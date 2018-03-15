@@ -397,7 +397,7 @@ module.exports = function(grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'bower_components/**/*',
-            'assets/images/{,*/}*.{webp,ico}',
+            'assets/images/{,*/}*.{webp,ico,png}',
             'assets/fonts/**/*',
             'index.html',
             // move from imagemin
