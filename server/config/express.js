@@ -43,7 +43,7 @@ export default function(app) {
   }
 
   if (env === 'production') {
-    app.use(favicon(path.join(config.root, 'client', 'favicon.ico')));
+    app.use(favicon(path.join(config.root, 'client/assets/images', 'favicon.ico')));
   }
 
   app.set('appPath', path.join(config.root, 'client'));
