@@ -1,11 +1,12 @@
 'use strict';
 
-const express = require('express');
-const controller = require('./main.controller');
-const auth = require('../../auth/auth.service');
+var express = require('express');
+var controller = require('./main.controller');
+var auth = require('../../auth/auth.service');
 
-const router = express.Router();
+var router = express.Router();
 
 router.get('/', auth.tryGetUser(), controller.index);
 
 module.exports = router;
+//# sourceMappingURL=index.js.map

@@ -1,10 +1,10 @@
 'use strict';
 
-const express = require('express');
-const controller = require('./pin.controller');
-const auth = require('../../auth/auth.service');
+var express = require('express');
+var controller = require('./pin.controller');
+var auth = require('../../auth/auth.service');
 
-const router = express.Router();
+var router = express.Router();
 
 router.post('/', auth.isAuthenticated(), controller.create);
 //router.get('/sizeof', controller.getImageSize);
@@ -28,5 +28,5 @@ router.delete('/:id/like', auth.isAuthenticated(), controller.removePinLike);
 router.post('/:id/favorite', auth.isAuthenticated(), controller.createPinFavorite);
 router.delete('/:id/favorite', auth.isAuthenticated(), controller.removePinFavorite);
 
-
 module.exports = router;
+//# sourceMappingURL=index.js.map

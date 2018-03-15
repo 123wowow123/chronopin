@@ -1,7 +1,7 @@
 'use strict';
 
-const path = require('path');
-const _ = require('lodash');
+var path = require('path');
+var _ = require('lodash');
 
 function requiredProcessEnv(name) {
   if (!process.env[name]) {
@@ -12,7 +12,7 @@ function requiredProcessEnv(name) {
 
 // All configurations will extend these options
 // ============================================
-let all = {
+var all = {
   host: 'www.chronopin.com',
 
   env: process.env.NODE_ENV,
@@ -104,7 +104,5 @@ let all = {
 
 // Export the config object based on the NODE_ENV
 // ==============================================
-module.exports = _.merge(
-  all,
-  require('./shared'),
-  require('./' + process.env.NODE_ENV + '.js') || {});
+module.exports = _.merge(all, require('./shared'), require('./' + process.env.NODE_ENV + '.js') || {});
+//# sourceMappingURL=index.js.map

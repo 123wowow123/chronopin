@@ -14,10 +14,13 @@
 
 'use strict';
 
-import { Router } from 'express';
-//import redis from 'redis';
-//import prerenderServer from 'prerender';
-import prerenderMiddleware from 'prerender-node';
+var _express = require('express');
+
+var _prerenderNode = require('prerender-node');
+
+var _prerenderNode2 = _interopRequireDefault(_prerenderNode);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //const path = require('path');
 
@@ -29,21 +32,17 @@ import prerenderMiddleware from 'prerender-node';
 // });
 // server.start();
 
-prerenderMiddleware
-    //.set('prerenderServiceUrl', 'http://localhost:3000')
-    .set('forwardHeaders', true)
-    .set('prerenderToken', 'G3NowTshSC0XWAnEV62Z')
-
-    .set('beforeRender', function (req, done) {
-        console.log('beforeRender', req.url);
-        done();
-        //client.get(req.url, done);
-    }).set('afterRender', function (err, req, prerender_res) {
-        console.log('afterRender', "fired");
-        //console.log('afterRender', prerender_res.body);
-        //client.set(req.url, prerender_res.body)
-    });
-
+_prerenderNode2.default
+//.set('prerenderServiceUrl', 'http://localhost:3000')
+.set('forwardHeaders', true).set('prerenderToken', 'G3NowTshSC0XWAnEV62Z').set('beforeRender', function (req, done) {
+    console.log('beforeRender', req.url);
+    done();
+    //client.get(req.url, done);
+}).set('afterRender', function (err, req, prerender_res) {
+    console.log('afterRender', "fired");
+    //console.log('afterRender', prerender_res.body);
+    //client.set(req.url, prerender_res.body)
+});
 
 // server.use(prerender.sendPrerenderHeader());
 // server.use(prerender.blockResources());
@@ -51,5 +50,7 @@ prerenderMiddleware
 // server.use(prerender.httpHeaders());
 
 
-
-module.exports = prerenderMiddleware;
+//import redis from 'redis';
+//import prerenderServer from 'prerender';
+module.exports = _prerenderNode2.default;
+//# sourceMappingURL=index.js.map

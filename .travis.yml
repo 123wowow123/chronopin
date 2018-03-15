@@ -56,7 +56,7 @@ after_success:
   - git config --global user.name "Travis CI"
   - export GIT_TAG=${TRAVIS_BRANCH}-0.1.${TRAVIS_BUILD_NUMBER}
 
-  - git remote add azure https://${GH_TOKEN}@github.com/123wowow123/chronopin_node.git
+  - git remote add azure https://${GH_TOKEN}@github.com/123wowow123/chronopin.git
 
   - git fetch azure
   - git add -A
@@ -79,7 +79,7 @@ after_deploy:
   #- eval "$(ssh-agent -s)" #start the ssh agent
   #- chmod 600 $GITHUB_API_SSH # this key should have push access
   #- ssh-add $GITHUB_API_SSH
-  #- git remote add deploy https://github.com/123wowow123/chronopin_node.git
+  #- git remote add deploy https://github.com/123wowow123/chronopin.git
   #- git push deploy azure
 
 

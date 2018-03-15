@@ -1,79 +1,85 @@
-import {
-  uniqueAndNonEmpty
-} from '../helper/util';
+'use strict';
 
-import {
-  getMeta
-} from '../helper/meta_tag';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-import {
-  getAttribute,
-  getImageAttribute
-} from '../helper/selector_attribute';
+var _promise = require('babel-runtime/core-js/promise');
+
+var _promise2 = _interopRequireDefault(_promise);
+
+exports.default = image;
+
+var _util = require('../helper/util');
+
+var _meta_tag = require('../helper/meta_tag');
+
+var _selector_attribute = require('../helper/selector_attribute');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function preloader(url) {
-  let imageObj = new Image();
-  return new Promise((resolve, reject) => {
-    imageObj.onload = pe => {
+  var imageObj = new Image();
+  return new _promise2.default(function (resolve, reject) {
+    imageObj.onload = function (pe) {
       resolve({
         originalUrl: url,
         height: imageObj.naturalHeight,
         width: imageObj.naturalWidth
       });
-    }
-    imageObj.error = err => {
+    };
+    imageObj.error = function (err) {
       console.log('Phantom: preloader:', err);
       reject(err);
-    }
+    };
     imageObj.src = url;
   });
 }
 
 function getImageSizes(images) {
-  let imagePromises = images.map(imageUrl => {
-    return preloader(imageUrl)
-      .then(image => {
-        return image;
-      })
-      .catch(err => {
-        //console.log('Phantom: getImageSizes:', err);
-        var image = {
-          sourceUrl: imageUrl,
-          width: 0,
-          height: 0
-        };
-        return image;
-      });
+  var imagePromises = images.map(function (imageUrl) {
+    return preloader(imageUrl).then(function (image) {
+      return image;
+    }).catch(function (err) {
+      //console.log('Phantom: getImageSizes:', err);
+      var image = {
+        sourceUrl: imageUrl,
+        width: 0,
+        height: 0
+      };
+      return image;
+    });
   });
 
-  return Promise.all(imagePromises);
+  return _promise2.default.all(imagePromises);
 }
 
-export default function image() {
+function image() {
   var res = [],
-    meta = ['og:image'],
-    tagAttribute = [{
-      selector: "[id*='article'] img, [id*='Article'] img, [class*='article'] img, [class*='Article'] img",
-      attribute: "src"
-    }, {
-      selector: "[id*='content'] img, [id*='Content'] img, [class*='content'] img, [class*='Content'] img",
-      attribute: "src"
-    }];
+      meta = ['og:image'],
+      tagAttribute = [{
+    selector: "[id*='article'] img, [id*='Article'] img, [class*='article'] img, [class*='Article'] img",
+    attribute: "src"
+  }, {
+    selector: "[id*='content'] img, [id*='Content'] img, [class*='content'] img, [class*='Content'] img",
+    attribute: "src"
+  }];
 
-  var metaRes = getMeta(meta);
+  var metaRes = (0, _meta_tag.getMeta)(meta);
   if (metaRes) {
     res = res.concat(metaRes);
   }
 
-  var attributeRes = getImageAttribute(tagAttribute);
+  var attributeRes = (0, _selector_attribute.getImageAttribute)(tagAttribute);
   if (attributeRes) {
     res = res.concat(attributeRes);
   }
 
-  res = uniqueAndNonEmpty(res);
+  res = (0, _util.uniqueAndNonEmpty)(res);
 
   if (res.length) {
     res = getImageSizes(res);
   }
   return res.length || res.then ? res : undefined;
 }
+//# sourceMappingURL=index.js.map

@@ -1,30 +1,32 @@
-import {
-  uniqueAndNonEmpty
-} from '../helper/util';
+'use strict';
 
-import {
-  getMeta
-} from '../helper/meta_tag';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = title;
 
-import {
-  getText
-} from '../helper/selector_text';
+var _util = require('../helper/util');
 
-export default function title() {
+var _meta_tag = require('../helper/meta_tag');
+
+var _selector_text = require('../helper/selector_text');
+
+function title() {
   var res = [],
-    meta = ['og:title', 'title'],
-    text = ['h1'];
+      meta = ['og:title', 'title'],
+      text = ['h1'];
 
-  var metaRes = getMeta(meta);
+  var metaRes = (0, _meta_tag.getMeta)(meta);
   if (metaRes) {
     res = res.concat(metaRes);
   }
 
-  var nameRes = getText(text);
+  var nameRes = (0, _selector_text.getText)(text);
   if (nameRes) {
     res = res.concat(nameRes);
   }
 
-  res = uniqueAndNonEmpty(res);
+  res = (0, _util.uniqueAndNonEmpty)(res);
   return res.length ? res : undefined;
 }
+//# sourceMappingURL=index.js.map

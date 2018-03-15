@@ -3,7 +3,7 @@
 var util = require('util');
 var stream = require('stream');
 
-module.exports.createReadStream = function(object, options) {
+module.exports.createReadStream = function (object, options) {
   return new MultiStream(object, options);
 };
 
@@ -24,7 +24,8 @@ function MultiStream(object, options) {
 
 util.inherits(MultiStream, stream.Readable);
 
-MultiStream.prototype._read = function() {
+MultiStream.prototype._read = function () {
   this.push(this._object);
   this._object = null;
 };
+//# sourceMappingURL=streamifier.js.map

@@ -4,31 +4,40 @@
 
 'use strict';
 
-import PinEvents from './pin.events';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.register = register;
+
+var _pin = require('./pin.events');
+
+var _pin2 = _interopRequireDefault(_pin);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Model events to emit
 var events = ['save', 'remove'];
 
-export function register(socket) {
+function register(socket) {
   // Bind model events to socket events
   for (var i = 0, eventsLength = events.length; i < eventsLength; i++) {
     var event = events[i];
     var listener = createListener('pin:' + event, socket);
 
-    PinEvents.on(event, listener);
+    _pin2.default.on(event, listener);
     socket.on('disconnect', removeListener(event, listener));
   }
 }
 
-
 function createListener(event, socket) {
-  return function(doc) {
+  return function (doc) {
     socket.emit(event, doc);
   };
 }
 
 function removeListener(event, listener) {
-  return function() {
-    PinEvents.removeListener(event, listener);
+  return function () {
+    _pin2.default.removeListener(event, listener);
   };
 }
+//# sourceMappingURL=pin.socket.js.map

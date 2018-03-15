@@ -1,72 +1,68 @@
 'use strict';
 
-import * as response from '../response';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.PinFavoriteEmitter = undefined;
+exports.createPinFavorite = createPinFavorite;
+exports.removePinFavorite = removePinFavorite;
 
-import {
-  Pin,
-  User,
-  Favorite
-} from '../../model';
+var _response = require('../response');
 
-import {
-  EventEmitter
-} from 'events';
+var response = _interopRequireWildcard(_response);
 
-const PinFavoriteEmitter = new EventEmitter();
+var _model = require('../../model');
 
-export function createPinFavorite(req, res) {
+var _events = require('events');
 
-  let user = req.user,
-    pinId = +req.params.id,
-    favoriteBody = req.body,
-    newFavorite = new Favorite(favoriteBody, user, new Pin({
-      id: pinId
-    }));
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-  return newFavorite.save()
-    .then(({
-      favorite
-    }) => {
-      return Pin.queryById(pinId, user.id);
-    })
-    .then(({
-      pin
-    }) => {
-      let event = "afterFavorite";
-      PinFavoriteEmitter.emit(event, pin);
-      return pin;
-    })
-    .then(response.withResult(res, 201))
-    .catch(response.handleError(res));
+var PinFavoriteEmitter = new _events.EventEmitter();
+
+function createPinFavorite(req, res) {
+
+  var user = req.user,
+      pinId = +req.params.id,
+      favoriteBody = req.body,
+      newFavorite = new _model.Favorite(favoriteBody, user, new _model.Pin({
+    id: pinId
+  }));
+
+  return newFavorite.save().then(function (_ref) {
+    var favorite = _ref.favorite;
+
+    return _model.Pin.queryById(pinId, user.id);
+  }).then(function (_ref2) {
+    var pin = _ref2.pin;
+
+    var event = "afterFavorite";
+    PinFavoriteEmitter.emit(event, pin);
+    return pin;
+  }).then(response.withResult(res, 201)).catch(response.handleError(res));
 }
 
 // mark as removed only
-export function removePinFavorite(req, res) {
+function removePinFavorite(req, res) {
 
-  let user = req.user,
-    pinId = +req.params.id,
-    favoriteBody = req.body,
-    newFavorite = new Favorite(favoriteBody, user, new Pin({
-      id: pinId
-    }));
+  var user = req.user,
+      pinId = +req.params.id,
+      favoriteBody = req.body,
+      newFavorite = new _model.Favorite(favoriteBody, user, new _model.Pin({
+    id: pinId
+  }));
 
-  return newFavorite.deleteByPinId()
-    .then(({
-      favorite
-    }) => {
-      return Pin.queryById(pinId, user.id);
-    })
-    .then(({
-      pin
-    }) => {
-      let event = "afterUnfavorite";
-      PinFavoriteEmitter.emit(event, pin);
-      return pin;
-    })
-    .then(response.withResult(res, 201))
-    .catch(response.handleError(res));
+  return newFavorite.deleteByPinId().then(function (_ref3) {
+    var favorite = _ref3.favorite;
+
+    return _model.Pin.queryById(pinId, user.id);
+  }).then(function (_ref4) {
+    var pin = _ref4.pin;
+
+    var event = "afterUnfavorite";
+    PinFavoriteEmitter.emit(event, pin);
+    return pin;
+  }).then(response.withResult(res, 201)).catch(response.handleError(res));
 }
 
-export {
-  PinFavoriteEmitter
-};
+exports.PinFavoriteEmitter = PinFavoriteEmitter;
+//# sourceMappingURL=pin.favorite.controller.js.map

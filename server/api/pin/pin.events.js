@@ -4,17 +4,15 @@
 
 'use strict';
 
-import {
-  EventEmitter
-} from 'events';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-import {
-  PinEmitter,
-  PinFavoriteEmitter,
-  PinLikeEmitter
-} from './pin.controller';
+var _events = require('events');
 
-var PinEvents = new EventEmitter();
+var _pin = require('./pin.controller');
+
+var PinEvents = new _events.EventEmitter();
 
 // Set max event listeners (0 == unlimited)
 PinEvents.setMaxListeners(0);
@@ -31,19 +29,20 @@ var events = {
 // Register the event emitter to the model events
 for (var e in events) {
   var event = events[e];
-  PinEmitter.on(e, emitEvent(event));
-  PinFavoriteEmitter.on(e, emitEvent(event));
-  PinLikeEmitter.on(e, emitEvent(event));
+  _pin.PinEmitter.on(e, emitEvent(event));
+  _pin.PinFavoriteEmitter.on(e, emitEvent(event));
+  _pin.PinLikeEmitter.on(e, emitEvent(event));
   //Pin.hook(e, emitEvent(event));
 }
 
 function emitEvent(event) {
-  return function(doc, options, done) {
+  return function (doc, options, done) {
     //crashes node with 2 consecutive emits: github.com/nodejs/node/issues/4261
     //PinEvents.emit(event + ':' + doc.id, doc);
     PinEvents.emit(event, doc);
     //done(null);
-  }
+  };
 }
 
-export default PinEvents;
+exports.default = PinEvents;
+//# sourceMappingURL=pin.events.js.map

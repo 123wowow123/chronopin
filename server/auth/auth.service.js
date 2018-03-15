@@ -1,49 +1,73 @@
 'use strict';
 
-import passport from 'passport';
-import config from '../config/environment';
-import jwt from 'jsonwebtoken';
-import expressJwt from 'express-jwt';
-import compose from 'composable-middleware';
-import {
-  User
-} from '../model';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.isAuthenticated = isAuthenticated;
+exports.tryGetUser = tryGetUser;
+exports.hasRole = hasRole;
+exports.signToken = signToken;
+exports.setTokenCookie = setTokenCookie;
 
-const tokenExpiresIn = 60 * 60 * 5;
+var _passport = require('passport');
 
-let validateJwt = expressJwt({
-  secret: config.secrets.session
+var _passport2 = _interopRequireDefault(_passport);
+
+var _environment = require('../config/environment');
+
+var _environment2 = _interopRequireDefault(_environment);
+
+var _jsonwebtoken = require('jsonwebtoken');
+
+var _jsonwebtoken2 = _interopRequireDefault(_jsonwebtoken);
+
+var _expressJwt = require('express-jwt');
+
+var _expressJwt2 = _interopRequireDefault(_expressJwt);
+
+var _composableMiddleware = require('composable-middleware');
+
+var _composableMiddleware2 = _interopRequireDefault(_composableMiddleware);
+
+var _model = require('../model');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var tokenExpiresIn = 60 * 60 * 5;
+
+var validateJwt = (0, _expressJwt2.default)({
+  secret: _environment2.default.secrets.session
 });
 
 /**
  * Attaches the user object to the request if authenticated
  * Otherwise returns 403
  */
-export function isAuthenticated() {
-  return compose()
-    // Validate jwt
-    .use(function(req, res, next) {
-      // allow access_token to be passed through query parameter as well
-      if (req.query && req.query.hasOwnProperty('access_token')) {
-        req.headers.authorization = 'Bearer ' + req.query.access_token;
+function isAuthenticated() {
+  return (0, _composableMiddleware2.default)()
+  // Validate jwt
+  .use(function (req, res, next) {
+    // allow access_token to be passed through query parameter as well
+    if (req.query && req.query.hasOwnProperty('access_token')) {
+      req.headers.authorization = 'Bearer ' + req.query.access_token;
+    }
+    validateJwt(req, res, next);
+  })
+  // Attach user to request
+  .use(function (req, res, next) {
+    _model.User.getById(+req.user.id).then(function (_ref) {
+      var user = _ref.user;
+
+      if (!user) {
+        return res.status(401).end();
       }
-      validateJwt(req, res, next);
-    })
-    // Attach user to request
-    .use(function(req, res, next) {
-      User.getById(+req.user.id)
-        .then(({
-          user
-        }) => {
-          if (!user) {
-            return res.status(401).end();
-          }
-          req.user = user;
-          next();
-          return null;
-        })
-        .catch(err => next(err));
+      req.user = user;
+      next();
+      return null;
+    }).catch(function (err) {
+      return next(err);
     });
+  });
 }
 
 /**
@@ -51,71 +75,68 @@ export function isAuthenticated() {
  * Otherwise proceed to the next function
  */
 
-export function tryGetUser() {
-  return compose()
-    // Validate jwt
-    .use(function(req, res, next) {
-      // allow access_token to be passed through query parameter as well
-      if (req.query && req.query.hasOwnProperty('access_token')) {
-        req.headers.authorization = 'Bearer ' + req.query.access_token;
-      }
+function tryGetUser() {
+  return (0, _composableMiddleware2.default)()
+  // Validate jwt
+  .use(function (req, res, next) {
+    // allow access_token to be passed through query parameter as well
+    if (req.query && req.query.hasOwnProperty('access_token')) {
+      req.headers.authorization = 'Bearer ' + req.query.access_token;
+    }
 
-      if (!req.headers.authorization || req.headers.authorization === 'Bearer ') {
+    if (!req.headers.authorization || req.headers.authorization === 'Bearer ') {
+      next();
+    } else {
+      validateJwt(req, res, next); //if validation fales then return to next function
+    }
+    return null;
+  })
+  // Attach user to request
+  .use(function (req, res, next) {
+    if (!req.user || req.user.id === undefined) {
+      next();
+    } else {
+      _model.User.getById(+req.user.id).then(function (_ref2) {
+        var user = _ref2.user;
+
+        if (!user) {
+          req.user = null;
+        }
+        req.user = user;
         next();
-      } else {
-        validateJwt(req, res, next); //if validation fales then return to next function
-      }
-      return null;
-    })
-    // Attach user to request
-    .use(function(req, res, next) {
-      if (!req.user || req.user.id === undefined) {
-        next();
-      } else {
-        User.getById(+req.user.id)
-          .then(({
-            user
-          }) => {
-            if (!user) {
-              req.user = null;
-            }
-            req.user = user;
-            next();
-          })
-          .catch(err => next(err));
-      }
-      return null;
-    });
+      }).catch(function (err) {
+        return next(err);
+      });
+    }
+    return null;
+  });
 }
 
 /**
  * Checks if the user role meets the minimum requirements of the route
  */
-export function hasRole(roleRequired) {
+function hasRole(roleRequired) {
   if (!roleRequired) {
     throw new Error('Required role needs to be set');
   }
 
-  return compose()
-    .use(isAuthenticated())
-    .use(function meetsRequirements(req, res, next) {
-      if (config.userRoles.indexOf(req.user.role) >=
-        config.userRoles.indexOf(roleRequired)) {
-        next();
-      } else {
-        res.status(403).send('Forbidden');
-      }
-    });
+  return (0, _composableMiddleware2.default)().use(isAuthenticated()).use(function meetsRequirements(req, res, next) {
+    if (_environment2.default.userRoles.indexOf(req.user.role) >= _environment2.default.userRoles.indexOf(roleRequired)) {
+      next();
+    } else {
+      res.status(403).send('Forbidden');
+    }
+  });
 }
 
 /**
  * Returns a jwt token signed by the app secret
  */
-export function signToken(id, role) {
-  return jwt.sign({
+function signToken(id, role) {
+  return _jsonwebtoken2.default.sign({
     id: id,
     role: role
-  }, config.secrets.session, {
+  }, _environment2.default.secrets.session, {
     expiresIn: tokenExpiresIn
   });
 }
@@ -123,8 +144,8 @@ export function signToken(id, role) {
 /**
  * Set token cookie directly for oAuth strategies
  */
-export function setTokenCookie(req, res) {
-  console.log('setTokenCookie', req.user)
+function setTokenCookie(req, res) {
+  console.log('setTokenCookie', req.user);
   if (!req.user) {
     return res.status(404).send('It looks like you aren\'t logged in, please try again.');
   }
@@ -132,3 +153,4 @@ export function setTokenCookie(req, res) {
   res.cookie('token', token);
   res.redirect('/');
 }
+//# sourceMappingURL=auth.service.js.map

@@ -1,10 +1,23 @@
 'use strict';
 
-import li from 'li';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.withResult = withResult;
+exports.withNoResult = withNoResult;
+exports.handleError = handleError;
+exports.handleEntityNotFound = handleEntityNotFound;
+exports.setPaginationHeader = setPaginationHeader;
 
-export function withResult(res, statusCode) {
+var _li = require('li');
+
+var _li2 = _interopRequireDefault(_li);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function withResult(res, statusCode) {
   statusCode = statusCode || 200;
-  return function(entity) {
+  return function (entity) {
     if (entity) {
       res.status(statusCode).json(entity);
     }
@@ -12,23 +25,23 @@ export function withResult(res, statusCode) {
   };
 }
 
-export function withNoResult(res) {
-  return function() {
+function withNoResult(res) {
+  return function () {
     res.status(204).end();
     return null;
-  }
+  };
 }
 
-export function handleError(res, statusCode) {
+function handleError(res, statusCode) {
   statusCode = statusCode || 500;
-  return function(err) {
+  return function (err) {
     res.status(statusCode).send(err);
     return null;
   };
 }
 
-export function handleEntityNotFound(res) {
-  return function(entity) {
+function handleEntityNotFound(res) {
+  return function (entity) {
     if (!entity) {
       res.status(404).end();
       return null;
@@ -40,17 +53,18 @@ export function handleEntityNotFound(res) {
 // RFC 5988 Pagination Header
 // http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api#pagination
 // https://github.com/richardkall/api_pagination_headers
-export function setPaginationHeader(res, urlPrfix, queryCount) {
-  return function(pins) {
+function setPaginationHeader(res, urlPrfix, queryCount) {
+  return function (pins) {
     if (pins.pins.length) {
-      let pinRange = pins.minMaxDateTimePin();
-      let linksObject = {
-        previous: `${urlPrfix}?from_date_time=-${pinRange.min.utcStartDateTime.toISOString()}&last_pin_id=${pinRange.min.id}`,
-        next: `${urlPrfix}?from_date_time=${pinRange.max.utcStartDateTime.toISOString()}&last_pin_id=${pinRange.max.id}`
+      var pinRange = pins.minMaxDateTimePin();
+      var linksObject = {
+        previous: urlPrfix + '?from_date_time=-' + pinRange.min.utcStartDateTime.toISOString() + '&last_pin_id=' + pinRange.min.id,
+        next: urlPrfix + '?from_date_time=' + pinRange.max.utcStartDateTime.toISOString() + '&last_pin_id=' + pinRange.max.id
       };
-      res.header('Link', li.stringify(linksObject));
+      res.header('Link', _li2.default.stringify(linksObject));
       res.header('X-Range-Count', queryCount);
     }
     return pins;
   };
 }
+//# sourceMappingURL=response.js.map

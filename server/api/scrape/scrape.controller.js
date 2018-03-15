@@ -5,12 +5,22 @@
 
 'use strict';
 
-import _ from 'lodash';
-import { scrape } from '../../scrape'
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getContent = getContent;
+
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _scrape = require('../../scrape');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function respondWithResult(res, statusCode) {
   statusCode = statusCode || 200;
-  return function(entity) {
+  return function (entity) {
     //console.log('respondWithResult:', entity);
     if (entity) {
       res.status(statusCode).json(entity);
@@ -19,7 +29,7 @@ function respondWithResult(res, statusCode) {
 }
 
 function handleEntityNotFound(res) {
-  return function(entity) {
+  return function (entity) {
     if (!entity) {
       res.status(404).end();
       return null;
@@ -30,16 +40,14 @@ function handleEntityNotFound(res) {
 
 function handleError(res, statusCode) {
   statusCode = statusCode || 500;
-  return function(err) {
+  return function (err) {
     res.status(statusCode).send(err);
   };
 }
 
-
 // Scrape web page
-export function getContent(req, res) {
+function getContent(req, res) {
   var pageUrl = req.query.url;
-  return scrape(pageUrl)
-    .then(respondWithResult(res, 200))
-    .catch(handleError(res));
+  return (0, _scrape.scrape)(pageUrl).then(respondWithResult(res, 200)).catch(handleError(res));
 }
+//# sourceMappingURL=scrape.controller.js.map

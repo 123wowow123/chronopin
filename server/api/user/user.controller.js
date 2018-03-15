@@ -1,36 +1,44 @@
 'use strict';
 
-import {
-  User,
-  Users
-} from '../../model';
-import config from '../../config/environment';
-import jwt from 'jsonwebtoken';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.UserEmitter = undefined;
+exports.addEntity = addEntity;
+exports.index = index;
+exports.create = create;
+exports.show = show;
+exports.destroy = destroy;
+exports.changePassword = changePassword;
+exports.me = me;
+exports.authCallback = authCallback;
 
-import {
-  EventEmitter
-} from 'events';
+var _model = require('../../model');
 
-const UserEmitter = new EventEmitter();
-const pickUserProps = [
-  'id',
-  'firstName',
-  'lastName',
-  'email',
-  'role',
-  'provider'
-];
+var _environment = require('../../config/environment');
 
-export function addEntity(newUser) {
+var _environment2 = _interopRequireDefault(_environment);
+
+var _jsonwebtoken = require('jsonwebtoken');
+
+var _jsonwebtoken2 = _interopRequireDefault(_jsonwebtoken);
+
+var _events = require('events');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var UserEmitter = new _events.EventEmitter();
+var pickUserProps = ['id', 'firstName', 'lastName', 'email', 'role', 'provider'];
+
+function addEntity(newUser) {
   //debugger
-  return newUser.save()
-    .then(({
-      user
-    }) => {
-      let event = "afterCreate";
-      UserEmitter.emit(event, user);
-      return user;
-    });
+  return newUser.save().then(function (_ref) {
+    var user = _ref.user;
+
+    var event = "afterCreate";
+    UserEmitter.emit(event, user);
+    return user;
+  });
 }
 
 function validationError(res, statusCode) {
@@ -51,122 +59,111 @@ function handleError(res, statusCode) {
  * Get list of users
  * restriction: 'admin'
  */
-export function index(req, res) {
-  return Users.getAll(pickUserProps)
-    .then(({
-      users
-    }) => {
-      res.status(200).json(users);
-    })
-    .catch(handleError(res));
+function index(req, res) {
+  return _model.Users.getAll(pickUserProps).then(function (_ref2) {
+    var users = _ref2.users;
+
+    res.status(200).json(users);
+  }).catch(handleError(res));
 }
 
 /**
  * Creates a new user
  */
-export function create(req, res, next) {
-  var newUser = new User(req.body);
+function create(req, res, next) {
+  var newUser = new _model.User(req.body);
   newUser.provider = 'local';
   newUser.role = 'user';
 
-  return addEntity(newUser)
-    .then(({
-      user
-    }) => {
-      var token = jwt.sign({
-        id: user.id
-      }, config.secrets.session, {
-          expiresIn: 60 * 60 * 5
-        });
-      res.json({
-        token
-      });
-    })
-    .catch(validationError(res));
+  return addEntity(newUser).then(function (_ref3) {
+    var user = _ref3.user;
+
+    var token = _jsonwebtoken2.default.sign({
+      id: user.id
+    }, _environment2.default.secrets.session, {
+      expiresIn: 60 * 60 * 5
+    });
+    res.json({
+      token: token
+    });
+  }).catch(validationError(res));
 }
 
 /**
  * Get a single user
  */
-export function show(req, res, next) {
+function show(req, res, next) {
   var userId = req.params.id;
 
-  return User.getById(userId)
-    .then(({
-      user
-    }) => {
-      if (!user) {
-        return res.status(404).end();
-      }
-      res.json(user.profile);
-    })
-    .catch(err => next(err));
+  return _model.User.getById(userId).then(function (_ref4) {
+    var user = _ref4.user;
+
+    if (!user) {
+      return res.status(404).end();
+    }
+    res.json(user.profile);
+  }).catch(function (err) {
+    return next(err);
+  });
 }
 
 /**
  * Deletes a user
  * restriction: 'admin'
  */
-export function destroy(req, res) {
-  return new User({
+function destroy(req, res) {
+  return new _model.User({
     id: req.params.id
-  }).delete()
-    .then(function () {
-      res.status(204).end();
-    })
-    .catch(handleError(res));
+  }).delete().then(function () {
+    res.status(204).end();
+  }).catch(handleError(res));
 }
 
 /**
  * Change a users password
  */
-export function changePassword(req, res, next) {
+function changePassword(req, res, next) {
   var userId = +req.user.id;
   var oldPass = String(req.body.oldPassword);
   var newPass = String(req.body.newPassword);
 
-  return User.getById(userId)
-    .then(({
-      user
-    }) => {
-      if (user.authenticate(oldPass)) {
-        user.password = newPass;
-        return user.update()
-          .then(() => {
-            res.status(204).end();
-          })
-          .catch(validationError(res));
-      } else {
-        return res.status(403).end();
-      }
-    });
+  return _model.User.getById(userId).then(function (_ref5) {
+    var user = _ref5.user;
+
+    if (user.authenticate(oldPass)) {
+      user.password = newPass;
+      return user.update().then(function () {
+        res.status(204).end();
+      }).catch(validationError(res));
+    } else {
+      return res.status(403).end();
+    }
+  });
 }
 
 /**
  * Get my info
  */
-export function me(req, res, next) {
-  let userId = +req.user.id;
-  return User.getById(userId)
-    .then(({
-      user
-    }) => { // don't ever give out the password or salt
-      if (!user) {
-        return res.status(401).end();
-      }
-      res.json(
-        user.pick(pickUserProps));
-    })
-    .catch(err => next(err));
+function me(req, res, next) {
+  var userId = +req.user.id;
+  return _model.User.getById(userId).then(function (_ref6) {
+    var user = _ref6.user;
+    // don't ever give out the password or salt
+    if (!user) {
+      return res.status(401).end();
+    }
+    res.json(user.pick(pickUserProps));
+  }).catch(function (err) {
+    return next(err);
+  });
 }
 
 /**
  * Authentication callback
  */
-export function authCallback(req, res, next) {
+function authCallback(req, res, next) {
   res.redirect('/');
 }
 
-export {
-  UserEmitter
-};
+exports.UserEmitter = UserEmitter;
+//# sourceMappingURL=user.controller.js.map

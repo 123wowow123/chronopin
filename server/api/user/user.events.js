@@ -4,15 +4,15 @@
 
 'use strict';
 
-import {
-  EventEmitter
-} from 'events';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-import {
-  UserEmitter
-} from './user.controller';
+var _events = require('events');
 
-var UserEvents = new EventEmitter();
+var _user = require('./user.controller');
+
+var UserEvents = new _events.EventEmitter();
 
 // Set max event listeners (0 == unlimited)
 UserEvents.setMaxListeners(0);
@@ -27,17 +27,18 @@ var events = {
 // Register the event emitter to the model events
 for (var e in events) {
   var event = events[e];
-  UserEmitter.on(e, emitEvent(event));
+  _user.UserEmitter.on(e, emitEvent(event));
 }
 
 function emitEvent(event) {
-  return function(doc, options, done) {
+  return function (doc, options, done) {
     //debugger;
     //crashes node with 2 consecutive emits: github.com/nodejs/node/issues/4261
     //PinEvents.emit(event + ':' + doc.id, doc);
     UserEvents.emit(event, doc);
     //done(null);
-  }
+  };
 }
 
-export default UserEvents;
+exports.default = UserEvents;
+//# sourceMappingURL=user.events.js.map

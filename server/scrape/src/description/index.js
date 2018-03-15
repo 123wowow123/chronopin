@@ -1,23 +1,25 @@
-import {
-  uniqueAndNonEmpty
-} from '../helper/util';
+'use strict';
 
-import {
-  getMeta
-} from '../helper/meta_tag';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = description;
 
-import {
-  getAttribute
-} from '../helper/selector_attribute';
+var _util = require('../helper/util');
 
-export default function description() {
+var _meta_tag = require('../helper/meta_tag');
+
+var _selector_attribute = require('../helper/selector_attribute');
+
+function description() {
   var res = [],
-    meta = ['description', 'og:description'];
+      meta = ['description', 'og:description'];
 
-  var metaRes = getMeta(meta);
+  var metaRes = (0, _meta_tag.getMeta)(meta);
   if (metaRes) {
     res = res.concat(metaRes);
   }
-  res = uniqueAndNonEmpty(res);
+  res = (0, _util.uniqueAndNonEmpty)(res);
   return res.length ? res : undefined;
 }
+//# sourceMappingURL=index.js.map

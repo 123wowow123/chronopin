@@ -8,3 +8,4 @@ exports = module.exports = {
   fbAppId: '560731380662615',
   gaAppId: 'UA-103783559-1'
 };
+//# sourceMappingURL=shared.js.map

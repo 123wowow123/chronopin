@@ -1,14 +1,14 @@
 'use strict';
 
-const config = require('../config/environment');
-const rp = require('request-promise');
+var config = require('../config/environment');
+var rp = require('request-promise');
 //let indices = ['temp'];
-const index = 'temp';
-const baseSearchUrl = `${config.azureSearch.serviceUrl}/indexes/${index}/docs`;
+var index = 'temp';
+var baseSearchUrl = config.azureSearch.serviceUrl + '/indexes/' + index + '/docs';
 
 // https://docs.microsoft.com/en-us/rest/api/searchservice/?redirectedfrom=MSDN
 module.exports.pin = function pin(searchText) {
-  let options = {
+  var options = {
     uri: baseSearchUrl,
     headers: {
       'api-key': config.azureSearch.queryKey
@@ -21,3 +21,4 @@ module.exports.pin = function pin(searchText) {
 
   return rp(options);
 };
+//# sourceMappingURL=index.js.map

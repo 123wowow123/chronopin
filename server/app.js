@@ -4,18 +4,28 @@
 
 'use strict';
 
-import express from 'express';
-//import sqldb from './sqldb';
-import config from './config/environment';
-import http from 'http';
+var _express = require('express');
+
+var _express2 = _interopRequireDefault(_express);
+
+var _environment = require('./config/environment');
+
+var _environment2 = _interopRequireDefault(_environment);
+
+var _http = require('http');
+
+var _http2 = _interopRequireDefault(_http);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Populate databases with sample data
 
 
-
 // Setup server
-var app = express();
-var server = http.createServer(app);
+
+//import sqldb from './sqldb';
+var app = (0, _express2.default)();
+var server = _http2.default.createServer(app);
 var socketio = require('socket.io')(server, {
   //serveClient: config.env !== 'production',
   path: '/socket.io-client'
@@ -40,8 +50,8 @@ startServer();
 
 // Start server
 function startServer() {
-  app.angularFullstack = server.listen(config.port, config.ip, function() {
-    console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
+  app.angularFullstack = server.listen(_environment2.default.port, _environment2.default.ip, function () {
+    console.log('Express server listening on %d, in %s mode', _environment2.default.port, app.get('env'));
   });
 }
 
@@ -55,3 +65,4 @@ function startServer() {
 
 // Expose app
 exports = module.exports = app;
+//# sourceMappingURL=app.js.map

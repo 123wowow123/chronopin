@@ -2,207 +2,245 @@
 
 'use strict';
 
-import * as mssql from 'mssql';
-import * as cp from '../../sqlConnectionPool';
-import * as search from '../../search';
-import * as _ from 'lodash';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-import {
-  Pin
-} from '../../model';
+var _promise = require('babel-runtime/core-js/promise');
 
-export default class Pins {
+var _promise2 = _interopRequireDefault(_promise);
+
+var _isInteger = require('babel-runtime/core-js/number/is-integer');
+
+var _isInteger2 = _interopRequireDefault(_isInteger);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _mssql = require('mssql');
+
+var mssql = _interopRequireWildcard(_mssql);
+
+var _sqlConnectionPool = require('../../sqlConnectionPool');
+
+var cp = _interopRequireWildcard(_sqlConnectionPool);
+
+var _search = require('../../search');
+
+var search = _interopRequireWildcard(_search);
+
+var _lodash = require('lodash');
+
+var _ = _interopRequireWildcard(_lodash);
+
+var _model = require('../../model');
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Pins = function () {
   // Properties
   // this.pins
   // this.queryCount - probably not needed
 
-  constructor(pins) {
+  function Pins(pins) {
+    (0, _classCallCheck3.default)(this, Pins);
+
     if (pins) {
       this.set(pins);
     }
   }
 
-  set(pins) {
-    if (Array.isArray(pins)) {
-      this
-        .setPins(pins)
-        .setQueryCount(undefined);
-    } else if (pins.pins && Number.isInteger(pins.queryCount)) {
-      this
-        .setPins(pins.pins)
-        .setQueryCount(pins.queryCount);
-    } else {
-      throw "Pins cannot set value of arg";
-    }
-    return this;
-  }
-
-  setPins(pins) {
-    if (Array.isArray(pins)) {
-      // ToDo: should check if pins are pinRows from sql
-      this.pins = Pins.mapPinsMedia(pins);
-    } else {
-      throw "arg is not an array";
-    }
-    return this;
-  }
-
-  setQueryCount(queryCount) {
-    if (Number.isInteger(queryCount) || queryCount == null) {
-      this.queryCount = queryCount;
-    } else {
-      throw "arg is not an integer, undefined, null";
-    }
-    return this;
-  }
-
-  save() {
-    this.pins.forEach(p => {
-      return p.save();
-    });
-    return this;
-  }
-
-  addSearchScores(searchScores) {
-    this.pins.forEach(pin => {
-      let foundSearchScore = searchScores.find((current, index) => {
-        return +current.id === pin.id;
-      })
-      if (foundSearchScore) {
-        pin.searchScore = foundSearchScore["@search.score"];
+  (0, _createClass3.default)(Pins, [{
+    key: 'set',
+    value: function set(pins) {
+      if (Array.isArray(pins)) {
+        this.setPins(pins).setQueryCount(undefined);
+      } else if (pins.pins && (0, _isInteger2.default)(pins.queryCount)) {
+        this.setPins(pins.pins).setQueryCount(pins.queryCount);
+      } else {
+        throw "Pins cannot set value of arg";
       }
-    });
-    return this;
-  }
-
-  minMaxDateTimePin() {
-    // empty array returns null
-    if (!this || !this.pins.length) {
-      return null;
+      return this;
     }
-    //console.log('_minMaxDateTimePin', results);
-    let firstPin = this.pins[0],
-      lastPin = this.pins[this.pins.length - 1],
-      minPin,
-      maxPin;
-    if (firstPin.utcStartDateTime < lastPin.utcStartDateTime) {
-      minPin = firstPin;
-      maxPin = lastPin;
-    } else {
-      minPin = lastPin;
-      maxPin = firstPin;
+  }, {
+    key: 'setPins',
+    value: function setPins(pins) {
+      if (Array.isArray(pins)) {
+        // ToDo: should check if pins are pinRows from sql
+        this.pins = Pins.mapPinsMedia(pins);
+      } else {
+        throw "arg is not an array";
+      }
+      return this;
     }
-    return {
-      min: minPin,
-      max: maxPin
-    };
-  }
+  }, {
+    key: 'setQueryCount',
+    value: function setQueryCount(queryCount) {
+      if ((0, _isInteger2.default)(queryCount) || queryCount == null) {
+        this.queryCount = queryCount;
+      } else {
+        throw "arg is not an integer, undefined, null";
+      }
+      return this;
+    }
+  }, {
+    key: 'save',
+    value: function save() {
+      this.pins.forEach(function (p) {
+        return p.save();
+      });
+      return this;
+    }
+  }, {
+    key: 'addSearchScores',
+    value: function addSearchScores(searchScores) {
+      this.pins.forEach(function (pin) {
+        var foundSearchScore = searchScores.find(function (current, index) {
+          return +current.id === pin.id;
+        });
+        if (foundSearchScore) {
+          pin.searchScore = foundSearchScore["@search.score"];
+        }
+      });
+      return this;
+    }
+  }, {
+    key: 'minMaxDateTimePin',
+    value: function minMaxDateTimePin() {
+      // empty array returns null
+      if (!this || !this.pins.length) {
+        return null;
+      }
+      //console.log('_minMaxDateTimePin', results);
+      var firstPin = this.pins[0],
+          lastPin = this.pins[this.pins.length - 1],
+          minPin = void 0,
+          maxPin = void 0;
+      if (firstPin.utcStartDateTime < lastPin.utcStartDateTime) {
+        minPin = firstPin;
+        maxPin = lastPin;
+      } else {
+        minPin = lastPin;
+        maxPin = firstPin;
+      }
+      return {
+        min: minPin,
+        max: maxPin
+      };
+    }
+  }], [{
+    key: 'mapPinsMedia',
+    value: function mapPinsMedia(pinRows) {
+      var pins = [],
+          groupedPinRows = void 0;
 
-  static mapPinsMedia(pinRows) {
-    let pins = [],
-      groupedPinRows;
+      groupedPinRows = _.groupBy(pinRows, function (row) {
+        return row.id;
+      });
 
-    groupedPinRows = _.groupBy(pinRows, row => {
-      return row.id;
-    });
+      _.forEach(groupedPinRows, function (pinRows) {
+        var pin = _model.Pin.mapPinMedia(pinRows);
+        pins.push(pin);
+      });
 
-    _.forEach(groupedPinRows, pinRows => {
-      let pin = Pin.mapPinMedia(pinRows);
-      pins.push(pin);
-    });
+      // need to sort properly
+      pins = _.chain(pins).sortBy('id').sortBy('utcStartDateTime').value();
 
-    // need to sort properly
-    pins = _.chain(pins)
-      .sortBy('id')
-      .sortBy('utcStartDateTime')
-      .value();
-
-    return pins;
-  }
-
-  static queryForwardByDate(fromDateTime, userId, lastPinId, pageSize) {
-    return _queryMSSQLPins(true, fromDateTime, userId, lastPinId, 0, pageSize)
-      .then(res => {
+      return pins;
+    }
+  }, {
+    key: 'queryForwardByDate',
+    value: function queryForwardByDate(fromDateTime, userId, lastPinId, pageSize) {
+      return _queryMSSQLPins(true, fromDateTime, userId, lastPinId, 0, pageSize).then(function (res) {
         //console.log('queryForwardByDate', res);
         return new Pins(res);
       });
-  }
-
-  static queryBackwardByDate(fromDateTime, userId, lastPinId, pageSize) {
-    return _queryMSSQLPins(false, fromDateTime, userId, lastPinId, 0, pageSize)
-      .then(res => {
+    }
+  }, {
+    key: 'queryBackwardByDate',
+    value: function queryBackwardByDate(fromDateTime, userId, lastPinId, pageSize) {
+      return _queryMSSQLPins(false, fromDateTime, userId, lastPinId, 0, pageSize).then(function (res) {
         //console.log('queryBackwardByDate', res);
         return new Pins(res);
       });
-  }
-
-  static queryInitialByDate(fromDateTime, userId, pageSizePrev, pageSizeNext) {
-    return _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext)
-      .then(res => {
+    }
+  }, {
+    key: 'queryInitialByDate',
+    value: function queryInitialByDate(fromDateTime, userId, pageSizePrev, pageSizeNext) {
+      return _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext).then(function (res) {
         //console.log('queryInitialByDate', res);
         return new Pins(res);
       });
-  }
-
-  static queryForwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize) {
-    return _queryMSSQLPinsFilterByHasFavorite(true, fromDateTime, userId, lastPinId, 0, pageSize)
-      .then(res => {
+    }
+  }, {
+    key: 'queryForwardByDateFilterByHasFavorite',
+    value: function queryForwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize) {
+      return _queryMSSQLPinsFilterByHasFavorite(true, fromDateTime, userId, lastPinId, 0, pageSize).then(function (res) {
         //console.log('queryForwardByDateFilterByHasFavorite', res);
         return new Pins(res);
       });
-  }
-
-  static queryBackwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize) {
-    return _queryMSSQLPinsFilterByHasFavorite(false, fromDateTime, userId, lastPinId, 0, pageSize)
-      .then(res => {
+    }
+  }, {
+    key: 'queryBackwardByDateFilterByHasFavorite',
+    value: function queryBackwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize) {
+      return _queryMSSQLPinsFilterByHasFavorite(false, fromDateTime, userId, lastPinId, 0, pageSize).then(function (res) {
         //console.log('queryBackwardByDateFilterByHasFavorite', res);
         return new Pins(res);
       });
-  }
-
-  static queryInitialByDateFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext) {
-    return _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext)
-      .then(res => {
+    }
+  }, {
+    key: 'queryInitialByDateFilterByHasFavorite',
+    value: function queryInitialByDateFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext) {
+      return _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext).then(function (res) {
         //console.log('queryInitialByDateFilterByHasFavorite', res);
         return new Pins(res);
       });
-  }
-
-  static querySearch(searchText) {
-    return search.pin(searchText)
-      .then(res => {
-        let serpJson = JSON.parse(res);
+    }
+  }, {
+    key: 'querySearch',
+    value: function querySearch(searchText) {
+      return search.pin(searchText).then(function (res) {
+        var serpJson = JSON.parse(res);
         // console.log('querySearch - search match:', serpJson);
-        return _queryMSSQLPinsBySearchText(serpJson.value)
-          .then(res => {
-            // console.log('querySearch', res);
-            let pins = new Pins(res);
-            pins.addSearchScores(serpJson.value);
-            return pins;
-          });
+        return _queryMSSQLPinsBySearchText(serpJson.value).then(function (res) {
+          // console.log('querySearch', res);
+          var pins = new Pins(res);
+          pins.addSearchScores(serpJson.value);
+          return pins;
+        });
       });
-  }
-
-  static querySearchFilterByHasFavorite(searchText, userId) {
-    return search.pin(searchText)
-      .then(res => {
-        let serpJson = JSON.parse(res);
+    }
+  }, {
+    key: 'querySearchFilterByHasFavorite',
+    value: function querySearchFilterByHasFavorite(searchText, userId) {
+      return search.pin(searchText).then(function (res) {
+        var serpJson = JSON.parse(res);
         // console.log('querySearch - search match:', serpJson);
-        return _queryMSSQLPinsBySearchTextFilterByHasFavorite(serpJson.value, userId)
-          .then(res => {
-            // console.log('querySearch', res);
-            let pins = new Pins(res);
-            pins.addSearchScores(serpJson.value);
-            return pins;
-          });
+        return _queryMSSQLPinsBySearchTextFilterByHasFavorite(serpJson.value, userId).then(function (res) {
+          // console.log('querySearch', res);
+          var pins = new Pins(res);
+          pins.addSearchScores(serpJson.value);
+          return pins;
+        });
       });
-  }
+    }
+  }]);
+  return Pins;
+}();
 
-}
+exports.default = Pins;
+
 
 function _mapMediaFromQuery(pin) {
-  let mediaObj = {},
-    hasProp;
+  var mediaObj = {},
+      hasProp = void 0;
   for (var prop in pin) {
     if (pin.hasOwnProperty(prop) && prop.startsWith('Media.')) {
       mediaObj[prop.substring(6)] = pin[prop];
@@ -216,304 +254,260 @@ function _mapMediaFromQuery(pin) {
 }
 
 function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, pageSize) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        let StoredProcedureName;
-        let request = new mssql.Request(conn)
-          .input('offset', mssql.Int, offset)
-          .input('pageSize', mssql.Int, pageSize)
-          .input('userId', mssql.Int, userId)
-          .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
-          .input('lastPinId', mssql.Int, lastPinId)
-          .output('queryCount', mssql.Int);
+  return cp.getConnection().then(function (conn) {
+    return new _promise2.default(function (resolve, reject) {
+      var StoredProcedureName = void 0;
+      var request = new mssql.Request(conn).input('offset', mssql.Int, offset).input('pageSize', mssql.Int, pageSize).input('userId', mssql.Int, userId).input('fromDateTime', mssql.DateTime2(7), fromDateTime).input('lastPinId', mssql.Int, lastPinId).output('queryCount', mssql.Int);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
+      //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
-        if (queryForward) {
-          StoredProcedureName = 'GetPinsWithFavoriteAndLikeNext';
-          request.execute(`[dbo].[${StoredProcedureName}]`,
-            function (err, recordsets, returnValue, affected) {
-              let queryCount;
-              //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
-              if (err) {
-                reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-              }
-              // ToDo: doesn't always return value
-              try {
-                //console.log('returnValue', returnValue); // always return 0
-                queryCount = request.parameters.queryCount.value;
-                //console.log('queryCount', queryCount);
-              } catch (e) {
-                queryCount = 0;
-              }
-              //console.log('_queryMSSQLPins', recordsets[0]);
-              resolve({
-                pins: recordsets[0],
-                queryCount: queryCount
-              });
-            });
-        } else {
-          StoredProcedureName = 'GetPinsWithFavoriteAndLikePrev';
-          request.execute(`[dbo].[${StoredProcedureName}]`,
-            function (err, recordsets, returnValue, affected) {
-              let queryCount;
-              if (err) {
-                reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-              }
-              // ToDo: doesn't always return value
-              try {
-                //console.log('returnValue', returnValue); // always return 0
-                queryCount = request.parameters.queryCount.value;
-              } catch (e) {
-                queryCount = 0;
-              }
+      if (queryForward) {
+        StoredProcedureName = 'GetPinsWithFavoriteAndLikeNext';
+        request.execute('[dbo].[' + StoredProcedureName + ']', function (err, recordsets, returnValue, affected) {
+          var queryCount = void 0;
+          //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+          if (err) {
+            reject('execute [dbo].[' + StoredProcedureName + '] err: ' + err);
+          }
+          // ToDo: doesn't always return value
+          try {
+            //console.log('returnValue', returnValue); // always return 0
+            queryCount = request.parameters.queryCount.value;
+            //console.log('queryCount', queryCount);
+          } catch (e) {
+            queryCount = 0;
+          }
+          //console.log('_queryMSSQLPins', recordsets[0]);
+          resolve({
+            pins: recordsets[0],
+            queryCount: queryCount
+          });
+        });
+      } else {
+        StoredProcedureName = 'GetPinsWithFavoriteAndLikePrev';
+        request.execute('[dbo].[' + StoredProcedureName + ']', function (err, recordsets, returnValue, affected) {
+          var queryCount = void 0;
+          if (err) {
+            reject('execute [dbo].[' + StoredProcedureName + '] err: ' + err);
+          }
+          // ToDo: doesn't always return value
+          try {
+            //console.log('returnValue', returnValue); // always return 0
+            queryCount = request.parameters.queryCount.value;
+          } catch (e) {
+            queryCount = 0;
+          }
 
-              resolve({
-                pins: recordsets[0],
-                queryCount: queryCount
-              });
-            });
-        }
-      });
+          resolve({
+            pins: recordsets[0],
+            queryCount: queryCount
+          });
+        });
+      }
     });
+  });
 }
 
 function _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'GetPinsWithFavoriteAndLikeInitial';
-        let request = new mssql.Request(conn)
-          .input('pageSizePrev', mssql.Int, pageSizePrev)
-          .input('pageSizeNext', mssql.Int, pageSizeNext)
-          .input('userId', mssql.Int, userId)
-          .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
-          .output('queryCount', mssql.Int);
+  return cp.getConnection().then(function (conn) {
+    return new _promise2.default(function (resolve, reject) {
+      var StoredProcedureName = 'GetPinsWithFavoriteAndLikeInitial';
+      var request = new mssql.Request(conn).input('pageSizePrev', mssql.Int, pageSizePrev).input('pageSizeNext', mssql.Int, pageSizeNext).input('userId', mssql.Int, userId).input('fromDateTime', mssql.DateTime2(7), fromDateTime).output('queryCount', mssql.Int);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
+      //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          function (err, recordsets, returnValue, affected) {
-            let queryCount;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
-            if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // ToDo: doesn't always return value
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              queryCount = request.parameters.queryCount.value;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              queryCount = 0;
-            }
+      request.execute('[dbo].[' + StoredProcedureName + ']', function (err, recordsets, returnValue, affected) {
+        var queryCount = void 0;
+        //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+        if (err) {
+          reject('execute [dbo].[' + StoredProcedureName + '] err: ' + err);
+        }
+        // ToDo: doesn't always return value
+        try {
+          //console.log('returnValue', returnValue); // always return 0
+          queryCount = request.parameters.queryCount.value;
+          //console.log('queryCount', queryCount);
+        } catch (e) {
+          queryCount = 0;
+        }
 
-            resolve({
-              pins: recordsets[0],
-              queryCount: queryCount
-            });
-          });
+        resolve({
+          pins: recordsets[0],
+          queryCount: queryCount
+        });
       });
     });
+  });
 }
 
-
 function _queryMSSQLPinsFilterByHasFavorite(queryForward, fromDateTime, userId, lastPinId, offset, pageSize) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        let StoredProcedureName;
-        let request = new mssql.Request(conn)
-          .input('offset', mssql.Int, offset)
-          .input('pageSize', mssql.Int, pageSize)
-          .input('userId', mssql.Int, userId)
-          .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
-          .input('lastPinId', mssql.Int, lastPinId)
-          .output('queryCount', mssql.Int);
+  return cp.getConnection().then(function (conn) {
+    return new _promise2.default(function (resolve, reject) {
+      var StoredProcedureName = void 0;
+      var request = new mssql.Request(conn).input('offset', mssql.Int, offset).input('pageSize', mssql.Int, pageSize).input('userId', mssql.Int, userId).input('fromDateTime', mssql.DateTime2(7), fromDateTime).input('lastPinId', mssql.Int, lastPinId).output('queryCount', mssql.Int);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
+      //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
-        if (queryForward) {
-          StoredProcedureName = 'GetPinsWithFavoriteAndLikeNextFilterByHasFavorite';
-          request.execute(`[dbo].[${StoredProcedureName}]`,
-            function (err, recordsets, returnValue, affected) {
-              let queryCount;
-              //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
-              if (err) {
-                reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-              }
-              // ToDo: doesn't always return value
-              try {
-                //console.log('returnValue', returnValue); // always return 0
-                queryCount = request.parameters.queryCount.value;
-                //console.log('queryCount', queryCount);
-              } catch (e) {
-                queryCount = 0;
-              }
-              //console.log('_queryMSSQLPins', recordsets[0]);
-              resolve({
-                pins: recordsets[0],
-                queryCount: queryCount
-              });
-            });
-        } else {
-          StoredProcedureName = 'GetPinsWithFavoriteAndLikePrevFilterByHasFavorite';
-          request.execute(`[dbo].[${StoredProcedureName}]`,
-            function (err, recordsets, returnValue, affected) {
-              let queryCount;
-              if (err) {
-                reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-              }
-              // ToDo: doesn't always return value
-              try {
-                //console.log('returnValue', returnValue); // always return 0
-                queryCount = request.parameters.queryCount.value;
-              } catch (e) {
-                queryCount = 0;
-              }
+      if (queryForward) {
+        StoredProcedureName = 'GetPinsWithFavoriteAndLikeNextFilterByHasFavorite';
+        request.execute('[dbo].[' + StoredProcedureName + ']', function (err, recordsets, returnValue, affected) {
+          var queryCount = void 0;
+          //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+          if (err) {
+            reject('execute [dbo].[' + StoredProcedureName + '] err: ' + err);
+          }
+          // ToDo: doesn't always return value
+          try {
+            //console.log('returnValue', returnValue); // always return 0
+            queryCount = request.parameters.queryCount.value;
+            //console.log('queryCount', queryCount);
+          } catch (e) {
+            queryCount = 0;
+          }
+          //console.log('_queryMSSQLPins', recordsets[0]);
+          resolve({
+            pins: recordsets[0],
+            queryCount: queryCount
+          });
+        });
+      } else {
+        StoredProcedureName = 'GetPinsWithFavoriteAndLikePrevFilterByHasFavorite';
+        request.execute('[dbo].[' + StoredProcedureName + ']', function (err, recordsets, returnValue, affected) {
+          var queryCount = void 0;
+          if (err) {
+            reject('execute [dbo].[' + StoredProcedureName + '] err: ' + err);
+          }
+          // ToDo: doesn't always return value
+          try {
+            //console.log('returnValue', returnValue); // always return 0
+            queryCount = request.parameters.queryCount.value;
+          } catch (e) {
+            queryCount = 0;
+          }
 
-              resolve({
-                pins: recordsets[0],
-                queryCount: queryCount
-              });
-            });
-        }
-      });
+          resolve({
+            pins: recordsets[0],
+            queryCount: queryCount
+          });
+        });
+      }
     });
+  });
 }
 
 function _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'GetPinsWithFavoriteAndLikeInitialFilterByHasFavorite';
-        let request = new mssql.Request(conn)
-          .input('pageSizePrev', mssql.Int, pageSizePrev)
-          .input('pageSizeNext', mssql.Int, pageSizeNext)
-          .input('userId', mssql.Int, userId)
-          .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
-          .output('queryCount', mssql.Int);
+  return cp.getConnection().then(function (conn) {
+    return new _promise2.default(function (resolve, reject) {
+      var StoredProcedureName = 'GetPinsWithFavoriteAndLikeInitialFilterByHasFavorite';
+      var request = new mssql.Request(conn).input('pageSizePrev', mssql.Int, pageSizePrev).input('pageSizeNext', mssql.Int, pageSizeNext).input('userId', mssql.Int, userId).input('fromDateTime', mssql.DateTime2(7), fromDateTime).output('queryCount', mssql.Int);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
+      //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          function (err, recordsets, returnValue, affected) {
-            let queryCount;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
-            if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // ToDo: doesn't always return value
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              queryCount = request.parameters.queryCount.value;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              queryCount = 0;
-            }
+      request.execute('[dbo].[' + StoredProcedureName + ']', function (err, recordsets, returnValue, affected) {
+        var queryCount = void 0;
+        //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+        if (err) {
+          reject('execute [dbo].[' + StoredProcedureName + '] err: ' + err);
+        }
+        // ToDo: doesn't always return value
+        try {
+          //console.log('returnValue', returnValue); // always return 0
+          queryCount = request.parameters.queryCount.value;
+          //console.log('queryCount', queryCount);
+        } catch (e) {
+          queryCount = 0;
+        }
 
-            resolve({
-              pins: recordsets[0],
-              queryCount: queryCount
-            });
-          });
+        resolve({
+          pins: recordsets[0],
+          queryCount: queryCount
+        });
       });
     });
+  });
 }
-
 
 function _queryMSSQLPinsBySearchText(searchMatches) {
   //console.log('_queryMSSQLPinsBySearchText', searchIds)
-  const tvp = new mssql.Table();
-  tvp.columns.add('tId', mssql.Int)
+  var tvp = new mssql.Table();
+  tvp.columns.add('tId', mssql.Int);
 
-  searchMatches.forEach(match => {
+  searchMatches.forEach(function (match) {
     // tvp.columns.add(id, sql.Int);
     tvp.rows.add(+match.id);
-  })
+  });
 
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        let StoredProcedureName;
-        let request = new mssql.Request(conn)
-          .input('TableIds', mssql.TVP, tvp)
-          .output('queryCount', mssql.Int);
+  return cp.getConnection().then(function (conn) {
+    return new _promise2.default(function (resolve, reject) {
+      var StoredProcedureName = void 0;
+      var request = new mssql.Request(conn).input('TableIds', mssql.TVP, tvp).output('queryCount', mssql.Int);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
+      //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
-        StoredProcedureName = 'GetPinByIds';
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          function (err, recordsets, returnValue, affected) {
-            let queryCount;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
-            if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // ToDo: doesn't always return value
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              queryCount = request.parameters.queryCount.value;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              queryCount = 0;
-            }
-            //console.log('_queryMSSQLPins', recordsets[0]);
-            resolve({
-              pins: recordsets[0],
-              queryCount: queryCount
-            });
-          });
-
+      StoredProcedureName = 'GetPinByIds';
+      request.execute('[dbo].[' + StoredProcedureName + ']', function (err, recordsets, returnValue, affected) {
+        var queryCount = void 0;
+        //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+        if (err) {
+          reject('execute [dbo].[' + StoredProcedureName + '] err: ' + err);
+        }
+        // ToDo: doesn't always return value
+        try {
+          //console.log('returnValue', returnValue); // always return 0
+          queryCount = request.parameters.queryCount.value;
+          //console.log('queryCount', queryCount);
+        } catch (e) {
+          queryCount = 0;
+        }
+        //console.log('_queryMSSQLPins', recordsets[0]);
+        resolve({
+          pins: recordsets[0],
+          queryCount: queryCount
+        });
       });
     });
+  });
 }
 
 function _queryMSSQLPinsBySearchTextFilterByHasFavorite(searchMatches, userId) {
   //console.log('_queryMSSQLPinsBySearchText', searchIds)
-  const tvp = new mssql.Table();
-  tvp.columns.add('tId', mssql.Int)
+  var tvp = new mssql.Table();
+  tvp.columns.add('tId', mssql.Int);
 
-  searchMatches.forEach(match => {
+  searchMatches.forEach(function (match) {
     // tvp.columns.add(id, sql.Int);
     tvp.rows.add(+match.id);
-  })
+  });
 
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        let StoredProcedureName;
-        let request = new mssql.Request(conn)
-          .input('TableIds', mssql.TVP, tvp)
-          .input('userId', mssql.Int, userId)
-          .output('queryCount', mssql.Int);
+  return cp.getConnection().then(function (conn) {
+    return new _promise2.default(function (resolve, reject) {
+      var StoredProcedureName = void 0;
+      var request = new mssql.Request(conn).input('TableIds', mssql.TVP, tvp).input('userId', mssql.Int, userId).output('queryCount', mssql.Int);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
+      //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
-        StoredProcedureName = 'GetPinByIdsFilterByHasFavorite';
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          function (err, recordsets, returnValue, affected) {
-            let queryCount;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
-            if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // ToDo: doesn't always return value
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              queryCount = request.parameters.queryCount.value;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              queryCount = 0;
-            }
-            //console.log('_queryMSSQLPins', recordsets[0]);
-            resolve({
-              pins: recordsets[0],
-              queryCount: queryCount
-            });
-          });
-
+      StoredProcedureName = 'GetPinByIdsFilterByHasFavorite';
+      request.execute('[dbo].[' + StoredProcedureName + ']', function (err, recordsets, returnValue, affected) {
+        var queryCount = void 0;
+        //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+        if (err) {
+          reject('execute [dbo].[' + StoredProcedureName + '] err: ' + err);
+        }
+        // ToDo: doesn't always return value
+        try {
+          //console.log('returnValue', returnValue); // always return 0
+          queryCount = request.parameters.queryCount.value;
+          //console.log('queryCount', queryCount);
+        } catch (e) {
+          queryCount = 0;
+        }
+        //console.log('_queryMSSQLPins', recordsets[0]);
+        resolve({
+          pins: recordsets[0],
+          queryCount: queryCount
+        });
       });
     });
+  });
 }
+//# sourceMappingURL=pins.js.map

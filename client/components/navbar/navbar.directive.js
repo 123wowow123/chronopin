@@ -1,9 +1,0 @@
-'use strict';
-
-angular.module('chronopinNodeApp')
-  .directive('navbar', () => ({
-    templateUrl: 'components/navbar/navbar.html',
-    restrict: 'E',
-    controller: 'NavbarController',
-    controllerAs: 'nav'
-  }));
