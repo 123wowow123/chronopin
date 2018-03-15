@@ -1,0 +1,18 @@
+'use strict';
+
+export default function(sequelize, DataTypes) {
+  return sequelize.define('Click', {
+    _id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    userId: DataTypes.INTEGER,
+    clickId: DataTypes.INTEGER
+  }, {
+    timestamps: true,
+    createdAt: false,
+    updatedAt: 'utcUpdatedDateTime'
+  });
+}

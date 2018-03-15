@@ -1,0 +1,149 @@
+@mixin box-shadow-bottom() {
+  box-shadow: 0 2px 1px rgba(0,0,0,0.3);
+}
+@mixin box-shadow-top() {
+  box-shadow: 0 -1px 1px rgba(0,0,0,0.1);
+}
+
+.create {
+  &--detached-control {
+    // offset for footer
+    padding-bottom: 60px;
+  }
+  // child blocks
+  &__text-form {
+    position: relative;
+    background-color: $outer-container-bg;
+    @include box-shadow-bottom();
+    @extend .clearfix;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba($outer-container-bg, .7);
+    @include box-shadow-top();
+
+    &--bg {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      background-color: $outer-container-bg;
+      z-index: -1;
+    }
+
+    &--transparent {
+      background-color: transparent;
+    }
+  }
+
+  &__loader {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+  }
+
+  &__select-image {
+    @include grid-verticle-break;
+  }
+}
+
+.image-dynamic-grid {
+  position: relative;
+  display: none;
+  padding: 0;
+
+  &.angular-grid {
+    display: block;
+  }
+}
+
+.image-grid {
+  position: absolute;
+  list-style: none;
+  background: #ffffff;
+  box-sizing: border-box;
+  transition: all 0.6s ease-out;
+  transition: box-shadow 0.3s ease-out;
+  overflow: hidden;
+  border-radius: 10px;
+
+  &--selected {
+    box-shadow: 0 0 1px 2px #0044FF;
+  }
+
+  .ng-leave {
+    transition: all ease 400ms;
+  }
+
+  .ng-leave.ng-leave-active {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  .ng-enter {
+    transition: all ease 400ms;
+    transition-delay: 500ms;
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  .ng-enter.ng-enter-active {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .img-loaded {
+    // after image-grid__image loads
+    visibility: visible;
+    opacity: 1;
+  }
+  // child blocks
+  &__image-container {
+    border: 1px solid #d4d4d4;
+    padding: 20px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+    width: 225px;
+    height: 225px;
+  }
+
+  &__image {
+    width: 100%;
+    vertical-align: middle;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.sync-to-start {
+  margin: 0 auto;
+  width: 40px;
+}
+
+.glyphicon-arrow-right-down-custom {
+  // right arrow
+  &:before {
+    content: "\e092";
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : $ipad-landscape) {
+  .image-dynamic-grid {
+    @include grid-normalize-margin;
+  }
+
+  .glyphicon-arrow-right-down-custom {
+    // down arrow
+    &:before {
+      content: "\e094";
+    }
+  }
+}

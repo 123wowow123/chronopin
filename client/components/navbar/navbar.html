@@ -1,0 +1,79 @@
+<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarController">
+  <div class="nav-container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" ng-click="nav.isCollapsed = !nav.isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a href="/" class="navbar-brand">Chronopin</a>
+
+      <form class="navbar-form navbar-left" ng-submit="nav.submitSearch(nav.search)">
+        <div class="search-group">
+          <span class="form-control__texbox_logo" ng-if="nav.search" title="Algolia Search"></span>
+          <input type="text" name="search" id="search" class="search-control" ng-class="{'--show-logo': nav.search}" placeholder="Search"
+            ng-model="nav.search" ng-change="nav.autoComplete(nav.search)">
+          <span class="form-control__clear-texbox" ng-if="nav.search" ng-click="nav.clearSearch(nav.search)"></span>
+        </div>
+      </form>
+    </div>
+    <div uib-collapse=" nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+      <!-- <ul class="nav navbar-nav">
+        <li ng-repeat="item in nav.menu" ui-sref-active="active">
+          <a ui-sref="{{item.state}}">{{item.title}}</a>
+        </li>
+        <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="admin">Admin</a></li>
+      </ul> -->
+
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-show="nav.isAdmin()" ui-sref-active="active">
+          <a ui-sref="admin">Admin</a>
+        </li>
+
+        <li ng-show="nav.isLoggedIn()" ui-sref-active="active">
+          <a ui-sref="create">
+            <span class="glyphicon glyphicon-plus"></span>
+          </a>
+        </li>
+        <!-- <li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="main.modalScroller.addPin"><span class="glyphicon glyphicon-star-empty"></span></a></li> -->
+        <li ng-hide="nav.isLoggedIn()" ui-sref-active="active">
+          <a ui-sref="signup">Sign up</a>
+        </li>
+        <li ng-hide="nav.isLoggedIn()" ui-sref-active="active">
+          <a ui-sref="login">Login</a>
+        </li>
+        <li class="dropdown" ng-show="nav.isLoggedIn()" uib-dropdown keyboard-nav>
+          <a type="button" class="dropdown-toggle" uib-dropdown-toggle role="button" aria-haspopup="true" aria-expanded="false">
+            {{ nav.getCurrentUserName() }}
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+            <li ui-sref-active="active" role="menuitem" ng-show="nav.isAdmin()">
+              <a ui-sref="referral">
+                <span class="glyphicon glyphicon-piggy-bank"></span> Referral</a>
+            </li>
+            <li ui-sref-active="active" role="menuitem">
+              <a ui-sref="watch">
+                <span class="glyphicon glyphicon-heart"></span> My Board</a>
+            </li>
+            <li ui-sref-active="active" role="menuitem">
+              <a ui-sref="settings">
+                <span class="glyphicon glyphicon-cog"></span> Password</a>
+            </li>
+            <li class="divider" role="separator"></li>
+            <li ui-sref-active="active" role="menuitem">
+              <a href="#">Settings</a>
+            </li>
+          </ul>
+        </li>
+        <!-- <li class="divider" role="separator"></li> -->
+        <li ng-show="nav.isLoggedIn()">
+          <a ui-sref="logout">Logout</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>

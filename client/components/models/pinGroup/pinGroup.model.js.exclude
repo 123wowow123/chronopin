@@ -1,0 +1,100 @@
+/*global pluralize*/
+'use strict';
+
+(function() {
+
+  function PinGroupFactory(modelInjector) {
+    let Pin;
+
+    function _sortDate(a, b) {
+      return _getSortDateKey(a) - _getSortDateKey(b);
+    }
+
+    function _getSortDateKey(a) {
+      return a.utcStartDateTime.getTime();
+    }
+
+    function _sortedPush(array, value) {
+      array.splice(_.sortedIndexBy(array, value, _getSortDateKey), 0, value);
+    }
+
+    return class PinGroupFactory extends Array {
+      
+      // properties: utcStartDateTime
+
+      constructor(utcStartDateTime, ...args) {
+        // Lazy load to prevent Angular circular dependency
+        Pin = Pin || modelInjector.getPin();
+
+        // Pins collection is pushed to super Array
+        // ToDo: add individual pin constructor
+        if (!Array.isArray(utcStartDateTime)) {
+          super(...args);
+          this.utcStartDateTime = utcStartDateTime;
+          this.sort(_sortDate);
+        } else {
+          args = [utcStartDateTime, ...args];
+          super(...args);
+          this.sort(_sortDate);
+        }
+      }
+
+      // ToDo: move to filter // currently used as a key field
+      toISODateTimeString() {
+        return this.utcStartDateTime.toISOString();
+      }
+
+      getDateSince(dateTimeOrString) {
+        let dateSpan = this.getDateSpan();
+        return dateSpan.start.diff(dateSpan.end, 'days', true);
+      }
+
+      getDateSpan(dateTimeOrString) {
+        let start = moment(this.utcStartDateTime).startOf('day'),
+          end = moment(dateTimeOrString).startOf('day');
+        return {
+          start: start,
+          end: end
+        };
+      }
+
+      mergePins(pins) {
+        pins.forEach(pin => {
+          if (!(pin instanceof Pin)) {
+            pin = new Pin(pin);
+          }
+          let foundPin = _.find(this, {
+            id: pin.id
+          });
+          if (foundPin) {
+            _.merge(foundPin, pin);
+          } else {
+            _sortedPush(this, pin);
+          }
+        });
+        return this;
+      }
+
+      findPinById(id) {
+        return _.find(this, {
+          'id': id
+        });
+      }
+
+      removePinById(id) {
+        let index = _.findIndex(this, {
+          'id': id
+        });
+        if (index > -1) {
+          return this.splice(index, 1)[0];
+        }
+      }
+
+    };
+
+  }
+
+  angular.module('chronopinNodeApp.model')
+    .factory('PinGroupFactory', PinGroupFactory);
+
+})();

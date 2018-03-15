@@ -1,0 +1,130 @@
+<div class="pin">
+  <div class="pin__preview">
+
+    <div class="pin__panel" ng-if="$ctrl.pinReady">
+      <a class="pin__asset pin__asset--link" ng-if="$ctrl.pin.media[0].thumbName" ng-href="{{$ctrl.pin.sourceUrl}}">
+        <img ng-src="{{$ctrl.appConfig.thumbUrlPrefix + $ctrl.pin.media[0].thumbName}}" class="pin__image" data-actual-width="{{$ctrl.pin.media[0].thumbWidth}}" data-actual-height="{{$ctrl.pin.media[0].thumbHeight}}" />
+      </a>
+      <div class="grid__body">
+        <h4 class="grid__heading">
+          <a href="{{$ctrl.pin.sourceUrl}}">
+          {{$ctrl.pin.title}}
+          </a>
+        </h4>
+        <div class="grid__uploaded-date" ng-switch="$ctrl.pin.allDay">
+          <span ng-switch-when="true">
+            <!-- <em>All Day</em> -->
+          </span>
+          <em ng-switch-default>
+        <span >Start: {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"}}</span>
+        <span ng-if="$ctrl.pin.utcEndDateTime">to {{$ctrl.pin.utcEndDateTime | date:"MM/dd/yyyy h:mma"}}</span>
+        </em>
+        </div>
+        <div class="grid__description">
+          {{$ctrl.pin.description}}
+        </div>
+        <div class="grid__footer">
+          <div class="grid__price" ng-class="{'grid__price--negative': $ctrl.pin.price < 0}" ng-if="$ctrl.pin.price">{{$ctrl.pin.price | money}}</div>
+
+          <div class="grid__social">
+            <div class="grid__watch" ng-switch="!!$ctrl.pin.hasFavorite">
+              <button type="button" class="grid__favorite--add" ng-click="$ctrl.addFavorite($ctrl.pin)" ng-switch-default><i class="fa fa-eye" aria-hidden="true"></i> {{pin.favoriteCount}}</button>
+              <button type="button" class="grid__favorite--remove" ng-click="$ctrl.removeFavorite($ctrl.pin)" ng-switch-when="true"><i class="fa fa-eye" aria-hidden="true"></i> {{pin.favoriteCount}}</button>
+            </div>
+
+            <div class="grid__likes">
+              <div fb-like page-href="{{$ctrl.pin.sourceUrl}}">
+                <loader-pulse-bubble></loader-pulse-bubble>
+              </div>
+            </div>
+
+            <div class="grid__tip" ng-if="$ctrl.isAdmin()">
+              <button class="btn btn-link" ui-sref="main.modalScroller.editPin({id:$ctrl.pin.id})"><i class="fa fa-pencil" aria-hidden="true" ></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pin__comment">
+
+    <div fb-comment-box page-href="{{$ctrl.pin.sourceUrl}}" data-numposts="5" data-colorscheme="light" data-width="100%">
+      <loader-pac ng-if="$ctrl.pinReady"></loader-pac>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="page_loading" ng-if="!$ctrl.pinReady">
+  <h3 class="text-muted">
+    <loader-pac></loader-pac>
+    <!-- loading... -->
+  </h3>
+</div>
+
+<div class="pin_suggestions">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 clearfix">
+
+        <ul class="dynamic-grid" angular-grid="$ctrl.pinsQuery" cssGrid="true" ag-refresh-on-img-load="false" ag-reflowed="$ctrl.reflowed($event)">
+          <li id="{{pin.id}}" class="grid" data-ng-repeat="pin in $ctrl.pinsQuery">
+
+            <article class="grid__panel grid__panel--plain">
+              <p ng-if="$ctrl.isAdmin()">{{pin.searchScore}}</p>
+              <a class="grid__asset grid__asset--link" ng-if="pin.media[0].thumbName" ui-sref="pin({id:pin.id})">
+              <img ng-src="{{$ctrl.appConfig.thumbUrlPrefix + pin.media[0].thumbName}}" class="grid__image" data-actual-width="{{pin.media[0].thumbWidth}}" data-actual-height="{{pin.media[0].thumbHeight}}" />
+            </a>
+              <div class="grid__body">
+                <h4 class="grid__heading">
+                  <a class="grid__heading_link" ui-sref="pin({id:pin.id})">
+                    {{pin.title}}
+                  </a>
+                </h4>
+                <div class="grid__uploaded-date" ng-switch="pin.allDay">
+                  <span ng-switch-when="true">
+                <!-- <em>All Day</em> -->
+              </span>
+                  <em ng-switch-default>
+              <span >Start: {{pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"}}</span>
+              <span ng-if="pin.utcEndDateTime">to {{pin.utcEndDateTime | date:"MM/dd/yyyy h:mma"}}</span>
+              </em>
+                </div>
+                <div class="grid__description">
+                  {{pin.description}}
+                </div>
+                <div class="grid__footer">
+                  <div class="grid__price" ng-class="{'grid__price--negative': pin.price < 0}" ng-if="pin.price">{{pin.price | money}}</div>
+
+                  <div class="grid__social">
+                    <div class="grid__watch" ng-switch="!!pin.hasFavorite">
+                      <button type="button" class="grid__favorite--add" ng-click="$ctrl.addFavorite(pin)" ng-switch-default><i class="fa fa-eye" aria-hidden="true"></i> {{pin.favoriteCount}}</button>
+                      <button type="button" class="grid__favorite--remove" ng-click="$ctrl.removeFavorite(pin)" ng-switch-when="true"><i class="fa fa-eye" aria-hidden="true"></i> {{pin.favoriteCount}}</button>
+                    </div>
+
+                    <div class="grid__likes">
+                      <div fb-like page-href="{{pin.sourceUrl}}">
+                        <loader-pulse-bubble></loader-pulse-bubble>
+                      </div>
+                    </div>
+
+                    <div class="grid__tip" ng-if="$ctrl.isAdmin()">
+                      <button class="btn btn-link" ui-sref="main.modalScroller.editPin({id:pin.id})"><i class="fa fa-pencil" aria-hidden="true" ></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+</div>

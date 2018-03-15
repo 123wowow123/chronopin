@@ -1,0 +1,79 @@
+.nav-container {
+    @extend .container-fluid;
+    display: flex;
+}
+
+.navbar-header {
+    display: flex;
+    flex-grow: 1;
+    float: none;
+    flex-basis: 700px;
+}
+
+.navbar-toggle {
+    order: 3;
+}
+
+.navbar-form {
+    border: 0;
+    padding: 0;
+    margin: 8px !important;
+    flex-grow: 1;
+}
+
+.navbar-collapse {
+    flex-shrink: 0;
+}
+
+.search-group {
+    @extend .form-group;
+    @extend .has-feedback;
+    width: 100%;
+}
+
+.search-control {
+    @extend .form-control;
+    width: 100% !important;
+    &.\--show-logo {
+        padding-left: 35px;
+    }
+}
+
+.navbar-toggle {
+    height: 34px;
+}
+
+.form-control__texbox_logo {
+    position: absolute;
+    background: lightgray url("/assets/images/algolia-mark-blue.png") no-repeat left top;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    top: 5px;
+    left: 5px;
+}
+
+.navbar-main {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%; //box-shadow: 0 3px 3px rgba(0,0,0,0.175);
+    .navbar {
+        margin: 0;
+        padding: 0 10px;
+        border-bottom: 2px solid;
+    }
+    .navbar-default {
+        background-color: #fff;
+        border-color: #e7e7e7;
+    }
+}
+
+@media only screen and (max-width: $ipad-portrait) {
+    .nav-container {
+        flex-wrap: wrap;
+    }
+    .navbar-collapse {
+        flex-grow: 1;
+    }
+}

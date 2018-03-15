@@ -1,0 +1,98 @@
+language: node_js
+node_js:
+  - "8.6.0"
+matrix:
+  fast_finish: true
+  allow_failures:
+  - node_js: 5.1.1
+before_script:
+  - npm install -g bower grunt-cli
+#  - gem install sass
+  - bower install
+# services: mongodb
+
+script:
+  - echo $SHELL
+  - npm run deploy
+
+# before_deploy:
+#   - echo 'start deployment'
+  # - git config --local core.autocrlf true
+  # - git config --get core.autocrlf
+
+# deploy:
+#   skip_cleanup: true
+
+  #provider: azure_web_apps
+  ## username: azure_deployment_user       # If AZURE_WA_USERNAME isn't set
+  ## password: azure_deployment_password   # If AZURE_WA_PASSWORD isn't set
+  #skip_cleanup: true
+  #verbose: false
+  ## quiet: true
+
+  #- git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
+  #- git push -q https://$TAGPERM@github.com/RlonRyan/JBasicX --tags
+
+  #provider: releases
+  #api_key:
+  #  secure: GITHUB_API_KEY
+  #file_glob: true
+  #file: dist/*
+  #skip_cleanup: true
+  #on:
+  #  tags: true
+
+  # provider: script
+  # script: travis/deploy.sh
+  # on:
+  #   branch: master
+
+after_success:
+
+  - echo 'executing after_success'
+
+  # - git show-ref
+  - git config --global user.email "builds@travis-ci.com"
+  - git config --global user.name "Travis CI"
+  - export GIT_TAG=${TRAVIS_BRANCH}-0.1.${TRAVIS_BUILD_NUMBER}
+
+  - git remote add azure https://${GH_TOKEN}@github.com/123wowow123/chronopin_node.git
+
+  - git fetch azure
+  - git add -A
+  - git stash
+  - git checkout azure
+  - git merge --squash --allow-unrelated-histories -Xtheirs stash
+  # - git stash drop
+
+  - git add -A && git commit -m "${GIT_TAG}" --quiet
+  - git config --global push.default simple
+  # - git push --set-upstream origin azure
+  - git push -f
+
+  - echo 'completed after_success'
+
+after_deploy:
+  - echo 'end deployment'
+
+#after_success:
+  #- eval "$(ssh-agent -s)" #start the ssh agent
+  #- chmod 600 $GITHUB_API_SSH # this key should have push access
+  #- ssh-add $GITHUB_API_SSH
+  #- git remote add deploy https://github.com/123wowow123/chronopin_node.git
+  #- git push deploy azure
+
+
+# Needed for lwip to compile on Travis CI
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+
+branches:
+   only:
+     - master
