@@ -267,7 +267,6 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 - Extract scrapping js to own repo and used typescript
 - side info panel with summation of 'tagged' categories of items and mode/median/mean
 - Add tags and allow upvoting of existing tags to gain meta data for search engine to process +
-- search conver to algolia
 - search feature bug / show tag button when searched to jump to different section like pinterest +++
 - show pixil dimention / size via tooltip?? of scraped image
 
