@@ -279,7 +279,9 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 - Externalize web scrape to AWS Lamda
 - Externalize pre render to AWS Lamda
 - Add Redis to serve prender pages
+- Externalize search to Algolia
 - Convert to Angular 5
+- Grafana activity dashboard
 - [Use Firebase DB for denormalized push notification of app data] <https://www.youtube.com/watch?v=LAWjdZYrUgI>
 
 ## Bugs
