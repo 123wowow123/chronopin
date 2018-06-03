@@ -192,6 +192,7 @@ Running `npm test` will run the unit tests with karma.
 <https://www.anker.com/>
 <https://images.template.net/wp-content/uploads/2015/07/Timeline-Web-Element-Template-PSD.jpg>
 <http://www.grubstreet.com/>
+<https://flipboard.com/>
 
 ## Email Templates
 <https://elements.envato.com/web-templates/email-templates>
