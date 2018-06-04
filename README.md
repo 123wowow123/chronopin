@@ -193,6 +193,8 @@ Running `npm test` will run the unit tests with karma.
 <https://images.template.net/wp-content/uploads/2015/07/Timeline-Web-Element-Template-PSD.jpg>
 <http://www.grubstreet.com/>
 <https://flipboard.com/>
+<https://news360.com/home>
+Use of top banner news feed: <http://www.latimes.com/entertainment/arts/la-et-cm-hammer-made-paggett-wiegmann-20180606-story.html>
 
 ## Email Templates
 <https://elements.envato.com/web-templates/email-templates>
