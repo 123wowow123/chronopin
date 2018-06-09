@@ -7,7 +7,7 @@
 
   class MainController {
 
-    constructor($scope, pinService, dateTimeService, mainService, pinApp, Auth, appConfig, modelInjector, $log, $timeout /*, socket*/) {
+    constructor($scope, pinService, dateTimeService, mainService, pinApp, Auth, appConfig, modelInjector, $log, $timeout, socket) {
       //PinApp = PinApp || modelInjector.getPinApp();
       Bags = Bags || modelInjector.getBags();
 
@@ -16,7 +16,7 @@
       this.$timeout = $timeout;
       this.$log = $log;
       this.$scope = $scope;
-      //this.socket = socket;
+      this.socket = socket;
       this.pinService = pinService;
       this.dateTimeService = dateTimeService;
       this.mainService = mainService;
@@ -92,7 +92,7 @@
     }
 
     $onDestroy() {
-      //this.socket.unsyncUpdates('pin');
+      this.socket.unsyncUpdates('pin');
     }
 
     // Click handlers

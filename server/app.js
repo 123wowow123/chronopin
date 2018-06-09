@@ -18,7 +18,7 @@ var app = express();
 var server = http.createServer(app);
 var socketio = require('socket.io')(server, {
   //serveClient: config.env !== 'production',
-  path: '/socket.io-client'
+  path: '/socket'
 });
 require('./config/socketio').default(socketio);
 require('./config/sns').default(require('./sns'));

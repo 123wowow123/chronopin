@@ -2,6 +2,8 @@
 
 const path = require('path');
 const _ = require('lodash');
+const fs = require('fs');
+const devConfigPath = './' + process.env.NODE_ENV + '.js';
 
 function requiredProcessEnv(name) {
   if (!process.env[name]) {
@@ -104,7 +106,9 @@ let all = {
 
 // Export the config object based on the NODE_ENV
 // ==============================================
+
 module.exports = _.merge(
   all,
   require('./shared'),
-  require('./' + process.env.NODE_ENV + '.js') || {});
+  fs.existsSync(devConfigPath) ? require(devConfigPath) : {}
+);

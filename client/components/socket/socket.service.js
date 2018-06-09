@@ -7,12 +7,11 @@ angular.module('chronopinNodeApp')
     var ioSocket = io('', {
       // Send auth token on connection, you will need to DI the Auth service above
       // 'query': 'token=' + Auth.getToken()
-      path: '/socket.io-client'
+      path: '/socket'
     });
 
-    var socket = socketFactory({
-      ioSocket
-    });
+    debugger;
+    var socket = ioSocket;
 
     return {
       socket,
