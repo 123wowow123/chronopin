@@ -281,7 +281,7 @@
             if (res.data.pins.length || res.data.dateTimes.length) {
               this.gettingNext = false;
               this.pinApp.mergeBagsWithDateTimes(res.data.dateTimes);
-              this.pinApp.getBags().mergePins(res.data.pins);
+              this.pinApp.mergeBagsWithPins(res.data.pins);
               this.nextParam = res.data.linkHeader && _.omit(res.data.linkHeader.next, this.omitLinkHeaderProp);
             } else {
               this.gettingNext = false;
@@ -311,7 +311,7 @@
               this.gettingPrev = false;
 
               this.pinApp.mergeBagsWithDateTimes(res.data.dateTimes);
-              this.pinApp.getBags().mergePins(res.data.pins);
+              this.pinApp.mergeBagsWithPins(res.data.pins);
 
               this.prevParam = res.data.linkHeader && _.omit(res.data.linkHeader.previous, this.omitLinkHeaderProp);
 
