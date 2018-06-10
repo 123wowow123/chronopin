@@ -14,9 +14,9 @@ import http from 'http';
 
 
 // Setup server
-var app = express();
-var server = http.createServer(app);
-var socketio = require('socket.io')(server, {
+const app = express();
+const server = http.createServer(app);
+const socketio = require('socket.io')(server, {
   //serveClient: config.env !== 'production',
   path: '/socket'
 });

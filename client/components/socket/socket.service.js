@@ -4,14 +4,13 @@
 angular.module('chronopinNodeApp')
   .factory('socket', function(socketFactory) {
     // socket.io now auto-configures its connection when we ommit a connection url
-    var ioSocket = io('', {
+    const ioSocket = io('', {
       // Send auth token on connection, you will need to DI the Auth service above
       // 'query': 'token=' + Auth.getToken()
       path: '/socket'
     });
 
-    debugger;
-    var socket = ioSocket;
+    const socket = ioSocket;
 
     return {
       socket,
@@ -33,11 +32,11 @@ angular.module('chronopinNodeApp')
          * Syncs item creation/updates on 'model:save'
          */
         socket.on(modelName + ':save', function(item) {
-          var oldItem = _.find(array, {
+          const oldItem = _.find(array, {
             id: item.id
           });
-          var index = array.indexOf(oldItem);
-          var event = 'created';
+          const index = array.indexOf(oldItem);
+          const event = 'created';
 
           // replace oldItem if it exists
           // otherwise just add item to the collection
@@ -55,7 +54,7 @@ angular.module('chronopinNodeApp')
          * Syncs removed items on 'model:remove'
          */
         socket.on(modelName + ':remove', function(item) {
-          var event = 'deleted';
+          const event = 'deleted';
           _.remove(array, {
             id: item.id
           });
