@@ -2,7 +2,7 @@
 'use strict';
 
 angular.module('chronopinNodeApp')
-  .factory('socket', function(socketFactory) {
+  .factory('socket', function (socketFactory) {
     // socket.io now auto-configures its connection when we ommit a connection url
     const ioSocket = io('', {
       // Send auth token on connection, you will need to DI the Auth service above
@@ -11,6 +11,19 @@ angular.module('chronopinNodeApp')
     });
 
     const socket = ioSocket;
+
+    // Model events to emit
+    const events = [
+      'favorite',
+      'unfavorite',
+
+      'like',
+      'unlike',
+
+      'save',
+      'update',
+      'remove'
+    ];
 
     return {
       socket,
@@ -25,23 +38,17 @@ angular.module('chronopinNodeApp')
        * @param {Function} cb
        */
       syncUpdates(modelName, cb) {
+        debugger
         cb = cb || angular.noop;
+        const eventPrefix = modelName + ':';
 
-        /**
-         * Syncs item creation/updates on 'model:save'
-         */
-        const saveEvent = modelName + ':save';
-        socket.on(saveEvent, function(item) {
-          cb(saveEvent, item);
-        });
+        for (const eventName of events) {
+          const event = eventPrefix + eventName;
+          socket.on(event, (item) => {
+            cb(event, item);
+          });
+        }
 
-        /**
-         * Syncs removed items on 'model:remove'
-         */
-        const deleteEvent = modelName + ':remove';
-        socket.on(deleteEvent, function(item) {
-          cb(deleteEvent, item);
-        });
       },
 
       /**

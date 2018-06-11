@@ -26,7 +26,7 @@ function _removeEntity(res) {
     if (entity) {
       return entity.delete()
         .then(obj => {
-          let event = "afterDestroy";
+          const event = "afterDestroy";
           PinEmitter.emit(event, entity);
           return obj;
         })
@@ -133,7 +133,7 @@ export function create(req, res) {
     .then(({
       pin
     }) => {
-      let event = "afterCreate";
+      const event = "afterCreate";
       PinEmitter.emit(event, pin);
       return pin;
     })
@@ -152,6 +152,8 @@ export function update(req, res) {
     .then(({
       pin
     }) => {
+      const event = "afterUpdate";
+      PinEmitter.emit(event, pin);
       return pin;
     })
     .then(response.handleEntityNotFound(res))

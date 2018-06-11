@@ -121,7 +121,7 @@
         pin.hasLike = true;
         return this.pinWebService.like(id)
           .then(res => {
-            pin.likeCount = res.data.likeCount;
+            //pin.likeCount = res.data.likeCount;
           })
           .catch(err => {
             pin.hasLike = false;
@@ -136,7 +136,7 @@
         pin.hasLike = false;
         return this.pinWebService.unlike(id)
           .then(res => {
-            pin.likeCount = res.data.likeCount;
+            //pin.likeCount = res.data.likeCount;
           })
           .catch(err => {
             pin.hasLike = false;
@@ -151,7 +151,7 @@
         pin.hasFavorite = true;
         return this.pinWebService.favorite(id)
           .then(res => {
-            pin.favoriteCount = res.data.favoriteCount; //need to get value from server due to concurrency issue
+            //pin.favoriteCount = res.data.favoriteCount; //need to get value from server due to concurrency issue
           })
           .catch(err => {
             pin.hasFavorite = false;
@@ -165,7 +165,7 @@
         pin.hasFavorite = false;
         return this.pinWebService.unfavorite(id)
           .then(res => {
-            pin.favoriteCount = res.data.favoriteCount; //need to get value from server due to concurrency issue
+            //pin.favoriteCount = res.data.favoriteCount; //need to get value from server due to concurrency issue
           })
           .catch(err => {
             pin.hasFavorite = false;
@@ -225,15 +225,30 @@
       }
 
       this.socket.syncUpdates('pin', (event, item) => { ////////////////////////////
-
-        if (event === "pin:save"
-          && this.pinApp.isWithinBagDateRange(new Date(item.utcStartDateTime))) { // check if within current pin array range
-          this.pinApp.mergeBagsWithPins([item]);
-
-
-          // if inserted above current top pin on screaan
-          // this.adjustScrollAfterPinInsert(); //////////////////////////
+        debugger
+        const inRange = this.pinApp.isWithinBagDateRange(new Date(item.utcStartDateTime));
+        if (!inRange) {
+          return;
         }
+
+        switch (event) {
+          case "pin:save":
+            this.pinApp.mergeBagsWithPins([item]);
+
+            // if inserted above current top pin on screaan
+            // this.adjustScrollAfterPinInsert(); //////////////////////////
+            break;
+
+          case "pin:update":
+          case "pin:favorite":
+          case "pin:unfavorite":
+          case "pin:like":
+          case "pin:unlike":
+            this.pinApp.mergeBagsWithPins([item]);
+            break;
+        }
+
+        this.$scope.$apply();
 
       });
 
