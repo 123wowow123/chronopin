@@ -3,7 +3,8 @@
  */
 'use strict';
 
-import config from './environment';
+// import config from './environment';
+import * as log from '../log';
 
 // When the user disconnects.. perform this
 function onDisconnect(socket) {}
@@ -12,7 +13,7 @@ function onDisconnect(socket) {}
 function onConnect(socket) {
   // When the client emits 'info', this listens and executes
   socket.on('info', data => {
-    socket.log(JSON.stringify(data, null, 2));
+    socket.log(log.stringify(data));
   });
 
   // Insert sockets below

@@ -7,7 +7,7 @@
 
   class WatchController {
 
-    constructor($scope, socket, pinService, Auth, appConfig, modelInjector, $log) {
+    constructor($scope, socket, pinWebService, Auth, appConfig, modelInjector, $log) {
       PinGroups = PinGroups || modelInjector.getPinGroups();
 
       this.omitLinkHeaderProp = ['rel', 'url'];
@@ -15,7 +15,7 @@
       this.$log = $log;
       this.$scope = $scope;
       this.socket = socket;
-      this.pinService = pinService;
+      this.pinWebService = pinWebService;
       this.isAdmin = Auth.isAdmin; //bind function so each digest loop it get re-evaluated to determin latest state
       this.appConfig = appConfig;
 
@@ -39,7 +39,7 @@
 
     $onInit() {
       this.loading = true;
-      this.pinService.list({
+      this.pinWebService.list({
           hasFavorite: true
         })
         .then(res => {
@@ -50,7 +50,7 @@
           this.$scope.$on('navbar.search', (event, data) => {
             this._captureOffset();
             this.searching = true;
-            this.pinService.search({
+            this.pinWebService.search({
                 searchText: data.searchText,
                 hasFavorite: true
               })
@@ -99,7 +99,7 @@
       let id = pin.id;
       if (id) {
         pin.hasLike = true;
-        return this.pinService.like(id)
+        return this.pinWebService.like(id)
           .then(res => {
             pin.likeCount = res.data.likeCount;
           })
@@ -113,7 +113,7 @@
       let id = pin.id;
       if (id) {
         pin.hasLike = false;
-        return this.pinService.unlike(id)
+        return this.pinWebService.unlike(id)
           .then(res => {
             pin.likeCount = res.data.likeCount;
           })
@@ -127,7 +127,7 @@
       let id = pin.id;
       if (id) {
         pin.hasFavorite = true;
-        return this.pinService.favorite(id)
+        return this.pinWebService.favorite(id)
           .then(res => {
             pin.favoriteCount = res.data.favoriteCount; //need to get value from server due to concurrency issue
           })
@@ -141,7 +141,7 @@
       let id = pin.id;
       if (id) {
         pin.hasFavorite = false;
-        return this.pinService.unfavorite(id)
+        return this.pinWebService.unfavorite(id)
           .then(res => {
             pin.favoriteCount = res.data.favoriteCount; //need to get value from server due to concurrency issue
           })
@@ -155,16 +155,12 @@
       switch (true) {
         case this.loading:
           return 'loading';
-          break;
         case this.searching:
           return 'searching';
-          break;
         case this.pinGroups === this.searchPinGroups && this.searchPinGroups.length:
           return 'found';
-          break;
         case this.pinGroups === this.searchPinGroups && !this.searchPinGroups.length:
           return 'no match';
-          break;
         default:
           return 'show';
       }
@@ -279,7 +275,7 @@
           return;
         }
         this.gettingNext = true;
-        this.pinService.list(this.nextParam)
+        this.pinWebService.list(this.nextParam)
           .then(res => {
             // No repositioning of scroll needed for scolling down.
             if (res.data.pins.length) {
@@ -302,7 +298,7 @@
         }
 
         this.gettingPrev = true;
-        this.pinService.list(this.prevParam)
+        this.pinWebService.list(this.prevParam)
           .then(res => {
             let scrollHeightBefore, scrollHeightAfter, scrollHeightDelta;
 

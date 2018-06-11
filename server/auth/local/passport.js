@@ -2,8 +2,9 @@ import passport from 'passport';
 import {
   Strategy as LocalStrategy
 } from 'passport-local';
+import { User } from '../../model'
 
-function localAuthenticate(User, email, password, done) {
+function localAuthenticate(email, password, done) {
   console.log('localAuthenticate', email, password)
   User.getByEmail(email.toLowerCase())
     .then(({user}) => {

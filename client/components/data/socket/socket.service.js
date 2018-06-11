@@ -22,43 +22,25 @@ angular.module('chronopinNodeApp')
        * and an optional callback function after new items are updated.
        *
        * @param {String} modelName
-       * @param {Array} array
        * @param {Function} cb
        */
-      syncUpdates(modelName, array, cb) {
+      syncUpdates(modelName, cb) {
         cb = cb || angular.noop;
 
         /**
          * Syncs item creation/updates on 'model:save'
          */
-        socket.on(modelName + ':save', function(item) {
-          const oldItem = _.find(array, {
-            id: item.id
-          });
-          const index = array.indexOf(oldItem);
-          const event = 'created';
-
-          // replace oldItem if it exists
-          // otherwise just add item to the collection
-          if (oldItem) {
-            array.splice(index, 1, item);
-            event = 'updated';
-          } else {
-            array.push(item);
-          }
-
-          cb(event, item, array);
+        const saveEvent = modelName + ':save';
+        socket.on(saveEvent, function(item) {
+          cb(saveEvent, item);
         });
 
         /**
          * Syncs removed items on 'model:remove'
          */
-        socket.on(modelName + ':remove', function(item) {
-          const event = 'deleted';
-          _.remove(array, {
-            id: item.id
-          });
-          cb(event, item, array);
+        const deleteEvent = modelName + ':remove';
+        socket.on(deleteEvent, function(item) {
+          cb(deleteEvent, item);
         });
       },
 

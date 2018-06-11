@@ -43,6 +43,14 @@
                 return this._bags.mergeDateTimes(dateTimes);
             }
 
+            findClosestFutureBagByDateTime(dateTime) {
+                return this._bags.findClosestFutureBagByDateTime(dateTime);
+            }
+
+            isWithinBagDateRange(dateTime) {
+                return this._bags.isWithinDateRange(dateTime);
+            }
+
             // Search Bags
 
             mergeSearchBagsWithPins(pins) {
@@ -51,6 +59,14 @@
 
             mergeSearchBagsWithDateTimes(dateTimes) {
                 return this._searchBags.mergeDateTimes(dateTimes);
+            }
+
+            findClosestFutureSearchBagByDateTime(dateTime) {
+                return this._searchBags.findClosestFutureBagByDateTime(dateTime);
+            }
+
+            isWithinSearchBagDateRange(dateTime) {
+                return this._searchBags.isWithinDateRange(dateTime);
             }
 
             //// Getters

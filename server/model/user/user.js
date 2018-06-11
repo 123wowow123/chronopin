@@ -38,6 +38,8 @@ let prop = [
   'utcDeletedDateTime'
 ];
 
+export * from './facebook.mapper';
+
 export default class User {
   constructor(user) {
     if (user) {

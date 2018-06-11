@@ -7,9 +7,9 @@
 
   class PinController {
 
-    constructor($scope, $stateParams, socket, pinService, Auth, appConfig, modelInjector, $log) {
+    constructor($scope, $stateParams, socket, pinWebService, Auth, appConfig, modelInjector, $log) {
       PinsQuery = PinsQuery || modelInjector.getPinsQuery();
-      this.pinService = pinService;
+      this.pinWebService = pinWebService;
       this.$stateParams = $stateParams;
       this.appConfig = appConfig;
 
@@ -24,7 +24,7 @@
 
     $onInit() {
       let id = +this.$stateParams.id;
-      this.pinService.get(id)
+      this.pinWebService.get(id)
         .then(res => {
           this.pin = res.data;
           this.pinReady = true;;
@@ -33,7 +33,7 @@
         .then(res => {
 
           this.searching = true;
-          this.pinService.search({
+          this.pinWebService.search({
             searchText: res.data.title
           })
           .then(res => {
@@ -59,7 +59,7 @@
       let id = pin.id;
       if (id) {
         pin.hasLike = true;
-        return this.pinService.like(id)
+        return this.pinWebService.like(id)
           .then(res => {
             pin.likeCount = res.data.likeCount;
           })
@@ -73,7 +73,7 @@
       let id = pin.id;
       if (id) {
         pin.hasLike = false;
-        return this.pinService.unlike(id)
+        return this.pinWebService.unlike(id)
           .then(res => {
             pin.likeCount = res.data.likeCount;
           })
@@ -87,7 +87,7 @@
       let id = pin.id;
       if (id) {
         pin.hasFavorite = true;
-        return this.pinService.favorite(id)
+        return this.pinWebService.favorite(id)
           .then(res => {
             pin.favoriteCount = res.data.favoriteCount; //need to get value from server due to concurrency issue
           })
@@ -101,7 +101,7 @@
       let id = pin.id;
       if (id) {
         pin.hasFavorite = false;
-        return this.pinService.unfavorite(id)
+        return this.pinWebService.unfavorite(id)
           .then(res => {
             pin.favoriteCount = res.data.favoriteCount; //need to get value from server due to concurrency issue
           })

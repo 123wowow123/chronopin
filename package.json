@@ -8,6 +8,7 @@
     "babel-polyfill": "^6.23.0",
     "babel-runtime": "^6.6.1",
     "body-parser": "^1.13.3",
+    "chalk": "^2.4.1",
     "chromeless": "^1.5.0",
     "chrono-node": "^1.2.4",
     "composable-middleware": "^0.3.0",

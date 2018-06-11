@@ -1,7 +1,8 @@
 'use strict';
 
 export {
-  default as User
+  default as User,
+  facebookMapper
 } from './user/user';
 export {
   default as Users
