@@ -38,7 +38,7 @@ angular.module('chronopinNodeApp')
        * @param {Function} cb
        */
       syncUpdates(modelName, cb) {
-        debugger
+        // debugger
         cb = cb || angular.noop;
         const eventPrefix = modelName + ':';
 

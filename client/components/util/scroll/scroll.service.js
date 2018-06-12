@@ -36,17 +36,17 @@
             },
 
             captureYOffset(scrollEl) {
-                return scrollEl.scrollTop;//  || document.body.scrollTop; // remove body
+                return scrollEl.scrollTop || document.body.scrollTop; // remove body
             },
 
             adjustScrollAfterPinInsert(scrollEl) {
                 const getScrollHeightFn = ScrollUtil.getScrollHeight.bind(null, scrollEl);
                 const scrollYToFn = ScrollUtil.scrollYTo.bind(null, scrollEl);
-                const scrollHeightBefore = getScrollHeight;
+                const scrollHeightBefore = getScrollHeightFn();
 
                 // no digest necessary
                 setTimeout(() => {
-                    const scrollHeightAfter = getScrollHeightFn,
+                    const scrollHeightAfter = getScrollHeightFn(),
                         scrollHeightDelta = scrollHeightAfter - scrollHeightBefore;
                     scrollYToFn(scrollHeightDelta);
                 }, 0);

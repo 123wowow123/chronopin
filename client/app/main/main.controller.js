@@ -111,6 +111,8 @@
 
     $onDestroy() {
       this.socket.unsyncUpdates('pin');
+      this._unRegisterInfinitScroll();
+      this._unRegisterWaypointObserver();
     }
 
     // Click handlers
@@ -274,7 +276,7 @@
     }
 
     _registerInfinitScroll() {
-      let scrolledBottom = this.$scope.$on('scrolled:bottom', (event, args) => {
+      const scrolledBottom = this.$scope.$on('scrolled:bottom', (event, args) => {
         //debugger;
         if (!!this.gettingNext || !this.nextParam) {
           return;
@@ -300,7 +302,7 @@
           });
       });
 
-      let scrolledTop = this.$scope.$on('scrolled:top', (event, args) => {
+      const scrolledTop = this.$scope.$on('scrolled:top', (event, args) => {
         //debugger;
         if (!!this.gettingPrev || !this.prevParam) {
           return;
@@ -309,9 +311,6 @@
         this.gettingPrev = true;
         this.mainWebService.list(this.prevParam)
           .then(res => {
-            let scrollHeightBefore,
-              scrollHeightAfter,
-              scrollHeightDelta;
 
             if (res.data.pins.length || res.data.dateTimes.length) {
               this.gettingPrev = false;
@@ -336,6 +335,9 @@
 
       this.registeredListeners['scrolled:bottom'] = scrolledBottom;
       this.registeredListeners['scrolled:top'] = scrolledTop;
+
+
+      this._registerWaypointObserver(); /////////////////////
     }
 
     _unRegisterInfinitScroll() {
@@ -348,6 +350,31 @@
         delete this.registeredListeners['scrolled:top'];
       }
     }
+
+    _registerWaypointObserver() {
+      const waypointIn = this.$scope.$on('waypoint:in', (event, args) => {
+        //debugger;
+      });
+
+      const waypointOut = this.$scope.$on('waypoint:out', (event, args) => {
+        //debugger;
+      });
+
+      this.registeredListeners['waypoint:in'] = waypointIn;
+      this.registeredListeners['waypoint:out'] = waypointOut;
+    }
+
+    _unRegisterWaypointObserver() {
+      if (this.registeredListeners['waypoint:in']) {
+        this.registeredListeners['waypoint:in']();
+        delete this.registeredListeners['waypoint:in'];
+      }
+      if (this.registeredListeners['waypoint:out']) {
+        this.registeredListeners['waypoint:out']();
+        delete this.registeredListeners['waypoint:out'];
+      }
+    }
+
   }
 
   angular.module('chronopinNodeApp')
