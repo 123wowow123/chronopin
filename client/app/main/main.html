@@ -24,7 +24,9 @@
       <div class="col-lg-12">
         <ul class="timeline">
 
-          <li id="{{bag.toISODateTimeString()}}" class="timeline__group-container" data-ng-repeat="bag in $ctrl.bags">
+
+          <!-- Extract Into Component -->
+          <li id="{{bag.toISODateTimeString()}}" class="timeline__group-container" data-ng-repeat="bag in $ctrl.bags" waypoint="{{bag.toISODateTimeString()}}">
             <!-- Add class: measure -->
             <div class="timeline__circle" uib-tooltip-html="'{{bag.utcStartDateTime | astroweek:'EEEE'}}'" tooltip-trigger="focus">
               <i class="astro" ng-class="'astro-' + (bag.utcStartDateTime | date:'EEE' | lowercase)"></i>
@@ -64,9 +66,8 @@
                       {{pin.title}}
                     </a>
                   </h4>
-                  <a class="grid__asset grid__asset--link" ng-if="pin.media[0].thumbName" ui-sref="pin({id:pin.id})">
-                    <img ng-src="{{$ctrl.appConfig.thumbUrlPrefix + pin.media[0].thumbName}}" class="grid__image" width="{{pin.media[0].thumbWidth}}"
-                      height="{{pin.media[0].thumbHeight}}" />
+                  <a class="grid__asset grid__asset--link" ng-if="pin.media[0].thumbName" ui-sref="pin({id:pin.id})" >
+                    <img ng-src="{{$ctrl.appConfig.thumbUrlPrefix + pin.media[0].thumbName}}" class="grid__image" ng-style="{'height': pin.media[0].thumbHeight + 'px' }"/>
                   </a>
                   <div class="grid__body">
                     <div class="grid__uploaded-date" ng-switch="pin.allDay">

@@ -263,13 +263,19 @@ $bag-font-color: #515151;
         @extend .btn-link;
     }
     &__asset {
-        display: block;
+        display: flex;
+        align-items: center;
         margin-bottom: 10px;
-        max-height: 350px;
+        max-height: 450px;
         overflow-y: hidden;
+
         &--link {
             cursor: zoom-in;
         }
+    }
+    &__image {
+        width: auto;
+        object-fit: cover;
     }
     &__body {
         margin-bottom: -10px;
