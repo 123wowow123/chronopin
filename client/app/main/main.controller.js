@@ -233,7 +233,7 @@
       }
 
       this.socket.syncUpdates('pin', (event, item) => { ////////////////////////////
-        debugger
+        // debugger
         const inRange = this.pinApp.isWithinBagDateRange(new Date(item.utcStartDateTime));
         if (!inRange) {
           return;
