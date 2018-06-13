@@ -95,14 +95,14 @@
   <!-- build:js(.tmp) app/app.js -->
   <script src="app/app.js"></script>
   <!-- injector:js -->
-  <script src="components/util/util.module.js"></script>
   <script src="app/admin/admin.module.js"></script>
   <script src="components/auth/auth.module.js"></script>
   <script src="components/facebook/fb.module.js"></script>
   <script src="components/google-analytics/ga.module.js"></script>
   <script src="components/loader/loader.module.js"></script>
-  <script src="components/models/models.module.js"></script>
-  <script src="app/app.constant.js"></script>
+  <script src="components/util/util.module.js"></script>
+  <script src="model/models.module.js"></script>
+  <script src="components/filter/astroweek.filter.js"></script>
   <script src="app/create/create.controller.js"></script>
   <script src="app/create/create.js"></script>
   <script src="app/main/main.controller.js"></script>
@@ -144,25 +144,25 @@
   <script src="components/modal-scroller/modal-scroller.js"></script>
   <script src="components/modal-scroller/modal/shared/pin-form.js"></script>
   <script src="components/modal/modal.service.js"></script>
-  <script src="components/models/bag/bag.model.js"></script>
-  <script src="components/models/bags/bags.model.js"></script>
-  <script src="components/models/dateTime/dateTime.model.js"></script>
-  <script src="components/models/medium/medium.model.js"></script>
-  <script src="components/models/model.injector.js"></script>
-  <script src="app/admin/admin.router.js"></script>
-  <script src="components/models/pin/pin.model.js"></script>
-  <script src="components/models/pinApp/pinApp.model.js"></script>
-  <script src="components/models/pinsQuery/pinsQuery.js"></script>
-  <script src="components/models/user/user.model.js"></script>
-  <script src="components/mongoose-error/mongoose-error.directive.js"></script>
   <script src="components/navbar/navbar.controller.js"></script>
   <script src="components/navbar/navbar.directive.js"></script>
   <script src="components/oauth-buttons/oauth-buttons.controller.js"></script>
   <script src="components/oauth-buttons/oauth-buttons.directive.js"></script>
   <script src="components/overlap/overlap.component.js"></script>
+  <script src="components/time-block/time-block.controller.js"></script>
   <script src="components/util/global/util.service.js"></script>
   <script src="components/util/scroll/scroll.service.js"></script>
-  <script src="components/filter/astroweek.filter.js"></script>
+  <script src="app/admin/admin.router.js"></script>
+  <script src="model/bag/bag.model.js"></script>
+  <script src="model/bags/bags.model.js"></script>
+  <script src="model/dateTime/dateTime.model.js"></script>
+  <script src="model/medium/medium.model.js"></script>
+  <script src="model/model.injector.js"></script>
+  <script src="app/app.constant.js"></script>
+  <script src="model/pin/pin.model.js"></script>
+  <script src="model/pinApp/pinApp.model.js"></script>
+  <script src="model/pinsQuery/pinsQuery.js"></script>
+  <script src="model/user/user.model.js"></script>
   <!-- endinjector -->
   <!-- endbuild -->
 </body>

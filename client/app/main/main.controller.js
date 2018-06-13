@@ -193,6 +193,12 @@
       }
     }
 
+    updateInView(event) {
+      //debugger;
+      //console.log(event);
+      event.target.bag.inView = event.inView;
+    };
+
     // Private helper functions
 
     _switchPinGroups(group) {
@@ -337,7 +343,7 @@
       this.registeredListeners['scrolled:top'] = scrolledTop;
 
 
-      this._registerWaypointObserver(); /////////////////////
+
     }
 
     _unRegisterInfinitScroll() {
@@ -348,30 +354,6 @@
       if (this.registeredListeners['scrolled:top']) {
         this.registeredListeners['scrolled:top']();
         delete this.registeredListeners['scrolled:top'];
-      }
-    }
-
-    _registerWaypointObserver() {
-      const waypointIn = this.$scope.$on('waypoint:in', (event, args) => {
-        //debugger;
-      });
-
-      const waypointOut = this.$scope.$on('waypoint:out', (event, args) => {
-        //debugger;
-      });
-
-      this.registeredListeners['waypoint:in'] = waypointIn;
-      this.registeredListeners['waypoint:out'] = waypointOut;
-    }
-
-    _unRegisterWaypointObserver() {
-      if (this.registeredListeners['waypoint:in']) {
-        this.registeredListeners['waypoint:in']();
-        delete this.registeredListeners['waypoint:in'];
-      }
-      if (this.registeredListeners['waypoint:out']) {
-        this.registeredListeners['waypoint:out']();
-        delete this.registeredListeners['waypoint:out'];
       }
     }
 

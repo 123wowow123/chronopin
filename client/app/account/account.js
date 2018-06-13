@@ -13,7 +13,7 @@ angular.module('chronopinNodeApp')
         referrer: 'main',
         template: '',
         controller: function($state, Auth) {
-          var referrer = $state.params.referrer || $state.current.referrer || 'main';
+          let referrer = $state.params.referrer || $state.current.referrer || 'main';
           Auth.logout();
           $state.go(referrer);
         }
