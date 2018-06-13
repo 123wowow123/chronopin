@@ -205,7 +205,8 @@ $bag-font-color: #515151;
     }
     &__description {
         color: #333;
-        font-family: Georgia, 'Times New Roman', Times, serif
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: justify;
     }
     /** search and sort section css end ***/
     /*** description section css ***/
