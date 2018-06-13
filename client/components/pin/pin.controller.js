@@ -3,7 +3,7 @@
 
 (function () {
 
-    class TimeBlockController {
+    class PinController {
 
         constructor($scope) {
         }
@@ -12,15 +12,14 @@
             //this._registerWaypointObserver(); /////////////////////
             //debugger
         }
-
     }
 
     angular.module('chronopinNodeApp')
-        .component('timeBlock', {
-            templateUrl: 'components/time-block/time-block.html',
-            controller: TimeBlockController,
+        .component('pinBlock', {
+            templateUrl: 'components/pin/pin.html',
+            controller: PinController,
             bindings: {
-                bag: '<',
+                pin: '<',
                 config: '<'
             }
         });
