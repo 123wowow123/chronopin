@@ -24,100 +24,10 @@
       <div class="col-lg-12">
         <ul class="timeline">
 
-
           <!-- Extract Into Component -->
           <li id="{{bag.toISODateTimeString()}}" class="timeline__group-container" data-ng-repeat="bag in $ctrl.bags" waypoint="$ctrl.updateInView(event)">
-            <!-- Add class: measure -->
-            <div class="timeline__circle" uib-tooltip-html="'{{bag.utcStartDateTime | astroweek:'EEEE'}}'" tooltip-trigger="focus">
-              <i class="astro" ng-class="'astro-' + (bag.utcStartDateTime | date:'EEE' | lowercase)"></i>
-            </div>
 
-            <div class="timeline__date --1">
-              <span class="timeline__tag" ng-bind="bag.utcStartDateTime | date:'MM/dd/yyyy'"></span>
-            </div>
-            <div class="timeline__countdown --2" ng-class="{'timeline__countdown--today': bag.getDateSince() === 0}" title="{{bag.getDateSpan() | timespan}}">
-              <span class="timeline__tag" ng-bind="bag.getDateSpan() | timespan : 'y'"></span>
-            </div>
-            <!-- Need to optimize -->
-            <div class="timeline__trivia" ng-class="'--' + ($index + 3)" uib-tooltip-html="'{{(dt.description || dt.title) | escapeHTML}}'"
-              tooltip-trigger="focus" ng-repeat="dt in $ctrl.bags.findBagByDateTimeByKey(bag.toISODateTimeString()).dateTimes"
-              tooltip-placement="top-left">
-              <span class="timeline__tag" ng-bind="dt.title"></span>
-            </div>
-
-            <ul ng-if="!bag.pins.length" class="timeline__group-section --placeholder">
-              <li ng-repeat="dtp in bag.dateTimes" class="bag">
-                <div class="bag_title" ng-bind="dtp.title"></div>
-                <div class="bag_description" ng-bind="dtp.description"></div>
-              </li>
-            </ul>
-
-            <!-- Angular Grid -->
-            <ul ng-if="bag.pins.length" class="timeline__group-section dynamic-grid">
-              <li id="{{pin.id}}" class="grid --timeline" data-ng-repeat="pin in bag.pins">
-                <article class="grid__panel">
-                  <p ng-if="$ctrl.isAdmin()">{{pin.searchScore}}</p>
-                  <div class="headline-above">
-                    <time class="" datetime="{{pin.utcCreatedDateTime}}">{{pin.utcCreatedDateTime | date : "MM/dd/yyyy 'at' h:mm a" | lowercase}}</time>
-                    <span class="rubric">{{'the chain gang' | uppercase}}</span>
-                  </div>
-                  <h4 class="grid__heading">
-                    <a class="grid__heading_link" ui-sref="pin({id:pin.id})">
-                      {{pin.title}}
-                    </a>
-                  </h4>
-                  <a class="grid__asset grid__asset--link" ng-if="pin.media[0].thumbName" ui-sref="pin({id:pin.id})" >
-                    <img ng-src="{{$ctrl.appConfig.thumbUrlPrefix + pin.media[0].thumbName}}" class="grid__image" ng-style="{'height': pin.media[0].thumbHeight + 'px' }"/>
-                  </a>
-                  <div class="grid__body">
-                    <div class="grid__uploaded-date" ng-switch="pin.allDay">
-                      <span ng-switch-when="true">
-                        <!-- <em>All Day</em> -->
-                      </span>
-                      <em ng-switch-default>
-                        <span>Start: {{pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"}}</span>
-                        <span ng-if="pin.utcEndDateTime">to {{pin.utcEndDateTime | date:"MM/dd/yyyy h:mma"}}</span>
-                      </em>
-                    </div>
-                    <div class="grid__description">
-                      {{pin.description}}
-                    </div>
-                    <div class="grid__footer">
-                      <div class="grid__price" ng-class="{'grid__price--negative': pin.price < 0}" ng-if="pin.price">{{pin.price | money}}</div>
-
-                      <div class="grid__social">
-                        <div class="grid__tip" ng-if="$ctrl.isAdmin()">
-                          <button class="btn btn-link" ui-sref="main.modalScroller.editPin({id:pin.id})">
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                          </button>
-                        </div>
-
-                        <div class="grid__watch" ng-switch="!!pin.hasFavorite">
-                          <button type="button" class="grid__favorite--add" ng-click="$ctrl.addFavorite(pin)" ng-switch-default>
-                            <i class="fa fa-eye" aria-hidden="true"></i> {{pin.favoriteCount}}</button>
-                          <button type="button" class="grid__favorite--remove" ng-click="$ctrl.removeFavorite(pin)" ng-switch-when="true">
-                            <i class="fa fa-eye" aria-hidden="true"></i> {{pin.favoriteCount}}</button>
-                        </div>
-
-                        <div class="grid__likes">
-                          <div fb-like page-href="{{pin.sourceUrl}}">
-                            <loader-pulse-bubble></loader-pulse-bubble>
-                          </div>
-                          <!-- <button type="button" class="grid__like--add" ng-click="$ctrl.addLike(pin)" ng-switch-default><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
-                          <button type="button" class="grid__like--remove" ng-click="$ctrl.removeLike(pin)" ng-switch-when="true"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button> {{pin.likeCount}} -->
-                        </div>
-
-                        <!-- <div class="tip pull-right">
-                          <button type="button" class="btn btn-link" ng-click="$ctrl.info(pin)"><i class="fa fa-info" aria-hidden="true" title="{{pin.tip}}"></i></button>
-                        </div> -->
-
-                      </div>
-                    </div>
-                  </div>
-                </article>
-
-              </li>
-            </ul>
+            <time-block bag="bag" config="$ctrl.appConfig"></time-block>
 
           </li>
         </ul>
