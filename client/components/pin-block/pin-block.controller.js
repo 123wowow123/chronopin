@@ -16,7 +16,8 @@
 
     angular.module('chronopinNodeApp')
         .component('pinBlock', {
-            //templateUrl: 'components/pin-block/pin-block.html',
+            // templateUrl throws render timing off and causes issues with infinite scroll
+            // templateUrl: 'components/pin-block/pin-block.html',
             controller: PinBlockController,
             bindings: {
                 pin: '<',

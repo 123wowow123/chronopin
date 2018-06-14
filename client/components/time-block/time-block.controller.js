@@ -17,7 +17,8 @@
 
     angular.module('chronopinNodeApp')
         .component('timeBlock', {
-            //templateUrl: 'components/time-block/time-block.html',
+            // templateUrl throws render timing off and causes issues with infinite scroll
+            // templateUrl: 'components/time-block/time-block.html',
             controller: TimeBlockController,
             bindings: {
                 bag: '<',
