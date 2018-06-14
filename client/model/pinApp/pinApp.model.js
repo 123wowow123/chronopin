@@ -51,6 +51,10 @@
                 return this._bags.isWithinDateRange(dateTime);
             }
 
+            getBagsFirstInViewAsc(){
+                return this._bags.getFirstInViewAsc();
+            }
+
             // Search Bags
 
             mergeSearchBagsWithPins(pins) {
@@ -67,6 +71,10 @@
 
             isWithinSearchBagDateRange(dateTime) {
                 return this._searchBags.isWithinDateRange(dateTime);
+            }
+
+            getSearchBagsFirstInViewAsc(){
+                return this._searchBags.getFirstInViewAsc();
             }
 
             //// Getters

@@ -240,7 +240,12 @@
 
         switch (event) {
           case "pin:save":
+//debugger
+            const bag = this.pinApp.getBagsFirstInViewAsc();
             this.pinApp.mergeBagsWithPins([item]);
+            if (bag.utcStartDateTime > new Date(item.utcStartDateTime)) {
+              this.adjustScrollAfterPinInsert();
+            }
 
             // if inserted above current top pin on screaan
             // this.adjustScrollAfterPinInsert(); //////////////////////////

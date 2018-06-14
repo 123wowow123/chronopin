@@ -170,6 +170,10 @@
         return createCount;
       }
 
+      getFirstInViewAsc() {
+        return this.find((t) => t.inView);
+      }
+
 
       static getDateTimeKey(dateTime) {
         return _getKey(dateTime);
