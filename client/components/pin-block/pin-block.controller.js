@@ -3,7 +3,7 @@
 
 (function () {
 
-    class PinController {
+    class PinBlockController {
 
         constructor($scope) {
         }
@@ -16,8 +16,8 @@
 
     angular.module('chronopinNodeApp')
         .component('pinBlock', {
-            //templateUrl: 'components/pin/pin.html',
-            controller: PinController,
+            //templateUrl: 'components/pin-block/pin-block.html',
+            controller: PinBlockController,
             bindings: {
                 pin: '<',
                 config: '<'
