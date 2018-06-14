@@ -112,7 +112,6 @@
     $onDestroy() {
       this.socket.unsyncUpdates('pin');
       this._unRegisterInfinitScroll();
-      this._unRegisterWaypointObserver();
     }
 
     // Click handlers
