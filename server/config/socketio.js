@@ -42,7 +42,9 @@ export default function (socketio) {
     socket.address = socket.request.connection.remoteAddress +
       ':' + socket.request.connection.remotePort;
 
-    // console.log(`decoded_token ${JSON.stringify(socket.decoded_token)}`);
+    // console.log(`socket decoded_token ${JSON.stringify(socket.decoded_token)}`);
+
+    // console.log(`socket handshake ${JSON.stringify(socket.handshake)}`);
 
     socket.connectedAt = new Date();
 
