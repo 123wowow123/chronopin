@@ -56,6 +56,7 @@
       this.scrollToID = this.ScrollUtil.scrollToID.bind(null, scrollEl);
       this.scrollYTo = this.ScrollUtil.scrollYTo.bind(null, scrollEl);
       this.adjustScrollAfterPinInsert = this.ScrollUtil.adjustScrollAfterPinInsert.bind(null, scrollEl);
+      this.adjustScrollRelativeToCurrentView = this.ScrollUtil.adjustScrollRelativeToCurrentView.bind(null, scrollEl);
     }
 
     $onInit() {
@@ -194,7 +195,6 @@
 
     updateInView(event) {
       //debugger;
-      //console.log(event);
       event.target.bag.inView = event.inView;
     };
 
@@ -240,15 +240,12 @@
 
         switch (event) {
           case "pin:save":
-//debugger
+            //debugger
             const bag = this.pinApp.getBagsFirstInViewAsc();
             this.pinApp.mergeBagsWithPins([item]);
-            if (bag.utcStartDateTime > new Date(item.utcStartDateTime)) {
-              this.adjustScrollAfterPinInsert();
-            }
-
-            // if inserted above current top pin on screaan
-            // this.adjustScrollAfterPinInsert(); //////////////////////////
+              debugger
+              const relEl = this.ScrollUtil.getElementById(bag.toISODateTimeString());
+              this.adjustScrollRelativeToCurrentView(relEl); //////
             break;
 
           case "pin:update":

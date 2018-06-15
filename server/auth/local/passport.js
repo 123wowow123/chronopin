@@ -30,11 +30,11 @@ function localAuthenticate(email, password, done) {
     .catch(err => done(err));
 }
 
-export function setup(User, config) {
+export function setup(config) {
   passport.use(new LocalStrategy({
     usernameField: 'email',
     passwordField: 'password' // this is the virtual field on the model
   }, function(email, password, done) {
-    return localAuthenticate(User, email, password, done);
+    return localAuthenticate(email, password, done);
   }));
 }

@@ -14,6 +14,10 @@
                 return scrollEl.scrollHeight;
             },
 
+            getElementById(id) {
+                return document.getElementById(id);
+            },
+
             // Impure Function
             scrollYTo(scrollEl, y) {
                 scrollEl.scrollTop = y;
@@ -21,7 +25,7 @@
             },
 
             scrollToID(scrollEl, id) {
-                let pos = ScrollUtil.findYPos(document.getElementById(id))
+                const pos = ScrollUtil.findYPos(ScrollUtil.getElementById(id))
                 return ScrollUtil.scrollYTo(scrollEl, pos);
             },
 
@@ -50,7 +54,21 @@
                         scrollHeightDelta = scrollHeightAfter - scrollHeightBefore;
                     scrollYToFn(scrollHeightDelta);
                 }, 0);
-            }
+            },
+
+            adjustScrollRelativeToCurrentView(scrollEl, relEl) {
+                const getScrollHeightFn = ScrollUtil.getScrollHeight.bind(null, scrollEl);
+                const scrollYToFn = ScrollUtil.scrollYTo.bind(null, scrollEl);
+                const boundingClientRectBefore = relEl.getBoundingClientRect();
+                const scrollHeightBefore = ScrollUtil.captureYOffset(scrollEl);
+                // no digest necessary
+                setTimeout(() => {
+                    const boundingClientRectAfter = relEl.getBoundingClientRect(),
+                        scrollHeightPos = scrollHeightBefore + boundingClientRectAfter.top - boundingClientRectBefore.top;
+                    scrollYToFn(scrollHeightPos);
+                }, 0);
+            },
+
         };
 
         return ScrollUtil;
