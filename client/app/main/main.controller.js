@@ -115,67 +115,6 @@
       this._unRegisterInfinitScroll();
     }
 
-    // Click handlers
-
-    addLike(pin) {
-      let id = pin.id;
-      if (id) {
-        pin.hasLike = true;
-        return this.pinWebService.like(id)
-          .then(res => {
-            //pin.likeCount = res.data.likeCount;
-          })
-          .catch(err => {
-            pin.hasLike = false;
-            throw err;
-          });
-      }
-    }
-
-    removeLike(pin) {
-      let id = pin.id;
-      if (id) {
-        pin.hasLike = false;
-        return this.pinWebService.unlike(id)
-          .then(res => {
-            //pin.likeCount = res.data.likeCount;
-          })
-          .catch(err => {
-            pin.hasLike = false;
-            throw err;
-          });
-      }
-    }
-
-    addFavorite(pin) {
-      let id = pin.id;
-      if (id) {
-        pin.hasFavorite = true;
-        return this.pinWebService.favorite(id)
-          .then(res => {
-            //pin.favoriteCount = res.data.favoriteCount; //need to get value from server due to concurrency issue
-          })
-          .catch(err => {
-            pin.hasFavorite = false;
-          });
-      }
-    }
-
-    removeFavorite(pin) {
-      let id = pin.id;
-      if (id) {
-        pin.hasFavorite = false;
-        return this.pinWebService.unfavorite(id)
-          .then(res => {
-            //pin.favoriteCount = res.data.favoriteCount; //need to get value from server due to concurrency issue
-          })
-          .catch(err => {
-            pin.hasFavorite = false;
-            throw err;
-          });
-      }
-    }
-
     // View functions
 
     getTimelineStatus() {
@@ -342,8 +281,6 @@
 
       this.registeredListeners['scrolled:bottom'] = scrolledBottom;
       this.registeredListeners['scrolled:top'] = scrolledTop;
-
-
 
     }
 

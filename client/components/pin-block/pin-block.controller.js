@@ -5,13 +5,76 @@
 
     class PinBlockController {
 
-        constructor($scope) {
+        constructor($scope, pinWebService) {
+            this.pinWebService = pinWebService;
         }
 
         $onInit() {
             //this._registerWaypointObserver(); /////////////////////
             //debugger
         }
+
+        // Click handlers
+
+        addLike(pin) {
+            const id = pin.id;
+            if (id) {
+                pin.hasLike = true;
+                return this.pinWebService.like(id)
+                    .then(res => {
+                        //pin.likeCount = res.data.likeCount;
+                    })
+                    .catch(err => {
+                        pin.hasLike = false;
+                        throw err;
+                    });
+            }
+        }
+
+        removeLike(pin) {
+            const id = pin.id;
+            if (id) {
+                pin.hasLike = false;
+                return this.pinWebService.unlike(id)
+                    .then(res => {
+                        //pin.likeCount = res.data.likeCount;
+                    })
+                    .catch(err => {
+                        pin.hasLike = false;
+                        throw err;
+                    });
+            }
+        }
+
+        addFavorite(pin) {
+            const id = pin.id;
+            if (id) {
+                pin.hasFavorite = true;
+                return this.pinWebService.favorite(id)
+                    .then(res => {
+                        //pin.favoriteCount = res.data.favoriteCount; //need to get value from server due to concurrency issue
+                    })
+                    .catch(err => {
+                        pin.hasFavorite = false;
+                    });
+            }
+        }
+
+        removeFavorite(pin) {
+            const id = pin.id;
+            if (id) {
+                pin.hasFavorite = false;
+                return this.pinWebService.unfavorite(id)
+                    .then(res => {
+                        //pin.favoriteCount = res.data.favoriteCount; //need to get value from server due to concurrency issue
+                    })
+                    .catch(err => {
+                        pin.hasFavorite = false;
+                        throw err;
+                    });
+            }
+        }
+
     }
 
     angular.module('chronopinNodeApp')
@@ -31,11 +94,11 @@
         <span class="rubric">{{'the chain gang' | uppercase}}</span>
     </div>
     <h4 class="grid__heading">
-        <a class="grid__heading_link" ui-sref="$ctrl.pin({id:$ctrl.pin.id})">
+        <a class="grid__heading_link" ui-sref="pin({id:$ctrl.pin.id})">
             {{$ctrl.pin.title}}
         </a>
     </h4>
-    <a class="grid__asset grid__asset--link" ng-if="$ctrl.pin.media[0].thumbName" ui-sref="$ctrl.pin({id:$ctrl.pin.id})">
+    <a class="grid__asset grid__asset--link" ng-if="$ctrl.pin.media[0].thumbName" ui-sref="pin({id:$ctrl.pin.id})">
         <img ng-src="{{$ctrl.config.thumbUrlPrefix + $ctrl.pin.media[0].thumbName}}" class="grid__image" ng-style="{'height': $ctrl.pin.media[0].thumbHeight + 'px' }"
         />
     </a>
