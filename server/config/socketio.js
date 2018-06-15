@@ -3,11 +3,11 @@
  */
 'use strict';
 
-// import config from './environment';
+import config from './environment';
 import * as log from '../log';
 
 // When the user disconnects.. perform this
-function onDisconnect(socket) {}
+function onDisconnect(socket) { }
 
 // When the user connects.. perform this
 function onConnect(socket) {
@@ -22,7 +22,7 @@ function onConnect(socket) {
 
 }
 
-export default function(socketio) {
+export default function (socketio) {
   // socket.io (v1.x.x) is powered by debug.
   // In order to see all the debug output, set DEBUG (in server/config/local.env.js) to including the desired scope.
   //
@@ -38,13 +38,15 @@ export default function(socketio) {
   //   handshake: true
   // }));
 
-  socketio.on('connection', function(socket) {
+  socketio.on('connection', function (socket) {
     socket.address = socket.request.connection.remoteAddress +
       ':' + socket.request.connection.remotePort;
 
+    // console.log(`decoded_token ${JSON.stringify(socket.decoded_token)}`);
+
     socket.connectedAt = new Date();
 
-    socket.log = function(...data) {
+    socket.log = function (...data) {
       console.log(`SocketIO ${socket.nsp.name} [${socket.address}]`, ...data);
     };
 

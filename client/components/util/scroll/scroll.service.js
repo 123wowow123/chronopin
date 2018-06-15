@@ -47,7 +47,6 @@
                 const getScrollHeightFn = ScrollUtil.getScrollHeight.bind(null, scrollEl);
                 const scrollYToFn = ScrollUtil.scrollYTo.bind(null, scrollEl);
                 const scrollHeightBefore = getScrollHeightFn();
-
                 // no digest necessary
                 setTimeout(() => {
                     const scrollHeightAfter = getScrollHeightFn(),
@@ -57,7 +56,6 @@
             },
 
             adjustScrollRelativeToCurrentView(scrollEl, relEl) {
-                const getScrollHeightFn = ScrollUtil.getScrollHeight.bind(null, scrollEl);
                 const scrollYToFn = ScrollUtil.scrollYTo.bind(null, scrollEl);
                 const boundingClientRectBefore = relEl.getBoundingClientRect();
                 const scrollHeightBefore = ScrollUtil.captureYOffset(scrollEl);
