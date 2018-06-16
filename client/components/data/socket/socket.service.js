@@ -7,7 +7,7 @@ angular.module('chronopinNodeApp')
     const ioSocket = io('', {
       // Send auth token on connection, you will need to DI the Auth service above
       //'query': 'token=' + Auth.getToken(),
-      
+
       path: '/socket'
     });
 
@@ -58,8 +58,11 @@ angular.module('chronopinNodeApp')
        * @param modelName
        */
       unsyncUpdates(modelName) {
-        socket.removeAllListeners(modelName + ':save');
-        socket.removeAllListeners(modelName + ':remove');
+        const eventPrefix = modelName + ':';
+        for (const eventName of events) {
+          const event = eventPrefix + eventName;
+          socket.removeAllListeners(event);
+        }
       }
     };
   });
