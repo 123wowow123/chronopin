@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/123wowow123/chronopin_node.svg?branch=master)](https://travis-ci.org/123wowow123/chronopin_node) [![Dependency Status](https://david-dm.org/123wowow123/chronopin_node.svg)](https://david-dm.org/123wowow123/chronopin_node) [![devDependency Status](https://david-dm.org/123wowow123/chronopin_node/dev-status.svg)](https://david-dm.org/123wowow123/chronopin_node#info=devDependencies) [![Coverage Status](https://coveralls.io/repos/github/123wowow123/chronopin_node/badge.svg?branch=master)](https://coveralls.io/github/123wowow123/chronopin_node?branch=master)
+[![Build Status](https://travis-ci.org/123wowow123/chronopin.svg?branch=master)](https://travis-ci.org/123wowow123/chronopin) [![Dependency Status](https://david-dm.org/123wowow123/chronopin.svg)](https://david-dm.org/123wowow123/chronopin) [![devDependency Status](https://david-dm.org/123wowow123/chronopin/dev-status.svg)](https://david-dm.org/123wowow123/chronopin#info=devDependencies) [![Coverage Status](https://coveralls.io/repos/github/123wowow123/chronopin/badge.svg?branch=master)](https://coveralls.io/github/123wowow123/chronopin?branch=master)
 
 # chronopin-node
 
