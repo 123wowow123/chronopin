@@ -3,29 +3,39 @@
 
 (function () {
 
-  let PinApp, Bags;
-
   class MainController {
 
-    constructor($scope, pinService, dateTimeService, mainService, pinApp, Auth, appConfig, modelInjector, $log, $timeout /*, socket*/) {
-      //PinApp = PinApp || modelInjector.getPinApp();
-      Bags = Bags || modelInjector.getBags();
+    constructor($scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, $log, $timeout, socket) {
 
-      this.omitLinkHeaderProp = ['rel', 'url'];
+      // constants
+      const omitLinkHeaderProp = ['rel', 'url'];
+      const scrollEl = document.documentElement;
 
+      // angular service
       this.$timeout = $timeout;
       this.$log = $log;
       this.$scope = $scope;
-      //this.socket = socket;
-      this.pinService = pinService;
-      this.dateTimeService = dateTimeService;
-      this.mainService = mainService;
+
+      // data service
+      this.socket = socket;
+      this.pinWebService = pinWebService;
+      this.dateTimeWebService = dateTimeWebService;
+      this.mainWebService = mainWebService;
+
+      // util service
+      this.mainUtilService = mainUtilService;
+      this.ScrollUtil = ScrollUtil;
+      this.Util = Util;
+
+      // model service
+      this.pinApp = pinApp;
+      this.bags;
+
+      // properties
       this.isAdmin = Auth.isAdmin; //bind function so each digest loop it get re-evaluated to determin latest state
       this.appConfig = appConfig;
 
       this.registeredListeners = {};
-      this.pinApp = pinApp;
-      this.bags;
 
       this.nextParam = null;
       this.prevParam = null;
@@ -37,21 +47,30 @@
       this.searching = false;
       this.noSearchResult = false;
 
-      this.bagsOffset;
+      // scroll properties
+      this.bagsYOffset;
+
+      // partially applied functions
+      this.getLinkHeader = this.Util.getLinkHeader.bind(null, omitLinkHeaderProp);
+      this.captureYOffset = this.ScrollUtil.captureYOffset.bind(null, scrollEl);
+      this.scrollToID = this.ScrollUtil.scrollToID.bind(null, scrollEl);
+      this.scrollYTo = this.ScrollUtil.scrollYTo.bind(null, scrollEl);
+      this.adjustScrollAfterPinInsert = this.ScrollUtil.adjustScrollAfterPinInsert.bind(null, scrollEl);
+      this.adjustScrollRelativeToCurrentView = this.ScrollUtil.adjustScrollRelativeToCurrentView.bind(null, scrollEl);
     }
 
     $onInit() {
       this.loading = true;
-      this.mainService.list()
+      this.mainWebService.list()
         .then(res => {
           this._setMainBagsWithPins(res.data);
           return res;
         })
         .then(res => {
           this.$scope.$on('navbar.search', (event, data) => {
-            this._captureOffset(); // move these to pinService / add search and main varients!!!!
+            this.bagsYOffset = this.captureYOffset();
             this.searching = true;
-            this.pinService.search({
+            this.pinWebService.search({
               searchText: data.searchText
             })
               .then(res => {
@@ -68,17 +87,17 @@
         .then(res => {
           this.$scope.$on('navbar.clearSearch', (event, data) => {
             this._switchPinGroups('main');
-            if (angular.isNumber(this.bagsOffset)) {
+            if (angular.isNumber(this.bagsYOffset)) {
               setTimeout(() => {
-                this._resetToCaptureOffset();
-              }, 0)
+                this.scrollYTo(this.bagsYOffset)
+              }, 0);
             }
           });
           return res;
         })
         .then(res => {
-          this.prevParam = _.omit(res.data.linkHeader.previous, this.omitLinkHeaderProp);
-          this.nextParam = _.omit(res.data.linkHeader.next, this.omitLinkHeaderProp);
+          this.prevParam = this.getLinkHeader(res.data.linkHeader, "previous");
+          this.nextParam = this.getLinkHeader(res.data.linkHeader, "next");
           return res;
         })
         .then(res => {
@@ -92,68 +111,8 @@
     }
 
     $onDestroy() {
-      //this.socket.unsyncUpdates('pin');
-    }
-
-    // Click handlers
-
-    addLike(pin) {
-      let id = pin.id;
-      if (id) {
-        pin.hasLike = true;
-        return this.pinService.like(id)
-          .then(res => {
-            pin.likeCount = res.data.likeCount;
-          })
-          .catch(err => {
-            pin.hasLike = false;
-            throw err;
-          });
-      }
-    }
-
-    removeLike(pin) {
-      let id = pin.id;
-      if (id) {
-        pin.hasLike = false;
-        return this.pinService.unlike(id)
-          .then(res => {
-            pin.likeCount = res.data.likeCount;
-          })
-          .catch(err => {
-            pin.hasLike = false;
-            throw err;
-          });
-      }
-    }
-
-    addFavorite(pin) {
-      let id = pin.id;
-      if (id) {
-        pin.hasFavorite = true;
-        return this.pinService.favorite(id)
-          .then(res => {
-            pin.favoriteCount = res.data.favoriteCount; //need to get value from server due to concurrency issue
-          })
-          .catch(err => {
-            pin.hasFavorite = false;
-          });
-      }
-    }
-
-    removeFavorite(pin) {
-      let id = pin.id;
-      if (id) {
-        pin.hasFavorite = false;
-        return this.pinService.unfavorite(id)
-          .then(res => {
-            pin.favoriteCount = res.data.favoriteCount; //need to get value from server due to concurrency issue
-          })
-          .catch(err => {
-            pin.hasFavorite = false;
-            throw err;
-          });
-      }
+      this.socket.unsyncUpdates('pin');
+      this._unRegisterInfinitScroll();
     }
 
     // View functions
@@ -173,6 +132,11 @@
       }
     }
 
+    updateInView(event) {
+      //debugger;
+      event.target.bag.inView = event.inView;
+    };
+
     // Private helper functions
 
     _switchPinGroups(group) {
@@ -186,7 +150,7 @@
       return this;
     }
 
-    _setMainBagsWithPins(data, offsetY) {
+    _setMainBagsWithPins(data) {
       // debugger;
       let dateTime = new Date();
 
@@ -194,26 +158,49 @@
       this.pinApp.mergeBagsWithPins(data.pins);
 
       this.$timeout(() => {
-        scrollAdjust.bind(this)(dateTime, offsetY);
+        scrollAdjust.bind(this)(dateTime);
       });
 
-      function scrollAdjust(dateTime, offsetY) {
+      function scrollAdjust(dateTime) {
         //debugger;
-        let firstbag = this.pinApp.getBags().findClosestFutureBagByDateTime(dateTime);
-        if (angular.isNumber(offsetY)) {
-          this._resetToCaptureOffset();
-        } else if (firstbag) {
-          this._scrollToID(firstbag.toISODateTimeString());
+        let firstBag = this.pinApp.findClosestFutureBagByDateTime(dateTime);
+        if (firstBag) {
+          this.scrollToID(firstBag.toISODateTimeString());
         }
         this._registerInfinitScroll();
       }
 
-      this._switchPinGroups('main');
+      this.socket.syncUpdates('pin', (event, item) => { ////////////////////////////
+        // debugger
+        const inRange = this.pinApp.isWithinBagDateRange(new Date(item.utcStartDateTime));
+        if (!inRange) {
+          return;
+        }
 
-      // this.pins = this.sortPins(res.data.pins);
-      // this.socket.syncUpdates('pin', this.pins, () => {
-      //   this.refresh();
-      // }); //pin needs to map to correct obj
+        switch (event) {
+          case "pin:save":
+            //debugger
+            const bag = this.pinApp.getBagsFirstInViewAsc();
+            this.pinApp.mergeBagsWithPins([item]);
+              debugger
+              const relEl = this.ScrollUtil.getElementById(bag.toISODateTimeString());
+              this.adjustScrollRelativeToCurrentView(relEl); //////
+            break;
+
+          case "pin:update":
+          case "pin:favorite":
+          case "pin:unfavorite":
+          case "pin:like":
+          case "pin:unlike":
+            this.pinApp.mergeBagsWithPins([item]);
+            break;
+        }
+
+        this.$scope.$apply();
+
+      });
+
+      this._switchPinGroups('main');
     }
 
     // ToDo: Not working
@@ -224,65 +211,32 @@
 
       this.pinApp.mergeSearchBagsWithPins(pins);
 
-      let firstBag = this.pinApp.getSearchBags().findClosestFutureBagByDateTime(dateTime);
+      let firstBag = this.pinApp.findClosestFutureSearchBagByDateTime(dateTime);
 
       this._switchPinGroups('search');
 
       if (firstBag) {
-        this._scrollToID(firstBag.toISODateTimeString());
+        this.scrollToID(firstBag.toISODateTimeString());
         // this._registerInfinitScroll();
       }
     }
 
-    _captureOffset() {
-      this.bagsOffset = document.documentElement.scrollTop || document.body.scrollTop;
-      return this;
-    }
-
-    _resetToCaptureOffset() {
-      return this._scrollTo(this.bagsOffset);
-    }
-
-    _findPos(obj) {
-      let curtop = 0;
-      if (obj.offsetParent) {
-        do {
-          curtop += obj.offsetTop;
-        } while (!!(obj = obj.offsetParent));
-        return curtop - 52 - 5; // add height of navbar main and additional 5px
-      }
-    }
-
-    _getScrollHeight() {
-      return document.documentElement.scrollHeight;
-    }
-
-    _scrollToID(id) {
-      let pos = this._findPos(document.getElementById(id))
-      return this._scrollTo(pos);
-    }
-
-    _scrollTo(y) {
-      window.scroll(0, y);
-      return this;
-    }
-
     _registerInfinitScroll() {
-      let scrolledBottom = this.$scope.$on('scrolled:bottom', (event, args) => {
+      const scrolledBottom = this.$scope.$on('scrolled:bottom', (event, args) => {
         //debugger;
         if (!!this.gettingNext || !this.nextParam) {
           return;
         }
         this.gettingNext = true;
-        this.mainService.list(this.nextParam)
+        this.mainWebService.list(this.nextParam)
           .then(res => {
             // No repositioning of scroll needed for scolling down.
 
             if (res.data.pins.length || res.data.dateTimes.length) {
               this.gettingNext = false;
               this.pinApp.mergeBagsWithDateTimes(res.data.dateTimes);
-              this.pinApp.getBags().mergePins(res.data.pins);
-              this.nextParam = res.data.linkHeader && _.omit(res.data.linkHeader.next, this.omitLinkHeaderProp);
+              this.pinApp.mergeBagsWithPins(res.data.pins);
+              this.nextParam = this.getLinkHeader(res.data.linkHeader, "next");
             } else {
               this.gettingNext = false;
               this.nextParam = null;
@@ -294,35 +248,25 @@
           });
       });
 
-      let scrolledTop = this.$scope.$on('scrolled:top', (event, args) => {
+      const scrolledTop = this.$scope.$on('scrolled:top', (event, args) => {
         //debugger;
         if (!!this.gettingPrev || !this.prevParam) {
           return;
         }
 
         this.gettingPrev = true;
-        this.mainService.list(this.prevParam)
+        this.mainWebService.list(this.prevParam)
           .then(res => {
-            let scrollHeightBefore,
-              scrollHeightAfter,
-              scrollHeightDelta;
 
             if (res.data.pins.length || res.data.dateTimes.length) {
               this.gettingPrev = false;
 
               this.pinApp.mergeBagsWithDateTimes(res.data.dateTimes);
-              this.pinApp.getBags().mergePins(res.data.pins);
+              this.pinApp.mergeBagsWithPins(res.data.pins);
 
-              this.prevParam = res.data.linkHeader && _.omit(res.data.linkHeader.previous, this.omitLinkHeaderProp);
+              this.prevParam = this.getLinkHeader(res.data.linkHeader, "previous");
 
-              scrollHeightBefore = this._getScrollHeight();
-
-              // no digest necessary
-              setTimeout(() => {
-                scrollHeightAfter = this._getScrollHeight();
-                scrollHeightDelta = scrollHeightAfter - scrollHeightBefore;
-                this._scrollTo(scrollHeightDelta);
-              }, 0);
+              this.adjustScrollAfterPinInsert();
 
             } else {
               this.gettingPrev = false;
@@ -337,6 +281,7 @@
 
       this.registeredListeners['scrolled:bottom'] = scrolledBottom;
       this.registeredListeners['scrolled:top'] = scrolledTop;
+
     }
 
     _unRegisterInfinitScroll() {
@@ -349,6 +294,7 @@
         delete this.registeredListeners['scrolled:top'];
       }
     }
+
   }
 
   angular.module('chronopinNodeApp')

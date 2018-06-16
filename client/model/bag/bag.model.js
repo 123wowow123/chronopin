@@ -22,7 +22,7 @@
 
     return class Bag {
 
-      // properties: utcStartDateTime, dateTimes, pins
+      // properties: utcStartDateTime, dateTimes, pins, inView
 
       constructor(bag) {
         // Lazy load to prevent Angular circular dependency

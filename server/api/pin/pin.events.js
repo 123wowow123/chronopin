@@ -21,16 +21,20 @@ PinEvents.setMaxListeners(0);
 
 // Model events
 var events = {
-  'afterFavorite': 'save',
-  'afterLike': 'save',
+  'afterFavorite': 'favorite',
+  'afterUnfavorite': 'unfavorite',
+
+  'afterLike': 'like',
+  'afterUnlike': 'unlike',
+
   'afterCreate': 'save',
-  'afterUpdate': 'save',
+  'afterUpdate': 'update',
   'afterDestroy': 'remove'
 };
 
 // Register the event emitter to the model events
-for (var e in events) {
-  var event = events[e];
+for (let e in events) {
+  const event = events[e];
   PinEmitter.on(e, emitEvent(event));
   PinFavoriteEmitter.on(e, emitEvent(event));
   PinLikeEmitter.on(e, emitEvent(event));

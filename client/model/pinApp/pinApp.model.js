@@ -43,6 +43,18 @@
                 return this._bags.mergeDateTimes(dateTimes);
             }
 
+            findClosestFutureBagByDateTime(dateTime) {
+                return this._bags.findClosestFutureBagByDateTime(dateTime);
+            }
+
+            isWithinBagDateRange(dateTime) {
+                return this._bags.isWithinDateRange(dateTime);
+            }
+
+            getBagsFirstInViewAsc(){
+                return this._bags.getFirstInViewAsc();
+            }
+
             // Search Bags
 
             mergeSearchBagsWithPins(pins) {
@@ -51,6 +63,18 @@
 
             mergeSearchBagsWithDateTimes(dateTimes) {
                 return this._searchBags.mergeDateTimes(dateTimes);
+            }
+
+            findClosestFutureSearchBagByDateTime(dateTime) {
+                return this._searchBags.findClosestFutureBagByDateTime(dateTime);
+            }
+
+            isWithinSearchBagDateRange(dateTime) {
+                return this._searchBags.isWithinDateRange(dateTime);
+            }
+
+            getSearchBagsFirstInViewAsc(){
+                return this._searchBags.getFirstInViewAsc();
             }
 
             //// Getters

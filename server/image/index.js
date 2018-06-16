@@ -5,6 +5,7 @@ import streamifier from '../util/streamifier';
 import config from '../config/environment';
 import * as url from 'url';
 import * as path from 'path';
+import * as log from '../log';
 
 //pipe to sizeOf
 //pipe to thumb
@@ -36,7 +37,7 @@ export function createThumb(imageUrl) {
           };
         })
         .catch(err => {
-          console.log('save-thumb error:', err);
+          log.error('save-thumb error:', err);
           throw new Error(err);
         });
     });
@@ -55,7 +56,7 @@ export function saveThumb(thumbObj) {
       return thumbObj;
     })
     .catch(err => {
-      console.log('save-thumb error:', err);
+      log.error('save-thumb error:', err);
       throw new Error(err);
     });
 }

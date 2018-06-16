@@ -3,13 +3,10 @@
 import express from 'express';
 import passport from 'passport';
 import config from '../config/environment';
-import {
-  User
-} from '../model';
 
 // Passport Configuration
-require('./local/passport').setup(User, config);
-require('./facebook/passport').setup(User, config);
+require('./local/passport').setup(config);
+require('./facebook/passport').setup(config);
 
 var router = express.Router();
 

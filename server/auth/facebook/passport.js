@@ -6,8 +6,10 @@ import {
   Strategy as FacebookStrategy
 } from 'passport-facebook';
 import * as userController from '../../api/user/user.controller';
+import { User, facebookMapper } from '../../model'
+import * as log from '../../log';
 
-export function setup(User, config) {
+export function setup(config) {
   passport.use(new FacebookStrategy({
     clientID: config.facebook.clientID,
     clientSecret: config.facebook.clientSecret,
@@ -36,43 +38,33 @@ export function setup(User, config) {
         .then(({
           user
         }) => {
-          // console.log('found facebook user', user);
-          // debugger;
-          if (user) {
-            //console.log('found facebook user', user);
+          log.info('facebook profile', log.stringify(profile));
+          log.infoBlue('current chronopin user', log.stringify(user));
+
+          // update empty fields
+          let { user: updatedUser, updatedFields } = facebookMapper(user, profile);
+
+
+          if (user && !updatedFields.length) {
             return done(null, user);
           }
 
-          // console.log('facebook user data', {
-          //   facebookId: profile.id,
-          //   firstName: profile.name.givenName,
-          //   lastName: profile.name.familyName,
-          //   gender: profile.gender,
-          //   locale: profile._json.locale,
-          //   pictureUrl: profile.photos && profile.photos.value,
-          //   fbUpdatedTime: profile._json.updated_time,
-          //   fbverified: profile._json.verified,
-          //   email: profile.emails[0].value,
-          //   role: 'user',
-          //   provider: 'facebook'
-          // });
+          if (user && updatedFields.length) {
+            log.info("user updated the following profile properties", log.stringify(updatedFields));
+            return updatedUser
+              .update()
+              .then(({
+                user
+              }) => {
+                done(null, user);
+              })
+              .catch(err => done(err));
+          }
 
-          user = new User({
-            facebookId: profile.id,
-            firstName: profile.name.givenName,
-            lastName: profile.name.familyName,
-            gender: profile.gender,
-            locale: profile._json.locale,
-            pictureUrl: profile.photos && profile.photos[0] && profile.photos[0].value,
-            fbUpdatedTime: profile._json.updated_time,
-            fbverified: profile._json.verified,
-            email: profile.emails[0].value,
-            about: profile.about,
-            role: 'user',
-            provider: 'facebook'
-          });
+          updatedUser.role = 'user';
+          updatedUser.role = 'facebook';
 
-          // console.log('facebook user', user);
+          log.infoBlue('new chronopin user', log.stringify(updatedUser));
 
           // var request = require('request');
           // request.post((process.env.DOMAIN || '') + '/api/users', user, function (error, response, body) {
@@ -81,7 +73,7 @@ export function setup(User, config) {
           //   }
           // })
 
-          userController.addEntity(user)
+          userController.addEntity(updatedUser)
             .then(({
               user
             }) => {

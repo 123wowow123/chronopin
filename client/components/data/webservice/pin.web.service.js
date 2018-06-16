@@ -11,7 +11,7 @@
    }
 
    angular.module('chronopinNodeApp')
-     .service('pinService', function($q, $http, linkHeaderParser) {
+     .service('pinWebService', function($q, $http, linkHeaderParser) {
 
        this.get = function(id, data) {
          return $http({

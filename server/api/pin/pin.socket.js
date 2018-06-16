@@ -5,15 +5,25 @@
 'use strict';
 
 import PinEvents from './pin.events';
+import * as log from '../../log';
 
 // Model events to emit
-var events = ['save', 'remove'];
+const events = [
+  'favorite',
+  'unfavorite',
+
+  'like',
+  'unlike',
+
+  'save',
+  'update',
+  'remove'
+];
 
 export function register(socket) {
   // Bind model events to socket events
-  for (var i = 0, eventsLength = events.length; i < eventsLength; i++) {
-    var event = events[i];
-    var listener = createListener('pin:' + event, socket);
+  for (const event of events) {
+    const listener = createListener('pin:' + event, socket);
 
     PinEvents.on(event, listener);
     socket.on('disconnect', removeListener(event, listener));
@@ -22,13 +32,14 @@ export function register(socket) {
 
 
 function createListener(event, socket) {
-  return function(doc) {
+  return function (doc) {
+    log.info(event, log.stringify(doc));
     socket.emit(event, doc);
   };
 }
 
 function removeListener(event, listener) {
-  return function() {
+  return function () {
     PinEvents.removeListener(event, listener);
   };
 }

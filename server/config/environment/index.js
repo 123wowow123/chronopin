@@ -1,7 +1,12 @@
 'use strict';
 
+import * as log from '../../log';
 const path = require('path');
 const _ = require('lodash');
+const fs = require('fs');
+
+
+const configOverridePath = './' + process.env.NODE_ENV;
 
 function requiredProcessEnv(name) {
   if (!process.env[name]) {
@@ -104,7 +109,16 @@ let all = {
 
 // Export the config object based on the NODE_ENV
 // ==============================================
+const overrideConfig = require.resolve(configOverridePath) ?
+  require(configOverridePath) :
+  (
+    log
+      .error("Environment:", process.env.NODE_ENV)
+      .error("Missing Override Config:", configOverridePath)
+  );
+
 module.exports = _.merge(
   all,
   require('./shared'),
-  require('./' + process.env.NODE_ENV + '.js') || {});
+  overrideConfig || {}
+);

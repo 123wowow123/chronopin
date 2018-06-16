@@ -34,7 +34,7 @@ export function createPinLike(req, res) {
     .then(({
       pin
     }) => {
-      let event = "afterLike";
+      const event = "afterLike";
       PinLikeEmitter.emit(event, pin);
       return pin;
     })
@@ -60,7 +60,7 @@ export function removePinLike(req, res) {
     .then(({
       pin
     }) => {
-      let event = "afterUnlike";
+      const event = "afterUnlike";
       PinLikeEmitter.emit(event, pin);
       return pin;
     })

@@ -24,6 +24,7 @@
 
     function _sortedPush(array, value) {
       array.splice(_.sortedIndexBy(array, value, _getSortDateKey), 0, value);
+      return array.length;
     }
 
     function _getKey(obj) {
@@ -32,12 +33,12 @@
       return dateTime;
     }
 
-    function _createDateTimes(dateTimes) {
-      return dateTimes.map(dt => new DateTime(dt));
+    function _createDateTime(dateTime) {
+      return new DateTime(dateTime);
     }
 
-    function _createPins(pins) {
-      return pins.map(p => new Pin(p));
+    function _createPin(pin) {
+      return new Pin(pin);
     }
 
     return class Bags extends Array {
@@ -109,28 +110,36 @@
         }
       }
 
+      isWithinDateRange(utcStartDateTime) {
+        const start = this[0],
+          end = this[this.length - 1];
+        return start.utcStartDateTime <= utcStartDateTime
+          && end.utcStartDateTime >= utcStartDateTime;
+      }
+
       // Public DateTimes methods
 
       mergeDateTimes(dateTimes) {
         if (!dateTimes) {
           return 0;
         }
-        let createCount = 0
-        dateTimes = _createDateTimes(dateTimes);
-        dateTimes.forEach(dateTime => {
-          let key = _getKey(dateTime);
-          let foundBag = this.findBagByDateTimeKey(key);
-          if (foundBag) {
-            createCount += foundBag.mergeDateTimes([dateTime]);
-          } else {
-            createCount++;
-            let bag = new Bag({
-              utcStartDateTime: key,
-              dateTimes: [dateTime]
-            });
-            _sortedPush(this, bag);
-          }
-        });
+        let createCount = 0;
+        dateTimes
+          .map(_createDateTime)
+          .forEach(dateTime => {
+            let key = _getKey(dateTime);
+            let foundBag = this.findBagByDateTimeKey(key);
+            if (foundBag) {
+              createCount += foundBag.mergeDateTimes([dateTime]);
+            } else {
+              createCount++;
+              let bag = new Bag({
+                utcStartDateTime: key,
+                dateTimes: [dateTime]
+              });
+              _sortedPush(this, bag);
+            }
+          });
         return createCount;
       }
 
@@ -141,23 +150,28 @@
           return 0;
         }
         let createCount = 0;
-        pins = _createPins(pins);
-        pins.forEach(pin => {
-          let key = _getKey(pin);
-          //debugger;
-          let foundBag = this.findBagByDateTimeKey(key);
-          if (foundBag) {
-            foundBag.mergePins([pin]);
-          } else {
-            createCount++;
-            let bag = new Bag({
-              utcStartDateTime: key,
-              pins: [pin]
-            });
-            _sortedPush(this, bag);
-          }
-        });
+        pins
+          .map(_createPin)
+          .forEach(pin => {
+            let key = _getKey(pin);
+            //debugger;
+            let foundBag = this.findBagByDateTimeKey(key);
+            if (foundBag) {
+              foundBag.mergePins([pin]);
+            } else {
+              createCount++;
+              let bag = new Bag({
+                utcStartDateTime: key,
+                pins: [pin]
+              });
+              _sortedPush(this, bag);
+            }
+          });
         return createCount;
+      }
+
+      getFirstInViewAsc() {
+        return this.find((t) => t.inView);
       }
 
 

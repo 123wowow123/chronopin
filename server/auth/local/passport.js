@@ -2,8 +2,9 @@ import passport from 'passport';
 import {
   Strategy as LocalStrategy
 } from 'passport-local';
+import { User } from '../../model'
 
-function localAuthenticate(User, email, password, done) {
+function localAuthenticate(email, password, done) {
   console.log('localAuthenticate', email, password)
   User.getByEmail(email.toLowerCase())
     .then(({user}) => {
@@ -29,11 +30,11 @@ function localAuthenticate(User, email, password, done) {
     .catch(err => done(err));
 }
 
-export function setup(User, config) {
+export function setup(config) {
   passport.use(new LocalStrategy({
     usernameField: 'email',
     passwordField: 'password' // this is the virtual field on the model
   }, function(email, password, done) {
-    return localAuthenticate(User, email, password, done);
+    return localAuthenticate(email, password, done);
   }));
 }

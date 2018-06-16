@@ -11,11 +11,11 @@
   }
 
   angular.module('chronopinNodeApp')
-    .service('mainService', function($q, $http, linkHeaderParser) {
+    .service('dateTimeWebService', function($q, $http, linkHeaderParser) {
 
       this.list = function(data) {
         return $http({
-          url: '/api/main',
+          url: '/api/dates/',
           method: 'GET',
           params: data,
           transformResponse: _appendTransform($http.defaults.transformResponse,

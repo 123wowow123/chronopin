@@ -1,7 +1,16 @@
 import azure from 'azure-storage';
 import config from '../config/environment';
+import * as log from '../log';
 
 const retryOperations = new azure.ExponentialRetryPolicyFilter();
+
+if (!config.azureStorage.AZURE_STORAGE_CONNECTION_STRING) {
+  log
+    .error("Environment:", process.env.NODE_ENV)
+    .error("Missing Azure Storage Connection String, 'config.azureStorage.AZURE_STORAGE_CONNECTION_STRING'.")
+    .info(log.stringify(config));
+}
+
 const blobSvc = azure.createBlobService(config.azureStorage.AZURE_STORAGE_CONNECTION_STRING)
   .withFilter(retryOperations);
 
