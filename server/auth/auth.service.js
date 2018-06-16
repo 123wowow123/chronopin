@@ -17,6 +17,10 @@ var _environment = require('../config/environment');
 
 var _environment2 = _interopRequireDefault(_environment);
 
+var _log = require('../log');
+
+var log = _interopRequireWildcard(_log);
+
 var _jsonwebtoken = require('jsonwebtoken');
 
 var _jsonwebtoken2 = _interopRequireDefault(_jsonwebtoken);
@@ -30,6 +34,8 @@ var _composableMiddleware = require('composable-middleware');
 var _composableMiddleware2 = _interopRequireDefault(_composableMiddleware);
 
 var _model = require('../model');
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -145,7 +151,7 @@ function signToken(id, role) {
  * Set token cookie directly for oAuth strategies
  */
 function setTokenCookie(req, res) {
-  console.log('setTokenCookie', req.user);
+  // log.info('setTokenCookie', req.user)
   if (!req.user) {
     return res.status(404).send('It looks like you aren\'t logged in, please try again.');
   }

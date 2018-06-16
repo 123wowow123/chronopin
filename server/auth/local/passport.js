@@ -11,11 +11,13 @@ var _passport2 = _interopRequireDefault(_passport);
 
 var _passportLocal = require('passport-local');
 
+var _model = require('../../model');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function localAuthenticate(User, email, password, done) {
+function localAuthenticate(email, password, done) {
   console.log('localAuthenticate', email, password);
-  User.getByEmail(email.toLowerCase()).then(function (_ref) {
+  _model.User.getByEmail(email.toLowerCase()).then(function (_ref) {
     var user = _ref.user;
 
     if (!user) {
@@ -41,12 +43,12 @@ function localAuthenticate(User, email, password, done) {
   });
 }
 
-function setup(User, config) {
+function setup(config) {
   _passport2.default.use(new _passportLocal.Strategy({
     usernameField: 'email',
     passwordField: 'password' // this is the virtual field on the model
   }, function (email, password, done) {
-    return localAuthenticate(User, email, password, done);
+    return localAuthenticate(email, password, done);
   }));
 }
 //# sourceMappingURL=passport.js.map

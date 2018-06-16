@@ -19,10 +19,14 @@ PinEvents.setMaxListeners(0);
 
 // Model events
 var events = {
-  'afterFavorite': 'save',
-  'afterLike': 'save',
+  'afterFavorite': 'favorite',
+  'afterUnfavorite': 'unfavorite',
+
+  'afterLike': 'like',
+  'afterUnlike': 'unlike',
+
   'afterCreate': 'save',
-  'afterUpdate': 'save',
+  'afterUpdate': 'update',
   'afterDestroy': 'remove'
 };
 

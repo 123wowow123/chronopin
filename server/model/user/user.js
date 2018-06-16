@@ -1,5 +1,13 @@
 'use strict';
 
+var _defineProperty = require('babel-runtime/core-js/object/define-property');
+
+var _defineProperty2 = _interopRequireDefault(_defineProperty);
+
+var _keys = require('babel-runtime/core-js/object/keys');
+
+var _keys2 = _interopRequireDefault(_keys);
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -19,6 +27,18 @@ var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 var _createClass2 = require('babel-runtime/helpers/createClass');
 
 var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _facebook = require('./facebook.mapper');
+
+(0, _keys2.default)(_facebook).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  (0, _defineProperty2.default)(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _facebook[key];
+    }
+  });
+});
 
 var _mssql = require('mssql');
 

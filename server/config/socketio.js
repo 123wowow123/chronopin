@@ -7,10 +7,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _stringify = require('babel-runtime/core-js/json/stringify');
-
-var _stringify2 = _interopRequireDefault(_stringify);
-
 exports.default = function (socketio) {
   // socket.io (v1.x.x) is powered by debug.
   // In order to see all the debug output, set DEBUG (in server/config/local.env.js) to including the desired scope.
@@ -29,6 +25,10 @@ exports.default = function (socketio) {
 
   socketio.on('connection', function (socket) {
     socket.address = socket.request.connection.remoteAddress + ':' + socket.request.connection.remotePort;
+
+    // console.log(`socket decoded_token ${JSON.stringify(socket.decoded_token)}`);
+
+    // console.log(`socket handshake ${JSON.stringify(socket.handshake)}`);
 
     socket.connectedAt = new Date();
 
@@ -58,6 +58,12 @@ var _environment = require('./environment');
 
 var _environment2 = _interopRequireDefault(_environment);
 
+var _log = require('../log');
+
+var log = _interopRequireWildcard(_log);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // When the user disconnects.. perform this
@@ -67,7 +73,7 @@ function onDisconnect(socket) {}
 function onConnect(socket) {
   // When the client emits 'info', this listens and executes
   socket.on('info', function (data) {
-    socket.log((0, _stringify2.default)(data, null, 2));
+    socket.log(log.stringify(data));
   });
 
   // Insert sockets below

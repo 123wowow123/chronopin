@@ -15,11 +15,17 @@ var _user = require('../../api/user/user.controller');
 
 var userController = _interopRequireWildcard(_user);
 
+var _model = require('../../model');
+
+var _log = require('../../log');
+
+var log = _interopRequireWildcard(_log);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function setup(User, config) {
+function setup(config) {
   _passport2.default.use(new _passportFacebook.Strategy({
     clientID: config.facebook.clientID,
     clientSecret: config.facebook.clientSecret,
@@ -34,46 +40,37 @@ function setup(User, config) {
   }, function (accessToken, refreshToken, profile, done) {
     // console.log('facebook profile', profile);
 
-    User.getByFacebookId(profile.id).then(function (_ref) {
+    _model.User.getByFacebookId(profile.id).then(function (_ref) {
       var user = _ref.user;
 
-      // console.log('found facebook user', user);
-      // debugger;
-      if (user) {
-        //console.log('found facebook user', user);
+      log.info('facebook profile', log.stringify(profile));
+      log.infoBlue('current chronopin user', log.stringify(user));
+
+      // update empty fields
+
+      var _facebookMapper = (0, _model.facebookMapper)(user, profile),
+          updatedUser = _facebookMapper.user,
+          updatedFields = _facebookMapper.updatedFields;
+
+      if (user && !updatedFields.length) {
         return done(null, user);
       }
 
-      // console.log('facebook user data', {
-      //   facebookId: profile.id,
-      //   firstName: profile.name.givenName,
-      //   lastName: profile.name.familyName,
-      //   gender: profile.gender,
-      //   locale: profile._json.locale,
-      //   pictureUrl: profile.photos && profile.photos.value,
-      //   fbUpdatedTime: profile._json.updated_time,
-      //   fbverified: profile._json.verified,
-      //   email: profile.emails[0].value,
-      //   role: 'user',
-      //   provider: 'facebook'
-      // });
+      if (user && updatedFields.length) {
+        log.info("user updated the following profile properties", log.stringify(updatedFields));
+        return updatedUser.update().then(function (_ref2) {
+          var user = _ref2.user;
 
-      user = new User({
-        facebookId: profile.id,
-        firstName: profile.name.givenName,
-        lastName: profile.name.familyName,
-        gender: profile.gender,
-        locale: profile._json.locale,
-        pictureUrl: profile.photos && profile.photos[0] && profile.photos[0].value,
-        fbUpdatedTime: profile._json.updated_time,
-        fbverified: profile._json.verified,
-        email: profile.emails[0].value,
-        about: profile.about,
-        role: 'user',
-        provider: 'facebook'
-      });
+          done(null, user);
+        }).catch(function (err) {
+          return done(err);
+        });
+      }
 
-      // console.log('facebook user', user);
+      updatedUser.role = 'user';
+      updatedUser.role = 'facebook';
+
+      log.infoBlue('new chronopin user', log.stringify(updatedUser));
 
       // var request = require('request');
       // request.post((process.env.DOMAIN || '') + '/api/users', user, function (error, response, body) {
@@ -82,8 +79,8 @@ function setup(User, config) {
       //   }
       // })
 
-      userController.addEntity(user).then(function (_ref2) {
-        var user = _ref2.user;
+      userController.addEntity(updatedUser).then(function (_ref3) {
+        var user = _ref3.user;
 
         done(null, user);
       }).catch(function (err) {

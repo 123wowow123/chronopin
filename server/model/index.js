@@ -12,6 +12,12 @@ Object.defineProperty(exports, 'User', {
     return _interopRequireDefault(_user).default;
   }
 });
+Object.defineProperty(exports, 'facebookMapper', {
+  enumerable: true,
+  get: function get() {
+    return _user.facebookMapper;
+  }
+});
 
 var _users = require('./user/users');
 

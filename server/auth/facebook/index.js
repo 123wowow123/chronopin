@@ -19,7 +19,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var router = _express2.default.Router();
 
 router.get('/', _passport2.default.authenticate('facebook', {
-  scope: ['email', 'user_about_me'],
+  scope: ['email', 'public_profile'],
   failureRedirect: '/signup',
   session: false
 })).get('/callback', _passport2.default.authenticate('facebook', {

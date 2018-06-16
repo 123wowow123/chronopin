@@ -35,6 +35,10 @@ var _path = require('path');
 
 var path = _interopRequireWildcard(_path);
 
+var _log = require('../log');
+
+var log = _interopRequireWildcard(_log);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -65,7 +69,7 @@ function createThumb(imageUrl) {
         extention: _getExtention(imageUrl)
       };
     }).catch(function (err) {
-      console.log('save-thumb error:', err);
+      log.error('save-thumb error:', err);
       throw new Error(err);
     });
   });
@@ -82,7 +86,7 @@ function saveThumb(thumbObj) {
   }).then(function () {
     return thumbObj;
   }).catch(function (err) {
-    console.log('save-thumb error:', err);
+    log.error('save-thumb error:', err);
     throw new Error(err);
   });
 }

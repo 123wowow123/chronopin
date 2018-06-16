@@ -1,7 +1,16 @@
 'use strict';
 
+var _log = require('../../log');
+
+var log = _interopRequireWildcard(_log);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 var path = require('path');
 var _ = require('lodash');
+var fs = require('fs');
+
+var configOverridePath = './' + process.env.NODE_ENV;
 
 function requiredProcessEnv(name) {
   if (!process.env[name]) {
@@ -104,5 +113,7 @@ var all = {
 
 // Export the config object based on the NODE_ENV
 // ==============================================
-module.exports = _.merge(all, require('./shared'), require('./' + process.env.NODE_ENV + '.js') || {});
+var overrideConfig = require.resolve(configOverridePath) ? require(configOverridePath) : log.error("Environment:", process.env.NODE_ENV).error("Missing Override Config:", configOverridePath);
+
+module.exports = _.merge(all, require('./shared'), overrideConfig || {});
 //# sourceMappingURL=index.js.map

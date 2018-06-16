@@ -16,13 +16,11 @@ var _environment = require('../config/environment');
 
 var _environment2 = _interopRequireDefault(_environment);
 
-var _model = require('../model');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Passport Configuration
-require('./local/passport').setup(_model.User, _environment2.default);
-require('./facebook/passport').setup(_model.User, _environment2.default);
+require('./local/passport').setup(_environment2.default);
+require('./facebook/passport').setup(_environment2.default);
 
 var router = _express2.default.Router();
 

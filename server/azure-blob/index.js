@@ -22,9 +22,20 @@ var _environment = require('../config/environment');
 
 var _environment2 = _interopRequireDefault(_environment);
 
+var _log = require('../log');
+
+var log = _interopRequireWildcard(_log);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var retryOperations = new _azureStorage2.default.ExponentialRetryPolicyFilter();
+
+if (!_environment2.default.azureStorage.AZURE_STORAGE_CONNECTION_STRING) {
+  log.error("Environment:", process.env.NODE_ENV).error("Missing Azure Storage Connection String, 'config.azureStorage.AZURE_STORAGE_CONNECTION_STRING'.").info(log.stringify(_environment2.default));
+}
+
 var blobSvc = _azureStorage2.default.createBlobService(_environment2.default.azureStorage.AZURE_STORAGE_CONNECTION_STRING).withFilter(retryOperations);
 
 function createThumbContainer() {

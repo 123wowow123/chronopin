@@ -204,6 +204,8 @@ function update(req, res) {
   return pin.update().then(function (_ref3) {
     var pin = _ref3.pin;
 
+    var event = "afterUpdate";
+    PinEmitter.emit(event, pin);
     return pin;
   }).then(response.handleEntityNotFound(res)).then(response.withResult(res)).catch(response.handleError(res));
 }
