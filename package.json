@@ -121,9 +121,6 @@
     "supertest": "^3.1.0",
     "time-grunt": "^1.2.1"
   },
-  "engines": {
-    "node": "8.9.4"
-  },
   "scripts": {
     "deploy": "grunt deploy",
     "test": "grunt test",
