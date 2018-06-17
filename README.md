@@ -29,23 +29,27 @@ Run `grunt build` for building and `grunt serve` for preview.
 
 ## Run Docker Build
 
-Run `docker build -t chronopin_node .`
+Run `docker build -t chronopin .`
 
 ## Run Docker Container
 
-Run `docker run -p 9000:9000 chronopin_node`
+Run `docker run -p 9000:9000 --name chronopin chronopin`
 
 Or
 
-Run `docker run chronopin_node`
+Run `docker run chronopin`
 
 ## Upload Docker Image
 
 Run `docker login`
 
-Run `docker tag chronopin_node 123wowow123/chronopin_node:latest`
+Run `docker tag chronopin 123wowow123/chronopin:latest`
 
-Run `docker push 123wowow123/chronopin_node:latest`
+Run `docker push 123wowow123/chronopin:latest`
+
+## Run Docker Image
+
+Run `docker container run -p 9000:9000 -d chronopin` to serve site on `localhost:9000`
 
 ## Run Docker Service
 
@@ -58,6 +62,12 @@ Open shell that's logged in to the manager node
 Run `docker stack deploy -c docker-compose.yml chronopin`
 
 To remove run `docker stack rm chronopin`
+
+## Docker Utility Commands
+
+Run `docker container rm -f $(docker container ls -a -q)` to stop and remove all docker containers
+
+Run `docker container exec -i -t chronopin /bin/sh` to open shell inside of running container
 
 ## Azure Deployment
 
