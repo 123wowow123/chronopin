@@ -3,7 +3,6 @@ FROM node:9-alpine
 # Environment Variables
 
 ENV PROJECT_ROOT /code
-ENV NODE_ENV=development
 
 # Create app directory
 RUN mkdir -p $PROJECT_ROOT

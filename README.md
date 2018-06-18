@@ -33,11 +33,7 @@ Run `docker build -t chronopin .`
 
 ## Run Docker Container
 
-Run `docker run -p 9000:9000 --name chronopin chronopin`
-
-Or
-
-Run `docker run chronopin`
+Run `docker run -p 9000:9000 --name chronopin --env-file env.dev.list chronopin`
 
 ## Upload Docker Image
 
@@ -68,6 +64,8 @@ To remove run `docker stack rm chronopin`
 Run `docker container rm -f $(docker container ls -a -q)` to stop and remove all docker containers
 
 Run `docker container exec -i -t chronopin /bin/sh` to open shell inside of running container
+
+Run `docker rmi <IMAGE ID>` to remove image from local system
 
 ## Azure Deployment
 

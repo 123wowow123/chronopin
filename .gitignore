@@ -5,8 +5,6 @@ public
 .sass-cache
 .idea
 client/bower_components
-server/config/local.env.js
-server/config/local.env.js.map
 server/config/environment/development.js
 npm-debug.log
 coverage
@@ -20,3 +18,5 @@ dist
 
 chronopin_docker
 chronopin_docker\.pub
+
+env.*.list
