@@ -43,10 +43,6 @@ Run `docker tag chronopin 123wowow123/chronopin:latest`
 
 Run `docker push 123wowow123/chronopin:latest`
 
-## Run Docker Image
-
-Run `docker container run -p 9000:9000 -d chronopin` to serve site on `localhost:9000`
-
 ## Run Docker Service
 
 Run `docker-compose up` to build and serve site on `localhost:9000`
@@ -62,6 +58,8 @@ To remove run `docker stack rm chronopin`
 ## Docker Utility Commands
 
 Run `docker container rm -f $(docker container ls -a -q)` to stop and remove all docker containers
+
+Run `docker rmi $(docker images -q)` to remove all docker images
 
 Run `docker container exec -i -t chronopin /bin/sh` to open shell inside of running container
 

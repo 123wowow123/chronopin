@@ -465,12 +465,12 @@ module.exports = function(grunt) {
       server: [
         'newer:babel:client',
         'sass',
-        'scrape'
+        //'scrape'
       ],
       test: [
         'newer:babel:client',
         'sass',
-        'scrape'
+        //'scrape'
       ],
       // debug: {
       //   tasks: [
@@ -485,7 +485,7 @@ module.exports = function(grunt) {
         'newer:babel:client',
         'sass',
         //'imagemin',
-        'scrape'
+        //'scrape'
       ]
     },
 
