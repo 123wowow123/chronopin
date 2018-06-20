@@ -33,7 +33,7 @@ Run `docker build -t chronopin .`
 
 ## Run Docker Container
 
-Run `docker run -p 9000:9000 --name chronopin --env-file env.dev.list chronopin`
+Run `docker run --rm -p 9000:9000 --name chronopin --env-file env.dev.list chronopin`
 
 ## Upload Docker Image
 
@@ -65,7 +65,21 @@ Run `docker container rm -f $(docker container ls -a -q)` to stop and remove all
 
 Run `docker container exec -i -t chronopin /bin/sh` to open shell inside of running container
 
+Run `exit` after `exec -i -t` to exit TTY
+
 Run `docker rmi <IMAGE ID>` to remove image from local system
+
+Run `docker container attach quotes` to attach our Terminal's standard input, output, and error 
+
+To quit the container without stopping or killing it, we can press the key combination `Ctrl+P Ctrl+Q`. This detaches us from the container while leaving it running in the background. On the other hand, if we want to detach and stop the container at the same time, we can just press `Ctrl+C`.
+
+
+
+## Kubernetes Utility Commands
+
+Run `minikube start` 
+
+
 
 ## Azure Deployment
 

@@ -1,4 +1,4 @@
-FROM node:9-alpine
+FROM node:9-alpine AS build
  
 # Environment Variables
 
@@ -18,4 +18,5 @@ COPY . $PROJECT_ROOT
 EXPOSE 9000
 # EXPOSE 1433 
 
-CMD [ "npm", "start" ]
+ENTRYPOINT ["npm"]
+CMD ["start"]
