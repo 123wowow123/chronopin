@@ -4,7 +4,7 @@
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 // console.log('process', process);
-// console.log('process.env.NODE_ENV', env);
+console.log('process.env.NODE_ENV', env);
 
 if (env === 'development' || env === 'test') {
   // Register the Babel require hook

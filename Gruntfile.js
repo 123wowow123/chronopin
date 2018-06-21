@@ -208,13 +208,13 @@ module.exports = function(grunt) {
     },
 
     // Debugging with node inspector
-    // 'node-inspector': {
-    //   custom: {
-    //     options: {
-    //       'web-host': 'localhost'
-    //     }
-    //   }
-    // },
+    'node-inspector': {
+      custom: {
+        options: {
+          'web-host': 'localhost'
+        }
+      }
+    },
 
     // Use nodemon to run server in debug mode with an initial breakpoint
     nodemon: {
@@ -231,11 +231,13 @@ module.exports = function(grunt) {
             });
 
             // opens browser on initial server start
-            nodemon.on('config:update', function() {
-              setTimeout(function() {
-                require('open')('http://localhost:<%= express.options.port %>/debug?port=5858');
-              }, 500);
-            });
+            
+            // disabled for docker
+            // nodemon.on('config:update', function() {
+            //   setTimeout(function() {
+            //     require('open')('http://localhost:<%= express.options.port %>/debug?port=5858');
+            //   }, 500);
+            // });
           }
         }
       }
@@ -472,15 +474,15 @@ module.exports = function(grunt) {
         'sass',
         //'scrape'
       ],
-      // debug: {
-      //   tasks: [
-      //     'nodemon',
-      //     'node-inspector'
-      //   ],
-      //   options: {
-      //     logConcurrentOutput: true
-      //   }
-      // },
+      debug: {
+        tasks: [
+          'nodemon',
+          'node-inspector'
+        ],
+        options: {
+          logConcurrentOutput: true
+        }
+      },
       dist: [
         'newer:babel:client',
         'sass',
@@ -758,7 +760,7 @@ module.exports = function(grunt) {
       'postcss',
       'express:dev',
       'wait',
-      'open',
+      //'open', // disabled for docker
       'watch'
     ]);
   });
