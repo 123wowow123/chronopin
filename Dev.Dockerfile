@@ -16,5 +16,7 @@ RUN npm install -g grunt-cli
 ## Bundle app source
 COPY . ${PROJECT_ROOT}
 
+# VOLUME ["$(pwd)/server:/code/server", "$(pwd)/client:/code/client"]
+
 ENTRYPOINT ["grunt"]
 CMD ["serve"]

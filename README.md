@@ -37,12 +37,12 @@ Run `docker build -t chronopin-dev -f Dev.Dockerfile .`
 
 ## Run Docker Container
 
-Run `docker run --rm -p 9000:9000 --name chronopin --env-file env.dev.list chronopin`
+Run Prod `docker run --rm -p 9000:9000 --name chronopin --env-file env.prod.list chronopin`
 
 Or
 
 Only mounts client and server folders for development
--Run `docker run --rm -p 9000:9000 --name chronopin-dev --env-file env.dev.list -v $(pwd)/server:/code/server -v $(pwd)/client:/code/client chronopin-dev`-
+Run Dev `docker run --rm -p 9000:9000 --name chronopin-dev --env-file env.dev.list -v $(pwd)/server:/code/server -v $(pwd)/client:/code/client chronopin-dev`
 
 ## Upload Docker Image
 
@@ -63,6 +63,8 @@ Run `docker image pull docker.io/library/123wowow123/chronopin:latest`
 ## Run Docker Service
 
 Run `docker-compose up` to build and serve site on `localhost:9000`
+
+Run `docker-compose down` to shut it down
 
 ## Deploy to cloud
 
@@ -88,7 +90,9 @@ Run `docker container attach quotes` to attach our Terminal's standard input, ou
 
 To quit the container without stopping or killing it, we can press the key combination `Ctrl+P Ctrl+Q`. This detaches us from the container while leaving it running in the background. On the other hand, if we want to detach and stop the container at the same time, we can just press `Ctrl+C`.
 
+Run `docker system df` to see docker disk space usage
 
+Run `docker image prune --force --all` to remove all images that are not currently in use on our system
 
 ## Kubernetes Utility Commands
 
