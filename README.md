@@ -29,11 +29,11 @@ Run `grunt build` for building and `grunt serve` for preview.
 
 ## Run Docker Build
 
-Run `docker build -t chronopin .`
+Run Prod Build `docker build -t chronopin .`
 
 Or
 
-Run `docker build -t chronopin-dev -f Dev.Dockerfile .`
+Run Dev Build `docker build -t chronopin-dev -f Dev.Dockerfile .`
 
 ## Run Docker Container
 
@@ -94,11 +94,102 @@ Run `docker system df` to see docker disk space usage
 
 Run `docker image prune --force --all` to remove all images that are not currently in use on our system
 
-## Kubernetes Utility Commands
+## Kubernetes Docker Hub Password Set Up
+
+Run `kubectl create secret docker-registry regcred --docker-server=https://index.docker.io/v1/ --docker-username=123wowow123 --docker-password=<password> --docker-email=flynni2008@gmail.com` to create a regcred as a Kubernetes cluster uses the Secret of docker-registry type to authenticate with a container registry to pull a private image.
+
+Run `kubectl get secret regcred --output=yaml` to inspect the Secret regcred
+
+Run `kubectl get secret regcred --output="jsonpath={.data.\.dockerconfigjson}" | base64 -D` to convert .dockerconfigjson field to a readable format and view credetials
+
+## Kubernetes 
+
+### VM
 
 Run `minikube start` 
 
+### ConfigMap
 
+Run `kubectl create configmap env-config --from-file=kube/`
+
+Run `kubectl create configmap env-file --from-env-file=env.dev.list`
+
+Run `kubectl get configmaps env-file -o yaml`
+
+---
+
+Run `kubectl delete configmap env-config`
+
+Run `kubectl delete configmap env-file`
+
+### Pod
+
+Run `kubectl create -f pod.yaml` to create a pod
+
+Run `kubectl logs -f chronopin-pod` to see logs
+
+Run `kubectl get pods` to check if pods have been created
+
+---
+
+Run `kubectl delete po/chronopin-pod` to delete created pod
+
+### Pod Utility
+
+Run `kubectl exec -it chronopin-pod -c chronopin /bin/sh`
+
+Run `kubectl exec -it chronopin-pod -- /bin/bash`
+
+Run `wget -qO - localhost:9000`
+
+Run `node` 
+    `process.env` to get env variables
+
+Run `kubectl get pods`
+    `kubectl exec -it chronopin-pod<guid> -- /bin/sh`
+    `nslookup chronopin-pod<guid>`
+
+### Deployment
+
+Run `kubectl create -f deployment.yaml`
+
+Run `kubectl describe deployment`
+
+---
+
+Run `kubectl delete deployment chronopin-dep`
+
+### Service
+
+Run `kubectl create -f web-service.yaml`
+
+Run `minikube service chronopin-web --url` to check url
+
+Run `minikube service chronopin-web` to open in browser
+
+Run `kubectl get services`
+Run `IP=$(minikube ip)`
+Run `curl -4 $IP:<port>/` port is equal to NodePort value
+
+---
+
+Run `kubectl delete svc/chronopin-web`
+
+### Proxy
+
+Run `kubectl proxy`
+
+Run 
+
+```sh
+export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
+echo Name of the Pod: $POD_NAME
+```
+
+Run 
+```sh
+curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/
+```
 
 ## Azure Deployment
 
@@ -109,6 +200,13 @@ Run `ls` to see if folder structure is correct
 Run `rm -r node_modules` to remove outdated node_modules folder
 
 Run `npm install --only=prod` to install and build latest node_modules
+
+## VirtualBox 
+
+Run `rm -rf ~/.minikube`
+    `minikube start` to reinstall minikube
+
+Run `minikube dashboard` to open the Kubernetes dashboard in a browser
 
 ## Remote SSH to VM
 

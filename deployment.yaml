@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chronopin-dep
+  labels:
+    app: chronopin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: website
+      role: frontend
+  template:
+    metadata:
+      labels:
+        app: website
+        role: frontend
+    spec:
+      containers:
+      - name: chronopin
+        image: 123wowow123/chronopin:latest
+        ports:
+        - containerPort: 9000
+        # - containerPort: 80
+        # - containerPort: 443
+        # command: [ "/bin/sh", "-c", "echo $(SPECIAL_LEVEL_KEY) $(SPECIAL_TYPE_KEY)" ]
+        # command: [ "/bin/sh", "-c", "env" ]
+        envFrom: 
+        - configMapRef:
+            name: env-file 
+      imagePullSecrets:
+      - name: regcred
