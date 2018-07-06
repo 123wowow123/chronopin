@@ -1,5 +1,7 @@
 'use strict';
 
+// This data also goes into client config
+
 exports = module.exports = {
   // List of user roles
   userRoles: ['guest', 'user', 'admin'],

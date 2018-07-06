@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/123wowow123/chronopin.svg?branch=master)](https://travis-ci.org/123wowow123/chronopin) [![Dependency Status](https://david-dm.org/123wowow123/chronopin.svg)](https://david-dm.org/123wowow123/chronopin) [![devDependency Status](https://david-dm.org/123wowow123/chronopin/dev-status.svg)](https://david-dm.org/123wowow123/chronopin#info=devDependencies) [![Coverage Status](https://coveralls.io/repos/github/123wowow123/chronopin/badge.svg?branch=master)](https://coveralls.io/github/123wowow123/chronopin?branch=master)
 
-# chronopin-node
+# Chronopin
 
 This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.7.6.
 
@@ -29,31 +29,42 @@ Run `grunt build` for building and `grunt serve` for preview.
 
 ## Run Docker Build
 
-Run `docker build -t chronopin .`
-
-## Run Docker Container
-
-Run `docker run -p 9000:9000 --name chronopin chronopin`
+Run Prod Build `docker build -t chronopin .`
 
 Or
 
-Run `docker run chronopin`
+Run Dev Build `docker build -t chronopin-dev -f Dev.Dockerfile .`
+
+## Run Docker Container
+
+Run Prod `docker run --rm -p 9000:9000 --name chronopin --env-file env.prod.list chronopin`
+
+Or
+
+Only mounts client and server folders for development
+Run Dev `docker run --rm -p 9000:9000 --name chronopin-dev --env-file env.dev.list -v $(pwd)/server:/code/server -v $(pwd)/client:/code/client chronopin-dev`
 
 ## Upload Docker Image
 
 Run `docker login`
 
+Or
+
+Run `docker login -u 123wowow123 -p <my secret password>`
+
 Run `docker tag chronopin 123wowow123/chronopin:latest`
 
 Run `docker push 123wowow123/chronopin:latest`
 
-## Run Docker Image
+## Download Docker Image
 
-Run `docker container run -p 9000:9000 -d chronopin` to serve site on `localhost:9000`
+Run `docker image pull docker.io/library/123wowow123/chronopin:latest`
 
 ## Run Docker Service
 
 Run `docker-compose up` to build and serve site on `localhost:9000`
+
+Run `docker-compose down` to shut it down
 
 ## Deploy to cloud
 
@@ -67,7 +78,139 @@ To remove run `docker stack rm chronopin`
 
 Run `docker container rm -f $(docker container ls -a -q)` to stop and remove all docker containers
 
+Run `docker rmi $(docker images -q)` to remove all docker images
+
 Run `docker container exec -i -t chronopin /bin/sh` to open shell inside of running container
+
+Run `exit` after `exec -i -t` to exit TTY
+
+Run `docker rmi <IMAGE ID>` to remove image from local system
+
+Run `docker container attach quotes` to attach our Terminal's standard input, output, and error 
+
+To quit the container without stopping or killing it, we can press the key combination `Ctrl+P Ctrl+Q`. This detaches us from the container while leaving it running in the background. On the other hand, if we want to detach and stop the container at the same time, we can just press `Ctrl+C`.
+
+Run `docker system df` to see docker disk space usage
+
+Run `docker image prune --force --all` to remove all images that are not currently in use on our system
+
+## Kubernetes Docker Hub Password Set Up
+
+Run `kubectl create secret docker-registry regcred --docker-server=https://index.docker.io/v1/ --docker-username=123wowow123 --docker-password=<password> --docker-email=flynni2008@gmail.com` to create a regcred as a Kubernetes cluster uses the Secret of docker-registry type to authenticate with a container registry to pull a private image.
+
+Run `kubectl get secret regcred --output=yaml` to inspect the Secret regcred
+
+Run `kubectl get secret regcred --output="jsonpath={.data.\.dockerconfigjson}" | base64 -D` to convert .dockerconfigjson field to a readable format and view credetials
+
+## Kubernetes 
+
+### VM
+
+Run `minikube start` 
+
+### ConfigMap
+
+Run `kubectl create configmap env-config --from-file=kube/`
+
+Run `kubectl create configmap env-file --from-env-file=env.dev.list`
+
+Run `kubectl get configmaps env-file -o yaml`
+
+---
+
+Run `kubectl delete configmap env-config`
+
+Run `kubectl delete configmap env-file`
+
+### Pod
+
+Run `kubectl create -f pod.yaml` to create a pod
+
+Run `kubectl logs -f chronopin-pod` to see logs
+
+Run `kubectl get pods` to check if pods have been created
+
+---
+
+Run `kubectl delete po/chronopin-pod` to delete created pod
+
+### Pod Utility
+
+Run `kubectl exec -it chronopin-pod -c chronopin /bin/sh`
+
+Run `kubectl exec -it chronopin-pod -- /bin/bash`
+
+Run `wget -qO - localhost:9000`
+
+Run `node` 
+    `process.env` to get env variables
+
+Run `kubectl get pods`
+    `kubectl exec -it chronopin-pod<guid> -- /bin/sh`
+    `nslookup chronopin-pod<guid>`
+
+### Deploy All
+
+Run `kubectl create -f kube/deployment.yaml` to deploy all
+
+Run `kubectl describe deployment`
+
+---
+
+Run `kubectl delete deployment chronopin-dep`
+
+### Deploy/Clean All
+
+First time run `chmod +x ./kube/deploy.sh` & `chmod +x ./kube/clean.sh` to set execute permission
+
+Run `./kube/deploy.sh` to deploy deployment and services
+
+Run `./kube/clean.sh` to clean deployment and services
+
+### Rolling Update
+
+Rum to start rolling update
+```sh
+kubectl set image deployment/chronopin-dep \
+    chronopin=123wowow123/chronopin:latest
+```
+
+Run to check rollout status
+`kubectl rollout status deploy/chronopin-dep`
+
+Run `rollout undo` to undo rollout
+
+### Service
+
+Run `kubectl create -f web-service.yaml`
+
+Run `minikube service chronopin-lb --url` to check url
+
+Run `minikube service chronopin-lb` to open in browser
+
+Run `kubectl get services`
+Run `IP=$(minikube ip)`
+Run `curl -4 $IP:<port>/` port is equal to NodePort value
+
+---
+
+Run `kubectl delete svc/chronopin-web`
+
+### Proxy
+
+Run `kubectl proxy`
+
+Run 
+
+```sh
+export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
+echo Name of the Pod: $POD_NAME
+```
+
+Run 
+```sh
+curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/
+```
 
 ## Azure Deployment
 
@@ -78,6 +221,13 @@ Run `ls` to see if folder structure is correct
 Run `rm -r node_modules` to remove outdated node_modules folder
 
 Run `npm install --only=prod` to install and build latest node_modules
+
+## VirtualBox 
+
+Run `rm -rf ~/.minikube`
+    `minikube start` to reinstall minikube
+
+Run `minikube dashboard` to open the Kubernetes dashboard in a browser
 
 ## Remote SSH to VM
 
@@ -103,7 +253,7 @@ Legacy node 6 run `node --inspect --debug-brk server/index.js` for debugging Nod
 
 Run `node --inspect-brk scripts/db/index.js` for debugging Node :: create:db
 
-Legacy node 6 run `node --inspect --debug-brk scripts/db/index.js` for debugging Node
+Legacy node 6 run `node --inspect --debug-brk scripts/db/index.js` for debugging Node :: create:db
 
 Run `node --inspect-brk scripts/data/index.js --seed` for debugging Node :: create:data
 
@@ -282,6 +432,10 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 - Add tags and allow upvoting of existing tags to gain meta data for search engine to process +
 - search feature bug / show tag button when searched to jump to different section like pinterest +++
 - show pixil dimention / size via tooltip?? of scraped image
+
+- Add FB privacy policy page
+- https://gist.github.com/muddylemon/2671176
+- https://developers.facebook.com/apps/560731380662615/settings/basic/
 
 - https://prerender.io/
 - facebook comment jumps @ pin page
