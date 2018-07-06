@@ -20,3 +20,6 @@ chronopin_docker
 chronopin_docker\.pub
 
 env.*.list
+
+kube/config-map-prod
+kube/pod-preset-prod.yaml

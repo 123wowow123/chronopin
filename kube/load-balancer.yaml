@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: chronopin-lb
+spec:
+  type: LoadBalancer
+  ports:
+  # - port: 443
+  #   protocol: TCP
+  #   name: https
+  - port: 9000
+    protocol: TCP
+    name: http
+  selector:
+    app: website
+    role: frontend
