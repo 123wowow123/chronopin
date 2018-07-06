@@ -5,31 +5,25 @@ const path = require('path');
 const _ = require('lodash');
 const fs = require('fs');
 
-
-const configOverridePath = './' + process.env.NODE_ENV;
-
-function requiredProcessEnv(name) {
-  if (!process.env[name]) {
-    throw new Error('You must set the ' + name + ' environment variable');
-  }
+function getProcessEnv(name) {
   return process.env[name];
 }
 
 // All configurations will extend these options
 // ============================================
 let all = {
-  host: 'www.chronopin.com',
+  host: getProcessEnv('HOST') || 'www.chronopin.com',
 
-  env: process.env.NODE_ENV,
+  env: getProcessEnv('NODE_ENV'),
 
   // Root path of server
   root: path.normalize(__dirname + '/../../..'),
 
   // Server port
-  port: process.env.PORT || 9000,
+  port: getProcessEnv('PORT') || 9000,
 
   // Server IP
-  ip: process.env.IP || '0.0.0.0',
+  ip: getProcessEnv('IP') || '0.0.0.0',
 
   // Should we populate the DB with sample data?
   seedDB: false,
@@ -52,7 +46,7 @@ let all = {
   sequelize: {
     // sequelize & mssql connection stringing
     // mssql uses query parameters for additional options while sequelize does not
-    uri: process.env.SEQUELIZE_URI,
+    uri: getProcessEnv('SEQUELIZE_URI'),
     options: {
       // sequalize options
       logging: true,
@@ -67,38 +61,38 @@ let all = {
   },
 
   facebook: {
-    clientID: process.env.FACEBOOK_ID || 'id',
-    clientSecret: process.env.FACEBOOK_SECRET || 'secret',
-    callbackURL: (process.env.DOMAIN || '') + '/auth/facebook/callback'
+    clientID: getProcessEnv('FACEBOOK_ID') || 'id',
+    clientSecret: getProcessEnv('FACEBOOK_SECRET') || 'secret',
+    callbackURL: (getProcessEnv('DOMAIN') || '') + '/auth/facebook/callback'
   },
 
   azureStorage: {
-    AZURE_STORAGE_CONNECTION_STRING: process.env.AZURE_STORAGE_CONNECTION_STRING || ''
+    AZURE_STORAGE_CONNECTION_STRING: getProcessEnv('AZURE_STORAGE_CONNECTION_STRING') || ''
   },
 
   azureSearch: {
-    serviceUrl: process.env.AZURE_SEARCH_URL,
-    apiKey: process.env.AZURE_SEARCH_API_KEY,
-    queryKey: process.env.AZURE_SEARCH_QUERY_KEY
+    serviceUrl: getProcessEnv('AZURE_SEARCH_URL'),
+    apiKey: getProcessEnv('AZURE_SEARCH_API_KEY'),
+    queryKey: getProcessEnv('AZURE_SEARCH_QUERY_KEY')
   },
 
   chromeless: {
-    endpointUrl: process.env.CHROMELESS_ENDPOINT_URL,
-    apiKey: process.env.CHROMELESS_ENDPOINT_API_KEY
+    endpointUrl: getProcessEnv('CHROMELESS_ENDPOINT_URL'),
+    apiKey: getProcessEnv('CHROMELESS_ENDPOINT_API_KEY')
   },
 
   aws: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    region: process.env.AWS_REGION,
+    accessKeyId: getProcessEnv('AWS_ACCESS_KEY_ID'),
+    secretAccessKey: getProcessEnv('AWS_SECRET_ACCESS_KEY'),
+    region: getProcessEnv('AWS_REGION'),
     sns: {
-      adminNewUserTopicArn: process.env.AWS_ADMIN_NEW_USER_TOPIC_ARN
+      adminNewUserTopicArn: getProcessEnv('AWS_ADMIN_NEW_USER_TOPIC_ARN')
     }
   },
 
   admin: {
     notification: {
-      email: process.env.ADMIN_NOTIFICATION_EMAIL
+      email: getProcessEnv('ADMIN_NOTIFICATION_EMAIL')
     }
   },
 
@@ -109,16 +103,20 @@ let all = {
 
 // Export the config object based on the NODE_ENV
 // ==============================================
-const overrideConfig = require.resolve(configOverridePath) ?
+
+const configOverridePath = './' + getProcessEnv('NODE_ENV') + '.js';
+
+const overrideConfig = fs.existsSync(path.join( __dirname, configOverridePath )) ?
   require(configOverridePath) :
   (
     log
-      .error("Environment:", process.env.NODE_ENV)
-      .error("Missing Override Config:", configOverridePath)
+      .warn("Environment:", process.env.NODE_ENV)
+      .warn("Missing Override Config, fallback to Env variables:", configOverridePath),
+      {}
   );
 
 module.exports = _.merge(
   all,
   require('./shared'),
-  overrideConfig || {}
+  overrideConfig
 );

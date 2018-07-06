@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: chronopin-pod
+  labels:
+    app: website
+    role: frontend
+spec:
+  containers:
+  - name: chronopin
+    image: 123wowow123/chronopin:latest
+    ports:
+    - containerPort: 9000
+    # - containerPort: 80
+    # - containerPort: 443
+    # command: [ "/bin/sh", "-c", "echo $(SPECIAL_LEVEL_KEY) $(SPECIAL_TYPE_KEY)" ]
+    # command: [ "/bin/sh", "-c", "env" ]
+    envFrom: 
+    - configMapRef:
+        name: env-file 
+  imagePullSecrets:
+  - name: regcred
