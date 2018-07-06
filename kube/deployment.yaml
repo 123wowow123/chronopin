@@ -21,6 +21,7 @@ spec:
         image: 123wowow123/chronopin:latest
         ports:
         - containerPort: 9000
+          protocol: TCP
         # - containerPort: 80
         # - containerPort: 443
         # command: [ "/bin/sh", "-c", "echo $(SPECIAL_LEVEL_KEY) $(SPECIAL_TYPE_KEY)" ]
@@ -30,3 +31,20 @@ spec:
             name: env-file 
       imagePullSecrets:
       - name: regcred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: chronopin-lb
+spec:
+  type: LoadBalancer
+  ports:
+  # - port: 443
+  #   protocol: TCP
+  #   name: https
+  - port: 9000
+    protocol: TCP
+    name: http
+  selector:
+    app: website
+    role: frontend

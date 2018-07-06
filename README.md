@@ -149,9 +149,9 @@ Run `kubectl get pods`
     `kubectl exec -it chronopin-pod<guid> -- /bin/sh`
     `nslookup chronopin-pod<guid>`
 
-### Deployment
+### Deploy All
 
-Run `kubectl create -f deployment.yaml`
+Run `kubectl create -f kube/deployment.yaml` to deploy all
 
 Run `kubectl describe deployment`
 
@@ -159,13 +159,34 @@ Run `kubectl describe deployment`
 
 Run `kubectl delete deployment chronopin-dep`
 
+### Deploy/Clean All
+
+First time run `chmod +x ./kube/deploy.sh` & `chmod +x ./kube/clean.sh` to set execute permission
+
+Run `./kube/deploy.sh` to deploy deployment and services
+
+Run `./kube/clean.sh` to clean deployment and services
+
+### Rolling Update
+
+Rum to start rolling update
+```sh
+kubectl set image deployment/chronopin-dep \
+    chronopin=123wowow123/chronopin:latest
+```
+
+Run to check rollout status
+`kubectl rollout status deploy/chronopin-dep`
+
+Run `rollout undo` to undo rollout
+
 ### Service
 
 Run `kubectl create -f web-service.yaml`
 
-Run `minikube service chronopin-web --url` to check url
+Run `minikube service chronopin-lb --url` to check url
 
-Run `minikube service chronopin-web` to open in browser
+Run `minikube service chronopin-lb` to open in browser
 
 Run `kubectl get services`
 Run `IP=$(minikube ip)`
@@ -411,6 +432,10 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 - Add tags and allow upvoting of existing tags to gain meta data for search engine to process +
 - search feature bug / show tag button when searched to jump to different section like pinterest +++
 - show pixil dimention / size via tooltip?? of scraped image
+
+- Add FB privacy policy page
+- https://gist.github.com/muddylemon/2671176
+- https://developers.facebook.com/apps/560731380662615/settings/basic/
 
 - https://prerender.io/
 - facebook comment jumps @ pin page
