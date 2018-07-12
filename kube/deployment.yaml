@@ -18,7 +18,8 @@ spec:
     spec:
       containers:
       - name: chronopin
-        image: 123wowow123/chronopin:latest
+        # image: 123wowow123/chronopin:latest # Docker Hub Registry
+        image: gcr.io/chronopin-209507/chronopin # Google Cloud Registry
         ports:
         - containerPort: 9000
           protocol: TCP
@@ -42,9 +43,10 @@ spec:
   # - port: 443
   #   protocol: TCP
   #   name: https
-  - port: 9000
+  - port: 80
     protocol: TCP
     name: http
+    targetPort: 9000
   selector:
     app: website
     role: frontend

@@ -110,9 +110,9 @@ Run `minikube start`
 
 ### ConfigMap
 
-Run `kubectl create configmap env-config --from-file=kube/`
+Run -`kubectl create configmap env-config --from-file=kube/`-
 
-Run `kubectl create configmap env-file --from-env-file=env.dev.list`
+Run `kubectl create configmap env-file --from-env-file=Docker/env.dev.list`
 
 Run `kubectl get configmaps env-file -o yaml`
 
@@ -366,6 +366,12 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 ## To Do
 
+### High Priority
+
+- Fix FB Login
+- Fix Scraper
+- Fix loading on correct timeline on mobile
+
 ### Web Scraper
 
 - Amazon Price Scrape
@@ -378,12 +384,18 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 - Editing image will delete image so make sure it's marked deleted in join table ++
 - Add price on contract icon
 - Add Free Cost Text rather then $0
+- Extract scaper code to new project
 
 ### Misc
 
 - Extract scrape core selector in config file
 - Pin feed needs to include if user have clicked on watch/like per min exclude deleted
 - Change Medium.type to NVarChar
+- General Sentiment Graph for a Company or Product
+- Search (Amazon) to buy product to support our website
+```
+This is a promotional article about one of the company partners with Interesting Engineering. By shopping with us, you not only get the materials you need, but you’re also supporting our website.
+```
 
 ### Partially Completed:
 
@@ -442,10 +454,9 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 ## Architecture
 - Externalize image processing to AWS Lamda
-- Externalize web scrape to AWS Lamda
 - Externalize pre render to AWS Lamda
 - Add Redis to serve prender pages
-- Externalize search to Algolia
+- Externalize search to Algolia or ElastiSearch
 - Convert to Angular 5
 - Grafana activity dashboard
 - [Use Firebase DB for denormalized push notification of app data] <https://www.youtube.com/watch?v=LAWjdZYrUgI>
