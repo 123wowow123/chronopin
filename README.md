@@ -169,7 +169,7 @@ Run `./kube/clean.sh` to clean deployment and services
 
 ### Rolling Update
 
-Rum to start rolling update
+Run to start rolling update
 ```sh
 kubectl set image deployment/chronopin-dep \
     chronopin=123wowow123/chronopin:latest
@@ -348,13 +348,17 @@ Running `npm test` will run the unit tests with karma.
 <https://codepen.io/hexagonest/pen/waaGqj>
 <https://codepen.io/jonitrythall/pen/dNJRRK>
 
-## Good design
+## Good Design
 <https://www.anker.com/>
 <https://images.template.net/wp-content/uploads/2015/07/Timeline-Web-Element-Template-PSD.jpg>
 <http://www.grubstreet.com/>
 <https://flipboard.com/>
 <https://news360.com/home>
 Use of top banner news feed: <http://www.latimes.com/entertainment/arts/la-et-cm-hammer-made-paggett-wiegmann-20180606-story.html>
+
+## Practical Design
+
+<https://www.msn.com/en-us/health/wellness/10-minute-moves-for-strength-speed-and-agility/ss-AAzWFok?OCID=ansmsnnews11>
 
 ## Email Templates
 <https://elements.envato.com/web-templates/email-templates>

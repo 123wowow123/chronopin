@@ -62,7 +62,7 @@ export function setup(config) {
           }
 
           updatedUser.role = 'user';
-          updatedUser.role = 'facebook';
+          updatedUser.provider = 'facebook';
 
           log.infoBlue('new chronopin user', log.stringify(updatedUser));
 
