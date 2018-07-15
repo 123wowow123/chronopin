@@ -1,7 +1,33 @@
 [
   {
-    "media": [],
+    "media": [
+      {
+        "id": 4,
+        "thumbName": "a351e26b-d8dd-4e80-a3a0-3ff3d8123063.jpg",
+        "thumbWidth": 400,
+        "thumbHeight": 226,
+        "originalUrl": "http://images.apple.com/apple-events/static/apple-events/september-2013/video/poster_large.jpg",
+        "originalWidth": 848,
+        "originalHeight": 480,
+        "type": "image/jpeg"
+      }
+    ],
     "id": 1,
+    "title": "iPhone 5S Event",
+    "description": "This should brighten everyone's day",
+    "sourceUrl": "http://www.apple.com/apple-events/september-2013/",
+    "utcStartDateTime": "2013-09-09T07:00:00.000Z",
+    "utcEndDateTime": "2013-09-10T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2017-06-15T05:50:37.116Z",
+    "favoriteCount": 0,
+    "likeCount": 0,
+    "hasFavorite": false,
+    "hasLike": false
+  },
+  {
+    "media": [],
+    "id": 7,
     "title": "Frankfurt, 65th International Motor Show (2013)",
     "description": "Passenger cars, motorcycles, motor caravans, parts and accessories, telematics, products for servicing, repair and maintenance",
     "sourceUrl": "http://www.iaa.de",
@@ -18,33 +44,7 @@
     "media": [
       {
         "id": 3,
-        "thumbName": "a4846ac4-19b3-4946-8dc0-9787bb18232d.jpg",
-        "thumbWidth": 400,
-        "thumbHeight": 226,
-        "originalUrl": "http://images.apple.com/apple-events/static/apple-events/september-2013/video/poster_large.jpg",
-        "originalWidth": 848,
-        "originalHeight": 480,
-        "type": "image/jpeg"
-      }
-    ],
-    "id": 4,
-    "title": "iPhone 5S Event",
-    "description": "This should brighten everyone's day",
-    "sourceUrl": "http://www.apple.com/apple-events/september-2013/",
-    "utcStartDateTime": "2013-09-09T07:00:00.000Z",
-    "utcEndDateTime": "2013-09-10T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.116Z",
-    "favoriteCount": 0,
-    "likeCount": 0,
-    "hasFavorite": false,
-    "hasLike": false
-  },
-  {
-    "media": [
-      {
-        "id": 1,
-        "thumbName": "09d790f5-4502-47e9-9a62-e48088544b89.jpg",
+        "thumbName": "8ca69931-5402-45e0-bed7-99fb09bfb5de.jpg",
         "thumbWidth": 290,
         "thumbHeight": 195,
         "originalUrl": "http://www.eweek.com/imagesvr_ce/522/290_Windows8_1.jpg",
@@ -53,7 +53,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 2,
+    "id": 6,
     "title": "Windows 8.1 Release Date",
     "description": "Freatures New Bings Apps",
     "sourceUrl": "http://www.eweek.com/enterprise-apps/microsoft-windows-8.1-gets-october-release-date/",
@@ -69,8 +69,8 @@
   {
     "media": [
       {
-        "id": 5,
-        "thumbName": "0f906b30-734c-4d80-a381-c0e4b587683a.jpg",
+        "id": 2,
+        "thumbName": "22e6378b-4c00-46a7-9d3e-3d7b5273da35.jpg",
         "thumbWidth": 400,
         "thumbHeight": 201,
         "originalUrl": "https://dri1.img.digitalrivercontent.net/Storefront/Site/msusa/images/promo/Homepage/en-US-Hm-Trip-L-SP4-Alcantara-Productivity.jpg",
@@ -79,7 +79,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 8,
+    "id": 4,
     "title": "Surface 2",
     "description": "Thin, light tablet with up to 10-hour battery life",
     "sourceUrl": "http://www.microsoftstore.com/store/msusa/en_US/html/pbPage.PDPS/productID.286867200",
@@ -95,8 +95,8 @@
   {
     "media": [
       {
-        "id": 10,
-        "thumbName": "7488e0a2-cf2a-43ae-985e-748f4fe5a860.jpg",
+        "id": 7,
+        "thumbName": "b967ecb6-b9ee-420c-97a4-b6cd4d3ba0b7.jpg",
         "thumbWidth": 400,
         "thumbHeight": 211,
         "originalUrl": "http://img.hexus.net/v2/news/nvidia/780Ti.jpg",
@@ -105,7 +105,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 7,
+    "id": 9,
     "title": "GeForce GTX 780 Ti Launch",
     "description": "best GPU that's ever been built.",
     "sourceUrl": "http://hexus.net/tech/news/graphics/61677-nvidia-takes-axe-geforce-gtx-780-gtx-770-pricing/",
@@ -122,8 +122,8 @@
   {
     "media": [
       {
-        "id": 6,
-        "thumbName": "b9f1e38d-c0eb-4e7b-9a46-1b3ce9800220.jpg",
+        "id": 5,
+        "thumbName": "8d6dc38b-8b55-4e85-a73c-d061b4452059.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
         "originalUrl": "https://data1.origin.com/live/content/dam/originx/web/app/programs/404/OriginX_404_Page_BG.jpg",
@@ -132,7 +132,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 5,
+    "id": 10,
     "title": "SimCity: Cities of Tomorrow expansion",
     "description": "New MegaTowers that will dwarf your SimCity skyscrapers, futuristic vehicles, and service drones.",
     "sourceUrl": "https://www.origin.com/en-us/store/buy/182095/mac-pc-download/addon/simcity-cities-of-tomorrow-limited-edition-ANW.html",
@@ -148,7 +148,7 @@
   },
   {
     "media": [],
-    "id": 6,
+    "id": 8,
     "title": "Visual Studio 2013 Virtual Launch",
     "description": "Weíve got a new ASP.NET dialog, amazing CSS3 support, new scaffolding engine and an amazing new surprise code-named ìArtery.î Weíll cover ASP.NET MVC 5, Web API 2, Web Forms, SignalR 2, and also learn about OWIN, ASP.NET identity improvements and much more!",
     "sourceUrl": "http://events.visualstudio.com/",
@@ -162,8 +162,34 @@
     "hasLike": false
   },
   {
+    "media": [
+      {
+        "id": 1,
+        "thumbName": "ee3941f9-df42-471a-a874-f980f5e9c5a3.jpg",
+        "thumbWidth": 400,
+        "thumbHeight": 258,
+        "originalUrl": "https://www.windowscentral.com/sites/wpcentral.com/files/styles/larger/public/field/image/2013/10/Precision%20M3800.jpg?itok=RedAc6Fq",
+        "originalWidth": 478,
+        "originalHeight": 308,
+        "type": "image/jpeg"
+      }
+    ],
+    "id": 2,
+    "title": "Dell Precision M3800",
+    "description": "Aluminum frame, carbon fiber chassis, and topped off with a Gorilla Glass display.",
+    "sourceUrl": "http://www.wpcentral.com/dell-launches-new-precision-m3800-laptop-and-knows-how-flaunt-design",
+    "utcStartDateTime": "2013-11-13T08:00:00.000Z",
+    "utcEndDateTime": "2013-11-14T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2017-06-15T05:50:37.303Z",
+    "favoriteCount": 0,
+    "likeCount": 0,
+    "hasFavorite": false,
+    "hasLike": false
+  },
+  {
     "media": [],
-    "id": 9,
+    "id": 5,
     "title": "Nexus 5 at T-Mobile USA",
     "description": "T-Mobile will only be selling the 16 GB no 32 GB. $42 up front and $17 per month over 24 months. All told, that's $450 compared to the $350 Google is charging.",
     "sourceUrl": "http://www.tomshardware.com/news/nexus-5-t-mobile-launch,25039.html",
@@ -179,34 +205,8 @@
   {
     "media": [
       {
-        "id": 2,
-        "thumbName": "49e40c37-08c6-4f54-ba20-2cc906e6fd5a.jpg",
-        "thumbWidth": 400,
-        "thumbHeight": 258,
-        "originalUrl": "https://www.windowscentral.com/sites/wpcentral.com/files/styles/larger/public/field/image/2013/10/Precision%20M3800.jpg?itok=RedAc6Fq",
-        "originalWidth": 478,
-        "originalHeight": 308,
-        "type": "image/jpeg"
-      }
-    ],
-    "id": 10,
-    "title": "Dell Precision M3800",
-    "description": "Aluminum frame, carbon fiber chassis, and topped off with a Gorilla Glass display.",
-    "sourceUrl": "http://www.wpcentral.com/dell-launches-new-precision-m3800-laptop-and-knows-how-flaunt-design",
-    "utcStartDateTime": "2013-11-13T08:00:00.000Z",
-    "utcEndDateTime": "2013-11-14T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.303Z",
-    "favoriteCount": 0,
-    "likeCount": 0,
-    "hasFavorite": false,
-    "hasLike": false
-  },
-  {
-    "media": [
-      {
-        "id": 4,
-        "thumbName": "0e8bff81-e24a-4210-adc3-80ce02849185",
+        "id": 6,
+        "thumbName": "c1af3853-c84d-4e5b-9dee-34c1318386e2",
         "thumbWidth": 400,
         "thumbHeight": 225,
         "originalUrl": "https://media.playstation.com/is/image/SCEA/killzone_shadow-fall-insurgent-pack-screenshot-03-ps4-us-31jul14?$MediaCarousel_LargeImage$",
@@ -247,8 +247,8 @@
   {
     "media": [
       {
-        "id": 7,
-        "thumbName": "10a59219-e7b1-4e6e-affc-39e2927d5a55.jpg",
+        "id": 9,
+        "thumbName": "8de7fdf7-3147-446b-90eb-b04044c37191.jpg",
         "thumbWidth": 400,
         "thumbHeight": 305,
         "originalUrl": "https://www.windowscentral.com/sites/wpcentral.com/files/styles/larger/public/field/image/2013/11/Lumia_2520_hand_0.jpg?itok=q3VXA46W",
@@ -290,6 +290,37 @@
   {
     "media": [],
     "id": 14,
+    "title": "Xbox One: USA Launch",
+    "description": "The all-in-one entertainment system. Where the best games, multiplayer, and your favorite movies, music, sports and live TV come together in one place.",
+    "sourceUrl": "http://www.xbox.com/en-US/xbox-one/meet-xbox-one",
+    "price": 499.99,
+    "utcStartDateTime": "2013-11-21T08:00:00.000Z",
+    "utcEndDateTime": "2013-11-22T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2017-06-15T05:50:37.319Z",
+    "favoriteCount": 0,
+    "likeCount": 0,
+    "hasFavorite": false,
+    "hasLike": false
+  },
+  {
+    "media": [],
+    "id": 15,
+    "title": "LA Motor Show 2013",
+    "description": "One of the biggest events on the calendar for the industry and debuts will include the BMW 4 Series Convertible, new MINI, Mercedes S65 AMG and the eagerly-awaited Porsche Macan.",
+    "sourceUrl": "http://www.autoexpress.co.uk/car-news/la-motor-show/66492/la-motor-show-2013-preview",
+    "utcStartDateTime": "2013-11-21T08:00:00.000Z",
+    "utcEndDateTime": "2013-12-01T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2017-06-15T05:50:37.319Z",
+    "favoriteCount": 0,
+    "likeCount": 0,
+    "hasFavorite": false,
+    "hasLike": false
+  },
+  {
+    "media": [],
+    "id": 17,
     "title": "Six-inch Nokia Lumia 1520",
     "description": "AT&T will also provide buyers with a $20 credit to buy apps in the Windows Phone store and 50 GB of AT&T Walker cloud storage space. Buyers also get a free copy of Halo: Spartan Assault with the purchase.",
     "sourceUrl": "http://www.dailytech.com/US+PreOrders+Kickoff+for+Nokia+Lumia+1520+Deliveries+Commence+November+22/article33712.htm",
@@ -306,37 +337,6 @@
   {
     "media": [],
     "id": 16,
-    "title": "Xbox One: USA Launch",
-    "description": "The all-in-one entertainment system. Where the best games, multiplayer, and your favorite movies, music, sports and live TV come together in one place.",
-    "sourceUrl": "http://www.xbox.com/en-US/xbox-one/meet-xbox-one",
-    "price": 499.99,
-    "utcStartDateTime": "2013-11-21T08:00:00.000Z",
-    "utcEndDateTime": "2013-11-22T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.319Z",
-    "favoriteCount": 0,
-    "likeCount": 0,
-    "hasFavorite": false,
-    "hasLike": false
-  },
-  {
-    "media": [],
-    "id": 17,
-    "title": "LA Motor Show 2013",
-    "description": "One of the biggest events on the calendar for the industry and debuts will include the BMW 4 Series Convertible, new MINI, Mercedes S65 AMG and the eagerly-awaited Porsche Macan.",
-    "sourceUrl": "http://www.autoexpress.co.uk/car-news/la-motor-show/66492/la-motor-show-2013-preview",
-    "utcStartDateTime": "2013-11-21T08:00:00.000Z",
-    "utcEndDateTime": "2013-12-01T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.319Z",
-    "favoriteCount": 0,
-    "likeCount": 0,
-    "hasFavorite": false,
-    "hasLike": false
-  },
-  {
-    "media": [],
-    "id": 15,
     "title": "Qualcomm Toq",
     "description": "Low power color E-INK-like Mirasol display, a proprietary technology developed at Qualcomm and inspired by butterfly wings",
     "sourceUrl": "http://www.dailytech.com/Quick+Note+Qualcomm+Toq+Ships+on+Cyber+Monday+Dec+2+Priced+at+34999/article33772.htm",
@@ -353,8 +353,8 @@
   {
     "media": [
       {
-        "id": 13,
-        "thumbName": "815077bc-f1da-4b84-8dc1-b9c53553092f.jpg",
+        "id": 10,
+        "thumbName": "a5fbbfda-1866-4e04-a901-0048be0c4c71.jpg",
         "thumbWidth": 400,
         "thumbHeight": 271,
         "originalUrl": "http://cdn.iopscience.com/images/1748-9326/11/5/054011/Full/erlaa21eff2_lr.jpg",
@@ -492,7 +492,7 @@
     "media": [
       {
         "id": 8,
-        "thumbName": "1259247a-00d5-40d0-80a1-b051f124a39e.jpg",
+        "thumbName": "539ffa4f-2e27-4f4e-8d13-8c00b28557fa.jpg",
         "thumbWidth": 400,
         "thumbHeight": 226,
         "originalUrl": "http://cdn.arstechnica.net/wp-content/uploads/2014/03/A-chaotic-battle-640x361.jpg",
@@ -501,7 +501,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 26,
+    "id": 27,
     "title": "Two years later, Reaper of Souls is the Diablo III we always wanted",
     "description": "Review: Expansion builds on previous patches to recapture the series' greatness.",
     "sourceUrl": "http://arstechnica.com/gaming/2014/03/two-years-later-reaper-of-souls-is-the-diablo-iii-we-always-wanted/",
@@ -518,7 +518,7 @@
   },
   {
     "media": [],
-    "id": 27,
+    "id": 26,
     "title": "Unveiled Office for iPad",
     "description": "Announcing the Office you love, now on the iPad ñ specifically Word, PowerPoint and Excel.",
     "sourceUrl": "http://blogs.office.com/2014/03/27/announcing-the-office-you-love-now-on-the-ipad/",
@@ -534,7 +534,7 @@
   },
   {
     "media": [],
-    "id": 29,
+    "id": 28,
     "title": "Qualcomm Snapdragon 805 Performance Preview - Snapdragon Becomes Snappier",
     "description": "The Snapdragon brand is synonymous with performance. It creates anxiety that competing SoCs feel deep down in their silicon substrate. But can Qualcomm's new Snapdragon 805 maintain its dominance in the Android-based smartphone market?",
     "sourceUrl": "http://www.tomshardware.com/reviews/qualcomm-snapdragon-805-performance,3887.html",
@@ -549,7 +549,7 @@
   },
   {
     "media": [],
-    "id": 28,
+    "id": 29,
     "title": "Surface 2 with LTE arrives at Microsoft Stores for impending launch",
     "description": "Windows Phone 8.1 is anticipated to be unveiled, we have also been hearing about a Surface 2 with LTE. Announced last year during a Reddit AMA, a recent FCC filing suggests that the device is close to being released.",
     "sourceUrl": "http://www.wpcentral.com/surface-2-att-lte-arrive-microsoft-stores-impending-launch",
@@ -581,7 +581,7 @@
   },
   {
     "media": [],
-    "id": 32,
+    "id": 31,
     "title": "Build 2014",
     "description": "Microsoft is expected to pull the cover off of Windows Phone 8.1 and dish out beta build of the OS for developers.",
     "sourceUrl": "http://www.wpcentral.com/microsoft-hints-windows-phone-81-their-main-website",
@@ -597,7 +597,7 @@
   },
   {
     "media": [],
-    "id": 31,
+    "id": 32,
     "title": "XPocalypse. Windows XP 'end of life' exposes vital industries to risk. Where's the panic?",
     "description": "The sharpest challenge is faced by critical infrastructure ìasset ownersî who rely on XP computers to run the industrial control systems that regulate the power grid, refineries, chemical plants, and other utilities and industries vital to US economic prosperity. As it happens, many of these industrial users rarely if ever patch their WinXP work-station computers anyway ñ and see no need to start.",
     "sourceUrl": "http://news.yahoo.com/windows-xp-end-life-exposes-vital-industries-risk-231617068.html",
@@ -659,7 +659,7 @@
   },
   {
     "media": [],
-    "id": 36,
+    "id": 37,
     "title": "Tax Deadline Midnight Tuesday",
     "description": "Because of federal budget cutbacks, your chances of being audited are much lower, especially if you make less than $200,000.  For more information on e-filing and for help with the process go here.",
     "sourceUrl": "http://www.kvue.com/news/consumer/Tax-day-is-April-15-255262661.html",
@@ -675,7 +675,7 @@
   },
   {
     "media": [],
-    "id": 37,
+    "id": 36,
     "title": "Microsoft starts to introduce Cortana features to Bing.com",
     "description": "As a user of this service you will start to see notifications which fit your interests in other Bing powered Microsoft services such as Cortana and Bing Sports. You can see relevant info cards presented in the lower section of the Bing.",
     "sourceUrl": "http://hexus.net/business/news/internet/68789-microsoft-starts-introduce-cortana-features-bingcom/",
@@ -690,7 +690,7 @@
   },
   {
     "media": [],
-    "id": 39,
+    "id": 38,
     "title": "New York auto show 2014",
     "description": "Brand new '14 & '15 production models and concept vehicles",
     "sourceUrl": "http://www.autoshowny.com",
@@ -705,7 +705,7 @@
   },
   {
     "media": [],
-    "id": 38,
+    "id": 46,
     "title": "Microsoft Now Officially Owns Nokia Devices",
     "description": "Upon the closing of the transaction, Nokia would be restricted from licensing the Nokia brand for use in connection with mobile device sales for 30 months and from using the Nokia brand on Nokia's own mobile devices until December 31, 2015.",
     "sourceUrl": "http://www.dailytech.com/Microsoft+Now+Officially+Owns+Nokia+Devices/article34793.htm",
@@ -721,7 +721,7 @@
   },
   {
     "media": [],
-    "id": 40,
+    "id": 39,
     "title": "MacBook Airs Gets Faster Processors But Same Body",
     "description": "Apple has really fallen behind the pack with regards to screen technology and resolutions on its two MacBook Air models ó the 11î gets by with a 1366x768 display while the 13î isnít much better at 1440x900. In addition, the chassis design for the MacBook Air has barely changed in over three years.",
     "sourceUrl": "http://www.dailytech.com/Report+Apple+to+Introduce+MacBook+Airs+with+Faster+Processors+Tomorrow/article34811.htm",
@@ -738,8 +738,8 @@
   {
     "media": [
       {
-        "id": 18,
-        "thumbName": "58bc6234-d8f2-41cb-98f9-c8f394c3045f.jpg",
+        "id": 62,
+        "thumbName": "40670ffe-4c1f-44e5-9e51-32913b6cfe16.jpg",
         "thumbWidth": 385,
         "thumbHeight": 216,
         "originalUrl": "http://www.scientificamerican.com/sciam/cache/file/F3606D9C-177E-4583-BCF3AE55CC302704_agenda.jpg?w=600&h=335",
@@ -748,7 +748,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 42,
+    "id": 40,
     "title": "World's Largest Solar Array Set to Crank Out 290 Megawatts of Sunshine Power",
     "description": "The plant comprises more than five million solar panels that span the equivalent of two Central Parks in the desert between Yuma and Phoenix. It generates 290 megawatts of poweróenough electricity to fuel 230,000 homes in neighboring California at peak capacity. Costing a total of $1.8 billion to construct, received a million-dollar loan from the Loan Programs Office.",
     "sourceUrl": "http://www.scientificamerican.com/article/world-s-largest-solar-array-set-to-crank-out-290-megawatts-of-sunshine-power/",
@@ -765,7 +765,7 @@
   },
   {
     "media": [],
-    "id": 41,
+    "id": 42,
     "title": "Intel's New Haswell Desktop CPUs, Allowing for iMac Update",
     "description": "The new Haswell desktop processors will offer a 100 MHz bump in clock speeds and will be a direct successor to most of the chips currently used in the iMac. Will include Intel's Z97 chipset, which provides support for faster and larger M.2 SATA Express drives.",
     "sourceUrl": "http://www.macrumors.com/2014/04/10/intel-haswell-imac-refresh/",
@@ -780,7 +780,7 @@
   },
   {
     "media": [],
-    "id": 43,
+    "id": 41,
     "title": "Microsoft overhauls Windows 8.1 Store today, makes finding things easier (and handsomer)",
     "description": "The persistent navigation bar is a welcomed change. Previously, users had to swipe down from the top to access it, and while it was much better in 8.1, discoverability was an issue. Now, the green bar will always be there for users. In addition, it highlights Top charts, Categories and Collections, which should go a long, long way in making it easier to find new apps and games.",
     "sourceUrl": "http://www.wpcentral.com/microsoft-overhauls-windows-81-store-today",
@@ -826,7 +826,7 @@
   },
   {
     "media": [],
-    "id": 46,
+    "id": 43,
     "title": "Intel reported to be a part of Microsoft's Surface event",
     "description": "Should Redmond announce a new Intel-powered Surface model, it's not expected to be of the same small form factor, at least enabling Qualcomm to have some of the spotlight. The current Surface Pro 2 utilizes an Intel Core i5 processor, which is also a Haswell chip. That said, the Qualcomm-powered Surface Mini would also be a first, with RT tablets from Microsoft previously using Nvidia components.",
     "sourceUrl": "http://www.wpcentral.com/intel-reported-be-part-microsofts-may-20-surface-event",
@@ -949,7 +949,7 @@
   },
   {
     "media": [],
-    "id": 54,
+    "id": 55,
     "title": "Windows Phone 8.1 Update 1: Making Touchless Gestures More Than a Gimmick",
     "description": "The Verge is reporting that \"McLaren\" -- a flagship handset expected to hit multiple U.S. carriers this fall -- will feature sophisticated hands-free controls.  These controls are similar to the touchless gestures offered by Samsung Electronics Comp., Ltd.'s Galaxy S4 and Galaxy S5 smartphones.  However, where as touch-free tech on Galaxy smartphones has been dismissed as a somewhat \"gimmicky\" feature, Microsoft's version is reportedly significantly more advanced and more tightly integrated.",
     "sourceUrl": "http://www.dailytech.com/Windows+Phone+81+Update+1+Making+Touchless+Gestures+More+Than+a+Gimmick/article35032.htm",
@@ -964,7 +964,7 @@
   },
   {
     "media": [],
-    "id": 55,
+    "id": 54,
     "title": "Civilization Revolution sequel coming directly to iOS",
     "description": "The console version of the first Civilization Revolution game barely cracked the NPD's US top 10, with 150,000 sales in its first month on the Xbox 360 before dropping off the sales listing entirely. Meanwhile, the iOS version was the ninth best-selling game of the iPhone for all of 2009, coming in just behind million-sellers like Flight Control. The iPad version has frequently reappeared on the iTunes top paid app list even years after it release, usually during 2K's periodic app sales.",
     "sourceUrl": "http://arstechnica.com/gaming/2014/06/civilization-revolution-sequel-coming-directly-to-ios-next-week/",
@@ -979,7 +979,7 @@
   },
   {
     "media": [],
-    "id": 57,
+    "id": 56,
     "title": "New superconducting material could open the door to commercial viability in some applications",
     "description": "New superconductor bumped the record for strongest superconductor to 17.6 Tesla (T), breaking the previous held record by 0.36 T, or roughly 2.1 percent.  While that may not sound like much, it's the first increase in the mark in more than a decade, with the last record (17.24 T) set in 2003. reviously, even small bumps have led to new commercialization prospects for superconductors. And given the well-documented and carefully thought out manufacturing process, this study has given those looking to commercialize a pretty clear roadmap.",
     "sourceUrl": "http://www.dailytech.com/GoldDoped+Superconductor+Stores+550000+Times+Earths+Magnetic+Field/article36139.htm",
@@ -995,8 +995,8 @@
   {
     "media": [
       {
-        "id": 9,
-        "thumbName": "2b0fe2c8-0648-48a8-87d6-e26acfc1aaf8.jpg",
+        "id": 12,
+        "thumbName": "27f2e10c-51af-4796-bff2-63b8f8bb9970.jpg",
         "thumbWidth": 400,
         "thumbHeight": 200,
         "originalUrl": "http://i.huffpost.com/gen/1837861/thumbs/o-SAILOR-MOON-CRYSTAL-facebook.jpg",
@@ -1005,7 +1005,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 56,
+    "id": 57,
     "title": "'Sailor Moon Crystal' Trailer Arrives To Fanfare",
     "description": "To the excitement of fans across the globe, the long-awaited (and briefly-delayed) \"Sailor Moon Crystal\" finally has a final air date as well as a brand new trailer. A reboot of the beloved 1992 Japanese animated TV show, \"Sailor Moon Crystal\" is set to air in Japan on July 5 and will be simulcast worldwide. The trailer shows the \"Sailor Moon\" protagonist, teenager Usagi Tsukino, getting ready for school before transforming into superhero Sailor Moon and introducing her fellow Sailor Scouts.",
     "sourceUrl": "http://www.huffingtonpost.com/2014/06/05/sailor-moon-crystal-trailer_n_5455148.html",
@@ -1112,7 +1112,7 @@
   },
   {
     "media": [],
-    "id": 64,
+    "id": 65,
     "title": "Samsung's 105-inch 4K UHD TV now available for pre-order",
     "description": "Samsung has announced a price for its 105-inch Samsung Curved UHD TV which was first unveiled at the CES 2014 back in January. Those who have a spare $199,999.99 for entertainment purposes will now be able to pre-order this 4K television set.",
     "sourceUrl": "http://hexus.net/tech/news/displays/72445-samsungs-105-inch-4k-uhd-tv-now-available-pre-order/",
@@ -1128,7 +1128,7 @@
   },
   {
     "media": [],
-    "id": 66,
+    "id": 64,
     "title": "Microsoft to go big with Xbox One panels and games at San Diego Comic-Con",
     "description": "One will offer up information about Halo: The Master Chief Collection, the Xbox One bundle of Halo 1-4 that's due out this fall. The other panel will revealed the first information on Halo: Nightfall, the live action digital series that will be included as part of the Master Chief Collection package. Finally, Microsoft will host a panel centering on its upcoming documentary \"Atari: Game Over\", that looks at the fall of the game console company in the early 1980s that will be shown exclusively on Xbox Live later in 2014.",
     "sourceUrl": "http://www.wpcentral.com/microsoft-go-big-xbox-one-panels-and-game-previews-san-diego-comic-con",
@@ -1144,7 +1144,7 @@
   },
   {
     "media": [],
-    "id": 65,
+    "id": 66,
     "title": "15-Inch Mid 2014 Retina MacBook Pro Benchmark Shows Decent Entry-Level Speed Gains",
     "description": "A GeekBench 3 result for the entry-level 15-inch Retina MacBook Pro indicates that the new machine is eight percent faster than the entry-level 2013 Retina MacBook Pro, and only two percent slower than the mid-level Retina MacBook Pro released in 2013.",
     "sourceUrl": "http://www.macrumors.com/2014/07/29/15-inch-retina-macbook-pro-benchmark/",
@@ -1159,7 +1159,7 @@
   },
   {
     "media": [],
-    "id": 68,
+    "id": 67,
     "title": "NVIDIA Shield Tablet - 16GB wi-fi model and 32GB LTE model",
     "description": "Twice as fast iPad Mini Retina. Unreal Engine 4 will be compatible with the processor. What this means is that we can expect to see high-end games on tablets and devices that use the chip with cranked up visuals. SHIELD tablet is 8 inch device with 1920◊1200 resolution. It has 2GB RAM, Tegra K1 SoC with 192 CUDA cores, QuadCore 2.2 GHz A15 CPU. Tablet has dual speakers and 5 MPIX ëselfieí camera.",
     "sourceUrl": "http://videocardz.com/51059/nvidia-extends-shield-family-shield-tablet-wireless-controller",
@@ -1175,22 +1175,7 @@
   },
   {
     "media": [],
-    "id": 67,
-    "title": "Hisense's Windows Phone 8.1 Packs LTE, Thin Metal Body",
-    "description": "An increased pace of Windows Phone announcements from Chinese OEMs.  The latest is the Hisense Electric Comp., Ltd.'s. Likely cracking the $200 USD mark. China Telecom, Chinaís third largest mobile provider, will carry it.",
-    "sourceUrl": "http://www.dailytech.com/Quick+Note+Hisenses+Windows+Phone+81+Packs+LTE+Thin+Metal+Body/article36133.htm",
-    "utcStartDateTime": "2014-07-30T07:00:00.000Z",
-    "utcEndDateTime": "2014-07-31T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.725Z",
-    "favoriteCount": 0,
-    "likeCount": 0,
-    "hasFavorite": false,
-    "hasLike": false
-  },
-  {
-    "media": [],
-    "id": 69,
+    "id": 68,
     "title": "Philips slims down the BR30 LED bulb (price and all)",
     "description": "Months after releasing a flattened A19 LED, Philips is at it again -- this time with a reinvented \"SlimStyle\" BR30 LED. Like the original SlimStyle LED, the new BR30 version disperses its diodes across a uniquely flat design, which eliminates the need for bulky, aluminum heat sinks.",
     "sourceUrl": "http://www.cnet.com/products/philips-slimstyle-br30-led/",
@@ -1206,7 +1191,22 @@
   },
   {
     "media": [],
-    "id": 70,
+    "id": 69,
+    "title": "Hisense's Windows Phone 8.1 Packs LTE, Thin Metal Body",
+    "description": "An increased pace of Windows Phone announcements from Chinese OEMs.  The latest is the Hisense Electric Comp., Ltd.'s. Likely cracking the $200 USD mark. China Telecom, Chinaís third largest mobile provider, will carry it.",
+    "sourceUrl": "http://www.dailytech.com/Quick+Note+Hisenses+Windows+Phone+81+Packs+LTE+Thin+Metal+Body/article36133.htm",
+    "utcStartDateTime": "2014-07-30T07:00:00.000Z",
+    "utcEndDateTime": "2014-07-31T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2017-06-15T05:50:37.725Z",
+    "favoriteCount": 0,
+    "likeCount": 0,
+    "hasFavorite": false,
+    "hasLike": false
+  },
+  {
+    "media": [],
+    "id": 71,
     "title": "Wellograph fitness watches to include Windows Phone 8.1 support",
     "description": "Wellograph watch features a heart rate monitor, activity tracker, pedometer as well as the date and time. The watch itself has a Pebble look about it but incorporates a Tri-LED Heart Rate Sensor into the soft spherical surface of the watch. The sensor replicates the action of a doctor using their fingertip to register your pulse. The Wellograph is waterproof up to 50 meters with the battery rated at two weeks of use per charge.",
     "sourceUrl": "http://www.wpcentral.com/wellograph-fitness-watches-include-windows-phone-81-support",
@@ -1223,8 +1223,8 @@
   {
     "media": [
       {
-        "id": 22,
-        "thumbName": "c16efb41-ce28-4d64-bc52-15dec803433b.jpg",
+        "id": 30,
+        "thumbName": "6fa0e46b-03db-4e76-97b7-45550fea3f4d.jpg",
         "thumbWidth": 400,
         "thumbHeight": 266,
         "originalUrl": "http://media.nbcsandiego.com/images/1200*797/shutterstock_64200658.jpg",
@@ -1233,7 +1233,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 71,
+    "id": 72,
     "title": "Open-Air Fish Market Coming to San Diego",
     "description": "With a picturesque waterfront already in place, San Diego will soon have its very own open-air fish market reminiscent of other similar markets around the United States, including Seattleís Pike Place Market.\n\n",
     "sourceUrl": "http://www.nbcsandiego.com/news/local/Open-Air-Fish-Market-San-Diego-Tuna-Harbor-Fresh-Catch-267440101.html",
@@ -1248,7 +1248,7 @@
   },
   {
     "media": [],
-    "id": 72,
+    "id": 70,
     "title": "All caps begone: Visual Studio 2013 Update adds mixed-case menu option",
     "description": "New features include expanding the memory usage profiler to support both .NET applications using WPF and native code applications using Win32, CodeLens support for git repositories so work items and change history can be shown integrated in the text editor, and a better debugging experience for Windows Store apps on multimonitor systems.\n",
     "sourceUrl": "http://arstechnica.com/information-technology/2014/08/all-caps-begone-visual-studio-2013-update-adds-mixed-case-menu-option/",
@@ -1310,8 +1310,8 @@
   {
     "media": [
       {
-        "id": 12,
-        "thumbName": "bc6e0cea-3bea-4814-b227-60d54e5047e8.jpg",
+        "id": 11,
+        "thumbName": "8962db27-bef9-427e-8915-04396b0d0219.jpg",
         "thumbWidth": 400,
         "thumbHeight": 256,
         "originalUrl": "http://cdn.arstechnica.net/wp-content/uploads/2014/08/ALR_Kindle_iPhone_Combo-640x410.jpg",
@@ -1320,7 +1320,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 75,
+    "id": 77,
     "title": "Amazonís new mobile card reader waltzes onto Square and PayPalís dance floor ",
     "description": "Amazon's card reader has promised customers who register for the service before October 31 will only be charged 1.75 percent on all transaction fees made through the swipe reader until January 1, 2016. Outside of that deal, merchants using Amazon Local Register are charged 2.5 percent for each swiped transaction and 2.75 percent for all manually keyed-in purchases.\n",
     "sourceUrl": "http://arstechnica.com/business/2014/08/amazons-new-mobile-card-reader-waltzes-onto-square-and-paypals-dance-floor/",
@@ -1335,7 +1335,7 @@
   },
   {
     "media": [],
-    "id": 78,
+    "id": 75,
     "title": "Diablo III Ultimate Evil Edition coming to Xbox One and 360 this August",
     "description": "The Ultimate Evil Edition will boast several console-exclusive improvements as well. The new Apprentice mode allows low-level players to boost their stats while adventuring with high-level friends. A new in-game mail system will let players send items to their friends, including ìmysterious Player Gifts containing rare loot for the adventurer whose name they bear.",
     "sourceUrl": "http://www.wpcentral.com/diablo-iii-ultimate-evil-edition-announced",
@@ -1350,7 +1350,7 @@
   },
   {
     "media": [],
-    "id": 77,
+    "id": 78,
     "title": "Verizon Wireless to Receive Exclusive \"HTC One (M8) for Windows\" Smartphone",
     "description": "HTC will soon be offering a version of its HTC One (M8) on Verizon Wireless that will run Windows Phone 8.1. However, the device will be saddled with the unfortunate name of HTC One (M8) for Windows. Regardless of how ridiculous the name is, you canít argue with the hardware specs, which means that weíll see a 1080p display, Snapdragon 801 processor, 2GB of RAM, BoomSound speakers, and the spiffy metal unibody design.",
     "sourceUrl": "http://www.dailytech.com/Verizon+Wireless+to+Receive+Exclusive+HTC+One+M8+for+Windows+Smartphone/article36302.htm",
@@ -1383,8 +1383,8 @@
   {
     "media": [
       {
-        "id": 14,
-        "thumbName": "8461a760-43f1-4d60-8ac6-9cd60b0a4ea9.jpg",
+        "id": 21,
+        "thumbName": "47181ee3-3bf1-46b4-8e4f-1853f43679e3.jpg",
         "thumbWidth": 400,
         "thumbHeight": 371,
         "originalUrl": "http://media.bestofmicro.com/S/I/174690/gallery/intel-logo-blue_w_500.jpg",
@@ -1439,8 +1439,8 @@
   {
     "media": [
       {
-        "id": 27,
-        "thumbName": "ec9d5a61-5007-463b-9ebc-4a709e7a6b5e.jpg",
+        "id": 17,
+        "thumbName": "a6f7804f-4846-471c-b059-4a51d67cdd6c.jpg",
         "thumbWidth": 400,
         "thumbHeight": 329,
         "originalUrl": "http://www.windowscentral.com/sites/wpcentral.com/files/styles/large/public/article_images/2014/09/broadcom-wifi-chip.jpg?itok=9ppb79nq",
@@ -1481,8 +1481,8 @@
   {
     "media": [
       {
-        "id": 17,
-        "thumbName": "df884951-bef6-4f3e-9fd0-7aa32902762b.jpg",
+        "id": 15,
+        "thumbName": "edcab5dc-2ccf-47bb-8d38-bceefd792dfe.jpg",
         "thumbWidth": 400,
         "thumbHeight": 650,
         "originalUrl": "http://cdn.macrumors.com/article-new/2014/07/iwatch_concept_set.jpg?retina",
@@ -1491,7 +1491,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 86,
+    "id": 85,
     "title": "Apple's Wearable Device, Likely Positioned as iPhone Accessory",
     "description": "Yesterday, Re/code broke the news that Apple planned to introduce its upcoming wearable device alongside the iPhone 6, and now Bloomberg is seconding...",
     "sourceUrl": "http://www.macrumors.com/2014/08/28/bloomberg-confirms-sept-wearable-device-debut/",
@@ -1509,7 +1509,7 @@
     "media": [
       {
         "id": 19,
-        "thumbName": "200471f7-e4ce-4602-8d0c-ca7b67880071.jpg",
+        "thumbName": "529c8e07-5e05-4b0c-9106-c2bde39b7f11.jpg",
         "thumbWidth": 400,
         "thumbHeight": 490,
         "originalUrl": "http://cdn.macrumors.com/article-new/2014/09/imac_27_angle.jpg?retina",
@@ -1518,7 +1518,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 85,
+    "id": 86,
     "title": "Retina iMacs and Apple Displays Within Reach as New DisplayPort 1.3 Spec Finalized",
     "description": "With Dell having announced its upcoming 5120 x 2880 \"5K\" display that would be the equivalent of a Retina 27-inch iMac or Apple Thunderbolt...",
     "sourceUrl": "http://www.macrumors.com/2014/09/15/retina-imacs-displays-displayport-1-3/",
@@ -1534,7 +1534,7 @@
   },
   {
     "media": [],
-    "id": 88,
+    "id": 87,
     "title": "iPhone 6 Said to Launch on Friday, September 19 in 32 GB and 64 GB Variants",
     "description": "Apple may launch the larger 5.5-inch version of the iPhone 6 and the 4.7-inch version simultaneously, with previous reports indicating that issues with battery and display technology would hold up the larger device. The iPhone 6 is expected to feature a thinner design, a faster A8 processor, and more. The iPhone 6 is also expected to feature an improved camera, with the larger 5.5-inch version exclusively utilizing optical image stabilization and the smaller device featuring an advanced lens module.",
     "sourceUrl": "http://www.macrumors.com/2014/06/25/iphone-6-friday-september19-32gb-64gb/",
@@ -1549,7 +1549,7 @@
   },
   {
     "media": [],
-    "id": 87,
+    "id": 88,
     "title": "Apple CEO Tim Cook: iPhone 6 and iPhone 6 Plus Will Trigger 'Mother of All Upgrades'",
     "description": "In an interview with the The Wall Street Journal following today's media event, Apple CEO Tim Cook stated that the company expects the launch of...",
     "sourceUrl": "http://www.macrumors.com/2014/09/09/tim-cook-iphone-6-plus-trigger-mother-of-upgrades/",
@@ -1566,8 +1566,8 @@
   {
     "media": [
       {
-        "id": 20,
-        "thumbName": "b0a07a77-bce1-4c3b-b06a-bef04bd95c66.jpg",
+        "id": 14,
+        "thumbName": "ba20022a-b9da-4810-8e46-e8c9adffa1df.jpg",
         "thumbWidth": 400,
         "thumbHeight": 724,
         "originalUrl": "http://media.bestofmicro.com/5/M/455098/gallery/bkgd_panel-basics_w_500.jpg",
@@ -1576,7 +1576,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 89,
+    "id": 90,
     "title": "Tesla Rolls Out New Features with v6.0 Model S Software Update",
     "description": "Tesla Motors is rolling out software version 6.0 for its Model S sedan that makes it smarter. The new update adds traffic-based navigation and calendar synchronization functions, which are currently in beta, as well as commute advice, remote start, location-based air suspension, power management options and even the ability to name your car.",
     "sourceUrl": "http://www.tomshardware.com/news/tesla-model-s-software-update,27725.html",
@@ -1593,8 +1593,8 @@
   {
     "media": [
       {
-        "id": 24,
-        "thumbName": "63b1d654-7531-40dd-81f1-adb55046554e.jpg",
+        "id": 13,
+        "thumbName": "b86a4863-8fa7-498c-b3b6-2a9e47227452.jpg",
         "thumbWidth": 400,
         "thumbHeight": 266,
         "originalUrl": "http://www.windowscentral.com/sites/wpcentral.com/files/styles/large/public/field/image/2013/12/Xbox_One_Console.jpg?itok=HCNkJz5T",
@@ -1603,7 +1603,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 90,
+    "id": 89,
     "title": "Xbox One to make its Chinese debut on September 23 (Update: Priced at 3,699 RMB)",
     "description": "Xbox Wire has made the Xbox One launch in China announcement official, which includes pricing info for the console in the region. Priced at 3,699 RMB ($600), the Xbox One will also include some pretty neat extras.",
     "sourceUrl": "http://www.wpcentral.com/xbox-one-make-its-chinese-debut-september-23",
@@ -1620,8 +1620,8 @@
   {
     "media": [
       {
-        "id": 21,
-        "thumbName": "d738a177-ea95-4da1-ba6c-14814845047f.jpg",
+        "id": 16,
+        "thumbName": "5cb580e4-82c7-4d78-967a-4c926b574832.jpg",
         "thumbWidth": 400,
         "thumbHeight": 238,
         "originalUrl": "http://cdn.macrumors.com/article-new/2014/08/mac_pro_creativity.jpg?retina",
@@ -1646,8 +1646,8 @@
   {
     "media": [
       {
-        "id": 32,
-        "thumbName": "ed2abfde-884b-4fc9-aabd-14aabe05fa8d.jpg",
+        "id": 29,
+        "thumbName": "9e1cf063-aadb-43ad-972b-c6c251d2183e.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
         "originalUrl": "https://ksr-ugc.imgix.net/assets/011/695/936/de2f17352e938746a1ae9a54433b5e31_original.jpg?crop=faces&w=1552&h=873&fit=crop&v=1463686915&auto=format&q=92&s=8a65c2fcb1d3cf0419dcf89009264f03",
@@ -1673,8 +1673,8 @@
   {
     "media": [
       {
-        "id": 70,
-        "thumbName": "0d563cd1-5aaf-4acb-b95f-7e2decce8d6d.jpg",
+        "id": 68,
+        "thumbName": "270b52a7-35da-4cdf-87d8-82dfb112358c.jpg",
         "thumbWidth": 400,
         "thumbHeight": 300,
         "originalUrl": "http://www.wpcentral.com/sites/wpcentral.com/files/styles/large/public/field/image/2014/08/Xbox_Hero_Kinect_Top.jpg?itok=oznzoMuv",
@@ -1700,8 +1700,8 @@
   {
     "media": [
       {
-        "id": 34,
-        "thumbName": "eba2da79-03b0-4f2d-9aff-0b76baff33a1.jpg",
+        "id": 39,
+        "thumbName": "feb4fd44-7259-4f91-912d-5faf37fdf61c.jpg",
         "thumbWidth": 400,
         "thumbHeight": 237,
         "originalUrl": "http://cdn.macrumors.com/article-new/2014/07/iphone_5s_6_grass.jpg?retina",
@@ -1710,7 +1710,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 95,
+    "id": 94,
     "title": "iPhone 6 Said to Launch on Tuesday, October 14, Part of 'Incredibly Busy' Month for Apple [Updated]",
     "description": "Apple may be planning to launch the iPhone 6 on Tuesday, October 14 as the month itself will be an incredibly busy one for the company, according to...",
     "sourceUrl": "http://www.macrumors.com/2014/07/31/iphone-6-october-14-incredibly-busy-month/",
@@ -1726,8 +1726,8 @@
   {
     "media": [
       {
-        "id": 60,
-        "thumbName": "11212935-2127-4e8c-8301-13883f9d124c.jpg",
+        "id": 66,
+        "thumbName": "d31d1d76-1b6e-4a32-8ed6-69c81bd7c8aa.jpg",
         "thumbWidth": 400,
         "thumbHeight": 300,
         "originalUrl": "http://www.wpcentral.com/sites/wpcentral.com/files/styles/large/public/field/image/2014/08/killer_instict.jpg?itok=JDRMFkNh",
@@ -1736,7 +1736,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 94,
+    "id": 95,
     "title": "Killer Instinct Season 2 drops the hammer down on Xbox One October 15",
     "description": "The second \"season\" for Microsoft's Xbox One revival of the Killer Instinct fighting game franchise will add eight new characters to its ranks.",
     "sourceUrl": "http://www.wpcentral.com/killer-instinct-season-2-drops-xbox-one-october-15",
@@ -1752,8 +1752,8 @@
   {
     "media": [
       {
-        "id": 23,
-        "thumbName": "faee0177-d2fc-4395-a23f-d11388610d3f.jpg",
+        "id": 28,
+        "thumbName": "c0d92ec8-3b46-49a1-92dc-a2786219ea9f.jpg",
         "thumbWidth": 400,
         "thumbHeight": 171,
         "originalUrl": "http://hexus.net/media/uploaded/2014/7/012e7f24-757c-4dd8-85c2-e5ac5fc88133.jpg",
@@ -1779,8 +1779,8 @@
   {
     "media": [
       {
-        "id": 28,
-        "thumbName": "f170a322-9e3d-46fd-860f-2e745b126048.jpg",
+        "id": 24,
+        "thumbName": "1feff3b0-b571-4423-bb50-5de3b821c3ae.jpg",
         "thumbWidth": 400,
         "thumbHeight": 206,
         "originalUrl": "http://www.windowscentral.com/sites/wpcentral.com/files/styles/large/public/field/image/2014/09/DT-903_side_orange_lede.jpg?itok=zJ2ERuBc",
@@ -1806,8 +1806,8 @@
   {
     "media": [
       {
-        "id": 29,
-        "thumbName": "47fd724f-5af1-4675-a09a-b2d3d0686531.jpg",
+        "id": 26,
+        "thumbName": "2598a1b0-0c72-4abe-b1a5-1dced762101a.jpg",
         "thumbWidth": 400,
         "thumbHeight": 312,
         "originalUrl": "http://cdn.macrumors.com/article-new/2014/09/ipad_air_touch_id_mockup_2.jpg?retina",
@@ -1833,8 +1833,8 @@
   {
     "media": [
       {
-        "id": 30,
-        "thumbName": "dacebe2a-6095-445b-b608-9904e580fc2e.jpg",
+        "id": 18,
+        "thumbName": "7e0a6ea3-8034-486a-ab37-e66d70ff0b82.jpg",
         "thumbWidth": 400,
         "thumbHeight": 282,
         "originalUrl": "https://www.windowscentral.com/sites/wpcentral.com/files/styles/larger_wm_blw/public/field/image/2014/06/3D_Touch_lede_sim.jpg?itok=OcctDdsF",
@@ -1859,8 +1859,8 @@
   {
     "media": [
       {
-        "id": 31,
-        "thumbName": "37c30377-92f4-4d51-9c17-296ee3c45278.jpg",
+        "id": 27,
+        "thumbName": "5b620b10-a231-45e8-a5e8-3d06db6e1dd5.jpg",
         "thumbWidth": 400,
         "thumbHeight": 215,
         "originalUrl": "http://hexus.net/media/uploaded/2014/5/e91e26fb-a5f7-4ab3-899e-00971727f4c9.jpg",
@@ -1900,7 +1900,7 @@
   },
   {
     "media": [],
-    "id": 102,
+    "id": 103,
     "title": "Ford to Switch 3,300 Employees from BlackBerries to Apple iPhones by Year's End",
     "description": "It meets the overall needs of the employees because it is able to serve both our business needs in a secure way and the needs we have in our personal lives with a single device,î said Ford spokesman Sara Tatchio.",
     "sourceUrl": "http://www.dailytech.com/Ford+to+Switch+3300+Employees+from+BlackBerries+to+Apple+iPhones+by+Years+End/article36307.htm",
@@ -1915,7 +1915,7 @@
   },
   {
     "media": [],
-    "id": 103,
+    "id": 102,
     "title": "Microsoft warns mainstream Windows 7 and Windows Server 2008 support ends Jan 2015",
     "description": "Microsoft usually provides mainstream support for its products for a five-year period, where the company provides free updated features and/or performance enhancements which include but are not limited to security updates. After this period Microsoft starts providing extended support for the product, where users receive free security fixes but pay for other types of updates, typically for five years also.",
     "sourceUrl": "http://support.microsoft.com/gp/support-reaching-end-2nd",
@@ -1945,7 +1945,7 @@
   },
   {
     "media": [],
-    "id": 106,
+    "id": 105,
     "title": "Panels are ~50% more efficient than SolarCity's current supplier's, a third better than the market leader",
     "description": "Mr. Musk owns a quarter (25 percent) of SolarCity shares. Silevo on target to achieve its near term goal of 24 percent panel efficiency. A 2013 slide deck showed Silevo was hoping to build a 230 MW capacity plant in the U.S. or China by the end of 2014. Even if the solar industry were only to generate 40 percent of the worldís electricity with photovoltaics by 2040, that would mean installing more than 400 GW of solar capacity per year for the next 25 years.",
     "sourceUrl": "http://www.dailytech.com/Elon+Musks+SolarCity+Buys+Silevo+Plans+New+York+Gigafactory+for+2016/article36073.htm",
@@ -1961,8 +1961,8 @@
   {
     "media": [
       {
-        "id": 25,
-        "thumbName": "363b7bd0-066b-4a3c-b14b-290449ffe4ac.jpg",
+        "id": 20,
+        "thumbName": "6548a8bd-c197-4739-ace9-66fe9b36b7dd.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
         "originalUrl": "http://cdn.macrumors.com/article-new/2013/07/ios7_activation_lock.jpg?retina",
@@ -1971,7 +1971,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 105,
+    "id": 106,
     "title": "California Law Now Requires All Smartphones to Have Built-In Kill Switches By July 2015",
     "description": "A California bill requiring all smartphones sold in the state to have antitheft technology installed was today signed into law by California governor...",
     "sourceUrl": "http://www.macrumors.com/2014/08/25/california-kill-switch-law/",
@@ -2002,8 +2002,8 @@
   {
     "media": [
       {
-        "id": 85,
-        "thumbName": "589af7a9-01c8-4b6e-8083-46b800051579.jpg",
+        "id": 91,
+        "thumbName": "9083947d-10ea-450b-a93a-826df3acc327.jpg",
         "thumbWidth": 400,
         "thumbHeight": 267,
         "originalUrl": "http://www.captureoutdoors.net/wp-content/uploads/2016/05/DSCF1297.jpg",
@@ -2012,7 +2012,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 109,
+    "id": 108,
     "title": "The Biolite SolarPanel 5+",
     "description": "The Biolite SolarPanel 5+ comes equipped with a 2200 mAh battery that can be pre-charged at home via the supplied USB cable or topped up via the solar panel. A little row of LEDs offers a battery level indicator and the little batter icon beside the LEDs is a little on-off switch. There is a simplicity with the product, light, well-built with exceptional attention to detail, for example both USB ports are enclosed by two little rubber doors to protect them from the elements.",
     "sourceUrl": "http://www.captureoutdoors.net/reviews/outdoor-gear/review-biolite-solarpanel-5/",
@@ -2029,8 +2029,8 @@
   {
     "media": [
       {
-        "id": 91,
-        "thumbName": "6369b017-e794-4abf-8b25-635fafab75af.jpg",
+        "id": 61,
+        "thumbName": "1b43a822-3cc0-4fa6-85cb-e358ec7aa5a8.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
         "originalUrl": "https://979105cc159402c3a227-e60b3149fd4ec17fe301ad8de9196b88.ssl.cf2.rackcdn.com/896ce7d9468a0cc452dbe2c0d1c44c74-3fb460be88b02cf48c721ee26c57d480.jpg",
@@ -2039,7 +2039,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 186,
+    "id": 109,
     "title": "The first & only sprayer that sprays 100% Real Butter.",
     "description": "Thanks to recent studies, butter is making its way back into peoples lives. In fact: Butter consumption in the U.S. has hit a 40-year high. Unfortunately, the way butter is served hasn’t changed in decades…so we thought: what if we could re-imagine the way people store and use butter?",
     "sourceUrl": "https://biemspray.com/",
@@ -2056,8 +2056,8 @@
   {
     "media": [
       {
-        "id": 11,
-        "thumbName": "a197cb77-0a2c-4df4-8837-0fc76a5a9bab.jpg",
+        "id": 23,
+        "thumbName": "ff8c2f88-6830-410f-95c6-32a6b4f4374e.jpg",
         "thumbWidth": 200,
         "thumbHeight": 200,
         "originalUrl": "http://norml.org/images/buttons/norml-logo-sq-bk.jpg",
@@ -2066,7 +2066,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 108,
+    "id": 110,
     "title": "Fifty-six percent of California voters approved Proposition 64 Legalizing Marijuana",
     "description": "Proposition 64, The Adult Use Marijuana Act, permits adults over 21 years of age who are not participating in the state’s medical cannabis program to legally grow (up to six plants, including all of the harvest from those plants) and to possess personal use quantities of cannabis (up to one ounce of flower and/or up to eight grams of concentrates) while also licensing commercial cannabis production and retail sales",
     "sourceUrl": "http://norml.org/laws/item/california-penalties",
@@ -2082,8 +2082,8 @@
   {
     "media": [
       {
-        "id": 33,
-        "thumbName": "9df392a4-f7c3-4f9e-8052-12157d69ffed.jpg",
+        "id": 32,
+        "thumbName": "75e423a5-028f-4e17-bcf1-bdd0b3eca184.jpg",
         "thumbWidth": 400,
         "thumbHeight": 393,
         "originalUrl": "https://cdn.arstechnica.net/wp-content/uploads/2017/04/136690_web-640x629.jpg",
@@ -2092,7 +2092,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 110,
+    "id": 111,
     "title": "The world spent less money to add more renewable energy than ever in 2016",
     "description": "$241.6 billion in investment gets you 138.5 gigawatts of renewable energy",
     "sourceUrl": "https://arstechnica.com/business/2017/04/global-investment-in-renewables-fell-in-2016-but-thats-not-a-bad-sign/",
@@ -2109,8 +2109,8 @@
   {
     "media": [
       {
-        "id": 15,
-        "thumbName": "88927bee-01e2-4ebd-813a-437ddb2e5dc4.jpg",
+        "id": 25,
+        "thumbName": "cc4bc1f4-c731-44a9-ba8c-a0b32f92ddb1.jpg",
         "thumbWidth": 200,
         "thumbHeight": 200,
         "originalUrl": "http://norml.org/images/buttons/norml-logo-sq-bk.jpg",
@@ -2119,7 +2119,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 111,
+    "id": 112,
     "title": "Nevada voters approved Question 2, which legalizes, taxes, and regulates marijuana for adults 21 and older",
     "description": "Permits adults who are not participating in the state's medical cannabis program to legally grow (up to six plants, including all of the harvest from those plants) and to possess personal use quantities of cannabis (up to one ounce of flower and/or up to 3.5 grams of concentrates) while also licensing commercial cannabis production and retail sales. (Home cultivation is not permitted if one's residence is within 25 miles of an operating marijuana retailer.) Commercial marijuana production is subject to a 15 percent excise tax, much of which is earmarked to the State Distributive School Account.",
     "sourceUrl": "http://norml.org/legal/item/nevada-legalization",
@@ -2135,8 +2135,8 @@
   {
     "media": [
       {
-        "id": 72,
-        "thumbName": "8625e746-0b42-4b67-8330-1f49b9ecb7b3.jpg",
+        "id": 37,
+        "thumbName": "1b8a7049-507f-4efe-ae08-932e9de59088.jpg",
         "thumbWidth": 400,
         "thumbHeight": 210,
         "originalUrl": "https://icdn4.digitaltrends.com/image/campstove2-5-1200x630-c-ar1.91.jpg?wm=https://files.digitaltrends.com/images/dt-share-banner-1200x90.png&wma=s,0,0,0,0,100",
@@ -2145,7 +2145,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 112,
+    "id": 113,
     "title": "BioLite’s new CampStove 2 improves on the original in just about every way",
     "description": "BioLite says that its latest model is more efficient, producing 50 percent more energy than the original version. That allows it to power up the stove’s removable 2600 mAh battery pack more quickly while also powering the onboard four-speed fan too. That fan that not only helps the stove to cook more efficiently but keeps the amount of smoke generated to a minimum as well. The new stove even ships with one of BioLite’s handy FlexLight, a USB powered lamp that helps you cook after dark.",
     "sourceUrl": "https://www.digitaltrends.com/outdoors/biolite-campstove2/",
@@ -2161,7 +2161,7 @@
   },
   {
     "media": [],
-    "id": 113,
+    "id": 114,
     "title": "Japanese company develops a solar cell with record-breaking 26%+ efficiency",
     "description": "A group of researchers funded by a Japanese government program develops “industrially compatible” cells. The silicon-based cells that make up a solar panel have a theoretical efficiency limit of 29 percent.",
     "sourceUrl": "https://arstechnica.com/science/2017/03/japanese-company-develops-a-solar-cell-with-record-breaking-26-efficiency/",
@@ -2178,8 +2178,8 @@
   {
     "media": [
       {
-        "id": 26,
-        "thumbName": "f7ed0e96-9ee8-468b-89a9-a9c1f1557680.jpg",
+        "id": 22,
+        "thumbName": "f01fa632-68c1-499b-a0fd-137ceb2ea9a4.jpg",
         "thumbWidth": 400,
         "thumbHeight": 296,
         "originalUrl": "http://hexus.net/media/uploaded/2017/3/7b25aa3b-c6e3-4eb8-8eb1-1070457045a4.jpg",
@@ -2188,7 +2188,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 114,
+    "id": 115,
     "title": "Dell's UltraSharp 32 Ultra HD 8K now available to purchase",
     "description": "First unveiled at CES 2017 the \"near borderless\" P3218K. To sum up, an 8K display like the P3218K provides a lot of pixels (over 33 million, or 7680 x 4320 at 60Hz), equivalent to 4x 4K displays or 16x FHD displays. Its IPS LED backlit display has a response time of 6ms (grey to grey).",
     "sourceUrl": "http://hexus.net/tech/news/monitors/103885-dells-ultrasharp-32-ultra-hd-8k-now-available-purchase/",
@@ -2204,7 +2204,7 @@
   },
   {
     "media": [],
-    "id": 115,
+    "id": 117,
     "title": "Comcast’s gigabit cable will be in 15 cities by early 2017",
     "description": "Comcast has two gigabit Internet services, one that uses cable and another that uses fiber only. The one we've talked about so far in this article uses existing cable lines to deliver 1Gbps download speeds and 35Mbps upload speeds with version 3.1 of DOCSIS (Data Over Cable Service Interface Specification). Comcast should be able to boost upload speeds significantly with advances in DOCSIS 3.1 technology, but it hasn't announced any specific plans to do so yet.",
     "sourceUrl": "http://arstechnica.com/information-technology/2016/11/comcasts-gigabit-cable-will-be-in-15-cities-by-early-2017/",
@@ -2221,8 +2221,8 @@
   {
     "media": [
       {
-        "id": 16,
-        "thumbName": "08c52645-23ac-4ec7-b7c9-1c7e0e8869f6.jpg",
+        "id": 44,
+        "thumbName": "f445568f-077a-40c7-b314-064f36e9b434.jpg",
         "thumbWidth": 400,
         "thumbHeight": 220,
         "originalUrl": "http://hexus.net/media/uploaded/2017/4/a26f0147-6f2f-46ad-8e99-0e053a784477.jpg",
@@ -2248,8 +2248,8 @@
   {
     "media": [
       {
-        "id": 49,
-        "thumbName": "1ea6dee1-721b-42f3-aac8-2d860e018acb.jpg",
+        "id": 52,
+        "thumbName": "e9d30a19-38af-48c4-8f60-dce98c4bdb80.jpg",
         "thumbWidth": 400,
         "thumbHeight": 208,
         "originalUrl": "http://hexus.net/media/uploaded/2017/5/cc33def7-172b-4c9f-ad7c-4eda9f6b3246.jpg",
@@ -2258,7 +2258,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 117,
+    "id": 118,
     "title": "Asus ZenScreen MB16AC 15.6-in USB monitor launching soon",
     "description": "It's a 15.6-inch full HD (1920 x 1080 pixels) IPS panel based device. Asus Zen devices are often pretty thin and this is no exception at 8mm. Improving its portability credentials is its weight of just 780g. Asus includes an ultra-thin 1mm foldable smart case with the screen, which provides screen protection and a further horizontal or vertical stand option.",
     "sourceUrl": "http://hexus.net/tech/news/monitors/105430-asus-zenscreen-mb16ac-156-in-usb-monitor-launching-soon/",
@@ -2275,8 +2275,8 @@
   {
     "media": [
       {
-        "id": 54,
-        "thumbName": "48a23ab4-df9f-4dd6-b695-fcadbb2c86d0.jpg",
+        "id": 34,
+        "thumbName": "62593bf6-d172-40ca-8a37-a50a2376c02e.jpg",
         "thumbWidth": 400,
         "thumbHeight": 195,
         "originalUrl": "http://hexus.net/media/uploaded/2017/5/45119a6f-0b2a-40f7-a0ed-0e09b558d2e0.jpg",
@@ -2285,7 +2285,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 118,
+    "id": 119,
     "title": "Intel patches nine-year-old enterprise CPU vulnerability",
     "description": "Intel has just patched a vulnerability which has been open and exploitable in all its enterprise targeted Core processors - for the last nine years. Since 2008 Intel's business-focussed PC processors have shipped with Active Management Technology (AMT), Intel Standard Manageability (ISM) and Small Business Technology (SBT) features - all useful features for remote management.",
     "sourceUrl": "http://hexus.net/tech/news/cpu/105202-intel-patches-nine-year-old-enterprise-cpu-vulnerability/",
@@ -2301,8 +2301,8 @@
   {
     "media": [
       {
-        "id": 44,
-        "thumbName": "ee8df67a-8dee-45b8-be9f-edb9520e2f5a.jpg",
+        "id": 33,
+        "thumbName": "91a7f6a0-d9a9-4636-8110-b9f016a7fa24.jpg",
         "thumbWidth": 400,
         "thumbHeight": 200,
         "originalUrl": "https://cdn.arstechnica.net/wp-content/uploads/2017/05/Apple.cash_.money_-760x380.jpg",
@@ -2311,7 +2311,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 119,
+    "id": 120,
     "title": "Apple has a record $250 billion in the bank",
     "description": "One possibility is delivering a huge dividend to shareholders. Another is the possible acquisition of companies that are true giants in their own right. Capital managers suggested to the WSJ that Apple could buy a company like Tesla, valued at $51 billion, to push forward a self-driving car project. Another idea is buying Netflix, valued at $65 billion, to work on video-streaming and as a hedge against Amazon. An even more outlandish idea—still within the realm of possibility—would be to buy The Walt Disney Company, which has a market cap of more than $180 billion.",
     "sourceUrl": "https://arstechnica.com/apple/2017/05/apple-has-a-record-250-billion-in-the-bank/",
@@ -2327,8 +2327,8 @@
   {
     "media": [
       {
-        "id": 35,
-        "thumbName": "9e1e809a-fb65-456c-85f6-67247dc12cb4.jpg",
+        "id": 48,
+        "thumbName": "c8c78cc9-658c-4e04-b7d0-b4c3ba655151.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
         "originalUrl": "https://cdn.arstechnica.net/wp-content/uploads/2017/05/surfacelap-5-640x360.jpg",
@@ -2354,8 +2354,8 @@
   {
     "media": [
       {
-        "id": 68,
-        "thumbName": "1061e54f-25b7-4dad-9566-47aba50575bf.jpg",
+        "id": 35,
+        "thumbName": "3d5b01d1-a8eb-41a8-a027-583866c3252c.jpg",
         "thumbWidth": 400,
         "thumbHeight": 326,
         "originalUrl": "https://cdn.arstechnica.net/wp-content/uploads/2017/05/Smooth_Tile_Perspective-800x652.jpg",
@@ -2364,7 +2364,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 120,
+    "id": 122,
     "title": "Tesla starts pre-orders on solar roof for $1,000, rolls out calculator for costs",
     "description": "A press release from Tesla claims that, on average, a solar roof will cost $21.85 per square foot, if 35 percent of the panels are active and the rest are inactive. Inactive panels are about $11 per square foot, and active panels are $42 per square foot, according to Peter Rive, SolarCity’s co-founder and CTO (and Elon Musk’s cousin).",
     "sourceUrl": "https://arstechnica.com/cars/2017/05/tesla-starts-pre-orders-on-solar-roof-for-1000-rolls-out-calculator-for-costs/",
@@ -2381,8 +2381,8 @@
   {
     "media": [
       {
-        "id": 41,
-        "thumbName": "e281058a-5f41-4058-a5fc-c5b840c19ef3.jpg",
+        "id": 51,
+        "thumbName": "23bbfa9e-8836-497b-b33d-905259bf5658.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
         "originalUrl": "https://cdn.macrumors.com/article-new/2017/05/new-surface-pro.jpg?retina",
@@ -2391,7 +2391,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 122,
+    "id": 123,
     "title": "Microsoft Says New Surface Pro is 1.7× Faster Than iPad Pro With 35% More Battery Life",
     "description": "Microsoft today introduced the new Surface Pro, choosing that name over Surface Pro 5, at a media event in Shanghai, China.",
     "sourceUrl": "https://www.macrumors.com/2017/05/23/microsoft-introduces-new-surface-pro/",
@@ -2407,7 +2407,7 @@
   },
   {
     "media": [],
-    "id": 123,
+    "id": 124,
     "title": "China Is Now Powered by the World's Largest Floating Solar Power Plant",
     "description": "China recently unveiled the largest floating solar power plant on earth which supplies 40MW of power to the grid in Huainan, China.",
     "sourceUrl": "http://interestingengineering.com/china-powered-worlds-largest-floating-solar-power-plant/",
@@ -2423,8 +2423,8 @@
   {
     "media": [
       {
-        "id": 47,
-        "thumbName": "3822f55f-722c-4d2c-8716-0e1864af64ec.jpg",
+        "id": 58,
+        "thumbName": "efdd6d8f-2787-4e81-acd4-6667b7a24d98.jpg",
         "thumbWidth": 400,
         "thumbHeight": 269,
         "originalUrl": "https://cdn.macrumors.com/article-new/2017/06/a10x-chart-2.jpg",
@@ -2433,7 +2433,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 124,
+    "id": 125,
     "title": "New iPad Pro's A10X Chip Revealed as First Manufactured Using TSMC's 10nm Process",
     "description": "With the launch of the new iPad Pro models at WWDC this year, Apple introduced new 10.5-inch and 12.9-inch devices that both came with an A10X Fusion Chip, which is said to deliver 30 percent faster CPU performance than previous-generation iPad Pro models and 40 percent faster graphics performance. In comparison, the A9 and A10 were built using a 16-nanometer process, the A8 used a 20-nanometer process, and the A7 used a 28-nanometer process.",
     "sourceUrl": "https://www.macrumors.com/2017/06/30/ipad-pros-a10x-10nm/",
@@ -2449,8 +2449,8 @@
   {
     "media": [
       {
-        "id": 39,
-        "thumbName": "30a135b9-537e-4740-a495-b3a45302899b.jpg",
+        "id": 64,
+        "thumbName": "f304a17b-bd97-439f-aef2-67b50d044058.jpg",
         "thumbWidth": 400,
         "thumbHeight": 300,
         "originalUrl": "https://img.youtube.com/vi/Y2ohh2L9YdE/0.jpg?retina",
@@ -2459,7 +2459,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 125,
+    "id": 126,
     "title": "Apple's New 10.5-Inch iPad Pro",
     "description": "The 10.5-inch iPad Pro is slightly larger than the 9.7-inch iPad Pro it replaces, but the size and weight difference is hardly noticeable, especially when you take in the much larger display. Apple was able to introduce a 20 percent larger display by shrinking the iPad's bezels by 40 percent. ProMotion introduces a 120Hz display refresh rate, which brings smoother, more responsive animations and motion response. For example, there's a dramatic difference when you scroll.",
     "sourceUrl": "https://www.macrumors.com/2017/06/13/10-5-inch-ipad-pro-hands-on/",
@@ -2476,8 +2476,8 @@
   {
     "media": [
       {
-        "id": 67,
-        "thumbName": "624219bf-90c2-4e79-a2d7-1e73df1bff67.jpg",
+        "id": 43,
+        "thumbName": "5379ba01-d2dc-4541-9cb9-60eb90e93239.jpg",
         "thumbWidth": 400,
         "thumbHeight": 214,
         "originalUrl": "http://hexus.net/media/uploaded/2017/6/f1a18765-6b80-4023-a85a-143ba7e8cc2f.jpg",
@@ -2486,7 +2486,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 126,
+    "id": 127,
     "title": "Microsoft Modern Keyboard with Fingerprint ID introduced",
     "description": "The new Microsoft Modern Keyboard with Fingerprint ID is built with an aluminum frame to make it slim, yet strong. Microsoft calls it a \"virtually indestructible\" workhorse of a keyboard.",
     "sourceUrl": "http://hexus.net/tech/news/peripherals/107098-microsoft-modern-keyboard-fingerprint-id-introduced/",
@@ -2503,8 +2503,8 @@
   {
     "media": [
       {
-        "id": 53,
-        "thumbName": "cb789284-63e8-42f4-80f5-917e2fc73af5.jpg",
+        "id": 60,
+        "thumbName": "0fc58f34-224f-4899-beff-22d21b6722c0.jpg",
         "thumbWidth": 400,
         "thumbHeight": 72,
         "originalUrl": "http://hexus.net/media/uploaded/2017/5/c92f97b5-eb95-4f96-89ed-15f69f0c41f1.jpg",
@@ -2513,7 +2513,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 127,
+    "id": 128,
     "title": "SK hynix Q2 products list includes GDDR6 and HBM2",
     "description": "Graphics RAM chips availability scheduled for Q4 2017 and Q2 2017 respectively.",
     "sourceUrl": "http://hexus.net/tech/news/graphics/105718-sk-hynix-q2-products-list-includes-gddr6-hbm2/",
@@ -2528,7 +2528,7 @@
   },
   {
     "media": [],
-    "id": 128,
+    "id": 129,
     "title": "A New Doubly Charmed Particle Has Just Been Discovered in CERN",
     "description": "For many years, physicists have been aware of the existence of this doubly charmed particle because of current physical theories. However, nobody has been successful in observing the particle and it is only now that the baryon with two heavy quarks has been distinctively detected. Known as Ξcc++(Xicc++), this new particle is almost four times heavier than a proton.",
     "sourceUrl": "http://interestingengineering.com/new-doubly-charmed-particle-discovered-cern/",
@@ -2544,8 +2544,8 @@
   {
     "media": [
       {
-        "id": 37,
-        "thumbName": "0656b904-31be-4575-bfd9-014b333d6f2d.jpg",
+        "id": 49,
+        "thumbName": "1689b9b1-3b46-4067-b7a8-c0fcf3a34a1b.jpg",
         "thumbWidth": 400,
         "thumbHeight": 266,
         "originalUrl": "http://hexus.net/media/uploaded/2017/7/10bd111c-b2ec-4a8e-a4c1-ec0bf866c968.jpg",
@@ -2554,7 +2554,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 131,
+    "id": 132,
     "title": "Samsung debuts 33ft wide HDR LED cinema display",
     "description": "4K resolution display is nearly 10x brighter than standard projector technologies can offer. Thanks to its brightness qualities Samsung sees its HDR cinema LED display used beyond the traditional cinema role - for presentations in either dark or ambient lighting conditions, for example. The display could also be put to great use at corporate events, concerts, sports event viewing and gaming competitions.",
     "sourceUrl": "http://hexus.net/ce/news/audio-visual/107929-samsung-debuts-33ft-wide-hdr-led-cinema-display/",
@@ -2570,8 +2570,8 @@
   {
     "media": [
       {
-        "id": 48,
-        "thumbName": "3e0a6db5-d143-4c76-8a04-0f54a3c80897.jpg",
+        "id": 46,
+        "thumbName": "249d7c07-2fbe-4ba6-b736-e315fa93f021.jpg",
         "thumbWidth": 400,
         "thumbHeight": 262,
         "originalUrl": "http://hexus.net/media/uploaded/2017/7/450c4f79-47b1-4064-b31b-c89a6ef5cf84.jpg",
@@ -2580,7 +2580,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 129,
+    "id": 131,
     "title": "Intel Movidius Neural Compute Stick available for US$79",
     "description": "Offers more than 100 GFLOPS of inference performance within a 1W power envelope.",
     "sourceUrl": "http://hexus.net/ce/news/gadgets/108157-intel-movidius-neural-compute-stick-available-us79/",
@@ -2597,8 +2597,8 @@
   {
     "media": [
       {
-        "id": 43,
-        "thumbName": "a5b8d604-73e7-4d8b-b501-7d4c95ace8de.jpg",
+        "id": 42,
+        "thumbName": "0d08a939-186f-4e28-86de-9f2398b94bd8.jpg",
         "thumbWidth": 400,
         "thumbHeight": 345,
         "originalUrl": "http://hexus.net/media/uploaded/2017/8/d076cf18-6cb6-42f1-a7ec-9ae68b929686.jpg",
@@ -2607,7 +2607,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 130,
+    "id": 133,
     "title": "Lian Li DK-05 adjustable desk PC (motorised) reaches UK and US",
     "description": "Lian Li first showcased its new Dual-System DK-05 motorised adjustable desk chassis back at CES 2017. At the time Lian Li heralded the DK-05 as \"the new pinnacle of PC desks,\" as it took lessons learnt from the DK-04 and its predecessors to create a new design that accommodated up-to twin EATX motherboards within an all-aluminium construction and under its tempered glass top.",
     "sourceUrl": "http://hexus.net/tech/news/chassis/108523-lian-li-dk-05-adjustable-desk-pc-motorised-reaches-uk-us/",
@@ -2624,8 +2624,8 @@
   {
     "media": [
       {
-        "id": 36,
-        "thumbName": "c53c5310-804d-4dd4-b50d-03b819da2c16.png",
+        "id": 31,
+        "thumbName": "de36dee2-43c5-41f3-a413-164be7f76919.png",
         "thumbWidth": 375,
         "thumbHeight": 281,
         "originalUrl": "https://fsmedia.imgix.net/assets/43.png?auto=format%2Ccompress&w=375",
@@ -2634,7 +2634,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 132,
+    "id": 130,
     "title": "Elon Musk's First Tesla Solar Roof Is Here, and It Looks Amazing",
     "description": "Tesla CEO Elon Musk announced during the Q2 2017 earnings call that himself and his CTO are using solar tiles on their own houses to provide renewable...",
     "sourceUrl": "https://www.inverse.com/article/35022-elon-musk-tesla-solar-roof-photos-amazing",
@@ -2649,7 +2649,7 @@
   },
   {
     "media": [],
-    "id": 135,
+    "id": 134,
     "title": "33rd Annual US Go Congress",
     "description": "The US Go Congress is the largest go activity in the United States. It happens once a year and spans one week. Events include the US Open, the largest annual go tournament in the US, professional lectures and game analysis, continuous self-paired games, and all kinds of go-related activities from morning to midnight.",
     "sourceUrl": "http://www.gocongress.org/",
@@ -2666,8 +2666,8 @@
   {
     "media": [
       {
-        "id": 62,
-        "thumbName": "e125d195-4545-440c-9133-8d00a7db9124.jpg",
+        "id": 36,
+        "thumbName": "e184a4f2-4285-4d1a-bf96-11b23742577c.jpg",
         "thumbWidth": 400,
         "thumbHeight": 222,
         "originalUrl": "http://hexus.net/media/uploaded/2017/6/e3ec48bb-0577-41fb-8310-78812ef68d36.jpg",
@@ -2676,7 +2676,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 134,
+    "id": 135,
     "title": "StarCraft Remastered",
     "description": "Full graphical upgrade of the original StarCraft and the StarCraft: Brood War expansion\nWidescreen UHD support for up to 4K resolution\nNew matchmaking and leaderboards\nPlayer profiles that track individual statistics\nCloud saving for campaign progress, hotkeys, and replays\nHigher fidelity music and sound\nSwitch between Remastered and the original StarCraft with the click of a button",
     "sourceUrl": "http://hexus.net/gaming/news/pc/107491-starcraft-remastered-gets-launch-date-14th-august/",
@@ -2693,8 +2693,8 @@
   {
     "media": [
       {
-        "id": 69,
-        "thumbName": "26be8592-c66a-4495-a305-184998b6e76e.jpg",
+        "id": 84,
+        "thumbName": "6aeadf75-e76e-4e04-9074-35503d975730.jpg",
         "thumbWidth": 400,
         "thumbHeight": 372,
         "originalUrl": "https://cdn.macrumors.com/article-new/2017/04/imac-duo.jpg?retina",
@@ -2703,7 +2703,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 133,
+    "id": 136,
     "title": "Intel Rumored to Debut Basin Falls Platform in May, Launch Coffee Lake Chips in August",
     "description": "Intel plans to move up the launch of its 14-nanometer Coffee Lake processors, introducing them in August of 2017 instead of January 2018. According to DigiTimes, the launch is being moved up because of \"increasing competition from AMD's Ryzen 7 and Ryzen 5 processors.\"",
     "sourceUrl": "https://www.macrumors.com/2017/04/20/intel-basin-falls-may-coffee-lake-august/",
@@ -2719,8 +2719,8 @@
   {
     "media": [
       {
-        "id": 88,
-        "thumbName": "772e7d9d-50b5-49ba-b118-95f0780ee538.jpg",
+        "id": 77,
+        "thumbName": "7fd57010-b10b-4fcf-a352-983abbbb869c.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
         "originalUrl": "https://ksr-ugc.imgix.net/assets/016/927/907/0928a0f336e6568b40e9b3957c5bb0ed_original.jpg?w=1552&h=873&fit=fill&bg=000000&v=1497002704&auto=format&q=92&s=ce04f53517e8113d9a0fb9a34a09f13c",
@@ -2729,7 +2729,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 136,
+    "id": 137,
     "title": "UNA Grill: the portable charcoal grill to carry anywhere",
     "description": "Sherif Soubra is raising funds for UNA Grill: the portable charcoal grill to carry anywhere on Kickstarter! \nUNA is the smart, compact, easy-to-clean charcoal grill. Now you can grill on your balcony, in the park, anywhere, year-round with UNA.",
     "sourceUrl": "https://www.kickstarter.com/projects/922121366/una-grill-the-portable-charcoal-grill-to-carry-any/description",
@@ -2746,8 +2746,8 @@
   {
     "media": [
       {
-        "id": 51,
-        "thumbName": "bddfe8c6-62b6-404e-80bd-52a0d9758d9d.jpg",
+        "id": 47,
+        "thumbName": "7757b555-3c10-4d41-83d8-072759a38c39.jpg",
         "thumbWidth": 400,
         "thumbHeight": 200,
         "originalUrl": "https://cdn.arstechnica.net/wp-content/uploads/2017/08/14-1-760x380.jpg",
@@ -2756,7 +2756,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 137,
+    "id": 138,
     "title": "New Nest Thermostat swaps stainless steel for plastic, lowers price by $80",
     "description": "The Nest E display (which remember, has a circular mask) is a 1.76-inch diameter, 320×320 display at 182 PPI. The regular Nest has a 2.08-inch diameter, 480×480 display with a PPI count of 229. While there's still an on-device menu system, the cheaper Nest doesn't have the \"farsight\" feature, which allows the Nest to show the time, temperature, or weather when not in use.",
     "sourceUrl": "https://arstechnica.com/gadgets/2017/08/nest-launches-a-cheaper-plastic-thermostat-the-nest-thermostat-e/",
@@ -2773,8 +2773,8 @@
   {
     "media": [
       {
-        "id": 40,
-        "thumbName": "f7ae3f73-03ed-4e46-b36f-3a1d3d76b34f.jpg",
+        "id": 69,
+        "thumbName": "f36cfb2e-8804-4d98-8b3e-afd16df1588f.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
         "originalUrl": "https://cdn.macrumors.com/article-new/2017/08/iphone8dummyfrontback-800x450.jpg",
@@ -2783,7 +2783,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 138,
+    "id": 141,
     "title": "Apple Invites Media to September 12 Event at Apple Park: 'Let's Meet at Our Place'",
     "description": "Apple's fall 2017 event will be its most significant in years thanks to the debut of a radically redesigned iPhone that features an edge-to-edge display, a vertical rear camera, facial recognition capabilities, a much improved processor, and wireless inductive charging functionality. The new iPhone features a display similar in size to the display of the 5.5-inch iPhone 7 Plus, but with a body closer in size to the 4.7-inch iPhone 7.",
     "sourceUrl": "https://www.macrumors.com/2017/08/31/september-12-event-invites/",
@@ -2799,8 +2799,8 @@
   {
     "media": [
       {
-        "id": 42,
-        "thumbName": "50d6a9dc-31db-4263-84d8-9621f7e0e771.jpg",
+        "id": 40,
+        "thumbName": "9d7d35b8-0d96-4ce9-bd50-00edbf1f5f4d.jpg",
         "thumbWidth": 400,
         "thumbHeight": 200,
         "originalUrl": "https://cdn.arstechnica.net/wp-content/uploads/2017/07/41-760x380.jpg",
@@ -2809,7 +2809,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 139,
+    "id": 140,
     "title": "New Google flagship phones to launch 366 days after the old Google phones",
     "description": "New Google phones to launch 366 days after the old Google phones. The device will come with a new SoC from Qualcomm, a \"Snapdragon 836.\" Pixel is being made by HTC, has bigger top and bottom bezels, and has a 4.97-inch 1080p OLED display. Will have squeezable frames like the HTC U11, dual front-facing speakers, an always-on display mode, no headphone jacks, and 4GB of RAM.",
     "sourceUrl": "https://arstechnica.com/gadgets/2017/08/report-google-pixel-2-to-launch-october-5/",
@@ -2825,8 +2825,8 @@
   {
     "media": [
       {
-        "id": 61,
-        "thumbName": "c9c58639-9992-45ee-98ef-cdd163b5744c.jpg",
+        "id": 78,
+        "thumbName": "078268b9-4dec-47d8-8640-565b437709c3.jpg",
         "thumbWidth": 400,
         "thumbHeight": 223,
         "originalUrl": "http://hexus.net/media/uploaded/2017/8/118103b7-f679-4bcd-b478-7ccb78c4621e.jpg",
@@ -2835,7 +2835,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 140,
+    "id": 139,
     "title": "Remake of the original Age of Empires 'Age of Empires: Definitive Edition'",
     "description": "All-new 4K graphics,\nRe-orchestrated soundtrack,\nNew zoom levels,\nAttack Move, Unit queuing,\n250-300 population cap,\nRally Points Basic, Rally Points Contextual (Intelligent Villagers),\nGrid default key layout,\nSelect Idle Military, Select Idle Villagers,\nRight-click mouse scroll",
     "sourceUrl": "http://hexus.net/gaming/news/pc/109256-microsoft-announces-age-empires-4-gamescom-video/",
@@ -2851,8 +2851,8 @@
   {
     "media": [
       {
-        "id": 46,
-        "thumbName": "27f4d54d-2930-4bb4-81c7-b14a42e0183e.jpg",
+        "id": 59,
+        "thumbName": "d9c5fdd6-9ee9-4c86-aae2-0659cd16829d.jpg",
         "thumbWidth": 400,
         "thumbHeight": 378,
         "originalUrl": "https://cdn.macrumors.com/article-new/2017/07/googlepixeldesign.jpg?retina",
@@ -2861,7 +2861,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 141,
+    "id": 142,
     "title": "Upcoming 2017 Google Pixel XL May Feature 'Squeezable' Frame for Activating Google Assistant",
     "description": "Google's second-generation Pixel XL could feature a squeezable body, a 6-inch AMOLED display, and thinner bezels. LG is said to be manufacturing the Google Pixel XL 2, which features a design that's curved like the original Google Pixel. It continues to offer a rear fingerprint sensor (now located in the aluminum portion of the device) and a large single-lens camera, eschewing the dual-lens camera trend.",
     "sourceUrl": "https://www.macrumors.com/2017/07/11/google-pixel-xl-2017-squeezable-frame/",
@@ -2877,8 +2877,8 @@
   {
     "media": [
       {
-        "id": 77,
-        "thumbName": "8a65b3be-94d6-4167-962c-af2cf3c4bc00.jpg",
+        "id": 72,
+        "thumbName": "3d425012-7eab-4e1c-a17b-7c3766458c8b.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
         "originalUrl": "https://cdn.vox-cdn.com/thumbor/X6Nu1XTCVhwtylb7i-m9laMTfBA=/0x0:2048x1152/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/55198519/xboxonex.1497215133.jpg",
@@ -2887,7 +2887,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 142,
+    "id": 143,
     "title": "Xbox One X is Microsoft's next game console",
     "description": "The new console will ship with 6 teraflops of graphical power, more than its main competitor, the PS4 Pro, with 4.2 teraflops. Microsoft is using a custom GPU engine on Scorpio that runs at 1172MHz, a big increase over the Xbox One’s 853MHz and even Sony’s 911MHz found on the PS4 Pro. Microsoft is also shipping the Xbox One X with an Ultra HD Blu-ray drive for 4K movies and entertainment, and 1TB of storage.",
     "sourceUrl": "https://www.theverge.com/2017/6/11/15774918/microsoft-xbox-one-x-release-date-price-new-console-announced-e3-2017",
@@ -2904,8 +2904,8 @@
   {
     "media": [
       {
-        "id": 81,
-        "thumbName": "c74140ff-ce79-4028-9cb9-2e10cfd619c5.jpg",
+        "id": 86,
+        "thumbName": "9982cd34-f196-4f83-baa1-aaf44b77dc74.jpg",
         "thumbWidth": 400,
         "thumbHeight": 209,
         "originalUrl": "https://i.amz.mshcdn.com/wz1ZGfs5idDJcJJw_yh5q8bLUwU=/1200x627/2015%2F05%2F27%2F12%2Fecocapsule0.8864c.jpg",
@@ -2914,7 +2914,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 143,
+    "id": 144,
     "title": "Wind and solar-powered Ecocapsule is your off-grid home of the future",
     "description": "At roughly 120 square feet, the Ecocapsule takes tiny living accommodations to the next level. The pod runs off wind and solar power and is equipped with a wind turbine and solar cells, which fuel the capsules' 9,744 watt-hour battery.  It also has tools to collect and reuse rainwater and dew. Between its solar and wind power and water collection systems, Nice Architects say the Ecocapsule can support you for as much as a year at a time in off-the-grid locations.",
     "sourceUrl": "http://mashable.com/2015/05/26/ecocapsule-pods/#cJE5J5tboiqD",
@@ -2930,7 +2930,7 @@
   },
   {
     "media": [],
-    "id": 144,
+    "id": 145,
     "title": "UK's Newest Fusion Reactor Just Generated Its First Plasma",
     "description": "The United Kingdom switched on its newest fusion reactor last week, and the ST40 has already hit a milestone -- plasma within its core. The reactor, created by Tokamak Energy, should heat plasma to 100 million degrees Celsius (or 180 million degrees Fahrenheit)",
     "sourceUrl": "http://interestingengineering.com/uks-fusion-reactor-just-generated-first-plasma/",
@@ -2946,8 +2946,8 @@
   {
     "media": [
       {
-        "id": 80,
-        "thumbName": "4f49b2c1-4f8d-412c-b7f2-c80f7ecdddbd.jpg",
+        "id": 82,
+        "thumbName": "60ced3a1-dcc3-4cab-90c0-81e2c5952851.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
         "originalUrl": "https://cdn.vox-cdn.com/thumbor/NlWSnrqavkPD4wkRQQYehVkkv0c=/0x106:2040x1254/1600x900/cdn.vox-cdn.com/uploads/chorus_image/image/56022631/theunit1_2040.0.0.jpg",
@@ -2956,7 +2956,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 145,
+    "id": 146,
     "title": "Fitbit says its long-awaited smartwatch will be ready for the holidays",
     "description": "On the earnings call, chief executive James Park said that Fitbit’s new smartwatch will have health and fitness tracking features, will have GPS, will be be water resistant up to 50 meters, and will offer cross-platform compatibility as well as “multi-day battery life.”",
     "sourceUrl": "https://www.theverge.com/2017/8/2/16086762/fitbit-second-quarter-q2-2017-earnings-smartwatch-announced-holiday",
@@ -2972,8 +2972,8 @@
   {
     "media": [
       {
-        "id": 87,
-        "thumbName": "166b65f6-64d5-4070-976e-1f93d8533ffa.jpg",
+        "id": 90,
+        "thumbName": "65c42c04-d9b3-437e-ab6b-bbf896bdedd7.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
         "originalUrl": "https://ksr-ugc.imgix.net/assets/016/338/003/80b84fb4af550e15d6f3033c14a678cf_original.jpg?crop=faces&w=1552&h=873&fit=crop&v=1494467972&auto=format&q=92&s=7615c38bb93baacb980235b6ca268674",
@@ -2982,7 +2982,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 146,
+    "id": 147,
     "title": "SolarGaps - Energy Generating Solar Panel Window Blinds",
     "description": "Consume Energy - The included SolarGaps dock that allows you to charge and power devices within your home or office. \nBattery Storage - By storing surplus energy in a battery, you can reduce your energy bill by consuming stored energy during peak hours when rates are higher.\nSell To Grid - With a two-way meter from your utility company, you can sell your surplus energy by supplying it to the power grid during the day when the demand and price is higher.",
     "sourceUrl": "https://www.kickstarter.com/projects/1170840477/solargaps-smart-solar-blinds/description",
@@ -2998,7 +2998,7 @@
   },
   {
     "media": [],
-    "id": 147,
+    "id": 148,
     "title": "Inside Tesla's $5 Billion Gigafactory - Visual Capitalist",
     "description": "The $5 Billion Tesla Gigfactory will set a new precedent for economies of scale in battery production, creating demand for graphite, cobalt, and lithium. The name gigafactory comes from the plant's planned annual battery production capacity of 35 gigawatt-hours, which Tesla said on Wednesday it would achieve by 2018.",
     "sourceUrl": "http://www.visualcapitalist.com/inside-teslas-5-billion-gigafactory/",
@@ -3015,8 +3015,8 @@
   {
     "media": [
       {
-        "id": 78,
-        "thumbName": "3ac1ab86-a72e-4f0d-89d3-e7b91969aad0.jpg",
+        "id": 80,
+        "thumbName": "31bb54dc-11e4-4734-b6af-9876288d7f04.jpg",
         "thumbWidth": 400,
         "thumbHeight": 200,
         "originalUrl": "https://solpad.com/asset/resource/shared/images/facebook_share2.jpg",
@@ -3025,7 +3025,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 148,
+    "id": 150,
     "title": "SolPad lets you take the power of the sun anywhere you go.",
     "description": "SolPad Mobile has more built-in battery storage than any other portable solar device. And multiple devices can be linked to create even more.\nOur FlexGrid system lets you connect multiple SolPad Mobile devices to generate as much power as you could imagine. And linking our devices is plug and play — they're self-configuring and instantly ready to give you the ability to make your own mini-grid off the grid.",
     "sourceUrl": "https://solpad.com/product/solpad-mobile/",
@@ -3042,8 +3042,8 @@
   {
     "media": [
       {
-        "id": 58,
-        "thumbName": "1a268a1a-6363-4b19-9cae-287a06d9cf18.jpg",
+        "id": 67,
+        "thumbName": "9a6b21aa-9d10-475e-8a73-0b0e984e6e24.jpg",
         "thumbWidth": 400,
         "thumbHeight": 247,
         "originalUrl": "http://hexus.net/media/uploaded/2016/9/33a8cbe6-7461-4bd3-b256-bfc04d10d03e.jpg",
@@ -3052,7 +3052,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 150,
+    "id": 149,
     "title": "GLOBALFOUNDRIES will jump directly from 14nm to 7nm",
     "description": "Tech expected to be ready for chip designers in H2 2017, production in early 2018. It will skip \"the marginal performance and power benefits for the high cost of the 10nm process node\" to hopefully become a leading differentiated 7nm chip fabricator ahead of major rivals.",
     "sourceUrl": "http://hexus.net/tech/news/industry/96997-globalfoundries-will-jump-directly-14nm-7nm/",
@@ -3068,34 +3068,8 @@
   {
     "media": [
       {
-        "id": 65,
-        "thumbName": "d84dac68-5d57-48b1-afe9-082bf71c119b.jpg",
-        "thumbWidth": 400,
-        "thumbHeight": 144,
-        "originalUrl": "https://cdn.macrumors.com/article-new/2017/11/intel8thgenamd.jpg?retina",
-        "originalWidth": 1374,
-        "originalHeight": 496,
-        "type": "image/jpeg"
-      }
-    ],
-    "id": 149,
-    "title": "Intel Teams Up With AMD for New 8th-Generation Processors With AMD GPUs",
-    "description": "Intel and AMD are joining forces to produce new 8th-Generation H-Series Intel mobile processors paired with stacked second-generation High Bandwidth Memory and custom-built discrete graphics from AMD. For the new H-Series chips, which feature all of the above listed components in a single processor package, Intel says is using its Embedded Multi-Die Interconnect Bridge (EMIB), a power-sharing framework that reduces the standard silicon footprint to less than half that of standard discrete components on a motherboard. This is the first consumer product that takes advantage of EMIB.",
-    "sourceUrl": "https://www.macrumors.com/2017/11/06/intel-8th-generation-processors-amd-gpus/",
-    "utcStartDateTime": "2018-03-31T07:00:00.000Z",
-    "utcEndDateTime": "2018-04-01T06:59:59.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-11-08T06:28:38.824Z",
-    "favoriteCount": 0,
-    "likeCount": 0,
-    "hasFavorite": false,
-    "hasLike": false
-  },
-  {
-    "media": [
-      {
-        "id": 50,
-        "thumbName": "c10bd492-a11b-4481-b4da-22b5057a996d.jpg",
+        "id": 54,
+        "thumbName": "8a5a11ee-b5d4-4cb9-9bcb-193b92173425.jpg",
         "thumbWidth": 400,
         "thumbHeight": 203,
         "originalUrl": "http://hexus.net/media/uploaded/2017/6/d502e6c0-0d33-4838-a69a-c540a9bc0fd2.jpg",
@@ -3120,8 +3094,34 @@
   {
     "media": [
       {
-        "id": 64,
-        "thumbName": "e2a7a3ed-6084-4033-b660-09619cb588e4.jpg",
+        "id": 75,
+        "thumbName": "aba65bf1-7ade-4cbd-a3e6-fb8e80812160.jpg",
+        "thumbWidth": 400,
+        "thumbHeight": 144,
+        "originalUrl": "https://cdn.macrumors.com/article-new/2017/11/intel8thgenamd.jpg?retina",
+        "originalWidth": 1374,
+        "originalHeight": 496,
+        "type": "image/jpeg"
+      }
+    ],
+    "id": 152,
+    "title": "Intel Teams Up With AMD for New 8th-Generation Processors With AMD GPUs",
+    "description": "Intel and AMD are joining forces to produce new 8th-Generation H-Series Intel mobile processors paired with stacked second-generation High Bandwidth Memory and custom-built discrete graphics from AMD. For the new H-Series chips, which feature all of the above listed components in a single processor package, Intel says is using its Embedded Multi-Die Interconnect Bridge (EMIB), a power-sharing framework that reduces the standard silicon footprint to less than half that of standard discrete components on a motherboard. This is the first consumer product that takes advantage of EMIB.",
+    "sourceUrl": "https://www.macrumors.com/2017/11/06/intel-8th-generation-processors-amd-gpus/",
+    "utcStartDateTime": "2018-03-31T07:00:00.000Z",
+    "utcEndDateTime": "2018-04-01T06:59:59.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2017-11-08T06:28:38.824Z",
+    "favoriteCount": 0,
+    "likeCount": 0,
+    "hasFavorite": false,
+    "hasLike": false
+  },
+  {
+    "media": [
+      {
+        "id": 73,
+        "thumbName": "ecd3edb5-bbb4-4582-8cb7-2b0ea194e87e.jpg",
         "thumbWidth": 400,
         "thumbHeight": 251,
         "originalUrl": "https://technewswith.me/wp-content/uploads/2017/04/Intel-Cannonlake.jpg",
@@ -3130,7 +3130,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 152,
+    "id": 153,
     "title": "Intel Cannonlake Processors based on the 10nm manufacturing Process",
     "description": "Cannonlake Processors will be 15% faster than the Kaby Lake ones,\n10nm FinFET Manufacturing Process,\nChipset of 200 Series,\nUSB 3.1 Gen 2 10Gbps support, 6 ports,\nThermal Design Power (TDP) up to 95 W (LGA 1151),\nUpdated Intel Optane Technology Support",
     "sourceUrl": "https://technewswith.me/intel-cannonlake-expected-specs/",
@@ -3146,8 +3146,8 @@
   {
     "media": [
       {
-        "id": 45,
-        "thumbName": "398775ed-6266-442d-907d-16b52e73af4b.jpg",
+        "id": 65,
+        "thumbName": "a28ae7ac-48b9-4381-95e0-3d5be1a63f24.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
         "originalUrl": "https://cdn.arstechnica.net/wp-content/uploads/2017/05/D382180-Daimler-lays-foundation-for-one-of-the-biggest-and-most-modern-battery-factories-in-the-world.jpg",
@@ -3156,7 +3156,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 153,
+    "id": 154,
     "title": "Daimler begins construction on a $562 million lithium-ion battery factory in Germany",
     "description": "German automaker wants to bring 10 new electric models to the market by 2020.",
     "sourceUrl": "https://arstechnica.com/cars/2017/05/daimler-begins-construction-on-a-562-million-lithium-ion-battery-in-germany/",
@@ -3173,8 +3173,8 @@
   {
     "media": [
       {
-        "id": 83,
-        "thumbName": "d2f680a5-0e70-4168-8bbb-b3519fbe56b1.jpg",
+        "id": 63,
+        "thumbName": "5441bf6f-438c-472b-8e8f-aba11a8b045e.jpg",
         "thumbWidth": 400,
         "thumbHeight": 119,
         "originalUrl": "https://cdn.macrumors.com/article-new/2017/06/iphone-8-sensor-bar-mockup.jpg",
@@ -3183,7 +3183,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 154,
+    "id": 155,
     "title": "Apple is planning to use OLED displays \"in all new iPhone models launched from the second half of 2018",
     "description": "Earlier this year, a supply chain report said that Apple plans to make all of its iPhones with an OLED screen by 2019. Apple was believed to be preparing to adopt OLED panels for 60 million units of the \"iPhone 8\" in 2017, and then the company would double the adoption of OLED panels in 2018 before wholly transitioning to OLED-only iPhones in 2019.",
     "sourceUrl": "https://www.macrumors.com/2017/07/06/apple-three-new-oled-iphones-2018/",
@@ -3198,7 +3198,7 @@
   },
   {
     "media": [],
-    "id": 155,
+    "id": 156,
     "title": "NASA's Groundbreaking Mission to 'Touch' the Sun Will Launch in 2018",
     "description": "NASA's Parker Solar Probe will be the first spacecraft to fly directly into the atmosphere of the Sun and explore its brutally hot corona.",
     "sourceUrl": "http://interestingengineering.com/nasas-groundbreaking-mission-touch-the-sun-launch-2018/",
@@ -3213,7 +3213,7 @@
   },
   {
     "media": [],
-    "id": 156,
+    "id": 158,
     "title": "Model 3 has officially arrived and sold out until at least mid-2018",
     "description": "The Model 3 will come equipped with a new suite of hardware that supports Tesla's second-generation Autopilot system, Enhanced Autopilot.\n\nEnhanced Autopilot will eventually allow the car to match its speed to traffic conditions, automatically change lanes without driver input, merge on and off highways, and park itself.",
     "sourceUrl": "http://www.businessinsider.com/teslas-model-3-launch-deliveries-begin-photos-features-2017-7",
@@ -3230,8 +3230,8 @@
   {
     "media": [
       {
-        "id": 57,
-        "thumbName": "fa7c6d53-b15c-412c-b77d-d71005eedfbb.jpg",
+        "id": 56,
+        "thumbName": "feb73ee2-09b8-464a-b382-862829b1ac80.jpg",
         "thumbWidth": 180,
         "thumbHeight": 101,
         "originalUrl": "https://wiki.evageeks.org/images/thumb/3/30/Eoe_mpe_flying_down.jpg/180px-Eoe_mpe_flying_down.jpg",
@@ -3256,8 +3256,8 @@
   {
     "media": [
       {
-        "id": 89,
-        "thumbName": "5553e464-f756-4cc7-ad5d-2b791644044f.jpg",
+        "id": 41,
+        "thumbName": "ac44ff36-1be8-4936-ad59-c6e47857b029.jpg",
         "thumbWidth": 400,
         "thumbHeight": 286,
         "originalUrl": "https://clotheshorse.com/wp-content/uploads/2018/01/D-Link-802.11ax-Routers.jpg",
@@ -3266,7 +3266,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 184,
+    "id": 159,
     "title": "D-Link 802.11ax Routers expected to provide 11,000 Mbps",
     "description": "The new Routers on paper are expected to provide 6,000 Mbps (via the AX6000) and a huge 11,000 Mbps from the AX11000. The 802.11ax wireless connectivity should deliver real-world speeds above 2Gbps while the current festive standard 802.11ac offers roughly 400Mbps in comparison.",
     "sourceUrl": "https://clotheshorse.com/d-link-802-11ax-routers-unveiled-ces-2018/460862",
@@ -3282,8 +3282,8 @@
   {
     "media": [
       {
-        "id": 59,
-        "thumbName": "67d6bc76-311b-4f60-a662-eda54db053f8.jpg",
+        "id": 81,
+        "thumbName": "d9118082-f309-4231-a768-df77668a31ee.jpg",
         "thumbWidth": 400,
         "thumbHeight": 200,
         "originalUrl": "https://cdn.arstechnica.net/wp-content/uploads/2017/05/msfc_2016_xp_sls_p_0003_maf_20160926_sf02_sls_em1_lh2_move_cell_a-80-760x380.jpg",
@@ -3292,7 +3292,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 158,
+    "id": 160,
     "title": "NASA pays the price of being subjected to a massive, expensive rocket",
     "description": "The agency is now likely to be at least three years late in delivering its new booster. I think that new manufacturing has caused some of the delays we’ve seen. No one welds the way that we’re welding material at the thicknesses we’re welding.",
     "sourceUrl": "https://arstechnica.com/science/2017/05/nasa-pays-the-price-of-being-subjected-to-a-massive-expensive-rocket/",
@@ -3309,34 +3309,8 @@
   {
     "media": [
       {
-        "id": 38,
-        "thumbName": "1eafa4d7-4ae5-4e74-a5c2-70ee429e0aad.jpg",
-        "thumbWidth": 400,
-        "thumbHeight": 626,
-        "originalUrl": "https://cdn.macrumors.com/article-new/2013/12/mac_pro_2013_rear-250x391.jpg?retina",
-        "originalWidth": 500,
-        "originalHeight": 782,
-        "type": "image/jpeg"
-      }
-    ],
-    "id": 159,
-    "title": "'Constant Negativity' From Pro Users Led Apple to Develop Modular Mac Pro, Which May Not Ship Until 2019",
-    "description": "Apple executives this week made an unusual and surprising announcement, detailing the company's work on an entirely revamped high-end modular Mac...",
-    "sourceUrl": "https://www.macrumors.com/2017/04/06/mac-pro-may-not-ship-until-2019/",
-    "utcStartDateTime": "2019-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2020-01-01T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-21T06:01:58.712Z",
-    "favoriteCount": 0,
-    "likeCount": 0,
-    "hasFavorite": false,
-    "hasLike": false
-  },
-  {
-    "media": [
-      {
-        "id": 73,
-        "thumbName": "54df441b-4cc6-4662-b287-27f7953775aa.jpg",
+        "id": 85,
+        "thumbName": "3f52b6bb-7ca6-49ab-b0aa-4cb9d83b8fd5.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
         "originalUrl": "https://cdn.macrumors.com/article-new/2017/01/Small-612-Audi-Q7-Piloted-Driving-Concept-800x450.jpg?retina",
@@ -3345,7 +3319,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 160,
+    "id": 161,
     "title": "Audi and Nvidia Working on Fully Autonomous Car for 2020 Rollout",
     "description": "Audi and Nvidia have announced they are working together to bring a fully self-driving car to the consumer market by the year 2020.",
     "sourceUrl": "http://www.macrumors.com/2017/01/05/audi-and-nvidia-autonomous-car-2020/",
@@ -3361,8 +3335,34 @@
   {
     "media": [
       {
-        "id": 55,
-        "thumbName": "20d5d8de-8489-48b7-837c-96fdf9262425.jpg",
+        "id": 50,
+        "thumbName": "dc7ff150-c0bd-4996-b804-06a549a56fbd.jpg",
+        "thumbWidth": 400,
+        "thumbHeight": 626,
+        "originalUrl": "https://cdn.macrumors.com/article-new/2013/12/mac_pro_2013_rear-250x391.jpg?retina",
+        "originalWidth": 500,
+        "originalHeight": 782,
+        "type": "image/jpeg"
+      }
+    ],
+    "id": 162,
+    "title": "'Constant Negativity' From Pro Users Led Apple to Develop Modular Mac Pro, Which May Not Ship Until 2019",
+    "description": "Apple executives this week made an unusual and surprising announcement, detailing the company's work on an entirely revamped high-end modular Mac...",
+    "sourceUrl": "https://www.macrumors.com/2017/04/06/mac-pro-may-not-ship-until-2019/",
+    "utcStartDateTime": "2019-12-31T08:00:00.000Z",
+    "utcEndDateTime": "2020-01-01T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2017-06-21T06:01:58.712Z",
+    "favoriteCount": 0,
+    "likeCount": 0,
+    "hasFavorite": false,
+    "hasLike": false
+  },
+  {
+    "media": [
+      {
+        "id": 53,
+        "thumbName": "dc47272b-52eb-445a-b0bc-8beaeafa2a3c.jpg",
         "thumbWidth": 400,
         "thumbHeight": 200,
         "originalUrl": "http://cdn.arstechnica.net/wp-content/uploads/2016/09/volkswagen_showcar_id_6500-760x380.jpg",
@@ -3371,7 +3371,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 161,
+    "id": 163,
     "title": "Volkswagen unveils the I.D., a long-range electric car due in 2020",
     "description": "250-300 mile range and an autonomous mode is coming by 2020.",
     "sourceUrl": "http://arstechnica.com/cars/2016/09/volkswagens-unveils-the-i-d-a-long-range-electric-car-due-in-2020/",
@@ -3387,8 +3387,8 @@
   {
     "media": [
       {
-        "id": 74,
-        "thumbName": "8b85ae45-2174-493c-a93d-e8d78a044a58.jpg",
+        "id": 87,
+        "thumbName": "2a21cf1e-4ccf-4ea4-b822-7e773eb628cd.jpg",
         "thumbWidth": 400,
         "thumbHeight": 267,
         "originalUrl": "http://mms.businesswire.com/media/20170302005430/en/573142/4/EWR6_Aerial_Big_cropped.jpg",
@@ -3397,7 +3397,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 162,
+    "id": 164,
     "title": "Amazon to install solar systems on 50 fulfillment facility rooftops worldwide by 2020",
     "description": "The initial solar projects planned for completion by the end of 2017 will generate up to 41 megawatts (MW) of power at Amazon facilities in California, New Jersey, Maryland, Nevada and Delaware. Depending on the specific project, time of year and other factors, a solar installation could generate as much as 80 percent of a single fulfillment facility’s annual energy needs.",
     "sourceUrl": "http://phoenix.corporate-ir.net/phoenix.zhtml?c=176060&p=irol-newsArticle&ID=2251024",
@@ -3412,7 +3412,7 @@
   },
   {
     "media": [],
-    "id": 163,
+    "id": 165,
     "title": "Battery-making capacity built by lithium-ion battery megafactories will triple by 2020",
     "description": "Today’s production capacity is approximately 35 GWh worldwide. However, once Tesla’s Gigafactory and the other facilities being built by LG Chem, Foxconn, BYD, and Boston Power are complete, we will have a total capacity in 2020 of around 122 GWh. This exponential ramping up of production capabilities proves that companies are serious about scale and reducing costs.",
     "sourceUrl": "http://www.visualcapitalist.com/the-lithium-ion-megafactories-are-coming-chart/",
@@ -3427,22 +3427,7 @@
   },
   {
     "media": [],
-    "id": 164,
-    "title": "Adobe Will Kill off Flash by 2020",
-    "description": "Flash is finally on its deathbed. Adobe is planning to remove support for the software by the end of 2020. Microsoft will pull the plug by 2019 and Google will phase out Flash over the next few years in an undeclared timeline.",
-    "sourceUrl": "http://interestingengineering.com/adobe-kill-off-flash-2020/",
-    "utcStartDateTime": "2020-01-01T08:00:00.000Z",
-    "utcEndDateTime": "2020-01-02T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-08-01T07:31:13.323Z",
-    "favoriteCount": 0,
-    "likeCount": 0,
-    "hasFavorite": false,
-    "hasLike": false
-  },
-  {
-    "media": [],
-    "id": 175,
+    "id": 166,
     "title": "Einride Launches a Prototype for Its Driverless Electric Truck T-Pod",
     "description": "Einride, a startup based in Scandinavia, has just released a full-scale prototype of its fully electric truck T-Pod. With a range of 124 miles and a 20kWh capacity, it is designed to replace small heavy duty fossil fuel reliant trucks on short trips. Without the need for the driver’s cab, the prototype looks pretty weird but if all goes to plan there will be 200 vehicles transporting goods between Gothenburg and Helsingborg in Sweden by 2020.",
     "sourceUrl": "http://interestingengineering.com/einride-prototype-driverless-electric-truck-t-pod/",
@@ -3456,10 +3441,25 @@
     "hasLike": false
   },
   {
+    "media": [],
+    "id": 167,
+    "title": "Adobe Will Kill off Flash by 2020",
+    "description": "Flash is finally on its deathbed. Adobe is planning to remove support for the software by the end of 2020. Microsoft will pull the plug by 2019 and Google will phase out Flash over the next few years in an undeclared timeline.",
+    "sourceUrl": "http://interestingengineering.com/adobe-kill-off-flash-2020/",
+    "utcStartDateTime": "2020-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2020-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2017-08-01T07:31:13.323Z",
+    "favoriteCount": 0,
+    "likeCount": 0,
+    "hasFavorite": false,
+    "hasLike": false
+  },
+  {
     "media": [
       {
-        "id": 76,
-        "thumbName": "0e760b6f-aa00-4efc-90ef-0e5f11718bd2.jpg",
+        "id": 71,
+        "thumbName": "dfea732f-b15d-401d-afb6-55ed63ff1bb5.jpg",
         "thumbWidth": 400,
         "thumbHeight": 241,
         "originalUrl": "http://hexus.net/media/uploaded/2016/10/1bafed45-47b4-4349-a2f2-fa0d09c1486d.jpg",
@@ -3468,7 +3468,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 165,
+    "id": 168,
     "title": "In December last year TSMC started to work on its 5nm process",
     "description": "In December last year TSMC started to work on its 5nm process. In the following January we heard from the firm's CEO about the progress of these plans, with a target launch date set for H1 2020. Now a recent report suggests that TSMC is confident of reaching its previously publicised goals, as it has started to allocate between 300 and 400 R&D staff to work on developing its 3nm process.",
     "sourceUrl": "http://hexus.net/tech/news/industry/97729-tsmc-dedicates-300-boffins-3nm-process-rd/",
@@ -3484,8 +3484,8 @@
   {
     "media": [
       {
-        "id": 90,
-        "thumbName": "7860f950-0eb4-43cd-b481-50a9abd8ea42.jpg",
+        "id": 70,
+        "thumbName": "f09839c6-cc38-457d-aa90-a5402a7729ca.jpg",
         "thumbWidth": 400,
         "thumbHeight": 245,
         "originalUrl": "https://hexus.net/media/uploaded/2017/11/6f0027ac-505d-4a65-b92c-d22c5059278f.jpg",
@@ -3494,7 +3494,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 185,
+    "id": 169,
     "title": "Wide scale deployment of 5G",
     "description": "5G promises greater speed, higher capacity, and low latency to our essential high-tech smart connected devices. Intel wants to make the transition to 5G smooth and seamless and with this in mind has designed a powerful end-to-end 5G solution. The Intel XMM 8000 series is Intel's first family of commercial 5G multi-mode modems, operating in both sub-6GHz and millimetre wave global spectrum bands. Intel hopes to gather a mass of design wins for the XMM 8000 in PC, phones, and even vehicles.",
     "sourceUrl": "https://hexus.net/tech/news/network/112292-intel-introduces-xmm-8000-series-5g-modems/",
@@ -3509,7 +3509,7 @@
   },
   {
     "media": [],
-    "id": 166,
+    "id": 171,
     "title": "Dubai to Add the World's First Rotating Skyscraper to Its Skyline by 2020",
     "description": "Dubai will be home to the first rotating skyscraper, dubbed the “Dynamic Tower” which is expected to be completed in 2020. The 42-meter skyscraper will be made of a series of 80-story-high rotating condos each costing a whopping $30 million.",
     "sourceUrl": "http://interestingengineering.com/dubai-add-worlds-first-rotating-skyscraper-skyline-2020/",
@@ -3525,7 +3525,7 @@
   },
   {
     "media": [],
-    "id": 167,
+    "id": 170,
     "title": "The World's First Ropeless Magnetic Levitation Multi-Directional Elevator Will Be Installed in Berlin",
     "description": "ThyssenKrupp will install the world's first rope-free multi-directional elevator in a project in Berlin, Germany. Not only is this multi-directional elevator very cool, it is also good for the environment. The Multi will reduce energy costs to buildings by incorporating a system that reduces peak power demand by up to 60% giving buildings the opportunity to reduce emissions.",
     "sourceUrl": "http://interestingengineering.com/worlds-first-ropeless-multi-directional-elevator-installed-in-berlin/",
@@ -3542,34 +3542,7 @@
     "media": [
       {
         "id": 79,
-        "thumbName": "797a369e-7f4d-42cd-96b7-48f3ffb9c813.jpg",
-        "thumbWidth": 400,
-        "thumbHeight": 229,
-        "originalUrl": "https://cdn.macrumors.com/article-new/2017/08/iowa-data-center-apple-800x458.jpg?retina",
-        "originalWidth": 1600,
-        "originalHeight": 916,
-        "type": "image/jpeg"
-      }
-    ],
-    "id": 177,
-    "title": "Apple Confirms Plans to Build Data Center in Iowa, Contribute Up to $100M to Community Projects",
-    "description": "Apple today announced plans to build a 400,000-square-foot data center in Waukee, Iowa, which will provide backend infrastructure for the App Store, Siri, Apple Music, iMessage, and other Apple services in North America.  The facility, which it says will create over 550 construction and operations jobs in the Des Moines area.  Authority reportedly approved a deal on Thursday that will give Apple $208 million in state and local tax breaks to construct two data centers near Des Moines. Apple will reportedly buy 2,000 acres of land for the project, allowing for future development in the area.",
-    "sourceUrl": "https://www.macrumors.com/2017/08/24/apple-confirms-iowa-data-center/",
-    "price": 1300000000,
-    "utcStartDateTime": "2020-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2021-01-01T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-08-29T05:19:13.217Z",
-    "favoriteCount": 0,
-    "likeCount": 0,
-    "hasFavorite": false,
-    "hasLike": false
-  },
-  {
-    "media": [
-      {
-        "id": 71,
-        "thumbName": "ad0b5f0b-83a3-41fe-808a-25ae24d6ce27.jpg",
+        "thumbName": "47282775-4d12-47e7-97c1-94dbae34ba70.jpg",
         "thumbWidth": 400,
         "thumbHeight": 274,
         "originalUrl": "https://i0.wp.com/themegaworld.com/wp-content/uploads/2017/04/2.jpg?resize=768%2C526",
@@ -3578,7 +3551,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 178,
+    "id": 172,
     "title": "Jeddah tower: World's Tallest Building- 1Km+",
     "description": "Jeddah tower previously known as Kingdom Tower, is currently under construction with a planned completion date of 2020. the tower is being build in Jeddah, Saudi Arabia. It will be about 1,000 meters, or one kilometer (3,280 feet) tall, Jeddah tower when complete in 2020 will be second tallest building in the world after ‘The tower at dubai creek harbor’in dubai ,UAE",
     "sourceUrl": "http://themegaworld.com/jeddah-tower-construction-update-2017/",
@@ -3595,8 +3568,35 @@
   {
     "media": [
       {
-        "id": 66,
-        "thumbName": "941050f1-99bc-4ee8-973d-5786c8d4ba2d.php",
+        "id": 89,
+        "thumbName": "790edfd7-57af-43ec-a75b-254394d7258e.jpg",
+        "thumbWidth": 400,
+        "thumbHeight": 229,
+        "originalUrl": "https://cdn.macrumors.com/article-new/2017/08/iowa-data-center-apple-800x458.jpg?retina",
+        "originalWidth": 1600,
+        "originalHeight": 916,
+        "type": "image/jpeg"
+      }
+    ],
+    "id": 173,
+    "title": "Apple Confirms Plans to Build Data Center in Iowa, Contribute Up to $100M to Community Projects",
+    "description": "Apple today announced plans to build a 400,000-square-foot data center in Waukee, Iowa, which will provide backend infrastructure for the App Store, Siri, Apple Music, iMessage, and other Apple services in North America.  The facility, which it says will create over 550 construction and operations jobs in the Des Moines area.  Authority reportedly approved a deal on Thursday that will give Apple $208 million in state and local tax breaks to construct two data centers near Des Moines. Apple will reportedly buy 2,000 acres of land for the project, allowing for future development in the area.",
+    "sourceUrl": "https://www.macrumors.com/2017/08/24/apple-confirms-iowa-data-center/",
+    "price": 1300000000,
+    "utcStartDateTime": "2020-12-31T08:00:00.000Z",
+    "utcEndDateTime": "2021-01-01T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2017-08-29T05:19:13.217Z",
+    "favoriteCount": 0,
+    "likeCount": 0,
+    "hasFavorite": false,
+    "hasLike": false
+  },
+  {
+    "media": [
+      {
+        "id": 57,
+        "thumbName": "3ad430eb-4faf-4b02-b04e-90a338e3c7da.php",
         "thumbWidth": 400,
         "thumbHeight": 309,
         "originalUrl": "http://www.thorntontomasetti.com/wp-content/themes/thornton/phpthumb/phpThumb.php?src=/wp-content/uploads/2015/02/suzhuo_2.jpg&w=700&h=540&zc=C",
@@ -3605,7 +3605,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 179,
+    "id": 174,
     "title": "Suzhou Zhongnan Center - Thornton Tomasetti",
     "description": "Located to the west of Jinji Lake, the Suzhou Zhongnan Center is a 729-meter, 137-story mixed-use tower with office, residential and hotel space. The tower has five stories below grade and an eight-story, long-span podium that provides ballroom and conference facilities.",
     "sourceUrl": "http://www.thorntontomasetti.com/projects/suzhou_zhongnan_center/",
@@ -3622,8 +3622,8 @@
   {
     "media": [
       {
-        "id": 86,
-        "thumbName": "e4140375-84e3-40c5-a54d-8fff050075f2.jpg",
+        "id": 88,
+        "thumbName": "931cd69b-cde6-469a-a9d8-125405853599.jpg",
         "thumbWidth": 400,
         "thumbHeight": 267,
         "originalUrl": "http://cdn.macrumors.com/article-new/2016/09/batt-800x533.jpg?retina",
@@ -3632,7 +3632,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 168,
+    "id": 175,
     "title": "Apple Planning New UK Headquarters in London's Historic Battersea Power Station",
     "description": "Apple is working on building an all-new campus location in London's Battersea Power Station, where 1,400 employees will be moved from eight...",
     "sourceUrl": "http://www.macrumors.com/2016/09/28/apple-plans-offices-battersea/",
@@ -3663,7 +3663,7 @@
   },
   {
     "media": [],
-    "id": 169,
+    "id": 177,
     "title": "France Aims to Transport Passengers on High-Speed Driverless Trains by 2023",
     "description": "The French government-owned railway, SNCF's project “drone trains” plans to put driverless trains on tracks by 2023.",
     "sourceUrl": "http://interestingengineering.com/france-transport-driverless-high-speed-trains-2023/",
@@ -3679,8 +3679,8 @@
   {
     "media": [
       {
-        "id": 82,
-        "thumbName": "be6e2220-e2fc-4aae-8335-b7b82970c0a9.jpg",
+        "id": 83,
+        "thumbName": "db8573f1-3436-4dbe-b31e-30219cfbd47e.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
         "originalUrl": "https://static.interestingengineering.com/images/uploads/sizes/microbus_lg.jpg",
@@ -3689,7 +3689,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 170,
+    "id": 178,
     "title": "Volkswagen Will Bring Back Its Iconic Microbus as an All-Electric Van",
     "description": "The batteries are expected to be mounted in the floor while the electric drive components will be kept as small as possible to maximize the space inside the van. The vehicle will have a style closer to a compact commercial van but inside it will offer the comfort and space of an SUV. Level three autonomous driving capability will also be standard across the range.",
     "sourceUrl": "http://interestingengineering.com/volkswagen-bring-back-iconic-microbus-all-electric-van/",
@@ -3705,8 +3705,8 @@
   {
     "media": [
       {
-        "id": 84,
-        "thumbName": "ce0e20c4-da6e-4595-a378-7e081121306d.jpg",
+        "id": 76,
+        "thumbName": "46835897-8d5a-4dea-97e4-fd3460b55f28.jpg",
         "thumbWidth": 400,
         "thumbHeight": 689,
         "originalUrl": "http://1v9vs2crct23kkf8ttrqsixx.wpengine.netdna-cdn.com/wp-content/uploads/2015/01/Jan29_HYards_55.jpg",
@@ -3715,7 +3715,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 171,
+    "id": 179,
     "title": "Hudson Yards",
     "description": "The West Side of New York City is in the midst of being transformed. Construction is well underway on Hudson Yards — the largest private real estate development in the history of the United States and the source of a new neighborhood situated between Chelsea and Hell’s Kitchen. Once completed, the site will be home to more than 17 million square feet of newly created space, including a public school and a much-anticipated cultural facility. Here’s an update on New York City’s largest project since Rockefeller Center.",
     "sourceUrl": "http://chelseanow.com/2015/01/progress-report-hudson-yards/",
@@ -3731,7 +3731,7 @@
   },
   {
     "media": [],
-    "id": 172,
+    "id": 182,
     "title": "Robots That Make 400 Burgers an Hour May Soon Take over Fast Food Restaurants",
     "description": "This robot needs only one hour to pump out 400 burgers made with fresh ground beef, salad, complete with a toasted bun. Tech blog Xconomy reported the prototype they saw demoed could save a fast-food restaurant up to $90,000 a year in training, salaries, and overhead costs.",
     "sourceUrl": "http://interestingengineering.com/robots-make-400-burgers-hour-take-over-fast-food-restaurants/",
@@ -3747,7 +3747,7 @@
   },
   {
     "media": [],
-    "id": 173,
+    "id": 180,
     "title": "Nanobots Will Be Flowing Through Your Body by 2030",
     "description": "In 10 years, tiny nanobots in your blood might help keep you from getting sick or even transmit your thoughts to a wireless cloud.",
     "sourceUrl": "http://interestingengineering.com/nanobots-will-flowing-body-2030/",
@@ -3762,7 +3762,7 @@
   },
   {
     "media": [],
-    "id": 174,
+    "id": 181,
     "title": "New Ceramic Coating Could Make Hypersonic Air Travel a Reality",
     "description": "The new coating is 12 times more effective than current ceramics. Dennis Muilenburg, CEO of Boeing has said that hypersonic passenger jets could be in the air within the next ten years. These aircraft would cut travel times by up to 700 percent. This would mean a flight from Shanghai to New York would be reduced from 15 hours to just two.",
     "sourceUrl": "http://interestingengineering.com/ceramic-coating-hypersonic-air-travel-reality/",
@@ -3778,8 +3778,8 @@
   {
     "media": [
       {
-        "id": 56,
-        "thumbName": "9417dc12-07ec-4af1-b2be-969407525edf.png",
+        "id": 45,
+        "thumbName": "13b56bf5-12e7-4c85-a88b-3ba8bfdef8f5.png",
         "thumbWidth": 150,
         "thumbHeight": 150,
         "originalUrl": "https://cdn.arstechnica.net/wp-content/uploads/2017/01/Screen-Shot-2017-01-06-at-11.50.06-AM-150x150.png",
@@ -3788,7 +3788,7 @@
         "type": "image/png"
       }
     ],
-    "id": 180,
+    "id": 183,
     "title": "US energy analysis sees renewable electricity passing coal by 2030",
     "description": "And the report is probably unrealistically conservative about wind power.",
     "sourceUrl": "http://arstechnica.com/science/2017/01/us-energy-analysis-sees-renewable-electricity-passing-coal-by-2030/",
@@ -3804,8 +3804,8 @@
   {
     "media": [
       {
-        "id": 63,
-        "thumbName": "3e7a88b1-2a27-42b7-b15e-bd279e47b7dd.jpg",
+        "id": 74,
+        "thumbName": "90a85d5e-bc41-4505-9917-123f524e7b58.jpg",
         "thumbWidth": 400,
         "thumbHeight": 267,
         "originalUrl": "http://www.3ders.org/images2017/naval-architect-says-3d-printing-entire-superyachts-will-be-a-reality-by-2030-1.jpg",
@@ -3814,7 +3814,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 181,
+    "id": 184,
     "title": "Naval architect says 3D printing entire superyachts will be a reality by 2030",
     "description": "A leading naval architect recently gave some predictions for the future of 3D printing in the yacht manufacturing industry. The technology stands to hugely improve efficiency in the manufacturing process, an industrial-grade printer should be ready by the end of this year, and 3D printing entire yachts will be possible by 2030",
     "sourceUrl": "http://www.3ders.org/articles/20170714-naval-architect-says-3d-printing-entire-superyachts-will-be-a-reality-by-2030.html",
@@ -3830,8 +3830,8 @@
   {
     "media": [
       {
-        "id": 52,
-        "thumbName": "c44f9cf4-7cb3-457f-99cb-927f3aa005e9.jpg",
+        "id": 55,
+        "thumbName": "d7edd223-6876-4e84-8ea9-c14072ae13f0.jpg",
         "thumbWidth": 150,
         "thumbHeight": 133,
         "originalUrl": "http://www.un.org/en/development/desa/files/2015/07/WPP2015_image-copy-150x133.jpg",
@@ -3840,7 +3840,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 182,
+    "id": 185,
     "title": "World population projected to reach 9.7 billion by 2050",
     "description": "The current world population of 7.3 billion is expected to reach 8.5 billion by 2030, 9.7 billion in 2050 and 11.2 billion in 2100, according to a new UN DESA report, “World Population Prospects: The 2015 Revision”, launched today. India expected to become the largest country in population size, surpassing China around 2022, while Nigeria could surpass the United States by 2050",
     "sourceUrl": "http://www.un.org/en/development/desa/news/population/2015-report.html",
@@ -3856,8 +3856,8 @@
   {
     "media": [
       {
-        "id": 75,
-        "thumbName": "2f45aa2b-2825-4c68-a7d5-52d03c9b3bc4.jpg",
+        "id": 38,
+        "thumbName": "13021f7b-c502-48d0-b642-5082de94f5e7.jpg",
         "thumbWidth": 286,
         "thumbHeight": 400,
         "originalUrl": "http://www.daviddarling.info/images/Kardashev.jpg",
@@ -3866,7 +3866,7 @@
         "type": "image/jpeg"
       }
     ],
-    "id": 183,
+    "id": 186,
     "title": "Will Humans Achieve a Type 1 Civilization by 2100?",
     "description": "Based on Kardashev’s speculations where does our civilization sit today? We are Type 0, somewhere between 0.7 and 0.72 producing 15 Terawatts of energy, a mere fraction of the energy a Type 1 would harvest from the physical world. The renowned theoretical physicist, Michio Kaku, has speculated on Kardashev’s scale and believes humanity will attain Type 1 status within a century or two.",
     "sourceUrl": "http://hplusmagazine.com/2014/07/29/will-humans-achieve-a-type-1-civilization-by-2100/",
