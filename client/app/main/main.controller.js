@@ -9,7 +9,7 @@
 
       // constants
       const omitLinkHeaderProp = ['rel', 'url'];
-      const scrollEl = document.documentElement;
+      const scrollEl = document.body; //document.documentElement; // Safari broke with documentElement
 
       // angular service
       this.$timeout = $timeout;

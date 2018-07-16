@@ -372,7 +372,7 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 ### High Priority
 
-- Fix loading on correct timeline on mobile
+- Fix loading on correct timeline on Safari and take account of mobile tag wrapping 
 
 ### Web Scraper
 

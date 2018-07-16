@@ -22,15 +22,6 @@ Run `kubectl create configmap env-file --from-env-file=Docker/env.prod.list`
 
 Run `kubectl delete configmap env-file`
 
-# Build Image for Google Cloud
-
-Run `docker build -t gcr.io/${PROJECT_ID}/chronopin:latest -f Docker/Dockerfile .`
-
-# Push Image to Google Cloud
-
-Run `gcloud docker -- push gcr.io/${PROJECT_ID}/chronopin:latest` to push to gcloud registry
-
-
 ### Deploy All
 
 Run `kubectl create -f kube/deployment.yaml` to deploy all
@@ -48,7 +39,7 @@ Run `kubectl get service`
 Run `kubectl delete svc/chronopin-lb`
 
 
-### Deploy a new version of your app
+### Build & Deploy a new version of your app
 
 Run `docker build -t gcr.io/${PROJECT_ID}/chronopin:latest -f Docker/Dockerfile .`
 
