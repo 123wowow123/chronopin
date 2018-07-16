@@ -10,6 +10,7 @@
       // constants
       const omitLinkHeaderProp = ['rel', 'url'];
 
+      // Plugin: https://github.com/gabceb/jquery-browser-plugin
       const isSafari = 	$.browser.ipad || $.browser.iphone || $.browser.ipod || $.browser.safari;
       const scrollEl = isSafari ? document.body : document.documentElement; // Safari broke with documentElement
 
