@@ -18,6 +18,10 @@ Run `export PROJECT_ID="$(gcloud config get-value project -q)"` set to chronopin
 
 Run `kubectl create configmap env-file --from-env-file=Docker/env.prod.list`
 
+---
+
+Run `kubectl delete configmap env-file`
+
 # Build Image for Google Cloud
 
 Run `docker build -t gcr.io/${PROJECT_ID}/chronopin:latest -f Docker/Dockerfile .`
@@ -51,3 +55,9 @@ Run `docker build -t gcr.io/${PROJECT_ID}/chronopin:latest -f Docker/Dockerfile 
 Run `gcloud docker -- push gcr.io/${PROJECT_ID}/chronopin:latest` to push to gcloud registry
 
 Run `kubectl set image deployment/chronopin-dep chronopin=gcr.io/${PROJECT_ID}/chronopin:latest`
+
+## Docker Cleanup Commands
+
+Run `docker system df` to see docker disk space usage
+
+Run `docker image prune --force --all` to remove all images that are not currently in use on our system

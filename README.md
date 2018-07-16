@@ -29,20 +29,20 @@ Run `grunt build` for building and `grunt serve` for preview.
 
 ## Run Docker Build
 
-Run Prod Build `docker build -t chronopin .`
+Run Prod Build `docker build -t chronopin -f Docker/Dockerfile .`
 
 Or
 
-Run Dev Build `docker build -t chronopin-dev -f Dev.Dockerfile .`
+Run Dev Build `docker build -t chronopin-dev -f Docker/Dev.Dockerfile .`
 
 ## Run Docker Container
 
-Run Prod `docker run --rm -p 9000:9000 --name chronopin --env-file env.prod.list chronopin`
+Run Prod `docker run --rm -p 9000:9000 --name chronopin --env-file Docker/env.prod.list chronopin`
 
 Or
 
 Only mounts client and server folders for development
-Run Dev `docker run --rm -p 9000:9000 --name chronopin-dev --env-file env.dev.list -v $(pwd)/server:/code/server -v $(pwd)/client:/code/client chronopin-dev`
+Run Dev `docker run --rm -p 9000:9000 --name chronopin-dev --env-file Docker/env.dev.list -v $(pwd)/server:/code/server -v $(pwd)/client:/code/client chronopin-dev`
 
 ## Upload Docker Image
 
