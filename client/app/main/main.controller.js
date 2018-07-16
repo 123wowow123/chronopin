@@ -9,7 +9,10 @@
 
       // constants
       const omitLinkHeaderProp = ['rel', 'url'];
-      const scrollEl = document.body; //document.documentElement; // Safari broke with documentElement
+
+      // https://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
+      const isSafari = 	$.browser.ipad || $.browser.iphone || $.browser.ipod || $.browser.safari;
+      const scrollEl = isSafari ? document.body : document.documentElement; // Safari broke with documentElement
 
       // angular service
       this.$timeout = $timeout;
