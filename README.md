@@ -372,8 +372,6 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 ### High Priority
 
-- Fix FB Login
-- Fix Scraper
 - Fix loading on correct timeline on mobile
 
 ### Web Scraper
