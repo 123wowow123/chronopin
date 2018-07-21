@@ -39,7 +39,9 @@ Run `kubectl get service`
 Run `kubectl delete svc/chronopin-lb`
 
 
-### Build & Deploy a new version of your app
+### Build & Deploy a new version of your app to GCP
+
+Run `export PROJECT_ID="$(gcloud config get-value project -q)"`
 
 Run `docker build -t gcr.io/${PROJECT_ID}/chronopin:latest -f Docker/Dockerfile .`
 

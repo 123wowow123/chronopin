@@ -372,7 +372,11 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 ### High Priority
 
-- Fix loading on correct timeline on Safari and take account of mobile tag wrapping 
+- Fix loading on correct timeline on IE and take account of mobile tag wrapping 
+- Fix image centering issue
+- ElastiSearch / auto complete search / keywords and people eg pinterest
+- Drilldown view reorganize
+- SSL
 
 ### Web Scraper
 
@@ -390,6 +394,8 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 ### Misc
 
+- Follow other people and get notified when they post
+- GeoHash grid aggregation of close events during breakdown of 1/3/5/10 days
 - Extract scrape core selector in config file
 - Pin feed needs to include if user have clicked on watch/like per min exclude deleted
 - Change Medium.type to NVarChar
@@ -424,7 +430,6 @@ This is a promotional article about one of the company partners with Interesting
 - facebook / tweet like button and counter need to show / move watch to top right of image
 - scrape alt text for image and save
 - get title in header bound correctly per page
-- remove border from pins
 - linking on watch/link and being redirected to login should fulfill request after logged in
 - Extract GA code in auth.service.js into it's own module
 - GA: Outbound link / non-interaction events / Social Interactions tracking / User Timings / set clientId on tracker creation
@@ -462,6 +467,7 @@ This is a promotional article about one of the company partners with Interesting
 - Convert to Angular 5
 - Grafana activity dashboard
 - [Use Firebase DB for denormalized push notification of app data] <https://www.youtube.com/watch?v=LAWjdZYrUgI>
+- GeoLite2 City: IP => City / lat:long
 
 ## Bugs
 - When in specific pin view and clicking logout will show blank screen
