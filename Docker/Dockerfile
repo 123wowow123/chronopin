@@ -11,12 +11,15 @@ WORKDIR $PROJECT_ROOT
 ## Install app dependencies
 COPY package.json $PROJECT_ROOT
 RUN npm install 
-RUN npm install -g grunt-cli
+COPY bower.json $PROJECT_ROOT
+RUN apk update && apk upgrade && \
+    apk add --no-cache bash git openssh
+RUN npm run bower:install
  
 ## Bundle app source
 COPY . ${PROJECT_ROOT}
 
-RUN npm run-script build
+RUN npm run build
 
 
 # Second Stage

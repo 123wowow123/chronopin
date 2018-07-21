@@ -49,6 +49,14 @@ Run `gcloud docker -- push gcr.io/${PROJECT_ID}/chronopin:latest` to push to gcl
 
 Run `kubectl set image deployment/chronopin-dep chronopin=gcr.io/${PROJECT_ID}/chronopin:latest`
 
+### GCP Cloud Build
+
+`gcloud container builds submit -t gcr.io/${PROJECT_ID}/chronopin -f Docker/Dockerfile .`
+
+Run `gcloud container builds submit --config cloudbuild.yaml .` to use GCP Builder to build on cloud
+
+[GCP Build History](https://console.cloud.google.com/cloud-build/builds?authuser=0&project=chronopin-209507)
+
 ## Docker Cleanup Commands
 
 Run `docker system df` to see docker disk space usage
