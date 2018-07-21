@@ -4,21 +4,24 @@ FROM node:9-alpine AS base
 ## Environment Variables
 ENV PROJECT_ROOT /code
 
-## Create app directory
+## Create App Directory
 RUN mkdir -p $PROJECT_ROOT
 WORKDIR $PROJECT_ROOT
  
-## Install app dependencies
+## Install App Dependencies
 COPY package.json $PROJECT_ROOT
-RUN npm install 
+RUN npm install
+
+## Bower Setup
 COPY bower.json $PROJECT_ROOT
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh
-RUN npm run bower:install
- 
-## Bundle app source
+
+## Bundle App Source
 COPY . ${PROJECT_ROOT}
 
+## Install Bower Libs and Compile
+RUN npm run bower:install
 RUN npm run build
 
 
@@ -38,7 +41,7 @@ RUN apk add --update --no-cache bind-tools
 
 COPY --from=base ${PROJECT_ROOT}/dist $PROJECT_ROOT
 
-# change this for dev
+# Change this for dev
 RUN npm install --only=production
 
 EXPOSE 9000
