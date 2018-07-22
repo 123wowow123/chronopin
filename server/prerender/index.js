@@ -14,7 +14,6 @@
 
 'use strict';
 
-import { Router } from 'express';
 //import redis from 'redis';
 //import prerenderServer from 'prerender';
 import prerenderMiddleware from 'prerender-node';
@@ -44,6 +43,9 @@ prerenderMiddleware
         //client.set(req.url, prerender_res.body)
     });
 
+prerenderMiddleware.crawlerUserAgents.push('googlebot');
+prerenderMiddleware.crawlerUserAgents.push('bingbot');
+prerenderMiddleware.crawlerUserAgents.push('yandex');
 
 // server.use(prerender.sendPrerenderHeader());
 // server.use(prerender.blockResources());
