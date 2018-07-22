@@ -34,9 +34,10 @@ See Plugin List
 
 `bin/logstash-plugin list`
 
-
-
 `GET /_cat/indices?v`
+
+
+`kubectl rollout status deployment/chronopin-dep`
 
 
 # ElastiSearch on Docker
