@@ -45,7 +45,7 @@ Run `export PROJECT_ID="$(gcloud config get-value project -q)"`
 
 Run `docker build -t gcr.io/${PROJECT_ID}/chronopin:latest -f Docker/Dockerfile .`
 
-Run `gcloud docker -- push gcr.io/${PROJECT_ID}/chronopin:latest` to push to gcloud registry
+Run [gcloud] `docker -- push gcr.io/${PROJECT_ID}/chronopin:latest` to push to gcloud registry
 
 Run `kubectl set image deployment/chronopin-dep chronopin=gcr.io/${PROJECT_ID}/chronopin:latest`
 
