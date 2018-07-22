@@ -49,6 +49,8 @@ Run [gcloud] `docker -- push gcr.io/${PROJECT_ID}/chronopin:latest` to push to g
 
 Run `kubectl set image deployment/chronopin-dep chronopin=gcr.io/${PROJECT_ID}/chronopin:latest`
 
+[Images / Build History](https://console.cloud.google.com/gcr/images/chronopin-209507/GLOBAL/chronopin?project=chronopin-209507&gcrImageListsize=50)
+
 ### GCP Cloud Build
 
 `gcloud container builds submit -t gcr.io/${PROJECT_ID}/chronopin -f Docker/Dockerfile .`

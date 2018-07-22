@@ -20,6 +20,7 @@ spec:
       - name: chronopin
         # image: 123wowow123/chronopin:latest # Docker Hub Registry
         image: gcr.io/chronopin-209507/chronopin # Google Cloud Registry
+        imagePullPolicy: Always
         ports:
         - containerPort: 9000
           protocol: TCP
