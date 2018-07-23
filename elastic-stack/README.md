@@ -19,6 +19,12 @@ Point your browser at http://localhost:5601
 
 Run `bin/logstash -f logstash.conf` to start
 
+# GCP Click-To-Deploy
+
+[ElastiSearch k8s](https://github.com/GoogleCloudPlatform/click-to-deploy/tree/master/k8s/elasticsearch)
+
+
+
 
 
 
@@ -38,6 +44,8 @@ See Plugin List
 
 
 `kubectl rollout status deployment/chronopin-dep`
+
+
 
 
 # ElastiSearch on Docker

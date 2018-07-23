@@ -375,6 +375,7 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 - Fix loading on correct timeline on IE and take account of mobile tag wrapping 
 - Fix image centering issue
 - ElastiSearch / auto complete search / keywords and people eg pinterest
+- Bulk load to ES (https://www.elastic.co/guide/en/elasticsearch/reference/current/_batch_processing.html)
 - Drilldown view reorganize
 - SSL
 
@@ -472,9 +473,3 @@ This is a promotional article about one of the company partners with Interesting
 ## Bugs
 - When in specific pin view and clicking logout will show blank screen
 - Date tag mobile view broken
-
-### To do once Azure supports Node 64bit:
-- add to package.json once Azure supports Node 64bit /*"sharp": "^0.18.4",*/
-
-
-unable to get presigned websocket URL and connect to it.
