@@ -5,7 +5,7 @@ import streamifier from '../util/streamifier';
 import config from '../config/environment';
 import * as url from 'url';
 import * as path from 'path';
-import * as log from '../log';
+import * as log from '../util/log';
 
 //pipe to sizeOf
 //pipe to thumb

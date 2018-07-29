@@ -16,6 +16,8 @@ import {
     DateTimes
 } from '../../server/model';
 
+import * as log from '../../server/util/log';
+
 import rp from 'request-promise';
 
 let INDEX;
@@ -52,12 +54,12 @@ module.exports.remove = function () {
                 .then((parsedBody) => {
                     if (parsedBody.statusCode != 200) {
                         // DELETE failed...
-                        console.log("DELETE Failed", JSON.stringify(parsedBody));
+                        log.error("DELETE Failed", JSON.stringify(parsedBody));
                         throw Error(parsedBody.body);
                     }
 
                     // DELETE succeeded...
-                    console.log("DELETE processed", JSON.stringify(parsedBody));
+                    log.success("DELETE processed", JSON.stringify(parsedBody));
                     return parsedBody;
                 })
             // .catch((err) => {
@@ -68,6 +70,6 @@ module.exports.remove = function () {
 
         })
         .then(() => {
-            console.log(`Delete Search "${INDEX}" INDEX  Complete`);
+            log.info(`Delete Search "${INDEX}" INDEX  Complete`);
         });
 }

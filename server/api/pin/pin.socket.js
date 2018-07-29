@@ -5,7 +5,7 @@
 'use strict';
 
 import PinEvents from './pin.events';
-import * as log from '../../log';
+import * as log from '../../util/log';
 
 // Model events to emit
 const events = [

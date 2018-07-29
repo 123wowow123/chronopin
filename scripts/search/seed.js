@@ -20,6 +20,7 @@ import fs from 'fs';
 import azureBlob from '../../server/azure-blob';
 import rp from 'request-promise';
 import _ from 'lodash';
+import * as log from '../../server/util/log';
 
 let cp,
     Request,
@@ -71,12 +72,12 @@ module.exports.seed = function () {
                 return rp(post)
                     .then((parsedBody) => {
                         // POST succeeded...
-                        console.log("POST succeeded", JSON.stringify(post));
+                        log.success("POST succeeded", JSON.stringify(post));
                         return parsedBody;
                     })
                     .catch((err) => {
                         // POST failed...
-                        console.log("POST Failed", JSON.stringify(err));
+                        log.error("POST Failed", JSON.stringify(err));
                         return err;
                     });
 
@@ -86,7 +87,7 @@ module.exports.seed = function () {
 
         })
         .then(() => {
-            console.log('Search Data Load Complete');
+            log.info('Search Data Load Complete');
         });
 }
 

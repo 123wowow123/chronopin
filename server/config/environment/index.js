@@ -1,6 +1,6 @@
 'use strict';
 
-import * as log from '../../log';
+import * as log from '../../util/log';
 const path = require('path');
 const _ = require('lodash');
 const fs = require('fs');

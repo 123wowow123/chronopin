@@ -2,7 +2,7 @@
 
 import passport from 'passport';
 import config from '../config/environment';
-import * as log from '../log';
+import * as log from '../util/log';
 import jwt from 'jsonwebtoken';
 import expressJwt from 'express-jwt';
 import compose from 'composable-middleware';
