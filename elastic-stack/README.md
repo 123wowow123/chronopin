@@ -4,10 +4,26 @@ Run `bin/elasticsearch` to start
 
 Run `curl http://localhost:9200/` to check if running
 
+
+Run below to export env variables and check health
+```sh
+export APP_INSTANCE_NAME=elasticsearch-chronopin
+export NAMESPACE=default
+```
+
+```sh
+SERVICE_IP=$(kubectl get svc $APP_INSTANCE_NAME-elasticsearch-svc \
+  --namespace $NAMESPACE \
+  --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
+```
+
+Run `curl http://${SERVICE_IP}:9200/_cat/health?v` to check health
+
 ---
 
 Delete all the indexes and data:
 `curl -X DELETE 'http://localhost:9200/_all'`
+
 
 # Kibana
 

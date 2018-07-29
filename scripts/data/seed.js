@@ -1,6 +1,5 @@
 /**
- * Populate DB with sample data on server start
- * to disable, edit config/environment/index.js, and set `seedDB: false`
+ * Populate DB with sample data
  */
 
 'use strict';
@@ -167,7 +166,7 @@ module.exports.seedDB = function() {
       return user.save();
     })
     .then(res => {
-      let user = new User(defaultUserObj);
+      let user = new User(secondaryUserObj);
       return user.save();
     })
     .then(({

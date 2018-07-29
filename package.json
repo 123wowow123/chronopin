@@ -131,6 +131,7 @@
     "start": "node server",
     "create:db": "node scripts/db/index.js",
     "create:data": "node scripts/data/index.js --seed",
+    "create:search": "node scripts/search/index.js --seed",
     "backup:data": "node scripts/data/index.js --save",
     "remediate:data": "node scripts/remediate/index.js"
   },
