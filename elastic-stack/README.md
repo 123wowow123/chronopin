@@ -21,6 +21,9 @@ Run `curl http://${SERVICE_IP}:9200/_cat/health?v` to check health
 
 ---
 
+Delete pins indexes and data:
+`curl -X DELETE 'http://localhost:9200/pins'`
+
 Delete all the indexes and data:
 `curl -X DELETE 'http://localhost:9200/_all'`
 

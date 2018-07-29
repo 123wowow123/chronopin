@@ -132,6 +132,7 @@
     "create:db": "node scripts/db/index.js",
     "create:data": "node scripts/data/index.js --seed",
     "create:search": "node scripts/search/index.js --seed",
+    "delete:search:pins": "node scripts/search/index.js --delete --index=pins",
     "backup:data": "node scripts/data/index.js --save",
     "remediate:data": "node scripts/remediate/index.js"
   },

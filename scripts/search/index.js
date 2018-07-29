@@ -6,11 +6,13 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 const args = require('args');
 const seed = require('./seed');
-//const save = require('./save');
+const remove = require('./remove');
 
 args
     //.option('save', 'Save search into JSON', false)
     .option('seed', 'Seed search from JSON', false)
+    .option('delete', 'Delete "pins" search index', false)
+    .option('index', 'Delete search index')
     .option('pinfile', 'Pin file path to be used for opporation', './scripts/backup/seed.json')
     .option('aphelionfile', 'Aphelion file path to be used for opporation', './scripts/backup/aphelion.json')
     .option('equinoxfile', 'Equinox file path to be used for opporation', './scripts/backup/equinox.json')
@@ -52,5 +54,11 @@ function execute(opt) {
         return seed
             .setup(seedOpt)
             .seed();
+    }
+    // delete 'pins'
+    if (opt.delete) {
+        return remove
+            .setup(Object.assign({}, seedOpt, { index: opt.index }))
+            .remove();
     }
 }

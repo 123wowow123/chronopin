@@ -72,10 +72,12 @@ module.exports.seed = function () {
                     .then((parsedBody) => {
                         // POST succeeded...
                         console.log("POST succeeded", JSON.stringify(post));
+                        return parsedBody;
                     })
                     .catch((err) => {
                         // POST failed...
                         console.log("POST Failed", JSON.stringify(err));
+                        return err;
                     });
 
             });
