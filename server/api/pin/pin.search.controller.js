@@ -24,3 +24,11 @@ export function searchPin(req, res) {
       .catch(response.handleError(res));
   }
 }
+
+export function updatePin(){
+  
+}
+
+export function createPin(){
+
+}

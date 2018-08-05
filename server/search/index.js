@@ -3,21 +3,54 @@
 const config = require('../config/environment');
 const rp = require('request-promise');
 //let indices = ['temp'];
-const index = 'temp';
-const baseSearchUrl = `${config.azureSearch.serviceUrl}/indexes/${index}/docs`;
+const index = 'pins';
+const baseSearchUrl = `${config.elastiSearch.serviceUrl}/${index}`;
 
 // https://docs.microsoft.com/en-us/rest/api/searchservice/?redirectedfrom=MSDN
-module.exports.pin = function pin(searchText) {
+module.exports.pins = function (searchText) {
+  const command = "_search";
+  const uri = baseSearchUrl + "/" + command;
+  const searchFields = ["title", "description", "address"];
+
   let options = {
-    uri: baseSearchUrl,
-    headers: {
-      'api-key': config.azureSearch.queryKey
-    },
+    method: 'POST',
+    uri: uri,
     qs: {
-      "api-version": "2016-09-01",
-      "search": searchText
+      "query": {
+        "multi_match": {
+          "query": searchText,
+          "fields": searchFields
+        }
+      }
     }
   };
 
-  return rp(options);
+  return rp(options); //////////////////////////// new mapping needed
+};
+
+module.exports.createPin = function (pin) {
+  // Create Pins
+  const id = pin.id;
+
+  const command = "_doc";
+  const uri = baseSearchUrl + "/" + command + "/" + id;
+
+  const options = {
+    method: 'PUT',
+    uri,
+    // body: {
+    //     some: 'payload'
+    // },
+    resolveWithFullResponse: true,
+    simple: false,
+    json: true // Automatically stringifies the body to JSON
+  };
+
+  // Create Pins
+
+  //debugger
+  const req = Object.assign({}, options, { body: pin });
+  console.log(req);
+  return rp(req);
+
 };

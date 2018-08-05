@@ -76,6 +76,10 @@ let all = {
     queryKey: getProcessEnv('AZURE_SEARCH_QUERY_KEY')
   },
 
+  elastiSearch: {
+    serviceUrl: getProcessEnv('ELASTISEARCH_URL') || ''
+  },
+
   chromeless: {
     endpointUrl: getProcessEnv('CHROMELESS_ENDPOINT_URL'),
     apiKey: getProcessEnv('CHROMELESS_ENDPOINT_API_KEY')

@@ -16,6 +16,8 @@ import {
     DateTimes
 } from '../../server/model';
 
+import * as search from '../../server/search';
+
 import fs from 'fs';
 import azureBlob from '../../server/azure-blob';
 import rp from 'request-promise';
@@ -48,36 +50,20 @@ module.exports.seed = function () {
 
     return Promise.resolve('Start Load Search Data')
         .then(() => {
-
-            // Create Pins
-            const uri = 'http://35.197.4.132:9200/pins/_doc/';
-
-            const options = {
-                method: 'POST',
-                uri,
-                // body: {
-                //     some: 'payload'
-                // },
-                json: true // Automatically stringifies the body to JSON
-            };
-
             // Create Pins
             let pinsJSON = JSON.parse(fs.readFileSync(pinFilePath, 'utf8'));
             let pins = new Pins(pinsJSON);
             let pinsPromise = pins.pins.map(p => {
 
-                //debugger
-                const req = Object.assign({}, options, { body: p });
-                //console.log(req);
-                return rp(req)
+                return search.createPin(p)
                     .then((parsedBody) => {
                         // POST succeeded...
-                        log.success("POST succeeded", JSON.stringify(req));
+                        log.success("Create succeeded", JSON.stringify(req));
                         return parsedBody;
                     })
                     .catch((err) => {
                         // POST failed...
-                        log.error("POST Failed", JSON.stringify(err));
+                        log.error("Create Failed", JSON.stringify(err));
                         return err;
                     });
 
