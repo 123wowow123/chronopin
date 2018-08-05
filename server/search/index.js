@@ -41,8 +41,8 @@ module.exports.createPin = function (pin) {
     // body: {
     //     some: 'payload'
     // },
-    resolveWithFullResponse: true,
-    simple: false,
+    //resolveWithFullResponse: true,
+    //simple: false,
     json: true // Automatically stringifies the body to JSON
   };
 
@@ -50,7 +50,7 @@ module.exports.createPin = function (pin) {
 
   //debugger
   const req = Object.assign({}, options, { body: pin });
-  console.log(req);
+  //console.log(req);
   return rp(req);
 
 };

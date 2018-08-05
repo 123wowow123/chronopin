@@ -58,7 +58,7 @@ module.exports.seed = function () {
                 return search.createPin(p)
                     .then((parsedBody) => {
                         // POST succeeded...
-                        log.success("Create succeeded", JSON.stringify(req));
+                        log.success("Create succeeded", JSON.stringify(parsedBody));
                         return parsedBody;
                     })
                     .catch((err) => {
