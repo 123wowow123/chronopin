@@ -67,12 +67,12 @@ module.exports.seed = function () {
             let pinsPromise = pins.pins.map(p => {
 
                 //debugger
-                const post = Object.assign({}, options, { body: p });
-                //console.log(post);
-                return rp(post)
+                const req = Object.assign({}, options, { body: p });
+                //console.log(req);
+                return rp(req)
                     .then((parsedBody) => {
                         // POST succeeded...
-                        log.success("POST succeeded", JSON.stringify(post));
+                        log.success("POST succeeded", JSON.stringify(req));
                         return parsedBody;
                     })
                     .catch((err) => {

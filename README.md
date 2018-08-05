@@ -372,12 +372,28 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 ### High Priority
 
-- Fix loading on correct timeline on IE and take account of mobile tag wrapping 
+- Fix loading on correct timeline on mobile tag wrapping 
 - Fix image centering issue
+- Add pin to ElastiSearch when create pin
 - ElastiSearch / auto complete search / keywords and people eg pinterest
-- Bulk load to ES (https://www.elastic.co/guide/en/elasticsearch/reference/current/_batch_processing.html)
 - Drilldown view reorganize
 - SSL
+- Namespace ElastiSearch /dev/pins
+- RSS/Atom summary
+
+### Search
+
+- Faceted Navigation (https://alistapart.com/article/design-patterns-faceted-navigation)(https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-post-filter.html)
+
+### Map
+- Plot pins on map relative to a specified date time and draw drill map time arrow indicating possible itinerary
+- Save and share itinerary (https://travefy.com/pro?km_marketing=homepage)
+  - Serve ads for hotels to flights to cruise
+  - See who else is going in your network
+  - If flight information is entered or flight booked through site then delays and be tracked and shared
+
+### Time Series
+- Read book for more ideas
 
 ### Web Scraper
 
