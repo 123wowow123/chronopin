@@ -7,7 +7,7 @@ import * as cp from '../../sqlConnectionPool';
 import * as _ from 'lodash';
 import {
   DateTime
-} from '../../model';
+} from '..';
 
 export default class DateTimes {
   // Properties

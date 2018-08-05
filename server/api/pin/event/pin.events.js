@@ -14,13 +14,13 @@ import {
   PinLikeEmitter
 } from './pin.controller';
 
-var PinEvents = new EventEmitter();
+const PinEvents = new EventEmitter();
 
 // Set max event listeners (0 == unlimited)
 PinEvents.setMaxListeners(0);
 
-// Model events
-var events = {
+// Restrict model events to listen
+const events = {
   'afterFavorite': 'favorite',
   'afterUnfavorite': 'unfavorite',
 
@@ -33,11 +33,10 @@ var events = {
 };
 
 // Register the event emitter to the model events
-for (let e in events) {
-  const event = events[e];
-  PinEmitter.on(e, emitEvent(event));
-  PinFavoriteEmitter.on(e, emitEvent(event));
-  PinLikeEmitter.on(e, emitEvent(event));
+for (const [k, v] of Object.entries(events)) {
+  PinEmitter.on(k, emitEvent(v));
+  PinFavoriteEmitter.on(k, emitEvent(v));
+  PinLikeEmitter.on(k, emitEvent(v));
   //Pin.hook(e, emitEvent(event));
 }
 

@@ -1,6 +1,8 @@
 'use strict';
 
 import * as response from '../response';
+import * as search from '../../search';
+import PinEvents from './pin.search';
 
 import {
   Pins
@@ -25,10 +27,12 @@ export function searchPin(req, res) {
   }
 }
 
-export function updatePin(){
-  
+
+// Listening to pin events
+function updatePin(pin) {
+  return search.upsertPin(pin);
 }
 
-export function createPin(){
-
+function createPin() {
+  return search.upsertPin(pin);
 }

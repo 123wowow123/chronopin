@@ -6,7 +6,7 @@ import * as _ from 'lodash';
 import {
   User,
   Pin
-} from '../../model';
+} from '..';
 
 // _user, userId, _pin, pinId
 let prop = [

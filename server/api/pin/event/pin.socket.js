@@ -7,7 +7,7 @@
 import PinEvents from './pin.events';
 import * as log from '../../util/log';
 
-// Model events to emit
+// Restrict model events to listen
 const events = [
   'favorite',
   'unfavorite',

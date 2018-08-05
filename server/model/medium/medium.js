@@ -6,7 +6,7 @@ import * as image from '../../image'
 const uuidv4 = require('uuid/v4');
 import {
   Pin
-} from '../../model';
+} from '..';
 
 // _pin
 let prop = [

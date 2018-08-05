@@ -28,7 +28,7 @@ module.exports.pins = function (searchText) {
   return rp(options); //////////////////////////// new mapping needed
 };
 
-module.exports.createPin = function (pin) {
+module.exports.upsertPin = function (pin) {
   // Create Pins
   const id = pin.id;
 
@@ -52,5 +52,4 @@ module.exports.createPin = function (pin) {
   const req = Object.assign({}, options, { body: pin });
   //console.log(req);
   return rp(req);
-
 };

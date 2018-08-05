@@ -9,7 +9,7 @@ import * as _ from 'lodash';
 
 import {
   Pin
-} from '../../model';
+} from '..';
 
 export default class Pins {
   // Properties
