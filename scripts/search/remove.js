@@ -16,6 +16,8 @@ import {
     DateTimes
 } from '../../server/model';
 
+import * as search from '../../server/search';
+
 import * as log from '../../server/util/log';
 
 import rp from 'request-promise';
@@ -37,20 +39,9 @@ module.exports.remove = function () {
                 throw new Error('Missing INDEX value')
             }
 
-            // DELETE Uri
-            const uri = `http://35.197.4.132:9200/${INDEX}`;
-
-            const options = {
-                method: 'DELETE',
-                uri,
-                // content-length":0 bug causing resonse to always fail even if command exeucuted sucessfully
-                // "body":"{\"acknowledged\":true}"
-                simple: false,
-                resolveWithFullResponse: true
-            };
-
             // DELETE INDEX
-            return rp(options)
+
+            return search.removeIndex(INDEX)
                 .then((parsedBody) => {
                     if (parsedBody.statusCode != 200) {
                         // DELETE failed...
@@ -62,11 +53,11 @@ module.exports.remove = function () {
                     log.success("DELETE processed", JSON.stringify(parsedBody));
                     return parsedBody;
                 })
-            // .catch((err) => {
-            //     // DELETE failed...
-            //     console.log("DELETE Failed", JSON.stringify(err));
-            //     throw err;
-            // });
+            .catch((err) => {
+                // DELETE failed...
+                console.log("DELETE Failed", JSON.stringify(err));
+                throw err;
+            });
 
         })
         .then(() => {

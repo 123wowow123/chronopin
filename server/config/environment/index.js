@@ -70,13 +70,8 @@ let all = {
     AZURE_STORAGE_CONNECTION_STRING: getProcessEnv('AZURE_STORAGE_CONNECTION_STRING') || ''
   },
 
-  azureSearch: {
-    serviceUrl: getProcessEnv('AZURE_SEARCH_URL'),
-    apiKey: getProcessEnv('AZURE_SEARCH_API_KEY'),
-    queryKey: getProcessEnv('AZURE_SEARCH_QUERY_KEY')
-  },
-
   elastiSearch: {
+    indexPrefix: getProcessEnv('INDEXPREFIX') || '',
     serviceUrl: getProcessEnv('ELASTISEARCH_URL') || ''
   },
 

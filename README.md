@@ -212,16 +212,6 @@ Run
 curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/
 ```
 
-## Azure Deployment
-
-Go To App Service Console
-
-Run `ls` to see if folder structure is correct
-
-Run `rm -r node_modules` to remove outdated node_modules folder
-
-Run `npm install --only=prod` to install and build latest node_modules
-
 ## VirtualBox 
 
 Run `rm -rf ~/.minikube`
@@ -368,7 +358,7 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 - Fix loading on correct timeline on mobile tag wrapping 
 - Fix image centering issue
-- Add pin to ElastiSearch when create pin
+- Fix continuous search merging serps issue
 - ElastiSearch / auto complete search / keywords and people eg pinterest
 - Drilldown view reorganize
 - SSL

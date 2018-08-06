@@ -1,5 +1,5 @@
 /**
- * Populate ElastiSearch with sample data
+ * Populate ElastiSearch with mapping
  */
 
 'use strict';
@@ -15,6 +15,8 @@ import {
     DateTime,
     DateTimes
 } from '../../server/model';
+
+import * as search from '../../server/search';
 
 import fs from 'fs';
 import azureBlob from '../../server/azure-blob';
@@ -40,38 +42,22 @@ module.exports.map = function () {
 
     return Promise.resolve('Start Map Search Data')
         .then(() => {
+            // Create Pins Mapping
+            const index = "pins";
 
-            // Create Pins
-            const uri = 'http://35.197.4.132:9200/pins';
+            let pinMap = JSON.parse(fs.readFileSync(pinMapFilePath, 'utf8'));
 
-            const options = {
-                method: 'PUT',
-                uri,
-                // body: {
-                //     some: 'payload'
-                // },
-                json: true // Automatically stringifies the body to JSON
-            };
-
-            // Create Pins
-            let pinMapJSON = JSON.parse(fs.readFileSync(pinMapFilePath, 'utf8'));
-
-            //debugger
-            const req = Object.assign({}, options, { body: pinMapJSON });
-            //console.log(req);
-            let reqPromise = rp(req)
+            return search.createMapping(index, pinMap)
                 .then((parsedBody) => {
-                    // PUT succeeded...
-                    log.success("PUT succeeded", JSON.stringify(req));
+                    // POST succeeded...
+                    log.success("Create succeeded", JSON.stringify(parsedBody));
                     return parsedBody;
                 })
                 .catch((err) => {
-                    // PUT failed...
-                    log.error("PUT Failed", JSON.stringify(err));
+                    // POST failed...
+                    log.error("Create Failed", JSON.stringify(err));
                     return err;
                 });
-
-            return reqPromise;
 
         })
         .then(() => {

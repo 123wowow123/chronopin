@@ -55,7 +55,7 @@ module.exports.seed = function () {
             let pins = new Pins(pinsJSON);
             let pinsPromise = pins.pins.map(p => {
 
-                return search.upsert(p)
+                return search.upsertPin(p)
                     .then((parsedBody) => {
                         // POST succeeded...
                         log.success("Create succeeded", JSON.stringify(parsedBody));
@@ -70,7 +70,6 @@ module.exports.seed = function () {
             });
 
             return Promise.all(pinsPromise);
-
         })
         .then(() => {
             log.info('Search Data Load Complete');
