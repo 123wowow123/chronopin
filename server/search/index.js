@@ -15,14 +15,15 @@ module.exports.pins = function (searchText) {
   let options = {
     method: 'POST',
     uri: uri,
-    qs: {
+    body: {
       "query": {
         "multi_match": {
           "query": searchText,
           "fields": searchFields
         }
       }
-    }
+    },
+    json: true // Automatically stringifies the body to JSON
   };
 
   return rp(options); //////////////////////////// new mapping needed

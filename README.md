@@ -249,15 +249,9 @@ Run `npm run remediate:data` for remediation of data
 
 Run `node --inspect-brk server/index.js` for debugging Node
 
-Legacy node 6 run `node --inspect --debug-brk server/index.js` for debugging Node
-
 Run `node --inspect-brk scripts/db/index.js` for debugging Node :: create:db
 
-Legacy node 6 run `node --inspect --debug-brk scripts/db/index.js` for debugging Node :: create:db
-
 Run `node --inspect-brk scripts/data/index.js --seed` for debugging Node :: create:data
-
-Legacy node 6 run `node --inspect --debug-brk scripts/data/index.js --seed` for debugging Node :: create:data
 
 ## Update Node
 
