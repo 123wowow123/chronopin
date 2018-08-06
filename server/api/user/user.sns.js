@@ -8,7 +8,7 @@ import UserEvents from './user.events';
 import config from '../../config/environment';
 
 // Model events to emit
-var events = [{
+let events = [{
   name: 'save',
   arn: config.aws.sns.adminNewUserTopicArn,
   transform: (data) => {
@@ -19,9 +19,9 @@ var events = [{
 
 export function register(sns) {
   // Bind model events to SNS publish
-  for (var i = 0, eventsLength = events.length; i < eventsLength; i++) {
-    var event = events[i];
-    var listener = createListener(event.arn, sns, event.transform);
+  for (let i = 0, eventsLength = events.length; i < eventsLength; i++) {
+    let event = events[i];
+    let listener = createListener(event.arn, sns, event.transform);
 
     UserEvents.on(event.name, listener);
   }
@@ -29,7 +29,7 @@ export function register(sns) {
 
 
 function createListener(arn, sns, transform) {
-  return function (data) {
+  return (data) => {
     if (typeof transform === 'function') {
       sns.publish(arn, transform(data));
     }
@@ -40,7 +40,7 @@ function createListener(arn, sns, transform) {
 }
 
 function removeListener(event, listener) {
-  return function () {
+  return () => {
     UserEvents.removeListener(event, listener);
   };
 }

@@ -5,7 +5,7 @@
 'use strict';
 
 import PinEvents from './pin.events';
-import * as log from '../../util/log';
+import * as log from '../../../util/log';
 
 // Restrict model events to listen
 const events = [
@@ -17,13 +17,14 @@ const events = [
 
   'save',
   'update',
+  
   'remove'
 ];
 
-export function register() {
+export function register(controller) {
   // Bind model events to socket events
   for (const event of events) {
-    const listener = createListener('pin:' + event, socket);
+    const listener = createListener('search:' + event, controller);
 
     PinEvents.on(event, listener);
     // socket.on('disconnect', removeListener(event, listener));
@@ -31,15 +32,15 @@ export function register() {
 }
 
 
-function createListener(event, socket) {
-  return function (doc) {
+function createListener(event, controller) {
+  return (doc) => {
     log.info(event, log.stringify(doc));
-    // socket.emit(event, doc);
+    controller.emit(event, doc);
   };
 }
 
 function removeListener(event, listener) {
-  return function () {
+  return () => {
     PinEvents.removeListener(event, listener);
   };
 }

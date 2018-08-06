@@ -2,7 +2,6 @@
 
 import * as response from '../response';
 import * as search from '../../search';
-import PinEvents from './pin.search';
 
 import {
   Pins
@@ -29,10 +28,28 @@ export function searchPin(req, res) {
 
 
 // Listening to pin events
-function updatePin(pin) {
+
+export function emit(event, pin) {
+  switch (event) {
+    case "search:favorite":
+    case "search:unfavorite":
+    case "search:like":
+    case "search:unlike":
+    case "search:save":
+    case "search:update":
+      upsertPin(pin);
+      break;
+    case "search:remove":
+      deletePin(pin);
+      break;
+  }
+}
+
+function upsertPin(pin) {
   return search.upsertPin(pin);
 }
 
-function createPin() {
-  return search.upsertPin(pin);
+function deletePin(pin) {
+  return search.removePin(pin);
 }
+

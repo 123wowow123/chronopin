@@ -12,7 +12,7 @@ import {
   PinEmitter,
   PinFavoriteEmitter,
   PinLikeEmitter
-} from './pin.controller';
+} from './../pin.controller';
 
 const PinEvents = new EventEmitter();
 

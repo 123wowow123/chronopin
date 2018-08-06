@@ -18,7 +18,7 @@ function onConnect(socket) {
 
   // Insert sockets below
   //require('../api/thing/thing.socket').register(socket);
-  require('../api/pin/pin.socket').register(socket);
+  require('../api/pin/event/pin.socket').register(socket);
 
 }
 

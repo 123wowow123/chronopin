@@ -5,7 +5,7 @@
 'use strict';
 
 import PinEvents from './pin.events';
-import * as log from '../../util/log';
+import * as log from '../../../util/log';
 
 // Restrict model events to listen
 const events = [

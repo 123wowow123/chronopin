@@ -19,6 +19,7 @@ const socketio = require('socket.io')(server, {
 });
 require('./config/socketio').default(socketio);
 require('./config/sns').default(require('./sns'));
+require('./config/search').default(require('./api/pin/pin.search.controller'));
 require('./config/express').default(app);
 require('./routes').default(app);
 
