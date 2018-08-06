@@ -13,8 +13,8 @@
       <form class="navbar-form navbar-left" ng-submit="nav.submitSearch(nav.search)" autocomplete="off">
         <div class="search-group">
           <!-- <span class="" ng-if="nav.search" title="Algolia Search"></span> -->
-          <span class="glyphicon glyphicon-search form-control__texbox_logo" aria-hidden="true"></span>
-          <input type="text" name="search" id="search" class="search-control --show-logo" placeholder="Search"
+          <span class="glyphicon glyphicon-search form-control__texbox_icon" aria-hidden="true"></span>
+          <input type="text" name="search" id="search" class="search-control --show-icon" placeholder="Search"
             ng-model="nav.search" ng-change="nav.autoComplete(nav.search)">
           <span class="form-control__clear-texbox" ng-if="nav.search" ng-click="nav.clearSearch(nav.search)"></span>
         </div>
