@@ -57,11 +57,16 @@ function executeCreateSP() {
             @utcCreatedDateTime DATETIME2(7),
             @utcUpdatedDateTime DATETIME2(7),
             @utcDeletedDateTime DATETIME2(7),
-            @id                 INT OUTPUT
+            @id                 INT OUT
         AS
           BEGIN
 
             SET NOCOUNT ON;
+ 
+            IF @id IS NOT NULL
+            BEGIN
+              SET IDENTITY_INSERT [dbo].[Pin] ON;
+            END
 
             IF @utcCreatedDateTime IS NULL
             BEGIN
@@ -74,6 +79,7 @@ function executeCreateSP() {
             END
 
             INSERT INTO [dbo].[Pin] (
+              id,
               title,
               description,
               sourceUrl,
@@ -90,6 +96,7 @@ function executeCreateSP() {
               utcUpdatedDateTime,
               utcDeletedDateTime)
             VALUES (
+              @id,
               @title,
               @description,
               @sourceUrl,
@@ -105,6 +112,11 @@ function executeCreateSP() {
               @utcCreatedDateTime,
               @utcUpdatedDateTime,
               @utcDeletedDateTime);
+
+            IF @id IS NOT NULL
+            BEGIN
+              SET IDENTITY_INSERT [dbo].[Pin] OFF;
+            END
 
             SET @id = SCOPE_IDENTITY();
 

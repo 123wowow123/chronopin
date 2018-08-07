@@ -51,6 +51,10 @@ Run `kubectl set image deployment/chronopin-dep chronopin=gcr.io/${PROJECT_ID}/c
 
 [Images / Build History](https://console.cloud.google.com/gcr/images/chronopin-209507/GLOBAL/chronopin?project=chronopin-209507&gcrImageListsize=50)
 
+### Get Pod Logs
+
+Run `kubectl logs -f <pod-id>`
+
 ### GCP Cloud Build
 
 `gcloud container builds submit -t gcr.io/${PROJECT_ID}/chronopin -f Docker/Dockerfile .`
@@ -64,3 +68,7 @@ Run `gcloud container builds submit --config cloudbuild.yaml .` to use GCP Build
 Run `docker system df` to see docker disk space usage
 
 Run `docker image prune --force --all` to remove all images that are not currently in use on our system
+
+## Pricing
+
+[Pricing](https://cloud.google.com/compute/pricing?hl=en_US&_ga=2.195120300.-1809462848.1528116354)

@@ -6,13 +6,14 @@ const auth = require('../../auth/auth.service');
 
 const router = express.Router();
 
-router.post('/', auth.isAuthenticated(), controller.create);
-//router.get('/sizeof', controller.getImageSize);
-
 router.get('/', auth.tryGetUser(), controller.index);
+router.post('/', auth.isAuthenticated(), controller.create);
 
 // Search Pins
 router.get('/search', auth.tryGetUser(), controller.searchPin);
+// router.post('/search', auth.isAuthenticated(), controller.createPin);
+// router.put('/search/:id', auth.isAuthenticated(), controller.updatePin);
+// router.patch('/search/:id', auth.isAuthenticated(), controller.update);
 
 router.get('/:id', auth.tryGetUser(), controller.show); ///:id(\\d+)/
 

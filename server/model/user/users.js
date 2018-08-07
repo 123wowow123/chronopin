@@ -7,7 +7,7 @@ import * as cp from '../../sqlConnectionPool';
 
 import {
   User
-} from '../../model';
+} from '..';
 
 export default class Users {
   // Properties

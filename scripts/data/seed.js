@@ -1,6 +1,5 @@
 /**
- * Populate DB with sample data on server start
- * to disable, edit config/environment/index.js, and set `seedDB: false`
+ * Populate DB with sample data
  */
 
 'use strict';
@@ -22,6 +21,8 @@ import azureBlob from '../../server/azure-blob';
 import rp from 'request-promise';
 import _ from 'lodash';
 
+import * as log from '../../server/util/log';
+
 // const Model = require('../../server/model');
 // const User = Model.User;
 // const Users = Model.Users;
@@ -41,7 +42,7 @@ let cp,
 
 
 // Setup
-module.exports.setup = function(seedOpt) {
+module.exports.setup = function (seedOpt) {
   cp = seedOpt.cp;
   Request = cp.Request;
   pinFilePath = seedOpt.pinfile;
@@ -53,7 +54,7 @@ module.exports.setup = function(seedOpt) {
   return this;
 }
 
-module.exports.seedDB = function() {
+module.exports.seedDB = function () {
   let mainUser,
     defaultUserObj = {
       provider: 'facebook',
@@ -132,7 +133,7 @@ module.exports.seedDB = function() {
     })
     .then(() => {
       // Create Aphelion Dates
-      debugger;
+      //debugger;
       let dateJSON = JSON.parse(fs.readFileSync(aphelionFilePath, 'utf8'));
       _alwaysShow(dateJSON, true);
       let dateTimes = new DateTimes(dateJSON);
@@ -167,7 +168,7 @@ module.exports.seedDB = function() {
       return user.save();
     })
     .then(res => {
-      let user = new User(defaultUserObj);
+      let user = new User(secondaryUserObj);
       return user.save();
     })
     .then(({
@@ -179,10 +180,13 @@ module.exports.seedDB = function() {
       pins.pins.forEach(p => {
         p.setUser(user);
       });
-      return pins.save();
+      return pins.save()
+        .catch(error => {
+          log.error('Pins Save Error');
+        });
     })
     .then(() => {
-      console.log('Data Load Complete');
+      log.info('Data Load Complete');
     });
 }
 

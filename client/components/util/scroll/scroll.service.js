@@ -5,6 +5,9 @@
     /**
      * The Util service is for thin, globally reusable, utility functions
      */
+
+    const menuOffset = 52;
+
     function ScrollUtil() {
 
         const ScrollUtil = {
@@ -25,7 +28,7 @@
             },
 
             scrollToID(scrollEl, id) {
-                const pos = ScrollUtil.findYPos(ScrollUtil.getElementById(id))
+                const pos = ScrollUtil.findYPos(ScrollUtil.getElementById(id));
                 return ScrollUtil.scrollYTo(scrollEl, pos);
             },
 
@@ -35,7 +38,7 @@
                     do {
                         curtop += el.offsetTop;
                     } while (!!(el = el.offsetParent));
-                    return curtop - 52 - 5; // add height of navbar main and additional 5px add to config
+                    return curtop - menuOffset - 5; // add height of navbar main and additional 5px add to config
                 }
             },
 

@@ -6,7 +6,7 @@ import * as _ from 'lodash';
 import {
   Medium,
   User
-} from '../../model';
+} from '..';
 
 // _user, userId, media
 let prop = [
@@ -307,7 +307,7 @@ function _createMSSQL(pin, userId) {
           .input('utcCreatedDateTime', mssql.DateTime2(7), pin.utcCreatedDateTime)
           .input('utcUpdatedDateTime', mssql.DateTime2(7), pin.utcUpdatedDateTime)
           .input('utcDeletedDateTime', mssql.DateTime2(7), pin.utcDeletedDateTime)
-          .output('id', mssql.Int);
+          .output('id', mssql.Int, pin.id);
 
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 

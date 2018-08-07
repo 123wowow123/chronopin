@@ -12,6 +12,7 @@
 
 .navbar-toggle {
     order: 3;
+    height: 34px;
 }
 
 .navbar-form {
@@ -34,23 +35,28 @@
 .search-control {
     @extend .form-control;
     width: 100% !important;
-    &.\--show-logo {
+    border: none;
+    background-color: #eee;
+
+    &:focus {
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(102, 175, 233, 1);
+    }
+
+    &.\--show-icon {
         padding-left: 35px;
     }
 }
 
-.navbar-toggle {
-    height: 34px;
-}
-
-.form-control__texbox_logo {
+.form-control__texbox_icon {
     position: absolute;
-    background: lightgray url("/assets/images/algolia-mark-blue.png") no-repeat left top;
-    background-size: cover;
+    font-size: 19px;
+    color: darkgray;
+    //background: lightgray url("/assets/images/algolia-mark-blue.png") no-repeat left top;
+    //background-size: cover;
     width: 25px;
     height: 25px;
-    top: 5px;
-    left: 5px;
+    top: 7px;
+    left: 9px;
 }
 
 .navbar-main {

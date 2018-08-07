@@ -9,7 +9,7 @@ import * as _ from 'lodash';
 
 import {
   Pin
-} from '../../model';
+} from '..';
 
 export default class Pins {
   // Properties
@@ -57,10 +57,10 @@ export default class Pins {
   }
 
   save() {
-    this.pins.forEach(p => {
+    let promises = this.pins.map(p => {
       return p.save();
     });
-    return this;
+    return Promise.all(promises);
   }
 
   addSearchScores(searchScores) {
@@ -169,15 +169,14 @@ export default class Pins {
   }
 
   static querySearch(searchText) {
-    return search.pin(searchText)
+    return search.pins(searchText)
       .then(res => {
-        let serpJson = JSON.parse(res);
         // console.log('querySearch - search match:', serpJson);
-        return _queryMSSQLPinsBySearchText(serpJson.value)
-          .then(res => {
+        return _queryMSSQLPinsBySearchText(res.hits.hits)
+          .then(({ pins: serpPin }) => {
             // console.log('querySearch', res);
-            let pins = new Pins(res);
-            pins.addSearchScores(serpJson.value);
+            let pins = new Pins(serpPin);
+            pins.addSearchScores(res.hits.hits);
             return pins;
           });
       });
@@ -186,13 +185,12 @@ export default class Pins {
   static querySearchFilterByHasFavorite(searchText, userId) {
     return search.pin(searchText)
       .then(res => {
-        let serpJson = JSON.parse(res);
         // console.log('querySearch - search match:', serpJson);
-        return _queryMSSQLPinsBySearchTextFilterByHasFavorite(serpJson.value, userId)
-          .then(res => {
+        return _queryMSSQLPinsBySearchTextFilterByHasFavorite(res.hits.hits, userId)
+          .then(({ pins: serpPin }) => {
             // console.log('querySearch', res);
-            let pins = new Pins(res);
-            pins.addSearchScores(serpJson.value);
+            let pins = new Pins(serpPin);
+            pins.addSearchScores(res.hits.hits);
             return pins;
           });
       });
@@ -430,7 +428,7 @@ function _queryMSSQLPinsBySearchText(searchMatches) {
 
   searchMatches.forEach(match => {
     // tvp.columns.add(id, sql.Int);
-    tvp.rows.add(+match.id);
+    tvp.rows.add(+match._id);
   })
 
   return cp.getConnection()
@@ -477,7 +475,7 @@ function _queryMSSQLPinsBySearchTextFilterByHasFavorite(searchMatches, userId) {
 
   searchMatches.forEach(match => {
     // tvp.columns.add(id, sql.Int);
-    tvp.rows.add(+match.id);
+    tvp.rows.add(+match._id);
   })
 
   return cp.getConnection()

@@ -7,7 +7,7 @@ import {
 } from 'passport-facebook';
 import * as userController from '../../api/user/user.controller';
 import { User, facebookMapper } from '../../model'
-import * as log from '../../log';
+import * as log from '../../util/log';
 
 export function setup(config) {
   passport.use(new FacebookStrategy({

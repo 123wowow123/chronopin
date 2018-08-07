@@ -1,6 +1,5 @@
 /**
- * Populate DB with sample data on server start
- * to disable, edit config/environment/index.js, and set `seedDB: false`
+ * Populate DB with sample data
  */
 
 'use strict';
@@ -28,7 +27,7 @@ module.exports.saveDB = function() {
 
   return Promise.resolve('Begin Backup')
     .then(() => {
-      let fromDateTime = new Date(0),
+      const fromDateTime = new Date(0),
         userId = 0,
         lastPinId = 0,
         pageSize = 2147483647; // Maximum values for an integer in SQL Server

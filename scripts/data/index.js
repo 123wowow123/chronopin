@@ -12,15 +12,14 @@ const save = require('./save');
 args
   .option('save', 'Save database into JSON', false)
   .option('seed', 'Seed database from JSON', false)
-  .option('pinfile', 'Pin file path to be used for opporation', './scripts/data/backup/seed.json')
-  .option('aphelionfile', 'Aphelion file path to be used for opporation', './scripts/data/backup/aphelion.json')
-  .option('equinoxfile', 'Equinox file path to be used for opporation', './scripts/data/backup/equinox.json')
-  .option('perihelionfile', 'Perihelion file path to be used for opporation', './scripts/data/backup/perihelion.json')
-  .option('solsticefile', 'Solstice file path to be used for opporation', './scripts/data/backup/solstice.json')
+  .option('pinfile', 'Pin file path to be used for opporation', './scripts/backup/seed.json')
+  .option('aphelionfile', 'Aphelion file path to be used for opporation', './scripts/backup/aphelion.json')
+  .option('equinoxfile', 'Equinox file path to be used for opporation', './scripts/backup/equinox.json')
+  .option('perihelionfile', 'Perihelion file path to be used for opporation', './scripts/backup/perihelion.json')
+  .option('solsticefile', 'Solstice file path to be used for opporation', './scripts/backup/solstice.json');
 
 const flags = args.parse(process.argv);
 const cp = require('../../server/sqlConnectionPool');
-const Request = cp.Request;
 
 const saveOpt = {
   cp: cp,
@@ -36,7 +35,7 @@ const seedOpt = {
   solsticefile: flags.solsticefile
 };
 
-execute()
+execute(flags)
   .then(arg => {
     //process.exit();
   })
@@ -45,11 +44,11 @@ execute()
   });
 
 function execute(opt) {
-  if (opt && opt.save || flags.save) {
+  if (opt.save) {
     return save
       .setup(saveOpt)
       .saveDB();
-  } else if (opt && opt.seed || flags.seed) {
+  } else if (opt.seed) {
     return seed
       .setup(seedOpt)
       .seedDB();

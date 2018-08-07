@@ -7,7 +7,7 @@ import * as cp from '../../sqlConnectionPool';
 import * as _ from 'lodash';
 import {
   DateTime
-} from '../../model';
+} from '..';
 
 export default class DateTimes {
   // Properties
@@ -54,10 +54,10 @@ export default class DateTimes {
   }
 
   save() {
-    this.dateTimes.forEach(p => {
+    let promises = this.dateTimes.map(p => {
       return p.save();
     });
-    return this;
+    return Promise.all(promises);
   }
 
   static queryByStartEndDate(startDateTime, endDateTime) {
@@ -73,7 +73,7 @@ export default class DateTimes {
 function _queryMSSQLDateTimesByStartEndDate(startDateTime, endDateTime) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'GetDateTimesByStartEndDate';
         let request = new mssql.Request(conn)
           .input('startDateTime', mssql.DateTime2(7), startDateTime)
@@ -82,7 +82,7 @@ function _queryMSSQLDateTimesByStartEndDate(startDateTime, endDateTime) {
         //console.log('GetDateTimesByStartEndDate', startDateTime, endDateTime);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          function(err, recordsets, returnValue, affected) {
+          function (err, recordsets, returnValue, affected) {
             let queryCount;
             //console.log('GetDateTimesByStartEndDate', recordsets[0]);
             if (err) {

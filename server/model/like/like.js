@@ -5,7 +5,7 @@ import * as cp from '../../sqlConnectionPool';
 import {
   User,
   Pin
-} from '../../model';
+} from '..';
 
 // _user, userId, _pin, pinId
 let prop = [

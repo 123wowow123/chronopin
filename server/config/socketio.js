@@ -4,7 +4,7 @@
 'use strict';
 
 import config from './environment';
-import * as log from '../log';
+import * as log from '../util/log';
 
 // When the user disconnects.. perform this
 function onDisconnect(socket) { }
@@ -18,7 +18,7 @@ function onConnect(socket) {
 
   // Insert sockets below
   //require('../api/thing/thing.socket').register(socket);
-  require('../api/pin/pin.socket').register(socket);
+  require('../api/pin/event/pin.socket').register(socket);
 
 }
 

@@ -1,6 +1,6 @@
 import azure from 'azure-storage';
 import config from '../config/environment';
-import * as log from '../log';
+import * as log from '../util/log';
 
 const retryOperations = new azure.ExponentialRetryPolicyFilter();
 

@@ -1,6 +1,6 @@
 'use strict';
 
-import * as log from '../../log';
+import * as log from '../../util/log';
 const path = require('path');
 const _ = require('lodash');
 const fs = require('fs');
@@ -70,10 +70,9 @@ let all = {
     AZURE_STORAGE_CONNECTION_STRING: getProcessEnv('AZURE_STORAGE_CONNECTION_STRING') || ''
   },
 
-  azureSearch: {
-    serviceUrl: getProcessEnv('AZURE_SEARCH_URL'),
-    apiKey: getProcessEnv('AZURE_SEARCH_API_KEY'),
-    queryKey: getProcessEnv('AZURE_SEARCH_QUERY_KEY')
+  elastiSearch: {
+    indexPrefix: getProcessEnv('INDEXPREFIX') || '',
+    serviceUrl: getProcessEnv('ELASTISEARCH_URL') || ''
   },
 
   chromeless: {

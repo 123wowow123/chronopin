@@ -6,7 +6,7 @@ import crypto from 'crypto';
 import _ from 'lodash';
 import {
   Medium
-} from '../../model';
+} from '..';
 
 const authTypes = ['github', 'twitter', 'facebook', 'google'];
 const defaultPasswordEncryptIterations = 10000;
