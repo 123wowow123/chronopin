@@ -57,10 +57,10 @@ export default class Pins {
   }
 
   save() {
-    this.pins.forEach(p => {
+    let promises = this.pins.map(p => {
       return p.save();
     });
-    return this;
+    return Promise.all(promises);
   }
 
   addSearchScores(searchScores) {

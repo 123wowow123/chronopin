@@ -129,6 +129,7 @@
     "test": "grunt test",
     "update-webdriver": "node node_modules/protractor/bin/webdriver-manager update",
     "start": "node server",
+    "db:refresh": "npm run create:db && npm run create:data",
     "create:db": "node scripts/db/index.js",
     "create:data": "node scripts/data/index.js --seed",
     "create:search": "node scripts/search/index.js --seed --map",

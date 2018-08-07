@@ -40,6 +40,9 @@ export function createThumb(imageUrl) {
           log.error('save-thumb error:', err);
           throw new Error(err);
         });
+    }).catch(err => {
+      log.error('download-image error:', err);
+      throw new Error(err);
     });
 }
 
@@ -48,10 +51,10 @@ export function saveThumb(thumbObj) {
     pageBlobSize = Math.ceil(bufferLength / 512) * 512,
     sf = streamifier.createReadStream(thumbObj.buffer);
   return azureBlob.createBlock(thumbObj.thumbName, sf, pageBlobSize, {
-      contentSettings: {
-        contentType: thumbObj.type //'image/png'
-      }
-    })
+    contentSettings: {
+      contentType: thumbObj.type //'image/png'
+    }
+  })
     .then(() => {
       return thumbObj;
     })

@@ -359,6 +359,7 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 - Fix loading on correct timeline on mobile tag wrapping 
 - Fix image centering issue
 - Fix continuous search merging serps issue
+- Database load need to save exact id otherwise search id gets out of sync
 - ElastiSearch / auto complete search / keywords and people eg pinterest
 - Drilldown view reorganize
 - SSL
