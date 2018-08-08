@@ -183,7 +183,7 @@
         switch (event) {
           case "pin:save":
             //debugger
-            const bag = this.pinApp.getBagsFirstInViewAsc();
+            this.pinApp.getBagsFirstInViewAsc();
             this.pinApp.mergeBagsWithPins([item]);
               debugger
               const relEl = this.ScrollUtil.getElementById(bag.toISODateTimeString());
@@ -212,6 +212,7 @@
 
       this._unRegisterInfinitScroll();
 
+      this.pinApp.clearSearchBags(); //////////////////////
       this.pinApp.mergeSearchBagsWithPins(pins);
 
       let firstBag = this.pinApp.findClosestFutureSearchBagByDateTime(dateTime);

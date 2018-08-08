@@ -57,6 +57,10 @@
 
             // Search Bags
 
+            clearSearchBags() {
+                return this._searchBags = new Bags();
+            }
+
             mergeSearchBagsWithPins(pins) {
                 return this._searchBags.mergePins(pins);
             }
