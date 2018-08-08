@@ -4,7 +4,7 @@ class NavbarController {
   //end-non-standard
 
   //start-non-standard
-  constructor(Auth, $rootScope) {
+  constructor(Auth, $rootScope, $state) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
@@ -13,12 +13,15 @@ class NavbarController {
     this.isCollapsed = true;
 
     this.$rootScope = $rootScope;
+    this.$state = $state;
   }
 
+  $onInit() {
+    this.search = this.$state.params.q;
+}
+
   submitSearch(searchText) {
-    this.$rootScope.$broadcast('navbar.search', {
-      searchText: searchText
-    });
+    this.$state.go('search', { q: searchText });
     return this;
   }
 
@@ -31,9 +34,7 @@ class NavbarController {
 
   clearSearch(searchText) {
     this.search = null;
-    this.$rootScope.$broadcast('navbar.clearSearch', {
-      prevSearchText: searchText
-    });
+    this.$state.go('main', { q: searchText });
     return this;
   }
 

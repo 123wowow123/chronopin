@@ -39,7 +39,7 @@ Run `kubectl get service`
 Run `kubectl delete svc/chronopin-lb`
 
 
-### Build & Deploy a new version of your app to GCP
+### Build & Deploy a New Version of Your App to GCP
 
 Run `export PROJECT_ID="$(gcloud config get-value project -q)"`
 
