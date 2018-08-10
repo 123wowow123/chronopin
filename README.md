@@ -358,6 +358,9 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 - Fix loading on correct timeline on mobile tag wrapping 
 - Fix image centering issue
+- Fix watch pins board
+- Main dosn't need to reload data every time on navigate
+- Add link header to all endpoints [watch]
 - ElastiSearch / auto complete search / keywords and people eg pinterest
 - Drilldown view reorganize
 - SSL
@@ -365,6 +368,7 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 - Fix continuous search merging serps issue
 - Seperate search page to it's own component using resolve ++
   - https://ui-router.github.io/ng1/tutorial/hellosolarsystem
+- Put location in place of "THE CHAIN GANG"
 
 ### Search
 
