@@ -209,7 +209,7 @@ function _mapMediaFromQuery(pinRows) {
   pinRows.forEach(pinRow => {
     let mediaObj = {},
       hasProp;
-    for (var prop in pinRow) {
+    for (let prop in pinRow) {
       if (pinRow.hasOwnProperty(prop) && prop.startsWith('Media.')) {
         mediaObj[prop.substring(6)] = pinRow[prop];
         hasProp = true;

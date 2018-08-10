@@ -34,9 +34,10 @@ export default function(app) {
   //   console.log(req.originalUrl);
   //   next()
   // }
+
   // app.use(requestPath);
 
-  app.use(require('../prerender'));
+  // app.use(require('../prerender'));
 
   if (env === 'development' || env === 'test') {
     app.use(express.static(path.join(config.root, '.tmp')));
