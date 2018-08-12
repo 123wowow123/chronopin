@@ -57,7 +57,7 @@ export default class Pins {
   }
 
   save() {
-    let promises = this.pins.map(p => {
+    const promises = this.pins.map(p => {
       return p.save();
     });
     return Promise.all(promises);
