@@ -37,7 +37,7 @@ function _removeEntity(res) {
 
 function _setPaginationHeader(res, req) {
   let urlPrefix = req.protocol + '://' + req.get('Host') + req.baseUrl + req.path;
-  return function (pins) {
+  return (pins) => {
     let queryCount = pins.queryCount;
     return response.setPaginationHeader(res, urlPrefix, queryCount)(pins);
   };
