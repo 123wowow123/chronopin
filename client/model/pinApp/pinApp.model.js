@@ -9,6 +9,9 @@
 
             // properties: _bags, _searchBags
 
+            bagsYOffset = 0;
+            searchBagsYOffset = 0;
+
             constructor(args) {
                 // Lazy load to prevent Angular circular dependency
                 Bags = Bags || modelInjector.getBags();

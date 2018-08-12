@@ -31,11 +31,10 @@ export function register(controller) {
   }
 }
 
-
 function createListener(event, controller) {
-  return (doc) => {
+  return (doc, userId) => {
     log.info(event, log.stringify(doc));
-    controller.emit(event, doc);
+    controller.emit(event, doc, userId);
   };
 }
 

@@ -33,7 +33,69 @@ module.exports.pins = function (searchText) {
   return rp(options); //////////////////////////// new mapping needed
 };
 
-module.exports.upsertPin = function (pin) {
+
+
+module.exports.favoritePin = (userId, pin) => {
+  // Create Pins
+  const id = pin.id;
+
+  const index = "pins";
+  const command = "_doc";
+  const uri = _prefixIndex(index) + "/" + command + "/" + id;
+
+  const options = {
+    method: 'POST',
+    uri: uri,
+    body: {
+      "script": "ctx._source.favorites += uId",
+      "params": {
+        "userId": userId
+      }
+    },
+    json: true // Automatically stringifies the body to JSON
+  };
+
+  //debugger
+  const req = Object.assign({}, options, { body: pin });
+  //console.log(req);
+  return rp(req);
+};
+
+module.exports.unfavoritePin = (userId, pin) => {
+
+};
+
+module.exports.likePin = (userId, pin) => {
+  // Create Pins
+  const id = pin.id;
+
+  const index = "pins";
+  const command = "_doc";
+  const uri = _prefixIndex(index) + "/" + command + "/" + id + "/_update";
+
+  const options = {
+    method: 'POST',
+    uri: uri,
+    body: {
+      "script": "ctx._source.likes += uId",
+      "params": {
+        "uId": userId
+      }
+    },
+    json: true // Automatically stringifies the body to JSON
+  };
+
+  //debugger
+  const req = Object.assign({}, options, { body: pin });
+  //console.log(req);
+  return rp(req);
+};
+
+module.exports.unlikePin = (userId, pin) => {
+
+};
+
+module.exports.upsertPin = (pin) => {
   // Create Pins
   const id = pin.id;
 
@@ -55,7 +117,7 @@ module.exports.upsertPin = function (pin) {
   return rp(req);
 };
 
-module.exports.removePin = function (pin) {
+module.exports.removePin = (pin) => {
   // Create Pins
   const id = pin.id;
 
@@ -77,10 +139,10 @@ module.exports.removePin = function (pin) {
   return rp(req);
 };
 
-module.exports.createMapping = function (index, mapping) {
+module.exports.createMapping = (index, mapping) => {
   // Create Mapping
   const uri = _prefixIndex(index);
-console.log(uri)
+  console.log(uri)
   const options = {
     method: 'PUT',
     uri,
@@ -95,7 +157,7 @@ console.log(uri)
   return rp(req);
 };
 
-module.exports.removeIndex = function (index) {
+module.exports.removeIndex = (index) => {
   // Remove Specified Index
   const uri = _prefixIndex(index);
 

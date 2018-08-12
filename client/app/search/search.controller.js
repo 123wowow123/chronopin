@@ -95,6 +95,11 @@
             }
         }
 
+        updateInView(event) {
+            //debugger;
+            event.target.bag.inView = event.inView;
+          };
+
         // Private helper functions
 
         // ToDo: Not working

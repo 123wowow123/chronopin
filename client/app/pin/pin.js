@@ -3,7 +3,7 @@
 angular.module('chronopinNodeApp')
   .config(function($stateProvider) {
     $stateProvider.state('pin', {
-    url: '/pin/:id',
+      url: '/pin/:id',
       template: '<pin></pin>'
     });
   });
