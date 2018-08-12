@@ -5,7 +5,7 @@
 
   class MainController {
 
-    constructor($scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, $log, $timeout, socket) {
+    constructor($transitions, $scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, $log, $timeout, socket) {
 
       // constants
       const omitLinkHeaderProp = ['rel', 'url'];
@@ -13,6 +13,9 @@
       // Plugin: https://github.com/gabceb/jquery-browser-plugin
       const isSafari = 	$.browser.ipad || $.browser.iphone || $.browser.ipod || $.browser.safari || $.browser.msedge;
       const scrollEl = isSafari ? document.body : document.documentElement; // Safari broke with documentElement
+
+      // stateParams Service
+      this.$transitions = $transitions;
 
       // angular service
       this.$timeout = $timeout;
@@ -47,11 +50,9 @@
       this.gettingPrev = null;
 
       this.loading = false;
-      this.searching = false;
-      this.noSearchResult = false;
 
       // scroll properties
-      this.bagsYOffset;
+      // this.bagsYOffset;
 
       // partially applied functions
       this.getLinkHeader = this.Util.getLinkHeader.bind(null, omitLinkHeaderProp);
@@ -64,38 +65,25 @@
 
     $onInit() {
       this.loading = true;
+
+      this.$transitions.onExit({ from: 'main' }, (transition) => {
+        //debugger
+        this.pinApp.bagsYOffset = this.captureYOffset();
+      });
+
+      // this.$transitions.onEnter({ to: 'main' }, (transition) => {
+      //   debugger
+      //   if (angular.isNumber(this.pinApp.bagsYOffset)) {
+      //     setTimeout(() => {
+      //       this.scrollYTo(this.pinApp.bagsYOffset)
+      //     }, 0);
+      //   }
+      // });
+
+
       this.mainWebService.list()
         .then(res => {
           this._setMainBagsWithPins(res.data);
-          return res;
-        })
-        .then(res => {
-          this.$scope.$on('navbar.search', (event, data) => {
-            this.bagsYOffset = this.captureYOffset();
-            this.searching = true;
-            this.pinWebService.search({
-              searchText: data.searchText
-            })
-              .then(res => {
-                this._setSearchPinGroups(res.data.pins);
-                this.searching = false;
-              })
-              .catch(err => {
-                this.searching = false;
-                throw err;
-              });
-          });
-          return res;
-        })
-        .then(res => {
-          this.$scope.$on('navbar.clearSearch', (event, data) => {
-            this._switchPinGroups('main');
-            if (angular.isNumber(this.bagsYOffset)) {
-              setTimeout(() => {
-                this.scrollYTo(this.bagsYOffset)
-              }, 0);
-            }
-          });
           return res;
         })
         .then(res => {
@@ -124,10 +112,6 @@
       switch (true) {
         case this.loading:
           return 'loading';
-        case this.searching:
-          return 'searching';
-        case this.bags === this.pinApp.getSearchBags() && this.pinApp.getSearchBags().length:
-          return 'found';
         case this.bags === this.pinApp.getBags() && !this.pinApp.getBags().length:
           return 'no match';
         default:
@@ -142,17 +126,6 @@
 
     // Private helper functions
 
-    _switchPinGroups(group) {
-      switch (group) {
-        case 'search':
-          this.bags = this.pinApp.getSearchBags();
-          break;
-        default:
-          this.bags = this.pinApp.getBags();
-      }
-      return this;
-    }
-
     _setMainBagsWithPins(data) {
       // debugger;
       let dateTime = new Date();
@@ -160,9 +133,11 @@
       this.pinApp.mergeBagsWithDateTimes(data.dateTimes);
       this.pinApp.mergeBagsWithPins(data.pins);
 
-      this.$timeout(() => {
-        scrollAdjust.bind(this)(dateTime);
-      });
+      if (angular.isNumber(this.pinApp.bagsYOffset)) {
+        this.$timeout(() => {
+          scrollAdjust.bind(this)(dateTime);
+        });
+      }
 
       function scrollAdjust(dateTime) {
         //debugger;
@@ -185,7 +160,7 @@
             //debugger
             this.pinApp.getBagsFirstInViewAsc();
             this.pinApp.mergeBagsWithPins([item]);
-              debugger
+              //debugger
               const relEl = this.ScrollUtil.getElementById(bag.toISODateTimeString());
               this.adjustScrollRelativeToCurrentView(relEl); //////
             break;
@@ -203,26 +178,7 @@
 
       });
 
-      this._switchPinGroups('main');
-    }
-
-    // ToDo: Not working
-    _setSearchPinGroups(pins) {
-      let dateTime = new Date();
-
-      this._unRegisterInfinitScroll();
-
-      this.pinApp.clearSearchBags(); //////////////////////
-      this.pinApp.mergeSearchBagsWithPins(pins);
-
-      let firstBag = this.pinApp.findClosestFutureSearchBagByDateTime(dateTime);
-
-      this._switchPinGroups('search');
-
-      if (firstBag) {
-        this.scrollToID(firstBag.toISODateTimeString());
-        // this._registerInfinitScroll();
-      }
+      this.bags = this.pinApp.getBags();
     }
 
     _registerInfinitScroll() {

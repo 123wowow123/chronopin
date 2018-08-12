@@ -30,18 +30,14 @@
         "utcCreatedDateTime": {
           "type": "date"
         },
-        "favoriteCount": {
-          "type": "integer"
+
+        "favorites": {
+          "type": "long"
         },
-        "likeCount": {
-          "type": "integer"
+        "likes": {
+          "type": "long"
         },
-        "hasFavorite": {
-          "type": "boolean"
-        },
-        "hasLike": {
-          "type": "boolean"
-        },
+        
         "media": {
           "type": "nested"
         }

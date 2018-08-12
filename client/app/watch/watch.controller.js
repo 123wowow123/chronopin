@@ -1,14 +1,14 @@
 /*jshint unused:false*/
 'use strict';
 
-(function() {
+(function () {
 
   let PinGroups;
 
   class WatchController {
 
     constructor($scope, socket, pinWebService, Auth, appConfig, modelInjector, $log) {
-      PinGroups = PinGroups || modelInjector.getPinGroups();
+      PinGroups = PinGroups || modelInjector.getBags();
 
       this.omitLinkHeaderProp = ['rel', 'url'];
 
@@ -40,8 +40,8 @@
     $onInit() {
       this.loading = true;
       this.pinWebService.list({
-          hasFavorite: true
-        })
+        hasFavorite: true
+      })
         .then(res => {
           this._setMainPinGroups(res.data.pins);
           return res;
@@ -51,9 +51,9 @@
             this._captureOffset();
             this.searching = true;
             this.pinWebService.search({
-                searchText: data.searchText,
-                hasFavorite: true
-              })
+              searchText: data.searchText,
+              hasFavorite: true
+            })
               .then(res => {
                 this._setSearchPinGroups(res.data.pins);
                 this.searching = false;
@@ -72,8 +72,8 @@
           return res;
         })
         .then(res => {
-          this.prevParam = _.omit(res.data.linkHeader.previous, this.omitLinkHeaderProp);
-          this.nextParam = _.omit(res.data.linkHeader.next, this.omitLinkHeaderProp);
+          //this.prevParam = _.omit(res.data.linkHeader.previous, this.omitLinkHeaderProp);
+          //this.nextParam = _.omit(res.data.linkHeader.next, this.omitLinkHeaderProp);
           return res;
         })
         .then(res => {

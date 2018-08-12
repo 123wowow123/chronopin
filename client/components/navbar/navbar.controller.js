@@ -3,6 +3,14 @@
 class NavbarController {
   //end-non-standard
 
+  searchChoice = [
+    { name: 'All', value: 'all' },
+    { name: 'Watched', value: 'watch' }
+    //'People'
+  ];
+
+  searchSelect;
+
   //start-non-standard
   constructor(Auth, $rootScope, $state) {
     this.isLoggedIn = Auth.isLoggedIn;
@@ -14,14 +22,16 @@ class NavbarController {
 
     this.$rootScope = $rootScope;
     this.$state = $state;
+
+    this.searchSelect = this.searchChoice[0];
   }
 
   $onInit() {
     this.search = this.$state.params.q;
-}
+  }
 
-  submitSearch(searchText) {
-    this.$state.go('search', { q: searchText });
+  submitSearch(searchText, searchSelectText) {
+    this.$state.go('search', { q: searchText, f: searchSelectText });
     return this;
   }
 
@@ -32,10 +42,14 @@ class NavbarController {
     // return this;
   }
 
-  clearSearch(searchText) {
+  clearSearch() {
     this.search = null;
-    this.$state.go('main', { q: searchText });
+    this.$state.go('main');
     return this;
+  }
+
+  searchChange(selectText) {
+    this.searchSelect = selectText;
   }
 
 }
