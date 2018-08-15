@@ -14,6 +14,15 @@ export {
   default as Pins
 } from './pins/pins';
 export {
+  default as SearchPin
+} from './searchPin/searchPin';
+export {
+  default as SearchPins
+} from './searchPin/searchPins';
+export {
+  default as SearchMapping
+} from './searchPin/searchMapping';
+export {
   default as Medium
 } from './medium/medium';
 export {

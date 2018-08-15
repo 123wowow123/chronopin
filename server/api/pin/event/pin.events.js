@@ -44,7 +44,7 @@ function emitEvent(event) {
   return function(doc, options, done) {
     //crashes node with 2 consecutive emits: github.com/nodejs/node/issues/4261
     //PinEvents.emit(event + ':' + doc.id, doc);
-    PinEvents.emit(event, doc);
+    PinEvents.emit(event, doc, options);
     //done(null);
   }
 }

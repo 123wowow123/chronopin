@@ -49,10 +49,10 @@ export default class Pin {
     });
 
     Object.defineProperty(this, 'userId', {
-      get: function() {
+      get: function () {
         return this._user && this._user.id;
       },
-      set: function(id) {
+      set: function (id) {
         if (this._user) {
           this._user.id = id;
         } else {
@@ -136,8 +136,8 @@ export default class Pin {
         toDeleteOriginalMedia = _difference(beforePinMedia, newPinMedia, 'originalUrl');
 
         toSaveMediaPromise = toSaveOriginalMedia.map(medium => {
-            return medium.createAndSaveToCDN();
-          })
+          return medium.createAndSaveToCDN();
+        })
           .then((newMedia) => {
             this.media = newMedia;
           });
@@ -204,11 +204,11 @@ export default class Pin {
 }
 
 function _mapMediaFromQuery(pinRows) {
-  let media = [];
+  const media = [];
 
   pinRows.forEach(pinRow => {
-    let mediaObj = {},
-      hasProp;
+    const mediaObj = {}
+    let hasProp;
     for (let prop in pinRow) {
       if (pinRow.hasOwnProperty(prop) && prop.startsWith('Media.')) {
         mediaObj[prop.substring(6)] = pinRow[prop];
@@ -220,10 +220,9 @@ function _mapMediaFromQuery(pinRows) {
     }
   });
 
-  if (media.length) {
-    return media;
-  }
-  return undefined;
+  return media.length
+    ? media
+    : undefined;
 }
 
 function _queryMSSQLPinWithFavoriteAndLikeById(pinId, userId) {
@@ -289,7 +288,7 @@ function _queryMSSQLPinById(pinId) {
 function _createMSSQL(pin, userId) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'CreatePin';
         let request = new mssql.Request(conn)
           .input('title', mssql.NVarChar(1024), pin.title)
@@ -339,7 +338,7 @@ function _createMSSQL(pin, userId) {
 function _updateMSSQL(pin, userId) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'UpdatePin';
         let request = new mssql.Request(conn)
           .input('id', mssql.Int, pin.id)
@@ -373,7 +372,7 @@ function _updateMSSQL(pin, userId) {
 function _deleteMSSQL(pin) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'UpdatePin';
         let request = new mssql.Request(conn)
           .input('id', mssql.Int, pin.id)

@@ -7,20 +7,10 @@
 //debugger;
 
 import {
-    User,
-    Users,
-    Pin,
-    Pins,
-    Medium,
-    DateTime,
-    DateTimes
+    SearchPin
 } from '../../server/model';
 
-import * as search from '../../server/search';
-
 import fs from 'fs';
-import azureBlob from '../../server/azure-blob';
-import rp from 'request-promise';
 import _ from 'lodash';
 import * as log from '../../server/util/log';
 
@@ -52,10 +42,10 @@ module.exports.seed = function () {
         .then(() => {
             // Create Pins
             let pinsJSON = JSON.parse(fs.readFileSync(pinFilePath, 'utf8'));
-            let pins = new Pins(pinsJSON);
+            let pins = new SearchPin(pinsJSON);
             let pinsPromise = pins.pins.map(p => {
 
-                return search.upsertPin(p)
+                return searchCtrl.upsertPin(p)
                     .then((parsedBody) => {
                         // POST succeeded...
                         log.success("Create succeeded", JSON.stringify(parsedBody));

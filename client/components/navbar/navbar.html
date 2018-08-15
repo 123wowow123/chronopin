@@ -15,26 +15,25 @@
         <div class="search-group">
           <!-- <span class="" ng-if="nav.search" title="Algolia Search"></span> -->
           <div class="search-box-container">
-            <input type="text" name="search" id="search" class="search-control --show-icon" placeholder="Search" ng-model="nav.search"
-              ng-change="nav.autoComplete(nav.search)">
+            <input type="text" name="search" id="search" class="search-control --show-icon" ng-class="{'--right-radius-none': nav.isLoggedIn()}" 
+              placeholder="Search" ng-model="nav.search" ng-change="nav.autoComplete(nav.search)">
             <span class="glyphicon glyphicon-search form-control__texbox_icon" aria-hidden="true"></span>
             <span class="form-control__clear-texbox" ng-if="nav.search" ng-click="nav.clearSearch(nav.search)"></span>
           </div>
 
-          <div class="input-group-btn search-dropdown" uib-dropdown>
+          <div class="input-group-btn search-dropdown" uib-dropdown ng-if="nav.isLoggedIn()">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-              uib-dropdown-toggle>{{nav.searchSelect.name}}
+              uib-dropdown-toggle>{{nav.searchChoice.name}}
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu dropdown-menu-right" uib-dropdown-menu>
 
-              <li ng-repeat="choice in nav.searchChoice">
+              <li ng-repeat="choice in nav.searchChoices">
                 <a data-choice="choice" ng-click="nav.searchChange(choice)">{{choice.name}}</a>
               </li>
 
             </ul>
           </div>
-          <!-- /btn-group -->
 
         </div>
       </form>

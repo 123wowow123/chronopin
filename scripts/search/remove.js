@@ -7,19 +7,10 @@
 //debugger;
 
 import {
-    User,
-    Users,
-    Pin,
-    Pins,
-    Medium,
-    DateTime,
-    DateTimes
+    SearchIndex
 } from '../../server/model';
 
-import * as search from '../../server/search';
-
 import * as log from '../../server/util/log';
-
 import rp from 'request-promise';
 
 let INDEX;
@@ -41,7 +32,7 @@ module.exports.remove = function () {
 
             // DELETE INDEX
 
-            return search.removeIndex(INDEX)
+            return SearchIndex.removeIndex(INDEX)
                 .then((parsedBody) => {
                     if (parsedBody.statusCode != 200) {
                         // DELETE failed...

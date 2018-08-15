@@ -2,9 +2,7 @@
 
 import config from '../../config/environment';
 import moment from 'moment';
-import * as _ from 'lodash';
 import * as response from '../response';
-import * as mssql from 'mssql';
 
 import {
   Pin,
@@ -134,7 +132,7 @@ export function create(req, res) {
       pin
     }) => {
       const event = "afterCreate";
-      PinEmitter.emit(event, pin);
+      PinEmitter.emit(event, pin, { userId: user.id });
       return pin;
     })
     .then(response.withResult(res, 201))
@@ -153,7 +151,7 @@ export function update(req, res) {
       pin
     }) => {
       const event = "afterUpdate";
-      PinEmitter.emit(event, pin);
+      PinEmitter.emit(event, pin, { userId: user.id });
       return pin;
     })
     .then(response.handleEntityNotFound(res))

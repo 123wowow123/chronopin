@@ -33,7 +33,7 @@ export function createPinFavorite(req, res) {
       pin
     }) => {
       const event = "afterFavorite";
-      PinFavoriteEmitter.emit(event, pin);
+      PinFavoriteEmitter.emit(event, pin, { userId: user.id });
       return pin;
     })
     .then(response.withResult(res, 201))
@@ -60,7 +60,7 @@ export function removePinFavorite(req, res) {
       pin
     }) => {
       const event = "afterUnfavorite";
-      PinFavoriteEmitter.emit(event, pin);
+      PinFavoriteEmitter.emit(event, pin, { userId: user.id });
       return pin;
     })
     .then(response.withResult(res, 201))

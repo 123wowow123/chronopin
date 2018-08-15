@@ -35,7 +35,7 @@ export function createPinLike(req, res) {
       pin
     }) => {
       const event = "afterLike";
-      PinLikeEmitter.emit(event, pin);
+      PinLikeEmitter.emit(event, pin, { userId: user.id });
       return pin;
     })
     .then(response.withResult(res, 201))
@@ -61,7 +61,7 @@ export function removePinLike(req, res) {
       pin
     }) => {
       const event = "afterUnlike";
-      PinLikeEmitter.emit(event, pin);
+      PinLikeEmitter.emit(event, pin, { userId: user.id });
       return pin;
     })
     .then(response.withResult(res, 201))

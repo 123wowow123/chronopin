@@ -32,9 +32,9 @@ export function register(controller) {
 }
 
 function createListener(event, controller) {
-  return (doc, userId) => {
+  return (doc, options) => {
     log.info(event, log.stringify(doc));
-    controller.emit(event, doc, userId);
+    controller.emit(event, doc, options);
   };
 }
 

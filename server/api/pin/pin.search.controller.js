@@ -1,46 +1,54 @@
 'use strict';
 
 import * as response from '../response';
-import * as search from '../../search';
+//import * as fp from 'lodash/fp';
 
 import {
-  Pins
+  Pins,
+  SearchPins
 } from '../../model';
 
 export function searchPin(req, res) {
   let user = req.user,
-    pinId = +req.params.id,
+    //pinId = +req.params.id,
     searchText = req.query.q,
-    hasFavorite = !!req.query.hasFavorite;
+    hasFavorite = req.query.f && req.query.f.toLowerCase() == 'watch';
 
   //console.log('searchPin:', searchText);
   if (hasFavorite) {
-    userId = +user.id;
-    return Pins.querySearchFilterByHasFavorite(searchText, userId)
+    const userId = +user.id;
+    return SearchPins.searchFavorite(userId, searchText)
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));
+    // return Pins.querySearchFilterByHasFavorite(searchText, userId)
+    //   .then(response.withResult(res, 200))
+    //   .catch(response.handleError(res));
   } else {
-    return Pins.querySearch(searchText)
+    return SearchPins.search(searchText)
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));
+    // return Pins.querySearch(searchText)
+    //   .then(response.withResult(res, 200))
+    //   .catch(response.handleError(res));
   }
 }
 
 
 // Listening to pin events
 
-export function emit(event, pin, userId) {
+export function emit(event, pin, options) {
   switch (event) {
     case "search:favorite":
-      favoritePin(userId, pin);
+      favoritePin(options.userId, pin);
       break;
     case "search:unfavorite":
-      unfavoritePin(userId, pin);
+      unfavoritePin(options.userId, pin);
+      break;
     case "search:like":
-      likePin(userId, pin);
+      likePin(options.userId, pin);
       break;
     case "search:unlike":
-      unlikePin(userId, pin);
+      unlikePin(options.userId, pin);
       break;
     case "search:save":
     case "search:update":
@@ -52,26 +60,44 @@ export function emit(event, pin, userId) {
   }
 }
 
-function favoritePin(userId, pin) {
-  return search.favoritePin(userId, pin);
+export function favoritePin(userId, pin) {
+  return search.favoritePin(userId, mapToSearchPin(pin));
 }
 
-function unfavoritePin(userId, pin) {
-  return search.unfavoritePin(userId, pin);
+export function unfavoritePin(userId, pin) {
+  return search.unfavoritePin(userId, mapToSearchPin(pin));
 }
 
-function likePin(userId, pin) {
-  return search.likePin(userId, pin);
+export function likePin(userId, pin) {
+  return search.likePin(userId, mapToSearchPin(pin));
 }
 
-function unlikePin(userId, pin) {
-  return search.unlikePin(userId, pin);
+export function unlikePin(userId, pin) {
+  return search.unlikePin(userId, mapToSearchPin(pin));
 }
 
-function upsertPin(pin) {
-  return search.upsertPin(pin);
+export function upsertPin(pin) {
+  return search.upsertPin(mapToSearchPin(pin));
 }
 
-function deletePin(pin) {
-  return search.removePin(pin);
+export function deletePin(pin) {
+  return search.removePin(pin.id);
+}
+
+function mapToSearchPin(pin) {
+  let clonedPin = Object.assign({}, pin);
+  delete clonedPin.favoriteCount;
+  delete clonedPin.likeCount;
+  delete clonedPin.hasFavorite;
+  delete clonedPin.hasLike;
+
+  if (!clonedPin.favorites) {
+    clonedPin.favorites = [];
+  }
+
+  if (!clonedPin.likes) {
+    clonedPin.likes = [];
+  }
+
+  return clonedPin;
 }

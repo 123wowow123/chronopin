@@ -44,8 +44,8 @@
            url: '/api/pins/search',
            method: 'GET',
            params: {
-             q: data.searchText,
-             hasFavorite: data.hasFavorite
+             q: data.q,
+             f: data.f
            },
            transformResponse: _appendTransform($http.defaults.transformResponse,
              function(data, headersGetter, status) {

@@ -32,14 +32,14 @@ export function register(socket) {
 
 
 function createListener(event, socket) {
-  return function (doc) {
+  return (doc) => {
     log.info(event, log.stringify(doc));
     socket.emit(event, doc);
   };
 }
 
 function removeListener(event, listener) {
-  return function () {
+  return () => {
     PinEvents.removeListener(event, listener);
   };
 }

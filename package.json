@@ -56,6 +56,7 @@
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-builtin-extend": "^1.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.6.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.7.0",
@@ -129,18 +130,14 @@
     "test": "grunt test",
     "update-webdriver": "node node_modules/protractor/bin/webdriver-manager update",
     "start": "node server",
-
+    "init:shebang": "npm run db:refresh && npm run search:refresh",
     "db:refresh": "npm run create:db && npm run create:data",
     "search:refresh": "npm run delete:search:pins && npm run create:search",
-    "init:shebang": "npm run db:refresh && npm run search:refresh",
-
     "create:db": "node scripts/db/index.js",
     "create:data": "node scripts/data/index.js --seed",
     "backup:data": "node scripts/data/index.js --save",
-
     "create:search": "node scripts/search/index.js --seed --map",
     "delete:search:pins": "node scripts/search/index.js --delete --index=pins",
-
     "remediate:data": "node scripts/remediate/index.js"
   },
   "private": true

@@ -59,11 +59,13 @@
         }
 
         $onInit() {
-            const searchText = this.$stateParams.q;
+            const query = this.$stateParams.q;
+            const filter = this.$stateParams.f;
 
             this.searching = true;
             this.pinWebService.search({
-                searchText: searchText
+                q: query,
+                f: filter
             })
                 .then(res => {
                     this._setSearchPinGroups(res.data.pins);
@@ -104,7 +106,7 @@
 
         // ToDo: Not working
         _setSearchPinGroups(pins) {
-            let dateTime = new Date();
+            //let dateTime = new Date();
 
             this.pinApp.clearSearchBags();
             this.pinApp.mergeSearchBagsWithPins(pins);

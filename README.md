@@ -369,6 +369,8 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 - Seperate search page to it's own component using resolve ++
   - https://ui-router.github.io/ng1/tutorial/hellosolarsystem
 - Put location in place of "THE CHAIN GANG"
+- Move socket listenr to pinApp, Search page doesn't recieve socket msg
+- Partial typeahead search
 
 ### Search
 

@@ -7,20 +7,10 @@
 //debugger;
 
 import {
-    User,
-    Users,
-    Pin,
-    Pins,
-    Medium,
-    DateTime,
-    DateTimes
+    SearchMapping
 } from '../../server/model';
 
-import * as search from '../../server/search';
-
 import fs from 'fs';
-import azureBlob from '../../server/azure-blob';
-import rp from 'request-promise';
 import _ from 'lodash';
 import * as log from '../../server/util/log';
 
@@ -47,7 +37,7 @@ module.exports.map = function () {
 
             let pinMap = JSON.parse(fs.readFileSync(pinMapFilePath, 'utf8'));
 
-            return search.createMapping(index, pinMap)
+            return SearchMapping.createMapping(index, pinMap)
                 .then((parsedBody) => {
                     // POST succeeded...
                     log.success("Create succeeded", JSON.stringify(parsedBody));
