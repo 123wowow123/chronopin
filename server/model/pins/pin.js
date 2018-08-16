@@ -29,7 +29,7 @@ let prop = [
   'likeCount',
   'hasFavorite',
   'hasLike',
-  'searchScore'
+  //'searchScore'
 ];
 
 function _difference(baseArray, otherArray, propName) {

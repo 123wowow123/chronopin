@@ -13,7 +13,7 @@ import {
 export default class Pins {
   // Properties
   // this.pins
-  // this.queryCount - probably not needed
+  // this.queryCount
 
   constructor(pins) {
     if (pins) {
@@ -61,18 +61,6 @@ export default class Pins {
     });
     return Promise.all(promises);
   }
-
-  // addSearchScores(searchScores) {
-  //   this.pins.forEach(pin => {
-  //     let foundSearchScore = searchScores.find((current, index) => {
-  //       return +current.id === pin.id;
-  //     })
-  //     if (foundSearchScore) {
-  //       pin.searchScore = foundSearchScore["@search.score"];
-  //     }
-  //   });
-  //   return this;
-  // }
 
   minMaxDateTimePin() {
     // empty array returns null
@@ -166,37 +154,6 @@ export default class Pins {
         return new Pins(res);
       });
   }
-
-
-  // Deprecated
-  // static querySearch(searchText) {
-  //   return search.pins(searchText)
-  //     .then(res => {
-  //       // console.log('querySearch - search match:', serpJson);
-  //       return _queryMSSQLPinsBySearchText(res.hits.hits)
-  //         .then(({ pins: serpPin }) => {
-  //           // console.log('querySearch', res);
-  //           let pins = new Pins(serpPin);
-  //           pins.addSearchScores(res.hits.hits);
-  //           return pins;
-  //         });
-  //     });
-  // }
-
-  // Deprecated
-  // static querySearchFilterByHasFavorite(searchText, userId) {
-  //   return search.pin(searchText)
-  //     .then(res => {
-  //       // console.log('querySearch - search match:', serpJson);
-  //       return _queryMSSQLPinsBySearchTextFilterByHasFavorite(res.hits.hits, userId)
-  //         .then(({ pins: serpPin }) => {
-  //           // console.log('querySearch', res);
-  //           let pins = new Pins(serpPin);
-  //           pins.addSearchScores(res.hits.hits);
-  //           return pins;
-  //         });
-  //     });
-  // }
 
 }
 
@@ -406,99 +363,3 @@ function _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSiz
       });
     });
 }
-
-
-// function _queryMSSQLPinsBySearchText(searchMatches) {
-//   //console.log('_queryMSSQLPinsBySearchText', searchIds)
-//   const tvp = new mssql.Table();
-//   tvp.columns.add('tId', mssql.Int)
-
-//   searchMatches.forEach(match => {
-//     // tvp.columns.add(id, sql.Int);
-//     tvp.rows.add(+match._id);
-//   })
-
-//   return cp.getConnection()
-//     .then(conn => {
-//       return new Promise(function (resolve, reject) {
-//         let StoredProcedureName;
-//         let request = new mssql.Request(conn)
-//           .input('TableIds', mssql.TVP, tvp)
-//           .output('queryCount', mssql.Int);
-
-//         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-//         StoredProcedureName = 'GetPinByIds';
-//         request.execute(`[dbo].[${StoredProcedureName}]`,
-//           function (err, recordsets, returnValue, affected) {
-//             let queryCount;
-//             //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
-//             if (err) {
-//               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-//             }
-//             // ToDo: doesn't always return value
-//             try {
-//               //console.log('returnValue', returnValue); // always return 0
-//               queryCount = request.parameters.queryCount.value;
-//               //console.log('queryCount', queryCount);
-//             } catch (e) {
-//               queryCount = 0;
-//             }
-//             //console.log('_queryMSSQLPins', recordsets[0]);
-//             resolve({
-//               pins: recordsets[0],
-//               queryCount: queryCount
-//             });
-//           });
-
-//       });
-//     });
-// }
-
-// function _queryMSSQLPinsBySearchTextFilterByHasFavorite(searchMatches, userId) {
-//   //console.log('_queryMSSQLPinsBySearchText', searchIds)
-//   const tvp = new mssql.Table();
-//   tvp.columns.add('tId', mssql.Int)
-
-//   searchMatches.forEach(match => {
-//     // tvp.columns.add(id, sql.Int);
-//     tvp.rows.add(+match._id);
-//   })
-
-//   return cp.getConnection()
-//     .then(conn => {
-//       return new Promise(function (resolve, reject) {
-//         let StoredProcedureName;
-//         let request = new mssql.Request(conn)
-//           .input('TableIds', mssql.TVP, tvp)
-//           .input('userId', mssql.Int, userId)
-//           .output('queryCount', mssql.Int);
-
-//         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-//         StoredProcedureName = 'GetPinByIdsFilterByHasFavorite';
-//         request.execute(`[dbo].[${StoredProcedureName}]`,
-//           function (err, recordsets, returnValue, affected) {
-//             let queryCount;
-//             //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
-//             if (err) {
-//               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-//             }
-//             // ToDo: doesn't always return value
-//             try {
-//               //console.log('returnValue', returnValue); // always return 0
-//               queryCount = request.parameters.queryCount.value;
-//               //console.log('queryCount', queryCount);
-//             } catch (e) {
-//               queryCount = 0;
-//             }
-//             //console.log('_queryMSSQLPins', recordsets[0]);
-//             resolve({
-//               pins: recordsets[0],
-//               queryCount: queryCount
-//             });
-//           });
-
-//       });
-//     });
-// }

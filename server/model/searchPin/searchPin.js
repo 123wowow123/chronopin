@@ -9,7 +9,9 @@ import {
 } from '..';
 
 
-// _user, userId, media, highlight
+// userId, media
+// favorites - will be converted to bool for client
+// likes - will be converted to bool for client
 let prop = [
     'id',
     'title',
@@ -26,9 +28,7 @@ let prop = [
     'utcCreatedDateTime',
     'utcUpdatedDateTime',
     'utcDeletedDateTime',
-
-    'favorites', // will be converted to bool for client
-    'likes', // will be converted to bool for client
+    'userId',
 
     /* SearchPin unique attributes */
     'searchScore',
@@ -39,6 +39,8 @@ let prop = [
 export default class SearchPin {
     constructor(pin) {
         this.media = [];
+        this.favorites = [];
+        this.likes = [];
 
         if (pin) {
             this.set(pin);
@@ -52,6 +54,14 @@ export default class SearchPin {
             }
             this.media = pin.media && pin.media.map(m => {
                 return new Medium(m, this);
+            }) || [];
+
+            this.favorites = pin.favorites && pin.favorites.map(f => {
+                return f;
+            }) || [];
+
+            this.likes = pin.likes && pin.likes.map(l => {
+                return l
             }) || [];
 
         } else {
@@ -93,20 +103,20 @@ export default class SearchPin {
         }).delete();
     }
 
-    static favoritePin(userId, searchText) {
-        return favoritePin(userId, searchText);
+    static favoritePin(userId, pin) {
+        return favoritePin(userId, pin);
     }
 
-    static unfavoritePin(userId, searchText) {
-        return unfavoritePin(userId, searchText);
+    static unfavoritePin(userId, pin) {
+        return unfavoritePin(userId, pin);
     }
 
-    static likePin(userId, searchText) {
-        return likePin(userId, searchText);
+    static likePin(userId, pin) {
+        return likePin(userId, pin);
     }
 
-    static unlikePin(userId, searchText) {
-        return unlikePin(userId, searchText);
+    static unlikePin(userId, pin) {
+        return unlikePin(userId, pin);
     }
 }
 

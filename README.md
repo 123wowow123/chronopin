@@ -363,20 +363,17 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 - Fix watch pins board
 - Main dosn't need to reload data every time on navigate
 - Add link header to all endpoints [watch]
-- ElastiSearch / auto complete search / keywords and people eg pinterest
+- ElastiSearch / auto complete search / Partial typeahead search / keywords and people eg pinterest
 - Drilldown view reorganize
 - SSL
 - RSS/Atom summary
 - Fix continuous search merging serps issue
-- Seperate search page to it's own component using resolve ++
-  - https://ui-router.github.io/ng1/tutorial/hellosolarsystem
 - Put location in place of "THE CHAIN GANG"
 - Move socket listenr to pinApp, Search page doesn't recieve socket msg
-- Partial typeahead search
 
 ### Search
 
-- Faceted Navigation (https://alistapart.com/article/design-patterns-faceted-navigation)(https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-post-filter.html)
+- Faceted Navigation that slides in one by one from the left in bubble blocks (https://alistapart.com/article/design-patterns-faceted-navigation)(https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-post-filter.html)
 
 ### Map
 - Plot pins on map relative to a specified date time and draw drill map time arrow indicating possible itinerary

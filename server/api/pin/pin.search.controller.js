@@ -5,7 +5,8 @@ import * as response from '../response';
 
 import {
   Pins,
-  SearchPins
+  SearchPins,
+  SearchPin
 } from '../../model';
 
 export function searchPin(req, res) {
@@ -20,16 +21,10 @@ export function searchPin(req, res) {
     return SearchPins.searchFavorite(userId, searchText)
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));
-    // return Pins.querySearchFilterByHasFavorite(searchText, userId)
-    //   .then(response.withResult(res, 200))
-    //   .catch(response.handleError(res));
   } else {
     return SearchPins.search(searchText)
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));
-    // return Pins.querySearch(searchText)
-    //   .then(response.withResult(res, 200))
-    //   .catch(response.handleError(res));
   }
 }
 
@@ -61,43 +56,25 @@ export function emit(event, pin, options) {
 }
 
 export function favoritePin(userId, pin) {
-  return search.favoritePin(userId, mapToSearchPin(pin));
+  return SearchPin.favoritePin(userId, new SearchPin(pin));
 }
 
 export function unfavoritePin(userId, pin) {
-  return search.unfavoritePin(userId, mapToSearchPin(pin));
+  return SearchPin.unfavoritePin(userId, new SearchPin(pin));
 }
 
 export function likePin(userId, pin) {
-  return search.likePin(userId, mapToSearchPin(pin));
+  return SearchPin.likePin(userId, new SearchPin(pin));
 }
 
 export function unlikePin(userId, pin) {
-  return search.unlikePin(userId, mapToSearchPin(pin));
+  return SearchPins.unlikePin(userId, new SearchPin(pin));
 }
 
 export function upsertPin(pin) {
-  return search.upsertPin(mapToSearchPin(pin));
+  return new SearchPin(pin).save();
 }
 
 export function deletePin(pin) {
-  return search.removePin(pin.id);
-}
-
-function mapToSearchPin(pin) {
-  let clonedPin = Object.assign({}, pin);
-  delete clonedPin.favoriteCount;
-  delete clonedPin.likeCount;
-  delete clonedPin.hasFavorite;
-  delete clonedPin.hasLike;
-
-  if (!clonedPin.favorites) {
-    clonedPin.favorites = [];
-  }
-
-  if (!clonedPin.likes) {
-    clonedPin.likes = [];
-  }
-
-  return clonedPin;
+  return SearchPins.delete(pin.id);
 }

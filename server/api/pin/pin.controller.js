@@ -6,9 +6,7 @@ import * as response from '../response';
 
 import {
   Pin,
-  Pins,
-  User,
-  Medium
+  Pins
 } from '../../model';
 
 import {

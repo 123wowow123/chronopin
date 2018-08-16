@@ -5,6 +5,7 @@ import {
     SearchPin
 } from '..';
 import { prefixSearchIndex } from './searchHelper';
+import Pins from '../pins/pins';
 
 export default class SearchPins {
     // Properties
@@ -82,17 +83,50 @@ export default class SearchPins {
         return Promise.all(promises);
     }
 
+    convertToPins(userId) {
+        let outPut = Object.assign({}, this);
+        let pins = outPut.pins.map(p => {
+            let out = Object.assign({}, p);
+
+            out.favoriteCount = out.favorites.length;
+            out.likeCount = out.likes.length;
+
+            if (userId != null) {
+                out.favorites.indexOf(userId) != -1
+                    ? (out.hasFavorite = true, out)
+                    : out;
+
+                out.likes.indexOf(userId) != -1
+                    ? (out.hasLike = true, out)
+                    : out;
+            }
+
+            delete out.favorites;
+            delete out.likes;
+            return out;
+        });
+
+        outPut.pins = pins;
+        return outPut;
+    }
+
     static search(searchText) {
         return search(searchText)
             .then(res => {
                 return new SearchPins().fromElasticSearch(res);
-            });
+            })
+            // .then(pins => {
+            //     return pins.convertToPins();
+            // });
     }
 
     static searchFavorite(userId, searchText) {
         return searchFavorite(userId, searchText)
             .then(res => {
                 return new SearchPins().fromElasticSearch(res);
+            })
+            .then(pins => {
+                return pins.convertToPins(userId);
             });
     }
 }
