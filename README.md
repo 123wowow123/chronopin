@@ -243,6 +243,8 @@ Run `node --inspect-brk scripts/db/index.js` for debugging Node :: create:db
 
 Run `node --inspect-brk scripts/data/index.js --seed` for debugging Node :: create:data
 
+Run `node --inspect-brk scripts/search/index.js --delete --index=pins` for debugging Node :: delete:search:pins
+
 ## Update Node
 
 Clear NPM's cache

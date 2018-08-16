@@ -7,7 +7,7 @@
 //debugger;
 
 import {
-    SearchPin
+    SearchPins
 } from '../../server/model';
 
 import fs from 'fs';
@@ -42,24 +42,18 @@ module.exports.seed = function () {
         .then(() => {
             // Create Pins
             let pinsJSON = JSON.parse(fs.readFileSync(pinFilePath, 'utf8'));
-            let pins = new SearchPin(pinsJSON);
-            let pinsPromise = pins.pins.map(p => {
-
-                return searchCtrl.upsertPin(p)
-                    .then((parsedBody) => {
-                        // POST succeeded...
-                        log.success("Create succeeded", JSON.stringify(parsedBody));
-                        return parsedBody;
-                    })
-                    .catch((err) => {
-                        // POST failed...
-                        log.error("Create Failed", JSON.stringify(err));
-                        return err;
-                    });
-
-            });
-
-            return Promise.all(pinsPromise);
+            let pins = new SearchPins(pinsJSON);
+            return pins.save()
+                .then((parsedBody) => {
+                    // POST succeeded...
+                    log.success("Create succeeded", JSON.stringify(parsedBody));
+                    return parsedBody;
+                })
+                .catch((err) => {
+                    // POST failed...
+                    log.error("Create Failed", JSON.stringify(err));
+                    return err;
+                });
         })
         .then(() => {
             log.info('Search Data Load Complete');

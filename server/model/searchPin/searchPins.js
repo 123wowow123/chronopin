@@ -1,5 +1,3 @@
-/*jshint eqnull:true */
-
 'use strict';
 
 import rp from 'request-promise';

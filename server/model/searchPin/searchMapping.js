@@ -1,4 +1,5 @@
 import { prefixSearchIndex } from './searchHelper';
+import rp from 'request-promise';
 
 export default class SearchMapping {
 

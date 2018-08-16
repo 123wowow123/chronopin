@@ -23,6 +23,9 @@ export {
   default as SearchMapping
 } from './searchPin/searchMapping';
 export {
+  default as SearchIndex
+} from './searchPin/searchIndex';
+export {
   default as Medium
 } from './medium/medium';
 export {
