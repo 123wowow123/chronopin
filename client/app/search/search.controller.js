@@ -60,12 +60,12 @@
 
         $onInit() {
             const query = this.$stateParams.q;
-            const filter = this.$stateParams.f;
+            const filter = this.Util.sanitizeSearchChoice(this.$stateParams.f);
 
             this.searching = true;
             this.pinWebService.search({
                 q: query,
-                f: filter
+                f: filter && filter.value
             })
                 .then(res => {
                     this._setSearchPinGroups(res.data.pins);

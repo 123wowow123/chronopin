@@ -5,8 +5,10 @@
   /**
    * The Util service is for thin, globally reusable, utility functions
    */
-  function UtilService($window) {
-    var Util = {
+  function UtilService($window, appConfig) {
+
+    const Util = {
+
       /**
        * Return a callback or noop function
        *
@@ -64,6 +66,18 @@
 
       getLinkHeader(omitLinkHeaderProp, linkHeader, key) {
         return linkHeader && _.omit(linkHeader[key], omitLinkHeaderProp);
+      },
+
+      sanitizeSearchChoice(searchChoice) {
+        const defaultChoice = appConfig.searchChoices[0];
+        if (!searchChoice) {
+          return defaultChoice;
+        }
+        const searchChoiceLower = searchChoice.toLowerCase();
+        let found = appConfig.searchChoices.find(t => {
+          return t.value === searchChoiceLower;
+        })
+        return found || defaultChoice;
       }
 
     };

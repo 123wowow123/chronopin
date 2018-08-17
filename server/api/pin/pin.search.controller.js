@@ -10,19 +10,19 @@ import {
 } from '../../model';
 
 export function searchPin(req, res) {
-  let user = req.user,
+  let user = req.user;
+  const userId = user && +user.id || 0,
     //pinId = +req.params.id,
     searchText = req.query.q,
     hasFavorite = req.query.f && req.query.f.toLowerCase() == 'watch';
 
   //console.log('searchPin:', searchText);
   if (hasFavorite) {
-    const userId = +user.id;
     return SearchPins.searchFavorite(userId, searchText)
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));
   } else {
-    return SearchPins.search(searchText)
+    return SearchPins.search(userId, searchText)
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));
   }

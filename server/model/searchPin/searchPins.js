@@ -110,14 +110,14 @@ export default class SearchPins {
         return outPut;
     }
 
-    static search(searchText) {
+    static search(userId, searchText) {
         return search(searchText)
             .then(res => {
                 return new SearchPins().fromElasticSearch(res);
             })
-            // .then(pins => {
-            //     return pins.convertToPins();
-            // });
+            .then(pins => {
+                return pins.convertToPins(userId);
+            });
     }
 
     static searchFavorite(userId, searchText) {

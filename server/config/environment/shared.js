@@ -4,6 +4,11 @@
 exports = module.exports = {
   // List of user roles
   userRoles: ['guest', 'user', 'admin'],
+  searchChoices: [
+    { name: 'All', value: undefined },
+    { name: 'Watched', value: 'watch' }
+    //'People'
+  ],
   thumbWidth: 400,
   thumbUrlPrefix: 'https://chronopin.blob.core.windows.net/thumb/',
   fbAppId: '560731380662615',

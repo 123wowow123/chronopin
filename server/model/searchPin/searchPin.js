@@ -9,7 +9,7 @@ import {
 } from '..';
 
 
-// userId, media
+// media
 // favorites - will be converted to bool for client
 // likes - will be converted to bool for client
 let prop = [
@@ -28,7 +28,11 @@ let prop = [
     'utcCreatedDateTime',
     'utcUpdatedDateTime',
     'utcDeletedDateTime',
-    'userId',
+
+    'userId', // not using defineProperty like Pin
+
+    // 'favoriteCount',
+    // 'likeCount',
 
     /* SearchPin unique attributes */
     'searchScore',
