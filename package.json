@@ -130,6 +130,7 @@
     "test": "grunt test",
     "update-webdriver": "node node_modules/protractor/bin/webdriver-manager update",
     "start": "node server",
+    
     "init:shebang": "npm run db:refresh && npm run search:refresh",
 
     "db:refresh": "npm run create:db && npm run create:data",

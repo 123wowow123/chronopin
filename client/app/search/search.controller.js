@@ -5,7 +5,7 @@
 
     class SearchController {
 
-        constructor($stateParams, $scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, $log, $timeout, socket) {
+        constructor($stateParams, $scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, $log, $timeout) {
 
             // constants
             const omitLinkHeaderProp = ['rel', 'url'];
@@ -23,7 +23,6 @@
             this.$scope = $scope;
 
             // data service
-            this.socket = socket;
             this.pinWebService = pinWebService;
             this.dateTimeWebService = dateTimeWebService;
             this.mainWebService = mainWebService;
@@ -104,10 +103,7 @@
 
         // Private helper functions
 
-        // ToDo: Not working
         _setSearchPinGroups(pins) {
-            //let dateTime = new Date();
-
             this.pinApp.clearSearchBags();
             this.pinApp.mergeSearchBagsWithPins(pins);
             this.bags = this.pinApp.getSearchBags();

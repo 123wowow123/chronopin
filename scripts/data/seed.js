@@ -63,7 +63,7 @@ module.exports.seedDB = function () {
       lastName: 'Flynn',
       email: 'flynni2008@gmail.com',
       password: 'admin',
-      facebookId: '17501731',
+      facebookId: '10100470408434696',
       id: 3 // ToDo: need to be dynamically linked
     },
     secondaryUserObj = {

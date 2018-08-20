@@ -69,7 +69,7 @@
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
-            <li ui-sref-active="active" role="menuitem" ng-show="nav.isAdmin()">
+            <li ui-sref-active="active" role="menuitem" ng-if="nav.isAdmin()">
               <a ui-sref="referral">
                 <span class="glyphicon glyphicon-piggy-bank"></span> Referral</a>
             </li>

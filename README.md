@@ -358,22 +358,34 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 ### High Priority
 
+- Back up users
+- Back up watch
 - Fix loading on correct timeline on mobile tag wrapping 
 - Fix image centering issue
-- Fix watch pins board
-- Main dosn't need to reload data every time on navigate
-- Add link header to all endpoints [watch]
+- Main dosn't need to reload data every time on navigate and socket should be on app model main/search --
+
 - ElastiSearch / auto complete search / Partial typeahead search / keywords and people eg pinterest
+- Search Paging
+
+- Fix watch pins board
 - Drilldown view reorganize
 - SSL
 - RSS/Atom summary
-- Fix continuous search merging serps issue
 - Put location in place of "THE CHAIN GANG"
-- Move socket listenr to pinApp, Search page doesn't recieve socket msg
+
+- Fix scrape timeout issue
+- Scrape should stream data with sockets
+- facebook login check for fbid and matching email in system to get user
+
 
 ### Search
 
 - Faceted Navigation that slides in one by one from the left in bubble blocks (https://alistapart.com/article/design-patterns-faceted-navigation)(https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-post-filter.html)
+
+- https://wordnet.princeton.edu/
+- https://arxiv.org/pdf/1402.3722.pdf
+- https://nlp.stanford.edu/software/sempre/
+- http://jupyter.org/
 
 ### Map
 - Plot pins on map relative to a specified date time and draw drill map time arrow indicating possible itinerary

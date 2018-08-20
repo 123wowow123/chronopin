@@ -1,5 +1,5 @@
 <article class="grid__panel">
-    <p ng-if="$ctrl.isAdmin()">{{$ctrl.pin.searchScore}}</p>
+    <!-- <p ng-if="$ctrl.Auth.isAdmin()">{{$ctrl.pin.searchScore}}</p> -->
     <div class="headline-above">
         <time class="" datetime="{{$ctrl.pin.utcCreatedDateTime}}">{{$ctrl.pin.utcCreatedDateTime | date : "MM/dd/yyyy 'at' h:mm a" | lowercase}}</time>
         <span class="rubric">{{'the chain gang' | uppercase}}</span>
@@ -48,12 +48,12 @@
                         <loader-pulse-bubble></loader-pulse-bubble>
                     </div>
                     <!-- <button type="button" class="grid__like--add" ng-click="$ctrl.addLike($ctrl.pin)" ng-switch-default><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
-          <button type="button" class="grid__like--remove" ng-click="$ctrl.removeLike($ctrl.pin)" ng-switch-when="true"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button> {{$ctrl.pin.likeCount}} -->
+              <button type="button" class="grid__like--remove" ng-click="$ctrl.removeLike($ctrl.pin)" ng-switch-when="true"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button> {{$ctrl.pin.likeCount}} -->
                 </div>
 
                 <!-- <div class="tip pull-right">
-          <button type="button" class="btn btn-link" ng-click="$ctrl.info($ctrl.pin)"><i class="fa fa-info" aria-hidden="true" title="{{$ctrl.pin.tip}}"></i></button>
-        </div> -->
+              <button type="button" class="btn btn-link" ng-click="$ctrl.info($ctrl.pin)"><i class="fa fa-info" aria-hidden="true" title="{{$ctrl.pin.tip}}"></i></button>
+            </div> -->
 
             </div>
         </div>

@@ -111,6 +111,7 @@
       }
 
       isWithinDateRange(utcStartDateTime) {
+        if (this.length === 0) return false;
         const start = this[0],
           end = this[this.length - 1];
         return start.utcStartDateTime <= utcStartDateTime
@@ -157,7 +158,7 @@
             //debugger;
             let foundBag = this.findBagByDateTimeKey(key);
             if (foundBag) {
-              foundBag.mergePins([pin]);
+              createCount += foundBag.mergePins([pin]);
             } else {
               createCount++;
               let bag = new Bag({
@@ -168,6 +169,24 @@
             }
           });
         return createCount;
+      }
+
+      updatePins(pins) {
+        if (!pins) {
+          return 0;
+        }
+        let updateCount = 0;
+        pins
+          .map(_createPin)
+          .forEach(pin => {
+            let key = _getKey(pin);
+            //debugger;
+            let foundBag = this.findBagByDateTimeKey(key);
+            if (foundBag) {
+              updateCount += foundBag.updatePins([pin]);
+            }
+          });
+        return updateCount;
       }
 
       getFirstInViewAsc() {

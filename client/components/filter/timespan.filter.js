@@ -12,6 +12,7 @@
       return function abbreviateTimeSpan(dateSpan, format) {
         format = format || 'd';
         let days = dateSpan.start.diff(dateSpan.end, 'days', true);
+        days = Math.abs(days);
 
         if (days === 0) {
           return 'Today';

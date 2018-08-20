@@ -8,6 +8,13 @@
 
     // Private Bag methods
 
+    function _initPin(pin) {
+      if (!(pin instanceof Pin)) {
+        pin = new Pin(pin);
+      }
+      return pin;
+    }
+
     function _sortDate(a, b) {
       return _getSortDateKey(a) - _getSortDateKey(b);
     }
@@ -121,12 +128,8 @@
         let createCount = 0;
         if (_.isArray(pins)) {
           pins.forEach(pin => {
-            if (!(pin instanceof Pin)) {
-              pin = new Pin(pin);
-            }
-            let foundPin = _.find(this.pins, {
-              id: pin.id
-            });
+            pin = _initPin(pin);
+            let foundPin = this.findPinById(pin.id);
             if (foundPin) {
               _.merge(foundPin, pin);
             } else {
@@ -136,6 +139,21 @@
           });
         }
         return createCount;
+      }
+
+      updatePins(pins) {
+        let updateCount = 0;
+        if (_.isArray(pins)) {
+          pins.forEach(pin => {
+            pin = _initPin(pin);
+            let foundPin = this.findPinById(pin.id);
+            if (foundPin) {
+              _.merge(foundPin, pin);
+              updateCount++;
+            }
+          });
+        }
+        return updateCount;
       }
 
       findPinById(id) {

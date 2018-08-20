@@ -2,7 +2,7 @@
 
 (function () {
 
-    function PinAppFactory(modelInjector) {
+    function PinAppFactory(modelInjector, socket, $rootScope) {
         let Bags;
 
         return class PinApp { // should extend emit
@@ -32,6 +32,9 @@
                     this._searchBags = new Bags();
                 }
 
+                // init
+                this.initSocket();
+
             }
 
             //// Setters 
@@ -40,6 +43,10 @@
 
             mergeBagsWithPins(pins) {
                 return this._bags.mergePins(pins);
+            }
+
+            updateBagsWithPins(pins) {
+                return this._bags.updatePins(pins);
             }
 
             mergeBagsWithDateTimes(dateTimes) {
@@ -54,7 +61,7 @@
                 return this._bags.isWithinDateRange(dateTime);
             }
 
-            getBagsFirstInViewAsc(){
+            getBagsFirstInViewAsc() {
                 return this._bags.getFirstInViewAsc();
             }
 
@@ -66,6 +73,10 @@
 
             mergeSearchBagsWithPins(pins) {
                 return this._searchBags.mergePins(pins);
+            }
+
+            updateSearchBagsWithPins(pins) {
+                return this._searchBags.updatePins(pins);
             }
 
             mergeSearchBagsWithDateTimes(dateTimes) {
@@ -80,9 +91,16 @@
                 return this._searchBags.isWithinDateRange(dateTime);
             }
 
-            getSearchBagsFirstInViewAsc(){
+            getSearchBagsFirstInViewAsc() {
                 return this._searchBags.getFirstInViewAsc();
             }
+
+            //// All Bags
+
+            updateAllBagsWithPins (items) {
+                this.updateBagsWithPins(items);
+                this.updateSearchBagsWithPins(items);
+            };
 
             //// Getters
 
@@ -92,6 +110,37 @@
 
             getSearchBags() {
                 return this._searchBags;
+            }
+
+            initSocket() {
+
+                socket.syncUpdates('pin', (event, item) => { ////////////////////////////
+                    // debugger
+                    const itemTime = new Date(item.utcStartDateTime);
+                    const inRange = this.isWithinBagDateRange(itemTime);
+                    const inSearchRange = this.isWithinSearchBagDateRange(itemTime);
+
+                    if (!inRange && !inSearchRange) {
+                        return;
+                    }
+
+                    switch (event) {
+                        case "pin:save":
+                            this.mergeBagsWithPins([item]);
+                            break;
+
+                        case "pin:update":
+                        case "pin:favorite":
+                        case "pin:unfavorite":
+                        case "pin:like":
+                        case "pin:unlike":
+                            this.updateAllBagsWithPins([item]);
+                            break;
+                    }
+
+                    $rootScope.$digest()
+
+                });
             }
 
         };

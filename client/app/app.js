@@ -19,12 +19,12 @@ angular.module('chronopinNodeApp', [
     'ig.linkHeaderParser',
     'angularGrid'
   ])
-  .config(function($urlRouterProvider, $locationProvider) {
+  .config(($urlRouterProvider, $locationProvider) => {
     $urlRouterProvider.otherwise('/');
 
     $locationProvider.html5Mode(true);
   })
-  .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
+  .config(['cfpLoadingBarProvider', (cfpLoadingBarProvider) => {
     cfpLoadingBarProvider.includeSpinner = false;
   }]);
   // .config(['uibDatepickerPopupConfig', function(uibDatepickerPopupConfig) {

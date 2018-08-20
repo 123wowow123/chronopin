@@ -5,7 +5,7 @@
 
   class MainController {
 
-    constructor($transitions, $scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, $log, $timeout, socket) {
+    constructor($transitions, $scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, $log, $timeout) {
 
       // constants
       const omitLinkHeaderProp = ['rel', 'url'];
@@ -23,7 +23,6 @@
       this.$scope = $scope;
 
       // data service
-      this.socket = socket;
       this.pinWebService = pinWebService;
       this.dateTimeWebService = dateTimeWebService;
       this.mainWebService = mainWebService;
@@ -102,7 +101,6 @@
     }
 
     $onDestroy() {
-      this.socket.unsyncUpdates('pin');
       this._unRegisterInfinitScroll();
     }
 
@@ -147,36 +145,6 @@
         }
         this._registerInfinitScroll();
       }
-
-      this.socket.syncUpdates('pin', (event, item) => { ////////////////////////////
-        // debugger
-        const inRange = this.pinApp.isWithinBagDateRange(new Date(item.utcStartDateTime));
-        if (!inRange) {
-          return;
-        }
-
-        switch (event) {
-          case "pin:save":
-            //debugger
-            this.pinApp.getBagsFirstInViewAsc();
-            this.pinApp.mergeBagsWithPins([item]);
-              //debugger
-              const relEl = this.ScrollUtil.getElementById(bag.toISODateTimeString());
-              this.adjustScrollRelativeToCurrentView(relEl); //////
-            break;
-
-          case "pin:update":
-          case "pin:favorite":
-          case "pin:unfavorite":
-          case "pin:like":
-          case "pin:unlike":
-            this.pinApp.mergeBagsWithPins([item]);
-            break;
-        }
-
-        this.$scope.$apply();
-
-      });
 
       this.bags = this.pinApp.getBags();
     }

@@ -10,8 +10,8 @@ import {
 } from '../../model';
 
 export function searchPin(req, res) {
-  let user = req.user;
-  const userId = user && +user.id || 0,
+  const user = req.user,
+    userId = user && +user.id || 0,
     //pinId = +req.params.id,
     searchText = req.query.q,
     hasFavorite = req.query.f && req.query.f.toLowerCase() == 'watch';
