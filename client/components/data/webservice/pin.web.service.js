@@ -60,6 +60,27 @@
          });
        };
 
+       this.autocomplete = function(data) {
+        return $http({
+          url: '/api/pins/autocomplete',
+          method: 'GET',
+          params: {
+            q: data.q,
+            f: data.f
+          },
+          transformResponse: _appendTransform($http.defaults.transformResponse,
+            function(data, headersGetter, status) {
+              let linkHeader,
+                header = headersGetter();
+              if (header.link) {
+                linkHeader = linkHeaderParser.parse(header.link);
+                data.linkHeader = linkHeader;
+              }
+              return data;
+            })
+        });
+      };
+
        this.like = function(id, data) {
          return $http.post('/api/pins/' + id + '/like', data);
        };

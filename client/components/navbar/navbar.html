@@ -16,7 +16,14 @@
           <!-- <span class="" ng-if="nav.search" title="Algolia Search"></span> -->
           <div class="search-box-container">
             <input type="text" name="search" id="search" class="search-control --show-icon" ng-class="{'--right-radius-none': nav.isLoggedIn()}" 
-              placeholder="Search" ng-model="nav.search" ng-change="nav.autoComplete(nav.search)">
+              placeholder="Search" ng-model="nav.search"  
+              ng-model-options="{ debounce: 100 }"
+              typeahead-show-hint="true"
+              typeahead-focus-first="false"
+              typeahead-on-select="nav.submitSearch(nav.search, nav.searchChoice.value)"
+              uib-typeahead="suggestion for suggestion in nav.autoComplete($viewValue, nav.searchChoice.value)"
+              >
+
             <span class="glyphicon glyphicon-search form-control__texbox_icon" aria-hidden="true"></span>
             <span class="form-control__clear-texbox" ng-if="nav.search" ng-click="nav.clearSearchToMain()"></span>
           </div>

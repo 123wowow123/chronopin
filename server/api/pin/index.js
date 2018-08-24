@@ -10,7 +10,8 @@ router.get('/', auth.tryGetUser(), controller.index);
 router.post('/', auth.isAuthenticated(), controller.create);
 
 // Search Pins
-router.get('/search', auth.tryGetUser(), controller.searchPin);
+router.get('/search', auth.tryGetUser(), controller.searchPins);
+router.get('/autocomplete', auth.tryGetUser(), controller.autocompletePins);
 // router.post('/search', auth.isAuthenticated(), controller.createPin);
 // router.put('/search/:id', auth.isAuthenticated(), controller.updatePin);
 // router.patch('/search/:id', auth.isAuthenticated(), controller.update);

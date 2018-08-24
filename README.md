@@ -362,7 +362,6 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 - Back up watch
 - Fix loading on correct timeline on mobile tag wrapping 
 - Fix image centering issue
-- Main dosn't need to reload data every time on navigate and socket should be on app model main/search --
 
 - ElastiSearch / auto complete search / Partial typeahead search / keywords and people eg pinterest
 - Search Paging
@@ -396,6 +395,10 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 ### Time Series
 - Read book for more ideas
+
+### Machine Learning
+- review algebra, then linear algebra, analysis, stat, calculus, graph theory in that order
+-- https://www.pinterest.com/mathematicsprof/
 
 ### Web Scraper
 

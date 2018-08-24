@@ -1,4 +1,28 @@
 {
+  "settings": {
+    "index": {
+      "analysis": {
+        "analyzer": {
+          "autocomplete_analyzer": {
+            "type": "custom",
+            "tokenizer": "standard",
+            "filter": [
+              "lowercase",
+              "autocomplete_edge_ngram"
+            ]
+          }
+        },
+        "filter": {
+          "autocomplete_edge_ngram": {
+            "type": "edge_ngram",
+            "min_gram": 1,
+            "max_gram": 10
+          }
+        }
+      }
+    }
+  },
+
   "mappings": {
     "_doc": {
       "properties": {
@@ -6,7 +30,11 @@
           "type": "keyword"
         },
         "title": {
-          "type": "text"
+          "type": "text",
+
+          "analyzer": "autocomplete_analyzer",
+          "search_analyzer": "standard"
+          
         },
         "description": {
           "type": "text"

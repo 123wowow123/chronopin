@@ -129,6 +129,26 @@ export default class SearchPins {
                 return pins.convertToPins(userId);
             });
     }
+
+    static autocomplete(userId, searchText) {
+        return autocomplete(searchText)
+            .then(res => {
+                return new SearchPins().fromElasticSearch(res);
+            })
+            .then(pins => {
+                return pins.convertToPins(userId);
+            });
+    }
+
+    static autocompleteFavorite(userId, searchText) {
+        return autocompleteFavorite(userId, searchText)
+            .then(res => {
+                return new SearchPins().fromElasticSearch(res);
+            })
+            .then(pins => {
+                return pins.convertToPins(userId);
+            });
+    }
 }
 
 /* Search */
@@ -154,7 +174,7 @@ function search(searchText) {
         json: true // Automatically stringifies the body to JSON
     };
 
-    return rp(options); //////////////////////////// new mapping needed
+    return rp(options);
 };
 
 function searchFavorite(userId, searchText) {
@@ -188,8 +208,66 @@ function searchFavorite(userId, searchText) {
         json: true // Automatically stringifies the body to JSON
     };
 
-    return rp(options); //////////////////////////// new mapping needed
+    return rp(options);
 };
 
 
+/* Autocomplete */
+function autocomplete(searchText) {
+    const index = "pins";
+    const command = "_search";
+    const uri = prefixSearchIndex(index) + "/" + command;
+    const searchFields = ["title", "description", "address"];
 
+    let options = {
+        method: 'POST',
+        uri: uri,
+        body: {
+            "_source": "title",
+            "query": {
+                "multi_match": {
+                    "query": searchText,
+                    "fields": searchFields
+                }
+            }
+        },
+        json: true // Automatically stringifies the body to JSON
+    };
+
+    return rp(options);
+};
+
+function autocompleteFavorite(userId, searchText) {
+    const index = "pins";
+    const command = "_search";
+    const uri = prefixSearchIndex(index) + "/" + command;
+    const searchFields = ["title", "description", "address"];
+
+    let options = {
+        method: 'POST',
+        uri: uri,
+        body: {
+            "_source": "title",
+            "query": {
+                "bool": {
+                    "must": [
+                        {
+                            "multi_match": {
+                                "query": searchText,
+                                "fields": searchFields
+                            }
+                        },
+                        {
+                            "match": {
+                                "favorites": userId
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        json: true // Automatically stringifies the body to JSON
+    };
+
+    return rp(options);
+};

@@ -5,7 +5,7 @@ class NavbarController {
 
   //start-non-standard
 
-  constructor(Auth, $rootScope, $state, Util, appConfig) {
+  constructor(Auth, $rootScope, $state, Util, appConfig, pinWebService) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
@@ -17,6 +17,7 @@ class NavbarController {
     this.$state = $state;
 
     this.Util = Util;
+    this.pinWebService = pinWebService;
 
     this.searchChoices = appConfig.searchChoices;
   }
@@ -31,11 +32,25 @@ class NavbarController {
     return this;
   }
 
-  autoComplete(searchText) {
-    // this.$rootScope.$broadcast('navbar.search', {
-    //   searchText: searchText
-    // })
-    // return this;
+  autoComplete(searchText, searchChoiceText) {
+    if (!searchText) {
+      return;
+    }
+    const query = searchText;
+    const filter = this.Util.sanitizeSearchChoice(searchChoiceText);
+
+    return this.suggestions = this.pinWebService
+    .autocomplete({
+      q: query,
+      f: filter && filter.value
+    })
+      .then(res => {
+        return _.get(res, 'data.pins', [])
+          .map(p => p.title);
+      })
+      .catch(err => {
+        throw err;
+      });
   }
 
   clearSearchToMain() {
@@ -63,3 +78,5 @@ class NavbarController {
 
 angular.module('chronopinNodeApp')
   .controller('NavbarController', NavbarController);
+
+  
