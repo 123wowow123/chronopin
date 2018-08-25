@@ -6,7 +6,7 @@ const args = require('args');
 const extend = require('extend');
 
 args
-  .option('file', 'File path to be used for opporation', './scripts/data/backup/seed.json');
+  .option('file', 'File path to be used for opporation', './scripts/data/backup/seedPins.json');
 
 const flags = args.parse(process.argv)
 

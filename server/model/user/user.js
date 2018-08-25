@@ -26,8 +26,8 @@ let prop = [
   'pictureUrl',
   'fbUpdatedTime',
   'fbverified',
-  'email',
   'about',
+  'email',
   'password',
   'role',
   'provider',
@@ -225,7 +225,7 @@ export default class User {
   }
 
   pick(properties) {
-    return _.pick(this, ...properties);
+    return _.pick(this, properties);
   }
 
   static getById(id) {

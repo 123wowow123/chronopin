@@ -63,7 +63,10 @@ function executeCreateSP() {
             role,
             provider,
             salt,
-            websiteUrl
+            websiteUrl,
+            
+            utcCreatedDateTime,
+            utcUpdatedDateTime
 
           FROM [dbo].[User]
           WHERE utcDeletedDateTime IS NULL;

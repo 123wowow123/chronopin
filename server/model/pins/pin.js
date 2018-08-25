@@ -25,6 +25,7 @@ let prop = [
   'utcCreatedDateTime',
   'utcUpdatedDateTime',
   'utcDeletedDateTime',
+  
   'favoriteCount',
   'likeCount',
   'hasFavorite',

@@ -56,15 +56,15 @@ export default class SearchPin {
             for (let i = 0; i < prop.length; i++) {
                 this[prop[i]] = pin[prop[i]];
             }
-            this.media = pin.media && pin.media.map(m => {
+            this.media = _.get(pin, 'media', []).map(m => {
                 return new Medium(m, this);
             }) || [];
 
-            this.favorites = pin.favorites && pin.favorites.map(f => {
+            this.favorites = _.get(pin, 'favorites', []).map(f => {
                 return f;
             }) || [];
 
-            this.likes = pin.likes && pin.likes.map(l => {
+            this.likes = _.get(pin, 'likes', []).map(l => {
                 return l
             }) || [];
 

@@ -360,21 +360,23 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 - Back up users
 - Back up watch
+
+- Search Paging
+- Faceted Search bubbles like Bing
 - Fix loading on correct timeline on mobile tag wrapping 
 - Fix image centering issue
 
-- ElastiSearch / auto complete search / Partial typeahead search / keywords and people eg pinterest
-- Search Paging
-
 - Fix watch pins board
-- Drilldown view reorganize
+- Drilldown view reorganize (Use reading mode to show full article)
+  - RSS/Atom summary
+
 - SSL
-- RSS/Atom summary
 - Put location in place of "THE CHAIN GANG"
 
 - Fix scrape timeout issue
 - Scrape should stream data with sockets
 - facebook login check for fbid and matching email in system to get user
+
 
 
 ### Search

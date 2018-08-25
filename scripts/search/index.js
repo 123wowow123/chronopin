@@ -16,7 +16,7 @@ args
     .option('delete', 'Delete "pins" search index', false)
     .option('index', 'Delete search index')
     .option('pinMapFilePath', 'Pin file path to be used for opporation', './scripts/backup/pin-map.json')
-    .option('pinfile', 'Pin file path to be used for opporation', './scripts/backup/seed.json')
+    .option('pinfile', 'Pin file path to be used for opporation', './scripts/backup/seedPins.json')
     .option('aphelionfile', 'Aphelion file path to be used for opporation', './scripts/backup/aphelion.json')
     .option('equinoxfile', 'Equinox file path to be used for opporation', './scripts/backup/equinox.json')
     .option('perihelionfile', 'Perihelion file path to be used for opporation', './scripts/backup/perihelion.json')
