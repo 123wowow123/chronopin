@@ -24,7 +24,8 @@ const cp = require('../../server/sqlConnectionPool');
 
 const saveOpt = {
   cp: cp,
-  pinfile: flags.pinfile
+  pinfile: flags.pinfile,
+  userfile: flags.userfile,
 };
 
 const seedOpt = {

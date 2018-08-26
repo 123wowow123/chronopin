@@ -102,7 +102,7 @@ export default class Medium {
   }
 
   static isValid(medium) {
-    return medium.hasOwnProperty("originalUrl");
+    return !!medium.originalUrl;
   }
 
 }

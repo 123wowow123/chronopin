@@ -14,7 +14,30 @@ const Users = Model.Users;
 
 let cp,
   Request,
-  pinFilePath;
+  pinFilePath,
+  userFilePath;
+
+const pickUserProps = [
+  'id',
+  'firstName',
+  'lastName',
+  'gender',
+  'locale',
+  'facebookId',
+  'pictureUrl',
+  'fbUpdatedTime',
+  'fbverified',
+  'about',
+  'email',
+  'password',
+  'role',
+  'provider',
+  'salt',
+  'websiteUrl',
+  'utcCreatedDateTime',
+  'utcUpdatedDateTime',
+  'utcDeletedDateTime'
+];
 
 // Setup
 module.exports.setup = function (saveOpt) {
@@ -48,7 +71,7 @@ module.exports.saveDB = function () {
 
       // users should be saved last to prevent orphaned pin
       console.log('Backup Users');
-      return Users.getAll()
+      return Users.getAll(pickUserProps)
         .then(({
           users
         }) => {

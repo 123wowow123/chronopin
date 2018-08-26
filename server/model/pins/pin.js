@@ -25,7 +25,7 @@ let prop = [
   'utcCreatedDateTime',
   'utcUpdatedDateTime',
   'utcDeletedDateTime',
-  
+
   'favoriteCount',
   'likeCount',
   'hasFavorite',
@@ -210,12 +210,17 @@ function _mapMediaFromQuery(pinRows) {
   pinRows.forEach(pinRow => {
     const mediaObj = {}
     let hasProp;
-    for (let prop in pinRow) {
-      if (pinRow.hasOwnProperty(prop) && prop.startsWith('Media.')) {
-        mediaObj[prop.substring(6)] = pinRow[prop];
+
+    Object.entries(pinRow)
+      //thumbName corrispond to the url when prefix is added
+      .filter(([key, value]) => {
+        return key.startsWith('Media.');
+      })
+      .forEach(([key, value]) => {
+        mediaObj[key.substring(6)] = value;
         hasProp = true;
-      }
-    }
+      });
+
     if (hasProp && Medium.isValid(mediaObj)) {
       media.push(mediaObj);
     }

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "firstName": "Ian",
+    "lastName": "Flynn",
+    "gender": "male",
+    "locale": "en_US",
+    "facebookId": "10100470408434696",
+    "pictureUrl": "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=10100470408434696&height=50&width=50&ext=1537822927&hash=AeRWwxtV22cSVYRr",
+    "fbUpdatedTime": "2017-05-14T15:27:04.000Z",
+    "fbverified": true,
+    "about": null,
+    "email": "flynni2008@gmail.com",
+    "password": "9ZAov7wPnzo9wc3TWxIwsy8wSwkKnkAQI0T4H8J3w4m8NxzXrqYy310QyAJKrcaDXAt1IdftlczIpPjrgCSemQ==",
+    "role": "admin",
+    "provider": "facebook",
+    "salt": "tCNYjAfjxMJYNHtGW0N51Q==",
+    "websiteUrl": null
+  },
+  {
+    "id": 2,
+    "firstName": "Serena",
+    "lastName": "Chen",
+    "gender": null,
+    "locale": null,
+    "facebookId": "984663319826",
+    "pictureUrl": null,
+    "fbUpdatedTime": null,
+    "fbverified": null,
+    "about": null,
+    "email": "chenxikristy@gmail.com",
+    "password": "uX6EN9PUNlA0l3F0Vd3asJqWHeUinO2RFsMIZ/IqXYhb7WwFqGyni3YAHveG3lp3PprnKsGVZ7CmFSWnDnYtqA==",
+    "role": "admin",
+    "provider": "facebook",
+    "salt": "TOF88fc2bLZC2Y9MRx5lDQ==",
+    "websiteUrl": null
+  }
+]
