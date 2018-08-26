@@ -212,7 +212,6 @@ function _mapMediaFromQuery(pinRows) {
     let hasProp;
 
     Object.entries(pinRow)
-      //thumbName corrispond to the url when prefix is added
       .filter(([key, value]) => {
         return key.startsWith('Media.');
       })

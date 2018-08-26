@@ -228,6 +228,11 @@ export default class User {
     return _.pick(this, properties);
   }
 
+  toJSON() {
+    // omits own and inherited properties with null values
+    return _.omitBy(this, _.isNull);
+  }
+
   static getById(id) {
     return _getUserByIdMSSQL(id);
   }
