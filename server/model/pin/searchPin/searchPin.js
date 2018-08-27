@@ -5,44 +5,32 @@ import rp from 'request-promise';
 import { prefixSearchIndex } from './searchHelper';
 
 import {
-    Medium
-} from '..';
+    BasePin,
+    BasePinProp
+} from '../..';
 
 
 // media
 // favorites - will be converted to bool for client
 // likes - will be converted to bool for client
-let prop = [
-    'id',
-    'title',
-    'description',
-    'sourceUrl',
-    'address',
-    'priceLowerBound',
-    'priceUpperBound',
-    'price',
-    'tip',
-    'utcStartDateTime',
-    'utcEndDateTime',
-    'allDay',
-    'utcCreatedDateTime',
-    'utcUpdatedDateTime',
-    'utcDeletedDateTime',
+const prop = BasePinProp.concat(
+    [
+        'userId', // not using defineProperty like Pin
 
-    'userId', // not using defineProperty like Pin
+        // 'favoriteCount',
+        // 'likeCount',
 
-    // 'favoriteCount',
-    // 'likeCount',
-
-    /* SearchPin unique attributes */
-    'searchScore',
-    'highlight'
-];
+        /* SearchPin unique attributes */
+        'searchScore',
+        'highlight'
+    ]
+);
 
 
-export default class SearchPin {
+export default class SearchPin extends BasePin {
     constructor(pin) {
-        this.media = [];
+        super(pin);
+
         this.favorites = [];
         this.likes = [];
 
@@ -52,21 +40,16 @@ export default class SearchPin {
     }
 
     set(pin) {
-        if (pin) {
-            for (let i = 0; i < prop.length; i++) {
-                this[prop[i]] = pin[prop[i]];
-            }
-            this.media = _.get(pin, 'media', []).map(m => {
-                return new Medium(m, this);
-            }) || [];
+        super.set(pin);
 
+        if (pin) {
             this.favorites = _.get(pin, 'favorites', []).map(f => {
                 return f;
-            }) || [];
+            });
 
             this.likes = _.get(pin, 'likes', []).map(l => {
                 return l
-            }) || [];
+            });
 
         } else {
             throw "SearchPin cannot set value of arg";
@@ -84,27 +67,6 @@ export default class SearchPin {
 
     delete() {
         return removePin(this.id);
-    }
-
-    addMedium(medium) {
-        if (medium instanceof Medium) {
-            medium.setPin(this);
-            this.media.push(medium);
-        } else {
-            throw "medium not instance of Medium";
-        }
-        return this;
-    }
-
-    toJSON() {
-        // omits own and inherited properties with null values
-        return _.omitBy(this, _.isNull);
-    }
-
-    static delete(id) {
-        return new SearchPin({
-            id: id
-        }).delete();
     }
 
     static favoritePin(userId, pin) {

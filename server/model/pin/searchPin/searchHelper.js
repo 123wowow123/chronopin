@@ -1,4 +1,4 @@
-import * as config from '../../config/environment';
+import * as config from '../../../config/environment';
 
 const indexPrefix = config.elastiSearch.indexPrefix; //will be empty string on prod
 const address = config.elastiSearch.serviceUrl;

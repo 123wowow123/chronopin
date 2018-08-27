@@ -1,48 +1,28 @@
 'use strict';
 
 import * as mssql from 'mssql';
-import * as cp from '../../sqlConnectionPool';
+import * as cp from '../../../sqlConnectionPool';
 import * as _ from 'lodash';
 import {
   Medium,
-  User
-} from '..';
+  User,
+  BasePin,
+  BasePinProp
+} from '../..';
 
 // _user, userId, media
-let prop = [
-  'id',
-  'title',
-  'description',
-  'sourceUrl',
-  'address',
-  'priceLowerBound',
-  'priceUpperBound',
-  'price',
-  'tip',
-  'utcStartDateTime',
-  'utcEndDateTime',
-  'allDay',
-  'utcCreatedDateTime',
-  'utcUpdatedDateTime',
-  'utcDeletedDateTime',
+const prop = BasePinProp.concat(
+  [
+    'favoriteCount',
+    'likeCount',
+    'hasFavorite',
+    'hasLike'
+  ]
+);
 
-  'favoriteCount',
-  'likeCount',
-  'hasFavorite',
-  'hasLike',
-  //'searchScore'
-];
-
-function _difference(baseArray, otherArray, propName) {
-  return baseArray.filter((obj) => {
-    return !otherArray.find((otherObj) => {
-      otherObj[propName] === obj[propName];
-    });
-  });
-}
-
-export default class Pin {
+export default class Pin extends BasePin {
   constructor(pin, user) {
+    super(pin);
     Object.defineProperty(this, '_user', {
       enumerable: false,
       configurable: false,
@@ -75,12 +55,7 @@ export default class Pin {
 
   set(pin, user) {
     if (pin) {
-      for (let i = 0; i < prop.length; i++) {
-        this[prop[i]] = pin[prop[i]];
-      }
-      this.media = pin.media && pin.media.map(m => {
-        return new Medium(m, this);
-      }) || [];
+      super.set(pin);
 
       if (user instanceof User) {
         this._user = user;
@@ -165,33 +140,12 @@ export default class Pin {
     return this;
   }
 
-  addMedium(medium) {
-    if (medium instanceof Medium) {
-      medium.setPin(this);
-      this.media.push(medium);
-    } else {
-      throw "medium not instance of Medium";
-    }
-    return this;
-  }
-
-  toJSON() {
-    // omits own and inherited properties with null values
-    return _.omitBy(this, _.isNull);
-  }
-
   static queryById(pinId, userId) {
     if (userId) {
       return _queryMSSQLPinWithFavoriteAndLikeById(pinId, userId);
     } else {
       return _queryMSSQLPinById(pinId);
     }
-  }
-
-  static delete(id) {
-    return new Pin({
-      id: id
-    }).delete();
   }
 
   static mapPinMedia(pinRows) {
@@ -202,6 +156,15 @@ export default class Pin {
     }
     return new Pin(pin);
   }
+}
+
+// Should move to Medium
+function _difference(baseArray, otherArray, propName) {
+  return baseArray.filter((obj) => {
+    return !otherArray.find((otherObj) => {
+      otherObj[propName] === obj[propName];
+    });
+  });
 }
 
 function _mapMediaFromQuery(pinRows) {

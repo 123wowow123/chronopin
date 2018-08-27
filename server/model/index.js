@@ -8,23 +8,36 @@ export {
   default as Users
 } from './user/users';
 export {
+  BasePinProp,
+  default as BasePin
+} from './pin/basePin/basePin';
+export {
+  default as BasePins
+} from './pin/basePin/basePins';
+export {
   default as Pin
-} from './pins/pin';
+} from './pin/pin/pin';
 export {
   default as Pins
-} from './pins/pins';
+} from './pin/pin/pins';
+export {
+  default as FullPin
+} from './pin/fullPin/fullPin';
+export {
+  FullPins
+} from './pin/FullPin/FullPins';
 export {
   default as SearchPin
-} from './searchPin/searchPin';
+} from './pin/searchPin/searchPin';
 export {
   default as SearchPins
-} from './searchPin/searchPins';
+} from './pin/searchPin/searchPins';
 export {
   default as SearchMapping
-} from './searchPin/searchMapping';
+} from './pin/searchPin/searchMapping';
 export {
   default as SearchIndex
-} from './searchPin/searchIndex';
+} from './pin/searchPin/searchIndex';
 export {
   default as Medium
 } from './medium/medium';

@@ -2,21 +2,19 @@
 
 import rp from 'request-promise';
 import {
-    SearchPin
-} from '..';
+    SearchPin,
+    BasePins
+} from '../..';
 import { prefixSearchIndex } from './searchHelper';
-import Pins from '../pins/pins';
 
-export default class SearchPins {
+export default class SearchPins extends BasePins {
     // Properties
     // this.pins
     // this.hits - Number of pins matching query without paging
     // this.took - ElasticSearch Processing Time
 
     constructor(pins) {
-        if (pins) {
-            this.set(pins);
-        }
+        super(pins);
     }
 
     set(pins) {
@@ -42,6 +40,10 @@ export default class SearchPins {
             throw "arg is not an array";
         }
         return this;
+    }
+
+    setQueryCount(queryCount) {
+        throw new Error("Not Implemented");
     }
 
     setHits(hits) {
@@ -74,13 +76,6 @@ export default class SearchPins {
             .set(pins)
             .setHits(result.hits.total)
             .setTook(result.took);
-    }
-
-    save() {
-        const promises = this.pins.map(p => {
-            return p.save();
-        });
-        return Promise.all(promises);
     }
 
     convertToPins(userId) {
