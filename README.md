@@ -359,6 +359,8 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 ### High Priority
 
 - Back up watch
+- Remove QueryCount model/script
+- Add Index on Pin Begin Time
 
 - Search Paging
 - Faceted Search bubbles like Bing
@@ -382,6 +384,7 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 - Faceted Navigation that slides in one by one from the left in bubble blocks (https://alistapart.com/article/design-patterns-faceted-navigation)(https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-post-filter.html)
 
+- https://en.wikipedia.org/wiki/Word2vec
 - https://wordnet.princeton.edu/
 - https://arxiv.org/pdf/1402.3722.pdf
 - https://nlp.stanford.edu/software/sempre/

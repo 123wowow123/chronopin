@@ -15,7 +15,7 @@ import {
 // likes - will be converted to bool for client
 const prop = BasePinProp.concat(
     [
-        'userId', // not using defineProperty like Pin
+        //'userId', // not using defineProperty like Pin
 
         // 'favoriteCount',
         // 'likeCount',
@@ -28,19 +28,13 @@ const prop = BasePinProp.concat(
 
 
 export default class SearchPin extends BasePin {
-    constructor(pin) {
-        super(pin);
 
-        this.favorites = [];
-        this.likes = [];
-
-        if (pin) {
-            this.set(pin);
-        }
+    constructor(pin, user) {
+        super(pin, user, prop);
     }
 
-    set(pin) {
-        super.set(pin);
+    set(pin, user) {
+        super.set(pin, user);
 
         if (pin) {
             this.favorites = _.get(pin, 'favorites', []).map(f => {

@@ -40,10 +40,10 @@ class NavbarController {
     const filter = this.Util.sanitizeSearchChoice(searchChoiceText);
 
     return this.suggestions = this.pinWebService
-    .autocomplete({
-      q: query,
-      f: filter && filter.value
-    })
+      .autocomplete({
+        q: query,
+        f: filter && filter.value
+      })
       .then(res => {
         return _.get(res, 'data.pins', [])
           .map(p => p.title);
@@ -74,9 +74,14 @@ class NavbarController {
     this.submitSearch(this.search, searchChoice.value);
   }
 
+  // onPressEnter($event, searchText, searchChoiceText) {
+  //   if ($event.key === "Enter") {
+  //     this.submitSearch(searchText, searchChoiceText);
+  //   }
+  // }
+
 }
 
 angular.module('chronopinNodeApp')
   .controller('NavbarController', NavbarController);
 
-  

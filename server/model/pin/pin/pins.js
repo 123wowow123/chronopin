@@ -7,7 +7,8 @@ import * as cp from '../../../sqlConnectionPool';
 import * as _ from 'lodash';
 
 import {
-  BasePins
+  BasePins,
+  Pin
 } from '../..';
 
 export default class Pins extends BasePins {
@@ -18,6 +19,37 @@ export default class Pins extends BasePins {
   constructor(pins) {
     super(pins);
   }
+
+  setPins(pins) {
+    if (Array.isArray(pins)) {
+        this.pins = Pins.mapPinsMedia(pins);
+    } else {
+        throw "arg is not an array";
+    }
+    return this;
+}
+
+  static mapPinsMedia(pinRows) {
+    let pins = [],
+        groupedPinRows;
+
+    groupedPinRows = _.groupBy(pinRows, row => {
+        return row.id;
+    });
+
+    _.forEach(groupedPinRows, pinRows => {
+        const pin = Pin.mapPinMedia(pinRows);
+        pins.push(pin);
+    });
+
+    // need to sort properly
+    pins = _.chain(pins)
+        .sortBy('id')
+        .sortBy('utcStartDateTime')
+        .value();
+
+    return pins;
+}
 
   static queryForwardByDate(fromDateTime, userId, lastPinId, pageSize) {
     return _queryMSSQLPins(true, fromDateTime, userId, lastPinId, 0, pageSize)

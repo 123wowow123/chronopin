@@ -4,8 +4,6 @@ require('babel-register');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-const extend = require('extend');
-
 const cp = require('../../server/sqlConnectionPool');
 const Request = cp.Request;
 
@@ -36,6 +34,7 @@ const createGetPinByIdsSP = createSP.createGetPinByIdsSP;
 const createGetPinByIdsFilterByHasFavoriteSP = createSP.createGetPinByIdsFilterByHasFavoriteSP;
 const createGetAllUsersSP = createSP.createGetAllUsersSP;
 const createGetDateTimesByStartEndDateSP = createSP.createGetDateTimesByStartEndDateSP;
+const createGetPinsWithFavoriteAndLikeArrayNextSP = createSP.createGetPinsWithFavoriteAndLikeArrayNextSP;
 
 // Returns Single Result
 const createGetPinWithFavoriteAndLikeSP = createSP.createGetPinWithFavoriteAndLikeSP;
@@ -116,6 +115,7 @@ function execute() {
           createGetPinByIdsFilterByHasFavoriteSP(),
           createGetAllUsersSP(),
           createGetDateTimesByStartEndDateSP(),
+          createGetPinsWithFavoriteAndLikeArrayNextSP(),
 
           // Returns Single Result
           createGetPinWithFavoriteAndLikeSP(),

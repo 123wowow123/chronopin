@@ -24,21 +24,27 @@ export const BasePinProp = [
     'utcDeletedDateTime'
 ];
 
+// _user, userId, media
 export default class BasePin {
-    constructor(pin) {
 
-        this.media = [];
-
+    _prop = BasePinProp;
+    
+    constructor(pin, user, prop) {
+        this._prop = prop;
         if (pin) {
-            this.set(pin);
+            this.set(pin, user);
         }
     }
 
-    set(pin) {
+    set(pin, user) {
         if (pin) {
-            BasePinProp.forEach(key => {
+            this._prop.forEach(key => {
                 this[key] = pin[key];
             });
+
+            if (user && user instanceof User) {
+                this._user = user;
+            }
 
             this.media = _.get(pin, 'media', [])
                 .map(m => {
@@ -75,7 +81,9 @@ export default class BasePin {
 
     toJSON() {
         // omits own and inherited properties with null values
-        return _.omitBy(this, _.isNull);
+        return _.omitBy(this, (value, key) => {
+            return key.startsWith('_') || _.isNull(value);
+        });
     }
 
     static queryById(pinId, userId) {
@@ -88,5 +96,30 @@ export default class BasePin {
             id: id
         }).delete();
     }
-    
+
 }
+
+const PinPrototype = BasePin.prototype;
+
+Object.defineProperty(PinPrototype, '_user', {
+    enumerable: false,
+    configurable: false,
+    writable: true
+});
+
+Object.defineProperty(PinPrototype, 'userId', {
+    get: () => {
+        return _.get(this, '_user.id', null);
+    },
+    set: (id) => {
+        if (this._user) {
+            this._user.id = id;
+        } else {
+            this._user = new User({
+                id: id
+            });
+        }
+    },
+    enumerable: true,
+    configurable: false
+});

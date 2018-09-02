@@ -4,10 +4,6 @@
 
 import * as _ from 'lodash';
 
-import {
-    BasePin
-} from '../..';
-
 export default class BasePins {
     // Properties
     // this.pins
@@ -35,14 +31,7 @@ export default class BasePins {
     }
 
     setPins(pins) {
-        if (Array.isArray(pins)) {
-            const PinsType = (this).constructor;
-            // ToDo: should check if pins are pinRows from sql
-            this.pins = PinsType.prototype.mapPinsMedia(pins);
-        } else {
-            throw "arg is not an array";
-        }
-        return this;
+        throw new Error("Not Implemented");
     }
 
     setQueryCount(queryCount) {
@@ -82,30 +71,6 @@ export default class BasePins {
             min: minPin,
             max: maxPin
         };
-    }
-
-    static mapPinsMedia(pinRows) {
-        let pins = [],
-            groupedPinRows;
-
-        const PinsType = (this).constructor;
-
-        groupedPinRows = _.groupBy(pinRows, row => {
-            return row.id;
-        });
-
-        _.forEach(groupedPinRows, pinRows => {
-            const pin = PinsType.prototype.mapPinMedia(pinRows);
-            pins.push(pin);
-        });
-
-        // need to sort properly
-        pins = _.chain(pins)
-            .sortBy('id')
-            .sortBy('utcStartDateTime')
-            .value();
-
-        return pins;
     }
 
     static queryForwardByDate(fromDateTime, userId, lastPinId, pageSize) {

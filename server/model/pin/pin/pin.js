@@ -10,7 +10,6 @@ import {
   BasePinProp
 } from '../..';
 
-// _user, userId, media
 const prop = BasePinProp.concat(
   [
     'favoriteCount',
@@ -21,45 +20,14 @@ const prop = BasePinProp.concat(
 );
 
 export default class Pin extends BasePin {
+
   constructor(pin, user) {
-    super(pin);
-    Object.defineProperty(this, '_user', {
-      enumerable: false,
-      configurable: false,
-      writable: true
-    });
-
-    Object.defineProperty(this, 'userId', {
-      get: function () {
-        return this._user && this._user.id;
-      },
-      set: function (id) {
-        if (this._user) {
-          this._user.id = id;
-        } else {
-          this._user = new User({
-            id: id
-          });
-        }
-      },
-      enumerable: true,
-      configurable: false
-    });
-
-    this.media = [];
-
-    if (pin) {
-      this.set(pin, user);
-    }
+    super(pin, user, prop);
   }
 
   set(pin, user) {
     if (pin) {
-      super.set(pin);
-
-      if (user instanceof User) {
-        this._user = user;
-      }
+      super.set(pin, user);
 
     } else {
       throw "Pin cannot set value of arg";

@@ -10,6 +10,7 @@ const createGetPinsWithFavoriteAndLikePrevFilterByHasFavoriteSP = require('./pin
 const createGetPinsWithFavoriteAndLikeInitialFilterByHasFavoriteSP = require('./pin/createGetPinsWithFavoriteAndLikeInitialFilterByHasFavoriteSP');
 const createGetPinByIdsSP = require('./pin/createGetPinByIdsSP');
 const createGetPinByIdsFilterByHasFavoriteSP = require('./pin/createGetPinByIdsFilterByHasFavoriteSP');
+const createGetPinsWithFavoriteAndLikeArrayNextSP = require('./pin/GetPinsWithFavoriteAndLikeArrayNext');
 /* user */
 const createGetAllUsersSP = require('./user/createGetAllUsersSP');
 /* dateTime */
@@ -90,6 +91,7 @@ module.exports.setup = function(connectionPool) {
   createGetPinByIdsFilterByHasFavoriteSP.setup(cp);
   createGetAllUsersSP.setup(cp);
   createGetDateTimesByStartEndDateSP.setup(cp);
+  createGetPinsWithFavoriteAndLikeArrayNextSP.setup(cp);
 
   // Returns Single Result
   createGetPinWithFavoriteAndLikeSP.setup(cp);

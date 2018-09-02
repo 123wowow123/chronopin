@@ -58,6 +58,8 @@ function executeCreateTable() {
             utcUpdatedDateTime DATETIME2(7),
             utcDeletedDateTime DATETIME2(7)
         );
+
+        CREATE INDEX IX_UtcStartDateTime ON [dbo].[${TableName}] (utcStartDateTime); 
         `;
 
   return cp.getConnection()

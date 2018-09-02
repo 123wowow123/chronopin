@@ -10,7 +10,8 @@
 
       <a href="/" class="navbar-brand" ng-click="nav.clearSearch()">Chronopin</a>
 
-      <form class="navbar-form navbar-left" ng-submit="nav.submitSearch(nav.search, nav.searchChoice.value)" autocomplete="off">
+      <form class="navbar-form navbar-left" autocomplete="off"> 
+        <!-- ng-submit="nav.submitSearch(nav.search, nav.searchChoice.value)"  -->
 
         <div class="search-group">
           <!-- <span class="" ng-if="nav.search" title="Algolia Search"></span> -->
@@ -23,6 +24,8 @@
               typeahead-on-select="nav.submitSearch(nav.search, nav.searchChoice.value)"
               uib-typeahead="suggestion for suggestion in nav.autoComplete($viewValue, nav.searchChoice.value)"
               >
+
+              <!-- ng-keyup="nav.onPressEnter($event, nav.search, nav.searchChoice.value)" -->
 
             <span class="glyphicon glyphicon-search form-control__texbox_icon" aria-hidden="true"></span>
             <span class="form-control__clear-texbox" ng-if="nav.search" ng-click="nav.clearSearchToMain()"></span>
