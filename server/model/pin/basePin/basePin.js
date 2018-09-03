@@ -44,6 +44,9 @@ export default class BasePin {
 
             if (user && user instanceof User) {
                 this._user = user;
+            } 
+            else if (pin._user && pin._user instanceof User) {
+                this._user = pin._user;
             }
 
             this.media = _.get(pin, 'media', [])
@@ -112,7 +115,7 @@ Object.defineProperty(PinPrototype, 'userId', {
         return _.get(this, '_user.id', null);
     },
     set: (id) => {
-        if (this._user) {
+        if (this._user && this._user instanceof User) {
             this._user.id = id;
         } else {
             this._user = new User({

@@ -66,7 +66,7 @@ export default class Pin extends BasePin {
   }
 
   update() {
-    let beforePin = Pin.queryById(this.id, this.userId)
+    Pin.queryById(this.id, this.userId)
       .then(({
         beforePin
       }) => {

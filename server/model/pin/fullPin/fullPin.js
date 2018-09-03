@@ -14,11 +14,7 @@ import {
 // media
 // favorites - will be converted to bool for client
 // likes - will be converted to bool for client
-const prop = BasePinProp.concat(
-    [
-        // 'userId', // not using defineProperty like Pin
-    ]
-);
+const prop = BasePinProp;
 
 
 export default class FullPin extends BasePin {
@@ -71,22 +67,21 @@ export default class FullPin extends BasePin {
 
     static mapPinRowsToPin(pinRows) {
         let pin = new FullPin(pinRows[0]);
-        pin.media = pin.mapPinMedia(pinRows);
-        pin.favorites = pin.mapPinMedia(pinRows);
-        pin.likes = pin.mapPinLikes(pinRows);
+        pin.media = _mapPinRowsToMedia(pinRows);
+        pin.favorites = _mapPinRowsToFavorites(pinRows);
+        pin.likes = _mapPinRowsToLikes(pinRows);
         return new FullPin(pin);
     }
+}
 
-    static mapPinMedia(pinRows) {
-        return mapHelper.mapSubObjectFromQuery('Media', 'id', pinRows);
-    }
+function _mapPinRowsToMedia(pinRows) {
+    return mapHelper.mapSubObjectFromQuery('Media', 'id', pinRows);
+}
 
-    static mapPinFavorites(pinRows) {
-        return mapHelper.mapSubObjectFromQuery('Favorites', 'userId', pinRows);
-    }
+function _mapPinRowsToFavorites(pinRows) {
+    return mapHelper.mapSubObjectFromQuery('Favorites', 'userId', pinRows);
+}
 
-    static mapPinLikes(pinRows) {
-        return mapHelper.mapSubObjectFromQuery('Likes', 'userId', pinRows);
-    }
-
+function _mapPinRowsToLikes(pinRows) {
+    return mapHelper.mapSubObjectFromQuery('Likes', 'userId', pinRows);
 }

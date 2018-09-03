@@ -23,7 +23,7 @@ export default class FullPins extends BasePins {
 
     setPins(pins) {
         if (Array.isArray(pins)) {
-            this.pins = FullPins.mapPinsMedia(pins);
+            this.pins = FullPins.mapPinRowsToPins(pins);
         } else {
             throw "arg is not an array";
         }
@@ -44,13 +44,12 @@ export default class FullPins extends BasePins {
             });
 
         // need to sort properly
-        // move to constructor //////////////
         pins = _.chain(pins)
             .sortBy('id')
             .sortBy('utcStartDateTime')
             .value();
 
-        return new Pins(pins);
+        return new FullPins(pins);
     }
 
     static queryForwardByDate(fromDateTime, userId, lastPinId, pageSize) {
@@ -59,7 +58,6 @@ export default class FullPins extends BasePins {
                 return new FullPins(res);
             });
     }
-
 }
 
 function _queryMSSQLPinsWithSubArrays(fromDateTime, lastPinId, offset, pageSize) {
