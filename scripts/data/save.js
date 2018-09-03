@@ -8,7 +8,7 @@ const fs = require('fs');
 const azureBlob = require('../../server/azure-blob');
 
 const Model = require('../../server/model');
-const Pins = Model.Pins;
+const FullPins = Model.FullPins;
 const Users = Model.Users;
 
 
@@ -59,7 +59,7 @@ module.exports.saveDB = function () {
     .then(() => {
 
       console.log('Backup Pins');
-      return Pins.queryForwardByDate(fromDateTime, userId, lastPinId, pageSize)
+      return FullPins.queryForwardByDate(fromDateTime, userId, lastPinId, pageSize)
         .then(({
           pins
         }) => {

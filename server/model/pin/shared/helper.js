@@ -6,14 +6,14 @@ export function mapSubObjectFromQuery(prefix, groupKey, pinRows) {
     startsWithKey = `${prefix}.`;
 
   let groupedSubRows = _.groupBy(pinRows, row => {
-    return row[groupByKey]; // 'Media.id'
+    return row[groupByKey]; // eg: 'Media.id'
   });
-
+  debugger
   Object.entries(groupedSubRows)
     .forEach(([key, subRows]) => {
       let subObj = Object.entries(subRows[0])
         .filter(([key, value]) => {
-          return key.startsWith(startsWithKey); // 'Media.'
+          return key.startsWith(startsWithKey); // eg: 'Media.'
         })
         .reduce((a, [key, value]) => {
           a[key.substring(6)] = value;

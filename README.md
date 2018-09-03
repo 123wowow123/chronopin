@@ -232,6 +232,8 @@ Run `node --inspect-brk server/index.js` for debugging Node
 
 Run `node --inspect-brk scripts/db/index.js` for debugging Node :: create:db
 
+Run `node --inspect-brk scripts/data/index.js --save` for debugging Node :: backup:data
+
 Run `node --inspect-brk scripts/data/index.js --seed` for debugging Node :: create:data
 
 Run `node --inspect-brk scripts/search/index.js --delete --index=pins` for debugging Node :: delete:search:pins
@@ -297,20 +299,10 @@ https://social.msdn.microsoft.com/Forums/en-US/871cc7c7-2917-4c96-b98d-f1e488937
 
 Running `npm test` will run the unit tests with karma.
 
-## Status check
-
-- [Azure Node Versions](https://chronopin.scm.azurewebsites.net/api/diagnostics/runtime)
-- [Kudu Console](https://chronopin.scm.azurewebsites.net/DebugConsole)
-- [Azure Node Inspector](https://docs.microsoft.com/en-us/azure/app-service-web/app-service-web-nodejs-get-started)
-
-## Debugging Reference
-
-[https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27](mailto:https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27)
-
 ## External API
 
 [Public holidays](http://kayaposoft.com/enrico/) eg: <http://kayaposoft.com/enrico/json/v1.0/?action=getPublicHolidaysForYear&year=2020&country=usa>
-[Rise & set times for the Sun and the Moon, twilight start & end, day length, moon phases, and more.](https://www.timeanddate.com/services/api/) eg: <hhttps://www.timeanddate.com/services/api/>
+[Rise & set times for the Sun and the Moon, twilight start & end, day length, moon phases, and more.](https://www.timeanddate.com/services/api/) eg: <https://www.timeanddate.com/services/api/>
 
 ## ICO Images
 [Calendar Clock Icon](http://www.iconarchive.com/show/small-n-flat-icons-by-paomedia/calendar-clock-icon.html)

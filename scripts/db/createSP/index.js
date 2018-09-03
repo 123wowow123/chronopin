@@ -10,7 +10,7 @@ const createGetPinsWithFavoriteAndLikePrevFilterByHasFavoriteSP = require('./pin
 const createGetPinsWithFavoriteAndLikeInitialFilterByHasFavoriteSP = require('./pin/createGetPinsWithFavoriteAndLikeInitialFilterByHasFavoriteSP');
 const createGetPinByIdsSP = require('./pin/createGetPinByIdsSP');
 const createGetPinByIdsFilterByHasFavoriteSP = require('./pin/createGetPinByIdsFilterByHasFavoriteSP');
-const createGetPinsWithFavoriteAndLikeArrayNextSP = require('./pin/GetPinsWithFavoriteAndLikeArrayNext');
+const createGetPinsWithFavoriteAndLikeArrayNextSP = require('./pin/createGetPinsWithFavoriteAndLikeArrayNextSP');
 /* user */
 const createGetAllUsersSP = require('./user/createGetAllUsersSP');
 /* dateTime */
@@ -142,6 +142,7 @@ module.exports.createGetPinByIdsSP = createGetPinByIdsSP.createSP;
 module.exports.createGetPinByIdsFilterByHasFavoriteSP = createGetPinByIdsFilterByHasFavoriteSP.createSP;
 module.exports.createGetAllUsersSP = createGetAllUsersSP.createSP;
 module.exports.createGetDateTimesByStartEndDateSP = createGetDateTimesByStartEndDateSP.createSP;
+module.exports.createGetPinsWithFavoriteAndLikeArrayNextSP  = createGetPinsWithFavoriteAndLikeArrayNextSP.createSP;
 
 // Returns Single Result
 module.exports.createGetPinWithFavoriteAndLikeSP = createGetPinWithFavoriteAndLikeSP.createSP;

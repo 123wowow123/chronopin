@@ -4,20 +4,14 @@
 
 'use strict';
 
-//debugger;
-
 import {
   User,
-  Users,
-  Pin,
   Pins,
-  Medium,
   DateTime,
   DateTimes
 } from '../../server/model';
 
 import fs from 'fs';
-import azureBlob from '../../server/azure-blob';
 import rp from 'request-promise';
 import _ from 'lodash';
 

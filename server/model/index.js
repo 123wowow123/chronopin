@@ -24,8 +24,8 @@ export {
   default as FullPin
 } from './pin/fullPin/fullPin';
 export {
-  FullPins
-} from './pin/FullPin/FullPins';
+  default as FullPins
+} from './pin/fullPin/fullPins';
 export {
   default as SearchPin
 } from './pin/searchPin/searchPin';

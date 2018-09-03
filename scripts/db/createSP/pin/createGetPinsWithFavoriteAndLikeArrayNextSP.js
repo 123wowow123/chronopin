@@ -41,7 +41,7 @@ function executeDropSP() {
 
 function executeCreateSP() {
   let sql = `
-CREATE PROCEDURE [dbo].[${GetPinsWithFavoriteAndLikeArrayNext}]
+CREATE PROCEDURE [dbo].[${StoredProcedureName}]
   @offset       INT,
   @pageSize     INT,
   @fromDateTime DATETIME2(7),
