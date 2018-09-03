@@ -16,52 +16,6 @@ let prop = [
 
 export default class Like {
   constructor(like, user, pin) {
-    Object.defineProperty(this, '_user', {
-      enumerable: false,
-      configurable: false,
-      writable: true
-    });
-
-    Object.defineProperty(this, 'userId', {
-      get: function() {
-        return this._user && this._user.id;
-      },
-      set: function(id) {
-        if (this._user) {
-          this._user.id = id;
-        } else {
-          this._user = new User({
-            id: id
-          });
-        }
-      },
-      enumerable: true,
-      configurable: false
-    });
-
-    Object.defineProperty(this, '_pin', {
-      enumerable: false,
-      configurable: false,
-      writable: true
-    });
-
-    Object.defineProperty(this, 'pinId', {
-      get: function() {
-        return this._pin && this._pin.id;
-      },
-      set: function(id) {
-        if (this._pin) {
-          this._pin.id = id;
-        } else {
-          this._pin = new Pin({
-            id: id
-          });
-        }
-      },
-      enumerable: true,
-      configurable: false
-    });
-
     if (like) {
       this.set(like, user, pin);
     }
@@ -137,6 +91,54 @@ export default class Like {
     }).delete();
   }
 }
+
+const LikePrototype = Like.prototype;
+
+Object.defineProperty(LikePrototype, '_user', {
+  enumerable: false,
+  configurable: false,
+  writable: true
+});
+
+Object.defineProperty(LikePrototype, 'userId', {
+  get: function() {
+    return this._user && this._user.id;
+  },
+  set: function(id) {
+    if (this._user) {
+      this._user.id = id;
+    } else {
+      this._user = new User({
+        id: id
+      });
+    }
+  },
+  enumerable: true,
+  configurable: false
+});
+
+Object.defineProperty(LikePrototype, '_pin', {
+  enumerable: false,
+  configurable: false,
+  writable: true
+});
+
+Object.defineProperty(LikePrototype, 'pinId', {
+  get: function() {
+    return this._pin && this._pin.id;
+  },
+  set: function(id) {
+    if (this._pin) {
+      this._pin.id = id;
+    } else {
+      this._pin = new Pin({
+        id: id
+      });
+    }
+  },
+  enumerable: true,
+  configurable: false
+});
 
 function _queryMSSQLLikeById(id) {
   return cp.getConnection()

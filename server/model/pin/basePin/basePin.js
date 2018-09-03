@@ -28,7 +28,7 @@ export const BasePinProp = [
 export default class BasePin {
 
     _prop = BasePinProp;
-    
+
     constructor(pin, user, prop) {
         this._prop = prop;
         if (pin) {

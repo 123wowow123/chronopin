@@ -16,51 +16,6 @@ let prop = [
 
 export default class Favorite {
   constructor(favorite, user, pin) {
-    Object.defineProperty(this, '_user', {
-      enumerable: false,
-      configurable: false,
-      writable: true
-    });
-
-    Object.defineProperty(this, 'userId', {
-      get: function() {
-        return this._user && this._user.id;
-      },
-      set: function(id) {
-        if (this._user) {
-          this._user.id = id;
-        } else {
-          this._user = new User({
-            id: id
-          });
-        }
-      },
-      enumerable: true,
-      configurable: false
-    });
-
-    Object.defineProperty(this, '_pin', {
-      enumerable: false,
-      configurable: false,
-      writable: true
-    });
-
-    Object.defineProperty(this, 'pinId', {
-      get: function() {
-        return this._pin && this._pin.id;
-      },
-      set: function(id) {
-        if (this._pin) {
-          this._pin.id = id;
-        } else {
-          this._pin = new Pin({
-            id: id
-          });
-        }
-      },
-      enumerable: true,
-      configurable: false
-    });
 
     if (favorite) {
       this.set(favorite, user, pin);
@@ -137,6 +92,54 @@ export default class Favorite {
     }).delete();
   }
 }
+
+const FavoritePrototype = Favorite.prototype;
+
+Object.defineProperty(FavoritePrototype, '_user', {
+  enumerable: false,
+  configurable: false,
+  writable: true
+});
+
+Object.defineProperty(FavoritePrototype, 'userId', {
+  get: function() {
+    return this._user && this._user.id;
+  },
+  set: function(id) {
+    if (this._user) {
+      this._user.id = id;
+    } else {
+      this._user = new User({
+        id: id
+      });
+    }
+  },
+  enumerable: true,
+  configurable: false
+});
+
+Object.defineProperty(FavoritePrototype, '_pin', {
+  enumerable: false,
+  configurable: false,
+  writable: true
+});
+
+Object.defineProperty(FavoritePrototype, 'pinId', {
+  get: function() {
+    return this._pin && this._pin.id;
+  },
+  set: function(id) {
+    if (this._pin) {
+      this._pin.id = id;
+    } else {
+      this._pin = new Pin({
+        id: id
+      });
+    }
+  },
+  enumerable: true,
+  configurable: false
+});
 
 function _queryMSSQLFavoriteById(id) {
   return cp.getConnection()

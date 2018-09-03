@@ -78,8 +78,11 @@ BEGIN
       [Media].[type]                                                              AS [Media.type],
 
       [Favorites].[userId]                                                        AS [Favorites.userId],
+      [Favorites].[utcCreatedDateTime]                                                        AS [Favorites.userId],
 
-      [Likes].[userId]                                                            AS [Likes.userId]
+      [Likes].[userId]                                                            AS [Likes.userId],
+      [Likes].[utcCreatedDateTime]                                                            AS [Likes.userId],
+      [Likes].[like]                                                            AS [Likes.userId]
 
     FROM [dbo].[Pin]
       LEFT JOIN [dbo].[PinMedium] AS [Media.PinMedium]

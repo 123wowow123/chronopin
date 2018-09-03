@@ -54,7 +54,7 @@ export default class FullPins extends BasePins {
     }
 
     static queryForwardByDate(fromDateTime, userId, lastPinId, pageSize) {
-        return _queryMSSQLPinsWithSubArrays(true, fromDateTime, userId, lastPinId, 0, pageSize)
+        return _queryMSSQLPinsWithSubArrays(fromDateTime, userId, lastPinId, 0, pageSize)
             .then(res => {
                 return new FullPins(res);
             });
@@ -62,7 +62,7 @@ export default class FullPins extends BasePins {
 
 }
 
-function _queryMSSQLPinsWithSubArrays(queryForward, fromDateTime, lastPinId, offset, pageSize) {
+function _queryMSSQLPinsWithSubArrays(fromDateTime, lastPinId, offset, pageSize) {
     return cp.getConnection()
         .then(conn => {
             return new Promise((resolve, reject) => {

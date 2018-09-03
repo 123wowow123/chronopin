@@ -3,9 +3,10 @@
 import * as mssql from 'mssql';
 import * as cp from '../../../sqlConnectionPool';
 import * as _ from 'lodash';
+import * as sql from '../shared/sql'
+import * as mapHelper from '../shared/helper'
+
 import {
-  Medium,
-  User,
   BasePin,
   BasePinProp
 } from '../..';
@@ -36,7 +37,7 @@ export default class Pin extends BasePin {
   }
 
   save() {
-    return _createMSSQL(this, this.userId)
+    return sql.createPinMSSQL(this, this.userId)
       .then(({
         pin
       }) => {
@@ -117,11 +118,8 @@ export default class Pin extends BasePin {
   }
 
   static mapPinMedia(pinRows) {
-    let media,
-      pin = new Pin(pinRows[0]);
-    if ((media = _mapMediaFromQuery(pinRows))) {
-      pin.media = media;
-    }
+    let pin = new Pin(pinRows[0]);
+    pin.media = mapHelper.mapSubObjectFromQuery('Media', 'id', pinRows);
     return new Pin(pin);
   }
 }
@@ -133,32 +131,6 @@ function _difference(baseArray, otherArray, propName) {
       otherObj[propName] === obj[propName];
     });
   });
-}
-
-function _mapMediaFromQuery(pinRows) {
-  const media = [];
-
-  pinRows.forEach(pinRow => {
-    const mediaObj = {}
-    let hasProp;
-
-    Object.entries(pinRow)
-      .filter(([key, value]) => {
-        return key.startsWith('Media.');
-      })
-      .forEach(([key, value]) => {
-        mediaObj[key.substring(6)] = value;
-        hasProp = true;
-      });
-
-    if (hasProp && Medium.isValid(mediaObj)) {
-      media.push(mediaObj);
-    }
-  });
-
-  return media.length
-    ? media
-    : undefined;
 }
 
 function _queryMSSQLPinWithFavoriteAndLikeById(pinId, userId) {
@@ -218,56 +190,6 @@ function _queryMSSQLPinById(pinId) {
       // ... connect error checks
       console.log("queryMSSQLPinById catch err", err);
       throw err;
-    });
-}
-
-function _createMSSQL(pin, userId) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'CreatePin';
-        let request = new mssql.Request(conn)
-          .input('title', mssql.NVarChar(1024), pin.title)
-          .input('description', mssql.NVarChar(4000), pin.description)
-          .input('sourceUrl', mssql.NVarChar(4000), pin.sourceUrl)
-          .input('address', mssql.NVarChar(4000), pin.address)
-          .input('priceLowerBound', mssql.Decimal(18, 2), pin.priceLowerBound)
-          .input('priceUpperBound', mssql.Decimal(18, 2), pin.priceUpperBound)
-          .input('price', mssql.Decimal(18, 2), pin.price)
-          .input('tip', mssql.NVarChar(4000), pin.tip)
-          .input('utcStartDateTime', mssql.DateTime2(0), pin.utcStartDateTime)
-          .input('utcEndDateTime', mssql.DateTime2(0), pin.utcEndDateTime)
-          .input('allDay', mssql.Bit, pin.allDay)
-          .input('userId', mssql.Int, userId)
-          .input('utcCreatedDateTime', mssql.DateTime2(7), pin.utcCreatedDateTime)
-          .input('utcUpdatedDateTime', mssql.DateTime2(7), pin.utcUpdatedDateTime)
-          .input('utcDeletedDateTime', mssql.DateTime2(7), pin.utcDeletedDateTime)
-          .output('id', mssql.Int, pin.id);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
-            let id;
-            if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // ToDo: doesn't always return value
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              pin.id = request.parameters.id.value;
-
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              throw e;
-            }
-
-            resolve({
-              pin: pin
-            });
-
-          });
-      });
     });
 }
 
