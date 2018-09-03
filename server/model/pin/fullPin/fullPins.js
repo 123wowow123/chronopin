@@ -50,7 +50,7 @@ export default class FullPins extends BasePins {
             .sortBy('utcStartDateTime')
             .value();
 
-        return new FullPins(pins);
+        return pins;
     }
 
     static queryForwardByDate(fromDateTime, userId, lastPinId, pageSize) {

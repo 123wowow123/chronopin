@@ -20,7 +20,7 @@ export default class BasePins {
             this
                 .setPins(pins)
                 .setQueryCount(undefined);
-        } else if (pins.pins && Number.isInteger(pins.queryCount)) {
+        } else if (pins.pins) {
             this
                 .setPins(pins.pins)
                 .setQueryCount(pins.queryCount);

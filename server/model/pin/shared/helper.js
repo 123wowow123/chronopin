@@ -5,10 +5,12 @@ export function mapSubObjectFromQuery(prefix, groupKey, pinRows) {
     groupByKey = `${prefix}.${groupKey}`,
     startsWithKey = `${prefix}.`;
 
-  let groupedSubRows = _.groupBy(pinRows, row => {
-    return row[groupByKey]; // eg: 'Media.id'
-  });
-  debugger
+  let groupedSubRows = _.groupBy(
+    pinRows.filter(t => t[groupByKey]),
+    row => {
+      return row[groupByKey]; // eg: 'Media.id'
+    });
+  //debugger
   Object.entries(groupedSubRows)
     .forEach(([key, subRows]) => {
       let subObj = Object.entries(subRows[0])

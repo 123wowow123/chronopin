@@ -44,7 +44,7 @@ export default class BasePin {
 
             if (user && user instanceof User) {
                 this._user = user;
-            } 
+            }
             else if (pin._user && pin._user instanceof User) {
                 this._user = pin._user;
             }
@@ -85,7 +85,9 @@ export default class BasePin {
     toJSON() {
         // omits own and inherited properties with null values
         return _.omitBy(this, (value, key) => {
-            return key.startsWith('_') || _.isNull(value);
+            return key.startsWith('_')
+                || _.isNull(value)
+                || (Array.isArray(value) && !value.length);
         });
     }
 
