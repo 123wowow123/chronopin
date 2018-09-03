@@ -7,7 +7,8 @@ import * as cp from '../../../sqlConnectionPool';
 import * as _ from 'lodash';
 
 import {
-    BasePins
+    BasePins,
+    FullPin
 } from '../..';
 
 //save //queryForwardByDate
@@ -40,7 +41,7 @@ export default class FullPins extends BasePins {
 
         pins = Object.entries(groupedPinRows)
             .map(([key, value]) => {
-                return Pin.mapPinRowsToPin(value);
+                return FullPin.mapPinRowsToPin(value);
             });
 
         // need to sort properly

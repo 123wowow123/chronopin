@@ -60,7 +60,7 @@ export default class FullPin extends BasePin {
                         pin: this.pin
                     }).save();
                 });
-                return Promise.all([saveLikePromises, saveFavoritePromises]);
+                return Promise.all([...saveLikePromises, ...saveFavoritePromises]);
             });
         return savePinPromise;
     }
