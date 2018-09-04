@@ -6,7 +6,7 @@
 
 import {
   User,
-  Pins,
+  FullPins,
   DateTime,
   DateTimes
 } from '../../server/model';
@@ -169,14 +169,14 @@ module.exports.seedDB = function () {
       user
     }) => {
       // Create Pins
-      let pinsJSON = JSON.parse(fs.readFileSync(pinFilePath, 'utf8'));
-      let pins = new Pins(pinsJSON);
+      let pinsJSONObjs = JSON.parse(fs.readFileSync(pinFilePath, 'utf8'));
+      let pins = new FullPins(pinsJSONObjs);
       pins.pins.forEach(p => {
         p.setUser(user);
       });
       return pins.save()
         .catch(error => {
-          log.error('Pins Save Error');
+          log.error('Pins Save Error', JSON.stringify(error));
         });
     })
     .then(() => {

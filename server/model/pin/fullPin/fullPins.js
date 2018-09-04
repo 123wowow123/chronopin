@@ -31,6 +31,13 @@ export default class FullPins extends BasePins {
         return this;
     }
 
+    setPinsFromArray(pins) {
+        this.pins = pins.map(p => {
+            return new FullPin(p);
+        });
+        return this;
+    }
+
     static mapPinRowsToPins(pinRows) {
         let pins,
             groupedPinRows;

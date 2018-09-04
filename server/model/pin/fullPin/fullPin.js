@@ -7,7 +7,9 @@ import * as mapHelper from '../shared/helper'
 import {
     BasePin,
     BasePinProp,
-    Like
+    Like,
+    Favorite,
+    Medium
 } from '../..';
 
 
@@ -50,17 +52,21 @@ export default class FullPin extends BasePin {
                         utcCreatedDateTime: l.utcCreatedDateTime,
                         like: l.like,
                         user: l._user,
-                        pin: this.pin
+                        pin: this
                     }).save();
                 });
                 const saveFavoritePromises = this.favorites.map(f => {
                     return new Favorite({
                         utcCreatedDateTime: f.utcCreatedDateTime,
                         user: f._user,
-                        pin: this.pin
+                        pin: this
                     }).save();
                 });
-                return Promise.all([...saveLikePromises, ...saveFavoritePromises]);
+                const saveMediumPromises = this.media.map(m => {
+                    debugger
+                    return new Medium(m, this).save();
+                });
+                return Promise.all([...saveLikePromises, ...saveFavoritePromises, ...saveMediumPromises]);
             });
         return savePinPromise;
     }

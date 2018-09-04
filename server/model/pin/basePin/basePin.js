@@ -2,7 +2,8 @@
 
 import * as _ from 'lodash';
 import {
-    Medium
+    Medium,
+    User
 } from '../..';
 
 // media
@@ -27,10 +28,8 @@ export const BasePinProp = [
 // _user, userId, media
 export default class BasePin {
 
-    _prop = BasePinProp;
-
     constructor(pin, user, prop) {
-        this._prop = prop;
+        this._prop = prop || BasePinProp;
         if (pin) {
             this.set(pin, user);
         }
@@ -72,6 +71,16 @@ export default class BasePin {
         throw new Error("Not Implemented");
     }
 
+    setUser(user) {
+        if (user instanceof User) {
+            this._user = user;
+        }
+        else {
+            throw "user not instance of User";
+        }
+        return this;
+    }
+
     addMedium(medium) {
         if (medium instanceof Medium) {
             medium.setPin(this);
@@ -79,6 +88,13 @@ export default class BasePin {
         } else {
             throw "medium not instance of Medium";
         }
+        return this;
+    }
+
+    addMedia(media) {
+        media.forEach(m => {
+            this.addMedium(m);
+        })
         return this;
     }
 
@@ -113,10 +129,10 @@ Object.defineProperty(PinPrototype, '_user', {
 });
 
 Object.defineProperty(PinPrototype, 'userId', {
-    get: () => {
+    get: function () {
         return _.get(this, '_user.id', null);
     },
-    set: (id) => {
+    set: function (id) {
         if (this._user && this._user instanceof User) {
             this._user.id = id;
         } else {

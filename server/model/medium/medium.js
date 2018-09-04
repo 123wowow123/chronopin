@@ -5,7 +5,7 @@ import * as cp from '../../sqlConnectionPool';
 import * as image from '../../image'
 const uuidv4 = require('uuid/v4');
 import {
-  Pin
+  BasePin
 } from '..';
 
 // _pin
@@ -24,11 +24,6 @@ let prop = [
 
 export default class Medium {
   constructor(medium, pin) {
-    Object.defineProperty(this, '_pin', {
-      enumerable: false,
-      configurable: false,
-      writable: true
-    });
 
     if (medium) {
       this.set(medium, pin);
@@ -41,8 +36,11 @@ export default class Medium {
         this[prop[i]] = medium[prop[i]];
       }
 
-      if (pin instanceof Pin) {
+      if (pin instanceof BasePin) {
         this._pin = pin;
+      }
+      else if (pin._pin && pin._pin instanceof BasePin) {
+          this._pin = pin._pin;
       }
 
     } else {
@@ -106,6 +104,14 @@ export default class Medium {
   }
 
 }
+
+const MediumPrototype = Medium.prototype;
+
+Object.defineProperty(MediumPrototype, '_pin', {
+  enumerable: false,
+  configurable: false,
+  writable: true
+});
 
 function _createMSSQL(medium, pinId) {
   return cp.getConnection()

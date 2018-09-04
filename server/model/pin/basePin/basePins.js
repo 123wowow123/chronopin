@@ -18,7 +18,7 @@ export default class BasePins {
     set(pins) {
         if (Array.isArray(pins)) {
             this
-                .setPins(pins)
+                .setPinsFromArray(pins)
                 .setQueryCount(undefined);
         } else if (pins.pins) {
             this
@@ -31,6 +31,10 @@ export default class BasePins {
     }
 
     setPins(pins) {
+        throw new Error("Not Implemented");
+    }
+
+    setPinsFromArray(pins) {
         throw new Error("Not Implemented");
     }
 
@@ -71,6 +75,12 @@ export default class BasePins {
             min: minPin,
             max: maxPin
         };
+    }
+
+    static setPinsFromArray(pins) {
+        const constructor = this.constructor,
+            instance = new constructor();
+        return instance.setPinsFromArray(pins);
     }
 
     static queryForwardByDate(fromDateTime, userId, lastPinId, pageSize) {

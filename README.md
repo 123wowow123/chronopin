@@ -341,9 +341,7 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 ### High Priority
 
-- Back up watch
-- Remove QueryCount model/script
-- Add Index on Pin Begin Time
+- Back up watch - upsert - likes/favorites
 
 - Search Paging
 - Faceted Search bubbles like Bing

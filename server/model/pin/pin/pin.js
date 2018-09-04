@@ -42,17 +42,13 @@ export default class Pin extends BasePin {
         pin
       }) => {
         //console.log('_createMSSQL', pin);
-        let mediaPromise;
-        if (this.media && this.media.length) {
-          mediaPromise = this.media.map(medium => {
-            return medium.createAndSaveToCDN();
-          });
-        } else {
-          mediaPromise = ['resolved'];
-        }
+        let mediaPromise = this.media.map(medium => {
+          return medium.createAndSaveToCDN();
+        });
+
         return Promise.all(mediaPromise)
-          .then(() => {
-            this.set(pin);
+          .then((media) => {
+            this.addMedia(media);
             return {
               pin: this
             };
@@ -101,12 +97,6 @@ export default class Pin extends BasePin {
 
   delete() {
     return _deleteMSSQL(this);
-  }
-
-  setUser(user) {
-    this._user = user;
-    this.userId = user.id;
-    return this;
   }
 
   static queryById(pinId, userId) {
