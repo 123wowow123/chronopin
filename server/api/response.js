@@ -1,37 +1,40 @@
 'use strict';
 
 import li from 'li';
+import * as log from '../util/log';
 
 export function withResult(res, statusCode) {
   statusCode = statusCode || 200;
-  return function(entity) {
+  return function (entity) {
     if (entity) {
-      res.status(statusCode).json(entity);
+      try {
+        res.status(statusCode).json(entity);
+      }
+      catch (err) {
+        log.error('withResult', log.stringify(err));
+        handleError(res)(err.message);
+      }
     }
-    return null;
   };
 }
 
 export function withNoResult(res) {
-  return function() {
+  return function () {
     res.status(204).end();
-    return null;
   }
 }
 
 export function handleError(res, statusCode) {
   statusCode = statusCode || 500;
-  return function(err) {
+  return function (err) {
     res.status(statusCode).send(err);
-    return null;
   };
 }
 
 export function handleEntityNotFound(res) {
-  return function(entity) {
+  return function (entity) {
     if (!entity) {
       res.status(404).end();
-      return null;
     }
     return entity;
   };
@@ -41,7 +44,7 @@ export function handleEntityNotFound(res) {
 // http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api#pagination
 // https://github.com/richardkall/api_pagination_headers
 export function setPaginationHeader(res, urlPrfix, queryCount) {
-  return function(pins) {
+  return function (pins) {
     if (pins.pins.length) {
       let pinRange = pins.minMaxDateTimePin();
       let linksObject = {

@@ -3,7 +3,8 @@
 import * as mssql from 'mssql';
 import * as cp from '../../sqlConnectionPool';
 import * as image from '../../image'
-const uuidv4 = require('uuid/v4');
+import * as _ from 'lodash';
+import uuidv4 from 'uuid/v4';
 import {
   BasePin
 } from '..';
@@ -87,6 +88,14 @@ export default class Medium {
     this._pin = pin;
     return this;
   }
+
+  toJSON() {
+    // omits own and inherited properties with null values
+    return _.omitBy(this, (value, key) => {
+        return key.startsWith('_')
+            || _.isNull(value);
+    });
+}
 
   static getByOriginalUrl(originalUrl) {
     return _getMediumByOriginalUrlMSSQL(originalUrl);

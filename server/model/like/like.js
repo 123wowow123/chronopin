@@ -57,9 +57,9 @@ export default class Like {
       });
   }
 
-  update() {
-    //return _updateMSSQL(this, this.userId);
-  }
+  // update() {
+  //   return _updateMSSQL(this, this.userId);
+  // }
 
   delete() {
     return _deleteMSSQL(this);

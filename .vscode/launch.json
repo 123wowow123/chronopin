@@ -32,12 +32,12 @@
         //     "name": "Grunt",
         //     //"cmd": "--inspect-brk ${workspaceFolder}/server/index.js"
         // },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Mailer Program",
-            "program": "${workspaceFolder}/server/mailer/index.js"
-        },
+        // {
+        //     "type": "node",
+        //     "request": "launch",
+        //     "name": "Mailer Program",
+        //     "program": "${workspaceFolder}/server/mailer/index.js"
+        // },
         // {
         //     "name": "Launch server.js via nodemon",
         //     "type": "node",
@@ -54,7 +54,7 @@
             "name": "Server/Client",
             "configurations": [
                 "Server",
-                "Client"
+                //"Client"
             ]
         }
     ]
