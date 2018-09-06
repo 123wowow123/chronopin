@@ -359,6 +359,8 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 - Scrape should stream data with sockets
 - facebook login check for fbid and matching email in system to get user
 
+- Stacking/grouping of related pins
+
 
 
 ### Search

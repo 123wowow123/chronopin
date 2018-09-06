@@ -46,7 +46,9 @@ function executeCreateTable() {
             userId INT NOT NULL,
             pinId INT NOT NULL,
             utcCreatedDateTime DATETIME2(7) DEFAULT SYSUTCDATETIME() NOT NULL,
-            utcDeletedDateTime DATETIME2(7)
+            utcUpdatedDateTime DATETIME2(7),
+            utcDeletedDateTime DATETIME2(7),
+            CONSTRAINT UC_like_userId_pinId UNIQUE (userId, pinId)
             --CONSTRAINT FK_Like_userId FOREIGN KEY (userId) REFERENCES [dbo].[User] (id),
             --CONSTRAINT FK_Like_pinId FOREIGN KEY (pinId) REFERENCES [dbo].[Pin] (id)
         );

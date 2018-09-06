@@ -68,7 +68,8 @@ function executeCreateSP() {
               @like,
               @userId,
               @pinId,
-              @utcCreatedDateTime);
+              @utcCreatedDateTime
+            );
 
             SET @id = SCOPE_IDENTITY();
 
