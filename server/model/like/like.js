@@ -11,7 +11,9 @@ import {
 let prop = [
   'id',
   'like',
-  'utcCreatedDateTime'
+  'utcCreatedDateTime',
+  'utcUpdatedDateTime',
+  'utcDeletedDateTime'
 ];
 
 export default class Like {
@@ -27,12 +29,18 @@ export default class Like {
         this[prop[i]] = like[prop[i]];
       }
 
-      if (user instanceof User) {
+      if (user && user instanceof User) {
         this._user = user;
+      }
+      else if (like._user && like._user instanceof User) {
+        this._user = like._user;
       }
 
       if (pin instanceof Pin) {
         this._pin = pin;
+      }
+      else if (like._pin && like._pin instanceof Pin) {
+        this._pin = like._pin;
       }
 
     } else {
@@ -42,24 +50,20 @@ export default class Like {
   }
 
   save() {
-    return _createMSSQL(this, this.userId, this.pinId)
-      .then(({
-        like
-      }) => {
-        this.set(like);
-        return {
-          like: this
-        };
-      })
+    return _upsert(this, this.userId, this.pinId)
       .catch(err => {
         console.log(`Like '${this.id}' save err:`, err);
         throw err;
       });
   }
 
-  // update() {
-  //   return _updateMSSQL(this, this.userId);
-  // }
+  update() {
+    return _upsert(this, this.userId, this.pinId)
+      .catch(err => {
+        console.log(`Like '${this.id}' update err:`, err);
+        throw err;
+      });
+  }
 
   delete() {
     return _deleteMSSQL(this);
@@ -101,10 +105,10 @@ Object.defineProperty(LikePrototype, '_user', {
 });
 
 Object.defineProperty(LikePrototype, 'userId', {
-  get: function() {
+  get: function () {
     return this._user && this._user.id;
   },
-  set: function(id) {
+  set: function (id) {
     if (this._user) {
       this._user.id = id;
     } else {
@@ -124,10 +128,10 @@ Object.defineProperty(LikePrototype, '_pin', {
 });
 
 Object.defineProperty(LikePrototype, 'pinId', {
-  get: function() {
+  get: function () {
     return this._pin && this._pin.id;
   },
-  set: function(id) {
+  set: function (id) {
     if (this._pin) {
       this._pin.id = id;
     } else {
@@ -139,6 +143,18 @@ Object.defineProperty(LikePrototype, 'pinId', {
   enumerable: true,
   configurable: false
 });
+
+function _upsert(like, userId, pinId) {
+  return _upsertMSSQL(like, userId, pinId)
+    .then(({
+      like
+    }) => {
+      like.set(like);
+      return {
+        like: like
+      };
+    })
+}
 
 function _queryMSSQLLikeById(id) {
   return cp.getConnection()
@@ -170,16 +186,18 @@ function _queryMSSQLLikeById(id) {
     });
 }
 
-function _createMSSQL(like, userId, pinId) {
+function _upsertMSSQL(like, userId, pinId) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
-        const StoredProcedureName = 'CreateLike';
+      return new Promise(function (resolve, reject) {
+        const StoredProcedureName = 'CreateMergeLike';
         let request = new mssql.Request(conn)
           .input('like', mssql.Bit, like.like)
-          .input('userId', mssql.Int, like.userId)
-          .input('pinId', mssql.Int, like.pinId)
+          .input('userId', mssql.Int, userId)
+          .input('pinId', mssql.Int, pinId)
           .input('utcCreatedDateTime', mssql.DateTime2(7), like.utcCreatedDateTime)
+          .input('utcUpdatedDateTime', mssql.DateTime2(7), like.utcUpdatedDateTime)
+          .input('utcDeletedDateTime', mssql.DateTime2(7), like.utcDeletedDateTime)
           .output('id', mssql.Int);
 
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
@@ -210,36 +228,10 @@ function _createMSSQL(like, userId, pinId) {
     });
 }
 
-function _updateMSSQL(like) { // ToDo: not ready
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function(resolve, reject) {
-        const StoredProcedureName = 'UpdateLike';
-        let request = new mssql.Request(conn)
-          .input('id', mssql.Int, like.id)
-          .input('like', mssql.Boolean, like.like);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
-            if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // Todo: updated date time need to be updated on model
-            resolve({
-              like: like
-            });
-          });
-      });
-    });
-}
-
 function _deleteMSSQL(like) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'DeleteLike';
         let request = new mssql.Request(conn)
           .input('id', mssql.Int, like.id)
@@ -274,7 +266,7 @@ function _deleteMSSQL(like) {
 function _deleteByPinIdMSSQL(like) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'DeleteLikeByPinId';
         let request = new mssql.Request(conn)
           .input('pinId', mssql.Int, like.pinId)

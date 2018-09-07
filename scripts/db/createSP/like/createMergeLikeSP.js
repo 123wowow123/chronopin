@@ -41,69 +41,71 @@ function executeDropSP() {
 
 function executeCreateSP() {
   let sql = `
-        CREATE PROCEDURE [dbo].[${StoredProcedureName}]
-            @like               BIT,
-            @userId             INT,
-            @pinId              INT,
-            @utcCreatedDateTime DATETIME2(7),
-            @utcUpdatedDateTime DATETIME2(7),
-            @utcDeletedDateTime DATETIME2(7),
+  CREATE PROCEDURE [dbo].[${StoredProcedureName}]
+  @like               BIT,
+  @userId             INT,
+  @pinId              INT,
+  @utcCreatedDateTime DATETIME2(7),
+  @utcUpdatedDateTime DATETIME2(7),
+  @utcDeletedDateTime DATETIME2(7),
 
-            @id                 INT OUTPUT
-        AS
-          BEGIN
+  @id                 INT OUTPUT
+AS
+BEGIN
 
-            SET NOCOUNT ON;
+  SET NOCOUNT ON;
 
-            DECLARE @utcCurrentDateTime AS DATETIME2(7) = sysutcdatetime();
+  DECLARE @utcCurrentDateTime AS DATETIME2(7) = sysutcdatetime();
+  DECLARE @table table (id int);
 
-            IF @utcCreatedDateTime IS NULL
-            BEGIN
-              SET @utcCreatedDateTime = @utcCurrentDateTime;
-            END
+  IF @utcCreatedDateTime IS NULL
+  BEGIN
+    SET @utcCreatedDateTime = @utcCurrentDateTime;
+  END
 
-            INSERT INTO @table(id) 
-            SELECT Id
-            FROM  
-            (
-              MERGE [dbo].[Like] AS r
-              USING ( 
-                  VALUES (
-                    @like, 
-                    @userId, 
-                    @pinId, 
-                    @utcCreatedDateTime, 
-                    @utcUpdatedDateTime, 
-                    @utcDeletedDateTime,
+  INSERT INTO @table(id)
+  SELECT Id
+  FROM
+  (
+    MERGE [dbo].[Like] AS r
+    USING (
+        VALUES (
+          @like,
+          @userId,
+          @pinId,
+          @utcCreatedDateTime,
+          @utcUpdatedDateTime,
+          @utcDeletedDateTime,
 
-                    @utcCurrentDateTime
-                  )
-              ) AS foo (
-                like, 
-                userId, 
-                pinId, 
-                utcCreatedDateTime, 
-                utcUpdatedDateTime, 
-                utcDeletedDateTime,
+          @utcCurrentDateTime
+        )
+    ) AS foo (
+      [like],
+      userId,
+      pinId,
+      utcCreatedDateTime,
+      utcUpdatedDateTime,
+      utcDeletedDateTime,
 
-                utcCurrentDateTime
-              )
-              ON r.userId = foo.userId 
-                AND r.pinId = foo.pinId
-              WHEN MATCHED THEN
-                UPDATE SET 
-                  like = foo.like,
-                  utcUpdatedDateTime = foo.utcCurrentDateTime,
-                  utcDeletedDateTime = null
-              WHEN NOT MATCHED THEN
-                INSERT (like, userId, pinId, utcCreatedDateTime, utcUpdatedDateTime, utcDeletedDateTime)
-                VALUES (foo.like, foo.userId, foo.pinId, foo.utcCreatedDateTime, foo.utcUpdatedDateTime, foo.utcDeletedDateTime)
-              ;
-            ) AS Changes (Id);
+      utcCurrentDateTime
+    )
+    ON r.userId = foo.userId
+      AND r.pinId = foo.pinId
+    WHEN MATCHED THEN
+      UPDATE SET
+        [like] = foo.[like],
+        utcUpdatedDateTime = foo.utcCurrentDateTime,
+        utcDeletedDateTime = null
+    WHEN NOT MATCHED THEN
+      INSERT ([like], userId, pinId, utcCreatedDateTime, utcUpdatedDateTime, utcDeletedDateTime)
+      VALUES (foo.[like], foo.userId, foo.pinId, foo.utcCreatedDateTime, foo.utcUpdatedDateTime, foo.utcDeletedDateTime)
+    OUTPUT inserted.id
 
-            SELECT @id = id from @table;
+  ) AS Changes (Id);
 
-          END;
+  SELECT @id = id from @table;
+
+END;
         `;
 
   return cp.getConnection()

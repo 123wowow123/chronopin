@@ -52,14 +52,14 @@ const createCreatePinSP = createSP.createCreatePinSP;
 const createCreateMediumSP = createSP.createCreateMediumSP;
 const createCreatePinMediumSP = createSP.createCreatePinMediumSP;
 const createCreatePinMediumLinkSP = createSP.createCreatePinMediumLinkSP;
-const createCreateLikeSP = createSP.createCreateLikeSP;
-const createCreateFavoriteSP = createSP.createCreateFavoriteSP;
+//const createCreateLikeSP = createSP.createCreateLikeSP;
+//const createCreateFavoriteSP = createSP.createCreateFavoriteSP;
 const createCreateDateTimeSP = createSP.createCreateDateTimeSP;
 
 // Update Record
 const createUpdateUserSP = createSP.createUpdateUserSP;
 const createUpdatePinSP = createSP.createUpdatePinSP;
-const createUpdateLikeSP = createSP.createUpdateLikeSP;
+//const createUpdateLikeSP = createSP.createUpdateLikeSP;
 
 // Delete Record
 const createDeleteUserByIdSP = createSP.createDeleteUserByIdSP;
@@ -69,6 +69,10 @@ const createDeleteLikeSP = createSP.createDeleteLikeSP;
 const createDeleteLikeByPinIdSP = createSP.createDeleteLikeByPinIdSP;
 const createDeleteFavoriteSP = createSP.createDeleteFavoriteSP;
 const createDeleteFavoriteByPinIdSP = createSP.createDeleteFavoriteByPinIdSP;
+
+// Upsert Record
+const createMergeLikeSP = createSP.createMergeLikeSP;
+const createMergeFavoriteSP = createSP.createMergeFavoriteSP;
 
 // Admin Delete
 const createAdminDeleteUserByIdSP = createSP.createAdminDeleteUserByIdSP;
@@ -133,14 +137,14 @@ function execute() {
           createCreateMediumSP(),
           createCreatePinMediumSP(),
           createCreatePinMediumLinkSP(),
-          createCreateLikeSP(),
-          createCreateFavoriteSP(),
+          //createCreateLikeSP(),
+          //createCreateFavoriteSP(),
           createCreateDateTimeSP(),
 
           // Update Record
           createUpdateUserSP(),
           createUpdatePinSP(),
-          createUpdateLikeSP(),
+          //createUpdateLikeSP(),
 
           // Delete Record
           createDeleteUserByIdSP(),
@@ -150,6 +154,9 @@ function execute() {
           createDeleteLikeByPinIdSP(),
           createDeleteFavoriteSP(),
           createDeleteFavoriteByPinIdSP(),
+
+          createMergeLikeSP(),
+          createMergeFavoriteSP(),
 
           // Admin Delete
           createAdminDeleteUserByIdSP()

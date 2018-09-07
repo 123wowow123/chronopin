@@ -11,7 +11,9 @@ import {
 // _user, userId, _pin, pinId
 let prop = [
   'id',
-  'utcCreatedDateTime'
+  'utcCreatedDateTime',
+  'utcUpdatedDateTime',
+  'utcDeletedDateTime'
 ];
 
 export default class Favorite {
@@ -28,12 +30,18 @@ export default class Favorite {
         this[prop[i]] = favorite[prop[i]];
       }
 
-      if (user instanceof User) {
+      if (user && user instanceof User) {
         this._user = user;
+      }
+      else if (favorite._user && favorite._user instanceof User) {
+        this._user = favorite._user;
       }
 
       if (pin instanceof Pin) {
         this._pin = pin;
+      }
+      else if (favorite._pin && favorite._pin instanceof Pin) {
+        this._pin = favorite._pin;
       }
 
     } else {
@@ -43,24 +51,20 @@ export default class Favorite {
   }
 
   save() {
-    return _createMSSQL(this, this.userId, this.pinId)
-      .then(({
-        favorite
-      }) => {
-        this.set(favorite);
-        return {
-          favorite: this
-        };
-      })
+    return _upsert(this, this.userId, this.pinId)
       .catch(err => {
         console.log(`Favorite '${this.id}' save err:`, err);
         throw err;
       });
   }
 
-  // update() {
-  //   return _updateMSSQL(this, this.userId);
-  // }
+  update() {
+    return _upsert(this, this.userId, this.pinId)
+      .catch(err => {
+        console.log(`Favorite '${this.id}' update err:`, err);
+        throw err;
+      });
+  }
 
   delete() {
     return _deleteMSSQL(this);
@@ -102,10 +106,10 @@ Object.defineProperty(FavoritePrototype, '_user', {
 });
 
 Object.defineProperty(FavoritePrototype, 'userId', {
-  get: function() {
+  get: function () {
     return this._user && this._user.id;
   },
-  set: function(id) {
+  set: function (id) {
     if (this._user) {
       this._user.id = id;
     } else {
@@ -125,10 +129,10 @@ Object.defineProperty(FavoritePrototype, '_pin', {
 });
 
 Object.defineProperty(FavoritePrototype, 'pinId', {
-  get: function() {
+  get: function () {
     return this._pin && this._pin.id;
   },
-  set: function(id) {
+  set: function (id) {
     if (this._pin) {
       this._pin.id = id;
     } else {
@@ -140,6 +144,18 @@ Object.defineProperty(FavoritePrototype, 'pinId', {
   enumerable: true,
   configurable: false
 });
+
+function _upsert(favorite, userId, pinId) {
+  return _upsertMSSQL(favorite, userId, pinId)
+    .then(({
+      favorite
+    }) => {
+      favorite.set(favorite);
+      return {
+        favorite: favorite
+      };
+    });
+}
 
 function _queryMSSQLFavoriteById(id) {
   return cp.getConnection()
@@ -171,15 +187,17 @@ function _queryMSSQLFavoriteById(id) {
     });
 }
 
-function _createMSSQL(favorite, userId, pinId) {
+function _upsertMSSQL(favorite, userId, pinId) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'CreateFavorite';
         let request = new mssql.Request(conn)
           .input('utcCreatedDateTime', mssql.DateTime2(7), favorite.utcCreatedDateTime)
-          .input('userId', mssql.Int, favorite.userId)
-          .input('pinId', mssql.Int, favorite.pinId)
+          .input('utcUpdatedDateTime', mssql.DateTime2(7), favorite.utcUpdatedDateTime)
+          .input('utcDeletedDateTime', mssql.DateTime2(7), favorite.utcDeletedDateTime)
+          .input('userId', mssql.Int, userId)
+          .input('pinId', mssql.Int, pinId)
           .output('id', mssql.Int);
 
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
@@ -213,7 +231,7 @@ function _createMSSQL(favorite, userId, pinId) {
 function _deleteMSSQL(favorite) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'DeleteFavorite';
         let request = new mssql.Request(conn)
           .input('id', mssql.Int, favorite.id)
@@ -248,7 +266,7 @@ function _deleteMSSQL(favorite) {
 function _deleteByPinIdMSSQL(favorite) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'DeleteFavoriteByPinId';
         let request = new mssql.Request(conn)
           .input('pinId', mssql.Int, favorite.pinId)

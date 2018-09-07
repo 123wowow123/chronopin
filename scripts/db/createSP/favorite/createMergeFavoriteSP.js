@@ -41,7 +41,7 @@ function executeDropSP() {
 
 function executeCreateSP() {
   let sql = `
-        CREATE PROCEDURE [dbo].[CreateMergeFavorite]
+        CREATE PROCEDURE [dbo].[${StoredProcedureName}]
             @userId             INT,
             @pinId              INT,
             @utcCreatedDateTime DATETIME2(7),
@@ -55,7 +55,7 @@ function executeCreateSP() {
             SET NOCOUNT ON;
 
             DECLARE @utcCurrentDateTime AS DATETIME2(7) = sysutcdatetime();
-            DECLARE @table table (id int)
+            DECLARE @table table (id int);
 
             IF @utcCreatedDateTime IS NULL
             BEGIN
@@ -96,7 +96,7 @@ function executeCreateSP() {
                 INSERT (userId, pinId, utcCreatedDateTime, utcUpdatedDateTime, utcDeletedDateTime)
                 VALUES (foo.userId, foo.pinId, foo.utcCreatedDateTime, foo.utcUpdatedDateTime, foo.utcDeletedDateTime)
               OUTPUT inserted.id
-              ;
+              
             ) AS Changes (Id);
 
             SELECT @id = id from @table;

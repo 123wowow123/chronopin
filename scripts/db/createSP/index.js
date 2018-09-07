@@ -42,9 +42,9 @@ const createCreateMediumSP = require('./medium/createCreateMediumSP');
 const createCreatePinMediumSP = require('./pinMedium/createCreatePinMediumSP');
 const createCreatePinMediumLinkSP = require('./pinMedium/createCreatePinMediumLinkSP');
 /* like */
-const createCreateLikeSP = require('./like/createCreateLikeSP');
+//const createCreateLikeSP = require('./like/createCreateLikeSP');
 /* favorite */
-const createCreateFavoriteSP = require('./favorite/createCreateFavoriteSP');
+//const createCreateFavoriteSP = require('./favorite/createCreateFavoriteSP');
 /* dateTime */
 const createCreateDateTimeSP = require('./dateTime/createCreateDateTimeSP');
 
@@ -54,7 +54,7 @@ const createUpdateUserSP = require('./user/createUpdateUserSP');
 /* pin */
 const createUpdatePinSP = require('./pin/createUpdatePinSP');
 /* like */
-const createUpdateLikeSP = require('./like/createUpdateLikeSP');
+//const createUpdateLikeSP = require('./like/createUpdateLikeSP');
 
 /** Delete Record **/
 /* pin */
@@ -69,6 +69,12 @@ const createDeleteLikeByPinIdSP = require('./like/createDeleteLikeByPinIdSP');
 /* favorite */
 const createDeleteFavoriteSP = require('./favorite/createDeleteFavoriteSP');
 const createDeleteFavoriteByPinIdSP = require('./favorite/createDeleteFavoriteByPinIdSP');
+
+/** Upsert Record **/
+/* like */
+const createMergeLikeSP = require('./like/createMergeLikeSP');
+/* favorite */
+const createMergeFavoriteSP = require('./favorite/createMergeFavoriteSP');
 
 /** Admin Delete **/
 /* user */
@@ -109,14 +115,14 @@ module.exports.setup = function(connectionPool) {
   createCreateMediumSP.setup(cp);
   createCreatePinMediumSP.setup(cp);
   createCreatePinMediumLinkSP.setup(cp);
-  createCreateLikeSP.setup(cp);
-  createCreateFavoriteSP.setup(cp);
+  //createCreateLikeSP.setup(cp);
+  //createCreateFavoriteSP.setup(cp);
   createCreateDateTimeSP.setup(cp);
 
   // Update Record
   createUpdateUserSP.setup(cp);
   createUpdatePinSP.setup(cp);
-  createUpdateLikeSP.setup(cp);
+  //createUpdateLikeSP.setup(cp);
 
   // Delete Record
   createDeletePinSP.setup(cp);
@@ -126,6 +132,10 @@ module.exports.setup = function(connectionPool) {
   createDeleteLikeByPinIdSP.setup(cp);
   createDeleteFavoriteSP.setup(cp);
   createDeleteFavoriteByPinIdSP.setup(cp);
+
+  // Upsert Record
+  createMergeLikeSP.setup(cp);
+  createMergeFavoriteSP.setup(cp);
 
   // Admin Delete
   createAdminDeleteUserByIdSP.setup(cp);
@@ -142,7 +152,7 @@ module.exports.createGetPinByIdsSP = createGetPinByIdsSP.createSP;
 module.exports.createGetPinByIdsFilterByHasFavoriteSP = createGetPinByIdsFilterByHasFavoriteSP.createSP;
 module.exports.createGetAllUsersSP = createGetAllUsersSP.createSP;
 module.exports.createGetDateTimesByStartEndDateSP = createGetDateTimesByStartEndDateSP.createSP;
-module.exports.createGetPinsWithFavoriteAndLikeArrayNextSP  = createGetPinsWithFavoriteAndLikeArrayNextSP.createSP;
+module.exports.createGetPinsWithFavoriteAndLikeArrayNextSP = createGetPinsWithFavoriteAndLikeArrayNextSP.createSP;
 
 // Returns Single Result
 module.exports.createGetPinWithFavoriteAndLikeSP = createGetPinWithFavoriteAndLikeSP.createSP;
@@ -160,14 +170,14 @@ module.exports.createCreateUserSP = createCreateUserSP.createSP;
 module.exports.createCreateMediumSP = createCreateMediumSP.createSP;
 module.exports.createCreatePinMediumSP = createCreatePinMediumSP.createSP;
 module.exports.createCreatePinMediumLinkSP = createCreatePinMediumLinkSP.createSP;
-module.exports.createCreateLikeSP = createCreateLikeSP.createSP;
-module.exports.createCreateFavoriteSP = createCreateFavoriteSP.createSP;
+//module.exports.createCreateLikeSP = createCreateLikeSP.createSP;
+//module.exports.createCreateFavoriteSP = createCreateFavoriteSP.createSP;
 module.exports.createCreateDateTimeSP = createCreateDateTimeSP.createSP;
 
 // Update Record
 module.exports.createUpdateUserSP = createUpdateUserSP.createSP;
 module.exports.createUpdatePinSP = createUpdatePinSP.createSP;
-module.exports.createUpdateLikeSP = createUpdateLikeSP.createSP;
+//module.exports.createUpdateLikeSP = createUpdateLikeSP.createSP;
 
 // Delete Record
 module.exports.createDeletePinSP = createDeletePinSP.createSP;
@@ -177,6 +187,10 @@ module.exports.createDeleteLikeSP = createDeleteLikeSP.createSP;
 module.exports.createDeleteLikeByPinIdSP = createDeleteLikeByPinIdSP.createSP;
 module.exports.createDeleteFavoriteSP = createDeleteFavoriteSP.createSP;
 module.exports.createDeleteFavoriteByPinIdSP = createDeleteFavoriteByPinIdSP.createSP;
+
+// Upsert Record
+module.exports.createMergeLikeSP = createMergeLikeSP.createSP;
+module.exports.createMergeFavoriteSP = createMergeFavoriteSP.createSP;
 
 // Admin Delete
 module.exports.createAdminDeleteUserByIdSP = createAdminDeleteUserByIdSP.createSP;
