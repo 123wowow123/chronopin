@@ -2,7 +2,7 @@
 
 ## node:9-alpine
 ## node:9
-FROM node:9-alpine AS base
+FROM node:10-alpine AS base
  
 ## Environment Variables
 ENV PROJECT_ROOT /code
