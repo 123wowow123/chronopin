@@ -36,12 +36,18 @@ export default class Favorite {
       else if (favorite._user && favorite._user instanceof User) {
         this._user = favorite._user;
       }
+      else if (Number.isInteger(favorite.userId)) {
+        this.userId = favorite.userId;
+      }
 
       if (pin instanceof Pin) {
         this._pin = pin;
       }
       else if (favorite._pin && favorite._pin instanceof Pin) {
         this._pin = favorite._pin;
+      }
+      else if (Number.isInteger(favorite.pinId)) {
+        this.pinId = favorite.pinId;
       }
 
     } else {
@@ -84,6 +90,14 @@ export default class Favorite {
     this._pin = pin;
     this.pinId = pin.id;
     return this;
+  }
+
+  toJSON() {
+    // omits own and inherited properties with null values
+    return _.omitBy(this, (value, key) => {
+      return key.startsWith('_')
+        || _.isNull(value);
+    });
   }
 
   static queryById(id) {

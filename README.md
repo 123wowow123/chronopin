@@ -341,25 +341,39 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 ### High Priority
 
+- Backup and reload from prod
 - Back up watch - upsert - likes/favorites
 
 - Search Paging
-- Faceted Search bubbles like Bing
 - Fix loading on correct timeline on mobile tag wrapping 
 - Fix image centering issue
+- Faceted Search bubbles like Bing
 
 - Fix watch pins board
 - Drilldown view reorganize (Use reading mode to show full article)
   - RSS/Atom summary
 
 - SSL
-- Put location in place of "THE CHAIN GANG"
+- facebook login check for fbid and matching email in system to get user
+- Edit Pins and rescrape
 
 - Fix scrape timeout issue
 - Scrape should stream data with sockets
-- facebook login check for fbid and matching email in system to get user
 
+- Put location in place of "THE CHAIN GANG" and use google mapping cordinates
 - Stacking/grouping of related pins
+- Youtube pin with time location
+- Amazon/Ebay product cross referencing
+
+- Neo4j
+- Reminder Aside Menu by date sections
+  - Sectional grouping on the bottom
+  https://www.bing.com/images/search?view=detailV2&ccid=Qz5ylXJX&id=DE79D5F3DD2FE17F2542FE2F74C1163AC546B6F2&thid=OIP.Qz5ylXJX6FmKOGL7rsaBzwAAAA&mediaurl=http%3a%2f%2forgjunkie.com%2fwp-content%2fuploads%2f2016%2f04%2fReminders-app.png&exph=650&expw=366&q=reminder+app&simid=608026157405111055&selectedIndex=225&ajaxhist=0
+  https://www.bing.com/images/search?view=detailV2&ccid=Qz5ylXJX&id=DE79D5F3DD2FE17F2542FE2F74C1163AC546B6F2&thid=OIP.Qz5ylXJX6FmKOGL7rsaBzwAAAA&mediaurl=http%3a%2f%2forgjunkie.com%2fwp-content%2fuploads%2f2016%2f04%2fReminders-app.png&exph=650&expw=366&q=reminder+app&simid=608026157405111055&selectedIndex=225&ajaxhist=0
+  https://www.bing.com/images/search?view=detailV2&ccid=K4SNUA5w&id=EB2F67702626BA4754DEBE73062FF73D98C88888&thid=OIP.K4SNUA5wdr1AIr8Ac4LfaAAAAA&mediaurl=http%3a%2f%2fa3.mzstatic.com%2fus%2fr30%2fPurple71%2fv4%2f4f%2f10%2faf%2f4f10af0e-ec9e-210e-f53c-62c42d63c45b%2fscreen696x696.jpeg&exph=696&expw=392&q=reminder+app&simid=607992622330676635&selectedIndex=770&ajaxhist=0
+  https://www.bing.com/images/search?view=detailV2&ccid=C3mXxt8Q&id=0AE073778932A6B23CA9542B7B24A2796CD57848&thid=OIP.C3mXxt8QSMmBHdR8S4TSuQHaMW&mediaurl=https%3a%2f%2flh3.googleusercontent.com%2fTK2tG4ci4kbOy9BPz8o88ohQDOUR2Cpo07bk05MERRhw8jgC95F5KXXZF-O3-yo7WEs%3dh900&exph=900&expw=540&q=reminder+app&simid=608050170612222716&selectedIndex=93
+  https://www.bing.com/images/search?view=detailV2&ccid=02xN%2bVaI&id=A3188565487997B0E1AFB447FC0156441FECBB42&thid=OIP.02xN-VaISVatDExN5BiimgAAAA&mediaurl=http%3a%2f%2fa1.mzstatic.com%2fus%2fr30%2fPurple127%2fv4%2f52%2ffa%2fdf%2f52fadfe0-04de-8924-9178-b8920102e7b7%2fscreen696x696.jpeg&exph=696&expw=392&q=reminder+app&simid=608011172316253708&selectedIndex=249
+  https://www.bing.com/images/search?view=detailV2&ccid=Puea8PZt&id=7EC1A129853AB342972F331E720A8F140ECDC010&thid=OIP.Puea8PZtmHSKlBaLFVd-1QHaNL&mediaurl=https%3a%2f%2flh4.ggpht.com%2fkSVYScpGNgwoH2vsTKla23eN4jnjT_kkZS3kxe6KYQE-hMgjI6doZxLDYojQ1Fph_38j%3dh900&exph=900&expw=506&q=reminder+app&simid=607993687487089105&selectedIndex=340
 
 
 

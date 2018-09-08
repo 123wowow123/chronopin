@@ -30,11 +30,11 @@ export default class FullPin extends BasePin {
 
         if (pin) {
             this.favorites = _.get(pin, 'favorites', []).map(f => {
-                return f;
+                return new Favorite(f);
             });
 
             this.likes = _.get(pin, 'likes', []).map(l => {
-                return l;
+                return new Like(l);
             });
 
         } else {

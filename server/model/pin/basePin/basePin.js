@@ -47,6 +47,9 @@ export default class BasePin {
             else if (pin._user && pin._user instanceof User) {
                 this._user = pin._user;
             }
+            else if (Number.isInteger(pin.userId)) {
+                this.userId = pin.userId;
+              }
 
             this.media = _.get(pin, 'media', [])
                 .map(m => {

@@ -35,12 +35,18 @@ export default class Like {
       else if (like._user && like._user instanceof User) {
         this._user = like._user;
       }
+      else if (Number.isInteger(like.userId)) {
+        this.userId = like.userId;
+      }
 
       if (pin instanceof Pin) {
         this._pin = pin;
       }
       else if (like._pin && like._pin instanceof Pin) {
         this._pin = like._pin;
+      }
+      else if (Number.isInteger(like.pinId)) {
+        this.pinId = like.pinId;
       }
 
     } else {
@@ -83,6 +89,14 @@ export default class Like {
     this._pin = pin;
     this.pinId = pin.id;
     return this;
+  }
+
+  toJSON() {
+    // omits own and inherited properties with null values
+    return _.omitBy(this, (value, key) => {
+      return key.startsWith('_')
+        || _.isNull(value);
+    });
   }
 
   static queryById(id) {

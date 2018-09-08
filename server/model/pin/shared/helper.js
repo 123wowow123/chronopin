@@ -18,7 +18,7 @@ export function mapSubObjectFromQuery(prefix, groupKey, pinRows) {
           return key.startsWith(startsWithKey); // eg: 'Media.'
         })
         .reduce((a, [key, value]) => {
-          a[key.substring(6)] = value;
+          a[key.substring(startsWithKey.length)] = value;
           return a;
         }, {});
 

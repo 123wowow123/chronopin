@@ -40,8 +40,11 @@ export default class Medium {
       if (pin instanceof BasePin) {
         this._pin = pin;
       }
-      else if (pin._pin && pin._pin instanceof BasePin) {
-          this._pin = pin._pin;
+      else if (medium._pin && medium._pin instanceof BasePin) {
+          this._pin = medium._pin;
+      }
+      else if (Number.isInteger(medium.pinId)) {
+        this.pinId = medium.pinId;
       }
 
     } else {
