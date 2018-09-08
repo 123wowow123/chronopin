@@ -16,8 +16,8 @@ const createUser = createTable.createUser;
 const createAddress = createTable.createAddress;
 const createClick = createTable.createClick;
 const createComment = createTable.createComment;
-const createFavorite = createTable.createFavorite;
-const createLike = createTable.createLike;
+//const createFavorite = createTable.createFavorite;
+//const createLike = createTable.createLike;
 const createMedium = createTable.createMedium;
 const createPin = createTable.createPin;
 const createPinMedium = createTable.createPinMedium;
@@ -104,8 +104,8 @@ function execute() {
           createPinMedium(),
           createClick(),
           createComment(),
-          createFavorite(),
-          createLike(),
+          //createFavorite(),
+          //createLike(),
           createDateTime(),
 
           // Retruns Collection

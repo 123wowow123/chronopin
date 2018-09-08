@@ -80,12 +80,10 @@ BEGIN
       [Favorites].[userId]                                                        AS [Favorites.userId],
       [Favorites].[utcCreatedDateTime]                                            AS [Favorites.utcCreatedDateTime],
       [Favorites].[utcUpdatedDateTime]                                            AS [Favorites.utcUpdatedDateTime],
-      [Favorites].[utcDeletedDateTime]                                            AS [Favorites.utcDeletedDateTime],
 
       [Likes].[userId]                                                            AS [Likes.userId],
       [Likes].[utcCreatedDateTime]                                                AS [Likes.utcCreatedDateTime],
       [Likes].[utcUpdatedDateTime]                                                AS [Likes.utcUpdatedDateTime],
-      [Likes].[utcDeletedDateTime]                                                AS [Likes.utcDeletedDateTime],
       [Likes].[like]                                                              AS [Likes.like]
 
     FROM [dbo].[Pin]

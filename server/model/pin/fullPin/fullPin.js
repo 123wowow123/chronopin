@@ -30,11 +30,11 @@ export default class FullPin extends BasePin {
 
         if (pin) {
             this.favorites = _.get(pin, 'favorites', []).map(f => {
-                return new Favorite(f);
+                return new Favorite(f, null, this);
             });
 
             this.likes = _.get(pin, 'likes', []).map(l => {
-                return new Like(l);
+                return new Like(l, null, this);
             });
 
         } else {
@@ -50,20 +50,20 @@ export default class FullPin extends BasePin {
                 const saveLikePromises = this.likes.map(l => {
                     return new Like({
                         utcCreatedDateTime: l.utcCreatedDateTime,
+                        utcUpdatedDateTime: l.utcUpdatedDateTime,
                         like: l.like,
-                        user: l._user,
-                        pin: this
-                    }).save();
+                        userId: f.userId
+                    }, null, this).save();
                 });
                 const saveFavoritePromises = this.favorites.map(f => {
                     return new Favorite({
                         utcCreatedDateTime: f.utcCreatedDateTime,
-                        user: f._user,
-                        pin: this
-                    }).save();
+                        utcUpdatedDateTime: f.utcUpdatedDateTime,
+                        userId: f.userId
+                    }, null, this).save();
                 });
                 const saveMediumPromises = this.media.map(m => {
-                    debugger
+                    //debugger
                     return new Medium(m, this).save();
                 });
                 return Promise.all([...saveLikePromises, ...saveFavoritePromises, ...saveMediumPromises]);

@@ -5,7 +5,7 @@ import * as cp from '../../sqlConnectionPool';
 import * as _ from 'lodash';
 import {
   User,
-  Pin
+  BasePin
 } from '..';
 
 // _user, userId, _pin, pinId
@@ -13,7 +13,7 @@ let prop = [
   'id',
   'utcCreatedDateTime',
   'utcUpdatedDateTime',
-  'utcDeletedDateTime'
+  //'utcDeletedDateTime'
 ];
 
 export default class Favorite {
@@ -40,10 +40,10 @@ export default class Favorite {
         this.userId = favorite.userId;
       }
 
-      if (pin instanceof Pin) {
+      if (pin instanceof BasePin) {
         this._pin = pin;
       }
-      else if (favorite._pin && favorite._pin instanceof Pin) {
+      else if (favorite._pin && favorite._pin instanceof BasePin) {
         this._pin = favorite._pin;
       }
       else if (Number.isInteger(favorite.pinId)) {
@@ -150,7 +150,7 @@ Object.defineProperty(FavoritePrototype, 'pinId', {
     if (this._pin) {
       this._pin.id = id;
     } else {
-      this._pin = new Pin({
+      this._pin = new BasePin({
         id: id
       });
     }
@@ -205,7 +205,7 @@ function _upsertMSSQL(favorite, userId, pinId) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'CreateFavorite';
+        const StoredProcedureName = 'CreateMergeFavorite';
         let request = new mssql.Request(conn)
           .input('utcCreatedDateTime', mssql.DateTime2(7), favorite.utcCreatedDateTime)
           .input('utcUpdatedDateTime', mssql.DateTime2(7), favorite.utcUpdatedDateTime)

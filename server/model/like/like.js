@@ -4,7 +4,7 @@ import * as mssql from 'mssql';
 import * as cp from '../../sqlConnectionPool';
 import {
   User,
-  Pin
+  BasePin
 } from '..';
 
 // _user, userId, _pin, pinId
@@ -13,7 +13,7 @@ let prop = [
   'like',
   'utcCreatedDateTime',
   'utcUpdatedDateTime',
-  'utcDeletedDateTime'
+  //'utcDeletedDateTime'
 ];
 
 export default class Like {
@@ -39,10 +39,10 @@ export default class Like {
         this.userId = like.userId;
       }
 
-      if (pin instanceof Pin) {
+      if (pin instanceof BasePin) {
         this._pin = pin;
       }
-      else if (like._pin && like._pin instanceof Pin) {
+      else if (like._pin && like._pin instanceof BasePin) {
         this._pin = like._pin;
       }
       else if (Number.isInteger(like.pinId)) {
@@ -149,7 +149,7 @@ Object.defineProperty(LikePrototype, 'pinId', {
     if (this._pin) {
       this._pin.id = id;
     } else {
-      this._pin = new Pin({
+      this._pin = new BasePin({
         id: id
       });
     }

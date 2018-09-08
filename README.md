@@ -398,7 +398,7 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 - Read book for more ideas
 
 ### Machine Learning
-- review algebra, then linear algebra, analysis, stat, calculus, graph theory in that order
+- review algebra, linear algebra, analysis, stat, calculus, graph theory in that order
 -- https://www.pinterest.com/mathematicsprof/
 
 ### Web Scraper
