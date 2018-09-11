@@ -16,12 +16,16 @@
         <div class="search-group">
           <!-- <span class="" ng-if="nav.search" title="Algolia Search"></span> -->
           <div class="search-box-container">
-            <input type="text" name="search" id="search" class="search-control --show-icon" ng-class="{'--right-radius-none': nav.isLoggedIn()}"
-              placeholder="Search" ng-model="nav.search" ng-model-options="{ debounce: 100 }" ng-change="nav.autoComplete(nav.search, nav.searchChoice.value)"
+            <input type="text" name="search" id="search" class="search-control --show-icon" 
+              ng-class="{'--right-radius-none': nav.isLoggedIn()}"
+              placeholder="Search" ng-model="nav.search" ng-model-options="{ debounce: 100 }" 
+              ng-change="nav.autoComplete(nav.search, nav.searchChoice.value)"
               ng-click="nav.showAutoComplete($event)">
 
-            <auto-complete title="title" prompt="Start typing a US state" suggestions="nav.suggestions" show="nav.showSuggestions"
-              on-select="nav.onAutoCompleteSelect($event)" on-dismiss="nav.dismissAutoComplete()" class="auto-complete" />
+            <auto-complete title="title" prompt="Start typing a US state" suggestions="nav.suggestions" 
+              show="nav.showSuggestions"
+              on-select="nav.onAutoCompleteSelect($event)" on-dismiss="nav.dismissAutoComplete()" 
+              class="auto-complete" />
             </auto-complete>
 
             <span class="glyphicon glyphicon-search form-control__texbox_icon" aria-hidden="true"></span>
