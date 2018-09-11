@@ -341,10 +341,8 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 ### High Priority
 
-- Backup and reload from prod
-- Back up watch - upsert - likes/favorites
+- Can't search without selecting auto complete suggestions 
 
-- Search Paging
 - Fix loading on correct timeline on mobile tag wrapping 
 - Fix image centering issue
 - Faceted Search bubbles like Bing
@@ -365,7 +363,7 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 - Youtube pin with time location
 - Amazon/Ebay product cross referencing
 
-- Neo4j
+- Neo4j / Marklogic
 - Reminder Aside Menu by date sections
   - Sectional grouping on the bottom
   https://www.bing.com/images/search?view=detailV2&ccid=Qz5ylXJX&id=DE79D5F3DD2FE17F2542FE2F74C1163AC546B6F2&thid=OIP.Qz5ylXJX6FmKOGL7rsaBzwAAAA&mediaurl=http%3a%2f%2forgjunkie.com%2fwp-content%2fuploads%2f2016%2f04%2fReminders-app.png&exph=650&expw=366&q=reminder+app&simid=608026157405111055&selectedIndex=225&ajaxhist=0
