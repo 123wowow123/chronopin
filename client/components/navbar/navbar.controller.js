@@ -28,25 +28,30 @@ class NavbarController {
   }
 
   submitSearch(searchText, searchChoiceText) {
+    this.dismissAutoComplete();
     this.$state.go('search', { q: searchText, f: searchChoiceText });
     return this;
   }
 
   autoComplete(searchText, searchChoiceText) {
+    //debugger
     if (!searchText) {
       return;
     }
     const query = searchText;
     const filter = this.Util.sanitizeSearchChoice(searchChoiceText);
 
-    return this.suggestions = this.pinWebService
+    return this.pinWebService
       .autocomplete({
         q: query,
         f: filter && filter.value
       })
       .then(res => {
-        return _.get(res, 'data.pins', [])
-          .map(p => p.title);
+        return _.get(res, 'data.pins', []);
+      })
+      .then(suggestions => {
+        this.suggestions = suggestions;
+        this.showSuggestions = true;
       })
       .catch(err => {
         throw err;
@@ -79,6 +84,25 @@ class NavbarController {
   //     this.submitSearch(searchText, searchChoiceText);
   //   }
   // }
+
+  showAutoComplete($event) {
+    //console.log(JSON.stringify($event));
+    $event.stopPropagation();
+    if (_.get(this, 'suggestions.length', 0)) {
+      this.showSuggestions = true;
+    }
+  }
+
+  onAutoCompleteSelect($event) {
+    //console.log(JSON.stringify($event.data));
+    this.search = $event.data.title;
+    this.submitSearch(this.search, this.searchChoice.value);
+  }
+
+  dismissAutoComplete() {
+    //console.log("On autocomplete dismiss", JSON.stringify())
+    this.showSuggestions = false;
+  }
 
 }
 

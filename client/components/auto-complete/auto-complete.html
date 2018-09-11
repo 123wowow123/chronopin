@@ -1,0 +1,6 @@
+<ul class="suggestions" class="suggestions">
+  <li class="suggestion-item" ng-repeat="suggestion in suggestions track by $index" ng-click="handleSelection(suggestion)"
+    style="cursor:pointer" ng-class="{active:isCurrent($index)}" ng-mouseenter="setCurrent($index)" ng-mouseleave="mouseleave()">
+    <a class="title">{{suggestion[title]}}</a>
+  </li>
+</ul>
