@@ -5,13 +5,14 @@ class NavbarController {
 
   //start-non-standard
 
-  constructor(Auth, $rootScope, $state, Util, appConfig, pinWebService) {
+  constructor(Auth, $rootScope, $state, $scope, $element, Util, appConfig, pinWebService) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
     this.getCurrentUserName = Auth.getCurrentUserName;
 
     this.isCollapsed = true;
+    this.searchControlsFocus = false;
 
     this.$rootScope = $rootScope;
     this.$state = $state;
@@ -20,6 +21,8 @@ class NavbarController {
     this.pinWebService = pinWebService;
 
     this.searchChoices = appConfig.searchChoices;
+    this.$el = $element;
+    this.$scope = $scope;
   }
 
   $onInit() {
@@ -58,6 +61,11 @@ class NavbarController {
       });
   }
 
+  showLogo() {
+    //debugger
+    return !this.showSuggestions && !this.searchControlsFocus;
+  }
+
   clearSearchToMain() {
     return this
       .clearSearch()
@@ -72,6 +80,10 @@ class NavbarController {
   goToMain() {
     this.$state.go('main');
     return this;
+  }
+
+  searhFocusToggle(focus) {
+    //this.searchControlsFocus = focus;
   }
 
   searchChange(searchChoice) {

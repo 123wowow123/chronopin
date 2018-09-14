@@ -77,7 +77,8 @@
                 data.linkHeader = linkHeader;
               }
               return data;
-            })
+            }),
+            ignoreLoadingBar: true
         });
       };
 

@@ -305,6 +305,7 @@ Running `npm test` will run the unit tests with karma.
 [Rise & set times for the Sun and the Moon, twilight start & end, day length, moon phases, and more.](https://www.timeanddate.com/services/api/) eg: <https://www.timeanddate.com/services/api/>
 
 ## ICO Images
+
 [Calendar Clock Icon](http://www.iconarchive.com/show/small-n-flat-icons-by-paomedia/calendar-clock-icon.html)
 [Clock-icon](http://www.iconarchive.com/show/childish-icons-by-double-j-design/Clock-icon.html)
 [Blue clock Icon](http://www.iconarchive.com/show/origami-colored-pencil-icons-by-double-j-design/blue-clock-icon.html)
@@ -312,12 +313,14 @@ Running `npm test` will run the unit tests with karma.
 ## Cool Things
 
 ### Loaders Animations
+
 <https://codepen.io/collection/HtAne/>
 <https://codepen.io/ChainsawBaby/pen/xbogNZ>
 <https://codepen.io/hexagonest/pen/waaGqj>
 <https://codepen.io/jonitrythall/pen/dNJRRK>
 
 ## Good Design
+
 <https://www.anker.com/>
 <https://images.template.net/wp-content/uploads/2015/07/Timeline-Web-Element-Template-PSD.jpg>
 <http://www.grubstreet.com/>
@@ -330,9 +333,11 @@ Use of top banner news feed: <http://www.latimes.com/entertainment/arts/la-et-cm
 <https://www.msn.com/en-us/health/wellness/10-minute-moves-for-strength-speed-and-agility/ss-AAzWFok?OCID=ansmsnnews11>
 
 ## Email Templates
+
 <https://elements.envato.com/web-templates/email-templates>
 
 ### API Endpoints used
+
 Equinoxes, Solstices, Perihelion, and Aphelion:
 <http://aa.usno.navy.mil/data/docs/EarthSeasons.php>
 <https://github.com/barrycarter/bcapps/blob/master/ASTRO/solstices-and-equinoxes.txt.bz2>
@@ -340,8 +345,6 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 ## To Do
 
 ### High Priority
-
-- Can't search without selecting auto complete suggestions 
 
 - Fix loading on correct timeline on mobile tag wrapping 
 - Fix image centering issue
@@ -374,7 +377,6 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
   https://www.bing.com/images/search?view=detailV2&ccid=Puea8PZt&id=7EC1A129853AB342972F331E720A8F140ECDC010&thid=OIP.Puea8PZtmHSKlBaLFVd-1QHaNL&mediaurl=https%3a%2f%2flh4.ggpht.com%2fkSVYScpGNgwoH2vsTKla23eN4jnjT_kkZS3kxe6KYQE-hMgjI6doZxLDYojQ1Fph_38j%3dh900&exph=900&expw=506&q=reminder+app&simid=607993687487089105&selectedIndex=340
 
 
-
 ### Search
 
 - Faceted Navigation that slides in one by one from the left in bubble blocks (https://alistapart.com/article/design-patterns-faceted-navigation)(https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-post-filter.html)
@@ -386,6 +388,7 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 - http://jupyter.org/
 
 ### Map
+
 - Plot pins on map relative to a specified date time and draw drill map time arrow indicating possible itinerary
 - Save and share itinerary (https://travefy.com/pro?km_marketing=homepage)
   - Serve ads for hotels to flights to cruise
@@ -393,9 +396,11 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
   - If flight information is entered or flight booked through site then delays and be tracked and shared
 
 ### Time Series
+
 - Read book for more ideas
 
 ### Machine Learning
+
 - review algebra, linear algebra, analysis, stat, calculus, graph theory in that order
 -- https://www.pinterest.com/mathematicsprof/
 
@@ -425,6 +430,7 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 ```
 This is a promotional article about one of the company partners with Interesting Engineering. By shopping with us, you not only get the materials you need, but you’re also supporting our website.
 ```
+- Add pin group and can see iteniary map view and invite people for each location (support open invitation where anyone can join and buy tickets).
 
 ### Partially Completed:
 
