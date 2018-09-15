@@ -54,7 +54,7 @@ class NavbarController {
       })
       .then(suggestions => {
         this.suggestions = suggestions;
-        this.showSuggestions = true;
+        this.showSuggestions = !!_.get(this, 'suggestions.length');
       })
       .catch(err => {
         throw err;
@@ -63,7 +63,7 @@ class NavbarController {
 
   showLogo() {
     //debugger
-    return !this.showSuggestions && !this.searchControlsFocus;
+    return !this.search && !this.searchControlsFocus;
   }
 
   clearSearchToMain() {
@@ -83,7 +83,8 @@ class NavbarController {
   }
 
   searhFocusToggle(focus) {
-    //this.searchControlsFocus = focus;
+    //debugger
+    this.searchControlsFocus = focus;
   }
 
   searchChange(searchChoice) {
