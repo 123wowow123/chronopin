@@ -8,17 +8,16 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a href="/" class="navbar-brand" ng-click="nav.clearSearch()" ng-if="nav.showLogo()">Chronopin</a>
+      <a href="/" class="navbar-brand" ng-click="nav.clearSearch()" ng-class="{'--collapse': !nav.showLogo()}">Chronopin</a>
 
       <form class="navbar-form navbar-left" autocomplete="off" ng-submit="nav.submitSearch(nav.search, nav.searchChoice.value)">
 
         <div class="search-group">
           <!-- <span class="" ng-if="nav.search" title="Algolia Search"></span> -->
-          <fieldset class="search-box-container" >
+          <fieldset class="search-box-container">
             <input type="text" name="search" id="search" class="search-control --show-icon" ng-class="{'--right-radius-none': nav.isLoggedIn()}"
               placeholder="Search" ng-model="nav.search" ng-model-options="{ debounce: 100 }" ng-change="nav.autoComplete(nav.search, nav.searchChoice.value)"
-              ng-click="nav.showAutoComplete($event)"
-              ng-focus="nav.searhFocusToggle(true)" ng-blur="nav.searhFocusToggle(false)">
+              ng-click="nav.showAutoComplete($event)" ng-focus="nav.searhFocusToggle(true)" ng-blur="nav.searhFocusToggle(false)">
 
             <auto-complete title="title" prompt="Start typing a US state" suggestions="nav.suggestions" show="nav.showSuggestions"
               on-select="nav.onAutoCompleteSelect($event)" on-dismiss="nav.dismissAutoComplete()" class="auto-complete">

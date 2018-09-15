@@ -101,4 +101,9 @@
     .navbar-collapse {
         flex-grow: 1;
     }
+    .navbar-brand {
+        &.\--collapse {
+            display: none;
+        }
+    }
 }
