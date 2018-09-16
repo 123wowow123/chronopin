@@ -33,13 +33,34 @@
             },
 
             findYPos(el) {
-                let curtop = 0;
+                let curtop = 0,
+                    originalEl = el;
                 if (el.offsetParent) {
                     do {
                         curtop += el.offsetTop;
                     } while (!!(el = el.offsetParent));
-                    return curtop - menuOffset - 5; // add height of navbar main and additional 5px add to config
+                    return curtop - menuOffset - 5 - Number.parseInt(this.findComputedStyle(originalEl, 'margin-top')); // add height of navbar main and additional 5px add to config and element margin
                 }
+            },
+
+            findComputedStyle(el, styleName) {
+                /***
+                 * get live runtime value of an element's css style
+                 *   http://robertnyman.com/2006/04/24/get-the-rendered-style-of-an-element
+                 *     note: "styleName" is in CSS form (i.e. 'font-size', not 'fontSize').
+                 ***/
+                //var getStyle = function (e, styleName) {
+                var styleValue = "";
+                if (document.defaultView && document.defaultView.getComputedStyle) {
+                    styleValue = document.defaultView.getComputedStyle(el, "").getPropertyValue(styleName);
+                }
+                else if (el.currentStyle) {
+                    styleName = styleName.replace(/\-(\w)/g, function (strMatch, p1) {
+                        return p1.toUpperCase();
+                    });
+                    styleValue = el.currentStyle[styleName];
+                }
+                return styleValue;
             },
 
             captureYOffset(scrollEl) {
