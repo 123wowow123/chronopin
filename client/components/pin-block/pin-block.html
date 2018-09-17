@@ -10,7 +10,7 @@
         </a>
     </h4>
     <a class="grid__asset grid__asset--link" ng-if="$ctrl.pin.media[0].thumbName" ui-sref="pin({id:$ctrl.pin.id})">
-        <img ng-src="{{$ctrl.config.thumbUrlPrefix + $ctrl.pin.media[0].thumbName}}" class="grid__image" ng-style="{'height': $ctrl.pin.media[0].thumbHeight + 'px' }"
+        <img ng-src="{{$ctrl.config.thumbUrlPrefix + $ctrl.pin.media[0].thumbName}}" class="grid__image" ng-style="{'height': ($ctrl.pin.media[0].thumbHeight * 0.757188498) + 'px' }"
         />
     </a>
     <div class="grid__body">
