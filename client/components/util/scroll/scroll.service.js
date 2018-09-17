@@ -50,7 +50,7 @@
                  *     note: "styleName" is in CSS form (i.e. 'font-size', not 'fontSize').
                  ***/
                 //var getStyle = function (e, styleName) {
-                var styleValue = "";
+                let styleValue = "";
                 if (document.defaultView && document.defaultView.getComputedStyle) {
                     styleValue = document.defaultView.getComputedStyle(el, "").getPropertyValue(styleName);
                 }
