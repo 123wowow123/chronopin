@@ -49,10 +49,9 @@
                  *   http://robertnyman.com/2006/04/24/get-the-rendered-style-of-an-element
                  *     note: "styleName" is in CSS form (i.e. 'font-size', not 'fontSize').
                  ***/
-                //var getStyle = function (e, styleName) {
                 let styleValue = "";
                 if (document.defaultView && document.defaultView.getComputedStyle) {
-                    styleValue = document.defaultView.getComputedStyle(el, "").getPropertyValue(styleName);
+                    styleValue = document.defaultView.getComputedStyle(el).getPropertyValue(styleName);
                 }
                 else if (el.currentStyle) {
                     styleName = styleName.replace(/\-(\w)/g, function (strMatch, p1) {

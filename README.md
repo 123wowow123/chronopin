@@ -346,7 +346,6 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 ### High Priority
 
-- Fix loading on correct timeline on mobile tag wrapping 
 - Fix image centering issue
 - Faceted Search bubbles like Bing
 
