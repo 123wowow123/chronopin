@@ -346,7 +346,15 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 ### High Priority
 
+- Youtube pin with time location
+  - Get closed caption text
+
+- Edit Pins and rescrape
+- Fix scrape timeout issue
+- Scrape should stream data with sockets
+
 - Faceted Search bubbles like Bing
+- Fullscreen mobile search menu
 
 - Fix watch pins board
 - Drilldown view reorganize (Use reading mode to show full article)
@@ -354,14 +362,10 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 - SSL
 - facebook login check for fbid and matching email in system to get user
-- Edit Pins and rescrape
-
-- Fix scrape timeout issue
-- Scrape should stream data with sockets
 
 - Put location in place of "THE CHAIN GANG" and use google mapping cordinates
 - Stacking/grouping of related pins
-- Youtube pin with time location
+
 - Amazon/Ebay product cross referencing
 
 - Neo4j / Marklogic

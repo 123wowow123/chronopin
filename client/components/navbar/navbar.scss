@@ -31,13 +31,20 @@
     @extend .form-group;
     @extend .has-feedback;
     width: 100%;
+    display: flex !important;
 }
 
 .search-box-container {
     position: relative;
+    flex: 1 1 0px;
     .dropdown-menu {
         right: 0px;
     }
+}
+
+.search-dropdown {
+    flex: 0 0 auto;
+    width: auto !important;
 }
 
 .search-control {
@@ -59,10 +66,6 @@
     &.\--show-icon {
         padding-left: 35px;
     }
-}
-
-.search-dropdown {
-    width: 1% !important;
 }
 
 .form-control__texbox_icon {
