@@ -348,6 +348,25 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 
 - Youtube pin with time location
   - Get closed caption text
+  - Pass playing video time to drilldown view
+  - Play from beginning button
+  - Timeline auto play one video after another
+    - Show movie trailers usages
+  - Scrape YouTube using something like: Reader.js
+  - Set YouTube time range
+
+- Drilldown Sumery
+  - Sentiment
+  - Summerize (or Use reading mode to show full article)
+  - Mini timeline for multiple date point articles (highlight date mined for mini timeline)
+  - Add other annotations to article
+  - Hitorically happens on date
+  - RSS/Atom summary
+
+- Google Map
+  - Localize pins in area
+  - Show distance
+  - https://sandiego.eater.com/2017/12/11/16761732/menya-ultra-ramen-japanese-restaurant-mira-mesa
 
 - Edit Pins and rescrape
 - Fix scrape timeout issue
@@ -357,8 +376,6 @@ Equinoxes, Solstices, Perihelion, and Aphelion:
 - Fullscreen mobile search menu
 
 - Fix watch pins board
-- Drilldown view reorganize (Use reading mode to show full article)
-  - RSS/Atom summary
 
 - SSL
 - facebook login check for fbid and matching email in system to get user
