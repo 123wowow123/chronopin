@@ -9,7 +9,7 @@ var cp = null;
 module.exports.getConnection = function getConnection() {
   if (cp) return cp;
   return cp = new Promise(function(resolve, reject) { // jshint ignore:line
-    let conn = new mssql.Connection(config.sequelize.uri, function(err) {
+    let conn = new mssql.connect(config.sequelize.uri, function(err) {
       if (err) {
         cp = null;
         console.log(`Connection err on database: ${conn.config.database}, connected: ${conn.connected}`);

@@ -10,8 +10,17 @@ import Sequelize from 'sequelize';
 
 var db = {
   Sequelize,
-  sequelize: new Sequelize(config.sequelize.uri, config.sequelize.options)
+  //sequelize: new Sequelize(config.sequelize.uri, config.sequelize.options)
+  sequelize: new Sequelize(
+    config.sequelize.connection.dbname,
+    config.sequelize.connection.username,
+    config.sequelize.connection.password,
+    config.sequelize.connection.options
+  )
 };
+
+// TODO: Temperarily added to make Session Table work
+db.sequelize.sync();
 
 // Insert models below
 

@@ -19,6 +19,21 @@
                 "--save"
             ]
         },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Create DB",
+            "program": "${workspaceFolder}/scripts/db/index.js",
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Create Data",
+            "program": "${workspaceFolder}/scripts/data/index.js",
+            "args": [
+                "--seed"
+            ]
+        },
         // {
         //     "type": "node",
         //     "request": "attach",

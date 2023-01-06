@@ -3,6 +3,7 @@
   "version": "0.3.0",
   "main": "server/app.js",
   "dependencies": {
+    "angular-link-header-parser": "^1.0.3",
     "aws-sdk": "^2.259.1",
     "azure-storage": "^2.8.3",
     "body-parser": "^1.18.3",
@@ -16,8 +17,8 @@
     "errorhandler": "^1.4.2",
     "express": "^4.16.3",
     "express-jwt": "^5.3.1",
-    "express-sequelize-session": "0.4.0",
-    "express-session": "^1.11.3",
+    "express-sequelize-session": "^2.3.0",
+    "express-session": "^1.17.3",
     "extend": "^3.0.0",
     "forcedomain": "^1.0.0",
     "format-link-header": "^2.1.0",
@@ -31,7 +32,7 @@
     "method-override": "^2.3.10",
     "moment": "^2.22.2",
     "morgan": "~1.9.0",
-    "mssql": "^3.3.0",
+    "mssql": "^9.0.1",
     "node-base64-image": "^1.0.5",
     "node-sass": "^4.9.3",
     "passport": "~0.4.0",
@@ -41,12 +42,12 @@
     "prerender-node": "^3.2.0",
     "request": "^2.87.0",
     "request-promise": "^4.2.1",
-    "sequelize": "^4.37.10",
+    "sequelize": "^6.28.0",
     "serve-favicon": "^2.5.0",
     "socket.io": "^2.1.1",
     "socket.io-client": "^2.1.1",
     "socketio-jwt": "^4.2.0",
-    "tedious": "^2.6.1",
+    "tedious": "^15.1.2",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
@@ -130,19 +131,14 @@
     "test": "grunt test",
     "update-webdriver": "node node_modules/protractor/bin/webdriver-manager update",
     "start": "node server",
-    
     "init:shebang": "npm run db:refresh && npm run search:refresh",
-
     "db:refresh": "npm run create:db && npm run create:data",
     "search:refresh": "npm run delete:search:pins && npm run create:search",
-
     "create:db": "node scripts/db/index.js",
     "create:data": "node scripts/data/index.js --seed",
     "backup:data": "node scripts/data/index.js --save",
-    
     "create:search": "node scripts/search/index.js --seed --map",
     "delete:search:pins": "node scripts/search/index.js --delete --index=pins",
-    
     "remediate:data": "node scripts/remediate/index.js"
   },
   "private": true

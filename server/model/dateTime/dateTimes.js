@@ -82,17 +82,17 @@ function _queryMSSQLDateTimesByStartEndDate(startDateTime, endDateTime) {
         //console.log('GetDateTimesByStartEndDate', startDateTime, endDateTime);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          function (err, recordsets, returnValue, affected) {
+          function (err, res, returnValue, affected) {
             let queryCount;
-            //console.log('GetDateTimesByStartEndDate', recordsets[0]);
+            //console.log('GetDateTimesByStartEndDate', res.recordset);
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
 
-            queryCount = recordsets[0].length;
+            queryCount = res.recordset.length;
 
             resolve({
-              dateTimes: recordsets[0],
+              dateTimes: res.recordset,
               queryCount: queryCount
             });
           });

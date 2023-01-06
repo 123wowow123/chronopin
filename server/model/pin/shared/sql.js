@@ -27,15 +27,14 @@ export function createPinMSSQL(pin, userId) {
                 //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
                 request.execute(`[dbo].[${StoredProcedureName}]`,
-                    (err, recordsets, returnValue, affected) => {
-                        let id;
+                    (err, res, returnValue, affected) => {
                         if (err) {
                             reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
                         }
                         // ToDo: doesn't always return value
                         try {
                             //console.log('returnValue', returnValue); // always return 0
-                            pin.id = request.parameters.id.value;
+                            pin.id = res.output.id;
 
                             //console.log('queryCount', queryCount);
                         } catch (e) {

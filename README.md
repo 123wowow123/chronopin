@@ -8,6 +8,12 @@ This project was generated with the [Angular Full-Stack Generator](https://githu
 
 ### Developing
 
+// install these first use node 14 and python 2.7.18
+https://tecadmin.net/install-nvm-macos-with-homebrew/#:~:text=1%20How%20To%20Install%20NVM%20on%20macOS%20with,what%20Node%20versions%20are%20available%20to%20install.%20
+
+https://www.freecodecamp.org/news/python-version-on-mac-update/
+
+
 1. Run `npm install` to install server dependencies.
 
 2. Run `bower install` to install front-end dependencies.
@@ -372,6 +378,16 @@ https://nationaldaycalendar.com/march/
   - Show distance
   - https://sandiego.eater.com/2017/12/11/16761732/menya-ultra-ramen-japanese-restaurant-mira-mesa
 
+- Tag
+ - Auto suggest tokenized tag in tag field
+ - ML suggest tag
+ - Add personal timeline column with composition of tag
+ - Home page with single popular timeline with flyout tag cloud
+
+- Trackable Variable per timeline
+ - Then use ML to try to predict it once enough pins exist for sub (eg: price)
+
+
 - Edit Pins and rescrape
 - Fix scrape timeout issue
 - Scrape should stream data with sockets
@@ -500,7 +516,7 @@ This is a promotional article about one of the company partners with Interesting
 - side info panel with summation of 'tagged' categories of items and mode/median/mean
 - Add tags and allow upvoting of existing tags to gain meta data for search engine to process +
 - search feature bug / show tag button when searched to jump to different section like pinterest +++
-- show pixil dimention / size via tooltip?? of scraped image
+- show pixel dimention / size via tooltip?? of scraped image
 
 - Add FB privacy policy page
 - https://gist.github.com/muddylemon/2671176

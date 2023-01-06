@@ -85,24 +85,29 @@
   <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
   <script src="bower_components/moment/moment.js"></script>
   <script src="bower_components/pluralize/pluralize.js"></script>
-  <script src="bower_components/moment-timezone/builds/moment-timezone-with-data-2012-2022.js"></script>
+  <script src="bower_components/moment-timezone/builds/moment-timezone-with-data-10-year-range.min.js"></script>
   <script src="bower_components/autotrack/autotrack.js"></script>
   <script src="bower_components/jquery.browser/dist/jquery.browser.js"></script>
   <script src="bower_components/uri-util/uri-util.js"></script>
-  <script src="bower_components/angular-link-header-parser/release/angular-link-header-parser.js"></script>
   <!-- endbower -->
   <!-- <script src="socket.io-client/socket.io.js"></script> -->
   <!-- endbuild -->
   <!-- build:js(.tmp) app/app.js -->
   <script src="app/app.js"></script>
   <!-- injector:js -->
-  <script src="components/facebook/fb.module.js"></script>
   <script src="app/admin/admin.module.js"></script>
   <script src="components/auth/auth.module.js"></script>
+  <script src="components/facebook/fb.module.js"></script>
   <script src="components/google-analytics/ga.module.js"></script>
   <script src="components/loader/loader.module.js"></script>
   <script src="components/util/util.module.js"></script>
   <script src="model/models.module.js"></script>
+  <script src="app/account/account.js"></script>
+  <script src="app/account/login/login.controller.js"></script>
+  <script src="app/account/settings/settings.controller.js"></script>
+  <script src="app/account/signup/signup.controller.js"></script>
+  <script src="app/admin/admin.controller.js"></script>
+  <script src="app/admin/admin.router.js"></script>
   <script src="app/app.constant.js"></script>
   <script src="app/create/create.controller.js"></script>
   <script src="app/create/create.js"></script>
@@ -117,7 +122,6 @@
   <script src="app/search/search.js"></script>
   <script src="app/watch/watch.controller.js"></script>
   <script src="app/watch/watch.js"></script>
-  <script src="app/account/settings/settings.controller.js"></script>
   <script src="components/auth/auth.service.js"></script>
   <script src="components/auth/interceptor.service.js"></script>
   <script src="components/auth/router.decorator.js"></script>
@@ -125,6 +129,7 @@
   <script src="components/auto-complete/auto-complete.controller.js"></script>
   <script src="components/auto-complete/auto-complete.directive.js"></script>
   <script src="components/data/socket/socket.service.js"></script>
+  <script src="components/data/webservice/angular-link-header-parser.js"></script>
   <script src="components/data/webservice/dateTime.web.service.js"></script>
   <script src="components/data/webservice/main.web.service.js"></script>
   <script src="components/data/webservice/pin.web.service.js"></script>
@@ -132,19 +137,16 @@
   <script src="components/emitter/waypoint/waypoint.js"></script>
   <script src="components/facebook/fb-comment/fb-comment.directive.js"></script>
   <script src="components/facebook/fb-like/fb-like.directive.js"></script>
-  <script src="app/account/login/login.controller.js"></script>
   <script src="components/facebook/fb/fb.service.js"></script>
   <script src="components/filter/astroweek.filter.js"></script>
   <script src="components/filter/escapeHTML.filter.js"></script>
   <script src="components/filter/money.filter.js"></script>
   <script src="components/filter/timespan.filter.js"></script>
   <script src="components/footer/footer.directive.js"></script>
-  <script src="app/account/signup/signup.controller.js"></script>
   <script src="components/google-analytics/ga/ga.service.js"></script>
   <script src="components/loader/loader-pac/loader-pac.controller.js"></script>
   <script src="components/loader/loader-pulse-bubble/loader-pulse-bubble.js"></script>
   <script src="components/loader/loader-ripple/loader-ripple.controller.js"></script>
-  <script src="app/admin/admin.controller.js"></script>
   <script src="components/modal-scroller/modal-scroller.controller.js"></script>
   <script src="components/modal-scroller/modal-scroller.js"></script>
   <script src="components/modal-scroller/modal/shared/pin-form.js"></script>
@@ -158,13 +160,11 @@
   <script src="components/time-block/time-block.controller.js"></script>
   <script src="components/util/global/util.service.js"></script>
   <script src="components/util/scroll/scroll.service.js"></script>
-  <script src="app/account/account.js"></script>
   <script src="model/bag/bag.model.js"></script>
   <script src="model/bags/bags.model.js"></script>
   <script src="model/dateTime/dateTime.model.js"></script>
   <script src="model/medium/medium.model.js"></script>
   <script src="model/model.injector.js"></script>
-  <script src="app/admin/admin.router.js"></script>
   <script src="model/pin/pin.model.js"></script>
   <script src="model/pinApp/pinApp.model.js"></script>
   <script src="model/pinsQuery/pinsQuery.js"></script>

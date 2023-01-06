@@ -95,75 +95,77 @@ function execute() {
   return cp.getConnection()
     .then(conn => {
       console.log('Begin createSP');
-      return Promise.all([
-          // Create Table
-          createUser(),
-          createAddress(),
-          createMedium(),
-          createPin(),
-          createPinMedium(),
-          createClick(),
-          createComment(),
-          //createFavorite(),
-          //createLike(),
-          createDateTime(),
+      //return Promise.all(
+      return [
+        // Create Table
+        createUser,
+        createAddress,
+        createMedium,
+        createPin,
+        createPinMedium,
+        createClick,
+        createComment,
+        //createFavorite,
+        //createLike,
+        createDateTime,
 
-          // Retruns Collection
-          createGetPinsWithFavoriteAndLikeNextSP(),
-          createGetPinsWithFavoriteAndLikePrevSP(),
-          createGetPinsWithFavoriteAndLikeInitialSP(),
-          createGetPinsWithFavoriteAndLikeNextFilterByHasFavoriteSP(),
-          createGetPinsWithFavoriteAndLikePrevFilterByHasFavoriteSP(),
-          createGetPinsWithFavoriteAndLikeInitialFilterByHasFavoriteSP(),
-          createGetPinByIdsSP(),
-          createGetPinByIdsFilterByHasFavoriteSP(),
-          createGetAllUsersSP(),
-          createGetDateTimesByStartEndDateSP(),
-          createGetPinsWithFavoriteAndLikeArrayNextSP(),
+        // Retruns Collection
+        createGetPinsWithFavoriteAndLikeNextSP,
+        createGetPinsWithFavoriteAndLikePrevSP,
+        createGetPinsWithFavoriteAndLikeInitialSP,
+        createGetPinsWithFavoriteAndLikeNextFilterByHasFavoriteSP,
+        createGetPinsWithFavoriteAndLikePrevFilterByHasFavoriteSP,
+        createGetPinsWithFavoriteAndLikeInitialFilterByHasFavoriteSP,
+        createGetPinByIdsSP,
+        createGetPinByIdsFilterByHasFavoriteSP,
+        createGetAllUsersSP,
+        createGetDateTimesByStartEndDateSP,
+        createGetPinsWithFavoriteAndLikeArrayNextSP,
 
-          // Returns Single Result
-          createGetPinWithFavoriteAndLikeSP(),
-          createGetUserByIdSP(),
-          createGetUserByFacebookIdSP(),
-          createGetUserByEmailSP(),
-          createGetMediumByOriginalUrlSP(),
-          createGetPinSP(),
-          createGetLikeSP(),
-          createGetFavoriteSP(),
+        // Returns Single Result
+        createGetPinWithFavoriteAndLikeSP,
+        createGetUserByIdSP,
+        createGetUserByFacebookIdSP,
+        createGetUserByEmailSP,
+        createGetMediumByOriginalUrlSP,
+        createGetPinSP,
+        createGetLikeSP,
+        createGetFavoriteSP,
 
-          // Create Record
-          createCreateUserSP(),
-          createCreatePinSP(),
-          createCreateMediumSP(),
-          createCreatePinMediumSP(),
-          createCreatePinMediumLinkSP(),
-          //createCreateLikeSP(),
-          //createCreateFavoriteSP(),
-          createCreateDateTimeSP(),
+        // Create Record
+        createCreateUserSP,
+        createCreatePinSP,
+        createCreateMediumSP,
+        createCreatePinMediumSP,
+        createCreatePinMediumLinkSP,
+        //createCreateLikeSP,
+        //createCreateFavoriteSP,
+        createCreateDateTimeSP,
 
-          // Update Record
-          createUpdateUserSP(),
-          createUpdatePinSP(),
-          //createUpdateLikeSP(),
+        // Update Record
+        createUpdateUserSP,
+        createUpdatePinSP,
+        //createUpdateLikeSP,
 
-          // Delete Record
-          createDeleteUserByIdSP(),
-          createDeletePinMediumByPinMediumIdSP(),
-          createDeletePinSP(),
-          createDeleteLikeSP(),
-          createDeleteLikeByPinIdSP(),
-          createDeleteFavoriteSP(),
-          createDeleteFavoriteByPinIdSP(),
+        // Delete Record
+        createDeleteUserByIdSP,
+        createDeletePinMediumByPinMediumIdSP,
+        createDeletePinSP,
+        createDeleteLikeSP,
+        createDeleteLikeByPinIdSP,
+        createDeleteFavoriteSP,
+        createDeleteFavoriteByPinIdSP,
 
-          createMergeLikeSP(),
-          createMergeFavoriteSP(),
+        createMergeLikeSP,
+        createMergeFavoriteSP,
 
-          // Admin Delete
-          createAdminDeleteUserByIdSP()
+        // Admin Delete
+        createAdminDeleteUserByIdSP
 
-          // Create Table Valued Parameters
-          // createMediumTableType()
-        ])
+        // Create Table Valued Parameters
+        // createMediumTableType
+      ].reduce((prev, cur) => prev.then(cur), Promise.resolve())
+        //)
         .then(values => {
           console.log(values); // [3, 1337, "foo"]
           console.log('Completed createSP');

@@ -87,13 +87,13 @@ export default class DateTime {
 //         const StoredProcedureName = 'GetDateTime';
 //         let request = new mssql.Request(conn)
 //           .input('dateTimeId', mssql.Int, dateTimeId)
-//           .execute(`[dbo].[${StoredProcedureName}]`, (err, recordsets, returnValue, affected) => {
+//           .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
 //             let dateTime;
 //             if (err) {
 //               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
 //             }
-//             if (recordsets[0].length) {
-//               dateTime = new DateTime(recordsets[0]);
+//             if (res.recordset.length) {
+//               dateTime = new DateTime(res.recordset[0]);
 //             } else {
 //               dateTime = undefined;
 //             }
@@ -129,7 +129,7 @@ function _createMSSQL(dateTime) {
           .output('id', mssql.Int);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             let id;
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
@@ -137,7 +137,7 @@ function _createMSSQL(dateTime) {
             // ToDo: doesn't always return value
             try {
               //console.log('returnValue', returnValue); // always return 0
-              dateTime.id = request.parameters.id.value;
+              dateTime.id = res.output.id;
 
               //console.log('queryCount', queryCount);
             } catch (e) {
@@ -173,7 +173,7 @@ function _createMSSQL(dateTime) {
 //           .output('id', mssql.Int);
 //
 //         request.execute(`[dbo].[${StoredProcedureName}]`,
-//           (err, recordsets, returnValue, affected) => {
+//           (err, res, returnValue, affected) => {
 //             if (err) {
 //               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
 //             }
@@ -196,7 +196,7 @@ function _createMSSQL(dateTime) {
 //           .output('utcDeletedDateTime', mssql.DateTime2(7));
 //
 //         request.execute(`[dbo].[${StoredProcedureName}]`,
-//           (err, recordsets, returnValue, affected) => {
+//           (err, res, returnValue, affected) => {
 //             let utcDeletedDateTime;
 //             if (err) {
 //               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);

@@ -146,16 +146,16 @@ function _createMSSQL(medium, pinId) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             let queryCount, id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
               //console.log('returnValue', returnValue); // always return 0
-              id = request.parameters.id.value;
+              id = res.output.id;
               //console.log('queryCount', queryCount);
             } catch (e) {
               id = 0;
@@ -185,9 +185,9 @@ function _createPinMediumMSSQL(medium, pinId) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             let queryCount, id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
@@ -238,16 +238,16 @@ function _deleteFromPinMSSQL(medium, pinId) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
               //console.log('returnValue', returnValue); // always return 0
-              utcDeletedDateTime = request.parameters.utcDeletedDateTime.value;
+              utcDeletedDateTime = res.output.utcDeletedDateTime;
               //console.log('queryCount', queryCount);
             } catch (e) {
               console.log(`[dbo].[${StoredProcedureName}]`, e);
@@ -273,12 +273,12 @@ function _getMediumByOriginalUrlMSSQL(originalUrl) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
-            if (recordsets[0].length) {
-              medium = new Medium(recordsets[0] && recordsets[0][0]);
+            if (res.recordset.length) {
+              medium = new Medium(res.recordset[0]);
             } else {
               medium = undefined;
             }

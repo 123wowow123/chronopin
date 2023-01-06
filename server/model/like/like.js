@@ -178,13 +178,13 @@ function _queryMSSQLLikeById(id) {
         const StoredProcedureName = 'GetLike';
         let request = new mssql.Request(conn)
           .input('id', mssql.Int, id)
-          .execute(`[dbo].[${StoredProcedureName}]`, (err, recordsets, returnValue, affected) => {
+          .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
             let like;
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
-            if (recordsets[0].length) {
-              like = new Like(recordsets[0] && recordsets[0][0]);
+            if (res.recordset.length) {
+              like = new Like(res.recordset[0]);
             } else {
               like = undefined;
             }
@@ -217,16 +217,16 @@ function _upsertMSSQL(like, userId, pinId) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             let id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
               //console.log('returnValue', returnValue); // always return 0
-              like.id = request.parameters.id.value;
+              like.id = res.output.id;
 
               //console.log('queryCount', queryCount);
             } catch (e) {
@@ -254,15 +254,15 @@ function _deleteMSSQL(like) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             try {
               //console.log('returnValue', returnValue); // always return 0
-              utcDeletedDateTime = request.parameters.utcDeletedDateTime.value;
+              utcDeletedDateTime = res.output.utcDeletedDateTime;
               //console.log('queryCount', queryCount);
             } catch (e) {
               console.log(`[dbo].[${StoredProcedureName}]`, e);
@@ -290,15 +290,15 @@ function _deleteByPinIdMSSQL(like) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             try {
               //console.log('returnValue', returnValue); // always return 0
-              utcDeletedDateTime = request.parameters.utcDeletedDateTime.value;
+              utcDeletedDateTime = res.output.utcDeletedDateTime;
               //console.log('queryCount', queryCount);
             } catch (e) {
               console.log(`[dbo].[${StoredProcedureName}]`, e);

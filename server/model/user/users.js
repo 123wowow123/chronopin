@@ -87,12 +87,12 @@ function _getAllUsersMSSQL() {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             let users;
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
-            users = recordsets && recordsets[0] && new Users(recordsets[0]);
+            users = res.recordset && new Users(res.recordset);
             resolve({
               users: users
             });

@@ -12,7 +12,7 @@ const authTypes = ['github', 'twitter', 'facebook', 'google'];
 const defaultPasswordEncryptIterations = 10000;
 const defaultPasswordOutputKeyLength = 64;
 
-let validatePresenceOf = function(value) {
+let validatePresenceOf = function (value) {
   return value && value.length;
 };
 
@@ -111,7 +111,7 @@ export default class User {
       return crypto.randomBytes(byteSize).toString('base64');
     }
 
-    return crypto.randomBytes(byteSize, function(err, salt) {
+    return crypto.randomBytes(byteSize, function (err, salt) {
       if (err) {
         callback(err);
       }
@@ -143,7 +143,7 @@ export default class User {
     }
 
     return crypto.pbkdf2(password, salt, defaultPasswordEncryptIterations, defaultPasswordOutputKeyLength, 'sha512',
-      function(err, key) {
+      function (err, key) {
         if (err) {
           callback(err);
         }
@@ -187,14 +187,14 @@ export default class User {
   save() {
     // save will always regenerate password hash
     return new Promise((resolve, reject) => {
-        this.updatePassword((err) => {
-          if (err) {
-            reject(err);
-          } else {
-            resolve();
-          }
-        });
-      })
+      this.updatePassword((err) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve();
+        }
+      });
+    })
       .then(() => {
         return _createMSSQL(this);
       })
@@ -203,14 +203,14 @@ export default class User {
   update() {
     // update will always regenerate password hash
     return new Promise((resolve, reject) => {
-        this.updatePassword((err) => {
-          if (err) {
-            reject(err);
-          } else {
-            resolve();
-          }
-        });
-      })
+      this.updatePassword((err) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve();
+        }
+      });
+    })
       .then(() => {
         return _updateMSSQL(this);
       });
@@ -250,7 +250,7 @@ export default class User {
 function _createMSSQL(user) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'CreateUser';
         let request = new mssql.Request(conn)
           // fb public attributes
@@ -262,7 +262,7 @@ function _createMSSQL(user) {
           .input('pictureUrl', mssql.NVarChar(255), user.pictureUrl)
           .input('fbUpdatedTime', mssql.DateTime2(7), user.fbUpdatedTime)
           .input('fbverified', mssql.Bit, user.fbverified)
-          .input('about',mssql.NVarChar(1000), user.about)
+          .input('about', mssql.NVarChar(1000), user.about)
           // fb private attributes
           .input('email', mssql.NVarChar(255), user.email)
           // cp attributes
@@ -279,16 +279,16 @@ function _createMSSQL(user) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             let id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
               //console.log('returnValue', returnValue); // always return 0
-              id = request.parameters.id.value;
+              id = res.output.id;
               //console.log('queryCount', queryCount);
             } catch (e) {
               id = 0;
@@ -305,7 +305,7 @@ function _createMSSQL(user) {
 function _updateMSSQL(user) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'UpdateUser';
         let request = new mssql.Request(conn)
           // fb public attributes
@@ -331,16 +331,16 @@ function _updateMSSQL(user) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             let id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
               //console.log('returnValue', returnValue); // always return 0
-              id = request.parameters.id.value;
+              id = res.output.id;
               //console.log('queryCount', queryCount);
             } catch (e) {
               id = 0;
@@ -357,7 +357,7 @@ function _updateMSSQL(user) {
 function _deleteMSSQL(user) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'DeleteUserById';
         let request = new mssql.Request(conn)
           // fb public attributes
@@ -367,16 +367,16 @@ function _deleteMSSQL(user) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
               //console.log('returnValue', returnValue); // always return 0
-              utcDeletedDateTime = request.parameters.utcDeletedDateTime.value;
+              utcDeletedDateTime = res.output.utcDeletedDateTime;
               //console.log('queryCount', queryCount);
             } catch (e) {
               console.log(`[dbo].[${StoredProcedureName}]`, e);
@@ -394,7 +394,7 @@ function _deleteMSSQL(user) {
 function _adminDeleteMSSQL(user) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'AdminDeleteUserById';
         let request = new mssql.Request(conn)
           // fb public attributes
@@ -403,16 +403,16 @@ function _adminDeleteMSSQL(user) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
               //console.log('returnValue', returnValue); // always return 0
-              utcDeletedDateTime = request.parameters.utcDeletedDateTime.value;
+              utcDeletedDateTime = res.output.utcDeletedDateTime;
               //console.log('queryCount', queryCount);
             } catch (e) {
               console.log(`[dbo].[${StoredProcedureName}]`, e);
@@ -429,7 +429,7 @@ function _adminDeleteMSSQL(user) {
 function _getUserByIdMSSQL(id) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'GetUserById';
         let user;
         let request = new mssql.Request(conn)
@@ -439,12 +439,12 @@ function _getUserByIdMSSQL(id) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
-            if (recordsets[0].length) {
-              user = new User(recordsets[0] && recordsets[0][0]);
+            if (res.recordset.length) {
+              user = new User(res.recordset[0]);
             } else {
               user = undefined;
             }
@@ -459,7 +459,7 @@ function _getUserByIdMSSQL(id) {
 function _getUserByFacebookIdMSSQL(facebookId) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'GetUserByFacebookId';
         let user;
         let request = new mssql.Request(conn)
@@ -468,13 +468,13 @@ function _getUserByFacebookIdMSSQL(facebookId) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
-            if (recordsets[0].length) {
-              //console.log('_getUserByFacebookIdMSSQL', recordsets[0]);
-              user = new User(recordsets[0] && recordsets[0][0]);
+            if (res.recordset.length) {
+              //console.log('_getUserByFacebookIdMSSQL', res.recordset);
+              user = new User(res.recordset[0]);
               //console.log('_getUserByFacebookIdMSSQL constructed', user);
             } else {
               user = undefined;
@@ -490,7 +490,7 @@ function _getUserByFacebookIdMSSQL(facebookId) {
 function _getUserByEmailMSSQL(email) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'GetUserByEmail';
         let user;
         let request = new mssql.Request(conn)
@@ -500,12 +500,12 @@ function _getUserByEmailMSSQL(email) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
-            if (recordsets[0].length) {
-              user = new User(recordsets[0] && recordsets[0][0]);
+            if (res.recordset.length) {
+              user = new User(res.recordset[0]);
             } else {
               user = undefined;
             }

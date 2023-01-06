@@ -32,11 +32,10 @@ module.exports = function(config) {
       'client/bower_components/angular-loading-bar/build/loading-bar.js',
       'client/bower_components/moment/moment.js',
       'client/bower_components/pluralize/pluralize.js',
-      'client/bower_components/moment-timezone/builds/moment-timezone-with-data-2012-2022.js',
+      'client/bower_components/moment-timezone/builds/moment-timezone-with-data-10-year-range.min.js',
       'client/bower_components/autotrack/autotrack.js',
       'client/bower_components/jquery.browser/dist/jquery.browser.js',
       'client/bower_components/uri-util/uri-util.js',
-      'client/bower_components/angular-link-header-parser/release/angular-link-header-parser.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'node_modules/socket.io-client/socket.io.js',

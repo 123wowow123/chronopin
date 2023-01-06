@@ -133,12 +133,12 @@ function _queryMSSQLPinWithFavoriteAndLikeById(pinId, userId) {
         let request = new mssql.Request(conn)
           .input('pinId', mssql.Int, pinId)
           .input('userId', mssql.Int, userId)
-          .execute(`[dbo].[${StoredProcedureName}]`, (err, recordsets, returnValue, affected) => {
+          .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
-            if (recordsets[0].length) {
-              pin = Pin.mapPinMedia(recordsets[0]);
+            if (res.recordset.length) {
+              pin = Pin.mapPinMedia(res.recordset);
             } else {
               pin = undefined;
             }
@@ -161,13 +161,13 @@ function _queryMSSQLPinById(pinId) {
         const StoredProcedureName = 'GetPin';
         let request = new mssql.Request(conn)
           .input('pinId', mssql.Int, pinId)
-          .execute(`[dbo].[${StoredProcedureName}]`, (err, recordsets, returnValue, affected) => {
+          .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
             let pin;
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
-            if (recordsets[0].length) {
-              pin = Pin.mapPinMedia(recordsets[0]);
+            if (res.recordset.length) {
+              pin = Pin.mapPinMedia(res.recordset);
             } else {
               pin = undefined;
             }
@@ -204,7 +204,7 @@ function _updateMSSQL(pin, userId) {
           .input('userId', mssql.Int, userId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
@@ -227,14 +227,14 @@ function _deleteMSSQL(pin) {
           .output('utcDeletedDateTime', mssql.DateTime2(7));
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             let utcDeletedDateTime;
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             try {
               //console.log('returnValue', returnValue); // always return 0
-              utcDeletedDateTime = request.parameters.utcDeletedDateTime.value;
+              utcDeletedDateTime = res.output.utcDeletedDateTime;
               //console.log('queryCount', queryCount);
             } catch (e) {
               console.log(`[dbo].[${StoredProcedureName}]`, e);

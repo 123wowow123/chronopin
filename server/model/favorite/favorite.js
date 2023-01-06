@@ -179,13 +179,13 @@ function _queryMSSQLFavoriteById(id) {
         const StoredProcedureName = 'GetFavorite';
         let request = new mssql.Request(conn)
           .input('id', mssql.Int, id)
-          .execute(`[dbo].[${StoredProcedureName}]`, (err, recordsets, returnValue, affected) => {
+          .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
             let favorite;
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
-            if (recordsets[0].length) {
-              favorite = new Favorite(recordsets[0] && recordsets[0][0]);
+            if (res.recordset.length) {
+              favorite = new Favorite(res.recordset[0]);
             } else {
               favorite = undefined;
             }
@@ -217,9 +217,9 @@ function _upsertMSSQL(favorite, userId, pinId) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             let id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
@@ -254,9 +254,9 @@ function _deleteMSSQL(favorite) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
@@ -290,15 +290,15 @@ function _deleteByPinIdMSSQL(favorite) {
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, recordsets, returnValue, affected) => {
+          (err, res, returnValue, affected) => {
             let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', recordsets[0]);
+            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             try {
               //console.log('returnValue', returnValue); // always return 0
-              utcDeletedDateTime = request.parameters.utcDeletedDateTime.value;
+              utcDeletedDateTime = res.output.utcDeletedDateTime;
               //console.log('queryCount', queryCount);
             } catch (e) {
               console.log(`[dbo].[${StoredProcedureName}]`, e);

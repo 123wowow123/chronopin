@@ -81,13 +81,13 @@ function _queryMSSQLPinsWithSubArrays(fromDateTime, lastPinId, offset, pageSize)
 
                 StoredProcedureName = 'GetPinsWithFavoriteAndLikeArrayNext';
                 request.execute(`[dbo].[${StoredProcedureName}]`,
-                    (err, recordsets, returnValue, affected) => {
+                    (err, res, returnValue, affected) => {
                         if (err) {
                             reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
                         }
 
                         resolve({
-                            pins: recordsets[0]
+                            pins: res.recordset
                         });
                     });
 

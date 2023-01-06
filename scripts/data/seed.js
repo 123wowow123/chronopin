@@ -58,7 +58,7 @@ module.exports.seedDB = function () {
       email: 'flynni2008@gmail.com',
       password: 'admin',
       facebookId: '10100470408434696',
-      id: 3 // ToDo: need to be dynamically linked
+      id: 1 // ToDo: need to be dynamically linked
     },
     secondaryUserObj = {
       provider: 'facebook',
@@ -68,7 +68,7 @@ module.exports.seedDB = function () {
       email: 'chenxikristy@gmail.com',
       password: 'admin',
       facebookId: '984663319826',
-      id: 4 // ToDo: need to be dynamically linked
+      id: 2 // ToDo: need to be dynamically linked
     };
 
 
@@ -166,8 +166,9 @@ module.exports.seedDB = function () {
       return user.save();
     })
     .then(({
-      user
+      //user
     }) => {
+      let user = new User(defaultUserObj);
       // Create Pins
       let pinsJSONObjs = JSON.parse(fs.readFileSync(pinFilePath, 'utf8'));
       let pins = new FullPins(pinsJSONObjs);
