@@ -2,12 +2,12 @@
   <div class="pin__preview">
 
     <div class="pin__panel" ng-if="$ctrl.pinReady">
-      <a class="pin__asset pin__asset--link" ng-if="$ctrl.pin.media[0].thumbName" ng-href="{{$ctrl.pin.sourceUrl}}">
+      <a class="pin__asset pin__asset--link" ng-if="$ctrl.pin.media[0].thumbName" ng-href="{{$ctrl.pin.sourceUrl}}" target="_blank" >
         <img ng-src="{{$ctrl.appConfig.thumbUrlPrefix + $ctrl.pin.media[0].thumbName}}" class="pin__image" data-actual-width="{{$ctrl.pin.media[0].thumbWidth}}" data-actual-height="{{$ctrl.pin.media[0].thumbHeight}}" />
       </a>
       <div class="grid__body">
         <h4 class="grid__heading">
-          <a href="{{$ctrl.pin.sourceUrl}}">
+          <a href="{{$ctrl.pin.sourceUrl}}" target="_blank">
           {{$ctrl.pin.title}}
           </a>
         </h4>

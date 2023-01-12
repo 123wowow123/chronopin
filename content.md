@@ -9,6 +9,26 @@ Add youtube pin capability
 Learn to summerize content - train using summery tag and full html body
 
 
+Improvement Idea:
+
+easy search - https://medium.datadriveninvestor.com/context-based-search-using-bert-8957d25feaa9
+Build search - https://medium.com/mlearning-ai/search-rank-and-recommendations-35cc717772cb
+
+
+Spotlight - show right side panel of things favorited in the next 30 days. Click link to scroll to item
+Trending - same as above but for trending. Also show local trending
+Need iframe viewing or they will chat on linked site and not on chronopin
+Add visit button next to title target blank
+
+Drilldown page:
+- Chat
+- Additional content if chopped off
+- More like this - see simlilar pins (drasctially smaller timeline starting from now -1 to end with show more button at beginning to show more from history)
+
+?- Hosted checkout
+
+
+
 To Add:
 
 https://youtu.be/Ac0BOavsWaY?t=117
@@ -43,3 +63,10 @@ https://youtu.be/YGkELtG8IMw?t=254
 
 https://youtu.be/YGkELtG8IMw?t=352
 2050 most of these counties will be aged out
+
+https://youtu.be/o49oovm1fRs?t=222
+Uktrain mud season (March into April), tanks cannot move on fields
+
+
+
+https://www.theverge.com/2023/1/5/23531458/alfred-dbs2-smart-deadbolt-lock-wireless-charging

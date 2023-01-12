@@ -6,7 +6,7 @@ $timeline-countdown-bg: lighten($timeline-base-bg, 20%);
 $timeline-trivia-bg: #6e7a73;
 $timeline-countdown-today-bg: #999966;
 $timeline-countdown-color: #ededed;
-$timeline-header-color: #111;
+$timeline-header-color: var(--grid-header-text-color);
 $timeline-content-color: #555;
 // Grid
 $grid-max-width-mobile: $iphone-6-landscape;
@@ -25,7 +25,7 @@ $grid-max-width-screen: $iphone-6-landscape / 2;
 }
 
 .main {
-    background-color: $outer-container-bg;
+    background-color: var(--primary-bg-color);
     padding-left: calc(env(safe-area-inset-left) * (2/3));
     padding-right: calc(env(safe-area-inset-right) * (2/3));
 }
@@ -118,7 +118,7 @@ $grid-max-width-screen: $iphone-6-landscape / 2;
         bottom: 0;
         position: absolute;
         width: 3px; // background-color: #eee;
-        border-left: 3px solid #eee;
+        border-left: 1px solid var(--timeline-color);
         left: 140px;
         margin-left: -1.5px;
         content: " ";
@@ -136,7 +136,7 @@ $grid-max-width-screen: $iphone-6-landscape / 2;
     }
 }
 
-$bag-font-color: #515151;
+$bag-font-color: var(--bag-text-color);
 .bag {
     padding-bottom: 1px;
     &_title {
@@ -166,7 +166,7 @@ $bag-font-color: #515151;
     }
     /** timeline panels **/
     &__panel {
-        background: #fff; //border: 1px solid #d4d4d4;
+        background: var(--grid-panel-bg-color); //border: 1px solid #d4d4d4;
         padding: 7px 15px 15px;
         position: relative;
         border-radius: 8px; //box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
@@ -196,7 +196,7 @@ $bag-font-color: #515151;
         color: $timeline-header-color;
         font-size: 20px;
         line-height: 23px;
-        font-family: GeorgiaProCondSemiBold, Georgia, serif; // &_link:focus, &_link:hover {
+        font-family: IBMPlexSans, Arial, sans-serif; //GeorgiaProCondSemiBold, Georgia, serif; // &_link:focus, &_link:hover {
         //   text-decoration: none;
         // }
         a {
@@ -204,9 +204,9 @@ $bag-font-color: #515151;
         }
     }
     &__description {
-        color: #333;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        text-align: justify;
+        color: var(--grid-description-text-color);
+        font-family: Noto Sans,Arial,sans-serif; //Georgia, 'Times New Roman', Times, serif;
+        //text-align: justify;
     }
     /** search and sort section css end ***/
     /*** description section css ***/
@@ -267,8 +267,10 @@ $bag-font-color: #515151;
         display: flex;
         align-items: center;
         margin-bottom: 10px;
-        max-height: 450px;
+        max-height: 510px;
         overflow-y: hidden;
+        //border-radius: 5px;
+        margin: 0 -15px 10px;
 
         &--link {
             cursor: zoom-in;
@@ -357,7 +359,7 @@ $bag-font-color: #515151;
 }
 
 .rubric {
-    color: $timeline-header-color;
+    color: var(--grid-auther-text-color);
     &:before {
         content: ' / ';
         display: inline;
@@ -367,7 +369,7 @@ $bag-font-color: #515151;
 }
 
 .headline-above {
-    color: lighten($timeline-content-color, 10%);
+    color: var(--grid-post-date-text-color);
     font-size: 10px;
     margin-bottom: 4px;
 }
@@ -424,11 +426,9 @@ $timeline-ipad-landscape-left-alignment: 95px;
         }
         /** timeline verticle line **/
         &:before {
-            border-left: 3px dotted #eee;
-            left: 7px;
+            border-left: 1px dotted var(--timeline-color-narrow);
+            left: 2px;
         }
-
-        
     }
     .main {
         &__no-result-found {

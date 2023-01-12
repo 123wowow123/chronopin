@@ -37,6 +37,7 @@
 .search-box-container {
     position: relative;
     flex: 1 1 0px;
+
     .dropdown-menu {
         right: 0px;
     }
@@ -51,7 +52,7 @@
     @extend .form-control;
     width: 100% !important;
     border: none;
-    background-color: #eee !important;
+    background-color: var(--header-search-bg-color) !important;
     border-radius: 4px !important;
 
     &:focus {
@@ -86,14 +87,25 @@
     top: 0;
     z-index: 100;
     width: 100%; //box-shadow: 0 3px 3px rgba(0,0,0,0.175);
+
     .navbar {
         margin: 0;
         padding: 0 10px;
         border-bottom: 2px solid;
     }
+
     .navbar-default {
-        background-color: #fff;
-        border-color: #e7e7e7;
+        //color: var(--header-brand-text-color) !important;
+        background-color: var(--header-bg-color);
+        border-color: var(--primary-border-color);
+
+        .navbar-nav >li>a {
+            color: var(--header-brand-text-color);
+        }
+
+        .navbar-brand {
+            color: var(--header-brand-text-color);
+        }
     }
 }
 
@@ -101,9 +113,11 @@
     .nav-container {
         flex-wrap: wrap;
     }
+
     .navbar-collapse {
         flex-grow: 1;
     }
+
     .navbar-brand {
         &.\--collapse {
             display: none;
