@@ -18,7 +18,7 @@ import {
 // likes - will be converted to bool for client
 const prop = BasePinProp;
 
-
+// Used in loading scripts but not in site
 export default class FullPin extends BasePin {
 
     constructor(pin, user) {

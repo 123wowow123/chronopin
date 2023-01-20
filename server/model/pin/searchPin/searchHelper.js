@@ -6,5 +6,5 @@ const address = config.elastiSearch.serviceUrl;
 /* ElasticSearch Helper */
 
 export function prefixSearchIndex(index) {
-    return `${address}/${indexPrefix}${index}`;
+    return `https://${address}/${indexPrefix}${index}`;
 };

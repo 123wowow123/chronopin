@@ -48,10 +48,13 @@ export default class BasePins {
     }
 
     save() {
-        const promises = this.pins.map(p => {
-            return p.save();
-        });
-        return Promise.all(promises);
+        const promises = this.pins
+            .reduce((prev, p) => prev.then(() => p.save()), Promise.resolve());
+        return promises;
+    }
+
+    getAllIds() {
+        return this.pins.map(p => p.id)
     }
 
     minMaxDateTimePin() {

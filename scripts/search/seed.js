@@ -36,6 +36,9 @@ module.exports.setup = function (seedOpt) {
     return this;
 }
 
+// Suppresses "Error: self signed certificate in certificate chain"
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
+
 module.exports.seed = function () {
 
     return Promise.resolve('Start Load Search Data')

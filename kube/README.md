@@ -72,3 +72,9 @@ Run `docker image prune --force --all` to remove all images that are not current
 ## Pricing
 
 [Pricing](https://cloud.google.com/compute/pricing?hl=en_US&_ga=2.195120300.-1809462848.1528116354)
+
+
+
+
+## New docker doc:
+https://www.elastic.co/guide/en/elasticsearch/reference/8.6/run-elasticsearch-locally.html#_send_requests_to_elasticsearch

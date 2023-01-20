@@ -1,5 +1,6 @@
 import { prefixSearchIndex } from './searchHelper';
 import rp from 'request-promise';
+import * as config from '../../../config/environment';
 
 export default class SearchIndex {
 
@@ -19,7 +20,8 @@ function removeIndex(index) {
     // content-length":0 bug causing resonse to always fail even if command exeucuted sucessfully
     // "body":"{\"acknowledged\":true}"
     simple: false,
-    resolveWithFullResponse: true
+    resolveWithFullResponse: true,
+    auth: config.elastiSearch.auth
   };
 
   //debugger

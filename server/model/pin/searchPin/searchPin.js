@@ -3,6 +3,7 @@
 import * as _ from 'lodash';
 import rp from 'request-promise';
 import { prefixSearchIndex } from './searchHelper';
+import * as config from '../../../config/environment';
 
 import {
     BasePin,
@@ -101,7 +102,8 @@ function favoritePin(userId, pin) {
                 }
             }
         },
-        json: true // Automatically stringifies the body to JSON
+        json: true, // Automatically stringifies the body to JSON
+        auth: config.elastiSearch.auth
     };
 
     console.log(JSON.stringify(options.body.script));
@@ -130,7 +132,8 @@ function unfavoritePin(userId, pin) {
                 }
             }
         },
-        json: true // Automatically stringifies the body to JSON
+        json: true, // Automatically stringifies the body to JSON
+        auth: config.elastiSearch.auth
     };
 
     console.log(JSON.stringify(options.body.script));
@@ -159,7 +162,8 @@ function likePin(userId, pin) {
                 "uId": userId
             }
         },
-        json: true // Automatically stringifies the body to JSON
+        json: true, // Automatically stringifies the body to JSON
+        auth: config.elastiSearch.auth
     };
 
     //debugger
@@ -187,7 +191,8 @@ function unlikePin(userId, pin) {
                 }
             }
         },
-        json: true // Automatically stringifies the body to JSON
+        json: true, // Automatically stringifies the body to JSON
+        auth: config.elastiSearch.auth
     };
 
     console.log(JSON.stringify(options.body.script));
@@ -210,7 +215,8 @@ function upsertPin(pin) {
     const options = {
         method: 'PUT',
         uri,
-        json: true // Automatically stringifies the body to JSON
+        json: true, // Automatically stringifies the body to JSON
+        auth: config.elastiSearch.auth
     };
 
     //debugger
@@ -227,7 +233,8 @@ function removePin(id) {
     const options = {
         method: 'DELETE',
         uri,
-        json: true // Automatically stringifies the body to JSON
+        json: true, // Automatically stringifies the body to JSON
+        auth: config.elastiSearch.auth
     };
 
     //debugger

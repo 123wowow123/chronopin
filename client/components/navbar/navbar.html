@@ -69,7 +69,7 @@
         <li ng-hide="nav.isLoggedIn()" ui-sref-active="active">
           <a ui-sref="login">Login</a>
         </li>
-        <li class="dropdown" ng-show="nav.isLoggedIn()" uib-dropdown keyboard-nav>
+        <li class="dropdown user-setting" ng-show="nav.isLoggedIn()" uib-dropdown keyboard-nav>
           <a type="button" class="dropdown-toggle" uib-dropdown-toggle role="button" aria-haspopup="true" aria-expanded="false">
             {{ nav.getCurrentUserName() }}
             <span class="caret"></span>

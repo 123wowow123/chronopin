@@ -1,5 +1,8 @@
 'use strict';
 
+// Suppresses "Error: self signed certificate in certificate chain"
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
+
 // Set default node environment to development
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 

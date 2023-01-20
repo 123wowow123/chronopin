@@ -13,6 +13,8 @@ import {
 
 //save //queryForwardByDate
 
+
+// Used in loading scripts but not in site
 export default class FullPins extends BasePins {
     // Properties
     // this.pins

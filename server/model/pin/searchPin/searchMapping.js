@@ -1,5 +1,6 @@
 import { prefixSearchIndex } from './searchHelper';
 import rp from 'request-promise';
+import * as config from '../../../config/environment';
 
 export default class SearchMapping {
 
@@ -16,7 +17,8 @@ function createMapping(index, mapping) {
   const options = {
     method: 'PUT',
     uri,
-    json: true // Automatically stringifies the body to JSON
+    json: true, // Automatically stringifies the body to JSON
+    auth: config.elastiSearch.auth
   };
 
   //debugger

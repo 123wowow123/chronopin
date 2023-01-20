@@ -51,8 +51,8 @@
             this._captureOffset();
             this.searching = true;
             this.pinWebService.search({
-              searchText: data.searchText,
-              hasFavorite: true
+              q: data.searchText,
+              f: true
             })
               .then(res => {
                 this._setSearchPinGroups(res.data.pins);

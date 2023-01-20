@@ -1,6 +1,6 @@
 {
   "name": "chronopin",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "main": "server/app.js",
   "dependencies": {
     "angular-link-header-parser": "^1.0.3",

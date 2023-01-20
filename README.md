@@ -538,3 +538,13 @@ This is a promotional article about one of the company partners with Interesting
 ## Bugs
 - When in specific pin view and clicking logout will show blank screen
 - Date tag mobile view broken
+
+
+
+
+
+
+auto dismiss
+fass return n number of results
+logged in search needs to be wider
+empty search shold not show dropdown

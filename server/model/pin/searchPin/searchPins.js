@@ -3,9 +3,11 @@
 import rp from 'request-promise';
 import {
     SearchPin,
+    Pins,
     BasePins
 } from '../..';
 import { prefixSearchIndex } from './searchHelper';
+import * as config from '../../../config/environment';
 
 export default class SearchPins extends BasePins {
     // Properties
@@ -64,6 +66,21 @@ export default class SearchPins extends BasePins {
         return this;
     }
 
+    fromFaiss(result) {
+        let pins = result.res.map(p => {
+            return {
+                // ...p._source,
+                // highlight: p.highlight,
+                id: p.index,
+                searchScore: p.match
+            };
+        });
+        return this
+            .set(pins)
+            .setHits(result.res.length)
+            .setTook(result.took);
+    }
+
     fromElasticSearch(result) {
         let pins = result.hits.hits.map(p => {
             return {
@@ -74,11 +91,11 @@ export default class SearchPins extends BasePins {
         });
         return this
             .set(pins)
-            .setHits(result.hits.total)
+            .setHits(result.hits.total.value)
             .setTook(result.took);
     }
 
-    convertToPins(userId) {
+    convertElasticSearchToPins(userId) {
         let outPut = Object.assign({}, this);
         let pins = outPut.pins.map(p => {
             let out = Object.assign({}, p);
@@ -106,50 +123,63 @@ export default class SearchPins extends BasePins {
     }
 
     static search(userId, searchText) {
-        return search(searchText)
+        return semanticSearch(searchText)
             .then(res => {
-                return new SearchPins().fromElasticSearch(res);
+                return new SearchPins().fromFaiss(res);
             })
             .then(pins => {
-                return pins.convertToPins(userId);
+                return Pins.queryPinByIds(pins); // TODO: should return SearchPins
             });
     }
 
     static searchFavorite(userId, searchText) {
-        return searchFavorite(userId, searchText)
+        return semanticSearch(searchText)
             .then(res => {
-                return new SearchPins().fromElasticSearch(res);
+                return new SearchPins().fromFaiss(res);
             })
             .then(pins => {
-                return pins.convertToPins(userId);
+                return Pins.queryPinByIdsFilterByHasFavorite(pins, userId); // TODO: should return SearchPins
             });
     }
 
     static autocomplete(userId, searchText) {
-        return autocomplete(searchText)
+        return autocomplete(searchText)  // TODO: Add semantic Search to results
             .then(res => {
                 return new SearchPins().fromElasticSearch(res);
             })
             .then(pins => {
-                return pins.convertToPins(userId);
+                return pins.convertElasticSearchToPins(userId);
             });
     }
 
     static autocompleteFavorite(userId, searchText) {
-        return autocompleteFavorite(userId, searchText)
+        return autocompleteFavorite(userId, searchText) // TODO: Add semantic Search to results
             .then(res => {
                 return new SearchPins().fromElasticSearch(res);
             })
             .then(pins => {
-                return pins.convertToPins(userId);
+                return pins.convertElasticSearchToPins(userId);
             });
     }
 }
 
 /* Search */
 
+function semanticSearch(searchText) {
+    const serviceUrl = config.faiss.serviceUrl;
+    const uri = `${serviceUrl}/faiss/search?q=${searchText}`
+
+    let options = {
+        method: 'GET',
+        uri: uri,
+        json: true // Automatically stringifies the body to JSON
+    };
+
+    return rp(options);
+};
+
 // https://docs.microsoft.com/en-us/rest/api/searchservice/?redirectedfrom=MSDN
-function search(searchText) {
+function elasticSearch(searchText) {
     const index = "pins";
     const command = "_search";
     const uri = prefixSearchIndex(index) + "/" + command;
@@ -166,13 +196,14 @@ function search(searchText) {
                 }
             }
         },
-        json: true // Automatically stringifies the body to JSON
+        json: true, // Automatically stringifies the body to JSON
+        auth: config.elastiSearch.auth
     };
 
     return rp(options);
 };
 
-function searchFavorite(userId, searchText) {
+function elasticSearchFavorite(userId, searchText) {
     const index = "pins";
     const command = "_search";
     const uri = prefixSearchIndex(index) + "/" + command;
@@ -200,7 +231,8 @@ function searchFavorite(userId, searchText) {
                 }
             }
         },
-        json: true // Automatically stringifies the body to JSON
+        json: true, // Automatically stringifies the body to JSON
+        auth: config.elastiSearch.auth
     };
 
     return rp(options);
@@ -226,7 +258,8 @@ function autocomplete(searchText) {
                 }
             }
         },
-        json: true // Automatically stringifies the body to JSON
+        json: true, // Automatically stringifies the body to JSON
+        auth: config.elastiSearch.auth
     };
 
     return rp(options);
@@ -261,7 +294,8 @@ function autocompleteFavorite(userId, searchText) {
                 }
             }
         },
-        json: true // Automatically stringifies the body to JSON
+        json: true, // Automatically stringifies the body to JSON
+        auth: config.elastiSearch.auth
     };
 
     return rp(options);

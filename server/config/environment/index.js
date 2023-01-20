@@ -70,9 +70,18 @@ let all = {
     AZURE_STORAGE_CONNECTION_STRING: getProcessEnv('AZURE_STORAGE_CONNECTION_STRING') || ''
   },
 
+  faiss: {
+    serviceUrl: getProcessEnv('FAISS_URL'),
+  },
+
   elastiSearch: {
     indexPrefix: getProcessEnv('INDEXPREFIX') || '',
-    serviceUrl: getProcessEnv('ELASTISEARCH_URL') || ''
+    serviceUrl: getProcessEnv('ELASTISEARCH_URL') || '',
+    auth: {
+      user: getProcessEnv('ELASTISEARCH_USER'),
+      pass: getProcessEnv('ELASTISEARCH_PASS'),
+      sendImmediately: false
+    },
   },
 
   chromeless: {
@@ -105,13 +114,13 @@ let all = {
 
 const configOverridePath = './' + getProcessEnv('NODE_ENV') + '.js';
 
-const overrideConfig = fs.existsSync(path.join( __dirname, configOverridePath )) ?
+const overrideConfig = fs.existsSync(path.join(__dirname, configOverridePath)) ?
   require(configOverridePath) :
   (
     log
       .warn("Environment:", process.env.NODE_ENV)
       .warn("Missing Override Config, fallback to Env variables:", configOverridePath),
-      {}
+    {}
   );
 
 module.exports = _.merge(

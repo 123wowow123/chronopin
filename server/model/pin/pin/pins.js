@@ -99,6 +99,22 @@ export default class Pins extends BasePins {
       });
   }
 
+  static queryPinByIds(pins) {
+    return _queryMSSQPinByIds(pins)
+      .then(res => {
+        //console.log('queryInitialByDateFilterByHasFavorite', res);
+        return new Pins(res);
+      });
+  }
+
+  static queryPinByIdsFilterByHasFavorite(pins, userId) {
+    return _queryPinByIdsFilterByHasFavorite(pins, userId)
+      .then(res => {
+        //console.log('queryInitialByDateFilterByHasFavorite', res);
+        return new Pins(res);
+      });
+  }
+
 }
 
 function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, pageSize) {
@@ -282,6 +298,90 @@ function _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSiz
           .output('queryCount', mssql.Int);
 
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
+
+        request.execute(`[dbo].[${StoredProcedureName}]`,
+          function (err, res, returnValue, affected) {
+            let queryCount;
+            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
+            if (err) {
+              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+            }
+            // ToDo: doesn't always return value
+            try {
+              //console.log('returnValue', returnValue); // always return 0
+              queryCount = res.output.queryCount;
+              //console.log('queryCount', queryCount);
+            } catch (e) {
+              queryCount = 0;
+            }
+
+            resolve({
+              pins: res.recordset,
+              queryCount: queryCount
+            });
+          });
+      });
+    });
+}
+
+
+function _queryMSSQPinByIds(pins) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise(function (resolve, reject) {
+        const StoredProcedureName = 'GetPinByIds';
+
+        const tvp = new mssql.Table()
+        tvp.columns.add('tId', mssql.Int);
+        pins.getAllIds().forEach(id => {
+          tvp.rows.add(id) // Values are in same order as columns.
+        });
+
+        let request = new mssql.Request(conn)
+          .input('TableIds', tvp)
+          .output('queryCount', mssql.Int);
+
+        request.execute(`[dbo].[${StoredProcedureName}]`,
+          function (err, res, returnValue, affected) {
+            let queryCount;
+            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
+            if (err) {
+              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+            }
+            // ToDo: doesn't always return value
+            try {
+              //console.log('returnValue', returnValue); // always return 0
+              queryCount = res.output.queryCount;
+              //console.log('queryCount', queryCount);
+            } catch (e) {
+              queryCount = 0;
+            }
+
+            resolve({
+              pins: res.recordset,
+              queryCount: queryCount
+            });
+          });
+      });
+    });
+}
+
+function _queryPinByIdsFilterByHasFavorite(pins, userId) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise(function (resolve, reject) {
+        const StoredProcedureName = 'GetPinByIdsFilterByHasFavorite';
+
+        const tvp = new mssql.Table()
+        tvp.columns.add('TableIds', mssql.Int);
+        pins.getAllIds().forEach(id => {
+          tvp.rows.add(id) // Values are in same order as columns.
+        });
+
+        let request = new mssql.Request(conn)
+          .input('tIds', tvp)
+          .input('userId', mssql.Int, userId)
+          .output('queryCount', mssql.Int);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           function (err, res, returnValue, affected) {

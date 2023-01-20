@@ -10,7 +10,6 @@
 	li {
 		display: flex;
 		border: none;
-		border-bottom: 1px lightgray solid;
 		margin-bottom: 0;
 
 		&:last-child {
@@ -26,5 +25,9 @@
 			align-items: center;
 			text-decoration: none;
 		}
+	}
+
+	li+li {
+		margin-top: 2px;
 	}
 }

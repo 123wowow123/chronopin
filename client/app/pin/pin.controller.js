@@ -34,7 +34,7 @@
 
           this.searching = true;
           this.pinWebService.search({
-            searchText: res.data.title
+            q: res.data.title
           })
           .then(res => {
             let pins = res.data.pins;

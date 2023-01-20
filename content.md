@@ -19,6 +19,7 @@ Spotlight - show right side panel of things favorited in the next 30 days. Click
 Trending - same as above but for trending. Also show local trending
 Need iframe viewing or they will chat on linked site and not on chronopin
 Add visit button next to title target blank
+Support multiple end dates per pin
 
 Drilldown page:
 - Chat
@@ -37,13 +38,11 @@ https://youtu.be/Ac0BOavsWaY?t=117
 https://youtu.be/8fwdSyA6AB0?t=133
 9-15% inflation for next 5 years
 
-
 https://youtu.be/GM-OI7HcCeU?t=55
 China will lose 30 million people a day 2050
 
 https://www.youtube.com/@TheB1M
 Video and their completion date
-
 
 https://youtu.be/pwA2rWWlCq0?t=471
 Russia losing hold of their teretory 2045 to 2070
@@ -66,6 +65,13 @@ https://youtu.be/YGkELtG8IMw?t=352
 
 https://youtu.be/o49oovm1fRs?t=222
 Uktrain mud season (March into April), tanks cannot move on fields
+
+https://youtu.be/7Me2G6FJZMI?t=33
+China by 2030 there will be more retirees than workers and by 2050 the entire population drops below 650 million
+
+
+https://youtu.be/IGkzPGBkGhw?t=323
+May and June russian will have increased force and Ukraine will have tanks
 
 
 

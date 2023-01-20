@@ -23,8 +23,8 @@ $nav-offset-collapsed: 102px;
 
 // fonts
 @font-face {
-    font-family: AstronomicSignsSt;
-    src: url(../assets/fonts/Astronomic_Signs_St.ttf);
+  font-family: AstronomicSignsSt;
+  src: url(../assets/fonts/Astronomic_Signs_St.ttf);
 }
 
 .browserupgrade {
@@ -38,6 +38,7 @@ $nav-offset-collapsed: 102px;
 .body {
   //adds padding for fix navbar-main
   padding-top: 51px;
+  color: var(--primary-color);
   background: var(--primary-bg-color);
 }
 
@@ -62,7 +63,8 @@ img {
   justify-content: center;
 }
 
-.page_message, .page_loading {
+.page_message,
+.page_loading {
   @extend .vertical-horizontal-align;
   position: fixed;
   top: $nav-offset;
@@ -71,18 +73,36 @@ img {
   right: 0;
 }
 
-// Override / extend bootstrap defaults
-.form-control__clear-texbox {
-  @extend .glyphicon;
-  @extend .glyphicon-remove;
-  @extend .form-control-feedback;
-  pointer-events: auto;
-  cursor: pointer;
-  opacity: 0.5;
-  top: auto;
-  bottom: 0;
-  z-index: 5;
+.form-control {
+  color: var(--header-search-color);
+  background-color: var(--header-search-bg-color) !important;
+  border-color: var(--header-search-bg-color);
+  border-radius: 4px !important;
 }
+
+.btn-default {
+
+  .input-group-btn &,
+  .input-group & {
+    color: var(--header-search-color);
+    background: var(--header-search-bg-color);
+    border-color: var(--header-search-bg-color);
+  }
+
+  @at-root .input-group-addon {
+    color: var(--header-search-color);
+    background: var(--header-search-bg-color);
+    border-color: var(--header-search-bg-color);
+  }
+
+}
+
+.list-group-item {
+  color: var(--header-search-color);
+  background: var(--header-search-bg-color);
+}
+
+
 
 // extend dosn't work inside media queries
 @mixin grid-verticle-break {

@@ -26,7 +26,6 @@ export default function (app) {
   /** End Test **/
 
   app.use('/api/users', require('./api/user'));
-  //app.use('/api/pins', require('./api/pin'));
   app.use('/api/pins', require('./api/pin'));
   //app.use('/api/likes', require('./api/like'));
   app.use('/api/scrape', require('./api/scrape'));
