@@ -102,7 +102,13 @@ img {
   background: var(--header-search-bg-color);
 }
 
+.btn-link {
+  color: var(--primary-link-color);
 
+  &:disabled {
+    color: var(--primary-link-color-disabled) !important;
+  }
+}
 
 // extend dosn't work inside media queries
 @mixin grid-verticle-break {
