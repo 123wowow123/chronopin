@@ -19,7 +19,7 @@ angular.module('chronopinNodeApp')
                 // let offset = parseInt(attrs.threshold) || 0;
                 const el = element[0];
                 const fn = $parse(attrs.waypoint);
-//debugger
+                //debugger
                 const callback = (entries, observer) => {
                     entries.forEach(entry => {
                         // debugger
@@ -38,8 +38,8 @@ angular.module('chronopinNodeApp')
                             inView: entry.isIntersecting,
                             entry: entry
                         };
-//debugger
-                        fn(scope, {event: emitObj});
+                        //debugger
+                        fn(scope, { event: emitObj });
 
                     });
                 };

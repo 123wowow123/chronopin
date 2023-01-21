@@ -15,6 +15,8 @@ export default class SearchPins extends BasePins {
     // this.hits - Number of pins matching query without paging
     // this.took - ElasticSearch Processing Time
 
+    static numberOfResults = 20;
+
     constructor(pins) {
         super(pins);
     }
@@ -123,7 +125,7 @@ export default class SearchPins extends BasePins {
     }
 
     static search(userId, searchText) {
-        return semanticSearch(searchText)
+        return semanticSearch(searchText, SearchPins.numberOfResults)
             .then(res => {
                 return new SearchPins().fromFaiss(res);
             })
@@ -133,7 +135,7 @@ export default class SearchPins extends BasePins {
     }
 
     static searchFavorite(userId, searchText) {
-        return semanticSearch(searchText)
+        return semanticSearch(searchText, SearchPins.numberOfResults)
             .then(res => {
                 return new SearchPins().fromFaiss(res);
             })
@@ -165,9 +167,9 @@ export default class SearchPins extends BasePins {
 
 /* Search */
 
-function semanticSearch(searchText) {
+function semanticSearch(searchText, numberOfResults) {
     const serviceUrl = config.faiss.serviceUrl;
-    const uri = `${serviceUrl}/faiss/search?q=${searchText}`
+    const uri = `${serviceUrl}/faiss/search?q=${searchText}&k=${numberOfResults}`
 
     let options = {
         method: 'GET',
