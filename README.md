@@ -546,5 +546,3 @@ This is a promotional article about one of the company partners with Interesting
 
 auto dismiss
 fass return n number of results
-logged in search needs to be wider
-empty search shold not show dropdown

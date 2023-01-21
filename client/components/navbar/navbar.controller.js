@@ -30,6 +30,12 @@ class NavbarController {
     this.searchChoice = this.Util.sanitizeSearchChoice(this.$state.params.f);
   }
 
+  clearSuggestionsAndDismiss() {
+    // TODO: add popular search suggestions
+    this.suggestions = [];
+    this.showSuggestions = false;
+  }
+
   submitSearch(searchText, searchChoiceText) {
     this.dismissAutoComplete();
     this.$state.go('search', { q: searchText, f: searchChoiceText });
@@ -39,7 +45,8 @@ class NavbarController {
   autoComplete(searchText, searchChoiceText) {
     //debugger
     if (!searchText) {
-      return;
+      debugger;
+      this.clearSuggestionsAndDismiss();
     }
     const query = searchText;
     const filter = this.Util.sanitizeSearchChoice(searchChoiceText);
@@ -98,9 +105,15 @@ class NavbarController {
   //   }
   // }
 
-  showAutoComplete($event) {
+  showAutoComplete($event, searchText) {
     //console.log(JSON.stringify($event));
     $event.stopPropagation();
+
+    if (!searchText) {
+      debugger;
+      return  this.clearSuggestionsAndDismiss();
+    }
+
     if (_.get(this, 'suggestions.length', 0)) {
       this.showSuggestions = true;
     }
@@ -114,6 +127,7 @@ class NavbarController {
 
   dismissAutoComplete() {
     //console.log("On autocomplete dismiss", JSON.stringify())
+    //debugger;
     this.showSuggestions = false;
   }
 
