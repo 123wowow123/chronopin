@@ -110,7 +110,7 @@ class NavbarController {
     $event.stopPropagation();
 
     if (!searchText) {
-      debugger;
+      //debugger;
       return  this.clearSuggestionsAndDismiss();
     }
 
