@@ -175,6 +175,9 @@ $bag-font-color: var(--bag-text-color);
             box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
             .grid__heading {
                 text-decoration: underline;
+                &_link {
+                    cursor: zoom-in;
+                }
             }
         }
     }
