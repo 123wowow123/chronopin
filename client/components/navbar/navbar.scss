@@ -13,6 +13,8 @@
 .navbar-toggle {
     order: 3;
     height: 34px;
+    margin-right: 0;
+    border: var(--header-search-bg-color);
 }
 
 .navbar-form {

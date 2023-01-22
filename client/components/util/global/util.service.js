@@ -63,7 +63,6 @@
         return origins.length >= 1;
       },
 
-
       getLinkHeader(omitLinkHeaderProp, linkHeader, key) {
         return linkHeader && _.omit(linkHeader[key], omitLinkHeaderProp);
       },
@@ -78,7 +77,7 @@
           return t.value === searchChoiceLower;
         })
         return found || defaultChoice;
-      }
+      },
 
     };
 
