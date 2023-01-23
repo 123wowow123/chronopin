@@ -25,6 +25,7 @@ module.exports.scrape = function scrape(pageUrl) {
 
       // this will be executed in headless chrome
       return (new Promise((resolve, reject) => {
+        // Github url js will not be executed need to upload to S3
         let scriptPath = "https://raw.githubusercontent.com/123wowow123/chronopin/master/server/scrape/scrape.min.js";
         var script = document.createElement('script');
         //resolve("script loaded")

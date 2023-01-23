@@ -84,10 +84,10 @@ let all = {
     },
   },
 
-  chromeless: {
-    endpointUrl: getProcessEnv('CHROMELESS_ENDPOINT_URL'),
-    apiKey: getProcessEnv('CHROMELESS_ENDPOINT_API_KEY')
-  },
+  // chromeless: {
+  //   endpointUrl: getProcessEnv('CHROMELESS_ENDPOINT_URL'),
+  //   apiKey: getProcessEnv('CHROMELESS_ENDPOINT_API_KEY')
+  // },
 
   aws: {
     accessKeyId: getProcessEnv('AWS_ACCESS_KEY_ID'),

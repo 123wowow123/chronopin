@@ -1,68 +1,65 @@
-const { Chromeless } = require('chromeless');
+import puppeteer from 'puppeteer';
+
 const _ = require('lodash');
 const fs = require('fs');
 const config = require('../config/environment');
 
 //console.log(JSON.stringify(config))
-//var scrapeJsFileName = __dirname + '/scrape.min.js';
+var scrapeJsFileName = __dirname + '/scrape.min.js';
+var scrapeJsFileJS = fs.readFileSync(scrapeJsFileName, 'utf8');
 //console.log(scrapeJsFileName);
 
 module.exports.scrape = function scrape(pageUrl) {
-  const chromeless = new Chromeless(
-    {
-    remote: {
-      endpointUrl: config.chromeless.endpointUrl,
-      apiKey: config.chromeless.apiKey,
-    },
-    //debug: true
-  }
-  );
-
-  // create script tag and listen to return function
-  let scraped = chromeless
-    .goto(pageUrl)
-    .evaluate(() => {
-
-      // this will be executed in headless chrome
-      return (new Promise((resolve, reject) => {
-        let scriptPath = "https://raw.githubusercontent.com/123wowow123/chronopin/master/server/scrape/scrape.min.js";
-        var script = document.createElement('script');
-        //resolve("script loaded")
-        script.onload = function () {
+  let browser = null;
+  let page = null;
+  const res = puppeteer.launch({
+    ignoreHTTPSErrors: true,
+    headless: true
+  })
+    .then((b) => {
+      browser = b
+      return browser.pages();
+    })
+    .then((pages) => {
+      page = pages[0]
+      return page.goto(pageUrl); //, { "waitUntil": ["load", "networkidle0"] }
+    })
+    .catch((err) => {
+      if (err.name === "TimeoutError")
+        return err;
+      else
+        throw err;
+    })
+    .then((res) => {
+      return page.evaluate((scrapeJsFileJS) => {
+        // this will be executed in headless chrome
+        return (new Promise((resolve, reject) => {
+          var script = document.createElement('script');
+          script.id = "chrono";
+          script.text = scrapeJsFileJS;
+          document.getElementsByTagName('head')[0].appendChild(script);
           window.cpScrapePromise
             .then((res) => {
               resolve(res);
             });
-        };
-        script.onerror = function () {
-          reject("loading failed");
-        };
-        script.src = scriptPath;
-        document.getElementsByTagName('head')[0].appendChild(script);
-      }))
-        .catch((err) => {
-          console.log(err);
-          return "load err";
-        });
-        
-    })
-    .then((scraped) => {
-      if (scraped.media) {
-        scraped.media = _.sortBy(scraped.media, i => {
-          return i.height * i.width;
-        }).reverse();
-      }
-      return scraped;
-    });
+        }));
 
-  return Promise.all([scraped, chromeless.end()])
-    .then(([scraped, chrome]) => {
-      return scraped;
+      }, scrapeJsFileJS);
     })
-    .catch((e)=>{
-      console.log(e);
-      throw e;
-    });
+    .then((res) => {
+      //for debugging
+      console.log(JSON.stringify(res))
+      return res;
+    })
+    .catch((err) => {
+      console.log(err);
+      return "load err";
+    })
+    .finally(() => {
+      return browser && browser.close();
+    })
+
+  return res;
 }
 
 //   function _getYouTubeURL($) {
