@@ -540,10 +540,10 @@ This is a promotional article about one of the company partners with Interesting
 - Single Pin page similarity needs to be in timeline
 - Comment fix
 - Login fix
+- Script to refresh pins in semantic search
 
 
 
 
 deploy search and site
 cache query
-
