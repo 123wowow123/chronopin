@@ -996,9 +996,18 @@
     "sourceUrl": "http://arstechnica.com/gaming/2014/06/kinect-v2-comes-to-the-pc-on-july-15-for-199/",
     "price": 199.99,
     "utcStartDateTime": "2014-07-14T07:00:00.000Z",
-    "utcEndDateTime": "2014-07-15T07:00:00.000Z",
+    "utcEndDateTime": "2014-07-16T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-15T05:50:37.569Z",
+    "utcUpdatedDateTime": "2023-01-24T06:10:09.966Z",
+    "media": [
+      {
+        "id": 138,
+        "thumbName": "06855743-37e2-4427-88bb-f555d9c73eaa.png",
+        "originalUrl": "https://cdn.arstechnica.net/wp-content/uploads/2014/06/kfw.png",
+        "type": "Image"
+      }
+    ],
     "userId": 1
   },
   {
@@ -1007,9 +1016,22 @@
     "description": "Water-cooling enables the use of the lightweight material and thus enables a significant weight reduction by nearly 30% while simultaneously providing cost and system benefits. First, much less effort is required to protect neighboring components from the heat. Second, cooling of the exhaust flow reduces the thermal load on the catalytic converter, meaning it hardly ages at all.",
     "sourceUrl": "http://www.greencarcongress.com/2014/07/20140715-conti.html",
     "utcStartDateTime": "2014-07-14T07:00:00.000Z",
-    "utcEndDateTime": "2014-07-15T07:00:00.000Z",
+    "utcEndDateTime": "2014-07-16T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-15T05:50:37.569Z",
+    "utcUpdatedDateTime": "2023-01-24T06:09:59.763Z",
+    "media": [
+      {
+        "id": 137,
+        "thumbName": "f3b95606-2f98-42d5-ad42-d0af8551c620",
+        "thumbWidth": 400,
+        "thumbHeight": 226,
+        "originalUrl": "https://bioage.typepad.com/.a/6a00d8341c4fbe53ef01a511e23fc9970c-600wi",
+        "originalWidth": 600,
+        "originalHeight": 339,
+        "type": "image/jpeg"
+      }
+    ],
     "userId": 1
   },
   {
