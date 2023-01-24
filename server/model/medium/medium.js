@@ -214,7 +214,7 @@ function _getImageStatAndSaveImage(imageUrl) {
         originalUrl: thumbBufferAndMeta.originalUrl,
         originalWidth: thumbBufferAndMeta.originalWidth,
         originalHeight: thumbBufferAndMeta.originalHeight,
-        type: thumbBufferAndMeta.type // change to mimeType
+        type: thumbBufferAndMeta.type || 'Image' // change to mimeType and currently cannot be undefined
         //type: 'Image' // do we need this?
       };
       return newMedium;
