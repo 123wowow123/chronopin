@@ -370,7 +370,7 @@ https://nationaldaycalendar.com/march/
   - Summerize (or Use reading mode to show full article)
   - Mini timeline for multiple date point articles (highlight date mined for mini timeline)
   - Add other annotations to article
-  - Hitorically happens on date
+  - Historically happens on date
   - RSS/Atom summary
 
 - Google Map
@@ -534,13 +534,15 @@ This is a promotional article about one of the company partners with Interesting
 ## Bugs
 - When in specific pin view and clicking logout will show blank screen
 - Date tag mobile view broken
+- Fix loading jumpiness
 
 ## Before Usable
-- Create page image redesig with image selection in right drawer
+- Create page image redesign with image selection in right drawer
 - Single Pin page similarity needs to be in timeline
 - Comment fix
 - Login fix
 - Script to refresh pins in semantic search
+
 
 
 

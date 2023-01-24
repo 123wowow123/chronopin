@@ -42,7 +42,7 @@ function executeDropSP() {
 function executeCreateSP() {
   let sql = `
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
-            @pinId          INT,
+            @pinId              INT,
             @mediumId           INT,
             @utcCreatedDateTime DATETIME2(7),
             @utcDeletedDateTime DATETIME2(7),
