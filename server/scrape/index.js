@@ -9,7 +9,7 @@ const scrapeJsFileName = __dirname + '/scrape.min.js';
 const scrapeJsFileJS = fs.readFileSync(scrapeJsFileName, 'utf8');
 //console.log(scrapeJsFileName);
 
-const defaultNavigationWait = 15000
+const defaultNavigationWait = 11000
 
 module.exports.scrape = function scrape(pageUrl) {
   let browser = null;
