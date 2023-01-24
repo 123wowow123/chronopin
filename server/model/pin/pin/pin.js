@@ -62,11 +62,14 @@ export default class Pin extends BasePin {
   }
 
   update() {
-    Pin.queryById(this.id, this.userId)
-      .then(({
-        beforePin
-      }) => {
-        let beforePinMedia = beforePin.media,
+    return Pin.queryById(this.id, this.userId)
+      .then((res) => {
+        
+        // TODO: Add to auth middleware
+        if (res.pin.userId !== this.userId || this.userId !== 1) throw "Unauthorized update";
+
+        let beforePinMedia = res.pin.media,
+          // originalUserId = beforePinMedia,
           newPinMedia = this.media,
           toSaveOriginalMedia = [],
           toDeleteOriginalMedia = [],
@@ -78,21 +81,26 @@ export default class Pin extends BasePin {
 
         toSaveMediaPromise = toSaveOriginalMedia.map(medium => {
           return medium.createAndSaveToCDN();
-        })
-          .then((newMedia) => {
-            this.media = newMedia;
-          });
-
-        toDeleteMediaPromise = toSaveOriginalMedia.map(medium => {
-          return medium.deleteFromPin();
         });
 
-        return Promise.all([].concat(toSaveMediaPromise, toDeleteMediaPromise))
+        toDeleteMediaPromise = toDeleteOriginalMedia.map(medium => {
+          return medium.deleteFromPin(); // TODO: Need to delete from CDN
+        });
+
+        return Promise.all(toSaveMediaPromise)
+          .then((newMedia) => {
+            this.media = newMedia;
+          })
           .then(() => {
-            return this;
+            return Promise.all(toDeleteMediaPromise)
+              .then(() => {
+                return this;
+              });
           });
+      })
+      .then((pin) => {
+        return _updateMSSQL(pin, pin.userId);
       });
-    return _updateMSSQL(this, this.userId);
   }
 
   delete() {
@@ -118,7 +126,7 @@ export default class Pin extends BasePin {
 function _difference(baseArray, otherArray, propName) {
   return baseArray.filter((obj) => {
     return !otherArray.find((otherObj) => {
-      otherObj[propName] === obj[propName];
+      return otherObj[propName] === obj[propName];
     });
   });
 }

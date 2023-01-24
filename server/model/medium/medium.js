@@ -74,7 +74,7 @@ export default class Medium {
   }
 
   createAndSaveToCDN() {
-    return _getImageStat(this.originalUrl)
+    return _getImageStatAndSaveImage(this.originalUrl)
       .then(newMedium => {
         // console.log('createAndSaveToCDN', newMedium);
         return this
@@ -200,11 +200,11 @@ function _createPinMediumMSSQL(medium, pinId) {
     });
 }
 
-function _getImageStat(imageUrl) {
+function _getImageStatAndSaveImage(imageUrl) {
   let thumbNameGuid = uuidv4();
   return image.createThumb(imageUrl)
     .then(thumbBufferAndMeta => {
-      // console.log('_getImageStat', thumbBufferAndMeta);
+      // console.log('_getImageStatAndSaveImage', thumbBufferAndMeta);
       let newMedium = {
         buffer: thumbBufferAndMeta.buffer,
         thumbName: thumbNameGuid + thumbBufferAndMeta.extention,

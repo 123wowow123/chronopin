@@ -5,9 +5,11 @@ const fs = require('fs');
 const config = require('../config/environment');
 
 //console.log(JSON.stringify(config))
-var scrapeJsFileName = __dirname + '/scrape.min.js';
-var scrapeJsFileJS = fs.readFileSync(scrapeJsFileName, 'utf8');
+const scrapeJsFileName = __dirname + '/scrape.min.js';
+const scrapeJsFileJS = fs.readFileSync(scrapeJsFileName, 'utf8');
 //console.log(scrapeJsFileName);
+
+const defaultNavigationWait = 15000
 
 module.exports.scrape = function scrape(pageUrl) {
   let browser = null;
@@ -22,6 +24,9 @@ module.exports.scrape = function scrape(pageUrl) {
     })
     .then((pages) => {
       page = pages[0]
+      return page.setDefaultNavigationTimeout(defaultNavigationWait);
+    })
+    .then(() => {
       return page.goto(pageUrl); //, { "waitUntil": ["load", "networkidle0"] }
     })
     .catch((err) => {
@@ -56,7 +61,7 @@ module.exports.scrape = function scrape(pageUrl) {
       return "load err";
     })
     .finally(() => {
-      return browser && browser.close();
+      return browser.close();
     })
 
   return res;

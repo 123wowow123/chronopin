@@ -118,7 +118,7 @@ export function show(req, res) {
 // Creates a new Pin in the DB
 export function create(req, res) {
   let user = req.user,
-    userId = +req.user.id,
+    // userId = +req.user.id,
     media = req.body && req.body.media,
     newPin = new Pin(req.body);
 
@@ -141,7 +141,11 @@ export function create(req, res) {
 export function update(req, res) {
   //console.log('update pin', req.body)
   let pinId = +req.params.id,
+    user = req.user,
+    // userId = +req.user.id,
     pin = new Pin(req.body);
+
+  pin.setUser(user);
   pin.id = pinId;
 
   return pin.update()

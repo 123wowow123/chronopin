@@ -43,7 +43,7 @@
               return pin.id !== id
             });
             //debugger;
-            let bagsCreated = this.pinsQuery.mergePins(pins);
+            ///let bagsCreated = this.pinsQuery.mergePins(pins);
             
             this.searching = false;
           })

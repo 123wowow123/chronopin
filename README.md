@@ -387,13 +387,9 @@ https://nationaldaycalendar.com/march/
 - Trackable Variable per timeline
  - Then use ML to try to predict it once enough pins exist for sub (eg: price)
 
-
-- Edit Pins and rescrape
-- Fix scrape timeout issue
-- Scrape should stream data with sockets
+- Filter by like threashold  
 
 - Faceted Search bubbles like Bing
-- Fullscreen mobile search menu
 
 - Fix watch pins board
 
@@ -525,12 +521,12 @@ This is a promotional article about one of the company partners with Interesting
 - https://prerender.io/
 - facebook comment jumps @ pin page
 
+
 ## Architecture
 - Externalize image processing to AWS Lamda
 - Externalize pre render to AWS Lamda
 - Add Redis to serve prender pages
-- Externalize search to Algolia or ElastiSearch
-- Convert to Angular 5
+- Convert to React
 - Grafana activity dashboard
 - [Use Firebase DB for denormalized push notification of app data] <https://www.youtube.com/watch?v=LAWjdZYrUgI>
 - GeoLite2 City: IP => City / lat:long
@@ -539,9 +535,15 @@ This is a promotional article about one of the company partners with Interesting
 - When in specific pin view and clicking logout will show blank screen
 - Date tag mobile view broken
 
+## Before Usable
+- Create page image redesig with image selection in right drawer
+- Single Pin page similarity needs to be in timeline
+- Comment fix
+- Login fix
 
 
-fix images
+
+
 deploy search and site
 cache query
 

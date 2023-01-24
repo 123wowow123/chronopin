@@ -44,14 +44,14 @@
          }
        });
 
-       $stateProvider.state('main.modalScroller.editPin', {
-         url: 'editpin/:id',
-         views: {
-           'modal': {
-             template: '<pin-form class="modal-wrapper" title="Edit Pin" mode="edit"></pin-form>'
-           }
-         }
-       });
+      //  $stateProvider.state('main.modalScroller.editPin', {
+      //    url: 'editpin/:id',
+      //    views: {
+      //      'modal': {
+      //        template: '<pin-form class="modal-wrapper" title="Edit Pin" mode="edit"></pin-form>'
+      //      }
+      //    }
+      //  });
 
      });
 

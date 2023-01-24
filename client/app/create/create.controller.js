@@ -7,7 +7,7 @@
 
   class CreateController {
 
-    constructor($http, $state, $scope, Auth, $q /*, $log, modelInjector */) {
+    constructor($state, $scope, Auth, $q, $stateParams, $http, pinWebService /*, $log, modelInjector */) {
       //PinGroups || (PinGroups = modelInjector.getPinGroups());
 
       let baseDate = new Date();
@@ -29,11 +29,12 @@
       this.isAdmin = Auth.isAdmin;
       this.getTimeZoneName = moment.tz.guess;
 
-      this.mode = this.mode || 'create';
+      // this.mode = this.mode || 'create';
 
+      this.pinWebService = pinWebService;
       this.$http = $http;
       this.$q = $q;
-      //this.$stateParams = $stateParams;
+      this.$stateParams = $stateParams;
       this.$state = $state;
       this.$scope = $scope;
 
@@ -68,18 +69,20 @@
     }
 
     $onInit() {
-      // let pinId = this.$stateParams.id;
-      // if (this.mode === 'edit' && pinId !== undefined) {
-      //   this.enableForm(false);
-      //   this.$http.get('/api/pins/' + pinId)
-      //     .then(res => {
-      //       this.setPin(res.data);
-      //       this.enableForm(true);
-      //     })
-      //     .catch(err => {
-      //       this.enableForm(true);
-      //     });
-      // }
+      let id = this.$stateParams.id;
+      this.mode = id ? "edit" : 'create';
+      if (this.mode === 'edit' && id !== undefined) {
+        this.enableForm(false);
+        //this.$http.get('/api/pins/' + id)
+        this.pinWebService.get(id)
+          .then(res => {
+            this.setPin(res.data);
+            this.enableForm(true);
+          })
+          .catch(err => {
+            this.enableForm(true);
+          });
+      }
     }
 
     selectImage(media) {
@@ -152,7 +155,17 @@
       this.pin.end = pin.utcStartDateTime && new Date(pin.utcEndDateTime);
       this.pin.allDay = pin.allDay;
       this.pin.media = pin.media;
+
       this.pin.selectedMedia = _.get(pin, 'media[0]');
+      return this;
+    }
+
+    setPinImageFromScrapeAndSelect(pin) {
+      this.pin.media = _.get(pin, 'media');
+      const foundMedium = _.get(pin, 'media', []).find(m => {
+        return m.originalUrl === _.get(this, 'pin.selectedMedia.originalUrl');
+      });
+      this.pin.selectedMedia = foundMedium ? foundMedium : _.get(pin, 'media[0]');
       return this;
     }
 
@@ -173,9 +186,7 @@
       this.pin.end = new Date(_.get(pin, 'dates[0].end'));
       this.pin.allDay = _.get(pin, 'dates[0].allDay');
 
-
-      this.pin.media = _.get(pin, 'media');
-      this.pin.selectedMedia = _.get(pin, 'media[0]');
+      this.setPinImageFromScrapeAndSelect(pin);
       return this;
     }
 
@@ -190,6 +201,24 @@
         .then(response => {
           this
             .setPinFromScrape(response.data)
+            .enableForm(true);
+        })
+        .catch(err => {
+          this.enableForm(true);
+        });
+    }
+
+    scrapeImage(url) {
+      this.enableForm(false);
+      let config = {
+        params: {
+          url: url
+        }
+      };
+      return this.$http.get('/api/scrape', config)
+        .then(response => {
+          this
+            .setPinImageFromScrapeAndSelect(response.data)
             .enableForm(true);
         })
         .catch(err => {
@@ -318,6 +347,7 @@
       }
 
       let newPin = {
+        id: pin.id,
         title: pin.title,
         description: pin.description,
         sourceUrl: pin.sourceUrl,

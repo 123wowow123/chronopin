@@ -52,9 +52,11 @@ function executeCreateSP() {
 
           SET @utcDeletedDateTime = sysutcdatetime();
 
-          UPDATE [dbo].[PinMedium]
-          SET utcDeletedDateTime = @utcDeletedDateTime
+          DELETE [dbo].[PinMedium]
           WHERE pinId = @pinId AND mediumId = @mediumId;
+
+          DELETE [dbo].[Medium]
+          WHERE id = @mediumId;
 
         END;
         `;
@@ -64,3 +66,31 @@ function executeCreateSP() {
       return new Request(conn).batch(sql);
     });
 }
+
+
+// Soft Delete but needs more tracking eg: user 
+// function executeCreateSP() {
+//   let sql = `
+//       CREATE PROCEDURE [dbo].[${StoredProcedureName}]
+//           @pinId INT,
+//           @mediumId INT,
+//           @utcDeletedDateTime DATETIME2(7) OUTPUT
+//       AS
+//         BEGIN
+
+//           SET NOCOUNT ON;
+
+//           SET @utcDeletedDateTime = sysutcdatetime();
+
+//           UPDATE [dbo].[PinMedium]
+//           SET utcDeletedDateTime = @utcDeletedDateTime
+//           WHERE pinId = @pinId AND mediumId = @mediumId;
+
+//         END;
+//         `;
+
+//   return cp.getConnection()
+//     .then(conn => {
+//       return new Request(conn).batch(sql);
+//     });
+// }

@@ -74,5 +74,7 @@ https://youtu.be/IGkzPGBkGhw?t=323
 May and June russian will have increased force and Ukraine will have tanks
 
 
+https://www.macrumors.com/2023/01/23/whats-next-for-the-mac/
+Apple plans to update the iMac family with the M3 chip later this year, likely around the October or November timeframe, given past precedent. Gurman describes the M2 family of chips as a "stopgap" for Apple silicon and suggests Apple is waiting for the more advanced M3 chip, based on the 3nm process technology, before updating its all-in-one desktop computer.
 
 https://www.theverge.com/2023/1/5/23531458/alfred-dbs2-smart-deadbolt-lock-wireless-charging
