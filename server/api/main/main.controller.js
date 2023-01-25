@@ -5,6 +5,7 @@ import * as _ from 'lodash';
 import * as response from '../response';
 import * as pinController from '../pin/pin.controller';
 import * as dateTimeController from '../dateTime/dateTime.controller';
+import * as paginationHeader from '../../util/paginationHeader'
 
 import {
   Pin,
@@ -20,14 +21,6 @@ import {
 
 const pageSize = config.pagination.pageSize || 25;
 
-function _setPaginationHeader(res, req) {
-  let urlPrefix = req.protocol + '://' + req.get('Host') + req.baseUrl + req.path;
-  return results => {
-    let queryCount = results.queryCount;
-    return response.setPaginationHeader(res, urlPrefix, queryCount)(results);
-  };
-}
-
 function _getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTimeString) {
   return pinController.getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTimeString);
 }
@@ -38,15 +31,24 @@ function _getDateTimes(startDateTime, endDateTime) {
 
 // Get a list of Pins with DateTimes 
 export function index(req, res) {
+  return getPinsAndFormatData(req, res)
+    .then(paginationHeader.setPaginationHeader(res, req))
+    .then(response.withResult(res))
+    .catch(response.handleError(res));
+}
+
+//let queryPromise;
+export function getPinsAndFormatData(req, res) {
   // need to cast req.query.last_pin_id to int
   let userId = req.user && +req.user.id || 0,
     hasDateTime = !!req.query.from_date_time,
     hasFavorite = !!req.query.hasFavorite,
     fromDateTimeString = req.query.from_date_time,
     querydForward = hasDateTime && fromDateTimeString[0] !== '-',
-    lastPinId = +req.query.last_pin_id, // if undefined => NaN
-    queryPromise;
+    lastPinId = +req.query.last_pin_id; // if undefined => NaN
 
+    let queryPromise; // TODO: Move outside and cache
+  //if (!queryPromise)
   queryPromise = _getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTimeString)
     .then(pins => {
       let pinRange = pins.minMaxDateTimePin();
@@ -73,9 +75,5 @@ export function index(req, res) {
         return pins;
       }
     });
-
-  return queryPromise
-    .then(_setPaginationHeader(res, req))
-    .then(response.withResult(res))
-    .catch(response.handleError(res));
+  return queryPromise;
 }

@@ -6,6 +6,8 @@
 
 import errors from './components/errors';
 import path from 'path';
+import * as paginationHeader from './util/paginationHeader'
+const mainController = require('./api/main/main.controller');
 
 export default function (app) {
   // Insert routes below
@@ -40,6 +42,15 @@ export default function (app) {
   // All other routes should redirect to the index.html
   app.route('/*')
     .get((req, res) => {
-      res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
+      //res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
+      const mainPinDataPromise = mainController.getPinsAndFormatData(req, res)
+        .then(paginationHeader.setPaginationObject(res, req))
+        .then((mainPinData) => {
+          // Render Templated root page
+          res.render(app.get('appPath') + '/index.ejs', { mainPinData });
+        }).catch(() => {
+          res.render(app.get('appPath') + '/index.ejs', {mainPinData: null});
+        });
+
     });
 }

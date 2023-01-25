@@ -46,14 +46,30 @@ export function handleEntityNotFound(res) {
 export function setPaginationHeader(res, urlPrfix, queryCount) {
   return function (pins) {
     if (pins.pins.length) {
-      let pinRange = pins.minMaxDateTimePin();
-      let linksObject = {
-        previous: `${urlPrfix}?from_date_time=-${pinRange.min.utcStartDateTime.toISOString()}&last_pin_id=${pinRange.min.id}`,
-        next: `${urlPrfix}?from_date_time=${pinRange.max.utcStartDateTime.toISOString()}&last_pin_id=${pinRange.max.id}`
-      };
+      const linksObject = _getLinkObject(pins, urlPrfix);
       res.header('Link', li.stringify(linksObject));
       res.header('X-Range-Count', queryCount);
     }
     return pins;
   };
+}
+
+export function setPaginationObject(res, urlPrfix, queryCount) {
+  return function (pins) {
+    if (pins.pins.length) {
+      const linksObject = _getLinkObject(pins, urlPrfix);
+      pins.link = li.stringify(linksObject);
+      pins.queryCount = queryCount;
+    }
+    return pins;
+  };
+}
+
+function _getLinkObject(pins, urlPrfix) {
+  const pinRange = pins.minMaxDateTimePin();
+  const linksObject = {
+    previous: `${urlPrfix}?from_date_time=-${pinRange.min.utcStartDateTime.toISOString()}&last_pin_id=${pinRange.min.id}`,
+    next: `${urlPrfix}?from_date_time=${pinRange.max.utcStartDateTime.toISOString()}&last_pin_id=${pinRange.max.id}`
+  };
+  return linksObject
 }

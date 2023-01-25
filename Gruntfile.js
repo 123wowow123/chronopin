@@ -100,7 +100,7 @@ module.exports = function(grunt) {
       },
       livereload: {
         files: [
-          '{.tmp,<%= yeoman.client %>}/{app,components}/**/*.{css,html}',
+          '{.tmp,<%= yeoman.client %>}/{app,components}/**/*.{css,html,ejs}',
           '{.tmp,<%= yeoman.client %>}/{app,components,model}/**/!(*.spec|*.mock).js',
           '<%= yeoman.client %>/assets/images/{,*//*}*.{png,jpg,jpeg,gif,webp,svg,ico}',
           '<%= yeoman.client %>/assets/fonts/{,*//*}*.*'
@@ -257,7 +257,7 @@ module.exports = function(grunt) {
         ]
       },
       client: {
-        src: '<%= yeoman.client %>/index.html',
+        src: '<%= yeoman.client %>/index.ejs',
         ignorePath: '<%= yeoman.client %>/',
       },
       test: {
@@ -280,7 +280,7 @@ module.exports = function(grunt) {
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
     useminPrepare: {
-      html: ['<%= yeoman.client %>/index.html'],
+      html: ['<%= yeoman.client %>/index.ejs'],
       options: {
         dest: '<%= yeoman.dist %>/<%= yeoman.client %>'
       }
@@ -401,7 +401,7 @@ module.exports = function(grunt) {
             'bower_components/**/*',
             'assets/images/{,*/}*.{webp,ico,png}',
             'assets/fonts/**/*',
-            'index.html',
+            'index.ejs',
             // move from imagemin
             '{,*/}*.{png,jpg,jpeg,gif,svg}'
           ]
@@ -656,7 +656,7 @@ module.exports = function(grunt) {
           endtag: '<!-- endinjector -->'
         },
         files: {
-          '<%= yeoman.client %>/index.html': [
+          '<%= yeoman.client %>/index.ejs': [
             [
               '<%= yeoman.client %>/{app,components,model}/**/!(*.spec|*.mock).js',
               '!{.tmp,<%= yeoman.client %>}/app/app.{js,ts}'
@@ -698,7 +698,7 @@ module.exports = function(grunt) {
           endtag: '<!-- endinjector -->'
         },
         files: {
-          '<%= yeoman.client %>/index.html': [
+          '<%= yeoman.client %>/index.ejs': [
             '<%= yeoman.client %>/{app,components}/**/*.css'
           ]
         }

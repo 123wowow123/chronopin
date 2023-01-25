@@ -5,13 +5,13 @@
 
   class MainController {
 
-    constructor($transitions, $scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, $log, $timeout) {
+    constructor($transitions, $scope, pinWebService, dateTimeWebService, mainWebService, linkHeaderParser, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, $log, $timeout) {
 
       // constants
       const omitLinkHeaderProp = ['rel', 'url'];
 
       // Plugin: https://github.com/gabceb/jquery-browser-plugin
-      const isSafari = 	$.browser.ipad || $.browser.iphone || $.browser.ipod || $.browser.safari || $.browser.msedge;
+      const isSafari = $.browser.ipad || $.browser.iphone || $.browser.ipod || $.browser.safari || $.browser.msedge;
       const scrollEl = isSafari ? document.body : document.documentElement; // Safari broke with documentElement
 
       // stateParams Service
@@ -31,6 +31,7 @@
       this.mainUtilService = mainUtilService;
       this.ScrollUtil = ScrollUtil;
       this.Util = Util;
+      this.linkHeaderParser = linkHeaderParser;
 
       // model service
       this.pinApp = pinApp;
@@ -79,25 +80,35 @@
       //   }
       // });
 
-
-      this.mainWebService.list()
-        .then(res => {
-          this._setMainBagsWithPins(res.data);
-          return res;
-        })
-        .then(res => {
-          this.prevParam = this.getLinkHeader(res.data.linkHeader, "previous");
-          this.nextParam = this.getLinkHeader(res.data.linkHeader, "next");
-          return res;
-        })
-        .then(res => {
-          this.loading = false;
-          return res;
-        })
-        .catch(err => {
-          this.loading = false;
-          throw err;
-        });
+      if (window.mainPinData) { // && false  
+        // Preloaded data
+        let mainPinData = window.mainPinData
+        this._setMainBagsWithPins(mainPinData);
+        const linkHeader = this.linkHeaderParser.parse(mainPinData.link);
+        this.prevParam = this.getLinkHeader(linkHeader, "previous");
+        this.nextParam = this.getLinkHeader(linkHeader, "next");
+        this.loading = false;
+      } else {
+        this.mainWebService.list()
+          .then(res => {
+            this._setMainBagsWithPins(res.data);
+            return res;
+          })
+          .then(res => {
+            this.prevParam = this.getLinkHeader(res.data.linkHeader, "previous");
+            this.nextParam = this.getLinkHeader(res.data.linkHeader, "next");
+            return res;
+          })
+          .then(res => {
+            return res;
+          })
+          .catch(err => {
+            throw err;
+          })
+          .finally(() => {
+            this.loading = false;
+          });
+      }
     }
 
     $onDestroy() {

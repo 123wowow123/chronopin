@@ -3,6 +3,7 @@
 import config from '../../config/environment';
 import moment from 'moment';
 import * as response from '../response';
+import * as paginationHeader from '../../util/paginationHeader'
 
 import {
   Pin,
@@ -28,14 +29,6 @@ function _removeEntity(res) {
         })
         .then(response.withNoResult(res));
     }
-  };
-}
-
-function _setPaginationHeader(res, req) {
-  let urlPrefix = req.protocol + '://' + req.get('Host') + req.baseUrl + req.path;
-  return (pins) => {
-    let queryCount = pins.queryCount;
-    return response.setPaginationHeader(res, urlPrefix, queryCount)(pins);
   };
 }
 
@@ -95,7 +88,7 @@ export function index(req, res) {
   // console.log('hasFavorite', hasFavorite);
 
   return getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTimeString)
-    .then(_setPaginationHeader(res, req))
+    .then(paginationHeader.setPaginationHeader(res, req))
     .then(response.withResult(res))
     .catch(response.handleError(res));
 }
