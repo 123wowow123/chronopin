@@ -17,8 +17,9 @@ let all = {
   env: getProcessEnv('NODE_ENV'),
 
   // Root path of server
+  // Docker needs path without dist unlike local
+  //root: getProcessEnv('NODE_ENV') === "development" ? path.normalize(__dirname + '/../../..') : path.normalize(__dirname + '/../../../dist'),
   root: path.normalize(__dirname + '/../../..'),
-
   // Server port
   port: getProcessEnv('PORT') || 9000,
 

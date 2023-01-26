@@ -5,12 +5,12 @@ steps:
 images:
 - 'us-west1-docker.pkg.dev/${PROJECT_ID}/chronopin-web/chronopin:latest'
 
-- name: 'gcr.io/cloud-builders/kubectl'
-  args:
-  - 'set'
-  - 'image'
-  - 'deployment/chronopin-dep'
-  - 'chronopin=us-west1-docker.pkg.dev/${PROJECT_ID}/chronopin-web/chronopin:latest'
-  env:
-  - 'CLOUDSDK_COMPUTE_ZONE=us-west1'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=chronopin-cluster'
+# - name: 'gcr.io/cloud-builders/kubectl'
+#   args:
+#   - 'set'
+#   - 'image'
+#   - 'deployment/chronopin'
+#   - 'chronopin=us-west1-docker.pkg.dev/${PROJECT_ID}/chronopin-web/chronopin:latest'
+#   env:
+#   - 'CLOUDSDK_COMPUTE_ZONE=us-west1'
+#   - 'CLOUDSDK_CONTAINER_CLUSTER=chronopin-cluster'

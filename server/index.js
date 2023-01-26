@@ -1,15 +1,15 @@
 'use strict';
 
 // Suppresses "Error: self signed certificate in certificate chain"
-process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
+// process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
 // Set default node environment to development
-var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development'; //'production'
 
 // console.log('process', process);
 console.log('process.env.NODE_ENV', env);
 
-if (env === 'development' || env === 'test') {
+if (env === 'development' || env === 'test' || env === 'production') {
   // Register the Babel require hook
   require('babel-register');
 }

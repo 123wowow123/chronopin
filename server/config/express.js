@@ -19,7 +19,7 @@ import passport from 'passport';
 import session from 'express-session';
 import sqldb from '../sqldb';
 import expressSequelizeSession from 'express-sequelize-session';
-import forceDomain from 'forcedomain';
+const { forceDomain } = require('forcedomain');
 var Store = expressSequelizeSession(session.Store);
 
 export default function(app) {

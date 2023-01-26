@@ -14,7 +14,7 @@ export default function (app) {
   //app.use('/api/things', require('./api/thing'));
 
   /** Begin Test **/
-  var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+  var env = process.env.NODE_ENV;
   if (env === 'development' || env === 'test') {
     // Register dev endpoints
     app.get('/api/test', function (req, res) {
@@ -39,18 +39,24 @@ export default function (app) {
   app.route('/:url(api|auth|components|app|bower_components|assets)/*')
     .get(errors[404]);
 
-  // All other routes should redirect to the index.html
-  app.route('/*')
+  app.route('/')
     .get((req, res) => {
       //res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
       const mainPinDataPromise = mainController.getPinsAndFormatData(req, res)
         .then(paginationHeader.setPaginationObject(res, req))
         .then((mainPinData) => {
           // Render Templated root page
-          res.render(app.get('appPath') + '/index.ejs', { mainPinData });
+          res.render(app.get('appPath') + '/index.html', { mainPinData });
         }).catch(() => {
-          res.render(app.get('appPath') + '/index.ejs', {mainPinData: null});
+          res.render(app.get('appPath') + '/index.html', { mainPinData: null });
         });
 
+    });
+    
+  // All other routes should redirect to the index.html
+  app.route('/*')
+    .get((req, res) => {
+      //res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
+      res.render(app.get('appPath') + '/index.html', { mainPinData: null });
     });
 }

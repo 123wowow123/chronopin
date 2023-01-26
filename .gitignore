@@ -6,6 +6,7 @@ public
 .idea
 client/bower_components
 server/config/environment/development.js
+server/config/environment/production.backup.js
 npm-debug.log
 coverage
 dev.sqlite

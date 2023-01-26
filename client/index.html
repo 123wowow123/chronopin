@@ -17,9 +17,9 @@
   <!-- Google Adsense code immediately after the head tag -->
 
   <script>
-    <%  if (mainPinData) { %>
+    <%if(mainPinData){%>
       window.mainPinData = <%- JSON.stringify(mainPinData || null) %>;
-    <% } %>
+    <%}%>
   </script>
 
   <meta charset="utf-8">

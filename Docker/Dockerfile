@@ -11,19 +11,17 @@ WORKDIR $PROJECT_ROOT
 ## Install python3 for node-sass
 RUN apk add --update --no-cache curl py-pip
 
-RUN npm install --ignore-scripts puppeteer
+## Bundle App Source
+COPY . ${PROJECT_ROOT}
 
 ## Install App Dependencies
-COPY package.json $PROJECT_ROOT
+# COPY package.json $PROJECT_ROOT
 RUN npm install
 
 ## Bower Setup
-COPY bower.json $PROJECT_ROOT
+# COPY bower.json $PROJECT_ROOT
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh
-
-## Bundle App Source
-COPY . ${PROJECT_ROOT}
 
 ## Install Bower Libs and Compile
 RUN npm run bower:install

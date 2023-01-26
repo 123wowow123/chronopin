@@ -28,7 +28,7 @@ Run `kubectl create -f kube/deployment.yaml` to deploy all
 
 ---
 
-Run `kubectl delete deployment chronopin-dep`
+Run `kubectl delete deployment chronopin`
 
 ### Service
 

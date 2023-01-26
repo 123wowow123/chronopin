@@ -4,7 +4,7 @@ import * as mssql from 'mssql';
 import * as cp from '../../sqlConnectionPool';
 import * as image from '../../image'
 import * as _ from 'lodash';
-import uuidv4 from 'uuid/v4';
+import { v4 as uuidv4 }  from 'uuid';
 import {
   BasePin
 } from '..';

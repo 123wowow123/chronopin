@@ -1,5 +1,4 @@
-import puppeteer from 'puppeteer';
-
+const puppeteer = require('puppeteer');
 const _ = require('lodash');
 const fs = require('fs');
 const config = require('../config/environment');
@@ -9,7 +8,7 @@ const scrapeJsFileName = __dirname + '/scrape.min.js';
 const scrapeJsFileJS = fs.readFileSync(scrapeJsFileName, 'utf8');
 //console.log(scrapeJsFileName);
 
-const defaultNavigationWait = 11000
+const defaultNavigationWait = 10000
 
 module.exports.scrape = function scrape(pageUrl) {
   let browser = null;
