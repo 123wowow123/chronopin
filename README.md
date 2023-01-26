@@ -530,6 +530,7 @@ This is a promotional article about one of the company partners with Interesting
 - Grafana activity dashboard
 - [Use Firebase DB for denormalized push notification of app data] <https://www.youtube.com/watch?v=LAWjdZYrUgI>
 - GeoLite2 City: IP => City / lat:long
+- Cache main query and improve load time <https://www.patterns.dev/posts/prpl/> <https://web.dev/rendering-on-the-web/>
 
 ## Bugs
 - When in specific pin view and clicking logout will show blank screen
@@ -548,4 +549,3 @@ This is a promotional article about one of the company partners with Interesting
 
 
 deploy search and site
-cache query

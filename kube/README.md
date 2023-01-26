@@ -43,11 +43,11 @@ Run `kubectl delete svc/chronopin-lb`
 
 Run `export PROJECT_ID="$(gcloud config get-value project -q)"`
 
-Run `docker build -t gcr.io/${PROJECT_ID}/chronopin:latest -f Docker/Dockerfile .`
+Run `docker build -t us-west1-docker.pkg.dev/chronopin-209507/chronopin-web/chronopin:latest -f Docker/Dockerfile .`
 
-Run [gcloud] `docker -- push gcr.io/${PROJECT_ID}/chronopin:latest` to push to gcloud registry
+Run [gcloud] `docker -- push us-west1-docker.pkg.dev/chronopin-209507/chronopin-web/chronopin:latest` to push to gcloud registry
 
-Run `kubectl set image deployment/chronopin-dep chronopin=gcr.io/${PROJECT_ID}/chronopin:latest`
+Run `kubectl set image deployment/chronopin-dep chronopin=us-west1-docker.pkg.dev/chronopin-209507/chronopin-web/chronopin:latest`
 
 [Images / Build History](https://console.cloud.google.com/gcr/images/chronopin-209507/GLOBAL/chronopin?project=chronopin-209507&gcrImageListsize=50)
 
@@ -57,9 +57,9 @@ Run `kubectl logs -f <pod-id>`
 
 ### GCP Cloud Build
 
-`gcloud container builds submit -t gcr.io/${PROJECT_ID}/chronopin -f Docker/Dockerfile .`
+`gcloud container builds submit -t us-west1-docker.pkg.dev/chronopin-209507/chronopin-web/chronopin -f Docker/Dockerfile .`
 
-Run `gcloud container builds submit --config cloudbuild.yaml .` to use GCP Builder to build on cloud
+Run `gcloud container builds submit --config cloudbuild.yaml .` to use GCP Builder to build on cloud | Needs updating to new repo
 
 [GCP Build History](https://console.cloud.google.com/cloud-build/builds?authuser=0&project=chronopin-209507)
 

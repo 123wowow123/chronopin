@@ -44,6 +44,26 @@ let all = {
 
   // Sequelize connection opions
   sequelize: {
+
+    connection: {
+      dbname: getProcessEnv('SEQUELIZE_DB_NAME'),
+      username: getProcessEnv('SEQUELIZE_USER_NAME'),
+      password: getProcessEnv('SEQUELIZE_PASSWORD'),
+      options: {
+        host: getProcessEnv('SEQUELIZE_HOST'),
+        dialect: 'mssql',
+        pool: {
+          max: 5,
+          min: 0,
+          idle: 10000
+        },
+        dialectOptions: {
+          options: {
+            encrypt: true
+          }
+        }
+      }
+    },
     // sequelize & mssql connection stringing
     // mssql uses query parameters for additional options while sequelize does not
     uri: getProcessEnv('SEQUELIZE_URI'),
