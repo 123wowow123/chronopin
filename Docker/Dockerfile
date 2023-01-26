@@ -1,5 +1,5 @@
 # First Stage Build
-FROM node:14-alpine AS base
+FROM node:16-alpine AS base
  
 ## Environment Variables
 ENV PROJECT_ROOT /code
@@ -33,7 +33,7 @@ RUN npm run build
 # Second Stage
 ## node:9-alpine ~223MB
 ## node:9        ~829MB
-FROM node:14-alpine AS prod
+FROM node:16-alpine AS prod
 
 ## Environment Variables
 ENV PROJECT_ROOT /code

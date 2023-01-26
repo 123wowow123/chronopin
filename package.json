@@ -68,6 +68,7 @@
     "chai-as-promised": "^7.1.1",
     "chai-things": "^0.2.0",
     "connect-livereload": "^0.6.1",
+    "graceful-fs": "^4.2.10",
     "grunt": "^1.5.3",
     "grunt-angular-templates": "^1.2.0",
     "grunt-babel": "~7.0.0",
@@ -126,7 +127,7 @@
     "time-grunt": "^1.4.0"
   },
   "scripts": {
-    "bower:install": "bower install --allow-root",
+    "bower:install": "bower install --allow-root --force",
     "build": "grunt build",
     "deploy": "grunt deploy",
     "test": "grunt test",
@@ -142,5 +143,9 @@
     "delete:search:pins": "node scripts/search/index.js --delete --index=pins",
     "remediate:data": "node scripts/remediate/index.js"
   },
+  "overrides": {
+    "graceful-fs": "^4.2.10"
+  },
+
   "private": true
 }
