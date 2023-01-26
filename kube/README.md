@@ -47,7 +47,12 @@ Run `docker build -t us-west1-docker.pkg.dev/chronopin-209507/chronopin-web/chro
 
 Run [gcloud] `docker -- push us-west1-docker.pkg.dev/chronopin-209507/chronopin-web/chronopin:latest` to push to gcloud registry
 
-Run `kubectl set image deployment/chronopin-dep chronopin=us-west1-docker.pkg.dev/chronopin-209507/chronopin-web/chronopin:latest`
+
+(https://cloud.google.com/kubernetes-engine/docs/deploy-app-cluster)
+
+Run `kubectl create deployment chronopin --image=us-west1-docker.pkg.dev/chronopin-209507/chronopin-web/chronopin:latest`
+
+Run `kubectl set image deployment/chronopin chronopin=us-west1-docker.pkg.dev/chronopin-209507/chronopin-web/chronopin:latest`
 
 [Images / Build History](https://console.cloud.google.com/gcr/images/chronopin-209507/GLOBAL/chronopin?project=chronopin-209507&gcrImageListsize=50)
 
@@ -57,9 +62,9 @@ Run `kubectl logs -f <pod-id>`
 
 ### GCP Cloud Build
 
-`gcloud container builds submit -t us-west1-docker.pkg.dev/chronopin-209507/chronopin-web/chronopin -f Docker/Dockerfile .`
+`gcloud builds submit --region=us-west2 -t us-west1-docker.pkg.dev/chronopin-209507/chronopin-web/chronopin -f Docker/Dockerfile .`
 
-Run `gcloud container builds submit --config cloudbuild.yaml .` to use GCP Builder to build on cloud | Needs updating to new repo
+Run `gcloud builds submit --region=us-west2 --config cloudbuild.yaml` to use GCP Builder to build on cloud | Needs updating to new repo
 
 [GCP Build History](https://console.cloud.google.com/cloud-build/builds?authuser=0&project=chronopin-209507)
 
