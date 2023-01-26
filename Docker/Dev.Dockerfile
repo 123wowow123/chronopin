@@ -1,8 +1,6 @@
 # First Stage Build
 
-## node:9-alpine
-## node:9
-FROM node:9-alpine AS base
+FROM node:14-alpine AS base
  
 ## Environment Variables
 ENV PROJECT_ROOT /code
@@ -13,6 +11,9 @@ WORKDIR $PROJECT_ROOT
 
 ## Install nslookup
 RUN apk add --update --no-cache bind-tools
+
+## Install pythob 2 for node-sass
+RUN apk add --no-cache python2.7
  
 ## Install App Dependencies
 COPY package.json $PROJECT_ROOT

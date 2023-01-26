@@ -1,5 +1,5 @@
 # First Stage Build
-FROM node:9-alpine AS base
+FROM node:14-alpine AS base
  
 ## Environment Variables
 ENV PROJECT_ROOT /code
@@ -8,6 +8,11 @@ ENV PROJECT_ROOT /code
 RUN mkdir -p $PROJECT_ROOT
 WORKDIR $PROJECT_ROOT
  
+## Install python3 for node-sass
+RUN apk add --update --no-cache curl py-pip
+
+RUN npm install --ignore-scripts puppeteer
+
 ## Install App Dependencies
 COPY package.json $PROJECT_ROOT
 RUN npm install
@@ -28,7 +33,7 @@ RUN npm run build
 # Second Stage
 ## node:9-alpine ~223MB
 ## node:9        ~829MB
-FROM node:9-alpine AS prod
+FROM node:14-alpine AS prod
 
 ## Environment Variables
 ENV PROJECT_ROOT /code

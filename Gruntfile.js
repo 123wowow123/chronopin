@@ -1,5 +1,6 @@
 // Generated on 2016-06-28 using generator-angular-fullstack 3.7.6
 'use strict';
+const sass = require('node-sass');
 
 module.exports = function(grunt) {
   var localConfig;
@@ -189,14 +190,6 @@ module.exports = function(grunt) {
 
     // Add vendor prefixed styles
     postcss: {
-      options: {
-        map: true,
-        processors: [
-          require('autoprefixer')({
-            browsers: ['last 2 version']
-          })
-        ]
-      },
       dist: {
         files: [{
           expand: true,
@@ -626,6 +619,7 @@ module.exports = function(grunt) {
     sass: {
       server: {
         options: {
+          implementation: sass,
           compass: false
         },
         files: {
