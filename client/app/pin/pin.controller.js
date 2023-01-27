@@ -42,8 +42,8 @@
             pins = pins.filter(pin => {
               return pin.id !== id
             });
-            //debugger;
-            ///let bagsCreated = this.pinsQuery.mergePins(pins);
+            //debugger; // cannot remove need refactor
+            let bagsCreated = this.pinsQuery.mergePins(pins);
             
             this.searching = false;
           })

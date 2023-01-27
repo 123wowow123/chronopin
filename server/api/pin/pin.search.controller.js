@@ -54,6 +54,7 @@ export function searchPins(req, res) {
   }
 }
 
+const customAutoComplete = true;
 export function autocompletePins(req, res) {
   const user = req.user,
     userId = user && +user.id || 0,
@@ -63,11 +64,15 @@ export function autocompletePins(req, res) {
 
   //console.log('searchPin:', searchText);
   if (hasFavorite) {
-    return SearchPins.autocompleteFavorite(userId, searchText)
+    return (customAutoComplete
+      ? SearchPins.search(userId, searchText)
+      : SearchPins.autocompleteFavorite(userId, searchText))
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));
   } else {
-    return SearchPins.autocomplete(userId, searchText)
+    return (customAutoComplete
+      ? SearchPins.search(userId, searchText)
+      : SearchPins.autocomplete(userId, searchText))
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));
   }
