@@ -538,6 +538,7 @@ This is a promotional article about one of the company partners with Interesting
 - Fix loading jumpiness
 
 ## Before Usable
+- Youtube!!
 - Create page image redesign with image selection in right drawer
 - Single Pin page similarity needs to be in timeline
 - Comment fix
@@ -545,7 +546,4 @@ This is a promotional article about one of the company partners with Interesting
 - Script to refresh pins in semantic search
 
 
-
-
-
-deploy search and site
+autocomplete search

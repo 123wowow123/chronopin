@@ -65,13 +65,13 @@ export function autocompletePins(req, res) {
   //console.log('searchPin:', searchText);
   if (hasFavorite) {
     return (customAutoComplete
-      ? SearchPins.search(searchText)
+      ? SearchPins.querySearchPin(searchText, searchText) //SearchPins.search(searchText)
       : SearchPins.autocompleteFavorite(userId, searchText))
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));
   } else {
     return (customAutoComplete
-      ? SearchPins.search(searchText)
+      ? SearchPins.querySearchPin(searchText, searchText) //SearchPins.search(searchText)
       : SearchPins.autocomplete(userId, searchText))
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));

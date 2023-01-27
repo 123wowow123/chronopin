@@ -1,5 +1,8 @@
 'use strict';
 
+import * as mssql from 'mssql';
+import * as cp from '../../../sqlConnectionPool';
+import * as _ from 'lodash';
 import rp from 'request-promise';
 import {
     SearchPin,
@@ -163,6 +166,14 @@ export default class SearchPins extends BasePins {
                 return pins.convertElasticSearchToPins(userId);
             });
     }
+
+    static querySearchPin(title, description) {
+        return _querySearchPin(title, description)
+          .then(res => {
+            //console.log('queryInitialByDateFilterByHasFavorite', res);
+            return new Pins(res);
+          });
+      }
 }
 
 /* Search */
@@ -302,3 +313,39 @@ function autocompleteFavorite(userId, searchText) {
 
     return rp(options);
 };
+
+function _querySearchPin(title, description) {
+    return cp.getConnection()
+      .then(conn => {
+        return new Promise(function (resolve, reject) {
+          const StoredProcedureName = 'SearchPin';
+  
+          let request = new mssql.Request(conn)
+            .input('searchTitle', mssql.NVarChar(64), title)
+            .input('searchDescription', mssql.NVarChar(64), description)
+            .output('queryCount', mssql.Int);
+  
+          request.execute(`[dbo].[${StoredProcedureName}]`,
+            function (err, res, returnValue, affected) {
+              let queryCount;
+              //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
+              if (err) {
+                reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              }
+              // ToDo: doesn't always return value
+              try {
+                //console.log('returnValue', returnValue); // always return 0
+                queryCount = res.output.queryCount;
+                //console.log('queryCount', queryCount);
+              } catch (e) {
+                queryCount = 0;
+              }
+  
+              resolve({
+                pins: res.recordset,
+                queryCount: queryCount
+              });
+            });
+        });
+      });
+  }
