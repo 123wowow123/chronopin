@@ -124,7 +124,7 @@ export default class SearchPins extends BasePins {
         return outPut;
     }
 
-    static search(userId, searchText) {
+    static search(searchText) {
         return semanticSearch(searchText, SearchPins.numberOfResults)
             .then(res => {
                 return new SearchPins().fromFaiss(res);

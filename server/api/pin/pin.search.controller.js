@@ -44,11 +44,11 @@ export function searchPins(req, res) {
 
   //console.log('searchPin:', searchText);
   if (hasFavorite) {
-    return SearchPins.searchFavorite(userId, searchText)
+    return SearchPins.searchFavorite(searchText)
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));
   } else {
-    return SearchPins.search(userId, searchText)
+    return SearchPins.search(searchText)
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));
   }
@@ -65,13 +65,13 @@ export function autocompletePins(req, res) {
   //console.log('searchPin:', searchText);
   if (hasFavorite) {
     return (customAutoComplete
-      ? SearchPins.search(userId, searchText)
+      ? SearchPins.search(searchText)
       : SearchPins.autocompleteFavorite(userId, searchText))
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));
   } else {
     return (customAutoComplete
-      ? SearchPins.search(userId, searchText)
+      ? SearchPins.search(searchText)
       : SearchPins.autocomplete(userId, searchText))
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));
