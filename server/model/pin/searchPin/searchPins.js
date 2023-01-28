@@ -167,8 +167,8 @@ export default class SearchPins extends BasePins {
             });
     }
 
-    static querySearchPin(title, description) {
-        return _querySearchPin(title, description)
+    static querySearchPin(title, description, k = 10) {
+        return _querySearchPin(title, description, k)
           .then(res => {
             //console.log('queryInitialByDateFilterByHasFavorite', res);
             return new Pins(res);
@@ -314,7 +314,7 @@ function autocompleteFavorite(userId, searchText) {
     return rp(options);
 };
 
-function _querySearchPin(title, description) {
+function _querySearchPin(title, description, k) {
     return cp.getConnection()
       .then(conn => {
         return new Promise(function (resolve, reject) {
@@ -323,6 +323,7 @@ function _querySearchPin(title, description) {
           let request = new mssql.Request(conn)
             .input('searchTitle', mssql.NVarChar(64), title)
             .input('searchDescription', mssql.NVarChar(64), description)
+            .input('top', mssql.Int, k)
             .output('queryCount', mssql.Int);
   
           request.execute(`[dbo].[${StoredProcedureName}]`,

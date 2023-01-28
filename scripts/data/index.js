@@ -44,6 +44,9 @@ execute(flags)
   })
   .catch(arg => {
     //process.exit();
+  })
+  .finally(() => {
+    cp.closeConnection();
   });
 
 function execute(opt) {

@@ -35,6 +35,7 @@ const createGetPinByIdsFilterByHasFavoriteSP = createSP.createGetPinByIdsFilterB
 const createGetAllUsersSP = createSP.createGetAllUsersSP;
 const createGetDateTimesByStartEndDateSP = createSP.createGetDateTimesByStartEndDateSP;
 const createGetPinsWithFavoriteAndLikeArrayNextSP = createSP.createGetPinsWithFavoriteAndLikeArrayNextSP;
+const createSearchPinSP = createSP.createSearchPinSP;
 
 // Returns Single Result
 const createGetPinWithFavoriteAndLikeSP = createSP.createGetPinWithFavoriteAndLikeSP;
@@ -85,6 +86,8 @@ execute()
   })
   .catch(arg => {
     //process.exit();
+  }).finally(() => {
+    cp.closeConnection();
   });
 
 function execute() {
@@ -121,6 +124,7 @@ function execute() {
         createGetAllUsersSP,
         createGetDateTimesByStartEndDateSP,
         createGetPinsWithFavoriteAndLikeArrayNextSP,
+        createSearchPinSP,
 
         // Returns Single Result
         createGetPinWithFavoriteAndLikeSP,

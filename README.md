@@ -544,6 +544,3 @@ This is a promotional article about one of the company partners with Interesting
 - Comment fix
 - Login fix
 - Script to refresh pins in semantic search
-
-
-autocomplete search

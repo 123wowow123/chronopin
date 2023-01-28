@@ -11,6 +11,8 @@ const createGetPinsWithFavoriteAndLikeInitialFilterByHasFavoriteSP = require('./
 const createGetPinByIdsSP = require('./pin/createGetPinByIdsSP');
 const createGetPinByIdsFilterByHasFavoriteSP = require('./pin/createGetPinByIdsFilterByHasFavoriteSP');
 const createGetPinsWithFavoriteAndLikeArrayNextSP = require('./pin/createGetPinsWithFavoriteAndLikeArrayNextSP');
+/* search pin */
+const createSearchPinSP = require('./pin/createSearchPinSP');
 /* user */
 const createGetAllUsersSP = require('./user/createGetAllUsersSP');
 /* dateTime */
@@ -98,6 +100,7 @@ module.exports.setup = function(connectionPool) {
   createGetAllUsersSP.setup(cp);
   createGetDateTimesByStartEndDateSP.setup(cp);
   createGetPinsWithFavoriteAndLikeArrayNextSP.setup(cp);
+  createSearchPinSP.setup(cp);
 
   // Returns Single Result
   createGetPinWithFavoriteAndLikeSP.setup(cp);
@@ -153,6 +156,7 @@ module.exports.createGetPinByIdsFilterByHasFavoriteSP = createGetPinByIdsFilterB
 module.exports.createGetAllUsersSP = createGetAllUsersSP.createSP;
 module.exports.createGetDateTimesByStartEndDateSP = createGetDateTimesByStartEndDateSP.createSP;
 module.exports.createGetPinsWithFavoriteAndLikeArrayNextSP = createGetPinsWithFavoriteAndLikeArrayNextSP.createSP;
+module.exports.createSearchPinSP = createSearchPinSP.createSP;
 
 // Returns Single Result
 module.exports.createGetPinWithFavoriteAndLikeSP = createGetPinWithFavoriteAndLikeSP.createSP;

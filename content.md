@@ -84,3 +84,9 @@ https://www.theverge.com/2023/1/5/23531458/alfred-dbs2-smart-deadbolt-lock-wirel
 
 https://www.youtube.com/watch?v=CDVH_JJIRWI
 September and October, Egypt will have food crisis as Russia kills off Ukraine's Agriculture industry
+
+
+Add mention dates
+Need thread using reply like twitter?
+https://twitter.com/lawhon_sam/status/1619052756651880450/photo/1
+Market participants have forgotten their oft-used mantra of "don't fight the Fed" when it has negative implications for risk assets and are playing a dangerous game in predicting that the Fed will lower rates into year-end

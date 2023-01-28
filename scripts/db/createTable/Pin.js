@@ -60,8 +60,8 @@ function executeCreateTable() {
         );
 
         CREATE INDEX IX_UtcStartDateTime ON [dbo].[${TableName}] (utcStartDateTime); 
-        -- CREATE INDEX IX_Title ON [dbo].[${TableName}] (title); 
-
+        CREATE INDEX IX_Title ON [dbo].[${TableName}] (title); 
+        CREATE INDEX IX_Description ON [dbo].[${TableName}] (description); 
         `;
 
   return cp.getConnection()

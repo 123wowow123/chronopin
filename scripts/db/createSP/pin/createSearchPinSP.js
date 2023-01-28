@@ -44,6 +44,7 @@ function executeCreateSP() {
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
           @searchTitle         NVARCHAR(64),
           @searchDescription   NVARCHAR(64),
+          @top                 INT,
           @queryCount          INT OUTPUT
         AS
         BEGIN
@@ -53,7 +54,7 @@ function executeCreateSP() {
         SELECT @searchTitle = RTRIM(@searchTitle) + '%';  
         SELECT @searchDescription = RTRIM(@searchDescription) + '%';  
 
-        SELECT
+        SELECT TOP (@top)
             [Pin].[id],
             [Pin].[title],
             [Pin].[description],
