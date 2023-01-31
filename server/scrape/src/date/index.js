@@ -6,7 +6,7 @@
 
 import $ from 'jquery';
 import _ from 'lodash';
-import chrono from 'chrono-node';
+import * as chrono from 'chrono-node';
 
 export default function date() {
   var res = [];
