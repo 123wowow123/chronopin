@@ -80,7 +80,11 @@ function executeCreateSP() {
               [Media.originalUrl]    NVARCHAR(4000),
               [Media.originalWidth]  INT,
               [Media.originalHeight] INT,
-              [Media.type]           VARCHAR(255)
+              [Media.type]           INT,
+
+              [Media.authorName]     NVARCHAR(1028),
+              [Media.authorUrl]      NVARCHAR(4000),
+              [Media.html]           NVARCHAR(4000)
             );
 
             INSERT INTO @tempPinsTbl
@@ -118,7 +122,11 @@ function executeCreateSP() {
                 [Media].[originalUrl]                                                       AS [Media.originalUrl],
                 [Media].[originalWidth]                                                     AS [Media.originalWidth],
                 [Media].[originalHeight]                                                    AS [Media.originalHeight],
-                [Media].[type]                                                              AS [Media.type]
+                [Media].[type]                                                              AS [Media.type],
+
+                [Media].[authorName]                       AS [Media.authorName],
+                [Media].[authorUrl]                        AS [Media.authorUrl],
+                [Media].[html]                             AS [Media.html]
 
               FROM [dbo].[Pin] AS [Pin]
                 LEFT JOIN [dbo].[PinMedium] AS [Media.PinMedium]
@@ -153,7 +161,12 @@ function executeCreateSP() {
                 [Media].[originalUrl],
                 [Media].[originalWidth],
                 [Media].[originalHeight],
-                [Media].[type]
+                [Media].[type],
+
+                [Media].[authorName],
+                [Media].[authorUrl],
+                [Media].[html]
+
               ORDER BY [Pin].[utcStartDateTime] DESC, [Pin].[id] DESC
               OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY
 

@@ -1,6 +1,6 @@
 let cp;
 let Request;
-const TableName = 'Medium';
+const TableName = 'MediumType';
 
 module.exports.setup = function setup(connectionPool) {
   cp = connectionPool;
@@ -8,9 +8,9 @@ module.exports.setup = function setup(connectionPool) {
   return this;
 }
 
-module.exports.createMedium = function createMedium() {
+module.exports.createMediumType = function createMediumType() {
   return dropCreateTable()
-    .catch(function(err) {
+    .catch(function (err) {
       // ... connect error checks
       console.log("err", err);
       throw err;
@@ -42,19 +42,8 @@ function executeCreateTable() {
         CREATE TABLE [dbo].[${TableName}]
         (
             id INT PRIMARY KEY NOT NULL IDENTITY,
-            thumbName NVARCHAR(4000) NOT NULL,
-            thumbWidth INT,
-            thumbHeight INT,
-            originalUrl NVARCHAR(4000),
-            originalWidth INT,
-            originalHeight INT,
-            type NVARCHAR(255) NOT NULL,
-
-            authorName NVARCHAR(1028),
-            authorUrl NVARCHAR(4000),
-            html NVARCHAR(4000),
+            type NVARCHAR(255) NOT NULL
         );
-        CREATE UNIQUE INDEX UQ_INDEX_Medium_thumbName ON [dbo].[${TableName}] (thumbName);
         `;
 
   return cp.getConnection()

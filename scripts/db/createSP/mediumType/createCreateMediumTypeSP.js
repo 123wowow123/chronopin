@@ -1,9 +1,9 @@
 let cp;
 let Request;
-const StoredProcedureName = 'GetMediumByOriginalUrl';
+const StoredProcedureName = 'CreateMediumType';
 
 // Setup
-module.exports.setup = function(connectionPool) {
+module.exports.setup = function (connectionPool) {
   cp = connectionPool;
   Request = cp.Request;
   return this;
@@ -11,7 +11,7 @@ module.exports.setup = function(connectionPool) {
 
 module.exports.createSP = function createSP() {
   return dropCreateSP()
-    .catch(function(err) {
+    .catch(function (err) {
       // ... connect error checks
       console.log("err", err);
       throw err;
@@ -42,28 +42,21 @@ function executeDropSP() {
 function executeCreateSP() {
   let sql = `
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
-            @originalUrl NVARCHAR(4000)
+            @type               VARCHAR(255),
+            @id                 INT OUTPUT
         AS
           BEGIN
 
             SET NOCOUNT ON;
 
-            SELECT
-              id,
-              thumbName,
-              thumbWidth,
-              thumbHeight,
-              originalUrl,
-              originalWidth,
-              originalHeight,
-              type,
+            INSERT INTO [dbo].[MediumType] (
+              type
+            )
+            VALUES (
+              @type
+            );
 
-              authorName,
-              authorUrl,
-              html
-                            
-            FROM [dbo].[Medium]
-            WHERE originalUrl = @originalUrl;
+            SET @id = SCOPE_IDENTITY();
 
           END;
         `;

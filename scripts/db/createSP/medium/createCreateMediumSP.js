@@ -50,6 +50,10 @@ function executeCreateSP() {
             @originalHeight     INT,
             @type               VARCHAR(255),
 
+            @authorName         VARCHAR(1028),
+            @authorUrl          VARCHAR(4000),
+            @html               VARCHAR(4000),
+
             @id                 INT OUTPUT
         AS
           BEGIN
@@ -63,7 +67,11 @@ function executeCreateSP() {
               originalUrl,
               originalWidth,
               originalHeight,
-              type
+              type,
+
+              authorName,
+              authorUrl,
+              html
             )
             VALUES (
               @thumbName,
@@ -72,7 +80,12 @@ function executeCreateSP() {
               @originalUrl,
               @originalWidth,
               @originalHeight,
-              @type);
+              @type,
+
+              @authorName,
+              @authorUrl,
+              @html
+              );
 
             SET @id = SCOPE_IDENTITY();
 

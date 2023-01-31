@@ -82,7 +82,11 @@ function executeCreateSP() {
               [Media.originalUrl]    NVARCHAR(4000),
               [Media.originalWidth]  INT,
               [Media.originalHeight] INT,
-              [Media.type]           VARCHAR(255)
+              [Media.type]           INT,
+
+              [Media.authorName]     NVARCHAR(1028),
+              [Media.authorUrl]      NVARCHAR(4000),
+              [Media.html]           NVARCHAR(4000)
             );
 
             INSERT INTO @tempPinsTbl

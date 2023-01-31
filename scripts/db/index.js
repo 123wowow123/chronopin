@@ -19,6 +19,7 @@ const createComment = createTable.createComment;
 //const createFavorite = createTable.createFavorite;
 //const createLike = createTable.createLike;
 const createMedium = createTable.createMedium;
+const createMediumType = createTable.createMediumType;
 const createPin = createTable.createPin;
 const createPinMedium = createTable.createPinMedium;
 const createDateTime = createTable.createDateTime;
@@ -51,6 +52,7 @@ const createGetFavoriteSP = createSP.createGetFavoriteSP;
 const createCreateUserSP = createSP.createCreateUserSP;
 const createCreatePinSP = createSP.createCreatePinSP;
 const createCreateMediumSP = createSP.createCreateMediumSP;
+const createCreateMediumTypeSP = createSP.createCreateMediumTypeSP;
 const createCreatePinMediumSP = createSP.createCreatePinMediumSP;
 const createCreatePinMediumLinkSP = createSP.createCreatePinMediumLinkSP;
 //const createCreateLikeSP = createSP.createCreateLikeSP;
@@ -104,6 +106,7 @@ function execute() {
         createUser,
         createAddress,
         createMedium,
+        createMediumType,
         createPin,
         createPinMedium,
         createClick,
@@ -140,6 +143,7 @@ function execute() {
         createCreateUserSP,
         createCreatePinSP,
         createCreateMediumSP,
+        createCreateMediumTypeSP,
         createCreatePinMediumSP,
         createCreatePinMediumLinkSP,
         //createCreateLikeSP,

@@ -1,5 +1,6 @@
 import {
-  uniqueAndNonEmpty
+  uniqueAndNonEmpty,
+  wait
 } from '../helper/util';
 
 import {
@@ -22,7 +23,7 @@ function preloader(url) {
       });
     }
     imageObj.error = err => {
-      console.log('Phantom: preloader:', err);
+      console.log('Preloader:', err);
       reject(err);
     }
     imageObj.src = url;
@@ -30,20 +31,29 @@ function preloader(url) {
 }
 
 function getImageSizes(images) {
+  let timeout = 7000;
   let imagePromises = images.map(imageUrl => {
-    return preloader(imageUrl)
-      .then(image => {
-        return image;
-      })
-      .catch(err => {
-        //console.log('Phantom: getImageSizes:', err);
-        var image = {
-          sourceUrl: imageUrl,
-          width: 0,
-          height: 0
-        };
-        return image;
-      });
+
+    let defaultReturnImage = {
+      sourceUrl: imageUrl,
+      width: 0,
+      height: 0
+    };
+
+    return Promise.race([
+      wait(timeout).then(() => {
+        console.log("getImageSizes timeout: " + timeout, imageUrl)
+        return defaultReturnImage;
+      }),
+      preloader(imageUrl)
+        .then(image => {
+          return image;
+        })
+        .catch(err => {
+          console.log('preloader getImageSizes:', err);
+          return defaultReturnImage;
+        })
+    ])
   });
 
   return Promise.all(imagePromises);

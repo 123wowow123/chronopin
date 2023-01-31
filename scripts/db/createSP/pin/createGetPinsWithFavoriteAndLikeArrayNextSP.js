@@ -77,6 +77,10 @@ BEGIN
       [Media].[originalHeight]                                                    AS [Media.originalHeight],
       [Media].[type]                                                              AS [Media.type],
 
+      [Media].[authorName]                       AS [Media.authorName],
+      [Media].[authorUrl]                        AS [Media.authorUrl],
+      [Media].[html]                             AS [Media.html],
+
       [Favorites].[userId]                                                        AS [Favorites.userId],
       [Favorites].[utcCreatedDateTime]                                            AS [Favorites.utcCreatedDateTime],
       [Favorites].[utcUpdatedDateTime]                                            AS [Favorites.utcUpdatedDateTime],

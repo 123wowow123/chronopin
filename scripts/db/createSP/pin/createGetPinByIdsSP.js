@@ -100,7 +100,11 @@ function executeCreateSP() {
               [Media].[originalUrl]                      AS [Media.originalUrl],
               [Media].[originalWidth]                    AS [Media.originalWidth],
               [Media].[originalHeight]                   AS [Media.originalHeight],
-              [Media].[type]                             AS [Media.type]
+              [Media].[type]                             AS [Media.type],
+
+              [Media].[authorName]                       AS [Media.authorName],
+              [Media].[authorUrl]                        AS [Media.authorUrl],
+              [Media].[html]                             AS [Media.html]
 
             FROM [dbo].[Pin] AS [Pin]
               JOIN @TableIds AS paramTableIds
@@ -138,7 +142,12 @@ function executeCreateSP() {
               [Media].[originalUrl],
               [Media].[originalWidth],
               [Media].[originalHeight],
-              [Media].[type]
+              [Media].[type],
+
+              [Media].[authorName],
+              [Media].[authorUrl],
+              [Media].[html]
+
               ORDER BY [Pin].[utcStartDateTime];
 
               SET @queryCount = @@ROWCOUNT;

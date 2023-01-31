@@ -11,11 +11,33 @@ const scrapeJsFileJS = fs.readFileSync(scrapeJsFileName, 'utf8');
 const defaultNavigationWait = 10000
 
 module.exports.scrape = function scrape(pageUrl) {
+  // regex
+
+  switch ('test') {
+    case 'twitter':
+      return _getTwitterPost(pageUrl);
+    case 'youtube':
+      return _getYoutubePost(pageUrl);
+    default:
+      return _webScrpae(pageUrl);
+  }
+
+}
+
+function _getYoutubePost(pageUrl) {
+
+}
+
+function _getTwitterPost(pageUrl) {
+
+}
+
+function _webScrpae(pageUrl) {
   let browser = null;
   let page = null;
   const res = puppeteer.launch({
     ignoreHTTPSErrors: true,
-    headless: true
+    headless: false
   })
     .then((b) => {
       browser = b
@@ -42,9 +64,16 @@ module.exports.scrape = function scrape(pageUrl) {
           script.id = "chrono";
           script.text = scrapeJsFileJS;
           document.getElementsByTagName('head')[0].appendChild(script);
+
+          console.log("chrono", window.cpScrapePromise);
+
           window.cpScrapePromise
             .then((res) => {
+              console.log("chrono resolve", res);
               resolve(res);
+            }).catch((e) => {
+              console.log("chrono catch", e);
+              throw e;
             });
         }));
 

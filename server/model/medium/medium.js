@@ -4,13 +4,13 @@ import * as mssql from 'mssql';
 import * as cp from '../../sqlConnectionPool';
 import * as image from '../../image'
 import * as _ from 'lodash';
-import { v4 as uuidv4 }  from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import {
   BasePin
 } from '..';
 
 // _pin
-let prop = [
+const prop = [
   'id',
   'thumbName',
   'thumbWidth',
@@ -20,7 +20,12 @@ let prop = [
   'originalHeight',
   'type',
   'utcCreatedDateTime',
-  'utcDeletedDateTime'
+  'utcDeletedDateTime',
+
+  // For twitter and youtube
+  'authorName',
+  'authorUrl',
+  'html'
 ];
 
 export default class Medium {
@@ -41,7 +46,7 @@ export default class Medium {
         this._pin = pin;
       }
       else if (medium._pin && medium._pin instanceof BasePin) {
-          this._pin = medium._pin;
+        this._pin = medium._pin;
       }
       else if (Number.isInteger(medium.pinId)) {
         this.pinId = medium.pinId;
@@ -95,10 +100,10 @@ export default class Medium {
   toJSON() {
     // omits own and inherited properties with null values
     return _.omitBy(this, (value, key) => {
-        return key.startsWith('_')
-            || _.isNull(value);
+      return key.startsWith('_')
+        || _.isNull(value);
     });
-}
+  }
 
   static getByOriginalUrl(originalUrl) {
     return _getMediumByOriginalUrlMSSQL(originalUrl);
@@ -106,8 +111,8 @@ export default class Medium {
 
   static createAndSaveToCDN(originalUrl) {
     return new Medium({
-        originalUrl: originalUrl
-      })
+      originalUrl: originalUrl
+    })
       .createAndSaveToCDN();
   }
 
@@ -138,9 +143,13 @@ function _createMSSQL(medium, pinId) {
           .input('originalUrl', mssql.NVarChar(4000), medium.originalUrl)
           .input('originalWidth', mssql.Int, medium.originalWidth)
           .input('originalHeight', mssql.Int, medium.originalHeight)
-          .input('type', mssql.VarChar(255), medium.type)
+          .input('type', mssql.Int, 1)
           .input('utcCreatedDateTime', mssql.DateTime2(7), medium.utcCreatedDateTime)
           .input('utcDeletedDateTime', mssql.DateTime2(7), medium.utcDeletedDateTime)
+          .input('authorName', mssql.NVarChar(1028), medium.authorName)
+          .input('authorUrl', mssql.NVarChar(4000), medium.authorUrl)
+          .input('html', mssql.NVarChar(4000), medium.html)
+
           .output('id', mssql.Int);
 
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
@@ -214,8 +223,7 @@ function _getImageStatAndSaveImage(imageUrl) {
         originalUrl: thumbBufferAndMeta.originalUrl,
         originalWidth: thumbBufferAndMeta.originalWidth,
         originalHeight: thumbBufferAndMeta.originalHeight,
-        type: thumbBufferAndMeta.type || 'Image' // change to mimeType and currently cannot be undefined
-        //type: 'Image' // do we need this?
+        type: 1 // 1 for 'Image'
       };
       return newMedium;
     })
@@ -227,7 +235,7 @@ function _getImageStatAndSaveImage(imageUrl) {
 function _deleteFromPinMSSQL(medium, pinId) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'DeletePinMediumByPinMediumId';
         let request = new mssql.Request(conn)
           // fb public attributes
@@ -264,7 +272,7 @@ function _deleteFromPinMSSQL(medium, pinId) {
 function _getMediumByOriginalUrlMSSQL(originalUrl) {
   return cp.getConnection()
     .then(conn => {
-      return new Promise(function(resolve, reject) {
+      return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'GetMediumByOriginalUrl';
         let medium;
         let request = new mssql.Request(conn)

@@ -52,6 +52,11 @@ function executeCreateSP() {
             @type               VARCHAR(255),
             @utcCreatedDateTime DATETIME2(7),
             @utcDeletedDateTime DATETIME2(7),
+
+            @authorName         VARCHAR(1028),
+            @authorUrl          VARCHAR(4000),
+            @html               VARCHAR(4000),
+
             @id                 INT OUTPUT
         AS
           BEGIN
@@ -74,6 +79,11 @@ function executeCreateSP() {
                 @originalWidth,
                 @originalHeight,
                 @type,
+
+                @authorName,
+                @authorUrl,
+                @html,
+
                 @id = @mediumId OUTPUT;
 
             EXEC [dbo].[CreatePinMedium]

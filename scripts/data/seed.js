@@ -5,6 +5,7 @@
 'use strict';
 
 import {
+  MediumType,
   User,
   FullPins,
   DateTime,
@@ -69,7 +70,19 @@ module.exports.seedDB = function () {
       password: 'admin',
       facebookId: '984663319826',
       id: 2 // ToDo: need to be dynamically linked
-    };
+    },
+    defaultMediumTypes = [
+      {
+        //id: 1,
+        type: 'image'
+      }, {
+        //id: 2,
+        type: 'twitter'
+      }, {
+        //id: 3,
+        type: 'youtube'
+      }
+    ];
 
 
   const baseUrl = "http://kayaposoft.com/enrico/json/v1.0/";
@@ -164,6 +177,17 @@ module.exports.seedDB = function () {
     .then(res => {
       let user = new User(secondaryUserObj);
       return user.save();
+    })
+    .then(res => {
+      const mediumTypePromises = defaultMediumTypes.map(mt => {
+        const mediumType = new MediumType(mt);
+        return mediumType.save();
+      });
+      return Promise.all(mediumTypePromises)
+        .catch(e => {
+          console.log("MediumType save error");
+          throw e;
+        });
     })
     .then(({
       //user

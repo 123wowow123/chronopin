@@ -90,3 +90,9 @@ Add mention dates
 Need thread using reply like twitter?
 https://twitter.com/lawhon_sam/status/1619052756651880450/photo/1
 Market participants have forgotten their oft-used mantra of "don't fight the Fed" when it has negative implications for risk assets and are playing a dangerous game in predicting that the Fed will lower rates into year-end
+
+https://www.macrumors.com/2023/01/27/wifi-6e-iphone-15-pro-models/
+
+
+https://www.youtube.com/watch?v=8jEmIDwqnL4
+General AI ready at 2060 - 2070

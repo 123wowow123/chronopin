@@ -42,6 +42,9 @@ export {
   default as Medium
 } from './medium/medium';
 export {
+  default as MediumType
+} from './mediumType/mediumType';
+export {
   default as Like
 } from './like/like';
 export {

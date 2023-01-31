@@ -540,7 +540,14 @@ This is a promotional article about one of the company partners with Interesting
 ## Before Usable
 - Youtube!!
 - Create page image redesign with image selection in right drawer
-- Single Pin page similarity needs to be in timeline
 - Comment fix
 - Login fix
 - Script to refresh pins in semantic search
+- Single Pin page similarity needs to be in timeline
+- Favorite needs to be grouped in folders and make public/private
+- Pinner should be able to add tags/groups to organize their pin
+- Notification when other people comment on your post for comment reply
+
+
+db & sp update - yes
+update client for youtube and twitter

@@ -40,6 +40,8 @@ const createCreatePinSP = require('./pin/createCreatePinSP');
 const createCreateUserSP = require('./user/createCreateUserSP');
 /* medium */
 const createCreateMediumSP = require('./medium/createCreateMediumSP');
+/* mediumType */
+const createCreateMediumTypeSP = require('./mediumType/createCreateMediumTypeSP');
 /* pinMedium */
 const createCreatePinMediumSP = require('./pinMedium/createCreatePinMediumSP');
 const createCreatePinMediumLinkSP = require('./pinMedium/createCreatePinMediumLinkSP');
@@ -116,6 +118,7 @@ module.exports.setup = function(connectionPool) {
   createCreatePinSP.setup(cp);
   createCreateUserSP.setup(cp);
   createCreateMediumSP.setup(cp);
+  createCreateMediumTypeSP.setup(cp);
   createCreatePinMediumSP.setup(cp);
   createCreatePinMediumLinkSP.setup(cp);
   //createCreateLikeSP.setup(cp);
@@ -172,6 +175,7 @@ module.exports.createGetFavoriteSP = createGetFavoriteSP.createSP;
 module.exports.createCreatePinSP = createCreatePinSP.createSP;
 module.exports.createCreateUserSP = createCreateUserSP.createSP;
 module.exports.createCreateMediumSP = createCreateMediumSP.createSP;
+module.exports.createCreateMediumTypeSP = createCreateMediumTypeSP.createSP;
 module.exports.createCreatePinMediumSP = createCreatePinMediumSP.createSP;
 module.exports.createCreatePinMediumLinkSP = createCreatePinMediumLinkSP.createSP;
 //module.exports.createCreateLikeSP = createCreateLikeSP.createSP;
