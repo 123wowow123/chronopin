@@ -95,6 +95,10 @@ let all = {
     serviceUrl: getProcessEnv('FAISS_URL'),
   },
 
+  youtube: {
+    YOUTUBE_API_KEY: getProcessEnv('YOUTUBE_API_KEY')
+  },
+
   elastiSearch: {
     indexPrefix: getProcessEnv('INDEXPREFIX') || '',
     serviceUrl: getProcessEnv('ELASTISEARCH_URL') || '',

@@ -91,8 +91,8 @@ function _getYoutubePost(pageUrl) {
 }
 
 function _getYoutubeEmbed(youtubeId) {
-  const YOUR_API_KEY = "AIzaSyD49PoiwirZTFH2YE0RigvOi2JkfzQtp1I";
-  const uri = `https://www.googleapis.com/youtube/v3/videos?part=player&id=${youtubeId}&maxResults=1&key=${YOUR_API_KEY}`;
+  const YOUTUBE_API_KEY = config.youtube.YOUTUBE_API_KEY;
+  const uri = `https://www.googleapis.com/youtube/v3/videos?part=player&id=${youtubeId}&maxResults=1&key=${YOUTUBE_API_KEY}`;
   const options = {
     method: 'GET',
     uri: uri,
