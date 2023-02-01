@@ -13,7 +13,7 @@ import {
 } from '../../server/model';
 
 import fs from 'fs';
-import rp from 'request-promise';
+const rp = require('request-promise');
 import _ from 'lodash';
 
 import * as log from '../../server/util/log';

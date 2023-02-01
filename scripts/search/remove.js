@@ -11,7 +11,7 @@ import {
 } from '../../server/model';
 
 import * as log from '../../server/util/log';
-import rp from 'request-promise';
+const rp = require('request-promise');
 
 let INDEX;
 

@@ -1,7 +1,7 @@
 'use strict';
 
 import * as _ from 'lodash';
-import rp from 'request-promise';
+const rp = require('request-promise');
 import { prefixSearchIndex } from './searchHelper';
 import * as config from '../../../config/environment';
 

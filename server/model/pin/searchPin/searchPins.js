@@ -3,7 +3,7 @@
 import * as mssql from 'mssql';
 import * as cp from '../../../sqlConnectionPool';
 import * as _ from 'lodash';
-import rp from 'request-promise';
+const rp = require('request-promise');
 import {
     SearchPin,
     Pins,

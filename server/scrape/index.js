@@ -2,12 +2,11 @@ const puppeteer = require('puppeteer');
 const _ = require('lodash');
 const fs = require('fs');
 const config = require('../config/environment');
-import rp from 'request-promise';
-
-import {
+const rp = require('request-promise');
+const {
   Pin,
   Medium
-} from '../model';
+} = require('../model');
 
 const scrapeJsFileName = __dirname + '/scrape.min.js';
 const scrapeJsFileJS = fs.readFileSync(scrapeJsFileName, 'utf8');
@@ -32,7 +31,7 @@ module.exports.scrape = function scrape(pageUrl) {
       break;
   }
   return scraperResPromise.then(scraperRes => {
-    return { ...scraperRes, type };
+    return Object.assign({}, scraperRes, { type });
   })
 }
 
