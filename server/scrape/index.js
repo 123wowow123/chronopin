@@ -2,42 +2,112 @@ const puppeteer = require('puppeteer');
 const _ = require('lodash');
 const fs = require('fs');
 const config = require('../config/environment');
+import rp from 'request-promise';
 
-//console.log(JSON.stringify(config))
+import {
+  Pin,
+  Medium
+} from '../model';
+
 const scrapeJsFileName = __dirname + '/scrape.min.js';
 const scrapeJsFileJS = fs.readFileSync(scrapeJsFileName, 'utf8');
-//console.log(scrapeJsFileName);
 
 const defaultNavigationWait = 10000
 
 module.exports.scrape = function scrape(pageUrl) {
-  // regex
-
-  switch ('test') {
-    case 'twitter':
-      return _getTwitterPost(pageUrl);
-    case 'youtube':
-      return _getYoutubePost(pageUrl);
+  const match = _getDomain(pageUrl);
+  let scraperResPromise, type;
+  switch (match[1]) {
+    case 'twitter.com':
+      type = 'twitter';
+      scraperResPromise = _getTwitterPost(pageUrl);
+      break;
+    case 'youtube.com':
+      type = 'youtube';
+      scraperResPromise = _getYoutubePost(pageUrl);
+      break;
     default:
-      return _webScrpae(pageUrl);
+      type = 'web';
+      scraperResPromise = _webScrpae(pageUrl);
+      break;
   }
-
+  return scraperResPromise.then(scraperRes => {
+    return { ...scraperRes, type };
+  })
 }
 
-function _getYoutubePost(pageUrl) {
-
+function _getDomain(pageUrl) {
+  const regex = /^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/?\n]+)/
+  const match = pageUrl.match(regex);
+  return match;
 }
 
 function _getTwitterPost(pageUrl) {
-
+  const regex = /\/(\d+)$/
+  const match = pageUrl.match(regex);
+  const jsonPromise = _getTwitterEmbed(match[1])
+    .then(res => {
+      console.log(res)
+      const newPin = new Pin();
+      newPin.addMedium(new Medium({
+        type: 2,
+        html: res.html
+      }));
+      return newPin;
+    }).catch(e => {
+      console.log(e)
+      throw e;
+    });
+  return jsonPromise;
 }
+
+function _getTwitterEmbed(twitterId) {
+  const uri = `https://publish.twitter.com/oembed?url=https://twitter.com/Interior/status/${twitterId}`;
+  const options = {
+    method: 'GET',
+    uri: uri,
+    json: true, // Automatically stringifies the body to JSON
+  };
+  return rp(options);
+};
+
+function _getYoutubePost(pageUrl) {
+  const regex = /(?<=v=|v\/|vi=|vi\/|youtu.be\/)[a-zA-Z0-9_-]{11}/
+  const match = pageUrl.match(regex);
+  const id = match.filter(t => !!t)[0];
+  const jsonPromise = _getYoutubeEmbed(id)
+    .then(res => {
+      const newPin = new Pin();
+      newPin.addMedium(new Medium({
+        type: 3,
+        html: _.get(res, "items[0].player.embedHtml")
+      }));
+      return newPin;
+    }).catch(e => {
+      console.log(e);
+      throw e;
+    })
+  return jsonPromise;
+}
+
+function _getYoutubeEmbed(youtubeId) {
+  const YOUR_API_KEY = "AIzaSyD49PoiwirZTFH2YE0RigvOi2JkfzQtp1I";
+  const uri = `https://www.googleapis.com/youtube/v3/videos?part=player&id=${youtubeId}&maxResults=1&key=${YOUR_API_KEY}`;
+  const options = {
+    method: 'GET',
+    uri: uri,
+    json: true, // Automatically stringifies the body to JSON
+  };
+
+  return rp(options);
+};
 
 function _webScrpae(pageUrl) {
   let browser = null;
   let page = null;
   const res = puppeteer.launch({
     ignoreHTTPSErrors: true,
-    headless: false
+    headless: true
   })
     .then((b) => {
       browser = b
@@ -94,6 +164,8 @@ function _webScrpae(pageUrl) {
 
   return res;
 }
+
+
 
 //   function _getYouTubeURL($) {
 //     var key = 'src';

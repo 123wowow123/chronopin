@@ -549,5 +549,4 @@ This is a promotional article about one of the company partners with Interesting
 - Notification when other people comment on your post for comment reply
 
 
-db & sp update - yes
 update client for youtube and twitter

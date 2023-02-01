@@ -19,10 +19,12 @@ angular.module('chronopinNodeApp', [
     'ig.linkHeaderParser',
     'angularGrid'
   ])
-  .config(($urlRouterProvider, $locationProvider) => {
+  .config(($urlRouterProvider, $locationProvider, $sceProvider) => {
     $urlRouterProvider.otherwise('/');
 
     $locationProvider.html5Mode(true);
+
+    $sceProvider.enabled(false);
   })
   .config(['cfpLoadingBarProvider', (cfpLoadingBarProvider) => {
     cfpLoadingBarProvider.includeSpinner = false;

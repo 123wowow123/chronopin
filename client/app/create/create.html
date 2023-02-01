@@ -135,7 +135,7 @@
                     <div class="col-sm-4">
                       <button type="button" class="btn btn-primary" ng-click="$ctrl.scrapePage($ctrl.pin.sourceUrl)"
                         ng-if="$ctrl.mode === 'edit'">Scrape</button>
-                        <button type="button" class="btn btn-primary" ng-click="$ctrl.scrapeImage($ctrl.pin.sourceUrl)"
+                      <button type="button" class="btn btn-primary" ng-click="$ctrl.scrapeImage($ctrl.pin.sourceUrl)"
                         ng-if="$ctrl.mode === 'edit'">Scrape Image</button>
                     </div>
                     <div class="col-sm-8">
@@ -160,24 +160,35 @@
 
   </div>
 
-  <div class="create__select-image">
+  <!-- Switch between image / iframe / tweets -->
+  <div class="grid__media container" ng-switch="$ctrl.pin.type">
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12 clearfix">
-
-          <ul class="image-dynamic-grid" angular-grid="$ctrl.pin.media" gutter-size="10" grid-width="200"
-            refresh-on-img-load="false">
-            <li data-ng-repeat="img in $ctrl.pin.media" class="image-grid"
-              ng-class="{'image-grid--selected': img === $ctrl.pin.selectedMedia }" ng-click="$ctrl.selectImage(img)">
-              <img ng-src="{{img.originalUrl}}" class="image-grid__image" data-actual-width="{{img.width}}"
-                data-actual-height="{{img.height}}" title="{{img.height}} x {{img.height}}" />
-            </li>
-          </ul>
-
+    <div class="create__select-image" ng-switch-when="web">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 clearfix">
+            <ul class="image-dynamic-grid" angular-grid="$ctrl.pin.media" gutter-size="10" grid-width="200"
+              refresh-on-img-load="false">
+              <li data-ng-repeat="img in $ctrl.pin.media" class="image-grid"
+                ng-class="{'image-grid--selected': img === $ctrl.pin.selectedMedia }" ng-click="$ctrl.selectImage(img)">
+                <img ng-src="{{img.originalUrl}}" class="image-grid__image" data-actual-width="{{img.width}}"
+                  data-actual-height="{{img.height}}" title="{{img.height}} x {{img.height}}" />
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="twitter-pin-container" ng-switch-when="twitter" ng-bind-html="$ctrl.pin.media[0].html">
+    </div>
+
+    <div class='embed-container --margin-top-bottom' ng-switch-when="youtube" ng-bind-html="$ctrl.pin.media[0].html">
+    </div>
+
+    <!-- <div ng-switch-default>
+        </div> -->
+
   </div>
 
 

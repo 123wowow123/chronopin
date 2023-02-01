@@ -26,16 +26,11 @@
             <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
         </div>
 
-        <div class='embed-container' ng-switch-when="3" >
-            <iframe src="https://www.youtube.com/embed/iBNySB2jpVg"
-                title="Why Tiny Cactus Bugs In Red Food Dye Are A $35 Billion Industry | Big Business | Insider Business"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+        <div class='embed-container' ng-switch-when="3" ng-bind-html="$ctrl.pin.media[0].html">
         </div>
 
         <!-- <div ng-switch-default>
         </div> -->
-
     </div>
 
 

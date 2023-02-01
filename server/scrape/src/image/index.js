@@ -31,17 +31,17 @@ function preloader(url) {
 }
 
 function getImageSizes(images) {
-  let timeout = 7000;
+  const timeout = 7000;
   let imagePromises = images.map(imageUrl => {
 
-    let defaultReturnImage = {
+    const defaultReturnImage = {
       sourceUrl: imageUrl,
       width: 0,
       height: 0
     };
 
     return Promise.race([
-      wait(timeout).then(() => {
+      wait(timeout).catch(() => {
         console.log("getImageSizes timeout: " + timeout, imageUrl)
         return defaultReturnImage;
       }),

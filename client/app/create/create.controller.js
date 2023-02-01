@@ -169,10 +169,25 @@
       return this;
     }
 
-    setPinFromScrape(pin) {
+    setPinFromYoutubeScrape(pin) {
+      this.pin.type = _.get(pin, 'type');
+      this.pin.media = _.get(pin, 'media', []);
+      return this;
+    }
+
+    setPinFromTwitterScrape(pin) {
+      this.pin.type = _.get(pin, 'type');
+      this.pin.media = _.get(pin, 'media', []);
+      $.getScript('//platform.twitter.com/widgets.js', () => {
+        twttr.widgets.load(document.body)
+      });
+      return this;
+    }
+
+    setPinFromWebScrape(pin) {
+      this.pin.type = _.get(pin, 'type');
       this.pin.title = _.get(pin, 'titles[0]');
       this.pin.description = _.get(pin, 'descriptions[0]');
-
       // if (!this.pin.address) {
       //   this.pin.address = _.get(pin, 'address');
       // }
@@ -198,12 +213,20 @@
         }
       };
       return this.$http.get('/api/scrape', config)
-        .then(response => {
-          this
-            .setPinFromScrape(response.data)
-            .enableForm(true);
+        .then(res => {
+          switch (res.data.type) {
+            case 'web':
+              this.setPinFromWebScrape(res.data)
+              break;
+            case 'twitter':
+              this.setPinFromTwitterScrape(res.data)
+              break;
+            case 'youtube':
+              this.setPinFromYoutubeScrape(res.data)
+              break;
+          }
         })
-        .catch(err => {
+        .finally(() => {
           this.enableForm(true);
         });
     }

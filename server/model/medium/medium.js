@@ -21,7 +21,6 @@ const prop = [
   'type',
   'utcCreatedDateTime',
   'utcDeletedDateTime',
-
   // For twitter and youtube
   'authorName',
   'authorUrl',
@@ -143,7 +142,7 @@ function _createMSSQL(medium, pinId) {
           .input('originalUrl', mssql.NVarChar(4000), medium.originalUrl)
           .input('originalWidth', mssql.Int, medium.originalWidth)
           .input('originalHeight', mssql.Int, medium.originalHeight)
-          .input('type', mssql.Int, 1)
+          .input('type', mssql.Int, medium.type)
           .input('utcCreatedDateTime', mssql.DateTime2(7), medium.utcCreatedDateTime)
           .input('utcDeletedDateTime', mssql.DateTime2(7), medium.utcDeletedDateTime)
           .input('authorName', mssql.NVarChar(1028), medium.authorName)

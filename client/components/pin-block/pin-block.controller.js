@@ -14,7 +14,7 @@
             //this._registerWaypointObserver(); /////////////////////
             //debugger
 
-            //youtube
+            // youtube
             //https://www.geeksforgeeks.org/how-to-get-youtube-video-id-with-php-regex/
             //get embed code
             // GET https://www.googleapis.com/youtube/v3/videos?part=player&id={VIDEO_ID}&maxResults=1&key={YOUR_API_KEY}
@@ -32,7 +32,8 @@
             // this.html = `
             // \u003Cblockquote class=\"twitter-tweet\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003ESunsets don&#39;t get much better than this one over \u003Ca href=\"https:\/\/twitter.com\/GrandTetonNPS?ref_src=twsrc%5Etfw\"\u003E@GrandTetonNPS\u003C\/a\u003E. \u003Ca href=\"https:\/\/twitter.com\/hashtag\/nature?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#nature\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/sunset?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#sunset\u003C\/a\u003E \u003Ca href=\"http:\/\/t.co\/YuKy2rcjyU\"\u003Epic.twitter.com\/YuKy2rcjyU\u003C\/a\u003E\u003C\/p\u003E&mdash; US Department of the Interior (@Interior) \u003Ca href=\"https:\/\/twitter.com\/Interior\/status\/463440424141459456?ref_src=twsrc%5Etfw\"\u003EMay 5, 2014\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n
             // `
-
+            // this.title = "Why Tiny Cactus Bugs In Red Food Dye Are A $35 Billion Industry | Big Business | Insider Business"
+            // this.embedlUrl = "https://www.youtube.com/embed/iBNySB2jpVg"
         }
 
         // Click handlers

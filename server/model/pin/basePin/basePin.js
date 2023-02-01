@@ -49,7 +49,7 @@ export default class BasePin {
             }
             else if (Number.isInteger(pin.userId)) {
                 this.userId = pin.userId;
-              }
+            }
 
             this.media = _.get(pin, 'media', [])
                 .map(m => {
@@ -87,6 +87,7 @@ export default class BasePin {
     addMedium(medium) {
         if (medium instanceof Medium) {
             medium.setPin(this);
+            if (!this.media) { this.media = []; };
             this.media.push(medium);
         } else {
             throw "medium not instance of Medium";
