@@ -22,7 +22,7 @@ import expressSequelizeSession from 'express-sequelize-session';
 const { forceDomain } = require('forcedomain');
 var Store = expressSequelizeSession(session.Store);
 
-export default function(app) {
+export default function (app) {
   var env = app.get('env');
 
   app.use(forceDomain({
@@ -48,7 +48,7 @@ export default function(app) {
   }
 
   app.set('appPath', path.join(config.root, 'client'));
-  app.use(express.static(app.get('appPath')));
+  app.use(express.static(app.get('appPath'), { index: '_' }));
   app.use(morgan('dev'));
 
   app.set('views', config.root + '/server/views');
