@@ -12,5 +12,10 @@ exports = module.exports = {
   thumbWidth: 400,
   thumbUrlPrefix: 'https://chronopin.blob.core.windows.net/thumb/',
   fbAppId: '560731380662615',
-  gaAppId: 'UA-103783559-1'
+  gaAppId: 'UA-103783559-1',
+  scrapeType: {
+    web: "web",
+    twitter: "twitter",
+    youtube: "youtube"
+  }
 };

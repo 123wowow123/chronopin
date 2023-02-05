@@ -30,6 +30,10 @@ Run `kubectl create -f kube/deployment.yaml` to deploy all
 
 Run `kubectl delete deployment chronopin`
 
+### Update All
+
+Run `kubectl apply -f kube/deployment.yaml`
+
 ### Service
 
 Run `kubectl get service`
@@ -83,3 +87,8 @@ Run `docker image prune --force --all` to remove all images that are not current
 
 ## New docker doc:
 https://www.elastic.co/guide/en/elasticsearch/reference/8.6/run-elasticsearch-locally.html#_send_requests_to_elasticsearch
+
+
+## Check ssl certificate status
+
+`kubectl describe managedcertificate chronopin-managed-cert`

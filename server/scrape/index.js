@@ -8,25 +8,25 @@ const {
   Medium
 } = require('../model');
 
+const scrapeType = config.scrapeType;
 const scrapeJsFileName = __dirname + '/scrape.min.js';
 const scrapeJsFileJS = fs.readFileSync(scrapeJsFileName, 'utf8');
-
 const defaultNavigationWait = 10000
 
 module.exports.scrape = function scrape(pageUrl) {
-  const match = _getDomain(pageUrl);
   let scraperResPromise, type;
-  switch (match[1]) {
+  const domainMatches = _getDomain(pageUrl);
+  switch (domainMatches[1]) {
     case 'twitter.com':
-      type = 'twitter';
+      type = scrapeType.twitter;
       scraperResPromise = _getTwitterPost(pageUrl);
       break;
     case 'youtube.com':
-      type = 'youtube';
+      type = scrapeType.youtube;
       scraperResPromise = _getYoutubePost(pageUrl);
       break;
     default:
-      type = 'web';
+      type = scrapeType.web;
       scraperResPromise = _webScrpae(pageUrl);
       break;
   }

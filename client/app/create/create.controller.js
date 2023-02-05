@@ -7,7 +7,7 @@
 
   class CreateController {
 
-    constructor($state, $scope, Auth, $q, $stateParams, $http, pinWebService /*, $log, modelInjector */) {
+    constructor($state, $scope, Auth, $q, $stateParams, $http, pinWebService, scrapeService, appConfig /*, $log, modelInjector */) {
       //PinGroups || (PinGroups = modelInjector.getPinGroups());
 
       let baseDate = new Date();
@@ -31,7 +31,9 @@
 
       // this.mode = this.mode || 'create';
 
+      this.scrapeType = appConfig.scrapeType;
       this.pinWebService = pinWebService;
+      this.scrapeService = scrapeService;
       this.$http = $http;
       this.$q = $q;
       this.$stateParams = $stateParams;
@@ -76,10 +78,9 @@
         //this.$http.get('/api/pins/' + id)
         this.pinWebService.get(id)
           .then(res => {
-            this.setPin(res.data);
-            this.enableForm(true);
+            return this.scrapeService.setPin(this.pin, res.data);
           })
-          .catch(err => {
+          .finally(() => {
             this.enableForm(true);
           });
       }
@@ -144,111 +145,6 @@
       return this;
     }
 
-    setPin(pin) {
-      this.pin.id = pin.id;
-      this.pin.sourceUrl = pin.sourceUrl;
-      this.pin.title = pin.title;
-      this.pin.description = pin.description;
-      this.pin.address = pin.address;
-      this.pin.price = pin.price;
-      this.pin.start = pin.utcStartDateTime && new Date(pin.utcStartDateTime);
-      this.pin.end = pin.utcStartDateTime && new Date(pin.utcEndDateTime);
-      this.pin.allDay = pin.allDay;
-      this.pin.media = pin.media;
-
-      this.pin.selectedMedia = _.get(pin, 'media[0]');
-      return this;
-    }
-
-    setPinImageFromScrapeAndSelect(pin) {
-      this.pin.media = _.get(pin, 'media');
-      const foundMedium = _.get(pin, 'media', []).find(m => {
-        return m.originalUrl === _.get(this, 'pin.selectedMedia.originalUrl');
-      });
-      this.pin.selectedMedia = foundMedium ? foundMedium : _.get(pin, 'media[0]');
-      return this;
-    }
-
-    setPinFromYoutubeScrape(pin) {
-      this.pin.type = _.get(pin, 'type');
-      this.pin.media = _.get(pin, 'media', []);
-      return this;
-    }
-
-    setPinFromTwitterScrape(pin) {
-      this.pin.type = _.get(pin, 'type');
-      this.pin.media = _.get(pin, 'media', []);
-      $.getScript('//platform.twitter.com/widgets.js', () => {
-        twttr.widgets.load(document.body)
-      });
-      return this;
-    }
-
-    setPinFromWebScrape(pin) {
-      this.pin.type = _.get(pin, 'type');
-      this.pin.title = _.get(pin, 'titles[0]');
-      this.pin.description = _.get(pin, 'descriptions[0]');
-      // if (!this.pin.address) {
-      //   this.pin.address = _.get(pin, 'address');
-      // }
-      // if (!this.pin.price) {
-      //   this.pin.price = _.get(pin, 'price');
-      // }
-      // if (!this.pin.price && _.get(pin, 'prices[0]')) {
-      //   this.pin.price = _.get(pin, 'prices[0]');
-      // }
-      this.pin.start = new Date(_.get(pin, 'dates[0].start'));
-      this.pin.end = new Date(_.get(pin, 'dates[0].end'));
-      this.pin.allDay = _.get(pin, 'dates[0].allDay');
-
-      this.setPinImageFromScrapeAndSelect(pin);
-      return this;
-    }
-
-    scrapePage(url) {
-      this.enableForm(false);
-      let config = {
-        params: {
-          url: url
-        }
-      };
-      return this.$http.get('/api/scrape', config)
-        .then(res => {
-          switch (res.data.type) {
-            case 'web':
-              this.setPinFromWebScrape(res.data)
-              break;
-            case 'twitter':
-              this.setPinFromTwitterScrape(res.data)
-              break;
-            case 'youtube':
-              this.setPinFromYoutubeScrape(res.data)
-              break;
-          }
-        })
-        .finally(() => {
-          this.enableForm(true);
-        });
-    }
-
-    scrapeImage(url) {
-      this.enableForm(false);
-      let config = {
-        params: {
-          url: url
-        }
-      };
-      return this.$http.get('/api/scrape', config)
-        .then(response => {
-          this
-            .setPinImageFromScrapeAndSelect(response.data)
-            .enableForm(true);
-        })
-        .catch(err => {
-          this.enableForm(true);
-        });
-    }
-
     urlChanged() {
       let sourceUrl = this.pin.sourceUrl;
       if (sourceUrl) {
@@ -256,33 +152,70 @@
           .resetForScrape()
           .scrapePage(sourceUrl);
       }
+      return this;
+    }
 
+    scrapePage(url) {
+      this.enableForm(false);
+      this.scrapeService.scrapePage(this.pin, url)
+        .then((pin) => {
+          if (pin.type === this.scrapeType.twitter) {
+            // TODO: Should be wrapped in new twitter card component
+            $.getScript('//platform.twitter.com/widgets.js', () => {
+              twttr.widgets.load(document.body);
+            });
+          }
+        })
+        .finally(() => {
+          this.enableForm(true);
+        });
+      return this;
+    }
+
+    scrapeImage(url) {
+      this.enableForm(false);
+      this.scrapeService.scrapeImage(this.pin, url).finally(() => {
+        this.enableForm(true);
+      });
       return this;
     }
 
     clearFormButSourceUrl() {
-      return this
-        .setPin({
+      this.scrapeService
+        .setPin(this.pin, {
           sourceUrl: this.pin.sourceUrl
         });
+      return this;
     }
 
     resetForScrape() {
       let newPin = _.pick(this.pin, ['sourceUrl', 'allDay']);
-      return this
-        .setPin(newPin);
+      this.scrapeService
+        .setPin(this.pin, newPin);
+      return this;
     }
 
     submitPin(pin, valid) {
-      this._forceValidate();
       if (!valid) {
         return this.$q.reject('form not valid');
       }
+
+      let submitPromise;
+      this._forceValidate();
+      this.enableForm(false);
       if (this.mode === 'edit') {
-        return this._updatePin(pin);
+        submitPromise = this.scrapeService.updatePin(pin);
       } else {
-        return this._addPin(pin);
+        submitPromise = this.scrapeService.addPin(pin);
       }
+      return submitPromise
+        .then(response => {
+          this.$state.go('main');
+          return response;
+        })
+        .catch(() => {
+          this.enableForm(true);
+        });
     }
 
     checkOverlapped($event) {
@@ -303,85 +236,6 @@
         field.$setDirty();
       });
       return this;
-    }
-
-    _addPin(pin) {
-      this.enableForm(false);
-      let newPin = this._formatSubmitPin(pin);
-      return this.$http.post('/api/pins', newPin)
-        .then(response => {
-          this.success = response.data;
-          return response;
-        })
-        .then(response => {
-          this.$state.go('main');
-          return response;
-        })
-        .catch(err => {
-          this.enableForm(true);
-        });
-    }
-
-    _updatePin(pin) {
-      this.enableForm(false);
-      let newPin = this._formatSubmitPin(pin);
-      return this.$http.put('/api/pins/' + pin.id, newPin)
-        .then(response => {
-          this.success = response.data;
-          return response;
-        })
-        .then(response => {
-          this.$state.go('main');
-          return response;
-        })
-        .catch(err => {
-          this.enableForm(true);
-        });
-    }
-
-    _getDateTimeToDayBegin(dateTime) {
-      let newDateTime = new Date(dateTime.getTime());
-      newDateTime.setHours(0);
-      newDateTime.setMinutes(0);
-      newDateTime.setSeconds(0);
-      newDateTime.setMilliseconds(0);
-      return newDateTime;
-    }
-
-    _getDateTimeToDayEnd(dateTime) {
-      let newDateTime = new Date(dateTime.getTime());
-      newDateTime.setHours(23);
-      newDateTime.setMinutes(59);
-      newDateTime.setSeconds(59);
-      newDateTime.setMilliseconds(999);
-      return newDateTime;
-    }
-
-    _formatSubmitPin(pin) {
-      let startDateTime, endDateTime, allDay = this.pin.allDay;
-      if (allDay) {
-        // set time portion to midnight
-        startDateTime = this._getDateTimeToDayBegin(pin.start);
-        // set time portion to 1 tick before midnight
-        endDateTime = this._getDateTimeToDayEnd(pin.end);
-      } else {
-        startDateTime = pin.start;
-        endDateTime = pin.end;
-      }
-
-      let newPin = {
-        id: pin.id,
-        title: pin.title,
-        description: pin.description,
-        sourceUrl: pin.sourceUrl,
-        address: pin.address,
-        price: pin.price,
-        utcStartDateTime: startDateTime, // ISO 8601 with toJSON
-        utcEndDateTime: endDateTime,
-        allDay: allDay,
-        media: [pin.selectedMedia]
-      };
-      return _.omitBy(newPin, _.isNull);
     }
 
   }
