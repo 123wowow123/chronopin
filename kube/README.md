@@ -92,3 +92,14 @@ https://www.elastic.co/guide/en/elasticsearch/reference/8.6/run-elasticsearch-lo
 ## Check ssl certificate status
 
 `kubectl describe managedcertificate chronopin-managed-cert`
+
+Troubleshooting commands
+`kubectl get ingress`
+`kubectl describe ingress chronopin-managed-cert-ingress`
+Delete test Load Balancer
+`kubectl delete service chronopin-lb`
+
+## Promote ephemeral external IP to static IP
+`gcloud compute addresses create chronopin-ip --global`
+
+

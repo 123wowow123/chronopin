@@ -34,20 +34,58 @@ spec:
       imagePullSecrets:
       - name: regcred
 ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: chronopin-lb
+# spec:
+#   type: LoadBalancer
+#   ports:
+#   # - port: 443
+#   #   protocol: TCP
+#   #   name: https
+#   - port: 80
+#     protocol: TCP
+#     name: http
+#     targetPort: 9000
+#   selector:
+#     app: website
+#     role: frontend
+---
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: chronopin-managed-cert
+spec:
+  domains:
+    - chronopin.com
+    - www.chronopin.com
+---
 apiVersion: v1
 kind: Service
 metadata:
-  name: chronopin-lb
+  name: chronopin-np
 spec:
-  type: LoadBalancer
-  ports:
-  # - port: 443
-  #   protocol: TCP
-  #   name: https
-  - port: 80
-    protocol: TCP
-    name: http
-    targetPort: 9000
+  type: NodePort
   selector:
     app: website
     role: frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: chronopin-managed-cert-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: chronopin-ip
+    networking.gke.io/managed-certificates: chronopin-managed-cert
+    kubernetes.io/ingress.class: "gce"
+spec:
+  defaultBackend:
+    service:
+      name: chronopin-np
+      port:
+        number: 80

@@ -25,11 +25,6 @@ var Store = expressSequelizeSession(session.Store);
 export default function (app) {
   var env = app.get('env');
 
-  app.use(forceDomain({
-    hostname: config.host,
-    type: 'permanent'
-  }));
-
   // let requestPath = function (req, res, next) {
   //   console.log(req.originalUrl);
   //   next()
@@ -44,6 +39,12 @@ export default function (app) {
   }
 
   if (env === 'production') {
+    // TODO: Causes errors
+    // app.use(forceDomain({
+    //   hostname: config.host,
+    //   protocol: 'https',
+    //   type: 'permanent'
+    // }));
     app.use(favicon(path.join(config.root, 'client/assets/images', 'favicon.ico')));
   }
 
