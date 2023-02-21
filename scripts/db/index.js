@@ -24,6 +24,9 @@ const createPin = createTable.createPin;
 const createPinMedium = createTable.createPinMedium;
 const createDateTime = createTable.createDateTime;
 
+// Create View
+const createPinView = createTable.createPinView;
+
 // Retruns Collection
 const createGetPinsWithFavoriteAndLikeNextSP = createSP.createGetPinsWithFavoriteAndLikeNextSP;
 const createGetPinsWithFavoriteAndLikePrevSP = createSP.createGetPinsWithFavoriteAndLikePrevSP;
@@ -115,6 +118,9 @@ function execute() {
         //createLike,
         createDateTime,
 
+        // Views
+        createPinView,
+
         // Retruns Collection
         createGetPinsWithFavoriteAndLikeNextSP,
         createGetPinsWithFavoriteAndLikePrevSP,
@@ -168,7 +174,7 @@ function execute() {
         createMergeFavoriteSP,
 
         // Admin Delete
-        createAdminDeleteUserByIdSP
+        createAdminDeleteUserByIdSP,
 
         // Create Table Valued Parameters
         // createMediumTableType

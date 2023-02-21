@@ -42,11 +42,19 @@ export default class Pin extends BasePin {
         pin
       }) => {
         //console.log('_createMSSQL', pin);
-        let mediaPromise = this.media.map(medium => {
-          return medium.createAndSaveToCDN();
-        });
+        const mediaPromise = this.media
+          .filter(medium => medium.type === 1)
+          .map(medium => {
+            return medium.createAndSaveToCDN();
+          });
 
-        return Promise.all(mediaPromise)
+        const mediaNonImagePromise = this.media
+          .filter(medium => medium.type !== 1)
+          .map(medium => {
+            return medium.save();
+          });
+
+        return Promise.all(mediaPromise.concat(mediaNonImagePromise))
           .then((media) => {
             this.addMedia(media);
             return {
@@ -64,7 +72,7 @@ export default class Pin extends BasePin {
   update() {
     return Pin.queryById(this.id, this.userId)
       .then((res) => {
-        
+
         // TODO: Add to auth middleware
         if (res.pin.userId !== this.userId || this.userId !== 1) throw "Unauthorized update";
 
@@ -107,6 +115,10 @@ export default class Pin extends BasePin {
     return _deleteMSSQL(this);
   }
 
+  // toJSON() {
+  //   return super.toJSON();
+  // }
+
   static queryById(pinId, userId) {
     if (userId) {
       return _queryMSSQLPinWithFavoriteAndLikeById(pinId, userId);
@@ -143,7 +155,7 @@ function _queryMSSQLPinWithFavoriteAndLikeById(pinId, userId) {
           .input('userId', mssql.Int, userId)
           .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+               return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             if (res.recordset.length) {
               pin = Pin.mapPinMedia(res.recordset);

@@ -13,24 +13,25 @@ import {
 
 export function emit(event, pin, options) {
   switch (event) {
+    // TODO: Add Faiss index
     case "search:favorite":
-      favoritePin(options.userId, pin);
+      //favoritePin(options.userId, pin);
       break;
     case "search:unfavorite":
-      unfavoritePin(options.userId, pin);
+      //unfavoritePin(options.userId, pin);
       break;
     case "search:like":
-      likePin(options.userId, pin);
+      //likePin(options.userId, pin);
       break;
     case "search:unlike":
-      unlikePin(options.userId, pin);
+      //unlikePin(options.userId, pin);
       break;
     case "search:save":
     case "search:update":
-      upsertPin(pin);
+      //upsertPin(pin);
       break;
     case "search:remove":
-      deletePin(pin);
+      //deletePin(pin);
       break;
   }
 }

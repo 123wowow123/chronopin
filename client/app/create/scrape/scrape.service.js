@@ -57,12 +57,19 @@
             this.setPinFromTwitterScrape = (thisPin, pin) => {
                 thisPin.type = _.get(pin, 'type');
                 thisPin.media = _.get(pin, 'media', []);
+
+                this.setPinImageFromScrapeAndSelect(thisPin, pin);
                 return this;
             };
 
             this.setPinFromYoutubeScrape = (thisPin, pin) => {
+                thisPin.title = _.get(pin, 'title');
+                thisPin.description = _.get(pin, 'description');
+
                 thisPin.type = _.get(pin, 'type');
                 thisPin.media = _.get(pin, 'media', []);
+
+                this.setPinImageFromScrapeAndSelect(thisPin, pin);
                 return this;
             };
 

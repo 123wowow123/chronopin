@@ -96,3 +96,15 @@ https://www.macrumors.com/2023/01/27/wifi-6e-iphone-15-pro-models/
 
 https://www.youtube.com/watch?v=8jEmIDwqnL4
 General AI ready at 2060 - 2070
+
+
+
+https://www.youtube.com/watch?v=2klS1diYMWU
+
+https://www.youtube.com/watch?v=4QRMcrvyQ_U
+
+https://twitter.com/INArteCarloDoss/status/1625538658290876429
+
+https://www.techradar.com/news/playstation-vr-2-release-date-price-news-and-rumors
+
+https://www.ign.com/articles/street-fighter-6-release-date-collectors-edition-preorder-bonus

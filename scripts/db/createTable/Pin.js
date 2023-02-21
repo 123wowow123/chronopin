@@ -29,6 +29,7 @@ function dropCreateTable() {
 
 function executeDropTable() {
   let sql = `
+        DROP VIEW IF EXISTS [dbo].[PinView];
         DROP TABLE IF EXISTS [dbo].[${TableName}];
         `;
   return cp.getConnection()
@@ -60,8 +61,6 @@ function executeCreateTable() {
         );
 
         CREATE INDEX IX_UtcStartDateTime ON [dbo].[${TableName}] (utcStartDateTime); 
-        CREATE INDEX IX_Title ON [dbo].[${TableName}] (title); 
-        CREATE INDEX IX_Description ON [dbo].[${TableName}] (description); 
         `;
 
   return cp.getConnection()

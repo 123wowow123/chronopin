@@ -11,6 +11,7 @@ $timeline-content-color: #555;
 // Grid
 $grid-max-width-mobile: $iphone-6-landscape;
 $grid-max-width-screen: $iphone-6-landscape / 2;
+
 @mixin tab-arrow($size, $bg-color) {
     position: absolute;
     top: 0;
@@ -36,6 +37,7 @@ $grid-max-width-screen: $iphone-6-landscape / 2;
             @include tab-arrow(1em, $timeline-tag-bg);
         }
     }
+
     @mixin date_tags($timeline-tag-bg, $timeline-color) {
         display: block;
         width: 95px;
@@ -47,38 +49,48 @@ $grid-max-width-screen: $iphone-6-landscape / 2;
         box-shadow: 0 0 11px rgba(0, 0, 0, 0.35);
         background: $timeline-tag-bg;
         color: $timeline-color;
+
         @for $i from 1 to 9 {
+
             // runs up to 9 - 1
             &.\--#{$i} {
                 top: 23px + (42px * ($i - 1));
                 z-index: 8 - $i;
             }
         }
+
         @include right-arrow($timeline-tag-bg);
     }
+
     @include grid-verticle-break;
     list-style: none;
     position: relative;
     transition: all 0.6s ease-out;
+
     &__group-container {
         padding: 0.1px; // margin collapsing prvention
         position: relative;
         margin-top: 10px;
     }
+
     &__date {
         @include date_tags($timeline-date-bg, $timeline-countdown-color);
         color: #ededed;
     }
+
     &__countdown {
         @include date_tags($timeline-countdown-bg, $timeline-countdown-color);
         color: #ededed;
+
         &--today {
             @include date_tags($timeline-countdown-today-bg, $timeline-countdown-color);
         }
     }
+
     &__trivia {
         @include date_tags($timeline-trivia-bg, $timeline-countdown-color);
     }
+
     &__group-section {
         list-style: none;
         padding: 0;
@@ -87,12 +99,14 @@ $grid-max-width-screen: $iphone-6-landscape / 2;
         padding: 0.1px; // margin collapsing prvention
         /** offset timeline__panel margin **/
         margin: 0 0 0 (190px - 20px);
+
         &.\--placeholder {
             min-height: 120px;
             position: relative;
             top: 30px;
         }
     }
+
     /** timeline circle icons **/
     &__circle {
         position: absolute;
@@ -112,6 +126,7 @@ $grid-max-width-screen: $iphone-6-landscape / 2;
         border-bottom-left-radius: 50%;
         z-index: 90;
     }
+
     /** timeline verticle line **/
     &:before {
         top: 0;
@@ -123,6 +138,7 @@ $grid-max-width-screen: $iphone-6-landscape / 2;
         margin-left: -1.5px;
         content: " ";
     }
+
     &__tag {
         display: inline-block;
         overflow: hidden;
@@ -137,12 +153,15 @@ $grid-max-width-screen: $iphone-6-landscape / 2;
 }
 
 $bag-font-color: var(--bag-text-color);
+
 .bag {
     padding-bottom: 1px;
+
     &_title {
         font-weight: bold;
         color: $bag-font-color;
     }
+
     &_description {
         color: $bag-font-color;
         margin-bottom: 7px;
@@ -155,6 +174,7 @@ $bag-font-color: var(--bag-text-color);
     list-style: none;
     box-sizing: border-box;
     transition: all 400ms ease;
+
     &.\--timeline {
         display: inline-block;
         vertical-align: top;
@@ -164,23 +184,36 @@ $bag-font-color: var(--bag-text-color);
         position: relative;
         padding-bottom: 13px;
     }
+
     /** timeline panels **/
     &__panel {
         background: var(--grid-panel-bg-color); //border: 1px solid #d4d4d4;
         padding: 7px 15px 15px;
         position: relative;
         border-radius: 8px; //box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+
         &:focus,
         &:hover {
             box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+
             .grid__heading {
                 text-decoration: underline;
+
                 &_link {
                     cursor: zoom-in;
                 }
             }
         }
     }
+
+    &__media {
+        margin: 0 -15px 10px;
+
+        &.\--create-pin {
+            margin: 0 auto;
+        }
+    }
+
     /** panel arrows **/
     // &:first-child .grid__panel:not(.grid__panel--plain):after {
     //   position: absolute;
@@ -200,17 +233,20 @@ $bag-font-color: var(--bag-text-color);
         font-size: 20px;
         line-height: 23px;
         font-family: IBMPlexSans, Arial, sans-serif; //GeorgiaProCondSemiBold, Georgia, serif; // &_link:focus, &_link:hover {
+
         //   text-decoration: none;
         // }
         a {
             color: inherit;
         }
     }
+
     &__description {
         color: var(--grid-description-text-color);
-        font-family: Noto Sans,Arial,sans-serif; //Georgia, 'Times New Roman', Times, serif;
+        font-family: Noto Sans, Arial, sans-serif; //Georgia, 'Times New Roman', Times, serif;
         //text-align: justify;
     }
+
     /** search and sort section css end ***/
     /*** description section css ***/
     &__footer {
@@ -220,52 +256,64 @@ $bag-font-color: var(--bag-text-color);
         padding: 10px 0 0;
         justify-content: flex-end;
     }
+
     &__uploaded-date {
         margin: 5px 0;
         @extend .small;
         @extend .text-muted;
     }
+
     &__social {
         display: flex;
         align-items: center;
     }
+
     &__price {
         flex-grow: 1;
         color: green;
+
         &--negative {
             color: brown;
         }
     }
+
     &__favorite--add {
         @extend .btn;
         @extend .btn-link;
         color: $timeline-content-color;
         letter-spacing: 3px;
+
         &:hover {
             text-decoration: none;
         }
     }
+
     &__favorite--remove {
         @extend .btn;
         @extend .btn-link;
         letter-spacing: 3px;
+
         &:hover {
             text-decoration: none;
         }
     }
+
     &__likes {
         margin-left: 2px;
         min-width: 20px;
     }
+
     &__like--add {
         @extend .btn;
         @extend .btn-link;
         color: $timeline-content-color;
     }
+
     &__like--remove {
         @extend .btn;
         @extend .btn-link;
     }
+
     &__asset {
         display: flex;
         align-items: center;
@@ -273,31 +321,37 @@ $bag-font-color: var(--bag-text-color);
         max-height: 510px;
         overflow-y: hidden;
         //border-radius: 5px;
-        margin: 0 -15px 10px;
+        // margin: 0 -15px 10px;
 
         &--link {
             cursor: zoom-in;
         }
     }
+
     &__image {
         width: auto;
         object-fit: cover;
     }
+
     &__body {
         margin-bottom: -10px;
     }
+
     &.ng-leave {
         transition: all ease 400ms;
+
         &.ng-leave-active {
             transform: scale(0.5);
             opacity: 0;
         }
     }
+
     &.ng-enter {
         transition: all ease 400ms;
         transition-delay: 500ms;
         transform: scale(0.5);
         opacity: 0;
+
         &.ng-enter-active {
             transform: scale(1);
             opacity: 1;
@@ -320,40 +374,51 @@ $bag-font-color: var(--bag-text-color);
     bottom: 3px;
     font-size: 1.1em;
     font-style: normal;
+
     &-sun {
         bottom: 4px;
+
         &::before {
             content: "B";
         }
     }
+
     &-mon {
         bottom: 4px;
+
         &::before {
             content: "A";
         }
     }
+
     &-tue {
         bottom: 4px;
+
         &::before {
             content: "E";
         }
     }
+
     &-wed {
         bottom: 2px;
+
         &::before {
             content: "D";
         }
     }
+
     &-thu {
         &::before {
             content: "F";
         }
     }
+
     &-fri {
         &::before {
             content: "C";
         }
     }
+
     &-sat {
         &::before {
             content: "G";
@@ -363,6 +428,7 @@ $bag-font-color: var(--bag-text-color);
 
 .rubric {
     color: var(--grid-auther-text-color);
+
     &:before {
         content: ' / ';
         display: inline;
@@ -382,13 +448,16 @@ $bag-font-color: var(--bag-text-color);
 
 $timeline-ipad-landscape-top-alignment: -45px;
 $timeline-ipad-landscape-left-alignment: 95px;
+
 @mixin tag-alignment($top-alignment, $left-shift) {
     @for $i from 1 to 9 {
+
         // runs up to 9 - 1
         &.\--#{$i} {
             top: $top-alignment;
             left: ($i - 1) * $left-shift;
             z-index: 8 - $i;
+
             @if $i>1 {
                 padding-left: 10px;
                 //padding-right: -10px;
@@ -401,43 +470,54 @@ $timeline-ipad-landscape-left-alignment: 95px;
     .timeline {
         padding: 2px 0;
         @include grid-normalize-margin;
+
         &__group-section {
             margin: 0 4px 3px 10px;
+
             &.\--placeholder {
                 min-height: 30px;
                 top: 0;
             }
         }
+
         &__group-container {
             margin-top: 45px;
         }
+
         &__date {
             @include tag-alignment($timeline-ipad-landscape-top-alignment, $timeline-ipad-landscape-left-alignment);
             margin-left: 1px;
         }
+
         &__countdown {
             @include tag-alignment($timeline-ipad-landscape-top-alignment, $timeline-ipad-landscape-left-alignment);
         }
+
         &__trivia {
             @include tag-alignment($timeline-ipad-landscape-top-alignment, $timeline-ipad-landscape-left-alignment);
         }
+
         &__circle {
             display: none;
         }
+
         &:before {
             left: 40px;
         }
+
         /** timeline verticle line **/
         &:before {
             border-left: 1px dotted var(--timeline-color-narrow);
             left: 2px;
         }
     }
+
     .main {
         &__no-result-found {
             top: $nav-offset-collapsed;
         }
     }
+
     .grid__panel:after {
         display: none !important;
     }

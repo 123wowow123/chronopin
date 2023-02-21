@@ -42,7 +42,7 @@ function executeCreateTable() {
         CREATE TABLE [dbo].[${TableName}]
         (
             id INT PRIMARY KEY NOT NULL IDENTITY,
-            thumbName NVARCHAR(4000) NOT NULL,
+            thumbName NVARCHAR(4000),
             thumbWidth INT,
             thumbHeight INT,
             originalUrl NVARCHAR(4000),
@@ -54,7 +54,6 @@ function executeCreateTable() {
             authorUrl NVARCHAR(4000),
             html NVARCHAR(4000),
         );
-        CREATE UNIQUE INDEX UQ_INDEX_Medium_thumbName ON [dbo].[${TableName}] (thumbName);
         `;
 
   return cp.getConnection()

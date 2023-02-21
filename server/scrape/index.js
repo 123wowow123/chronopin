@@ -72,14 +72,20 @@ function _getTwitterEmbed(twitterId) {
 
 function _getYoutubePost(pageUrl) {
   const regex = /(?<=v=|v\/|vi=|vi\/|youtu.be\/)[a-zA-Z0-9_-]{11}/
+  const iframeSrcRegex = /(?<=src=").*?(?=[\?"])/
   const match = pageUrl.match(regex);
   const id = match.filter(t => !!t)[0];
   const jsonPromise = _getYoutubeEmbed(id)
     .then(res => {
+      const html = _.get(res, "items[0].player.embedHtml")
+      const match = html.match(iframeSrcRegex);
       const newPin = new Pin();
+      newPin.title = _.get(res, "items[0].snippet.title")
+      newPin.description = _.get(res, "items[0].snippet.description")
       newPin.addMedium(new Medium({
         type: 3,
-        html: _.get(res, "items[0].player.embedHtml")
+        html: html,
+        originalUrl: match[0]
       }));
       return newPin;
     }).catch(e => {
@@ -91,7 +97,7 @@ function _getYoutubePost(pageUrl) {
 
 function _getYoutubeEmbed(youtubeId) {
   const YOUTUBE_API_KEY = config.youtube.YOUTUBE_API_KEY;
-  const uri = `https://www.googleapis.com/youtube/v3/videos?part=player&id=${youtubeId}&maxResults=1&key=${YOUTUBE_API_KEY}`;
+  const uri = `https://www.googleapis.com/youtube/v3/videos?part=player,snippet&id=${youtubeId}&maxResults=1&key=${YOUTUBE_API_KEY}`;
   const options = {
     method: 'GET',
     uri: uri,

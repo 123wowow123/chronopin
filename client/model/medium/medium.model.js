@@ -1,6 +1,6 @@
 'use strict';
 
-(function() {
+(function () {
 
   function MediumFactory(modelInjector) {
     let Pin;
@@ -16,7 +16,11 @@
       'originalHeight',
       'type',
       'utcCreatedDateTime',
-      'utcDeletedDateTime'
+      'utcDeletedDateTime',
+      // For twitter and youtube
+      'authorName',
+      'authorUrl',
+      'html'
     ];
 
     return class Medium {

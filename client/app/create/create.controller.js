@@ -195,13 +195,13 @@
       return this;
     }
 
-    submitPin(pin, valid) {
-      if (!valid) {
+    submitPin(pin) {
+      this._forceValidate();
+      if (!this.$scope.pinForm.$valid) {
         return this.$q.reject('form not valid');
       }
 
       let submitPromise;
-      this._forceValidate();
       this.enableForm(false);
       if (this.mode === 'edit') {
         submitPromise = this.scrapeService.updatePin(pin);

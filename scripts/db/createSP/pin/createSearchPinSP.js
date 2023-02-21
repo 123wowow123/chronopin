@@ -87,7 +87,7 @@ function executeCreateSP() {
             [Media].[authorUrl]                        AS [Media.authorUrl],
             [Media].[html]                             AS [Media.html]
 
-          FROM [dbo].[Pin] AS [Pin]
+          FROM [dbo].[PinView] AS [Pin]
             LEFT JOIN [dbo].[PinMedium] AS [Media.PinMedium]
               ON [Pin].[id] = [Media.PinMedium].[PinId]
             LEFT JOIN [dbo].[Medium] AS [Media]

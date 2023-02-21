@@ -158,7 +158,7 @@ function _createMSSQL(medium, pinId) {
             let queryCount, id;
             //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
@@ -169,9 +169,7 @@ function _createMSSQL(medium, pinId) {
               id = 0;
             }
             medium.id = id;
-            resolve({
-              medium: medium
-            });
+            resolve(medium);
           });
       });
     });
