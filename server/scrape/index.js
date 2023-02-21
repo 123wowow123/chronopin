@@ -78,14 +78,14 @@ function _getYoutubePost(pageUrl) {
   const jsonPromise = _getYoutubeEmbed(id)
     .then(res => {
       const html = _.get(res, "items[0].player.embedHtml")
-      const match = html.match(iframeSrcRegex);
+      const youtubeUrl = html.match(iframeSrcRegex)[0];
       const newPin = new Pin();
       newPin.title = _.get(res, "items[0].snippet.title")
       newPin.description = _.get(res, "items[0].snippet.description")
       newPin.addMedium(new Medium({
         type: 3,
         html: html,
-        originalUrl: match[0]
+        originalUrl: youtubeUrl
       }));
       return newPin;
     }).catch(e => {
