@@ -21,6 +21,7 @@ module.exports.scrape = function scrape(pageUrl) {
       type = scrapeType.twitter;
       scraperResPromise = _getTwitterPost(pageUrl);
       break;
+    case 'youtu.be':
     case 'youtube.com':
       type = scrapeType.youtube;
       scraperResPromise = _getYoutubePost(pageUrl);
@@ -79,6 +80,7 @@ function _getYoutubePost(pageUrl) {
     .then(res => {
       const html = _.get(res, "items[0].player.embedHtml")
       const youtubeUrl = html.match(iframeSrcRegex)[0];
+      // const replacedHtml  = html.replace(youtubeUrl, youtubeUrl + "?start=225")
       const newPin = new Pin();
       newPin.title = _.get(res, "items[0].snippet.title")
       newPin.description = _.get(res, "items[0].snippet.description")
