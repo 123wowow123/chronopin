@@ -82,8 +82,6 @@ https://www.theverge.com/2023/1/5/23531458/alfred-dbs2-smart-deadbolt-lock-wirel
 
 
 
-https://www.youtube.com/watch?v=CDVH_JJIRWI
-September and October, Egypt will have food crisis as Russia kills off Ukraine's Agriculture industry
 
 
 Add mention dates
