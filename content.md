@@ -105,5 +105,4 @@ https://twitter.com/INArteCarloDoss/status/1625538658290876429
 
 https://www.techradar.com/news/playstation-vr-2-release-date-price-news-and-rumors
 
-https://www.ign.com/articles/street-fighter-6-release-date-collectors-edition-preorder-bonus
 

@@ -176,7 +176,7 @@ function _webScrpae(pageUrl) {
               console.log("chrono resolve", res);
               resolve && resolve(res);
             })
-             
+
             .catch((e) => {
               console.log("chrono catch", e);
               throw e;
@@ -203,7 +203,7 @@ function _webScrpae(pageUrl) {
         }));
       });
 
-      const youtubeProsmises = res.youtube.map(url => {
+      const youtubeProsmises = _.get(res, "youtube", []).map(url => {
         return _getYoutubeAndWrapInMediumSync(url);
       });
 
