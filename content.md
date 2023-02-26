@@ -107,7 +107,3 @@ https://www.techradar.com/news/playstation-vr-2-release-date-price-news-and-rumo
 
 https://www.ign.com/articles/street-fighter-6-release-date-collectors-edition-preorder-bonus
 
-
-
-https://www.pcgamesn.com/street-fighter-6/release-date#:~:text=Street%20Fighter%206%20release%20date%20Street%20Fighter%206,date%20was%20revealed%20at%20The%20Game%20Awards%202022.
-Need to scrape youtube on page and show youtube and image selections. Also need to fix date parsing!!!!
