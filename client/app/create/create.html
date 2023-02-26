@@ -20,7 +20,7 @@
                 <div class="form-group" ng-class="{'has-error' : pinForm.title.$invalid && pinForm.title.$dirty}">
                   <label for="title" class="control-label">Title</label>
                   <input name="title" type="text" class="form-control" id="title" placeholder="Add your title"
-                    ng-model="$ctrl.pin.title" required>
+                    ng-model="$ctrl.pin.title" required maxlength="180">
                 </div>
                 <div class="form-group"
                   ng-class="{'has-error' : pinForm.description.$invalid && pinForm.description.$dirty}">
