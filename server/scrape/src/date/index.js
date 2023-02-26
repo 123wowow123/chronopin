@@ -18,25 +18,24 @@ export default function date() {
 
   var jQuery = $;
 
-  var text = jQuery('[id*="article"], [id*="Article"], [id*="content"], [id*="Content"], [class*="article"], [class*="Article"], [class*="content"], [class*="Content"]')
+  var text = jQuery('[id*="article"], [id*="Article"], [id*="content"], [id*="Content"], [class*="article"], [class*="Article"], [class*="content"], [class*="Content"], strong')
     .clone()
-    .find('[id*="comment"], [id*="Comment"], [class*="comment"], [class*="Comment"]')
+    .find('[id*="comment"], [id*="Comment"], [class*="comment"], [class*="Comment"], strong')
     .remove()
     .end()
     .text();
 
   var result = chrono.parse(text);
-
   // Todo: reset hour min so on ??
-  result = result.map(function(chronoObj) {
+  result = result.map(function (chronoObj) {
     var dateTime = {};
-    dateTime.start = chronoObj.start.date();
+    dateTime.start = chronoObj.start.date().toISOString();
     var end = chronoObj.end;
     if (end) {
-      dateTime.end = end.date();
+      dateTime.end = end.date().toISOString();
       dateTime.allDay = false;
     } else {
-      dateTime.end = chronoObj.start.date();
+      dateTime.end = chronoObj.start.date().toISOString();
       dateTime.allDay = true;
     }
     return dateTime;

@@ -7,9 +7,8 @@
           <form name="pinForm" class="create__form" ng-submit="$ctrl.submitPin($ctrl.pin)" novalidate>
             <h4>{{$ctrl.title}}</h4>
             <div style="position: relative;">
-              <a href="{{$ctrl.pin.sourceUrl}}" target="_blank" class="btn btn-link"
-                style="position:absolute; right: 0; top: -5px;">Open Link <span class="glyphicon glyphicon-share-alt"
-                  aria-hidden="true"></span></a>
+              <a href="{{$ctrl.pin.sourceUrl}}" target="_blank" class="btn btn-link --open-source-link">Open Link <span
+                  class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a>
               <fieldset ng-disabled="$ctrl.formDisabled">
                 <div class="form-group"
                   ng-class="{'has-error' : pinForm.sourceUrl.$invalid && pinForm.sourceUrl.$dirty}">
@@ -60,7 +59,8 @@
                     </div>
                     <div class="col-sm-5">
                       <label for="end" class="control-label">End</label>
-                      <div class="input-group end" ng-class="{'has-error' : pinForm.end.$invalid && pinForm.end.$dirty}">
+                      <div class="input-group end"
+                        ng-class="{'has-error' : pinForm.end.$invalid && pinForm.end.$dirty}">
                         <input name="end" type="text" id="end" autocomplete="off" class="form-control" required="true"
                           ng-model="$ctrl.pin.end" ng-change="$ctrl.endChange($ctrl.pin.end)"
                           placeholder="End Date (optional)" uib-datepicker-popup="{{$ctrl.format}}"
@@ -169,10 +169,25 @@
           <div class="col-lg-12 clearfix">
             <ul class="image-dynamic-grid" angular-grid="$ctrl.pin.media" gutter-size="10" grid-width="200"
               refresh-on-img-load="false">
-              <li data-ng-repeat="img in $ctrl.pin.media" class="image-grid"
-                ng-class="{'image-grid--selected': img === $ctrl.pin.selectedMedia }" ng-click="$ctrl.selectImage(img)">
-                <img ng-src="{{img.originalUrl}}" class="image-grid__image" data-actual-width="{{img.width}}"
-                  data-actual-height="{{img.height}}" title="{{img.height}} x {{img.height}}" />
+              <li data-ng-repeat="medium in $ctrl.pin.media" class="image-grid"
+                ng-class="{'image-grid--selected': medium === $ctrl.pin.selectedMedia }"
+                ng-click="$ctrl.selectImage(medium)" ng-switch="medium.type">
+
+                <img ng-src="{{medium.originalUrl}}" class="image-grid__image"
+                  data-actual-width="{{medium.originalWidth}}" data-actual-height="{{medium.originalHeight}}"
+                  title="{{medium.originalWidth}} x {{medium.originalHeight}}" ng-switch-when="1" />
+
+                <div class="twitter-pin-container" ng-switch-when="2" ng-bind-html="medium.html">
+                </div>
+
+                <div class='embed-container --margin-top-bottom' ng-switch-when="3" ng-bind-html="medium.html"
+                  data-actual-width="400" data-actual-height="270">
+                </div>
+
+                <!-- Just need detection cover-->
+                <div class="image-grid__cover_button" ng-hide="medium.type !== 3 || medium === $ctrl.pin.selectedMedia">
+                </div>
+
               </li>
             </ul>
           </div>
@@ -183,7 +198,8 @@
     <div class="twitter-pin-container" ng-switch-when="twitter" ng-bind-html="$ctrl.pin.selectedMedia.html">
     </div>
 
-    <div class='embed-container --margin-top-bottom' ng-switch-when="youtube" ng-bind-html="$ctrl.pin.selectedMedia.html">
+    <div class='embed-container --margin-top-bottom' ng-switch-when="youtube"
+      ng-bind-html="$ctrl.pin.selectedMedia.html">
     </div>
 
     <!-- <div ng-switch-default>

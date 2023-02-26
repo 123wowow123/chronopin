@@ -3,15 +3,23 @@ const _ = require('lodash');
 const fs = require('fs');
 const config = require('../config/environment');
 const rp = require('request-promise');
+const getVideoId = require('get-video-id');
 const {
   Pin,
   Medium
 } = require('../model');
 
+const headless = true;
 const scrapeType = config.scrapeType;
 const scrapeJsFileName = __dirname + '/scrape.min.js';
 const scrapeJsFileJS = fs.readFileSync(scrapeJsFileName, 'utf8');
 const defaultNavigationWait = 10000
+
+const MediumID = {
+  image: 1,
+  twitter: 2,
+  youtube: 3,
+}
 
 module.exports.scrape = function scrape(pageUrl) {
   let scraperResPromise, type;
@@ -50,7 +58,7 @@ function _getTwitterPost(pageUrl) {
       console.log(res)
       const newPin = new Pin();
       newPin.addMedium(new Medium({
-        type: 2,
+        type: MediumID.twitter,
         html: res.html
       }));
       return newPin;
@@ -72,29 +80,47 @@ function _getTwitterEmbed(twitterId) {
 };
 
 function _getYoutubePost(pageUrl) {
-  const regex = /(?<=v=|v\/|vi=|vi\/|youtu.be\/)[a-zA-Z0-9_-]{11}/
-  const iframeSrcRegex = /(?<=src=").*?(?=[\?"])/
-  const match = pageUrl.match(regex);
-  const id = match.filter(t => !!t)[0];
-  const jsonPromise = _getYoutubeEmbed(id)
-    .then(res => {
-      const html = _.get(res, "items[0].player.embedHtml")
-      const youtubeUrl = html.match(iframeSrcRegex)[0];
-      // const replacedHtml  = html.replace(youtubeUrl, youtubeUrl + "?start=225")
+  const postPromise = _getYoutubeAndWrapInMediumSync(pageUrl)
+    .then(({ res, medium }) => {
+      // Wraps everythig in Pin
       const newPin = new Pin();
       newPin.title = _.get(res, "items[0].snippet.title")
       newPin.description = _.get(res, "items[0].snippet.description")
-      newPin.addMedium(new Medium({
-        type: 3,
-        html: html,
-        originalUrl: youtubeUrl
-      }));
+      newPin.addMedium(medium);
       return newPin;
-    }).catch(e => {
+    })
+    .catch(e => {
       console.log(e);
       throw e;
     })
-  return jsonPromise;
+  return postPromise;
+}
+
+function _getYoutubeAndWrapInMediumSync(pageUrl) {
+  const { id } = getVideoId(pageUrl);
+  const promise = _getYoutubeEmbed(id)
+    .then(res => {
+      // Wraps youtube to Medium
+      const medium = _youtubeEmbedToMedium(res);
+      return {
+        res,
+        medium
+      };
+    });
+  return promise;
+}
+
+function _youtubeEmbedToMedium(res) {
+  const iframeSrcRegex = /(?<=src=").*?(?=[\?"])/
+  const html = _.get(res, "items[0].player.embedHtml")
+  const youtubeUrl = html.match(iframeSrcRegex)[0];
+  // const replacedHtml  = html.replace(youtubeUrl, youtubeUrl + "?start=225")
+  const medium = new Medium({
+    type: MediumID.youtube,
+    html: html,
+    originalUrl: youtubeUrl
+  });
+  return medium
 }
 
 function _getYoutubeEmbed(youtubeId) {
@@ -114,7 +140,7 @@ function _webScrpae(pageUrl) {
   let page = null;
   const res = puppeteer.launch({
     ignoreHTTPSErrors: true,
-    headless: true
+    headless: headless
   })
     .then((b) => {
       browser = b
@@ -144,11 +170,14 @@ function _webScrpae(pageUrl) {
 
           console.log("chrono", window.cpScrapePromise);
 
+          // Copy here for debug
           window.cpScrapePromise
             .then((res) => {
               console.log("chrono resolve", res);
-              resolve(res);
-            }).catch((e) => {
+              resolve && resolve(res);
+            })
+             
+            .catch((e) => {
               console.log("chrono catch", e);
               throw e;
             });
@@ -157,8 +186,36 @@ function _webScrpae(pageUrl) {
       }, scrapeJsFileJS);
     })
     .then((res) => {
-      //for debugging
-      console.log(JSON.stringify(res))
+      //console.log(JSON.stringify(res));
+      const newPin = new Pin();
+      newPin.title = _.get(res, "titles[0]")
+      newPin.description = _.get(res, "descriptions[0]")
+      newPin.utcStartDateTime = new Date(_.get(res, 'dates[0].start'));
+      newPin.utcEndDateTime = new Date(_.get(res, 'dates[0].end'));
+      newPin.allDay = _.get(res, 'dates[0].allDay');
+
+      res.media.forEach(m => {
+        newPin.addMedium(new Medium({
+          type: MediumID.image,
+          originalWidth: m.width,
+          originalHeight: m.height,
+          originalUrl: m.originalUrl
+        }));
+      });
+
+      const youtubeProsmises = res.youtube.map(url => {
+        return _getYoutubeAndWrapInMediumSync(url);
+      });
+
+      return Promise.all(youtubeProsmises)
+        .then(values => {
+          values.forEach(({ res, medium }) => {
+            newPin.unshiftMedium(medium);
+          });
+          return newPin;
+        });
+    })
+    .then((res) => {
       return res;
     })
     .catch((err) => {

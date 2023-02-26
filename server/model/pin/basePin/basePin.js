@@ -95,6 +95,17 @@ export default class BasePin {
         return this;
     }
 
+    unshiftMedium(medium) {
+        if (medium instanceof Medium) {
+            medium.setPin(this);
+            if (!this.media) { this.media = []; };
+            this.media.unshift(medium);
+        } else {
+            throw "medium not instance of Medium";
+        }
+        return this;
+    }
+
     addMedia(media) {
         media.forEach(m => {
             this.addMedium(m);

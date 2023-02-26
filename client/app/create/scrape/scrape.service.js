@@ -43,12 +43,11 @@
 
             this.setPinFromWebScrape = (thisPin, pin) => {
                 thisPin.type = _.get(pin, 'type');
-                thisPin.title = _.get(pin, 'titles[0]');
-                thisPin.description = _.get(pin, 'descriptions[0]');
-
-                thisPin.start = new Date(_.get(pin, 'dates[0].start'));
-                thisPin.end = new Date(_.get(pin, 'dates[0].end'));
-                thisPin.allDay = _.get(pin, 'dates[0].allDay');
+                thisPin.title = _.get(pin, 'title');
+                thisPin.description = _.get(pin, 'description');
+                thisPin.start = _.get(pin, 'utcStartDateTime') && new Date(_.get(pin, 'utcStartDateTime'));
+                thisPin.end = _.get(pin, 'utcEndDateTime') && new Date(_.get(pin, 'utcEndDateTime'));
+                thisPin.allDay = _.get(pin, 'allDay');
 
                 this.setPinImageFromScrapeAndSelect(thisPin, pin);
                 return this;
