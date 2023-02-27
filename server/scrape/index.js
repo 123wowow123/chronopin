@@ -240,7 +240,9 @@ function _webScrpae(pageUrl) {
       });
 
       const youtubeProsmises = _.get(res, "youtube", []).map(url => {
-        return _getYoutubeAndWrapInMediumSync(url);
+        return _getYoutubeAndWrapInMediumSync(url).catch((e) => {
+          return { res: null, medium: null };
+        });
       });
 
       const twitterProsmises = _.get(res, "twitter", []).map(url => {
