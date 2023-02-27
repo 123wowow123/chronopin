@@ -84,6 +84,12 @@ export default class BasePin {
         return this;
     }
 
+    findMediumByOriginalUrl(originalUrl) {
+        return _.get(this, "media", []).find(m => {
+            return m.originalUrl === originalUrl
+        });
+    }
+
     addMedium(medium) {
         if (medium instanceof Medium) {
             medium.setPin(this);

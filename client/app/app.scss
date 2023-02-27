@@ -14,6 +14,12 @@ $iphone-6-landscape: 667px;
 $iphone-6-plus-portrait: 414px;
 $iphone-6-plus-landscape: 736px;
 
+$iphone-11-portrait: 414px;
+$iphone-11-landscape: 896px;
+
+$iphone-portrait: $iphone-11-portrait;
+$iphone-landscape: $iphone-11-landscape;
+
 // iPad breakpoints
 $ipad-portrait: 768px;
 $ipad-landscape: 1024px;

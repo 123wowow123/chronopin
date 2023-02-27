@@ -103,6 +103,10 @@ https://www.youtube.com/watch?v=4QRMcrvyQ_U
 
 https://twitter.com/INArteCarloDoss/status/1625538658290876429
 
-https://www.techradar.com/news/playstation-vr-2-release-date-price-news-and-rumors
 
 
+twitter scrape in web
+https://www.gamesradar.com/demon-slayer-season-3-release-date-news-trailer-swordsmith-village-arc-cast/
+
+cannot get twitter id of below
+https://twitter.com/animetv_jp/status/1621479864367812610?s=20&t=25ipt2OJqB1T-igVZHAnJQ

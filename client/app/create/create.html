@@ -167,7 +167,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-12 clearfix">
-            <ul class="image-dynamic-grid" angular-grid="$ctrl.pin.media" gutter-size="10" grid-width="200"
+            <ul class="image-dynamic-grid" angular-grid="$ctrl.pin.media" gutter-size="10" grid-width="250"
               refresh-on-img-load="false">
               <li data-ng-repeat="medium in $ctrl.pin.media" class="image-grid"
                 ng-class="{'image-grid--selected': medium === $ctrl.pin.selectedMedia }"
@@ -177,7 +177,8 @@
                   data-actual-width="{{medium.originalWidth}}" data-actual-height="{{medium.originalHeight}}"
                   title="{{medium.originalWidth}} x {{medium.originalHeight}}" ng-switch-when="1" />
 
-                <div class="twitter-pin-container" ng-switch-when="2" ng-bind-html="medium.html">
+                <div class="twitter-pin-container" ng-switch-when="2" ng-bind-html="medium.html"
+                data-actual-width="250" data-actual-height="496">
                 </div>
 
                 <div class='embed-container --margin-top-bottom' ng-switch-when="3" ng-bind-html="medium.html"
@@ -185,7 +186,7 @@
                 </div>
 
                 <!-- Just need detection cover-->
-                <div class="image-grid__cover_button" ng-hide="medium.type !== 3 || medium === $ctrl.pin.selectedMedia">
+                <div class="image-grid__cover_button" ng-hide="medium.type === 1 || medium === $ctrl.pin.selectedMedia">
                 </div>
 
               </li>

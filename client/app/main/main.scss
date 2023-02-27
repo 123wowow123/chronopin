@@ -9,8 +9,8 @@ $timeline-countdown-color: #ededed;
 $timeline-header-color: var(--grid-header-text-color);
 $timeline-content-color: #555;
 // Grid
-$grid-max-width-mobile: $iphone-6-landscape;
-$grid-max-width-screen: $iphone-6-landscape / 2;
+$grid-max-width-mobile: $iphone-landscape;
+$grid-max-width-screen: $iphone-landscape / 2;
 
 @mixin tab-arrow($size, $bg-color) {
     position: absolute;

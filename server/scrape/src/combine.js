@@ -2,6 +2,7 @@ import title from './title';
 import description from './description';
 import image from './image';
 import youtube from './youtube';
+import twitter from './twitter';
 import price from './price';
 import date from './date';
 import $ from 'jquery';
@@ -40,13 +41,19 @@ import $ from 'jquery';
       promiseObj.youtube = youtubeRes;
     }
 
-    window.cpScrapePromise = Promise.all([titleRes, descriptionRes, imageRes, youtubeRes, priceRes, dateRes])
-      .then(([titleRes, descriptionRes, imageRes, youtubeRes, priceRes, dateRes]) => {
+    var twitterRes = twitter();
+    if (twitterRes) {
+      promiseObj.twitter = twitterRes;
+    }
+
+    window.cpScrapePromise = Promise.all([titleRes, descriptionRes, imageRes, youtubeRes, twitterRes, priceRes, dateRes])
+      .then(([titleRes, descriptionRes, imageRes, youtubeRes, twitterRes, priceRes, dateRes]) => {
         let res = {
           titles: titleRes,
           descriptions: descriptionRes,
           media: imageRes,
           youtube: youtubeRes,
+          twitter: twitterRes,
           prices: priceRes,
           dates: dateRes
         };

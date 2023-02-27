@@ -61,6 +61,13 @@
     right: 0; 
     top: -5px;
   }
+
+  .twitter-tweet {
+    margin: 0 !important;
+    iframe {
+      max-width: 100%;
+    }
+  }
 }
 
 .image-dynamic-grid {

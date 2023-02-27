@@ -28,6 +28,11 @@
         .then(res => {
           this.pin = res.data;
           this.pinReady = true;;
+
+          // TODO: Should be wrapped in new twitter card component
+          $.getScript('//platform.twitter.com/widgets.js', () => {
+            twttr.widgets.load(document.body);
+          });
           return res;
         })
         .then(res => {
@@ -36,21 +41,21 @@
           this.pinWebService.search({
             q: res.data.title
           })
-          .then(res => {
-            let pins = res.data.pins;
+            .then(res => {
+              let pins = res.data.pins;
 
-            pins = pins.filter(pin => {
-              return pin.id !== id
+              pins = pins.filter(pin => {
+                return pin.id !== id
+              });
+              //debugger; // cannot remove need refactor
+              let bagsCreated = this.pinsQuery.mergePins(pins);
+
+              this.searching = false;
+            })
+            .catch(err => {
+              this.searching = false;
+              throw err;
             });
-            //debugger; // cannot remove need refactor
-            let bagsCreated = this.pinsQuery.mergePins(pins);
-            
-            this.searching = false;
-          })
-          .catch(err => {
-            this.searching = false;
-            throw err;
-          });
 
         });
     }

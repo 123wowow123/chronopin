@@ -51,22 +51,58 @@ function _getDomain(pageUrl) {
 }
 
 function _getTwitterPost(pageUrl) {
-  const regex = /\/(\d+)$/
-  const match = pageUrl.match(regex);
-  const jsonPromise = _getTwitterEmbed(match[1])
-    .then(res => {
-      console.log(res)
+  const postPromise = _getTwitterAndWrapInMediumSync(pageUrl)
+    .then(({ res, medium }) => {
       const newPin = new Pin();
-      newPin.addMedium(new Medium({
-        type: MediumID.twitter,
-        html: res.html
-      }));
+      newPin.addMedium(medium);
       return newPin;
     }).catch(e => {
       console.log(e)
       throw e;
     });
-  return jsonPromise;
+  return postPromise;
+}
+
+function _getTwitterAndWrapInMediumSync(pageUrl) {
+  const twitterId = _getTwitterId(pageUrl);
+  if (!twitterId) {
+    return Promise.reject(twitterId);
+  }
+  const promise = _getTwitterEmbed(twitterId)
+    .then(res => {
+      // Wraps youtube to Medium
+      const medium = _twitterEmbedToMedium(res);
+      return {
+        res,
+        medium
+      };
+    });
+  return promise;
+}
+
+function _twitterEmbedToMedium(res) {
+  const medium = new Medium({
+    type: MediumID.twitter,
+    html: res.html,
+    originalUrl: res.url,
+    authorName: res.author_name,
+    authorUrl: res.author_url
+  });
+  return medium
+}
+
+function _getTwitterId(pageUrl) {
+  const regex = /\/(\d+)$/
+  const match = pageUrl.match(regex);
+  let twitterId = match && match[1] || null;
+
+  if (!twitterId) {
+    // Find digits
+    const reg = /^(\d+)$/
+    const digitMatch = pageUrl.match(reg);
+    twitterId = digitMatch && digitMatch[1] || null;
+  }
+  return twitterId;
 }
 
 function _getTwitterEmbed(twitterId) {
@@ -113,12 +149,12 @@ function _getYoutubeAndWrapInMediumSync(pageUrl) {
 function _youtubeEmbedToMedium(res) {
   const iframeSrcRegex = /(?<=src=").*?(?=[\?"])/
   const html = _.get(res, "items[0].player.embedHtml")
-  const youtubeUrl = html.match(iframeSrcRegex)[0];
-  // const replacedHtml  = html.replace(youtubeUrl, youtubeUrl + "?start=225")
+  const originalUrl = html.match(iframeSrcRegex)[0];
+  // const replacedHtml  = html.replace(originalUrl, originalUrl + "?start=225")
   const medium = new Medium({
     type: MediumID.youtube,
     html: html,
-    originalUrl: youtubeUrl
+    originalUrl: originalUrl
   });
   return medium
 }
@@ -194,7 +230,7 @@ function _webScrpae(pageUrl) {
       newPin.utcEndDateTime = new Date(_.get(res, 'dates[0].end'));
       newPin.allDay = _.get(res, 'dates[0].allDay');
 
-      res.media.forEach(m => {
+      _.get(res, "media", []).forEach(m => {
         newPin.addMedium(new Medium({
           type: MediumID.image,
           originalWidth: m.width,
@@ -207,10 +243,19 @@ function _webScrpae(pageUrl) {
         return _getYoutubeAndWrapInMediumSync(url);
       });
 
-      return Promise.all(youtubeProsmises)
+      const twitterProsmises = _.get(res, "twitter", []).map(url => {
+        return _getTwitterAndWrapInMediumSync(url).catch((e) => {
+          return { res: null, medium: null };
+        });
+      });
+
+      return Promise.all(youtubeProsmises.concat(twitterProsmises))
         .then(values => {
           values.forEach(({ res, medium }) => {
-            newPin.unshiftMedium(medium);
+            if (!!medium && !newPin.findMediumByOriginalUrl(medium.originalUrl)) {
+              newPin.medium
+              newPin.unshiftMedium(medium);
+            }
           });
           return newPin;
         });
