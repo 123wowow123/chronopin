@@ -177,9 +177,9 @@
                   data-actual-width="{{medium.originalWidth}}" data-actual-height="{{medium.originalHeight}}"
                   title="{{medium.originalWidth}} x {{medium.originalHeight}}" ng-switch-when="1" />
 
-                <div class="twitter-pin-container" ng-switch-when="2" ng-bind-html="medium.html"
-                data-actual-width="250" data-actual-height="496">
-                </div>
+                <twitter-pin ng-switch-when="2" html="{{medium.html}}">
+                </twitter-pin>
+  
 
                 <div class='embed-container --margin-top-bottom' ng-switch-when="3" ng-bind-html="medium.html"
                   data-actual-width="400" data-actual-height="270">
@@ -196,8 +196,8 @@
       </div>
     </div>
 
-    <div class="twitter-pin-container" ng-switch-when="twitter" ng-bind-html="$ctrl.pin.selectedMedia.html">
-    </div>
+    <twitter-pin ng-switch-when="twitter" html="{{$ctrl.pin.selectedMedia.html}}">
+    </twitter-pin>
 
     <div class='embed-container --margin-top-bottom' ng-switch-when="youtube"
       ng-bind-html="$ctrl.pin.selectedMedia.html">

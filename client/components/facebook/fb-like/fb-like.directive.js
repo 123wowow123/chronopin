@@ -48,9 +48,9 @@
                         $likeEl.show();
                       });
                     });
-                  });
+                  }, delayParse);
 
-                }, delayParse);
+                });
             }
 
           });

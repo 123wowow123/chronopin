@@ -1,8 +1,13 @@
+Bugs:
+
+Fix load scroll
+Chat - https://github.com/posativ/isso
+
 To Do:
 
 learn NLP
 build NLP search
-Add youtube pin capability
+
 
 
 ----
@@ -13,18 +18,22 @@ Improvement Idea:
 
 easy search - https://medium.datadriveninvestor.com/context-based-search-using-bert-8957d25feaa9
 Build search - https://medium.com/mlearning-ai/search-rank-and-recommendations-35cc717772cb
-
-
 Spotlight - show right side panel of things favorited in the next 30 days. Click link to scroll to item
 Trending - same as above but for trending. Also show local trending
-Need iframe viewing or they will chat on linked site and not on chronopin
-Add visit button next to title target blank
 Support multiple end dates per pin
 
+Create thread in one shot  or port from twitter with date tags:
+https://twitter.com/mrouben/status/1630913875418677250
+
+Sync to calender, can pay to remove ads
+
+Pin thread
+https://twitter.com/PauloMacro/status/1630759939625869314
+
 Drilldown page:
-- Chat
 - Additional content if chopped off
 - More like this - see simlilar pins (drasctially smaller timeline starting from now -1 to end with show more button at beginning to show more from history)
+- Affiliate buy
 
 ?- Hosted checkout
 
@@ -110,3 +119,9 @@ https://www.gamesradar.com/demon-slayer-season-3-release-date-news-trailer-sword
 
 cannot get twitter id of below
 https://twitter.com/animetv_jp/status/1621479864367812610?s=20&t=25ipt2OJqB1T-igVZHAnJQ
+
+
+
+Excess US savings have and will continue to help the US economy. However, by Q3Q4 '23 expects to be fully eroded
+https://twitter.com/boazweinstein/status/1631331891100917762
+Oct 1

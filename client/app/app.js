@@ -6,6 +6,7 @@ angular.module('chronopinNodeApp', [
     'chronopinNodeApp.constants',
     'chronopinNodeApp.model',
     'chronopinNodeApp.facebook',
+    'chronopinNodeApp.twitter',
     'chronopinNodeApp.loader',
     'chronopinNodeApp.google',
     'ngCookies',

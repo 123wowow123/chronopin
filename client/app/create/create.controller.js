@@ -158,14 +158,6 @@
     scrapePage(url) {
       this.enableForm(false);
       this.scrapeService.scrapePage(this.pin, url)
-        .then((pin) => {
-          if (pin.type === this.scrapeType.twitter || pin.type === this.scrapeType.web) {
-            // TODO: Should be wrapped in new twitter card component
-            $.getScript('//platform.twitter.com/widgets.js', () => {
-              twttr.widgets.load(document.body);
-            });
-          }
-        })
         .finally(() => {
           this.enableForm(true);
         });

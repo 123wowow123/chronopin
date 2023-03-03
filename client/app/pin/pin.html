@@ -15,9 +15,8 @@
           </a>
         </div>
 
-        <div ng-switch-when="2" ng-bind-html="$ctrl.pin.media[0].html">
-          <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-        </div>
+        <twitter-pin ng-switch-when="2" html="{{$ctrl.pin.media[0].html}}">
+        </twitter-pin>
 
         <div class='embed-container' ng-switch-when="3" ng-bind-html="$ctrl.pin.media[0].html">
         </div>

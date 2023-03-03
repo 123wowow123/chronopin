@@ -27,12 +27,7 @@
       this.pinWebService.get(id)
         .then(res => {
           this.pin = res.data;
-          this.pinReady = true;;
-
-          // TODO: Should be wrapped in new twitter card component
-          $.getScript('//platform.twitter.com/widgets.js', () => {
-            twttr.widgets.load(document.body);
-          });
+          this.pinReady = true;
           return res;
         })
         .then(res => {
