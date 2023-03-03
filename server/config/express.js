@@ -49,7 +49,8 @@ export default function (app) {
   }
 
   app.set('appPath', path.join(config.root, 'client'));
-  app.use(express.static(app.get('appPath')/*, { index: '_' }*/ ));
+  // app.use(express.static(app.get('appPath')/*, { index: '_' }*/ ));
+  app.use(express.static(app.get('appPath'), { index: '_' } ));
   app.use(morgan('dev'));
 
   app.set('views', config.root + '/server/views');
