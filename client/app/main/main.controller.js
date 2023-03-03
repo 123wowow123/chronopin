@@ -57,7 +57,7 @@
       // partially applied functions
       this.getLinkHeader = this.Util.getLinkHeader.bind(null, omitLinkHeaderProp);
       this.captureYOffset = this.ScrollUtil.captureYOffset.bind(null, scrollEl);
-      this.scrollToID = this.ScrollUtil.scrollToID.bind(null, scrollEl);
+      this.scrollToIDAsync = this.ScrollUtil.scrollToIDAsync.bind(null, scrollEl);
       this.scrollYTo = this.ScrollUtil.scrollYTo.bind(null, scrollEl);
       this.adjustScrollAfterPinInsert = this.ScrollUtil.adjustScrollAfterPinInsert.bind(null, scrollEl);
       this.adjustScrollRelativeToCurrentView = this.ScrollUtil.adjustScrollRelativeToCurrentView.bind(null, scrollEl);
@@ -152,9 +152,13 @@
         //debugger;
         let firstBag = this.pinApp.findClosestFutureBagByDateTime(dateTime);
         if (firstBag) {
-          this.scrollToID(firstBag.toISODateTimeString());
+          this.scrollToIDAsync(firstBag.toISODateTimeString())
+            .then(t => {
+              this._registerInfinitScroll();
+            })
+        } else {
+          this._registerInfinitScroll();
         }
-        this._registerInfinitScroll();
       }
 
       this.bags = this.pinApp.getBags();

@@ -1,6 +1,5 @@
 Bugs:
 
-Fix load scroll
 Chat - https://github.com/posativ/isso
 
 To Do:
@@ -8,7 +7,7 @@ To Do:
 learn NLP
 build NLP search
 Sanitize all post values
-
+Fix header load
 
 ----
 Learn to summerize content - train using summery tag and full html body
@@ -125,3 +124,15 @@ https://twitter.com/animetv_jp/status/1621479864367812610?s=20&t=25ipt2OJqB1T-ig
 Excess US savings have and will continue to help the US economy. However, by Q3Q4 '23 expects to be fully eroded
 https://twitter.com/boazweinstein/status/1631331891100917762
 Oct 1
+
+
+50 bp in March done deal
+50 bp in May a distinct possibility 
+https://twitter.com/INArteCarloDoss/status/1631608129120083969
+
+
+Current terminal rates:
+Fed 5.36%
+BoE 4.69%
+ECB 3.86%
+https://twitter.com/INArteCarloDoss/status/1631581883485102081

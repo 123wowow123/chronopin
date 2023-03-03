@@ -7,10 +7,18 @@
      */
 
     const menuOffset = 52;
+    let resolveInitialized;
+    let initialized = new Promise((resolve, reject) => {
+        resolveInitialized = resolve;
+    });
 
     function ScrollUtil() {
 
         const ScrollUtil = {
+
+            setInitialized(value) {
+                resolveInitialized(value);
+            },
 
             // Pure Function
             getScrollHeight(scrollEl) {
@@ -30,6 +38,12 @@
             scrollToID(scrollEl, id) {
                 const pos = ScrollUtil.findYPos(ScrollUtil.getElementById(id));
                 return ScrollUtil.scrollYTo(scrollEl, pos);
+            },
+
+            scrollToIDAsync(scrollEl, id) {
+                return initialized.then(t => {
+                    ScrollUtil.scrollToID(scrollEl, id);
+                });
             },
 
             findYPos(el) {

@@ -5,13 +5,15 @@
 
     class PinBlockController {
 
-        constructor($scope, pinWebService, Auth) {
+        constructor($scope, pinWebService, Auth, ScrollUtil) {
             this.pinWebService = pinWebService;
             this.Auth = Auth;
+            this.ScrollUtil = ScrollUtil;
         }
 
         $onInit() {
             //this._registerWaypointObserver(); /////////////////////
+            this.ScrollUtil.setInitialized(true);
         }
 
         // Click handlers
