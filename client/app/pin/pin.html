@@ -103,10 +103,25 @@
 
             <article class="grid__panel grid__panel--plain">
               <p ng-if="$ctrl.isAdmin()">{{pin.searchScore}}</p>
-              <a class="grid__asset grid__asset--link" ng-if="pin.media[0].thumbName" ui-sref="pin({id:pin.id})">
-                <img ng-src="{{$ctrl.appConfig.thumbUrlPrefix + pin.media[0].thumbName}}" class="grid__image"
-                  data-actual-width="{{pin.media[0].thumbWidth}}" data-actual-height="{{pin.media[0].thumbHeight}}" />
-              </a>
+
+              <!-- Switch between image / iframe / tweets -->
+              <div class="grid__media" ng-switch="pin.media[0].type">
+                <div ng-switch-when="1">
+                  <a class="pin__asset pin__asset--link" ng-if="pin.media[0].thumbName" ui-sref="pin({id:pin.id})">
+                    <img ng-src="{{$ctrl.appConfig.thumbUrlPrefix + pin.media[0].thumbName}}" class="pin__image"
+                      data-actual-width="{{pin.media[0].thumbWidth}}"
+                      data-actual-height="{{pin.media[0].thumbHeight}}" />
+                  </a>
+                </div>
+
+                <twitter-pin ng-switch-when="2" html="{{pin.media[0].html}}">
+                </twitter-pin>
+
+                <div class='embed-container' ng-switch-when="3" ng-bind-html="pin.media[0].html">
+                </div>
+              </div>
+
+
               <div class="grid__body">
                 <h4 class="grid__heading">
                   <a class="grid__heading_link" ui-sref="pin({id:pin.id})">
