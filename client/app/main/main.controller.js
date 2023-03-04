@@ -12,7 +12,7 @@
 
       // Plugin: https://github.com/gabceb/jquery-browser-plugin
       const isSafari = $.browser.ipad || $.browser.iphone || $.browser.ipod || $.browser.safari || $.browser.msedge;
-      const scrollEl = isSafari ? document.body : document.documentElement; // Safari broke with documentElement
+      const scrollEl = document.documentElement;
 
       // stateParams Service
       this.$transitions = $transitions;
