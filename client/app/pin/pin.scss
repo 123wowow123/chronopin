@@ -29,12 +29,6 @@
   }
 }
 
-// .grid {
-//   &.\--angular {
-//     position: absolute;
-//   }
-// }
-
 @media only screen and (max-width: $ipad-landscape) {
   .pin_suggestions {
     @include grid-normalize-margin;

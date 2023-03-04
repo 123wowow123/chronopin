@@ -7,7 +7,7 @@ To Do:
 learn NLP
 build NLP search
 Sanitize all post values
-Fix header load
+Fix header data load
 
 ----
 Learn to summerize content - train using summery tag and full html body

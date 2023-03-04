@@ -320,8 +320,6 @@ $bag-font-color: var(--bag-text-color);
         margin-bottom: 10px;
         max-height: 510px;
         overflow-y: hidden;
-        //border-radius: 5px;
-        // margin: 0 -15px 10px;
 
         &--link {
             cursor: zoom-in;
@@ -522,6 +520,13 @@ $timeline-ipad-landscape-left-alignment: 95px;
         display: none !important;
     }
 }
+
+.twitter-tweet {
+    margin: 0 !important;
+    iframe {
+      max-width: 100%;
+    }
+  }
 
 @media (max-width: $grid-max-width-mobile) {
     .grid {
