@@ -1,13 +1,19 @@
-Bugs:
+Bugs/priority:
 
 Chat - https://github.com/posativ/isso
+Sanitize all post values
+Fix header data load
+Affliate buy link with price scrape
+Create universal pin component
+Login test, add google login
+Tab for "For you" & "Following"
+Research hashtag
+
 
 To Do:
 
 learn NLP
 build NLP search
-Sanitize all post values
-Fix header data load
 
 ----
 Learn to summerize content - train using summery tag and full html body
@@ -21,7 +27,7 @@ Spotlight - show right side panel of things favorited in the next 30 days. Click
 Trending - same as above but for trending. Also show local trending
 Support multiple end dates per pin
 
-Create thread in one shot  or port from twitter with date tags:
+Create thread in one shot or port from twitter with date tags:
 https://twitter.com/mrouben/status/1630913875418677250
 
 Sync to calender, can pay to remove ads
@@ -32,8 +38,6 @@ https://twitter.com/PauloMacro/status/1630759939625869314
 Drilldown page:
 - Additional content if chopped off
 - More like this - see simlilar pins (drasctially smaller timeline starting from now -1 to end with show more button at beginning to show more from history)
-- Affiliate buy
-
 ?- Hosted checkout
 
 
@@ -136,3 +140,4 @@ Fed 5.36%
 BoE 4.69%
 ECB 3.86%
 https://twitter.com/INArteCarloDoss/status/1631581883485102081
+

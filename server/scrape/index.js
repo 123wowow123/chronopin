@@ -240,7 +240,23 @@ function _webScrpae(pageUrl) {
       });
 
       const youtubeProsmises = _.get(res, "youtube", []).map(url => {
-        return _getYoutubeAndWrapInMediumSync(url).catch((e) => {
+        let finalURL = url;
+        function decodeQueryParam(p) {
+          return decodeURIComponent(p.replace(/\+/g, " "));
+        }
+        function extractEmbedlyURL(url) {
+          const params = (new URL(url)).searchParams;
+          const hasSRC = params.has("src");
+          const src = params.get("src");
+          return hasSRC ? decodeQueryParam(src) : url;
+        }
+
+        // extract url from embedly query string
+        if (url.startsWith('https://embedly')) {
+          finalURL = extractEmbedlyURL(url);
+        }
+
+        return _getYoutubeAndWrapInMediumSync(finalURL).catch((e) => {
           return { res: null, medium: null };
         });
       });
