@@ -17,5 +17,10 @@ exports = module.exports = {
     web: "web",
     twitter: "twitter",
     youtube: "youtube"
+  },
+  mediumID: {
+    image: 1,
+    twitter: 2,
+    youtube: 3,
   }
 };

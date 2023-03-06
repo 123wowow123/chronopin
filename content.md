@@ -142,3 +142,6 @@ Fed 5.36%
 BoE 4.69%
 ECB 3.86%
 https://twitter.com/INArteCarloDoss/status/1631581883485102081
+
+https://twitter.com/simon_ree/status/1630867027375144960/photo/4
+
