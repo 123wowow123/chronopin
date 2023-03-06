@@ -13,7 +13,7 @@ const headless = true;
 const scrapeType = config.scrapeType;
 const scrapeJsFileName = __dirname + '/scrape.min.js';
 const scrapeJsFileJS = fs.readFileSync(scrapeJsFileName, 'utf8');
-const defaultNavigationWait = 10000
+const defaultNavigationWait = 9000
 
 const MediumID = {
   image: 1,
@@ -88,7 +88,7 @@ function _twitterEmbedToMedium(res) {
     authorName: res.author_name,
     authorUrl: res.author_url
   });
-  return medium
+  return medium;
 }
 
 function _getTwitterId(pageUrl) {
@@ -176,7 +176,12 @@ function _webScrpae(pageUrl) {
   let page = null;
   const res = puppeteer.launch({
     ignoreHTTPSErrors: true,
-    headless: headless
+    headless: headless,
+    //devtools: !headless
+    defaultViewport: {
+      width: 1280,
+      height: 1200
+    }
   })
     .then((b) => {
       browser = b
@@ -194,12 +199,29 @@ function _webScrpae(pageUrl) {
         return err;
       else
         throw err;
+    }).then(() => {
+      return page.keyboard.press("PageDown");
     })
-    .then((res) => {
+    .then(() => {
+      return page.waitForSelector(`iframe[src*="www.youtube.com"]`, { timeout: 1000 })
+        .catch(e => {
+          return e;
+        });
+    }).then(() => {
+      return page.evaluate(() => {
+        window.scrollTo(0, window.document.body.scrollHeight);
+      });
+    }).then(() => {
+      return page.waitForSelector(`iframe[src*="www.youtube.com"]`, { timeout: 2000 })
+        .catch(e => {
+          return e;
+        });
+    })
+    .then((t) => {
       return page.evaluate((scrapeJsFileJS) => {
         // this will be executed in headless chrome
         return (new Promise((resolve, reject) => {
-          var script = document.createElement('script');
+          let script = document.createElement('script');
           script.id = "chrono";
           script.text = scrapeJsFileJS;
           document.getElementsByTagName('head')[0].appendChild(script);
@@ -207,16 +229,43 @@ function _webScrpae(pageUrl) {
           console.log("chrono", window.cpScrapePromise);
 
           // Copy here for debug
-          window.cpScrapePromise
+
+          function promiseRetry(fn, times, delay) {
+            return new Promise(function (resolve, reject) {
+              let error;
+              let attempt = function () {
+                if (times == 0) {
+                  reject(error);
+                } else {
+                  try {
+                    fn.then(resolve)
+                      .catch(function (e) {
+                        times--;
+                        error = e;
+                        setTimeout(function () { attempt() }, delay);
+                      });
+                  } catch (e) {
+                    times--;
+                    error = e;
+                    setTimeout(function () { attempt() }, delay);
+                  }
+                }
+              };
+              attempt();
+            });
+          };
+
+          promiseRetry(window.cpScrapePromise, 20, 100)
             .then((res) => {
-              console.log("chrono resolve", res);
-              resolve && resolve(res);
+              console.log("chrono resolve", JSON.stringify(res));
+              resolve(res);
             })
 
             .catch((e) => {
               console.log("chrono catch", e);
-              throw e;
+              reject(e);
             });
+
         }));
 
       }, scrapeJsFileJS);

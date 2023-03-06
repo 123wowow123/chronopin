@@ -8,6 +8,8 @@ Create universal pin component
 Login test, add google login
 Tab for "For you" & "Following"
 Research hashtag
+Change pin author to real handle
+client validate url before submitting
 
 
 To Do:
@@ -140,4 +142,3 @@ Fed 5.36%
 BoE 4.69%
 ECB 3.86%
 https://twitter.com/INArteCarloDoss/status/1631581883485102081
-

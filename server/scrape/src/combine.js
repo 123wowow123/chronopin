@@ -9,57 +9,39 @@ import $ from 'jquery';
 
 (
   function combine() {
-    var promiseObj = {};
 
-    var titleRes = title();
-    if (titleRes) {
-      promiseObj.titles = titleRes;
-    }
+    window.cpScrapePromise = new Promise(function (resolve, reject) {
 
-    var descriptionRes = description();
-    if (descriptionRes) {
-      promiseObj.descriptions = descriptionRes;
-    }
+      var titleRes = title();
 
-    var imageRes = image();
-    if (imageRes) {
-      promiseObj.images = imageRes;
-    }
+      var descriptionRes = description();
 
-    var priceRes = price();
-    if (priceRes) {
-      promiseObj.prices = priceRes;
-    }
+      var imageRes = image();
 
-    var dateRes = date();
-    if (dateRes) {
-      promiseObj.dates = dateRes;
-    }
+      var priceRes = price();
 
-    var youtubeRes = youtube();
-    if (youtubeRes) {
-      promiseObj.youtube = youtubeRes;
-    }
+      var dateRes = date();
 
-    var twitterRes = twitter();
-    if (twitterRes) {
-      promiseObj.twitter = twitterRes;
-    }
+      var youtubeRes = youtube();
 
-    window.cpScrapePromise = Promise.all([titleRes, descriptionRes, imageRes, youtubeRes, twitterRes, priceRes, dateRes])
-      .then(([titleRes, descriptionRes, imageRes, youtubeRes, twitterRes, priceRes, dateRes]) => {
-        let res = {
-          titles: titleRes,
-          descriptions: descriptionRes,
-          media: imageRes,
-          youtube: youtubeRes,
-          twitter: twitterRes,
-          prices: priceRes,
-          dates: dateRes
-        };
-        return res; // jshint ignore:line
-      });
+      var twitterRes = twitter();
 
-  }
+      Promise.all([titleRes, descriptionRes, imageRes, youtubeRes, twitterRes, priceRes, dateRes])
+        .then(([titleRes, descriptionRes, imageRes, youtubeRes, twitterRes, priceRes, dateRes]) => {
+          let res = {
+            titles: titleRes,
+            descriptions: descriptionRes,
+            media: imageRes,
+            youtube: youtubeRes,
+            twitter: twitterRes,
+            prices: priceRes,
+            dates: dateRes
+          };
+          return res; // jshint ignore:line
+        })
+        .then(resolve)
+        .catch(reject);
+    });
+}
 
 )();

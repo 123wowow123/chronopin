@@ -5,8 +5,10 @@
 //need to add weight to date and sort by weight
 
 import $ from 'jquery';
-import _ from 'lodash';
 import * as chrono from 'chrono-node';
+import {
+  uniqueAndNonEmpty
+} from '../helper/util';
 
 export default function date() {
   var res = [];
@@ -41,8 +43,6 @@ export default function date() {
     return dateTime;
   });
 
-  res = _.uniqBy(result, _.isEqual);
-
-  //res = uniqueAndNonEmpty(res);
+  res = uniqueAndNonEmpty(result);
   return res.length ? res : undefined;
 }
