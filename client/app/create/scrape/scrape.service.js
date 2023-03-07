@@ -14,7 +14,8 @@
                 };
                 return $http.get('/api/scrape', config)
                     .then(res => {
-                        return this.setPinFromWebScrape(thisPin, res.data)
+                        thisPin.type = _.get(res.data, 'type');
+                        return this.setPinImageFromScrapeAndSelect(thisPin, res.data)
                     });
             };
 
