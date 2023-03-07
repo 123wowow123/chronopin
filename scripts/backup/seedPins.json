@@ -1,16 +1,5 @@
 [
   {
-    "id": 1,
-    "title": "Frankfurt, 65th International Motor Show (2013)",
-    "description": "Passenger cars, motorcycles, motor caravans, parts and accessories, telematics, products for servicing, repair and maintenance",
-    "sourceUrl": "http://www.iaa.de",
-    "utcStartDateTime": "2013-09-09T07:00:00.000Z",
-    "utcEndDateTime": "2013-09-22T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.084Z",
-    "userId": 1
-  },
-  {
     "id": 2,
     "title": "iPhone 5S Event",
     "description": "This should brighten everyone's day",
@@ -51,29 +40,6 @@
         "originalUrl": "http://www.eweek.com/imagesvr_ce/522/290_Windows8_1.jpg",
         "originalWidth": 290,
         "originalHeight": 195,
-        "type": "1"
-      }
-    ],
-    "userId": 1
-  },
-  {
-    "id": 4,
-    "title": "Surface 2",
-    "description": "Thin, light tablet with up to 10-hour battery life",
-    "sourceUrl": "http://www.microsoftstore.com/store/msusa/en_US/html/pbPage.PDPS/productID.286867200",
-    "utcStartDateTime": "2013-10-24T07:00:00.000Z",
-    "utcEndDateTime": "2013-10-25T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.178Z",
-    "media": [
-      {
-        "id": 3,
-        "thumbName": "6699c4dc-bdf4-4a4c-be39-52c77797a944.jpg",
-        "thumbWidth": 400,
-        "thumbHeight": 201,
-        "originalUrl": "https://dri1.img.digitalrivercontent.net/Storefront/Site/msusa/images/promo/Homepage/en-US-Hm-Trip-L-SP4-Alcantara-Productivity.jpg",
-        "originalWidth": 802,
-        "originalHeight": 404,
         "type": "1"
       }
     ],
@@ -125,17 +91,6 @@
         "type": "1"
       }
     ],
-    "userId": 1
-  },
-  {
-    "id": 7,
-    "title": "Visual Studio 2013 Virtual Launch",
-    "description": "Weíve got a new ASP.NET dialog, amazing CSS3 support, new scaffolding engine and an amazing new surprise code-named ìArtery.î Weíll cover ASP.NET MVC 5, Web API 2, Web Forms, SignalR 2, and also learn about OWIN, ASP.NET identity improvements and much more!",
-    "sourceUrl": "http://events.visualstudio.com/",
-    "utcStartDateTime": "2013-11-12T08:00:00.000Z",
-    "utcEndDateTime": "2013-11-13T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.288Z",
     "userId": 1
   },
   {
@@ -206,17 +161,6 @@
     "userId": 1
   },
   {
-    "id": 11,
-    "title": "PlayStation 4: USA Launch",
-    "description": "The PS4ô system is centered around a powerful custom chip that contains eight x86-64 cores and a state of the art 1.84 TFLOPS graphics processor with 8 GB of ultra-fast GDDR5 unified system memory, easing game creation and increasing the richness of content achievable on the platform.",
-    "sourceUrl": "http://us.playstation.com/ps4/index.htm",
-    "utcStartDateTime": "2013-11-14T08:00:00.000Z",
-    "utcEndDateTime": "2013-11-15T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.303Z",
-    "userId": 1
-  },
-  {
     "id": 12,
     "title": "Nokia Lumia 2520 - $399 on AT&T",
     "description": "Activate a Nokia Lumia 2520 between November 22 and January 9. You'll be eligible for a $20 app voucher for the Windows Store.",
@@ -238,30 +182,6 @@
         "type": "1"
       }
     ],
-    "userId": 1
-  },
-  {
-    "id": 13,
-    "title": "Forza Motorsport 5 for Xbox One",
-    "description": "Feature in game commentary by the showís hosts including Jeremy Clarkson, James may, and Richard Hammond.",
-    "sourceUrl": "http://www.wpcentral.com/forza-motorsport-5-revs-its-xbox-one-debut-top-gear-s-jeremy-clarkson",
-    "price": 59.99,
-    "utcStartDateTime": "2013-11-21T08:00:00.000Z",
-    "utcEndDateTime": "2013-11-22T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.319Z",
-    "userId": 1
-  },
-  {
-    "id": 14,
-    "title": "Xbox One: USA Launch",
-    "description": "The all-in-one entertainment system. Where the best games, multiplayer, and your favorite movies, music, sports and live TV come together in one place.",
-    "sourceUrl": "http://www.xbox.com/en-US/xbox-one/meet-xbox-one",
-    "price": 499.99,
-    "utcStartDateTime": "2013-11-21T08:00:00.000Z",
-    "utcEndDateTime": "2013-11-22T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.319Z",
     "userId": 1
   },
   {
@@ -289,30 +209,6 @@
     "userId": 1
   },
   {
-    "id": 16,
-    "title": "Six-inch Nokia Lumia 1520",
-    "description": "AT&T will also provide buyers with a $20 credit to buy apps in the Windows Phone store and 50 GB of AT&T Walker cloud storage space. Buyers also get a free copy of Halo: Spartan Assault with the purchase.",
-    "sourceUrl": "http://www.dailytech.com/US+PreOrders+Kickoff+for+Nokia+Lumia+1520+Deliveries+Commence+November+22/article33712.htm",
-    "price": 199.99,
-    "utcStartDateTime": "2013-11-21T08:00:00.000Z",
-    "utcEndDateTime": "2013-11-22T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.319Z",
-    "userId": 1
-  },
-  {
-    "id": 17,
-    "title": "Qualcomm Toq",
-    "description": "Low power color E-INK-like Mirasol display, a proprietary technology developed at Qualcomm and inspired by butterfly wings",
-    "sourceUrl": "http://www.dailytech.com/Quick+Note+Qualcomm+Toq+Ships+on+Cyber+Monday+Dec+2+Priced+at+34999/article33772.htm",
-    "price": 349.99,
-    "utcStartDateTime": "2013-12-01T08:00:00.000Z",
-    "utcEndDateTime": "2013-12-02T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.334Z",
-    "userId": 1
-  },
-  {
     "id": 18,
     "title": "Five Pacific islands lost to rising seas as climate change hits",
     "description": "Using time series aerial and satellite imagery from 1947 to 2014 of 33 islands, along with historical insight from local knowledge, we have identified five vegetated reef islands that have vanished over this time period and a further six islands experiencing severe shoreline recession.",
@@ -333,17 +229,6 @@
         "type": "1"
       }
     ],
-    "userId": 1
-  },
-  {
-    "id": 19,
-    "title": "CES 2014",
-    "description": "Tech Titans Keynote: Brian Krzanich - Intel CEO, Rupert Stadler - Audi AG Chairman, Gary Shapiro - Consumer Electronics Association President and CEO, Kazuo Hirai - Sony President and CEO",
-    "sourceUrl": "http://www.microsoftstore.com/store/msusa/en_US/html/pbPage.PDPS/productID.286867200",
-    "utcStartDateTime": "2014-01-06T08:00:00.000Z",
-    "utcEndDateTime": "2014-01-10T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.334Z",
     "userId": 1
   },
   {
@@ -396,18 +281,6 @@
     "userId": 1
   },
   {
-    "id": 22,
-    "title": "Mad Catzô Pro Racingô Force Feedback Wheel and Pedals for Xbox OneÆ",
-    "description": "Next-gen Force Feedback with Dual Motors and Helical Gears",
-    "sourceUrl": "http://store.madcatz.com/categories/specialty-controllers-category/Mad-Catz-Pro-Racing-Force-Feedback-Wheel-and-Pedals-for-Xbox-One.html",
-    "price": 399.99,
-    "utcStartDateTime": "2014-02-27T08:00:00.000Z",
-    "utcEndDateTime": "2014-02-28T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.350Z",
-    "userId": 1
-  },
-  {
     "id": 23,
     "title": "Tesla Model S gains (free) titanium and aluminum armor upgrade",
     "description": "Additional titanium and aluminum armor are added to Tesla model S underbellies. The car carries its thousands of battery cells in a sealed enclosure below the floorpan, and the added armor is intended to protect the enclosure from puncture even under extreme conditions. This in turn should reduce the chances of Model S vehicles catching on fire",
@@ -431,18 +304,6 @@
         "type": "1"
       }
     ],
-    "userId": 1
-  },
-  {
-    "id": 24,
-    "title": "Titanfall",
-    "description": "Prepare for Titanfall. Crafted by one of the co-creators of Call of Duty and other key developers behind the Call of Duty franchise, Titanfall is an all-new universe juxtaposing small vs. giant, natural vs. industrial and man vs. machine.",
-    "sourceUrl": "http://www.xbox.com/en-US/xbox-one/xbox-one-games",
-    "price": 59.99,
-    "utcStartDateTime": "2014-03-10T07:00:00.000Z",
-    "utcEndDateTime": "2014-03-11T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.366Z",
     "userId": 1
   },
   {
@@ -567,41 +428,6 @@
     "userId": 1
   },
   {
-    "id": 30,
-    "title": "Surface 2 with LTE arrives at Microsoft Stores for impending launch",
-    "description": "Windows Phone 8.1 is anticipated to be unveiled, we have also been hearing about a Surface 2 with LTE. Announced last year during a Reddit AMA, a recent FCC filing suggests that the device is close to being released.",
-    "sourceUrl": "http://www.wpcentral.com/surface-2-att-lte-arrive-microsoft-stores-impending-launch",
-    "address": "The Moscone Center San Francisco, CA",
-    "utcStartDateTime": "2014-04-01T07:00:00.000Z",
-    "utcEndDateTime": "2014-04-04T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.397Z",
-    "userId": 1
-  },
-  {
-    "id": 31,
-    "title": "Build 2014",
-    "description": "Microsoft is expected to pull the cover off of Windows Phone 8.1 and dish out beta build of the OS for developers.",
-    "sourceUrl": "http://www.wpcentral.com/microsoft-hints-windows-phone-81-their-main-website",
-    "address": "The Moscone Center San Francisco, CA",
-    "utcStartDateTime": "2014-04-01T07:00:00.000Z",
-    "utcEndDateTime": "2014-04-04T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.397Z",
-    "userId": 1
-  },
-  {
-    "id": 32,
-    "title": "XPocalypse. Windows XP 'end of life' exposes vital industries to risk. Where's the panic?",
-    "description": "The sharpest challenge is faced by critical infrastructure ìasset ownersî who rely on XP computers to run the industrial control systems that regulate the power grid, refineries, chemical plants, and other utilities and industries vital to US economic prosperity. As it happens, many of these industrial users rarely if ever patch their WinXP work-station computers anyway ñ and see no need to start.",
-    "sourceUrl": "http://news.yahoo.com/windows-xp-end-life-exposes-vital-industries-risk-231617068.html",
-    "utcStartDateTime": "2014-04-07T07:00:00.000Z",
-    "utcEndDateTime": "2014-04-08T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.413Z",
-    "userId": 1
-  },
-  {
     "id": 33,
     "title": "Mouse and keyboard-friendly Windows 8.1 Update",
     "description": "Tuned to run well on devices with 1GB of RAM and 16GB of storage, roughly half the acceptable minimum for current Windows tablets. Systems without touchscreens will boot to the desktop by default instead of to the Start screen.",
@@ -620,87 +446,6 @@
         "type": "1"
       }
     ],
-    "userId": 1
-  },
-  {
-    "id": 34,
-    "title": "PAX East 2014",
-    "description": "Nintendo's No-Show Clouds Company's Strategy at Penny Arcade Expo (PAX), the biggest gaming convention in eastern USA.",
-    "sourceUrl": "http://www.tomsguide.com/us/nintendo-no-show-strategy,news-18529.html",
-    "address": "Boston Convention & Exhibition Center 415 Summer Street Boston, MA 02210",
-    "utcStartDateTime": "2014-04-10T07:00:00.000Z",
-    "utcEndDateTime": "2014-04-13T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.413Z",
-    "userId": 1
-  },
-  {
-    "id": 35,
-    "title": "Galaxy S5 sales doubled S4 sales in some countires on launch day",
-    "description": "The Galaxy S5 features a 5.1î 1080p display, 2.5GHz quad-core Snapdragon 800 processor paired, fingerprint reader, 16MP camera, 2800 mAh battery, and USB 3.0 connectivity. Available across 125 countries including the U.S., Europe, Middle East, Latin America, and most of Asia.",
-    "sourceUrl": "http://www.dailytech.com/Quick+Note+Samsung+Galaxy+S5+Launch+Day+Sales+Surpass+Predecessor/article34711.htm",
-    "utcStartDateTime": "2014-04-10T07:00:00.000Z",
-    "utcEndDateTime": "2014-04-11T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.413Z",
-    "userId": 1
-  },
-  {
-    "id": 36,
-    "title": "Tax Deadline Midnight Tuesday",
-    "description": "Because of federal budget cutbacks, your chances of being audited are much lower, especially if you make less than $200,000.  For more information on e-filing and for help with the process go here.",
-    "sourceUrl": "http://www.kvue.com/news/consumer/Tax-day-is-April-15-255262661.html",
-    "address": "1600 Pennsylvania Ave NW, Washington DC",
-    "utcStartDateTime": "2014-04-14T07:00:00.000Z",
-    "utcEndDateTime": "2014-04-15T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.413Z",
-    "userId": 1
-  },
-  {
-    "id": 37,
-    "title": "Microsoft starts to introduce Cortana features to Bing.com",
-    "description": "As a user of this service you will start to see notifications which fit your interests in other Bing powered Microsoft services such as Cortana and Bing Sports. You can see relevant info cards presented in the lower section of the Bing.",
-    "sourceUrl": "http://hexus.net/business/news/internet/68789-microsoft-starts-introduce-cortana-features-bingcom/",
-    "utcStartDateTime": "2014-04-16T07:00:00.000Z",
-    "utcEndDateTime": "2014-04-17T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.428Z",
-    "userId": 1
-  },
-  {
-    "id": 38,
-    "title": "New York auto show 2014",
-    "description": "Brand new '14 & '15 production models and concept vehicles",
-    "sourceUrl": "http://www.autoshowny.com",
-    "utcStartDateTime": "2014-04-17T07:00:00.000Z",
-    "utcEndDateTime": "2014-04-27T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.459Z",
-    "userId": 1
-  },
-  {
-    "id": 39,
-    "title": "Microsoft Now Officially Owns Nokia Devices",
-    "description": "Upon the closing of the transaction, Nokia would be restricted from licensing the Nokia brand for use in connection with mobile device sales for 30 months and from using the Nokia brand on Nokia's own mobile devices until December 31, 2015.",
-    "sourceUrl": "http://www.dailytech.com/Microsoft+Now+Officially+Owns+Nokia+Devices/article34793.htm",
-    "price": 7500000000,
-    "utcStartDateTime": "2014-04-23T07:00:00.000Z",
-    "utcEndDateTime": "2014-04-24T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.459Z",
-    "userId": 1
-  },
-  {
-    "id": 40,
-    "title": "MacBook Airs Gets Faster Processors But Same Body",
-    "description": "Apple has really fallen behind the pack with regards to screen technology and resolutions on its two MacBook Air models ó the 11î gets by with a 1366x768 display while the 13î isnít much better at 1440x900. In addition, the chassis design for the MacBook Air has barely changed in over three years.",
-    "sourceUrl": "http://www.dailytech.com/Report+Apple+to+Introduce+MacBook+Airs+with+Faster+Processors+Tomorrow/article34811.htm",
-    "price": 999,
-    "utcStartDateTime": "2014-04-27T07:00:00.000Z",
-    "utcEndDateTime": "2014-04-28T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.459Z",
     "userId": 1
   },
   {
@@ -726,17 +471,6 @@
         "type": "1"
       }
     ],
-    "userId": 1
-  },
-  {
-    "id": 42,
-    "title": "Intel's New Haswell Desktop CPUs, Allowing for iMac Update",
-    "description": "The new Haswell desktop processors will offer a 100 MHz bump in clock speeds and will be a direct successor to most of the chips currently used in the iMac. Will include Intel's Z97 chipset, which provides support for faster and larger M.2 SATA Express drives.",
-    "sourceUrl": "http://www.macrumors.com/2014/04/10/intel-haswell-imac-refresh/",
-    "utcStartDateTime": "2014-05-09T07:00:00.000Z",
-    "utcEndDateTime": "2014-05-10T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.475Z",
     "userId": 1
   },
   {
@@ -789,28 +523,6 @@
     "userId": 1
   },
   {
-    "id": 45,
-    "title": "Microsoft's Surface Mini Could Arrive in May",
-    "description": "We've already heard that Microsoft plans to make Windows 8.1 free on devices smaller than nine inches, thus reducing the overall price of the tablet given there's no licensing fee. Microsoft has also made the operating system's footprint physically smaller with the launch of 8.1, which should be good news for tablet owners given their small storage capacities.",
-    "sourceUrl": "http://www.tomshardware.co.uk/microsoft-windows-surface-mini-tablet,news-47772.html",
-    "utcStartDateTime": "2014-05-17T07:00:00.000Z",
-    "utcEndDateTime": "2014-05-18T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.475Z",
-    "userId": 1
-  },
-  {
-    "id": 46,
-    "title": "Intel reported to be a part of Microsoft's Surface event",
-    "description": "Should Redmond announce a new Intel-powered Surface model, it's not expected to be of the same small form factor, at least enabling Qualcomm to have some of the spotlight. The current Surface Pro 2 utilizes an Intel Core i5 processor, which is also a Haswell chip. That said, the Qualcomm-powered Surface Mini would also be a first, with RT tablets from Microsoft previously using Nvidia components.",
-    "sourceUrl": "http://www.wpcentral.com/intel-reported-be-part-microsofts-may-20-surface-event",
-    "utcStartDateTime": "2014-05-19T07:00:00.000Z",
-    "utcEndDateTime": "2014-05-20T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.475Z",
-    "userId": 1
-  },
-  {
     "id": 47,
     "title": "Watch Dogs confirmed for 27th May launch ñ except for Wii U",
     "description": "Originally expected to be released as a launch title on the next-gen Microsoft and Sony consoles before Christmas but was delayed until this spring so the developers could \"polish and fine tune every detail\"",
@@ -835,42 +547,6 @@
     "userId": 1
   },
   {
-    "id": 48,
-    "title": "WWDC 2014 - Likely iOS 8 Announcement",
-    "description": "iOS 8 is expected to include upgrades to Apple's Maps app, including possible support for public transit directions and enhanced points of interest, a Healthbook app that assists users in aggregating personal health data like blood pressure, heart rate, and more -- perhaps in concert with a smart watch product -- as well as improvements to Siri and iTunes Radio",
-    "sourceUrl": "http://www.macrumors.com/2014/04/07/ios-7-adoption-87/",
-    "address": "San Fransico",
-    "price": 1599,
-    "utcStartDateTime": "2014-06-01T07:00:00.000Z",
-    "utcEndDateTime": "2014-06-07T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.522Z",
-    "userId": 1
-  },
-  {
-    "id": 49,
-    "title": "Learn a lot more about Halo 5: Guardians at an E3 media briefing",
-    "description": "Bonnie Ross, General Manager, 343 Industries wrote to say that the development team is very serious in its undertaking to \"deliver the Halo game that fans deserve, and a game that is built from the ground up for Xbox One\". Also we are promised that the game will run \"at 60 frames per second, on dedicated servers, with the scope, features and scale weíve been dreaming of for more than a decade\".",
-    "sourceUrl": "http://hexus.net/gaming/news/xbox/69889-microsoft-announces-halo-5-guardians/",
-    "utcStartDateTime": "2014-06-08T07:00:00.000Z",
-    "utcEndDateTime": "2014-06-09T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.522Z",
-    "userId": 1
-  },
-  {
-    "id": 50,
-    "title": "Xbox One Now Priced at $399 Sans Kinect, Xbox Live Gold No Longer Required for Netflix, Hulu",
-    "description": "the console by itself will be priced at $399, matching the price of entry for the Sony PlayStation 4.   The PlayStation 4 has maintained a sales lead over the Xbox One since its introduction late last yet, but the tides could easily shift now that Microsoft is at pricing parity with its main rival.",
-    "sourceUrl": "http://www.dailytech.com/Xbox+One+Now+Priced+at+399+Sans+Kinect+Xbox+Live+Gold+No+Longer+Required+for+Netflix+Hulu/article34903.htm",
-    "address": "Redmond, Washington",
-    "utcStartDateTime": "2014-06-08T07:00:00.000Z",
-    "utcEndDateTime": "2014-06-09T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.522Z",
-    "userId": 1
-  },
-  {
     "id": 51,
     "title": "24 Hours of Le Mans 2014",
     "description": "Noteworthy: Nissan ZEOD RC is a hybrid electric racing car with a chassis similar in design to the DeltaWing. Porsche's brand new LMP1.",
@@ -891,39 +567,6 @@
     "userId": 1
   },
   {
-    "id": 52,
-    "title": "Sharp's 'Free-Form Displays' with Ultra-Thin Bezels Make New Display Shapes Possible",
-    "description": "Conventional displays are rectangular because they require a minimal width for the bezel in order to accommodate the drive circuit, called the gate driver, around the perimeter of the screen's display area. With the Free-Form Display, the gate driver's function is dispersed throughout the pixels on the display area. This allows the bezel to be shrunk considerably, and it gives the freedom to design the LCD to match whatever shape the display area of the screen needs to be.",
-    "sourceUrl": "http://www.macrumors.com/2014/06/18/sharp-free-form-displays/",
-    "utcStartDateTime": "2014-06-17T07:00:00.000Z",
-    "utcEndDateTime": "2014-06-18T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.553Z",
-    "userId": 1
-  },
-  {
-    "id": 53,
-    "title": "Amazon Launches \"Fire\" Smartphone",
-    "description": "Include free one-year membership to Amazon Prime and flat earbud cables. Four infrared cameras on the front of the device provides a 3D interface that Amazon calls ìDynamic Perspective.î The 3D effect is used to make some pretty swanky lock screen wallpaper that seem to pop out at you, but it can also be useful in, for example, mapping applications where you can see building pop out of your screen and pivot your head to look ìaroundî them or tilt the phone to see objects that would normally be hidden by the top bezel of the display screen.",
-    "sourceUrl": "http://www.dailytech.com/Amazon+Launches+Fire+Smartphone+Priced+from+199+on+ATT+with+2year+Contract/article36076.htm",
-    "utcStartDateTime": "2014-06-17T07:00:00.000Z",
-    "utcEndDateTime": "2014-06-18T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.553Z",
-    "userId": 1
-  },
-  {
-    "id": 54,
-    "title": "Windows Phone 8.1 Update 1: Making Touchless Gestures More Than a Gimmick",
-    "description": "The Verge is reporting that \"McLaren\" -- a flagship handset expected to hit multiple U.S. carriers this fall -- will feature sophisticated hands-free controls.  These controls are similar to the touchless gestures offered by Samsung Electronics Comp., Ltd.'s Galaxy S4 and Galaxy S5 smartphones.  However, where as touch-free tech on Galaxy smartphones has been dismissed as a somewhat \"gimmicky\" feature, Microsoft's version is reportedly significantly more advanced and more tightly integrated.",
-    "sourceUrl": "http://www.dailytech.com/Windows+Phone+81+Update+1+Making+Touchless+Gestures+More+Than+a+Gimmick/article35032.htm",
-    "utcStartDateTime": "2014-06-23T07:00:00.000Z",
-    "utcEndDateTime": "2014-06-24T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.569Z",
-    "userId": 1
-  },
-  {
     "id": 55,
     "title": "Civilization Revolution sequel coming directly to iOS",
     "description": "The console version of the first Civilization Revolution game barely cracked the NPD's US top 10, with 150,000 sales in its first month on the Xbox 360 before dropping off the sales listing entirely. Meanwhile, the iOS version was the ninth best-selling game of the iPhone for all of 2009, coming in just behind million-sellers like Flight Control. The iPad version has frequently reappeared on the iTunes top paid app list even years after it release, usually during 2K's periodic app sales.",
@@ -941,17 +584,6 @@
         "type": "1"
       }
     ],
-    "userId": 1
-  },
-  {
-    "id": 56,
-    "title": "New superconducting material could open the door to commercial viability in some applications",
-    "description": "New superconductor bumped the record for strongest superconductor to 17.6 Tesla (T), breaking the previous held record by 0.36 T, or roughly 2.1 percent.  While that may not sound like much, it's the first increase in the mark in more than a decade, with the last record (17.24 T) set in 2003. reviously, even small bumps have led to new commercialization prospects for superconductors. And given the well-documented and carefully thought out manufacturing process, this study has given those looking to commercialize a pretty clear roadmap.",
-    "sourceUrl": "http://www.dailytech.com/GoldDoped+Superconductor+Stores+550000+Times+Earths+Magnetic+Field/article36139.htm",
-    "utcStartDateTime": "2014-07-02T07:00:00.000Z",
-    "utcEndDateTime": "2014-07-03T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.569Z",
     "userId": 1
   },
   {
@@ -1816,39 +1448,6 @@
     "userId": 1
   },
   {
-    "id": 101,
-    "title": "Ford to Switch 3,300 Employees from BlackBerries to Apple iPhones by Year's End",
-    "description": "It meets the overall needs of the employees because it is able to serve both our business needs in a secure way and the needs we have in our personal lives with a single device,î said Ford spokesman Sara Tatchio.",
-    "sourceUrl": "http://www.dailytech.com/Ford+to+Switch+3300+Employees+from+BlackBerries+to+Apple+iPhones+by+Years+End/article36307.htm",
-    "utcStartDateTime": "2014-12-30T08:00:00.000Z",
-    "utcEndDateTime": "2014-12-31T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.897Z",
-    "userId": 1
-  },
-  {
-    "id": 102,
-    "title": "Skype Realtime Translation Coming by End of 2014",
-    "description": "\"Word Lens\" offer real-time translation via a smartphone camera of Spanish printed signage -- was acquired by Google for an undisclosed sum.  Google said it will continue to support the standalone app for Android and its rival Apple, Inc.'s (AAPL) iOS for now, but that ongoing development will shift to tightly-integrated, platform-exclusive features integrated into Android OS, Chrome OS, and Google's web API.",
-    "sourceUrl": "http://www.dailytech.com/Skype+Realtime+Translation+Coming+by+End+of+2014/article34967.htm",
-    "utcStartDateTime": "2014-12-30T08:00:00.000Z",
-    "utcEndDateTime": "2014-12-31T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.913Z",
-    "userId": 1
-  },
-  {
-    "id": 103,
-    "title": "Microsoft warns mainstream Windows 7 and Windows Server 2008 support ends Jan 2015",
-    "description": "Microsoft usually provides mainstream support for its products for a five-year period, where the company provides free updated features and/or performance enhancements which include but are not limited to security updates. After this period Microsoft starts providing extended support for the product, where users receive free security fixes but pay for other types of updates, typically for five years also.",
-    "sourceUrl": "http://support.microsoft.com/gp/support-reaching-end-2nd",
-    "utcStartDateTime": "2015-01-12T08:00:00.000Z",
-    "utcEndDateTime": "2015-01-13T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.913Z",
-    "userId": 1
-  },
-  {
     "id": 104,
     "title": "Tri-band Wi-Fi chips for multi-gigabit streaming coming from Qualcomm",
     "description": "Qualcomm announced that it completed the purchase of Wilocity and will soon deliver \"a family of tri-band platforms that combine Qualcomm Atheros, Inc.ís Wi-Fi and WiGig solutions to significantly increase performance and enable cutting-edge wireless applications. The initial tri-band platform is a reference design based on the Qualcomm Snapdragon 810, which is the worldís first mobile platform designed to support WiGig.\" The Snapdragon 810 is expected to ship in the first half of 2015.",
@@ -1866,17 +1465,6 @@
         "type": "1"
       }
     ],
-    "userId": 1
-  },
-  {
-    "id": 105,
-    "title": "Panels are ~50% more efficient than SolarCity's current supplier's, a third better than the market leader",
-    "description": "Mr. Musk owns a quarter (25 percent) of SolarCity shares. Silevo on target to achieve its near term goal of 24 percent panel efficiency. A 2013 slide deck showed Silevo was hoping to build a 230 MW capacity plant in the U.S. or China by the end of 2014. Even if the solar industry were only to generate 40 percent of the worldís electricity with photovoltaics by 2040, that would mean installing more than 400 GW of solar capacity per year for the next 25 years.",
-    "sourceUrl": "http://www.dailytech.com/Elon+Musks+SolarCity+Buys+Silevo+Plans+New+York+Gigafactory+for+2016/article36073.htm",
-    "utcStartDateTime": "2015-06-17T07:00:00.000Z",
-    "utcEndDateTime": "2015-06-18T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2017-06-15T05:50:37.553Z",
     "userId": 1
   },
   {

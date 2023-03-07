@@ -145,3 +145,13 @@ https://twitter.com/INArteCarloDoss/status/1631581883485102081
 
 https://twitter.com/simon_ree/status/1630867027375144960/photo/4
 
+https://twitter.com/INArteCarloDoss/status/1632733866082332675
+
+
+
+https://www.thurrott.com/hardware/161229/microsofts-next-gen-hololens-codenamed-sydney-arrives-q1-2019
+
+macrumors scrape
+
+
+GET /api/pins/search?q=Hands-on+with+the+Surface+Laptop:+Well,+it%E2%80%99s+a+laptop 500 84.257 ms - 420
