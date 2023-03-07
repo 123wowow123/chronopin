@@ -166,9 +166,10 @@
 
     scrapeImage(url) {
       this.enableForm(false);
-      this.scrapeService.scrapeImage(this.pin, url).finally(() => {
-        this.enableForm(true);
-      });
+      this.scrapeService.scrapeImage(this.pin, url)
+        .finally(() => {
+          this.enableForm(true);
+        });
       return this;
     }
 

@@ -4,7 +4,6 @@ Chat - https://github.com/posativ/isso
 Sanitize all post values
 Fix header data load
 Affliate buy link with price scrape
-Create universal pin component
 Login test, add google login
 Tab for "For you" & "Following"
 Research hashtag
@@ -151,7 +150,8 @@ https://twitter.com/INArteCarloDoss/status/1632733866082332675
 
 https://www.thurrott.com/hardware/161229/microsofts-next-gen-hololens-codenamed-sydney-arrives-q1-2019
 
-macrumors scrape
+https://www.thurrott.com/xbox/161232/microsofts-next-gen-xbox-will-arrive-2020
+
 
 
 GET /api/pins/search?q=Hands-on+with+the+Surface+Laptop:+Well,+it%E2%80%99s+a+laptop 500 84.257 ms - 420

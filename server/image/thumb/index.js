@@ -59,11 +59,11 @@ export function shrink(buffer, options) {
         return output;
 
       } else {
-
-        return image
+        let output;
+        image
           .resize(options.width, Jimp.AUTO)
           .getBuffer(Jimp.AUTO, (err, buffer) => {
-            const output = {
+            output = {
               buffer: buffer,
               width: image.bitmap.width,
               height: image.bitmap.height,
@@ -71,9 +71,8 @@ export function shrink(buffer, options) {
               originalHeight: originalHeight,
               type: image.getMIME()
             };
-            return output;
           });
-
+        return output;
       }
     });
 

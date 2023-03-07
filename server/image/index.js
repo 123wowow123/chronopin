@@ -25,13 +25,13 @@ export function createThumb(imageUrl) {
         .shrink(buffer, THUMB_OPTIONS)
         .then(newThumb => {
           return {
-            buffer: buffer,
-            thumbWidth: newThumb.bitmap.width,
-            thumbHeight: newThumb.bitmap.height,
+            buffer: newThumb.buffer,
+            thumbWidth: newThumb.width,
+            thumbHeight: newThumb.height,
             originalUrl: imageUrl,
-            originalWidth: newThumb._exif.imageSize.width,
-            originalHeight: newThumb._exif.imageSize.height,
-            type: newThumb._originalMime,
+            originalWidth: newThumb.originalWidth,
+            originalHeight: newThumb.originalHeight,
+            type: newThumb.type,
             extention: _getExtention(imageUrl)
           };
         })

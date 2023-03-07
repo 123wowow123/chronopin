@@ -13,8 +13,8 @@
                     }
                 };
                 return $http.get('/api/scrape', config)
-                    .then(response => {
-                        return this.setPinImageFromScrapeAndSelect(thisPin, response.data)
+                    .then(res => {
+                        return this.setPinFromWebScrape(thisPin, res.data)
                     });
             };
 
