@@ -9,7 +9,7 @@ Tab for "For you" & "Following"
 Research hashtag
 Change pin author to real handle
 client validate url before submitting
-
+create non headless browser
 
 To Do:
 
@@ -148,10 +148,7 @@ https://twitter.com/INArteCarloDoss/status/1632733866082332675
 
 
 
-https://www.thurrott.com/hardware/161229/microsofts-next-gen-hololens-codenamed-sydney-arrives-q1-2019
-
-https://www.thurrott.com/xbox/161232/microsofts-next-gen-xbox-will-arrive-2020
-
-
 
 GET /api/pins/search?q=Hands-on+with+the+Surface+Laptop:+Well,+it%E2%80%99s+a+laptop 500 84.257 ms - 420
+
+http://www.gocongress.org/
