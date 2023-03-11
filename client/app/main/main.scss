@@ -283,15 +283,6 @@ $bag-font-color: var(--bag-text-color);
         letter-spacing: 3px;
         text-decoration: none !important;
 
-        &:hover {
-            color: #23527c !important;
-        }
-
-        &:active,
-        &.focus {
-            color: #337ab7 !important;
-        }
-
         &.\--add {
             color: $timeline-content-color;
         }
@@ -299,6 +290,14 @@ $bag-font-color: var(--bag-text-color);
         // &.\--remove {
         // }
 
+        &:hover {
+            color: #23527c !important;
+        }
+
+        &:active,
+        &:focus {
+            color: #337ab7 !important;
+        }
     }
 
 
@@ -308,21 +307,21 @@ $bag-font-color: var(--bag-text-color);
         margin-left: 2px;
         min-width: 20px;
 
-        &:hover {
-            color: #23527c !important;
-        }
-
-        &:active,
-        &.focus {
-            color: #337ab7 !important;
-        }
-
         &.\--add {
             color: $timeline-content-color;
         }
 
         // &.\--remove {
         // }
+
+        &:hover {
+            color: #23527c !important;
+        }
+
+        &:active,
+        &:focus {
+            color: #337ab7 !important;
+        }
     }
 
     &__comment_count {

@@ -1,34 +1,34 @@
-.comment-count {
+.comment-num-count {
     letter-spacing: 3px;
+    padding: 7px 13px;
 
-    & a {
-        color: $timeline-content-color;
-        text-decoration: none;
-        &:hover {
-            color: #23527c;
-        }
-        &:active, &.focus {
-            color: #337ab7;
-        }
+    color: $timeline-content-color;
+    text-decoration: none !important;
+
+    &:hover {
+        color: #23527c;
     }
 
-    & .comment-num-count {
-        &::before {
-            font-family: FontAwesome;
-            font-weight: normal;
-            font-style: normal;
-            display: inline-block;
-            text-decoration: inherit;
-            content: "\f086";
-            padding-right: 6px;
-        }
+    &:active,
+    &:focus {
+        color: #337ab7;
+    }
 
-        &::after {
-            content: attr(data-num-comments);
-        }
+    &::before {
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        text-decoration: inherit;
+        content: "\f086";
+        padding-right: 6px;
+    }
 
-        & .num-comments {
-            display: none;
-        }
+    &::after {
+        content: attr(data-num-comments);
+    }
+
+    & .num-comments {
+        display: none;
     }
 }
