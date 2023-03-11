@@ -1,15 +1,22 @@
 Bugs/priority:
 
-Chat - https://github.com/posativ/isso
+comment styling - post,count
+test comment db backup
+Change pin author to real handle
+
+comment sync login
+fix pin overlap issue
+
 Sanitize all post values
 Fix header data load
 Affliate buy link with price scrape
 Login test, add google login
 Tab for "For you" & "Following"
 Research hashtag
-Change pin author to real handle
 client validate url before submitting
 create non headless browser
+
+"depends on hardware", "reveals more information" tags on comment feature
 
 To Do:
 
@@ -145,6 +152,12 @@ https://twitter.com/INArteCarloDoss/status/1631581883485102081
 https://twitter.com/simon_ree/status/1630867027375144960/photo/4
 
 https://twitter.com/INArteCarloDoss/status/1632733866082332675
+
+https://www.cnbc.com/2023/03/07/a-new-nuclear-reactor-in-the-us-starts-up-for-first-time-in-seven-years.html
+
+https://www.polygon.com/23594712/zelda-tears-kingdom-release-date-trailers-gameplay-story-botw-2
+
+https://www.cnbc.com/2023/03/08/what-is-6g-and-when-will-it-launch-telco-execs-predict.html
 
 
 

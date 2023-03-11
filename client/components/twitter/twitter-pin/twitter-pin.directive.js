@@ -8,7 +8,7 @@
 
       function createHTML(html) {
         return (`
-          <div class="twitter-pin-container" ng-switch-when="2"
+          <div class="twitter-pin-container"
             data-actual-width="250" data-actual-height="496">
             ${html}
           </div>
@@ -25,8 +25,8 @@
             if (html) {
               twitterJs.initalized
                 .then(twttr => {
-                  let $twitterEl = $(createHTML(html));
-                  elem.append($twitterEl);
+                  let $el = $(createHTML(html));
+                  elem.empty().append($el);
 
                   $timeout(() => {
                     twttr.widgets.load(elem);

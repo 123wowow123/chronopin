@@ -5,7 +5,7 @@
 
     class SearchController {
 
-        constructor($stateParams, $scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, $log, $timeout) {
+        constructor($stateParams, $scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, commentJs, $log, $timeout) {
 
             // constants
             const omitLinkHeaderProp = ['rel', 'url'];
@@ -35,6 +35,7 @@
             // model service
             this.pinApp = pinApp;
             this.bags;
+            this.commentJs = commentJs;
 
             // properties
             this.isAdmin = Auth.isAdmin; //bind function so each digest loop it get re-evaluated to determin latest state
@@ -68,12 +69,13 @@
             })
                 .then(res => {
                     this._setSearchPinGroups(res.data.pins);
-                    this.searching = false;
                     return res;
                 })
                 .catch(err => {
-                    this.searching = false;
                     throw err;
+                }).finally(() => {
+                    this.searching = false;
+                    this.commentJs.ayncRefresh();
                 });
         }
 
@@ -99,7 +101,7 @@
         updateInView(event) {
             //debugger;
             event.target.bag.inView = event.inView;
-          };
+        };
 
         // Private helper functions
 

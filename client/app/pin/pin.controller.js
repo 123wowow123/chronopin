@@ -7,11 +7,12 @@
 
   class PinController {
 
-    constructor($scope, $stateParams, socket, pinWebService, Auth, appConfig, modelInjector, $log) {
+    constructor($scope, $stateParams, socket, pinWebService, Auth, appConfig, modelInjector, commentJs, $log) {
       PinsQuery = PinsQuery || modelInjector.getPinsQuery();
       this.pinWebService = pinWebService;
       this.$stateParams = $stateParams;
       this.appConfig = appConfig;
+      this.commentJs = commentJs;
 
       this.isAdmin = Auth.isAdmin; //bind function so each digest loop it get re-evaluated to determin latest state
       this.searching = false;
@@ -50,8 +51,9 @@
             .catch(err => {
               this.searching = false;
               throw err;
+            }).finally(() => {
+              this.commentJs.ayncRefresh();
             });
-
         });
     }
 

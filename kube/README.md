@@ -92,10 +92,13 @@ https://www.elastic.co/guide/en/elasticsearch/reference/8.6/run-elasticsearch-lo
 ## Check ssl certificate status
 
 `kubectl describe managedcertificate chronopin-managed-cert`
+`kubectl describe managedcertificate chronopin-comment-managed-cert`
 
 Troubleshooting commands
 `kubectl get ingress`
 `kubectl describe ingress chronopin-managed-cert-ingress`
+
+`kubectl describe ingress chronopin-comment-managed-cert-ingress`
 Delete test Load Balancer
 `kubectl delete service chronopin-lb`
 
@@ -103,3 +106,27 @@ Delete test Load Balancer
 `gcloud compute addresses create chronopin-ip --global`
 
 
+# Google Cloud Troubleshooting and Sending Commands Pods
+
+kubectl get deployment chronopin-comment
+
+kubectl get pods -l app=comment
+
+kubectl exec chronopin-comment-686968757b-4hqm4 \
+    -- sh -c 'cd .. && ls'
+
+kubectl exec chronopin-comment-6456b9d474-w9bjm \
+    -- sh -c 'ls'
+
+kubectl exec chronopin-comment-6456b9d474-w9bjm \
+    -- sh -c 'cd runtime && ls'
+
+kubectl exec chronopin-comment-6456b9d474-w9bjm \
+    -- sh -c 'cd isso && ls'
+
+kubectl exec chronopin-comment-686968757b-r8hzx \
+    -- sh -c 'cd isso && cd db && ls'
+
+kubectl exec -it chronopin-comment-96dbb74f8-wzfwt  -- /bin/bash
+
+kubectl describe deployments chronopin-comment

@@ -16,4 +16,4 @@ grefresh:
 	gcloud builds submit --region=us-west2 --config cloudbuild.yaml
 
 gupdate:
-	kubectl set image deployment/chronopin chronopin=us-west1-docker.pkg.dev/chronopin-209507/chronopin-web/chronopin:latest
+	kubectl set image deployment/chronopin chronopin=us-west1-docker.pkg.dev/$(GPROJECT_ID)/chronopin-web/chronopin:$(GRELEASE)

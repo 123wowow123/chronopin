@@ -9,6 +9,7 @@ angular.module('chronopinNodeApp', [
     'chronopinNodeApp.twitter',
     'chronopinNodeApp.loader',
     'chronopinNodeApp.google',
+    'chronopinNodeApp.comment',
     'ngCookies',
     'ngResource',
     'ngSanitize',

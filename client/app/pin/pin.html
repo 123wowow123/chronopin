@@ -75,10 +75,7 @@
 
   <div class="pin__comment">
 
-    <div fb-comment-box page-href="{{$ctrl.pin.sourceUrl}}" data-numposts="5" data-colorscheme="light"
-      data-width="100%">
-      <loader-pac ng-if="$ctrl.pinReady"></loader-pac>
-    </div>
+    <comment-post comment-url="{{'/pin/'+$ctrl.pin.id}}"></comment-post>
 
   </div>
 

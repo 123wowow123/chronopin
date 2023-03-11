@@ -5,7 +5,7 @@
 
   class MainController {
 
-    constructor($transitions, $scope, pinWebService, dateTimeWebService, mainWebService, linkHeaderParser, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, $log, $timeout) {
+    constructor($transitions, $scope, pinWebService, dateTimeWebService, mainWebService, linkHeaderParser, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, commentJs, $log, $timeout) {
 
       // constants
       const omitLinkHeaderProp = ['rel', 'url'];
@@ -33,6 +33,7 @@
       // model service
       this.pinApp = pinApp;
       this.bags;
+      this.commentJs = commentJs;
 
       // properties
       this.isAdmin = Auth.isAdmin; //bind function so each digest loop it get re-evaluated to determin latest state
@@ -104,6 +105,7 @@
           })
           .finally(() => {
             this.loading = false;
+            this.commentJs.ayncRefresh();
           });
       }
     }

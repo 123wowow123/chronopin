@@ -314,6 +314,10 @@ $bag-font-color: var(--bag-text-color);
         @extend .btn-link;
     }
 
+    &__comment_count {
+        margin-left: 2px;
+    }
+
     &__asset {
         display: flex;
         align-items: center;

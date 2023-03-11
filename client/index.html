@@ -32,9 +32,7 @@
 
   <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0, viewport-fit=cover" />
 
-
   <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://localhost:35729/livereload.js?snipver=1"> -->
-
 
   <meta property="og:title" content="Chronopin: Date tracker for both historical and future events.">
   <meta property="og:type" content="website">
@@ -100,6 +98,7 @@
   <!-- injector:js -->
   <script src="app/admin/admin.module.js"></script>
   <script src="components/auth/auth.module.js"></script>
+  <script src="components/comment/comment.module.js"></script>
   <script src="components/facebook/fb.module.js"></script>
   <script src="components/google-analytics/ga.module.js"></script>
   <script src="components/loader/loader.module.js"></script>
@@ -134,6 +133,9 @@
   <script src="components/auth/user.service.js"></script>
   <script src="components/auto-complete/auto-complete.controller.js"></script>
   <script src="components/auto-complete/auto-complete.directive.js"></script>
+  <script src="components/comment/comment-count/comment-count.directive.js"></script>
+  <script src="components/comment/comment-post/comment-post.directive.js"></script>
+  <script src="components/comment/comment/comment.service.js"></script>
   <script src="components/data/socket/socket.service.js"></script>
   <script src="components/data/webservice/angular-link-header-parser.js"></script>
   <script src="components/data/webservice/dateTime.web.service.js"></script>
