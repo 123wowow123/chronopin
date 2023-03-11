@@ -4,6 +4,12 @@
     & a {
         color: $timeline-content-color;
         text-decoration: none;
+        &:hover {
+            color: #23527c;
+        }
+        &:active, &.focus {
+            color: #337ab7;
+        }
     }
 
     & .comment-num-count {
@@ -18,7 +24,6 @@
         }
 
         &::after {
-
             content: attr(data-num-comments);
         }
 

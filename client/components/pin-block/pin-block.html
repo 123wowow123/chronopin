@@ -60,10 +60,10 @@
                 </div>
 
                 <div class="grid__watch" ng-switch="!!$ctrl.pin.hasFavorite">
-                    <button type="button" class="grid__favorite--add" ng-click="$ctrl.addFavorite($ctrl.pin)"
+                    <button type="button" class="grid__favorite --add" ng-click="$ctrl.addFavorite($ctrl.pin)"
                         ng-switch-default>
                         <i class="fa fa-eye" aria-hidden="true"></i> {{$ctrl.pin.favoriteCount}}</button>
-                    <button type="button" class="grid__favorite--remove" ng-click="$ctrl.removeFavorite($ctrl.pin)"
+                    <button type="button" class="grid__favorite --remove" ng-click="$ctrl.removeFavorite($ctrl.pin)"
                         ng-switch-when="true">
                         <i class="fa fa-eye" aria-hidden="true"></i> {{$ctrl.pin.favoriteCount}}</button>
                 </div>
@@ -72,8 +72,8 @@
                     <div fb-like page-href="{{$ctrl.pin.sourceUrl}}">
                         <loader-pulse-bubble></loader-pulse-bubble>
                     </div>
-                    <!-- <button type="button" class="grid__like--add" ng-click="$ctrl.addLike($ctrl.pin)" ng-switch-default><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
-              <button type="button" class="grid__like--remove" ng-click="$ctrl.removeLike($ctrl.pin)" ng-switch-when="true"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button> {{$ctrl.pin.likeCount}} -->
+                    <!-- <button type="button" class="grid__like --add" ng-click="$ctrl.addLike($ctrl.pin)" ng-switch-default><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
+              <button type="button" class="grid__like --remove" ng-click="$ctrl.removeLike($ctrl.pin)" ng-switch-when="true"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button> {{$ctrl.pin.likeCount}} -->
                 </div>
 
                 <!-- <div class="tip pull-right">

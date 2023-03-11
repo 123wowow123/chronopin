@@ -50,9 +50,9 @@
 
           <div class="grid__social">
             <div class="grid__watch" ng-switch="!!$ctrl.pin.hasFavorite">
-              <button type="button" class="grid__favorite--add" ng-click="$ctrl.addFavorite($ctrl.pin)"
+              <button type="button" class="grid__favorite --add" ng-click="$ctrl.addFavorite($ctrl.pin)"
                 ng-switch-default><i class="fa fa-eye" aria-hidden="true"></i> {{pin.favoriteCount}}</button>
-              <button type="button" class="grid__favorite--remove" ng-click="$ctrl.removeFavorite($ctrl.pin)"
+              <button type="button" class="grid__favorite --remove" ng-click="$ctrl.removeFavorite($ctrl.pin)"
                 ng-switch-when="true"><i class="fa fa-eye" aria-hidden="true"></i> {{pin.favoriteCount}}</button>
             </div>
 
