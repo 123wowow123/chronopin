@@ -3,7 +3,7 @@ Bugs/priority:
 comment styling - post,count
 test comment db backup
 Change pin author to real handle
-fix fais search with quote issue
+fix faiss search with quote issue
 Add date in drilldown page
 
 comment sync login
