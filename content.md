@@ -1,8 +1,8 @@
 Bugs/priority:
 
 comment styling - post,count
+Change pin author to real handleChange pin author to real handle
 test comment db backup
-Change pin author to real handle
 fix faiss search with quote issue
 Add date in drilldown page
 
@@ -36,6 +36,8 @@ Build search - https://medium.com/mlearning-ai/search-rank-and-recommendations-3
 Spotlight - show right side panel of things favorited in the next 30 days. Click link to scroll to item
 Trending - same as above but for trending. Also show local trending
 Support multiple end dates per pin
+
+Create a workout routine for 7 days etc with pins (can refer to 2020, 2021 etc workout routine)
 
 Create thread in one shot or port from twitter with date tags:
 https://twitter.com/mrouben/status/1630913875418677250

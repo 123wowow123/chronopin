@@ -27,6 +27,9 @@ $ipad-landscape: 1024px;
 $nav-offset: 50px;
 $nav-offset-collapsed: 102px;
 
+$timeline-content-color: #555;
+
+
 // fonts
 @font-face {
   font-family: AstronomicSignsSt;
@@ -145,6 +148,7 @@ img {
 @import 'theme.scss';
 @import 'watch/watch.scss';
 @import '../components/auto-complete/auto-complete.scss';
+@import '../components/comment/comment-count/comment-count.scss';
 @import '../components/footer/footer.scss';
 @import '../components/loader/loader-pac/loader-pac.scss';
 @import '../components/loader/loader-pulse-bubble/loader-pulse-bubble.scss';

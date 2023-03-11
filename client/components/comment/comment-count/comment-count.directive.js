@@ -8,7 +8,9 @@
 
       function createHTML(commentUrl) {
         return (`
-          <a href="${commentUrl}" data-isso-id="${commentUrl}"></a>
+          <span class="comment-count">
+            <a class="comment-num-count" href="${commentUrl}" data-isso-id="${commentUrl}"></a>
+          </span>
           `)
       }
 
