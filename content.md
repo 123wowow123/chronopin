@@ -1,6 +1,5 @@
 Bugs/priority:
 
-comment styling - post,count
 Change pin author to real handleChange pin author to real handle
 test comment db backup
 fix faiss search with quote issue
@@ -17,6 +16,7 @@ Tab for "For you" & "Following"
 Research hashtag
 client validate url before submitting
 create non headless browser
+update faiss search on crete pin
 
 "depends on hardware", "reveals more information" tags on comment feature
 

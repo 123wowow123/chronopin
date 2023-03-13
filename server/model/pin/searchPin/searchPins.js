@@ -180,7 +180,7 @@ export default class SearchPins extends BasePins {
 
 function semanticSearch(searchText, numberOfResults) {
     const serviceUrl = config.faiss.serviceUrl;
-    const uri = `${serviceUrl}/faiss/search?q=${searchText}&k=${numberOfResults}`
+    const uri = `${serviceUrl}/faiss/search?q=${encodeURI(searchText)}&k=${numberOfResults}`
 
     let options = {
         method: 'GET',
