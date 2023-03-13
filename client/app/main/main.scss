@@ -349,6 +349,14 @@ $bag-font-color: var(--bag-text-color);
         margin-bottom: -10px;
     }
 
+    &__meta {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
     &.ng-leave {
         transition: all ease 400ms;
 
@@ -369,6 +377,10 @@ $bag-font-color: var(--bag-text-color);
             opacity: 1;
         }
     }
+}
+
+.\--clear-margin {
+    margin: 0 !important;
 }
 
 

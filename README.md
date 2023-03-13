@@ -396,7 +396,7 @@ https://nationaldaycalendar.com/march/
 - SSL
 - facebook login check for fbid and matching email in system to get user
 
-- Put location in place of "THE CHAIN GANG" and use google mapping cordinates
+- Put location in place of "THE PIN GANG" and use google mapping cordinates
 - Stacking/grouping of related pins
 
 - Amazon/Ebay product cross referencing

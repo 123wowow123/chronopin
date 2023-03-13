@@ -1,9 +1,7 @@
 Bugs/priority:
 
-Change pin author to real handleChange pin author to real handle
+Change pin author to real handle
 test comment db backup
-fix faiss search with quote issue
-Add date in drilldown page
 
 comment sync login
 fix pin overlap issue

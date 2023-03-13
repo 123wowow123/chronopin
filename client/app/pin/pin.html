@@ -27,20 +27,33 @@
 
 
       <div class="grid__body">
+
+        <div class="grid__meta">
+          <div class="headline-above --clear-margin">
+            <time class="" datetime="{{$ctrl.pin.utcCreatedDateTime}}">Posted {{$ctrl.pin.utcCreatedDateTime | date :
+              "MM/dd/yyyy
+              'at' h:mm a" | lowercase}}</time>
+            <span class="rubric">{{'the pin gang' | uppercase}}</span>
+          </div>
+          <div class="grid__uploaded-date --clear-margin" ng-switch="$ctrl.pin.allDay">
+            <span ng-switch-when="true">
+              <em>
+                <span>Starts {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy"}}</span>
+                <span> - All day</span>
+              </em>
+            </span>
+            <em ng-switch-default>
+              <span>Starts {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"}}</span>
+              <span ng-if="$ctrl.pin.utcEndDateTime">to {{$ctrl.pin.utcEndDateTime | date:"MM/dd/yyyy h:mma"}}</span>
+            </em>
+          </div>
+        </div>
+
         <h4 class="grid__heading">
           <a href="{{$ctrl.pin.sourceUrl}}" target="_blank">
             {{$ctrl.pin.title}}
           </a>
         </h4>
-        <div class="grid__uploaded-date" ng-switch="$ctrl.pin.allDay">
-          <span ng-switch-when="true">
-            <!-- <em>All Day</em> -->
-          </span>
-          <em ng-switch-default>
-            <span>Start: {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"}}</span>
-            <span ng-if="$ctrl.pin.utcEndDateTime">to {{$ctrl.pin.utcEndDateTime | date:"MM/dd/yyyy h:mma"}}</span>
-          </em>
-        </div>
         <div class="grid__description">
           {{$ctrl.pin.description}}
         </div>
