@@ -14,6 +14,7 @@ import {
 const UserEmitter = new EventEmitter();
 const pickUserProps = [
   'id',
+  'userName',
   'firstName',
   'lastName',
   'email',

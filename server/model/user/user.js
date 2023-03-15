@@ -285,7 +285,7 @@ function _createMSSQL(user) {
             let id;
             //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
@@ -338,7 +338,7 @@ function _updateMSSQL(user) {
             let id;
             //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
@@ -374,7 +374,7 @@ function _deleteMSSQL(user) {
             let utcDeletedDateTime;
             //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
@@ -410,7 +410,7 @@ function _adminDeleteMSSQL(user) {
             let utcDeletedDateTime;
             //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
@@ -444,7 +444,7 @@ function _getUserByIdMSSQL(id) {
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             if (res.recordset.length) {
               user = new User(res.recordset[0]);
@@ -473,7 +473,7 @@ function _getUserByFacebookIdMSSQL(facebookId) {
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             if (res.recordset.length) {
               //console.log('_getUserByFacebookIdMSSQL', res.recordset);
@@ -505,7 +505,7 @@ function _getUserByEmailMSSQL(email) {
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             if (res.recordset.length) {
               user = new User(res.recordset[0]);
