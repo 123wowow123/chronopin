@@ -1,12 +1,12 @@
 'use strict';
 
-(function() {
+(function () {
 
   function PinFactory(modelInjector) {
 
     let User, Medium;
 
-    // _user, userId, media
+    // user, userId, media
     let prop = [
       'id',
       'title',
@@ -43,23 +43,17 @@
         User = User || modelInjector.getUser();
         Medium = Medium || modelInjector.getMedium();
 
-        Object.defineProperty(this, '_user', {
-          enumerable: false,
-          configurable: false,
-          writable: true
-        });
-
         Object.defineProperty(this, 'userId', {
-          get: function() {
-            return this._user && this._user.id;
+          get: function () {
+            return this.user && this.user.id;
           },
-          set: function(id) {
-            if (this._user) {
-              this._user.id = id;
+          set: function (id) {
+            if (this.user) {
+              this.user.id = id;
             } else {
-              this._user = new User({
+              this.setUser(new User({
                 id: id
-              });
+              }));
             }
           },
           enumerable: true,
@@ -86,7 +80,9 @@
           }) || [];
 
           if (user instanceof User) {
-            this._user = user;
+            this.user = user;
+          } else if (pin.user) {
+            this.setUser(new User(pin.user));
           }
 
         } else {
@@ -96,7 +92,7 @@
       }
 
       setUser(user) {
-        this._user = user;
+        this.user = user;
         this.userId = user.id;
         return this;
       }

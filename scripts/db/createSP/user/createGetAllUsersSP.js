@@ -49,6 +49,7 @@ function executeCreateSP() {
 
           SELECT
             id,
+            userName,
             firstName,
             lastName,
             gender,

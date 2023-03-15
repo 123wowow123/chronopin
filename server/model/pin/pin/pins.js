@@ -23,6 +23,13 @@ export default class Pins extends BasePins {
   setPins(pins) {
     if (Array.isArray(pins)) {
       this.pins = Pins.mapPinsMedia(pins);
+
+      // need to sort properly
+      this.pins = _.chain(this.pins)
+        .sortBy('id')
+        .sortBy('utcStartDateTime')
+        .value();
+
     } else {
       throw "arg is not an array";
     }
@@ -38,7 +45,8 @@ export default class Pins extends BasePins {
     });
 
     _.forEach(groupedPinRows, pinRows => {
-      const pin = Pin.mapPinMedia(pinRows);
+      let pin = new Pin(pinRows[0]);
+      pin = Pin.mapPinMedia(pin, pinRows);
       pins.push(pin);
     });
 

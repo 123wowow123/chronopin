@@ -127,10 +127,9 @@ export default class Pin extends BasePin {
     }
   }
 
-  static mapPinMedia(pinRows) {
-    let pin = new Pin(pinRows[0]);
+  static mapPinMedia(pin, pinRows) {
     pin.media = mapHelper.mapSubObjectFromQuery('Media', 'id', pinRows);
-    return new Pin(pin);
+    return pin;
   }
 }
 
@@ -155,10 +154,11 @@ function _queryMSSQLPinWithFavoriteAndLikeById(pinId, userId) {
           .input('userId', mssql.Int, userId)
           .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
             if (err) {
-               return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             if (res.recordset.length) {
-              pin = Pin.mapPinMedia(res.recordset);
+              pin = new Pin(res.recordset[0]);
+              pin = Pin.mapPinMedia(pin, res.recordset);
             } else {
               pin = undefined;
             }
@@ -187,7 +187,9 @@ function _queryMSSQLPinById(pinId) {
               reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             if (res.recordset.length) {
-              pin = Pin.mapPinMedia(res.recordset);
+              pin = new Pin(res.recordset[0]);
+              pin = Pin.mapPinMedia(pin, res.recordset);
+              // pin = Pin.mapPinUser(pin, res.recordset[0]);
             } else {
               pin = undefined;
             }

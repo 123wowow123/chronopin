@@ -84,7 +84,9 @@ function executeCreateSP() {
 
               [Media.authorName]     NVARCHAR(1028),
               [Media.authorUrl]      NVARCHAR(4000),
-              [Media.html]           NVARCHAR(4000)
+              [Media.html]           NVARCHAR(4000),
+
+              [User.userName]      NVARCHAR(255)
             );
 
             INSERT INTO @tempPinsTbl
@@ -126,7 +128,9 @@ function executeCreateSP() {
 
                 [Media].[authorName]                       AS [Media.authorName],
                 [Media].[authorUrl]                        AS [Media.authorUrl],
-                [Media].[html]                             AS [Media.html]
+                [Media].[html]                             AS [Media.html],
+
+                [User].[userName]                                                           AS [User.userName]
 
               FROM [dbo].[Pin] AS [Pin]
                 LEFT JOIN [dbo].[PinMedium] AS [Media.PinMedium]
@@ -136,6 +140,8 @@ function executeCreateSP() {
                 INNER JOIN [dbo].[Favorite] AS [Favorites]
                   ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL
                 LEFT JOIN [dbo].[Like] AS [Likes] ON [Pin].[id] = [Likes].[PinId] AND [Likes].[utcDeletedDateTime] IS NULL
+                LEFT JOIN [dbo].[User] AS [User]
+                  ON [Pin].[userId] = [User].[id]
 
               WHERE [Pin].[utcStartDateTime] < @fromDateTime OR ([Pin].[utcStartDateTime] = @fromDateTime AND [Pin].[id] < @lastPinId)
                 AND [Pin].[utcDeletedDateTime] IS NULL
@@ -167,7 +173,9 @@ function executeCreateSP() {
 
                 [Media].[authorName],
                 [Media].[authorUrl],
-                [Media].[html]
+                [Media].[html],
+
+                [User].[userName]
 
               ORDER BY [Pin].[utcStartDateTime] DESC, [Pin].[id] DESC
                 OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY

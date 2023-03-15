@@ -6,6 +6,7 @@
 
     let prop = [
       'id',
+      'userName',
       'firstName',
       'lastName',
       'gender',

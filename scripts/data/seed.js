@@ -54,6 +54,7 @@ module.exports.seedDB = function () {
     defaultUserObj = {
       provider: 'facebook',
       role: 'admin',
+      userName: 'THE PIN GANG',
       firstName: 'Ian',
       lastName: 'Flynn',
       email: 'flynni2008@gmail.com',
@@ -64,6 +65,7 @@ module.exports.seedDB = function () {
     secondaryUserObj = {
       provider: 'facebook',
       role: 'admin',
+      userName: 'Pretty Gang',
       firstName: 'Serena',
       lastName: 'Chen',
       email: 'chenxikristy@gmail.com',

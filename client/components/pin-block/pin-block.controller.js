@@ -94,7 +94,7 @@
             <div class="headline-above">
                 <time class="" datetime="{{$ctrl.pin.utcCreatedDateTime}}">{{$ctrl.pin.utcCreatedDateTime | date : "MM/dd/yyyy
                     'at' h:mm a" | lowercase}}</time>
-                <span class="rubric">{{'the pin gang' | uppercase}}</span>
+                <span class="rubric">{{$ctrl.pin.user.userName}}</span>
             </div>
             <h4 class="grid__heading">
                 <a class="grid__heading_link" ui-sref="pin({id:$ctrl.pin.id})">

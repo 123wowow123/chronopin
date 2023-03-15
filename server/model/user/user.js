@@ -18,6 +18,7 @@ let validatePresenceOf = function (value) {
 
 let prop = [
   'id',
+  'userName',
   'firstName',
   'lastName',
   'gender',
@@ -254,6 +255,7 @@ function _createMSSQL(user) {
         const StoredProcedureName = 'CreateUser';
         let request = new mssql.Request(conn)
           // fb public attributes
+          .input('userName', mssql.NVarChar(255), user.userName)
           .input('firstName', mssql.NVarChar(255), user.firstName)
           .input('lastName', mssql.NVarChar(255), user.lastName)
           .input('gender', mssql.NVarChar(255), user.gender)
@@ -310,6 +312,7 @@ function _updateMSSQL(user) {
         let request = new mssql.Request(conn)
           // fb public attributes
           .input('id', mssql.Int, user.id)
+          .input('userName', mssql.NVarChar(255), user.userName)
           .input('firstName', mssql.NVarChar(255), user.firstName)
           .input('lastName', mssql.NVarChar(255), user.lastName)
           .input('gender', mssql.NVarChar(255), user.gender)

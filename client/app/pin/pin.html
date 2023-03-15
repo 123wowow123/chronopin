@@ -33,7 +33,7 @@
             <time class="" datetime="{{$ctrl.pin.utcCreatedDateTime}}">Posted {{$ctrl.pin.utcCreatedDateTime | date :
               "MM/dd/yyyy
               'at' h:mm a" | lowercase}}</time>
-            <span class="rubric">{{'the pin gang' | uppercase}}</span>
+            <span class="rubric">{{$ctrl.pin.user.userName}}</span>
           </div>
           <div class="grid__uploaded-date --clear-margin" ng-switch="$ctrl.pin.allDay">
             <span ng-switch-when="true">

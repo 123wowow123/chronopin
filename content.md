@@ -1,6 +1,6 @@
 Bugs/priority:
 
-Change pin author to real handle
+Change pin author to real handle (user name)
 test comment db backup
 
 comment sync login
@@ -14,7 +14,7 @@ Tab for "For you" & "Following"
 Research hashtag
 client validate url before submitting
 create non headless browser
-update faiss search on crete pin
+update faiss search on create pin
 
 "depends on hardware", "reveals more information" tags on comment feature
 
@@ -162,6 +162,9 @@ https://www.polygon.com/23594712/zelda-tears-kingdom-release-date-trailers-gamep
 https://www.cnbc.com/2023/03/08/what-is-6g-and-when-will-it-launch-telco-execs-predict.html
 
 
+
+https://youtu.be/IdczWxyftT4?list=PLEbhOtC9klbDzksGrbLATckXU5BkQrQP0&t=1044
+The high warter mark year for globalization is 2007 and the tide has been going out
 
 
 GET /api/pins/search?q=Hands-on+with+the+Surface+Laptop:+Well,+it%E2%80%99s+a+laptop 500 84.257 ms - 420

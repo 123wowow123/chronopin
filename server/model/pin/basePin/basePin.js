@@ -25,7 +25,7 @@ export const BasePinProp = [
     'utcDeletedDateTime'
 ];
 
-// _user, userId, media
+// user, userId, media
 export default class BasePin {
 
     constructor(pin, user, prop) {
@@ -42,13 +42,14 @@ export default class BasePin {
             });
 
             if (user && user instanceof User) {
-                this._user = user;
+                this.user = user;
             }
-            else if (pin._user && pin._user instanceof User) {
-                this._user = pin._user;
+            else if (pin.user && pin.user instanceof User) {
+                this.user = pin.user;
             }
             else if (Number.isInteger(pin.userId)) {
                 this.userId = pin.userId;
+                this.user.userName = BasePin.getPinUserName(pin);
             }
 
             this.media = _.get(pin, 'media', [])
@@ -76,7 +77,7 @@ export default class BasePin {
 
     setUser(user) {
         if (user instanceof User) {
-            this._user = user;
+            this.user = user;
         }
         else {
             throw "user not instance of User";
@@ -128,6 +129,13 @@ export default class BasePin {
         });
     }
 
+    static getPinUserName(pinRow) {
+        if (pinRow['User.userName']) {
+            return pinRow['User.userName']
+        }
+        return undefined;;
+    }
+
     static queryById(pinId, userId) {
         throw new Error("Not Implemented");
     }
@@ -143,21 +151,15 @@ export default class BasePin {
 
 const PinPrototype = BasePin.prototype;
 
-Object.defineProperty(PinPrototype, '_user', {
-    enumerable: false,
-    configurable: false,
-    writable: true
-});
-
 Object.defineProperty(PinPrototype, 'userId', {
     get: function () {
-        return _.get(this, '_user.id', null);
+        return _.get(this, 'user.id', null);
     },
     set: function (id) {
-        if (this._user && this._user instanceof User) {
-            this._user.id = id;
+        if (this.user && this.user instanceof User) {
+            this.user.id = id;
         } else {
-            this._user = new User({
+            this.user = new User({
                 id: id
             });
         }

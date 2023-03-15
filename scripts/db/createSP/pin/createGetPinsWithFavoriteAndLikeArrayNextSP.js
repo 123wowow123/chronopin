@@ -88,7 +88,9 @@ BEGIN
       [Likes].[userId]                                                            AS [Likes.userId],
       [Likes].[utcCreatedDateTime]                                                AS [Likes.utcCreatedDateTime],
       [Likes].[utcUpdatedDateTime]                                                AS [Likes.utcUpdatedDateTime],
-      [Likes].[like]                                                              AS [Likes.like]
+      [Likes].[like]                                                              AS [Likes.like],
+
+      [User].[userName]                          AS [User.userName]
 
     FROM [dbo].[Pin]
       LEFT JOIN [dbo].[PinMedium] AS [Media.PinMedium]
@@ -98,6 +100,8 @@ BEGIN
       LEFT JOIN [dbo].[Favorite] AS [Favorites]
         ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL
       LEFT JOIN [dbo].[Like] AS [Likes] ON [Pin].[id] = [Likes].[PinId] AND [Likes].[utcDeletedDateTime] IS NULL
+      LEFT JOIN [dbo].[User] AS [User]
+       ON [Pin].[userId] = [User].[id]
 
     WHERE [Pin].[utcStartDateTime] > @fromDateTime
       OR ([Pin].[utcStartDateTime] = @fromDateTime

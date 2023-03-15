@@ -83,7 +83,9 @@ function executeCreateSP() {
 
               [Media].[authorName]                       AS [Media.authorName],
               [Media].[authorUrl]                        AS [Media.authorUrl],
-              [Media].[html]                             AS [Media.html]
+              [Media].[html]                             AS [Media.html],
+
+              [User].[userName]                                                           AS [User.userName]
 
             FROM [dbo].[Pin] AS [Pin]
               LEFT JOIN [dbo].[PinMedium] AS [Media.PinMedium]
@@ -93,6 +95,8 @@ function executeCreateSP() {
               LEFT JOIN [dbo].[Favorite] AS [Favorites]
                 ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL
               LEFT JOIN [dbo].[Like] AS [Likes] ON [Pin].[id] = [Likes].[PinId] AND [Likes].[utcDeletedDateTime] IS NULL
+              LEFT JOIN [dbo].[User] AS [User]
+                ON [Pin].[userId] = [User].[id]
 
             WHERE [Pin].[id] = @pinId AND [Pin].[utcDeletedDateTime] IS NULL
 
@@ -122,7 +126,9 @@ function executeCreateSP() {
 
               [Media].[authorName],
               [Media].[authorUrl],
-              [Media].[html]
+              [Media].[html],
+
+              [User].[userName]
 
               ORDER BY [Pin].[utcStartDateTime];
         END;

@@ -42,6 +42,7 @@ function executeCreateTable() {
         CREATE TABLE [dbo].[${TableName}]
         (
             id INT PRIMARY KEY NOT NULL IDENTITY,
+            userName NVARCHAR(255) NOT NULL,
             firstName NVARCHAR(255) NOT NULL,
             lastName NVARCHAR(255) NOT NULL,
             gender NVARCHAR(255),

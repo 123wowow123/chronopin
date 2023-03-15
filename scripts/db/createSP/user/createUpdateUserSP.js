@@ -43,6 +43,7 @@ function executeCreateSP() {
   let sql = `
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
             @id            INT,
+            @userName      NVARCHAR(255),
             @firstName     NVARCHAR(255),
             @lastName      NVARCHAR(255),
             @gender        NVARCHAR(255),
@@ -67,6 +68,7 @@ function executeCreateSP() {
 
             UPDATE [dbo].[User]
             SET
+              userName      = @firstName,
               firstName     = @firstName,
               lastName      = @lastName,
               gender        = @gender,

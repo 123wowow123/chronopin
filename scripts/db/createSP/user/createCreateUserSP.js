@@ -42,6 +42,7 @@ function executeDropSP() {
 function executeCreateSP() {
   let sql = `
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
+            @userName      NVARCHAR(255),
             @firstName     NVARCHAR(255),
             @lastName      NVARCHAR(255),
             @gender        NVARCHAR(255),
@@ -73,6 +74,7 @@ function executeCreateSP() {
             END
 
             INSERT INTO [dbo].[User] (
+              userName,
               firstName,
               lastName,
               gender,
@@ -93,6 +95,7 @@ function executeCreateSP() {
               utcDeletedDateTime
             )
             VALUES (
+              @userName,
               @firstName,
               @lastName,
               @gender,

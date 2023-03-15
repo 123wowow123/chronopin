@@ -1,6 +1,6 @@
 'use strict';
 
-(function() {
+(function () {
 
   function AuthService($location, $http, $cookies, $q, appConfig, Util, User) {
     var safeCb = Util.safeCb;
@@ -21,9 +21,9 @@
         password
       }, callback) {
         return $http.post('/auth/local', {
-            email: email,
-            password: password
-          })
+          email: email,
+          password: password
+        })
           .then(res => {
             $cookies.put('token', res.data.token);
             this.setCurrentUser(User.get());
@@ -92,9 +92,9 @@
         }, {
           oldPassword: oldPassword,
           newPassword: newPassword
-        }, function() {
+        }, function () {
           return safeCb(callback)(null);
-        }, function(err) {
+        }, function (err) {
           return safeCb(callback)(err);
         }).$promise;
       },
@@ -124,6 +124,17 @@
       },
 
       /**
+       * Gets User Real Name on a user
+       *   (synchronous|asynchronous)
+       *
+       * @param  {Function|*} callback - optional, funciton(user)
+       * @return {Object|Promise}
+       */
+      getCurrentUserRealName() {
+        return (currentUser.firstName || '') + (currentUser.firstName && currentUser.lastName ? ' ' : '') + (currentUser.lastName || '');
+      },
+
+      /**
        * Gets User Name on a user
        *   (synchronous|asynchronous)
        *
@@ -131,7 +142,7 @@
        * @return {Object|Promise}
        */
       getCurrentUserName() {
-        return (currentUser.firstName || '') + (currentUser.firstName && currentUser.lastName ? ' ' : '') + (currentUser.lastName || '');
+        return (currentUser.userName || '');
       },
 
       /**
@@ -163,7 +174,7 @@
        * @return {Bool|Promise}
        */
       hasRole(role, callback) {
-        var hasRole = function(r, h) {
+        var hasRole = function (r, h) {
           return userRoles.indexOf(r) >= userRoles.indexOf(h);
         };
 
