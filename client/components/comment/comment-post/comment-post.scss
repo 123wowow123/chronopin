@@ -1,7 +1,19 @@
-comment-post {
+.isso-postbox {
     color: #222;
 }
 
 .isso-thread-heading {
     color: var(--primary-color) !important;
+}
+
+.isso-text {
+    color: var(--primary-color) !important;
+}
+
+.isso-input-wrapper {
+    display: none !important;
+}
+
+.isso-post-action {
+    margin: 1em 0 0 0.9em !important;
 }

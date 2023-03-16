@@ -23,15 +23,17 @@ let validateJwt = expressJwt({
 export function isAuthenticated() {
   return compose()
     // Validate jwt
-    .use(function(req, res, next) {
+    .use(function (req, res, next) {
       // allow access_token to be passed through query parameter as well
       if (req.query && req.query.hasOwnProperty('access_token')) {
         req.headers.authorization = 'Bearer ' + req.query.access_token;
+      } else if (req.cookies && req.cookies.hasOwnProperty('token')) {
+        req.headers.authorization = 'Bearer ' + req.cookies.token;
       }
       validateJwt(req, res, next);
     })
     // Attach user to request
-    .use(function(req, res, next) {
+    .use(function (req, res, next) {
       User.getById(+req.user.id)
         .then(({
           user
@@ -55,10 +57,12 @@ export function isAuthenticated() {
 export function tryGetUser() {
   return compose()
     // Validate jwt
-    .use(function(req, res, next) {
+    .use(function (req, res, next) {
       // allow access_token to be passed through query parameter as well
       if (req.query && req.query.hasOwnProperty('access_token')) {
         req.headers.authorization = 'Bearer ' + req.query.access_token;
+      } else if (req.cookies && req.cookies.hasOwnProperty('token')) {
+        req.headers.authorization = 'Bearer ' + req.cookies.token;
       }
 
       if (!req.headers.authorization || req.headers.authorization === 'Bearer ') {
@@ -69,7 +73,7 @@ export function tryGetUser() {
       return null;
     })
     // Attach user to request
-    .use(function(req, res, next) {
+    .use(function (req, res, next) {
       if (!req.user || req.user.id === undefined) {
         next();
       } else {

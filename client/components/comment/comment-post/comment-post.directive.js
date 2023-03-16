@@ -6,9 +6,9 @@
   angular.module('chronopinNodeApp.comment')
     .directive('commentPost', function (commentJs, $timeout) {
 
-      function createHTML(commentUrl) {
+      function createHTML(commentUrl, title) {
         return (`
-          <section id="isso-thread" data-isso-id="${commentUrl}">
+          <section id="isso-thread" data-title="${title}" data-isso-id="${commentUrl}">
             <noscript>Javascript needs to be activated to view comments.</noscript>
           </section>
           `)
@@ -18,18 +18,29 @@
         restrict: 'AE',
         scope: {},
         link: function postLink(scope, elem, attrs) {
-          attrs.$observe('commentUrl', function (newValue) {
-            let commentUrl = newValue;
+          let commentUrl;
+          let title;
 
-            if (commentUrl) {
+          function render(commentUrl, title) {
+            if (commentUrl && title) {
               commentJs.initalized
                 .then(isso => {
-                  let $el = $(createHTML(commentUrl));
+                  let $el = $(createHTML(commentUrl, title));
                   elem.empty().append($el);
                 });
             }
+          }
 
+          attrs.$observe('commentUrl', function (newValue) {
+            commentUrl = newValue;
+            render(commentUrl, title)
           });
+
+          attrs.$observe('title', function (newValue) {
+            title = newValue;
+            render(commentUrl, title)
+          });
+
         }
       };
     });
