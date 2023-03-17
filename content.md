@@ -1,9 +1,15 @@
 Bugs/priority:
 
+use non proxy for comment to fix ip issue and easier maintenace
+comment need login
+
+fix socket
+fix pin overlap issue
+
 test comment db backup
 
-create non headless browser
-fix pin overlap issue
+update faiss search on create pin
+pin use markup editor
 
 Sanitize all post values
 Fix header data load
@@ -12,7 +18,7 @@ Login test, add google login
 Tab for "For you" & "Following"
 Research hashtag
 client validate url before submitting
-update faiss search on create pin
+create non headless browser
 
 Each pin has main image, video quick link
 
@@ -175,3 +181,16 @@ Silicon Valley 2018 : think the same
 GET /api/pins/search?q=Hands-on+with+the+Surface+Laptop:+Well,+it%E2%80%99s+a+laptop 500 84.257 ms - 420
 
 http://www.gocongress.org/
+
+
+https://www.techadvisor.com/article/743458/intel-meteor-lake-14th-gen-release-date-pricing-and-spec-rumours.html
+Intel Meteor Lake: 14th-gen CPUs
+late September 2023
+
+The key takeaway here is the move to the Intel 4, which sees the company finally shift to a 7nm process. Intel 20A refers to a 5nm process, but it’s not expected until Arrow Lake in 2024.
+
+In April 2022, AnandTech said that Meteor Lake will be the company’s first to use EUV (extreme ultraviolet lithography) in manufacturing, moving away from the current hybrid architecture.
+
+The new integrated GPU (a successor to the current Iris Xe) will deliver nearly 2x the performance as it currently does – according to clock speeds, anyway.
+
+Versions with 6 performance/8 efficiency and 6 performance/16 efficiency are thought to exist, with an eight performance core version believed to be in the works too.

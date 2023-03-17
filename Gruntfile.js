@@ -583,7 +583,6 @@ module.exports = function(grunt) {
         options: {
           plugins: [
             'transform-class-properties',
-            'transform-runtime'
           ]
         },
         files: [{
@@ -601,9 +600,7 @@ module.exports = function(grunt) {
       scrapeJs: {
         options: {
           plugins: [
-            'transform-class-properties',
-            'transform-runtime',
-            'babel-polyfill'
+            'transform-class-properties'
           ]
         },
         files: [{
