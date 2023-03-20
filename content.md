@@ -1,7 +1,7 @@
 Bugs/priority:
 
 use non proxy for comment to fix ip issue and easier maintenace
-comment need login
+comment need login - link to login page for now (disable reply and vote)
 
 fix socket
 fix pin overlap issue
@@ -23,6 +23,11 @@ create non headless browser
 Each pin has main image, video quick link
 
 "depends on hardware", "reveals more information" tags on comment feature
+
+Compact view to show more pins 
+Click on tag to show only matching
+
+Group into months, quarters
 
 To Do:
 

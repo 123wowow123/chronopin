@@ -35,7 +35,8 @@ export default function (app) {
   app.use('/api/main', require('./api/main'));
   app.use('/auth', require('./auth').default);
 
-  app.use('/isso', require('./isso'));
+  // Direct isso request is easier to maintain
+  //app.use('/isso', require('./isso'));
 
   // All undefined asset or api routes should return a 404
   app.route('/:url(api|auth|components|app|bower_components|assets)/*')

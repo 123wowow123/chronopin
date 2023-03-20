@@ -101,15 +101,12 @@
 
       /**
        * Gets all available info on a user
-       *   (synchronous|asynchronous)
+       *   (synchronous)
        *
        * @param  {Function|*} callback - optional, funciton(user)
        * @return {Object|Promise}
        */
       getCurrentUser(callback) {
-        if (arguments.length === 0) {
-          return currentUser;
-        }
 
         var value = (currentUser.hasOwnProperty('$promise')) ?
           currentUser.$promise : currentUser;
@@ -125,14 +122,23 @@
 
       /**
        * Gets User Real Name on a user
-       *   (synchronous|asynchronous)
+       *   (synchronous)
        *
-       * @param  {Function|*} callback - optional, funciton(user)
-       * @return {Object|Promise}
+       * @return {Object}
        */
       getCurrentUserRealName() {
         return (currentUser.firstName || '') + (currentUser.firstName && currentUser.lastName ? ' ' : '') + (currentUser.lastName || '');
       },
+
+            /**
+       * Gets User Email on a user
+       *   (synchronous)
+       *
+       * @return {Object}
+       */
+        getCurrentUserEmail() {
+          return currentUser.email;
+        },
 
       /**
        * Gets User Name on a user

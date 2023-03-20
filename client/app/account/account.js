@@ -3,7 +3,7 @@
 angular.module('chronopinNodeApp')
   .config(function($stateProvider) {
     $stateProvider.state('login', {
-        url: '/login',
+        url: '/login?redirect',
         templateUrl: 'app/account/login/login.html',
         controller: 'LoginController',
         controllerAs: 'vm'
