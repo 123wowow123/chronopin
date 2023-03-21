@@ -130,7 +130,7 @@
         return (currentUser.firstName || '') + (currentUser.firstName && currentUser.lastName ? ' ' : '') + (currentUser.lastName || '');
       },
 
-            /**
+      /**
        * Gets User Email on a user
        *   (synchronous)
        *
@@ -144,8 +144,7 @@
        * Gets User Name on a user
        *   (synchronous|asynchronous)
        *
-       * @param  {Function|*} callback - optional, funciton(user)
-       * @return {Object|Promise}
+       * @return {Object}
        */
       getCurrentUserName() {
         return (currentUser.userName || '');

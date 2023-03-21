@@ -12,6 +12,7 @@
             id="isso-thread" 
             data-isso-postbox="${email ? "true" : "false"}" 
             data-isso-vote="${email ? "true" : "false"}"
+            data-isso-modify="${email ? "true" : "false"}"
             ${title ? `data-isso-title="${title}"` : ''} 
             ${commentUrl ? `data-isso-id="${commentUrl}"` : ''} 
             ${author ? `data-isso-author="${author}"` : ''}  
