@@ -1,14 +1,22 @@
 'use strict';
 
 (function () {
-  const delayParse = 1000;
+  const delayParse = 500;
 
   class Comment {
     constructor() {
-      this.initalized = this.loadComment();
+      this.initalized;
+      this.queue = Promise.resolve();
     }
 
-    loadComment() {
+    registerRefreshQueue(waitForFn) {
+      const promise = new Promise((resolve, reject) => {
+        waitForFn(resolve);
+      });
+      this.queue = this.queue.then(promise);
+    }
+
+    loadCommentAsync() {
       return new Promise((resolve, reject) => {
         const script = document.createElement('script');
         script.src = '//comment.chronopin.com/js/embed.min.js';
@@ -24,9 +32,14 @@
 
     ayncRefresh() {
       setTimeout(() => {
-        this.initalized
-          .then(isso => {
-            isso.init();
+        this.queue
+          .then(() => {
+            if (!this.initalized) {
+              this.initalized = this.loadCommentAsync();
+            }
+            this.initalized.then((isso) => {
+              isso.init();
+            });
           });
       }, delayParse);
     }

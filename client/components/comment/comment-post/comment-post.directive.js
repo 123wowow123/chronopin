@@ -32,39 +32,39 @@
           let email;
           let author;
 
-          const currentUserPromise = Auth.getCurrentUser();
-          currentUserPromise.then(currentUser => {
-            if (currentUser.email) {
-              email = currentUser.email;
-              author = Auth.getCurrentUserName();
-            } else {
-              // Show login control
-            }
-          });
-
-          attrs.$observe('commentUrl', function (newValue) {
-            commentUrl = newValue;
-            currentUserPromise.then(() => {
-              render(commentUrl, title, author, email);
+          commentJs.registerRefreshQueue((resolve) => {
+            const currentUserPromise = Auth.getCurrentUser();
+            currentUserPromise.then(currentUser => {
+              if (currentUser.email) {
+                email = currentUser.email;
+                author = Auth.getCurrentUserName();
+              }
             });
-          });
 
-          attrs.$observe('title', function (newValue) {
-            title = newValue;
-            currentUserPromise.then(() => {
-              render(commentUrl, title, author, email);
+            attrs.$observe('commentUrl', function (newValue) {
+              commentUrl = newValue;
+              currentUserPromise.then(() => {
+                render(commentUrl, title, author, email);
+              });
             });
-          });
 
-          function render(commentUrl, title, author, email) {
-            if (commentUrl && title) {
-              commentJs.initalized
-                .then(isso => {
-                  let $el = $(createHTML(commentUrl, title, author, email));
-                  elem.empty().append($el);
-                });
+            attrs.$observe('title', function (newValue) {
+              title = newValue;
+              currentUserPromise.then(() => {
+                render(commentUrl, title, author, email);
+              });
+            });
+
+            function render(commentUrl, title, author, email) {
+              if (commentUrl && title) {
+                let $el = $(createHTML(commentUrl, title, author, email));
+                elem.empty().append($el);
+
+                resolve();
+              }
             }
-          }
+
+          });
 
         }
       };

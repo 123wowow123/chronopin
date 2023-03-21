@@ -1,7 +1,5 @@
 Bugs/priority:
 
-use non proxy for comment to fix ip issue and easier maintenace
-comment need login - link to login page for now (disable reply and vote)
 
 fix socket
 fix pin overlap issue

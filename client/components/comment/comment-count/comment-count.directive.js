@@ -16,17 +16,14 @@
         restrict: 'AE',
         scope: {},
         link: function postLink(scope, elem, attrs) {
-          attrs.$observe('commentUrl', function (newValue) {
-            let commentUrl = newValue;
-
-            if (commentUrl) {
-              commentJs.initalized
-                .then(isso => {
-                  let $el = $(createHTML(commentUrl));
-                  elem.empty().append($el);
-                });
-            }
-
+          commentJs.registerRefreshQueue((resolve) => {
+            attrs.$observe('commentUrl', function (newValue) {
+              let commentUrl = newValue;
+              if (commentUrl) {
+                let $el = $(createHTML(commentUrl));
+                elem.empty().append($el);
+              }
+            });
           });
         }
       };
