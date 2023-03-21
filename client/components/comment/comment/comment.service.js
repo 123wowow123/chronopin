@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  const delayParse = 700;
+  const delayParse = 1000;
 
   class Comment {
     constructor() {
