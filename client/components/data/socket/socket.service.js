@@ -2,7 +2,7 @@
 'use strict';
 
 angular.module('chronopinNodeApp')
-  .factory('socket', function (socketFactory, Auth) {
+  .factory('socket', function (Auth) {
     // socket.io now auto-configures its connection when we ommit a connection url
     const ioSocket = io('', {
       // Send auth token on connection, you will need to DI the Auth service above

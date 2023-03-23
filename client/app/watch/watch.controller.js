@@ -87,7 +87,7 @@
     }
 
     $onDestroy() {
-      this.socket.unsyncUpdates('pin');
+      // this.socket.unsyncUpdates('pin');
     }
 
     reflowed($event) {

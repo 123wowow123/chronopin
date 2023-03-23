@@ -52,8 +52,6 @@
     "sequelize": "^6.28.0",
     "serve-favicon": "^2.5.0",
     "socket.io": "^4.5.4",
-    "socket.io-client": "^4.5.4",
-    "socketio-jwt": "^4.6.2",
     "tedious": "^15.1.2",
     "uuid": "^9.0.0"
   },

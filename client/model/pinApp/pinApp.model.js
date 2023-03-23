@@ -114,7 +114,7 @@
 
             initSocket() {
 
-                socket.syncUpdates('pin', (event, item) => { ////////////////////////////
+                socket.syncUpdates('pin', (event, item) => {
                     // debugger
                     const itemTime = new Date(item.utcStartDateTime);
                     const inRange = this.isWithinBagDateRange(itemTime);

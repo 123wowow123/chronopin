@@ -1,31 +1,31 @@
 Bugs/priority:
 
 
-fix socket
+update faiss search on create pin
+
+
 fix pin overlap issue
+pin use markup editor
+Affliate buy link with price scrape
 
 test comment db backup
-
-update faiss search on create pin
-pin use markup editor
-
 Sanitize all post values
-Fix header data load
-Affliate buy link with price scrape
-Login test, add google login
-Tab for "For you" & "Following"
-Research hashtag
 client validate url before submitting
+Fix header data load
+
+Login test, add google login
+Research hashtag
 create non headless browser
 
 Each pin has main image, video quick link
 
 "depends on hardware", "reveals more information" tags on comment feature
+Tab for "For you" & "Following"
 
+Group into months, quarters
 Compact view to show more pins 
 Click on tag to show only matching
 
-Group into months, quarters
 
 To Do:
 
@@ -197,3 +197,19 @@ In April 2022, AnandTech said that Meteor Lake will be the company’s first to 
 The new integrated GPU (a successor to the current Iris Xe) will deliver nearly 2x the performance as it currently does – according to clock speeds, anyway.
 
 Versions with 6 performance/8 efficiency and 6 performance/16 efficiency are thought to exist, with an eight performance core version believed to be in the works too.
+
+
+https://www.youtube.com/watch?v=ehyuFBpmUSo
+Fed Fund Rate Will be at:
+5.1% at the end of 2023
+4.3% at the end of 2024
+3.1% at the end of 2025
+
+
+
+https://www.sandiegouniontribune.com/news/education/story/2022-01-21/uc-san-diego-dorm-beds
+UC San Diego is pushing ahead with plans to build dorms that will collectively hold 3,310 students to deal with the school’s runaway growth and a critical housing shortage.
+
+Tentative plans call for the complex to be finished in 2025
+
+UCSD also is the the process of building the Theater District Living and Learning Neighborhood, a complex next to the La Jolla Playhouse that will feature room for 2,000 students, starting in fall 2023.
