@@ -1,19 +1,19 @@
 Bugs/priority:
 
-
+Profile page
+Login test, add google login (add username workflow)
 update faiss search on create pin
-
+Add Watch List page
 
 fix pin overlap issue
-pin use markup editor
 Affliate buy link with price scrape
+pin use markup editor
 
 test comment db backup
 Sanitize all post values
 client validate url before submitting
 Fix header data load
 
-Login test, add google login
 Research hashtag
 create non headless browser
 
@@ -213,3 +213,11 @@ UC San Diego is pushing ahead with plans to build dorms that will collectively h
 Tentative plans call for the complex to be finished in 2025
 
 UCSD also is the the process of building the Theater District Living and Learning Neighborhood, a complex next to the La Jolla Playhouse that will feature room for 2,000 students, starting in fall 2023.
+
+
+https://twitter.com/INArteCarloDoss/status/1638924682991747078
+Kind of scary when different time horizons start matching up. 
+
+Will likely see US student loan payments resume by then as well - an additional headwind.
+
+Buy 2 year T-Bill

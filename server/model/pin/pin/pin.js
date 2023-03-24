@@ -184,7 +184,7 @@ function _queryMSSQLPinById(pinId) {
           .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
             let pin;
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             if (res.recordset.length) {
               pin = new Pin(res.recordset[0]);
@@ -228,7 +228,7 @@ function _updateMSSQL(pin, userId) {
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // Todo: updated date time need to be updated on model
             resolve({
@@ -252,7 +252,7 @@ function _deleteMSSQL(pin) {
           (err, res, returnValue, affected) => {
             let utcDeletedDateTime;
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             try {
               //console.log('returnValue', returnValue); // always return 0

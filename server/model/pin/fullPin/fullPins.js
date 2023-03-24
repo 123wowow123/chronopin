@@ -85,7 +85,7 @@ function _queryMSSQLPinsWithSubArrays(fromDateTime, lastPinId, offset, pageSize)
                 request.execute(`[dbo].[${StoredProcedureName}]`,
                     (err, res, returnValue, affected) => {
                         if (err) {
-                            reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+                            return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
                         }
 
                         resolve({

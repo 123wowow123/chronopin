@@ -90,7 +90,7 @@ function _getAllUsersMSSQL() {
           (err, res, returnValue, affected) => {
             let users;
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             users = res.recordset && new Users(res.recordset);
             resolve({

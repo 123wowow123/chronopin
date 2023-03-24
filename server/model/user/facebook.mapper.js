@@ -5,66 +5,83 @@ export function facebookMapper(inUser, profile) {
 
     let user = new User(inUser),
         updatedFields = [],
-        prop;
+        prop,
+        val;
 
     prop = 'id';
-    if (user.facebookId !== _.get(profile, prop)) {
-        user.facebookId = profile.id;
-        updatedFields.push(prop);
+    val = _.get(profile, prop);
+    if (user.facebookId != val) {
+        user.facebookId = val;
+        updatedFields.push({[prop]: val});
     }
 
     prop = 'name.givenName';
-    if (user.firstName !== _.get(profile, prop)) {
-        user.firstName = profile.name.givenName;
-        updatedFields.push(prop);
+    val = _.get(profile, prop);
+    if (user.firstName != val) {
+        user.firstName = val;
+        updatedFields.push({[prop]: val});
     }
 
     prop = 'name.familyName';
-    if (user.lastName !== _.get(profile, prop)) {
-        user.lastName = profile.name.familyName;
-        updatedFields.push(prop);
+    val = _.get(profile, prop);
+    if (user.lastName != val) {
+        user.lastName = val;
+        updatedFields.push({[prop]: val});
     }
 
     prop = 'gender';
-    if (user.gender !== _.get(profile, prop)) {
-        user.gender = profile.gender;
-        updatedFields.push(prop);
+    val = _.get(profile, prop);
+    if (user.gender != val) {
+        user.gender = val;
+        updatedFields.push({[prop]: val});
     }
 
     prop = '_json.locale';
-    if (user.locale !== _.get(profile, prop)) {
-        user.locale = profile._json.locale;
-        updatedFields.push(prop);
+    val = _.get(profile, prop);
+    if (user.locale != val) {
+        user.locale = val;
+        updatedFields.push({[prop]: val});
     }
 
     prop = 'photos[0].value';
-    if (user.pictureUrl !== _.get(profile, prop)) {
-        user.pictureUrl = profile.photos[0].value;
-        updatedFields.push(prop);
+    val = _.get(profile, prop);
+    if (user.pictureUrl != val) {
+        user.pictureUrl = val;
+        updatedFields.push({[prop]: val});
     }
 
     prop = '_json.updated_time';
-    if (user.fbUpdatedTime !== _.get(profile, prop)) {
-        user.fbUpdatedTime = profile._json.updated_time;
-        updatedFields.push(prop);
+    val = _.get(profile, prop);
+    if (user.fbUpdatedTime != val) {
+        user.fbUpdatedTime = val;
+        updatedFields.push({[prop]: val});
     }
 
     prop = '_json.verified';
-    if (user.fbverified !== _.get(profile, prop)) {
-        user.fbverified = profile._json.verified;
-        updatedFields.push(prop);
+    val = _.get(profile, prop);
+    if (user.fbverified != val) {
+        user.fbverified = val;
+        updatedFields.push({[prop]: val});
     }
 
     prop = 'emails[0].value';
-    if (user.email !== _.get(profile, prop)) {
-        user.email = profile.emails[0].value;
-        updatedFields.push(prop);
+    val = _.get(profile, prop);
+    if (user.email != val) {
+        user.email = val;
+        updatedFields.push({[prop]: val});
     }
 
     prop = 'about';
-    if (user.about !== _.get(profile, prop)) {
-        user.about = profile.about;
-        updatedFields.push(prop);
+    val = _.get(profile, prop);
+    if (user.about != val) {
+        user.about = val;
+        updatedFields.push({[prop]: val});
+    }
+
+    // Set default userName is missing
+    if (!user.userName) {
+        user.userName = [user.firstName, user.lastName].join(" ");
+        updatedFields.push({'userName': val});
     }
 
     return { user, updatedFields };

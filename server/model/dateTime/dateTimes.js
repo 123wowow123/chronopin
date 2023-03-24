@@ -86,7 +86,7 @@ function _queryMSSQLDateTimesByStartEndDate(startDateTime, endDateTime) {
             let queryCount;
             //console.log('GetDateTimesByStartEndDate', res.recordset);
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
 
             queryCount = res.recordset.length;

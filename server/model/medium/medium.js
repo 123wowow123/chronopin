@@ -195,7 +195,7 @@ function _createPinMediumMSSQL(medium, pinId) {
             let queryCount, id;
             //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
 
             resolve({
@@ -247,7 +247,7 @@ function _deleteFromPinMSSQL(medium, pinId) {
             let utcDeletedDateTime;
             //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
@@ -280,7 +280,7 @@ function _getMediumByOriginalUrlMSSQL(originalUrl) {
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             if (res.recordset.length) {
               medium = new Medium(res.recordset[0]);

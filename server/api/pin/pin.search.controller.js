@@ -45,7 +45,7 @@ export function searchPins(req, res) {
 
   //console.log('searchPin:', searchText);
   if (hasFavorite) {
-    return SearchPins.searchFavorite(searchText)
+    return SearchPins.searchFavorite(userId, searchText)
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));
   } else {

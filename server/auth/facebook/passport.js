@@ -32,8 +32,6 @@ export function setup(config) {
     ]
   },
     function (accessToken, refreshToken, profile, done) {
-      // console.log('facebook profile', profile);
-
       User.getByFacebookId(profile.id)
         .then(({
           user

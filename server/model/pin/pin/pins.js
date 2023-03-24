@@ -147,7 +147,7 @@ function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, 
               let queryCount;
               //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
               if (err) {
-                reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+                return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
               }
               // ToDo: doesn't always return value
               try {
@@ -169,7 +169,7 @@ function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, 
             function (err, res, returnValue, affected) {
               let queryCount;
               if (err) {
-                reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+                return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
               }
               // ToDo: doesn't always return value
               try {
@@ -208,7 +208,7 @@ function _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext
             let queryCount;
             //console.log('GetPinsWithFavoriteAndLikeNext', res[0]);
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
@@ -251,7 +251,7 @@ function _queryMSSQLPinsFilterByHasFavorite(queryForward, fromDateTime, userId, 
               let queryCount;
               //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
               if (err) {
-                reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+                return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
               }
               // ToDo: doesn't always return value
               try {
@@ -273,7 +273,7 @@ function _queryMSSQLPinsFilterByHasFavorite(queryForward, fromDateTime, userId, 
             function (err, res, returnValue, affected) {
               let queryCount;
               if (err) {
-                reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+                return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
               }
               // ToDo: doesn't always return value
               try {
@@ -312,7 +312,7 @@ function _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSiz
             let queryCount;
             //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
@@ -354,7 +354,7 @@ function _queryMSSQPinByIds(pins) {
             let queryCount;
             //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
@@ -381,13 +381,13 @@ function _queryPinByIdsFilterByHasFavorite(pins, userId) {
         const StoredProcedureName = 'GetPinByIdsFilterByHasFavorite';
 
         const tvp = new mssql.Table()
-        tvp.columns.add('TableIds', mssql.Int);
+        tvp.columns.add('tId', mssql.Int);
         pins.getAllIds().forEach(id => {
           tvp.rows.add(id) // Values are in same order as columns.
         });
 
         let request = new mssql.Request(conn)
-          .input('tIds', tvp)
+          .input('TableIds', tvp)
           .input('userId', mssql.Int, userId)
           .output('queryCount', mssql.Int);
 
@@ -396,7 +396,7 @@ function _queryPinByIdsFilterByHasFavorite(pins, userId) {
             let queryCount;
             //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {

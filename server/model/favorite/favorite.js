@@ -182,7 +182,7 @@ function _queryMSSQLFavoriteById(id) {
           .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
             let favorite;
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             if (res.recordset.length) {
               favorite = new Favorite(res.recordset[0]);
@@ -221,7 +221,7 @@ function _upsertMSSQL(favorite, userId, pinId) {
             let id;
             //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
@@ -258,7 +258,7 @@ function _deleteMSSQL(favorite) {
             let utcDeletedDateTime;
             //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             try {
               //console.log('returnValue', returnValue); // always return 0
@@ -294,7 +294,7 @@ function _deleteByPinIdMSSQL(favorite) {
             let utcDeletedDateTime;
             //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
-              reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             try {
               //console.log('returnValue', returnValue); // always return 0

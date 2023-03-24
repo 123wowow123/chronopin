@@ -335,20 +335,10 @@ function _updateMSSQL(user) {
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
-            let id;
             //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
-            // ToDo: doesn't always return value
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              id = res.output.id;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              id = 0;
-            }
-            user.id = id;
             resolve({
               user: user
             });
