@@ -25,6 +25,7 @@ const createGetPinSP = require('./pin/createGetPinSP');
 /* user */
 const createGetUserByIdSP = require('./user/createGetUserByIdSP');
 const createGetUserByFacebookIdSP = require('./user/createGetUserByFacebookIdSP');
+const createGetUserByGoogleIdSP = require('./user/createGetUserByGoogleIdSP');
 const createGetUserByEmailSP = require('./user/createGetUserByEmailSP');
 /* medium */
 const createGetMediumByOriginalUrlSP = require('./medium/createGetMediumByOriginalUrlSP');
@@ -109,6 +110,7 @@ module.exports.setup = function(connectionPool) {
   createGetPinSP.setup(cp);
   createGetUserByIdSP.setup(cp);
   createGetUserByFacebookIdSP.setup(cp);
+  createGetUserByGoogleIdSP.setup(cp);
   createGetUserByEmailSP.setup(cp);
   createGetMediumByOriginalUrlSP.setup(cp);
   createGetLikeSP.setup(cp);
@@ -166,6 +168,7 @@ module.exports.createGetPinWithFavoriteAndLikeSP = createGetPinWithFavoriteAndLi
 module.exports.createGetPinSP = createGetPinSP.createSP;
 module.exports.createGetUserByIdSP = createGetUserByIdSP.createSP;
 module.exports.createGetUserByFacebookIdSP = createGetUserByFacebookIdSP.createSP;
+module.exports.createGetUserByGoogleIdSP = createGetUserByGoogleIdSP.createSP;
 module.exports.createGetUserByEmailSP = createGetUserByEmailSP.createSP;
 module.exports.createGetMediumByOriginalUrlSP = createGetMediumByOriginalUrlSP.createSP;
 module.exports.createGetLikeSP = createGetLikeSP.createSP;

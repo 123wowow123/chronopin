@@ -43,6 +43,7 @@
     "node-base64-image": "^2.0.4",
     "passport": "~0.6.0",
     "passport-facebook": "^3.0.0",
+    "passport-google-oauth20": "^2.0.0",
     "passport-local": "^1.0.0",
     "prerender": "^5.20.1",
     "prerender-node": "^3.5.0",

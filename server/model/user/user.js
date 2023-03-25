@@ -24,9 +24,11 @@ let prop = [
   'gender',
   'locale',
   'facebookId',
+  'googleId',
   'pictureUrl',
   'fbUpdatedTime',
-  'fbverified',
+  'fbVerified',
+  'googleVerified',
   'about',
   'email',
   'password',
@@ -40,6 +42,7 @@ let prop = [
 ];
 
 export * from './facebook.mapper';
+export * from './google.mapper';
 
 export default class User {
   constructor(user) {
@@ -242,6 +245,10 @@ export default class User {
     return _getUserByFacebookIdMSSQL(facebookId);
   }
 
+  static getByGoogleId(googleId) {
+    return _getUserByGoogleIdMSSQL(googleId);
+  }
+
   static getByEmail(email) {
     return _getUserByEmailMSSQL(email);
   }
@@ -261,9 +268,11 @@ function _createMSSQL(user) {
           .input('gender', mssql.NVarChar(255), user.gender)
           .input('locale', mssql.NChar(5), user.locale)
           .input('facebookId', mssql.NVarChar(25), user.facebookId)
+          .input('googleId', mssql.NVarChar(25), user.googleId)
           .input('pictureUrl', mssql.NVarChar(255), user.pictureUrl)
           .input('fbUpdatedTime', mssql.DateTime2(7), user.fbUpdatedTime)
-          .input('fbverified', mssql.Bit, user.fbverified)
+          .input('fbVerified', mssql.Bit, user.fbVerified)
+          .input('googleVerified', mssql.Bit, user.googleVerified)
           .input('about', mssql.NVarChar(1000), user.about)
           // fb private attributes
           .input('email', mssql.NVarChar(255), user.email)
@@ -318,9 +327,11 @@ function _updateMSSQL(user) {
           .input('gender', mssql.NVarChar(255), user.gender)
           .input('locale', mssql.NChar(5), user.locale)
           .input('facebookId', mssql.NVarChar(25), user.facebookId)
+          .input('googleId', mssql.NVarChar(25), user.googleId)
           .input('pictureUrl', mssql.NVarChar(255), user.pictureUrl)
           .input('fbUpdatedTime', mssql.DateTime2(7), user.fbUpdatedTime)
-          .input('fbverified', mssql.Bit, user.fbverified)
+          .input('fbVerified', mssql.Bit, user.fbVerified)
+          .input('googleVerified', mssql.Bit, user.googleVerified)
           .input('about', mssql.NVarChar(1000), user.about)
           // fb private attributes
           .input('email', mssql.NVarChar(255), user.email)
@@ -466,9 +477,36 @@ function _getUserByFacebookIdMSSQL(facebookId) {
               return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             if (res.recordset.length) {
-              //console.log('_getUserByFacebookIdMSSQL', res.recordset);
               user = new User(res.recordset[0]);
-              //console.log('_getUserByFacebookIdMSSQL constructed', user);
+            } else {
+              user = undefined;
+            }
+            resolve({
+              user: user
+            });
+          });
+      });
+    });
+}
+
+function _getUserByGoogleIdMSSQL(googleId) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise(function (resolve, reject) {
+        const StoredProcedureName = 'GetUserByGoogleId';
+        let user;
+        let request = new mssql.Request(conn)
+          .input('googleId', mssql.NVarChar(25), googleId);
+
+        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
+
+        request.execute(`[dbo].[${StoredProcedureName}]`,
+          (err, res, returnValue, affected) => {
+            if (err) {
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+            }
+            if (res.recordset.length) {
+              user = new User(res.recordset[0]);
             } else {
               user = undefined;
             }

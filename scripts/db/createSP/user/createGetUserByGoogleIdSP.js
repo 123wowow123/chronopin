@@ -1,6 +1,6 @@
 let cp;
 let Request;
-const StoredProcedureName = 'GetUserById';
+const StoredProcedureName = 'GetUserByGoogleId';
 
 // Setup
 module.exports.setup = function(connectionPool) {
@@ -42,7 +42,7 @@ function executeDropSP() {
 function executeCreateSP() {
   let sql = `
       CREATE PROCEDURE [dbo].[${StoredProcedureName}]
-          @id INT
+          @googleId NVARCHAR(25)
       AS
         BEGIN
 
@@ -55,6 +55,7 @@ function executeCreateSP() {
             lastName,
             gender,
             locale,
+            googleId,
             pictureUrl,
             fbUpdatedTime,
             fbVerified,
@@ -66,12 +67,12 @@ function executeCreateSP() {
             provider,
             salt,
             websiteUrl,
-
+            
             utcCreatedDateTime,
             utcUpdatedDateTime
 
           FROM [dbo].[User]
-          WHERE id = @id AND utcDeletedDateTime IS NULL;
+          WHERE googleId = @googleId AND utcDeletedDateTime IS NULL;
 
         END;
         `;

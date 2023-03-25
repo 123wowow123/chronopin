@@ -2,7 +2,8 @@
 
 export {
   default as User,
-  facebookMapper
+  facebookMapper,
+  googleMapper
 } from './user/user';
 export {
   default as Users

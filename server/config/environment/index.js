@@ -87,6 +87,12 @@ let all = {
     callbackURL: (getProcessEnv('DOMAIN') || '') + '/auth/facebook/callback'
   },
 
+  google: {
+    clientID: getProcessEnv('GOOGLE_ID') || 'id',
+    clientSecret: getProcessEnv('GOOGLE_SECRET') || 'secret',
+    callbackURL: (getProcessEnv('DOMAIN') || '') + '/auth/google/callback'
+  },
+
   azureStorage: {
     AZURE_STORAGE_CONNECTION_STRING: getProcessEnv('AZURE_STORAGE_CONNECTION_STRING') || ''
   },

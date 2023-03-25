@@ -21,9 +21,9 @@ export function register(sns) {
   // Bind model events to SNS publish
   for (let i = 0, eventsLength = events.length; i < eventsLength; i++) {
     let event = events[i];
-    let listener = createListener(event.arn, sns, event.transform);
+    // let listener = createListener(event.arn, sns, event.transform);
 
-    UserEvents.on(event.name, listener);
+    // UserEvents.on(event.name, listener);
   }
 }
 

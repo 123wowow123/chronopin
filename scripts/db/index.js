@@ -45,6 +45,7 @@ const createSearchPinSP = createSP.createSearchPinSP;
 const createGetPinWithFavoriteAndLikeSP = createSP.createGetPinWithFavoriteAndLikeSP;
 const createGetUserByIdSP = createSP.createGetUserByIdSP;
 const createGetUserByFacebookIdSP = createSP.createGetUserByFacebookIdSP;
+const createGetUserByGoogleIdSP = createSP.createGetUserByGoogleIdSP;
 const createGetUserByEmailSP = createSP.createGetUserByEmailSP;
 const createGetMediumByOriginalUrlSP = createSP.createGetMediumByOriginalUrlSP;
 const createGetPinSP = createSP.createGetPinSP;
@@ -139,6 +140,7 @@ function execute() {
         createGetPinWithFavoriteAndLikeSP,
         createGetUserByIdSP,
         createGetUserByFacebookIdSP,
+        createGetUserByGoogleIdSP,
         createGetUserByEmailSP,
         createGetMediumByOriginalUrlSP,
         createGetPinSP,

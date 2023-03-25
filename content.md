@@ -1,7 +1,6 @@
 Bugs/priority:
 
 Profile page
-Login test, add google login (add username workflow)
 update faiss search on create pin
 Add Watch List page
 

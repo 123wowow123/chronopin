@@ -8,7 +8,9 @@ angular.module('chronopinNodeApp')
       controller: 'OauthButtonsCtrl',
       controllerAs: 'OauthButtons',
       scope: {
-        classes: '@'
+        classes: '@',
+        provider: '@',
+        label: '@'
       }
     };
   });

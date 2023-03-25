@@ -3,46 +3,29 @@
 
 import passport from 'passport';
 import {
-  Strategy as FacebookStrategy
-} from 'passport-facebook';
+  Strategy as GoogleStrategy
+} from 'passport-google-oauth20';
 import * as userController from '../../api/user/user.controller';
-import { User, facebookMapper } from '../../model'
+import { User, googleMapper } from '../../model'
 import * as log from '../../util/log';
 import * as _ from 'lodash';
 
 export function setup(config) {
-  passport.use(new FacebookStrategy({
-    clientID: config.facebook.clientID,
-    clientSecret: config.facebook.clientSecret,
-    callbackURL: config.facebook.callbackURL,
-    profileFields: [
-      'first_name',
-      'last_name',
-      'emails',
-      //'age_range',
-      'locale',
-      'picture',
-      'timezone',
-      'updated_time',
-      'verified',
-      'gender',
-      'about'
-      //'birthday',
-      //'education',
-      //'location'
-    ]
+  passport.use(new GoogleStrategy({
+    clientID: config.google.clientID,
+    clientSecret: config.google.clientSecret,
+    callbackURL: config.google.callbackURL,
   },
     function (accessToken, refreshToken, profile, done) {
       User.getByEmail(_.get(profile, "emails[0].value"))
         .then(({
           user
         }) => {
-          log.info('facebook profile', log.stringify(profile));
+          log.info('google profile', log.stringify(profile));
           log.infoBlue('current chronopin user', log.stringify(user));
 
           // update empty fields
-          let { user: updatedUser, updatedFields } = facebookMapper(user, profile);
-
+          let { user: updatedUser, updatedFields } = googleMapper(user, profile);
 
           if (user && !updatedFields.length) {
             return done(null, user);
@@ -61,7 +44,7 @@ export function setup(config) {
           }
 
           updatedUser.role = 'user';
-          updatedUser.provider = 'facebook';
+          updatedUser.provider = 'google';
 
           log.infoBlue('new chronopin user', log.stringify(updatedUser));
 
