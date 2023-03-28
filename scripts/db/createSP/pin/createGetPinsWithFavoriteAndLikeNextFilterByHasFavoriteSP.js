@@ -139,7 +139,7 @@ function executeCreateSP() {
                 LEFT JOIN [dbo].[Medium] AS [Media]
                   ON [Media].[id] = [Media.PinMedium].[MediumId] AND [Media.PinMedium].[utcDeletedDateTime] IS NULL
                 INNER JOIN [dbo].[Favorite] AS [Favorites]
-                  ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL
+                  ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL AND [Favorites].[userId] = @userId
                 LEFT JOIN [dbo].[Like] AS [Likes] ON [Pin].[id] = [Likes].[PinId] AND [Likes].[utcDeletedDateTime] IS NULL
                 LEFT JOIN [dbo].[User] AS [User]
                   ON [Pin].[userId] = [User].[id]
