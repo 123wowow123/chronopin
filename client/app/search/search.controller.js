@@ -5,7 +5,7 @@
 
     class SearchController {
 
-        constructor($stateParams, $scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, commentJs, $log, $timeout) {
+        constructor($stateParams, $state, $scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, commentJs, $log, $timeout) {
 
             // constants
             const omitLinkHeaderProp = ['rel', 'url'];
@@ -21,6 +21,7 @@
             this.$timeout = $timeout;
             this.$log = $log;
             this.$scope = $scope;
+            this.$state = $state;
 
             // data service
             this.pinWebService = pinWebService;
@@ -61,11 +62,16 @@
         $onInit() {
             const query = this.$stateParams.q;
             const filter = this.Util.sanitizeSearchChoice(this.$stateParams.f);
+            const filterValue = filter && filter.value;
+
+            if (!query && !filterValue) {
+                return this.$state.go('main');
+            }
 
             this.searching = true;
             this.pinWebService.search({
                 q: query,
-                f: filter && filter.value
+                f: filterValue
             })
                 .then(res => {
                     this._setSearchPinGroups(res.data.pins);

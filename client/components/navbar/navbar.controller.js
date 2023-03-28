@@ -28,6 +28,7 @@ class NavbarController {
   $onInit() {
     this.search = this.$state.params.q;
     this.searchChoice = this.Util.sanitizeSearchChoice(this.$state.params.f);
+    this.searchSubmitted = false;
   }
 
   clearSuggestionsAndDismiss() {
@@ -39,6 +40,7 @@ class NavbarController {
   submitSearch(searchText, searchChoiceText) {
     this.dismissAutoComplete();
     this.$state.go('search', { q: searchText, f: searchChoiceText });
+    this.searchSubmitted = true;
     return this;
   }
 
@@ -61,10 +63,15 @@ class NavbarController {
       })
       .then(suggestions => {
         this.suggestions = suggestions;
-        this.showSuggestions = !!_.get(this, 'suggestions.length');
+        if (!this.searchSubmitted) {
+          this.showSuggestions = !!_.get(this, 'suggestions.length');
+        }
       })
       .catch(err => {
         throw err;
+      })
+      .finally(() => {
+        this.searchSubmitted = false;
       });
   }
 
@@ -111,7 +118,7 @@ class NavbarController {
 
     if (!searchText) {
       //debugger;
-      return  this.clearSuggestionsAndDismiss();
+      return this.clearSuggestionsAndDismiss();
     }
 
     if (_.get(this, 'suggestions.length', 0)) {
