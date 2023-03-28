@@ -28,6 +28,11 @@ $grid-max-width-screen: $iphone-landscape / 2;
     background-color: var(--primary-bg-color);
     padding-left: calc(env(safe-area-inset-left) * (2/3));
     padding-right: calc(env(safe-area-inset-right) * (2/3));
+
+    &__timeline {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 .timeline {
@@ -39,7 +44,7 @@ $grid-max-width-screen: $iphone-landscape / 2;
 
     @mixin date_tags($timeline-tag-bg, $timeline-color) {
         display: block;
-        width: 95px;
+        width: 100px;
         margin: 0 auto;
         padding: 5px 0;
         font-weight: bold;
@@ -471,7 +476,7 @@ $bag-font-color: var(--bag-text-color);
 /** media queries **/
 
 $timeline-ipad-landscape-top-alignment: -45px;
-$timeline-ipad-landscape-left-alignment: 95px;
+$timeline-ipad-landscape-left-alignment: 100px;
 
 @mixin tag-alignment($top-alignment, $left-shift) {
     @for $i from 1 to 9 {
