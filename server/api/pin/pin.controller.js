@@ -16,7 +16,7 @@ import {
 
 
 const PinEmitter = new EventEmitter();
-const pageSize = config.pagination.pageSize || 25;
+const pageSize = config.pagination.pageSize;
 
 function _removeEntity(res) {
   return function (entity) {
@@ -52,7 +52,7 @@ export function getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTim
       }
     } else {
       fromDateTime = new Date();
-      queryPromise = Pins.queryInitialByDateFilterByHasFavorite(fromDateTime, userId, 10, 20); // should be next 10 groups of items
+      queryPromise = Pins.queryInitialByDateFilterByHasFavorite(fromDateTime, userId, pageSize, pageSize); // should be next 10 groups of items
     }
   } else {
     if (hasDateTime) {
@@ -69,7 +69,7 @@ export function getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTim
       }
     } else {
       fromDateTime = new Date();
-      queryPromise = Pins.queryInitialByDate(fromDateTime, userId, 10, 20); // should be next 10 groups of items
+      queryPromise = Pins.queryInitialByDate(fromDateTime, userId, pageSize, pageSize); // should be next 10 groups of items
     }
   }
   return queryPromise;

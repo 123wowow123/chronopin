@@ -1,7 +1,6 @@
 Bugs/priority:
 
 update faiss search on create pin
-Add Watch List page
 
 fix pin overlap issue
 Affliate buy link with price scrape
@@ -220,3 +219,7 @@ Kind of scary when different time horizons start matching up.
 Will likely see US student loan payments resume by then as well - an additional headwind.
 
 Buy 2 year T-Bill
+
+
+https://twitter.com/INArteCarloDoss/status/1640619037251043328
+Stagnant till 2028

@@ -19,7 +19,7 @@ import {
 } from 'events';
 
 
-const pageSize = config.pagination.pageSize || 25;
+const pageSize = config.pagination.pageSize;
 
 function _getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTimeString) {
   return pinController.getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTimeString);

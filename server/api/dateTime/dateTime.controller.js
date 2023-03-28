@@ -11,7 +11,7 @@ import {
   DateTimes
 } from '../../model';
 
-const pageSize = config.pagination.pageSize || 25;
+const pageSize = config.pagination.pageSize;
 
 export function getDateTimes(startDateTime, endDateTime) {
   return DateTimes.queryByStartEndDate(startDateTime, endDateTime);

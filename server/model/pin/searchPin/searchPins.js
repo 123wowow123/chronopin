@@ -12,6 +12,8 @@ import {
 import { prefixSearchIndex } from './searchHelper';
 import * as config from '../../../config/environment';
 
+const pageSize = config.pagination.pageSize;
+
 export default class SearchPins extends BasePins {
     // Properties
     // this.pins
@@ -138,13 +140,19 @@ export default class SearchPins extends BasePins {
     }
 
     static searchFavorite(userId, searchText) {
-        return semanticSearch(searchText, SearchPins.numberOfResults)
-            .then(res => {
-                return new SearchPins().fromFaiss(res);
-            })
-            .then(pins => {
-                return Pins.queryPinByIdsFilterByHasFavorite(pins, userId); // TODO: should return SearchPins
-            });
+         // TODO: should return SearchPins
+        if (!searchText) {
+            let fromDateTime = new Date();
+            return Pins.queryInitialByDateFilterByHasFavorite(fromDateTime, userId, pageSize, pageSize);
+        } else {
+            return semanticSearch(searchText, SearchPins.numberOfResults)
+                .then(res => {
+                    return new SearchPins().fromFaiss(res);
+                })
+                .then(pins => {
+                    return Pins.queryPinByIdsFilterByHasFavorite(pins, userId);
+                });
+        }
     }
 
     static autocomplete(userId, searchText) {
@@ -169,11 +177,11 @@ export default class SearchPins extends BasePins {
 
     static querySearchPin(title, description, k = 10) {
         return _querySearchPin(title, description, k)
-          .then(res => {
-            //console.log('queryInitialByDateFilterByHasFavorite', res);
-            return new Pins(res);
-          });
-      }
+            .then(res => {
+                //console.log('queryInitialByDateFilterByHasFavorite', res);
+                return new Pins(res);
+            });
+    }
 }
 
 /* Search */
@@ -316,37 +324,37 @@ function autocompleteFavorite(userId, searchText) {
 
 function _querySearchPin(title, description, k) {
     return cp.getConnection()
-      .then(conn => {
-        return new Promise(function (resolve, reject) {
-          const StoredProcedureName = 'SearchPin';
-  
-          let request = new mssql.Request(conn)
-            .input('searchTitle', mssql.NVarChar(64), title)
-            .input('searchDescription', mssql.NVarChar(64), description)
-            .input('top', mssql.Int, k)
-            .output('queryCount', mssql.Int);
-  
-          request.execute(`[dbo].[${StoredProcedureName}]`,
-            function (err, res, returnValue, affected) {
-              let queryCount;
-              //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-              if (err) {
-                return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-              }
-              // ToDo: doesn't always return value
-              try {
-                //console.log('returnValue', returnValue); // always return 0
-                queryCount = res.output.queryCount;
-                //console.log('queryCount', queryCount);
-              } catch (e) {
-                queryCount = 0;
-              }
-  
-              resolve({
-                pins: res.recordset,
-                queryCount: queryCount
-              });
+        .then(conn => {
+            return new Promise(function (resolve, reject) {
+                const StoredProcedureName = 'SearchPin';
+
+                let request = new mssql.Request(conn)
+                    .input('searchTitle', mssql.NVarChar(64), title)
+                    .input('searchDescription', mssql.NVarChar(64), description)
+                    .input('top', mssql.Int, k)
+                    .output('queryCount', mssql.Int);
+
+                request.execute(`[dbo].[${StoredProcedureName}]`,
+                    function (err, res, returnValue, affected) {
+                        let queryCount;
+                        //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
+                        if (err) {
+                            return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+                        }
+                        // ToDo: doesn't always return value
+                        try {
+                            //console.log('returnValue', returnValue); // always return 0
+                            queryCount = res.output.queryCount;
+                            //console.log('queryCount', queryCount);
+                        } catch (e) {
+                            queryCount = 0;
+                        }
+
+                        resolve({
+                            pins: res.recordset,
+                            queryCount: queryCount
+                        });
+                    });
             });
         });
-      });
-  }
+}
