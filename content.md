@@ -1,12 +1,12 @@
 Bugs/priority:
 
-Profile page
 update faiss search on create pin
 Add Watch List page
 
 fix pin overlap issue
 Affliate buy link with price scrape
 pin use markup editor
+changing username needs to sync to comment
 
 test comment db backup
 Sanitize all post values

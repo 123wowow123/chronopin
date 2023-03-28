@@ -22,6 +22,30 @@ const pickUserProps = [
   'provider'
 ];
 
+export function updateEntity(newUser) {
+  //debugger
+  return newUser.update()
+    .then(({
+      user
+    }) => {
+      let event = "afterUpdate";
+      UserEmitter.emit(event, user);
+      return user;
+    });
+}
+
+export function patchEntity(newUser) {
+  //debugger
+  return newUser.patchWithoutPassword()
+    .then(({
+      user
+    }) => {
+      let event = "afterPatch";
+      UserEmitter.emit(event, user);
+      return user;
+    });
+}
+
 export function addEntity(newUser) {
   //debugger
   return newUser.save()
@@ -77,8 +101,8 @@ export function create(req, res, next) {
       var token = jwt.sign({
         id: user.id
       }, config.secrets.session, {
-          expiresIn: 60 * 60 * 5
-        });
+        expiresIn: 60 * 60 * 5
+      });
       res.json({
         token
       });
@@ -87,10 +111,48 @@ export function create(req, res, next) {
 }
 
 /**
+ * Patch a new user
+ */
+export function patch(req, res, next) {
+  let patchUser = new User(req.body);
+
+  let userId = +req.user.id;
+  return User.getById(userId)
+    .then(({
+      user
+    }) => { // don't ever give out the password or salt
+      if (!user) {
+        return res.status(401).end();
+      }
+
+      const patchedUser = user.patchSet(patchUser);
+      return patchEntity(patchedUser)
+        .then((
+          user
+        ) => {
+          let token = jwt.sign({
+            id: user.id
+          }, config.secrets.session, {
+            expiresIn: 60 * 60 * 5
+          });
+          res.json({
+            token
+          });
+        })
+        .catch(validationError(res));
+
+      // res.json(
+      //   user.pick(pickUserProps));
+    })
+    .catch(err => next(err));
+
+}
+
+/**
  * Get a single user
  */
 export function show(req, res, next) {
-  var userId = req.params.id;
+  let userId = req.params.id;
 
   return User.getById(userId)
     .then(({
@@ -122,9 +184,9 @@ export function destroy(req, res) {
  * Change a users password
  */
 export function changePassword(req, res, next) {
-  var userId = +req.user.id;
-  var oldPass = String(req.body.oldPassword);
-  var newPass = String(req.body.newPassword);
+  let userId = +req.user.id;
+  let oldPass = String(req.body.oldPassword);
+  let newPass = String(req.body.newPassword);
 
   return User.getById(userId)
     .then(({

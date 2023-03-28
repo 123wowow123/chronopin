@@ -79,6 +79,26 @@
       },
 
       /**
+       * Patch a new user
+       *
+       * @param  {Object}   user     - user info
+       * @param  {Function} callback - optional, function(error, user)
+       * @return {Promise}
+       */
+      patchUser(user, callback) {
+        return User.update(user,
+          (data) => {
+            $cookies.put('token', data.token);
+            this.setCurrentUser(User.get());
+            return safeCb(callback)(null, user);
+          },
+          (err) => {
+            Auth.logout();
+            return safeCb(callback)(err);
+          }).$promise;
+      },
+
+      /**
        * Change password
        *
        * @param  {String}   oldPassword
@@ -136,9 +156,9 @@
        *
        * @return {Object}
        */
-        getCurrentUserEmail() {
-          return currentUser.email;
-        },
+      getCurrentUserEmail() {
+        return currentUser.email;
+      },
 
       /**
        * Gets User Name on a user

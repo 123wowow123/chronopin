@@ -17,6 +17,12 @@
         params: {
           id: 'me'
         }
+      },
+      update: {
+        method: 'PATCH',
+        params: {
+          id: 'me'
+        }
       }
     });
   }

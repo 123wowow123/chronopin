@@ -70,7 +70,7 @@ function executeCreateSP() {
 
             UPDATE [dbo].[User]
             SET
-              userName      = @firstName,
+              userName      = @userName,
               firstName     = @firstName,
               lastName      = @lastName,
               gender        = @gender,

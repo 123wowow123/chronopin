@@ -24,6 +24,12 @@ angular.module('chronopinNodeApp')
         controller: 'SignupController',
         controllerAs: 'vm'
       })
+      .state('profile', {
+        url: '/profile',
+        templateUrl: 'app/account/profile/profile.html',
+        controller: 'ProfileController',
+        controllerAs: 'vm'
+      })
       .state('settings', {
         url: '/settings',
         templateUrl: 'app/account/settings/settings.html',

@@ -63,6 +63,19 @@ export default class User {
     return this;
   }
 
+  patchSet(user) {
+    if (user) {
+      for (let i = 0; i < prop.length; i++) {
+        if (!!user[prop[i]]) {
+          this[prop[i]] = user[prop[i]];
+        }
+      }
+    } else {
+      throw "User cannot set value of arg";
+    }
+    return this;
+  }
+
   /**
    * Authenticate - check if the passwords are the same
    *
@@ -218,6 +231,10 @@ export default class User {
       .then(() => {
         return _updateMSSQL(this);
       });
+  }
+
+  patchWithoutPassword() {
+    return _updateMSSQL(this);
   }
 
   delete() {

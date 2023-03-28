@@ -34,7 +34,7 @@ export function setup(config) {
           if (user && updatedFields.length) {
             log.info("user updated the following profile properties", log.stringify(updatedFields));
             return updatedUser
-              .update()
+              .patchWithoutPassword()
               .then(({
                 user
               }) => {
