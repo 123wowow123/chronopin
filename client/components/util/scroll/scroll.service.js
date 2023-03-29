@@ -16,6 +16,10 @@
 
         const ScrollUtil = {
 
+            getScrollEl() {
+                return document.documentElement;
+            },
+
             setInitialized(value) {
                 resolveInitialized(value);
             },

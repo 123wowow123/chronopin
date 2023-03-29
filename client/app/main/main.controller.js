@@ -9,7 +9,7 @@
 
       // constants
       const omitLinkHeaderProp = ['rel', 'url'];
-      const scrollEl = document.documentElement;
+      const scrollEl = ScrollUtil.getScrollEl();
 
       // stateParams Service
       this.$transitions = $transitions;
@@ -134,6 +134,22 @@
 
     // Private helper functions
 
+    _scrollAdjust(elId) {
+      if (elId) {
+        return this.scrollToIDAsync(elId);
+      }
+      return Promise.resolve();
+    }
+
+
+    getHomeScrollId() {
+      let firstBag = this.pinApp.findClosestFutureBagByDateTime(new Date());
+      if (firstBag) {
+        return firstBag.toISODateTimeString();
+      }
+      return null;
+    }
+
     _setMainBagsWithPins(data) {
       // debugger;
       let dateTime = new Date();
@@ -143,23 +159,12 @@
 
       if (angular.isNumber(this.pinApp.bagsYOffset)) {
         this.$timeout(() => {
-          scrollAdjust.bind(this)(dateTime);
+          const elId = this.getHomeScrollId();
+          this._scrollAdjust(elId).then(() => {
+            this._registerInfinitScroll();
+          })
         });
       }
-
-      function scrollAdjust(dateTime) {
-        //debugger;
-        let firstBag = this.pinApp.findClosestFutureBagByDateTime(dateTime);
-        if (firstBag) {
-          this.scrollToIDAsync(firstBag.toISODateTimeString())
-            .then(t => {
-              this._registerInfinitScroll();
-            })
-        } else {
-          this._registerInfinitScroll();
-        }
-      }
-
       this.bags = this.pinApp.getBags();
     }
 

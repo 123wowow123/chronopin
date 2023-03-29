@@ -10,6 +10,7 @@ angular.module('chronopinNodeApp', [
     'chronopinNodeApp.loader',
     'chronopinNodeApp.google',
     'chronopinNodeApp.comment',
+    'chronopinNodeApp.scroll',
     'ngCookies',
     'ngResource',
     'ngSanitize',
