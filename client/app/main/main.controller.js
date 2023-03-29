@@ -5,7 +5,7 @@
 
   class MainController {
 
-    constructor($transitions, $scope, pinWebService, dateTimeWebService, mainWebService, linkHeaderParser, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, commentJs, $log, $timeout) {
+    constructor($transitions, $scope, $stateParams, pinWebService, dateTimeWebService, mainWebService, linkHeaderParser, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, commentJs, $log, $timeout) {
 
       // constants
       const omitLinkHeaderProp = ['rel', 'url'];
@@ -13,6 +13,7 @@
 
       // stateParams Service
       this.$transitions = $transitions;
+      this.$stateParams = $stateParams;
 
       // angular service
       this.$timeout = $timeout;

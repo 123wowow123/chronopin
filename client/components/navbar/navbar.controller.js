@@ -5,7 +5,7 @@ class NavbarController {
 
   //start-non-standard
 
-  constructor(Auth, $rootScope, $state, $scope, $element, Util, appConfig, pinWebService) {
+  constructor(Auth, $rootScope, $state, $scope, $element, Util, appConfig, pinWebService, $transitions) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
@@ -23,6 +23,7 @@ class NavbarController {
     this.searchChoices = appConfig.searchChoices;
     this.$el = $element;
     this.$scope = $scope;
+    this.$transitions = $transitions;
   }
 
   $onInit() {
@@ -81,13 +82,12 @@ class NavbarController {
   }
 
   clearSearchToMain() {
-    return this
-      .clearSearch()
-      .goToMain();
+    return this.clearSearch();
   }
 
   clearSearch() {
     this.search = null;
+    this.searchChoice = this.searchChoices[0];
     return this;
   }
 
