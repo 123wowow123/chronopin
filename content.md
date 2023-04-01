@@ -1,6 +1,10 @@
 Bugs/priority:
 
 update faiss search on create pin
+mobile x scrolling issue
+Multi pin post
+Modal save favorite with naming and quick button tab with search watch page
+Add generic profile icon for logged in user
 
 fix pin overlap issue
 Affliate buy link with price scrape
@@ -223,3 +227,19 @@ Buy 2 year T-Bill
 
 https://twitter.com/INArteCarloDoss/status/1640619037251043328
 Stagnant till 2028
+
+https://www.fhfa.gov/Media/PublicAffairs/Pages/FHFA-Announces-Enhanced-Payment-Deferral-Policies-for-Borrowers-Facing-Financial-Hardship.aspx
+FHFA Announces Enhanced Payment Deferral Policies for Borrowers Facing Financial Hardship adoption by October 1, 2023 allow borrowers to defer up to six months of mortgage payments... Housing Crash April 1 2024 !?
+
+https://www.cnbc.com/2023/03/31/social-security-trust-funds-depletion-date-moves-up-to-2034.html
+The Social Security trust funds that about 67 million Americans rely on for benefits are scheduled to be depleted in 2034, one year earlier than was projected last year, according to the annual trustees
+
+Meanwhile, Medicare’s hospital insurance trust fund will be able to pay 100% of scheduled benefits until 2031, three years later than projected last year.
+
+12/31/34
+12/31/31
+
+https://www.cnn.com/2023/01/18/politics/debt-ceiling-deadline-congress/index.html
+While Treasury Secretary Janet Yellen doesn’t expect the US to default on its debt before early June, Congress has to get serious about negotiating a solution, which is not expected to be easy.
+
+6/30/23
