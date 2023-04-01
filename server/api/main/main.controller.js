@@ -47,7 +47,7 @@ export function getPinsAndFormatData(req, res) {
     querydForward = hasDateTime && fromDateTimeString[0] !== '-',
     lastPinId = +req.query.last_pin_id; // if undefined => NaN
 
-    let queryPromise; // TODO: Move outside and cache
+    let queryPromise; // TODO: Move outside and cache`
   //if (!queryPromise)
   queryPromise = _getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTimeString)
     .then(pins => {
