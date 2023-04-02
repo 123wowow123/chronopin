@@ -1,6 +1,5 @@
 Bugs/priority:
 
-add / remove / update faiss search on create pin
 mobile x scrolling issue
 Multi pin post
 Modal save favorite with naming and quick button tab with search watch page
