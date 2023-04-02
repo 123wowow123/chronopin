@@ -28,6 +28,9 @@ export {
   default as FullPins
 } from './pin/fullPin/fullPins';
 export {
+  default as ElasticSearchPin
+} from './pin/searchPin/elasticSearchPin';
+export {
   default as SearchPin
 } from './pin/searchPin/searchPin';
 export {

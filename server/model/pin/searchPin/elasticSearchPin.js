@@ -10,8 +10,6 @@ import {
     BasePinProp
 } from '../..';
 
-const serviceUrl = config.faiss.serviceUrl;
-const faissUri = `${serviceUrl}/faiss`
 
 // media
 // favorites - will be converted to bool for client
@@ -30,7 +28,7 @@ const prop = BasePinProp.concat(
 );
 
 
-export default class SearchPin extends BasePin {
+export default class ElasticSearchPin extends BasePin {
 
     constructor(pin, user) {
         super(pin, user, prop);
@@ -85,7 +83,7 @@ export default class SearchPin extends BasePin {
 
 /* Favorites Update */
 
-function favoritePin(userId, pin) {
+function favoriteElasticSearchPin(userId, pin) {
     // Create Pins
     const id = pin.id;
 
@@ -115,7 +113,7 @@ function favoritePin(userId, pin) {
     return rp(req);
 };
 
-function unfavoritePin(userId, pin) {
+function unfavoriteElasticSearchPin(userId, pin) {
     // Create Pins
     const id = pin.id;
 
@@ -147,7 +145,7 @@ function unfavoritePin(userId, pin) {
 
 /* Likes Update */
 
-function likePin(userId, pin) {
+function likeElasticSearchPin(userId, pin) {
     // Create Pins
     const id = pin.id;
 
@@ -174,7 +172,7 @@ function likePin(userId, pin) {
     return rp(req);
 };
 
-function unlikePin(userId, pin) {
+function unlikeElasticSearchPin(userId, pin) {
     // Create Pins
     const id = pin.id;
 
@@ -206,41 +204,41 @@ function unlikePin(userId, pin) {
 
 /* Add & Remove Update */
 
-function upsertPin(pin) {
+function upsertElasticSearchPin(pin) {
     // Create Pins
-    const uri = faissUri + "/add"
+    const id = pin.id;
+
+    const index = "pins";
+    const command = "_doc";
+    const uri = prefixSearchIndex(index) + "/" + command + "/" + id;
+
     const options = {
-        method: 'POST',
+        method: 'PUT',
         uri,
         json: true, // Automatically stringifies the body to JSON
+        auth: config.elastiSearch.auth
     };
 
     //debugger
-    const req = Object.assign({}, options, {
-        body: {
-            id: pin.id,
-            title: pin.title,
-            description: pin.description
-        }
-    });
+    const req = Object.assign({}, options, { body: pin });
     //console.log(req);
     return rp(req);
 };
 
-function removePin(id) {
-    const uri = faissUri + "/remove"
+function removeElasticSearchPin(id) {
+    const index = "pins";
+    const command = "_doc";
+    const uri = prefixSearchIndex(index) + "/" + command + "/" + id;
+
     const options = {
         method: 'DELETE',
         uri,
         json: true, // Automatically stringifies the body to JSON
+        auth: config.elastiSearch.auth
     };
 
     //debugger
-    const req = Object.assign({}, options, {
-        body: {
-            id
-        }
-    });
+    const req = Object.assign({}, options);
     //console.log(req);
     return rp(req);
 };

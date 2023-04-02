@@ -28,10 +28,10 @@ export function emit(event, pin, options) {
       break;
     case "search:save":
     case "search:update":
-      //upsertPin(pin);
+      upsertPin(pin);
       break;
     case "search:remove":
-      //deletePin(pin);
+      deletePin(pin);
       break;
   }
 }

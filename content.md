@@ -1,6 +1,6 @@
 Bugs/priority:
 
-update faiss search on create pin
+add / remove / update faiss search on create pin
 mobile x scrolling issue
 Multi pin post
 Modal save favorite with naming and quick button tab with search watch page
@@ -243,3 +243,6 @@ https://www.cnn.com/2023/01/18/politics/debt-ceiling-deadline-congress/index.htm
 While Treasury Secretary Janet Yellen doesn’t expect the US to default on its debt before early June, Congress has to get serious about negotiating a solution, which is not expected to be easy.
 
 6/30/23
+
+
+
