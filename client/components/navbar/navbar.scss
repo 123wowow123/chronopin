@@ -15,6 +15,11 @@
     height: 34px;
     margin-right: 0;
     border: var(--header-search-bg-color);
+    background-color: transparent !important;
+
+    .fa-user {
+        font-size: 1.85rem;
+    }
 }
 
 .navbar-form {

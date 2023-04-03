@@ -3,7 +3,6 @@ Bugs/priority:
 mobile x scrolling issue
 Multi pin post
 Modal save favorite with naming and quick button tab with search watch page
-Add generic profile icon for logged in user
 
 fix pin overlap issue
 Affliate buy link with price scrape
@@ -244,4 +243,6 @@ While Treasury Secretary Janet Yellen doesn’t expect the US to default on its 
 6/30/23
 
 
+https://twitter.com/EponymouslyAnon/status/1641849547235131403
 
+https://twitter.com/lawhon_sam/status/1641848266810617856
