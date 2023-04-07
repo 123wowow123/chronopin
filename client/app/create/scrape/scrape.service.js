@@ -84,6 +84,7 @@
 
             this.setPin = (thisPin, pin) => {
                 thisPin.id = pin.id;
+                thisPin.parentId = pin.parentId;
                 thisPin.sourceUrl = pin.sourceUrl;
                 thisPin.title = pin.title;
                 thisPin.description = pin.description;
@@ -130,6 +131,7 @@
 
                 let newPin = {
                     id: pin.id,
+                    parentId: pin.parentId,
                     title: pin.title,
                     description: pin.description,
                     sourceUrl: pin.sourceUrl,

@@ -56,7 +56,8 @@ function executeCreateSP() {
             DECLARE @queryCountNext INT;
 
             DECLARE @tempPinsTbl TABLE(
-              id                    INT       NOT NULL,
+              id                     INT       NOT NULL,
+              parentId               INT,
               title                  NVARCHAR(1024),
               description            NVARCHAR(4000),
               sourceUrl              NVARCHAR(4000),

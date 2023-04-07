@@ -43,6 +43,7 @@ function executeCreateSP() {
   let sql = `
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
             @id                 INT,
+            @parentId           INT,
             @title              NVARCHAR(1024),
             @description        NVARCHAR(4000),
             @sourceUrl          NVARCHAR(4000),
@@ -64,6 +65,7 @@ function executeCreateSP() {
 
             UPDATE [dbo].[Pin]
             SET
+              parentId = @parentId,
               title = @title,
               description = @description,
               sourceUrl = @sourceUrl,

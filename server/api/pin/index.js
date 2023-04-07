@@ -9,6 +9,9 @@ const router = express.Router();
 router.get('/', auth.tryGetUser(), controller.index);
 router.post('/', auth.isAuthenticated(), controller.create);
 
+// Get Thread
+router.get('/thread/:id', auth.tryGetUser(), controller.getThreadPins);
+
 // Search Pins
 router.get('/search', auth.tryGetUser(), controller.searchPins);
 router.get('/autocomplete', auth.tryGetUser(), controller.autocompletePins);

@@ -54,7 +54,8 @@ function executeCreateSP() {
             SET NOCOUNT ON;
 
             DECLARE @tempPinsTbl TABLE(
-              id                    INT       NOT NULL,
+              id                     INT       NOT NULL,
+              parentId               INT,
               title                  NVARCHAR(1024),
               description            NVARCHAR(4000),
               sourceUrl              NVARCHAR(4000),
@@ -92,6 +93,7 @@ function executeCreateSP() {
             INSERT INTO @tempPinsTbl
               SELECT
                 [Pin].[id],
+                [Pin].[parentId],
                 [Pin].[title],
                 [Pin].[description],
                 [Pin].[sourceUrl],
@@ -150,6 +152,7 @@ function executeCreateSP() {
               GROUP BY [Pin].[utcCreatedDateTime],
                 [Pin].[utcUpdatedDateTime],
                 [Pin].[id],
+                [Pin].[parentId],
                 [Pin].[title],
                 [Pin].[description],
                 [Pin].[address],

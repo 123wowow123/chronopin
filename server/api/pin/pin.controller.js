@@ -93,6 +93,16 @@ export function index(req, res) {
     .catch(response.handleError(res));
 }
 
+// Gets a list of Pins in Thread
+export function getThreadPins(req, res) {
+  let pinId = +req.params.id;
+
+  return Pins.getThreadPins(pinId)
+    // .then(paginationHeader.setPaginationHeader(res, req))
+    .then(response.withResult(res))
+    .catch(response.handleError(res));
+}
+
 // Gets a single Pin from the DB
 export function show(req, res) {
   let pinId = +req.params.id,

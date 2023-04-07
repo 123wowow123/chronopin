@@ -7,6 +7,7 @@ export function createPinMSSQL(pin, userId) {
             return new Promise(function (resolve, reject) {
                 const StoredProcedureName = 'CreatePin';
                 let request = new mssql.Request(conn)
+                    .input('parentId', mssql.Int, pin.parentId)
                     .input('title', mssql.NVarChar(1024), pin.title)
                     .input('description', mssql.NVarChar(4000), pin.description)
                     .input('sourceUrl', mssql.NVarChar(4000), pin.sourceUrl)

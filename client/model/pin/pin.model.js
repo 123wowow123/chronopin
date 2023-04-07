@@ -9,6 +9,7 @@
     // user, userId, media
     let prop = [
       'id',
+      'parentId',
       'title',
       'description',
       'sourceUrl',

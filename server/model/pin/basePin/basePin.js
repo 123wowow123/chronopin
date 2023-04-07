@@ -9,6 +9,7 @@ import {
 // media
 export const BasePinProp = [
     'id',
+    'parentId',
     'title',
     'description',
     'sourceUrl',

@@ -98,9 +98,6 @@
             this.nextParam = this.getLinkHeader(res.data.linkHeader, "next");
             return res;
           })
-          .then(res => {
-            return res;
-          })
           .catch(err => {
             throw err;
           })

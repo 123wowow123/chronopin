@@ -43,6 +43,7 @@ function executeCreateTable() {
         CREATE TABLE [dbo].[${TableName}]
         (
             id INT PRIMARY KEY NOT NULL IDENTITY,
+            parentId INT,
             title NVARCHAR(1024) NOT NULL,
             description NVARCHAR(4000),
             sourceUrl NVARCHAR(4000),
@@ -61,6 +62,7 @@ function executeCreateTable() {
         );
 
         CREATE INDEX IX_UtcStartDateTime ON [dbo].[${TableName}] (utcStartDateTime); 
+        CREATE INDEX parentId ON [dbo].[${TableName}] (parentId); 
         `;
 
   return cp.getConnection()

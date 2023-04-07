@@ -1,8 +1,9 @@
 Bugs/priority:
 
 mobile x scrolling issue
-Multi pin post
+Multi pin post (thread by author)(response thread) - recursive thread query
 Modal save favorite with naming and quick button tab with search watch page
+mobile screen going into pin scrolls to middle of screen issue
 
 fix pin overlap issue
 Affliate buy link with price scrape
@@ -246,3 +247,11 @@ While Treasury Secretary Janet Yellen doesn’t expect the US to default on its 
 https://twitter.com/EponymouslyAnon/status/1641849547235131403
 
 https://twitter.com/lawhon_sam/status/1641848266810617856
+
+
+https://www.motortrend.com/news/2020-winnebago-solis-camper/
+
+
+https://www.polydrops.com/aerodynamics
+
+https://www.motortrend.com/news/2025-rivian-adventure-van-electric-off-road-overland-camper-rv/

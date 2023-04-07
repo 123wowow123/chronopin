@@ -22,6 +22,7 @@
               if (commentUrl) {
                 let $el = $(createHTML(commentUrl));
                 elem.empty().append($el);
+                resolve();
               }
             });
           });

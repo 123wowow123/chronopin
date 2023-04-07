@@ -6,10 +6,23 @@
 
           <form name="pinForm" class="create__form" ng-submit="$ctrl.submitPin($ctrl.pin)" novalidate>
             <h4>{{$ctrl.title}}</h4>
-            <div style="position: relative;">
-              <a href="{{$ctrl.pin.sourceUrl}}" target="_blank" class="btn btn-link --open-source-link">Open Link <span
-                  class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a>
-              <fieldset ng-disabled="$ctrl.formDisabled">
+
+            <fieldset ng-disabled="$ctrl.formDisabled">
+
+              <div class="form-group" ng-if="$ctrl.mode === 'respond' ">
+                <label for="respondPinTitle" class="control-label">Responding to Pin</label>
+                <input name="respondPinTitle" class="form-control" id="respondPinTitle" ng-model="$ctrl.respondPinTitle"
+                  required disabled>
+              </div>
+              <div class="form-group" ng-class="{'has-error' : pinForm.parentId.$invalid && pinForm.parentId.$dirty}"
+                  ng-if="$ctrl.mode === 'respond' ">
+                  <label for="parentId" class="control-label">Responding to Pin</label>
+                  <input name="parentId" type="number" class="form-control" id="parentId" ng-model="$ctrl.pin.parentId"
+                    required disabled>
+                </div>
+              <div style="position: relative;">
+                <a href="{{$ctrl.pin.sourceUrl}}" target="_blank" class="btn btn-link --open-source-link">Open Link
+                  <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a>
                 <div class="form-group"
                   ng-class="{'has-error' : pinForm.sourceUrl.$invalid && pinForm.sourceUrl.$dirty}">
                   <label for="sourceUrl" class="control-label">Source Url</label>
@@ -147,89 +160,88 @@
                   </div>
                 </div>
 
-              </fieldset>
-            </div>
-          </form>
-
+            </fieldset>
         </div>
+        </form>
+
       </div>
     </div>
-    <div class="create__loader" ng-if="$ctrl.formDisabled">
-      <loader-pac></loader-pac>
-    </div>
-
+  </div>
+  <div class="create__loader" ng-if="$ctrl.formDisabled">
+    <loader-pac></loader-pac>
   </div>
 
-  <!-- Switch between image / iframe / tweets -->
-  <div class="grid__media container --create-pin" ng-switch="$ctrl.pin.type">
+</div>
 
-    <div class="create__select-image" ng-switch-when="web">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12 clearfix">
-            <ul class="image-dynamic-grid" angular-grid="$ctrl.pin.media" gutter-size="10" grid-width="250"
-              refresh-on-img-load="false">
-              <li data-ng-repeat="medium in $ctrl.pin.media" class="image-grid"
-                ng-class="{'image-grid--selected': medium === $ctrl.pin.selectedMedia }"
-                ng-click="$ctrl.selectImage(medium)" ng-switch="medium.type">
+<!-- Switch between image / iframe / tweets -->
+<div class="grid__media container --create-pin" ng-switch="$ctrl.pin.type">
 
-                <img ng-src="{{medium.originalUrl}}" class="image-grid__image"
-                  data-actual-width="{{medium.originalWidth}}" data-actual-height="{{medium.originalHeight}}"
-                  title="{{medium.originalWidth}} x {{medium.originalHeight}}" ng-switch-when="1" />
+  <div class="create__select-image" ng-switch-when="web">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 clearfix">
+          <ul class="image-dynamic-grid" angular-grid="$ctrl.pin.media" gutter-size="10" grid-width="250"
+            refresh-on-img-load="false">
+            <li data-ng-repeat="medium in $ctrl.pin.media" class="image-grid"
+              ng-class="{'image-grid--selected': medium === $ctrl.pin.selectedMedia }"
+              ng-click="$ctrl.selectImage(medium)" ng-switch="medium.type">
 
-                <twitter-pin ng-switch-when="2" html="{{medium.html}}">
-                </twitter-pin>
-  
+              <img ng-src="{{medium.originalUrl}}" class="image-grid__image"
+                data-actual-width="{{medium.originalWidth}}" data-actual-height="{{medium.originalHeight}}"
+                title="{{medium.originalWidth}} x {{medium.originalHeight}}" ng-switch-when="1" />
 
-                <div class='embed-container --margin-top-bottom' ng-switch-when="3" ng-bind-html="medium.html"
-                  data-actual-width="400" data-actual-height="270">
-                </div>
+              <twitter-pin ng-switch-when="2" html="{{medium.html}}">
+              </twitter-pin>
 
-                <!-- Just need detection cover-->
-                <div class="image-grid__cover_button" ng-hide="medium.type === 1 || medium === $ctrl.pin.selectedMedia">
-                </div>
 
-              </li>
-            </ul>
-          </div>
+              <div class='embed-container --margin-top-bottom' ng-switch-when="3" ng-bind-html="medium.html"
+                data-actual-width="400" data-actual-height="270">
+              </div>
+
+              <!-- Just need detection cover-->
+              <div class="image-grid__cover_button" ng-hide="medium.type === 1 || medium === $ctrl.pin.selectedMedia">
+              </div>
+
+            </li>
+          </ul>
         </div>
       </div>
     </div>
+  </div>
 
-    <twitter-pin ng-switch-when="twitter" html="{{$ctrl.pin.selectedMedia.html}}">
-    </twitter-pin>
+  <twitter-pin ng-switch-when="twitter" html="{{$ctrl.pin.selectedMedia.html}}">
+  </twitter-pin>
 
-    <div class='embed-container --margin-top-bottom' ng-switch-when="youtube"
-      ng-bind-html="$ctrl.pin.selectedMedia.html">
-    </div>
+  <div class='embed-container --margin-top-bottom' ng-switch-when="youtube" ng-bind-html="$ctrl.pin.selectedMedia.html">
+  </div>
 
-    <!-- <div ng-switch-default>
+  <!-- <div ng-switch-default>
         </div> -->
 
-  </div>
+</div>
 
 
-  <div class="create__footer--bg" ng-class="{'create__footer--transparent': !$ctrl.showCreateFooter}" overlap
-    on-overlap="$ctrl.checkOverlapped($event)" overlap-id="'create__text-form'">
-  </div>
+<div class="create__footer--bg" ng-class="{'create__footer--transparent': !$ctrl.showCreateFooter}" overlap
+  on-overlap="$ctrl.checkOverlapped($event)" overlap-id="'create__text-form'">
+</div>
 
-  <div id="create-footer" class="create__footer" ng-if="$ctrl.showCreateFooter">
-    <div class="container">
+<div id="create-footer" class="create__footer" ng-if="$ctrl.showCreateFooter">
+  <div class="container">
 
-      <div class="row">
-        <div class="col-sm-4">
-          <button type="button" class="btn btn-primary" ng-click="$ctrl.scrapePage($ctrl.pin.sourceUrl)"
-            ng-if="$ctrl.mode === 'edit'">Scrape</button>
-        </div>
-        <div class="col-sm-8">
-          <div class="pull-right">
-            <button type="button" class="btn btn-warning" ui-sref="main">Cancel</button>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <button type="button" class="btn btn-primary" ng-click="$ctrl.scrapePage($ctrl.pin.sourceUrl)"
+          ng-if="$ctrl.mode === 'edit'">Scrape</button>
+      </div>
+      <div class="col-sm-8">
+        <div class="pull-right">
+          <button type="button" class="btn btn-warning" ui-sref="main">Cancel</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
         </div>
       </div>
-
     </div>
+
   </div>
+</div>
 
 </div>

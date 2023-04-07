@@ -72,13 +72,25 @@
 
     $onInit() {
       let id = this.$stateParams.id;
-      this.mode = id ? "edit" : 'create';
+      let respondId = this.$stateParams.respondId;
+      this.mode = id ? "edit" : respondId ? 'respond' : 'create';
       if (this.mode === 'edit' && id !== undefined) {
         this.enableForm(false);
         //this.$http.get('/api/pins/' + id)
         this.pinWebService.get(id)
           .then(res => {
             return this.scrapeService.setPin(this.pin, res.data);
+          })
+          .finally(() => {
+            this.enableForm(true);
+          });
+      } else if (this.mode === 'respond' && respondId !== undefined) {
+        this.enableForm(false);
+        this.pinWebService.get(+respondId)
+          .then(res => {
+            this.respondPinTitle = _.get(res, 'data.title');
+            this.pin.parentId = +respondId;
+            return this.pin;
           })
           .finally(() => {
             this.enableForm(true);
@@ -182,7 +194,7 @@
     }
 
     resetForScrape() {
-      let newPin = _.pick(this.pin, ['sourceUrl', 'allDay']);
+      let newPin = _.pick(this.pin, ['sourceUrl', 'allDay', 'parentId']);
       this.scrapeService
         .setPin(this.pin, newPin);
       return this;

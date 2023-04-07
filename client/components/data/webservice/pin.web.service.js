@@ -60,6 +60,23 @@
          });
        };
 
+       this.thread = function(pinId) {
+        return $http({
+          url: '/api/pins/thread/' + pinId,
+          method: 'GET',
+          transformResponse: _appendTransform($http.defaults.transformResponse,
+            function(data, headersGetter, status) {
+              let linkHeader,
+                header = headersGetter();
+              if (header.link) {
+                linkHeader = linkHeaderParser.parse(header.link);
+                data.linkHeader = linkHeader;
+              }
+              return data;
+            })
+        });
+      };
+
        this.autocomplete = function(data) {
         return $http({
           url: '/api/pins/autocomplete',

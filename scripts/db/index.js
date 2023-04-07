@@ -40,6 +40,8 @@ const createGetAllUsersSP = createSP.createGetAllUsersSP;
 const createGetDateTimesByStartEndDateSP = createSP.createGetDateTimesByStartEndDateSP;
 const createGetPinsWithFavoriteAndLikeArrayNextSP = createSP.createGetPinsWithFavoriteAndLikeArrayNextSP;
 const createSearchPinSP = createSP.createSearchPinSP;
+const createGetPinAuthorThreadSP = createSP.createGetPinAuthorThreadSP;
+const createGetPinAuthorThreadWithFavoriteAndLikeSP = createSP.createGetPinAuthorThreadWithFavoriteAndLikeSP;
 
 // Returns Single Result
 const createGetPinWithFavoriteAndLikeSP = createSP.createGetPinWithFavoriteAndLikeSP;
@@ -135,6 +137,8 @@ function execute() {
         createGetDateTimesByStartEndDateSP,
         createGetPinsWithFavoriteAndLikeArrayNextSP,
         createSearchPinSP,
+        createGetPinAuthorThreadSP,
+        createGetPinAuthorThreadWithFavoriteAndLikeSP,
 
         // Returns Single Result
         createGetPinWithFavoriteAndLikeSP,

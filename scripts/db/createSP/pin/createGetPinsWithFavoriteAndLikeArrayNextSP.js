@@ -53,6 +53,7 @@ BEGIN
 
     SELECT
       [Pin].[id],
+      [Pin].[parentId],
       [Pin].[title],
       [Pin].[description],
       [Pin].[sourceUrl],

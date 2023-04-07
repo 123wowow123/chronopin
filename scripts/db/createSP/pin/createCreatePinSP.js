@@ -42,6 +42,7 @@ function executeDropSP() {
 function executeCreateSP() {
   let sql = `
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
+            @parentId           INT,
             @title              NVARCHAR(1024),
             @description        NVARCHAR(4000),
             @sourceUrl          NVARCHAR(4000),
@@ -74,6 +75,7 @@ function executeCreateSP() {
             END
 
             INSERT INTO [dbo].[Pin] (
+              parentId,
               title,
               description,
               sourceUrl,
@@ -90,6 +92,7 @@ function executeCreateSP() {
               utcUpdatedDateTime,
               utcDeletedDateTime)
             VALUES (
+              @parentId,
               @title,
               @description,
               @sourceUrl,

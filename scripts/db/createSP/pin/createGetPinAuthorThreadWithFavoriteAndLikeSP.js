@@ -1,6 +1,6 @@
 let cp;
 let Request;
-const StoredProcedureName = 'GetPinByIds';
+const StoredProcedureName = 'GetPinByIdsAndOrderedByThread';
 
 // Setup
 module.exports.setup = function(connectionPool) {
@@ -22,8 +22,6 @@ function dropCreateSP() {
   console.log(`Begin drop & create ${StoredProcedureName}`);
   return Promise.resolve('begin query')
     .then(executeDropSP)
-    .then(executeDropTVP)
-    .then(executeCreateTVP)
     .then(executeCreateSP)
     .then(res => {
       return `Create ${StoredProcedureName} completed`;
@@ -41,37 +39,24 @@ function executeDropSP() {
     });
 }
 
-function executeDropTVP() {
-  let sql = `
-        DROP TYPE IF EXISTS tIds;
-        `;
-  return cp.getConnection()
-    .then(conn => {
-      return new Request(conn).batch(sql);
-    });
-}
-
-function executeCreateTVP() {
-  let sql = `
-        CREATE TYPE tIds AS Table (
-          tId INT
-        );
-        `;
-  return cp.getConnection()
-    .then(conn => {
-      return new Request(conn).batch(sql);
-    });
-}
-
 function executeCreateSP() {
   let sql = `
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
-           @TableIds AS tIds READONLY,
-           @queryCount   INT OUTPUT
+          @pinId INT
         AS
         BEGIN
 
         SET NOCOUNT ON;
+
+        DECLARE @tIdsOrderedTbl TABLE(
+          id                     INT       NOT NULL,
+          parentId               INT,
+          userId                 INT       NOT NULL,
+          reverseOrder           INT       NOT NULL
+        );
+
+        INSERT INTO @tIdsOrderedTbl
+        EXEC [dbo].[GetPinAuthorThread] @pinId;
 
         SELECT
               [Pin].[id],
@@ -107,11 +92,13 @@ function executeCreateSP() {
               [Media].[authorUrl]                        AS [Media.authorUrl],
               [Media].[html]                             AS [Media.html],
 
-              [User].[userName]                          AS [User.userName]
+              [User].[userName]                          AS [User.userName],
+
+              paramTableIds.reverseOrder                 AS reverseOrder
 
             FROM [dbo].[Pin] AS [Pin]
-              JOIN @TableIds AS paramTableIds
-                ON [Pin].[id] = paramTableIds.tId
+              JOIN @tIdsOrderedTbl AS paramTableIds
+                ON [Pin].[id] = paramTableIds.id
               LEFT JOIN [dbo].[PinMedium] AS [Media.PinMedium]
                 ON [Pin].[id] = [Media.PinMedium].[PinId]
               LEFT JOIN [dbo].[Medium] AS [Media]
@@ -154,11 +141,11 @@ function executeCreateSP() {
               [Media].[authorUrl],
               [Media].[html],
 
-              [User].[userName]
+              [User].[userName],
 
-              ORDER BY [Pin].[utcStartDateTime];
+              paramTableIds.reverseOrder
 
-              SET @queryCount = @@ROWCOUNT;
+              -- ORDER BY paramTableIds.reverseOrder DESC;
         END;
         `;
 

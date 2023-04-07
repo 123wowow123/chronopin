@@ -1,0 +1,55 @@
+.thread-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+
+    h2 {
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+    .response-thread-btn {
+        border: none;
+        padding: 0;
+    }
+}
+
+.thread-list {
+    padding: 0;
+    background: var(--grid-panel-bg-color);
+
+    li {
+        margin: 0;
+
+        &.current {
+            background-color: var(--primary-highlight-bg-color);
+        }
+
+        &:hover {
+            background-color: var(--primary-highlight-plus-bg-color);
+        }
+
+        a {
+            padding: 15px;
+            color: inherit;
+            text-decoration: none;
+            width: 100%;
+            display: inline-block;
+
+            h3 {
+                width: 100%;
+                overflow: hidden;
+                font-size: 1.4rem;
+                margin: 0;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+
+                .index-count {
+                    padding-right: 10px;
+                }
+            }
+        }
+
+    }
+
+}

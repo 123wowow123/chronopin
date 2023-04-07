@@ -89,11 +89,15 @@
 
   </div>
 
-  <div class="pin__comment">
-
-    <comment comment-url="{{'/pin/'+$ctrl.pin.id}}" title="{{$ctrl.pin.title}}"></comment>
-
+  <div class="pin__right_pannel">
+    <div class="pin__thread">
+      <thread ng-if="!!$ctrl.pin.id" pin-id="$ctrl.pin.id" config="$ctrl.appConfig"></thread>
+    </div>
+    <div class="pin__comment">
+      <comment comment-url="{{'/pin/'+$ctrl.pin.id}}" title="{{$ctrl.pin.title}}"></comment>
+    </div>
   </div>
+
 
 </div>
 

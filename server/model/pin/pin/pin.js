@@ -16,7 +16,8 @@ const prop = BasePinProp.concat(
     'favoriteCount',
     'likeCount',
     'hasFavorite',
-    'hasLike'
+    'hasLike',
+    'reverseOrder'
   ]
 );
 
@@ -212,6 +213,7 @@ function _updateMSSQL(pin, userId) {
         const StoredProcedureName = 'UpdatePin';
         let request = new mssql.Request(conn)
           .input('id', mssql.Int, pin.id)
+          .input('parentId', mssql.Int, pin.parentId)
           .input('title', mssql.NVarChar(1024), pin.title)
           .input('description', mssql.NVarChar(4000), pin.description)
           .input('sourceUrl', mssql.NVarChar(4000), pin.sourceUrl)

@@ -76,6 +76,7 @@ function executeCreateSP() {
 
         SELECT
               [Pin].[id],
+              [Pin].[parentId],
               [Pin].[title],
               [Pin].[description],
               [Pin].[sourceUrl],
@@ -129,6 +130,7 @@ function executeCreateSP() {
             GROUP BY [Pin].[utcCreatedDateTime],
               [Pin].[utcUpdatedDateTime],
               [Pin].[id],
+              [Pin].[parentId],
               [Pin].[title],
               [Pin].[description],
               [Pin].[address],

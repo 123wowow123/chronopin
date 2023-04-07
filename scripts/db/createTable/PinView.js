@@ -45,6 +45,7 @@ function executeCreateTable() {
           AS
         SELECT
             id,
+            parentId,
             title,
             description,
             sourceUrl,

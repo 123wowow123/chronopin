@@ -36,7 +36,16 @@ export default class Pins extends BasePins {
     return this;
   }
 
-  static mapPinsMedia(pinRows) {
+  setPinsSortBy(pins, sortId) {
+    if (Array.isArray(pins)) {
+      this.pins = Pins.mapPinsMedia(pins, sortId);
+    } else {
+      throw "arg is not an array";
+    }
+    return this;
+  }
+
+  static mapPinsMedia(pinRows, sortId) {
     let pins = [],
       groupedPinRows;
 
@@ -50,11 +59,18 @@ export default class Pins extends BasePins {
       pins.push(pin);
     });
 
-    // need to sort properly
-    pins = _.chain(pins)
-      .sortBy('id')
-      .sortBy('utcStartDateTime')
-      .value();
+    if (sortId) {
+      pins = _.chain(pins)
+        .sortBy('sortId')
+        .value();
+    } else {
+      // need to sort properly
+      pins = _.chain(pins)
+        .sortBy('id')
+        .sortBy('utcStartDateTime')
+        .value();
+    }
+
 
     return pins;
   }
@@ -62,7 +78,6 @@ export default class Pins extends BasePins {
   static queryForwardByDate(fromDateTime, userId, lastPinId, pageSize) {
     return _queryMSSQLPins(true, fromDateTime, userId, lastPinId, 0, pageSize)
       .then(res => {
-        //console.log('queryForwardByDate', res);
         return new Pins(res);
       });
   }
@@ -70,7 +85,6 @@ export default class Pins extends BasePins {
   static queryBackwardByDate(fromDateTime, userId, lastPinId, pageSize) {
     return _queryMSSQLPins(false, fromDateTime, userId, lastPinId, 0, pageSize)
       .then(res => {
-        //console.log('queryBackwardByDate', res);
         return new Pins(res);
       });
   }
@@ -78,7 +92,6 @@ export default class Pins extends BasePins {
   static queryInitialByDate(fromDateTime, userId, pageSizePrev, pageSizeNext) {
     return _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext)
       .then(res => {
-        //console.log('queryInitialByDate', res);
         return new Pins(res);
       });
   }
@@ -86,7 +99,6 @@ export default class Pins extends BasePins {
   static queryForwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize) {
     return _queryMSSQLPinsFilterByHasFavorite(true, fromDateTime, userId, lastPinId, 0, pageSize)
       .then(res => {
-        //console.log('queryForwardByDateFilterByHasFavorite', res);
         return new Pins(res);
       });
   }
@@ -94,7 +106,6 @@ export default class Pins extends BasePins {
   static queryBackwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize) {
     return _queryMSSQLPinsFilterByHasFavorite(false, fromDateTime, userId, lastPinId, 0, pageSize)
       .then(res => {
-        //console.log('queryBackwardByDateFilterByHasFavorite', res);
         return new Pins(res);
       });
   }
@@ -102,7 +113,6 @@ export default class Pins extends BasePins {
   static queryInitialByDateFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext) {
     return _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext)
       .then(res => {
-        //console.log('queryInitialByDateFilterByHasFavorite', res);
         return new Pins(res);
       });
   }
@@ -110,7 +120,6 @@ export default class Pins extends BasePins {
   static queryPinByIds(pins) {
     return _queryMSSQPinByIds(pins)
       .then(res => {
-        //console.log('queryInitialByDateFilterByHasFavorite', res);
         return new Pins(res);
       });
   }
@@ -118,8 +127,14 @@ export default class Pins extends BasePins {
   static queryPinByIdsFilterByHasFavorite(pins, userId) {
     return _queryPinByIdsFilterByHasFavorite(pins, userId)
       .then(res => {
-        //console.log('queryInitialByDateFilterByHasFavorite', res);
         return new Pins(res);
+      });
+  }
+
+  static getThreadPins(pinId) {
+    return _queryPinByIdsAndOrderedByThread(pinId)
+      .then(res => {
+        return new Pins().setPinsSortBy(res.pins, 'reverseOrder');
       });
   }
 
@@ -410,6 +425,28 @@ function _queryPinByIdsFilterByHasFavorite(pins, userId) {
             resolve({
               pins: res.recordset,
               queryCount: queryCount
+            });
+          });
+      });
+    });
+}
+
+function _queryPinByIdsAndOrderedByThread(pinId) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise(function (resolve, reject) {
+        const StoredProcedureName = 'GetPinByIdsAndOrderedByThread';
+
+        let request = new mssql.Request(conn)
+          .input('pinId', mssql.Int, pinId);
+
+        request.execute(`[dbo].[${StoredProcedureName}]`,
+          function (err, res, returnValue, affected) {
+            if (err) {
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+            }
+            resolve({
+              pins: res.recordset
             });
           });
       });
