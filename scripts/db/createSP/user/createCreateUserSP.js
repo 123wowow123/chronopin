@@ -49,7 +49,7 @@ function executeCreateSP() {
             @locale        NCHAR(5),
             @facebookId    NVARCHAR(25),
             @googleId      NVARCHAR(25),
-            @pictureUrl    NVARCHAR(255),
+            @pictureUrl    NVARCHAR(1000),
             @fbUpdatedTime DATETIME2(7),
             @fbVerified        BIT,
             @googleVerified    BIT,
