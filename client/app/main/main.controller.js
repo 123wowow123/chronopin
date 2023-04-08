@@ -70,7 +70,6 @@
       });
 
       // this.$transitions.onEnter({ to: 'main' }, (transition) => {
-      //   debugger
       //   if (angular.isNumber(this.pinApp.bagsYOffset)) {
       //     setTimeout(() => {
       //       this.scrollYTo(this.pinApp.bagsYOffset)
