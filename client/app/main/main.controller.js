@@ -66,7 +66,6 @@
       this.loading = true;
 
       this.$transitions.onExit({ from: 'main' }, (transition) => {
-        //debugger
         this.pinApp.bagsYOffset = this.captureYOffset();
       });
 
@@ -126,7 +125,6 @@
     }
 
     updateInView(event) {
-      //debugger;
       event.target.bag.inView = event.inView;
     };
 
@@ -149,9 +147,6 @@
     }
 
     _setMainBagsWithPins(data) {
-      // debugger;
-      let dateTime = new Date();
-
       this.pinApp.mergeBagsWithDateTimes(data.dateTimes);
       this.pinApp.mergeBagsWithPins(data.pins);
 
@@ -168,7 +163,6 @@
 
     _registerInfinitScroll() {
       const scrolledBottom = this.$scope.$on('scrolled:bottom', (event, args) => {
-        //debugger;
         if (!!this.gettingNext || !this.nextParam) {
           return;
         }
@@ -194,7 +188,6 @@
       });
 
       const scrolledTop = this.$scope.$on('scrolled:top', (event, args) => {
-        //debugger;
         if (!!this.gettingPrev || !this.prevParam) {
           return;
         }
