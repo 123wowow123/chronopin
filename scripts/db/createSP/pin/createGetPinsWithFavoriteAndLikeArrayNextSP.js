@@ -52,57 +52,9 @@ BEGIN
   SET NOCOUNT ON;
 
     SELECT
-      [Pin].[id],
-      [Pin].[parentId],
-      [Pin].[title],
-      [Pin].[description],
-      [Pin].[sourceUrl],
-      [Pin].[address],
-      [Pin].[priceLowerBound],
-      [Pin].[priceUpperBound],
-      [Pin].[price],
-      [Pin].[tip],
-      [Pin].[utcStartDateTime],
-      [Pin].[utcEndDateTime],
-      [Pin].[allDay],
-      [Pin].[userId],
-      [Pin].[utcCreatedDateTime],
-      [Pin].[utcUpdatedDateTime],
+      [Pin].*
 
-      [Media].[id]                                                                AS [Media.id],
-      [Media].[thumbName]                                                         AS [Media.thumbName],
-      [Media].[thumbWidth]                                                        AS [Media.thumbWidth],
-      [Media].[thumbHeight]                                                       AS [Media.thumbHeight],
-      [Media].[originalUrl]                                                       AS [Media.originalUrl],
-      [Media].[originalWidth]                                                     AS [Media.originalWidth],
-      [Media].[originalHeight]                                                    AS [Media.originalHeight],
-      [Media].[type]                                                              AS [Media.type],
-
-      [Media].[authorName]                       AS [Media.authorName],
-      [Media].[authorUrl]                        AS [Media.authorUrl],
-      [Media].[html]                             AS [Media.html],
-
-      [Favorites].[userId]                                                        AS [Favorites.userId],
-      [Favorites].[utcCreatedDateTime]                                            AS [Favorites.utcCreatedDateTime],
-      [Favorites].[utcUpdatedDateTime]                                            AS [Favorites.utcUpdatedDateTime],
-
-      [Likes].[userId]                                                            AS [Likes.userId],
-      [Likes].[utcCreatedDateTime]                                                AS [Likes.utcCreatedDateTime],
-      [Likes].[utcUpdatedDateTime]                                                AS [Likes.utcUpdatedDateTime],
-      [Likes].[like]                                                              AS [Likes.like],
-
-      [User].[userName]                          AS [User.userName]
-
-    FROM [dbo].[Pin]
-      LEFT JOIN [dbo].[PinMedium] AS [Media.PinMedium]
-        ON [Pin].[id] = [Media.PinMedium].[PinId]
-      LEFT JOIN [dbo].[Medium] AS [Media]
-        ON [Media].[id] = [Media.PinMedium].[MediumId] AND [Media.PinMedium].[utcDeletedDateTime] IS NULL
-      LEFT JOIN [dbo].[Favorite] AS [Favorites]
-        ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL
-      LEFT JOIN [dbo].[Like] AS [Likes] ON [Pin].[id] = [Likes].[PinId] AND [Likes].[utcDeletedDateTime] IS NULL
-      LEFT JOIN [dbo].[User] AS [User]
-       ON [Pin].[userId] = [User].[id]
+    FROM [dbo].[PinBaseView] AS [Pin]
 
     WHERE [Pin].[utcStartDateTime] > @fromDateTime
       OR ([Pin].[utcStartDateTime] = @fromDateTime

@@ -74,6 +74,7 @@ function executeCreateSP() {
               utcUpdatedDateTime     DATETIME2,
               favoriteCount          INT,
               likeCount              INT,
+              rootThread             BIT,
               hasFavorite            BIT,
               hasLike                BIT,
               [Media.id]             INT,

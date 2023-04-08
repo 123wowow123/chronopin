@@ -72,9 +72,10 @@ function executeCreateSP() {
               utcUpdatedDateTime     DATETIME2,
               favoriteCount          INT,
               likeCount              INT,
+              rootThread             BIT,
               hasFavorite            BIT,
               hasLike                BIT,
-              [Media.id]            INT,
+              [Media.id]             INT,
               [Media.thumbName]      NVARCHAR(4000),
               [Media.thumbWidth]     INT,
               [Media.thumbHeight]    INT,
@@ -87,7 +88,7 @@ function executeCreateSP() {
               [Media.authorUrl]      NVARCHAR(4000),
               [Media.html]           NVARCHAR(4000),
 
-              [User.userName]      NVARCHAR(255)
+              [User.userName]        NVARCHAR(255)
             );
 
             INSERT INTO @tempPinsTbl
@@ -110,8 +111,9 @@ function executeCreateSP() {
                 [Pin].[utcCreatedDateTime],
                 [Pin].[utcUpdatedDateTime],
 
-                COUNT([Favorites].[id])                                                    AS [favoriteCount],
-                COUNT([Likes].[id])                                                        AS [likeCount],
+                [Pin].[favoriteCount],
+                [Pin].[likeCount],
+                [Pin].[rootThread],
 
                 (CAST((SELECT COUNT(f.id)
                        FROM [Favorite] AS f
@@ -120,66 +122,27 @@ function executeCreateSP() {
                        FROM [Like] AS l
                        WHERE l.userId = @userId AND l.PinId = [Pin].[id] AND l.utcDeletedDateTime IS NULL) AS BIT)) AS [hasLike],
 
-                [Media].[id]                                                                AS [Media.id],
-                [Media].[thumbName]                                                         AS [Media.thumbName],
-                [Media].[thumbWidth]                                                        AS [Media.thumbWidth],
-                [Media].[thumbHeight]                                                       AS [Media.thumbHeight],
-                [Media].[originalUrl]                                                       AS [Media.originalUrl],
-                [Media].[originalWidth]                                                     AS [Media.originalWidth],
-                [Media].[originalHeight]                                                    AS [Media.originalHeight],
-                [Media].[type]                                                              AS [Media.type],
+                [Media.id],
+                [Media.thumbName],
+                [Media.thumbWidth],
+                [Media.thumbHeight],
+                [Media.originalUrl],
+                [Media.originalWidth],
+                [Media.originalHeight],
+                [Media.type],
 
-                [Media].[authorName]                       AS [Media.authorName],
-                [Media].[authorUrl]                        AS [Media.authorUrl],
-                [Media].[html]                             AS [Media.html],
+                [Media.authorName],
+                [Media.authorUrl],
+                [Media.html],
 
-                [User].[userName]                          AS [User.userName]
+               [User.userName]
 
-              FROM [dbo].[Pin]
-                LEFT JOIN [dbo].[PinMedium] AS [Media.PinMedium]
-                  ON [Pin].[id] = [Media.PinMedium].[PinId]
-                LEFT JOIN [dbo].[Medium] AS [Media]
-                  ON [Media].[id] = [Media.PinMedium].[MediumId] AND [Media.PinMedium].[utcDeletedDateTime] IS NULL
+              FROM [dbo].[PinBaseView] AS [Pin]
                 INNER JOIN [dbo].[Favorite] AS [Favorites]
                   ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL AND [Favorites].[userId] = @userId
-                LEFT JOIN [dbo].[Like] AS [Likes] ON [Pin].[id] = [Likes].[PinId] AND [Likes].[utcDeletedDateTime] IS NULL
-                LEFT JOIN [dbo].[User] AS [User]
-                  ON [Pin].[userId] = [User].[id]
 
               WHERE [Pin].[utcStartDateTime] > @fromDateTime OR ([Pin].[utcStartDateTime] = @fromDateTime AND [Pin].[id] > @lastPinId)
                 AND [Pin].[utcDeletedDateTime] IS NULL
-                AND [Favorites].[userId] = @userId
-
-              GROUP BY [Pin].[utcCreatedDateTime],
-                [Pin].[utcUpdatedDateTime],
-                [Pin].[id],
-                [Pin].[parentId],
-                [Pin].[title],
-                [Pin].[description],
-                [Pin].[address],
-                [Pin].[sourceUrl],
-                [Pin].[priceLowerBound],
-                [Pin].[priceUpperBound],
-                [Pin].[price],
-                [Pin].[tip],
-                [Pin].[utcStartDateTime],
-                [Pin].[utcEndDateTime],
-                [Pin].[allDay],
-                [Pin].[userId],
-                [Media].[id],
-                [Media].[thumbName],
-                [Media].[thumbWidth],
-                [Media].[thumbHeight],
-                [Media].[originalUrl],
-                [Media].[originalWidth],
-                [Media].[originalHeight],
-                [Media].[type],
-
-                [Media].[authorName],
-                [Media].[authorUrl],
-                [Media].[html],
-
-                [User].[userName]
 
               ORDER BY [Pin].[utcStartDateTime], [Pin].[id]
                 OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY

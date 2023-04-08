@@ -26,6 +26,7 @@ const createDateTime = createTable.createDateTime;
 
 // Create View
 const createPinView = createTable.createPinView;
+const createPinBaseView = createTable.createPinBaseView;
 
 // Retruns Collection
 const createGetPinsWithFavoriteAndLikeNextSP = createSP.createGetPinsWithFavoriteAndLikeNextSP;
@@ -123,6 +124,7 @@ function execute() {
 
         // Views
         createPinView,
+        createPinBaseView,
 
         // Retruns Collection
         createGetPinsWithFavoriteAndLikeNextSP,

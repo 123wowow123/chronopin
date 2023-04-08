@@ -91,11 +91,18 @@
             template: `
             <article class="grid__panel">
             <!-- <p ng-if="$ctrl.Auth.isAdmin()">{{$ctrl.pin.searchScore}}</p> -->
-            <div class="headline-above">
-                <time class="" datetime="{{$ctrl.pin.utcCreatedDateTime}}">{{$ctrl.pin.utcCreatedDateTime | date : "MM/dd/yyyy
-                    'at' h:mm a" | lowercase}}</time>
-                <span class="rubric">{{$ctrl.pin.user.userName}}</span>
-            </div>
+            <a class="headline-above" ui-sref="pin({id:$ctrl.pin.id})">
+                <div>
+                    <time class="" datetime="{{$ctrl.pin.utcCreatedDateTime}}">{{$ctrl.pin.utcCreatedDateTime | date :
+                        "MM/dd/yyyy
+                        'at' h:mm a" | lowercase}}</time>
+                    <span class="rubric">{{$ctrl.pin.user.userName}}</span>
+                </div>
+                <div>
+                    <span class="thread-icon" ng-if="!!$ctrl.pin.parentId" title="Part of thread"></span>
+                    <span class="thread-icon" ng-if="!!$ctrl.pin.rootThread" title="Firt Pin in a thread"></span>
+                </div>
+            </a>
             <h4 class="grid__heading">
                 <a class="grid__heading_link" ui-sref="pin({id:$ctrl.pin.id})">
                     {{$ctrl.pin.title}}
@@ -147,7 +154,6 @@
                         </div>
         
                         <div class="grid__comment_count">
-                            <!-- <a href="{{'/pin/'+$ctrl.pin.id}}" data-isso-id="{{'/pin/'+$ctrl.pin.id}}"></a> -->
                             <comment-count comment-url="{{'/pin/'+$ctrl.pin.id}}"></comment-count>
                         </div>
         

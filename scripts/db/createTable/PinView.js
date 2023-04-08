@@ -45,23 +45,6 @@ function executeCreateTable() {
           AS
         SELECT
             id,
-            parentId,
-            title,
-            description,
-            sourceUrl,
-            address,
-            priceLowerBound,
-            priceUpperBound,
-            price,
-            tip,
-            utcStartDateTime,
-            utcEndDateTime,
-            allDay,
-            userId,
-            utcCreatedDateTime,
-            utcUpdatedDateTime,
-            utcDeletedDateTime,
-
             LEFT(title, 64) AS searchTitle,
             LEFT(description, 64) AS searchDescription
 
@@ -78,7 +61,6 @@ function executeCreateTableIndex() {
   let sql = `
         CREATE UNIQUE CLUSTERED INDEX IX_Id ON [dbo].[${TableName}] (id); 
         CREATE INDEX IX_SearchDescription ON [dbo].[${TableName}] (searchDescription);
-        CREATE INDEX IX_UtcStartDateTime ON [dbo].[${TableName}] (utcStartDateTime); 
         CREATE INDEX IX_SearchTitle ON [dbo].[${TableName}] (searchTitle); 
         `;
 

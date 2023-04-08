@@ -30,6 +30,7 @@ function dropCreateTable() {
 function executeDropTable() {
   let sql = `
         DROP VIEW IF EXISTS [dbo].[PinView];
+        DROP VIEW IF EXISTS [dbo].[PinBaseView];
         DROP TABLE IF EXISTS [dbo].[${TableName}];
         `;
   return cp.getConnection()

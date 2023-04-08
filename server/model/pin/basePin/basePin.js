@@ -10,6 +10,7 @@ import {
 export const BasePinProp = [
     'id',
     'parentId',
+    'rootThread',
     'title',
     'description',
     'sourceUrl',

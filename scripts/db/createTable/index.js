@@ -19,6 +19,8 @@ module.exports.setup = function(connectionPool) {
   require('./DateTime').setup(cp);
 
   require('./PinView').setup(cp);
+
+  require('./PinBaseView').setup(cp);
 };
 
 // Retruns Table
@@ -36,3 +38,4 @@ module.exports.createDateTime = require('./DateTime').createDateTime;
 
 // Retruns View
 module.exports.createPinView = require('./PinView').createPinView;
+module.exports.createPinBaseView = require('./PinBaseView').createPinBaseView;

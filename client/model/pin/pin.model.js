@@ -33,6 +33,7 @@
       'allDay',
       'favoriteCount',
       'likeCount',
+      'rootThread',
       'hasFavorite',
       'hasLike',
       'searchScore'
