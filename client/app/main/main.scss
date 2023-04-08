@@ -467,11 +467,12 @@ $bag-font-color: var(--bag-text-color);
 }
 
 .headline-above {
-    color: var(--grid-post-date-text-color);
+    color: var(--grid-post-date-text-color) !important;
     font-size: 10px;
     margin-bottom: 4px;
     display: flex;
     justify-content: space-between;
+    text-decoration: none !important;
 }
 
 
