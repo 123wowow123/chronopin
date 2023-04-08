@@ -30,6 +30,7 @@ angular.module('chronopinNodeApp')
             });
             $log.log('top', top);
           }
+          
         });
       }
 

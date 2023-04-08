@@ -1,9 +1,7 @@
 Bugs/priority:
 
 mobile x scrolling issue
-Multi pin post (thread by author)(response thread) - recursive thread query
 Modal save favorite with naming and quick button tab with search watch page
-mobile screen going into pin scrolls to middle of screen issue
 back button does not refresh pin comment
 
 fix pin overlap issue

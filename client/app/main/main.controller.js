@@ -224,6 +224,7 @@
           });
       });
 
+      this._unRegisterInfinitScroll();
       this.registeredListeners['scrolled:bottom'] = scrolledBottom;
       this.registeredListeners['scrolled:top'] = scrolledTop;
 
