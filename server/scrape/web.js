@@ -39,6 +39,20 @@ export function _webScrape(pageUrl) {
       return page.setDefaultNavigationTimeout(defaultNavigationWait);
     })
     .then(() => {
+      return page.setRequestInterception(true)
+    })
+    .then(() => {
+      page.on('request', req => {
+        if (req.isNavigationRequest() && req.frame() === page.mainFrame() && req.url() !== pageUrl) {
+          // no redirect chain means the navigation is caused by setting `location.href`
+          req.respond(req.redirectChain().length
+            ? { body: '' } // prevent 301/302 redirect
+            : { status: 204 } // prevent navigation by js
+          )
+        } else {
+          req.continue()
+        }
+      });
       return page.goto(pageUrl); //, { "waitUntil": ["load", "networkidle0"] }
     })
     .catch((err) => {
@@ -54,12 +68,14 @@ export function _webScrape(pageUrl) {
         .catch(e => {
           return e;
         });
-    }).then(() => {
+    })
+    .then(() => {
       return page.evaluate(() => {
         window.scrollTo(0, window.document.body.scrollHeight);
       });
-    }).then(() => {
-      return page.waitForSelector(`iframe[src*="www.youtube.com"]`, { timeout: 2000 })
+    })
+    .then(() => {
+      return page.waitForSelector(`iframe[src*="www.youtube.com"]`, { timeout: 1000 })
         .catch(e => {
           return e;
         });

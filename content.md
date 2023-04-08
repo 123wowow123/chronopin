@@ -1,26 +1,31 @@
 Bugs/priority:
 
+Bugs:
 mobile x scrolling issue
-Modal save favorite with naming and quick button tab with search watch page
 back button does not refresh pin comment
-
 fix pin overlap issue
-Affliate buy link with price scrape
-pin use markup editor
 changing username needs to sync to comment
+Fix header data load
+referal menu issue on mobile
 
+Features:
+pin use markup editor / tldr block +++
+Affliate buy link with price scrape ++
+Modal save favorite with naming/tag and quick button tab with search watch page ++
+Tab for "For you" & "Following"
+Add Poll feature
+Preview create pin
+
+Cleanup:
 test comment db backup
 Sanitize all post values
 client validate url before submitting
-Fix header data load
 
+R&D:
 Research hashtag
 create non headless browser
 
 Each pin has main image, video quick link
-
-"depends on hardware", "reveals more information" tags on comment feature
-Tab for "For you" & "Following"
 
 Group into months, quarters
 Compact view to show more pins 
