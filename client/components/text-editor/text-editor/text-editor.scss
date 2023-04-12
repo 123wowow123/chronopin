@@ -1,8 +1,12 @@
+$mobile-breakpoint: 651px;
+
 #editorjs {
     background-color: var(--header-search-bg-color) !important;
     border-color: var(--header-search-bg-color);
     border-radius: 4px !important;
     color: #333333;
+    z-index: 5;
+    position: relative;
 }
 
 
@@ -20,20 +24,34 @@
 
     .ce-block__content,
     .ce-toolbar__content {
-        max-width: 100% !important;
-        margin-left: 60px;
+        @media only screen and (min-width : $mobile-breakpoint) {
+            max-width: 100% !important;
+            margin-left: 60px;
+        }
+    }
+
+    .codex-editor--narrow .ce-toolbar__actions {
+        @media only screen and (min-width : $mobile-breakpoint) {
+            max-width: initial !important;
+            margin-left: initial;
+        }
     }
 
     .ce-toolbar {
 
         .ce-toolbar__plus,
         .ce-toolbar__settings-btn {
-            color: var(--primary-color);
+            color: var(--primary-bg-color);
+
+            @media only screen and (min-width : $mobile-breakpoint) {
+                color: var(--primary-color);
+            }
+
         }
     }
 
     .cdx-block {
         max-width: 100% !important;
     }
-    
+
 }
