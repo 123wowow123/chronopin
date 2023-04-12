@@ -96,6 +96,7 @@
             this.enableForm(true);
           });
       }
+
     }
 
     selectImage(media) {

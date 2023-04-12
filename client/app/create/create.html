@@ -38,9 +38,7 @@
                 <div class="form-group"
                   ng-class="{'has-error' : pinForm.description.$invalid && pinForm.description.$dirty}">
                   <label for="description" class="control-label">Description</label>
-                  <textarea name="description" class="form-control" id="description" rows="5"
-                    placeholder="Tell everyone what the content is about" ng-model="$ctrl.pin.description"
-                    required></textarea>
+                  <text-editor ng-model="$ctrl.pin.description"></text-editor>
                 </div>
 
                 <div class="form-group" style="margin-bottom: 0;">

@@ -168,7 +168,7 @@
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : $ipad-landscape) {
+@media only screen and (max-width : ($ipad-portrait - 1)) {
   .image-dynamic-grid {
     @include grid-normalize-margin;
   }

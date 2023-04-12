@@ -1,6 +1,6 @@
 'use strict';
 
-(function() {
+(function () {
 
   class OverlapController {
 
@@ -22,7 +22,7 @@
       var KBPoint, KBRectangle, kbAssert, kbAssertExists, kbAssertNonNegative, kbAssertNotZero, kbAssertNumber, kbAssertPositive, kbElementArea, kbForAll, kbGetAbsolutePositionRectangle,
         __slice = [].slice;
 
-      kbAssert = function(condition, message) {
+      kbAssert = function (condition, message) {
         if (message == null) {
           message = 'unspecified error';
         }
@@ -32,50 +32,50 @@
         return true;
       };
 
-      kbAssertExists = function() {
+      kbAssertExists = function () {
         var values;
         values = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
-        return kbForall(values, function(x) {
+        return kbForall(values, function (x) {
           return kbAssert(x != null, 'value should not be null or undefined');
         });
       };
 
-      kbAssertNumber = function() {
+      kbAssertNumber = function () {
         var values;
         values = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
-        return kbForAll(values, function(x) {
+        return kbForAll(values, function (x) {
           return kbAssert(typeof x === 'number', 'the value should be a number');
         });
       };
 
-      kbAssertNotZero = function() {
+      kbAssertNotZero = function () {
         var values;
         values = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
-        return kbForAll(values, function(x) {
+        return kbForAll(values, function (x) {
           kbAssertNumber(x);
           return kbAssert(x !== 0, 'the value should not be zero');
         });
       };
 
-      kbAssertNonNegative = function() {
+      kbAssertNonNegative = function () {
         var values;
         values = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
-        return kbForAll(values, function(x) {
+        return kbForAll(values, function (x) {
           kbAssertNumber(x);
           return kbAssert(x >= 0, 'the value should not be negative');
         });
       };
 
-      kbAssertPositive = function() {
+      kbAssertPositive = function () {
         var values;
         values = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
-        return kbForAll(values, function(x) {
+        return kbForAll(values, function (x) {
           kbAssertNumber(x);
           return kbAssert(x > 0, 'the value should be positive');
         });
       };
 
-      kbForAll = function(array, predicate) {
+      kbForAll = function (array, predicate) {
         var element, result, _i, _len;
         result = true;
         for (_i = 0, _len = array.length; _i < _len; _i++) {
@@ -88,7 +88,7 @@
         return result;
       };
 
-      KBPoint = (function() {
+      KBPoint = (function () {
         function KBPoint(x, y) {
           this.x = x;
           this.y = y;
@@ -96,43 +96,43 @@
           kbAssertNumber(this.y);
         }
 
-        KBPoint.prototype.horizontalDistanceTo = function(another) {
+        KBPoint.prototype.horizontalDistanceTo = function (another) {
           return Math.abs(this.x - another.x);
         };
 
-        KBPoint.prototype.verticalDistanceTo = function(another) {
+        KBPoint.prototype.verticalDistanceTo = function (another) {
           return Math.abs(this.y - another.y);
         };
 
-        KBPoint.prototype.distanceTo = function(another) {
+        KBPoint.prototype.distanceTo = function (another) {
           return Math.sqrt(Math.pow(KBPoint.horizontalDistanceTo(another, 2)) + Math.pow(KBPoint.verticalDistanceTo(another, 2)));
         };
 
-        KBPoint.prototype.withOffsetX = function(xOffset) {
+        KBPoint.prototype.withOffsetX = function (xOffset) {
           kbAssertPositive(xOffset);
           return new KBPoint(this.x + xOffset, this.y);
         };
 
-        KBPoint.prototype.withOffsetY = function(yOffset) {
+        KBPoint.prototype.withOffsetY = function (yOffset) {
           kbAssertPositive(yOffset);
           return new KBPoint(this.x, this.y + yOffset);
         };
 
-        KBPoint.prototype.withOffset = function(xOffset, yOffset) {
+        KBPoint.prototype.withOffset = function (xOffset, yOffset) {
           kbAssertNumber(xOffset);
           kbAssertNumber(yOffset);
           return this.withOffsetX(xOffset).withOffsetY(yOffset);
         };
 
-        KBPoint.prototype.atLeastFarAs = function(another) {
+        KBPoint.prototype.atLeastFarAs = function (another) {
           return this.x >= another.x && this.y >= another.y;
         };
 
-        KBPoint.prototype.atMostFarAs = function(another) {
+        KBPoint.prototype.atMostFarAs = function (another) {
           return this.x <= another.x && this.y <= another.y;
         };
 
-        KBPoint.prototype.equalTo = function(another, epsilon) {
+        KBPoint.prototype.equalTo = function (another, epsilon) {
           if (epsilon == null) {
             epsilon = 0;
           }
@@ -143,7 +143,7 @@
           }
         };
 
-        KBPoint.prototype.asString = function() {
+        KBPoint.prototype.asString = function () {
           return '(' + this.x + ', ' + this.y + ')';
         };
 
@@ -151,68 +151,68 @@
 
       })();
 
-      KBRectangle = (function() {
+      KBRectangle = (function () {
         function KBRectangle(topLeft, bottomRight) {
           this.topLeft = topLeft;
           this.bottomRight = bottomRight;
         }
 
-        KBRectangle.fromPoints = function(pointTopLeft, pointBottomRight) {
+        KBRectangle.fromPoints = function (pointTopLeft, pointBottomRight) {
           kbAssert(pointTopLeft.atMostFarAs(pointBottomRight), "The first point should be 'less' than the second."); // jshint ignore:line
           return new KBRectangle(pointTopLeft, pointBottomRight);
         };
 
-        KBRectangle.fromOriginAndSize = function(origin, width, height) {
+        KBRectangle.fromOriginAndSize = function (origin, width, height) {
           kbAssertPositive(width);
           kbAssertPositive(height);
           return KBRectangle.fromPoints(origin, origin.withOffset(width, height));
         };
 
-        KBRectangle.fromCoordinatesAndSize = function(x, y, width, height) {
+        KBRectangle.fromCoordinatesAndSize = function (x, y, width, height) {
           return KBRectangle.fromOriginAndSize(new KBPoint(x, y), width, height);
         };
 
-        KBRectangle.fromCoordinates = function(x1, y1, x2, y2) {
+        KBRectangle.fromCoordinates = function (x1, y1, x2, y2) {
           return KBRectangle.fromPoints(new KBPoint(x1, y1), new KBPoint(x2, y2));
         };
 
-        KBRectangle.empty = function() {
+        KBRectangle.empty = function () {
           return KBRectangle.fromCoordinates(0, 0, 0, 0);
         };
 
-        KBRectangle.prototype.withOffsetX = function(xOffset) {
+        KBRectangle.prototype.withOffsetX = function (xOffset) {
           return new KBRectangle(this.topLeft.withOffsetX(xOffset), this.bottomRight.withOffsetX(xOffset));
         };
 
-        KBRectangle.prototype.withOffsetY = function(yOffset) {
+        KBRectangle.prototype.withOffsetY = function (yOffset) {
           return new KBRectangle(this.topLeft.withOffsetY(yOffset), this.bottomRight.withOffsetY(yOffset));
         };
 
-        KBRectangle.prototype.withOffset = function(xOffset, yOffset) {
+        KBRectangle.prototype.withOffset = function (xOffset, yOffset) {
           return this.withOffsetX(xOffset).withOffsetY(yOffset);
         };
 
-        KBRectangle.prototype.width = function() {
+        KBRectangle.prototype.width = function () {
           return this.topLeft.horizontalDistanceTo(this.bottomRight);
         };
 
-        KBRectangle.prototype.height = function() {
+        KBRectangle.prototype.height = function () {
           return this.topLeft.verticalDistanceTo(this.bottomRight);
         };
 
-        KBRectangle.prototype.area = function() {
+        KBRectangle.prototype.area = function () {
           return this.width() * this.height();
         };
 
-        KBRectangle.prototype.containsPoint = function(point) {
+        KBRectangle.prototype.containsPoint = function (point) {
           return point.x >= this.topLeft.x && point.x <= this.bottomRight.x && point.y >= this.topLeft.y && point.y <= this.bottomRight.y;
         };
 
-        KBRectangle.prototype.containsRectangle = function(rectangle) {
+        KBRectangle.prototype.containsRectangle = function (rectangle) {
           return this.topLeft.atMostFarAs(rectangle.topLeft && this.bottomRight.atLeastFarAs(rectangle.bottomRight));
         };
 
-        KBRectangle.prototype.intersectionWith = function(another) {
+        KBRectangle.prototype.intersectionWith = function (another) {
           var x1, x2, y1, y2;
           x1 = Math.max(this.topLeft.x, another.topLeft.x);
           y1 = Math.max(this.topLeft.y, another.topLeft.y);
@@ -225,15 +225,15 @@
           }
         };
 
-        KBRectangle.prototype.equalTo = function(another) {
+        KBRectangle.prototype.equalTo = function (another) {
           return this.topLeft.equalTo(another.topLeft) && this.bottomRight.equalTo(another.bottomRight);
         };
 
-        KBRectangle.prototype.isIntersectingWith = function(another) {
+        KBRectangle.prototype.isIntersectingWith = function (another) {
           return !this.intersectionWith(another).equalTo(KBRectangle.empty() || this.containsPoint(new KBPoint(0, 0)) && another.containsPoint(new KBPoint(0, 0)));
         };
 
-        KBRectangle.prototype.asString = function() {
+        KBRectangle.prototype.asString = function () {
           return 'Rectangle Origin (top-left): (' + this.topLeft.x + ', ' + this.topLeft.y + ') End (bottom-right): (' + this.bottomRight.x + ', ' + this.bottomRight.y + ').';
         };
 
@@ -257,11 +257,19 @@
     }
 
     kbGetAbsolutePositionRectangle(jQueryElement) {
-      var height, offset, width;
-      offset = jQueryElement.offset();
-      width = jQueryElement.width();
-      height = jQueryElement.height();
-      return this.KBRectangle.fromCoordinatesAndSize(offset.left, offset.top, width, height);
+      function getInnerHeight(elm) {
+        var computed = getComputedStyle(elm),
+          padding = parseInt(computed.paddingTop) + parseInt(computed.paddingBottom);
+
+        return elm.clientHeight - padding
+      }
+
+      let height, topx, leftx, width;
+      topx = jQueryElement[0].offsetTop;
+      leftx = jQueryElement[0].offsetLeft;
+      width = jQueryElement[0].offsetWidth;;
+      height = getInnerHeight(jQueryElement[0]);
+      return this.KBRectangle.fromCoordinatesAndSize(leftx, topx, width, height);
     }
 
     kbElementArea(jQueryElement) {

@@ -57,9 +57,7 @@
             <i class='fa fa-external-link'></i>
           </a>
         </h4>
-        <div class="grid__description">
-          {{$ctrl.pin.description}}
-        </div>
+        <div class="grid__description" ng-bind-html="$ctrl.pin.description"></div>
         <div class="grid__footer">
           <div class="grid__price" ng-class="{'grid__price--negative': $ctrl.pin.price < 0}" ng-if="$ctrl.pin.price">
             {{$ctrl.pin.price | money}}</div>

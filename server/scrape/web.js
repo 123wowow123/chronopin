@@ -42,6 +42,7 @@ export function _webScrape(pageUrl) {
       return page.setRequestInterception(true)
     })
     .then(() => {
+      /// https://github.com/puppeteer/puppeteer/issues/823
       page.on('request', req => {
         if (req.isNavigationRequest() && req.frame() === page.mainFrame() && req.url() !== pageUrl) {
           // no redirect chain means the navigation is caused by setting `location.href`

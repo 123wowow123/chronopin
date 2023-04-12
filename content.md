@@ -7,14 +7,16 @@ fix pin overlap issue
 changing username needs to sync to comment
 Fix header data load
 referal menu issue on mobile
+phone view time control not grouped by date control ++
 
 Features:
-pin use markup editor / tldr block +++
 Affliate buy link with price scrape ++
 Modal save favorite with naming/tag and quick button tab with search watch page ++
+location ++
 Tab for "For you" & "Following"
 Add Poll feature
 Preview create pin
+Upload image for pin and pin content
 
 Cleanup:
 test comment db backup
@@ -259,3 +261,6 @@ https://www.motortrend.com/news/2020-winnebago-solis-camper/
 https://www.polydrops.com/aerodynamics
 
 https://www.motortrend.com/news/2025-rivian-adventure-van-electric-off-road-overland-camper-rv/
+
+https://www.cnbc.com/2023/04/11/ford-to-build-ev-manufacturing-hub-in-canada.html
+

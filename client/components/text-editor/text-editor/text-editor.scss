@@ -1,0 +1,39 @@
+#editorjs {
+    background-color: var(--header-search-bg-color) !important;
+    border-color: var(--header-search-bg-color);
+    border-radius: 4px !important;
+    color: #333333;
+}
+
+
+.codex-editor {
+
+    .ce-block--selected {
+        .ce-block__content {
+            background: var(--primary-highlight-plus-bg-color);
+        }
+    }
+
+    .ce-block__content {
+        color: var(--header-search-color);
+    }
+
+    .ce-block__content,
+    .ce-toolbar__content {
+        max-width: 100% !important;
+        margin-left: 60px;
+    }
+
+    .ce-toolbar {
+
+        .ce-toolbar__plus,
+        .ce-toolbar__settings-btn {
+            color: var(--primary-color);
+        }
+    }
+
+    .cdx-block {
+        max-width: 100% !important;
+    }
+    
+}

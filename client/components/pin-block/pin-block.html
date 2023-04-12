@@ -48,9 +48,7 @@
                 <span ng-if="$ctrl.pin.utcEndDateTime">to {{$ctrl.pin.utcEndDateTime | date:"MM/dd/yyyy h:mma"}}</span>
             </em>
         </div>
-        <div class="grid__description">
-            {{$ctrl.pin.description}}
-        </div>
+        <div class="grid__description" ng-bind-html="$ctrl.pin.description"></div>
         <div class="grid__footer">
             <div class="grid__price" ng-class="{'grid__price--negative': $ctrl.pin.price < 0}" ng-if="$ctrl.pin.price">
                 {{$ctrl.pin.price | money}}</div>

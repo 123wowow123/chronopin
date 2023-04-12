@@ -29,6 +29,18 @@ $nav-offset-collapsed: 102px;
 
 $timeline-content-color: #555;
 
+::selection {
+  background-color: var(--text-highlight-color);
+}
+
+// input:-webkit-autofill,
+// input:-webkit-autofill:hover, 
+// input:-webkit-autofill:focus {
+//   // border: 1px solid green;
+//   -webkit-text-fill-color: green;
+//   -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+//   transition: background-color 5000s ease-in-out 
+// }
 
 // fonts
 @font-face {
@@ -89,7 +101,18 @@ img {
   border-radius: 4px !important;
 }
 
+button {
+  &:hover, &:focus {
+    outline-color: var(--primary-link-color) !important;
+  }
+}
+
 .btn-default {
+
+  &:hover {
+    color: var(--header-search-color) !important;
+    background: var(--primary-highlight-plus-bg-color) !important;
+  }
 
   .input-group-btn &,
   .input-group & {
@@ -164,6 +187,7 @@ img {
 @import '../components/oauth-buttons/oauth-buttons.scss';
 @import '../components/pin-block/pin-block.scss';
 @import '../components/scroll/scroll/scroll.scss';
+@import '../components/text-editor/text-editor/text-editor.scss';
 @import '../components/thread/thread/thread.scss';
 @import '../components/time-block/time-block.scss';
 /* endinject */
