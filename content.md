@@ -8,6 +8,8 @@ changing username needs to sync to comment
 Fix header data load
 referal menu issue on mobile
 phone view time control not grouped by date control ++
+create/edit/respond page needs to have auth guard +
+remove facebook like +
 
 Features:
 Affliate buy link with price scrape ++
