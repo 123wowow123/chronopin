@@ -17,6 +17,7 @@ Tab for "For you" & "Following"
 Add Poll feature
 Preview create pin
 Upload image for pin and pin content
+Buy keywords in content that will turn into link where it will show map and nearest location when you can buy product.
 
 Cleanup:
 test comment db backup

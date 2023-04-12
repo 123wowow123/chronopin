@@ -2,7 +2,7 @@
 
 (function () {
   angular.module('chronopinNodeApp.textEditor')
-    .directive('textEditor', function (EditorJS, Util, Auth, $timeout) {
+    .directive('textEditor', function (EditorJS, Auth, $timeout) {
 
       function createHTML() {
         return (`
@@ -19,8 +19,8 @@
         scope: {},
         link: function postLink(scope, elem, attrs, ngModel) {
           function setModelInstance(editor, edjsParser) {
-            scope.editor.editor = editor;
-            scope.editor.parser = new edjsParser();
+            scope.editor = editor;
+            scope.parser = new edjsParser();
           };
 
           function render() {
@@ -29,13 +29,13 @@
           };
 
           function updateContent(htmlContent) {
-            scope.editor.editor.blocks.renderFromHTML(htmlContent);
+            scope.editor.blocks.renderFromHTML(htmlContent);
           };
 
           render();
 
           ngModel.$render = function () {
-            if (_.get(scope, 'editor.editor.blocks')) {
+            if (_.get(scope, 'editor.blocks')) {
               updateContent(ngModel.$viewValue);
             }
           };
@@ -44,13 +44,12 @@
             resolve();
             EditorJS.ayncInit(
               "editorjs",
-              Util.getNormalizedDescription(ngModel.$viewValue),
 
               (api, event) => {
-                if (scope.editor.editor) {
-                  scope.editor.editor.save()
+                if (scope.editor) {
+                  scope.editor.save()
                     .then((htmlContent) => {
-                      ngModel.$setViewValue(scope.editor.parser.parse(htmlContent));
+                      ngModel.$setViewValue(scope.parser.parse(htmlContent));
                       scope.$apply();
                     });
                 }
@@ -58,7 +57,9 @@
 
               .then(({ editor, edjsParser }) => {
                 setModelInstance(editor, edjsParser);
-                updateContent(ngModel.$viewValue);
+                if (ngModel.$viewValue) {
+                  updateContent(ngModel.$viewValue);
+                }
               });
 
           });

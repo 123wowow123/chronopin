@@ -1,8 +1,6 @@
 'use strict';
 
 (function () {
-  const delayParse = 500;
-
   class TextEditorJS {
     constructor() {
       this.initalized;
@@ -42,7 +40,7 @@
         });
     }
 
-    ayncInit(elId, data, onChange) {
+    ayncInit(elId, onChange) {
       return this.queue
         .then(() => {
           if (!this.initalized) {
@@ -59,7 +57,7 @@
 
                 //readOnly: true,
 
-                data,
+                // data,
 
                 tools: {
                   header: {
