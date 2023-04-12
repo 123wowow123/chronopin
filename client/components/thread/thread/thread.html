@@ -1,7 +1,7 @@
 <div>
     <div class="thread-header">
         <h2 >Thread</h2>
-        <a class="btn btn-link response-thread-btn" ui-sref="respond({respondId:thread.pinId})">Response to this Pin</a>
+        <a class="btn btn-link response-thread-btn" ui-sref="respond({respondId:thread.pinId})" ng-if="thread.isLoggedIn()">Respond to this Pin</a>
     </div>
 
     <ul class="thread-list">

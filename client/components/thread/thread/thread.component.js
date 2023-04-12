@@ -7,6 +7,7 @@
 
         constructor($scope, Auth, pinWebService) {
             this.Auth = Auth;
+            this.isLoggedIn = Auth.isLoggedIn;
             this.pinWebService = pinWebService;
         }
 

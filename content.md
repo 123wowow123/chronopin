@@ -10,16 +10,23 @@ referal menu issue on mobile
 phone view time control not grouped by date control ++
 create/edit/respond page needs to have auth guard +
 remove facebook like +
+mobile view pin scrolls to bottom ++
+
+Should show page not found and redirect to home? https://chronopin.com/pin/178
 
 Features:
 Affliate buy link with price scrape ++
 Modal save favorite with naming/tag and quick button tab with search watch page ++
 location ++
+pin loading needs to remain the same index or search engine will have outdated urls +
 Tab for "For you" & "Following"
 Add Poll feature
 Preview create pin
 Upload image for pin and pin content
 Buy keywords in content that will turn into link where it will show map and nearest location when you can buy product.
+Google index sub pages: RSS, mRSS, and Atom 1.0
+https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap#rss
+
 
 Cleanup:
 test comment db backup

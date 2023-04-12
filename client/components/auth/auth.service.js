@@ -127,7 +127,6 @@
        * @return {Object|Promise}
        */
       getCurrentUser(callback) {
-
         var value = (currentUser.hasOwnProperty('$promise')) ?
           currentUser.$promise : currentUser;
         return $q.when(value)

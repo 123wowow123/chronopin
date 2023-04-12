@@ -258,7 +258,12 @@ $bag-font-color: var(--bag-text-color);
         align-items: center;
         justify-content: space-between;
         padding: 10px 0 0;
-        justify-content: flex-end;
+    }
+
+    &__footer-left {
+        display: flex;
+        gap: 12px;
+        align-items: center;
     }
 
     &__uploaded-date {
@@ -273,12 +278,43 @@ $bag-font-color: var(--bag-text-color);
     }
 
     &__price {
-        flex-grow: 1;
-        color: green;
+        flex-grow: 0;
+        color: #118C4F;
+        font-size: 15px;
 
         &--negative {
             color: brown;
         }
+    }
+
+    &__merchant {
+        flex-grow: 0;
+        display: flex;
+        justify-content: flex-start;
+
+        a {
+            display: inline-block;
+            overflow-y: hidden;
+        }
+
+        a+a {
+            margin-left: 10px;
+        }
+
+        .gamestop__merchant-link {
+            height: 31px;
+        }
+
+        .amazon__merchant-link {
+            height: 31px;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
     }
 
     &__favorite {
