@@ -99,7 +99,8 @@
               </a> -->
               <div class="merchant" ng-repeat="merchant in $ctrl.pin.merchants track by $index">
                 <a target="_blank" class="merchant generic__merchant-link" href="{{merchant.url}}" ng-if="!!merchant.url">
-                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  <!-- <i class="fa fa-shopping-cart" aria-hidden="true"></i> -->
+                  <span class="merchant-label" title="{{merchant.label}}">{{merchant.label}}</span>
                   <span class="merchant-price"
                     ng-class="{'grid__price--negative': $ctrl.pin.price < 0}">{{merchant.price
                     | money}}</span>

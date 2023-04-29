@@ -85,6 +85,7 @@ function executeCreateTable() {
               [User].[userName]                          AS [User.userName],
 
               [Merchant].[id]                           AS [Merchant.id],
+              [Merchant].[label]                        AS [Merchant.label],
               [Merchant].[url]                          AS [Merchant.url],
               [Merchant].[price]                        AS [Merchant.price]
 
@@ -134,6 +135,7 @@ function executeCreateTable() {
               [User].[userName],
 
               [Merchant].[id],
+              [Merchant].[label],
               [Merchant].[url],
               [Merchant].[price]
         `;

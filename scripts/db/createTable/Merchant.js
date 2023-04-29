@@ -44,6 +44,7 @@ function executeCreateTable() {
         (
             id INT PRIMARY KEY NOT NULL IDENTITY,
             pinId INT NOT NULL,
+            label NVARCHAR(1024),
             url NVARCHAR(1024),
             price DECIMAL(18,2)
         );

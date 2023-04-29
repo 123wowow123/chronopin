@@ -50,11 +50,11 @@ function executeCreateSP() {
 
             SELECT
             id,
-            [like],
-            userId,
-            pinId,
-            utcCreatedDateTime
-            FROM [dbo].[Like]
+            label,
+            url,
+            price,
+            pinId
+            FROM [dbo].[Merchant]
             WHERE id = @id;
 
           END;

@@ -10,6 +10,7 @@ import {
 //_pin, pinId
 let prop = [
   'id',
+  'label',
   'url',
   'price'
 ];
@@ -138,6 +139,7 @@ function _upsertMSSQL(merchant, pinId) {
         const StoredProcedureName = 'CreateMergeMerchant';
         let request = new mssql.Request(conn)
           .input('url', mssql.NVarChar(1024), merchant.url)
+          .input('label', mssql.NVarChar(1024), merchant.label)
           .input('price', mssql.Decimal(18, 2), merchant.price)
           .input('pinId', mssql.Int, pinId)
           .output('id', mssql.Int, merchant.id);

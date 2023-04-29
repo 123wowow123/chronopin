@@ -36,12 +36,12 @@ $grid-max-width-screen: $iphone-landscape / 2;
 }
 
 @mixin merchant {
-    height: 50px;
+    height: 65px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none !important;
 
     img {
@@ -282,6 +282,8 @@ $bag-font-color: var(--bag-text-color);
         display: flex;
         gap: 12px;
         align-items: center;
+        min-width: 0;
+        margin-right: 5px;
     }
 
     &__uploaded-date {
@@ -309,6 +311,8 @@ $bag-font-color: var(--bag-text-color);
         flex-grow: 0;
         display: flex;
         justify-content: flex-start;
+        width: 100%;
+        overflow-x: auto;
 
         a {
             display: inline-block;

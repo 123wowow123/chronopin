@@ -243,6 +243,7 @@
       }
 
       this.pin.merchants.push({
+        label: null,
         price: null,
         url: null
       })

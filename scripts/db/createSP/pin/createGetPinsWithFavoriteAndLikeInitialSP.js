@@ -93,6 +93,7 @@ function executeCreateSP() {
               [User.userName]        NVARCHAR(255),
 
               [Merchant.id]         INT,
+              [Merchant.label]      NVARCHAR(1000),
               [Merchant.url]        NVARCHAR(1000),
               [Merchant.price]      DECIMAL(18, 2)
             );

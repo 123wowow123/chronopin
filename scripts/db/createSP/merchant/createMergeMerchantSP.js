@@ -42,6 +42,7 @@ function executeDropSP() {
 function executeCreateSP() {
   let sql = `
   CREATE PROCEDURE [dbo].[${StoredProcedureName}]
+  @label              NVARCHAR(1024),
   @url                NVARCHAR(1024),
   @price              DECIMAL(18, 2),
   @pinId              INT,
@@ -61,11 +62,13 @@ BEGIN
     MERGE [dbo].[Merchant] AS r
     USING (
         VALUES (
+          @label,
           @url,
           @price,
           @pinId
         )
     ) AS foo (
+      label,
       url,
       price,
       pinId
@@ -73,11 +76,12 @@ BEGIN
     ON r.pinId = foo.pinId AND r.id = @id
     WHEN MATCHED THEN
       UPDATE SET
-        [url] = foo.[url],
+        label = foo.label,
+        url = foo.url,
         price = foo.price
     WHEN NOT MATCHED THEN
-      INSERT ([url], price, pinId)
-      VALUES (foo.[url], foo.price, foo.pinId)
+      INSERT (label, url, price, pinId)
+      VALUES (foo.label, foo.url, foo.price, foo.pinId)
     OUTPUT inserted.id
 
   ) AS Changes (Id);
