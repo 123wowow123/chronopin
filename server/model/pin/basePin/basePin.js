@@ -3,10 +3,12 @@
 import * as _ from 'lodash';
 import {
     Medium,
+    Merchant,
     User
 } from '../..';
 
 // media
+// merchants
 export const BasePinProp = [
     'id',
     'parentId',
@@ -57,6 +59,11 @@ export default class BasePin {
             this.media = _.get(pin, 'media', [])
                 .map(m => {
                     return new Medium(m, this);
+                });
+
+            this.merchants = _.get(pin, 'merchants', [])
+                .map(m => {
+                    return new Merchant(m, this);
                 });
 
         } else {
@@ -119,6 +126,24 @@ export default class BasePin {
         media.forEach(m => {
             this.addMedium(m);
         })
+        return this;
+    }
+
+    addMerchants(merchants) {
+        merchants.forEach(m => {
+            this.addMerchant(new Merchant(m));
+        })
+        return this;
+    }
+
+    addMerchant(merchant) {
+        if (merchant instanceof Merchant) {
+            merchant.setPin(this);
+            if (!this.merchants) { this.merchants = []; };
+            this.merchants.push(merchant);
+        } else {
+            throw "merchant not instance of Merchant";
+        }
         return this;
     }
 

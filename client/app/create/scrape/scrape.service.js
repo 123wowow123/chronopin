@@ -94,6 +94,7 @@
                 thisPin.end = pin.utcStartDateTime && new Date(pin.utcEndDateTime);
                 thisPin.allDay = pin.allDay;
                 thisPin.media = pin.media;
+                thisPin.merchants = pin.merchants;
 
                 thisPin.selectedMedia = _.get(pin, 'media[0]');
                 return this;
@@ -140,6 +141,7 @@
                     utcStartDateTime: startDateTime, // ISO 8601 with toJSON
                     utcEndDateTime: endDateTime,
                     allDay: allDay,
+                    merchants: pin.merchants,
                     media: [pin.selectedMedia]
                 };
                 return _.omitBy(newPin, _.isNull);

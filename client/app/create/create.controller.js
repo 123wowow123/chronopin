@@ -237,6 +237,21 @@
       return this;
     }
 
+    addMerchantPrice() {
+      if (!this.pin.merchants) {
+        this.pin.merchants = [];
+      }
+
+      this.pin.merchants.push({
+        price: null,
+        url: null
+      })
+    }
+
+    removeMerchantPrice(merchant) {
+      this.pin.merchants.splice(this.pin.merchants.indexOf(merchant), 1);
+    }
+
     _forceValidate() {
       angular.forEach(this.$scope.pinForm.$error.required, field => {
         field.$setDirty();

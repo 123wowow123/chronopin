@@ -389,10 +389,10 @@ module.exports = function(grunt) {
           cwd: '<%= yeoman.client %>',
           dest: '<%= yeoman.dist %>/<%= yeoman.client %>',
           src: [
-            '*.{ico,png,txt}',
+            '*.{ico,png,jpeg,jpg,txt}',
             '.htaccess',
             'bower_components/**/*',
-            'assets/images/{,*/}*.{webp,ico,png}',
+            'assets/images/{,*/}*.{webp,ico,png,jpeg,jpg}',
             'assets/fonts/**/*',
             'index.html',
             // move from imagemin

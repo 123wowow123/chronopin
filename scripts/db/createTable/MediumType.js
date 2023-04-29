@@ -8,7 +8,7 @@ module.exports.setup = function setup(connectionPool) {
   return this;
 }
 
-module.exports.createMediumType = function createMediumType() {
+module.exports.createMediumType = () => {
   return dropCreateTable()
     .catch(function (err) {
       // ... connect error checks

@@ -74,14 +74,13 @@ function _queryMSSQLPinsWithSubArrays(fromDateTime, lastPinId, offset, pageSize)
     return cp.getConnection()
         .then(conn => {
             return new Promise((resolve, reject) => {
-                let StoredProcedureName;
+                const StoredProcedureName = 'GetPinsWithFavoriteAndLikeArrayNext';
                 let request = new mssql.Request(conn)
                     .input('offset', mssql.Int, offset)
                     .input('pageSize', mssql.Int, pageSize)
                     .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
                     .input('lastPinId', mssql.Int, lastPinId);
 
-                StoredProcedureName = 'GetPinsWithFavoriteAndLikeArrayNext';
                 request.execute(`[dbo].[${StoredProcedureName}]`,
                     (err, res, returnValue, affected) => {
                         if (err) {

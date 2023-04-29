@@ -1,20 +1,24 @@
 Bugs/priority:
 
+WIP:
+Merchant create UI
+
 Bugs:
 mobile x scrolling issue
-back button does not refresh pin comment
+back button does not refresh pin comment +
 fix pin overlap issue
 changing username needs to sync to comment
 Fix header data load
 referal menu issue on mobile
-phone view time control not grouped by date control ++
 create/edit/respond page needs to have auth guard +
 remove facebook like +
 mobile view pin scrolls to bottom ++
+missing description validation
 
 Should show page not found and redirect to home? https://chronopin.com/pin/178
 
 Features:
+Show number of days countdown in pin page +++
 Affliate buy link with price scrape ++
 Modal save favorite with naming/tag and quick button tab with search watch page ++
 location ++
@@ -26,6 +30,9 @@ Upload image for pin and pin content
 Buy keywords in content that will turn into link where it will show map and nearest location when you can buy product.
 Google index sub pages: RSS, mRSS, and Atom 1.0
 https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap#rss
+Show youtube transcript on create pin for referance +
+Add google chrome auto login +
+Add alt text for image/media for SEO
 
 
 Cleanup:
@@ -273,4 +280,20 @@ https://www.polydrops.com/aerodynamics
 https://www.motortrend.com/news/2025-rivian-adventure-van-electric-off-road-overland-camper-rv/
 
 https://www.cnbc.com/2023/04/11/ford-to-build-ev-manufacturing-hub-in-canada.html
+
+
+follow required so need chrome extension
+https://twitter.com/roaringmeows/status/1648404621503627266
+
+
+https://www.youtube.com/watch?v=d5hu62W89nk
+Chicago, Albuquerque, Phoenix, Denver, Dallas Fort Worth (Solar and wind)
+
+https://www.cnbc.com/2023/04/19/how-pepsico-is-trying-to-get-doritos-cheetos-bags-into-compost-bins.html
+
+https://insideevs.com/news/658711/insider-shares-more-on-tesla-project-highland-aka-model-3-refresh/
+
+https://krcrtv.com/news/local/sites-reservoir-still-on-tract-to-break-ground-in-2024
+
+https://www.cnbc.com/2023/04/28/california-bans-the-sale-of-new-diesel-trucks-by-2036.html
 

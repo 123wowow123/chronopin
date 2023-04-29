@@ -1,6 +1,6 @@
 let cp;
 let Request;
-const TableName = 'Pin';
+const TableName = 'Merchant';
 
 module.exports.setup = function setup(connectionPool) {
   cp = connectionPool;
@@ -8,7 +8,7 @@ module.exports.setup = function setup(connectionPool) {
   return this;
 }
 
-module.exports.createPin = () => {
+module.exports.createMerchant = () => {
   return dropCreateTable()
     .catch(function (err) {
       // ... connect error checks
@@ -29,7 +29,6 @@ function dropCreateTable() {
 
 function executeDropTable() {
   let sql = `
-        DROP VIEW IF EXISTS [dbo].[PinView];
         DROP VIEW IF EXISTS [dbo].[PinBaseView];
         DROP TABLE IF EXISTS [dbo].[${TableName}];
         `;
@@ -44,26 +43,10 @@ function executeCreateTable() {
         CREATE TABLE [dbo].[${TableName}]
         (
             id INT PRIMARY KEY NOT NULL IDENTITY,
-            parentId INT,
-            title NVARCHAR(1024) NOT NULL,
-            description NVARCHAR(4000),
-            sourceUrl NVARCHAR(4000),
-            address NVARCHAR(4000),
-            priceLowerBound DECIMAL(18,2),
-            priceUpperBound DECIMAL(18,2),
-            price DECIMAL(18,2),
-            tip NVARCHAR(4000),
-            utcStartDateTime DATETIME2(0) NOT NULL,
-            utcEndDateTime DATETIME2(0) NOT NULL,
-            allDay BIT DEFAULT 0 NOT NULL,
-            userId INT NOT NULL,
-            utcCreatedDateTime DATETIME2(7) DEFAULT SYSUTCDATETIME() NOT NULL,
-            utcUpdatedDateTime DATETIME2(7),
-            utcDeletedDateTime DATETIME2(7)
+            pinId INT NOT NULL,
+            url NVARCHAR(1024),
+            price DECIMAL(18,2)
         );
-
-        CREATE INDEX IX_UtcStartDateTime ON [dbo].[${TableName}] (utcStartDateTime); 
-        CREATE INDEX parentId ON [dbo].[${TableName}] (parentId); 
         `;
 
   return cp.getConnection()

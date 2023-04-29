@@ -8,9 +8,9 @@ module.exports.setup = function setup(connectionPool) {
   return this;
 }
 
-module.exports.createDateTime = function createDateTime() {
+module.exports.createDateTime = () => {
   return dropCreateTable()
-    .catch(function(err) {
+    .catch(function (err) {
       // ... connect error checks
       console.log("err", err);
       throw err;

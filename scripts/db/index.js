@@ -23,6 +23,7 @@ const createMediumType = createTable.createMediumType;
 const createPin = createTable.createPin;
 const createPinMedium = createTable.createPinMedium;
 const createDateTime = createTable.createDateTime;
+const createMerchant = createTable.createMerchant;
 
 // Create View
 const createPinView = createTable.createPinView;
@@ -54,6 +55,7 @@ const createGetMediumByOriginalUrlSP = createSP.createGetMediumByOriginalUrlSP;
 const createGetPinSP = createSP.createGetPinSP;
 const createGetLikeSP = createSP.createGetLikeSP;
 const createGetFavoriteSP = createSP.createGetFavoriteSP;
+const createGetMerchantSP = createSP.createGetMerchantSP;
 
 // Create Record
 const createCreateUserSP = createSP.createCreateUserSP;
@@ -79,10 +81,13 @@ const createDeleteLikeSP = createSP.createDeleteLikeSP;
 const createDeleteLikeByPinIdSP = createSP.createDeleteLikeByPinIdSP;
 const createDeleteFavoriteSP = createSP.createDeleteFavoriteSP;
 const createDeleteFavoriteByPinIdSP = createSP.createDeleteFavoriteByPinIdSP;
+const createDeleteMerchantSP = createSP.createDeleteMerchantSP;
+const createDeleteMerchantByPinIdSP = createSP.createDeleteMerchantByPinIdSP;
 
 // Upsert Record
 const createMergeLikeSP = createSP.createMergeLikeSP;
 const createMergeFavoriteSP = createSP.createMergeFavoriteSP;
+const createMergeMerchantSP = createSP.createMergeMerchantSP;
 
 // Admin Delete
 const createAdminDeleteUserByIdSP = createSP.createAdminDeleteUserByIdSP;
@@ -121,6 +126,7 @@ function execute() {
         //createFavorite,
         //createLike,
         createDateTime,
+        createMerchant,
 
         // Views
         createPinView,
@@ -152,6 +158,7 @@ function execute() {
         createGetPinSP,
         createGetLikeSP,
         createGetFavoriteSP,
+        createGetMerchantSP,
 
         // Create Record
         createCreateUserSP,
@@ -177,9 +184,12 @@ function execute() {
         createDeleteLikeByPinIdSP,
         createDeleteFavoriteSP,
         createDeleteFavoriteByPinIdSP,
+        createDeleteMerchantSP,
+        createDeleteMerchantByPinIdSP,
 
         createMergeLikeSP,
         createMergeFavoriteSP,
+        createMergeMerchantSP,
 
         // Admin Delete
         createAdminDeleteUserByIdSP,

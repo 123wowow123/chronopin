@@ -22,7 +22,7 @@ export default class Pins extends BasePins {
 
   setPins(pins) {
     if (Array.isArray(pins)) {
-      this.pins = Pins.mapPinsMedia(pins);
+      this.pins = Pins.mapPinJoins(pins);
 
       // need to sort properly
       this.pins = _.chain(this.pins)
@@ -38,14 +38,14 @@ export default class Pins extends BasePins {
 
   setPinsSortBy(pins, sortId) {
     if (Array.isArray(pins)) {
-      this.pins = Pins.mapPinsMedia(pins, sortId);
+      this.pins = Pins.mapPinJoins(pins, sortId);
     } else {
       throw "arg is not an array";
     }
     return this;
   }
 
-  static mapPinsMedia(pinRows, sortId) {
+  static mapPinJoins(pinRows, sortId) {
     let pins = [],
       groupedPinRows;
 
@@ -55,13 +55,13 @@ export default class Pins extends BasePins {
 
     _.forEach(groupedPinRows, pinRows => {
       let pin = new Pin(pinRows[0]);
-      pin = Pin.mapPinMedia(pin, pinRows);
+      pin = Pin.mapPinJoins(pin, pinRows);
       pins.push(pin);
     });
 
     if (sortId) {
       pins = _.chain(pins)
-        .sortBy('sortId')
+        .sortBy(sortId)
         .value();
     } else {
       // need to sort properly
@@ -70,7 +70,6 @@ export default class Pins extends BasePins {
         .sortBy('utcStartDateTime')
         .value();
     }
-
 
     return pins;
   }

@@ -8,9 +8,9 @@ module.exports.setup = function setup(connectionPool) {
   return this;
 }
 
-module.exports.createMedium = function createMedium() {
+module.exports.createMedium = () => {
   return dropCreateTable()
-    .catch(function(err) {
+    .catch(function (err) {
       // ... connect error checks
       console.log("err", err);
       throw err;

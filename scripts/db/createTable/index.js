@@ -3,7 +3,7 @@
 let cp;
 
 // Setup
-module.exports.setup = function(connectionPool) {
+module.exports.setup = function (connectionPool) {
   cp = connectionPool;
 
   require('./User').setup(cp);
@@ -17,9 +17,9 @@ module.exports.setup = function(connectionPool) {
   require('./Pin').setup(cp);
   require('./PinMedium').setup(cp);
   require('./DateTime').setup(cp);
+  require('./Merchant').setup(cp);
 
   require('./PinView').setup(cp);
-
   require('./PinBaseView').setup(cp);
 };
 
@@ -35,6 +35,7 @@ module.exports.createMediumType = require('./MediumType').createMediumType;
 module.exports.createPin = require('./Pin').createPin;
 module.exports.createPinMedium = require('./PinMedium').createPinMedium;
 module.exports.createDateTime = require('./DateTime').createDateTime;
+module.exports.createMerchant = require('./Merchant').createMerchant;
 
 // Retruns View
 module.exports.createPinView = require('./PinView').createPinView;

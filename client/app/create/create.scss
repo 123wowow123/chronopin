@@ -57,8 +57,8 @@
   .\--open-source-link {
     padding-left: 0;
     padding-right: 0;
-    position:absolute; 
-    right: 0; 
+    position: absolute;
+    right: 0;
     top: -5px;
   }
 }
@@ -161,10 +161,70 @@
   }
 }
 
-
 .twitter-pin-container {
   display: flex;
   justify-content: center;
+}
+
+.optional_line_break {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px dotted var(--primary-link-color-disabled);
+  margin-top: -15px;
+  margin-bottom: 30px;
+
+  &__label {
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    padding: 10px;
+    background: var(--primary-bg-color);
+  }
+}
+
+.optional_content {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.merchant-list {
+  width: 100%;
+
+  .header {
+    .row {
+      flex-grow: 1;
+    }
+  }
+
+  li {
+    display: flex;
+    border: none;
+    margin-bottom: 0;
+    flex: 1 1 auto;
+    background: var(--primary-bg-color);
+
+    .form-group {
+      flex-grow: 1;
+    }
+
+    .input-group {
+      width: 100%;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .trash {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+  }
+
+  li+li {
+    margin-top: 2px;
+  }
 }
 
 /* Small Devices, Tablets */

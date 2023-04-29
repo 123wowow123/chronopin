@@ -8,9 +8,9 @@ module.exports.setup = function setup(connectionPool) {
   return this;
 }
 
-module.exports.createPinBaseView = function createPinBaseView() {
+module.exports.createPinBaseView = () => {
   return dropCreateTable()
-    .catch(function(err) {
+    .catch(function (err) {
       // ... connect error checks
       console.log("err", err);
       throw err;
@@ -82,7 +82,11 @@ function executeCreateTable() {
               [Media].[authorUrl]                        AS [Media.authorUrl],
               [Media].[html]                             AS [Media.html],
 
-              [User].[userName]                          AS [User.userName]
+              [User].[userName]                          AS [User.userName],
+
+              [Merchant].[id]                           AS [Merchant.id],
+              [Merchant].[url]                          AS [Merchant.url],
+              [Merchant].[price]                        AS [Merchant.price]
 
             FROM [dbo].[Pin] AS [Pin]
               LEFT JOIN [dbo].[PinMedium] AS [Media.PinMedium]
@@ -94,6 +98,8 @@ function executeCreateTable() {
               LEFT JOIN [dbo].[Like] AS [Likes] ON [Pin].[id] = [Likes].[PinId] AND [Likes].[utcDeletedDateTime] IS NULL
               LEFT JOIN [dbo].[User] AS [User]
                 ON [Pin].[userId] = [User].[id]
+              LEFT JOIN [dbo].[Merchant] AS [Merchant]
+                ON [Pin].[id] = [Merchant].[pinId]
 
             GROUP BY [Pin].[utcCreatedDateTime],
               [Pin].[utcUpdatedDateTime],
@@ -125,7 +131,11 @@ function executeCreateTable() {
               [Media].[authorUrl],
               [Media].[html],
 
-              [User].[userName]
+              [User].[userName],
+
+              [Merchant].[id],
+              [Merchant].[url],
+              [Merchant].[price]
         `;
 
   return cp.getConnection()

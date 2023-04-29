@@ -35,6 +35,24 @@ $grid-max-width-screen: $iphone-landscape / 2;
     // }
 }
 
+@mixin merchant {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    text-decoration: none !important;
+
+    img {
+        height: 24px;
+    }
+
+    .fa {
+        font-size: 24px;
+    }
+}
+
 .timeline {
     @mixin right-arrow($timeline-tag-bg) {
         &::after {
@@ -278,13 +296,7 @@ $bag-font-color: var(--bag-text-color);
     }
 
     &__price {
-        flex-grow: 0;
-        color: #118C4F;
-        font-size: 15px;
-
-        &--negative {
-            color: brown;
-        }
+        @include merchant;
     }
 
     &__merchant {
@@ -297,16 +309,34 @@ $bag-font-color: var(--bag-text-color);
             overflow-y: hidden;
         }
 
-        a+a {
-            margin-left: 10px;
+        a+a,
+        div+a {
+            margin-left: 15px;
+        }
+
+        .merchant-price {
+            display: inline-block;
+            color: #118C4F;
+
+            &--negative {
+                color: brown;
+            }
+
+            .msrp {
+                color: var(--grid-header-text-color);
+            }
+        }
+
+        .generic__merchant-link {
+            @include merchant;
         }
 
         .gamestop__merchant-link {
-            height: 31px;
+            @include merchant;
         }
 
         .amazon__merchant-link {
-            height: 31px;
+            @include merchant;
         }
 
         img {

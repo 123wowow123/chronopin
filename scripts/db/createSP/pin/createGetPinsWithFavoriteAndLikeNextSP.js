@@ -88,7 +88,11 @@ function executeCreateSP() {
               [Media.authorUrl]      NVARCHAR(4000),
               [Media.html]           NVARCHAR(4000),
 
-              [User.userName]      NVARCHAR(255)
+              [User.userName]        NVARCHAR(255),
+
+              [Merchant.id]         INT,
+              [Merchant.url]        NVARCHAR(1000),
+              [Merchant.price]      DECIMAL(18, 2)
             );
 
             INSERT INTO @tempPinsTbl
@@ -134,7 +138,11 @@ function executeCreateSP() {
                 [Media.authorUrl],
                 [Media.html],
 
-                [User.userName]
+                [User.userName],
+
+                [Merchant.id],
+                [Merchant.url],
+                [Merchant.price]
 
               FROM [dbo].[PinBaseView] AS [Pin]
 

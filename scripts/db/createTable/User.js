@@ -8,9 +8,9 @@ module.exports.setup = function setup(connectionPool) {
   return this;
 }
 
-module.exports.createUser = function createUser() {
+module.exports.createUser = () => {
   return dropCreateTable()
-    .catch(function(err) {
+    .catch(function (err) {
       // ... connect error checks
       console.log("err", err);
       throw err;

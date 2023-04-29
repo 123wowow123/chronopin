@@ -8,7 +8,8 @@ import * as mapHelper from '../shared/helper'
 
 import {
   BasePin,
-  BasePinProp
+  BasePinProp,
+  Merchant
 } from '../..';
 
 const prop = BasePinProp.concat(
@@ -44,24 +45,49 @@ export default class Pin extends BasePin {
       }) => {
         //console.log('_createMSSQL', pin);
         const mediaPromise = this.media
-          .filter(medium => medium.type === 1)
-          .map(medium => {
-            return medium.createAndSaveToCDN();
+          .filter(m => m.type === 1)
+          .map(m => {
+            return m.createAndSaveToCDN();
           });
 
         const mediaNonImagePromise = this.media
-          .filter(medium => medium.type !== 1)
-          .map(medium => {
-            return medium.save();
+          .filter(m => m.type !== 1)
+          .map(m => {
+            return m.save();
           });
 
-        return Promise.all(mediaPromise.concat(mediaNonImagePromise))
+        const merchantsPromise = this.merchants
+          .map(m => {
+            return m.save();
+          });
+
+        const allMediaPromise = Promise.all(
+          mediaPromise.concat(mediaNonImagePromise)
+        )
           .then((media) => {
             this.addMedia(media);
             return {
               pin: this
             };
           });
+
+        const allMerchantPromise = Promise.all(
+          merchantsPromise
+        )
+          .then((merchants) => {
+            this.addMerchants(merchants);
+            return {
+              pin: this
+            };
+          });
+
+        return Promise.all([allMediaPromise, allMerchantPromise])
+          .then((results) => {
+            return {
+              pin: this
+            };
+          });
+
       })
       .catch(err => {
         console.log(`Pin '${this.title}' save err:`);
@@ -80,6 +106,7 @@ export default class Pin extends BasePin {
         let beforePinMedia = res.pin.media,
           // originalUserId = beforePinMedia,
           newPinMedia = this.media,
+          newPinMerchants = this.merchants,
           toSaveOriginalMedia = [],
           toDeleteOriginalMedia = [],
           toSaveMediaPromise = [],
@@ -87,6 +114,21 @@ export default class Pin extends BasePin {
 
         toSaveOriginalMedia = _difference(newPinMedia, beforePinMedia, 'originalUrl');
         toDeleteOriginalMedia = _difference(beforePinMedia, newPinMedia, 'originalUrl');
+
+
+        const allMerchantPromise = Merchant.deleteByPinId(this.id)
+          .then(() => {
+            const merchantsPromise = newPinMerchants
+              .map(m => {
+                return m.save();
+              });
+
+            return Promise.all(
+              merchantsPromise
+            ).then((merchants) => {
+              this.addMerchants(merchants);
+            });
+          });
 
         toSaveMediaPromise = toSaveOriginalMedia.map(medium => {
           return medium.createAndSaveToCDN();
@@ -102,6 +144,12 @@ export default class Pin extends BasePin {
           })
           .then(() => {
             return Promise.all(toDeleteMediaPromise)
+              .then(() => {
+                return this;
+              });
+          })
+          .then(() => {
+            return allMerchantPromise
               .then(() => {
                 return this;
               });
@@ -128,8 +176,19 @@ export default class Pin extends BasePin {
     }
   }
 
+  static mapPinJoins(pin, pinRows) {
+    pin = Pin.mapPinMedia(pin, pinRows);
+    pin = Pin.mapPinMerchants(pin, pinRows);
+    return pin;
+  }
+
   static mapPinMedia(pin, pinRows) {
     pin.media = mapHelper.mapSubObjectFromQuery('Media', 'id', pinRows);
+    return pin;
+  }
+
+  static mapPinMerchants(pin, pinRows) {
+    pin.merchants = mapHelper.mapSubObjectFromQuery('Merchant', 'id', pinRows);
     return pin;
   }
 }
@@ -159,7 +218,7 @@ function _queryMSSQLPinWithFavoriteAndLikeById(pinId, userId) {
             }
             if (res.recordset.length) {
               pin = new Pin(res.recordset[0]);
-              pin = Pin.mapPinMedia(pin, res.recordset);
+              pin = Pin.mapPinJoins(pin, res.recordset);
             } else {
               pin = undefined;
             }
@@ -189,7 +248,7 @@ function _queryMSSQLPinById(pinId) {
             }
             if (res.recordset.length) {
               pin = new Pin(res.recordset[0]);
-              pin = Pin.mapPinMedia(pin, res.recordset);
+              pin = Pin.mapPinJoins(pin, res.recordset);
               // pin = Pin.mapPinUser(pin, res.recordset[0]);
             } else {
               pin = undefined;

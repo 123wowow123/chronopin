@@ -77,14 +77,16 @@
       //   }
       // });
 
-      if (window.mainPinData) { // && false  
+      if (_.has(window, 'mainPinData.link')) { // && false  
         // Preloaded data
-        let mainPinData = window.mainPinData
+        let mainPinData = _.get(window, 'mainPinData');
         this._setMainBagsWithPins(mainPinData);
         const linkHeader = this.linkHeaderParser.parse(mainPinData.link);
         this.prevParam = this.getLinkHeader(linkHeader, "previous");
         this.nextParam = this.getLinkHeader(linkHeader, "next");
         this.loading = false;
+        // clear Preloaded data
+        window.mainPinData = null;
       } else {
         this.mainWebService.list()
           .then(res => {

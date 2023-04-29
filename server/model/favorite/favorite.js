@@ -159,14 +159,14 @@ Object.defineProperty(FavoritePrototype, 'pinId', {
   configurable: false
 });
 
-function _upsert(favorite, userId, pinId) {
+function _upsert(favoriteIn, userId, pinId) {
   return _upsertMSSQL(favorite, userId, pinId)
     .then(({
       favorite
     }) => {
-      favorite.set(favorite);
+      favoriteIn.set(favorite);
       return {
-        favorite: favorite
+        favorite: favoriteIn
       };
     });
 }

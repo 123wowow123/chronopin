@@ -61,19 +61,38 @@
         <div class="grid__footer">
 
           <div class="grid__footer-left">
-            <div class="grid__price" ng-class="{'grid__price--negative': $ctrl.pin.price < 0}" ng-if="$ctrl.pin.price">
-              {{$ctrl.pin.price | money}}</div>
 
-            <div class="grid__merchant">
-              <a target="_blank" class="gamestop__merchant-link"
+
+            <div class="grid__merchant" ng-repeat="merchant in $ctrl.pin.merchants track by $index">
+
+              <div class="grid__price " ng-class="{'grid__price--negative': $ctrl.pin.price < 0}" ng-if="$ctrl.pin.price">
+                <span class="msrp">MSRP</span>
+                <span class="merchant-price">{{$ctrl.pin.price | money}}</span>
+              </div>
+
+              <!-- Merchant Ads-->
+              <!-- <a target="_blank" class="gamestop__merchant-link"
                 href="{{$ctrl.pin.merchant.gamestop.url || 'https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10006500&type=3&subid='}}"
                 ng-if="$ctrl.pin.merchant.gamestop.url || true">
                 <img alt="Gamestop logo" src="https://merchant.linksynergy.com/fs/banners/24348/24348_10000852.png" />
-              </a>
-              <a target="_blank" class="amazon__merchant-link" href="{{$ctrl.pin.merchant.amazon.url}}"
+
+                <span class="merchant-price"
+                  ng-class="{'grid__price--negative': $ctrl.pin.price < 0}">{{merchant.price | money}}</span>
+              </a> -->
+              <!-- <a target="_blank" class="amazon__merchant-link" href="{{$ctrl.pin.merchant.amazon.url}}"
                 ng-if="!!$ctrl.pin.merchant.amazon.url">
                 <img alt="Amazon logo" src="/assets/images/OIP.jpeg" />
+
+                <span class="merchant-price"
+                  ng-class="{'grid__price--negative': $ctrl.pin.price < 0}">{{merchant.price | money}}</span>
+              </a> -->
+
+              <a target="_blank" class="generic__merchant-link" href="{{merchant.url}}" ng-if="!!merchant.url">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span class="merchant-price"
+                  ng-class="{'grid__price--negative': $ctrl.pin.price < 0}">{{merchant.price | money}}</span>
               </a>
+
             </div>
           </div>
 
@@ -106,12 +125,35 @@
   </div>
 
   <div class="pin__right_pannel">
-    <div class="pin__thread">
-      <thread ng-if="!!$ctrl.pin.id" pin-id="$ctrl.pin.id" config="$ctrl.appConfig"></thread>
+    <div class="pin__right_pannel_content">
+      <div class="pin__thread">
+        <thread ng-if="!!$ctrl.pin.id" pin-id="$ctrl.pin.id" config="$ctrl.appConfig"></thread>
+      </div>
+
+      <div class="pin__thread_bottom_ads">
+        <!-- Google Ads-->
+        <amp-ad width="100vw" height="320" type="adsense" data-ad-client="ca-pub-4845333369058390"
+          data-ad-slot="2802659011" data-auto-format="rspv" data-full-width="">
+          <div overflow=""></div>
+        </amp-ad>
+        <amp-ad width="100vw" height="320" type="adsense" data-ad-client="ca-pub-4845333369058390"
+          data-ad-slot="2802659011" data-auto-format="rspv" data-full-width="">
+          <div overflow=""></div>
+        </amp-ad>
+      </div>
+
+      <div class="pin__comment">
+        <comment comment-url="{{'/pin/'+$ctrl.pin.id}}" title="{{$ctrl.pin.title}}"></comment>
+      </div>
     </div>
-    <div class="pin__comment">
-      <comment comment-url="{{'/pin/'+$ctrl.pin.id}}" title="{{$ctrl.pin.title}}"></comment>
+    <div class="pin__right_pannel_wide_ads">
+      <!-- Google Ads-->
+      <amp-ad width="100vw" height="320" type="adsense" data-ad-client="ca-pub-4845333369058390"
+        data-ad-slot="5947697108" data-auto-format="rspv" data-full-width="">
+        <div overflow=""></div>
+      </amp-ad>
     </div>
+
   </div>
 </div>
 
@@ -119,6 +161,12 @@
   <div id="amzn-assoc-ad-98cb6875-162d-4a0a-ae94-43b14e993e7c"></div>
   <script async
     src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=98cb6875-162d-4a0a-ae94-43b14e993e7c"></script>
+
+  <!-- Google Ads-->
+  <amp-ad width="100vw" height="320" type="adsense" data-ad-client="ca-pub-4845333369058390" data-ad-slot="9433708055"
+    data-auto-format="rspv" data-full-width="">
+    <div overflow=""></div>
+  </amp-ad>
 </div>
 
 <div class="page_loading" ng-if="!$ctrl.pinReady">

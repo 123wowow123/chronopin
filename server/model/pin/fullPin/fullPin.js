@@ -9,11 +9,13 @@ import {
     BasePinProp,
     Like,
     Favorite,
-    Medium
+    Medium,
+    Merchant
 } from '../..';
 
 
 // media
+// merchants
 // favorites - will be converted to bool for client
 // likes - will be converted to bool for client
 const prop = BasePinProp;
@@ -63,10 +65,17 @@ export default class FullPin extends BasePin {
                     }, null, this).save();
                 });
                 const saveMediumPromises = this.media.map(m => {
-                    //debugger
                     return new Medium(m, this).save();
                 });
-                return Promise.all([...saveLikePromises, ...saveFavoritePromises, ...saveMediumPromises]);
+                const saveMerchantsPromises = this.merchants.map(m => {
+                    return new Merchant(m, this).save();
+                });
+                return Promise.all([
+                    ...saveLikePromises,
+                    ...saveFavoritePromises,
+                    ...saveMediumPromises,
+                    ...saveMerchantsPromises
+                ]);
             });
         return savePinPromise;
     }
@@ -76,9 +85,12 @@ export default class FullPin extends BasePin {
         pin.media = _mapPinRowsToMedia(pinRows);
         pin.favorites = _mapPinRowsToFavorites(pinRows);
         pin.likes = _mapPinRowsToLikes(pinRows);
+        pin.merchants = _mapPinRowsToMerchants(pinRows);
         return new FullPin(pin);
     }
 }
+
+
 
 function _mapPinRowsToMedia(pinRows) {
     return mapHelper.mapSubObjectFromQuery('Media', 'id', pinRows);
@@ -90,4 +102,8 @@ function _mapPinRowsToFavorites(pinRows) {
 
 function _mapPinRowsToLikes(pinRows) {
     return mapHelper.mapSubObjectFromQuery('Likes', 'userId', pinRows);
+}
+
+function _mapPinRowsToMerchants(pinRows) {
+    return mapHelper.mapSubObjectFromQuery('Merchant', 'id', pinRows);
 }
