@@ -65,7 +65,7 @@
 
             <div class="grid__merchant" ng-repeat="merchant in $ctrl.pin.merchants track by $index">
 
-              <div class="grid__price " ng-class="{'grid__price--negative': $ctrl.pin.price < 0}" ng-if="$ctrl.pin.price">
+              <div class="merchant-price " ng-class="{'grid__price--negative': $ctrl.pin.price < 0}" ng-if="$ctrl.pin.price">
                 <span class="msrp">MSRP</span>
                 <span class="merchant-price">{{$ctrl.pin.price | money}}</span>
               </div>
