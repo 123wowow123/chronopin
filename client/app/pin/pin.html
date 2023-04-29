@@ -1,4 +1,14 @@
 <div class="pin">
+
+  <div>
+    <!-- Google Ads-->
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-4845333369058390"
+      data-ad-slot="6184404789"></ins>
+
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4845333369058390" data-ad-slot="7661137981"
+      data-ad-format="auto" data-full-width-responsive="true"></ins>
+  </div>
+
   <div class="pin__preview">
 
     <div class="pin__panel" ng-if="$ctrl.pinReady">
@@ -63,9 +73,10 @@
           <div class="grid__footer-left">
 
 
-            <div class="grid__merchant" ng-repeat="merchant in $ctrl.pin.merchants track by $index">
+            <div class="grid__merchant">
 
-              <div class="merchant-price " ng-class="{'grid__price--negative': $ctrl.pin.price < 0}" ng-if="$ctrl.pin.price">
+              <div class="merchant merchant-price " ng-class="{'grid__price--negative': $ctrl.pin.price < 0}"
+                ng-if="$ctrl.pin.price">
                 <span class="msrp">MSRP</span>
                 <span class="merchant-price">{{$ctrl.pin.price | money}}</span>
               </div>
@@ -86,12 +97,14 @@
                 <span class="merchant-price"
                   ng-class="{'grid__price--negative': $ctrl.pin.price < 0}">{{merchant.price | money}}</span>
               </a> -->
-
-              <a target="_blank" class="generic__merchant-link" href="{{merchant.url}}" ng-if="!!merchant.url">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                <span class="merchant-price"
-                  ng-class="{'grid__price--negative': $ctrl.pin.price < 0}">{{merchant.price | money}}</span>
-              </a>
+              <div class="merchant" ng-repeat="merchant in $ctrl.pin.merchants track by $index">
+                <a target="_blank" class="merchant generic__merchant-link" href="{{merchant.url}}" ng-if="!!merchant.url">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  <span class="merchant-price"
+                    ng-class="{'grid__price--negative': $ctrl.pin.price < 0}">{{merchant.price
+                    | money}}</span>
+                </a>
+              </div>
 
             </div>
           </div>
@@ -132,14 +145,10 @@
 
       <div class="pin__thread_bottom_ads">
         <!-- Google Ads-->
-        <amp-ad width="100vw" height="320" type="adsense" data-ad-client="ca-pub-4845333369058390"
-          data-ad-slot="2802659011" data-auto-format="rspv" data-full-width="">
-          <div overflow=""></div>
-        </amp-ad>
-        <amp-ad width="100vw" height="320" type="adsense" data-ad-client="ca-pub-4845333369058390"
-          data-ad-slot="2802659011" data-auto-format="rspv" data-full-width="">
-          <div overflow=""></div>
-        </amp-ad>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4845333369058390"
+          data-ad-slot="2802659011" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4845333369058390"
+          data-ad-slot="2802659011" data-ad-format="auto" data-full-width-responsive="true"></ins>
       </div>
 
       <div class="pin__comment">
@@ -148,9 +157,8 @@
     </div>
     <div class="pin__right_pannel_wide_ads">
       <!-- Google Ads-->
-      <amp-ad width="100vw" height="320" type="adsense" data-ad-client="ca-pub-4845333369058390"
-        data-ad-slot="5947697108" data-auto-format="rspv" data-full-width="">
-        <div overflow=""></div>
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4845333369058390" data-ad-slot="5947697108"
+        data-ad-format="auto" data-full-width-responsive="true"></ins>
       </amp-ad>
     </div>
 
@@ -163,10 +171,8 @@
     src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=98cb6875-162d-4a0a-ae94-43b14e993e7c"></script>
 
   <!-- Google Ads-->
-  <amp-ad width="100vw" height="320" type="adsense" data-ad-client="ca-pub-4845333369058390" data-ad-slot="9433708055"
-    data-auto-format="rspv" data-full-width="">
-    <div overflow=""></div>
-  </amp-ad>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4845333369058390" data-ad-slot="9433708055"
+    data-ad-format="auto" data-full-width-responsive="true"></ins>
 </div>
 
 <div class="page_loading" ng-if="!$ctrl.pinReady">
@@ -194,5 +200,9 @@
       </div>
     </div>
   </div>
+
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 
 </div>

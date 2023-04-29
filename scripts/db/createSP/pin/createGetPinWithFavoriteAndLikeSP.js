@@ -49,7 +49,7 @@ function executeCreateSP() {
 
         SET NOCOUNT ON;
 
-        SELECT TOP 1
+        SELECT
               [Pin].*,
 
               (CAST((SELECT COUNT(f.id) FROM [Favorite] AS f WHERE f.userId = @userId AND f.PinId = [Pin].[id] AND f.utcDeletedDateTime IS NULL) AS bit)) AS [hasFavorite],

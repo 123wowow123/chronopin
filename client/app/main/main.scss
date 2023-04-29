@@ -315,13 +315,15 @@ $bag-font-color: var(--bag-text-color);
             overflow-y: hidden;
         }
 
-        a+a,
-        div+a {
+        .merchant {
+            @include merchant;
+        }
+
+        .merchant+.merchant {
             margin-left: 15px;
         }
 
         .merchant-price {
-            @include merchant;
             color: #118C4F;
 
             &--negative {
@@ -333,17 +335,11 @@ $bag-font-color: var(--bag-text-color);
             }
         }
 
-        .generic__merchant-link {
-            @include merchant;
-        }
+        // .generic__merchant-link {}
 
-        .gamestop__merchant-link {
-            @include merchant;
-        }
+        // .gamestop__merchant-link {}
 
-        .amazon__merchant-link {
-            @include merchant;
-        }
+        // .amazon__merchant-link {}
 
         img {
             height: 100%;

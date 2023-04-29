@@ -45,7 +45,7 @@ function executeCreateSP() {
   @url                NVARCHAR(1024),
   @price              DECIMAL(18, 2),
   @pinId              INT,
-
+  
   @id                 INT OUTPUT
 AS
 BEGIN
@@ -70,7 +70,7 @@ BEGIN
       price,
       pinId
     )
-    ON r.pinId = foo.pinId
+    ON r.pinId = foo.pinId AND r.id = @id
     WHEN MATCHED THEN
       UPDATE SET
         [url] = foo.[url],

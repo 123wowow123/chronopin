@@ -48,8 +48,8 @@ function executeCreateSP() {
 
         SET NOCOUNT ON;
 
-        SELECT TOP 1
-            *
+        SELECT
+           [Pin].*
 
             FROM [dbo].[PinBaseView] AS [Pin]
 

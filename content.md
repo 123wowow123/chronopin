@@ -33,6 +33,7 @@ https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitem
 Show youtube transcript on create pin for referance +
 Add google chrome auto login +
 Add alt text for image/media for SEO
+Remove jquery for speedup
 
 
 Cleanup:

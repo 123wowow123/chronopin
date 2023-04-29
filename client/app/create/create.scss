@@ -185,10 +185,16 @@
 .optional_content {
   margin-left: -15px;
   margin-right: -15px;
+  margin-bottom: 20px;
+}
+
+.merchant-list+.merchant-list {
+  margin-bottom: 15px;
 }
 
 .merchant-list {
   width: 100%;
+  margin-bottom: 0;
 
   .header {
     .row {
