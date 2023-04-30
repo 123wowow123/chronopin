@@ -38,14 +38,14 @@ export default class Pins extends BasePins {
 
   setPinsSortBy(pins, sortId, reverse) {
     if (Array.isArray(pins)) {
-      this.pins = Pins.mapPinJoins(pins, sortId);
+      this.pins = Pins.mapPinJoins(pins, sortId, reverse);
     } else {
       throw "arg is not an array";
     }
     return this;
   }
 
-  static mapPinJoins(pinRows, sortId) {
+  static mapPinJoins(pinRows, sortId, reverse) {
     let pins = [],
       groupedPinRows;
 
