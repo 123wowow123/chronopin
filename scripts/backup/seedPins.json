@@ -4023,6 +4023,112 @@
     "userId": 1
   },
   {
+    "id": 159,
+    "rootThread": true,
+    "title": "The 15 most anticipated games of 2023 | CNN Underscored",
+    "description": "",
+    "sourceUrl": "https://www.cnn.com/cnn-underscored/electronics/most-anticipated-games-2023",
+    "utcStartDateTime": "2023-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2023-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-04-30T00:42:52.928Z",
+    "user": {
+      "id": 1,
+      "userName": "THE PIN GANG"
+    },
+    "media": [
+      {
+        "id": 157,
+        "thumbName": "56b98a1f-ac89-4284-a918-667622614ca1.jpg",
+        "thumbWidth": 400,
+        "thumbHeight": 225,
+        "originalUrl": "https://media.cnn.com/api/v1/images/stellar/prod/msm2-reveal-attack-4k-legal-49511613a7f1a129cc7-33276055.jpg?c=16x9&q=w_800,c_fill",
+        "originalWidth": 800,
+        "originalHeight": 450,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 160,
+    "parentId": 159,
+    "rootThread": false,
+    "title": "A remake of Electronic Arts' 15-year-old sci-fi survival horror classic, Dead Space aims to retain the terrifying atmosphere, gore-soaked action and tense, twisty storytelling",
+    "description": "<p class=\"paragraph\"> Never mind the numerous necromorphs, the tortured torsos sprouting out of walls, or the terrifyingly towering space sphincter – the thing I was most scared of going into the Dead Space remake is that it wouldn't live up to my fond memories of the fantastically horrific 2008 original. After just over 12 hours spent stalking through the revitalized USG Ishimura I’m happy to report that of the many things to legitimately fear about this haunted space hulk, that was not one of them. This new Dead Space enhances the original in almost every way, using a Plasma Cutter to drop its ugliest appendages on the cutting room floor while preserving the essence of what made its distinctly dismemberment-heavy shooting so special, and grafting on welcome new character details in order to present its creepy sci-fi horror story in its very best light – and its most intimidating shadows. </p>",
+    "sourceUrl": "https://www.ign.com/articles/dead-space-remake-review",
+    "price": 69.99,
+    "utcStartDateTime": "2023-01-27T08:00:00.000Z",
+    "utcEndDateTime": "2023-01-28T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-04-30T00:49:52.244Z",
+    "user": {
+      "id": 1,
+      "userName": "THE PIN GANG"
+    },
+    "media": [
+      {
+        "id": 158,
+        "thumbName": "42f3b3b5-2dd7-470e-a0bf-bbe1b9bef2da.jpg",
+        "thumbWidth": 400,
+        "thumbHeight": 225,
+        "originalUrl": "https://assets-prd.ignimgs.com/2023/01/25/deadspace-blogroll-1674687060495.jpg?width=1280",
+        "originalWidth": 1280,
+        "originalHeight": 720,
+        "type": "1"
+      }
+    ],
+    "merchants": [
+      {
+        "id": 3,
+        "label": "Gamestop Pre-Owned",
+        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fdead-space---playstation-5%2F359611.html",
+        "price": 49.99,
+        "pinId": 160
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 161,
+    "parentId": 160,
+    "rootThread": false,
+    "title": "Hogwarts Legacy Review - IGN",
+    "description": "<p class=\"paragraph\"> Like many, I’ve been waiting for a truly excellent Harry Potter game since I was in the third grade. In that time, we’ve gotten some respectable&nbsp;<a href=\"https://www.ign.com/articles/2010/06/29/lego-harry-potter-years-1-4-review\">LEGO Potter games</a>, an underwhelming EA Sports Quidditch game for some reason, and even suffered through the fevered nightmare that is&nbsp;<a href=\"https://www.ign.com/videos/harry-potter-for-kinect-launch-trailer\">Harry Potter Kinect</a>. But none of these has come close to fulfilling that fantasy of receiving a Hogwarts admission letter that opens the door to a secret world. With Hogwarts Legacy, I’m happy to say that we finally got a Harry Potter game that captures some of that magic. Its open world map absolutely nails the vibe of Hogwarts School of Witchcraft and Wizardry, it has spellcasting combat that’s stupefyingly good, the characters that inhabit it are charming and unforgettable, and it is positively brimming with countless diversions to soak up dozens of hours of your time. It may not be the most impressive technical achievement and it is certainly cursed with a lack of enemy variety, but none of Hogwarts Legacy’s issues can cast a Descendo charm on this triumphant visit to the Wizarding World. </p>",
+    "sourceUrl": "https://www.ign.com/articles/hogwarts-legacy-review-harry-potter-ps5-xbox-pc",
+    "price": 69.99,
+    "utcStartDateTime": "2023-02-10T08:00:00.000Z",
+    "utcEndDateTime": "2023-02-11T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-04-30T00:55:58.513Z",
+    "user": {
+      "id": 1,
+      "userName": "THE PIN GANG"
+    },
+    "media": [
+      {
+        "id": 159,
+        "thumbName": "ef6fbfd1-759b-4312-ab12-e466a7cf2f17.jpg",
+        "thumbWidth": 400,
+        "thumbHeight": 225,
+        "originalUrl": "https://assets-prd.ignimgs.com/2023/02/05/hogwartslegacyreview-blogroll-1675622127531.jpg?width=1280",
+        "originalWidth": 1280,
+        "originalHeight": 720,
+        "type": "1"
+      }
+    ],
+    "merchants": [
+      {
+        "id": 4,
+        "label": "Gamestop Pre-Owned",
+        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fhogwarts-legacy---playstation-5%2F359794.html",
+        "price": 64.99,
+        "pinId": 161
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 142,
     "rootThread": false,
     "title": "Everything else about the PS VR2 feels like a quantum leap over any other headset in its price class",
@@ -4078,6 +4184,84 @@
     "userId": 1
   },
   {
+    "id": 162,
+    "parentId": 161,
+    "rootThread": false,
+    "title": "Star Wars Jedi: Survivor Review - IGN",
+    "description": "<p class=\"paragraph\"> At first I was afraid, I was petrified – I kept thinking \"how could Respawn follow up on its outstanding Star Wars Jedi: Fallen Order?\" But then I spent so many nights playing the sequel finding out how they got it right and Cal Kestis grew strong, and I learned how to get along. And now we’re back, in outer space… okay, okay, don’t leave! I’ll stop. The point is that with vastly expanded combat options, bigger, more open maps, vastly more abilities to play with, and enough collectable stuff to fill a Correllian freighter, Star Wars Jedi: Survivor is in many ways the Batman: Arkham City to Fallen Order’s Arkham Asylum. And much like the Arkham games did for Batman, nothing else convincingly captures playing as a Force user quite as well as this. </p>",
+    "sourceUrl": "https://www.ign.com/articles/star-wars-jedi-survivor-review",
+    "price": 69.99,
+    "utcStartDateTime": "2023-03-17T07:00:00.000Z",
+    "utcEndDateTime": "2023-03-18T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-04-30T00:59:16.937Z",
+    "user": {
+      "id": 1,
+      "userName": "THE PIN GANG"
+    },
+    "media": [
+      {
+        "id": 160,
+        "thumbName": "0ba0fe60-6fcd-4275-987a-883836a72e27.jpg",
+        "thumbWidth": 400,
+        "thumbHeight": 225,
+        "originalUrl": "https://assets-prd.ignimgs.com/2023/04/26/starwarsjedisurvivor-review-blogroll-1682485572564.jpg?width=1280",
+        "originalWidth": 1280,
+        "originalHeight": 720,
+        "type": "1"
+      }
+    ],
+    "merchants": [
+      {
+        "id": 5,
+        "label": "Gamestop",
+        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fstar-wars-jedi-survivor---playstation-5%2F392881.html",
+        "price": 69.99,
+        "pinId": 162
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 163,
+    "parentId": 162,
+    "rootThread": false,
+    "title": "Resident Evil 4 Review  - IGN",
+    "description": "<p class=\"paragraph\"> In light of the high-quality remakes of&nbsp;<a href=\"https://www.ign.com/games/resident-evil-2\">Resident Evil 2</a>&nbsp;and&nbsp;<a href=\"https://www.ign.com/games/resident-evil-3\">3</a>&nbsp;released in 2019 and 2020, it felt like a safe bet that Capcom would do an equally admirable job of rebuilding Resident Evil 4. Even so, when I hit the start button on this 2023 remake of the legendary 2005 action-horror game I wasn’t prepared for how forcefully it would knock my knees out from under me and suplex me headfirst into 16 hours of sustained tension and exhilaration. This fully revitalised campaign dramatically one-ups the original in almost every conceivable way. Its Spanish countryside setting is substantially more sinister, its pacing has been tightened to the point where hardly a single minute is wasted, and its controls have been modernised in order to allow its signature dynamic shooting mechanics to really shine. I’ve been waiting 18 years for a game to thrill me in the same way as Resident Evil 4; as it turns out, this whole time I’ve just been waiting for another Resident Evil 4. </p>",
+    "sourceUrl": "https://www.ign.com/articles/resident-evil-4-remake-review",
+    "price": 59.99,
+    "utcStartDateTime": "2023-03-24T07:00:00.000Z",
+    "utcEndDateTime": "2023-03-25T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-04-30T01:01:40.688Z",
+    "user": {
+      "id": 1,
+      "userName": "THE PIN GANG"
+    },
+    "media": [
+      {
+        "id": 161,
+        "thumbName": "e9970655-276f-42d1-8ead-15d083b8544c.jpg",
+        "thumbWidth": 400,
+        "thumbHeight": 225,
+        "originalUrl": "https://assets-prd.ignimgs.com/2023/03/17/re4-blogroll-1679022261876.jpg?width=1280",
+        "originalWidth": 1280,
+        "originalHeight": 720,
+        "type": "1"
+      }
+    ],
+    "merchants": [
+      {
+        "id": 6,
+        "label": "Gamestop Pre-Owned",
+        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fresident-evil-4---playstation-5%2F391500.html",
+        "price": 54.99,
+        "pinId": 163
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 144,
     "parentId": 143,
     "rootThread": false,
@@ -4104,6 +4288,7 @@
   },
   {
     "id": 145,
+    "parentId": 163,
     "rootThread": false,
     "title": "The Legend of Zelda: Tears of the Kingdom pre-order guide",
     "description": "Clear your calendar and put your Steam Deck in storage, because The Legend of Zelda: Tears of the Kingdom for Nintendo Switch finally arrives on May 12. Nintendo recently showed off 10 minutes of gameplay footage (embedded above), giving gamers their first look at how Tears of the Kingdom will look and run, answering several questions along the way about weapon durability, new abilities, and more. It also announced a limited edition Switch OLED console with a design inspired by the game.",
@@ -4139,6 +4324,7 @@
   },
   {
     "id": 146,
+    "parentId": 145,
     "rootThread": false,
     "title": "Street Fighter 6 is scheduled to release on June 2, 2023 on PC, Xbox Series X/S, PlayStation 4, and PlayStation 5",
     "description": "The next evolution of the Street Fighter series is almost here, focusing heavily on single-player elements to ensure there’s plenty of content for every level of fighter. Street Fighter 5 was heavily criticized at launch for its lack of playable content outside of versus mode and while this satisfied most high-level players, casual players found there was very little to keep them entertained.\nCapcom has taken its time developing Street Fighter 6 to ensure they don’t repeat the same mistakes again. It features a brand new single-player story mode which gives players a chance to explore Metro City as a custom fighter. Street Fighter 6 is shaping up to become one of the best fighting games and potentially one of the best PC games overall.",
@@ -4174,15 +4360,17 @@
   },
   {
     "id": 147,
+    "parentId": 146,
     "rootThread": false,
-    "title": "At 2022's The Game Awards, a glitzy new trailer announced the game's final release date - 6 June 2023.",
-    "description": "The fourth in the action role-playing series will be darker than the last iteration - a return to the grittier roots of the original Diablo.",
+    "title": "Diablo 4 at 2022's The Game Awards, a glitzy new trailer announced the game's final release date - 6 June 2023.",
+    "description": "<p class=\"paragraph\"> The fourth in the action role-playing series will be darker than the last iteration - a return to the grittier roots of the original Diablo. </p><p class=\"paragraph\"> Diablo 4 is on the way - there's plenty more hacking and slashing to be had. The next game in Blizzard's mega-popular franchise was unveiled a good while ago, and its release is drawing ever closer. </p>",
     "sourceUrl": "https://www.msn.com/en-us/entertainment/gaming/diablo-4-release-date-beta-dates-trailers-and-more/ar-AA17Hvne",
     "price": 69.99,
     "utcStartDateTime": "2023-06-06T07:00:00.000Z",
     "utcEndDateTime": "2023-06-07T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-03-06T05:37:29.942Z",
+    "utcUpdatedDateTime": "2023-04-30T01:12:39.396Z",
     "user": {
       "id": 1,
       "userName": "THE PIN GANG"
@@ -4193,6 +4381,87 @@
         "originalUrl": "//www.youtube.com/embed/9bRWIdOMfro",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/9bRWIdOMfro\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+      }
+    ],
+    "merchants": [
+      {
+        "id": 7,
+        "label": "Gamestop",
+        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fdiablo-iv----playstation-5%2F357780.html",
+        "price": 69.99,
+        "pinId": 147
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 164,
+    "parentId": 147,
+    "rootThread": false,
+    "title": "Final Fantasy 16: Release Date, Story, And Everything We Know",
+    "description": "<p class=\"paragraph\"> Here's everything you need to know about the next Final Fantasy game's story, characters, gameplay, and world. </p><p class=\"paragraph\"> Six years have passed since the last mainline installment in the decidedly not-so-final Final Fantasy series, making this one of the largest gaps between games in the series' 35 years of history. However, all that waiting seems to be for good reason. What we've seen from Final Fantasy XVI makes the game look like a high-fantasy epic combining the grandeur of older titles with the cutting-edge technology of newer games, making us hopeful that this next entry will be well worth the wait. </p>",
+    "sourceUrl": "https://www.gamespot.com/articles/final-fantasy-16-release-date-story-and-everything-we-know/1100-6485789/",
+    "price": 69.99,
+    "utcStartDateTime": "2023-06-22T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-23T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-04-30T01:15:49.851Z",
+    "user": {
+      "id": 1,
+      "userName": "THE PIN GANG"
+    },
+    "media": [
+      {
+        "id": 162,
+        "thumbName": "6a0c7bc3-0c05-495b-b066-2ccb791c85d7.jpg",
+        "thumbWidth": 400,
+        "thumbHeight": 225,
+        "originalUrl": "https://www.gamespot.com/a/uploads/scale_super/1574/15747411/3777063-ffxvi.jpg",
+        "originalWidth": 1280,
+        "originalHeight": 719,
+        "type": "1"
+      }
+    ],
+    "merchants": [
+      {
+        "id": 8,
+        "label": "Gamestop",
+        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fplaystation-5%2Fproducts%2Ffinal-fantasy-xvi---playstation-5%2F357774.html",
+        "price": 69.99,
+        "pinId": 164
+      },
+      {
+        "id": 9,
+        "label": "GameStop Deluxe Edition",
+        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fplaystation-5%2Fproducts%2Ffinal-fantasy-xvi-deluxe-edition---playstation-5%2F357775.html",
+        "price": 99.99,
+        "pinId": 164
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 165,
+    "parentId": 164,
+    "rootThread": false,
+    "title": "Baldur's Gate 3 - Gameplay Trailer | State of Play 2023",
+    "description": "<p class=\"paragraph\"> Following a 20-plus year wait, RPG fans will finally return to the Forgotten Realms of the popular Baldur's Gate franchise. But the Dungeons &amp; Dragons-based sequel has much more going for it than players' long-brimming anticipation. Developed by Larian Studios — the team behind acclaimed RPG series Divinity — Baldur's Gate III represents that rare dream pairing of a beloved property with the studio best suited to adapting it. Toss in the fact that this hotly anticipated&nbsp;<a href=\"https://www.cnn.com/cnn-underscored/electronics/best-pc-games\">PC game</a>&nbsp;has been honed over two years of fan feedback-fueled early access, and we can't wait to party up and teach those ugly mind flayers some manners.&nbsp; </p>",
+    "sourceUrl": "https://www.youtube.com/watch?v=okFSR8CCOPY",
+    "price": 69.99,
+    "utcStartDateTime": "2023-08-31T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-01T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-04-30T01:18:36.259Z",
+    "user": {
+      "id": 1,
+      "userName": "THE PIN GANG"
+    },
+    "media": [
+      {
+        "id": 163,
+        "originalUrl": "//www.youtube.com/embed/okFSR8CCOPY",
+        "type": "3",
+        "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/okFSR8CCOPY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
       }
     ],
     "userId": 1
@@ -4217,6 +4486,36 @@
         "originalUrl": "//www.youtube.com/embed/CDVH_JJIRWI",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/CDVH_JJIRWI\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 166,
+    "parentId": 165,
+    "rootThread": false,
+    "title": "Marvel's Spider-Man 2: everything we know about the long-awaited PS5 sequel",
+    "description": "<p class=\"paragraph\"> Marvel's Spider-Man 2&nbsp;is due to release in Fall 2023 exclusively for&nbsp;<a href=\"https://www.techradar.com/reviews/ps5\">PS5</a>, completely skipping&nbsp;<a href=\"https://www.techradar.com/reviews/gaming/games-consoles/original-2013-ps4-review-1131803/review\">PS4</a>. This was confirmed via a&nbsp;<a href=\"https://twitter.com/PlayStation/status/1603434786693038083?s=20&amp;t=NqVLDU4ReKYGIVOFxqCuIA\" target=\"_blank\">Tweet by PlayStation</a>(opens in new tab)&nbsp;(opens in a new tab). Rumors had suggested that we would be getting a release date imminently, so it was great to have it confirmed. For now, Fall 2023 is the closest we have to a final date. We'll update if we hear more. </p>",
+    "sourceUrl": "https://www.techradar.com/news/marvels-spider-man-2",
+    "price": 69.99,
+    "utcStartDateTime": "2023-11-30T08:00:00.000Z",
+    "utcEndDateTime": "2023-12-01T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-04-30T01:22:31.011Z",
+    "user": {
+      "id": 1,
+      "userName": "THE PIN GANG"
+    },
+    "media": [
+      {
+        "id": 164,
+        "thumbName": "ed30a2c1-8f8d-4394-aa81-c8378e093f9f.jpg",
+        "thumbWidth": 400,
+        "thumbHeight": 225,
+        "originalUrl": "https://cdn.mos.cms.futurecdn.net/QubQsn2xMAzmo3KCB4uZMo-1200-80.jpg",
+        "originalWidth": 1200,
+        "originalHeight": 675,
+        "type": "1"
       }
     ],
     "userId": 1
