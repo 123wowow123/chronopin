@@ -62,7 +62,8 @@ export default class Pins extends BasePins {
     if (sortId) {
       pins = _.chain(pins)
         .sortBy(sortId)
-        .value();
+        .value()
+        .reverse();
     } else {
       // need to sort properly
       pins = _.chain(pins)
