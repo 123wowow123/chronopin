@@ -201,27 +201,33 @@
       return this;
     }
 
-    submitPin(pin) {
-      this._forceValidate();
-      if (!this.$scope.pinForm.$valid) {
-        return this.$q.reject('form not valid');
-      }
+    submitPin() {
+      // Form needs to settle
+      setTimeout(() => {
+        let pin = this.pin;
+        this._forceValidate();
+        if (!this.$scope.pinForm.$valid) {
+          return this.$q.reject('form not valid');
+        }
 
-      let submitPromise;
-      this.enableForm(false);
-      if (this.mode === 'edit') {
-        submitPromise = this.scrapeService.updatePin(pin);
-      } else {
-        submitPromise = this.scrapeService.addPin(pin);
-      }
-      return submitPromise
-        .then(response => {
-          this.$state.go('main');
-          return response;
-        })
-        .catch(() => {
-          this.enableForm(true);
-        });
+        let submitPromise;
+        this.enableForm(false);
+        if (this.mode === 'edit') {
+          submitPromise = this.scrapeService.updatePin(pin);
+        } else {
+          submitPromise = this.scrapeService.addPin(pin);
+        }
+        return submitPromise
+          .then(response => {
+            this.$state.go('main');
+            return response;
+          })
+          .catch(() => {
+            this.enableForm(true);
+          });
+      }, 0)
+
+
     }
 
     checkOverlapped($event) {

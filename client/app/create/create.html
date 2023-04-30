@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-lg-12 clearfix">
 
-          <form name="pinForm" class="create__form" ng-submit="$ctrl.submitPin($ctrl.pin)" novalidate>
+          <form name="pinForm" class="create__form" ng-submit="$ctrl.submitPin()" novalidate>
             <h4>{{$ctrl.title}}</h4>
 
             <fieldset ng-disabled="$ctrl.formDisabled">
@@ -128,7 +128,7 @@
                   <label for="price" class="control-label">MSRP Price</label>
                   <div class="input-group" ng-class="{'has-error' : pinForm.price.$invalid && pinForm.price.$dirty}">
                     <div class="input-group-addon">$</div>
-                    <input name="price" type="text" class="form-control" id="price" placeholder="MSRP Price"
+                    <input name="price" type="number" class="form-control" id="price" placeholder="MSRP Price"
                       ng-model="$ctrl.pin.price" ng-pattern="/^-?\d*\.?\d{0,2}$/">
                   </div>
 
