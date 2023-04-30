@@ -42,7 +42,7 @@ function executeCreateTable() {
   let sql = `
         CREATE TABLE [dbo].[${TableName}]
         (
-            id INT PRIMARY KEY NOT NULL IDENTITY,
+            id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
             userName NVARCHAR(255) NOT NULL,
             firstName NVARCHAR(255) NOT NULL,
             lastName NVARCHAR(255) NOT NULL,

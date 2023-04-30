@@ -41,77 +41,121 @@ function executeDropSP() {
 
 function executeCreateSP() {
   let sql = `
-        CREATE PROCEDURE [dbo].[${StoredProcedureName}]
-            @parentId           INT,
-            @title              NVARCHAR(1024),
-            @description        NVARCHAR(4000),
-            @sourceUrl          NVARCHAR(4000),
-            @address            NVARCHAR(4000),
-            @priceLowerBound    DECIMAL(18, 2),
-            @priceUpperBound    DECIMAL(18, 2),
-            @price              DECIMAL(18, 2),
-            @tip                NVARCHAR(4000),
-            @utcStartDateTime   DATETIME2,
-            @utcEndDateTime     DATETIME2,
-            @allDay             BIT,
-            @userId             INT,
-            @utcCreatedDateTime DATETIME2(7),
-            @utcUpdatedDateTime DATETIME2(7),
-            @utcDeletedDateTime DATETIME2(7),
-            @id                 INT OUT
-        AS
-          BEGIN
+      CREATE PROCEDURE [dbo].[${StoredProcedureName}]
+      @parentId           INT,
+      @title              NVARCHAR(1024),
+      @description        NVARCHAR(4000),
+      @sourceUrl          NVARCHAR(4000),
+      @address            NVARCHAR(4000),
+      @priceLowerBound    DECIMAL(18, 2),
+      @priceUpperBound    DECIMAL(18, 2),
+      @price              DECIMAL(18, 2),
+      @tip                NVARCHAR(4000),
+      @utcStartDateTime   DATETIME2,
+      @utcEndDateTime     DATETIME2,
+      @allDay             BIT,
+      @userId             INT,
+      @utcCreatedDateTime DATETIME2(7),
+      @utcUpdatedDateTime DATETIME2(7),
+      @utcDeletedDateTime DATETIME2(7),
+      @id                 INT OUT
+    AS
+    BEGIN
 
-            SET NOCOUNT ON;
+      SET NOCOUNT ON;
 
-            IF @utcCreatedDateTime IS NULL
-            BEGIN
-               SET @utcCreatedDateTime = sysutcdatetime();
-            END
+      IF @id IS NOT NULL
+      BEGIN
+          SET IDENTITY_INSERT dbo.Pin ON;
+      END
 
-            IF @allDay IS NULL
-            BEGIN
-               SET @allDay = 0;
-            END
+      IF @utcCreatedDateTime IS NULL
+      BEGIN
+        SET @utcCreatedDateTime = sysutcdatetime();
+      END
 
-            INSERT INTO [dbo].[Pin] (
-              parentId,
-              title,
-              description,
-              sourceUrl,
-              address,
-              priceLowerBound,
-              priceUpperBound,
-              price,
-              tip,
-              utcStartDateTime,
-              utcEndDateTime,
-              allDay,
-              userId,
-              utcCreatedDateTime,
-              utcUpdatedDateTime,
-              utcDeletedDateTime)
-            VALUES (
-              @parentId,
-              @title,
-              @description,
-              @sourceUrl,
-              @address,
-              @priceLowerBound,
-              @priceUpperBound,
-              @price,
-              @tip,
-              @utcStartDateTime,
-              @utcEndDateTime,
-              @allDay,
-              @userId,
-              @utcCreatedDateTime,
-              @utcUpdatedDateTime,
-              @utcDeletedDateTime);
+      IF @allDay IS NULL
+      BEGIN
+        SET @allDay = 0;
+      END
 
-            SET @id = SCOPE_IDENTITY();
+      IF @id IS NULL
+        INSERT INTO [dbo].[Pin] (
+          parentId,
+          title,
+          description,
+          sourceUrl,
+          address,
+          priceLowerBound,
+          priceUpperBound,
+          price,
+          tip,
+          utcStartDateTime,
+          utcEndDateTime,
+          allDay,
+          userId,
+          utcCreatedDateTime,
+          utcUpdatedDateTime,
+          utcDeletedDateTime)
+        VALUES (
+          @parentId,
+          @title,
+          @description,
+          @sourceUrl,
+          @address,
+          @priceLowerBound,
+          @priceUpperBound,
+          @price,
+          @tip,
+          @utcStartDateTime,
+          @utcEndDateTime,
+          @allDay,
+          @userId,
+          @utcCreatedDateTime,
+          @utcUpdatedDateTime,
+          @utcDeletedDateTime);
+      ELSE 
+        INSERT INTO [dbo].[Pin] (
+          id,
+          parentId,
+          title,
+          description,
+          sourceUrl,
+          address,
+          priceLowerBound,
+          priceUpperBound,
+          price,
+          tip,
+          utcStartDateTime,
+          utcEndDateTime,
+          allDay,
+          userId,
+          utcCreatedDateTime,
+          utcUpdatedDateTime,
+          utcDeletedDateTime)
+        VALUES (
+          @id,
+          @parentId,
+          @title,
+          @description,
+          @sourceUrl,
+          @address,
+          @priceLowerBound,
+          @priceUpperBound,
+          @price,
+          @tip,
+          @utcStartDateTime,
+          @utcEndDateTime,
+          @allDay,
+          @userId,
+          @utcCreatedDateTime,
+          @utcUpdatedDateTime,
+          @utcDeletedDateTime);
 
-          END;
+      SET @id = SCOPE_IDENTITY();
+      SET IDENTITY_INSERT dbo.Pin OFF;
+
+    END;
         `;
 
   return cp.getConnection()

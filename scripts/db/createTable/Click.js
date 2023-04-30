@@ -41,7 +41,7 @@ function executeCreateTable() {
   let sql = `
         CREATE TABLE [dbo].[${TableName}]
         (
-            id INT PRIMARY KEY NOT NULL IDENTITY,
+            id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
             userId INT NOT NULL,
             mediumId INT NOT NULL,
             utcCreatedDateTime DATETIME2(7) DEFAULT SYSUTCDATETIME() NOT NULL,
