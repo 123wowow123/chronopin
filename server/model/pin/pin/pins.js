@@ -36,7 +36,7 @@ export default class Pins extends BasePins {
     return this;
   }
 
-  setPinsSortBy(pins, sortId) {
+  setPinsSortBy(pins, sortId, reverse) {
     if (Array.isArray(pins)) {
       this.pins = Pins.mapPinJoins(pins, sortId);
     } else {
@@ -62,8 +62,7 @@ export default class Pins extends BasePins {
     if (sortId) {
       pins = _.chain(pins)
         .sortBy(sortId)
-        .value()
-        .reverse();
+        .value();
     } else {
       // need to sort properly
       pins = _.chain(pins)
@@ -72,7 +71,7 @@ export default class Pins extends BasePins {
         .value();
     }
 
-    return pins;
+    return reverse ? pins.reverse() : pins;
   }
 
   static queryForwardByDate(fromDateTime, userId, lastPinId, pageSize) {
@@ -134,7 +133,7 @@ export default class Pins extends BasePins {
   static getThreadPins(pinId) {
     return _queryPinByIdsAndOrderedByThread(pinId)
       .then(res => {
-        return new Pins().setPinsSortBy(res.pins, 'reverseOrder');
+        return new Pins().setPinsSortBy(res.pins, 'reverseOrder', true);
       });
   }
 
