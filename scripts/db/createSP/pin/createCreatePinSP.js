@@ -152,8 +152,13 @@ function executeCreateSP() {
           @utcUpdatedDateTime,
           @utcDeletedDateTime);
 
+      IF @id IS NOT NULL
+      BEGIN
+        SET IDENTITY_INSERT dbo.Pin OFF;
+      END
+
       SET @id = SCOPE_IDENTITY();
-      SET IDENTITY_INSERT dbo.Pin OFF;
+
 
     END;
         `;
