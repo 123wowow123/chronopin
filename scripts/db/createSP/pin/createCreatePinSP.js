@@ -150,8 +150,7 @@ function executeCreateSP() {
           @userId,
           @utcCreatedDateTime,
           @utcUpdatedDateTime,
-          @utcDeletedDateTime
-          );
+          @utcDeletedDateTime);
 
       IF @id IS NOT NULL
       BEGIN
