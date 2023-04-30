@@ -8,7 +8,6 @@ mobile x scrolling issue
 back button does not refresh pin comment +
 fix pin overlap issue
 changing username needs to sync to comment
-Fix header data load
 referal menu issue on mobile
 create/edit/respond page needs to have auth guard +
 remove facebook like +
