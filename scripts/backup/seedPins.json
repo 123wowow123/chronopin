@@ -5217,6 +5217,35 @@
     "userId": 1
   },
   {
+    "id": 190,
+    "rootThread": false,
+    "title": "The U.S. could hit the debt ceiling by June 1, much sooner than expected, Yellen warns",
+    "description": "<ul><li>The U.S. could fail to meet its debt obligations sooner than expected, Treasury Secretary Janet Yellen warned in a letter to&nbsp;House&nbsp;Speaker Kevin&nbsp;McCarthy.</li><li>Yellen said a drop in tax receipts meant the U.S. could hit its debt ceiling as soon as June 1, earlier than Wall Street and Washington had estimated.</li><li>This date is earlier than Wall Street economists were expecting. Goldman Sachs’ latest estimate this week put the deadline at some point in late July, though the bank’s economists acknowledged that weaker-than-expected tax receipts could advance that timeline.<br></li></ul>",
+    "sourceUrl": "https://www.cnbc.com/2023/05/01/treasury-debt-limit-measures-may-run-out-by-june-1-yellen-says-in-letter-to-mccarthy.html",
+    "utcStartDateTime": "2023-06-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-03T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-01T23:36:09.437Z",
+    "utcUpdatedDateTime": "2023-05-01T23:37:51.845Z",
+    "user": {
+      "id": 1,
+      "userName": "THE PIN GANG"
+    },
+    "media": [
+      {
+        "id": 188,
+        "thumbName": "939475ba-e3b2-444d-b836-d8b4f1662b5c.jpeg",
+        "thumbWidth": 400,
+        "thumbHeight": 225,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107224649-1681394215859-gettyimages-1251778220-AFP_33D49XF.jpeg?v=1682973276&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 146,
     "parentId": 145,
     "rootThread": false,

@@ -6,6 +6,7 @@ Merchant create UI
 Bugs:
 twitter load jump issue ++
 pins loaded from infinit scroll needs to be in memory so that navigating back to home will have proper scroll position ++
+fix "The Legend of Zelda: Tears of the Kingdom pre-order guide" suggestion pins ++
 
 fix pin overlap issue +
 changing username needs to sync to comment
