@@ -39,6 +39,7 @@
             }
             this.initalized.then((isso) => {
               isso.init();
+              isso.fetchComments();
             });
           });
       }, delayParse);

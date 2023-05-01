@@ -4,24 +4,27 @@ WIP:
 Merchant create UI
 
 Bugs:
-mobile x scrolling issue
-back button does not refresh pin comment +
-fix pin overlap issue
+twitter load jump issue ++
+pins loaded from infinit scroll needs to be in memory so that navigating back to home will have proper scroll position ++
+
+fix pin overlap issue +
 changing username needs to sync to comment
 referal menu issue on mobile
 create/edit/respond page needs to have auth guard +
-remove facebook like +
-mobile view pin scrolls to bottom ++
+remove facebook like
 missing description validation
 
 Should show page not found and redirect to home? https://chronopin.com/pin/178
 
 Features:
-Show number of days countdown in pin page +++
-Affliate buy link with price scrape ++
-Modal save favorite with naming/tag and quick button tab with search watch page ++
+Show number of days countdown in pin page ++
+tags useful for 'editor's choice' and other badges ++
+Search by author and by tag (includes pins with group containing tags) ++
+Modal save favorite with naming/tag and quick button tab with search watch page (delay this in favor of just using tags) ++
 location ++
-pin loading needs to remain the same index or search engine will have outdated urls +
+Affliate buy link with price scrape +
+Show youtube transcript on create pin for referance +
+Add google chrome auto login +
 Tab for "For you" & "Following"
 Add Poll feature
 Preview create pin
@@ -29,12 +32,12 @@ Upload image for pin and pin content
 Buy keywords in content that will turn into link where it will show map and nearest location when you can buy product.
 Google index sub pages: RSS, mRSS, and Atom 1.0
 https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap#rss
-Show youtube transcript on create pin for referance +
-Add google chrome auto login +
 Add alt text for image/media for SEO
 Remove jquery for speedup
 All links to outside site will be converted to target blank
 
+
+Share yelp with pictures and location
 
 Cleanup:
 test comment db backup
@@ -298,3 +301,5 @@ https://krcrtv.com/news/local/sites-reservoir-still-on-tract-to-break-ground-in-
 
 https://www.cnbc.com/2023/04/28/california-bans-the-sale-of-new-diesel-trucks-by-2036.html
 
+Inflation Tracker group Tag and tag
+https://twitter.com/INArteCarloDoss/status/1652048950352814155

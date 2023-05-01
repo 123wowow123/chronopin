@@ -1,7 +1,10 @@
 .pin {
-  background-color: var(--primary-bg-color);
-  display: flex;
-  flex-wrap: wrap;
+
+  &__content {
+    background-color: var(--primary-bg-color);
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   &__preview {
     min-width: 0;
@@ -61,7 +64,17 @@
   }
 
   &_suggestions {
+    max-width: 100%;
     @include grid-verticle-break;
+    padding: 0 15px;
+
+    .dynamic-grid {
+      padding: 0;
+    }
+
+    @media only screen and (max-width: $ipad-landscape) {
+      padding: 0;
+    }
   }
 
   .external-link-icon {
@@ -84,10 +97,4 @@
     }
   }
 
-}
-
-@media only screen and (max-width: $ipad-landscape) {
-  .pin_suggestions {
-    @include grid-normalize-margin;
-  }
 }
