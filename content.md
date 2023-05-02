@@ -16,6 +16,7 @@ remove facebook like
 missing description validation
 
 Should show page not found and redirect to home? https://chronopin.com/pin/178
+quick add 1.3 billion 
 
 Features:
 Show number of days countdown in pin page ++
@@ -284,7 +285,6 @@ https://www.polydrops.com/aerodynamics
 
 https://www.motortrend.com/news/2025-rivian-adventure-van-electric-off-road-overland-camper-rv/
 
-https://www.cnbc.com/2023/04/11/ford-to-build-ev-manufacturing-hub-in-canada.html
 
 
 follow required so need chrome extension
@@ -294,13 +294,8 @@ https://twitter.com/roaringmeows/status/1648404621503627266
 https://www.youtube.com/watch?v=d5hu62W89nk
 Chicago, Albuquerque, Phoenix, Denver, Dallas Fort Worth (Solar and wind)
 
-https://www.cnbc.com/2023/04/19/how-pepsico-is-trying-to-get-doritos-cheetos-bags-into-compost-bins.html
 
-https://insideevs.com/news/658711/insider-shares-more-on-tesla-project-highland-aka-model-3-refresh/
 
-https://krcrtv.com/news/local/sites-reservoir-still-on-tract-to-break-ground-in-2024
-
-https://www.cnbc.com/2023/04/28/california-bans-the-sale-of-new-diesel-trucks-by-2036.html
 
 Inflation Tracker group Tag and tag
 https://twitter.com/INArteCarloDoss/status/1652048950352814155
