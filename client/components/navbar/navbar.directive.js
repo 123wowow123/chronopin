@@ -14,7 +14,10 @@
         function dismissDropdown(e) {
 
           const navbarToggle = document.getElementById("navbar-toggle");
+          const subDropdownToggle = document.getElementsByClassName("sub-dropdown-activation");
+
           if (!navbarToggle) return;
+          if (subDropdownToggle && subDropdownToggle[0] && subDropdownToggle[0].contains(e.target)) return;
           
           const foundEl = navbarToggle.contains(e.target);
 
