@@ -32,7 +32,6 @@ Share gouping through email and signup +
 hash*tag? useful for 'editor's choice' and other badges ++
 Search by author and by tag (includes pins with group containing tags) ++
 Modal save favorite with naming/tag and quick button tab with search watch page (delay this in favor of just using tags) ++
-location ++
 Affliate buy link with price scrape +
 Show youtube transcript on create pin for referance +
 Add google chrome auto login +
