@@ -31,7 +31,7 @@ class NavbarController {
   $onInit() {
     this.search = this.$state.params.q;
     this.searchChoice = this.Util.sanitizeSearchChoice(this.$state.params.f);
-    this.searchSubmitted = false;
+    this.searchCountSubmitted = 0;
 
     const searchSubmitListener = this.$scope.$on('search:submit', (event, args) => {
       this.search = args.searchText;
@@ -56,7 +56,7 @@ class NavbarController {
   submitSearch(searchText, searchChoiceText) {
     this.dismissAutoComplete();
     this.$state.go('search', { q: searchText, f: searchChoiceText });
-    this.searchSubmitted = true;
+    this.searchCountSubmitted = 0;
     return this;
   }
 
@@ -67,6 +67,7 @@ class NavbarController {
     const query = searchText;
     const filter = this.Util.sanitizeSearchChoice(searchChoiceText);
 
+    this.searchCountSubmitted++;
     return this.pinWebService
       .autocomplete({
         q: query,
@@ -77,7 +78,7 @@ class NavbarController {
       })
       .then(suggestions => {
         this.suggestions = suggestions;
-        if (!this.searchSubmitted) {
+        if (this.searchCountSubmitted !== 0) {
           this.showSuggestions = !!_.get(this, 'suggestions.length');
         }
       })
@@ -85,7 +86,9 @@ class NavbarController {
         throw err;
       })
       .finally(() => {
-        this.searchSubmitted = false;
+        if (this.searchCountSubmitted !== 0) {
+          this.searchCountSubmitted--;
+        }
       });
   }
 
