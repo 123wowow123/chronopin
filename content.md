@@ -9,9 +9,7 @@ fix pin overlap issue +
 
 pins loaded from infinit scroll needs to be in memory so that navigating back to home will have proper scroll position ++
 create/edit/respond page needs to have auth guard +
-
-changing username needs to sync to comment
-referal menu issue on mobile
+changing username needs to sync to comment +
 
 remove facebook like
 missing description validation
