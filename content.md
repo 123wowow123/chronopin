@@ -5,22 +5,31 @@ Merchant create UI
 
 Bugs:
 twitter load jump issue ++
-pins loaded from infinit scroll needs to be in memory so that navigating back to home will have proper scroll position ++
-fix "The Legend of Zelda: Tears of the Kingdom pre-order guide" suggestion pins ++
-
 fix pin overlap issue +
+
+pins loaded from infinit scroll needs to be in memory so that navigating back to home will have proper scroll position ++
+create/edit/respond page needs to have auth guard +
+
 changing username needs to sync to comment
 referal menu issue on mobile
-create/edit/respond page needs to have auth guard +
+
 remove facebook like
 missing description validation
 
 Should show page not found and redirect to home? https://chronopin.com/pin/178
-quick add 1.3 billion 
+quick add 1.3 billion etc
+quck add Q2 etc
 
 Features:
-Show number of days countdown in pin page ++
-tags useful for 'editor's choice' and other badges ++
+
+Map and address field +
+Basic content Hashtag +
+All links to outside site will be converted to target blank +
+
+Share yelp with pictures and location +
+Share gouping through email and signup +
+
+hash*tag? useful for 'editor's choice' and other badges ++
 Search by author and by tag (includes pins with group containing tags) ++
 Modal save favorite with naming/tag and quick button tab with search watch page (delay this in favor of just using tags) ++
 location ++
@@ -36,10 +45,8 @@ Google index sub pages: RSS, mRSS, and Atom 1.0
 https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap#rss
 Add alt text for image/media for SEO
 Remove jquery for speedup
-All links to outside site will be converted to target blank
 
-
-Share yelp with pictures and location
+Show number of days countdown in pin page
 
 Cleanup:
 test comment db backup
@@ -299,3 +306,7 @@ Chicago, Albuquerque, Phoenix, Denver, Dallas Fort Worth (Solar and wind)
 
 Inflation Tracker group Tag and tag
 https://twitter.com/INArteCarloDoss/status/1652048950352814155
+
+
+https://www.bankrate.com/banking/list-of-failed-banks/
+

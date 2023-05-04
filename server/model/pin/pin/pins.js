@@ -137,6 +137,20 @@ export default class Pins extends BasePins {
       });
   }
 
+  static queryPinByAuthors(userNames) {
+    return _queryPinByAuthors(userNames)
+      .then(res => {
+        return new Pins(res);
+      });
+  }
+
+  static queryPinByAuthorsHasFavorite(userId, userNames) {
+    return _queryPinByAuthorsHasFavorite(userId, userNames)
+      .then(res => {
+        return new Pins(res);
+      });
+  }
+
 }
 
 function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, pageSize) {
@@ -446,6 +460,81 @@ function _queryPinByIdsAndOrderedByThread(pinId) {
             }
             resolve({
               pins: res.recordset
+            });
+          });
+      });
+    });
+}
+
+function _queryPinByAuthors(userNames) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise(function (resolve, reject) {
+        const StoredProcedureName = 'GetPinByAuthers';
+
+        const tvp = new mssql.Table()
+        tvp.columns.add('userName', mssql.NVarChar(255));
+        userNames.forEach(userName => {
+          tvp.rows.add(userName) // Values are in same order as columns.
+        });
+
+        let request = new mssql.Request(conn)
+          .input('TableAuthors', tvp)
+          .output('queryCount', mssql.Int);
+
+        request.execute(`[dbo].[${StoredProcedureName}]`,
+          function (err, res, returnValue, affected) {
+            let queryCount;
+            if (err) {
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+            }
+            try {
+              queryCount = res.output.queryCount;
+            } catch (e) {
+              queryCount = 0;
+            }
+
+            resolve({
+              pins: res.recordset,
+              queryCount: queryCount
+            });
+          });
+      });
+    });
+}
+
+function _queryPinByAuthorsHasFavorite(userId, userNames) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise(function (resolve, reject) {
+        const StoredProcedureName = 'GetPinByAuthersFilterByHasFavorite';
+
+        const tvp = new mssql.Table()
+        tvp.columns.add('userName', mssql.NVarChar(255));
+        userNames.forEach(userName => {
+          tvp.rows.add(userName) // Values are in same order as columns.
+        });
+
+        let request = new mssql.Request(conn)
+          .input('TableIds', tvp)
+          .input('userId', mssql.Int, userId)
+          .output('queryCount', mssql.Int);
+
+        request.execute(`[dbo].[${StoredProcedureName}]`,
+          function (err, res, returnValue, affected) {
+            let queryCount;
+            if (err) {
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+            }
+            try {
+              queryCount = res.output.queryCount;
+            } catch (e) {
+              queryCount = 0;
+            }
+
+            resolve({
+              pins: res.recordset,
+              queryCount: queryCount
             });
           });
       });

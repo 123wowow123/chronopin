@@ -5,10 +5,11 @@
 
     class PinBlockController {
 
-        constructor($scope, pinWebService, Auth, ScrollUtil) {
+        constructor($scope, pinWebService, Auth, ScrollUtil, searchService) {
             this.pinWebService = pinWebService;
             this.Auth = Auth;
             this.ScrollUtil = ScrollUtil;
+            this.searchService = searchService;
         }
 
         $onInit() {
@@ -91,18 +92,28 @@
             template: `
             <article class="grid__panel">
             <!-- <p ng-if="$ctrl.Auth.isAdmin()">{{$ctrl.pin.searchScore}}</p> -->
-            <a class="headline-above" ui-sref="pin({id:$ctrl.pin.id})">
-                <div>
-                    <time class="" datetime="{{$ctrl.pin.utcCreatedDateTime}}">{{$ctrl.pin.utcCreatedDateTime | date :
-                        "MM/dd/yyyy
-                        'at' h:mm a" | lowercase}}</time>
-                    <span class="rubric">{{$ctrl.pin.user.userName}}</span>
+            <div class="grid__headline">
+                <div class="headline-left">
+                    <a class="posted-time" ui-sref="pin({id:$ctrl.pin.id})">
+                        <time datetime="{{$ctrl.pin.utcCreatedDateTime}}">{{$ctrl.pin.utcCreatedDateTime | date :
+                            "MM/dd/yyyy
+                            'at' h:mm a" | lowercase}}
+                        </time>
+                    </a>
+                    <span class="rubric__divider">/</span>
+                    <a ng-click="$ctrl.searchService.submit($ctrl.pin.user.userName)" class="rubric">
+                        <span>{{$ctrl.pin.user.userName}}</span>
+                    </a>
                 </div>
-                <div>
-                    <span class="thread-icon" ng-if="!!$ctrl.pin.parentId" title="Part of thread"></span>
-                    <span class="thread-icon" ng-if="!!$ctrl.pin.rootThread" title="Firt Pin in a thread"></span>
-                </div>
-            </a>
+        
+                <a ui-sref="pin({id:$ctrl.pin.id})">
+                    <div>
+                        <span class="thread-icon" ng-if="!!$ctrl.pin.parentId" title="Part of thread"></span>
+                        <span class="thread-icon" ng-if="!!$ctrl.pin.rootThread" title="Firt Pin in a thread"></span>
+                    </div>
+                </a>
+            </div>
+        
             <h4 class="grid__heading">
                 <a class="grid__heading_link" ui-sref="pin({id:$ctrl.pin.id})">
                     {{$ctrl.pin.title}}

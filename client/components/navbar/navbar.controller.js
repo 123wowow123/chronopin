@@ -24,12 +24,27 @@ class NavbarController {
     this.$el = $element;
     this.$scope = $scope;
     this.$transitions = $transitions;
+
+    this.registeredListeners = {};
   }
 
   $onInit() {
     this.search = this.$state.params.q;
     this.searchChoice = this.Util.sanitizeSearchChoice(this.$state.params.f);
     this.searchSubmitted = false;
+
+    const searchSubmitListener = this.$scope.$on('search:submit', (event, args) => {
+      this.search = args.searchText;
+      this.searchChoice = args.searchChoiceText
+        ? this.Util.sanitizeSearchChoice(args.searchChoiceText)
+        : this.Util.sanitizeSearchChoice(this.$state.params.f);
+
+      this.submitSearch(
+        this.search,
+        this.searchChoice.value,
+      )
+    });
+    this.registeredListeners['search:submit'] = searchSubmitListener;
   }
 
   clearSuggestionsAndDismiss() {
@@ -46,9 +61,7 @@ class NavbarController {
   }
 
   autoComplete(searchText, searchChoiceText) {
-    //debugger
     if (!searchText) {
-      debugger;
       this.clearSuggestionsAndDismiss();
     }
     const query = searchText;
@@ -77,12 +90,12 @@ class NavbarController {
   }
 
   showLogo() {
-    //debugger
     return !this.search && !this.searchControlsFocus;
   }
 
   clearSearchToMain() {
-    return this.clearSearch();
+    return this.clearSearch()
+      .goToMain();
   }
 
   clearSearch() {
@@ -97,7 +110,6 @@ class NavbarController {
   }
 
   searhFocusToggle(focus) {
-    //debugger
     this.searchControlsFocus = focus;
   }
 
@@ -136,6 +148,17 @@ class NavbarController {
     //console.log("On autocomplete dismiss", JSON.stringify())
     //debugger;
     this.showSuggestions = false;
+  }
+
+  $onDestroy() {
+    this._unRegisterListeners();
+  }
+
+  _unRegisterListeners() {
+    if (this.registeredListeners['search:submit']) {
+      this.registeredListeners['search:submit']();
+      delete this.registeredListeners['search:submit'];
+    }
   }
 
 }

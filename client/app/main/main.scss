@@ -190,6 +190,29 @@ $bag-font-color: var(--bag-text-color);
     }
 }
 
+.headline-left {
+    color: var(--grid-post-date-text-color);
+    display: flex;
+    justify-content: space-between;
+
+    a.posted-time {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
+    .rubric {
+        color: inherit;
+        cursor: pointer;
+
+        &__divider {
+            content: ' / ';
+            display: inline;
+            padding-left: 3px;
+            padding-right: 6px;
+        }
+    }
+}
+
 .grid {
     box-sizing: border-box;
     transition: all 0.6s ease-out;
@@ -219,13 +242,17 @@ $bag-font-color: var(--bag-text-color);
             box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 
             .grid__heading {
-                text-decoration: underline;
-
                 &_link {
                     cursor: zoom-in;
                 }
             }
         }
+    }
+
+    &__headline {
+        display: flex;
+        font-size: 10px;
+        justify-content: space-between;
     }
 
     &__media {
@@ -250,14 +277,12 @@ $bag-font-color: var(--bag-text-color);
     // }
     /** timeline content **/
     &__heading {
-        margin: 0 0 15px;
+        margin: 4px 0 15px;
         color: $timeline-header-color;
         font-size: 20px;
         line-height: 23px;
         font-family: IBMPlexSans, Arial, sans-serif; //GeorgiaProCondSemiBold, Georgia, serif; // &_link:focus, &_link:hover {
 
-        //   text-decoration: none;
-        // }
         a {
             color: inherit;
         }
@@ -266,7 +291,6 @@ $bag-font-color: var(--bag-text-color);
     &__description {
         color: var(--grid-description-text-color);
         font-family: Noto Sans, Arial, sans-serif; //Georgia, 'Times New Roman', Times, serif;
-        //text-align: justify;
     }
 
     /** search and sort section css end ***/
@@ -287,8 +311,8 @@ $bag-font-color: var(--bag-text-color);
     }
 
     &__uploaded-date {
+        font-size: 12px;
         margin: 5px 0;
-        @extend .small;
         @extend .text-muted;
     }
 
@@ -438,6 +462,10 @@ $bag-font-color: var(--bag-text-color);
         justify-content: space-between;
         align-items: center;
         margin-bottom: 12px;
+
+        .grid__headline {
+            font-size: 11px;
+        }
     }
 
     &.ng-leave {
@@ -531,26 +559,6 @@ $bag-font-color: var(--bag-text-color);
             content: "G";
         }
     }
-}
-
-.rubric {
-    color: var(--grid-auther-text-color);
-
-    &:before {
-        content: ' / ';
-        display: inline;
-        padding-left: 3px;
-        padding-right: 6px;
-    }
-}
-
-.headline-above {
-    color: var(--grid-post-date-text-color) !important;
-    font-size: 10px;
-    margin-bottom: 4px;
-    display: flex;
-    justify-content: space-between;
-    text-decoration: none !important;
 }
 
 

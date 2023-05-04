@@ -19,14 +19,14 @@ angular.module('chronopinNodeApp')
 
           if (bottom <= offset) {
             $rootScope.$broadcast('scrolled:bottom', {
-              top: top,
-              bottom: bottom
+              top,
+              bottom
             });
             $log.log('bottom', bottom);
           } else if (top <= offset) {
             $rootScope.$broadcast('scrolled:top', {
-              top: top,
-              bottom: bottom
+              top,
+              bottom
             });
             $log.log('top', top);
           }

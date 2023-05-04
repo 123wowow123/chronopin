@@ -143,7 +143,17 @@
        * Gets User Real Name on a user
        *   (synchronous)
        *
-       * @return {Object}
+       * @return {String}
+       */
+      getCurrentUserNameNoPrefix() {
+        return currentUser.userName.substring(1);
+      },
+
+      /**
+       * Gets User Real Name on a user
+       *   (synchronous)
+       *
+       * @return {String}
        */
       getCurrentUserRealName() {
         return (currentUser.firstName || '') + (currentUser.firstName && currentUser.lastName ? ' ' : '') + (currentUser.lastName || '');
@@ -153,7 +163,7 @@
        * Gets User Email on a user
        *   (synchronous)
        *
-       * @return {Object}
+       * @return {String}
        */
       getCurrentUserEmail() {
         return currentUser.email;
@@ -163,7 +173,7 @@
        * Gets User Name on a user
        *   (synchronous|asynchronous)
        *
-       * @return {Object}
+       * @return {String}
        */
       getCurrentUserName() {
         return (currentUser.userName || '');

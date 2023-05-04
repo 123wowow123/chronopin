@@ -43,16 +43,35 @@ export function searchPins(req, res) {
     searchText = req.query.q,
     hasFavorite = req.query.f && req.query.f.toLowerCase() == 'watch';
 
-  //console.log('searchPin:', searchText);
-  if (hasFavorite) {
-    return SearchPins.searchFavorite(userId, searchText)
-      .then(response.withResult(res, 200))
-      .catch(response.handleError(res));
+  const searchTextArray = searchText.split(" ");
+  const userNames = searchTextArray.filter(t => {
+    return t.startsWith("@");
+  });
+
+  if (userNames.length) {
+
+    if (hasFavorite) {
+      return SearchPins.searchAuthorsFavorite(userId, userNames)
+        .then(response.withResult(res, 200))
+        .catch(response.handleError(res));
+    } else {
+      return SearchPins.searchAuthors(userNames)
+        .then(response.withResult(res, 200))
+        .catch(response.handleError(res));
+    }
+
   } else {
-    return SearchPins.search(searchText)
-      .then(response.withResult(res, 200))
-      .catch(response.handleError(res));
+    if (hasFavorite) {
+      return SearchPins.searchFavorite(userId, searchText)
+        .then(response.withResult(res, 200))
+        .catch(response.handleError(res));
+    } else {
+      return SearchPins.search(searchText)
+        .then(response.withResult(res, 200))
+        .catch(response.handleError(res));
+    }
   }
+
 }
 
 const customAutoComplete = true;

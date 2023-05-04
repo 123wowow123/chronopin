@@ -54,7 +54,7 @@ module.exports.seedDB = function () {
     defaultUserObj = {
       provider: 'facebook',
       role: 'admin',
-      userName: 'THE PIN GANG',
+      userName: '@ThePinGang',
       firstName: 'Ian',
       lastName: 'Flynn',
       email: 'flynni2008@gmail.com',
@@ -65,7 +65,7 @@ module.exports.seedDB = function () {
     secondaryUserObj = {
       provider: 'facebook',
       role: 'admin',
-      userName: 'Pretty Gang',
+      userName: '@PrettyGang',
       firstName: 'Serena',
       lastName: 'Chen',
       email: 'chenxikristy@gmail.com',
@@ -194,13 +194,10 @@ module.exports.seedDB = function () {
     .then(({
       //user
     }) => {
-      let user = new User(defaultUserObj);
       // Create Pins
       let pinsJSONObjs = JSON.parse(fs.readFileSync(pinFilePath, 'utf8'));
       let pins = new FullPins(pinsJSONObjs);
-      pins.pins.forEach(p => {
-        p.setUser(user);
-      });
+      
       return pins.save()
         .catch(error => {
           log.error('Pins Save Error', JSON.stringify(error));

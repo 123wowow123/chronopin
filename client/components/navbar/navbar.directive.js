@@ -14,6 +14,8 @@
         function dismissDropdown(e) {
 
           const navbarToggle = document.getElementById("navbar-toggle");
+          if (!navbarToggle) return;
+          
           const foundEl = navbarToggle.contains(e.target);
 
           if (foundEl || scope.nav.isCollapsed) return;

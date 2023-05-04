@@ -84,10 +84,10 @@ function executeCreateTable() {
 
               [User].[userName]                          AS [User.userName],
 
-              [Merchant].[id]                           AS [Merchant.id],
-              [Merchant].[label]                        AS [Merchant.label],
-              [Merchant].[url]                          AS [Merchant.url],
-              [Merchant].[price]                        AS [Merchant.price]
+              [Merchant].[id]                            AS [Merchant.id],
+              [Merchant].[label]                         AS [Merchant.label],
+              [Merchant].[url]                           AS [Merchant.url],
+              [Merchant].[price]                         AS [Merchant.price]
 
             FROM [dbo].[Pin] AS [Pin]
               LEFT JOIN [dbo].[PinMedium] AS [Media.PinMedium]

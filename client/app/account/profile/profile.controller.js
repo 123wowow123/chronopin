@@ -17,6 +17,7 @@ class ProfileController {
     this.Auth.getCurrentUser()
       .then((user) => {
         this.user = user;
+        this.user.userNameNoPrefix = user.userName.substring(1);
       })
       .finally(() => {
         this.loading = false;
@@ -28,7 +29,7 @@ class ProfileController {
 
     if (form.$valid) {
       this.Auth.patchUser({
-        userName: this.user.userName,
+        userName: '@'+this.user.userNameNoPrefix,
         firstName: this.user.firstName,
         lastName: this.user.lastName,
         email: this.user.email

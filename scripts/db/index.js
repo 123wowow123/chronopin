@@ -44,6 +44,8 @@ const createGetPinsWithFavoriteAndLikeArrayNextSP = createSP.createGetPinsWithFa
 const createSearchPinSP = createSP.createSearchPinSP;
 const createGetPinAuthorThreadSP = createSP.createGetPinAuthorThreadSP;
 const createGetPinAuthorThreadWithFavoriteAndLikeSP = createSP.createGetPinAuthorThreadWithFavoriteAndLikeSP;
+const createGetPinByAuthersFilterByHasFavoriteSP = createSP.createGetPinByAuthersFilterByHasFavoriteSP;
+const createGetPinByAuthersSP = createSP.createGetPinByAuthersSP;
 
 // Returns Single Result
 const createGetPinWithFavoriteAndLikeSP = createSP.createGetPinWithFavoriteAndLikeSP;
@@ -147,6 +149,8 @@ function execute() {
         createSearchPinSP,
         createGetPinAuthorThreadSP,
         createGetPinAuthorThreadWithFavoriteAndLikeSP,
+        createGetPinByAuthersFilterByHasFavoriteSP,
+        createGetPinByAuthersSP,
 
         // Returns Single Result
         createGetPinWithFavoriteAndLikeSP,

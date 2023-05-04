@@ -79,6 +79,10 @@
         return found || defaultChoice;
       },
 
+      defaultSearchChoice() {
+        return appConfig.searchChoices[0];
+      },
+
     };
 
     return Util;
