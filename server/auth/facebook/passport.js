@@ -12,6 +12,7 @@ import * as _ from 'lodash';
 
 export function setup(config) {
   passport.use(new FacebookStrategy({
+    passReqToCallback: true,
     clientID: config.facebook.clientID,
     clientSecret: config.facebook.clientSecret,
     callbackURL: config.facebook.callbackURL,
@@ -32,7 +33,9 @@ export function setup(config) {
       //'location'
     ]
   },
-    function (accessToken, refreshToken, profile, done) {
+    function (req, accessToken, refreshToken, profile, done) {
+      const handle = _.get(req, "cookies.handle");
+      
       User.getByEmail(_.get(profile, "emails[0].value"))
         .then(({
           user
@@ -41,7 +44,7 @@ export function setup(config) {
           log.infoBlue('current chronopin user', log.stringify(user));
 
           // update empty fields
-          let { user: updatedUser, updatedFields } = facebookMapper(user, profile);
+          let { user: updatedUser, updatedFields } = facebookMapper(user, profile, handle);
 
 
           if (user && !updatedFields.length) {

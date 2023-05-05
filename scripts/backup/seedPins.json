@@ -4461,6 +4461,35 @@
     "userId": 1
   },
   {
+    "id": 199,
+    "rootThread": false,
+    "title": "China rolls out a further 1 trillion yuan in economic stimulus ($146 billion dollars)",
+    "description": "<p class=\"paragraph\"> Among the allowances, state policy banks were given an additional 300 billion yuan ($44 billion) focused mainly on financing infrastructure projects. Tight rules were announced alongside the measures that require the projects to be profit-making and targeted. </p><p class=\"paragraph\"> Local governments were given the green light to use more than 500 billion yuan ($73 billion) of existing special bond quotas and were promised reduced financing costs through interest-rate changes. </p><p class=\"paragraph\"> Amid an&nbsp;<a href=\"https://www.wsj.com/articles/china-extends-power-curbs-amid-heat-wave-drought-11661171568?mod=mktw&amp;mod=article_inline\">energy crisis sparked by severe droughts and heat waves</a>, the cabinet said central-government-run electricity firms will be allowed to sell 200 billion yuan ($29 billion) in special debt to ensure adequate energy supply. </p>",
+    "sourceUrl": "https://www.marketwatch.com/story/china-rolls-out-a-further-trillion-yuan-in-economic-stimulus-after-vowing-it-wouldnt-unleash-big-fiscal-packages-11661465281",
+    "price": 146000000000,
+    "utcStartDateTime": "2022-08-24T07:00:00.000Z",
+    "utcEndDateTime": "2022-08-25T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-04T16:12:40.474Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 197,
+        "thumbName": "3ee89a6d-3605-42c3-96e9-b3c393477c02",
+        "thumbWidth": 400,
+        "thumbHeight": 200,
+        "originalUrl": "https://images.mktw.net/im-554407/social",
+        "originalWidth": 1280,
+        "originalHeight": 640,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 188,
     "parentId": 187,
     "rootThread": false,
@@ -5250,6 +5279,34 @@
     "userId": 1
   },
   {
+    "id": 198,
+    "rootThread": false,
+    "title": "The Fed's rate-setting body said it would raise its benchmark rate to a range between 5% and 5.25%, the highest level since 2007",
+    "description": "",
+    "sourceUrl": "https://www.msn.com/en-us/money/markets/fed-hikes-interest-rate-025-percentage-point-but-signals-pause/ar-AA1aH87N",
+    "utcStartDateTime": "2023-05-03T07:00:00.000Z",
+    "utcEndDateTime": "2023-05-04T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-04T05:12:49.504Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 196,
+        "thumbName": "6bf42ba4-f7de-49ac-8ba1-d6e8b2c91d45.img",
+        "thumbWidth": 400,
+        "thumbHeight": 253,
+        "originalUrl": "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1aHaKw.img?h=506&w=799&m=6&q=60&o=f&l=f",
+        "originalWidth": 799,
+        "originalHeight": 506,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 145,
     "parentId": 163,
     "rootThread": false,
@@ -5781,6 +5838,35 @@
         "originalUrl": "https://dnd2oi6izkvoi.cloudfront.net/images/uploads/ceramic-coating-1.jpg",
         "originalWidth": 768,
         "originalHeight": 545,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 200,
+    "rootThread": false,
+    "title": "Westinghouse announces a new small nuclear reactor — a notable step in the industry's efforts to remake itself",
+    "description": "<p class=\"paragraph\"> Westinghouse announced the launch of a small version of its flagship AP1000 nuclear reactor on Thursday. </p><p class=\"paragraph\"> The new reactor, called the AP300, aims to be available in 2027, and will generate about a third of the power as the flagship AP1000 reactor, enough to power about 300,000 homes. </p><p class=\"paragraph\"> It’s expected to cost about $1 billion to set up each plant, a small fraction of the expense of the full AP1000. </p>",
+    "sourceUrl": "https://www.cnbc.com/2023/05/04/westinghouse-announces-a-small-nuclear-reactor.html",
+    "price": 1000000000000,
+    "utcStartDateTime": "2027-12-31T08:00:00.000Z",
+    "utcEndDateTime": "2028-01-01T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-04T17:01:11.702Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 198,
+        "thumbName": "bf50f483-f7d7-4ca8-bc7e-2e3e25b773b5.jpg",
+        "thumbWidth": 400,
+        "thumbHeight": 225,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107234152-1683046852769-SMR_-_Overview.jpg?v=1683205201&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
         "type": "1"
       }
     ],

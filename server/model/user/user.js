@@ -270,6 +270,10 @@ export default class User {
     return _getUserByEmailMSSQL(email);
   }
 
+  static getUserByUserName(handle) {
+    return _getUserByUserNameMSSQL(handle);
+  }
+
 }
 
 function _createMSSQL(user) {
@@ -546,6 +550,33 @@ function _getUserByEmailMSSQL(email) {
           .input('email', mssql.NVarChar, email);
 
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
+
+        request.execute(`[dbo].[${StoredProcedureName}]`,
+          (err, res, returnValue, affected) => {
+            if (err) {
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+            }
+            if (res.recordset.length) {
+              user = new User(res.recordset[0]);
+            } else {
+              user = undefined;
+            }
+            resolve({
+              user: user
+            });
+          });
+      });
+    });
+}
+
+function _getUserByUserNameMSSQL(userName) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise(function (resolve, reject) {
+        const StoredProcedureName = 'GetUserByUserName';
+        let user;
+        let request = new mssql.Request(conn)
+          .input('userName', mssql.NVarChar, userName);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {

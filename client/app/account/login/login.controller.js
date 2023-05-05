@@ -35,6 +35,10 @@
           });
       }
     }
+
+    validate() {
+      return true;
+    }
   }
 
   angular.module('chronopinNodeApp')

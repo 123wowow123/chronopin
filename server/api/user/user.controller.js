@@ -224,6 +224,22 @@ export function me(req, res, next) {
 }
 
 /**
+ * Check Handle Available
+ */
+export function checkHandle(req, res, next) {
+  let handle = String(req.body.handle);
+  return User.getUserByUserName(handle)
+    .then(({
+      user
+    }) => {
+      res.json({
+        available: !user
+      });
+    })
+    .catch(err => next(err));
+}
+
+/**
  * Authentication callback
  */
 export function authCallback(req, res, next) {

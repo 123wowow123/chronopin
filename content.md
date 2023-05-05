@@ -19,7 +19,8 @@ quick add 1.3 billion etc
 quck add Q2 etc
 
 Features:
-
+readable dollar figure +
+Add image upload content/mainPin and supporting media reference tab ++
 Map and address field +
 Basic content Hashtag +
 All links to outside site will be converted to target blank +

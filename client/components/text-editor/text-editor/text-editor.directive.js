@@ -18,7 +18,6 @@
         require: '?ngModel',
         scope: {},
         link: function postLink(scope, elem, attrs, ngModel) {
-          let initSkipListenerCount = 0;
 
           function setModelInstance(editor, edjsParser) {
             scope.editor = editor;
@@ -46,29 +45,23 @@
             resolve();
             EditorJS.ayncInit(
               "editorjs",
-
               (api, event) => {
-                if (initSkipListenerCount === 0) {
-                  if (scope.editor) {
+                if (scope.editor) {
+                  setTimeout(() => {
                     scope.editor.save()
                       .then((htmlContent) => {
                         ngModel.$setViewValue(scope.parser.parse(htmlContent));
                         scope.$apply();
                       });
-                  }
-                } else {
-                  initSkipListenerCount--;
+                  }, 0);
                 }
               })
-
               .then(({ editor, edjsParser }) => {
                 setModelInstance(editor, edjsParser);
                 if (ngModel.$viewValue) {
-                  initSkipListenerCount++;
                   updateContent(ngModel.$viewValue);
                 }
               });
-
           });
 
         }

@@ -12,11 +12,14 @@ import * as _ from 'lodash';
 
 export function setup(config) {
   passport.use(new GoogleStrategy({
+    passReqToCallback: true,
     clientID: config.google.clientID,
     clientSecret: config.google.clientSecret,
     callbackURL: config.google.callbackURL,
   },
-    function (accessToken, refreshToken, profile, done) {
+    function (req, accessToken, refreshToken, profile, done) {
+      const handle = _.get(req, "cookies.handle");
+
       User.getByEmail(_.get(profile, "emails[0].value"))
         .then(({
           user
@@ -25,7 +28,7 @@ export function setup(config) {
           log.infoBlue('current chronopin user', log.stringify(user));
 
           // update empty fields
-          let { user: updatedUser, updatedFields } = googleMapper(user, profile);
+          let { user: updatedUser, updatedFields } = googleMapper(user, profile, handle);
 
           if (user && !updatedFields.length) {
             return done(null, user);

@@ -10,7 +10,9 @@ angular.module('chronopinNodeApp')
       scope: {
         classes: '@',
         provider: '@',
-        label: '@'
+        label: '@',
+        handle: '@',
+        validateFn: '&'
       }
     };
   });

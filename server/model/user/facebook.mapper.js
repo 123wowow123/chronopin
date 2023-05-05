@@ -1,8 +1,9 @@
 import * as _ from 'lodash';
 import User from './user';
 import { mapToUserWhenEmpty } from '../../util/mapper';
+import { handleValidateReg } from '../../util/validation';
 
-export function facebookMapper(inUser, profile) {
+export function facebookMapper(inUser, profile, handle) {
 
     const mapping = {
         facebookId: "id",
@@ -21,10 +22,10 @@ export function facebookMapper(inUser, profile) {
 
     let updatedFields = mapToUserWhenEmpty(mapping, profile, user);
 
-    // Set default userName is missing
-    if (!user.userName) {
-        user.userName = [user.firstName, user.lastName].join(" ");
-        updatedFields.push({ 'userName': val });
+    // Add userName is it hasn't been set
+    if (!user.userName && handle && handle.length > 1 && handleValidateReg.test(handle.substring(1))) {
+        user.userName = handle;
+        updatedFields.push({ 'userName': handle });
     }
 
     return { user, updatedFields };

@@ -50,6 +50,7 @@ const createGetPinByAuthersSP = createSP.createGetPinByAuthersSP;
 // Returns Single Result
 const createGetPinWithFavoriteAndLikeSP = createSP.createGetPinWithFavoriteAndLikeSP;
 const createGetUserByIdSP = createSP.createGetUserByIdSP;
+const createGetUserByUserNameSP = createSP.createGetUserByUserNameSP;
 const createGetUserByFacebookIdSP = createSP.createGetUserByFacebookIdSP;
 const createGetUserByGoogleIdSP = createSP.createGetUserByGoogleIdSP;
 const createGetUserByEmailSP = createSP.createGetUserByEmailSP;
@@ -155,6 +156,7 @@ function execute() {
         // Returns Single Result
         createGetPinWithFavoriteAndLikeSP,
         createGetUserByIdSP,
+        createGetUserByUserNameSP,
         createGetUserByFacebookIdSP,
         createGetUserByGoogleIdSP,
         createGetUserByEmailSP,

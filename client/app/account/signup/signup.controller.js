@@ -14,33 +14,48 @@ class SignupController {
 
   register(form) {
     this.submitted = true;
-
     if (form.$valid) {
       this.Auth.createUser({
-        userName: this.user.userName,
+        userName: '@' + this.user.userNameNoPrefix,
         firstName: this.user.firstName,
         lastName: this.user.lastName,
         email: this.user.email,
         password: this.user.password
       })
-      .then(() => {
-        // Account created, redirect to home
-        this.$state.go('main');
-      })
-      .catch(err => {
-        err = err.data;
-        this.errors = {};
+        .then(() => {
+          // Account created, redirect to home
+          this.$state.go('main');
+        })
+        .catch(err => {
+          err = err.data;
+          this.errors = {};
 
-        // Update validity of form fields that match the sequelize errors
-        if (err.firstName || err.lastName) {
-          angular.forEach(err.fields, field => {
-            form[field].$setValidity('mongoose', false);
-            this.errors[field] = err.message;
-          });
-        }
-      });
+          // Update validity of form fields that match the sequelize errors
+          if (err.firstName || err.lastName) {
+            angular.forEach(err.fields, field => {
+              form[field].$setValidity('mongoose', false);
+              this.errors[field] = err.message;
+            });
+          }
+        });
     }
   }
+
+  validateSocialSubmition(valid) {
+    this.socialSubmitted = true;
+    return valid;
+  }
+
+  // checkHandle(handle) {
+  //   const prefixedHandle = '@' + handle;
+  //   this.Auth.checkHandle(prefixedHandle).then((res) => {
+  //     const data = res.data;
+  //     this.handleAvailable = data.available;
+  //   }).catch((err) => {
+  //     this.handleAvailable = false;
+  //     console.error(err);
+  //   })
+  // }
 }
 
 angular.module('chronopinNodeApp')

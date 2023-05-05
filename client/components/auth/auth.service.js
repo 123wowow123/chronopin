@@ -244,6 +244,12 @@
        */
       getToken() {
         return $cookies.get('token');
+      },
+
+      checkHandle(handle) {
+        return $http.post('/api/users/handle/check', {
+          handle
+        });
       }
 
     };
