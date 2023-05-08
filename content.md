@@ -20,7 +20,11 @@ quck add Q2 etc
 
 Features:
 readable dollar figure +
-Add image upload content/mainPin and supporting media reference tab ++
+
+
+default does not select media but when selected it will auto check pin header media.
+
+Add image upload content/mainPin and supporting media reference tab ++ embed youtube/twitter/image/hashtag/alignment
 Map and address field +
 Basic content Hashtag +
 All links to outside site will be converted to target blank +
@@ -43,6 +47,8 @@ Google index sub pages: RSS, mRSS, and Atom 1.0
 https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap#rss
 Add alt text for image/media for SEO
 Remove jquery for speedup
+
+add rottentomatoes rating +
 
 Show number of days countdown in pin page
 
@@ -307,4 +313,6 @@ https://twitter.com/INArteCarloDoss/status/1652048950352814155
 
 
 https://www.bankrate.com/banking/list-of-failed-banks/
+
+https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html
 

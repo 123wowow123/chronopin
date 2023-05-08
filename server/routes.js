@@ -42,24 +42,38 @@ export default function (app) {
   app.route('/:url(api|auth|components|app|bower_components|assets)/*')
     .get(errors[404]);
 
-  app.route('/')
+  // app.route('/')
+  //   .get((req, res) => {
+  //     //res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
+  //     const mainPinDataPromise = mainController.getPinsAndFormatData(req, res)
+  //       .then(paginationHeader.setPaginationObject(res, req))
+  //       .then((mainPinData) => {
+  //         // Render Templated root page
+  //         res.render(app.get('appPath') + '/index.html', { mainPinData });
+  //       }).catch(() => {
+  //         res.render(app.get('appPath') + '/index.html', { mainPinData: null });
+  //       });
+
+  //   });
+
+  // All other routes should redirect to the index.html
+  // app.route('/*')
+  //   .get((req, res) => {
+  //     //res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
+  //     res.render(app.get('appPath') + '/index.html', { mainPinData: null });
+  //   });
+
+    app.route('/mainPinData.js')
     .get((req, res) => {
-      //res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
       const mainPinDataPromise = mainController.getPinsAndFormatData(req, res)
         .then(paginationHeader.setPaginationObject(res, req))
         .then((mainPinData) => {
           // Render Templated root page
-          res.render(app.get('appPath') + '/index.html', { mainPinData });
+          res.render(app.get('appPath') + '/mainPinData.ejs', { mainPinData });
         }).catch(() => {
-          res.render(app.get('appPath') + '/index.html', { mainPinData: null });
+          res.render(app.get('appPath') + '/mainPinData.ejs', { mainPinData: null });
         });
 
     });
-    
-  // All other routes should redirect to the index.html
-  app.route('/*')
-    .get((req, res) => {
-      //res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
-      res.render(app.get('appPath') + '/index.html', { mainPinData: null });
-    });
+
 }

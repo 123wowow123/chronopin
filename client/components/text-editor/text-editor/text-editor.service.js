@@ -32,11 +32,14 @@
       const listJsPromise = loadJSPromise('List', 'https://cdn.jsdelivr.net/npm/@editorjs/list@1.8.0/dist/bundle.min.js');
       const strikethroughPromise = loadJSPromise('Strikethrough', 'https://cdn.jsdelivr.net/npm/@sotaproject/strikethrough@1.0.1/dist/bundle.min.js');
       const edjsParserPromise = loadJSPromise('edjsParser', 'https://cdn.jsdelivr.net/npm/editorjs-parser@1/build/Parser.browser.min.js');
+      const embedPromise = loadJSPromise('Embed', 'https://cdn.jsdelivr.net/npm/@editorjs/embed@latest');
+
+      // const AlignmentTuneToolPromise = loadJSPromise('AlignmentBlockTune', 'https://cdn.jsdelivr.net/npm/editorjs-text-alignment-blocktune@latest');
 
 
-      return Promise.all([editorJsPromise, headerJsPromise, listJsPromise, strikethroughPromise, edjsParserPromise])
-        .then(([EditorJS, Header, List, Strikethrough, edjsParser]) => {
-          return { EditorJS, Header, List, Strikethrough, edjsParser };
+      return Promise.all([editorJsPromise, headerJsPromise, listJsPromise, strikethroughPromise, edjsParserPromise, embedPromise])
+        .then(([EditorJS, Header, List, Strikethrough, edjsParser, Embed]) => {
+          return { EditorJS, Header, List, Strikethrough, edjsParser, Embed };
         });
     }
 
@@ -47,7 +50,7 @@
             this.initalized = this.loadJsAsync();
           }
           return this.initalized
-            .then(({ EditorJS, Header, List, Strikethrough, edjsParser }) => {
+            .then(({ EditorJS, Header, List, Strikethrough, edjsParser, Embed }) => {
 
               const editor = new EditorJS({
                 holder: elId,
@@ -72,7 +75,12 @@
                       defaultStyle: 'unordered'
                     }
                   },
-                  strikethrough: Strikethrough
+                  strikethrough: Strikethrough,
+                  embed: {
+                    class: Embed,
+                    inlineToolbar: true
+                  },
+
 
                 },
 

@@ -108,6 +108,10 @@
                 }, 0);
             },
 
+            isOverflown({ clientHeight, scrollHeight }) {
+                return scrollHeight > clientHeight;
+            }
+
         };
 
         return ScrollUtil;
