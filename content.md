@@ -314,8 +314,6 @@ https://twitter.com/INArteCarloDoss/status/1652048950352814155
 
 https://www.bankrate.com/banking/list-of-failed-banks/
 
-https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html
-
 https://www.telegraph.co.uk/world-news/2023/04/07/china-taiwan-invasion-war-usa-russia-ukraine-xi-jinping/
 
 https://twitter.com/BurggrabenH/status/1650413711297789954
