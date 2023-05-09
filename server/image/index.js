@@ -14,15 +14,38 @@ import * as log from '../util/log';
 //pipe to save in Medium
 
 const THUMB_OPTIONS = {
-  width: config.thumbWidth
+  width: config.thumbWidth,
+  uploadImageWidth: config.uploadImageWidth
 };
 
-export function createThumb(imageUrl) {
+export function createThumbFromLocalPath(localPath) {
+
+  return thumb
+    .shrinkFromPath(localPath, THUMB_OPTIONS)
+    .then(newThumb => {
+      return {
+        buffer: newThumb.buffer,
+        thumbWidth: newThumb.width,
+        thumbHeight: newThumb.height,
+        originalUrl: undefined,
+        originalWidth: newThumb.originalWidth,
+        originalHeight: newThumb.originalHeight,
+        type: newThumb.type,
+        extention: _getExtentionFromMimeType(newThumb.type)
+      };
+    })
+    .catch(err => {
+      log.error('save-thumb error:', err);
+      throw new Error(err);
+    });
+}
+
+export function createThumbFromUrl(imageUrl) {
   //create get image stream
   return downloadImage(imageUrl)
     .then(buffer => {
       return thumb
-        .shrink(buffer, THUMB_OPTIONS)
+        .shrinkFromBuffer(buffer, THUMB_OPTIONS)
         .then(newThumb => {
           return {
             buffer: newThumb.buffer,
@@ -32,7 +55,7 @@ export function createThumb(imageUrl) {
             originalWidth: newThumb.originalWidth,
             originalHeight: newThumb.originalHeight,
             type: newThumb.type,
-            extention: _getExtention(imageUrl)
+            extention: _getExtentionFromMimeType(newThumb.type)
           };
         })
         .catch(err => {
@@ -66,6 +89,10 @@ export function saveThumb(thumbObj) {
 // https://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript/12900504#12900504
 function _getExtention(fname) {
   return path.extname(url.parse(fname).pathname); // '.jpg'
+}
+
+function _getExtentionFromMimeType(type) {
+  return '.' + type.split('/')[1] // '.jpg'
 }
 
 export {

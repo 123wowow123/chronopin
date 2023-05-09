@@ -7,17 +7,6 @@ import * as pinController from '../pin/pin.controller';
 import * as dateTimeController from '../dateTime/dateTime.controller';
 import * as paginationHeader from '../../util/paginationHeader'
 
-import {
-  Pin,
-  Pins,
-  User,
-  Medium
-} from '../../model';
-
-import {
-  EventEmitter
-} from 'events';
-
 
 const pageSize = config.pagination.pageSize;
 

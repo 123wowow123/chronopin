@@ -63,7 +63,7 @@ export default class Medium {
       .then(({
         medium
       }) => {
-        if (medium) {
+        if (_.get(medium, "_pin.id")) {
           // share existing Medium to save thumb space and better analytics
           // no modification needed and just reuse db medium;
           this.set(medium);
@@ -72,7 +72,11 @@ export default class Medium {
               return this.set(newMedium);
             });
         } else {
-          return _createMSSQL(this, this._pin.id);
+          if (_.get(this, "_pin.id")) {
+            return _createPinMediumLinkMSSQL(this, this._pin.id);
+          } else {
+            return _createMSSQL(this);
+          }
         }
       });
   }
@@ -115,7 +119,11 @@ export default class Medium {
       .createAndSaveToCDN();
   }
 
-  static isValid(medium) {
+  static createAndSaveToCDNFromLocalPath(localPath) {
+    return _getImageStatAndSaveImageFromLocalPath(localPath);
+  }
+
+  static isValid(localPath) {
     return !!medium.originalUrl;
   }
 
@@ -129,7 +137,7 @@ Object.defineProperty(MediumPrototype, '_pin', {
   writable: true
 });
 
-function _createMSSQL(medium, pinId) {
+function _createPinMediumLinkMSSQL(medium, pinId) {
   return cp.getConnection()
     .then(conn => {
       return new Promise((resolve, reject) => {
@@ -145,6 +153,49 @@ function _createMSSQL(medium, pinId) {
           .input('type', mssql.Int, medium.type)
           .input('utcCreatedDateTime', mssql.DateTime2(7), medium.utcCreatedDateTime)
           .input('utcDeletedDateTime', mssql.DateTime2(7), medium.utcDeletedDateTime)
+          .input('authorName', mssql.NVarChar(1028), medium.authorName)
+          .input('authorUrl', mssql.NVarChar(4000), medium.authorUrl)
+          .input('html', mssql.NVarChar(4000), medium.html)
+
+          .output('id', mssql.Int);
+
+        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
+
+        request.execute(`[dbo].[${StoredProcedureName}]`,
+          (err, res, returnValue, affected) => {
+            let queryCount, id;
+            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
+            if (err) {
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+            }
+            // ToDo: doesn't always return value
+            try {
+              //console.log('returnValue', returnValue); // always return 0
+              id = res.output.id;
+              //console.log('queryCount', queryCount);
+            } catch (e) {
+              id = 0;
+            }
+            medium.id = id;
+            resolve(medium);
+          });
+      });
+    });
+}
+
+function _createMSSQL(medium) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise((resolve, reject) => {
+        const StoredProcedureName = 'CreateMedium';
+        let request = new mssql.Request(conn)
+          .input('thumbName', mssql.NVarChar(4000), medium.thumbName)
+          .input('thumbWidth', mssql.Int, medium.thumbWidth)
+          .input('thumbHeight', mssql.Int, medium.thumbHeight)
+          .input('originalUrl', mssql.NVarChar(4000), medium.originalUrl)
+          .input('originalWidth', mssql.Int, medium.originalWidth)
+          .input('originalHeight', mssql.Int, medium.originalHeight)
+          .input('type', mssql.Int, medium.type)
           .input('authorName', mssql.NVarChar(1028), medium.authorName)
           .input('authorUrl', mssql.NVarChar(4000), medium.authorUrl)
           .input('html', mssql.NVarChar(4000), medium.html)
@@ -206,27 +257,30 @@ function _createPinMediumMSSQL(medium, pinId) {
     });
 }
 
-function _getImageStatAndSaveImage(imageUrl) {
+function _mapAndSaveThumb(thumbBufferAndMeta) {
   let thumbNameGuid = uuidv4();
-  return image.createThumb(imageUrl)
-    .then(thumbBufferAndMeta => {
-      // console.log('_getImageStatAndSaveImage', thumbBufferAndMeta);
-      let newMedium = {
-        buffer: thumbBufferAndMeta.buffer,
-        thumbName: thumbNameGuid + thumbBufferAndMeta.extention,
-        thumbWidth: thumbBufferAndMeta.thumbWidth,
-        thumbHeight: thumbBufferAndMeta.thumbHeight,
+  let newMedium = {
+    buffer: thumbBufferAndMeta.buffer,
+    thumbName: thumbNameGuid + thumbBufferAndMeta.extention,
+    thumbWidth: thumbBufferAndMeta.thumbWidth,
+    thumbHeight: thumbBufferAndMeta.thumbHeight,
 
-        originalUrl: thumbBufferAndMeta.originalUrl,
-        originalWidth: thumbBufferAndMeta.originalWidth,
-        originalHeight: thumbBufferAndMeta.originalHeight,
-        type: 1 // 1 for 'Image'
-      };
-      return newMedium;
-    })
-    .then(newMedium => {
-      return image.saveThumb(newMedium);
-    });
+    originalUrl: thumbBufferAndMeta.originalUrl,
+    originalWidth: thumbBufferAndMeta.originalWidth,
+    originalHeight: thumbBufferAndMeta.originalHeight,
+    type: 1 // 1 for 'Image'
+  };
+  return image.saveThumb(newMedium);
+}
+
+function _getImageStatAndSaveImageFromLocalPath(localPath) {
+  return image.createThumbFromLocalPath(localPath)
+    .then(_mapAndSaveThumb);
+}
+
+function _getImageStatAndSaveImage(imageUrl) {
+  return image.createThumbFromUrl(imageUrl)
+    .then(_mapAndSaveThumb);
 }
 
 function _deleteFromPinMSSQL(medium, pinId) {

@@ -5279,6 +5279,34 @@
     "userId": 1
   },
   {
+    "id": 202,
+    "rootThread": false,
+    "title": "Used vehicle prices fell last month for the first time in 2023",
+    "description": "<p class=\"paragraph\"> Wholesale used vehicle prices declined last month for the first time this year. </p><p class=\"paragraph\"> Cox Automotive reported a 3% decline from March to April in its Manheim Used Vehicle Value Index. </p><p class=\"paragraph\"> Further declines could help bring used vehicle pricing down for consumers, since retail prices traditionally follow changes in wholesale prices. </p>",
+    "sourceUrl": "https://www.cnbc.com/2023/05/05/manheim-used-vehicle-index-prices-fall-in-april.html",
+    "utcStartDateTime": "2023-05-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-05-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-05T16:42:20.118Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 200,
+        "thumbName": "fdb32feb-199d-448d-93af-bea61de72f7b.jpg",
+        "thumbWidth": 400,
+        "thumbHeight": 225,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/106889426-1626195968001-106889426-1622137995065-gettyimages-1233138884-AFP_9AW3FN.jpg?v=1683295047&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 198,
     "rootThread": false,
     "title": "The Fed's rate-setting body said it would raise its benchmark rate to a range between 5% and 5.25%, the highest level since 2007",
@@ -5331,6 +5359,31 @@
         "originalWidth": 750,
         "originalHeight": 422,
         "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 203,
+    "rootThread": false,
+    "title": "Probability for another 25bps hike in June doubled today 8.5% to 16.6%",
+    "sourceUrl": "https://twitter.com/Jay__Cale/status/1655653917651247104",
+    "utcStartDateTime": "2023-05-08T07:00:00.000Z",
+    "utcEndDateTime": "2023-05-09T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-09T02:09:30.214Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 201,
+        "originalUrl": "https://twitter.com/Jay__Cale/status/1655653917651247104",
+        "type": "2",
+        "authorName": "Jay Cal",
+        "authorUrl": "https://twitter.com/Jay__Cale",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Probability for another 25bps hike in June doubled today <a href=\"https://t.co/OWDq1ceIEx\">pic.twitter.com/OWDq1ceIEx</a></p>&mdash; Jay Cal (@Jay__Cale) <a href=\"https://twitter.com/Jay__Cale/status/1655653917651247104?ref_src=twsrc%5Etfw\">May 8, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
       }
     ],
     "userId": 1

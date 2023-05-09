@@ -34,7 +34,9 @@ export default function (app) {
   app.use('/api/dates', require('./api/dateTime'));
   app.use('/api/main', require('./api/main'));
   app.use('/auth', require('./auth').default);
+  app.use('/upload', require('./api/upload'));
 
+  
   // Direct isso request is easier to maintain
   //app.use('/isso', require('./isso'));
 
@@ -53,17 +55,10 @@ export default function (app) {
   //       }).catch(() => {
   //         res.render(app.get('appPath') + '/index.html', { mainPinData: null });
   //       });
-
   //   });
 
-  // All other routes should redirect to the index.html
-  // app.route('/*')
-  //   .get((req, res) => {
-  //     //res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
-  //     res.render(app.get('appPath') + '/index.html', { mainPinData: null });
-  //   });
 
-    app.route('/mainPinData.js')
+  app.route('/mainPinData.js')
     .get((req, res) => {
       const mainPinDataPromise = mainController.getPinsAndFormatData(req, res)
         .then(paginationHeader.setPaginationObject(res, req))
@@ -74,6 +69,13 @@ export default function (app) {
           res.render(app.get('appPath') + '/mainPinData.ejs', { mainPinData: null });
         });
 
+    });
+
+  // All other routes should redirect to the index.html
+  app.route('/*')
+    .get((req, res) => {
+      res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
+      // res.render(app.get('appPath') + '/index.html', { mainPinData: null });
     });
 
 }

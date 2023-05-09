@@ -33,13 +33,12 @@
       const strikethroughPromise = loadJSPromise('Strikethrough', 'https://cdn.jsdelivr.net/npm/@sotaproject/strikethrough@1.0.1/dist/bundle.min.js');
       const edjsParserPromise = loadJSPromise('edjsParser', 'https://cdn.jsdelivr.net/npm/editorjs-parser@1/build/Parser.browser.min.js');
       const embedPromise = loadJSPromise('Embed', 'https://cdn.jsdelivr.net/npm/@editorjs/embed@latest');
+      const ImageToolPromise = loadJSPromise('ImageTool', 'https://cdn.jsdelivr.net/npm/@editorjs/image@2.3.0');
 
-      // const AlignmentTuneToolPromise = loadJSPromise('AlignmentBlockTune', 'https://cdn.jsdelivr.net/npm/editorjs-text-alignment-blocktune@latest');
 
-
-      return Promise.all([editorJsPromise, headerJsPromise, listJsPromise, strikethroughPromise, edjsParserPromise, embedPromise])
-        .then(([EditorJS, Header, List, Strikethrough, edjsParser, Embed]) => {
-          return { EditorJS, Header, List, Strikethrough, edjsParser, Embed };
+      return Promise.all([editorJsPromise, headerJsPromise, listJsPromise, strikethroughPromise, edjsParserPromise, embedPromise, ImageToolPromise])
+        .then(([EditorJS, Header, List, Strikethrough, edjsParser, Embed, ImageTool]) => {
+          return { EditorJS, Header, List, Strikethrough, edjsParser, Embed, ImageTool };
         });
     }
 
@@ -50,7 +49,7 @@
             this.initalized = this.loadJsAsync();
           }
           return this.initalized
-            .then(({ EditorJS, Header, List, Strikethrough, edjsParser, Embed }) => {
+            .then(({ EditorJS, Header, List, Strikethrough, edjsParser, Embed, ImageTool }) => {
 
               const editor = new EditorJS({
                 holder: elId,
@@ -81,6 +80,15 @@
                     inlineToolbar: true
                   },
 
+                  image: {
+                    class: ImageTool,
+                    config: {
+                      endpoints: {
+                        byFile: '/upload/uploadFile', // Your backend file uploader endpoint
+                        byUrl: '/upload/fetchUrl', // Your endpoint that provides uploading by Url
+                      }
+                    }
+                  }
 
                 },
 

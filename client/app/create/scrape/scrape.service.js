@@ -142,7 +142,7 @@
                     utcEndDateTime: endDateTime,
                     allDay: allDay,
                     merchants: pin.merchants,
-                    media: [pin.selectedMedia]
+                    media: pin.selectedMedia ? [pin.selectedMedia] : undefined
                 };
                 return _.omitBy(newPin, _.isNull);
             }

@@ -316,3 +316,13 @@ https://www.bankrate.com/banking/list-of-failed-banks/
 
 https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html
 
+https://www.telegraph.co.uk/world-news/2023/04/07/china-taiwan-invasion-war-usa-russia-ukraine-xi-jinping/
+
+https://twitter.com/BurggrabenH/status/1650413711297789954
+
+https://chinachange.org/2023/04/07/china-has-a-youth-unemployment-problem-guangdong-province-spearheads-a-plan-to-send-300000-youth-to-the-countryside-by-the-end-of-2025/
+
+https://www.cnbc.com/2023/04/25/lucid-gravity-suv-road-tests.html
+with map
+
+https://en.wikipedia.org/wiki/Tokyo_Anime_Award

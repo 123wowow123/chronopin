@@ -2,52 +2,14 @@
 // import sharp from 'sharp';
 import Jimp from 'jimp';
 
-// Faster but needs 64 bit node running on Azure
-// export function shrink(buffer, options) {
-//
-//   let originalWidth, originalHeight;
-//   const image = sharp(buffer);
-//
-//   return image
-//     .metadata()
-//     .then(metadata => {
-//       originalWidth = metadata.width;
-//       originalHeight = metadata.height;
-//
-//       return image
-//         .resize(options.width)
-//         .max()
-//         .toBuffer({
-//           resolveWithObject: true
-//         });
-//     })
-//     .then(obj => {
-//       const output = {
-//         buffer: obj.data,
-//         width: obj.info.width,
-//         height: obj.info.height,
-//         originalWidth: originalWidth,
-//         originalHeight: originalHeight,
-//         extention: "." + obj.info.format
-//       };
-//
-//       return output;
-//     });
-//
-// }
-
-
-export function shrink(buffer, options) {
-  let originalWidth, originalHeight;
-  //const image = sharp(buffer);
-
-  return Jimp.read(buffer)
+export function shrinkImage(bufferOrLocalPath, options) {
+  return Jimp.read(bufferOrLocalPath)
     .then(image => {
       // do stuff with the image (if no exception)
       let originalWidth = image.bitmap.width;
       let originalHeight = image.bitmap.height;
 
-      if (originalWidth <= options.width) { // rename to max width?
+      if (originalWidth <= options.uploadImageWidth) { // rename to max width?
         const output = {
           buffer: image.bitmap.data,
           width: originalWidth,
@@ -61,7 +23,7 @@ export function shrink(buffer, options) {
       } else {
         let output;
         image
-          .resize(options.width, Jimp.AUTO)
+          .resize(options.uploadImageWidth, Jimp.AUTO)
           .getBuffer(Jimp.AUTO, (err, buffer) => {
             output = {
               buffer: buffer,
@@ -76,4 +38,14 @@ export function shrink(buffer, options) {
       }
     });
 
+}
+
+
+export function shrinkFromBuffer(buffer, options) {
+  return shrinkImage(buffer, options);
+}
+
+
+export function shrinkFromPath(localPath, options) {
+  return shrinkImage(localPath, options);
 }
