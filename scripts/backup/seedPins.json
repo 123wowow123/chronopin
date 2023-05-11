@@ -5675,6 +5675,22 @@
     "userId": 1
   },
   {
+    "id": 206,
+    "rootThread": false,
+    "title": "Elon Musk announces timing for Tesla Cybertruck delivery event",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/m7atGkba-Z8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\"> In a conference call following the release of the results, CEO Elon Musk made new comments announcing that Tesla plans to hold a “handover event,” which generally means the first deliveries of a new car, toward “the end of the third quarter.” </p><p class=\"paragraph\"> This would put the first Tesla Cybertruck deliveries around September 2023. It’s the most precise timing of Cybertruck deliveries that Tesla has released to date. </p><p class=\"paragraph\"> Based on the launch of Tesla’s most recent models, especially the Model Y, we should expect Tesla to only deliver a few Cybertrucks during the delivery event, likely only to Tesla insiders, and we can expect months between the event and the start of deliveries to customers. </p><p class=\"paragraph\"> Interestingly, Musk also said that Cybertruck reservation holders should expect to get an update on specs and pricing at that event at the end of Q3. </p><p class=\"paragraph\"> In previous comments, Musk indicated that the Cybertruck would be available in a new top-of-the-line variant with quad motors rather than the tri-motor powertrain originally announced. </p>",
+    "sourceUrl": "https://electrek.co/2023/04/19/elon-musk-announces-tesla-cybertruck-delivery-event/",
+    "utcStartDateTime": "2023-09-30T07:00:00.000Z",
+    "utcEndDateTime": "2023-10-01T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-11T05:30:27.302Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "userId": 1
+  },
+  {
     "id": 166,
     "parentId": 165,
     "rootThread": false,

@@ -33,10 +33,13 @@
         <div class="grid__media" ng-switch="$ctrl.pin.media[0].type">
 
             <div ng-switch-when="1">
-                <a class="grid__asset grid__asset--link" ng-if="$ctrl.pin.media[0].thumbName"
+                <a class="grid__asset grid__asset--link"
+                    ng-if="$ctrl.pin.media[0].thumbName || $ctrl.pin.media[0].originalUrl"
                     ui-sref="pin({id:$ctrl.pin.id})">
-                    <img ng-src="{{$ctrl.config.thumbUrlPrefix + $ctrl.pin.media[0].thumbName}}" class="grid__image"
-                        ng-style="{'height': ($ctrl.pin.media[0].thumbHeight * 0.757188498) + 'px' }" data-height="{{$ctrl.pin.media[0].thumbHeight}}"/>
+                    <img ng-src="{{$ctrl.pin.media[0].thumbName ? ($ctrl.config.thumbUrlPrefix + $ctrl.pin.media[0].thumbName) : $ctrl.pin.media[0].originalUrl}}"
+                        class="grid__image"
+                        ng-style="{'height': ($ctrl.pin.media[0].thumbHeight * 0.757188498) + 'px' }"
+                        data-height="{{$ctrl.pin.media[0].thumbHeight}}" />
                 </a>
             </div>
 

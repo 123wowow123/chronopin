@@ -328,6 +328,4 @@ https://en.wikipedia.org/wiki/Tokyo_Anime_Award
 https://en.wikipedia.org/wiki/World_of_Warcraft
 and expansions
 
-https://electrek.co/2023/04/19/elon-musk-announces-tesla-cybertruck-delivery-event/
-
 
