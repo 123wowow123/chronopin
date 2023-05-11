@@ -312,7 +312,6 @@ Inflation Tracker group Tag and tag
 https://twitter.com/INArteCarloDoss/status/1652048950352814155
 
 
-https://www.bankrate.com/banking/list-of-failed-banks/
 
 https://www.telegraph.co.uk/world-news/2023/04/07/china-taiwan-invasion-war-usa-russia-ukraine-xi-jinping/
 
