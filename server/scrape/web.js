@@ -13,7 +13,7 @@ const {
 const headless = true;
 const scrapeJsFileName = __dirname + '/scrape.min.js';
 const scrapeJsFileJS = fs.readFileSync(scrapeJsFileName, 'utf8');
-const defaultNavigationWait = 6000
+const defaultNavigationWait = 8000
 
 export function _webScrape(pageUrl) {
   let browser = null;
@@ -31,15 +31,15 @@ export function _webScrape(pageUrl) {
     }
   })
     .then((b) => {
-      browser = b
+      browser = b;
       return browser.pages();
     })
     .then((pages) => {
-      page = pages[0]
+      page = pages[0];
       return page.setDefaultNavigationTimeout(defaultNavigationWait);
     })
     .then(() => {
-      return page.setRequestInterception(true)
+      return page.setRequestInterception(true);
     })
     .then(() => {
       /// https://github.com/puppeteer/puppeteer/issues/823
@@ -51,7 +51,7 @@ export function _webScrape(pageUrl) {
             : { status: 204 } // prevent navigation by js
           )
         } else {
-          req.continue()
+          req.continue();
         }
       });
       return page.goto(pageUrl); //, { "waitUntil": ["load", "networkidle0"] }
