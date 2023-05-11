@@ -5,9 +5,6 @@ Merchant create UI
 
 Bugs:
 
-https://youtu.be/HQUgJ4Te6Bc?t=186
-Last week of May, or into June before Ukraining can move
-
 twitter load jump issue ++
 fix pin overlap issue +
 
@@ -334,4 +331,3 @@ and expansions
 https://electrek.co/2023/04/19/elon-musk-announces-tesla-cybertruck-delivery-event/
 
 
-https://www.dw.com/en/countdown-to-counteroffensive-when-will-mud-season-end-in-ukraine/a-65204612
