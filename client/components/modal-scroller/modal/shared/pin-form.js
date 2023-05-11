@@ -75,7 +75,7 @@
       }
     }
 
-    selectImage(image) {
+    selectMedia(image) {
       this.pin.selectedImage = image;
     }
 

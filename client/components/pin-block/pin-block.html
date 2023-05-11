@@ -36,7 +36,7 @@
                 <a class="grid__asset grid__asset--link" ng-if="$ctrl.pin.media[0].thumbName"
                     ui-sref="pin({id:$ctrl.pin.id})">
                     <img ng-src="{{$ctrl.config.thumbUrlPrefix + $ctrl.pin.media[0].thumbName}}" class="grid__image"
-                        ng-style="{'height': ($ctrl.pin.media[0].thumbHeight * 0.757188498) + 'px' }" />
+                        ng-style="{'height': ($ctrl.pin.media[0].thumbHeight * 0.757188498) + 'px' }" data-height="{{$ctrl.pin.media[0].thumbHeight}}"/>
                 </a>
             </div>
 
@@ -49,16 +49,16 @@
         </div>
 
         <div class="grid__body">
-            <div class="grid__uploaded-date" ng-switch="$ctrl.pin.allDay">
+            <!-- <div class="grid__uploaded-date" ng-switch="$ctrl.pin.allDay">
                 <span ng-switch-when="true">
-                    <!-- <em>All day</em> -->
+                    <em>All day</em>
                 </span>
                 <em ng-switch-default>
                     <span>Start: {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"}}</span>
                     <span ng-if="$ctrl.pin.utcEndDateTime">to {{$ctrl.pin.utcEndDateTime | date:"MM/dd/yyyy
                         h:mma"}}</span>
                 </em>
-            </div>
+            </div> -->
             <div class="grid__description" ng-bind-html="$ctrl.pin.description"></div>
         </div>
 
@@ -95,7 +95,7 @@
 
             <div class="grid__likes">
                 <div fb-like page-href="{{$ctrl.pin.sourceUrl}}">
-                    <loader-pulse-bubble></loader-pulse-bubble>
+                    <!-- <loader-pulse-bubble></loader-pulse-bubble> -->
                 </div>
                 <!-- <button type="button" class="grid__like --add" ng-click="$ctrl.addLike($ctrl.pin)" ng-switch-default><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
           <button type="button" class="grid__like --remove" ng-click="$ctrl.removeLike($ctrl.pin)" ng-switch-when="true"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button> {{$ctrl.pin.likeCount}} -->

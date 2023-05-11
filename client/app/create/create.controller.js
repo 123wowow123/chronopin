@@ -10,6 +10,11 @@
     constructor($state, $scope, Auth, $q, $stateParams, $http, pinWebService, scrapeService, appConfig /*, $log, modelInjector */) {
       //PinGroups || (PinGroups = modelInjector.getPinGroups());
 
+      // different states of pin
+      this.pin = { useMedia: true };
+      this.pinSuggestion = {};
+      this.previewPin = {};
+
       let baseDate = new Date();
       let dateOptions = {
         //formatYear: 'yy',
@@ -26,11 +31,13 @@
       };
 
       // bind function so each digest loop it get re-evaluated to determin latest state
+      this.Auth = Auth;
       this.isAdmin = Auth.isAdmin;
       this.getTimeZoneName = moment.tz.guess;
 
       // this.mode = this.mode || 'create';
 
+      this.appConfig = appConfig;
       this.scrapeType = appConfig.scrapeType;
       this.pinWebService = pinWebService;
       this.scrapeService = scrapeService;
@@ -42,7 +49,9 @@
 
       this.title = 'Create Pin';
       this.formDisabled = false;
-      this.pin = {};
+      this.scraping = false;
+      this.hasScrapedText = false;
+      this.hasScrapedImage = false;
 
       this.pin.allDay = true;
       //this.timePicker = {};
@@ -68,18 +77,29 @@
         options: angular.extend({}, timeOptions)
       };
 
+      this.activeTabs = {
+        title: 0,
+        content: 0,
+        footer: 0
+      }
+
     }
 
     $onInit() {
+      this.Auth.getCurrentUser()
+        .then((user) => {
+          this.user = user;
+        });
+
       let id = this.$stateParams.id;
       let respondId = this.$stateParams.respondId;
       this.mode = id ? "edit" : respondId ? 'respond' : 'create';
       if (this.mode === 'edit' && id !== undefined) {
         this.enableForm(false);
-        //this.$http.get('/api/pins/' + id)
         this.pinWebService.get(id)
           .then(res => {
-            return this.scrapeService.setPin(this.pin, res.data);
+            return this.scrapeService
+              .setPin(this.pin, res.data);
           })
           .finally(() => {
             this.enableForm(true);
@@ -99,7 +119,7 @@
 
     }
 
-    selectImage(media) {
+    selectMedia(media) {
       this.pin.selectedMedia = media;
       return this;
     }
@@ -169,21 +189,36 @@
     }
 
     scrapePage(url) {
-      this.enableForm(false);
-      this.scrapeService.scrapePage(this.pin, url)
+      this.setScraping(true);
+      this.scrapeService.scrapePage(this.pinSuggestion, url)
+        .then(() => {
+          this.postScrapeCopy();
+        })
         .finally(() => {
-          this.enableForm(true);
+          this.setScraping(false);
+          this.hasScrapedText = true;
+          this.hasScrapedImage = true;
         });
       return this;
     }
 
     scrapeImage(url) {
-      this.enableForm(false);
-      this.scrapeService.scrapeImage(this.pin, url)
+      this.setScraping(true);
+      this.scrapeService.scrapeImage(this.pinSuggestion, url)
+        .then(() => {
+          this.postScrapeCopy();
+        })
         .finally(() => {
-          this.enableForm(true);
+          this.setScraping(false);
+          this.hasScrapedImage = true;
         });
       return this;
+    }
+
+    postScrapeCopy() {
+      this.selectMedia(this.pinSuggestion.selectedMedia);
+      this.pin.start = this.pinSuggestion.start;
+      this.pin.end = this.pinSuggestion.end;
     }
 
     clearFormButSourceUrl() {
@@ -195,7 +230,7 @@
     }
 
     resetForScrape() {
-      let newPin = _.pick(this.pin, ['sourceUrl', 'allDay', 'parentId']);
+      let newPin = _.pick(this.pin, ['sourceUrl', 'allDay', 'parentId', 'useMedia']);
       this.scrapeService
         .setPin(this.pin, newPin);
       return this;
@@ -204,14 +239,17 @@
     submitPin() {
       // Form needs to settle
       setTimeout(() => {
-        let pin = this.pin;
         this._forceValidate();
         if (!this.$scope.pinForm.$valid) {
           return this.$q.reject('form not valid');
         }
 
+        const pin = {
+          ...this.pin,
+          ...this._resolveActiveTabPinData(),
+        };
+
         let submitPromise;
-        this.enableForm(false);
         if (this.mode === 'edit') {
           submitPromise = this.scrapeService.updatePin(pin);
         } else {
@@ -221,13 +259,8 @@
           .then(response => {
             this.$state.go('main');
             return response;
-          })
-          .catch(() => {
-            this.enableForm(true);
           });
-      }, 0)
-
-
+      }, 0);
     }
 
     checkOverlapped($event) {
@@ -240,6 +273,11 @@
 
     enableForm(enable) {
       this.formDisabled = !enable;
+      return this;
+    }
+
+    setScraping(scraping) {
+      this.scraping = scraping;
       return this;
     }
 
@@ -257,6 +295,75 @@
 
     removeMerchantPrice(merchant) {
       this.pin.merchants.splice(this.pin.merchants.indexOf(merchant), 1);
+    }
+
+    tabChange(name, value) {
+      this.activeTabs[name] = value;
+      return this;
+    }
+
+    scrapingMessage(content) {
+      if (this.scraping) {
+        return "Generating Suggestion";
+      }
+      else if (!this.scraping && content) {
+        return "Suggestion";
+      }
+      else if (!this.scraping && !content) {
+        return "Suggestion Not Found";
+      }
+    }
+
+    scrapingMediaMessage() {
+      const hasMedia = !!_.get(this, 'pinSuggestion.media.length');
+      if (this.scraping) {
+        return "Generating Heading Media Suggestions";
+      }
+      else if (!this.scraping && hasMedia) {
+        return "Heading Media Suggestions";
+      }
+      else if (!this.scraping && !hasMedia) {
+        return "Heading Media Suggestions Not Found";
+      }
+    }
+
+    getPreviewPin() {
+      let defaultView = {
+        // use default value
+        user: _.get(this, 'user'),
+        utcCreatedDateTime: new Date(),
+        utcStartDateTime: this.pin.start,
+        utcEndDateTime: this.pin.end,
+        media: this.pin.useMedia && this.pin.selectedMedia ? [this.pin.selectedMedia] : undefined,
+        ...this._resolveActiveTabPinData(),
+      };
+
+      defaultView.title = defaultView.title ? defaultView.title : "Preview Your Pin";
+
+      const reducePinView = Object.entries(this.pin).filter(([k, v]) => {
+        return !(k === "media" || k === "title" || k === "description");
+      }).reduce((a, [k, v]) => {
+        return { ...a, [k]: v };
+      }, {});
+
+      const tempPin = Object.assign(
+        this.previewPin,
+        defaultView,
+        reducePinView
+      );
+      return tempPin;
+    }
+
+    multPrice(mult) {
+      this.pin.price = this.pin.price * mult;
+    }
+
+    _resolveActiveTabPinData() {
+      const view = {
+        title: (this.activeTabs['title'] === 0 ? this.pin.title : this.pinSuggestion.title),
+        description: this.activeTabs['content'] === 0 ? this.pin.description : this.pinSuggestion.description,
+      };
+      return view;
     }
 
     _forceValidate() {

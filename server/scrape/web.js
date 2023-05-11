@@ -13,7 +13,7 @@ const {
 const headless = true;
 const scrapeJsFileName = __dirname + '/scrape.min.js';
 const scrapeJsFileJS = fs.readFileSync(scrapeJsFileName, 'utf8');
-const defaultNavigationWait = 9000
+const defaultNavigationWait = 6000
 
 export function _webScrape(pageUrl) {
   let browser = null;
@@ -65,7 +65,7 @@ export function _webScrape(pageUrl) {
       return page.keyboard.press("PageDown");
     })
     .then(() => {
-      return page.waitForSelector(`iframe[src*="www.youtube.com"]`, { timeout: 1000 })
+      return page.waitForSelector(`iframe[src*="www.youtube.com"]`, { timeout: 500 })
         .catch(e => {
           return e;
         });
@@ -76,7 +76,7 @@ export function _webScrape(pageUrl) {
       });
     })
     .then(() => {
-      return page.waitForSelector(`iframe[src*="www.youtube.com"]`, { timeout: 1000 })
+      return page.waitForSelector(`iframe[src*="www.youtube.com"]`, { timeout: 500 })
         .catch(e => {
           return e;
         });
@@ -144,12 +144,14 @@ export function _webScrape(pageUrl) {
       newPin.allDay = _.get(res, 'dates[0].allDay');
 
       _.get(res, "media", []).forEach(m => {
-        newPin.addMedium(new Medium({
-          type: mediumID.image,
-          originalWidth: m.width,
-          originalHeight: m.height,
-          originalUrl: m.originalUrl
-        }));
+        if (m.width > 150 && m.height > 150) {
+          newPin.addMedium(new Medium({
+            type: mediumID.image,
+            originalWidth: m.width,
+            originalHeight: m.height,
+            originalUrl: m.originalUrl
+          }));
+        }
       });
 
       const youtubeProsmises = _.get(res, "youtube", []).map(url => {

@@ -25,20 +25,65 @@
                   <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a>
                 <div class="form-group"
                   ng-class="{'has-error' : pinForm.sourceUrl.$invalid && pinForm.sourceUrl.$dirty}">
-                  <label for="sourceUrl" class="control-label">Source Url</label>
+                  <label for="sourceUrl" class="control-label">Source Url</label> <span class="analyzing-url-text"
+                    ng-if="$ctrl.scraping">(Analyzing Page...)</span>
                   <input name="sourceUrl" type="url" class="form-control" id="sourceUrl"
                     placeholder="https://www.example.com" ng-model="$ctrl.pin.sourceUrl" ng-change="$ctrl.urlChanged()"
                     required>
                 </div>
-                <div class="form-group" ng-class="{'has-error' : pinForm.title.$invalid && pinForm.title.$dirty}">
-                  <label for="title" class="control-label">Title</label>
-                  <input name="title" type="text" class="form-control" id="title" placeholder="Add your title"
-                    ng-model="$ctrl.pin.title" required maxlength="180">
+
+                <div ng-switch="$ctrl.hasScrapedText">
+                  <label ng-switch-when="false" for="title" class="control-label">Title</label>
+
+                  <div class="control-tabs" ng-switch-when="true">
+                    <button type="button" class="control-tab control-tab-left"
+                      ng-class="{'\--active' : $ctrl.activeTabs['title'] === 0}" ng-click="$ctrl.tabChange('title', 0)">
+                      <label for="title" class="control-label">Title</label>
+                    </button>
+                    <button type="button" class="control-tab control-tab-right"
+                      ng-class="{'\--active' : $ctrl.activeTabs['title'] === 1}" ng-click="$ctrl.tabChange('title', 1)"
+                      ng-if="$ctrl.hasScrapedText">
+                      <label for="title"
+                        class="control-label">{{$ctrl.scrapingMessage($ctrl.pinSuggestion.title)}}</label>
+                    </button>
+                  </div>
                 </div>
-                <div class="form-group"
-                  ng-class="{'has-error' : pinForm.description.$invalid && pinForm.description.$dirty}">
-                  <label for="description" class="control-label">Content</label>
-                  <text-editor ng-model="$ctrl.pin.description"></text-editor>
+
+                <div class="form-group" ng-class="{'has-error' : pinForm.title.$invalid && pinForm.title.$dirty, 
+                  'has-error-suggestion' : pinForm.suggestionTitle.$invalid && pinForm.suggestionTitle.$dirty}">
+                  <div ng-switch="$ctrl.activeTabs['title']">
+                    <input ng-switch-when="0" name="title" type="text" class="form-control" id="title"
+                      placeholder="Add your title" ng-model="$ctrl.pin.title" required maxlength="180">
+
+                    <input ng-switch-when="1" name="suggestionTitle" type="text" class="form-control"
+                      id="suggestionTitle" placeholder="Suggested title" ng-model="$ctrl.pinSuggestion.title" required
+                      maxlength="180">
+                  </div>
+                </div>
+
+                <div class="form-group" ng-class="{'has-error' : pinForm.description.$invalid && pinForm.description.$dirty,
+                  'has-error-suggestion' : pinForm.pinSuggestion.$invalid && pinForm.pinSuggestion.$dirty}">
+                  <div ng-switch="$ctrl.hasScrapedText">
+                    <label ng-switch-when="false" for="description" class="control-label">Content</label>
+                    <div class="control-tabs" ng-switch-when="true">
+                      <button type="button" class="control-tab control-tab-left"
+                        ng-class="{'\--active' : $ctrl.activeTabs['content'] === 0}"
+                        ng-click="$ctrl.tabChange('content', 0)">
+                        <label for="description" class="control-label">Content</label>
+                      </button>
+                      <button type="button" class="control-tab control-tab-right"
+                        ng-class="{'\--active' : $ctrl.activeTabs['content'] === 1}"
+                        ng-click="$ctrl.tabChange('content', 1)" ng-if="$ctrl.hasScrapedText">
+                        <label for="description"
+                          class="control-label">{{$ctrl.scrapingMessage($ctrl.pinSuggestion.description)}}</label>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div ng-switch="$ctrl.activeTabs['content']">
+                    <text-editor ng-switch-when="0" ng-model="$ctrl.pin.description"></text-editor>
+                    <text-editor ng-switch-when="1" ng-model="$ctrl.pinSuggestion.description"></text-editor>
+                  </div>
                 </div>
 
                 <div class="form-group" style="margin-bottom: 0;">
@@ -122,14 +167,17 @@
                   </div>
                 </div>
 
-                <div class="optional_line_break"><span class="optional_line_break__label">Optional</span></div>
+                <!-- <div class="optional_line_break"><span class="optional_line_break__label">Optional</span></div> -->
 
                 <div class="form-group">
                   <label for="price" class="control-label">MSRP Price</label>
                   <div class="input-group" ng-class="{'has-error' : pinForm.price.$invalid && pinForm.price.$dirty}">
                     <div class="input-group-addon">$</div>
-                    <input name="price" type="number" class="form-control" id="price" placeholder="MSRP Price"
-                      ng-model="$ctrl.pin.price" ng-pattern="/^-?\d*\.?\d{0,2}$/">
+                    <input name="price" type="number" class="form-control" id="price"
+                      placeholder="MSRP Price (optional)" ng-model="$ctrl.pin.price" ng-pattern="/^-?\d*\.?\d{0,2}$/" />
+                    <div class="input-group-addon" ng-click="$ctrl.multPrice(1000)">T</div>
+                    <div class="input-group-addon" ng-click="$ctrl.multPrice(1000000)">M</div>
+                    <div class="input-group-addon" ng-click="$ctrl.multPrice(1000000000)">B</div>
                   </div>
 
                   <div class="optional_content">
@@ -201,7 +249,81 @@
 
                   </div>
 
-                  <div class="form-group" ng-if="!$ctrl.showCreateFooter">
+                  <div class="footer-content">
+                    <div class="control-tabs">
+                      <button type="button" class="control-tab control-tab-left"
+                        ng-class="{'\--active' : $ctrl.activeTabs['footer'] === 0}"
+                        ng-click="$ctrl.tabChange('footer', 0)">
+                        <label for="previewPin" class="control-label">Preview Pin</label>
+                      </button>
+                      <button type="button" class="control-tab control-tab-right"
+                        ng-class="{'\--active' : $ctrl.activeTabs['footer'] === 1}"
+                        ng-click="$ctrl.tabChange('footer', 1)" ng-if="$ctrl.hasScrapedImage">
+                        <label for="suggestedImage" class="control-label">{{$ctrl.scrapingMediaMessage()}}</label>
+                      </button>
+                    </div>
+
+                    <div class="use-media-container checkbox">
+                      <label>
+                        Use Heading Image
+                        <input id="useMedia" name="useMedia" type="checkbox" ng-model="$ctrl.pin.useMedia" value="true">
+                      </label>
+                    </div>
+
+                    <div class="preview-pin-block" ng-if="$ctrl.activeTabs['footer'] === 0">
+                      <pin-block pin="$ctrl.getPreviewPin()" config="$ctrl.appConfig"></pin-block>
+                    </div>
+
+                    <div class="footer-image-selector" ng-if="$ctrl.activeTabs['footer'] === 1">
+                      <!-- Switch between image / iframe / tweets -->
+                      <div class="grid__media container --create-pin" ng-switch="$ctrl.pinSuggestion.type">
+
+                        <div class="create__select-image" ng-switch-when="web">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div class="col-lg-12 clearfix">
+                                <ul class="image-dynamic-grid" angular-grid="$ctrl.pinSuggestion.media" gutter-size="10"
+                                  grid-width="250" refresh-on-img-load="false">
+                                  <li data-ng-repeat="medium in $ctrl.pinSuggestion.media" class="image-grid"
+                                    ng-class="{'image-grid--selected': medium === $ctrl.pin.selectedMedia }"
+                                    ng-click="$ctrl.selectMedia(medium)" ng-switch="medium.type">
+
+                                    <img ng-src="{{medium.originalUrl}}" class="image-grid__image"
+                                      data-actual-width="{{medium.originalWidth}}"
+                                      data-actual-height="{{medium.originalHeight}}"
+                                      title="{{medium.originalWidth}} x {{medium.originalHeight}}" ng-switch-when="1" />
+
+                                    <twitter-pin ng-switch-when="2" html="{{medium.html}}">
+                                    </twitter-pin>
+
+                                    <div class='embed-container --margin-top-bottom' ng-switch-when="3"
+                                      ng-bind-html="medium.html" data-actual-width="400" data-actual-height="270">
+                                    </div>
+
+                                    <!-- Just need detection cover-->
+                                    <div class="image-grid__cover_button"
+                                      ng-hide="medium.type === 1 || medium === $ctrl.pin.selectedMedia">
+                                    </div>
+
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <twitter-pin ng-switch-when="twitter" html="{{$ctrl.pin.selectedMedia.html}}">
+                        </twitter-pin>
+
+                        <div class='embed-container --margin-top-bottom' ng-switch-when="youtube"
+                          ng-bind-html="$ctrl.pin.selectedMedia.html">
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group create-footer" ng-if="!$ctrl.showCreateFooter">
                     <div class="row">
                       <div class="col-sm-4">
                         <button type="button" class="btn btn-primary" ng-click="$ctrl.scrapePage($ctrl.pin.sourceUrl)"
@@ -217,67 +339,17 @@
                       </div>
                     </div>
                   </div>
-
             </fieldset>
         </div>
         </form>
-
       </div>
     </div>
   </div>
+
   <div class="create__loader" ng-if="$ctrl.formDisabled">
     <loader-pac></loader-pac>
   </div>
-
 </div>
-
-<!-- Switch between image / iframe / tweets -->
-<div class="grid__media container --create-pin" ng-switch="$ctrl.pin.type">
-
-  <div class="create__select-image" ng-switch-when="web">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12 clearfix">
-          <ul class="image-dynamic-grid" angular-grid="$ctrl.pin.media" gutter-size="10" grid-width="250"
-            refresh-on-img-load="false">
-            <li data-ng-repeat="medium in $ctrl.pin.media" class="image-grid"
-              ng-class="{'image-grid--selected': medium === $ctrl.pin.selectedMedia }"
-              ng-click="$ctrl.selectImage(medium)" ng-switch="medium.type">
-
-              <img ng-src="{{medium.originalUrl}}" class="image-grid__image"
-                data-actual-width="{{medium.originalWidth}}" data-actual-height="{{medium.originalHeight}}"
-                title="{{medium.originalWidth}} x {{medium.originalHeight}}" ng-switch-when="1" />
-
-              <twitter-pin ng-switch-when="2" html="{{medium.html}}">
-              </twitter-pin>
-
-
-              <div class='embed-container --margin-top-bottom' ng-switch-when="3" ng-bind-html="medium.html"
-                data-actual-width="400" data-actual-height="270">
-              </div>
-
-              <!-- Just need detection cover-->
-              <div class="image-grid__cover_button" ng-hide="medium.type === 1 || medium === $ctrl.pin.selectedMedia">
-              </div>
-
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <twitter-pin ng-switch-when="twitter" html="{{$ctrl.pin.selectedMedia.html}}">
-  </twitter-pin>
-
-  <div class='embed-container --margin-top-bottom' ng-switch-when="youtube" ng-bind-html="$ctrl.pin.selectedMedia.html">
-  </div>
-
-  <!-- <div ng-switch-default>
-        </div> -->
-
-</div>
-
 
 <div class="create__footer--bg" ng-class="{'create__footer--transparent': !$ctrl.showCreateFooter}" overlap
   on-overlap="$ctrl.checkOverlapped($event)" overlap-id="'create__text-form'">

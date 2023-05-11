@@ -29,13 +29,13 @@
                     .then(res => {
                         switch (res.data.type) {
                             case appConfig.scrapeType.web:
-                                this.setPinFromWebScrape(thisPin, res.data)
+                                this.setPinFromWebScrape(thisPin, res.data);
                                 break;
                             case appConfig.scrapeType.twitter:
-                                this.setPinFromTwitterScrape(thisPin, res.data)
+                                this.setPinFromTwitterScrape(thisPin, res.data);
                                 break;
                             case appConfig.scrapeType.youtube:
-                                this.setPinFromYoutubeScrape(thisPin, res.data)
+                                this.setPinFromYoutubeScrape(thisPin, res.data);
                                 break;
                         }
                         return thisPin;
@@ -142,7 +142,7 @@
                     utcEndDateTime: endDateTime,
                     allDay: allDay,
                     merchants: pin.merchants,
-                    media: pin.selectedMedia ? [pin.selectedMedia] : undefined
+                    media: pin.useMedia && pin.selectedMedia ? [pin.selectedMedia] : undefined
                 };
                 return _.omitBy(newPin, _.isNull);
             }

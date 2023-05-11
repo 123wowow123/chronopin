@@ -85,7 +85,7 @@
                   Image
                 </div>
               </div>
-              <div ng-repeat="i in $ctrl.pin.images" style="height: 100%; width: 100%; display: inline-block;" ng-click="$ctrl.selectImage(i)" ng-class="{'pin-form__selected': i === $ctrl.pin.selectedImage}">
+              <div ng-repeat="i in $ctrl.pin.images" style="height: 100%; width: 100%; display: inline-block;" ng-click="$ctrl.selectMedia(i)" ng-class="{'pin-form__selected': i === $ctrl.pin.selectedImage}">
                 <img ng-src="{{i.sourceUrl || i.originalUrl}}" class="pin-form__img" style="margin: 0 auto; display: block; max-width: 10%; max-height: 10%; transform: scale(10); transform-origin: top center" ng-class="{'pin-form__selected': i === $ctrl.pin.selectedImage}" />
               </div>
             </div>
