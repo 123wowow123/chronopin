@@ -4,6 +4,10 @@ WIP:
 Merchant create UI
 
 Bugs:
+
+https://youtu.be/HQUgJ4Te6Bc?t=186
+Last week of May, or into June before Ukraining can move
+
 twitter load jump issue ++
 fix pin overlap issue +
 
@@ -15,12 +19,11 @@ remove facebook like
 missing description validation
 
 Should show page not found and redirect to home? https://chronopin.com/pin/178
-quick add 1.3 billion etc
 quck add Q2 etc
 
 Features:
-readable dollar figure +
 
+readable dollar figure +
 
 default does not select media but when selected it will auto check pin header media.
 
@@ -324,3 +327,11 @@ https://www.cnbc.com/2023/04/25/lucid-gravity-suv-road-tests.html
 with map
 
 https://en.wikipedia.org/wiki/Tokyo_Anime_Award
+
+https://en.wikipedia.org/wiki/World_of_Warcraft
+and expansions
+
+https://electrek.co/2023/04/19/elon-musk-announces-tesla-cybertruck-delivery-event/
+
+
+https://www.dw.com/en/countdown-to-counteroffensive-when-will-mud-season-end-in-ukraine/a-65204612
