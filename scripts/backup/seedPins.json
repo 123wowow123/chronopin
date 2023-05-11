@@ -5295,6 +5295,31 @@
     "userId": 1
   },
   {
+    "id": 208,
+    "rootThread": false,
+    "title": "Goldman estimates the debt racked up by China’s provincial governments at $23 trillion — 126% of gross domestic product",
+    "sourceUrl": "https://twitter.com/BurggrabenH/status/1650415388553822211",
+    "utcStartDateTime": "2023-04-19T07:00:00.000Z",
+    "utcEndDateTime": "2023-04-20T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-11T06:39:36.743Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 204,
+        "originalUrl": "https://twitter.com/BurggrabenH/status/1650415388553822211",
+        "type": "2",
+        "authorName": "Alexander Stahel ????",
+        "authorUrl": "https://twitter.com/BurggrabenH",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Some context <a href=\"https://t.co/t9eaGpfuuv\">pic.twitter.com/t9eaGpfuuv</a></p>&mdash; Alexander Stahel ???? (@BurggrabenH) <a href=\"https://twitter.com/BurggrabenH/status/1650415388553822211?ref_src=twsrc%5Etfw\">April 24, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 202,
     "rootThread": false,
     "title": "Used vehicle prices fell last month for the first time in 2023",
@@ -5863,6 +5888,35 @@
     "userId": 1
   },
   {
+    "id": 209,
+    "rootThread": false,
+    "title": "UC San Diego adding 3,310 dorm beds to deal with growth, housing shortage,",
+    "description": "<p class=\"paragraph\"> UC San Diego is pushing ahead with plans to build dorms that will collectively hold 3,310 students to deal with the school’s runaway growth and a critical housing shortage. </p><p class=\"paragraph\"> The expansion will increase the university’s housing capacity to 22,260 — a figure larger than the number of people living in such communities as Solana Beach and Scripps Ranch. </p><p class=\"paragraph\"> The campus got a lift from the University of California Board of Regents, which this week gave the school permission to move forward with two huge projects, Pepper Canyon West and Thurgood Marshall College Undergraduate Student Housing. </p><p class=\"paragraph\"> Pepper Canyon will house 1,310 transfer and upper-diversion undergraduate students near the Blue Line trolley station that recently opened on campus, a few minutes walk from Geisel Library. </p><p class=\"paragraph\"> &nbsp;The $350 million project also will feature retail space. </p>",
+    "sourceUrl": "https://www.sandiegouniontribune.com/news/education/story/2022-01-21/uc-san-diego-dorm-beds",
+    "price": 350000000,
+    "utcStartDateTime": "2024-12-31T08:00:00.000Z",
+    "utcEndDateTime": "2025-01-01T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-11T06:53:36.343Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 206,
+        "thumbName": "be21cdb1-011d-433f-85e0-40eea9fb1bbd.jpeg",
+        "thumbWidth": 1200,
+        "thumbHeight": 630,
+        "originalUrl": "https://ca-times.brightspotcdn.com/dims4/default/a19707e/2147483647/strip/true/crop/1280x672+0+24/resize/1200x630!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F41%2F17%2F93c0557f43448dd013626ec755b4%2Ftower.jpg",
+        "originalWidth": 1200,
+        "originalHeight": 630,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 152,
     "rootThread": false,
     "title": "Robots That Make 400 Burgers an Hour May Soon Take over Fast Food Restaurants",
@@ -5923,7 +5977,7 @@
     "id": 207,
     "rootThread": false,
     "title": "Xi Jinping's 48-hour plan to invade Taiwan, 2027 is the date that he wants the Chinese army to be ‘ready’ to take back Taiwan",
-    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/tb6pykXE_MI\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\"> &nbsp;Now, that doesn’t mean that they will invade in 2027, but certainly implies a significant milestone. </p>",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/tb6pykXE_MI\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\">Now, that doesn’t mean that they will invade in 2027, but certainly implies a significant milestone. </p>",
     "sourceUrl": "https://www.telegraph.co.uk/world-news/2023/04/07/china-taiwan-invasion-war-usa-russia-ukraine-xi-jinping/",
     "utcStartDateTime": "2027-01-01T08:00:00.000Z",
     "utcEndDateTime": "2027-01-02T08:00:00.000Z",

@@ -247,15 +247,6 @@ Fed Fund Rate Will be at:
 3.1% at the end of 2025
 
 
-
-https://www.sandiegouniontribune.com/news/education/story/2022-01-21/uc-san-diego-dorm-beds
-UC San Diego is pushing ahead with plans to build dorms that will collectively hold 3,310 students to deal with the school’s runaway growth and a critical housing shortage.
-
-Tentative plans call for the complex to be finished in 2025
-
-UCSD also is the the process of building the Theater District Living and Learning Neighborhood, a complex next to the La Jolla Playhouse that will feature room for 2,000 students, starting in fall 2023.
-
-
 https://twitter.com/INArteCarloDoss/status/1638924682991747078
 Kind of scary when different time horizons start matching up. 
 
@@ -306,16 +297,9 @@ https://www.youtube.com/watch?v=d5hu62W89nk
 Chicago, Albuquerque, Phoenix, Denver, Dallas Fort Worth (Solar and wind)
 
 
-
-
 Inflation Tracker group Tag and tag
 https://twitter.com/INArteCarloDoss/status/1652048950352814155
 
-
-
-https://www.telegraph.co.uk/world-news/2023/04/07/china-taiwan-invasion-war-usa-russia-ukraine-xi-jinping/
-
-https://twitter.com/BurggrabenH/status/1650413711297789954
 
 https://chinachange.org/2023/04/07/china-has-a-youth-unemployment-problem-guangdong-province-spearheads-a-plan-to-send-300000-youth-to-the-countryside-by-the-end-of-2025/
 
