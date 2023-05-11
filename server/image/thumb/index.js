@@ -9,35 +9,44 @@ export function shrinkImage(bufferOrLocalPath, options) {
       let originalWidth = image.bitmap.width;
       let originalHeight = image.bitmap.height;
 
-      if (originalWidth <= options.uploadImageWidth) { // rename to max width?
-        const output = {
-          buffer: image.bitmap.data,
-          width: originalWidth,
-          height: originalHeight,
-          originalWidth: originalWidth,
-          originalHeight: originalHeight,
-          type: image.getMIME()
-        };
-        return output;
-
-      } else {
+      return new Promise((resolve, reject) => {
         let output;
-        image
-          .resize(options.uploadImageWidth, Jimp.AUTO)
-          .getBuffer(Jimp.AUTO, (err, buffer) => {
-            output = {
-              buffer: buffer,
-              width: image.bitmap.width,
-              height: image.bitmap.height,
-              originalWidth: originalWidth,
-              originalHeight: originalHeight,
-              type: image.getMIME()
-            };
-          });
-        return output;
-      }
+        if (originalWidth <= options.uploadImageWidth) { // rename to max width?
+          image
+            .getBuffer(Jimp.AUTO, (err, buffer) => {
+              if (err) {
+                reject(err);
+              }
+              output = {
+                buffer: buffer,
+                width: image.bitmap.width,
+                height: image.bitmap.height,
+                originalWidth: originalWidth,
+                originalHeight: originalHeight,
+                type: image.getMIME()
+              };
+            });
+          resolve(output);
+        } else {
+          image
+            .resize(options.uploadImageWidth, Jimp.AUTO)
+            .getBuffer(Jimp.AUTO, (err, buffer) => {
+              if (err) {
+                reject(err);
+              }
+              output = {
+                buffer: buffer,
+                width: image.bitmap.width,
+                height: image.bitmap.height,
+                originalWidth: originalWidth,
+                originalHeight: originalHeight,
+                type: image.getMIME()
+              };
+            });
+          resolve(output);
+        }
+      });
     });
-
 }
 
 

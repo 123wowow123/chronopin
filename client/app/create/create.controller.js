@@ -217,8 +217,8 @@
 
     postScrapeCopy() {
       this.selectMedia(this.pinSuggestion.selectedMedia);
-      this.pin.start = this.pinSuggestion.start;
-      this.pin.end = this.pinSuggestion.end;
+      this.pin.start = this.pinSuggestion.start ? this.pinSuggestion.start : this.pin.start;
+      this.pin.end = this.pinSuggestion.end ? this.pinSuggestion.end : this.pin.end;
     }
 
     clearFormButSourceUrl() {

@@ -123,14 +123,14 @@ export default class BasePin {
     }
 
     addMedia(media) {
-        media.forEach(m => {
-            this.addMedium(m);
+        (media || []).forEach(m => {
+            this.addMedium(new Medium(m));
         })
         return this;
     }
 
     addMerchants(merchants) {
-        merchants.forEach(m => {
+        (merchants || []).forEach(m => {
             this.addMerchant(new Merchant(m));
         })
         return this;

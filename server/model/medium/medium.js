@@ -268,6 +268,7 @@ function _mapAndSaveThumb(thumbBufferAndMeta) {
     originalUrl: thumbBufferAndMeta.originalUrl,
     originalWidth: thumbBufferAndMeta.originalWidth,
     originalHeight: thumbBufferAndMeta.originalHeight,
+    mimeType: thumbBufferAndMeta.type,
     type: 1 // 1 for 'Image'
   };
   return image.saveThumb(newMedium);
@@ -311,7 +312,7 @@ function _deleteFromPinMSSQL(medium, pinId) {
             } catch (e) {
               console.log(`[dbo].[${StoredProcedureName}]`, e);
             }
-            resolve({
+            return resolve({
               utcDeletedDateTime: utcDeletedDateTime,
               medium: medium
             });
@@ -341,7 +342,7 @@ function _getMediumByOriginalUrlMSSQL(originalUrl) {
             } else {
               medium = undefined;
             }
-            resolve({
+            return resolve({
               medium: medium
             });
           });

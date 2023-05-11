@@ -41,7 +41,7 @@ export function createThumbFromLocalPath(localPath) {
 }
 
 export function createThumbFromUrl(imageUrl) {
-  //create get image stream
+
   return downloadImage(imageUrl)
     .then(buffer => {
       return thumb
@@ -74,7 +74,7 @@ export function saveThumb(thumbObj) {
     sf = streamifier.createReadStream(thumbObj.buffer);
   return azureBlob.createBlock(thumbObj.thumbName, sf, pageBlobSize, {
     contentSettings: {
-      contentType: thumbObj.type //'image/png'
+      contentType: thumbObj.mimeType //'image/png'
     }
   })
     .then(() => {

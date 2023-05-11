@@ -106,54 +106,44 @@ export default class Pin extends BasePin {
         let beforePinMedia = res.pin.media,
           // originalUserId = beforePinMedia,
           newPinMedia = this.media,
-          newPinMerchants = this.merchants,
-          toSaveOriginalMedia = [],
-          toDeleteOriginalMedia = [],
-          toSaveMediaPromise = [],
-          toDeleteMediaPromise = [];
+          newPinMerchants = this.merchants
 
-        toSaveOriginalMedia = _difference(newPinMedia, beforePinMedia, 'originalUrl');
-        toDeleteOriginalMedia = _difference(beforePinMedia, newPinMedia, 'originalUrl');
-
+        let toSaveOriginalMedia = _difference(newPinMedia, beforePinMedia, 'originalUrl');
+        let toDeleteOriginalMedia = _difference(beforePinMedia, newPinMedia, 'originalUrl');
 
         const allMerchantPromise = Merchant.deleteByPinId(this.id)
           .then(() => {
-            const merchantsPromise = newPinMerchants
-              .map(m => {
-                return m.save();
-              });
-
             return Promise.all(
-              merchantsPromise
+              newPinMerchants
+                .map(m => {
+                  return m.save();
+                })
             ).then((merchants) => {
               this.addMerchants(merchants);
             });
           });
 
-        toSaveMediaPromise = toSaveOriginalMedia.map(medium => {
-          return medium.createAndSaveToCDN();
-        });
-
-        toDeleteMediaPromise = toDeleteOriginalMedia.map(medium => {
-          return medium.deleteFromPin(); // TODO: Need to delete from CDN
-        });
-
-        return Promise.all(toSaveMediaPromise)
+        const toSaveMediaPromise = Promise.all(
+          toSaveOriginalMedia.map(medium => {
+            return medium.createAndSaveToCDN();
+          }))
           .then((newMedia) => {
             this.media = newMedia;
-          })
-          .then(() => {
-            return Promise.all(toDeleteMediaPromise)
-              .then(() => {
-                return this;
-              });
-          })
-          .then(() => {
-            return allMerchantPromise
-              .then(() => {
-                return this;
-              });
           });
+
+        const toDeleteMediaPromise = Promise.all(
+          toDeleteOriginalMedia.map(medium => {
+            return medium.deleteFromPin(); // TODO: Need to delete from CDN
+          })
+        );
+
+        return Promise.all([
+          toSaveMediaPromise,
+          toDeleteMediaPromise,
+          allMerchantPromise
+        ]).then(() => {
+          return this;
+        });
       })
       .then((pin) => {
         return _updateMSSQL(pin, pin.userId);
@@ -183,12 +173,12 @@ export default class Pin extends BasePin {
   }
 
   static mapPinMedia(pin, pinRows) {
-    pin.media = mapHelper.mapSubObjectFromQuery('Media', 'id', pinRows);
+    pin.addMedia(mapHelper.mapSubObjectFromQuery('Media', 'id', pinRows));
     return pin;
   }
 
   static mapPinMerchants(pin, pinRows) {
-    pin.merchants = mapHelper.mapSubObjectFromQuery('Merchant', 'id', pinRows);
+    pin.addMerchants(mapHelper.mapSubObjectFromQuery('Merchant', 'id', pinRows));
     return pin;
   }
 }

@@ -213,7 +213,7 @@ function _deleteByPinIdMSSQL(pinId) {
               return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
 
-            resolve({
+            return resolve({
               pinId
             });
           });
