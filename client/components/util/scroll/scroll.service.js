@@ -46,7 +46,7 @@
 
             scrollToIDAsync(scrollEl, id) {
                 return initialized.then(t => {
-                    ScrollUtil.scrollToID(scrollEl, id);
+                    return ScrollUtil.scrollToID(scrollEl, id);
                 });
             },
 

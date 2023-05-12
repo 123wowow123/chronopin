@@ -152,11 +152,24 @@
       this.pinApp.mergeBagsWithPins(data.pins);
 
       if (angular.isNumber(this.pinApp.bagsYOffset)) {
+
+        // Adjust scrollheight after all dependent resources such as stylesheets, scripts, iframes, and images are loaded
+        window.addEventListener('load', () => {
+          this.$timeout(() => {
+            const elId = this.getHomeScrollId();
+            this._scrollAdjust(elId)
+              // .then(() => {
+              //   console.log("document.documentElement.scrollTop)", document.documentElement.scrollTop);
+              //   console.log("document.documentElement.scrollHeight", document.documentElement.scrollHeight);
+              // });
+          })
+        });
+
         this.$timeout(() => {
           const elId = this.getHomeScrollId();
           this._scrollAdjust(elId).then(() => {
             this._registerInfinitScroll();
-          })
+          });
         });
       }
       this.bags = this.pinApp.getBags();

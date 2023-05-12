@@ -8,8 +8,7 @@
 
       function createHTML(html) {
         return (`
-          <div class="twitter-pin-container"
-            data-actual-width="250" data-actual-height="496">
+          <div class="twitter-pin-container">
             ${html}
           </div>
           `)

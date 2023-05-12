@@ -20,8 +20,6 @@ quck add Q2 etc
 
 Features:
 
-readable dollar figure +
-
 default does not select media but when selected it will auto check pin header media.
 
 Add image upload content/mainPin and supporting media reference tab ++ embed youtube/twitter/image/hashtag/alignment

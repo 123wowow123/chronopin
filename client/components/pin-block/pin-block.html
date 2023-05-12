@@ -37,9 +37,10 @@
                     ng-if="$ctrl.pin.media[0].thumbName || $ctrl.pin.media[0].originalUrl"
                     ui-sref="pin({id:$ctrl.pin.id})">
                     <img ng-src="{{$ctrl.pin.media[0].thumbName ? ($ctrl.config.thumbUrlPrefix + $ctrl.pin.media[0].thumbName) : $ctrl.pin.media[0].originalUrl}}"
-                        class="grid__image"
-                        ng-style="{'height': ($ctrl.pin.media[0].thumbHeight * 0.757188498) + 'px' }"
-                        data-height="{{$ctrl.pin.media[0].thumbHeight}}" />
+                        class="grid__image" data-actual-height="{{$ctrl.pin.media[0].thumbHeight}}"
+                        data-actual-width="{{$ctrl.pin.media[0].thumbWidth}}"
+                        height="{{$ctrl.pin.media[0].thumbHeight + 'px'}}"
+                        width="{{$ctrl.pin.media[0].thumbWidth + 'px'}}" />
                 </a>
             </div>
 
