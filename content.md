@@ -50,6 +50,10 @@ add rottentomatoes rating +
 
 Show number of days countdown in pin page
 
+comment should have ability to show pictures / pins
+
+Add do not show pin again feature
+
 Cleanup:
 test comment db backup
 Sanitize all post values

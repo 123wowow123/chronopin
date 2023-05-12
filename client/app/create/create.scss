@@ -318,6 +318,11 @@ twitter-pin {
   margin: 0 auto;
 }
 
+text-editor {
+  z-index: 6;
+  position: relative;
+}
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : ($ipad-portrait - 1)) {
   .image-dynamic-grid {
