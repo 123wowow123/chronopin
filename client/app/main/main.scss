@@ -354,8 +354,6 @@ $bag-font-color: var(--bag-text-color);
     }
 
     &__uploaded-date {
-        font-size: 12px;
-        margin: 5px 0;
         @extend .text-muted;
     }
 
@@ -497,17 +495,7 @@ $bag-font-color: var(--bag-text-color);
         height: auto;
     }
 
-    &__meta {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 12px;
 
-        .grid__headline {
-            font-size: 11px;
-        }
-    }
 
     &.ng-leave {
         transition: all ease 400ms;
@@ -529,6 +517,11 @@ $bag-font-color: var(--bag-text-color);
             opacity: 1;
         }
     }
+}
+
+.\--meta {
+    margin-bottom: 12px;
+    font-size: 12px;
 }
 
 .\--clear-margin {
