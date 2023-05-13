@@ -5,10 +5,11 @@
 
     class ThreadController {
 
-        constructor($scope, Auth, pinWebService) {
+        constructor($scope, Auth, pinWebService, searchService) {
             this.Auth = Auth;
             this.isLoggedIn = Auth.isLoggedIn;
             this.pinWebService = pinWebService;
+            this.searchService = searchService;
         }
 
         $onInit() {

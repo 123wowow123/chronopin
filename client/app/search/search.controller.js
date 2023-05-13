@@ -69,17 +69,27 @@
             }
 
             this.searching = true;
-            this.pinWebService.search({
-                q: query,
-                f: filterValue
-            })
+            const threadEmoji = "🧵";
+            let searchPromise;
+            if (query.startsWith(threadEmoji)) {
+                const pinId = +query.substring(threadEmoji.length);
+                searchPromise = this.pinWebService.thread(pinId);
+            } else {
+                searchPromise = this.pinWebService.search({
+                    q: query,
+                    f: filterValue
+                });
+            }
+            searchPromise
                 .then(res => {
-                    this._setSearchPinGroups(res.data.pins);
+                    const pins = _.get(res, "data.pins", []);
+                    this._setSearchPinGroups(pins);
                     return res;
                 })
                 .catch(err => {
                     throw err;
-                }).finally(() => {
+                })
+                .finally(() => {
                     this.searching = false;
                     this.commentJs.ayncRefresh();
                 });

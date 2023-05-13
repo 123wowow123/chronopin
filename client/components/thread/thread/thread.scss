@@ -12,6 +12,11 @@
         border: none;
         padding: 0;
     }
+
+    .thread-header-link {
+        color: var(--primary-color);
+        cursor: pointer;
+}
 }
 
 .thread-list {
