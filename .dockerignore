@@ -1,0 +1,8 @@
+server/config/environment/development.js
+server/config/environment/production.backup.js
+env.*.list
+node_modules
+client/bower_components
+scripts
+.tmp
+.vscode

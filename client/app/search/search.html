@@ -1,0 +1,30 @@
+<div ng-switch="$ctrl.getTimelineStatus()" class="main">
+    <div class="page_message" ng-switch-when="no match">
+      <h3 class="text-muted">
+        No results found, please try a different search
+      </h3>
+    </div>
+  
+    <div class="page_loading" ng-switch-when="searching">
+      <h3 class="text-muted">
+        <loader-pac></loader-pac>
+        <!-- searching... -->
+      </h3>
+    </div>
+  
+    <div class="container-fluid main__timeline" ng-switch-default>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul class="timeline">
+  
+            <!-- Extract Into Component -->
+            <li id="{{bag.toISODateTimeString()}}" class="timeline__group-container" data-ng-repeat="bag in $ctrl.bags" waypoint="$ctrl.updateInView(event)">
+  
+              <time-block bag="bag" config="$ctrl.appConfig"></time-block>
+  
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>

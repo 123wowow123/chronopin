@@ -1,0 +1,33 @@
+.admin {
+	background-color: var(--primary-bg-color);
+}
+
+.trash {
+	color: rgb(209, 91, 71);
+}
+
+.user-list {
+	li {
+		display: flex;
+		border: none;
+		margin-bottom: 0;
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		.user-info {
+			flex-grow: 1;
+		}
+
+		.trash {
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+		}
+	}
+
+	li+li {
+		margin-top: 2px;
+	}
+}

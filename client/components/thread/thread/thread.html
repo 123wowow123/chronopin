@@ -1,0 +1,14 @@
+<div>
+    <div class="thread-header">
+        <h2 >Thread</h2>
+        <a class="btn btn-link response-thread-btn" ui-sref="respond({respondId:thread.pinId})" ng-if="thread.isLoggedIn()">Respond to this Pin</a>
+    </div>
+
+    <ul class="thread-list">
+        <li id="{{pin.id}}" class="grid" data-ng-repeat="pin in thread.pins track by $index" ng-class="{ 'current': thread.pinId == pin.id}">
+            <a ui-sref="pin({id:pin.id})">
+                <h3><span class="index-count" title="{{pin.title}}">{{$index + 1}}</span> {{pin.title}}</h3>
+            </a>
+        </li>
+    </ul>
+</div>

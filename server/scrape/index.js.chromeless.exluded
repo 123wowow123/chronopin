@@ -1,0 +1,80 @@
+const { Chromeless } = require('chromeless');
+const _ = require('lodash');
+const fs = require('fs');
+const config = require('../config/environment');
+
+//console.log(JSON.stringify(config))
+//var scrapeJsFileName = __dirname + '/scrape.min.js';
+//console.log(scrapeJsFileName);
+
+module.exports.scrape = function scrape(pageUrl) {
+  const chromeless = new Chromeless(
+    {
+    remote: {
+      endpointUrl: config.chromeless.endpointUrl,
+      apiKey: config.chromeless.apiKey,
+    },
+    //debug: true
+  }
+  );
+
+  // create script tag and listen to return function
+  let scraped = chromeless
+    .goto(pageUrl)
+    .evaluate(() => {
+
+      // this will be executed in headless chrome
+      return (new Promise((resolve, reject) => {
+        // Github url js will not be executed need to upload to S3
+        let scriptPath = "https://raw.githubusercontent.com/123wowow123/chronopin/master/server/scrape/scrape.min.js";
+        var script = document.createElement('script');
+        //resolve("script loaded")
+        script.onload = function () {
+          window.cpScrapePromise
+            .then((res) => {
+              resolve(res);
+            });
+        };
+        script.onerror = function () {
+          reject("loading failed");
+        };
+        script.src = scriptPath;
+        document.getElementsByTagName('head')[0].appendChild(script);
+      }))
+        .catch((err) => {
+          console.log(err);
+          return "load err";
+        });
+        
+    })
+    .then((scraped) => {
+      if (scraped.media) {
+        scraped.media = _.sortBy(scraped.media, i => {
+          return i.height * i.width;
+        }).reverse();
+      }
+      return scraped;
+    });
+
+  return Promise.all([scraped, chromeless.end()])
+    .then(([scraped, chrome]) => {
+      return scraped;
+    })
+    .catch((e)=>{
+      console.log(e);
+      throw e;
+    });
+}
+
+//   function _getYouTubeURL($) {
+//     var key = 'src';
+//     var name = 'https://www.youtube.com/embed/';
+//
+//     var match = $(`[${key}^="${name}"]`);
+//     if (match.get().length > 0) {
+//       return match.map(function() {
+//         return $(this).attr(key);
+//       }).get();
+//     }
+//     return undefined;
+//   }

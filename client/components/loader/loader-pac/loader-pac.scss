@@ -1,0 +1,83 @@
+$pac-width: 100px;
+$pac-height: 100px;
+$pac-half-height: $pac-height/2;
+$pac-amber: #FFC107;
+$pac-grey: #ccc;
+$pac-time: 0.4s;
+@mixin animation($name) {
+   @keyframes #{$name}{
+    @content;
+  }
+}
+@include animation(up) {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(-30deg);
+  }
+}
+@include animation(down) {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(30deg);
+  }
+}
+@include animation(r-to-l) {
+  100% {
+    margin-left: -1px;
+  }
+}
+@mixin use-animation($name, $time) {
+  animation: $name $time infinite;
+}
+
+.loader-pac {
+  position: relative;
+  height: $pac-height;
+  width: $pac-width;
+  margin: 0 auto;
+  left: -$pac-width / 3;
+  transform: scale(0.4, 0.4);
+
+  .pac:after,
+  .pac:before {
+    content: '';
+    position: absolute;
+    background: $pac-amber;
+    width: $pac-width;
+    height: $pac-half-height;
+    left: 50%;
+    top: 50%;
+    margin-left: - $pac-width/2;
+    margin-top: - $pac-half-height;
+    border-radius: $pac-half-height $pac-half-height 0 0;
+    @include use-animation(up, $pac-time);
+  }
+
+  .pac:after {
+    margin-top: -1px;
+    border-radius: 0 0 $pac-half-height $pac-half-height;
+    @include use-animation(down, $pac-time);
+  }
+
+  .dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: $pac-half-height/5;
+    height: $pac-half-height/5;
+    margin-top: - $pac-half-height/10;
+    margin-left: 30px;
+    border-radius: 50%;
+    background: $pac-grey;
+    box-shadow: 30px 0 0 $pac-grey, 60px 0 0 $pac-grey, 90px 0 0 $pac-grey, 120px 0 0 $pac-grey, 150px 0 0 $pac-grey;
+    @include use-animation(r-to-l, $pac-time);
+  }
+}

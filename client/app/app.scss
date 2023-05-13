@@ -1,0 +1,197 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+@import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
+@import '../bower_components/bootstrap-social/bootstrap-social.scss';
+$fa-font-path: "../bower_components/font-awesome/fonts";
+@import '../bower_components/font-awesome/scss/font-awesome';
+/**
+ * App-wide Styles
+ */
+
+// iPhone breakpoints
+$iphone-6-portrait: 375px;
+$iphone-6-landscape: 667px;
+
+$iphone-6-plus-portrait: 414px;
+$iphone-6-plus-landscape: 736px;
+
+$iphone-11-portrait: 414px;
+$iphone-11-landscape: 896px;
+
+$iphone-portrait: $iphone-11-portrait;
+$iphone-landscape: $iphone-11-landscape;
+
+// iPad breakpoints
+$ipad-portrait: 768px;
+$ipad-landscape: 1024px;
+
+
+// Ad breakpoints
+$wide-ad: 1200px;
+
+$nav-offset: 50px;
+$nav-offset-collapsed: 102px;
+
+$timeline-content-color: #555;
+
+::selection {
+  background-color: var(--text-highlight-color);
+}
+
+// input:-webkit-autofill,
+// input:-webkit-autofill:hover, 
+// input:-webkit-autofill:focus {
+//   // border: 1px solid green;
+//   -webkit-text-fill-color: green;
+//   -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+//   transition: background-color 5000s ease-in-out 
+// }
+
+// fonts
+@font-face {
+  font-family: AstronomicSignsSt;
+  src: url(../assets/fonts/Astronomic_Signs_St.ttf);
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+.body {
+  //adds padding for fix navbar-main
+  padding-top: 51px;
+  color: var(--primary-color);
+  background: var(--primary-bg-color);
+}
+
+.view {
+  position: relative;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+.vertical-horizontal-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page_message,
+.page_loading {
+  @extend .vertical-horizontal-align;
+  position: fixed;
+  top: $nav-offset;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.form-control {
+  color: var(--header-search-color);
+  background-color: var(--header-search-bg-color) !important;
+  border-color: var(--header-search-bg-color);
+  border-radius: 4px !important;
+}
+
+button {
+  &:hover, &:focus {
+    outline-color: var(--primary-link-color) !important;
+  }
+}
+
+.btn-default {
+
+  &:hover {
+    color: var(--header-search-color) !important;
+    background: var(--primary-highlight-plus-bg-color) !important;
+  }
+
+  .input-group-btn &,
+  .input-group & {
+    color: var(--header-search-color);
+    background: var(--header-search-bg-color);
+    border-color: var(--header-search-bg-color);
+  }
+
+  @at-root .input-group-addon {
+    color: var(--header-search-color);
+    background: var(--header-search-bg-color);
+    border-color: var(--header-search-bg-color);
+  }
+
+}
+
+.list-group-item {
+  color: var(--header-search-color);
+  background: var(--header-search-bg-color);
+}
+
+.btn-link {
+  color: var(--primary-link-color);
+
+  &:disabled {
+    color: var(--primary-link-color-disabled) !important;
+  }
+}
+
+// extend dosn't work inside media queries
+@mixin grid-verticle-break {
+  padding: 15px 0 0;
+}
+
+@mixin grid-normalize-margin {
+  margin: 0 -15px;
+}
+
+@media only screen and (max-width : $ipad-portrait) {
+  .navbar-form {
+    margin: 0;
+  }
+}
+
+// Component styles are injected through grunt
+/* inject:scss */
+@import 'account/login/login.scss';
+@import 'account/profile/profile.scss';
+@import 'account/settings/settings.scss';
+@import 'account/signup/signup.scss';
+@import 'admin/admin.scss';
+@import 'create/create.scss';
+@import 'data.scss';
+@import 'main/main.scss';
+@import 'pin/pin.scss';
+@import 'search/search.scss';
+@import 'theme.scss';
+@import 'watch/watch.scss';
+@import '../components/auto-complete/auto-complete.scss';
+@import '../components/comment/comment-count/comment-count.scss';
+@import '../components/comment/comment-login/comment-login.scss';
+@import '../components/comment/comment-post/comment-post.scss';
+@import '../components/footer/footer.scss';
+@import '../components/loader/loader-pac/loader-pac.scss';
+@import '../components/loader/loader-pulse-bubble/loader-pulse-bubble.scss';
+@import '../components/loader/loader-ripple/loader-ripple.scss';
+@import '../components/modal-scroller/modal-backdrop.scss';
+@import '../components/modal-scroller/modal/modal-box.scss';
+@import '../components/modal-scroller/modal/shared/pin-form.scss';
+@import '../components/modal/modal.scss';
+@import '../components/navbar/navbar.scss';
+@import '../components/oauth-buttons/oauth-buttons.scss';
+@import '../components/pin-block/pin-block.scss';
+@import '../components/scroll/scroll/scroll.scss';
+@import '../components/text-editor/text-editor/text-editor.scss';
+@import '../components/thread/thread/thread.scss';
+@import '../components/time-block/time-block.scss';
+/* endinject */

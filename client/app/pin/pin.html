@@ -1,0 +1,210 @@
+<div class="pin">
+  <div class="pin__content">
+    <div>
+      <!-- Google Ads-->
+      <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed"
+        data-ad-client="ca-pub-4845333369058390" data-ad-slot="6184404789"></ins>
+
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4845333369058390" data-ad-slot="7661137981"
+        data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </div>
+
+    <div class="pin__preview">
+
+      <div class="pin__panel" ng-if="$ctrl.pinReady">
+
+        <!-- Switch between image / iframe / tweets -->
+        <div class="grid__media" ng-switch="$ctrl.pin.media[0].type">
+
+          <div ng-switch-when="1">
+            <a class="pin__asset pin__asset--link" ng-if="$ctrl.pin.media[0].thumbName"
+              ng-href="{{$ctrl.pin.sourceUrl}}" target="_blank">
+              <img ng-src="{{$ctrl.appConfig.thumbUrlPrefix + $ctrl.pin.media[0].thumbName}}" class="pin__image"
+                data-actual-width="{{$ctrl.pin.media[0].thumbWidth}}"
+                data-actual-height="{{$ctrl.pin.media[0].thumbHeight}}" />
+            </a>
+          </div>
+
+          <twitter-pin ng-switch-when="2" html="{{$ctrl.pin.media[0].html}}">
+          </twitter-pin>
+
+          <div class='embed-container' ng-switch-when="3" ng-bind-html="$ctrl.pin.media[0].html">
+          </div>
+
+          <!-- <div ng-switch-default></div> -->
+        </div>
+
+
+        <div class="grid__body">
+
+          <div class="grid__meta">
+            <div class="grid__headline">
+              <div class="headline-left">
+                  <a class="posted-time" ui-sref="pin({id:$ctrl.pin.id})">
+                      <time datetime="{{$ctrl.pin.utcCreatedDateTime}}">{{$ctrl.pin.utcCreatedDateTime | date :
+                          "MM/dd/yyyy
+                          'at' h:mm a" | lowercase}}
+                      </time>
+                  </a>
+                  <span class="rubric__divider">/</span>
+                  <a ng-click="$ctrl.searchService.submit($ctrl.pin.user.userName)" class="rubric">
+                      <span>{{$ctrl.pin.user.userName}}</span>
+                  </a>
+              </div>
+          </div>
+            <div class="grid__uploaded-date --clear-margin" ng-switch="$ctrl.pin.allDay">
+              <span ng-switch-when="true">
+                <em>
+                  <span>Starts {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy"}}</span>
+                  <span> - All day</span>
+                </em>
+              </span>
+              <em ng-switch-default>
+                <span>Starts {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"}}</span>
+                <span ng-if="$ctrl.pin.utcEndDateTime">to {{$ctrl.pin.utcEndDateTime | date:"MM/dd/yyyy h:mma"}}</span>
+              </em>
+            </div>
+          </div>
+
+          <h4 class="grid__heading">
+            <a href="{{$ctrl.pin.sourceUrl}}" target="_blank">
+              {{$ctrl.pin.title}}
+            </a>
+            <a class="external-link-icon" href="{{$ctrl.pin.sourceUrl}}" target="_blank">
+              <i class='fa fa-external-link'></i>
+            </a>
+          </h4>
+          <div class="grid__description" ng-bind-html="$ctrl.pin.description"></div>
+          <div class="grid__footer">
+
+            <div class="grid__footer-left">
+
+              <div class="grid__merchant">
+
+                <div class="merchant merchant-price " ng-class="{'grid__price--negative': $ctrl.pin.price < 0}"
+                  ng-if="$ctrl.pin.price">
+                  <span class="msrp">MSRP</span>
+                  <span class="merchant-price">{{$ctrl.pin.price | money}}</span>
+                </div>
+
+                <!-- Merchant Ads-->
+                <!-- <a target="_blank" class="gamestop__merchant-link"
+                  href="{{$ctrl.pin.merchant.gamestop.url || 'https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10006500&type=3&subid='}}"
+                  ng-if="$ctrl.pin.merchant.gamestop.url || true">
+                  <img alt="Gamestop logo" src="https://merchant.linksynergy.com/fs/banners/24348/24348_10000852.png" />
+  
+                  <span class="merchant-price"
+                    ng-class="{'grid__price--negative': $ctrl.pin.price < 0}">{{merchant.price | money}}</span>
+                </a> -->
+                <!-- <a target="_blank" class="amazon__merchant-link" href="{{$ctrl.pin.merchant.amazon.url}}"
+                  ng-if="!!$ctrl.pin.merchant.amazon.url">
+                  <img alt="Amazon logo" src="/assets/images/OIP.jpeg" />
+  
+                  <span class="merchant-price"
+                    ng-class="{'grid__price--negative': $ctrl.pin.price < 0}">{{merchant.price | money}}</span>
+                </a> -->
+                <div class="merchant" ng-repeat="merchant in $ctrl.pin.merchants track by $index">
+                  <a target="_blank" class="merchant generic__merchant-link" href="{{merchant.url}}"
+                    ng-if="!!merchant.url">
+                    <!-- <i class="fa fa-shopping-cart" aria-hidden="true"></i> -->
+                    <span class="merchant-label" title="{{merchant.label}}">{{merchant.label}}</span>
+                    <span class="merchant-price"
+                      ng-class="{'grid__price--negative': $ctrl.pin.price < 0}">{{merchant.price
+                      | money}}</span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="grid__footer-right">
+              <div class="grid__social">
+                <div class="grid__watch" ng-switch="!!$ctrl.pin.hasFavorite">
+                  <button type="button" class="grid__favorite --add" ng-click="$ctrl.addFavorite($ctrl.pin)"
+                    ng-switch-default><i class="fa fa-eye" aria-hidden="true"></i> {{pin.favoriteCount}}</button>
+                  <button type="button" class="grid__favorite --remove" ng-click="$ctrl.removeFavorite($ctrl.pin)"
+                    ng-switch-when="true"><i class="fa fa-eye" aria-hidden="true"></i> {{pin.favoriteCount}}</button>
+                </div>
+
+                <div class="grid__likes">
+                  <div fb-like page-href="{{$ctrl.pin.sourceUrl}}">
+                    <loader-pulse-bubble></loader-pulse-bubble>
+                  </div>
+                </div>
+
+                <div class="grid__tip" ng-if="$ctrl.isAdmin()">
+                  <button class="btn btn-link" ui-sref="update({id:$ctrl.pin.id})"><i class="fa fa-pencil"
+                      aria-hidden="true"></i></button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pin__right_pannel">
+      <div class="pin__right_pannel_content">
+        <div class="pin__thread">
+          <thread ng-if="!!$ctrl.pin.id" pin-id="$ctrl.pin.id" config="$ctrl.appConfig"></thread>
+        </div>
+
+        <div class="pin__thread_bottom_ads">
+          <!-- Google Ads-->
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4845333369058390"
+            data-ad-slot="2802659011" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4845333369058390"
+            data-ad-slot="2802659011" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+
+        <div class="pin__comment">
+          <comment comment-url="{{'/pin/'+$ctrl.pin.id}}" title="{{$ctrl.pin.title}}"></comment>
+        </div>
+      </div>
+      <div class="pin__right_pannel_wide_ads">
+        <!-- Google Ads-->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4845333369058390"
+          data-ad-slot="5947697108" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </amp-ad>
+      </div>
+
+    </div>
+
+
+    <div class="pin__center-ads">
+      <div id="amzn-assoc-ad-98cb6875-162d-4a0a-ae94-43b14e993e7c"></div>
+      <script async
+        src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=98cb6875-162d-4a0a-ae94-43b14e993e7c"></script>
+
+      <!-- Google Ads-->
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4845333369058390" data-ad-slot="9433708055"
+        data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </div>
+
+    <div class="page_loading" ng-if="!$ctrl.pinReady">
+      <h3 class="text-muted">
+        <loader-pac></loader-pac>
+        <!-- loading... -->
+      </h3>
+    </div>
+  </div>
+
+  <div class="pin_suggestions">
+
+    <ul class="dynamic-grid" angular-grid="$ctrl.pinsQuery" cssGrid="true" ag-refresh-on-img-load="false"
+      ag-reflowed="$ctrl.reflowed($event)">
+      <li id="{{pin.id}}" class="grid" data-ng-repeat="pin in $ctrl.pinsQuery">
+
+        <pin-block pin="pin" config="$ctrl.appConfig"></pin-block>
+
+      </li>
+    </ul>
+
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+  </div>
+</div>

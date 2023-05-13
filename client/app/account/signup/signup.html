@@ -1,0 +1,125 @@
+<div class="signup">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Sign up</h1>
+      </div>
+      <div class="col-sm-12">
+        <form class="form" name="form" ng-submit="vm.register(form)" novalidate>
+
+          <div class="form-group" ng-class="{ 'has-success': form.userNameNoPrefix.$valid && form.userNameNoPrefix.$dirty || vm.socialSubmitted || vm.submitted,
+                                            'has-error': form.userNameNoPrefix.$invalid && form.userNameNoPrefix.$dirty || vm.socialSubmitted || vm.submitted}">
+            <label>User Handle</label>
+            <div class="input-group">
+              <div class="input-group-addon">@</div>
+              <input type="text" name="userNameNoPrefix" class="form-control" ng-model="vm.user.userNameNoPrefix"
+                required ng-pattern="/^[a-zA-Z0-9-_]+$/" maxlength="15" ng-trim="false" user-handle
+                ng-model-options="{ debounce: 100 }" />
+            </div>
+            <p class="help-block" ng-show="form.userNameNoPrefix.$error.required">
+              A user handle is required
+            </p>
+            <p class="help-block"
+              ng-show="!form.userNameNoPrefix.$error.required && form.userNameNoPrefix.$error.pattern">
+              A user handle can have a maximum of 15 characters with only alphanumeric characters and cannot have spaces
+            </p>
+            <p class="help-block"
+              ng-show="!form.userNameNoPrefix.$error.required && !form.userNameNoPrefix.$error.pattern && form.userNameNoPrefix.$error.handleAvailable">
+              User handle is not available
+            </p>
+          </div>
+
+          <div class="optional_line_break">
+            <span class="optional_line_break__label">Signup using Social Media options or Form</span>
+          </div>
+
+          <div class="form-group" ng-class="{ 'has-success': form.firstname.$valid && vm.submitted,
+                                            'has-error': form.firstname.$invalid && vm.submitted }">
+            <label>Frist Name</label>
+
+            <input type="text" name="firstname" class="form-control" ng-model="vm.user.firstName" required />
+            <p class="help-block" ng-show="form.firstname.$error.required && vm.submitted">
+              A first name is required
+            </p>
+          </div>
+
+          <div class="form-group" ng-class="{ 'has-success': form.lastname.$valid && vm.submitted,
+                                            'has-error': form.lastname.$invalid && vm.submitted }">
+            <label>Last Name</label>
+
+            <input type="text" name="lastname" class="form-control" ng-model="vm.user.lastName" required />
+            <p class="help-block" ng-show="form.lastname.$error.required && vm.submitted">
+              A last name is required
+            </p>
+          </div>
+
+          <div class="form-group" ng-class="{ 'has-success': form.email.$valid && vm.submitted,
+                                            'has-error': form.email.$invalid && vm.submitted }">
+            <label>Email</label>
+
+            <input type="email" name="email" class="form-control" ng-model="vm.user.email" required mongoose-error />
+            <p class="help-block" ng-show="form.email.$error.email && vm.submitted">
+              Doesn't look like a valid email.
+            </p>
+            <p class="help-block" ng-show="form.email.$error.required && vm.submitted">
+              What's your email address?
+            </p>
+            <p class="help-block" ng-show="form.email.$error.mongoose">
+              {{ vm.errors.email }}
+            </p>
+          </div>
+
+          <div class="form-group" ng-class="{ 'has-success': form.password.$valid && vm.submitted,
+                                            'has-error': form.password.$invalid && vm.submitted }">
+            <label>Password</label>
+
+            <input type="password" name="password" class="form-control" ng-model="vm.user.password" ng-minlength="3"
+              required mongoose-error />
+            <p class="help-block"
+              ng-show="(form.password.$error.minlength || form.password.$error.required) && vm.submitted">
+              Password must be at least 3 characters.
+            </p>
+            <p class="help-block" ng-show="form.password.$error.mongoose">
+              {{ vm.errors.password }}
+            </p>
+          </div>
+
+          <div class="form-group" ng-class="{ 'has-success': form.confirmPassword.$valid && vm.submitted,
+                                            'has-error': form.confirmPassword.$invalid && vm.submitted }">
+            <label>Confirm Password</label>
+            <input type="password" name="confirmPassword" class="form-control" ng-model="vm.user.confirmPassword"
+              match="vm.user.password" ng-minlength="3" required />
+            <p class="help-block" ng-show="form.confirmPassword.$error.match && vm.submitted">
+              Passwords must match.
+            </p>
+          </div>
+
+          <div>
+            <button class="btn btn-default  btn-lg btn-register" type="submit">
+              Sign up
+            </button>
+            <a class="btn btn-default  btn-lg btn-login" ui-sref="login">
+              Login
+            </a>
+          </div>
+
+          <div class="optional_line_break">
+            <span class="optional_line_break__label">Or</span>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-5 col-md-4 oauth-buttons-wrapper">
+              <oauth-buttons classes="btn-block" provider="facebook" label="Facebook"
+                handle="{{'@' + vm.user.userNameNoPrefix}}" validate-fn="vm.validateSocialSubmition(form.userNameNoPrefix.$valid)"></oauth-buttons>
+            </div>
+            <div class="col-sm-5 col-md-4 oauth-buttons-wrapper">
+              <oauth-buttons classes="btn-block" provider="google" label="Google"
+                handle="{{'@' + vm.user.userNameNoPrefix}}" validate-fn="vm.validateSocialSubmition(form.userNameNoPrefix.$valid)"></oauth-buttons>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

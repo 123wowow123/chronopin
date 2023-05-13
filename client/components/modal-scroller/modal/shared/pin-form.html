@@ -1,0 +1,112 @@
+<form name="pinForm" class="modal-box clearfix" ng-submit="$ctrl.submitPin($ctrl.pin, pinForm.$valid)" ng-click="$ctrl.closeDatePicker()" novalidate>
+  <fieldset ng-disabled="!$ctrl.enableForm">
+    <h4>{{$ctrl.title}}</h4>
+    <div class="form-group" ng-class="{'has-error' : pinForm.pageUrl.$invalid && pinForm.pageUrl.$dirty}">
+      <label for="pageUrl" class="control-label">Url</label> <a href="{{$ctrl.pin.pageUrl}}" target="_blank" class="btn btn-link pull-right">Open Link <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a>
+      <input name="pageUrl" type="url" class="form-control" id="pageUrl" placeholder="Url" ng-model="$ctrl.pin.pageUrl" ng-change="$ctrl.urlChanged()" required>
+    </div>
+    <div class="form-group" ng-class="{'has-error' : pinForm.title.$invalid && pinForm.title.$dirty}">
+      <label for="title" class="control-label">Title</label>
+      <input name="title" type="text" class="form-control" id="title" placeholder="Title" ng-model="$ctrl.pin.title" required>
+    </div>
+    <div class="form-group" ng-class="{'has-error' : pinForm.description.$invalid && pinForm.description.$dirty}">
+      <label for="description" class="control-label">Description</label>
+      <textarea name="description" class="form-control" id="description" rows="5" placeholder="Description" ng-model="$ctrl.pin.description" required></textarea>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 0;">
+      <div class="row">
+        <div class="col-sm-6">
+          <label for="start" class="control-label">Start</label>
+          <div class="input-group" ng-click="$ctrl.stopPropagation($event)" ng-class="{'has-error' : pinForm.start.$invalid && pinForm.start.$dirty}">
+            <input name="start" type="text" id="start" autocomplete="off" class="form-control" required="true" ng-model="$ctrl.pin.start" ng-change="$ctrl.startChange()" placeholder="Start Date" uib-datepicker-popup="{{$ctrl.format}}" is-open="$ctrl.datePickerStart.opened"
+                datepicker-options="$ctrl.datePickerStart.options" close-text="Close" alt-input-formats="$ctrl.altInputFormats" />
+            <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="$ctrl.openDatePickerStart()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <label for="end" class="control-label">End</label>
+          <div class="input-group" ng-class="{'has-error' : pinForm.end.$invalid && pinForm.end.$dirty}" ng-click="$ctrl.stopPropagation($event)">
+            <input name="end" type="text" id="end" autocomplete="off" class="form-control" ng-model="$ctrl.pin.end" placeholder="End Date (optional)" uib-datepicker-popup="{{$ctrl.format}}" is-open="$ctrl.datePickerEnd.opened" datepicker-options="$ctrl.datePickerEnd.options"
+                close-text="Close" alt-input-formats="$ctrl.altInputFormats" />
+            <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="$ctrl.openDatePickerEnd()"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 0;" ng-show="$ctrl.timePicker.show">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="input-group" ng-class="{'has-error' : pinForm.startTime.$invalid && pinForm.startTime.$dirty}">
+            <div name="startTime" uib-timepicker ng-model="$ctrl.pin.start" hour-step="$ctrl.timePickerStart.options.hstep" ng-change="$ctrl.timeChange()" minute-step="$ctrl.timePickerStart.options.mstep" show-meridian="$ctrl.timePickerStart.options.ismeridian"></div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="input-group" ng-class="{'has-error' : pinForm.endTime.$invalid && pinForm.endTime.$dirty}">
+            <div name="endTime" uib-timepicker ng-model="$ctrl.pin.end" hour-step="$ctrl.timePickerEnd.options.hstep" ng-change="$ctrl.timeChange()" minute-step="$ctrl.timePickerEnd.options.mstep" show-meridian="$ctrl.timePickerEnd.options.ismeridian"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-12">
+          <button type="button" class="btn btn-link" ng-click="$ctrl.toggleTimePicker()">
+          <span ng-switch="$ctrl.timePicker.show">
+            <span ng-switch-when="false">Add Time</span>
+          <span ng-switch-when="true">Remove Time</span>
+          </span>
+        </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="price" class="control-label">Price</label>
+      <div class="input-group" ng-class="{'has-error' : pinForm.price.$invalid && pinForm.price.$dirty}">
+        <div class="input-group-addon">$</div>
+        <input name="price" type="text" class="form-control" id="price" placeholder="Price (optional)" ng-model="$ctrl.pin.price" ng-pattern="/^\d*\.?\d{0,2}$/">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group" style="width: 100%">
+        <div class="row">
+          <div class="col-sm-12" style="display:table;width:100%;">
+            <div style="background-color:lightgrey; height:250px; width: 100%; display:table-cell; overflow-x: auto; overflow-y: hidden; white-space: nowrap;">
+              <div class="background-message-block" ng-hide="$ctrl.pin.images" style="align:middle;">
+                <div class="background-message-block--text">
+                  Image
+                </div>
+              </div>
+              <div ng-repeat="i in $ctrl.pin.images" style="height: 100%; width: 100%; display: inline-block;" ng-click="$ctrl.selectMedia(i)" ng-class="{'pin-form__selected': i === $ctrl.pin.selectedImage}">
+                <img ng-src="{{i.sourceUrl || i.originalUrl}}" class="pin-form__img" style="margin: 0 auto; display: block; max-width: 10%; max-height: 10%; transform: scale(10); transform-origin: top center" ng-class="{'pin-form__selected': i === $ctrl.pin.selectedImage}" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-2">
+          <button type="button" class="btn btn-primary" ng-click="$ctrl.scrapePage($ctrl.pin.pageUrl)" ng-if="$ctrl.mode === 'edit'">Scrape</button>
+        </div>
+        <div class="col-sm-10">
+          <div class="pull-right">
+            <button type="button" class="btn btn-warning" ui-sref="main">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </fieldset>
+</form>

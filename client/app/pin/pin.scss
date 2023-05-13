@@ -1,0 +1,100 @@
+.pin {
+
+  &__content {
+    background-color: var(--primary-bg-color);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__preview {
+    min-width: 0;
+    padding: 15px;
+    flex-grow: 1;
+    flex-basis: $ipad-landscape / 2;
+  }
+
+  &__right_pannel {
+    display: flex;
+    min-width: 0;
+    padding: 15px;
+    flex-grow: 1;
+    flex-basis: $ipad-landscape / 2;
+    gap: 10px;
+
+    &_content {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    &_wide_ads {
+      display: none;
+    }
+
+    @media only screen and (min-width: $wide-ad) {
+      &_wide_ads {
+        display: flex;
+        justify-content: right;
+        flex: 0 0 auto;
+      }
+    }
+  }
+
+  &__center-ads {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__thread {
+    margin-bottom: 15px;
+  }
+
+  &__thread_bottom_ads {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__asset {
+    display: block;
+    margin-bottom: 10px;
+
+    &--link {
+      cursor: pointer;
+    }
+  }
+
+  &_suggestions {
+    max-width: 100%;
+    @include grid-verticle-break;
+    padding: 0 15px;
+
+    .dynamic-grid {
+      padding: 0;
+    }
+
+    @media only screen and (max-width: $ipad-landscape) {
+      padding: 0;
+    }
+  }
+
+  .external-link-icon {
+    margin-left: 10px;
+    position: relative;
+
+    .fa-external-link {
+      color: var(--timeline-color-narrow);
+      font-size: 1.3rem;
+      position: absolute;
+      top: 5px;
+    }
+  }
+
+  .grid__heading {
+    &:hover {
+      .fa-external-link {
+        color: var(--grid-header-text-color);
+      }
+    }
+  }
+
+}

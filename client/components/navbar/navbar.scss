@@ -1,0 +1,183 @@
+.nav-container {
+    @extend .container-fluid;
+    display: flex;
+}
+
+.navbar-header {
+    display: flex;
+    flex-grow: 1;
+    float: none;
+    flex-basis: 700px;
+}
+
+.navbar-toggle {
+    order: 3;
+    height: 34px;
+    margin-right: 0;
+    border: var(--header-search-bg-color);
+    background-color: transparent !important;
+
+    .fa-user {
+        font-size: 1.85rem;
+    }
+}
+
+.navbar-form {
+    border: 0;
+    padding: 0;
+    margin: 8px !important;
+    flex-grow: 1;
+}
+
+.navbar-collapse {
+    flex-shrink: 0;
+    border-color: var(--primary-color);
+}
+
+.search-group {
+    @extend .input-group;
+    @extend .form-group;
+    @extend .has-feedback;
+    width: 100%;
+    display: flex !important;
+}
+
+.search-box-container {
+    flex: 1 1 0px;
+}
+
+.search-input-container {
+    position: relative;
+}
+
+.dropdown-menu {
+    right: 0px;
+    padding: 5px 0;
+    background-color: var(--header-search-bg-color);
+
+    &>li>a {
+        line-height: 2em;
+        color: var(--header-search-color);
+
+        &:hover {
+            background-color: var(--primary-highlight-bg-color);
+            color: var(--header-search-color);
+        }
+    }
+
+}
+
+.search-dropdown {
+    flex: 0 0 auto;
+    width: auto !important;
+
+    .dropdown-toggle {
+        border-left: 1px solid var(--header-search-border-color);
+    }
+}
+
+.dropdown-toggle {
+    color: var(--header-search-color);
+}
+
+.dropdown.open>.dropdown-toggle {
+    background-color: var(--header-search-bg-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--header-search-color) !important;
+}
+
+.user-setting>a {
+    border: 0;
+}
+
+.search-control {
+    @extend .form-control;
+    width: 100% !important;
+
+    &.\--right-radius-none {
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+
+    &.\--show-icon {
+        padding-left: 35px;
+    }
+
+}
+
+// Override / extend bootstrap defaults
+.form-control {
+    &__clear-texbox {
+        @extend .glyphicon;
+        @extend .glyphicon-remove;
+        @extend .form-control-feedback;
+        pointer-events: auto;
+        cursor: pointer;
+        opacity: 0.5;
+        top: auto;
+        z-index: 5;
+        color: var(--header-search-color);
+    }
+
+    &__texbox_icon {
+        position: absolute;
+        font-size: 19px;
+        color: darkgray;
+        //background: lightgray url("/assets/images/algolia-mark-blue.png") no-repeat left top;
+        //background-size: cover;
+        width: 25px;
+        height: 25px;
+        top: 7px;
+        left: 9px;
+        z-index: 5;
+    }
+}
+
+.navbar-main {
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 100;
+    width: 100%; //box-shadow: 0 3px 3px rgba(0,0,0,0.175);
+
+    .navbar {
+        margin: 0;
+        padding: 0 10px;
+        border-bottom: 2px solid;
+    }
+
+    .navbar-default {
+        //color: var(--header-brand-text-color) !important;
+        background-color: var(--header-bg-color);
+        border-color: var(--primary-border-color);
+
+        & .navbar-nav>.active>a {
+            background-color: var(--primary-highlight-bg-color);
+            color: var(--header-brand-text-color);
+        }
+
+        .navbar-nav>li>a {
+            color: var(--header-brand-text-color);
+        }
+
+        .navbar-brand {
+            color: var(--header-brand-text-color);
+        }
+    }
+}
+
+@media only screen and (max-width: $ipad-portrait) {
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
+    .navbar-collapse {
+        flex-grow: 1;
+    }
+
+    .navbar-brand {
+        &.\--collapse {
+            display: none;
+        }
+    }
+}

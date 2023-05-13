@@ -1,0 +1,70 @@
+:root {
+    &.\--light {
+        --primary-color: #555;
+        --primary-bg-color: #FFF;
+        --primary-highlight-bg-color: #DDD;
+        --primary-highlight-plus-bg-color: #CCC;
+        --primary-border-color: #E7E7E7;
+        --header-bg-color: #337ab7;
+        --primary-link-color-disabled: #777;
+
+        --primary-active-highlight-color: #236aa8;;
+
+        --text-highlight-color: initial;
+
+        --header-brand-text-color: #777;
+        --header-bg-color: #FFF;
+
+        --header-search-color: var(--primary-color);
+        --header-search-bg-color: #EEE;
+        --header-search-border-color: var(--primary-bg-color);
+        --auto-complete-title-color: var(--header-search-color);
+        --auto-complete-bg-color: var(--header-search-bg-color);
+
+        --bag-text-color: #515151;
+
+        --grid-panel-bg-color: #FFF;
+        --grid-header-text-color: #111;
+        --grid-description-text-color: #333;
+        --grid-post-date-text-color: var(--primary-color);
+        --grid-auther-text-color: #111;
+
+        --timeline-color: #EEE;
+        --timeline-color-narrow: #EEE;
+    }
+
+    &.\--dark {
+        --primary-color: #BBB;
+        --primary-bg-color: #222;
+        --primary-highlight-bg-color: #333;
+        --primary-highlight-plus-bg-color: #444;
+        --primary-border-color: #1A1A1B;
+        --primary-link-color: #4a92d1;
+        --primary-link-color-disabled: #888;
+
+        --primary-active-highlight-color: #236aa8;;
+
+        --text-highlight-color: #346;
+
+        --header-brand-text-color: #D7DADC;
+        --header-bg-color: #1A1A1B;
+
+        --header-search-color: var(--primary-color);
+        --header-search-bg-color: #000;
+        --header-search-border-color: var(--primary-bg-color);
+        --auto-complete-title-color: var(--header-search-color);
+        --auto-complete-bg-color: var(--header-search-bg-color);
+
+        --bag-text-color: #818384;
+
+        --grid-panel-bg-color: #000;
+        --grid-header-text-color: #D7DADC;
+        --grid-description-text-color: #D7DADC;
+        --grid-post-date-text-color: var(--primary-color);
+        --grid-auther-text-color: var(--primary-color);
+
+        --timeline-color: #DDD;
+        --timeline-color-narrow: #999;
+    }
+
+}
