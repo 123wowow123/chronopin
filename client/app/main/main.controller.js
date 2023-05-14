@@ -138,15 +138,6 @@
       return Promise.resolve();
     }
 
-
-    getHomeScrollId() {
-      let firstBag = this.pinApp.findClosestFutureBagByDateTime(new Date());
-      if (firstBag) {
-        return firstBag.toISODateTimeString();
-      }
-      return null;
-    }
-
     _setMainBagsWithPins(data) {
       this.pinApp.mergeBagsWithDateTimes(data.dateTimes);
       this.pinApp.mergeBagsWithPins(data.pins);

@@ -57,6 +57,10 @@
                 return this._bags.findClosestFutureBagByDateTime(dateTime);
             }
 
+            findClosestFutureSearchBagByDateTime(dateTime) {
+                return this._searchBags.findClosestFutureBagByDateTime(dateTime);
+            }
+
             isWithinBagDateRange(dateTime) {
                 return this._bags.isWithinDateRange(dateTime);
             }
@@ -97,7 +101,7 @@
 
             //// All Bags
 
-            updateAllBagsWithPins (items) {
+            updateAllBagsWithPins(items) {
                 this.updateBagsWithPins(items);
                 this.updateSearchBagsWithPins(items);
             };
@@ -110,6 +114,22 @@
 
             getSearchBags() {
                 return this._searchBags;
+            }
+
+            getTodayScrollId() {
+                let firstBag = this.findClosestFutureBagByDateTime(new Date());
+                if (firstBag) {
+                    return firstBag.toISODateTimeString();
+                }
+                return null;
+            }
+
+            getTodaySearchScrollId() {
+                let firstBag = this.findClosestFutureSearchBagByDateTime(new Date());
+                if (firstBag) {
+                    return firstBag.toISODateTimeString();
+                }
+                return null;
             }
 
             initSocket() {

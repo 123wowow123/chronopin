@@ -6,7 +6,8 @@
         <ul class="timeline">
 
           <!-- Extract Into Component -->
-          <li id="{{bag.toISODateTimeString()}}" class="timeline__group-container" data-ng-repeat="bag in $ctrl.bags" waypoint="$ctrl.updateInView(event)">
+          <li id="{{bag.toISODateTimeString()}}" class="timeline__group-container" data-ng-repeat="bag in $ctrl.bags"
+            waypoint="$ctrl.updateInView(event)">
 
             <time-block bag="bag" config="$ctrl.appConfig"></time-block>
 
@@ -29,5 +30,5 @@
       <!-- loading... -->
     </h3>
   </div>
-  <scroll scroll-to-id="$ctrl.getHomeScrollId()"/>
+  <scroll scroll-to-id="$ctrl.pinApp.getTodayScrollId()" />
 </div>

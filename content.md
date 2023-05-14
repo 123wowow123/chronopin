@@ -20,6 +20,8 @@ quck add Q2 etc
 
 Features:
 
+check mapbox
+
 default does not select media but when selected it will auto check pin header media.
 
 Add image upload content/mainPin and supporting media reference tab ++ embed youtube/twitter/image/hashtag/alignment
@@ -307,6 +309,7 @@ https://chinachange.org/2023/04/07/china-has-a-youth-unemployment-problem-guangd
 
 https://www.cnbc.com/2023/04/25/lucid-gravity-suv-road-tests.html
 with map
+Casa Grande, Arizona
 
 https://en.wikipedia.org/wiki/Tokyo_Anime_Award
 
@@ -314,3 +317,9 @@ https://en.wikipedia.org/wiki/World_of_Warcraft
 and expansions
 
 
+https://www.google.com/maps/embed/v1/place?key=AIzaSyA2Y5rx_RbJh-kHVW6H-_I-_gmkl8qB9O0
+    &q={{'Space+Needle,Seattle+WA'}}
+
+
+https://www.motor1.com/news/449472/hyundai-porest-compact-rv/
+korea only
