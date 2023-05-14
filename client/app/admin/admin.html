@@ -4,7 +4,7 @@
     <ul class="list-group user-list">
       <li class="list-group-item" ng-repeat="user in admin.users">
         <div class="user-info">
-          <strong>{{user.name || 'N/A'}}</strong><br>
+          <strong>{{user.userName || 'N/A'}}</strong><br>
           <span class="">{{user.email}}</span>
         </div>
         <a ng-click="admin.delete(user)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
