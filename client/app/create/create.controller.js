@@ -7,8 +7,11 @@
 
   class CreateController {
 
-    constructor($state, $scope, Auth, $q, $stateParams, $http, pinWebService, scrapeService, appConfig /*, $log, modelInjector */) {
+    constructor($window, $state, $scope, Auth, $q, $rootScope, $stateParams, $http, pinWebService, scrapeService, appConfig /*, $log, modelInjector */) {
       //PinGroups || (PinGroups = modelInjector.getPinGroups());
+
+      this.$window = $window;
+      this.$rootScope = $rootScope;
 
       // different states of pin
       this.pin = { useMedia: true };

@@ -5,12 +5,13 @@
 
     class PinBlockController {
 
-        constructor($scope, $element, pinWebService, Auth, ScrollUtil, searchService) {
+        constructor($scope, $element, $attrs, pinWebService, Auth, ScrollUtil, searchService) {
             this.pinWebService = pinWebService;
             this.Auth = Auth;
             this.ScrollUtil = ScrollUtil;
             this.searchService = searchService;
             this.$element = $element;
+            this.disableLink = $attrs.hasOwnProperty('disabled');
         }
 
         $onInit() {
@@ -97,12 +98,13 @@
             // },
             bindings: {
                 pin: '<',
-                config: '<'
+                config: '<',
+                disabled: '='
             },
             // templateUrl throws render timing off and causes issues with infinite scroll
             //templateUrl: 'components/pin-block/pin-block.html',
             template: `
-            <article class="grid__panel">
+            <article class="grid__panel" ng-class="{ '\--disabled': $ctrl.disableLink }">
             <!-- <p ng-if="$ctrl.Auth.isAdmin()">{{$ctrl.pin.searchScore}}</p> -->
             <div class="grid__content">
                 <div class="grid__headline">
@@ -114,7 +116,7 @@
                             </time>
                         </a>
                         <span class="rubric__divider">/</span>
-                        <a ng-click="$ctrl.searchService.submit($ctrl.pin.user.userName)" class="rubric">
+                        <a ng-click="!$ctrl.disableLink && $ctrl.searchService.submit($ctrl.pin.user.userName)" class="rubric">
                             <span>{{$ctrl.pin.user.userName}}</span>
                         </a>
                     </div>
@@ -193,10 +195,10 @@
                     </div>
         
                     <div class="grid__watch" ng-switch="!!$ctrl.pin.hasFavorite">
-                        <button type="button" class="grid__favorite --add" ng-click="$ctrl.addFavorite($ctrl.pin)"
+                        <button type="button" class="grid__favorite --add" ng-click="!$ctrl.disableLink && $ctrl.addFavorite($ctrl.pin)"
                             ng-switch-default>
                             <i class="fa fa-eye" aria-hidden="true"></i> {{$ctrl.pin.favoriteCount}}</button>
-                        <button type="button" class="grid__favorite --remove" ng-click="$ctrl.removeFavorite($ctrl.pin)"
+                        <button type="button" class="grid__favorite --remove" ng-click="!$ctrl.disableLink && $ctrl.removeFavorite($ctrl.pin)"
                             ng-switch-when="true">
                             <i class="fa fa-eye" aria-hidden="true"></i> {{$ctrl.pin.favoriteCount}}</button>
                     </div>
