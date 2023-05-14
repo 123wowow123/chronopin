@@ -147,7 +147,7 @@
         // Adjust scrollheight after all dependent resources such as stylesheets, scripts, iframes, and images are loaded
         window.addEventListener('load', () => {
           this.$timeout(() => {
-            const elId = this.getHomeScrollId();
+            const elId = this.pinApp.getTodayScrollId();
             this._scrollAdjust(elId)
               // .then(() => {
               //   console.log("document.documentElement.scrollTop)", document.documentElement.scrollTop);
@@ -157,7 +157,7 @@
         });
 
         this.$timeout(() => {
-          const elId = this.getHomeScrollId();
+          const elId = this.pinApp.getTodayScrollId();
           this._scrollAdjust(elId).then(() => {
             this._registerInfinitScroll();
           });
