@@ -307,13 +307,13 @@
 
     scrapingMessage(content) {
       if (this.scraping) {
-        return "Generating Suggestion";
-      }
-      else if (!this.scraping && content) {
-        return "Suggestion";
+        return { message: "Generating Suggestion", code: 0 };
       }
       else if (!this.scraping && !content) {
-        return "Suggestion Not Found";
+        return { message: "Suggestion Not Found", code: 1 };
+      }
+      else if (!this.scraping && content) {
+        return { message: "Suggestion", code: 2 };
       }
     }
 
