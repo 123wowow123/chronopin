@@ -2607,30 +2607,18 @@
     "id": 91,
     "rootThread": false,
     "title": "33rd Annual US Go Congress",
-    "description": "The US Go Congress is the largest go activity in the United States. It happens once a year and spans one week. Events include the US Open, the largest annual go tournament in the US, professional lectures and game analysis, continuous self-paired games, and all kinds of go-related activities from morning to midnight.",
+    "description": "<p class=\"paragraph\"> The US Go Congress is the largest go activity in the United States. It happens once a year and spans one week. Events include the US Open, the largest annual go tournament in the US, professional lectures and game analysis, continuous self-paired games, and all kinds of go-related activities from morning to midnight. </p>",
     "sourceUrl": "http://www.gocongress.org/",
     "price": 75,
     "utcStartDateTime": "2017-08-05T07:00:00.000Z",
-    "utcEndDateTime": "2017-08-17T07:00:00.000Z",
+    "utcEndDateTime": "2017-08-18T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-08-02T03:24:32.378Z",
-    "utcUpdatedDateTime": "2023-03-07T07:50:46.118Z",
+    "utcUpdatedDateTime": "2023-05-15T00:54:33.902Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
-    "media": [
-      {
-        "id": 92,
-        "thumbName": "b80e48e3-d0ad-4842-bad8-1f2ecad78a80.png",
-        "thumbWidth": 400,
-        "thumbHeight": 401,
-        "originalUrl": "https://d2pdy1mfywet8.cloudfront.net/assets/logo/usgc/2022-c219b92909993fa8b7b6e26943c67c498afbf6a8e705b415b08f8fd83961079a.png",
-        "originalWidth": 400,
-        "originalHeight": 401,
-        "type": "1"
-      }
-    ],
     "userId": 1
   },
   {
