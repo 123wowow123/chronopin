@@ -332,10 +332,6 @@ https://en.wikipedia.org/wiki/World_of_Warcraft
 and expansions
 
 
-https://www.google.com/maps/embed/v1/place?key=AIzaSyA2Y5rx_RbJh-kHVW6H-_I-_gmkl8qB9O0
-    &q={{'Space+Needle,Seattle+WA'}}
-
-
 https://www.motor1.com/news/449472/hyundai-porest-compact-rv/
 korea only
 
@@ -354,6 +350,3 @@ https://www.cnbc.com/2023/05/18/queen-elizabeth-iis-funeral-cost-over-200-millio
 
 
 https://www.theverge.com/2023/5/18/23728678/meta-ai-new-chip-mtia-msvp-datacenter
-
-https://www.cbsnews.com/news/california-solar-panels-canals-drought/
-
