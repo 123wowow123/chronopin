@@ -125,32 +125,41 @@
       }
       function joinLocations(locations) {
         return locations.reduce((a, t) => {
-          return a + "|" + googleMapEncode(t);
+          return a ? `${a}|` : '' + googleMapEncode(t);
         }, '');
       }
 
-      let cloneLocations = _.get(this.pin, 'locations', []).slice(0);
       let origin;
       let destination;
       let waypoints;
-      if (cloneLocations.length === 0) {
+      let cloneLocations = _.get(this.pin, 'locations', []).slice(0);
+      let locationLength = cloneLocations.length;
+
+      if (locationLength === 0) {
         return '';
-      } else if (cloneLocations.length === 1) {
+      } else if (locationLength === 1) {
         origin = googleMapEncode(cloneLocations.shift());
-      } else if (cloneLocations.length === 2) {
+      } else if (locationLength === 2) {
         origin = googleMapEncode(cloneLocations.shift());
         destination = googleMapEncode(cloneLocations.pop());
-      } else if (cloneLocations.length > 2) {
+      } else if (locationLength > 2) {
         origin = googleMapEncode(cloneLocations.shift());
         destination = googleMapEncode(cloneLocations.pop());
         waypoints = joinLocations(cloneLocations);
       }
 
-      return `https://www.google.com/maps/embed/v1/directions` +
-        `?key=AIzaSyA2Y5rx_RbJh-kHVW6H-_I-_gmkl8qB9O0` +
-        `&origin=${origin}` +
-        `${destination ? '&destination=' + destination : ''}` +
-        `${waypoints ? '&waypoints=' + waypoints : ''}`
+      if (locationLength === 1) {
+        return `https://www.google.com/maps/embed/v1/place` +
+          `?key=AIzaSyA2Y5rx_RbJh-kHVW6H-_I-_gmkl8qB9O0` +
+          `&q=${origin}`;
+      } else {
+        return `https://www.google.com/maps/embed/v1/directions` +
+          `?key=AIzaSyA2Y5rx_RbJh-kHVW6H-_I-_gmkl8qB9O0` +
+          `&origin=${origin}` +
+          `${destination ? '&destination=' + destination : ''}` +
+          `${waypoints ? '&waypoints=' + waypoints : ''}`;
+      }
+
     }
 
   }
