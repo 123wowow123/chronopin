@@ -4,7 +4,7 @@
 
   function PinFactory(modelInjector) {
 
-    let User, Medium;
+    let User, Medium, Location;
 
     // user, userId, media
     let prop = [
@@ -43,6 +43,7 @@
         // Lazy load to prevent Angular circular dependency
         User = User || modelInjector.getUser();
         Medium = Medium || modelInjector.getMedium();
+        Location = Location || modelInjector.getLocation();
 
         Object.defineProperty(this, 'userId', {
           get: function () {
@@ -61,6 +62,7 @@
           configurable: false
         });
         this.media = [];
+        this.locations = [];
 
         if (pin) {
           this.set(pin, user);
@@ -78,6 +80,10 @@
           }
           this.media = pin.media && pin.media.map(m => {
             return new Medium(m, this);
+          }) || [];
+
+          this.locations = pin.locations && pin.locations.map(m => {
+            return new Location(m, this);
           }) || [];
 
           if (user instanceof User) {
@@ -103,7 +109,17 @@
           medium.setPin(this);
           this.media.push(medium);
         } else {
-          throw ' ';
+          throw 'medium not instanceof Medium';
+        }
+        return this;
+      }
+
+      addLocation(location) {
+        if (location instanceof Location) {
+          location.setPin(this);
+          this.locations.push(location);
+        } else {
+          throw 'location not instanceof Location';
         }
         return this;
       }

@@ -10,6 +10,9 @@
       getMedium: function () {
         return $injector.get('MediumFactory');
       },
+      getLocation: function () {
+        return $injector.get('LocationFactory');
+      },
       getPin: function () {
         return $injector.get('PinFactory');
       },
