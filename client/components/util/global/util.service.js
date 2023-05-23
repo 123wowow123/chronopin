@@ -89,7 +89,7 @@
         }
         function joinLocations(locations) {
           return locations.reduce((a, t) => {
-            return a ? `${a}|` : '' + googleMapEncode(t);
+            return (a ? `${a}|` : '') + googleMapEncode(t);
           }, '');
         }
 
