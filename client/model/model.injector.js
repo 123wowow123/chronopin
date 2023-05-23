@@ -13,6 +13,9 @@
       getLocation: function () {
         return $injector.get('LocationFactory');
       },
+      getMerchant: function () {
+        return $injector.get('MerchantFactory');
+      },
       getPin: function () {
         return $injector.get('PinFactory');
       },
@@ -28,7 +31,7 @@
       getPinsQuery: function () {
         return $injector.get('PinsQueryFactory');
       },
-      getPinApp: function() {
+      getPinApp: function () {
         return $injector.get('PinAppFactory');
       }
     };
@@ -39,7 +42,7 @@
     .factory('modelInjector', modelInjector);
 
   angular.module('chronopinNodeApp.model')
-    .factory('pinApp', function(modelInjector){
+    .factory('pinApp', function (modelInjector) {
       let pinApp = modelInjector.getPinApp();
       return new pinApp();
     });
