@@ -23,5 +23,6 @@ exports = module.exports = {
     image: 1,
     twitter: 2,
     youtube: 3,
-  }
+  },
+  gMapKey: `AIzaSyA2Y5rx_RbJh-kHVW6H-_I-_gmkl8qB9O0`
 };

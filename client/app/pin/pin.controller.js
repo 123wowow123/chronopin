@@ -129,6 +129,7 @@
         }, '');
       }
 
+      const key = '?key=' + this.appConfig.gMapKey;
       let origin;
       let destination;
       let waypoints;
@@ -150,11 +151,11 @@
 
       if (locationLength === 1) {
         return `https://www.google.com/maps/embed/v1/place` +
-          `?key=AIzaSyA2Y5rx_RbJh-kHVW6H-_I-_gmkl8qB9O0` +
+          key +
           `&q=${origin}`;
       } else {
         return `https://www.google.com/maps/embed/v1/directions` +
-          `?key=AIzaSyA2Y5rx_RbJh-kHVW6H-_I-_gmkl8qB9O0` +
+          key +
           `&origin=${origin}` +
           `${destination ? '&destination=' + destination : ''}` +
           `${waypoints ? '&waypoints=' + waypoints : ''}`;
