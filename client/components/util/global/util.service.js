@@ -124,6 +124,10 @@
             `${destination ? '&destination=' + destination : ''}` +
             `${waypoints ? '&waypoints=' + waypoints : ''}`;
         }
+      },
+
+      hasAddress(pin) {
+        return _.get(pin, "locations[0].address");
       }
 
     };

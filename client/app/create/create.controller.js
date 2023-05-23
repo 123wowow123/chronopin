@@ -7,7 +7,7 @@
 
   class CreateController {
 
-    constructor($window, $state, $scope, Auth, $q, $rootScope, $stateParams, $http, pinWebService, scrapeService, appConfig /*, $log, modelInjector */) {
+    constructor($window, $state, $scope, Auth, $q, $rootScope, $stateParams, $http, pinWebService, scrapeService, appConfig, Util /*, $log, modelInjector */) {
       //PinGroups || (PinGroups = modelInjector.getPinGroups());
 
       this.$window = $window;
@@ -34,6 +34,7 @@
       };
 
       // bind function so each digest loop it get re-evaluated to determin latest state
+      this.Util = Util;
       this.Auth = Auth;
       this.isAdmin = Auth.isAdmin;
       this.getTimeZoneName = moment.tz.guess;
@@ -87,7 +88,7 @@
         content: 0,
         location: 0,
         footer: 0
-      }
+      };
 
     }
 
@@ -371,6 +372,18 @@
 
     multPrice(mult) {
       this.pin.price = (this.pin.price || 1) * mult;
+    }
+
+    hasAddress() {
+      return this.Util.hasAddress(this.pin);
+    }
+
+    getGoogleMapUrl() {
+      return this.Util.getGoogleMapUrl(this.pin);
+    }
+
+    resetAddress() {
+      this.pin.locations = this.scrapeService.getResetLocation();
     }
 
     _resolveActiveTabPinData() {

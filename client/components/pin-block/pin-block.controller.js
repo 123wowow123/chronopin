@@ -5,9 +5,10 @@
 
     class PinBlockController {
 
-        constructor($scope, $element, $attrs, pinWebService, Auth, ScrollUtil, searchService) {
+        constructor($scope, $element, $attrs, pinWebService, Auth, ScrollUtil, Util, searchService) {
             this.pinWebService = pinWebService;
             this.Auth = Auth;
+            this.Util = Util;
             this.ScrollUtil = ScrollUtil;
             this.searchService = searchService;
             this.$element = $element;
@@ -126,7 +127,7 @@
                             <span class="thread-icon" ng-if="!!$ctrl.pin.parentId" title="Part of thread"></span>
                             <span class="thread-icon" ng-if="!!$ctrl.pin.rootThread" title="Firt Pin in a thread"></span>
                         </a>
-                        <a ui-sref="pin({id:$ctrl.pin.id})" ng-if="!!$ctrl.pin.locations.length">
+                        <a ui-sref="pin({id:$ctrl.pin.id})" ng-if="$ctrl.Util.hasAddress($ctrl.pin)">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                         </a>
                     </div>

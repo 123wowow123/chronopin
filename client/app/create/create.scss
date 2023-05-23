@@ -78,6 +78,10 @@
     }
   }
 
+  .pin__map {
+    margin-top: 25px;
+  }
+
 }
 
 .image-dynamic-grid {
@@ -268,11 +272,12 @@ twitter-pin {
       text-decoration: none;
     }
 
-    .trash-container{
+    .trash-container {
       display: flex;
       align-items: center;
       justify-content: center;
       text-decoration: none;
+      top: 2px;
     }
   }
 
@@ -359,7 +364,7 @@ text-editor {
   }
 
   .create {
-    .row {
+    .row.\--vertical {
       &>div+div {
         margin-top: 10px;
       }

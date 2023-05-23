@@ -183,7 +183,7 @@
                     'has-error-suggestion' : pinForm.suggestionLocation.$invalid && pinForm.suggestionLocation.$dirty}">
 
                           <div class="input-group"
-                            ng-class="{'has-error' : pinForm['location' + $index].$invalid && pinForm['location' + $index].$dirty}">
+                            ng-class="{'has-error' : ($ctrl.pin.locations.length > 1 && !$ctrl.hasAddress()) || (pinForm['location' + $index].$invalid && pinForm['location' + $index].$dirty)}">
                             <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
                             <div ng-switch="$ctrl.activeTabs['location']">
                               <input ng-switch-when="0" name="location" type="text" class="form-control" id="location"
@@ -192,6 +192,9 @@
                               <input ng-switch-when="1" name="suggestionLocation" type="text" class="form-control"
                                 id="suggestionLocation" placeholder="Location (optional)"
                                 ng-model="$ctrl.pinSuggestion.location" maxlength="300">
+
+                              <span class="form-control__clear-texbox" ng-if="$ctrl.hasAddress()"
+                                ng-click="$ctrl.resetAddress()"></span>
                             </div>
                           </div>
                         </div>
@@ -201,7 +204,7 @@
                       <div class="form-group" ng-if="$index !== 0">
                         <div class="row">
 
-                          <div class="col-sm-11">
+                          <div class="col-xs-11">
                             <div class="input-group"
                               ng-class="{'has-error' : pinForm['location' + $index].$invalid && pinForm['location' + $index].$dirty}">
                               <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
@@ -211,7 +214,7 @@
                             </div>
                           </div>
 
-                          <div class="col-sm-1 trash-container">
+                          <div class="col-xs-1 trash-container">
                             <a ng-click="$ctrl.removeLocation(location)" class="trash"><span
                                 class="fa fa-trash fa-2x"></span></a>
                           </div>
@@ -225,6 +228,14 @@
                   <button type="button" class="btn btn-link" ng-click="$ctrl.addLocation()">
                     <span>Add location</span>
                   </button>
+
+
+                  <!-- Google Map-->
+                  <div class="pin__map embed" ng-if="$ctrl.hasAddress()">
+                    <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
+                      referrerpolicy="no-referrer-when-downgrade" src="{{$ctrl.getGoogleMapUrl()}}">
+                    </iframe>
+                  </div>
                 </div>
 
                 <div class="form-group">
@@ -260,7 +271,7 @@
 
                       <li class="list-group-item" ng-repeat="merchant in $ctrl.pin.merchants track by $index">
                         <div class="form-group">
-                          <div class="row">
+                          <div class="row  --vertical">
 
                             <div class="col-sm-2">
                               <label for="{{'merchantPrice' + $index}}" class="control-label --only-small">{{$index+1}}.
