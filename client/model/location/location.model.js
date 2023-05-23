@@ -37,7 +37,7 @@
           }
 
         } else {
-          throw 'medium cannot set value of arg';
+          throw 'location cannot set value of arg';
         }
 
         return this;
