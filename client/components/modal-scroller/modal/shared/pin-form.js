@@ -125,8 +125,8 @@
       if (!this.pin.description) {
         this.pin.description = pin.description;
       }
-      if (!this.pin.address) {
-        this.pin.address = pin.address;
+      if (!this.pin.locations) {
+        this.pin.locations = pin.locations;
       }
       if (!this.pin.price) {
         this.pin.price = pin.price;
@@ -156,8 +156,8 @@
       if (!this.pin.description && pin.description && pin.description[0]) {
         this.pin.description = pin.description[0];
       }
-      if (!this.pin.address) {
-        this.pin.address = pin.address;
+      if (!this.pin.locations) {
+        this.pin.locations = pin.locations;
       }
       if (!this.pin.price) {
         this.pin.price = pin.price;
@@ -204,7 +204,6 @@
     reset() {
       this.pin.title = undefined;
       this.pin.description = undefined;
-      this.pin.address = undefined;
       this.pin.price = undefined;
       this.pin.start = undefined;
       this.pin.end = undefined;
@@ -255,7 +254,6 @@
         title: pin.title,
         description: pin.description,
         sourceUrl: pin.pageUrl,
-        address: pin.address,
         price: pin.price,
         utcStartDateTime: pin.start,
         utcEndDateTime: pin.end && undefined,

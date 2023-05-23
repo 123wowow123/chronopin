@@ -5713,6 +5713,40 @@
     "userId": 1
   },
   {
+    "id": 213,
+    "rootThread": false,
+    "title": "When is the Mortal Kombat 1 release date?",
+    "description": "<p class=\"paragraph\"> After&nbsp;<a href=\"https://www.gamerevolution.com/news/939172-mortal-kombat-12-teased-mk12-anniversary-video\">multiple</a>&nbsp;<a href=\"https://www.playstationlifestyle.net/2023/05/17/mortal-kombat-12-trailer-confirmed-release-date/\">teases</a>,&nbsp;Mortal Kombat 1&nbsp;has finally officially been revealed through a new trailer. It’s not actually Mortal Kombat 12 and is instead setting back the clock all the way back, hence the name. </p><p class=\"paragraph\"> Fire God Liu Kang wound back time in Mortal Kombat 11 and its Aftermath DLC, which are seemingly somewhat vital to understanding why Mortal Kombat 1 is a reboot. It appears as though Liu Kang is taking Raiden’s godly role and Kung Lao will be taking Liu Kang’s role as the chosen one. </p><p class=\"paragraph\"> The trailer shows Shang Tsung bringing chaos to the realm, which prompts “war with a god.” The story will be told through NetherRealm’s “genre-defining” campaign that features a cinematic narrative and “unexpected twists on classic rivalries and original backstories.” </p>",
+    "sourceUrl": "https://www.gamerevolution.com/games/940032-mortal-kombat-1-story-trailer-release-date-dlc-pre-order",
+    "price": 69.99,
+    "utcStartDateTime": "2023-09-19T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-20T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-20T22:40:35.712Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 209,
+        "originalUrl": "//www.youtube.com/embed/UZ6eFEjFfJ0",
+        "type": "3",
+        "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/UZ6eFEjFfJ0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+      }
+    ],
+    "merchants": [
+      {
+        "id": 33,
+        "label": "Gamestop PS5",
+        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fmortal-kombat-1----playstation-5%2F394354.html",
+        "price": 69.99,
+        "pinId": 213
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 206,
     "rootThread": false,
     "title": "Elon Musk announces timing for Tesla Cybertruck delivery event",

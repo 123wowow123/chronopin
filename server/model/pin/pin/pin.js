@@ -9,7 +9,8 @@ import * as mapHelper from '../shared/helper'
 import {
   BasePin,
   BasePinProp,
-  Merchant
+  Merchant,
+  Location
 } from '../..';
 
 const prop = BasePinProp.concat(
@@ -61,6 +62,11 @@ export default class Pin extends BasePin {
             return m.save();
           });
 
+        const locationsPromise = this.locations
+          .map(m => {
+            return m.save();
+          });
+
         const allMediaPromise = Promise.all(
           mediaPromise.concat(mediaNonImagePromise)
         )
@@ -71,7 +77,7 @@ export default class Pin extends BasePin {
             };
           });
 
-        const allMerchantPromise = Promise.all(
+        const allMerchantsPromise = Promise.all(
           merchantsPromise
         )
           .then((merchants) => {
@@ -81,7 +87,17 @@ export default class Pin extends BasePin {
             };
           });
 
-        return Promise.all([allMediaPromise, allMerchantPromise])
+        const allLocationsPromise = Promise.all(
+          locationsPromise
+        )
+          .then((locations) => {
+            this.addLocations(locations);
+            return {
+              pin: this
+            };
+          });
+
+        return Promise.all([allMediaPromise, allMerchantsPromise, allLocationsPromise])
           .then((results) => {
             return {
               pin: this
@@ -106,7 +122,8 @@ export default class Pin extends BasePin {
         let beforePinMedia = res.pin.media,
           // originalUserId = beforePinMedia,
           newPinMedia = this.media,
-          newPinMerchants = this.merchants
+          newPinMerchants = this.merchants,
+          newPinLocations = this.locations
 
         let toSaveOriginalMedia = _difference(newPinMedia, beforePinMedia, 'originalUrl');
         let toDeleteOriginalMedia = _difference(beforePinMedia, newPinMedia, 'originalUrl');
@@ -120,6 +137,18 @@ export default class Pin extends BasePin {
                 })
             ).then((merchants) => {
               this.addMerchants(merchants);
+            });
+          });
+
+        const allLocationPromise = Location.deleteByPinId(this.id)
+          .then(() => {
+            return Promise.all(
+              newPinLocations
+                .map(m => {
+                  return m.save();
+                })
+            ).then((locations) => {
+              this.addLocations(locations);
             });
           });
 
@@ -140,7 +169,8 @@ export default class Pin extends BasePin {
         return Promise.all([
           toSaveMediaPromise,
           toDeleteMediaPromise,
-          allMerchantPromise
+          allMerchantPromise,
+          allLocationPromise
         ]).then(() => {
           return this;
         });
@@ -169,6 +199,7 @@ export default class Pin extends BasePin {
   static mapPinJoins(pin, pinRows) {
     pin = Pin.mapPinMedia(pin, pinRows);
     pin = Pin.mapPinMerchants(pin, pinRows);
+    pin = Pin.mapPinLocations(pin, pinRows);
     return pin;
   }
 
@@ -179,6 +210,11 @@ export default class Pin extends BasePin {
 
   static mapPinMerchants(pin, pinRows) {
     pin.addMerchants(mapHelper.mapSubObjectFromQuery('Merchant', 'id', pinRows));
+    return pin;
+  }
+
+  static mapPinLocations(pin, pinRows) {
+    pin.addLocations(mapHelper.mapSubObjectFromQuery('Location', 'id', pinRows));
     return pin;
   }
 }
@@ -266,7 +302,6 @@ function _updateMSSQL(pin, userId) {
           .input('title', mssql.NVarChar(1024), pin.title)
           .input('description', mssql.NVarChar(4000), pin.description)
           .input('sourceUrl', mssql.NVarChar(4000), pin.sourceUrl)
-          .input('address', mssql.NVarChar(4000), pin.address)
           .input('priceLowerBound', mssql.Decimal(18, 2), pin.priceLowerBound)
           .input('priceUpperBound', mssql.Decimal(18, 2), pin.priceUpperBound)
           .input('price', mssql.Decimal(18, 2), pin.price)

@@ -114,6 +114,15 @@
       }
     }
 
+
+    hasMap() {
+      return !!_.get(this.pin, 'locations[0].address');
+    }
+
+    getGoogleMapUrl() {
+      return `https://www.google.com/maps/embed/v1/place?key=AIzaSyA2Y5rx_RbJh-kHVW6H-_I-_gmkl8qB9O0&q=${_.get(this.pin, 'locations[0].address')}`
+    }
+
   }
 
   angular.module('chronopinNodeApp')

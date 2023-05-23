@@ -1,6 +1,6 @@
 let cp;
 let Request;
-const TableName = 'Address';
+const TableName = 'Location';
 
 module.exports.setup = function setup(connectionPool) {
   cp = connectionPool;
@@ -8,7 +8,7 @@ module.exports.setup = function setup(connectionPool) {
   return this;
 }
 
-module.exports.createAddress = () => {
+module.exports.createLocation = () => {
   return dropCreateTable()
     .catch(function (err) {
       // ... connect error checks
@@ -42,10 +42,9 @@ function executeCreateTable() {
         CREATE TABLE [dbo].[${TableName}]
         (
             id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-            userId INT NOT NULL,
-            address NVARCHAR(1000) NOT NULL,
-            geolocation GEOGRAPHY
-            --CONSTRAINT FK_Address_userId FOREIGN KEY (userId) REFERENCES [dbo].[User] (id),
+            pinId INT NOT NULL,
+            address NVARCHAR(2000)
+            -- CONSTRAINT FK_Address_pinId FOREIGN KEY (pinId) REFERENCES [dbo].[Pin] (id)
         );
         `;
 

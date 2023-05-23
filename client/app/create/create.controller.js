@@ -80,9 +80,12 @@
         options: angular.extend({}, timeOptions)
       };
 
+      this.pin.locations = this.scrapeService.getResetLocation();
+
       this.activeTabs = {
         title: 0,
         content: 0,
+        location: 0,
         footer: 0
       }
 
@@ -286,19 +289,28 @@
 
     addMerchantPrice() {
       if (!this.pin.merchants) {
-        this.pin.merchants = [];
+        this.pin.merchants = this.scrapeService.getResetMerchant();
       }
 
-      this.pin.merchants.push({
-        label: null,
-        price: null,
-        url: null
-      })
+      this.pin.merchants.push(this.scrapeService.getMerchantObject());
+    }
+
+    addLocation() {
+      if (!this.pin.locations) {
+        this.pin.locations = this.scrapeService.getResetLocation();
+      }
+
+      this.pin.locations.push(this.scrapeService.getLocationObject());
     }
 
     removeMerchantPrice(merchant) {
       this.pin.merchants.splice(this.pin.merchants.indexOf(merchant), 1);
     }
+
+    removeLocation(location) {
+      this.pin.locations.splice(this.pin.locations.indexOf(location), 1);
+    }
+
 
     tabChange(name, value) {
       this.activeTabs[name] = value;
@@ -358,7 +370,7 @@
     }
 
     multPrice(mult) {
-      this.pin.price = this.pin.price * mult;
+      this.pin.price = (this.pin.price || 1) * mult;
     }
 
     _resolveActiveTabPinData() {

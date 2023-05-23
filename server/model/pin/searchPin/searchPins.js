@@ -212,7 +212,7 @@ function elasticSearch(searchText) {
     const index = "pins";
     const command = "_search";
     const uri = prefixSearchIndex(index) + "/" + command;
-    const searchFields = ["title", "description", "address"];
+    const searchFields = ["title", "description", "location"];
 
     let options = {
         method: 'POST',
@@ -236,7 +236,7 @@ function elasticSearchFavorite(userId, searchText) {
     const index = "pins";
     const command = "_search";
     const uri = prefixSearchIndex(index) + "/" + command;
-    const searchFields = ["title", "description", "address"];
+    const searchFields = ["title", "description", "location"];
 
     let options = {
         method: 'POST',
@@ -273,7 +273,7 @@ function autocomplete(searchText) {
     const index = "pins";
     const command = "_search";
     const uri = prefixSearchIndex(index) + "/" + command;
-    const searchFields = ["title", "description", "address"];
+    const searchFields = ["title", "description", "location"];
 
     let options = {
         method: 'POST',
@@ -298,7 +298,7 @@ function autocompleteFavorite(userId, searchText) {
     const index = "pins";
     const command = "_search";
     const uri = prefixSearchIndex(index) + "/" + command;
-    const searchFields = ["title", "description", "address"];
+    const searchFields = ["title", "description", "location"];
 
     let options = {
         method: 'POST',

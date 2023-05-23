@@ -11,7 +11,6 @@ export function createPinMSSQL(pin, userId) {
                     .input('title', mssql.NVarChar(1024), pin.title)
                     .input('description', mssql.NVarChar(4000), pin.description)
                     .input('sourceUrl', mssql.NVarChar(4000), pin.sourceUrl)
-                    .input('address', mssql.NVarChar(4000), pin.address)
                     .input('priceLowerBound', mssql.Decimal(18, 2), pin.priceLowerBound)
                     .input('priceUpperBound', mssql.Decimal(18, 2), pin.priceUpperBound)
                     .input('price', mssql.Decimal(18, 2), pin.price)

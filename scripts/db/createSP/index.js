@@ -42,6 +42,8 @@ const createGetLikeSP = require('./like/createGetLikeSP');
 const createGetFavoriteSP = require('./favorite/createGetFavoriteSP');
 /* merchant */
 const createGetMerchantSP = require('./merchant/createGetMerchantSP');
+/* location */
+const createGetLocationSP = require('./location/createGetLocationSP');
 
 /** Create Record **/
 /* pin */
@@ -86,6 +88,9 @@ const createDeleteFavoriteByPinIdSP = require('./favorite/createDeleteFavoriteBy
 /* merchant */
 const createDeleteMerchantSP = require('./merchant/createDeleteMerchantSP');
 const createDeleteMerchantByPinIdSP = require('./merchant/createDeleteMerchantByPinIdSP');
+/* location */
+const createDeleteLocationSP = require('./location/createDeleteLocationSP');
+const createDeleteLocationByPinIdSP = require('./location/createDeleteLocationByPinIdSP');
 
 /** Upsert Record **/
 /* like */
@@ -94,6 +99,8 @@ const createMergeLikeSP = require('./like/createMergeLikeSP');
 const createMergeFavoriteSP = require('./favorite/createMergeFavoriteSP');
 /* merchant */
 const createMergeMerchantSP = require('./merchant/createMergeMerchantSP');
+/* location */
+const createMergeLocationSP = require('./location/createMergeLocationSP');
 
 /** Admin Delete **/
 /* user */
@@ -135,6 +142,7 @@ module.exports.setup = function (connectionPool) {
   createGetLikeSP.setup(cp);
   createGetFavoriteSP.setup(cp);
   createGetMerchantSP.setup(cp);
+  createGetLocationSP.setup(cp);
 
   // Create Record
   createCreatePinSP.setup(cp);
@@ -162,11 +170,14 @@ module.exports.setup = function (connectionPool) {
   createDeleteFavoriteByPinIdSP.setup(cp);
   createDeleteMerchantSP.setup(cp);
   createDeleteMerchantByPinIdSP.setup(cp);
+  createDeleteLocationSP.setup(cp);
+  createDeleteLocationByPinIdSP.setup(cp);
 
   // Upsert Record
   createMergeLikeSP.setup(cp);
   createMergeFavoriteSP.setup(cp);
   createMergeMerchantSP.setup(cp);
+  createMergeLocationSP.setup(cp);
 
   // Admin Delete
   createAdminDeleteUserByIdSP.setup(cp);
@@ -202,6 +213,7 @@ module.exports.createGetMediumByOriginalUrlSP = createGetMediumByOriginalUrlSP.c
 module.exports.createGetLikeSP = createGetLikeSP.createSP;
 module.exports.createGetFavoriteSP = createGetFavoriteSP.createSP;
 module.exports.createGetMerchantSP = createGetMerchantSP.createSP;
+module.exports.createGetLocationSP = createGetLocationSP.createSP;
 
 // Create Record
 module.exports.createCreatePinSP = createCreatePinSP.createSP;
@@ -229,11 +241,14 @@ module.exports.createDeleteFavoriteSP = createDeleteFavoriteSP.createSP;
 module.exports.createDeleteFavoriteByPinIdSP = createDeleteFavoriteByPinIdSP.createSP;
 module.exports.createDeleteMerchantSP = createDeleteMerchantSP.createSP;
 module.exports.createDeleteMerchantByPinIdSP = createDeleteMerchantByPinIdSP.createSP;
+module.exports.createDeleteLocationSP = createDeleteLocationSP.createSP;
+module.exports.createDeleteLocationByPinIdSP = createDeleteLocationByPinIdSP.createSP;
 
 // Upsert Record
 module.exports.createMergeLikeSP = createMergeLikeSP.createSP;
 module.exports.createMergeFavoriteSP = createMergeFavoriteSP.createSP;
 module.exports.createMergeMerchantSP = createMergeMerchantSP.createSP;
+module.exports.createMergeLocationSP = createMergeLocationSP.createSP;
 
 // Admin Delete
 module.exports.createAdminDeleteUserByIdSP = createAdminDeleteUserByIdSP.createSP;

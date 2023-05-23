@@ -9,7 +9,6 @@ let prop = [
   'title',
   'description',
   'sourceUrl',
-  'address',
   'tip',
   'utcStartDateTime',
   'utcEndDateTime',
@@ -118,7 +117,6 @@ function _createMSSQL(dateTime) {
           .input('title', mssql.NVarChar(1024), dateTime.title)
           .input('description', mssql.NVarChar(4000), dateTime.description)
           .input('sourceUrl', mssql.NVarChar(4000), dateTime.sourceUrl)
-          .input('address', mssql.NVarChar(4000), dateTime.address)
           .input('tip', mssql.NVarChar(4000), dateTime.tip)
           .input('utcStartDateTime', mssql.DateTime2(0), dateTime.utcStartDateTime)
           .input('utcEndDateTime', mssql.DateTime2(0), dateTime.utcEndDateTime)
@@ -163,7 +161,6 @@ function _createMSSQL(dateTime) {
 //           .input('title', mssql.NVarChar(1024), dateTime.title)
 //           .input('description', mssql.NVarChar(4000), dateTime.description)
 //           .input('sourceUrl', mssql.NVarChar(4000), dateTime.sourceUrl)
-//           .input('address', mssql.NVarChar(4000), dateTime.address)
 //           .input('tip', mssql.NVarChar(4000), dateTime.tip)
 //           .input('utcStartDateTime', mssql.DateTime2(7), dateTime.utcStartDateTime)
 //           .input('utcEndDateTime', mssql.DateTime2(7), dateTime.utcEndDateTime)

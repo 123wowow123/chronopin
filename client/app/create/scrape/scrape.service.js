@@ -88,15 +88,15 @@
                 thisPin.sourceUrl = pin.sourceUrl;
                 thisPin.title = pin.title;
                 thisPin.description = pin.description;
-                thisPin.address = pin.address;
                 thisPin.price = pin.price;
                 thisPin.start = pin.utcStartDateTime && new Date(pin.utcStartDateTime);
                 thisPin.end = pin.utcStartDateTime && new Date(pin.utcEndDateTime);
                 thisPin.allDay = pin.allDay;
                 thisPin.media = pin.media;
                 thisPin.merchants = pin.merchants;
+                thisPin.locations = pin.locations && pin.locations.length ? pin.locations : this.getResetLocation(),
 
-                thisPin.selectedMedia = _.get(pin, 'media[0]');
+                    thisPin.selectedMedia = _.get(pin, 'media[0]');
                 return this;
             };
 
@@ -136,12 +136,12 @@
                     title: pin.title,
                     description: pin.description,
                     sourceUrl: pin.sourceUrl,
-                    address: pin.address,
                     price: pin.price,
                     utcStartDateTime: startDateTime, // ISO 8601 with toJSON
                     utcEndDateTime: endDateTime,
                     allDay: allDay,
                     merchants: pin.merchants,
+                    locations: pin.locations && pin.locations.length ? pin.locations : this.getResetLocation(),
                     media: pin.useMedia && pin.selectedMedia ? [pin.selectedMedia] : undefined
                 };
                 return _.omitBy(newPin, _.isNull);
@@ -163,6 +163,28 @@
                 newDateTime.setSeconds(59);
                 newDateTime.setMilliseconds(999);
                 return newDateTime;
+            }
+
+            this.getMerchantObject = () => {
+                return {
+                    label: null,
+                    price: null,
+                    url: null
+                };
+            }
+
+            this.getResetMerchant = () => {
+                return [];
+            }
+
+            this.getLocationObject = () => {
+                return {
+                    address: null
+                };
+            }
+
+            this.getResetLocation = () => {
+                return [this.getLocationObject()];
             }
 
         });

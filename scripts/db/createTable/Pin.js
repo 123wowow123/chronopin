@@ -48,7 +48,6 @@ function executeCreateTable() {
             title NVARCHAR(1024) NOT NULL,
             description NVARCHAR(4000),
             sourceUrl NVARCHAR(4000),
-            address NVARCHAR(4000),
             priceLowerBound DECIMAL(18,2),
             priceUpperBound DECIMAL(18,2),
             price DECIMAL(18,2),

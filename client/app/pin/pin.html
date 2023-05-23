@@ -148,12 +148,11 @@
     <div class="pin__right_pannel">
       <div class="pin__right_pannel_content">
         <!-- Google Map-->
-        <!-- <div class="pin__map embed">
+        <div class="pin__map embed" ng-if="$ctrl.hasMap()">
           <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA2Y5rx_RbJh-kHVW6H-_I-_gmkl8qB9O0
-    &q=Casa Grande, Arizona">
+            referrerpolicy="no-referrer-when-downgrade" src="{{$ctrl.getGoogleMapUrl()}}">
           </iframe>
-        </div> -->
+        </div>
 
         <div class="pin__thread">
           <thread ng-if="!!$ctrl.pin.id" pin-id="$ctrl.pin.id" config="$ctrl.appConfig"></thread>

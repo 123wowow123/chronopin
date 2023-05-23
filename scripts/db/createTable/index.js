@@ -7,7 +7,7 @@ module.exports.setup = function (connectionPool) {
   cp = connectionPool;
 
   require('./User').setup(cp);
-  require('./Address').setup(cp);
+  require('./Location').setup(cp);
   require('./Click').setup(cp);
   require('./Comment').setup(cp);
   require('./Favorite').setup(cp);
@@ -25,7 +25,7 @@ module.exports.setup = function (connectionPool) {
 
 // Retruns Table
 module.exports.createUser = require('./User').createUser;
-module.exports.createAddress = require('./Address').createAddress;
+module.exports.createLocation = require('./Location').createLocation;
 module.exports.createClick = require('./Click').createClick;
 module.exports.createComment = require('./Comment').createComment;
 module.exports.createFavorite = require('./Favorite').createFavorite;

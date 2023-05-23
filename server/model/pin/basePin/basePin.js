@@ -4,11 +4,13 @@ import * as _ from 'lodash';
 import {
     Medium,
     Merchant,
+    Location,
     User
 } from '../..';
 
 // media
 // merchants
+// locations
 export const BasePinProp = [
     'id',
     'parentId',
@@ -16,7 +18,6 @@ export const BasePinProp = [
     'title',
     'description',
     'sourceUrl',
-    'address',
     'priceLowerBound',
     'priceUpperBound',
     'price',
@@ -64,6 +65,11 @@ export default class BasePin {
             this.merchants = _.get(pin, 'merchants', [])
                 .map(m => {
                     return new Merchant(m, this);
+                });
+
+            this.locations = _.get(pin, 'locations', [])
+                .map(m => {
+                    return new Location(m, this);
                 });
 
         } else {
@@ -143,6 +149,24 @@ export default class BasePin {
             this.merchants.push(merchant);
         } else {
             throw "merchant not instance of Merchant";
+        }
+        return this;
+    }
+
+    addLocations(locations) {
+        (locations || []).forEach(m => {
+            this.addLocation(new Location(m));
+        })
+        return this;
+    }
+
+    addLocation(location) {
+        if (location instanceof Location) {
+            location.setPin(this);
+            if (!this.locations) { this.locations = []; };
+            this.locations.push(location);
+        } else {
+            throw "location not instance of Location";
         }
         return this;
     }

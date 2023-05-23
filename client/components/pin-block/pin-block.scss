@@ -26,6 +26,22 @@
     }
 }
 
+.icon_set {
+    display: flex;
+
+    a{
+        display: inline-block;
+    }
+    a+a {
+        margin-left: 10px;
+    }
+
+    .fa {
+        font-size: 15px;
+        position: relative;
+        top: -1px;
+    }
+}
 
 .thread-icon {
     rotate: 30deg;
@@ -35,6 +51,15 @@
         content: '🧵';
     }
 }
+
+// .thread-icon {
+//     rotate: 30deg;
+//     display: inline-block;
+
+//     &::after {
+//         content: '🧵';
+//     }
+// }
 
 /** timeline panels **/
 .grid__panel {

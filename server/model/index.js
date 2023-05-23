@@ -55,6 +55,9 @@ export {
   default as Merchant
 } from './merchant/merchant';
 export {
+  default as Location
+} from './location/location';
+export {
   default as Favorite
 } from './favorite/favorite';
 export {

@@ -50,7 +50,6 @@ function executeCreateTable() {
               [Pin].[title],
               [Pin].[description],
               [Pin].[sourceUrl],
-              [Pin].[address],
               [Pin].[priceLowerBound],
               [Pin].[priceUpperBound],
               [Pin].[price],
@@ -87,7 +86,11 @@ function executeCreateTable() {
               [Merchant].[id]                            AS [Merchant.id],
               [Merchant].[label]                         AS [Merchant.label],
               [Merchant].[url]                           AS [Merchant.url],
-              [Merchant].[price]                         AS [Merchant.price]
+              [Merchant].[price]                         AS [Merchant.price],
+
+              [Location].[id]                            AS [Location.id],
+              [Location].[address]                       AS [Location.address]
+
 
             FROM [dbo].[Pin] AS [Pin]
               LEFT JOIN [dbo].[PinMedium] AS [Media.PinMedium]
@@ -101,6 +104,8 @@ function executeCreateTable() {
                 ON [Pin].[userId] = [User].[id]
               LEFT JOIN [dbo].[Merchant] AS [Merchant]
                 ON [Pin].[id] = [Merchant].[pinId]
+              LEFT JOIN [dbo].[Location] AS [Location]
+                ON [Pin].[id] = [Location].[pinId]
 
             GROUP BY [Pin].[utcCreatedDateTime],
               [Pin].[utcUpdatedDateTime],
@@ -108,7 +113,6 @@ function executeCreateTable() {
               [Pin].[parentId],
               [Pin].[title],
               [Pin].[description],
-              [Pin].[address],
               [Pin].[sourceUrl],
               [Pin].[priceLowerBound],
               [Pin].[priceUpperBound],
@@ -137,7 +141,11 @@ function executeCreateTable() {
               [Merchant].[id],
               [Merchant].[label],
               [Merchant].[url],
-              [Merchant].[price]
+              [Merchant].[price],
+
+              [Location].[id],
+              [Location].[address]
+
         `;
 
   return cp.getConnection()

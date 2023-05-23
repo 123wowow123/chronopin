@@ -61,7 +61,6 @@ function executeCreateSP() {
               title                  NVARCHAR(1024),
               description            NVARCHAR(4000),
               sourceUrl              NVARCHAR(4000),
-              address                NVARCHAR(4000),
               priceLowerBound        DECIMAL(18, 2),
               priceUpperBound        DECIMAL(18, 2),
               price                  DECIMAL(18, 2),
@@ -95,7 +94,10 @@ function executeCreateSP() {
               [Merchant.id]         INT,
               [Merchant.label]      NVARCHAR(1000),
               [Merchant.url]        NVARCHAR(1000),
-              [Merchant.price]      DECIMAL(18, 2)
+              [Merchant.price]      DECIMAL(18, 2),
+              
+              [Location.id]                            INT,
+              [Location.address]                       NVARCHAR(2000)
             );
 
             INSERT INTO @tempPinsTbl

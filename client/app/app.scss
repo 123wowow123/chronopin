@@ -106,7 +106,9 @@ img {
 }
 
 button {
-  &:hover, &:focus {
+
+  &:hover,
+  &:focus {
     outline-color: var(--primary-link-color) !important;
   }
 }
@@ -136,6 +138,11 @@ button {
 .list-group-item {
   color: var(--header-search-color);
   background: var(--header-search-bg-color);
+
+
+  &>div {
+    flex-grow: 1;
+  }
 }
 
 .btn-link {

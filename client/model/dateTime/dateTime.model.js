@@ -9,7 +9,6 @@
       'title',
       'description',
       'sourceUrl',
-      'address',
       'tip',
       {
         'utcStartDateTime': Date

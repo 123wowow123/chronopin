@@ -22,6 +22,15 @@ Features:
 
 check mapbox
 
+add button for infinit scroll seo
+change pin page header to h1 and test "site:"
+
+
+google dmap doc: 
+https://developers.google.com/maps/documentation/embed/embedding-map
+can suggest airbnb for referals
+
+
 default does not select media but when selected it will auto check pin header media.
 
 Add image upload content/mainPin and supporting media reference tab ++ embed youtube/twitter/image/hashtag/alignment
@@ -56,6 +65,8 @@ comment should have ability to show pictures / pins
 
 Add do not show pin again feature
 
+Add no date pin feature and have it come up time to time so people cam contribute more info
+
 Cleanup:
 test comment db backup
 Sanitize all post values
@@ -71,6 +82,10 @@ Group into months, quarters
 Compact view to show more pins 
 Click on tag to show only matching
 
+
+Add all Tesla shareholder/demo videos and buy link
+https://www.youtube.com/watch?v=bZNL_8bUz6A&t=3520s
+Add bullet point summery
 
 To Do:
 
@@ -323,3 +338,22 @@ https://www.google.com/maps/embed/v1/place?key=AIzaSyA2Y5rx_RbJh-kHVW6H-_I-_gmkl
 
 https://www.motor1.com/news/449472/hyundai-porest-compact-rv/
 korea only
+
+https://www.travelandleisure.com/brightline-high-speed-train-las-vegas-to-los-angeles-7485359
+San Bernardino, California, and makes a stop in Victor Valley before continuing to a final destination near the Las Vegas Strip
+
+
+https://www.bloomberg.com/news/articles/2023-05-16/mercedes-e-vans-target-glamping-fans-in-bid-to-boost-profit
+
+
+https://www.cnbc.com/2023/05/17/why-californias-high-speed-rail-is-taking-so-long-to-complete.html
+The rail authority said the goal is to have the section between Bakersfield and Merced operational between 2030 and 2033.
+
+
+https://www.cnbc.com/2023/05/18/queen-elizabeth-iis-funeral-cost-over-200-million-uk-government-reveals.html
+
+
+https://www.theverge.com/2023/5/18/23728678/meta-ai-new-chip-mtia-msvp-datacenter
+
+https://www.cbsnews.com/news/california-solar-panels-canals-drought/
+

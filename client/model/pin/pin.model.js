@@ -13,7 +13,6 @@
       'title',
       'description',
       'sourceUrl',
-      'address',
       'priceLowerBound',
       'priceUpperBound',
       'price',

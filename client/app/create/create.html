@@ -102,9 +102,9 @@
                         </span>
                       </div>
 
-                      <div ng-show="!$ctrl.pin.allDay" class="input-group"
+                      <div ng-show="!$ctrl.pin.allDay" class="input-group time-group"
                         ng-class="{'has-error' : pinForm.startTime.$invalid && pinForm.startTime.$dirty}">
-                        <div name="startTime" uib-timepicker ng-model="$ctrl.pin.start"
+                        <div class="time" name="startTime" uib-timepicker ng-model="$ctrl.pin.start"
                           hour-step="$ctrl.timePickerStart.options.hstep" ng-change="$ctrl.startChange($ctrl.pin.start)"
                           minute-step="$ctrl.timePickerStart.options.mstep"
                           show-meridian="$ctrl.timePickerStart.options.ismeridian"></div>
@@ -135,9 +135,9 @@
                         </span>
                       </div>
 
-                      <div ng-show="!$ctrl.pin.allDay" class="input-group"
+                      <div ng-show="!$ctrl.pin.allDay" class="input-group time-group"
                         ng-class="{'has-error' : pinForm.endTime.$invalid && pinForm.endTime.$dirty}">
-                        <div name="endTime" uib-timepicker ng-model="$ctrl.pin.end"
+                        <div class="time" name="endTime" uib-timepicker ng-model="$ctrl.pin.end"
                           hour-step="$ctrl.timePickerEnd.options.hstep" ng-change="$ctrl.endChange()"
                           minute-step="$ctrl.timePickerEnd.options.mstep"
                           show-meridian="$ctrl.timePickerEnd.options.ismeridian"></div>
@@ -168,6 +168,65 @@
 
                 <!-- <div class="optional_line_break"><span class="optional_line_break__label">Optional</span></div> -->
 
+                <div class="content_block">
+
+                  <ul class="list-group merchant-list">
+                    <li class="list-group-item" ng-repeat="location in $ctrl.pin.locations track by $index">
+
+                      <!-- First Location Element -->
+                      <div ng-if="$index === 0"
+                        ng-switch="$ctrl.hasScrapedText && $ctrl.scrapingMessage($ctrl.pinSuggestion.location).code == 2">
+                        <label ng-switch-when="false" for="location" class="control-label">Location</label>
+
+                        <div class="form-group"
+                          ng-class="{'has-error' : pinForm['location' + $index].$invalid && pinForm['location' + $index].$dirty, 
+                    'has-error-suggestion' : pinForm.suggestionLocation.$invalid && pinForm.suggestionLocation.$dirty}">
+
+                          <div class="input-group"
+                            ng-class="{'has-error' : pinForm['location' + $index].$invalid && pinForm['location' + $index].$dirty}">
+                            <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                            <div ng-switch="$ctrl.activeTabs['location']">
+                              <input ng-switch-when="0" name="location" type="text" class="form-control" id="location"
+                                placeholder="Location (optional)" ng-model="location.address" maxlength="300">
+
+                              <input ng-switch-when="1" name="suggestionLocation" type="text" class="form-control"
+                                id="suggestionLocation" placeholder="Location (optional)"
+                                ng-model="$ctrl.pinSuggestion.location" maxlength="300">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Additonal Location Element -->
+                      <div class="form-group" ng-if="$index !== 0">
+                        <div class="row">
+
+                          <div class="col-sm-11">
+                            <div class="input-group"
+                              ng-class="{'has-error' : pinForm['location' + $index].$invalid && pinForm['location' + $index].$dirty}">
+                              <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                              <input name="{{'location' + $index}}" type="text" class="form-control"
+                                id="{{'location' + $index}}" placeholder="Additional Location"
+                                ng-model="location.address" required>
+                            </div>
+                          </div>
+
+                          <div class="col-sm-1 trash-container">
+                            <a ng-click="$ctrl.removeLocation(location)" class="trash"><span
+                                class="fa fa-trash fa-2x"></span></a>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </li>
+                  </ul>
+
+                  <button type="button" class="btn btn-link" ng-click="$ctrl.addLocation()">
+                    <span>Add location</span>
+                  </button>
+                </div>
+
                 <div class="form-group">
                   <label for="price" class="control-label">MSRP Price</label>
                   <div class="input-group" ng-class="{'has-error' : pinForm.price.$invalid && pinForm.price.$dirty}">
@@ -180,11 +239,11 @@
                     <div class="input-group-addon" ng-click="$ctrl.multPrice(1000000000000)">T</div>
                   </div>
 
-                  <div class="optional_content">
+                  <div class="content_block">
 
                     <ul class="list-group merchant-list" ng-if="!!$ctrl.pin.merchants.length">
 
-                      <li class="list-group-item header">
+                      <li class="list-group-item header --merchant">
                         <div class="row">
                           <div class="col-sm-2">
                             Merchant Price
@@ -204,16 +263,23 @@
                           <div class="row">
 
                             <div class="col-sm-2">
+                              <label for="{{'merchantPrice' + $index}}" class="control-label --only-small">{{$index+1}}.
+                                Merchant
+                                Price</label>
+
                               <div class="input-group"
                                 ng-class="{'has-error' : pinForm['merchantPrice' + $index].$invalid && pinForm['merchantPrice' + $index].$dirty}">
                                 <div class="input-group-addon">$</div>
                                 <input name="{{'merchantPrice' + $index}}" type="number" class="form-control"
-                                  id="{{'merchant' + $index}}" placeholder="price" ng-model="merchant.price"
+                                  id="{{'merchant' + $index}}" placeholder="Price" ng-model="merchant.price"
                                   ng-pattern="/^-?\d*\.?\d{0,2}$/" required>
                               </div>
                             </div>
 
                             <div class="col-sm-4">
+                              <label for="{{'merchantLabel' + $index}}" class="control-label --only-small">{{$index+1}}.
+                                Merchant Label</label>
+
                               <div class="input-group"
                                 ng-class="{'has-error' : pinForm['merchantLabel' + $index].$invalid && pinForm['merchantLabel' + $index].$dirty }">
                                 <input name="{{'merchantLabel' + $index}}" type="text" class="form-control"
@@ -223,17 +289,20 @@
                             </div>
 
                             <div class="col-sm-5">
+                              <label for="{{'merchant' + $index}}" class="control-label --only-small">{{$index+1}}.
+                                Merchant Url</label>
+
                               <div class="input-group"
                                 ng-class="{'has-error' : pinForm['merchantUrl' + $index].$invalid && pinForm['merchantUrl' + $index].$dirty }">
                                 <input name="{{'merchantUrl' + $index}}" type="text" class="form-control"
-                                  id="{{'merchant' + $index}}" placeholder="https://www.merchant.com"
+                                  id="{{'merchant' + $index}}" placeholder="https://www.merchant.com/game"
                                   ng-model="merchant.url"
                                   ng-pattern="/https?:\/\/([-a-zA-Z0-9\u1F60-\uFFFF\u1F60-\uFFFF\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u024F@:%._\+~#=]{1,256})\.([a-zA-Z][a-zA-Z0-9\u1F60-\uFFFF\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u024F\u0370-\u03ff\u1f00-\u1fff\u0400-\u04ff()-]{1,62})\b([\/#][-a-zA-Z0-9\u1F60-\uFFFF\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u024F\u0370-\u03ff\u1f00-\u1fff\u0400-\u04ff\u0900-\u097F\u0600-\u06FF\u0985-\u0994\u0995-\u09a7\u09a8-\u09ce\u0981\u0982\u0983\u09e6-\u09ef\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF\u4E00-\u9FFFẸɓɗẹỊỌịọṢỤṣụ()@:%_\+.~#?&//=\[\]!\$'*+,;]*)?/"
                                   required>
                               </div>
                             </div>
 
-                            <div class="col-sm-1">
+                            <div class="col-sm-1 trash-container">
                               <a ng-click="$ctrl.removeMerchantPrice(merchant)" class="trash"><span
                                   class="fa fa-trash fa-2x"></span></a>
                             </div>

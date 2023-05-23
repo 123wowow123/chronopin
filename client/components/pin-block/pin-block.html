@@ -15,12 +15,15 @@
                 </a>
             </div>
 
-            <a ui-sref="pin({id:$ctrl.pin.id})">
-                <div>
+            <div class="icon_set">
+                <a ui-sref="pin({id:$ctrl.pin.id})" ng-if="!!$ctrl.pin.parentId || !!$ctrl.pin.rootThread">
                     <span class="thread-icon" ng-if="!!$ctrl.pin.parentId" title="Part of thread"></span>
                     <span class="thread-icon" ng-if="!!$ctrl.pin.rootThread" title="Firt Pin in a thread"></span>
-                </div>
-            </a>
+                </a>
+                <a ui-sref="pin({id:$ctrl.pin.id})" ng-if="!!$ctrl.pin.locations.length">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
 
         <h4 class="grid__heading">
@@ -89,11 +92,11 @@
             </div>
 
             <div class="grid__watch" ng-switch="!!$ctrl.pin.hasFavorite">
-                <button type="button" class="grid__favorite --add" ng-click="!$ctrl.disableLink && $ctrl.addFavorite($ctrl.pin)"
-                    ng-switch-default>
+                <button type="button" class="grid__favorite --add"
+                    ng-click="!$ctrl.disableLink && $ctrl.addFavorite($ctrl.pin)" ng-switch-default>
                     <i class="fa fa-eye" aria-hidden="true"></i> {{$ctrl.pin.favoriteCount}}</button>
-                <button type="button" class="grid__favorite --remove" ng-click="!$ctrl.disableLink && $ctrl.removeFavorite($ctrl.pin)"
-                    ng-switch-when="true">
+                <button type="button" class="grid__favorite --remove"
+                    ng-click="!$ctrl.disableLink && $ctrl.removeFavorite($ctrl.pin)" ng-switch-when="true">
                     <i class="fa fa-eye" aria-hidden="true"></i> {{$ctrl.pin.favoriteCount}}</button>
             </div>
 

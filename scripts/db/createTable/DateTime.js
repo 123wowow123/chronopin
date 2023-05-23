@@ -45,7 +45,6 @@ function executeCreateTable() {
             title NVARCHAR(1024) NOT NULL,
             description NVARCHAR(4000),
             sourceUrl NVARCHAR(4000),
-            address NVARCHAR(4000),
             tip NVARCHAR(4000),
             utcStartDateTime DATETIME2(0) NOT NULL,
             utcEndDateTime DATETIME2(0),
