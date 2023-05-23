@@ -313,7 +313,15 @@ https://twitter.com/roaringmeows/status/1648404621503627266
 
 
 https://www.youtube.com/watch?v=d5hu62W89nk
-Chicago, Albuquerque, Phoenix, Denver, Dallas Fort Worth (Solar and wind)
+What do Chicago, Denver, and DFW all have in common? Yes, they are all major metro areas in the US, but more importantly, they're colocated with green energy sources.
+
+As the world adopts more and more clean energy, these regions with localized energy sources will have a huge leg up on places that don't.
+
+Best wind potential location are Chicago, Albuquerque, Phoenix, Denver
+
+Dallas Fort Worth has both Solar and wind potential
+
+
 
 
 Inflation Tracker group Tag and tag
@@ -334,9 +342,6 @@ and expansions
 
 https://www.motor1.com/news/449472/hyundai-porest-compact-rv/
 korea only
-
-https://www.travelandleisure.com/brightline-high-speed-train-las-vegas-to-los-angeles-7485359
-San Bernardino, California, and makes a stop in Victor Valley before continuing to a final destination near the Las Vegas Strip
 
 
 https://www.bloomberg.com/news/articles/2023-05-16/mercedes-e-vans-target-glamping-fans-in-bid-to-boost-profit
