@@ -7,13 +7,14 @@
 
   class PinController {
 
-    constructor($scope, $stateParams, socket, pinWebService, searchService, Auth, appConfig, modelInjector, commentJs, $log) {
+    constructor($scope, $stateParams, socket, pinWebService, searchService, Auth, appConfig, modelInjector, commentJs, Util, $log) {
       PinsQuery = PinsQuery || modelInjector.getPinsQuery();
       this.pinWebService = pinWebService;
       this.$stateParams = $stateParams;
       this.appConfig = appConfig;
       this.commentJs = commentJs;
       this.searchService = searchService;
+      this.Util = Util;
 
       this.isAdmin = Auth.isAdmin; //bind function so each digest loop it get re-evaluated to determin latest state
       this.searching = false;
@@ -120,47 +121,7 @@
     }
 
     getGoogleMapUrl() {
-      function googleMapEncode(location) {
-        return location.address.replace(' ', '+')
-      }
-      function joinLocations(locations) {
-        return locations.reduce((a, t) => {
-          return a ? `${a}|` : '' + googleMapEncode(t);
-        }, '');
-      }
-
-      const key = '?key=' + this.appConfig.gMapKey;
-      let origin;
-      let destination;
-      let waypoints;
-      let cloneLocations = _.get(this.pin, 'locations', []).slice(0);
-      let locationLength = cloneLocations.length;
-
-      if (locationLength === 0) {
-        return '';
-      } else if (locationLength === 1) {
-        origin = googleMapEncode(cloneLocations.shift());
-      } else if (locationLength === 2) {
-        origin = googleMapEncode(cloneLocations.shift());
-        destination = googleMapEncode(cloneLocations.pop());
-      } else if (locationLength > 2) {
-        origin = googleMapEncode(cloneLocations.shift());
-        destination = googleMapEncode(cloneLocations.pop());
-        waypoints = joinLocations(cloneLocations);
-      }
-
-      if (locationLength === 1) {
-        return `https://www.google.com/maps/embed/v1/place` +
-          key +
-          `&q=${origin}`;
-      } else {
-        return `https://www.google.com/maps/embed/v1/directions` +
-          key +
-          `&origin=${origin}` +
-          `${destination ? '&destination=' + destination : ''}` +
-          `${waypoints ? '&waypoints=' + waypoints : ''}`;
-      }
-
+      return this.Util.getGoogleMapUrl(this.pin);
     }
 
   }

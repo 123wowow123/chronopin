@@ -83,6 +83,49 @@
         return appConfig.searchChoices[0];
       },
 
+      getGoogleMapUrl(pin) {
+        function googleMapEncode(location) {
+          return location.address.replace(' ', '+')
+        }
+        function joinLocations(locations) {
+          return locations.reduce((a, t) => {
+            return a ? `${a}|` : '' + googleMapEncode(t);
+          }, '');
+        }
+
+        const key = '?key=' + appConfig.gMapKey;
+        let origin;
+        let destination;
+        let waypoints;
+        let cloneLocations = _.get(pin, 'locations', []).slice(0);
+        let locationLength = cloneLocations.length;
+
+        if (locationLength === 0) {
+          return '';
+        } else if (locationLength === 1) {
+          origin = googleMapEncode(cloneLocations.shift());
+        } else if (locationLength === 2) {
+          origin = googleMapEncode(cloneLocations.shift());
+          destination = googleMapEncode(cloneLocations.pop());
+        } else if (locationLength > 2) {
+          origin = googleMapEncode(cloneLocations.shift());
+          destination = googleMapEncode(cloneLocations.pop());
+          waypoints = joinLocations(cloneLocations);
+        }
+
+        if (locationLength === 1) {
+          return `https://www.google.com/maps/embed/v1/place` +
+            key +
+            `&q=${origin}`;
+        } else {
+          return `https://www.google.com/maps/embed/v1/directions` +
+            key +
+            `&origin=${origin}` +
+            `${destination ? '&destination=' + destination : ''}` +
+            `${waypoints ? '&waypoints=' + waypoints : ''}`;
+        }
+      }
+
     };
 
     return Util;
