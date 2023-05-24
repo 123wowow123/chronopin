@@ -10,12 +10,14 @@ import {
     Like,
     Favorite,
     Medium,
-    Merchant
+    Merchant,
+    Location
 } from '../..';
 
 
 // media
 // merchants
+// locations
 // favorites - will be converted to bool for client
 // likes - will be converted to bool for client
 const prop = BasePinProp;
@@ -70,11 +72,15 @@ export default class FullPin extends BasePin {
                 const saveMerchantsPromises = this.merchants.map(m => {
                     return new Merchant(m, this).save();
                 });
+                const saveLocationsPromises = this.locations.map(m => {
+                    return new Location(m, this).save();
+                });
                 return Promise.all([
                     ...saveLikePromises,
                     ...saveFavoritePromises,
                     ...saveMediumPromises,
-                    ...saveMerchantsPromises
+                    ...saveMerchantsPromises,
+                    ...saveLocationsPromises
                 ]);
             });
         return savePinPromise;
@@ -86,6 +92,7 @@ export default class FullPin extends BasePin {
         pin.favorites = _mapPinRowsToFavorites(pinRows);
         pin.likes = _mapPinRowsToLikes(pinRows);
         pin.merchants = _mapPinRowsToMerchants(pinRows);
+        pin.locations = _mapPinRowsToLocations(pinRows);
         return new FullPin(pin);
     }
 }
@@ -106,4 +113,8 @@ function _mapPinRowsToLikes(pinRows) {
 
 function _mapPinRowsToMerchants(pinRows) {
     return mapHelper.mapSubObjectFromQuery('Merchant', 'id', pinRows);
+}
+
+function _mapPinRowsToLocations(pinRows) {
+    return mapHelper.mapSubObjectFromQuery('Location', 'id', pinRows);
 }

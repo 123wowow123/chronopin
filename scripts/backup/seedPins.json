@@ -2317,13 +2317,13 @@
     "id": 81,
     "rootThread": false,
     "title": "China Is Now Powered by the World's Largest Floating Solar Power Plant",
-    "description": "China recently unveiled the largest floating solar power plant on earth which supplies 40MW of power to the grid in Huainan, China.",
+    "description": "<p class=\"paragraph\"> China recently unveiled the largest floating solar power plant on earth which supplies 40MW of power to the grid in Huainan, China. </p>",
     "sourceUrl": "http://interestingengineering.com/china-powered-worlds-largest-floating-solar-power-plant/",
     "utcStartDateTime": "2017-05-31T07:00:00.000Z",
-    "utcEndDateTime": "2017-06-02T07:00:00.000Z",
+    "utcEndDateTime": "2017-06-03T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-19T04:52:26.300Z",
-    "utcUpdatedDateTime": "2023-01-24T05:36:17.223Z",
+    "utcUpdatedDateTime": "2023-05-24T01:22:04.494Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -2338,6 +2338,13 @@
         "originalWidth": 768,
         "originalHeight": 545,
         "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 13,
+        "address": "Huainan, China",
+        "pinId": 81
       }
     ],
     "userId": 1
@@ -3773,14 +3780,14 @@
     "id": 132,
     "rootThread": false,
     "title": "Dubai to Add the World's First Rotating Skyscraper to Its Skyline by 2020",
-    "description": "Dubai will be home to the first rotating skyscraper, dubbed the “Dynamic Tower” which is expected to be completed in 2020. The 42-meter skyscraper will be made of a series of 80-story-high rotating condos each costing a whopping $30 million.",
+    "description": "<p class=\"paragraph\"> Dubai will be home to the first rotating skyscraper, dubbed the “Dynamic Tower” which is expected to be completed in 2020. The 42-meter skyscraper will be made of a series of 80-story-high rotating condos each costing a whopping $30 million. </p>",
     "sourceUrl": "http://interestingengineering.com/dubai-add-worlds-first-rotating-skyscraper-skyline-2020/",
     "price": 30000000,
     "utcStartDateTime": "2020-12-01T08:00:00.000Z",
-    "utcEndDateTime": "2020-12-03T08:00:00.000Z",
+    "utcEndDateTime": "2020-12-04T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-21T06:16:42.177Z",
-    "utcUpdatedDateTime": "2023-01-24T05:27:21.068Z",
+    "utcUpdatedDateTime": "2023-05-24T01:21:08.198Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3795,6 +3802,13 @@
         "originalWidth": 768,
         "originalHeight": 545,
         "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 12,
+        "address": "Dubai",
+        "pinId": 132
       }
     ],
     "userId": 1
@@ -3832,13 +3846,14 @@
     "id": 134,
     "rootThread": false,
     "title": "Jeddah tower: World's Tallest Building- 1Km+",
-    "description": "Jeddah tower previously known as Kingdom Tower, is currently under construction with a planned completion date of 2020. the tower is being build in Jeddah, Saudi Arabia. It will be about 1,000 meters, or one kilometer (3,280 feet) tall, Jeddah tower when complete in 2020 will be second tallest building in the world after ‘The tower at dubai creek harbor’in dubai ,UAE",
+    "description": "<p class=\"paragraph\"> Jeddah tower previously known as Kingdom Tower, is currently under construction with a planned completion date of 2020. the tower is being build in Jeddah, Saudi Arabia. It will be about 1,000 meters, or one kilometer (3,280 feet) tall, Jeddah tower when complete in 2020 will be second tallest building in the world after ‘The tower at dubai creek harbor’in dubai ,UAE </p>",
     "sourceUrl": "http://themegaworld.com/jeddah-tower-construction-update-2017/",
     "price": 1230000000,
     "utcStartDateTime": "2020-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2021-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2021-01-02T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-21T06:36:39.436Z",
+    "utcUpdatedDateTime": "2023-05-24T00:31:18.403Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3855,20 +3870,27 @@
         "type": "1"
       }
     ],
+    "locations": [
+      {
+        "id": 1,
+        "address": "Jeddah tower, Saudi Arabia",
+        "pinId": 134
+      }
+    ],
     "userId": 1
   },
   {
     "id": 135,
     "rootThread": false,
     "title": "Apple Confirms Plans to Build Data Center in Iowa, Contribute Up to $100M to Community Projects",
-    "description": "<p class=\"paragraph\"> Apple today announced plans to build a 400,000-square-foot data center in Waukee, Iowa, which will provide backend infrastructure for the App Store, Siri, Apple Music, iMessage, and other Apple services in North America.  The facility, which it says will create over 550 construction and operations jobs in the Des Moines area.  Authority reportedly approved a deal on Thursday that will give Apple $208 million in state and local tax breaks to construct two data centers near Des Moines. Apple will reportedly buy 2,000 acres of land for the project, allowing for future development in the area. </p>",
+    "description": "<p class=\"paragraph\">  Apple today announced plans to build a 400,000-square-foot data center in Waukee, Iowa, which will provide backend infrastructure for the App Store, Siri, Apple Music, iMessage, and other Apple services in North America.  The facility, which it says will create over 550 construction and operations jobs in the Des Moines area.  Authority reportedly approved a deal on Thursday that will give Apple $208 million in state and local tax breaks to construct two data centers near Des Moines. Apple will reportedly buy 2,000 acres of land for the project, allowing for future development in the area.  </p>",
     "sourceUrl": "https://www.macrumors.com/2017/08/24/apple-confirms-iowa-data-center/",
     "price": 1300000000,
     "utcStartDateTime": "2020-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2021-01-02T08:00:00.000Z",
+    "utcEndDateTime": "2021-01-03T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-08-29T05:19:13.217Z",
-    "utcUpdatedDateTime": "2023-05-24T00:13:00.944Z",
+    "utcUpdatedDateTime": "2023-05-24T01:20:00.448Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3885,19 +3907,27 @@
         "type": "1"
       }
     ],
+    "locations": [
+      {
+        "id": 10,
+        "address": "Waukee, Iowa",
+        "pinId": 135
+      }
+    ],
     "userId": 1
   },
   {
     "id": 136,
     "rootThread": false,
     "title": "Suzhou Zhongnan Center - Thornton Tomasetti",
-    "description": "Located to the west of Jinji Lake, the Suzhou Zhongnan Center is a 729-meter, 137-story mixed-use tower with office, residential and hotel space. The tower has five stories below grade and an eight-story, long-span podium that provides ballroom and conference facilities.",
+    "description": "<p class=\"paragraph\"> Located to the west of Jinji Lake, the Suzhou Zhongnan Center is a 729-meter, 137-story mixed-use tower with office, residential and hotel space. The tower has five stories below grade and an eight-story, long-span podium that provides ballroom and conference facilities. </p>",
     "sourceUrl": "http://www.thorntontomasetti.com/projects/suzhou_zhongnan_center/",
     "price": 4460000000,
     "utcStartDateTime": "2020-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2021-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2021-01-02T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-21T06:48:03.919Z",
+    "utcUpdatedDateTime": "2023-05-24T01:20:51.151Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3912,6 +3942,13 @@
         "originalWidth": 700,
         "originalHeight": 540,
         "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 11,
+        "address": "Suzhou Zhongnan Center",
+        "pinId": 136
       }
     ],
     "userId": 1
@@ -3949,13 +3986,13 @@
     "id": 138,
     "rootThread": false,
     "title": "Apple Planning New UK Headquarters in London's Historic Battersea Power Station",
-    "description": "<p class=\"paragraph\"> Apple is working on building an all-new campus location in London's Battersea Power Station, where 1,400 employees will be moved from eight... </p>",
+    "description": "<p class=\"paragraph\">  Apple is working on building an all-new campus location in London's Battersea Power Station, where 1,400 employees will be moved from eight...  </p>",
     "sourceUrl": "http://www.macrumors.com/2016/09/28/apple-plans-offices-battersea/",
     "utcStartDateTime": "2021-01-01T08:00:00.000Z",
-    "utcEndDateTime": "2021-01-03T08:00:00.000Z",
+    "utcEndDateTime": "2021-01-04T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-15T05:50:37.991Z",
-    "utcUpdatedDateTime": "2023-05-24T00:12:12.194Z",
+    "utcUpdatedDateTime": "2023-05-24T01:19:42.588Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3970,6 +4007,13 @@
         "originalWidth": 1600,
         "originalHeight": 1066,
         "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 9,
+        "address": "Battersea Power Station, London",
+        "pinId": 138
       }
     ],
     "userId": 1
@@ -4529,6 +4573,42 @@
     "userId": 1
   },
   {
+    "id": 220,
+    "rootThread": false,
+    "title": "Queen Elizabeth II's funeral cost over $200 million, UK government reveals",
+    "description": "<p class=\"paragraph\"> A 10-day period of national mourning, during which most businesses and workplaces remained open but many events were canceled, was held ahead of her funeral in Westminster Abbey on Sept. 18. </p><p class=\"paragraph\"> An estimated 250,000 members of the public saw the British queen lying in state in London during the mourning period, with many queuing in the streets of London for more than 24 hours. </p>",
+    "sourceUrl": "https://www.cnbc.com/2023/05/18/queen-elizabeth-iis-funeral-cost-over-200-million-uk-government-reveals.html",
+    "price": 200000000,
+    "utcStartDateTime": "2022-09-08T07:00:00.000Z",
+    "utcEndDateTime": "2022-09-09T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-24T00:44:03.609Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 154,
+        "thumbName": "36f6a415-3344-446e-af58-61917018dd04.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107120539-1663590537664-gettyimages-1243355631-AFP_32JP2N4.jpeg?v=1684421952&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 2,
+        "address": "Westminster Abbey, UK",
+        "pinId": 220
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 183,
     "parentId": 182,
     "rootThread": false,
@@ -4546,7 +4626,7 @@
     },
     "media": [
       {
-        "id": 154,
+        "id": 155,
         "thumbName": "5ad98b1c-b16a-4666-9ba8-e576a40f90a4.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -4585,7 +4665,7 @@
     },
     "media": [
       {
-        "id": 155,
+        "id": 156,
         "thumbName": "22c5bfb5-2c7f-48c1-aebe-3721640c3744.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -4624,7 +4704,7 @@
     },
     "media": [
       {
-        "id": 156,
+        "id": 157,
         "thumbName": "ede5a297-f07c-41d3-8183-5de9103bc08a.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -4663,7 +4743,7 @@
     },
     "media": [
       {
-        "id": 157,
+        "id": 158,
         "thumbName": "7f52690d-5077-48f9-be00-5d577a1d248b.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -4702,7 +4782,7 @@
     },
     "media": [
       {
-        "id": 158,
+        "id": 159,
         "thumbName": "d0d53c39-1a69-4377-9fec-5e8ea7a4d1c8.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -4741,7 +4821,7 @@
     },
     "media": [
       {
-        "id": 159,
+        "id": 160,
         "thumbName": "8040aedd-8cb4-459e-a6b7-fd8a0364f880.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -4780,7 +4860,7 @@
     },
     "media": [
       {
-        "id": 160,
+        "id": 161,
         "thumbName": "e6b16977-b989-4376-ae44-07f2d5cfa40e.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -4819,7 +4899,7 @@
     },
     "media": [
       {
-        "id": 161,
+        "id": 162,
         "thumbName": "839b354f-85ec-43c3-a65e-2a47fcacf3f9.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -4858,7 +4938,7 @@
     },
     "media": [
       {
-        "id": 162,
+        "id": 163,
         "thumbName": "e279b355-c3ff-496c-aa3d-3f8db0726b29.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -4897,7 +4977,7 @@
     },
     "media": [
       {
-        "id": 163,
+        "id": 164,
         "thumbName": "0c2086c0-c554-47e8-a855-da109acaa054.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -4936,7 +5016,7 @@
     },
     "media": [
       {
-        "id": 164,
+        "id": 165,
         "thumbName": "33f24825-ef80-41b6-8f91-0a6c121ae557.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -4973,7 +5053,7 @@
     },
     "media": [
       {
-        "id": 165,
+        "id": 166,
         "thumbName": "117e34b8-8970-4a7e-99f4-23a371f469c3.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5001,7 +5081,7 @@
     },
     "media": [
       {
-        "id": 166,
+        "id": 167,
         "thumbName": "8d86146d-3afa-48f7-a78c-0895c4c1ac2b.jpg",
         "thumbWidth": 400,
         "thumbHeight": 284,
@@ -5030,7 +5110,7 @@
     },
     "media": [
       {
-        "id": 167,
+        "id": 168,
         "thumbName": "56b98a1f-ac89-4284-a918-667622614ca1.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5046,21 +5126,21 @@
     "id": 214,
     "rootThread": false,
     "title": "California will be the first state in the nation to install solar panel canopies over canals to combat drought and climate change.",
-    "description": "<p class=\"paragraph\">   In an effort to combat the devastating drought conditions hitting California, the Golden State will become the first in the nation to install solar panel canopies over canals.   </p><p class=\"paragraph\">   The $20 million pilot project funded by the state has been dubbed \"<a href=\"https://www.tid.org/about-tid/current-projects/project-nexus/\" target=\"_blank\">Project Nexus</a>.\" It will consist of an estimated 8,500 feet of solar panels installed over three sections of Turlock Irrigation District (TID) canals in Central California. The installation process is expected to begin by 2023, and be completed by 2024.   </p><p class=\"paragraph\">   The project, first announced in February, was initiated by&nbsp;<a href=\"https://solaraquagrid.com/\" target=\"_blank\">Solar AquaGrid</a>&nbsp;— a Bay Area development firm focused on innovative solutions to address water and energy issues. They have partnered with the&nbsp;<a href=\"https://www.citizengroup.com/\" target=\"_blank\">Citizen Group</a>&nbsp;organization and TID to kick-start Project Nexus.&nbsp; &nbsp;   </p><p class=\"paragraph\">   According to TID, the project aims to use water and energy management hand-in-hand. The project is designed to increase renewable power generation, while reducing water evaporation and vegetative growth in canals.   </p><p class=\"paragraph\">   TID states that the project will also serve as a \"proof of concept\" to further study \"solar over canal design.\" The agency cites a&nbsp;<a href=\"https://escholarship.org/content/qt8cj5j07p/qt8cj5j07p.pdf\" target=\"_blank\">2021 University of California, Merced study</a>, which showed that covering all of the approximately 4,000 miles of public water delivery system infrastructure in the state with solar panels could save an estimated 63 billion gallons of water annually, as well as&nbsp; result in significant energy and cost savings.&nbsp;   </p><p class=\"paragraph\">   \"According to the study, the 13 gigawatts of solar power the panels would generate each year would equal about one-sixth of the state's current installed capacity,\" TID wrote on its website.&nbsp;   </p>",
+    "description": "<p class=\"paragraph\">    In an effort to combat the devastating drought conditions hitting California, the Golden State will become the first in the nation to install solar panel canopies over canals.    </p><p class=\"paragraph\">    The $20 million pilot project funded by the state has been dubbed \"<a href=\"https://www.tid.org/about-tid/current-projects/project-nexus/\" target=\"_blank\">Project Nexus</a>.\" It will consist of an estimated 8,500 feet of solar panels installed over three sections of Turlock Irrigation District (TID) canals in Central California. The installation process is expected to begin by 2023, and be completed by 2024.    </p><p class=\"paragraph\">    The project, first announced in February, was initiated by&nbsp;<a href=\"https://solaraquagrid.com/\" target=\"_blank\">Solar AquaGrid</a>&nbsp;— a Bay Area development firm focused on innovative solutions to address water and energy issues. They have partnered with the&nbsp;<a href=\"https://www.citizengroup.com/\" target=\"_blank\">Citizen Group</a>&nbsp;organization and TID to kick-start Project Nexus.&nbsp; &nbsp;    </p><p class=\"paragraph\">    According to TID, the project aims to use water and energy management hand-in-hand. The project is designed to increase renewable power generation, while reducing water evaporation and vegetative growth in canals.    </p><p class=\"paragraph\">    TID states that the project will also serve as a \"proof of concept\" to further study \"solar over canal design.\" The agency cites a&nbsp;<a href=\"https://escholarship.org/content/qt8cj5j07p/qt8cj5j07p.pdf\" target=\"_blank\">2021 University of California, Merced study</a>, which showed that covering all of the approximately 4,000 miles of public water delivery system infrastructure in the state with solar panels could save an estimated 63 billion gallons of water annually, as well as&nbsp; result in significant energy and cost savings.&nbsp;    </p><p class=\"paragraph\">    \"According to the study, the 13 gigawatts of solar power the panels would generate each year would equal about one-sixth of the state's current installed capacity,\" TID wrote on its website.&nbsp;    </p>",
     "sourceUrl": "https://www.cbsnews.com/news/california-solar-panels-canals-drought/",
     "price": 20000000,
     "utcStartDateTime": "2023-01-01T08:00:00.000Z",
-    "utcEndDateTime": "2025-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2025-01-02T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-23T18:28:07.763Z",
-    "utcUpdatedDateTime": "2023-05-23T18:36:32.626Z",
+    "utcUpdatedDateTime": "2023-05-24T01:08:27.007Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "media": [
       {
-        "id": 168,
+        "id": 169,
         "thumbName": "e2ed6298-6523-4583-b8ca-6b741a201f1a.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -5068,6 +5148,13 @@
         "originalWidth": 1200,
         "originalHeight": 630,
         "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 3,
+        "address": "Turlock Irrigation District",
+        "pinId": 214
       }
     ],
     "userId": 1
@@ -5090,7 +5177,7 @@
     },
     "media": [
       {
-        "id": 169,
+        "id": 170,
         "thumbName": "42f3b3b5-2dd7-470e-a0bf-bbe1b9bef2da.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5129,7 +5216,7 @@
     },
     "media": [
       {
-        "id": 170,
+        "id": 171,
         "thumbName": "ef6fbfd1-759b-4312-ab12-e466a7cf2f17.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5167,7 +5254,7 @@
     },
     "media": [
       {
-        "id": 171,
+        "id": 172,
         "thumbName": "4a8cec7a-ca73-4879-b9e9-ae95ed31e619.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5195,7 +5282,7 @@
     },
     "media": [
       {
-        "id": 172,
+        "id": 173,
         "originalUrl": "https://twitter.com/DemonSlayerUSA/status/1601569955865976833",
         "type": "2",
         "authorName": "Demon Slayer: Kimetsu no Yaiba (English)",
@@ -5223,7 +5310,7 @@
     },
     "media": [
       {
-        "id": 173,
+        "id": 174,
         "thumbName": "0ba0fe60-6fcd-4275-987a-883836a72e27.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5278,7 +5365,7 @@
     },
     "media": [
       {
-        "id": 174,
+        "id": 175,
         "thumbName": "e9970655-276f-42d1-8ead-15d083b8544c.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5316,7 +5403,7 @@
     },
     "media": [
       {
-        "id": 175,
+        "id": 176,
         "originalUrl": "//www.youtube.com/embed/Mz5OcKiGoV8",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Mz5OcKiGoV8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5339,7 +5426,7 @@
     },
     "media": [
       {
-        "id": 176,
+        "id": 177,
         "originalUrl": "https://twitter.com/BurggrabenH/status/1650415388553822211",
         "type": "2",
         "authorName": "Alexander Stahel ????",
@@ -5365,7 +5452,7 @@
     },
     "media": [
       {
-        "id": 177,
+        "id": 178,
         "thumbName": "fdb32feb-199d-448d-93af-bea61de72f7b.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5394,7 +5481,7 @@
     },
     "media": [
       {
-        "id": 178,
+        "id": 179,
         "thumbName": "8f512cad-4dce-4420-8ce9-abcc15b38dbd.png",
         "thumbWidth": 799,
         "thumbHeight": 506,
@@ -5422,7 +5509,7 @@
     },
     "media": [
       {
-        "id": 179,
+        "id": 180,
         "thumbName": "5ce370bf-3c98-41a1-b57e-3fa9ee03b54f.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5449,7 +5536,7 @@
     },
     "media": [
       {
-        "id": 180,
+        "id": 181,
         "originalUrl": "https://twitter.com/Jay__Cale/status/1655653917651247104",
         "type": "2",
         "authorName": "Jay Cal",
@@ -5474,7 +5561,7 @@
     },
     "media": [
       {
-        "id": 181,
+        "id": 182,
         "originalUrl": "https://twitter.com/RJRCapital/status/1656838113858076672",
         "type": "2",
         "authorName": "RJR Capital",
@@ -5503,7 +5590,7 @@
     },
     "media": [
       {
-        "id": 182,
+        "id": 183,
         "originalUrl": "//www.youtube.com/embed/a6qna-ZCbxA",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/a6qna-ZCbxA\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5521,22 +5608,6 @@
     "userId": 1
   },
   {
-    "id": 218,
-    "rootThread": false,
-    "title": "Meta’s new MTIA chip, which stands for Meta Training and Inference Accelerator, is its “in-house, custom accelerator chip family targeting inference workloads",
-    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/B3vlnO9FMxc\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\"> Meta is building its first custom chip specifically for running AI models,&nbsp;<a href=\"https://about.fb.com/news/2023/05/metas-infrastructure-for-ai/\">the company announced on Thursday</a>. As Meta increases its AI efforts — CEO Mark Zuckerberg&nbsp;<a href=\"https://www.theverge.com/2023/4/26/23699633/mark-zuckerberg-meta-generative-ai-chatbots-instagram-facebook-whatsapp\">recently said</a>&nbsp;the company sees “an opportunity to introduce AI agents to billions of people in ways that will be useful and meaningful” — the chip and other infrastructure plans revealed Thursday could be critical tools for Meta to compete with other tech giants also investing significant resources into AI. </p><p class=\"paragraph\"> Meta’s new MTIA chip, which stands for Meta Training and Inference Accelerator, is its “in-house, custom accelerator chip family targeting inference workloads,” Meta VP and head of infrastructure Santosh Janardhan wrote in a blog post. The chip apparently provides “greater compute power and efficiency” than CPUs and is “customized for our internal workloads.” With a combination of MTIA chips and GPUs, Janardhan said that Meta believes “we’ll deliver better performance, decreased latency, and greater efficiency for each workload.” </p><p class=\"paragraph\"> The MTIA could be a big boon for Meta, especially given&nbsp;<a href=\"https://www.theinformation.com/articles/ai-developers-stymied-by-server-shortage-at-aws-microsoft-google\">increasingly high demand for AI compute power</a>. But the MTIA chip is seemingly a long ways away: it’s not set to come out until 2025,&nbsp;<a href=\"https://techcrunch.com/2023/05/18/meta-bets-big-on-ai-with-custom-chips-and-a-supercomputer/\">TechCrunch&nbsp;reports</a>. </p><p class=\"paragraph\"> In addition to the MTIA, Meta is also introducing a new ASIC specifically to help with video transcoding, which it calls the “MSVP,” or Meta Scalable Video Processor. It’s designed to support both “the high-quality transcoding needed for VOD as well as the low latency and faster processing times that live streaming requires,”&nbsp;<a href=\"https://ai.facebook.com/blog/meta-scalable-video-processor-MSVP/\">Meta said in a separate blog post</a>, and “in the future,” it will help bring things like AI-made content and AR- and VR-specific content to Meta’s apps. </p><p class=\"paragraph\"> Meta is also working on a “next-generation data center design” that will be “AI-optimized” and “faster and more cost-effective to build,” Janardhan said, and the company also touted the power of its Research SuperCluster (RSC) AI Supercomputer, “which we believe is one of the fastest AI supercomputers in the world.” This isn’t exactly new rhetoric about the RSC from Meta; the company has been sharing high praise about the supercomputer&nbsp;<a href=\"https://www.theverge.com/2022/1/24/22898651/meta-artificial-intelligence-ai-supercomputer-rsc-2022\">since last year</a>. But as the company tries to stand out against an increasing number of AI initiatives from many of the biggest technology giants — including other&nbsp;<a href=\"https://www.theverge.com/2023/4/18/23687912/microsoft-athena-ai-chips-nvidia\">custom</a>&nbsp;<a href=\"https://aws.amazon.com/machine-learning/inferentia/\">chips</a>&nbsp;—it makes sense that Meta would want to brag about its faith in its own AI hardware. </p>",
-    "sourceUrl": "https://www.theverge.com/2023/5/18/23728678/meta-ai-new-chip-mtia-msvp-datacenter",
-    "utcStartDateTime": "2023-05-25T07:00:00.000Z",
-    "utcEndDateTime": "2023-05-26T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2023-05-24T00:29:30.105Z",
-    "user": {
-      "id": 1,
-      "userName": "@ThePinGang"
-    },
-    "userId": 1
-  },
-  {
     "id": 205,
     "rootThread": false,
     "title": "Ukraine counteroffensive: Mud season should end last week of May or first week of June before Ukraining can move",
@@ -5551,6 +5622,13 @@
       "id": 1,
       "userName": "@ThePinGang"
     },
+    "locations": [
+      {
+        "id": 4,
+        "address": "Kyiv, Ukraine",
+        "pinId": 205
+      }
+    ],
     "userId": 1
   },
   {
@@ -5570,7 +5648,7 @@
     },
     "media": [
       {
-        "id": 183,
+        "id": 184,
         "thumbName": "939475ba-e3b2-444d-b836-d8b4f1662b5c.jpeg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5601,7 +5679,7 @@
     },
     "media": [
       {
-        "id": 184,
+        "id": 185,
         "originalUrl": "//www.youtube.com/embed/GZud-p0QRvA",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/GZud-p0QRvA\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5637,7 +5715,7 @@
     },
     "media": [
       {
-        "id": 185,
+        "id": 186,
         "originalUrl": "//www.youtube.com/embed/9bRWIdOMfro",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/9bRWIdOMfro\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5672,7 +5750,7 @@
     },
     "media": [
       {
-        "id": 186,
+        "id": 187,
         "thumbName": "6a0c7bc3-0c05-495b-b066-2ccb791c85d7.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5711,7 +5789,7 @@
     },
     "media": [
       {
-        "id": 187,
+        "id": 188,
         "originalUrl": "//www.youtube.com/embed/okFSR8CCOPY",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/okFSR8CCOPY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5735,7 +5813,7 @@
     },
     "media": [
       {
-        "id": 188,
+        "id": 189,
         "originalUrl": "//www.youtube.com/embed/CDVH_JJIRWI",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/CDVH_JJIRWI\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5759,7 +5837,7 @@
     },
     "media": [
       {
-        "id": 189,
+        "id": 190,
         "thumbName": "9297e0e8-ca76-441c-a838-5c9af85aeb9e.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5788,7 +5866,7 @@
     },
     "media": [
       {
-        "id": 190,
+        "id": 191,
         "originalUrl": "//www.youtube.com/embed/UZ6eFEjFfJ0",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/UZ6eFEjFfJ0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5839,7 +5917,7 @@
     },
     "media": [
       {
-        "id": 191,
+        "id": 192,
         "thumbName": "ed30a2c1-8f8d-4394-aa81-c8378e093f9f.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5855,24 +5933,55 @@
     "id": 149,
     "rootThread": false,
     "title": "The MSG Sphere is the largest sphere in the world, planned to open in Las Vegas in the second half of 2023.",
-    "description": "<p class=\"paragraph\"> The MSG Sphere is the largest spherical building in the world, providing Las Vegas' No. 1 immersive show experience. MSG Sphere interior screen measures 19,000 by 13,500 pixels covering a space that is more than three football pitches. It is 100 times crisper and more detailed than the best world-class HD TVs in the market. </p>",
+    "description": "<p class=\"paragraph\">  The MSG Sphere is the largest spherical building in the world, providing Las Vegas' No. 1 immersive show experience. MSG Sphere interior screen measures 19,000 by 13,500 pixels covering a space that is more than three football pitches. It is 100 times crisper and more detailed than the best world-class HD TVs in the market.  </p>",
     "sourceUrl": "https://1oaklasvegas.com/msg-sphere-las-vegas/",
     "price": 2000000000,
     "utcStartDateTime": "2023-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2024-01-04T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-05T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-03-11T03:18:25.589Z",
-    "utcUpdatedDateTime": "2023-05-24T00:09:15.019Z",
+    "utcUpdatedDateTime": "2023-05-24T01:22:47.730Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "media": [
       {
-        "id": 192,
+        "id": 193,
         "originalUrl": "//www.youtube.com/embed/Q2kN6LONlWw",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Q2kN6LONlWw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+      }
+    ],
+    "locations": [
+      {
+        "id": 14,
+        "address": "MSG Sphere, Las Vegas",
+        "pinId": 149
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 222,
+    "rootThread": false,
+    "title": "Lucid's Gravity SUV is taking another step toward production with tests on public roads",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/LLs2vvefrbY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\"> Lucid has promised that the Gravity will have greater electric range than any SUV currently on the market. The new vehicle will incorporate the advanced batteries and charging systems developed by Lucid for its Air sedan, and is expected to debut with range close to the Air’s industry-leading 516 EPA-estimated miles in top trim. </p><p class=\"paragraph\"> The Gravity’s likely electric luxury SUV rivals –&nbsp;<a href=\"https://www.cnbc.com/quotes/RIVN/\">Rivian</a>’s R1S,&nbsp;<a href=\"https://www.cnbc.com/quotes/TSLA/\">Tesla</a>’s Model X, and the&nbsp;<a href=\"https://www.cnbc.com/quotes/bmwyy\">BMW</a>&nbsp;iX – have maximum EPA-estimated ranges of 390 miles, 333 miles and 324 miles, respectively. </p><p class=\"paragraph\"> Lucid had originally planned to release the Gravity later this year. But in February 2022, after beginning production of the Air, Rawlinson said Lucid would&nbsp;<a href=\"https://www.cnbc.com/2022/02/28/lucid-slashes-2022-vehicle-production-forecast.html\">delay the Gravity until 2024</a>&nbsp;to refine the design and incorporate lessons learned from the Air’s launch. The Gravity will be built alongside the Air at Lucid’s factory in Casa Grande, Arizona. </p>",
+    "sourceUrl": "https://www.cnbc.com/2023/04/25/lucid-gravity-suv-road-tests.html",
+    "price": 100000,
+    "utcStartDateTime": "2024-03-01T08:00:00.000Z",
+    "utcEndDateTime": "2024-03-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-24T00:58:33.082Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "locations": [
+      {
+        "id": 5,
+        "address": "Casa Grande, Arizona",
+        "pinId": 222
       }
     ],
     "userId": 1
@@ -5895,7 +6004,7 @@
     },
     "media": [
       {
-        "id": 193,
+        "id": 194,
         "thumbName": "e7f718cc-9190-4eed-a8df-270ec8c9d66c.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5923,7 +6032,7 @@
     },
     "media": [
       {
-        "id": 194,
+        "id": 195,
         "thumbName": "4744b1cd-fc70-430d-a3a2-df642e1aea79.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 503,
@@ -5939,21 +6048,21 @@
     "id": 150,
     "rootThread": false,
     "title": "Hudson Yards",
-    "description": "<p class=\"paragraph\"> The West Side of New York City is in the midst of being transformed. Construction is well underway on Hudson Yards — the largest private real estate development in the history of the United States and the source of a new neighborhood situated between Chelsea and Hell’s Kitchen. Once completed, the site will be home to more than 17 million square feet of newly created space, including a public school and a much-anticipated cultural facility. Here’s an update on New York City’s largest project since Rockefeller Center. </p>",
+    "description": "<p class=\"paragraph\">  The West Side of New York City is in the midst of being transformed. Construction is well underway on Hudson Yards — the largest private real estate development in the history of the United States and the source of a new neighborhood situated between Chelsea and Hell’s Kitchen. Once completed, the site will be home to more than 17 million square feet of newly created space, including a public school and a much-anticipated cultural facility. Here’s an update on New York City’s largest project since Rockefeller Center.  </p>",
     "sourceUrl": "http://chelseanow.com/2015/01/progress-report-hudson-yards/",
     "price": 20000000000,
     "utcStartDateTime": "2024-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2025-01-02T08:00:00.000Z",
+    "utcEndDateTime": "2025-01-03T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-21T07:10:59.579Z",
-    "utcUpdatedDateTime": "2023-05-24T00:10:10.802Z",
+    "utcUpdatedDateTime": "2023-05-24T01:27:54.029Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "media": [
       {
-        "id": 195,
+        "id": 196,
         "thumbName": "604abb42-6c90-4201-afeb-fdb0f26a8898.jpg",
         "thumbWidth": 400,
         "thumbHeight": 689,
@@ -5961,6 +6070,13 @@
         "originalWidth": 600,
         "originalHeight": 1034,
         "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 17,
+        "address": "Hudson Yards, New York",
+        "pinId": 150
       }
     ],
     "userId": 1
@@ -5982,7 +6098,7 @@
     },
     "media": [
       {
-        "id": 196,
+        "id": 197,
         "thumbName": "1870e18c-c013-4e68-8821-0ed0881d9d2d.jpg",
         "thumbWidth": 400,
         "thumbHeight": 267,
@@ -5998,20 +6114,21 @@
     "id": 192,
     "rootThread": false,
     "title": "Sites Reservoir still on tract to break ground in 2024",
-    "description": "<p class=\"paragraph\"> Sites Reservoir when completed, the long-proposed, $4 billion Sites Reservoir will hold enough water to feed the needs of five million homes a year or a half million acres of farmland. That's enough water to cover every square inch of San Francisco with water that is 50 feet deep. </p>",
+    "description": "<p class=\"paragraph\">  Sites Reservoir when completed, the long-proposed, $4 billion Sites Reservoir will hold enough water to feed the needs of five million homes a year or a half million acres of farmland. That's enough water to cover every square inch of San Francisco with water that is 50 feet deep.  </p>",
     "sourceUrl": "https://krcrtv.com/news/local/sites-reservoir-still-on-tract-to-break-ground-in-2024",
     "price": 4000000000,
     "utcStartDateTime": "2024-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2025-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2025-01-02T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-01T23:50:17.318Z",
+    "utcUpdatedDateTime": "2023-05-24T01:25:44.544Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "media": [
       {
-        "id": 197,
+        "id": 198,
         "thumbName": "5ae38366-d033-4972-bc04-48f4d4b6b485.jpg",
         "thumbWidth": 400,
         "thumbHeight": 224,
@@ -6021,27 +6138,34 @@
         "type": "1"
       }
     ],
+    "locations": [
+      {
+        "id": 15,
+        "address": "West of Colusa in the Sacramento Valley, California",
+        "pinId": 192
+      }
+    ],
     "userId": 1
   },
   {
     "id": 209,
     "rootThread": false,
     "title": "UC San Diego adding 3,310 dorm beds to deal with growth, housing shortage,",
-    "description": "<p class=\"paragraph\">        UC San Diego is pushing ahead with plans to build dorms that will collectively hold 3,310 students to deal with the school’s runaway growth and a critical housing shortage.        </p><p class=\"paragraph\">        The expansion will increase the university’s housing capacity to 22,260 — a figure larger than the number of people living in such communities as Solana Beach and Scripps Ranch.        </p><p class=\"paragraph\">        The campus got a lift from the University of California Board of Regents, which this week gave the school permission to move forward with two huge projects, Pepper Canyon West and Thurgood Marshall College Undergraduate Student Housing.        </p><p class=\"paragraph\">        Pepper Canyon will house 1,310 transfer and upper-diversion undergraduate students near the Blue Line trolley station that recently opened on campus, a few minutes walk from Geisel Library.        </p><p class=\"paragraph\">        &nbsp;The $350 million project also will feature retail space.        </p>",
+    "description": "<p class=\"paragraph\">         UC San Diego is pushing ahead with plans to build dorms that will collectively hold 3,310 students to deal with the school’s runaway growth and a critical housing shortage.         </p><p class=\"paragraph\">         The expansion will increase the university’s housing capacity to 22,260 — a figure larger than the number of people living in such communities as Solana Beach and Scripps Ranch.         </p><p class=\"paragraph\">         The campus got a lift from the University of California Board of Regents, which this week gave the school permission to move forward with two huge projects, Pepper Canyon West and Thurgood Marshall College Undergraduate Student Housing.         </p><p class=\"paragraph\">         Pepper Canyon will house 1,310 transfer and upper-diversion undergraduate students near the Blue Line trolley station that recently opened on campus, a few minutes walk from Geisel Library.                &nbsp; </p><p class=\"paragraph\"> The $350 million project also will feature retail space.         </p>",
     "sourceUrl": "https://www.sandiegouniontribune.com/news/education/story/2022-01-21/uc-san-diego-dorm-beds",
     "price": 350000000,
     "utcStartDateTime": "2024-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2025-01-08T08:00:00.000Z",
+    "utcEndDateTime": "2025-01-09T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-11T06:53:36.343Z",
-    "utcUpdatedDateTime": "2023-05-11T19:12:34.631Z",
+    "utcUpdatedDateTime": "2023-05-24T01:27:33.232Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "media": [
       {
-        "id": 198,
+        "id": 199,
         "thumbName": "10240ef3-a8b9-4c73-8d53-53b182f57374.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -6049,6 +6173,13 @@
         "originalWidth": 1200,
         "originalHeight": 630,
         "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 16,
+        "address": "UC San Diego",
+        "pinId": 209
       }
     ],
     "userId": 1
@@ -6070,7 +6201,7 @@
     },
     "media": [
       {
-        "id": 199,
+        "id": 200,
         "thumbName": "9d3fdd45-fbda-4b7c-b649-1d7c72016c63.jpg",
         "thumbWidth": 400,
         "thumbHeight": 284,
@@ -6086,20 +6217,20 @@
     "id": 194,
     "rootThread": false,
     "title": "PepsiCo, which owns Frito-Lay and Quaker Oats, has set a goal to design 100% of its packaging to be recyclable, compostable, biodegradable or reusable by 2025.",
-    "description": "<p class=\"paragraph\">  “Two years ago, if you think about our multipack packages, that’s our one ounce size in multipack servings, those packages were in another outer plastic. So we moved that from plastic into cardboard and recyclable cardboard,” he said.  </p><p class=\"paragraph\">  That move alone was able to deliver 12 million pounds of plastic out of the environment, PepsiCo said  </p><p class=\"paragraph\">  In April, Frito-Lay and Quaker Oats opened a new learning center for packaging innovation at Frito-Lay’s research and development headquarters in Texas, where it will field test, measure and analyze compostable packaging, aiming to make the process of testing products to certification-ready at least two to three times faster.  </p>",
+    "description": "<p class=\"paragraph\">   “Two years ago, if you think about our multipack packages, that’s our one ounce size in multipack servings, those packages were in another outer plastic. So we moved that from plastic into cardboard and recyclable cardboard,” he said.   </p><p class=\"paragraph\">   That move alone was able to deliver 12 million pounds of plastic out of the environment, PepsiCo said   </p><p class=\"paragraph\">   In April, Frito-Lay and Quaker Oats opened a new learning center for packaging innovation at Frito-Lay’s research and development headquarters in Texas, where it will field test, measure and analyze compostable packaging, aiming to make the process of testing products to certification-ready at least two to three times faster.   </p>",
     "sourceUrl": "https://www.cnbc.com/2023/04/19/how-pepsico-is-trying-to-get-doritos-cheetos-bags-into-compost-bins.html",
     "utcStartDateTime": "2025-01-01T08:00:00.000Z",
-    "utcEndDateTime": "2025-01-03T08:00:00.000Z",
+    "utcEndDateTime": "2025-01-04T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-02T00:01:10.246Z",
-    "utcUpdatedDateTime": "2023-05-24T00:11:10.490Z",
+    "utcUpdatedDateTime": "2023-05-24T01:28:12.544Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "media": [
       {
-        "id": 200,
+        "id": 201,
         "thumbName": "58441b39-2150-45ad-8f12-b36ab5f90736.jpeg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6107,6 +6238,13 @@
         "originalWidth": 1920,
         "originalHeight": 1080,
         "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 18,
+        "address": "Frito-Lay’s research and development headquarters, Texas",
+        "pinId": 194
       }
     ],
     "userId": 1
@@ -6128,7 +6266,7 @@
     },
     "media": [
       {
-        "id": 201,
+        "id": 202,
         "thumbName": "6535282f-7932-4bdf-8f0e-51ab0f6d2578.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -6141,37 +6279,124 @@
     "userId": 1
   },
   {
-    "id": 207,
+    "id": 218,
     "rootThread": false,
-    "title": "Xi Jinping's 48-hour plan to invade Taiwan, 2027 is the date that he wants the Chinese army to be ‘ready’ to take back Taiwan",
-    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/tb6pykXE_MI\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\">Now, that doesn’t mean that they will invade in 2027, but certainly implies a significant milestone. </p>",
-    "sourceUrl": "https://www.telegraph.co.uk/world-news/2023/04/07/china-taiwan-invasion-war-usa-russia-ukraine-xi-jinping/",
-    "utcStartDateTime": "2027-01-01T08:00:00.000Z",
-    "utcEndDateTime": "2027-01-02T08:00:00.000Z",
+    "title": "Meta’s new MTIA chip, which stands for Meta Training and Inference Accelerator, is its “in-house, custom accelerator chip family targeting inference workloads",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/B3vlnO9FMxc\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\">  Meta is building its first custom chip specifically for running AI models,&nbsp;<a href=\"https://about.fb.com/news/2023/05/metas-infrastructure-for-ai/\">the company announced on Thursday</a>. As Meta increases its AI efforts — CEO Mark Zuckerberg&nbsp;<a href=\"https://www.theverge.com/2023/4/26/23699633/mark-zuckerberg-meta-generative-ai-chatbots-instagram-facebook-whatsapp\">recently said</a>&nbsp;the company sees “an opportunity to introduce AI agents to billions of people in ways that will be useful and meaningful” — the chip and other infrastructure plans revealed Thursday could be critical tools for Meta to compete with other tech giants also investing significant resources into AI.  </p><p class=\"paragraph\">  Meta’s new MTIA chip, which stands for Meta Training and Inference Accelerator, is its “in-house, custom accelerator chip family targeting inference workloads,” Meta VP and head of infrastructure Santosh Janardhan wrote in a blog post. The chip apparently provides “greater compute power and efficiency” than CPUs and is “customized for our internal workloads.” With a combination of MTIA chips and GPUs, Janardhan said that Meta believes “we’ll deliver better performance, decreased latency, and greater efficiency for each workload.”  </p><p class=\"paragraph\">  The MTIA could be a big boon for Meta, especially given&nbsp;<a href=\"https://www.theinformation.com/articles/ai-developers-stymied-by-server-shortage-at-aws-microsoft-google\">increasingly high demand for AI compute power</a>. But the MTIA chip is seemingly a long ways away: it’s not set to come out until 2025,&nbsp;<a href=\"https://techcrunch.com/2023/05/18/meta-bets-big-on-ai-with-custom-chips-and-a-supercomputer/\">TechCrunch&nbsp;reports</a>.  </p><p class=\"paragraph\">  In addition to the MTIA, Meta is also introducing a new ASIC specifically to help with video transcoding, which it calls the “MSVP,” or Meta Scalable Video Processor. It’s designed to support both “the high-quality transcoding needed for VOD as well as the low latency and faster processing times that live streaming requires,”&nbsp;<a href=\"https://ai.facebook.com/blog/meta-scalable-video-processor-MSVP/\">Meta said in a separate blog post</a>, and “in the future,” it will help bring things like AI-made content and AR- and VR-specific content to Meta’s apps.  </p><p class=\"paragraph\">  Meta is also working on a “next-generation data center design” that will be “AI-optimized” and “faster and more cost-effective to build,” Janardhan said, and the company also touted the power of its Research SuperCluster (RSC) AI Supercomputer, “which we believe is one of the fastest AI supercomputers in the world.” This isn’t exactly new rhetoric about the RSC from Meta; the company has been sharing high praise about the supercomputer&nbsp;<a href=\"https://www.theverge.com/2022/1/24/22898651/meta-artificial-intelligence-ai-supercomputer-rsc-2022\">since last year</a>. But as the company tries to stand out against an increasing number of AI initiatives from many of the biggest technology giants — including other&nbsp;<a href=\"https://www.theverge.com/2023/4/18/23687912/microsoft-athena-ai-chips-nvidia\">custom</a>&nbsp;<a href=\"https://aws.amazon.com/machine-learning/inferentia/\">chips</a>&nbsp;—it makes sense that Meta would want to brag about its faith in its own AI hardware.  </p>",
+    "sourceUrl": "https://www.theverge.com/2023/5/18/23728678/meta-ai-new-chip-mtia-msvp-datacenter",
+    "utcStartDateTime": "2025-12-31T08:00:00.000Z",
+    "utcEndDateTime": "2026-01-01T08:00:00.000Z",
     "allDay": true,
-    "utcCreatedDateTime": "2023-05-11T06:18:21.638Z",
+    "utcCreatedDateTime": "2023-05-24T00:29:30.105Z",
+    "utcUpdatedDateTime": "2023-05-24T00:32:37.169Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
+    "locations": [
+      {
+        "id": 6,
+        "pinId": 218
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 221,
+    "rootThread": false,
+    "title": "Mercedes bringing luxury electric camper van to the US",
+    "description": "<p class=\"paragraph\"> Starting 2026, we will introduce our purpose-built EV architecture VAN.EA. This enables us to consolidate our midsize and large vans down to only one architecture and significantly reduce the complexity of our product portfolio. Maximum added value for customers with sustainable profitability at the same time: VAN.EA clearly underscores our aspiration to be ‘Lead in Electric’. </p><p class=\"paragraph\"> To streamline production, Mercedes’s new architecture is a scalable solution with three modules. The front module stays the same in all VAN.EA variants consisting of the electric powertrain and front axle. </p><p class=\"paragraph\"> Meanwhile, the center module dictates the length of the vehicle, while the rear module will be available with an electric motor (for AWD) or without (FWD). </p><p class=\"paragraph\"> Based on the various combinations, Mercedes will offer different versions for private and commercial customers. VAN.EA-P (for privately positioned) is designed for those looking for a mobile office, family activity vehicle, or business partner (such as a VIP shuttle) for example. </p><p class=\"paragraph\"> The VAN.EA-C (for premium commercial vans), on the other hand, is for the courier, express, and parcel delivery vehicles to ambulances and camper vans with added cargo space and functionality. </p><p class=\"paragraph\"> Mercedes already offers fully electric van variants in all segments but with the VAN.EA platform, the van division aims to achieve 50% EV sales share by 2030. </p>",
+    "sourceUrl": "https://electrek.co/2023/05/16/mercedes-reveals-luxury-electric-vans-us-including-camper/",
+    "utcStartDateTime": "2026-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2026-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-24T00:53:07.565Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 203,
+        "thumbName": "49b5fdba-9013-4950-863c-e88b8c3f3bcb.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 500,
+        "originalUrl": "https://electrek.co/wp-content/uploads/sites/3/2022/11/Mercedes-Benz-electric-camper.jpeg?quality=82&strip=all&w=1024",
+        "originalWidth": 1024,
+        "originalHeight": 512,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 7,
+        "pinId": 221
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 207,
+    "rootThread": false,
+    "title": "Xi Jinping's 48-hour plan to invade Taiwan, 2027 is the date that he wants the Chinese army to be ‘ready’ to take back Taiwan",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/tb6pykXE_MI\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\">  Now, that doesn’t mean that they will invade in 2027, but certainly implies a significant milestone.   </p>",
+    "sourceUrl": "https://www.telegraph.co.uk/world-news/2023/04/07/china-taiwan-invasion-war-usa-russia-ukraine-xi-jinping/",
+    "utcStartDateTime": "2027-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2027-01-04T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-11T06:18:21.638Z",
+    "utcUpdatedDateTime": "2023-05-24T01:29:22.904Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "locations": [
+      {
+        "id": 20,
+        "address": "Taiwan",
+        "pinId": 207
+      }
+    ],
     "userId": 1
   },
   {
     "id": 215,
     "rootThread": false,
     "title": "This High-speed Train Could Take Travelers From Los Angeles to Las Vegas in 2 Hours",
-    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/j03j0CY980s\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\">  Travelers in the&nbsp;<a href=\"https://www.travelandleisure.com/travel-guide/los-angeles\">Los Angeles area</a>&nbsp;may soon be able to reach Sin City a whole lot faster.&nbsp;<a href=\"https://www.gobrightline.com/brightline-west\" target=\"_blank\">Brightline West</a>, a company that plans to connect Las Vegas and Los Angeles with high-speed train service, recently made progress to turn the project into reality. This includes the signing of a labor agreement with a&nbsp;<a href=\"https://www.gobrightline.com/press-room/brightline-west-high-speed-rail-labor-coalition\" target=\"_blank\">railroad construction union</a>&nbsp;and receiving government support for federal funding.&nbsp;  </p><p class=\"paragraph\">  The Brightline West service will start in San Bernardino, California, and makes a stop in Victor Valley before continuing to a final destination near the Las Vegas Strip. Brightline expects the project to debut in 2027.The train service would operate at 186 mph over a 260-mile track, which would cut the drive time between the two cities in half, the company shared with&nbsp;Travel + Leisure. The train may even be a faster option than flying too — flights take, on average, one hour and 15 minutes — after factoring in security and check-in times.&nbsp;  </p><p class=\"paragraph\">  Over 38 million tourists visited Las Vegas in 2022, which was up 20% from the previous year,&nbsp;<a href=\"https://www.lvcva.com/research/visitor-statistics/\" target=\"_blank\">according to the Las Vegas Convention and Visitor Authority</a>. Before the pandemic, the city saw a decline in visitors from California,&nbsp;<a href=\"https://vegasinc.lasvegassun.com/business/tourism/2019/apr/10/tourism-survey-fewer-visitors-las-vegas-california/\" target=\"_blank\">reported the&nbsp;Las Vegas Sun</a>, but the new train could make it easier for those in Southern California to visit.  </p><p class=\"paragraph\">  Government leaders in Nevada and California have voiced support for the project and are seeking $4 billion in federal funds to bring it to fruition,&nbsp;<a href=\"https://www.reviewjournal.com/news/news-columns/road-warrior/nearly-4b-grant-sought-for-vegas-to-so-cal-high-speed-rail-system-2766651/\" target=\"_blank\">according to the&nbsp;Las Vegas Review-Journal</a>.&nbsp;“This project is a major priority because it will make southern Nevada more accessible to millions of visitors each year,” said U.S. Sen. Jacky Rosen,&nbsp;<a href=\"https://apnews.com/article/bullet-train-vegas-los-angeles-nevada-california-e6ac480fd784e2947dba49304cb4fe20\" target=\"_blank\">reported the Associated Press</a>.Once built, the Brightline West train plans to offer free onboard Wi-Fi, food, beverages, the ability to check in luggage, and other amenities.  </p>",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/j03j0CY980s?start=2s\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\">   Travelers in the&nbsp;<a href=\"https://www.travelandleisure.com/travel-guide/los-angeles\">Los Angeles area</a>&nbsp;may soon be able to reach Sin City a whole lot faster.&nbsp;<a href=\"https://www.gobrightline.com/brightline-west\" target=\"_blank\">Brightline West</a>, a company that plans to connect Las Vegas and Los Angeles with high-speed train service, recently made progress to turn the project into reality. This includes the signing of a labor agreement with a&nbsp;<a href=\"https://www.gobrightline.com/press-room/brightline-west-high-speed-rail-labor-coalition\" target=\"_blank\">railroad construction union</a>&nbsp;and receiving government support for federal funding.&nbsp;   </p><p class=\"paragraph\">   The Brightline West service will start in San Bernardino, California, and makes a stop in Victor Valley before continuing to a final destination near the Las Vegas Strip. Brightline expects the project to debut in 2027.The train service would operate at 186 mph over a 260-mile track, which would cut the drive time between the two cities in half, the company shared with&nbsp;Travel + Leisure. The train may even be a faster option than flying too — flights take, on average, one hour and 15 minutes — after factoring in security and check-in times.&nbsp;   </p><p class=\"paragraph\">   Over 38 million tourists visited Las Vegas in 2022, which was up 20% from the previous year,&nbsp;<a href=\"https://www.lvcva.com/research/visitor-statistics/\" target=\"_blank\">according to the Las Vegas Convention and Visitor Authority</a>. Before the pandemic, the city saw a decline in visitors from California,&nbsp;<a href=\"https://vegasinc.lasvegassun.com/business/tourism/2019/apr/10/tourism-survey-fewer-visitors-las-vegas-california/\" target=\"_blank\">reported the&nbsp;Las Vegas Sun</a>, but the new train could make it easier for those in Southern California to visit.   </p><p class=\"paragraph\">   Government leaders in Nevada and California have voiced support for the project and are seeking $4 billion in federal funds to bring it to fruition,&nbsp;<a href=\"https://www.reviewjournal.com/news/news-columns/road-warrior/nearly-4b-grant-sought-for-vegas-to-so-cal-high-speed-rail-system-2766651/\" target=\"_blank\">according to the&nbsp;Las Vegas Review-Journal</a>.&nbsp;“This project is a major priority because it will make southern Nevada more accessible to millions of visitors each year,” said U.S. Sen. Jacky Rosen,&nbsp;<a href=\"https://apnews.com/article/bullet-train-vegas-los-angeles-nevada-california-e6ac480fd784e2947dba49304cb4fe20\" target=\"_blank\">reported the Associated Press</a>.Once built, the Brightline West train plans to offer free onboard Wi-Fi, food, beverages, the ability to check in luggage, and other amenities.   </p>",
     "sourceUrl": "https://www.travelandleisure.com/brightline-high-speed-train-las-vegas-to-los-angeles-7485359",
     "price": 10000000000,
     "utcStartDateTime": "2027-01-01T08:00:00.000Z",
-    "utcEndDateTime": "2027-01-03T08:00:00.000Z",
+    "utcEndDateTime": "2027-01-04T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-23T22:57:12.656Z",
-    "utcUpdatedDateTime": "2023-05-23T23:03:00.173Z",
+    "utcUpdatedDateTime": "2023-05-24T01:33:59.796Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
+    "locations": [
+      {
+        "id": 21,
+        "address": "Rancho Cucamonga, California",
+        "pinId": 215
+      },
+      {
+        "id": 22,
+        "address": "Hesperia, California",
+        "pinId": 215
+      },
+      {
+        "id": 23,
+        "address": "Apple Valley",
+        "pinId": 215
+      },
+      {
+        "id": 24,
+        "address": "Las Vegas Strip",
+        "pinId": 215
+      }
+    ],
     "userId": 1
   },
   {
@@ -6191,7 +6416,7 @@
     },
     "media": [
       {
-        "id": 202,
+        "id": 204,
         "thumbName": "a4cf2cb9-1df7-4058-89f4-11000af5cd5d.png",
         "originalUrl": "https://dnd2oi6izkvoi.cloudfront.net/img/iea/3gG9oW0wV7/nanobots-in-your-body-by-2030.png",
         "type": "1"
@@ -6216,7 +6441,7 @@
     },
     "media": [
       {
-        "id": 203,
+        "id": 205,
         "thumbName": "73f7248b-3954-4aa5-aae1-e3463be1f269.jpg",
         "thumbWidth": 400,
         "thumbHeight": 284,
@@ -6245,7 +6470,7 @@
     },
     "media": [
       {
-        "id": 204,
+        "id": 206,
         "thumbName": "bf50f483-f7d7-4ca8-bc7e-2e3e25b773b5.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6290,7 +6515,7 @@
     },
     "media": [
       {
-        "id": 205,
+        "id": 207,
         "thumbName": "70cb68bb-e894-41e9-a3b8-943c8257ec69.jpg",
         "thumbWidth": 400,
         "thumbHeight": 267,
@@ -6298,6 +6523,43 @@
         "originalWidth": 600,
         "originalHeight": 400,
         "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 219,
+    "rootThread": false,
+    "title": "California's high-speed rail's goal is to have the section between Bakersfield and Merced operational between 2030 and 2033",
+    "description": "<p class=\"paragraph\">  California’s plan is to build an electric train that will connect Los Angeles with the Central Valley and then San Francisco in two hours and 40 minutes.  </p><p class=\"paragraph\">  But 15 years later, there is not a single mile of track laid, and executives involved say there isn’t enough money to finish the project.  </p><p class=\"paragraph\">  Estimates suggest it will cost between $88 billion and $128 billion to complete the entire system from LA to San Francisco.  </p><p class=\"paragraph\">  The rail authority said the goal is to have the section between Bakersfield and Merced operational between 2030 and 2033.  </p>",
+    "sourceUrl": "https://www.cnbc.com/2023/05/17/why-californias-high-speed-rail-is-taking-so-long-to-complete.html",
+    "price": 128000000000,
+    "utcStartDateTime": "2030-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2033-01-03T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-24T00:38:22.420Z",
+    "utcUpdatedDateTime": "2023-05-24T00:38:54.858Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 208,
+        "thumbName": "8c5669d4-d0ff-4a13-a8c4-faf8f5ab7a08.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107241894-1684252464924-10.jpg?v=1684325611&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 8,
+        "address": "Merced, CA",
+        "pinId": 219
       }
     ],
     "userId": 1
@@ -6318,7 +6580,7 @@
     },
     "media": [
       {
-        "id": 206,
+        "id": 209,
         "thumbName": "7cc700a4-3b9f-41c9-aee7-4d04239f8736.jpeg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6346,7 +6608,7 @@
     },
     "media": [
       {
-        "id": 207,
+        "id": 210,
         "thumbName": "44d2270e-f5b2-4116-85bd-23620693c371.jpg",
         "thumbWidth": 150,
         "thumbHeight": 133,
@@ -6375,7 +6637,7 @@
     },
     "media": [
       {
-        "id": 208,
+        "id": 211,
         "originalUrl": "https://twitter.com/BurggrabenH/status/1657432126076141570",
         "type": "2",
         "authorName": "Alexander Stahel ????",
@@ -6401,7 +6663,7 @@
     },
     "media": [
       {
-        "id": 209,
+        "id": 212,
         "thumbName": "96a0f58b-ba43-4ae8-861f-f3f05b74305a.jpg",
         "thumbWidth": 286,
         "thumbHeight": 400,

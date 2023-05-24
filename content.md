@@ -7,6 +7,7 @@ Bugs:
 
 twitter load jump issue ++
 fix pin overlap issue +
+Editing pin with youtube content will delete youtube content in edit mode ++
 
 pins loaded from infinit scroll needs to be in memory so that navigating back to home will have proper scroll position ++
 create/edit/respond page needs to have auth guard +
@@ -241,10 +242,6 @@ Silicon Valley 2018 : think the same
 -- Show the same above mean on side timeline as supporting pin (should show user who madet his connection of supporting pin)
 
 
-GET /api/pins/search?q=Hands-on+with+the+Surface+Laptop:+Well,+it%E2%80%99s+a+laptop 500 84.257 ms - 420
-
-http://www.gocongress.org/
-
 
 https://www.techadvisor.com/article/743458/intel-meteor-lake-14th-gen-release-date-pricing-and-spec-rumours.html
 Intel Meteor Lake: 14th-gen CPUs
@@ -323,9 +320,6 @@ https://twitter.com/INArteCarloDoss/status/1652048950352814155
 
 https://chinachange.org/2023/04/07/china-has-a-youth-unemployment-problem-guangdong-province-spearheads-a-plan-to-send-300000-youth-to-the-countryside-by-the-end-of-2025/
 
-https://www.cnbc.com/2023/04/25/lucid-gravity-suv-road-tests.html
-with map
-Casa Grande, Arizona
 
 https://en.wikipedia.org/wiki/Tokyo_Anime_Award
 
@@ -335,13 +329,3 @@ and expansions
 
 https://www.motor1.com/news/449472/hyundai-porest-compact-rv/
 korea only
-
-
-https://www.bloomberg.com/news/articles/2023-05-16/mercedes-e-vans-target-glamping-fans-in-bid-to-boost-profit
-
-
-https://www.cnbc.com/2023/05/17/why-californias-high-speed-rail-is-taking-so-long-to-complete.html
-The rail authority said the goal is to have the section between Bakersfield and Merced operational between 2030 and 2033.
-
-
-https://www.cnbc.com/2023/05/18/queen-elizabeth-iis-funeral-cost-over-200-million-uk-government-reveals.html
