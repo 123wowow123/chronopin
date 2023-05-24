@@ -3697,6 +3697,23 @@
     "userId": 1
   },
   {
+    "id": 217,
+    "rootThread": false,
+    "title": "2020 Winnebago Solis—an all-new camper van with a body and powerplant courtesy of a Ram ProMaster",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/xfT6B6_-RFg\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\"> Say hello to the 2020&nbsp;<a href=\"https://www.motortrend.com/news/winnebago-travato-first-drive/\">Winnebago</a>&nbsp;Solis—an all-new camper van with a body and powerplant courtesy of a&nbsp;<a href=\"https://www.motortrend.com/?post_type=capsule_review&amp;p=2237079\">Ram ProMaster</a>. The all-season home away from home sleeps up to four adults and is designed as both a beach cruiser and a camper for the ski slopes. But before you get too excited, know that the Solis' price tag starts just north of $100,000. </p><p class=\"paragraph\"> Its walls and plumbing are insulated for colder climates, and there's a heated bathroom and shower that can also be used as a drying room for your scuba or surf gear. The Solis has captain's chairs for the driver and front passenger that swivel back to a removable table and two more seats—a perfect setup for you and your poker buddies. </p><p class=\"paragraph\"> The fiberglass pop-top offers a comfy loft for two. There's a Murphy bed, a small work station, dinette table, refrigerator, a two-burner stove top, and a modern sink. It also features a 220-watt solar panel on the roof to help you live your weekends off the grid. </p><p class=\"paragraph\"> There are bug screens for the windows, a sliding side door, double doors around back, and storage cabinets and space under the floor for all your gear. Under the hood, the&nbsp;<a href=\"https://www.motortrend.com/cars/ram/\">Ram</a>'s 3.6-liter V-6 engine cranks out 280 ponies and 260 lb-ft of torque. The V-6 is mated to a six-speed automatic transmission. </p>",
+    "sourceUrl": "https://www.motortrend.com/news/2020-winnebago-solis-camper-van/",
+    "price": 100667,
+    "utcStartDateTime": "2020-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2020-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-24T00:04:11.098Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "userId": 1
+  },
+  {
     "id": 130,
     "rootThread": false,
     "title": "In December last year TSMC started to work on its 5nm process",
@@ -3844,13 +3861,14 @@
     "id": 135,
     "rootThread": false,
     "title": "Apple Confirms Plans to Build Data Center in Iowa, Contribute Up to $100M to Community Projects",
-    "description": "Apple today announced plans to build a 400,000-square-foot data center in Waukee, Iowa, which will provide backend infrastructure for the App Store, Siri, Apple Music, iMessage, and other Apple services in North America.  The facility, which it says will create over 550 construction and operations jobs in the Des Moines area.  Authority reportedly approved a deal on Thursday that will give Apple $208 million in state and local tax breaks to construct two data centers near Des Moines. Apple will reportedly buy 2,000 acres of land for the project, allowing for future development in the area.",
+    "description": "<p class=\"paragraph\"> Apple today announced plans to build a 400,000-square-foot data center in Waukee, Iowa, which will provide backend infrastructure for the App Store, Siri, Apple Music, iMessage, and other Apple services in North America.  The facility, which it says will create over 550 construction and operations jobs in the Des Moines area.  Authority reportedly approved a deal on Thursday that will give Apple $208 million in state and local tax breaks to construct two data centers near Des Moines. Apple will reportedly buy 2,000 acres of land for the project, allowing for future development in the area. </p>",
     "sourceUrl": "https://www.macrumors.com/2017/08/24/apple-confirms-iowa-data-center/",
     "price": 1300000000,
     "utcStartDateTime": "2020-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2021-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2021-01-02T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-08-29T05:19:13.217Z",
+    "utcUpdatedDateTime": "2023-05-24T00:13:00.944Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3931,12 +3949,13 @@
     "id": 138,
     "rootThread": false,
     "title": "Apple Planning New UK Headquarters in London's Historic Battersea Power Station",
-    "description": "Apple is working on building an all-new campus location in London's Battersea Power Station, where 1,400 employees will be moved from eight...",
+    "description": "<p class=\"paragraph\"> Apple is working on building an all-new campus location in London's Battersea Power Station, where 1,400 employees will be moved from eight... </p>",
     "sourceUrl": "http://www.macrumors.com/2016/09/28/apple-plans-offices-battersea/",
     "utcStartDateTime": "2021-01-01T08:00:00.000Z",
-    "utcEndDateTime": "2021-01-02T08:00:00.000Z",
+    "utcEndDateTime": "2021-01-03T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-15T05:50:37.991Z",
+    "utcUpdatedDateTime": "2023-05-24T00:12:12.194Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3959,14 +3978,14 @@
     "id": 139,
     "rootThread": false,
     "title": "NASA Is Getting Closer to Building An Ultra-Quiet Supersonic Jet for Passenger Flight",
-    "description": "NASA is moving forward with their plans to create a quieter supersonic jet that can cut travel times in half. The quiet plane will fly up to 55,000 feet at supersonic speeds. The new prototype will run on two engines and in theory, it could cut the flight time from New York to Los Angeles in half from 6 to 3 hours.",
+    "description": "<p class=\"paragraph\"> NASA is moving forward with their plans to create a quieter supersonic jet that can cut travel times in half. The quiet plane will fly up to 55,000 feet at supersonic speeds. The new prototype will run on two engines and in theory, it could cut the flight time from New York to Los Angeles in half from 6 to 3 hours. </p>",
     "sourceUrl": "http://interestingengineering.com/nasa-building-ultra-quiet-supersonic-jet-for-passenger-flight/",
     "price": 390000000,
     "utcStartDateTime": "2022-01-01T08:00:00.000Z",
-    "utcEndDateTime": "2022-01-03T08:00:00.000Z",
+    "utcEndDateTime": "2022-01-04T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-08-01T07:34:50.441Z",
-    "utcUpdatedDateTime": "2023-01-23T22:49:39.032Z",
+    "utcUpdatedDateTime": "2023-05-24T00:14:27.929Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -5041,7 +5060,7 @@
     },
     "media": [
       {
-        "id": 208,
+        "id": 168,
         "thumbName": "e2ed6298-6523-4583-b8ca-6b741a201f1a.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -5071,7 +5090,7 @@
     },
     "media": [
       {
-        "id": 168,
+        "id": 169,
         "thumbName": "42f3b3b5-2dd7-470e-a0bf-bbe1b9bef2da.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5110,7 +5129,7 @@
     },
     "media": [
       {
-        "id": 169,
+        "id": 170,
         "thumbName": "ef6fbfd1-759b-4312-ab12-e466a7cf2f17.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5148,7 +5167,7 @@
     },
     "media": [
       {
-        "id": 170,
+        "id": 171,
         "thumbName": "4a8cec7a-ca73-4879-b9e9-ae95ed31e619.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5176,7 +5195,7 @@
     },
     "media": [
       {
-        "id": 171,
+        "id": 172,
         "originalUrl": "https://twitter.com/DemonSlayerUSA/status/1601569955865976833",
         "type": "2",
         "authorName": "Demon Slayer: Kimetsu no Yaiba (English)",
@@ -5204,7 +5223,7 @@
     },
     "media": [
       {
-        "id": 172,
+        "id": 173,
         "thumbName": "0ba0fe60-6fcd-4275-987a-883836a72e27.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5259,7 +5278,7 @@
     },
     "media": [
       {
-        "id": 173,
+        "id": 174,
         "thumbName": "e9970655-276f-42d1-8ead-15d083b8544c.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5297,7 +5316,7 @@
     },
     "media": [
       {
-        "id": 174,
+        "id": 175,
         "originalUrl": "//www.youtube.com/embed/Mz5OcKiGoV8",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Mz5OcKiGoV8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5320,7 +5339,7 @@
     },
     "media": [
       {
-        "id": 175,
+        "id": 176,
         "originalUrl": "https://twitter.com/BurggrabenH/status/1650415388553822211",
         "type": "2",
         "authorName": "Alexander Stahel ????",
@@ -5346,7 +5365,7 @@
     },
     "media": [
       {
-        "id": 176,
+        "id": 177,
         "thumbName": "fdb32feb-199d-448d-93af-bea61de72f7b.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5375,7 +5394,7 @@
     },
     "media": [
       {
-        "id": 177,
+        "id": 178,
         "thumbName": "8f512cad-4dce-4420-8ce9-abcc15b38dbd.png",
         "thumbWidth": 799,
         "thumbHeight": 506,
@@ -5403,7 +5422,7 @@
     },
     "media": [
       {
-        "id": 178,
+        "id": 179,
         "thumbName": "5ce370bf-3c98-41a1-b57e-3fa9ee03b54f.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5430,7 +5449,7 @@
     },
     "media": [
       {
-        "id": 179,
+        "id": 180,
         "originalUrl": "https://twitter.com/Jay__Cale/status/1655653917651247104",
         "type": "2",
         "authorName": "Jay Cal",
@@ -5455,7 +5474,7 @@
     },
     "media": [
       {
-        "id": 180,
+        "id": 181,
         "originalUrl": "https://twitter.com/RJRCapital/status/1656838113858076672",
         "type": "2",
         "authorName": "RJR Capital",
@@ -5484,7 +5503,7 @@
     },
     "media": [
       {
-        "id": 181,
+        "id": 182,
         "originalUrl": "//www.youtube.com/embed/a6qna-ZCbxA",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/a6qna-ZCbxA\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5502,15 +5521,32 @@
     "userId": 1
   },
   {
+    "id": 218,
+    "rootThread": false,
+    "title": "Meta’s new MTIA chip, which stands for Meta Training and Inference Accelerator, is its “in-house, custom accelerator chip family targeting inference workloads",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/B3vlnO9FMxc\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\"> Meta is building its first custom chip specifically for running AI models,&nbsp;<a href=\"https://about.fb.com/news/2023/05/metas-infrastructure-for-ai/\">the company announced on Thursday</a>. As Meta increases its AI efforts — CEO Mark Zuckerberg&nbsp;<a href=\"https://www.theverge.com/2023/4/26/23699633/mark-zuckerberg-meta-generative-ai-chatbots-instagram-facebook-whatsapp\">recently said</a>&nbsp;the company sees “an opportunity to introduce AI agents to billions of people in ways that will be useful and meaningful” — the chip and other infrastructure plans revealed Thursday could be critical tools for Meta to compete with other tech giants also investing significant resources into AI. </p><p class=\"paragraph\"> Meta’s new MTIA chip, which stands for Meta Training and Inference Accelerator, is its “in-house, custom accelerator chip family targeting inference workloads,” Meta VP and head of infrastructure Santosh Janardhan wrote in a blog post. The chip apparently provides “greater compute power and efficiency” than CPUs and is “customized for our internal workloads.” With a combination of MTIA chips and GPUs, Janardhan said that Meta believes “we’ll deliver better performance, decreased latency, and greater efficiency for each workload.” </p><p class=\"paragraph\"> The MTIA could be a big boon for Meta, especially given&nbsp;<a href=\"https://www.theinformation.com/articles/ai-developers-stymied-by-server-shortage-at-aws-microsoft-google\">increasingly high demand for AI compute power</a>. But the MTIA chip is seemingly a long ways away: it’s not set to come out until 2025,&nbsp;<a href=\"https://techcrunch.com/2023/05/18/meta-bets-big-on-ai-with-custom-chips-and-a-supercomputer/\">TechCrunch&nbsp;reports</a>. </p><p class=\"paragraph\"> In addition to the MTIA, Meta is also introducing a new ASIC specifically to help with video transcoding, which it calls the “MSVP,” or Meta Scalable Video Processor. It’s designed to support both “the high-quality transcoding needed for VOD as well as the low latency and faster processing times that live streaming requires,”&nbsp;<a href=\"https://ai.facebook.com/blog/meta-scalable-video-processor-MSVP/\">Meta said in a separate blog post</a>, and “in the future,” it will help bring things like AI-made content and AR- and VR-specific content to Meta’s apps. </p><p class=\"paragraph\"> Meta is also working on a “next-generation data center design” that will be “AI-optimized” and “faster and more cost-effective to build,” Janardhan said, and the company also touted the power of its Research SuperCluster (RSC) AI Supercomputer, “which we believe is one of the fastest AI supercomputers in the world.” This isn’t exactly new rhetoric about the RSC from Meta; the company has been sharing high praise about the supercomputer&nbsp;<a href=\"https://www.theverge.com/2022/1/24/22898651/meta-artificial-intelligence-ai-supercomputer-rsc-2022\">since last year</a>. But as the company tries to stand out against an increasing number of AI initiatives from many of the biggest technology giants — including other&nbsp;<a href=\"https://www.theverge.com/2023/4/18/23687912/microsoft-athena-ai-chips-nvidia\">custom</a>&nbsp;<a href=\"https://aws.amazon.com/machine-learning/inferentia/\">chips</a>&nbsp;—it makes sense that Meta would want to brag about its faith in its own AI hardware. </p>",
+    "sourceUrl": "https://www.theverge.com/2023/5/18/23728678/meta-ai-new-chip-mtia-msvp-datacenter",
+    "utcStartDateTime": "2023-05-25T07:00:00.000Z",
+    "utcEndDateTime": "2023-05-26T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-24T00:29:30.105Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "userId": 1
+  },
+  {
     "id": 205,
     "rootThread": false,
     "title": "Ukraine counteroffensive: Mud season should end last week of May or first week of June before Ukraining can move",
-    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/HQUgJ4Te6Bc?start=186\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\"> Kyiv plans to launch a counteroffensive against Russia this spring. A former US military meteorologist has taken to Twitter to provide valuable predictions as to when ground conditions will be right. </p>",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/HQUgJ4Te6Bc?start=186s\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\">  Kyiv plans to launch a counteroffensive against Russia this spring. A former US military meteorologist has taken to Twitter to provide valuable predictions as to when ground conditions will be right.  </p>",
     "sourceUrl": "https://www.dw.com/en/countdown-to-counteroffensive-when-will-mud-season-end-in-ukraine/a-65204612",
     "utcStartDateTime": "2023-05-29T07:00:00.000Z",
-    "utcEndDateTime": "2023-06-05T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-06T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-11T04:51:51.846Z",
+    "utcUpdatedDateTime": "2023-05-24T00:19:10.462Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -5534,7 +5570,7 @@
     },
     "media": [
       {
-        "id": 182,
+        "id": 183,
         "thumbName": "939475ba-e3b2-444d-b836-d8b4f1662b5c.jpeg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5565,7 +5601,7 @@
     },
     "media": [
       {
-        "id": 183,
+        "id": 184,
         "originalUrl": "//www.youtube.com/embed/GZud-p0QRvA",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/GZud-p0QRvA\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5601,7 +5637,7 @@
     },
     "media": [
       {
-        "id": 184,
+        "id": 185,
         "originalUrl": "//www.youtube.com/embed/9bRWIdOMfro",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/9bRWIdOMfro\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5636,7 +5672,7 @@
     },
     "media": [
       {
-        "id": 185,
+        "id": 186,
         "thumbName": "6a0c7bc3-0c05-495b-b066-2ccb791c85d7.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5675,7 +5711,7 @@
     },
     "media": [
       {
-        "id": 186,
+        "id": 187,
         "originalUrl": "//www.youtube.com/embed/okFSR8CCOPY",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/okFSR8CCOPY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5699,7 +5735,7 @@
     },
     "media": [
       {
-        "id": 187,
+        "id": 188,
         "originalUrl": "//www.youtube.com/embed/CDVH_JJIRWI",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/CDVH_JJIRWI\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5723,7 +5759,7 @@
     },
     "media": [
       {
-        "id": 188,
+        "id": 189,
         "thumbName": "9297e0e8-ca76-441c-a838-5c9af85aeb9e.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5752,7 +5788,7 @@
     },
     "media": [
       {
-        "id": 189,
+        "id": 190,
         "originalUrl": "//www.youtube.com/embed/UZ6eFEjFfJ0",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/UZ6eFEjFfJ0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5803,7 +5839,7 @@
     },
     "media": [
       {
-        "id": 190,
+        "id": 191,
         "thumbName": "ed30a2c1-8f8d-4394-aa81-c8378e093f9f.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5819,21 +5855,21 @@
     "id": 149,
     "rootThread": false,
     "title": "The MSG Sphere is the largest sphere in the world, planned to open in Las Vegas in the second half of 2023.",
-    "description": "The MSG Sphere is the largest spherical building in the world, providing Las Vegas' No. 1 immersive show experience. MSG Sphere interior screen measures 19,000 by 13,500 pixels covering a space that is more than three football pitches. It is 100 times crisper and more detailed than the best world-class HD TVs in the market.",
+    "description": "<p class=\"paragraph\"> The MSG Sphere is the largest spherical building in the world, providing Las Vegas' No. 1 immersive show experience. MSG Sphere interior screen measures 19,000 by 13,500 pixels covering a space that is more than three football pitches. It is 100 times crisper and more detailed than the best world-class HD TVs in the market. </p>",
     "sourceUrl": "https://1oaklasvegas.com/msg-sphere-las-vegas/",
     "price": 2000000000,
     "utcStartDateTime": "2023-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2024-01-03T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-04T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-03-11T03:18:25.589Z",
-    "utcUpdatedDateTime": "2023-03-11T03:24:51.687Z",
+    "utcUpdatedDateTime": "2023-05-24T00:09:15.019Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "media": [
       {
-        "id": 191,
+        "id": 192,
         "originalUrl": "//www.youtube.com/embed/Q2kN6LONlWw",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Q2kN6LONlWw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5845,20 +5881,21 @@
     "id": 195,
     "rootThread": false,
     "title": "Ford will invest about $1.3 billion in its Oakville Assembly Plant in Ontario, Canada, to transition the facility into a new electric vehicle hub.",
-    "description": "<p class=\"paragraph\"> The plant will build the company’s next-generation EVs that are expected to arrive to market around mid-decade.  </p><p class=\"paragraph\"> The changes to the Oakville complex will include combining three body shops into one and adding battery pack assembly, Ford said. </p><p class=\"paragraph\"> The Oakville plant will continue to build the gas-powered Ford Edge and Lincoln Nautilus crossovers up until the plant’s downtime. </p><p class=\"paragraph\"> The investment is part of Ford’s plan to have production capacity for 2 million EVs globally by the end of 2026. </p><p class=\"paragraph\"> The retooling is expected to take six months and begin in the second quarter of next year, Ford said. </p>",
+    "description": "<p class=\"paragraph\">  The plant will build the company’s next-generation EVs that are expected to arrive to market around mid-decade.   </p><p class=\"paragraph\">  The changes to the Oakville complex will include combining three body shops into one and adding battery pack assembly, Ford said.  </p><p class=\"paragraph\">  The Oakville plant will continue to build the gas-powered Ford Edge and Lincoln Nautilus crossovers up until the plant’s downtime.  </p><p class=\"paragraph\">  The investment is part of Ford’s plan to have production capacity for 2 million EVs globally by the end of 2026.  </p><p class=\"paragraph\">  The retooling is expected to take six months and begin in the second quarter of next year, Ford said.  </p>",
     "sourceUrl": "https://www.cnbc.com/2023/04/11/ford-to-build-ev-manufacturing-hub-in-canada.html",
     "price": 1300000000,
     "utcStartDateTime": "2024-06-01T07:00:00.000Z",
-    "utcEndDateTime": "2025-01-02T08:00:00.000Z",
+    "utcEndDateTime": "2025-01-03T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-02T00:08:34.344Z",
+    "utcUpdatedDateTime": "2023-05-24T00:08:23.802Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "media": [
       {
-        "id": 192,
+        "id": 193,
         "thumbName": "e7f718cc-9190-4eed-a8df-270ec8c9d66c.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5886,7 +5923,7 @@
     },
     "media": [
       {
-        "id": 193,
+        "id": 194,
         "thumbName": "4744b1cd-fc70-430d-a3a2-df642e1aea79.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 503,
@@ -5902,20 +5939,21 @@
     "id": 150,
     "rootThread": false,
     "title": "Hudson Yards",
-    "description": "The West Side of New York City is in the midst of being transformed. Construction is well underway on Hudson Yards — the largest private real estate development in the history of the United States and the source of a new neighborhood situated between Chelsea and Hell’s Kitchen. Once completed, the site will be home to more than 17 million square feet of newly created space, including a public school and a much-anticipated cultural facility. Here’s an update on New York City’s largest project since Rockefeller Center.",
+    "description": "<p class=\"paragraph\"> The West Side of New York City is in the midst of being transformed. Construction is well underway on Hudson Yards — the largest private real estate development in the history of the United States and the source of a new neighborhood situated between Chelsea and Hell’s Kitchen. Once completed, the site will be home to more than 17 million square feet of newly created space, including a public school and a much-anticipated cultural facility. Here’s an update on New York City’s largest project since Rockefeller Center. </p>",
     "sourceUrl": "http://chelseanow.com/2015/01/progress-report-hudson-yards/",
     "price": 20000000000,
     "utcStartDateTime": "2024-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2025-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2025-01-02T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-21T07:10:59.579Z",
+    "utcUpdatedDateTime": "2023-05-24T00:10:10.802Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "media": [
       {
-        "id": 194,
+        "id": 195,
         "thumbName": "604abb42-6c90-4201-afeb-fdb0f26a8898.jpg",
         "thumbWidth": 400,
         "thumbHeight": 689,
@@ -5944,7 +5982,7 @@
     },
     "media": [
       {
-        "id": 195,
+        "id": 196,
         "thumbName": "1870e18c-c013-4e68-8821-0ed0881d9d2d.jpg",
         "thumbWidth": 400,
         "thumbHeight": 267,
@@ -5973,7 +6011,7 @@
     },
     "media": [
       {
-        "id": 196,
+        "id": 197,
         "thumbName": "5ae38366-d033-4972-bc04-48f4d4b6b485.jpg",
         "thumbWidth": 400,
         "thumbHeight": 224,
@@ -6003,7 +6041,7 @@
     },
     "media": [
       {
-        "id": 197,
+        "id": 198,
         "thumbName": "10240ef3-a8b9-4c73-8d53-53b182f57374.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -6032,7 +6070,7 @@
     },
     "media": [
       {
-        "id": 198,
+        "id": 199,
         "thumbName": "9d3fdd45-fbda-4b7c-b649-1d7c72016c63.jpg",
         "thumbWidth": 400,
         "thumbHeight": 284,
@@ -6048,23 +6086,53 @@
     "id": 194,
     "rootThread": false,
     "title": "PepsiCo, which owns Frito-Lay and Quaker Oats, has set a goal to design 100% of its packaging to be recyclable, compostable, biodegradable or reusable by 2025.",
-    "description": "<p class=\"paragraph\"> “Two years ago, if you think about our multipack packages, that’s our one ounce size in multipack servings, those packages were in another outer plastic. So we moved that from plastic into cardboard and recyclable cardboard,” he said. </p><p class=\"paragraph\"> That move alone was able to deliver 12 million pounds of plastic out of the environment, PepsiCo said </p><p class=\"paragraph\"> In April, Frito-Lay and Quaker Oats opened a new learning center for packaging innovation at Frito-Lay’s research and development headquarters in Texas, where it will field test, measure and analyze compostable packaging, aiming to make the process of testing products to certification-ready at least two to three times faster. </p>",
+    "description": "<p class=\"paragraph\">  “Two years ago, if you think about our multipack packages, that’s our one ounce size in multipack servings, those packages were in another outer plastic. So we moved that from plastic into cardboard and recyclable cardboard,” he said.  </p><p class=\"paragraph\">  That move alone was able to deliver 12 million pounds of plastic out of the environment, PepsiCo said  </p><p class=\"paragraph\">  In April, Frito-Lay and Quaker Oats opened a new learning center for packaging innovation at Frito-Lay’s research and development headquarters in Texas, where it will field test, measure and analyze compostable packaging, aiming to make the process of testing products to certification-ready at least two to three times faster.  </p>",
     "sourceUrl": "https://www.cnbc.com/2023/04/19/how-pepsico-is-trying-to-get-doritos-cheetos-bags-into-compost-bins.html",
     "utcStartDateTime": "2025-01-01T08:00:00.000Z",
-    "utcEndDateTime": "2025-01-02T08:00:00.000Z",
+    "utcEndDateTime": "2025-01-03T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-02T00:01:10.246Z",
+    "utcUpdatedDateTime": "2023-05-24T00:11:10.490Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "media": [
       {
-        "id": 199,
+        "id": 200,
         "thumbName": "58441b39-2150-45ad-8f12-b36ab5f90736.jpeg",
         "thumbWidth": 400,
         "thumbHeight": 225,
         "originalUrl": "https://image.cnbcfm.com/api/v1/image/107228153-1681932936894-gettyimages-1428542954-1006_32_fl220704001.jpeg?v=1682001622&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 216,
+    "rootThread": false,
+    "title": "2025 Rivian Adventure Van, the only OEM off-road-capable adventure van on the market",
+    "description": "<p class=\"paragraph\"> The electric Rivian Adventure Van will be an off-road-capable, go-anywhere overland camper van likely based on the R1T/R1S. </p><p class=\"paragraph\"> WHAT IT IS: Basically conceived as the&nbsp;<a href=\"https://www.motortrend.com/cars/rivian/r1t/\" target=\"_blank\">progeny of a Rivian R1T</a>&nbsp;and a&nbsp;<a href=\"https://www.motortrend.com/reviews/163-1304-travel-sportsmobile-4wd-ford-e-series/\" target=\"_blank\">Sportsmobile Ford Econoline</a>, the Rivian Adventure Van (the name may change; R1V has a nice ring to it, no?) aims to live up to Rivian's philosophy of \"keeping the world adventurous forever.\" The Adventure Van will be an R1-based electric off-roader, with clever features&nbsp;<a href=\"https://www.motortrend.com/features/rivian-r1t-camp-kitchen-review-overview/\" target=\"_blank\">like Rivian's camp kitchen</a>, and likely the ability to convert its seats into beds—allowing for days of off-the-grid living. </p><p class=\"paragraph\"> WHY IT MATTERS:&nbsp;With most automakers just now waking up to the amount of money to be made by investing in the overland craze, the Rivian Adventure Van would take things a step further by creating the only OEM off-road-capable adventure van on the market. The Adventure Van would harken back to the days when you could roll into your local Volkswagen or Toyota dealer and leave with a Westfalia or Chinook. </p><p class=\"paragraph\"> PLATFORM AND POWERTRAIN:&nbsp;Although Rivian could conceivably build the Adventure Van from its&nbsp;<a href=\"https://www.motortrend.com/news/2022-rivian-prime-delivery-van-first-look-review/\">commercial-oriented Prime Van</a>&nbsp;or RCV, we believe it'll instead use the more off-road-capable platform under the R1T pickup and R1S SUV. Hard details from our sources are scarce, as it's still early days for the Adventure Van, but we believe it will be available with multiple battery and motor options and come standard with the company's trick hydropneumatic suspension. We suspect&nbsp;<a href=\"https://www.motortrend.com/news/rivian-r1t-r1s-two-motor-standard-battery-pack-details/\">both dual- and quad-motor powertrains</a>&nbsp;will be available, with as much as 1,200 hp and 1,200 lb-ft on tap, and Rivian's 180-kWh Max battery pack. </p>",
+    "sourceUrl": "https://www.motortrend.com/news/2025-rivian-adventure-van-electric-off-road-overland-camper-rv/",
+    "price": 125000,
+    "utcStartDateTime": "2025-12-31T08:00:00.000Z",
+    "utcEndDateTime": "2026-01-01T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-23T23:48:10.234Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 201,
+        "thumbName": "6535282f-7932-4bdf-8f0e-51ab0f6d2578.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.motortrend.com/uploads/2022/07/2205-MT-Future-Cars-Rendering-Rivian-Adventure-Van.jpg",
         "originalWidth": 1920,
         "originalHeight": 1080,
         "type": "1"
@@ -6123,7 +6191,7 @@
     },
     "media": [
       {
-        "id": 200,
+        "id": 202,
         "thumbName": "a4cf2cb9-1df7-4058-89f4-11000af5cd5d.png",
         "originalUrl": "https://dnd2oi6izkvoi.cloudfront.net/img/iea/3gG9oW0wV7/nanobots-in-your-body-by-2030.png",
         "type": "1"
@@ -6148,7 +6216,7 @@
     },
     "media": [
       {
-        "id": 201,
+        "id": 203,
         "thumbName": "73f7248b-3954-4aa5-aae1-e3463be1f269.jpg",
         "thumbWidth": 400,
         "thumbHeight": 284,
@@ -6177,7 +6245,7 @@
     },
     "media": [
       {
-        "id": 202,
+        "id": 204,
         "thumbName": "bf50f483-f7d7-4ca8-bc7e-2e3e25b773b5.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6222,7 +6290,7 @@
     },
     "media": [
       {
-        "id": 203,
+        "id": 205,
         "thumbName": "70cb68bb-e894-41e9-a3b8-943c8257ec69.jpg",
         "thumbWidth": 400,
         "thumbHeight": 267,
@@ -6250,7 +6318,7 @@
     },
     "media": [
       {
-        "id": 204,
+        "id": 206,
         "thumbName": "7cc700a4-3b9f-41c9-aee7-4d04239f8736.jpeg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6278,7 +6346,7 @@
     },
     "media": [
       {
-        "id": 205,
+        "id": 207,
         "thumbName": "44d2270e-f5b2-4116-85bd-23620693c371.jpg",
         "thumbWidth": 150,
         "thumbHeight": 133,
@@ -6307,7 +6375,7 @@
     },
     "media": [
       {
-        "id": 206,
+        "id": 208,
         "originalUrl": "https://twitter.com/BurggrabenH/status/1657432126076141570",
         "type": "2",
         "authorName": "Alexander Stahel ????",
@@ -6333,7 +6401,7 @@
     },
     "media": [
       {
-        "id": 207,
+        "id": 209,
         "thumbName": "96a0f58b-ba43-4ae8-861f-f3f05b74305a.jpg",
         "thumbWidth": 286,
         "thumbHeight": 400,

@@ -288,31 +288,24 @@ Meanwhile, Medicare’s hospital insurance trust fund will be able to pay 100% o
 12/31/34
 12/31/31
 
-https://www.cnn.com/2023/01/18/politics/debt-ceiling-deadline-congress/index.html
-While Treasury Secretary Janet Yellen doesn’t expect the US to default on its debt before early June, Congress has to get serious about negotiating a solution, which is not expected to be easy.
-
-6/30/23
-
 
 https://twitter.com/EponymouslyAnon/status/1641849547235131403
 
 https://twitter.com/lawhon_sam/status/1641848266810617856
 
 
-https://www.motortrend.com/news/2020-winnebago-solis-camper/
 
 
 https://www.polydrops.com/aerodynamics
-
-https://www.motortrend.com/news/2025-rivian-adventure-van-electric-off-road-overland-camper-rv/
-
-
 
 follow required so need chrome extension
 https://twitter.com/roaringmeows/status/1648404621503627266
 
 
 https://www.youtube.com/watch?v=d5hu62W89nk
+Need youtube text summerization
+
+
 What do Chicago, Denver, and DFW all have in common? Yes, they are all major metro areas in the US, but more importantly, they're colocated with green energy sources.
 
 As the world adopts more and more clean energy, these regions with localized energy sources will have a huge leg up on places that don't.
@@ -352,6 +345,3 @@ The rail authority said the goal is to have the section between Bakersfield and 
 
 
 https://www.cnbc.com/2023/05/18/queen-elizabeth-iis-funeral-cost-over-200-million-uk-government-reveals.html
-
-
-https://www.theverge.com/2023/5/18/23728678/meta-ai-new-chip-mtia-msvp-datacenter
