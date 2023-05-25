@@ -23,6 +23,7 @@ default does not select media but when selected it will auto check pin header me
 
 
 SEO:
+ Google Analytics 4
  test "site:"
  add button for infinit scroll seo
  Add alt text for image/media for SEO
