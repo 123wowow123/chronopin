@@ -15,6 +15,8 @@
     "font-awesome": ">=4.1.0",
     "lodash": "~4.17.4",
     "angulargrid": "https://github.com/123wowow123/angulargrid.git#master",
+    "Sortable": "https://github.com/123wowow123/Sortable.git#master",
+    "angular-legacy-sortablejs": "https://github.com/123wowow123/angular-legacy-sortablejs.git#master",
     "angular-ui-router": "~1.0.10",
     "angular-validation-match": "~1.9.0",
     "angular-loading-bar": "^0.9.0",
@@ -32,6 +34,9 @@
   "overrides": {
     "angular-link-header-parser": {
       "main": "release/angular-link-header-parser.js"
+    },
+    "angular-legacy-sortablejs": {
+      "main": "angular-legacy-sortable.js"
     }
   }
 }

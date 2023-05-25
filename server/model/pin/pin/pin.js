@@ -300,7 +300,7 @@ function _updateMSSQL(pin, userId) {
           .input('id', mssql.Int, pin.id)
           .input('parentId', mssql.Int, pin.parentId)
           .input('title', mssql.NVarChar(1024), pin.title)
-          .input('description', mssql.NVarChar(4000), pin.description)
+          .input('description', mssql.NVarChar(mssql.MAX), pin.description)
           .input('sourceUrl', mssql.NVarChar(4000), pin.sourceUrl)
           .input('priceLowerBound', mssql.Decimal(18, 2), pin.priceLowerBound)
           .input('priceUpperBound', mssql.Decimal(18, 2), pin.priceUpperBound)

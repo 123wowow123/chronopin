@@ -71,7 +71,7 @@
             this.searching = true;
             const threadEmoji = "🧵";
             let searchPromise;
-            if (query.startsWith(threadEmoji)) {
+            if (query && query.startsWith(threadEmoji)) {
                 const pinId = +query.substring(threadEmoji.length);
                 searchPromise = this.pinWebService.thread(pinId);
             } else {

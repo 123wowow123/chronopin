@@ -27,9 +27,7 @@ add button for infinit scroll seo
 change pin page header to h1 and test "site:"
 
 
-google dmap doc: 
-https://developers.google.com/maps/documentation/embed/embedding-map
-can suggest airbnb for referals
+can suggest airbnb and flights referals when map data is available
 
 
 default does not select media but when selected it will auto check pin header media.
@@ -169,12 +167,6 @@ May and June russian will have increased force and Ukraine will have tanks
 https://www.macrumors.com/2023/01/23/whats-next-for-the-mac/
 Apple plans to update the iMac family with the M3 chip later this year, likely around the October or November timeframe, given past precedent. Gurman describes the M2 family of chips as a "stopgap" for Apple silicon and suggests Apple is waiting for the more advanced M3 chip, based on the 3nm process technology, before updating its all-in-one desktop computer.
 
-https://www.theverge.com/2023/1/5/23531458/alfred-dbs2-smart-deadbolt-lock-wireless-charging
-
-
-
-
-
 
 Add mention dates
 Need thread using reply like twitter?
@@ -263,17 +255,6 @@ Fed Fund Rate Will be at:
 3.1% at the end of 2025
 
 
-https://twitter.com/INArteCarloDoss/status/1638924682991747078
-Kind of scary when different time horizons start matching up. 
-
-Will likely see US student loan payments resume by then as well - an additional headwind.
-
-Buy 2 year T-Bill
-
-
-https://twitter.com/INArteCarloDoss/status/1640619037251043328
-Stagnant till 2028
-
 https://www.fhfa.gov/Media/PublicAffairs/Pages/FHFA-Announces-Enhanced-Payment-Deferral-Policies-for-Borrowers-Facing-Financial-Hardship.aspx
 FHFA Announces Enhanced Payment Deferral Policies for Borrowers Facing Financial Hardship adoption by October 1, 2023 allow borrowers to defer up to six months of mortgage payments... Housing Crash April 1 2024 !?
 
@@ -288,14 +269,13 @@ Meanwhile, Medicare’s hospital insurance trust fund will be able to pay 100% o
 
 https://twitter.com/EponymouslyAnon/status/1641849547235131403
 
+
+need post twitter thread feature
 https://twitter.com/lawhon_sam/status/1641848266810617856
 
 
 
-
-https://www.polydrops.com/aerodynamics
-
-follow required so need chrome extension
+private follow required so need chrome extension
 https://twitter.com/roaringmeows/status/1648404621503627266
 
 
@@ -316,9 +296,6 @@ Dallas Fort Worth has both Solar and wind potential
 
 Inflation Tracker group Tag and tag
 https://twitter.com/INArteCarloDoss/status/1652048950352814155
-
-
-https://chinachange.org/2023/04/07/china-has-a-youth-unemployment-problem-guangdong-province-spearheads-a-plan-to-send-300000-youth-to-the-countryside-by-the-end-of-2025/
 
 
 https://en.wikipedia.org/wiki/Tokyo_Anime_Award

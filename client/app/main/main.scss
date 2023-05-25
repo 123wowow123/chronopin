@@ -502,6 +502,7 @@ $bag-font-color: var(--bag-text-color);
 .\--meta {
     margin-bottom: 12px;
     font-size: 12px;
+    flex-wrap: wrap;
 }
 
 .\--clear-margin {

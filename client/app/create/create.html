@@ -169,48 +169,22 @@
                 <!-- <div class="optional_line_break"><span class="optional_line_break__label">Optional</span></div> -->
 
                 <div class="content_block">
-
-                  <ul class="list-group merchant-list">
+                  <label for="location" class="control-label location-label">Location</label>
+                  <ul class="list-group merchant-list" ng-sortable=$ctrl.sortableConf>
+                    
                     <li class="list-group-item" ng-repeat="location in $ctrl.pin.locations track by $index">
 
-                      <!-- First Location Element -->
-                      <div ng-if="$index === 0"
-                        ng-switch="$ctrl.hasScrapedText && $ctrl.scrapingMessage($ctrl.pinSuggestion.location).code == 2">
-                        <label ng-switch-when="false" for="location" class="control-label">Location</label>
-
-                        <div class="form-group"
-                          ng-class="{'has-error' : pinForm['location' + $index].$invalid && pinForm['location' + $index].$dirty, 
-                    'has-error-suggestion' : pinForm.suggestionLocation.$invalid && pinForm.suggestionLocation.$dirty}">
-
-                          <div class="input-group"
-                            ng-class="{'has-error' : ($ctrl.pin.locations.length > 1 && !$ctrl.hasAddress()) || (pinForm['location' + $index].$invalid && pinForm['location' + $index].$dirty)}">
-                            <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                            <div ng-switch="$ctrl.activeTabs['location']">
-                              <input ng-switch-when="0" name="location" type="text" class="form-control" id="location"
-                                placeholder="Location (optional)" ng-model="location.address" maxlength="300">
-
-                              <input ng-switch-when="1" name="suggestionLocation" type="text" class="form-control"
-                                id="suggestionLocation" placeholder="Location (optional)"
-                                ng-model="$ctrl.pinSuggestion.location" maxlength="300">
-
-                              <span class="form-control__clear-texbox" ng-if="$ctrl.hasAddress()"
-                                ng-click="$ctrl.resetAddress()"></span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Additonal Location Element -->
-                      <div class="form-group" ng-if="$index !== 0">
+                      <!-- Location Elements -->
+                      <div class="form-group">
                         <div class="row">
 
                           <div class="col-xs-11">
                             <div class="input-group"
                               ng-class="{'has-error' : pinForm['location' + $index].$invalid && pinForm['location' + $index].$dirty}">
-                              <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                              <div class="input-group-addon location-addon"><i class="fa fa-map-marker" aria-hidden="true"></i><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
                               <input name="{{'location' + $index}}" type="text" class="form-control"
-                                id="{{'location' + $index}}" placeholder="Additional Location"
-                                ng-model="location.address" required>
+                                id="{{'location' + $index}}" placeholder="Location (optional) eg: San Francisco, CA"
+                                ng-model="location.address" ng-required="$ctrl.pin.locations.length != 1">
                             </div>
                           </div>
 
@@ -233,7 +207,7 @@
                   <!-- Google Map-->
                   <div class="pin__map embed" ng-if="$ctrl.hasAddress()">
                     <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
-                      referrerpolicy="no-referrer-when-downgrade" src="{{$ctrl.getGoogleMapUrl()}}">
+                      referrerpolicy="no-referrer-when-downgrade" ng-src="{{$ctrl.getGoogleMapUrl()}}">
                     </iframe>
                   </div>
                 </div>

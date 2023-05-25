@@ -90,6 +90,12 @@
         footer: 0
       };
 
+      this.sortableConf = {
+        handle: ".location-addon",
+        direction: 'vertical',
+        forceFallback: true,
+      };
+
     }
 
     $onInit() {

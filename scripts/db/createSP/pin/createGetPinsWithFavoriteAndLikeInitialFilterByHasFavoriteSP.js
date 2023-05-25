@@ -59,7 +59,7 @@ function executeCreateSP() {
               id                     INT       NOT NULL,
               parentId               INT,
               title                  NVARCHAR(1024),
-              description            NVARCHAR(4000),
+              description            NVARCHAR(max),
               sourceUrl              NVARCHAR(4000),
               priceLowerBound        DECIMAL(18, 2),
               priceUpperBound        DECIMAL(18, 2),

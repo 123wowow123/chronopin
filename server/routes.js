@@ -64,9 +64,9 @@ export default function (app) {
         .then(paginationHeader.setPaginationObject(res, req))
         .then((mainPinData) => {
           // Render Templated root page
-          res.render(app.get('appPath') + '/mainPinData.ejs', { mainPinData });
+          res.type('text/javascript').render(app.get('appPath') + '/mainPinData.ejs', { mainPinData });
         }).catch(() => {
-          res.render(app.get('appPath') + '/mainPinData.ejs', { mainPinData: null });
+          res.type('text/javascrip').render(app.get('appPath') + '/mainPinData.ejs', { mainPinData: null });
         });
 
     });

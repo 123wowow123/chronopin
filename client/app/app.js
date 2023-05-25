@@ -20,7 +20,8 @@ angular.module('chronopinNodeApp', [
   'validation.match',
   'angular-loading-bar',
   'ig.linkHeaderParser',
-  'angularGrid'
+  'angularGrid',
+  'ng-sortable'
 ])
   .config(($urlRouterProvider, $locationProvider, $sceProvider) => {
     $urlRouterProvider.otherwise('/');

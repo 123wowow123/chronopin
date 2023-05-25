@@ -94,9 +94,8 @@
                 thisPin.allDay = pin.allDay;
                 thisPin.media = pin.media;
                 thisPin.merchants = pin.merchants;
-                thisPin.locations = pin.locations && pin.locations.length ? pin.locations : this.getResetLocation(),
-
-                    thisPin.selectedMedia = _.get(pin, 'media[0]');
+                thisPin.locations = pin.locations && pin.locations.length ? pin.locations : this.getResetLocation();
+                thisPin.selectedMedia = _.get(pin, 'media[0]');
                 return this;
             };
 

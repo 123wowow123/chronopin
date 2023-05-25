@@ -115,7 +115,7 @@ function _createMSSQL(dateTime) {
         const StoredProcedureName = 'CreateDateTime';
         let request = new mssql.Request(conn)
           .input('title', mssql.NVarChar(1024), dateTime.title)
-          .input('description', mssql.NVarChar(4000), dateTime.description)
+          .input('description', mssql.NVarChar(mssql.MAX), dateTime.description)
           .input('sourceUrl', mssql.NVarChar(4000), dateTime.sourceUrl)
           .input('tip', mssql.NVarChar(4000), dateTime.tip)
           .input('utcStartDateTime', mssql.DateTime2(0), dateTime.utcStartDateTime)
@@ -159,7 +159,7 @@ function _createMSSQL(dateTime) {
 //         let request = new mssql.Request(conn)
 //           .input('id', mssql.Int, dateTime.id)
 //           .input('title', mssql.NVarChar(1024), dateTime.title)
-//           .input('description', mssql.NVarChar(4000), dateTime.description)
+//           .input('description', mssql.NVarChar(mssql.MAX), dateTime.description)
 //           .input('sourceUrl', mssql.NVarChar(4000), dateTime.sourceUrl)
 //           .input('tip', mssql.NVarChar(4000), dateTime.tip)
 //           .input('utcStartDateTime', mssql.DateTime2(7), dateTime.utcStartDateTime)

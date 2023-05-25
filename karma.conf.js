@@ -26,6 +26,8 @@ module.exports = function(config) {
       'client/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'client/bower_components/lodash/lodash.js',
       'client/bower_components/angulargrid/angulargrid.js',
+      'client/bower_components/Sortable/Sortable.js',
+      'client/bower_components/angular-legacy-sortablejs/angular-legacy-sortable.js',
       'client/bower_components/angular-ui-router/release/angular-ui-router.js',
       'client/bower_components/angular-validation-match/dist/angular-validation-match.min.js',
       'client/bower_components/angular-loading-bar/build/loading-bar.js',

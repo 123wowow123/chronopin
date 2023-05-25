@@ -46,7 +46,7 @@ function executeCreateTable() {
         SELECT
             id,
             LEFT(title, 64) AS searchTitle,
-            LEFT(description, 64) AS searchDescription
+            CAST(LEFT(description, 64) as nvarchar(64)) AS searchDescription
 
         FROM [dbo].[Pin]
         `;

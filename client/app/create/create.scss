@@ -82,6 +82,18 @@
     margin-top: 25px;
   }
 
+  .location-addon {
+    .fa-ellipsis-h {
+      position: absolute;
+      bottom: 0px;
+      left: 11.5px;
+    }
+  }
+
+  .location-label {
+    margin: 0 15px;
+  }
+
 }
 
 .image-dynamic-grid {

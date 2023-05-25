@@ -85,7 +85,7 @@
 
       getGoogleMapUrl(pin) {
         function googleMapEncode(location) {
-          return location.address.replace(' ', '+')
+          return encodeURIComponent(location.address);
         }
         function joinLocations(locations) {
           return locations.reduce((a, t) => {
@@ -113,7 +113,9 @@
           waypoints = joinLocations(cloneLocations);
         }
 
-        if (locationLength === 1) {
+        if (!origin) {
+          return '';
+        } else if (locationLength === 1) {
           return `https://www.google.com/maps/embed/v1/place` +
             key +
             `&q=${origin}`;

@@ -43,7 +43,7 @@ function executeCreateTable() {
         (
             id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
             title NVARCHAR(1024) NOT NULL,
-            description NVARCHAR(4000),
+            description NVARCHAR(max),
             sourceUrl NVARCHAR(4000),
             tip NVARCHAR(4000),
             utcStartDateTime DATETIME2(0) NOT NULL,

@@ -117,7 +117,7 @@
 
 
     hasMap() {
-      return !!_.get(this.pin, 'locations[0].address');
+      return this.Util.hasAddress(this.pin);
     }
 
     getGoogleMapUrl() {

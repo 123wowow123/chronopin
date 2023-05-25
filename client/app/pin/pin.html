@@ -73,7 +73,6 @@
 
         <div class="grid__body">
 
-
           <div class="grid__description" ng-bind-html="$ctrl.pin.description"></div>
           <div class="grid__footer">
 
@@ -148,9 +147,9 @@
     <div class="pin__right_pannel">
       <div class="pin__right_pannel_content">
         <!-- Google Map-->
-        <div class="pin__map embed" ng-if="$ctrl.hasMap()">
+        <div class="pin__map embed" ng-if="$ctrl.hasMap() && $ctrl.getGoogleMapUrl()">
           <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade" src="{{$ctrl.getGoogleMapUrl()}}">
+            referrerpolicy="no-referrer-when-downgrade" ng-src="{{$ctrl.getGoogleMapUrl()}}">
           </iframe>
         </div>
 
