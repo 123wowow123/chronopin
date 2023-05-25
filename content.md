@@ -18,52 +18,44 @@ missing description validation
 
 Should show page not found and redirect to home? https://chronopin.com/pin/178
 quck add Q2 etc
+default does not select media but when selected it will auto check pin header media.
+
+
+
+SEO:
+ test "site:"
+ add button for infinit scroll seo
+ Add alt text for image/media for SEO
+Google index sub pages: RSS, mRSS, and Atom 1.0
+https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap#rss
+
+Monetize:
+can suggest airbnb and flights referals when map data is available
+Affliate buy link with price scrape +
+Buy keywords in content that will turn into link where it will show map and nearest location when you can buy product.
 
 Features:
 
-check mapbox
+Basic content Hashtag ++
+hash*tag? useful for 'editor's choice' and other badges ++
 
-add button for infinit scroll seo
-change pin page header to h1 and test "site:"
-
-
-can suggest airbnb and flights referals when map data is available
-
-
-default does not select media but when selected it will auto check pin header media.
-
-Add image upload content/mainPin and supporting media reference tab ++ embed youtube/twitter/image/hashtag/alignment
-Map and address field +
-Basic content Hashtag +
 All links to outside site will be converted to target blank +
 
 Share yelp with pictures and location +
 Share gouping through email and signup +
-
-hash*tag? useful for 'editor's choice' and other badges ++
-Search by author and by tag (includes pins with group containing tags) ++
 Modal save favorite with naming/tag and quick button tab with search watch page (delay this in favor of just using tags) ++
-Affliate buy link with price scrape +
+
 Show youtube transcript on create pin for referance +
 Add google chrome auto login +
 Tab for "For you" & "Following"
 Add Poll feature
 Preview create pin
-Upload image for pin and pin content
-Buy keywords in content that will turn into link where it will show map and nearest location when you can buy product.
-Google index sub pages: RSS, mRSS, and Atom 1.0
-https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap#rss
-Add alt text for image/media for SEO
+
 Remove jquery for speedup
-
 add rottentomatoes rating +
-
 Show number of days countdown in pin page
-
 comment should have ability to show pictures / pins
-
 Add do not show pin again feature
-
 Add no date pin feature and have it come up time to time so people cam contribute more info
 
 Cleanup:
@@ -74,6 +66,7 @@ client validate url before submitting
 R&D:
 Research hashtag
 create non headless browser
+check mapbox
 
 Each pin has main image, video quick link
 
