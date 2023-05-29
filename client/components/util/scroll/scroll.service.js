@@ -53,7 +53,7 @@
             findYPos(el) {
                 let curtop = 0,
                     originalEl = el;
-                if (el.offsetParent) {
+                if (el && el.offsetParent) {
                     do {
                         curtop += el.offsetTop;
                     } while (!!(el = el.offsetParent));
