@@ -5,7 +5,7 @@
 
     class SearchController {
 
-        constructor($stateParams, $state, $scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, commentJs, $log, $timeout) {
+        constructor($stateParams, $state, $scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, searchService, Util, mainUtilService, pinApp, Auth, appConfig, commentJs, $log, $timeout) {
 
             // constants
             const omitLinkHeaderProp = ['rel', 'url'];
@@ -31,6 +31,7 @@
             // util service
             this.mainUtilService = mainUtilService;
             this.ScrollUtil = ScrollUtil;
+            this.searchService = searchService;
             this.Util = Util;
 
             // model service
@@ -60,6 +61,15 @@
         }
 
         $onInit() {
+            if (this.searchService.lastNotification) {
+                this.search = this.searchService.lastNotification.searchText;
+                this.searchChoice = this.Util.sanitizeSearchChoice(this.searchService.lastNotification.searchChoiceText)
+                this.submitSearch(
+                    this.search,
+                    this.searchChoice.value,
+                );
+            }
+
             const searchSubmitListener = this.$scope.$on('search:submit', (event, args) => {
                 this.search = args.searchText;
                 this.searchChoice = this.Util.sanitizeSearchChoice(args.searchChoiceText)
@@ -74,11 +84,6 @@
 
         submitSearch(search, filterValue) {
             const threadEmoji = this.appConfig.searchPrefix.threadEmoji;
-
-            if (!search && !filterValue) {
-                return this.$state.go('main');
-            }
-
             this.searching = true;
             let searchPromise;
             if (search && search.startsWith(threadEmoji)) {

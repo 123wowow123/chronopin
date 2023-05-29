@@ -32,6 +32,9 @@ class NavbarController {
 
   $onInit() {
     const searchSubmitListener = this.$scope.$on('search:submit', (event, args) => {
+      if (!args.searchText && !args.searchChoiceText) {
+        this.clearSearch();
+      }
       this.search = args.searchText;
       this.searchChoice = this.Util.sanitizeSearchChoice(args.searchChoiceText);
     });

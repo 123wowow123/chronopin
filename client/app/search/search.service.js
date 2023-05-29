@@ -4,12 +4,15 @@
 
     class SearchService {
         constructor($rootScope, $state, $transitions, appConfig) {
+            this.lastNotification;
             this.appConfig = appConfig;
             this.$rootScope = $rootScope;
             this.$state = $state;
             this.locationService = $state.router.locationService;
+
             const extractedQuery = this._extractQuery(this.locationService);
-            if(extractedQuery.path == "/search"){
+            if (extractedQuery.path == "/search") {
+                this.lastNotification = extractedQuery;
                 this.notifySearch(
                     extractedQuery.searchText,
                     extractedQuery.searchChoiceText
@@ -19,9 +22,18 @@
             // todo: if route is search and submit
             $transitions.onSuccess({ entering: 'search' }, (transition) => {
                 const extractedQuery = this._extractQuery(this.locationService);
+                this.lastNotification = extractedQuery;
                 this.notifySearch(
                     extractedQuery.searchText,
                     extractedQuery.searchChoiceText
+                );
+            });
+
+            $transitions.onSuccess({ exiting: 'search' }, (transition) => {
+                this.lastNotification = undefined;
+                this.notifySearch(
+                    undefined,
+                    undefined
                 );
             });
 
@@ -43,14 +55,10 @@
         }
 
         notifySearch(searchText, searchChoiceText) {
-            setTimeout(() => {
-                setTimeout(() => {
-                    this.$rootScope.$broadcast('search:submit', {
-                        searchText,
-                        searchChoiceText
-                    });
-                }, 0)
-            }, 0);
+            this.$rootScope.$broadcast('search:submit', {
+                searchText,
+                searchChoiceText
+            });
         }
 
         goSearch(searchText, searchChoiceText) {
