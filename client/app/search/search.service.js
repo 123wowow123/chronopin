@@ -3,27 +3,68 @@
 (function () {
 
     class SearchService {
-        constructor($rootScope, $state) {
+        constructor($rootScope, $state, $transitions, appConfig) {
+            this.appConfig = appConfig;
             this.$rootScope = $rootScope;
             this.$state = $state;
+            this.locationService = $state.router.locationService;
+            const extractedQuery = this._extractQuery(this.locationService);
+            if(extractedQuery.path == "/search"){
+                this.notifySearch(
+                    extractedQuery.searchText,
+                    extractedQuery.searchChoiceText
+                );
+            }
+
+            // todo: if route is search and submit
+            $transitions.onSuccess({ entering: 'search' }, (transition) => {
+                const extractedQuery = this._extractQuery(this.locationService);
+                this.notifySearch(
+                    extractedQuery.searchText,
+                    extractedQuery.searchChoiceText
+                );
+            });
+
         }
 
-        submit(searchText, searchChoiceText) {
-            this.$rootScope.$broadcast('search:submit', {
+        _extractQuery(locationService) {
+            const hashTag = this.appConfig.searchPrefix.hashTag;
+            const path = locationService.path();
+            const args = locationService.search();
+            const hashValue = locationService.hash()
+            const q = args.q;
+            const searchChoiceText = args.f;
+            const searchText = (q || '') + (hashValue ? `${hashTag}${hashValue}` : '');
+            return {
+                path,
                 searchText,
                 searchChoiceText
-            });
+            };
+        }
+
+        notifySearch(searchText, searchChoiceText) {
+            setTimeout(() => {
+                setTimeout(() => {
+                    this.$rootScope.$broadcast('search:submit', {
+                        searchText,
+                        searchChoiceText
+                    });
+                }, 0)
+            }, 0);
+        }
+
+        goSearch(searchText, searchChoiceText) {
+            if (!searchText && !searchChoiceText) {
+                return this.goToMain();
+            }
+            this.$state.go('search', { q: searchText, f: searchChoiceText });
             return this;
         }
 
-        update(searchText, searchChoiceText) {
-            this.$rootScope.$broadcast('search:update', {
-                searchText,
-                searchChoiceText
-            });
+        goToMain() {
+            this.$state.go('main');
             return this;
         }
-
     }
 
     angular.module('chronopinNodeApp')

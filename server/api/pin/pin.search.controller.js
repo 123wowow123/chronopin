@@ -43,7 +43,7 @@ export function searchPins(req, res) {
     searchText = req.query.q,
     hasFavorite = req.query.f && req.query.f.toLowerCase() == 'watch';
 
-  const searchTextArray = searchText.split(" ");
+  const searchTextArray = searchText ? searchText.split(" ") : [];
   const userNames = searchTextArray.filter(t => {
     return t.startsWith("@");
   });

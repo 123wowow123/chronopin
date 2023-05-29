@@ -14,12 +14,13 @@
                 <input name="respondPinTitle" class="form-control" id="respondPinTitle" ng-model="$ctrl.respondPinTitle"
                   required disabled>
               </div>
-              <!-- <div class="form-group" ng-class="{'has-error' : pinForm.parentId.$invalid && pinForm.parentId.$dirty}"
-                  ng-if="$ctrl.mode === 'respond' ">
-                  <label for="parentId" class="control-label">Parent Pin ID</label>
-                  <input name="parentId" type="number" class="form-control" id="parentId" ng-model="$ctrl.pin.parentId"
-                    required disabled>
-                </div> -->
+
+              <div class="form-group" ng-class="{'has-error' : pinForm.parentId.$invalid && pinForm.parentId.$dirty}"
+                ng-if="$ctrl.mode === 'edit' ">
+                <!-- Admin -->
+                <label for="parentId" class="control-label">Parent Pin ID (Admin)</label>
+                <input name="parentId" type="number" class="form-control" id="parentId" ng-model="$ctrl.pin.parentId">
+              </div>
               <div style="position: relative;">
                 <a href="{{$ctrl.pin.sourceUrl}}" target="_blank" class="btn btn-link --open-source-link">Open Link
                   <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a>
@@ -171,7 +172,7 @@
                 <div class="content_block">
                   <label for="location" class="control-label location-label">Location</label>
                   <ul class="list-group merchant-list" ng-sortable=$ctrl.sortableConf>
-                    
+
                     <li class="list-group-item" ng-repeat="location in $ctrl.pin.locations track by $index">
 
                       <!-- Location Elements -->
@@ -181,7 +182,8 @@
                           <div class="col-xs-11">
                             <div class="input-group"
                               ng-class="{'has-error' : pinForm['location' + $index].$invalid && pinForm['location' + $index].$dirty}">
-                              <div class="input-group-addon location-addon"><i class="fa fa-map-marker" aria-hidden="true"></i><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                              <div class="input-group-addon location-addon"><i class="fa fa-map-marker"
+                                  aria-hidden="true"></i><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
                               <input name="{{'location' + $index}}" type="text" class="form-control"
                                 id="{{'location' + $index}}" placeholder="Location (optional) eg: San Francisco, CA"
                                 ng-model="location.address" ng-required="$ctrl.pin.locations.length != 1">

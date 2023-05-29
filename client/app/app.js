@@ -25,9 +25,7 @@ angular.module('chronopinNodeApp', [
 ])
   .config(($urlRouterProvider, $locationProvider, $sceProvider) => {
     $urlRouterProvider.otherwise('/');
-
     $locationProvider.html5Mode(true);
-
     $sceProvider.enabled(false);
   })
   .config(['cfpLoadingBarProvider', (cfpLoadingBarProvider) => {
@@ -37,3 +35,6 @@ angular.module('chronopinNodeApp', [
   //   uibDatepickerPopupConfig.datepickerPopupTemplateUrl = 'components/templates/datepickerPopup/popup.html';
   //   uibDatepickerPopupConfig.beginDateText = "Match"
   // }]);
+  .controller('AppCtrl', function ($scope, searchService) {
+    // Initializes searchService singleton
+  });

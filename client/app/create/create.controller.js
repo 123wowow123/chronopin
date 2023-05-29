@@ -243,7 +243,7 @@
     }
 
     resetForScrape() {
-      let newPin = _.pick(this.pin, ['sourceUrl', 'allDay', 'parentId', 'useMedia']);
+      let newPin = _.pick(this.pin, ['sourceUrl', 'allDay', 'id', 'parentId', 'useMedia']);
       this.scrapeService
         .setPin(this.pin, newPin);
       return this;

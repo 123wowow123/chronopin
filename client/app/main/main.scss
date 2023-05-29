@@ -239,6 +239,12 @@ $bag-font-color: var(--bag-text-color);
         margin-right: 10px;
     }
 
+    &__body {
+        .embed {
+            margin-bottom: 10px;
+        }
+    }
+
     &__content {
         max-height: 600px;
         overflow: hidden;
@@ -416,8 +422,9 @@ $bag-font-color: var(--bag-text-color);
             color: $timeline-content-color;
         }
 
-        // &.\--remove {
-        // }
+        &.\--remove {
+            color: #C49702;
+        }
 
         &:hover {
             color: #23527c !important;
@@ -439,8 +446,9 @@ $bag-font-color: var(--bag-text-color);
             color: $timeline-content-color;
         }
 
-        // &.\--remove {
-        // }
+        &.\--remove {
+            color: #C49702;
+        }
 
         &:hover {
             color: #23527c !important;

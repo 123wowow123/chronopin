@@ -159,7 +159,7 @@ Object.defineProperty(LikePrototype, 'pinId', {
 });
 
 function _upsert(likeIn, userId, pinId) {
-  return _upsertMSSQL(like, userId, pinId)
+  return _upsertMSSQL(likeIn, userId, pinId)
     .then(({
       like
     }) => {

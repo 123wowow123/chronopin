@@ -43,7 +43,7 @@
               </time>
             </a>
             <span class="rubric__divider">/</span>
-            <a ng-click="$ctrl.searchService.submit($ctrl.pin.user.userName)" class="rubric">
+            <a ng-href="/search?q={{$ctrl.pin.user.userName}}" class="rubric">
               <span>{{$ctrl.pin.user.userName}}</span>
             </a>
           </div>
@@ -120,9 +120,11 @@
               <div class="grid__social">
                 <div class="grid__watch" ng-switch="!!$ctrl.pin.hasFavorite">
                   <button type="button" class="grid__favorite --add" ng-click="$ctrl.addFavorite($ctrl.pin)"
-                    ng-switch-default><i class="fa fa-eye" aria-hidden="true"></i> {{pin.favoriteCount}}</button>
+                    title="Add to watch" ng-switch-default><i class="fa fa-eye" aria-hidden="true"></i>
+                    {{pin.favoriteCount}}</button>
                   <button type="button" class="grid__favorite --remove" ng-click="$ctrl.removeFavorite($ctrl.pin)"
-                    ng-switch-when="true"><i class="fa fa-eye" aria-hidden="true"></i> {{pin.favoriteCount}}</button>
+                    title="Remove from watch" ng-switch-when="true"><i class="fa fa-eye" aria-hidden="true"></i>
+                    {{pin.favoriteCount}}</button>
                 </div>
 
                 <div class="grid__likes">
@@ -132,8 +134,8 @@
                 </div>
 
                 <div class="grid__tip" ng-if="$ctrl.isAdmin()">
-                  <button class="btn btn-link" ui-sref="update({id:$ctrl.pin.id})"><i class="fa fa-pencil"
-                      aria-hidden="true"></i></button>
+                  <button class="btn btn-link" ui-sref="update({id:$ctrl.pin.id})" title="Edit Pin"><i
+                      class="fa fa-pencil" aria-hidden="true"></i></button>
                 </div>
               </div>
 
@@ -151,6 +153,12 @@
           <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
             referrerpolicy="no-referrer-when-downgrade" ng-src="{{$ctrl.getGoogleMapUrl()}}">
           </iframe>
+        </div>
+
+        <div class="pin__map_locations" ng-if="$ctrl.hasMap() && $ctrl.getGoogleMapUrl()">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <span class="pin__map_location"
+            ng-repeat="location in $ctrl.pin.locations track by $index">{{location.address}}</span>
         </div>
 
         <div class="pin__thread">

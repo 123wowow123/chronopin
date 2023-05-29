@@ -50,7 +50,7 @@
   }
 
   &__map {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
   &__thread_bottom_ads {
@@ -104,6 +104,27 @@
   .fb-like {
     position: relative;
     top: 3px;
+  }
+
+  .pin__map_locations {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+
+    .fa-map-marker{
+      display: inline-block;
+      margin-right: 5px;
+      color: #337ab7;
+    }
+
+    .pin__map_location::before {
+      content: ", ";
+    }
+
+    .pin__map_location:first-of-type::before {
+      content: "";
+    }
   }
 
 }

@@ -5,8 +5,6 @@ Merchant create UI
 
 Bugs:
 
-twitter load jump issue ++
-fix pin overlap issue +
 Editing pin with youtube content will delete youtube content in edit mode ++
 
 pins loaded from infinit scroll needs to be in memory so that navigating back to home will have proper scroll position ++
@@ -17,13 +15,14 @@ remove facebook like
 missing description validation
 
 Should show page not found and redirect to home? https://chronopin.com/pin/178
-quck add Q2 etc
+quick add Q2 etc
 default does not select media but when selected it will auto check pin header media.
-
+fix search back not clearing +
+Favorite & Watch not being backed up and seeding ++
+User not using seed file ++
 
 
 SEO:
- Google Analytics 4
  test "site:"
  add button for infinit scroll seo
  Add alt text for image/media for SEO
@@ -34,6 +33,7 @@ Monetize:
 can suggest airbnb and flights referals when map data is available
 Affliate buy link with price scrape +
 Buy keywords in content that will turn into link where it will show map and nearest location when you can buy product.
+Pin dollar tag should link to referal page in new tab
 
 Features:
 
@@ -44,7 +44,7 @@ All links to outside site will be converted to target blank +
 
 Share yelp with pictures and location +
 Share gouping through email and signup +
-Modal save favorite with naming/tag and quick button tab with search watch page (delay this in favor of just using tags) ++
+Modal save favorite with naming/tag and quick button tab with search watch page (delay this in favor of just using tags) +
 
 Show youtube transcript on create pin for referance +
 Add google chrome auto login +
@@ -58,11 +58,13 @@ Show number of days countdown in pin page
 comment should have ability to show pictures / pins
 Add do not show pin again feature
 Add no date pin feature and have it come up time to time so people cam contribute more info
+Search twitter pins by scraping and indexing it's text
 
 Cleanup:
 test comment db backup
 Sanitize all post values
 client validate url before submitting
+Add very unsure, unsure, sure, very sure for dates and article content 
 
 R&D:
 Research hashtag
@@ -79,6 +81,11 @@ Click on tag to show only matching
 Add all Tesla shareholder/demo videos and buy link
 https://www.youtube.com/watch?v=bZNL_8bUz6A&t=3520s
 Add bullet point summery
+
+Create alert for price drop
+Poeple can post used items to product as well and post price
+
+Show new only when logged in and fade pin in new timebag and collapse others that does not have new content
 
 To Do:
 
@@ -300,3 +307,15 @@ and expansions
 
 https://www.motor1.com/news/449472/hyundai-porest-compact-rv/
 korea only
+
+
+https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm
+reocurring events
+
+
+https://marketrealist.com/p/us-companies-leaving-china/#:~:text=Yahoo%20Joins%20the%20List%201%20Yahoo%20is%20leaving,of%20China%20in%20the%20past%20few%20years.%20
+
+
+https://youtu.be/7Qo9a6yMxE0?t=513
+China expectd to becoe the world's largest luxury goods market by 2025
+need timestamped youtube

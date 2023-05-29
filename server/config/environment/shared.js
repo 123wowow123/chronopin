@@ -2,6 +2,10 @@
 
 // This data also goes into client config
 exports = module.exports = {
+  searchPrefix: {
+    threadEmoji: "🧵",
+    hashTag: "#"
+  },
   // List of user roles
   userRoles: ['guest', 'user', 'admin'],
   searchChoices: [

@@ -160,7 +160,7 @@ Object.defineProperty(FavoritePrototype, 'pinId', {
 });
 
 function _upsert(favoriteIn, userId, pinId) {
-  return _upsertMSSQL(favorite, userId, pinId)
+  return _upsertMSSQL(favoriteIn, userId, pinId)
     .then(({
       favorite
     }) => {

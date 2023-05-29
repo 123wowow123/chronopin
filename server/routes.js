@@ -8,6 +8,7 @@ import errors from './components/errors';
 import path from 'path';
 import * as paginationHeader from './util/paginationHeader'
 const mainController = require('./api/main/main.controller');
+const auth = require('./auth/auth.service');
 
 export default function (app) {
   // Insert routes below
@@ -36,7 +37,7 @@ export default function (app) {
   app.use('/auth', require('./auth').default);
   app.use('/upload', require('./api/upload'));
 
-  
+
   // Direct isso request is easier to maintain
   //app.use('/isso', require('./isso'));
 
@@ -59,6 +60,7 @@ export default function (app) {
 
 
   app.route('/mainPinData.js')
+    .get(auth.tryGetUser())
     .get((req, res) => {
       const mainPinDataPromise = mainController.getPinsAndFormatData(req, res)
         .then(paginationHeader.setPaginationObject(res, req))

@@ -60,23 +60,33 @@
         }
 
         $onInit() {
-            const query = this.$stateParams.q;
-            const filter = this.Util.sanitizeSearchChoice(this.$stateParams.f);
-            const filterValue = filter && filter.value;
+            const searchSubmitListener = this.$scope.$on('search:submit', (event, args) => {
+                this.search = args.searchText;
+                this.searchChoice = this.Util.sanitizeSearchChoice(args.searchChoiceText)
 
-            if (!query && !filterValue) {
+                this.submitSearch(
+                    this.search,
+                    this.searchChoice.value,
+                );
+            });
+            this.registeredListeners['search:submit'] = searchSubmitListener;
+        }
+
+        submitSearch(search, filterValue) {
+            const threadEmoji = this.appConfig.searchPrefix.threadEmoji;
+
+            if (!search && !filterValue) {
                 return this.$state.go('main');
             }
 
             this.searching = true;
-            const threadEmoji = "🧵";
             let searchPromise;
-            if (query && query.startsWith(threadEmoji)) {
-                const pinId = +query.substring(threadEmoji.length);
+            if (search && search.startsWith(threadEmoji)) {
+                const pinId = +search.substring(threadEmoji.length);
                 searchPromise = this.pinWebService.thread(pinId);
             } else {
                 searchPromise = this.pinWebService.search({
-                    q: query,
+                    q: search,
                     f: filterValue
                 });
             }
@@ -96,7 +106,10 @@
         }
 
         $onDestroy() {
-
+            if (this.registeredListeners['search:submit']) {
+                this.registeredListeners['search:submit']();
+                delete this.registeredListeners['search:submit'];
+            }
         }
 
         // View functions

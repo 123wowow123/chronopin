@@ -80,7 +80,8 @@
           <a ui-sref="signup">Sign up</a>
         </li>
         <li ng-hide="nav.isLoggedIn()" ui-sref-active="active">
-          <a ui-sref="login">Login</a>
+          <a ng-if="nav.$location.$$url.startsWith('/pin')" ui-sref="login({redirect: nav.$location.$$url})">Login</a>
+          <a ng-if="!nav.$location.$$url.startsWith('/pin')" ui-sref="login">Login</a>
         </li>
 
         <li class="dropdown user-setting" ng-show="nav.isLoggedIn()" uib-dropdown keyboard-nav>

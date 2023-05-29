@@ -134,5 +134,9 @@ export function setTokenCookie(req, res) {
   }
   var token = signToken(+req.user.id, req.user.role);
   res.cookie('token', token);
-  res.redirect('/');
+
+  const redirect = _.get(req, "cookies.redirect");
+  res.cookie('redirect', undefined);
+  redirect ? res.redirect(redirect) : res.redirect('/');
+
 }

@@ -1,11 +1,8 @@
 'use strict';
 
 class NavbarController {
-  //end-non-standard
 
-  //start-non-standard
-
-  constructor(Auth, $rootScope, $state, $scope, $element, Util, appConfig, pinWebService, $transitions) {
+  constructor(Auth, $rootScope, $stateParams, $state, $scope, $element, $location, Util, searchService, appConfig, pinWebService, $transitions) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
@@ -15,9 +12,12 @@ class NavbarController {
     this.searchControlsFocus = false;
 
     this.$rootScope = $rootScope;
+    this.$stateParams = $stateParams;
     this.$state = $state;
+    this.$location = $location;
 
     this.Util = Util;
+    this.searchService = searchService;
     this.pinWebService = pinWebService;
 
     this.searchChoices = appConfig.searchChoices;
@@ -26,41 +26,31 @@ class NavbarController {
     this.$transitions = $transitions;
 
     this.registeredListeners = {};
+    this.searchChoice = this.Util.sanitizeSearchChoice();
+    this.searchCountSubmitted = 0;
   }
 
   $onInit() {
-    this.search = this.$state.params.q;
-    this.searchChoice = this.Util.sanitizeSearchChoice(this.$state.params.f);
-    this.searchCountSubmitted = 0;
-
     const searchSubmitListener = this.$scope.$on('search:submit', (event, args) => {
       this.search = args.searchText;
-      this.searchChoice = args.searchChoiceText
-        ? this.Util.sanitizeSearchChoice(args.searchChoiceText)
-        : this.Util.sanitizeSearchChoice(this.$state.params.f);
-
-      this.submitSearch(
-        this.search,
-        this.searchChoice.value,
-      )
+      this.searchChoice = this.Util.sanitizeSearchChoice(args.searchChoiceText);
     });
     this.registeredListeners['search:submit'] = searchSubmitListener;
   }
 
   clearSuggestionsAndDismiss() {
-    // TODO: add popular search suggestions
     this.suggestions = [];
     this.showSuggestions = false;
   }
 
   submitSearch(searchText, searchChoiceText) {
     this.dismissAutoComplete();
-    this.$state.go('search', { q: searchText, f: searchChoiceText });
+    this.searchService.goSearch(searchText, searchChoiceText);
     this.searchCountSubmitted = 0;
-    return this;
   }
 
   autoComplete(searchText, searchChoiceText) {
+    // TODO: add popular search suggestions
     if (!searchText) {
       this.clearSuggestionsAndDismiss();
     }
@@ -97,18 +87,17 @@ class NavbarController {
   }
 
   clearSearchToMain() {
-    return this.clearSearch()
-      .goToMain();
+    this.clearSearch();
+    // Empty search and filter will return home
+    this.submitSearch(
+      this.search,
+      this.searchChoice.value,
+    );
   }
 
   clearSearch() {
     this.search = null;
     this.searchChoice = this.searchChoices[0];
-    return this;
-  }
-
-  goToMain() {
-    this.$state.go('main');
     return this;
   }
 
@@ -128,11 +117,8 @@ class NavbarController {
   // }
 
   showAutoComplete($event, searchText) {
-    //console.log(JSON.stringify($event));
     $event.stopPropagation();
-
     if (!searchText) {
-      //debugger;
       return this.clearSuggestionsAndDismiss();
     }
 
@@ -142,14 +128,11 @@ class NavbarController {
   }
 
   onAutoCompleteSelect($event) {
-    //console.log(JSON.stringify($event.data));
     this.search = $event.data.title;
     this.submitSearch(this.search, this.searchChoice.value);
   }
 
   dismissAutoComplete() {
-    //console.log("On autocomplete dismiss", JSON.stringify())
-    //debugger;
     this.showSuggestions = false;
   }
 
