@@ -137,6 +137,6 @@ export function setTokenCookie(req, res) {
 
   const redirect = _.get(req, "cookies.redirect");
   res.cookie('redirect', undefined);
-  redirect ? res.redirect(redirect) : res.redirect('/');
+  redirect && redirect !== '/login' ? res.redirect(redirect) : res.redirect('/');
 
 }
