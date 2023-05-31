@@ -11,7 +11,8 @@ import {
     Favorite,
     Medium,
     Merchant,
-    Location
+    Location,
+    Mention
 } from '../..';
 
 
@@ -75,12 +76,16 @@ export default class FullPin extends BasePin {
                 const saveLocationsPromises = this.locations.map(m => {
                     return new Location(m, this).save();
                 });
+                const saveMentionsPromises = this.mentions.map(m => {
+                    return new Mention(m, this).save();
+                });
                 return Promise.all([
                     ...saveLikePromises,
                     ...saveFavoritePromises,
                     ...saveMediumPromises,
                     ...saveMerchantsPromises,
-                    ...saveLocationsPromises
+                    ...saveLocationsPromises,
+                    ...saveMentionsPromises
                 ]);
             });
         return savePinPromise;
@@ -93,6 +98,7 @@ export default class FullPin extends BasePin {
         pin.likes = _mapPinRowsToLikes(pinRows);
         pin.merchants = _mapPinRowsToMerchants(pinRows);
         pin.locations = _mapPinRowsToLocations(pinRows);
+        pin.mentions = _mapPinRowsToMentions(pinRows);
         return new FullPin(pin);
     }
 }
@@ -117,4 +123,8 @@ function _mapPinRowsToMerchants(pinRows) {
 
 function _mapPinRowsToLocations(pinRows) {
     return mapHelper.mapSubObjectFromQuery('Location', 'id', pinRows);
+}
+
+function _mapPinRowsToMentions(pinRows) {
+    return mapHelper.mapSubObjectFromQuery('Mention', 'id', pinRows);
 }

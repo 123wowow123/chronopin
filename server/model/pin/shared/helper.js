@@ -33,8 +33,8 @@ export function mapSubObjectFromQuery(prefix, groupKey, pinRows) {
 }
 
 export function extractTags(searchText) {
-  const matchHashString = /(?<!class="chrono-hash-highlight">)(?<!href="\/search\?q=)(#[A-z\d-]+)/g;
-  const matchAtString = /(?<!class="chrono-at-highlight">)(@[A-z\d-]+)/g;
+  const matchHashString = /(?<!class="chrono-hash-highlight">)(#[A-z\d-]+)(?:<)/g;
+  const matchAtString = /(?<!class="chrono-at-highlight">)(@[A-z\d-]+)(?:<)/g;
   const hashTags = [];
   const atTags = [];
   let result1, result2;
