@@ -37,7 +37,6 @@ Pin dollar tag should link to referal page in new tab
 
 Features:
 
-Basic content Hashtag ++
 hash*tag? useful for 'editor's choice' and other badges ++
 
 All links to outside site will be converted to target blank +
