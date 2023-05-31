@@ -17,7 +17,8 @@ missing description validation
 Should show page not found and redirect to home? https://chronopin.com/pin/178
 quick add Q2 etc
 default does not select media but when selected it will auto check pin header media.
-fix search back not clearing +
+
+
 Favorite & Watch not being backed up and seeding ++
 User not using seed file ++
 
@@ -38,6 +39,7 @@ Pin dollar tag should link to referal page in new tab
 Features:
 
 hash*tag? useful for 'editor's choice' and other badges ++
+$tag mention will show ticker price in pin view
 
 All links to outside site will be converted to target blank +
 
@@ -312,3 +314,6 @@ https://marketrealist.com/p/us-companies-leaving-china/#:~:text=Yahoo%20Joins%20
 https://youtu.be/7Qo9a6yMxE0?t=513
 China expectd to become the world's largest luxury goods market by 2025
 need timestamped youtube
+
+https://twitter.com/INArteCarloDoss/status/1663872116314329088
+

@@ -50,14 +50,22 @@ function executeCreateSP() {
 
             SET NOCOUNT ON;
 
-            INSERT INTO [dbo].[Mention] (
-              tag
-            )
-            VALUES (
-              @tag
-            );
+            IF EXISTS(SELECT tag FROM [dbo].[Mention] WHERE tag = @tag)
+            BEGIN
+                SELECT top 1 @id = id FROM [dbo].[Mention] WHERE tag = @tag
+            END
+            ELSE
+            BEGIN
+                --insert new row
+                INSERT INTO [dbo].[Mention] (
+                  tag
+                )
+                VALUES (
+                  @tag
+                );
 
-            SET @id = SCOPE_IDENTITY();
+                SET @id = SCOPE_IDENTITY();
+            END
 
           END;
         `;

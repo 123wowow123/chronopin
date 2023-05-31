@@ -83,8 +83,7 @@ export default class Mention {
 
   static scrapeAllMention(text) {
     const tagObj = Mention.scrapeMention(text);
-    const allTags = tagObj.hashTags.concat(tagObj.atTags);
-    return allTags;
+    return tagObj.allTags;
   }
 
 }

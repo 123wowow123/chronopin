@@ -77,6 +77,7 @@
                           let firstEl = el.firstChild;
                           const matchTagStringWithSpace = /(?<!class="chrono-hash-highlight">)(#[A-z\d-]+(?:\s|&nbsp;))/g;
                           const matchAtStringWithSpace = /(?<!class="chrono-at-highlight">)(@[A-z\d-]+(?:\s|&nbsp;))/g;
+                          const matchDollarStringWithSpace = /(?<!class="chrono-at-highlight">)(\$[A-z]+[\d-]?(?:\s|&nbsp;))/g;
 
                           // Match #tag
                           if (matchTagStringWithSpace.test(firstEl.innerHTML)) {
@@ -89,10 +90,19 @@
                             // firstEl.innerHTML = firstEl.innerHTML.replace(/&nbsp;/, ' ');
                             // placeCaretAtEnd(el)
                           }
+                          // Match @tag
                           if (matchAtStringWithSpace.test(firstEl.innerHTML)) {
                             const matchAtString = /(?<!class="chrono-at-highlight">)(@[A-z\d-]+)/g;
                             const html = firstEl.innerHTML.replace(matchAtString, (x) => {
                               return `<a href="/search?q=${x}" class="chrono-at-highlight">${x}</a>`
+                            });
+                            firstEl.innerHTML = html;
+                          }
+                          // Match $tag
+                          if (matchDollarStringWithSpace.test(firstEl.innerHTML)) {
+                            const matchDollarString = /(?<!class="chrono-dollar-highlight">)(?<!href="\/search\?q=)(\$[A-z]+[\d-]?)/g;
+                            const html = firstEl.innerHTML.replace(matchDollarString, (x) => {
+                              return `<a href="/search?q=${x}" class="chrono-dollar-highlight">${x}</a>`
                             });
                             firstEl.innerHTML = html;
                           }

@@ -51,7 +51,7 @@ module.exports.setup = function (seedOpt) {
 
 module.exports.seedDB = function () {
   let mainUser,
-    defaultUserObj = {
+    defaultUserObj = { ///////////////////////////////////////////////////
       provider: 'facebook',
       role: 'admin',
       userName: '@ThePinGang',

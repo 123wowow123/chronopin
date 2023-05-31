@@ -5777,12 +5777,13 @@
   {
     "id": 210,
     "rootThread": false,
-    "title": "Last time Fed Funds Rate was this high, S&P 500 TTM PE was around 18.",
+    "title": "Last time Fed Funds Rate was this high, S&P 500 TTM PE was around 18 it's now 23.91",
     "sourceUrl": "https://twitter.com/RJRCapital/status/1656838113858076672",
     "utcStartDateTime": "2023-05-11T07:00:00.000Z",
-    "utcEndDateTime": "2023-05-12T07:00:00.000Z",
+    "utcEndDateTime": "2023-05-13T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-12T06:43:39.599Z",
+    "utcUpdatedDateTime": "2023-05-31T06:21:08.918Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -5795,6 +5796,12 @@
         "authorName": "RJR Capital",
         "authorUrl": "https://twitter.com/RJRCapital",
         "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">6/ So how has Big Tech fared? Here&#39;s a snapshot:<a href=\"https://twitter.com/search?q=%24AAPL&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$AAPL</a> 29.18 on 1/4, 29.47 now<a href=\"https://twitter.com/search?q=%24MSFT&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$MSFT</a> 35.39 then, 45.74 now<a href=\"https://twitter.com/search?q=%24GOOG&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$GOOG</a> 25.78 then, 35.21 now<a href=\"https://twitter.com/search?q=%24META&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$META</a> 24.37 then, 40.24 now<a href=\"https://twitter.com/search?q=%24NVDA&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$NVDA</a> 63.47 then, 164.24 now<a href=\"https://twitter.com/search?q=%24AMZN&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$AMZN</a> 51.35 then, 267.10 now<a href=\"https://twitter.com/search?q=%24NFLX&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$NFLX</a> and <a href=\"https://twitter.com/search?q=%24TSLA&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$TSLA</a> are the only 2 with lower PEs today.</p>&mdash; RJR Capital (@RJRCapital) <a href=\"https://twitter.com/RJRCapital/status/1656838113858076672?ref_src=twsrc%5Etfw\">May 12, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 47,
+        "pinId": 210
       }
     ],
     "userId": 1

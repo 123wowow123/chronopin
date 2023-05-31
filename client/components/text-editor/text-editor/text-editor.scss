@@ -56,8 +56,9 @@ $mobile-breakpoint: 651px;
 
 }
 
-.\chrono-hash-highlight,
-.\chrono-at-highlight  {
+.chrono-hash-highlight,
+.chrono-at-highlight,
+.chrono-dollar-highlight  {
     background-color: rgba(88, 144, 255, .15);
     border-bottom: 1px solid rgba(88, 144, 255, .3);
     // color: red;
