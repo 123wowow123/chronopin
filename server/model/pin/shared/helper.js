@@ -10,7 +10,7 @@ export function mapSubObjectFromQuery(prefix, groupKey, pinRows) {
     row => {
       return row[groupByKey]; // eg: 'Media.id'
     });
-  //debugger
+
   Object.entries(groupedSubRows)
     .forEach(([key, subRows]) => {
       let subObj = Object.entries(subRows[0])
@@ -33,20 +33,24 @@ export function mapSubObjectFromQuery(prefix, groupKey, pinRows) {
 }
 
 export function extractTags(searchText) {
-  const matchHashString = /(?<!class="chrono-hash-highlight">)(#[A-z\d-]+)(?:<)/g;
-  const matchAtString = /(?<!class="chrono-at-highlight">)(@[A-z\d-]+)(?:<)/g;
+  const matchHashString = /(?<!class="chrono-hash-highlight">)(#[A-z\d-]+)(?:<|\b)/g;
+  const matchAtString = /(?<!class="chrono-at-highlight">)(@[A-z\d-]+)(?:<|\b)/g;
   const hashTags = [];
   const atTags = [];
   let result1, result2;
 
   while ((result1 = matchHashString.exec(searchText)) !== null) {
     let matchString = result1[1];
-    hashTags.push(matchString);
+    if (!hashTags.includes(matchString)) {
+      hashTags.push(matchString);
+    }
   }
 
   while ((result2 = matchAtString.exec(searchText)) !== null) {
     let matchString = result2[1];
-    atTags.push(matchString);
+    if (!atTags.includes(matchString)) {
+      atTags.push(matchString);
+    }
   }
   return {
     hashTags,

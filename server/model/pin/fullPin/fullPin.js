@@ -126,5 +126,5 @@ function _mapPinRowsToLocations(pinRows) {
 }
 
 function _mapPinRowsToMentions(pinRows) {
-    return mapHelper.mapSubObjectFromQuery('Mention', 'id', pinRows);
+    return mapHelper.mapSubObjectFromQuery('Mention', 'tag', pinRows);
 }
