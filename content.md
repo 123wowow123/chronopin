@@ -66,7 +66,6 @@ client validate url before submitting
 Add very unsure, unsure, sure, very sure for dates and article content 
 
 R&D:
-Research hashtag
 create non headless browser
 check mapbox
 
@@ -74,7 +73,6 @@ Each pin has main image, video quick link
 
 Group into months, quarters
 Compact view to show more pins 
-Click on tag to show only matching
 
 
 Add all Tesla shareholder/demo videos and buy link
@@ -161,7 +159,7 @@ China by 2030 there will be more retirees than workers and by 2050 the entire po
 
 
 https://youtu.be/IGkzPGBkGhw?t=323
-May and June russian will have increased force and Ukraine will have tanks
+May and June Russian will have increased force and Ukraine will have tanks
 
 
 https://www.macrumors.com/2023/01/23/whats-next-for-the-mac/
@@ -294,10 +292,6 @@ Dallas Fort Worth has both Solar and wind potential
 
 
 
-Inflation Tracker group Tag and tag
-https://twitter.com/INArteCarloDoss/status/1652048950352814155
-
-
 https://en.wikipedia.org/wiki/Tokyo_Anime_Award
 
 https://en.wikipedia.org/wiki/World_of_Warcraft
@@ -316,5 +310,5 @@ https://marketrealist.com/p/us-companies-leaving-china/#:~:text=Yahoo%20Joins%20
 
 
 https://youtu.be/7Qo9a6yMxE0?t=513
-China expectd to becoe the world's largest luxury goods market by 2025
+China expectd to become the world's largest luxury goods market by 2025
 need timestamped youtube
