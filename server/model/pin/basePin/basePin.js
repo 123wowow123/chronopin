@@ -74,10 +74,9 @@ export default class BasePin {
                     return new Location(m, this);
                 });
 
-            const allTags = Mention.scrapeAllMention(this.description);
-            this.mentions = (allTags || [])
+            this.mentions = _.get(pin, 'mentions', [])
                 .map(m => {
-                    return new Mention({ tag: m }, this);
+                    return new Mention(m, this);
                 });
 
         } else {
@@ -96,6 +95,16 @@ export default class BasePin {
 
     delete() {
         throw new Error("Not Implemented");
+    }
+
+    rescrapeMention() {
+        const allTags = Mention.scrapeAllMention(this.description);
+        this.mentions = (allTags || [])
+            .map(m => {
+                return new Mention({ tag: m }, this);
+            });
+
+        return this;
     }
 
     setUser(user) {

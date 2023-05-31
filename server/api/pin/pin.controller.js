@@ -126,6 +126,7 @@ export function create(req, res) {
     newPin = new Pin(req.body);
 
   newPin
+    .rescrapeMention()
     .setUser(user);
 
   return newPin.save()
@@ -148,7 +149,9 @@ export function update(req, res) {
     // userId = +req.user.id,
     pin = new Pin(req.body);
 
-  pin.setUser(user);
+  pin
+    .rescrapeMention()
+    .setUser(user);
   pin.id = pinId;
 
   return pin.update()
