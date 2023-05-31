@@ -11,8 +11,8 @@ const createGetPinsWithFavoriteAndLikeInitialFilterByHasFavoriteSP = require('./
 const createGetPinByIdsSP = require('./pin/createGetPinByIdsSP');
 const createGetPinByIdsFilterByHasFavoriteSP = require('./pin/createGetPinByIdsFilterByHasFavoriteSP');
 const createGetPinsWithFavoriteAndLikeArrayNextSP = require('./pin/createGetPinsWithFavoriteAndLikeArrayNextSP');
-const createGetPinByAuthersFilterByHasFavoriteSP = require('./pin/createGetPinByAuthersFilterByHasFavoriteSP');
-const createGetPinByAuthersSP = require('./pin/createGetPinByAuthersSP');
+const createGetPinByTagsFilterByHasFavoriteSP = require('./pin/createGetPinByTagsFilterByHasFavoriteSP');
+const createGetPinByTagsSP = require('./pin/createGetPinByTagsSP');
 
 /* search pin */
 const createSearchPinSP = require('./pin/createSearchPinSP');
@@ -63,6 +63,10 @@ const createCreatePinMediumLinkSP = require('./pinMedium/createCreatePinMediumLi
 //const createCreateFavoriteSP = require('./favorite/createCreateFavoriteSP');
 /* dateTime */
 const createCreateDateTimeSP = require('./dateTime/createCreateDateTimeSP');
+/* mention */
+const createCreateMentionSP = require('./mention/createCreateMentionSP');
+const createCreatePinMentionSP = require('./pinMention/createCreatePinMentionSP');
+const createCreatePinMentionLinkSP = require('./pinMention/createCreatePinMentionLinkSP');
 
 /** Update Record **/
 /* user */
@@ -91,6 +95,8 @@ const createDeleteMerchantByPinIdSP = require('./merchant/createDeleteMerchantBy
 /* location */
 const createDeleteLocationSP = require('./location/createDeleteLocationSP');
 const createDeleteLocationByPinIdSP = require('./location/createDeleteLocationByPinIdSP');
+/* pinMention */
+const createDeletePinMentionByPinIdSP = require('./pinMention/createDeletePinMentionByPinIdSP');
 
 /** Upsert Record **/
 /* like */
@@ -127,8 +133,8 @@ module.exports.setup = function (connectionPool) {
   createSearchPinSP.setup(cp);
   createGetPinAuthorThreadSP.setup(cp);
   createGetPinAuthorThreadWithFavoriteAndLikeSP.setup(cp);
-  createGetPinByAuthersFilterByHasFavoriteSP.setup(cp);
-  createGetPinByAuthersSP.setup(cp);
+  createGetPinByTagsFilterByHasFavoriteSP.setup(cp);
+  createGetPinByTagsSP.setup(cp);
 
   // Returns Single Result
   createGetPinWithFavoriteAndLikeSP.setup(cp);
@@ -154,6 +160,9 @@ module.exports.setup = function (connectionPool) {
   //createCreateLikeSP.setup(cp);
   //createCreateFavoriteSP.setup(cp);
   createCreateDateTimeSP.setup(cp);
+  createCreateMentionSP.setup(cp);
+  createCreatePinMentionSP.setup(cp);
+  createCreatePinMentionLinkSP.setup(cp);
 
   // Update Record
   createUpdateUserSP.setup(cp);
@@ -172,6 +181,7 @@ module.exports.setup = function (connectionPool) {
   createDeleteMerchantByPinIdSP.setup(cp);
   createDeleteLocationSP.setup(cp);
   createDeleteLocationByPinIdSP.setup(cp);
+  createDeletePinMentionByPinIdSP.setup(cp);
 
   // Upsert Record
   createMergeLikeSP.setup(cp);
@@ -198,8 +208,8 @@ module.exports.createGetPinsWithFavoriteAndLikeArrayNextSP = createGetPinsWithFa
 module.exports.createSearchPinSP = createSearchPinSP.createSP;
 module.exports.createGetPinAuthorThreadSP = createGetPinAuthorThreadSP.createSP;
 module.exports.createGetPinAuthorThreadWithFavoriteAndLikeSP = createGetPinAuthorThreadWithFavoriteAndLikeSP.createSP;
-module.exports.createGetPinByAuthersFilterByHasFavoriteSP = createGetPinByAuthersFilterByHasFavoriteSP.createSP;
-module.exports.createGetPinByAuthersSP = createGetPinByAuthersSP.createSP;
+module.exports.createGetPinByTagsFilterByHasFavoriteSP = createGetPinByTagsFilterByHasFavoriteSP.createSP;
+module.exports.createGetPinByTagsSP = createGetPinByTagsSP.createSP;
 
 // Returns Single Result
 module.exports.createGetPinWithFavoriteAndLikeSP = createGetPinWithFavoriteAndLikeSP.createSP;
@@ -225,6 +235,9 @@ module.exports.createCreatePinMediumLinkSP = createCreatePinMediumLinkSP.createS
 //module.exports.createCreateLikeSP = createCreateLikeSP.createSP;
 //module.exports.createCreateFavoriteSP = createCreateFavoriteSP.createSP;
 module.exports.createCreateDateTimeSP = createCreateDateTimeSP.createSP;
+module.exports.createCreateMentionSP = createCreateMentionSP.createSP;
+module.exports.createCreatePinMentionSP = createCreatePinMentionSP.createSP;
+module.exports.createCreatePinMentionLinkSP = createCreatePinMentionLinkSP.createSP;
 
 // Update Record
 module.exports.createUpdateUserSP = createUpdateUserSP.createSP;
@@ -243,6 +256,7 @@ module.exports.createDeleteMerchantSP = createDeleteMerchantSP.createSP;
 module.exports.createDeleteMerchantByPinIdSP = createDeleteMerchantByPinIdSP.createSP;
 module.exports.createDeleteLocationSP = createDeleteLocationSP.createSP;
 module.exports.createDeleteLocationByPinIdSP = createDeleteLocationByPinIdSP.createSP;
+module.exports.createDeletePinMentionByPinIdSP = createDeletePinMentionByPinIdSP.createSP;
 
 // Upsert Record
 module.exports.createMergeLikeSP = createMergeLikeSP.createSP;

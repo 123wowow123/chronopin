@@ -1,6 +1,6 @@
 let cp;
 let Request;
-const StoredProcedureName = 'DeletePinMediumByPinMediumId';
+const StoredProcedureName = 'DeletePinMentionByPinId';
 
 // Setup
 module.exports.setup = function(connectionPool) {
@@ -42,21 +42,14 @@ function executeDropSP() {
 function executeCreateSP() {
   let sql = `
       CREATE PROCEDURE [dbo].[${StoredProcedureName}]
-          @pinId INT,
-          @mediumId INT,
-          @utcDeletedDateTime DATETIME2(7) OUTPUT
+          @pinId INT
       AS
         BEGIN
 
           SET NOCOUNT ON;
 
-          SET @utcDeletedDateTime = sysutcdatetime();
-
-          DELETE [dbo].[PinMedium]
-          WHERE pinId = @pinId AND mediumId = @mediumId;
-
-          --DELETE [dbo].[Medium]
-          --WHERE id = @mediumId;
+          DELETE [dbo].[PinMention]
+          WHERE pinId = @pinId;
 
         END;
         `;

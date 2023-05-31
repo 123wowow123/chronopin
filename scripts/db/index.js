@@ -24,6 +24,8 @@ const createPin = createTable.createPin;
 const createPinMedium = createTable.createPinMedium;
 const createDateTime = createTable.createDateTime;
 const createMerchant = createTable.createMerchant;
+const createMention = createTable.createMention;
+const createPinMention = createTable.createPinMention;
 
 // Create View
 const createPinView = createTable.createPinView;
@@ -44,8 +46,8 @@ const createGetPinsWithFavoriteAndLikeArrayNextSP = createSP.createGetPinsWithFa
 const createSearchPinSP = createSP.createSearchPinSP;
 const createGetPinAuthorThreadSP = createSP.createGetPinAuthorThreadSP;
 const createGetPinAuthorThreadWithFavoriteAndLikeSP = createSP.createGetPinAuthorThreadWithFavoriteAndLikeSP;
-const createGetPinByAuthersFilterByHasFavoriteSP = createSP.createGetPinByAuthersFilterByHasFavoriteSP;
-const createGetPinByAuthersSP = createSP.createGetPinByAuthersSP;
+const createGetPinByTagsFilterByHasFavoriteSP = createSP.createGetPinByTagsFilterByHasFavoriteSP;
+const createGetPinByTagsSP = createSP.createGetPinByTagsSP;
 
 // Returns Single Result
 const createGetPinWithFavoriteAndLikeSP = createSP.createGetPinWithFavoriteAndLikeSP;
@@ -71,6 +73,9 @@ const createCreatePinMediumLinkSP = createSP.createCreatePinMediumLinkSP;
 //const createCreateLikeSP = createSP.createCreateLikeSP;
 //const createCreateFavoriteSP = createSP.createCreateFavoriteSP;
 const createCreateDateTimeSP = createSP.createCreateDateTimeSP;
+const createCreateMentionSP = createSP.createCreateMentionSP;
+const createCreatePinMentionSP = createSP.createCreatePinMentionSP;
+const createCreatePinMentionLinkSP = createSP.createCreatePinMentionLinkSP;
 
 // Update Record
 const createUpdateUserSP = createSP.createUpdateUserSP;
@@ -89,6 +94,7 @@ const createDeleteMerchantSP = createSP.createDeleteMerchantSP;
 const createDeleteMerchantByPinIdSP = createSP.createDeleteMerchantByPinIdSP;
 const createDeleteLocationSP = createSP.createDeleteLocationSP;
 const createDeleteLocationByPinIdSP = createSP.createDeleteLocationByPinIdSP;
+const createDeletePinMentionByPinIdSP = createSP.createDeletePinMentionByPinIdSP;
 
 // Upsert Record
 const createMergeLikeSP = createSP.createMergeLikeSP;
@@ -134,6 +140,8 @@ function execute() {
         //createLike,
         createDateTime,
         createMerchant,
+        createMention,
+        createPinMention,
 
         // Views
         createPinView,
@@ -154,8 +162,8 @@ function execute() {
         createSearchPinSP,
         createGetPinAuthorThreadSP,
         createGetPinAuthorThreadWithFavoriteAndLikeSP,
-        createGetPinByAuthersFilterByHasFavoriteSP,
-        createGetPinByAuthersSP,
+        createGetPinByTagsFilterByHasFavoriteSP,
+        createGetPinByTagsSP,
 
         // Returns Single Result
         createGetPinWithFavoriteAndLikeSP,
@@ -181,6 +189,9 @@ function execute() {
         //createCreateLikeSP,
         //createCreateFavoriteSP,
         createCreateDateTimeSP,
+        createCreateMentionSP,
+        createCreatePinMentionSP,
+        createCreatePinMentionLinkSP,
 
         // Update Record
         createUpdateUserSP,
@@ -204,6 +215,7 @@ function execute() {
         createMergeFavoriteSP,
         createMergeMerchantSP,
         createMergeLocationSP,
+        createDeletePinMentionByPinIdSP,
 
         // Admin Delete
         createAdminDeleteUserByIdSP,

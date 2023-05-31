@@ -10,7 +10,8 @@ import {
   BasePin,
   BasePinProp,
   Merchant,
-  Location
+  Location,
+  Mention
 } from '../..';
 
 const prop = BasePinProp.concat(
@@ -67,6 +68,11 @@ export default class Pin extends BasePin {
             return m.save();
           });
 
+        const mentionsPromise = this.mentions
+          .map(m => {
+            return m.save();
+          });
+
         const allMediaPromise = Promise.all(
           mediaPromise.concat(mediaNonImagePromise)
         )
@@ -97,7 +103,17 @@ export default class Pin extends BasePin {
             };
           });
 
-        return Promise.all([allMediaPromise, allMerchantsPromise, allLocationsPromise])
+        const allMentionsPromise = Promise.all(
+          mentionsPromise
+        )
+          .then((mentions) => {
+            this.addMentions(mentions);
+            return {
+              pin: this
+            };
+          });
+
+        return Promise.all([allMediaPromise, allMerchantsPromise, allLocationsPromise, allMentionsPromise])
           .then((results) => {
             return {
               pin: this
@@ -123,7 +139,8 @@ export default class Pin extends BasePin {
           // originalUserId = beforePinMedia,
           newPinMedia = this.media,
           newPinMerchants = this.merchants,
-          newPinLocations = this.locations
+          newPinLocations = this.locations,
+          newPinMentions = this.mentions;
 
         let toSaveOriginalMedia = _difference(newPinMedia, beforePinMedia, 'originalUrl');
         let toDeleteOriginalMedia = _difference(beforePinMedia, newPinMedia, 'originalUrl');
@@ -152,6 +169,18 @@ export default class Pin extends BasePin {
             });
           });
 
+        const allMentionPromise = Mention.deleteByPinId(this.id)
+          .then(() => {
+            return Promise.all(
+              newPinMentions
+                .map(m => {
+                  return m.save();
+                })
+            ).then((mentions) => {
+              this.addMentions(mentions);
+            });
+          });
+
         const toSaveMediaPromise = Promise.all(
           toSaveOriginalMedia.map(medium => {
             return medium.createAndSaveToCDN();
@@ -170,7 +199,8 @@ export default class Pin extends BasePin {
           toSaveMediaPromise,
           toDeleteMediaPromise,
           allMerchantPromise,
-          allLocationPromise
+          allLocationPromise,
+          allMentionPromise
         ]).then(() => {
           return this;
         });
@@ -200,6 +230,7 @@ export default class Pin extends BasePin {
     pin = Pin.mapPinMedia(pin, pinRows);
     pin = Pin.mapPinMerchants(pin, pinRows);
     pin = Pin.mapPinLocations(pin, pinRows);
+    pin = Pin.mapPinMentions(pin, pinRows);
     return pin;
   }
 
@@ -215,6 +246,11 @@ export default class Pin extends BasePin {
 
   static mapPinLocations(pin, pinRows) {
     pin.addLocations(mapHelper.mapSubObjectFromQuery('Location', 'id', pinRows));
+    return pin;
+  }
+
+  static mapPinMentions(pin, pinRows) {
+    pin.addMentions(mapHelper.mapSubObjectFromQuery('Mention', 'id', pinRows));
     return pin;
   }
 }

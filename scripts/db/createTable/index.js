@@ -18,6 +18,8 @@ module.exports.setup = function (connectionPool) {
   require('./PinMedium').setup(cp);
   require('./DateTime').setup(cp);
   require('./Merchant').setup(cp);
+  require('./Mention').setup(cp);
+  require('./PinMention').setup(cp);
 
   require('./PinView').setup(cp);
   require('./PinBaseView').setup(cp);
@@ -36,6 +38,9 @@ module.exports.createPin = require('./Pin').createPin;
 module.exports.createPinMedium = require('./PinMedium').createPinMedium;
 module.exports.createDateTime = require('./DateTime').createDateTime;
 module.exports.createMerchant = require('./Merchant').createMerchant;
+
+module.exports.createMention = require('./Mention').createMention;
+module.exports.createPinMention = require('./PinMention').createPinMention;
 
 // Retruns View
 module.exports.createPinView = require('./PinView').createPinView;

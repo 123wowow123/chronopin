@@ -6,7 +6,8 @@ import * as response from '../response';
 import {
   Pins,
   SearchPins,
-  SearchPin
+  SearchPin,
+  Mention
 } from '../../model';
 
 // Listening to pin events
@@ -43,19 +44,16 @@ export function searchPins(req, res) {
     searchText = req.query.q,
     hasFavorite = req.query.f && req.query.f.toLowerCase() == 'watch';
 
-  const searchTextArray = searchText ? searchText.split(" ") : [];
-  const userNames = searchTextArray.filter(t => {
-    return t.startsWith("@");
-  });
+  const allTags = Mention.scrapeAllMention(searchText);
 
-  if (userNames.length) {
+  if (allTags.length) {
 
     if (hasFavorite) {
-      return SearchPins.searchAuthorsFavorite(userId, userNames)
+      return SearchPins.searchTagsFavorite(userId, allTags)
         .then(response.withResult(res, 200))
         .catch(response.handleError(res));
     } else {
-      return SearchPins.searchAuthors(userNames)
+      return SearchPins.searchTags(allTags)
         .then(response.withResult(res, 200))
         .catch(response.handleError(res));
     }

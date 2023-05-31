@@ -137,15 +137,15 @@ export default class Pins extends BasePins {
       });
   }
 
-  static queryPinByAuthors(userNames) {
-    return _queryPinByAuthors(userNames)
+  static queryPinByTags(allTags) {
+    return _queryPinByTags(allTags)
       .then(res => {
         return new Pins(res);
       });
   }
 
-  static queryPinByAuthorsHasFavorite(userId, userNames) {
-    return _queryPinByAuthorsHasFavorite(userId, userNames)
+  static queryPinByTagsHasFavorite(userId, allTags) {
+    return _queryPinByTagsHasFavorite(userId, allTags)
       .then(res => {
         return new Pins(res);
       });
@@ -466,20 +466,20 @@ function _queryPinByIdsAndOrderedByThread(pinId) {
     });
 }
 
-function _queryPinByAuthors(userNames) {
+function _queryPinByTags(tags) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'GetPinByAuthers';
+        const StoredProcedureName = 'GetPinByTags';
 
         const tvp = new mssql.Table()
-        tvp.columns.add('userName', mssql.NVarChar(255));
-        userNames.forEach(userName => {
-          tvp.rows.add(userName) // Values are in same order as columns.
+        tvp.columns.add('tag', mssql.NVarChar(255));
+        tags.forEach(tag => {
+          tvp.rows.add(tag) // Values are in same order as columns.
         });
 
         let request = new mssql.Request(conn)
-          .input('TableAuthors', tvp)
+          .input('TableTags', tvp)
           .output('queryCount', mssql.Int);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
@@ -503,20 +503,20 @@ function _queryPinByAuthors(userNames) {
     });
 }
 
-function _queryPinByAuthorsHasFavorite(userId, userNames) {
+function _queryPinByTagsHasFavorite(userId, allTags) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'GetPinByAuthersFilterByHasFavorite';
+        const StoredProcedureName = 'GetPinByTagsFilterByHasFavorite';
 
         const tvp = new mssql.Table()
-        tvp.columns.add('userName', mssql.NVarChar(255));
-        userNames.forEach(userName => {
-          tvp.rows.add(userName) // Values are in same order as columns.
+        tvp.columns.add('tag', mssql.NVarChar(255));
+        allTags.forEach(tag => {
+          tvp.rows.add(tag) // Values are in same order as columns.
         });
 
         let request = new mssql.Request(conn)
-          .input('TableIds', tvp)
+          .input('TableTags', tvp)
           .input('userId', mssql.Int, userId)
           .output('queryCount', mssql.Int);
 

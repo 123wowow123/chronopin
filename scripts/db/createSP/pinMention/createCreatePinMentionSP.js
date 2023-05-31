@@ -1,6 +1,6 @@
 let cp;
 let Request;
-const StoredProcedureName = 'GetPinByAuthers';
+const StoredProcedureName = 'CreatePinMention';
 
 // Setup
 module.exports.setup = function(connectionPool) {
@@ -22,8 +22,6 @@ function dropCreateSP() {
   console.log(`Begin drop & create ${StoredProcedureName}`);
   return Promise.resolve('begin query')
     .then(executeDropSP)
-    .then(executeDropTVP)
-    .then(executeCreateTVP)
     .then(executeCreateSP)
     .then(res => {
       return `Create ${StoredProcedureName} completed`;
@@ -41,51 +39,29 @@ function executeDropSP() {
     });
 }
 
-function executeDropTVP() {
-  let sql = `
-        DROP TYPE IF EXISTS tAuthors;
-        `;
-  return cp.getConnection()
-    .then(conn => {
-      return new Request(conn).batch(sql);
-    });
-}
-
-function executeCreateTVP() {
-  let sql = `
-        CREATE TYPE tAuthors AS Table (
-          userName NVARCHAR(255)
-        );
-        `;
-  return cp.getConnection()
-    .then(conn => {
-      return new Request(conn).batch(sql);
-    });
-}
-
 function executeCreateSP() {
   let sql = `
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
-           @TableAuthors AS tAuthors READONLY,
-           @queryCount   INT OUTPUT
+            @pinId              INT,
+            @mentionId          INT,
+            @id                 INT OUTPUT
         AS
-        BEGIN
+          BEGIN
 
-        SET NOCOUNT ON;
+            SET NOCOUNT ON;
 
-        SELECT
-              [Pin].*
+            INSERT INTO [dbo].[PinMention] (
+              pinId,
+              mentionId
+            )
+            VALUES (
+              @pinId,
+              @mentionId
+            )
 
-            FROM [dbo].[PinBaseView] AS [Pin]
-              JOIN @TableAuthors AS paramTable
-                ON [Pin].[User.userName] = paramTable.userName
+            SET @id = SCOPE_IDENTITY();
 
-            WHERE [Pin].[utcDeletedDateTime] IS NULL
-
-            ORDER BY [Pin].[utcStartDateTime];
-
-            SET @queryCount = @@ROWCOUNT;
-        END;
+          END;
         `;
 
   return cp.getConnection()

@@ -31,3 +31,25 @@ export function mapSubObjectFromQuery(prefix, groupKey, pinRows) {
     ? aggregate
     : undefined;
 }
+
+export function extractTags(searchText) {
+  const matchHashString = /(?<!class="chrono-hash-highlight">)(?<!href="\/search\?q=)(#[A-z\d-]+)/g;
+  const matchAtString = /(?<!class="chrono-at-highlight">)(@[A-z\d-]+)/g;
+  const hashTags = [];
+  const atTags = [];
+  let result1, result2;
+
+  while ((result1 = matchHashString.exec(searchText)) !== null) {
+    let matchString = result1[1];
+    hashTags.push(matchString);
+  }
+
+  while ((result2 = matchAtString.exec(searchText)) !== null) {
+    let matchString = result2[1];
+    atTags.push(matchString);
+  }
+  return {
+    hashTags,
+    atTags
+  };
+}

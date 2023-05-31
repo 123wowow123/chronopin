@@ -89,7 +89,10 @@ function executeCreateTable() {
               [Merchant].[price]                         AS [Merchant.price],
 
               [Location].[id]                            AS [Location.id],
-              [Location].[address]                       AS [Location.address]
+              [Location].[address]                       AS [Location.address],
+
+              [PinMention].[id]                          AS [Mention.id],
+              [Mention].[tag]                            AS [Mention.tag]
 
 
             FROM [dbo].[Pin] AS [Pin]
@@ -106,6 +109,11 @@ function executeCreateTable() {
                 ON [Pin].[id] = [Merchant].[pinId]
               LEFT JOIN [dbo].[Location] AS [Location]
                 ON [Pin].[id] = [Location].[pinId]
+              LEFT JOIN [dbo].[PinMention] AS [PinMention]
+                ON [Pin].[id] = [PinMention].[PinId]
+              LEFT JOIN [dbo].[Mention] AS [Mention]
+                ON [Mention].[id] = [PinMention].[MentionId]
+
 
             GROUP BY [Pin].[utcCreatedDateTime],
               [Pin].[utcUpdatedDateTime],
@@ -144,7 +152,10 @@ function executeCreateTable() {
               [Merchant].[price],
 
               [Location].[id],
-              [Location].[address]
+              [Location].[address],
+
+              [PinMention].[id],
+              [Mention].[tag]
 
         `;
 

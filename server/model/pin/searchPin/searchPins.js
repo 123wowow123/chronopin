@@ -5,6 +5,7 @@ import * as cp from '../../../sqlConnectionPool';
 import * as _ from 'lodash';
 const rp = require('request-promise');
 import {
+    Mention,
     SearchPin,
     Pins,
     BasePins
@@ -130,21 +131,25 @@ export default class SearchPins extends BasePins {
     }
 
     static search(searchText) {
-        return semanticSearch(searchText, SearchPins.numberOfResults)
+        //ToDo: get tags and remove them and then do semanticSearch then recombine results
+
+        const semanticPinsPromise = semanticSearch(searchText, SearchPins.numberOfResults)
             .then(res => {
                 return new SearchPins().fromFaiss(res);
             })
-            .then(pins => {
-                return Pins.queryPinByIds(pins); // TODO: should return SearchPins
+
+        return Promise.all([semanticPinsPromise])
+            .then(([semanticPins]) => {
+                return Pins.queryPinByIds(semanticPins); // TODO: should return SearchPins
             });
     }
 
-    static searchAuthors(userNames) {
-        return Pins.queryPinByAuthors(userNames); // TODO: should return SearchPins
+    static searchTags(allTags) {
+        return Pins.queryPinByTags(allTags); // TODO: should return SearchPins
     }
 
-    static searchAuthorsFavorite(userId, userNames) {
-        return Pins.queryPinByAuthorsHasFavorite(userId, userNames); // TODO: should return SearchPins
+    static searchTagsFavorite(userId, allTags) {
+        return Pins.queryPinByTagsHasFavorite(userId, allTags); // TODO: should return SearchPins
     }
 
     static searchFavorite(userId, searchText) {

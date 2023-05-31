@@ -46,6 +46,9 @@ export {
   default as Medium
 } from './medium/medium';
 export {
+  default as Mention
+} from './mention/mention';
+export {
   default as MediumType
 } from './mediumType/mediumType';
 export {

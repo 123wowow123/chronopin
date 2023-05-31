@@ -1,6 +1,6 @@
 let cp;
 let Request;
-const StoredProcedureName = 'GetPinByAuthersFilterByHasFavorite';
+const StoredProcedureName = 'GetPinByTags';
 
 // Setup
 module.exports.setup = function(connectionPool) {
@@ -43,7 +43,7 @@ function executeDropSP() {
 
 function executeDropTVP() {
   let sql = `
-        DROP TYPE IF EXISTS tAuthors2;
+        DROP TYPE IF EXISTS tTags;
         `;
   return cp.getConnection()
     .then(conn => {
@@ -53,8 +53,8 @@ function executeDropTVP() {
 
 function executeCreateTVP() {
   let sql = `
-        CREATE TYPE tAuthors2 AS Table (
-          userName NVARCHAR(255)
+        CREATE TYPE tTags AS Table (
+          tag NVARCHAR(1028)
         );
         `;
   return cp.getConnection()
@@ -66,8 +66,7 @@ function executeCreateTVP() {
 function executeCreateSP() {
   let sql = `
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
-           @TableAuthors AS tAuthors2 READONLY,
-           @userId       INT,
+           @TableTags AS tTags READONLY,
            @queryCount   INT OUTPUT
         AS
         BEGIN
@@ -78,17 +77,14 @@ function executeCreateSP() {
               [Pin].*
 
             FROM [dbo].[PinBaseView] AS [Pin]
-              JOIN @TableAuthors AS paramTable
-                ON [Pin].[User.userName] = paramTable.userName
-              LEFT JOIN [dbo].[Favorite] AS [Favorites]
-                ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL
+              JOIN @TableTags AS paramTable
+                ON ([Pin].[User.userName] = paramTable.tag OR [Mention.tag] = paramTable.tag)
 
             WHERE [Pin].[utcDeletedDateTime] IS NULL
-              AND [Favorites].[userId] = @userId
 
-              ORDER BY [Pin].[utcStartDateTime], [Pin].[id];
+            ORDER BY [Pin].[utcStartDateTime];
 
-              SET @queryCount = @@ROWCOUNT;
+            SET @queryCount = @@ROWCOUNT;
         END;
         `;
 

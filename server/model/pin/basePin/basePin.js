@@ -5,12 +5,14 @@ import {
     Medium,
     Merchant,
     Location,
+    Mention,
     User
 } from '../..';
 
 // media
 // merchants
 // locations
+// mentions
 export const BasePinProp = [
     'id',
     'parentId',
@@ -30,7 +32,7 @@ export const BasePinProp = [
     'utcDeletedDateTime'
 ];
 
-// user, userId, media
+// user, userId
 export default class BasePin {
 
     constructor(pin, user, prop) {
@@ -70,6 +72,12 @@ export default class BasePin {
             this.locations = _.get(pin, 'locations', [])
                 .map(m => {
                     return new Location(m, this);
+                });
+
+            const allTags = Mention.scrapeAllMention(this.description);
+            this.mentions = (allTags || [])
+                .map(m => {
+                    return new Mention({ tag: m }, this);
                 });
 
         } else {
@@ -153,13 +161,6 @@ export default class BasePin {
         return this;
     }
 
-    addLocations(locations) {
-        (locations || []).forEach(m => {
-            this.addLocation(new Location(m));
-        })
-        return this;
-    }
-
     addLocation(location) {
         if (location instanceof Location) {
             location.setPin(this);
@@ -168,6 +169,31 @@ export default class BasePin {
         } else {
             throw "location not instance of Location";
         }
+        return this;
+    }
+
+    addLocations(locations) {
+        (locations || []).forEach(m => {
+            this.addLocation(new Location(m));
+        })
+        return this;
+    }
+
+    addMention(mention) {
+        if (mention instanceof Mention) {
+            mention.setPin(this);
+            if (!this.mentions) { this.mentions = []; };
+            this.mentions.push(mention);
+        } else {
+            throw "mention not instance of Mention";
+        }
+        return this;
+    }
+
+    addMentions(mentions) {
+        (mentions || []).forEach(m => {
+            this.addMention(new Mention(m));
+        })
         return this;
     }
 
