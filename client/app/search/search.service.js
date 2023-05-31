@@ -20,20 +20,20 @@
             }
 
             // todo: if route is search and submit
+            $transitions.onSuccess({ exiting: 'search' }, (transition) => {
+                this.lastNotification = undefined;
+                this.notifySearch(
+                    undefined,
+                    undefined
+                );
+            });
+
             $transitions.onSuccess({ entering: 'search' }, (transition) => {
                 const extractedQuery = this._extractQuery(this.locationService);
                 this.lastNotification = extractedQuery;
                 this.notifySearch(
                     extractedQuery.searchText,
                     extractedQuery.searchChoiceText
-                );
-            });
-
-            $transitions.onSuccess({ exiting: 'search' }, (transition) => {
-                this.lastNotification = undefined;
-                this.notifySearch(
-                    undefined,
-                    undefined
                 );
             });
 
