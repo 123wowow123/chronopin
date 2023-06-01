@@ -65,7 +65,11 @@
                   header: {
                     class: Header,
                     shortcut: 'CMD+SHIFT+H',
-                    inlineToolbar: true
+                    inlineToolbar: true,
+                    config: {
+                      levels: [2, 3, 4],
+                      defaultLevel: 2
+                    }
                   },
                   list: {
                     class: List,
