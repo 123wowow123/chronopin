@@ -129,6 +129,9 @@
                     endDateTime = pin.end;
                 }
 
+                const merchants = _.get(this, 'merchants', []).filter(t => t.url);
+                const locations = _.get(this, 'locations', []).filter(t => t.address);
+
                 let newPin = {
                     id: pin.id,
                     parentId: pin.parentId,
@@ -139,8 +142,8 @@
                     utcStartDateTime: startDateTime, // ISO 8601 with toJSON
                     utcEndDateTime: endDateTime,
                     allDay: allDay,
-                    merchants: pin.merchants,
-                    locations: pin.locations && pin.locations.length ? pin.locations : this.getResetLocation(),
+                    merchants: merchants.length ? merchants : undefined,
+                    locations: locations.length ? locations : undefined,
                     media: pin.useMedia && pin.selectedMedia ? [pin.selectedMedia] : undefined
                 };
                 return _.omitBy(newPin, _.isNull);

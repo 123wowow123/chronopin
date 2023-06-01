@@ -122,7 +122,6 @@ export function show(req, res) {
 export function create(req, res) {
   let user = req.user,
     // userId = +req.user.id,
-    media = req.body && req.body.media,
     newPin = new Pin(req.body);
 
   newPin
