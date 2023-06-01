@@ -19,7 +19,7 @@ quick add Q2 etc
 default does not select media but when selected it will auto check pin header media.
 fix indexing with hashtag
 
-
+updating tags does not update links
 User not using seed file ++
 
 
