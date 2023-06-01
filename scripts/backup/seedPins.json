@@ -6218,12 +6218,13 @@
     "id": 237,
     "rootThread": false,
     "title": "National Doughnut Day: Where to get free doughnuts this Friday?",
-    "description": "<h3>Krispy Kreme</h3><p class=\"paragraph\"> Folks who show up at Krispy Kreme on June 2 will be treated to a free doughnut of their choosing (<a href=\"https://investors.krispykreme.com/news-releases/news-release-details/krispy-kremer-sweetens-national-doughnut-day-friday-any-doughnut\" target=\"_blank\">“any doughnut,”</a>&nbsp;the company says) with no other purchases necessary. Anyone who buys a dozen doughnuts on Friday can also get a second Original Glazed dozen for $2 more. </p><h3>Shipley Do-Nuts</h3><p class=\"paragraph\"> The doughnut chain, which has locations primarily in the South, will be giving each of its customers a&nbsp;<a href=\"https://www.facebook.com/ShipleyDonuts/videos/192748866626199/\" target=\"_blank\">free glazed doughnut</a>&nbsp;with every purchase. </p><h3>Dunkin‘</h3><p class=\"paragraph\"> Dunkin’ customers who purchase any beverage on June 2 can redeem a free classic doughnut of their choice. </p><h3>Tim Hortons</h3><p class=\"paragraph\"> Apparently, National Doughnut Day isn’t just an American thing. In honor of both the U.S. and Canadian National Doughnut Days — which&nbsp;<a href=\"https://salvationarmy.ca/ontario/home/events/national-doughnut-day/\" target=\"_blank\">both fall on June 2</a>&nbsp;— Toronto-based chain Tim Hortons (which also operates hundreds of U.S. locations) is giving away free doughnuts to customers in the U.S. on Friday, provided they order any hot or iced beverage via the Tim Hortons app. </p><p class=\"paragraph\"> Not a fan of the above chains? Check with your favorite local shops to see if they’re offering any freebies on Friday. Or, hop in the car and take a trip to one of the&nbsp;<a href=\"https://wgntv.com/news/nexstar-media-wire/the-100-best-doughnut-shops-in-the-country-according-to-yelp/\" target=\"_blank\">best doughnut shops in America</a>&nbsp;to try some of the top-rated — although maybe not&nbsp;free&nbsp;— doughnuts in the country. </p><h3>Duck Donuts</h3><p class=\"paragraph\"> The Pennsylvania-based chain, which specializes in made-to-order doughnuts, is offering&nbsp;<a href=\"https://www.facebook.com/duckdonuts/posts/pfbid02b5XzsAHXKc9edtWB5SDE7QKzrTn9qb1ntQE7jCRoUyrjMQ6ypEiiEAWv94fw5kdil\" target=\"_blank\">free cinnamon-sugar doughnuts</a>&nbsp;to customers this Friday. No other purchase is necessary, a representative confirmed. </p>",
+    "description": "<h3>Krispy Kreme</h3><p class=\"paragraph\">   Folks who show up at Krispy Kreme on June 2 will be treated to a free doughnut of their choosing (<a href=\"https://investors.krispykreme.com/news-releases/news-release-details/krispy-kremer-sweetens-national-doughnut-day-friday-any-doughnut\" target=\"_blank\">“any doughnut,”</a>&nbsp;the company says) with no other purchases necessary. Anyone who buys a dozen doughnuts on Friday can also get a second Original Glazed dozen for $2 more.   </p><h3>Shipley Do-Nuts</h3><p class=\"paragraph\">   The doughnut chain, which has locations primarily in the South, will be giving each of its customers a&nbsp;<a href=\"https://www.facebook.com/ShipleyDonuts/videos/192748866626199/\" target=\"_blank\">free glazed doughnut</a>&nbsp;with every purchase.   </p><h3>Dunkin‘</h3><p class=\"paragraph\">   Dunkin’ customers who purchase any beverage on June 2 can redeem a free classic doughnut of their choice.   </p><h3>Tim Hortons</h3><p class=\"paragraph\">   Apparently, National Doughnut Day isn’t just an American thing. In honor of both the U.S. and Canadian National Doughnut Days — which&nbsp;<a href=\"https://salvationarmy.ca/ontario/home/events/national-doughnut-day/\" target=\"_blank\">both fall on June 2</a>&nbsp;— Toronto-based chain Tim Hortons (which also operates hundreds of U.S. locations) is giving away free doughnuts to customers in the U.S. on Friday, provided they order any hot or iced beverage via the Tim Hortons app.   </p><p class=\"paragraph\">   Not a fan of the above chains? Check with your favorite local shops to see if they’re offering any freebies on Friday. Or, hop in the car and take a trip to one of the&nbsp;<a href=\"https://wgntv.com/news/nexstar-media-wire/the-100-best-doughnut-shops-in-the-country-according-to-yelp/\" target=\"_blank\">best doughnut shops in America</a>&nbsp;to try some of the top-rated — although maybe not&nbsp;free&nbsp;— doughnuts in the country.   </p><h3>Duck Donuts</h3><p class=\"paragraph\">   The Pennsylvania-based chain, which specializes in made-to-order doughnuts, is offering&nbsp;<a href=\"https://www.facebook.com/duckdonuts/posts/pfbid02b5XzsAHXKc9edtWB5SDE7QKzrTn9qb1ntQE7jCRoUyrjMQ6ypEiiEAWv94fw5kdil\" target=\"_blank\">free cinnamon-sugar doughnuts</a>&nbsp;to customers this Friday. No other purchase is necessary, a representative confirmed.   </p>",
     "sourceUrl": "https://thehill.com/changing-america/enrichment/arts-culture/4029854-national-doughnut-day-where-to-get-free-doughnuts-this-friday/",
     "utcStartDateTime": "2023-06-02T07:00:00.000Z",
-    "utcEndDateTime": "2023-06-03T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-05T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-01T20:36:54.286Z",
+    "utcUpdatedDateTime": "2023-06-01T22:42:53.683Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -6238,6 +6239,13 @@
         "originalWidth": 1280,
         "originalHeight": 853,
         "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 29,
+        "address": "Krispy Kreme",
+        "pinId": 237
       }
     ],
     "userId": 1

@@ -129,8 +129,8 @@
                     endDateTime = pin.end;
                 }
 
-                const merchants = _.get(this, 'merchants', []).filter(t => t.url);
-                const locations = _.get(this, 'locations', []).filter(t => t.address);
+                const merchants = _.get(pin, 'merchants', []).filter(t => t.url);
+                const locations = _.get(pin, 'locations', []).filter(t => t.address);
 
                 let newPin = {
                     id: pin.id,
