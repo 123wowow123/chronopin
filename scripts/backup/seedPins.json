@@ -5339,6 +5339,46 @@
     "userId": 1
   },
   {
+    "id": 235,
+    "rootThread": true,
+    "title": "Private payroll growth slowed to 106,000 in January as weather hit hiring, ADP says",
+    "description": "<p class=\"paragraph\"> Most of the growth came in the hospitality industry, as bars, restaurants, hotels and the like added 95,000 positions. Other growth industries included financial activities (30,000), manufacturing (23,000), and education and health services (12,000). </p><p class=\"paragraph\"> However, the trade, transportation and utilities sector lost 41,000, construction was off 24,000, and natural resources and mining declined by 2,000. </p><p class=\"paragraph\"> In all, goods-producing industries saw a net loss of 3,000 jobs, while service providers added 109,000. </p><p class=\"paragraph\"> Pay growth was little changed for the month, but up 7.3% from a year ago. </p><p class=\"paragraph\"> <a href=\"/search?q=#ADP\">#ADP</a>&nbsp;<a href=\"/search?q=#Jobs\">#Jobs</a>&nbsp; </p>",
+    "sourceUrl": "https://www.cnbc.com/2023/02/01/adp-jobs-report-january-2022-.html",
+    "utcStartDateTime": "2023-02-01T08:00:00.000Z",
+    "utcEndDateTime": "2023-02-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-01T19:33:18.377Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 224,
+        "thumbName": "81dfeb38-a567-4d2c-8c28-0ab5cf16c737.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107184030-1674677561525-gettyimages-1435419021-newyorkcityunemploymentratefellapointthepastmonth006.jpeg?v=1678290775&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 32,
+        "tag": "#ADP",
+        "pinId": 235
+      },
+      {
+        "id": 33,
+        "tag": "#Jobs",
+        "pinId": 235
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 161,
     "parentId": 160,
     "rootThread": false,
@@ -5410,6 +5450,48 @@
         "id": 5,
         "tag": "$SONY",
         "pinId": 142
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 234,
+    "parentId": 235,
+    "rootThread": false,
+    "title": "Private payrolls rose by 242,000 in February, better than expected, ADP says",
+    "description": "<p class=\"paragraph\">  By sector, leisure and hospitality led job growth with 83,000 additions. Financial activities added 62,000 while manufacturing showed a robust 43,000 gain as the industry benefited from a mild winter.  </p><p class=\"paragraph\">  Other areas showing increases included education and health services (35,000), the “other services” category (34,000), and natural resources and mining (25,000). Professional and business services lost 36,000 jobs, while construction was down 16,000.  </p><p class=\"paragraph\">  All of the job additions came from companies employing 50 or more workers. Small businesses saw a net loss of 61,000, most of which came at establishments employing fewer than 20 people.  </p><p class=\"paragraph\">  <a href=\"/search?q=#ADP\">#ADP</a>&nbsp;<a href=\"/search?q=#Jobs\">#Jobs</a>&nbsp;  </p>",
+    "sourceUrl": "https://www.cnbc.com/2023/03/08/adp-jobs-report-february-2023-.html",
+    "utcStartDateTime": "2023-03-01T08:00:00.000Z",
+    "utcEndDateTime": "2023-03-03T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-01T19:32:13.829Z",
+    "utcUpdatedDateTime": "2023-06-01T19:34:00.767Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 223,
+        "thumbName": "f1588ef6-4b7e-4977-9249-cf7125cab0ee.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107085927-1657230390946-pan.jpg?v=1678286326&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 36,
+        "tag": "#ADP",
+        "pinId": 234
+      },
+      {
+        "id": 37,
+        "tag": "#Jobs",
+        "pinId": 234
       }
     ],
     "userId": 1
@@ -5569,14 +5651,16 @@
   },
   {
     "id": 232,
+    "parentId": 234,
     "rootThread": false,
     "title": "Private payrolls rose by 145,000 in March, well below expectations, ADP says",
-    "description": "<p class=\"paragraph\"> Annual pay rose at a 6.9% rate in March, down from 7.2% in February, according to the firm’s calculations. </p><p class=\"paragraph\"> Job growth was almost evenly split between services and goods-producing firms, an unusual occurrence. The U.S. economy is heavily services-oriented, so that sector generally produces much stronger hiring gains. The data released Wednesday showed a gain of 75,000 in services and 70,000 in goods producers. </p><p class=\"paragraph\"> Last month, though, financial activities lost 51,000 jobs and professional and business services fell by 46,000. Manufacturing also saw a decline of 30,000. </p><p class=\"paragraph\"> On the plus side, leisure and hospitality added another 98,000 workers, trade, transportation and utilities grew by 56,000, and construction rose by 53,000. Natural resources and mining also showed a gain, up 47,000, while education and health services added 17,000. </p><p class=\"paragraph\"> From a size standpoint, companies with fewer than 50 workers led with 101,000, a reversal from recent months in which small business saw limited job growth. </p><p class=\"paragraph\"> <a href=\"/search?q=#ADP\">#ADP</a>&nbsp;<a href=\"/search?q=#Jobs\">#Jobs</a>&nbsp; </p>",
+    "description": "<p class=\"paragraph\">  Annual pay rose at a 6.9% rate in March, down from 7.2% in February, according to the firm’s calculations.  </p><p class=\"paragraph\">  Job growth was almost evenly split between services and goods-producing firms, an unusual occurrence. The U.S. economy is heavily services-oriented, so that sector generally produces much stronger hiring gains. The data released Wednesday showed a gain of 75,000 in services and 70,000 in goods producers.  </p><p class=\"paragraph\">  Last month, though, financial activities lost 51,000 jobs and professional and business services fell by 46,000. Manufacturing also saw a decline of 30,000.  </p><p class=\"paragraph\">  On the plus side, leisure and hospitality added another 98,000 workers, trade, transportation and utilities grew by 56,000, and construction rose by 53,000. Natural resources and mining also showed a gain, up 47,000, while education and health services added 17,000.  </p><p class=\"paragraph\">  From a size standpoint, companies with fewer than 50 workers led with 101,000, a reversal from recent months in which small business saw limited job growth.  </p><p class=\"paragraph\">  <a href=\"/search?q=#ADP\">#ADP</a>&nbsp;<a href=\"/search?q=#Jobs\">#Jobs</a>&nbsp;  </p>",
     "sourceUrl": "https://www.cnbc.com/2023/04/05/adp-march-2023.html?qsearchterm=adp",
     "utcStartDateTime": "2023-04-01T07:00:00.000Z",
-    "utcEndDateTime": "2023-04-02T07:00:00.000Z",
+    "utcEndDateTime": "2023-04-03T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-01T18:47:37.910Z",
+    "utcUpdatedDateTime": "2023-06-01T19:33:41.830Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -5595,12 +5679,12 @@
     ],
     "mentions": [
       {
-        "id": 22,
+        "id": 34,
         "tag": "#ADP",
         "pinId": 232
       },
       {
-        "id": 23,
+        "id": 35,
         "tag": "#Jobs",
         "pinId": 232
       }
@@ -5687,14 +5771,16 @@
   },
   {
     "id": 233,
+    "parentId": 232,
     "rootThread": false,
     "title": "Private payrolls surged by 296,000 in April, much higher than expected, ADP says",
-    "description": "<p class=\"paragraph\"> According to ADP, the fastest job growth in April came in leisure and hospitality with a gain of 154,000, followed by education and health services (69,000), and construction (53,000). Other sectors posting solid increases included natural resources and mining, with 52,000, and trade, transportation and utilities, which added 32,000. </p><p class=\"paragraph\"> The financial sector, beset by deposit runs that have led to the closure of three mid-sized banks, lost 28,000 jobs for the month. Manufacturing also took a hit, down 38,000 jobs, as the sector has been in contraction for the past six months. </p><p class=\"paragraph\"> Job gains were fairly evenly distributed across company size, with firms employing fewer than 500 employees contributing 243,000 to the total. </p><p class=\"paragraph\"> <a href=\"/search?q=#ADP\">#ADP</a>&nbsp;<a href=\"/search?q=#Jobs\">#Jobs</a>&nbsp; </p>",
+    "description": "<p class=\"paragraph\">  According to ADP, the fastest job growth in April came in leisure and hospitality with a gain of 154,000, followed by education and health services (69,000), and construction (53,000). Other sectors posting solid increases included natural resources and mining, with 52,000, and trade, transportation and utilities, which added 32,000.  </p><p class=\"paragraph\">  The financial sector, beset by deposit runs that have led to the closure of three mid-sized banks, lost 28,000 jobs for the month. Manufacturing also took a hit, down 38,000 jobs, as the sector has been in contraction for the past six months.  </p><p class=\"paragraph\">  Job gains were fairly evenly distributed across company size, with firms employing fewer than 500 employees contributing 243,000 to the total.  </p><p class=\"paragraph\">  <a href=\"/search?q=#ADP\">#ADP</a>&nbsp;<a href=\"/search?q=#Jobs\">#Jobs</a>&nbsp;  </p>",
     "sourceUrl": "https://www.cnbc.com/2023/05/03/adp-jobs-report-april-2023.html?qsearchterm=adp",
     "utcStartDateTime": "2023-05-01T07:00:00.000Z",
-    "utcEndDateTime": "2023-05-02T07:00:00.000Z",
+    "utcEndDateTime": "2023-05-03T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-01T18:49:02.348Z",
+    "utcUpdatedDateTime": "2023-06-01T19:25:46.156Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -5713,12 +5799,12 @@
     ],
     "mentions": [
       {
-        "id": 24,
+        "id": 28,
         "tag": "#ADP",
         "pinId": 233
       },
       {
-        "id": 25,
+        "id": 29,
         "tag": "#Jobs",
         "pinId": 233
       }
@@ -6016,7 +6102,7 @@
   },
   {
     "id": 190,
-    "rootThread": false,
+    "rootThread": true,
     "title": "The U.S. could hit the debt ceiling by June 1, much sooner than expected, Yellen warns",
     "description": "<p class=\"paragraph\">  The U.S. could fail to meet its debt obligations sooner than expected, Treasury Secretary Janet Yellen warned in a letter to&nbsp;House&nbsp;Speaker Kevin&nbsp;McCarthy.  </p><p class=\"paragraph\">   Yellen said a drop in tax receipts meant the U.S. could hit its debt ceiling as soon as June 1, earlier than Wall Street and Washington had estimated.  </p><p class=\"paragraph\">   This date is earlier than Wall Street economists were expecting. Goldman Sachs’ latest estimate this week put the deadline at some point in late July, though the bank’s economists acknowledged that weaker-than-expected tax receipts could advance that timeline.  </p><p class=\"paragraph\"> <a href=\"/search?q=#XDAY\">#XDAY</a>&nbsp; </p>",
     "sourceUrl": "https://www.cnbc.com/2023/05/01/treasury-debt-limit-measures-may-run-out-by-june-1-yellen-says-in-letter-to-mccarthy.html",
@@ -6060,14 +6146,16 @@
   },
   {
     "id": 231,
+    "parentId": 233,
     "rootThread": false,
     "title": "Private payrolls rose by 278,000 in May, well ahead of expectations, ADP says",
-    "description": "<p class=\"paragraph\"> The ADP report noted that the distribution of job gains was “fragmented” for the month, as increases were concentrated in leisure and hospitality, which added 208,000 positions, and natural resources and mining, which saw a gain of 94,000. </p><p class=\"paragraph\"> Construction added 64,000 jobs, but multiple other categories had declines. </p><p class=\"paragraph\"> For instance, manufacturing saw a drop of 48,000, financial activities lost 35,000, and education and health services was off by 29,000. Trade, transportation and utilities posted an increase of 32,000 while the other services category added 12,000. </p><p class=\"paragraph\"> From a size perspective, companies with 500 or more workers lost 106,000 jobs. Small firms, with fewer than 50 workers, added 235,000 positions. </p><p class=\"paragraph\"> One area of note for ADP was a slowdown in the pace of wage gains, with annual pay up a still-robust 6.5% in May but down from the 6.7% increase in April. Those switching jobs reported an annual increase of 12.1%, off a percentage point from the month before. </p><p class=\"paragraph\"> <a href=\"/search?q=#ADP\">#ADP</a>&nbsp;<a href=\"/search?q=#Jobs\">#Jobs</a>&nbsp; </p>",
+    "description": "<p class=\"paragraph\">  The ADP report noted that the distribution of job gains was “fragmented” for the month, as increases were concentrated in leisure and hospitality, which added 208,000 positions, and natural resources and mining, which saw a gain of 94,000.  </p><p class=\"paragraph\">  Construction added 64,000 jobs, but multiple other categories had declines.  </p><p class=\"paragraph\">  For instance, manufacturing saw a drop of 48,000, financial activities lost 35,000, and education and health services was off by 29,000. Trade, transportation and utilities posted an increase of 32,000 while the other services category added 12,000.  </p><p class=\"paragraph\">  From a size perspective, companies with 500 or more workers lost 106,000 jobs. Small firms, with fewer than 50 workers, added 235,000 positions.  </p><p class=\"paragraph\">  One area of note for ADP was a slowdown in the pace of wage gains, with annual pay up a still-robust 6.5% in May but down from the 6.7% increase in April. Those switching jobs reported an annual increase of 12.1%, off a percentage point from the month before.  </p><p class=\"paragraph\">  <a href=\"/search?q=#ADP\">#ADP</a>&nbsp;<a href=\"/search?q=#Jobs\">#Jobs</a>&nbsp;  </p>",
     "sourceUrl": "https://www.cnbc.com/2023/06/01/private-payrolls-rose-by-278000-in-may-well-ahead-of-expectations-adp-says.html",
     "utcStartDateTime": "2023-06-01T07:00:00.000Z",
-    "utcEndDateTime": "2023-06-02T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-03T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-01T18:28:02.920Z",
+    "utcUpdatedDateTime": "2023-06-01T19:25:05.952Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -6086,13 +6174,13 @@
     ],
     "mentions": [
       {
-        "id": 19,
-        "tag": "#Jobs",
+        "id": 26,
+        "tag": "#ADP",
         "pinId": 231
       },
       {
-        "id": 20,
-        "tag": "#ADP",
+        "id": 27,
+        "tag": "#Jobs",
         "pinId": 231
       }
     ],
@@ -6130,6 +6218,42 @@
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fstreet-fighter-6---playstation-5%2F357753.html",
         "price": 59.99,
         "pinId": 146
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 236,
+    "parentId": 190,
+    "rootThread": false,
+    "title": "Treasury Secretary Janet Yellen said Friday that the United States will likely have enough reserves to push off a potential debt default until June 5",
+    "description": "<p class=\"paragraph\"> The last time the so-called “X date” was updated was on May 1, when Yellen told Congress the United States had enough cash available to meet its obligations until “early June, and potentially as early as June 1.”&nbsp; </p><p class=\"paragraph\"> Friday’s letter marked the first time since Yellen began sending regular updates to Congress in January that the secretary did not caveat the date with a phrase like “as early as.” </p><p class=\"paragraph\"> Instead, Yellen explained that Treasury would make more than ”$130 billion of scheduled payments in the first two days of June,” leaving the agency with “an extremely low level of resources.” </p><p class=\"paragraph\"> “During the week of June 5, Treasury is scheduled to make an estimated $92 billion of payments and transfers,” Yellen continued, and “our projected resources would be inadequate to satisfy all of these obligations.” </p><p class=\"paragraph\"> To underscore just how low Treasury’s reserves had fallen, Yellen said the agency was forced to deploy an obscure measure on Thursday to move $2 billion from a civil service retirement fund over to the government’s main borrowing institution, the Federal Financing Bank. </p><p class=\"paragraph\"> The move was necessary because “the&nbsp;extremely&nbsp;low level of remaining resources demands that I exhaust all available extraordinary&nbsp;measures to&nbsp;avoid being unable to meet all of the government’s commitments,” Yellen wrote. </p><p class=\"paragraph\"> Markets&nbsp;<a href=\"https://www.cnbc.com/2023/05/25/stock-market-today-live-updates.html\">closed higher</a>&nbsp;Friday, buoyed in part by optimism that there would be a deal passed by the House and Senate and signed by the president by June 1.&nbsp; </p><p class=\"paragraph\"> But as talks dragged on this week with little more than vague claims of “progress” by those involved, optimism faded that deal would be reached by the end of Friday. </p><p class=\"paragraph\"> Officials said Friday was widely seen as the last possible day to reach a deal and still have enough time to craft it into legislation, pass it in the House and then pass it in the Senate before the previous “X-date” of June 1. </p><p class=\"paragraph\"> Yellen’s new date came amid growing concerns around the world about the U.S. credit rating.&nbsp; </p><p class=\"paragraph\"> On Wednesday, the Fitch credit rating agency announced it had placed the United States’ triple-A status on&nbsp;<a href=\"https://www.cnbc.com/2023/05/24/fitch-us-aaa-rating-negative-watch-debt-ceiling.html\">“rating watch negative.”</a> </p><p class=\"paragraph\"> <a href=\"/search?q=#XDate\">#XDate</a>&nbsp; </p>",
+    "sourceUrl": "https://www.cnbc.com/2023/05/26/treasury-says-it-wont-run-out-money-until-at-least-june-5-buying-time-for-debt-ceiling-talks.html",
+    "utcStartDateTime": "2023-06-05T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-06T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-01T20:08:55.387Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 225,
+        "thumbName": "a36e78c3-2828-4e8b-8975-23c9f36726e9.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107240498-1683910744369-gettyimages-1483917268-109a1946_5ziiaq4o.jpeg?v=1685132977&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 38,
+        "tag": "#XDate",
+        "pinId": 236
       }
     ],
     "userId": 1
