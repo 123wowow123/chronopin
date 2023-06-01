@@ -6134,14 +6134,6 @@
         "pinId": 190
       }
     ],
-    "favorites": [
-      {
-        "id": 1,
-        "utcCreatedDateTime": "2023-06-01T18:20:26.234Z",
-        "userId": 1,
-        "pinId": 190
-      }
-    ],
     "userId": 1
   },
   {
@@ -6226,13 +6218,14 @@
     "id": 236,
     "parentId": 190,
     "rootThread": false,
-    "title": "Treasury Secretary Janet Yellen said Friday that the United States will likely have enough reserves to push off a potential debt default until June 5",
-    "description": "<p class=\"paragraph\"> The last time the so-called “X date” was updated was on May 1, when Yellen told Congress the United States had enough cash available to meet its obligations until “early June, and potentially as early as June 1.”&nbsp; </p><p class=\"paragraph\"> Friday’s letter marked the first time since Yellen began sending regular updates to Congress in January that the secretary did not caveat the date with a phrase like “as early as.” </p><p class=\"paragraph\"> Instead, Yellen explained that Treasury would make more than ”$130 billion of scheduled payments in the first two days of June,” leaving the agency with “an extremely low level of resources.” </p><p class=\"paragraph\"> “During the week of June 5, Treasury is scheduled to make an estimated $92 billion of payments and transfers,” Yellen continued, and “our projected resources would be inadequate to satisfy all of these obligations.” </p><p class=\"paragraph\"> To underscore just how low Treasury’s reserves had fallen, Yellen said the agency was forced to deploy an obscure measure on Thursday to move $2 billion from a civil service retirement fund over to the government’s main borrowing institution, the Federal Financing Bank. </p><p class=\"paragraph\"> The move was necessary because “the&nbsp;extremely&nbsp;low level of remaining resources demands that I exhaust all available extraordinary&nbsp;measures to&nbsp;avoid being unable to meet all of the government’s commitments,” Yellen wrote. </p><p class=\"paragraph\"> Markets&nbsp;<a href=\"https://www.cnbc.com/2023/05/25/stock-market-today-live-updates.html\">closed higher</a>&nbsp;Friday, buoyed in part by optimism that there would be a deal passed by the House and Senate and signed by the president by June 1.&nbsp; </p><p class=\"paragraph\"> But as talks dragged on this week with little more than vague claims of “progress” by those involved, optimism faded that deal would be reached by the end of Friday. </p><p class=\"paragraph\"> Officials said Friday was widely seen as the last possible day to reach a deal and still have enough time to craft it into legislation, pass it in the House and then pass it in the Senate before the previous “X-date” of June 1. </p><p class=\"paragraph\"> Yellen’s new date came amid growing concerns around the world about the U.S. credit rating.&nbsp; </p><p class=\"paragraph\"> On Wednesday, the Fitch credit rating agency announced it had placed the United States’ triple-A status on&nbsp;<a href=\"https://www.cnbc.com/2023/05/24/fitch-us-aaa-rating-negative-watch-debt-ceiling.html\">“rating watch negative.”</a> </p><p class=\"paragraph\"> <a href=\"/search?q=#XDate\">#XDate</a>&nbsp; </p>",
+    "title": "United States will likely have enough reserves to push off a potential debt default until June 5 says Treasury Secretary Janet Yellen",
+    "description": "<p class=\"paragraph\">  The last time the so-called “X date” was updated was on May 1, when Yellen told Congress the United States had enough cash available to meet its obligations until “early June, and potentially as early as June 1.”&nbsp;  </p><p class=\"paragraph\">  Friday’s letter marked the first time since Yellen began sending regular updates to Congress in January that the secretary did not caveat the date with a phrase like “as early as.”  </p><p class=\"paragraph\">  Instead, Yellen explained that Treasury would make more than ”$130 billion of scheduled payments in the first two days of June,” leaving the agency with “an extremely low level of resources.”  </p><p class=\"paragraph\">  “During the week of June 5, Treasury is scheduled to make an estimated $92 billion of payments and transfers,” Yellen continued, and “our projected resources would be inadequate to satisfy all of these obligations.”  </p><p class=\"paragraph\">  To underscore just how low Treasury’s reserves had fallen, Yellen said the agency was forced to deploy an obscure measure on Thursday to move $2 billion from a civil service retirement fund over to the government’s main borrowing institution, the Federal Financing Bank.  </p><p class=\"paragraph\">  The move was necessary because “the&nbsp;extremely&nbsp;low level of remaining resources demands that I exhaust all available extraordinary&nbsp;measures to&nbsp;avoid being unable to meet all of the government’s commitments,” Yellen wrote.  </p><p class=\"paragraph\">  Markets&nbsp;<a href=\"https://www.cnbc.com/2023/05/25/stock-market-today-live-updates.html\">closed higher</a>&nbsp;Friday, buoyed in part by optimism that there would be a deal passed by the House and Senate and signed by the president by June 1.&nbsp;  </p><p class=\"paragraph\">  But as talks dragged on this week with little more than vague claims of “progress” by those involved, optimism faded that deal would be reached by the end of Friday.  </p><p class=\"paragraph\">  Officials said Friday was widely seen as the last possible day to reach a deal and still have enough time to craft it into legislation, pass it in the House and then pass it in the Senate before the previous “X-date” of June 1.  </p><p class=\"paragraph\">  Yellen’s new date came amid growing concerns around the world about the U.S. credit rating.&nbsp;  </p><p class=\"paragraph\">  On Wednesday, the Fitch credit rating agency announced it had placed the United States’ triple-A status on&nbsp;<a href=\"https://www.cnbc.com/2023/05/24/fitch-us-aaa-rating-negative-watch-debt-ceiling.html\">“rating watch negative.”</a>  </p><p class=\"paragraph\">  <a href=\"/search?q=#XDate\">#XDate</a>&nbsp;  </p>",
     "sourceUrl": "https://www.cnbc.com/2023/05/26/treasury-says-it-wont-run-out-money-until-at-least-june-5-buying-time-for-debt-ceiling-talks.html",
     "utcStartDateTime": "2023-06-05T07:00:00.000Z",
-    "utcEndDateTime": "2023-06-06T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-07T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-01T20:08:55.387Z",
+    "utcUpdatedDateTime": "2023-06-01T20:14:59.311Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -6251,8 +6244,16 @@
     ],
     "mentions": [
       {
-        "id": 38,
+        "id": 42,
         "tag": "#XDate",
+        "pinId": 236
+      }
+    ],
+    "favorites": [
+      {
+        "id": 10,
+        "utcCreatedDateTime": "2023-06-01T20:12:24.466Z",
+        "userId": 1,
         "pinId": 236
       }
     ],
