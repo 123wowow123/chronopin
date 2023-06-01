@@ -67,10 +67,8 @@ BEGIN
       address,
       pinId
     )
-    ON r.pinId = foo.pinId AND r.id = @id
-    WHEN MATCHED THEN
-      UPDATE SET
-        address = foo.address
+    ON r.pinId = foo.pinId AND r.address = @address
+
     WHEN NOT MATCHED THEN
       INSERT (address, pinId)
       VALUES (foo.address, foo.pinId)

@@ -2,6 +2,7 @@
 
 /** Retruns Collection **/
 /* pin */
+const createGetPinsWithFavoriteAndLikeArrayNextFullPinSP = require('./pin/createGetPinsWithFavoriteAndLikeArrayNextFullPinSP');
 const createGetPinsWithFavoriteAndLikeNextSP = require('./pin/createGetPinsWithFavoriteAndLikeNextSP');
 const createGetPinsWithFavoriteAndLikePrevSP = require('./pin/createGetPinsWithFavoriteAndLikePrevSP');
 const createGetPinsWithFavoriteAndLikeInitialSP = require('./pin/createGetPinsWithFavoriteAndLikeInitialSP');
@@ -119,6 +120,7 @@ module.exports.setup = function (connectionPool) {
   cp = connectionPool;
 
   // Retruns Collection
+  createGetPinsWithFavoriteAndLikeArrayNextFullPinSP.setup(cp);
   createGetPinsWithFavoriteAndLikeNextSP.setup(cp);
   createGetPinsWithFavoriteAndLikePrevSP.setup(cp);
   createGetPinsWithFavoriteAndLikeInitialSP.setup(cp);
@@ -194,6 +196,7 @@ module.exports.setup = function (connectionPool) {
 };
 
 // Retruns Collection
+module.exports.createGetPinsWithFavoriteAndLikeArrayNextFullPinSP = createGetPinsWithFavoriteAndLikeArrayNextFullPinSP.createSP;
 module.exports.createGetPinsWithFavoriteAndLikeNextSP = createGetPinsWithFavoriteAndLikeNextSP.createSP;
 module.exports.createGetPinsWithFavoriteAndLikePrevSP = createGetPinsWithFavoriteAndLikePrevSP.createSP;
 module.exports.createGetPinsWithFavoriteAndLikeInitialSP = createGetPinsWithFavoriteAndLikeInitialSP.createSP;

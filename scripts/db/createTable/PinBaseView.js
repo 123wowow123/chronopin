@@ -102,7 +102,8 @@ function executeCreateTable() {
                 ON [Media].[id] = [Media.PinMedium].[MediumId] AND [Media.PinMedium].[utcDeletedDateTime] IS NULL
               LEFT JOIN [dbo].[Favorite] AS [Favorites]
                 ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL
-              LEFT JOIN [dbo].[Like] AS [Likes] ON [Pin].[id] = [Likes].[PinId] AND [Likes].[utcDeletedDateTime] IS NULL
+              LEFT JOIN [dbo].[Like] AS [Likes] 
+                ON [Pin].[id] = [Likes].[PinId] AND [Likes].[utcDeletedDateTime] IS NULL
               LEFT JOIN [dbo].[User] AS [User]
                 ON [Pin].[userId] = [User].[id]
               LEFT JOIN [dbo].[Merchant] AS [Merchant]

@@ -73,7 +73,7 @@ BEGIN
       price,
       pinId
     )
-    ON r.pinId = foo.pinId AND r.id = @id
+    ON r.pinId = foo.pinId AND r.label = @label AND r.url = @url
     WHEN MATCHED THEN
       UPDATE SET
         label = foo.label,

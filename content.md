@@ -20,7 +20,6 @@ default does not select media but when selected it will auto check pin header me
 fix indexing with hashtag
 
 
-Favorite & Watch not being backed up and seeding ++
 User not using seed file ++
 
 

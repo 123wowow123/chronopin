@@ -91,11 +91,11 @@ BEGIN
     )
     ON r.userId = foo.userId
       AND r.pinId = foo.pinId
+      AND r.utcDeletedDateTime IS NULL
     WHEN MATCHED THEN
       UPDATE SET
         [like] = foo.[like],
-        utcUpdatedDateTime = foo.utcCurrentDateTime,
-        utcDeletedDateTime = null
+        utcUpdatedDateTime = foo.utcCurrentDateTime
     WHEN NOT MATCHED THEN
       INSERT ([like], userId, pinId, utcCreatedDateTime, utcUpdatedDateTime, utcDeletedDateTime)
       VALUES (foo.[like], foo.userId, foo.pinId, foo.utcCreatedDateTime, foo.utcUpdatedDateTime, foo.utcDeletedDateTime)

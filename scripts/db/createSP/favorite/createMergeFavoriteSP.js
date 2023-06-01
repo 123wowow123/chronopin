@@ -87,11 +87,9 @@ function executeCreateSP() {
                 utcCurrentDateTime
               )
               ON r.userId = foo.userId 
-                AND r.pinId = foo.pinId
-              WHEN MATCHED THEN
-                UPDATE SET 
-                  utcUpdatedDateTime = foo.utcCurrentDateTime,
-                  utcDeletedDateTime = null
+                AND r.pinId = foo.pinId 
+                AND r.utcDeletedDateTime IS NULL
+
               WHEN NOT MATCHED THEN
                 INSERT (userId, pinId, utcCreatedDateTime, utcUpdatedDateTime, utcDeletedDateTime)
                 VALUES (foo.userId, foo.pinId, foo.utcCreatedDateTime, foo.utcUpdatedDateTime, foo.utcDeletedDateTime)

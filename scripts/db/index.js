@@ -16,8 +16,8 @@ const createUser = createTable.createUser;
 const createLocation = createTable.createLocation;
 const createClick = createTable.createClick;
 const createComment = createTable.createComment;
-//const createFavorite = createTable.createFavorite;
-//const createLike = createTable.createLike;
+const createFavorite = createTable.createFavorite;
+const createLike = createTable.createLike;
 const createMedium = createTable.createMedium;
 const createMediumType = createTable.createMediumType;
 const createPin = createTable.createPin;
@@ -32,6 +32,7 @@ const createPinView = createTable.createPinView;
 const createPinBaseView = createTable.createPinBaseView;
 
 // Retruns Collection
+const createGetPinsWithFavoriteAndLikeArrayNextFullPinSP = createSP.createGetPinsWithFavoriteAndLikeArrayNextFullPinSP;
 const createGetPinsWithFavoriteAndLikeNextSP = createSP.createGetPinsWithFavoriteAndLikeNextSP;
 const createGetPinsWithFavoriteAndLikePrevSP = createSP.createGetPinsWithFavoriteAndLikePrevSP;
 const createGetPinsWithFavoriteAndLikeInitialSP = createSP.createGetPinsWithFavoriteAndLikeInitialSP;
@@ -136,8 +137,8 @@ function execute() {
         createPinMedium,
         createClick,
         createComment,
-        //createFavorite,
-        //createLike,
+        createFavorite,
+        createLike,
         createDateTime,
         createMerchant,
         createMention,
@@ -148,6 +149,7 @@ function execute() {
         createPinBaseView,
 
         // Retruns Collection
+        createGetPinsWithFavoriteAndLikeArrayNextFullPinSP,
         createGetPinsWithFavoriteAndLikeNextSP,
         createGetPinsWithFavoriteAndLikePrevSP,
         createGetPinsWithFavoriteAndLikeInitialSP,
