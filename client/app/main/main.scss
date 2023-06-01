@@ -261,6 +261,7 @@ $bag-font-color: var(--bag-text-color);
         bottom: 0;
         left: 0;
         background: var(--grid-panel-bg-color) !important;
+        color: #337ab7;
 
         &:before {
             content: '';

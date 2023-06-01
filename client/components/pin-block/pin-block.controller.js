@@ -85,6 +85,10 @@
             return this.ScrollUtil.isOverflown(contentEl);
         }
 
+        scrollHeightLessOne(contentEl) {
+            return this.activateFullPin && this.fullPin ? { 'max-height': this.ScrollUtil.scrollHeightLessOne(contentEl) + 'px' } : {};
+        }
+
         $postLink() {
             this.contentEl = this.$element[0].querySelector('.grid__content');
         };
@@ -100,14 +104,17 @@
             bindings: {
                 pin: '<',
                 config: '<',
-                disabled: '='
+                fullPin: '<',
+                activateFullPin: '=',
+                disabled: '=',
+                showMoreFn: "&",
             },
             // templateUrl throws render timing off and causes issues with infinite scroll
             //templateUrl: 'components/pin-block/pin-block.html',
             template: `
             <article class="grid__panel" ng-class="{ '\--disabled': $ctrl.disableLink }">
             <!-- <p ng-if="$ctrl.Auth.isAdmin()">{{$ctrl.pin.searchScore}}</p> -->
-            <div class="grid__content">
+            <div class="grid__content" ng-style="$ctrl.scrollHeightLessOne($ctrl.contentEl)">
                 <div class="grid__headline">
                     <div class="headline-left">
                         <a class="posted-time" ui-sref="pin({id:$ctrl.pin.id})">
@@ -176,9 +183,13 @@
                     <div class="grid__description" ng-bind-html="$ctrl.pin.description"></div>
                 </div>
         
-                <a class="grid__show_more" ui-sref="pin({id:$ctrl.pin.id})" ng-if="$ctrl.isContentOverflown($ctrl.contentEl)">
+                <a class="grid__show_more" ui-sref="pin({id:$ctrl.pin.id})" ng-if="!$ctrl.activateFullPin && $ctrl.isContentOverflown($ctrl.contentEl)">
                     show more
                 </a>
+        
+                <span class="grid__show_more" ng-click="$ctrl.showMoreFn()" ng-if="$ctrl.activateFullPin && $ctrl.isContentOverflown($ctrl.contentEl)">
+                    {{$ctrl.fullPin ? 'show less' : 'show more'}}
+                </span>
         
             </div>
         

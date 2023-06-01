@@ -17,6 +17,7 @@ missing description validation
 Should show page not found and redirect to home? https://chronopin.com/pin/178
 quick add Q2 etc
 default does not select media but when selected it will auto check pin header media.
+fix indexing with hashtag
 
 
 Favorite & Watch not being backed up and seeding ++
@@ -37,6 +38,11 @@ Buy keywords in content that will turn into link where it will show map and near
 Pin dollar tag should link to referal page in new tab
 
 Features:
+
+treading tags and search query on side pane +
+$tag should show posted time ticker price as well as current price eg: +
+https://www.marketwatch.com/story/big-apple-microsoft-names-back-stock-picking-site?dist=msr_10
+https://rapidapi.com/twelvedata/api/twelve-data1
 
 hash*tag? useful for 'editor's choice' and other badges ++
 $tag mention will show ticker price in pin view
@@ -314,6 +320,3 @@ https://marketrealist.com/p/us-companies-leaving-china/#:~:text=Yahoo%20Joins%20
 https://youtu.be/7Qo9a6yMxE0?t=513
 China expectd to become the world's largest luxury goods market by 2025
 need timestamped youtube
-
-https://twitter.com/INArteCarloDoss/status/1663872116314329088
-

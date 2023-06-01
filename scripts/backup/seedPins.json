@@ -797,12 +797,6 @@
         "type": "1"
       }
     ],
-    "locations": [
-      {
-        "id": 2,
-        "pinId": 28
-      }
-    ],
     "userId": 1
   },
   {
@@ -1095,7 +1089,7 @@
     ],
     "locations": [
       {
-        "id": 3,
+        "id": 2,
         "address": "Dockside Fish Market, San Diego",
         "pinId": 38
       }
@@ -1638,12 +1632,6 @@
         "pinId": 57
       }
     ],
-    "locations": [
-      {
-        "id": 4,
-        "pinId": 57
-      }
-    ],
     "userId": 1
   },
   {
@@ -1795,12 +1783,6 @@
         "label": "Gamestop Pre-Owned PS4",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Ffar-cry-4---playstation-4%2F106677.html",
         "price": 6.99,
-        "pinId": 62
-      }
-    ],
-    "locations": [
-      {
-        "id": 5,
         "pinId": 62
       }
     ],
@@ -2388,7 +2370,7 @@
     ],
     "locations": [
       {
-        "id": 6,
+        "id": 3,
         "address": "Huainan, China",
         "pinId": 81
       }
@@ -2493,12 +2475,6 @@
         "label": "Amazon: Modern Mouse Silver",
         "url": "https://amzn.to/3IC8VDN",
         "price": 37.49,
-        "pinId": 84
-      }
-    ],
-    "locations": [
-      {
-        "id": 7,
         "pinId": 84
       }
     ],
@@ -3312,12 +3288,6 @@
         "type": "1"
       }
     ],
-    "locations": [
-      {
-        "id": 8,
-        "pinId": 113
-      }
-    ],
     "userId": 1
   },
   {
@@ -3441,12 +3411,6 @@
         "label": "Amazon Prime Video - 1 Year",
         "url": "https://amzn.to/43izwxQ",
         "price": 139,
-        "pinId": 117
-      }
-    ],
-    "locations": [
-      {
-        "id": 9,
         "pinId": 117
       }
     ],
@@ -3600,13 +3564,13 @@
     "id": 123,
     "rootThread": false,
     "title": "'Constant Negativity' From Pro Users Led Apple to Develop Modular Mac Pro, Which May Not Ship Until 2019",
-    "description": "<p class=\"paragraph\"> Apple executives this week made an unusual and surprising announcement, detailing the company's work on an&nbsp;<a href=\"https://www.macrumors.com/2017/04/04/apple-updates-mac-pro-and-more/\">entirely revamped high-end modular Mac Pro</a>&nbsp;that's set to be released sometime after 2017. </p><p class=\"paragraph\"> No specific information on a potential release date was shared, but&nbsp;<a href=\"http://www.osnews.com/story/29755/Some_notes_regarding_the_new_Mac_Pro\">OSnews' Thom Holwerda</a>&nbsp;has shared some tidbits heard from \"people and sources who know their stuff,\" giving a little insight into just when we might see the revamped Mac Pro and why Apple decided to renew its focus on professional users. </p><p class=\"paragraph\"> Ahead of Apple's announcement, Holwerda says the Mac Pro was in limbo, and Apple wasn't sure what was going to happen to the machine. </p><p class=\"paragraph\"> Apparently, the negative response to the MacBook Pro with Touch Bar, which many complained was not oriented towards pro users, was a major factor. Apple saw a surge of orders for older MacBook Pros instead of the new model, and that, combined with the reaction to the LG 5K display and the \"constant negativity\" from professional users, led Apple to \"double down on professional users.\" </p><p class=\"paragraph\"> The decision to move ahead with a modular Mac Pro replacement was made \"in recent months\" with development starting \"only a few weeks ago,\" suggesting it's going to be a long wait. </p><p class=\"paragraph\"> Given a rough estimate of the length of time it normally takes to develop a project, it could be late 2018 or even 2019 before we see the machine. </p><p class=\"paragraph\"> The decision to go ahead and develop a modular Mac Pro replacement seems to have been made only in recent months, with development starting only a few weeks ago, which makes it clear why Apple said it won't ship this year. I have no idea how long it takes to develop a new computer like a Mac Pro, but I think we can expect the new Mac Pro late 2018 at the earliest, but most likely it won't be until early 2019 before it ships. </p><p class=\"paragraph\"> Aside from the Mac Pro, Holwerda also believes Apple is working on additional MacBook Pro models sans Touch Bar, and developing other features aimed at professionals, such as pairing the iPad Pro with a Mac so that it can be used as a Cintiq-style drawing tablet. </p><p class=\"paragraph\"> Apple hasn't shared a lot of detail on the new Mac Pro, but the promised modular design will allow professional users to keep it up to date with new hardware on a regular basis. Apple executives have said the machine will also be able to handle virtual reality software and high-end cinema editing, pointing towards support for higher-end single GPUs, and Apple also plans to ship the machine with an Apple-branded professional display. </p>",
+    "description": "<p class=\"paragraph\">  Apple executives this week made an unusual and surprising announcement, detailing the company's work on an&nbsp;<a href=\"https://www.macrumors.com/2017/04/04/apple-updates-mac-pro-and-more/\">entirely revamped high-end modular Mac Pro</a>&nbsp;that's set to be released sometime after 2017.  </p><p class=\"paragraph\">  No specific information on a potential release date was shared, but&nbsp;<a href=\"http://www.osnews.com/story/29755/Some_notes_regarding_the_new_Mac_Pro\">OSnews' Thom Holwerda</a>&nbsp;has shared some tidbits heard from \"people and sources who know their stuff,\" giving a little insight into just when we might see the revamped Mac Pro and why Apple decided to renew its focus on professional users.  </p><p class=\"paragraph\">  Ahead of Apple's announcement, Holwerda says the Mac Pro was in limbo, and Apple wasn't sure what was going to happen to the machine.  </p><p class=\"paragraph\">  Apparently, the negative response to the MacBook Pro with Touch Bar, which many complained was not oriented towards pro users, was a major factor. Apple saw a surge of orders for older MacBook Pros instead of the new model, and that, combined with the reaction to the LG 5K display and the \"constant negativity\" from professional users, led Apple to \"double down on professional users.\"  </p><p class=\"paragraph\">  The decision to move ahead with a modular Mac Pro replacement was made \"in recent months\" with development starting \"only a few weeks ago,\" suggesting it's going to be a long wait.  </p><p class=\"paragraph\">  Given a rough estimate of the length of time it normally takes to develop a project, it could be late 2018 or even 2019 before we see the machine.  </p><p class=\"paragraph\">  The decision to go ahead and develop a modular Mac Pro replacement seems to have been made only in recent months, with development starting only a few weeks ago, which makes it clear why Apple said it won't ship this year. I have no idea how long it takes to develop a new computer like a Mac Pro, but I think we can expect the new Mac Pro late 2018 at the earliest, but most likely it won't be until early 2019 before it ships.  </p><p class=\"paragraph\">  Aside from the Mac Pro, Holwerda also believes Apple is working on additional MacBook Pro models sans Touch Bar, and developing other features aimed at professionals, such as pairing the iPad Pro with a Mac so that it can be used as a Cintiq-style drawing tablet.  </p><p class=\"paragraph\">  Apple hasn't shared a lot of detail on the new Mac Pro, but the promised modular design will allow professional users to keep it up to date with new hardware on a regular basis. Apple executives have said the machine will also be able to handle virtual reality software and high-end cinema editing, pointing towards support for higher-end single GPUs, and Apple also plans to ship the machine with an Apple-branded professional display.  </p><p class=\"paragraph\"> <a href=\"/search?q=#AAPL\">#AAPL</a>&nbsp; </p>",
     "sourceUrl": "https://www.macrumors.com/2017/04/06/mac-pro-may-not-ship-until-2019/",
     "utcStartDateTime": "2019-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2020-01-02T08:00:00.000Z",
+    "utcEndDateTime": "2020-01-03T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-21T06:01:58.712Z",
-    "utcUpdatedDateTime": "2023-05-25T23:54:08.436Z",
+    "utcUpdatedDateTime": "2023-05-31T17:57:46.015Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3623,9 +3587,10 @@
         "type": "1"
       }
     ],
-    "locations": [
+    "mentions": [
       {
-        "id": 10,
+        "id": 1,
+        "tag": "#AAPL",
         "pinId": 123
       }
     ],
@@ -3691,12 +3656,13 @@
     "id": 126,
     "rootThread": false,
     "title": "Amazon to install solar systems on 50 fulfillment facility rooftops worldwide by 2020",
-    "description": "The initial solar projects planned for completion by the end of 2017 will generate up to 41 megawatts (MW) of power at Amazon facilities in California, New Jersey, Maryland, Nevada and Delaware. Depending on the specific project, time of year and other factors, a solar installation could generate as much as 80 percent of a single fulfillment facility’s annual energy needs.",
+    "description": "<p class=\"paragraph\"> The initial solar projects planned for completion by the end of 2017 will generate up to 41 megawatts (MW) of power at Amazon facilities in California, New Jersey, Maryland, Nevada and Delaware. Depending on the specific project, time of year and other factors, a solar installation could generate as much as 80 percent of a single fulfillment facility’s annual energy needs. </p><p class=\"paragraph\"> <a href=\"/search?q=$AMZN\">$AMZN</a>&nbsp; </p>",
     "sourceUrl": "http://phoenix.corporate-ir.net/phoenix.zhtml?c=176060&p=irol-newsArticle&ID=2251024",
     "utcStartDateTime": "2020-01-01T08:00:00.000Z",
-    "utcEndDateTime": "2020-01-02T08:00:00.000Z",
+    "utcEndDateTime": "2020-01-03T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-21T06:14:26.451Z",
+    "utcUpdatedDateTime": "2023-05-31T17:56:49.608Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3711,6 +3677,13 @@
         "originalWidth": 480,
         "originalHeight": 320,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 2,
+        "tag": "$AMZN",
+        "pinId": 126
       }
     ],
     "userId": 1
@@ -3744,12 +3717,12 @@
     ],
     "locations": [
       {
-        "id": 11,
+        "id": 4,
         "address": "Gothenburg",
         "pinId": 127
       },
       {
-        "id": 12,
+        "id": 5,
         "address": "Helsingborg",
         "pinId": 127
       }
@@ -3863,12 +3836,13 @@
     "id": 131,
     "rootThread": false,
     "title": "Wide scale deployment of 5G",
-    "description": "5G promises greater speed, higher capacity, and low latency to our essential high-tech smart connected devices. Intel wants to make the transition to 5G smooth and seamless and with this in mind has designed a powerful end-to-end 5G solution. The Intel XMM 8000 series is Intel's first family of commercial 5G multi-mode modems, operating in both sub-6GHz and millimetre wave global spectrum bands. Intel hopes to gather a mass of design wins for the XMM 8000 in PC, phones, and even vehicles.",
+    "description": "<p class=\"paragraph\"> 5G promises greater speed, higher capacity, and low latency to our essential high-tech smart connected devices. Intel wants to make the transition to 5G smooth and seamless and with this in mind has designed a powerful end-to-end 5G solution. The Intel XMM 8000 series is Intel's first family of commercial 5G multi-mode modems, operating in both sub-6GHz and millimetre wave global spectrum bands. Intel hopes to gather a mass of design wins for the XMM 8000 in PC, phones, and even vehicles. </p><p class=\"paragraph\"> <a href=\"/search?q=$INTC\">$INTC</a>&nbsp; </p>",
     "sourceUrl": "https://hexus.net/tech/news/network/112292-intel-introduces-xmm-8000-series-5g-modems/",
     "utcStartDateTime": "2020-06-15T07:00:00.000Z",
-    "utcEndDateTime": "2020-06-16T06:59:59.000Z",
+    "utcEndDateTime": "2020-06-16T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2018-02-27T06:23:16.798Z",
+    "utcUpdatedDateTime": "2023-05-31T17:55:32.639Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3883,6 +3857,13 @@
         "originalWidth": 700,
         "originalHeight": 429,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 3,
+        "tag": "$INTC",
+        "pinId": 131
       }
     ],
     "userId": 1
@@ -3917,7 +3898,7 @@
     ],
     "locations": [
       {
-        "id": 13,
+        "id": 6,
         "address": "Dubai",
         "pinId": 132
       }
@@ -3983,7 +3964,7 @@
     ],
     "locations": [
       {
-        "id": 14,
+        "id": 7,
         "address": "Jeddah tower, Saudi Arabia",
         "pinId": 134
       }
@@ -4020,7 +4001,7 @@
     ],
     "locations": [
       {
-        "id": 15,
+        "id": 8,
         "address": "Waukee, Iowa",
         "pinId": 135
       }
@@ -4057,7 +4038,7 @@
     ],
     "locations": [
       {
-        "id": 16,
+        "id": 9,
         "address": "Suzhou Zhongnan Center",
         "pinId": 136
       }
@@ -4122,7 +4103,7 @@
     ],
     "locations": [
       {
-        "id": 17,
+        "id": 10,
         "address": "Battersea Power Station, London",
         "pinId": 138
       }
@@ -4155,12 +4136,6 @@
         "originalWidth": 678,
         "originalHeight": 545,
         "type": "1"
-      }
-    ],
-    "locations": [
-      {
-        "id": 18,
-        "pinId": 139
       }
     ],
     "userId": 1
@@ -4309,12 +4284,6 @@
         "pinId": 172
       }
     ],
-    "locations": [
-      {
-        "id": 19,
-        "pinId": 172
-      }
-    ],
     "userId": 1
   },
   {
@@ -4393,15 +4362,9 @@
         "pinId": 197
       }
     ],
-    "locations": [
-      {
-        "id": 20,
-        "pinId": 197
-      }
-    ],
     "mentions": [
       {
-        "id": 1,
+        "id": 4,
         "tag": "#crypto",
         "pinId": 197
       }
@@ -4739,7 +4702,7 @@
     ],
     "locations": [
       {
-        "id": 21,
+        "id": 11,
         "address": "Westminster Abbey, UK",
         "pinId": 220
       }
@@ -4976,12 +4939,6 @@
         "label": "Gamestop Pre-Owned PS5",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fsifu-vengeance-edition---playstation-5%2F337595.html",
         "price": 44.99,
-        "pinId": 186
-      }
-    ],
-    "locations": [
-      {
-        "id": 22,
         "pinId": 186
       }
     ],
@@ -5297,7 +5254,7 @@
     ],
     "locations": [
       {
-        "id": 23,
+        "id": 12,
         "address": "Turlock Irrigation District",
         "pinId": 214
       }
@@ -5337,12 +5294,6 @@
         "label": "UPPAbaby VISTA Upper Adapters",
         "url": "https://amzn.to/3WBMhBj",
         "price": 29.99,
-        "pinId": 226
-      }
-    ],
-    "locations": [
-      {
-        "id": 24,
         "pinId": 226
       }
     ],
@@ -5430,13 +5381,14 @@
     "id": 142,
     "rootThread": false,
     "title": "Everything else about the PS VR2 feels like a quantum leap over any other headset in its price class",
-    "description": "It’s a thrill when we get to say this about a new piece of gaming hardware: The PlayStation VR 2 is a true generational leap that makes the old one look like a piece of junk. It’s not exactly cheap, but for $549.99 you get a high-end headset with a 4K, HDR-enabled OLED screen, a 110-degree field of view, built-in tracking cameras, and eye tracking, plus two of its slick Sense controllers with the excellent adaptive triggers and haptic feedback Sony introduced with the PlayStation 5’s DualSense controller. The catch is that it requires you to be connected to a PS5 by a single USB-C cable, but that means it’s much, much more powerful when it comes to delivering fantastic graphics than a self-contained headset like the Meta Quest 2. With all of that, including a few features you don’t see on even more expensive PC VR headsets like Valve’s Index and HP’s Reverb G2, the PlayStation VR2 has vaulted console VR into the lead in just about every category… except available games.",
+    "description": "<p class=\"paragraph\"> It’s a thrill when we get to say this about a new piece of gaming hardware: The PlayStation VR 2 is a true generational leap that makes the old one look like a piece of junk. It’s not exactly cheap, but for $549.99 you get a high-end headset with a 4K, HDR-enabled OLED screen, a 110-degree field of view, built-in tracking cameras, and eye tracking, plus two of its slick Sense controllers with the excellent adaptive triggers and haptic feedback Sony introduced with the PlayStation 5’s DualSense controller. The catch is that it requires you to be connected to a PS5 by a single USB-C cable, but that means it’s much, much more powerful when it comes to delivering fantastic graphics than a self-contained headset like the Meta Quest 2. With all of that, including a few features you don’t see on even more expensive PC VR headsets like Valve’s Index and HP’s Reverb G2, the PlayStation VR2 has vaulted console VR into the lead in just about every category… except available games. </p><p class=\"paragraph\"> <a href=\"/search?q=$SONY\">$SONY</a>&nbsp; </p>",
     "sourceUrl": "https://www.ign.com/articles/playstation-vr2-review",
     "price": 549.99,
     "utcStartDateTime": "2023-02-22T08:00:00.000Z",
-    "utcEndDateTime": "2023-02-23T08:00:00.000Z",
+    "utcEndDateTime": "2023-02-24T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-02-26T07:16:16.457Z",
+    "utcUpdatedDateTime": "2023-05-31T17:58:32.140Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -5451,6 +5403,13 @@
         "originalWidth": 1200,
         "originalHeight": 675,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 5,
+        "tag": "$SONY",
+        "pinId": 142
       }
     ],
     "userId": 1
@@ -5591,7 +5550,7 @@
     },
     "media": [
       {
-        "id": 216,
+        "id": 176,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1652048950352814155",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -5599,15 +5558,9 @@
         "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Inflation is finished ?? <br><br>Tweet dedicated to all cumlordz ! <a href=\"https://t.co/D32wSXOASx\">pic.twitter.com/D32wSXOASx</a></p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1652048950352814155?ref_src=twsrc%5Etfw\">April 28, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
       }
     ],
-    "locations": [
-      {
-        "id": 46,
-        "pinId": 227
-      }
-    ],
     "mentions": [
       {
-        "id": 3,
+        "id": 6,
         "tag": "#inflation",
         "pinId": 227
       }
@@ -5631,7 +5584,7 @@
     },
     "media": [
       {
-        "id": 176,
+        "id": 177,
         "originalUrl": "//www.youtube.com/embed/Mz5OcKiGoV8",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Mz5OcKiGoV8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5654,7 +5607,7 @@
     },
     "media": [
       {
-        "id": 177,
+        "id": 178,
         "originalUrl": "https://twitter.com/BurggrabenH/status/1650415388553822211",
         "type": "2",
         "authorName": "Alexander Stahel ????",
@@ -5680,7 +5633,7 @@
     },
     "media": [
       {
-        "id": 178,
+        "id": 179,
         "thumbName": "fdb32feb-199d-448d-93af-bea61de72f7b.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5709,7 +5662,7 @@
     },
     "media": [
       {
-        "id": 179,
+        "id": 180,
         "thumbName": "8f512cad-4dce-4420-8ce9-abcc15b38dbd.png",
         "thumbWidth": 799,
         "thumbHeight": 506,
@@ -5737,7 +5690,7 @@
     },
     "media": [
       {
-        "id": 180,
+        "id": 181,
         "thumbName": "5ce370bf-3c98-41a1-b57e-3fa9ee03b54f.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5764,7 +5717,7 @@
     },
     "media": [
       {
-        "id": 181,
+        "id": 182,
         "originalUrl": "https://twitter.com/Jay__Cale/status/1655653917651247104",
         "type": "2",
         "authorName": "Jay Cal",
@@ -5778,19 +5731,20 @@
     "id": 210,
     "rootThread": false,
     "title": "Last time Fed Funds Rate was this high, S&P 500 TTM PE was around 18 it's now 23.91",
+    "description": "<p class=\"paragraph\"> <a href=\"/search?q=$AAPL\">$AAPL</a>&nbsp;<a href=\"/search?q=$MSFT\">$MSFT</a>&nbsp;<a href=\"/search?q=$GOOG\">$GOOG</a>&nbsp;<a href=\"/search?q=$META\">$META</a>&nbsp;<a href=\"/search?q=$NVDA\">$NVDA</a>&nbsp;<a href=\"/search?q=$AMAZN\">$AMAZN</a>&nbsp;<a href=\"/search?q=$NFLX\">$NFLX</a>&nbsp;<a href=\"/search?q=$TSLA\">$TSLA</a>&nbsp; </p>",
     "sourceUrl": "https://twitter.com/RJRCapital/status/1656838113858076672",
     "utcStartDateTime": "2023-05-11T07:00:00.000Z",
-    "utcEndDateTime": "2023-05-13T07:00:00.000Z",
+    "utcEndDateTime": "2023-05-14T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-12T06:43:39.599Z",
-    "utcUpdatedDateTime": "2023-05-31T06:21:08.918Z",
+    "utcUpdatedDateTime": "2023-05-31T17:54:05.248Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "media": [
       {
-        "id": 182,
+        "id": 183,
         "originalUrl": "https://twitter.com/RJRCapital/status/1656838113858076672",
         "type": "2",
         "authorName": "RJR Capital",
@@ -5798,9 +5752,45 @@
         "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">6/ So how has Big Tech fared? Here&#39;s a snapshot:<a href=\"https://twitter.com/search?q=%24AAPL&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$AAPL</a> 29.18 on 1/4, 29.47 now<a href=\"https://twitter.com/search?q=%24MSFT&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$MSFT</a> 35.39 then, 45.74 now<a href=\"https://twitter.com/search?q=%24GOOG&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$GOOG</a> 25.78 then, 35.21 now<a href=\"https://twitter.com/search?q=%24META&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$META</a> 24.37 then, 40.24 now<a href=\"https://twitter.com/search?q=%24NVDA&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$NVDA</a> 63.47 then, 164.24 now<a href=\"https://twitter.com/search?q=%24AMZN&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$AMZN</a> 51.35 then, 267.10 now<a href=\"https://twitter.com/search?q=%24NFLX&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$NFLX</a> and <a href=\"https://twitter.com/search?q=%24TSLA&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$TSLA</a> are the only 2 with lower PEs today.</p>&mdash; RJR Capital (@RJRCapital) <a href=\"https://twitter.com/RJRCapital/status/1656838113858076672?ref_src=twsrc%5Etfw\">May 12, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
       }
     ],
-    "locations": [
+    "mentions": [
       {
-        "id": 47,
+        "id": 7,
+        "tag": "$AAPL",
+        "pinId": 210
+      },
+      {
+        "id": 8,
+        "tag": "$MSFT",
+        "pinId": 210
+      },
+      {
+        "id": 9,
+        "tag": "$AMAZN",
+        "pinId": 210
+      },
+      {
+        "id": 10,
+        "tag": "$NVDA",
+        "pinId": 210
+      },
+      {
+        "id": 11,
+        "tag": "$META",
+        "pinId": 210
+      },
+      {
+        "id": 12,
+        "tag": "$TSLA",
+        "pinId": 210
+      },
+      {
+        "id": 13,
+        "tag": "$GOOG",
+        "pinId": 210
+      },
+      {
+        "id": 14,
+        "tag": "$NFLX",
         "pinId": 210
       }
     ],
@@ -5825,7 +5815,7 @@
     },
     "media": [
       {
-        "id": 183,
+        "id": 184,
         "originalUrl": "//www.youtube.com/embed/a6qna-ZCbxA",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/a6qna-ZCbxA\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5859,9 +5849,87 @@
     },
     "locations": [
       {
-        "id": 25,
+        "id": 13,
         "address": "Kyiv, Ukraine",
         "pinId": 205
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 228,
+    "rootThread": false,
+    "title": "Is $NVDA in a bubble similar to http://dot.com ?",
+    "description": "<p class=\"paragraph\"> <a href=\"/search?q=$NVDA\">$NVDA</a>&nbsp; </p>",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1663872116314329088",
+    "utcStartDateTime": "2023-05-31T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-01T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-31T17:40:25.666Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 185,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1663872116314329088",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">So is <a href=\"https://twitter.com/search?q=%24NVDA&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$NVDA</a> in a bubble similar to <a href=\"https://t.co/ozN4bah6Cw\">https://t.co/ozN4bah6Cw</a> ? Not yet, but now is the moment of truth. It’s levitating at 3 sigma over 200SMA , which is 100% &gt; 200SMA , but it did hit 350% &gt; 200SMA during the infamous <a href=\"https://t.co/ozN4bah6Cw\">https://t.co/ozN4bah6Cw</a> bubble. Excluding that period, 60d fwd… <a href=\"https://t.co/lTbDOQpBcP\">pic.twitter.com/lTbDOQpBcP</a></p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1663872116314329088?ref_src=twsrc%5Etfw\">May 31, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 15,
+        "tag": "$NVDA",
+        "pinId": 228
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 229,
+    "rootThread": false,
+    "title": "Coincident economic indicators, Las Vegas Strip revenues, has decelerated sharply in March/April. Was up 20% Y/Y in Jan/Feb. Barely up in last two months",
+    "description": "<p class=\"paragraph\"> <a href=\"/search?q=#CoincidentEconomicIndicator\">#CoincidentEconomicIndicator</a>&nbsp;<a href=\"/search?q=#indicator\">#indicator</a>&nbsp; </p>",
+    "sourceUrl": "https://twitter.com/WallStCynic/status/1663937504037294080",
+    "utcStartDateTime": "2023-05-31T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-01T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-05-31T19:51:10.893Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 186,
+        "originalUrl": "https://twitter.com/WallStCynic/status/1663937504037294080",
+        "type": "2",
+        "authorName": "Diogenes",
+        "authorUrl": "https://twitter.com/WallStCynic",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">On of my favorite coincident economic indicators, Las Vegas Strip revenues, has decelerated sharply in March/April. Was up 20% Y/Y in Jan/Feb. Barely up in last two months. <a href=\"https://t.co/KJqfQKl86N\">https://t.co/KJqfQKl86N</a></p>&mdash; Diogenes (@WallStCynic) <a href=\"https://twitter.com/WallStCynic/status/1663937504037294080?ref_src=twsrc%5Etfw\">May 31, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 14,
+        "address": "Las Vegas Strip",
+        "pinId": 229
+      }
+    ],
+    "mentions": [
+      {
+        "id": 16,
+        "tag": "#indicator",
+        "pinId": 229
+      },
+      {
+        "id": 17,
+        "tag": "#CoincidentEconomicIndicator",
+        "pinId": 229
       }
     ],
     "userId": 1
@@ -5883,7 +5951,7 @@
     },
     "media": [
       {
-        "id": 184,
+        "id": 187,
         "thumbName": "939475ba-e3b2-444d-b836-d8b4f1662b5c.jpeg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -5893,15 +5961,9 @@
         "type": "1"
       }
     ],
-    "locations": [
-      {
-        "id": 26,
-        "pinId": 190
-      }
-    ],
     "mentions": [
       {
-        "id": 2,
+        "id": 18,
         "tag": "#XDAY",
         "pinId": 190
       }
@@ -5927,7 +5989,7 @@
     },
     "media": [
       {
-        "id": 185,
+        "id": 188,
         "originalUrl": "//www.youtube.com/embed/GZud-p0QRvA",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/GZud-p0QRvA\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5963,7 +6025,7 @@
     },
     "media": [
       {
-        "id": 186,
+        "id": 189,
         "originalUrl": "//www.youtube.com/embed/9bRWIdOMfro",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/9bRWIdOMfro\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -5998,7 +6060,7 @@
     },
     "media": [
       {
-        "id": 187,
+        "id": 190,
         "thumbName": "6a0c7bc3-0c05-495b-b066-2ccb791c85d7.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6021,7 +6083,7 @@
   },
   {
     "id": 224,
-    "rootThread": false,
+    "rootThread": true,
     "title": "The problem with US economy is that it will unravel all at once in Q3",
     "description": "<p class=\"paragraph\"> Will likely see US student loan payments resume by then as well - an additional headwind. </p>",
     "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1638924685193641986",
@@ -6036,18 +6098,12 @@
     },
     "media": [
       {
-        "id": 188,
+        "id": 191,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1638924685193641986",
         "type": "2",
         "authorName": "KKGB Kitty",
         "authorUrl": "https://twitter.com/INArteCarloDoss",
         "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">This combination will increase dramatically US economy’s sensitivity to interest rates hikes when those are at terminal level (all hikes effect will be felt) and credit multiplier effect will rise sharply. Until then, momentum is carrying growth through. <br>2/2</p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1638924685193641986?ref_src=twsrc%5Etfw\">March 23, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
-      }
-    ],
-    "locations": [
-      {
-        "id": 27,
-        "pinId": 224
       }
     ],
     "userId": 1
@@ -6070,7 +6126,7 @@
     },
     "media": [
       {
-        "id": 189,
+        "id": 192,
         "originalUrl": "//www.youtube.com/embed/okFSR8CCOPY",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/okFSR8CCOPY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -6095,7 +6151,7 @@
     },
     "media": [
       {
-        "id": 190,
+        "id": 193,
         "originalUrl": "//www.youtube.com/embed/CDVH_JJIRWI",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/CDVH_JJIRWI\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -6103,12 +6159,12 @@
     ],
     "locations": [
       {
-        "id": 28,
+        "id": 15,
         "address": "South Asia Subregion",
         "pinId": 148
       },
       {
-        "id": 29,
+        "id": 16,
         "address": "Egypt Country",
         "pinId": 148
       }
@@ -6131,7 +6187,7 @@
     },
     "media": [
       {
-        "id": 191,
+        "id": 194,
         "thumbName": "9297e0e8-ca76-441c-a838-5c9af85aeb9e.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6160,7 +6216,7 @@
     },
     "media": [
       {
-        "id": 192,
+        "id": 195,
         "originalUrl": "//www.youtube.com/embed/UZ6eFEjFfJ0",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/UZ6eFEjFfJ0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -6194,6 +6250,41 @@
     "userId": 1
   },
   {
+    "id": 230,
+    "parentId": 224,
+    "rootThread": false,
+    "title": "In Q3, interest+payments resume at avg $400/m.  Pre tax, this is a $9k pay cut, offsetting all 2023 wage gains+more",
+    "description": "<p class=\"paragraph\"> <a href=\"/search?q=#studentloans\">#studentloans</a>&nbsp; </p>",
+    "sourceUrl": "https://twitter.com/gamer__capital/status/1663987579962945536",
+    "utcStartDateTime": "2023-10-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-10-03T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-01T02:32:54.559Z",
+    "utcUpdatedDateTime": "2023-06-01T02:35:13.638Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 196,
+        "originalUrl": "https://twitter.com/gamer__capital/status/1663987579962945536",
+        "type": "2",
+        "authorName": "gamer capital ???",
+        "authorUrl": "https://twitter.com/gamer__capital",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">this will take time to play out<br><br>debt deal needs to pass and we need to see whether loans are forgiven<br><br>this will start to reflect in q3 earnings come Oct, and likely peak with q4 earnings in early 2024<br><br>always keep these dates in mind. it will be a much bigger story later</p>&mdash; gamer capital ??? (@gamer__capital) <a href=\"https://twitter.com/gamer__capital/status/1663987579962945536?ref_src=twsrc%5Etfw\">May 31, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 19,
+        "tag": "#studentloans",
+        "pinId": 230
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 166,
     "parentId": 165,
     "rootThread": false,
@@ -6211,7 +6302,7 @@
     },
     "media": [
       {
-        "id": 193,
+        "id": 197,
         "thumbName": "ed30a2c1-8f8d-4394-aa81-c8378e093f9f.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6241,7 +6332,7 @@
     },
     "media": [
       {
-        "id": 194,
+        "id": 198,
         "originalUrl": "//www.youtube.com/embed/Q2kN6LONlWw",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Q2kN6LONlWw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -6249,7 +6340,7 @@
     ],
     "locations": [
       {
-        "id": 30,
+        "id": 17,
         "address": "MSG Sphere, Las Vegas",
         "pinId": 149
       }
@@ -6273,7 +6364,7 @@
     },
     "locations": [
       {
-        "id": 31,
+        "id": 18,
         "address": "Casa Grande, Arizona",
         "pinId": 222
       }
@@ -6298,7 +6389,7 @@
     },
     "media": [
       {
-        "id": 195,
+        "id": 199,
         "thumbName": "e7f718cc-9190-4eed-a8df-270ec8c9d66c.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6310,7 +6401,7 @@
     ],
     "locations": [
       {
-        "id": 32,
+        "id": 19,
         "address": "Oakville Assembly Plant in Ontario, Canada",
         "pinId": 195
       }
@@ -6335,7 +6426,7 @@
     },
     "media": [
       {
-        "id": 196,
+        "id": 200,
         "thumbName": "4744b1cd-fc70-430d-a3a2-df642e1aea79.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 503,
@@ -6343,12 +6434,6 @@
         "originalWidth": 1200,
         "originalHeight": 603,
         "type": "1"
-      }
-    ],
-    "locations": [
-      {
-        "id": 33,
-        "pinId": 212
       }
     ],
     "userId": 1
@@ -6371,7 +6456,7 @@
     },
     "media": [
       {
-        "id": 197,
+        "id": 201,
         "thumbName": "604abb42-6c90-4201-afeb-fdb0f26a8898.jpg",
         "thumbWidth": 400,
         "thumbHeight": 689,
@@ -6383,7 +6468,7 @@
     ],
     "locations": [
       {
-        "id": 34,
+        "id": 20,
         "address": "Hudson Yards, New York",
         "pinId": 150
       }
@@ -6407,7 +6492,7 @@
     },
     "media": [
       {
-        "id": 198,
+        "id": 202,
         "thumbName": "1870e18c-c013-4e68-8821-0ed0881d9d2d.jpg",
         "thumbWidth": 400,
         "thumbHeight": 267,
@@ -6437,7 +6522,7 @@
     },
     "media": [
       {
-        "id": 199,
+        "id": 203,
         "thumbName": "5ae38366-d033-4972-bc04-48f4d4b6b485.jpg",
         "thumbWidth": 400,
         "thumbHeight": 224,
@@ -6449,7 +6534,7 @@
     ],
     "locations": [
       {
-        "id": 35,
+        "id": 21,
         "address": "West of Colusa in the Sacramento Valley, California",
         "pinId": 192
       }
@@ -6474,7 +6559,7 @@
     },
     "media": [
       {
-        "id": 200,
+        "id": 204,
         "thumbName": "10240ef3-a8b9-4c73-8d53-53b182f57374.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -6486,7 +6571,7 @@
     ],
     "locations": [
       {
-        "id": 36,
+        "id": 22,
         "address": "UC San Diego",
         "pinId": 209
       }
@@ -6510,7 +6595,7 @@
     },
     "media": [
       {
-        "id": 201,
+        "id": 205,
         "thumbName": "9d3fdd45-fbda-4b7c-b649-1d7c72016c63.jpg",
         "thumbWidth": 400,
         "thumbHeight": 284,
@@ -6539,7 +6624,7 @@
     },
     "media": [
       {
-        "id": 202,
+        "id": 206,
         "thumbName": "58441b39-2150-45ad-8f12-b36ab5f90736.jpeg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6551,7 +6636,7 @@
     ],
     "locations": [
       {
-        "id": 37,
+        "id": 23,
         "address": "Frito-Lay’s research and development headquarters, Texas",
         "pinId": 194
       }
@@ -6575,7 +6660,7 @@
     },
     "media": [
       {
-        "id": 203,
+        "id": 207,
         "thumbName": "6535282f-7932-4bdf-8f0e-51ab0f6d2578.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -6602,12 +6687,6 @@
       "id": 1,
       "userName": "@ThePinGang"
     },
-    "locations": [
-      {
-        "id": 38,
-        "pinId": 218
-      }
-    ],
     "userId": 1
   },
   {
@@ -6626,7 +6705,7 @@
     },
     "media": [
       {
-        "id": 204,
+        "id": 208,
         "thumbName": "f37f0f24-e347-4e0a-b805-d1a1a30dbd14.png",
         "thumbWidth": 743,
         "thumbHeight": 430,
@@ -6638,7 +6717,7 @@
     ],
     "locations": [
       {
-        "id": 39,
+        "id": 24,
         "address": "Guangdong Province",
         "pinId": 225
       }
@@ -6661,7 +6740,7 @@
     },
     "media": [
       {
-        "id": 205,
+        "id": 209,
         "thumbName": "49b5fdba-9013-4950-863c-e88b8c3f3bcb.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 500,
@@ -6669,12 +6748,6 @@
         "originalWidth": 1024,
         "originalHeight": 512,
         "type": "1"
-      }
-    ],
-    "locations": [
-      {
-        "id": 40,
-        "pinId": 221
       }
     ],
     "userId": 1
@@ -6696,7 +6769,7 @@
     },
     "locations": [
       {
-        "id": 41,
+        "id": 25,
         "address": "Taiwan",
         "pinId": 207
       }
@@ -6721,12 +6794,7 @@
     },
     "locations": [
       {
-        "id": 42,
-        "address": "Las Vegas Strip",
-        "pinId": 215
-      },
-      {
-        "id": 43,
+        "id": 26,
         "address": "Apple Valley",
         "pinId": 215
       }
@@ -6750,7 +6818,7 @@
     },
     "media": [
       {
-        "id": 206,
+        "id": 210,
         "thumbName": "a4cf2cb9-1df7-4058-89f4-11000af5cd5d.png",
         "originalUrl": "https://dnd2oi6izkvoi.cloudfront.net/img/iea/3gG9oW0wV7/nanobots-in-your-body-by-2030.png",
         "type": "1"
@@ -6775,7 +6843,7 @@
     },
     "media": [
       {
-        "id": 207,
+        "id": 211,
         "thumbName": "73f7248b-3954-4aa5-aae1-e3463be1f269.jpg",
         "thumbWidth": 400,
         "thumbHeight": 284,
@@ -6804,7 +6872,7 @@
     },
     "media": [
       {
-        "id": 208,
+        "id": 212,
         "thumbName": "bf50f483-f7d7-4ca8-bc7e-2e3e25b773b5.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6831,7 +6899,7 @@
     },
     "media": [
       {
-        "id": 209,
+        "id": 213,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1640619037251043328",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -6841,7 +6909,7 @@
     ],
     "locations": [
       {
-        "id": 44,
+        "id": 27,
         "address": "Europe",
         "pinId": 223
       }
@@ -6881,7 +6949,7 @@
     },
     "media": [
       {
-        "id": 210,
+        "id": 214,
         "thumbName": "70cb68bb-e894-41e9-a3b8-943c8257ec69.jpg",
         "thumbWidth": 400,
         "thumbHeight": 267,
@@ -6911,7 +6979,7 @@
     },
     "media": [
       {
-        "id": 211,
+        "id": 215,
         "thumbName": "8c5669d4-d0ff-4a13-a8c4-faf8f5ab7a08.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -6923,7 +6991,7 @@
     ],
     "locations": [
       {
-        "id": 45,
+        "id": 28,
         "address": "Merced, CA",
         "pinId": 219
       }
@@ -6946,7 +7014,7 @@
     },
     "media": [
       {
-        "id": 212,
+        "id": 216,
         "thumbName": "7cc700a4-3b9f-41c9-aee7-4d04239f8736.jpeg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6974,7 +7042,7 @@
     },
     "media": [
       {
-        "id": 213,
+        "id": 217,
         "thumbName": "44d2270e-f5b2-4116-85bd-23620693c371.jpg",
         "thumbWidth": 150,
         "thumbHeight": 133,
@@ -7003,7 +7071,7 @@
     },
     "media": [
       {
-        "id": 214,
+        "id": 218,
         "originalUrl": "https://twitter.com/BurggrabenH/status/1657432126076141570",
         "type": "2",
         "authorName": "Alexander Stahel ????",
@@ -7029,7 +7097,7 @@
     },
     "media": [
       {
-        "id": 215,
+        "id": 219,
         "thumbName": "96a0f58b-ba43-4ae8-861f-f3f05b74305a.jpg",
         "thumbWidth": 286,
         "thumbHeight": 400,

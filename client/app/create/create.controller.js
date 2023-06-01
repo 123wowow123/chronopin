@@ -41,6 +41,8 @@
 
       // this.mode = this.mode || 'create';
 
+      this.showFullPin = false;
+
       this.appConfig = appConfig;
       this.scrapeType = appConfig.scrapeType;
       this.pinWebService = pinWebService;
@@ -390,6 +392,10 @@
 
     resetAddress() {
       this.pin.locations = this.scrapeService.getResetLocation();
+    }
+
+    showMore() {
+      this.showFullPin = !this.showFullPin;
     }
 
     _resolveActiveTabPinData() {

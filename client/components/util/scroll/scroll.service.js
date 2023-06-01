@@ -110,6 +110,10 @@
 
             isOverflown({ clientHeight, scrollHeight }) {
                 return scrollHeight > clientHeight;
+            },
+
+            scrollHeightLessOne({ scrollHeight }) {
+                return scrollHeight - 1;
             }
 
         };
