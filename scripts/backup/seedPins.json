@@ -6320,6 +6320,15 @@
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/9bRWIdOMfro\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
       }
     ],
+    "merchants": [
+      {
+        "id": 37,
+        "label": "Gamestop",
+        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fdiablo-iv----playstation-5%2F357780.html",
+        "price": 69.99,
+        "pinId": 147
+      }
+    ],
     "userId": 1
   },
   {

@@ -112,10 +112,14 @@
     text-overflow: ellipsis;
     margin-bottom: 10px;
 
-    .fa-map-marker{
+    .fa-map-marker {
       display: inline-block;
       margin-right: 5px;
       color: #337ab7;
+    }
+
+    .pin__map_location {
+      display: inline-block;
     }
 
     .pin__map_location::before {

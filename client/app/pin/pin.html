@@ -51,13 +51,14 @@
           <div class="grid__uploaded-date" ng-switch="$ctrl.pin.allDay">
             <span ng-switch-when="true">
               <em>
-                <span>Starts {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy"}}</span>
-                <span> - All day</span>
+                <time datetime='{{$ctrl.pin.utcStartDateTime}}'>Starts {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy"}}</time>
+                <time datetime='PT24H'> - All day</time>
               </em>
             </span>
             <em ng-switch-default>
-              <span>Starts {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"}}</span>
-              <span ng-if="$ctrl.pin.utcEndDateTime">to {{$ctrl.pin.utcEndDateTime | date:"MM/dd/yyyy h:mma"}}</span>
+              <time datetime='{{$ctrl.pin.utcStartDateTime}}'>Starts {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"}}</time>
+              <span ng-if="$ctrl.pin.utcEndDateTime">to</span>
+              <time ng-if="$ctrl.pin.utcEndDateTime" datetime='{{$ctrl.pin.utcEndDateTime}}'>{{$ctrl.pin.utcEndDateTime | date:"MM/dd/yyyy h:mma"}}</time>
             </em>
           </div>
         </div>
@@ -157,8 +158,8 @@
 
         <div class="pin__map_locations" ng-if="$ctrl.hasMap() && $ctrl.getGoogleMapUrl()">
           <i class="fa fa-map-marker" aria-hidden="true"></i>
-          <span class="pin__map_location"
-            ng-repeat="location in $ctrl.pin.locations track by $index">{{location.address}}</span>
+          <address class="pin__map_location"
+            ng-repeat="location in $ctrl.pin.locations track by $index">{{location.address}}</address>
         </div>
 
         <div class="pin__thread">
