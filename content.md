@@ -21,7 +21,6 @@ fix indexing with hashtag
 
 Search page does not color watch icon correctly
 updating tags does not update links
-User not using seed file ++
 
 
 SEO:
