@@ -21,6 +21,7 @@ const pickUserProps = [
   'id',
   'firstName',
   'lastName',
+  'userName',
   'gender',
   'locale',
   'facebookId',

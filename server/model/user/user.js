@@ -201,6 +201,10 @@ export default class User {
     }
   }
 
+  saveSeed() {
+    return _createMSSQL(this);
+  }
+
   save() {
     // save will always regenerate password hash
     return new Promise((resolve, reject) => {
@@ -306,7 +310,7 @@ function _createMSSQL(user) {
           .input('utcCreatedDateTime', mssql.DateTime2(7), user.utcCreatedDateTime)
           .input('utcUpdatedDateTime', mssql.DateTime2(7), user.utcCreatedDateTime)
           .input('utcDeletedDateTime', mssql.DateTime2(7), user.utcDeletedDateTime)
-          .output('id', mssql.Int);
+          .output('id', mssql.Int, user.id);
 
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 

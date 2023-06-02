@@ -70,57 +70,117 @@ function executeCreateSP() {
 
             SET NOCOUNT ON;
 
+            IF @id IS NOT NULL
+            BEGIN
+                SET IDENTITY_INSERT [dbo].[User] ON;
+            END
+
             IF @utcCreatedDateTime IS NULL
             BEGIN
                SET @utcCreatedDateTime = sysutcdatetime();
             END
 
-            INSERT INTO [dbo].[User] (
-              userName,
-              firstName,
-              lastName,
-              gender,
-              locale,
-              facebookId,
-              googleId,
-              pictureUrl,
-              fbUpdatedTime,
-              fbVerified,
-              googleVerified,
-              about,
-              email,
-              password,
-              provider,
-              role,
-              salt,
-              websiteUrl,
-              utcCreatedDateTime,
-              utcUpdatedDateTime,
-              utcDeletedDateTime
-            )
-            VALUES (
-              @userName,
-              @firstName,
-              @lastName,
-              @gender,
-              @locale,
-              @facebookId,
-              @googleId,
-              @pictureUrl,
-              @fbUpdatedTime,
-              @fbVerified,
-              @googleVerified,
-              @about,
-              @email,
-              @password,
-              @provider,
-              @role,
-              @salt,
-              @websiteUrl,
-              @utcCreatedDateTime,
-              @utcUpdatedDateTime,
-              @utcDeletedDateTime
-            );
+            IF @id IS NULL
+              INSERT INTO [dbo].[User] (
+                userName,
+                firstName,
+                lastName,
+                gender,
+                locale,
+                facebookId,
+                googleId,
+                pictureUrl,
+                fbUpdatedTime,
+                fbVerified,
+                googleVerified,
+                about,
+                email,
+                password,
+                provider,
+                role,
+                salt,
+                websiteUrl,
+                utcCreatedDateTime,
+                utcUpdatedDateTime,
+                utcDeletedDateTime
+              )
+              VALUES (
+                @userName,
+                @firstName,
+                @lastName,
+                @gender,
+                @locale,
+                @facebookId,
+                @googleId,
+                @pictureUrl,
+                @fbUpdatedTime,
+                @fbVerified,
+                @googleVerified,
+                @about,
+                @email,
+                @password,
+                @provider,
+                @role,
+                @salt,
+                @websiteUrl,
+                @utcCreatedDateTime,
+                @utcUpdatedDateTime,
+                @utcDeletedDateTime
+              );
+            ELSE
+              INSERT INTO [dbo].[User] (
+                id,
+                userName,
+                firstName,
+                lastName,
+                gender,
+                locale,
+                facebookId,
+                googleId,
+                pictureUrl,
+                fbUpdatedTime,
+                fbVerified,
+                googleVerified,
+                about,
+                email,
+                password,
+                provider,
+                role,
+                salt,
+                websiteUrl,
+                utcCreatedDateTime,
+                utcUpdatedDateTime,
+                utcDeletedDateTime
+              )
+              VALUES (
+                @id,
+                @userName,
+                @firstName,
+                @lastName,
+                @gender,
+                @locale,
+                @facebookId,
+                @googleId,
+                @pictureUrl,
+                @fbUpdatedTime,
+                @fbVerified,
+                @googleVerified,
+                @about,
+                @email,
+                @password,
+                @provider,
+                @role,
+                @salt,
+                @websiteUrl,
+                @utcCreatedDateTime,
+                @utcUpdatedDateTime,
+                @utcDeletedDateTime
+              );
+
+            IF @id IS NOT NULL
+            BEGIN
+              SET IDENTITY_INSERT [dbo].[User] OFF;
+            END
 
             SET @id = SCOPE_IDENTITY();
 

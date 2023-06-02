@@ -29,6 +29,7 @@ import * as log from '../../server/util/log';
 
 let cp,
   Request,
+  userFilePath,
   pinFilePath,
   aphelionFilePath,
   solsticeFilePath,
@@ -40,6 +41,7 @@ let cp,
 module.exports.setup = function (seedOpt) {
   cp = seedOpt.cp;
   Request = cp.Request;
+  userFilePath = seedOpt.userfile;
   pinFilePath = seedOpt.pinfile;
   aphelionFilePath = seedOpt.aphelionfile;
   solsticeFilePath = seedOpt.solsticefile;
@@ -51,28 +53,6 @@ module.exports.setup = function (seedOpt) {
 
 module.exports.seedDB = function () {
   let mainUser,
-    defaultUserObj = { ///////////////////////////////////////////////////
-      provider: 'facebook',
-      role: 'admin',
-      userName: '@ThePinGang',
-      firstName: 'Ian',
-      lastName: 'Flynn',
-      email: 'flynni2008@gmail.com',
-      password: 'admin',
-      facebookId: '10100470408434696',
-      id: 1 // ToDo: need to be dynamically linked
-    },
-    secondaryUserObj = {
-      provider: 'facebook',
-      role: 'admin',
-      userName: '@PrettyGang',
-      firstName: 'Serena',
-      lastName: 'Chen',
-      email: 'chenxikristy@gmail.com',
-      password: 'admin',
-      facebookId: '984663319826',
-      id: 2 // ToDo: need to be dynamically linked
-    },
     defaultMediumTypes = [
       {
         //id: 1,
@@ -173,12 +153,16 @@ module.exports.seedDB = function () {
       return dateTimes.save();
     })
     .then(res => {
-      let user = new User(defaultUserObj);
-      return user.save();
-    })
-    .then(res => {
-      let user = new User(secondaryUserObj);
-      return user.save();
+      let userJSONObjs = JSON.parse(fs.readFileSync(userFilePath, 'utf8'));
+      let userPromises = userJSONObjs.map(t => {
+        let user = new User(t);
+        return user.saveSeed()
+          .catch(error => {
+            log.error('User Save Error', JSON.stringify(error));
+            throw error;
+          });
+      });
+      return Promise.all(userPromises);
     })
     .then(res => {
       const mediumTypePromises = defaultMediumTypes.map(mt => {
@@ -197,7 +181,7 @@ module.exports.seedDB = function () {
       // Create Pins
       let pinsJSONObjs = JSON.parse(fs.readFileSync(pinFilePath, 'utf8'));
       let pins = new FullPins(pinsJSONObjs);
-      
+
       return pins.save()
         .catch(error => {
           log.error('Pins Save Error', JSON.stringify(error));
