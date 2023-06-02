@@ -53,7 +53,7 @@ export function searchPins(req, res) {
         .then(response.withResult(res, 200))
         .catch(response.handleError(res));
     } else {
-      return SearchPins.searchTags(allTags)
+      return SearchPins.searchTags(userId, allTags)
         .then(response.withResult(res, 200))
         .catch(response.handleError(res));
     }
@@ -64,7 +64,7 @@ export function searchPins(req, res) {
         .then(response.withResult(res, 200))
         .catch(response.handleError(res));
     } else {
-      return SearchPins.search(searchText)
+      return SearchPins.search(userId, searchText)
         .then(response.withResult(res, 200))
         .catch(response.handleError(res));
     }

@@ -116,8 +116,8 @@ export default class Pins extends BasePins {
       });
   }
 
-  static queryPinByIds(pins) {
-    return _queryMSSQPinByIds(pins)
+  static queryPinByIds(userId, pins) {
+    return _queryMSSQPinByIds(userId, pins)
       .then(res => {
         return new Pins(res);
       });
@@ -137,8 +137,8 @@ export default class Pins extends BasePins {
       });
   }
 
-  static queryPinByTags(allTags) {
-    return _queryPinByTags(allTags)
+  static queryPinByTags(userId, allTags) {
+    return _queryPinByTags(userId, allTags)
       .then(res => {
         return new Pins(res);
       });
@@ -361,7 +361,7 @@ function _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSiz
 }
 
 
-function _queryMSSQPinByIds(pins) {
+function _queryMSSQPinByIds(userId, pins) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
@@ -375,6 +375,7 @@ function _queryMSSQPinByIds(pins) {
 
         let request = new mssql.Request(conn)
           .input('TableIds', tvp)
+          .input('userId', mssql.Int, userId)
           .output('queryCount', mssql.Int);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
@@ -466,7 +467,7 @@ function _queryPinByIdsAndOrderedByThread(pinId) {
     });
 }
 
-function _queryPinByTags(tags) {
+function _queryPinByTags(userId, tags) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
@@ -480,6 +481,7 @@ function _queryPinByTags(tags) {
 
         let request = new mssql.Request(conn)
           .input('TableTags', tvp)
+          .input('userId', mssql.Int, userId)
           .output('queryCount', mssql.Int);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,

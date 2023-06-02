@@ -130,9 +130,8 @@ export default class SearchPins extends BasePins {
         return outPut;
     }
 
-    static search(searchText) {
+    static search(userId, searchText) {
         //ToDo: get tags and remove them and then do semanticSearch then recombine results
-
         const semanticPinsPromise = semanticSearch(searchText, SearchPins.numberOfResults)
             .then(res => {
                 return new SearchPins().fromFaiss(res);
@@ -140,12 +139,12 @@ export default class SearchPins extends BasePins {
 
         return Promise.all([semanticPinsPromise])
             .then(([semanticPins]) => {
-                return Pins.queryPinByIds(semanticPins); // TODO: should return SearchPins
+                return Pins.queryPinByIds(userId, semanticPins); // TODO: should return SearchPins
             });
     }
 
-    static searchTags(allTags) {
-        return Pins.queryPinByTags(allTags); // TODO: should return SearchPins
+    static searchTags(userId, allTags) {
+        return Pins.queryPinByTags(userId, allTags); // TODO: should return SearchPins
     }
 
     static searchTagsFavorite(userId, allTags) {

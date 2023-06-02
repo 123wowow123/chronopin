@@ -16,10 +16,9 @@ missing description validation
 
 Should show page not found and redirect to home? https://chronopin.com/pin/178
 quick add Q2 etc
-default does not select media but when selected it will auto check pin header media.
+default does not select media but when selected it will auto check pin header media
 fix indexing with hashtag
 
-Search page does not color watch icon correctly
 updating tags does not update links
 
 
