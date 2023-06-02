@@ -2465,16 +2465,16 @@
     "merchants": [
       {
         "id": 4,
-        "label": "Amazon: Modern Mouse Silver",
-        "url": "https://amzn.to/3IC8VDN",
-        "price": 37.49,
+        "label": "Amazon: Modern Keyboard Silver",
+        "url": "https://amzn.to/4283DqD",
+        "price": 81,
         "pinId": 84
       },
       {
         "id": 5,
-        "label": "Amazon: Modern Keyboard Silver",
-        "url": "https://amzn.to/4283DqD",
-        "price": 81,
+        "label": "Amazon: Modern Mouse Silver",
+        "url": "https://amzn.to/3IC8VDN",
+        "price": 37.49,
         "pinId": 84
       }
     ],
@@ -5367,12 +5367,12 @@
     "mentions": [
       {
         "id": 5,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 235
       },
       {
         "id": 6,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 235
       }
     ],
@@ -5800,12 +5800,12 @@
     "mentions": [
       {
         "id": 13,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 233
       },
       {
         "id": 14,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 233
       }
     ],
@@ -5921,17 +5921,17 @@
     "mentions": [
       {
         "id": 15,
-        "tag": "$MSFT",
-        "pinId": 210
-      },
-      {
-        "id": 16,
         "tag": "$AAPL",
         "pinId": 210
       },
       {
+        "id": 16,
+        "tag": "$MSFT",
+        "pinId": 210
+      },
+      {
         "id": 17,
-        "tag": "$NVDA",
+        "tag": "$META",
         "pinId": 210
       },
       {
@@ -5941,17 +5941,17 @@
       },
       {
         "id": 19,
-        "tag": "$META",
+        "tag": "$NVDA",
         "pinId": 210
       },
       {
         "id": 20,
-        "tag": "$TSLA",
+        "tag": "$GOOG",
         "pinId": 210
       },
       {
         "id": 21,
-        "tag": "$GOOG",
+        "tag": "$TSLA",
         "pinId": 210
       },
       {
@@ -6167,12 +6167,12 @@
     "mentions": [
       {
         "id": 27,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 231
       },
       {
         "id": 28,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 231
       }
     ],
@@ -6267,7 +6267,7 @@
     },
     "media": [
       {
-        "id": 227,
+        "id": 195,
         "thumbName": "ab84a1de-2d1c-448c-b0a8-0bae10e49315.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -6279,7 +6279,7 @@
     ],
     "locations": [
       {
-        "id": 32,
+        "id": 16,
         "address": "Magic Kingdom at Walt Disney World, ORLANDO, Fla.",
         "pinId": 238
       }
@@ -6304,7 +6304,7 @@
     },
     "media": [
       {
-        "id": 195,
+        "id": 196,
         "thumbName": "a36e78c3-2828-4e8b-8975-23c9f36726e9.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -6350,7 +6350,7 @@
     },
     "media": [
       {
-        "id": 196,
+        "id": 197,
         "originalUrl": "//www.youtube.com/embed/9bRWIdOMfro",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/9bRWIdOMfro\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -6385,7 +6385,7 @@
     },
     "media": [
       {
-        "id": 197,
+        "id": 198,
         "thumbName": "6a0c7bc3-0c05-495b-b066-2ccb791c85d7.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6423,7 +6423,7 @@
     },
     "media": [
       {
-        "id": 198,
+        "id": 199,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1638924685193641986",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -6459,7 +6459,7 @@
     },
     "media": [
       {
-        "id": 199,
+        "id": 200,
         "originalUrl": "//www.youtube.com/embed/okFSR8CCOPY",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/okFSR8CCOPY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -6484,7 +6484,7 @@
     },
     "media": [
       {
-        "id": 200,
+        "id": 201,
         "originalUrl": "//www.youtube.com/embed/CDVH_JJIRWI",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/CDVH_JJIRWI\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -6492,12 +6492,12 @@
     ],
     "locations": [
       {
-        "id": 16,
+        "id": 17,
         "address": "South Asia Subregion",
         "pinId": 148
       },
       {
-        "id": 17,
+        "id": 18,
         "address": "Egypt Country",
         "pinId": 148
       }
@@ -6520,7 +6520,7 @@
     },
     "media": [
       {
-        "id": 201,
+        "id": 202,
         "thumbName": "9297e0e8-ca76-441c-a838-5c9af85aeb9e.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6549,7 +6549,7 @@
     },
     "media": [
       {
-        "id": 202,
+        "id": 203,
         "originalUrl": "//www.youtube.com/embed/UZ6eFEjFfJ0",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/UZ6eFEjFfJ0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -6562,6 +6562,31 @@
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fmortal-kombat-1----playstation-5%2F394354.html",
         "price": 69.99,
         "pinId": 213
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 239,
+    "rootThread": false,
+    "title": "Meta Quest 3 Coming This Fall",
+    "description": "<p class=\"paragraph\"> <a href=\"https://www.instagram.com/p/Cs809N-BUJ7/\">Mark Zuckerberg just announced</a>&nbsp;Meta Quest 3, our next-generation virtual and mixed reality headset, which launches later this year. It features higher resolution, stronger performance, breakthrough&nbsp;<a href=\"https://www.meta.com/blog/quest/mixed-reality-definition-passthrough-scene-understanding-spatial-anchors/\">Meta Reality</a>&nbsp;technology, and a slimmer, more comfortable form factor. Quest 3 will ship in&nbsp;<a href=\"https://www.meta.com/help/orders-and-returns/articles/quest-2-supported-countries/\">all countries where Meta Quest is currently supported</a>&nbsp;this fall. The 128GB headset starts at $499.99 USD, and we’ll offer an additional storage option for those who want some extra space. Mark your calendars because we’ll have lots more to share at Meta Connect, which returns this year on September 27. </p><h2>Our Most Powerful Headset Yet</h2><p class=\"paragraph\"> Quest 3 combines our highest resolution display and pancake optics to make content look better than ever. To power those extra pixels, this will be the first headset to feature a next-generation Snapdragon chipset developed in collaboration with&nbsp;<a href=\"https://www.qualcomm.com/home\">Qualcomm Technologies</a>. That next-gen Snapdragon chipset delivers more than twice the graphical performance as the previous generation Snapdragon GPU in Quest 2 — meaning you’ll get smoother performance and incredibly crisp details in immersive games.&nbsp; </p><h2>Immersive VR + Breakthrough Meta Reality in a Single Device</h2><p class=\"paragraph\"> On Quest 3, our best-in-class Meta Reality technology lets you seamlessly blend your physical world with the virtual one. These new experiences go beyond today’s mixed reality by intelligently understanding and responding to objects in your physical space and allowing you to navigate that space in natural, intuitive ways that were nearly impossible before. High-fidelity color Passthrough, innovative machine learning, and spatial understanding let you interact with virtual content and the physical world simultaneously, creating limitless possibilities to explore. Now you can play a virtual board game on your kitchen table with&nbsp;<a href=\"https://www.oculus.com/experiences/quest/3634830803298285/\"><i>Demeo</i></a>, decorate your living room with virtual art courtesy of&nbsp;<a href=\"https://www.oculus.com/experiences/quest/3106117596158066/\"><i>Painting VR,</i></a>&nbsp;or dive into a fully immersive world to do things that are simply not possible otherwise.&nbsp; </p><p class=\"paragraph\"> Quest 3 makes Meta Reality available to even more people and at a lower price point, making it our first mass-market offering to deliver both cutting-edge VR and MR experiences in a single device, setting a new benchmark for future headsets. </p><h2>Redesigned for Comfort + Control</h2><p class=\"paragraph\"> With a 40% slimmer optic profile* compared to Quest 2, Quest 3 is a sleeker, more comfortable headset. We also completely redesigned Quest 3’s Touch Plus controllers with a more streamlined and ergonomic form factor. Thanks to our advances in tracking technology, we’ve dropped the outer tracking rings so the controllers feel like a more natural extension of your hands and take up less space. We also included TruTouch haptics that first debuted in Touch Pro to help you feel the action like never before. You can even upgrade to our fully self-tracked&nbsp;<a href=\"https://www.meta.com/quest/accessories/quest-touch-pro-controllers-and-charging-dock/\">Meta Quest Touch Pro Controllers</a>&nbsp;for a premium experience. And hand tracking will be supported out of the box, so you can explore without controllers, thanks to Direct Touch that lets you use just your hands to interact with virtual objects. </p><h2>World’s Best Library of Immersive Content</h2><p class=\"paragraph\"> Quest 3 is compatible with the&nbsp;<a href=\"https://www.meta.com/quest/products/quest-2/\">Quest 2</a>&nbsp;catalog of over 500 VR games, apps, and experiences (and counting), and we’ve got even more exciting new VR and MR titles lined up for launch. That means Quest 3 will have the world’s best library of immersive experiences on day one. Be sure to tune in to today’s&nbsp;<a href=\"https://www.youtube.com/channel/UC766vkQw0Mz3VtXX5XvXxGQ\">Meta Quest Gaming Showcase</a>&nbsp;for a rundown of new games and updates coming to the Quest Platform — plus a sneak peek at Quest 3’s AAA flagship adventure. </p><h2>Quest 2 Gets New Lower Prices, Plus a Performance Upgrade</h2><p class=\"paragraph\"> We’re excited for Quest 3 and look forward to sharing more later this year at Connect. But what about Quest 2? </p><p class=\"paragraph\"> <a href=\"https://www.meta.com/quest/products/quest-2/\">Meta Quest 2</a>&nbsp;changed the face of VR when it first hit the scene in 2020, ushering in a new era of gaming, fitness, and more. It’s already one of the most affordable ways to get into VR — and it’s about to get even better. Starting June 4, we’re lowering the price of Quest 2 to $299.99 USD for the 128GB SKU and $349.99 USD for the 256GB SKU, helping even more people access the magic of all-in-one VR and our vast content library. </p><p class=\"paragraph\"> But that’s not all! In an upcoming software update, we’re updating the Quest 2 and Quest Pro GPU and CPU. Quest 2 and Pro will see an up-to 26% CPU performance increase with an up-to 19% GPU speed increase for Quest 2 and 11% for Quest Pro. As developers take advantage of these changes, you can expect smoother gameplay, a more responsive UI, and richer content on both headsets. And we’re enabling Dynamic Resolution Scaling for both Quest 2 and Quest Pro, so games and apps can take advantage of increased pixel density without dropping frames. </p><p class=\"paragraph\"> While Quest 3 sets a new standard for mixed reality, immersive gaming, and what a mainstream VR headset can be, Quest 2 remains our most affordable entry point to VR and Pro is optimized for work use cases, with face and eye tracking for more authentic self-expression in meetings. We’ll continue to sell Quest 2 and Pro alongside Quest 3, as well as continue shipping new software updates to make the Quest experience even better. </p><p class=\"paragraph\"> From games, to fitness apps, professional collaboration tools and more, Quest has something for everyone. And we can’t wait to welcome even more people to the Meta Quest community. </p>",
+    "sourceUrl": "https://about.fb.com/news/2023/06/meta-quest-3-coming-this-fall/",
+    "price": 499.99,
+    "utcStartDateTime": "2023-09-27T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-28T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-02T05:10:20.735Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 228,
+        "originalUrl": "//www.youtube.com/embed/5AKl_cEB26c",
+        "type": "3",
+        "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/5AKl_cEB26c\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
       }
     ],
     "userId": 1
@@ -6608,7 +6633,7 @@
     },
     "media": [
       {
-        "id": 203,
+        "id": 204,
         "originalUrl": "https://twitter.com/gamer__capital/status/1663987579962945536",
         "type": "2",
         "authorName": "gamer capital ???",
@@ -6651,7 +6676,7 @@
     },
     "media": [
       {
-        "id": 204,
+        "id": 205,
         "thumbName": "ed30a2c1-8f8d-4394-aa81-c8378e093f9f.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6681,7 +6706,7 @@
     },
     "media": [
       {
-        "id": 205,
+        "id": 206,
         "originalUrl": "//www.youtube.com/embed/Q2kN6LONlWw",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Q2kN6LONlWw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -6689,7 +6714,7 @@
     ],
     "locations": [
       {
-        "id": 18,
+        "id": 19,
         "address": "MSG Sphere, Las Vegas",
         "pinId": 149
       }
@@ -6713,7 +6738,7 @@
     },
     "locations": [
       {
-        "id": 19,
+        "id": 20,
         "address": "Casa Grande, Arizona",
         "pinId": 222
       }
@@ -6738,7 +6763,7 @@
     },
     "media": [
       {
-        "id": 206,
+        "id": 207,
         "thumbName": "e7f718cc-9190-4eed-a8df-270ec8c9d66c.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6750,7 +6775,7 @@
     ],
     "locations": [
       {
-        "id": 20,
+        "id": 21,
         "address": "Oakville Assembly Plant in Ontario, Canada",
         "pinId": 195
       }
@@ -6775,7 +6800,7 @@
     },
     "media": [
       {
-        "id": 207,
+        "id": 208,
         "thumbName": "4744b1cd-fc70-430d-a3a2-df642e1aea79.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 503,
@@ -6813,7 +6838,7 @@
     },
     "media": [
       {
-        "id": 208,
+        "id": 209,
         "thumbName": "604abb42-6c90-4201-afeb-fdb0f26a8898.jpg",
         "thumbWidth": 400,
         "thumbHeight": 689,
@@ -6825,7 +6850,7 @@
     ],
     "locations": [
       {
-        "id": 21,
+        "id": 22,
         "address": "Hudson Yards, New York",
         "pinId": 150
       }
@@ -6849,7 +6874,7 @@
     },
     "media": [
       {
-        "id": 209,
+        "id": 210,
         "thumbName": "1870e18c-c013-4e68-8821-0ed0881d9d2d.jpg",
         "thumbWidth": 400,
         "thumbHeight": 267,
@@ -6879,7 +6904,7 @@
     },
     "media": [
       {
-        "id": 210,
+        "id": 211,
         "thumbName": "5ae38366-d033-4972-bc04-48f4d4b6b485.jpg",
         "thumbWidth": 400,
         "thumbHeight": 224,
@@ -6891,7 +6916,7 @@
     ],
     "locations": [
       {
-        "id": 22,
+        "id": 23,
         "address": "West of Colusa in the Sacramento Valley, California",
         "pinId": 192
       }
@@ -6916,7 +6941,7 @@
     },
     "media": [
       {
-        "id": 211,
+        "id": 212,
         "thumbName": "10240ef3-a8b9-4c73-8d53-53b182f57374.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -6928,7 +6953,7 @@
     ],
     "locations": [
       {
-        "id": 23,
+        "id": 24,
         "address": "UC San Diego",
         "pinId": 209
       }
@@ -6952,7 +6977,7 @@
     },
     "media": [
       {
-        "id": 212,
+        "id": 213,
         "thumbName": "9d3fdd45-fbda-4b7c-b649-1d7c72016c63.jpg",
         "thumbWidth": 400,
         "thumbHeight": 284,
@@ -6981,7 +7006,7 @@
     },
     "media": [
       {
-        "id": 213,
+        "id": 214,
         "thumbName": "58441b39-2150-45ad-8f12-b36ab5f90736.jpeg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -6993,7 +7018,7 @@
     ],
     "locations": [
       {
-        "id": 24,
+        "id": 25,
         "address": "Frito-Lay’s research and development headquarters, Texas",
         "pinId": 194
       }
@@ -7017,7 +7042,7 @@
     },
     "media": [
       {
-        "id": 214,
+        "id": 215,
         "thumbName": "6535282f-7932-4bdf-8f0e-51ab0f6d2578.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -7070,7 +7095,7 @@
     },
     "media": [
       {
-        "id": 215,
+        "id": 216,
         "thumbName": "f37f0f24-e347-4e0a-b805-d1a1a30dbd14.png",
         "thumbWidth": 743,
         "thumbHeight": 430,
@@ -7082,7 +7107,7 @@
     ],
     "locations": [
       {
-        "id": 25,
+        "id": 26,
         "address": "Guangdong Province",
         "pinId": 225
       }
@@ -7105,7 +7130,7 @@
     },
     "media": [
       {
-        "id": 216,
+        "id": 217,
         "thumbName": "49b5fdba-9013-4950-863c-e88b8c3f3bcb.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 500,
@@ -7142,7 +7167,7 @@
     },
     "locations": [
       {
-        "id": 26,
+        "id": 27,
         "address": "Taiwan",
         "pinId": 207
       }
@@ -7167,7 +7192,7 @@
     },
     "locations": [
       {
-        "id": 27,
+        "id": 28,
         "address": "Apple Valley",
         "pinId": 215
       }
@@ -7191,7 +7216,7 @@
     },
     "media": [
       {
-        "id": 217,
+        "id": 218,
         "thumbName": "a4cf2cb9-1df7-4058-89f4-11000af5cd5d.png",
         "originalUrl": "https://dnd2oi6izkvoi.cloudfront.net/img/iea/3gG9oW0wV7/nanobots-in-your-body-by-2030.png",
         "type": "1"
@@ -7216,7 +7241,7 @@
     },
     "media": [
       {
-        "id": 218,
+        "id": 219,
         "thumbName": "73f7248b-3954-4aa5-aae1-e3463be1f269.jpg",
         "thumbWidth": 400,
         "thumbHeight": 284,
@@ -7245,7 +7270,7 @@
     },
     "media": [
       {
-        "id": 219,
+        "id": 220,
         "thumbName": "bf50f483-f7d7-4ca8-bc7e-2e3e25b773b5.jpg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -7272,7 +7297,7 @@
     },
     "media": [
       {
-        "id": 220,
+        "id": 221,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1640619037251043328",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -7282,7 +7307,7 @@
     ],
     "locations": [
       {
-        "id": 28,
+        "id": 29,
         "address": "Europe",
         "pinId": 223
       }
@@ -7322,7 +7347,7 @@
     },
     "media": [
       {
-        "id": 221,
+        "id": 222,
         "thumbName": "70cb68bb-e894-41e9-a3b8-943c8257ec69.jpg",
         "thumbWidth": 400,
         "thumbHeight": 267,
@@ -7352,7 +7377,7 @@
     },
     "media": [
       {
-        "id": 222,
+        "id": 223,
         "thumbName": "8c5669d4-d0ff-4a13-a8c4-faf8f5ab7a08.jpeg",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -7364,7 +7389,7 @@
     ],
     "locations": [
       {
-        "id": 29,
+        "id": 30,
         "address": "Merced, CA",
         "pinId": 219
       }
@@ -7395,7 +7420,7 @@
     },
     "media": [
       {
-        "id": 223,
+        "id": 224,
         "thumbName": "7cc700a4-3b9f-41c9-aee7-4d04239f8736.jpeg",
         "thumbWidth": 400,
         "thumbHeight": 225,
@@ -7431,7 +7456,7 @@
     },
     "media": [
       {
-        "id": 224,
+        "id": 225,
         "thumbName": "44d2270e-f5b2-4116-85bd-23620693c371.jpg",
         "thumbWidth": 150,
         "thumbHeight": 133,
@@ -7460,7 +7485,7 @@
     },
     "media": [
       {
-        "id": 225,
+        "id": 226,
         "originalUrl": "https://twitter.com/BurggrabenH/status/1657432126076141570",
         "type": "2",
         "authorName": "Alexander Stahel ????",
@@ -7486,7 +7511,7 @@
     },
     "media": [
       {
-        "id": 226,
+        "id": 227,
         "thumbName": "96a0f58b-ba43-4ae8-861f-f3f05b74305a.jpg",
         "thumbWidth": 286,
         "thumbHeight": 400,

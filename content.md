@@ -55,14 +55,13 @@ Show youtube transcript on create pin for referance +
 Add google chrome auto login +
 Tab for "For you" & "Following"
 Add Poll feature
-Preview create pin
 
 Remove jquery for speedup
 add rottentomatoes rating +
 Show number of days countdown in pin page
 comment should have ability to show pictures / pins
 Add do not show pin again feature
-Add no date pin feature and have it come up time to time so people cam contribute more info
+Add no date pin feature and have it come up time to time so people can contribute more info
 Search twitter pins by scraping and indexing it's text
 
 Cleanup:
