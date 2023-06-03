@@ -5,6 +5,7 @@ import * as cp from '../../sqlConnectionPool';
 import * as image from '../../image'
 import * as _ from 'lodash';
 import { v4 as uuidv4 } from 'uuid';
+const config = require('../../config/environment');
 import {
   BasePin
 } from '..';
@@ -106,6 +107,17 @@ export default class Medium {
       return key.startsWith('_')
         || _.isNull(value);
     });
+  }
+
+  getUrl() {
+    switch (+this.type) {
+      case config.mediumID.image:
+        return this.thumbName ? config.thumbUrlPrefix + this.thumbName : undefined;
+      case config.mediumID.youtube:
+        return this.originalUrl;
+      case config.mediumID.twitter:
+        return this.originalUrl;
+    }
   }
 
   static getByOriginalUrl(originalUrl) {

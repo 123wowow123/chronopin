@@ -85,6 +85,17 @@ export default function (app) {
       let pinId = +req.params.id,
         userId = req.user && +req.user.id;
 
+      function getOgType(mediumID) {
+        switch (+mediumID) {
+          case config.mediumID.image:
+            return 'og:image';
+          case config.mediumID.youtube:
+            return 'og:video';
+          case config.mediumID.twitter:
+            return undefined;
+        }
+      }
+
       return Pin.queryById(pinId, userId)
         .then(({
           pin
@@ -92,10 +103,12 @@ export default function (app) {
           const dom = new JSDOM(pin.description);
           const document = dom.window.document;
           const description = document.querySelector('p').textContent.trim();
+          const medium = _.get(pin, 'media[0]');
           const meta = {
             title: pin.title,
             description,
-            image: config.thumbUrlPrefix + _.get(pin, 'media[0].thumbName')
+            mediaContent: medium ? medium.getUrl() : undefined,
+            mediaType: getOgType(medium.type),
           };
           res.render(app.get('appPath') + '/index.html', { meta });
         }).catch((e) => {
