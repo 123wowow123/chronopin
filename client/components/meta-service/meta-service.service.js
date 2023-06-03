@@ -5,9 +5,9 @@
         .service('MetaService', (appConfig) => {
             let title, description, image;
             function reset() {
-                title = appConfig.title;
-                description = appConfig.description;
-                image = appConfig.image;
+                title = appConfig.meta.title;
+                description = appConfig.meta.description;
+                image = appConfig.meta.image;
             }
             reset();
 
