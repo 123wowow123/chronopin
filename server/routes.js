@@ -102,7 +102,8 @@ export default function (app) {
         }) => {
           const dom = new JSDOM(pin.description);
           const document = dom.window.document;
-          const description = document.querySelector('p').textContent.trim();
+          const querySelector = document.querySelector('p');
+          const description = querySelector && querySelector.textContent ? querySelector.textContent.trim(): pin.description;
           const medium = _.get(pin, 'media[0]');
           const meta = {
             title: pin.title,
