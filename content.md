@@ -17,10 +17,10 @@ missing description validation
 Should show page not found and redirect to home? https://chronopin.com/pin/178
 quick add Q2 etc
 default does not select media but when selected it will auto check pin header media
-fix indexing with hashtag
+fix indexing with hashtag for ml search
 
-updating tags does not update links
-invalid hashtag in editor needs to be removed
+updating tags does not update links++
+invalid hashtag in editor needs to be removed++
 
 
 SEO:
@@ -39,6 +39,9 @@ Buy keywords in content that will turn into link where it will show map and near
 Pin dollar tag should link to referal page in new tab
 
 Features:
+
+private group +
+STock ticker +
 
 treading tags and search query on side pane +
 $tag should show posted time ticker price as well as current price eg: +
