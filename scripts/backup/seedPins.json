@@ -6379,6 +6379,38 @@
     "userId": 1
   },
   {
+    "id": 242,
+    "rootThread": false,
+    "title": "What to Expect From WWDC 2023: AR/VR Headset, 15-Inch MacBook Air, Mac Studio, iOS 17, xrOS, macOS 14 and More",
+    "description": "<p class=\"paragraph\">  Apple is expected to introduce its first new wearable since the launch of the Apple Watch, plus there are new Macs coming and notable features for&nbsp;<a href=\"https://www.macrumors.com/roundup/ios-17/\">iOS 17</a>&nbsp;and&nbsp;<a href=\"https://www.macrumors.com/roundup/watchos-10/\">watchOS 10</a>. This guide highlights everything rumored to be coming at&nbsp;<a href=\"https://www.macrumors.com/roundup/wwdc/\">WWDC 2023</a>.  </p><h2>Hardware</h2><p class=\"paragraph\">  We don't always get hardware at WWDC, and in fact, the event usually focuses on software. Every once in awhile, though, Apple has a new product to show off that's timed well for a June launch, and that's the case this year.  </p><h3><a href=\"https://www.macrumors.com/roundup/ar-vr/\">AR/VR Headset</a></h3><p class=\"paragraph\">  Apple's AR/VR headset has been in active development for years now, and Apple has pushed it back several times to work out ongoing issues. We're expecting to get our first glimpse at the headset at WWDC, though it is not expected to officially launch until later in the year.  </p><p class=\"paragraph\">  The headset is expected to have a thin and light design that will make it more comfortable to wear than competing products, and the lighter weight will be primarily facilitated by an external battery pack that's worn at the hip and connected to the headset through a USB-C cable. Apple wants the headset to weigh around 200 grams, which would be notably lighter than other options. </p><div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/p241GaehVn8?start=1s\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\">  Battery life will come in at around two hours, but because it's using an external battery pack, batteries will be swappable for longer wear. The headset will support both virtual reality and augmented reality, with a physical Digital Crown-like button to switch between modes.  </p><p class=\"paragraph\">  Leaked design information suggests the headset will be made from aluminum, glass, and carbon fiber, with a look that's not too far off from other VR headsets like the PlayStation VR 2 or the Oculus Quest 2. It will have a sleek front visor that's held on with an Apple Watch-like band, with a mesh that sits against the face.  </p><p class=\"paragraph\">  Two 4K microOLED displays from Sony will offer high-resolution content in a 120-degree field of view, with Apple aiming for 5,000 nits brightness for HDR and 4,000 pixels per inch. HDR is not a typical feature for VR headsets, and that pixel density will outshine all competing headsets. Prescription lenses will be accommodated, and the internal lenses will be able to be adjusted to match the wearer's interpupillary distance.  </p><p class=\"paragraph\">  More than a dozen cameras will track hand movements, leg movements, and facial gestures, plus iris scanning will be available for authentication. Capturing lower body movement is not something most headsets do, and Apple plans to use the cameras to track hand and eye gestures for control purposes. Users will, for example, be able to look at an on-screen item to select it, using hand gestures to interact with it. An \"air-typing\" feature will be available for text input, though Apple also plans to allow users to enter text with an&nbsp;<a href=\"https://www.macrumors.com/guide/iphone/\">iPhone</a>, similar to how the&nbsp;<a href=\"https://www.macrumors.com/roundup/apple-tv/\">Apple TV</a>&nbsp;works. The cameras will also map the surrounding environment for augmented reality applications, with LiDAR scanners also included.  </p><p class=\"paragraph\">  While the headset can connect to a Mac to display what's on the Mac's screen, it is designed to operate independently. There are two Mac-level&nbsp;<a href=\"https://www.macrumors.com/guide/m2/\">M2</a>&nbsp;processors inside, one that's a higher-end chip and one that's a lower-end chip for powering sensors.  </p><p class=\"paragraph\">  The AR/VR headset will run a new operating system that's likely to be called&nbsp;<a href=\"https://www.macrumors.com/guide/xros/\">xrOS</a>, with the xr standing for \"extended reality.\" ‌xrOS‌ will be immediately familiar to iOS users, and Apple is developing dedicated apps for the device. Safari,&nbsp;<a href=\"https://www.macrumors.com/guide/photos/\">Photos</a>, Messages, Maps,&nbsp;<a href=\"https://www.macrumors.com/guide/apple-music/\">Apple Music</a>,&nbsp;<a href=\"https://www.macrumors.com/guide/facetime/\">FaceTime</a>, and more will be optimized for a 3D interface, and it will also be able to run 2D&nbsp;<a href=\"https://www.macrumors.com/roundup/ipad/\">iPad</a>&nbsp;apps through a special 3D viewing experience, similar to how YouTube works on a device like the Meta Quest 2.  </p><p class=\"paragraph\">  Apple is developing a dedicated Fitness+ app for the headset for those who want to use the device while exercising, and Health features will guide users through meditations. There will be a media focus with Apple planning to provide a dedicated TV app, and Apple is teaming up with companies like Disney and Dolby for content.  </p><p class=\"paragraph\">  Apple is already working with gaming developers to help them update their existing content for mixed reality, and ‌FaceTime‌ will also be a focus. ‌FaceTime‌ will support one-on-one chats with realistic avatars featuring a user's actual face and body, while multi-person chats will use Memojis.  </p>",
+    "sourceUrl": "https://www.macrumors.com/guide/wwdc-2023-what-to-expect/",
+    "utcStartDateTime": "2023-06-05T17:00:00.000Z",
+    "utcEndDateTime": "2023-06-05T18:00:00.000Z",
+    "allDay": false,
+    "utcCreatedDateTime": "2023-06-03T06:36:56.667Z",
+    "utcUpdatedDateTime": "2023-06-03T06:40:17.323Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 232,
+        "originalUrl": "//www.youtube.com/embed/GYkq9Rgoj8E",
+        "type": "3",
+        "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/GYkq9Rgoj8E\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+      }
+    ],
+    "locations": [
+      {
+        "id": 34,
+        "address": "Apple Park, CA",
+        "pinId": 242
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 147,
     "parentId": 146,
     "rootThread": false,

@@ -10,6 +10,7 @@ Editing pin with youtube content will delete youtube content in edit mode ++
 pins loaded from infinit scroll needs to be in memory so that navigating back to home will have proper scroll position ++
 create/edit/respond page needs to have auth guard +
 changing username needs to sync to comment +
+show pixel dimention / size via tooltip?? of scraped image +
 
 remove facebook like
 missing description validation
@@ -21,7 +22,8 @@ fix indexing with hashtag for ml search
 
 updating tags does not update links++
 invalid hashtag in editor needs to be removed++
-
+ul needs some bottom margin on pin ++
+Comment cleanup/backup +
 
 SEO:
  test "site:"
@@ -41,7 +43,14 @@ Pin dollar tag should link to referal page in new tab
 Features:
 
 private group +
-STock ticker +
+Stock ticker +
+show new pin added banner and clicking it will take to search page with only new pins
+
+browser extention
+mobile app
+anime review integration+
+movie review integration+
+Notification when other people comment on your post for comment reply
 
 treading tags and search query on side pane +
 $tag should show posted time ticker price as well as current price eg: +
@@ -69,12 +78,14 @@ comment should have ability to show pictures / pins
 Add do not show pin again feature
 Add no date pin feature and have it come up time to time so people can contribute more info
 Search twitter pins by scraping and indexing it's text
+scrape alt text for image and save
 
 Cleanup:
 test comment db backup
 Sanitize all post values
 client validate url before submitting
 Add very unsure, unsure, sure, very sure for dates and article content 
+Extract scrapping js to own repo and remove jquery
 
 R&D:
 create non headless browser

@@ -390,10 +390,6 @@ https://nationaldaycalendar.com/march/
 - Filter by like threashold  
 
 - Faceted Search bubbles like Bing
-
-- Fix watch pins board
-
-- SSL
 - facebook login check for fbid and matching email in system to get user
 
 - Put location in place of "THE PIN GANG" and use google mapping cordinates
@@ -474,33 +470,14 @@ This is a promotional article about one of the company partners with Interesting
 - Check out upcoming side calendar <https://cafeastrology.com/astrologyof2017horoscopes.html>
 - provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc. <https://aztro.readthedocs.io/en/latest>
 - add flyout for different types of like (on time). Watch should show modal to add or select grouping pin will live in
-- Add unique constraint on like and favorite so one user can like / favorite a pin once
-- promise return null to suppress warnings
 - Unit / Integration test on User and Pin model
-- Change readFileSync to Async in scrape code to load scrape file or cache it
-- Prevent user from posting the same pin of same url more then once
 - Pin save should be wrapped in transaction
 - format money with comma's on pin form
-- Socket io updates - like will replace pin causing flicker ++
-- cancel scraping button ++
-- add edit ability to scraping modal ++
-
-- Create watch view ++
 - inherit main and watch view ++
 - extract timeline into directive ++
-- pin page media query
-- facebook / tweet like button and counter need to show / move watch to top right of image
-- scrape alt text for image and save
-- get title in header bound correctly per page
-- linking on watch/link and being redirected to login should fulfill request after logged in
-- Extract GA code in auth.service.js into it's own module
-- GA: Outbound link / non-interaction events / Social Interactions tracking / User Timings / set clientId on tracker creation
-- searching on anything other then main page should bring you to main page
-- multiline description support
-- Accessory feature listing below main pin
 
 - Side panel for favorite events: https://cafeastrology.com/articles/daysoftheweek.html
-- convert to use jQuery.scrollTo https://github.com/flesler/jquery.scrollTo
+
 - Chinese Lunar Calendar (Nong Li)
 - display error banner on create page when failed scrape
 
@@ -508,11 +485,8 @@ This is a promotional article about one of the company partners with Interesting
 - search with infinit scroll
 - check scrolling to the end as link header is not responsed
 
-- Extract scrapping js to own repo and used typescript
 - side info panel with summation of 'tagged' categories of items and mode/median/mean
 - Add tags and allow upvoting of existing tags to gain meta data for search engine to process +
-- search feature bug / show tag button when searched to jump to different section like pinterest +++
-- show pixel dimention / size via tooltip?? of scraped image
 
 - Add FB privacy policy page
 - https://gist.github.com/muddylemon/2671176
@@ -532,21 +506,7 @@ This is a promotional article about one of the company partners with Interesting
 - GeoLite2 City: IP => City / lat:long
 - Cache main query and improve load time <https://www.patterns.dev/posts/prpl/> <https://web.dev/rendering-on-the-web/>
 
-## Bugs
-- When in specific pin view and clicking logout will show blank screen
-- Date tag mobile view broken
-- Fix loading jumpiness
-
-## Before Usable
-- Youtube!!
-- Create page image redesign with image selection in right drawer
-- Comment fix
-- Login fix
-- Script to refresh pins in semantic search
-- Single Pin page similarity needs to be in timeline
-- Favorite needs to be grouped in folders and make public/private
-- Pinner should be able to add tags/groups to organize their pin
-- Notification when other people comment on your post for comment reply
 
 
-update client for youtube and twitter
+## Merketing
+My website specializes in allowing people to discover and track upcoming, release dates, events, and other important dates. It can help people plan their travel and see what type of gear, lodging, and transport they can leverage to make their travel more enjoyable.
