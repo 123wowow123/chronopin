@@ -7,7 +7,7 @@
 
   class PinController {
 
-    constructor($scope, $stateParams, socket, pinWebService, searchService, Auth, appConfig, modelInjector, commentJs, Util, $log) {
+    constructor($scope, $stateParams, $rootScope, socket, pinWebService, searchService, Auth, appConfig, modelInjector, commentJs, Util, MetaService, $log) {
       PinsQuery = PinsQuery || modelInjector.getPinsQuery();
       this.pinWebService = pinWebService;
       this.$stateParams = $stateParams;
@@ -15,6 +15,7 @@
       this.commentJs = commentJs;
       this.searchService = searchService;
       this.Util = Util;
+      this.MetaService = MetaService;
 
       this.isAdmin = Auth.isAdmin; //bind function so each digest loop it get re-evaluated to determin latest state
       this.searching = false;
@@ -31,6 +32,13 @@
         .then(res => {
           this.pin = res.data;
           this.pinReady = true;
+
+          this.MetaService.set(
+            _.get(this, 'pin.title'),
+            _.get(this, 'pin.description'),
+            this.appConfig.thumbUrlPrefix + _.get(this, 'pin.media[0].thumbName')
+          );
+
           return res;
         })
         .then(res => {
@@ -57,6 +65,10 @@
               this.commentJs.ayncRefresh();
             });
         });
+    }
+
+    $onDestroy() {
+      this.MetaService.reset();
     }
 
     addLike(pin) {

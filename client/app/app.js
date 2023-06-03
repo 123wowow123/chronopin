@@ -35,6 +35,16 @@ angular.module('chronopinNodeApp', [
   //   uibDatepickerPopupConfig.datepickerPopupTemplateUrl = 'components/templates/datepickerPopup/popup.html';
   //   uibDatepickerPopupConfig.beginDateText = "Match"
   // }]);
-  .controller('AppCtrl', function ($scope, searchService) {
+  .controller('AppCtrl', ($scope, searchService, $rootScope, MetaService, $transitions) => {
     // Initializes searchService singleton
-  });
+    $rootScope.metaservice = MetaService;
+  })
+//   .run(['$rootScope', ($rootScope, $transitions) => {
+//     // $rootScope.$on('$routeChangeSuccess', (event, current, previous) => {
+//     //     $rootScope.title = current.$$route.title;
+//     //     $rootScope.description = current.$$route.description;
+//     //     $rootScope.keywords = current.$$route.keywords;
+//     //     $rootScope.image = current.$$route.image;
+//     // });
+
+//  }]);

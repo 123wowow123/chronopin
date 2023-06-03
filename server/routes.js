@@ -7,8 +7,15 @@
 import errors from './components/errors';
 import path from 'path';
 import * as paginationHeader from './util/paginationHeader'
+import * as _ from 'lodash';
+const config = require('./config/environment');
 const mainController = require('./api/main/main.controller');
 const auth = require('./auth/auth.service');
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+import {
+  Pin
+} from './model';
 
 export default function (app) {
   // Insert routes below
@@ -73,11 +80,34 @@ export default function (app) {
 
     });
 
+  app.route('/pin/:id')
+    .get((req, res) => {
+      let pinId = +req.params.id,
+        userId = req.user && +req.user.id;
+
+      return Pin.queryById(pinId, userId)
+        .then(({
+          pin
+        }) => {
+          const dom = new JSDOM(pin.description);
+          const document = dom.window.document;
+          const description = document.querySelector('p').textContent.trim();
+          const meta = {
+            title: pin.title,
+            description,
+            image: config.thumbUrlPrefix + _.get(pin, 'media[0].thumbName')
+          };
+          res.render(app.get('appPath') + '/index.html', { meta });
+        }).catch((e) => {
+          res.render(app.get('appPath') + '/index.html', { meta: config.meta });
+        });
+    });
+
   // All other routes should redirect to the index.html
   app.route('/*')
     .get((req, res) => {
-      res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
-      // res.render(app.get('appPath') + '/index.html', { mainPinData: null });
+      // res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
+      res.render(app.get('appPath') + '/index.html', { meta: config.meta });
     });
 
 }

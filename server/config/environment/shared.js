@@ -28,5 +28,10 @@ exports = module.exports = {
     twitter: 2,
     youtube: 3,
   },
-  gMapKey: `AIzaSyA2Y5rx_RbJh-kHVW6H-_I-_gmkl8qB9O0`
+  gMapKey: `AIzaSyA2Y5rx_RbJh-kHVW6H-_I-_gmkl8qB9O0`,
+  meta: {
+    title: 'Chronopin',
+    description: 'Discover and track upcoming, release dates, events, and other important dates.',
+    image: '/assets/images/favicon.ico'
+  }
 };

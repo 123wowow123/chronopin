@@ -20,6 +20,7 @@ default does not select media but when selected it will auto check pin header me
 fix indexing with hashtag
 
 updating tags does not update links
+invalid hashtag in editor needs to be removed
 
 
 SEO:
@@ -28,6 +29,8 @@ SEO:
  Add alt text for image/media for SEO
 Google index sub pages: RSS, mRSS, and Atom 1.0
 https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap#rss
+national day & weather:
+https://dev.timeanddate.com/
 
 Monetize:
 can suggest airbnb and flights referals when map data is available

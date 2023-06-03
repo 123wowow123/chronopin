@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js --dark" ng-app="chronopinNodeApp" infinite-scroll threshold="500">
+<html class="no-js --dark" ng-app="chronopinNodeApp" infinite-scroll threshold="500" ng-controller="AppCtrl">
 <!--<![endif]-->
 
 <head>
@@ -26,18 +26,20 @@
 
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <base href="/">
-  <title>Chronopin</title>
-  <meta name="fragment" content="!">
-  <meta name="description" content="Discover and track upcoming, release dates, events, and other important dates.">
-  <!-- <meta name="viewport" content="width=device-width"> -->
 
+  <title ng-bind="metaservice.metaTitle()">Chronopin</title>
+  <meta name="fragment" content="!">
   <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0, viewport-fit=cover" />
+
+  <meta name="og:title" content='<%= meta.title %>'>
+  <meta property="og:image" content='<%= meta.image %>'>
+  <meta name="og:description" content='<%= meta.description %>'>
+
+  <meta property="og:type" content="website">
 
   <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://localhost:35729/livereload.js?snipver=1"> -->
 
-  <meta property="og:title" content="Chronopin: Date tracker for both historical and future events.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.chronopin.com/">
+  <!-- <meta property="og:url" content="https://www.chronopin.com/"> -->
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(client) app/vendor.css -->
@@ -54,7 +56,7 @@
 
 </head>
 
-<body class="body">
+<body class="body" >
 
   <!--[if lt IE 7]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -165,6 +167,7 @@
   <script src="components/loader/loader-pac/loader-pac.controller.js"></script>
   <script src="components/loader/loader-pulse-bubble/loader-pulse-bubble.js"></script>
   <script src="components/loader/loader-ripple/loader-ripple.controller.js"></script>
+  <script src="components/meta-service/meta-service.service.js"></script>
   <script src="components/modal-scroller/modal-scroller.controller.js"></script>
   <script src="components/modal-scroller/modal-scroller.js"></script>
   <script src="components/modal-scroller/modal/shared/pin-form.js"></script>
