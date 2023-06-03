@@ -32,6 +32,7 @@ exports = module.exports = {
   meta: {
     title: 'Chronopin',
     description: 'Discover and track upcoming, release dates, events, and other important dates.',
-    image: '/assets/images/favicon.ico'
+    image: '/assets/images/favicon.ico',
+    type: 'website'
   }
 };

@@ -109,6 +109,7 @@ export default function (app) {
             description,
             mediaContent: medium ? medium.getUrl() : undefined,
             mediaType: getOgType(medium.type),
+            type: 'article'
           };
           res.render(app.get('appPath') + '/index.html', { meta });
         }).catch((e) => {
