@@ -6,6 +6,7 @@ import * as image from '../../image'
 import * as _ from 'lodash';
 import { v4 as uuidv4 } from 'uuid';
 const config = require('../../config/environment');
+import url from 'node:url';
 import {
   BasePin
 } from '..';
@@ -114,7 +115,12 @@ export default class Medium {
       case config.mediumID.image:
         return this.thumbName ? config.thumbUrlPrefix + this.thumbName : undefined;
       case config.mediumID.youtube:
-        return this.originalUrl;
+        const parsedUrl = url.parse(this.originalUrl);
+        if (!parsedUrl.protocol) {
+          parsedUrl.protocol = 'https:';
+        }
+        const outUrl = parsedUrl.protocol + parsedUrl.pathname;
+        return outUrl;
       case config.mediumID.twitter:
         return this.originalUrl;
     }
