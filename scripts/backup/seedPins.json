@@ -6398,6 +6398,42 @@
     "userId": 1
   },
   {
+    "id": 244,
+    "parentId": 236,
+    "rootThread": false,
+    "title": "Biden signs debt ceiling bill, avoiding a catastrophic economic default",
+    "description": "<p class=\"paragraph\"> President Joe Biden on Friday discussed a bill to lift the debt ceiling, just days before the Treasury estimated the government would run out of money. </p><p class=\"paragraph\"> The compromise debt ceiling bill&nbsp;<a href=\"https://www.cnbc.com/2023/06/01/debt-ceiling-bill-updates.html\">passed the Senate</a>&nbsp;by a 63-36 margin Thursday evening, winning enough support from both parties to overcome the chamber’s 60-vote threshold to avoid a filibuster. On Wednesday, it moved&nbsp;<a href=\"https://www.cnbc.com/2023/05/31/debt-ceiling-bill-house-vote.html\">through the House</a>&nbsp;after about 72 hours, passing 314-117. </p><p class=\"paragraph\"> <a href=\"https://www.cnbc.com/2023/05/09/debt-ceiling-explained.html\">Without the agreement</a>, federal obligations such as Social Security, Medicare and military paychecks would have gone unsent. And failure to lift the debt ceiling would have roiled global financial markets and sparked job losses in the U.S. </p><p class=\"paragraph\"> <a href=\"/search?q=#XDate\">#XDate</a>&nbsp; </p>",
+    "sourceUrl": "https://www.cnbc.com/2023/06/02/biden-says-debt-ceiling-bill-avoids-catastrophic-economic-default.html",
+    "utcStartDateTime": "2023-06-03T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-04T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-04T04:19:41.098Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 234,
+        "thumbName": "613caa1e-33dd-4b9b-a403-c00aa79489c6.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107250516-16857485052023-06-02t232716z_1061230179_rc2bb1axn8y6_rtrmadp_0_usa-debt-biden.jpeg?v=1685748575&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 37,
+        "tag": "#XDate",
+        "pinId": 244
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 236,
     "parentId": 190,
     "rootThread": false,
