@@ -122,10 +122,10 @@
                 <div class="grid__watch" ng-switch="!!$ctrl.pin.hasFavorite">
                   <button type="button" class="grid__favorite --add" ng-click="$ctrl.addFavorite($ctrl.pin)"
                     title="Add to watch" ng-switch-default><i class="fa fa-eye" aria-hidden="true"></i>
-                    {{pin.favoriteCount}}</button>
+                    {{$ctrl.pin.favoriteCount}}</button>
                   <button type="button" class="grid__favorite --remove" ng-click="$ctrl.removeFavorite($ctrl.pin)"
                     title="Remove from watch" ng-switch-when="true"><i class="fa fa-eye" aria-hidden="true"></i>
-                    {{pin.favoriteCount}}</button>
+                    {{$ctrl.pin.favoriteCount}}</button>
                 </div>
 
                 <div class="grid__likes" ng-switch="!!$ctrl.pin.hasLike">
