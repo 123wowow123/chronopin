@@ -342,7 +342,7 @@ $bag-font-color: var(--bag-text-color);
 
         h4 {
             font-size: 14px;
-    }
+        }
     }
 
     /** search and sort section css end ***/
@@ -433,36 +433,13 @@ $bag-font-color: var(--bag-text-color);
 
     }
 
-    &__favorite {
+    &__favorite,
+    &__likes {
         @extend .btn;
         @extend .btn-link;
         color: $timeline-content-color;
         letter-spacing: 3px;
         text-decoration: none !important;
-
-        &.\--add {
-            color: $timeline-content-color;
-        }
-
-        &.\--remove {
-            color: #C49702;
-        }
-
-        &:hover {
-            color: #23527c !important;
-        }
-
-        &:active,
-        &:focus {
-            color: #337ab7 !important;
-        }
-    }
-
-
-    &__likes {
-        @extend .btn;
-        @extend .btn-link;
-        padding: 0;
 
         &.\--add {
             color: $timeline-content-color;

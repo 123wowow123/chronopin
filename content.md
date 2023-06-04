@@ -12,7 +12,6 @@ create/edit/respond page needs to have auth guard +
 changing username needs to sync to comment +
 show pixel dimention / size via tooltip?? of scraped image +
 
-remove facebook like
 missing description validation
 
 Should show page not found and redirect to home? https://chronopin.com/pin/178

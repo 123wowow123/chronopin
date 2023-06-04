@@ -128,11 +128,18 @@
                     {{pin.favoriteCount}}</button>
                 </div>
 
-                <div class="grid__likes">
-                  <div class="fb-like" fb-like page-href="{{$ctrl.pin.sourceUrl}}">
-                    <loader-pulse-bubble></loader-pulse-bubble>
-                  </div>
-                </div>
+                <div class="grid__likes" ng-switch="!!$ctrl.pin.hasLike">
+                  <!-- <div fb-like page-href="{{$ctrl.pin.sourceUrl}}">
+                      <loader-pulse-bubble></loader-pulse-bubble>
+                  </div> -->
+                  <button type="button" class="grid__favorite --add" title="Like Pin"
+                      ng-click="!$ctrl.disableLink && $ctrl.addLike($ctrl.pin)" ng-switch-default>
+                      <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{$ctrl.pin.likeCount}}</button>
+                  <button type="button" class="grid__favorite --remove" title="Remove Like Pin"
+                      ng-click="!$ctrl.disableLink && $ctrl.removeLike($ctrl.pin)" ng-switch-when="true">
+                      <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{$ctrl.pin.likeCount}}</button>
+  
+              </div>
 
                 <div class="grid__tip" ng-if="$ctrl.isAdmin()">
                   <button class="btn btn-link" ui-sref="update({id:$ctrl.pin.id})" title="Edit Pin"><i

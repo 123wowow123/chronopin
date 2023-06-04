@@ -183,11 +183,13 @@
                     <div class="grid__description" ng-bind-html="$ctrl.pin.description"></div>
                 </div>
         
-                <a class="grid__show_more" ui-sref="pin({id:$ctrl.pin.id})" ng-if="!$ctrl.activateFullPin && $ctrl.isContentOverflown($ctrl.contentEl)">
+                <a class="grid__show_more" ui-sref="pin({id:$ctrl.pin.id})"
+                    ng-if="!$ctrl.activateFullPin && $ctrl.isContentOverflown($ctrl.contentEl)">
                     show more
                 </a>
         
-                <span class="grid__show_more" ng-click="$ctrl.showMoreFn()" ng-if="$ctrl.activateFullPin && $ctrl.isContentOverflown($ctrl.contentEl)">
+                <span class="grid__show_more" ng-click="$ctrl.showMoreFn()"
+                    ng-if="$ctrl.activateFullPin && $ctrl.isContentOverflown($ctrl.contentEl)">
                     {{$ctrl.fullPin ? 'show less' : 'show more'}}
                 </span>
         
@@ -218,12 +220,17 @@
                             <i class="fa fa-eye" aria-hidden="true"></i> {{$ctrl.pin.favoriteCount}}</button>
                     </div>
         
-                    <div class="grid__likes">
-                        <div fb-like page-href="{{$ctrl.pin.sourceUrl}}">
-                            <!-- <loader-pulse-bubble></loader-pulse-bubble> -->
-                        </div>
-                        <!-- <button type="button" class="grid__like --add" ng-click="$ctrl.addLike($ctrl.pin)" ng-switch-default><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
-                  <button type="button" class="grid__like --remove" ng-click="$ctrl.removeLike($ctrl.pin)" ng-switch-when="true"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button> {{$ctrl.pin.likeCount}} -->
+                    <div class="grid__likes" ng-switch="!!$ctrl.pin.hasLike">
+                        <!-- <div fb-like page-href="{{$ctrl.pin.sourceUrl}}">
+                            <loader-pulse-bubble></loader-pulse-bubble>
+                        </div> -->
+                        <button type="button" class="grid__favorite --add" title="Like Pin"
+                            ng-click="!$ctrl.disableLink && $ctrl.addLike($ctrl.pin)" ng-switch-default>
+                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{$ctrl.pin.likeCount}}</button>
+                        <button type="button" class="grid__favorite --remove" title="Remove Like Pin"
+                            ng-click="!$ctrl.disableLink && $ctrl.removeLike($ctrl.pin)" ng-switch-when="true">
+                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{$ctrl.pin.likeCount}}</button>
+        
                     </div>
         
                     <!-- <div class="tip pull-right">
