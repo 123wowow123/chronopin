@@ -2,6 +2,7 @@
 
 import * as mssql from 'mssql';
 import * as cp from '../../sqlConnectionPool';
+import _ from 'lodash';
 import {
   User,
   BasePin

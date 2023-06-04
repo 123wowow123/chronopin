@@ -19,8 +19,8 @@ quick add Q2 etc
 default does not select media but when selected it will auto check pin header media
 fix indexing with hashtag for ml search
 
-updating tags does not update links++
-invalid hashtag in editor needs to be removed++
+updating tags does not update links ++
+invalid hashtag in editor needs to be removed ++
 Comment cleanup/backup +
 
 SEO:
@@ -40,17 +40,17 @@ Pin dollar tag should link to referal page in new tab
 
 Features:
 
-private group +
-Stock ticker +
-show new pin added banner and clicking it will take to search page with only new pins
+private group ++
+Stock ticker ++
+show new pin added banner and clicking it will take to search page with only new pins +
 
 browser extention
 mobile app
-anime review integration+
-movie review integration+
+anime review integration +
+movie review integration +
 Notification when other people comment on your post for comment reply
 
-treading tags and search query on side pane +
+trending tags and search query on side pane +
 $tag should show posted time ticker price as well as current price eg: +
 https://www.marketwatch.com/story/big-apple-microsoft-names-back-stock-picking-site?dist=msr_10
 https://rapidapi.com/twelvedata/api/twelve-data1
