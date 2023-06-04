@@ -11,11 +11,7 @@ angular.module('chronopinNodeApp')
         $(window).on('scroll', function(event, eventData) {
           const bottom = el.scrollHeight - el.scrollTop - window.innerHeight;
 
-          // start browser incompatibility hack
-          // https://stackoverflow.com/questions/1830080/jquery-scrolltop-doesnt-seem-to-work-in-safari-or-chrome-windows
-          // $.browser.safari ? $("body") : $("html") ;
           const top = $('html').scrollTop() || $('body').scrollTop(); // e.scrollTop;
-          // end browser incompatibility hack
 
           if (bottom <= offset) {
             $rootScope.$broadcast('scrolled:bottom', {
