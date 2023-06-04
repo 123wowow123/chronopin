@@ -8,9 +8,11 @@ import errors from './components/errors';
 import path from 'path';
 import * as paginationHeader from './util/paginationHeader'
 import * as _ from 'lodash';
+import fs from 'fs';
 const config = require('./config/environment');
 const mainController = require('./api/main/main.controller');
 const auth = require('./auth/auth.service');
+const ejs = require('ejs');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 import {
@@ -65,17 +67,24 @@ export default function (app) {
   //       });
   //   });
 
-
+  let mainPinDataContent;
   app.route('/mainPinData.js')
     .get(auth.tryGetUser())
     .get((req, res) => {
+      if (!mainPinDataContent) {
+        mainPinDataContent = fs.readFileSync(app.get('views') + '/mainPinData.ejs', 'utf8');
+      }
       const mainPinDataPromise = mainController.getPinsAndFormatData(req, res)
         .then(paginationHeader.setPaginationObject(res, req))
         .then((mainPinData) => {
           // Render Templated root page
-          res.type('text/javascript').render(app.get('appPath') + '/mainPinData.ejs', { mainPinData });
+          res.setHeader('Content-Type', 'text/javascript');
+          const js = ejs.render(mainPinDataContent, { mainPinData });
+          res.send(js);
         }).catch(() => {
-          res.type('text/javascrip').render(app.get('appPath') + '/mainPinData.ejs', { mainPinData: null });
+          res.setHeader('Content-Type', 'text/javascript');
+          const js = ejs.render(mainPinDataContent, { mainPinData });
+          res.send(js);
         });
 
     });
@@ -103,7 +112,7 @@ export default function (app) {
           const dom = new JSDOM(pin.description);
           const document = dom.window.document;
           const querySelector = document.querySelector('p');
-          const description = querySelector && querySelector.textContent ? querySelector.textContent.trim(): pin.description;
+          const description = querySelector && querySelector.textContent ? querySelector.textContent.trim() : pin.description;
           const medium = _.get(pin, 'media[0]');
           const meta = {
             title: pin.title,
