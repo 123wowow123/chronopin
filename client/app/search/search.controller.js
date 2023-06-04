@@ -11,7 +11,7 @@
             const omitLinkHeaderProp = ['rel', 'url'];
 
             // Plugin: https://github.com/gabceb/jquery-browser-plugin
-            const isSafari = $.browser.ipad || $.browser.iphone || $.browser.ipod || $.browser.safari || $.browser.msedge;
+            //const isSafari = $.browser.ipad || $.browser.iphone || $.browser.ipod || $.browser.safari || $.browser.msedge;
             const scrollEl = ScrollUtil.getScrollEl();
 
             // stateParams Service

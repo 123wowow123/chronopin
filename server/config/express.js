@@ -33,7 +33,8 @@ export default function (app) {
   // app.use(requestPath);
 
   // app.use(require('../prerender'));
-
+  app.use(compression());
+  
   if (env === 'development' || env === 'test') {
     app.use(express.static(path.join(config.root, '.tmp')));
   }
@@ -56,7 +57,7 @@ export default function (app) {
   app.set('views', config.root + '/server/views');
   app.engine('html', require('ejs').renderFile);
   app.set('view engine', 'html');
-  app.use(compression());
+
   app.use(bodyParser.urlencoded({
     extended: false
   }));
