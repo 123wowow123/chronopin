@@ -122,7 +122,6 @@ module.exports.seedDB = function () {
     })
     .then(() => {
       // Create Aphelion Dates
-      //debugger;
       let dateJSON = JSON.parse(fs.readFileSync(aphelionFilePath, 'utf8'));
       _alwaysShow(dateJSON, true);
       let dateTimes = new DateTimes(dateJSON);

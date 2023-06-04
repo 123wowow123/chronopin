@@ -45,7 +45,7 @@ export default class Pin extends BasePin {
       .then(({
         pin
       }) => {
-        //console.log('_createMSSQL', pin);
+        console.log('saving', JSON.stringify(pin.id));
         const mediaPromise = this.media
           .filter(m => m.type === 1)
           .map(m => {

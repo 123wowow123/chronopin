@@ -174,7 +174,6 @@ function _upsert(likeIn, userId, pinId) {
 function _queryMSSQLLikeById(id) {
   return cp.getConnection()
     .then(conn => {
-      //console.log("queryMSSQLPinById then err", err)
       return new Promise((resolve, reject) => {
         const StoredProcedureName = 'GetLike';
         let request = new mssql.Request(conn)
@@ -182,7 +181,7 @@ function _queryMSSQLLikeById(id) {
           .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
             let like;
             if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${JSON.stringify(err)}`);
             }
             if (res.recordset.length) {
               like = new Like(res.recordset[0]);
@@ -219,17 +218,12 @@ function _upsertMSSQL(like, userId, pinId) {
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
-            let id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${JSON.stringify(err)}`);
             }
             // ToDo: doesn't always return value
             try {
-              //console.log('returnValue', returnValue); // always return 0
               like.id = res.output.id;
-
-              //console.log('queryCount', queryCount);
             } catch (e) {
               throw e;
             }

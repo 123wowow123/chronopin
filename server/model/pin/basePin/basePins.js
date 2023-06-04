@@ -49,7 +49,12 @@ export default class BasePins {
 
     save() {
         const promises = this.pins
-            .reduce((prev, p) => prev.then(() => p.save()), Promise.resolve());
+            .reduce((prev, p) => {
+                return prev.then(() => {
+                    console.log('Saving Pin:', p.id);
+                    return p.save();
+                });
+            }, Promise.resolve());
         return promises;
     }
 

@@ -57,7 +57,7 @@ export default class FullPin extends BasePin {
                         utcCreatedDateTime: l.utcCreatedDateTime,
                         utcUpdatedDateTime: l.utcUpdatedDateTime,
                         like: l.like,
-                        userId: f.userId
+                        userId: l.userId
                     }, null, this).save();
                 });
                 const saveFavoritePromises = this.favorites.map(f => {
