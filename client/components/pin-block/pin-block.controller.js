@@ -220,7 +220,7 @@
                             <i class="fa fa-eye" aria-hidden="true"></i> {{$ctrl.pin.favoriteCount}}</button>
                     </div>
         
-                    <div class="grid__likes" ng-switch="!!$ctrl.pin.hasLike">
+                    <div class="grid__watch" ng-switch="!!$ctrl.pin.hasLike">
                         <!-- <div fb-like page-href="{{$ctrl.pin.sourceUrl}}">
                             <loader-pulse-bubble></loader-pulse-bubble>
                         </div> -->
