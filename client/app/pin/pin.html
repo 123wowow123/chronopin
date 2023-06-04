@@ -18,7 +18,8 @@
 
           <div ng-switch-when="1">
             <a class="pin__asset pin__asset--link" ng-if="$ctrl.pin.media[0].thumbName"
-              ng-href="{{$ctrl.pin.sourceUrl}}" target="_blank">
+              ng-href="{{$ctrl.pin.sourceUrl}}" target="_blank"
+              ng-attr-aria-label="Read more about {{$ctrl.pin.title}} from the source page">
               <img ng-src="{{$ctrl.appConfig.thumbUrlPrefix + $ctrl.pin.media[0].thumbName}}" class="pin__image"
                 data-actual-width="{{$ctrl.pin.media[0].thumbWidth}}"
                 data-actual-height="{{$ctrl.pin.media[0].thumbHeight}}" />
@@ -36,14 +37,14 @@
 
         <div class="grid__headline --meta">
           <div class="headline-left">
-            <a class="posted-time" ui-sref="pin({id:$ctrl.pin.id})">
-              <time datetime="{{$ctrl.pin.utcCreatedDateTime}}">{{$ctrl.pin.utcCreatedDateTime | date :
-                "MM/dd/yyyy
-                'at' h:mm a" | lowercase}}
-              </time>
-            </a>
+
+            <time class="posted-time" datetime="{{$ctrl.pin.utcCreatedDateTime}}">
+              {{$ctrl.pin.utcCreatedDateTime | date : "MM/dd/yyyy 'at' h:mm a" | lowercase}}
+            </time>
+
             <span class="rubric__divider">/</span>
-            <a ng-href="/search?q={{$ctrl.pin.user.userName}}" class="rubric">
+            <a ng-href="/search?q={{$ctrl.pin.user.userName}}" class="rubric"
+              ng-attr-aria-label="Read more pins posted from or containing user {{$ctrl.pin.user.userName}}">
               <span>{{$ctrl.pin.user.userName}}</span>
             </a>
           </div>
@@ -51,23 +52,27 @@
           <div class="grid__uploaded-date" ng-switch="$ctrl.pin.allDay">
             <span ng-switch-when="true">
               <em>
-                <time datetime='{{$ctrl.pin.utcStartDateTime}}'>Starts {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy"}}</time>
+                <time datetime='{{$ctrl.pin.utcStartDateTime}}'>Starts {{$ctrl.pin.utcStartDateTime |
+                  date:"MM/dd/yyyy"}}</time>
                 <time datetime='PT24H'> - All day</time>
               </em>
             </span>
             <em ng-switch-default>
-              <time datetime='{{$ctrl.pin.utcStartDateTime}}'>Starts {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"}}</time>
+              <time datetime='{{$ctrl.pin.utcStartDateTime}}'>Starts {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy
+                h:mma"}}</time>
               <span ng-if="$ctrl.pin.utcEndDateTime">to</span>
-              <time ng-if="$ctrl.pin.utcEndDateTime" datetime='{{$ctrl.pin.utcEndDateTime}}'>{{$ctrl.pin.utcEndDateTime | date:"MM/dd/yyyy h:mma"}}</time>
+              <time ng-if="$ctrl.pin.utcEndDateTime" datetime='{{$ctrl.pin.utcEndDateTime}}'>{{$ctrl.pin.utcEndDateTime
+                | date:"MM/dd/yyyy h:mma"}}</time>
             </em>
           </div>
         </div>
 
         <h1 class="grid__heading">
-          <a href="{{$ctrl.pin.sourceUrl}}" target="_blank">
+          <a href="{{$ctrl.pin.sourceUrl}}" target="_blank"
+            ng-attr-aria-label="Read more about {{$ctrl.pin.title}} from the source page">
             {{$ctrl.pin.title}}
           </a>
-          <a class="external-link-icon" href="{{$ctrl.pin.sourceUrl}}" target="_blank">
+          <a class="external-link-icon" href="{{$ctrl.pin.sourceUrl}}" target="_blank" aria-hidden="true" tabindex="-1">
             <i class='fa fa-external-link'></i>
           </a>
         </h1>
@@ -105,7 +110,8 @@
                 </a> -->
                 <div class="merchant" ng-repeat="merchant in $ctrl.pin.merchants track by $index">
                   <a target="_blank" class="merchant generic__merchant-link" href="{{merchant.url}}"
-                    ng-if="!!merchant.url">
+                    ng-if="!!merchant.url" ng-attr-aria-label="Purchase {{merchant.label}} for {{merchant.price
+                      | money}}">
                     <!-- <i class="fa fa-shopping-cart" aria-hidden="true"></i> -->
                     <span class="merchant-label" title="{{merchant.label}}">{{merchant.label}}</span>
                     <span class="merchant-price"
@@ -133,13 +139,13 @@
                       <loader-pulse-bubble></loader-pulse-bubble>
                   </div> -->
                   <button type="button" class="grid__favorite --add" title="Like Pin"
-                      ng-click="!$ctrl.disableLink && $ctrl.addLike($ctrl.pin)" ng-switch-default>
-                      <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{$ctrl.pin.likeCount}}</button>
+                    ng-click="!$ctrl.disableLink && $ctrl.addLike($ctrl.pin)" ng-switch-default>
+                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{$ctrl.pin.likeCount}}</button>
                   <button type="button" class="grid__favorite --remove" title="Remove Like Pin"
-                      ng-click="!$ctrl.disableLink && $ctrl.removeLike($ctrl.pin)" ng-switch-when="true">
-                      <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{$ctrl.pin.likeCount}}</button>
-  
-              </div>
+                    ng-click="!$ctrl.disableLink && $ctrl.removeLike($ctrl.pin)" ng-switch-when="true">
+                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{$ctrl.pin.likeCount}}</button>
+
+                </div>
 
                 <div class="grid__tip" ng-if="$ctrl.isAdmin()">
                   <button class="btn btn-link" ui-sref="update({id:$ctrl.pin.id})" title="Edit Pin"><i
@@ -165,8 +171,8 @@
 
         <div class="pin__map_locations" ng-if="$ctrl.hasMap() && $ctrl.getGoogleMapUrl()">
           <i class="fa fa-map-marker" aria-hidden="true"></i>
-          <address class="pin__map_location"
-            ng-repeat="location in $ctrl.pin.locations track by $index">{{location.address}}</address>
+          <address class="pin__map_location" ng-repeat="location in $ctrl.pin.locations track by $index">
+            {{location.address}}</address>
         </div>
 
         <div class="pin__thread">

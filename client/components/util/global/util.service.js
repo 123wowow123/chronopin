@@ -130,6 +130,15 @@
 
       hasAddress(pin) {
         return _.get(pin, "locations[0].address");
+      },
+
+      getListOfAddress(pin) {
+        function joinLocations(locations) {
+          return locations.reduce((a, t) => {
+            return (a ? `${a.address}, ` : '') + t.address;
+          }, '');
+        }
+        return joinLocations(_.get(pin, "locations"));
       }
 
     };
