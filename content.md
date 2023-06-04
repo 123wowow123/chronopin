@@ -19,9 +19,7 @@ quick add Q2 etc
 default does not select media but when selected it will auto check pin header media
 fix indexing with hashtag for ml search
 
-updating tags does not update links ++
-invalid hashtag in editor needs to be removed ++
-Comment cleanup/backup +
+
 
 SEO:
  test "site:"
@@ -31,6 +29,8 @@ Google index sub pages: RSS, mRSS, and Atom 1.0
 https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap#rss
 national day & weather:
 https://dev.timeanddate.com/
+Create Social Media Company sites and can serve as link exchange +
+Create Wiki Site +
 
 Monetize:
 can suggest airbnb and flights referals when map data is available
@@ -38,11 +38,20 @@ Affliate buy link with price scrape +
 Buy keywords in content that will turn into link where it will show map and nearest location when you can buy product.
 Pin dollar tag should link to referal page in new tab
 
-Features:
-
+Before Usable:
+Add edit/delete own pin feature ++
 private group ++
+
+Before Usable Bug:
+updating tags does not update links ++
+invalid hashtag in editor needs to be removed ++
+Comment cleanup/backup +
+Main timeline should remain be in background for speedup
+
+Features:
 Stock ticker ++
 show new pin added banner and clicking it will take to search page with only new pins +
+
 
 browser extention
 mobile app
@@ -57,6 +66,7 @@ https://rapidapi.com/twelvedata/api/twelve-data1
 
 hash*tag? useful for 'editor's choice' and other badges ++
 $tag mention will show ticker price in pin view
+Upload Videos
 
 All links to outside site will be converted to target blank +
 
