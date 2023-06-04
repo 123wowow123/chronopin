@@ -22,7 +22,6 @@ fix indexing with hashtag for ml search
 
 updating tags does not update links++
 invalid hashtag in editor needs to be removed++
-ul needs some bottom margin on pin ++
 Comment cleanup/backup +
 
 SEO:
