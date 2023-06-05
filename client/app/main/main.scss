@@ -476,13 +476,10 @@ $bag-font-color: var(--bag-text-color);
     }
 
     &__image {
-        // width: 100%;
-        object-fit: cover;
+        // object-fit: cover;
         max-width: 100%;
         height: auto;
     }
-
-
 
     &.ng-leave {
         transition: all ease 400ms;
