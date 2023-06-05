@@ -3506,26 +3506,27 @@
     "id": 121,
     "rootThread": false,
     "title": "Autonomous cars won’t solve traffic, but the Eli Zero could",
-    "description": "It's a two-seater, with side-by-side seating, as opposed to the tandem format of the Twizy. And unlike the Twizy, GEM, or a golf cart, it's fully enclosed, which means it's vastly more attractive to people living in places where it rains or snows. It uses a 4kW (5.3hp) electric motor powered by a 6kWh lithium-ion battery, which gives the Zero a range of 55 miles (89km), with a recharging time of 4.5 hours at 110V. A version with a bigger battery, the Zero+, will have a range of 85 miles (137km) thanks to a larger 8.3kWh pack—though this increases charging time to a still-reasonable six hours.",
+    "description": "<p class=\"paragraph\"> It's a two-seater, with side-by-side seating, as opposed to the tandem format of the Twizy. And unlike the Twizy, GEM, or a golf cart, it's fully enclosed, which means it's vastly more attractive to people living in places where it rains or snows. It uses a 4kW (5.3hp) electric motor powered by a 6kWh lithium-ion battery, which gives the Zero a range of 55 miles (89km), with a recharging time of 4.5 hours at 110V. A version with a bigger battery, the Zero+, will have a range of 85 miles (137km) thanks to a larger 8.3kWh pack—though this increases charging time to a still-reasonable six hours. </p>",
     "sourceUrl": "https://arstechnica.com/cars/2018/05/the-eli-zero-might-make-neighborhood-electric-vehicles-cool/",
     "price": 10900,
     "utcStartDateTime": "2019-06-30T07:00:00.000Z",
-    "utcEndDateTime": "2019-07-01T06:59:59.000Z",
+    "utcEndDateTime": "2019-07-01T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2018-07-16T06:46:52.213Z",
+    "utcUpdatedDateTime": "2023-06-05T01:33:46.475Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "media": [
       {
-        "id": 120,
-        "thumbName": "ff2604a7-828b-4021-822d-e92db0d19bb1.jpg",
-        "thumbWidth": 150,
-        "thumbHeight": 150,
-        "originalUrl": "https://cdn.arstechnica.net/wp-content/uploads/2018/05/Eli_ZERO4-150x150.jpg",
-        "originalWidth": 150,
-        "originalHeight": 150,
+        "id": 256,
+        "thumbName": "6b872176-9c4b-4ce2-81fa-c8f713e04d9c.jpeg",
+        "thumbWidth": 760,
+        "thumbHeight": 380,
+        "originalUrl": "https://cdn.arstechnica.net/wp-content/uploads/2018/05/Eli_ZERO19-760x380.jpg",
+        "originalWidth": 760,
+        "originalHeight": 380,
         "type": "1"
       }
     ],

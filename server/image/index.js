@@ -14,7 +14,6 @@ import * as log from '../util/log';
 //pipe to save in Medium
 
 const THUMB_OPTIONS = {
-  width: config.thumbWidth,
   uploadImageWidth: config.uploadImageWidth
 };
 

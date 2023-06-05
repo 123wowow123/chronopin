@@ -632,6 +632,11 @@ $timeline-ipad-landscape-left-alignment: 95px;
 
         &__trivia {
             @include tag-alignment($timeline-ipad-landscape-top-alignment, $timeline-ipad-landscape-left-alignment);
+            width: 180px;
+
+            .timeline__tag {
+                width: 180px;
+            }
         }
 
         &__circle {
