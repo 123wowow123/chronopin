@@ -114,11 +114,21 @@ export default function (app) {
           const querySelector = document.querySelector('p');
           const description = querySelector && querySelector.textContent ? querySelector.textContent.trim() : pin.description;
           const medium = _.get(pin, 'media[0]');
+          let mediaType;
+          let mediaContent = medium ? medium.getUrl() : undefined;
+          if (!mediaContent) {
+            const querySelector = document.querySelector('img');
+            mediaContent = querySelector && querySelector.src ? querySelector.src : undefined;
+            mediaType = 'og:image';
+          } else {
+            mediaType = getOgType(medium.type);
+          }
+
           const meta = {
             title: pin.title,
             description,
-            mediaContent: medium ? medium.getUrl() : undefined,
-            mediaType: getOgType(medium.type),
+            mediaContent,
+            mediaType,
             type: 'article'
           };
           res.render(app.get('appPath') + '/index.html', { meta });
