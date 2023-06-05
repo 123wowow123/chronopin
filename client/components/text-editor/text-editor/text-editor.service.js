@@ -28,10 +28,10 @@
       };
 
       const editorJsPromise = loadJSPromise('EditorJS', 'https://cdn.jsdelivr.net/npm/@editorjs/editorjs@2.26.5/dist/editor.min.js');
+      const edjsParserPromise = loadJSPromise('edjsParser', 'https://cdn.jsdelivr.net/npm/editorjs-parser@1/build/Parser.browser.min.js');
       const headerJsPromise = loadJSPromise('Header', 'https://cdn.jsdelivr.net/npm/@editorjs/header@2.7.0/dist/bundle.min.js');
       const listJsPromise = loadJSPromise('List', 'https://cdn.jsdelivr.net/npm/@editorjs/list@1.8.0/dist/bundle.min.js');
       const strikethroughPromise = loadJSPromise('Strikethrough', 'https://cdn.jsdelivr.net/npm/@sotaproject/strikethrough@1.0.1/dist/bundle.min.js');
-      const edjsParserPromise = loadJSPromise('edjsParser', 'https://cdn.jsdelivr.net/npm/editorjs-parser@1/build/Parser.browser.min.js');
       const embedPromise = loadJSPromise('Embed', 'https://cdn.jsdelivr.net/npm/@editorjs/embed@latest');
       const ImageToolPromise = loadJSPromise('ImageTool', 'https://cdn.jsdelivr.net/npm/@editorjs/image@2.3.0');
 
