@@ -33,6 +33,8 @@ Create Social Media Company sites and can serve as link exchange +
 Create Wiki Site +
 Page Speed Test 
 https://pagespeed.web.dev/analysis/https-chronopin-com/3dx7zai5z7?hl=en&form_factor=mobile
+FB Sharing Debugger
+https://developers.facebook.com/tools/debug/
 
 Monetize:
 can suggest airbnb and flights referals when map data is available
