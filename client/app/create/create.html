@@ -327,7 +327,9 @@
                     </div>
 
                     <div class="preview-pin-block" ng-if="$ctrl.activeTabs['footer'] === 0">
-                      <pin-block pin="$ctrl.getPreviewPin()" config="$ctrl.appConfig" disabled show-more-fn="$ctrl.showMore()"  full-pin="$ctrl.showFullPin" activate-full-pin="true"></pin-block>
+                      <pin-block pin="$ctrl.getPreviewPin()" config="$ctrl.appConfig" disabled
+                        show-more-fn="$ctrl.showMore()" full-pin="$ctrl.showFullPin"
+                        activate-full-pin="true"></pin-block>
                     </div>
 
                     <div class="footer-image-selector" ng-if="$ctrl.activeTabs['footer'] === 1">
@@ -344,7 +346,7 @@
                                     ng-class="{'image-grid--selected': medium === $ctrl.pin.selectedMedia }"
                                     ng-click="$ctrl.selectMedia(medium)" ng-switch="medium.type">
 
-                                    <img ng-src="{{medium.originalUrl}}" class="image-grid__image"
+                                    <img ng-src="{{medium.originalUrl}}" class="image-grid__image" loading="lazy"
                                       data-actual-width="{{medium.originalWidth}}"
                                       data-actual-height="{{medium.originalHeight}}"
                                       title="{{medium.originalWidth}} x {{medium.originalHeight}}" ng-switch-when="1" />

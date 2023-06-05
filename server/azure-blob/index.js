@@ -2,6 +2,7 @@ import azure from 'azure-storage';
 import config from '../config/environment';
 import * as log from '../util/log';
 
+const containerName = 'thumb';
 const retryOperations = new azure.ExponentialRetryPolicyFilter();
 
 if (!config.azureStorage.AZURE_STORAGE_CONNECTION_STRING) {
@@ -14,13 +15,52 @@ if (!config.azureStorage.AZURE_STORAGE_CONNECTION_STRING) {
 const blobSvc = azure.createBlobService(config.azureStorage.AZURE_STORAGE_CONNECTION_STRING)
   .withFilter(retryOperations);
 
+export function iterateOverAllBlobsInThumbContainer(properties) {
+  let promise = new Promise((outerResolve, outerReject) => {
+    let blobs = [];
+    function listBlobs(continuationToken, callback) {
+      blobSvc.listBlobsSegmented(containerName, continuationToken, function (error, result) {
+        blobs.push.apply(blobs, result.entries);
+        const continuationToken = result.continuationToken;
+        if (continuationToken) {
+          listBlobs(continuationToken, callback);
+        } else {
+          console.log("completed listing all blobs");
+          callback();
+        }
+      });
+    }
+
+    listBlobs(null, () => {
+
+      console.log(blobs);
+      let promises = blobs.map((b) => {
+        return new Promise((resolve, reject) => {
+          blobSvc.setBlobProperties(containerName, b.name, properties, (error, result, response) => {
+            console.log(JSON.stringify(result));
+            if (error) {
+              reject(result);
+            }
+            resolve(result);
+          })
+        });
+
+      });
+      return Promise.all(promises)
+        .then(outerResolve)
+        .catch(outerReject);
+
+    });
+  });
+  return promise;
+}
 
 export function createThumbContainer() {
   let promise = new Promise((resolve, reject) => {
     blobSvc.createContainerIfNotExists(
-      'thumb', {
-        publicAccessLevel: 'blob'
-      },
+      containerName, {
+      publicAccessLevel: 'blob'
+    },
       (error, containerCreated, response) => {
         if (!error) {
           resolve({
@@ -38,7 +78,7 @@ export function createThumbContainer() {
 export function deleteThumbContainer() {
   let promise = new Promise((resolve, reject) => {
     blobSvc.deleteContainer(
-      'thumb',
+      containerName,
       (error, response) => {
         if (!error) {
           resolve({
@@ -54,7 +94,7 @@ export function deleteThumbContainer() {
 
 export function getBlobUrl(fileName) {
   return blobSvc.getBlobUrl(
-    'thumb',
+    containerName,
     fileName);
 }
 
@@ -62,7 +102,7 @@ export function createBlob(fileName, stream, size, options) {
   let promise = new Promise((resolve, reject) => {
     try {
       blobSvc.createPageBlobFromStream(
-        'thumb',
+        containerName,
         fileName,
         stream,
         size,
@@ -88,7 +128,7 @@ export function createBlock(fileName, stream, size, options) {
   let promise = new Promise((resolve, reject) => {
     try {
       blobSvc.createBlockBlobFromStream(
-        'thumb',
+        containerName,
         fileName,
         stream,
         size,

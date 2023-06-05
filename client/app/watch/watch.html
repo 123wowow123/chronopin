@@ -24,18 +24,24 @@
       <div class="col-lg-12">
         <ul class="timeline">
 
-          <li id="{{pinGroup.toISODateTimeString()}}" class="timeline__group-container" data-ng-repeat="pinGroup in $ctrl.pinGroups">
+          <li id="{{pinGroup.toISODateTimeString()}}" class="timeline__group-container"
+            data-ng-repeat="pinGroup in $ctrl.pinGroups">
             <div class="timeline__circle"></div>
 
-            <div class="timeline__countdown" ng-class="{'timeline__countdown--today': pinGroup.getDateSince() === 0}" ng-bind="pinGroup.getDateSpan() | timespan : 'y'" title="{{pinGroup.getDateSpan() | timespan}}"></div>
+            <div class="timeline__countdown" ng-class="{'timeline__countdown--today': pinGroup.getDateSince() === 0}"
+              ng-bind="pinGroup.getDateSpan() | timespan : 'y'" title="{{pinGroup.getDateSpan() | timespan}}"></div>
             <div class="timeline__date" ng-bind="pinGroup.utcStartDateTime | date:'MM/dd/yyyy'"></div>
 
-            <ul class="timeline__group-section dynamic-grid" ag-id="{{pinGroup.toISODateTimeString()}}" angular-grid="pinGroup" cssGrid="true" ag-refresh-on-img-load="false" ag-reflowed="$ctrl.reflowed($event)">
+            <ul class="timeline__group-section dynamic-grid" ag-id="{{pinGroup.toISODateTimeString()}}"
+              angular-grid="pinGroup" cssGrid="true" ag-refresh-on-img-load="false"
+              ag-reflowed="$ctrl.reflowed($event)">
               <li id="{{pin.id}}" class="grid" data-ng-repeat="pin in pinGroup">
 
                 <article class="grid__panel">
                   <a class="grid__asset" ng-if="pin.media[0].thumbName" ui-sref="pin({id:pin.id})">
-                    <img ng-src="{{$ctrl.appConfig.thumbUrlPrefix + pin.media[0].thumbName}}" class="grid__image" data-actual-width="{{pin.media[0].thumbWidth}}" data-actual-height="{{pin.media[0].thumbHeight}}" />
+                    <img ng-src="{{$ctrl.appConfig.thumbUrlPrefix + pin.media[0].thumbName}}" class="grid__image"
+                      loading="lazy" data-actual-width="{{pin.media[0].thumbWidth}}"
+                      data-actual-height="{{pin.media[0].thumbHeight}}" />
                   </a>
                   <div class="grid__body">
                     <h4 class="grid__heading">
@@ -45,21 +51,26 @@
                     </h4>
                     <div class="grid__uploaded-date" ng-switch="pin.allDay">
                       <span ng-switch-when="true">
-                    <!-- <em>All day</em> -->
-                  </span>
+                        <!-- <em>All day</em> -->
+                      </span>
                       <em ng-switch-default>
-                  <span >Start: {{pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"}}</span>
-                  <span ng-if="pin.utcEndDateTime">to {{pin.utcEndDateTime | date:"MM/dd/yyyy h:mma"}}</span>
-                  </em>
+                        <span>Start: {{pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"}}</span>
+                        <span ng-if="pin.utcEndDateTime">to {{pin.utcEndDateTime | date:"MM/dd/yyyy h:mma"}}</span>
+                      </em>
                     </div>
                     <div class="grid__description" ng-bind-html="$ctrl.pin.description"></div>
                     <div class="grid__footer">
-                      <div class="grid__price" ng-class="{'grid__price--negative': pin.price < 0}" ng-if="pin.price">{{pin.price | money}}</div>
+                      <div class="grid__price" ng-class="{'grid__price--negative': pin.price < 0}" ng-if="pin.price">
+                        {{pin.price | money}}</div>
 
                       <div class="grid__social">
                         <div class="grid__watch" ng-switch="!!pin.hasFavorite">
-                          <button type="button" class="grid__favorite --add" ng-click="$ctrl.addFavorite(pin)" ng-switch-default><i class="fa fa-eye" aria-hidden="true"></i> {{pin.favoriteCount}}</button>
-                          <button type="button" class="grid__favorite --remove" ng-click="$ctrl.removeFavorite(pin)" ng-switch-when="true"><i class="fa fa-eye" aria-hidden="true"></i> {{pin.favoriteCount}}</button>
+                          <button type="button" class="grid__favorite --add" ng-click="$ctrl.addFavorite(pin)"
+                            ng-switch-default><i class="fa fa-eye" aria-hidden="true"></i>
+                            {{pin.favoriteCount}}</button>
+                          <button type="button" class="grid__favorite --remove" ng-click="$ctrl.removeFavorite(pin)"
+                            ng-switch-when="true"><i class="fa fa-eye" aria-hidden="true"></i>
+                            {{pin.favoriteCount}}</button>
                         </div>
 
                         <div class="grid__likes">
@@ -69,7 +80,8 @@
                         </div>
 
                         <div class="grid__tip" ng-if="$ctrl.isAdmin()">
-                          <button class="btn btn-link" ui-sref="main.modalScroller.editPin({id:pin.id})"><i class="fa fa-pencil" aria-hidden="true" ></i></button>
+                          <button class="btn btn-link" ui-sref="main.modalScroller.editPin({id:pin.id})"><i
+                              class="fa fa-pencil" aria-hidden="true"></i></button>
                         </div>
                       </div>
                     </div>

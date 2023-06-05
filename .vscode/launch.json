@@ -34,6 +34,15 @@
                 "--seed"
             ]
         },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Update Image",
+            "program": "${workspaceFolder}/scripts/data/index.js",
+            "args": [
+                "--updateImage"
+            ]
+        },
         // {
         //     "type": "node",
         //     "request": "attach",

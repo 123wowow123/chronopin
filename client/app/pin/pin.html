@@ -21,7 +21,7 @@
               ng-href="{{$ctrl.pin.sourceUrl}}" target="_blank"
               ng-attr-aria-label="Read more about {{$ctrl.pin.title}} from the source page">
               <img ng-src="{{$ctrl.appConfig.thumbUrlPrefix + $ctrl.pin.media[0].thumbName}}" class="pin__image"
-                data-actual-width="{{$ctrl.pin.media[0].thumbWidth}}"
+                loading="lazy" data-actual-width="{{$ctrl.pin.media[0].thumbWidth}}"
                 data-actual-height="{{$ctrl.pin.media[0].thumbHeight}}" />
             </a>
           </div>

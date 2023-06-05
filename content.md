@@ -21,7 +21,6 @@ fix indexing with hashtag for ml search
 scale up image with math
 once user scrolls then don't reset scroll on load complete
 
-
 SEO:
  test "site:"
  add button for infinit scroll seo

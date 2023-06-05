@@ -60,6 +60,9 @@
       this.scrollYTo = this.ScrollUtil.scrollYTo.bind(null, scrollEl);
       this.adjustScrollAfterPinInsert = this.ScrollUtil.adjustScrollAfterPinInsert.bind(null, scrollEl);
       this.adjustScrollRelativeToCurrentView = this.ScrollUtil.adjustScrollRelativeToCurrentView.bind(null, scrollEl);
+
+      this.userScroll = false;
+
     }
 
     $onInit() {
@@ -108,8 +111,24 @@
       }
     }
 
+    initScrollChecker() {
+      const mouseEvent = (e) => {
+        this.userScroll = true;
+      }
+      this.registeredListeners['mousedown'] = this.ScrollUtil.addEventListener('mousedown', mouseEvent);
+      this.registeredListeners['wheel'] = this.ScrollUtil.addEventListener('wheel', mouseEvent);
+    }
+
     $onDestroy() {
       this._unRegisterInfinitScroll();
+      if (this.registeredListeners['mousedown']) {
+        this.registeredListeners['mousedown']();
+        delete this.registeredListeners['mousedown'];
+      }
+      if (this.registeredListeners['wheel']) {
+        this.registeredListeners['wheel']();
+        delete this.registeredListeners['wheel'];
+      }
     }
 
     // View functions
@@ -148,11 +167,14 @@
         window.addEventListener('load', () => {
           this.$timeout(() => {
             const elId = this.pinApp.getTodayScrollId();
-            this._scrollAdjust(elId)
-              // .then(() => {
-              //   console.log("document.documentElement.scrollTop)", document.documentElement.scrollTop);
-              //   console.log("document.documentElement.scrollHeight", document.documentElement.scrollHeight);
-              // });
+            if (!this.userScroll) {
+              this._scrollAdjust(elId);
+            }
+
+            // .then(() => {
+            //   console.log("document.documentElement.scrollTop)", document.documentElement.scrollTop);
+            //   console.log("document.documentElement.scrollHeight", document.documentElement.scrollHeight);
+            // });
           })
         });
 
@@ -160,6 +182,7 @@
           const elId = this.pinApp.getTodayScrollId();
           this._scrollAdjust(elId).then(() => {
             this._registerInfinitScroll();
+            this.initScrollChecker();
           });
         });
       }

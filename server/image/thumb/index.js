@@ -1,4 +1,3 @@
-// http://sharp.dimens.io/en/stable/
 // import sharp from 'sharp';
 import Jimp from 'jimp';
 

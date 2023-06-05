@@ -17,6 +17,8 @@ const THUMB_OPTIONS = {
   uploadImageWidth: config.uploadImageWidth
 };
 
+const cacheControl = 'public, max-age=8640000, immutable';
+
 export function createThumbFromLocalPath(localPath) {
 
   return thumb
@@ -73,7 +75,8 @@ export function saveThumb(thumbObj) {
     sf = streamifier.createReadStream(thumbObj.buffer);
   return azureBlob.createBlock(thumbObj.thumbName, sf, pageBlobSize, {
     contentSettings: {
-      contentType: thumbObj.mimeType //'image/png'
+      contentType: thumbObj.mimeType, //'image/png',
+      cacheControl: cacheControl
     }
   })
     .then(() => {
@@ -81,6 +84,16 @@ export function saveThumb(thumbObj) {
     })
     .catch(err => {
       log.error('save-thumb error:', err);
+      throw new Error(err);
+    });
+}
+
+export function updateThumbProperties(properties) {
+  return azureBlob.iterateOverAllBlobsInThumbContainer({
+    cacheControl: cacheControl
+  })
+    .catch(err => {
+      log.error('update thumb properties error:', err);
       throw new Error(err);
     });
 }

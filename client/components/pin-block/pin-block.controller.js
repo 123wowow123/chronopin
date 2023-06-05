@@ -89,8 +89,41 @@
             return this.activateFullPin && this.fullPin ? { 'max-height': this.ScrollUtil.scrollHeightLessOne(contentEl) + 'px' } : {};
         }
 
+        getMediaSource(pin) {
+            const firstMedia = _.get(pin, 'media[0]');
+            return firstMedia.thumbName ? (this.config.thumbUrlPrefix + firstMedia.thumbName) : firstMedia.originalUrl;
+        }
+
+        pinComputedImageWidth(pin) {
+            return this.width + 'px';
+        }
+
+        pinComputedImageHeight(pin) {
+            const imageOriginalWidth = this._pinImageWidth(pin);
+            const imageOriginalHeight = this._pinImageHeight(pin);
+            const height = this.width / (imageOriginalWidth / imageOriginalHeight);
+            return height + 'px';
+        }
+
+        _pinImageWidth(pin) {
+            const thumbWidth = _.get(pin, 'media[0].thumbWidth');
+            // if (!thumbWidth) {
+            //     console.log('thumbWidth', pin.id);
+            // }
+            return thumbWidth;
+        }
+
+        _pinImageHeight(pin) {
+            const thumbHeight = _.get(pin, 'media[0].thumbHeight');
+            // if (!thumbHeight) {
+            //     console.log('thumbHeight', pin.id);
+            // }
+            return thumbHeight;
+        }
+
         $postLink() {
             this.contentEl = this.$element[0].querySelector('.grid__content');
+            this.width = this.contentEl.offsetWidth;
         };
 
     }
@@ -117,24 +150,28 @@
             <div class="grid__content" ng-style="$ctrl.scrollHeightLessOne($ctrl.contentEl)">
                 <div class="grid__headline">
                     <div class="headline-left">
-                        <a class="posted-time" ui-sref="pin({id:$ctrl.pin.id})" ng-attr-aria-label="Read more about {{$ctrl.pin.title}}">
+                        <a class="posted-time" ui-sref="pin({id:$ctrl.pin.id})"
+                            ng-attr-aria-label="Read more about {{$ctrl.pin.title}}">
                             <time datetime="{{$ctrl.pin.utcCreatedDateTime}}">{{$ctrl.pin.utcCreatedDateTime | date :
                                 "MM/dd/yyyy
                                 'at' h:mm a" | lowercase}}
                             </time>
                         </a>
                         <span class="rubric__divider">/</span>
-                        <a ng-href="/search?q={{$ctrl.pin.user.userName}}" class="rubric" ng-attr-aria-label="Read more pins posted from or containing user {{$ctrl.pin.user.userName}}">
+                        <a ng-href="/search?q={{$ctrl.pin.user.userName}}" class="rubric"
+                            ng-attr-aria-label="Read more pins posted from or containing user {{$ctrl.pin.user.userName}}">
                             <span>{{$ctrl.pin.user.userName}}</span>
                         </a>
                     </div>
         
                     <div class="icon_set">
-                        <a ui-sref="pin({id:$ctrl.pin.id})" ng-if="!!$ctrl.pin.parentId || !!$ctrl.pin.rootThread" ng-attr-aria-label="Read more about {{$ctrl.pin.title}}">
+                        <a ui-sref="pin({id:$ctrl.pin.id})" ng-if="!!$ctrl.pin.parentId || !!$ctrl.pin.rootThread"
+                            ng-attr-aria-label="Read more about {{$ctrl.pin.title}}">
                             <span class="thread-icon" ng-if="!!$ctrl.pin.parentId" title="Part of thread"></span>
                             <span class="thread-icon" ng-if="!!$ctrl.pin.rootThread" title="Firt Pin in a thread"></span>
                         </a>
-                        <a ui-sref="pin({id:$ctrl.pin.id})" ng-if="$ctrl.Util.hasAddress($ctrl.pin)" ng-attr-aria-label="See the following locations of this pin on a map: {{$ctrl.Util.getListOfAddress($ctrl.pin)}}">
+                        <a ui-sref="pin({id:$ctrl.pin.id})" ng-if="$ctrl.Util.hasAddress($ctrl.pin)"
+                            ng-attr-aria-label="See the following locations of this pin on a map: {{$ctrl.Util.getListOfAddress($ctrl.pin)}}">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -151,14 +188,10 @@
         
                     <div ng-switch-when="1">
                         <a class="grid__asset grid__asset--link"
-                            ng-if="$ctrl.pin.media[0].thumbName || $ctrl.pin.media[0].originalUrl"
-                            ui-sref="pin({id:$ctrl.pin.id})"
-                            ng-attr-aria-label="Read more about {{$ctrl.pin.title}}">
-                            <img ng-src="{{$ctrl.pin.media[0].thumbName ? ($ctrl.config.thumbUrlPrefix + $ctrl.pin.media[0].thumbName) : $ctrl.pin.media[0].originalUrl}}"
-                                class="grid__image" data-actual-height="{{$ctrl.pin.media[0].thumbHeight}}"
-                                data-actual-width="{{$ctrl.pin.media[0].thumbWidth}}"
-                                height="{{$ctrl.pin.media[0].thumbHeight + 'px'}}"
-                                width="{{$ctrl.pin.media[0].thumbWidth + 'px'}}" />
+                            ng-if="$ctrl.getMediaSource($ctrl.pin)"
+                            ui-sref="pin({id:$ctrl.pin.id})" ng-attr-aria-label="Read more about {{$ctrl.pin.title}}">
+                            <img ng-src="{{$ctrl.getMediaSource($ctrl.pin)}}" class="grid__image" loading="lazy"
+                                height="{{$ctrl.pinComputedImageHeight($ctrl.pin)}}" width="{{$ctrl.pinComputedImageWidth($ctrl.pin)}}" />
                         </a>
                     </div>
         

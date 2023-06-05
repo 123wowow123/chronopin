@@ -8,10 +8,12 @@ const args = require('args');
 const extend = require('extend');
 const seed = require('./seed');
 const save = require('./save');
+const image = require('./image');
 
 args
   .option('save', 'Save database into JSON', false)
   .option('seed', 'Seed database from JSON', false)
+  .option('updateImage', 'Update Images', false)
   .option('pinfile', 'Pin file path to be used for opporation', './scripts/backup/seedPins.json')
   .option('userfile', 'Pin file path to be used for opporation', './scripts/backup/seedUsers.json')
   .option('aphelionfile', 'Aphelion file path to be used for opporation', './scripts/backup/aphelion.json')
@@ -38,6 +40,10 @@ const seedOpt = {
   solsticefile: flags.solsticefile
 };
 
+const imageOpt = {
+  cp: cp
+};
+
 execute(flags)
   .then(arg => {
     //process.exit();
@@ -58,5 +64,9 @@ function execute(opt) {
     return seed
       .setup(seedOpt)
       .seedDB();
+  } else if (opt.updateImage) {
+    return image
+      .setup(imageOpt)
+      .execute();
   }
 }

@@ -16,6 +16,10 @@
 
         const ScrollUtil = {
 
+            getDocument() {
+                return document;
+            },
+
             getScrollEl() {
                 return document.documentElement;
             },
@@ -114,6 +118,14 @@
 
             scrollHeightLessOne({ scrollHeight }) {
                 return scrollHeight - 1;
+            },
+
+            addEventListener(type, handler, capture) {
+                let scope = this.getDocument();
+                scope.addEventListener(type, handler, capture);
+                return () => {
+                    scope.removeEventListener(type, handler, capture);
+                }
             }
 
         };

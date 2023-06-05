@@ -12,7 +12,7 @@ angular.module('chronopinNodeApp')
           const bottom = el.scrollHeight - el.scrollTop - window.innerHeight;
 
           const top = $('html').scrollTop() || $('body').scrollTop(); // e.scrollTop;
-
+          // $log.log('top, bottom', top, bottom);
           if (bottom <= offset) {
             $rootScope.$broadcast('scrolled:bottom', {
               top,

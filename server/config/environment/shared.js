@@ -13,6 +13,7 @@ exports = module.exports = {
     { name: 'Watched', value: 'watch' }
     //'People'
   ],
+  uploadThumbWidth: 450,
   uploadImageWidth: 1000,
   thumbUrlPrefix: 'https://chronopin.blob.core.windows.net/thumb/',
   fbAppId: '560731380662615',
