@@ -102,8 +102,9 @@
         }
 
         getMediaSource(pin) {
+            const largePostfix = this.config.uploadImage.large.postFix;
             const firstMedia = _.get(pin, 'media[0]');
-            return firstMedia.thumbName ? (this.config.thumbUrlPrefix + firstMedia.thumbName.replace('-lg.', '.')) : firstMedia.originalUrl;
+            return firstMedia.thumbName ? (this.config.thumbUrlPrefix + firstMedia.thumbName.replace(`${largePostfix}.`, '.')) : firstMedia.originalUrl;
         }
 
         pinComputedImageWidth() {
