@@ -106,7 +106,7 @@
             return firstMedia.thumbName ? (this.config.thumbUrlPrefix + firstMedia.thumbName.replace('-lg.', '.')) : firstMedia.originalUrl;
         }
 
-        pinComputedImageWidth(pin) {
+        pinComputedImageWidth() {
             return this.width + 'px';
         }
 
