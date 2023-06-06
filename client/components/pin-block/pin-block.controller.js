@@ -13,6 +13,9 @@
             this.searchService = searchService;
             this.$element = $element;
             this.disableLink = $attrs.hasOwnProperty('disabled');
+
+            this.description;
+            this.replacedDescription;
         }
 
         $onInit() {
@@ -89,9 +92,18 @@
             return this.activateFullPin && this.fullPin ? { 'max-height': this.ScrollUtil.scrollHeightLessOne(contentEl) + 'px' } : {};
         }
 
+        getDescriptionHtml(pin) {
+            if (this.description !== _.get(pin, 'description')) {
+                const largePostfix = this.config.uploadImage.large.postFix;
+                this.description = _.get(pin, 'description', '');
+                this.replacedDescription = this.description.replaceAll(`${largePostfix}.`, '.');
+            }
+            return this.replacedDescription;
+        }
+
         getMediaSource(pin) {
             const firstMedia = _.get(pin, 'media[0]');
-            return firstMedia.thumbName ? (this.config.thumbUrlPrefix + firstMedia.thumbName) : firstMedia.originalUrl;
+            return firstMedia.thumbName ? (this.config.thumbUrlPrefix + firstMedia.thumbName.replace('-lg.', '.')) : firstMedia.originalUrl;
         }
 
         pinComputedImageWidth(pin) {
@@ -187,11 +199,11 @@
                 <div class="grid__media" ng-switch="$ctrl.pin.media[0].type">
         
                     <div ng-switch-when="1">
-                        <a class="grid__asset grid__asset--link"
-                            ng-if="$ctrl.getMediaSource($ctrl.pin)"
+                        <a class="grid__asset grid__asset--link" ng-if="$ctrl.getMediaSource($ctrl.pin)"
                             ui-sref="pin({id:$ctrl.pin.id})" ng-attr-aria-label="Read more about {{$ctrl.pin.title}}">
                             <img ng-src="{{$ctrl.getMediaSource($ctrl.pin)}}" class="grid__image" loading="lazy"
-                                height="{{$ctrl.pinComputedImageHeight($ctrl.pin)}}" width="{{$ctrl.pinComputedImageWidth($ctrl.pin)}}" />
+                                height="{{$ctrl.pinComputedImageHeight($ctrl.pin)}}"
+                                width="{{$ctrl.pinComputedImageWidth($ctrl.pin)}}" />
                         </a>
                     </div>
         
@@ -214,7 +226,7 @@
                                 h:mma"}}</span>
                         </em>
                     </div> -->
-                    <div class="grid__description" ng-bind-html="$ctrl.pin.description"></div>
+                    <div class="grid__description" ng-bind-html="$ctrl.getDescriptionHtml($ctrl.pin) "></div>
                 </div>
         
                 <a class="grid__show_more" ui-sref="pin({id:$ctrl.pin.id})"

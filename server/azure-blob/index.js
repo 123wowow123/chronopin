@@ -19,6 +19,7 @@ export function iterateOverAllBlobsInThumbContainer(properties) {
   let promise = new Promise((outerResolve, outerReject) => {
     let blobs = [];
     function listBlobs(continuationToken, callback) {
+      // Also includes upgrade to latest code samples: https://github.com/search?q=repo%3AAzure%2Fazure-sdk-for-js%20setproperties&type=code
       blobSvc.listBlobsSegmented(containerName, continuationToken, function (error, result) {
         blobs.push.apply(blobs, result.entries);
         const continuationToken = result.continuationToken;
@@ -36,6 +37,7 @@ export function iterateOverAllBlobsInThumbContainer(properties) {
       console.log(blobs);
       let promises = blobs.map((b) => {
         return new Promise((resolve, reject) => {
+          // https://stackoverflow.com/questions/41680131/add-cache-control-and-expires-headers-to-azure-blob-storage-node-js
           blobSvc.setBlobProperties(containerName, b.name, properties, (error, result, response) => {
             console.log(JSON.stringify(result));
             if (error) {

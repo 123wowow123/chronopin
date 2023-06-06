@@ -1,59 +1,60 @@
-// import sharp from 'sharp';
-import Jimp from 'jimp';
+import sharp from 'sharp';
 
-export function shrinkImage(bufferOrLocalPath, options) {
-  return Jimp.read(bufferOrLocalPath)
+function shrinkImageSharp(bufferOrLocalPath, options) {
+  return sharp(bufferOrLocalPath)
+    .metadata()
     .then(image => {
       // do stuff with the image (if no exception)
-      let originalWidth = image.bitmap.width;
-      let originalHeight = image.bitmap.height;
+      let originalWidth = image.width;
+      let originalHeight = image.height;
 
       return new Promise((resolve, reject) => {
-        let output;
-        if (originalWidth <= options.uploadImageWidth) { // rename to max width?
-          image
-            .getBuffer(Jimp.AUTO, (err, buffer) => {
+        if (originalWidth <= options.uploadWidth) { // rename to max width?
+          sharp(bufferOrLocalPath, { animated: true })
+            .webp({ effort: 6 })
+            .toBuffer((err, buffer, info) => {
               if (err) {
                 reject(err);
               }
-              output = {
+              let output = {
                 buffer: buffer,
-                width: image.bitmap.width,
-                height: image.bitmap.height,
+                width: info.width,
+                height: info.height,
                 originalWidth: originalWidth,
                 originalHeight: originalHeight,
-                type: image.getMIME()
+                type: info.format,
+                passThrough: true
               };
+              return resolve(output);
             });
-          resolve(output);
         } else {
-          image
-            .resize(options.uploadImageWidth, Jimp.AUTO)
-            .getBuffer(Jimp.AUTO, (err, buffer) => {
+          sharp(bufferOrLocalPath, { animated: true })
+            .resize({ width: options.uploadWidth })
+            .webp({ effort: 6 })
+            .toBuffer((err, buffer, info) => {
               if (err) {
                 reject(err);
               }
-              output = {
+              let output = {
                 buffer: buffer,
-                width: image.bitmap.width,
-                height: image.bitmap.height,
+                width: info.width,
+                height: info.height,
                 originalWidth: originalWidth,
                 originalHeight: originalHeight,
-                type: image.getMIME()
+                type: info.format
               };
+              return resolve(output);
             });
-          resolve(output);
         }
       });
     });
 }
 
-
 export function shrinkFromBuffer(buffer, options) {
-  return shrinkImage(buffer, options);
+  return shrinkImageSharp(buffer, options);
 }
 
 
 export function shrinkFromPath(localPath, options) {
-  return shrinkImage(localPath, options);
+  return shrinkImageSharp(localPath, options);
 }

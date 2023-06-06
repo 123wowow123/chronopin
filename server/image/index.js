@@ -13,16 +13,14 @@ import * as log from '../util/log';
 //pipe to save azure blob
 //pipe to save in Medium
 
-const THUMB_OPTIONS = {
-  uploadImageWidth: config.uploadImageWidth
-};
+
 
 const cacheControl = 'public, max-age=8640000, immutable';
 
-export function createThumbFromLocalPath(localPath) {
+export function createThumbFromLocalPath(localPath, options) {
 
   return thumb
-    .shrinkFromPath(localPath, THUMB_OPTIONS)
+    .shrinkFromPath(localPath, options)
     .then(newThumb => {
       return {
         buffer: newThumb.buffer,
@@ -31,7 +29,7 @@ export function createThumbFromLocalPath(localPath) {
         originalUrl: undefined,
         originalWidth: newThumb.originalWidth,
         originalHeight: newThumb.originalHeight,
-        type: newThumb.type,
+        mimeType: newThumb.type,
         extention: _getExtentionFromMimeType(newThumb.type)
       };
     })
@@ -41,12 +39,12 @@ export function createThumbFromLocalPath(localPath) {
     });
 }
 
-export function createThumbFromUrl(imageUrl) {
+export function createThumbFromUrl(imageUrl, options) {
 
   return downloadImage(imageUrl)
     .then(buffer => {
       return thumb
-        .shrinkFromBuffer(buffer, THUMB_OPTIONS)
+        .shrinkFromBuffer(buffer, options)
         .then(newThumb => {
           return {
             buffer: newThumb.buffer,
@@ -55,7 +53,7 @@ export function createThumbFromUrl(imageUrl) {
             originalUrl: imageUrl,
             originalWidth: newThumb.originalWidth,
             originalHeight: newThumb.originalHeight,
-            type: newThumb.type,
+            mimeType: newThumb.type,
             extention: _getExtentionFromMimeType(newThumb.type)
           };
         })
@@ -75,7 +73,7 @@ export function saveThumb(thumbObj) {
     sf = streamifier.createReadStream(thumbObj.buffer);
   return azureBlob.createBlock(thumbObj.thumbName, sf, pageBlobSize, {
     contentSettings: {
-      contentType: thumbObj.mimeType, //'image/png',
+      contentType: thumbObj.mimeType, //'png',
       cacheControl: cacheControl
     }
   })
@@ -88,7 +86,8 @@ export function saveThumb(thumbObj) {
     });
 }
 
-export function updateThumbProperties(properties) {
+// Used in script only
+export function updateThumbProperties() {
   return azureBlob.iterateOverAllBlobsInThumbContainer({
     cacheControl: cacheControl
   })
@@ -104,7 +103,7 @@ function _getExtention(fname) {
 }
 
 function _getExtentionFromMimeType(type) {
-  return '.' + type.split('/')[1] // '.jpg'
+  return '.' + type // '.jpg'
 }
 
 export {

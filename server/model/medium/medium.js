@@ -29,6 +29,16 @@ const prop = [
   'html'
 ];
 
+const IMAGE_THUMB_OPTIONS = {
+  uploadWidth: config.uploadImage.small.width,
+  postFix: config.uploadImage.small.postFix
+};
+
+const IMAGE_LARGE_OPTIONS = {
+  uploadWidth: config.uploadImage.large.width,
+  postFix: config.uploadImage.large.postFix
+};
+
 export default class Medium {
   constructor(medium, pin) {
 
@@ -133,8 +143,7 @@ export default class Medium {
   static createAndSaveToCDN(originalUrl) {
     return new Medium({
       originalUrl: originalUrl
-    })
-      .createAndSaveToCDN();
+    }).createAndSaveToCDN();
   }
 
   static createAndSaveToCDNFromLocalPath(localPath) {
@@ -275,31 +284,52 @@ function _createPinMediumMSSQL(medium, pinId) {
     });
 }
 
-function _mapAndSaveThumb(thumbBufferAndMeta) {
-  let thumbNameGuid = uuidv4();
-  let newMedium = {
-    buffer: thumbBufferAndMeta.buffer,
-    thumbName: thumbNameGuid + thumbBufferAndMeta.extention,
-    thumbWidth: thumbBufferAndMeta.thumbWidth,
-    thumbHeight: thumbBufferAndMeta.thumbHeight,
+function _mapAndSaveThumb(options) {
+  return (thumbBufferAndMeta) => {
+    let thumbNameGuid = _.get(options, 'thumbNameGuid', uuidv4());
+    let newMedium = {
+      buffer: thumbBufferAndMeta.buffer,
+      thumbName: thumbNameGuid + _.get(options, 'postFix', '') + thumbBufferAndMeta.extention,
+      thumbWidth: thumbBufferAndMeta.thumbWidth,
+      thumbHeight: thumbBufferAndMeta.thumbHeight,
 
-    originalUrl: thumbBufferAndMeta.originalUrl,
-    originalWidth: thumbBufferAndMeta.originalWidth,
-    originalHeight: thumbBufferAndMeta.originalHeight,
-    mimeType: thumbBufferAndMeta.type,
-    type: 1 // 1 for 'Image'
-  };
-  return image.saveThumb(newMedium);
+      originalUrl: thumbBufferAndMeta.originalUrl,
+      originalWidth: thumbBufferAndMeta.originalWidth,
+      originalHeight: thumbBufferAndMeta.originalHeight,
+      mimeType: thumbBufferAndMeta.mimeType,
+      type: 1 // 1 for 'Image'
+    };
+    return image.saveThumb(newMedium)
+      .then((thumbObj) => {
+        return thumbObj;
+      })
+  }
 }
 
 function _getImageStatAndSaveImageFromLocalPath(localPath) {
-  return image.createThumbFromLocalPath(localPath)
-    .then(_mapAndSaveThumb);
+  let thumbNameGuid = uuidv4();
+  return image.createThumbFromLocalPath(localPath, IMAGE_THUMB_OPTIONS)
+    .then(_mapAndSaveThumb(Object.assign({}, IMAGE_THUMB_OPTIONS, { thumbNameGuid })))
+    .then(() => {
+      return image.createThumbFromLocalPath(localPath, IMAGE_LARGE_OPTIONS)
+        .then(_mapAndSaveThumb(Object.assign({}, IMAGE_LARGE_OPTIONS, { thumbNameGuid })))
+        .then((thumbObj) => {
+          return thumbObj;
+        })
+    });
 }
 
 function _getImageStatAndSaveImage(imageUrl) {
-  return image.createThumbFromUrl(imageUrl)
-    .then(_mapAndSaveThumb);
+  let thumbNameGuid = uuidv4();
+  return image.createThumbFromUrl(imageUrl, IMAGE_THUMB_OPTIONS)
+    .then(_mapAndSaveThumb(Object.assign({}, IMAGE_THUMB_OPTIONS, { thumbNameGuid })))
+    .then(() => {
+      return image.createThumbFromUrl(imageUrl, IMAGE_LARGE_OPTIONS)
+        .then(_mapAndSaveThumb(Object.assign({}, IMAGE_LARGE_OPTIONS, { thumbNameGuid })))
+        .then((thumbObj) => {
+          return thumbObj;
+        })
+    });
 }
 
 function _deleteFromPinMSSQL(medium, pinId) {
