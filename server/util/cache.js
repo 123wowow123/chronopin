@@ -16,8 +16,8 @@ export function getWithExpiry(key) {
     return item.value;
 }
 
-// TTL value in milliseconds default 1h
-export function setWithExpiry(key, value, ttl = 3600000) {
+// TTL value in milliseconds default 4h
+export function setWithExpiry(key, value, ttl = 3600000 * 4) {
     const now = new Date()
 
     // `item` is an object which contains the original value
