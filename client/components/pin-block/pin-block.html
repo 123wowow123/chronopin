@@ -51,7 +51,7 @@
             <twitter-pin ng-switch-when="2" html="{{$ctrl.pin.media[0].html}}">
             </twitter-pin>
 
-            <div class='embed-container' ng-switch-when="3" ng-bind-html="$ctrl.pin.media[0].html">
+            <div class='embed-container' ng-switch-when="3" ng-bind-html="$ctrl.getYouTubeHtml($ctrl.pin)">
             </div>
 
         </div>

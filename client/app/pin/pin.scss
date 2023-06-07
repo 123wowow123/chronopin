@@ -71,6 +71,11 @@
     }
   }
 
+  &__image {
+    max-width: 100%;
+    height: auto;
+}
+
   &_suggestions {
     max-width: 100%;
     @include grid-verticle-break;

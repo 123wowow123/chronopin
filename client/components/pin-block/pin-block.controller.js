@@ -16,6 +16,9 @@
 
             this.description;
             this.replacedDescription;
+
+            this.youTubeHtml;
+            this.replacedYoutubeHtml;
         }
 
         $onInit() {
@@ -93,12 +96,22 @@
         }
 
         getDescriptionHtml(pin) {
-            if (this.description !== _.get(pin, 'description')) {
+            const description = _.get(pin, 'description');
+            if (this.description !== description) {
                 const largePostfix = this.config.uploadImage.large.postFix;
-                this.description = _.get(pin, 'description', '');
+                this.description = description;
                 this.replacedDescription = this.description.replaceAll(`${largePostfix}.`, '.');
             }
             return this.replacedDescription;
+        }
+
+        getYouTubeHtml(pin) {
+            const html = _.get(pin, 'media[0].html');
+            if (this.youTubeHtml !== html) {
+                this.youTubeHtml = html;
+                this.replacedYoutubeHtml = html.replace('<iframe', '<iframe loading="lazy"');
+            }
+            return this.replacedYoutubeHtml;
         }
 
         getMediaSource(pin) {
@@ -120,17 +133,11 @@
 
         _pinImageWidth(pin) {
             const thumbWidth = _.get(pin, 'media[0].thumbWidth');
-            // if (!thumbWidth) {
-            //     console.log('thumbWidth', pin.id);
-            // }
             return thumbWidth;
         }
 
         _pinImageHeight(pin) {
             const thumbHeight = _.get(pin, 'media[0].thumbHeight');
-            // if (!thumbHeight) {
-            //     console.log('thumbHeight', pin.id);
-            // }
             return thumbHeight;
         }
 
