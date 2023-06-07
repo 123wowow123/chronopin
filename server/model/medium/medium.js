@@ -93,8 +93,8 @@ export default class Medium {
       });
   }
 
-  createAndSaveToCDN() {
-    return _getImageStatAndSaveImage(this.originalUrl)
+  createAndSaveToCDN(thumbName) {
+    return _getImageStatAndSaveImage(this.originalUrl, thumbName)
       .then(newMedium => {
         // console.log('createAndSaveToCDN', newMedium);
         return this
@@ -123,7 +123,7 @@ export default class Medium {
   getUrl() {
     switch (+this.type) {
       case config.mediumID.image:
-        return this.thumbName ? config.thumbUrlPrefix + this.thumbName : undefined;
+        return this.getImageUrl();
       case config.mediumID.youtube:
         const parsedUrl = URL.parse(this.originalUrl);
         if (!parsedUrl.protocol) {
@@ -136,14 +136,18 @@ export default class Medium {
     }
   }
 
+  getImageUrl() {
+    return this.thumbName ? config.thumbUrlPrefix + this.thumbName : undefined;
+  }
+
   static getByOriginalUrl(originalUrl) {
     return _getMediumByOriginalUrlMSSQL(originalUrl);
   }
 
-  static createAndSaveToCDN(originalUrl) {
+  static createAndSaveToCDN(originalUrl, thumbName) {
     return new Medium({
       originalUrl: originalUrl
-    }).createAndSaveToCDN();
+    }).createAndSaveToCDN(thumbName);
   }
 
   static createAndSaveToCDNFromLocalPath(localPath) {
@@ -302,12 +306,12 @@ function _mapAndSaveThumb(options) {
     return image.saveThumb(newMedium)
       .then((thumbObj) => {
         return thumbObj;
-      })
+      });
   }
 }
 
-function _getImageStatAndSaveImageFromLocalPath(localPath) {
-  let thumbNameGuid = uuidv4();
+function _getImageStatAndSaveImageFromLocalPath(localPath, thumbName) {
+  const thumbNameGuid = thumbName ? thumbName : uuidv4();
   return image.createThumbFromLocalPath(localPath, IMAGE_THUMB_OPTIONS)
     .then(_mapAndSaveThumb(Object.assign({}, IMAGE_THUMB_OPTIONS, { thumbNameGuid })))
     .then(() => {
@@ -319,8 +323,8 @@ function _getImageStatAndSaveImageFromLocalPath(localPath) {
     });
 }
 
-function _getImageStatAndSaveImage(imageUrl) {
-  let thumbNameGuid = uuidv4();
+function _getImageStatAndSaveImage(imageUrl, thumbName) {
+  const thumbNameGuid = thumbName ? thumbName : uuidv4();
   return image.createThumbFromUrl(imageUrl, IMAGE_THUMB_OPTIONS)
     .then(_mapAndSaveThumb(Object.assign({}, IMAGE_THUMB_OPTIONS, { thumbNameGuid })))
     .then(() => {

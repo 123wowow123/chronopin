@@ -43,11 +43,11 @@ const pickUserProps = [
 ];
 
 // Setup
-module.exports.setup = function (saveOpt) {
-  cp = saveOpt.cp;
+module.exports.setup = function (opt) {
+  cp = opt.cp;
   Request = cp.Request;
-  pinFilePath = saveOpt.pinfile;
-  userFilePath = saveOpt.userfile;
+  pinFilePath = opt.pinfile;
+  userFilePath = opt.userfile;
   return this;
 };
 

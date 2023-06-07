@@ -41,7 +41,8 @@ const seedOpt = {
 };
 
 const imageOpt = {
-  cp: cp
+  cp: cp,
+  pinfile: flags.pinfile
 };
 
 execute(flags)

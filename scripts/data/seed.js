@@ -38,15 +38,15 @@ let cp,
 
 
 // Setup
-module.exports.setup = function (seedOpt) {
-  cp = seedOpt.cp;
+module.exports.setup = function (opt) {
+  cp = opt.cp;
   Request = cp.Request;
-  userFilePath = seedOpt.userfile;
-  pinFilePath = seedOpt.pinfile;
-  aphelionFilePath = seedOpt.aphelionfile;
-  solsticeFilePath = seedOpt.solsticefile;
-  equinoxFilePath = seedOpt.equinoxfile;
-  perihelionFilePath = seedOpt.perihelionfile;
+  userFilePath = opt.userfile;
+  pinFilePath = opt.pinfile;
+  aphelionFilePath = opt.aphelionfile;
+  solsticeFilePath = opt.solsticefile;
+  equinoxFilePath = opt.equinoxfile;
+  perihelionFilePath = opt.perihelionfile;
 
   return this;
 }

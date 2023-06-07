@@ -23,7 +23,7 @@ exports = module.exports = {
       postFix: '-chrono-lg'
     }
   },
-  thumbUrlPrefix: 'https://chronopin.blob.core.windows.net/thumb/',
+  thumbUrlPrefix: 'https://chronopin.blob.core.windows.net/thumb2/',
   fbAppId: '560731380662615',
   gaAppId: 'UA-103783559-1',
   scrapeType: {

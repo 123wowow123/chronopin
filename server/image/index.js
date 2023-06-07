@@ -18,7 +18,6 @@ import * as log from '../util/log';
 const cacheControl = 'public, max-age=8640000, immutable';
 
 export function createThumbFromLocalPath(localPath, options) {
-
   return thumb
     .shrinkFromPath(localPath, options)
     .then(newThumb => {
@@ -40,7 +39,6 @@ export function createThumbFromLocalPath(localPath, options) {
 }
 
 export function createThumbFromUrl(imageUrl, options) {
-
   return downloadImage(imageUrl)
     .then(buffer => {
       return thumb
