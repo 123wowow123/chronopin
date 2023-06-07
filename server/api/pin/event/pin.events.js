@@ -14,6 +14,8 @@ import {
   PinLikeEmitter
 } from './../pin.controller';
 
+import * as cache from '../../../util/cache';
+
 const PinEvents = new EventEmitter();
 
 // Set max event listeners (0 == unlimited)
@@ -41,12 +43,15 @@ for (const [k, v] of Object.entries(events)) {
 }
 
 function emitEvent(event) {
-  return function(doc, options, done) {
+  return function (doc, options, done) {
     //crashes node with 2 consecutive emits: github.com/nodejs/node/issues/4261
     //PinEvents.emit(event + ':' + doc.id, doc);
+    cache.clearKey(cache.key.mainPinData);
     PinEvents.emit(event, doc, options);
     //done(null);
   }
 }
+
+
 
 export default PinEvents;

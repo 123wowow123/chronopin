@@ -5,6 +5,7 @@
 'use strict';
 
 import errors from './components/errors';
+import * as cache from './util/cache';
 import path from 'path';
 import * as paginationHeader from './util/paginationHeader'
 import * as _ from 'lodash';
@@ -74,8 +75,17 @@ export default function (app) {
       if (!mainPinDataContent) {
         mainPinDataContent = fs.readFileSync(app.get('views') + '/mainPinData.ejs', 'utf8');
       }
-      const mainPinDataPromise = mainController.getPinsAndFormatData(req, res)
-        .then(paginationHeader.setPaginationObject(res, req))
+      const useCache = !req.user;
+      const key = cache.key.mainPinData;
+      let responsePromise = cache.getWithExpiry(key);
+      if (!useCache) {
+        responsePromise = mainController.getPinsAndFormatData(req, res);
+      }
+      else if (useCache && !responsePromise) {
+        responsePromise = cache.setWithExpiry(key, mainController.getPinsAndFormatData(req, res));
+      }
+
+      responsePromise.then(paginationHeader.setPaginationObject(res, req))
         .then((mainPinData) => {
           // Render Templated root page
           res.setHeader('Content-Type', 'text/javascript');

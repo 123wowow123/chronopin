@@ -7,7 +7,7 @@ const auth = require('../../auth/auth.service');
 const router = express.Router();
 
 router.get('/', auth.tryGetUser(), controller.index);
-router.post('/', auth.isAuthenticated(), controller.create);
+router.post('/', auth.isAuthenticated(), controller.create); // afterCreate
 
 // Get Thread
 router.get('/thread/:id', auth.tryGetUser(), controller.getThreadPins);
@@ -21,17 +21,17 @@ router.get('/autocomplete', auth.tryGetUser(), controller.autocompletePins);
 
 router.get('/:id', auth.tryGetUser(), controller.show); ///:id(\\d+)/
 
-router.put('/:id', auth.isAuthenticated(), controller.update);
-router.patch('/:id', auth.isAuthenticated(), controller.update);
-router.delete('/:id', auth.isAuthenticated(), controller.destroy);
+router.put('/:id', auth.isAuthenticated(), controller.update); // afterUpdate
+router.patch('/:id', auth.isAuthenticated(), controller.update); // afterUpdate
+router.delete('/:id', auth.isAuthenticated(), controller.destroy); // afterDestroy
 
 // Create Like association
-router.post('/:id/like', auth.isAuthenticated(), controller.createPinLike);
-router.delete('/:id/like', auth.isAuthenticated(), controller.removePinLike);
+router.post('/:id/like', auth.isAuthenticated(), controller.createPinLike); // afterLike
+router.delete('/:id/like', auth.isAuthenticated(), controller.removePinLike); // afterUnlike
 
 // Create Favorite association
-router.post('/:id/favorite', auth.isAuthenticated(), controller.createPinFavorite);
-router.delete('/:id/favorite', auth.isAuthenticated(), controller.removePinFavorite);
+router.post('/:id/favorite', auth.isAuthenticated(), controller.createPinFavorite); // afterFavorite
+router.delete('/:id/favorite', auth.isAuthenticated(), controller.removePinFavorite); // afterUnfavorite
 
 
 module.exports = router;
