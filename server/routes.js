@@ -124,7 +124,7 @@ export default function (app) {
           const querySelector = document.querySelector('p');
           const description = querySelector && querySelector.textContent ? querySelector.textContent.trim() : pin.description;
           const medium = _.get(pin, 'media[0]');
-          let mediaType;
+          let mediaType, mediaWidth, mediaHeight;
           let mediaContent = medium ? medium.getUrl() : undefined;
           if (!mediaContent) {
             const querySelector = document.querySelector('img');
@@ -132,6 +132,8 @@ export default function (app) {
             mediaType = 'og:image';
           } else {
             mediaType = getOgType(medium.type);
+            // mediaWidth = medium.thumbWidth;
+            // mediaHeight = medium.thumbHeight;
           }
 
           const meta = {

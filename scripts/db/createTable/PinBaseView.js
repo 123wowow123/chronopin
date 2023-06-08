@@ -8,7 +8,7 @@ module.exports.setup = function setup(connectionPool) {
   return this;
 }
 
-module.exports.createPinBaseView = () => {
+module.exports.create = () => {
   return dropCreateTable()
     .catch(function (err) {
       // ... connect error checks

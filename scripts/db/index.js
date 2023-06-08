@@ -7,104 +7,115 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const cp = require('../../server/sqlConnectionPool');
 const Request = cp.Request;
 
-// Setup
-const createTable = require('./createTable');
-const createSP = require('./createSP');
+const {
+  // Setup
+  setup: tableSetup,
 
-// Create Table
-const createUser = createTable.createUser;
-const createLocation = createTable.createLocation;
-const createClick = createTable.createClick;
-const createComment = createTable.createComment;
-const createFavorite = createTable.createFavorite;
-const createLike = createTable.createLike;
-const createMedium = createTable.createMedium;
-const createMediumType = createTable.createMediumType;
-const createPin = createTable.createPin;
-const createPinMedium = createTable.createPinMedium;
-const createDateTime = createTable.createDateTime;
-const createMerchant = createTable.createMerchant;
-const createMention = createTable.createMention;
-const createPinMention = createTable.createPinMention;
+  // Create Table
+  createUser,
+  createLocation,
+  createClick,
+  createComment,
+  createFavorite,
+  createLike,
+  createMedium,
+  createMediumType,
+  createPin,
+  createPinMedium,
+  createDateTime,
+  createMerchant,
+  createMention,
+  createPinMention,
+  createCircle,
+  createUserCircle,
+  createPinCircle,
 
-// Create View
-const createPinView = createTable.createPinView;
-const createPinBaseView = createTable.createPinBaseView;
+  // Create View
+  createPinView,
+  createPinBaseView
+} = require('./createTable');
 
-// Retruns Collection
-const createGetPinsWithFavoriteAndLikeArrayNextFullPinSP = createSP.createGetPinsWithFavoriteAndLikeArrayNextFullPinSP;
-const createGetPinsWithFavoriteAndLikeNextSP = createSP.createGetPinsWithFavoriteAndLikeNextSP;
-const createGetPinsWithFavoriteAndLikePrevSP = createSP.createGetPinsWithFavoriteAndLikePrevSP;
-const createGetPinsWithFavoriteAndLikeInitialSP = createSP.createGetPinsWithFavoriteAndLikeInitialSP;
-const createGetPinsWithFavoriteAndLikeNextFilterByHasFavoriteSP = createSP.createGetPinsWithFavoriteAndLikeNextFilterByHasFavoriteSP;
-const createGetPinsWithFavoriteAndLikePrevFilterByHasFavoriteSP = createSP.createGetPinsWithFavoriteAndLikePrevFilterByHasFavoriteSP;
-const createGetPinsWithFavoriteAndLikeInitialFilterByHasFavoriteSP = createSP.createGetPinsWithFavoriteAndLikeInitialFilterByHasFavoriteSP;
-const createGetPinByIdsSP = createSP.createGetPinByIdsSP;
-const createGetPinByIdsFilterByHasFavoriteSP = createSP.createGetPinByIdsFilterByHasFavoriteSP;
-const createGetAllUsersSP = createSP.createGetAllUsersSP;
-const createGetDateTimesByStartEndDateSP = createSP.createGetDateTimesByStartEndDateSP;
-const createGetPinsWithFavoriteAndLikeArrayNextSP = createSP.createGetPinsWithFavoriteAndLikeArrayNextSP;
-const createSearchPinSP = createSP.createSearchPinSP;
-const createGetPinAuthorThreadSP = createSP.createGetPinAuthorThreadSP;
-const createGetPinAuthorThreadWithFavoriteAndLikeSP = createSP.createGetPinAuthorThreadWithFavoriteAndLikeSP;
-const createGetPinByTagsFilterByHasFavoriteSP = createSP.createGetPinByTagsFilterByHasFavoriteSP;
-const createGetPinByTagsSP = createSP.createGetPinByTagsSP;
+const {
+  // Setup
+  setup: spSetup,
 
-// Returns Single Result
-const createGetPinWithFavoriteAndLikeSP = createSP.createGetPinWithFavoriteAndLikeSP;
-const createGetUserByIdSP = createSP.createGetUserByIdSP;
-const createGetUserByUserNameSP = createSP.createGetUserByUserNameSP;
-const createGetUserByFacebookIdSP = createSP.createGetUserByFacebookIdSP;
-const createGetUserByGoogleIdSP = createSP.createGetUserByGoogleIdSP;
-const createGetUserByEmailSP = createSP.createGetUserByEmailSP;
-const createGetMediumByOriginalUrlSP = createSP.createGetMediumByOriginalUrlSP;
-const createGetPinSP = createSP.createGetPinSP;
-const createGetLikeSP = createSP.createGetLikeSP;
-const createGetFavoriteSP = createSP.createGetFavoriteSP;
-const createGetMerchantSP = createSP.createGetMerchantSP;
-const createGetLocationSP = createSP.createGetLocationSP;
+  // Retruns Collection
+  createGetPinsWithFavoriteAndLikeArrayNextFullPinSP,
+  createGetPinsWithFavoriteAndLikeNextSP,
+  createGetPinsWithFavoriteAndLikePrevSP,
+  createGetPinsWithFavoriteAndLikeInitialSP,
+  createGetPinsWithFavoriteAndLikeNextFilterByHasFavoriteSP,
+  createGetPinsWithFavoriteAndLikePrevFilterByHasFavoriteSP,
+  createGetPinsWithFavoriteAndLikeInitialFilterByHasFavoriteSP,
+  createGetPinByIdsSP,
+  createGetPinByIdsFilterByHasFavoriteSP,
+  createGetAllUsersSP,
+  createGetDateTimesByStartEndDateSP,
+  createGetPinsWithFavoriteAndLikeArrayNextSP,
+  createSearchPinSP,
+  createGetPinAuthorThreadSP,
+  createGetPinAuthorThreadWithFavoriteAndLikeSP,
+  createGetPinByTagsFilterByHasFavoriteSP,
+  createGetPinByTagsSP,
 
-// Create Record
-const createCreateUserSP = createSP.createCreateUserSP;
-const createCreatePinSP = createSP.createCreatePinSP;
-const createCreateMediumSP = createSP.createCreateMediumSP;
-const createCreateMediumTypeSP = createSP.createCreateMediumTypeSP;
-const createCreatePinMediumSP = createSP.createCreatePinMediumSP;
-const createCreatePinMediumLinkSP = createSP.createCreatePinMediumLinkSP;
-//const createCreateLikeSP = createSP.createCreateLikeSP;
-//const createCreateFavoriteSP = createSP.createCreateFavoriteSP;
-const createCreateDateTimeSP = createSP.createCreateDateTimeSP;
-const createCreateMentionSP = createSP.createCreateMentionSP;
-const createCreatePinMentionSP = createSP.createCreatePinMentionSP;
-const createCreatePinMentionLinkSP = createSP.createCreatePinMentionLinkSP;
+  // Returns Single Result
+  createGetPinWithFavoriteAndLikeSP,
+  createGetUserByIdSP,
+  createGetUserByUserNameSP,
+  createGetUserByFacebookIdSP,
+  createGetUserByGoogleIdSP,
+  createGetUserByEmailSP,
+  createGetMediumByOriginalUrlSP,
+  createGetPinSP,
+  createGetLikeSP,
+  createGetFavoriteSP,
+  createGetMerchantSP,
+  createGetLocationSP,
 
-// Update Record
-const createUpdateUserSP = createSP.createUpdateUserSP;
-const createUpdatePinSP = createSP.createUpdatePinSP;
-//const createUpdateLikeSP = createSP.createUpdateLikeSP;
+  // Create Record
+  createCreateUserSP,
+  createCreatePinSP,
+  createCreateMediumSP,
+  createCreateMediumTypeSP,
+  createCreatePinMediumSP,
+  createCreatePinMediumLinkSP,
+  // createCreateLikeSP,
+  // createCreateFavoriteSP,
+  createCreateDateTimeSP,
+  createCreateMentionSP,
+  createCreatePinMentionSP,
+  createCreatePinMentionLinkSP,
 
-// Delete Record
-const createDeleteUserByIdSP = createSP.createDeleteUserByIdSP;
-const createDeletePinMediumByPinMediumIdSP = createSP.createDeletePinMediumByPinMediumIdSP;
-const createDeletePinSP = createSP.createDeletePinSP;
-const createDeleteLikeSP = createSP.createDeleteLikeSP;
-const createDeleteLikeByPinIdSP = createSP.createDeleteLikeByPinIdSP;
-const createDeleteFavoriteSP = createSP.createDeleteFavoriteSP;
-const createDeleteFavoriteByPinIdSP = createSP.createDeleteFavoriteByPinIdSP;
-const createDeleteMerchantSP = createSP.createDeleteMerchantSP;
-const createDeleteMerchantByPinIdSP = createSP.createDeleteMerchantByPinIdSP;
-const createDeleteLocationSP = createSP.createDeleteLocationSP;
-const createDeleteLocationByPinIdSP = createSP.createDeleteLocationByPinIdSP;
-const createDeletePinMentionByPinIdSP = createSP.createDeletePinMentionByPinIdSP;
+  // Update Record
+  createUpdateUserSP,
+  createUpdatePinSP,
+  // createUpdateLikeSP,
 
-// Upsert Record
-const createMergeLikeSP = createSP.createMergeLikeSP;
-const createMergeFavoriteSP = createSP.createMergeFavoriteSP;
-const createMergeMerchantSP = createSP.createMergeMerchantSP;
-const createMergeLocationSP = createSP.createMergeLocationSP;
+  // Delete Record
+  createDeleteUserByIdSP,
+  createDeletePinMediumByPinMediumIdSP,
+  createDeletePinSP,
+  createDeleteLikeSP,
+  createDeleteLikeByPinIdSP,
+  createDeleteFavoriteSP,
+  createDeleteFavoriteByPinIdSP,
+  createDeleteMerchantSP,
+  createDeleteMerchantByPinIdSP,
+  createDeleteLocationSP,
+  createDeleteLocationByPinIdSP,
+  createDeletePinMentionByPinIdSP,
 
-// Admin Delete
-const createAdminDeleteUserByIdSP = createSP.createAdminDeleteUserByIdSP;
+  // Upsert Record
+  createMergeLikeSP,
+  createMergeFavoriteSP,
+  createMergeMerchantSP,
+  createMergeLocationSP,
+
+  // Admin Delete
+  createAdminDeleteUserByIdSP
+} = require('./createSP');
+
+
 // Create Table Valued Parameters
 // const createMediumTableType = require('./createMediumTableType').createMediumTableType;
 
@@ -120,8 +131,8 @@ execute()
 
 function execute() {
   console.log('Begin setupSP');
-  createTable.setup(cp);
-  createSP.setup(cp);
+  tableSetup(cp);
+  spSetup(cp);
 
   return cp.getConnection()
     .then(conn => {
@@ -143,6 +154,9 @@ function execute() {
         createMerchant,
         createMention,
         createPinMention,
+        createCircle,
+        createUserCircle,
+        createPinCircle,
 
         // Views
         createPinView,
