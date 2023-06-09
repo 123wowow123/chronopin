@@ -7,6 +7,7 @@ private group ++
 Before Usable Bug:
 updating tags does not update links ++
 invalid hashtag in editor needs to be removed ++
+editing youtube and image will fail ++
 Comment cleanup/backup +
 Main timeline should remain be in background for speedup
 
