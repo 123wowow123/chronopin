@@ -118,6 +118,20 @@ export function show(req, res) {
     .catch(response.handleError(res));
 }
 
+// Gets a single Edit Pin from the DB
+export function showEdit(req, res) {
+  let pinId = +req.params.id;
+
+  return Pin.queryByIdForEdit(pinId)
+    .then(({
+      pin
+    }) => {
+      return pin;
+    })
+    .then(response.withResult(res))
+    .catch(response.handleError(res));
+}
+
 // Creates a new Pin in the DB
 export function create(req, res) {
   let user = req.user,

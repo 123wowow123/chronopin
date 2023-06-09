@@ -10,6 +10,7 @@
     constructor($window, $state, $scope, Auth, $q, $rootScope, $stateParams, $http, pinWebService, scrapeService, appConfig, Util /*, $log, modelInjector */) {
       //PinGroups || (PinGroups = modelInjector.getPinGroups());
 
+      this.pinRecieved = false;
       this.$window = $window;
       this.$rootScope = $rootScope;
 
@@ -60,6 +61,7 @@
       this.hasScrapedImage = false;
 
       this.pin.allDay = true;
+      this.parser;
       //this.timePicker = {};
       //this.timePicker.openedBefore = false; ////////////
 
@@ -111,27 +113,37 @@
       this.mode = id ? "edit" : respondId ? 'respond' : 'create';
       if (this.mode === 'edit' && id !== undefined) {
         this.enableForm(false);
-        this.pinWebService.get(id)
+        this.pinWebService.getEdit(id)
           .then(res => {
             return this.scrapeService
               .setPin(this.pin, res.data);
           })
           .finally(() => {
+            this.pinRecieved = true;
             this.enableForm(true);
           });
       } else if (this.mode === 'respond' && respondId !== undefined) {
         this.enableForm(false);
-        this.pinWebService.get(+respondId)
+        this.pinWebService.getEdit(+respondId)
           .then(res => {
             this.respondPinTitle = _.get(res, 'data.title');
             this.pin.parentId = +respondId;
             return this.pin;
           })
           .finally(() => {
+            this.pinRecieved = true;
             this.enableForm(true);
           });
       }
 
+    }
+
+    descriptionOnChange(html) {
+      this.pin.description = html;
+    }
+
+    suggestionDescriptionOnChange(html) {
+      this.pinSuggestion.description = html;
     }
 
     selectMedia(media) {

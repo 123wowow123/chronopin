@@ -57,6 +57,7 @@ const {
   createGetPinAuthorThreadWithFavoriteAndLikeSP,
   createGetPinByTagsFilterByHasFavoriteSP,
   createGetPinByTagsSP,
+  createGetPinForEditSP,
 
   // Returns Single Result
   createGetPinWithFavoriteAndLikeSP,
@@ -180,6 +181,7 @@ function execute() {
         createGetPinAuthorThreadWithFavoriteAndLikeSP,
         createGetPinByTagsFilterByHasFavoriteSP,
         createGetPinByTagsSP,
+        createGetPinForEditSP,
 
         // Returns Single Result
         createGetPinWithFavoriteAndLikeSP,

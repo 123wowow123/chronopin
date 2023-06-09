@@ -12,6 +12,7 @@
       'parentId',
       'title',
       'description',
+      'sourceDescription',
       'sourceUrl',
       'priceLowerBound',
       'priceUpperBound',

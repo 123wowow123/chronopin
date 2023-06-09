@@ -47,6 +47,7 @@ function executeCreateTable() {
             parentId INT,
             title NVARCHAR(1024) NOT NULL,
             description NVARCHAR(max),
+            sourceDescription NVARCHAR(max),
             sourceUrl NVARCHAR(4000),
             priceLowerBound DECIMAL(18,2),
             priceUpperBound DECIMAL(18,2),

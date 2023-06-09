@@ -19,6 +19,7 @@ export const BasePinProp = [
     'rootThread',
     'title',
     'description',
+    'sourceDescription',
     'sourceUrl',
     'priceLowerBound',
     'priceUpperBound',

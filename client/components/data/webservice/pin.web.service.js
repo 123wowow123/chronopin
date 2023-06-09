@@ -21,6 +21,14 @@
          });
        };
 
+       this.getEdit = function(id, data) {
+        return $http({
+          url: '/api/pins/edit/' + id,
+          method: 'GET',
+          params: data
+        });
+      };
+
        this.list = function(data) {
          return $http({
            url: '/api/pins',

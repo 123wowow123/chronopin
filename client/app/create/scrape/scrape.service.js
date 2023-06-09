@@ -88,6 +88,7 @@
                 thisPin.sourceUrl = pin.sourceUrl;
                 thisPin.title = pin.title;
                 thisPin.description = pin.description;
+                thisPin.sourceDescription = typeof pin.sourceDescription === 'string' ? JSON.parse(pin.sourceDescription) : pin.sourceDescription;
                 thisPin.price = pin.price;
                 thisPin.start = pin.utcStartDateTime && new Date(pin.utcStartDateTime);
                 thisPin.end = pin.utcStartDateTime && new Date(pin.utcEndDateTime);
@@ -137,6 +138,7 @@
                     parentId: pin.parentId,
                     title: pin.title,
                     description: pin.description,
+                    sourceDescription: pin.sourceDescription ? JSON.stringify(pin.sourceDescription) : undefined,
                     sourceUrl: pin.sourceUrl,
                     price: pin.price,
                     utcStartDateTime: startDateTime, // ISO 8601 with toJSON

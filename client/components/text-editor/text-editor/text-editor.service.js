@@ -2,7 +2,8 @@
 
 (function () {
   class TextEditorJS {
-    constructor() {
+    constructor($injector) {
+      this.$injector = $injector;
       this.initalized;
       this.queue = Promise.resolve();
     }
@@ -35,21 +36,24 @@
       const embedPromise = loadJSPromise('Embed', 'https://cdn.jsdelivr.net/npm/@editorjs/embed@latest');
       const ImageToolPromise = loadJSPromise('ImageTool', 'https://cdn.jsdelivr.net/npm/@editorjs/image@2.3.0');
 
+      const HashTagTool = this.$injector.get('HashTagTool');
+      const DollarTagTool = this.$injector.get('DollarTagTool');
+      const AtTagTool = this.$injector.get('AtTagTool');
 
       return Promise.all([editorJsPromise, headerJsPromise, listJsPromise, strikethroughPromise, edjsParserPromise, embedPromise, ImageToolPromise])
         .then(([EditorJS, Header, List, Strikethrough, edjsParser, Embed, ImageTool]) => {
-          return { EditorJS, Header, List, Strikethrough, edjsParser, Embed, ImageTool };
+          return { EditorJS, Header, List, Strikethrough, edjsParser, Embed, ImageTool, HashTagTool, DollarTagTool, AtTagTool };
         });
     }
 
-    ayncInit(elId, onChange) {
+    ayncInit(elId, onChange, data) {
       return this.queue
         .then(() => {
           if (!this.initalized) {
             this.initalized = this.loadJsAsync();
           }
           return this.initalized
-            .then(({ EditorJS, Header, List, Strikethrough, edjsParser, Embed, ImageTool }) => {
+            .then(({ EditorJS, Header, List, Strikethrough, edjsParser, Embed, ImageTool, HashTagTool, DollarTagTool, AtTagTool }) => {
 
               const editor = new EditorJS({
                 holder: elId,
@@ -59,7 +63,7 @@
 
                 //readOnly: true,
 
-                // data,
+                data,
 
                 tools: {
                   header: {
@@ -92,6 +96,18 @@
                         byUrl: '/upload/fetchUrl', // Your endpoint that provides uploading by Url
                       }
                     }
+                  },
+
+                  hashTagTool: {
+                    class: HashTagTool,
+                  },
+
+                  dollarTagTool: {
+                    class: DollarTagTool,
+                  },
+
+                  atTagTool: {
+                    class: AtTagTool,
                   }
 
                 },
@@ -101,7 +117,14 @@
                  */
                 onChange: (api, event) => {
                   onChange(api, event);
-                }
+                },
+
+                // sanitizer: {
+                //   a: {
+                //     href: true, // leave <a> with href
+                //     target: '_blank' // add 'target="_blank"'
+                //   }
+                // }
 
               });
 

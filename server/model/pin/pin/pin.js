@@ -129,7 +129,7 @@ export default class Pin extends BasePin {
   }
 
   update() {
-    return Pin.queryById(this.id, this.userId)
+    return Pin.queryByIdForEdit(this.id)
       .then((res) => {
 
         // TODO: Add to auth middleware
@@ -217,6 +217,10 @@ export default class Pin extends BasePin {
   // toJSON() {
   //   return super.toJSON();
   // }
+
+  static queryByIdForEdit(pinId) {
+    return _queryMSSQLPinByIdForEdit(pinId);
+  }
 
   static queryById(pinId, userId) {
     if (userId) {
@@ -327,6 +331,38 @@ function _queryMSSQLPinById(pinId) {
     });
 }
 
+function _queryMSSQLPinByIdForEdit(pinId) {
+  return cp.getConnection()
+    .then(conn => {
+      //console.log("queryMSSQLPinById then err", err)
+      return new Promise((resolve, reject) => {
+        const StoredProcedureName = 'GetPinForEdit';
+        let request = new mssql.Request(conn)
+          .input('pinId', mssql.Int, pinId)
+          .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
+            let pin;
+            if (err) {
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+            }
+            if (res.recordset.length) {
+              pin = new Pin(res.recordset[0]);
+              pin = Pin.mapPinJoins(pin, res.recordset);
+              // pin = Pin.mapPinUser(pin, res.recordset[0]);
+            } else {
+              pin = undefined;
+            }
+            resolve({
+              pin: pin
+            });
+          });
+      });
+    }).catch(err => {
+      // ... connect error checks
+      console.log("queryMSSQLPinById catch err", err);
+      throw err;
+    });
+}
+
 function _updateMSSQL(pin, userId) {
   return cp.getConnection()
     .then(conn => {
@@ -337,6 +373,7 @@ function _updateMSSQL(pin, userId) {
           .input('parentId', mssql.Int, pin.parentId)
           .input('title', mssql.NVarChar(1024), pin.title)
           .input('description', mssql.NVarChar(mssql.MAX), pin.description)
+          .input('sourceDescription', mssql.NVarChar(mssql.MAX), pin.sourceDescription)
           .input('sourceUrl', mssql.NVarChar(4000), pin.sourceUrl)
           .input('priceLowerBound', mssql.Decimal(18, 2), pin.priceLowerBound)
           .input('priceUpperBound', mssql.Decimal(18, 2), pin.priceUpperBound)

@@ -14,6 +14,7 @@ const createGetPinByIdsFilterByHasFavoriteSP = require('./pin/createGetPinByIdsF
 const createGetPinsWithFavoriteAndLikeArrayNextSP = require('./pin/createGetPinsWithFavoriteAndLikeArrayNextSP');
 const createGetPinByTagsFilterByHasFavoriteSP = require('./pin/createGetPinByTagsFilterByHasFavoriteSP');
 const createGetPinByTagsSP = require('./pin/createGetPinByTagsSP');
+const createGetPinForEditSP = require('./pin/createGetPinForEditSP');
 
 /* search pin */
 const createSearchPinSP = require('./pin/createSearchPinSP');
@@ -137,6 +138,7 @@ module.exports.setup = function (connectionPool) {
   createGetPinAuthorThreadWithFavoriteAndLikeSP.setup(cp);
   createGetPinByTagsFilterByHasFavoriteSP.setup(cp);
   createGetPinByTagsSP.setup(cp);
+  createGetPinForEditSP.setup(cp);
 
   // Returns Single Result
   createGetPinWithFavoriteAndLikeSP.setup(cp);
@@ -227,6 +229,7 @@ module.exports.createGetLikeSP = createGetLikeSP.createSP;
 module.exports.createGetFavoriteSP = createGetFavoriteSP.createSP;
 module.exports.createGetMerchantSP = createGetMerchantSP.createSP;
 module.exports.createGetLocationSP = createGetLocationSP.createSP;
+module.exports.createGetPinForEditSP = createGetPinForEditSP.createSP;
 
 // Create Record
 module.exports.createCreatePinSP = createCreatePinSP.createSP;

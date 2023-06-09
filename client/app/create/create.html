@@ -75,15 +75,26 @@
                         ng-class="{'\--active' : $ctrl.activeTabs['content'] === 1}"
                         ng-click="$ctrl.tabChange('content', 1)" ng-if="$ctrl.hasScrapedText">
                         <label for="description"
-                          class="control-label">{{$ctrl.scrapingMessage($ctrl.pinSuggestion.description).message}}</label>
+                          class="control-label">{{$ctrl.scrapingMessage($ctrl.pinSuggestion.sourceDescription).message}}</label>
                       </button>
                     </div>
                   </div>
 
-                  <div ng-switch="$ctrl.activeTabs['content']">
-                    <text-editor ng-switch-when="0" ng-model="$ctrl.pin.description"></text-editor>
-                    <text-editor ng-switch-when="1" ng-model="$ctrl.pinSuggestion.description"></text-editor>
+                  <div ng-switch="$ctrl.activeTabs['content']" ng-if="$ctrl.pinRecieved">
+                    <text-editor ng-switch-when="0" ng-model="$ctrl.pin.sourceDescription"
+                      on-change="$ctrl.descriptionOnChange(html)"></text-editor>
+                    <text-editor ng-switch-when="1" ng-model="$ctrl.pinSuggestion.sourceDescription"
+                      on-change="$ctrl.suggestionDescriptionOnChange(html)"></text-editor>
                   </div>
+
+                  <!-- <div ng-switch="$ctrl.activeTabs['content']">
+                    <div ng-switch-when="0" ng-bind-html="$ctrl.pin.description"></div>
+                    <div ng-switch-when="1" ng-bind-html="$ctrl.pinSuggestion.description"></div>
+                  </div> -->
+                  <!-- <div ng-switch="$ctrl.activeTabs['content']">
+                    <div ng-switch-when="0" ng-bind="$ctrl.pin.sourceDescription"></div>
+                    <div ng-switch-when="1" ng-bind="$ctrl.pinSuggestion.sourceDescription"></div>
+                  </div> -->
                 </div>
 
                 <div class="form-group" style="margin-bottom: 0;">

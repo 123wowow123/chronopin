@@ -122,7 +122,7 @@ export default function (app) {
           const dom = new JSDOM(pin.description);
           const document = dom.window.document;
           const querySelector = document.querySelector('p');
-          const description = querySelector && querySelector.textContent ? querySelector.textContent.trim() : pin.description;
+          const description = querySelector && querySelector.textContent ? querySelector.textContent.trim() :'';
           const medium = _.get(pin, 'media[0]');
           let mediaType, mediaWidth, mediaHeight;
           let mediaContent = medium ? medium.getUrl() : undefined;
