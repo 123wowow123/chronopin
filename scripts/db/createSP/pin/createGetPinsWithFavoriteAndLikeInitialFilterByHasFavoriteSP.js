@@ -108,7 +108,7 @@ function executeCreateSP() {
 
             SELECT *
             FROM @tempPinsTbl
-            ORDER BY [utcStartDateTime], [id];
+            ORDER BY [utcStartDateTime], [id], [Merchant.id], [Location.id]
 
             SET @queryCount = @queryCountPrev + @queryCountNext;
 

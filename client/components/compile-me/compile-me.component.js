@@ -11,11 +11,12 @@
     }
 
     $onInit() {
-      let $el = angular.element(this.html);
-      let link = this.$compile($el);
+      let el = document.createElement('DIV');
+      el.innerHTML = this.html
+      let link = this.$compile(el);
       let $newScope = this.$scope.$parent.$new();
       link($newScope);
-      this.$element.parent().append($el);
+      this.$element.parent().append(el);
       this.$scope.$destroy();
       this.$element.remove();
     }

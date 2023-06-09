@@ -159,7 +159,7 @@ function executeCreateSP() {
                 AND [Pin].[utcDeletedDateTime] IS NULL
 
               ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.id], [Location.id]
-                OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY
+              OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY
 
             SELECT *
             FROM @tempPinsTbl;

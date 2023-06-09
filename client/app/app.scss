@@ -159,6 +159,14 @@ button {
   }
 }
 
+figure {
+  margin-bottom: 15px;
+}
+
+figcaption {
+  margin-top: 5px;
+}
+
 // extend dosn't work inside media queries
 @mixin grid-verticle-break {
   padding: 15px 0 0;
