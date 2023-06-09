@@ -218,7 +218,7 @@
                     <twitter-pin ng-switch-when="2" html="{{$ctrl.pin.media[0].html}}">
                     </twitter-pin>
         
-                    <div class='embed-container' ng-switch-when="3" ng-bind-html="$ctrl.pin.media[0].html">
+                    <div class='embed-container' ng-switch-when="3" ng-bind-html="$ctrl.getYouTubeHtml($ctrl.pin)">
                     </div>
         
                 </div>
@@ -234,7 +234,9 @@
                                 h:mma"}}</span>
                         </em>
                     </div> -->
-                    <div class="grid__description" ng-bind-html="$ctrl.getDescriptionHtml($ctrl.pin) "></div>
+                    <div class="grid__description" ng-if="$ctrl.pin.description">
+                        <compile-me html="$ctrl.pin.description"></compile-me>
+                    </div>
                 </div>
         
                 <a class="grid__show_more" ui-sref="pin({id:$ctrl.pin.id})"
