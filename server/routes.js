@@ -93,7 +93,7 @@ export default function (app) {
           res.send(js);
         }).catch(() => {
           res.setHeader('Content-Type', 'text/javascript');
-          const js = ejs.render(mainPinDataContent, { mainPinData });
+          const js = ejs.render(mainPinDataContent, { mainPinData: null });
           res.send(js);
         });
 
