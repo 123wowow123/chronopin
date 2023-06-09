@@ -68,6 +68,8 @@ function executeCreateSP() {
                 ON [Pin].[id] = paramTableIds.id
 
             WHERE [Pin].[utcDeletedDateTime] IS NULL
+
+            ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.id], [Location.id]
         END;
         `;
 

@@ -158,8 +158,6 @@ function executeCreateTable() {
               [PinMention].[id],
               [Mention].[tag]
 
-              ORDER BY [Pin].[utcStartDateTime], [Merchant].[id], [Location].[id]
-
         `;
 
   return cp.getConnection()

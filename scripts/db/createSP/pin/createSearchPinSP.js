@@ -65,7 +65,7 @@ function executeCreateSP() {
             AND [PinView].[searchTitle] LIKE @searchTitle
             OR  [PinView].[searchDescription] LIKE @searchDescription
 
-            ORDER BY [Pin].[utcStartDateTime];
+            ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.id], [Location.id]
 
             SET @queryCount = @@ROWCOUNT;
         END;
