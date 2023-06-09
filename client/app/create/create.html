@@ -81,9 +81,9 @@
                   </div>
 
                   <div ng-switch="$ctrl.activeTabs['content']" ng-if="$ctrl.pinRecieved">
-                    <text-editor ng-switch-when="0" ng-model="$ctrl.pin.sourceDescription"
+                    <text-editor ng-switch-when="0" ng-model="$ctrl.pin.sourceDescription" description="$ctrl.pin.description"
                       on-change="$ctrl.descriptionOnChange(html)"></text-editor>
-                    <text-editor ng-switch-when="1" ng-model="$ctrl.pinSuggestion.sourceDescription"
+                    <text-editor ng-switch-when="1" ng-model="$ctrl.pinSuggestion.sourceDescription" description="$ctrl.pinSuggestion.description"
                       on-change="$ctrl.suggestionDescriptionOnChange(html)"></text-editor>
                   </div>
 

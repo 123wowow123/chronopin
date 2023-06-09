@@ -71,72 +71,76 @@
             }
           }
 
+          const editorOnChange = (api, event) => {
+            if (scope.editor) {
+              setTimeout(() => {
+                scope.editor.save()
+                  .then((jsonHtmlContent) => {
+                    //event && api
+                    const el = _.get(event, 'detail.target.holder');
+                    if (el) {
+
+                      const hashEls = el.getElementsByClassName('chrono-dollar-highlight');
+                      console.log('hashEls', hashEls.length);
+
+                      let firstEl = el.firstChild;
+                      const matchTagStringWithSpace = /(?<!class="chrono-hash-highlight">)(#[A-z\d-]+(?:\s|&nbsp;))/g;
+                      const matchAtStringWithSpace = /(?<!class="chrono-at-highlight">)(@[A-z\d-]+(?:\s|&nbsp;))/g;
+                      const matchDollarStringWithSpace = /(?<!class="chrono-at-highlight">)(\$[A-z]+[\d-]?(?:\s|&nbsp;))/g;
+
+                      // Match #tag
+                      if (matchTagStringWithSpace.test(firstEl.innerHTML)) {
+                        const matchHashString = /(?<!class="chrono-hash-highlight">)(#[A-z\d-]+)/g;
+                        const html = firstEl.innerHTML.replace(matchHashString, (x) => {
+                          return `<chronohash class="chrono-hash-highlight">${x}</chronohash>`
+                        });
+                        firstEl.innerHTML = html;
+                        //add link to # search
+                        // firstEl.innerHTML = firstEl.innerHTML.replace(/&nbsp;/, ' ');
+                        // placeCaretAtEnd(el)
+                      }
+                      // Match @tag
+                      if (matchAtStringWithSpace.test(firstEl.innerHTML)) {
+                        const matchAtString = /(?<!class="chrono-at-highlight">)(@[A-z\d-]+)/g;
+                        const html = firstEl.innerHTML.replace(matchAtString, (x) => {
+                          return `<chronoat class="chrono-at-highlight">${x}</chronoat>`
+                        });
+                        firstEl.innerHTML = html;
+                      }
+                      // Match $tag
+                      if (matchDollarStringWithSpace.test(firstEl.innerHTML)) {
+                        const matchDollarString = /(?<!class="chrono-dollar-highlight">)(\$[A-z]+[\d-]?)/g;
+                        const html = firstEl.innerHTML.replace(matchDollarString, (x) => {
+                          return `<chronodollar class="chrono-dollar-highlight">${x}</chronodollar>`
+                        });
+                        firstEl.innerHTML = html;
+                      }
+                    }
+
+                    ngModel.$setViewValue(jsonHtmlContent);
+                    scope.onChange({ html: scope.parser.parse(jsonHtmlContent) })
+                  });
+              }, 0);
+            }
+          }
+
           function init() {
             EditorJS.registerRefreshQueue((resolve) => {
-              resolve();
-              EditorJS.ayncInit(
-                "editorjs",
-                (api, event) => {
-                  if (scope.editor) {
-
-                    setTimeout(() => {
-                      scope.editor.save()
-                        .then((jsonHtmlContent) => {
-
-                          //event && api
-                          const el = _.get(event, 'detail.target.holder');
-                          if (el) {
-
-                            const hashEls = el.getElementsByClassName('chrono-dollar-highlight');
-                            console.log('hashEls', hashEls.length);
-
-                            let firstEl = el.firstChild;
-                            const matchTagStringWithSpace = /(?<!class="chrono-hash-highlight">)(#[A-z\d-]+(?:\s|&nbsp;))/g;
-                            const matchAtStringWithSpace = /(?<!class="chrono-at-highlight">)(@[A-z\d-]+(?:\s|&nbsp;))/g;
-                            const matchDollarStringWithSpace = /(?<!class="chrono-at-highlight">)(\$[A-z]+[\d-]?(?:\s|&nbsp;))/g;
-
-                            // Match #tag
-                            if (matchTagStringWithSpace.test(firstEl.innerHTML)) {
-                              const matchHashString = /(?<!class="chrono-hash-highlight">)(#[A-z\d-]+)/g;
-                              const html = firstEl.innerHTML.replace(matchHashString, (x) => {
-                                return `<chronohash class="chrono-hash-highlight">${x}</chronohash>`
-                              });
-                              firstEl.innerHTML = html;
-                              //add link to # search
-                              // firstEl.innerHTML = firstEl.innerHTML.replace(/&nbsp;/, ' ');
-                              // placeCaretAtEnd(el)
-                            }
-                            // Match @tag
-                            if (matchAtStringWithSpace.test(firstEl.innerHTML)) {
-                              const matchAtString = /(?<!class="chrono-at-highlight">)(@[A-z\d-]+)/g;
-                              const html = firstEl.innerHTML.replace(matchAtString, (x) => {
-                                return `<chronoat class="chrono-at-highlight">${x}</chronoat>`
-                              });
-                              firstEl.innerHTML = html;
-                            }
-                            // Match $tag
-                            if (matchDollarStringWithSpace.test(firstEl.innerHTML)) {
-                              const matchDollarString = /(?<!class="chrono-dollar-highlight">)(\$[A-z]+[\d-]?)/g;
-                              const html = firstEl.innerHTML.replace(matchDollarString, (x) => {
-                                return `<chronodollar class="chrono-dollar-highlight">${x}</chronodollar>`
-                              });
-                              firstEl.innerHTML = html;
-                            }
-                          }
-
-                          ngModel.$setViewValue(jsonHtmlContent);
-                          scope.onChange({ html: scope.parser.parse(jsonHtmlContent) })
-                        });
-                    }, 0);
-
-                  }
-                }, ngModel.$viewValue)
-                .then(({ editor, edjsParser }) => {
-                  setModelInstance(editor, edjsParser);
-                  if (!ngModel.$viewValue && scope.description) {
-                    updateFromHtmlContent(scope.description);
-                  }
-                });
+              setTimeout(() => {
+                const data = ngModel.$viewValue;
+                resolve();
+                EditorJS.ayncInit(
+                  "editorjs",
+                  editorOnChange,
+                  data
+                )
+                  .then(({ editor, edjsParser }) => {
+                    setModelInstance(editor, edjsParser);
+                    if (!ngModel.$viewValue && scope.description) {
+                      updateFromHtmlContent(scope.description);
+                    }
+                  });
+              }, 0);
             });
           }
 
