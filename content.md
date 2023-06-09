@@ -1,7 +1,14 @@
 Bugs/priority:
 
-WIP:
-Merchant create UI
+Before Usable:
+Add edit/delete own pin feature ++
+private group ++
+
+Before Usable Bug:
+updating tags does not update links ++
+invalid hashtag in editor needs to be removed ++
+Comment cleanup/backup +
+Main timeline should remain be in background for speedup
 
 Bugs:
 
@@ -41,16 +48,6 @@ can suggest airbnb and flights referals when map data is available
 Affliate buy link with price scrape +
 Buy keywords in content that will turn into link where it will show map and nearest location when you can buy product.
 Pin dollar tag should link to referal page in new tab
-
-Before Usable:
-Add edit/delete own pin feature ++
-private group ++
-
-Before Usable Bug:
-updating tags does not update links ++
-invalid hashtag in editor needs to be removed ++
-Comment cleanup/backup +
-Main timeline should remain be in background for speedup
 
 Features:
 Stock ticker ++
