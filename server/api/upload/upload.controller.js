@@ -10,6 +10,10 @@ function _formatJSON(medium) {
         "success": 1,
         "file": {
             "url": config.thumbUrlPrefix + medium.thumbName,
+            "attributes": {
+                "width": medium.thumbWidth,
+                "height": medium.thumbHeight
+            }
             // ... and any additional fields you want to store, such as width, height, color, extension, etc
         }
     }

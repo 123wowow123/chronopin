@@ -134,6 +134,8 @@
             this.pinRecieved = true;
             this.enableForm(true);
           });
+      } else {
+        this.pinRecieved = true;
       }
 
     }

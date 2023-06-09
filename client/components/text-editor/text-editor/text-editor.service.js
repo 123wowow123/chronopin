@@ -34,7 +34,7 @@
       const listJsPromise = loadJSPromise('List', 'https://cdn.jsdelivr.net/npm/@editorjs/list@1.8.0/dist/bundle.min.js');
       const strikethroughPromise = loadJSPromise('Strikethrough', 'https://cdn.jsdelivr.net/npm/@sotaproject/strikethrough@1.0.1/dist/bundle.min.js');
       const embedPromise = loadJSPromise('Embed', 'https://cdn.jsdelivr.net/npm/@editorjs/embed@latest');
-      const ImageToolPromise = loadJSPromise('ImageTool', 'https://cdn.jsdelivr.net/npm/@editorjs/image@2.3.0');
+      const ImageToolPromise = loadJSPromise('ImageTool', 'https://cdn.jsdelivr.net/gh/123wowow123/image@v1.0-beta.4/dist/bundle.js');
 
       const HashTagTool = this.$injector.get('HashTagTool');
       const DollarTagTool = this.$injector.get('DollarTagTool');
@@ -94,7 +94,8 @@
                       endpoints: {
                         byFile: '/upload/uploadFile', // Your backend file uploader endpoint
                         byUrl: '/upload/fetchUrl', // Your endpoint that provides uploading by Url
-                      }
+                      },
+                      attributes: {}
                     }
                   },
 

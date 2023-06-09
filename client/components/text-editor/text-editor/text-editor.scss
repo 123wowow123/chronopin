@@ -7,6 +7,10 @@ $mobile-breakpoint: 651px;
     color: #333333;
     z-index: 5;
     position: relative;
+
+    a {
+        pointer-events: none;
+    }
 }
 
 

@@ -24,7 +24,51 @@
 
           function setModelInstance(editor, edjsParser) {
             scope.editor = editor;
-            scope.parser = new edjsParser();
+            scope.parser = new edjsParser(undefined, {
+
+              // image: function (data, config) {
+              //   return `<img src="${data.file.url}" alt="${data.caption}" alt="${data.width}" alt="${data.width}" loading="lazy" >`;
+              // }
+
+              image: function image(data, config) {
+                var imageConditions = "".concat(data.stretched ? "img-fullwidth" : "", " ").concat(data.withBorder ? "img-border" : "", " ").concat(data.withBackground ? "img-bg" : "");
+                var imgClass = config.image.imgClass || "";
+                var imageSrc;
+
+                if (data.url) {
+                  // simple-image was used and the image probably is not uploaded to this server
+                  // therefore, we use the absolute path provided in data.url
+                  // so, config.image.path property is useless in this case!
+                  imageSrc = data.url;
+                } else if (config.image.path === "absolute") {
+                  imageSrc = data.file.url;
+                } else {
+                  imageSrc = config.image.path.replace(/<(.+)>/, function (match, p1) {
+                    return data.file[p1];
+                  });
+                }
+
+                if (config.image.use === "img") {
+                  return "<img class=\"".concat(imageConditions, " ").concat(imgClass, "\" src=\"").concat(imageSrc, "\" alt=\"").concat(data.caption, "\">");
+                } else if (config.image.use === "figure") {
+                  const attributes = data.file.attributes || {};
+                  var figureClass = config.image.figureClass || "";
+                  var figCapClass = config.image.figCapClass || "";
+                  let figure = "<figure class=\""
+                    .concat(figureClass, "\"><img loading=\"lazy\" class=\"")
+                    .concat(imgClass, " ")
+                    .concat(imageConditions, "\" src=\"")
+                    .concat(imageSrc, "\" alt=\"")
+                    .concat(data.caption, "\" height=\"")
+                    .concat(attributes.height, "\" width=\"")
+                    .concat(attributes.width, "\"><figcaption class=\"")
+                    .concat(figCapClass, "\">")
+                    .concat(data.caption, "</figcaption></figure>");
+                  return figure;
+                }
+              },
+
+            });
           };
 
           function render() {
@@ -118,7 +162,8 @@
                     }
 
                     ngModel.$setViewValue(jsonHtmlContent);
-                    scope.onChange({ html: scope.parser.parse(jsonHtmlContent) })
+                    const saveHtml = scope.parser.parse(jsonHtmlContent);
+                    scope.onChange({ html: saveHtml })
                   });
               }, 0);
             }

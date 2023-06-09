@@ -65,13 +65,17 @@ BEGIN
       [Favorites].[userId]                       AS [Favorites.userId],
       [Favorites].[pinId]                        AS [Favorites.pinId],
       [Favorites].[utcCreatedDateTime]           AS [Favorites.utcCreatedDateTime],
-      [Favorites].[utcUpdatedDateTime]           AS [Favorites.utcUpdatedDateTime]
+      [Favorites].[utcUpdatedDateTime]           AS [Favorites.utcUpdatedDateTime],
+
+      [OriginalPin].[sourceDescription]
 
     FROM [dbo].[PinBaseView] AS [Pin]
       LEFT JOIN [dbo].[Favorite] AS [Favorites]
         ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL
       LEFT JOIN [dbo].[Like] AS [Likes] 
         ON [Pin].[id] = [Likes].[PinId] AND [Likes].[utcDeletedDateTime] IS NULL
+      JOIN [dbo].[Pin] AS [OriginalPin]
+        ON [Pin].id = [OriginalPin].id
 
     WHERE [Pin].[utcStartDateTime] > @fromDateTime
       OR ([Pin].[utcStartDateTime] = @fromDateTime
