@@ -1,39 +1,29 @@
 'use strict';
 
 (function () {
+  const delayParse = 0;
 
-  class Controller {
+  angular.module('chronopinNodeApp')
+    .directive('compileMe', function ($compile) {
 
-    constructor($scope, $element, $compile) {
-      this.$scope = $scope;
-      this.$element = $element;
-      this.$compile = $compile;
-    }
+      function createHTML(html, scope) {
+        let el = document.createElement('DIV');
+        el.innerHTML = html
+        let link = $compile(el);
+        link(scope);
+        return el;
+      }
 
-    $onInit() {
-      let el = document.createElement('DIV');
-      el.innerHTML = this.html
-      let link = this.$compile(el);
-      let $newScope = this.$scope.$parent.$new();
-      link($newScope);
-      this.$element.parent().append(el);
-      this.$scope.$destroy();
-      this.$element.remove();
-    }
-
-  }
-
-  angular
-    .module('chronopinNodeApp')
-    .directive('compileMe', function () {
       return {
-        restrict: 'E',
-        controllerAs: 'vm',
-        bindToController: true,
-        scope: {
-          html: "="
-        },
-        controller: Controller
+        restrict: 'AE',
+        scope: {},
+        link: function postLink(scope, elem, attrs) {
+          attrs.$observe('html', function (newValue) {
+            let html = newValue;
+            let $el = $(createHTML(html, scope));
+            elem.empty().append($el);
+          });
+        }
       };
     });
 

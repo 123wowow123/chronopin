@@ -8,14 +8,14 @@
     controllerAs: 'vm',
     bindToController: true,
     transclude: true,
-    controller: function ($window, $cookies, $state, $location, $element, searchService) {
+    controller: ['$element', 'searchService', function ($element, searchService) {
       this.goSearch = () => {
         const tagEl = _.get($element, '[0].childNodes[0]');
         searchService.goSearch(
           tagEl.outerText
         );
       }
-    },
+    }],
   }
 
   angular.module('chronopinNodeApp')
