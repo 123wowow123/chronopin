@@ -13,6 +13,8 @@ Main timeline should remain be in background for speedup
 
 Bugs:
 
+embed data update
+
 Editing pin with youtube content will delete youtube content in edit mode ++
 
 pins loaded from infinit scroll needs to be in memory so that navigating back to home will have proper scroll position ++

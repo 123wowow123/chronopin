@@ -161,13 +161,15 @@ button {
 
 figure {
   margin-bottom: 15px;
+
   img {
     height: auto;
   }
-}
 
-figcaption {
-  margin-top: 5px;
+  figcaption {
+    margin-top: 5px;
+    font-size: 13px;
+  }
 }
 
 // extend dosn't work inside media queries
