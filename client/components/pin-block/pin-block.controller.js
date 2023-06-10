@@ -24,6 +24,27 @@
         $onInit() {
             //this._registerWaypointObserver(); /////////////////////
             this.ScrollUtil.setInitialized(true);
+
+            // let width, height;
+            // setTimeout(() => {
+            //     this.rect = this.$element[0].querySelector('.grid__content').getBoundingClientRect();
+            //     width = this.rect.width;
+            //     height = this.rect.height;
+            // }, 100)
+
+            // setTimeout(() => {
+            //     const {
+            //         width: nwidth,
+            //         height: nheight
+            //     } = this.$element[0].querySelector('.grid__content').getBoundingClientRect();
+            //     const id = this.pin.id;
+            //     if (width != nwidth) {
+            //         console.log(id + " width:", width, nwidth);
+            //     }
+            //     if (height != nheight) {
+            //         console.log(id + " height:", height, nheight);
+            //     }
+            // }, 10000)
         }
 
         // Click handlers
