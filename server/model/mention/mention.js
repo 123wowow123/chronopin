@@ -3,7 +3,7 @@
 import * as mssql from 'mssql';
 import * as cp from '../../sqlConnectionPool';
 import * as _ from 'lodash';
-import { extractTags } from '../pin/shared/helper'
+import { extractTags, extractTagsHtml } from '../pin/shared/helper'
 import {
   BasePin
 } from '..';
@@ -83,6 +83,16 @@ export default class Mention {
 
   static scrapeAllMention(text) {
     const tagObj = Mention.scrapeMention(text);
+    return tagObj.allTags;
+  }
+
+  static scrapeMentionHtml(text) {
+    const tagObj = extractTagsHtml(text);
+    return tagObj;
+  }
+
+  static scrapeAllMentionHtml(text) {
+    const tagObj = Mention.scrapeMentionHtml(text);
     return tagObj.allTags;
   }
 

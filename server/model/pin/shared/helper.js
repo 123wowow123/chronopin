@@ -33,9 +33,20 @@ export function mapSubObjectFromQuery(prefix, groupKey, pinRows) {
 }
 
 export function extractTags(searchText) {
+  const matchHashString = /(#[A-z\d-]+)(?:<|\b)/g;
+  const matchAtString = /(@[A-z\d-]+)(?:<|\b)/g;
+  const matchDollarString = /(\$[A-z]+[\d-]?)(?:<|\b)/g;
+  return _extractTags(matchHashString, matchAtString, matchDollarString, searchText)
+}
+
+export function extractTagsHtml(searchText) {
   const matchHashString = /(?<=class="chrono-hash-highlight">)(#[A-z\d-]+)(?:<|\b)/g;
   const matchAtString = /(?<=class="chrono-at-highlight">)(@[A-z\d-]+)(?:<|\b)/g;
   const matchDollarString = /(?<=class="chrono-dollar-highlight">)(\$[A-z]+[\d-]?)(?:<|\b)/g;
+  return _extractTags(matchHashString, matchAtString, matchDollarString, searchText)
+}
+
+function _extractTags(matchHashString, matchAtString, matchDollarString, searchText) {
   const hashTags = [];
   const atTags = [];
   const dollarTags = [];

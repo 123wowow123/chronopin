@@ -99,7 +99,7 @@ export default class BasePin {
     }
 
     rescrapeMention() {
-        const allTags = Mention.scrapeAllMention(this.description);
+        const allTags = Mention.scrapeAllMentionHtml(this.description);
         this.mentions = (allTags || [])
             .map(m => {
                 return new Mention({ tag: m }, this);
