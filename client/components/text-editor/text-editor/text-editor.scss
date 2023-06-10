@@ -42,6 +42,10 @@ $mobile-breakpoint: 651px;
 
     .ce-toolbar {
 
+        .codex-editor--narrow .ce-toolbar__actions {
+            right: initial !important;
+        }
+
         .ce-toolbar__plus,
         .ce-toolbar__settings-btn {
             color: var(--primary-bg-color);

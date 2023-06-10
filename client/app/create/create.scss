@@ -178,7 +178,13 @@
 
 }
 
-.start,
+.start{
+  z-index: 7;
+
+  input {
+    z-index: 5 !important;
+  }
+}
 .end {
   z-index: 6;
 

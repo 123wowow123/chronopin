@@ -5,9 +5,7 @@ Add edit/delete own pin feature ++
 private group ++
 
 Before Usable Bug:
-updating tags does not update links ++
-invalid hashtag in editor needs to be removed ++
-editing youtube and image will fail ++
+Editing pin with youtube content will delete youtube content in edit mode ++
 Comment cleanup/backup +
 Main timeline should remain be in background for speedup
 
@@ -15,8 +13,6 @@ Bugs:
 scrolling 
 https://ui-router.github.io/ng1/docs/0.3.1/index.html#/api/ui.router.state.$uiViewScroll
 embed data update
-
-Editing pin with youtube content will delete youtube content in edit mode ++
 
 pins loaded from infinit scroll needs to be in memory so that navigating back to home will have proper scroll position ++
 create/edit/respond page needs to have auth guard +
