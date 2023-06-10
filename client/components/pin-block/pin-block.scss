@@ -29,9 +29,10 @@
 .icon_set {
     display: flex;
 
-    a{
+    a {
         display: inline-block;
     }
+
     a+a {
         margin-left: 10px;
     }
@@ -86,4 +87,9 @@
             // text-decoration: none;
         }
     }
+}
+
+pin-block {
+    display: inline-block;
+    max-width: 550px;
 }

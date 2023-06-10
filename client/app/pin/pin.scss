@@ -81,6 +81,15 @@
     @include grid-verticle-break;
     padding: 0 15px;
 
+    pin-block {
+      min-width: 0;
+      width: 100%;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
     .dynamic-grid {
       padding: 0;
     }
