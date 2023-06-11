@@ -172,6 +172,15 @@ figure {
   }
 }
 
+.twitter-tweet {
+  margin-left: auto;
+  margin-right: auto;
+}
+// .embed-tool__preloader {
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
 // extend dosn't work inside media queries
 @mixin grid-verticle-break {
   padding: 15px 0 0;

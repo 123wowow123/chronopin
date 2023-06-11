@@ -2,14 +2,14 @@
 'use strict';
 
 (function () {
-
+  const delayParse = 0;
   //let PinGroups;
 
   class CreateController {
 
-    constructor($window, $state, $scope, Auth, $q, $rootScope, $stateParams, $http, pinWebService, scrapeService, appConfig, Util /*, $log, modelInjector */) {
+    constructor($window, $state, $scope, Auth, $q, $rootScope, $stateParams, $http, twitterJs, pinWebService, scrapeService, appConfig, Util /*, $log, modelInjector */) {
       //PinGroups || (PinGroups = modelInjector.getPinGroups());
-
+      this.twitterJs = twitterJs;
       this.pinRecieved = false;
       this.$window = $window;
       this.$rootScope = $rootScope;
@@ -410,6 +410,16 @@
 
     showMore() {
       this.showFullPin = !this.showFullPin;
+      this.refreshEmbed();
+    }
+
+    refreshEmbed() {
+      this.twitterJs.initalized
+        .then(twttr => {
+          $timeout(() => {
+            twttr.widgets.load(elem);
+          }, delayParse);
+        });
     }
 
     _resolveActiveTabPinData() {

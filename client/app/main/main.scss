@@ -665,14 +665,6 @@ $timeline-ipad-landscape-left-alignment: 95px;
     }
 }
 
-.twitter-tweet {
-    margin: 0 !important;
-
-    iframe {
-        max-width: 100%;
-    }
-}
-
 @media (max-width: $grid-max-width-mobile) {
     .grid {
         &.\--timeline {

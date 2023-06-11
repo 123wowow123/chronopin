@@ -2,12 +2,12 @@
 'use strict';
 
 (function () {
-
+  const delayParse = 0;
   let PinsQuery;
 
   class PinController {
 
-    constructor($scope, $stateParams, $rootScope, socket, pinWebService, searchService, Auth, appConfig, modelInjector, commentJs, Util, MetaService, $log) {
+    constructor($stateParams, $timeout, pinWebService, searchService, Auth, appConfig, modelInjector, commentJs, Util, MetaService, twitterJs) {
       PinsQuery = PinsQuery || modelInjector.getPinsQuery();
       this.pinWebService = pinWebService;
       this.$stateParams = $stateParams;
@@ -16,6 +16,8 @@
       this.searchService = searchService;
       this.Util = Util;
       this.MetaService = MetaService;
+      this.twitterJs = twitterJs;
+      this.$timeout = $timeout;
 
       this.isAdmin = Auth.isAdmin; //bind function so each digest loop it get re-evaluated to determin latest state
       this.searching = false;
@@ -42,7 +44,6 @@
           return res;
         })
         .then(res => {
-
           this.searching = true;
           this.pinWebService.search({
             q: res.data.title
@@ -62,13 +63,23 @@
               this.searching = false;
               throw err;
             }).finally(() => {
-              this.commentJs.ayncRefresh();
+              this.afterPinInit();
             });
         });
     }
 
     $onDestroy() {
       this.MetaService.reset();
+    }
+
+    afterPinInit() {
+      this.commentJs.ayncRefresh();
+      this.twitterJs.initalized
+        .then(twttr => {
+          $timeout(() => {
+            twttr.widgets.load(elem);
+          }, delayParse);
+        });
     }
 
     addLike(pin) {

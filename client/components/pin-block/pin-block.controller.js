@@ -5,7 +5,7 @@
 
     class PinBlockController {
 
-        constructor($scope, $element, $attrs, pinWebService, Auth, ScrollUtil, Util, searchService) {
+        constructor($element, $attrs, pinWebService, Auth, ScrollUtil, Util, searchService) {
             this.pinWebService = pinWebService;
             this.Auth = Auth;
             this.Util = Util;
