@@ -4,7 +4,16 @@
   const delayParse = 0;
 
   angular.module('chronopinNodeApp')
-    .directive('compileMe', function ($compile) {
+    .directive('compileMe', function ($compile,  $timeout, twitterJs) {
+
+      function afterPinInit(elem) {
+        twitterJs.initalized
+          .then(twttr => {
+            $timeout(() => {
+              twttr.widgets.load(elem);
+            }, delayParse);
+          });
+      }
 
       function createHTML(html, scope) {
         let el = document.createElement('DIV');
@@ -19,9 +28,16 @@
         scope: {},
         link: function postLink(scope, elem, attrs) {
           attrs.$observe('html', function (newValue) {
-            let html = newValue;
-            let $el = $(createHTML(html, scope));
-            elem.empty().append($el);
+
+            // scope.$apply(() => {
+              let html = newValue;
+              let htmlEl = createHTML(html, scope);
+              let $el = $(htmlEl);
+              elem.empty().append($el);
+              afterPinInit(htmlEl);
+            // });
+
+
           });
         }
       };

@@ -7,12 +7,14 @@
 
   class CreateController {
 
-    constructor($window, $state, $scope, Auth, $q, $rootScope, $stateParams, $http, twitterJs, pinWebService, scrapeService, appConfig, Util /*, $log, modelInjector */) {
+    constructor($window, $state, $scope, Auth, $q, $rootScope, $stateParams, $http, $timeout, $element, twitterJs, pinWebService, scrapeService, appConfig, Util /*, $log, modelInjector */) {
       //PinGroups || (PinGroups = modelInjector.getPinGroups());
       this.twitterJs = twitterJs;
       this.pinRecieved = false;
       this.$window = $window;
       this.$rootScope = $rootScope;
+      this.$timeout = $timeout;
+      this.$element = $element;
 
       // different states of pin
       this.pin = { useMedia: true };
@@ -416,7 +418,8 @@
     refreshEmbed() {
       this.twitterJs.initalized
         .then(twttr => {
-          $timeout(() => {
+          this.$timeout(() => {
+            const elem = this.$element[0];
             twttr.widgets.load(elem);
           }, delayParse);
         });
