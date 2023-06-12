@@ -2,7 +2,7 @@ import azure from 'azure-storage';
 import config from '../config/environment';
 import * as log from '../util/log';
 
-let containerName = 'thumb2';
+let containerName = config.thumbFolder;
 const retryOperations = new azure.ExponentialRetryPolicyFilter();
 
 if (!config.azureStorage.AZURE_STORAGE_CONNECTION_STRING) {

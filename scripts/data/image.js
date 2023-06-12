@@ -9,7 +9,7 @@ import {
   Medium,
   FullPins
 } from '../../server/model';
-
+import config from '../../server/config/environment';
 import * as azureBlob from '../../server/azure-blob';
 import fs from 'fs';
 const jsdom = require("jsdom");
@@ -28,8 +28,8 @@ module.exports.setup = function (opt) {
 };
 
 module.exports.execute = function () {
-  const originalContainerName = 'thumb';
-  const containerName = 'thumb2';
+  const originalContainerName = config.thumbFolder;
+  const containerName = 't';
   return Promise.resolve('Begin Image Execute')
     .then(() => {
       return azureBlob.setup({ containerName });

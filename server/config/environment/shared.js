@@ -1,6 +1,7 @@
 'use strict';
 
 // This data also goes into client config
+const thumbFolder = 't';
 exports = module.exports = {
   searchPrefix: {
     threadEmoji: "🧵",
@@ -23,7 +24,8 @@ exports = module.exports = {
       postFix: '-chrono-lg'
     }
   },
-  thumbUrlPrefix: 'https://chronopin.blob.core.windows.net/thumb2/',
+  thumbFolder: thumbFolder,
+  thumbUrlPrefix: `https://chronopin.blob.core.windows.net/${thumbFolder}/`,
   fbAppId: '560731380662615',
   gaAppId: 'UA-103783559-1',
   scrapeType: {
