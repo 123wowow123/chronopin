@@ -122,18 +122,22 @@ export default function (app) {
           const dom = new JSDOM(pin.description);
           const document = dom.window.document;
           const querySelector = document.querySelector('p');
-          const description = querySelector && querySelector.textContent ? querySelector.textContent.trim() :'';
+          const description = querySelector && querySelector.textContent ? querySelector.textContent.trim() : '';
           const medium = _.get(pin, 'media[0]');
           let mediaType, mediaWidth, mediaHeight;
-          let mediaContent = medium ? medium.getUrl() : undefined;
+          let mediaContent = medium ? medium.getUrl() : '';
           if (!mediaContent) {
             const querySelector = document.querySelector('img');
-            mediaContent = querySelector && querySelector.src ? querySelector.src : undefined;
+            mediaContent = querySelector && querySelector.src ? querySelector.src : '';
             mediaType = 'og:image';
           } else {
             mediaType = getOgType(medium.type);
             // mediaWidth = medium.thumbWidth;
             // mediaHeight = medium.thumbHeight;
+          }
+
+          if (mediaType === 'og:image') {
+            mediaContent = mediaContent.replace('.webp', '.jpeg');
           }
 
           const meta = {

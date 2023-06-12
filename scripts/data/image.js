@@ -28,8 +28,8 @@ module.exports.setup = function (opt) {
 };
 
 module.exports.execute = function () {
-  const originalContainerName = config.thumbFolder;
-  const containerName = 't';
+  const originalContainerName = 'thumb2';
+  const containerName = config.thumbFolder;
   return Promise.resolve('Begin Image Execute')
     .then(() => {
       return azureBlob.setup({ containerName });
@@ -57,7 +57,8 @@ module.exports.execute = function () {
           // if (!m.thumbHeight) {
           //   console.log('missing thumbHeight:', m.thumbName, m.originalUrl);
           // }
-          const thumbName = m.thumbName.replace(/\.[^/.]+$/, "");
+          let thumbName = m.thumbName.replace(/\.[^/.]+$/, "");
+          thumbName = thumbName.replace(/-chrono-lg/, "");
           let promise = Medium.createAndSaveToCDN(m.originalUrl, thumbName)
             .then(t => {
               m.thumbName = t.thumbName;
@@ -100,10 +101,12 @@ module.exports.execute = function () {
           if (src) {
             let urlParts = src.split("/");
             let filename = urlParts[urlParts.length - 1];
-            const thumbNameHtml = filename.replace(/\.[^/.]+$/, "");
+            let thumbNameHtml = filename.replace(/\.[^/.]+$/, "");
+            thumbNameHtml = thumbNameHtml.replace(/-chrono-lg/, "");
             let promise = Medium.createAndSaveToCDN(src, thumbNameHtml)
               .then(t => {
                 p.description = p.description.replaceAll(src, t.getImageUrl());
+                p.sourceDescription = p.sourceDescription.replaceAll(src, t.getImageUrl());
                 return t;
               })
               .catch(e => {

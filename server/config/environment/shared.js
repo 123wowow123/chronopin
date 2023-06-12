@@ -1,7 +1,7 @@
 'use strict';
 
 // This data also goes into client config
-const thumbFolder = 't';
+const thumbFolder = 'thumb';
 exports = module.exports = {
   searchPrefix: {
     threadEmoji: "🧵",

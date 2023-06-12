@@ -311,28 +311,32 @@ function _mapAndSaveThumb(options) {
 }
 
 function _getImageStatAndSaveImageFromLocalPath(localPath, thumbName) {
-  const thumbNameGuid = thumbName ? thumbName : uuidv4();
-  return image.createThumbFromLocalPath(localPath, IMAGE_THUMB_OPTIONS)
-    .then(_mapAndSaveThumb(Object.assign({}, IMAGE_THUMB_OPTIONS, { thumbNameGuid })))
-    .then(() => {
-      return image.createThumbFromLocalPath(localPath, IMAGE_LARGE_OPTIONS)
-        .then(_mapAndSaveThumb(Object.assign({}, IMAGE_LARGE_OPTIONS, { thumbNameGuid })))
-        .then((thumbObj) => {
-          return thumbObj;
-        })
-    });
+  const createImageFn = image.createThumbFromLocalPath;
+  return _getImageStatAndSaveImageFromLocalPath(createImageFn, localPath, thumbName)
 }
 
 function _getImageStatAndSaveImage(imageUrl, thumbName) {
+  const createImageFn = image.createThumbFromUrl;
+  return _getImageStatAndSaveImageFromLocalPath(createImageFn, imageUrl, thumbName)
+}
+
+function _getImageStatAndSaveImageFromLocalPath(createImageFn, path, thumbName) {
   const thumbNameGuid = thumbName ? thumbName : uuidv4();
-  return image.createThumbFromUrl(imageUrl, IMAGE_THUMB_OPTIONS)
-    .then(_mapAndSaveThumb(Object.assign({}, IMAGE_THUMB_OPTIONS, { thumbNameGuid })))
+  return Promise.resolve()
     .then(() => {
-      return image.createThumbFromUrl(imageUrl, IMAGE_LARGE_OPTIONS)
+      return createImageFn(path, Object.assign({}, IMAGE_THUMB_OPTIONS, { type: 'jpeg' }))
+        .then(_mapAndSaveThumb(Object.assign({}, IMAGE_THUMB_OPTIONS, { thumbNameGuid })));
+    })
+    .then(() => {
+      return createImageFn(path, IMAGE_THUMB_OPTIONS)
+        .then(_mapAndSaveThumb(Object.assign({}, IMAGE_THUMB_OPTIONS, { thumbNameGuid })));
+    })
+    .then(() => {
+      return createImageFn(path, IMAGE_LARGE_OPTIONS)
         .then(_mapAndSaveThumb(Object.assign({}, IMAGE_LARGE_OPTIONS, { thumbNameGuid })))
-        .then((thumbObj) => {
-          return thumbObj;
-        })
+        // .then((thumbObj) => {
+        //   return thumbObj;
+        // })
     });
 }
 
