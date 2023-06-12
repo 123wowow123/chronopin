@@ -29,7 +29,7 @@ scale up image with math
 once user scrolls then don't reset scroll on load complete
 
 SEO:
- test "site:"
+ test "site:www.chronopin.com"
  add button for infinit scroll seo
  Add alt text for image/media for SEO
 Google index sub pages: RSS, mRSS, and Atom 1.0
@@ -51,6 +51,7 @@ Buy keywords in content that will turn into link where it will show map and near
 Pin dollar tag should link to referal page in new tab
 
 Features:
+integrate with filemoon++
 Stock ticker ++
 show new pin added banner and clicking it will take to search page with only new pins +
 Show top 6 pin on main timeline with ellipsis button for show more
