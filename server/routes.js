@@ -137,6 +137,7 @@ export default function (app) {
           }
 
           if (mediaType === 'og:image') {
+            mediaContent = mediaContent.replace(config.uploadImage.large.postFix, '');
             mediaContent = mediaContent.replace('.webp', '.jpeg');
           }
 
