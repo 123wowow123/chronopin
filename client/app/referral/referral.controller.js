@@ -4,7 +4,7 @@
 (function () {
 
   class ReferralController {
-
+    constructor() {}
   }
 
   angular.module('chronopinNodeApp')

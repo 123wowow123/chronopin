@@ -38,6 +38,10 @@ angular.module('chronopinNodeApp', [
   .controller('AppCtrl', ($scope, searchService, $rootScope, MetaService, $transitions) => {
     // Initializes searchService singleton
     $rootScope.metaservice = MetaService;
+    window.open = function (url, name, specs, replace) {
+      // Prevent Popup ads from 3rd party
+      console.info("ad blocked");
+    }
   })
 //   .run(['$rootScope', ($rootScope, $transitions) => {
 //     // $rootScope.$on('$routeChangeSuccess', (event, current, previous) => {

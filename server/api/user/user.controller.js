@@ -49,11 +49,11 @@ export function patchEntity(newUser) {
 export function addEntity(newUser) {
   //debugger
   return newUser.save()
-    .then(({
+    .then((
       user
-    }) => {
+    ) => {
       let event = "afterCreate";
-      UserEmitter.emit(event, user);
+      UserEmitter.emit(event, user.user);
       return user;
     });
 }

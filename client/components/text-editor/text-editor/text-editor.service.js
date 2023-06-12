@@ -85,7 +85,17 @@
                   strikethrough: Strikethrough,
                   embed: {
                     class: Embed,
-                    inlineToolbar: true
+                    inlineToolbar: true,
+                    config: {
+                      services: {
+                        codepen: {
+                          regex: /https:\/\/filemoon\.sx\/d\/([^\/\?\&]*)\/.*/,
+                          embedUrl: 'https://filemoon.sx/e/<%= remote_id %>/',
+                          html: `<iframe loading="lazy" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="640" height="360" allowfullscreen></iframe>`,
+                          id: (groups) => groups.join('')
+                        }
+                      }
+                    }
                   },
 
                   image: {
