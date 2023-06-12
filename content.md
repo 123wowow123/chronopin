@@ -42,6 +42,7 @@ Page Speed Test
 https://pagespeed.web.dev/analysis/https-chronopin-com/3dx7zai5z7?hl=en&form_factor=mobile
 FB Sharing Debugger
 https://developers.facebook.com/tools/debug/
+Promote on reddit
 
 Monetize:
 can suggest airbnb and flights referals when map data is available
@@ -52,7 +53,7 @@ Pin dollar tag should link to referal page in new tab
 Features:
 Stock ticker ++
 show new pin added banner and clicking it will take to search page with only new pins +
-
+Show top 6 pin on main timeline with ellipsis button for show more
 
 browser extention
 mobile app

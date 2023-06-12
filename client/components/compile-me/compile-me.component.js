@@ -4,7 +4,7 @@
   const delayParse = 0;
 
   angular.module('chronopinNodeApp')
-    .directive('compileMe', function ($compile,  $timeout, twitterJs) {
+    .directive('compileMe', function ($compile, $timeout, twitterJs) {
 
       function afterPinInit(elem) {
         twitterJs.initalized
@@ -17,7 +17,7 @@
 
       function createHTML(html, scope) {
         let el = document.createElement('DIV');
-        el.innerHTML = html
+        el.innerHTML = html;
         let link = $compile(el);
         link(scope);
         return el;
@@ -28,16 +28,11 @@
         scope: {},
         link: function postLink(scope, elem, attrs) {
           attrs.$observe('html', function (newValue) {
-
-            // scope.$apply(() => {
-              let html = newValue;
-              let htmlEl = createHTML(html, scope);
-              let $el = $(htmlEl);
-              elem.empty().append($el);
-              afterPinInit(htmlEl);
-            // });
-
-
+            let html = newValue;
+            let htmlEl = createHTML(html, scope);
+            let $el = $(htmlEl);
+            elem.empty().append($el);
+            afterPinInit(htmlEl);
           });
         }
       };
