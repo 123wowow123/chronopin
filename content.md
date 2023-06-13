@@ -1,5 +1,10 @@
 Bugs/priority:
 
+search dropdown add mine (username)
+parent pin no longer admin
+fix calender overlap
+related threds
+
 Before Usable:
 Add edit/delete own pin feature ++
 private group ++
