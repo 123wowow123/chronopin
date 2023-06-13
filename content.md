@@ -3,7 +3,13 @@ Bugs/priority:
 search dropdown add mine (username)
 parent pin no longer admin
 fix calender overlap
-related threds
+related threads
+scrape button should be next to field
+do not auto rescrape
+expand left pane
+pin creation completion should take to pin view
+
+https://filemoon.sx/d/8ueyghs88xj5
 
 Before Usable:
 Add edit/delete own pin feature ++
