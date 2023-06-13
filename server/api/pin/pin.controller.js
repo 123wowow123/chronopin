@@ -162,8 +162,7 @@ export function update(req, res) {
     // userId = +req.user.id,
     pin = new Pin(req.body);
 
-  pin
-    .rescrapeMention();
+  pin.rescrapeMention();
   pin.id = pinId;
 
   return pin.update(user)
