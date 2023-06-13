@@ -242,6 +242,7 @@ $bag-font-color: var(--bag-text-color);
     &__body {
         .embed {
             margin-bottom: 10px;
+
             .overlay {
                 font-size: 50px;
                 display: flex;
@@ -255,6 +256,8 @@ $bag-font-color: var(--bag-text-color);
                 color: white;
                 text-decoration: none;
                 cursor: pointer;
+                background-size: contain !important;
+                background-repeat: no-repeat !important;
             }
         }
     }
