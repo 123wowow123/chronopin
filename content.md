@@ -3,6 +3,7 @@ Bugs/priority:
 Before Usable:
 Add edit/delete own pin feature ++
 private group ++
+Fix infinite scroll up not capturing continuous position problem
 
 Before Usable Bug:
 Editing pin with youtube content will delete youtube content in edit mode ++

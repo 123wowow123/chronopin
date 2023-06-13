@@ -17,9 +17,11 @@
       this.Util = Util;
       this.MetaService = MetaService;
 
+      this.Auth = Auth;
       this.isAdmin = Auth.isAdmin; //bind function so each digest loop it get re-evaluated to determin latest state
       this.searching = false;
       this.pinReady = false;
+      this.pinIsCreatedByUser = false;
       //this.pinApp = pinApp;
       this.pinsQuery = new PinsQuery(); ///////
 
@@ -32,6 +34,7 @@
         .then(res => {
           this.pin = res.data;
           this.pinReady = true;
+          this.pinIsCreatedByUser = this.Auth.checkPinIsCreatedByUser(this.pin.id);
 
           this.MetaService.set(
             _.get(this, 'pin.title'),

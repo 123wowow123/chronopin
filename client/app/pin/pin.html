@@ -148,7 +148,7 @@
 
                 </div>
 
-                <div class="grid__tip" ng-if="$ctrl.isAdmin()">
+                <div class="grid__tip" ng-if="$ctrl.isAdmin() || $ctrl.pinIsCreatedByUser">
                   <button class="btn btn-link" ui-sref="update({id:$ctrl.pin.id})" title="Edit Pin"><i
                       class="fa fa-pencil" aria-hidden="true"></i></button>
                 </div>

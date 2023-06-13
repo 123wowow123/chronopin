@@ -139,6 +139,17 @@
           });
       },
 
+      checkPinIsCreatedByUser(pinUserId) {
+        var value = (currentUser.hasOwnProperty('$promise')) ?
+          currentUser.$promise : currentUser;
+        return $q.when(value)
+          .then(user => {
+            return user.id = pinUserId;
+          }, () => {
+            return false;
+          });
+      },
+
       /**
        * Gets User Real Name on a user
        *   (synchronous)
