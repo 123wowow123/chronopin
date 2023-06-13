@@ -128,12 +128,12 @@ export default class Pin extends BasePin {
       });
   }
 
-  update() {
+  update(updatingUser) {
     return Pin.queryByIdForEdit(this.id)
       .then((res) => {
-
         // TODO: Add to auth middleware
-        if (res.pin.userId !== this.userId || this.userId !== 1) throw "Unauthorized update";
+        if (res.pin.userId !== updatingUser.userId && updatingUser.role !== 'admin') throw "Unauthorized update";
+        this.userId = res.pin.userId;
 
         let beforePinMedia = res.pin.media,
           // originalUserId = beforePinMedia,

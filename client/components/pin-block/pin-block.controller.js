@@ -256,7 +256,7 @@
                         </em>
                     </div> -->
                     <div class="grid__description" ng-if="$ctrl.pin.description">
-                        <compile-me html="{{$ctrl.pin.description}}"></compile-me>
+                        <compile-me html="{{$ctrl.pin.description}}" light="true" pinid="$ctrl.pin.id"></compile-me>
                     </div>
                 </div>
         

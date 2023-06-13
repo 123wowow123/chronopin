@@ -163,11 +163,10 @@ export function update(req, res) {
     pin = new Pin(req.body);
 
   pin
-    .rescrapeMention()
-    .setUser(user);
+    .rescrapeMention();
   pin.id = pinId;
 
-  return pin.update()
+  return pin.update(user)
     .then(({
       pin
     }) => {
