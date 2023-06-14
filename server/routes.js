@@ -17,7 +17,8 @@ const ejs = require('ejs');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 import {
-  Pin
+  Pin,
+  FullPins
 } from './model';
 
 export default function (app) {
@@ -96,7 +97,6 @@ export default function (app) {
           const js = ejs.render(mainPinDataContent, { mainPinData: null });
           res.send(js);
         });
-
     });
 
   app.route('/pin/:id')
@@ -151,6 +151,25 @@ export default function (app) {
           res.render(app.get('appPath') + '/index.html', { meta });
         }).catch((e) => {
           res.render(app.get('appPath') + '/index.html', { meta: config.meta });
+        });
+    });
+
+  let sitemapTemplate;
+  app.route('/sitemap.txt')
+    .get((req, res) => {
+      if (!sitemapTemplate) {
+        sitemapTemplate = fs.readFileSync(app.get('views') + '/sitemap.ejs', 'utf8');
+      }
+      const fromDateTime = new Date(0),
+        userId = 0,
+        lastPinId = 0,
+        pageSize = 2147483647; // Maximum values for an integer in SQL Server
+      return FullPins.queryForwardByDate(fromDateTime, userId, lastPinId, pageSize)
+        .then(({
+          pins
+        }) => {
+          const txt = ejs.render(sitemapTemplate, { pins });
+          res.send(txt);
         });
     });
 
