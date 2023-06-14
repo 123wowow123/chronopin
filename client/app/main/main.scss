@@ -294,7 +294,7 @@ $bag-font-color: var(--bag-text-color);
 
     &__headline {
         display: flex;
-        font-size: 10px;
+        font-size: 12px;
         justify-content: space-between;
     }
 
@@ -380,7 +380,7 @@ $bag-font-color: var(--bag-text-color);
     }
 
     &__uploaded-date {
-        @extend .text-muted;
+        color: #aaa;
     }
 
     &__social {
