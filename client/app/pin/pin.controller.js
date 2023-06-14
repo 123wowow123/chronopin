@@ -36,7 +36,7 @@
         .then(res => {
           this.pin = res.data;
           this.pinReady = true;
-          this.Auth.checkPinIsCreatedByUser(this.pin.id)
+          this.Auth.checkPinIsCreatedByUser(this.pin.userId)
             .then(value => {
               this.pinIsCreatedByUser = value;
             });
