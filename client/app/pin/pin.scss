@@ -34,7 +34,7 @@
     flex-basis: $ipad-landscape / 2;
 
     &.\--wide {
-      flex-basis: initial;
+      flex-basis: 100%;
     }
 
     @media only screen and (max-width: $ipad-landscape) {
