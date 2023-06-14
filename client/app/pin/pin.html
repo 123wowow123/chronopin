@@ -9,7 +9,7 @@
         data-ad-format="auto" data-full-width-responsive="true"></ins>
     </div>
 
-    <div class="pin__preview">
+    <div class="pin__preview" ng-class="{ '\--wide': $ctrl.wide}">
 
       <div class="pin__panel" ng-if="$ctrl.pinReady">
 
@@ -34,36 +34,43 @@
           <!-- <div ng-switch-default></div> -->
         </div>
 
-        <div class="grid__headline --meta">
-          <div class="headline-left">
+        <div class="pin__control">
+          <div class="grid__headline --meta">
+            <div class="headline-left">
 
-            <time class="posted-time" datetime="{{$ctrl.pin.utcCreatedDateTime}}">
-              {{$ctrl.pin.utcCreatedDateTime | date : "MM/dd/yyyy 'at' h:mm a" | lowercase}}
-            </time>
+              <time class="posted-time" datetime="{{$ctrl.pin.utcCreatedDateTime}}">
+                {{$ctrl.pin.utcCreatedDateTime | date : "MM/dd/yyyy 'at' h:mm a" | lowercase}}
+              </time>
 
-            <span class="rubric__divider">/</span>
-            <a ng-href="/search?q={{$ctrl.pin.user.userName}}" class="rubric"
-              ng-attr-aria-label="Read more pins posted from or containing user {{$ctrl.pin.user.userName}}">
-              <span>{{$ctrl.pin.user.userName}}</span>
-            </a>
-          </div>
+              <span class="rubric__divider">/</span>
+              <a ng-href="/search?q={{$ctrl.pin.user.userName}}" class="rubric"
+                ng-attr-aria-label="Read more pins posted from or containing user {{$ctrl.pin.user.userName}}">
+                <span>{{$ctrl.pin.user.userName}}</span>
+              </a>
+            </div>
 
-          <div class="grid__uploaded-date" ng-switch="$ctrl.pin.allDay">
-            <span ng-switch-when="true">
-              <em>
-                <time datetime='{{$ctrl.pin.utcStartDateTime}}'>Starts {{$ctrl.pin.utcStartDateTime |
-                  date:"MM/dd/yyyy"}}</time>
-                <time datetime='PT24H'> - All day</time>
+            <div class="grid__uploaded-date" ng-switch="$ctrl.pin.allDay">
+              <span ng-switch-when="true">
+                <em>
+                  <time datetime='{{$ctrl.pin.utcStartDateTime}}'>Starts {{$ctrl.pin.utcStartDateTime |
+                    date:"MM/dd/yyyy"}}</time>
+                  <time datetime='PT24H'> - All day</time>
+                </em>
+              </span>
+              <em ng-switch-default>
+                <time datetime='{{$ctrl.pin.utcStartDateTime}}'>Starts {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy
+                  h:mma"}}</time>
+                <span ng-if="$ctrl.pin.utcEndDateTime">to</span>
+                <time ng-if="$ctrl.pin.utcEndDateTime"
+                  datetime='{{$ctrl.pin.utcEndDateTime}}'>{{$ctrl.pin.utcEndDateTime
+                  | date:"MM/dd/yyyy h:mma"}}</time>
               </em>
-            </span>
-            <em ng-switch-default>
-              <time datetime='{{$ctrl.pin.utcStartDateTime}}'>Starts {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy
-                h:mma"}}</time>
-              <span ng-if="$ctrl.pin.utcEndDateTime">to</span>
-              <time ng-if="$ctrl.pin.utcEndDateTime" datetime='{{$ctrl.pin.utcEndDateTime}}'>{{$ctrl.pin.utcEndDateTime
-                | date:"MM/dd/yyyy h:mma"}}</time>
-            </em>
+            </div>
           </div>
+
+          <button type="button" class="wide-control" ng-click="$ctrl.toggleWide()"
+            title="Click to toggle wide view mode"><i class="fa" aria-hidden="true"
+              ng-class="{'fa-compress': $ctrl.wide, 'fa-expand': !$ctrl.wide}"></i></button>
         </div>
 
         <h1 class="grid__heading">

@@ -212,6 +212,7 @@
     urlChanged() {
       let sourceUrl = this.pin.sourceUrl;
       if (sourceUrl) {
+        this.lastScrapeUrl = this.pin.sourceUrl;
         this
           .resetForScrape()
           .scrapePage(sourceUrl);
@@ -242,6 +243,18 @@
         .finally(() => {
           this.setScraping(false);
           this.hasScrapedImage = true;
+        });
+      return this;
+    }
+
+    delete(id) {
+      this.enableForm(false);
+      this.pinWebService.delete(id)
+        .then(res => {
+          this.$state.go('main');
+        })
+        .finally(() => {
+          this.enableForm(true);
         });
       return this;
     }
@@ -288,7 +301,7 @@
         }
         return submitPromise
           .then(response => {
-            this.$state.go('main');
+            this.$state.go('pin', { id: response.data.id });
             return response;
           });
       }, 0);

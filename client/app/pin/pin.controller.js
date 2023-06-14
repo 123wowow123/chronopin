@@ -7,7 +7,7 @@
 
   class PinController {
 
-    constructor($stateParams, pinWebService, searchService, Auth, appConfig, modelInjector, commentJs, Util, MetaService) {
+    constructor($stateParams, $window, pinWebService, searchService, Auth, appConfig, modelInjector, commentJs, Util, MetaService) {
       PinsQuery = PinsQuery || modelInjector.getPinsQuery();
       this.pinWebService = pinWebService;
       this.$stateParams = $stateParams;
@@ -16,6 +16,7 @@
       this.searchService = searchService;
       this.Util = Util;
       this.MetaService = MetaService;
+      this.$window = $window;
 
       this.Auth = Auth;
       this.isAdmin = Auth.isAdmin; //bind function so each digest loop it get re-evaluated to determin latest state
@@ -24,6 +25,7 @@
       this.pinIsCreatedByUser = false;
       //this.pinApp = pinApp;
       this.pinsQuery = new PinsQuery(); ///////
+      this.wide = $window.localStorage.getItem("wide") == "true";
 
       this.pin;
     }
@@ -140,6 +142,11 @@
 
     getGoogleMapUrl() {
       return this.Util.getGoogleMapUrl(this.pin);
+    }
+
+    toggleWide() {
+      this.wide = !this.wide;
+      this.$window.localStorage.setItem("wide", this.wide)
     }
 
   }

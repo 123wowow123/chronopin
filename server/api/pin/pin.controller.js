@@ -18,13 +18,17 @@ import {
 const PinEmitter = new EventEmitter();
 const pageSize = config.pagination.pageSize;
 
-function _removeEntity(res) {
+function _removeEntity(req, res) {
   return function (entity) {
     if (entity) {
-      return entity.delete()
+      let pin = entity.pin;
+      let updatingUser = req.user;
+      if (pin.userId !== updatingUser.id && updatingUser.role !== 'admin') throw "Unauthorized update";
+
+      return pin.delete()
         .then(obj => {
           const event = "afterDestroy";
-          PinEmitter.emit(event, entity);
+          PinEmitter.emit(event, pin);
           return obj;
         })
         .then(response.withNoResult(res));
@@ -182,7 +186,7 @@ export function update(req, res) {
 export function destroy(req, res) {
   return Pin.queryById(req.params.id)
     .then(response.handleEntityNotFound(res))
-    .then(_removeEntity(res))
+    .then(_removeEntity(req, res))
     .catch(response.handleError(res));
 }
 

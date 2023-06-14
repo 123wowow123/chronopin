@@ -178,21 +178,30 @@
 
 }
 
-.start{
-  z-index: 7;
+.start {
+  z-index: 2;
+
+  &:focus-within {
+    z-index: 5;
+  }
 
   input {
-    z-index: 5 !important;
+    z-index: 1 !important;
   }
 }
+
 .end {
-  z-index: 6;
+  z-index: 1;
 
-  input {
-    z-index: 5 !important;
+  &:focus-within {
+    z-index: 5;
   }
 
+  input {
+    z-index: 1 !important;
+  }
 }
+
 
 .sync-to-start {
   margin: 0 auto;
@@ -363,8 +372,11 @@ twitter-pin {
 }
 
 text-editor {
-  z-index: 10;
   position: relative;
+
+  &:focus-within {
+    z-index: 5;
+  }
 }
 
 /* Small Devices, Tablets */

@@ -17,20 +17,22 @@
 
               <div class="form-group" ng-class="{'has-error' : pinForm.parentId.$invalid && pinForm.parentId.$dirty}"
                 ng-if="$ctrl.mode === 'edit' ">
-                <!-- Admin -->
-                <label for="parentId" class="control-label">Parent Pin ID (Admin)</label>
+                <label for="parentId" class="control-label">Parent Pin ID</label>
                 <input name="parentId" type="number" class="form-control" id="parentId" ng-model="$ctrl.pin.parentId">
               </div>
+
               <div style="position: relative;">
                 <a href="{{$ctrl.pin.sourceUrl}}" target="_blank" class="btn btn-link --open-source-link">Open Link
                   <span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></a>
-                <div class="form-group"
-                  ng-class="{'has-error' : pinForm.sourceUrl.$invalid && pinForm.sourceUrl.$dirty}">
+                <div class="form-group">
                   <label for="sourceUrl" class="control-label">Source Url</label> <span class="analyzing-url-text"
                     ng-if="$ctrl.scraping">(Analyzing Page...)</span>
-                  <input name="sourceUrl" type="url" class="form-control" id="sourceUrl"
-                    placeholder="https://www.example.com" ng-model="$ctrl.pin.sourceUrl" ng-change="$ctrl.urlChanged()"
-                    required>
+                  <div class="input-group"
+                    ng-class="{'has-error' : pinForm.sourceUrl.$invalid && pinForm.sourceUrl.$dirty}">
+                    <input name="sourceUrl" type="url" class="form-control" id="sourceUrl"
+                      placeholder="https://www.example.com" ng-model="$ctrl.pin.sourceUrl" required>
+                    <div class="input-group-addon" ng-click="$ctrl.urlChanged()">Scrape</div>
+                  </div>
                 </div>
 
                 <div ng-switch="$ctrl.hasScrapedText && $ctrl.scrapingMessage($ctrl.pinSuggestion.title).code == 2">
@@ -81,9 +83,10 @@
                   </div>
 
                   <div ng-switch="$ctrl.activeTabs['content']" ng-if="$ctrl.pinRecieved">
-                    <text-editor ng-switch-when="0" ng-model="$ctrl.pin.sourceDescription" description="$ctrl.pin.description"
-                      on-change="$ctrl.descriptionOnChange(html)"></text-editor>
-                    <text-editor ng-switch-when="1" ng-model="$ctrl.pinSuggestion.sourceDescription" description="$ctrl.pinSuggestion.description"
+                    <text-editor ng-switch-when="0" ng-model="$ctrl.pin.sourceDescription"
+                      description="$ctrl.pin.description" on-change="$ctrl.descriptionOnChange(html)"></text-editor>
+                    <text-editor ng-switch-when="1" ng-model="$ctrl.pinSuggestion.sourceDescription"
+                      description="$ctrl.pinSuggestion.description"
                       on-change="$ctrl.suggestionDescriptionOnChange(html)"></text-editor>
                   </div>
 
@@ -395,10 +398,10 @@
                   <div class="form-group create-footer" ng-if="!$ctrl.showCreateFooter">
                     <div class="row">
                       <div class="col-xs-6">
-                        <button type="button" class="btn btn-primary" ng-click="$ctrl.scrapePage($ctrl.pin.sourceUrl)"
-                          ng-if="$ctrl.mode === 'edit'">Scrape</button>
-                        <button type="button" class="btn btn-primary" ng-click="$ctrl.scrapeImage($ctrl.pin.sourceUrl)"
-                          ng-if="$ctrl.mode === 'edit'">Scrape Image</button>
+                        <!-- <button type="button" class="btn btn-primary" ng-click="$ctrl.scrapeImage($ctrl.pin.sourceUrl)"
+                          ng-if="$ctrl.mode === 'edit'">Scrape Image</button> -->
+                        <button type="button" class="btn btn-danger" ng-if="$ctrl.pin.id" ng-click="$ctrl.delete($ctrl.pin.id)"
+                          ng-if="$ctrl.mode === 'edit'">Delete</button>
                       </div>
                       <div class="col-xs-6">
                         <div class="pull-right">

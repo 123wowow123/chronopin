@@ -11,7 +11,8 @@ exports = module.exports = {
   userRoles: ['guest', 'user', 'admin'],
   searchChoices: [
     { name: 'All', value: undefined },
-    { name: 'Watched', value: 'watch' }
+    { name: 'Watched', value: 'watch' },
+    { name: 'Mine', value: 'mine' }
     //'People'
   ],
   uploadImage: {

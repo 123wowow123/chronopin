@@ -21,6 +21,13 @@
          });
        };
 
+       this.delete = function(id) {
+        return $http({
+          url: '/api/pins/' + id,
+          method: 'DELETE'
+        });
+      };
+
        this.getEdit = function(id, data) {
         return $http({
           url: '/api/pins/edit/' + id,

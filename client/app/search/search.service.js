@@ -3,12 +3,13 @@
 (function () {
 
     class SearchService {
-        constructor($rootScope, $state, $transitions, appConfig) {
+        constructor($rootScope, $state, $transitions, Auth, appConfig) {
             this.lastNotification;
             this.appConfig = appConfig;
             this.$rootScope = $rootScope;
             this.$state = $state;
             this.locationService = $state.router.locationService;
+            this.Auth = Auth;
 
             const extractedQuery = this._extractQuery(this.locationService);
             if (extractedQuery.path == "/search") {
@@ -64,6 +65,10 @@
         goSearch(searchText, searchChoiceText) {
             if (!searchText && !searchChoiceText) {
                 return this.goToMain();
+            } else if (searchChoiceText === 'mine') {
+                let userName = this.Auth.getCurrentUserName();
+                searchText = `${userName}`;
+                searchChoiceText = undefined;
             }
             this.$state.go('search', { q: searchText, f: searchChoiceText });
             return this;

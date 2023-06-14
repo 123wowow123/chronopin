@@ -1,5 +1,26 @@
 .pin {
 
+  &__control {
+    display: flex;
+    align-items: baseline;
+
+    .grid__headline {
+      flex-grow: 1;
+    }
+
+    .wide-control {
+      background-color: transparent;
+      border: none;
+      font-size: 12px;
+      padding: 0;
+      height: 25px;
+      width: 25px;
+      @media only screen and (max-width: $ipad-landscape) {
+        display: none;
+      }
+    }
+  }
+
   &__content {
     background-color: var(--primary-bg-color);
     display: flex;
@@ -11,6 +32,10 @@
     padding: 15px;
     flex-grow: 1;
     flex-basis: $ipad-landscape / 2;
+
+    &.\--wide {
+      flex-basis: initial;
+    }
 
     @media only screen and (max-width: $ipad-landscape) {
       padding: 15px 0;
@@ -74,7 +99,7 @@
   &__image {
     max-width: 100%;
     height: auto;
-}
+  }
 
   &_suggestions {
     max-width: 100%;

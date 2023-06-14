@@ -402,7 +402,7 @@ function _deleteMSSQL(pin) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'UpdatePin';
+        const StoredProcedureName = 'DeletePin';
         let request = new mssql.Request(conn)
           .input('id', mssql.Int, pin.id)
           .output('utcDeletedDateTime', mssql.DateTime2(7));

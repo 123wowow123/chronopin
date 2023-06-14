@@ -1,18 +1,8 @@
 Bugs/priority:
 
-search dropdown add mine (username)
-parent pin no longer admin
-fix calender overlap
-related threads
-scrape button should be next to field
-do not auto rescrape
-expand left pane
-pin creation completion should take to pin view
-
 https://filemoon.sx/d/8ueyghs88xj5
 
 Before Usable:
-Add edit/delete own pin feature ++
 private group ++
 Fix infinite scroll up not capturing continuous position problem
 
@@ -63,6 +53,7 @@ Buy keywords in content that will turn into link where it will show map and near
 Pin dollar tag should link to referal page in new tab
 
 Features:
+related threads++
 integrate with filemoon++
 Stock ticker ++
 show new pin added banner and clicking it will take to search page with only new pins +

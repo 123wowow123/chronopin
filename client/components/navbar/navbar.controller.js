@@ -31,6 +31,11 @@ class NavbarController {
   }
 
   $onInit() {
+    if (this.searchService.lastNotification) {
+      this.search = this.searchService.lastNotification.searchText;
+      this.searchChoice = this.Util.sanitizeSearchChoice(this.searchService.lastNotification.searchChoiceText)
+    }
+
     const searchSubmitListener = this.$scope.$on('search:submit', (event, args) => {
       if (!args.searchText && !args.searchChoiceText) {
         this.clearSearch();

@@ -130,6 +130,13 @@ export default class SearchPins extends BasePins {
         return outPut;
     }
 
+    static delete(pinId) {
+        return semanticSearchDelete(pinId)
+            .then((res) => {
+                return res;
+            });
+    }
+
     static search(userId, searchText) {
         //ToDo: get tags and remove them and then do semanticSearch then recombine results
         const semanticPinsPromise = semanticSearch(searchText, SearchPins.numberOfResults)
@@ -206,6 +213,22 @@ function semanticSearch(searchText, numberOfResults) {
         method: 'GET',
         uri: uri,
         json: true // Automatically stringifies the body to JSON
+    };
+
+    return rp(options);
+};
+
+function semanticSearchDelete(pinId) {
+    const serviceUrl = config.faiss.serviceUrl;
+    const uri = `${serviceUrl}/faiss/remove`
+
+    let options = {
+        method: 'DELETE',
+        uri: uri,
+        json: true, // Automatically stringifies the body to JSON
+        body: {
+            "id": pinId
+        }
     };
 
     return rp(options);
