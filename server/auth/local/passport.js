@@ -5,7 +5,6 @@ import {
 import { User } from '../../model'
 
 function localAuthenticate(email, password, done) {
-  console.log('localAuthenticate', email, password)
   User.getByEmail(email.toLowerCase())
     .then(({user}) => {
       if (!user) {

@@ -144,7 +144,7 @@
           currentUser.$promise : currentUser;
         return $q.when(value)
           .then(user => {
-            return user.id = pinUserId;
+            return user.id == pinUserId;
           }, () => {
             return false;
           });

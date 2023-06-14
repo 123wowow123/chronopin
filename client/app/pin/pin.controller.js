@@ -36,7 +36,10 @@
         .then(res => {
           this.pin = res.data;
           this.pinReady = true;
-          this.pinIsCreatedByUser = this.Auth.checkPinIsCreatedByUser(this.pin.id);
+          this.Auth.checkPinIsCreatedByUser(this.pin.id)
+            .then(value => {
+              this.pinIsCreatedByUser = value;
+            });
 
           this.MetaService.set(
             _.get(this, 'pin.title'),
