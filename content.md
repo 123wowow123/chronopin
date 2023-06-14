@@ -3,6 +3,16 @@ Bugs/priority:
 https://filemoon.sx/d/8ueyghs88xj5
 
 hightlight scrape when available
+failed login attempt stuck at login page
+calender seep through
+filemoon share link
+h1 on home not longer than approximately 150 characters in length.
+
+https://www.bing.com/indexnow#implementation
+https://blogs.bing.com/webmaster/february-2023/The-Importance-of-Setting-the-lastmod-Tag-in-Your-Sitemap
+
+Add more descriptive content inside your <title> tag. Make it unique, and relevant to best describe the page content. Use our Keyword Research Tool to find relevant keyword ideas for title tag.
+
 
 Before Usable:
 private group ++
@@ -61,6 +71,7 @@ Stock ticker ++
 show new pin added banner and clicking it will take to search page with only new pins +
 Show top 6 pin on main timeline with ellipsis button for show more
 
+ML interest match to threads
 browser extention
 mobile app
 anime review integration +

@@ -7,6 +7,11 @@
 }
 
 .create {
+
+  .input-group-addon{
+    cursor: pointer;
+  }
+
   &--detached-control {
     // offset for footer
     padding-bottom: 60px;

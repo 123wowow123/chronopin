@@ -31,7 +31,7 @@
                     ng-class="{'has-error' : pinForm.sourceUrl.$invalid && pinForm.sourceUrl.$dirty}">
                     <input name="sourceUrl" type="url" class="form-control" id="sourceUrl"
                       placeholder="https://www.example.com" ng-model="$ctrl.pin.sourceUrl" required>
-                    <div class="input-group-addon" ng-click="$ctrl.urlChanged()">Scrape</div>
+                    <div class="input-group-addon" ng-click="$ctrl.urlChanged()" role="button">Scrape</div>
                   </div>
                 </div>
 
@@ -234,10 +234,10 @@
                     <div class="input-group-addon">$</div>
                     <input name="price" type="number" class="form-control" id="price"
                       placeholder="MSRP Price (optional)" ng-model="$ctrl.pin.price" ng-pattern="/^-?\d*\.?\d{0,2}$/" />
-                    <div class="input-group-addon" ng-click="$ctrl.multPrice(1000)">K</div>
-                    <div class="input-group-addon" ng-click="$ctrl.multPrice(1000000)">M</div>
-                    <div class="input-group-addon" ng-click="$ctrl.multPrice(1000000000)">B</div>
-                    <div class="input-group-addon" ng-click="$ctrl.multPrice(1000000000000)">T</div>
+                    <div class="input-group-addon" ng-click="$ctrl.multPrice(1000)" role="button">K</div>
+                    <div class="input-group-addon" ng-click="$ctrl.multPrice(1000000)" role="button">M</div>
+                    <div class="input-group-addon" ng-click="$ctrl.multPrice(1000000000)" role="button">B</div>
+                    <div class="input-group-addon" ng-click="$ctrl.multPrice(1000000000000)" role="button">T</div>
                   </div>
 
                   <div class="content_block">
@@ -400,8 +400,8 @@
                       <div class="col-xs-6">
                         <!-- <button type="button" class="btn btn-primary" ng-click="$ctrl.scrapeImage($ctrl.pin.sourceUrl)"
                           ng-if="$ctrl.mode === 'edit'">Scrape Image</button> -->
-                        <button type="button" class="btn btn-danger" ng-if="$ctrl.pin.id" ng-click="$ctrl.delete($ctrl.pin.id)"
-                          ng-if="$ctrl.mode === 'edit'">Delete</button>
+                        <button type="button" class="btn btn-danger" ng-if="$ctrl.pin.id"
+                          ng-click="$ctrl.delete($ctrl.pin.id)" ng-if="$ctrl.mode === 'edit'">Delete</button>
                       </div>
                       <div class="col-xs-6">
                         <div class="pull-right">
