@@ -8026,6 +8026,50 @@
     "userId": 1
   },
   {
+    "id": 289,
+    "rootThread": false,
+    "title": "AMD reveals the new MI300X A.I. chip to challenge Nvidia's dominance",
+    "description": "<h2>The MI300X</h2><p class=\"paragraph\"> AMD said that its new MI300X chip and its CDNA architecture were designed for large language models and other cutting-edge AI models. </p><p class=\"paragraph\"> “At the center of this are GPUs. GPUs are enabling generative AI,” Su said. </p><p class=\"paragraph\"> The MI300X can use up to 192GB of memory, which means it can fit even bigger AI models than other chips. Nvidia’s rival H100 only supports 120GB of memory, for example. </p><p class=\"paragraph\"> Large language models for generative AI applications use lots of memory because they run an increasing number of calculations. AMD demoed the MI300x running a 40 billion parameter model called Falcon. OpenAI’s GPT-3 model has 175 billion parameters. </p><p class=\"paragraph\"> “Model sizes are getting much larger, and you actually need multiple GPUs to run the latest large language models,” Su said, noting that with the added memory on AMD chips developers wouldn’t need as many GPUs. </p><p class=\"paragraph\"> AMD also said it would offer an Infinity Architecture that combines eight of its M1300X accelerators in one system. Nvidia and Google have developed similar systems that combine eight or more GPUs in a single box for AI applications. </p><p class=\"paragraph\"> One reason why AI developers have historically preferred Nvidia chips is that it has a well-developed software package called CUDA that enables them to access the chip’s core hardware features. </p><p class=\"paragraph\"> AMD said on Tuesday that it has its own software for its AI chips that it calls ROCm. </p><p class=\"paragraph\"> “Now while this is a journey, we’ve made really great progress in building a powerful software stack that works with the open ecosystem of models, libraries, frameworks and tools,” AMD president Victor Peng said. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#AI</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#GPU</chronohash>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$AMD</chronodollar>&nbsp; </p>",
+    "sourceUrl": "https://www.cnbc.com/2023/06/13/amd-reveals-new-ai-chip-to-challenge-nvidias-dominance.html",
+    "utcStartDateTime": "2024-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-14T04:07:56.507Z",
+    "user": {
+      "id": 1
+    },
+    "media": [
+      {
+        "id": 241,
+        "thumbName": "841b2539-69ee-46df-b177-cc70bd000a99-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107255926-1686678111756-gettyimages-1454302971-_8db0157_d7a2aa99-cd40-4c93-8ff3-89725b36c318.jpeg?v=1686681791&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 41,
+        "tag": "#AI",
+        "pinId": 289
+      },
+      {
+        "id": 42,
+        "tag": "#GPU",
+        "pinId": 289
+      },
+      {
+        "id": 43,
+        "tag": "$AMD",
+        "pinId": 289
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 222,
     "rootThread": false,
     "title": "Lucid's Gravity SUV is taking another step toward production with tests on public roads",

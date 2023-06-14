@@ -2,6 +2,8 @@ Bugs/priority:
 
 https://filemoon.sx/d/8ueyghs88xj5
 
+hightlight scrape when available
+
 Before Usable:
 private group ++
 Fix infinite scroll up not capturing continuous position problem
