@@ -8,13 +8,15 @@ Add more descriptive content inside your <title> tag. Make it unique, and releva
 
 
 Before Usable:
-private group ++
 Fix infinite scroll up not capturing continuous position problem +
-clearing search should not move out of create page
+fix tags
+suggest tag
+Comment cleanup/backup +
+
+private group ++
 
 Before Usable Bug:
-Editing pin with youtube content will delete youtube content in edit mode ++
-Comment cleanup/backup +
+clearing search should not move out of create page+
 Main timeline should remain be in background for speedup
 
 Bugs:
