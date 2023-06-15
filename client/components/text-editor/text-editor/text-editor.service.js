@@ -89,7 +89,7 @@
                     config: {
                       services: {
                         codepen: {
-                          regex: /https:\/\/filemoon\.sx\/d\/([^\/\?\&]*)\/.*/,
+                          regex: /https:\/\/filemoon\.sx\/d\/([^\/\?\&]*)\/?.*/,
                           embedUrl: 'https://filemoon.sx/e/<%= remote_id %>/',
                           html: `<iframe loading="lazy"
                            frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="640" height="360" allowfullscreen alt="">'

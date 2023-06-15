@@ -16,8 +16,12 @@
       // Intercept 401s and redirect you to login
       responseError(response) {
         if (response.status === 401) {
+          let path = $injector.get('$location').path();
+          if (path == "/login") {
+            path = undefined;
+          }
           $injector.get('$state')
-            .go('login', { redirect: $injector.get('$location').path() });
+            .go('login', { redirect: path });
           // remove any stale tokens
           $cookies.remove('token');
         }

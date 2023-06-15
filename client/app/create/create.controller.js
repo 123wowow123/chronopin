@@ -61,6 +61,7 @@
       this.scraping = false;
       this.hasScrapedText = false;
       this.hasScrapedImage = false;
+      this.sourceChanged = false;
 
       this.pin.allDay = true;
       this.parser;
@@ -210,8 +211,14 @@
     }
 
     urlChanged() {
+      this.sourceChanged = true;
+      return this;
+    }
+
+    urlScrape() {
       let sourceUrl = this.pin.sourceUrl;
       if (sourceUrl) {
+        this.sourceChanged = false;
         this.lastScrapeUrl = this.pin.sourceUrl;
         this
           .resetForScrape()

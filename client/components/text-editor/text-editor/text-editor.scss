@@ -37,6 +37,7 @@ $mobile-breakpoint: 651px;
         @media only screen and (min-width : $mobile-breakpoint) {
             max-width: initial !important;
             margin-left: initial;
+            margin-right: initial;
         }
     }
 

@@ -29,9 +29,22 @@
                     ng-if="$ctrl.scraping">(Analyzing Page...)</span>
                   <div class="input-group"
                     ng-class="{'has-error' : pinForm.sourceUrl.$invalid && pinForm.sourceUrl.$dirty}">
-                    <input name="sourceUrl" type="url" class="form-control" id="sourceUrl"
-                      placeholder="https://www.example.com" ng-model="$ctrl.pin.sourceUrl" required>
-                    <div class="input-group-addon" ng-click="$ctrl.urlChanged()" role="button">Scrape</div>
+                    <div class="input-clear-container">
+                      <input name="sourceUrl" type="url" class="form-control" id="sourceUrl"
+                        ng-change="$ctrl.urlChanged()" placeholder="https://www.example.com"
+                        ng-model="$ctrl.pin.sourceUrl" required>
+                      <span class="form-control__clear-texbox" ng-if="$ctrl.pin.sourceUrl"
+                        ng-click="$ctrl.pin.sourceUrl = undefined" role="button"></span>
+                    </div>
+                    <span class="input-group-btn" ng-switch="$ctrl.scraping">
+                      <button ng-switch-when="false" ng-class="{'--highlight': $ctrl.sourceChanged}"
+                        ng-click="$ctrl.urlScrape()" type="button" class="btn btn-default">
+                        <span>Scrape</span>
+                      </button>
+                      <div class="btn btn-default" ng-switch-when="true">
+                        <i class="fa fa-spinner fa-spin"></i>
+                      </div>
+                    </span>
                   </div>
                 </div>
 
@@ -232,12 +245,27 @@
                   <label for="price" class="control-label">MSRP Price</label>
                   <div class="input-group" ng-class="{'has-error' : pinForm.price.$invalid && pinForm.price.$dirty}">
                     <div class="input-group-addon">$</div>
-                    <input name="price" type="number" class="form-control" id="price"
-                      placeholder="MSRP Price (optional)" ng-model="$ctrl.pin.price" ng-pattern="/^-?\d*\.?\d{0,2}$/" />
-                    <div class="input-group-addon" ng-click="$ctrl.multPrice(1000)" role="button">K</div>
-                    <div class="input-group-addon" ng-click="$ctrl.multPrice(1000000)" role="button">M</div>
-                    <div class="input-group-addon" ng-click="$ctrl.multPrice(1000000000)" role="button">B</div>
-                    <div class="input-group-addon" ng-click="$ctrl.multPrice(1000000000000)" role="button">T</div>
+
+                    <div class="input-clear-container">
+                      <input name="price" type="number" class="form-control" id="price"
+                        placeholder="MSRP Price (optional)" ng-model="$ctrl.pin.price"
+                        ng-pattern="/^-?\d*\.?\d{0,2}$/" />
+                      <span class="form-control__clear-texbox" ng-if="$ctrl.pin.price"
+                        ng-click="$ctrl.pin.price = undefined" role="button"></span>
+                    </div>
+
+
+
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button" ng-click="$ctrl.multPrice(1000)"
+                        role="button">K</button>
+                      <button class="btn btn-default" type="button" ng-click="$ctrl.multPrice(1000000)"
+                        role="button">M</button>
+                      <button class="btn btn-default" type="button" ng-click="$ctrl.multPrice(1000000000)"
+                        role="button">B</button>
+                      <button class="btn btn-default" type="button" ng-click="$ctrl.multPrice(1000000000000)"
+                        role="button">T</button>
+                    </span>
                   </div>
 
                   <div class="content_block">

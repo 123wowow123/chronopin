@@ -1,5 +1,6 @@
 :root {
     &.\--light {
+        --extreme-primary-text: #000;
         --primary-color: #555;
         --primary-bg-color: #FFF;
         --primary-highlight-bg-color: #DDD;
@@ -34,6 +35,7 @@
     }
 
     &.\--dark {
+        --extreme-primary-text: #FFF;
         --primary-color: #BBB;
         --primary-bg-color: #222;
         --primary-highlight-bg-color: #333;

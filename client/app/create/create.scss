@@ -8,7 +8,18 @@
 
 .create {
 
-  .input-group-addon{
+  .input-group-btn {
+    .btn.\--highlight {
+      background-color: #094a8b;
+      color: var(--extreme-primary-text);
+    }
+  }
+
+  .input-clear-container {
+    position: relative;
+  }
+
+  .input-group-addon {
     cursor: pointer;
   }
 
@@ -184,7 +195,7 @@
 }
 
 .start {
-  z-index: 2;
+  z-index: 4;
 
   &:focus-within {
     z-index: 5;
@@ -196,7 +207,7 @@
 }
 
 .end {
-  z-index: 1;
+  z-index: 3;
 
   &:focus-within {
     z-index: 5;

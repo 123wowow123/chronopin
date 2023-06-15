@@ -30,7 +30,7 @@
                 ng-click="nav.showAutoComplete($event, nav.search)" ng-focus="nav.searhFocusToggle(true)"
                 ng-blur="nav.searhFocusToggle(false)">
               <span class="glyphicon glyphicon-search form-control__texbox_icon" aria-hidden="true"></span>
-              <span class="form-control__clear-texbox" ng-if="nav.search" ng-click="nav.clearSearchToMain()"></span>
+              <span class="form-control__clear-texbox" ng-if="nav.search" ng-click="nav.clearSearchToMain()" role="button"></span>
             </div>
 
             <auto-complete title="title" prompt="Start typing a US state" suggestions="nav.suggestions"
