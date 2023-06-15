@@ -204,7 +204,9 @@
           .catch(err => {
             throw err;
           }).finally(() => {
-            this.gettingNext = false;
+            setTimeout(() => {
+              this.gettingNext = false;
+            }, 500);
           });
       });
 
@@ -231,7 +233,9 @@
           .catch(err => {
             throw err;
           }).finally(() => {
-            this.gettingPrev = false;
+            setTimeout(() => {
+              this.gettingPrev = false;
+            }, 500);
           });
       });
 
