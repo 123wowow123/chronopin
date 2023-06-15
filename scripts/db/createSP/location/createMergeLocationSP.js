@@ -44,6 +44,7 @@ function executeCreateSP() {
   CREATE PROCEDURE [dbo].[${StoredProcedureName}]
   @address            NVARCHAR(2000),
   @pinId              INT,
+  @order              INT,
   
   @id                 INT OUTPUT
 AS
@@ -61,17 +62,19 @@ BEGIN
     USING (
         VALUES (
           @address,
-          @pinId
+          @pinId,
+          @order
         )
     ) AS foo (
       address,
-      pinId
+      pinId,
+      [order]
     )
-    ON r.pinId = foo.pinId AND r.address = @address
+    ON r.pinId = foo.pinId AND r.address = @address AND r.[order] = @order
 
     WHEN NOT MATCHED THEN
-      INSERT (address, pinId)
-      VALUES (foo.address, foo.pinId)
+      INSERT (address, pinId, [order])
+      VALUES (foo.address, foo.pinId, foo.[order])
     OUTPUT inserted.id
 
   ) AS Changes (Id);

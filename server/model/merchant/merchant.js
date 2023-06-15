@@ -12,7 +12,8 @@ let prop = [
   'id',
   'label',
   'url',
-  'price'
+  'price',
+  'order'
 ];
 
 export default class Merchant {
@@ -142,6 +143,7 @@ function _upsertMSSQL(merchant, pinId) {
           .input('label', mssql.NVarChar(1024), merchant.label)
           .input('price', mssql.Decimal(18, 2), merchant.price)
           .input('pinId', mssql.Int, pinId)
+          .input('order', mssql.Int, merchant.order)
           .output('id', mssql.Int, merchant.id);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,

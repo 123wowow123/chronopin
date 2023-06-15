@@ -7,6 +7,10 @@ Add more descriptive content inside your <title> tag. Make it unique, and releva
 
 
 Before Usable:
+links should be external
+scrape when empty before
+edit should prompt to navigate away ++
+main should not scroll to middle on back ++
 fix tags with continuous space enter
 suggest tag
 Comment cleanup/backup +

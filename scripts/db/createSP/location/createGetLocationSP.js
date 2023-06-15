@@ -51,7 +51,8 @@ function executeCreateSP() {
             SELECT
             id,
             address,
-            pinId
+            pinId,
+            [order]
             FROM [dbo].[Location]
             WHERE id = @id;
 

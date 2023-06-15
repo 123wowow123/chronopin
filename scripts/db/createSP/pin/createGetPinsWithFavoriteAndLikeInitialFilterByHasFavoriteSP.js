@@ -95,9 +95,11 @@ function executeCreateSP() {
               [Merchant.label]      NVARCHAR(1000),
               [Merchant.url]        NVARCHAR(1000),
               [Merchant.price]      DECIMAL(18, 2),
+              [Merchant.order]      INT,
 
               [Location.id]          INT,
-              [Location.address]     NVARCHAR(2000)
+              [Location.address]     NVARCHAR(2000),
+              [Location.order]       INT
             );
 
             INSERT INTO @tempPinsTbl
@@ -108,7 +110,7 @@ function executeCreateSP() {
 
             SELECT *
             FROM @tempPinsTbl
-            ORDER BY [utcStartDateTime], [id], [Merchant.id], [Location.id]
+            ORDER BY [utcStartDateTime], [id], [Merchant.order], [Location.order]
 
             SET @queryCount = @queryCountPrev + @queryCountNext;
 

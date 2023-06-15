@@ -87,9 +87,11 @@ function executeCreateTable() {
               [Merchant].[label]                         AS [Merchant.label],
               [Merchant].[url]                           AS [Merchant.url],
               [Merchant].[price]                         AS [Merchant.price],
+              [Merchant].[order]                         AS [Merchant.order],
 
               [Location].[id]                            AS [Location.id],
               [Location].[address]                       AS [Location.address],
+              [Location].[order]                         AS [Location.order],
 
               [PinMention].[id]                          AS [Mention.id],
               [Mention].[tag]                            AS [Mention.tag]
@@ -151,9 +153,11 @@ function executeCreateTable() {
               [Merchant].[label],
               [Merchant].[url],
               [Merchant].[price],
+              [Merchant].[order],
 
               [Location].[id],
               [Location].[address],
+              [Location].[order],
 
               [PinMention].[id],
               [Mention].[tag]

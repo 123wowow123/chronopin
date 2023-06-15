@@ -82,7 +82,7 @@ BEGIN
       AND [Pin].[id] > @lastPinId)
       AND [Pin].[utcDeletedDateTime] IS NULL
 
-    ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.id], [Location.id]
+    ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
     OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY
 
 END;

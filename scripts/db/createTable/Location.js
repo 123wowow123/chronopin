@@ -43,7 +43,8 @@ function executeCreateTable() {
         (
             id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
             pinId INT NOT NULL,
-            address NVARCHAR(2000) NOT NULL
+            address NVARCHAR(2000) NOT NULL,
+            [order] INT NOT NULL
             -- CONSTRAINT FK_Address_pinId FOREIGN KEY (pinId) REFERENCES [dbo].[Pin] (id)
         );
         `;

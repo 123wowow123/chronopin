@@ -86,7 +86,7 @@ function executeCreateSP() {
             WHERE [Pin].[utcDeletedDateTime] IS NULL
               AND [Favorites].[userId] = @userId
 
-              ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.id], [Location.id]
+              ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
 
               SET @queryCount = @@ROWCOUNT;
         END;

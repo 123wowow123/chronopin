@@ -130,8 +130,8 @@
                     endDateTime = pin.end;
                 }
 
-                const merchants = _.get(pin, 'merchants', []).filter(t => t.url);
-                const locations = _.get(pin, 'locations', []).filter(t => t.address);
+                const merchants = _.get(pin, 'merchants', []).filter(t => t.url).map((t, i) => { return t.order = i });
+                const locations = _.get(pin, 'locations', []).filter(t => t.address).map((t, i) => { return t.order = i });
 
                 let newPin = {
                     id: pin.id,

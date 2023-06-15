@@ -70,10 +70,10 @@ export default class FullPin extends BasePin {
                 const saveMediumPromises = this.media.map(m => {
                     return new Medium(m, this).save();
                 });
-                const saveMerchantsPromises = this.merchants.map(m => {
+                const saveMerchantsPromises = this.merchants.map((m, i) => {
                     return new Merchant(m, this).save();
                 });
-                const saveLocationsPromises = this.locations.filter(m => m.address).map(m => {
+                const saveLocationsPromises = this.locations.filter(m => m.address).map((m, i) => {
                     return new Location(m, this).save();
                 });
                 const saveMentionsPromises = this.mentions.map(m => {

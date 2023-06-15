@@ -10,7 +10,8 @@ import {
 //_pin, pinId
 let prop = [
   'id',
-  'address'
+  'address',
+  'order'
 ];
 
 export default class Location {
@@ -138,6 +139,7 @@ function _upsertMSSQL(location, pinId) {
         let request = new mssql.Request(conn)
           .input('address', mssql.NVarChar(2000), location.address)
           .input('pinId', mssql.Int, pinId)
+          .input('order', mssql.Int, location.order)
           .output('id', mssql.Int, location.id);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,

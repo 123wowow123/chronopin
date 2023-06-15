@@ -53,7 +53,8 @@ function executeCreateSP() {
             label,
             url,
             price,
-            pinId
+            pinId,
+            [order]
             FROM [dbo].[Merchant]
             WHERE id = @id;
 

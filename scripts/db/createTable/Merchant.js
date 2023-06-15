@@ -46,7 +46,8 @@ function executeCreateTable() {
             pinId INT NOT NULL,
             label NVARCHAR(1024),
             url NVARCHAR(1024),
-            price DECIMAL(18,2)
+            price DECIMAL(18,2),
+            [order] INT NOT NULL
         );
         `;
 

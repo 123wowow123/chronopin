@@ -59,7 +59,7 @@ function executeCreateSP() {
 
             WHERE [Pin].[id] = @pinId AND [Pin].[utcDeletedDateTime] IS NULL
 
-            ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.id], [Location.id]
+            ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
         END;
         `;
 

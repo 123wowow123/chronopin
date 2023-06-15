@@ -46,6 +46,7 @@ function executeCreateSP() {
   @url                NVARCHAR(1024),
   @price              DECIMAL(18, 2),
   @pinId              INT,
+  @order              INT,
   
   @id                 INT OUTPUT
 AS
@@ -65,23 +66,26 @@ BEGIN
           @label,
           @url,
           @price,
-          @pinId
+          @pinId,
+          @order
         )
     ) AS foo (
       label,
       url,
       price,
-      pinId
+      pinId,
+      [order]
     )
     ON r.pinId = foo.pinId AND r.label = @label AND r.url = @url
     WHEN MATCHED THEN
       UPDATE SET
         label = foo.label,
         url = foo.url,
-        price = foo.price
+        price = foo.price,
+        [order] = foo.[order]
     WHEN NOT MATCHED THEN
-      INSERT (label, url, price, pinId)
-      VALUES (foo.label, foo.url, foo.price, foo.pinId)
+      INSERT (label, url, price, pinId, [order])
+      VALUES (foo.label, foo.url, foo.price, foo.pinId, foo.[order])
     OUTPUT inserted.id
 
   ) AS Changes (Id);

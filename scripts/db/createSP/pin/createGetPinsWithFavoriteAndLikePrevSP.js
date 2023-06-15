@@ -154,7 +154,7 @@ function executeCreateSP() {
 
               WHERE [Pin].[utcStartDateTime] < @fromDateTime OR ([Pin].[utcStartDateTime] = @fromDateTime AND [Pin].[id] < @lastPinId) AND [Pin].[utcDeletedDateTime] IS NULL
 
-              ORDER BY [Pin].[utcStartDateTime] DESC, [Pin].[id] DESC, [Merchant.id], [Location.id]
+              ORDER BY [Pin].[utcStartDateTime] DESC, [Pin].[id] DESC, [Merchant.order], [Location.order]
               OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY
 
             SELECT *
