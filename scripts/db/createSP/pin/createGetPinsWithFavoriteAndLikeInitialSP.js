@@ -97,9 +97,9 @@ function executeCreateSP() {
               [Merchant.price]      DECIMAL(18, 2),
               [Merchant.order]      INT,
               
-              [Location.id]                          INT,
-              [Location.address]                     NVARCHAR(2000),
-              [Location.order]                       INT
+              [Location.id]         INT,
+              [Location.address]    NVARCHAR(2000),
+              [Location.order]      INT
             );
 
             INSERT INTO @tempPinsTbl

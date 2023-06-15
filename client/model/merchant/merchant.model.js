@@ -8,7 +8,8 @@
     // _pin
     let prop = [
       'id',
-      "address"
+      "address",
+      "order"
     ];
 
     return class Merchant {

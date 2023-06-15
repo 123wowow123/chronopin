@@ -93,9 +93,11 @@ function executeCreateSP() {
               [Merchant.label]      NVARCHAR(1000),
               [Merchant.url]        NVARCHAR(1000),
               [Merchant.price]      DECIMAL(18, 2),
+              [Merchant.order]      INT,
 
-              [Location.id]                            INT,
-              [Location.address]                       NVARCHAR(2000)
+              [Location.id]         INT,
+              [Location.address]    NVARCHAR(2000),
+              [Location.order]      INT
             );
 
             INSERT INTO @tempPinsTbl
@@ -146,9 +148,11 @@ function executeCreateSP() {
                 [Merchant.label],
                 [Merchant.url],
                 [Merchant.price],
+                [Merchant.order],
 
                 [Location.id],
-                [Location.address]
+                [Location.address],
+                [Location.order]
 
               FROM [dbo].[PinBaseView] AS [Pin]
 
