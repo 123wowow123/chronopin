@@ -6,13 +6,12 @@ https://blogs.bing.com/webmaster/february-2023/The-Importance-of-Setting-the-las
 Add more descriptive content inside your <title> tag. Make it unique, and relevant to best describe the page content. Use our Keyword Research Tool to find relevant keyword ideas for title tag.
 
 
-
 Before Usable:
 fix tags with continuous space enter
 suggest tag
 Comment cleanup/backup +
-
-private group ++
+search needs relavant sort +
+private group +
 
 Before Usable Bug:
 clearing search should not move out of create page+
@@ -21,7 +20,6 @@ Main timeline should remain be in background for speedup
 Bugs:
 scrolling 
 https://ui-router.github.io/ng1/docs/0.3.1/index.html#/api/ui.router.state.$uiViewScroll
-embed data update
 
 pins loaded from infinit scroll needs to be in memory so that navigating back to home will have proper scroll position ++
 create/edit/respond page needs to have auth guard +
