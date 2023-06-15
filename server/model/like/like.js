@@ -214,8 +214,6 @@ function _upsertMSSQL(like, userId, pinId) {
           .input('utcDeletedDateTime', mssql.DateTime2(7), like.utcDeletedDateTime)
           .output('id', mssql.Int);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             if (err) {
@@ -245,8 +243,6 @@ function _deleteMSSQL(like) {
         let request = new mssql.Request(conn)
           .input('id', mssql.Int, like.id)
           .output('utcDeletedDateTime', mssql.DateTime2(7));
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
@@ -281,8 +277,6 @@ function _deleteByPinIdMSSQL(like) {
           .input('pinId', mssql.Int, like.pinId)
           .input('userId', mssql.Int, like.userId)
           .output('utcDeletedDateTime', mssql.DateTime2(7));
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {

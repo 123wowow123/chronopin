@@ -140,8 +140,6 @@ function _upsertMSSQL(location, pinId) {
           .input('pinId', mssql.Int, pinId)
           .output('id', mssql.Int, location.id);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             let id;
@@ -176,8 +174,6 @@ function _deleteMSSQL(location) {
         let request = new mssql.Request(conn)
           .input('id', mssql.Int, location.id);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
@@ -199,8 +195,6 @@ function _deleteByPinIdMSSQL(pinId) {
         const StoredProcedureName = 'DeleteLocationByPinId';
         let request = new mssql.Request(conn)
           .input('pinId', mssql.Int, pinId);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {

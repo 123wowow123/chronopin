@@ -88,7 +88,7 @@
                 return scrollEl.scrollTop || document.body.scrollTop; // remove body
             },
 
-            adjustScrollAfterPinInsert(scrollEl) {
+            adjustScrollAfterPinInsert(scrollEl, cb) {
                 const getScrollHeightFn = ScrollUtil.getScrollHeight.bind(null, scrollEl);
                 const scrollYToFn = ScrollUtil.scrollYTo.bind(null, scrollEl);
                 const scrollHeightBefore = getScrollHeightFn();
@@ -97,10 +97,11 @@
                     const scrollHeightAfter = getScrollHeightFn(),
                         scrollHeightDelta = scrollHeightAfter - scrollHeightBefore;
                     scrollYToFn(scrollHeightDelta);
+                    cb && cb();
                 }, 0);
             },
 
-            adjustScrollRelativeToCurrentView(scrollEl, relEl) {
+            adjustScrollRelativeToCurrentView(scrollEl, relEl, cb) {
                 const scrollYToFn = ScrollUtil.scrollYTo.bind(null, scrollEl);
                 const boundingClientRectBefore = relEl.getBoundingClientRect();
                 const scrollHeightBefore = ScrollUtil.captureYOffset(scrollEl);
@@ -109,6 +110,7 @@
                     const boundingClientRectAfter = relEl.getBoundingClientRect(),
                         scrollHeightPos = scrollHeightBefore + boundingClientRectAfter.top - boundingClientRectBefore.top;
                     scrollYToFn(scrollHeightPos);
+                    cb && cb();
                 }, 0);
             },
 

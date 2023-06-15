@@ -166,8 +166,6 @@ function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, 
           .input('lastPinId', mssql.Int, lastPinId)
           .output('queryCount', mssql.Int);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
         if (queryForward) {
           StoredProcedureName = 'GetPinsWithFavoriteAndLikeNext';
           request.execute(`[dbo].[${StoredProcedureName}]`,
@@ -229,8 +227,6 @@ function _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext
           .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
           .output('queryCount', mssql.Int);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
         request.execute(`[dbo].[${StoredProcedureName}]`,
           function (err, res, returnValue, affected) {
             let queryCount;
@@ -269,8 +265,6 @@ function _queryMSSQLPinsFilterByHasFavorite(queryForward, fromDateTime, userId, 
           .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
           .input('lastPinId', mssql.Int, lastPinId)
           .output('queryCount', mssql.Int);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         if (queryForward) {
           StoredProcedureName = 'GetPinsWithFavoriteAndLikeNextFilterByHasFavorite';
@@ -332,8 +326,6 @@ function _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSiz
           .input('userId', mssql.Int, userId)
           .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
           .output('queryCount', mssql.Int);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           function (err, res, returnValue, affected) {

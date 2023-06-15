@@ -59,10 +59,9 @@
       this.scrollToIDAsync = this.ScrollUtil.scrollToIDAsync.bind(null, scrollEl);
       this.scrollYTo = this.ScrollUtil.scrollYTo.bind(null, scrollEl);
       this.adjustScrollAfterPinInsert = this.ScrollUtil.adjustScrollAfterPinInsert.bind(null, scrollEl);
-      this.adjustScrollRelativeToCurrentView = this.ScrollUtil.adjustScrollRelativeToCurrentView.bind(null, scrollEl);
-
+      //this.adjustScrollRelativeToCurrentView = this.ScrollUtil.adjustScrollRelativeToCurrentView.bind(null, scrollEl);
+      this.captureYOffset = ScrollUtil.captureYOffset.bind(null, scrollEl);
       this.userScroll = false;
-
     }
 
     $onInit() {
@@ -195,18 +194,17 @@
             // No repositioning of scroll needed for scolling down.
 
             if (res.data.pins.length || res.data.dateTimes.length) {
-              this.gettingNext = false;
               this.pinApp.mergeBagsWithDateTimes(res.data.dateTimes);
               this.pinApp.mergeBagsWithPins(res.data.pins);
               this.nextParam = this.getLinkHeader(res.data.linkHeader, "next");
             } else {
-              this.gettingNext = false;
               this.nextParam = null;
             }
           })
           .catch(err => {
-            this.gettingNext = false;
             throw err;
+          }).finally(() => {
+            this.gettingNext = false;
           });
       });
 
@@ -214,29 +212,26 @@
         if (!!this.gettingPrev || !this.prevParam) {
           return;
         }
-
         this.gettingPrev = true;
         this.mainWebService.list(this.prevParam)
           .then(res => {
-
-            if (res.data.pins.length || res.data.dateTimes.length) {
-              this.gettingPrev = false;
-
-              this.pinApp.mergeBagsWithDateTimes(res.data.dateTimes);
-              this.pinApp.mergeBagsWithPins(res.data.pins);
-
-              this.prevParam = this.getLinkHeader(res.data.linkHeader, "previous");
-
-              this.adjustScrollAfterPinInsert();
-
-            } else {
-              this.gettingPrev = false;
-              this.prevParam = null;
-            }
+            let promise = new Promise((resolve, reject) => {
+              if (res.data.pins.length || res.data.dateTimes.length) {
+                this.pinApp.mergeBagsWithDateTimes(res.data.dateTimes);
+                this.pinApp.mergeBagsWithPins(res.data.pins);
+                this.prevParam = this.getLinkHeader(res.data.linkHeader, "previous");
+                this.adjustScrollAfterPinInsert(resolve);
+              } else {
+                this.prevParam = null;
+                resolve();
+              }
+            });
+            return promise;
           })
           .catch(err => {
-            this.gettingPrev = false;
             throw err;
+          }).finally(() => {
+            this.gettingPrev = false;
           });
       });
 

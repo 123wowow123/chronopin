@@ -312,8 +312,6 @@ function _createMSSQL(user) {
           .input('utcDeletedDateTime', mssql.DateTime2(7), user.utcDeletedDateTime)
           .output('id', mssql.Int, user.id);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             let id;
@@ -367,8 +365,6 @@ function _updateMSSQL(user) {
           .input('salt', mssql.NVarChar(255), user.salt)
           .input('websiteUrl', mssql.NVarChar(500), user.websiteUrl);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
@@ -392,8 +388,6 @@ function _deleteMSSQL(user) {
           // fb public attributes
           .input('id', mssql.Int, user.id)
           .output('utcDeletedDateTime', mssql.DateTime2(7));
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
@@ -429,8 +423,6 @@ function _adminDeleteMSSQL(user) {
           // fb public attributes
           .input('id', mssql.Int, user.id);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             let utcDeletedDateTime;
@@ -465,8 +457,6 @@ function _getUserByIdMSSQL(id) {
           // fb public attributes
           .input('id', mssql.INT, id);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             if (err) {
@@ -493,8 +483,6 @@ function _getUserByFacebookIdMSSQL(facebookId) {
         let user;
         let request = new mssql.Request(conn)
           .input('facebookId', mssql.NVarChar(25), facebookId);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
@@ -523,8 +511,6 @@ function _getUserByGoogleIdMSSQL(googleId) {
         let request = new mssql.Request(conn)
           .input('googleId', mssql.NVarChar(25), googleId);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             if (err) {
@@ -552,8 +538,6 @@ function _getUserByEmailMSSQL(email) {
         let request = new mssql.Request(conn)
           // fb public attributes
           .input('email', mssql.NVarChar, email);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {

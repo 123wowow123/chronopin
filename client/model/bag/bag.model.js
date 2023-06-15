@@ -20,7 +20,7 @@
     }
 
     function _getSortDateKey(a) {
-      return a.utcStartDateTime.getTime();
+      return a.utcStartDateTime.getTime() + a.id;
     }
 
     function _sortedPush(array, value) {

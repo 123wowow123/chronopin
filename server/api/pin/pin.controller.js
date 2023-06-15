@@ -88,9 +88,6 @@ export function index(req, res) {
     fromDateTimeString = req.query.from_date_time,
     lastPinId = +req.query.last_pin_id; // if undefined => NaN
 
-  // console.log('hasDateTime', hasDateTime);
-  // console.log('hasFavorite', hasFavorite);
-
   return getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTimeString)
     .then(paginationHeader.setPaginationHeader(res, req))
     .then(response.withResult(res))

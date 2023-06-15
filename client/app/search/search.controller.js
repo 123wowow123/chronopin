@@ -53,8 +53,8 @@
             this.captureYOffset = this.ScrollUtil.captureYOffset.bind(null, scrollEl);
             this.scrollToID = this.ScrollUtil.scrollToID.bind(null, scrollEl);
             this.scrollYTo = this.ScrollUtil.scrollYTo.bind(null, scrollEl);
-            this.adjustScrollAfterPinInsert = this.ScrollUtil.adjustScrollAfterPinInsert.bind(null, scrollEl);
-            this.adjustScrollRelativeToCurrentView = this.ScrollUtil.adjustScrollRelativeToCurrentView.bind(null, scrollEl);
+            //this.adjustScrollAfterPinInsert = this.ScrollUtil.adjustScrollAfterPinInsert.bind(null, scrollEl);
+            //this.adjustScrollRelativeToCurrentView = this.ScrollUtil.adjustScrollRelativeToCurrentView.bind(null, scrollEl);
         }
 
         $onInit() {

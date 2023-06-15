@@ -187,10 +187,7 @@ function _createPinMediumLinkMSSQL(medium, pinId) {
           .input('authorName', mssql.NVarChar(1028), medium.authorName)
           .input('authorUrl', mssql.NVarChar(4000), medium.authorUrl)
           .input('html', mssql.NVarChar(4000), medium.html)
-
           .output('id', mssql.Int);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
@@ -230,10 +227,7 @@ function _createMSSQL(medium) {
           .input('authorName', mssql.NVarChar(1028), medium.authorName)
           .input('authorUrl', mssql.NVarChar(4000), medium.authorUrl)
           .input('html', mssql.NVarChar(4000), medium.html)
-
           .output('id', mssql.Int);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
@@ -269,8 +263,6 @@ function _createPinMediumMSSQL(medium, pinId) {
           .input('utcCreatedDateTime', mssql.DateTime2(7), medium.utcCreatedDateTime)
           .input('utcDeletedDateTime', mssql.DateTime2(7), medium.utcDeletedDateTime)
           .output('id', mssql.Int);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
@@ -351,8 +343,6 @@ function _deleteFromPinMSSQL(medium, pinId) {
           .input('mediumId', mssql.Int, medium.id)
           .output('utcDeletedDateTime', mssql.DateTime2(7));
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             let utcDeletedDateTime;
@@ -385,8 +375,6 @@ function _getMediumByOriginalUrlMSSQL(originalUrl) {
         let medium;
         let request = new mssql.Request(conn)
           .input('originalUrl', mssql.NVarChar, originalUrl);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {

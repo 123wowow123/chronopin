@@ -8,8 +8,7 @@ Add more descriptive content inside your <title> tag. Make it unique, and releva
 
 
 Before Usable:
-Fix infinite scroll up not capturing continuous position problem +
-fix tags
+fix tags with continuous space enter
 suggest tag
 Comment cleanup/backup +
 

@@ -84,8 +84,6 @@ function _getAllUsersMSSQL() {
         const StoredProcedureName = 'GetAllUserSP';
         let request = new mssql.Request(conn);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             let users;

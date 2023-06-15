@@ -54,8 +54,6 @@ function _createMediumTypeMSSQL(mediumType) {
           .input('type', mssql.NVarChar(255), mediumType.type)
           .output('id', mssql.Int);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             let queryCount, id;

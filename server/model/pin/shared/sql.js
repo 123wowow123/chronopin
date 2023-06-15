@@ -25,8 +25,6 @@ export function createPinMSSQL(pin, userId) {
                     .input('utcDeletedDateTime', mssql.DateTime2(7), pin.utcDeletedDateTime)
                     .output('id', mssql.Int, pin.id);
 
-                //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
                 request.execute(`[dbo].[${StoredProcedureName}]`,
                     (err, res, returnValue, affected) => {
                         if (err) {
