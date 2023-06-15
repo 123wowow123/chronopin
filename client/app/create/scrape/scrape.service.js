@@ -90,8 +90,8 @@
                 thisPin.description = pin.description;
                 thisPin.sourceDescription = typeof pin.sourceDescription === 'string' ? JSON.parse(pin.sourceDescription) : pin.sourceDescription;
                 thisPin.price = pin.price;
-                thisPin.start = pin.utcStartDateTime && new Date(pin.utcStartDateTime);
-                thisPin.end = pin.utcStartDateTime && new Date(pin.utcEndDateTime);
+                thisPin.start = pin.start ? pin.start : (pin.utcStartDateTime && new Date(pin.utcStartDateTime));
+                thisPin.end = pin.end ? pin.end : (pin.utcStartDateTime && new Date(pin.utcEndDateTime));
                 thisPin.allDay = pin.allDay;
                 thisPin.media = pin.media;
                 thisPin.merchants = pin.merchants;

@@ -62,6 +62,7 @@
       this.hasScrapedText = false;
       this.hasScrapedImage = false;
       this.sourceChanged = false;
+      this.autoScrape = false;
 
       this.pin.allDay = true;
       this.parser;
@@ -135,9 +136,11 @@
           })
           .finally(() => {
             this.pinRecieved = true;
+            this.autoScrape = true;
             this.enableForm(true);
           });
       } else {
+        this.autoScrape = true;
         this.pinRecieved = true;
       }
 
@@ -210,6 +213,12 @@
       return this;
     }
 
+    urlBlur() {
+      if (this.autoScrape) {
+        this.urlScrape();
+      }
+    }
+
     urlChanged() {
       this.sourceChanged = true;
       return this;
@@ -222,12 +231,12 @@
         this.lastScrapeUrl = this.pin.sourceUrl;
         this
           .resetForScrape()
-          .scrapePage(sourceUrl);
+          ._scrapePage(sourceUrl);
       }
       return this;
     }
 
-    scrapePage(url) {
+    _scrapePage(url) {
       this.setScraping(true);
       this.scrapeService.scrapePage(this.pinSuggestion, url)
         .then(() => {
@@ -268,8 +277,8 @@
 
     postScrapeCopy() {
       this.selectMedia(this.pinSuggestion.selectedMedia);
-      this.pin.start = this.pinSuggestion.start ? this.pinSuggestion.start : this.pin.start;
-      this.pin.end = this.pinSuggestion.end ? this.pinSuggestion.end : this.pin.end;
+      this.pin.start = this.pin.start ? this.pin.start : this.pinSuggestion.start;
+      this.pin.end = this.pin.end ? this.pin.end : this.pinSuggestion.end;
     }
 
     clearFormButSourceUrl() {
@@ -281,7 +290,7 @@
     }
 
     resetForScrape() {
-      let newPin = _.pick(this.pin, ['sourceUrl', 'allDay', 'id', 'parentId', 'useMedia']);
+      let newPin = _.pick(this.pin, ['sourceUrl', 'allDay', 'id', 'parentId', 'useMedia', 'start', 'end', 'locations', 'merchants', 'price']);
       this.scrapeService
         .setPin(this.pin, newPin);
       return this;

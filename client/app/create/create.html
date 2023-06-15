@@ -31,8 +31,8 @@
                     ng-class="{'has-error' : pinForm.sourceUrl.$invalid && pinForm.sourceUrl.$dirty}">
                     <div class="input-clear-container">
                       <input name="sourceUrl" type="url" class="form-control" id="sourceUrl"
-                        ng-change="$ctrl.urlChanged()" placeholder="https://www.example.com"
-                        ng-model="$ctrl.pin.sourceUrl" ng-pattern='/^(ftp|http|https):\/\/[^ "]+$/' required >
+                        ng-change="$ctrl.urlChanged()" ng-blur="$ctrl.urlBlur()" placeholder="https://www.example.com"
+                        ng-model="$ctrl.pin.sourceUrl" ng-pattern='/^(ftp|http|https):\/\/[^ "]+$/' required>
 
                       <span class="form-control__clear-texbox" ng-if="$ctrl.pin.sourceUrl"
                         ng-click="$ctrl.pin.sourceUrl = undefined" role="button"></span>
@@ -459,7 +459,7 @@
 
     <div class="row">
       <div class="col-xs-6">
-        <button type="button" class="btn btn-primary" ng-click="$ctrl.scrapePage($ctrl.pin.sourceUrl)"
+        <button type="button" class="btn btn-primary" ng-click="$ctrl.urlScrape()"
           ng-if="$ctrl.mode === 'edit'">Scrape</button>
       </div>
       <div class="col-xs-6">

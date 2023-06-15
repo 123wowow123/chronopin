@@ -8,7 +8,6 @@ Add more descriptive content inside your <title> tag. Make it unique, and releva
 
 Before Usable:
 links should be external
-scrape when empty before
 edit should prompt to navigate away ++
 main should not scroll to middle on back ++
 fix tags with continuous space enter
@@ -19,7 +18,7 @@ private group +
 
 Before Usable Bug:
 clearing search should not move out of create page+
-Main timeline should remain be in background for speedup
+Main timeline should remain in background for speedup
 
 Bugs:
 scrolling 

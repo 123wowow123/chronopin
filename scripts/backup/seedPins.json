@@ -8344,6 +8344,40 @@
     "userId": 1
   },
   {
+    "id": 308,
+    "rootThread": false,
+    "title": "The government shutdown saga is not over! If the two chambers don’t get their ducks in order by October then shutdowns of Federal agencies is back on the table.",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#XDate</chronohash>&nbsp; </p>",
+    "sourceDescription": "{\"time\":1686865267828,\"blocks\":[{\"id\":\"Ywcy8fENVM\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#XDate</chronohash>&nbsp;\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1669416501747564569",
+    "utcStartDateTime": "2023-10-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-10-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-15T21:41:16.402Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 246,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1669416501747564569",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">The government shutdown saga is not over! The House Appropriations Committee just voted 33-27 along Republican party lines to adopt a 2024 discretionary spending of $ 1.47 t - reminder that fiscal 24 starts on Oct 1. Problem? It’s $ 120 b below the ceiling set out in the…</p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1669416501747564569?ref_src=twsrc%5Etfw\">June 15, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 47,
+        "tag": "#XDate",
+        "pinId": 308
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 166,
     "parentId": 165,
     "rootThread": false,
