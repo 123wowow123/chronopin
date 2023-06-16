@@ -8524,14 +8524,14 @@
     "parentId": 295,
     "rootThread": false,
     "title": "The Fed’s new SEP expect UR to rise to 4.1% by end 2023, compared with 3.6% end of last year.",
-    "description": "<h4><a href=\"https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20230614.htm\">June 14, 2023: FOMC Projections materials</a></h4><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#UnemploymentRate</chronohash>&nbsp; </p>",
-    "sourceDescription": "{\"time\":1686839664817,\"blocks\":[{\"id\":\"mnOBj71Lcj\",\"type\":\"header\",\"data\":{\"text\":\"<a href=\\\"https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20230614.htm\\\">June 14, 2023: FOMC Projections materials</a>\",\"level\":4}},{\"id\":\"twxN30A-Go\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#UnemploymentRate</chronohash>&nbsp;\"}}],\"version\":\"2.26.5\"}",
+    "description": "<a href=\"https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20230614.htm\" target=\"_blank\" rel=\"noopener noreferrer\">June 14, 2023: FOMC Projections materials</a><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#UnemploymentRate</chronohash>&nbsp; </p>",
+    "sourceDescription": "{\"time\":1686895075742,\"blocks\":[{\"id\":\"mnOBj71Lcj\",\"type\":\"header\",\"data\":{\"text\":\"<a href=\\\"https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20230614.htm\\\">June 14, 2023: FOMC Projections materials</a>\",\"level\":4}},{\"id\":\"twxN30A-Go\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#UnemploymentRate</chronohash>&nbsp;\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1669242180433592322",
     "utcStartDateTime": "2023-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2024-01-02T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-04T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-15T14:27:47.737Z",
-    "utcUpdatedDateTime": "2023-06-15T14:34:30.080Z",
+    "utcUpdatedDateTime": "2023-06-16T06:13:31.164Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -8548,7 +8548,7 @@
     ],
     "mentions": [
       {
-        "id": 40,
+        "id": 49,
         "tag": "#UnemploymentRate",
         "pinId": 306
       }
