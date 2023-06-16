@@ -182,12 +182,13 @@
                 activateFullPin: '=',
                 disabled: '=',
                 showMoreFn: "&",
+                showSearchScore: '<'
             },
             // templateUrl throws render timing off and causes issues with infinite scroll
             //templateUrl: 'components/pin-block/pin-block.html',
             template: `
             <article class="grid__panel" ng-class="{ '\--disabled': $ctrl.disableLink }">
-            <!-- <p ng-if="$ctrl.Auth.isAdmin()">{{$ctrl.pin.searchScore}}</p> -->
+            <p ng-if="$ctrl.showSearchScore">{{$ctrl.pin.searchScore}}</p>
             <div class="grid__content" ng-style="$ctrl.scrollHeightLessOne($ctrl.contentEl)">
                 <div class="grid__headline">
                     <div class="headline-left">

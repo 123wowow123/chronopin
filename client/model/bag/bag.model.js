@@ -61,7 +61,7 @@
       }
 
       getDateSince(dateTimeOrString) {
-        let dateSpan = this.getDateSpan();
+        let dateSpan = this.getDateSpan(dateTimeOrString);
         return dateSpan.start.diff(dateSpan.end, 'days', true);
       }
 

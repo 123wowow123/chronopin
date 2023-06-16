@@ -53,6 +53,10 @@ $grid-max-width-screen: $iphone-landscape / 2;
     }
 }
 
+.match__group-section {
+    padding: 0;
+}
+
 .timeline {
     @mixin right-arrow($timeline-tag-bg) {
         &::after {

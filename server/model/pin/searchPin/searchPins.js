@@ -130,6 +130,20 @@ export default class SearchPins extends BasePins {
         return outPut;
     }
 
+    hydrateAndRemoveUnmatch(pins) {
+        //non pure
+        const queriedPins = pins.pins;
+        this.pins.reduce((a, c) => {
+            let found = queriedPins.find(p => c.id === p.id);
+            if (found) {
+                c.set({ ...c, ...found });
+                a.push(c);
+            }
+            return a;
+        }, []);
+        return this.pins;
+    }
+
     static delete(pinId) {
         return semanticSearchDelete(pinId)
             .then((res) => {
@@ -146,7 +160,11 @@ export default class SearchPins extends BasePins {
 
         return Promise.all([semanticPinsPromise])
             .then(([semanticPins]) => {
-                return Pins.queryPinByIds(userId, semanticPins); // TODO: should return SearchPins
+                return Pins.queryPinByIds(userId, semanticPins)
+                    .then(pins => {
+                        semanticPins.hydrateAndRemoveUnmatch(pins);
+                        return semanticPins;
+                    });
             });
     }
 

@@ -5,7 +5,7 @@
 
     class SearchController {
 
-        constructor($stateParams, $state, $scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, searchService, Util, mainUtilService, pinApp, Auth, appConfig, commentJs, $log, $timeout) {
+        constructor($window, $stateParams, $state, $scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, searchService, Util, mainUtilService, pinApp, Auth, appConfig, commentJs, $log, $timeout) {
 
             // constants
             const omitLinkHeaderProp = ['rel', 'url'];
@@ -19,6 +19,7 @@
             this.$log = $log;
             this.$scope = $scope;
             this.$state = $state;
+            this.$window = $window;
 
             // data service
             this.pinWebService = pinWebService;
@@ -55,6 +56,9 @@
             this.scrollYTo = this.ScrollUtil.scrollYTo.bind(null, scrollEl);
             //this.adjustScrollAfterPinInsert = this.ScrollUtil.adjustScrollAfterPinInsert.bind(null, scrollEl);
             //this.adjustScrollRelativeToCurrentView = this.ScrollUtil.adjustScrollRelativeToCurrentView.bind(null, scrollEl);
+
+            this.sortedPins = [];
+            this.viewType = $window.localStorage.getItem("viewType") || 'timeline';
         }
 
         $onInit() {
@@ -77,6 +81,11 @@
                 );
             });
             this.registeredListeners['search:submit'] = searchSubmitListener;
+        }
+
+        toggleView() {
+            this.viewType = this.viewType === 'timeline' ? 'match' : 'timeline';
+            this.$window.localStorage.setItem("viewType", this.viewType)
         }
 
         submitSearch(search, filterValue) {
@@ -139,8 +148,11 @@
             this.pinApp.clearSearchBags();
             this.pinApp.mergeSearchBagsWithPins(pins);
             this.bags = this.pinApp.getSearchBags();
-        }
 
+            this.sortedPins = pins.slice(0).sort((a, b) => {
+                return a.searchScore - b.searchScore;
+            });
+        }
 
     }
 

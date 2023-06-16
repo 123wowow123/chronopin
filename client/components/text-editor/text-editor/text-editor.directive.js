@@ -25,10 +25,17 @@
           function setModelInstance(editor, edjsParser) {
             scope.editor = editor;
             scope.parser = new edjsParser(undefined, {
-
-              // image: function (data, config) {
-              //   return `<img src="${data.file.url}" alt="${data.caption}" alt="${data.width}" alt="${data.width}" loading="lazy" >`;
-              // }
+              header: (data, config) => {
+                // This actually cleanses all anchor tags and not header
+                const html = document.createElement('div');
+                html.innerHTML = data.text;
+                const links = html.getElementsByTagName('a');
+                for (let i = 0, len = links.length; i < len; i += 1) {
+                  links[i].target = '_blank';
+                  links[i].rel = 'noopener noreferrer';
+                }
+                return html.innerHTML;
+              },
 
               image: function image(data, config) {
                 var imageConditions = "".concat(data.stretched ? "img-fullwidth" : "", " ").concat(data.withBorder ? "img-border" : "", " ").concat(data.withBackground ? "img-bg" : "");

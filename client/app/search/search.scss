@@ -1,0 +1,23 @@
+.toggle_view {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 75px;
+    right: 20px;
+    z-index: 5;
+
+    button {
+        background-color: black;
+        border: none;
+        height: 35px;
+        width: 35px;
+        &.active{
+            color: black;
+            background-color: #AAA;
+        }
+        &:active {
+            color: black;
+            background-color: #444;
+        }
+    }
+}
