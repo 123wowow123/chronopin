@@ -7,7 +7,7 @@
 
   class CreateController {
 
-    constructor($window, $state, $scope, Auth, $q, $rootScope, $stateParams, $http, $timeout, $element, twitterJs, pinWebService, scrapeService, appConfig, Util /*, $log, modelInjector */) {
+    constructor($window, $state, $scope, $transitions, Modal, Auth, $q, $rootScope, $stateParams, $http, $timeout, $element, twitterJs, pinWebService, scrapeService, appConfig, Util /*, $log, modelInjector */) {
       //PinGroups || (PinGroups = modelInjector.getPinGroups());
       this.twitterJs = twitterJs;
       this.pinRecieved = false;
@@ -15,6 +15,8 @@
       this.$rootScope = $rootScope;
       this.$timeout = $timeout;
       this.$element = $element;
+      this.$transitions = $transitions;
+      this.Modal = Modal;
 
       // different states of pin
       this.pin = { useMedia: true };
@@ -104,9 +106,20 @@
         forceFallback: true,
       };
 
+      this.submitSuccess = false;
     }
 
     $onInit() {
+      this.$transitions.onStart({ from: 'create' }, (trans) => {
+        let clean = !_.get(this, '$scope.pinForm.$dirty', false);
+        let submitSuccess = this.submitSuccess;
+        if (clean || submitSuccess) {
+          return true;
+        } else {
+          return this.Modal.confirm.navigate()();
+        }
+      });
+
       this.Auth.getCurrentUser()
         .then((user) => {
           this.user = user;
@@ -317,6 +330,7 @@
         }
         return submitPromise
           .then(response => {
+            this.submitSuccess = true;
             this.$state.go('pin', { id: response.data.id });
             return response;
           });

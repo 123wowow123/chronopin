@@ -63,7 +63,10 @@
         }
 
         goSearch(searchText, searchChoiceText) {
-            if (!searchText && !searchChoiceText) {
+            const notOnSearch = this.$state.current.name !== "search";
+            if (notOnSearch && !searchText && !searchChoiceText) {
+                return this;
+            } else if (!searchText && !searchChoiceText) {
                 return this.goToMain();
             } else if (searchChoiceText === 'mine') {
                 let userName = this.Auth.getCurrentUserName();

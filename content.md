@@ -9,8 +9,6 @@ Add more descriptive content inside your <title> tag. Make it unique, and releva
 
 Before Usable:
 
-edit should prompt with modal to navigate away ++
-clearing search should not move out of create page only search page should navigate to main+
 links should be external cleanup
 add twitter html to search indexing
 search should have today button in best match mode
@@ -372,3 +370,5 @@ Best scene of anime music and make auto play
 https://www.youtube.com/watch?v=TivcjUnJtKM
 
 https://www.youtube.com/watch?v=NgvxSqnA1jM
+
+https://www.youtube.com/watch?v=n1zaoGZqVNA
