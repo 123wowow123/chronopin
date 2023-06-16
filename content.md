@@ -6,20 +6,23 @@ https://blogs.bing.com/webmaster/february-2023/The-Importance-of-Setting-the-las
 Add more descriptive content inside your <title> tag. Make it unique, and relevant to best describe the page content. Use our Keyword Research Tool to find relevant keyword ideas for title tag.
 
 
+
 Before Usable:
 
+edit should prompt with modal to navigate away ++
+clearing search should not move out of create page only search page should navigate to main+
 links should be external cleanup
-edit should prompt to navigate away ++
-main should not scroll to middle on back ++
-fix tags with continuous space enter
-suggest tag
+add twitter html to search indexing
+search should have today button in best match mode
 Comment cleanup/backup +
-search needs relavant sort +
-private group +
+
+suggest tag +
+
 
 Before Usable Bug:
-clearing search should not move out of create page+
 Main timeline should remain in background for speedup
+fix tags with continuous space enter
+main should not scroll to middle on back ++
 
 Bugs:
 scrolling 
@@ -35,8 +38,6 @@ missing description validation
 Should show page not found and redirect to home? https://chronopin.com/pin/178
 quick add Q2 etc
 default does not select media but when selected it will auto check pin header media
-fix indexing with hashtag for ml search
-scale up image with math
 once user scrolls then don't reset scroll on load complete
 
 SEO:
@@ -63,7 +64,7 @@ Pin dollar tag should link to referal page in new tab
 
 Features:
 related threads++
-integrate with filemoon++
+private group +
 Stock ticker ++
 show new pin added banner and clicking it will take to search page with only new pins +
 Show top 6 pin on main timeline with ellipsis button for show more
@@ -369,3 +370,5 @@ https://www.youtube.com/watch?v=jBr_85S0BHo
 Best scene of anime music and make auto play
 
 https://www.youtube.com/watch?v=TivcjUnJtKM
+
+https://www.youtube.com/watch?v=NgvxSqnA1jM

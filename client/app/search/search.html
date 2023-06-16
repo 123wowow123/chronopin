@@ -20,10 +20,6 @@
             waypoint="$ctrl.updateInView(event)">
             <time-block bag="bag" config="$ctrl.appConfig"></time-block>
           </li>
-          <li id="{{bag.toISODateTimeString()}}" class="timeline__group-container" data-ng-repeat="bag in $ctrl.bags"
-            waypoint="$ctrl.updateInView(event)">
-            <time-block bag="bag" config="$ctrl.appConfig"></time-block>
-          </li>
         </ul>
 
         <ul ng-if="$ctrl.sortedPins.length" class="match__group-section dynamic-grid" ng-switch-when="match">

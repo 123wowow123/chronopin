@@ -119,6 +119,7 @@ export default function (app) {
         .then(({
           pin
         }) => {
+          const canonical = `https://www.chronopin.com/pin/${pinId}`;
           const dom = new JSDOM(pin.description);
           const document = dom.window.document;
           const querySelector = document.querySelector('p');
@@ -142,6 +143,7 @@ export default function (app) {
           }
 
           const meta = {
+            canonical,
             title: pin.title,
             description,
             mediaContent,

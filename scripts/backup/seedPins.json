@@ -8025,6 +8025,31 @@
     "userId": 1
   },
   {
+    "id": 310,
+    "rootThread": false,
+    "title": "There's a lot of 2nd or even 3rd tier data out for Germany today and none of it looks good",
+    "sourceUrl": "https://twitter.com/OliverRakau/status/1669617210086641666",
+    "utcStartDateTime": "2023-06-16T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-17T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-16T15:10:41.863Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 248,
+        "originalUrl": "https://twitter.com/OliverRakau/status/1669617210086641666",
+        "type": "2",
+        "authorName": "Oliver Rakau",
+        "authorUrl": "https://twitter.com/OliverRakau",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Maybe most interesting: Lagarde spoke of tourism strength supporting activity &amp; inflation. At least in Germany, the demand-side argument is lacking. Hospitality turnover dropped in April, was below 2022 levels and way below 2019 with subdued demand expectations in the sector. 5/ <a href=\"https://t.co/lCf7lnNItr\">pic.twitter.com/lCf7lnNItr</a></p>&mdash; Oliver Rakau (@OliverRakau) <a href=\"https://twitter.com/OliverRakau/status/1669617210086641666?ref_src=twsrc%5Etfw\">June 16, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 247,
     "parentId": 249,
     "rootThread": false,
@@ -8551,6 +8576,40 @@
         "id": 49,
         "tag": "#UnemploymentRate",
         "pinId": 306
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 309,
+    "rootThread": false,
+    "title": "The Fed released a note last week regarding \"Other Credit Facilities.\" They're expecting the $185 billion to be paid back before the end of 2023.",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Liquidity</chronohash>&nbsp; </p>",
+    "sourceDescription": "{\"time\":1686927648141,\"blocks\":[{\"id\":\"Wi-JzAE_hM\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Liquidity</chronohash>&nbsp;\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/FinanceLancelot/status/1669204050217246720",
+    "utcStartDateTime": "2023-12-31T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-01T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-16T15:00:55.130Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 247,
+        "originalUrl": "https://twitter.com/FinanceLancelot/status/1669204050217246720",
+        "type": "2",
+        "authorName": "Financelot",
+        "authorUrl": "https://twitter.com/FinanceLancelot",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">The Fed released a note last week regarding &quot;Other Credit Facilities.&quot; The interesting part of this is they&#39;re expecting the $185 billion to be paid back before the end of 2023.<br><br>That&#39;s a massive liquidity rug pull from the banking system this fall.<a href=\"https://t.co/lVoVKDVq7r\">https://t.co/lVoVKDVq7r</a> <a href=\"https://t.co/xncGPPEjxj\">https://t.co/xncGPPEjxj</a> <a href=\"https://t.co/KTj6kXfESs\">pic.twitter.com/KTj6kXfESs</a></p>&mdash; Financelot (@FinanceLancelot) <a href=\"https://twitter.com/FinanceLancelot/status/1669204050217246720?ref_src=twsrc%5Etfw\">June 15, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 50,
+        "tag": "#Liquidity",
+        "pinId": 309
       }
     ],
     "userId": 1
