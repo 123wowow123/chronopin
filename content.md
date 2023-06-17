@@ -33,6 +33,7 @@ default does not select media but when selected it will auto check pin header me
 once user scrolls then don't reset scroll on load complete
 
 SEO:
+ create embed poll for best anime of each year and post on redit
  test "site:www.chronopin.com"
  add button for infinit scroll seo
  Add alt text for image/media for SEO
