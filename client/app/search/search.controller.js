@@ -83,8 +83,8 @@
             this.registeredListeners['search:submit'] = searchSubmitListener;
         }
 
-        toggleView() {
-            this.viewType = this.viewType === 'timeline' ? 'match' : 'timeline';
+        setView(viewType) {
+            this.viewType = viewType;
             this.$window.localStorage.setItem("viewType", this.viewType)
         }
 

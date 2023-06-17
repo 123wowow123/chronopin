@@ -35,14 +35,15 @@
       const strikethroughPromise = loadJSPromise('Strikethrough', 'https://cdn.jsdelivr.net/npm/@sotaproject/strikethrough@1.0.1/dist/bundle.min.js');
       const embedPromise = loadJSPromise('Embed', 'https://cdn.jsdelivr.net/npm/@editorjs/embed@latest');
       const ImageToolPromise = loadJSPromise('ImageTool', 'https://cdn.jsdelivr.net/gh/123wowow123/image@v1.0-beta.4/dist/bundle.js');
+      const LinkToolPromise = loadJSPromise('LinkTool', 'https://cdn.jsdelivr.net/npm/@editorjs/link@2.5.0/dist/bundle.min.js');
 
       const HashTagTool = this.$injector.get('HashTagTool');
       const DollarTagTool = this.$injector.get('DollarTagTool');
       const AtTagTool = this.$injector.get('AtTagTool');
 
-      return Promise.all([editorJsPromise, headerJsPromise, listJsPromise, strikethroughPromise, edjsParserPromise, embedPromise, ImageToolPromise])
-        .then(([EditorJS, Header, List, Strikethrough, edjsParser, Embed, ImageTool]) => {
-          return { EditorJS, Header, List, Strikethrough, edjsParser, Embed, ImageTool, HashTagTool, DollarTagTool, AtTagTool };
+      return Promise.all([editorJsPromise, headerJsPromise, listJsPromise, strikethroughPromise, edjsParserPromise, embedPromise, ImageToolPromise, LinkToolPromise])
+        .then(([EditorJS, Header, List, Strikethrough, edjsParser, Embed, ImageTool, LinkTool]) => {
+          return { EditorJS, Header, List, Strikethrough, edjsParser, Embed, ImageTool, LinkTool, HashTagTool, DollarTagTool, AtTagTool };
         });
     }
 
@@ -53,7 +54,7 @@
             this.initalized = this.loadJsAsync();
           }
           return this.initalized
-            .then(({ EditorJS, Header, List, Strikethrough, edjsParser, Embed, ImageTool, HashTagTool, DollarTagTool, AtTagTool }) => {
+            .then(({ EditorJS, Header, List, Strikethrough, edjsParser, Embed, ImageTool, LinkTool, HashTagTool, DollarTagTool, AtTagTool }) => {
 
               const editor = new EditorJS({
                 holder: elId,
@@ -111,6 +112,13 @@
                     }
                   },
 
+                  linkTool: {
+                    class: LinkTool,
+                    config: {
+                      endpoint: '/meta/fetchUrl', // Your backend endpoint for url data fetching,
+                    }
+                  },
+               
                   hashTagTool: {
                     class: HashTagTool,
                   },

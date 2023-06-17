@@ -47,6 +47,7 @@ export default function (app) {
   app.use('/api/main', require('./api/main'));
   app.use('/auth', require('./auth').default);
   app.use('/upload', require('./api/upload'));
+  app.use('/meta', require('./api/meta'));
 
 
   // Direct isso request is easier to maintain

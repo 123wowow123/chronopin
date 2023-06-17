@@ -24,7 +24,16 @@
 
           function setModelInstance(editor, edjsParser) {
             scope.editor = editor;
-            scope.parser = new edjsParser(undefined, {
+            scope.parser = new edjsParser({
+              linkTool: {
+                linkCardClass: 'link-tool__content',
+                linkToolMainClass: 'link-tool__content',
+                titleClass: 'link-tool__title',
+                descriptionClass: 'link-tool__description',
+                linkClass: 'link-tool__anchor',
+                imgBgClass: 'link-tool__image'
+              }
+            }, {
               header: (data, config) => {
                 // This actually cleanses all anchor tags and not header
                 const html = document.createElement('div');
@@ -35,6 +44,26 @@
                   links[i].rel = 'noopener noreferrer';
                 }
                 return html.innerHTML;
+              },
+
+              linkTool: function (data, config) {
+                const cfg = config.linkTool // configurations for linkTool
+                // Display meta tags if available (title, description)
+                const imageLink = _.get(data, 'meta.image.URL') || _.get(data, 'meta.image.url') || ''
+                let imageDiv = ''
+                if (imageLink && imageLink.length > 0) {
+                  imageDiv = `
+                    <div class="${cfg.imgBgClass}" style="background-image: url(${imageLink})"></div>
+                    `
+                }
+                var url = new URL(data.link);
+                return `
+                  <a class=" ${cfg.linkCardClass}" href="${data.link}" target="_blank">
+                  ${imageDiv}
+                    ${_.get(data, 'meta.title.length') > 0 ? '<p class=' + cfg.titleClass + '>' + data.meta.title + '</p>' : ''}
+                    ${_.get(data, 'meta.description.length') > 0 ? '<p class=' + cfg.descriptionClass + '>' + data.meta.description + '</p>' : ''}
+                    <span class="${cfg.linkClass}">${url.origin}</span>
+                  </a>`
               },
 
               image: function image(data, config) {

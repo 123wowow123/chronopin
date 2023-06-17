@@ -8,7 +8,6 @@
     opacity: 0.75;
 
     button {
-        background-color: black;
         border: none;
         height: 35px;
         width: 35px;
@@ -16,9 +15,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        color: black;
+        background-color: #AAA;
+        color: black;
         &.active{
-            color: black;
-            background-color: #AAA;
+            color: #AAA;
+            background-color: black;
         }
         &:active {
             color: black;
