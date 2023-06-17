@@ -132,6 +132,19 @@ export default function (app) {
             const querySelector = document.querySelector('img');
             mediaContent = querySelector && querySelector.src ? querySelector.src : '';
             mediaType = 'og:image';
+            if (!mediaContent) {
+              const querySelector = document.querySelector('iframe');
+              let src = querySelector && querySelector.src ? querySelector.src : '';
+              if (src) {
+                const filemoonRex = /https:\/\/filemoon\.sx\/e\/([^\/\?\&]*)\/.*/
+                let result1, matchId;
+                result1 = filemoonRex.exec(src)
+                matchId = result1 && result1[1];
+                if (matchId) {
+                  mediaContent = `https://thumbs.filemoon.sx/${matchId}.jpg`;
+                }
+              }
+            }
           } else {
             mediaType = getOgType(medium.type);
             // mediaWidth = medium.thumbWidth;
