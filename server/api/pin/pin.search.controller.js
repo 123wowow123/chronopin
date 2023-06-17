@@ -47,7 +47,6 @@ export function searchPins(req, res) {
   const allTags = Mention.scrapeAllMention(searchText);
 
   if (allTags.length) {
-
     if (hasFavorite) {
       return SearchPins.searchTagsFavorite(userId, allTags)
         .then(response.withResult(res, 200))
