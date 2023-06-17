@@ -5,12 +5,9 @@ https://www.bing.com/indexnow#implementation
 https://blogs.bing.com/webmaster/february-2023/The-Importance-of-Setting-the-lastmod-Tag-in-Your-Sitemap
 Add more descriptive content inside your <title> tag. Make it unique, and relevant to best describe the page content. Use our Keyword Research Tool to find relevant keyword ideas for title tag.
 
-
-
 Before Usable:
 
 links should be external cleanup
-add twitter html to search indexing
 search should have today button in best match mode
 Comment cleanup/backup +
 

@@ -220,7 +220,8 @@ function upsertPin(pin) {
         body: {
             id: pin.id,
             title: pin.title,
-            description: pin.description
+            description: pin.description,
+            media: pin.media
         }
     });
     //console.log(req);
