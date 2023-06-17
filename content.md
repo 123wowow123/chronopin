@@ -5,19 +5,16 @@ https://www.bing.com/indexnow#implementation
 https://blogs.bing.com/webmaster/february-2023/The-Importance-of-Setting-the-lastmod-Tag-in-Your-Sitemap
 Add more descriptive content inside your <title> tag. Make it unique, and relevant to best describe the page content. Use our Keyword Research Tool to find relevant keyword ideas for title tag.
 
-Before Usable:
-
-links should be external cleanup
-search should have today button in best match mode
-Comment cleanup/backup +
-
-suggest tag +
-
-
 Before Usable Bug:
-Main timeline should remain in background for speedup
-fix tags with continuous space enter
+fix tags with continuous space enter ++
 main should not scroll to middle on back ++
+Main timeline should remain in background for speedup
+
+Before Usable:
+suggest tag +
+Comment cleanup/backup +
+search should have today button in best match mode +
+links should be external cleanup
 
 Bugs:
 scrolling 
