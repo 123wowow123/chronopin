@@ -5735,13 +5735,14 @@
     "id": 226,
     "rootThread": false,
     "title": "Hilary Duff shares her 9 daily lifestyle essentials for 2023 - CNN",
-    "description": "<p class=\"paragraph\">       <a href=\"https://www.instagram.com/hilaryduff/\" target=\"_blank\">Hilary Duff</a>&nbsp;cannot be left alone.       </p><p class=\"paragraph\">       As the mom of three, the “How I Met Your Father” actress says that her kids love to follow her around the house when she goes from room to room. “Even my husband [Matthew Koma] will follow me into a room when I leave to get something,” she says with a laugh. “It’s so nice to be loved, but sometimes I’m like, ‘I need a minute!’” Still, Duff is loving every second of having such a happy and full home. After her series “Younger” ended in 2021, she relocated with her family to L.A., where she recently wrapped shooting the “Lizzie McGuire” reboot. And while Duff says she misses New York every day, she also loves having space for her two dogs and eight chickens. “We have fresh eggs every day,” she says.       </p><p class=\"paragraph\">       Aside from fresh eggs and her family, Duff says there are plenty of other things she’s currently obsessed with. Below, she lists some of her current favorite daily essentials.       </p>",
+    "description": "<p class=\"paragraph\">        <a href=\"https://www.instagram.com/hilaryduff/\" target=\"_blank\">Hilary Duff</a>&nbsp;cannot be left alone.        </p><p class=\"paragraph\">        As the mom of three, the “How I Met Your Father” actress says that her kids love to follow her around the house when she goes from room to room. “Even my husband [Matthew Koma] will follow me into a room when I leave to get something,” she says with a laugh. “It’s so nice to be loved, but sometimes I’m like, ‘I need a minute!’” Still, Duff is loving every second of having such a happy and full home. After her series “Younger” ended in 2021, she relocated with her family to L.A., where she recently wrapped shooting the “Lizzie McGuire” reboot. And while Duff says she misses New York every day, she also loves having space for her two dogs and eight chickens. “We have fresh eggs every day,” she says.        </p><p class=\"paragraph\">        Aside from fresh eggs and her family, Duff says there are plenty of other things she’s currently obsessed with. Below, she lists some of her current favorite daily essentials.        </p>",
+    "sourceDescription": "{\"time\":1687063474041,\"blocks\":[{\"id\":\"jZWVnKdt1s\",\"type\":\"paragraph\",\"data\":{\"text\":\"       <a href=\\\"https://www.instagram.com/hilaryduff/\\\" target=\\\"_blank\\\">Hilary Duff</a>&nbsp;cannot be left alone.       \"}},{\"id\":\"W0CtkROAct\",\"type\":\"paragraph\",\"data\":{\"text\":\"       As the mom of three, the “How I Met Your Father” actress says that her kids love to follow her around the house when she goes from room to room. “Even my husband [Matthew Koma] will follow me into a room when I leave to get something,” she says with a laugh. “It’s so nice to be loved, but sometimes I’m like, ‘I need a minute!’” Still, Duff is loving every second of having such a happy and full home. After her series “Younger” ended in 2021, she relocated with her family to L.A., where she recently wrapped shooting the “Lizzie McGuire” reboot. And while Duff says she misses New York every day, she also loves having space for her two dogs and eight chickens. “We have fresh eggs every day,” she says.       \"}},{\"id\":\"eOFr_sOUaU\",\"type\":\"paragraph\",\"data\":{\"text\":\"       Aside from fresh eggs and her family, Duff says there are plenty of other things she’s currently obsessed with. Below, she lists some of her current favorite daily essentials.       \"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.cnn.com/cnn-underscored/home/hilary-duff-daily-lifestyle-essentials",
     "utcStartDateTime": "2023-01-01T08:00:00.000Z",
-    "utcEndDateTime": "2023-01-07T08:00:00.000Z",
+    "utcEndDateTime": "2023-01-08T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-26T01:36:39.232Z",
-    "utcUpdatedDateTime": "2023-06-04T22:19:31.315Z",
+    "utcUpdatedDateTime": "2023-06-18T04:46:06.198Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -5760,7 +5761,7 @@
     ],
     "merchants": [
       {
-        "id": 30,
+        "id": 49,
         "label": "Plushible Halloween Candy Bags",
         "url": "https://a.co/d/4jQwcnc",
         "price": 19.99,
@@ -5768,23 +5769,31 @@
         "pinId": 226
       },
       {
-        "id": 31,
+        "id": 50,
         "label": "UPPAbaby VISTA Upper Adapters",
         "url": "https://amzn.to/3WBMhBj",
         "price": 29.99,
-        "order": 2,
-        "pinId": 226
-      },
-      {
-        "id": 32,
-        "label": "Tegion Reusable Silicone Straws",
-        "url": "https://a.co/d/fTIFcq4",
-        "price": 11.99,
         "order": 1,
         "pinId": 226
       },
       {
-        "id": 33,
+        "id": 51,
+        "label": "Tegion Reusable Silicone Straws",
+        "url": "https://a.co/d/fTIFcq4",
+        "price": 11.99,
+        "order": 2,
+        "pinId": 226
+      },
+      {
+        "id": 52,
+        "label": "Extra Large Ceramic Coffee",
+        "url": "https://a.co/d/0glb5Wg",
+        "price": 28.99,
+        "order": 4,
+        "pinId": 226
+      },
+      {
+        "id": 53,
         "label": "Doctor's Best DHA 500",
         "url": "https://a.co/d/e0Ibvji",
         "price": 40.45,
@@ -5792,11 +5801,11 @@
         "pinId": 226
       },
       {
-        "id": 34,
-        "label": "Extra Large Ceramic Coffee",
-        "url": "https://a.co/d/0glb5Wg",
-        "price": 28.99,
-        "order": 4,
+        "id": 54,
+        "label": "Secura Visual Countdown Timer",
+        "url": "https://a.co/d/cI0Vejb",
+        "price": 18.99,
+        "order": 5,
         "pinId": 226
       }
     ],
@@ -9122,6 +9131,35 @@
     "userId": 1
   },
   {
+    "id": 324,
+    "rootThread": false,
+    "title": "LiquidPiston introduces XTS-210 25hp heavy-fueled rotary engine; 1/5th size & weight of current diesel piston engines of same power",
+    "description": "<p class=\"paragraph\"> LiquidPiston, an innovator of compact and efficient engine technology and hybrid power systems, intends to commercialize the XTS-210, a 25-horsepower, two-stroke, supercharged, liquid-cooled, 210cc rotary engine. The XTS-210 is heavy-fuel compatible (diesel, Jet A, JP-8, kerosene) and multi-fuel capable (gasoline, propane, hydrogen). Compared to current piston diesel engines, the XTS-210 design reduces size and weight by nearly 80%, while maintaining comparable power output. </p><p class=\"paragraph\"> This announcement builds upon a $9-million development contract from the US Army to develop a prototype core engine based on the XTS-210 design for military applications. (<a href=\"https://www.greencarcongress.com/2022/11/20221102-liquidpiston.html\">Earlier post</a>.) </p><p class=\"paragraph\"> Representing the latest generation of LiquidPiston’s X-Engine platform architecture, the XTS-210 engine addresses the fuel efficiency, lubrication, and fuel type limitations of the traditional Wankel rotary engine. </p><p class=\"paragraph\"> The X-Engine is inherently simple in design, with just two primary moving parts: a rotor and shaft. The 25-horsepower XTS-210 adds up to one bar of boost through supercharging and operates as a two-stroke, producing six combustion events per revolution of the rotor, to deliver smooth power from a lightweight package, roughly the size of a basketball. </p><p class=\"paragraph\"> The XTS-210 uniquely addresses four major market requirements: </p><ul><li>5x the power-to-weight (specific power) and power-to-volume (power density), and up to 3x the torque-to-weight (specific torque) compared with piston diesel engines of similar power;</li><li>Ultra-portable and configurable for operation in both engine-only and hybrid-electric modes. Capable of running up to 7,000 RPM, which matches well with small and lightweight electrical machines, enabling increased mobility for power generation and hybrid applications;</li><li>Liquid-cooled and capable of either Spark-Ignition (SI) or Compression-Ignition (CI). Designed for military-grade robustness from its inception; and</li><li>Multi-fuel capability, with initial testing focuses on JP-8/Jet-A fuels for defense and aerospace applications.</li></ul><p class=\"paragraph\"> The XTS-210 model will meet demanding commercial and military heavy-fuel applications, including mobile electric power generation, primary or hybrid-electric propulsive power for vertical take-off and landing aircraft (VTOL) and small unmanned aircraft systems (sUAS), as well as auxiliary power units for land, air, and marine vehicles. </p><p class=\"paragraph\"> LiquidPiston is targeting delivery of an XTS-210 prototype to the US Army in 2024. The company has previously prototyped several variants of rotary X-Engines, demonstrating significant versatility in engine architecture, including naturally aspirated four-stroke versions ranging from five to 40 horsepower. </p><p class=\"paragraph\"> In addition to the recent $9-million award to contribute to the development of the XTS-210, LiquidPiston has also received a $1.7-million Army contract to power a hybrid-electric VTOL UAV demonstrator. This brings the company’s Department of Defense contracts total to over $30 million. </p>",
+    "sourceDescription": "{\"time\":1687064327198,\"blocks\":[{\"id\":\"4wreuFKlyB\",\"type\":\"paragraph\",\"data\":{\"text\":\"LiquidPiston, an innovator of compact and efficient engine technology and hybrid power systems, intends to commercialize the XTS-210, a 25-horsepower, two-stroke, supercharged, liquid-cooled, 210cc rotary engine. The XTS-210 is heavy-fuel compatible (diesel, Jet A, JP-8, kerosene) and multi-fuel capable (gasoline, propane, hydrogen). Compared to current piston diesel engines, the XTS-210 design reduces size and weight by nearly 80%, while maintaining comparable power output.\"}},{\"id\":\"XSjhBmYH6s\",\"type\":\"paragraph\",\"data\":{\"text\":\"This announcement builds upon a $9-million development contract from the US Army to develop a prototype core engine based on the XTS-210 design for military applications. (<a href=\\\"https://www.greencarcongress.com/2022/11/20221102-liquidpiston.html\\\">Earlier post</a>.)\"}},{\"id\":\"zOQZVMHNPC\",\"type\":\"paragraph\",\"data\":{\"text\":\"Representing the latest generation of LiquidPiston’s X-Engine platform architecture, the XTS-210 engine addresses the fuel efficiency, lubrication, and fuel type limitations of the traditional Wankel rotary engine.\"}},{\"id\":\"FeHxplQBQi\",\"type\":\"paragraph\",\"data\":{\"text\":\"The X-Engine is inherently simple in design, with just two primary moving parts: a rotor and shaft. The 25-horsepower XTS-210 adds up to one bar of boost through supercharging and operates as a two-stroke, producing six combustion events per revolution of the rotor, to deliver smooth power from a lightweight package, roughly the size of a basketball.\"}},{\"id\":\"pS7tMwEBzz\",\"type\":\"paragraph\",\"data\":{\"text\":\"The XTS-210 uniquely addresses four major market requirements:\"}},{\"id\":\"6y1Z12byLC\",\"type\":\"list\",\"data\":{\"style\":\"unordered\",\"items\":[\"5x the power-to-weight (specific power) and power-to-volume (power density), and up to 3x the torque-to-weight (specific torque) compared with piston diesel engines of similar power;\",\"Ultra-portable and configurable for operation in both engine-only and hybrid-electric modes. Capable of running up to 7,000 RPM, which matches well with small and lightweight electrical machines, enabling increased mobility for power generation and hybrid applications;\",\"Liquid-cooled and capable of either Spark-Ignition (SI) or Compression-Ignition (CI). Designed for military-grade robustness from its inception; and\",\"Multi-fuel capability, with initial testing focuses on JP-8/Jet-A fuels for defense and aerospace applications.\"]}},{\"id\":\"WJ-8mov0yc\",\"type\":\"paragraph\",\"data\":{\"text\":\"The XTS-210 model will meet demanding commercial and military heavy-fuel applications, including mobile electric power generation, primary or hybrid-electric propulsive power for vertical take-off and landing aircraft (VTOL) and small unmanned aircraft systems (sUAS), as well as auxiliary power units for land, air, and marine vehicles.\"}},{\"id\":\"qqibR3L19i\",\"type\":\"paragraph\",\"data\":{\"text\":\"LiquidPiston is targeting delivery of an XTS-210 prototype to the US Army in 2024. The company has previously prototyped several variants of rotary X-Engines, demonstrating significant versatility in engine architecture, including naturally aspirated four-stroke versions ranging from five to 40 horsepower.\"}},{\"id\":\"vtvbt7Tfdw\",\"type\":\"paragraph\",\"data\":{\"text\":\"In addition to the recent $9-million award to contribute to the development of the XTS-210, LiquidPiston has also received a $1.7-million Army contract to power a hybrid-electric VTOL UAV demonstrator. This brings the company’s Department of Defense contracts total to over $30 million.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.greencarcongress.com/2023/04/liquidpiston-introduces-xts-210-25hp-heavy-fueled-rotary-engine-15th-size-weight-of-current-diesel-p.html",
+    "utcStartDateTime": "2024-12-31T08:00:00.000Z",
+    "utcEndDateTime": "2025-01-01T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-18T04:59:42.306Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 256,
+        "thumbName": "512b7eb4-5f06-4b87-9b31-c70d51f2df46-chrono-lg.webp",
+        "thumbWidth": 600,
+        "thumbHeight": 471,
+        "originalUrl": "https://bioage.typepad.com/.a/6a00d8341c4fbe53ef02b7519e2c09200c-600wi",
+        "originalWidth": 600,
+        "originalHeight": 471,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 152,
     "rootThread": false,
     "title": "Robots That Make 400 Burgers an Hour May Soon Take over Fast Food Restaurants",
@@ -9183,6 +9221,110 @@
         "address": "Frito-Lay’s research and development headquarters, Texas",
         "order": 0,
         "pinId": 194
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 323,
+    "rootThread": false,
+    "title": "MAN introduces 35/44DF CD GenSet; slashes methane slip, ready for methanol and other future-fuels",
+    "description": "<p class=\"paragraph\"> MAN Energy Solutions has&nbsp;<a href=\"https://www.man-es.com/company/press-releases/press-details/2023/06/07/man-35-44df-cd-genset-launched\">introduced</a>&nbsp;its latest engine, an auxiliary MAN 35/44DF CD type. Developed in cooperation with STX Engine and solely for production by MAN licensees, the new engine is particularly aimed at container and LNG carrier applications. </p><p class=\"paragraph\"> The GenSet was developed with the clear aim of cutting down CAPEX and OPEX costs, and for being future-proof over the coming decades. It is based on the mature MAN 35/44DF CR and MAN 32/44CR engines—well-proven in a multitude of applications over many years with millions of running hours—that form the basis for its operational safety and low maintenance requirements. </p><p class=\"paragraph\"> The 35/44DF CD comes with a number of features for reducing greenhouse gas emissions, such as methane slip, which it reduces by up to 85% compared with market standards. MAN Energy Solutions states that it expects the first delivery by mid-2024, with the first unit in commercial operation from 2025. </p><p class=\"paragraph\"> The MAN 35/44DF CD is characterized by: </p><ul><li>CAPEX/OPEX-optimized design;</li><li>Easy integration by shipyards, low engine-room investment;</li><li>Full digitalization and connectivity with state-of-the-art cybersecurity;</li><li>Methane-slip reduction technology as standard, delivering up to 85% lower methane slip compared to market standards;</li><li>Compact footprint with multiple layout options for engine-room flexibility;</li><li>Highest power output in segment with 560 kW/cylinder, leading to fewer cylinders or even engines for same power output per vessel; and</li><li>Fuel flexibility, including biofuels, gas and also future-fuel methanol-ready.</li></ul>",
+    "sourceUrl": "https://www.greencarcongress.com/2023/06/20230608-man.html",
+    "utcStartDateTime": "2025-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2025-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-18T04:54:42.213Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 255,
+        "thumbName": "3ddd9850-2551-4ade-b842-2099e75caf6c-chrono-lg.webp",
+        "thumbWidth": 600,
+        "thumbHeight": 308,
+        "originalUrl": "https://bioage.typepad.com/.a/6a00d8341c4fbe53ef02b68539bb9b200d-600wi",
+        "originalWidth": 600,
+        "originalHeight": 308,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 321,
+    "rootThread": false,
+    "title": "AISIN to invest more than $200M in new production lines for two-motor hybrid transmissions in N Carolina",
+    "description": "<p class=\"paragraph\"> AISIN Corporation, the fifth-largest Tier 1 auto supplier in the world, announced today that it will launch two new production lines with a total anticipated investment of more than $200 million at its AISIN North Carolina Corporation (ANC) facility in Durham, North Carolina. The new lines will incorporate a high level of automation and support the production of two-motor hybrid transmissions for automakers. </p><p class=\"paragraph\"> The new production of two-motor hybrid transmission systems strengthens the company’s electrification efforts in North America. </p><p class=\"paragraph\"> The company’s first big milestone on the new lines will be completing a trial by the end of the year. Anticipated start-of-production for transmissions is April 2025, with volumes slated for approximately 30,000 per month. </p><p class=\"paragraph\"> In addition to implementing the new lines and capital equipment, the investment has created the opportunity to better streamline the Durham plant, enabling better flow of materials and resources across its footprint. </p><p class=\"paragraph\"> Beyond manufacturing a product that enables more eco-friendly transportation, the new lines will help reduce the facility’s carbon footprint through equipment that requires the use of less air. Additionally, new LED high-bay lighting, controlled by Wi-Fi and Bluetooth, will be installed to reduce energy use. The introduction of energy monitoring tools as well as HVAC upgrades are also in the works. </p>",
+    "sourceDescription": "{\"time\":1687060691495,\"blocks\":[{\"id\":\"8JzrgfGXWA\",\"type\":\"paragraph\",\"data\":{\"text\":\"AISIN Corporation, the fifth-largest Tier 1 auto supplier in the world, announced today that it will launch two new production lines with a total anticipated investment of more than $200 million at its AISIN North Carolina Corporation (ANC) facility in Durham, North Carolina. The new lines will incorporate a high level of automation and support the production of two-motor hybrid transmissions for automakers.\"}},{\"id\":\"bgLohc8Xwx\",\"type\":\"paragraph\",\"data\":{\"text\":\"The new production of two-motor hybrid transmission systems strengthens the company’s electrification efforts in North America.\"}},{\"id\":\"F-E2hdO8eq\",\"type\":\"paragraph\",\"data\":{\"text\":\"The company’s first big milestone on the new lines will be completing a trial by the end of the year. Anticipated start-of-production for transmissions is April 2025, with volumes slated for approximately 30,000 per month.\"}},{\"id\":\"Rg7jFPnm3I\",\"type\":\"paragraph\",\"data\":{\"text\":\"In addition to implementing the new lines and capital equipment, the investment has created the opportunity to better streamline the Durham plant, enabling better flow of materials and resources across its footprint.\"}},{\"id\":\"G0FLC-uMYI\",\"type\":\"paragraph\",\"data\":{\"text\":\"Beyond manufacturing a product that enables more eco-friendly transportation, the new lines will help reduce the facility’s carbon footprint through equipment that requires the use of less air. Additionally, new LED high-bay lighting, controlled by Wi-Fi and Bluetooth, will be installed to reduce energy use. The introduction of energy monitoring tools as well as HVAC upgrades are also in the works.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.greencarcongress.com/2023/06/20230615-aisin1.html",
+    "price": 200000000,
+    "utcStartDateTime": "2025-04-01T07:00:00.000Z",
+    "utcEndDateTime": "2025-04-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-18T03:58:31.751Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 253,
+        "thumbName": "a40beb47-cb9a-43c6-9a0e-d1dd0f31ec9b-chrono-lg.webp",
+        "thumbWidth": 591,
+        "thumbHeight": 308,
+        "originalUrl": "https://bioage.typepad.com/.a/6a00d8341c4fbe53ef02c1b25672f8200d-600wi",
+        "originalWidth": 591,
+        "originalHeight": 308,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 38,
+        "address": "AISIN North Carolina Corporation (ANC) facility in Durham, North Carolina",
+        "order": 0,
+        "pinId": 321
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 322,
+    "rootThread": false,
+    "title": "Neste has made the final investment decision to commence construction of upgrading facilities to process150,000 tons of liquefied waste plastic",
+    "description": "<p class=\"paragraph\"> Neste has made the final investment decision to commence construction of upgrading facilities for liquefied plastic waste at its Porvoo refinery in Finland. With the investment of 111 million euros, Neste will build the capacity to upgrade 150,000 tons of liquefied waste plastic per year. Upgrading is one of the three processing steps turning liquefied waste plastic into high-quality feedstock for new plastics: pretreatment, upgrading and refining. The investment is part of a broader project (PULSE*), which has received an EU Innovation Fund grant of 135 million euros if fully implemented and is targeting a total capacity of 400,000 tons per year. </p><p class=\"paragraph\"> Pretreatment and upgrading of liquefied waste plastic play an important role in Neste’s approach to chemical recycling. They allow the company to increase flexibility for processing lower-quality plastic waste and scale up processing the liquefied waste plastic into high-quality petrochemical feedstock in its existing refinery in Porvoo.&nbsp; </p><p class=\"paragraph\"> “We have developed our capability to process circular raw material at the Porvoo refinery over the recent years and are now set to build a respective facility. The new facility processing 150,000 tons of liquefied waste plastic, is planned to be finalized in the first half of 2025,” states Markku Korvenranta, Executive Vice President in Neste’s Oil Products. </p><p class=\"paragraph\"> The project &nbsp;will see Neste building new assets at the Porvoo refinery, but also leveraging existing assets through retrofitting, to scale-up chemical recycling fast and efficiently. The upgraded liquefied waste plastic will then be processed in the conventional refinery in which it will replace a portion of the fossil resources processed at the Porvoo refinery.&nbsp; </p><p class=\"paragraph\"> Required preparation works at the Porvoo refinery were successfully completed during the first half of 2023, enabling the construction work to commence without any delay.&nbsp; </p>",
+    "sourceDescription": "{\"time\":1687063762950,\"blocks\":[{\"id\":\"Suo3Z7hblt\",\"type\":\"paragraph\",\"data\":{\"text\":\"Neste has made the final investment decision to commence construction of upgrading facilities for liquefied plastic waste at its Porvoo refinery in Finland. With the investment of 111 million euros, Neste will build the capacity to upgrade 150,000 tons of liquefied waste plastic per year. Upgrading is one of the three processing steps turning liquefied waste plastic into high-quality feedstock for new plastics: pretreatment, upgrading and refining. The investment is part of a broader project (PULSE*), which has received an EU Innovation Fund grant of 135 million euros if fully implemented and is targeting a total capacity of 400,000 tons per year.\"}},{\"id\":\"QrJVfWXqZ5\",\"type\":\"paragraph\",\"data\":{\"text\":\"Pretreatment and upgrading of liquefied waste plastic play an important role in Neste’s approach to chemical recycling. They allow the company to increase flexibility for processing lower-quality plastic waste and scale up processing the liquefied waste plastic into high-quality petrochemical feedstock in its existing refinery in Porvoo.&nbsp;\"}},{\"id\":\"dmXiJZ6n_f\",\"type\":\"paragraph\",\"data\":{\"text\":\"“We have developed our capability to process circular raw material at the Porvoo refinery over the recent years and are now set to build a respective facility. The new facility processing 150,000 tons of liquefied waste plastic, is planned to be finalized in the first half of 2025,” states Markku Korvenranta, Executive Vice President in Neste’s Oil Products.\"}},{\"id\":\"TAaJ2AqpEH\",\"type\":\"paragraph\",\"data\":{\"text\":\"The project &nbsp;will see Neste building new assets at the Porvoo refinery, but also leveraging existing assets through retrofitting, to scale-up chemical recycling fast and efficiently. The upgraded liquefied waste plastic will then be processed in the conventional refinery in which it will replace a portion of the fossil resources processed at the Porvoo refinery.&nbsp;\"}},{\"id\":\"B4rDPwIZ3m\",\"type\":\"paragraph\",\"data\":{\"text\":\"Required preparation works at the Porvoo refinery were successfully completed during the first half of 2023, enabling the construction work to commence without any delay.&nbsp;\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.neste.com/releases-and-news/circular-economy/neste-decides-invest-liquefied-waste-plastic-upgrading-unit-its-porvoo-refinery",
+    "price": 121688740,
+    "utcStartDateTime": "2025-05-31T07:00:00.000Z",
+    "utcEndDateTime": "2025-06-01T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-18T04:50:52.088Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 254,
+        "thumbName": "17d63629-02e3-4d3f-be38-c9001a87421d-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 525,
+        "originalUrl": "https://www.neste.com/sites/neste.com/files/styles/facebook_banner/public/release_attachments/nestes_investment_liquefied_waste_plastic_upgrading_unit_porvoo_refinery_-_press_release_photo.jpg?itok=1IXk3LJO",
+        "originalWidth": 1200,
+        "originalHeight": 630,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 39,
+        "address": "Neste  Porvoo refinery in Finland",
+        "order": 0,
+        "pinId": 322
       }
     ],
     "userId": 1
