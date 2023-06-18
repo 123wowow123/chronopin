@@ -304,15 +304,15 @@ function _mapAndSaveThumb(options) {
 
 function _getImageStatAndSaveImageFromLocalPath(localPath, thumbName) {
   const createImageFn = image.createThumbFromLocalPath;
-  return _getImageStatAndSaveImageFromLocalPath(createImageFn, localPath, thumbName)
+  return _getImageStatAndSaveImage(createImageFn, localPath, thumbName)
 }
 
 function _getImageStatAndSaveImage(imageUrl, thumbName) {
   const createImageFn = image.createThumbFromUrl;
-  return _getImageStatAndSaveImageFromLocalPath(createImageFn, imageUrl, thumbName)
+  return _getImageStatAndSaveImage(createImageFn, imageUrl, thumbName)
 }
 
-function _getImageStatAndSaveImageFromLocalPath(createImageFn, path, thumbName) {
+function _getImageStatAndSaveImage(createImageFn, path, thumbName) {
   const thumbNameGuid = thumbName ? thumbName : uuidv4();
   return Promise.resolve()
     .then(() => {
