@@ -10,9 +10,9 @@ fix tags with continuous space enter ++
 Main timeline should remain in background for speedup
 
 Before Usable:
-suggest tag +
-Comment cleanup/backup +
 search should have today button in best match mode +
+Comment cleanup/backup +
+suggest tag +
 links should be external cleanup
 
 Bugs:
