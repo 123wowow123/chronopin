@@ -20,10 +20,10 @@ import session from 'express-session';
 import sqldb from '../sqldb';
 import expressSequelizeSession from 'express-sequelize-session';
 const { forceDomain } = require('forcedomain');
-var Store = expressSequelizeSession(session.Store);
+let Store = expressSequelizeSession(session.Store);
 
 export default function (app) {
-  var env = app.get('env');
+  let env = app.get('env');
 
   // let requestPath = function (req, res, next) {
   //   console.log(req.originalUrl);
@@ -34,20 +34,22 @@ export default function (app) {
 
   // app.use(require('../prerender'));
   app.use(compression());
-  
+
   if (env === 'development' || env === 'test') {
     app.use(express.static(path.join(config.root, '.tmp')));
   }
 
   if (env === 'production') {
     // TODO: Causes errors
-    // app.use(forceDomain({
-    //   hostname: config.host,
-    //   protocol: 'https',
-    //   type: 'permanent'
-    // }));
     app.use(favicon(path.join(config.root, 'client/assets/images', 'favicon.ico')));
   }
+
+  // app.use(forceDomain({
+  //   hostname: config.host,
+  //   hostname: config.port,
+  //   protocol: 'https',
+  //   type: 'permanent'
+  // }));
 
   app.set('appPath', path.join(config.root, 'client'));
   app.use(express.static(app.get('appPath'), { index: '_' }));
@@ -75,6 +77,24 @@ export default function (app) {
     resave: false,
     store: new Store(sqldb.sequelize)
   }));
+
+  // app.all(/.*/, function (req, res, next) {
+  //   let host = req.header("host");
+  //   let protocol = req.protocol;
+  //   const url = `${protocol}://${host}${req.url}`;
+  //   const xforwardedfor = req.headers['x-forwarded-for'];
+  //   const xforwarded = req.headers['x-forwarded'];
+  //   const forwardedfor = req.headers['forwarded-for'];
+  //   const forwarded = req.headers['forwarded'];
+  //   console.log(url);
+  //   console.log('x-forwarded-for:', xforwardedfor, 'x-forwarded:', xforwarded, 'forwarded-for:', forwardedfor, 'forwarded:', forwarded);
+  //   // if (host.match(/^www\..*/i)) {
+  //     next();
+  //   // } else {
+  //   //   //but url comes in like this so doesn't work: http://10.112.0.169/
+  //   //   res.redirect(301, `${protocol}://www.${host}${req.url}`);
+  //   // }
+  // });
 
   /**
    * Lusca - express server security

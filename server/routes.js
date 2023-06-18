@@ -170,6 +170,18 @@ export default function (app) {
         });
     });
 
+  app.route('/login')
+    .get((req, res) => {
+      const canonical = `https://www.chronopin.com/login`;
+      const description = 'Login to discover and track upcoming, release dates, events, and other important dates.';
+      let meta = {
+        ...config.meta,
+        canonical,
+        description
+      };
+      res.render(app.get('appPath') + '/index.html', { meta });
+    });
+
   let sitemapTemplate;
   app.route('/sitemap.txt')
     .get((req, res) => {
