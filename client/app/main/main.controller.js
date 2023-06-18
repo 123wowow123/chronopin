@@ -174,7 +174,13 @@
 
         this.$timeout(() => {
           const elId = this.pinApp.getTodayScrollId();
-          this._scrollAdjust(elId).then(() => {
+          let promise;
+          if (!!this.pinApp.bagsYOffset) {
+            promise = Promise.resolve(this.scrollYTo(this.pinApp.bagsYOffset));
+          } else {
+            promise = this._scrollAdjust(elId);
+          }
+          promise.then(() => {
             this._registerInfinitScroll();
             this.initScrollChecker();
           });

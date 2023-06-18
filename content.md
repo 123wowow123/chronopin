@@ -7,7 +7,6 @@ Add more descriptive content inside your <title> tag. Make it unique, and releva
 
 Before Usable Bug:
 fix tags with continuous space enter ++
-main should not scroll to middle on back ++
 Main timeline should remain in background for speedup
 
 Before Usable:
@@ -15,9 +14,6 @@ suggest tag +
 Comment cleanup/backup +
 search should have today button in best match mode +
 links should be external cleanup
-
-https://www.greencarcongress.com/2023/04/liquidpiston-introduces-xts-210-25hp-heavy-fueled-rotary-engine-15th-size-weight-of-current-diesel-p.html
-image upload issue
 
 Bugs:
 scrolling 
