@@ -184,6 +184,18 @@ export default function (app) {
       res.render(app.get('appPath') + '/index.html', { meta });
     });
 
+  app.route('/about')
+    .get((req, res) => {
+      const canonical = `https://www.chronopin.com/about`;
+      const description = `Chronopin, is a social bookmarking service for storing, sharing and discovering web bookmarks but treats chronology as a first class citizen via it's timeline user interface. Released in 2023, the service is available via mobile and desktop web browsers.`;
+      let meta = {
+        ...config.meta,
+        canonical,
+        description
+      };
+      res.render(app.get('appPath') + '/index.html', { meta });
+    });
+
   let sitemapTemplate;
   app.route('/sitemap.txt')
     .get((req, res) => {

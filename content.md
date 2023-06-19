@@ -1,3 +1,5 @@
+Wiki: https://en.wikipedia.org/wiki/Draft:Chronopin_(service)
+
 Bugs/priority:
 
 h1 on home not longer than approximately 150 characters in length.
@@ -17,9 +19,6 @@ Comment cleanup/backup +
 suggest tag +
 links should be external cleanup
 Polling feature and share on reddit - embed pin
-
-Add about page and reference below wiki
-https://en.wikipedia.org/wiki/Draft:Chronopin_(service)
 
 Bugs:
 scrolling 
