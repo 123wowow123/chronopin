@@ -126,7 +126,7 @@ export default function (app) {
           const querySelector = document.querySelector('p');
           const description = querySelector && querySelector.textContent ? querySelector.textContent.trim() : '';
           const medium = _.get(pin, 'media[0]');
-          let mediaType, mediaWidth, mediaHeight;
+          let mediaContentType, mediaType, mediaWidth, mediaHeight;
           let mediaContent = medium ? medium.getUrl() : '';
           if (!mediaContent) {
             const querySelector = document.querySelector('img');
@@ -154,6 +154,7 @@ export default function (app) {
           if (mediaType === 'og:image') {
             mediaContent = mediaContent.replace(config.uploadImage.large.postFix, '');
             mediaContent = mediaContent.replace('.webp', '.jpeg');
+            mediaContentType = `<meta property="og:image:type" content="image/jpeg" />`;
           }
 
           const meta = {
@@ -162,6 +163,7 @@ export default function (app) {
             description,
             mediaContent,
             mediaType,
+            mediaContentType,
             type: 'article'
           };
           res.render(app.get('appPath') + '/index.html', { meta });

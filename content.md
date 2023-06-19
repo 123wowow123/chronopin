@@ -5,15 +5,21 @@ https://www.bing.com/indexnow#implementation
 https://blogs.bing.com/webmaster/february-2023/The-Importance-of-Setting-the-lastmod-Tag-in-Your-Sitemap
 Add more descriptive content inside your <title> tag. Make it unique, and relevant to best describe the page content. Use our Keyword Research Tool to find relevant keyword ideas for title tag.
 
+
 Before Usable Bug:
 fix tags with continuous space enter ++
 Main timeline should remain in background for speedup
+delete thumb2 +
 
 Before Usable:
 search should have today button in best match mode +
 Comment cleanup/backup +
 suggest tag +
 links should be external cleanup
+Polling feature and share on reddit - embed pin
+
+Add about page and reference below wiki
+https://en.wikipedia.org/wiki/Draft:Chronopin_(service)
 
 Bugs:
 scrolling 
