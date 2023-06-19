@@ -184,6 +184,18 @@ export default function (app) {
       res.render(app.get('appPath') + '/index.html', { meta });
     });
 
+  app.route('/signup')
+    .get((req, res) => {
+      const canonical = `https://www.chronopin.com/signup`;
+      const description = 'Signup to discover and track upcoming, release dates, events, and other important dates.';
+      let meta = {
+        ...config.meta,
+        canonical,
+        description
+      };
+      res.render(app.get('appPath') + '/index.html', { meta });
+    });
+
   app.route('/about')
     .get((req, res) => {
       const canonical = `https://www.chronopin.com/about`;
