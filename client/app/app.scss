@@ -198,6 +198,7 @@ figure {
 
 // Component styles are injected through grunt
 /* inject:scss */
+@import 'about/about.scss';
 @import 'account/login/login.scss';
 @import 'account/profile/profile.scss';
 @import 'account/settings/settings.scss';

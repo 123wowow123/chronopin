@@ -23,13 +23,13 @@
       this.pinSuggestion = {};
       this.previewPin = {};
 
-      let baseDate = new Date();
+      this.baseDate = new Date();
       let dateOptions = {
         //formatYear: 'yy',
         // maxDate: new Date(2020, 5, 22),
         // minDate: new Date(),
         startingDay: 1,
-        baseDate: baseDate
+        baseDate: this.baseDate
       };
 
       let timeOptions = {
@@ -411,10 +411,10 @@
     }
 
     getPreviewPin() {
-      let defaultView = {
+      const defaultView = {
         // use default value
         user: _.get(this, 'user'),
-        utcCreatedDateTime: new Date(),
+        utcCreatedDateTime: this.baseDate,
         utcStartDateTime: this.pin.start,
         utcEndDateTime: this.pin.end,
         media: this.pin.useMedia && this.pin.selectedMedia ? [this.pin.selectedMedia] : undefined,
@@ -472,6 +472,7 @@
       const view = {
         title: (this.activeTabs['title'] === 0 ? this.pin.title : this.pinSuggestion.title),
         description: this.activeTabs['content'] === 0 ? this.pin.description : this.pinSuggestion.description,
+        sourceDescription: this.activeTabs['content'] === 0 ? this.pin.sourceDescription : this.pinSuggestion.sourceDescription
       };
       return view;
     }
