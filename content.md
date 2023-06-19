@@ -1,5 +1,4 @@
-Wiki: https://en.wikipedia.org/wiki/Draft:Chronopin_(service)
-Need to publish here when approved: https://en.wikipedia.org/wiki/List_of_social_bookmarking_websites
+
 
 Bugs/priority:
 
@@ -8,6 +7,9 @@ https://www.bing.com/indexnow#implementation
 https://blogs.bing.com/webmaster/february-2023/The-Importance-of-Setting-the-lastmod-Tag-in-Your-Sitemap
 Add more descriptive content inside your <title> tag. Make it unique, and relevant to best describe the page content. Use our Keyword Research Tool to find relevant keyword ideas for title tag.
 
+add mac release
+
+https://www.chronopin.com/pin/326
 
 Before Usable Bug:
 fix tags with continuous space enter ++
@@ -20,6 +22,7 @@ Comment cleanup/backup +
 suggest tag +
 links should be external cleanup
 Polling feature and share on reddit - embed pin
+test scraping
 
 Bugs:
 scrolling 
@@ -38,6 +41,11 @@ default does not select media but when selected it will auto check pin header me
 once user scrolls then don't reset scroll on load complete
 
 SEO:
+Wiki: https://en.wikipedia.org/wiki/Draft:Chronopin_(service)
+Need to publish here when approved: https://en.wikipedia.org/wiki/List_of_social_bookmarking_websites
+submit to https://mashable.com/about/contact-us
+Create tutorial youtube vid
+
  create embed poll for best anime of each year and post on redit
  test "site:www.chronopin.com"
  add button for infinit scroll seo
@@ -372,3 +380,5 @@ https://www.youtube.com/watch?v=TivcjUnJtKM
 https://www.youtube.com/watch?v=NgvxSqnA1jM
 
 https://www.youtube.com/watch?v=n1zaoGZqVNA
+
+https://www.youtube.com/watch?v=n1zaoGZqVNA&t=1s

@@ -94,7 +94,7 @@ export default class Medium {
   }
 
   createAndSaveToCDN(thumbName) {
-    return _getImageStatAndSaveImage(this.originalUrl, thumbName)
+    return getImageStatAndSaveImage(this.originalUrl, thumbName)
       .then(newMedium => {
         // console.log('createAndSaveToCDN', newMedium);
         return this
@@ -151,7 +151,7 @@ export default class Medium {
   }
 
   static createAndSaveToCDNFromLocalPath(localPath) {
-    return _getImageStatAndSaveImageFromLocalPath(localPath);
+    return getImageStatAndSaveImageFromLocalPath(localPath);
   }
 
   static isValid(localPath) {
@@ -302,12 +302,12 @@ function _mapAndSaveThumb(options) {
   }
 }
 
-function _getImageStatAndSaveImageFromLocalPath(localPath, thumbName) {
+function getImageStatAndSaveImageFromLocalPath(localPath, thumbName) {
   const createImageFn = image.createThumbFromLocalPath;
   return _getImageStatAndSaveImage(createImageFn, localPath, thumbName)
 }
 
-function _getImageStatAndSaveImage(imageUrl, thumbName) {
+function getImageStatAndSaveImage(imageUrl, thumbName) {
   const createImageFn = image.createThumbFromUrl;
   return _getImageStatAndSaveImage(createImageFn, imageUrl, thumbName)
 }

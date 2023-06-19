@@ -2509,18 +2509,18 @@
     "merchants": [
       {
         "id": 4,
-        "label": "Amazon: Modern Mouse Silver",
-        "url": "https://amzn.to/3IC8VDN",
-        "price": 37.49,
-        "order": 0,
-        "pinId": 84
-      },
-      {
-        "id": 5,
         "label": "Amazon: Modern Keyboard Silver",
         "url": "https://amzn.to/4283DqD",
         "price": 81,
         "order": 1,
+        "pinId": 84
+      },
+      {
+        "id": 5,
+        "label": "Amazon: Modern Mouse Silver",
+        "url": "https://amzn.to/3IC8VDN",
+        "price": 37.49,
+        "order": 0,
         "pinId": 84
       }
     ],
@@ -5761,7 +5761,7 @@
     ],
     "merchants": [
       {
-        "id": 49,
+        "id": 30,
         "label": "Plushible Halloween Candy Bags",
         "url": "https://a.co/d/4jQwcnc",
         "price": 19.99,
@@ -5769,15 +5769,7 @@
         "pinId": 226
       },
       {
-        "id": 50,
-        "label": "UPPAbaby VISTA Upper Adapters",
-        "url": "https://amzn.to/3WBMhBj",
-        "price": 29.99,
-        "order": 1,
-        "pinId": 226
-      },
-      {
-        "id": 51,
+        "id": 31,
         "label": "Tegion Reusable Silicone Straws",
         "url": "https://a.co/d/fTIFcq4",
         "price": 11.99,
@@ -5785,15 +5777,15 @@
         "pinId": 226
       },
       {
-        "id": 52,
-        "label": "Extra Large Ceramic Coffee",
-        "url": "https://a.co/d/0glb5Wg",
-        "price": 28.99,
-        "order": 4,
+        "id": 32,
+        "label": "UPPAbaby VISTA Upper Adapters",
+        "url": "https://amzn.to/3WBMhBj",
+        "price": 29.99,
+        "order": 1,
         "pinId": 226
       },
       {
-        "id": 53,
+        "id": 33,
         "label": "Doctor's Best DHA 500",
         "url": "https://a.co/d/e0Ibvji",
         "price": 40.45,
@@ -5801,7 +5793,15 @@
         "pinId": 226
       },
       {
-        "id": 54,
+        "id": 34,
+        "label": "Extra Large Ceramic Coffee",
+        "url": "https://a.co/d/0glb5Wg",
+        "price": 28.99,
+        "order": 4,
+        "pinId": 226
+      },
+      {
+        "id": 35,
         "label": "Secura Visual Countdown Timer",
         "url": "https://a.co/d/cI0Vejb",
         "price": 18.99,
@@ -5970,7 +5970,7 @@
     ],
     "merchants": [
       {
-        "id": 35,
+        "id": 36,
         "label": "Gamestop Pre-Owned",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fdead-space---playstation-5%2F359611.html",
         "price": 49.99,
@@ -6090,7 +6090,7 @@
     ],
     "merchants": [
       {
-        "id": 36,
+        "id": 37,
         "label": "Gamestop Pre-Owned",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fhogwarts-legacy---playstation-5%2F359794.html",
         "price": 64.99,
@@ -6150,14 +6150,6 @@
     ],
     "merchants": [
       {
-        "id": 37,
-        "label": "GameStop: Sony PlayStation VR2 Horizon Bundle",
-        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2-horizon-call-of-the-mountain-bundle%2F393119.html",
-        "price": 599.99,
-        "order": 1,
-        "pinId": 142
-      },
-      {
         "id": 38,
         "label": "GameStop: Sony PlayStation VR2",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2%2F393118.html",
@@ -6167,6 +6159,14 @@
       },
       {
         "id": 39,
+        "label": "GameStop: Sony PlayStation VR2 Horizon Bundle",
+        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2-horizon-call-of-the-mountain-bundle%2F393119.html",
+        "price": 599.99,
+        "order": 1,
+        "pinId": 142
+      },
+      {
+        "id": 40,
         "label": "Gamestop Power Up get exclusive offers, earn monthly rewards and more",
         "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007594&type=3&subid=",
         "price": 24.99,
@@ -6269,7 +6269,7 @@
     },
     "media": [
       {
-        "id": 252,
+        "id": 181,
         "thumbName": "c2cfd4b6-d286-4d2d-95fa-59e0ba94c92a-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 523,
@@ -6299,7 +6299,7 @@
     },
     "media": [
       {
-        "id": 181,
+        "id": 182,
         "thumbName": "0ba0fe60-6fcd-4275-987a-883836a72e27-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -6311,7 +6311,7 @@
     ],
     "merchants": [
       {
-        "id": 40,
+        "id": 41,
         "label": "Gamestop",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fstar-wars-jedi-survivor---playstation-5%2F392881.html",
         "price": 69.99,
@@ -6357,7 +6357,7 @@
     },
     "media": [
       {
-        "id": 182,
+        "id": 183,
         "thumbName": "e9970655-276f-42d1-8ead-15d083b8544c-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -6369,7 +6369,7 @@
     ],
     "merchants": [
       {
-        "id": 41,
+        "id": 42,
         "label": "Gamestop Pre-Owned",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fresident-evil-4---playstation-5%2F391500.html",
         "price": 54.99,
@@ -6397,7 +6397,7 @@
     },
     "media": [
       {
-        "id": 183,
+        "id": 184,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1652048950352814155",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -6433,7 +6433,7 @@
     },
     "media": [
       {
-        "id": 184,
+        "id": 185,
         "thumbName": "2521a8b6-5f29-4519-b515-94dec41a6651-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -6491,7 +6491,7 @@
     },
     "media": [
       {
-        "id": 185,
+        "id": 186,
         "originalUrl": "//www.youtube.com/embed/Mz5OcKiGoV8",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Mz5OcKiGoV8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -6586,7 +6586,7 @@
     },
     "media": [
       {
-        "id": 251,
+        "id": 187,
         "originalUrl": "//www.youtube.com/embed/hbvzjOZM3AQ",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/hbvzjOZM3AQ\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -6647,7 +6647,7 @@
     },
     "media": [
       {
-        "id": 186,
+        "id": 188,
         "originalUrl": "https://twitter.com/BurggrabenH/status/1650415388553822211",
         "type": "2",
         "authorName": "Alexander Stahel ????",
@@ -6767,7 +6767,7 @@
     },
     "media": [
       {
-        "id": 187,
+        "id": 189,
         "thumbName": "fdb32feb-199d-448d-93af-bea61de72f7b-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -6798,7 +6798,7 @@
     },
     "media": [
       {
-        "id": 188,
+        "id": 190,
         "thumbName": "5221d986-6149-4d67-9ee4-ab315aa0ada1-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -6858,7 +6858,7 @@
     },
     "media": [
       {
-        "id": 189,
+        "id": 191,
         "thumbName": "8f512cad-4dce-4420-8ce9-abcc15b38dbd-chrono-lg.webp",
         "thumbWidth": 799,
         "thumbHeight": 506,
@@ -6912,7 +6912,7 @@
     },
     "media": [
       {
-        "id": 190,
+        "id": 192,
         "thumbName": "5ce370bf-3c98-41a1-b57e-3fa9ee03b54f-chrono-lg.webp",
         "thumbWidth": 750,
         "thumbHeight": 422,
@@ -6961,7 +6961,7 @@
     },
     "media": [
       {
-        "id": 191,
+        "id": 193,
         "originalUrl": "https://twitter.com/Jay__Cale/status/1655653917651247104",
         "type": "2",
         "authorName": "Jay Cal",
@@ -7033,7 +7033,7 @@
     },
     "media": [
       {
-        "id": 192,
+        "id": 194,
         "originalUrl": "https://twitter.com/RJRCapital/status/1656838113858076672",
         "type": "2",
         "authorName": "RJR Capital",
@@ -7049,32 +7049,32 @@
       },
       {
         "id": 18,
-        "tag": "$GOOG",
-        "pinId": 210
-      },
-      {
-        "id": 19,
-        "tag": "$NVDA",
-        "pinId": 210
-      },
-      {
-        "id": 20,
         "tag": "$MSFT",
         "pinId": 210
       },
       {
-        "id": 21,
+        "id": 19,
+        "tag": "$AAPL",
+        "pinId": 210
+      },
+      {
+        "id": 20,
         "tag": "$AMAZN",
         "pinId": 210
       },
       {
-        "id": 22,
+        "id": 21,
         "tag": "$META",
         "pinId": 210
       },
       {
+        "id": 22,
+        "tag": "$GOOG",
+        "pinId": 210
+      },
+      {
         "id": 23,
-        "tag": "$AAPL",
+        "tag": "$NVDA",
         "pinId": 210
       },
       {
@@ -7104,7 +7104,7 @@
     },
     "media": [
       {
-        "id": 193,
+        "id": 195,
         "originalUrl": "//www.youtube.com/embed/a6qna-ZCbxA",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/a6qna-ZCbxA\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -7112,7 +7112,7 @@
     ],
     "merchants": [
       {
-        "id": 42,
+        "id": 43,
         "label": "GameStop",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fnintendo-switch%2Fproducts%2Fthe-legend-of-zelda-tears-of-the-kingdom---nintendo-switch%2F351955.html",
         "price": 69.99,
@@ -7334,7 +7334,7 @@
     },
     "media": [
       {
-        "id": 194,
+        "id": 196,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1663872116314329088",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -7369,7 +7369,7 @@
     },
     "media": [
       {
-        "id": 195,
+        "id": 197,
         "originalUrl": "https://twitter.com/WallStCynic/status/1663937504037294080",
         "type": "2",
         "authorName": "Diogenes",
@@ -7388,12 +7388,12 @@
     "mentions": [
       {
         "id": 26,
-        "tag": "#CoincidentEconomicIndicator",
+        "tag": "#indicator",
         "pinId": 229
       },
       {
         "id": 27,
-        "tag": "#indicator",
+        "tag": "#CoincidentEconomicIndicator",
         "pinId": 229
       }
     ],
@@ -7417,7 +7417,7 @@
     },
     "media": [
       {
-        "id": 196,
+        "id": 198,
         "thumbName": "939475ba-e3b2-444d-b836-d8b4f1662b5c-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -7455,7 +7455,7 @@
     },
     "media": [
       {
-        "id": 197,
+        "id": 199,
         "thumbName": "76bce240-dc66-4914-b91e-d3418a56f8bc-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -7468,12 +7468,12 @@
     "mentions": [
       {
         "id": 29,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 231
       },
       {
         "id": 30,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 231
       }
     ],
@@ -7499,7 +7499,7 @@
     },
     "media": [
       {
-        "id": 198,
+        "id": 200,
         "originalUrl": "//www.youtube.com/embed/GZud-p0QRvA",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/GZud-p0QRvA\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -7507,7 +7507,7 @@
     ],
     "merchants": [
       {
-        "id": 43,
+        "id": 44,
         "label": "Gamestop",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fstreet-fighter-6---playstation-5%2F357753.html",
         "price": 59.99,
@@ -7534,7 +7534,7 @@
     },
     "media": [
       {
-        "id": 199,
+        "id": 201,
         "thumbName": "895067ab-76d7-4d06-9461-86b5df11e2a1-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 666,
@@ -7571,7 +7571,7 @@
     },
     "media": [
       {
-        "id": 200,
+        "id": 202,
         "thumbName": "ab84a1de-2d1c-448c-b0a8-0bae10e49315-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -7609,7 +7609,7 @@
     },
     "media": [
       {
-        "id": 201,
+        "id": 203,
         "thumbName": "dbba26cd-62d9-4de9-ab86-a1de656d7cad-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -7647,7 +7647,7 @@
     },
     "media": [
       {
-        "id": 202,
+        "id": 204,
         "thumbName": "613caa1e-33dd-4b9b-a403-c00aa79489c6-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -7704,7 +7704,7 @@
     },
     "media": [
       {
-        "id": 203,
+        "id": 205,
         "thumbName": "a36e78c3-2828-4e8b-8975-23c9f36726e9-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -7758,7 +7758,7 @@
     },
     "media": [
       {
-        "id": 204,
+        "id": 206,
         "originalUrl": "//www.youtube.com/embed/GYkq9Rgoj8E",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/GYkq9Rgoj8E\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -7818,7 +7818,7 @@
     },
     "media": [
       {
-        "id": 205,
+        "id": 207,
         "originalUrl": "//www.youtube.com/embed/9bRWIdOMfro",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/9bRWIdOMfro\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -7826,7 +7826,7 @@
     ],
     "merchants": [
       {
-        "id": 44,
+        "id": 45,
         "label": "Gamestop",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fdiablo-iv----playstation-5%2F357780.html",
         "price": 69.99,
@@ -7908,7 +7908,7 @@
     },
     "media": [
       {
-        "id": 206,
+        "id": 208,
         "originalUrl": "//www.youtube.com/embed/Rfcfzh2ujVE",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Rfcfzh2ujVE\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -7942,7 +7942,7 @@
     },
     "media": [
       {
-        "id": 207,
+        "id": 209,
         "thumbName": "9ebc9bd8-151e-4c9b-88da-148af44d51f0-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 750,
@@ -8005,7 +8005,7 @@
     },
     "media": [
       {
-        "id": 208,
+        "id": 210,
         "thumbName": "c74855d4-065d-4e43-bb80-e4ddb5f4dac7-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 559,
@@ -8050,7 +8050,7 @@
     },
     "media": [
       {
-        "id": 209,
+        "id": 211,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1664622345498112001",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -8123,7 +8123,7 @@
     },
     "media": [
       {
-        "id": 210,
+        "id": 212,
         "thumbName": "815c1049-3b90-4544-8d4c-d08cecbfcc2e-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -8152,7 +8152,7 @@
     },
     "media": [
       {
-        "id": 211,
+        "id": 213,
         "thumbName": "9709f6b5-8eff-4946-a3cb-6d9be6304101-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -8180,6 +8180,32 @@
     "userId": 1
   },
   {
+    "id": 326,
+    "rootThread": false,
+    "title": "Amazon officially opens first phase of HQ2 in Virginia with room for 14k employees",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/n63dsq8fLVw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\">  Free bananas and dogs at the office — Amazon is officially open for business at its HQ2 in Arlington, Va.  </p><p class=\"paragraph\">  The Seattle-based tech giant cut the ribbon Thursday on Metropolitan Park, a 2.1-million-square-foot campus that will serve as the first phase of Amazon’s second headquarters.  </p><p class=\"paragraph\">  The campus features two 22-story buildings which will house 8,000 Amazon employees at the start. The original plan calls for HQ2 to be home to 25,000 workers by 2030.  </p><p class=\"paragraph\">  Amazon CEO Andy Jassy called Arlington “tremendous” in a&nbsp;<a href=\"https://twitter.com/ajassy/status/1669447814626283524\">tweet</a>&nbsp;on Thursday and said the company was proud to call the city home.  </p><p class=\"paragraph\">  “We look forward to inventing for customers and being an active part of the community for many years to come,” Jassy wrote.  </p><p class=\"paragraph\">  The opening comes after the company&nbsp;<a href=\"https://www.geekwire.com/2023/amazon-pausing-construction-on-hq2-in-washington-d-c-area/\">paused construction</a>&nbsp;on the second phase of HQ2 in March as it continued to navigate its hybrid work policies, layoffs, and an economic downturn.  </p><p class=\"paragraph\">  “We’re always&nbsp;evaluating space plans to make sure they fit our business needs and to create a great experience for employees,” Amazon real estate chief John Schoettler said in a statement to GeekWire at the time. “And since Met Park will have space to accommodate more than 14,000 employees, we’ve decided to shift the groundbreaking of PenPlace&nbsp;(the second phase of HQ2) out a bit.”  </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/92f0ce72-5b1e-4b56-ad46-3cc9265f1e68-chrono-lg.webp\" alt=\"Virginia Gov. Glenn Youngkin, in red tie, and First Lady Suzanne Youngkin take a tour of HQ2 with Amazon real estate chief John Schoettler, left, on Thursday. (Amazon Photo)\" height=\"563\" width=\"1000\"><figcaption class=\"fig-cap\">Virginia Gov. Glenn Youngkin, in red tie, and First Lady Suzanne Youngkin take a tour of HQ2 with Amazon real estate chief John Schoettler, left, on Thursday. (Amazon Photo)</figcaption></figure><p class=\"paragraph\">  There is a 2.5-acre public open space with 175 native trees and plantings, a dog park, public art installations, walking paths, a children’s garden and play area, and space for seasonal weekend farmers markets.  </p><p class=\"paragraph\">  A rooftop vegetable garden is designed to distribute food to local organizations through non-profits.  </p><p class=\"paragraph\">  There are 620 bike racks, two bike repair and wash stations, a half-mile of protected bike lanes, and four levels of below-grade parking with 290 electric vehicle charging stations.  </p><p class=\"paragraph\">  <a href=\"https://www.geekwire.com/2021/amazon-unveils-design-plans-virginia-hq2-dramatic-spiral-helix-building-centerpiece/\">Previous design plans</a>&nbsp;for HQ2 have included a spiraling centerpiece building called The Helix.  </p><p class=\"paragraph\">  Amazon&nbsp;<a href=\"https://www.geekwire.com/2017/amazon-build-second-hq-outside-seattle-seeks-proposals-cities-5b-campus-50k-jobs/\">launched</a>&nbsp;the highly-publicized HQ2 sweepstakes in 2017 as it searched for a location for a second North American headquarters. The company originally said it would split a 50,000-person second headquarters between Northern Virginia and New York City, but it&nbsp;<a href=\"https://www.geekwire.com/2019/amazon-pulls-new-york-hq2-amid-growing-backlash/\">pulled out of its NYC plans</a>&nbsp;after political backlash.  </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/75555718-b91c-4142-80e6-8e9adcfab019-chrono-lg.webp\" alt=\"Metropolitan Park is the first phase of Amazon’s HQ2 in Arlington, Va. (Amazon Photo)\" height=\"666\" width=\"1000\"><figcaption class=\"fig-cap\">Metropolitan Park is the first phase of Amazon’s HQ2 in Arlington, Va. (Amazon Photo)</figcaption></figure>",
+    "sourceDescription": "{\"time\":1687189994568,\"blocks\":[{\"id\":\"I2DdMLVtQ6\",\"type\":\"embed\",\"data\":{\"service\":\"youtube\",\"source\":\"https://www.youtube.com/watch?v=n63dsq8fLVw\",\"embed\":\"https://www.youtube.com/embed/n63dsq8fLVw\",\"width\":580,\"height\":320,\"caption\":\"Amazon HQ2 Grand Opening today\",\"length\":\"\"}},{\"id\":\"uKyK4KpI8Q\",\"type\":\"paragraph\",\"data\":{\"text\":\" Free bananas and dogs at the office — Amazon is officially open for business at its HQ2 in Arlington, Va. \"}},{\"id\":\"NiizUEBnun\",\"type\":\"paragraph\",\"data\":{\"text\":\" The Seattle-based tech giant cut the ribbon Thursday on Metropolitan Park, a 2.1-million-square-foot campus that will serve as the first phase of Amazon’s second headquarters. \"}},{\"id\":\"khvv1PCi24\",\"type\":\"paragraph\",\"data\":{\"text\":\" The campus features two 22-story buildings which will house 8,000 Amazon employees at the start. The original plan calls for HQ2 to be home to 25,000 workers by 2030. \"}},{\"id\":\"gopGfzH5sX\",\"type\":\"paragraph\",\"data\":{\"text\":\" Amazon CEO Andy Jassy called Arlington “tremendous” in a&nbsp;<a href=\\\"https://twitter.com/ajassy/status/1669447814626283524\\\">tweet</a>&nbsp;on Thursday and said the company was proud to call the city home. \"}},{\"id\":\"X0rGCqiCej\",\"type\":\"paragraph\",\"data\":{\"text\":\" “We look forward to inventing for customers and being an active part of the community for many years to come,” Jassy wrote. \"}},{\"id\":\"vbeq_lqJES\",\"type\":\"paragraph\",\"data\":{\"text\":\" The opening comes after the company&nbsp;<a href=\\\"https://www.geekwire.com/2023/amazon-pausing-construction-on-hq2-in-washington-d-c-area/\\\">paused construction</a>&nbsp;on the second phase of HQ2 in March as it continued to navigate its hybrid work policies, layoffs, and an economic downturn. \"}},{\"id\":\"fGhWq4qGP4\",\"type\":\"paragraph\",\"data\":{\"text\":\" “We’re always&nbsp;evaluating space plans to make sure they fit our business needs and to create a great experience for employees,” Amazon real estate chief John Schoettler said in a statement to GeekWire at the time. “And since Met Park will have space to accommodate more than 14,000 employees, we’ve decided to shift the groundbreaking of PenPlace&nbsp;(the second phase of HQ2) out a bit.” \"}},{\"id\":\"Jg3fG04YDG\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/92f0ce72-5b1e-4b56-ad46-3cc9265f1e68-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":563}},\"caption\":\"Virginia Gov. Glenn Youngkin, in red tie, and First Lady Suzanne Youngkin take a tour of HQ2 with Amazon real estate chief John Schoettler, left, on Thursday. (Amazon Photo)\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"7tO6UN8Km9\",\"type\":\"paragraph\",\"data\":{\"text\":\" There is a 2.5-acre public open space with 175 native trees and plantings, a dog park, public art installations, walking paths, a children’s garden and play area, and space for seasonal weekend farmers markets. \"}},{\"id\":\"4Y-_Q_iWYI\",\"type\":\"paragraph\",\"data\":{\"text\":\" A rooftop vegetable garden is designed to distribute food to local organizations through non-profits. \"}},{\"id\":\"1eWzjEZ2U8\",\"type\":\"paragraph\",\"data\":{\"text\":\" There are 620 bike racks, two bike repair and wash stations, a half-mile of protected bike lanes, and four levels of below-grade parking with 290 electric vehicle charging stations. \"}},{\"id\":\"HTTwgnhznp\",\"type\":\"paragraph\",\"data\":{\"text\":\" <a href=\\\"https://www.geekwire.com/2021/amazon-unveils-design-plans-virginia-hq2-dramatic-spiral-helix-building-centerpiece/\\\">Previous design plans</a>&nbsp;for HQ2 have included a spiraling centerpiece building called The Helix. \"}},{\"id\":\"h5-s2JCSTf\",\"type\":\"paragraph\",\"data\":{\"text\":\" Amazon&nbsp;<a href=\\\"https://www.geekwire.com/2017/amazon-build-second-hq-outside-seattle-seeks-proposals-cities-5b-campus-50k-jobs/\\\">launched</a>&nbsp;the highly-publicized HQ2 sweepstakes in 2017 as it searched for a location for a second North American headquarters. The company originally said it would split a 50,000-person second headquarters between Northern Virginia and New York City, but it&nbsp;<a href=\\\"https://www.geekwire.com/2019/amazon-pulls-new-york-hq2-amid-growing-backlash/\\\">pulled out of its NYC plans</a>&nbsp;after political backlash. \"}},{\"id\":\"1WEU6-RPg0\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/75555718-b91c-4142-80e6-8e9adcfab019-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":666}},\"caption\":\"Metropolitan Park is the first phase of Amazon’s HQ2 in Arlington, Va. (Amazon Photo)\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.geekwire.com/2023/amazon-officially-opens-first-phase-of-hq2-in-virginia-with-room-for-14k-employees/",
+    "utcStartDateTime": "2023-06-15T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-17T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-19T15:42:19.250Z",
+    "utcUpdatedDateTime": "2023-06-19T15:53:20.304Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "locations": [
+      {
+        "id": 41,
+        "address": "Metropolitan Park Amazon’s HQ2 in Arlington, Va.",
+        "order": 0,
+        "pinId": 326
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 310,
     "rootThread": false,
     "title": "There's a lot of 2nd or even 3rd tier data out for Germany today and none of it looks good",
@@ -8194,7 +8220,7 @@
     },
     "media": [
       {
-        "id": 212,
+        "id": 214,
         "originalUrl": "https://twitter.com/OliverRakau/status/1669617210086641666",
         "type": "2",
         "authorName": "Oliver Rakau",
@@ -8261,7 +8287,7 @@
     },
     "media": [
       {
-        "id": 213,
+        "id": 215,
         "thumbName": "6a0c7bc3-0c05-495b-b066-2ccb791c85d7-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 562,
@@ -8273,7 +8299,7 @@
     ],
     "merchants": [
       {
-        "id": 45,
+        "id": 46,
         "label": "Gamestop",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fplaystation-5%2Fproducts%2Ffinal-fantasy-xvi---playstation-5%2F357774.html",
         "price": 69.99,
@@ -8299,7 +8325,7 @@
     },
     "locations": [
       {
-        "id": 37,
+        "id": 24,
         "address": "Japan",
         "order": 0,
         "pinId": 315
@@ -8324,7 +8350,7 @@
     },
     "media": [
       {
-        "id": 214,
+        "id": 216,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1638924685193641986",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -8409,7 +8435,7 @@
     },
     "media": [
       {
-        "id": 215,
+        "id": 217,
         "originalUrl": "//www.youtube.com/embed/okFSR8CCOPY",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/okFSR8CCOPY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -8434,7 +8460,7 @@
     },
     "media": [
       {
-        "id": 216,
+        "id": 218,
         "originalUrl": "//www.youtube.com/embed/CDVH_JJIRWI",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/CDVH_JJIRWI\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -8442,15 +8468,15 @@
     ],
     "locations": [
       {
-        "id": 23,
-        "address": "South Asia Subregion",
-        "order": 0,
+        "id": 25,
+        "address": "Egypt Country",
+        "order": 1,
         "pinId": 148
       },
       {
-        "id": 24,
-        "address": "Egypt Country",
-        "order": 1,
+        "id": 26,
+        "address": "South Asia Subregion",
+        "order": 0,
         "pinId": 148
       }
     ],
@@ -8472,7 +8498,7 @@
     },
     "media": [
       {
-        "id": 217,
+        "id": 219,
         "thumbName": "9297e0e8-ca76-441c-a838-5c9af85aeb9e-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -8501,7 +8527,7 @@
     },
     "media": [
       {
-        "id": 218,
+        "id": 220,
         "originalUrl": "//www.youtube.com/embed/UZ6eFEjFfJ0",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/UZ6eFEjFfJ0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -8509,7 +8535,7 @@
     ],
     "merchants": [
       {
-        "id": 46,
+        "id": 47,
         "label": "Gamestop PS5",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fmortal-kombat-1----playstation-5%2F394354.html",
         "price": 69.99,
@@ -8536,7 +8562,7 @@
     },
     "media": [
       {
-        "id": 219,
+        "id": 221,
         "originalUrl": "//www.youtube.com/embed/5AKl_cEB26c",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/5AKl_cEB26c\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -8589,7 +8615,7 @@
     },
     "media": [
       {
-        "id": 220,
+        "id": 222,
         "originalUrl": "https://twitter.com/gamer__capital/status/1663987579962945536",
         "type": "2",
         "authorName": "gamer capital ???",
@@ -8631,7 +8657,7 @@
     },
     "media": [
       {
-        "id": 221,
+        "id": 223,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1669416501747564569",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -8666,7 +8692,7 @@
     },
     "media": [
       {
-        "id": 222,
+        "id": 224,
         "thumbName": "ed30a2c1-8f8d-4394-aa81-c8378e093f9f-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -8696,7 +8722,7 @@
     },
     "media": [
       {
-        "id": 223,
+        "id": 225,
         "originalUrl": "//www.youtube.com/embed/Q2kN6LONlWw",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Q2kN6LONlWw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -8704,7 +8730,7 @@
     ],
     "locations": [
       {
-        "id": 25,
+        "id": 27,
         "address": "MSG Sphere, Las Vegas",
         "order": 0,
         "pinId": 149
@@ -8730,7 +8756,7 @@
     },
     "media": [
       {
-        "id": 224,
+        "id": 226,
         "originalUrl": "//www.youtube.com/embed/e-FuDjteXxs",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/e-FuDjteXxs\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -8738,19 +8764,19 @@
     ],
     "merchants": [
       {
-        "id": 47,
-        "label": "Gamestop Steam Gift Card",
-        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fgift-cards%2Fproducts%2Fvalve-steam-wallet-card-20%2F215593.html",
-        "price": 20,
-        "order": 0,
-        "pinId": 241
-      },
-      {
         "id": 48,
         "label": "Gamestop Power Up save $5 per Month on Gift Cards",
         "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007593&type=3&subid=",
         "price": 24.99,
         "order": 1,
+        "pinId": 241
+      },
+      {
+        "id": 49,
+        "label": "Gamestop Steam Gift Card",
+        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fgift-cards%2Fproducts%2Fvalve-steam-wallet-card-20%2F215593.html",
+        "price": 20,
+        "order": 0,
         "pinId": 241
       }
     ],
@@ -8773,7 +8799,7 @@
     },
     "media": [
       {
-        "id": 225,
+        "id": 227,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1669043173492940814",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -8809,7 +8835,7 @@
     },
     "media": [
       {
-        "id": 226,
+        "id": 228,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1669242180433592322",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -8843,7 +8869,7 @@
     },
     "media": [
       {
-        "id": 227,
+        "id": 229,
         "originalUrl": "https://twitter.com/FinanceLancelot/status/1669204050217246720",
         "type": "2",
         "authorName": "Financelot",
@@ -8876,7 +8902,7 @@
     },
     "media": [
       {
-        "id": 228,
+        "id": 230,
         "thumbName": "841b2539-69ee-46df-b177-cc70bd000a99-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -8894,12 +8920,12 @@
       },
       {
         "id": 45,
-        "tag": "#GPU",
+        "tag": "$AMD",
         "pinId": 289
       },
       {
         "id": 46,
-        "tag": "$AMD",
+        "tag": "#GPU",
         "pinId": 289
       }
     ],
@@ -8924,7 +8950,7 @@
     },
     "locations": [
       {
-        "id": 26,
+        "id": 28,
         "address": "Casa Grande, Arizona",
         "order": 0,
         "pinId": 222
@@ -8950,7 +8976,7 @@
     },
     "media": [
       {
-        "id": 229,
+        "id": 231,
         "thumbName": "e7f718cc-9190-4eed-a8df-270ec8c9d66c-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -8962,7 +8988,7 @@
     ],
     "locations": [
       {
-        "id": 27,
+        "id": 29,
         "address": "Oakville Assembly Plant in Ontario, Canada",
         "order": 0,
         "pinId": 195
@@ -8988,7 +9014,7 @@
     },
     "media": [
       {
-        "id": 230,
+        "id": 232,
         "thumbName": "4744b1cd-fc70-430d-a3a2-df642e1aea79-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 503,
@@ -9026,7 +9052,7 @@
     },
     "media": [
       {
-        "id": 231,
+        "id": 233,
         "thumbName": "604abb42-6c90-4201-afeb-fdb0f26a8898-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 1034,
@@ -9038,7 +9064,7 @@
     ],
     "locations": [
       {
-        "id": 28,
+        "id": 30,
         "address": "Hudson Yards, New York",
         "order": 0,
         "pinId": 150
@@ -9063,7 +9089,7 @@
     },
     "media": [
       {
-        "id": 232,
+        "id": 234,
         "thumbName": "1870e18c-c013-4e68-8821-0ed0881d9d2d-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 400,
@@ -9093,7 +9119,7 @@
     },
     "media": [
       {
-        "id": 233,
+        "id": 235,
         "thumbName": "5ae38366-d033-4972-bc04-48f4d4b6b485-chrono-lg.webp",
         "thumbWidth": 986,
         "thumbHeight": 553,
@@ -9105,7 +9131,7 @@
     ],
     "locations": [
       {
-        "id": 29,
+        "id": 31,
         "address": "West of Colusa in the Sacramento Valley, California",
         "order": 0,
         "pinId": 192
@@ -9131,7 +9157,7 @@
     },
     "media": [
       {
-        "id": 234,
+        "id": 236,
         "thumbName": "10240ef3-a8b9-4c73-8d53-53b182f57374-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -9143,7 +9169,7 @@
     ],
     "locations": [
       {
-        "id": 30,
+        "id": 32,
         "address": "UC San Diego",
         "order": 0,
         "pinId": 209
@@ -9169,7 +9195,7 @@
     },
     "media": [
       {
-        "id": 256,
+        "id": 237,
         "thumbName": "512b7eb4-5f06-4b87-9b31-c70d51f2df46-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 471,
@@ -9198,7 +9224,7 @@
     },
     "media": [
       {
-        "id": 235,
+        "id": 238,
         "thumbName": "9d3fdd45-fbda-4b7c-b649-1d7c72016c63-chrono-lg.webp",
         "thumbWidth": 768,
         "thumbHeight": 545,
@@ -9227,7 +9253,7 @@
     },
     "media": [
       {
-        "id": 236,
+        "id": 239,
         "thumbName": "58441b39-2150-45ad-8f12-b36ab5f90736-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -9239,7 +9265,7 @@
     ],
     "locations": [
       {
-        "id": 31,
+        "id": 33,
         "address": "Frito-Lay’s research and development headquarters, Texas",
         "order": 0,
         "pinId": 194
@@ -9263,7 +9289,7 @@
     },
     "media": [
       {
-        "id": 255,
+        "id": 240,
         "thumbName": "3ddd9850-2551-4ade-b842-2099e75caf6c-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 308,
@@ -9293,7 +9319,7 @@
     },
     "media": [
       {
-        "id": 253,
+        "id": 241,
         "thumbName": "a40beb47-cb9a-43c6-9a0e-d1dd0f31ec9b-chrono-lg.webp",
         "thumbWidth": 591,
         "thumbHeight": 308,
@@ -9305,7 +9331,7 @@
     ],
     "locations": [
       {
-        "id": 38,
+        "id": 34,
         "address": "AISIN North Carolina Corporation (ANC) facility in Durham, North Carolina",
         "order": 0,
         "pinId": 321
@@ -9331,7 +9357,7 @@
     },
     "media": [
       {
-        "id": 254,
+        "id": 242,
         "thumbName": "17d63629-02e3-4d3f-be38-c9001a87421d-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -9343,7 +9369,7 @@
     ],
     "locations": [
       {
-        "id": 39,
+        "id": 35,
         "address": "Neste  Porvoo refinery in Finland",
         "order": 0,
         "pinId": 322
@@ -9368,7 +9394,7 @@
     },
     "media": [
       {
-        "id": 237,
+        "id": 243,
         "thumbName": "6535282f-7932-4bdf-8f0e-51ab0f6d2578-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -9422,7 +9448,7 @@
     },
     "media": [
       {
-        "id": 238,
+        "id": 244,
         "thumbName": "f37f0f24-e347-4e0a-b805-d1a1a30dbd14-chrono-lg.webp",
         "thumbWidth": 743,
         "thumbHeight": 430,
@@ -9434,7 +9460,7 @@
     ],
     "locations": [
       {
-        "id": 32,
+        "id": 36,
         "address": "Guangdong Province",
         "order": 0,
         "pinId": 225
@@ -9458,7 +9484,7 @@
     },
     "media": [
       {
-        "id": 239,
+        "id": 245,
         "thumbName": "49b5fdba-9013-4950-863c-e88b8c3f3bcb-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 500,
@@ -9496,7 +9522,7 @@
     },
     "locations": [
       {
-        "id": 33,
+        "id": 37,
         "address": "Taiwan",
         "order": 0,
         "pinId": 207
@@ -9523,7 +9549,7 @@
     },
     "locations": [
       {
-        "id": 34,
+        "id": 38,
         "address": "Apple Valley",
         "order": 0,
         "pinId": 215
@@ -9548,7 +9574,7 @@
     },
     "media": [
       {
-        "id": 240,
+        "id": 246,
         "thumbName": "a4cf2cb9-1df7-4058-89f4-11000af5cd5d-chrono-lg.webp",
         "thumbWidth": 908,
         "thumbHeight": 474,
@@ -9577,7 +9603,7 @@
     },
     "media": [
       {
-        "id": 241,
+        "id": 247,
         "thumbName": "73f7248b-3954-4aa5-aae1-e3463be1f269-chrono-lg.webp",
         "thumbWidth": 768,
         "thumbHeight": 545,
@@ -9606,7 +9632,7 @@
     },
     "media": [
       {
-        "id": 242,
+        "id": 248,
         "thumbName": "bf50f483-f7d7-4ca8-bc7e-2e3e25b773b5-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -9633,7 +9659,7 @@
     },
     "media": [
       {
-        "id": 243,
+        "id": 249,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1640619037251043328",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -9643,7 +9669,7 @@
     ],
     "locations": [
       {
-        "id": 35,
+        "id": 39,
         "address": "Europe",
         "order": 0,
         "pinId": 223
@@ -9692,7 +9718,7 @@
     },
     "media": [
       {
-        "id": 244,
+        "id": 250,
         "thumbName": "70cb68bb-e894-41e9-a3b8-943c8257ec69-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 400,
@@ -9722,7 +9748,7 @@
     },
     "media": [
       {
-        "id": 245,
+        "id": 251,
         "thumbName": "8c5669d4-d0ff-4a13-a8c4-faf8f5ab7a08-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -9734,7 +9760,7 @@
     ],
     "locations": [
       {
-        "id": 36,
+        "id": 40,
         "address": "Merced, CA",
         "order": 0,
         "pinId": 219
@@ -9766,7 +9792,7 @@
     },
     "media": [
       {
-        "id": 246,
+        "id": 252,
         "thumbName": "7cc700a4-3b9f-41c9-aee7-4d04239f8736-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -9802,7 +9828,7 @@
     },
     "media": [
       {
-        "id": 247,
+        "id": 253,
         "thumbName": "44d2270e-f5b2-4116-85bd-23620693c371-chrono-lg.webp",
         "thumbWidth": 150,
         "thumbHeight": 133,
@@ -9831,7 +9857,7 @@
     },
     "media": [
       {
-        "id": 248,
+        "id": 254,
         "originalUrl": "https://twitter.com/BurggrabenH/status/1657432126076141570",
         "type": "2",
         "authorName": "Alexander Stahel ????",
@@ -9859,7 +9885,7 @@
     },
     "media": [
       {
-        "id": 249,
+        "id": 255,
         "originalUrl": "https://twitter.com/CyberMagazineX/status/890816308144558080",
         "type": "2",
         "authorName": "MagX(??????????X)",
@@ -9892,7 +9918,7 @@
     },
     "media": [
       {
-        "id": 250,
+        "id": 256,
         "thumbName": "96a0f58b-ba43-4ae8-861f-f3f05b74305a-chrono-lg.webp",
         "thumbWidth": 286,
         "thumbHeight": 400,
