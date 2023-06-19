@@ -1,4 +1,5 @@
 Wiki: https://en.wikipedia.org/wiki/Draft:Chronopin_(service)
+Need to publish here when approved: https://en.wikipedia.org/wiki/List_of_social_bookmarking_websites
 
 Bugs/priority:
 
