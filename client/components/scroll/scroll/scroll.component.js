@@ -13,12 +13,8 @@
         }
 
         scrollAdjust(elId) {
-            if (!this.scrollToPinMode) {
-                if (elId) {
-                    return this.scrollToIDAsync(elId);
-                }
-            } else {
-                // To Do Add scroll to pin and not timeline location
+            if (elId) {
+                return this.scrollToIDAsync(elId);
             }
             return Promise.resolve();
         }
@@ -29,8 +25,7 @@
             controller: ScrollController,
             controllerAs: 'scroll',
             bindings: {
-                scrollToId: '<',
-                scrollToPinMode: '<'
+                scrollToId: '<'
             },
             templateUrl: 'components/scroll/scroll/scroll.html',
         });

@@ -18,13 +18,22 @@
         color: black;
         background-color: #AAA;
         color: black;
-        &.active{
+
+        &.active {
             color: #AAA;
             background-color: black;
         }
+
         &:active {
             color: black;
             background-color: #444;
         }
     }
+}
+
+.\--closest {
+    pin-block {
+        box-shadow: 0 0px 8px rgba(255, 215, 0, 0.7);
+    }
+
 }

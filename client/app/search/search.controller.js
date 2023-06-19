@@ -154,6 +154,35 @@
             });
         }
 
+        getTodayPinId() {
+            if (!this.sortedPins.length) return;
+            let objects = this.sortedPins
+            let testDate = new Date(),
+                nextDateIndexesByDiff = [],
+                prevDateIndexesByDiff = [];
+
+            for (let i = 0; i < objects.length; i++) {
+                let thisDate = Date.parse(objects[i].utcStartDateTime),
+                    curDiff = testDate - thisDate;
+
+                curDiff < 0
+                    ? nextDateIndexesByDiff.push([i, curDiff])
+                    : prevDateIndexesByDiff.push([i, curDiff]);
+            }
+
+            nextDateIndexesByDiff.sort(function (a, b) { return a[1] < b[1]; });
+            prevDateIndexesByDiff.sort(function (a, b) { return a[1] > b[1]; });
+
+            this.closestFutureDate = objects[nextDateIndexesByDiff[0][0]];
+            this.closestPastDate = objects[prevDateIndexesByDiff[0][0]];
+
+            return this.closestFutureDate.id;
+        }
+
+        getTodaySearchScrollId() {
+            return this.viewType === 'timeline' ? this.pinApp.getTodaySearchScrollId() : this.getTodayPinId();
+        }
+
     }
 
     angular.module('chronopinNodeApp')
