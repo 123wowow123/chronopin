@@ -14,10 +14,8 @@ https://www.chronopin.com/pin/326
 Before Usable Bug:
 fix tags with continuous space enter ++
 Main timeline should remain in background for speedup
-delete thumb2 +
 
 Before Usable:
-search should have today button in best match mode +
 Comment cleanup/backup +
 suggest tag +
 links should be external cleanup

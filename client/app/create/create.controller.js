@@ -243,7 +243,6 @@
         this.sourceChanged = false;
         this.lastScrapeUrl = this.pin.sourceUrl;
         this
-          .resetForScrape()
           ._scrapePage(sourceUrl);
       }
       return this;
@@ -299,13 +298,6 @@
         .setPin(this.pin, {
           sourceUrl: this.pin.sourceUrl
         });
-      return this;
-    }
-
-    resetForScrape() {
-      let newPin = _.pick(this.pin, ['sourceUrl', 'allDay', 'id', 'parentId', 'useMedia', 'start', 'end', 'locations', 'merchants', 'price']);
-      this.scrapeService
-        .setPin(this.pin, newPin);
       return this;
     }
 
