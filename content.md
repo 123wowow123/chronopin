@@ -14,6 +14,8 @@ https://www.chronopin.com/pin/326
 Before Usable Bug:
 fix tags with continuous space enter ++
 Main timeline should remain in background for speedup
+validate user first last name
+user creation needs to be in transaction
 
 Before Usable:
 Comment cleanup/backup +
