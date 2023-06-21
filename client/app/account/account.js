@@ -1,18 +1,18 @@
 'use strict';
 
 angular.module('chronopinNodeApp')
-  .config(function($stateProvider) {
+  .config(function ($stateProvider) {
     $stateProvider.state('login', {
-        url: '/login?redirect',
-        templateUrl: 'app/account/login/login.html',
-        controller: 'LoginController',
-        controllerAs: 'vm'
-      })
+      url: '/login?redirect',
+      templateUrl: 'app/account/login/login.html',
+      controller: 'LoginController',
+      controllerAs: 'vm'
+    })
       .state('logout', {
         url: '/logout?referrer',
         referrer: 'main',
         template: '',
-        controller: function($state, Auth) {
+        controller: function ($state, Auth) {
           let referrer = $state.params.referrer || $state.current.referrer || 'main';
           Auth.logout();
           $state.go(referrer);
@@ -28,7 +28,8 @@ angular.module('chronopinNodeApp')
         url: '/profile',
         templateUrl: 'app/account/profile/profile.html',
         controller: 'ProfileController',
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        authenticate: true
       })
       .state('settings', {
         url: '/settings',
@@ -37,11 +38,4 @@ angular.module('chronopinNodeApp')
         controllerAs: 'vm',
         authenticate: true
       });
-  })
-  .run(function($rootScope) {
-    $rootScope.$on('$stateChangeStart', function(event, next, nextParams, current) {
-      if (next.name === 'logout' && current && current.name && !current.authenticate) {
-        next.referrer = current.name;
-      }
-    });
   });

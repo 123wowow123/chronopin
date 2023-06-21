@@ -15,6 +15,8 @@ Before Usable Bug:
 Main timeline should remain in background for speedup
 validate user first last name ++
 user creation needs to be in transaction
+add conical url on search page
+Add join mailing list
 
 Before Usable:
 Comment cleanup/backup +
@@ -24,6 +26,8 @@ Polling feature and share on reddit - embed pin
 test scraping
 improve today button on search page
 switch to suggestion tab automatically if non suggestion is empty
+need client redirect to www.
+check referer
 
 Bugs:
 scrolling 
@@ -39,6 +43,8 @@ Should show page not found and redirect to home? https://chronopin.com/pin/178
 quick add Q2 etc
 default does not select media but when selected it will auto check pin header media
 once user scrolls then don't reset scroll on load complete
+https://www.chronopin.com/settings should be behind login
+
 
 TD:
 https://developer.tdameritrade.com/quotes/apis/get/marketdata/quotes

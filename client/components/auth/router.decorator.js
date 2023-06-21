@@ -1,23 +1,20 @@
 'use strict';
 
-(function() {
+(function () {
 
   angular.module('chronopinNodeApp.auth')
-    .run(function($rootScope, $state, Auth) {
+    .run(function ($rootScope, $state, Auth, $transitions) {
       // Redirect to login if route requires auth and the user is not logged in, or doesn't have required role
-      $rootScope.$on('$stateChangeStart', function(event, next) {
-        if (!next.authenticate) {
+      $transitions.onEnter({ to: '**' }, (transition, param) => {
+        if (!param.authenticate) {
           return;
         }
-
-        if (typeof next.authenticate === 'string') {
-          Auth.hasRole(next.authenticate, _.noop)
+        if (typeof param.authenticate === 'string') {
+          Auth.hasRole(param.authenticate, _.noop)
             .then(has => {
               if (has) {
                 return;
               }
-
-              event.preventDefault();
               return Auth.isLoggedIn(_.noop)
                 .then(is => {
                   $state.go(is ? 'main' : 'login');
@@ -29,11 +26,10 @@
               if (is) {
                 return;
               }
-
-              event.preventDefault();
               $state.go('main');
             });
         }
       });
+
     });
 })();
