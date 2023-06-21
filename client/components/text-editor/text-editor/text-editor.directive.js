@@ -20,7 +20,7 @@
           description: '<',
           onChange: '&'
         },
-        link: function postLink(scope, elem, attrs, ngModel) {
+        link: (scope, elem, attrs, ngModel) => {
 
           function setModelInstance(editor, edjsParser) {
             scope.editor = editor;
@@ -51,7 +51,7 @@
                 return html.innerHTML;
               },
 
-              linkTool: function (data, config) {
+              linkTool: (data, config) => {
                 const cfg = config.linkTool // configurations for linkTool
                 // Display meta tags if available (title, description)
                 const imageLink = _.get(data, 'meta.image.URL') || _.get(data, 'meta.image.url') || ''
