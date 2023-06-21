@@ -22,6 +22,8 @@ suggest tag +
 links should be external cleanup
 Polling feature and share on reddit - embed pin
 test scraping
+improve today button on search page
+switch to suggestion tab automatically if non suggestion is empty
 
 Bugs:
 scrolling 

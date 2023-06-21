@@ -7824,6 +7824,50 @@
     "userId": 1
   },
   {
+    "id": 344,
+    "rootThread": false,
+    "title": "U.K. inflation came in hotter than expected in May, as consumer prices rose by an annual 8.7% while projection is a 8.4%",
+    "description": "<p class=\"paragraph\"> U.K. inflation came in hotter than expected in May as consumer prices rose by an annual 8.7%, unchanged from the previous month. </p><p class=\"paragraph\"> Economists polled by Reuters had projected an annual rise in the headline consumer price index (CPI) of 8.4%. </p><p class=\"paragraph\"> Core inflation — which excludes volatile energy, food, alcohol and tobacco prices — rose by an annual 7.1%, up from 6.8% in April and the highest rate since March 1992, according to the Office for National Statistics. </p><p class=\"paragraph\"> “Rising prices for air travel, recreational and cultural goods and services, and second-hand cars resulted in the largest upward contributions to the monthly change in both the CPIH and CPI annual rates. </p><p class=\"paragraph\"> The Organization for Economic Cooperation and Development projected earlier this month that the&nbsp;<a href=\"https://www.cnbc.com/2023/06/07/uk-predicted-to-have-the-highest-inflation-rate-out-of-all-advanced-economies-this-year.html\">U.K. will post annual headline inflation of 6.9% this year</a>, the highest level among all advanced economies. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Inflation</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687328457797,\"blocks\":[{\"id\":\"GQM2zylOEZ\",\"type\":\"paragraph\",\"data\":{\"text\":\"U.K. inflation came in hotter than expected in May as consumer prices rose by an annual 8.7%, unchanged from the previous month.\"}},{\"id\":\"MIkWQ2bzVR\",\"type\":\"paragraph\",\"data\":{\"text\":\"Economists polled by Reuters had projected an annual rise in the headline consumer price index (CPI) of 8.4%.\"}},{\"id\":\"RYQwo5Rv4l\",\"type\":\"paragraph\",\"data\":{\"text\":\"Core inflation — which excludes volatile energy, food, alcohol and tobacco prices — rose by an annual 7.1%, up from 6.8% in April and the highest rate since March 1992, according to the Office for National Statistics.\"}},{\"id\":\"ppxi6uoSPT\",\"type\":\"paragraph\",\"data\":{\"text\":\"“Rising prices for air travel, recreational and cultural goods and services, and second-hand cars resulted in the largest upward contributions to the monthly change in both the CPIH and CPI annual rates.\"}},{\"id\":\"nNXb90a0BT\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Organization for Economic Cooperation and Development projected earlier this month that the&nbsp;<a href=\\\"https://www.cnbc.com/2023/06/07/uk-predicted-to-have-the-highest-inflation-rate-out-of-all-advanced-economies-this-year.html\\\">U.K. will post annual headline inflation of 6.9% this year</a>, the highest level among all advanced economies.\"}},{\"id\":\"KZhNFiABLH\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Inflation</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/06/21/uk-inflation-exceeds-expectations-in-may-piling-pressure-on-the-government-and-bank-of-england.html",
+    "utcStartDateTime": "2023-06-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-21T06:21:58.909Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 270,
+        "thumbName": "64b3abe8-3706-4bbf-a8d8-6196d12de14f-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107252417-1686130172227-gettyimages-1257091995-UK_ECONOMY.jpeg?v=1687327837&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 45,
+        "address": "U.K.",
+        "order": 0,
+        "pinId": 344
+      }
+    ],
+    "mentions": [
+      {
+        "id": 97,
+        "tag": "#inflation",
+        "pinId": 344
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 146,
     "parentId": 145,
     "rootThread": false,
