@@ -37,7 +37,7 @@
                                             'has-error': form.firstname.$invalid && vm.submitted }">
             <label>Frist Name</label>
 
-            <input type="text" name="firstname" class="form-control" ng-model="vm.user.firstName" required />
+            <input type="text" name="firstname" class="form-control" ng-model="vm.user.firstName" required ng-pattern="/^[a-zA-Z]+$/" maxlength="60"/>
             <p class="help-block" ng-show="form.firstname.$error.required && vm.submitted">
               A first name is required
             </p>
@@ -47,7 +47,7 @@
                                             'has-error': form.lastname.$invalid && vm.submitted }">
             <label>Last Name</label>
 
-            <input type="text" name="lastname" class="form-control" ng-model="vm.user.lastName" required />
+            <input type="text" name="lastname" class="form-control" ng-model="vm.user.lastName" required ng-pattern="/^[a-zA-Z]+$/" maxlength="60"/>
             <p class="help-block" ng-show="form.lastname.$error.required && vm.submitted">
               A last name is required
             </p>
