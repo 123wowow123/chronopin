@@ -26,7 +26,7 @@ Polling feature and share on reddit - embed pin
 test scraping
 improve today button on search page
 switch to suggestion tab automatically if non suggestion is empty
-need client redirect to www.
+need client redirect to www. social login won't work
 check referer
 
 Bugs:
