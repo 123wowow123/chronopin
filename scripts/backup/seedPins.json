@@ -9072,6 +9072,35 @@
     "userId": 1
   },
   {
+    "id": 343,
+    "rootThread": false,
+    "title": "It's official: Student loan payments will restart in October, Education Department says",
+    "description": "<p class=\"paragraph\"> Around 40 million Americans have debt from their education. The typical monthly bill is roughly $350. </p><p class=\"paragraph\"> Student loan debt in the U.S. now totals nearly $1.8 trillion </p>",
+    "sourceDescription": "{\"time\":1687327603870,\"blocks\":[{\"id\":\"-q5ZzKyb8t\",\"type\":\"paragraph\",\"data\":{\"text\":\"Around 40 million Americans have debt from their education. The typical monthly bill is roughly $350.\"}},{\"id\":\"bzR96Z8xJe\",\"type\":\"paragraph\",\"data\":{\"text\":\"Student loan debt in the U.S. now totals nearly $1.8 trillion\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/06/20/its-official-student-loan-payments-will-restart-in-october.html",
+    "utcStartDateTime": "2023-10-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-10-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-21T06:07:14.552Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 269,
+        "thumbName": "1636b6d8-591f-4f8f-82f7-973737459bf0-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107232741-1682690964916-gettyimages-1474157336-dsc00810.jpeg?v=1687275815&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 166,
     "parentId": 165,
     "rootThread": false,
@@ -9355,6 +9384,54 @@
         "id": 48,
         "tag": "$AMD",
         "pinId": 289
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 342,
+    "rootThread": false,
+    "title": "Yen carry trade to unwind creating a liquidity suck in 2H23-1H24",
+    "description": "<p class=\"paragraph\"> People who borrowed yen and sent it overseas to obtain yields higher than there interest rate will return the yen. Creating a liquidity suck in the second half of the year or first quarter of next year. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#CarryTrade</chronohash>&nbsp; </p>",
+    "sourceDescription": "{\"time\":1687326566105,\"blocks\":[{\"id\":\"pMXuRXW83i\",\"type\":\"paragraph\",\"data\":{\"text\":\"People who borrowed yen and sent it overseas to obtain yields higher than there interest rate will return the yen. Creating a liquidity suck in the second half of the year or first quarter of next year.\"}},{\"id\":\"x-M6m99ePT\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#CarryTrade</chronohash>&nbsp;\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/PauloMacro/status/1670148000780255233",
+    "utcStartDateTime": "2024-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-21T05:50:33.492Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 268,
+        "originalUrl": "https://twitter.com/PauloMacro/status/1670148000780255233",
+        "type": "2",
+        "authorName": "Paulo Macro",
+        "authorUrl": "https://twitter.com/PauloMacro",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">At this point I am convinced the yen and the unwind of this carry trade is the “Don Coxe Surprise” of 2H23-1H24<a href=\"https://twitter.com/kevinmuir?ref_src=twsrc%5Etfw\">@kevinmuir</a></p>&mdash; Paulo Macro (@PauloMacro) <a href=\"https://twitter.com/PauloMacro/status/1670148000780255233?ref_src=twsrc%5Etfw\">June 17, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 43,
+        "address": "United Sates",
+        "order": 0,
+        "pinId": 342
+      },
+      {
+        "id": 44,
+        "address": "Japan",
+        "order": 1,
+        "pinId": 342
+      }
+    ],
+    "mentions": [
+      {
+        "id": 96,
+        "tag": "#CarryTrade",
+        "pinId": 342
       }
     ],
     "userId": 1
