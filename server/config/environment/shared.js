@@ -28,7 +28,7 @@ exports = module.exports = {
   thumbFolder: thumbFolder,
   thumbUrlPrefix: `https://chronopin.blob.core.windows.net/${thumbFolder}/`,
   fbAppId: '560731380662615',
-  gaAppId: 'UA-103783559-1',
+  gaAppId: 'G-N7Q4YYVSC9',
   scrapeType: {
     web: "web",
     twitter: "twitter",

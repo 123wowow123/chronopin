@@ -12,7 +12,6 @@ add mac release
 https://www.chronopin.com/pin/326
 
 Before Usable Bug:
-fix tags with continuous space enter ++
 Main timeline should remain in background for speedup
 validate user first last name
 user creation needs to be in transaction
@@ -32,13 +31,18 @@ pins loaded from infinit scroll needs to be in memory so that navigating back to
 create/edit/respond page needs to have auth guard +
 changing username needs to sync to comment +
 show pixel dimention / size via tooltip?? of scraped image +
-
 missing description validation
 
 Should show page not found and redirect to home? https://chronopin.com/pin/178
 quick add Q2 etc
 default does not select media but when selected it will auto check pin header media
 once user scrolls then don't reset scroll on load complete
+
+TD:
+https://developer.tdameritrade.com/quotes/apis/get/marketdata/quotes
+https://github.com/alexgolec/tda-api
+https://github.com/knicola/tdameritradejs
+
 
 SEO:
 Wiki: https://en.wikipedia.org/wiki/Draft:Chronopin_(service)

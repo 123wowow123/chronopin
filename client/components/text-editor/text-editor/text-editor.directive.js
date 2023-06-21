@@ -36,7 +36,12 @@
             }, {
               header: (data, config) => {
                 // This actually cleanses all anchor tags and not header
-                const html = document.createElement('div');
+                let html
+                if (Number.isInteger(data.level)) {
+                  html = document.createElement(`h${data.level}`);
+                } else {
+                  html = document.createElement('div');
+                }
                 html.innerHTML = data.text;
                 const links = html.getElementsByTagName('a');
                 for (let i = 0, len = links.length; i < len; i += 1) {
@@ -56,7 +61,7 @@
                     <div class="${cfg.imgBgClass}" style="background-image: url(${imageLink})"></div>
                     `
                 }
-                var url = new URL(data.link);
+                let url = new URL(data.link);
                 return `
                   <a class=" ${cfg.linkCardClass}" href="${data.link}" target="_blank">
                   ${imageDiv}
@@ -67,9 +72,9 @@
               },
 
               image: function image(data, config) {
-                var imageConditions = "".concat(data.stretched ? "img-fullwidth" : "", " ").concat(data.withBorder ? "img-border" : "", " ").concat(data.withBackground ? "img-bg" : "");
-                var imgClass = config.image.imgClass || "";
-                var imageSrc;
+                let imageConditions = "".concat(data.stretched ? "img-fullwidth" : "", " ").concat(data.withBorder ? "img-border" : "", " ").concat(data.withBackground ? "img-bg" : "");
+                let imgClass = config.image.imgClass || "";
+                let imageSrc;
 
                 if (data.url) {
                   // simple-image was used and the image probably is not uploaded to this server
@@ -88,8 +93,8 @@
                   return "<img class=\"".concat(imageConditions, " ").concat(imgClass, "\" src=\"").concat(imageSrc, "\" alt=\"").concat(data.caption, "\">");
                 } else if (config.image.use === "figure") {
                   const attributes = data.file.attributes || {};
-                  var figureClass = config.image.figureClass || "";
-                  var figCapClass = config.image.figCapClass || "";
+                  let figureClass = config.image.figureClass || "";
+                  let figCapClass = config.image.figCapClass || "";
                   let figure = "<figure class=\""
                     .concat(figureClass, "\"><img loading=\"lazy\" class=\"")
                     .concat(imgClass, " ")
@@ -134,69 +139,158 @@
           };
 
           function placeCaretAtEnd(el) {
+            let child = el;
+            let parent = child.parentNode;
+            let childNodes = parent.childNodes;
+            let count = childNodes.length;
+            let child_index;
+            for (let i = 0; i < count; ++i) {
+              if (child === childNodes[i]) {
+                child_index = i;
+                break;
+              }
+            }
+
             el.focus();
-            if (typeof window.getSelection != "undefined"
-              && typeof document.createRange != "undefined") {
-              var range = document.createRange();
-              range.selectNodeContents(el);
-              range.collapse(false);
-              var sel = window.getSelection();
-              sel.removeAllRanges();
-              sel.addRange(range);
-            } else if (typeof document.body.createTextRange != "undefined") {
-              var textRange = document.body.createTextRange();
-              textRange.moveToElementText(el);
-              textRange.collapse(false);
-              textRange.select();
+            let range = document.createRange();
+            range.selectNode(el.nextSibling);
+            range.collapse(false);
+            let sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+          }
+
+
+          // Recurse and loop through DOM elements only once
+          function treeHTML(element, matchFactories, doNotContinueCursor) {
+            let nodeList = element.childNodes;
+
+            if (nodeList != null) {
+              if (nodeList.length) {
+
+                for (let i = 0; i < nodeList.length; i++) {
+                  if (nodeList[i].nodeType == 3) { // if child node is **final base-case** text node
+                    matchFactories.forEach((f) => {
+                      let parentNode = nodeList[i].parentNode;
+                      //let match = f.regexValidateContent.exec(nodeList[i].nodeValue);
+                      let validateContentPass = f.regexValidateContent.exec(nodeList[i].nodeValue);
+                      let validateContentAny = f.regexValidateAny.exec(nodeList[i].nodeValue);
+
+                      if (parentNode.nodeName.toLowerCase() === f.nodeName.toLowerCase() && !validateContentPass && validateContentAny) {
+                        //if parent is tag node then remove and rewrap
+                        const oldText0 = parentNode.textContent;
+                        let range0 = new Range();
+                        range0.setStart(nodeList[i], validateContentAny.index);
+                        range0.setEnd(nodeList[i], validateContentAny.index + validateContentAny[1].length);
+                        let newNode0 = f.nodeWrapperFactory();
+                        range0.surroundContents(newNode0);
+                        let fragment = new DocumentFragment()
+                        fragment.append(newNode0);
+                        let remainerContent = oldText0.substring(validateContentAny.index + validateContentAny[1].length)
+                        fragment.append(remainerContent);
+
+                        parentNode.replaceWith(fragment);
+                        !doNotContinueCursor && placeCaretAtEnd(newNode0);
+                      } else if (parentNode.nodeName.toLowerCase() === f.nodeName.toLowerCase() && !validateContentPass) {
+                        const oldText = parentNode.textContent;
+                        let fragment = new DocumentFragment()
+                        fragment.append(oldText);
+                        parentNode.replaceWith(fragment);
+                      } else if (parentNode.nodeName.toLowerCase() === f.nodeName.toLowerCase() && validateContentPass) {
+                        validateContentPass
+                      } else if (validateContentPass) {
+                        if (parentNode.nodeName.toLowerCase() !== f.nodeName.toLowerCase()) {
+                          let range = new Range();
+                          range.setStart(nodeList[i], validateContentPass.index);
+                          range.setEnd(nodeList[i], validateContentPass.index + validateContentPass[1].length);
+                          let newNode = f.nodeWrapperFactory();
+                          range.surroundContents(newNode);
+                          !doNotContinueCursor && placeCaretAtEnd(newNode);
+                        } else {
+                          //if parent is tag node then remove and rewrap
+                          const oldText = parentNode.textContent;
+                          let range2 = new Range();
+                          range2.setStart(nodeList[i], validateContentPass.index);
+                          range2.setEnd(nodeList[i], validateContentPass.index + validateContentPass[1].length);
+                          let newNode2 = f.nodeWrapperFactory();
+                          range2.surroundContents(newNode2);
+                          let fragment = new DocumentFragment()
+                          fragment.append(newNode2);
+                          let remainerContent = oldText.substring(validateContentPass.index + validateContentPass[1].length)
+                          fragment.append(remainerContent);
+
+                          parentNode.replaceWith(fragment);
+                          !doNotContinueCursor && placeCaretAtEnd(newNode2);
+                        }
+                      }
+                    });
+                  } else {
+                    treeHTML(nodeList[i], matchFactories, doNotContinueCursor);
+                  }
+                }
+              }
             }
           }
 
+          const matchFactories = [
+            {
+              // hash factory
+              // preCheckRegex: /(?<!class="chrono-hash-highlight">)(#[A-z\d-]+(?:\s|&nbsp;))/g,
+              // regex: /(#[A-z\d-]+)(?:\s|&nbsp;)/,
+              regexValidateContent: /(#[A-z\d-]+)$/,
+              regexValidateAny: /(#[A-z\d-]+)/,
+              nodeName: 'chronohash',
+              nodeWrapperFactory: () => {
+                let newNode = document.createElement('chronohash');
+                newNode.classList.add('chrono-hash-highlight');
+                return newNode;
+              }
+            },
+            {
+              // at factory
+              // preCheckRegex: /(?<!class="chrono-at-highlight">)(@[A-z\d-]+(?:\s|&nbsp;))/g,
+              // regex: /(@[A-z\d-]+)(?:\s|&nbsp;)/,
+              regexValidateContent: /(@[A-z\d-]+)$/,
+              regexValidateAny: /(@[A-z\d-]+)/,
+              nodeName: 'chronoat',
+              nodeWrapperFactory: () => {
+                let newNode = document.createElement('chronoat');
+                newNode.classList.add('chrono-at-highlight');
+                return newNode;
+              }
+            },
+            {
+              // dollar factory
+              // preCheckRegex: /(?<!class="chrono-dollar-highlight">)(\$[A-z]+[\d-]?(?:\s|&nbsp;))/g,
+              // regex: /(\$[A-z]+[\d-]?)(?:\s|&nbsp;)/,
+              regexValidateContent: /(\$[A-z]+[\d-]?)$/,
+              regexValidateAny: /(\$[A-z]+[\d-]?)/,
+              nodeName: 'chronodollar',
+              nodeWrapperFactory: () => {
+                let newNode = document.createElement('chronodollar');
+                newNode.classList.add('chrono-dollar-highlight');
+                return newNode;
+              }
+            }
+          ];
+
+          let previousBlockEl;
           const editorOnChange = (api, event) => {
             if (scope.editor) {
+              //event && api
+              const el = _.get(event, 'detail.target.holder');
+              if (el) {
+                if (event.type === "block-added" && previousBlockEl) {
+                  treeHTML(previousBlockEl, matchFactories, true);
+                }
+                let firstEl = el.firstChild;
+                previousBlockEl = firstEl;
+                treeHTML(firstEl, matchFactories);
+              }
+
               setTimeout(() => {
                 scope.editor.save()
                   .then((jsonHtmlContent) => {
-                    //event && api
-                    const el = _.get(event, 'detail.target.holder');
-                    if (el) {
-
-                      const hashEls = el.getElementsByClassName('chrono-dollar-highlight');
-                      console.log('hashEls', hashEls.length);
-
-                      let firstEl = el.firstChild;
-                      const matchTagStringWithSpace = /(?<!class="chrono-hash-highlight">)(#[A-z\d-]+(?:\s|&nbsp;))/g;
-                      const matchAtStringWithSpace = /(?<!class="chrono-at-highlight">)(@[A-z\d-]+(?:\s|&nbsp;))/g;
-                      const matchDollarStringWithSpace = /(?<!class="chrono-at-highlight">)(\$[A-z]+[\d-]?(?:\s|&nbsp;))/g;
-
-                      // Match #tag
-                      if (matchTagStringWithSpace.test(firstEl.innerHTML)) {
-                        const matchHashString = /(?<!class="chrono-hash-highlight">)(#[A-z\d-]+)/g;
-                        const html = firstEl.innerHTML.replace(matchHashString, (x) => {
-                          return `<chronohash class="chrono-hash-highlight">${x}</chronohash>`
-                        });
-                        firstEl.innerHTML = html;
-                        //add link to # search
-                        // firstEl.innerHTML = firstEl.innerHTML.replace(/&nbsp;/, ' ');
-                        // placeCaretAtEnd(el)
-                      }
-                      // Match @tag
-                      if (matchAtStringWithSpace.test(firstEl.innerHTML)) {
-                        const matchAtString = /(?<!class="chrono-at-highlight">)(@[A-z\d-]+)/g;
-                        const html = firstEl.innerHTML.replace(matchAtString, (x) => {
-                          return `<chronoat class="chrono-at-highlight">${x}</chronoat>`
-                        });
-                        firstEl.innerHTML = html;
-                      }
-                      // Match $tag
-                      if (matchDollarStringWithSpace.test(firstEl.innerHTML)) {
-                        const matchDollarString = /(?<!class="chrono-dollar-highlight">)(\$[A-z]+[\d-]?)/g;
-                        const html = firstEl.innerHTML.replace(matchDollarString, (x) => {
-                          return `<chronodollar class="chrono-dollar-highlight">${x}</chronodollar>`
-                        });
-                        firstEl.innerHTML = html;
-                      }
-                    }
-
                     ngModel.$setViewValue(jsonHtmlContent);
                     const saveHtml = scope.parser.parse(jsonHtmlContent);
                     scope.onChange({ html: saveHtml })
