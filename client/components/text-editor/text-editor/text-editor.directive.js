@@ -48,7 +48,7 @@
                   links[i].target = '_blank';
                   links[i].rel = 'noopener noreferrer';
                 }
-                return html.innerHTML;
+                return html.outerHTML;
               },
 
               linkTool: (data, config) => {
@@ -175,7 +175,6 @@
                         fragment.append(newNode0);
                         let remainerContent = oldText0.substring(validateContentAny.index + validateContentAny[1].length);
                         fragment.append(remainerContent);
-
                         parentNode.replaceWith(fragment);
                         !doNotContinueCursor && placeCaretAtEnd(newNode0);
                       } else if (parentNode.nodeName.toLowerCase() === f.nodeName.toLowerCase() && !validateContentPass) {
@@ -201,11 +200,10 @@
                           range2.setEnd(nodeList[i], match.index + match[1].length);
                           let newNode2 = f.nodeWrapperFactory();
                           range2.surroundContents(newNode2);
-                          let fragment = new DocumentFragment()
+                          let fragment = new DocumentFragment();
                           fragment.append(newNode2);
                           let remainerContent = oldText.substring(match.index + match[1].length)
                           fragment.append(remainerContent);
-
                           parentNode.replaceWith(fragment);
                           placeCaretAtEnd(newNode2);
                         }

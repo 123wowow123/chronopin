@@ -13,7 +13,7 @@ https://www.chronopin.com/pin/326
 
 Before Usable Bug:
 Main timeline should remain in background for speedup
-validate user first last name
+validate user first last name ++
 user creation needs to be in transaction
 
 Before Usable:
