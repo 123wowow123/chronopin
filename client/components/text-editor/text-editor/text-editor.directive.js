@@ -71,7 +71,7 @@
                   </a>`
               },
 
-              image: function image(data, config) {
+              image: (data, config) => {
                 let imageConditions = "".concat(data.stretched ? "img-fullwidth" : "", " ").concat(data.withBorder ? "img-border" : "", " ").concat(data.withBackground ? "img-bg" : "");
                 let imgClass = config.image.imgClass || "";
                 let imageSrc;
@@ -139,18 +139,6 @@
           };
 
           function placeCaretAtEnd(el) {
-            let child = el;
-            let parent = child.parentNode;
-            let childNodes = parent.childNodes;
-            let count = childNodes.length;
-            let child_index;
-            for (let i = 0; i < count; ++i) {
-              if (child === childNodes[i]) {
-                child_index = i;
-                break;
-              }
-            }
-
             el.focus();
             let range = document.createRange();
             range.selectNode(el.nextSibling);
@@ -158,8 +146,7 @@
             let sel = window.getSelection();
             sel.removeAllRanges();
             sel.addRange(range);
-          }
-
+          };
 
           // Recurse and loop through DOM elements only once
           function treeHTML(element, matchFactories, doNotContinueCursor) {
@@ -172,7 +159,7 @@
                   if (nodeList[i].nodeType == 3) { // if child node is **final base-case** text node
                     matchFactories.forEach((f) => {
                       let parentNode = nodeList[i].parentNode;
-                      //let match = f.regexValidateContent.exec(nodeList[i].nodeValue);
+                      let match = f.regex.exec(nodeList[i].nodeValue);
                       let validateContentPass = f.regexValidateContent.exec(nodeList[i].nodeValue);
                       let validateContentAny = f.regexValidateAny.exec(nodeList[i].nodeValue);
 
@@ -184,43 +171,43 @@
                         range0.setEnd(nodeList[i], validateContentAny.index + validateContentAny[1].length);
                         let newNode0 = f.nodeWrapperFactory();
                         range0.surroundContents(newNode0);
-                        let fragment = new DocumentFragment()
+                        let fragment = new DocumentFragment();
                         fragment.append(newNode0);
-                        let remainerContent = oldText0.substring(validateContentAny.index + validateContentAny[1].length)
+                        let remainerContent = oldText0.substring(validateContentAny.index + validateContentAny[1].length);
                         fragment.append(remainerContent);
 
                         parentNode.replaceWith(fragment);
                         !doNotContinueCursor && placeCaretAtEnd(newNode0);
                       } else if (parentNode.nodeName.toLowerCase() === f.nodeName.toLowerCase() && !validateContentPass) {
                         const oldText = parentNode.textContent;
-                        let fragment = new DocumentFragment()
+                        let fragment = new DocumentFragment();
                         fragment.append(oldText);
                         parentNode.replaceWith(fragment);
                       } else if (parentNode.nodeName.toLowerCase() === f.nodeName.toLowerCase() && validateContentPass) {
                         validateContentPass
-                      } else if (validateContentPass) {
+                      } else if (match) {
                         if (parentNode.nodeName.toLowerCase() !== f.nodeName.toLowerCase()) {
                           let range = new Range();
-                          range.setStart(nodeList[i], validateContentPass.index);
-                          range.setEnd(nodeList[i], validateContentPass.index + validateContentPass[1].length);
+                          range.setStart(nodeList[i], match.index);
+                          range.setEnd(nodeList[i], match.index + match[1].length);
                           let newNode = f.nodeWrapperFactory();
                           range.surroundContents(newNode);
-                          !doNotContinueCursor && placeCaretAtEnd(newNode);
+                          placeCaretAtEnd(newNode);
                         } else {
                           //if parent is tag node then remove and rewrap
                           const oldText = parentNode.textContent;
                           let range2 = new Range();
-                          range2.setStart(nodeList[i], validateContentPass.index);
-                          range2.setEnd(nodeList[i], validateContentPass.index + validateContentPass[1].length);
+                          range2.setStart(nodeList[i], match.index);
+                          range2.setEnd(nodeList[i], match.index + match[1].length);
                           let newNode2 = f.nodeWrapperFactory();
                           range2.surroundContents(newNode2);
                           let fragment = new DocumentFragment()
                           fragment.append(newNode2);
-                          let remainerContent = oldText.substring(validateContentPass.index + validateContentPass[1].length)
+                          let remainerContent = oldText.substring(match.index + match[1].length)
                           fragment.append(remainerContent);
 
                           parentNode.replaceWith(fragment);
-                          !doNotContinueCursor && placeCaretAtEnd(newNode2);
+                          placeCaretAtEnd(newNode2);
                         }
                       }
                     });
@@ -236,7 +223,7 @@
             {
               // hash factory
               // preCheckRegex: /(?<!class="chrono-hash-highlight">)(#[A-z\d-]+(?:\s|&nbsp;))/g,
-              // regex: /(#[A-z\d-]+)(?:\s|&nbsp;)/,
+              regex: /(#[A-z\d-]+)/, // /(#[A-z\d-]+)(?:\s|&nbsp;)/,
               regexValidateContent: /(#[A-z\d-]+)$/,
               regexValidateAny: /(#[A-z\d-]+)/,
               nodeName: 'chronohash',
@@ -249,7 +236,7 @@
             {
               // at factory
               // preCheckRegex: /(?<!class="chrono-at-highlight">)(@[A-z\d-]+(?:\s|&nbsp;))/g,
-              // regex: /(@[A-z\d-]+)(?:\s|&nbsp;)/,
+              regex: /(@[A-z\d-]+)/, ///(@[A-z\d-]+)(?:\s|&nbsp;)/,
               regexValidateContent: /(@[A-z\d-]+)$/,
               regexValidateAny: /(@[A-z\d-]+)/,
               nodeName: 'chronoat',
@@ -262,7 +249,7 @@
             {
               // dollar factory
               // preCheckRegex: /(?<!class="chrono-dollar-highlight">)(\$[A-z]+[\d-]?(?:\s|&nbsp;))/g,
-              // regex: /(\$[A-z]+[\d-]?)(?:\s|&nbsp;)/,
+              regex: /(\$[A-z]+[\d-]?)/, // /(\$[A-z]+[\d-]?)(?:\s|&nbsp;)/,
               regexValidateContent: /(\$[A-z]+[\d-]?)$/,
               regexValidateAny: /(\$[A-z]+[\d-]?)/,
               nodeName: 'chronodollar',
