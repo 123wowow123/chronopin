@@ -13,11 +13,9 @@ Before Usable Bug:
 
 Before Usable:
 Comment cleanup/backup +
-
 links should be external cleanup
 
 improve today button on search page
-thread conicoal url should be from initial thread
 
 Bugs:
 scrolling 

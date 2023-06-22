@@ -9326,13 +9326,14 @@
     "id": 357,
     "rootThread": false,
     "title": "Bank of England surprises with 50 basis point rate hike to tackle persistent inflation",
-    "description": "<p class=\"paragraph\"> Thursday’s 50 basis point hike surprised markets, which had priced in a smaller rise. </p><p class=\"paragraph\"> Policymakers are walking a tightrope as they attempt to tighten monetary policy sufficiently to quell inflationary pressures without triggering a full-scale mortgage crisis and recession. </p><p class=\"paragraph\"> Core inflation — which excludes volatile energy, food, alcohol and tobacco prices — was 7.1% year on year in May, up from 6.8% in April and the highest rate since March 1992. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Inflation</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#BOE</chronohash> </p>",
-    "sourceDescription": "{\"time\":1687443636812,\"blocks\":[{\"id\":\"Ofox7aMxZ-\",\"type\":\"paragraph\",\"data\":{\"text\":\"Thursday’s 50 basis point hike surprised markets, which had priced in a smaller rise.\"}},{\"id\":\"x9I7ZAeblm\",\"type\":\"paragraph\",\"data\":{\"text\":\"Policymakers are walking a tightrope as they attempt to tighten monetary policy sufficiently to quell inflationary pressures without triggering a full-scale mortgage crisis and recession.\"}},{\"id\":\"1vFt84dKpR\",\"type\":\"paragraph\",\"data\":{\"text\":\"Core inflation — which excludes volatile energy, food, alcohol and tobacco prices — was 7.1% year on year in May, up from 6.8% in April and the highest rate since March 1992.\"}},{\"id\":\"gMzO_jeIkY\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Inflation</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#BOE</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "description": "<p class=\"paragraph\"> Thursday’s 50 basis point hike surprised markets, which had priced in a smaller rise. </p><p class=\"paragraph\"> Policymakers are walking a tightrope as they attempt to tighten monetary policy sufficiently to quell inflationary pressures without triggering a full-scale mortgage crisis and recession. </p><p class=\"paragraph\"> Core inflation — which excludes volatile energy, food, alcohol and tobacco prices — was 7.1% year on year in May, up from 6.8% in April and the highest rate since March 1992. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Rates</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Inflation</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#BOE</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687476827200,\"blocks\":[{\"id\":\"Ofox7aMxZ-\",\"type\":\"paragraph\",\"data\":{\"text\":\"Thursday’s 50 basis point hike surprised markets, which had priced in a smaller rise.\"}},{\"id\":\"x9I7ZAeblm\",\"type\":\"paragraph\",\"data\":{\"text\":\"Policymakers are walking a tightrope as they attempt to tighten monetary policy sufficiently to quell inflationary pressures without triggering a full-scale mortgage crisis and recession.\"}},{\"id\":\"1vFt84dKpR\",\"type\":\"paragraph\",\"data\":{\"text\":\"Core inflation — which excludes volatile energy, food, alcohol and tobacco prices — was 7.1% year on year in May, up from 6.8% in April and the highest rate since March 1992.\"}},{\"id\":\"w1Egedqgv_\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Rates</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Inflation</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#BOE</chronohash>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.cnbc.com/2023/06/22/bank-of-england-june-decision-50-basis-point-rate-hike-to-tackle-persistent-inflation.html",
     "utcStartDateTime": "2023-06-22T07:00:00.000Z",
-    "utcEndDateTime": "2023-06-23T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-24T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-22T14:22:59.923Z",
+    "utcUpdatedDateTime": "2023-06-22T23:33:49.910Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -9351,7 +9352,7 @@
     ],
     "locations": [
       {
-        "id": 55,
+        "id": 111,
         "address": "UK",
         "order": 0,
         "pinId": 357
@@ -9359,12 +9360,17 @@
     ],
     "mentions": [
       {
-        "id": 75,
+        "id": 107,
+        "tag": "#rates",
+        "pinId": 357
+      },
+      {
+        "id": 108,
         "tag": "#inflation",
         "pinId": 357
       },
       {
-        "id": 76,
+        "id": 109,
         "tag": "#BOE",
         "pinId": 357
       }
@@ -9455,6 +9461,124 @@
         "id": 81,
         "tag": "$SPR",
         "pinId": 360
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 366,
+    "rootThread": false,
+    "title": "New technologies hurt car quality as EV brands fare poorly, J.D. Power says",
+    "description": "<p class=\"paragraph\"> New vehicles are becoming more troublesome, due in part to new technologies including safety systems, according to the 2023 edition of J.D. Power’s Initial Quality Study.  </p><p class=\"paragraph\"> The study found industry-wide problems per 100 vehicles rose by 12 to 192, on average. </p><p class=\"paragraph\"> The firm’s annual initial quality rankings are based on survey responses from new car buyers or lessees of current model-year vehicles who respond during their first 90 days of ownership. </p><p class=\"paragraph\"> Top 10 auto brands in the 2023 J.D. Power Initial Quality Study </p><ol><li>Dodge, with 140 average problems per 100 vehicles</li><li>Ram, 141</li><li>Alfa Romeo, 143</li><li>Buick, 162</li><li>Chevrolet, 166</li><li>GMC, 167</li><li>Porsche, 167</li><li>Cadillac, 170</li><li>Kia, 170</li><li>Lexus, 171</li></ol><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Quality</chronohash> </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$STLA</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$F</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$TSLA</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$PSNY</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$TM</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$GM</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687476213817,\"blocks\":[{\"id\":\"Kmdnt23fXt\",\"type\":\"paragraph\",\"data\":{\"text\":\"New vehicles are becoming more troublesome, due in part to new technologies including safety systems, according to the 2023 edition of J.D. Power’s Initial Quality Study. \"}},{\"id\":\"HQT2XRLJqI\",\"type\":\"paragraph\",\"data\":{\"text\":\"The study found industry-wide problems per 100 vehicles rose by 12 to 192, on average.\"}},{\"id\":\"HAvCT6_l5C\",\"type\":\"paragraph\",\"data\":{\"text\":\"The firm’s annual initial quality rankings are based on survey responses from new car buyers or lessees of current model-year vehicles who respond during their first 90 days of ownership.\"}},{\"id\":\"1EFpzU-08U\",\"type\":\"paragraph\",\"data\":{\"text\":\"Top 10 auto brands in the 2023 J.D. Power Initial Quality Study\"}},{\"id\":\"CkUH5sxFlA\",\"type\":\"list\",\"data\":{\"style\":\"ordered\",\"items\":[\"Dodge, with 140 average problems per 100 vehicles\",\"Ram, 141\",\"Alfa Romeo, 143\",\"Buick, 162\",\"Chevrolet, 166\",\"GMC, 167\",\"Porsche, 167\",\"Cadillac, 170\",\"Kia, 170\",\"Lexus, 171\"]}},{\"id\":\"iS386fhzoP\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Quality</chronohash>\"}},{\"id\":\"ryrWJ6eymY\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$STLA</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$F</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$TSLA</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$PSNY</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$TM</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$GM</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/06/22/jd-power-initial-quality-study-2023-dodge-ram-top-tesla-volvo.html",
+    "utcStartDateTime": "2023-06-22T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-24T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-22T23:22:07.584Z",
+    "utcUpdatedDateTime": "2023-06-22T23:23:41.599Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 285,
+        "thumbName": "ed403288-e612-4c06-a382-5e95ecad420f-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/106601633-1593705950588dg021_001mmadvslbdfb7nh8o1ggbe7bj8ie3.jpg?v=1687449602&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 98,
+        "tag": "#Quality",
+        "pinId": 366
+      },
+      {
+        "id": 99,
+        "tag": "$STLA",
+        "pinId": 366
+      },
+      {
+        "id": 100,
+        "tag": "$F",
+        "pinId": 366
+      },
+      {
+        "id": 101,
+        "tag": "$TSLA",
+        "pinId": 366
+      },
+      {
+        "id": 102,
+        "tag": "$GM",
+        "pinId": 366
+      },
+      {
+        "id": 103,
+        "tag": "$PSNY",
+        "pinId": 366
+      },
+      {
+        "id": 104,
+        "tag": "$TM",
+        "pinId": 366
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 367,
+    "rootThread": false,
+    "title": "AWS invests $100 million in new generative AI program",
+    "description": "<p class=\"paragraph\"> AWS introduced a new generative AI program that connects its AI and machine learning experts with customers. </p><p class=\"paragraph\"> The cloud provider launched its AWS Generative AI Innovation Center on Thursday. AWS is investing $100 million in the program, aimed at AWS customers. </p><p class=\"paragraph\"> Under the center's model, technology experts from Amazon will meet with business leaders from participating organizations to understand their vision and business priorities, AWS said. Then, AWS and the customers will determine practical applications for generative AI that can materially improve business operations for the users. </p><p class=\"paragraph\"> Also, AWS data scientists will work with customers to build new products, scale them and then put them into action. </p><p class=\"paragraph\"> Customers involved in the program will have access to&nbsp;<a href=\"https://www.techtarget.com/searchenterpriseai/news/365535275/AWS-new-generative-AI-service-fills-need-in-market\">AWS generative AI services</a>, including&nbsp;<a href=\"https://www.techtarget.com/searchsoftwarequality/news/252527816/Amazon-boosts-Code-Whisperer-AI-and-ML-tools\">Amazon CodeWhisperer</a>, a coding assistant service, and Amazon Bedrock, a managed service that includes foundation models from startups such as AI21 Labs, Anthropic and Stability AI, as well as Amazon's foundation models. Customers can also train, build and deploy their models using Amazon SageMaker. </p><h3>Helping enterprises scale</h3><p class=\"paragraph\"> AWS' program comes as the generative AI market has boomed over the last seven months. Amid that rapid growth and growing interest from enterprises, the big cloud providers, including&nbsp;<a href=\"https://www.techtarget.com/searchenterpriseai/news/366538454/Microsoft-pushes-to-dominate-in-AI-race\">Microsoft and Google</a>, are racing to prove that generative AI technology is applicable and safe for enterprises. </p><p class=\"paragraph\"> Programs such as the Generative AI Innovation Center help enterprises use the data that tech giants such as AWS possess, helping them scale up their capabilities, according to Whit Andrews, an analyst at Gartner. </p><p class=\"paragraph\"> \"AI at this point in time demands massive scale in terms of the data that is available to create artificial intelligence elements, such as, most commonly, models that you feed in something and get something out,\" Andrews said. </p><p class=\"paragraph\"> This large scale -- exemplified by applications such as high-volume customer service contact centers -- means that enterprises are relying more and more on hyperscalers such as AWS, Google and Microsoft to help them apply generative AI to their business processes. </p><p class=\"paragraph\"> Moreover, because many enterprises are already working with the tech giants' cloud platforms and other technologies, they can trust the results they get from them, Andrews added. </p><p class=\"paragraph\"> However, the challenge an organization working with one of the providers might face is how to effectively use the tech giants' technology and expertise. </p><p class=\"paragraph\"> \"Will they make good decisions with it?\" Andrews continued. </p><h3>Selling directly to buyers</h3><p class=\"paragraph\"> For AWS, a program such as the Generative AI Innovation Center helps it continue selling directly to the buyer. </p><p class=\"paragraph\"> \"They are very comfortable being direct to buyer to consumer,\" Andrews said. \"What you're seeing here with this is Amazon saying, 'You can work directly with us. We facilitate that without your needing to invest in a third party.'\" </p><p class=\"paragraph\"> Amazon hopes to come across as a company focusing on openness and ease of use, he said. </p><p class=\"paragraph\"> But even as it is in effect deploying what is its own consulting service, AWS is also working with big consulting and systems integrator firms such as Accenture. </p><p class=\"paragraph\"> On June 21, Accenture revealed that it will work with AWS to help clients derive value from large language models and generative AI. </p><p class=\"paragraph\"> AWS has already started to work with some enterprises under its separate innovation program, which was introduced in April. </p><p class=\"paragraph\"> The tech giant uses AWS services to build&nbsp;<a href=\"https://www.techtarget.com/searchenterpriseai/definition/natural-language-generation-NLG\">natural language generation</a>&nbsp;capabilities with Fox Corporation, the media conglomerate, for example. Broadcasters at Fox Sports use AI-generated content to tell better stories, according to Sri Elaprolu, a senior leader of machine learning at AWS. </p><p class=\"paragraph\"> AWS said it is also working with healthcare, life sciences, and other media and entertainment industry customers to show how generative AI applies to their use cases. </p><p class=\"paragraph\"> \"We can only see and imagine what our customers are going to do with this technology,\" Elaprolu said. \"This is a huge generational shift in technology that we're expecting to see.\" </p><p class=\"paragraph\"> Enterprises do not have to pay an additional cost to be part of the generative AI innovation program. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#AI</chronohash>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$AMZN</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687476611128,\"blocks\":[{\"id\":\"-fkViC88at\",\"type\":\"paragraph\",\"data\":{\"text\":\"AWS introduced a new generative AI program that connects its AI and machine learning experts with customers.\"}},{\"id\":\"BU0OYasKci\",\"type\":\"paragraph\",\"data\":{\"text\":\"The cloud provider launched its AWS Generative AI Innovation Center on Thursday. AWS is investing $100 million in the program, aimed at AWS customers.\"}},{\"id\":\"HaTIuePob7\",\"type\":\"paragraph\",\"data\":{\"text\":\"Under the center's model, technology experts from Amazon will meet with business leaders from participating organizations to understand their vision and business priorities, AWS said. Then, AWS and the customers will determine practical applications for generative AI that can materially improve business operations for the users.\"}},{\"id\":\"jBIvAU8835\",\"type\":\"paragraph\",\"data\":{\"text\":\"Also, AWS data scientists will work with customers to build new products, scale them and then put them into action.\"}},{\"id\":\"XVjLf7vcWu\",\"type\":\"paragraph\",\"data\":{\"text\":\"Customers involved in the program will have access to&nbsp;<a href=\\\"https://www.techtarget.com/searchenterpriseai/news/365535275/AWS-new-generative-AI-service-fills-need-in-market\\\">AWS generative AI services</a>, including&nbsp;<a href=\\\"https://www.techtarget.com/searchsoftwarequality/news/252527816/Amazon-boosts-Code-Whisperer-AI-and-ML-tools\\\">Amazon CodeWhisperer</a>, a coding assistant service, and Amazon Bedrock, a managed service that includes foundation models from startups such as AI21 Labs, Anthropic and Stability AI, as well as Amazon's foundation models. Customers can also train, build and deploy their models using Amazon SageMaker.\"}},{\"id\":\"YrRN_mZwYe\",\"type\":\"header\",\"data\":{\"text\":\"Helping enterprises scale\",\"level\":3}},{\"id\":\"TgNcPckK9b\",\"type\":\"paragraph\",\"data\":{\"text\":\"AWS' program comes as the generative AI market has boomed over the last seven months. Amid that rapid growth and growing interest from enterprises, the big cloud providers, including&nbsp;<a href=\\\"https://www.techtarget.com/searchenterpriseai/news/366538454/Microsoft-pushes-to-dominate-in-AI-race\\\">Microsoft and Google</a>, are racing to prove that generative AI technology is applicable and safe for enterprises.\"}},{\"id\":\"nGwFfbsriO\",\"type\":\"paragraph\",\"data\":{\"text\":\"Programs such as the Generative AI Innovation Center help enterprises use the data that tech giants such as AWS possess, helping them scale up their capabilities, according to Whit Andrews, an analyst at Gartner.\"}},{\"id\":\"4OvQJiZQY-\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"AI at this point in time demands massive scale in terms of the data that is available to create artificial intelligence elements, such as, most commonly, models that you feed in something and get something out,\\\" Andrews said.\"}},{\"id\":\"xbSi_Mf4cS\",\"type\":\"paragraph\",\"data\":{\"text\":\"This large scale -- exemplified by applications such as high-volume customer service contact centers -- means that enterprises are relying more and more on hyperscalers such as AWS, Google and Microsoft to help them apply generative AI to their business processes.\"}},{\"id\":\"PUReuSCmna\",\"type\":\"paragraph\",\"data\":{\"text\":\"Moreover, because many enterprises are already working with the tech giants' cloud platforms and other technologies, they can trust the results they get from them, Andrews added.\"}},{\"id\":\"WSovqAubYh\",\"type\":\"paragraph\",\"data\":{\"text\":\"However, the challenge an organization working with one of the providers might face is how to effectively use the tech giants' technology and expertise.\"}},{\"id\":\"YPDmu8kEq9\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"Will they make good decisions with it?\\\" Andrews continued.\"}},{\"id\":\"kHMlsQBit-\",\"type\":\"header\",\"data\":{\"text\":\"Selling directly to buyers\",\"level\":3}},{\"id\":\"M8D4mJvBF4\",\"type\":\"paragraph\",\"data\":{\"text\":\"For AWS, a program such as the Generative AI Innovation Center helps it continue selling directly to the buyer.\"}},{\"id\":\"f7DYhMWwjZ\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"They are very comfortable being direct to buyer to consumer,\\\" Andrews said. \\\"What you're seeing here with this is Amazon saying, 'You can work directly with us. We facilitate that without your needing to invest in a third party.'\\\"\"}},{\"id\":\"_NlalnXyOu\",\"type\":\"paragraph\",\"data\":{\"text\":\"Amazon hopes to come across as a company focusing on openness and ease of use, he said.\"}},{\"id\":\"U-IslK_pUc\",\"type\":\"paragraph\",\"data\":{\"text\":\"But even as it is in effect deploying what is its own consulting service, AWS is also working with big consulting and systems integrator firms such as Accenture.\"}},{\"id\":\"C7bfsWvhwY\",\"type\":\"paragraph\",\"data\":{\"text\":\"On June 21, Accenture revealed that it will work with AWS to help clients derive value from large language models and generative AI.\"}},{\"id\":\"t9JsLWWlIZ\",\"type\":\"paragraph\",\"data\":{\"text\":\"AWS has already started to work with some enterprises under its separate innovation program, which was introduced in April.\"}},{\"id\":\"_14Wjso7m1\",\"type\":\"paragraph\",\"data\":{\"text\":\"The tech giant uses AWS services to build&nbsp;<a href=\\\"https://www.techtarget.com/searchenterpriseai/definition/natural-language-generation-NLG\\\">natural language generation</a>&nbsp;capabilities with Fox Corporation, the media conglomerate, for example. Broadcasters at Fox Sports use AI-generated content to tell better stories, according to Sri Elaprolu, a senior leader of machine learning at AWS.\"}},{\"id\":\"ZdsSTxssR5\",\"type\":\"paragraph\",\"data\":{\"text\":\"AWS said it is also working with healthcare, life sciences, and other media and entertainment industry customers to show how generative AI applies to their use cases.\"}},{\"id\":\"Pi_w0vD1Ot\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"We can only see and imagine what our customers are going to do with this technology,\\\" Elaprolu said. \\\"This is a huge generational shift in technology that we're expecting to see.\\\"\"}},{\"id\":\"Hvz142fzd-\",\"type\":\"paragraph\",\"data\":{\"text\":\"Enterprises do not have to pay an additional cost to be part of the generative AI innovation program.\"}},{\"id\":\"G1y_UFoToQ\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#AI</chronohash>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$AMZN</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/06/22/aws-invests-100-million-in-generative-ai-as-it-sees-a-long-race-ahead.html",
+    "price": 100000000,
+    "utcStartDateTime": "2023-06-22T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-24T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-22T23:29:36.411Z",
+    "utcUpdatedDateTime": "2023-06-22T23:30:17.052Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 286,
+        "thumbName": "fa769f80-f0e4-430b-8939-cb425c5aba1e-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107260563-1687390716921-gettyimages-1247865087-CERAWEEK_2023.jpeg?v=1687451401&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 110,
+        "address": "AWS Generative AI Innovation Center",
+        "order": 0,
+        "pinId": 367
+      }
+    ],
+    "mentions": [
+      {
+        "id": 105,
+        "tag": "#AI",
+        "pinId": 367
+      },
+      {
+        "id": 106,
+        "tag": "$AMZN",
+        "pinId": 367
       }
     ],
     "userId": 1

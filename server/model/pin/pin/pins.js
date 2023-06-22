@@ -137,6 +137,14 @@ export default class Pins extends BasePins {
       });
   }
 
+  static getFirstThreadPins(pinId) {
+    return _queryPinByIdsAndOrderedByThread(pinId)
+      .then(res => {
+        const pins = new Pins().setPinsSortBy(res.pins, 'reverseOrder', true);
+        return pins.getFirstPin();
+      });
+  }
+
   static queryPinByTags(userId, allTags) {
     return _queryPinByTags(userId, allTags)
       .then(res => {

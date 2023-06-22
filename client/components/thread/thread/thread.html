@@ -1,6 +1,6 @@
 <div>
     <div class="thread-header">
-        <h2><a class="thread-header-link" ng-href="/search?q={{'🧵'+thread.pinId}}">🧵 Thread</a></h2>
+        <h2><a class="thread-header-link" ng-href="/search?q={{'🧵'+thread.threadId}}">🧵 Thread</a></h2>
         <a class="btn btn-link response-thread-btn" ui-sref="respond({respondId:thread.pinId})"
             ng-if="thread.isLoggedIn()">Respond to this Pin</a>
     </div>

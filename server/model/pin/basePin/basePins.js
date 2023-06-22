@@ -62,6 +62,10 @@ export default class BasePins {
         return this.pins.map(p => p.id)
     }
 
+    getFirstPin() {
+        return _.get(this.pins, '[0]');
+    }
+
     minMaxDateTimePin() {
         // empty array returns null
         if (!this || !this.pins.length) {

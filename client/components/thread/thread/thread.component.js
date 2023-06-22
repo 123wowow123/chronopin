@@ -17,6 +17,8 @@
             this.pinWebService.thread(this.pinId)
                 .then(res => {
                     this.pins = _.get(res, "data.pins", []);
+                    const threadId = _.get(this.pins, "[0].id", this.pinId);
+                    this.threadId = threadId;
                     return res;
                 })
                 .catch(err => {
