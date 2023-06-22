@@ -2,33 +2,31 @@
 
 (function () {
 
-  const tagOptions = {
+  const tagOptionsFactory = {
     templateUrl: 'components/tags/chronotag.html',
     restrict: 'E',
     controllerAs: 'vm',
     bindToController: true,
     transclude: true,
-    controller: ['$element', 'searchService', function ($element, searchService) {
-      this.goSearch = () => {
-        const tagEl = _.get($element, '[0].childNodes[0]');
-        searchService.goSearch(
-          tagEl.outerText
-        );
-      }
+    scope: {},
+    controller: ['$transclude', function ($transclude) {
+      $transclude((clone, scope) => {
+        this.searchText = clone.text();
+      });
     }],
-  }
+  };
 
   angular.module('chronopinNodeApp')
     .directive('chronohash',
       () => {
-        return tagOptions;
+        return tagOptionsFactory;
       })
     .directive('chronoat',
       () => {
-        return tagOptions;
+        return tagOptionsFactory;
       })
     .directive('chronodollar',
       () => {
-        return tagOptions;
+        return tagOptionsFactory;
       });
 })();
