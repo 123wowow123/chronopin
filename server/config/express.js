@@ -19,7 +19,6 @@ import passport from 'passport';
 import session from 'express-session';
 import sqldb from '../sqldb';
 import expressSequelizeSession from 'express-sequelize-session';
-const { forceDomain } = require('forcedomain');
 let Store = expressSequelizeSession(session.Store);
 
 export default function (app) {
@@ -43,13 +42,6 @@ export default function (app) {
     // TODO: Causes errors
     app.use(favicon(path.join(config.root, 'client/assets/images', 'favicon.ico')));
   }
-
-  // app.use(forceDomain({
-  //   hostname: config.host,
-  //   hostname: config.port,
-  //   protocol: 'https',
-  //   type: 'permanent'
-  // }));
 
   app.set('appPath', path.join(config.root, 'client'));
   app.use(express.static(app.get('appPath'), { index: '_' }));
