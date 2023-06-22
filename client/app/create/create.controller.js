@@ -227,7 +227,7 @@
     }
 
     urlBlur() {
-      if (this.autoScrape) {
+      if (this.autoScrape && this.sourceChanged) {
         this.urlScrape();
       }
     }
@@ -242,8 +242,7 @@
       if (sourceUrl) {
         this.sourceChanged = false;
         this.lastScrapeUrl = this.pin.sourceUrl;
-        this
-          ._scrapePage(sourceUrl);
+        this._scrapePage(sourceUrl);
       }
       return this;
     }
@@ -252,7 +251,9 @@
       this.setScraping(true);
       this.scrapeService.scrapePage(this.pinSuggestion, url)
         .then(() => {
-          this.postScrapeCopy();
+          this
+            .postScrapeCopy()
+            .postScrapeUIUpdate();
         })
         .finally(() => {
           this.setScraping(false);
@@ -287,10 +288,21 @@
       return this;
     }
 
+    postScrapeUIUpdate() {
+      if (!this.pin.title && this.pinSuggestion.title) {
+        this.tabChange('title', 1);
+      }
+      if (!this.pin.description && this.pinSuggestion.description) {
+        this.tabChange('content', 1);
+      }
+      return this;
+    }
+
     postScrapeCopy() {
       this.selectMedia(this.pinSuggestion.selectedMedia);
       this.pin.start = this.pin.start ? this.pin.start : this.pinSuggestion.start;
       this.pin.end = this.pin.end ? this.pin.end : this.pinSuggestion.end;
+      return this;
     }
 
     clearFormButSourceUrl() {

@@ -79,7 +79,7 @@
                 </div>
 
                 <div class="form-group">
-                  <div ng-switch="$ctrl.hasScrapedText && $ctrl.scrapingMessage($ctrl.pinSuggestion.title).code == 2">
+                  <div ng-switch="$ctrl.hasScrapedText && $ctrl.scrapingMessage($ctrl.pinSuggestion.description).code == 2">
                     <label ng-switch-when="false" for="description" class="control-label">Content</label>
                     <div class="control-tabs" ng-switch-when="true">
                       <button type="button" class="control-tab control-tab-left"
@@ -91,7 +91,7 @@
                         ng-class="{'\--active' : $ctrl.activeTabs['content'] === 1}"
                         ng-click="$ctrl.tabChange('content', 1)" ng-if="$ctrl.hasScrapedText">
                         <label for="description"
-                          class="control-label">{{$ctrl.scrapingMessage($ctrl.pinSuggestion.sourceDescription).message}}</label>
+                          class="control-label">{{$ctrl.scrapingMessage($ctrl.pinSuggestion.description).message}}</label>
                       </button>
                     </div>
                   </div>
