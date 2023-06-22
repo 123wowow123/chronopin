@@ -172,34 +172,23 @@ export default function (app) {
         });
     });
 
-  app.route('/login')
-    .get((req, res) => {
-      const canonical = `https://www.chronopin.com/login`;
-      const description = 'Login to discover and track upcoming, release dates, events, and other important dates.';
-      let meta = {
-        ...config.meta,
-        canonical,
-        description
-      };
-      res.render(app.get('appPath') + '/index.html', { meta });
-    });
+  const descriptions = {
+    login: 'Login to discover and track upcoming, release dates, events, and other important dates.',
+    signup: 'Signup to discover and track upcoming, release dates, events, and other important dates.',
+    about: `Chronopin, is a social bookmarking service for storing, sharing and discovering web bookmarks but treats chronology as a first class citizen via it's timeline user interface. Released in 2023, the service is available via mobile and desktop web browsers.`,
+  }
 
-  app.route('/signup')
+  app.route('/:url(login|signup|about|search)')
     .get((req, res) => {
-      const canonical = `https://www.chronopin.com/signup`;
-      const description = 'Signup to discover and track upcoming, release dates, events, and other important dates.';
-      let meta = {
-        ...config.meta,
-        canonical,
-        description
-      };
-      res.render(app.get('appPath') + '/index.html', { meta });
-    });
+      const host = req.host;
+      const url = req.url;
+      const protocol = req.protocol;
+      const page = req.params.url;
+      const canonical = `${protocol}://www.${host}${url}`;
+      const description = descriptions[page] || descriptions.about;
 
-  app.route('/about')
-    .get((req, res) => {
-      const canonical = `https://www.chronopin.com/about`;
-      const description = `Chronopin, is a social bookmarking service for storing, sharing and discovering web bookmarks but treats chronology as a first class citizen via it's timeline user interface. Released in 2023, the service is available via mobile and desktop web browsers.`;
+      // `https://www.${host}${req.url}`);
+      // req.url
       let meta = {
         ...config.meta,
         canonical,

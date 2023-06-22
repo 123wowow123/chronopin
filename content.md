@@ -12,7 +12,6 @@ Before Usable Bug:
 Main timeline should remain in background for speedup
 validate user first last name ++
 user creation needs to be in transaction
-add conical url on search page
 Add join mailing list
 
 Before Usable:

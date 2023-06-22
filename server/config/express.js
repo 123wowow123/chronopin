@@ -80,11 +80,13 @@ export default function (app) {
 
   app.all(/.*/, function (req, res, next) {
     const host = req.host;
+    const url = req.url;
+    const protocol = req.protocol;
     if (!host.match(/chronopin/i) || host.match(/^www\..*/i)) {
       next();
     } else {
       // url can come in like this so doesn't work: http://10.112.0.169/
-      res.redirect(301, `https://www.${host}${req.url}`);
+      res.redirect(301, `${protocol}://www.${host}${url}`);
     }
   });
 
