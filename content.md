@@ -9,14 +9,14 @@ Add more descriptive content inside your <title> tag. Make it unique, and releva
 
 
 Before Usable Bug:
-Main timeline should remain in background for speedup
-user creation needs to be in transaction
-Add join mailing list
+
 
 Before Usable:
 Comment cleanup/backup +
+
 links should be external cleanup
 test scraping
+
 improve today button on search page
 switch to suggestion tab automatically if non suggestion is empty
 thread conicoal url should be from initial thread
@@ -73,6 +73,9 @@ Buy keywords in content that will turn into link where it will show map and near
 Pin dollar tag should link to referal page in new tab
 
 Features:
+Main timeline should remain in background for speedup
+user creation needs to be in transaction
+Add join mailing list
 Polling feature and share on reddit - embed pin +
 suggest tag +
 Follow user to be notified of new content++

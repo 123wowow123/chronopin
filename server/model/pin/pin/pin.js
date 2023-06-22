@@ -182,12 +182,16 @@ export default class Pin extends BasePin {
           });
 
         const toSaveMediaPromise = Promise.all(
-          toSaveOriginalMedia.map(medium => {
-            return medium.createAndSaveToCDN();
-          }))
-          .then((newMedia) => {
-            this.media = newMedia;
-          });
+          toSaveOriginalMedia
+            .map(medium => {
+              if (medium.type === 1) {
+                return medium.createAndSaveToCDN();
+              } else {
+                return medium.save()
+              }
+            })).then((newMedia) => {
+              this.media = newMedia;
+            });
 
         const toDeleteMediaPromise = Promise.all(
           toDeleteOriginalMedia.map(medium => {
