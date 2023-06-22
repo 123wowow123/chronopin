@@ -15,10 +15,8 @@ Before Usable:
 Comment cleanup/backup +
 
 links should be external cleanup
-test scraping
 
 improve today button on search page
-switch to suggestion tab automatically if non suggestion is empty
 thread conicoal url should be from initial thread
 
 Bugs:
