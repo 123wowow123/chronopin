@@ -78,23 +78,15 @@ export default function (app) {
     store: new Store(sqldb.sequelize)
   }));
 
-  // app.all(/.*/, function (req, res, next) {
-  //   let host = req.header("host");
-  //   let protocol = req.protocol;
-  //   const url = `${protocol}://${host}${req.url}`;
-  //   const xforwardedfor = req.headers['x-forwarded-for'];
-  //   const xforwarded = req.headers['x-forwarded'];
-  //   const forwardedfor = req.headers['forwarded-for'];
-  //   const forwarded = req.headers['forwarded'];
-  //   console.log(url);
-  //   console.log('x-forwarded-for:', xforwardedfor, 'x-forwarded:', xforwarded, 'forwarded-for:', forwardedfor, 'forwarded:', forwarded);
-  //   // if (host.match(/^www\..*/i)) {
-  //     next();
-  //   // } else {
-  //   //   //but url comes in like this so doesn't work: http://10.112.0.169/
-  //   //   res.redirect(301, `${protocol}://www.${host}${req.url}`);
-  //   // }
-  // });
+  app.all(/.*/, function (req, res, next) {
+    const host = req.host;
+    if (!host.match(/chronopin/i) || host.match(/^www\..*/i)) {
+      next();
+    } else {
+      // url can come in like this so doesn't work: http://10.112.0.169/
+      res.redirect(301, `https://www.${host}${req.url}`);
+    }
+  });
 
   /**
    * Lusca - express server security

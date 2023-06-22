@@ -7,9 +7,6 @@ https://www.bing.com/indexnow#implementation
 https://blogs.bing.com/webmaster/february-2023/The-Importance-of-Setting-the-lastmod-Tag-in-Your-Sitemap
 Add more descriptive content inside your <title> tag. Make it unique, and relevant to best describe the page content. Use our Keyword Research Tool to find relevant keyword ideas for title tag.
 
-add mac release
-
-https://www.chronopin.com/pin/326
 
 Before Usable Bug:
 Main timeline should remain in background for speedup
@@ -26,8 +23,8 @@ Polling feature and share on reddit - embed pin
 test scraping
 improve today button on search page
 switch to suggestion tab automatically if non suggestion is empty
-need client redirect to www. social login won't work
-check referer
+
+Follow user to be notified of new content
 
 Bugs:
 scrolling 
@@ -394,3 +391,7 @@ https://www.youtube.com/watch?v=NgvxSqnA1jM
 https://www.youtube.com/watch?v=n1zaoGZqVNA
 
 https://www.youtube.com/watch?v=n1zaoGZqVNA&t=1s
+
+Representation democracy works well when voters have the correct info to make an informed decision, to their own interests. But nobody, myself included, can keep up with all the politics of ballot initiatives, so people can often vote for things that are 100% against their own interests. Can Chronopin help me with that?
+
+For sure, can't keep up with all the information and development creates decision paralysis or wrong decisions that can lead to the detriment of self and surrounding people. I'm constantly struggling with that. Here's a neat little site that tracks my bookmarked articles and events in a chronological order that I'm starting to use to at least put some order to my information overload.
