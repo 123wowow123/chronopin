@@ -58,7 +58,7 @@
 
               const editor = new EditorJS({
                 holder: elId,
-                placeholder: "Tell everyone what the content is about",
+                placeholder: "Tell everyone what the content is about. (try pasting images, youtube, twitter urls)",
 
                 logLevel: 'VERBOSE',
 

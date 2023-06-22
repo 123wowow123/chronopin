@@ -9071,6 +9071,89 @@
     "userId": 1
   },
   {
+    "id": 357,
+    "rootThread": false,
+    "title": "Bank of England surprises with 50 basis point rate hike to tackle persistent inflation",
+    "description": "<p class=\"paragraph\"> Thursday’s 50 basis point hike surprised markets, which had priced in a smaller rise. </p><p class=\"paragraph\"> Policymakers are walking a tightrope as they attempt to tighten monetary policy sufficiently to quell inflationary pressures without triggering a full-scale mortgage crisis and recession. </p><p class=\"paragraph\"> Core inflation — which excludes volatile energy, food, alcohol and tobacco prices — was 7.1% year on year in May, up from 6.8% in April and the highest rate since March 1992. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Inflation</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#BOE</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687443636812,\"blocks\":[{\"id\":\"Ofox7aMxZ-\",\"type\":\"paragraph\",\"data\":{\"text\":\"Thursday’s 50 basis point hike surprised markets, which had priced in a smaller rise.\"}},{\"id\":\"x9I7ZAeblm\",\"type\":\"paragraph\",\"data\":{\"text\":\"Policymakers are walking a tightrope as they attempt to tighten monetary policy sufficiently to quell inflationary pressures without triggering a full-scale mortgage crisis and recession.\"}},{\"id\":\"1vFt84dKpR\",\"type\":\"paragraph\",\"data\":{\"text\":\"Core inflation — which excludes volatile energy, food, alcohol and tobacco prices — was 7.1% year on year in May, up from 6.8% in April and the highest rate since March 1992.\"}},{\"id\":\"gMzO_jeIkY\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Inflation</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#BOE</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/06/22/bank-of-england-june-decision-50-basis-point-rate-hike-to-tackle-persistent-inflation.html",
+    "utcStartDateTime": "2023-06-22T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-23T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-22T14:22:59.923Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 274,
+        "thumbName": "af0da67d-0d1b-4534-a968-de76e14c7320-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/106878997-1620285560596-gettyimages-1231784837-UK_BOE.jpeg?v=1687431844&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 55,
+        "address": "UK",
+        "order": 0,
+        "pinId": 357
+      }
+    ],
+    "mentions": [
+      {
+        "id": 75,
+        "tag": "#inflation",
+        "pinId": 357
+      },
+      {
+        "id": 76,
+        "tag": "#BOE",
+        "pinId": 357
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 358,
+    "rootThread": false,
+    "title": "Recession indicator. When you see paperboard production decline, watch out. How does everything arrive at your home? In a cardboard box.",
+    "description": "<p class=\"paragraph\"> Fewer shipments, fewer new orders, factories not running at capacity: it leads to a cut in worker hours. This is coming. Action, meet reaction. </p><p class=\"paragraph\"> First \"A,\" then \"B,\" then \"C.\" </p><p class=\"paragraph\"> A) Packaging materials production down. </p><p class=\"paragraph\"> B) Capacity utilization down. </p><p class=\"paragraph\"> C) Worker hours down. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#RecessionIndicator</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687444607676,\"blocks\":[{\"id\":\"Sprb1l2-1t\",\"type\":\"paragraph\",\"data\":{\"text\":\"Fewer shipments, fewer new orders, factories not running at capacity: it leads to a cut in worker hours. This is coming. Action, meet reaction.\"}},{\"id\":\"TQIhO1fiNe\",\"type\":\"paragraph\",\"data\":{\"text\":\"First \\\"A,\\\" then \\\"B,\\\" then \\\"C.\\\"\"}},{\"id\":\"B19h_-42HP\",\"type\":\"paragraph\",\"data\":{\"text\":\"A) Packaging materials production down.\"}},{\"id\":\"_47tanZ9Qs\",\"type\":\"paragraph\",\"data\":{\"text\":\"B) Capacity utilization down.\"}},{\"id\":\"MK5flqYEtb\",\"type\":\"paragraph\",\"data\":{\"text\":\"C) Worker hours down.\"}},{\"id\":\"fXEvrLJjE7\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#RecessionIndicator</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/JeffWeniger/status/1671587326869348362",
+    "utcStartDateTime": "2023-06-22T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-23T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-22T14:37:03.093Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 275,
+        "originalUrl": "https://twitter.com/JeffWeniger/status/1671587326869348362",
+        "type": "2",
+        "authorName": "Jeff Weniger",
+        "authorUrl": "https://twitter.com/JeffWeniger",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">2/2<br><br>Fewer shipments, fewer new orders, factories not running at capacity: it leads to a cut in worker hours. This is coming. Action, meet reaction.<br><br>First &quot;A,&quot; then &quot;B,&quot; then &quot;C.&quot;<br><br>A) Packaging materials production down.<br>B) Capacity utilization down.<br>C) Worker hours down. <a href=\"https://t.co/vE4aAwwINh\">pic.twitter.com/vE4aAwwINh</a></p>&mdash; Jeff Weniger (@JeffWeniger) <a href=\"https://twitter.com/JeffWeniger/status/1671587326869348362?ref_src=twsrc%5Etfw\">June 21, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 77,
+        "tag": "#RecessionIndicator",
+        "pinId": 358
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 315,
     "rootThread": false,
     "title": "Seishun Buta Yarou wa Odekake Sister no Yume wo Minai (Rascal Does Not Dream of a Sister Venturing Out) movie debuts in Japan on June 23",
@@ -9283,6 +9366,40 @@
         "id": 60,
         "tag": "#rates",
         "pinId": 331
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 359,
+    "rootThread": false,
+    "title": "Should have more states trigger under Sahm Rule and have a sufficient rise in UR to up recession odds significant",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Unemployment</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687445251253,\"blocks\":[{\"id\":\"IF-gIuY1ni\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Unemployment</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1671876832361320454",
+    "utcStartDateTime": "2023-07-31T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-01T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-22T14:47:37.763Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 276,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1671876832361320454",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">tbc, I am expecting this line to be crossed next week or the week after and to see deteriorating trends well into end of July/early August. Should have more states trigger under Sahm Rule and have a sufficient rise in UR to up recession odds significant <a href=\"https://t.co/naRFPddet8\">https://t.co/naRFPddet8</a></p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1671876832361320454?ref_src=twsrc%5Etfw\">June 22, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 78,
+        "tag": "#Unemployment",
+        "pinId": 359
       }
     ],
     "userId": 1
