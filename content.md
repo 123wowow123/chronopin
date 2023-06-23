@@ -16,6 +16,7 @@ Comment cleanup/backup +
 links should be external cleanup
 
 improve today button on search page
+confirm before delete
 
 Bugs:
 scrolling 
