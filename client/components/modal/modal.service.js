@@ -27,12 +27,8 @@ angular.module('chronopinNodeApp')
       confirm: {
 
         delete() {
-          return function () {
-            let args = Array.prototype.slice.call(arguments),
-              name = args.shift(),
-              deleteModal;
-
-            deleteModal = openModal({
+          return function (name) {
+            let deleteModal = openModal({
               modal: {
                 dismissable: true,
                 title: 'Confirm Delete',

@@ -16,7 +16,10 @@ Comment cleanup/backup +
 links should be external cleanup
 
 improve today button on search page
-confirm before delete
+#️⃣ upgrade parameters
+search tag with additional query to narrow down results
+
+https://www.emojiall.com/en/emoji/%23%E2%83%A3
 
 Bugs:
 scrolling 
@@ -399,3 +402,6 @@ graphics card
 
 https://insideevs.com/news/672790/blink-dua-lport-ccs-nacs-charger/
 https://insideevs.com/news/673158/tesla-giga-casting-manufacturing-becomes-mainstream/
+
+
+https://frame.work/

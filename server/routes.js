@@ -193,11 +193,12 @@ export default function (app) {
         description
       };
 
+      let promise = Promise.reject();
       if (page === 'search') {
         const searchText = req.query.q;
         if (searchText && searchText.startsWith('🧵')) {
           const id = searchText.replace('🧵', '');
-          Pins.getFirstThreadPins(id)
+          promise = Pins.getFirstThreadPins(id)
             .then(pin => {
               const theadEmoji = '%F0%9F%A7%B5'; //🧵
               if (pin) {
@@ -208,9 +209,10 @@ export default function (app) {
               }
             });
         }
-      } else {
-        res.render(app.get('appPath') + '/index.html', { meta });
       }
+      promise.catch(err => {
+        res.render(app.get('appPath') + '/index.html', { meta });
+      });
     });
 
   let sitemapTemplate;

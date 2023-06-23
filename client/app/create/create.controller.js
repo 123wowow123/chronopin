@@ -278,14 +278,15 @@
 
     delete(id) {
       this.enableForm(false);
-      this.pinWebService.delete(id)
-        .then(res => {
-          this.$state.go('main');
-        })
-        .finally(() => {
+      return this.Modal.confirm.delete()('Pin')
+        .then(() => {
+          return this.pinWebService.delete(id)
+            .then(res => {
+              this.$state.go('main');
+            });
+        }).finally(() => {
           this.enableForm(true);
         });
-      return this;
     }
 
     postScrapeUIUpdate() {
