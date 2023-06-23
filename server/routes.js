@@ -238,7 +238,12 @@ export default function (app) {
   app.route('/*')
     .get((req, res) => {
       // res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
-      res.render(app.get('appPath') + '/index.html', { meta: config.meta });
+      const canonical = `https://www.chronopin.com/`;
+      let meta = {
+        ...config.meta,
+        canonical
+      };
+      res.render(app.get('appPath') + '/index.html', { meta });
     });
 
 }
