@@ -175,8 +175,10 @@
                         fragment.append(newNode0);
                         let remainerContent = oldText0.substring(validateContentAny.index + validateContentAny[1].length);
                         fragment.append(remainerContent);
+                        let preRemainerContent = oldText0.substring(0, validateContentAny.index);
+                        fragment.prepend(preRemainerContent);
                         parentNode.replaceWith(fragment);
-                        !doNotContinueCursor && placeCaretAtEnd(newNode0);
+                        !doNotContinueCursor && !preRemainerContent && placeCaretAtEnd(newNode0);
                       } else if (parentNode.nodeName.toLowerCase() === f.nodeName.toLowerCase() && !validateContentPass) {
                         const oldText = parentNode.textContent;
                         let fragment = new DocumentFragment();
@@ -222,7 +224,7 @@
               // hash factory
               // preCheckRegex: /(?<!class="chrono-hash-highlight">)(#[A-z\d-]+(?:\s|&nbsp;))/g,
               regex: /(#[A-z\d-]+)/, // /(#[A-z\d-]+)(?:\s|&nbsp;)/,
-              regexValidateContent: /(#[A-z\d-]+)$/,
+              regexValidateContent: /^(#[A-z\d-]+)$/,
               regexValidateAny: /(#[A-z\d-]+)/,
               nodeName: 'chronohash',
               nodeWrapperFactory: () => {
@@ -235,7 +237,7 @@
               // at factory
               // preCheckRegex: /(?<!class="chrono-at-highlight">)(@[A-z\d-]+(?:\s|&nbsp;))/g,
               regex: /(@[A-z\d-]+)/, ///(@[A-z\d-]+)(?:\s|&nbsp;)/,
-              regexValidateContent: /(@[A-z\d-]+)$/,
+              regexValidateContent: /^(@[A-z\d-]+)$/,
               regexValidateAny: /(@[A-z\d-]+)/,
               nodeName: 'chronoat',
               nodeWrapperFactory: () => {
@@ -248,7 +250,7 @@
               // dollar factory
               // preCheckRegex: /(?<!class="chrono-dollar-highlight">)(\$[A-z]+[\d-]?(?:\s|&nbsp;))/g,
               regex: /(\$[A-z]+[\d-]?)/, // /(\$[A-z]+[\d-]?)(?:\s|&nbsp;)/,
-              regexValidateContent: /(\$[A-z]+[\d-]?)$/,
+              regexValidateContent: /^(\$[A-z]+[\d-]?)$/,
               regexValidateAny: /(\$[A-z]+[\d-]?)/,
               nodeName: 'chronodollar',
               nodeWrapperFactory: () => {
