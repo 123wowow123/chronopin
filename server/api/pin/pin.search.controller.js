@@ -44,7 +44,7 @@ export function searchPins(req, res) {
     searchText = req.query.q,
     hasFavorite = req.query.f && req.query.f.toLowerCase() == 'watch';
 
-  const allTags = Mention.scrapeAllMention(searchText);
+  const allTags = Mention.scrapeAllMentionQuery(searchText);
 
   if (allTags.length) {
     if (hasFavorite) {
