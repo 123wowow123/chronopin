@@ -41,13 +41,10 @@
         }
 
         _extractQuery(locationService) {
-            const hashTag = this.appConfig.searchPrefix.hashTag;
             const path = locationService.path();
             const args = locationService.search();
-            const hashValue = locationService.hash()
-            const q = args.q;
+            const searchText = args.q;
             const searchChoiceText = args.f;
-            const searchText = (q || '') + (hashValue ? `${hashTag}${hashValue}` : '');
             return {
                 path,
                 searchText,

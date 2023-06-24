@@ -1,4 +1,5 @@
 import * as _ from 'lodash';
+import config from '../../../config/environment';
 
 export function mapSubObjectFromQuery(prefix, groupKey, pinRows) {
   const aggregate = [],
@@ -32,7 +33,7 @@ export function mapSubObjectFromQuery(prefix, groupKey, pinRows) {
     : undefined;
 }
 
-export function extractTags(searchText) {
+export function extractQueryTags(searchText) {
   const matchHashString = /(#[A-z\d-]+)(?:<|\b)/g;
   const matchAtString = /(@[A-z\d-]+)(?:<|\b)/g;
   const matchDollarString = /(\$[A-z]+[\d-]?)(?:<|\b)/g;

@@ -9804,6 +9804,48 @@
     "userId": 1
   },
   {
+    "id": 374,
+    "rootThread": false,
+    "title": "Japan core, core inflation (so excluding fresh food and energy costs) came in higher than expected at 4.3% Y/Y, 42-year high",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Inflation</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687496089579,\"blocks\":[{\"id\":\"GpK_O2PjCo\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Inflation</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/DavidInglesTV/status/1672026383382634496",
+    "utcStartDateTime": "2023-06-22T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-23T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-23T04:55:05.959Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 293,
+        "originalUrl": "https://twitter.com/DavidInglesTV/status/1672026383382634496",
+        "type": "2",
+        "authorName": "David Ingles",
+        "authorUrl": "https://twitter.com/DavidInglesTV",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Japan core, core inflation (so excluding fresh food and energy costs) came in higher than expected. <br><br>4.3% Y/Y, 42-year high <a href=\"https://t.co/7dpd8HY8tv\">pic.twitter.com/7dpd8HY8tv</a></p>&mdash; David Ingles (@DavidInglesTV) <a href=\"https://twitter.com/DavidInglesTV/status/1672026383382634496?ref_src=twsrc%5Etfw\">June 22, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 112,
+        "address": "Japan",
+        "order": 0,
+        "pinId": 374
+      }
+    ],
+    "mentions": [
+      {
+        "id": 116,
+        "tag": "#inflation",
+        "pinId": 374
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 315,
     "rootThread": false,
     "title": "Seishun Buta Yarou wa Odekake Sister no Yume wo Minai (Rascal Does Not Dream of a Sister Venturing Out) movie debuts in Japan on June 23",

@@ -9,9 +9,10 @@
     bindToController: true,
     transclude: true,
     scope: {},
-    controller: ['$transclude', function ($transclude) {
+    controller: ['$transclude', 'appConfig', function ($transclude, appConfig) {
       $transclude((clone, scope) => {
-        this.searchText = clone.text();
+        let searchText = clone.text();
+        this.searchText = encodeURIComponent(searchText);
       });
     }],
   };

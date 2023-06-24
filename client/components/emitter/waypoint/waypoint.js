@@ -4,7 +4,6 @@ angular.module('chronopinNodeApp')
     .directive('waypoint', function ($rootScope, $parse, $log) {
 
         const options = {
-            // root: document.querySelector('#scrollArea'), // null become browser viewport
             rootMargin: '0px',
             threshold: 0
         }
@@ -16,10 +15,8 @@ angular.module('chronopinNodeApp')
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
-                // let offset = parseInt(attrs.threshold) || 0;
                 const el = element[0];
                 const fn = $parse(attrs.waypoint);
-                //debugger
                 const callback = (entries, observer) => {
                     entries.forEach(entry => {
                         // debugger

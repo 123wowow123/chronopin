@@ -59,8 +59,8 @@
           url: '/api/pins/search',
           method: 'GET',
           params: {
-            q: data && data.q && encodeURIComponent(data.q),
-            f: data && data.f && encodeURIComponent(data.f)
+            q: data.q, //data && data.q && encodeURIComponent(data.q),
+            f: data.f //data && data.f && encodeURIComponent(data.f)
           },
           transformResponse: _appendTransform($http.defaults.transformResponse,
             function (data, headersGetter, status) {
