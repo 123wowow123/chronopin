@@ -238,7 +238,7 @@ export default function (app) {
   app.route('/*')
     .get((req, res) => {
       // res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
-      const canonical = `https://www.chronopin.com/`;
+      const canonical = `https://www.chronopin.com`;
       let meta = {
         ...config.meta,
         canonical
