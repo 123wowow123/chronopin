@@ -247,14 +247,11 @@ function _deleteMSSQL(like) {
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             try {
-              //console.log('returnValue', returnValue); // always return 0
               utcDeletedDateTime = res.output.utcDeletedDateTime;
-              //console.log('queryCount', queryCount);
             } catch (e) {
               console.log(`[dbo].[${StoredProcedureName}]`, e);
             }
@@ -281,14 +278,11 @@ function _deleteByPinIdMSSQL(like) {
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             try {
-              //console.log('returnValue', returnValue); // always return 0
               utcDeletedDateTime = res.output.utcDeletedDateTime;
-              //console.log('queryCount', queryCount);
             } catch (e) {
               console.log(`[dbo].[${StoredProcedureName}]`, e);
             }

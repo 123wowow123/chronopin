@@ -217,16 +217,12 @@ function _upsertMSSQL(favorite, userId, pinId) {
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             let id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
-              //console.log('returnValue', returnValue); // always return 0
               favorite.id = request.parameters.id.value;
-
-              //console.log('queryCount', queryCount);
             } catch (e) {
               throw e;
             }
@@ -252,14 +248,11 @@ function _deleteMSSQL(favorite) {
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             try {
-              //console.log('returnValue', returnValue); // always return 0
               utcDeletedDateTime = request.parameters.utcDeletedDateTime.value;
-              //console.log('queryCount', queryCount);
             } catch (e) {
               console.log(`[dbo].[${StoredProcedureName}]`, e);
             }
@@ -286,14 +279,11 @@ function _deleteByPinIdMSSQL(favorite) {
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             try {
-              //console.log('returnValue', returnValue); // always return 0
               utcDeletedDateTime = res.output.utcDeletedDateTime;
-              //console.log('queryCount', queryCount);
             } catch (e) {
               console.log(`[dbo].[${StoredProcedureName}]`, e);
             }

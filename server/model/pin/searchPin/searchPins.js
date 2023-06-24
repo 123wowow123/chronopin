@@ -390,15 +390,12 @@ function _querySearchPin(title, description, k) {
                 request.execute(`[dbo].[${StoredProcedureName}]`,
                     function (err, res, returnValue, affected) {
                         let queryCount;
-                        //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
                         if (err) {
                             return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
                         }
                         // ToDo: doesn't always return value
                         try {
-                            //console.log('returnValue', returnValue); // always return 0
                             queryCount = res.output.queryCount;
-                            //console.log('queryCount', queryCount);
                         } catch (e) {
                             queryCount = 0;
                         }

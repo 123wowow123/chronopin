@@ -17,7 +17,7 @@ links should be external cleanup
 
 improve today button on search page
 search tag with additional query to narrow down results
-check delete
+check delete and remove local copy
 
 https://www.emojiall.com/en/emoji/%23%E2%83%A3
 

@@ -145,16 +145,12 @@ function _upsertMSSQL(location, pinId) {
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             let id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
             // ToDo: doesn't always return value
             try {
-              //console.log('returnValue', returnValue); // always return 0
               location.id = res.output.id;
-
-              //console.log('queryCount', queryCount);
             } catch (e) {
               throw e;
             }
@@ -178,7 +174,6 @@ function _deleteMSSQL(location) {
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
@@ -200,7 +195,6 @@ function _deleteByPinIdMSSQL(pinId) {
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }

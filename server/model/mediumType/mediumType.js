@@ -57,15 +57,11 @@ function _createMediumTypeMSSQL(mediumType) {
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {
             let queryCount, id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
             if (err) {
               return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
-            // ToDo: doesn't always return value
             try {
-              //console.log('returnValue', returnValue); // always return 0
-              id = res.output.id;
-              //console.log('queryCount', queryCount);
+              id = res.output.id
             } catch (e) {
               id = 0;
             }

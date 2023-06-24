@@ -156,7 +156,9 @@ function executeCreateSP() {
 
               FROM [dbo].[PinBaseView] AS [Pin]
 
-              WHERE [Pin].[utcStartDateTime] > @fromDateTime OR ([Pin].[utcStartDateTime] = @fromDateTime AND [Pin].[id] > @lastPinId) AND [Pin].[utcDeletedDateTime] IS NULL
+              WHERE ([Pin].[utcStartDateTime] > @fromDateTime OR 
+              ([Pin].[utcStartDateTime] = @fromDateTime AND [Pin].[id] > @lastPinId))
+              AND [Pin].[utcDeletedDateTime] IS NULL
 
               ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
               OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY
