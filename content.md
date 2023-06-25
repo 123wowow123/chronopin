@@ -14,7 +14,6 @@ Before Usable:
 Comment cleanup/backup +
 links should be external cleanup
 
-improve today button on search page
 search tag with additional query to narrow down results +
 
 https://www.emojiall.com/en/emoji/%23%E2%83%A3
@@ -34,6 +33,9 @@ quick add Q2 etc
 default does not select media but when selected it will auto check pin header media
 once user scrolls then don't reset scroll on load complete
 https://www.chronopin.com/settings should be behind login
+
+
+animated gif height issue it's streched out
 
 
 TD:
@@ -71,6 +73,7 @@ Buy keywords in content that will turn into link where it will show map and near
 Pin dollar tag should link to referal page in new tab
 
 Features:
+Undo feature of create description box
 small pin card mode use examplable bubble in today button
 Main timeline should remain in background for speedup
 user creation needs to be in transaction
@@ -378,7 +381,6 @@ need timestamped youtube
 
 
 
-https://fluxkeyboard.com/
 
 https://www.youtube.com/watch?v=jBr_85S0BHo
 
@@ -400,7 +402,3 @@ https://en.wikipedia.org/wiki/Nvidia
 graphics card
 
 https://insideevs.com/news/672790/blink-dua-lport-ccs-nacs-charger/
-https://insideevs.com/news/673158/tesla-giga-casting-manufacturing-becomes-mainstream/
-
-
-https://frame.work/

@@ -155,28 +155,24 @@
         }
 
         getTodayPinId() {
-            if (!this.sortedPins.length) return;
-            let objects = this.sortedPins
-            let testDate = new Date(),
-                nextDateIndexesByDiff = [],
-                prevDateIndexesByDiff = [];
-
-            for (let i = 0; i < objects.length; i++) {
-                let thisDate = Date.parse(objects[i].utcStartDateTime),
-                    curDiff = testDate - thisDate;
-
-                curDiff < 0
-                    ? nextDateIndexesByDiff.push([i, curDiff])
-                    : prevDateIndexesByDiff.push([i, curDiff]);
+            const bags = this.pinApp.findClosestFutureSearchBagByDateTime(new Date());
+            if (bags) {
+                const pins = bags.pins;
+                this.closestFutureDates = pins;
+                return pins && pins[0] && pins[0].id;
             }
+        }
 
-            nextDateIndexesByDiff.sort(function (a, b) { return a[1] < b[1]; });
-            prevDateIndexesByDiff.sort(function (a, b) { return a[1] > b[1]; });
+        isPinInCloseFutureBag(id) {
+            let found = this.closestFutureDates
+                .find(t => {
+                    return t.id == id;
+                });
+            return found;
+        }
 
-            this.closestFutureDate = objects[nextDateIndexesByDiff[0][0]];
-            this.closestPastDate = objects[prevDateIndexesByDiff[0][0]];
-
-            return this.closestFutureDate.id;
+        isPinInClosestFutureBag(id) {
+            return this.closestFutureDates[0].id == id;
         }
 
         getTodaySearchScrollId() {

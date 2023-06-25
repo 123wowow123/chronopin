@@ -31,9 +31,15 @@
     }
 }
 
+.\--close {
+    pin-block {
+        box-shadow: 0 0px 5px rgba(255, 215, 0, 0.5);
+    }
+}
+
 .\--closest {
     pin-block {
-        box-shadow: 0 0px 8px rgba(255, 215, 0, 0.7);
+        box-shadow: 0 0px 5px rgba(255, 215, 0, 0.9);
     }
 
 }

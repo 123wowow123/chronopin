@@ -24,7 +24,7 @@
 
         <ul ng-if="$ctrl.sortedPins.length" class="match__group-section dynamic-grid" ng-switch-when="match">
           <li id="{{pin.id}}" class="grid --timeline" data-ng-repeat="pin in $ctrl.sortedPins"
-            ng-class="{'--closest': $ctrl.closestFutureDate.id == pin.id}">
+            ng-class="{'--closest': $ctrl.isPinInClosestFutureBag(pin.id), '--close': $ctrl.isPinInCloseFutureBag(pin.id)}">
             <pin-block pin="pin" config="$ctrl.appConfig" show-search-score="false"></pin-block>
           </li>
         </ul>
@@ -46,5 +46,5 @@
     </h3>
   </div>
 
-  <scroll scroll-to-id="$ctrl.getTodaySearchScrollId()" ></scroll>
+  <scroll scroll-to-id="$ctrl.getTodaySearchScrollId()"></scroll>
 </div>

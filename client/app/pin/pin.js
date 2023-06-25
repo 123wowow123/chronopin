@@ -13,7 +13,7 @@ angular.module('chronopinNodeApp')
             top: 0
           });
         }, 0);
-
       }
+      
     });
   });
