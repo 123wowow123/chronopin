@@ -56,7 +56,6 @@
 
       // ToDo: move to filter // currently used as a key field
       toISODateTimeString() {
-        //debugger;
         return this.utcStartDateTime.toISOString();
       }
 

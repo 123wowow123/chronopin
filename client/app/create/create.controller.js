@@ -7,7 +7,7 @@
 
   class CreateController {
 
-    constructor($window, $state, $scope, $transitions, Modal, Auth, $q, $rootScope, $stateParams, $http, $timeout, $element, twitterJs, pinWebService, scrapeService, appConfig, Util /*, $log, modelInjector */) {
+    constructor($window, $state, $scope, $transitions, Modal, Auth, $q, $rootScope, $stateParams, $http, $timeout, $element, pinApp, twitterJs, pinWebService, scrapeService, appConfig, Util /*, $log, modelInjector */) {
       //PinGroups || (PinGroups = modelInjector.getPinGroups());
       this.twitterJs = twitterJs;
       this.pinRecieved = false;
@@ -17,6 +17,7 @@
       this.$element = $element;
       this.$transitions = $transitions;
       this.Modal = Modal;
+      this.pinApp = pinApp;
 
       // different states of pin
       this.pin = { useMedia: true };
@@ -282,6 +283,7 @@
         .then(() => {
           return this.pinWebService.delete(id)
             .then(res => {
+              this.pinApp.deletePinInBags(id);
               this.$state.go('main');
             });
         }).finally(() => {

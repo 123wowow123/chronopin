@@ -1845,12 +1845,12 @@
     "mentions": [
       {
         "id": 1,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 332
       },
       {
         "id": 2,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 332
       }
     ],
@@ -3675,12 +3675,12 @@
     "mentions": [
       {
         "id": 9,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 336
       },
       {
         "id": 10,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 336
       }
     ],
@@ -3976,14 +3976,14 @@
     "locations": [
       {
         "id": 5,
-        "address": "Helsingborg",
-        "order": 1,
+        "address": "Gothenburg",
+        "order": 0,
         "pinId": 127
       },
       {
         "id": 6,
-        "address": "Gothenburg",
-        "order": 0,
+        "address": "Helsingborg",
+        "order": 1,
         "pinId": 127
       }
     ],
@@ -4399,12 +4399,12 @@
     "mentions": [
       {
         "id": 16,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 338
       },
       {
         "id": 17,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 338
       }
     ],
@@ -5963,12 +5963,12 @@
     "mentions": [
       {
         "id": 21,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 340
       },
       {
         "id": 22,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 340
       }
     ],
@@ -6107,10 +6107,10 @@
     "sourceDescription": "{\"time\":1687063474041,\"blocks\":[{\"id\":\"jZWVnKdt1s\",\"type\":\"paragraph\",\"data\":{\"text\":\"       <a href=\\\"https://www.instagram.com/hilaryduff/\\\" target=\\\"_blank\\\">Hilary Duff</a>&nbsp;cannot be left alone.       \"}},{\"id\":\"W0CtkROAct\",\"type\":\"paragraph\",\"data\":{\"text\":\"       As the mom of three, the “How I Met Your Father” actress says that her kids love to follow her around the house when she goes from room to room. “Even my husband [Matthew Koma] will follow me into a room when I leave to get something,” she says with a laugh. “It’s so nice to be loved, but sometimes I’m like, ‘I need a minute!’” Still, Duff is loving every second of having such a happy and full home. After her series “Younger” ended in 2021, she relocated with her family to L.A., where she recently wrapped shooting the “Lizzie McGuire” reboot. And while Duff says she misses New York every day, she also loves having space for her two dogs and eight chickens. “We have fresh eggs every day,” she says.       \"}},{\"id\":\"eOFr_sOUaU\",\"type\":\"paragraph\",\"data\":{\"text\":\"       Aside from fresh eggs and her family, Duff says there are plenty of other things she’s currently obsessed with. Below, she lists some of her current favorite daily essentials.       \"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.cnn.com/cnn-underscored/home/hilary-duff-daily-lifestyle-essentials",
     "utcStartDateTime": "2023-01-01T08:00:00.000Z",
-    "utcEndDateTime": "2023-01-08T08:00:00.000Z",
+    "utcEndDateTime": "2023-01-09T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-26T01:36:39.232Z",
-    "utcUpdatedDateTime": "2023-06-18T04:46:06.198Z",
+    "utcUpdatedDateTime": "2023-06-24T21:26:38.232Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -6129,7 +6129,7 @@
     ],
     "merchants": [
       {
-        "id": 31,
+        "id": 56,
         "label": "Plushible Halloween Candy Bags",
         "url": "https://a.co/d/4jQwcnc",
         "price": 19.99,
@@ -6137,23 +6137,23 @@
         "pinId": 226
       },
       {
-        "id": 32,
-        "label": "UPPAbaby VISTA Upper Adapters",
-        "url": "https://amzn.to/3WBMhBj",
-        "price": 29.99,
+        "id": 57,
+        "label": "Tegion Reusable Silicone Straws",
+        "url": "https://a.co/d/fTIFcq4",
+        "price": 11.99,
         "order": 1,
         "pinId": 226
       },
       {
-        "id": 33,
-        "label": "Tegion Reusable Silicone Straws",
-        "url": "https://a.co/d/fTIFcq4",
-        "price": 11.99,
+        "id": 58,
+        "label": "UPPAbaby VISTA Upper Adapters",
+        "url": "https://amzn.to/3WBMhBj",
+        "price": 29.99,
         "order": 2,
         "pinId": 226
       },
       {
-        "id": 34,
+        "id": 59,
         "label": "Doctor's Best DHA 500",
         "url": "https://a.co/d/e0Ibvji",
         "price": 40.45,
@@ -6161,19 +6161,27 @@
         "pinId": 226
       },
       {
-        "id": 35,
+        "id": 60,
         "label": "Secura Visual Countdown Timer",
         "url": "https://a.co/d/cI0Vejb",
         "price": 18.99,
-        "order": 5,
+        "order": 4,
         "pinId": 226
       },
       {
-        "id": 36,
+        "id": 61,
+        "label": "Magical Handwriting Workbooks",
+        "url": "https://a.co/d/1oGcC0a",
+        "price": 16.99,
+        "order": 6,
+        "pinId": 226
+      },
+      {
+        "id": 62,
         "label": "Extra Large Ceramic Coffee",
         "url": "https://a.co/d/0glb5Wg",
         "price": 28.99,
-        "order": 4,
+        "order": 5,
         "pinId": 226
       }
     ],
@@ -6317,14 +6325,14 @@
     "locations": [
       {
         "id": 16,
-        "address": "LVCC West Hall, Las Vegas",
-        "order": 1,
+        "address": "ARIA, Las Vegas",
+        "order": 4,
         "pinId": 350
       },
       {
         "id": 17,
-        "address": "LVCC North Hall, Las Vegas",
-        "order": 2,
+        "address": "LVCC West Hall, Las Vegas",
+        "order": 1,
         "pinId": 350
       },
       {
@@ -6341,8 +6349,8 @@
       },
       {
         "id": 20,
-        "address": "ARIA, Las Vegas",
-        "order": 4,
+        "address": "LVCC North Hall, Las Vegas",
+        "order": 2,
         "pinId": 350
       }
     ],
@@ -6366,7 +6374,7 @@
     },
     "media": [
       {
-        "id": 283,
+        "id": 179,
         "thumbName": "0f66a19d-9ddf-4dd9-871f-da1149f6409b-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 523,
@@ -6378,21 +6386,21 @@
     ],
     "locations": [
       {
-        "id": 105,
-        "address": "Mount Sinai Hospital, New York",
-        "order": 0,
+        "id": 21,
+        "address": "Montefiore Medical Center, New York",
+        "order": 1,
         "pinId": 364
       },
       {
-        "id": 106,
-        "address": "Montefiore Medical Center, New York",
-        "order": 1,
+        "id": 22,
+        "address": "Mount Sinai Hospital, New York",
+        "order": 0,
         "pinId": 364
       }
     ],
     "mentions": [
       {
-        "id": 94,
+        "id": 23,
         "tag": "#Strike",
         "pinId": 364
       }
@@ -6474,7 +6482,7 @@
     },
     "media": [
       {
-        "id": 179,
+        "id": 180,
         "thumbName": "42f3b3b5-2dd7-470e-a0bf-bbe1b9bef2da-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -6514,7 +6522,7 @@
     },
     "media": [
       {
-        "id": 180,
+        "id": 181,
         "thumbName": "81dfeb38-a567-4d2c-8c28-0ab5cf16c737-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -6526,12 +6534,12 @@
     ],
     "mentions": [
       {
-        "id": 23,
+        "id": 24,
         "tag": "#Jobs",
         "pinId": 235
       },
       {
-        "id": 24,
+        "id": 25,
         "tag": "#ADP",
         "pinId": 235
       }
@@ -6577,7 +6585,7 @@
     },
     "media": [
       {
-        "id": 181,
+        "id": 182,
         "thumbName": "31333c90-3d38-41d0-9056-72e39c49bd8b-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -6617,7 +6625,7 @@
     },
     "media": [
       {
-        "id": 284,
+        "id": 183,
         "thumbName": "c125a138-7bdc-487b-bb7e-083cc84a6b5c-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -6629,7 +6637,7 @@
     ],
     "locations": [
       {
-        "id": 108,
+        "id": 23,
         "address": "London, UK",
         "order": 0,
         "pinId": 365
@@ -6637,12 +6645,12 @@
     ],
     "mentions": [
       {
-        "id": 95,
+        "id": 26,
         "tag": "#Stike",
         "pinId": 365
       },
       {
-        "id": 96,
+        "id": 27,
         "tag": "#Europe",
         "pinId": 365
       }
@@ -6686,7 +6694,7 @@
     },
     "media": [
       {
-        "id": 182,
+        "id": 184,
         "thumbName": "ef6fbfd1-759b-4312-ab12-e466a7cf2f17-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -6746,7 +6754,7 @@
     },
     "media": [
       {
-        "id": 183,
+        "id": 185,
         "originalUrl": "//www.youtube.com/embed/GZhpuCu-4v4",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/GZhpuCu-4v4\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -6783,7 +6791,7 @@
     },
     "media": [
       {
-        "id": 184,
+        "id": 186,
         "thumbName": "4a8cec7a-ca73-4879-b9e9-ae95ed31e619-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -6796,6 +6804,14 @@
     "merchants": [
       {
         "id": 42,
+        "label": "Gamestop Power Up get exclusive offers, earn monthly rewards and more",
+        "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007594&type=3&subid=",
+        "price": 24.99,
+        "order": 2,
+        "pinId": 142
+      },
+      {
+        "id": 43,
         "label": "GameStop: Sony PlayStation VR2 Horizon Bundle",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2-horizon-call-of-the-mountain-bundle%2F393119.html",
         "price": 599.99,
@@ -6803,25 +6819,17 @@
         "pinId": 142
       },
       {
-        "id": 43,
+        "id": 44,
         "label": "GameStop: Sony PlayStation VR2",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2%2F393118.html",
         "price": 549.99,
         "order": 0,
         "pinId": 142
-      },
-      {
-        "id": 44,
-        "label": "Gamestop Power Up get exclusive offers, earn monthly rewards and more",
-        "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007594&type=3&subid=",
-        "price": 24.99,
-        "order": 2,
-        "pinId": 142
       }
     ],
     "mentions": [
       {
-        "id": 25,
+        "id": 28,
         "tag": "$SONY",
         "pinId": 142
       }
@@ -6847,7 +6855,7 @@
     },
     "media": [
       {
-        "id": 185,
+        "id": 187,
         "thumbName": "f1588ef6-4b7e-4977-9249-cf7125cab0ee-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -6859,13 +6867,13 @@
     ],
     "mentions": [
       {
-        "id": 26,
-        "tag": "#ADP",
+        "id": 29,
+        "tag": "#Jobs",
         "pinId": 234
       },
       {
-        "id": 27,
-        "tag": "#Jobs",
+        "id": 30,
+        "tag": "#ADP",
         "pinId": 234
       }
     ],
@@ -6887,7 +6895,7 @@
     },
     "media": [
       {
-        "id": 186,
+        "id": 188,
         "originalUrl": "https://twitter.com/DemonSlayerUSA/status/1601569955865976833",
         "type": "2",
         "authorName": "Demon Slayer: Kimetsu no Yaiba (English)",
@@ -6914,7 +6922,7 @@
     },
     "media": [
       {
-        "id": 187,
+        "id": 189,
         "thumbName": "c2cfd4b6-d286-4d2d-95fa-59e0ba94c92a-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 523,
@@ -6963,7 +6971,7 @@
     },
     "media": [
       {
-        "id": 188,
+        "id": 190,
         "thumbName": "0ba0fe60-6fcd-4275-987a-883836a72e27-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -7003,7 +7011,7 @@
     },
     "media": [
       {
-        "id": 282,
+        "id": 191,
         "thumbName": "6d80ac5c-e4b0-4bdb-a260-fc1b06473784-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -7015,7 +7023,7 @@
     ],
     "locations": [
       {
-        "id": 100,
+        "id": 24,
         "address": "Los Angeles Unified School District",
         "order": 0,
         "pinId": 363
@@ -7023,7 +7031,7 @@
     ],
     "mentions": [
       {
-        "id": 93,
+        "id": 31,
         "tag": "#Strike",
         "pinId": 363
       }
@@ -7066,7 +7074,7 @@
     },
     "media": [
       {
-        "id": 189,
+        "id": 192,
         "thumbName": "e9970655-276f-42d1-8ead-15d083b8544c-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -7106,7 +7114,7 @@
     },
     "media": [
       {
-        "id": 281,
+        "id": 193,
         "thumbName": "1910a7a1-be38-448a-ac95-cc33ec8ad04d-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -7118,7 +7126,7 @@
     ],
     "locations": [
       {
-        "id": 98,
+        "id": 25,
         "address": "Germany",
         "order": 0,
         "pinId": 362
@@ -7126,7 +7134,7 @@
     ],
     "mentions": [
       {
-        "id": 92,
+        "id": 32,
         "tag": "#Strike",
         "pinId": 362
       }
@@ -7151,7 +7159,7 @@
     },
     "media": [
       {
-        "id": 190,
+        "id": 194,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1652048950352814155",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -7161,7 +7169,7 @@
     ],
     "mentions": [
       {
-        "id": 28,
+        "id": 33,
         "tag": "#inflation",
         "pinId": 227
       }
@@ -7187,7 +7195,7 @@
     },
     "media": [
       {
-        "id": 191,
+        "id": 195,
         "thumbName": "2521a8b6-5f29-4519-b515-94dec41a6651-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -7199,13 +7207,13 @@
     ],
     "mentions": [
       {
-        "id": 29,
-        "tag": "#Jobs",
+        "id": 34,
+        "tag": "#ADP",
         "pinId": 232
       },
       {
-        "id": 30,
-        "tag": "#ADP",
+        "id": 35,
+        "tag": "#Jobs",
         "pinId": 232
       }
     ],
@@ -7245,7 +7253,7 @@
     },
     "media": [
       {
-        "id": 192,
+        "id": 196,
         "originalUrl": "//www.youtube.com/embed/Mz5OcKiGoV8",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Mz5OcKiGoV8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -7340,7 +7348,7 @@
     },
     "media": [
       {
-        "id": 193,
+        "id": 197,
         "originalUrl": "//www.youtube.com/embed/hbvzjOZM3AQ",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/hbvzjOZM3AQ\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -7401,7 +7409,7 @@
     },
     "media": [
       {
-        "id": 194,
+        "id": 198,
         "originalUrl": "https://twitter.com/BurggrabenH/status/1650415388553822211",
         "type": "2",
         "authorName": "Alexander Stahel ????",
@@ -7521,7 +7529,7 @@
     },
     "media": [
       {
-        "id": 195,
+        "id": 199,
         "thumbName": "fdb32feb-199d-448d-93af-bea61de72f7b-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -7552,7 +7560,7 @@
     },
     "media": [
       {
-        "id": 196,
+        "id": 200,
         "thumbName": "5221d986-6149-4d67-9ee4-ab315aa0ada1-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -7564,12 +7572,12 @@
     ],
     "mentions": [
       {
-        "id": 31,
+        "id": 36,
         "tag": "#ADP",
         "pinId": 233
       },
       {
-        "id": 32,
+        "id": 37,
         "tag": "#Jobs",
         "pinId": 233
       }
@@ -7612,7 +7620,7 @@
     },
     "media": [
       {
-        "id": 279,
+        "id": 201,
         "originalUrl": "https://twitter.com/hwinkler4real/status/1653764896432050178",
         "type": "2",
         "authorName": "Henry Winkler",
@@ -7622,33 +7630,33 @@
     ],
     "locations": [
       {
-        "id": 93,
+        "id": 26,
         "address": "Los Angeles",
         "order": 0,
         "pinId": 361
       },
       {
-        "id": 94,
+        "id": 27,
+        "address": "Burbank",
+        "order": 3,
+        "pinId": 361
+      },
+      {
+        "id": 28,
         "address": "New York City",
         "order": 1,
         "pinId": 361
       },
       {
-        "id": 95,
+        "id": 29,
         "address": "Culver City",
         "order": 2,
-        "pinId": 361
-      },
-      {
-        "id": 96,
-        "address": "Burbank",
-        "order": 3,
         "pinId": 361
       }
     ],
     "mentions": [
       {
-        "id": 91,
+        "id": 38,
         "tag": "#Strike",
         "pinId": 361
       }
@@ -7673,7 +7681,7 @@
     },
     "media": [
       {
-        "id": 197,
+        "id": 202,
         "thumbName": "8f512cad-4dce-4420-8ce9-abcc15b38dbd-chrono-lg.webp",
         "thumbWidth": 799,
         "thumbHeight": 506,
@@ -7685,7 +7693,7 @@
     ],
     "mentions": [
       {
-        "id": 33,
+        "id": 39,
         "tag": "#rates",
         "pinId": 198
       }
@@ -7727,7 +7735,7 @@
     },
     "media": [
       {
-        "id": 198,
+        "id": 203,
         "thumbName": "5ce370bf-3c98-41a1-b57e-3fa9ee03b54f-chrono-lg.webp",
         "thumbWidth": 750,
         "thumbHeight": 422,
@@ -7776,7 +7784,7 @@
     },
     "media": [
       {
-        "id": 199,
+        "id": 204,
         "originalUrl": "https://twitter.com/Jay__Cale/status/1655653917651247104",
         "type": "2",
         "authorName": "Jay Cal",
@@ -7786,7 +7794,7 @@
     ],
     "mentions": [
       {
-        "id": 34,
+        "id": 40,
         "tag": "#rates",
         "pinId": 203
       }
@@ -7848,7 +7856,7 @@
     },
     "media": [
       {
-        "id": 200,
+        "id": 205,
         "originalUrl": "https://twitter.com/RJRCapital/status/1656838113858076672",
         "type": "2",
         "authorName": "RJR Capital",
@@ -7858,42 +7866,42 @@
     ],
     "mentions": [
       {
-        "id": 35,
+        "id": 41,
         "tag": "$AAPL",
         "pinId": 210
       },
       {
-        "id": 36,
-        "tag": "$MSFT",
-        "pinId": 210
-      },
-      {
-        "id": 37,
+        "id": 42,
         "tag": "$NFLX",
         "pinId": 210
       },
       {
-        "id": 38,
-        "tag": "$META",
+        "id": 43,
+        "tag": "$MSFT",
         "pinId": 210
       },
       {
-        "id": 39,
-        "tag": "$AMAZN",
-        "pinId": 210
-      },
-      {
-        "id": 40,
-        "tag": "$NVDA",
-        "pinId": 210
-      },
-      {
-        "id": 41,
+        "id": 44,
         "tag": "$GOOG",
         "pinId": 210
       },
       {
-        "id": 42,
+        "id": 45,
+        "tag": "$NVDA",
+        "pinId": 210
+      },
+      {
+        "id": 46,
+        "tag": "$META",
+        "pinId": 210
+      },
+      {
+        "id": 47,
+        "tag": "$AMAZN",
+        "pinId": 210
+      },
+      {
+        "id": 48,
         "tag": "$TSLA",
         "pinId": 210
       }
@@ -7919,7 +7927,7 @@
     },
     "media": [
       {
-        "id": 201,
+        "id": 206,
         "originalUrl": "//www.youtube.com/embed/a6qna-ZCbxA",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/a6qna-ZCbxA\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -8105,7 +8113,7 @@
     },
     "locations": [
       {
-        "id": 21,
+        "id": 30,
         "address": "Kyiv, Ukraine",
         "order": 0,
         "pinId": 205
@@ -8149,7 +8157,7 @@
     },
     "media": [
       {
-        "id": 202,
+        "id": 207,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1663872116314329088",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -8159,7 +8167,7 @@
     ],
     "mentions": [
       {
-        "id": 43,
+        "id": 49,
         "tag": "$NVDA",
         "pinId": 228
       }
@@ -8184,7 +8192,7 @@
     },
     "media": [
       {
-        "id": 203,
+        "id": 208,
         "originalUrl": "https://twitter.com/WallStCynic/status/1663937504037294080",
         "type": "2",
         "authorName": "Diogenes",
@@ -8194,7 +8202,7 @@
     ],
     "locations": [
       {
-        "id": 22,
+        "id": 31,
         "address": "Las Vegas Strip",
         "order": 0,
         "pinId": 229
@@ -8202,13 +8210,13 @@
     ],
     "mentions": [
       {
-        "id": 44,
-        "tag": "#CoincidentEconomicIndicator",
+        "id": 50,
+        "tag": "#indicator",
         "pinId": 229
       },
       {
-        "id": 45,
-        "tag": "#indicator",
+        "id": 51,
+        "tag": "#CoincidentEconomicIndicator",
         "pinId": 229
       }
     ],
@@ -8231,7 +8239,7 @@
     },
     "media": [
       {
-        "id": 204,
+        "id": 209,
         "originalUrl": "https://twitter.com/StephaneDeo/status/1670806770678153216",
         "type": "2",
         "authorName": "Stephane Deo",
@@ -8241,7 +8249,7 @@
     ],
     "locations": [
       {
-        "id": 23,
+        "id": 32,
         "address": "Europe",
         "order": 0,
         "pinId": 327
@@ -8249,12 +8257,12 @@
     ],
     "mentions": [
       {
-        "id": 46,
+        "id": 52,
         "tag": "#inflation",
         "pinId": 327
       },
       {
-        "id": 47,
+        "id": 53,
         "tag": "#Euro",
         "pinId": 327
       }
@@ -8279,7 +8287,7 @@
     },
     "media": [
       {
-        "id": 205,
+        "id": 210,
         "thumbName": "939475ba-e3b2-444d-b836-d8b4f1662b5c-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -8291,7 +8299,7 @@
     ],
     "mentions": [
       {
-        "id": 48,
+        "id": 54,
         "tag": "#XDate",
         "pinId": 190
       }
@@ -8317,7 +8325,7 @@
     },
     "media": [
       {
-        "id": 206,
+        "id": 211,
         "thumbName": "76bce240-dc66-4914-b91e-d3418a56f8bc-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -8329,13 +8337,13 @@
     ],
     "mentions": [
       {
-        "id": 49,
-        "tag": "#Jobs",
+        "id": 55,
+        "tag": "#ADP",
         "pinId": 231
       },
       {
-        "id": 50,
-        "tag": "#ADP",
+        "id": 56,
+        "tag": "#Jobs",
         "pinId": 231
       }
     ],
@@ -8358,7 +8366,7 @@
     },
     "media": [
       {
-        "id": 207,
+        "id": 212,
         "thumbName": "64b3abe8-3706-4bbf-a8d8-6196d12de14f-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -8370,7 +8378,7 @@
     ],
     "locations": [
       {
-        "id": 24,
+        "id": 33,
         "address": "U.K.",
         "order": 0,
         "pinId": 344
@@ -8378,7 +8386,7 @@
     ],
     "mentions": [
       {
-        "id": 51,
+        "id": 57,
         "tag": "#inflation",
         "pinId": 344
       }
@@ -8403,7 +8411,7 @@
     },
     "media": [
       {
-        "id": 292,
+        "id": 213,
         "thumbName": "b1b0bac9-e8ec-4876-a592-28979ccd6a8a-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 500,
@@ -8415,7 +8423,7 @@
     ],
     "mentions": [
       {
-        "id": 115,
+        "id": 58,
         "tag": "#InitialJoblessClaims",
         "pinId": 373
       }
@@ -8442,7 +8450,7 @@
     },
     "media": [
       {
-        "id": 208,
+        "id": 214,
         "originalUrl": "//www.youtube.com/embed/GZud-p0QRvA",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/GZud-p0QRvA\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -8477,7 +8485,7 @@
     },
     "media": [
       {
-        "id": 209,
+        "id": 215,
         "thumbName": "895067ab-76d7-4d06-9461-86b5df11e2a1-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 666,
@@ -8489,7 +8497,7 @@
     ],
     "locations": [
       {
-        "id": 25,
+        "id": 34,
         "address": "Krispy Kreme",
         "order": 0,
         "pinId": 237
@@ -8514,7 +8522,7 @@
     },
     "media": [
       {
-        "id": 210,
+        "id": 216,
         "thumbName": "ab84a1de-2d1c-448c-b0a8-0bae10e49315-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -8526,7 +8534,7 @@
     ],
     "locations": [
       {
-        "id": 26,
+        "id": 35,
         "address": "Magic Kingdom at Walt Disney World, ORLANDO, Fla.",
         "order": 0,
         "pinId": 238
@@ -8552,7 +8560,7 @@
     },
     "media": [
       {
-        "id": 211,
+        "id": 217,
         "thumbName": "dbba26cd-62d9-4de9-ab86-a1de656d7cad-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -8564,7 +8572,7 @@
     ],
     "mentions": [
       {
-        "id": 52,
+        "id": 59,
         "tag": "#NonfarmPayroll",
         "pinId": 243
       }
@@ -8590,7 +8598,7 @@
     },
     "media": [
       {
-        "id": 212,
+        "id": 218,
         "thumbName": "613caa1e-33dd-4b9b-a403-c00aa79489c6-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -8602,7 +8610,7 @@
     ],
     "mentions": [
       {
-        "id": 53,
+        "id": 60,
         "tag": "#XDate",
         "pinId": 244
       }
@@ -8647,7 +8655,7 @@
     },
     "media": [
       {
-        "id": 213,
+        "id": 219,
         "thumbName": "a36e78c3-2828-4e8b-8975-23c9f36726e9-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -8659,7 +8667,7 @@
     ],
     "mentions": [
       {
-        "id": 54,
+        "id": 61,
         "tag": "#XDate",
         "pinId": 236
       }
@@ -8701,7 +8709,7 @@
     },
     "media": [
       {
-        "id": 214,
+        "id": 220,
         "originalUrl": "//www.youtube.com/embed/GYkq9Rgoj8E",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/GYkq9Rgoj8E\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -8709,7 +8717,7 @@
     ],
     "locations": [
       {
-        "id": 27,
+        "id": 36,
         "address": "Apple Park, CA",
         "order": 0,
         "pinId": 242
@@ -8717,7 +8725,7 @@
     ],
     "mentions": [
       {
-        "id": 55,
+        "id": 62,
         "tag": "$AAPL",
         "pinId": 242
       }
@@ -8761,7 +8769,7 @@
     },
     "media": [
       {
-        "id": 215,
+        "id": 221,
         "originalUrl": "//www.youtube.com/embed/9bRWIdOMfro",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/9bRWIdOMfro\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -8833,7 +8841,7 @@
     },
     "media": [
       {
-        "id": 216,
+        "id": 222,
         "thumbName": "e96564e0-9bd6-48b9-9107-cd0a763c6346-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -8845,7 +8853,7 @@
     ],
     "locations": [
       {
-        "id": 28,
+        "id": 37,
         "address": "CUPERTINO, CALIFORNIA",
         "order": 0,
         "pinId": 355
@@ -8890,7 +8898,7 @@
     },
     "media": [
       {
-        "id": 287,
+        "id": 223,
         "thumbName": "af157dc3-0318-4836-92e6-d20cacec67a6-chrono-lg.webp",
         "thumbWidth": 750,
         "thumbHeight": 422,
@@ -8902,7 +8910,7 @@
     ],
     "mentions": [
       {
-        "id": 110,
+        "id": 63,
         "tag": "#JoblessClaims",
         "pinId": 368
       }
@@ -8927,7 +8935,7 @@
     },
     "media": [
       {
-        "id": 291,
+        "id": 224,
         "thumbName": "1eeb9e56-9e53-454b-b950-3a82771ac72c-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 500,
@@ -8939,7 +8947,7 @@
     ],
     "mentions": [
       {
-        "id": 114,
+        "id": 64,
         "tag": "#InitialJoblessClaims",
         "pinId": 372
       }
@@ -8964,7 +8972,7 @@
     },
     "media": [
       {
-        "id": 217,
+        "id": 225,
         "originalUrl": "//www.youtube.com/embed/Rfcfzh2ujVE",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Rfcfzh2ujVE\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -8972,7 +8980,7 @@
     ],
     "locations": [
       {
-        "id": 29,
+        "id": 38,
         "address": "Stade Roland Garros, Paris, France",
         "order": 0,
         "pinId": 252
@@ -8998,7 +9006,7 @@
     },
     "media": [
       {
-        "id": 218,
+        "id": 226,
         "thumbName": "9ebc9bd8-151e-4c9b-88da-148af44d51f0-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 750,
@@ -9010,7 +9018,7 @@
     ],
     "locations": [
       {
-        "id": 30,
+        "id": 39,
         "address": "24th Street and Treat Avenue, San Fransisco, CA",
         "order": 0,
         "pinId": 251
@@ -9018,7 +9026,7 @@
     ],
     "mentions": [
       {
-        "id": 56,
+        "id": 65,
         "tag": "#MassShooting",
         "pinId": 251
       }
@@ -9061,7 +9069,7 @@
     },
     "media": [
       {
-        "id": 219,
+        "id": 227,
         "thumbName": "c74855d4-065d-4e43-bb80-e4ddb5f4dac7-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 559,
@@ -9073,7 +9081,7 @@
     ],
     "locations": [
       {
-        "id": 31,
+        "id": 40,
         "address": "GM Fort Wayne, Indiana",
         "order": 0,
         "pinId": 253
@@ -9081,7 +9089,7 @@
     ],
     "mentions": [
       {
-        "id": 57,
+        "id": 66,
         "tag": "$GM",
         "pinId": 253
       }
@@ -9106,7 +9114,7 @@
     },
     "media": [
       {
-        "id": 220,
+        "id": 228,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1664622345498112001",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -9116,7 +9124,7 @@
     ],
     "mentions": [
       {
-        "id": 58,
+        "id": 67,
         "tag": "#rates",
         "pinId": 240
       }
@@ -9179,7 +9187,7 @@
     },
     "media": [
       {
-        "id": 221,
+        "id": 229,
         "thumbName": "815c1049-3b90-4544-8d4c-d08cecbfcc2e-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -9208,7 +9216,7 @@
     },
     "media": [
       {
-        "id": 222,
+        "id": 230,
         "thumbName": "9709f6b5-8eff-4946-a3cb-6d9be6304101-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -9220,7 +9228,7 @@
     ],
     "locations": [
       {
-        "id": 32,
+        "id": 41,
         "address": "European Central Bank",
         "order": 0,
         "pinId": 307
@@ -9228,7 +9236,7 @@
     ],
     "mentions": [
       {
-        "id": 59,
+        "id": 68,
         "tag": "#ECB",
         "pinId": 307
       }
@@ -9253,7 +9261,7 @@
     },
     "locations": [
       {
-        "id": 33,
+        "id": 42,
         "address": "Metropolitan Park Amazon’s HQ2 in Arlington, Va.",
         "order": 0,
         "pinId": 326
@@ -9279,7 +9287,7 @@
     },
     "media": [
       {
-        "id": 288,
+        "id": 231,
         "thumbName": "26a777aa-64df-454a-94f3-e0da331be5fe-chrono-lg.webp",
         "thumbWidth": 750,
         "thumbHeight": 422,
@@ -9291,7 +9299,7 @@
     ],
     "mentions": [
       {
-        "id": 111,
+        "id": 69,
         "tag": "#JoblessClaims",
         "pinId": 369
       }
@@ -9315,7 +9323,7 @@
     },
     "media": [
       {
-        "id": 290,
+        "id": 232,
         "thumbName": "70221c6f-24d7-4b6d-9dcd-006ffa3bdb1d-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 500,
@@ -9327,7 +9335,7 @@
     ],
     "mentions": [
       {
-        "id": 113,
+        "id": 70,
         "tag": "#InitialJoblessClaims",
         "pinId": 371
       }
@@ -9349,7 +9357,7 @@
     },
     "media": [
       {
-        "id": 223,
+        "id": 233,
         "originalUrl": "https://twitter.com/OliverRakau/status/1669617210086641666",
         "type": "2",
         "authorName": "Oliver Rakau",
@@ -9433,7 +9441,7 @@
     },
     "media": [
       {
-        "id": 224,
+        "id": 234,
         "thumbName": "c4fa9735-df4b-4484-af67-c1bcb8bbe570-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 445,
@@ -9484,7 +9492,7 @@
     },
     "media": [
       {
-        "id": 225,
+        "id": 235,
         "thumbName": "6a0c7bc3-0c05-495b-b066-2ccb791c85d7-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 562,
@@ -9524,7 +9532,7 @@
     },
     "media": [
       {
-        "id": 274,
+        "id": 236,
         "thumbName": "af0da67d-0d1b-4534-a968-de76e14c7320-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -9536,7 +9544,7 @@
     ],
     "locations": [
       {
-        "id": 111,
+        "id": 43,
         "address": "UK",
         "order": 0,
         "pinId": 357
@@ -9544,17 +9552,17 @@
     ],
     "mentions": [
       {
-        "id": 107,
+        "id": 71,
         "tag": "#rates",
         "pinId": 357
       },
       {
-        "id": 108,
+        "id": 72,
         "tag": "#inflation",
         "pinId": 357
       },
       {
-        "id": 109,
+        "id": 73,
         "tag": "#BOE",
         "pinId": 357
       }
@@ -9578,7 +9586,7 @@
     },
     "media": [
       {
-        "id": 275,
+        "id": 237,
         "originalUrl": "https://twitter.com/JeffWeniger/status/1671587326869348362",
         "type": "2",
         "authorName": "Jeff Weniger",
@@ -9588,7 +9596,7 @@
     ],
     "mentions": [
       {
-        "id": 77,
+        "id": 74,
         "tag": "#RecessionIndicator",
         "pinId": 358
       }
@@ -9612,7 +9620,7 @@
     },
     "media": [
       {
-        "id": 277,
+        "id": 238,
         "thumbName": "ffa31c5d-9d2b-4694-8c2f-0d2efc7f4959-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -9624,7 +9632,7 @@
     ],
     "locations": [
       {
-        "id": 56,
+        "id": 44,
         "address": "Spirit AeroSystems Wichita, Kansas",
         "order": 0,
         "pinId": 360
@@ -9632,18 +9640,18 @@
     ],
     "mentions": [
       {
-        "id": 79,
+        "id": 75,
         "tag": "#Strike",
         "pinId": 360
       },
       {
-        "id": 80,
-        "tag": "$BA",
+        "id": 76,
+        "tag": "$SPR",
         "pinId": 360
       },
       {
-        "id": 81,
-        "tag": "$SPR",
+        "id": 77,
+        "tag": "$BA",
         "pinId": 360
       }
     ],
@@ -9667,7 +9675,7 @@
     },
     "media": [
       {
-        "id": 285,
+        "id": 239,
         "thumbName": "ed403288-e612-4c06-a382-5e95ecad420f-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -9679,38 +9687,38 @@
     ],
     "mentions": [
       {
-        "id": 98,
-        "tag": "#Quality",
-        "pinId": 366
-      },
-      {
-        "id": 99,
-        "tag": "$STLA",
-        "pinId": 366
-      },
-      {
-        "id": 100,
-        "tag": "$F",
-        "pinId": 366
-      },
-      {
-        "id": 101,
+        "id": 78,
         "tag": "$TSLA",
         "pinId": 366
       },
       {
-        "id": 102,
+        "id": 79,
         "tag": "$GM",
         "pinId": 366
       },
       {
-        "id": 103,
+        "id": 80,
+        "tag": "$STLA",
+        "pinId": 366
+      },
+      {
+        "id": 81,
+        "tag": "#Quality",
+        "pinId": 366
+      },
+      {
+        "id": 82,
+        "tag": "$TM",
+        "pinId": 366
+      },
+      {
+        "id": 83,
         "tag": "$PSNY",
         "pinId": 366
       },
       {
-        "id": 104,
-        "tag": "$TM",
+        "id": 84,
+        "tag": "$F",
         "pinId": 366
       }
     ],
@@ -9735,7 +9743,7 @@
     },
     "media": [
       {
-        "id": 286,
+        "id": 240,
         "thumbName": "fa769f80-f0e4-430b-8939-cb425c5aba1e-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -9747,7 +9755,7 @@
     ],
     "locations": [
       {
-        "id": 110,
+        "id": 45,
         "address": "AWS Generative AI Innovation Center",
         "order": 0,
         "pinId": 367
@@ -9755,13 +9763,13 @@
     ],
     "mentions": [
       {
-        "id": 105,
-        "tag": "#AI",
+        "id": 85,
+        "tag": "$AMZN",
         "pinId": 367
       },
       {
-        "id": 106,
-        "tag": "$AMZN",
+        "id": 86,
+        "tag": "#AI",
         "pinId": 367
       }
     ],
@@ -9784,7 +9792,7 @@
     },
     "media": [
       {
-        "id": 289,
+        "id": 241,
         "thumbName": "a3352a68-51cb-423f-8730-31a1faa89db0-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 500,
@@ -9796,7 +9804,7 @@
     ],
     "mentions": [
       {
-        "id": 112,
+        "id": 87,
         "tag": "#InitialJoblessClaims",
         "pinId": 370
       }
@@ -9820,7 +9828,7 @@
     },
     "media": [
       {
-        "id": 293,
+        "id": 242,
         "originalUrl": "https://twitter.com/DavidInglesTV/status/1672026383382634496",
         "type": "2",
         "authorName": "David Ingles",
@@ -9830,7 +9838,7 @@
     ],
     "locations": [
       {
-        "id": 112,
+        "id": 46,
         "address": "Japan",
         "order": 0,
         "pinId": 374
@@ -9838,7 +9846,7 @@
     ],
     "mentions": [
       {
-        "id": 116,
+        "id": 88,
         "tag": "#inflation",
         "pinId": 374
       }
@@ -9861,7 +9869,7 @@
     },
     "locations": [
       {
-        "id": 34,
+        "id": 47,
         "address": "Japan",
         "order": 0,
         "pinId": 315
@@ -9886,7 +9894,7 @@
     },
     "media": [
       {
-        "id": 226,
+        "id": 243,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1638924685193641986",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -9923,7 +9931,7 @@
     },
     "media": [
       {
-        "id": 227,
+        "id": 244,
         "originalUrl": "//www.youtube.com/embed/EWZ9wjeoHcE",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/EWZ9wjeoHcE\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -9940,6 +9948,41 @@
       }
     ],
     "userId": 4
+  },
+  {
+    "id": 359,
+    "rootThread": false,
+    "title": "Should have more states trigger under Sahm Rule and have a sufficient rise in UR to up recession odds significant",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Unemployment</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687445251253,\"blocks\":[{\"id\":\"IF-gIuY1ni\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Unemployment</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1671876832361320454",
+    "utcStartDateTime": "2023-07-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-22T14:47:37.763Z",
+    "utcUpdatedDateTime": "2023-06-24T23:27:02.903Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 247,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1671876832361320454",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">tbc, I am expecting this line to be crossed next week or the week after and to see deteriorating trends well into end of July/early August. Should have more states trigger under Sahm Rule and have a sufficient rise in UR to up recession odds significant <a href=\"https://t.co/naRFPddet8\">https://t.co/naRFPddet8</a></p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1671876832361320454?ref_src=twsrc%5Etfw\">June 22, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 105,
+        "tag": "#Unemployment",
+        "pinId": 359
+      }
+    ],
+    "userId": 1
   },
   {
     "id": 316,
@@ -10008,7 +10051,7 @@
     },
     "media": [
       {
-        "id": 228,
+        "id": 245,
         "thumbName": "a8627482-e7e5-4614-8749-99feaf5cf68b-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -10020,7 +10063,7 @@
     ],
     "locations": [
       {
-        "id": 35,
+        "id": 48,
         "address": "USA",
         "order": 0,
         "pinId": 345
@@ -10045,7 +10088,7 @@
     },
     "media": [
       {
-        "id": 229,
+        "id": 246,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1670884043531976704",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -10055,43 +10098,9 @@
     ],
     "mentions": [
       {
-        "id": 60,
+        "id": 89,
         "tag": "#rates",
         "pinId": 331
-      }
-    ],
-    "userId": 1
-  },
-  {
-    "id": 359,
-    "rootThread": false,
-    "title": "Should have more states trigger under Sahm Rule and have a sufficient rise in UR to up recession odds significant",
-    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Unemployment</chronohash> </p>",
-    "sourceDescription": "{\"time\":1687445251253,\"blocks\":[{\"id\":\"IF-gIuY1ni\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Unemployment</chronohash>\"}}],\"version\":\"2.26.5\"}",
-    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1671876832361320454",
-    "utcStartDateTime": "2023-07-31T07:00:00.000Z",
-    "utcEndDateTime": "2023-08-01T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2023-06-22T14:47:37.763Z",
-    "user": {
-      "id": 1,
-      "userName": "@ThePinGang"
-    },
-    "media": [
-      {
-        "id": 276,
-        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1671876832361320454",
-        "type": "2",
-        "authorName": "KKGB Kitty",
-        "authorUrl": "https://twitter.com/INArteCarloDoss",
-        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">tbc, I am expecting this line to be crossed next week or the week after and to see deteriorating trends well into end of July/early August. Should have more states trigger under Sahm Rule and have a sufficient rise in UR to up recession odds significant <a href=\"https://t.co/naRFPddet8\">https://t.co/naRFPddet8</a></p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1671876832361320454?ref_src=twsrc%5Etfw\">June 22, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
-      }
-    ],
-    "mentions": [
-      {
-        "id": 78,
-        "tag": "#Unemployment",
-        "pinId": 359
       }
     ],
     "userId": 1
@@ -10114,7 +10123,7 @@
     },
     "media": [
       {
-        "id": 230,
+        "id": 248,
         "originalUrl": "//www.youtube.com/embed/okFSR8CCOPY",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/okFSR8CCOPY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -10139,7 +10148,7 @@
     },
     "media": [
       {
-        "id": 231,
+        "id": 249,
         "originalUrl": "//www.youtube.com/embed/CDVH_JJIRWI",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/CDVH_JJIRWI\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -10147,13 +10156,13 @@
     ],
     "locations": [
       {
-        "id": 36,
+        "id": 49,
         "address": "South Asia Subregion",
         "order": 0,
         "pinId": 148
       },
       {
-        "id": 37,
+        "id": 50,
         "address": "Egypt Country",
         "order": 1,
         "pinId": 148
@@ -10177,7 +10186,7 @@
     },
     "media": [
       {
-        "id": 232,
+        "id": 250,
         "thumbName": "9297e0e8-ca76-441c-a838-5c9af85aeb9e-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -10206,7 +10215,7 @@
     },
     "media": [
       {
-        "id": 233,
+        "id": 251,
         "originalUrl": "//www.youtube.com/embed/UZ6eFEjFfJ0",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/UZ6eFEjFfJ0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -10241,7 +10250,7 @@
     },
     "media": [
       {
-        "id": 234,
+        "id": 252,
         "originalUrl": "//www.youtube.com/embed/5AKl_cEB26c",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/5AKl_cEB26c\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -10294,7 +10303,7 @@
     },
     "media": [
       {
-        "id": 235,
+        "id": 253,
         "originalUrl": "https://twitter.com/gamer__capital/status/1663987579962945536",
         "type": "2",
         "authorName": "gamer capital ???",
@@ -10304,7 +10313,7 @@
     ],
     "mentions": [
       {
-        "id": 61,
+        "id": 91,
         "tag": "#studentloans",
         "pinId": 230
       }
@@ -10336,7 +10345,7 @@
     },
     "media": [
       {
-        "id": 236,
+        "id": 254,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1669416501747564569",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -10346,7 +10355,7 @@
     ],
     "mentions": [
       {
-        "id": 62,
+        "id": 92,
         "tag": "#XDate",
         "pinId": 308
       }
@@ -10373,7 +10382,7 @@
     },
     "media": [
       {
-        "id": 237,
+        "id": 255,
         "thumbName": "1636b6d8-591f-4f8f-82f7-973737459bf0-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -10405,7 +10414,7 @@
     },
     "media": [
       {
-        "id": 238,
+        "id": 256,
         "thumbName": "ed30a2c1-8f8d-4394-aa81-c8378e093f9f-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -10445,7 +10454,7 @@
     },
     "media": [
       {
-        "id": 239,
+        "id": 257,
         "originalUrl": "//www.youtube.com/embed/Q2kN6LONlWw",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Q2kN6LONlWw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -10453,7 +10462,7 @@
     ],
     "locations": [
       {
-        "id": 38,
+        "id": 51,
         "address": "MSG Sphere, Las Vegas",
         "order": 0,
         "pinId": 149
@@ -10479,7 +10488,7 @@
     },
     "media": [
       {
-        "id": 240,
+        "id": 258,
         "originalUrl": "//www.youtube.com/embed/e-FuDjteXxs",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/e-FuDjteXxs\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -10522,7 +10531,7 @@
     },
     "media": [
       {
-        "id": 241,
+        "id": 259,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1669043173492940814",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -10532,7 +10541,7 @@
     ],
     "mentions": [
       {
-        "id": 63,
+        "id": 93,
         "tag": "#rates",
         "pinId": 295
       }
@@ -10558,7 +10567,7 @@
     },
     "media": [
       {
-        "id": 242,
+        "id": 260,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1669242180433592322",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -10568,7 +10577,7 @@
     ],
     "mentions": [
       {
-        "id": 64,
+        "id": 94,
         "tag": "#UnemploymentRate",
         "pinId": 306
       }
@@ -10592,7 +10601,7 @@
     },
     "media": [
       {
-        "id": 243,
+        "id": 261,
         "originalUrl": "https://twitter.com/FinanceLancelot/status/1669204050217246720",
         "type": "2",
         "authorName": "Financelot",
@@ -10602,7 +10611,7 @@
     ],
     "mentions": [
       {
-        "id": 65,
+        "id": 95,
         "tag": "#Liquidity",
         "pinId": 309
       }
@@ -10628,13 +10637,13 @@
     },
     "mentions": [
       {
-        "id": 66,
-        "tag": "#TelevisionCategory",
+        "id": 96,
+        "tag": "#TokyoAnimeAward",
         "pinId": 341
       },
       {
-        "id": 67,
-        "tag": "#TokyoAnimeAward",
+        "id": 97,
+        "tag": "#TelevisionCategory",
         "pinId": 341
       }
     ],
@@ -10659,7 +10668,7 @@
     },
     "media": [
       {
-        "id": 244,
+        "id": 262,
         "thumbName": "9c08c3a1-9b74-4e40-9c3e-8953037a4adb-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 562,
@@ -10670,6 +10679,58 @@
       }
     ],
     "userId": 4
+  },
+  {
+    "id": 376,
+    "rootThread": false,
+    "title": "Mountain Valley natural-gas pipeline moving forward, capacity may be limited, target project completion by year-end 2023",
+    "description": "<p class=\"paragraph\"> The $6.6 billion Mountain Valley natural gas pipeline from West Virginia to Virginia is on track to get final permits by Saturday, moving the long-delayed project closer to re-starting construction. </p><p class=\"paragraph\"> Some analysts, however, said that even when the pipe enters service, which could be as soon as the end of 2023, it would only operate at half capacity or less due to transmission constraints. </p><p class=\"paragraph\"> Equitrans Midstream Corp, the lead partner building Mountain Valley, disputed that half-capacity analysis and noted that it is normal for gas markets to take time to fully adjust to new large-scale projects. </p><p class=\"paragraph\"> Mountain Valley \"is not being built for the short term. (It) will meet increasing gas demand and improve reliability and affordability for domestic consumers for decades to come,\" Equitrans spokesperson Natalie Cox told Reuters in an email. </p><p class=\"paragraph\"> <a href=\"https://www.reuters.com/business/energy/us-mountain-valley-natgas-pipe-closer-construction-after-wv-permit-2023-06-13/\">Mountain Valley</a>&nbsp;has said it expects to resume construction after the U.S. Army Corps of Engineers issues a water permit. That should happen by Saturday as mandated by the&nbsp;<a href=\"https://www.reuters.com/business/energy/biden-mccarthy-debt-deal-would-speed-up-mountain-valley-gas-pipeline-2023-05-29/\">Fiscal Responsibility Act</a>, which ended the debt ceiling crisis. </p><p class=\"paragraph\"> \"We will request the administrative authorizations necessary to resume full construction in the near future,\" Cox said, noting that Mountain Valley continues to target project completion by year-end 2023. </p><p class=\"paragraph\"> Mountain Valley is one of several U.S. projects delayed by regulatory and legal fights with environmental and local groups in recent years. The pipe is key to unlocking more gas supplies in Appalachia, the nation's biggest shale gas basin. </p><p class=\"paragraph\"> But analysts at energy consulting firm East Daley Analytics said Mountain Valley will only run at about 35% of its 2 billion cubic feet per day (bcfd) capacity when it is finally built. </p><p class=\"paragraph\"> That's because the Transcontinental Gas Pipe Line (Transco) system into which Mountain Valley will connect in Virginia has limited takeaway capacity, East Daley said. </p><p class=\"paragraph\"> Transco is owned by U.S. energy company Williams Cos Inc. Officials at Williams were not immediately available for comment. </p><p class=\"paragraph\"> Environmental groups, meanwhile, continue to challenge Mountain Valley's permits in court. </p><p class=\"paragraph\"> \"There is no reason to think they could build and operate this project safely, and now analysts are saying that if (Mountain Valley) is completed, it would only run at less than half capacity,\" said Caroline Hansley, senior campaign representative at the Sierra Club, an environmental group opposed to the pipeline. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Pipeliine</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687653494090,\"blocks\":[{\"id\":\"Vx7vaqniIJ\",\"type\":\"paragraph\",\"data\":{\"text\":\"The $6.6 billion Mountain Valley natural gas pipeline from West Virginia to Virginia is on track to get final permits by Saturday, moving the long-delayed project closer to re-starting construction.\"}},{\"id\":\"Lli0exW0Da\",\"type\":\"paragraph\",\"data\":{\"text\":\"Some analysts, however, said that even when the pipe enters service, which could be as soon as the end of 2023, it would only operate at half capacity or less due to transmission constraints.\"}},{\"id\":\"OLgkAFv1_L\",\"type\":\"paragraph\",\"data\":{\"text\":\"Equitrans Midstream Corp, the lead partner building Mountain Valley, disputed that half-capacity analysis and noted that it is normal for gas markets to take time to fully adjust to new large-scale projects.\"}},{\"id\":\"AYK9B20HT9\",\"type\":\"paragraph\",\"data\":{\"text\":\"Mountain Valley \\\"is not being built for the short term. (It) will meet increasing gas demand and improve reliability and affordability for domestic consumers for decades to come,\\\" Equitrans spokesperson Natalie Cox told Reuters in an email.\"}},{\"id\":\"swDLCmJtAE\",\"type\":\"paragraph\",\"data\":{\"text\":\"<a href=\\\"https://www.reuters.com/business/energy/us-mountain-valley-natgas-pipe-closer-construction-after-wv-permit-2023-06-13/\\\">Mountain Valley</a>&nbsp;has said it expects to resume construction after the U.S. Army Corps of Engineers issues a water permit. That should happen by Saturday as mandated by the&nbsp;<a href=\\\"https://www.reuters.com/business/energy/biden-mccarthy-debt-deal-would-speed-up-mountain-valley-gas-pipeline-2023-05-29/\\\">Fiscal Responsibility Act</a>, which ended the debt ceiling crisis.\"}},{\"id\":\"XXDsTK1_wW\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"We will request the administrative authorizations necessary to resume full construction in the near future,\\\" Cox said, noting that Mountain Valley continues to target project completion by year-end 2023.\"}},{\"id\":\"pJhMO7ijcj\",\"type\":\"paragraph\",\"data\":{\"text\":\"Mountain Valley is one of several U.S. projects delayed by regulatory and legal fights with environmental and local groups in recent years. The pipe is key to unlocking more gas supplies in Appalachia, the nation's biggest shale gas basin.\"}},{\"id\":\"yryTbnIcjJ\",\"type\":\"paragraph\",\"data\":{\"text\":\"But analysts at energy consulting firm East Daley Analytics said Mountain Valley will only run at about 35% of its 2 billion cubic feet per day (bcfd) capacity when it is finally built.\"}},{\"id\":\"S8VfqMzRPf\",\"type\":\"paragraph\",\"data\":{\"text\":\"That's because the Transcontinental Gas Pipe Line (Transco) system into which Mountain Valley will connect in Virginia has limited takeaway capacity, East Daley said.\"}},{\"id\":\"UJ_eWrY2xL\",\"type\":\"paragraph\",\"data\":{\"text\":\"Transco is owned by U.S. energy company Williams Cos Inc. Officials at Williams were not immediately available for comment.\"}},{\"id\":\"Hs7GXZzrOH\",\"type\":\"paragraph\",\"data\":{\"text\":\"Environmental groups, meanwhile, continue to challenge Mountain Valley's permits in court.\"}},{\"id\":\"YnF3vH3eIM\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"There is no reason to think they could build and operate this project safely, and now analysts are saying that if (Mountain Valley) is completed, it would only run at less than half capacity,\\\" said Caroline Hansley, senior campaign representative at the Sierra Club, an environmental group opposed to the pipeline.\"}},{\"id\":\"dNRDHl6tzE\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Pipeliine</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.reuters.com/business/energy/us-mountain-valley-natgas-pipe-moving-forward-capacity-may-be-limited-2023-06-23/",
+    "price": 6600000000,
+    "utcStartDateTime": "2023-12-31T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-25T00:36:29.237Z",
+    "utcUpdatedDateTime": "2023-06-25T00:38:15.815Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 293,
+        "thumbName": "54e3185a-3f81-4573-9f0c-1ed374ca3c77-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 523,
+        "originalUrl": "https://www.reuters.com/resizer/vNu4pR22of1X9lWOkX_h9Hhfykc=/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/E6ELAGU37VNUXOKG5W5EPDZXIE.jpg",
+        "originalWidth": 1200,
+        "originalHeight": 628,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 71,
+        "address": "Marcellus and Utica shale sites",
+        "order": 0,
+        "pinId": 376
+      },
+      {
+        "id": 72,
+        "address": "Mountain Valley natural gas pipeline Southern  Virginia",
+        "order": 1,
+        "pinId": 376
+      }
+    ],
+    "mentions": [
+      {
+        "id": 106,
+        "tag": "#Pipeliine",
+        "pinId": 376
+      }
+    ],
+    "userId": 1
   },
   {
     "id": 289,
@@ -10687,7 +10748,7 @@
     },
     "media": [
       {
-        "id": 245,
+        "id": 263,
         "thumbName": "841b2539-69ee-46df-b177-cc70bd000a99-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -10699,18 +10760,18 @@
     ],
     "mentions": [
       {
-        "id": 68,
-        "tag": "#GPU",
-        "pinId": 289
-      },
-      {
-        "id": 69,
+        "id": 98,
         "tag": "#AI",
         "pinId": 289
       },
       {
-        "id": 70,
+        "id": 99,
         "tag": "$AMD",
+        "pinId": 289
+      },
+      {
+        "id": 100,
+        "tag": "#GPU",
         "pinId": 289
       }
     ],
@@ -10733,7 +10794,7 @@
     },
     "media": [
       {
-        "id": 246,
+        "id": 264,
         "originalUrl": "https://twitter.com/PauloMacro/status/1670148000780255233",
         "type": "2",
         "authorName": "Paulo Macro",
@@ -10743,21 +10804,21 @@
     ],
     "locations": [
       {
-        "id": 39,
-        "address": "Japan",
-        "order": 1,
+        "id": 52,
+        "address": "United Sates",
+        "order": 0,
         "pinId": 342
       },
       {
-        "id": 40,
-        "address": "United Sates",
-        "order": 0,
+        "id": 53,
+        "address": "Japan",
+        "order": 1,
         "pinId": 342
       }
     ],
     "mentions": [
       {
-        "id": 71,
+        "id": 101,
         "tag": "#CarryTrade",
         "pinId": 342
       }
@@ -10783,7 +10844,7 @@
     },
     "locations": [
       {
-        "id": 41,
+        "id": 54,
         "address": "Casa Grande, Arizona",
         "order": 0,
         "pinId": 222
@@ -10809,7 +10870,7 @@
     },
     "media": [
       {
-        "id": 247,
+        "id": 265,
         "thumbName": "e7f718cc-9190-4eed-a8df-270ec8c9d66c-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -10821,7 +10882,7 @@
     ],
     "locations": [
       {
-        "id": 42,
+        "id": 55,
         "address": "Oakville Assembly Plant in Ontario, Canada",
         "order": 0,
         "pinId": 195
@@ -10847,7 +10908,7 @@
     },
     "media": [
       {
-        "id": 248,
+        "id": 266,
         "thumbName": "4744b1cd-fc70-430d-a3a2-df642e1aea79-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 503,
@@ -10863,6 +10924,45 @@
         "utcCreatedDateTime": "2023-06-01T18:42:52.783Z",
         "userId": 1,
         "pinId": 212
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 375,
+    "rootThread": false,
+    "title": "Check out this $110 million tech campus being built in Lithuania — the largest in Europe",
+    "description": "<p class=\"paragraph\"> Lithuania is building a huge tech campus — Europe’s largest — in the capital of Vilnius, as it looks to become the new tech capital of the Baltics. </p><p class=\"paragraph\"> Built by Tech Zity, an infrastructure project in Lithuania, the campus is a 100 million euro ($109.6 million) development that will span 55,000 square meters and house 5,000 digital workers, the firm said Friday. </p><p class=\"paragraph\"> That would make it larger than Paris’ Station F, currently the largest startup campus in all of Europe. </p><p class=\"paragraph\"> The development is inspired by British renovation projects such as the Battersea Power Station and Tate Modern art gallery. </p><p class=\"paragraph\"> Tech Zity developers will renovate a number of sewing factories in a disused industrial space in Vilnius’ New Town, maintaining factory-like office floors with ceiling heights of at least 7 meters. </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/c8e11f87-d144-4b97-bc29-eb2c12c709b3-chrono-lg.webp\" alt=\"The campus is aimed at encouraging Vilnius’ tech workers to come back to the office post-pandemic.\" height=\"416\" width=\"740\"><figcaption class=\"fig-cap\">The campus is aimed at encouraging Vilnius’ tech workers to come back to the office post-pandemic.</figcaption></figure><p class=\"paragraph\"> The project aims to encourage Vilnius’ tech workers to return to the office after the pandemic. Tech companies have increasingly been pushing for their employees to go back to the office, in a reversal from the pandemic-era trend of working from home. </p><h2><a target=\"_blank\" rel=\"noopener noreferrer\"></a>Lithuania’s growing tech scene</h2><p class=\"paragraph\"> Lithuania’s tech ecosystem has grown dramatically over the past decade, Darius Zakaitis, Tech Zity’s founder, told CNBC. </p><p class=\"paragraph\"> “When I started 30 years ago, there were 200 people in the Lithuanian tech ecosystem,” Zakaitis said. “Now it’s 18,000 people.” </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/43414084-148f-4756-a7d8-67bbbf61349a-chrono-lg.webp\" alt=\"The development project is a restoration of old disused industrial space in Vilnius’ New Town, which is known as the hipster part of town.\" height=\"416\" width=\"740\"><figcaption class=\"fig-cap\">The development project is a restoration of old disused industrial space in Vilnius’ New Town, which is known as the hipster part of town.</figcaption></figure><p class=\"paragraph\"> “It’s a result of 10 years of active young people building new companies every day. Some of them are very successful,” he said. </p><p class=\"paragraph\"> “Lithuanians are very productive, very results-oriented, highly-skilled guys, very aggressively building their own companies,” he added. </p><p class=\"paragraph\"> Vilnius, the second-largest city in the Baltic states, is home to a burgeoning tech industry, including major unicorns such as used clothing retailer Vinted and cybersecurity firm Nord.&nbsp; </p><p class=\"paragraph\"> Nord has its own 300-square-meter campus in Vilnius about 300 meters away from Tech Zity’s, while Vinted’s headquarters is roughly 200 meters away. </p><p class=\"paragraph\"> Tech Zity’s new campus will include co-living spaces, restaurants and bars, and cultural and educational facilities. </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/290aedd2-267e-47b0-bb88-d147a5b77232-chrono-lg.webp\" alt=\"Tech Zity wants the campus to foster a buzzing night life as well as other socializing opportunities, incorporating co-living spaces, restaurants, and bars.\" height=\"416\" width=\"740\"><figcaption class=\"fig-cap\">Tech Zity wants the campus to foster a buzzing night life as well as other socializing opportunities, incorporating co-living spaces, restaurants, and bars.</figcaption></figure><p class=\"paragraph\"> “Vilnius is maintaining a firm position within the European tech scene thanks to rapid innovations and visionary businesses such as Tech Zity,” Valdas Benkunskas, the mayor of Vilnius, said in a statement Friday.&nbsp; </p><p class=\"paragraph\"> “Bursting with innovative entrepreneurs, multinational talents, and ambitious investors, the capital has grown to a modern tech hub that evokes bold ideas, successful collaborations, and&nbsp; people-focused solutions.” </p><p class=\"paragraph\"> Lithuanian tech companies make roughly 99% of their revenues abroad, he said. He added that the country’s tech scene models itself after Israel’s, which has produced numerous global tech successes, including self-driving tech firm Mobileye and the mapping app Waze. </p><p class=\"paragraph\"> Tech Zity manages three tech campuses in Vilnius, including Tech Park, Tech Loft, and Tech Spa, which are home to companies like Google, Bored Panda and Kilo Health. </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/607858b5-ff6c-433a-921d-ba73d0f2f3a6-chrono-lg.webp\" alt=\"The project is a huge undertaking — at 55,000 square meters, it is expected to be the largest tech startup campus in all of Europe.\" height=\"416\" width=\"740\"><figcaption class=\"fig-cap\">The project is a huge undertaking — at 55,000 square meters, it is expected to be the largest tech startup campus in all of Europe.</figcaption></figure><p class=\"paragraph\"> U.S. streaming platform&nbsp;<a href=\"https://www.cnbc.com/quotes/NFLX/\">Netflix</a>&nbsp;has used Tech Zity locations for filming, including the docu-series “The Playlist” which focuses&nbsp; on Spotify founder Daniel Ek. </p><p class=\"paragraph\"> Currently occupying 20,000 square meters, Tech Zity plans to reach 80,000 square meters over time, considering new campuses, existing locations, and other projects. </p><h2><a target=\"_blank\" rel=\"noopener noreferrer\"></a>Long way to go</h2><p class=\"paragraph\"> Despite its recent successes, Lithuania is far from becoming a major tech hub that rivals the likes of the U.K., France or Germany. </p><p class=\"paragraph\"> The country attracted 222 million euros of venture capital funding in 2022, paling in comparison to its Western European peers. By contrast, U.K. tech startups raised $30 billion, while their French counterparts raised 13.5 billion euros. </p><p class=\"paragraph\"> But the country has been drawing more interest from venture capitalists, according to local founders. </p><p class=\"paragraph\"> “All the top VC firms are now coming to Lithuania and talking with startups, angel investors, and anyone else,” Tom, CEO and co-founder of Nord Security, told CNBC on the sidelines of the Web Summit tech conference in Lisbon, Portugal, last November. </p><p class=\"paragraph\"> “The last raise for a Lithuanian startup called Kevin was from Accel, Vineted has Insight Parnters, EQT, Accel, and many others.” </p>",
+    "sourceDescription": "{\"time\":1687652190630,\"blocks\":[{\"id\":\"A4gl9v4CxX\",\"type\":\"paragraph\",\"data\":{\"text\":\"Lithuania is building a huge tech campus — Europe’s largest — in the capital of Vilnius, as it looks to become the new tech capital of the Baltics.\"}},{\"id\":\"6FCXLQTq3v\",\"type\":\"paragraph\",\"data\":{\"text\":\"Built by Tech Zity, an infrastructure project in Lithuania, the campus is a 100 million euro ($109.6 million) development that will span 55,000 square meters and house 5,000 digital workers, the firm said Friday.\"}},{\"id\":\"ejB0NNwPIk\",\"type\":\"paragraph\",\"data\":{\"text\":\"That would make it larger than Paris’ Station F, currently the largest startup campus in all of Europe.\"}},{\"id\":\"SHRYomRcfY\",\"type\":\"paragraph\",\"data\":{\"text\":\"The development is inspired by British renovation projects such as the Battersea Power Station and Tate Modern art gallery.\"}},{\"id\":\"hXqmCBweD5\",\"type\":\"paragraph\",\"data\":{\"text\":\"Tech Zity developers will renovate a number of sewing factories in a disused industrial space in Vilnius’ New Town, maintaining factory-like office floors with ceiling heights of at least 7 meters.\"}},{\"id\":\"GNV1aB0wht\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/c8e11f87-d144-4b97-bc29-eb2c12c709b3-chrono-lg.webp\",\"attributes\":{\"width\":740,\"height\":416}},\"caption\":\"The campus is aimed at encouraging Vilnius’ tech workers to come back to the office post-pandemic.\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"opn6sS02zZ\",\"type\":\"paragraph\",\"data\":{\"text\":\"The project aims to encourage Vilnius’ tech workers to return to the office after the pandemic. Tech companies have increasingly been pushing for their employees to go back to the office, in a reversal from the pandemic-era trend of working from home.\"}},{\"id\":\"o-wZmelsdX\",\"type\":\"header\",\"data\":{\"text\":\"<a></a>Lithuania’s growing tech scene\",\"level\":2}},{\"id\":\"eH4KQ3ZQ8x\",\"type\":\"paragraph\",\"data\":{\"text\":\"Lithuania’s tech ecosystem has grown dramatically over the past decade, Darius Zakaitis, Tech Zity’s founder, told CNBC.\"}},{\"id\":\"RVXhc3FP-V\",\"type\":\"paragraph\",\"data\":{\"text\":\"“When I started 30 years ago, there were 200 people in the Lithuanian tech ecosystem,” Zakaitis said. “Now it’s 18,000 people.”\"}},{\"id\":\"0GbJg9B37G\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/43414084-148f-4756-a7d8-67bbbf61349a-chrono-lg.webp\",\"attributes\":{\"width\":740,\"height\":416}},\"caption\":\"The development project is a restoration of old disused industrial space in Vilnius’ New Town, which is known as the hipster part of town.\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"xJoO8qYdRc\",\"type\":\"paragraph\",\"data\":{\"text\":\"“It’s a result of 10 years of active young people building new companies every day. Some of them are very successful,” he said.\"}},{\"id\":\"15UEcAi7YB\",\"type\":\"paragraph\",\"data\":{\"text\":\"“Lithuanians are very productive, very results-oriented, highly-skilled guys, very aggressively building their own companies,” he added.\"}},{\"id\":\"HUWUOCRh6_\",\"type\":\"paragraph\",\"data\":{\"text\":\"Vilnius, the second-largest city in the Baltic states, is home to a burgeoning tech industry, including major unicorns such as used clothing retailer Vinted and cybersecurity firm Nord.&nbsp;\"}},{\"id\":\"QJFF2tw1Uf\",\"type\":\"paragraph\",\"data\":{\"text\":\"Nord has its own 300-square-meter campus in Vilnius about 300 meters away from Tech Zity’s, while Vinted’s headquarters is roughly 200 meters away.\"}},{\"id\":\"l_pEouiq59\",\"type\":\"paragraph\",\"data\":{\"text\":\"Tech Zity’s new campus will include co-living spaces, restaurants and bars, and cultural and educational facilities.\"}},{\"id\":\"7BFZK_CQ5s\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/290aedd2-267e-47b0-bb88-d147a5b77232-chrono-lg.webp\",\"attributes\":{\"width\":740,\"height\":416}},\"caption\":\"Tech Zity wants the campus to foster a buzzing night life as well as other socializing opportunities, incorporating co-living spaces, restaurants, and bars.\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"Y1cRSw_RbY\",\"type\":\"paragraph\",\"data\":{\"text\":\"“Vilnius is maintaining a firm position within the European tech scene thanks to rapid innovations and visionary businesses such as Tech Zity,” Valdas Benkunskas, the mayor of Vilnius, said in a statement Friday.&nbsp;\"}},{\"id\":\"MwvSuZ_n1m\",\"type\":\"paragraph\",\"data\":{\"text\":\"“Bursting with innovative entrepreneurs, multinational talents, and ambitious investors, the capital has grown to a modern tech hub that evokes bold ideas, successful collaborations, and&nbsp; people-focused solutions.”\"}},{\"id\":\"SJLJ-4UOOm\",\"type\":\"paragraph\",\"data\":{\"text\":\"Lithuanian tech companies make roughly 99% of their revenues abroad, he said. He added that the country’s tech scene models itself after Israel’s, which has produced numerous global tech successes, including self-driving tech firm Mobileye and the mapping app Waze.\"}},{\"id\":\"760FlKaxik\",\"type\":\"paragraph\",\"data\":{\"text\":\"Tech Zity manages three tech campuses in Vilnius, including Tech Park, Tech Loft, and Tech Spa, which are home to companies like Google, Bored Panda and Kilo Health.\"}},{\"id\":\"u-EDKyXPIB\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/607858b5-ff6c-433a-921d-ba73d0f2f3a6-chrono-lg.webp\",\"attributes\":{\"width\":740,\"height\":416}},\"caption\":\"The project is a huge undertaking — at 55,000 square meters, it is expected to be the largest tech startup campus in all of Europe.\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"oOSmFerNF3\",\"type\":\"paragraph\",\"data\":{\"text\":\"U.S. streaming platform&nbsp;<a href=\\\"https://www.cnbc.com/quotes/NFLX/\\\">Netflix</a>&nbsp;has used Tech Zity locations for filming, including the docu-series “The Playlist” which focuses&nbsp; on Spotify founder Daniel Ek.\"}},{\"id\":\"6FUBuP4Vdd\",\"type\":\"paragraph\",\"data\":{\"text\":\"Currently occupying 20,000 square meters, Tech Zity plans to reach 80,000 square meters over time, considering new campuses, existing locations, and other projects.\"}},{\"id\":\"8kWXm8NV3A\",\"type\":\"header\",\"data\":{\"text\":\"<a></a>Long way to go\",\"level\":2}},{\"id\":\"HCYKk6rIj5\",\"type\":\"paragraph\",\"data\":{\"text\":\"Despite its recent successes, Lithuania is far from becoming a major tech hub that rivals the likes of the U.K., France or Germany.\"}},{\"id\":\"RkYeYuRSBy\",\"type\":\"paragraph\",\"data\":{\"text\":\"The country attracted 222 million euros of venture capital funding in 2022, paling in comparison to its Western European peers. By contrast, U.K. tech startups raised $30 billion, while their French counterparts raised 13.5 billion euros.\"}},{\"id\":\"2b5nmn4-KY\",\"type\":\"paragraph\",\"data\":{\"text\":\"But the country has been drawing more interest from venture capitalists, according to local founders.\"}},{\"id\":\"bk1ZFbQalp\",\"type\":\"paragraph\",\"data\":{\"text\":\"“All the top VC firms are now coming to Lithuania and talking with startups, angel investors, and anyone else,” Tom, CEO and co-founder of Nord Security, told CNBC on the sidelines of the Web Summit tech conference in Lisbon, Portugal, last November.\"}},{\"id\":\"AMk77Yz3tO\",\"type\":\"paragraph\",\"data\":{\"text\":\"“The last raise for a Lithuanian startup called Kevin was from Accel, Vineted has Insight Parnters, EQT, Accel, and many others.”\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/06/23/lithuania-building-a-110-million-tech-campus-the-largest-in-europe.html",
+    "price": 109600000,
+    "utcStartDateTime": "2024-07-01T07:00:00.000Z",
+    "utcEndDateTime": "2024-07-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-25T00:23:54.083Z",
+    "utcUpdatedDateTime": "2023-06-25T01:09:36.842Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 292,
+        "thumbName": "d2d8fc73-b718-4495-8db8-aefecfd22feb-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107261235-1687467421083-TechZity_Lilium__DO_ARCHITECTS_4.jpg?v=1687498696&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 73,
+        "address": "Tech Zity Vilnius, Lithuania",
+        "order": 0,
+        "pinId": 375
       }
     ],
     "userId": 1
@@ -10886,7 +10986,7 @@
     },
     "media": [
       {
-        "id": 249,
+        "id": 267,
         "thumbName": "1870e18c-c013-4e68-8821-0ed0881d9d2d-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 400,
@@ -10898,7 +10998,7 @@
     ],
     "mentions": [
       {
-        "id": 72,
+        "id": 102,
         "tag": "$BA",
         "pinId": 151
       }
@@ -10923,7 +11023,7 @@
     },
     "media": [
       {
-        "id": 250,
+        "id": 268,
         "thumbName": "5ae38366-d033-4972-bc04-48f4d4b6b485-chrono-lg.webp",
         "thumbWidth": 986,
         "thumbHeight": 553,
@@ -10935,7 +11035,7 @@
     ],
     "locations": [
       {
-        "id": 43,
+        "id": 56,
         "address": "West of Colusa in the Sacramento Valley, California",
         "order": 0,
         "pinId": 192
@@ -10961,7 +11061,7 @@
     },
     "media": [
       {
-        "id": 251,
+        "id": 269,
         "thumbName": "10240ef3-a8b9-4c73-8d53-53b182f57374-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -10973,7 +11073,7 @@
     ],
     "locations": [
       {
-        "id": 44,
+        "id": 57,
         "address": "UC San Diego",
         "order": 0,
         "pinId": 209
@@ -10999,7 +11099,7 @@
     },
     "media": [
       {
-        "id": 252,
+        "id": 270,
         "thumbName": "512b7eb4-5f06-4b87-9b31-c70d51f2df46-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 471,
@@ -11028,7 +11128,7 @@
     },
     "media": [
       {
-        "id": 253,
+        "id": 271,
         "thumbName": "9d3fdd45-fbda-4b7c-b649-1d7c72016c63-chrono-lg.webp",
         "thumbWidth": 768,
         "thumbHeight": 545,
@@ -11057,7 +11157,7 @@
     },
     "media": [
       {
-        "id": 254,
+        "id": 272,
         "thumbName": "58441b39-2150-45ad-8f12-b36ab5f90736-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11069,7 +11169,7 @@
     ],
     "locations": [
       {
-        "id": 45,
+        "id": 58,
         "address": "Frito-Lay’s research and development headquarters, Texas",
         "order": 0,
         "pinId": 194
@@ -11093,7 +11193,7 @@
     },
     "media": [
       {
-        "id": 255,
+        "id": 273,
         "thumbName": "3ddd9850-2551-4ade-b842-2099e75caf6c-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 308,
@@ -11123,7 +11223,7 @@
     },
     "media": [
       {
-        "id": 256,
+        "id": 274,
         "thumbName": "a40beb47-cb9a-43c6-9a0e-d1dd0f31ec9b-chrono-lg.webp",
         "thumbWidth": 591,
         "thumbHeight": 308,
@@ -11135,7 +11235,7 @@
     ],
     "locations": [
       {
-        "id": 46,
+        "id": 59,
         "address": "AISIN North Carolina Corporation (ANC) facility in Durham, North Carolina",
         "order": 0,
         "pinId": 321
@@ -11161,7 +11261,7 @@
     },
     "media": [
       {
-        "id": 257,
+        "id": 275,
         "thumbName": "17d63629-02e3-4d3f-be38-c9001a87421d-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -11173,7 +11273,7 @@
     ],
     "locations": [
       {
-        "id": 47,
+        "id": 60,
         "address": "Neste  Porvoo refinery in Finland",
         "order": 0,
         "pinId": 322
@@ -11200,7 +11300,7 @@
     },
     "media": [
       {
-        "id": 258,
+        "id": 276,
         "thumbName": "d2e483e6-7652-467e-a87e-ceecf0dc0537-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11212,7 +11312,7 @@
     ],
     "locations": [
       {
-        "id": 48,
+        "id": 61,
         "address": "Hudson Yards, New York",
         "order": 0,
         "pinId": 150
@@ -11237,7 +11337,7 @@
     },
     "media": [
       {
-        "id": 259,
+        "id": 277,
         "thumbName": "6535282f-7932-4bdf-8f0e-51ab0f6d2578-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11291,7 +11391,7 @@
     },
     "media": [
       {
-        "id": 260,
+        "id": 278,
         "thumbName": "f37f0f24-e347-4e0a-b805-d1a1a30dbd14-chrono-lg.webp",
         "thumbWidth": 743,
         "thumbHeight": 430,
@@ -11303,7 +11403,7 @@
     ],
     "locations": [
       {
-        "id": 49,
+        "id": 62,
         "address": "Guangdong Province",
         "order": 0,
         "pinId": 225
@@ -11327,7 +11427,7 @@
     },
     "media": [
       {
-        "id": 261,
+        "id": 279,
         "thumbName": "49b5fdba-9013-4950-863c-e88b8c3f3bcb-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 500,
@@ -11365,7 +11465,7 @@
     },
     "locations": [
       {
-        "id": 50,
+        "id": 63,
         "address": "Taiwan",
         "order": 0,
         "pinId": 207
@@ -11392,7 +11492,7 @@
     },
     "locations": [
       {
-        "id": 51,
+        "id": 64,
         "address": "Apple Valley",
         "order": 0,
         "pinId": 215
@@ -11418,7 +11518,7 @@
     },
     "media": [
       {
-        "id": 262,
+        "id": 280,
         "thumbName": "a4cf2cb9-1df7-4058-89f4-11000af5cd5d-chrono-lg.webp",
         "thumbWidth": 908,
         "thumbHeight": 474,
@@ -11447,7 +11547,7 @@
     },
     "media": [
       {
-        "id": 263,
+        "id": 281,
         "thumbName": "73f7248b-3954-4aa5-aae1-e3463be1f269-chrono-lg.webp",
         "thumbWidth": 768,
         "thumbHeight": 545,
@@ -11476,7 +11576,7 @@
     },
     "media": [
       {
-        "id": 264,
+        "id": 282,
         "thumbName": "bf50f483-f7d7-4ca8-bc7e-2e3e25b773b5-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11503,7 +11603,7 @@
     },
     "media": [
       {
-        "id": 265,
+        "id": 283,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1640619037251043328",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -11513,7 +11613,7 @@
     ],
     "locations": [
       {
-        "id": 52,
+        "id": 65,
         "address": "Europe",
         "order": 0,
         "pinId": 223
@@ -11539,7 +11639,7 @@
     },
     "mentions": [
       {
-        "id": 73,
+        "id": 103,
         "tag": "#energy",
         "pinId": 155
       }
@@ -11562,7 +11662,7 @@
     },
     "media": [
       {
-        "id": 266,
+        "id": 284,
         "thumbName": "70cb68bb-e894-41e9-a3b8-943c8257ec69-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 400,
@@ -11592,7 +11692,7 @@
     },
     "media": [
       {
-        "id": 267,
+        "id": 285,
         "thumbName": "8c5669d4-d0ff-4a13-a8c4-faf8f5ab7a08-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11604,7 +11704,7 @@
     ],
     "locations": [
       {
-        "id": 53,
+        "id": 66,
         "address": "Merced, CA",
         "order": 0,
         "pinId": 219
@@ -11637,7 +11737,7 @@
     },
     "media": [
       {
-        "id": 268,
+        "id": 286,
         "thumbName": "994a389a-f825-4822-bfbe-53b1e279b285-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 523,
@@ -11649,7 +11749,7 @@
     ],
     "locations": [
       {
-        "id": 54,
+        "id": 67,
         "address": "China",
         "order": 0,
         "pinId": 330
@@ -11673,7 +11773,7 @@
     },
     "media": [
       {
-        "id": 269,
+        "id": 287,
         "thumbName": "7cc700a4-3b9f-41c9-aee7-4d04239f8736-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11709,7 +11809,7 @@
     },
     "media": [
       {
-        "id": 270,
+        "id": 288,
         "thumbName": "44d2270e-f5b2-4116-85bd-23620693c371-chrono-lg.webp",
         "thumbWidth": 150,
         "thumbHeight": 133,
@@ -11738,7 +11838,7 @@
     },
     "media": [
       {
-        "id": 271,
+        "id": 289,
         "originalUrl": "https://twitter.com/BurggrabenH/status/1657432126076141570",
         "type": "2",
         "authorName": "Alexander Stahel ????",
@@ -11766,7 +11866,7 @@
     },
     "media": [
       {
-        "id": 272,
+        "id": 290,
         "originalUrl": "https://twitter.com/CyberMagazineX/status/890816308144558080",
         "type": "2",
         "authorName": "MagX(??????????X)",
@@ -11776,7 +11876,7 @@
     ],
     "mentions": [
       {
-        "id": 74,
+        "id": 104,
         "tag": "#AI",
         "pinId": 248
       }
@@ -11799,7 +11899,7 @@
     },
     "media": [
       {
-        "id": 273,
+        "id": 291,
         "thumbName": "96a0f58b-ba43-4ae8-861f-f3f05b74305a-chrono-lg.webp",
         "thumbWidth": 286,
         "thumbHeight": 400,

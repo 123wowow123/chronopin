@@ -61,7 +61,6 @@
         let found = _.find(this, bag => {
           return bag.toISODateTimeString() === utcStartDateTime.toISOString();
         });
-
         return found;
       }
 
@@ -155,7 +154,6 @@
           .map(_createPin)
           .forEach(pin => {
             let key = _getKey(pin);
-            //debugger;
             let foundBag = this.findBagByDateTimeKey(key);
             if (foundBag) {
               createCount += foundBag.mergePins([pin]);
@@ -180,13 +178,29 @@
           .map(_createPin)
           .forEach(pin => {
             let key = _getKey(pin);
-            //debugger;
             let foundBag = this.findBagByDateTimeKey(key);
             if (foundBag) {
               updateCount += foundBag.updatePins([pin]);
             }
           });
         return updateCount;
+      }
+
+      deletePin(id) {
+        let removed = false
+        if (!id) {
+          return removed;
+        }
+        this.forEach(bag => {
+          const index = bag.pins.findIndex(pin => {
+            return pin.id === id;
+          });
+          if (index !== -1) {
+            bag.pins.splice(index, 1);
+            removed = true;
+          }
+        });
+        return removed;
       }
 
       getFirstInViewAsc() {

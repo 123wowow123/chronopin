@@ -24,7 +24,7 @@
       this.pinReady = false;
       this.pinIsCreatedByUser = false;
       //this.pinApp = pinApp;
-      this.pinsQuery = new PinsQuery(); ///////
+      this.pinsQuery = new PinsQuery();
       this.wide = $window.localStorage.getItem("wide") == "true";
 
       this.pin;

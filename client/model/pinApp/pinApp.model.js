@@ -49,6 +49,10 @@
                 return this._bags.updatePins(pins);
             }
 
+            deletePinInBags(id) {
+                return this._bags.deletePin(id);
+            }
+
             mergeBagsWithDateTimes(dateTimes) {
                 return this._bags.mergeDateTimes(dateTimes);
             }
@@ -133,7 +137,6 @@
             }
 
             initSocket() {
-
                 socket.syncUpdates('pin', (event, item) => {
                     // debugger
                     const itemTime = new Date(item.utcStartDateTime);

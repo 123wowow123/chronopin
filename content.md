@@ -10,14 +10,12 @@ Add more descriptive content inside your <title> tag. Make it unique, and releva
 
 Before Usable Bug:
 
-
 Before Usable:
 Comment cleanup/backup +
 links should be external cleanup
 
 improve today button on search page
-search tag with additional query to narrow down results
-check delete and remove local copy
+search tag with additional query to narrow down results +
 
 https://www.emojiall.com/en/emoji/%23%E2%83%A3
 
@@ -73,6 +71,7 @@ Buy keywords in content that will turn into link where it will show map and near
 Pin dollar tag should link to referal page in new tab
 
 Features:
+small pin card mode use examplable bubble in today button
 Main timeline should remain in background for speedup
 user creation needs to be in transaction
 Add join mailing list
