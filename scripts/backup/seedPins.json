@@ -3533,14 +3533,15 @@
     "id": 116,
     "rootThread": false,
     "title": "Model 3 has officially arrived and sold out until at least mid-2018",
-    "description": "The Model 3 will come equipped with a new suite of hardware that supports Tesla's second-generation Autopilot system, Enhanced Autopilot.\n\nEnhanced Autopilot will eventually allow the car to match its speed to traffic conditions, automatically change lanes without driver input, merge on and off highways, and park itself.",
+    "description": "<p class=\"paragraph\"> The Model 3 will come equipped with a new suite of hardware that supports Tesla's second-generation Autopilot system, Enhanced Autopilot.\n\nEnhanced Autopilot will eventually allow the car to match its speed to traffic conditions, automatically change lanes without driver input, merge on and off highways, and park itself. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$TSLA</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687715202425,\"blocks\":[{\"id\":\"opxYFb-pQ9\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Model 3 will come equipped with a new suite of hardware that supports Tesla's second-generation Autopilot system, Enhanced Autopilot.\\n\\nEnhanced Autopilot will eventually allow the car to match its speed to traffic conditions, automatically change lanes without driver input, merge on and off highways, and park itself.\"}},{\"id\":\"owe2TJ2Asl\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$TSLA</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "http://www.businessinsider.com/teslas-model-3-launch-deliveries-begin-photos-features-2017-7",
     "price": 35000,
     "utcStartDateTime": "2018-08-15T07:00:00.000Z",
-    "utcEndDateTime": "2018-08-17T07:00:00.000Z",
+    "utcEndDateTime": "2018-08-18T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-08-01T07:27:38.354Z",
-    "utcUpdatedDateTime": "2023-01-24T05:32:03.661Z",
+    "utcUpdatedDateTime": "2023-06-25T17:47:20.673Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3555,6 +3556,13 @@
         "originalWidth": 1200,
         "originalHeight": 600,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 108,
+        "tag": "$TSLA",
+        "pinId": 116
       }
     ],
     "userId": 1
@@ -3675,12 +3683,12 @@
     "mentions": [
       {
         "id": 9,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 336
       },
       {
         "id": 10,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 336
       }
     ],
@@ -3869,12 +3877,12 @@
     "mentions": [
       {
         "id": 12,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 337
       },
       {
         "id": 13,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 337
       }
     ],
@@ -4399,12 +4407,12 @@
     "mentions": [
       {
         "id": 16,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 338
       },
       {
         "id": 17,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 338
       }
     ],
@@ -6129,7 +6137,7 @@
     ],
     "merchants": [
       {
-        "id": 56,
+        "id": 31,
         "label": "Plushible Halloween Candy Bags",
         "url": "https://a.co/d/4jQwcnc",
         "price": 19.99,
@@ -6137,7 +6145,7 @@
         "pinId": 226
       },
       {
-        "id": 57,
+        "id": 32,
         "label": "Tegion Reusable Silicone Straws",
         "url": "https://a.co/d/fTIFcq4",
         "price": 11.99,
@@ -6145,7 +6153,7 @@
         "pinId": 226
       },
       {
-        "id": 58,
+        "id": 33,
         "label": "UPPAbaby VISTA Upper Adapters",
         "url": "https://amzn.to/3WBMhBj",
         "price": 29.99,
@@ -6153,7 +6161,7 @@
         "pinId": 226
       },
       {
-        "id": 59,
+        "id": 34,
         "label": "Doctor's Best DHA 500",
         "url": "https://a.co/d/e0Ibvji",
         "price": 40.45,
@@ -6161,15 +6169,7 @@
         "pinId": 226
       },
       {
-        "id": 60,
-        "label": "Secura Visual Countdown Timer",
-        "url": "https://a.co/d/cI0Vejb",
-        "price": 18.99,
-        "order": 4,
-        "pinId": 226
-      },
-      {
-        "id": 61,
+        "id": 35,
         "label": "Magical Handwriting Workbooks",
         "url": "https://a.co/d/1oGcC0a",
         "price": 16.99,
@@ -6177,7 +6177,15 @@
         "pinId": 226
       },
       {
-        "id": 62,
+        "id": 36,
+        "label": "Secura Visual Countdown Timer",
+        "url": "https://a.co/d/cI0Vejb",
+        "price": 18.99,
+        "order": 4,
+        "pinId": 226
+      },
+      {
+        "id": 37,
         "label": "Extra Large Ceramic Coffee",
         "url": "https://a.co/d/0glb5Wg",
         "price": 28.99,
@@ -6285,7 +6293,7 @@
     ],
     "merchants": [
       {
-        "id": 37,
+        "id": 38,
         "label": "Amazon",
         "url": "https://amzn.to/42NZacZ",
         "price": 129.99,
@@ -6325,26 +6333,26 @@
     "locations": [
       {
         "id": 16,
-        "address": "ARIA, Las Vegas",
-        "order": 4,
-        "pinId": 350
-      },
-      {
-        "id": 17,
         "address": "LVCC West Hall, Las Vegas",
         "order": 1,
         "pinId": 350
       },
       {
+        "id": 17,
+        "address": "ARIA, Las Vegas",
+        "order": 4,
+        "pinId": 350
+      },
+      {
         "id": 18,
-        "address": "LVCC Central Hall, Las Vegas",
-        "order": 0,
+        "address": "Venetian, Las Vegas",
+        "order": 3,
         "pinId": 350
       },
       {
         "id": 19,
-        "address": "Venetian, Las Vegas",
-        "order": 3,
+        "address": "LVCC Central Hall, Las Vegas",
+        "order": 0,
         "pinId": 350
       },
       {
@@ -6387,14 +6395,14 @@
     "locations": [
       {
         "id": 21,
-        "address": "Montefiore Medical Center, New York",
-        "order": 1,
+        "address": "Mount Sinai Hospital, New York",
+        "order": 0,
         "pinId": 364
       },
       {
         "id": 22,
-        "address": "Mount Sinai Hospital, New York",
-        "order": 0,
+        "address": "Montefiore Medical Center, New York",
+        "order": 1,
         "pinId": 364
       }
     ],
@@ -6425,6 +6433,49 @@
       "userName": "@PrinceAnime"
     },
     "userId": 3
+  },
+  {
+    "id": 383,
+    "rootThread": false,
+    "title": "Tesla Starts Assembling 9,000-Ton Cybertruck Giga Press  in Gigafactory Austin",
+    "description": "<p class=\"paragraph\"> After several components from Italian die casting machinery maker IDRA Group were spotted at Tesla's Gigafactory Austin over the past few months, it looks like technicians finally started assembling the 9,000-ton Giga Press that will be used to churn out Cybertruck structural components. </p><p class=\"paragraph\"> Drone operator Joe Tegtmeyer, who has been following closely the construction of Tesla's Texas plant since groundbreaking, has spotted the giant new casting machine being assembled inside the factory. </p><p class=\"paragraph\"> The drone flyover video clearly shows that Tesla is currently assembling the Giga Press, the world's largest aluminum die casting machine. The giant press can be seen partly assembled in&nbsp;<a href=\"https://insideevs.com/news/627307/idra-group-parts-spotted-inside-giga-texas-likely-from-giga-press/\">a section of the factory where Tesla plans to build the Cybertruck body</a>. </p><p class=\"paragraph\"> As Joe Tegtmeyer points out in a tweet, the same factory section includes three more identical foundations to the one on which the first Giga Press is being installed. That and the fact there's a huge amount of space left in this area of the plant suggest Tesla could receive three more mega casting machines from IDRA Group in the coming months. </p><div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/6BOkkD-zwXw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\"> Details about the components that will be made by the Giga Press are not available, though a prototype Cybertruck frame was spotted on the production floor late last year. However, Sandy Munro took a good look at the photo and&nbsp;<a href=\"https://insideevs.com/news/626866/sandy-munro-tesla-cybertruck-body-photo-analysis/\">concluded that the frame was not the result of single-piece casting</a>, having been made from several different sections instead. </p><p class=\"paragraph\"> The assembly of the Giga Press is great news for the more than 1.6 million people who have expressed interest in the Cybertruck and likely indicates Tesla is on schedule to start initial production of the electric pickup truck in mid-2023 as promised. </p><p class=\"paragraph\"> Mass production will reportedly begin before the end of the year, according to insiders cited by&nbsp;Reuters&nbsp;in November 2022.&nbsp; </p><p class=\"paragraph\"> Now, despite the insane amount of coverage the Cybertruck continues to receive on a regular basis,&nbsp;<a href=\"https://insideevs.com/tesla/\" target=\"_blank\">Tesla</a>&nbsp;is yet to provide an update on the production version of the Cybertruck with final specifications and pricing.&nbsp;Elon Musk admitted last year that prices and specifications will differ because a lot has changed since the Cybertruck's 2019 unveiling. </p><p class=\"paragraph\"> After the automaker removed Cybertruck specs and pricing from its customer website in October 2021, no significant product updates have been released other than the fact&nbsp;<a href=\"https://insideevs.com/news/552335/musk-tesla-cybertruck-quad-motor/\">it will initially feature a quad-motor powertrain - as per Tesla's CEO</a>. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$TSLA</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687715107016,\"blocks\":[{\"id\":\"UTEL5Ob6TG\",\"type\":\"paragraph\",\"data\":{\"text\":\"After several components from Italian die casting machinery maker IDRA Group were spotted at Tesla's Gigafactory Austin over the past few months, it looks like technicians finally started assembling the 9,000-ton Giga Press that will be used to churn out Cybertruck structural components.\"}},{\"id\":\"V1Gtu8NBzW\",\"type\":\"paragraph\",\"data\":{\"text\":\"Drone operator Joe Tegtmeyer, who has been following closely the construction of Tesla's Texas plant since groundbreaking, has spotted the giant new casting machine being assembled inside the factory.\"}},{\"id\":\"fEB08mDi_3\",\"type\":\"paragraph\",\"data\":{\"text\":\"The drone flyover video clearly shows that Tesla is currently assembling the Giga Press, the world's largest aluminum die casting machine. The giant press can be seen partly assembled in&nbsp;<a href=\\\"https://insideevs.com/news/627307/idra-group-parts-spotted-inside-giga-texas-likely-from-giga-press/\\\">a section of the factory where Tesla plans to build the Cybertruck body</a>.\"}},{\"id\":\"rPVtT5sWIo\",\"type\":\"paragraph\",\"data\":{\"text\":\"As Joe Tegtmeyer points out in a tweet, the same factory section includes three more identical foundations to the one on which the first Giga Press is being installed. That and the fact there's a huge amount of space left in this area of the plant suggest Tesla could receive three more mega casting machines from IDRA Group in the coming months.\"}},{\"id\":\"KXERu0JVhT\",\"type\":\"embed\",\"data\":{\"service\":\"youtube\",\"source\":\"https://www.youtube.com/watch?v=6BOkkD-zwXw\",\"embed\":\"https://www.youtube.com/embed/6BOkkD-zwXw\",\"width\":580,\"height\":320,\"caption\":\"IDRA GROUP | Assembly of the Giga Press 9000t in Idra Italy\",\"length\":\"\"}},{\"id\":\"orBlGF8GML\",\"type\":\"paragraph\",\"data\":{\"text\":\"Details about the components that will be made by the Giga Press are not available, though a prototype Cybertruck frame was spotted on the production floor late last year. However, Sandy Munro took a good look at the photo and&nbsp;<a href=\\\"https://insideevs.com/news/626866/sandy-munro-tesla-cybertruck-body-photo-analysis/\\\">concluded that the frame was not the result of single-piece casting</a>, having been made from several different sections instead.\"}},{\"id\":\"6cl0dxH3Ub\",\"type\":\"paragraph\",\"data\":{\"text\":\"The assembly of the Giga Press is great news for the more than 1.6 million people who have expressed interest in the Cybertruck and likely indicates Tesla is on schedule to start initial production of the electric pickup truck in mid-2023 as promised.\"}},{\"id\":\"T_3FUj47Fw\",\"type\":\"paragraph\",\"data\":{\"text\":\"Mass production will reportedly begin before the end of the year, according to insiders cited by&nbsp;Reuters&nbsp;in November 2022.&nbsp;\"}},{\"id\":\"HY9DK_co-k\",\"type\":\"paragraph\",\"data\":{\"text\":\"Now, despite the insane amount of coverage the Cybertruck continues to receive on a regular basis,&nbsp;<a href=\\\"https://insideevs.com/tesla/\\\" target=\\\"_blank\\\">Tesla</a>&nbsp;is yet to provide an update on the production version of the Cybertruck with final specifications and pricing.&nbsp;Elon Musk admitted last year that prices and specifications will differ because a lot has changed since the Cybertruck's 2019 unveiling.\"}},{\"id\":\"UxKFrPkNhu\",\"type\":\"paragraph\",\"data\":{\"text\":\"After the automaker removed Cybertruck specs and pricing from its customer website in October 2021, no significant product updates have been released other than the fact&nbsp;<a href=\\\"https://insideevs.com/news/552335/musk-tesla-cybertruck-quad-motor/\\\">it will initially feature a quad-motor powertrain - as per Tesla's CEO</a>.\"}},{\"id\":\"3WNgTIPWQh\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$TSLA</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://insideevs.com/news/631575/tesla-starts-assembling-9000-ton-cybertruck-giga-press-in-texas/",
+    "utcStartDateTime": "2023-01-13T08:00:00.000Z",
+    "utcEndDateTime": "2023-01-15T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-25T17:44:21.704Z",
+    "utcUpdatedDateTime": "2023-06-25T17:45:11.032Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 295,
+        "originalUrl": "https://twitter.com/JoeTegtmeyer/status/1613927887631179776",
+        "type": "2",
+        "authorName": "Joe Tegtmeyer ?? ????",
+        "authorUrl": "https://twitter.com/JoeTegtmeyer",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Friday the 13th! Don&#39;t get distracted by all the price cuts on Tesla cars, the real story is the assembly of the 9K-ton Giga Press! Here are a few images to get you started, much more on a busy Giga Texas in my YouTube video later today! <a href=\"https://t.co/Gz6uaFCJ2M\">pic.twitter.com/Gz6uaFCJ2M</a></p>&mdash; Joe Tegtmeyer ?? ???? (@JoeTegtmeyer) <a href=\"https://twitter.com/JoeTegtmeyer/status/1613927887631179776?ref_src=twsrc%5Etfw\">January 13, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 72,
+        "address": "Tesla Gigafactory Austin TX",
+        "order": 0,
+        "pinId": 383
+      }
+    ],
+    "mentions": [
+      {
+        "id": 106,
+        "tag": "$TSLA",
+        "pinId": 383
+      }
+    ],
+    "userId": 1
   },
   {
     "id": 284,
@@ -6494,7 +6545,7 @@
     ],
     "merchants": [
       {
-        "id": 38,
+        "id": 39,
         "label": "Gamestop Pre-Owned",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fdead-space---playstation-5%2F359611.html",
         "price": 49.99,
@@ -6597,7 +6648,7 @@
     ],
     "merchants": [
       {
-        "id": 39,
+        "id": 40,
         "label": "Amazon",
         "url": "https://amzn.to/3plPkRV",
         "price": 249.99,
@@ -6706,7 +6757,7 @@
     ],
     "merchants": [
       {
-        "id": 40,
+        "id": 41,
         "label": "Gamestop Pre-Owned",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fhogwarts-legacy---playstation-5%2F359794.html",
         "price": 64.99,
@@ -6762,7 +6813,7 @@
     ],
     "merchants": [
       {
-        "id": 41,
+        "id": 42,
         "label": "Unistellar",
         "url": "https://shop.unistellar.com/products/equinox-2?variant=40467965018135",
         "price": 2499,
@@ -6803,14 +6854,6 @@
     ],
     "merchants": [
       {
-        "id": 42,
-        "label": "Gamestop Power Up get exclusive offers, earn monthly rewards and more",
-        "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007594&type=3&subid=",
-        "price": 24.99,
-        "order": 2,
-        "pinId": 142
-      },
-      {
         "id": 43,
         "label": "GameStop: Sony PlayStation VR2 Horizon Bundle",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2-horizon-call-of-the-mountain-bundle%2F393119.html",
@@ -6824,6 +6867,14 @@
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2%2F393118.html",
         "price": 549.99,
         "order": 0,
+        "pinId": 142
+      },
+      {
+        "id": 45,
+        "label": "Gamestop Power Up get exclusive offers, earn monthly rewards and more",
+        "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007594&type=3&subid=",
+        "price": 24.99,
+        "order": 2,
         "pinId": 142
       }
     ],
@@ -6868,12 +6919,12 @@
     "mentions": [
       {
         "id": 29,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 234
       },
       {
         "id": 30,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 234
       }
     ],
@@ -6983,7 +7034,7 @@
     ],
     "merchants": [
       {
-        "id": 45,
+        "id": 46,
         "label": "Gamestop",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fstar-wars-jedi-survivor---playstation-5%2F392881.html",
         "price": 69.99,
@@ -7086,7 +7137,7 @@
     ],
     "merchants": [
       {
-        "id": 46,
+        "id": 47,
         "label": "Gamestop Pre-Owned",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fresident-evil-4---playstation-5%2F391500.html",
         "price": 54.99,
@@ -7208,12 +7259,12 @@
     "mentions": [
       {
         "id": 34,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 232
       },
       {
         "id": 35,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 232
       }
     ],
@@ -7637,8 +7688,8 @@
       },
       {
         "id": 27,
-        "address": "Burbank",
-        "order": 3,
+        "address": "Culver City",
+        "order": 2,
         "pinId": 361
       },
       {
@@ -7649,8 +7700,8 @@
       },
       {
         "id": 29,
-        "address": "Culver City",
-        "order": 2,
+        "address": "Burbank",
+        "order": 3,
         "pinId": 361
       }
     ],
@@ -7867,42 +7918,42 @@
     "mentions": [
       {
         "id": 41,
-        "tag": "$AAPL",
-        "pinId": 210
-      },
-      {
-        "id": 42,
-        "tag": "$NFLX",
-        "pinId": 210
-      },
-      {
-        "id": 43,
-        "tag": "$MSFT",
-        "pinId": 210
-      },
-      {
-        "id": 44,
-        "tag": "$GOOG",
-        "pinId": 210
-      },
-      {
-        "id": 45,
         "tag": "$NVDA",
         "pinId": 210
       },
       {
-        "id": 46,
-        "tag": "$META",
+        "id": 42,
+        "tag": "$AAPL",
         "pinId": 210
       },
       {
-        "id": 47,
+        "id": 43,
         "tag": "$AMAZN",
         "pinId": 210
       },
       {
-        "id": 48,
+        "id": 44,
+        "tag": "$META",
+        "pinId": 210
+      },
+      {
+        "id": 45,
         "tag": "$TSLA",
+        "pinId": 210
+      },
+      {
+        "id": 46,
+        "tag": "$GOOG",
+        "pinId": 210
+      },
+      {
+        "id": 47,
+        "tag": "$NFLX",
+        "pinId": 210
+      },
+      {
+        "id": 48,
+        "tag": "$MSFT",
         "pinId": 210
       }
     ],
@@ -7935,7 +7986,7 @@
     ],
     "merchants": [
       {
-        "id": 47,
+        "id": 48,
         "label": "GameStop",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fnintendo-switch%2Fproducts%2Fthe-legend-of-zelda-tears-of-the-kingdom---nintendo-switch%2F351955.html",
         "price": 69.99,
@@ -8458,7 +8509,7 @@
     ],
     "merchants": [
       {
-        "id": 48,
+        "id": 49,
         "label": "Gamestop",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fstreet-fighter-6---playstation-5%2F357753.html",
         "price": 59.99,
@@ -8777,7 +8828,7 @@
     ],
     "merchants": [
       {
-        "id": 49,
+        "id": 50,
         "label": "Gamestop",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fdiablo-iv----playstation-5%2F357780.html",
         "price": 69.99,
@@ -9504,7 +9555,7 @@
     ],
     "merchants": [
       {
-        "id": 50,
+        "id": 51,
         "label": "Gamestop",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fplaystation-5%2Fproducts%2Ffinal-fantasy-xvi---playstation-5%2F357774.html",
         "price": 69.99,
@@ -9558,12 +9609,12 @@
       },
       {
         "id": 72,
-        "tag": "#inflation",
+        "tag": "#BOE",
         "pinId": 357
       },
       {
         "id": 73,
-        "tag": "#BOE",
+        "tag": "#inflation",
         "pinId": 357
       }
     ],
@@ -9646,12 +9697,12 @@
       },
       {
         "id": 76,
-        "tag": "$SPR",
+        "tag": "$BA",
         "pinId": 360
       },
       {
         "id": 77,
-        "tag": "$BA",
+        "tag": "$SPR",
         "pinId": 360
       }
     ],
@@ -9703,12 +9754,12 @@
       },
       {
         "id": 81,
-        "tag": "#Quality",
+        "tag": "$TM",
         "pinId": 366
       },
       {
         "id": 82,
-        "tag": "$TM",
+        "tag": "#Quality",
         "pinId": 366
       },
       {
@@ -9939,7 +9990,7 @@
     ],
     "merchants": [
       {
-        "id": 51,
+        "id": 52,
         "label": "FluentPet",
         "url": "https://fluent.pet/collections/connect/products/connect-get-started-kit",
         "price": 159.95,
@@ -9967,7 +10018,7 @@
     },
     "media": [
       {
-        "id": 247,
+        "id": 245,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1671876832361320454",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -9977,7 +10028,7 @@
     ],
     "mentions": [
       {
-        "id": 105,
+        "id": 89,
         "tag": "#Unemployment",
         "pinId": 359
       }
@@ -10051,7 +10102,7 @@
     },
     "media": [
       {
-        "id": 245,
+        "id": 246,
         "thumbName": "a8627482-e7e5-4614-8749-99feaf5cf68b-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -10088,7 +10139,7 @@
     },
     "media": [
       {
-        "id": 246,
+        "id": 247,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1670884043531976704",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -10098,7 +10149,7 @@
     ],
     "mentions": [
       {
-        "id": 89,
+        "id": 90,
         "tag": "#rates",
         "pinId": 331
       }
@@ -10157,14 +10208,14 @@
     "locations": [
       {
         "id": 49,
-        "address": "South Asia Subregion",
-        "order": 0,
+        "address": "Egypt Country",
+        "order": 1,
         "pinId": 148
       },
       {
         "id": 50,
-        "address": "Egypt Country",
-        "order": 1,
+        "address": "South Asia Subregion",
+        "order": 0,
         "pinId": 148
       }
     ],
@@ -10174,12 +10225,14 @@
     "id": 193,
     "rootThread": false,
     "title": "Insider Shares More On Tesla's Project Highland AKA Model 3 Refresh",
-    "description": "<p class=\"paragraph\"> Several&nbsp;<a href=\"https://insideevs.com/news/650722/tesla-model3-refresh-project-highland-testing-covered/\">test prototypes have already been spotted with camouflaged front and rear ends</a>, suggesting the Model 3 is in for some major visual updates. But Tesla's compact sedan will get more than that.&nbsp;According to a \"trusted insider\" who offered an exclusive insight to&nbsp;Not A Tesla App, the Project Highland will bring significant changes inside and out.&nbsp; </p><p class=\"paragraph\"> Starting with the design, the report notes the headlights will have a different shape, which means the front bumper will be redesigned as well. It will be more aerodynamic and will now house a single camera in the center area of the lower grille, in similar fashion to the Cybertruck. </p><p class=\"paragraph\"> Out back, the&nbsp;<a href=\"https://insideevs.com/news/632016/tesla-model-3-facelift-project-highland-spotted/\">refreshed Tesla Model 3</a>&nbsp;is also getting a redesigned bumper, although the changes will likely be purely for aesthetic reasons. </p><p class=\"paragraph\"> The source also said the side mirrors will be subtly updated and the Project Highland will be getting more cameras to take advantage of the&nbsp;<a href=\"https://insideevs.com/news/652740/tesla-autopilot-hardware-4-fsd2-leak/\">new Hardware 4.0 Autopilot supercomputer</a>. Three new cameras will reportedly be added to the Model 3: one in the center of the front bumper and two on the sides of the car. </p>",
+    "description": "<p class=\"paragraph\">  Several&nbsp;<a href=\"https://insideevs.com/news/650722/tesla-model3-refresh-project-highland-testing-covered/\">test prototypes have already been spotted with camouflaged front and rear ends</a>, suggesting the Model 3 is in for some major visual updates. But Tesla's compact sedan will get more than that.&nbsp;According to a \"trusted insider\" who offered an exclusive insight to&nbsp;Not A Tesla App, the Project Highland will bring significant changes inside and out.&nbsp;  </p><p class=\"paragraph\">  Starting with the design, the report notes the headlights will have a different shape, which means the front bumper will be redesigned as well. It will be more aerodynamic and will now house a single camera in the center area of the lower grille, in similar fashion to the Cybertruck.  </p><p class=\"paragraph\">  Out back, the&nbsp;<a href=\"https://insideevs.com/news/632016/tesla-model-3-facelift-project-highland-spotted/\">refreshed Tesla Model 3</a>&nbsp;is also getting a redesigned bumper, although the changes will likely be purely for aesthetic reasons.  </p><p class=\"paragraph\">  The source also said the side mirrors will be subtly updated and the Project Highland will be getting more cameras to take advantage of the&nbsp;<a href=\"https://insideevs.com/news/652740/tesla-autopilot-hardware-4-fsd2-leak/\">new Hardware 4.0 Autopilot supercomputer</a>. Three new cameras will reportedly be added to the Model 3: one in the center of the front bumper and two on the sides of the car.  </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$TSLA</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687715144876,\"blocks\":[{\"id\":\"kP6z_GYnN2\",\"type\":\"paragraph\",\"data\":{\"text\":\" Several&nbsp;<a href=\\\"https://insideevs.com/news/650722/tesla-model3-refresh-project-highland-testing-covered/\\\">test prototypes have already been spotted with camouflaged front and rear ends</a>, suggesting the Model 3 is in for some major visual updates. But Tesla's compact sedan will get more than that.&nbsp;According to a \\\"trusted insider\\\" who offered an exclusive insight to&nbsp;Not A Tesla App, the Project Highland will bring significant changes inside and out.&nbsp; \"}},{\"id\":\"PGxN-3ECPE\",\"type\":\"paragraph\",\"data\":{\"text\":\" Starting with the design, the report notes the headlights will have a different shape, which means the front bumper will be redesigned as well. It will be more aerodynamic and will now house a single camera in the center area of the lower grille, in similar fashion to the Cybertruck. \"}},{\"id\":\"Oj53APYdP8\",\"type\":\"paragraph\",\"data\":{\"text\":\" Out back, the&nbsp;<a href=\\\"https://insideevs.com/news/632016/tesla-model-3-facelift-project-highland-spotted/\\\">refreshed Tesla Model 3</a>&nbsp;is also getting a redesigned bumper, although the changes will likely be purely for aesthetic reasons. \"}},{\"id\":\"QkniWEjogQ\",\"type\":\"paragraph\",\"data\":{\"text\":\" The source also said the side mirrors will be subtly updated and the Project Highland will be getting more cameras to take advantage of the&nbsp;<a href=\\\"https://insideevs.com/news/652740/tesla-autopilot-hardware-4-fsd2-leak/\\\">new Hardware 4.0 Autopilot supercomputer</a>. Three new cameras will reportedly be added to the Model 3: one in the center of the front bumper and two on the sides of the car. \"}},{\"id\":\"GN_JnEUCOe\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$TSLA</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://insideevs.com/news/658711/insider-shares-more-on-tesla-project-highland-aka-model-3-refresh/",
     "utcStartDateTime": "2023-09-01T07:00:00.000Z",
-    "utcEndDateTime": "2023-09-02T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-03T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-01T23:57:18.698Z",
+    "utcUpdatedDateTime": "2023-06-25T17:45:48.485Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -10194,6 +10247,13 @@
         "originalWidth": 1920,
         "originalHeight": 1080,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 107,
+        "tag": "$TSLA",
+        "pinId": 193
       }
     ],
     "userId": 1
@@ -10223,7 +10283,7 @@
     ],
     "merchants": [
       {
-        "id": 52,
+        "id": 53,
         "label": "Gamestop PS5",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fmortal-kombat-1----playstation-5%2F394354.html",
         "price": 69.99,
@@ -10426,7 +10486,7 @@
     ],
     "merchants": [
       {
-        "id": 53,
+        "id": 54,
         "label": "Gamestop PS5",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fplaystation-5%2Fproducts%2Fmarvels-spider-man-2-launch-edition---playstation-5%2F394826.html",
         "price": 69.99,
@@ -10496,19 +10556,19 @@
     ],
     "merchants": [
       {
-        "id": 54,
-        "label": "Gamestop Steam Gift Card",
-        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fgift-cards%2Fproducts%2Fvalve-steam-wallet-card-20%2F215593.html",
-        "price": 20,
-        "order": 0,
-        "pinId": 241
-      },
-      {
         "id": 55,
         "label": "Gamestop Power Up save $5 per Month on Gift Cards",
         "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007593&type=3&subid=",
         "price": 24.99,
         "order": 1,
+        "pinId": 241
+      },
+      {
+        "id": 56,
+        "label": "Gamestop Steam Gift Card",
+        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fgift-cards%2Fproducts%2Fvalve-steam-wallet-card-20%2F215593.html",
+        "price": 20,
+        "order": 0,
         "pinId": 241
       }
     ],
@@ -10638,12 +10698,12 @@
     "mentions": [
       {
         "id": 96,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 341
       },
       {
         "id": 97,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 341
       }
     ],
@@ -10699,7 +10759,7 @@
     },
     "media": [
       {
-        "id": 293,
+        "id": 263,
         "thumbName": "54e3185a-3f81-4573-9f0c-1ed374ca3c77-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 523,
@@ -10711,21 +10771,21 @@
     ],
     "locations": [
       {
-        "id": 71,
-        "address": "Marcellus and Utica shale sites",
-        "order": 0,
+        "id": 52,
+        "address": "Mountain Valley natural gas pipeline Southern  Virginia",
+        "order": 1,
         "pinId": 376
       },
       {
-        "id": 72,
-        "address": "Mountain Valley natural gas pipeline Southern  Virginia",
-        "order": 1,
+        "id": 53,
+        "address": "Marcellus and Utica shale sites",
+        "order": 0,
         "pinId": 376
       }
     ],
     "mentions": [
       {
-        "id": 106,
+        "id": 98,
         "tag": "#Pipeliine",
         "pinId": 376
       }
@@ -10748,7 +10808,7 @@
     },
     "media": [
       {
-        "id": 263,
+        "id": 264,
         "thumbName": "841b2539-69ee-46df-b177-cc70bd000a99-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -10760,18 +10820,18 @@
     ],
     "mentions": [
       {
-        "id": 98,
-        "tag": "#AI",
-        "pinId": 289
-      },
-      {
         "id": 99,
-        "tag": "$AMD",
+        "tag": "#GPU",
         "pinId": 289
       },
       {
         "id": 100,
-        "tag": "#GPU",
+        "tag": "#AI",
+        "pinId": 289
+      },
+      {
+        "id": 101,
+        "tag": "$AMD",
         "pinId": 289
       }
     ],
@@ -10794,7 +10854,7 @@
     },
     "media": [
       {
-        "id": 264,
+        "id": 265,
         "originalUrl": "https://twitter.com/PauloMacro/status/1670148000780255233",
         "type": "2",
         "authorName": "Paulo Macro",
@@ -10804,13 +10864,13 @@
     ],
     "locations": [
       {
-        "id": 52,
+        "id": 54,
         "address": "United Sates",
         "order": 0,
         "pinId": 342
       },
       {
-        "id": 53,
+        "id": 55,
         "address": "Japan",
         "order": 1,
         "pinId": 342
@@ -10818,7 +10878,7 @@
     ],
     "mentions": [
       {
-        "id": 101,
+        "id": 102,
         "tag": "#CarryTrade",
         "pinId": 342
       }
@@ -10844,13 +10904,53 @@
     },
     "locations": [
       {
-        "id": 54,
+        "id": 56,
         "address": "Casa Grande, Arizona",
         "order": 0,
         "pinId": 222
       }
     ],
     "userId": 1
+  },
+  {
+    "id": 382,
+    "rootThread": false,
+    "title": "Demon Slayer season 4 : Hashira Geiko-hen (Hashira Training Arc)",
+    "description": "<h2>Demon Slayer season 4 release date speculation</h2><p class=\"paragraph\"> While we don’t know the Demon Slayer season 4 release date for certain, animation studio Ufotable’s recent output does clue us in on when we could expect the Hashira Training arc to pop up on our screens. </p><p class=\"paragraph\"> The first and third Demon Slayer seasons both premiered in April, while the Mugen Train movie and Demon Slayer season 2 both premiered in the month of October. Despite likely being a shorter season – more on that below – we don’t expect Demon Slayer season 4 to release this year. Instead, April 2024 or October 2024 seem to be the likely destinations for the anime’s return.Demon Slayer season 4 will follow on from the end of the Swordsmith Village arc (chapters 98-127 of the manga) </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/77620ad6-69cb-4acb-828f-a36bb066ef25-chrono-lg.webp\" alt=\"Demon Slayer season 4 will follow on from the end of the Swordsmith Village arc (chapters 98-127 of the manga)\" height=\"546\" width=\"970\"><figcaption class=\"fig-cap\">Demon Slayer season 4 will follow on from the end of the Swordsmith Village arc (chapters 98-127 of the manga)</figcaption></figure><h2>Demon Slayer season 4 story: which manga chapters is it adapting?</h2><p class=\"paragraph\"> Demon Slayer season 4 will follow on from the end of the Swordsmith Village arc (chapters 98-127 of the manga) by adapting the Hashira Training arc (chapters 128-136). If you’re following on in the bundled editions, that’s the latter half of Volume 15 and the first three chapters in Volume 16. </p><p class=\"paragraph\"> No spoilers here, but the source material does give us a taste of what to expect. </p><p class=\"paragraph\"> The book synopsis reads: \"Tanjiro goes to see the Stone Hashira, Himejima, who intends to prepare him for the battles to come. The training to become a Hashira – a high-ranking member of the Demon Slayer Corps – is intense and demanding, and earning Himejima’s approval seems impossible, but Tanjiro won’t give up!\" </p><p class=\"paragraph\"> In straightforward terms, expect Tanjiro to harness more of his powers with the help of various Hashira. The Stone Hashira, Water Hashira, Insect Hashira, Wind Hashira, and Snake Hashira have already been confirmed for the Hashira Training arc.&nbsp; </p><p class=\"paragraph\"> The upcoming season should also revolve around the emergence of Nezuko’s new powers, namely that she can ‘conquer the sun’ and exist as a demon in the daylight. Series antagonist Muzan Kibutsuji, as shown in the Swordsmith Village finale, is aware of those developments and will be hot on her tail. </p><p class=\"paragraph\"> Looking further ahead, it also appears to be the last step before the very final anime arc, dubbed the Final Battle arc. </p><div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/Sf4cKpeyAbo?start=65s\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><h2>Demon Slayer season 4 cast</h2><p class=\"paragraph\"> Tanjiro (Natsuki Hanae), Zenitsu (Hiro Shimono), Inosuke (Yoshitsugu Matsuoka), and Nezuko (Akari Kitou) should all have a part to play in the Hashira Training arc.&nbsp; </p><p class=\"paragraph\"> The Water Hashira Giyu Tomioka (Takahiro Sakurai), Snake Hashira Obanai Iguro (Kenichi Suzumura), Insect Hashira Shinobu Kocho (Saori Hayami), Wind Hashira Sanemi Shinazugawa (Tomokazu Seki), and Stone Hashira Gyomei Himejima (Tomokazu Sugita) will each be a major presence as Tanjiro begins his training. </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/099c3bc9-887b-459c-8044-6ae091219692-chrono-lg.webp\" alt=\"Hashira Geiko-hen&nbsp;(Hashira Training Arc)\" height=\"320\" width=\"340\"><figcaption class=\"fig-cap\">Hashira Geiko-hen&nbsp;(Hashira Training Arc)</figcaption></figure><h2>Demon Slayer season 4 episode count: how many episodes could the Hashira Training arc cover?</h2><p class=\"paragraph\"> The first season of Demon Slayer consisted of 26 episodes – but episode counts have been dwindling since then. The Mugen Train and Entertainment District arcs were seven and 11 episodes respectively, while Swordsmith Village was also 11 episodes. </p><p class=\"paragraph\"> Hashira Training, however, only has a small amount of source material to draw from. Without some serious padding, it’s unlikely to stack up to even Mugen Train’s truncated seven-episode run. While it’s been confirmed as a full season, we wouldn’t be surprised for it to be a short pit stop on the way to bigger things – a six-episode season (tops) would be our guess. But even something as short as two or three episodes could be realistic. </p>",
+    "sourceDescription": "{\"time\":1687711491531,\"blocks\":[{\"id\":\"s2KcXVg5uQ\",\"type\":\"header\",\"data\":{\"text\":\"Demon Slayer season 4 release date speculation\",\"level\":2}},{\"id\":\"xl6eOwjxmQ\",\"type\":\"paragraph\",\"data\":{\"text\":\"While we don’t know the Demon Slayer season 4 release date for certain, animation studio Ufotable’s recent output does clue us in on when we could expect the Hashira Training arc to pop up on our screens.\"}},{\"id\":\"s-MtPfxs0F\",\"type\":\"paragraph\",\"data\":{\"text\":\"The first and third Demon Slayer seasons both premiered in April, while the Mugen Train movie and Demon Slayer season 2 both premiered in the month of October. Despite likely being a shorter season – more on that below – we don’t expect Demon Slayer season 4 to release this year. Instead, April 2024 or October 2024 seem to be the likely destinations for the anime’s return.Demon Slayer season 4 will follow on from the end of the Swordsmith Village arc (chapters 98-127 of the manga)\"}},{\"id\":\"fV0itgmuoU\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/77620ad6-69cb-4acb-828f-a36bb066ef25-chrono-lg.webp\",\"attributes\":{\"width\":970,\"height\":546}},\"caption\":\"Demon Slayer season 4 will follow on from the end of the Swordsmith Village arc (chapters 98-127 of the manga)\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"3_JguzwkN6\",\"type\":\"header\",\"data\":{\"text\":\"Demon Slayer season 4 story: which manga chapters is it adapting?\",\"level\":2}},{\"id\":\"P6eQHQHeGF\",\"type\":\"paragraph\",\"data\":{\"text\":\"Demon Slayer season 4 will follow on from the end of the Swordsmith Village arc (chapters 98-127 of the manga) by adapting the Hashira Training arc (chapters 128-136). If you’re following on in the bundled editions, that’s the latter half of Volume 15 and the first three chapters in Volume 16.\"}},{\"id\":\"YTj9EArFnT\",\"type\":\"paragraph\",\"data\":{\"text\":\"No spoilers here, but the source material does give us a taste of what to expect.\"}},{\"id\":\"psgLrJyXeD\",\"type\":\"paragraph\",\"data\":{\"text\":\"The book synopsis reads: \\\"Tanjiro goes to see the Stone Hashira, Himejima, who intends to prepare him for the battles to come. The training to become a Hashira – a high-ranking member of the Demon Slayer Corps – is intense and demanding, and earning Himejima’s approval seems impossible, but Tanjiro won’t give up!\\\"\"}},{\"id\":\"I6AgYAofO8\",\"type\":\"paragraph\",\"data\":{\"text\":\"In straightforward terms, expect Tanjiro to harness more of his powers with the help of various Hashira. The Stone Hashira, Water Hashira, Insect Hashira, Wind Hashira, and Snake Hashira have already been confirmed for the Hashira Training arc.&nbsp;\"}},{\"id\":\"3rlP4iKzE8\",\"type\":\"paragraph\",\"data\":{\"text\":\"The upcoming season should also revolve around the emergence of Nezuko’s new powers, namely that she can ‘conquer the sun’ and exist as a demon in the daylight. Series antagonist Muzan Kibutsuji, as shown in the Swordsmith Village finale, is aware of those developments and will be hot on her tail.\"}},{\"id\":\"aqt4alzzhm\",\"type\":\"paragraph\",\"data\":{\"text\":\"Looking further ahead, it also appears to be the last step before the very final anime arc, dubbed the Final Battle arc.\"}},{\"id\":\"wH-0o7osbV\",\"type\":\"embed\",\"data\":{\"service\":\"youtube\",\"source\":\"https://www.youtube.com/watch?v=Sf4cKpeyAbo&amp;t=65s\",\"embed\":\"https://www.youtube.com/embed/Sf4cKpeyAbo?start=65s\",\"width\":580,\"height\":320,\"caption\":\"「鬼滅の刃」柱稽古編 テレビアニメ化決定 PV\",\"length\":\"\"}},{\"id\":\"uEEcPjy9Vg\",\"type\":\"header\",\"data\":{\"text\":\"Demon Slayer season 4 cast\",\"level\":2}},{\"id\":\"II0i4N2un6\",\"type\":\"paragraph\",\"data\":{\"text\":\"Tanjiro (Natsuki Hanae), Zenitsu (Hiro Shimono), Inosuke (Yoshitsugu Matsuoka), and Nezuko (Akari Kitou) should all have a part to play in the Hashira Training arc.&nbsp;\"}},{\"id\":\"P_7VClbLzb\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Water Hashira Giyu Tomioka (Takahiro Sakurai), Snake Hashira Obanai Iguro (Kenichi Suzumura), Insect Hashira Shinobu Kocho (Saori Hayami), Wind Hashira Sanemi Shinazugawa (Tomokazu Seki), and Stone Hashira Gyomei Himejima (Tomokazu Sugita) will each be a major presence as Tanjiro begins his training.\"}},{\"id\":\"XfOBnNhoy9\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/099c3bc9-887b-459c-8044-6ae091219692-chrono-lg.webp\",\"attributes\":{\"width\":340,\"height\":320}},\"caption\":\"Hashira Geiko-hen&nbsp;(Hashira Training Arc)\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"Hn_DYO-jNk\",\"type\":\"header\",\"data\":{\"text\":\"Demon Slayer season 4 episode count: how many episodes could the Hashira Training arc cover?\",\"level\":2}},{\"id\":\"k8s2wN3IXl\",\"type\":\"paragraph\",\"data\":{\"text\":\"The first season of Demon Slayer consisted of 26 episodes – but episode counts have been dwindling since then. The Mugen Train and Entertainment District arcs were seven and 11 episodes respectively, while Swordsmith Village was also 11 episodes.\"}},{\"id\":\"6y5x2GoqVK\",\"type\":\"paragraph\",\"data\":{\"text\":\"Hashira Training, however, only has a small amount of source material to draw from. Without some serious padding, it’s unlikely to stack up to even Mugen Train’s truncated seven-episode run. While it’s been confirmed as a full season, we wouldn’t be surprised for it to be a short pit stop on the way to bigger things – a six-episode season (tops) would be our guess. But even something as short as two or three episodes could be realistic.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.gamesradar.com/demon-slayer-season-4-release-date-cast-trailer-hashira-training-arc/",
+    "utcStartDateTime": "2024-04-01T07:00:00.000Z",
+    "utcEndDateTime": "2024-04-03T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-25T16:45:15.260Z",
+    "utcUpdatedDateTime": "2023-06-25T16:58:11.555Z",
+    "user": {
+      "id": 3,
+      "userName": "@PrinceAnime"
+    },
+    "media": [
+      {
+        "id": 266,
+        "thumbName": "322b2670-ce5d-4439-8185-7386ac18dbbe-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 523,
+        "originalUrl": "https://cdn.mos.cms.futurecdn.net/xm7mq9bEr995dY28bw7sQC-1200-80.jpg",
+        "originalWidth": 1200,
+        "originalHeight": 628,
+        "type": "1"
+      }
+    ],
+    "merchants": [
+      {
+        "id": 57,
+        "label": "Manga Box Set vol 1-23",
+        "url": "https://amzn.to/3COZZI9",
+        "price": 142,
+        "order": 0,
+        "pinId": 382
+      }
+    ],
+    "userId": 3
   },
   {
     "id": 195,
@@ -10870,7 +10970,7 @@
     },
     "media": [
       {
-        "id": 265,
+        "id": 267,
         "thumbName": "e7f718cc-9190-4eed-a8df-270ec8c9d66c-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -10882,7 +10982,7 @@
     ],
     "locations": [
       {
-        "id": 55,
+        "id": 57,
         "address": "Oakville Assembly Plant in Ontario, Canada",
         "order": 0,
         "pinId": 195
@@ -10908,7 +11008,7 @@
     },
     "media": [
       {
-        "id": 266,
+        "id": 268,
         "thumbName": "4744b1cd-fc70-430d-a3a2-df642e1aea79-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 503,
@@ -10947,7 +11047,7 @@
     },
     "media": [
       {
-        "id": 292,
+        "id": 269,
         "thumbName": "d2d8fc73-b718-4495-8db8-aefecfd22feb-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -10959,7 +11059,7 @@
     ],
     "locations": [
       {
-        "id": 73,
+        "id": 58,
         "address": "Tech Zity Vilnius, Lithuania",
         "order": 0,
         "pinId": 375
@@ -10986,7 +11086,7 @@
     },
     "media": [
       {
-        "id": 267,
+        "id": 270,
         "thumbName": "1870e18c-c013-4e68-8821-0ed0881d9d2d-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 400,
@@ -10998,7 +11098,7 @@
     ],
     "mentions": [
       {
-        "id": 102,
+        "id": 103,
         "tag": "$BA",
         "pinId": 151
       }
@@ -11023,7 +11123,7 @@
     },
     "media": [
       {
-        "id": 268,
+        "id": 271,
         "thumbName": "5ae38366-d033-4972-bc04-48f4d4b6b485-chrono-lg.webp",
         "thumbWidth": 986,
         "thumbHeight": 553,
@@ -11035,7 +11135,7 @@
     ],
     "locations": [
       {
-        "id": 56,
+        "id": 59,
         "address": "West of Colusa in the Sacramento Valley, California",
         "order": 0,
         "pinId": 192
@@ -11061,7 +11161,7 @@
     },
     "media": [
       {
-        "id": 269,
+        "id": 272,
         "thumbName": "10240ef3-a8b9-4c73-8d53-53b182f57374-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -11073,7 +11173,7 @@
     ],
     "locations": [
       {
-        "id": 57,
+        "id": 60,
         "address": "UC San Diego",
         "order": 0,
         "pinId": 209
@@ -11099,7 +11199,7 @@
     },
     "media": [
       {
-        "id": 270,
+        "id": 273,
         "thumbName": "512b7eb4-5f06-4b87-9b31-c70d51f2df46-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 471,
@@ -11128,7 +11228,7 @@
     },
     "media": [
       {
-        "id": 271,
+        "id": 274,
         "thumbName": "9d3fdd45-fbda-4b7c-b649-1d7c72016c63-chrono-lg.webp",
         "thumbWidth": 768,
         "thumbHeight": 545,
@@ -11157,7 +11257,7 @@
     },
     "media": [
       {
-        "id": 272,
+        "id": 275,
         "thumbName": "58441b39-2150-45ad-8f12-b36ab5f90736-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11169,7 +11269,7 @@
     ],
     "locations": [
       {
-        "id": 58,
+        "id": 61,
         "address": "Frito-Lay’s research and development headquarters, Texas",
         "order": 0,
         "pinId": 194
@@ -11193,7 +11293,7 @@
     },
     "media": [
       {
-        "id": 273,
+        "id": 276,
         "thumbName": "3ddd9850-2551-4ade-b842-2099e75caf6c-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 308,
@@ -11223,7 +11323,7 @@
     },
     "media": [
       {
-        "id": 274,
+        "id": 277,
         "thumbName": "a40beb47-cb9a-43c6-9a0e-d1dd0f31ec9b-chrono-lg.webp",
         "thumbWidth": 591,
         "thumbHeight": 308,
@@ -11235,7 +11335,7 @@
     ],
     "locations": [
       {
-        "id": 59,
+        "id": 62,
         "address": "AISIN North Carolina Corporation (ANC) facility in Durham, North Carolina",
         "order": 0,
         "pinId": 321
@@ -11261,7 +11361,7 @@
     },
     "media": [
       {
-        "id": 275,
+        "id": 278,
         "thumbName": "17d63629-02e3-4d3f-be38-c9001a87421d-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -11273,7 +11373,7 @@
     ],
     "locations": [
       {
-        "id": 60,
+        "id": 63,
         "address": "Neste  Porvoo refinery in Finland",
         "order": 0,
         "pinId": 322
@@ -11300,7 +11400,7 @@
     },
     "media": [
       {
-        "id": 276,
+        "id": 279,
         "thumbName": "d2e483e6-7652-467e-a87e-ceecf0dc0537-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11312,7 +11412,7 @@
     ],
     "locations": [
       {
-        "id": 61,
+        "id": 64,
         "address": "Hudson Yards, New York",
         "order": 0,
         "pinId": 150
@@ -11337,7 +11437,7 @@
     },
     "media": [
       {
-        "id": 277,
+        "id": 280,
         "thumbName": "6535282f-7932-4bdf-8f0e-51ab0f6d2578-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11391,7 +11491,7 @@
     },
     "media": [
       {
-        "id": 278,
+        "id": 281,
         "thumbName": "f37f0f24-e347-4e0a-b805-d1a1a30dbd14-chrono-lg.webp",
         "thumbWidth": 743,
         "thumbHeight": 430,
@@ -11403,7 +11503,7 @@
     ],
     "locations": [
       {
-        "id": 62,
+        "id": 65,
         "address": "Guangdong Province",
         "order": 0,
         "pinId": 225
@@ -11427,7 +11527,7 @@
     },
     "media": [
       {
-        "id": 279,
+        "id": 282,
         "thumbName": "49b5fdba-9013-4950-863c-e88b8c3f3bcb-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 500,
@@ -11465,7 +11565,7 @@
     },
     "locations": [
       {
-        "id": 63,
+        "id": 66,
         "address": "Taiwan",
         "order": 0,
         "pinId": 207
@@ -11492,7 +11592,7 @@
     },
     "locations": [
       {
-        "id": 64,
+        "id": 67,
         "address": "Apple Valley",
         "order": 0,
         "pinId": 215
@@ -11518,7 +11618,7 @@
     },
     "media": [
       {
-        "id": 280,
+        "id": 283,
         "thumbName": "a4cf2cb9-1df7-4058-89f4-11000af5cd5d-chrono-lg.webp",
         "thumbWidth": 908,
         "thumbHeight": 474,
@@ -11547,7 +11647,7 @@
     },
     "media": [
       {
-        "id": 281,
+        "id": 284,
         "thumbName": "73f7248b-3954-4aa5-aae1-e3463be1f269-chrono-lg.webp",
         "thumbWidth": 768,
         "thumbHeight": 545,
@@ -11576,7 +11676,7 @@
     },
     "media": [
       {
-        "id": 282,
+        "id": 285,
         "thumbName": "bf50f483-f7d7-4ca8-bc7e-2e3e25b773b5-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11603,7 +11703,7 @@
     },
     "media": [
       {
-        "id": 283,
+        "id": 286,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1640619037251043328",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -11613,7 +11713,7 @@
     ],
     "locations": [
       {
-        "id": 65,
+        "id": 68,
         "address": "Europe",
         "order": 0,
         "pinId": 223
@@ -11639,7 +11739,7 @@
     },
     "mentions": [
       {
-        "id": 103,
+        "id": 104,
         "tag": "#energy",
         "pinId": 155
       }
@@ -11662,7 +11762,7 @@
     },
     "media": [
       {
-        "id": 284,
+        "id": 287,
         "thumbName": "70cb68bb-e894-41e9-a3b8-943c8257ec69-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 400,
@@ -11692,7 +11792,7 @@
     },
     "media": [
       {
-        "id": 285,
+        "id": 288,
         "thumbName": "8c5669d4-d0ff-4a13-a8c4-faf8f5ab7a08-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11704,7 +11804,7 @@
     ],
     "locations": [
       {
-        "id": 66,
+        "id": 69,
         "address": "Merced, CA",
         "order": 0,
         "pinId": 219
@@ -11737,7 +11837,7 @@
     },
     "media": [
       {
-        "id": 286,
+        "id": 289,
         "thumbName": "994a389a-f825-4822-bfbe-53b1e279b285-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 523,
@@ -11749,7 +11849,7 @@
     ],
     "locations": [
       {
-        "id": 67,
+        "id": 70,
         "address": "China",
         "order": 0,
         "pinId": 330
@@ -11773,7 +11873,7 @@
     },
     "media": [
       {
-        "id": 287,
+        "id": 290,
         "thumbName": "7cc700a4-3b9f-41c9-aee7-4d04239f8736-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11809,7 +11909,7 @@
     },
     "media": [
       {
-        "id": 288,
+        "id": 291,
         "thumbName": "44d2270e-f5b2-4116-85bd-23620693c371-chrono-lg.webp",
         "thumbWidth": 150,
         "thumbHeight": 133,
@@ -11838,7 +11938,7 @@
     },
     "media": [
       {
-        "id": 289,
+        "id": 292,
         "originalUrl": "https://twitter.com/BurggrabenH/status/1657432126076141570",
         "type": "2",
         "authorName": "Alexander Stahel ????",
@@ -11866,7 +11966,7 @@
     },
     "media": [
       {
-        "id": 290,
+        "id": 293,
         "originalUrl": "https://twitter.com/CyberMagazineX/status/890816308144558080",
         "type": "2",
         "authorName": "MagX(??????????X)",
@@ -11876,7 +11976,7 @@
     ],
     "mentions": [
       {
-        "id": 104,
+        "id": 105,
         "tag": "#AI",
         "pinId": 248
       }
@@ -11899,7 +11999,7 @@
     },
     "media": [
       {
-        "id": 291,
+        "id": 294,
         "thumbName": "96a0f58b-ba43-4ae8-861f-f3f05b74305a-chrono-lg.webp",
         "thumbWidth": 286,
         "thumbHeight": 400,
