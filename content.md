@@ -14,8 +14,6 @@ Before Usable:
 Comment cleanup/backup +
 links should be external cleanup
 
-search tag with additional query to narrow down results +
-
 https://www.emojiall.com/en/emoji/%23%E2%83%A3
 
 Bugs:

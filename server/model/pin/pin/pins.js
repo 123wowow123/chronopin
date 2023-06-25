@@ -188,7 +188,7 @@ function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, 
               } catch (e) {
                 queryCount = 0;
               }
-              resolve({
+              return resolve({
                 pins: res.recordset,
                 queryCount: queryCount
               });
@@ -208,7 +208,7 @@ function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, 
                 queryCount = 0;
               }
 
-              resolve({
+              return resolve({
                 pins: res.recordset,
                 queryCount: queryCount
               });
@@ -243,7 +243,7 @@ function _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext
               queryCount = 0;
             }
 
-            resolve({
+            return resolve({
               pins: res.recordset,
               queryCount: queryCount
             });
@@ -280,7 +280,7 @@ function _queryMSSQLPinsFilterByHasFavorite(queryForward, fromDateTime, userId, 
               } catch (e) {
                 queryCount = 0;
               }
-              resolve({
+              return resolve({
                 pins: res.recordset,
                 queryCount: queryCount
               });
@@ -300,7 +300,7 @@ function _queryMSSQLPinsFilterByHasFavorite(queryForward, fromDateTime, userId, 
                 queryCount = 0;
               }
 
-              resolve({
+              return resolve({
                 pins: res.recordset,
                 queryCount: queryCount
               });
@@ -335,7 +335,7 @@ function _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSiz
               queryCount = 0;
             }
 
-            resolve({
+            return resolve({
               pins: res.recordset,
               queryCount: queryCount
             });
@@ -375,7 +375,7 @@ function _queryMSSQPinByIds(userId, pins) {
               queryCount = 0;
             }
 
-            resolve({
+            return resolve({
               pins: res.recordset,
               queryCount: queryCount
             });
@@ -414,7 +414,7 @@ function _queryPinByIdsFilterByHasFavorite(pins, userId) {
               queryCount = 0;
             }
 
-            resolve({
+            return resolve({
               pins: res.recordset,
               queryCount: queryCount
             });
@@ -437,7 +437,7 @@ function _queryPinByIdsAndOrderedByThread(pinId) {
             if (err) {
               return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
             }
-            resolve({
+            return resolve({
               pins: res.recordset
             });
           });
@@ -474,7 +474,7 @@ function _queryPinByTags(userId, tags) {
               queryCount = 0;
             }
 
-            resolve({
+            return resolve({
               pins: res.recordset,
               queryCount: queryCount
             });
@@ -512,7 +512,7 @@ function _queryPinByTagsHasFavorite(userId, allTags) {
               queryCount = 0;
             }
 
-            resolve({
+            return resolve({
               pins: res.recordset,
               queryCount: queryCount
             });

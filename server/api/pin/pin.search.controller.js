@@ -37,6 +37,15 @@ export function emit(event, pin, options) {
   }
 }
 
+function pinIntersection(arrays, compareFn = (val1, val2) => {
+  return val1.id === val2.id;
+}) {
+  if (arrays.length < 2) return arrays[0] || [];
+  const array1 = arrays[0];
+  const array2 = pinIntersection(arrays.slice(1), compareFn);
+  return array1.filter(val1 => array2.some(val2 => compareFn(val1, val2)));
+}
+
 export function searchPins(req, res) {
   const user = req.user,
     userId = user && +user.id || 0,
@@ -45,15 +54,36 @@ export function searchPins(req, res) {
     hasFavorite = req.query.f && req.query.f.toLowerCase() == 'watch';
 
   const allTags = Mention.scrapeAllMentionQuery(searchText);
+  let searchTextWithoutTags = searchText; //Mention.scrapeAllMentionQuery(searchText);
+
+  allTags.forEach(tag => {
+    searchTextWithoutTags = searchTextWithoutTags.replaceAll(tag, '');
+  });
 
   if (allTags.length) {
     if (hasFavorite) {
-      return SearchPins.searchTagsFavorite(userId, allTags)
-        .then(response.withResult(res, 200))
+      Promise.all([
+        SearchPins.searchTagsFavorite(userId, allTags),
+        searchTextWithoutTags ? SearchPins.searchFavorite(userId, searchTextWithoutTags) : Promise.resolve(undefined)
+      ]).then(([tagPins, searchPins]) => {
+        if (searchPins === undefined) {
+          return tagPins;
+        }
+        const intersectPins = pinIntersection([searchPins.pins, tagPins.pins]);
+        return new SearchPins(intersectPins);
+      }).then(response.withResult(res, 200))
         .catch(response.handleError(res));
     } else {
-      return SearchPins.searchTags(userId, allTags)
-        .then(response.withResult(res, 200))
+      Promise.all([
+        SearchPins.searchTags(userId, allTags),
+        searchTextWithoutTags ? SearchPins.search(userId, searchTextWithoutTags) : Promise.resolve(undefined)
+      ]).then(([tagPins, searchPins]) => {
+        if (searchPins === undefined) {
+          return tagPins;
+        }
+        const intersectPins = pinIntersection([searchPins.pins, tagPins.pins]);
+        return new SearchPins(intersectPins);
+      }).then(response.withResult(res, 200))
         .catch(response.handleError(res));
     }
 
