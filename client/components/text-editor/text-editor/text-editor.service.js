@@ -105,8 +105,8 @@
                     class: ImageTool,
                     config: {
                       endpoints: {
-                        byFile: '/upload/uploadFile', // Your backend file uploader endpoint
-                        byUrl: '/upload/fetchUrl', // Your endpoint that provides uploading by Url
+                        byFile: '/api/upload/uploadFile', // Your backend file uploader endpoint
+                        byUrl: '/api/upload/fetchUrl', // Your endpoint that provides uploading by Url
                       },
                       attributes: {}
                     }
@@ -115,7 +115,7 @@
                   linkTool: {
                     class: LinkTool,
                     config: {
-                      endpoint: '/meta/fetchUrl', // Your backend endpoint for url data fetching,
+                      endpoint: '/api/meta/fetchUrl', // Your backend endpoint for url data fetching,
                     }
                   },
                

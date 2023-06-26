@@ -1,5 +1,3 @@
-
-
 Bugs/priority:
 
 h1 on home not longer than approximately 150 characters in length.
@@ -13,6 +11,7 @@ Before Usable Bug:
 Before Usable:
 Comment cleanup/backup +
 links should be external cleanup
+follow notification
 
 
 Bugs:
@@ -24,6 +23,9 @@ create/edit/respond page needs to have auth guard +
 changing username needs to sync to comment +
 show pixel dimention / size via tooltip?? of scraped image +
 missing description validation
+pressing enter on editor wants to navigate away
+
+case insensitive hash search
 
 Should show page not found and redirect to home? https://chronopin.com/pin/178
 quick add Q2 etc

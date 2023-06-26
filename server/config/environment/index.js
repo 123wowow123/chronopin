@@ -105,6 +105,10 @@ let all = {
     YOUTUBE_API_KEY: getProcessEnv('YOUTUBE_API_KEY')
   },
 
+  stock: {
+    TD_API_KEY: getProcessEnv('TD_API_KEY')
+  },
+
   elastiSearch: {
     indexPrefix: getProcessEnv('INDEXPREFIX') || '',
     serviceUrl: getProcessEnv('ELASTISEARCH_URL') || '',

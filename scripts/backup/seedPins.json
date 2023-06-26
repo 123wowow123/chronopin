@@ -9990,6 +9990,32 @@
     "userId": 1
   },
   {
+    "id": 396,
+    "rootThread": false,
+    "title": "Intel & HPE Declare Aurora Supercomputer Blade Installation Complete",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/XVcKLetqf3U?start=19s\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\"> The Aurora supercomputer at Argonne National Laboratory is now fully equipped with all 10,624 compute blades, boasting 63,744 Intel Data Center GPU Max Series and 21,248 Intel Xeon CPU Max Series processors. \"Aurora is the first deployment of Intel's Max Series GPU, the biggest Xeon Max CPU-based system, and the largest GPU cluster in the world. We're proud to be part of this historic system and excited for the groundbreaking AI, science and engineering Aurora will enable.\"—Jeff McVeigh, Intel corporate vice president and general manager of the Super Compute Group </p><h2>Planned usage</h2><p class=\"paragraph\"> Planned functions include research on&nbsp;<a href=\"https://en.wikipedia.org/wiki/Nuclear_fusion\">nuclear fusion</a>,&nbsp;<a href=\"https://en.wikipedia.org/wiki/Low-carbon_power\">low carbon technologies</a>,&nbsp;<a href=\"https://en.wikipedia.org/wiki/Subatomic_particle\">subatomic particles</a>,&nbsp;<a href=\"https://en.wikipedia.org/wiki/Cancer\">cancer</a>&nbsp;and&nbsp;<a href=\"https://en.wikipedia.org/wiki/Cosmology\">cosmology</a>.&nbsp;It will also develop new materials that will be useful for batteries and more efficient&nbsp;<a href=\"https://en.wikipedia.org/wiki/Solar_cell\">solar cells</a>.&nbsp;It is to be available to the general scientific community. </p>",
+    "sourceDescription": "{\"time\":1687814429541,\"blocks\":[{\"id\":\"expT98Muo8\",\"type\":\"embed\",\"data\":{\"service\":\"youtube\",\"source\":\"https://www.youtube.com/watch?v=XVcKLetqf3U&amp;t=19s\",\"embed\":\"https://www.youtube.com/embed/XVcKLetqf3U?start=19s\",\"width\":580,\"height\":320,\"caption\":\"Intel &amp; HPE Declare Aurora Supercomputer Blade Installation Complete\",\"length\":\"\"}},{\"id\":\"EStPAwJbtr\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Aurora supercomputer at Argonne National Laboratory is now fully equipped with all 10,624 compute blades, boasting 63,744 Intel Data Center GPU Max Series and 21,248 Intel Xeon CPU Max Series processors. \\\"Aurora is the first deployment of Intel's Max Series GPU, the biggest Xeon Max CPU-based system, and the largest GPU cluster in the world. We're proud to be part of this historic system and excited for the groundbreaking AI, science and engineering Aurora will enable.\\\"—Jeff McVeigh, Intel corporate vice president and general manager of the Super Compute Group\"}},{\"id\":\"x23Ekot9v6\",\"type\":\"header\",\"data\":{\"text\":\"Planned usage\",\"level\":2}},{\"id\":\"Pj_i-4RE2W\",\"type\":\"paragraph\",\"data\":{\"text\":\"Planned functions include research on&nbsp;<a href=\\\"https://en.wikipedia.org/wiki/Nuclear_fusion\\\">nuclear fusion</a>,&nbsp;<a href=\\\"https://en.wikipedia.org/wiki/Low-carbon_power\\\">low carbon technologies</a>,&nbsp;<a href=\\\"https://en.wikipedia.org/wiki/Subatomic_particle\\\">subatomic particles</a>,&nbsp;<a href=\\\"https://en.wikipedia.org/wiki/Cancer\\\">cancer</a>&nbsp;and&nbsp;<a href=\\\"https://en.wikipedia.org/wiki/Cosmology\\\">cosmology</a>.&nbsp;It will also develop new materials that will be useful for batteries and more efficient&nbsp;<a href=\\\"https://en.wikipedia.org/wiki/Solar_cell\\\">solar cells</a>.&nbsp;It is to be available to the general scientific community.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.techpowerup.com/310402/intel-hpe-declare-aurora-supercomputer-blade-installation-complete",
+    "price": 500000000,
+    "utcStartDateTime": "2023-06-22T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-23T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-26T21:20:34.931Z",
+    "user": {
+      "id": 4,
+      "userName": "@GadgetWorld"
+    },
+    "locations": [
+      {
+        "id": 76,
+        "address": "Argonne National Laboratory",
+        "order": 0,
+        "pinId": 396
+      }
+    ],
+    "userId": 4
+  },
+  {
     "id": 315,
     "rootThread": false,
     "title": "Seishun Buta Yarou wa Odekake Sister no Yume wo Minai (Rascal Does Not Dream of a Sister Venturing Out) movie debuts in Japan on June 23",
