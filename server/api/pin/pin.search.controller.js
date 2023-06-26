@@ -54,7 +54,7 @@ export function searchPins(req, res) {
     hasFavorite = req.query.f && req.query.f.toLowerCase() == 'watch';
 
   const allTags = Mention.scrapeAllMentionQuery(searchText);
-  let searchTextWithoutTags = searchText; //Mention.scrapeAllMentionQuery(searchText);
+  let searchTextWithoutTags = searchText;
 
   allTags.forEach(tag => {
     searchTextWithoutTags = searchTextWithoutTags.replaceAll(tag, '');
