@@ -62,7 +62,7 @@ $timeline-content-color: #555;
 
 .body {
   //adds padding for fix navbar-main
-  padding-top: 51px;
+  padding-top: 52px;
   color: var(--primary-color);
   background: var(--primary-bg-color);
 }
@@ -227,6 +227,7 @@ figure {
 @import '../components/oauth-buttons/oauth-buttons.scss';
 @import '../components/pin-block/pin-block.scss';
 @import '../components/scroll/scroll/scroll.scss';
+@import '../components/tags/chronotag.scss';
 @import '../components/text-editor/text-editor/text-editor.scss';
 @import '../components/thread/thread/thread.scss';
 @import '../components/time-block/time-block.scss';

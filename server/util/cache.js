@@ -35,5 +35,7 @@ export function clearKey(key) {
 }
 
 export const key = {
-    mainPinData: 'mainPinData'
+    mainPinData: 'mainPinData',
+
+    stockPrefix: 'stockSymbol-'
 }

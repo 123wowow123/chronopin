@@ -7970,14 +7970,14 @@
     "id": 210,
     "rootThread": false,
     "title": "Last time Fed Funds Rate was this high, S&P 500 TTM PE was around 18 it's now 23.91",
-    "description": "<p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$AAPL</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$MSFT</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$GOOG</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$META</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$NVDA</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$AMAZN</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$NFLX</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$TSLA</chronodollar>&nbsp; </p>",
-    "sourceDescription": "{\"time\":1686354510823,\"blocks\":[{\"id\":\"GnrkHAe-u_\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$AAPL</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$MSFT</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$GOOG</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$META</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$NVDA</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$AMAZN</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$NFLX</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$TSLA</chronodollar>&nbsp;\"}}],\"version\":\"2.26.5\"}",
+    "description": "<p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$AAPL</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$MSFT</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$GOOG</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$META</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$NVDA</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$AMZN</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$NFLX</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$TSLA</chronodollar>&nbsp; </p>",
+    "sourceDescription": "{\"time\":1687822171706,\"blocks\":[{\"id\":\"GnrkHAe-u_\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$AAPL</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$MSFT</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$GOOG</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$META</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$NVDA</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$AMZN</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$NFLX</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$TSLA</chronodollar>&nbsp;\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://twitter.com/RJRCapital/status/1656838113858076672",
     "utcStartDateTime": "2023-05-11T07:00:00.000Z",
-    "utcEndDateTime": "2023-05-15T07:00:00.000Z",
+    "utcEndDateTime": "2023-05-16T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-12T06:43:39.599Z",
-    "utcUpdatedDateTime": "2023-06-09T23:48:34.917Z",
+    "utcUpdatedDateTime": "2023-06-26T23:29:34.695Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -7994,43 +7994,43 @@
     ],
     "mentions": [
       {
-        "id": 44,
+        "id": 117,
         "tag": "$AAPL",
         "pinId": 210
       },
       {
-        "id": 45,
-        "tag": "$TSLA",
-        "pinId": 210
-      },
-      {
-        "id": 46,
-        "tag": "$AMAZN",
-        "pinId": 210
-      },
-      {
-        "id": 47,
-        "tag": "$GOOG",
-        "pinId": 210
-      },
-      {
-        "id": 48,
-        "tag": "$META",
-        "pinId": 210
-      },
-      {
-        "id": 49,
-        "tag": "$NVDA",
-        "pinId": 210
-      },
-      {
-        "id": 50,
+        "id": 118,
         "tag": "$MSFT",
         "pinId": 210
       },
       {
-        "id": 51,
+        "id": 119,
+        "tag": "$GOOG",
+        "pinId": 210
+      },
+      {
+        "id": 120,
+        "tag": "$META",
+        "pinId": 210
+      },
+      {
+        "id": 121,
+        "tag": "$NVDA",
+        "pinId": 210
+      },
+      {
+        "id": 122,
+        "tag": "$AMZN",
+        "pinId": 210
+      },
+      {
+        "id": 123,
         "tag": "$NFLX",
+        "pinId": 210
+      },
+      {
+        "id": 124,
+        "tag": "$TSLA",
         "pinId": 210
       }
     ],

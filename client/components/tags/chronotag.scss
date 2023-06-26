@@ -1,0 +1,17 @@
+.chrono-dollar-highlight {
+    .price{
+        color: var(--primary-color);
+    }
+    .percentage-change {
+        color: var(--primary-color);
+
+        &.\--negative {
+            color: #bd1414;
+        }
+
+        &.\--positive {
+            color: #007560;
+        }
+    }
+
+}

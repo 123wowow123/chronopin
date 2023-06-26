@@ -1,4 +1,9 @@
-<a ng-class="classes" ng-href="/search?q={{vm.searchText}}" uib-tooltip-html="vm.lastPrice"  tooltip-trigger="mouseenter">
-  <div ng-transclude>
-  </div>
+<a ng-href="/search?q={{vm.searchText}}" uib-tooltip-html="vm.lastPrice"
+  tooltip-trigger="mouseenter">
+  <span ng-transclude>
+  </span>
+  <span>
+    <span ng-if="vm.netPercentChangeInDouble !== undefined" class="percentage-change" ng-class="{'--negative' : vm.netPercentChangeInDouble < 0, '--positive' : vm.netPercentChangeInDouble > 0}">
+      {{vm.netPercentChangeInDouble | percentage:2}}</span>
+  </span>
 </a>

@@ -31,7 +31,8 @@
           this.loading = true;
           stockWebService.quotes(symbol)
             .then((res) => {
-              this.lastPrice = $sce.trustAsHtml(`<span>${_.get(res, 'data.lastPrice')}</span>`); //_.get(res, 'data.lastPrice'); //`<span>${_.get(res, 'data.lastPrice')}</span>`
+              this.lastPrice = _.get(res, 'data.lastPrice', '');
+              this.netPercentChangeInDouble = _.get(res, 'data.netPercentChangeInDouble', '');
             }).finally(() => {
               this.loading = false;
             });
