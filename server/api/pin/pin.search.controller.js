@@ -59,6 +59,7 @@ export function searchPins(req, res) {
   allTags.forEach(tag => {
     searchTextWithoutTags = searchTextWithoutTags.replaceAll(tag, '');
   });
+  searchTextWithoutTags = searchTextWithoutTags && searchTextWithoutTags.trim();
 
   if (allTags.length) {
     if (hasFavorite) {

@@ -44,6 +44,7 @@ function executeDropSP() {
 function executeDropTVP() {
   let sql = `
         DROP TYPE IF EXISTS tTags;
+        DROP TYPE IF EXISTS tUTags;
         `;
   return cp.getConnection()
     .then(conn => {
@@ -54,7 +55,10 @@ function executeDropTVP() {
 function executeCreateTVP() {
   let sql = `
         CREATE TYPE tTags AS Table (
-          tag NVARCHAR(1028)
+          tag NVARCHAR(255)
+        );
+        CREATE TYPE tUTags AS Table (
+          tag NVARCHAR(255)
         );
         `;
   return cp.getConnection()
@@ -67,6 +71,7 @@ function executeCreateSP() {
   let sql = `
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
            @TableTags AS tTags READONLY,
+           @TableUserTags AS tUTags READONLY,
            @userId       INT,
            @queryCount   INT OUTPUT
         AS
@@ -74,25 +79,90 @@ function executeCreateSP() {
 
         SET NOCOUNT ON;
 
-        SELECT
-              [Pin].*,
+        IF EXISTS (SELECT 1 FROM @TableTags) AND EXISTS (SELECT 1 FROM @TableUserTags)
+        BEGIN
 
-              (CAST((SELECT COUNT(f.id)
-                FROM [Favorite] AS f
-                WHERE f.userId = @userId AND f.PinId = [Pin].[id] AND f.utcDeletedDateTime IS NULL) AS BIT)) AS [hasFavorite],
-              (CAST((SELECT COUNT(l.id)
-                FROM [Like] AS l
-                WHERE l.userId = @userId AND l.PinId = [Pin].[id] AND l.utcDeletedDateTime IS NULL) AS BIT)) AS [hasLike]
+          SELECT
+            [Pin].*,
 
-            FROM [dbo].[PinBaseView] AS [Pin]
-              JOIN @TableTags AS paramTable
-                ON ([Pin].[User.userName] = paramTable.tag OR [Mention.tag] = paramTable.tag)
+            (CAST((SELECT COUNT(f.id)
+              FROM [Favorite] AS f
+              WHERE f.userId = @userId AND f.PinId = [Pin].[id] AND f.utcDeletedDateTime IS NULL) AS BIT)) AS [hasFavorite],
+            (CAST((SELECT COUNT(l.id)
+              FROM [Like] AS l
+              WHERE l.userId = @userId AND l.PinId = [Pin].[id] AND l.utcDeletedDateTime IS NULL) AS BIT)) AS [hasLike]
 
-            WHERE [Pin].[utcDeletedDateTime] IS NULL
+          FROM [dbo].[PinBaseView] AS [Pin]
+            JOIN @TableUserTags AS paramUserTable
+              ON ([Pin].[User.userName] = paramUserTable.tag OR [Pin].[Mention.tag] = paramUserTable.tag)
+            JOIN @TableTags AS paramTable
+              ON ([Pin].[Mention.tag] = paramTable.tag)
 
-            ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
+          WHERE [Pin].[utcDeletedDateTime] IS NULL
 
-            SET @queryCount = @@ROWCOUNT;
+          ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
+
+          SET @queryCount = @@ROWCOUNT;
+
+        END
+
+        ELSE IF EXISTS (SELECT 1 FROM @TableTags)
+        BEGIN
+
+          SELECT
+            [Pin].*,
+
+            (CAST((SELECT COUNT(f.id)
+              FROM [Favorite] AS f
+              WHERE f.userId = @userId AND f.PinId = [Pin].[id] AND f.utcDeletedDateTime IS NULL) AS BIT)) AS [hasFavorite],
+            (CAST((SELECT COUNT(l.id)
+              FROM [Like] AS l
+              WHERE l.userId = @userId AND l.PinId = [Pin].[id] AND l.utcDeletedDateTime IS NULL) AS BIT)) AS [hasLike]
+
+          FROM [dbo].[PinBaseView] AS [Pin]
+            JOIN @TableTags AS paramTable
+              ON ([Pin].[Mention.tag] = paramTable.tag)
+
+          WHERE [Pin].[utcDeletedDateTime] IS NULL
+
+          ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
+
+          SET @queryCount = @@ROWCOUNT;
+
+        END
+
+        ELSE IF EXISTS (SELECT 1 FROM @TableUserTags)
+        BEGIN
+
+          SELECT
+            [Pin].*,
+
+            (CAST((SELECT COUNT(f.id)
+              FROM [Favorite] AS f
+              WHERE f.userId = @userId AND f.PinId = [Pin].[id] AND f.utcDeletedDateTime IS NULL) AS BIT)) AS [hasFavorite],
+            (CAST((SELECT COUNT(l.id)
+              FROM [Like] AS l
+              WHERE l.userId = @userId AND l.PinId = [Pin].[id] AND l.utcDeletedDateTime IS NULL) AS BIT)) AS [hasLike]
+
+          FROM [dbo].[PinBaseView] AS [Pin]
+            JOIN @TableUserTags AS paramUserTable
+              ON ([Pin].[User.userName] = paramUserTable.tag OR [Pin].[Mention.tag] = paramUserTable.tag)
+
+          WHERE [Pin].[utcDeletedDateTime] IS NULL
+
+          ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
+
+          SET @queryCount = @@ROWCOUNT;
+
+        END
+
+        ELSE 
+        BEGIN
+          -- Should not call this SP if both @TableTags & @TableUserTags are empty
+          SET @queryCount = 0;
+        END
+
+
         END;
         `;
 

@@ -453,12 +453,29 @@ function _queryPinByTags(userId, tags) {
 
         const tvp = new mssql.Table()
         tvp.columns.add('tag', mssql.NVarChar(255));
-        tags.forEach(tag => {
-          tvp.rows.add(tag) // Values are in same order as columns.
-        });
+        const tvpUser = new mssql.Table()
+        tvpUser.columns.add('tag', mssql.NVarChar(255));
+
+        tags
+          .filter(tag => {
+            return !tag.startsWith('@');
+          })
+          .forEach(tag => {
+            tvp.rows.add(tag) // Values are in same order as columns.
+          });
+
+        tags
+          .filter(tag => {
+            return tag.startsWith('@');
+          })
+          .forEach(tag => {
+            tvpUser.rows.add(tag) // Values are in same order as columns.
+          });
+
 
         let request = new mssql.Request(conn)
           .input('TableTags', tvp)
+          .input('TableUserTags', tvpUser)
           .input('userId', mssql.Int, userId)
           .output('queryCount', mssql.Int);
 
@@ -491,12 +508,28 @@ function _queryPinByTagsHasFavorite(userId, allTags) {
 
         const tvp = new mssql.Table()
         tvp.columns.add('tag', mssql.NVarChar(255));
-        allTags.forEach(tag => {
-          tvp.rows.add(tag) // Values are in same order as columns.
-        });
+        const tvpUser = new mssql.Table()
+        tvpUser.columns.add('tag', mssql.NVarChar(255));
+
+        allTags
+          .filter(tag => {
+            return !tag.startsWith('@');
+          })
+          .forEach(tag => {
+            tvp.rows.add(tag) // Values are in same order as columns.
+          });
+
+        allTags
+          .filter(tag => {
+            return tag.startsWith('@');
+          })
+          .forEach(tag => {
+            tvpUser.rows.add(tag) // Values are in same order as columns.
+          });
 
         let request = new mssql.Request(conn)
           .input('TableTags', tvp)
+          .input('TableUserTags', tvpUser)
           .input('userId', mssql.Int, userId)
           .output('queryCount', mssql.Int);
 

@@ -44,6 +44,7 @@ function executeDropSP() {
 function executeDropTVP() {
   let sql = `
         DROP TYPE IF EXISTS tTags2;
+        DROP TYPE IF EXISTS tUTags2;
         `;
   return cp.getConnection()
     .then(conn => {
@@ -54,7 +55,10 @@ function executeDropTVP() {
 function executeCreateTVP() {
   let sql = `
         CREATE TYPE tTags2 AS Table (
-          tag NVARCHAR(1028)
+          tag NVARCHAR(255)
+        );
+        CREATE TYPE tUTags2 AS Table (
+          tag NVARCHAR(255)
         );
         `;
   return cp.getConnection()
@@ -67,6 +71,7 @@ function executeCreateSP() {
   let sql = `
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
            @TableTags AS tTags2 READONLY,
+           @TableUserTags AS tUTags2 READONLY,
            @userId       INT,
            @queryCount   INT OUTPUT
         AS
@@ -74,21 +79,77 @@ function executeCreateSP() {
 
         SET NOCOUNT ON;
 
-        SELECT
-              [Pin].*
+        IF EXISTS (SELECT 1 FROM @TableTags) AND EXISTS (SELECT 1 FROM @TableUserTags)
+        BEGIN
 
-            FROM [dbo].[PinBaseView] AS [Pin]
-              JOIN @TableTags AS paramTable
-                ON ([Pin].[User.userName] = paramTable.tag OR [Mention.tag] = paramTable.tag)
-              LEFT JOIN [dbo].[Favorite] AS [Favorites]
-                ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL
+          SELECT
+                [Pin].*
 
-            WHERE [Pin].[utcDeletedDateTime] IS NULL
-              AND [Favorites].[userId] = @userId
+              FROM [dbo].[PinBaseView] AS [Pin]
+                JOIN @TableUserTags AS paramUserTable
+                  ON ([Pin].[User.userName] = paramUserTable.tag OR [Pin].[Mention.tag] = paramUserTable.tag)
+                JOIN @TableTags AS paramTable
+                  ON ([Pin].[Mention.tag] = paramTable.tag)
+                LEFT JOIN [dbo].[Favorite] AS [Favorites]
+                  ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL
 
-              ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
+                WHERE [Pin].[utcDeletedDateTime] IS NULL
+                  AND [Favorites].[userId] = @userId
 
-              SET @queryCount = @@ROWCOUNT;
+                ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
+
+                SET @queryCount = @@ROWCOUNT;
+
+              END
+
+              ELSE IF EXISTS (SELECT 1 FROM @TableTags)
+              BEGIN
+        
+                SELECT
+                [Pin].*
+
+                FROM [dbo].[PinBaseView] AS [Pin]
+                  JOIN @TableTags AS paramTable
+                    ON ([Pin].[Mention.tag] = paramTable.tag)
+                  LEFT JOIN [dbo].[Favorite] AS [Favorites]
+                    ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL
+
+                  WHERE [Pin].[utcDeletedDateTime] IS NULL
+                    AND [Favorites].[userId] = @userId
+
+                  ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
+
+                  SET @queryCount = @@ROWCOUNT;
+        
+              END
+
+              ELSE IF EXISTS (SELECT 1 FROM @TableUserTags)
+              BEGIN
+
+                SELECT
+                [Pin].*
+
+                FROM [dbo].[PinBaseView] AS [Pin]
+                  JOIN @TableUserTags AS paramUserTable
+                    ON ([Pin].[User.userName] = paramUserTable.tag OR [Pin].[Mention.tag] = paramUserTable.tag)
+                  LEFT JOIN [dbo].[Favorite] AS [Favorites]
+                    ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL
+
+                  WHERE [Pin].[utcDeletedDateTime] IS NULL
+                    AND [Favorites].[userId] = @userId
+
+                  ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
+
+                  SET @queryCount = @@ROWCOUNT;
+        
+              END
+
+              ELSE 
+              BEGIN
+                  -- Should not call this SP if both @TableTags & @TableUserTags are empty
+                  SET @queryCount = 0;
+              END
+
         END;
         `;
 
