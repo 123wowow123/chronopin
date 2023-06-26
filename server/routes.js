@@ -182,7 +182,7 @@ export default function (app) {
 
   app.route('/:url(login|signup|about|search)')
     .get((req, res) => {
-      const host = req.host;
+      const host = req.hostname;
       const protocol = req.protocol;
       const page = req.params.url;
       const description = descriptions[page] || descriptions.about;

@@ -71,7 +71,7 @@ export default function (app) {
   }));
 
   app.all(/.*/, function (req, res, next) {
-    const host = req.host;
+    const host = req.hostname;
     const url = req.url;
     const protocol = req.protocol;
     if (!host.match(/chronopin/i) || host.match(/^www\..*/i)) {

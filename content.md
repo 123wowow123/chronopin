@@ -13,6 +13,11 @@ Comment cleanup/backup +
 links should be external cleanup
 follow notification
 
+popover needs:
+posted price
+current price
+change between posted/current price
+
 
 Bugs:
 scrolling 
