@@ -7,8 +7,8 @@
       <div class="col-sm-12">
         <form class="form" name="form" ng-submit="vm.register(form)" novalidate>
 
-          <div class="form-group" ng-class="{ 'has-success': form.userNameNoPrefix.$valid && form.userNameNoPrefix.$dirty && (vm.socialSubmitted || vm.submitted),
-                                            'has-error': form.userNameNoPrefix.$invalid && form.userNameNoPrefix.$dirty && (vm.socialSubmitted || vm.submitted)}">
+          <div class="form-group" ng-class="{ 'has-success': form.userNameNoPrefix.$valid && (form.userNameNoPrefix.$dirty || vm.socialSubmitted || vm.submitted),
+                                            'has-error': form.userNameNoPrefix.$invalid && (form.userNameNoPrefix.$dirty || vm.socialSubmitted || vm.submitted)}">
             <label>User Handle</label>
             <div class="input-group">
               <div class="input-group-addon">@</div>

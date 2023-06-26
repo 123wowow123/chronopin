@@ -14,9 +14,6 @@ Before Usable:
 Comment cleanup/backup +
 links should be external cleanup
 
-need validate user handle on signup with social
-
-https://www.emojiall.com/en/emoji/%23%E2%83%A3
 
 Bugs:
 scrolling 
