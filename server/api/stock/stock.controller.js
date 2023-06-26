@@ -31,7 +31,7 @@ function _fetch(symbol) {
                     cache.setWithExpiry(cacheKey, data, ttl);
                     resolve(data);
                 }).catch(err => {
-                    reject(err);ƒ
+                    reject(err);
                 });
         }
     });
