@@ -12,6 +12,10 @@ Before Usable:
 Comment cleanup/backup +
 links should be external cleanup
 follow notification
+copy past tags creates link
+ $5 should not be a tag
+ https://www.chronopin.com/pin/105
+
 
 popover needs:
 posted price
