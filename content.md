@@ -17,7 +17,6 @@ popover needs:
 posted price
 current price
 change between posted/current price
-need cancel scrape if it gets stuck
 
 Bugs:
 scrolling 
@@ -29,7 +28,6 @@ changing username needs to sync to comment +
 show pixel dimention / size via tooltip?? of scraped image +
 missing description validation
 
-Should show page not found and redirect to home? https://chronopin.com/pin/178
 quick add Q2 etc
 default does not select media but when selected it will auto check pin header media
 once user scrolls then don't reset scroll on load complete
