@@ -12,7 +12,6 @@ Before Usable:
 Comment cleanup/backup +
 links should be external cleanup
 follow notification
-copy past tags creates link
 
 popover needs:
 posted price

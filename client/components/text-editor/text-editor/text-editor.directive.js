@@ -154,9 +154,22 @@
 
             if (nodeList != null) {
               if (nodeList.length) {
-
                 for (let i = 0; i < nodeList.length; i++) {
-                  if (nodeList[i].nodeType == 3) { // if child node is **final base-case** text node
+                  if (nodeList[i].tagName === 'A') {
+                    if (nodeList[i].href && nodeList[i].href.includes("/search?q=")) {
+                      const params = new URL(nodeList[i].href).searchParams;
+                      const query = params.get("q");
+                      matchFactories.forEach((f) => {
+                        let validateContentPass = f.regexValidateContent.exec(query);
+                        if (validateContentPass) {
+                          // replace node with chrono tag node
+                          let newNode = f.nodeWrapperFactory();
+                          newNode.append(query);
+                          nodeList[i].replaceWith(newNode);
+                        }
+                      });
+                    }
+                  } else if (nodeList[i].nodeType == 3) { // if child node is **final base-case** text node
                     matchFactories.forEach((f) => {
                       let parentNode = nodeList[i].parentNode;
                       let match = f.regex.exec(nodeList[i].nodeValue);
