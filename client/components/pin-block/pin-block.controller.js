@@ -113,7 +113,7 @@
         }
 
         scrollHeightLessOne(contentEl) {
-            return this.activateFullPin && this.fullPin ? { 'max-height': this.ScrollUtil.scrollHeightLessOne(contentEl) + 'px' } : {};
+            return this.activateFullPin && this.fullPin ? { 'max-height': this.ScrollUtil.scrollHeightLessOne(contentEl) + 'px', 'padding-bottom': '25px' } : {};
         }
 
         getDescriptionHtml(pin) {

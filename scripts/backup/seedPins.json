@@ -1241,12 +1241,14 @@
     "id": 43,
     "rootThread": false,
     "title": "Report: Haswell-E, X99, DDR4 to Arrive August 29",
-    "description": "Expect three CPUs to arrive: The Core i7-5820K, the Core i7-5930K, and the Core i7-5960X. Rumored specifications are in the table.",
+    "description": "<p class=\"paragraph\"> Expect three CPUs to arrive: The Core i7-5820K, the Core i7-5930K, and the Core i7-5960X. Rumored specifications are in the table. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$INTC</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687843557668,\"blocks\":[{\"id\":\"-s1XQyA0tV\",\"type\":\"paragraph\",\"data\":{\"text\":\"Expect three CPUs to arrive: The Core i7-5820K, the Core i7-5930K, and the Core i7-5960X. Rumored specifications are in the table.\"}},{\"id\":\"lnl58b_K1B\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$INTC</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "http://www.tomshardware.com/news/haswell-e-ddr4-x99-launch-date,27460.html",
     "utcStartDateTime": "2014-08-29T07:00:00.000Z",
-    "utcEndDateTime": "2014-08-30T07:00:00.000Z",
+    "utcEndDateTime": "2014-08-31T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-15T05:50:37.819Z",
+    "utcUpdatedDateTime": "2023-06-27T05:26:04.336Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -1261,6 +1263,13 @@
         "originalWidth": 500,
         "originalHeight": 464,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 127,
+        "tag": "$INTC",
+        "pinId": 43
       }
     ],
     "userId": 1
@@ -3892,12 +3901,14 @@
     "id": 125,
     "rootThread": false,
     "title": "Volkswagen unveils the I.D., a long-range electric car due in 2020",
-    "description": "250-300 mile range and an autonomous mode is coming by 2020.",
+    "description": "<p class=\"paragraph\"> 250-300 mile range and an autonomous mode is coming by 2020. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$VWAGY</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687843597682,\"blocks\":[{\"id\":\"yMatAWK754\",\"type\":\"paragraph\",\"data\":{\"text\":\"250-300 mile range and an autonomous mode is coming by 2020.\"}},{\"id\":\"Fce4GM2c1y\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$VWAGY</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "http://arstechnica.com/cars/2016/09/volkswagens-unveils-the-i-d-a-long-range-electric-car-due-in-2020/",
     "utcStartDateTime": "2020-01-01T08:00:00.000Z",
-    "utcEndDateTime": "2020-01-02T08:00:00.000Z",
+    "utcEndDateTime": "2020-01-03T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-15T05:50:37.959Z",
+    "utcUpdatedDateTime": "2023-06-27T05:26:41.430Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3912,6 +3923,13 @@
         "originalWidth": 760,
         "originalHeight": 380,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 128,
+        "tag": "$VWAGY",
+        "pinId": 125
       }
     ],
     "userId": 1
@@ -11872,13 +11890,15 @@
     "id": 216,
     "rootThread": false,
     "title": "2025 Rivian Adventure Van, the only OEM off-road-capable adventure van on the market",
-    "description": "<p class=\"paragraph\"> The electric Rivian Adventure Van will be an off-road-capable, go-anywhere overland camper van likely based on the R1T/R1S. </p><p class=\"paragraph\"> WHAT IT IS: Basically conceived as the&nbsp;<a href=\"https://www.motortrend.com/cars/rivian/r1t/\" target=\"_blank\">progeny of a Rivian R1T</a>&nbsp;and a&nbsp;<a href=\"https://www.motortrend.com/reviews/163-1304-travel-sportsmobile-4wd-ford-e-series/\" target=\"_blank\">Sportsmobile Ford Econoline</a>, the Rivian Adventure Van (the name may change; R1V has a nice ring to it, no?) aims to live up to Rivian's philosophy of \"keeping the world adventurous forever.\" The Adventure Van will be an R1-based electric off-roader, with clever features&nbsp;<a href=\"https://www.motortrend.com/features/rivian-r1t-camp-kitchen-review-overview/\" target=\"_blank\">like Rivian's camp kitchen</a>, and likely the ability to convert its seats into beds—allowing for days of off-the-grid living. </p><p class=\"paragraph\"> WHY IT MATTERS:&nbsp;With most automakers just now waking up to the amount of money to be made by investing in the overland craze, the Rivian Adventure Van would take things a step further by creating the only OEM off-road-capable adventure van on the market. The Adventure Van would harken back to the days when you could roll into your local Volkswagen or Toyota dealer and leave with a Westfalia or Chinook. </p><p class=\"paragraph\"> PLATFORM AND POWERTRAIN:&nbsp;Although Rivian could conceivably build the Adventure Van from its&nbsp;<a href=\"https://www.motortrend.com/news/2022-rivian-prime-delivery-van-first-look-review/\">commercial-oriented Prime Van</a>&nbsp;or RCV, we believe it'll instead use the more off-road-capable platform under the R1T pickup and R1S SUV. Hard details from our sources are scarce, as it's still early days for the Adventure Van, but we believe it will be available with multiple battery and motor options and come standard with the company's trick hydropneumatic suspension. We suspect&nbsp;<a href=\"https://www.motortrend.com/news/rivian-r1t-r1s-two-motor-standard-battery-pack-details/\">both dual- and quad-motor powertrains</a>&nbsp;will be available, with as much as 1,200 hp and 1,200 lb-ft on tap, and Rivian's 180-kWh Max battery pack. </p>",
+    "description": "<p class=\"paragraph\">  The electric Rivian Adventure Van will be an off-road-capable, go-anywhere overland camper van likely based on the R1T/R1S.  </p><p class=\"paragraph\">  WHAT IT IS: Basically conceived as the&nbsp;<a href=\"https://www.motortrend.com/cars/rivian/r1t/\" target=\"_blank\">progeny of a Rivian R1T</a>&nbsp;and a&nbsp;<a href=\"https://www.motortrend.com/reviews/163-1304-travel-sportsmobile-4wd-ford-e-series/\" target=\"_blank\">Sportsmobile Ford Econoline</a>, the Rivian Adventure Van (the name may change; R1V has a nice ring to it, no?) aims to live up to Rivian's philosophy of \"keeping the world adventurous forever.\" The Adventure Van will be an R1-based electric off-roader, with clever features&nbsp;<a href=\"https://www.motortrend.com/features/rivian-r1t-camp-kitchen-review-overview/\" target=\"_blank\">like Rivian's camp kitchen</a>, and likely the ability to convert its seats into beds—allowing for days of off-the-grid living.  </p><p class=\"paragraph\">  WHY IT MATTERS:&nbsp;With most automakers just now waking up to the amount of money to be made by investing in the overland craze, the Rivian Adventure Van would take things a step further by creating the only OEM off-road-capable adventure van on the market. The Adventure Van would harken back to the days when you could roll into your local Volkswagen or Toyota dealer and leave with a Westfalia or Chinook.  </p><p class=\"paragraph\">  PLATFORM AND POWERTRAIN:&nbsp;Although Rivian could conceivably build the Adventure Van from its&nbsp;<a href=\"https://www.motortrend.com/news/2022-rivian-prime-delivery-van-first-look-review/\">commercial-oriented Prime Van</a>&nbsp;or RCV, we believe it'll instead use the more off-road-capable platform under the R1T pickup and R1S SUV. Hard details from our sources are scarce, as it's still early days for the Adventure Van, but we believe it will be available with multiple battery and motor options and come standard with the company's trick hydropneumatic suspension. We suspect&nbsp;<a href=\"https://www.motortrend.com/news/rivian-r1t-r1s-two-motor-standard-battery-pack-details/\">both dual- and quad-motor powertrains</a>&nbsp;will be available, with as much as 1,200 hp and 1,200 lb-ft on tap, and Rivian's 180-kWh Max battery pack.  </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$RIVN</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687843619394,\"blocks\":[{\"id\":\"RQisyb__LA\",\"type\":\"paragraph\",\"data\":{\"text\":\" The electric Rivian Adventure Van will be an off-road-capable, go-anywhere overland camper van likely based on the R1T/R1S. \"}},{\"id\":\"W0g_nMJ5G-\",\"type\":\"paragraph\",\"data\":{\"text\":\" WHAT IT IS: Basically conceived as the&nbsp;<a href=\\\"https://www.motortrend.com/cars/rivian/r1t/\\\" target=\\\"_blank\\\">progeny of a Rivian R1T</a>&nbsp;and a&nbsp;<a href=\\\"https://www.motortrend.com/reviews/163-1304-travel-sportsmobile-4wd-ford-e-series/\\\" target=\\\"_blank\\\">Sportsmobile Ford Econoline</a>, the Rivian Adventure Van (the name may change; R1V has a nice ring to it, no?) aims to live up to Rivian's philosophy of \\\"keeping the world adventurous forever.\\\" The Adventure Van will be an R1-based electric off-roader, with clever features&nbsp;<a href=\\\"https://www.motortrend.com/features/rivian-r1t-camp-kitchen-review-overview/\\\" target=\\\"_blank\\\">like Rivian's camp kitchen</a>, and likely the ability to convert its seats into beds—allowing for days of off-the-grid living. \"}},{\"id\":\"rnmE6qxCx3\",\"type\":\"paragraph\",\"data\":{\"text\":\" WHY IT MATTERS:&nbsp;With most automakers just now waking up to the amount of money to be made by investing in the overland craze, the Rivian Adventure Van would take things a step further by creating the only OEM off-road-capable adventure van on the market. The Adventure Van would harken back to the days when you could roll into your local Volkswagen or Toyota dealer and leave with a Westfalia or Chinook. \"}},{\"id\":\"5YsTGDXeUJ\",\"type\":\"paragraph\",\"data\":{\"text\":\" PLATFORM AND POWERTRAIN:&nbsp;Although Rivian could conceivably build the Adventure Van from its&nbsp;<a href=\\\"https://www.motortrend.com/news/2022-rivian-prime-delivery-van-first-look-review/\\\">commercial-oriented Prime Van</a>&nbsp;or RCV, we believe it'll instead use the more off-road-capable platform under the R1T pickup and R1S SUV. Hard details from our sources are scarce, as it's still early days for the Adventure Van, but we believe it will be available with multiple battery and motor options and come standard with the company's trick hydropneumatic suspension. We suspect&nbsp;<a href=\\\"https://www.motortrend.com/news/rivian-r1t-r1s-two-motor-standard-battery-pack-details/\\\">both dual- and quad-motor powertrains</a>&nbsp;will be available, with as much as 1,200 hp and 1,200 lb-ft on tap, and Rivian's 180-kWh Max battery pack. \"}},{\"id\":\"bsu33AtoZJ\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$RIVN</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.motortrend.com/news/2025-rivian-adventure-van-electric-off-road-overland-camper-rv/",
     "price": 125000,
     "utcStartDateTime": "2025-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2026-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2026-01-03T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-23T23:48:10.234Z",
+    "utcUpdatedDateTime": "2023-06-27T05:33:59.381Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -11893,6 +11913,13 @@
         "originalWidth": 1920,
         "originalHeight": 1080,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 130,
+        "tag": "$RIVN",
+        "pinId": 216
       }
     ],
     "favorites": [
