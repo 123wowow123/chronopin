@@ -315,7 +315,7 @@
     ],
     "mentions": [
       {
-        "id": 158,
+        "id": 1,
         "tag": "$AMD",
         "pinId": 11
       }
@@ -382,7 +382,7 @@
     ],
     "mentions": [
       {
-        "id": 149,
+        "id": 2,
         "tag": "$TSLA",
         "pinId": 13
       }
@@ -508,7 +508,7 @@
     ],
     "mentions": [
       {
-        "id": 133,
+        "id": 3,
         "tag": "$QCOM",
         "pinId": 17
       }
@@ -1022,7 +1022,7 @@
     ],
     "mentions": [
       {
-        "id": 135,
+        "id": 4,
         "tag": "$NVDA",
         "pinId": 34
       }
@@ -1089,7 +1089,7 @@
     ],
     "mentions": [
       {
-        "id": 161,
+        "id": 5,
         "tag": "$PHG",
         "pinId": 36
       }
@@ -1308,7 +1308,7 @@
     ],
     "mentions": [
       {
-        "id": 127,
+        "id": 6,
         "tag": "$INTC",
         "pinId": 43
       }
@@ -1375,7 +1375,7 @@
     ],
     "mentions": [
       {
-        "id": 159,
+        "id": 7,
         "tag": "$AVGO",
         "pinId": 45
       }
@@ -1560,7 +1560,7 @@
     ],
     "mentions": [
       {
-        "id": 148,
+        "id": 8,
         "tag": "$TSLA",
         "pinId": 51
       }
@@ -1912,12 +1912,12 @@
     },
     "mentions": [
       {
-        "id": 1,
+        "id": 9,
         "tag": "#TokyoAnimeAward",
         "pinId": 332
       },
       {
-        "id": 2,
+        "id": 10,
         "tag": "#TelevisionCategory",
         "pinId": 332
       }
@@ -1954,7 +1954,7 @@
     ],
     "mentions": [
       {
-        "id": 132,
+        "id": 11,
         "tag": "$QCOM",
         "pinId": 63
       }
@@ -2008,12 +2008,12 @@
     },
     "mentions": [
       {
-        "id": 3,
+        "id": 12,
         "tag": "#TelevisionCategory",
         "pinId": 333
       },
       {
-        "id": 4,
+        "id": 13,
         "tag": "#TokyoAnimeAward",
         "pinId": 333
       }
@@ -2154,12 +2154,12 @@
     },
     "mentions": [
       {
-        "id": 5,
+        "id": 14,
         "tag": "#TokyoAnimeAward",
         "pinId": 334
       },
       {
-        "id": 6,
+        "id": 15,
         "tag": "#TelevisionCategory",
         "pinId": 334
       }
@@ -2323,7 +2323,7 @@
     ],
     "mentions": [
       {
-        "id": 157,
+        "id": 16,
         "tag": "$DELL",
         "pinId": 72
       }
@@ -3182,7 +3182,7 @@
     ],
     "favorites": [
       {
-        "id": 16,
+        "id": 1,
         "utcCreatedDateTime": "2023-06-27T06:16:47.783Z",
         "userId": 1,
         "pinId": 101
@@ -3295,12 +3295,12 @@
     },
     "mentions": [
       {
-        "id": 7,
+        "id": 17,
         "tag": "#TokyoAnimeAward",
         "pinId": 335
       },
       {
-        "id": 8,
+        "id": 18,
         "tag": "#TelevisionCategory",
         "pinId": 335
       }
@@ -3311,14 +3311,15 @@
     "id": 105,
     "rootThread": false,
     "title": "Inside Tesla's $5 Billion Gigafactory - Visual Capitalist",
-    "description": "The $5 Billion Tesla Gigfactory will set a new precedent for economies of scale in battery production, creating demand for graphite, cobalt, and lithium. The name gigafactory comes from the plant's planned annual battery production capacity of 35 gigawatt-hours, which Tesla said on Wednesday it would achieve by 2018.",
+    "description": "<p class=\"paragraph\"> The $5 Billion Tesla Gigfactory will set a new precedent for economies of scale in battery production, creating demand for graphite, cobalt, and lithium. The name gigafactory comes from the plant's planned annual battery production capacity of 35 gigawatt-hours, which Tesla said on Wednesday it would achieve by 2018. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$TSLA</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687897509074,\"blocks\":[{\"id\":\"Tz47HnMrWH\",\"type\":\"paragraph\",\"data\":{\"text\":\"The $5 Billion Tesla Gigfactory will set a new precedent for economies of scale in battery production, creating demand for graphite, cobalt, and lithium. The name gigafactory comes from the plant's planned annual battery production capacity of 35 gigawatt-hours, which Tesla said on Wednesday it would achieve by 2018.\"}},{\"id\":\"0ip5F2Ls6M\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$TSLA</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "http://www.visualcapitalist.com/inside-teslas-5-billion-gigafactory/",
     "price": 5000000000,
     "utcStartDateTime": "2018-01-01T08:00:00.000Z",
-    "utcEndDateTime": "2018-01-03T08:00:00.000Z",
+    "utcEndDateTime": "2018-01-04T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-07-23T18:52:56.814Z",
-    "utcUpdatedDateTime": "2023-01-24T05:33:44.489Z",
+    "utcUpdatedDateTime": "2023-06-27T20:25:18.858Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3333,6 +3334,13 @@
         "originalWidth": 890,
         "originalHeight": 7008,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 19,
+        "tag": "$TSLA",
+        "pinId": 105
       }
     ],
     "userId": 1
@@ -3396,7 +3404,7 @@
     ],
     "mentions": [
       {
-        "id": 155,
+        "id": 20,
         "tag": "$GFS",
         "pinId": 107
       }
@@ -3461,7 +3469,7 @@
     ],
     "mentions": [
       {
-        "id": 134,
+        "id": 21,
         "tag": "$INTC",
         "pinId": 109
       }
@@ -3498,7 +3506,7 @@
     ],
     "mentions": [
       {
-        "id": 154,
+        "id": 22,
         "tag": "$INTC",
         "pinId": 110
       }
@@ -3622,7 +3630,7 @@
     ],
     "mentions": [
       {
-        "id": 160,
+        "id": 23,
         "tag": "$AAPL",
         "pinId": 114
       }
@@ -3689,7 +3697,7 @@
     ],
     "mentions": [
       {
-        "id": 9,
+        "id": 24,
         "tag": "$TSLA",
         "pinId": 116
       }
@@ -3794,7 +3802,7 @@
     ],
     "mentions": [
       {
-        "id": 156,
+        "id": 25,
         "tag": "$AMD",
         "pinId": 119
       }
@@ -3820,13 +3828,13 @@
     },
     "mentions": [
       {
-        "id": 10,
-        "tag": "#TelevisionCategory",
+        "id": 26,
+        "tag": "#TokyoAnimeAward",
         "pinId": 336
       },
       {
-        "id": 11,
-        "tag": "#TokyoAnimeAward",
+        "id": 27,
+        "tag": "#TelevisionCategory",
         "pinId": 336
       }
     ],
@@ -3862,7 +3870,7 @@
     ],
     "mentions": [
       {
-        "id": 136,
+        "id": 28,
         "tag": "$MSFT",
         "pinId": 120
       }
@@ -3958,7 +3966,7 @@
     ],
     "mentions": [
       {
-        "id": 12,
+        "id": 29,
         "tag": "$AAPL",
         "pinId": 123
       }
@@ -3995,7 +4003,7 @@
     ],
     "locations": [
       {
-        "id": 80,
+        "id": 4,
         "address": "Consumer Electronics Show in Las Vegas, Nevada",
         "order": 0,
         "pinId": 124
@@ -4003,13 +4011,13 @@
     ],
     "mentions": [
       {
-        "id": 145,
-        "tag": "$VWAGY",
+        "id": 30,
+        "tag": "$NVDA",
         "pinId": 124
       },
       {
-        "id": 146,
-        "tag": "$NVDA",
+        "id": 31,
+        "tag": "$VWAGY",
         "pinId": 124
       }
     ],
@@ -4034,13 +4042,13 @@
     },
     "mentions": [
       {
-        "id": 13,
-        "tag": "#TokyoAnimeAward",
+        "id": 32,
+        "tag": "#TelevisionCategory",
         "pinId": 337
       },
       {
-        "id": 14,
-        "tag": "#TelevisionCategory",
+        "id": 33,
+        "tag": "#TokyoAnimeAward",
         "pinId": 337
       }
     ],
@@ -4076,7 +4084,7 @@
     ],
     "mentions": [
       {
-        "id": 128,
+        "id": 34,
         "tag": "$VWAGY",
         "pinId": 125
       }
@@ -4113,7 +4121,7 @@
     ],
     "mentions": [
       {
-        "id": 15,
+        "id": 35,
         "tag": "$AMZN",
         "pinId": 126
       }
@@ -4151,14 +4159,14 @@
     "locations": [
       {
         "id": 5,
-        "address": "Gothenburg",
-        "order": 0,
+        "address": "Helsingborg",
+        "order": 1,
         "pinId": 127
       },
       {
         "id": 6,
-        "address": "Helsingborg",
-        "order": 1,
+        "address": "Gothenburg",
+        "order": 0,
         "pinId": 127
       }
     ],
@@ -4299,7 +4307,7 @@
     ],
     "mentions": [
       {
-        "id": 16,
+        "id": 36,
         "tag": "$INTC",
         "pinId": 131
       }
@@ -4480,7 +4488,7 @@
     ],
     "locations": [
       {
-        "id": 87,
+        "id": 10,
         "address": "Waukee, Iowa",
         "order": 0,
         "pinId": 135
@@ -4488,23 +4496,23 @@
     ],
     "mentions": [
       {
-        "id": 172,
-        "tag": "$1",
+        "id": 37,
+        "tag": "$AAPL",
         "pinId": 135
       },
       {
-        "id": 173,
-        "tag": "$100",
-        "pinId": 135
-      },
-      {
-        "id": 174,
+        "id": 38,
         "tag": "$208",
         "pinId": 135
       },
       {
-        "id": 175,
-        "tag": "$AAPL",
+        "id": 39,
+        "tag": "$1",
+        "pinId": 135
+      },
+      {
+        "id": 40,
+        "tag": "$100",
         "pinId": 135
       }
     ],
@@ -4596,12 +4604,12 @@
     },
     "mentions": [
       {
-        "id": 17,
+        "id": 41,
         "tag": "#TelevisionCategory",
         "pinId": 338
       },
       {
-        "id": 18,
+        "id": 42,
         "tag": "#TokyoAnimeAward",
         "pinId": 338
       }
@@ -4638,7 +4646,7 @@
     ],
     "locations": [
       {
-        "id": 86,
+        "id": 12,
         "address": "Battersea Power Station, London",
         "order": 0,
         "pinId": 138
@@ -4646,7 +4654,7 @@
     ],
     "mentions": [
       {
-        "id": 171,
+        "id": 43,
         "tag": "$AAPL",
         "pinId": 138
       }
@@ -4735,12 +4743,12 @@
     },
     "mentions": [
       {
-        "id": 19,
+        "id": 44,
         "tag": "#TokyoAnimeAward",
         "pinId": 339
       },
       {
-        "id": 20,
+        "id": 45,
         "tag": "#TelevisionCategory",
         "pinId": 339
       }
@@ -5036,7 +5044,7 @@
     ],
     "mentions": [
       {
-        "id": 21,
+        "id": 46,
         "tag": "#crypto",
         "pinId": 197
       }
@@ -5490,7 +5498,7 @@
     ],
     "mentions": [
       {
-        "id": 22,
+        "id": 47,
         "tag": "$AAPL",
         "pinId": 391
       }
@@ -5515,7 +5523,7 @@
     },
     "favorites": [
       {
-        "id": 1,
+        "id": 2,
         "utcCreatedDateTime": "2023-06-13T18:53:42.052Z",
         "userId": 3,
         "pinId": 269
@@ -5561,7 +5569,7 @@
     },
     "merchants": [
       {
-        "id": 60,
+        "id": 20,
         "label": "GameStop MSI GeForce RTX 4090 GAMING TRIO 24G",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fpc-gaming%2Fpc-components%2Fvideo-cards%2Fproducts%2Fmsi-geforce-rtx-4090-gaming-trio-24g-graphics-card%2F352628.html",
         "price": 1599.99,
@@ -5571,7 +5579,7 @@
     ],
     "mentions": [
       {
-        "id": 115,
+        "id": 48,
         "tag": "$NVDA",
         "pinId": 395
       }
@@ -5608,7 +5616,7 @@
     ],
     "merchants": [
       {
-        "id": 20,
+        "id": 21,
         "label": "Gamestop Pre-Owned PS5",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fa-plague-tale-requiem---playstation-5%2F351728.html",
         "price": 44.99,
@@ -5667,7 +5675,7 @@
     ],
     "merchants": [
       {
-        "id": 21,
+        "id": 22,
         "label": "Gamestop Pre-Owned Switch",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fnintendo-switch%2Fproducts%2Fmario-plus-rabbids-sparks-of-hope---nintendo-switch%2F351883.html",
         "price": 44.99,
@@ -5726,7 +5734,7 @@
     ],
     "merchants": [
       {
-        "id": 22,
+        "id": 23,
         "label": "Gamestop Pre-Owned",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fnintendo-switch%2Fproducts%2Fbayonetta-3---nintendo-switch%2F351786.html",
         "price": 49.99,
@@ -5766,7 +5774,7 @@
     ],
     "merchants": [
       {
-        "id": 23,
+        "id": 24,
         "label": "Gamestop Pre-Owned",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fcall-of-duty-modern-warfare-ii---playstation-5%2F349162.html",
         "price": 49.99,
@@ -5827,7 +5835,7 @@
     ],
     "merchants": [
       {
-        "id": 24,
+        "id": 25,
         "label": "Gamestop Pre-Owned PS5",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fsifu-vengeance-edition---playstation-5%2F337595.html",
         "price": 44.99,
@@ -5864,7 +5872,7 @@
     ],
     "merchants": [
       {
-        "id": 25,
+        "id": 26,
         "label": "Snapmaker",
         "url": "https://us.snapmaker.com/products/snapmaker-j1-independent-dual-extruder-3d-printer",
         "price": 1399,
@@ -5904,7 +5912,7 @@
     ],
     "merchants": [
       {
-        "id": 26,
+        "id": 27,
         "label": "PlayStation 5 Console Digital Bundle",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-5-digital-edition-console-with-god-of-war-ragnarok-digital-edition-bundle%2F352654.html",
         "price": 459.99,
@@ -5982,7 +5990,7 @@
     ],
     "merchants": [
       {
-        "id": 27,
+        "id": 28,
         "label": "Gamestop Pre-Owned Switch",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fnintendo-switch%2Fproducts%2Fpokemon-scarlet---nintendo-switch%2F349083.html",
         "price": 54.99,
@@ -6060,7 +6068,7 @@
     ],
     "merchants": [
       {
-        "id": 28,
+        "id": 29,
         "label": "Gamestop PS5",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fneed-for-speed-unbound---playstation-5%2F352604.html",
         "price": 34.99,
@@ -6100,7 +6108,7 @@
     ],
     "merchants": [
       {
-        "id": 29,
+        "id": 30,
         "label": "Gamestop Pre-Owned PS5",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fthe-callisto-protocol-day-one-edition---playstation-5%2F357344.html",
         "price": 27.99,
@@ -6140,7 +6148,7 @@
     ],
     "merchants": [
       {
-        "id": 30,
+        "id": 31,
         "label": "Gamestop Pre-Owned PS5",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fmarvels-midnight-suns---playstation-5%2F349110.html",
         "price": 44.99,
@@ -6245,12 +6253,12 @@
     },
     "mentions": [
       {
-        "id": 23,
+        "id": 49,
         "tag": "#TokyoAnimeAward",
         "pinId": 340
       },
       {
-        "id": 24,
+        "id": 50,
         "tag": "#TelevisionCategory",
         "pinId": 340
       }
@@ -6287,7 +6295,7 @@
     ],
     "mentions": [
       {
-        "id": 147,
+        "id": 51,
         "tag": "$VWAGY",
         "pinId": 140
       }
@@ -6421,31 +6429,7 @@
     ],
     "merchants": [
       {
-        "id": 31,
-        "label": "Plushible Halloween Candy Bags",
-        "url": "https://a.co/d/4jQwcnc",
-        "price": 19.99,
-        "order": 0,
-        "pinId": 226
-      },
-      {
         "id": 32,
-        "label": "Tegion Reusable Silicone Straws",
-        "url": "https://a.co/d/fTIFcq4",
-        "price": 11.99,
-        "order": 1,
-        "pinId": 226
-      },
-      {
-        "id": 33,
-        "label": "UPPAbaby VISTA Upper Adapters",
-        "url": "https://amzn.to/3WBMhBj",
-        "price": 29.99,
-        "order": 2,
-        "pinId": 226
-      },
-      {
-        "id": 34,
         "label": "Doctor's Best DHA 500",
         "url": "https://a.co/d/e0Ibvji",
         "price": 40.45,
@@ -6453,11 +6437,27 @@
         "pinId": 226
       },
       {
+        "id": 33,
+        "label": "Plushible Halloween Candy Bags",
+        "url": "https://a.co/d/4jQwcnc",
+        "price": 19.99,
+        "order": 0,
+        "pinId": 226
+      },
+      {
+        "id": 34,
+        "label": "Tegion Reusable Silicone Straws",
+        "url": "https://a.co/d/fTIFcq4",
+        "price": 11.99,
+        "order": 1,
+        "pinId": 226
+      },
+      {
         "id": 35,
-        "label": "Secura Visual Countdown Timer",
-        "url": "https://a.co/d/cI0Vejb",
-        "price": 18.99,
-        "order": 4,
+        "label": "UPPAbaby VISTA Upper Adapters",
+        "url": "https://amzn.to/3WBMhBj",
+        "price": 29.99,
+        "order": 2,
         "pinId": 226
       },
       {
@@ -6470,6 +6470,14 @@
       },
       {
         "id": 37,
+        "label": "Secura Visual Countdown Timer",
+        "url": "https://a.co/d/cI0Vejb",
+        "price": 18.99,
+        "order": 4,
+        "pinId": 226
+      },
+      {
+        "id": 38,
         "label": "Extra Large Ceramic Coffee",
         "url": "https://a.co/d/0glb5Wg",
         "price": 28.99,
@@ -6479,7 +6487,7 @@
     ],
     "favorites": [
       {
-        "id": 2,
+        "id": 3,
         "utcCreatedDateTime": "2023-06-03T17:50:58.520Z",
         "userId": 1,
         "pinId": 226
@@ -6577,7 +6585,7 @@
     ],
     "merchants": [
       {
-        "id": 38,
+        "id": 39,
         "label": "Amazon",
         "url": "https://amzn.to/42NZacZ",
         "price": 129.99,
@@ -6617,20 +6625,20 @@
     "locations": [
       {
         "id": 17,
-        "address": "LVCC Central Hall, Las Vegas",
-        "order": 0,
-        "pinId": 350
-      },
-      {
-        "id": 18,
         "address": "ARIA, Las Vegas",
         "order": 4,
         "pinId": 350
       },
       {
-        "id": 19,
+        "id": 18,
         "address": "LVCC North Hall, Las Vegas",
         "order": 2,
+        "pinId": 350
+      },
+      {
+        "id": 19,
+        "address": "LVCC Central Hall, Las Vegas",
+        "order": 0,
         "pinId": 350
       },
       {
@@ -6692,7 +6700,7 @@
     ],
     "mentions": [
       {
-        "id": 25,
+        "id": 52,
         "tag": "#Strike",
         "pinId": 364
       }
@@ -6754,7 +6762,7 @@
     ],
     "mentions": [
       {
-        "id": 26,
+        "id": 53,
         "tag": "$TSLA",
         "pinId": 383
       }
@@ -6829,7 +6837,7 @@
     ],
     "merchants": [
       {
-        "id": 39,
+        "id": 40,
         "label": "Gamestop Pre-Owned",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fdead-space---playstation-5%2F359611.html",
         "price": 49.99,
@@ -6869,13 +6877,13 @@
     ],
     "mentions": [
       {
-        "id": 27,
-        "tag": "#Jobs",
+        "id": 54,
+        "tag": "#ADP",
         "pinId": 235
       },
       {
-        "id": 28,
-        "tag": "#ADP",
+        "id": 55,
+        "tag": "#Jobs",
         "pinId": 235
       }
     ],
@@ -6932,7 +6940,7 @@
     ],
     "merchants": [
       {
-        "id": 40,
+        "id": 41,
         "label": "Amazon",
         "url": "https://amzn.to/3plPkRV",
         "price": 249.99,
@@ -6980,12 +6988,12 @@
     ],
     "mentions": [
       {
-        "id": 29,
+        "id": 56,
         "tag": "#Europe",
         "pinId": 365
       },
       {
-        "id": 30,
+        "id": 57,
         "tag": "#Stike",
         "pinId": 365
       }
@@ -7041,7 +7049,7 @@
     ],
     "merchants": [
       {
-        "id": 41,
+        "id": 42,
         "label": "Gamestop Pre-Owned",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fhogwarts-legacy---playstation-5%2F359794.html",
         "price": 64.99,
@@ -7097,7 +7105,7 @@
     ],
     "merchants": [
       {
-        "id": 42,
+        "id": 43,
         "label": "Unistellar",
         "url": "https://shop.unistellar.com/products/equinox-2?variant=40467965018135",
         "price": 2499,
@@ -7138,7 +7146,7 @@
     ],
     "merchants": [
       {
-        "id": 43,
+        "id": 44,
         "label": "GameStop: Sony PlayStation VR2 Horizon Bundle",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2-horizon-call-of-the-mountain-bundle%2F393119.html",
         "price": 599.99,
@@ -7146,7 +7154,7 @@
         "pinId": 142
       },
       {
-        "id": 44,
+        "id": 45,
         "label": "GameStop: Sony PlayStation VR2",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2%2F393118.html",
         "price": 549.99,
@@ -7154,7 +7162,7 @@
         "pinId": 142
       },
       {
-        "id": 45,
+        "id": 46,
         "label": "Gamestop Power Up get exclusive offers, earn monthly rewards and more",
         "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007594&type=3&subid=",
         "price": 24.99,
@@ -7164,7 +7172,7 @@
     ],
     "mentions": [
       {
-        "id": 31,
+        "id": 58,
         "tag": "$SONY",
         "pinId": 142
       }
@@ -7202,12 +7210,12 @@
     ],
     "mentions": [
       {
-        "id": 32,
+        "id": 59,
         "tag": "#ADP",
         "pinId": 234
       },
       {
-        "id": 33,
+        "id": 60,
         "tag": "#Jobs",
         "pinId": 234
       }
@@ -7318,7 +7326,7 @@
     ],
     "merchants": [
       {
-        "id": 46,
+        "id": 47,
         "label": "Gamestop",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fstar-wars-jedi-survivor---playstation-5%2F392881.html",
         "price": 69.99,
@@ -7366,7 +7374,7 @@
     ],
     "mentions": [
       {
-        "id": 34,
+        "id": 61,
         "tag": "#Strike",
         "pinId": 363
       }
@@ -7421,7 +7429,7 @@
     ],
     "merchants": [
       {
-        "id": 47,
+        "id": 48,
         "label": "Gamestop Pre-Owned",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fresident-evil-4---playstation-5%2F391500.html",
         "price": 54.99,
@@ -7469,7 +7477,7 @@
     ],
     "mentions": [
       {
-        "id": 35,
+        "id": 62,
         "tag": "#Strike",
         "pinId": 362
       }
@@ -7504,7 +7512,7 @@
     ],
     "mentions": [
       {
-        "id": 36,
+        "id": 63,
         "tag": "#inflation",
         "pinId": 227
       }
@@ -7542,12 +7550,12 @@
     ],
     "mentions": [
       {
-        "id": 37,
+        "id": 64,
         "tag": "#ADP",
         "pinId": 232
       },
       {
-        "id": 38,
+        "id": 65,
         "tag": "#Jobs",
         "pinId": 232
       }
@@ -7614,7 +7622,7 @@
     },
     "favorites": [
       {
-        "id": 3,
+        "id": 4,
         "utcCreatedDateTime": "2023-06-13T16:26:44.556Z",
         "userId": 3,
         "pinId": 254
@@ -7658,7 +7666,7 @@
     },
     "favorites": [
       {
-        "id": 4,
+        "id": 5,
         "utcCreatedDateTime": "2023-06-13T16:27:04.322Z",
         "userId": 3,
         "pinId": 260
@@ -7907,12 +7915,12 @@
     ],
     "mentions": [
       {
-        "id": 39,
+        "id": 66,
         "tag": "#Jobs",
         "pinId": 233
       },
       {
-        "id": 40,
+        "id": 67,
         "tag": "#ADP",
         "pinId": 233
       }
@@ -7966,32 +7974,32 @@
     "locations": [
       {
         "id": 28,
-        "address": "Burbank",
-        "order": 3,
-        "pinId": 361
-      },
-      {
-        "id": 29,
         "address": "New York City",
         "order": 1,
         "pinId": 361
       },
       {
+        "id": 29,
+        "address": "Burbank",
+        "order": 3,
+        "pinId": 361
+      },
+      {
         "id": 30,
-        "address": "Los Angeles",
-        "order": 0,
+        "address": "Culver City",
+        "order": 2,
         "pinId": 361
       },
       {
         "id": 31,
-        "address": "Culver City",
-        "order": 2,
+        "address": "Los Angeles",
+        "order": 0,
         "pinId": 361
       }
     ],
     "mentions": [
       {
-        "id": 41,
+        "id": 68,
         "tag": "#Strike",
         "pinId": 361
       }
@@ -8028,7 +8036,7 @@
     ],
     "mentions": [
       {
-        "id": 42,
+        "id": 69,
         "tag": "#rates",
         "pinId": 198
       }
@@ -8129,7 +8137,7 @@
     ],
     "mentions": [
       {
-        "id": 43,
+        "id": 70,
         "tag": "#rates",
         "pinId": 203
       }
@@ -8201,43 +8209,43 @@
     ],
     "mentions": [
       {
-        "id": 117,
-        "tag": "$AAPL",
-        "pinId": 210
-      },
-      {
-        "id": 118,
-        "tag": "$MSFT",
-        "pinId": 210
-      },
-      {
-        "id": 119,
-        "tag": "$GOOG",
-        "pinId": 210
-      },
-      {
-        "id": 120,
-        "tag": "$META",
-        "pinId": 210
-      },
-      {
-        "id": 121,
-        "tag": "$NVDA",
-        "pinId": 210
-      },
-      {
-        "id": 122,
+        "id": 71,
         "tag": "$AMZN",
         "pinId": 210
       },
       {
-        "id": 123,
+        "id": 72,
+        "tag": "$NVDA",
+        "pinId": 210
+      },
+      {
+        "id": 73,
+        "tag": "$AAPL",
+        "pinId": 210
+      },
+      {
+        "id": 74,
+        "tag": "$MSFT",
+        "pinId": 210
+      },
+      {
+        "id": 75,
+        "tag": "$TSLA",
+        "pinId": 210
+      },
+      {
+        "id": 76,
+        "tag": "$GOOG",
+        "pinId": 210
+      },
+      {
+        "id": 77,
         "tag": "$NFLX",
         "pinId": 210
       },
       {
-        "id": 124,
-        "tag": "$TSLA",
+        "id": 78,
+        "tag": "$META",
         "pinId": 210
       }
     ],
@@ -8271,7 +8279,7 @@
     ],
     "merchants": [
       {
-        "id": 63,
+        "id": 49,
         "label": "GameStop",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fnintendo-switch%2Fproducts%2Fthe-legend-of-zelda-tears-of-the-kingdom---nintendo-switch%2F351955.html",
         "price": 69.99,
@@ -8281,9 +8289,37 @@
     ],
     "mentions": [
       {
-        "id": 153,
+        "id": 79,
         "tag": "$NTDOY",
         "pinId": 145
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 402,
+    "rootThread": false,
+    "title": "Interest coverage ratios have dropped dramatically in 20 largest LBOs",
+    "description": "<p class=\"paragraph\"> Much of the debt used by these funds is floating-rate, tied to a benchmark. Despite being extremely cheap (at the time), very few funds hedged their interest rate exposure. As such, the interest expense that these funds saddled their portfolio companies with soared </p>",
+    "sourceDescription": "{\"time\":1687908352897,\"blocks\":[{\"id\":\"Qa5LK9TF8l\",\"type\":\"paragraph\",\"data\":{\"text\":\"Much of the debt used by these funds is floating-rate, tied to a benchmark. Despite being extremely cheap (at the time), very few funds hedged their interest rate exposure. As such, the interest expense that these funds saddled their portfolio companies with soared\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/lawhon_sam/status/1673441817826586628",
+    "utcStartDateTime": "2023-05-12T07:00:00.000Z",
+    "utcEndDateTime": "2023-05-14T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-27T23:24:56.912Z",
+    "utcUpdatedDateTime": "2023-06-27T23:26:13.178Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 308,
+        "originalUrl": "https://twitter.com/lawhon_sam/status/1673441817826586628",
+        "type": "2",
+        "authorName": "Sam Lawhon",
+        "authorUrl": "https://twitter.com/lawhon_sam",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">In turn, interest coverage ratios have dropped dramatically <a href=\"https://t.co/UEr8KIGYiu\">pic.twitter.com/UEr8KIGYiu</a></p>&mdash; Sam Lawhon (@lawhon_sam) <a href=\"https://twitter.com/lawhon_sam/status/1673441817826586628?ref_src=twsrc%5Etfw\">June 26, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
       }
     ],
     "userId": 1
@@ -8510,7 +8546,7 @@
     ],
     "mentions": [
       {
-        "id": 52,
+        "id": 80,
         "tag": "$NVDA",
         "pinId": 228
       }
@@ -8553,13 +8589,13 @@
     ],
     "mentions": [
       {
-        "id": 53,
-        "tag": "#CoincidentEconomicIndicator",
+        "id": 81,
+        "tag": "#indicator",
         "pinId": 229
       },
       {
-        "id": 54,
-        "tag": "#indicator",
+        "id": 82,
+        "tag": "#CoincidentEconomicIndicator",
         "pinId": 229
       }
     ],
@@ -8600,13 +8636,13 @@
     ],
     "mentions": [
       {
-        "id": 55,
-        "tag": "#inflation",
+        "id": 83,
+        "tag": "#Euro",
         "pinId": 327
       },
       {
-        "id": 56,
-        "tag": "#Euro",
+        "id": 84,
+        "tag": "#inflation",
         "pinId": 327
       }
     ],
@@ -8642,7 +8678,7 @@
     ],
     "mentions": [
       {
-        "id": 57,
+        "id": 85,
         "tag": "#XDate",
         "pinId": 190
       }
@@ -8680,12 +8716,12 @@
     ],
     "mentions": [
       {
-        "id": 58,
+        "id": 86,
         "tag": "#ADP",
         "pinId": 231
       },
       {
-        "id": 59,
+        "id": 87,
         "tag": "#Jobs",
         "pinId": 231
       }
@@ -8729,7 +8765,7 @@
     ],
     "mentions": [
       {
-        "id": 60,
+        "id": 88,
         "tag": "#inflation",
         "pinId": 344
       }
@@ -8766,7 +8802,7 @@
     ],
     "mentions": [
       {
-        "id": 61,
+        "id": 89,
         "tag": "#InitialJoblessClaims",
         "pinId": 373
       }
@@ -8801,7 +8837,7 @@
     ],
     "merchants": [
       {
-        "id": 49,
+        "id": 50,
         "label": "Gamestop",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fstreet-fighter-6---playstation-5%2F357753.html",
         "price": 59.99,
@@ -8915,7 +8951,7 @@
     ],
     "mentions": [
       {
-        "id": 62,
+        "id": 90,
         "tag": "#NonfarmPayroll",
         "pinId": 243
       }
@@ -8953,7 +8989,7 @@
     ],
     "mentions": [
       {
-        "id": 63,
+        "id": 91,
         "tag": "#XDate",
         "pinId": 244
       }
@@ -9010,14 +9046,14 @@
     ],
     "mentions": [
       {
-        "id": 64,
+        "id": 92,
         "tag": "#XDate",
         "pinId": 236
       }
     ],
     "favorites": [
       {
-        "id": 5,
+        "id": 6,
         "utcCreatedDateTime": "2023-06-01T20:12:24.466Z",
         "userId": 1,
         "pinId": 236
@@ -9068,14 +9104,14 @@
     ],
     "mentions": [
       {
-        "id": 65,
+        "id": 93,
         "tag": "$AAPL",
         "pinId": 242
       }
     ],
     "favorites": [
       {
-        "id": 6,
+        "id": 7,
         "utcCreatedDateTime": "2023-06-04T00:44:30.676Z",
         "userId": 1,
         "pinId": 242
@@ -9120,7 +9156,7 @@
     ],
     "merchants": [
       {
-        "id": 62,
+        "id": 51,
         "label": "Gamestop",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fdiablo-iv----playstation-5%2F357780.html",
         "price": 69.99,
@@ -9130,14 +9166,14 @@
     ],
     "mentions": [
       {
-        "id": 152,
+        "id": 94,
         "tag": "$ATVI",
         "pinId": 147
       }
     ],
     "favorites": [
       {
-        "id": 7,
+        "id": 8,
         "utcCreatedDateTime": "2023-06-03T17:54:45.238Z",
         "userId": 1,
         "pinId": 147
@@ -9260,7 +9296,7 @@
     ],
     "mentions": [
       {
-        "id": 66,
+        "id": 95,
         "tag": "#JoblessClaims",
         "pinId": 368
       }
@@ -9297,7 +9333,7 @@
     ],
     "mentions": [
       {
-        "id": 67,
+        "id": 96,
         "tag": "#InitialJoblessClaims",
         "pinId": 372
       }
@@ -9376,7 +9412,7 @@
     ],
     "mentions": [
       {
-        "id": 68,
+        "id": 97,
         "tag": "#MassShooting",
         "pinId": 251
       }
@@ -9439,7 +9475,7 @@
     ],
     "mentions": [
       {
-        "id": 69,
+        "id": 98,
         "tag": "$GM",
         "pinId": 253
       }
@@ -9474,7 +9510,7 @@
     ],
     "mentions": [
       {
-        "id": 70,
+        "id": 99,
         "tag": "#rates",
         "pinId": 240
       }
@@ -9586,7 +9622,7 @@
     ],
     "mentions": [
       {
-        "id": 71,
+        "id": 100,
         "tag": "#ECB",
         "pinId": 307
       }
@@ -9649,7 +9685,7 @@
     ],
     "mentions": [
       {
-        "id": 72,
+        "id": 101,
         "tag": "#JoblessClaims",
         "pinId": 369
       }
@@ -9685,7 +9721,7 @@
     ],
     "mentions": [
       {
-        "id": 73,
+        "id": 102,
         "tag": "#InitialJoblessClaims",
         "pinId": 371
       }
@@ -9804,7 +9840,7 @@
     ],
     "mentions": [
       {
-        "id": 74,
+        "id": 103,
         "tag": "$CSCO",
         "pinId": 346
       }
@@ -9862,7 +9898,7 @@
     ],
     "merchants": [
       {
-        "id": 61,
+        "id": 52,
         "label": "Gamestop",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fplaystation-5%2Fproducts%2Ffinal-fantasy-xvi---playstation-5%2F357774.html",
         "price": 69.99,
@@ -9872,7 +9908,7 @@
     ],
     "mentions": [
       {
-        "id": 151,
+        "id": 104,
         "tag": "$SQNXF",
         "pinId": 164
       }
@@ -9917,17 +9953,17 @@
     ],
     "mentions": [
       {
-        "id": 75,
+        "id": 105,
         "tag": "#rates",
         "pinId": 357
       },
       {
-        "id": 76,
+        "id": 106,
         "tag": "#inflation",
         "pinId": 357
       },
       {
-        "id": 77,
+        "id": 107,
         "tag": "#BOE",
         "pinId": 357
       }
@@ -9961,7 +9997,7 @@
     ],
     "mentions": [
       {
-        "id": 78,
+        "id": 108,
         "tag": "#RecessionIndicator",
         "pinId": 358
       }
@@ -10005,17 +10041,17 @@
     ],
     "mentions": [
       {
-        "id": 79,
+        "id": 109,
         "tag": "#Strike",
         "pinId": 360
       },
       {
-        "id": 80,
+        "id": 110,
         "tag": "$BA",
         "pinId": 360
       },
       {
-        "id": 81,
+        "id": 111,
         "tag": "$SPR",
         "pinId": 360
       }
@@ -10052,37 +10088,37 @@
     ],
     "mentions": [
       {
-        "id": 82,
-        "tag": "$GM",
-        "pinId": 366
-      },
-      {
-        "id": 83,
+        "id": 112,
         "tag": "$TSLA",
         "pinId": 366
       },
       {
-        "id": 84,
-        "tag": "$STLA",
+        "id": 113,
+        "tag": "$GM",
         "pinId": 366
       },
       {
-        "id": 85,
-        "tag": "#Quality",
-        "pinId": 366
-      },
-      {
-        "id": 86,
+        "id": 114,
         "tag": "$PSNY",
         "pinId": 366
       },
       {
-        "id": 87,
+        "id": 115,
+        "tag": "#Quality",
+        "pinId": 366
+      },
+      {
+        "id": 116,
+        "tag": "$STLA",
+        "pinId": 366
+      },
+      {
+        "id": 117,
         "tag": "$TM",
         "pinId": 366
       },
       {
-        "id": 88,
+        "id": 118,
         "tag": "$F",
         "pinId": 366
       }
@@ -10128,12 +10164,12 @@
     ],
     "mentions": [
       {
-        "id": 89,
+        "id": 119,
         "tag": "$AMZN",
         "pinId": 367
       },
       {
-        "id": 90,
+        "id": 120,
         "tag": "#AI",
         "pinId": 367
       }
@@ -10169,7 +10205,7 @@
     ],
     "mentions": [
       {
-        "id": 91,
+        "id": 121,
         "tag": "#InitialJoblessClaims",
         "pinId": 370
       }
@@ -10211,7 +10247,7 @@
     ],
     "mentions": [
       {
-        "id": 92,
+        "id": 122,
         "tag": "#inflation",
         "pinId": 374
       }
@@ -10237,7 +10273,7 @@
     },
     "locations": [
       {
-        "id": 78,
+        "id": 49,
         "address": "Argonne National Laboratory",
         "order": 0,
         "pinId": 396
@@ -10245,7 +10281,7 @@
     ],
     "mentions": [
       {
-        "id": 126,
+        "id": 123,
         "tag": "$INTC",
         "pinId": 396
       }
@@ -10268,7 +10304,7 @@
     },
     "locations": [
       {
-        "id": 49,
+        "id": 50,
         "address": "Japan",
         "order": 0,
         "pinId": 315
@@ -10294,7 +10330,7 @@
     },
     "media": [
       {
-        "id": 305,
+        "id": 245,
         "originalUrl": "https://twitter.com/St0neP1ne/status/1673369857788616707",
         "type": "2",
         "authorName": "?? Zirbe",
@@ -10304,7 +10340,7 @@
     ],
     "locations": [
       {
-        "id": 77,
+        "id": 51,
         "address": "Volkswagen Emden, Germany",
         "order": 0,
         "pinId": 394
@@ -10312,7 +10348,7 @@
     ],
     "mentions": [
       {
-        "id": 116,
+        "id": 124,
         "tag": "$VWAGY",
         "pinId": 394
       }
@@ -10355,7 +10391,7 @@
     },
     "media": [
       {
-        "id": 306,
+        "id": 246,
         "thumbName": "a9b923f7-1420-43f5-bf5c-b4e0c1963205-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -10367,49 +10403,143 @@
     ],
     "mentions": [
       {
-        "id": 184,
-        "tag": "$170",
-        "pinId": 398
-      },
-      {
-        "id": 185,
-        "tag": "#Bankruptcy",
-        "pinId": 398
-      },
-      {
-        "id": 186,
-        "tag": "$230",
-        "pinId": 398
-      },
-      {
-        "id": 187,
-        "tag": "$52",
-        "pinId": 398
-      },
-      {
-        "id": 188,
-        "tag": "$47",
-        "pinId": 398
-      },
-      {
-        "id": 189,
+        "id": 125,
         "tag": "$1",
         "pinId": 398
       },
       {
-        "id": 190,
-        "tag": "$171",
-        "pinId": 398
-      },
-      {
-        "id": 191,
+        "id": 126,
         "tag": "$108",
         "pinId": 398
       },
       {
-        "id": 192,
+        "id": 127,
+        "tag": "$171",
+        "pinId": 398
+      },
+      {
+        "id": 128,
+        "tag": "$230",
+        "pinId": 398
+      },
+      {
+        "id": 129,
+        "tag": "$170",
+        "pinId": 398
+      },
+      {
+        "id": 130,
+        "tag": "$52",
+        "pinId": 398
+      },
+      {
+        "id": 131,
+        "tag": "#Bankruptcy",
+        "pinId": 398
+      },
+      {
+        "id": 132,
+        "tag": "$47",
+        "pinId": 398
+      },
+      {
+        "id": 133,
         "tag": "$RIDE",
         "pinId": 398
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 401,
+    "rootThread": false,
+    "title": "Scary for the US Housing Market is just how many Airbnbs there are. Shows 1 million Airbnb / VRBO rentals.  Compared to only 570k homes for sale.",
+    "description": "<p class=\"paragraph\"> Ground zero for this Airbnb collapse is a city like PHOENIX.&nbsp; </p><p class=\"paragraph\"> Another area with huge exposure is Eastern Tennessee. </p><p class=\"paragraph\"> Another area to watch out for is Central Texas. </p><p class=\"paragraph\"> Another area that is getting smoked by the Airbnb Crash is the Pacific Northwest / Mountain Region. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Housing</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Crash</chronohash> </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$ABNB</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687907153020,\"blocks\":[{\"id\":\"a-EAN1iD7Z\",\"type\":\"paragraph\",\"data\":{\"text\":\"Ground zero for this Airbnb collapse is a city like PHOENIX.&nbsp;\"}},{\"id\":\"IIl21g7PB8\",\"type\":\"paragraph\",\"data\":{\"text\":\"Another area with huge exposure is Eastern Tennessee.\"}},{\"id\":\"Vp0KqoJxFW\",\"type\":\"paragraph\",\"data\":{\"text\":\"Another area to watch out for is Central Texas.\"}},{\"id\":\"4aRIpWGD22\",\"type\":\"paragraph\",\"data\":{\"text\":\"Another area that is getting smoked by the Airbnb Crash is the Pacific Northwest / Mountain Region.\"}},{\"id\":\"hAgRCEjQ2a\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Housing</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Crash</chronohash>\"}},{\"id\":\"Oed5eDbyer\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$ABNB</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/nickgerli1/status/1673775106793828352",
+    "utcStartDateTime": "2023-06-27T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-28T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-27T23:08:38.539Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 307,
+        "originalUrl": "https://twitter.com/nickgerli1/status/1673775106793828352",
+        "type": "2",
+        "authorName": "Nick Gerli",
+        "authorUrl": "https://twitter.com/nickgerli1",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">1) What&#39;s scary for the US Housing Market is just how many Airbnbs there are.<br><br>Data from AllTheRooms shows 1 million Airbnb / VRBO rentals.<br><br>Compared to only 570k homes for sale.<br><br>Creates huge home price downside if struggling Airbnb owners elect to sell. <a href=\"https://t.co/7NPw3EaNAG\">pic.twitter.com/7NPw3EaNAG</a></p>&mdash; Nick Gerli (@nickgerli1) <a href=\"https://twitter.com/nickgerli1/status/1673775106793828352?ref_src=twsrc%5Etfw\">June 27, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 79,
+        "address": "PHOENIX",
+        "order": 0,
+        "pinId": 401
+      },
+      {
+        "id": 80,
+        "address": "Austin",
+        "order": 1,
+        "pinId": 401
+      },
+      {
+        "id": 81,
+        "address": "San Antonio",
+        "order": 2,
+        "pinId": 401
+      },
+      {
+        "id": 82,
+        "address": "Uvalde",
+        "order": 3,
+        "pinId": 401
+      },
+      {
+        "id": 83,
+        "address": "Idaho",
+        "order": 6,
+        "pinId": 401
+      },
+      {
+        "id": 84,
+        "address": "Montana",
+        "order": 5,
+        "pinId": 401
+      },
+      {
+        "id": 85,
+        "address": "Sevierville, Tennessee",
+        "order": 4,
+        "pinId": 401
+      },
+      {
+        "id": 86,
+        "address": "Oregon",
+        "order": 7,
+        "pinId": 401
+      }
+    ],
+    "mentions": [
+      {
+        "id": 174,
+        "tag": "#Housing",
+        "pinId": 401
+      },
+      {
+        "id": 175,
+        "tag": "#Crash",
+        "pinId": 401
+      },
+      {
+        "id": 176,
+        "tag": "$ABNB",
+        "pinId": 401
       }
     ],
     "userId": 1
@@ -10431,7 +10561,7 @@
     },
     "media": [
       {
-        "id": 245,
+        "id": 247,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1638924685193641986",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -10441,7 +10571,7 @@
     ],
     "favorites": [
       {
-        "id": 8,
+        "id": 9,
         "utcCreatedDateTime": "2023-06-01T18:42:29.143Z",
         "userId": 1,
         "pinId": 224
@@ -10468,7 +10598,7 @@
     },
     "media": [
       {
-        "id": 246,
+        "id": 248,
         "originalUrl": "//www.youtube.com/embed/EWZ9wjeoHcE",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/EWZ9wjeoHcE\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -10476,7 +10606,7 @@
     ],
     "merchants": [
       {
-        "id": 52,
+        "id": 53,
         "label": "FluentPet",
         "url": "https://fluent.pet/collections/connect/products/connect-get-started-kit",
         "price": 159.95,
@@ -10504,7 +10634,7 @@
     },
     "media": [
       {
-        "id": 247,
+        "id": 249,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1671876832361320454",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -10514,7 +10644,7 @@
     ],
     "mentions": [
       {
-        "id": 93,
+        "id": 134,
         "tag": "#Unemployment",
         "pinId": 359
       }
@@ -10588,7 +10718,7 @@
     },
     "media": [
       {
-        "id": 248,
+        "id": 250,
         "thumbName": "a8627482-e7e5-4614-8749-99feaf5cf68b-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -10600,7 +10730,7 @@
     ],
     "locations": [
       {
-        "id": 50,
+        "id": 52,
         "address": "USA",
         "order": 0,
         "pinId": 345
@@ -10625,7 +10755,7 @@
     },
     "media": [
       {
-        "id": 249,
+        "id": 251,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1670884043531976704",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -10635,7 +10765,7 @@
     ],
     "mentions": [
       {
-        "id": 94,
+        "id": 135,
         "tag": "#rates",
         "pinId": 331
       }
@@ -10660,7 +10790,7 @@
     },
     "media": [
       {
-        "id": 250,
+        "id": 252,
         "originalUrl": "//www.youtube.com/embed/okFSR8CCOPY",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/okFSR8CCOPY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -10685,7 +10815,7 @@
     },
     "media": [
       {
-        "id": 251,
+        "id": 253,
         "originalUrl": "//www.youtube.com/embed/CDVH_JJIRWI",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/CDVH_JJIRWI\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -10693,13 +10823,13 @@
     ],
     "locations": [
       {
-        "id": 51,
+        "id": 53,
         "address": "South Asia Subregion",
         "order": 0,
         "pinId": 148
       },
       {
-        "id": 52,
+        "id": 54,
         "address": "Egypt Country",
         "order": 1,
         "pinId": 148
@@ -10725,7 +10855,7 @@
     },
     "media": [
       {
-        "id": 252,
+        "id": 254,
         "thumbName": "9297e0e8-ca76-441c-a838-5c9af85aeb9e-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -10737,7 +10867,7 @@
     ],
     "mentions": [
       {
-        "id": 95,
+        "id": 136,
         "tag": "$TSLA",
         "pinId": 193
       }
@@ -10763,7 +10893,7 @@
     },
     "media": [
       {
-        "id": 303,
+        "id": 255,
         "originalUrl": "//www.youtube.com/embed/Dz_8n9EcslU",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Dz_8n9EcslU\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -10771,7 +10901,7 @@
     ],
     "mentions": [
       {
-        "id": 131,
+        "id": 137,
         "tag": "$AAPL",
         "pinId": 392
       }
@@ -10796,7 +10926,7 @@
     },
     "media": [
       {
-        "id": 304,
+        "id": 256,
         "thumbName": "570e934d-30af-4210-baac-3eca0e7aef4d-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -10808,7 +10938,7 @@
     ],
     "mentions": [
       {
-        "id": 141,
+        "id": 138,
         "tag": "$AAPL",
         "pinId": 393
       }
@@ -10832,7 +10962,7 @@
     },
     "media": [
       {
-        "id": 253,
+        "id": 257,
         "originalUrl": "//www.youtube.com/embed/UZ6eFEjFfJ0",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/UZ6eFEjFfJ0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -10840,7 +10970,7 @@
     ],
     "merchants": [
       {
-        "id": 53,
+        "id": 54,
         "label": "Gamestop PS5",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fproducts%2Fmortal-kombat-1----playstation-5%2F394354.html",
         "price": 69.99,
@@ -10869,7 +10999,7 @@
     },
     "media": [
       {
-        "id": 254,
+        "id": 258,
         "originalUrl": "//www.youtube.com/embed/5AKl_cEB26c",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/5AKl_cEB26c\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -10877,23 +11007,23 @@
     ],
     "mentions": [
       {
-        "id": 137,
-        "tag": "$499",
-        "pinId": 239
-      },
-      {
-        "id": 138,
-        "tag": "$299",
-        "pinId": 239
-      },
-      {
         "id": 139,
         "tag": "$META",
         "pinId": 239
       },
       {
         "id": 140,
+        "tag": "$299",
+        "pinId": 239
+      },
+      {
+        "id": 141,
         "tag": "$349",
+        "pinId": 239
+      },
+      {
+        "id": 142,
+        "tag": "$499",
         "pinId": 239
       }
     ],
@@ -10917,14 +11047,14 @@
     },
     "mentions": [
       {
-        "id": 142,
+        "id": 143,
         "tag": "$TSLA",
         "pinId": 206
       }
     ],
     "favorites": [
       {
-        "id": 9,
+        "id": 10,
         "utcCreatedDateTime": "2023-06-01T18:42:42.908Z",
         "userId": 1,
         "pinId": 206
@@ -10951,7 +11081,7 @@
     },
     "media": [
       {
-        "id": 255,
+        "id": 259,
         "originalUrl": "https://twitter.com/gamer__capital/status/1663987579962945536",
         "type": "2",
         "authorName": "gamer capital ???",
@@ -10961,14 +11091,14 @@
     ],
     "mentions": [
       {
-        "id": 96,
+        "id": 144,
         "tag": "#studentloans",
         "pinId": 230
       }
     ],
     "favorites": [
       {
-        "id": 10,
+        "id": 11,
         "utcCreatedDateTime": "2023-06-01T18:42:35.861Z",
         "userId": 1,
         "pinId": 230
@@ -10993,7 +11123,7 @@
     },
     "media": [
       {
-        "id": 256,
+        "id": 260,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1669416501747564569",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -11003,7 +11133,7 @@
     ],
     "mentions": [
       {
-        "id": 97,
+        "id": 145,
         "tag": "#XDate",
         "pinId": 308
       }
@@ -11030,7 +11160,7 @@
     },
     "media": [
       {
-        "id": 257,
+        "id": 261,
         "thumbName": "1636b6d8-591f-4f8f-82f7-973737459bf0-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11062,7 +11192,7 @@
     },
     "media": [
       {
-        "id": 258,
+        "id": 262,
         "thumbName": "ed30a2c1-8f8d-4394-aa81-c8378e093f9f-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11074,7 +11204,7 @@
     ],
     "merchants": [
       {
-        "id": 54,
+        "id": 55,
         "label": "Gamestop PS5",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fvideo-games%2Fplaystation-5%2Fproducts%2Fmarvels-spider-man-2-launch-edition---playstation-5%2F394826.html",
         "price": 69.99,
@@ -11103,7 +11233,7 @@
     },
     "media": [
       {
-        "id": 259,
+        "id": 263,
         "originalUrl": "//www.youtube.com/embed/Q2kN6LONlWw",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Q2kN6LONlWw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -11111,7 +11241,7 @@
     ],
     "locations": [
       {
-        "id": 81,
+        "id": 55,
         "address": "MSG Sphere, Las Vegas",
         "order": 0,
         "pinId": 149
@@ -11119,7 +11249,7 @@
     ],
     "mentions": [
       {
-        "id": 162,
+        "id": 146,
         "tag": "$MSGS",
         "pinId": 149
       }
@@ -11144,7 +11274,7 @@
     },
     "media": [
       {
-        "id": 260,
+        "id": 264,
         "originalUrl": "//www.youtube.com/embed/e-FuDjteXxs",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/e-FuDjteXxs\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -11152,7 +11282,7 @@
     ],
     "merchants": [
       {
-        "id": 55,
+        "id": 56,
         "label": "Gamestop Steam Gift Card",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fgift-cards%2Fproducts%2Fvalve-steam-wallet-card-20%2F215593.html",
         "price": 20,
@@ -11160,7 +11290,7 @@
         "pinId": 241
       },
       {
-        "id": 56,
+        "id": 57,
         "label": "Gamestop Power Up save $5 per Month on Gift Cards",
         "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007593&type=3&subid=",
         "price": 24.99,
@@ -11187,7 +11317,7 @@
     },
     "media": [
       {
-        "id": 261,
+        "id": 265,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1669043173492940814",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -11197,7 +11327,7 @@
     ],
     "mentions": [
       {
-        "id": 98,
+        "id": 147,
         "tag": "#rates",
         "pinId": 295
       }
@@ -11223,7 +11353,7 @@
     },
     "media": [
       {
-        "id": 262,
+        "id": 266,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1669242180433592322",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -11233,7 +11363,7 @@
     ],
     "mentions": [
       {
-        "id": 99,
+        "id": 148,
         "tag": "#UnemploymentRate",
         "pinId": 306
       }
@@ -11257,7 +11387,7 @@
     },
     "media": [
       {
-        "id": 263,
+        "id": 267,
         "originalUrl": "https://twitter.com/FinanceLancelot/status/1669204050217246720",
         "type": "2",
         "authorName": "Financelot",
@@ -11267,7 +11397,7 @@
     ],
     "mentions": [
       {
-        "id": 100,
+        "id": 149,
         "tag": "#Liquidity",
         "pinId": 309
       }
@@ -11293,13 +11423,13 @@
     },
     "mentions": [
       {
-        "id": 101,
-        "tag": "#TokyoAnimeAward",
+        "id": 150,
+        "tag": "#TelevisionCategory",
         "pinId": 341
       },
       {
-        "id": 102,
-        "tag": "#TelevisionCategory",
+        "id": 151,
+        "tag": "#TokyoAnimeAward",
         "pinId": 341
       }
     ],
@@ -11324,7 +11454,7 @@
     },
     "media": [
       {
-        "id": 264,
+        "id": 268,
         "thumbName": "9c08c3a1-9b74-4e40-9c3e-8953037a4adb-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 562,
@@ -11355,7 +11485,7 @@
     },
     "media": [
       {
-        "id": 265,
+        "id": 269,
         "thumbName": "54e3185a-3f81-4573-9f0c-1ed374ca3c77-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 523,
@@ -11367,13 +11497,13 @@
     ],
     "locations": [
       {
-        "id": 84,
+        "id": 56,
         "address": "Mountain Valley natural gas pipeline Southern  Virginia",
         "order": 0,
         "pinId": 376
       },
       {
-        "id": 85,
+        "id": 57,
         "address": "Marcellus and Utica shale sites",
         "order": 1,
         "pinId": 376
@@ -11381,23 +11511,23 @@
     ],
     "mentions": [
       {
-        "id": 167,
-        "tag": "#Pipeliine",
-        "pinId": 376
-      },
-      {
-        "id": 168,
+        "id": 152,
         "tag": "$ETRN",
         "pinId": 376
       },
       {
-        "id": 169,
+        "id": 153,
         "tag": "$NEE",
         "pinId": 376
       },
       {
-        "id": 170,
+        "id": 154,
         "tag": "$ED",
+        "pinId": 376
+      },
+      {
+        "id": 155,
+        "tag": "#Pipeliine",
         "pinId": 376
       }
     ],
@@ -11421,7 +11551,7 @@
     },
     "media": [
       {
-        "id": 266,
+        "id": 270,
         "originalUrl": "//www.youtube.com/embed/km3MVZ8HZeY",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/km3MVZ8HZeY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -11445,7 +11575,7 @@
     },
     "media": [
       {
-        "id": 267,
+        "id": 271,
         "thumbName": "841b2539-69ee-46df-b177-cc70bd000a99-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11457,18 +11587,18 @@
     ],
     "mentions": [
       {
-        "id": 104,
+        "id": 156,
         "tag": "#AI",
         "pinId": 289
       },
       {
-        "id": 105,
-        "tag": "#GPU",
+        "id": 157,
+        "tag": "$AMD",
         "pinId": 289
       },
       {
-        "id": 106,
-        "tag": "$AMD",
+        "id": 158,
+        "tag": "#GPU",
         "pinId": 289
       }
     ],
@@ -11491,7 +11621,7 @@
     },
     "media": [
       {
-        "id": 268,
+        "id": 272,
         "originalUrl": "https://twitter.com/PauloMacro/status/1670148000780255233",
         "type": "2",
         "authorName": "Paulo Macro",
@@ -11501,21 +11631,21 @@
     ],
     "locations": [
       {
-        "id": 56,
-        "address": "Japan",
-        "order": 1,
+        "id": 58,
+        "address": "United Sates",
+        "order": 0,
         "pinId": 342
       },
       {
-        "id": 57,
-        "address": "United Sates",
-        "order": 0,
+        "id": 59,
+        "address": "Japan",
+        "order": 1,
         "pinId": 342
       }
     ],
     "mentions": [
       {
-        "id": 107,
+        "id": 159,
         "tag": "#CarryTrade",
         "pinId": 342
       }
@@ -11540,7 +11670,7 @@
     },
     "media": [
       {
-        "id": 269,
+        "id": 273,
         "originalUrl": "//www.youtube.com/embed/N7OVagiblPo",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/N7OVagiblPo\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -11548,7 +11678,7 @@
     ],
     "merchants": [
       {
-        "id": 57,
+        "id": 58,
         "label": "FLUX",
         "url": "https://fluxkeyboard.com/",
         "price": 450,
@@ -11577,7 +11707,7 @@
     },
     "locations": [
       {
-        "id": 79,
+        "id": 60,
         "address": "Casa Grande, Arizona",
         "order": 0,
         "pinId": 222
@@ -11585,7 +11715,7 @@
     ],
     "mentions": [
       {
-        "id": 144,
+        "id": 160,
         "tag": "$LCID",
         "pinId": 222
       }
@@ -11610,7 +11740,7 @@
     },
     "media": [
       {
-        "id": 270,
+        "id": 274,
         "thumbName": "322b2670-ce5d-4439-8185-7386ac18dbbe-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 523,
@@ -11622,7 +11752,7 @@
     ],
     "merchants": [
       {
-        "id": 58,
+        "id": 59,
         "label": "Manga Box Set vol 1-23",
         "url": "https://amzn.to/3COZZI9",
         "price": 142,
@@ -11650,7 +11780,7 @@
     },
     "media": [
       {
-        "id": 271,
+        "id": 275,
         "thumbName": "e7f718cc-9190-4eed-a8df-270ec8c9d66c-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11662,7 +11792,7 @@
     ],
     "locations": [
       {
-        "id": 59,
+        "id": 61,
         "address": "Oakville Assembly Plant in Ontario, Canada",
         "order": 0,
         "pinId": 195
@@ -11689,7 +11819,7 @@
     },
     "media": [
       {
-        "id": 272,
+        "id": 276,
         "thumbName": "4744b1cd-fc70-430d-a3a2-df642e1aea79-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 503,
@@ -11701,14 +11831,14 @@
     ],
     "mentions": [
       {
-        "id": 150,
+        "id": 161,
         "tag": "$VWAGY",
         "pinId": 212
       }
     ],
     "favorites": [
       {
-        "id": 11,
+        "id": 12,
         "utcCreatedDateTime": "2023-06-01T18:42:52.783Z",
         "userId": 1,
         "pinId": 212
@@ -11735,7 +11865,7 @@
     },
     "media": [
       {
-        "id": 273,
+        "id": 277,
         "thumbName": "d2d8fc73-b718-4495-8db8-aefecfd22feb-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11747,7 +11877,7 @@
     ],
     "locations": [
       {
-        "id": 60,
+        "id": 62,
         "address": "Tech Zity Vilnius, Lithuania",
         "order": 0,
         "pinId": 375
@@ -11772,7 +11902,7 @@
     },
     "media": [
       {
-        "id": 274,
+        "id": 278,
         "thumbName": "1d8eacd1-1268-41d0-992c-bee0066fa60e-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11784,7 +11914,7 @@
     ],
     "locations": [
       {
-        "id": 61,
+        "id": 63,
         "address": "USA",
         "order": 0,
         "pinId": 386
@@ -11811,7 +11941,7 @@
     },
     "media": [
       {
-        "id": 275,
+        "id": 279,
         "thumbName": "1870e18c-c013-4e68-8821-0ed0881d9d2d-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 400,
@@ -11823,7 +11953,7 @@
     ],
     "mentions": [
       {
-        "id": 108,
+        "id": 162,
         "tag": "$BA",
         "pinId": 151
       }
@@ -11848,7 +11978,7 @@
     },
     "media": [
       {
-        "id": 276,
+        "id": 280,
         "thumbName": "5ae38366-d033-4972-bc04-48f4d4b6b485-chrono-lg.webp",
         "thumbWidth": 986,
         "thumbHeight": 553,
@@ -11860,7 +11990,7 @@
     ],
     "locations": [
       {
-        "id": 62,
+        "id": 64,
         "address": "West of Colusa in the Sacramento Valley, California",
         "order": 0,
         "pinId": 192
@@ -11886,7 +12016,7 @@
     },
     "media": [
       {
-        "id": 277,
+        "id": 281,
         "thumbName": "10240ef3-a8b9-4c73-8d53-53b182f57374-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -11898,7 +12028,7 @@
     ],
     "locations": [
       {
-        "id": 63,
+        "id": 65,
         "address": "UC San Diego",
         "order": 0,
         "pinId": 209
@@ -11924,7 +12054,7 @@
     },
     "media": [
       {
-        "id": 278,
+        "id": 282,
         "thumbName": "512b7eb4-5f06-4b87-9b31-c70d51f2df46-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 471,
@@ -11935,6 +12065,40 @@
       }
     ],
     "userId": 1
+  },
+  {
+    "id": 400,
+    "rootThread": false,
+    "title": "Micron Announces New Semiconductor Assembly and Test Facility in India with Phase 1 to be operational in late 2024",
+    "description": "<p class=\"paragraph\"> Micron Technology, Inc., one of the world's largest semiconductor companies, today announced plans to build a new assembly and test facility in Gujarat, India. Micron's new facility will enable assembly and test manufacturing for both DRAM and NAND products and address demand from domestic and international markets. </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/7dae0e51-535e-4a74-952b-97f5553fa35f-chrono-lg.webp\" alt=\"Micron Integrated Semiconductor Plant Phase 1 and 2\" height=\"563\" width=\"1000\"><figcaption class=\"fig-cap\">Micron Integrated Semiconductor Plant Phase 1 and 2</figcaption></figure><p class=\"paragraph\"> Phased construction of the new assembly and test facility in Gujarat is expected to begin in 2023. Phase 1, which will include 500,000 square feet of planned cleanroom space, will start to become operational in late 2024, and Micron will ramp capacity gradually over time in line with global demand trends. Micron expects Phase 2 of the project, which would include construction of a facility similar in scale to Phase 1, to start towards the second half of the decade. </p><p class=\"paragraph\"> Micron's investment will be up to $825 million over the two phases of the project and will create up to 5,000 new direct Micron jobs and 15,000 community jobs over the next several years. Under the government's \"Modified Assembly, Testing, Marking and Packaging (ATMP) Scheme,\" Micron will receive 50% fiscal support for the total project cost from the Indian central government and incentives representing 20% of the total project cost from the state of Gujarat. The combined investment by Micron and the two government entities over the course of both phases will be up to $2.75 billion. Government support will help fund the project and facilitate access to essential semiconductor infrastructure and resources to drive innovation and enhance local talent development. </p><p class=\"paragraph\"> \"We are excited about the steps India is taking to develop the local semiconductor ecosystem,\" said Micron President and CEO Sanjay Mehrotra. \"I am grateful to the Indian government and all of the officials involved that made this investment possible. Our new assembly and test location in India will enable Micron to expand our global manufacturing base and better serve our customers in India and around the world.\" </p><p class=\"paragraph\"> Micron's plans are part of the company's strategy to meet expected long-term demand for memory and storage across markets and complement the company's global assembly and test network. </p><p class=\"paragraph\"> \"Micron's investment to set up assembly and test manufacturing in India will fundamentally transform India's semiconductor landscape and generate tens of thousands of high-tech and construction jobs,\" said Union Cabinet Minister for Railways, Communications, Electronics and IT Shri Ashwini Vaishnaw. \"This investment will be a crucial building block in the country's blossoming semiconductor ecosystem.\" </p><p class=\"paragraph\"> Micron selected the state of Gujarat due to its manufacturing infrastructure, conducive business environment and a well-established talent pipeline in the SANAND Industrial Park (Gujarat Industrial Development Corporation - GIDC). </p><p class=\"paragraph\"> \"After more than a year of discussions with Indian government officials, spearheaded by the India Semiconductor Mission and the state of Gujarat, Micron is pleased to bring its industry-leading assembly and test capabilities to be a part of this transformation in India's semiconductor industry,\" said Micron's Senior Vice President of Global Assembly and Test Operations Gursharan Singh. </p><p class=\"paragraph\"> Micron's new facility will focus on transforming wafers into ball grid array (BGA) integrated circuit packages, memory modules and solid-state drives. </p><p class=\"paragraph\"> Micron will build and operate the assembly and test facility in accordance with the company's sustainability goals and in line with local and global environmental commitments. Micron is committed to designing and building the facility to meet or exceed Leadership in Energy and Environmental Design (LEED) Gold standards. Additionally, the facility will use advanced water-saving technologies to enable Zero Liquid Discharge. </p><p class=\"paragraph\"> Micron was named one of the 2022 World's Most Ethical Companies, awarded a Ecovadis Sustainability Platinum medal (top 1%) and was recognized as one of Newsweek America's Most Responsible Companies. In India, Micron was a Silver winner of the India Workplace Equality Index (IWEI) 2022, won the Data Engineering Award for Data Engineering Transformation and was the recipient of two DivHERsity 2023 Awards (Top 20 Most Innovative Practices in Women Leadership and Development; Top 3 companies in the Electrical, Electronics and Semiconductor Industry). </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$MU</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687904808234,\"blocks\":[{\"id\":\"sQZEWpUuNj\",\"type\":\"paragraph\",\"data\":{\"text\":\"Micron Technology, Inc., one of the world's largest semiconductor companies, today announced plans to build a new assembly and test facility in Gujarat, India. Micron's new facility will enable assembly and test manufacturing for both DRAM and NAND products and address demand from domestic and international markets.\"}},{\"id\":\"mJtTrGLsg3\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/7dae0e51-535e-4a74-952b-97f5553fa35f-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":563}},\"caption\":\"Micron Integrated Semiconductor Plant Phase 1 and 2\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"1FsKj9kU0X\",\"type\":\"paragraph\",\"data\":{\"text\":\"Phased construction of the new assembly and test facility in Gujarat is expected to begin in 2023. Phase 1, which will include 500,000 square feet of planned cleanroom space, will start to become operational in late 2024, and Micron will ramp capacity gradually over time in line with global demand trends. Micron expects Phase 2 of the project, which would include construction of a facility similar in scale to Phase 1, to start towards the second half of the decade.\"}},{\"id\":\"IJNd4tGVXJ\",\"type\":\"paragraph\",\"data\":{\"text\":\"Micron's investment will be up to $825 million over the two phases of the project and will create up to 5,000 new direct Micron jobs and 15,000 community jobs over the next several years. Under the government's \\\"Modified Assembly, Testing, Marking and Packaging (ATMP) Scheme,\\\" Micron will receive 50% fiscal support for the total project cost from the Indian central government and incentives representing 20% of the total project cost from the state of Gujarat. The combined investment by Micron and the two government entities over the course of both phases will be up to $2.75 billion. Government support will help fund the project and facilitate access to essential semiconductor infrastructure and resources to drive innovation and enhance local talent development.\"}},{\"id\":\"ik4bPD4As6\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"We are excited about the steps India is taking to develop the local semiconductor ecosystem,\\\" said Micron President and CEO Sanjay Mehrotra. \\\"I am grateful to the Indian government and all of the officials involved that made this investment possible. Our new assembly and test location in India will enable Micron to expand our global manufacturing base and better serve our customers in India and around the world.\\\"\"}},{\"id\":\"tBGIvhu9WP\",\"type\":\"paragraph\",\"data\":{\"text\":\"Micron's plans are part of the company's strategy to meet expected long-term demand for memory and storage across markets and complement the company's global assembly and test network.\"}},{\"id\":\"jURBx5Mhlf\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"Micron's investment to set up assembly and test manufacturing in India will fundamentally transform India's semiconductor landscape and generate tens of thousands of high-tech and construction jobs,\\\" said Union Cabinet Minister for Railways, Communications, Electronics and IT Shri Ashwini Vaishnaw. \\\"This investment will be a crucial building block in the country's blossoming semiconductor ecosystem.\\\"\"}},{\"id\":\"30dgN4p80l\",\"type\":\"paragraph\",\"data\":{\"text\":\"Micron selected the state of Gujarat due to its manufacturing infrastructure, conducive business environment and a well-established talent pipeline in the SANAND Industrial Park (Gujarat Industrial Development Corporation - GIDC).\"}},{\"id\":\"i7-CCoJIFY\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"After more than a year of discussions with Indian government officials, spearheaded by the India Semiconductor Mission and the state of Gujarat, Micron is pleased to bring its industry-leading assembly and test capabilities to be a part of this transformation in India's semiconductor industry,\\\" said Micron's Senior Vice President of Global Assembly and Test Operations Gursharan Singh.\"}},{\"id\":\"i3DJgmfT9C\",\"type\":\"paragraph\",\"data\":{\"text\":\"Micron's new facility will focus on transforming wafers into ball grid array (BGA) integrated circuit packages, memory modules and solid-state drives.\"}},{\"id\":\"7-OdhpVOEW\",\"type\":\"paragraph\",\"data\":{\"text\":\"Micron will build and operate the assembly and test facility in accordance with the company's sustainability goals and in line with local and global environmental commitments. Micron is committed to designing and building the facility to meet or exceed Leadership in Energy and Environmental Design (LEED) Gold standards. Additionally, the facility will use advanced water-saving technologies to enable Zero Liquid Discharge.\"}},{\"id\":\"a2QfSGW1rt\",\"type\":\"paragraph\",\"data\":{\"text\":\"Micron was named one of the 2022 World's Most Ethical Companies, awarded a Ecovadis Sustainability Platinum medal (top 1%) and was recognized as one of Newsweek America's Most Responsible Companies. In India, Micron was a Silver winner of the India Workplace Equality Index (IWEI) 2022, won the Data Engineering Award for Data Engineering Transformation and was the recipient of two DivHERsity 2023 Awards (Top 20 Most Innovative Practices in Women Leadership and Development; Top 3 companies in the Electrical, Electronics and Semiconductor Industry).\"}},{\"id\":\"dYjLcNSWbv\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$MU</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.techpowerup.com/310385/micron-announces-new-semiconductor-assembly-and-test-facility-in-india",
+    "price": 825000000,
+    "utcStartDateTime": "2024-12-31T08:00:00.000Z",
+    "utcEndDateTime": "2025-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-27T22:26:26.358Z",
+    "utcUpdatedDateTime": "2023-06-27T22:26:50.639Z",
+    "user": {
+      "id": 4,
+      "userName": "@GadgetWorld"
+    },
+    "locations": [
+      {
+        "id": 78,
+        "address": "Gujarat, India. Micron",
+        "order": 0,
+        "pinId": 400
+      }
+    ],
+    "mentions": [
+      {
+        "id": 173,
+        "tag": "$MU",
+        "pinId": 400
+      }
+    ],
+    "userId": 4
   },
   {
     "id": 152,
@@ -11953,7 +12117,7 @@
     },
     "media": [
       {
-        "id": 279,
+        "id": 283,
         "thumbName": "9d3fdd45-fbda-4b7c-b649-1d7c72016c63-chrono-lg.webp",
         "thumbWidth": 768,
         "thumbHeight": 545,
@@ -11982,7 +12146,7 @@
     },
     "media": [
       {
-        "id": 280,
+        "id": 284,
         "thumbName": "58441b39-2150-45ad-8f12-b36ab5f90736-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11994,7 +12158,7 @@
     ],
     "locations": [
       {
-        "id": 64,
+        "id": 66,
         "address": "Frito-Lay’s research and development headquarters, Texas",
         "order": 0,
         "pinId": 194
@@ -12018,7 +12182,7 @@
     },
     "media": [
       {
-        "id": 281,
+        "id": 285,
         "thumbName": "3ddd9850-2551-4ade-b842-2099e75caf6c-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 308,
@@ -12029,6 +12193,31 @@
       }
     ],
     "userId": 1
+  },
+  {
+    "id": 399,
+    "rootThread": false,
+    "title": "Intel Expects to Beat TSMC at 2nm with the Intel 18A node in 2025, Intel Foundry to Operate Almost as a Separate Business",
+    "description": "<p class=\"paragraph\"> Intel's integrated device manufacturing (IDM) has been experiencing a lot of trouble in recent years, and the company is not a leading-edge semiconductor manufacturer, with TSMC taking the pole position. However, the new restructuring hopes to change some of the business operations to increase its efficiency and establish Intel as the go-to foundry for customers. David Zinsner, Executive Vice President and the Chief Financial Officer, alongside Jason Grebe, Corporate Vice President &amp; GM of the Corporate Planning Group at Intel, joined investors to explain how IDM will transform into a next-generation business. Intel IDM, including Intel Foundry Services (IFS), will get a new operation model, which will put IDM as an almost separate business unit with its own profit and loss (P&amp;L) statement published in the quarterly/yearly financial report. </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/0244bfeb-09f8-4e6f-8a3f-26c20c5ad873-chrono-lg.webp\" alt=\"Intel Foundry Model\" height=\"552\" width=\"1000\"><figcaption class=\"fig-cap\">Intel Foundry Model</figcaption></figure><p class=\"paragraph\"> According to Intel, the company's IDM 1.0 strategy has been serving it well, but IDM 2.0 is needed to build next-generation nodes as the capital required for them is massive. Intel hopes to regain node leadership with the Intel 18A node in 2025. The company's strategy is still to have IFS as the second biggest external foundry business, presumably just behind TSMC. Putting IDM into its own P&amp;L will result in $8-10 billion in \"cost reduction opportunities, \" including ramp rates, test time, and sort times based on the market pricing, not Intel's pricing. At the start, IDM is expected to start with a negative operating margin. Intel also states that keeping IFS as a business unit allows the company to simultaneously develop products on it and de-risk it for customers who want to build on IFS. The company is developing five different products (assuming packaging) on Intel 18A, all of which will be available for customers to use as well. </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/851f8867-6e4c-44aa-a49f-8500de322a46-chrono-lg.webp\" alt=\"Benefits of Intel Foundry Model\" height=\"554\" width=\"1000\"><figcaption class=\"fig-cap\">Benefits of Intel Foundry Model</figcaption></figure><p class=\"paragraph\"> Jason Grebe continued to stress that there will be complete segregation of customer data and IP, with world-class service and support, so upcoming customers can get a sense of trust. David Zinsner was asked why Intel didn't just split into a fabless design business and a separate foundry business. He noted that they thought there is a lot of benefit of combining design and manufacturing business, especially as having Intel as customer zero, which can translate its knowledge of working with new technologies to other customers. </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/d8bed9d1-b54c-46c2-a4d4-b9841291ccfc-chrono-lg.webp\" alt=\"Intel Cost Savings Opportunities\" height=\"552\" width=\"1000\"><figcaption class=\"fig-cap\">Intel Cost Savings Opportunities</figcaption></figure><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/c4f78646-31fa-4817-9f69-bab19e0f39d5-chrono-lg.webp\" alt=\"IFS Customers Benefit from IDM Engineering\" height=\"557\" width=\"1000\"><figcaption class=\"fig-cap\">IFS Customers Benefit from IDM Engineering</figcaption></figure><p class=\"paragraph\"> A pair of slides that caught our attention in the slide deck below, compare Intel's foundry node advancement to those of its competitors. It details how Intel maintained a technological and first-to-market lead over TSMC across their 90 nm-class, 65 nm-class, 45 nm-class, 32 nm-class, 22 nm-class, and 14 nm-class. The company's 10 nm node was significantly delayed, which gave TSMC 7 nm free reign over the next-generation market for over a yearI. </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/fdf3e95f-bd58-4880-a037-fa95b60b5bef-chrono-lg.webp\" alt=\"Intel IDM 1.0\" height=\"562\" width=\"1000\"><figcaption class=\"fig-cap\">Intel IDM 1.0</figcaption></figure><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/a5e0d54b-e5a3-4b04-9267-bf36650924d2-chrono-lg.webp\" alt=\"Intel lagging behind TSMC\" height=\"562\" width=\"1000\"><figcaption class=\"fig-cap\">Intel lagging behind TSMC</figcaption></figure><p class=\"paragraph\"> Intel marks 10 nm (aka Intel 7) as significantly lagging behind TSMC 7 nm on time-to-market. TSMC 5 nm has already been in the market for over 3 quarters now, and it's only later in Q3 that Intel could release the first products based on the rival Intel 4 node (\"Meteor Lake\" compute tile). Intel 3 could similarly lag by a couple of quarters behind TSMC 3 nm, as could Intel 20A. It's at the 2 nm-class where Intel claims that if it executes the IFS and IDM 2.0 roadmap correctly, the Intel 18A foundry node should beat TSMC 2 nm-class nodes both technologically, and at time-to-market. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$INTC</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687904138529,\"blocks\":[{\"id\":\"_SnjHGlGmV\",\"type\":\"paragraph\",\"data\":{\"text\":\"Intel's integrated device manufacturing (IDM) has been experiencing a lot of trouble in recent years, and the company is not a leading-edge semiconductor manufacturer, with TSMC taking the pole position. However, the new restructuring hopes to change some of the business operations to increase its efficiency and establish Intel as the go-to foundry for customers. David Zinsner, Executive Vice President and the Chief Financial Officer, alongside Jason Grebe, Corporate Vice President &amp; GM of the Corporate Planning Group at Intel, joined investors to explain how IDM will transform into a next-generation business. Intel IDM, including Intel Foundry Services (IFS), will get a new operation model, which will put IDM as an almost separate business unit with its own profit and loss (P&amp;L) statement published in the quarterly/yearly financial report.\"}},{\"id\":\"8s8_rvTwDS\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/0244bfeb-09f8-4e6f-8a3f-26c20c5ad873-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":552}},\"caption\":\"Intel Foundry Model\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"FZRZ1PCvi3\",\"type\":\"paragraph\",\"data\":{\"text\":\"According to Intel, the company's IDM 1.0 strategy has been serving it well, but IDM 2.0 is needed to build next-generation nodes as the capital required for them is massive. Intel hopes to regain node leadership with the Intel 18A node in 2025. The company's strategy is still to have IFS as the second biggest external foundry business, presumably just behind TSMC. Putting IDM into its own P&amp;L will result in $8-10 billion in \\\"cost reduction opportunities, \\\" including ramp rates, test time, and sort times based on the market pricing, not Intel's pricing. At the start, IDM is expected to start with a negative operating margin. Intel also states that keeping IFS as a business unit allows the company to simultaneously develop products on it and de-risk it for customers who want to build on IFS. The company is developing five different products (assuming packaging) on Intel 18A, all of which will be available for customers to use as well.\"}},{\"id\":\"KTYn6Q2KUv\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/851f8867-6e4c-44aa-a49f-8500de322a46-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":554}},\"caption\":\"Benefits of Intel Foundry Model\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"SlVtQUDlmI\",\"type\":\"paragraph\",\"data\":{\"text\":\"Jason Grebe continued to stress that there will be complete segregation of customer data and IP, with world-class service and support, so upcoming customers can get a sense of trust. David Zinsner was asked why Intel didn't just split into a fabless design business and a separate foundry business. He noted that they thought there is a lot of benefit of combining design and manufacturing business, especially as having Intel as customer zero, which can translate its knowledge of working with new technologies to other customers.\"}},{\"id\":\"eEi1wEOcZX\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/d8bed9d1-b54c-46c2-a4d4-b9841291ccfc-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":552}},\"caption\":\"Intel Cost Savings Opportunities\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"LtiX12sknU\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/c4f78646-31fa-4817-9f69-bab19e0f39d5-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":557}},\"caption\":\"IFS Customers Benefit from IDM Engineering\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"cxbxBRcQWZ\",\"type\":\"paragraph\",\"data\":{\"text\":\"A pair of slides that caught our attention in the slide deck below, compare Intel's foundry node advancement to those of its competitors. It details how Intel maintained a technological and first-to-market lead over TSMC across their 90 nm-class, 65 nm-class, 45 nm-class, 32 nm-class, 22 nm-class, and 14 nm-class. The company's 10 nm node was significantly delayed, which gave TSMC 7 nm free reign over the next-generation market for over a yearI.\"}},{\"id\":\"Fao1kmpjI1\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/fdf3e95f-bd58-4880-a037-fa95b60b5bef-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":562}},\"caption\":\"Intel IDM 1.0\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"Wt_3gNqyfu\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/a5e0d54b-e5a3-4b04-9267-bf36650924d2-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":562}},\"caption\":\"Intel lagging behind TSMC\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"UZ5rZWdWUR\",\"type\":\"paragraph\",\"data\":{\"text\":\"Intel marks 10 nm (aka Intel 7) as significantly lagging behind TSMC 7 nm on time-to-market. TSMC 5 nm has already been in the market for over 3 quarters now, and it's only later in Q3 that Intel could release the first products based on the rival Intel 4 node (\\\"Meteor Lake\\\" compute tile). Intel 3 could similarly lag by a couple of quarters behind TSMC 3 nm, as could Intel 20A. It's at the 2 nm-class where Intel claims that if it executes the IFS and IDM 2.0 roadmap correctly, the Intel 18A foundry node should beat TSMC 2 nm-class nodes both technologically, and at time-to-market.\"}},{\"id\":\"5Ioo8A2z03\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$INTC</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.techpowerup.com/310378/intel-expects-to-beat-tsmc-at-2nm-intel-foundry-to-operate-almost-as-a-separate-business",
+    "utcStartDateTime": "2025-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2025-01-03T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-27T22:14:41.062Z",
+    "utcUpdatedDateTime": "2023-06-27T22:15:43.328Z",
+    "user": {
+      "id": 4,
+      "userName": "@GadgetWorld"
+    },
+    "mentions": [
+      {
+        "id": 163,
+        "tag": "$INTC",
+        "pinId": 399
+      }
+    ],
+    "userId": 4
   },
   {
     "id": 321,
@@ -12048,7 +12237,7 @@
     },
     "media": [
       {
-        "id": 282,
+        "id": 286,
         "thumbName": "a40beb47-cb9a-43c6-9a0e-d1dd0f31ec9b-chrono-lg.webp",
         "thumbWidth": 591,
         "thumbHeight": 308,
@@ -12060,7 +12249,7 @@
     ],
     "locations": [
       {
-        "id": 65,
+        "id": 67,
         "address": "AISIN North Carolina Corporation (ANC) facility in Durham, North Carolina",
         "order": 0,
         "pinId": 321
@@ -12072,21 +12261,22 @@
     "id": 322,
     "rootThread": false,
     "title": "Neste has made the final investment decision to commence construction of upgrading facilities to process150,000 tons of liquefied waste plastic",
-    "description": "<p class=\"paragraph\"> Neste has made the final investment decision to commence construction of upgrading facilities for liquefied plastic waste at its Porvoo refinery in Finland. With the investment of 111 million euros, Neste will build the capacity to upgrade 150,000 tons of liquefied waste plastic per year. Upgrading is one of the three processing steps turning liquefied waste plastic into high-quality feedstock for new plastics: pretreatment, upgrading and refining. The investment is part of a broader project (PULSE*), which has received an EU Innovation Fund grant of 135 million euros if fully implemented and is targeting a total capacity of 400,000 tons per year. </p><p class=\"paragraph\"> Pretreatment and upgrading of liquefied waste plastic play an important role in Neste’s approach to chemical recycling. They allow the company to increase flexibility for processing lower-quality plastic waste and scale up processing the liquefied waste plastic into high-quality petrochemical feedstock in its existing refinery in Porvoo.&nbsp; </p><p class=\"paragraph\"> “We have developed our capability to process circular raw material at the Porvoo refinery over the recent years and are now set to build a respective facility. The new facility processing 150,000 tons of liquefied waste plastic, is planned to be finalized in the first half of 2025,” states Markku Korvenranta, Executive Vice President in Neste’s Oil Products. </p><p class=\"paragraph\"> The project &nbsp;will see Neste building new assets at the Porvoo refinery, but also leveraging existing assets through retrofitting, to scale-up chemical recycling fast and efficiently. The upgraded liquefied waste plastic will then be processed in the conventional refinery in which it will replace a portion of the fossil resources processed at the Porvoo refinery.&nbsp; </p><p class=\"paragraph\"> Required preparation works at the Porvoo refinery were successfully completed during the first half of 2023, enabling the construction work to commence without any delay.&nbsp; </p>",
-    "sourceDescription": "{\"time\":1687063762950,\"blocks\":[{\"id\":\"Suo3Z7hblt\",\"type\":\"paragraph\",\"data\":{\"text\":\"Neste has made the final investment decision to commence construction of upgrading facilities for liquefied plastic waste at its Porvoo refinery in Finland. With the investment of 111 million euros, Neste will build the capacity to upgrade 150,000 tons of liquefied waste plastic per year. Upgrading is one of the three processing steps turning liquefied waste plastic into high-quality feedstock for new plastics: pretreatment, upgrading and refining. The investment is part of a broader project (PULSE*), which has received an EU Innovation Fund grant of 135 million euros if fully implemented and is targeting a total capacity of 400,000 tons per year.\"}},{\"id\":\"QrJVfWXqZ5\",\"type\":\"paragraph\",\"data\":{\"text\":\"Pretreatment and upgrading of liquefied waste plastic play an important role in Neste’s approach to chemical recycling. They allow the company to increase flexibility for processing lower-quality plastic waste and scale up processing the liquefied waste plastic into high-quality petrochemical feedstock in its existing refinery in Porvoo.&nbsp;\"}},{\"id\":\"dmXiJZ6n_f\",\"type\":\"paragraph\",\"data\":{\"text\":\"“We have developed our capability to process circular raw material at the Porvoo refinery over the recent years and are now set to build a respective facility. The new facility processing 150,000 tons of liquefied waste plastic, is planned to be finalized in the first half of 2025,” states Markku Korvenranta, Executive Vice President in Neste’s Oil Products.\"}},{\"id\":\"TAaJ2AqpEH\",\"type\":\"paragraph\",\"data\":{\"text\":\"The project &nbsp;will see Neste building new assets at the Porvoo refinery, but also leveraging existing assets through retrofitting, to scale-up chemical recycling fast and efficiently. The upgraded liquefied waste plastic will then be processed in the conventional refinery in which it will replace a portion of the fossil resources processed at the Porvoo refinery.&nbsp;\"}},{\"id\":\"B4rDPwIZ3m\",\"type\":\"paragraph\",\"data\":{\"text\":\"Required preparation works at the Porvoo refinery were successfully completed during the first half of 2023, enabling the construction work to commence without any delay.&nbsp;\"}}],\"version\":\"2.26.5\"}",
+    "description": "<p class=\"paragraph\"> Neste has made the final investment decision to commence construction of upgrading facilities for liquefied plastic waste at its Porvoo refinery in Finland. With the investment of 111 million euros, Neste will build the capacity to upgrade 150,000 tons of liquefied waste plastic per year. Upgrading is one of the three processing steps turning liquefied waste plastic into high-quality feedstock for new plastics: pretreatment, upgrading and refining. The investment is part of a broader project (PULSE*), which has received an EU Innovation Fund grant of 135 million euros if fully implemented and is targeting a total capacity of 400,000 tons per year. </p><p class=\"paragraph\"> Pretreatment and upgrading of liquefied waste plastic play an important role in Neste’s approach to chemical recycling. They allow the company to increase flexibility for processing lower-quality plastic waste and scale up processing the liquefied waste plastic into high-quality petrochemical feedstock in its existing refinery in Porvoo.&nbsp; </p><p class=\"paragraph\"> “We have developed our capability to process circular raw material at the Porvoo refinery over the recent years and are now set to build a respective facility. The new facility processing 150,000 tons of liquefied waste plastic, is planned to be finalized in the first half of 2025,” states Markku Korvenranta, Executive Vice President in Neste’s Oil Products. </p><p class=\"paragraph\"> The project &nbsp;will see Neste building new assets at the Porvoo refinery, but also leveraging existing assets through retrofitting, to scale-up chemical recycling fast and efficiently. The upgraded liquefied waste plastic will then be processed in the conventional refinery in which it will replace a portion of the fossil resources processed at the Porvoo refinery.&nbsp; </p><p class=\"paragraph\"> Required preparation works at the Porvoo refinery were successfully completed during the first half of 2023, enabling the construction work to commence without any delay.&nbsp; </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$NESTE.HE</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687897530986,\"blocks\":[{\"id\":\"Suo3Z7hblt\",\"type\":\"paragraph\",\"data\":{\"text\":\"Neste has made the final investment decision to commence construction of upgrading facilities for liquefied plastic waste at its Porvoo refinery in Finland. With the investment of 111 million euros, Neste will build the capacity to upgrade 150,000 tons of liquefied waste plastic per year. Upgrading is one of the three processing steps turning liquefied waste plastic into high-quality feedstock for new plastics: pretreatment, upgrading and refining. The investment is part of a broader project (PULSE*), which has received an EU Innovation Fund grant of 135 million euros if fully implemented and is targeting a total capacity of 400,000 tons per year.\"}},{\"id\":\"QrJVfWXqZ5\",\"type\":\"paragraph\",\"data\":{\"text\":\"Pretreatment and upgrading of liquefied waste plastic play an important role in Neste’s approach to chemical recycling. They allow the company to increase flexibility for processing lower-quality plastic waste and scale up processing the liquefied waste plastic into high-quality petrochemical feedstock in its existing refinery in Porvoo.&nbsp;\"}},{\"id\":\"dmXiJZ6n_f\",\"type\":\"paragraph\",\"data\":{\"text\":\"“We have developed our capability to process circular raw material at the Porvoo refinery over the recent years and are now set to build a respective facility. The new facility processing 150,000 tons of liquefied waste plastic, is planned to be finalized in the first half of 2025,” states Markku Korvenranta, Executive Vice President in Neste’s Oil Products.\"}},{\"id\":\"TAaJ2AqpEH\",\"type\":\"paragraph\",\"data\":{\"text\":\"The project &nbsp;will see Neste building new assets at the Porvoo refinery, but also leveraging existing assets through retrofitting, to scale-up chemical recycling fast and efficiently. The upgraded liquefied waste plastic will then be processed in the conventional refinery in which it will replace a portion of the fossil resources processed at the Porvoo refinery.&nbsp;\"}},{\"id\":\"B4rDPwIZ3m\",\"type\":\"paragraph\",\"data\":{\"text\":\"Required preparation works at the Porvoo refinery were successfully completed during the first half of 2023, enabling the construction work to commence without any delay.&nbsp;\"}},{\"id\":\"LR34fbbvNx\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$NESTE.HE</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.neste.com/releases-and-news/circular-economy/neste-decides-invest-liquefied-waste-plastic-upgrading-unit-its-porvoo-refinery",
     "price": 121688740,
     "utcStartDateTime": "2025-05-31T07:00:00.000Z",
-    "utcEndDateTime": "2025-06-01T07:00:00.000Z",
+    "utcEndDateTime": "2025-06-02T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-18T04:50:52.088Z",
+    "utcUpdatedDateTime": "2023-06-27T20:25:38.812Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "media": [
       {
-        "id": 283,
+        "id": 287,
         "thumbName": "17d63629-02e3-4d3f-be38-c9001a87421d-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -12098,9 +12288,16 @@
     ],
     "locations": [
       {
-        "id": 66,
+        "id": 68,
         "address": "Neste  Porvoo refinery in Finland",
         "order": 0,
+        "pinId": 322
+      }
+    ],
+    "mentions": [
+      {
+        "id": 164,
+        "tag": "$NESTE.HE",
         "pinId": 322
       }
     ],
@@ -12124,7 +12321,7 @@
     },
     "locations": [
       {
-        "id": 67,
+        "id": 69,
         "address": "Apple Infinite Loop, Cupertino, California",
         "order": 0,
         "pinId": 390
@@ -12132,7 +12329,7 @@
     ],
     "mentions": [
       {
-        "id": 109,
+        "id": 165,
         "tag": "$APPL",
         "pinId": 390
       }
@@ -12157,7 +12354,7 @@
     },
     "media": [
       {
-        "id": 284,
+        "id": 288,
         "thumbName": "d1414c24-6dd4-46a1-82fa-359a46aa1e17-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 562,
@@ -12169,7 +12366,7 @@
     ],
     "mentions": [
       {
-        "id": 110,
+        "id": 166,
         "tag": "$AAPL",
         "pinId": 388
       }
@@ -12193,7 +12390,7 @@
     },
     "media": [
       {
-        "id": 285,
+        "id": 289,
         "thumbName": "73a872d0-5698-4599-b796-64861526dbc6-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 562,
@@ -12205,7 +12402,7 @@
     ],
     "mentions": [
       {
-        "id": 111,
+        "id": 167,
         "tag": "$AAPL",
         "pinId": 389
       }
@@ -12231,7 +12428,7 @@
     },
     "media": [
       {
-        "id": 286,
+        "id": 290,
         "thumbName": "d2e483e6-7652-467e-a87e-ceecf0dc0537-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -12243,7 +12440,7 @@
     ],
     "locations": [
       {
-        "id": 68,
+        "id": 70,
         "address": "Hudson Yards, New York",
         "order": 0,
         "pinId": 150
@@ -12270,7 +12467,7 @@
     },
     "media": [
       {
-        "id": 287,
+        "id": 291,
         "thumbName": "6535282f-7932-4bdf-8f0e-51ab0f6d2578-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -12282,14 +12479,14 @@
     ],
     "mentions": [
       {
-        "id": 130,
+        "id": 168,
         "tag": "$RIVN",
         "pinId": 216
       }
     ],
     "favorites": [
       {
-        "id": 12,
+        "id": 13,
         "utcCreatedDateTime": "2023-06-01T18:43:03.127Z",
         "userId": 1,
         "pinId": 216
@@ -12331,7 +12528,7 @@
     },
     "media": [
       {
-        "id": 288,
+        "id": 292,
         "thumbName": "f37f0f24-e347-4e0a-b805-d1a1a30dbd14-chrono-lg.webp",
         "thumbWidth": 743,
         "thumbHeight": 430,
@@ -12343,7 +12540,7 @@
     ],
     "locations": [
       {
-        "id": 69,
+        "id": 71,
         "address": "Guangdong Province",
         "order": 0,
         "pinId": 225
@@ -12369,7 +12566,7 @@
     },
     "media": [
       {
-        "id": 289,
+        "id": 293,
         "thumbName": "49b5fdba-9013-4950-863c-e88b8c3f3bcb-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 500,
@@ -12381,14 +12578,14 @@
     ],
     "mentions": [
       {
-        "id": 143,
+        "id": 169,
         "tag": "$MBGAF",
         "pinId": 221
       }
     ],
     "favorites": [
       {
-        "id": 13,
+        "id": 14,
         "utcCreatedDateTime": "2023-06-01T18:43:05.440Z",
         "userId": 1,
         "pinId": 221
@@ -12414,7 +12611,7 @@
     },
     "locations": [
       {
-        "id": 70,
+        "id": 72,
         "address": "Taiwan",
         "order": 0,
         "pinId": 207
@@ -12441,7 +12638,7 @@
     },
     "locations": [
       {
-        "id": 71,
+        "id": 73,
         "address": "Apple Valley",
         "order": 0,
         "pinId": 215
@@ -12467,7 +12664,7 @@
     },
     "media": [
       {
-        "id": 290,
+        "id": 294,
         "thumbName": "a4cf2cb9-1df7-4058-89f4-11000af5cd5d-chrono-lg.webp",
         "thumbWidth": 908,
         "thumbHeight": 474,
@@ -12496,7 +12693,7 @@
     },
     "media": [
       {
-        "id": 291,
+        "id": 295,
         "thumbName": "73f7248b-3954-4aa5-aae1-e3463be1f269-chrono-lg.webp",
         "thumbWidth": 768,
         "thumbHeight": 545,
@@ -12525,7 +12722,7 @@
     },
     "media": [
       {
-        "id": 292,
+        "id": 296,
         "thumbName": "bf50f483-f7d7-4ca8-bc7e-2e3e25b773b5-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -12552,7 +12749,7 @@
     },
     "media": [
       {
-        "id": 293,
+        "id": 297,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1640619037251043328",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -12562,7 +12759,7 @@
     ],
     "locations": [
       {
-        "id": 72,
+        "id": 74,
         "address": "Europe",
         "order": 0,
         "pinId": 223
@@ -12588,7 +12785,7 @@
     },
     "mentions": [
       {
-        "id": 112,
+        "id": 170,
         "tag": "#energy",
         "pinId": 155
       }
@@ -12611,7 +12808,7 @@
     },
     "media": [
       {
-        "id": 294,
+        "id": 298,
         "thumbName": "70cb68bb-e894-41e9-a3b8-943c8257ec69-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 400,
@@ -12641,7 +12838,7 @@
     },
     "media": [
       {
-        "id": 295,
+        "id": 299,
         "thumbName": "8c5669d4-d0ff-4a13-a8c4-faf8f5ab7a08-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -12653,7 +12850,7 @@
     ],
     "locations": [
       {
-        "id": 73,
+        "id": 75,
         "address": "Merced, CA",
         "order": 0,
         "pinId": 219
@@ -12661,7 +12858,7 @@
     ],
     "favorites": [
       {
-        "id": 14,
+        "id": 15,
         "utcCreatedDateTime": "2023-06-01T18:43:24.408Z",
         "userId": 1,
         "pinId": 219
@@ -12686,7 +12883,7 @@
     },
     "media": [
       {
-        "id": 296,
+        "id": 300,
         "thumbName": "bf5d33da-73c4-4feb-b47d-a18c70c47179-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 562,
@@ -12698,7 +12895,7 @@
     ],
     "mentions": [
       {
-        "id": 113,
+        "id": 171,
         "tag": "$AAPL",
         "pinId": 387
       }
@@ -12722,7 +12919,7 @@
     },
     "media": [
       {
-        "id": 297,
+        "id": 301,
         "thumbName": "994a389a-f825-4822-bfbe-53b1e279b285-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 523,
@@ -12734,7 +12931,7 @@
     ],
     "locations": [
       {
-        "id": 74,
+        "id": 76,
         "address": "China",
         "order": 0,
         "pinId": 330
@@ -12758,7 +12955,7 @@
     },
     "media": [
       {
-        "id": 298,
+        "id": 302,
         "thumbName": "7cc700a4-3b9f-41c9-aee7-4d04239f8736-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -12770,7 +12967,7 @@
     ],
     "favorites": [
       {
-        "id": 15,
+        "id": 16,
         "utcCreatedDateTime": "2023-06-01T18:43:33.799Z",
         "userId": 1,
         "pinId": 191
@@ -12794,7 +12991,7 @@
     },
     "media": [
       {
-        "id": 299,
+        "id": 303,
         "thumbName": "44d2270e-f5b2-4116-85bd-23620693c371-chrono-lg.webp",
         "thumbWidth": 150,
         "thumbHeight": 133,
@@ -12823,7 +13020,7 @@
     },
     "media": [
       {
-        "id": 300,
+        "id": 304,
         "originalUrl": "https://twitter.com/BurggrabenH/status/1657432126076141570",
         "type": "2",
         "authorName": "Alexander Stahel ????",
@@ -12851,7 +13048,7 @@
     },
     "media": [
       {
-        "id": 301,
+        "id": 305,
         "originalUrl": "https://twitter.com/CyberMagazineX/status/890816308144558080",
         "type": "2",
         "authorName": "MagX(??????????X)",
@@ -12861,7 +13058,7 @@
     ],
     "mentions": [
       {
-        "id": 114,
+        "id": 172,
         "tag": "#AI",
         "pinId": 248
       }
@@ -12884,7 +13081,7 @@
     },
     "media": [
       {
-        "id": 302,
+        "id": 306,
         "thumbName": "96a0f58b-ba43-4ae8-861f-f3f05b74305a-chrono-lg.webp",
         "thumbWidth": 286,
         "thumbHeight": 400,

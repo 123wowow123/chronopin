@@ -9,7 +9,7 @@
     bindToController: true,
     transclude: true,
     scope: {},
-    controller: ['$transclude', 'appConfig', function ($transclude, appConfig) {
+    controller: ['$transclude', function ($transclude) {
       $transclude((clone, scope) => {
         let searchText = clone.text();
         this.searchText = encodeURIComponent(searchText);
@@ -20,7 +20,7 @@
   const dollarTagFactory = {
     ...tagOFactory,
     templateUrl: 'components/tags/dollartag.html',
-    controller: ['$transclude', '$sce', 'stockWebService', function ($transclude, $sce, stockWebService) {
+    controller: ['$transclude', 'stockWebService', function ($transclude, stockWebService) {
       this.loading = false;
       $transclude((clone, scope) => {
         let searchText = clone.text();
@@ -33,8 +33,7 @@
             .then((res) => {
               this.lastPrice = _.get(res, 'data.lastPrice', '');
               this.netPercentChangeInDouble = _.get(res, 'data.netPercentChangeInDouble', '');
-            })
-            .catch((e) => {
+            }).catch((e) => {
               return e;
             }).finally(() => {
               this.loading = false;
