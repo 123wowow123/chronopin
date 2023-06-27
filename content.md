@@ -13,10 +13,11 @@ Comment cleanup/backup +
 links should be external cleanup
 follow notification
 copy past tags creates link
+
  $5 should not be a tag
  https://www.chronopin.com/pin/105
 
- NESTE.HE
+$NESTE.HE
 https://www.chronopin.com/pin/322
 
 popover needs:
