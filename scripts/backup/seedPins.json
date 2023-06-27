@@ -3421,12 +3421,14 @@
     "id": 110,
     "rootThread": false,
     "title": "Intel Cannonlake Processors based on the 10nm manufacturing Process",
-    "description": "Cannonlake Processors will be 15% faster than the Kaby Lake ones,\n10nm FinFET Manufacturing Process,\nChipset of 200 Series,\nUSB 3.1 Gen 2 10Gbps support, 6 ports,\nThermal Design Power (TDP) up to 95 W (LGA 1151),\nUpdated Intel Optane Technology Support",
+    "description": "<p class=\"paragraph\"> Cannonlake Processors will be 15% faster than the Kaby Lake ones,\n10nm FinFET Manufacturing Process,\nChipset of 200 Series,\nUSB 3.1 Gen 2 10Gbps support, 6 ports,\nThermal Design Power (TDP) up to 95 W (LGA 1151),\nUpdated Intel Optane Technology Support </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$INTC</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687846352217,\"blocks\":[{\"id\":\"fuQvi3PxXj\",\"type\":\"paragraph\",\"data\":{\"text\":\"Cannonlake Processors will be 15% faster than the Kaby Lake ones,\\n10nm FinFET Manufacturing Process,\\nChipset of 200 Series,\\nUSB 3.1 Gen 2 10Gbps support, 6 ports,\\nThermal Design Power (TDP) up to 95 W (LGA 1151),\\nUpdated Intel Optane Technology Support\"}},{\"id\":\"KoHixM84tK\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$INTC</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://technewswith.me/intel-cannonlake-expected-specs/",
     "utcStartDateTime": "2018-04-01T07:00:00.000Z",
-    "utcEndDateTime": "2018-04-02T07:00:00.000Z",
+    "utcEndDateTime": "2018-04-03T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-08-09T06:07:44.172Z",
+    "utcUpdatedDateTime": "2023-06-27T06:12:37.017Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3441,6 +3443,13 @@
         "originalWidth": 794,
         "originalHeight": 499,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 154,
+        "tag": "$INTC",
+        "pinId": 110
       }
     ],
     "userId": 1
