@@ -289,13 +289,14 @@
     "id": 11,
     "rootThread": false,
     "title": "AMD reveals details for Kaveri APU",
-    "description": "AMD boasted performance figure of 856 GFLOPS from the new processor, which utilises a heterogeneous system architecture, where compute and graphics cores share the same system memory.",
+    "description": "<p class=\"paragraph\"> AMD boasted performance figure of 856 GFLOPS from the new processor, which utilises a heterogeneous system architecture, where compute and graphics cores share the same system memory. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$AMD</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687846490595,\"blocks\":[{\"id\":\"Fqy_-ENZFh\",\"type\":\"paragraph\",\"data\":{\"text\":\"AMD boasted performance figure of 856 GFLOPS from the new processor, which utilises a heterogeneous system architecture, where compute and graphics cores share the same system memory.\"}},{\"id\":\"ekNxccyjmz\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$AMD</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "http://hexus.net/tech/news/cpu/62350-amd-reveals-details-release-date-kaveri-apu/",
     "utcStartDateTime": "2014-01-13T08:00:00.000Z",
-    "utcEndDateTime": "2014-01-15T08:00:00.000Z",
+    "utcEndDateTime": "2014-01-16T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-15T05:50:37.350Z",
-    "utcUpdatedDateTime": "2023-01-24T06:05:20.342Z",
+    "utcUpdatedDateTime": "2023-06-27T06:14:53.189Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -310,6 +311,13 @@
         "originalWidth": 600,
         "originalHeight": 363,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 158,
+        "tag": "$AMD",
+        "pinId": 11
       }
     ],
     "userId": 1
@@ -1054,14 +1062,15 @@
     "id": 36,
     "rootThread": false,
     "title": "Philips slims down the BR30 LED bulb (price and all)",
-    "description": "Months after releasing a flattened A19 LED, Philips is at it again -- this time with a reinvented \"SlimStyle\" BR30 LED. Like the original SlimStyle LED, the new BR30 version disperses its diodes across a uniquely flat design, which eliminates the need for bulky, aluminum heat sinks.",
+    "description": "<p class=\"paragraph\"> Months after releasing a flattened A19 LED, Philips is at it again -- this time with a reinvented \"SlimStyle\" BR30 LED. Like the original SlimStyle LED, the new BR30 version disperses its diodes across a uniquely flat design, which eliminates the need for bulky, aluminum heat sinks. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$PHG</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687846580737,\"blocks\":[{\"id\":\"FtNxM2VuF4\",\"type\":\"paragraph\",\"data\":{\"text\":\"Months after releasing a flattened A19 LED, Philips is at it again -- this time with a reinvented \\\"SlimStyle\\\" BR30 LED. Like the original SlimStyle LED, the new BR30 version disperses its diodes across a uniquely flat design, which eliminates the need for bulky, aluminum heat sinks.\"}},{\"id\":\"NZY8kGNTxv\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$PHG</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "http://www.cnet.com/products/philips-slimstyle-br30-led/",
     "price": 12.97,
     "utcStartDateTime": "2014-07-30T07:00:00.000Z",
-    "utcEndDateTime": "2014-08-01T07:00:00.000Z",
+    "utcEndDateTime": "2014-08-02T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-15T05:50:37.725Z",
-    "utcUpdatedDateTime": "2023-03-07T07:46:52.787Z",
+    "utcUpdatedDateTime": "2023-06-27T06:16:35.111Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -1076,6 +1085,13 @@
         "originalWidth": 1200,
         "originalHeight": 675,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 161,
+        "tag": "$PHG",
+        "pinId": 36
       }
     ],
     "userId": 1
@@ -1332,13 +1348,15 @@
     "id": 45,
     "rootThread": false,
     "title": "Broadcom doubles Wi-Fi performance for smartphones and tablets with new combo chip",
-    "description": "Broadcom announced a new Wi-Fi and Bluetooth combo chip today that the manufacturer claims will double wireless networking performance of high-end smartphones and tablets. The hardware vendor claims that users spend an estimated four to five hours everyday on Wi-Fi, and that with the new chipset, they will be able to download and stream content twice as fast as current-gen devices and with less lag.",
+    "description": "<p class=\"paragraph\"> Broadcom announced a new Wi-Fi and Bluetooth combo chip today that the manufacturer claims will double wireless networking performance of high-end smartphones and tablets. The hardware vendor claims that users spend an estimated four to five hours everyday on Wi-Fi, and that with the new chipset, they will be able to download and stream content twice as fast as current-gen devices and with less lag. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$AVGO</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687846511893,\"blocks\":[{\"id\":\"1Umru_6cyl\",\"type\":\"paragraph\",\"data\":{\"text\":\"Broadcom announced a new Wi-Fi and Bluetooth combo chip today that the manufacturer claims will double wireless networking performance of high-end smartphones and tablets. The hardware vendor claims that users spend an estimated four to five hours everyday on Wi-Fi, and that with the new chipset, they will be able to download and stream content twice as fast as current-gen devices and with less lag.\"}},{\"id\":\"-wBhB9zE7r\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$AVGO</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "http://www.wpcentral.com/broadcom-doubles-wi-fi-performance-smartphones-and-tablets-new-combo-chip",
     "price": 0,
     "utcStartDateTime": "2014-09-03T07:00:00.000Z",
-    "utcEndDateTime": "2014-09-04T07:00:00.000Z",
+    "utcEndDateTime": "2014-09-05T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-15T05:50:37.913Z",
+    "utcUpdatedDateTime": "2023-06-27T06:15:15.236Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -1353,6 +1371,13 @@
         "originalWidth": 780,
         "originalHeight": 641,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 159,
+        "tag": "$AVGO",
+        "pinId": 45
       }
     ],
     "userId": 1
@@ -2271,13 +2296,15 @@
     "id": 72,
     "rootThread": false,
     "title": "Dell's UltraSharp 32 Ultra HD 8K now available to purchase",
-    "description": "First unveiled at CES 2017 the \"near borderless\" P3218K. To sum up, an 8K display like the P3218K provides a lot of pixels (over 33 million, or 7680 x 4320 at 60Hz), equivalent to 4x 4K displays or 16x FHD displays. Its IPS LED backlit display has a response time of 6ms (grey to grey).",
+    "description": "<p class=\"paragraph\"> First unveiled at CES 2017 the \"near borderless\" P3218K. To sum up, an 8K display like the P3218K provides a lot of pixels (over 33 million, or 7680 x 4320 at 60Hz), equivalent to 4x 4K displays or 16x FHD displays. Its IPS LED backlit display has a response time of 6ms (grey to grey). </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$DELL</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687846463830,\"blocks\":[{\"id\":\"urkkVw76XF\",\"type\":\"paragraph\",\"data\":{\"text\":\"First unveiled at CES 2017 the \\\"near borderless\\\" P3218K. To sum up, an 8K display like the P3218K provides a lot of pixels (over 33 million, or 7680 x 4320 at 60Hz), equivalent to 4x 4K displays or 16x FHD displays. Its IPS LED backlit display has a response time of 6ms (grey to grey).\"}},{\"id\":\"fSBJCCjCxh\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$DELL</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "http://hexus.net/tech/news/monitors/103885-dells-ultrasharp-32-ultra-hd-8k-now-available-purchase/",
     "price": 4999,
     "utcStartDateTime": "2017-03-24T07:00:00.000Z",
-    "utcEndDateTime": "2017-03-25T07:00:00.000Z",
+    "utcEndDateTime": "2017-03-26T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-08-02T04:41:39.829Z",
+    "utcUpdatedDateTime": "2023-06-27T06:14:29.783Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -2292,6 +2319,13 @@
         "originalWidth": 700,
         "originalHeight": 518,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 157,
+        "tag": "$DELL",
+        "pinId": 72
       }
     ],
     "userId": 1
@@ -3146,6 +3180,14 @@
         "type": "1"
       }
     ],
+    "favorites": [
+      {
+        "id": 16,
+        "utcCreatedDateTime": "2023-06-27T06:16:47.783Z",
+        "userId": 1,
+        "pinId": 101
+      }
+    ],
     "userId": 1
   },
   {
@@ -3328,12 +3370,14 @@
     "id": 107,
     "rootThread": false,
     "title": "GLOBALFOUNDRIES will jump directly from 14nm to 7nm",
-    "description": "Tech expected to be ready for chip designers in H2 2017, production in early 2018. It will skip \"the marginal performance and power benefits for the high cost of the 10nm process node\" to hopefully become a leading differentiated 7nm chip fabricator ahead of major rivals.",
+    "description": "<p class=\"paragraph\"> Tech expected to be ready for chip designers in H2 2017, production in early 2018. It will skip \"the marginal performance and power benefits for the high cost of the 10nm process node\" to hopefully become a leading differentiated 7nm chip fabricator ahead of major rivals. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$GFS</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687846422593,\"blocks\":[{\"id\":\"ghVkzGSpJB\",\"type\":\"paragraph\",\"data\":{\"text\":\"Tech expected to be ready for chip designers in H2 2017, production in early 2018. It will skip \\\"the marginal performance and power benefits for the high cost of the 10nm process node\\\" to hopefully become a leading differentiated 7nm chip fabricator ahead of major rivals.\"}},{\"id\":\"xPWqDwJ-Ou\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$GFS</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "http://hexus.net/tech/news/industry/96997-globalfoundries-will-jump-directly-14nm-7nm/",
     "utcStartDateTime": "2018-03-30T07:00:00.000Z",
-    "utcEndDateTime": "2018-03-31T07:00:00.000Z",
+    "utcEndDateTime": "2018-04-01T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-21T06:20:08.534Z",
+    "utcUpdatedDateTime": "2023-06-27T06:13:49.783Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3348,6 +3392,13 @@
         "originalWidth": 700,
         "originalHeight": 433,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 155,
+        "tag": "$GFS",
+        "pinId": 107
       }
     ],
     "userId": 1
@@ -3544,13 +3595,15 @@
     "id": 114,
     "rootThread": false,
     "title": "Key Takeaways of 2018 MacBook Pro vs. 2017 MacBook Pro",
-    "description": "2018 MacBook Pros feature eighth-generation Intel Core processors. Apple says the 15-inch model is up to 70 percent faster, and the 13-inch model is up to two times faster, than the equivalent 2017 models with seventh-generation Intel Core processors in benchmarks.\n15-inch models can now be maxed out with a 2.9GHz six-core Core i9 processor, while the previous generation topped out at a 3.1GHz quad-core Core i7. Quad-core 13-inch models with the Touch Bar are now available, up to 2.7GHz, while 2017 models were dual-core up to 3.5GHz.",
+    "description": "<p class=\"paragraph\"> 2018 MacBook Pros feature eighth-generation Intel Core processors. Apple says the 15-inch model is up to 70 percent faster, and the 13-inch model is up to two times faster, than the equivalent 2017 models with seventh-generation Intel Core processors in benchmarks.\n15-inch models can now be maxed out with a 2.9GHz six-core Core i9 processor, while the previous generation topped out at a 3.1GHz quad-core Core i7. Quad-core 13-inch models with the Touch Bar are now available, up to 2.7GHz, while 2017 models were dual-core up to 3.5GHz. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$AAPL</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687846538767,\"blocks\":[{\"id\":\"sw-Ov2NX1N\",\"type\":\"paragraph\",\"data\":{\"text\":\"2018 MacBook Pros feature eighth-generation Intel Core processors. Apple says the 15-inch model is up to 70 percent faster, and the 13-inch model is up to two times faster, than the equivalent 2017 models with seventh-generation Intel Core processors in benchmarks.\\n15-inch models can now be maxed out with a 2.9GHz six-core Core i9 processor, while the previous generation topped out at a 3.1GHz quad-core Core i7. Quad-core 13-inch models with the Touch Bar are now available, up to 2.7GHz, while 2017 models were dual-core up to 3.5GHz.\"}},{\"id\":\"gpLs33beSu\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$AAPL</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.macrumors.com/2018/07/12/2018-macbook-pro-vs-2017-macbook-pro/",
     "price": 2399,
     "utcStartDateTime": "2018-07-12T07:00:00.000Z",
-    "utcEndDateTime": "2018-07-13T06:59:59.000Z",
+    "utcEndDateTime": "2018-07-13T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2018-07-16T06:37:35.931Z",
+    "utcUpdatedDateTime": "2023-06-27T06:15:41.533Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3565,6 +3618,13 @@
         "originalWidth": 1600,
         "originalHeight": 1494,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 160,
+        "tag": "$AAPL",
+        "pinId": 114
       }
     ],
     "userId": 1
@@ -3707,13 +3767,15 @@
     "id": 119,
     "rootThread": false,
     "title": "AMD 12nm Polaris 30 GPUs set to land in Radeon RX-600 graphics cards before year-end",
-    "description": "The part, which would appear in a series of Radeon RX-600-branded graphics cards, will offer a 15 per cent performance boost compared to current RX-500 series cards, which were a minor refresh on 2016's RX-400s.",
+    "description": "<p class=\"paragraph\"> The part, which would appear in a series of Radeon RX-600-branded graphics cards, will offer a 15 per cent performance boost compared to current RX-500 series cards, which were a minor refresh on 2016's RX-400s. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$AMD</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687846440829,\"blocks\":[{\"id\":\"d42KItVHXr\",\"type\":\"paragraph\",\"data\":{\"text\":\"The part, which would appear in a series of Radeon RX-600-branded graphics cards, will offer a 15 per cent performance boost compared to current RX-500 series cards, which were a minor refresh on 2016's RX-400s.\"}},{\"id\":\"A3IEpEM00u\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$AMD</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.v3.co.uk/v3-uk/news/3035322/amd-12nm-polaris-30-gpus-set-to-land-in-radeon-rx-680-graphics-cards-before-year-end",
     "price": 397.45,
     "utcStartDateTime": "2018-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2019-01-01T07:59:59.000Z",
+    "utcEndDateTime": "2019-01-01T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2018-07-16T06:20:16.601Z",
+    "utcUpdatedDateTime": "2023-06-27T06:14:03.392Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -3728,6 +3790,13 @@
         "originalWidth": 580,
         "originalHeight": 358,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 156,
+        "tag": "$AMD",
+        "pinId": 119
       }
     ],
     "userId": 1
@@ -10911,14 +10980,15 @@
     "id": 149,
     "rootThread": false,
     "title": "The MSG Sphere is the largest sphere in the world, planned to open in Las Vegas in the second half of 2023.",
-    "description": "<p class=\"paragraph\">  The MSG Sphere is the largest spherical building in the world, providing Las Vegas' No. 1 immersive show experience. MSG Sphere interior screen measures 19,000 by 13,500 pixels covering a space that is more than three football pitches. It is 100 times crisper and more detailed than the best world-class HD TVs in the market.  </p>",
+    "description": "<p class=\"paragraph\">   The MSG Sphere is the largest spherical building in the world, providing Las Vegas' No. 1 immersive show experience. MSG Sphere interior screen measures 19,000 by 13,500 pixels covering a space that is more than three football pitches. It is 100 times crisper and more detailed than the best world-class HD TVs in the market.   </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$MSGS</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687846740769,\"blocks\":[{\"id\":\"OR4r27YACs\",\"type\":\"paragraph\",\"data\":{\"text\":\"  The MSG Sphere is the largest spherical building in the world, providing Las Vegas' No. 1 immersive show experience. MSG Sphere interior screen measures 19,000 by 13,500 pixels covering a space that is more than three football pitches. It is 100 times crisper and more detailed than the best world-class HD TVs in the market.  \"}},{\"id\":\"MSuWWsonIP\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$MSGS</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://1oaklasvegas.com/msg-sphere-las-vegas/",
     "price": 2000000000,
     "utcStartDateTime": "2023-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2024-01-05T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-06T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-03-11T03:18:25.589Z",
-    "utcUpdatedDateTime": "2023-05-24T01:22:47.730Z",
+    "utcUpdatedDateTime": "2023-06-27T06:19:07.407Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -10933,9 +11003,16 @@
     ],
     "locations": [
       {
-        "id": 53,
+        "id": 81,
         "address": "MSG Sphere, Las Vegas",
         "order": 0,
+        "pinId": 149
+      }
+    ],
+    "mentions": [
+      {
+        "id": 162,
+        "tag": "$MSGS",
         "pinId": 149
       }
     ],
@@ -11155,15 +11232,15 @@
     "id": 376,
     "rootThread": false,
     "title": "Mountain Valley natural-gas pipeline moving forward, capacity may be limited, target project completion by year-end 2023",
-    "description": "<p class=\"paragraph\"> The $6.6 billion Mountain Valley natural gas pipeline from West Virginia to Virginia is on track to get final permits by Saturday, moving the long-delayed project closer to re-starting construction. </p><p class=\"paragraph\"> Some analysts, however, said that even when the pipe enters service, which could be as soon as the end of 2023, it would only operate at half capacity or less due to transmission constraints. </p><p class=\"paragraph\"> Equitrans Midstream Corp, the lead partner building Mountain Valley, disputed that half-capacity analysis and noted that it is normal for gas markets to take time to fully adjust to new large-scale projects. </p><p class=\"paragraph\"> Mountain Valley \"is not being built for the short term. (It) will meet increasing gas demand and improve reliability and affordability for domestic consumers for decades to come,\" Equitrans spokesperson Natalie Cox told Reuters in an email. </p><p class=\"paragraph\"> <a href=\"https://www.reuters.com/business/energy/us-mountain-valley-natgas-pipe-closer-construction-after-wv-permit-2023-06-13/\">Mountain Valley</a>&nbsp;has said it expects to resume construction after the U.S. Army Corps of Engineers issues a water permit. That should happen by Saturday as mandated by the&nbsp;<a href=\"https://www.reuters.com/business/energy/biden-mccarthy-debt-deal-would-speed-up-mountain-valley-gas-pipeline-2023-05-29/\">Fiscal Responsibility Act</a>, which ended the debt ceiling crisis. </p><p class=\"paragraph\"> \"We will request the administrative authorizations necessary to resume full construction in the near future,\" Cox said, noting that Mountain Valley continues to target project completion by year-end 2023. </p><p class=\"paragraph\"> Mountain Valley is one of several U.S. projects delayed by regulatory and legal fights with environmental and local groups in recent years. The pipe is key to unlocking more gas supplies in Appalachia, the nation's biggest shale gas basin. </p><p class=\"paragraph\"> But analysts at energy consulting firm East Daley Analytics said Mountain Valley will only run at about 35% of its 2 billion cubic feet per day (bcfd) capacity when it is finally built. </p><p class=\"paragraph\"> That's because the Transcontinental Gas Pipe Line (Transco) system into which Mountain Valley will connect in Virginia has limited takeaway capacity, East Daley said. </p><p class=\"paragraph\"> Transco is owned by U.S. energy company Williams Cos Inc. Officials at Williams were not immediately available for comment. </p><p class=\"paragraph\"> Environmental groups, meanwhile, continue to challenge Mountain Valley's permits in court. </p><p class=\"paragraph\"> \"There is no reason to think they could build and operate this project safely, and now analysts are saying that if (Mountain Valley) is completed, it would only run at less than half capacity,\" said Caroline Hansley, senior campaign representative at the Sierra Club, an environmental group opposed to the pipeline. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Pipeliine</chronohash> </p>",
-    "sourceDescription": "{\"time\":1687653494090,\"blocks\":[{\"id\":\"Vx7vaqniIJ\",\"type\":\"paragraph\",\"data\":{\"text\":\"The $6.6 billion Mountain Valley natural gas pipeline from West Virginia to Virginia is on track to get final permits by Saturday, moving the long-delayed project closer to re-starting construction.\"}},{\"id\":\"Lli0exW0Da\",\"type\":\"paragraph\",\"data\":{\"text\":\"Some analysts, however, said that even when the pipe enters service, which could be as soon as the end of 2023, it would only operate at half capacity or less due to transmission constraints.\"}},{\"id\":\"OLgkAFv1_L\",\"type\":\"paragraph\",\"data\":{\"text\":\"Equitrans Midstream Corp, the lead partner building Mountain Valley, disputed that half-capacity analysis and noted that it is normal for gas markets to take time to fully adjust to new large-scale projects.\"}},{\"id\":\"AYK9B20HT9\",\"type\":\"paragraph\",\"data\":{\"text\":\"Mountain Valley \\\"is not being built for the short term. (It) will meet increasing gas demand and improve reliability and affordability for domestic consumers for decades to come,\\\" Equitrans spokesperson Natalie Cox told Reuters in an email.\"}},{\"id\":\"swDLCmJtAE\",\"type\":\"paragraph\",\"data\":{\"text\":\"<a href=\\\"https://www.reuters.com/business/energy/us-mountain-valley-natgas-pipe-closer-construction-after-wv-permit-2023-06-13/\\\">Mountain Valley</a>&nbsp;has said it expects to resume construction after the U.S. Army Corps of Engineers issues a water permit. That should happen by Saturday as mandated by the&nbsp;<a href=\\\"https://www.reuters.com/business/energy/biden-mccarthy-debt-deal-would-speed-up-mountain-valley-gas-pipeline-2023-05-29/\\\">Fiscal Responsibility Act</a>, which ended the debt ceiling crisis.\"}},{\"id\":\"XXDsTK1_wW\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"We will request the administrative authorizations necessary to resume full construction in the near future,\\\" Cox said, noting that Mountain Valley continues to target project completion by year-end 2023.\"}},{\"id\":\"pJhMO7ijcj\",\"type\":\"paragraph\",\"data\":{\"text\":\"Mountain Valley is one of several U.S. projects delayed by regulatory and legal fights with environmental and local groups in recent years. The pipe is key to unlocking more gas supplies in Appalachia, the nation's biggest shale gas basin.\"}},{\"id\":\"yryTbnIcjJ\",\"type\":\"paragraph\",\"data\":{\"text\":\"But analysts at energy consulting firm East Daley Analytics said Mountain Valley will only run at about 35% of its 2 billion cubic feet per day (bcfd) capacity when it is finally built.\"}},{\"id\":\"S8VfqMzRPf\",\"type\":\"paragraph\",\"data\":{\"text\":\"That's because the Transcontinental Gas Pipe Line (Transco) system into which Mountain Valley will connect in Virginia has limited takeaway capacity, East Daley said.\"}},{\"id\":\"UJ_eWrY2xL\",\"type\":\"paragraph\",\"data\":{\"text\":\"Transco is owned by U.S. energy company Williams Cos Inc. Officials at Williams were not immediately available for comment.\"}},{\"id\":\"Hs7GXZzrOH\",\"type\":\"paragraph\",\"data\":{\"text\":\"Environmental groups, meanwhile, continue to challenge Mountain Valley's permits in court.\"}},{\"id\":\"YnF3vH3eIM\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"There is no reason to think they could build and operate this project safely, and now analysts are saying that if (Mountain Valley) is completed, it would only run at less than half capacity,\\\" said Caroline Hansley, senior campaign representative at the Sierra Club, an environmental group opposed to the pipeline.\"}},{\"id\":\"dNRDHl6tzE\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Pipeliine</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "description": "<p class=\"paragraph\"> The $6.6 billion Mountain Valley natural gas pipeline from West Virginia to Virginia is on track to get final permits by Saturday, moving the long-delayed project closer to re-starting construction. </p><p class=\"paragraph\"> Some analysts, however, said that even when the pipe enters service, which could be as soon as the end of 2023, it would only operate at half capacity or less due to transmission constraints. </p><p class=\"paragraph\"> Equitrans Midstream Corp, the lead partner building Mountain Valley, disputed that half-capacity analysis and noted that it is normal for gas markets to take time to fully adjust to new large-scale projects. </p><p class=\"paragraph\"> Mountain Valley \"is not being built for the short term. (It) will meet increasing gas demand and improve reliability and affordability for domestic consumers for decades to come,\" Equitrans spokesperson Natalie Cox told Reuters in an email. </p><p class=\"paragraph\"> <a href=\"https://www.reuters.com/business/energy/us-mountain-valley-natgas-pipe-closer-construction-after-wv-permit-2023-06-13/\">Mountain Valley</a>&nbsp;has said it expects to resume construction after the U.S. Army Corps of Engineers issues a water permit. That should happen by Saturday as mandated by the&nbsp;<a href=\"https://www.reuters.com/business/energy/biden-mccarthy-debt-deal-would-speed-up-mountain-valley-gas-pipeline-2023-05-29/\">Fiscal Responsibility Act</a>, which ended the debt ceiling crisis. </p><p class=\"paragraph\"> \"We will request the administrative authorizations necessary to resume full construction in the near future,\" Cox said, noting that Mountain Valley continues to target project completion by year-end 2023. </p><p class=\"paragraph\"> Mountain Valley is one of several U.S. projects delayed by regulatory and legal fights with environmental and local groups in recent years. The pipe is key to unlocking more gas supplies in Appalachia, the nation's biggest shale gas basin. </p><p class=\"paragraph\"> But analysts at energy consulting firm East Daley Analytics said Mountain Valley will only run at about 35% of its 2 billion cubic feet per day (bcfd) capacity when it is finally built. </p><p class=\"paragraph\"> That's because the Transcontinental Gas Pipe Line (Transco) system into which Mountain Valley will connect in Virginia has limited takeaway capacity, East Daley said. </p><p class=\"paragraph\"> Transco is owned by U.S. energy company Williams Cos Inc. Officials at Williams were not immediately available for comment. </p><p class=\"paragraph\"> Environmental groups, meanwhile, continue to challenge Mountain Valley's permits in court. </p><p class=\"paragraph\"> \"There is no reason to think they could build and operate this project safely, and now analysts are saying that if (Mountain Valley) is completed, it would only run at less than half capacity,\" said Caroline Hansley, senior campaign representative at the Sierra Club, an environmental group opposed to the pipeline. </p><p class=\"paragraph\"> The MVP is owned by Mountain Valley Pipeline, LLC (MVP LLC), which is a joint venture between&nbsp;<a href=\"https://en.wikipedia.org/wiki/Equitrans_Midstream\">Equitrans Midstream</a>,&nbsp;<a href=\"https://en.wikipedia.org/wiki/NextEra_Energy_Resources\">NextEra Energy Resources</a>,&nbsp;<a href=\"https://en.wikipedia.org/wiki/Consolidated_Edison\">Con Edison Transmission</a>&nbsp;and other midstream partners.&nbsp;The MVP would be operated by Equitrans Midstream which is the majority owner. Equitrans Midstream was formed in a June 2020 merger. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Pipeliine</chronohash>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$ETRN</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$NEE</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$ED</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687847027410,\"blocks\":[{\"id\":\"Vx7vaqniIJ\",\"type\":\"paragraph\",\"data\":{\"text\":\"The $6.6 billion Mountain Valley natural gas pipeline from West Virginia to Virginia is on track to get final permits by Saturday, moving the long-delayed project closer to re-starting construction.\"}},{\"id\":\"Lli0exW0Da\",\"type\":\"paragraph\",\"data\":{\"text\":\"Some analysts, however, said that even when the pipe enters service, which could be as soon as the end of 2023, it would only operate at half capacity or less due to transmission constraints.\"}},{\"id\":\"OLgkAFv1_L\",\"type\":\"paragraph\",\"data\":{\"text\":\"Equitrans Midstream Corp, the lead partner building Mountain Valley, disputed that half-capacity analysis and noted that it is normal for gas markets to take time to fully adjust to new large-scale projects.\"}},{\"id\":\"AYK9B20HT9\",\"type\":\"paragraph\",\"data\":{\"text\":\"Mountain Valley \\\"is not being built for the short term. (It) will meet increasing gas demand and improve reliability and affordability for domestic consumers for decades to come,\\\" Equitrans spokesperson Natalie Cox told Reuters in an email.\"}},{\"id\":\"swDLCmJtAE\",\"type\":\"paragraph\",\"data\":{\"text\":\"<a href=\\\"https://www.reuters.com/business/energy/us-mountain-valley-natgas-pipe-closer-construction-after-wv-permit-2023-06-13/\\\">Mountain Valley</a>&nbsp;has said it expects to resume construction after the U.S. Army Corps of Engineers issues a water permit. That should happen by Saturday as mandated by the&nbsp;<a href=\\\"https://www.reuters.com/business/energy/biden-mccarthy-debt-deal-would-speed-up-mountain-valley-gas-pipeline-2023-05-29/\\\">Fiscal Responsibility Act</a>, which ended the debt ceiling crisis.\"}},{\"id\":\"XXDsTK1_wW\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"We will request the administrative authorizations necessary to resume full construction in the near future,\\\" Cox said, noting that Mountain Valley continues to target project completion by year-end 2023.\"}},{\"id\":\"pJhMO7ijcj\",\"type\":\"paragraph\",\"data\":{\"text\":\"Mountain Valley is one of several U.S. projects delayed by regulatory and legal fights with environmental and local groups in recent years. The pipe is key to unlocking more gas supplies in Appalachia, the nation's biggest shale gas basin.\"}},{\"id\":\"yryTbnIcjJ\",\"type\":\"paragraph\",\"data\":{\"text\":\"But analysts at energy consulting firm East Daley Analytics said Mountain Valley will only run at about 35% of its 2 billion cubic feet per day (bcfd) capacity when it is finally built.\"}},{\"id\":\"S8VfqMzRPf\",\"type\":\"paragraph\",\"data\":{\"text\":\"That's because the Transcontinental Gas Pipe Line (Transco) system into which Mountain Valley will connect in Virginia has limited takeaway capacity, East Daley said.\"}},{\"id\":\"UJ_eWrY2xL\",\"type\":\"paragraph\",\"data\":{\"text\":\"Transco is owned by U.S. energy company Williams Cos Inc. Officials at Williams were not immediately available for comment.\"}},{\"id\":\"Hs7GXZzrOH\",\"type\":\"paragraph\",\"data\":{\"text\":\"Environmental groups, meanwhile, continue to challenge Mountain Valley's permits in court.\"}},{\"id\":\"YnF3vH3eIM\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"There is no reason to think they could build and operate this project safely, and now analysts are saying that if (Mountain Valley) is completed, it would only run at less than half capacity,\\\" said Caroline Hansley, senior campaign representative at the Sierra Club, an environmental group opposed to the pipeline.\"}},{\"id\":\"ELZDPDTOQf\",\"type\":\"paragraph\",\"data\":{\"text\":\"The MVP is owned by Mountain Valley Pipeline, LLC (MVP LLC), which is a joint venture between&nbsp;<a href=\\\"https://en.wikipedia.org/wiki/Equitrans_Midstream\\\">Equitrans Midstream</a>,&nbsp;<a href=\\\"https://en.wikipedia.org/wiki/NextEra_Energy_Resources\\\">NextEra Energy Resources</a>,&nbsp;<a href=\\\"https://en.wikipedia.org/wiki/Consolidated_Edison\\\">Con Edison Transmission</a>&nbsp;and other midstream partners.&nbsp;The MVP would be operated by Equitrans Midstream which is the majority owner. Equitrans Midstream was formed in a June 2020 merger.\"}},{\"id\":\"dNRDHl6tzE\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Pipeliine</chronohash>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$ETRN</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$NEE</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$ED</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.reuters.com/business/energy/us-mountain-valley-natgas-pipe-moving-forward-capacity-may-be-limited-2023-06-23/",
     "price": 6600000000,
     "utcStartDateTime": "2023-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2024-01-02T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-04T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-25T00:36:29.237Z",
-    "utcUpdatedDateTime": "2023-06-25T00:38:15.815Z",
+    "utcUpdatedDateTime": "2023-06-27T06:24:07.578Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -11182,22 +11259,37 @@
     ],
     "locations": [
       {
-        "id": 54,
+        "id": 84,
         "address": "Mountain Valley natural gas pipeline Southern  Virginia",
-        "order": 1,
+        "order": 0,
         "pinId": 376
       },
       {
-        "id": 55,
+        "id": 85,
         "address": "Marcellus and Utica shale sites",
-        "order": 0,
+        "order": 1,
         "pinId": 376
       }
     ],
     "mentions": [
       {
-        "id": 103,
+        "id": 167,
         "tag": "#Pipeliine",
+        "pinId": 376
+      },
+      {
+        "id": 168,
+        "tag": "$ETRN",
+        "pinId": 376
+      },
+      {
+        "id": 169,
+        "tag": "$NEE",
+        "pinId": 376
+      },
+      {
+        "id": 170,
+        "tag": "$ED",
         "pinId": 376
       }
     ],
