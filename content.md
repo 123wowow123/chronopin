@@ -16,6 +16,8 @@ copy past tags creates link
  $5 should not be a tag
  https://www.chronopin.com/pin/105
 
+ NESTE.HE
+https://www.chronopin.com/pin/322
 
 popover needs:
 posted price
