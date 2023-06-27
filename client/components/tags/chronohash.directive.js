@@ -33,6 +33,9 @@
             .then((res) => {
               this.lastPrice = _.get(res, 'data.lastPrice', '');
               this.netPercentChangeInDouble = _.get(res, 'data.netPercentChangeInDouble', '');
+            })
+            .catch((e) => {
+              return e;
             }).finally(() => {
               this.loading = false;
             });

@@ -17,7 +17,7 @@ popover needs:
 posted price
 current price
 change between posted/current price
-
+need cancel scrape if it gets stuck
 
 Bugs:
 scrolling 
