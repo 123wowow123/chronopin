@@ -31,6 +31,7 @@ function _fetch(symbol) {
                     cache.setWithExpiry(cacheKey, data, ttl);
                     resolve(data);
                 }).catch(err => {
+                    cache.setWithExpiry(cacheKey, {}, ttl);
                     reject(err);
                 });
         }
