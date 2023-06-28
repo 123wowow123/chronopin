@@ -7628,6 +7628,36 @@
     "userId": 3
   },
   {
+    "id": 421,
+    "rootThread": true,
+    "title": "Bank Term Funding Program",
+    "description": "<p class=\"paragraph\"> As of March 15, 2023: </p><p class=\"paragraph\"> • The total outstanding amount of all advances under the BTFP was $11,942,528,000. </p><p class=\"paragraph\"> • The total value of the collateral pledged to secure outstanding advances was $15,885,798,000. </p><p class=\"paragraph\"> • The amount of interest, fees, and other revenue or items of value received under the facility, reported on an accrual basis, was $662,000.  </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Liquidity</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#BTFP</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687970903073,\"blocks\":[{\"id\":\"8zOo5LUU2d\",\"type\":\"paragraph\",\"data\":{\"text\":\"As of March 15, 2023:\"}},{\"id\":\"Lu-GYw84li\",\"type\":\"paragraph\",\"data\":{\"text\":\"• The total outstanding amount of all advances under the BTFP was $11,942,528,000.\"}},{\"id\":\"ZBcKsITyaI\",\"type\":\"paragraph\",\"data\":{\"text\":\"• The total value of the collateral pledged to secure outstanding advances was $15,885,798,000.\"}},{\"id\":\"tkzncEdC5e\",\"type\":\"paragraph\",\"data\":{\"text\":\"• The amount of interest, fees, and other revenue or items of value received under the facility, reported on an accrual basis, was $662,000. \"}},{\"id\":\"WIpLfivcaQ\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Liquidity</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#BTFP</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.federalreserve.gov/publications/files/13-3-report-btfp-20230316.pdf",
+    "price": 11942528000,
+    "utcStartDateTime": "2023-03-15T07:00:00.000Z",
+    "utcEndDateTime": "2023-03-16T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-28T16:48:59.039Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "mentions": [
+      {
+        "id": 224,
+        "tag": "#Liquidity",
+        "pinId": 421
+      },
+      {
+        "id": 225,
+        "tag": "#BTFP",
+        "pinId": 421
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 162,
     "parentId": 161,
     "rootThread": false,
@@ -7846,6 +7876,38 @@
         "id": 63,
         "tag": "#inflation",
         "pinId": 227
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 419,
+    "parentId": 421,
+    "rootThread": false,
+    "title": "Bank Term Funding Program",
+    "description": "<p class=\"paragraph\"> As of March 31, 2023: </p><p class=\"paragraph\"> • The total outstanding amount of all advances under the BTFP was $64,595,880,000. </p><p class=\"paragraph\"> • The total value of the collateral pledged to secure outstanding advances was $79,569,489,000. </p><p class=\"paragraph\"> The amount of interest, fees, and other revenue or items of value received under the facility, reported on an accrual basis, was $93,568,000.  </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Liquidity</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#BTFP</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687971072285,\"blocks\":[{\"id\":\"68GzHbMhgi\",\"type\":\"paragraph\",\"data\":{\"text\":\"As of March 31, 2023:\"}},{\"id\":\"2DsM9vxpMB\",\"type\":\"paragraph\",\"data\":{\"text\":\"• The total outstanding amount of all advances under the BTFP was $64,595,880,000.\"}},{\"id\":\"FxU_46bsxb\",\"type\":\"paragraph\",\"data\":{\"text\":\"• The total value of the collateral pledged to secure outstanding advances was $79,569,489,000.\"}},{\"id\":\"RabAzH1kPe\",\"type\":\"paragraph\",\"data\":{\"text\":\"The amount of interest, fees, and other revenue or items of value received under the facility, reported on an accrual basis, was $93,568,000. \"}},{\"id\":\"WS7vDCo3fu\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Liquidity</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#BTFP</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.federalreserve.gov/publications/files/13-3-report-btfp-20230411.pdf",
+    "price": 64595880000,
+    "utcStartDateTime": "2023-03-31T07:00:00.000Z",
+    "utcEndDateTime": "2023-04-04T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-28T16:44:00.149Z",
+    "utcUpdatedDateTime": "2023-06-28T16:51:14.695Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "mentions": [
+      {
+        "id": 234,
+        "tag": "#Liquidity",
+        "pinId": 419
+      },
+      {
+        "id": 235,
+        "tag": "#BTFP",
+        "pinId": 419
       }
     ],
     "userId": 1
@@ -8186,6 +8248,38 @@
       "userName": "@PrinceAnime"
     },
     "userId": 3
+  },
+  {
+    "id": 420,
+    "parentId": 419,
+    "rootThread": false,
+    "title": "Bank Term Funding Program",
+    "description": "<p class=\"paragraph\"> As of April 30, 2023: </p><p class=\"paragraph\"> • The total outstanding amount of all advances under the BTFP was $83,061,693,000. </p><p class=\"paragraph\"> • The total value of the collateral pledged to secure outstanding advances was $104,299,674,000. </p><p class=\"paragraph\"> • The amount of interest, fees, and other revenue or items of value received under the facility, reported on an accrual basis, was $369,957,000.  </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Liquidity</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#BTFP</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687970798995,\"blocks\":[{\"id\":\"HqVKMY7FbG\",\"type\":\"paragraph\",\"data\":{\"text\":\"As of April 30, 2023:\"}},{\"id\":\"SQZHYbp4ll\",\"type\":\"paragraph\",\"data\":{\"text\":\"• The total outstanding amount of all advances under the BTFP was $83,061,693,000.\"}},{\"id\":\"1tTXI2z4nP\",\"type\":\"paragraph\",\"data\":{\"text\":\"• The total value of the collateral pledged to secure outstanding advances was $104,299,674,000.\"}},{\"id\":\"qpGmFRVlYK\",\"type\":\"paragraph\",\"data\":{\"text\":\"• The amount of interest, fees, and other revenue or items of value received under the facility, reported on an accrual basis, was $369,957,000. \"}},{\"id\":\"vFklW0RvAN\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Liquidity</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#BTFP</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.federalreserve.gov/publications/files/13-3-report-btfp-20230511.pdf",
+    "price": 83061693000,
+    "utcStartDateTime": "2023-04-30T07:00:00.000Z",
+    "utcEndDateTime": "2023-05-03T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-28T16:46:11.290Z",
+    "utcUpdatedDateTime": "2023-06-28T16:50:02.633Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "mentions": [
+      {
+        "id": 228,
+        "tag": "#Liquidity",
+        "pinId": 420
+      },
+      {
+        "id": 229,
+        "tag": "#BTFP",
+        "pinId": 420
+      }
+    ],
+    "userId": 1
   },
   {
     "id": 202,
@@ -8631,14 +8725,14 @@
     "id": 402,
     "rootThread": false,
     "title": "Interest coverage ratios have dropped dramatically in 20 largest LBOs",
-    "description": "<p class=\"paragraph\"> Much of the debt used by these funds is floating-rate, tied to a benchmark. Despite being extremely cheap (at the time), very few funds hedged their interest rate exposure. As such, the interest expense that these funds saddled their portfolio companies with soared </p>",
-    "sourceDescription": "{\"time\":1687908352897,\"blocks\":[{\"id\":\"Qa5LK9TF8l\",\"type\":\"paragraph\",\"data\":{\"text\":\"Much of the debt used by these funds is floating-rate, tied to a benchmark. Despite being extremely cheap (at the time), very few funds hedged their interest rate exposure. As such, the interest expense that these funds saddled their portfolio companies with soared\"}}],\"version\":\"2.26.5\"}",
+    "description": "<p class=\"paragraph\"> Much of the debt used by these funds is floating-rate, tied to a benchmark. Despite being extremely cheap (at the time), very few funds hedged their interest rate exposure. As such, the interest expense that these funds saddled their portfolio companies with soared </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Crash</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687969619456,\"blocks\":[{\"id\":\"Qa5LK9TF8l\",\"type\":\"paragraph\",\"data\":{\"text\":\"Much of the debt used by these funds is floating-rate, tied to a benchmark. Despite being extremely cheap (at the time), very few funds hedged their interest rate exposure. As such, the interest expense that these funds saddled their portfolio companies with soared\"}},{\"id\":\"jLWJPmZNvK\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Crash</chronohash>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://twitter.com/lawhon_sam/status/1673441817826586628",
     "utcStartDateTime": "2023-05-12T07:00:00.000Z",
-    "utcEndDateTime": "2023-05-14T07:00:00.000Z",
+    "utcEndDateTime": "2023-05-15T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-27T23:24:56.912Z",
-    "utcUpdatedDateTime": "2023-06-27T23:26:13.178Z",
+    "utcUpdatedDateTime": "2023-06-28T16:27:00.933Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -8651,6 +8745,13 @@
         "authorName": "Sam Lawhon",
         "authorUrl": "https://twitter.com/lawhon_sam",
         "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">In turn, interest coverage ratios have dropped dramatically <a href=\"https://t.co/UEr8KIGYiu\">pic.twitter.com/UEr8KIGYiu</a></p>&mdash; Sam Lawhon (@lawhon_sam) <a href=\"https://twitter.com/lawhon_sam/status/1673441817826586628?ref_src=twsrc%5Etfw\">June 26, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 213,
+        "tag": "#Crash",
+        "pinId": 402
       }
     ],
     "userId": 1
@@ -8975,6 +9076,38 @@
         "id": 84,
         "tag": "#inflation",
         "pinId": 327
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 418,
+    "parentId": 420,
+    "rootThread": false,
+    "title": "Bank Term Funding Program",
+    "description": "<p class=\"paragraph\"> As of May 31, 2023: </p><p class=\"paragraph\"> • The total outstanding amount of all advances under the BTFP was $107,376,686,000. </p><p class=\"paragraph\"> • The total value of the collateral pledged to secure outstanding advances was $128,972,991,000. </p><p class=\"paragraph\"> • The amount of interest, fees, and other revenue or items of value received under the facility, reported on an accrual basis, was $762,960,000.  </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Liquidity</chronohash> <chronohash class=\"chrono-hash-highlight\">#BTFP</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687970747629,\"blocks\":[{\"id\":\"rHGAkWaJfg\",\"type\":\"paragraph\",\"data\":{\"text\":\"As of May 31, 2023:\"}},{\"id\":\"d0_3KufX5c\",\"type\":\"paragraph\",\"data\":{\"text\":\"• The total outstanding amount of all advances under the BTFP was $107,376,686,000.\"}},{\"id\":\"n4pa1ZwKq8\",\"type\":\"paragraph\",\"data\":{\"text\":\"• The total value of the collateral pledged to secure outstanding advances was $128,972,991,000.\"}},{\"id\":\"rnqpRohqsh\",\"type\":\"paragraph\",\"data\":{\"text\":\"• The amount of interest, fees, and other revenue or items of value received under the facility, reported on an accrual basis, was $762,960,000. \"}},{\"id\":\"JpA8Bb2I2o\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Liquidity</chronohash> <chronohash class=\\\"chrono-hash-highlight\\\">#BTFP</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.federalreserve.gov/publications/files/13-3-report-btfp-20230613.pdf",
+    "price": 107376686000,
+    "utcStartDateTime": "2023-05-31T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-03T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-28T16:39:18.869Z",
+    "utcUpdatedDateTime": "2023-06-28T16:49:42.945Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "mentions": [
+      {
+        "id": 226,
+        "tag": "#Liquidity",
+        "pinId": 418
+      },
+      {
+        "id": 227,
+        "tag": "#BTFP",
+        "pinId": 418
       }
     ],
     "userId": 1
@@ -9814,6 +9947,42 @@
     "userId": 1
   },
   {
+    "id": 417,
+    "parentId": 416,
+    "rootThread": false,
+    "title": "PBOC is likely to continue easing. It's H1 in reverse, until something breaks again.",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Inflation</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687969747356,\"blocks\":[{\"id\":\"kUzDsk4K9-\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Inflation</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/CJUNilsson/status/1669042640912826368",
+    "utcStartDateTime": "2023-06-12T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-14T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-28T16:30:38.011Z",
+    "utcUpdatedDateTime": "2023-06-28T16:30:46.417Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 328,
+        "originalUrl": "https://twitter.com/CJUNilsson/status/1669042640912826368",
+        "type": "2",
+        "authorName": "C-J",
+        "authorUrl": "https://twitter.com/CJUNilsson",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Exactly. From this list, only the PBOC is likely to continue easing. It&#39;s H1 in reverse, until something breaks again.<a href=\"https://t.co/RPlYjhSgqw\">https://t.co/RPlYjhSgqw</a></p>&mdash; C-J (@CJUNilsson) <a href=\"https://twitter.com/CJUNilsson/status/1669042640912826368?ref_src=twsrc%5Etfw\">June 14, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 215,
+        "tag": "#inflation",
+        "pinId": 417
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 240,
     "rootThread": false,
     "title": "Odds of a June 25 bp shooting back up. If core comes > 45 bp on 13th Fed will literally have no place to hide but hike",
@@ -9866,6 +10035,55 @@
       "userName": "@PrinceAnime"
     },
     "userId": 3
+  },
+  {
+    "id": 425,
+    "rootThread": false,
+    "title": "China makes surprise rate cut to 1.9% from 2% as economic recovery loses steam",
+    "description": "<p class=\"paragraph\"> China’s central bank on Tuesday made a surprise cut to one of its key lending rates in a bid to shore up&nbsp;<a href=\"https://www.cnn.com/2023/05/30/economy/china-pmi-economy-intl-hnk/index.html#:~:text=China's%20economic%20recovery%20loses%20steam%20as%20factory%20production%20contracts%20further,-By%20Laura%20He&amp;text=Factory%20activity%20in%20China%20has,recovery%20continues%20to%20lose%20steam.\" target=\"_blank\">sputtering growth</a>&nbsp;in the world’s second largest economy. </p><p class=\"paragraph\"> The cut to the 7-day reverse repo rate — the first since August last year — will boost liquidity in the banking system and make short term loans cheaper. The rate will drop to 1.9% from 2%, according to&nbsp;<a href=\"http://www.pbc.gov.cn/zhengcehuobisi/125207/125213/125431/125475/4953019/index.html\" target=\"_blank\">the People’s Bank of China.</a> </p><p class=\"paragraph\"> The amount of lending affected is small, but the move is significant as it signals that the PBOC is likely to cut several other key interest rates later this month,&nbsp;analysts say. </p><p class=\"paragraph\"> The rate cut reveals “growing concerns among policymakers” about the health of China’s recovery, Capital Economics analysts said on Tuesday. </p><p class=\"paragraph\"> It is likely to be followed by similar reductions&nbsp;to a medium-term lending rate, and the benchmark Loan Prime Rate (LPR) on Thursday and next Tuesday respectively, given that all three rates typically move in tandem, they added.&nbsp;The last time China slashed its LPR was also&nbsp;<a href=\"https://www.cnn.com/2022/08/22/economy/china-lpr-rate-cut-property-crisis-intl-hnk/index.html\" target=\"_blank\">in August</a>&nbsp;last year. </p><p class=\"paragraph\"> “The … rate cut came earlier and sharper than our and market expectations, highlighting the sense of urgency to alleviate economic momentum and business confidence,” said Becky Liu, head of China macro strategy for Standard Chartered Bank. </p><p class=\"paragraph\"> In March, the PBOC&nbsp;<a href=\"https://www.cnn.com/2023/03/17/economy/china-reserve-requirement-ratio-cut-intl-hnk/index.html#:~:text=The%20People's%20Bank%20of%20China,percentage%20points%2C%20effective%20March%2027.\" target=\"_blank\">cut its reserve requirement ratio</a>&nbsp;— which determines the amount of money that banks must keep in reserve, rather than lend out — by 0.25 percentage points, in an effort to keep money flowing through the financial system and prop up the economy. That rate cut also came as a surprise and followed a week of turmoil in global financial markets triggered by the failure of some regional US banks. </p><h2>‘Imminent’ policy pivot?</h2><p class=\"paragraph\"> Multiple indicators show that China’s recovery is waning following an initial burst of activity in the first few months of this year after the lifting of Covid-19 restrictions. </p><p class=\"paragraph\"> <a href=\"https://www.cnn.com/2023/05/11/economy/china-april-cpi-ppi-intl-hnk/index.html\" target=\"_blank\">Deflationary risks</a>&nbsp;are hanging over the economy. The Chinese producer price index fell 4.6% in May, the biggest decline in seven years, according to government statistics released last week. The consumer price index edged up 0.2% in May from a year ago. In April, the CPI increased by just 0.1%. </p><p class=\"paragraph\"> The low inflation levels are in sharp contrast to rising prices in other major economies around the world, suggesting weakness in China’s domestic demand. </p><p class=\"paragraph\"> Exports fell 7.5% in May from a year earlier, the biggest decline since January, and imports contracted further. </p><p class=\"paragraph\"> The country’s official manufacturing PMI, a gauge of factory activity among big, state-owned firms,&nbsp;<a href=\"https://www.cnn.com/2023/05/30/economy/china-pmi-economy-intl-hnk/index.html\" target=\"_blank\">slid further into contraction</a>&nbsp;territory in May. </p><p class=\"paragraph\"> <a href=\"https://www.cnn.com/2023/06/09/economy/china-unemployment-temple-lottery-intl-hnk/index.html#:~:text=The%20jobless%20rate%20for%20people,ministry%20estimated%20earlier%20this%20year.\" target=\"_blank\">Youth unemployment</a>&nbsp;rate, meanwhile, surged to a historic high of 20.4% in April, highlighting the pressure the economy is facing to absorb new workers. </p><p class=\"paragraph\"> “China’s growth has been losing momentum amid deteriorating confidence,” said Zhaopeng Xing and Betty Wang, analysts for ANZ Research, in a research note on&nbsp;Tuesday. </p><p class=\"paragraph\"> Moreover, heavily indebted households are attempting to save up to repay loans instead of spending, they said. Local governments are also facing&nbsp;<a href=\"https://www.cnn.com/2023/05/29/economy/china-wuhan-local-debt-crisis-intl-hnk/index.html#:~:text=Analysts%20estimate%20China's%20outstanding%20government,risky%20local%20government%20financing%20platforms.\" target=\"_blank\">mounting debt repayment pressure</a>&nbsp;this year. </p><p class=\"paragraph\"> The authorities appear increasingly worried. </p><p class=\"paragraph\"> Yi Gang, governor of the PBOC, said last weekend that “counter-cyclical adjustment” will be strengthened. </p><p class=\"paragraph\"> In the language of China’s policymakers, that implies a bias towards easing monetary policy, said Larry Hu, chief China economist for Macquarie Group. “Governor Yi sent a clear signal that further policy support would be forthcoming in the near term.” </p><p class=\"paragraph\"> The “policy turning point is imminent,” he added. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#PBOC</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Rate</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687973761868,\"blocks\":[{\"id\":\"_zti5lC9Wb\",\"type\":\"paragraph\",\"data\":{\"text\":\"China’s central bank on Tuesday made a surprise cut to one of its key lending rates in a bid to shore up&nbsp;<a href=\\\"https://www.cnn.com/2023/05/30/economy/china-pmi-economy-intl-hnk/index.html#:~:text=China's%20economic%20recovery%20loses%20steam%20as%20factory%20production%20contracts%20further,-By%20Laura%20He&amp;text=Factory%20activity%20in%20China%20has,recovery%20continues%20to%20lose%20steam.\\\" target=\\\"_blank\\\">sputtering growth</a>&nbsp;in the world’s second largest economy.\"}},{\"id\":\"MQqIlSHQQ_\",\"type\":\"paragraph\",\"data\":{\"text\":\"The cut to the 7-day reverse repo rate — the first since August last year — will boost liquidity in the banking system and make short term loans cheaper. The rate will drop to 1.9% from 2%, according to&nbsp;<a href=\\\"http://www.pbc.gov.cn/zhengcehuobisi/125207/125213/125431/125475/4953019/index.html\\\" target=\\\"_blank\\\">the People’s Bank of China.</a>\"}},{\"id\":\"Mzv-3AfSTg\",\"type\":\"paragraph\",\"data\":{\"text\":\"The amount of lending affected is small, but the move is significant as it signals that the PBOC is likely to cut several other key interest rates later this month,&nbsp;analysts say.\"}},{\"id\":\"-91Cqxh_7D\",\"type\":\"paragraph\",\"data\":{\"text\":\"The rate cut reveals “growing concerns among policymakers” about the health of China’s recovery, Capital Economics analysts said on Tuesday.\"}},{\"id\":\"_LH58RuvVQ\",\"type\":\"paragraph\",\"data\":{\"text\":\"It is likely to be followed by similar reductions&nbsp;to a medium-term lending rate, and the benchmark Loan Prime Rate (LPR) on Thursday and next Tuesday respectively, given that all three rates typically move in tandem, they added.&nbsp;The last time China slashed its LPR was also&nbsp;<a href=\\\"https://www.cnn.com/2022/08/22/economy/china-lpr-rate-cut-property-crisis-intl-hnk/index.html\\\" target=\\\"_blank\\\">in August</a>&nbsp;last year.\"}},{\"id\":\"PfoNK2gerv\",\"type\":\"paragraph\",\"data\":{\"text\":\"“The … rate cut came earlier and sharper than our and market expectations, highlighting the sense of urgency to alleviate economic momentum and business confidence,” said Becky Liu, head of China macro strategy for Standard Chartered Bank.\"}},{\"id\":\"fW4YskwUVS\",\"type\":\"paragraph\",\"data\":{\"text\":\"In March, the PBOC&nbsp;<a href=\\\"https://www.cnn.com/2023/03/17/economy/china-reserve-requirement-ratio-cut-intl-hnk/index.html#:~:text=The%20People's%20Bank%20of%20China,percentage%20points%2C%20effective%20March%2027.\\\" target=\\\"_blank\\\">cut its reserve requirement ratio</a>&nbsp;— which determines the amount of money that banks must keep in reserve, rather than lend out — by 0.25 percentage points, in an effort to keep money flowing through the financial system and prop up the economy. That rate cut also came as a surprise and followed a week of turmoil in global financial markets triggered by the failure of some regional US banks.\"}},{\"id\":\"daumUTg-JU\",\"type\":\"header\",\"data\":{\"text\":\"‘Imminent’ policy pivot?\",\"level\":2}},{\"id\":\"7Hc65jYFbe\",\"type\":\"paragraph\",\"data\":{\"text\":\"Multiple indicators show that China’s recovery is waning following an initial burst of activity in the first few months of this year after the lifting of Covid-19 restrictions.\"}},{\"id\":\"_104oekLhY\",\"type\":\"paragraph\",\"data\":{\"text\":\"<a href=\\\"https://www.cnn.com/2023/05/11/economy/china-april-cpi-ppi-intl-hnk/index.html\\\" target=\\\"_blank\\\">Deflationary risks</a>&nbsp;are hanging over the economy. The Chinese producer price index fell 4.6% in May, the biggest decline in seven years, according to government statistics released last week. The consumer price index edged up 0.2% in May from a year ago. In April, the CPI increased by just 0.1%.\"}},{\"id\":\"UG727-cKbn\",\"type\":\"paragraph\",\"data\":{\"text\":\"The low inflation levels are in sharp contrast to rising prices in other major economies around the world, suggesting weakness in China’s domestic demand.\"}},{\"id\":\"aOLLYcD9jy\",\"type\":\"paragraph\",\"data\":{\"text\":\"Exports fell 7.5% in May from a year earlier, the biggest decline since January, and imports contracted further.\"}},{\"id\":\"DzNMxZtPCM\",\"type\":\"paragraph\",\"data\":{\"text\":\"The country’s official manufacturing PMI, a gauge of factory activity among big, state-owned firms,&nbsp;<a href=\\\"https://www.cnn.com/2023/05/30/economy/china-pmi-economy-intl-hnk/index.html\\\" target=\\\"_blank\\\">slid further into contraction</a>&nbsp;territory in May.\"}},{\"id\":\"Dqf_P3JDpQ\",\"type\":\"paragraph\",\"data\":{\"text\":\"<a href=\\\"https://www.cnn.com/2023/06/09/economy/china-unemployment-temple-lottery-intl-hnk/index.html#:~:text=The%20jobless%20rate%20for%20people,ministry%20estimated%20earlier%20this%20year.\\\" target=\\\"_blank\\\">Youth unemployment</a>&nbsp;rate, meanwhile, surged to a historic high of 20.4% in April, highlighting the pressure the economy is facing to absorb new workers.\"}},{\"id\":\"-10REzHBq8\",\"type\":\"paragraph\",\"data\":{\"text\":\"“China’s growth has been losing momentum amid deteriorating confidence,” said Zhaopeng Xing and Betty Wang, analysts for ANZ Research, in a research note on&nbsp;Tuesday.\"}},{\"id\":\"OlkMlQf5au\",\"type\":\"paragraph\",\"data\":{\"text\":\"Moreover, heavily indebted households are attempting to save up to repay loans instead of spending, they said. Local governments are also facing&nbsp;<a href=\\\"https://www.cnn.com/2023/05/29/economy/china-wuhan-local-debt-crisis-intl-hnk/index.html#:~:text=Analysts%20estimate%20China's%20outstanding%20government,risky%20local%20government%20financing%20platforms.\\\" target=\\\"_blank\\\">mounting debt repayment pressure</a>&nbsp;this year.\"}},{\"id\":\"zSC27E73IQ\",\"type\":\"paragraph\",\"data\":{\"text\":\"The authorities appear increasingly worried.\"}},{\"id\":\"MKlvABGmMY\",\"type\":\"paragraph\",\"data\":{\"text\":\"Yi Gang, governor of the PBOC, said last weekend that “counter-cyclical adjustment” will be strengthened.\"}},{\"id\":\"cB1v96j-Q3\",\"type\":\"paragraph\",\"data\":{\"text\":\"In the language of China’s policymakers, that implies a bias towards easing monetary policy, said Larry Hu, chief China economist for Macquarie Group. “Governor Yi sent a clear signal that further policy support would be forthcoming in the near term.”\"}},{\"id\":\"CuAcrZ_agi\",\"type\":\"paragraph\",\"data\":{\"text\":\"The “policy turning point is imminent,” he added.\"}},{\"id\":\"Dgkh_4dkyx\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#PBOC</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Rate</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://edition.cnn.com/2023/06/13/economy/china-surprise-rate-cut-economic-recovery-intl-hnk/index.html",
+    "utcStartDateTime": "2023-06-13T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-14T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-28T17:36:23.517Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 331,
+        "thumbName": "d8a429eb-2893-425e-8055-3c4c8c20fa1f-chrono-lg.webp",
+        "thumbWidth": 800,
+        "thumbHeight": 450,
+        "originalUrl": "https://media.cnn.com/api/v1/images/stellar/prod/230613092157-china-surprise-rate-cut-060923.jpg?c=16x9&q=w_800,c_fill",
+        "originalWidth": 800,
+        "originalHeight": 450,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 100,
+        "address": "China",
+        "order": 0,
+        "pinId": 425
+      }
+    ],
+    "mentions": [
+      {
+        "id": 246,
+        "tag": "#PBOC",
+        "pinId": 425
+      },
+      {
+        "id": 247,
+        "tag": "#Rate",
+        "pinId": 425
+      }
+    ],
+    "userId": 1
   },
   {
     "id": 294,
@@ -9964,23 +10182,30 @@
     "id": 326,
     "rootThread": false,
     "title": "Amazon officially opens first phase of HQ2 in Virginia with room for 14k employees",
-    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/n63dsq8fLVw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\">  Free bananas and dogs at the office — Amazon is officially open for business at its HQ2 in Arlington, Va.  </p><p class=\"paragraph\">  The Seattle-based tech giant cut the ribbon Thursday on Metropolitan Park, a 2.1-million-square-foot campus that will serve as the first phase of Amazon’s second headquarters.  </p><p class=\"paragraph\">  The campus features two 22-story buildings which will house 8,000 Amazon employees at the start. The original plan calls for HQ2 to be home to 25,000 workers by 2030.  </p><p class=\"paragraph\">  Amazon CEO Andy Jassy called Arlington “tremendous” in a&nbsp;<a href=\"https://twitter.com/ajassy/status/1669447814626283524\">tweet</a>&nbsp;on Thursday and said the company was proud to call the city home.  </p><p class=\"paragraph\">  “We look forward to inventing for customers and being an active part of the community for many years to come,” Jassy wrote.  </p><p class=\"paragraph\">  The opening comes after the company&nbsp;<a href=\"https://www.geekwire.com/2023/amazon-pausing-construction-on-hq2-in-washington-d-c-area/\">paused construction</a>&nbsp;on the second phase of HQ2 in March as it continued to navigate its hybrid work policies, layoffs, and an economic downturn.  </p><p class=\"paragraph\">  “We’re always&nbsp;evaluating space plans to make sure they fit our business needs and to create a great experience for employees,” Amazon real estate chief John Schoettler said in a statement to GeekWire at the time. “And since Met Park will have space to accommodate more than 14,000 employees, we’ve decided to shift the groundbreaking of PenPlace&nbsp;(the second phase of HQ2) out a bit.”  </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/92f0ce72-5b1e-4b56-ad46-3cc9265f1e68-chrono-lg.webp\" alt=\"Virginia Gov. Glenn Youngkin, in red tie, and First Lady Suzanne Youngkin take a tour of HQ2 with Amazon real estate chief John Schoettler, left, on Thursday. (Amazon Photo)\" height=\"563\" width=\"1000\"><figcaption class=\"fig-cap\">Virginia Gov. Glenn Youngkin, in red tie, and First Lady Suzanne Youngkin take a tour of HQ2 with Amazon real estate chief John Schoettler, left, on Thursday. (Amazon Photo)</figcaption></figure><p class=\"paragraph\">  There is a 2.5-acre public open space with 175 native trees and plantings, a dog park, public art installations, walking paths, a children’s garden and play area, and space for seasonal weekend farmers markets.  </p><p class=\"paragraph\">  A rooftop vegetable garden is designed to distribute food to local organizations through non-profits.  </p><p class=\"paragraph\">  There are 620 bike racks, two bike repair and wash stations, a half-mile of protected bike lanes, and four levels of below-grade parking with 290 electric vehicle charging stations.  </p><p class=\"paragraph\">  <a href=\"https://www.geekwire.com/2021/amazon-unveils-design-plans-virginia-hq2-dramatic-spiral-helix-building-centerpiece/\">Previous design plans</a>&nbsp;for HQ2 have included a spiraling centerpiece building called The Helix.  </p><p class=\"paragraph\">  Amazon&nbsp;<a href=\"https://www.geekwire.com/2017/amazon-build-second-hq-outside-seattle-seeks-proposals-cities-5b-campus-50k-jobs/\">launched</a>&nbsp;the highly-publicized HQ2 sweepstakes in 2017 as it searched for a location for a second North American headquarters. The company originally said it would split a 50,000-person second headquarters between Northern Virginia and New York City, but it&nbsp;<a href=\"https://www.geekwire.com/2019/amazon-pulls-new-york-hq2-amid-growing-backlash/\">pulled out of its NYC plans</a>&nbsp;after political backlash.  </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/75555718-b91c-4142-80e6-8e9adcfab019-chrono-lg.webp\" alt=\"Metropolitan Park is the first phase of Amazon’s HQ2 in Arlington, Va. (Amazon Photo)\" height=\"666\" width=\"1000\"><figcaption class=\"fig-cap\">Metropolitan Park is the first phase of Amazon’s HQ2 in Arlington, Va. (Amazon Photo)</figcaption></figure>",
-    "sourceDescription": "{\"time\":1687189994568,\"blocks\":[{\"id\":\"I2DdMLVtQ6\",\"type\":\"embed\",\"data\":{\"service\":\"youtube\",\"source\":\"https://www.youtube.com/watch?v=n63dsq8fLVw\",\"embed\":\"https://www.youtube.com/embed/n63dsq8fLVw\",\"width\":580,\"height\":320,\"caption\":\"Amazon HQ2 Grand Opening today\",\"length\":\"\"}},{\"id\":\"uKyK4KpI8Q\",\"type\":\"paragraph\",\"data\":{\"text\":\" Free bananas and dogs at the office — Amazon is officially open for business at its HQ2 in Arlington, Va. \"}},{\"id\":\"NiizUEBnun\",\"type\":\"paragraph\",\"data\":{\"text\":\" The Seattle-based tech giant cut the ribbon Thursday on Metropolitan Park, a 2.1-million-square-foot campus that will serve as the first phase of Amazon’s second headquarters. \"}},{\"id\":\"khvv1PCi24\",\"type\":\"paragraph\",\"data\":{\"text\":\" The campus features two 22-story buildings which will house 8,000 Amazon employees at the start. The original plan calls for HQ2 to be home to 25,000 workers by 2030. \"}},{\"id\":\"gopGfzH5sX\",\"type\":\"paragraph\",\"data\":{\"text\":\" Amazon CEO Andy Jassy called Arlington “tremendous” in a&nbsp;<a href=\\\"https://twitter.com/ajassy/status/1669447814626283524\\\">tweet</a>&nbsp;on Thursday and said the company was proud to call the city home. \"}},{\"id\":\"X0rGCqiCej\",\"type\":\"paragraph\",\"data\":{\"text\":\" “We look forward to inventing for customers and being an active part of the community for many years to come,” Jassy wrote. \"}},{\"id\":\"vbeq_lqJES\",\"type\":\"paragraph\",\"data\":{\"text\":\" The opening comes after the company&nbsp;<a href=\\\"https://www.geekwire.com/2023/amazon-pausing-construction-on-hq2-in-washington-d-c-area/\\\">paused construction</a>&nbsp;on the second phase of HQ2 in March as it continued to navigate its hybrid work policies, layoffs, and an economic downturn. \"}},{\"id\":\"fGhWq4qGP4\",\"type\":\"paragraph\",\"data\":{\"text\":\" “We’re always&nbsp;evaluating space plans to make sure they fit our business needs and to create a great experience for employees,” Amazon real estate chief John Schoettler said in a statement to GeekWire at the time. “And since Met Park will have space to accommodate more than 14,000 employees, we’ve decided to shift the groundbreaking of PenPlace&nbsp;(the second phase of HQ2) out a bit.” \"}},{\"id\":\"Jg3fG04YDG\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/92f0ce72-5b1e-4b56-ad46-3cc9265f1e68-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":563}},\"caption\":\"Virginia Gov. Glenn Youngkin, in red tie, and First Lady Suzanne Youngkin take a tour of HQ2 with Amazon real estate chief John Schoettler, left, on Thursday. (Amazon Photo)\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"7tO6UN8Km9\",\"type\":\"paragraph\",\"data\":{\"text\":\" There is a 2.5-acre public open space with 175 native trees and plantings, a dog park, public art installations, walking paths, a children’s garden and play area, and space for seasonal weekend farmers markets. \"}},{\"id\":\"4Y-_Q_iWYI\",\"type\":\"paragraph\",\"data\":{\"text\":\" A rooftop vegetable garden is designed to distribute food to local organizations through non-profits. \"}},{\"id\":\"1eWzjEZ2U8\",\"type\":\"paragraph\",\"data\":{\"text\":\" There are 620 bike racks, two bike repair and wash stations, a half-mile of protected bike lanes, and four levels of below-grade parking with 290 electric vehicle charging stations. \"}},{\"id\":\"HTTwgnhznp\",\"type\":\"paragraph\",\"data\":{\"text\":\" <a href=\\\"https://www.geekwire.com/2021/amazon-unveils-design-plans-virginia-hq2-dramatic-spiral-helix-building-centerpiece/\\\">Previous design plans</a>&nbsp;for HQ2 have included a spiraling centerpiece building called The Helix. \"}},{\"id\":\"h5-s2JCSTf\",\"type\":\"paragraph\",\"data\":{\"text\":\" Amazon&nbsp;<a href=\\\"https://www.geekwire.com/2017/amazon-build-second-hq-outside-seattle-seeks-proposals-cities-5b-campus-50k-jobs/\\\">launched</a>&nbsp;the highly-publicized HQ2 sweepstakes in 2017 as it searched for a location for a second North American headquarters. The company originally said it would split a 50,000-person second headquarters between Northern Virginia and New York City, but it&nbsp;<a href=\\\"https://www.geekwire.com/2019/amazon-pulls-new-york-hq2-amid-growing-backlash/\\\">pulled out of its NYC plans</a>&nbsp;after political backlash. \"}},{\"id\":\"1WEU6-RPg0\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/75555718-b91c-4142-80e6-8e9adcfab019-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":666}},\"caption\":\"Metropolitan Park is the first phase of Amazon’s HQ2 in Arlington, Va. (Amazon Photo)\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}}],\"version\":\"2.26.5\"}",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/n63dsq8fLVw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\">  Free bananas and dogs at the office — Amazon is officially open for business at its HQ2 in Arlington, Va.  </p><p class=\"paragraph\">  The Seattle-based tech giant cut the ribbon Thursday on Metropolitan Park, a 2.1-million-square-foot campus that will serve as the first phase of Amazon’s second headquarters.  </p><p class=\"paragraph\">  The campus features two 22-story buildings which will house 8,000 Amazon employees at the start. The original plan calls for HQ2 to be home to 25,000 workers by 2030.  </p><p class=\"paragraph\">  Amazon CEO Andy Jassy called Arlington “tremendous” in a&nbsp;<a href=\"https://twitter.com/ajassy/status/1669447814626283524\">tweet</a>&nbsp;on Thursday and said the company was proud to call the city home.  </p><p class=\"paragraph\">  “We look forward to inventing for customers and being an active part of the community for many years to come,” Jassy wrote.  </p><p class=\"paragraph\">  The opening comes after the company&nbsp;<a href=\"https://www.geekwire.com/2023/amazon-pausing-construction-on-hq2-in-washington-d-c-area/\">paused construction</a>&nbsp;on the second phase of HQ2 in March as it continued to navigate its hybrid work policies, layoffs, and an economic downturn.  </p><p class=\"paragraph\">  “We’re always&nbsp;evaluating space plans to make sure they fit our business needs and to create a great experience for employees,” Amazon real estate chief John Schoettler said in a statement to GeekWire at the time. “And since Met Park will have space to accommodate more than 14,000 employees, we’ve decided to shift the groundbreaking of PenPlace&nbsp;(the second phase of HQ2) out a bit.”  </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/92f0ce72-5b1e-4b56-ad46-3cc9265f1e68-chrono-lg.webp\" alt=\"Virginia Gov. Glenn Youngkin, in red tie, and First Lady Suzanne Youngkin take a tour of HQ2 with Amazon real estate chief John Schoettler, left, on Thursday. (Amazon Photo)\" height=\"563\" width=\"1000\"><figcaption class=\"fig-cap\">Virginia Gov. Glenn Youngkin, in red tie, and First Lady Suzanne Youngkin take a tour of HQ2 with Amazon real estate chief John Schoettler, left, on Thursday. (Amazon Photo)</figcaption></figure><p class=\"paragraph\">  There is a 2.5-acre public open space with 175 native trees and plantings, a dog park, public art installations, walking paths, a children’s garden and play area, and space for seasonal weekend farmers markets.  </p><p class=\"paragraph\">  A rooftop vegetable garden is designed to distribute food to local organizations through non-profits.  </p><p class=\"paragraph\">  There are 620 bike racks, two bike repair and wash stations, a half-mile of protected bike lanes, and four levels of below-grade parking with 290 electric vehicle charging stations.  </p><p class=\"paragraph\">  <a href=\"https://www.geekwire.com/2021/amazon-unveils-design-plans-virginia-hq2-dramatic-spiral-helix-building-centerpiece/\">Previous design plans</a>&nbsp;for HQ2 have included a spiraling centerpiece building called The Helix.  </p><p class=\"paragraph\">  Amazon&nbsp;<a href=\"https://www.geekwire.com/2017/amazon-build-second-hq-outside-seattle-seeks-proposals-cities-5b-campus-50k-jobs/\">launched</a>&nbsp;the highly-publicized HQ2 sweepstakes in 2017 as it searched for a location for a second North American headquarters. The company originally said it would split a 50,000-person second headquarters between Northern Virginia and New York City, but it&nbsp;<a href=\"https://www.geekwire.com/2019/amazon-pulls-new-york-hq2-amid-growing-backlash/\">pulled out of its NYC plans</a>&nbsp;after political backlash.  </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/75555718-b91c-4142-80e6-8e9adcfab019-chrono-lg.webp\" alt=\"Metropolitan Park is the first phase of Amazon’s HQ2 in Arlington, Va. (Amazon Photo)\" height=\"666\" width=\"1000\"><figcaption class=\"fig-cap\">Metropolitan Park is the first phase of Amazon’s HQ2 in Arlington, Va. (Amazon Photo)</figcaption></figure><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$AMZN</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687973918418,\"blocks\":[{\"id\":\"I2DdMLVtQ6\",\"type\":\"embed\",\"data\":{\"service\":\"youtube\",\"source\":\"https://www.youtube.com/watch?v=n63dsq8fLVw\",\"embed\":\"https://www.youtube.com/embed/n63dsq8fLVw\",\"width\":580,\"height\":320,\"caption\":\"Amazon HQ2 Grand Opening today\",\"length\":\"\"}},{\"id\":\"uKyK4KpI8Q\",\"type\":\"paragraph\",\"data\":{\"text\":\" Free bananas and dogs at the office — Amazon is officially open for business at its HQ2 in Arlington, Va. \"}},{\"id\":\"NiizUEBnun\",\"type\":\"paragraph\",\"data\":{\"text\":\" The Seattle-based tech giant cut the ribbon Thursday on Metropolitan Park, a 2.1-million-square-foot campus that will serve as the first phase of Amazon’s second headquarters. \"}},{\"id\":\"khvv1PCi24\",\"type\":\"paragraph\",\"data\":{\"text\":\" The campus features two 22-story buildings which will house 8,000 Amazon employees at the start. The original plan calls for HQ2 to be home to 25,000 workers by 2030. \"}},{\"id\":\"gopGfzH5sX\",\"type\":\"paragraph\",\"data\":{\"text\":\" Amazon CEO Andy Jassy called Arlington “tremendous” in a&nbsp;<a href=\\\"https://twitter.com/ajassy/status/1669447814626283524\\\">tweet</a>&nbsp;on Thursday and said the company was proud to call the city home. \"}},{\"id\":\"X0rGCqiCej\",\"type\":\"paragraph\",\"data\":{\"text\":\" “We look forward to inventing for customers and being an active part of the community for many years to come,” Jassy wrote. \"}},{\"id\":\"vbeq_lqJES\",\"type\":\"paragraph\",\"data\":{\"text\":\" The opening comes after the company&nbsp;<a href=\\\"https://www.geekwire.com/2023/amazon-pausing-construction-on-hq2-in-washington-d-c-area/\\\">paused construction</a>&nbsp;on the second phase of HQ2 in March as it continued to navigate its hybrid work policies, layoffs, and an economic downturn. \"}},{\"id\":\"fGhWq4qGP4\",\"type\":\"paragraph\",\"data\":{\"text\":\" “We’re always&nbsp;evaluating space plans to make sure they fit our business needs and to create a great experience for employees,” Amazon real estate chief John Schoettler said in a statement to GeekWire at the time. “And since Met Park will have space to accommodate more than 14,000 employees, we’ve decided to shift the groundbreaking of PenPlace&nbsp;(the second phase of HQ2) out a bit.” \"}},{\"id\":\"Jg3fG04YDG\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/92f0ce72-5b1e-4b56-ad46-3cc9265f1e68-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":563}},\"caption\":\"Virginia Gov. Glenn Youngkin, in red tie, and First Lady Suzanne Youngkin take a tour of HQ2 with Amazon real estate chief John Schoettler, left, on Thursday. (Amazon Photo)\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"7tO6UN8Km9\",\"type\":\"paragraph\",\"data\":{\"text\":\" There is a 2.5-acre public open space with 175 native trees and plantings, a dog park, public art installations, walking paths, a children’s garden and play area, and space for seasonal weekend farmers markets. \"}},{\"id\":\"4Y-_Q_iWYI\",\"type\":\"paragraph\",\"data\":{\"text\":\" A rooftop vegetable garden is designed to distribute food to local organizations through non-profits. \"}},{\"id\":\"1eWzjEZ2U8\",\"type\":\"paragraph\",\"data\":{\"text\":\" There are 620 bike racks, two bike repair and wash stations, a half-mile of protected bike lanes, and four levels of below-grade parking with 290 electric vehicle charging stations. \"}},{\"id\":\"HTTwgnhznp\",\"type\":\"paragraph\",\"data\":{\"text\":\" <a href=\\\"https://www.geekwire.com/2021/amazon-unveils-design-plans-virginia-hq2-dramatic-spiral-helix-building-centerpiece/\\\">Previous design plans</a>&nbsp;for HQ2 have included a spiraling centerpiece building called The Helix. \"}},{\"id\":\"h5-s2JCSTf\",\"type\":\"paragraph\",\"data\":{\"text\":\" Amazon&nbsp;<a href=\\\"https://www.geekwire.com/2017/amazon-build-second-hq-outside-seattle-seeks-proposals-cities-5b-campus-50k-jobs/\\\">launched</a>&nbsp;the highly-publicized HQ2 sweepstakes in 2017 as it searched for a location for a second North American headquarters. The company originally said it would split a 50,000-person second headquarters between Northern Virginia and New York City, but it&nbsp;<a href=\\\"https://www.geekwire.com/2019/amazon-pulls-new-york-hq2-amid-growing-backlash/\\\">pulled out of its NYC plans</a>&nbsp;after political backlash. \"}},{\"id\":\"1WEU6-RPg0\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/75555718-b91c-4142-80e6-8e9adcfab019-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":666}},\"caption\":\"Metropolitan Park is the first phase of Amazon’s HQ2 in Arlington, Va. (Amazon Photo)\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"xvEhfkX9JL\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$AMZN</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.geekwire.com/2023/amazon-officially-opens-first-phase-of-hq2-in-virginia-with-room-for-14k-employees/",
     "utcStartDateTime": "2023-06-15T07:00:00.000Z",
-    "utcEndDateTime": "2023-06-17T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-18T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-19T15:42:19.250Z",
-    "utcUpdatedDateTime": "2023-06-19T15:53:20.304Z",
+    "utcUpdatedDateTime": "2023-06-28T17:38:43.017Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "locations": [
       {
-        "id": 44,
+        "id": 101,
         "address": "Metropolitan Park Amazon’s HQ2 in Arlington, Va.",
         "order": 0,
+        "pinId": 326
+      }
+    ],
+    "mentions": [
+      {
+        "id": 248,
+        "tag": "$AMZN",
         "pinId": 326
       }
     ],
@@ -10841,6 +11066,43 @@
     "userId": 1
   },
   {
+    "id": 422,
+    "rootThread": false,
+    "title": "Soya beans made more meat-like by adding genes for pig proteins",
+    "description": "<figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/32a549a8-ff23-4e6f-937a-75166906d0a8-chrono-lg.webp\" alt=\"These genetically modified “Piggy Sooy” soya beans can contain 25 per cent pig protein\" height=\"599\" width=\"900\"><figcaption class=\"fig-cap\">These genetically modified “Piggy Sooy” soya beans can contain 25 per cent pig protein</figcaption></figure><p class=\"paragraph\"> Meat substitutes could be about to get a lot more meat-like. A UK-based company called Moolec says it has created genetically modified soya plants that produce beans in which a quarter of the soluble proteins are pig proteins. It has named its plant “Piggy Sooy”. </p><p class=\"paragraph\"> Moolec is also creating pea plants that contain&nbsp;<a href=\"https://www.newscientist.com/article/2217035-beef-eating-consumers-are-helping-drive-amazon-deforestation/\">beef proteins</a>. It claims its products will be able to provide similar taste, texture and nutritional value as meat, but without the high costs associated with&nbsp;<a href=\"https://www.newscientist.com/article/2269671-lab-grown-meat-now-mimics-muscle-fibres-like-those-found-in-steak/\">cultured meat</a>. </p><p class=\"paragraph\"> The company won’t yet say which pig genes have been added to soya to produce Piggy Sooy. “At this point, we can’t disclose that, for intellectual property reasons,” says&nbsp;<a href=\"https://www.linkedin.com/in/amitdhingraphd/\">Amit Dhingra</a>&nbsp;at Moolec. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#FakeMeat</chronohash> </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$MLEC</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687971468690,\"blocks\":[{\"id\":\"H9IwKNd6ET\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/32a549a8-ff23-4e6f-937a-75166906d0a8-chrono-lg.webp\",\"attributes\":{\"width\":900,\"height\":599}},\"caption\":\"These genetically modified “Piggy Sooy” soya beans can contain 25 per cent pig protein\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"l_KzkI65O8\",\"type\":\"paragraph\",\"data\":{\"text\":\"Meat substitutes could be about to get a lot more meat-like. A UK-based company called Moolec says it has created genetically modified soya plants that produce beans in which a quarter of the soluble proteins are pig proteins. It has named its plant “Piggy Sooy”.\"}},{\"id\":\"f-fogF3pjw\",\"type\":\"paragraph\",\"data\":{\"text\":\"Moolec is also creating pea plants that contain&nbsp;<a href=\\\"https://www.newscientist.com/article/2217035-beef-eating-consumers-are-helping-drive-amazon-deforestation/\\\">beef proteins</a>. It claims its products will be able to provide similar taste, texture and nutritional value as meat, but without the high costs associated with&nbsp;<a href=\\\"https://www.newscientist.com/article/2269671-lab-grown-meat-now-mimics-muscle-fibres-like-those-found-in-steak/\\\">cultured meat</a>.\"}},{\"id\":\"0VbxcOcrvf\",\"type\":\"paragraph\",\"data\":{\"text\":\"The company won’t yet say which pig genes have been added to soya to produce Piggy Sooy. “At this point, we can’t disclose that, for intellectual property reasons,” says&nbsp;<a href=\\\"https://www.linkedin.com/in/amitdhingraphd/\\\">Amit Dhingra</a>&nbsp;at Moolec.\"}},{\"id\":\"qEKRFZRfby\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#FakeMeat</chronohash>\"}},{\"id\":\"2tSE3Ri0n3\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$MLEC</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.newscientist.com/article/2380087-soya-beans-made-more-meat-like-by-adding-genes-for-pig-proteins",
+    "utcStartDateTime": "2023-06-28T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-29T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-28T16:58:22.148Z",
+    "user": {
+      "id": 4,
+      "userName": "@GadgetWorld"
+    },
+    "locations": [
+      {
+        "id": 89,
+        "address": "17 Boulevarrd F.W. Raiffeisen, Gallows Hill Luxembourg City 2411 Luxembourg",
+        "order": 0,
+        "pinId": 422
+      }
+    ],
+    "mentions": [
+      {
+        "id": 236,
+        "tag": "#FakeMeat",
+        "pinId": 422
+      },
+      {
+        "id": 237,
+        "tag": "$MLEC",
+        "pinId": 422
+      }
+    ],
+    "userId": 4
+  },
+  {
     "id": 403,
     "rootThread": false,
     "title": "As it stands, excess savings are likely to run out by the middle of the year.",
@@ -10911,16 +11173,57 @@
     "userId": 1
   },
   {
+    "id": 416,
+    "rootThread": true,
+    "title": "Global liquidity is likely to deteriorate meaningfully in H2.",
+    "description": "<p class=\"paragraph\"> Monetary tightness can be measured via:  </p><p class=\"paragraph\"> 1) Real interest rates </p><p class=\"paragraph\"> 2) Policy rates vs model based estimates </p><p class=\"paragraph\"> 3) Quantities vs prices </p><p class=\"paragraph\"> 4) Liquidity effects </p><p class=\"paragraph\"> 5) Broad financial conditions </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Liquidity</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Crash</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687971697024,\"blocks\":[{\"id\":\"4WeaAOZO8p\",\"type\":\"paragraph\",\"data\":{\"text\":\"Monetary tightness can be measured via: \"}},{\"id\":\"8nJ11ASwug\",\"type\":\"paragraph\",\"data\":{\"text\":\"1) Real interest rates\"}},{\"id\":\"P0hay5-zTZ\",\"type\":\"paragraph\",\"data\":{\"text\":\"2) Policy rates vs model based estimates\"}},{\"id\":\"6m2gFMblND\",\"type\":\"paragraph\",\"data\":{\"text\":\"3) Quantities vs prices\"}},{\"id\":\"GfL6h9fkBi\",\"type\":\"paragraph\",\"data\":{\"text\":\"4) Liquidity effects\"}},{\"id\":\"U3YEeE1jM4\",\"type\":\"paragraph\",\"data\":{\"text\":\"5) Broad financial conditions\"}},{\"id\":\"2ExzcXod2o\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Liquidity</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Crash</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/patrick_saner/status/1668167467774902273",
+    "utcStartDateTime": "2023-06-30T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-03T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-28T15:49:55.016Z",
+    "utcUpdatedDateTime": "2023-06-28T17:01:38.678Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 327,
+        "originalUrl": "https://twitter.com/patrick_saner/status/1668167467774902273",
+        "type": "2",
+        "authorName": "Patrick Saner",
+        "authorUrl": "https://twitter.com/patrick_saner",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Global liquidity is likely to deteriorate meaningfully in H2. <br><br>Whilst everyone is rightfully focused on Fed QT and TGA refill, one shouldn&#39;t forget upcoming declines in ECB liquidity and potential changes to the BoJ&#39;s YCC. Ironically, ECB and BoJ liquidity have driven US assets… <a href=\"https://t.co/w2sOgCtQE4\">pic.twitter.com/w2sOgCtQE4</a></p>&mdash; Patrick Saner (@patrick_saner) <a href=\"https://twitter.com/patrick_saner/status/1668167467774902273?ref_src=twsrc%5Etfw\">June 12, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 239,
+        "tag": "#Liquidity",
+        "pinId": 416
+      },
+      {
+        "id": 240,
+        "tag": "#Crash",
+        "pinId": 416
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 224,
     "rootThread": true,
     "title": "The problem with US economy is that it will unravel all at once in Q3",
-    "description": "<p class=\"paragraph\"> Will likely see US student loan payments resume by then as well - an additional headwind. </p>",
+    "description": "<p class=\"paragraph\">  Will likely see US student loan payments resume by then as well - an additional headwind.  </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Crash</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687967640094,\"blocks\":[{\"id\":\"7jSv73DyR3\",\"type\":\"paragraph\",\"data\":{\"text\":\" Will likely see US student loan payments resume by then as well - an additional headwind. \"}},{\"id\":\"9bnZOEBzIR\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Crash</chronohash>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1638924685193641986",
     "utcStartDateTime": "2023-07-01T07:00:00.000Z",
-    "utcEndDateTime": "2023-10-02T07:00:00.000Z",
+    "utcEndDateTime": "2023-10-03T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-25T01:02:46.224Z",
-    "utcUpdatedDateTime": "2023-05-25T01:05:40.569Z",
+    "utcUpdatedDateTime": "2023-06-28T15:54:08.625Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -10933,6 +11236,13 @@
         "authorName": "KKGB Kitty",
         "authorUrl": "https://twitter.com/INArteCarloDoss",
         "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">This combination will increase dramatically US economy’s sensitivity to interest rates hikes when those are at terminal level (all hikes effect will be felt) and credit multiplier effect will rise sharply. Until then, momentum is carrying growth through. <br>2/2</p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1638924685193641986?ref_src=twsrc%5Etfw\">March 23, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 204,
+        "tag": "#Crash",
+        "pinId": 224
       }
     ],
     "favorites": [
@@ -10986,14 +11296,14 @@
     "id": 359,
     "rootThread": false,
     "title": "Should have more states trigger under Sahm Rule and have a sufficient rise in UR to up recession odds significant",
-    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Unemployment</chronohash> </p>",
-    "sourceDescription": "{\"time\":1687445251253,\"blocks\":[{\"id\":\"IF-gIuY1ni\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Unemployment</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Unemployment</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Crash</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687967682497,\"blocks\":[{\"id\":\"IF-gIuY1ni\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Unemployment</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Crash</chronohash>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1671876832361320454",
     "utcStartDateTime": "2023-07-01T07:00:00.000Z",
-    "utcEndDateTime": "2023-07-02T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-03T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-22T14:47:37.763Z",
-    "utcUpdatedDateTime": "2023-06-24T23:27:02.903Z",
+    "utcUpdatedDateTime": "2023-06-28T15:54:44.078Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -11010,8 +11320,13 @@
     ],
     "mentions": [
       {
-        "id": 134,
+        "id": 205,
         "tag": "#Unemployment",
+        "pinId": 359
+      },
+      {
+        "id": 206,
+        "tag": "#Crash",
         "pinId": 359
       }
     ],
@@ -11433,14 +11748,14 @@
     "parentId": 224,
     "rootThread": false,
     "title": "In Q3, interest+payments resume at avg $400/m.  Pre tax, this is a $9k pay cut, offsetting all 2023 wage gains+more",
-    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#StudentLoans</chronohash>&nbsp; </p>",
-    "sourceDescription": "{\"time\":1686354742333,\"blocks\":[{\"id\":\"9D5_A1GbuN\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#StudentLoans</chronohash>&nbsp;\"}}],\"version\":\"2.26.5\"}",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#StudentLoans</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Crash</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687969515792,\"blocks\":[{\"id\":\"9D5_A1GbuN\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#StudentLoans</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Crash</chronohash>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://twitter.com/gamer__capital/status/1663987579962945536",
     "utcStartDateTime": "2023-10-01T07:00:00.000Z",
-    "utcEndDateTime": "2023-10-04T07:00:00.000Z",
+    "utcEndDateTime": "2023-10-05T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-01T02:32:54.559Z",
-    "utcUpdatedDateTime": "2023-06-09T23:52:24.213Z",
+    "utcUpdatedDateTime": "2023-06-28T16:25:18.074Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -11457,8 +11772,13 @@
     ],
     "mentions": [
       {
-        "id": 144,
+        "id": 207,
         "tag": "#studentloans",
+        "pinId": 230
+      },
+      {
+        "id": 208,
+        "tag": "#Crash",
         "pinId": 230
       }
     ],
@@ -11511,15 +11831,15 @@
     "parentId": 230,
     "rootThread": false,
     "title": "It's official: Student loan payments will restart in October, Education Department says",
-    "description": "<p class=\"paragraph\"> Around 40 million Americans have debt from their education. The typical monthly bill is roughly $350. </p><p class=\"paragraph\"> Student loan debt in the U.S. now totals nearly $1.8 trillion </p>",
-    "sourceDescription": "{\"time\":1687327603870,\"blocks\":[{\"id\":\"-q5ZzKyb8t\",\"type\":\"paragraph\",\"data\":{\"text\":\"Around 40 million Americans have debt from their education. The typical monthly bill is roughly $350.\"}},{\"id\":\"bzR96Z8xJe\",\"type\":\"paragraph\",\"data\":{\"text\":\"Student loan debt in the U.S. now totals nearly $1.8 trillion\"}}],\"version\":\"2.26.5\"}",
+    "description": "<p class=\"paragraph\"> Around 40 million Americans have debt from their education. The typical monthly bill is roughly $350. </p><p class=\"paragraph\"> Student loan debt in the U.S. now totals nearly $1.8 trillion </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#StudentLoan</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Crash</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687969550295,\"blocks\":[{\"id\":\"-q5ZzKyb8t\",\"type\":\"paragraph\",\"data\":{\"text\":\"Around 40 million Americans have debt from their education. The typical monthly bill is roughly $350.\"}},{\"id\":\"bzR96Z8xJe\",\"type\":\"paragraph\",\"data\":{\"text\":\"Student loan debt in the U.S. now totals nearly $1.8 trillion\"}},{\"id\":\"SS9Gcievjb\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#StudentLoan</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Crash</chronohash>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.cnbc.com/2023/06/20/its-official-student-loan-payments-will-restart-in-october.html",
     "price": 1800000000000,
     "utcStartDateTime": "2023-10-01T07:00:00.000Z",
-    "utcEndDateTime": "2023-10-04T07:00:00.000Z",
+    "utcEndDateTime": "2023-10-05T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-21T06:07:14.552Z",
-    "utcUpdatedDateTime": "2023-06-22T06:22:26.269Z",
+    "utcUpdatedDateTime": "2023-06-28T16:25:59.996Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -11534,6 +11854,18 @@
         "originalWidth": 1920,
         "originalHeight": 1080,
         "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 209,
+        "tag": "#StudentLoan",
+        "pinId": 343
+      },
+      {
+        "id": 210,
+        "tag": "#Crash",
+        "pinId": 343
       }
     ],
     "userId": 1
@@ -11705,14 +12037,14 @@
     "parentId": 295,
     "rootThread": false,
     "title": "The Fed’s new SEP expect UR to rise to 4.1% by end 2023, compared with 3.6% end of last year.",
-    "description": "<a href=\"https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20230614.htm\" target=\"_blank\" rel=\"noopener noreferrer\">June 14, 2023: FOMC Projections materials</a><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#UnemploymentRate</chronohash>&nbsp; </p>",
-    "sourceDescription": "{\"time\":1686895075742,\"blocks\":[{\"id\":\"mnOBj71Lcj\",\"type\":\"header\",\"data\":{\"text\":\"<a href=\\\"https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20230614.htm\\\">June 14, 2023: FOMC Projections materials</a>\",\"level\":4}},{\"id\":\"twxN30A-Go\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#UnemploymentRate</chronohash>&nbsp;\"}}],\"version\":\"2.26.5\"}",
+    "description": "<h4><a href=\"https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20230614.htm\" target=\"_blank\" rel=\"noopener noreferrer\">June 14, 2023: FOMC Projections materials</a></h4><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#UnemploymentRate</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Crash</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687967612488,\"blocks\":[{\"id\":\"mnOBj71Lcj\",\"type\":\"header\",\"data\":{\"text\":\"<a href=\\\"https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20230614.htm\\\">June 14, 2023: FOMC Projections materials</a>\",\"level\":4}},{\"id\":\"twxN30A-Go\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#UnemploymentRate</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Crash</chronohash>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1669242180433592322",
     "utcStartDateTime": "2023-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2024-01-04T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-05T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-15T14:27:47.737Z",
-    "utcUpdatedDateTime": "2023-06-16T06:13:31.164Z",
+    "utcUpdatedDateTime": "2023-06-28T15:53:34.625Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -11729,7 +12061,12 @@
     ],
     "mentions": [
       {
-        "id": 148,
+        "id": 202,
+        "tag": "#Crash",
+        "pinId": 306
+      },
+      {
+        "id": 203,
         "tag": "#UnemploymentRate",
         "pinId": 306
       }
@@ -11974,13 +12311,14 @@
     "id": 342,
     "rootThread": false,
     "title": "Yen carry trade to unwind creating a liquidity suck in 2H23-1H24",
-    "description": "<p class=\"paragraph\"> People who borrowed yen and sent it overseas to obtain yields higher than there interest rate will return the yen. Creating a liquidity suck in the second half of the year or first quarter of next year. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#CarryTrade</chronohash>&nbsp; </p>",
-    "sourceDescription": "{\"time\":1687326566105,\"blocks\":[{\"id\":\"pMXuRXW83i\",\"type\":\"paragraph\",\"data\":{\"text\":\"People who borrowed yen and sent it overseas to obtain yields higher than there interest rate will return the yen. Creating a liquidity suck in the second half of the year or first quarter of next year.\"}},{\"id\":\"x-M6m99ePT\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#CarryTrade</chronohash>&nbsp;\"}}],\"version\":\"2.26.5\"}",
+    "description": "<p class=\"paragraph\"> People who borrowed yen and sent it overseas to obtain yields higher than there interest rate will return the yen. Creating a liquidity suck in the second half of the year or first quarter of next year. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#CarryTrade</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Crash</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687969592892,\"blocks\":[{\"id\":\"pMXuRXW83i\",\"type\":\"paragraph\",\"data\":{\"text\":\"People who borrowed yen and sent it overseas to obtain yields higher than there interest rate will return the yen. Creating a liquidity suck in the second half of the year or first quarter of next year.\"}},{\"id\":\"x-M6m99ePT\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#CarryTrade</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Crash</chronohash>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://twitter.com/PauloMacro/status/1670148000780255233",
     "utcStartDateTime": "2024-01-01T08:00:00.000Z",
-    "utcEndDateTime": "2024-01-02T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-03T08:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-21T05:50:33.492Z",
+    "utcUpdatedDateTime": "2023-06-28T16:26:35.105Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -11997,13 +12335,13 @@
     ],
     "locations": [
       {
-        "id": 58,
+        "id": 87,
         "address": "United Sates",
         "order": 0,
         "pinId": 342
       },
       {
-        "id": 59,
+        "id": 88,
         "address": "Japan",
         "order": 1,
         "pinId": 342
@@ -12011,8 +12349,13 @@
     ],
     "mentions": [
       {
-        "id": 159,
+        "id": 211,
         "tag": "#CarryTrade",
+        "pinId": 342
+      },
+      {
+        "id": 212,
+        "tag": "#Crash",
         "pinId": 342
       }
     ],
@@ -12915,6 +13258,48 @@
     "userId": 1
   },
   {
+    "id": 423,
+    "rootThread": true,
+    "title": "Samsung Electronics to start mass production of 2nm mobile chips in 2025",
+    "description": "<p class=\"paragraph\"> Samsung Electronics plans to catch up with Taiwan's TSMC in the foundry business by starting mass production of 2-nanometer mobile chips in 2025, the Korean chip giant announced at the Samsung Foundry Forum held in San Jose, Calif., Tuesday (local time). </p><p class=\"paragraph\"> During the forum, Samsung said it will continue to expand the use of the 2-nanometer process to high-performance computing (HPC) chips in 2026 and automotive semiconductors in 2027. </p><p class=\"paragraph\"> This is the first time that Samsung shared a detailed roadmap of mass production using the 2-nanometer process, although the company announced in 2022 that it would begin producing chips using the process in 2025 and the 1.4-nanometer process in 2027. </p><p class=\"paragraph\"> The lower the number, the more advanced the semiconductor process. Mass production using the 1.4-nanometer process will begin in 2027 as planned, the company said. </p><p class=\"paragraph\"> The 2-nanometer process is expected to become more important in the foundry business, which produces chips ordered by semiconductor design companies, because data usage will dramatically increase in artificial intelligence (AI) chips and HPC. In addition to Samsung and TSMC, U.S.-based Intel and Rapidus of Japan also announced mass production plans based on the 2-nanometer process. </p><p class=\"paragraph\"> Samsung said it plans to begin full-scale mass production of foundry products for various applications, including mobile devices, at Line 3 of its Pyeongtaek foundry factory in the second half of this year. </p><p class=\"paragraph\"> Its Taylor foundry factory in Texas is currently under construction and Samsung said Line 1 at the U.S. factory will be completed in the second half of this year as planned and will begin production in the second half of 2023. </p><p class=\"paragraph\"> The forum was attended by more than 700 key customers and partners of Samsung's foundry business. Also, 38 partner companies set up promotional booths at the event to share the latest foundry technology trends. </p><p class=\"paragraph\"> \"Many customers are actively developing AI-specific semiconductors to optimize their products and services,\" said Choi Si-young, president and general manager of the foundry business at Samsung Electronics' Device Solutions Division. \"Samsung Electronics will continue to innovate the most optimized GAA transistor technology for AI semiconductors and lead the paradigm shift in AI technology. </p><p class=\"paragraph\"> \"GAA refers to gate-all-around transistor architecture technology, a core technology that increases data processing speed and power efficiency. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Chips</chronohash> </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$EWY</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687973097843,\"blocks\":[{\"id\":\"c26DCUFVTT\",\"type\":\"paragraph\",\"data\":{\"text\":\"Samsung Electronics plans to catch up with Taiwan's TSMC in the foundry business by starting mass production of 2-nanometer mobile chips in 2025, the Korean chip giant announced at the Samsung Foundry Forum held in San Jose, Calif., Tuesday (local time).\"}},{\"id\":\"_ker7gPr3a\",\"type\":\"paragraph\",\"data\":{\"text\":\"During the forum, Samsung said it will continue to expand the use of the 2-nanometer process to high-performance computing (HPC) chips in 2026 and automotive semiconductors in 2027.\"}},{\"id\":\"HRA24GCo-8\",\"type\":\"paragraph\",\"data\":{\"text\":\"This is the first time that Samsung shared a detailed roadmap of mass production using the 2-nanometer process, although the company announced in 2022 that it would begin producing chips using the process in 2025 and the 1.4-nanometer process in 2027.\"}},{\"id\":\"jFcMk47KhE\",\"type\":\"paragraph\",\"data\":{\"text\":\"The lower the number, the more advanced the semiconductor process. Mass production using the 1.4-nanometer process will begin in 2027 as planned, the company said.\"}},{\"id\":\"5d-y82DPKe\",\"type\":\"paragraph\",\"data\":{\"text\":\"The 2-nanometer process is expected to become more important in the foundry business, which produces chips ordered by semiconductor design companies, because data usage will dramatically increase in artificial intelligence (AI) chips and HPC. In addition to Samsung and TSMC, U.S.-based Intel and Rapidus of Japan also announced mass production plans based on the 2-nanometer process.\"}},{\"id\":\"crSfNaRAgE\",\"type\":\"paragraph\",\"data\":{\"text\":\"Samsung said it plans to begin full-scale mass production of foundry products for various applications, including mobile devices, at Line 3 of its Pyeongtaek foundry factory in the second half of this year.\"}},{\"id\":\"WUXEhAhKFv\",\"type\":\"paragraph\",\"data\":{\"text\":\"Its Taylor foundry factory in Texas is currently under construction and Samsung said Line 1 at the U.S. factory will be completed in the second half of this year as planned and will begin production in the second half of 2023.\"}},{\"id\":\"nD3fJEFjJh\",\"type\":\"paragraph\",\"data\":{\"text\":\"The forum was attended by more than 700 key customers and partners of Samsung's foundry business. Also, 38 partner companies set up promotional booths at the event to share the latest foundry technology trends.\"}},{\"id\":\"502mME6L4F\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"Many customers are actively developing AI-specific semiconductors to optimize their products and services,\\\" said Choi Si-young, president and general manager of the foundry business at Samsung Electronics' Device Solutions Division. \\\"Samsung Electronics will continue to innovate the most optimized GAA transistor technology for AI semiconductors and lead the paradigm shift in AI technology.\"}},{\"id\":\"dYyfWO5Fl3\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"GAA refers to gate-all-around transistor architecture technology, a core technology that increases data processing speed and power efficiency.\"}},{\"id\":\"SAKSK-d4ud\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Chips</chronohash>\"}},{\"id\":\"38F-DGWNRv\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$EWY</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://koreatimes.co.kr/www/tech/2023/06/133_353857.html",
+    "utcStartDateTime": "2025-12-31T08:00:00.000Z",
+    "utcEndDateTime": "2026-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-28T17:18:25.473Z",
+    "utcUpdatedDateTime": "2023-06-28T17:25:04.878Z",
+    "user": {
+      "id": 4,
+      "userName": "@GadgetWorld"
+    },
+    "media": [
+      {
+        "id": 329,
+        "thumbName": "436caa0c-eb19-4629-8b0d-3941fc270377-chrono-lg.webp",
+        "thumbWidth": 980,
+        "thumbHeight": 467,
+        "originalUrl": "https://koreatimes-bucket.s3.ap-northeast-2.amazonaws.com/IMAGE/upload/newsV2/images/202306/e308d796f096421a979bef13b255a789.jpg",
+        "originalWidth": 980,
+        "originalHeight": 467,
+        "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 242,
+        "tag": "#Chips",
+        "pinId": 423
+      },
+      {
+        "id": 243,
+        "tag": "$EWY",
+        "pinId": 423
+      }
+    ],
+    "userId": 4
+  },
+  {
     "id": 221,
     "rootThread": false,
     "title": "Mercedes bringing luxury electric camper van to the US",
@@ -13099,6 +13484,81 @@
       }
     ],
     "userId": 1
+  },
+  {
+    "id": 424,
+    "parentId": 423,
+    "rootThread": false,
+    "title": "Samsung Foundry aims for 1.4nm process in 2027",
+    "description": "<p class=\"paragraph\"> Samsung Electronics is planning to introduce a 1.4nm process technology in mass production in 2027. </p><p class=\"paragraph\"> The company has already taped out multiple chips on the second generation 3nm process technology using the new Gate All Around (GAA) transistor design. It plans to triple its capacity for leading edge processes by that time. </p><p class=\"paragraph\"> Samsung is planning to introduce a GAA 2nm process in 2025 and 1.4nm process in 2027. </p><p class=\"paragraph\"> TSMC is planning 3nm FinFET production later this year, with 2nm GAA production in 2024. Intel is planning its 20A 2nm process for mid-2024 with GAA RibbonFET transistors. Research is ongoing to modify the RibbonFET structures for the 18A (1.8nm) process in mid-2025 using the high NA lithography systems that have just been delivered by ASML in the Netherlands. </p><p class=\"paragraph\"> “The technology development goal down to 1.4nm and foundry platforms specialized for each application, together with stable supply through consistent investment are all part of Samsung’s strategies to secure customers’ trust and support their success,” said Dr. Si-young Choi, president and head of the Foundry Business at Samsung Electronics. </p><p class=\"paragraph\"> The significant market growth in high-performance computing (HPC), artificial intelligence (AI), 5/6G connectivity and automotive applications is driving demand for higher performance chips built on more advanced processes. </p><p class=\"paragraph\"> This is also driving the development of 2.5D/3D chiplet packaging technology to provide a total system in its foundry services. This will see its 3D packaging X-Cube with micro-bump interconnection ready for mass production in 2024, and bump-less X-Cube will be available in 2026. </p><p class=\"paragraph\"> For automotive customers specifically, Samsung is currently providing embedded non-volatile memory (eNVM) solutions based on 28nm technology. In order to support automotive-grade reliability, the company plans to further expand process nodes by launching 14nm eNVM solutions in 2024 and adding 8nm eNVM in the future. Samsung has been mass producing 8nm RF following 14nm RF, and 5nm RF is currently in development. </p><p class=\"paragraph\"> Including the new fab under construction in Taylor, Texas, Samsung’s foundry manufacturing lines are currently in five locations: Giheung, Hwaseong, and Pyeongtaek in Korea; and Austin and Taylor in the United States. </p><p class=\"paragraph\"> Given the downturn facing the semiconductor industry, Samsung is taking a ‘Shell-First’ strategy for capacity investment, building the plants and cleanrooms first irrespective of market conditions. With cleanrooms readily available, fab equipment can be installed later and set up flexibly as needed in line with future demand. </p><p class=\"paragraph\"> As of 2022, Samsung provides more than 4,000 IP blocks with 56 partners, and is also cooperating with nine and 22 partners in the design solution and EDA, respectively. It also offers cloud services with nine partners and packaging services with 10 partners. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Chips</chronohash> </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$EWY</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687973411203,\"blocks\":[{\"id\":\"5iSCLD0hSi\",\"type\":\"paragraph\",\"data\":{\"text\":\"Samsung Electronics is planning to introduce a 1.4nm process technology in mass production in 2027.\"}},{\"id\":\"tGkjUiMun2\",\"type\":\"paragraph\",\"data\":{\"text\":\"The company has already taped out multiple chips on the second generation 3nm process technology using the new Gate All Around (GAA) transistor design. It plans to triple its capacity for leading edge processes by that time.\"}},{\"id\":\"q-lbybAePj\",\"type\":\"paragraph\",\"data\":{\"text\":\"Samsung is planning to introduce a GAA 2nm process in 2025 and 1.4nm process in 2027.\"}},{\"id\":\"MIFvLkY4oj\",\"type\":\"paragraph\",\"data\":{\"text\":\"TSMC is planning 3nm FinFET production later this year, with 2nm GAA production in 2024. Intel is planning its 20A 2nm process for mid-2024 with GAA RibbonFET transistors. Research is ongoing to modify the RibbonFET structures for the 18A (1.8nm) process in mid-2025 using the high NA lithography systems that have just been delivered by ASML in the Netherlands.\"}},{\"id\":\"wyD_zpW87w\",\"type\":\"paragraph\",\"data\":{\"text\":\"“The technology development goal down to 1.4nm and foundry platforms specialized for each application, together with stable supply through consistent investment are all part of Samsung’s strategies to secure customers’ trust and support their success,” said Dr. Si-young Choi, president and head of the Foundry Business at Samsung Electronics.\"}},{\"id\":\"NyiTRrUreo\",\"type\":\"paragraph\",\"data\":{\"text\":\"The significant market growth in high-performance computing (HPC), artificial intelligence (AI), 5/6G connectivity and automotive applications is driving demand for higher performance chips built on more advanced processes.\"}},{\"id\":\"teggGZS7KR\",\"type\":\"paragraph\",\"data\":{\"text\":\"This is also driving the development of 2.5D/3D chiplet packaging technology to provide a total system in its foundry services. This will see its 3D packaging X-Cube with micro-bump interconnection ready for mass production in 2024, and bump-less X-Cube will be available in 2026.\"}},{\"id\":\"cXzWF2amH9\",\"type\":\"paragraph\",\"data\":{\"text\":\"For automotive customers specifically, Samsung is currently providing embedded non-volatile memory (eNVM) solutions based on 28nm technology. In order to support automotive-grade reliability, the company plans to further expand process nodes by launching 14nm eNVM solutions in 2024 and adding 8nm eNVM in the future. Samsung has been mass producing 8nm RF following 14nm RF, and 5nm RF is currently in development.\"}},{\"id\":\"pES0k4veU-\",\"type\":\"paragraph\",\"data\":{\"text\":\"Including the new fab under construction in Taylor, Texas, Samsung’s foundry manufacturing lines are currently in five locations: Giheung, Hwaseong, and Pyeongtaek in Korea; and Austin and Taylor in the United States.\"}},{\"id\":\"C4CP8LQtYL\",\"type\":\"paragraph\",\"data\":{\"text\":\"Given the downturn facing the semiconductor industry, Samsung is taking a ‘Shell-First’ strategy for capacity investment, building the plants and cleanrooms first irrespective of market conditions. With cleanrooms readily available, fab equipment can be installed later and set up flexibly as needed in line with future demand.\"}},{\"id\":\"0WW4vawiU2\",\"type\":\"paragraph\",\"data\":{\"text\":\"As of 2022, Samsung provides more than 4,000 IP blocks with 56 partners, and is also cooperating with nine and 22 partners in the design solution and EDA, respectively. It also offers cloud services with nine partners and packaging services with 10 partners.\"}},{\"id\":\"QiVnRw7BTC\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Chips</chronohash>\"}},{\"id\":\"QpdpM7_cDO\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$EWY</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.eenewseurope.com/en/samsung-foundry-aims-for-1-4nm-process-in-2027",
+    "utcStartDateTime": "2027-12-31T08:00:00.000Z",
+    "utcEndDateTime": "2028-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-28T17:28:23.222Z",
+    "utcUpdatedDateTime": "2023-06-28T17:30:15.487Z",
+    "user": {
+      "id": 4,
+      "userName": "@GadgetWorld"
+    },
+    "media": [
+      {
+        "id": 330,
+        "thumbName": "f5556fd5-e7b8-499f-85f4-c5c3935e1094-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 667,
+        "originalUrl": "https://ee.cdnartwhere.eu/wp-content/uploads/2022/10/Samsung_Foundry_Forum_2022-scaled.jpg",
+        "originalWidth": 1080,
+        "originalHeight": 720,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 95,
+        "address": "Giheung",
+        "order": 0,
+        "pinId": 424
+      },
+      {
+        "id": 96,
+        "address": "Hwaseong",
+        "order": 1,
+        "pinId": 424
+      },
+      {
+        "id": 97,
+        "address": "Pyeongtaek",
+        "order": 2,
+        "pinId": 424
+      },
+      {
+        "id": 98,
+        "address": "Austin, USA",
+        "order": 3,
+        "pinId": 424
+      },
+      {
+        "id": 99,
+        "address": "Taylor, USA",
+        "order": 4,
+        "pinId": 424
+      }
+    ],
+    "mentions": [
+      {
+        "id": 244,
+        "tag": "#Chips",
+        "pinId": 424
+      },
+      {
+        "id": 245,
+        "tag": "$EWY",
+        "pinId": 424
+      }
+    ],
+    "userId": 4
   },
   {
     "id": 223,
