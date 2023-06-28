@@ -62,6 +62,7 @@
       //this.adjustScrollRelativeToCurrentView = this.ScrollUtil.adjustScrollRelativeToCurrentView.bind(null, scrollEl);
       this.captureYOffset = ScrollUtil.captureYOffset.bind(null, scrollEl);
       this.userScroll = false;
+      this.skipFirtScrollTop = true;
     }
 
     $onInit() {
@@ -110,13 +111,13 @@
       }
     }
 
-    initScrollChecker() {
-      const mouseEvent = (e) => {
-        this.userScroll = true;
-      }
-      this.registeredListeners['mousedown'] = this.ScrollUtil.addEventListener('mousedown', mouseEvent);
-      this.registeredListeners['wheel'] = this.ScrollUtil.addEventListener('wheel', mouseEvent);
-    }
+    // initScrollChecker() {
+    //   const mouseEvent = (e) => {
+    //     this.userScroll = true;
+    //   }
+    //   this.registeredListeners['mousedown'] = this.ScrollUtil.addEventListener('mousedown', mouseEvent);
+    //   this.registeredListeners['wheel'] = this.ScrollUtil.addEventListener('wheel', mouseEvent);
+    // }
 
     $onDestroy() {
       this._unRegisterInfinitScroll();
@@ -182,7 +183,7 @@
           }
           promise.then(() => {
             this._registerInfinitScroll();
-            this.initScrollChecker();
+            // this.initScrollChecker();
           });
         });
       }
@@ -217,6 +218,10 @@
       });
 
       const scrolledTop = this.$scope.$on('scrolled:top', (event, args) => {
+        if (this.skipFirtScrollTop) {
+          this.skipFirtScrollTop = false;
+          return;
+        }
         if (!!this.gettingPrev || !this.prevParam) {
           return;
         }
