@@ -4,7 +4,8 @@
   const delayParse = 0;
 
   angular.module('chronopinNodeApp')
-    .directive('compileMe', function ($compile, $timeout, twitterJs) {
+    .directive('compileMe', function ($compile, $timeout, twitterJs, appConfig) {
+      const thumbUrlPrefix = appConfig.filemoon.thumbUrlPrefix;
 
       function beforePinInit(elem, light, pinid) {
         if (light) {
@@ -22,7 +23,7 @@
               i.classList.add("fa", "fa-play");
               let o = document.createElement("a");
               o.href = `/pin/${pinid}`;
-              o.style.background = `url("https://thumbs.filemoon.sx/${matchId}.jpg")`;
+              o.style.background = `url("${thumbUrlPrefix}/${matchId}.jpg")`;
               o.classList.add("overlay");
               o.appendChild(i);
               parent.appendChild(o);

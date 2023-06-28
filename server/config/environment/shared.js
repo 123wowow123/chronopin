@@ -45,5 +45,8 @@ exports = module.exports = {
     description: 'Discover and track upcoming, release dates, events, and other important dates.',
     image: '/assets/images/favicon.ico',
     type: 'website'
+  },
+  filemoon:{
+    thumbUrlPrefix: 'https://img-place.com'
   }
 };
