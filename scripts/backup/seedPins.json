@@ -10545,6 +10545,76 @@
     "userId": 1
   },
   {
+    "id": 403,
+    "rootThread": false,
+    "title": "As it stands, excess savings are likely to run out by the middle of the year.",
+    "description": "<p class=\"paragraph\"> So then, by the end of the summer we will have:  </p><p class=\"paragraph\"> -Fed at Terminal Rate (liquidity🔻, volatility🔼)  </p><p class=\"paragraph\"> -Excess savings depleted (consumer🔻)  </p><p class=\"paragraph\"> -Stimulus programs rolling off (consumer🔻)  </p><p class=\"paragraph\"> -Sticky inflation (consumer🔻) </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Crash</chronohash> </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$SPY</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$QQQ</chronodollar> </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$META</chronodollar> <chronodollar class=\"chrono-dollar-highlight\">$AMZN</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$AAPL</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$MSFT</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$GOOGL</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687910888927,\"blocks\":[{\"id\":\"7qwQw87-uK\",\"type\":\"paragraph\",\"data\":{\"text\":\"So then, by the end of the summer we will have: \"}},{\"id\":\"yxyivPpMAx\",\"type\":\"paragraph\",\"data\":{\"text\":\"-Fed at Terminal Rate (liquidity🔻, volatility🔼) \"}},{\"id\":\"vy-0m5Uo4P\",\"type\":\"paragraph\",\"data\":{\"text\":\"-Excess savings depleted (consumer🔻) \"}},{\"id\":\"4e4gz-BKug\",\"type\":\"paragraph\",\"data\":{\"text\":\"-Stimulus programs rolling off (consumer🔻) \"}},{\"id\":\"L9jJ527DX0\",\"type\":\"paragraph\",\"data\":{\"text\":\"-Sticky inflation (consumer🔻)\"}},{\"id\":\"bNdJhWYecv\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Crash</chronohash>\"}},{\"id\":\"MRetN-Kwwz\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$SPY</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$QQQ</chronodollar>\"}},{\"id\":\"f29Zl94o8w\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$META</chronodollar> <chronodollar class=\\\"chrono-dollar-highlight\\\">$AMZN</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$AAPL</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$MSFT</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$GOOGL</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/lawhon_sam/status/1641848266810617856",
+    "utcStartDateTime": "2023-06-30T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-28T00:02:46.516Z",
+    "utcUpdatedDateTime": "2023-06-28T00:08:26.594Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 309,
+        "originalUrl": "https://twitter.com/lawhon_sam/status/1641848266810617856",
+        "type": "2",
+        "authorName": "Sam Lawhon",
+        "authorUrl": "https://twitter.com/lawhon_sam",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">As it stands, excess savings are likely to run out by the middle of the year. <a href=\"https://t.co/twscPyEaqq\">pic.twitter.com/twscPyEaqq</a></p>&mdash; Sam Lawhon (@lawhon_sam) <a href=\"https://twitter.com/lawhon_sam/status/1641848266810617856?ref_src=twsrc%5Etfw\">March 31, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 180,
+        "tag": "#Crash",
+        "pinId": 403
+      },
+      {
+        "id": 181,
+        "tag": "$SPY",
+        "pinId": 403
+      },
+      {
+        "id": 182,
+        "tag": "$QQQ",
+        "pinId": 403
+      },
+      {
+        "id": 183,
+        "tag": "$META",
+        "pinId": 403
+      },
+      {
+        "id": 184,
+        "tag": "$AMZN",
+        "pinId": 403
+      },
+      {
+        "id": 185,
+        "tag": "$MSFT",
+        "pinId": 403
+      },
+      {
+        "id": 186,
+        "tag": "$AAPL",
+        "pinId": 403
+      },
+      {
+        "id": 187,
+        "tag": "$GOOGL",
+        "pinId": 403
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 224,
     "rootThread": true,
     "title": "The problem with US economy is that it will unravel all at once in Q3",
@@ -12901,6 +12971,74 @@
       }
     ],
     "userId": 4
+  },
+  {
+    "id": 405,
+    "parentId": 404,
+    "rootThread": false,
+    "title": "Hospital Insurance Trust Fund solvent until 2031, Medicare trustees project",
+    "description": "The Medicare Hospital Insurance Trust Fund will have sufficient funds to pay full benefits until 2031, according to the latest annual report by the Medicare Board of Trustees.",
+    "sourceDescription": "{\"time\":1687912030648,\"blocks\":[{\"id\":\"rPkWRawVby\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Medicare Hospital Insurance Trust Fund will have sufficient funds to pay full benefits until 2031, according to the latest&nbsp;<a href=\\\"https://www.cms.gov/files/document/2023-medicare-trustees-report.pdf\\\" target=\\\"_blank\\\">annual report</a>&nbsp;by the Medicare Board of Trustees. That’s three years longer than reported last year, mainly due to lower projected health care spending based on more recent data, trustees&nbsp;<a href=\\\"https://home.treasury.gov/system/files/136/TR-2023-Fact-Sheet.pdf\\\" target=\\\"_blank\\\">said</a>. Known as Medicare Part A, the HI Trust Fund helps pay for inpatient hospital services, hospice care, and skilled nursing facility and home health services following hospital stays.&nbsp;\"}},{\"id\":\"B_xrQSkMtw\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Trustees report also projects lower expenditures for the Supplementary Medical Insurance Trust Fund, known as Medicare Part B, in part due to lower projected spending for Part B and D drugs. The federal government automatically adjusts SMI Trust Fund contributions and premiums annually to cover costs for the upcoming year.&nbsp;&nbsp;\"}},{\"id\":\"LQnc1WY2WU\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Congressional Budget Office, which conducts its own solvency analyses, recently projected that the HI Trust Fund would remain fully funded until&nbsp;<a href=\\\"https://www.cbo.gov/system/files/2023-02/58848-Outlook.pdf\\\" target=\\\"_blank\\\">2033</a>, two years longer than the new Medicare trustees report.\"}},{\"id\":\"88kOEXvBiM\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Medicare</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.aha.org/news/headline/2023-03-31-hospital-insurance-trust-fund-solvent-until-2031-medicare-trustees-project",
+    "utcStartDateTime": "2031-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2031-01-03T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-28T00:27:27.232Z",
+    "utcUpdatedDateTime": "2023-06-28T00:27:52.217Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 316,
+        "thumbName": "5c20b877-d87f-4773-be83-7bafedfe5c7d-chrono-lg.webp",
+        "thumbWidth": 900,
+        "thumbHeight": 400,
+        "originalUrl": "https://www.aha.org/sites/default/files/2018-02/ahatoday-parntering-population-health-900x400.jpg",
+        "originalWidth": 900,
+        "originalHeight": 400,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 404,
+    "rootThread": true,
+    "title": "Social Security trust funds depletion date moves one year earlier to 2034, Treasury says",
+    "description": "<p class=\"paragraph\"> Social Security’s combined funds that pay retirement, disability and family benefits will be able to pay scheduled benefits until 2034, according to the program’s annual trustees report released on Friday. </p><p class=\"paragraph\"> At that time, the program will be able to pay 80% of scheduled benefits. </p><p class=\"paragraph\"> The new projection date is one year earlier than the forecast from last year, prompting retirement advocates to call on Congress to fix both Social Security and Medicare. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#SocialSecurity</chronohash> </p>",
+    "sourceDescription": "{\"time\":1687912084649,\"blocks\":[{\"id\":\"v1NWSAg5A_\",\"type\":\"paragraph\",\"data\":{\"text\":\"Social Security’s combined funds that pay retirement, disability and family benefits will be able to pay scheduled benefits until 2034, according to the program’s annual trustees report released on Friday.\"}},{\"id\":\"K73lhPN7Qm\",\"type\":\"paragraph\",\"data\":{\"text\":\"At that time, the program will be able to pay 80% of scheduled benefits.\"}},{\"id\":\"ZnGxmGmb5h\",\"type\":\"paragraph\",\"data\":{\"text\":\"The new projection date is one year earlier than the forecast from last year, prompting retirement advocates to call on Congress to fix both Social Security and Medicare.\"}},{\"id\":\"w4pdcHPC_V\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#SocialSecurity</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/03/31/social-security-trust-funds-depletion-date-moves-up-to-2034.html",
+    "utcStartDateTime": "2034-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2034-01-03T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-28T00:24:06.702Z",
+    "utcUpdatedDateTime": "2023-06-28T00:28:08.076Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 315,
+        "thumbName": "4b349fb3-9434-4c61-be29-275a1f940ffe-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/104212247-GettyImages-52123754.jpg?v=1681221210&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 188,
+        "tag": "#SocialSecurity",
+        "pinId": 404
+      }
+    ],
+    "userId": 1
   },
   {
     "id": 330,

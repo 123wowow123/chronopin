@@ -320,19 +320,11 @@ Fed Fund Rate Will be at:
 https://www.fhfa.gov/Media/PublicAffairs/Pages/FHFA-Announces-Enhanced-Payment-Deferral-Policies-for-Borrowers-Facing-Financial-Hardship.aspx
 FHFA Announces Enhanced Payment Deferral Policies for Borrowers Facing Financial Hardship adoption by October 1, 2023 allow borrowers to defer up to six months of mortgage payments... Housing Crash April 1 2024 !?
 
-https://www.cnbc.com/2023/03/31/social-security-trust-funds-depletion-date-moves-up-to-2034.html
-The Social Security trust funds that about 67 million Americans rely on for benefits are scheduled to be depleted in 2034, one year earlier than was projected last year, according to the annual trustees
-
-Meanwhile, Medicare’s hospital insurance trust fund will be able to pay 100% of scheduled benefits until 2031, three years later than projected last year.
-
-12/31/34
-12/31/31
-
 
 https://twitter.com/EponymouslyAnon/status/1641849547235131403
 
 
-need post twitter thread feature
+need post twitter thread feature (posted)
 https://twitter.com/lawhon_sam/status/1641848266810617856
 
 
@@ -355,15 +347,8 @@ Dallas Fort Worth has both Solar and wind potential
 
 
 
-
-https://en.wikipedia.org/wiki/Tokyo_Anime_Award
-
 https://en.wikipedia.org/wiki/World_of_Warcraft
 and expansions
-
-
-https://www.motor1.com/news/449472/hyundai-porest-compact-rv/
-korea only
 
 
 https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm
@@ -396,8 +381,3 @@ https://www.youtube.com/watch?v=n1zaoGZqVNA&t=1s
 Representation democracy works well when voters have the correct info to make an informed decision, to their own interests. But nobody, myself included, can keep up with all the politics of ballot initiatives, so people can often vote for things that are 100% against their own interests. Can Chronopin help me with that?
 
 For sure, can't keep up with all the information and development creates decision paralysis or wrong decisions that can lead to the detriment of self and surrounding people. I'm constantly struggling with that. Here's a neat little site that tracks my bookmarked articles and events in a chronological order that I'm starting to use to at least put some order to my information overload.
-
-https://en.wikipedia.org/wiki/Nvidia
-graphics card
-
-https://insideevs.com/news/672790/blink-dua-lport-ccs-nacs-charger/
