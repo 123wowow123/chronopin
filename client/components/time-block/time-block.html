@@ -6,7 +6,7 @@
 <div class="timeline__date --1">
     <span class="timeline__tag" ng-bind="$ctrl.bag.utcStartDateTime | date:'MM/dd/yyyy'"></span>
 </div>
-<div class="timeline__countdown --2" ng-class="{'timeline__countdown--today': $ctrl.bag.getDateSince() === 0}" title="{{$ctrl.bag.getDateSpan() | timespan}}">
+<div class="timeline__countdown --2" ng-class="{'timeline__countdown--today': $ctrl.bag.getDateSince() === 0}" title="{{$ctrl.bag.getDateSpan() | timespan}}" id="{{$ctrl.bag.getDateSince()}}">
     <span class="timeline__tag" ng-bind="$ctrl.bag.getDateSpan() | timespan : 'y'"></span>
 </div>
 <!-- Need to optimize -->
