@@ -18,22 +18,26 @@ function _fetch(symbol) {
             resolve(data);
         } else {
             //console.log('new stock quote query');
-            fetch(`${quoteURL}?apikey=${apiKey}&symbol=${symbol}`)
-                .then(response => {
-                    return response.json();
-                }).then(body => {
-                    const lastPrice = body[symbol].lastPrice;
-                    const netPercentChangeInDouble = body[symbol].netPercentChangeInDouble;
-                    const data = {
-                        lastPrice,
-                        netPercentChangeInDouble
-                    };
-                    cache.setWithExpiry(cacheKey, data, ttl);
-                    resolve(data);
-                }).catch(err => {
-                    cache.setWithExpiry(cacheKey, {}, ttl);
-                    reject(err);
-                });
+            try {
+                fetch(`${quoteURL}?apikey=${apiKey}&symbol=${symbol}`)
+                    .then(response => {
+                        return response.json();
+                    }).then(body => {
+                        const lastPrice = body[symbol].lastPrice;
+                        const netPercentChangeInDouble = body[symbol].netPercentChangeInDouble;
+                        const data = {
+                            lastPrice,
+                            netPercentChangeInDouble
+                        };
+                        cache.setWithExpiry(cacheKey, data, ttl);
+                        resolve(data);
+                    }).catch(err => {
+                        cache.setWithExpiry(cacheKey, {}, ttl);
+                        reject(err);
+                    });
+            } catch (error) {
+                reject(error);
+            }
         }
     });
     return promise;

@@ -161,7 +161,17 @@
                       const query = params.get("q");
                       matchFactories.forEach((f) => {
                         let validateContentPass = f.regexValidateContent.exec(query);
-                        if (validateContentPass) {
+
+                        let parentNode = nodeList[i].parentNode;
+                        if (parentNode.nodeName.toLowerCase() === f.nodeName.toLowerCase() && validateContentPass) {
+                          let spaceTextNode = document.createTextNode(" ");
+                          let newNode = f.nodeWrapperFactory();
+                          newNode.append(query);
+                          let fragment = new DocumentFragment();
+                          fragment.append(newNode);
+                          fragment.append(spaceTextNode);
+                          parentNode.replaceWith(fragment);
+                        } else if (validateContentPass) {
                           // replace node with chrono tag node
                           let newNode = f.nodeWrapperFactory();
                           newNode.append(query);
