@@ -12,8 +12,6 @@ Before Usable:
 Comment cleanup/backup +
 follow notification
 
-fix copy past of multiple tags at once
-
 Bugs:
 scrolling 
 https://ui-router.github.io/ng1/docs/0.3.1/index.html#/api/ui.router.state.$uiViewScroll
