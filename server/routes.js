@@ -200,16 +200,20 @@ export default function (app) {
         const searchText = req.query.q;
         if (searchText && searchText.startsWith('🧵')) {
           const id = searchText.replace('🧵', '');
-          promise = Pins.getFirstThreadPins(id)
-            .then(pin => {
-              const theadEmoji = '%F0%9F%A7%B5'; //🧵
-              if (pin) {
-                const newUrl = url.replace(`${theadEmoji}${id}`, `🧵${pin.id}`);
-                const newCanonical = `${protocol}://www.${host}${newUrl}`; // update q to pinid
-                meta.canonical = newCanonical;
-                res.render(app.get('appPath') + '/index.html', { meta });
-              }
-            });
+          promise = promise.catch(e => {
+            return Pins.getFirstThreadPins(id)
+              .then(pin => {
+                const theadEmoji = '%F0%9F%A7%B5'; //🧵
+                if (pin) {
+                  const newUrl = url.replace(`${theadEmoji}${id}`, `🧵${pin.id}`);
+                  const newCanonical = `${protocol}://www.${host}${newUrl}`; // update q to pinid
+                  meta.canonical = newCanonical;
+                  res.render(app.get('appPath') + '/index.html', { meta });
+                } else {
+                  throw 'no pin found';
+                }
+              });
+          });
         }
       }
       promise.catch(err => {
