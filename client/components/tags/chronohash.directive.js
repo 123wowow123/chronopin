@@ -31,7 +31,8 @@
           this.loading = true;
           stockWebService.quotes(symbol)
             .then((res) => {
-              this.lastPrice = _.get(res, 'data.lastPrice', '');
+              this.lastPrice = _.get(res, 'data.lastPrice');
+              this.lastPrice = this.lastPrice ? `$${this.lastPrice}` : '';
               this.netPercentChangeInDouble = _.get(res, 'data.netPercentChangeInDouble', '');
             }).catch((e) => {
               return e;
