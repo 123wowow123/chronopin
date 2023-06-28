@@ -8,8 +8,11 @@
     <ul class="thread-list">
         <li id="{{pin.id}}" class="grid" data-ng-repeat="pin in thread.pins track by $index"
             ng-class="{ 'current': thread.pinId == pin.id}">
-            <a ui-sref="pin({id:pin.id})">
+            <a ui-sref="pin({id:pin.id})" class="thread-link">
                 <h3><span class="index-count" title="{{pin.title}}">{{$index + 1}}</span> {{pin.title}}</h3>
+                <time datetime="{{pin.utcStartDateTime}}">{{pin.utcStartDateTime | date :
+                    "MM/dd/yyyy"}}
+                </time>
             </a>
         </li>
     </ul>
