@@ -143,7 +143,8 @@ export default function (app) {
                 result1 = filemoonRex.exec(src)
                 matchId = result1 && result1[1];
                 if (matchId) {
-                  mediaContent = `https://thumbs.filemoon.sx/${matchId}.jpg`;
+                  const thumbUrlPrefix = config.filemoon.thumbUrlPrefix;
+                  mediaContent = `${thumbUrlPrefix}/${matchId}.jpg`;
                 }
               }
             }
