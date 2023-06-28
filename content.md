@@ -347,10 +347,6 @@ Dallas Fort Worth has both Solar and wind potential
 
 
 
-https://en.wikipedia.org/wiki/World_of_Warcraft
-and expansions
-
-
 https://www.cftc.gov/MarketReports/CommitmentsofTraders/index.htm
 reocurring events
 
