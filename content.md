@@ -10,13 +10,7 @@ Before Usable Bug:
 
 Before Usable:
 Comment cleanup/backup +
-links should be external cleanup
 follow notification
-
-popover needs:
-posted price
-current price
-change between posted/current price
 
 Bugs:
 scrolling 
@@ -121,6 +115,12 @@ Add do not show pin again feature
 Add no date pin feature and have it come up time to time so people can contribute more info
 Search twitter pins by scraping and indexing it's text
 scrape alt text for image and save
+
+stock price popover needs:
+    posted price
+    current price
+    change between posted/current price
+
 
 Cleanup:
 test comment db backup
