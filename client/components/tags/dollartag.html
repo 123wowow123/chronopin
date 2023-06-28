@@ -2,8 +2,7 @@
   <span ng-transclude>
   </span>
   <span>
-    <span ng-if="vm.netPercentChangeInDouble !== undefined" class="percentage-change"
-      ng-class="{'--negative' : vm.netPercentChangeInDouble < 0, '--positive' : vm.netPercentChangeInDouble > 0}">
+    <span ng-if="vm.netPercentChangeInDouble !== undefined" class="percentage-change" ng-class="vm.priceClass">
       {{vm.netPercentChangeInDouble | percentage:2}}</span>
   </span>
 </a>

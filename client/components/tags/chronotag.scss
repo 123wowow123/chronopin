@@ -1,17 +1,25 @@
 .chrono-dollar-highlight {
-    .price{
+    .price-tooltip {
+        padding: 4px;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .price {
         color: var(--primary-color);
     }
+
     .percentage-change {
         color: var(--primary-color);
+    }
 
-        &.\--negative {
-            color: #bd1414;
-        }
+    .\--negative {
+        color: #bd1414;
+    }
 
-        &.\--positive {
-            color: #007560;
-        }
+    .\--positive {
+        color: #008169;
     }
 
 }

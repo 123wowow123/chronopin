@@ -29,11 +29,23 @@
         const symbol = searchText.substring(1);
         if (!this.lastPrice && !this.loading) {
           this.loading = true;
+          let priceClassString = '';
           stockWebService.quotes(symbol)
             .then((res) => {
-              this.lastPrice = _.get(res, 'data.lastPrice');
-              this.lastPrice = this.lastPrice ? `$${this.lastPrice}` : '';
               this.netPercentChangeInDouble = _.get(res, 'data.netPercentChangeInDouble', '');
+              if (this.netPercentChangeInDouble === 0) {
+                this.priceClass = {};
+              } else if (this.netPercentChangeInDouble < 0) {
+                priceClassString = "--negative";
+                this.priceClass = { [priceClassString]: true };
+              } else {
+                priceClassString = "--positive";
+                this.priceClass = { [priceClassString]: true };
+              }
+
+              const lastPrice = _.get(res, 'data.lastPrice');
+              const lastPriceHtml = lastPrice ? `<span class="price-tooltip ${priceClassString}">$${lastPrice}</span>` : '';
+              this.lastPrice = lastPriceHtml;
             }).catch((e) => {
               return e;
             }).finally(() => {
