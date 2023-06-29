@@ -17,6 +17,7 @@ import {
 
 const PinEmitter = new EventEmitter();
 const pageSize = config.pagination.pageSize;
+const initialPageSize = config.pagination.initialPageSize;
 
 function _removeEntity(req, res) {
   return function (entity) {
@@ -73,7 +74,7 @@ export function getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTim
       }
     } else {
       fromDateTime = new Date();
-      queryPromise = Pins.queryInitialByDate(fromDateTime, userId, pageSize, pageSize); // should be next 10 groups of items
+      queryPromise = Pins.queryInitialByDate(fromDateTime, userId, initialPageSize, initialPageSize); // should be next 10 groups of items
     }
   }
   return queryPromise;
