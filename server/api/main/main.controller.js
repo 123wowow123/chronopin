@@ -8,7 +8,7 @@ import * as dateTimeController from '../dateTime/dateTime.controller';
 import * as paginationHeader from '../../util/paginationHeader'
 
 
-const pageSize = config.pagination.pageSize;
+// const pageSize = config.pagination.pageSize;
 
 function _getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTimeString) {
   return pinController.getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTimeString);

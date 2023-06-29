@@ -103,7 +103,7 @@ function executeCreateSP() {
             );
 
             INSERT INTO @tempPinsTbl
-            EXEC [dbo].[GetPinsWithFavoriteAndLikePrev] 0, @pageSizePrev, @userId, @fromDateTime, 0, @queryCount = @queryCountPrev OUTPUT;
+            EXEC [dbo].[GetPinsWithFavoriteAndLikePrev] 0, @pageSizePrev, @userId, @fromDateTime, 2147483647, @queryCount = @queryCountPrev OUTPUT;
 
             INSERT INTO @tempPinsTbl
             EXEC [dbo].[GetPinsWithFavoriteAndLikeNext] 0, @pageSizeNext, @userId, @fromDateTime, 0, @queryCount = @queryCountNext OUTPUT;
