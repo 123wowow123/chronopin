@@ -466,7 +466,7 @@
     }
 
     refreshEmbed() {
-      this.twitterJs.initalized
+      this.twitterJs.initialized
         .then(twttr => {
           this.$timeout(() => {
             const elem = this.$element[0];

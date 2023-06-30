@@ -5,7 +5,7 @@
 
   class Comment {
     constructor() {
-      this.initalized;
+      this.initialized;
       this.queue = Promise.resolve();
     }
 
@@ -34,10 +34,10 @@
       setTimeout(() => {
         this.queue
           .then(() => {
-            if (!this.initalized) {
-              this.initalized = this.loadCommentAsync();
+            if (!this.initialized) {
+              this.initialized = this.loadCommentAsync();
             }
-            this.initalized.then((isso) => {
+            this.initialized.then((isso) => {
               isso.init();
               isso.fetchComments();
             });

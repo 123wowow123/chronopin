@@ -55,14 +55,10 @@ BEGIN
       [Pin].*
 
     FROM [dbo].[PinBaseView] AS [Pin]
-
-    WHERE [Pin].[utcStartDateTime] > @fromDateTime
-      OR ([Pin].[utcStartDateTime] = @fromDateTime
-      AND [Pin].[id] > @lastPinId)
-      AND [Pin].[utcDeletedDateTime] IS NULL
+      JOIN GetNextPinIdsPaginatedFunc(@offset, @pageSize, @fromDateTime, @lastPinId) AS nextPin
+        ON nextPin.id = [Pin].id
 
     ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
-    OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY
 
 END;
         `;

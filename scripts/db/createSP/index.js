@@ -114,6 +114,10 @@ const createMergeLocationSP = require('./location/createMergeLocationSP');
 /* user */
 const createAdminDeleteUserByIdSP = require('./user/createAdminDeleteUserByIdSP');
 
+/** Functions **/
+const createGetPrevPinIdsPaginatedFunc = require('./pin/createGetPrevPinIdsPaginatedFunc');
+const createGetNextPinIdsPaginatedFunc = require('./pin/createGetNextPinIdsPaginatedFunc');
+
 let cp;
 
 // Setup
@@ -195,6 +199,10 @@ module.exports.setup = function (connectionPool) {
 
   // Admin Delete
   createAdminDeleteUserByIdSP.setup(cp);
+
+  // Functions
+  createGetPrevPinIdsPaginatedFunc.setup(cp);
+  createGetNextPinIdsPaginatedFunc.setup(cp);
 };
 
 // Retruns Collection
@@ -272,6 +280,10 @@ module.exports.createMergeLocationSP = createMergeLocationSP.createSP;
 
 // Admin Delete
 module.exports.createAdminDeleteUserByIdSP = createAdminDeleteUserByIdSP.createSP;
+
+// Function
+module.exports.createGetPrevPinIdsPaginatedFunc = createGetPrevPinIdsPaginatedFunc.createSP;
+module.exports.createGetNextPinIdsPaginatedFunc = createGetNextPinIdsPaginatedFunc.createSP;
 
 // Create Table Valued Parameters
 // module.exports.createMediumTableType = require('./createMediumTableType');

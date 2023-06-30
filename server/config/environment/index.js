@@ -140,8 +140,8 @@ let all = {
   },
 
   pagination: {
-    initialPageSize: 55,
-    pageSize: 25
+    initialPageSize: 20,
+    pageSize: 15
   }
 };
 

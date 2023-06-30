@@ -156,14 +156,12 @@ function executeCreateSP() {
                 [Location.order]
 
               FROM [dbo].[PinBaseView] AS [Pin]
+                JOIN GetNextPinIdsPaginatedFunc(@offset, @pageSize, @fromDateTime, @lastPinId) AS nextPin
+                  ON nextPin.id = [Pin].id
                 INNER JOIN [dbo].[Favorite] AS [Favorites]
                   ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL AND [Favorites].[userId] = @userId
 
-              WHERE [Pin].[utcStartDateTime] > @fromDateTime OR ([Pin].[utcStartDateTime] = @fromDateTime AND [Pin].[id] > @lastPinId)
-                AND [Pin].[utcDeletedDateTime] IS NULL
-
               ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
-              OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY
 
             SELECT *
             FROM @tempPinsTbl;

@@ -35,7 +35,7 @@
               size = attrs.size || 'small';
               showFaces = attrs.showFaces || false;
               share = attrs.share || false;
-              fb.initalized
+              fb.initialized
                 .then(FB => {
                   let $likeEl = $(createHTML(href, layout, action, size, showFaces, share));
                   $likeEl.hide();

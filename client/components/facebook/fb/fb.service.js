@@ -4,7 +4,7 @@
 
   class FaceBook {
     constructor(appConfig) {
-      this.initalized = this.loadFB(appConfig.fbAppId);
+      this.initialized = this.loadFB(appConfig.fbAppId);
     }
 
     loadFB(fbAppId) {

@@ -22,7 +22,7 @@
             let html = newValue;
             let $el = $(createHTML(html));
             elem.empty().append($el);
-            twitterJs.initalized
+            twitterJs.initialized
               .then(twttr => {
                 $timeout(() => {
                   twttr.widgets.load(elem);

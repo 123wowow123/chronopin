@@ -4,7 +4,7 @@
 
   class Twitter {
     constructor() {
-      this.initalized = this.loadTwitter();
+      this.initialized = this.loadTwitter();
     }
 
     loadTwitter() {

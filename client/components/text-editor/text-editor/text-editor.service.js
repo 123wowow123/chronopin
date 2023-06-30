@@ -4,7 +4,7 @@
   class TextEditorJS {
     constructor($injector) {
       this.$injector = $injector;
-      this.initalized;
+      this.initialized;
       this.queue = Promise.resolve();
     }
 
@@ -50,10 +50,10 @@
     ayncInit(elId, onChange, data) {
       return this.queue
         .then(() => {
-          if (!this.initalized) {
-            this.initalized = this.loadJsAsync();
+          if (!this.initialized) {
+            this.initialized = this.loadJsAsync();
           }
-          return this.initalized
+          return this.initialized
             .then(({ EditorJS, Header, List, Strikethrough, edjsParser, Embed, ImageTool, LinkTool, HashTagTool, DollarTagTool, AtTagTool }) => {
 
               const editor = new EditorJS({

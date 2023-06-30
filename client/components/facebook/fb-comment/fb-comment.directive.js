@@ -29,7 +29,7 @@
               numposts = attrs.numposts || 5;
               colorscheme = attrs.colorscheme || 'light';
               width = attrs.width || '100%';
-              fb.initalized
+              fb.initialized
                 .then(FB => {
                   let $commentEl = $(createHTML(href, numposts, colorscheme, width));
                   $commentEl.hide();

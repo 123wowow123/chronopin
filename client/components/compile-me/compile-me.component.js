@@ -34,7 +34,7 @@
       }
 
       function afterPinInit(elem) {
-        twitterJs.initalized
+        twitterJs.initialized
           .then(twttr => {
             $timeout(() => {
               twttr.widgets.load(elem);

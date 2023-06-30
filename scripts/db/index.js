@@ -113,7 +113,11 @@ const {
   createMergeLocationSP,
 
   // Admin Delete
-  createAdminDeleteUserByIdSP
+  createAdminDeleteUserByIdSP,
+
+  // Function
+  createGetPrevPinIdsPaginatedFunc,
+  createGetNextPinIdsPaginatedFunc
 } = require('./createSP');
 
 
@@ -237,6 +241,10 @@ function execute() {
 
         // Admin Delete
         createAdminDeleteUserByIdSP,
+
+        // Function
+        createGetPrevPinIdsPaginatedFunc,
+        createGetNextPinIdsPaginatedFunc
 
         // Create Table Valued Parameters
         // createMediumTableType
