@@ -197,7 +197,6 @@ export default class SearchPins extends BasePins {
     }
 
     static searchFavorite(userId, searchText) {
-        // TODO: should return SearchPins
         if (!searchText) {
             let fromDateTime = new Date();
             return Pins.queryInitialByDateFilterByHasFavorite(fromDateTime, userId, pageSize, pageSize);
