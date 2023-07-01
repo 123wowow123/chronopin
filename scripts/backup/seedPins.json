@@ -2111,12 +2111,12 @@
     "mentions": [
       {
         "id": 15,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 332
       },
       {
         "id": 16,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 332
       }
     ],
@@ -2241,12 +2241,12 @@
     "mentions": [
       {
         "id": 19,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 333
       },
       {
         "id": 20,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 333
       }
     ],
@@ -2387,12 +2387,12 @@
     "mentions": [
       {
         "id": 21,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 334
       },
       {
         "id": 22,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 334
       }
     ],
@@ -2919,18 +2919,18 @@
     "merchants": [
       {
         "id": 4,
-        "label": "Amazon: Modern Mouse Silver",
-        "url": "https://amzn.to/3IC8VDN",
-        "price": 37.49,
-        "order": 0,
-        "pinId": 84
-      },
-      {
-        "id": 5,
         "label": "Amazon: Modern Keyboard Silver",
         "url": "https://amzn.to/4283DqD",
         "price": 81,
         "order": 1,
+        "pinId": 84
+      },
+      {
+        "id": 5,
+        "label": "Amazon: Modern Mouse Silver",
+        "url": "https://amzn.to/3IC8VDN",
+        "price": 37.49,
+        "order": 0,
         "pinId": 84
       }
     ],
@@ -4277,12 +4277,12 @@
     "mentions": [
       {
         "id": 38,
-        "tag": "$NVDA",
+        "tag": "$VWAGY",
         "pinId": 124
       },
       {
         "id": 39,
-        "tag": "$VWAGY",
+        "tag": "$NVDA",
         "pinId": 124
       }
     ],
@@ -4308,12 +4308,12 @@
     "mentions": [
       {
         "id": 40,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 337
       },
       {
         "id": 41,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 337
       }
     ],
@@ -4805,12 +4805,12 @@
       },
       {
         "id": 48,
-        "tag": "$1",
+        "tag": "$100",
         "pinId": 135
       },
       {
         "id": 49,
-        "tag": "$100",
+        "tag": "$1",
         "pinId": 135
       }
     ],
@@ -4903,12 +4903,12 @@
     "mentions": [
       {
         "id": 50,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 338
       },
       {
         "id": 51,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 338
       }
     ],
@@ -5042,12 +5042,12 @@
     "mentions": [
       {
         "id": 53,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 339
       },
       {
         "id": 54,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 339
       }
     ],
@@ -6793,18 +6793,18 @@
       },
       {
         "id": 36,
-        "label": "Magical Handwriting Workbooks",
-        "url": "https://a.co/d/1oGcC0a",
-        "price": 16.99,
-        "order": 6,
-        "pinId": 226
-      },
-      {
-        "id": 37,
         "label": "Extra Large Ceramic Coffee",
         "url": "https://a.co/d/0glb5Wg",
         "price": 28.99,
         "order": 5,
+        "pinId": 226
+      },
+      {
+        "id": 37,
+        "label": "Magical Handwriting Workbooks",
+        "url": "https://a.co/d/1oGcC0a",
+        "price": 16.99,
+        "order": 6,
         "pinId": 226
       },
       {
@@ -6956,20 +6956,20 @@
     "locations": [
       {
         "id": 17,
-        "address": "LVCC Central Hall, Las Vegas",
-        "order": 0,
-        "pinId": 350
-      },
-      {
-        "id": 18,
         "address": "ARIA, Las Vegas",
         "order": 4,
         "pinId": 350
       },
       {
-        "id": 19,
+        "id": 18,
         "address": "LVCC West Hall, Las Vegas",
         "order": 1,
+        "pinId": 350
+      },
+      {
+        "id": 19,
+        "address": "LVCC North Hall, Las Vegas",
+        "order": 2,
         "pinId": 350
       },
       {
@@ -6980,8 +6980,8 @@
       },
       {
         "id": 21,
-        "address": "LVCC North Hall, Las Vegas",
-        "order": 2,
+        "address": "LVCC Central Hall, Las Vegas",
+        "order": 0,
         "pinId": 350
       }
     ],
@@ -7320,12 +7320,12 @@
     "mentions": [
       {
         "id": 66,
-        "tag": "#Stike",
+        "tag": "#Europe",
         "pinId": 365
       },
       {
         "id": 67,
-        "tag": "#Europe",
+        "tag": "#Stike",
         "pinId": 365
       }
     ],
@@ -7478,14 +7478,6 @@
     "merchants": [
       {
         "id": 44,
-        "label": "Gamestop Power Up get exclusive offers, earn monthly rewards and more",
-        "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007594&type=3&subid=",
-        "price": 24.99,
-        "order": 2,
-        "pinId": 142
-      },
-      {
-        "id": 45,
         "label": "GameStop: Sony PlayStation VR2",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2%2F393118.html",
         "price": 549.99,
@@ -7493,11 +7485,19 @@
         "pinId": 142
       },
       {
-        "id": 46,
+        "id": 45,
         "label": "GameStop: Sony PlayStation VR2 Horizon Bundle",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2-horizon-call-of-the-mountain-bundle%2F393119.html",
         "price": 599.99,
         "order": 1,
+        "pinId": 142
+      },
+      {
+        "id": 46,
+        "label": "Gamestop Power Up get exclusive offers, earn monthly rewards and more",
+        "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007594&type=3&subid=",
+        "price": 24.99,
+        "order": 2,
         "pinId": 142
       }
     ],
@@ -7542,12 +7542,12 @@
     "mentions": [
       {
         "id": 69,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 234
       },
       {
         "id": 70,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 234
       }
     ],
@@ -7944,12 +7944,12 @@
     "mentions": [
       {
         "id": 78,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 232
       },
       {
         "id": 79,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 232
       }
     ],
@@ -8341,12 +8341,12 @@
     "mentions": [
       {
         "id": 82,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 233
       },
       {
         "id": 83,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 233
       }
     ],
@@ -8405,14 +8405,14 @@
       },
       {
         "id": 29,
-        "address": "New York City",
-        "order": 1,
+        "address": "Burbank",
+        "order": 3,
         "pinId": 361
       },
       {
         "id": 30,
-        "address": "Burbank",
-        "order": 3,
+        "address": "New York City",
+        "order": 1,
         "pinId": 361
       },
       {
@@ -8635,27 +8635,27 @@
     "mentions": [
       {
         "id": 87,
-        "tag": "$MSFT",
+        "tag": "$AMZN",
         "pinId": 210
       },
       {
         "id": 88,
-        "tag": "$NVDA",
-        "pinId": 210
-      },
-      {
-        "id": 89,
-        "tag": "$TSLA",
-        "pinId": 210
-      },
-      {
-        "id": 90,
         "tag": "$AAPL",
         "pinId": 210
       },
       {
+        "id": 89,
+        "tag": "$NVDA",
+        "pinId": 210
+      },
+      {
+        "id": 90,
+        "tag": "$TSLA",
+        "pinId": 210
+      },
+      {
         "id": 91,
-        "tag": "$AMZN",
+        "tag": "$MSFT",
         "pinId": 210
       },
       {
@@ -9022,12 +9022,12 @@
     "mentions": [
       {
         "id": 98,
-        "tag": "#indicator",
+        "tag": "#CoincidentEconomicIndicator",
         "pinId": 229
       },
       {
         "id": 99,
-        "tag": "#CoincidentEconomicIndicator",
+        "tag": "#indicator",
         "pinId": 229
       }
     ],
@@ -9181,12 +9181,12 @@
     "mentions": [
       {
         "id": 105,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 231
       },
       {
         "id": 106,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 231
       }
     ],
@@ -10074,12 +10074,12 @@
     "mentions": [
       {
         "id": 120,
-        "tag": "#PBOC",
+        "tag": "#Rate",
         "pinId": 425
       },
       {
         "id": 121,
-        "tag": "#Rate",
+        "tag": "#PBOC",
         "pinId": 425
       }
     ],
@@ -10510,12 +10510,12 @@
     "mentions": [
       {
         "id": 128,
-        "tag": "#inflation",
+        "tag": "#rates",
         "pinId": 357
       },
       {
         "id": 129,
-        "tag": "#rates",
+        "tag": "#inflation",
         "pinId": 357
       },
       {
@@ -10603,12 +10603,12 @@
       },
       {
         "id": 133,
-        "tag": "$BA",
+        "tag": "$SPR",
         "pinId": 360
       },
       {
         "id": 134,
-        "tag": "$SPR",
+        "tag": "$BA",
         "pinId": 360
       }
     ],
@@ -10645,22 +10645,22 @@
     "mentions": [
       {
         "id": 135,
-        "tag": "$TSLA",
-        "pinId": 366
-      },
-      {
-        "id": 136,
         "tag": "$GM",
         "pinId": 366
       },
       {
+        "id": 136,
+        "tag": "$TSLA",
+        "pinId": 366
+      },
+      {
         "id": 137,
-        "tag": "$STLA",
+        "tag": "$TM",
         "pinId": 366
       },
       {
         "id": 138,
-        "tag": "$PSNY",
+        "tag": "$STLA",
         "pinId": 366
       },
       {
@@ -10670,7 +10670,7 @@
       },
       {
         "id": 140,
-        "tag": "$TM",
+        "tag": "$PSNY",
         "pinId": 366
       },
       {
@@ -10960,12 +10960,12 @@
     "mentions": [
       {
         "id": 148,
-        "tag": "$RIDE",
+        "tag": "#Bankruptcy",
         "pinId": 398
       },
       {
         "id": 149,
-        "tag": "#Bankruptcy",
+        "tag": "$RIDE",
         "pinId": 398
       }
     ],
@@ -10999,50 +10999,50 @@
     "locations": [
       {
         "id": 53,
+        "address": "Idaho",
+        "order": 6,
+        "pinId": 401
+      },
+      {
+        "id": 54,
         "address": "Sevierville, Tennessee",
         "order": 4,
         "pinId": 401
       },
       {
-        "id": 54,
+        "id": 55,
         "address": "San Antonio",
         "order": 2,
         "pinId": 401
       },
       {
-        "id": 55,
-        "address": "Uvalde",
-        "order": 3,
-        "pinId": 401
-      },
-      {
         "id": 56,
-        "address": "Montana",
-        "order": 5,
-        "pinId": 401
-      },
-      {
-        "id": 57,
         "address": "PHOENIX",
         "order": 0,
         "pinId": 401
       },
       {
-        "id": 58,
-        "address": "Oregon",
-        "order": 7,
+        "id": 57,
+        "address": "Uvalde",
+        "order": 3,
         "pinId": 401
       },
       {
-        "id": 59,
+        "id": 58,
         "address": "Austin",
         "order": 1,
         "pinId": 401
       },
       {
+        "id": 59,
+        "address": "Montana",
+        "order": 5,
+        "pinId": 401
+      },
+      {
         "id": 60,
-        "address": "Idaho",
-        "order": 6,
+        "address": "Oregon",
+        "order": 7,
         "pinId": 401
       }
     ],
@@ -11150,42 +11150,42 @@
     "mentions": [
       {
         "id": 155,
-        "tag": "$META",
-        "pinId": 403
-      },
-      {
-        "id": 156,
-        "tag": "#Crash",
-        "pinId": 403
-      },
-      {
-        "id": 157,
-        "tag": "$MSFT",
-        "pinId": 403
-      },
-      {
-        "id": 158,
         "tag": "$AAPL",
         "pinId": 403
       },
       {
-        "id": 159,
-        "tag": "$AMZN",
+        "id": 156,
+        "tag": "$MSFT",
         "pinId": 403
       },
       {
-        "id": 160,
-        "tag": "$QQQ",
-        "pinId": 403
-      },
-      {
-        "id": 161,
+        "id": 157,
         "tag": "$GOOGL",
         "pinId": 403
       },
       {
-        "id": 162,
+        "id": 158,
         "tag": "$SPY",
+        "pinId": 403
+      },
+      {
+        "id": 159,
+        "tag": "$META",
+        "pinId": 403
+      },
+      {
+        "id": 160,
+        "tag": "$AMZN",
+        "pinId": 403
+      },
+      {
+        "id": 161,
+        "tag": "#Crash",
+        "pinId": 403
+      },
+      {
+        "id": 162,
+        "tag": "$QQQ",
         "pinId": 403
       }
     ],
@@ -11229,6 +11229,24 @@
         "pinId": 416
       }
     ],
+    "userId": 1
+  },
+  {
+    "id": 427,
+    "rootThread": false,
+    "title": "Supreme Court Strikes Down Biden’s Student-Loan Forgiveness Plan",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/WcNV39BHtq0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\"> The Supreme Court&nbsp;<a href=\"https://s.wsj.net/public/resources/documents/SCOTUS-biden-nebraska-opinion.pdf\" target=\"_blank\">threw out the Biden administration</a>’s plan to forgive student loans held by 40 million Americans, ending a $430 billion program the White House considers a crucial way to cement the president’s support among younger Americans. </p><p class=\"paragraph\"> <a href=\"https://s.wsj.net/public/resources/documents/SCOTUS-biden-nebraska-opinion.pdf\" target=\"_blank\">The 6-3 decision</a>&nbsp;by Chief Justice&nbsp;John Roberts&nbsp;said that while Education Secretary&nbsp;Miguel Cardona&nbsp;holds some power under federal law to alter the terms of student aid programs, the massive plan he approved last year vastly exceeded the authority Congress delegated to the executive branch. </p><p class=\"paragraph\"> The Heroes Act, which permits the secretary to modify the programs to respond to emergencies, doesn’t permit him “to rewrite that statute from the ground up,” Roberts wrote, joined by Justices&nbsp;Clarence Thomas,&nbsp;Samuel Alito,&nbsp;Neil Gorsuch,&nbsp;Brett Kavanaugh&nbsp;and&nbsp;Amy Coney Barrett. </p><p class=\"paragraph\"> Writing in dissent for the court’s three liberals, Justice&nbsp;Elena Kagan&nbsp;said the majority had read into the law a restriction that wasn’t there. </p><p class=\"paragraph\"> The law’s text doesn’t expressly limit the secretary’s judgment about the waivers or modifications needed to deal with an emergency, she wrote. “That may have been a good idea, or it may have been a bad idea. Either way, it was what Congress said,” she wrote, joined by Justices&nbsp;Sonia Sotomayor&nbsp;and&nbsp;Ketanji Brown Jackson. </p><p class=\"paragraph\"> Beyond its financial implications,&nbsp;<a href=\"https://www.wsj.com/articles/supreme-court-student-loan-case-test-limits-of-presidential-power-4402d2ae?mod=article_inline\">the case&nbsp;</a>brought to the fore vastly different views of executive power espoused by the White House and the Supreme Court. </p><p class=\"paragraph\"> President Biden has at times sought to take aggressive actions in response to economic, immigration and other crises as partisan divisions hobble Congress. </p><p class=\"paragraph\"> The court, with a conservative majority skeptical of&nbsp;<a href=\"https://www.wsj.com/articles/supreme-court-limits-environmental-protection-agencys-authority-11656598034?mod=article_inline\">federal regulatory power</a>, has blocked several administration initiatives and limited agency authority to act on new situations that existing legislation might not have anticipated. </p><p class=\"paragraph\"> “I believe that the Court’s decision to strike down our student debt relief plan is wrong,” the president said. “But I will stop at nothing to find other ways to deliver relief to hard-working middle-class families.” </p><p class=\"paragraph\"> Missouri Attorney General Andrew Bailey, who was a party to the case Biden v. Nebraska, hailed the justices’ decision. “This means that the state coffers will not suffer a $44 million hit,” he said, adding: “This one was personal. I paid for my college with blood, sweat and tears in service to my country and it’s only fair that working families not be stuck with other people’s debt.” </p><p class=\"paragraph\"> Progressive lawmakers, meanwhile, called on Biden to take another crack at wide-ranging loan forgiveness using different legal authority. “This fight is not over. The president has more tools to cancel student debt—and he must use them,” said Sen. Elizabeth Warren (D., Mass.) one of Congress’ leading advocates for debt cancellation. </p><p class=\"paragraph\"> As a presidential candidate in 2020, Biden said he would pursue legislation to erase $10,000 in student debt per borrower. Once in office, however, he confronted a gridlocked Congress where neither Democratic efforts to cancel student debt nor Republican bills to prohibit loan forgiveness survived. Under pressure from progressives to make good on the promise, Biden chose to make permanent the decision to forgive certain borrowers’ student debt during the Covid-19 emergency. </p><p class=\"paragraph\"> Biden initially doubted the administration’s ability to take such a step. “I don’t think I have the authority to do it by signing with a pen,” he said during a CNN town hall in 2021. But after months of internal debate and additional legal research by administration officials, the president concluded that emergency powers Congress had granted the education secretary included the discretion to permanently forgive student-loan debt. </p><p class=\"paragraph\"> The key language was contained in the Heroes Act, a federal law adopted after the Sept. 11, 2001, terrorist attacks. It was expanded during the wars that followed to ensure that those involved in a military operation or national emergency “are not placed in a worse position financially” because of those events. </p><p class=\"paragraph\"> During the Covid-19 pandemic, officials of both the Trump and Biden administrations paused student-loan repayments. But the Heroes Act language didn’t specify relief must be temporary or that the government must be made whole. </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/409563ef-8f6c-49f8-a7ff-328cd50f621c-chrono-lg.webp\" alt=\"Supreme Court Strikes Down Biden’s Student-Loan Forgiveness Plan\" height=\"666\" width=\"1000\"><figcaption class=\"fig-cap\">Supreme Court Strikes Down Biden’s Student-Loan Forgiveness Plan</figcaption></figure><p class=\"paragraph\"> Days before leaving office in January 2021, the Trump Education Department’s top lawyer signed an eight-page memo concluding that while the statute didn’t explicitly bar blanket loan forgiveness, such a prohibition could be inferred from its structure. </p><p class=\"paragraph\"> Cardona, Biden’s education secretary, didn’t see it that way. In August 2022, he authorized permanent forgiveness of up to $10,000 for borrowers who earn less than $125,000 a year, with an additional $10,000 of relief for those who held Pell Grants, which typically are awarded to the neediest students. </p><p class=\"paragraph\"> The directive cited the department’s experience when it paused loan repayments for borrowers affected by natural disasters such as hurricanes and wildfires. The default rate was 0.3% in the calendar year before the disaster, but rose to 6.5% when repayment obligations resumed for borrowers whose bills had been paused. </p><p class=\"paragraph\"> Along with Cardona’s directive came a supporting legal opinion from Assistant Attorney General Christopher Schroeder, head of the Justice Department’s Office of Legal Counsel. Schroeder’s memo argued that the Heroes Act gave the education secretary broad discretion to waive or modify student-aid programs because of the emergency. </p><p class=\"paragraph\"> Unpersuaded Republican officials in six states sued to block the plan, contending among other things that it would harm state finances because the discharged debt wouldn’t be classified as taxable income. They argued that the education secretary lacked authority to erase billions of dollars of debt from the Treasury’s books. </p><p class=\"paragraph\"> A federal appeals court in St. Louis sided with the Republican states, issuing orders to block the plan while litigation proceeded. A federal judge in Fort Worth, Texas, hearing a suit from borrowers who complained they weren’t eligible for the maximum relief provided to others with student loans, issued a similar order. </p><p class=\"paragraph\"> The administration appealed to the Supreme Court, which heard the argument in February. </p><p class=\"paragraph\"> Sotomayor said millions of students would benefit from the program, adding, “Many of them don’t have assets sufficient to bail them out after the pandemic.” </p><p class=\"paragraph\"> Roberts highlighted the hardship that fell on those who hadn’t taken on student debt. Imagine, he said, a high-school graduate who borrowed money to set up a lawn-care business, while a classmate instead went to college on a student loan. </p><p class=\"paragraph\"> “Nobody is telling the person who is trying to set up the lawn-service business that he does not have to pay his loan,” Roberts said, “even though his tax dollars are” subsidizing his classmate. </p><p class=\"paragraph\"> The White House has been preparing for the court to overturn the program for weeks, people familiar with the matter said. The Education Department is expected to soon complete a proposal to offer borrowers new options for income-based repayment of their loans. </p><p class=\"paragraph\"> The administration hopes that low-income borrowers will enroll in the income-based repayment program, which would allow them to pay a set percentage of their discretionary incomes each month. The new program would provide qualifying borrowers with significantly more generous options that could leave them debt-free sooner, while paying off only a fraction of their total loan balances. </p><p class=\"paragraph\"> In addition, after payments restart in October, the administration is planning to impose a three-month transition period in which borrowers who miss payments won’t be penalized, the people said. </p>",
+    "sourceDescription": "{\"time\":1688147139286,\"blocks\":[{\"id\":\"crAabw0IdY\",\"type\":\"embed\",\"data\":{\"service\":\"youtube\",\"source\":\"https://www.youtube.com/watch?v=WcNV39BHtq0\",\"embed\":\"https://www.youtube.com/embed/WcNV39BHtq0\",\"width\":580,\"height\":320,\"caption\":\"Supreme Court strikes down Biden's student loan forgiveness plan\",\"length\":\"\"}},{\"id\":\"4U2nJFZhFY\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Supreme Court&nbsp;<a href=\\\"https://s.wsj.net/public/resources/documents/SCOTUS-biden-nebraska-opinion.pdf\\\" target=\\\"_blank\\\">threw out the Biden administration</a>’s plan to forgive student loans held by 40 million Americans, ending a $430 billion program the White House considers a crucial way to cement the president’s support among younger Americans.\"}},{\"id\":\"VEFky72l1F\",\"type\":\"paragraph\",\"data\":{\"text\":\"<a href=\\\"https://s.wsj.net/public/resources/documents/SCOTUS-biden-nebraska-opinion.pdf\\\" target=\\\"_blank\\\">The 6-3 decision</a>&nbsp;by Chief Justice&nbsp;John Roberts&nbsp;said that while Education Secretary&nbsp;Miguel Cardona&nbsp;holds some power under federal law to alter the terms of student aid programs, the massive plan he approved last year vastly exceeded the authority Congress delegated to the executive branch.\"}},{\"id\":\"mWEOR6K09L\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Heroes Act, which permits the secretary to modify the programs to respond to emergencies, doesn’t permit him “to rewrite that statute from the ground up,” Roberts wrote, joined by Justices&nbsp;Clarence Thomas,&nbsp;Samuel Alito,&nbsp;Neil Gorsuch,&nbsp;Brett Kavanaugh&nbsp;and&nbsp;Amy Coney Barrett.\"}},{\"id\":\"65M9tB4efN\",\"type\":\"paragraph\",\"data\":{\"text\":\"Writing in dissent for the court’s three liberals, Justice&nbsp;Elena Kagan&nbsp;said the majority had read into the law a restriction that wasn’t there.\"}},{\"id\":\"JqATTDsQr1\",\"type\":\"paragraph\",\"data\":{\"text\":\"The law’s text doesn’t expressly limit the secretary’s judgment about the waivers or modifications needed to deal with an emergency, she wrote. “That may have been a good idea, or it may have been a bad idea. Either way, it was what Congress said,” she wrote, joined by Justices&nbsp;Sonia Sotomayor&nbsp;and&nbsp;Ketanji Brown Jackson.\"}},{\"id\":\"0u3E6keV0J\",\"type\":\"paragraph\",\"data\":{\"text\":\"Beyond its financial implications,&nbsp;<a href=\\\"https://www.wsj.com/articles/supreme-court-student-loan-case-test-limits-of-presidential-power-4402d2ae?mod=article_inline\\\">the case&nbsp;</a>brought to the fore vastly different views of executive power espoused by the White House and the Supreme Court.\"}},{\"id\":\"vSFctmL7Lj\",\"type\":\"paragraph\",\"data\":{\"text\":\"President Biden has at times sought to take aggressive actions in response to economic, immigration and other crises as partisan divisions hobble Congress.\"}},{\"id\":\"sSnYJBo7La\",\"type\":\"paragraph\",\"data\":{\"text\":\"The court, with a conservative majority skeptical of&nbsp;<a href=\\\"https://www.wsj.com/articles/supreme-court-limits-environmental-protection-agencys-authority-11656598034?mod=article_inline\\\">federal regulatory power</a>, has blocked several administration initiatives and limited agency authority to act on new situations that existing legislation might not have anticipated.\"}},{\"id\":\"aSzcRiYaIE\",\"type\":\"paragraph\",\"data\":{\"text\":\"“I believe that the Court’s decision to strike down our student debt relief plan is wrong,” the president said. “But I will stop at nothing to find other ways to deliver relief to hard-working middle-class families.”\"}},{\"id\":\"H_gnOT2smK\",\"type\":\"paragraph\",\"data\":{\"text\":\"Missouri Attorney General Andrew Bailey, who was a party to the case Biden v. Nebraska, hailed the justices’ decision. “This means that the state coffers will not suffer a $44 million hit,” he said, adding: “This one was personal. I paid for my college with blood, sweat and tears in service to my country and it’s only fair that working families not be stuck with other people’s debt.”\"}},{\"id\":\"Y7s-ldVWLK\",\"type\":\"paragraph\",\"data\":{\"text\":\"Progressive lawmakers, meanwhile, called on Biden to take another crack at wide-ranging loan forgiveness using different legal authority. “This fight is not over. The president has more tools to cancel student debt—and he must use them,” said Sen. Elizabeth Warren (D., Mass.) one of Congress’ leading advocates for debt cancellation.\"}},{\"id\":\"HHaTCB0WOn\",\"type\":\"paragraph\",\"data\":{\"text\":\"As a presidential candidate in 2020, Biden said he would pursue legislation to erase $10,000 in student debt per borrower. Once in office, however, he confronted a gridlocked Congress where neither Democratic efforts to cancel student debt nor Republican bills to prohibit loan forgiveness survived. Under pressure from progressives to make good on the promise, Biden chose to make permanent the decision to forgive certain borrowers’ student debt during the Covid-19 emergency.\"}},{\"id\":\"fuHKN7WFHr\",\"type\":\"paragraph\",\"data\":{\"text\":\"Biden initially doubted the administration’s ability to take such a step. “I don’t think I have the authority to do it by signing with a pen,” he said during a CNN town hall in 2021. But after months of internal debate and additional legal research by administration officials, the president concluded that emergency powers Congress had granted the education secretary included the discretion to permanently forgive student-loan debt.\"}},{\"id\":\"yU0PawqMhD\",\"type\":\"paragraph\",\"data\":{\"text\":\"The key language was contained in the Heroes Act, a federal law adopted after the Sept. 11, 2001, terrorist attacks. It was expanded during the wars that followed to ensure that those involved in a military operation or national emergency “are not placed in a worse position financially” because of those events.\"}},{\"id\":\"GJBA0nepsK\",\"type\":\"paragraph\",\"data\":{\"text\":\"During the Covid-19 pandemic, officials of both the Trump and Biden administrations paused student-loan repayments. But the Heroes Act language didn’t specify relief must be temporary or that the government must be made whole.\"}},{\"id\":\"GrZ9GAos7t\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/409563ef-8f6c-49f8-a7ff-328cd50f621c-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":666}},\"caption\":\"Supreme Court Strikes Down Biden’s Student-Loan Forgiveness Plan\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"KgvffKngYV\",\"type\":\"paragraph\",\"data\":{\"text\":\"Days before leaving office in January 2021, the Trump Education Department’s top lawyer signed an eight-page memo concluding that while the statute didn’t explicitly bar blanket loan forgiveness, such a prohibition could be inferred from its structure.\"}},{\"id\":\"L-bX-nh5WM\",\"type\":\"paragraph\",\"data\":{\"text\":\"Cardona, Biden’s education secretary, didn’t see it that way. In August 2022, he authorized permanent forgiveness of up to $10,000 for borrowers who earn less than $125,000 a year, with an additional $10,000 of relief for those who held Pell Grants, which typically are awarded to the neediest students.\"}},{\"id\":\"mihY05XTzC\",\"type\":\"paragraph\",\"data\":{\"text\":\"The directive cited the department’s experience when it paused loan repayments for borrowers affected by natural disasters such as hurricanes and wildfires. The default rate was 0.3% in the calendar year before the disaster, but rose to 6.5% when repayment obligations resumed for borrowers whose bills had been paused.\"}},{\"id\":\"QdDlzhqGmK\",\"type\":\"paragraph\",\"data\":{\"text\":\"Along with Cardona’s directive came a supporting legal opinion from Assistant Attorney General Christopher Schroeder, head of the Justice Department’s Office of Legal Counsel. Schroeder’s memo argued that the Heroes Act gave the education secretary broad discretion to waive or modify student-aid programs because of the emergency.\"}},{\"id\":\"FrSL42IbM1\",\"type\":\"paragraph\",\"data\":{\"text\":\"Unpersuaded Republican officials in six states sued to block the plan, contending among other things that it would harm state finances because the discharged debt wouldn’t be classified as taxable income. They argued that the education secretary lacked authority to erase billions of dollars of debt from the Treasury’s books.\"}},{\"id\":\"19NDMDYSsR\",\"type\":\"paragraph\",\"data\":{\"text\":\"A federal appeals court in St. Louis sided with the Republican states, issuing orders to block the plan while litigation proceeded. A federal judge in Fort Worth, Texas, hearing a suit from borrowers who complained they weren’t eligible for the maximum relief provided to others with student loans, issued a similar order.\"}},{\"id\":\"DBMSnEYmx5\",\"type\":\"paragraph\",\"data\":{\"text\":\"The administration appealed to the Supreme Court, which heard the argument in February.\"}},{\"id\":\"d-a-h_yU9_\",\"type\":\"paragraph\",\"data\":{\"text\":\"Sotomayor said millions of students would benefit from the program, adding, “Many of them don’t have assets sufficient to bail them out after the pandemic.”\"}},{\"id\":\"cwZM98iiZX\",\"type\":\"paragraph\",\"data\":{\"text\":\"Roberts highlighted the hardship that fell on those who hadn’t taken on student debt. Imagine, he said, a high-school graduate who borrowed money to set up a lawn-care business, while a classmate instead went to college on a student loan.\"}},{\"id\":\"EPOXaFdpes\",\"type\":\"paragraph\",\"data\":{\"text\":\"“Nobody is telling the person who is trying to set up the lawn-service business that he does not have to pay his loan,” Roberts said, “even though his tax dollars are” subsidizing his classmate.\"}},{\"id\":\"x1ci40oRYb\",\"type\":\"paragraph\",\"data\":{\"text\":\"The White House has been preparing for the court to overturn the program for weeks, people familiar with the matter said. The Education Department is expected to soon complete a proposal to offer borrowers new options for income-based repayment of their loans.\"}},{\"id\":\"kFud3Kb_Mp\",\"type\":\"paragraph\",\"data\":{\"text\":\"The administration hopes that low-income borrowers will enroll in the income-based repayment program, which would allow them to pay a set percentage of their discretionary incomes each month. The new program would provide qualifying borrowers with significantly more generous options that could leave them debt-free sooner, while paying off only a fraction of their total loan balances.\"}},{\"id\":\"IXp3hK5QTY\",\"type\":\"paragraph\",\"data\":{\"text\":\"In addition, after payments restart in October, the administration is planning to impose a three-month transition period in which borrowers who miss payments won’t be penalized, the people said.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.wsj.com/articles/supreme-court-strikes-down-bidens-student-loan-forgiveness-plan-54a1ca7",
+    "price": 430000000000,
+    "utcStartDateTime": "2023-06-30T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-01T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-30T17:47:52.125Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
     "userId": 1
   },
   {
@@ -11707,7 +11725,7 @@
     ],
     "mentions": [
       {
-        "id": 217,
+        "id": 172,
         "tag": "$META",
         "pinId": 239
       }
@@ -11732,7 +11750,7 @@
     },
     "mentions": [
       {
-        "id": 176,
+        "id": 173,
         "tag": "$TSLA",
         "pinId": 206
       }
@@ -11776,12 +11794,12 @@
     ],
     "mentions": [
       {
-        "id": 177,
+        "id": 174,
         "tag": "#Crash",
         "pinId": 230
       },
       {
-        "id": 178,
+        "id": 175,
         "tag": "#studentloans",
         "pinId": 230
       }
@@ -11823,7 +11841,7 @@
     ],
     "mentions": [
       {
-        "id": 179,
+        "id": 176,
         "tag": "#XDate",
         "pinId": 308
       }
@@ -11862,13 +11880,13 @@
     ],
     "mentions": [
       {
-        "id": 180,
-        "tag": "#StudentLoan",
+        "id": 177,
+        "tag": "#Crash",
         "pinId": 343
       },
       {
-        "id": 181,
-        "tag": "#Crash",
+        "id": 178,
+        "tag": "#StudentLoan",
         "pinId": 343
       }
     ],
@@ -11951,7 +11969,7 @@
     ],
     "mentions": [
       {
-        "id": 182,
+        "id": 179,
         "tag": "$MSGS",
         "pinId": 149
       }
@@ -11985,18 +12003,18 @@
     "merchants": [
       {
         "id": 56,
-        "label": "Gamestop Power Up save $5 per Month on Gift Cards",
-        "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007593&type=3&subid=",
-        "price": 24.99,
-        "order": 1,
-        "pinId": 241
-      },
-      {
-        "id": 57,
         "label": "Gamestop Steam Gift Card",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fgift-cards%2Fproducts%2Fvalve-steam-wallet-card-20%2F215593.html",
         "price": 20,
         "order": 0,
+        "pinId": 241
+      },
+      {
+        "id": 57,
+        "label": "Gamestop Power Up save $5 per Month on Gift Cards",
+        "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007593&type=3&subid=",
+        "price": 24.99,
+        "order": 1,
         "pinId": 241
       }
     ],
@@ -12029,7 +12047,7 @@
     ],
     "mentions": [
       {
-        "id": 183,
+        "id": 180,
         "tag": "#rates",
         "pinId": 295
       }
@@ -12065,12 +12083,12 @@
     ],
     "mentions": [
       {
-        "id": 184,
+        "id": 181,
         "tag": "#Crash",
         "pinId": 306
       },
       {
-        "id": 185,
+        "id": 182,
         "tag": "#UnemploymentRate",
         "pinId": 306
       }
@@ -12104,7 +12122,7 @@
     ],
     "mentions": [
       {
-        "id": 186,
+        "id": 183,
         "tag": "#Liquidity",
         "pinId": 309
       }
@@ -12130,13 +12148,13 @@
     },
     "mentions": [
       {
-        "id": 187,
-        "tag": "#TokyoAnimeAward",
+        "id": 184,
+        "tag": "#TelevisionCategory",
         "pinId": 341
       },
       {
-        "id": 188,
-        "tag": "#TelevisionCategory",
+        "id": 185,
+        "tag": "#TokyoAnimeAward",
         "pinId": 341
       }
     ],
@@ -12218,22 +12236,22 @@
     ],
     "mentions": [
       {
-        "id": 189,
-        "tag": "$NEE",
-        "pinId": 376
-      },
-      {
-        "id": 190,
-        "tag": "#Pipeliine",
-        "pinId": 376
-      },
-      {
-        "id": 191,
+        "id": 186,
         "tag": "$ED",
         "pinId": 376
       },
       {
-        "id": 192,
+        "id": 187,
+        "tag": "$NEE",
+        "pinId": 376
+      },
+      {
+        "id": 188,
+        "tag": "#Pipeliine",
+        "pinId": 376
+      },
+      {
+        "id": 189,
         "tag": "$ETRN",
         "pinId": 376
       }
@@ -12294,17 +12312,17 @@
     ],
     "mentions": [
       {
-        "id": 193,
-        "tag": "$AMD",
-        "pinId": 289
-      },
-      {
-        "id": 194,
+        "id": 190,
         "tag": "#AI",
         "pinId": 289
       },
       {
-        "id": 195,
+        "id": 191,
+        "tag": "$AMD",
+        "pinId": 289
+      },
+      {
+        "id": 192,
         "tag": "#GPU",
         "pinId": 289
       }
@@ -12353,12 +12371,12 @@
     ],
     "mentions": [
       {
-        "id": 196,
+        "id": 193,
         "tag": "#Crash",
         "pinId": 342
       },
       {
-        "id": 197,
+        "id": 194,
         "tag": "#CarryTrade",
         "pinId": 342
       }
@@ -12428,7 +12446,7 @@
     ],
     "mentions": [
       {
-        "id": 198,
+        "id": 195,
         "tag": "$LCID",
         "pinId": 222
       }
@@ -12544,7 +12562,7 @@
     ],
     "mentions": [
       {
-        "id": 199,
+        "id": 196,
         "tag": "$VWAGY",
         "pinId": 212
       }
@@ -12666,7 +12684,7 @@
     ],
     "mentions": [
       {
-        "id": 200,
+        "id": 197,
         "tag": "$BA",
         "pinId": 151
       }
@@ -12806,7 +12824,7 @@
     ],
     "mentions": [
       {
-        "id": 201,
+        "id": 198,
         "tag": "$MU",
         "pinId": 400
       }
@@ -12925,7 +12943,7 @@
     },
     "mentions": [
       {
-        "id": 202,
+        "id": 199,
         "tag": "$INTC",
         "pinId": 399
       }
@@ -13009,7 +13027,7 @@
     ],
     "mentions": [
       {
-        "id": 203,
+        "id": 200,
         "tag": "$NESTE.HE",
         "pinId": 322
       }
@@ -13042,7 +13060,7 @@
     ],
     "mentions": [
       {
-        "id": 204,
+        "id": 201,
         "tag": "$APPL",
         "pinId": 390
       }
@@ -13079,7 +13097,7 @@
     ],
     "mentions": [
       {
-        "id": 205,
+        "id": 202,
         "tag": "$AAPL",
         "pinId": 388
       }
@@ -13115,7 +13133,7 @@
     ],
     "mentions": [
       {
-        "id": 206,
+        "id": 203,
         "tag": "$AAPL",
         "pinId": 389
       }
@@ -13192,7 +13210,7 @@
     ],
     "mentions": [
       {
-        "id": 207,
+        "id": 204,
         "tag": "$RIVN",
         "pinId": 216
       }
@@ -13291,13 +13309,13 @@
     ],
     "mentions": [
       {
-        "id": 208,
-        "tag": "#Chips",
+        "id": 205,
+        "tag": "$EWY",
         "pinId": 423
       },
       {
-        "id": 209,
-        "tag": "$EWY",
+        "id": 206,
+        "tag": "#Chips",
         "pinId": 423
       }
     ],
@@ -13333,7 +13351,7 @@
     ],
     "mentions": [
       {
-        "id": 210,
+        "id": 207,
         "tag": "$MBGAF",
         "pinId": 221
       }
@@ -13521,26 +13539,26 @@
     "locations": [
       {
         "id": 85,
-        "address": "Austin, USA",
-        "order": 3,
-        "pinId": 424
-      },
-      {
-        "id": 86,
-        "address": "Pyeongtaek",
-        "order": 2,
-        "pinId": 424
-      },
-      {
-        "id": 87,
         "address": "Hwaseong",
         "order": 1,
         "pinId": 424
       },
       {
-        "id": 88,
+        "id": 86,
+        "address": "Austin, USA",
+        "order": 3,
+        "pinId": 424
+      },
+      {
+        "id": 87,
         "address": "Taylor, USA",
         "order": 4,
+        "pinId": 424
+      },
+      {
+        "id": 88,
+        "address": "Pyeongtaek",
+        "order": 2,
         "pinId": 424
       },
       {
@@ -13552,13 +13570,13 @@
     ],
     "mentions": [
       {
-        "id": 211,
-        "tag": "$EWY",
+        "id": 208,
+        "tag": "#Chips",
         "pinId": 424
       },
       {
-        "id": 212,
-        "tag": "#Chips",
+        "id": 209,
+        "tag": "$EWY",
         "pinId": 424
       }
     ],
@@ -13615,7 +13633,7 @@
     },
     "mentions": [
       {
-        "id": 213,
+        "id": 210,
         "tag": "#energy",
         "pinId": 155
       }
@@ -13725,7 +13743,7 @@
     ],
     "mentions": [
       {
-        "id": 214,
+        "id": 211,
         "tag": "$AAPL",
         "pinId": 387
       }
@@ -13793,7 +13811,7 @@
     ],
     "mentions": [
       {
-        "id": 215,
+        "id": 212,
         "tag": "#SocialSecurity",
         "pinId": 404
       }
@@ -13956,7 +13974,7 @@
     ],
     "mentions": [
       {
-        "id": 216,
+        "id": 213,
         "tag": "#AI",
         "pinId": 248
       }
