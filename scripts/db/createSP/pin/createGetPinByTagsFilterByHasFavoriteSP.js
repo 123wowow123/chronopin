@@ -83,7 +83,14 @@ function executeCreateSP() {
         BEGIN
 
           SELECT
-                [Pin].*
+                [Pin].*,
+
+                (CAST((SELECT COUNT(f.id)
+                  FROM [Favorite] AS f
+                    WHERE f.userId = @userId AND f.PinId = [Pin].[id] AND f.utcDeletedDateTime IS NULL) AS BIT)) AS [hasFavorite],
+                (CAST((SELECT COUNT(l.id)
+                  FROM [Like] AS l
+                    WHERE l.userId = @userId AND l.PinId = [Pin].[id] AND l.utcDeletedDateTime IS NULL) AS BIT)) AS [hasLike]
 
               FROM [dbo].[PinBaseView] AS [Pin]
                 JOIN @TableUserTags AS paramUserTable

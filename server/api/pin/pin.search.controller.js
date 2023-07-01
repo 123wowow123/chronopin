@@ -87,7 +87,6 @@ export function searchPins(req, res) {
       }).then(response.withResult(res, 200))
         .catch(response.handleError(res));
     }
-
   } else {
     if (hasFavorite) {
       return SearchPins.searchFavorite(userId, searchText)

@@ -130,10 +130,19 @@ export default class SearchPins extends BasePins {
         return outPut;
     }
 
+    uniqByKeepFirst() {
+        let seen = new Set();
+        this.pins = this.pins.filter(item => {
+            let k = item.id;
+            return seen.has(k) ? false : seen.add(k);
+        });
+        return this;
+    }
+
     hydrateAndRemoveUnmatch(pins) {
         //non pure
         const queriedPins = pins.pins;
-        this.pins.reduce((a, c) => {
+        this.pins = this.pins.reduce((a, c) => {
             let found = queriedPins.find(p => c.id === p.id);
             if (found) {
                 c.set({ ...c, ...found });
@@ -141,7 +150,7 @@ export default class SearchPins extends BasePins {
             }
             return a;
         }, []);
-        return this.pins;
+        return this;
     }
 
     static delete(pinId) {
@@ -152,18 +161,29 @@ export default class SearchPins extends BasePins {
     }
 
     static search(userId, searchText) {
-        //ToDo: get tags and remove them and then do semanticSearch then recombine results
         const semanticPinsPromise = semanticSearch(searchText, SearchPins.numberOfResults)
             .then(res => {
                 return new SearchPins().fromFaiss(res);
-            })
+            });
 
-        return Promise.all([semanticPinsPromise])
-            .then(([semanticPins]) => {
-                return Pins.queryPinByIds(userId, semanticPins)
+        const beginMatchPinsPromise = SearchPins.querySearchPin(searchText, searchText)
+            .then(res => {
+                const searchPins = new SearchPins(res.pins);
+                searchPins.pins.forEach(p => {
+                    return p.searchScore = 0;
+                });
+                return searchPins;
+            });
+
+        return Promise.all([semanticPinsPromise, beginMatchPinsPromise])
+            .then(([semanticPins, beginMatchPins]) => {
+                const unionSearchPins = new SearchPins([...beginMatchPins.pins, ...semanticPins.pins]);
+                return Pins.queryPinByIds(userId, unionSearchPins)
                     .then(pins => {
-                        semanticPins.hydrateAndRemoveUnmatch(pins);
-                        return semanticPins;
+                        unionSearchPins
+                            .uniqByKeepFirst()
+                            .hydrateAndRemoveUnmatch(pins);
+                        return unionSearchPins;
                     });
             });
     }
@@ -182,12 +202,15 @@ export default class SearchPins extends BasePins {
             let fromDateTime = new Date();
             return Pins.queryInitialByDateFilterByHasFavorite(fromDateTime, userId, pageSize, pageSize);
         } else {
-            return semanticSearch(searchText, SearchPins.numberOfResults)
-                .then(res => {
-                    return new SearchPins().fromFaiss(res);
-                })
-                .then(pins => {
-                    return Pins.queryPinByIdsFilterByHasFavorite(pins, userId);
+            return SearchPins.search(userId, searchText)
+                .then(searchPins => {
+                    return Pins.queryPinByIdsFilterByHasFavorite(searchPins, userId)
+                        .then(pins => {
+                            searchPins
+                                .uniqByKeepFirst()
+                                .hydrateAndRemoveUnmatch(pins);
+                            return searchPins;
+                        });
                 });
         }
     }
@@ -382,8 +405,8 @@ function _querySearchPin(title, description, k) {
                 const StoredProcedureName = 'SearchPin';
 
                 let request = new mssql.Request(conn)
-                    .input('searchTitle', mssql.NVarChar(64), title)
-                    .input('searchDescription', mssql.NVarChar(64), description)
+                    .input('searchTitle', mssql.NVarChar(64), title.slice(0, 64))
+                    .input('searchDescription', mssql.NVarChar(64), description.slice(0, 64))
                     .input('top', mssql.Int, k)
                     .output('queryCount', mssql.Int);
 

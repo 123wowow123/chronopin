@@ -20,8 +20,10 @@ const prop = BasePinProp.concat(
     [
         //'userId', // not using defineProperty like Pin
 
-        // 'favoriteCount',
-        // 'likeCount',
+        'favoriteCount',
+        'likeCount',
+        'hasFavorite',
+        'hasLike',
 
         /* SearchPin unique attributes */
         'searchScore',
