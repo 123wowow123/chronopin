@@ -234,7 +234,7 @@ export default function (app) {
         userId = 0,
         lastPinId = 0,
         pageSize = 2147483647; // Maximum values for an integer in SQL Server
-      return FullPins.queryForwardByDate(fromDateTime, userId, lastPinId, pageSize)
+      return Pins.queryForwardByDate(fromDateTime, userId, lastPinId, pageSize)
         .then(({
           pins
         }) => {

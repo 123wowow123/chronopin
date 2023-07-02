@@ -54,9 +54,9 @@ function executeCreateSP() {
 
             FROM [dbo].[Pin] AS [Pin]
 
-            WHERE [Pin].[utcStartDateTime] > @fromDateTime
+            WHERE ([Pin].[utcStartDateTime] > @fromDateTime
               OR ([Pin].[utcStartDateTime] = @fromDateTime
-              AND [Pin].[id] > @lastPinId)
+              AND [Pin].[id] > @lastPinId))
               AND [Pin].[utcDeletedDateTime] IS NULL
 
             ORDER BY [Pin].[utcStartDateTime], [Pin].[id]
