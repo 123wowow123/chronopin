@@ -14,5 +14,6 @@ angular.module('chronopinNodeApp')
           });
         }, 0);
       }
+      
     });
   });
