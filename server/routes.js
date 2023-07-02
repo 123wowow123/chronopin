@@ -122,6 +122,9 @@ export default function (app) {
         .then(({
           pin
         }) => {
+          if(!pin){
+            return errors[404](req, res);
+          }
           const canonical = `https://www.chronopin.com/pin/${pinId}`;
           const dom = new JSDOM(pin.description);
           const document = dom.window.document;

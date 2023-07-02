@@ -11,6 +11,7 @@ Before Usable Bug:
 Before Usable:
 Comment cleanup/backup +
 follow notification
+countdown on pin page
 
 Bugs:
 scrolling 
