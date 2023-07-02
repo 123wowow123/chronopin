@@ -4094,12 +4094,12 @@
     "mentions": [
       {
         "id": 34,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 336
       },
       {
         "id": 35,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 336
       }
     ],
@@ -4424,14 +4424,14 @@
     "locations": [
       {
         "id": 5,
-        "address": "Gothenburg",
-        "order": 0,
+        "address": "Helsingborg",
+        "order": 1,
         "pinId": 127
       },
       {
         "id": 6,
-        "address": "Helsingborg",
-        "order": 1,
+        "address": "Gothenburg",
+        "order": 0,
         "pinId": 127
       }
     ],
@@ -4800,12 +4800,12 @@
       },
       {
         "id": 47,
-        "tag": "$208",
+        "tag": "$1",
         "pinId": 135
       },
       {
         "id": 48,
-        "tag": "$1",
+        "tag": "$208",
         "pinId": 135
       },
       {
@@ -4903,12 +4903,12 @@
     "mentions": [
       {
         "id": 50,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 338
       },
       {
         "id": 51,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 338
       }
     ],
@@ -5042,12 +5042,12 @@
     "mentions": [
       {
         "id": 53,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 339
       },
       {
         "id": 54,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 339
       }
     ],
@@ -6769,14 +6769,6 @@
       },
       {
         "id": 33,
-        "label": "Tegion Reusable Silicone Straws",
-        "url": "https://a.co/d/fTIFcq4",
-        "price": 11.99,
-        "order": 1,
-        "pinId": 226
-      },
-      {
-        "id": 34,
         "label": "Plushible Halloween Candy Bags",
         "url": "https://a.co/d/4jQwcnc",
         "price": 19.99,
@@ -6784,11 +6776,19 @@
         "pinId": 226
       },
       {
-        "id": 35,
+        "id": 34,
         "label": "UPPAbaby VISTA Upper Adapters",
         "url": "https://amzn.to/3WBMhBj",
         "price": 29.99,
         "order": 2,
+        "pinId": 226
+      },
+      {
+        "id": 35,
+        "label": "Tegion Reusable Silicone Straws",
+        "url": "https://a.co/d/fTIFcq4",
+        "price": 11.99,
+        "order": 1,
         "pinId": 226
       },
       {
@@ -6962,8 +6962,8 @@
       },
       {
         "id": 18,
-        "address": "LVCC West Hall, Las Vegas",
-        "order": 1,
+        "address": "LVCC North Hall, Las Vegas",
+        "order": 2,
         "pinId": 350
       },
       {
@@ -6974,8 +6974,8 @@
       },
       {
         "id": 20,
-        "address": "LVCC North Hall, Las Vegas",
-        "order": 2,
+        "address": "LVCC West Hall, Las Vegas",
+        "order": 1,
         "pinId": 350
       },
       {
@@ -7018,14 +7018,14 @@
     "locations": [
       {
         "id": 22,
-        "address": "Montefiore Medical Center, New York",
-        "order": 1,
+        "address": "Mount Sinai Hospital, New York",
+        "order": 0,
         "pinId": 364
       },
       {
         "id": 23,
-        "address": "Mount Sinai Hospital, New York",
-        "order": 0,
+        "address": "Montefiore Medical Center, New York",
+        "order": 1,
         "pinId": 364
       }
     ],
@@ -7209,12 +7209,12 @@
     "mentions": [
       {
         "id": 64,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 235
       },
       {
         "id": 65,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 235
       }
     ],
@@ -7478,6 +7478,14 @@
     "merchants": [
       {
         "id": 44,
+        "label": "GameStop: Sony PlayStation VR2",
+        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2%2F393118.html",
+        "price": 549.99,
+        "order": 0,
+        "pinId": 142
+      },
+      {
+        "id": 45,
         "label": "GameStop: Sony PlayStation VR2 Horizon Bundle",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2-horizon-call-of-the-mountain-bundle%2F393119.html",
         "price": 599.99,
@@ -7485,19 +7493,11 @@
         "pinId": 142
       },
       {
-        "id": 45,
+        "id": 46,
         "label": "Gamestop Power Up get exclusive offers, earn monthly rewards and more",
         "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007594&type=3&subid=",
         "price": 24.99,
         "order": 2,
-        "pinId": 142
-      },
-      {
-        "id": 46,
-        "label": "GameStop: Sony PlayStation VR2",
-        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2%2F393118.html",
-        "price": 549.99,
-        "order": 0,
         "pinId": 142
       }
     ],
@@ -7542,12 +7542,12 @@
     "mentions": [
       {
         "id": 69,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 234
       },
       {
         "id": 70,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 234
       }
     ],
@@ -7944,12 +7944,12 @@
     "mentions": [
       {
         "id": 78,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 232
       },
       {
         "id": 79,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 232
       }
     ],
@@ -8270,12 +8270,12 @@
     "mentions": [
       {
         "id": 80,
-        "tag": "#BTFP",
+        "tag": "#Liquidity",
         "pinId": 420
       },
       {
         "id": 81,
-        "tag": "#Liquidity",
+        "tag": "#BTFP",
         "pinId": 420
       }
     ],
@@ -8399,14 +8399,14 @@
     "locations": [
       {
         "id": 28,
-        "address": "Burbank",
-        "order": 3,
+        "address": "New York City",
+        "order": 1,
         "pinId": 361
       },
       {
         "id": 29,
-        "address": "New York City",
-        "order": 1,
+        "address": "Burbank",
+        "order": 3,
         "pinId": 361
       },
       {
@@ -8645,7 +8645,7 @@
       },
       {
         "id": 89,
-        "tag": "$TSLA",
+        "tag": "$NVDA",
         "pinId": 210
       },
       {
@@ -8655,22 +8655,22 @@
       },
       {
         "id": 91,
-        "tag": "$NVDA",
+        "tag": "$TSLA",
         "pinId": 210
       },
       {
         "id": 92,
-        "tag": "$GOOG",
+        "tag": "$META",
         "pinId": 210
       },
       {
         "id": 93,
-        "tag": "$NFLX",
+        "tag": "$GOOG",
         "pinId": 210
       },
       {
         "id": 94,
-        "tag": "$META",
+        "tag": "$NFLX",
         "pinId": 210
       }
     ],
@@ -9022,12 +9022,12 @@
     "mentions": [
       {
         "id": 98,
-        "tag": "#CoincidentEconomicIndicator",
+        "tag": "#indicator",
         "pinId": 229
       },
       {
         "id": 99,
-        "tag": "#indicator",
+        "tag": "#CoincidentEconomicIndicator",
         "pinId": 229
       }
     ],
@@ -9069,12 +9069,12 @@
     "mentions": [
       {
         "id": 100,
-        "tag": "#inflation",
+        "tag": "#Euro",
         "pinId": 327
       },
       {
         "id": 101,
-        "tag": "#Euro",
+        "tag": "#inflation",
         "pinId": 327
       }
     ],
@@ -9101,12 +9101,12 @@
     "mentions": [
       {
         "id": 102,
-        "tag": "#Liquidity",
+        "tag": "#BTFP",
         "pinId": 418
       },
       {
         "id": 103,
-        "tag": "#BTFP",
+        "tag": "#Liquidity",
         "pinId": 418
       }
     ],
@@ -9181,12 +9181,12 @@
     "mentions": [
       {
         "id": 105,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 231
       },
       {
         "id": 106,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 231
       }
     ],
@@ -9731,43 +9731,6 @@
     "userId": 3
   },
   {
-    "id": 368,
-    "rootThread": false,
-    "title": "Jobless claims totaled 261,000 more than expected to their highest since October 2021",
-    "description": "<p class=\"paragraph\"> Jobless claims totaled 261,000 for the week ended June 3, an increase of 28,000 from the previous week. </p><p class=\"paragraph\"> The total was well ahead of the Dow Jones estimate for 235,000 and was the highest weekly rate since Oct. 30, 2021. </p><p class=\"paragraph\"> The report comes less than a week ahead of the next Federal Reserve meeting. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#JoblessClaims</chronohash> </p>",
-    "sourceDescription": "{\"time\":1687489882847,\"blocks\":[{\"id\":\"lahTnZg-ZS\",\"type\":\"paragraph\",\"data\":{\"text\":\"Jobless claims totaled 261,000 for the week ended June 3, an increase of 28,000 from the previous week.\"}},{\"id\":\"gYoHYlF_wt\",\"type\":\"paragraph\",\"data\":{\"text\":\"The total was well ahead of the Dow Jones estimate for 235,000 and was the highest weekly rate since Oct. 30, 2021.\"}},{\"id\":\"KGFyzk0CHR\",\"type\":\"paragraph\",\"data\":{\"text\":\"The report comes less than a week ahead of the next Federal Reserve meeting.\"}},{\"id\":\"n9dCX3BpZl\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#JoblessClaims</chronohash>\"}}],\"version\":\"2.26.5\"}",
-    "sourceUrl": "https://www.cnbc.com/2023/06/08/jobless-claims-increase-more-than-expected-to-their-highest-since-october-2021.html",
-    "utcStartDateTime": "2023-06-08T07:00:00.000Z",
-    "utcEndDateTime": "2023-06-09T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2023-06-23T03:12:05.755Z",
-    "utcDeletedDateTime": "2023-06-23T03:26:28.487Z",
-    "user": {
-      "id": 1,
-      "userName": "@ThePinGang"
-    },
-    "media": [
-      {
-        "id": 236,
-        "thumbName": "af157dc3-0318-4836-92e6-d20cacec67a6-chrono-lg.webp",
-        "thumbWidth": 750,
-        "thumbHeight": 422,
-        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107253353-16862332251686233223-29799881917-1080pnbcnews.jpg?v=1686233432&w=750&h=422&vtcrop=y",
-        "originalWidth": 750,
-        "originalHeight": 422,
-        "type": "1"
-      }
-    ],
-    "mentions": [
-      {
-        "id": 114,
-        "tag": "#JoblessClaims",
-        "pinId": 368
-      }
-    ],
-    "userId": 1
-  },
-  {
     "id": 372,
     "rootThread": false,
     "title": "U.S. jobless claims leap to nearly two-year high of 261,000",
@@ -10074,12 +10037,12 @@
     "mentions": [
       {
         "id": 120,
-        "tag": "#PBOC",
+        "tag": "#Rate",
         "pinId": 425
       },
       {
         "id": 121,
-        "tag": "#Rate",
+        "tag": "#PBOC",
         "pinId": 425
       }
     ],
@@ -10207,43 +10170,6 @@
         "id": 123,
         "tag": "$AMZN",
         "pinId": 326
-      }
-    ],
-    "userId": 1
-  },
-  {
-    "id": 369,
-    "rootThread": false,
-    "title": "Initial jobless claims totaled 412,000, show surprise increase to highest level in a month",
-    "description": "<p class=\"paragraph\"> Initial jobless claims totaled 412,000 last week, an increase of 37,000 from the previous week and higher than the 360,000 estimate. </p><p class=\"paragraph\"> Essentially all the increase came from Pennsylvania and California. </p><p class=\"paragraph\"> A separate manufacturing report by the Philadelphia Fed was higher than expected, with inflation-related indexes at their highest levels in 40 years. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#JoblessClaims</chronohash> </p>",
-    "sourceDescription": "{\"time\":1687490201376,\"blocks\":[{\"id\":\"gyfa1o0N9L\",\"type\":\"paragraph\",\"data\":{\"text\":\"Initial jobless claims totaled 412,000 last week, an increase of 37,000 from the previous week and higher than the 360,000 estimate.\"}},{\"id\":\"mr4RUvcU5v\",\"type\":\"paragraph\",\"data\":{\"text\":\"Essentially all the increase came from Pennsylvania and California.\"}},{\"id\":\"X5QyJqNMsa\",\"type\":\"paragraph\",\"data\":{\"text\":\"A separate manufacturing report by the Philadelphia Fed was higher than expected, with inflation-related indexes at their highest levels in 40 years.\"}},{\"id\":\"CgBGsJhXlV\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#JoblessClaims</chronohash>\"}}],\"version\":\"2.26.5\"}",
-    "sourceUrl": "https://www.cnbc.com/2021/06/17/us-weekly-jobless-claims.html",
-    "utcStartDateTime": "2023-06-15T07:00:00.000Z",
-    "utcEndDateTime": "2023-06-16T07:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2023-06-23T03:16:49.473Z",
-    "utcDeletedDateTime": "2023-06-23T03:26:10.878Z",
-    "user": {
-      "id": 1,
-      "userName": "@ThePinGang"
-    },
-    "media": [
-      {
-        "id": 246,
-        "thumbName": "26a777aa-64df-454a-94f3-e0da331be5fe-chrono-lg.webp",
-        "thumbWidth": 750,
-        "thumbHeight": 422,
-        "originalUrl": "https://image.cnbcfm.com/api/v1/image/106898697-16239332751623933273-16818211239-1080pnbcnews.jpg?v=1623933274&w=750&h=422&vtcrop=y",
-        "originalWidth": 750,
-        "originalHeight": 422,
-        "type": "1"
-      }
-    ],
-    "mentions": [
-      {
-        "id": 124,
-        "tag": "#JoblessClaims",
-        "pinId": 369
       }
     ],
     "userId": 1
@@ -10510,12 +10436,12 @@
     "mentions": [
       {
         "id": 128,
-        "tag": "#rates",
+        "tag": "#inflation",
         "pinId": 357
       },
       {
         "id": 129,
-        "tag": "#inflation",
+        "tag": "#rates",
         "pinId": 357
       },
       {
@@ -10598,12 +10524,12 @@
     "mentions": [
       {
         "id": 132,
-        "tag": "#Strike",
+        "tag": "$BA",
         "pinId": 360
       },
       {
         "id": 133,
-        "tag": "$BA",
+        "tag": "#Strike",
         "pinId": 360
       },
       {
@@ -10655,27 +10581,27 @@
       },
       {
         "id": 137,
-        "tag": "#Quality",
+        "tag": "$TM",
         "pinId": 366
       },
       {
         "id": 138,
-        "tag": "$PSNY",
-        "pinId": 366
-      },
-      {
-        "id": 139,
         "tag": "$STLA",
         "pinId": 366
       },
       {
-        "id": 140,
+        "id": 139,
         "tag": "$F",
         "pinId": 366
       },
       {
+        "id": 140,
+        "tag": "#Quality",
+        "pinId": 366
+      },
+      {
         "id": 141,
-        "tag": "$TM",
+        "tag": "$PSNY",
         "pinId": 366
       }
     ],
@@ -10721,12 +10647,12 @@
     "mentions": [
       {
         "id": 142,
-        "tag": "$AMZN",
+        "tag": "#AI",
         "pinId": 367
       },
       {
         "id": 143,
-        "tag": "#AI",
+        "tag": "$AMZN",
         "pinId": 367
       }
     ],
@@ -10960,12 +10886,12 @@
     "mentions": [
       {
         "id": 148,
-        "tag": "#Bankruptcy",
+        "tag": "$RIDE",
         "pinId": 398
       },
       {
         "id": 149,
-        "tag": "$RIDE",
+        "tag": "#Bankruptcy",
         "pinId": 398
       }
     ],
@@ -10999,67 +10925,67 @@
     "locations": [
       {
         "id": 53,
-        "address": "Sevierville, Tennessee",
-        "order": 4,
-        "pinId": 401
-      },
-      {
-        "id": 54,
-        "address": "PHOENIX",
-        "order": 0,
-        "pinId": 401
-      },
-      {
-        "id": 55,
         "address": "Austin",
         "order": 1,
         "pinId": 401
       },
       {
-        "id": 56,
-        "address": "San Antonio",
-        "order": 2,
-        "pinId": 401
-      },
-      {
-        "id": 57,
+        "id": 54,
         "address": "Uvalde",
         "order": 3,
         "pinId": 401
       },
       {
-        "id": 58,
-        "address": "Oregon",
-        "order": 7,
-        "pinId": 401
-      },
-      {
-        "id": 59,
+        "id": 55,
         "address": "Idaho",
         "order": 6,
         "pinId": 401
       },
       {
-        "id": 60,
+        "id": 56,
+        "address": "Sevierville, Tennessee",
+        "order": 4,
+        "pinId": 401
+      },
+      {
+        "id": 57,
+        "address": "San Antonio",
+        "order": 2,
+        "pinId": 401
+      },
+      {
+        "id": 58,
         "address": "Montana",
         "order": 5,
+        "pinId": 401
+      },
+      {
+        "id": 59,
+        "address": "PHOENIX",
+        "order": 0,
+        "pinId": 401
+      },
+      {
+        "id": 60,
+        "address": "Oregon",
+        "order": 7,
         "pinId": 401
       }
     ],
     "mentions": [
       {
         "id": 150,
-        "tag": "#Crash",
+        "tag": "$ABNB",
         "pinId": 401
       },
       {
         "id": 151,
-        "tag": "#Housing",
+        "tag": "#Crash",
         "pinId": 401
       },
       {
         "id": 152,
-        "tag": "$ABNB",
+        "tag": "#Housing",
         "pinId": 401
       }
     ],
@@ -11138,7 +11064,7 @@
     },
     "media": [
       {
-        "id": 327,
+        "id": 261,
         "thumbName": "f50417b8-6427-4a8e-a2f9-2ff0bac9e6f4-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 500,
@@ -11150,7 +11076,7 @@
     ],
     "mentions": [
       {
-        "id": 214,
+        "id": 155,
         "tag": "#InitialJoblessClaims",
         "pinId": 428
       }
@@ -11175,7 +11101,7 @@
     },
     "media": [
       {
-        "id": 261,
+        "id": 262,
         "originalUrl": "https://twitter.com/lawhon_sam/status/1641848266810617856",
         "type": "2",
         "authorName": "Sam Lawhon",
@@ -11185,43 +11111,43 @@
     ],
     "mentions": [
       {
-        "id": 155,
-        "tag": "$AAPL",
-        "pinId": 403
-      },
-      {
         "id": 156,
-        "tag": "$MSFT",
-        "pinId": 403
-      },
-      {
-        "id": 157,
-        "tag": "$GOOGL",
-        "pinId": 403
-      },
-      {
-        "id": 158,
         "tag": "$AMZN",
         "pinId": 403
       },
       {
-        "id": 159,
-        "tag": "$SPY",
+        "id": 157,
+        "tag": "$AAPL",
         "pinId": 403
       },
       {
-        "id": 160,
+        "id": 158,
         "tag": "#Crash",
         "pinId": 403
       },
       {
-        "id": 161,
+        "id": 159,
         "tag": "$META",
         "pinId": 403
       },
       {
-        "id": 162,
+        "id": 160,
+        "tag": "$MSFT",
+        "pinId": 403
+      },
+      {
+        "id": 161,
         "tag": "$QQQ",
+        "pinId": 403
+      },
+      {
+        "id": 162,
+        "tag": "$SPY",
+        "pinId": 403
+      },
+      {
+        "id": 163,
+        "tag": "$GOOGL",
         "pinId": 403
       }
     ],
@@ -11245,7 +11171,7 @@
     },
     "media": [
       {
-        "id": 262,
+        "id": 263,
         "originalUrl": "https://twitter.com/patrick_saner/status/1668167467774902273",
         "type": "2",
         "authorName": "Patrick Saner",
@@ -11255,12 +11181,12 @@
     ],
     "mentions": [
       {
-        "id": 163,
+        "id": 164,
         "tag": "#Crash",
         "pinId": 416
       },
       {
-        "id": 164,
+        "id": 165,
         "tag": "#Liquidity",
         "pinId": 416
       }
@@ -11303,7 +11229,7 @@
     },
     "media": [
       {
-        "id": 263,
+        "id": 264,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1638924685193641986",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -11313,7 +11239,7 @@
     ],
     "mentions": [
       {
-        "id": 165,
+        "id": 166,
         "tag": "#Crash",
         "pinId": 224
       }
@@ -11347,7 +11273,7 @@
     },
     "media": [
       {
-        "id": 264,
+        "id": 265,
         "originalUrl": "//www.youtube.com/embed/EWZ9wjeoHcE",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/EWZ9wjeoHcE\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -11383,7 +11309,7 @@
     },
     "media": [
       {
-        "id": 265,
+        "id": 266,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1671876832361320454",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -11393,12 +11319,12 @@
     ],
     "mentions": [
       {
-        "id": 166,
+        "id": 167,
         "tag": "#Crash",
         "pinId": 359
       },
       {
-        "id": 167,
+        "id": 168,
         "tag": "#Unemployment",
         "pinId": 359
       }
@@ -11422,7 +11348,7 @@
     },
     "media": [
       {
-        "id": 328,
+        "id": 267,
         "thumbName": "97408b04-d2fb-463e-aba6-24c2fa1c7dff-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11434,13 +11360,13 @@
     ],
     "locations": [
       {
-        "id": 93,
+        "id": 62,
         "address": "Vancouver Port",
         "order": 0,
         "pinId": 429
       },
       {
-        "id": 94,
+        "id": 63,
         "address": "Prince Rupert Port",
         "order": 1,
         "pinId": 429
@@ -11448,7 +11374,7 @@
     ],
     "mentions": [
       {
-        "id": 215,
+        "id": 169,
         "tag": "#Strike",
         "pinId": 429
       }
@@ -11470,6 +11396,38 @@
       "userName": "@PrinceAnime"
     },
     "userId": 3
+  },
+  {
+    "id": 430,
+    "rootThread": false,
+    "title": "30 injured, 2 fatally, in mass shooting at Baltimore block party",
+    "description": "<figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/2abdf2d3-87b5-4898-9227-b2146d00b8c0-chrono-lg.webp\" alt=\"A \"mass shooting incident\" in Baltimore has left multiple victims in the Brooklyn Homes neighborhood in the southern district of the city, according to the Baltimore Police Department.\" height=\"558\" width=\"992\"><figcaption class=\"fig-cap\">A \"mass shooting incident\" in Baltimore has left multiple victims in the Brooklyn Homes neighborhood in the southern district of the city, according to the Baltimore Police Department.</figcaption></figure><p class=\"paragraph\"> At least 30 people were injured, two fatally, when a&nbsp;<a href=\"https://abcnews.go.com/US/gunviolence\">mass shooting erupted</a>&nbsp;early Sunday at a block party in Baltimore, according to police. </p><p class=\"paragraph\"> An 18-year-old girl was found dead at the scene from a gunshot wound and a 20-year-old man was taken to a hospital, where he died, authorities said. Three of the injured people were in critical condition, officials said. </p><p class=\"paragraph\"> The mass shooting unfolded around 12:30 a.m. in the Brooklyn Homes neighborhood in the southern district of the city. Acting Baltimore Police Commissioner Richard Worley said police officers rushed to the scene when numerous 911 callers reported shots being fired. </p><p class=\"paragraph\"> Worley said the barrage of gunfire broke out during a large block party at a housing development in the 800 block of Gretna Court. </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/5e891c6c-1d8c-4e00-a394-5a2dcf9628fe-chrono-lg.webp\" alt=\"Police is on the scene of a mass shooting incident at 800 block of Gretna Court in the Southern District, in Baltimore, on July 2, 2023.\" height=\"558\" width=\"992\"><figcaption class=\"fig-cap\">Police is on the scene of a mass shooting incident at 800 block of Gretna Court in the Southern District, in Baltimore, on July 2, 2023.</figcaption></figure><p class=\"paragraph\"> \"When officers got here, we located multiple victims suffering from gunshot wounds,\" Worley said. </p><p class=\"paragraph\"> No suspects have been arrested in the violence Baltimore Mayor Brandon Scott described as \"a reckless, cowardly act.\" </p><p class=\"paragraph\"> \"This morning, all of Baltimore is grieving the lives that were lost here, and our hearts are with those who are recovering as a result of this mass shooting,\" Scott said at a news conference near the crime scene. “We will not stop until we find those cowards who decided to just shoot dozens of people, causing people to lose their lives.\" </p><p class=\"paragraph\"> Worley said investigators are combing through security video in an attempt to identify suspects. He said a motive also remains under investigation. </p><p class=\"paragraph\"> Directing his comments to the assailants, Scott said, \"I want those responsible to hear me clearly, we will not stop until we find you. And, we will find you.\" </p><p class=\"paragraph\"> \"Until then, I hope that with every single breath you take, you think about the lives that you took and you think about the lives that you impacted here tonight.\" </p><p class=\"paragraph\"> Both the mayor and Worley asked for the community's help in finding the perpetrators. </p><p class=\"paragraph\"> \"If you saw anything or know anything, please call 911,\" Worley said. </p><p class=\"paragraph\"> Scott added, \"Treat this as if it were your family, how you would want to be treated if you were mourning, if this was your neighborhood, if this was an event in your community.\" </p><p class=\"paragraph\"> The names of the slain victims were not immediately identified. </p><p class=\"paragraph\"> Worley said nine people, including the young man who died, were taken to area hospitals by ambulance. Additionally, 20 other victims walked into hospital emergency rooms throughout the region seeking treatment for gunshot wounds, he said. </p><p class=\"paragraph\"> \"This is an extensive crime scene,\" Worley said. \"Our detectives will be here quite a while.\" </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#MassShooting</chronohash> </p>",
+    "sourceDescription": "{\"time\":1688316177847,\"blocks\":[{\"id\":\"oXZ-eTorMs\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/2abdf2d3-87b5-4898-9227-b2146d00b8c0-chrono-lg.webp\",\"attributes\":{\"width\":992,\"height\":558}},\"caption\":\"A \\\"mass shooting incident\\\" in Baltimore has left multiple victims in the Brooklyn Homes neighborhood in the southern district of the city, according to the Baltimore Police Department.\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"8XHWh-YzwU\",\"type\":\"paragraph\",\"data\":{\"text\":\"At least 30 people were injured, two fatally, when a&nbsp;<a href=\\\"https://abcnews.go.com/US/gunviolence\\\">mass shooting erupted</a>&nbsp;early Sunday at a block party in Baltimore, according to police.\"}},{\"id\":\"-zJ9Jb5R3V\",\"type\":\"paragraph\",\"data\":{\"text\":\"An 18-year-old girl was found dead at the scene from a gunshot wound and a 20-year-old man was taken to a hospital, where he died, authorities said. Three of the injured people were in critical condition, officials said.\"}},{\"id\":\"ueLUhLihPQ\",\"type\":\"paragraph\",\"data\":{\"text\":\"The mass shooting unfolded around 12:30 a.m. in the Brooklyn Homes neighborhood in the southern district of the city. Acting Baltimore Police Commissioner Richard Worley said police officers rushed to the scene when numerous 911 callers reported shots being fired.\"}},{\"id\":\"pcDBxd27wd\",\"type\":\"paragraph\",\"data\":{\"text\":\"Worley said the barrage of gunfire broke out during a large block party at a housing development in the 800 block of Gretna Court.\"}},{\"id\":\"746X3MY_zd\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/5e891c6c-1d8c-4e00-a394-5a2dcf9628fe-chrono-lg.webp\",\"attributes\":{\"width\":992,\"height\":558}},\"caption\":\"Police is on the scene of a mass shooting incident at 800 block of Gretna Court in the Southern District, in Baltimore, on July 2, 2023.\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"ZVR--ifDT4\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"When officers got here, we located multiple victims suffering from gunshot wounds,\\\" Worley said.\"}},{\"id\":\"PqTXSGmvfg\",\"type\":\"paragraph\",\"data\":{\"text\":\"No suspects have been arrested in the violence Baltimore Mayor Brandon Scott described as \\\"a reckless, cowardly act.\\\"\"}},{\"id\":\"WvRjldyglx\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"This morning, all of Baltimore is grieving the lives that were lost here, and our hearts are with those who are recovering as a result of this mass shooting,\\\" Scott said at a news conference near the crime scene. “We will not stop until we find those cowards who decided to just shoot dozens of people, causing people to lose their lives.\\\"\"}},{\"id\":\"Rn9r4-t8a6\",\"type\":\"paragraph\",\"data\":{\"text\":\"Worley said investigators are combing through security video in an attempt to identify suspects. He said a motive also remains under investigation.\"}},{\"id\":\"F0mXwfb5CN\",\"type\":\"paragraph\",\"data\":{\"text\":\"Directing his comments to the assailants, Scott said, \\\"I want those responsible to hear me clearly, we will not stop until we find you. And, we will find you.\\\"\"}},{\"id\":\"GBv87RP_ip\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"Until then, I hope that with every single breath you take, you think about the lives that you took and you think about the lives that you impacted here tonight.\\\"\"}},{\"id\":\"k2Il4_Cqgj\",\"type\":\"paragraph\",\"data\":{\"text\":\"Both the mayor and Worley asked for the community's help in finding the perpetrators.\"}},{\"id\":\"2ulNAo3mR3\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"If you saw anything or know anything, please call 911,\\\" Worley said.\"}},{\"id\":\"ZKAhBGGdw_\",\"type\":\"paragraph\",\"data\":{\"text\":\"Scott added, \\\"Treat this as if it were your family, how you would want to be treated if you were mourning, if this was your neighborhood, if this was an event in your community.\\\"\"}},{\"id\":\"R02R48kyZU\",\"type\":\"paragraph\",\"data\":{\"text\":\"The names of the slain victims were not immediately identified.\"}},{\"id\":\"18ydM27jSQ\",\"type\":\"paragraph\",\"data\":{\"text\":\"Worley said nine people, including the young man who died, were taken to area hospitals by ambulance. Additionally, 20 other victims walked into hospital emergency rooms throughout the region seeking treatment for gunshot wounds, he said.\"}},{\"id\":\"KQFa-wnPsb\",\"type\":\"paragraph\",\"data\":{\"text\":\"\\\"This is an extensive crime scene,\\\" Worley said. \\\"Our detectives will be here quite a while.\\\"\"}},{\"id\":\"Ae6OZv7uW-\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#MassShooting</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://abcnews.go.com/US/mass-shooting-incident-baltimore-police-confirm-multiple-victims/story",
+    "utcStartDateTime": "2023-07-02T07:30:04.000Z",
+    "utcEndDateTime": "2023-07-02T07:30:04.000Z",
+    "allDay": false,
+    "utcCreatedDateTime": "2023-07-02T16:43:01.294Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "locations": [
+      {
+        "id": 95,
+        "address": "800 block of Gretna Court, Baltimore",
+        "order": 0,
+        "pinId": 430
+      }
+    ],
+    "mentions": [
+      {
+        "id": 216,
+        "tag": "#MassShooting",
+        "pinId": 430
+      }
+    ],
+    "userId": 1
   },
   {
     "id": 313,
@@ -11522,7 +11480,7 @@
     },
     "media": [
       {
-        "id": 266,
+        "id": 268,
         "thumbName": "a8627482-e7e5-4614-8749-99feaf5cf68b-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11534,7 +11492,7 @@
     ],
     "locations": [
       {
-        "id": 62,
+        "id": 64,
         "address": "USA",
         "order": 0,
         "pinId": 345
@@ -11559,7 +11517,7 @@
     },
     "media": [
       {
-        "id": 267,
+        "id": 269,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1670884043531976704",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -11569,7 +11527,7 @@
     ],
     "mentions": [
       {
-        "id": 168,
+        "id": 170,
         "tag": "#rates",
         "pinId": 331
       }
@@ -11594,7 +11552,7 @@
     },
     "media": [
       {
-        "id": 268,
+        "id": 270,
         "originalUrl": "//www.youtube.com/embed/okFSR8CCOPY",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/okFSR8CCOPY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -11619,7 +11577,7 @@
     },
     "media": [
       {
-        "id": 269,
+        "id": 271,
         "originalUrl": "//www.youtube.com/embed/CDVH_JJIRWI",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/CDVH_JJIRWI\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -11627,15 +11585,15 @@
     ],
     "locations": [
       {
-        "id": 63,
-        "address": "South Asia Subregion",
-        "order": 0,
+        "id": 65,
+        "address": "Egypt Country",
+        "order": 1,
         "pinId": 148
       },
       {
-        "id": 64,
-        "address": "Egypt Country",
-        "order": 1,
+        "id": 66,
+        "address": "South Asia Subregion",
+        "order": 0,
         "pinId": 148
       }
     ],
@@ -11659,7 +11617,7 @@
     },
     "media": [
       {
-        "id": 270,
+        "id": 272,
         "thumbName": "9297e0e8-ca76-441c-a838-5c9af85aeb9e-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11671,7 +11629,7 @@
     ],
     "mentions": [
       {
-        "id": 169,
+        "id": 171,
         "tag": "$TSLA",
         "pinId": 193
       }
@@ -11697,7 +11655,7 @@
     },
     "media": [
       {
-        "id": 271,
+        "id": 273,
         "originalUrl": "//www.youtube.com/embed/Dz_8n9EcslU",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Dz_8n9EcslU\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -11705,7 +11663,7 @@
     ],
     "mentions": [
       {
-        "id": 170,
+        "id": 172,
         "tag": "$AAPL",
         "pinId": 392
       }
@@ -11730,7 +11688,7 @@
     },
     "media": [
       {
-        "id": 272,
+        "id": 274,
         "thumbName": "570e934d-30af-4210-baac-3eca0e7aef4d-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11742,7 +11700,7 @@
     ],
     "mentions": [
       {
-        "id": 171,
+        "id": 173,
         "tag": "$AAPL",
         "pinId": 393
       }
@@ -11766,7 +11724,7 @@
     },
     "media": [
       {
-        "id": 273,
+        "id": 275,
         "originalUrl": "//www.youtube.com/embed/UZ6eFEjFfJ0",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/UZ6eFEjFfJ0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -11803,7 +11761,7 @@
     },
     "media": [
       {
-        "id": 274,
+        "id": 276,
         "originalUrl": "//www.youtube.com/embed/5AKl_cEB26c",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/5AKl_cEB26c\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -11811,7 +11769,7 @@
     ],
     "mentions": [
       {
-        "id": 172,
+        "id": 174,
         "tag": "$META",
         "pinId": 239
       }
@@ -11836,7 +11794,7 @@
     },
     "mentions": [
       {
-        "id": 173,
+        "id": 175,
         "tag": "$TSLA",
         "pinId": 206
       }
@@ -11870,7 +11828,7 @@
     },
     "media": [
       {
-        "id": 275,
+        "id": 277,
         "originalUrl": "https://twitter.com/gamer__capital/status/1663987579962945536",
         "type": "2",
         "authorName": "gamer capital ???",
@@ -11880,12 +11838,12 @@
     ],
     "mentions": [
       {
-        "id": 174,
+        "id": 176,
         "tag": "#Crash",
         "pinId": 230
       },
       {
-        "id": 175,
+        "id": 177,
         "tag": "#studentloans",
         "pinId": 230
       }
@@ -11917,7 +11875,7 @@
     },
     "media": [
       {
-        "id": 276,
+        "id": 278,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1669416501747564569",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -11927,7 +11885,7 @@
     ],
     "mentions": [
       {
-        "id": 176,
+        "id": 178,
         "tag": "#XDate",
         "pinId": 308
       }
@@ -11954,7 +11912,7 @@
     },
     "media": [
       {
-        "id": 277,
+        "id": 279,
         "thumbName": "1636b6d8-591f-4f8f-82f7-973737459bf0-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -11966,12 +11924,12 @@
     ],
     "mentions": [
       {
-        "id": 177,
+        "id": 179,
         "tag": "#StudentLoan",
         "pinId": 343
       },
       {
-        "id": 178,
+        "id": 180,
         "tag": "#Crash",
         "pinId": 343
       }
@@ -11998,7 +11956,7 @@
     },
     "media": [
       {
-        "id": 278,
+        "id": 280,
         "thumbName": "ed30a2c1-8f8d-4394-aa81-c8378e093f9f-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -12039,7 +11997,7 @@
     },
     "media": [
       {
-        "id": 279,
+        "id": 281,
         "originalUrl": "//www.youtube.com/embed/Q2kN6LONlWw",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Q2kN6LONlWw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -12047,7 +12005,7 @@
     ],
     "locations": [
       {
-        "id": 65,
+        "id": 67,
         "address": "MSG Sphere, Las Vegas",
         "order": 0,
         "pinId": 149
@@ -12055,7 +12013,7 @@
     ],
     "mentions": [
       {
-        "id": 179,
+        "id": 181,
         "tag": "$MSGS",
         "pinId": 149
       }
@@ -12080,7 +12038,7 @@
     },
     "media": [
       {
-        "id": 280,
+        "id": 282,
         "originalUrl": "//www.youtube.com/embed/e-FuDjteXxs",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/e-FuDjteXxs\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -12123,7 +12081,7 @@
     },
     "media": [
       {
-        "id": 281,
+        "id": 283,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1669043173492940814",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -12133,7 +12091,7 @@
     ],
     "mentions": [
       {
-        "id": 180,
+        "id": 182,
         "tag": "#rates",
         "pinId": 295
       }
@@ -12159,7 +12117,7 @@
     },
     "media": [
       {
-        "id": 282,
+        "id": 284,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1669242180433592322",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -12169,12 +12127,12 @@
     ],
     "mentions": [
       {
-        "id": 181,
+        "id": 183,
         "tag": "#Crash",
         "pinId": 306
       },
       {
-        "id": 182,
+        "id": 184,
         "tag": "#UnemploymentRate",
         "pinId": 306
       }
@@ -12198,7 +12156,7 @@
     },
     "media": [
       {
-        "id": 283,
+        "id": 285,
         "originalUrl": "https://twitter.com/FinanceLancelot/status/1669204050217246720",
         "type": "2",
         "authorName": "Financelot",
@@ -12208,7 +12166,7 @@
     ],
     "mentions": [
       {
-        "id": 183,
+        "id": 185,
         "tag": "#Liquidity",
         "pinId": 309
       }
@@ -12234,12 +12192,12 @@
     },
     "mentions": [
       {
-        "id": 184,
+        "id": 186,
         "tag": "#TelevisionCategory",
         "pinId": 341
       },
       {
-        "id": 185,
+        "id": 187,
         "tag": "#TokyoAnimeAward",
         "pinId": 341
       }
@@ -12265,7 +12223,7 @@
     },
     "media": [
       {
-        "id": 284,
+        "id": 286,
         "thumbName": "9c08c3a1-9b74-4e40-9c3e-8953037a4adb-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 562,
@@ -12296,7 +12254,7 @@
     },
     "media": [
       {
-        "id": 285,
+        "id": 287,
         "thumbName": "54e3185a-3f81-4573-9f0c-1ed374ca3c77-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 523,
@@ -12308,36 +12266,36 @@
     ],
     "locations": [
       {
-        "id": 66,
-        "address": "Marcellus and Utica shale sites",
-        "order": 1,
+        "id": 68,
+        "address": "Mountain Valley natural gas pipeline Southern  Virginia",
+        "order": 0,
         "pinId": 376
       },
       {
-        "id": 67,
-        "address": "Mountain Valley natural gas pipeline Southern  Virginia",
-        "order": 0,
+        "id": 69,
+        "address": "Marcellus and Utica shale sites",
+        "order": 1,
         "pinId": 376
       }
     ],
     "mentions": [
       {
-        "id": 186,
+        "id": 188,
         "tag": "$NEE",
         "pinId": 376
       },
       {
-        "id": 187,
-        "tag": "$ED",
-        "pinId": 376
-      },
-      {
-        "id": 188,
+        "id": 189,
         "tag": "$ETRN",
         "pinId": 376
       },
       {
-        "id": 189,
+        "id": 190,
+        "tag": "$ED",
+        "pinId": 376
+      },
+      {
+        "id": 191,
         "tag": "#Pipeliine",
         "pinId": 376
       }
@@ -12362,7 +12320,7 @@
     },
     "media": [
       {
-        "id": 286,
+        "id": 288,
         "originalUrl": "//www.youtube.com/embed/km3MVZ8HZeY",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/km3MVZ8HZeY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -12386,7 +12344,7 @@
     },
     "media": [
       {
-        "id": 287,
+        "id": 289,
         "thumbName": "841b2539-69ee-46df-b177-cc70bd000a99-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -12398,17 +12356,17 @@
     ],
     "mentions": [
       {
-        "id": 190,
+        "id": 192,
         "tag": "#AI",
         "pinId": 289
       },
       {
-        "id": 191,
+        "id": 193,
         "tag": "$AMD",
         "pinId": 289
       },
       {
-        "id": 192,
+        "id": 194,
         "tag": "#GPU",
         "pinId": 289
       }
@@ -12433,7 +12391,7 @@
     },
     "media": [
       {
-        "id": 288,
+        "id": 290,
         "originalUrl": "https://twitter.com/PauloMacro/status/1670148000780255233",
         "type": "2",
         "authorName": "Paulo Macro",
@@ -12443,13 +12401,13 @@
     ],
     "locations": [
       {
-        "id": 68,
+        "id": 70,
         "address": "United Sates",
         "order": 0,
         "pinId": 342
       },
       {
-        "id": 69,
+        "id": 71,
         "address": "Japan",
         "order": 1,
         "pinId": 342
@@ -12457,12 +12415,12 @@
     ],
     "mentions": [
       {
-        "id": 193,
+        "id": 195,
         "tag": "#Crash",
         "pinId": 342
       },
       {
-        "id": 194,
+        "id": 196,
         "tag": "#CarryTrade",
         "pinId": 342
       }
@@ -12487,7 +12445,7 @@
     },
     "media": [
       {
-        "id": 289,
+        "id": 291,
         "originalUrl": "//www.youtube.com/embed/N7OVagiblPo",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/N7OVagiblPo\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -12524,7 +12482,7 @@
     },
     "locations": [
       {
-        "id": 70,
+        "id": 72,
         "address": "Casa Grande, Arizona",
         "order": 0,
         "pinId": 222
@@ -12532,7 +12490,7 @@
     ],
     "mentions": [
       {
-        "id": 195,
+        "id": 197,
         "tag": "$LCID",
         "pinId": 222
       }
@@ -12557,7 +12515,7 @@
     },
     "media": [
       {
-        "id": 290,
+        "id": 292,
         "thumbName": "322b2670-ce5d-4439-8185-7386ac18dbbe-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 523,
@@ -12597,7 +12555,7 @@
     },
     "media": [
       {
-        "id": 291,
+        "id": 293,
         "thumbName": "e7f718cc-9190-4eed-a8df-270ec8c9d66c-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -12609,7 +12567,7 @@
     ],
     "locations": [
       {
-        "id": 71,
+        "id": 73,
         "address": "Oakville Assembly Plant in Ontario, Canada",
         "order": 0,
         "pinId": 195
@@ -12636,7 +12594,7 @@
     },
     "media": [
       {
-        "id": 292,
+        "id": 294,
         "thumbName": "4744b1cd-fc70-430d-a3a2-df642e1aea79-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 503,
@@ -12648,7 +12606,7 @@
     ],
     "mentions": [
       {
-        "id": 196,
+        "id": 198,
         "tag": "$VWAGY",
         "pinId": 212
       }
@@ -12682,7 +12640,7 @@
     },
     "media": [
       {
-        "id": 293,
+        "id": 295,
         "thumbName": "d2d8fc73-b718-4495-8db8-aefecfd22feb-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -12694,7 +12652,7 @@
     ],
     "locations": [
       {
-        "id": 72,
+        "id": 74,
         "address": "Tech Zity Vilnius, Lithuania",
         "order": 0,
         "pinId": 375
@@ -12719,7 +12677,7 @@
     },
     "media": [
       {
-        "id": 294,
+        "id": 296,
         "thumbName": "1d8eacd1-1268-41d0-992c-bee0066fa60e-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -12731,7 +12689,7 @@
     ],
     "locations": [
       {
-        "id": 73,
+        "id": 75,
         "address": "USA",
         "order": 0,
         "pinId": 386
@@ -12758,7 +12716,7 @@
     },
     "media": [
       {
-        "id": 295,
+        "id": 297,
         "thumbName": "1870e18c-c013-4e68-8821-0ed0881d9d2d-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 400,
@@ -12770,7 +12728,7 @@
     ],
     "mentions": [
       {
-        "id": 197,
+        "id": 199,
         "tag": "$BA",
         "pinId": 151
       }
@@ -12795,7 +12753,7 @@
     },
     "media": [
       {
-        "id": 296,
+        "id": 298,
         "thumbName": "5ae38366-d033-4972-bc04-48f4d4b6b485-chrono-lg.webp",
         "thumbWidth": 986,
         "thumbHeight": 553,
@@ -12807,7 +12765,7 @@
     ],
     "locations": [
       {
-        "id": 74,
+        "id": 76,
         "address": "West of Colusa in the Sacramento Valley, California",
         "order": 0,
         "pinId": 192
@@ -12833,7 +12791,7 @@
     },
     "media": [
       {
-        "id": 297,
+        "id": 299,
         "thumbName": "10240ef3-a8b9-4c73-8d53-53b182f57374-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -12845,7 +12803,7 @@
     ],
     "locations": [
       {
-        "id": 75,
+        "id": 77,
         "address": "UC San Diego",
         "order": 0,
         "pinId": 209
@@ -12871,7 +12829,7 @@
     },
     "media": [
       {
-        "id": 298,
+        "id": 300,
         "thumbName": "512b7eb4-5f06-4b87-9b31-c70d51f2df46-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 471,
@@ -12902,7 +12860,7 @@
     },
     "locations": [
       {
-        "id": 76,
+        "id": 78,
         "address": "Gujarat, India. Micron",
         "order": 0,
         "pinId": 400
@@ -12910,7 +12868,7 @@
     ],
     "mentions": [
       {
-        "id": 198,
+        "id": 200,
         "tag": "$MU",
         "pinId": 400
       }
@@ -12934,7 +12892,7 @@
     },
     "media": [
       {
-        "id": 299,
+        "id": 301,
         "thumbName": "9d3fdd45-fbda-4b7c-b649-1d7c72016c63-chrono-lg.webp",
         "thumbWidth": 768,
         "thumbHeight": 545,
@@ -12963,7 +12921,7 @@
     },
     "media": [
       {
-        "id": 300,
+        "id": 302,
         "thumbName": "58441b39-2150-45ad-8f12-b36ab5f90736-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -12975,7 +12933,7 @@
     ],
     "locations": [
       {
-        "id": 77,
+        "id": 79,
         "address": "Frito-Lay’s research and development headquarters, Texas",
         "order": 0,
         "pinId": 194
@@ -12999,7 +12957,7 @@
     },
     "media": [
       {
-        "id": 301,
+        "id": 303,
         "thumbName": "3ddd9850-2551-4ade-b842-2099e75caf6c-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 308,
@@ -13029,7 +12987,7 @@
     },
     "mentions": [
       {
-        "id": 199,
+        "id": 201,
         "tag": "$INTC",
         "pinId": 399
       }
@@ -13054,7 +13012,7 @@
     },
     "media": [
       {
-        "id": 302,
+        "id": 304,
         "thumbName": "a40beb47-cb9a-43c6-9a0e-d1dd0f31ec9b-chrono-lg.webp",
         "thumbWidth": 591,
         "thumbHeight": 308,
@@ -13066,7 +13024,7 @@
     ],
     "locations": [
       {
-        "id": 78,
+        "id": 80,
         "address": "AISIN North Carolina Corporation (ANC) facility in Durham, North Carolina",
         "order": 0,
         "pinId": 321
@@ -13093,7 +13051,7 @@
     },
     "media": [
       {
-        "id": 303,
+        "id": 305,
         "thumbName": "17d63629-02e3-4d3f-be38-c9001a87421d-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -13105,7 +13063,7 @@
     ],
     "locations": [
       {
-        "id": 79,
+        "id": 81,
         "address": "Neste  Porvoo refinery in Finland",
         "order": 0,
         "pinId": 322
@@ -13113,7 +13071,7 @@
     ],
     "mentions": [
       {
-        "id": 200,
+        "id": 202,
         "tag": "$NESTE.HE",
         "pinId": 322
       }
@@ -13138,7 +13096,7 @@
     },
     "locations": [
       {
-        "id": 80,
+        "id": 82,
         "address": "Apple Infinite Loop, Cupertino, California",
         "order": 0,
         "pinId": 390
@@ -13146,7 +13104,7 @@
     ],
     "mentions": [
       {
-        "id": 201,
+        "id": 203,
         "tag": "$APPL",
         "pinId": 390
       }
@@ -13171,7 +13129,7 @@
     },
     "media": [
       {
-        "id": 304,
+        "id": 306,
         "thumbName": "d1414c24-6dd4-46a1-82fa-359a46aa1e17-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 562,
@@ -13183,7 +13141,7 @@
     ],
     "mentions": [
       {
-        "id": 202,
+        "id": 204,
         "tag": "$AAPL",
         "pinId": 388
       }
@@ -13207,7 +13165,7 @@
     },
     "media": [
       {
-        "id": 305,
+        "id": 307,
         "thumbName": "73a872d0-5698-4599-b796-64861526dbc6-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 562,
@@ -13219,7 +13177,7 @@
     ],
     "mentions": [
       {
-        "id": 203,
+        "id": 205,
         "tag": "$AAPL",
         "pinId": 389
       }
@@ -13245,7 +13203,7 @@
     },
     "media": [
       {
-        "id": 306,
+        "id": 308,
         "thumbName": "d2e483e6-7652-467e-a87e-ceecf0dc0537-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -13257,7 +13215,7 @@
     ],
     "locations": [
       {
-        "id": 81,
+        "id": 83,
         "address": "Hudson Yards, New York",
         "order": 0,
         "pinId": 150
@@ -13284,7 +13242,7 @@
     },
     "media": [
       {
-        "id": 307,
+        "id": 309,
         "thumbName": "6535282f-7932-4bdf-8f0e-51ab0f6d2578-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -13296,7 +13254,7 @@
     ],
     "mentions": [
       {
-        "id": 204,
+        "id": 206,
         "tag": "$RIVN",
         "pinId": 216
       }
@@ -13345,7 +13303,7 @@
     },
     "media": [
       {
-        "id": 308,
+        "id": 310,
         "thumbName": "f37f0f24-e347-4e0a-b805-d1a1a30dbd14-chrono-lg.webp",
         "thumbWidth": 743,
         "thumbHeight": 430,
@@ -13357,7 +13315,7 @@
     ],
     "locations": [
       {
-        "id": 82,
+        "id": 84,
         "address": "Guangdong Province",
         "order": 0,
         "pinId": 225
@@ -13383,7 +13341,7 @@
     },
     "media": [
       {
-        "id": 309,
+        "id": 311,
         "thumbName": "436caa0c-eb19-4629-8b0d-3941fc270377-chrono-lg.webp",
         "thumbWidth": 980,
         "thumbHeight": 467,
@@ -13395,12 +13353,12 @@
     ],
     "mentions": [
       {
-        "id": 205,
+        "id": 207,
         "tag": "#Chips",
         "pinId": 423
       },
       {
-        "id": 206,
+        "id": 208,
         "tag": "$EWY",
         "pinId": 423
       }
@@ -13425,7 +13383,7 @@
     },
     "media": [
       {
-        "id": 310,
+        "id": 312,
         "thumbName": "49b5fdba-9013-4950-863c-e88b8c3f3bcb-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 500,
@@ -13437,7 +13395,7 @@
     ],
     "mentions": [
       {
-        "id": 207,
+        "id": 209,
         "tag": "$MBGAF",
         "pinId": 221
       }
@@ -13470,7 +13428,7 @@
     },
     "locations": [
       {
-        "id": 83,
+        "id": 85,
         "address": "Taiwan",
         "order": 0,
         "pinId": 207
@@ -13497,7 +13455,7 @@
     },
     "locations": [
       {
-        "id": 84,
+        "id": 86,
         "address": "Apple Valley",
         "order": 0,
         "pinId": 215
@@ -13523,7 +13481,7 @@
     },
     "media": [
       {
-        "id": 311,
+        "id": 313,
         "thumbName": "a4cf2cb9-1df7-4058-89f4-11000af5cd5d-chrono-lg.webp",
         "thumbWidth": 908,
         "thumbHeight": 474,
@@ -13552,7 +13510,7 @@
     },
     "media": [
       {
-        "id": 312,
+        "id": 314,
         "thumbName": "73f7248b-3954-4aa5-aae1-e3463be1f269-chrono-lg.webp",
         "thumbWidth": 768,
         "thumbHeight": 545,
@@ -13581,7 +13539,7 @@
     },
     "media": [
       {
-        "id": 313,
+        "id": 315,
         "thumbName": "bf50f483-f7d7-4ca8-bc7e-2e3e25b773b5-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -13612,7 +13570,7 @@
     },
     "media": [
       {
-        "id": 314,
+        "id": 316,
         "thumbName": "f5556fd5-e7b8-499f-85f4-c5c3935e1094-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 667,
@@ -13623,18 +13581,6 @@
       }
     ],
     "locations": [
-      {
-        "id": 85,
-        "address": "Giheung",
-        "order": 0,
-        "pinId": 424
-      },
-      {
-        "id": 86,
-        "address": "Pyeongtaek",
-        "order": 2,
-        "pinId": 424
-      },
       {
         "id": 87,
         "address": "Taylor, USA",
@@ -13652,17 +13598,29 @@
         "address": "Austin, USA",
         "order": 3,
         "pinId": 424
+      },
+      {
+        "id": 90,
+        "address": "Giheung",
+        "order": 0,
+        "pinId": 424
+      },
+      {
+        "id": 91,
+        "address": "Pyeongtaek",
+        "order": 2,
+        "pinId": 424
       }
     ],
     "mentions": [
       {
-        "id": 208,
-        "tag": "#Chips",
+        "id": 210,
+        "tag": "$EWY",
         "pinId": 424
       },
       {
-        "id": 209,
-        "tag": "$EWY",
+        "id": 211,
+        "tag": "#Chips",
         "pinId": 424
       }
     ],
@@ -13683,7 +13641,7 @@
     },
     "media": [
       {
-        "id": 315,
+        "id": 317,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1640619037251043328",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -13693,7 +13651,7 @@
     ],
     "locations": [
       {
-        "id": 90,
+        "id": 92,
         "address": "Europe",
         "order": 0,
         "pinId": 223
@@ -13719,7 +13677,7 @@
     },
     "mentions": [
       {
-        "id": 210,
+        "id": 212,
         "tag": "#energy",
         "pinId": 155
       }
@@ -13742,7 +13700,7 @@
     },
     "media": [
       {
-        "id": 316,
+        "id": 318,
         "thumbName": "70cb68bb-e894-41e9-a3b8-943c8257ec69-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 400,
@@ -13772,7 +13730,7 @@
     },
     "media": [
       {
-        "id": 317,
+        "id": 319,
         "thumbName": "8c5669d4-d0ff-4a13-a8c4-faf8f5ab7a08-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -13784,7 +13742,7 @@
     ],
     "locations": [
       {
-        "id": 91,
+        "id": 93,
         "address": "Merced, CA",
         "order": 0,
         "pinId": 219
@@ -13817,7 +13775,7 @@
     },
     "media": [
       {
-        "id": 318,
+        "id": 320,
         "thumbName": "bf5d33da-73c4-4feb-b47d-a18c70c47179-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 562,
@@ -13829,7 +13787,7 @@
     ],
     "mentions": [
       {
-        "id": 211,
+        "id": 213,
         "tag": "$AAPL",
         "pinId": 387
       }
@@ -13855,7 +13813,7 @@
     },
     "media": [
       {
-        "id": 319,
+        "id": 321,
         "thumbName": "5c20b877-d87f-4773-be83-7bafedfe5c7d-chrono-lg.webp",
         "thumbWidth": 900,
         "thumbHeight": 400,
@@ -13885,7 +13843,7 @@
     },
     "media": [
       {
-        "id": 320,
+        "id": 322,
         "thumbName": "4b349fb3-9434-4c61-be29-275a1f940ffe-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -13897,7 +13855,7 @@
     ],
     "mentions": [
       {
-        "id": 212,
+        "id": 214,
         "tag": "#SocialSecurity",
         "pinId": 404
       }
@@ -13921,7 +13879,7 @@
     },
     "media": [
       {
-        "id": 321,
+        "id": 323,
         "thumbName": "994a389a-f825-4822-bfbe-53b1e279b285-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 523,
@@ -13933,7 +13891,7 @@
     ],
     "locations": [
       {
-        "id": 92,
+        "id": 94,
         "address": "China",
         "order": 0,
         "pinId": 330
@@ -13957,7 +13915,7 @@
     },
     "media": [
       {
-        "id": 322,
+        "id": 324,
         "thumbName": "7cc700a4-3b9f-41c9-aee7-4d04239f8736-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -13993,7 +13951,7 @@
     },
     "media": [
       {
-        "id": 323,
+        "id": 325,
         "thumbName": "44d2270e-f5b2-4116-85bd-23620693c371-chrono-lg.webp",
         "thumbWidth": 150,
         "thumbHeight": 133,
@@ -14022,7 +13980,7 @@
     },
     "media": [
       {
-        "id": 324,
+        "id": 326,
         "originalUrl": "https://twitter.com/BurggrabenH/status/1657432126076141570",
         "type": "2",
         "authorName": "Alexander Stahel ????",
@@ -14050,7 +14008,7 @@
     },
     "media": [
       {
-        "id": 325,
+        "id": 327,
         "originalUrl": "https://twitter.com/CyberMagazineX/status/890816308144558080",
         "type": "2",
         "authorName": "MagX(??????????X)",
@@ -14060,7 +14018,7 @@
     ],
     "mentions": [
       {
-        "id": 213,
+        "id": 215,
         "tag": "#AI",
         "pinId": 248
       }
@@ -14083,7 +14041,7 @@
     },
     "media": [
       {
-        "id": 326,
+        "id": 328,
         "thumbName": "96a0f58b-ba43-4ae8-861f-f3f05b74305a-chrono-lg.webp",
         "thumbWidth": 286,
         "thumbHeight": 400,
