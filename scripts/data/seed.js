@@ -7,6 +7,7 @@
 import {
   MediumType,
   User,
+  FollowUsers,
   FullPins,
   DateTime,
   DateTimes
@@ -30,6 +31,7 @@ import * as log from '../../server/util/log';
 let cp,
   Request,
   userFilePath,
+  followUserFilePath,
   pinFilePath,
   aphelionFilePath,
   solsticeFilePath,
@@ -42,6 +44,7 @@ module.exports.setup = function (opt) {
   cp = opt.cp;
   Request = cp.Request;
   userFilePath = opt.userfile;
+  followUserFilePath = opt.followuserfile;
   pinFilePath = opt.pinfile;
   aphelionFilePath = opt.aphelionfile;
   solsticeFilePath = opt.solsticefile;
@@ -163,6 +166,15 @@ module.exports.seedDB = function () {
       });
       return Promise.all(userPromises);
     })
+    .then(() => {
+      // Create FollowUsers
+      let followUserJSONObjs = JSON.parse(fs.readFileSync(followUserFilePath, 'utf8'));
+      let followUsers = new FollowUsers(followUserJSONObjs);
+      return followUsers.save()
+        .catch(error => {
+          log.error('FollowUsers Save Error', JSON.stringify(error));
+        });
+    })
     .then(res => {
       const mediumTypePromises = defaultMediumTypes.map(mt => {
         const mediumType = new MediumType(mt);
@@ -174,9 +186,7 @@ module.exports.seedDB = function () {
           throw e;
         });
     })
-    .then(({
-      //user
-    }) => {
+    .then(() => {
       // Create Pins
       let pinsJSONObjs = JSON.parse(fs.readFileSync(pinFilePath, 'utf8'));
       let pins = new FullPins(pinsJSONObjs);

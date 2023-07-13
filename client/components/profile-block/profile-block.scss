@@ -1,0 +1,75 @@
+.profile-block {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    background-color: black;
+    padding: 15px;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(255, 255, 255, .1);
+
+    .user-name {
+        color: white;
+        font-size: 16px;
+    }
+
+    .about {
+        color: white;
+    }
+
+    .follow-block {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            font-weight: bold;
+            background-color: black;
+            color: white;
+
+            &.following {
+                width: 91px;
+
+                &::after {
+                    content: 'Following';
+                }
+
+                &:hover {
+                    border-color: red;
+                    background: black !important;
+
+                    &::after {
+                        content: 'Unfollow';
+                        color: red;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .count-text {
+        font-weight: bold;
+    }
+
+    .missing-bio {
+        color: gray;
+        font-style: italic;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .following-count,
+    .follower-count {
+        margin-right: 8px;
+        display: inline-block;
+    }
+
+    div+div {
+        margin-top: 15px;
+    }
+}

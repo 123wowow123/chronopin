@@ -5,6 +5,8 @@ https://www.bing.com/indexnow#implementation
 https://blogs.bing.com/webmaster/february-2023/The-Importance-of-Setting-the-lastmod-Tag-in-Your-Sitemap
 Add more descriptive content inside your <title> tag. Make it unique, and relevant to best describe the page content. Use our Keyword Research Tool to find relevant keyword ideas for title tag.
 
+Mastodon, Hive Social, Blue - compitition
+
 
 Before Usable Bug:
 
@@ -16,6 +18,11 @@ countdown on pin page
 Bugs:
 scrolling 
 https://ui-router.github.io/ng1/docs/0.3.1/index.html#/api/ui.router.state.$uiViewScroll
+
+
+$3333.HK
+https://www.chronopin.com/pin/443
+
 
 pins loaded from infinit scroll needs to be in memory so that navigating back to home will have proper scroll position ++
 create/edit/respond page needs to have auth guard +
@@ -30,6 +37,13 @@ https://www.chronopin.com/settings should be behind login
 
 
 animated gif height issue it's streched out
+
+
+sentiment score
+scrollbar sentiment heatmap
+topical tag and sectioning
+Pro tip field
+small pins mode
 
 
 TD:
@@ -65,8 +79,11 @@ can suggest airbnb and flights referals when map data is available
 Affliate buy link with price scrape +
 Buy keywords in content that will turn into link where it will show map and nearest location when you can buy product.
 Pin dollar tag should link to referal page in new tab
+verified account - subscribe to get verification checkmark $1.99/mo
 
 Features:
+Not sure date add need community input
+https://www.chronopin.com/pin/439
 Undo feature of create description box
 small pin card mode use examplable bubble in today button
 Main timeline should remain in background for speedup

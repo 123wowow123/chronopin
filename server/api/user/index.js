@@ -2,9 +2,17 @@
 
 import {Router} from 'express';
 import * as controller from './user.controller';
+import * as followController from './user.follow.controller';
 import * as auth from '../../auth/auth.service';
 
 const router = new Router();
+
+// Profile use userName as id
+router.get('/profile', auth.tryGetUser(), controller.profile);
+
+// Create Follow association
+router.post('/follow', auth.isAuthenticated(), followController.create); // afterFollow
+router.post('/unfollow', auth.isAuthenticated(), followController.destroy); // afterUnfollow
 
 router.get('/', auth.hasRole('admin'), controller.index);
 router.delete('/:id', auth.hasRole('admin'), controller.destroy);

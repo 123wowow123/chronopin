@@ -23,6 +23,8 @@ module.exports.setup = function (connectionPool) {
   require('./Circle').setup(cp);
   require('./UserCircle').setup(cp);
   require('./PinCircle').setup(cp);
+  require('./FollowUser').setup(cp);
+  require('./View').setup(cp);
 
   require('./PinView').setup(cp);
   require('./PinBaseView').setup(cp);
@@ -46,6 +48,8 @@ module.exports.createPinMention = require('./PinMention').create;
 module.exports.createCircle = require('./Circle').create;
 module.exports.createPinCircle = require('./PinCircle').create;
 module.exports.createUserCircle = require('./UserCircle').create;
+module.exports.createFollowUser = require('./FollowUser').create;
+module.exports.createView = require('./View').create;
 
 // Retruns View
 module.exports.createPinView = require('./PinView').create;

@@ -64,6 +64,12 @@
         $onInit() {
             if (this.searchService.lastNotification) {
                 this.search = this.searchService.lastNotification.searchText;
+                const userNameRegex = /(@[A-z\d-]+)/;
+                const match = userNameRegex.exec(this.search);
+                if (match) {
+                    const userName = match[1];
+                    this.userName = userName;
+                }
                 this.searchChoice = this.Util.sanitizeSearchChoice(this.searchService.lastNotification.searchChoiceText)
                 this.submitSearch(
                     this.search,

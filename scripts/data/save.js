@@ -10,12 +10,13 @@ const azureBlob = require('../../server/azure-blob');
 const Model = require('../../server/model');
 const FullPins = Model.FullPins;
 const Users = Model.Users;
-
+const FollowUsers = Model.FollowUsers;
 
 let cp,
   Request,
   pinFilePath,
-  userFilePath;
+  userFilePath,
+  followUserFilePath;
 
 const pickUserProps = [
   'id',
@@ -48,6 +49,7 @@ module.exports.setup = function (opt) {
   Request = cp.Request;
   pinFilePath = opt.pinfile;
   userFilePath = opt.userfile;
+  followUserFilePath = opt.followuserfile;
   return this;
 };
 
@@ -80,7 +82,15 @@ module.exports.saveDB = function () {
         }) => {
           return fs.writeFileSync(userFilePath, JSON.stringify(users, null, 2));
         });
-
+    })
+    .then(() => {
+      console.log('Backup FollowUsers');
+      return FollowUsers.getAll()
+        .then(({
+          followUsers
+        }) => {
+          return fs.writeFileSync(followUserFilePath, JSON.stringify(followUsers, null, 2));
+        });
     })
     .then(() => {
       console.log('Data Backup Complete');

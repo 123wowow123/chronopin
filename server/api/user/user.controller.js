@@ -2,10 +2,12 @@
 
 import {
   User,
-  Users
+  Users,
+  FollowUser
 } from '../../model';
 import config from '../../config/environment';
 import jwt from 'jsonwebtoken';
+import _ from 'lodash';
 
 import {
   EventEmitter
@@ -19,11 +21,18 @@ const pickUserProps = [
   'lastName',
   'email',
   'role',
-  'provider'
+  'provider',
+  'about'
+];
+
+const pickUserProfileProps = [
+  'id',
+  'userName',
+  'about',
+  'utcCreatedDateTime'
 ];
 
 export function updateEntity(newUser) {
-  //debugger
   return newUser.update()
     .then(({
       user
@@ -35,7 +44,6 @@ export function updateEntity(newUser) {
 }
 
 export function patchEntity(newUser) {
-  //debugger
   return newUser.patchWithoutPassword()
     .then(({
       user
@@ -47,7 +55,6 @@ export function patchEntity(newUser) {
 }
 
 export function addEntity(newUser) {
-  //debugger
   return newUser.save()
     .then((
       user
@@ -140,9 +147,6 @@ export function patch(req, res, next) {
           });
         })
         .catch(validationError(res));
-
-      // res.json(
-      //   user.pick(pickUserProps));
     })
     .catch(err => next(err));
 
@@ -164,6 +168,35 @@ export function show(req, res, next) {
       res.json(user.profile);
     })
     .catch(err => next(err));
+}
+
+/**
+ * Get a single user by userName
+ */
+export function profile(req, res, next) {
+  let userId = req.user && +req.user.id;
+  const userName = req.query.userName;
+
+  const userPromise = User.getUserByUserName(userName);
+  const followingPromise = FollowUser.queryFollowingByUserName(userName);
+  const followerPromise = FollowUser.queryFollowerByUserName(userName);
+  const isFollowingPromise = userId ? FollowUser.queryIsFollowingByUserName(userId, userName) : Promise.resolve({ isFollowing: false });
+
+  return Promise.all([userPromise, followingPromise, followerPromise, isFollowingPromise])
+    .then(([user, following, follower, isFollowing]) => {
+
+      if (!user.user) {
+        return res.status(404).end();
+      }
+      const filteredUser = _.pick(user.user, pickUserProfileProps);
+      res.json({
+        ...filteredUser,
+        followingCount: following.count,
+        followerCount: follower.count,
+        isFollowing: isFollowing.isFollowing
+      });
+
+    }).catch(err => next(err));
 }
 
 /**

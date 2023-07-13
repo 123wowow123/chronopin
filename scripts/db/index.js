@@ -29,6 +29,8 @@ const {
   createCircle,
   createUserCircle,
   createPinCircle,
+  createFollowUser,
+  createView,
 
   // Create View
   createPinView,
@@ -58,6 +60,10 @@ const {
   createGetPinByTagsFilterByHasFavoriteSP,
   createGetPinByTagsSP,
   createGetPinForEditSP,
+  createGetFollowingUsersByUserIdSP,
+  createGetFollowerUsersByUserIdSP,
+  createGetIsFollowingByUserNameSP,
+  createGetAllFollowUsersSP,
 
   // Returns Single Result
   createGetPinWithFavoriteAndLikeSP,
@@ -105,12 +111,14 @@ const {
   createDeleteLocationSP,
   createDeleteLocationByPinIdSP,
   createDeletePinMentionByPinIdSP,
+  createDeleteFollowUserSP,
 
   // Upsert Record
   createMergeLikeSP,
   createMergeFavoriteSP,
   createMergeMerchantSP,
   createMergeLocationSP,
+  createMergeFollowUserSP,
 
   // Admin Delete
   createAdminDeleteUserByIdSP,
@@ -162,6 +170,8 @@ function execute() {
         createCircle,
         createUserCircle,
         createPinCircle,
+        createFollowUser,
+        createView,
 
         // Views
         createPinView,
@@ -186,6 +196,10 @@ function execute() {
         createGetPinByTagsFilterByHasFavoriteSP,
         createGetPinByTagsSP,
         createGetPinForEditSP,
+        createGetFollowingUsersByUserIdSP,
+        createGetFollowerUsersByUserIdSP,
+        createGetIsFollowingByUserNameSP,
+        createGetAllFollowUsersSP,
 
         // Returns Single Result
         createGetPinWithFavoriteAndLikeSP,
@@ -214,6 +228,7 @@ function execute() {
         createCreateMentionSP,
         createCreatePinMentionSP,
         createCreatePinMentionLinkSP,
+        createDeleteFollowUserSP,
 
         // Update Record
         createUpdateUserSP,
@@ -238,6 +253,7 @@ function execute() {
         createMergeMerchantSP,
         createMergeLocationSP,
         createDeletePinMentionByPinIdSP,
+        createMergeFollowUserSP,
 
         // Admin Delete
         createAdminDeleteUserByIdSP,
@@ -267,7 +283,7 @@ function execute() {
 function executeListSP() {
   //console.log('executeListSP');
 
-  let sql = `
+  const sql = `
         select *
         from Chronopin.information_schema.routines
         where routine_type = 'PROCEDURE'

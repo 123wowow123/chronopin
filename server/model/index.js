@@ -9,6 +9,12 @@ export {
   default as Users
 } from './user/users';
 export {
+  default as FollowUser
+} from './followUser/followUser';
+export {
+  default as FollowUsers
+} from './followUser/followUsers';
+export {
   BasePinProp,
   default as BasePin
 } from './pin/basePin/basePin';

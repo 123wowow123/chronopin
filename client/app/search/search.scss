@@ -41,5 +41,12 @@
     pin-block {
         box-shadow: 0 0px 5px rgba(255, 215, 0, 0.9);
     }
+}
 
+.\--profile-offset {
+    top: 75px + 158px;
+}
+
+.main__timeline.\--search {
+    padding-top: 10px;
 }

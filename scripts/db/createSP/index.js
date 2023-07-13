@@ -25,6 +25,11 @@ const createGetDateTimesByStartEndDateSP = require('./dateTime/createGetDateTime
 /* pin thread */
 const createGetPinAuthorThreadSP = require('./pin/createGetPinAuthorThreadSP');
 const createGetPinAuthorThreadWithFavoriteAndLikeSP = require('./pin/createGetPinAuthorThreadWithFavoriteAndLikeSP');
+/* followUser */
+const createGetFollowingUsersByUserIdSP = require('./followUser/createGetFollowingUsersByUserNameSP');
+const createGetFollowerUsersByUserIdSP = require('./followUser/createGetFollowerUsersByUserNameSP');
+const createGetIsFollowingByUserNameSP = require('./followUser/createGetIsFollowingByUserNameSP');
+const createGetAllFollowUsersSP = require('./followUser/createGetAllFollowUsersSP');
 
 /** Returns Single Result **/
 /* pin */
@@ -99,6 +104,8 @@ const createDeleteLocationSP = require('./location/createDeleteLocationSP');
 const createDeleteLocationByPinIdSP = require('./location/createDeleteLocationByPinIdSP');
 /* pinMention */
 const createDeletePinMentionByPinIdSP = require('./pinMention/createDeletePinMentionByPinIdSP');
+/* followUser */
+const createDeleteFollowUserSP = require('./followUser/createDeleteFollowUserSP');
 
 /** Upsert Record **/
 /* like */
@@ -109,6 +116,8 @@ const createMergeFavoriteSP = require('./favorite/createMergeFavoriteSP');
 const createMergeMerchantSP = require('./merchant/createMergeMerchantSP');
 /* location */
 const createMergeLocationSP = require('./location/createMergeLocationSP');
+/* followUser */
+const createMergeFollowUserSP = require('./followUser/createMergeFollowUserSP');
 
 /** Admin Delete **/
 /* user */
@@ -143,6 +152,10 @@ module.exports.setup = function (connectionPool) {
   createGetPinByTagsFilterByHasFavoriteSP.setup(cp);
   createGetPinByTagsSP.setup(cp);
   createGetPinForEditSP.setup(cp);
+  createGetFollowingUsersByUserIdSP.setup(cp);
+  createGetFollowerUsersByUserIdSP.setup(cp);
+  createGetIsFollowingByUserNameSP.setup(cp);
+  createGetAllFollowUsersSP.setup(cp);
 
   // Returns Single Result
   createGetPinWithFavoriteAndLikeSP.setup(cp);
@@ -190,12 +203,14 @@ module.exports.setup = function (connectionPool) {
   createDeleteLocationSP.setup(cp);
   createDeleteLocationByPinIdSP.setup(cp);
   createDeletePinMentionByPinIdSP.setup(cp);
+  createDeleteFollowUserSP.setup(cp);
 
   // Upsert Record
   createMergeLikeSP.setup(cp);
   createMergeFavoriteSP.setup(cp);
   createMergeMerchantSP.setup(cp);
   createMergeLocationSP.setup(cp);
+  createMergeFollowUserSP.setup(cp);
 
   // Admin Delete
   createAdminDeleteUserByIdSP.setup(cp);
@@ -223,6 +238,10 @@ module.exports.createGetPinAuthorThreadSP = createGetPinAuthorThreadSP.createSP;
 module.exports.createGetPinAuthorThreadWithFavoriteAndLikeSP = createGetPinAuthorThreadWithFavoriteAndLikeSP.createSP;
 module.exports.createGetPinByTagsFilterByHasFavoriteSP = createGetPinByTagsFilterByHasFavoriteSP.createSP;
 module.exports.createGetPinByTagsSP = createGetPinByTagsSP.createSP;
+module.exports.createGetFollowingUsersByUserIdSP = createGetFollowingUsersByUserIdSP.createSP;
+module.exports.createGetFollowerUsersByUserIdSP = createGetFollowerUsersByUserIdSP.createSP;
+module.exports.createGetIsFollowingByUserNameSP = createGetIsFollowingByUserNameSP.createSP;
+module.exports.createGetAllFollowUsersSP = createGetAllFollowUsersSP.createSP;
 
 // Returns Single Result
 module.exports.createGetPinWithFavoriteAndLikeSP = createGetPinWithFavoriteAndLikeSP.createSP;
@@ -271,12 +290,14 @@ module.exports.createDeleteMerchantByPinIdSP = createDeleteMerchantByPinIdSP.cre
 module.exports.createDeleteLocationSP = createDeleteLocationSP.createSP;
 module.exports.createDeleteLocationByPinIdSP = createDeleteLocationByPinIdSP.createSP;
 module.exports.createDeletePinMentionByPinIdSP = createDeletePinMentionByPinIdSP.createSP;
+module.exports.createDeleteFollowUserSP = createDeleteFollowUserSP.createSP;
 
 // Upsert Record
 module.exports.createMergeLikeSP = createMergeLikeSP.createSP;
 module.exports.createMergeFavoriteSP = createMergeFavoriteSP.createSP;
 module.exports.createMergeMerchantSP = createMergeMerchantSP.createSP;
 module.exports.createMergeLocationSP = createMergeLocationSP.createSP;
+module.exports.createMergeFollowUserSP = createMergeFollowUserSP.createSP;
 
 // Admin Delete
 module.exports.createAdminDeleteUserByIdSP = createAdminDeleteUserByIdSP.createSP;
