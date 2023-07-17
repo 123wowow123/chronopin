@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  const refreshInterval = 10000;
+  const refreshInterval = 60000;
 
   class Notification {
     constructor(profileWebService, $rootScope) {
@@ -27,7 +27,6 @@
       this.profileWebService.getAggregateUnreadCount()
         .then((res) => {
           const count = res.data;
-          this.aggregateUnreadCount = count;
           this.$rootScope.$broadcast('notification:count', {
             count
           });
