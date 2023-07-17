@@ -19,7 +19,7 @@
             this.$rootScope.$broadcast('notification:count', {
               count
             });
-          })
+          });
       }, refreshInterval); // 1 minute
     }
 
@@ -30,7 +30,7 @@
           this.$rootScope.$broadcast('notification:count', {
             count
           });
-        })
+        });
     }
   }
 
