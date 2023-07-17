@@ -50,7 +50,7 @@ export function index(req, res) {
     .catch(handleError(res));
 }
 
-export function create(req, res, next) {
+export function create(req, res) {
   const userName = req.query.userName;
   const userId = req.user && +req.user.id;
 
@@ -92,7 +92,7 @@ export function destroy(req, res) {
 }
 
 // Bell functionality
-export function getAggregateUnreadCount(req, res, next) {
+export function getAggregateUnreadCount(req, res) {
   const userId = req.user && +req.user.id;
   return FollowUser.getAggregateUnreadCount(userId)
     .then(({
@@ -103,7 +103,7 @@ export function getAggregateUnreadCount(req, res, next) {
     .catch(handleError(res));
 }
 
-export function getAggregateUnread(req, res, next) {
+export function getAggregateUnread(req, res) {
   const userId = req.user && +req.user.id;
   return FollowUser.getAggregateUnread(userId)
     .then((
@@ -118,7 +118,7 @@ export function getAggregateUnread(req, res, next) {
     .catch(handleError(res));
 }
 
-export function updateLastCheckedAggregateUnread(req, res, next) {
+export function updateLastCheckedAggregateUnread(req, res) {
   const userId = req.user && +req.user.id;
   const checkedDateTime = new Date();
   return FollowUser.updateLastCheckedAggregateUnread(userId, checkedDateTime)
