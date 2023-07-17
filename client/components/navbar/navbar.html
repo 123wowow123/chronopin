@@ -1,6 +1,7 @@
 <div class="navbar navbar-default navbar-static-top" ng-controller="NavbarController">
   <div class="nav-container">
     <div class="navbar-header">
+
       <button id="navbar-toggle" class="navbar-toggle" type="button" ng-click="nav.isCollapsed = !nav.isCollapsed"
         ng-if="nav.showLogo()" ng-switch="nav.isLoggedIn()">
         <span class="sr-only">Toggle navigation</span>
@@ -12,6 +13,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </span>
+
+        <span class="badge --menu" ng-if="!!nav.aggregateUnreadCount">{{nav.aggregateUnreadCount}}</span>
       </button>
 
       <a href="/" class="navbar-brand" ng-click="nav.clearSearchToMain()"
@@ -30,7 +33,8 @@
                 ng-click="nav.showAutoComplete($event, nav.search)" ng-focus="nav.searhFocusToggle(true)"
                 ng-blur="nav.searhFocusToggle(false)">
               <span class="glyphicon glyphicon-search form-control__texbox_icon" aria-hidden="true"></span>
-              <span class="form-control__clear-texbox" ng-if="nav.search" ng-click="nav.clearSearchToMain()" role="button"></span>
+              <span class="form-control__clear-texbox" ng-if="nav.search" ng-click="nav.clearSearchToMain()"
+                role="button"></span>
             </div>
 
             <auto-complete title="title" prompt="Start typing a US state" suggestions="nav.suggestions"
@@ -65,8 +69,12 @@
       </ul> -->
 
       <ul class="nav navbar-nav navbar-right">
-        <li ng-show="nav.isAdmin()" ui-sref-active="active">
-          <a ui-sref="admin">Admin</a>
+        <li ng-show="nav.isLoggedIn()" ui-sref-active="active">
+          <a ui-sref="notification">
+            <i class="fa fa-bell" aria-hidden="true"></i>
+            <span class="text-description" ng-class="{'--hide': nav.isCollapsed }">Notification</span>
+            <span class="badge --main-menu" ng-if="!!nav.aggregateUnreadCount">{{nav.aggregateUnreadCount}}</span>
+          </a>
         </li>
 
         <li ng-show="nav.isLoggedIn()" ui-sref-active="active">
@@ -91,6 +99,9 @@
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+            <li ng-show="nav.isAdmin()" ui-sref-active="active" role="menuitem">
+              <a ui-sref="admin"><span class="glyphicon glyphicon-cog"></span> Admin</a>
+            </li>
             <li ui-sref-active="active" role="menuitem" ng-if="nav.isAdmin()">
               <a ui-sref="referral">
                 <span class="glyphicon glyphicon-piggy-bank"></span> Referral</a>
@@ -101,8 +112,9 @@
             </li> -->
             <li ui-sref-active="active" role="menuitem">
               <a ui-sref="settings">
-                <span class="glyphicon glyphicon-cog"></span> Password</a>
+                <span class="glyphicon glyphicon-lock"></span> Password</a>
             </li>
+
             <li class="divider" role="separator"></li>
             <li ui-sref-active="active" role="menuitem">
               <a ui-sref="profile">Profile</a>

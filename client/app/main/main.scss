@@ -164,6 +164,10 @@ $grid-max-width-screen: $iphone-landscape / 2;
         margin-left: -1.5px;
         content: " ";
     }
+    
+    &.\--hide-border:before {
+        border: none;
+    }
 
     &__tag {
         display: inline-block;

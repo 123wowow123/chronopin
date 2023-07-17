@@ -3,7 +3,7 @@
   <div class="container-fluid main__timeline">
     <div class="row">
       <div class="col-lg-12">
-        <ul class="timeline">
+        <ul class="timeline" ng-class="{'--hide-border': !$ctrl.bags.length }">
 
           <!-- Extract Into Component -->
           <li id="{{bag.toISODateTimeString()}}" class="timeline__group-container" data-ng-repeat="bag in $ctrl.bags"

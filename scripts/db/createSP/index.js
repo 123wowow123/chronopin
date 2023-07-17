@@ -31,6 +31,10 @@ const createGetFollowerUsersByUserIdSP = require('./followUser/createGetFollower
 const createGetIsFollowingByUserNameSP = require('./followUser/createGetIsFollowingByUserNameSP');
 const createGetAllFollowUsersSP = require('./followUser/createGetAllFollowUsersSP');
 
+const createUpdateAlFollowUserCheckedDateTimeSP = require('./followUser/createUpdateAlFollowUserCheckedDateTimeSP');
+const createGetFollowUserUnreadCountSP = require('./followUser/createGetFollowUserUnreadCountSP');
+const createGetFollowUserUnreadSP = require('./followUser/createGetFollowUserUnreadSP');
+
 /** Returns Single Result **/
 /* pin */
 const createGetPinWithFavoriteAndLikeSP = require('./pin/createGetPinWithFavoriteAndLikeSP');
@@ -157,6 +161,10 @@ module.exports.setup = function (connectionPool) {
   createGetIsFollowingByUserNameSP.setup(cp);
   createGetAllFollowUsersSP.setup(cp);
 
+  createUpdateAlFollowUserCheckedDateTimeSP.setup(cp);
+  createGetFollowUserUnreadCountSP.setup(cp);
+  createGetFollowUserUnreadSP.setup(cp);
+
   // Returns Single Result
   createGetPinWithFavoriteAndLikeSP.setup(cp);
   createGetPinSP.setup(cp);
@@ -242,6 +250,10 @@ module.exports.createGetFollowingUsersByUserIdSP = createGetFollowingUsersByUser
 module.exports.createGetFollowerUsersByUserIdSP = createGetFollowerUsersByUserIdSP.createSP;
 module.exports.createGetIsFollowingByUserNameSP = createGetIsFollowingByUserNameSP.createSP;
 module.exports.createGetAllFollowUsersSP = createGetAllFollowUsersSP.createSP;
+
+module.exports.createUpdateAlFollowUserCheckedDateTimeSP = createUpdateAlFollowUserCheckedDateTimeSP.createSP;
+module.exports.createGetFollowUserUnreadCountSP = createGetFollowUserUnreadCountSP.createSP;
+module.exports.createGetFollowUserUnreadSP = createGetFollowUserUnreadSP.createSP;
 
 // Returns Single Result
 module.exports.createGetPinWithFavoriteAndLikeSP = createGetPinWithFavoriteAndLikeSP.createSP;

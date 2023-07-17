@@ -44,6 +44,7 @@ scrollbar sentiment heatmap
 topical tag and sectioning
 Pro tip field
 small pins mode
+max pain for stocks
 
 
 TD:

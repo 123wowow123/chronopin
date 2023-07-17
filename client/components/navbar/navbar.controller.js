@@ -2,7 +2,7 @@
 
 class NavbarController {
 
-  constructor(Auth, $rootScope, $stateParams, $state, $scope, $element, $location, Util, searchService, appConfig, pinWebService, $transitions) {
+  constructor(Auth, $rootScope, $stateParams, $state, $scope, $element, $location, Util, appConfig, searchService, pinWebService, profileWebService, $transitions) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
@@ -19,6 +19,7 @@ class NavbarController {
     this.Util = Util;
     this.searchService = searchService;
     this.pinWebService = pinWebService;
+    this.profileWebService = profileWebService;
 
     this.searchChoices = appConfig.searchChoices;
     this.$el = $element;
@@ -44,6 +45,13 @@ class NavbarController {
       this.searchChoice = this.Util.sanitizeSearchChoice(args.searchChoiceText);
     });
     this.registeredListeners['search:submit'] = searchSubmitListener;
+
+
+    const notificationCountListener = this.$scope.$on('notification:count', (event, args) => {
+      const count = args.count;
+      this.aggregateUnreadCount = count;
+    });
+    this.registeredListeners['notification:count'] = notificationCountListener;
   }
 
   clearSuggestionsAndDismiss() {
@@ -152,6 +160,10 @@ class NavbarController {
     if (this.registeredListeners['search:submit']) {
       this.registeredListeners['search:submit']();
       delete this.registeredListeners['search:submit'];
+    }
+    if (this.registeredListeners['notification:count']) {
+      this.registeredListeners['notification:count']();
+      delete this.registeredListeners['notification:count'];
     }
   }
 

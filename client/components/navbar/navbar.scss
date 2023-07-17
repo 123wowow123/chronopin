@@ -136,7 +136,7 @@
 .navbar-main {
     position: fixed;
     top: 0;
-    left:0;
+    left: 0;
     z-index: 100;
     width: 100%; //box-shadow: 0 3px 3px rgba(0,0,0,0.175);
 
@@ -151,6 +151,12 @@
         background-color: var(--header-bg-color);
         border-color: var(--primary-border-color);
 
+        & .navbar-nav {
+            .text-description.\--hide {
+                display: none;
+            }
+        }
+
         & .navbar-nav>.active>a {
             background-color: var(--primary-highlight-bg-color);
             color: var(--header-brand-text-color);
@@ -164,6 +170,29 @@
             color: var(--header-brand-text-color);
         }
     }
+}
+
+.badge {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    top: -1px;
+
+    &.\--menu {
+        position: absolute;
+        top: -3px;
+        right: -6px;
+    }
+
+    &.\--main-menu {
+        position: absolute;
+        top: 4px;
+        right: -2px;
+    }
+
 }
 
 @media only screen and (max-width: $ipad-portrait) {

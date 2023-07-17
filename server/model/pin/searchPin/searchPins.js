@@ -237,7 +237,6 @@ export default class SearchPins extends BasePins {
     static querySearchPin(title, description, k = 10) {
         return _querySearchPin(title, description, k)
             .then(res => {
-                //console.log('queryInitialByDateFilterByHasFavorite', res);
                 return new Pins(res);
             });
     }

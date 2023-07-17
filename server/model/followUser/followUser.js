@@ -4,7 +4,8 @@ import * as mssql from 'mssql';
 import * as cp from '../../sqlConnectionPool';
 import _ from 'lodash';
 import {
-  User
+  User,
+  Pins
 } from '..';
 
 let prop = [
@@ -84,6 +85,23 @@ export default class FollowUser {
   static queryIsFollowingByUserName(userId, userName) {
     return _queryIsFollowingByUserName(userId, userName);
   }
+
+  // Bell functionality
+  static getAggregateUnreadCount(userId) {
+    return _queryMSSQLGetAggregateUnreadCount(userId);
+  }
+
+  static getAggregateUnread(userId) {
+    return _queryMSSQLGetAggregateUnread(userId)
+      .then(res => {
+        return new Pins(res);
+      });
+  }
+
+  static updateLastCheckedAggregateUnread(userId, checkedDateTime) {
+    return _queryMSSQLUpdateLastCheckedAggregateUnread(userId, checkedDateTime);
+  }
+
 }
 
 const FollowUserPrototype = FollowUser.prototype;
@@ -279,5 +297,79 @@ function _deleteMSSQL(followUser) {
             });
           });
       });
+    });
+}
+
+// Bell functionality
+function _queryMSSQLGetAggregateUnreadCount(userId) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise((resolve, reject) => {
+        const StoredProcedureName = 'GetFollowUserUnreadCount';
+        let request = new mssql.Request(conn)
+          .input('currentUserId', mssql.Int, userId)
+          .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
+            let count;
+            if (err) {
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${JSON.stringify(err)}`);
+            }
+            if (res.recordset.length) {
+              count = res.recordset[0];
+            } else {
+              count = undefined;
+            }
+            resolve(count);
+          });
+      });
+    }).catch(err => {
+      // ... connect error checks
+      console.log(`${StoredProcedureName} catch err`, err);
+      throw err;
+    });
+}
+
+function _queryMSSQLGetAggregateUnread(userId) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise((resolve, reject) => {
+        const StoredProcedureName = 'GetFollowUserUnread';
+        let request = new mssql.Request(conn)
+          .input('currentUserId', mssql.Int, userId)
+          .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
+            if (err) {
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${JSON.stringify(err)}`);
+            }
+
+            resolve({
+              pins: res.recordset
+            });
+          });
+      });
+    }).catch(err => {
+      // ... connect error checks
+      console.log(`${StoredProcedureName} catch err`, err);
+      throw err;
+    });
+}
+
+function _queryMSSQLUpdateLastCheckedAggregateUnread(userId, checkedDateTime) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise((resolve, reject) => {
+        const StoredProcedureName = 'UpdateAlFollowUserCheckedDateTime';
+        let request = new mssql.Request(conn)
+          .input('currentUserId', mssql.Int, userId)
+          .input('utcCheckedDateTime', mssql.DateTime2(7), checkedDateTime.toISOString())
+          .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
+            if (err) {
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${JSON.stringify(err)}`);
+            }
+            resolve(res);
+          });
+      });
+    }).catch(err => {
+      // ... connect error checks
+      console.log(`${StoredProcedureName} catch err`, err);
+      throw err;
     });
 }

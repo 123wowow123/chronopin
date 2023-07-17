@@ -48,6 +48,22 @@
         });
       };
 
+      // Bell functionality
+      this.getAggregateUnreadCount = function () {
+        return $http({
+          url: '/api/users/getAggregateUnreadCount',
+          method: 'GET',
+          ignoreLoadingBar: true
+        });
+      };
+
+      this.getAggregateUnread = function () {
+        return $http({
+          url: '/api/users/getAggregateUnread',
+          method: 'POST'
+        });
+      };
+
     });
 
 })();

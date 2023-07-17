@@ -1,14 +1,23 @@
 [
   {
     "id": 1,
+    "utcCheckedDateTime": "2023-07-13T21:41:20.589Z",
     "utcCreatedDateTime": "2023-07-13T21:41:20.589Z",
     "userId": 1,
     "followingUserId": 3
   },
   {
     "id": 2,
+    "utcCheckedDateTime": "2023-07-13T21:41:37.246Z",
     "utcCreatedDateTime": "2023-07-13T21:41:37.246Z",
     "userId": 1,
     "followingUserId": 4
+  },
+  {
+    "id": 3,
+    "utcCheckedDateTime": "2023-07-13T22:22:35.264Z",
+    "utcCreatedDateTime": "2023-07-13T22:22:35.264Z",
+    "userId": 1,
+    "followingUserId": 2
   }
 ]

@@ -43,7 +43,7 @@ function executeCreateSP() {
   let sql = `
   CREATE PROCEDURE [dbo].[${StoredProcedureName}]
   @userId             INT,
-  @followingUserId              INT,
+  @followingUserId    INT,
   @utcCheckedDateTime DATETIME2(7),
   @utcCreatedDateTime DATETIME2(7),
 
@@ -59,6 +59,11 @@ BEGIN
   IF @utcCreatedDateTime IS NULL
   BEGIN
     SET @utcCreatedDateTime = @utcCurrentDateTime;
+  END
+
+  IF @utcCheckedDateTime IS NULL
+  BEGIN
+    SET @utcCheckedDateTime = @utcCurrentDateTime;
   END
 
   INSERT INTO @table(id)

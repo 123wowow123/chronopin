@@ -14,6 +14,11 @@ router.get('/profile', auth.tryGetUser(), controller.profile);
 router.post('/follow', auth.isAuthenticated(), followController.create); // afterFollow
 router.post('/unfollow', auth.isAuthenticated(), followController.destroy); // afterUnfollow
 
+// Bell functionality
+router.get('/getAggregateUnreadCount', auth.tryGetUser(), followController.getAggregateUnreadCount);
+router.post('/getAggregateUnread', auth.tryGetUser(), followController.getAggregateUnread);
+// router.post('/updateLastCheckedAggregateUnread', auth.tryGetUser(), followController.updateLastCheckedAggregateUnread);
+
 router.get('/', auth.hasRole('admin'), controller.index);
 router.delete('/:id', auth.hasRole('admin'), controller.destroy);
 router.get('/me', auth.isAuthenticated(), controller.me);

@@ -65,6 +65,10 @@ const {
   createGetIsFollowingByUserNameSP,
   createGetAllFollowUsersSP,
 
+  createUpdateAlFollowUserCheckedDateTimeSP,
+  createGetFollowUserUnreadCountSP,
+  createGetFollowUserUnreadSP,
+
   // Returns Single Result
   createGetPinWithFavoriteAndLikeSP,
   createGetUserByIdSP,
@@ -126,6 +130,7 @@ const {
   // Function
   createGetPrevPinIdsPaginatedFunc,
   createGetNextPinIdsPaginatedFunc
+
 } = require('./createSP');
 
 
@@ -200,6 +205,10 @@ function execute() {
         createGetFollowerUsersByUserIdSP,
         createGetIsFollowingByUserNameSP,
         createGetAllFollowUsersSP,
+
+        createUpdateAlFollowUserCheckedDateTimeSP,
+        createGetFollowUserUnreadCountSP,
+        createGetFollowUserUnreadSP,
 
         // Returns Single Result
         createGetPinWithFavoriteAndLikeSP,
