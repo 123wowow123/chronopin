@@ -272,9 +272,9 @@
             {
               // dollar factory
               // preCheckRegex: /(?<!class="chrono-dollar-highlight">)(\$[A-z]+[\d-]?(?:\s|&nbsp;))/g,
-              regex: /(\$[A-z]+[A-z\.\d-]*)/, // /(\$[A-z]+[\d-]?)(?:\s|&nbsp;)/,
-              regexValidateContent: /^(\$[A-z]+[A-z\.\d-]*)$/,
-              regexValidateAny: /(\$[A-z]+[A-z\.\d-]*)/,
+              regex: /(\$[A-z]+[A-z\.\d-]*|\$[0-9]+\.[A-z]{2,})/, // /(\$[A-z]+[\d-]?)(?:\s|&nbsp;)/,
+              regexValidateContent: /^(\$[A-z]+[A-z\.\d-]*|\$[0-9]+\.[A-z]{2,})$/,
+              regexValidateAny: /(\$[A-z]+[A-z\.\d-]*|\$[0-9]+\.[A-z]{2,})/,
               nodeName: 'chronodollar',
               nodeWrapperFactory: () => {
                 let newNode = document.createElement('chronodollar');

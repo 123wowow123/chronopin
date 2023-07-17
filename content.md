@@ -20,10 +20,6 @@ scrolling
 https://ui-router.github.io/ng1/docs/0.3.1/index.html#/api/ui.router.state.$uiViewScroll
 
 
-$3333.HK
-https://www.chronopin.com/pin/443
-
-
 pins loaded from infinit scroll needs to be in memory so that navigating back to home will have proper scroll position ++
 create/edit/respond page needs to have auth guard +
 changing username needs to sync to comment +
