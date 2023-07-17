@@ -2165,12 +2165,12 @@
     "mentions": [
       {
         "id": 15,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 332
       },
       {
         "id": 16,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 332
       }
     ],
@@ -2295,12 +2295,12 @@
     "mentions": [
       {
         "id": 19,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 333
       },
       {
         "id": 20,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 333
       }
     ],
@@ -2441,12 +2441,12 @@
     "mentions": [
       {
         "id": 21,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 334
       },
       {
         "id": 22,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 334
       }
     ],
@@ -3007,18 +3007,18 @@
     "merchants": [
       {
         "id": 4,
-        "label": "Amazon: Modern Mouse Silver",
-        "url": "https://amzn.to/3IC8VDN",
-        "price": 37.49,
-        "order": 0,
-        "pinId": 84
-      },
-      {
-        "id": 5,
         "label": "Amazon: Modern Keyboard Silver",
         "url": "https://amzn.to/4283DqD",
         "price": 81,
         "order": 1,
+        "pinId": 84
+      },
+      {
+        "id": 5,
+        "label": "Amazon: Modern Mouse Silver",
+        "url": "https://amzn.to/3IC8VDN",
+        "price": 37.49,
+        "order": 0,
         "pinId": 84
       }
     ],
@@ -4184,12 +4184,12 @@
     "mentions": [
       {
         "id": 35,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 336
       },
       {
         "id": 36,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 336
       }
     ],
@@ -4398,12 +4398,12 @@
     "mentions": [
       {
         "id": 41,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 337
       },
       {
         "id": 42,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 337
       }
     ],
@@ -4964,12 +4964,12 @@
     "mentions": [
       {
         "id": 51,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 338
       },
       {
         "id": 52,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 338
       }
     ],
@@ -5121,12 +5121,12 @@
     "mentions": [
       {
         "id": 54,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 339
       },
       {
         "id": 55,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 339
       }
     ],
@@ -6709,12 +6709,12 @@
     "mentions": [
       {
         "id": 61,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 340
       },
       {
         "id": 62,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 340
       }
     ],
@@ -6901,18 +6901,18 @@
       },
       {
         "id": 34,
-        "label": "Tegion Reusable Silicone Straws",
-        "url": "https://a.co/d/fTIFcq4",
-        "price": 11.99,
-        "order": 1,
-        "pinId": 226
-      },
-      {
-        "id": 35,
         "label": "Doctor's Best DHA 500",
         "url": "https://a.co/d/e0Ibvji",
         "price": 40.45,
         "order": 3,
+        "pinId": 226
+      },
+      {
+        "id": 35,
+        "label": "Tegion Reusable Silicone Straws",
+        "url": "https://a.co/d/fTIFcq4",
+        "price": 11.99,
+        "order": 1,
         "pinId": 226
       },
       {
@@ -6925,18 +6925,18 @@
       },
       {
         "id": 37,
-        "label": "Secura Visual Countdown Timer",
-        "url": "https://a.co/d/cI0Vejb",
-        "price": 18.99,
-        "order": 4,
-        "pinId": 226
-      },
-      {
-        "id": 38,
         "label": "Magical Handwriting Workbooks",
         "url": "https://a.co/d/1oGcC0a",
         "price": 16.99,
         "order": 6,
+        "pinId": 226
+      },
+      {
+        "id": 38,
+        "label": "Secura Visual Countdown Timer",
+        "url": "https://a.co/d/cI0Vejb",
+        "price": 18.99,
+        "order": 4,
         "pinId": 226
       }
     ],
@@ -7025,27 +7025,27 @@
     "mentions": [
       {
         "id": 64,
-        "tag": "$NVDA",
-        "pinId": 433
-      },
-      {
-        "id": 65,
-        "tag": "$AAPL",
-        "pinId": 433
-      },
-      {
-        "id": 66,
         "tag": "$INTC",
         "pinId": 433
       },
       {
+        "id": 65,
+        "tag": "$NVDA",
+        "pinId": 433
+      },
+      {
+        "id": 66,
+        "tag": "$AAPL",
+        "pinId": 433
+      },
+      {
         "id": 67,
-        "tag": "$ASML",
+        "tag": "#Chips",
         "pinId": 433
       },
       {
         "id": 68,
-        "tag": "#Chips",
+        "tag": "$KLAC",
         "pinId": 433
       },
       {
@@ -7060,7 +7060,7 @@
       },
       {
         "id": 71,
-        "tag": "$KLAC",
+        "tag": "$ASML",
         "pinId": 433
       }
     ],
@@ -7157,26 +7157,26 @@
       },
       {
         "id": 20,
-        "address": "LVCC West Hall, Las Vegas",
-        "order": 1,
-        "pinId": 350
-      },
-      {
-        "id": 21,
         "address": "LVCC North Hall, Las Vegas",
         "order": 2,
         "pinId": 350
       },
       {
+        "id": 21,
+        "address": "LVCC Central Hall, Las Vegas",
+        "order": 0,
+        "pinId": 350
+      },
+      {
         "id": 22,
-        "address": "ARIA, Las Vegas",
-        "order": 4,
+        "address": "LVCC West Hall, Las Vegas",
+        "order": 1,
         "pinId": 350
       },
       {
         "id": 23,
-        "address": "LVCC Central Hall, Las Vegas",
-        "order": 0,
+        "address": "ARIA, Las Vegas",
+        "order": 4,
         "pinId": 350
       }
     ],
@@ -7404,12 +7404,12 @@
     "mentions": [
       {
         "id": 74,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 235
       },
       {
         "id": 75,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 235
       }
     ],
@@ -7737,12 +7737,12 @@
     "mentions": [
       {
         "id": 79,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 234
       },
       {
         "id": 80,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 234
       }
     ],
@@ -7841,12 +7841,12 @@
     "mentions": [
       {
         "id": 81,
-        "tag": "#BTFP",
+        "tag": "#Liquidity",
         "pinId": 421
       },
       {
         "id": 82,
-        "tag": "#Liquidity",
+        "tag": "#BTFP",
         "pinId": 421
       }
     ],
@@ -8096,12 +8096,12 @@
     "mentions": [
       {
         "id": 86,
-        "tag": "#BTFP",
+        "tag": "#Liquidity",
         "pinId": 419
       },
       {
         "id": 87,
-        "tag": "#Liquidity",
+        "tag": "#BTFP",
         "pinId": 419
       }
     ],
@@ -8139,12 +8139,12 @@
     "mentions": [
       {
         "id": 88,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 232
       },
       {
         "id": 89,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 232
       }
     ],
@@ -8532,12 +8532,12 @@
     "mentions": [
       {
         "id": 90,
-        "tag": "#BTFP",
+        "tag": "#Liquidity",
         "pinId": 420
       },
       {
         "id": 91,
-        "tag": "#Liquidity",
+        "tag": "#BTFP",
         "pinId": 420
       }
     ],
@@ -8698,14 +8698,14 @@
     "locations": [
       {
         "id": 31,
-        "address": "Burbank",
-        "order": 3,
+        "address": "Culver City",
+        "order": 2,
         "pinId": 361
       },
       {
         "id": 32,
-        "address": "Culver City",
-        "order": 2,
+        "address": "Burbank",
+        "order": 3,
         "pinId": 361
       },
       {
@@ -8934,42 +8934,42 @@
     "mentions": [
       {
         "id": 98,
-        "tag": "$MSFT",
-        "pinId": 210
-      },
-      {
-        "id": 99,
-        "tag": "$AAPL",
-        "pinId": 210
-      },
-      {
-        "id": 100,
         "tag": "$TSLA",
         "pinId": 210
       },
       {
-        "id": 101,
+        "id": 99,
         "tag": "$AMZN",
         "pinId": 210
       },
       {
-        "id": 102,
-        "tag": "$NFLX",
+        "id": 100,
+        "tag": "$AAPL",
         "pinId": 210
       },
       {
-        "id": 103,
+        "id": 101,
+        "tag": "$MSFT",
+        "pinId": 210
+      },
+      {
+        "id": 102,
         "tag": "$NVDA",
         "pinId": 210
       },
       {
+        "id": 103,
+        "tag": "$NFLX",
+        "pinId": 210
+      },
+      {
         "id": 104,
-        "tag": "$META",
+        "tag": "$GOOG",
         "pinId": 210
       },
       {
         "id": 105,
-        "tag": "$GOOG",
+        "tag": "$META",
         "pinId": 210
       }
     ],
@@ -9321,12 +9321,12 @@
     "mentions": [
       {
         "id": 109,
-        "tag": "#CoincidentEconomicIndicator",
+        "tag": "#indicator",
         "pinId": 229
       },
       {
         "id": 110,
-        "tag": "#indicator",
+        "tag": "#CoincidentEconomicIndicator",
         "pinId": 229
       }
     ],
@@ -9400,12 +9400,12 @@
     "mentions": [
       {
         "id": 113,
-        "tag": "#Liquidity",
+        "tag": "#BTFP",
         "pinId": 418
       },
       {
         "id": 114,
-        "tag": "#BTFP",
+        "tag": "#Liquidity",
         "pinId": 418
       }
     ],
@@ -9480,12 +9480,12 @@
     "mentions": [
       {
         "id": 116,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 231
       },
       {
         "id": 117,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 231
       }
     ],
@@ -10403,12 +10403,12 @@
     "mentions": [
       {
         "id": 132,
-        "tag": "#PBOC",
+        "tag": "#Rate",
         "pinId": 425
       },
       {
         "id": 133,
-        "tag": "#Rate",
+        "tag": "#PBOC",
         "pinId": 425
       }
     ],
@@ -10937,12 +10937,12 @@
     "mentions": [
       {
         "id": 146,
-        "tag": "$TSLA",
+        "tag": "$GM",
         "pinId": 366
       },
       {
         "id": 147,
-        "tag": "$GM",
+        "tag": "$TSLA",
         "pinId": 366
       },
       {
@@ -10957,7 +10957,7 @@
       },
       {
         "id": 150,
-        "tag": "#Quality",
+        "tag": "$PSNY",
         "pinId": 366
       },
       {
@@ -10967,7 +10967,7 @@
       },
       {
         "id": 152,
-        "tag": "$PSNY",
+        "tag": "#Quality",
         "pinId": 366
       }
     ],
@@ -11252,12 +11252,12 @@
     "mentions": [
       {
         "id": 159,
-        "tag": "$RIDE",
+        "tag": "#Bankruptcy",
         "pinId": 398
       },
       {
         "id": 160,
-        "tag": "#Bankruptcy",
+        "tag": "$RIDE",
         "pinId": 398
       }
     ],
@@ -11291,20 +11291,20 @@
     "locations": [
       {
         "id": 57,
-        "address": "PHOENIX",
-        "order": 0,
-        "pinId": 401
-      },
-      {
-        "id": 58,
         "address": "Sevierville, Tennessee",
         "order": 4,
         "pinId": 401
       },
       {
+        "id": 58,
+        "address": "Idaho",
+        "order": 6,
+        "pinId": 401
+      },
+      {
         "id": 59,
-        "address": "Montana",
-        "order": 5,
+        "address": "Uvalde",
+        "order": 3,
         "pinId": 401
       },
       {
@@ -11315,26 +11315,26 @@
       },
       {
         "id": 61,
-        "address": "Oregon",
-        "order": 7,
+        "address": "PHOENIX",
+        "order": 0,
         "pinId": 401
       },
       {
         "id": 62,
-        "address": "Idaho",
-        "order": 6,
-        "pinId": 401
-      },
-      {
-        "id": 63,
         "address": "Austin",
         "order": 1,
         "pinId": 401
       },
       {
+        "id": 63,
+        "address": "Oregon",
+        "order": 7,
+        "pinId": 401
+      },
+      {
         "id": 64,
-        "address": "Uvalde",
-        "order": 3,
+        "address": "Montana",
+        "order": 5,
         "pinId": 401
       }
     ],
@@ -11483,12 +11483,12 @@
       },
       {
         "id": 168,
-        "tag": "$META",
+        "tag": "$MSFT",
         "pinId": 403
       },
       {
         "id": 169,
-        "tag": "$AAPL",
+        "tag": "$META",
         "pinId": 403
       },
       {
@@ -11498,22 +11498,22 @@
       },
       {
         "id": 171,
-        "tag": "$MSFT",
+        "tag": "$AAPL",
         "pinId": 403
       },
       {
         "id": 172,
-        "tag": "$SPY",
-        "pinId": 403
-      },
-      {
-        "id": 173,
         "tag": "$QQQ",
         "pinId": 403
       },
       {
-        "id": 174,
+        "id": 173,
         "tag": "$GOOGL",
+        "pinId": 403
+      },
+      {
+        "id": 174,
+        "tag": "$SPY",
         "pinId": 403
       }
     ],
@@ -11772,14 +11772,14 @@
     "locations": [
       {
         "id": 67,
-        "address": "Vancouver Port",
-        "order": 0,
+        "address": "Prince Rupert Port",
+        "order": 1,
         "pinId": 429
       },
       {
         "id": 68,
-        "address": "Prince Rupert Port",
-        "order": 1,
+        "address": "Vancouver Port",
+        "order": 0,
         "pinId": 429
       }
     ],
@@ -11891,8 +11891,8 @@
     "locations": [
       {
         "id": 70,
-        "address": "Connecticut",
-        "order": 0,
+        "address": "Nevada",
+        "order": 1,
         "pinId": 463
       },
       {
@@ -11903,8 +11903,8 @@
       },
       {
         "id": 72,
-        "address": "Nevada",
-        "order": 1,
+        "address": "Connecticut",
+        "order": 0,
         "pinId": 463
       }
     ],
@@ -12033,14 +12033,14 @@
     "locations": [
       {
         "id": 74,
-        "address": "Santa Monica",
-        "order": 1,
+        "address": "Los Angeles",
+        "order": 0,
         "pinId": 437
       },
       {
         "id": 75,
-        "address": "Los Angeles",
-        "order": 0,
+        "address": "Santa Monica",
+        "order": 1,
         "pinId": 437
       }
     ],
@@ -12389,12 +12389,12 @@
     "mentions": [
       {
         "id": 194,
-        "tag": "#StudentDebt",
+        "tag": "#inflation",
         "pinId": 469
       },
       {
         "id": 195,
-        "tag": "#inflation",
+        "tag": "#StudentDebt",
         "pinId": 469
       }
     ],
@@ -12464,6 +12464,50 @@
         "id": 197,
         "tag": "#inflation",
         "pinId": 471
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 472,
+    "rootThread": false,
+    "title": "Russia axes landmark Ukraine grain deal just hours before deadline",
+    "description": "<p class=\"paragraph\"> Russia on Monday said it had suspended a humanitarian corridor to deliver key Ukrainian grains to global markets, hours before the agreement’s expiry. </p><p class=\"paragraph\"> First signed in July 2022, the U.N.-brokered&nbsp;<a href=\"https://www.un.org/en/black-sea-grain-initiative\" target=\"_blank\">Black Sea Grain Initiative</a>&nbsp;has been repeatedly extended in short increments, amid increasing discontent from Russia over perceived restrictions that limit the full dispatch of its own grain and fertilizer exports. Russian head of state&nbsp;<a href=\"https://www.cnbc.com/vladimir-putin/\">Vladimir Putin</a>&nbsp;reiterated these complaints over a weekend call with South African President Cyril Ramaphosa, saying — according to a&nbsp;<a href=\"http://kremlin.ru/events/president/news/71680\" target=\"_blank\">Google-translated report</a>&nbsp;from the Kremlin — that the key objective of supplying grain to countries in need, including those on the African continent, had not been achieved under the Black Sea Grain Initiative. </p><p class=\"paragraph\"> The deal was set up to abate a global food crisis, after Moscow launched&nbsp;<a href=\"https://www.cnbc.com/2023/07/17/russia-ukraine-live-updates.html\">a full-scale invasion</a>&nbsp;of fellow key grain exporter and neighbor Ukraine. It was set to lapse on Monday at midnight, Istanbul time. </p><p class=\"paragraph\"> “The Black Sea agreements ceased to be valid today. As the President of the Russian Federation said earlier, the deadline is July 17. Unfortunately, the part relating to Russia in this Black Sea agreement has not been implemented so far. Therefore, its effect is terminated,” Kremlin spokesperson Dmitry Peskov said, in Google-translated comments reported by Russian state news agency Tass on Monday. </p><p class=\"paragraph\"> Moscow has officially notified Ankara, Kyiv and the U.N. secretariat that it opposed extending the initiative, Tass cited Russian Foreign Ministry spokeswoman Maria Zakharova as saying on a&nbsp;<a href=\"https://t.me/tass_agency/201302\" target=\"_blank\">Google-translated Telegram post</a>&nbsp;of the news organization. </p><p class=\"paragraph\"> “Only if concrete results are received, not promises and assurances, will Russia be ready to consider resuming the ‘deal,’” the Russian Ministry of Foreign Affairs said in a&nbsp;<a href=\"https://www.facebook.com/MIDRussia/posts/pfbid02mEkSdu6n66ECh484Hgukho2WggfB6Prq11Z1WvYQbNJCCTrrdtoXUKNeRmSBgBTyl\" target=\"_blank\">Monday statement on Facebook</a>, according to a Google translation. It stressed that the agreement expires on July 18 and was only “directed to serve the narrow self-interests” of Kyiv and its Western allies. </p><p class=\"paragraph\"> Peskov said that Moscow’s objection to prolonging the grain deal was communicated even before an explosion on a Crimean bridge that reportedly killed two and halted traffic — which Russian-backed officials have called a “terrorist attack” and blamed on Ukraine. </p><p class=\"paragraph\"> The European Union has condemned the Kremlin’s withdrawal from the agreement. </p><p class=\"paragraph\"> “I strongly condemn Russia’s cynical move to terminate the Black Sea Grain Initiative, despite UN &amp; Türkiye’s efforts,” European Commission President Ursula von der Leyen said on Twitter on Monday. “EU is working to ensure food security for the world’s vulnerable.” </p><h2><a target=\"_blank\" rel=\"noopener noreferrer\"></a>Wheat’s at stake</h2><p class=\"paragraph\"> Wheat prices jumped 3.5% as the news broke. </p><p class=\"paragraph\"> “Ukraine will now be forced to export most of its grains and oilseeds through its land borders and Danube ports. This will significantly drive up transportation costs and pile further pressure on Ukrainian farmers’ profits. The knock-on effect of this is it could prompt them to plant less next season, placing further pressure on supplies going forward,” said Carlos Mera, head of the agri commodities markets at Rabobank, in emailed comments. </p><p class=\"paragraph\"> Simon Evenett, a professor of international trade and economic development at the University of St. Gallen, said that Russia’s announcement is the “coup de grace on a deal that was on its last legs.” </p><p class=\"paragraph\"> “Shipments have been falling steadily this year,” he added. </p><p class=\"paragraph\"> The grain pact allowed the export of commercial food and fertilizer supplies, including ammonia, from three Ukrainian ports on the Black Sea – Odesa, Chornomorsk and Pivdennyi, previously known as Yuzhny. </p><p class=\"paragraph\"> Cargo ships proceed through the agreed humanitarian corridor to Istanbul, one of the busiest ports of Turkey, whose administration under President Recep Tayyip Erdogan has been deeply immersed in the negotiations. </p><p class=\"paragraph\"> Following the announcement, Erdogan on Monday expressed his belief that his Kremlin counterpart Putin wants to continue the Black Sea Grain Initiative, hailing the agreement as a diplomatic success, according to a Google translation of comments reported by Turkish state news agency Anadolu on Telegram. Erdogan added that he will hold phone talks with Putin on the topic ahead of their anticipated in-person meeting in August, and that the Turkish and Russian foreign ministers will likewise discuss the agreement. </p><p class=\"paragraph\"> Erdogan’s entreaties may enjoy a frosty reception, after Turkey last week dealt an indirect blow to Moscow by finally endorsing the NATO membership bid of Sweden during a meeting of the military alliance in Vilnius, Lithuania. </p><p class=\"paragraph\"> “Russia would have you believe it is being forced to end a deal that, in fact, it benefits from – a deal designed to alleviate some of the global consequences of its war of choice,” Michael Carpenter, U.S. ambassador to the Organization for Security and Cooperation in Europe,&nbsp;<a href=\"https://osce.usmission.gov/the-russian-federations-ongoing-aggression-against-ukraine-59/\" target=\"_blank\">said on July 13</a>, estimating that over 32 million tons of grain and food reached global markets to date as a result of the deal. </p><p class=\"paragraph\"> The Russian Rusgrain union&nbsp;<a href=\"https://t.me/rusgrain/2064\" target=\"_blank\">said on Telegram</a>&nbsp;that it plans to continue supplying its customers as part of its commitment to fight world hunger, irrespective of the Ukraine deal development. </p><p class=\"paragraph\"> “All contractual obligations of Russian grain exporters will be fulfilled,” it said, according to a Google translation. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Inflation</chronohash> </p>",
+    "sourceDescription": "{\"time\":1689619531742,\"blocks\":[{\"id\":\"Pn2TaXOaVs\",\"type\":\"paragraph\",\"data\":{\"text\":\"Russia on Monday said it had suspended a humanitarian corridor to deliver key Ukrainian grains to global markets, hours before the agreement’s expiry.\"}},{\"id\":\"Y1ihuslpt-\",\"type\":\"paragraph\",\"data\":{\"text\":\"First signed in July 2022, the U.N.-brokered&nbsp;<a href=\\\"https://www.un.org/en/black-sea-grain-initiative\\\" target=\\\"_blank\\\">Black Sea Grain Initiative</a>&nbsp;has been repeatedly extended in short increments, amid increasing discontent from Russia over perceived restrictions that limit the full dispatch of its own grain and fertilizer exports. Russian head of state&nbsp;<a href=\\\"https://www.cnbc.com/vladimir-putin/\\\">Vladimir Putin</a>&nbsp;reiterated these complaints over a weekend call with South African President Cyril Ramaphosa, saying — according to a&nbsp;<a href=\\\"http://kremlin.ru/events/president/news/71680\\\" target=\\\"_blank\\\">Google-translated report</a>&nbsp;from the Kremlin — that the key objective of supplying grain to countries in need, including those on the African continent, had not been achieved under the Black Sea Grain Initiative.\"}},{\"id\":\"8FRn_HhBAD\",\"type\":\"paragraph\",\"data\":{\"text\":\"The deal was set up to abate a global food crisis, after Moscow launched&nbsp;<a href=\\\"https://www.cnbc.com/2023/07/17/russia-ukraine-live-updates.html\\\">a full-scale invasion</a>&nbsp;of fellow key grain exporter and neighbor Ukraine. It was set to lapse on Monday at midnight, Istanbul time.\"}},{\"id\":\"pSNXWc_P7v\",\"type\":\"paragraph\",\"data\":{\"text\":\"“The Black Sea agreements ceased to be valid today. As the President of the Russian Federation said earlier, the deadline is July 17. Unfortunately, the part relating to Russia in this Black Sea agreement has not been implemented so far. Therefore, its effect is terminated,” Kremlin spokesperson Dmitry Peskov said, in Google-translated comments reported by Russian state news agency Tass on Monday.\"}},{\"id\":\"NLLn0-Bo7m\",\"type\":\"paragraph\",\"data\":{\"text\":\"Moscow has officially notified Ankara, Kyiv and the U.N. secretariat that it opposed extending the initiative, Tass cited Russian Foreign Ministry spokeswoman Maria Zakharova as saying on a&nbsp;<a href=\\\"https://t.me/tass_agency/201302\\\" target=\\\"_blank\\\">Google-translated Telegram post</a>&nbsp;of the news organization.\"}},{\"id\":\"lmuQOFcWGU\",\"type\":\"paragraph\",\"data\":{\"text\":\"“Only if concrete results are received, not promises and assurances, will Russia be ready to consider resuming the ‘deal,’” the Russian Ministry of Foreign Affairs said in a&nbsp;<a href=\\\"https://www.facebook.com/MIDRussia/posts/pfbid02mEkSdu6n66ECh484Hgukho2WggfB6Prq11Z1WvYQbNJCCTrrdtoXUKNeRmSBgBTyl\\\" target=\\\"_blank\\\">Monday statement on Facebook</a>, according to a Google translation. It stressed that the agreement expires on July 18 and was only “directed to serve the narrow self-interests” of Kyiv and its Western allies.\"}},{\"id\":\"tS9CmIpk-b\",\"type\":\"paragraph\",\"data\":{\"text\":\"Peskov said that Moscow’s objection to prolonging the grain deal was communicated even before an explosion on a Crimean bridge that reportedly killed two and halted traffic — which Russian-backed officials have called a “terrorist attack” and blamed on Ukraine.\"}},{\"id\":\"reAkuhJqBl\",\"type\":\"paragraph\",\"data\":{\"text\":\"The European Union has condemned the Kremlin’s withdrawal from the agreement.\"}},{\"id\":\"mhFPRcbYZ6\",\"type\":\"paragraph\",\"data\":{\"text\":\"“I strongly condemn Russia’s cynical move to terminate the Black Sea Grain Initiative, despite UN &amp; Türkiye’s efforts,” European Commission President Ursula von der Leyen said on Twitter on Monday. “EU is working to ensure food security for the world’s vulnerable.”\"}},{\"id\":\"qLxZynbWFk\",\"type\":\"header\",\"data\":{\"text\":\"<a></a>Wheat’s at stake\",\"level\":2}},{\"id\":\"fIjd3kgIaL\",\"type\":\"paragraph\",\"data\":{\"text\":\"Wheat prices jumped 3.5% as the news broke.\"}},{\"id\":\"jAVB1RAzJG\",\"type\":\"paragraph\",\"data\":{\"text\":\"“Ukraine will now be forced to export most of its grains and oilseeds through its land borders and Danube ports. This will significantly drive up transportation costs and pile further pressure on Ukrainian farmers’ profits. The knock-on effect of this is it could prompt them to plant less next season, placing further pressure on supplies going forward,” said Carlos Mera, head of the agri commodities markets at Rabobank, in emailed comments.\"}},{\"id\":\"JKc_FgzqkY\",\"type\":\"paragraph\",\"data\":{\"text\":\"Simon Evenett, a professor of international trade and economic development at the University of St. Gallen, said that Russia’s announcement is the “coup de grace on a deal that was on its last legs.”\"}},{\"id\":\"FmpYgKIW9j\",\"type\":\"paragraph\",\"data\":{\"text\":\"“Shipments have been falling steadily this year,” he added.\"}},{\"id\":\"M0zYeQSnve\",\"type\":\"paragraph\",\"data\":{\"text\":\"The grain pact allowed the export of commercial food and fertilizer supplies, including ammonia, from three Ukrainian ports on the Black Sea – Odesa, Chornomorsk and Pivdennyi, previously known as Yuzhny.\"}},{\"id\":\"mG6dttHaLN\",\"type\":\"paragraph\",\"data\":{\"text\":\"Cargo ships proceed through the agreed humanitarian corridor to Istanbul, one of the busiest ports of Turkey, whose administration under President Recep Tayyip Erdogan has been deeply immersed in the negotiations.\"}},{\"id\":\"QAkBweKu2P\",\"type\":\"paragraph\",\"data\":{\"text\":\"Following the announcement, Erdogan on Monday expressed his belief that his Kremlin counterpart Putin wants to continue the Black Sea Grain Initiative, hailing the agreement as a diplomatic success, according to a Google translation of comments reported by Turkish state news agency Anadolu on Telegram. Erdogan added that he will hold phone talks with Putin on the topic ahead of their anticipated in-person meeting in August, and that the Turkish and Russian foreign ministers will likewise discuss the agreement.\"}},{\"id\":\"YcBsMSoOXX\",\"type\":\"paragraph\",\"data\":{\"text\":\"Erdogan’s entreaties may enjoy a frosty reception, after Turkey last week dealt an indirect blow to Moscow by finally endorsing the NATO membership bid of Sweden during a meeting of the military alliance in Vilnius, Lithuania.\"}},{\"id\":\"4WCtD_BYze\",\"type\":\"paragraph\",\"data\":{\"text\":\"“Russia would have you believe it is being forced to end a deal that, in fact, it benefits from – a deal designed to alleviate some of the global consequences of its war of choice,” Michael Carpenter, U.S. ambassador to the Organization for Security and Cooperation in Europe,&nbsp;<a href=\\\"https://osce.usmission.gov/the-russian-federations-ongoing-aggression-against-ukraine-59/\\\" target=\\\"_blank\\\">said on July 13</a>, estimating that over 32 million tons of grain and food reached global markets to date as a result of the deal.\"}},{\"id\":\"fpFjaxxVut\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Russian Rusgrain union&nbsp;<a href=\\\"https://t.me/rusgrain/2064\\\" target=\\\"_blank\\\">said on Telegram</a>&nbsp;that it plans to continue supplying its customers as part of its commitment to fight world hunger, irrespective of the Ukraine deal development.\"}},{\"id\":\"mi0SjYoicN\",\"type\":\"paragraph\",\"data\":{\"text\":\"“All contractual obligations of Russian grain exporters will be fulfilled,” it said, according to a Google translation.\"}},{\"id\":\"U36vge__9Z\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Inflation</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/07/17/russia-says-it-will-not-extend-the-landmark-ukraine-grain-deal.html",
+    "utcStartDateTime": "2023-07-17T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-18T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-17T18:45:35.464Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 359,
+        "thumbName": "66c6d687-5cd2-4d43-8b95-c2acc1eac30f-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107272224-1689585640573-gettyimages-1251552534-AFP_33CZ3LF.jpeg?v=1689599834&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 117,
+        "address": "Ukraine",
+        "order": 0,
+        "pinId": 472
+      }
+    ],
+    "mentions": [
+      {
+        "id": 264,
+        "tag": "#inflation",
+        "pinId": 472
       }
     ],
     "userId": 1
@@ -12558,12 +12602,12 @@
     "mentions": [
       {
         "id": 199,
-        "tag": "#Chips",
+        "tag": "#Gallium",
         "pinId": 440
       },
       {
         "id": 200,
-        "tag": "#Gallium",
+        "tag": "#Chips",
         "pinId": 440
       },
       {
@@ -12626,14 +12670,14 @@
     "locations": [
       {
         "id": 81,
-        "address": "Egypt Country",
-        "order": 1,
+        "address": "South Asia Subregion",
+        "order": 0,
         "pinId": 148
       },
       {
         "id": 82,
-        "address": "South Asia Subregion",
-        "order": 0,
+        "address": "Egypt Country",
+        "order": 1,
         "pinId": 148
       }
     ],
@@ -13194,18 +13238,18 @@
     "merchants": [
       {
         "id": 56,
-        "label": "Gamestop Power Up save $5 per Month on Gift Cards",
-        "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007593&type=3&subid=",
-        "price": 24.99,
-        "order": 1,
-        "pinId": 241
-      },
-      {
-        "id": 57,
         "label": "Gamestop Steam Gift Card",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fgift-cards%2Fproducts%2Fvalve-steam-wallet-card-20%2F215593.html",
         "price": 20,
         "order": 0,
+        "pinId": 241
+      },
+      {
+        "id": 57,
+        "label": "Gamestop Power Up save $5 per Month on Gift Cards",
+        "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007593&type=3&subid=",
+        "price": 24.99,
+        "order": 1,
         "pinId": 241
       }
     ],
@@ -13275,12 +13319,12 @@
     "mentions": [
       {
         "id": 217,
-        "tag": "#Crash",
+        "tag": "#UnemploymentRate",
         "pinId": 306
       },
       {
         "id": 218,
-        "tag": "#UnemploymentRate",
+        "tag": "#Crash",
         "pinId": 306
       }
     ],
@@ -13428,22 +13472,22 @@
     "mentions": [
       {
         "id": 222,
-        "tag": "$ED",
-        "pinId": 376
-      },
-      {
-        "id": 223,
         "tag": "$NEE",
         "pinId": 376
       },
       {
+        "id": 223,
+        "tag": "$ED",
+        "pinId": 376
+      },
+      {
         "id": 224,
-        "tag": "$ETRN",
+        "tag": "#Pipeliine",
         "pinId": 376
       },
       {
         "id": 225,
-        "tag": "#Pipeliine",
+        "tag": "$ETRN",
         "pinId": 376
       }
     ],
@@ -13546,7 +13590,7 @@
     "mentions": [
       {
         "id": 228,
-        "tag": "#AI",
+        "tag": "#GPU",
         "pinId": 289
       },
       {
@@ -13556,7 +13600,7 @@
       },
       {
         "id": 230,
-        "tag": "#GPU",
+        "tag": "#AI",
         "pinId": 289
       }
     ],
@@ -13605,12 +13649,12 @@
     "mentions": [
       {
         "id": 231,
-        "tag": "#CarryTrade",
+        "tag": "#Crash",
         "pinId": 342
       },
       {
         "id": 232,
-        "tag": "#Crash",
+        "tag": "#CarryTrade",
         "pinId": 342
       }
     ],
@@ -13794,12 +13838,12 @@
     "mentions": [
       {
         "id": 235,
-        "tag": "$NTDOY",
+        "tag": "#Switch",
         "pinId": 454
       },
       {
         "id": 236,
-        "tag": "#Switch",
+        "tag": "$NTDOY",
         "pinId": 454
       }
     ],
@@ -14938,8 +14982,8 @@
     "locations": [
       {
         "id": 105,
-        "address": "Hwaseong",
-        "order": 1,
+        "address": "Austin, USA",
+        "order": 3,
         "pinId": 424
       },
       {
@@ -14950,32 +14994,32 @@
       },
       {
         "id": 107,
-        "address": "Taylor, USA",
-        "order": 4,
+        "address": "Hwaseong",
+        "order": 1,
         "pinId": 424
       },
       {
         "id": 108,
-        "address": "Austin, USA",
-        "order": 3,
+        "address": "Pyeongtaek",
+        "order": 2,
         "pinId": 424
       },
       {
         "id": 109,
-        "address": "Pyeongtaek",
-        "order": 2,
+        "address": "Taylor, USA",
+        "order": 4,
         "pinId": 424
       }
     ],
     "mentions": [
       {
         "id": 251,
-        "tag": "$EWY",
+        "tag": "#Chips",
         "pinId": 424
       },
       {
         "id": 252,
-        "tag": "#Chips",
+        "tag": "$EWY",
         "pinId": 424
       }
     ],
@@ -15140,22 +15184,22 @@
     "mentions": [
       {
         "id": 256,
-        "tag": "$MSFT",
-        "pinId": 457
-      },
-      {
-        "id": 257,
-        "tag": "#PlayStation",
-        "pinId": 457
-      },
-      {
-        "id": 258,
         "tag": "$SONY",
         "pinId": 457
       },
       {
-        "id": 259,
+        "id": 257,
+        "tag": "$MSFT",
+        "pinId": 457
+      },
+      {
+        "id": 258,
         "tag": "#Xbox",
+        "pinId": 457
+      },
+      {
+        "id": 259,
+        "tag": "#PlayStation",
         "pinId": 457
       }
     ],
