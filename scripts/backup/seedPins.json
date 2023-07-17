@@ -2853,6 +2853,50 @@
     "userId": 1
   },
   {
+    "id": 473,
+    "rootThread": false,
+    "title": "China's frail Q2 GDP growth raises urgency for more policy support",
+    "description": "<p class=\"paragraph\"> GDP grows 0.8% q/q in Q2, vs 2.2% in Q1, shows slowing momentum. </p><p class=\"paragraph\"> GDP expands 6.3% y/y in Q2 due to low base effects.  </p><p class=\"paragraph\"> Frail data raises urgency to unveil more policy steps.  </p><p class=\"paragraph\"> Policymakers seen avoiding aggressive stimulus due to debt risks </p><p class=\"paragraph\"> Property investment slumped 20.6% in June year-on-year after a 21.5% drop in May, according to Reuters calculations. </p><p class=\"paragraph\"> Youth jobless rate climbed to 21.3% in June from 20.8% in May, a new record high, as graduates scrambled for limited offers during the job hunting season. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Crash</chronohash> </p>",
+    "sourceDescription": "{\"time\":1689620659500,\"blocks\":[{\"id\":\"P8EyRz7J-h\",\"type\":\"paragraph\",\"data\":{\"text\":\"GDP grows 0.8% q/q in Q2, vs 2.2% in Q1, shows slowing momentum.\"}},{\"id\":\"n-P_X9uLWI\",\"type\":\"paragraph\",\"data\":{\"text\":\"GDP expands 6.3% y/y in Q2 due to low base effects. \"}},{\"id\":\"EmYCBI1UsN\",\"type\":\"paragraph\",\"data\":{\"text\":\"Frail data raises urgency to unveil more policy steps. \"}},{\"id\":\"deNnCYAYKM\",\"type\":\"paragraph\",\"data\":{\"text\":\"Policymakers seen avoiding aggressive stimulus due to debt risks\"}},{\"id\":\"kcq_PUik2v\",\"type\":\"paragraph\",\"data\":{\"text\":\"Property investment slumped 20.6% in June year-on-year after a 21.5% drop in May, according to Reuters calculations.\"}},{\"id\":\"rXC8zwRwEt\",\"type\":\"paragraph\",\"data\":{\"text\":\"Youth jobless rate climbed to 21.3% in June from 20.8% in May, a new record high, as graduates scrambled for limited offers during the job hunting season.\"}},{\"id\":\"Tr1d7n4YSj\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Crash</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.reuters.com/world/china/chinas-q2-gdp-growth-slows-08-qq-just-above-expectations-2023-07-17/",
+    "utcStartDateTime": "2017-05-15T07:00:00.000Z",
+    "utcEndDateTime": "2017-05-16T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-17T19:05:12.345Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 360,
+        "thumbName": "fa0cb813-b37c-4afe-8dc3-7a511ff156f7-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 523,
+        "originalUrl": "https://www.reuters.com/resizer/za9jC-d741zDip7BryiZkaJum-E=/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/ZKBLDNJV3BKRTELDVYZNYQTYGA.jpg",
+        "originalWidth": 1200,
+        "originalHeight": 628,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 118,
+        "address": "Chiina",
+        "order": 0,
+        "pinId": 473
+      }
+    ],
+    "mentions": [
+      {
+        "id": 265,
+        "tag": "#Crash",
+        "pinId": 473
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 80,
     "rootThread": false,
     "title": "Microsoft Says New Surface Pro is 1.7× Faster Than iPad Pro With 35% More Battery Life",
