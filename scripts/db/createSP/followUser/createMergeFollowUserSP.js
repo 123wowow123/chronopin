@@ -86,7 +86,6 @@ BEGIN
     )
     ON r.userId = foo.userId
       AND r.followingUserId = foo.followingUserId
-      AND r.utcCreatedDateTime = foo.utcCreatedDateTime
     WHEN MATCHED THEN
       UPDATE SET
         utcCheckedDateTime = foo.utcCheckedDateTime

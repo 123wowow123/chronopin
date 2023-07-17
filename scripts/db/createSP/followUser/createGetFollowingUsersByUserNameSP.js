@@ -55,7 +55,7 @@ function executeCreateSP() {
               JOIN [dbo].[User] AS ThisUser
                 ON [FollowUser].userId = [ThisUser].id
               JOIN [dbo].[User] AS FollowingUser
-                ON [FollowUser].followingUserId = [FollowingUser].id
+                ON [FollowUser].followingUserId = FollowingUser.id
 
             WHERE [ThisUser].userName = @userName;
 

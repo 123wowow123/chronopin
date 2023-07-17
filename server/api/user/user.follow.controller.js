@@ -52,12 +52,12 @@ export function index(req, res) {
 
 export function create(req, res, next) {
   const userName = req.query.userName;
-  let userId = req.user && +req.user.id;
+  const userId = req.user && +req.user.id;
 
   return User.getUserByUserName(userName)
     .then(followingUserRes => {
-      let followingUser = followingUserRes.user;
-      let newFollowUser = new FollowUser({
+      const followingUser = followingUserRes.user;
+      const newFollowUser = new FollowUser({
         userId
       }).setFollowUser(followingUser);
 

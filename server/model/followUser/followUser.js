@@ -252,7 +252,7 @@ function _upsertMSSQL(followUser) {
       return new Promise(function (resolve, reject) {
         const StoredProcedureName = 'CreateMergeFollowUser';
         let request = new mssql.Request(conn)
-          .input('userId', mssql.Bit, followUser.userId)
+          .input('userId', mssql.Int, followUser.userId)
           .input('followingUserId', mssql.Int, followUser.followingUserId)
           .input('utcCreatedDateTime', mssql.DateTime2(7), followUser.utcCreatedDateTime)
           .input('utcCheckedDateTime', mssql.DateTime2(7), followUser.utcCheckedDateTime)
