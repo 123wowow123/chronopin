@@ -12,7 +12,6 @@ Before Usable Bug:
 
 Before Usable:
 Comment cleanup/backup +
-follow notification
 countdown on pin page
 
 Bugs:
@@ -35,12 +34,17 @@ https://www.chronopin.com/settings should be behind login
 animated gif height issue it's streched out
 
 
-sentiment score
+
 scrollbar sentiment heatmap
 topical tag and sectioning
 Pro tip field
 small pins mode
 max pain for stocks
+
+Tag autocomplete ++
+sentiment score
+user submitted sentiment score
+show follows content only
 
 
 TD:
