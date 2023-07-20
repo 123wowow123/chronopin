@@ -19,6 +19,13 @@ spec:
       containers:
       - name: chronopin
         image: us-west1-docker.pkg.dev/chronopin-209507/chronopin-web/chronopin:latest
+        resources:
+          requests:
+            memory: "500Mi"
+            cpu: "0.2"
+          limits:
+            memory: "2000Mi"
+            cpu: "0.5"
         imagePullPolicy: Always
         ports:
         - containerPort: 9000
@@ -68,6 +75,13 @@ spec:
       containers:
       - name: chronopin-comment
         image: us-west1-docker.pkg.dev/chronopin-209507/chronopin-comment/isso:latest
+        resources:
+          requests:
+            memory: "250Mi"
+            cpu: "0.1"
+          limits:
+            memory: "500Mi"
+            cpu: "0.5"
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -83,8 +97,6 @@ spec:
             port: 8080
           initialDelaySeconds: 30
           timeoutSeconds: 5
-          # command: ["/bin/mkdir", "-p", "/db"]
-          # command: ["/bin/sh", "-c", "mkdir -p 'config/' && printf '[general]\ndbpath = /db/comments.db\nhost =\n    http://localhost:9000/\n    http://www.chronopin.com/\n    https://www.chronopin.com/' > config/isso.cfg && cat 'config/isso.cfg'"]
       imagePullSecrets:
       - name: regcred
       volumes:

@@ -111,6 +111,10 @@ movie review integration +
 Notification when other people comment on your post for comment reply
 Quoted embed pins
 
+copying below becomes link
+#SunnyOptical
+https://twitter.com/YuanTalks/status/1681868766924386304
+
 trending tags and search query on side pane +
 $tag should show posted time ticker price as well as current price eg: +
 https://www.marketwatch.com/story/big-apple-microsoft-names-back-stock-picking-site?dist=msr_10
