@@ -2237,12 +2237,12 @@
     "mentions": [
       {
         "id": 15,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 332
       },
       {
         "id": 16,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 332
       }
     ],
@@ -2371,12 +2371,12 @@
     "mentions": [
       {
         "id": 19,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 333
       },
       {
         "id": 20,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 333
       }
     ],
@@ -2522,12 +2522,12 @@
     "mentions": [
       {
         "id": 21,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 334
       },
       {
         "id": 22,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 334
       }
     ],
@@ -3817,12 +3817,12 @@
     "mentions": [
       {
         "id": 27,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 335
       },
       {
         "id": 28,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 335
       }
     ],
@@ -4586,12 +4586,12 @@
     "mentions": [
       {
         "id": 42,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 337
       },
       {
         "id": 43,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 337
       }
     ],
@@ -5097,12 +5097,12 @@
       },
       {
         "id": 50,
-        "tag": "$208",
+        "tag": "$100",
         "pinId": 135
       },
       {
         "id": 51,
-        "tag": "$100",
+        "tag": "$208",
         "pinId": 135
       }
     ],
@@ -5330,12 +5330,12 @@
     "mentions": [
       {
         "id": 55,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 339
       },
       {
         "id": 56,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 339
       }
     ],
@@ -7147,14 +7147,6 @@
     "merchants": [
       {
         "id": 32,
-        "label": "UPPAbaby VISTA Upper Adapters",
-        "url": "https://amzn.to/3WBMhBj",
-        "price": 29.99,
-        "order": 2,
-        "pinId": 226
-      },
-      {
-        "id": 33,
         "label": "Plushible Halloween Candy Bags",
         "url": "https://a.co/d/4jQwcnc",
         "price": 19.99,
@@ -7162,19 +7154,27 @@
         "pinId": 226
       },
       {
-        "id": 34,
-        "label": "Tegion Reusable Silicone Straws",
-        "url": "https://a.co/d/fTIFcq4",
-        "price": 11.99,
-        "order": 1,
+        "id": 33,
+        "label": "UPPAbaby VISTA Upper Adapters",
+        "url": "https://amzn.to/3WBMhBj",
+        "price": 29.99,
+        "order": 2,
         "pinId": 226
       },
       {
-        "id": 35,
+        "id": 34,
         "label": "Doctor's Best DHA 500",
         "url": "https://a.co/d/e0Ibvji",
         "price": 40.45,
         "order": 3,
+        "pinId": 226
+      },
+      {
+        "id": 35,
+        "label": "Tegion Reusable Silicone Straws",
+        "url": "https://a.co/d/fTIFcq4",
+        "price": 11.99,
+        "order": 1,
         "pinId": 226
       },
       {
@@ -7300,7 +7300,7 @@
       },
       {
         "id": 67,
-        "tag": "$NVDA",
+        "tag": "$KLAC",
         "pinId": 433
       },
       {
@@ -7315,17 +7315,17 @@
       },
       {
         "id": 70,
-        "tag": "$LRCX",
+        "tag": "$NVDA",
         "pinId": 433
       },
       {
         "id": 71,
-        "tag": "$KLAC",
+        "tag": "$ASML",
         "pinId": 433
       },
       {
         "id": 72,
-        "tag": "$ASML",
+        "tag": "$LRCX",
         "pinId": 433
       }
     ],
@@ -7419,32 +7419,32 @@
     "locations": [
       {
         "id": 20,
+        "address": "ARIA, Las Vegas",
+        "order": 4,
+        "pinId": 350
+      },
+      {
+        "id": 21,
         "address": "Venetian, Las Vegas",
         "order": 3,
         "pinId": 350
       },
       {
-        "id": 21,
-        "address": "LVCC West Hall, Las Vegas",
-        "order": 1,
-        "pinId": 350
-      },
-      {
         "id": 22,
-        "address": "LVCC Central Hall, Las Vegas",
-        "order": 0,
-        "pinId": 350
-      },
-      {
-        "id": 23,
         "address": "LVCC North Hall, Las Vegas",
         "order": 2,
         "pinId": 350
       },
       {
+        "id": 23,
+        "address": "LVCC West Hall, Las Vegas",
+        "order": 1,
+        "pinId": 350
+      },
+      {
         "id": 24,
-        "address": "ARIA, Las Vegas",
-        "order": 4,
+        "address": "LVCC Central Hall, Las Vegas",
+        "order": 0,
         "pinId": 350
       }
     ],
@@ -7482,14 +7482,14 @@
     "locations": [
       {
         "id": 25,
-        "address": "Montefiore Medical Center, New York",
-        "order": 1,
+        "address": "Mount Sinai Hospital, New York",
+        "order": 0,
         "pinId": 364
       },
       {
         "id": 26,
-        "address": "Mount Sinai Hospital, New York",
-        "order": 0,
+        "address": "Montefiore Medical Center, New York",
+        "order": 1,
         "pinId": 364
       }
     ],
@@ -7679,12 +7679,12 @@
     "mentions": [
       {
         "id": 75,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 235
       },
       {
         "id": 76,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 235
       }
     ],
@@ -7793,12 +7793,12 @@
     "mentions": [
       {
         "id": 77,
-        "tag": "#Stike",
+        "tag": "#Europe",
         "pinId": 365
       },
       {
         "id": 78,
-        "tag": "#Europe",
+        "tag": "#Stike",
         "pinId": 365
       }
     ],
@@ -7956,18 +7956,18 @@
     "merchants": [
       {
         "id": 44,
-        "label": "GameStop: Sony PlayStation VR2",
-        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2%2F393118.html",
-        "price": 549.99,
-        "order": 0,
-        "pinId": 142
-      },
-      {
-        "id": 45,
         "label": "Gamestop Power Up get exclusive offers, earn monthly rewards and more",
         "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007594&type=3&subid=",
         "price": 24.99,
         "order": 2,
+        "pinId": 142
+      },
+      {
+        "id": 45,
+        "label": "GameStop: Sony PlayStation VR2",
+        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2%2F393118.html",
+        "price": 549.99,
+        "order": 0,
         "pinId": 142
       },
       {
@@ -8021,12 +8021,12 @@
     "mentions": [
       {
         "id": 80,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 234
       },
       {
         "id": 81,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 234
       }
     ],
@@ -8129,12 +8129,12 @@
     "mentions": [
       {
         "id": 82,
-        "tag": "#BTFP",
+        "tag": "#Liquidity",
         "pinId": 421
       },
       {
         "id": 83,
-        "tag": "#Liquidity",
+        "tag": "#BTFP",
         "pinId": 421
       }
     ],
@@ -8435,12 +8435,12 @@
     "mentions": [
       {
         "id": 89,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 232
       },
       {
         "id": 90,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 232
       }
     ],
@@ -8845,12 +8845,12 @@
     "mentions": [
       {
         "id": 91,
-        "tag": "#Liquidity",
+        "tag": "#BTFP",
         "pinId": 420
       },
       {
         "id": 92,
-        "tag": "#BTFP",
+        "tag": "#Liquidity",
         "pinId": 420
       }
     ],
@@ -8985,7 +8985,7 @@
     "utcEndDateTime": "2023-05-03T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-14T18:46:10.657Z",
-    "sentimentScore": 0.04199941456317902,
+    "sentimentScore": 0.04199941456317903,
     "user": {
       "id": 3,
       "userName": "@PrinceAnime"
@@ -9020,33 +9020,33 @@
     ],
     "locations": [
       {
-        "id": 128,
+        "id": 32,
         "address": "Culver City",
         "order": 0,
         "pinId": 361
       },
       {
-        "id": 129,
+        "id": 33,
+        "address": "Los Angeles",
+        "order": 3,
+        "pinId": 361
+      },
+      {
+        "id": 34,
         "address": "New York City",
         "order": 2,
         "pinId": 361
       },
       {
-        "id": 130,
+        "id": 35,
         "address": "Burbank",
         "order": 1,
-        "pinId": 361
-      },
-      {
-        "id": 131,
-        "address": "Los Angeles",
-        "order": 3,
         "pinId": 361
       }
     ],
     "mentions": [
       {
-        "id": 278,
+        "id": 97,
         "tag": "#Strike",
         "pinId": 361
       }
@@ -9265,7 +9265,7 @@
     "mentions": [
       {
         "id": 100,
-        "tag": "$TSLA",
+        "tag": "$AAPL",
         "pinId": 210
       },
       {
@@ -9275,17 +9275,17 @@
       },
       {
         "id": 102,
-        "tag": "$MSFT",
+        "tag": "$TSLA",
         "pinId": 210
       },
       {
         "id": 103,
-        "tag": "$AAPL",
+        "tag": "$AMZN",
         "pinId": 210
       },
       {
         "id": 104,
-        "tag": "$AMZN",
+        "tag": "$MSFT",
         "pinId": 210
       },
       {
@@ -9295,12 +9295,12 @@
       },
       {
         "id": 106,
-        "tag": "$GOOG",
+        "tag": "$META",
         "pinId": 210
       },
       {
         "id": 107,
-        "tag": "$META",
+        "tag": "$GOOG",
         "pinId": 210
       }
     ],
@@ -9604,7 +9604,7 @@
     "allDay": true,
     "utcCreatedDateTime": "2023-05-31T17:40:25.666Z",
     "utcUpdatedDateTime": "2023-06-09T23:48:53.902Z",
-    "sentimentScore": 0.04281658306717873,
+    "sentimentScore": 0.04281658306717874,
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -9666,12 +9666,12 @@
     "mentions": [
       {
         "id": 111,
-        "tag": "#CoincidentEconomicIndicator",
+        "tag": "#indicator",
         "pinId": 229
       },
       {
         "id": 112,
-        "tag": "#indicator",
+        "tag": "#CoincidentEconomicIndicator",
         "pinId": 229
       }
     ],
@@ -9747,12 +9747,12 @@
     "mentions": [
       {
         "id": 115,
-        "tag": "#BTFP",
+        "tag": "#Liquidity",
         "pinId": 418
       },
       {
         "id": 116,
-        "tag": "#Liquidity",
+        "tag": "#BTFP",
         "pinId": 418
       }
     ],
@@ -9829,12 +9829,12 @@
     "mentions": [
       {
         "id": 118,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 231
       },
       {
         "id": 119,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 231
       }
     ],
@@ -9981,12 +9981,12 @@
     "mentions": [
       {
         "id": 122,
-        "tag": "#ETI",
+        "tag": "#LeadingIndicator",
         "pinId": 449
       },
       {
         "id": 123,
-        "tag": "#LeadingIndicator",
+        "tag": "#ETI",
         "pinId": 449
       }
     ],
@@ -10825,12 +10825,12 @@
     "mentions": [
       {
         "id": 136,
-        "tag": "#PBOC",
+        "tag": "#Rate",
         "pinId": 425
       },
       {
         "id": 137,
-        "tag": "#Rate",
+        "tag": "#PBOC",
         "pinId": 425
       }
     ],
@@ -11327,17 +11327,17 @@
     "mentions": [
       {
         "id": 147,
-        "tag": "#Strike",
+        "tag": "$BA",
         "pinId": 360
       },
       {
         "id": 148,
-        "tag": "$SPR",
+        "tag": "#Strike",
         "pinId": 360
       },
       {
         "id": 149,
-        "tag": "$BA",
+        "tag": "$SPR",
         "pinId": 360
       }
     ],
@@ -11385,17 +11385,17 @@
       },
       {
         "id": 152,
-        "tag": "$STLA",
-        "pinId": 366
-      },
-      {
-        "id": 153,
         "tag": "$F",
         "pinId": 366
       },
       {
-        "id": 154,
+        "id": 153,
         "tag": "$TM",
+        "pinId": 366
+      },
+      {
+        "id": 154,
+        "tag": "$STLA",
         "pinId": 366
       },
       {
@@ -11738,38 +11738,38 @@
     "locations": [
       {
         "id": 59,
+        "address": "Montana",
+        "order": 5,
+        "pinId": 401
+      },
+      {
+        "id": 60,
         "address": "Idaho",
         "order": 6,
         "pinId": 401
       },
       {
-        "id": 60,
+        "id": 61,
         "address": "Sevierville, Tennessee",
         "order": 4,
         "pinId": 401
       },
       {
-        "id": 61,
+        "id": 62,
         "address": "Uvalde",
         "order": 3,
         "pinId": 401
       },
       {
-        "id": 62,
-        "address": "Oregon",
-        "order": 7,
-        "pinId": 401
-      },
-      {
         "id": 63,
-        "address": "Austin",
-        "order": 1,
+        "address": "San Antonio",
+        "order": 2,
         "pinId": 401
       },
       {
         "id": 64,
-        "address": "San Antonio",
-        "order": 2,
+        "address": "Austin",
+        "order": 1,
         "pinId": 401
       },
       {
@@ -11780,8 +11780,8 @@
       },
       {
         "id": 66,
-        "address": "Montana",
-        "order": 5,
+        "address": "Oregon",
+        "order": 7,
         "pinId": 401
       }
     ],
@@ -11929,12 +11929,12 @@
     "mentions": [
       {
         "id": 171,
-        "tag": "$AMZN",
+        "tag": "#Crash",
         "pinId": 403
       },
       {
         "id": 172,
-        "tag": "$META",
+        "tag": "$AMZN",
         "pinId": 403
       },
       {
@@ -11944,7 +11944,7 @@
       },
       {
         "id": 174,
-        "tag": "#Crash",
+        "tag": "$META",
         "pinId": 403
       },
       {
@@ -11954,12 +11954,12 @@
       },
       {
         "id": 176,
-        "tag": "$QQQ",
+        "tag": "$GOOGL",
         "pinId": 403
       },
       {
         "id": 177,
-        "tag": "$GOOGL",
+        "tag": "$QQQ",
         "pinId": 403
       },
       {
@@ -12000,12 +12000,12 @@
     "mentions": [
       {
         "id": 179,
-        "tag": "#Liquidity",
+        "tag": "#Crash",
         "pinId": 416
       },
       {
         "id": 180,
-        "tag": "#Crash",
+        "tag": "#Liquidity",
         "pinId": 416
       }
     ],
@@ -12020,9 +12020,11 @@
     "sourceUrl": "https://www.wsj.com/articles/supreme-court-strikes-down-bidens-student-loan-forgiveness-plan-54a1ca7",
     "price": 430000000000,
     "utcStartDateTime": "2023-06-30T07:00:00.000Z",
-    "utcEndDateTime": "2023-07-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-02T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-30T17:47:52.125Z",
+    "utcUpdatedDateTime": "2023-07-20T04:43:58.102Z",
+    "sentimentScore": -0.43901498243212694,
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -12583,14 +12585,14 @@
     "locations": [
       {
         "id": 78,
-        "address": "Los Angeles",
-        "order": 0,
+        "address": "Santa Monica",
+        "order": 1,
         "pinId": 437
       },
       {
         "id": 79,
-        "address": "Santa Monica",
-        "order": 1,
+        "address": "Los Angeles",
+        "order": 0,
         "pinId": 437
       }
     ],
@@ -12949,12 +12951,12 @@
     "mentions": [
       {
         "id": 200,
-        "tag": "#StudentDebt",
+        "tag": "#inflation",
         "pinId": 469
       },
       {
         "id": 201,
-        "tag": "#inflation",
+        "tag": "#StudentDebt",
         "pinId": 469
       }
     ],
@@ -13274,12 +13276,12 @@
     "mentions": [
       {
         "id": 210,
-        "tag": "#Bearish",
+        "tag": "#RE",
         "pinId": 474
       },
       {
         "id": 211,
-        "tag": "#RE",
+        "tag": "#Bearish",
         "pinId": 474
       }
     ],
@@ -13293,10 +13295,11 @@
     "sourceDescription": "{\"time\":1688490655007,\"blocks\":[{\"id\":\"lEcB8pREl2\",\"type\":\"paragraph\",\"data\":{\"text\":\"China is restricting the exports of two metals key to the manufacturing of semiconductors,&nbsp;<a href=\\\"http://www.mofcom.gov.cn/article/zwgk/gkzcfb/202307/20230703419666.shtml\\\" target=\\\"_blank\\\">its commerce ministry said late Monday</a>, escalating a technological trade war with Europe and the United States over access to microchips.\"}},{\"id\":\"FCF7K7fNp1\",\"type\":\"paragraph\",\"data\":{\"text\":\"These new regulations — imposed on grounds of national security — will require exporters to seek a license to ship some gallium and germanium compounds starting Aug. 1, China’s commerce ministry&nbsp;<a href=\\\"http://www.mofcom.gov.cn/article/zwgk/gkzcfb/202307/20230703419666.shtml\\\" target=\\\"_blank\\\">said</a>. Applications for these export licenses must identify importers and end users and stipulate how these metals will be used.\"}},{\"id\":\"0Rzd-5cDj2\",\"type\":\"paragraph\",\"data\":{\"text\":\"This move is part of an intensifying global&nbsp;<a href=\\\"https://www.cnbc.com/2023/07/03/eu-japan-look-to-partner-on-ai-chips-amid-china-de-risking-push.html\\\">battle for technological supremacy</a>&nbsp;— with China as the world’s largest source of both metals, according to a European Union study on critical raw materials this year.\"}},{\"id\":\"cObEVwcWgC\",\"type\":\"paragraph\",\"data\":{\"text\":\"Shares of Chinese germanium producers soared on Tuesday. At the midday trading break, Yunnan Lincang Xinyuan Germanium Industrial surged by the 10% limit in Shenzhen, while&nbsp;<a href=\\\"https://www.cnbc.com/quotes/497-SZ/\\\">Yunnan Chihong Zinc &amp; Germanium</a>&nbsp;pared earlier gains but was still 7.5% higher. Both are outperforming the 0.1% gain for the CSI 300 index of China’s largest A-share listings.\"}},{\"id\":\"bCg1zgOqEn\",\"type\":\"paragraph\",\"data\":{\"text\":\"In October, the U.S. launched&nbsp;<a href=\\\"https://www.cnbc.com/2022/10/10/chinese-chip-stocks-tumble-after-us-calls-for-new-curbs-on-high-end-tech.html\\\">sweeping rules</a>&nbsp;aimed at&nbsp;<a href=\\\"https://www.cnbc.com/2022/10/12/us-chip-export-restrictions-could-hobble-chinas-semiconductor-goals.html\\\">cutting off exports</a>&nbsp;of key chips and semiconductor tools to China. The measures are believed to have the potential to&nbsp;<a href=\\\"https://www.cnbc.com/2022/10/12/us-chip-export-restrictions-could-hobble-chinas-semiconductor-goals.html\\\">cripple China’s ambitions</a>&nbsp;to boost its domestic technology industries. The U.S. has also lobbied key chipmaking nations and allies, like the Netherlands and Japan,&nbsp;<a href=\\\"https://www.cnbc.com/2022/12/05/us-ramps-up-pressure-on-netherlands-to-fall-in-line-with-china-chip-policy.html\\\">to introduce export restrictions of their own</a>.\"}},{\"id\":\"GN82xp9URm\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Netherlands responded Friday with&nbsp;<a href=\\\"https://www.cnbc.com/2023/06/30/netherlands-follows-us-with-semiconductor-export-restrictions-.html\\\">new export restrictions</a>&nbsp;on advanced semiconductor equipment. This will effectively bar&nbsp;<a href=\\\"https://www.cnbc.com/2022/03/23/inside-asml-the-company-advanced-chipmakers-use-for-euv-lithography.html\\\">ASML</a>&nbsp;from exporting to China. But these latest Dutch curbs do not specifically target ASML,&nbsp;<a href=\\\"https://www.cnbc.com/2022/03/23/inside-asml-the-company-advanced-chipmakers-use-for-euv-lithography.html\\\">one of the most important semiconductor companies in the world</a>.\"}},{\"id\":\"9DRS49APqc\",\"type\":\"paragraph\",\"data\":{\"text\":\"Some countries are also trying to secure their own supply chains and build up their domestic chip industries, focusing on areas where they are traditionally strong. Last week, a fund backed by the Japanese government&nbsp;<a href=\\\"https://www.cnbc.com/2023/06/26/japan-backed-fund-to-buy-semiconductor-firm-jsr-for-6point3-billion.html\\\">proposed&nbsp;</a>a 903.9 billion yen ($6.3 billion) acquisition of semiconductor materials giant&nbsp;<a href=\\\"https://www.cnbc.com/quotes/4185.T-JP/\\\">JSR</a>.\"}},{\"id\":\"ZhYpmYmkf4\",\"type\":\"paragraph\",\"data\":{\"text\":\"Semiconductors are some of the most important technology products. They go into everything from smartphones to cars and refrigerators, and are also seen as key to military applications and advancing artificial intelligence.\"}},{\"id\":\"zzuZ1wLqge\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Chips</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Gallium</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Germanium</chronohash>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.cnbc.com/2023/07/04/china-imposes-export-curbs-on-chipmaking-metals-in-tech-war-with-the-us.html",
     "utcStartDateTime": "2023-08-01T07:00:00.000Z",
-    "utcEndDateTime": "2023-08-04T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-05T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-07-04T06:02:28.008Z",
-    "utcUpdatedDateTime": "2023-07-04T17:11:01.767Z",
+    "utcUpdatedDateTime": "2023-07-20T04:37:15.392Z",
+    "sentimentScore": -0.268181923776865,
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -13315,7 +13318,7 @@
     ],
     "locations": [
       {
-        "id": 87,
+        "id": 124,
         "address": "China",
         "order": 0,
         "pinId": 440
@@ -13323,17 +13326,17 @@
     ],
     "mentions": [
       {
-        "id": 212,
-        "tag": "#Gallium",
-        "pinId": 440
-      },
-      {
-        "id": 213,
+        "id": 277,
         "tag": "#Chips",
         "pinId": 440
       },
       {
-        "id": 214,
+        "id": 278,
+        "tag": "#Gallium",
+        "pinId": 440
+      },
+      {
+        "id": 279,
         "tag": "#Germanium",
         "pinId": 440
       }
@@ -13729,12 +13732,12 @@
     "mentions": [
       {
         "id": 222,
-        "tag": "#studentloans",
+        "tag": "#Crash",
         "pinId": 230
       },
       {
         "id": 223,
-        "tag": "#Crash",
+        "tag": "#studentloans",
         "pinId": 230
       }
     ],
@@ -14059,12 +14062,12 @@
     "mentions": [
       {
         "id": 230,
-        "tag": "#Crash",
+        "tag": "#UnemploymentRate",
         "pinId": 306
       },
       {
         "id": 231,
-        "tag": "#UnemploymentRate",
+        "tag": "#Crash",
         "pinId": 306
       }
     ],
@@ -14202,26 +14205,26 @@
     "locations": [
       {
         "id": 91,
-        "address": "Marcellus and Utica shale sites",
-        "order": 1,
+        "address": "Mountain Valley natural gas pipeline Southern  Virginia",
+        "order": 0,
         "pinId": 376
       },
       {
         "id": 92,
-        "address": "Mountain Valley natural gas pipeline Southern  Virginia",
-        "order": 0,
+        "address": "Marcellus and Utica shale sites",
+        "order": 1,
         "pinId": 376
       }
     ],
     "mentions": [
       {
         "id": 235,
-        "tag": "$NEE",
+        "tag": "$ED",
         "pinId": 376
       },
       {
         "id": 236,
-        "tag": "$ED",
+        "tag": "$ETRN",
         "pinId": 376
       },
       {
@@ -14231,7 +14234,7 @@
       },
       {
         "id": 238,
-        "tag": "$ETRN",
+        "tag": "$NEE",
         "pinId": 376
       }
     ],
@@ -14296,12 +14299,12 @@
     "mentions": [
       {
         "id": 239,
-        "tag": "$SONY",
+        "tag": "#PS5",
         "pinId": 456
       },
       {
         "id": 240,
-        "tag": "#PS5",
+        "tag": "$SONY",
         "pinId": 456
       }
     ],
@@ -14337,17 +14340,17 @@
     "mentions": [
       {
         "id": 241,
-        "tag": "$AMD",
-        "pinId": 289
-      },
-      {
-        "id": 242,
         "tag": "#AI",
         "pinId": 289
       },
       {
-        "id": 243,
+        "id": 242,
         "tag": "#GPU",
+        "pinId": 289
+      },
+      {
+        "id": 243,
+        "tag": "$AMD",
         "pinId": 289
       }
     ],
@@ -14383,14 +14386,14 @@
     "locations": [
       {
         "id": 93,
-        "address": "United Sates",
-        "order": 0,
+        "address": "Japan",
+        "order": 1,
         "pinId": 342
       },
       {
         "id": 94,
-        "address": "Japan",
-        "order": 1,
+        "address": "United Sates",
+        "order": 0,
         "pinId": 342
       }
     ],
@@ -15630,12 +15633,12 @@
     "mentions": [
       {
         "id": 262,
-        "tag": "#Chips",
+        "tag": "$INTC",
         "pinId": 435
       },
       {
         "id": 263,
-        "tag": "$INTC",
+        "tag": "#Chips",
         "pinId": 435
       }
     ],
@@ -15765,32 +15768,32 @@
     "locations": [
       {
         "id": 112,
-        "address": "Giheung",
-        "order": 0,
-        "pinId": 424
-      },
-      {
-        "id": 113,
         "address": "Austin, USA",
         "order": 3,
         "pinId": 424
       },
       {
-        "id": 114,
+        "id": 113,
         "address": "Hwaseong",
         "order": 1,
         "pinId": 424
       },
       {
+        "id": 114,
+        "address": "Giheung",
+        "order": 0,
+        "pinId": 424
+      },
+      {
         "id": 115,
-        "address": "Pyeongtaek",
-        "order": 2,
+        "address": "Taylor, USA",
+        "order": 4,
         "pinId": 424
       },
       {
         "id": 116,
-        "address": "Taylor, USA",
-        "order": 4,
+        "address": "Pyeongtaek",
+        "order": 2,
         "pinId": 424
       }
     ],
@@ -15848,12 +15851,12 @@
     "mentions": [
       {
         "id": 266,
-        "tag": "$INTC",
+        "tag": "#Chips",
         "pinId": 436
       },
       {
         "id": 267,
-        "tag": "#Chips",
+        "tag": "$INTC",
         "pinId": 436
       }
     ],
@@ -15971,12 +15974,12 @@
     "mentions": [
       {
         "id": 269,
-        "tag": "$SONY",
+        "tag": "$MSFT",
         "pinId": 457
       },
       {
         "id": 270,
-        "tag": "$MSFT",
+        "tag": "$SONY",
         "pinId": 457
       },
       {
@@ -16080,14 +16083,14 @@
     "locations": [
       {
         "id": 120,
-        "address": "Bakersfield, CA",
-        "order": 1,
+        "address": "Merced, CA",
+        "order": 0,
         "pinId": 219
       },
       {
         "id": 121,
-        "address": "Merced, CA",
-        "order": 0,
+        "address": "Bakersfield, CA",
+        "order": 1,
         "pinId": 219
       }
     ],
