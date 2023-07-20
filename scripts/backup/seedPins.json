@@ -13173,6 +13173,94 @@
     "userId": 2
   },
   {
+    "id": 481,
+    "rootThread": false,
+    "title": "Russian petroleum exports are soaring again in the first half of July so far…",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Oil</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Energy</chronohash> </p>",
+    "sourceDescription": "{\"time\":1689863203250,\"blocks\":[{\"id\":\"-wRER-a168\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Oil</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Energy</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/BurggrabenH/status/1681982173493047296",
+    "utcStartDateTime": "2023-07-20T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-21T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-20T14:26:57.688Z",
+    "sentimentScore": 0.32693660259246826,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 367,
+        "originalUrl": "https://twitter.com/BurggrabenH/status/1681982173493047296",
+        "type": "2",
+        "authorName": "Alexander Stahel ????",
+        "authorUrl": "https://twitter.com/BurggrabenH",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">“Cuts”, the Russian way…!<br><br>Russian petroleum exports are soaring again in the first half of July so far…<br><br>Diesel exports at 1.2mbpd..! <br>Naphtha back to 400kbpd; <br>Gasoil stable at 0.6mbpd…<a href=\"https://twitter.com/hashtag/OOTT?src=hash&amp;ref_src=twsrc%5Etfw\">#OOTT</a> <a href=\"https://twitter.com/UrbanKaoboy?ref_src=twsrc%5Etfw\">@UrbanKaoboy</a> <a href=\"https://t.co/RdjRk4tzsM\">pic.twitter.com/RdjRk4tzsM</a></p>&mdash; Alexander Stahel ???? (@BurggrabenH) <a href=\"https://twitter.com/BurggrabenH/status/1681982173493047296?ref_src=twsrc%5Etfw\">July 20, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 125,
+        "address": "Russia",
+        "order": 0,
+        "pinId": 481
+      }
+    ],
+    "mentions": [
+      {
+        "id": 282,
+        "tag": "#Oil",
+        "pinId": 481
+      },
+      {
+        "id": 283,
+        "tag": "#energy",
+        "pinId": 481
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 482,
+    "rootThread": false,
+    "title": "The biggest-ever UK offshore wind auction awarded contracts at a record-low price.",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#WindFarm</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Energy</chronohash> </p>",
+    "sourceDescription": "{\"time\":1689863694567,\"blocks\":[{\"id\":\"sr0LFfLpel\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#WindFarm</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Energy</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/BurggrabenH/status/1681975338237042691",
+    "utcStartDateTime": "2023-07-20T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-21T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-20T14:34:59.434Z",
+    "sentimentScore": 0.28486216254532337,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 368,
+        "originalUrl": "https://twitter.com/BurggrabenH/status/1681975338237042691",
+        "type": "2",
+        "authorName": "Alexander Stahel ????",
+        "authorUrl": "https://twitter.com/BurggrabenH",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Vattenfall: <br><br>“Although demand for fossil-free electricity is greater than ever, the market for wind power is challenging. Inflation &amp; capital costs are affecting the sector, but the geopolitical situation has made wind &amp; its supply chain particularly vulnerable.”<br><br>2/2 <a href=\"https://t.co/0MKzokxD2v\">pic.twitter.com/0MKzokxD2v</a></p>&mdash; Alexander Stahel ???? (@BurggrabenH) <a href=\"https://twitter.com/BurggrabenH/status/1681975338237042691?ref_src=twsrc%5Etfw\">July 20, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 284,
+        "tag": "#WindFarm",
+        "pinId": 482
+      },
+      {
+        "id": 285,
+        "tag": "#energy",
+        "pinId": 482
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 476,
     "rootThread": false,
     "title": "Carvana Issuing 35M Class A shares",
