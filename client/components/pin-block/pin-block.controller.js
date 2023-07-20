@@ -207,6 +207,9 @@
                     </div>
         
                     <div class="icon_set">
+                        <a ui-sref="pin({id:$ctrl.pin.id})" ng-if="!!$ctrl.pin.sentimentScore">
+                            <sentiment-block sentiment-score="$ctrl.pin.sentimentScore"></sentiment-block>
+                        </a>
                         <a ui-sref="pin({id:$ctrl.pin.id})" ng-if="!!$ctrl.pin.parentId || !!$ctrl.pin.rootThread"
                             ng-attr-aria-label="Read more about {{$ctrl.pin.title}}">
                             <span class="thread-icon" ng-if="!!$ctrl.pin.parentId" title="Part of thread"></span>

@@ -7,7 +7,8 @@ import * as paginationHeader from '../../util/paginationHeader'
 
 import {
   Pin,
-  Pins
+  Pins,
+  AI
 } from '../../model';
 
 import {
@@ -144,13 +145,23 @@ export function create(req, res) {
     .rescrapeMention()
     .setUser(user);
 
-  return newPin.save()
-    .then(({
-      pin
-    }) => {
-      const event = "afterCreate";
-      PinEmitter.emit(event, pin, { userId: user.id });
-      return pin;
+  return AI.getSentiment(newPin)
+    .then((res) => {
+      const score = res.score;
+      newPin.setSentimentScore(score);
+    })
+    .catch((e) => {
+      console.log(e);
+    })
+    .then(() => {
+      return newPin.save()
+        .then(({
+          pin
+        }) => {
+          const event = "afterCreate";
+          PinEmitter.emit(event, pin, { userId: user.id });
+          return pin;
+        });
     })
     .then(response.withResult(res, 201))
     .catch(response.handleError(res));
@@ -167,13 +178,23 @@ export function update(req, res) {
   pin.rescrapeMention();
   pin.id = pinId;
 
-  return pin.update(user)
-    .then(({
-      pin
-    }) => {
-      const event = "afterUpdate";
-      PinEmitter.emit(event, pin, { userId: user.id });
-      return pin;
+  return AI.getSentiment(pin)
+    .then((res) => {
+      const score = res.score;
+      pin.setSentimentScore(score);
+    })
+    .catch((e) => {
+      console.log(e);
+    })
+    .then(() => {
+      return pin.update(user)
+        .then(({
+          pin
+        }) => {
+          const event = "afterUpdate";
+          PinEmitter.emit(event, pin, { userId: user.id });
+          return pin;
+        });
     })
     .then(response.handleEntityNotFound(res))
     .then(response.withResult(res))

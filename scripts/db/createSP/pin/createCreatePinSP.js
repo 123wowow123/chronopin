@@ -55,6 +55,7 @@ function executeCreateSP() {
       @utcEndDateTime     DATETIME2,
       @allDay             BIT,
       @userId             INT,
+      @sentimentScore     DECIMAL(18, 17),
       @utcCreatedDateTime DATETIME2(7),
       @utcUpdatedDateTime DATETIME2(7),
       @utcDeletedDateTime DATETIME2(7),
@@ -94,6 +95,7 @@ function executeCreateSP() {
           utcEndDateTime,
           allDay,
           userId,
+          sentimentScore,
           utcCreatedDateTime,
           utcUpdatedDateTime,
           utcDeletedDateTime)
@@ -111,6 +113,7 @@ function executeCreateSP() {
           @utcEndDateTime,
           @allDay,
           @userId,
+          @sentimentScore,
           @utcCreatedDateTime,
           @utcUpdatedDateTime,
           @utcDeletedDateTime);
@@ -130,6 +133,7 @@ function executeCreateSP() {
           utcEndDateTime,
           allDay,
           userId,
+          sentimentScore,
           utcCreatedDateTime,
           utcUpdatedDateTime,
           utcDeletedDateTime)
@@ -148,6 +152,7 @@ function executeCreateSP() {
           @utcEndDateTime,
           @allDay,
           @userId,
+          @sentimentScore,
           @utcCreatedDateTime,
           @utcUpdatedDateTime,
           @utcDeletedDateTime);

@@ -9,8 +9,6 @@
         }
 
         $onInit() {
-            //this._registerWaypointObserver(); /////////////////////
-            //debugger
         }
 
     }

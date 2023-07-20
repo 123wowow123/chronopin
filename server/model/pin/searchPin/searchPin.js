@@ -170,9 +170,7 @@ function likePin(userId, pin) {
         auth: config.elastiSearch.auth
     };
 
-    //debugger
     const req = Object.assign({}, options);
-    //console.log(req);
     return rp(req);
 };
 
@@ -199,8 +197,7 @@ function unlikePin(userId, pin) {
         auth: config.elastiSearch.auth
     };
 
-    console.log(JSON.stringify(options.body.script));
-    //debugger
+    // console.log(JSON.stringify(options.body.script));
     const req = Object.assign({}, options);
     console.log(req);
     return rp(req);
@@ -217,7 +214,6 @@ function upsertPin(pin) {
         json: true, // Automatically stringifies the body to JSON
     };
 
-    //debugger
     const req = Object.assign({}, options, {
         body: {
             id: pin.id,
@@ -226,7 +222,6 @@ function upsertPin(pin) {
             media: pin.media
         }
     });
-    //console.log(req);
     return rp(req);
 };
 
@@ -238,12 +233,10 @@ function removePin(id) {
         json: true, // Automatically stringifies the body to JSON
     };
 
-    //debugger
     const req = Object.assign({}, options, {
         body: {
             id
         }
     });
-    //console.log(req);
     return rp(req);
 };

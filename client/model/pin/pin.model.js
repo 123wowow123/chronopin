@@ -36,7 +36,8 @@
       'rootThread',
       'hasFavorite',
       'hasLike',
-      'searchScore'
+      'searchScore',
+      'sentimentScore'
     ];
 
     return class Pin {

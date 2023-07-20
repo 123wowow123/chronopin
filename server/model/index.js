@@ -75,3 +75,6 @@ export {
 export {
   default as DateTimes
 } from './dateTime/dateTimes';
+export {
+  default as AI
+} from './ai/ai';

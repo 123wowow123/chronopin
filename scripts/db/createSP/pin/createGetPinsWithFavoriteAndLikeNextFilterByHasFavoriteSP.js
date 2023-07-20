@@ -67,6 +67,7 @@ function executeCreateSP() {
               utcEndDateTime         DATETIME2,
               allDay                 BIT,
               userId                 INT,
+              sentimentScore         DECIMAL(18, 17),
               utcCreatedDateTime     DATETIME2 NOT NULL,
               utcUpdatedDateTime     DATETIME2,
               favoriteCount          INT,
@@ -115,6 +116,7 @@ function executeCreateSP() {
                 [Pin].[utcEndDateTime],
                 [Pin].[allDay],
                 [Pin].[userId],
+                [Pin].[sentimentScore],
 
                 [Pin].[utcCreatedDateTime],
                 [Pin].[utcUpdatedDateTime],

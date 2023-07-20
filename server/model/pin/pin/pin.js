@@ -386,7 +386,8 @@ function _updateMSSQL(pin, userId) {
           .input('utcStartDateTime', mssql.DateTime2(0), pin.utcStartDateTime)
           .input('utcEndDateTime', mssql.DateTime2(0), pin.utcEndDateTime)
           .input('allDay', mssql.Bit, pin.allDay)
-          .input('userId', mssql.Int, userId);
+          .input('userId', mssql.Int, userId)
+          .input('sentimentScore', mssql.Decimal(18, 17), pin.sentimentScore);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
           (err, res, returnValue, affected) => {

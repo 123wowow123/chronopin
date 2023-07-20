@@ -12,7 +12,8 @@ import {
     Medium,
     Merchant,
     Location,
-    Mention
+    Mention,
+    AI
 } from '../..';
 
 
@@ -49,6 +50,15 @@ export default class FullPin extends BasePin {
     }
 
     save() {
+        // return AI.getSentiment(this)
+        //     .then((res) => {
+        //         const score = res.score;
+        //         this.setSentimentScore(score);
+        //     })
+        //     .catch((e)=>{
+        //         console.log(e)
+        //     })
+        //     .finally(() => {
         const savePinPromise = sql.createPinMSSQL(this, this.userId)
             .then(() => {
                 // check for duplicates //upsert
@@ -79,16 +89,18 @@ export default class FullPin extends BasePin {
                 const saveMentionsPromises = this.mentions.map(m => {
                     return new Mention(m, this).save();
                 });
+
                 return Promise.all([
                     ...saveLikePromises,
                     ...saveFavoritePromises,
                     ...saveMediumPromises,
                     ...saveMerchantsPromises,
                     ...saveLocationsPromises,
-                    ...saveMentionsPromises
+                    ...saveMentionsPromises,
                 ]);
             });
         return savePinPromise;
+        // })
     }
 
     static mapPinRowsToPin(pinRows) {

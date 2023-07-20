@@ -20,6 +20,7 @@ export function createPinMSSQL(pin, userId) {
                     .input('utcEndDateTime', mssql.DateTime2(0), pin.utcEndDateTime)
                     .input('allDay', mssql.Bit, pin.allDay)
                     .input('userId', mssql.Int, userId)
+                    .input('sentimentScore', mssql.Decimal(18, 17), pin.sentimentScore)
                     .input('utcCreatedDateTime', mssql.DateTime2(7), pin.utcCreatedDateTime)
                     .input('utcUpdatedDateTime', mssql.DateTime2(7), pin.utcUpdatedDateTime)
                     .input('utcDeletedDateTime', mssql.DateTime2(7), pin.utcDeletedDateTime)

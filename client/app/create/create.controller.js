@@ -7,7 +7,7 @@
 
   class CreateController {
 
-    constructor($window, $state, $scope, $transitions, Modal, Auth, $q, $rootScope, $stateParams, $http, $timeout, $element, pinApp, twitterJs, pinWebService, scrapeService, appConfig, Util /*, $log, modelInjector */) {
+    constructor($window, $state, $scope, $transitions, Modal, Auth, $q, $rootScope, $stateParams, $http, $timeout, $element, pinApp, twitterJs, pinWebService, aiWebService, scrapeService, appConfig, Util /*, $log, modelInjector */) {
       //PinGroups || (PinGroups = modelInjector.getPinGroups());
       this.twitterJs = twitterJs;
       this.pinRecieved = false;
@@ -51,6 +51,7 @@
 
       this.appConfig = appConfig;
       this.scrapeType = appConfig.scrapeType;
+      this.aiWebService = aiWebService;
       this.pinWebService = pinWebService;
       this.scrapeService = scrapeService;
       this.$http = $http;
@@ -162,10 +163,22 @@
 
     descriptionOnChange(html) {
       this.pin.description = html;
+      const pin = this.getPreviewPin();
+      this.updateSentiment(pin);
     }
 
     suggestionDescriptionOnChange(html) {
       this.pinSuggestion.description = html;
+      const pin = this.getPreviewPin();
+      this.updateSentiment(pin);
+    }
+
+    updateSentiment(pin) {
+      this.aiWebService.sentiment(pin)
+        .then((res) => {
+          const sentimentScore = _.get(res, 'data.score');
+          pin.sentimentScore = sentimentScore;
+        });
     }
 
     selectMedia(media) {
@@ -441,7 +454,9 @@
         defaultView,
         reducePinView
       );
-      return tempPin;
+
+      this.previewPin = tempPin;
+      return this.previewPin;
     }
 
     multPrice(mult) {

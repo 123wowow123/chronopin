@@ -57,6 +57,7 @@ function executeCreateTable() {
             utcEndDateTime DATETIME2(0) NOT NULL,
             allDay BIT DEFAULT 0 NOT NULL,
             userId INT NOT NULL,
+            sentimentScore DECIMAL(18, 17),
             utcCreatedDateTime DATETIME2(7) DEFAULT SYSUTCDATETIME() NOT NULL,
             utcUpdatedDateTime DATETIME2(7),
             utcDeletedDateTime DATETIME2(7)

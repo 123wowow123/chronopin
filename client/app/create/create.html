@@ -31,8 +31,9 @@
                     ng-class="{'has-error' : pinForm.sourceUrl.$invalid && pinForm.sourceUrl.$dirty}">
                     <div class="input-clear-container">
                       <input name="sourceUrl" type="url" class="form-control" id="sourceUrl"
-                        ng-change="$ctrl.urlChanged()" ng-blur="$ctrl.urlBlur()" placeholder="https://www.example.com (webpage, twitter, youtube)"
-                        ng-model="$ctrl.pin.sourceUrl" ng-pattern='/^(ftp|http|https):\/\/[^ "]+$/' required>
+                        ng-change="$ctrl.urlChanged()" ng-blur="$ctrl.urlBlur()"
+                        placeholder="https://www.example.com (webpage, twitter, youtube)" ng-model="$ctrl.pin.sourceUrl"
+                        ng-pattern='/^(ftp|http|https):\/\/[^ "]+$/' required>
 
                       <span class="form-control__clear-texbox" ng-if="$ctrl.pin.sourceUrl"
                         ng-click="$ctrl.pin.sourceUrl = undefined" role="button"></span>
@@ -79,7 +80,8 @@
                 </div>
 
                 <div class="form-group">
-                  <div ng-switch="$ctrl.hasScrapedText && $ctrl.scrapingMessage($ctrl.pinSuggestion.description).code == 2">
+                  <div
+                    ng-switch="$ctrl.hasScrapedText && $ctrl.scrapingMessage($ctrl.pinSuggestion.description).code == 2">
                     <label ng-switch-when="false" for="description" class="control-label">Content</label>
                     <div class="control-tabs" ng-switch-when="true">
                       <button type="button" class="control-tab control-tab-left"

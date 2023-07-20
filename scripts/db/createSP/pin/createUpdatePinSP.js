@@ -55,7 +55,8 @@ function executeCreateSP() {
             @utcStartDateTime   DATETIME2,
             @utcEndDateTime     DATETIME2,
             @allDay             BIT,
-            @userId             INT
+            @userId             INT,
+            @sentimentScore     DECIMAL(18, 17)
         AS
           BEGIN
 
@@ -78,6 +79,7 @@ function executeCreateSP() {
               utcEndDateTime = @utcEndDateTime,
               allDay = @allDay,
               userId = @userId,
+              sentimentScore = @sentimentScore,
               utcUpdatedDateTime = @utcUpdatedDateTime
             WHERE id = @id;
 

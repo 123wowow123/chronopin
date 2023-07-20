@@ -1,0 +1,7 @@
+<span class="sentiment-icon" ng-switch="$ctrl.getSentimentKey($ctrl.sentimentScore)">
+    <i ng-switch-when="neutral" class="fa fa-meh-o neutral" title="Neutral Sentiment"></i>
+    <i ng-switch-when="negative" class="fa fa-frown-o negative" title="Negative Sentiment"></i>
+    <i ng-switch-when="very negative" class="fa fa-frown-o verynegative" title="Very Negative Sentiment"></i>
+    <i ng-switch-when="positive" class="fa fa-smile-o positive" title="Positive Sentiment"></i>
+    <i ng-switch-when="very positive" class="fa fa-smile-o verypositive" title="Very Positive Sentiment"></i>
+  </span>

@@ -40,12 +40,16 @@ topical tag and sectioning
 Pro tip field
 small pins mode
 max pain for stocks
+user submitted sentiment score
 
 Tag autocomplete ++
-sentiment score
-user submitted sentiment score
 show follows content only
+after login/logout refresh notification
+notification don't show cought up untill api resolves
+menu slide in from side
 
+sentiment calender
+https://developers.google.com/chart/interactive/docs/gallery/calendar
 
 TD:
 https://developer.tdameritrade.com/quotes/apis/get/marketdata/quotes

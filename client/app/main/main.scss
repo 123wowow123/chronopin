@@ -202,6 +202,7 @@ $bag-font-color: var(--bag-text-color);
     color: var(--grid-post-date-text-color);
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
 
     a.posted-time {
         color: inherit;
@@ -536,7 +537,16 @@ $bag-font-color: var(--bag-text-color);
     margin-bottom: 12px;
     font-size: 12px;
     flex-wrap: wrap;
+    align-items: baseline;
+
+    .sentiment{
+        display: inline-block;
+        margin-right: 8px;
+        font-size: 14px;
+    }
 }
+
+
 
 .\--clear-margin {
     margin: 0 !important;

@@ -30,7 +30,8 @@ export const BasePinProp = [
     'allDay',
     'utcCreatedDateTime',
     'utcUpdatedDateTime',
-    'utcDeletedDateTime'
+    'utcDeletedDateTime',
+    'sentimentScore'
 ];
 
 // user, userId
@@ -204,6 +205,11 @@ export default class BasePin {
         (mentions || []).forEach(m => {
             this.addMention(new Mention(m));
         })
+        return this;
+    }
+
+    setSentimentScore(score) {
+        this.sentimentScore = score;
         return this;
     }
 

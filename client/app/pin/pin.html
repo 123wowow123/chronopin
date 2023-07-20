@@ -36,8 +36,10 @@
 
         <div class="pin__control">
           <div class="grid__headline --meta">
-            <div class="headline-left">
 
+            <div class="headline-left">
+              <sentiment-block class="sentiment" ng-if="!!$ctrl.pin.sentimentScore"
+                sentiment-score="$ctrl.pin.sentimentScore"></sentiment-block>
               <time class="posted-time" datetime="{{$ctrl.pin.utcCreatedDateTime}}">
                 {{$ctrl.pin.utcCreatedDateTime | date : "MM/dd/yyyy 'at' h:mm a" | lowercase}}
               </time>
