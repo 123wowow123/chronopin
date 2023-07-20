@@ -77,11 +77,11 @@ spec:
         image: us-west1-docker.pkg.dev/chronopin-209507/chronopin-comment/isso:latest
         resources:
           requests:
-            memory: "250Mi"
+            memory: "200Mi"
             cpu: "0.1"
           limits:
-            memory: "500Mi"
-            cpu: "0.5"
+            memory: "350Mi"
+            cpu: "0.3"
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
