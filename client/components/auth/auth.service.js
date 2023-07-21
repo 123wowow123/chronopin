@@ -2,12 +2,13 @@
 
 (function () {
 
-  function AuthService($location, $http, $cookies, $q, appConfig, Util, User) {
-    var safeCb = Util.safeCb;
-    var currentUser = {};
-    var userRoles = appConfig.userRoles || [];
+  function AuthService($location, $http, $cookies, $q, $injector, appConfig, Util, User) {
+    let safeCb = Util.safeCb;
+    let currentUser = {};
+    let userRoles = appConfig.userRoles || [];
+    let notificationJs = $injector.get('notificationJs');
 
-    var Auth = {
+    let Auth = {
 
       /**
        * Authenticate user and save token
@@ -55,7 +56,9 @@
        * @return {Object|Promise}
        */
       setCurrentUser(user) {
-        return currentUser = user;
+        currentUser = user;
+        notificationJs.refresh();
+        return currentUser;
       },
 
       /**
