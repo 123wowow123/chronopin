@@ -9549,24 +9549,31 @@
     "id": 205,
     "rootThread": false,
     "title": "Ukraine counteroffensive: Mud season should end last week of May or first week of June before Ukraining can move",
-    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/HQUgJ4Te6Bc\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\">   Kyiv plans to launch a counteroffensive against Russia this spring. A former US military meteorologist has taken to Twitter to provide valuable predictions as to when ground conditions will be right.   </p>",
-    "sourceDescription": "{\"time\":1686445558459,\"blocks\":[{\"id\":\"PRfOCToMLB\",\"type\":\"embed\",\"data\":{\"service\":\"youtube\",\"source\":\"https://www.youtube.com/watch?v=HQUgJ4Te6Bc\",\"embed\":\"https://www.youtube.com/embed/HQUgJ4Te6Bc\",\"width\":580,\"height\":320,\"caption\":\"Introduction Ukraine War Updates Part 1: The Inevitables || Peter Zeihan\",\"length\":\"\"}},{\"id\":\"FMfCVuKNEe\",\"type\":\"paragraph\",\"data\":{\"text\":\"  Kyiv plans to launch a counteroffensive against Russia this spring. A former US military meteorologist has taken to Twitter to provide valuable predictions as to when ground conditions will be right.  \"}}],\"version\":\"2.26.5\"}",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/HQUgJ4Te6Bc\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\">   Kyiv plans to launch a counteroffensive against Russia this spring. A former US military meteorologist has taken to Twitter to provide valuable predictions as to when ground conditions will be right. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#War</chronohash> </p>",
+    "sourceDescription": "{\"time\":1689960838270,\"blocks\":[{\"id\":\"PRfOCToMLB\",\"type\":\"embed\",\"data\":{\"service\":\"youtube\",\"source\":\"https://www.youtube.com/watch?v=HQUgJ4Te6Bc\",\"embed\":\"https://www.youtube.com/embed/HQUgJ4Te6Bc\",\"width\":580,\"height\":320,\"caption\":\"Introduction Ukraine War Updates Part 1: The Inevitables || Peter Zeihan\",\"length\":\"\"}},{\"id\":\"FMfCVuKNEe\",\"type\":\"paragraph\",\"data\":{\"text\":\"  Kyiv plans to launch a counteroffensive against Russia this spring. A former US military meteorologist has taken to Twitter to provide valuable predictions as to when ground conditions will be right.\"}},{\"id\":\"FbTFfiZj-9\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#War</chronohash>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.dw.com/en/countdown-to-counteroffensive-when-will-mud-season-end-in-ukraine/a-65204612",
     "utcStartDateTime": "2023-05-29T07:00:00.000Z",
-    "utcEndDateTime": "2023-06-07T07:00:00.000Z",
+    "utcEndDateTime": "2023-06-08T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-05-11T04:51:51.846Z",
-    "utcUpdatedDateTime": "2023-06-11T01:06:02.758Z",
-    "sentimentScore": 0.01597527042031288,
+    "utcUpdatedDateTime": "2023-07-21T17:34:01.049Z",
+    "sentimentScore": -0.00110312178730965,
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "locations": [
       {
-        "id": 36,
+        "id": 131,
         "address": "Kyiv, Ukraine",
         "order": 0,
+        "pinId": 205
+      }
+    ],
+    "mentions": [
+      {
+        "id": 296,
+        "tag": "#War",
         "pinId": 205
       }
     ],
@@ -15368,6 +15375,53 @@
       }
     ],
     "userId": 4
+  },
+  {
+    "id": 487,
+    "rootThread": false,
+    "title": "Amazon to build $120 million facility in Florida to prep Kuiper internet satellites for launch",
+    "description": "<p class=\"paragraph\"> Amazon will invest $120 million in a satellite processing facility at NASA’s Kennedy Space Center in Florida. </p><p class=\"paragraph\"> Project Kuiper is Amazon’s plan to build a network of 3,236 satellites in low Earth orbit, to provide high-speed internet access anywhere in the world. </p><p class=\"paragraph\"> The 100,000-square-foot processing facility will serve as one of the final steps before the satellites reach orbit, preparing them for launches on the rockets of ULA and Blue Origin. </p><p class=\"paragraph\"> Will be processing our first production satellites through this facility in early 2025 </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$AMZN</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1689959430851,\"blocks\":[{\"id\":\"8tCCycgA64\",\"type\":\"paragraph\",\"data\":{\"text\":\"Amazon will invest $120 million in a satellite processing facility at NASA’s Kennedy Space Center in Florida.\"}},{\"id\":\"mleUHXdfSn\",\"type\":\"paragraph\",\"data\":{\"text\":\"Project Kuiper is Amazon’s plan to build a network of 3,236 satellites in low Earth orbit, to provide high-speed internet access anywhere in the world.\"}},{\"id\":\"rQcUdr-bfs\",\"type\":\"paragraph\",\"data\":{\"text\":\"The 100,000-square-foot processing facility will serve as one of the final steps before the satellites reach orbit, preparing them for launches on the rockets of ULA and Blue Origin.\"}},{\"id\":\"J-HdaDUi7V\",\"type\":\"paragraph\",\"data\":{\"text\":\"Will be processing our first production satellites through this facility in early 2025\"}},{\"id\":\"Fjc6NqCcoU\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$AMZN</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/07/21/amazon-kuiper-to-build-satellite-prep-facility-in-florida.html",
+    "price": 120000000,
+    "utcStartDateTime": "2025-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2025-01-03T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-21T17:13:43.432Z",
+    "utcUpdatedDateTime": "2023-07-21T17:19:18.455Z",
+    "sentimentScore": 0.435786945745349,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 373,
+        "thumbName": "cf7f0b26-6136-4b84-9e66-860ec1e9255b-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107274759-1689939292831-Kuiper_Satellite_Processing_Facility_1.jpg?v=1689944401&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 130,
+        "address": "NASA’s Kennedy Space Center, Florida",
+        "order": 0,
+        "pinId": 487
+      }
+    ],
+    "mentions": [
+      {
+        "id": 295,
+        "tag": "$AMZN",
+        "pinId": 487
+      }
+    ],
+    "userId": 1
   },
   {
     "id": 321,

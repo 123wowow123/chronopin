@@ -43,7 +43,6 @@ Tag autocomplete ++
 show follows content only +
 
 menu slide in from side +++
-after login/logout refresh notification +
 
 animated gif height issue it's streched out
 pin needs min height and remove min heigth of twitter

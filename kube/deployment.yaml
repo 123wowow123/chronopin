@@ -21,7 +21,7 @@ spec:
         image: us-west1-docker.pkg.dev/chronopin-209507/chronopin-web/chronopin:latest
         resources:
           requests:
-            memory: "500Mi"
+            memory: "1000Mi"
             cpu: "0.2"
           limits:
             memory: "2000Mi"
