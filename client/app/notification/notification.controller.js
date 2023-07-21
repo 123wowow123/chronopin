@@ -8,42 +8,42 @@
   class Controller {
 
     constructor($window, $stateParams, $state, $scope, profileWebService, ScrollUtil, searchService, Util, pinApp, Auth, appConfig, commentJs, notificationJs, $log, $timeout) {
-            // constants
-            const omitLinkHeaderProp = ['rel', 'url'];
-            const scrollEl = ScrollUtil.getScrollEl();
+      // constants
+      const omitLinkHeaderProp = ['rel', 'url'];
+      const scrollEl = ScrollUtil.getScrollEl();
 
-            // stateParams Service
-            this.$stateParams = $stateParams;
+      // stateParams Service
+      this.$stateParams = $stateParams;
 
-            // angular service
-            this.$timeout = $timeout;
-            this.$log = $log;
-            this.$scope = $scope;
-            this.$state = $state;
-            this.$window = $window;
+      // angular service
+      this.$timeout = $timeout;
+      this.$log = $log;
+      this.$scope = $scope;
+      this.$state = $state;
+      this.$window = $window;
 
-            // data service
-            this.profileWebService = profileWebService;
+      // data service
+      this.profileWebService = profileWebService;
 
-            // util service
-            this.ScrollUtil = ScrollUtil;
-            this.searchService = searchService;
-            this.Util = Util;
+      // util service
+      this.ScrollUtil = ScrollUtil;
+      this.searchService = searchService;
+      this.Util = Util;
 
-            // model service
-            this.pinApp = pinApp;
-            this.bags;
-            this.commentJs = commentJs;
-            this.notificationJs = notificationJs;
+      // model service
+      this.pinApp = pinApp;
+      this.bags;
+      this.commentJs = commentJs;
+      this.notificationJs = notificationJs;
 
-            // properties
-            this.isAdmin = Auth.isAdmin; //bind function so each digest loop it get re-evaluated to determin latest state
-            this.appConfig = appConfig;
+      // properties
+      this.isAdmin = Auth.isAdmin; //bind function so each digest loop it get re-evaluated to determin latest state
+      this.appConfig = appConfig;
 
-            this.registeredListeners = {};
+      this.registeredListeners = {};
 
-            this.searching = false;
-            this.noSearchResult = false;
+      this.searching = false;
+      this.noSearchResult = false;
     }
 
     $onInit() {
@@ -65,25 +65,34 @@
     }
 
     _setSearchPinGroups(pins) {
-        this.pinApp.clearSearchBags();
-        this.pinApp.mergeSearchBagsWithPins(pins);
-        this.bags = this.pinApp.getSearchBags();
+      this.pinApp.clearSearchBags();
+      this.pinApp.mergeSearchBagsWithPins(pins);
+      this.bags = this.pinApp.getSearchBags();
     }
 
     getTodayPinId() {
-        const bags = this.pinApp.findClosestFutureSearchBagByDateTime(new Date());
-        if (bags) {
-            const pins = bags.pins;
-            this.closestFutureDates = pins;
-            return pins && pins[0] && pins[0].id;
-        }
+      const bags = this.pinApp.findClosestFutureSearchBagByDateTime(new Date());
+      if (bags) {
+        const pins = bags.pins;
+        this.closestFutureDates = pins;
+        return pins && pins[0] && pins[0].id;
+      }
     }
 
     $onDestroy() {
     }
 
     getTodaySearchScrollId() {
-        return this.viewType === 'timeline' ? this.pinApp.getTodaySearchScrollId() : this.getTodayPinId();
+      return this.viewType === 'timeline' ? this.pinApp.getTodaySearchScrollId() : this.getTodayPinId();
+    }
+
+    getTimelineStatus() {
+      switch (true) {
+        case this.loading:
+          return 'loading';
+        default:
+          return 'show';
+      }
     }
 
   }

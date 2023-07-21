@@ -31,10 +31,6 @@ once user scrolls then don't reset scroll on load complete
 https://www.chronopin.com/settings should be behind login
 
 
-animated gif height issue it's streched out
-
-
-
 scrollbar sentiment heatmap
 topical tag and sectioning
 Pro tip field
@@ -42,11 +38,15 @@ small pins mode
 max pain for stocks
 user submitted sentiment score
 
+
 Tag autocomplete ++
-show follows content only
-after login/logout refresh notification
-notification don't show cought up untill api resolves
-menu slide in from side
+show follows content only +
+
+menu slide in from side +++
+after login/logout refresh notification +
+
+animated gif height issue it's streched out
+pin needs min height and remove min heigth of twitter
 
 sentiment calender
 https://developers.google.com/chart/interactive/docs/gallery/calendar
@@ -159,7 +159,6 @@ Extract scrapping js to own repo and remove jquery
 
 R&D:
 create non headless browser
-check mapbox
 
 Each pin has main image, video quick link
 

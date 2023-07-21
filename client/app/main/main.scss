@@ -164,7 +164,7 @@ $grid-max-width-screen: $iphone-landscape / 2;
         margin-left: -1.5px;
         content: " ";
     }
-    
+
     &.\--hide-border:before {
         border: none;
     }
@@ -203,6 +203,12 @@ $bag-font-color: var(--bag-text-color);
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+
+    a.sentiment {
+        display: inline-block;
+        margin-right: 8px;
+        font-size: 14px;
+    }
 
     a.posted-time {
         color: inherit;
@@ -539,7 +545,7 @@ $bag-font-color: var(--bag-text-color);
     flex-wrap: wrap;
     align-items: baseline;
 
-    .sentiment{
+    .sentiment {
         display: inline-block;
         margin-right: 8px;
         font-size: 14px;

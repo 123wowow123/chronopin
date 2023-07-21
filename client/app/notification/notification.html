@@ -1,9 +1,5 @@
 <div ng-switch="$ctrl.getTimelineStatus()" class="main">
 
-  <div class="no-notifications" ng-if="!$ctrl.bags.length">
-    You are all caught up on notifications
-  </div>
-
   <div class="container-fluid main__timeline --search">
     <div class="row">
 
@@ -26,16 +22,16 @@
     </div>
   </div>
 
-  <div class="page_message" ng-switch-when="no match">
-    <h3 class="text-muted">
-      No results found, please try a different search
-    </h3>
+  <div class="page_message" ng-switch-when="show">
+    <div class="no-notifications" ng-if="!$ctrl.bags.length">
+      You are all caught up on notifications
+    </div>
   </div>
 
-  <div class="page_loading" ng-switch-when="searching">
+  <div class="page_loading" ng-switch-when="loading">
     <h3 class="text-muted">
       <loader-pac></loader-pac>
-      <!-- searching... -->
+      <!-- loading... -->
     </h3>
   </div>
 

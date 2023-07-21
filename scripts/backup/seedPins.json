@@ -13347,9 +13347,11 @@
     "sourceDescription": "{\"time\":1689895717737,\"blocks\":[{\"id\":\"c4WiL9F2n-\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Federal Reserve launched its FedNow instant-payments service Thursday, following several years of developing a system officials say will allow the faster flow of cash for businesses and individuals.\"}},{\"id\":\"Zt1Y3vyarL\",\"type\":\"paragraph\",\"data\":{\"text\":\"Whether it’s providing instant access to paychecks, allowing for last-minute bill payments or sending government payments out to individuals, the&nbsp;<a href=\\\"https://www.cnbc.com/2023/03/15/long-awaited-fed-digital-payment-system-to-launch-in-july.html\\\">system is expected to improve the flow of money</a>&nbsp;through the U.S. economy.\"}},{\"id\":\"ZaAUTuZexZ\",\"type\":\"paragraph\",\"data\":{\"text\":\"“The Federal Reserve built the FedNow Service to help make everyday payments over the coming years faster and more convenient,” Fed Chair&nbsp;<a href=\\\"https://www.cnbc.com/jay-powell/\\\">Jerome Powell</a>&nbsp;said. “Over time, as more banks choose to use this new tool, the benefits to individuals and businesses will include enabling a person to immediately receive a paycheck, or a company to instantly access funds when an invoice is paid.”\"}},{\"id\":\"L2plN4U3Yc\",\"type\":\"paragraph\",\"data\":{\"text\":\"So far, 35 early adopters, including&nbsp;<a href=\\\"https://www.cnbc.com/quotes/JPM/\\\">JPMorgan Chase</a>&nbsp;and&nbsp;<a href=\\\"https://www.cnbc.com/quotes/WFC/\\\">Wells Fargo</a>, two of the four largest banks in the U.S.,&nbsp;<a href=\\\"https://www.federalreserve.gov/newsevents/pressreleases/files/other20230720a1.pdf\\\" target=\\\"_blank\\\">have signed up</a>.\"}},{\"id\":\"PUyEfFoq-f\",\"type\":\"paragraph\",\"data\":{\"text\":\"There are an additional 16 institutions providing services for banks and credit unions.\"}},{\"id\":\"rKXXHOMjZl\",\"type\":\"paragraph\",\"data\":{\"text\":\"The American Bankers Association said it welcomes the FedNow developments, noting that the central bank joins the Clearing House, which put its payments service online in 2017, as two major providers in the space.\"}},{\"id\":\"R8DMqdAyn-\",\"type\":\"paragraph\",\"data\":{\"text\":\"“We will continue to educate our members on the two systems and the benefits they offer consumers and businesses,” ABA president and CEO Rob Nichols said.\"}},{\"id\":\"PTlMRtOwrG\",\"type\":\"paragraph\",\"data\":{\"text\":\"There are still some outstanding questions about FedNow, such as whether banks will charge for the service.\"}},{\"id\":\"ewt1mhLKOA\",\"type\":\"paragraph\",\"data\":{\"text\":\"The central bank expects that as the system is developed further, it will be integrated into the apps and websites of banks and credit unions.\"}},{\"id\":\"wDEp-Vnc-W\",\"type\":\"paragraph\",\"data\":{\"text\":\"As FedNow goes online, Fed officials are studying the implementation of&nbsp;<a href=\\\"https://www.cnbc.com/2021/05/20/the-fed-this-summer-will-take-another-step-ahead-in-developing-a-digital-currency.html\\\">a central bank digital currency</a>, with some saying they think FedNow could mitigate the need for a CBDC.\"}},{\"id\":\"VL-lKRWAFt\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#InstantPay</chronohash>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.cnbc.com/2023/07/20/fed-officially-launches-new-fednow-instant-payments-service.html",
     "utcStartDateTime": "2023-07-20T07:00:00.000Z",
-    "utcEndDateTime": "2023-07-21T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-22T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-07-20T23:28:43.962Z",
+    "utcUpdatedDateTime": "2023-07-21T00:11:25.991Z",
+    "sentimentScore": 0.691706002689898,
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -13368,7 +13370,7 @@
     ],
     "locations": [
       {
-        "id": 126,
+        "id": 128,
         "address": "USA",
         "order": 0,
         "pinId": 485
@@ -13376,9 +13378,52 @@
     ],
     "mentions": [
       {
-        "id": 291,
+        "id": 293,
         "tag": "#InstantPay",
         "pinId": 485
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 486,
+    "rootThread": false,
+    "title": "TSMC announced that the Az. factory is being delayed because of a lack of skilled workers. This🧵covers why this is untrue and is because of demand weakness",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Chips</chronohash> </p>",
+    "sourceDescription": "{\"time\":1689897854370,\"blocks\":[{\"id\":\"FJ9KPE0___\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Chips</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/BiggPuug/status/1682043482779844609",
+    "utcStartDateTime": "2023-07-20T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-21T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-21T00:05:13.471Z",
+    "sentimentScore": -0.815347065217793,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 372,
+        "originalUrl": "https://twitter.com/BiggPuug/status/1682043482779844609",
+        "type": "2",
+        "authorName": "Skydeeza",
+        "authorUrl": "https://twitter.com/BiggPuug",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">TSMC is seeing demand weakness now and over the Az Factory event horizon.<br><br>This does not bode well for Global GDP and specifically for the end markets they serve.<br><br>8/end</p>&mdash; Skydeeza (@BiggPuug) <a href=\"https://twitter.com/BiggPuug/status/1682043482779844609?ref_src=twsrc%5Etfw\">July 20, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 127,
+        "address": "TSMC Arizona Corporation",
+        "order": 0,
+        "pinId": 486
+      }
+    ],
+    "mentions": [
+      {
+        "id": 292,
+        "tag": "#Chips",
+        "pinId": 486
       }
     ],
     "userId": 1
