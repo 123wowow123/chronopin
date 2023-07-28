@@ -30,7 +30,6 @@ default does not select media but when selected it will auto check pin header me
 once user scrolls then don't reset scroll on load complete
 https://www.chronopin.com/settings should be behind login
 
-
 scrollbar sentiment heatmap
 topical tag and sectioning
 Pro tip field
@@ -38,11 +37,14 @@ small pins mode
 max pain for stocks
 user submitted sentiment score
 
+UI for all following / follower
 
-Tag autocomplete ++
+
+embed pin ++
 show follows content only +
-
 menu slide in from side +++
+need better date data ui ++
+need flyout today button
 
 animated gif height issue it's streched out
 pin needs min height and remove min heigth of twitter

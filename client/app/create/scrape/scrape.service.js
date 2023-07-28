@@ -23,7 +23,8 @@
                 let config = {
                     params: {
                         url: url
-                    }
+                    },
+                    ignoreLoadingBar: true
                 };
                 return $http.get('/api/scrape', config)
                     .then(res => {

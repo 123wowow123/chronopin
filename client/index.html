@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en" class="no-js --dark" ng-app="chronopinNodeApp" infinite-scroll threshold="1000" ng-controller="AppCtrl">
+<html lang="en" class="no-js --dark" ng-app="chronopinNodeApp" infinite-scroll threshold="1100" ng-controller="AppCtrl">
 <!--<![endif]-->
 
 <head>
@@ -24,7 +24,7 @@
 
   <script id="mainPinData" type="text/javascript" src="/mainPinData.js" defer></script>
 
-  <meta http-equiv="x-ua-compatible" content="ie=edge" /> 
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <base href="/" />
 
   <title ng-bind="metaservice.metaTitle()">Chronopin</title>
@@ -39,26 +39,26 @@
   <meta property="og:type" content="<%= meta.type %>" />
   <%- meta.mediaContentType %>
 
-  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://localhost:35729/livereload.js?snipver=1"> -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://localhost:35729/livereload.js?snipver=1"> -->
 
-  <!-- <meta property="og:image:width" content='<%= meta.mediaWidth %>'>
+    <!-- <meta property="og:image:width" content='<%= meta.mediaWidth %>'>
   <meta property="og:image:height" content='<%= meta.mediaHeight %>'>
   <meta property="og:url" content="https://www.chronopin.com"> -->
 
-  <link rel="canonical" href="<%= meta.canonical %>" />
+    <link rel="canonical" href="<%= meta.canonical %>" />
 
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <!-- build:css(client) app/vendor.css -->
-  <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
-  <!-- endbower -->
-  <!-- endbuild -->
-  <!-- build:css({.tmp,client}) app/app.css -->
-  <link rel="stylesheet" href="app/app.css" />
-  <!-- injector:css -->
-  <!-- endinjector -->
-  <!-- endbuild -->
-  <link rel="icon" href="/assets/images/favicon.ico" />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(client) app/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,client}) app/app.css -->
+    <link rel="stylesheet" href="app/app.css" />
+    <!-- injector:css -->
+    <!-- endinjector -->
+    <!-- endbuild -->
+    <link rel="icon" href="/assets/images/favicon.ico" />
 
 </head>
 
@@ -69,10 +69,15 @@
     <![endif]-->
 
   <!-- Add your site or application content here -->
-  <navbar class="navbar-main"></navbar>
-  <div ui-view="" class="view" autoscroll="false"></div>
+  <div>
+    <navbar class="navbar-main"></navbar>
+    <div ui-view="" class="view" autoscroll="false"></div>
+    <div ui-view="modalScroller" autoscroll="false"></div>
+  </div>
+  <!-- <div>
+    <profile-menu></profile-menu>
+  </div> -->
 
-  <div ui-view="modalScroller" autoscroll="false"></div>
   <!-- <footer></footer> -->
 
   <!--[if lt IE 9]>
@@ -161,6 +166,7 @@
   <script src="components/data/webservice/angular-link-header-parser.js"></script>
   <script src="components/data/webservice/dateTime.web.service.js"></script>
   <script src="components/data/webservice/main.web.service.js"></script>
+  <script src="components/data/webservice/mention.web.service.js"></script>
   <script src="components/data/webservice/pin.web.service.js"></script>
   <script src="components/data/webservice/profile.web.service.js"></script>
   <script src="components/data/webservice/stock.web.service.js"></script>
@@ -192,6 +198,7 @@
   <script src="components/overlap/overlap.component.js"></script>
   <script src="components/pin-block/pin-block.controller.js"></script>
   <script src="components/profile-block/profile-block.component.js"></script>
+  <script src="components/profile-menu/profile-menu.component.js"></script>
   <script src="components/scroll/scroll/scroll.component.js"></script>
   <script src="components/sentiment-block/sentiment-block.controller.js"></script>
   <script src="components/tags/chronohash.directive.js"></script>

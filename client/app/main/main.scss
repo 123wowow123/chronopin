@@ -207,7 +207,7 @@ $bag-font-color: var(--bag-text-color);
     a.sentiment {
         display: inline-block;
         margin-right: 8px;
-        font-size: 14px;
+        font-size: 15px;
     }
 
     a.posted-time {
@@ -309,7 +309,7 @@ $bag-font-color: var(--bag-text-color);
 
     &__headline {
         display: flex;
-        font-size: 12px;
+        font-size: 13px;
         justify-content: space-between;
     }
 
@@ -541,14 +541,14 @@ $bag-font-color: var(--bag-text-color);
 
 .\--meta {
     margin-bottom: 12px;
-    font-size: 12px;
+    font-size: 13px;
     flex-wrap: wrap;
     align-items: baseline;
 
     .sentiment {
         display: inline-block;
         margin-right: 8px;
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 

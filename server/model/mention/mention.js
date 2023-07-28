@@ -70,6 +70,10 @@ export default class Mention {
     });
   }
 
+  static autocomplete(tag) {
+    return _autocompleteMSSQL(tag);
+  }
+
   static deleteByPinId(pinId) {
     return new Mention({
       pinId: pinId
@@ -168,6 +172,36 @@ function _deleteByPinIdMSSQL(pinId) {
             return resolve({
               pinId
             });
+          });
+      });
+    });
+}
+
+function _autocompleteMSSQL(tag) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise(function (resolve, reject) {
+        const StoredProcedureName = 'SearchMention';
+        let request = new mssql.Request(conn)
+          .input('tag', mssql.NVarChar(1024), tag);
+
+        request.execute(`[dbo].[${StoredProcedureName}]`,
+          (err, res, returnValue, affected) => {
+            let tags;
+            if (err) {
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+            }
+            // ToDo: doesn't always return value
+            try {
+              tags = res.recordset.map(t=>t);
+            } catch (e) {
+              throw e;
+            }
+
+            resolve({
+              tags
+            });
+
           });
       });
     });

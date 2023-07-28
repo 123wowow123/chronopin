@@ -94,6 +94,7 @@ const {
   // createCreateFavoriteSP,
   createCreateDateTimeSP,
   createCreateMentionSP,
+  createSearchMentionSP,
   createCreatePinMentionSP,
   createCreatePinMentionLinkSP,
 
@@ -235,6 +236,7 @@ function execute() {
         //createCreateFavoriteSP,
         createCreateDateTimeSP,
         createCreateMentionSP,
+        createSearchMentionSP,
         createCreatePinMentionSP,
         createCreatePinMentionLinkSP,
         createDeleteFollowUserSP,

@@ -18,7 +18,8 @@
         require: '?ngModel',
         scope: {
           description: '<',
-          onChange: '&'
+          onChange: '&',
+          tagChange: '&'
         },
         link: (scope, elem, attrs, ngModel) => {
 
@@ -54,7 +55,7 @@
               linkTool: (data, config) => {
                 const cfg = config.linkTool // configurations for linkTool
                 // Display meta tags if available (title, description)
-                const imageLink = _.get(data, 'meta.image.URL') || _.get(data, 'meta.image.url') || ''
+                const imageLink = _.get(data, 'meta.image.URL') || _.get(data, 'meta.image.url') || '';
                 let imageDiv = ''
                 if (imageLink && imageLink.length > 0) {
                   imageDiv = `
@@ -148,9 +149,32 @@
             sel.addRange(range);
           };
 
+          function placeCaretAtEndOfTextNode(textNode) {
+            let range = document.createRange();
+            range.selectNode(textNode);
+            range.collapse(false);
+            let sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+          };
+
           // Recurse and loop through DOM elements only once
           function treeHTML(element, matchFactories, doNotContinueCursor) {
             let nodeList = element.childNodes;
+
+            const sel = document.getSelection();
+            if (sel) {
+              const anchorNode = sel.anchorNode;
+              const parentNode = anchorNode.parentNode;
+              console.log('tagChange sel check anchorNode', anchorNode.nodeName)
+              matchFactories.forEach((f) => {
+                if (parentNode.nodeName.toLowerCase() === f.nodeName.toLowerCase()) {
+                  const text = anchorNode.data;
+                  console.log('tagChange', text);
+                  scope.tagChange({ tag: text, node: parentNode });
+                }
+              });
+            }
 
             if (nodeList != null) {
               if (nodeList.length) {
@@ -202,11 +226,12 @@
                         fragment.prepend(preRemainerContent);
                         parentNode.replaceWith(fragment);
                         !doNotContinueCursor && !preRemainerContent && placeCaretAtEnd(newNode0);
+                        scope.tagChange({ tag: validateContentAny[1], node: newNode0 });
                       } else if (parentNode.nodeName.toLowerCase() === f.nodeName.toLowerCase() && !validateContentPass) {
                         const oldText = parentNode.textContent;
-                        let fragment = new DocumentFragment();
-                        fragment.append(oldText);
-                        parentNode.replaceWith(fragment);
+                        const newtext = document.createTextNode(oldText);
+                        parentNode.replaceWith(newtext);
+                        placeCaretAtEndOfTextNode(newtext);
                       } else if (parentNode.nodeName.toLowerCase() === f.nodeName.toLowerCase() && validateContentPass) {
                         validateContentPass
                       } else if (match) {
@@ -217,6 +242,7 @@
                           let newNode = f.nodeWrapperFactory();
                           range.surroundContents(newNode);
                           placeCaretAtEnd(newNode);
+                          scope.tagChange({ tag: validateContentAny[1], node: newNode });
                         } else {
                           //if parent is tag node then remove and rewrap
                           const oldText = parentNode.textContent;
@@ -231,6 +257,7 @@
                           fragment.append(remainerContent);
                           parentNode.replaceWith(fragment);
                           placeCaretAtEnd(newNode2);
+                          scope.tagChange({ tag: validateContentAny[1], node: newNode2 });
                         }
                       }
                     });

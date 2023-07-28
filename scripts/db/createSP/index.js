@@ -76,6 +76,7 @@ const createCreatePinMediumLinkSP = require('./pinMedium/createCreatePinMediumLi
 const createCreateDateTimeSP = require('./dateTime/createCreateDateTimeSP');
 /* mention */
 const createCreateMentionSP = require('./mention/createCreateMentionSP');
+const createSearchMentionSP =  require('./mention/createSearchMentionSP');
 const createCreatePinMentionSP = require('./pinMention/createCreatePinMentionSP');
 const createCreatePinMentionLinkSP = require('./pinMention/createCreatePinMentionLinkSP');
 
@@ -190,6 +191,7 @@ module.exports.setup = function (connectionPool) {
   //createCreateFavoriteSP.setup(cp);
   createCreateDateTimeSP.setup(cp);
   createCreateMentionSP.setup(cp);
+  createSearchMentionSP.setup(cp);
   createCreatePinMentionSP.setup(cp);
   createCreatePinMentionLinkSP.setup(cp);
 
@@ -281,6 +283,7 @@ module.exports.createCreatePinMediumLinkSP = createCreatePinMediumLinkSP.createS
 //module.exports.createCreateFavoriteSP = createCreateFavoriteSP.createSP;
 module.exports.createCreateDateTimeSP = createCreateDateTimeSP.createSP;
 module.exports.createCreateMentionSP = createCreateMentionSP.createSP;
+module.exports.createSearchMentionSP = createSearchMentionSP.createSP;
 module.exports.createCreatePinMentionSP = createCreatePinMentionSP.createSP;
 module.exports.createCreatePinMentionLinkSP = createCreatePinMentionLinkSP.createSP;
 

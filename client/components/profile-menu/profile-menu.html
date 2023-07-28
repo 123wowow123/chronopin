@@ -1,0 +1,37 @@
+<div class="profile-block">
+    <div>
+        <span class="user-name">
+            {{vm.user.userName}}
+        </span>
+    </div>
+    <div class="about">
+        <span ng-if="vm.user.about">{{vm.user.about}}</span>
+        <span ng-if="!vm.user.about" class="missing-bio">Missing bio</span>
+    </div>
+
+    <div class="footer">
+        <span class="footer-left">
+            <div>
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                <span>Joined</span>
+                <time datetime="{{vm.user.utcCreatedDateTime}}">{{vm.user.utcCreatedDateTime | date :
+                    "MM/dd/yyyy" | lowercase}}
+                </time>
+            </div>
+            <div>
+                <span class="following-count">
+                    <span class="count-text">{{vm.user.followingCount}}</span> Following
+                </span>
+                <span class="follower-count">
+                    <span class="count-text">{{vm.user.followerCount}}</span> Followers
+                </span>
+            </div>
+        </span>
+        <span class="follow-block footer-right" ng-if="vm.Auth.getCurrentUserName() && (vm.Auth.getCurrentUserName() !== vm.user.userName)">
+            <button ng-if="!vm.user.isFollowing" class="btn btn-default follow" type="button" ng-click="vm.clickFollow()">
+                Follow
+            </button>
+            <button ng-if="vm.user.isFollowing" class="btn btn-default following" type="button" ng-click="vm.clickFollow()"></button>
+        </span>
+    </div>
+</div>

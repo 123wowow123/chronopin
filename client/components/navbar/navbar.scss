@@ -133,6 +133,26 @@
     }
 }
 
+// #navbar-main {
+//     height: 100vh;
+//     width: calc(100% + 35px * -1);
+//     margin: 0;
+//     position: fixed;
+//     z-index: 100;
+//     top: 50px;
+//     background: #222;
+//     right: calc(-100% + 35px);
+//     animation: slide 0.5s forwards;
+//     animation-delay: 0s;
+// }
+
+// @keyframes slide {
+//     100% {
+//         right: 0;
+//     }
+// }
+
+
 .navbar-main {
     position: fixed;
     top: 0;

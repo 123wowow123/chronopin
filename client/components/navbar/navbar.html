@@ -24,7 +24,6 @@
         ng-submit="nav.submitSearch(nav.search, nav.searchChoice.value)">
 
         <div class="search-group">
-          <!-- <span class="" ng-if="nav.search" title="Algolia Search"></span> -->
           <fieldset class="search-box-container">
             <div class="search-input-container">
               <input type="text" name="search" id="search" class="search-control --show-icon"
@@ -61,12 +60,6 @@
       </form>
     </div>
     <div uib-collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
-      <!-- <ul class="nav navbar-nav">
-        <li ng-repeat="item in nav.menu" ui-sref-active="active">
-          <a ui-sref="{{item.state}}">{{item.title}}</a>
-        </li>
-        <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="admin">Admin</a></li>
-      </ul> -->
 
       <ul class="nav navbar-nav navbar-right">
         <li ng-show="nav.isLoggedIn()" ui-sref-active="active">
@@ -80,10 +73,8 @@
         <li ng-show="nav.isLoggedIn()" ui-sref-active="active">
           <a ui-sref="create">
             Create
-            <!-- <span class="glyphicon glyphicon-plus"></span> -->
           </a>
         </li>
-        <!-- <li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="main.modalScroller.addPin"><span class="glyphicon glyphicon-star-empty"></span></a></li> -->
         <li ng-hide="nav.isLoggedIn()" ui-sref-active="active">
           <a ui-sref="signup">Sign up</a>
         </li>
@@ -106,10 +97,6 @@
               <a ui-sref="referral">
                 <span class="glyphicon glyphicon-piggy-bank"></span> Referral</a>
             </li>
-            <!-- <li ui-sref-active="active" role="menuitem">
-              <a ui-sref="watch">
-                <span class="glyphicon glyphicon-heart"></span> My Board</a>
-            </li> -->
             <li ui-sref-active="active" role="menuitem">
               <a ui-sref="settings">
                 <span class="glyphicon glyphicon-lock"></span> Password</a>
@@ -122,7 +109,6 @@
           </ul>
         </li>
 
-        <!-- <li class="divider" role="separator"></li> -->
         <li ng-show="nav.isLoggedIn()">
           <a ui-sref="logout">Logout</a>
         </li>

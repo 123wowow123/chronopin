@@ -100,10 +100,16 @@
 
                   <div ng-switch="$ctrl.activeTabs['content']" ng-if="$ctrl.pinRecieved">
                     <text-editor ng-switch-when="0" ng-model="$ctrl.pin.sourceDescription"
-                      description="$ctrl.pin.description" on-change="$ctrl.descriptionOnChange(html)"></text-editor>
+                      description="$ctrl.pin.description" on-change="$ctrl.descriptionOnChange(html)"
+                      tag-change="$ctrl.tagChange(tag, node)"></text-editor>
                     <text-editor ng-switch-when="1" ng-model="$ctrl.pinSuggestion.sourceDescription"
                       description="$ctrl.pinSuggestion.description"
-                      on-change="$ctrl.suggestionDescriptionOnChange(html)"></text-editor>
+                      on-change="$ctrl.suggestionDescriptionOnChange(html)"
+                      tag-change="$ctrl.tagChange(tag, node)"></text-editor>
+
+                    <auto-complete top="$ctrl.topOffesetTagAutoComplete" show="$ctrl.showTagAutoComplete"
+                      suggestions="$ctrl.suggestions" title="tag" on-select="$ctrl.tagSelect($event)"
+                      on-dismiss="$ctrl.tagDismiss($event)"><auto-complete>
                   </div>
 
                   <!-- <div ng-switch="$ctrl.activeTabs['content']">

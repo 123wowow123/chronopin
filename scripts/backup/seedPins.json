@@ -8533,6 +8533,38 @@
     "userId": 2
   },
   {
+    "id": 495,
+    "rootThread": true,
+    "title": "Treasury Announces Marketable Borrowing Estimates | April – June 2023",
+    "description": "<p class=\"paragraph\"> During the April – June 2023 quarter, Treasury expects to borrow $726 billion in privately-held net marketable debt, assuming an end-of-June cash balance of $550 billion. The borrowing estimate is $449 billion higher than announced in January 2023, primarily due to the lower beginning-of-quarter cash balance ($322 billion), and projections of lower receipts and higher outlays ($117 billion). </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#TGA</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Liquidity</chronohash> </p>",
+    "sourceDescription": "{\"time\":1690475014607,\"blocks\":[{\"id\":\"1vZk8bjd0L\",\"type\":\"paragraph\",\"data\":{\"text\":\"During the April – June 2023 quarter, Treasury expects to borrow $726 billion in privately-held net marketable debt, assuming an end-of-June cash balance of $550 billion. The borrowing estimate is $449 billion higher than announced in January 2023, primarily due to the lower beginning-of-quarter cash balance ($322 billion), and projections of lower receipts and higher outlays ($117 billion).\"}},{\"id\":\"vYrB56yUSB\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#TGA</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Liquidity</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://home.treasury.gov/news/press-releases/jy1453",
+    "price": 726000000000,
+    "utcStartDateTime": "2023-04-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-27T16:23:38.608Z",
+    "utcUpdatedDateTime": "2023-07-27T16:25:51.286Z",
+    "sentimentScore": 0.03309807926416397,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "mentions": [
+      {
+        "id": 308,
+        "tag": "#TGA",
+        "pinId": 495
+      },
+      {
+        "id": 309,
+        "tag": "#Liquidity",
+        "pinId": 495
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 144,
     "parentId": 143,
     "rootThread": false,
@@ -12508,6 +12540,39 @@
     "userId": 1
   },
   {
+    "id": 496,
+    "parentId": 495,
+    "rootThread": false,
+    "title": "Treasury Announces Marketable Borrowing Estimates | July – September 2023",
+    "description": "<p class=\"paragraph\"> During the July – September 2023 quarter, Treasury expects to borrow $733 billion in privately-held net marketable debt, assuming an end-of-September cash balance of $600 billion. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#TGA</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Liquidity</chronohash> </p>",
+    "sourceDescription": "{\"time\":1690475091686,\"blocks\":[{\"id\":\"2kX5DpseBq\",\"type\":\"paragraph\",\"data\":{\"text\":\"During the July – September 2023 quarter, Treasury expects to borrow $733 billion in privately-held net marketable debt, assuming an end-of-September cash balance of $600 billion.\"}},{\"id\":\"7aw1lWKWGi\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#TGA</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Liquidity</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://home.treasury.gov/news/press-releases/jy1453",
+    "price": 733000000000,
+    "utcStartDateTime": "2023-07-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-10-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-27T16:25:02.424Z",
+    "utcUpdatedDateTime": "2023-07-27T16:26:08.942Z",
+    "sentimentScore": 0.04769907984882593,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "mentions": [
+      {
+        "id": 310,
+        "tag": "#TGA",
+        "pinId": 496
+      },
+      {
+        "id": 311,
+        "tag": "#Liquidity",
+        "pinId": 496
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 316,
     "rootThread": false,
     "title": "Mushoku Tensei: Jobless Reincarnation Season 2 release date is on July 2, 2023",
@@ -13466,6 +13531,41 @@
     "userId": 1
   },
   {
+    "id": 488,
+    "rootThread": false,
+    "title": "Repos per day are nearly 20,000 cars. Let that primary data settle in..as we head into the week of dealership earnings.",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#VehicleRepossession</chronohash> </p>",
+    "sourceDescription": "{\"time\":1690210455877,\"blocks\":[{\"id\":\"jV6FlhhtYK\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#VehicleRepossession</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/UnicusResearch/status/1683463750991347712",
+    "utcStartDateTime": "2023-07-24T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-25T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-24T14:54:28.119Z",
+    "sentimentScore": 0.0197175070643425,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 374,
+        "originalUrl": "https://twitter.com/UnicusResearch/status/1683463750991347712",
+        "type": "2",
+        "authorName": "Unicus",
+        "authorUrl": "https://twitter.com/UnicusResearch",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Direct from our sources regarding car repos. <br><br>1. 1 out of 3 cars are 30+days late<br>2. 1 out of 5 cars are 60+days late<br>3. 1 out of 7 cars are 90+ days late.<br><br>Repos per day are nearly 20,000 cars. Let that primary data settle in..as we head into the week of dealership earnings.…</p>&mdash; Unicus (@UnicusResearch) <a href=\"https://twitter.com/UnicusResearch/status/1683463750991347712?ref_src=twsrc%5Etfw\">July 24, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 299,
+        "tag": "#VehicleRepossession",
+        "pinId": 488
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 331,
     "rootThread": false,
     "title": "FOMC July is a given hike and another hike thereafter will really depend on claims trends and a closing of current jobs-workers gap.",
@@ -13501,18 +13601,179 @@
     "userId": 1
   },
   {
+    "id": 491,
+    "rootThread": false,
+    "title": "When enough is enough",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bearish</chronohash> </p>",
+    "sourceDescription": "{\"time\":1690380853330,\"blocks\":[{\"id\":\"YOyKq88AIX\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bearish</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/OliverRakau/status/1684115905217970177",
+    "utcStartDateTime": "2023-07-26T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-27T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-26T14:14:22.749Z",
+    "sentimentScore": -0.03056387603282929,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 375,
+        "originalUrl": "https://twitter.com/OliverRakau/status/1684115905217970177",
+        "type": "2",
+        "authorName": "Oliver Rakau",
+        "authorUrl": "https://twitter.com/OliverRakau",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">When enough is enough, edition 34. <a href=\"https://t.co/tQfiqGl4Ay\">pic.twitter.com/tQfiqGl4Ay</a></p>&mdash; Oliver Rakau (@OliverRakau) <a href=\"https://twitter.com/OliverRakau/status/1684115905217970177?ref_src=twsrc%5Etfw\">July 26, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 133,
+        "address": "Europe",
+        "order": 0,
+        "pinId": 491
+      }
+    ],
+    "mentions": [
+      {
+        "id": 300,
+        "tag": "#Bearish",
+        "pinId": 491
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 492,
+    "rootThread": false,
+    "title": "Fed approves hike that takes interest rates to highest level in more than 22 years",
+    "description": "<p class=\"paragraph\"> The quarter percentage point increase will bring the fed funds rate to a target range of 5.25%-5.5%. </p><p class=\"paragraph\"> The Federal Reserve approved a much-anticipated interest rate hike that takes benchmark borrowing costs to their highest level in more than 22 years. </p><p class=\"paragraph\"> While policymakers indicated at the June meeting that two rate hikes are coming this year, markets are pricing in a better-than-even chance that there won’t be any more moves this year. </p><p class=\"paragraph\"> Chair Jerome Powell said the central bank will make data-driven decisions on a “meeting-by-meeting” basis. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Rate</chronohash> </p>",
+    "sourceDescription": "{\"time\":1690402849413,\"blocks\":[{\"id\":\"Q0Xx5M8uz0\",\"type\":\"paragraph\",\"data\":{\"text\":\"The quarter percentage point increase will bring the fed funds rate to a target range of 5.25%-5.5%.\"}},{\"id\":\"MrwQB6JRkq\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Federal Reserve approved a much-anticipated interest rate hike that takes benchmark borrowing costs to their highest level in more than 22 years.\"}},{\"id\":\"c-ZKh2A5N6\",\"type\":\"paragraph\",\"data\":{\"text\":\"While policymakers indicated at the June meeting that two rate hikes are coming this year, markets are pricing in a better-than-even chance that there won’t be any more moves this year.\"}},{\"id\":\"KqxkiG_Rfy\",\"type\":\"paragraph\",\"data\":{\"text\":\"Chair Jerome Powell said the central bank will make data-driven decisions on a “meeting-by-meeting” basis.\"}},{\"id\":\"wHDYGUhv7k\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Rate</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/07/26/fed-meeting-july-2023-.html",
+    "utcStartDateTime": "2023-07-26T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-28T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-26T20:20:31.539Z",
+    "utcUpdatedDateTime": "2023-07-26T20:20:53.227Z",
+    "sentimentScore": 0.1989690260961652,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 376,
+        "thumbName": "fba52e4c-83f1-4858-9485-53a9a9e81411-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107277354-1690400137823-jerome.jpg?v=1690400359&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 301,
+        "tag": "#Rate",
+        "pinId": 492
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 493,
+    "rootThread": false,
+    "title": "European Central Bank raises rates by a quarter percentage point, says inflation set to remain ‘too high for too long’",
+    "description": "<p class=\"paragraph\"> The European Central Bank on Thursday announced a new rate increase of 25 basis points, bringing its main rate to 3.75% </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#ECB</chronohash> </p>",
+    "sourceDescription": "{\"time\":1690468743814,\"blocks\":[{\"id\":\"e2SFhJjkbU\",\"type\":\"paragraph\",\"data\":{\"text\":\"The European Central Bank on Thursday announced a new rate increase of 25 basis points, bringing its main rate to 3.75%\"}},{\"id\":\"_6MpO17viT\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#ECB</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/07/27/ecb-rate-decision-july-2023-raises-rates-by-25-basis-points.html",
+    "utcStartDateTime": "2023-07-27T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-28T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-27T14:39:16.817Z",
+    "sentimentScore": -0.12363239005208015,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 377,
+        "thumbName": "b4643ccb-d524-47c4-b27f-6a987d24fe1f-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107257381-1686831365389-gettyimages-1258708596-AFP_33JU8Y3.jpeg?v=1690460303&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 134,
+        "address": "Europe",
+        "order": 0,
+        "pinId": 493
+      }
+    ],
+    "mentions": [
+      {
+        "id": 302,
+        "tag": "#ECB",
+        "pinId": 493
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 498,
+    "rootThread": false,
+    "title": "12.5 is your $VIX floor. Market positioning is extremely extended hence last rally mile is fraught with pain for late longs",
+    "description": "<p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$VIX</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1690497326783,\"blocks\":[{\"id\":\"VbvcFNOXR6\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$VIX</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1684679631935356928",
+    "utcStartDateTime": "2023-07-27T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-28T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-27T22:36:25.300Z",
+    "sentimentScore": -0.26038646697998047,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 380,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1684679631935356928",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">What will come out if all this? 12.5 is your <a href=\"https://twitter.com/search?q=%24VIX&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$VIX</a> floor. Market positioning is extremely extended hence last rally mile is fraught with pain for late longs. Growth right tail is punishing when ERP is so low. Disinflation will keep ratcheting up front real yield pressure. Equities…</p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1684679631935356928?ref_src=twsrc%5Etfw\">July 27, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 313,
+        "tag": "$VIX",
+        "pinId": 498
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 474,
     "rootThread": false,
-    "title": "Was thinking about 2007-2009 just yesterday and how slowly it played out. RE wise I said 12-18 months for lower valuations to enter the books, and indeed, 30 June will see the firs",
+    "title": "Was thinking about 2007-2009 just yesterday and how slowly it played out. RE wise I said 12-18 months for lower valuations to enter the books, and indeed, 30 June will see",
     "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bearish</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#RE</chronohash> </p>",
     "sourceDescription": "{\"time\":1689689584490,\"blocks\":[{\"id\":\"Nqqi826nJn\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bearish</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#RE</chronohash>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://twitter.com/DrastikThomas/status/1681209005656485890",
     "utcStartDateTime": "2023-07-30T07:00:00.000Z",
-    "utcEndDateTime": "2023-08-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-02T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-07-18T14:12:51.979Z",
-    "utcUpdatedDateTime": "2023-07-18T14:13:09.291Z",
-    "sentimentScore": -0.22469327971339223,
+    "utcUpdatedDateTime": "2023-07-22T14:58:05.269Z",
+    "sentimentScore": -0.31624204106628895,
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -13529,7 +13790,7 @@
     ],
     "locations": [
       {
-        "id": 86,
+        "id": 132,
         "address": "Germany",
         "order": 0,
         "pinId": 474
@@ -13537,13 +13798,13 @@
     ],
     "mentions": [
       {
-        "id": 210,
-        "tag": "#RE",
+        "id": 297,
+        "tag": "#Bearish",
         "pinId": 474
       },
       {
-        "id": 211,
-        "tag": "#Bearish",
+        "id": 298,
+        "tag": "#RE",
         "pinId": 474
       }
     ],
@@ -13604,6 +13865,59 @@
       }
     ],
     "userId": 1
+  },
+  {
+    "id": 494,
+    "rootThread": false,
+    "title": "Refunding announcement coming in a few days (Aug 2) and will show a marked pick-up in coupon issuance. Net net there will be over $ 1 t of net additional coupons issued 24 vs 23",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#TGA</chronohash> </p>",
+    "sourceDescription": "{\"time\":1690469159925,\"blocks\":[{\"id\":\"MzYS2_TBXV\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#TGA</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1684569204043943936",
+    "utcStartDateTime": "2023-08-02T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-03T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-27T14:46:11.142Z",
+    "sentimentScore": -0.11558844894170762,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 378,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1684569204043943936",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">What?… noooo… Refunding announcement coming in a few days (Aug 2) and will show a marked pick-up in coupon issuance. Net net there will be over $ 1 t of net additional coupons issued 24 vs 23. <br><br>That said, there is absolutely no evidence of any statistical relationship between… <a href=\"https://t.co/mv0cPulhm2\">https://t.co/mv0cPulhm2</a></p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1684569204043943936?ref_src=twsrc%5Etfw\">July 27, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 303,
+        "tag": "#TGA",
+        "pinId": 494
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 490,
+    "rootThread": false,
+    "title": "Goblin Slayer II",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/ufYEythBd3w\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><h2>Plot</h2><p class=\"paragraph\"> Rumor has it that, in a certain guild in the middle of nowhere, there is an extraordinary man who has climbed all the way to the Silver rank just by killing goblins. At the same guild, a priestess who’s just become a new adventurer has formed her first party... and the man who ends up rescuing that party when they get into trouble is none other than the Goblin Slayer. </p>",
+    "sourceDescription": "{\"time\":1690328809900,\"blocks\":[{\"id\":\"rIIbob4nvj\",\"type\":\"embed\",\"data\":{\"service\":\"youtube\",\"source\":\"https://www.youtube.com/watch?v=ufYEythBd3w\",\"embed\":\"https://www.youtube.com/embed/ufYEythBd3w\",\"width\":580,\"height\":320,\"caption\":\"Goblin Slayer Season 2 | OFFICIAL TRAILER\",\"length\":\"\"}},{\"id\":\"u8jKfNAwc5\",\"type\":\"header\",\"data\":{\"text\":\"Plot\",\"level\":2}},{\"id\":\"7P2--z4yKV\",\"type\":\"paragraph\",\"data\":{\"text\":\"Rumor has it that, in a certain guild in the middle of nowhere, there is an extraordinary man who has climbed all the way to the Silver rank just by killing goblins. At the same guild, a priestess who’s just become a new adventurer has formed her first party... and the man who ends up rescuing that party when they get into trouble is none other than the Goblin Slayer.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://myanimelist.net/anime/47160/Goblin_Slayer_II",
+    "utcStartDateTime": "2023-08-04T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-05T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-25T23:47:24.912Z",
+    "sentimentScore": 0.27175784669816494,
+    "user": {
+      "id": 3,
+      "userName": "@PrinceAnime"
+    },
+    "userId": 3
   },
   {
     "id": 165,
@@ -14675,6 +14989,41 @@
     "userId": 1
   },
   {
+    "id": 497,
+    "rootThread": false,
+    "title": "Both Fed and market have cuts pencilled in for 24 which does not seem unreasonable, question is how early in 24.",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Rates</chronohash> </p>",
+    "sourceDescription": "{\"time\":1690476848247,\"blocks\":[{\"id\":\"Bwy-CGlFXT\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Rates</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1684604798346067968",
+    "utcStartDateTime": "2024-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-27T16:54:26.723Z",
+    "sentimentScore": -0.00004982948303223,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 379,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1684604798346067968",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">I would say this though, inverted YC have ALWAYS been followed by Fed rate cuts. <br><br>This cycle has been the 2nd longest (counting from 78 onwards). between start of inversion and cuts (still running clearly). Longest was 2005. This cycle has seen inversion for 457 days so far.… <a href=\"https://t.co/Fvx50f5h1G\">https://t.co/Fvx50f5h1G</a></p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1684604798346067968?ref_src=twsrc%5Etfw\">July 27, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 312,
+        "tag": "#rates",
+        "pinId": 497
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 385,
     "rootThread": false,
     "title": "Flux Keyboard - The Keyboard Reinvented",
@@ -14710,6 +15059,25 @@
       }
     ],
     "userId": 4
+  },
+  {
+    "id": 489,
+    "rootThread": false,
+    "title": "Solo Leveling",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/9vIxi5XkQ8Y?start=10s\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><h2>Plot</h2><p class=\"paragraph\"> In a world where hunters — human warriors who possess supernatural abilities — must battle deadly monsters to protect mankind from certain annihilation, a notoriously weak hunter named Sung Jinwoo finds himself in a seemingly endless struggle for survival. One day, after narrowly surviving an overwhelmingly powerful double dungeon that nearly wipes out his entire party, a mysterious program called the System chooses him as its sole player and in turn, gives him the extremely rare ability to level up in strength and turn anyone he kills into a loyal minion called a shadow. Jinwoo then sets out on a journey as he fights against all kinds of enemies, both man and monster, to discover the secrets of the dungeons and the true source of his powers. </p>",
+    "sourceDescription": "{\"time\":1690328473229,\"blocks\":[{\"id\":\"ONp9yEbSPi\",\"type\":\"embed\",\"data\":{\"service\":\"youtube\",\"source\":\"https://www.youtube.com/watch?v=9vIxi5XkQ8Y&amp;t=10s\",\"embed\":\"https://www.youtube.com/embed/9vIxi5XkQ8Y?start=10s\",\"width\":580,\"height\":320,\"caption\":\"Solo Leveling | OFFICIAL TRAILER 2\",\"length\":\"\"}},{\"id\":\"78i3b_3UPY\",\"type\":\"header\",\"data\":{\"text\":\"Plot\",\"level\":2}},{\"id\":\"gN2uy1CYKV\",\"type\":\"paragraph\",\"data\":{\"text\":\"In a world where hunters — human warriors who possess supernatural abilities — must battle deadly monsters to protect mankind from certain annihilation, a notoriously weak hunter named Sung Jinwoo finds himself in a seemingly endless struggle for survival. One day, after narrowly surviving an overwhelmingly powerful double dungeon that nearly wipes out his entire party, a mysterious program called the System chooses him as its sole player and in turn, gives him the extremely rare ability to level up in strength and turn anyone he kills into a loyal minion called a shadow. Jinwoo then sets out on a journey as he fights against all kinds of enemies, both man and monster, to discover the secrets of the dungeons and the true source of his powers.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Solo_Leveling",
+    "utcStartDateTime": "2024-01-31T08:00:00.000Z",
+    "utcEndDateTime": "2024-02-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-25T23:43:41.454Z",
+    "utcUpdatedDateTime": "2023-07-25T23:48:16.725Z",
+    "sentimentScore": -0.16695242375135422,
+    "user": {
+      "id": 3,
+      "userName": "@PrinceAnime"
+    },
+    "userId": 3
   },
   {
     "id": 222,

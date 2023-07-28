@@ -5,9 +5,17 @@
   const delayParse = 0;
   //let PinGroups;
 
+  function getAbsoluteOffsetTop(el) {
+    let top = el.getBoundingClientRect().top;
+    let scrollY = window.scrollY;
+    let offset = top + scrollY;
+
+    return offset;
+  }
+
   class CreateController {
 
-    constructor($window, $state, $scope, $transitions, Modal, Auth, $q, $rootScope, $stateParams, $http, $timeout, $element, pinApp, twitterJs, pinWebService, aiWebService, scrapeService, appConfig, Util /*, $log, modelInjector */) {
+    constructor($window, $state, $scope, $transitions, Modal, Auth, $q, $rootScope, $stateParams, $http, $timeout, $element, pinApp, twitterJs, pinWebService, aiWebService, mentionService, scrapeService, appConfig, Util /*, $log, modelInjector */) {
       //PinGroups || (PinGroups = modelInjector.getPinGroups());
       this.twitterJs = twitterJs;
       this.pinRecieved = false;
@@ -52,6 +60,7 @@
       this.appConfig = appConfig;
       this.scrapeType = appConfig.scrapeType;
       this.aiWebService = aiWebService;
+      this.mentionService = mentionService;
       this.pinWebService = pinWebService;
       this.scrapeService = scrapeService;
       this.$http = $http;
@@ -109,6 +118,8 @@
       };
 
       this.submitSuccess = false;
+      this.getTagAutocompleteDebounce = _.debounce(this.getTagAutocomplete, 250);
+      this.showTagAutoComplete = false;
     }
 
     $onInit() {
@@ -158,7 +169,6 @@
         this.autoScrape = true;
         this.pinRecieved = true;
       }
-
     }
 
     descriptionOnChange(html) {
@@ -487,6 +497,38 @@
             const elem = this.$element[0];
             twttr.widgets.load(elem);
           }, delayParse);
+        });
+    }
+
+    tagChange(tag, node) {
+      if (!tag || !node) return;
+      this.getTagAutocompleteDebounce(tag, node);
+    }
+
+    tagSelect($event) {
+      const tag = $event.data.tag;
+      this.node.textContent = tag;
+      this.showTagAutoComplete = false;
+    }
+
+    tagDismiss($event) {
+      this.showTagAutoComplete = false;
+    }
+
+    getTagAutocomplete(tag, node) {
+      console.log('searching', tag)
+      this.node = node;
+
+      this.mentionService.autocomplete(tag.trim())
+        .then((res) => {
+          const tags = res.data.tags;
+          if ((!node || !node.parentNode) || (tags && !tags.length)) {
+            return this.showTagAutoComplete = false;
+          }
+          this.suggestions = tags;
+          this.showTagAutoComplete = true;
+          const top = getAbsoluteOffsetTop(node);
+          this.topOffesetTagAutoComplete = top - 90;
         });
     }
 

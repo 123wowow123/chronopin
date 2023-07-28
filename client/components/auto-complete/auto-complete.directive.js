@@ -7,7 +7,8 @@ angular.module('chronopinNodeApp')
         show: '<',
         title: '@',
         onSelect: '&',
-        onDismiss: '&'
+        onDismiss: '&',
+        top: '<'
       },
       link: function (scope, elem, attrs) {
 

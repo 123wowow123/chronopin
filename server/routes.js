@@ -50,6 +50,7 @@ export default function (app) {
   app.use('/api/meta', require('./api/meta'));
   app.use('/api/stock', require('./api/stock'));
   app.use('/api/ai', require('./api/ai'));
+  app.use('/api/mention', require('./api/mention'));
   app.use('/auth', require('./auth').default);
 
 
