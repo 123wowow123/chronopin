@@ -71,6 +71,9 @@ export default class Mention {
   }
 
   static autocomplete(tag) {
+    if (tag && tag.startsWith('@')) {
+      return _autocompleteUserMSSQL(tag);
+    }
     return _autocompleteMSSQL(tag);
   }
 
@@ -193,7 +196,37 @@ function _autocompleteMSSQL(tag) {
             }
             // ToDo: doesn't always return value
             try {
-              tags = res.recordset.map(t=>t);
+              tags = res.recordset.map(t => t);
+            } catch (e) {
+              throw e;
+            }
+
+            resolve({
+              tags
+            });
+
+          });
+      });
+    });
+}
+
+function _autocompleteUserMSSQL(tag) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise(function (resolve, reject) {
+        const StoredProcedureName = 'SearchUserMention';
+        let request = new mssql.Request(conn)
+          .input('tag', mssql.NVarChar(1024), tag);
+
+        request.execute(`[dbo].[${StoredProcedureName}]`,
+          (err, res, returnValue, affected) => {
+            let tags;
+            if (err) {
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+            }
+            // ToDo: doesn't always return value
+            try {
+              tags = res.recordset.map(t => ({ tag: t.userName }));
             } catch (e) {
               throw e;
             }

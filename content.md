@@ -42,9 +42,10 @@ UI for all following / follower
 
 embed pin ++
 show follows content only +
-menu slide in from side +++
+menu slide in from side +
 need better date data ui ++
-need flyout today button
+need flyout today button +++
+@autocomplete
 
 animated gif height issue it's streched out
 pin needs min height and remove min heigth of twitter
