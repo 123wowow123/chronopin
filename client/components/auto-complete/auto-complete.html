@@ -1,4 +1,4 @@
-<ul class="suggestions --tag" ng-style="getOffeset()">
+<ul class="suggestions" ng-style="getOffeset()" ng-class="{'--tag': useTag}">
   <li class="suggestion-item" ng-repeat="suggestion in suggestions track by $index"
     ng-click="handleSelection(suggestion)" ng-class="{active:isCurrent($index)}" ng-mouseenter="setCurrent($index)"
     ng-mouseleave="mouseleave()">

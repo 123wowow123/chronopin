@@ -107,7 +107,7 @@
                       on-change="$ctrl.suggestionDescriptionOnChange(html)"
                       tag-change="$ctrl.tagChange(tag, node)"></text-editor>
 
-                    <auto-complete top="$ctrl.topOffesetTagAutoComplete" show="$ctrl.showTagAutoComplete"
+                    <auto-complete top="$ctrl.topOffesetTagAutoComplete" show="$ctrl.showTagAutoComplete" use-tag="true"
                       suggestions="$ctrl.suggestions" title="tag" on-select="$ctrl.tagSelect($event)"
                       on-dismiss="$ctrl.tagDismiss($event)"><auto-complete>
                   </div>
