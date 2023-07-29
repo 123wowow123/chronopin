@@ -14,6 +14,9 @@ Before Usable:
 Comment cleanup/backup +
 countdown on pin page
 
+link not external ++
+https://www.chronopin.com/pin/504
+
 Bugs:
 scrolling 
 https://ui-router.github.io/ng1/docs/0.3.1/index.html#/api/ui.router.state.$uiViewScroll
@@ -42,10 +45,9 @@ UI for all following / follower
 
 embed pin ++
 show follows content only +
-menu slide in from side +
+menu slide in from side 
 need better date data ui ++
 need flyout today button +++
-@autocomplete
 
 animated gif height issue it's streched out
 pin needs min height and remove min heigth of twitter
@@ -188,6 +190,7 @@ Learn to summerize content - train using summery tag and full html body
 
 Improvement Idea:
 
+remind me later @memtion on twitter to autopin
 easy search - https://medium.datadriveninvestor.com/context-based-search-using-bert-8957d25feaa9
 Build search - https://medium.com/mlearning-ai/search-rank-and-recommendations-35cc717772cb
 Spotlight - show right side panel of things favorited in the next 30 days. Click link to scroll to item

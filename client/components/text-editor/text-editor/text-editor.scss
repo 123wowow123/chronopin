@@ -8,6 +8,13 @@ $mobile-breakpoint: 651px;
     z-index: 5;
     position: relative;
 
+    input,
+    textarea {
+        color: var(--primary-color);
+        font: inherit;
+        margin: 0;
+    }
+
     a {
         pointer-events: none;
     }
