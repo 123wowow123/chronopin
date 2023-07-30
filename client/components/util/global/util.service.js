@@ -139,6 +139,10 @@
           }, '');
         }
         return joinLocations(_.get(pin, "locations"));
+      },
+
+      getCurrentUrlWithoutHash() {
+        return window.location.protocol + '//' + window.location.hostname + window.location.pathname;
       }
 
     };

@@ -40,17 +40,19 @@ small pins mode
 max pain for stocks
 user submitted sentiment score
 
-UI for all following / follower
-
-
+UI for all following / follower +
 embed pin ++
-show follows content only +
-menu slide in from side 
 need better date data ui ++
+
 need flyout today button +++
 
-animated gif height issue it's streched out
-pin needs min height and remove min heigth of twitter
+animated gif height issue it's streched out ++
+show follows content only ++
+pin needs min height and remove min heigth of twitter ++
+Share to text button ++
+
+menu slide in from side
+
 
 sentiment calender
 https://developers.google.com/chart/interactive/docs/gallery/calendar
@@ -190,7 +192,7 @@ Learn to summerize content - train using summery tag and full html body
 
 Improvement Idea:
 
-remind me later @memtion on twitter to autopin
+remind me later @memtion on twitter/reddit to autopin
 easy search - https://medium.datadriveninvestor.com/context-based-search-using-bert-8957d25feaa9
 Build search - https://medium.com/mlearning-ai/search-rank-and-recommendations-35cc717772cb
 Spotlight - show right side panel of things favorited in the next 30 days. Click link to scroll to item

@@ -28,6 +28,14 @@
       this.wide = $window.localStorage.getItem("wide") == "true";
 
       this.pin;
+
+      this.shareDataMemoized = _.memoize((pin) => {
+        return {
+          title: pin.title,
+          url: this.Util.getCurrentUrlWithoutHash()
+        };
+      }), ['title', 'id'];
+
     }
 
     $onInit() {
@@ -150,6 +158,10 @@
     toggleWide() {
       this.wide = !this.wide;
       this.$window.localStorage.setItem("wide", this.wide)
+    }
+
+    getShareData(pin) {
+      return this.shareDataMemoized(pin);
     }
 
   }

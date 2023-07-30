@@ -12,6 +12,7 @@ angular.module('chronopinNodeApp', [
   'chronopinNodeApp.comment',
   'chronopinNodeApp.textEditor',
   'chronopinNodeApp.scroll',
+  'chronopinNodeApp.share',
   'ngCookies',
   'ngResource',
   'ngSanitize',
