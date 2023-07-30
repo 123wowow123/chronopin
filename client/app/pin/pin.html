@@ -136,7 +136,7 @@
             <div class="grid__footer-right">
               <div class="grid__social">
                 <div class="grid__watch" ng-switch="!!$ctrl.pin.hasFavorite">
-                  <share-button data="$ctrl.getShareData($ctrl.pin)" ng-if="navigator.share && $ctrl.pin"></share-button>
+                  <share-button data="$ctrl.getShareData($ctrl.pin)" ng-if="$ctrl.getShareData($ctrl.pin)"></share-button>
                   <button type="button" class="grid__favorite --add" ng-click="$ctrl.addFavorite($ctrl.pin)"
                     title="Add to watch" ng-switch-default><i class="fa fa-eye" aria-hidden="true"></i>
                     {{$ctrl.pin.favoriteCount}}</button>

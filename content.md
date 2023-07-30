@@ -44,12 +44,14 @@ UI for all following / follower +
 embed pin ++
 need better date data ui ++
 
-need flyout today button +++
+need action botton for today button +++
+https://codepen.io/brandonmcconnell/pen/PoWMboY?editors=0100
+https://github.com/nobitagit/ng-material-floating-button
+https://stackoverflow.com/questions/29209244/css-floating-action-button
 
 animated gif height issue it's streched out ++
 show follows content only ++
 pin needs min height and remove min heigth of twitter ++
-Share to text button ++
 
 menu slide in from side
 
