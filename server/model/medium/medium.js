@@ -121,23 +121,11 @@ export default class Medium {
   }
 
   getUrl() {
-    switch (+this.type) {
-      case config.mediumID.image:
-        return this.getImageUrl();
-      case config.mediumID.youtube:
-        const parsedUrl = URL.parse(this.originalUrl);
-        if (!parsedUrl.protocol) {
-          parsedUrl.protocol = 'https:';
-        }
-        const outUrl = parsedUrl.protocol + parsedUrl.pathname;
-        return outUrl;
-      case config.mediumID.twitter:
-        return this.originalUrl;
-    }
+    return config.getUrl(this);
   }
 
   getImageUrl() {
-    return this.thumbName ? config.thumbUrlPrefix + this.thumbName : undefined;
+    return config.getImageUrl(this);
   }
 
   static getByOriginalUrl(originalUrl) {
@@ -319,9 +307,9 @@ function _getImageStatAndSaveImage(createImageFn, path, thumbName) {
     .then(() => {
       return createImageFn(path, IMAGE_LARGE_OPTIONS)
         .then(_mapAndSaveThumb(Object.assign({}, IMAGE_LARGE_OPTIONS, { thumbNameGuid })))
-        // .then((thumbObj) => {
-        //   return thumbObj;
-        // })
+      // .then((thumbObj) => {
+      //   return thumbObj;
+      // })
     });
 }
 

@@ -31,11 +31,11 @@
   <meta name="fragment" content="!" />
   <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0, viewport-fit=cover" />
 
-  <meta name="description" content='<%= meta.description %>' />
+  <meta name="description" ng-attr-content='{{metaservice.metaDescription()}}' content='<%= meta.description %>' />
 
-  <meta name="og:title" content='<%= meta.title %>' />
-  <meta name="og:description" content='<%= meta.description %>' />
-  <meta property="<%= meta.mediaType %>" content='<%= meta.mediaContent %>' />
+  <meta name="og:title" ng-attr-content='{{metaservice.metaTitle()}}' content='<%= meta.title %>' />
+  <meta name="og:description" ng-attr-content='{{metaservice.metaDescription()}}' content='<%= meta.description %>' />
+  <meta ng-attr-property='{{metaservice.metaMediaType()}}' property="<%= meta.mediaType %>" ng-attr-content='{{metaservice.metaImage()}}' content='<%= meta.mediaContent %>' />
   <meta property="og:type" content="<%= meta.type %>" />
   <%- meta.mediaContentType %>
 
@@ -45,7 +45,7 @@
   <meta property="og:image:height" content='<%= meta.mediaHeight %>'>
   <meta property="og:url" content="https://www.chronopin.com"> -->
 
-    <link rel="canonical" href="<%= meta.canonical %>" />
+    <link rel="canonical" ng-attr-href='{{metaservice.metaCanonical()}}' href="<%= meta.canonical %>" />
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->

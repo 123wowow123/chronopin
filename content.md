@@ -44,6 +44,9 @@ UI for all following / follower +
 embed pin ++
 need better date data ui ++
 
+
+metaImage content type fix
+
 need action botton for today button +++
 https://codepen.io/brandonmcconnell/pen/PoWMboY?editors=0100
 https://github.com/nobitagit/ng-material-floating-button

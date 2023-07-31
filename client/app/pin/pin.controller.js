@@ -49,10 +49,13 @@
               this.pinIsCreatedByUser = value;
             });
 
+          const meta = this.MetaService.extractMeta(_.get(this, 'pin'));
+
           this.MetaService.set(
-            _.get(this, 'pin.title'),
-            _.get(this, 'pin.description'),
-            this.appConfig.thumbUrlPrefix + _.get(this, 'pin.media[0].thumbName')
+            meta.title,
+            meta.description,
+            meta.mediaContent,
+            this.Util.getCurrentUrlWithoutHash()
           );
 
           return res;

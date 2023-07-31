@@ -22,6 +22,8 @@ import {
   FullPins
 } from './model';
 
+const extractMeta = config.extractMeta;
+
 export default function (app) {
   // Insert routes below
   //app.use('/api/things', require('./api/thing'));
@@ -108,72 +110,19 @@ export default function (app) {
     .get((req, res) => {
       let pinId = +req.params.id,
         userId = req.user && +req.user.id;
-
-      function getOgType(mediumID) {
-        switch (+mediumID) {
-          case config.mediumID.image:
-            return 'og:image';
-          case config.mediumID.youtube:
-            return 'og:video';
-          case config.mediumID.twitter:
-            return undefined;
-        }
-      }
-
       return Pin.queryById(pinId, userId)
         .then(({
           pin
         }) => {
-          if(!pin){
+          if (!pin) {
             return errors[404](req, res);
           }
-          const canonical = `https://www.chronopin.com/pin/${pinId}`;
-          const dom = new JSDOM(pin.description);
-          const document = dom.window.document;
-          const querySelector = document.querySelector('p');
-          const description = querySelector && querySelector.textContent ? querySelector.textContent.trim() : '';
-          const medium = _.get(pin, 'media[0]');
-          let mediaContentType, mediaType, mediaWidth, mediaHeight;
-          let mediaContent = medium ? medium.getUrl() : '';
-          if (!mediaContent) {
-            const querySelector = document.querySelector('img');
-            mediaContent = querySelector && querySelector.src ? querySelector.src : '';
-            mediaType = 'og:image';
-            if (!mediaContent) {
-              const querySelector = document.querySelector('iframe');
-              let src = querySelector && querySelector.src ? querySelector.src : '';
-              if (src) {
-                const filemoonRex = /https:\/\/filemoon\.sx\/e\/([^\/\?\&]*)\/.*/
-                let result1, matchId;
-                result1 = filemoonRex.exec(src)
-                matchId = result1 && result1[1];
-                if (matchId) {
-                  const thumbUrlPrefix = config.filemoon.thumbUrlPrefix;
-                  mediaContent = `${thumbUrlPrefix}/${matchId}.jpg`;
-                }
-              }
-            }
-          } else {
-            mediaType = getOgType(medium.type);
-            // mediaWidth = medium.thumbWidth;
-            // mediaHeight = medium.thumbHeight;
-          }
+          const meta = extractMeta(pin, (fragmentString) => {
+            const dom = new JSDOM(fragmentString);
+            const document = dom.window.document;
+            return document;
+          }, _);
 
-          if (mediaType === 'og:image') {
-            mediaContent = mediaContent.replace(config.uploadImage.large.postFix, '');
-            mediaContent = mediaContent.replace('.webp', '.jpeg');
-            mediaContentType = `<meta property="og:image:type" content="image/jpeg" />`;
-          }
-
-          const meta = {
-            canonical,
-            title: pin.title,
-            description,
-            mediaContent,
-            mediaType,
-            mediaContentType,
-            type: 'article'
-          };
           res.render(app.get('appPath') + '/index.html', { meta });
         }).catch((e) => {
           res.render(app.get('appPath') + '/index.html', { meta: config.meta });
