@@ -129,7 +129,10 @@
         if (clean || submitSuccess) {
           return true;
         } else {
-          return this.Modal.confirm.navigate()();
+          return this.Modal.confirm.navigate()()
+            .catch(() => {
+              return false;
+            });
         }
       });
 
