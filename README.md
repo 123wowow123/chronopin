@@ -509,6 +509,61 @@ This is a promotional article about one of the company partners with Interesting
 
 
 ## Merketing
-Discover and track upcoming release dates, events, and travels. Plan trips and see what type of gear, lodging, and transport can be leverage to make the trip more enjoyable.
 
-Discover and track upcoming release dates, events, and plan and share trips.
+Demo Chronopin: 
+If your new to using Chronopin, welcome, this will be an absolute beginner's guide. Chronopin is a social event bookmarking app. An event in the Chronopin lingo stand for content that has a time component. 
+
+We can access the site by typing in Chronopin.com
+Once we are on the site, right off the bat you can see pins that are taged for today. And as you scroll down you can see future events and scroll up for historical events. 
+
+https://www.chronopin.com/pin/165
+You can click a pin to see the full content and other people's comments. I like to post a comment but you need to be logged in into to do so. So I'll click login. 
+
+I'll login using google and it'll bring me back to the pin once logged in.
+Here I'll say "Can't wait, this game's been 20 years in the making !"
+
+I'll scroll down to see if there's any other recommendation pins that interest me.
+Or maybe I'll click the logo to go the main timeline and scroll down to discover more things occuring in the future
+
+Founder Introduction:
+Hi, my name is ______
+I am the founder and CEO and lead developer of Chronopin.
+
+From when I was a high school student, my peers and I always was looking for better ways to organize and track past, present and especially upcoming events with something that has more social features than just a calendar app or a shared excel file while bringing collaboration and the wisdom of the crowd to play. After working in the tech industry for more then 15 years I still see people using the same calendar or excel workflows to track and socialize timely content but they invariably end up in lost silos.
+
+After needing such a service myself and having observed and pondered and now prototyped a working demo app for such use case, I'd like to now additionally sprinkle some YC magic, and together we can start to disrupt the way we socialize our event calendars.
+
+
+Hi, my name is ______
+I am the founder and CEO and lead developer of Chronopin.
+
+From when I was a high school student, my peers and I were constantly was looking for better ways to organize and track
+
+past, present and especially upcoming events. 
+
+if we just can have something that has a social element that can help with colaboration. 
+Something dare I say harness the wisdom of the crowd and anyone can equipt themselves with such wisdom through as simple reminder.
+Or better yet suggest similar events relavant to your place and time using the latest generation of AIs to always find something catchy to follow
+
+After working more then 15 years in the tech industry 
+I still see people using the same calendar or excel workflows 
+to track and socialize time sensitive content. 
+Which they invariably gets in lost silos.
+
+After dreaming for such service for myself. 
+and now having create a working app for such use case, 
+
+I'd like to now additionally request for some YC pixie dust, 
+
+I humbly request that disrupt 
+the way we use and socialize  +++
+our event calendars. 
+
+remind me bots
+location based reminder
+
+
+------
+start to disrupt 
+the way we use and socialize
+our event calendars. 

@@ -42,11 +42,12 @@ function executeDropSP() {
 function executeCreateSP() {
   let sql = `
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
-            @pageSizePrev INT,
-            @pageSizeNext INT,
-            @userId       INT,
-            @fromDateTime DATETIME2(7),
-            @queryCount   INT OUTPUT
+            @pageSizePrev   INT,
+            @pageSizeNext   INT,
+            @userId         INT,
+            @fromDateTime   DATETIME2(7),
+            @followingOnly  BIT,
+            @queryCount     INT OUTPUT
         AS
           BEGIN
 
@@ -69,6 +70,7 @@ function executeCreateSP() {
               utcEndDateTime         DATETIME2,
               allDay                 BIT,
               userId                 INT,
+              sentimentScore         DECIMAL(18, 17),
               utcCreatedDateTime     DATETIME2 NOT NULL,
               utcUpdatedDateTime     DATETIME2,
               favoriteCount          INT,
@@ -103,10 +105,10 @@ function executeCreateSP() {
             );
 
             INSERT INTO @tempPinsTbl
-            EXEC [dbo].[GetPinsWithFavoriteAndLikePrevFilterByHasFavorite] 0, @pageSizePrev, @userId, @fromDateTime, 2147483647, @queryCount = @queryCountPrev OUTPUT;
+            EXEC [dbo].[GetPinsWithFavoriteAndLikePrevFilterByHasFavorite] 0, @pageSizePrev, @userId, @fromDateTime, 2147483647, @followingOnly, @queryCount = @queryCountPrev OUTPUT;
 
             INSERT INTO @tempPinsTbl
-            EXEC [dbo].[GetPinsWithFavoriteAndLikeNextFilterByHasFavorite] 0, @pageSizeNext, @userId, @fromDateTime, 0, @queryCount = @queryCountNext OUTPUT;
+            EXEC [dbo].[GetPinsWithFavoriteAndLikeNextFilterByHasFavorite] 0, @pageSizeNext, @userId, @fromDateTime, 0, @followingOnly, @queryCount = @queryCountNext OUTPUT;
 
             SELECT *
             FROM @tempPinsTbl
@@ -126,12 +128,32 @@ function executeCreateSP() {
 
 // DECLARE @test INT;
 // DECLARE @date DATETIME2(7) = GETDATE();
-//
-// EXEC GetPinsWithFavoriteAndLikeInitial
-//      @userId = -1
-//     , @fromDateTime = @date
-//     , @pageSizePrev = 10
+// DECLARE @followingOnly BIT =  CAST('false' as bit);
+
+// EXEC GetPinsWithFavoriteAndLikeInitialFilterByHasFavorite
+//     @pageSizePrev = 10
 //     , @pageSizeNext = 20
+//     , @userId = 0
+//     , @fromDateTime = @date
+//     , @followingOnly = @followingOnly
 //     , @queryCount = @test OUTPUT;
-//
+
 // PRINT 'test var: ' + CONVERT(VARCHAR, @test)
+
+
+
+
+// DECLARE @userId INT = 1;
+// DECLARE @offset INT = 0;
+// DECLARE @pageSize INT = 10;
+// DECLARE @fromDateTime DATETIME2(7) = GETDATE();
+// DECLARE @followingOnly BIT =  CAST('false' as bit);  
+
+// DECLARE @queryCountPrev INT;
+// DECLARE @queryCountNext INT;
+
+// EXEC [dbo].[GetPinsWithFavoriteAndLikePrevFilterByHasFavorite] 
+// @offset, @pageSize, @userId, @fromDateTime, 2147483647, @followingOnly, @queryCount = @queryCountPrev OUTPUT;
+
+// EXEC [dbo].[GetPinsWithFavoriteAndLikeNextFilterByHasFavorite] 
+// @offset, @pageSize, @userId, @fromDateTime, 0, @followingOnly, @queryCount = @queryCountNext OUTPUT;

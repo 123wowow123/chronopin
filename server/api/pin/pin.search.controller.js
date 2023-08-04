@@ -1,6 +1,7 @@
 'use strict';
 
 import * as response from '../response';
+import config from '../../config/environment'
 //import * as fp from 'lodash/fp';
 
 import {
@@ -51,7 +52,8 @@ export function searchPins(req, res) {
     userId = user && +user.id || 0,
     //pinId = +req.params.id,
     searchText = req.query.q,
-    hasFavorite = req.query.f && req.query.f.toLowerCase() == 'watch';
+    hasFavorite = req.query.f && req.query.f.toLowerCase() === 'watch',
+    isFollowing = req.query.f && req.query.f.toLowerCase() === 'following';
 
   const allTags = Mention.scrapeAllMentionQuery(searchText);
   let searchTextWithoutTags = searchText;
@@ -64,8 +66,8 @@ export function searchPins(req, res) {
   if (allTags.length) {
     if (hasFavorite) {
       Promise.all([
-        SearchPins.searchTagsFavorite(userId, allTags),
-        searchTextWithoutTags ? SearchPins.searchFavorite(userId, searchTextWithoutTags) : Promise.resolve(undefined)
+        SearchPins.searchTagsFavorite(userId, allTags, isFollowing),
+        searchTextWithoutTags ? SearchPins.searchFavorite(userId, searchTextWithoutTags, isFollowing) : Promise.resolve(undefined)
       ]).then(([tagPins, searchPins]) => {
         if (searchPins === undefined) {
           return tagPins;
@@ -76,8 +78,8 @@ export function searchPins(req, res) {
         .catch(response.handleError(res));
     } else {
       Promise.all([
-        SearchPins.searchTags(userId, allTags),
-        searchTextWithoutTags ? SearchPins.search(userId, searchTextWithoutTags) : Promise.resolve(undefined)
+        SearchPins.searchTags(userId, allTags, isFollowing),
+        searchTextWithoutTags ? SearchPins.search(userId, searchTextWithoutTags, isFollowing) : Promise.resolve(undefined)
       ]).then(([tagPins, searchPins]) => {
         if (searchPins === undefined) {
           return tagPins;
@@ -89,11 +91,11 @@ export function searchPins(req, res) {
     }
   } else {
     if (hasFavorite) {
-      return SearchPins.searchFavorite(userId, searchText)
+      return SearchPins.searchFavorite(userId, searchText, isFollowing)
         .then(response.withResult(res, 200))
         .catch(response.handleError(res));
     } else {
-      return SearchPins.search(userId, searchText)
+      return SearchPins.search(userId, searchText, isFollowing)
         .then(response.withResult(res, 200))
         .catch(response.handleError(res));
     }

@@ -163,7 +163,7 @@
             let nodeList = element.childNodes;
 
             const sel = document.getSelection();
-            if (sel) {
+            if (sel && sel.anchorNode) {
               const anchorNode = sel.anchorNode;
               const parentNode = anchorNode.parentNode;
               console.log('tagChange sel check anchorNode', anchorNode.nodeName)

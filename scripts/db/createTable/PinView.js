@@ -45,6 +45,7 @@ function executeCreateTable() {
           AS
         SELECT
             id,
+            userId,
             LEFT(title, 64) AS searchTitle,
             CAST(LEFT(description, 64) as nvarchar(64)) AS searchDescription
 

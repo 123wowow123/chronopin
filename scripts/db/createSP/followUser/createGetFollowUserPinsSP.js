@@ -1,6 +1,6 @@
 let cp;
 let Request;
-const StoredProcedureName = 'GetPinsWithFavoriteAndLikeArrayNext';
+const StoredProcedureName = 'GetFollowUserPins';
 
 // Setup
 module.exports.setup = function(connectionPool) {
@@ -41,28 +41,30 @@ function executeDropSP() {
 
 function executeCreateSP() {
   let sql = `
-CREATE PROCEDURE [dbo].[${StoredProcedureName}]
-  @offset         INT,
-  @pageSize       INT,
-  @fromDateTime   DATETIME2(7),
-  @lastPinId      INT,
-  @userId         INT,
-  @followingOnly  BIT
-AS
-BEGIN
+  CREATE PROCEDURE [dbo].[${StoredProcedureName}]
+    @currentUserId INT
+  AS
+    BEGIN
 
-  SET NOCOUNT ON;
+      SET NOCOUNT ON;
 
-    SELECT
-      [Pin].*
+      SELECT
+        Pin.*,
+        
+        (CAST((SELECT COUNT(f.id)
+          FROM [Favorite] AS f
+            WHERE f.userId = @currentUserId AND f.PinId = [Pin].[id] AND f.utcDeletedDateTime IS NULL) AS BIT)) AS [hasFavorite],
+        (CAST((SELECT COUNT(l.id)
+          FROM [Like] AS l
+            WHERE l.userId = @currentUserId AND l.PinId = [Pin].[id] AND l.utcDeletedDateTime IS NULL) AS BIT)) AS [hasLike]
+  
+      FROM [dbo].[FollowUser]
+        JOIN [dbo].[PinBaseView] AS [Pin]
+          ON [Pin].userId = [FollowUser].followingUserId
+      
+      WHERE [FollowUser].userId = @currentUserId;
 
-    FROM [dbo].[PinBaseView] AS [Pin]
-      JOIN GetNextPinIdsPaginatedFunc(@offset, @pageSize, @fromDateTime, @lastPinId, @userId, CAST('false' as bit), @followingOnly) AS nextPin
-        ON nextPin.id = [Pin].id
-
-    ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
-
-END;
+    END;
         `;
 
   return cp.getConnection()

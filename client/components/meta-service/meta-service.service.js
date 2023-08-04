@@ -47,11 +47,7 @@
                             case config.mediumID.image:
                                 return getImageUrl(medium);
                             case config.mediumID.youtube:
-                                const parsedUrl = URL.parse(medium.originalUrl);
-                                if (!parsedUrl.protocol) {
-                                    parsedUrl.protocol = 'https:';
-                                }
-                                const outUrl = parsedUrl.protocol + parsedUrl.pathname;
+                                const outUrl = medium.originalUrl.replace('http://','https://');
                                 return outUrl;
                             case config.mediumID.twitter:
                                 return medium.originalUrl;

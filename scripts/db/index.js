@@ -41,6 +41,10 @@ const {
   // Setup
   setup: spSetup,
 
+  // Function
+  createGetPrevPinIdsPaginatedFunc,
+  createGetNextPinIdsPaginatedFunc,
+
   // Retruns Collection
   createGetPinsWithFavoriteAndLikeArrayNextFullPinSP,
   createGetPinsWithFavoriteAndLikeNextSP,
@@ -68,6 +72,7 @@ const {
   createUpdateAlFollowUserCheckedDateTimeSP,
   createGetFollowUserUnreadCountSP,
   createGetFollowUserUnreadSP,
+  createGetFollowUserPinsSP,
 
   // Returns Single Result
   createGetPinWithFavoriteAndLikeSP,
@@ -127,11 +132,7 @@ const {
   createMergeFollowUserSP,
 
   // Admin Delete
-  createAdminDeleteUserByIdSP,
-
-  // Function
-  createGetPrevPinIdsPaginatedFunc,
-  createGetNextPinIdsPaginatedFunc
+  createAdminDeleteUserByIdSP
 
 } = require('./createSP');
 
@@ -184,6 +185,10 @@ function execute() {
         createPinView,
         createPinBaseView,
 
+        // Function
+        createGetPrevPinIdsPaginatedFunc,
+        createGetNextPinIdsPaginatedFunc,
+
         // Retruns Collection
         createGetPinsWithFavoriteAndLikeArrayNextFullPinSP,
         createGetPinsWithFavoriteAndLikeNextSP,
@@ -211,6 +216,7 @@ function execute() {
         createUpdateAlFollowUserCheckedDateTimeSP,
         createGetFollowUserUnreadCountSP,
         createGetFollowUserUnreadSP,
+        createGetFollowUserPinsSP,
 
         // Returns Single Result
         createGetPinWithFavoriteAndLikeSP,
@@ -270,10 +276,6 @@ function execute() {
 
         // Admin Delete
         createAdminDeleteUserByIdSP,
-
-        // Function
-        createGetPrevPinIdsPaginatedFunc,
-        createGetNextPinIdsPaginatedFunc
 
         // Create Table Valued Parameters
         // createMediumTableType

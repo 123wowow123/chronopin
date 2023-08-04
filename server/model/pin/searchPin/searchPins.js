@@ -160,13 +160,13 @@ export default class SearchPins extends BasePins {
             });
     }
 
-    static search(userId, searchText) {
-        const semanticPinsPromise = semanticSearch(searchText, SearchPins.numberOfResults)
+    static search(userId, searchText = "", followingOnly = false) {
+        const semanticPinsPromise = searchText ? semanticSearch(searchText, SearchPins.numberOfResults)
             .then(res => {
                 return new SearchPins().fromFaiss(res);
-            });
+            }) : Promise.resolve({ pins: [] });
 
-        const beginMatchPinsPromise = SearchPins.querySearchPin(searchText, searchText)
+        const beginMatchPinsPromise = SearchPins.querySearchPin(searchText, searchText, userId, followingOnly, searchText ? undefined : 1000)
             .then(res => {
                 const searchPins = new SearchPins(res.pins);
                 searchPins.pins.forEach(p => {
@@ -188,20 +188,20 @@ export default class SearchPins extends BasePins {
             });
     }
 
-    static searchTags(userId, allTags) {
-        return Pins.queryPinByTags(userId, allTags); // TODO: should return SearchPins
+    static searchTags(userId, allTags, followingOnly) {
+        return Pins.queryPinByTags(userId, allTags, followingOnly); // TODO: should return SearchPins
     }
 
-    static searchTagsFavorite(userId, allTags) {
-        return Pins.queryPinByTagsHasFavorite(userId, allTags); // TODO: should return SearchPins
+    static searchTagsFavorite(userId, allTags, followingOnly) {
+        return Pins.queryPinByTagsHasFavorite(userId, allTags, followingOnly); // TODO: should return SearchPins
     }
 
-    static searchFavorite(userId, searchText) {
+    static searchFavorite(userId, searchText, followingOnly) {
         if (!searchText) {
             let fromDateTime = new Date();
-            return Pins.queryInitialByDateFilterByHasFavorite(fromDateTime, userId, pageSize, pageSize);
+            return Pins.queryInitialByDateFilterByHasFavorite(fromDateTime, userId, pageSize, pageSize, followingOnly);
         } else {
-            return SearchPins.search(userId, searchText)
+            return SearchPins.search(userId, searchText, followingOnly)
                 .then(searchPins => {
                     return Pins.queryPinByIdsFilterByHasFavorite(searchPins, userId)
                         .then(pins => {
@@ -234,8 +234,8 @@ export default class SearchPins extends BasePins {
             });
     }
 
-    static querySearchPin(title, description, k = 10) {
-        return _querySearchPin(title, description, k)
+    static querySearchPin(title, description, userId, followingOnly = false, k = 10) {
+        return _querySearchPin(title, description, userId, followingOnly, k)
             .then(res => {
                 return new Pins(res);
             });
@@ -396,7 +396,7 @@ function autocompleteFavorite(userId, searchText) {
     return rp(options);
 };
 
-function _querySearchPin(title, description, k) {
+function _querySearchPin(title, description, userId, followingOnly, k) {
     return cp.getConnection()
         .then(conn => {
             return new Promise(function (resolve, reject) {
@@ -405,6 +405,8 @@ function _querySearchPin(title, description, k) {
                 let request = new mssql.Request(conn)
                     .input('searchTitle', mssql.NVarChar(64), title.slice(0, 64))
                     .input('searchDescription', mssql.NVarChar(64), description.slice(0, 64))
+                    .input('userId', mssql.Int, userId)
+                    .input('followingOnly', mssql.Bit, followingOnly)
                     .input('top', mssql.Int, k)
                     .output('queryCount', mssql.Int);
 

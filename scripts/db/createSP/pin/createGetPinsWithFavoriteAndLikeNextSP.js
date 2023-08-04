@@ -42,12 +42,13 @@ function executeDropSP() {
 function executeCreateSP() {
   let sql = `
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
-            @offset       INT,
-            @pageSize     INT,
-            @userId       INT,
-            @fromDateTime DATETIME2(7),
-            @lastPinId    INT,
-            @queryCount   INT OUTPUT
+            @offset         INT,
+            @pageSize       INT,
+            @userId         INT,
+            @fromDateTime   DATETIME2(7),
+            @lastPinId      INT,
+            @followingOnly  BIT,
+            @queryCount     INT OUTPUT
         AS
           BEGIN
 
@@ -157,9 +158,8 @@ function executeCreateSP() {
                 [Location.order]
 
               FROM [dbo].[PinBaseView] AS [Pin]
-                JOIN GetNextPinIdsPaginatedFunc(@offset, @pageSize, @fromDateTime, @lastPinId) AS nextPin
+                JOIN GetNextPinIdsPaginatedFunc(@offset, @pageSize, @fromDateTime, @lastPinId, @userId, CAST('false' as bit), @followingOnly) AS nextPin
                   ON nextPin.id = [Pin].id
-
 
               ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
 
@@ -177,3 +177,16 @@ function executeCreateSP() {
       return new Request(conn).batch(sql);
     });
 }
+
+
+// DECLARE @test INT;
+// DECLARE @userId INT = 1;
+// DECLARE @offset INT = 0;
+// DECLARE @pageSize INT = 10;
+// DECLARE @lastPinId INT = 2147483647;
+// DECLARE @fromDateTime DATETIME2(7) = GETDATE();
+// DECLARE @followingOnly BIT =  CAST('false' as bit);        
+
+
+// EXEC [dbo].[GetPinsWithFavoriteAndLikeNext] 
+// @offset, @pageSize, @userId, @fromDateTime, @lastPinId, @followingOnly, @queryCount = @test OUTPUT;

@@ -58,13 +58,14 @@ module.exports.saveDB = function () {
   const fromDateTime = new Date(0),
     userId = 0,
     lastPinId = 0,
+    offset = 0,
     pageSize = 2147483647; // Maximum values for an integer in SQL Server
 
   return Promise.resolve('Begin Backup')
     .then(() => {
 
       console.log('Backup Pins');
-      return FullPins.queryForwardByDate(fromDateTime, userId, lastPinId, pageSize)
+      return FullPins.queryForwardByDate(fromDateTime, userId, lastPinId, offset, pageSize)
         .then(({
           pins
         }) => {

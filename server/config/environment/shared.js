@@ -3,6 +3,14 @@
 // This data also goes into client config
 let config;
 const thumbFolder = 'thumb';
+
+const SEARCH_CONST = {
+  ALL: { name: 'All', value: undefined },
+  WATCH: { name: 'Watched', value: 'watch' },
+  FOLLOWING: { name: 'Following', value: 'following' },
+  MINE: { name: 'Mine', value: 'mine' }
+};
+
 exports = module.exports = config = {
   searchPrefix: {
     threadEmoji: "🧵",
@@ -11,10 +19,10 @@ exports = module.exports = config = {
   // List of user roles
   userRoles: ['guest', 'user', 'admin'],
   searchChoices: [
-    { name: 'All', value: undefined },
-    { name: 'Watched', value: 'watch' },
-    { name: 'Mine', value: 'mine' }
-    //'People'
+    SEARCH_CONST.ALL,
+    SEARCH_CONST.WATCH,
+    SEARCH_CONST.FOLLOWING,
+    SEARCH_CONST.MINE,
   ],
   uploadImage: {
     small: {
@@ -121,11 +129,7 @@ exports = module.exports = config = {
       case config.mediumID.image:
         return config.getImageUrl(medium);
       case config.mediumID.youtube:
-        const parsedUrl = URL.parse(medium.originalUrl);
-        if (!parsedUrl.protocol) {
-          parsedUrl.protocol = 'https:';
-        }
-        const outUrl = parsedUrl.protocol + parsedUrl.pathname;
+        const outUrl = medium.originalUrl.replace('http://','https://');
         return outUrl;
       case config.mediumID.twitter:
         return medium.originalUrl;

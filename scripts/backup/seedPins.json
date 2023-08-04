@@ -2237,12 +2237,12 @@
     "mentions": [
       {
         "id": 15,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 332
       },
       {
         "id": 16,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 332
       }
     ],
@@ -2522,12 +2522,12 @@
     "mentions": [
       {
         "id": 21,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 334
       },
       {
         "id": 22,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 334
       }
     ],
@@ -3817,12 +3817,12 @@
     "mentions": [
       {
         "id": 27,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 335
       },
       {
         "id": 28,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 335
       }
     ],
@@ -5087,12 +5087,12 @@
     "mentions": [
       {
         "id": 48,
-        "tag": "$AAPL",
+        "tag": "$1",
         "pinId": 135
       },
       {
         "id": 49,
-        "tag": "$1",
+        "tag": "$AAPL",
         "pinId": 135
       },
       {
@@ -5330,12 +5330,12 @@
     "mentions": [
       {
         "id": 55,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 339
       },
       {
         "id": 56,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 339
       }
     ],
@@ -6965,12 +6965,12 @@
     "mentions": [
       {
         "id": 62,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 340
       },
       {
         "id": 63,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 340
       }
     ],
@@ -7146,22 +7146,6 @@
     "merchants": [
       {
         "id": 32,
-        "label": "Plushible Halloween Candy Bags",
-        "url": "https://a.co/d/4jQwcnc",
-        "price": 19.99,
-        "order": 0,
-        "pinId": 226
-      },
-      {
-        "id": 33,
-        "label": "Tegion Reusable Silicone Straws",
-        "url": "https://a.co/d/fTIFcq4",
-        "price": 11.99,
-        "order": 1,
-        "pinId": 226
-      },
-      {
-        "id": 34,
         "label": "UPPAbaby VISTA Upper Adapters",
         "url": "https://amzn.to/3WBMhBj",
         "price": 29.99,
@@ -7169,7 +7153,15 @@
         "pinId": 226
       },
       {
-        "id": 35,
+        "id": 33,
+        "label": "Plushible Halloween Candy Bags",
+        "url": "https://a.co/d/4jQwcnc",
+        "price": 19.99,
+        "order": 0,
+        "pinId": 226
+      },
+      {
+        "id": 34,
         "label": "Doctor's Best DHA 500",
         "url": "https://a.co/d/e0Ibvji",
         "price": 40.45,
@@ -7177,15 +7169,15 @@
         "pinId": 226
       },
       {
-        "id": 36,
-        "label": "Secura Visual Countdown Timer",
-        "url": "https://a.co/d/cI0Vejb",
-        "price": 18.99,
-        "order": 4,
+        "id": 35,
+        "label": "Tegion Reusable Silicone Straws",
+        "url": "https://a.co/d/fTIFcq4",
+        "price": 11.99,
+        "order": 1,
         "pinId": 226
       },
       {
-        "id": 37,
+        "id": 36,
         "label": "Extra Large Ceramic Coffee",
         "url": "https://a.co/d/0glb5Wg",
         "price": 28.99,
@@ -7193,11 +7185,19 @@
         "pinId": 226
       },
       {
-        "id": 38,
+        "id": 37,
         "label": "Magical Handwriting Workbooks",
         "url": "https://a.co/d/1oGcC0a",
         "price": 16.99,
         "order": 6,
+        "pinId": 226
+      },
+      {
+        "id": 38,
+        "label": "Secura Visual Countdown Timer",
+        "url": "https://a.co/d/cI0Vejb",
+        "price": 18.99,
+        "order": 4,
         "pinId": 226
       }
     ],
@@ -7289,17 +7289,17 @@
     "mentions": [
       {
         "id": 65,
-        "tag": "$INTC",
+        "tag": "$NVDA",
         "pinId": 433
       },
       {
         "id": 66,
-        "tag": "$AAPL",
+        "tag": "$INTC",
         "pinId": 433
       },
       {
         "id": 67,
-        "tag": "$ASML",
+        "tag": "$AAPL",
         "pinId": 433
       },
       {
@@ -7309,22 +7309,22 @@
       },
       {
         "id": 69,
-        "tag": "$LRCX",
-        "pinId": 433
-      },
-      {
-        "id": 70,
         "tag": "$AMAT",
         "pinId": 433
       },
       {
+        "id": 70,
+        "tag": "$LRCX",
+        "pinId": 433
+      },
+      {
         "id": 71,
-        "tag": "$NVDA",
+        "tag": "#Chips",
         "pinId": 433
       },
       {
         "id": 72,
-        "tag": "#Chips",
+        "tag": "$ASML",
         "pinId": 433
       }
     ],
@@ -7424,26 +7424,26 @@
       },
       {
         "id": 21,
-        "address": "LVCC Central Hall, Las Vegas",
-        "order": 0,
+        "address": "ARIA, Las Vegas",
+        "order": 4,
         "pinId": 350
       },
       {
         "id": 22,
-        "address": "LVCC West Hall, Las Vegas",
-        "order": 1,
-        "pinId": 350
-      },
-      {
-        "id": 23,
         "address": "LVCC North Hall, Las Vegas",
         "order": 2,
         "pinId": 350
       },
       {
+        "id": 23,
+        "address": "LVCC West Hall, Las Vegas",
+        "order": 1,
+        "pinId": 350
+      },
+      {
         "id": 24,
-        "address": "ARIA, Las Vegas",
-        "order": 4,
+        "address": "LVCC Central Hall, Las Vegas",
+        "order": 0,
         "pinId": 350
       }
     ],
@@ -7481,14 +7481,14 @@
     "locations": [
       {
         "id": 25,
-        "address": "Montefiore Medical Center, New York",
-        "order": 1,
+        "address": "Mount Sinai Hospital, New York",
+        "order": 0,
         "pinId": 364
       },
       {
         "id": 26,
-        "address": "Mount Sinai Hospital, New York",
-        "order": 0,
+        "address": "Montefiore Medical Center, New York",
+        "order": 1,
         "pinId": 364
       }
     ],
@@ -7963,18 +7963,18 @@
       },
       {
         "id": 45,
-        "label": "GameStop: Sony PlayStation VR2 Horizon Bundle",
-        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2-horizon-call-of-the-mountain-bundle%2F393119.html",
-        "price": 599.99,
-        "order": 1,
-        "pinId": 142
-      },
-      {
-        "id": 46,
         "label": "GameStop: Sony PlayStation VR2",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2%2F393118.html",
         "price": 549.99,
         "order": 0,
+        "pinId": 142
+      },
+      {
+        "id": 46,
+        "label": "GameStop: Sony PlayStation VR2 Horizon Bundle",
+        "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2-horizon-call-of-the-mountain-bundle%2F393119.html",
+        "price": 599.99,
+        "order": 1,
         "pinId": 142
       }
     ],
@@ -8020,12 +8020,12 @@
     "mentions": [
       {
         "id": 80,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 234
       },
       {
         "id": 81,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 234
       }
     ],
@@ -8390,12 +8390,12 @@
     "mentions": [
       {
         "id": 87,
-        "tag": "#Liquidity",
+        "tag": "#BTFP",
         "pinId": 419
       },
       {
         "id": 88,
-        "tag": "#BTFP",
+        "tag": "#Liquidity",
         "pinId": 419
       }
     ],
@@ -8640,15 +8640,15 @@
     "id": 260,
     "rootThread": true,
     "title": "Mother and Children : Oshi No Ko",
-    "description": "<div class=\"embed\"><iframe  scrolling=\"no\" src=\"https://filemoon.sx/e/l9d02nf2ecg8/\" frameborder=\"no\" loading=\"lazy\" allowtransparency=\"true\" allowfullscreen=\"true\"></iframe></div><h2>Synopsis</h2><p class=\"paragraph\"> Doctor Gorou Amamiya is an avid fan of the idol Ai Hoshino, spurred on partly due her being the favorite idol of Sarina Tendouji, a previous patient of his who died at the age of 12 from a terminal illness. Gorou is shocked when Ai quietly arrives at his rural hospital 20 weeks pregnant with twins, though she refuses to divulge who the father is. Ai confides in Gorou that as an orphan, she wanted to experience the happiness of raising her own family, but at the same time does not want to give up her idol career so she intends to raise her children in secret. Gorou swears to make sure Ai gives birth to healthy babies and takes care of her for the rest of her pregnancy. However, on Ai's due date, Gorou is confronted by a man stalking Ai and ends up being pushed off a cliff, dying at the same moment Ai goes into labor. He then wakes up and discovers he has been reborn as Ai's son Aquamarine and lives together with her and his twin sister Ruby. Ruby herself is the reincarnation of Sarina, but she does not tell Aqua her previous identity. Ai's manager Ichigo Saitou then begins making plans for Ai's comeback, arranging for his wife Miyako to take care of the twins while Ai is performing. When Miyako begins to get anxious about being relegated to the role of babysitter and considers blowing the whistle on Ai's secret pregnancy, the twins use their intelligence to trick Miyako into thinking they are gods in human form, securing her cooperation. </p><p class=\"paragraph\"> As time passes, the twins steadily learn more and more about the intricacies and realities of the idol and entertainment industries. One year later, Aqua becomes acquainted with a film director, who offers to secure Ai a role in one of his films if Aqua stars in it as well. During filming, Aqua meets child actress Kana Arima who is skeptical of Ai's acting ability. Aqua is able to play his part flawlessly, which frustrates Kana who forms a one sided rivalry. Two years later, the film ends up being a modest success which helps propel Ai's career upward. However, on the day of her first major<a href=\"https://en.wikipedia.org/wiki/Tokyo_Dome\">Tokyo Dome</a>&nbsp;performance, the same stalker who killed Gorou tracks down Ai and fatally stabs her before fleeing in regret. In her final moments, Ai comforts the twins, telling them that she loves them and is reassured that her love for them is genuine. Afterwards, the stalker is found to have committed suicide and a memorial is held for Ai, but she is quickly forgotten by the public. The twins are formally adopted by the Saitous. Ruby decides she wants to follow in Ai's footsteps and become an idol, while Aqua deduces that their biological father leaked Ai's address to the stalker with the intent of getting her killed. Aqua reasons that his father is also a figure in the entertainment industry and decides to train as an actor, finding a new purpose in life by tracking down his own father and killing him in revenge for Ai's death. Many years later, the twins head out to their first day of high school, and Aqua sets his revenge plan in motion. </p>",
-    "sourceDescription": "{\"time\":1686788877035,\"blocks\":[{\"id\":\"cnIqP5LvLI\",\"type\":\"embed\",\"data\":{\"service\":\"codepen\",\"source\":\"https://filemoon.sx/d/l9d02nf2ecg8/29e6a8ec9efafe2adef9b88467956755_mp4-1.mp4\",\"embed\":\"https://filemoon.sx/e/l9d02nf2ecg8/\",\"caption\":\"Mother and Children : Oshi No Ko\",\"length\":\"\"}},{\"id\":\"tOkAv6H-Bp\",\"type\":\"header\",\"data\":{\"text\":\"Synopsis\",\"level\":2}},{\"id\":\"jrpvXr-KVN\",\"type\":\"paragraph\",\"data\":{\"text\":\"Doctor Gorou Amamiya is an avid fan of the idol Ai Hoshino, spurred on partly due her being the favorite idol of Sarina Tendouji, a previous patient of his who died at the age of 12 from a terminal illness. Gorou is shocked when Ai quietly arrives at his rural hospital 20 weeks pregnant with twins, though she refuses to divulge who the father is. Ai confides in Gorou that as an orphan, she wanted to experience the happiness of raising her own family, but at the same time does not want to give up her idol career so she intends to raise her children in secret. Gorou swears to make sure Ai gives birth to healthy babies and takes care of her for the rest of her pregnancy. However, on Ai's due date, Gorou is confronted by a man stalking Ai and ends up being pushed off a cliff, dying at the same moment Ai goes into labor. He then wakes up and discovers he has been reborn as Ai's son Aquamarine and lives together with her and his twin sister Ruby. Ruby herself is the reincarnation of Sarina, but she does not tell Aqua her previous identity. Ai's manager Ichigo Saitou then begins making plans for Ai's comeback, arranging for his wife Miyako to take care of the twins while Ai is performing. When Miyako begins to get anxious about being relegated to the role of babysitter and considers blowing the whistle on Ai's secret pregnancy, the twins use their intelligence to trick Miyako into thinking they are gods in human form, securing her cooperation.\"}},{\"id\":\"tht2qhamph\",\"type\":\"paragraph\",\"data\":{\"text\":\"As time passes, the twins steadily learn more and more about the intricacies and realities of the idol and entertainment industries. One year later, Aqua becomes acquainted with a film director, who offers to secure Ai a role in one of his films if Aqua stars in it as well. During filming, Aqua meets child actress Kana Arima who is skeptical of Ai's acting ability. Aqua is able to play his part flawlessly, which frustrates Kana who forms a one sided rivalry. Two years later, the film ends up being a modest success which helps propel Ai's career upward. However, on the day of her first major<a href=\\\"https://en.wikipedia.org/wiki/Tokyo_Dome\\\">Tokyo Dome</a>&nbsp;performance, the same stalker who killed Gorou tracks down Ai and fatally stabs her before fleeing in regret. In her final moments, Ai comforts the twins, telling them that she loves them and is reassured that her love for them is genuine. Afterwards, the stalker is found to have committed suicide and a memorial is held for Ai, but she is quickly forgotten by the public. The twins are formally adopted by the Saitous. Ruby decides she wants to follow in Ai's footsteps and become an idol, while Aqua deduces that their biological father leaked Ai's address to the stalker with the intent of getting her killed. Aqua reasons that his father is also a figure in the entertainment industry and decides to train as an actor, finding a new purpose in life by tracking down his own father and killing him in revenge for Ai's death. Many years later, the twins head out to their first day of high school, and Aqua sets his revenge plan in motion.\"}}],\"version\":\"2.26.5\"}",
+    "description": "<div class=\"embed\"><iframe  scrolling=\"no\" src=\"https://filemoon.sx/e/l9d02nf2ecg8/\" frameborder=\"no\" loading=\"lazy\" allowtransparency=\"true\" allowfullscreen=\"true\"></iframe></div><h2>Synopsis</h2><p class=\"paragraph\"> Doctor Gorou Amamiya is an avid fan of the idol Ai Hoshino, spurred on partly due her being the favorite idol of Sarina Tendouji, a previous patient of his who died at the age of 12 from a terminal illness. Gorou is shocked when Ai quietly arrives at his rural hospital 20 weeks pregnant with twins, though she refuses to divulge who the father is. Ai confides in Gorou that as an orphan, she wanted to experience the happiness of raising her own family, but at the same time does not want to give up her idol career so she intends to raise her children in secret. Gorou swears to make sure Ai gives birth to healthy babies and takes care of her for the rest of her pregnancy. However, on Ai's due date, Gorou is confronted by a man stalking Ai and ends up being pushed off a cliff, dying at the same moment Ai goes into labor. He then wakes up and discovers he has been reborn as Ai's son Aquamarine and lives together with her and his twin sister Ruby. Ruby herself is the reincarnation of Sarina, but she does not tell Aqua her previous identity. Ai's manager Ichigo Saitou then begins making plans for Ai's comeback, arranging for his wife Miyako to take care of the twins while Ai is performing. When Miyako begins to get anxious about being relegated to the role of babysitter and considers blowing the whistle on Ai's secret pregnancy, the twins use their intelligence to trick Miyako into thinking they are gods in human form, securing her cooperation. </p><p class=\"paragraph\"> As time passes, the twins steadily learn more and more about the intricacies and realities of the idol and entertainment industries. One year later, Aqua becomes acquainted with a film director, who offers to secure Ai a role in one of his films if Aqua stars in it as well. During filming, Aqua meets child actress Kana Arima who is skeptical of Ai's acting ability. Aqua is able to play his part flawlessly, which frustrates Kana who forms a one sided rivalry. Two years later, the film ends up being a modest success which helps propel Ai's career upward. However, on the day of her first major&nbsp;<a href=\"https://en.wikipedia.org/wiki/Tokyo_Dome\">Tokyo Dome</a>&nbsp;performance, the same stalker who killed Gorou tracks down Ai and fatally stabs her before fleeing in regret. In her final moments, Ai comforts the twins, telling them that she loves them and is reassured that her love for them is genuine. Afterwards, the stalker is found to have committed suicide and a memorial is held for Ai, but she is quickly forgotten by the public. The twins are formally adopted by the Saitous. Ruby decides she wants to follow in Ai's footsteps and become an idol, while Aqua deduces that their biological father leaked Ai's address to the stalker with the intent of getting her killed. Aqua reasons that his father is also a figure in the entertainment industry and decides to train as an actor, finding a new purpose in life by tracking down his own father and killing him in revenge for Ai's death. Many years later, the twins head out to their first day of high school, and Aqua sets his revenge plan in motion. </p>",
+    "sourceDescription": "{\"time\":1690648330913,\"blocks\":[{\"id\":\"cnIqP5LvLI\",\"type\":\"embed\",\"data\":{\"service\":\"codepen\",\"source\":\"https://filemoon.sx/d/l9d02nf2ecg8/29e6a8ec9efafe2adef9b88467956755_mp4-1.mp4\",\"embed\":\"https://filemoon.sx/e/l9d02nf2ecg8/\",\"caption\":\"Mother and Children : Oshi No Ko\",\"length\":\"\"}},{\"id\":\"tOkAv6H-Bp\",\"type\":\"header\",\"data\":{\"text\":\"Synopsis\",\"level\":2}},{\"id\":\"jrpvXr-KVN\",\"type\":\"paragraph\",\"data\":{\"text\":\"Doctor Gorou Amamiya is an avid fan of the idol Ai Hoshino, spurred on partly due her being the favorite idol of Sarina Tendouji, a previous patient of his who died at the age of 12 from a terminal illness. Gorou is shocked when Ai quietly arrives at his rural hospital 20 weeks pregnant with twins, though she refuses to divulge who the father is. Ai confides in Gorou that as an orphan, she wanted to experience the happiness of raising her own family, but at the same time does not want to give up her idol career so she intends to raise her children in secret. Gorou swears to make sure Ai gives birth to healthy babies and takes care of her for the rest of her pregnancy. However, on Ai's due date, Gorou is confronted by a man stalking Ai and ends up being pushed off a cliff, dying at the same moment Ai goes into labor. He then wakes up and discovers he has been reborn as Ai's son Aquamarine and lives together with her and his twin sister Ruby. Ruby herself is the reincarnation of Sarina, but she does not tell Aqua her previous identity. Ai's manager Ichigo Saitou then begins making plans for Ai's comeback, arranging for his wife Miyako to take care of the twins while Ai is performing. When Miyako begins to get anxious about being relegated to the role of babysitter and considers blowing the whistle on Ai's secret pregnancy, the twins use their intelligence to trick Miyako into thinking they are gods in human form, securing her cooperation.\"}},{\"id\":\"tht2qhamph\",\"type\":\"paragraph\",\"data\":{\"text\":\"As time passes, the twins steadily learn more and more about the intricacies and realities of the idol and entertainment industries. One year later, Aqua becomes acquainted with a film director, who offers to secure Ai a role in one of his films if Aqua stars in it as well. During filming, Aqua meets child actress Kana Arima who is skeptical of Ai's acting ability. Aqua is able to play his part flawlessly, which frustrates Kana who forms a one sided rivalry. Two years later, the film ends up being a modest success which helps propel Ai's career upward. However, on the day of her first major&nbsp;<a href=\\\"https://en.wikipedia.org/wiki/Tokyo_Dome\\\">Tokyo Dome</a>&nbsp;performance, the same stalker who killed Gorou tracks down Ai and fatally stabs her before fleeing in regret. In her final moments, Ai comforts the twins, telling them that she loves them and is reassured that her love for them is genuine. Afterwards, the stalker is found to have committed suicide and a memorial is held for Ai, but she is quickly forgotten by the public. The twins are formally adopted by the Saitous. Ruby decides she wants to follow in Ai's footsteps and become an idol, while Aqua deduces that their biological father leaked Ai's address to the stalker with the intent of getting her killed. Aqua reasons that his father is also a figure in the entertainment industry and decides to train as an actor, finding a new purpose in life by tracking down his own father and killing him in revenge for Ai's death. Many years later, the twins head out to their first day of high school, and Aqua sets his revenge plan in motion.\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://en.wikipedia.org/wiki/Oshi_no_Ko",
     "utcStartDateTime": "2023-04-12T07:00:00.000Z",
-    "utcEndDateTime": "2023-04-14T07:00:00.000Z",
+    "utcEndDateTime": "2023-04-15T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-13T16:24:13.728Z",
-    "utcUpdatedDateTime": "2023-06-15T00:28:05.050Z",
-    "sentimentScore": 0.24479335546493533,
+    "utcUpdatedDateTime": "2023-07-29T16:32:16.549Z",
+    "sentimentScore": 0.21442570164799693,
     "user": {
       "id": 3,
       "userName": "@PrinceAnime"
@@ -8876,12 +8876,12 @@
     "mentions": [
       {
         "id": 93,
-        "tag": "#Liquidity",
+        "tag": "#BTFP",
         "pinId": 420
       },
       {
         "id": 94,
-        "tag": "#BTFP",
+        "tag": "#Liquidity",
         "pinId": 420
       }
     ],
@@ -9052,26 +9052,26 @@
     "locations": [
       {
         "id": 32,
-        "address": "Culver City",
-        "order": 0,
-        "pinId": 361
-      },
-      {
-        "id": 33,
         "address": "Los Angeles",
         "order": 3,
         "pinId": 361
       },
       {
-        "id": 34,
+        "id": 33,
         "address": "New York City",
         "order": 2,
         "pinId": 361
       },
       {
-        "id": 35,
+        "id": 34,
         "address": "Burbank",
         "order": 1,
+        "pinId": 361
+      },
+      {
+        "id": 35,
+        "address": "Culver City",
+        "order": 0,
         "pinId": 361
       }
     ],
@@ -9296,12 +9296,12 @@
     "mentions": [
       {
         "id": 102,
-        "tag": "$AAPL",
+        "tag": "$MSFT",
         "pinId": 210
       },
       {
         "id": 103,
-        "tag": "$AMZN",
+        "tag": "$AAPL",
         "pinId": 210
       },
       {
@@ -9311,7 +9311,7 @@
       },
       {
         "id": 105,
-        "tag": "$MSFT",
+        "tag": "$AMZN",
         "pinId": 210
       },
       {
@@ -9321,17 +9321,17 @@
       },
       {
         "id": 107,
-        "tag": "$GOOG",
+        "tag": "$META",
         "pinId": 210
       },
       {
         "id": 108,
-        "tag": "$NFLX",
+        "tag": "$GOOG",
         "pinId": 210
       },
       {
         "id": 109,
-        "tag": "$META",
+        "tag": "$NFLX",
         "pinId": 210
       }
     ],
@@ -9538,6 +9538,32 @@
     "userId": 3
   },
   {
+    "id": 510,
+    "rootThread": false,
+    "title": "AirJet® is the world’s first solid-state chip for active device cooling, delivering 2x improvement in device performance while operating in silence.",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/vdD0yMS40a0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\"> You have vibrating membranes inside the chip. When they vibrate they create a suction force that pulls air from the top through the dust guard into the inlet vents, and then pushes it down at very high velocities, and that high velocity air impinges on the copper heat spreader at the bottom of the chip. It get saturated with heat by extracting heat from the copper heat spreader and then it exits sideways. </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/29615f73-2e06-4c48-8f8d-c9ce29c2a424-chrono-lg.webp\" alt=\"A rough idea of how an AirJet works, according to the company. Image: Frore\" height=\"240\" width=\"1000\"><figcaption class=\"fig-cap\">A rough idea of how an AirJet works, according to the company. Image: Frore</figcaption></figure><p class=\"paragraph\"> The company’s called&nbsp;<a href=\"https://www.froresystems.com/\">Frore Systems</a>, the device is called AirJet, and today it’s no longer just&nbsp;<a href=\"https://go.redirectingat.com/?xs=1&amp;id=1025X1701640&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DYGxTnGEAx3E&amp;xcust=___vg__p_23497633__t_w__r_https://www.bing.com/__d_D\" target=\"_blank\">a cool demo at CES</a>. At Computex 2023, Zotac has just announced it will sell an AirJet-cooled mini-PC for $499 by the end of this year. </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/59d26f3d-1000-481e-a97f-67b2343e34c0-chrono-lg.webp\" alt=\"The AirJet Mini was continually spinning this rotor during my entire visit to Frore’s HQ. GIF by Sean Hollister\" height=\"461\" width=\"615\"><figcaption class=\"fig-cap\">The AirJet Mini was continually spinning this rotor during my entire visit to Frore’s HQ. GIF by Sean Hollister</figcaption></figure><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Cooling</chronohash> </p>",
+    "sourceDescription": "{\"time\":1690910193044,\"blocks\":[{\"id\":\"EvDiO-N_WN\",\"type\":\"embed\",\"data\":{\"service\":\"youtube\",\"source\":\"https://www.youtube.com/watch?v=vdD0yMS40a0\",\"embed\":\"https://www.youtube.com/embed/vdD0yMS40a0\",\"width\":580,\"height\":320,\"caption\":\"AirJet® by Frore Systems is the world’s first solid-state chip for active device cooling, delivering 2x improvement in device performance while operating in silence.\",\"length\":\"\"}},{\"id\":\"IyH9hANW-o\",\"type\":\"paragraph\",\"data\":{\"text\":\"You have vibrating membranes inside the chip. When they vibrate they create a suction force that pulls air from the top through the dust guard into the inlet vents, and then pushes it down at very high velocities, and that high velocity air impinges on the copper heat spreader at the bottom of the chip. It get saturated with heat by extracting heat from the copper heat spreader and then it exits sideways.\"}},{\"id\":\"MoVdTQ2kuq\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/29615f73-2e06-4c48-8f8d-c9ce29c2a424-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":240}},\"caption\":\"A rough idea of how an AirJet works, according to the company. Image: Frore\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"DP21TQA-Ty\",\"type\":\"paragraph\",\"data\":{\"text\":\"The company’s called&nbsp;<a href=\\\"https://www.froresystems.com/\\\">Frore Systems</a>, the device is called AirJet, and today it’s no longer just&nbsp;<a href=\\\"https://go.redirectingat.com/?xs=1&amp;id=1025X1701640&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DYGxTnGEAx3E&amp;xcust=___vg__p_23497633__t_w__r_https://www.bing.com/__d_D\\\" target=\\\"_blank\\\">a cool demo at CES</a>. At Computex 2023, Zotac has just announced it will sell an AirJet-cooled mini-PC for $499 by the end of this year.\"}},{\"id\":\"WxjlqjU3A8\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/59d26f3d-1000-481e-a97f-67b2343e34c0-chrono-lg.webp\",\"attributes\":{\"width\":615,\"height\":461}},\"caption\":\"The AirJet Mini was continually spinning this rotor during my entire visit to Frore’s HQ. GIF by Sean Hollister\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"xR1ZfGrCIk\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Cooling</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.theverge.com/2023/5/23/23733592/frore-airjet-zotac-mini-desktop-pc-zbox-pi430aj-price",
+    "utcStartDateTime": "2023-05-23T07:00:00.000Z",
+    "utcEndDateTime": "2023-05-25T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-01T17:16:20.911Z",
+    "utcUpdatedDateTime": "2023-08-01T17:16:41.427Z",
+    "sentimentScore": 0.6428533140569925,
+    "user": {
+      "id": 4,
+      "userName": "@GadgetWorld"
+    },
+    "mentions": [
+      {
+        "id": 112,
+        "tag": "#Cooling",
+        "pinId": 510
+      }
+    ],
+    "userId": 4
+  },
+  {
     "id": 265,
     "parentId": 264,
     "rootThread": false,
@@ -9604,7 +9630,7 @@
     ],
     "mentions": [
       {
-        "id": 112,
+        "id": 113,
         "tag": "#War",
         "pinId": 205
       }
@@ -9659,7 +9685,7 @@
     ],
     "mentions": [
       {
-        "id": 113,
+        "id": 114,
         "tag": "$NVDA",
         "pinId": 228
       }
@@ -9703,13 +9729,13 @@
     ],
     "mentions": [
       {
-        "id": 114,
-        "tag": "#CoincidentEconomicIndicator",
+        "id": 115,
+        "tag": "#indicator",
         "pinId": 229
       },
       {
-        "id": 115,
-        "tag": "#indicator",
+        "id": 116,
+        "tag": "#CoincidentEconomicIndicator",
         "pinId": 229
       }
     ],
@@ -9751,12 +9777,12 @@
     ],
     "mentions": [
       {
-        "id": 116,
+        "id": 117,
         "tag": "#inflation",
         "pinId": 327
       },
       {
-        "id": 117,
+        "id": 118,
         "tag": "#Euro",
         "pinId": 327
       }
@@ -9784,12 +9810,12 @@
     },
     "mentions": [
       {
-        "id": 118,
+        "id": 119,
         "tag": "#BTFP",
         "pinId": 418
       },
       {
-        "id": 119,
+        "id": 120,
         "tag": "#Liquidity",
         "pinId": 418
       }
@@ -9827,7 +9853,7 @@
     ],
     "mentions": [
       {
-        "id": 120,
+        "id": 121,
         "tag": "#XDate",
         "pinId": 190
       }
@@ -9866,12 +9892,12 @@
     ],
     "mentions": [
       {
-        "id": 121,
+        "id": 122,
         "tag": "#ADP",
         "pinId": 231
       },
       {
-        "id": 122,
+        "id": 123,
         "tag": "#Jobs",
         "pinId": 231
       }
@@ -9916,7 +9942,7 @@
     ],
     "mentions": [
       {
-        "id": 123,
+        "id": 124,
         "tag": "#inflation",
         "pinId": 344
       }
@@ -9954,7 +9980,7 @@
     ],
     "mentions": [
       {
-        "id": 124,
+        "id": 125,
         "tag": "#InitialJoblessClaims",
         "pinId": 373
       }
@@ -10018,13 +10044,13 @@
     },
     "mentions": [
       {
-        "id": 125,
-        "tag": "#ETI",
+        "id": 126,
+        "tag": "#LeadingIndicator",
         "pinId": 449
       },
       {
-        "id": 126,
-        "tag": "#LeadingIndicator",
+        "id": 127,
+        "tag": "#ETI",
         "pinId": 449
       }
     ],
@@ -10066,13 +10092,13 @@
     ],
     "mentions": [
       {
-        "id": 127,
-        "tag": "#Bearish",
+        "id": 128,
+        "tag": "#Hospitality",
         "pinId": 479
       },
       {
-        "id": 128,
-        "tag": "#Hospitality",
+        "id": 129,
+        "tag": "#Bearish",
         "pinId": 479
       }
     ],
@@ -10224,7 +10250,7 @@
     ],
     "mentions": [
       {
-        "id": 129,
+        "id": 130,
         "tag": "#NonfarmPayroll",
         "pinId": 243
       }
@@ -10263,7 +10289,7 @@
     ],
     "mentions": [
       {
-        "id": 130,
+        "id": 131,
         "tag": "#XDate",
         "pinId": 244
       }
@@ -10322,7 +10348,7 @@
     ],
     "mentions": [
       {
-        "id": 131,
+        "id": 132,
         "tag": "#XDate",
         "pinId": 236
       }
@@ -10381,7 +10407,7 @@
     ],
     "mentions": [
       {
-        "id": 132,
+        "id": 133,
         "tag": "$AAPL",
         "pinId": 242
       }
@@ -10444,7 +10470,7 @@
     ],
     "mentions": [
       {
-        "id": 133,
+        "id": 134,
         "tag": "$ATVI",
         "pinId": 147
       }
@@ -10578,7 +10604,7 @@
     ],
     "mentions": [
       {
-        "id": 134,
+        "id": 135,
         "tag": "#InitialJoblessClaims",
         "pinId": 372
       }
@@ -10659,7 +10685,7 @@
     ],
     "mentions": [
       {
-        "id": 135,
+        "id": 136,
         "tag": "#MassShooting",
         "pinId": 251
       }
@@ -10724,7 +10750,7 @@
     ],
     "mentions": [
       {
-        "id": 136,
+        "id": 137,
         "tag": "$GM",
         "pinId": 253
       }
@@ -10761,7 +10787,7 @@
     ],
     "mentions": [
       {
-        "id": 137,
+        "id": 138,
         "tag": "#inflation",
         "pinId": 417
       }
@@ -10797,7 +10823,7 @@
     ],
     "mentions": [
       {
-        "id": 138,
+        "id": 139,
         "tag": "#rates",
         "pinId": 240
       }
@@ -10862,12 +10888,12 @@
     ],
     "mentions": [
       {
-        "id": 139,
+        "id": 140,
         "tag": "#Rate",
         "pinId": 425
       },
       {
-        "id": 140,
+        "id": 141,
         "tag": "#PBOC",
         "pinId": 425
       }
@@ -10963,7 +10989,7 @@
     ],
     "mentions": [
       {
-        "id": 141,
+        "id": 142,
         "tag": "#ECB",
         "pinId": 307
       }
@@ -10997,7 +11023,7 @@
     ],
     "mentions": [
       {
-        "id": 142,
+        "id": 143,
         "tag": "$AMZN",
         "pinId": 326
       }
@@ -11034,7 +11060,7 @@
     ],
     "mentions": [
       {
-        "id": 143,
+        "id": 144,
         "tag": "#InitialJoblessClaims",
         "pinId": 371
       }
@@ -11158,7 +11184,7 @@
     ],
     "mentions": [
       {
-        "id": 144,
+        "id": 145,
         "tag": "$CSCO",
         "pinId": 346
       }
@@ -11228,7 +11254,7 @@
     ],
     "mentions": [
       {
-        "id": 145,
+        "id": 146,
         "tag": "$SQNXF",
         "pinId": 164
       }
@@ -11274,17 +11300,17 @@
     ],
     "mentions": [
       {
-        "id": 146,
-        "tag": "#inflation",
-        "pinId": 357
-      },
-      {
         "id": 147,
         "tag": "#rates",
         "pinId": 357
       },
       {
         "id": 148,
+        "tag": "#inflation",
+        "pinId": 357
+      },
+      {
+        "id": 149,
         "tag": "#BOE",
         "pinId": 357
       }
@@ -11319,7 +11345,7 @@
     ],
     "mentions": [
       {
-        "id": 149,
+        "id": 150,
         "tag": "#RecessionIndicator",
         "pinId": 358
       }
@@ -11364,18 +11390,18 @@
     ],
     "mentions": [
       {
-        "id": 150,
-        "tag": "#Strike",
-        "pinId": 360
-      },
-      {
         "id": 151,
-        "tag": "$BA",
+        "tag": "#Strike",
         "pinId": 360
       },
       {
         "id": 152,
         "tag": "$SPR",
+        "pinId": 360
+      },
+      {
+        "id": 153,
+        "tag": "$BA",
         "pinId": 360
       }
     ],
@@ -11412,28 +11438,23 @@
     ],
     "mentions": [
       {
-        "id": 153,
-        "tag": "$GM",
-        "pinId": 366
-      },
-      {
         "id": 154,
         "tag": "$TSLA",
         "pinId": 366
       },
       {
         "id": 155,
-        "tag": "$STLA",
+        "tag": "$GM",
         "pinId": 366
       },
       {
         "id": 156,
-        "tag": "$PSNY",
+        "tag": "#Quality",
         "pinId": 366
       },
       {
         "id": 157,
-        "tag": "#Quality",
+        "tag": "$TM",
         "pinId": 366
       },
       {
@@ -11443,7 +11464,12 @@
       },
       {
         "id": 159,
-        "tag": "$TM",
+        "tag": "$STLA",
+        "pinId": 366
+      },
+      {
+        "id": 160,
+        "tag": "$PSNY",
         "pinId": 366
       }
     ],
@@ -11489,12 +11515,12 @@
     ],
     "mentions": [
       {
-        "id": 160,
+        "id": 161,
         "tag": "$AMZN",
         "pinId": 367
       },
       {
-        "id": 161,
+        "id": 162,
         "tag": "#AI",
         "pinId": 367
       }
@@ -11531,7 +11557,7 @@
     ],
     "mentions": [
       {
-        "id": 162,
+        "id": 163,
         "tag": "#InitialJoblessClaims",
         "pinId": 370
       }
@@ -11574,7 +11600,7 @@
     ],
     "mentions": [
       {
-        "id": 163,
+        "id": 164,
         "tag": "#inflation",
         "pinId": 374
       }
@@ -11609,7 +11635,7 @@
     ],
     "mentions": [
       {
-        "id": 164,
+        "id": 165,
         "tag": "$INTC",
         "pinId": 396
       }
@@ -11678,7 +11704,7 @@
     ],
     "mentions": [
       {
-        "id": 165,
+        "id": 166,
         "tag": "$VWAGY",
         "pinId": 394
       }
@@ -11735,13 +11761,13 @@
     ],
     "mentions": [
       {
-        "id": 166,
-        "tag": "#Bankruptcy",
+        "id": 167,
+        "tag": "$RIDE",
         "pinId": 398
       },
       {
-        "id": 167,
-        "tag": "$RIDE",
+        "id": 168,
+        "tag": "#Bankruptcy",
         "pinId": 398
       }
     ],
@@ -11776,26 +11802,26 @@
     "locations": [
       {
         "id": 59,
-        "address": "Idaho",
-        "order": 6,
+        "address": "Montana",
+        "order": 5,
         "pinId": 401
       },
       {
         "id": 60,
-        "address": "Sevierville, Tennessee",
-        "order": 4,
+        "address": "Uvalde",
+        "order": 3,
         "pinId": 401
       },
       {
         "id": 61,
-        "address": "Oregon",
-        "order": 7,
+        "address": "Austin",
+        "order": 1,
         "pinId": 401
       },
       {
         "id": 62,
-        "address": "Montana",
-        "order": 5,
+        "address": "Idaho",
+        "order": 6,
         "pinId": 401
       },
       {
@@ -11806,8 +11832,8 @@
       },
       {
         "id": 64,
-        "address": "Uvalde",
-        "order": 3,
+        "address": "Oregon",
+        "order": 7,
         "pinId": 401
       },
       {
@@ -11818,24 +11844,24 @@
       },
       {
         "id": 66,
-        "address": "Austin",
-        "order": 1,
+        "address": "Sevierville, Tennessee",
+        "order": 4,
         "pinId": 401
       }
     ],
     "mentions": [
       {
-        "id": 168,
+        "id": 169,
         "tag": "#Crash",
         "pinId": 401
       },
       {
-        "id": 169,
+        "id": 170,
         "tag": "#Housing",
         "pinId": 401
       },
       {
-        "id": 170,
+        "id": 171,
         "tag": "$ABNB",
         "pinId": 401
       }
@@ -11868,13 +11894,13 @@
     ],
     "mentions": [
       {
-        "id": 171,
-        "tag": "$MLEC",
+        "id": 172,
+        "tag": "#FakeMeat",
         "pinId": 422
       },
       {
-        "id": 172,
-        "tag": "#FakeMeat",
+        "id": 173,
+        "tag": "$MLEC",
         "pinId": 422
       }
     ],
@@ -11930,7 +11956,7 @@
     ],
     "mentions": [
       {
-        "id": 173,
+        "id": 174,
         "tag": "#InitialJoblessClaims",
         "pinId": 428
       }
@@ -11966,43 +11992,43 @@
     ],
     "mentions": [
       {
-        "id": 174,
+        "id": 175,
         "tag": "$AAPL",
         "pinId": 403
       },
       {
-        "id": 175,
-        "tag": "$SPY",
-        "pinId": 403
-      },
-      {
         "id": 176,
-        "tag": "$MSFT",
-        "pinId": 403
-      },
-      {
-        "id": 177,
-        "tag": "$META",
-        "pinId": 403
-      },
-      {
-        "id": 178,
-        "tag": "$QQQ",
-        "pinId": 403
-      },
-      {
-        "id": 179,
         "tag": "#Crash",
         "pinId": 403
       },
       {
+        "id": 177,
+        "tag": "$AMZN",
+        "pinId": 403
+      },
+      {
+        "id": 178,
+        "tag": "$MSFT",
+        "pinId": 403
+      },
+      {
+        "id": 179,
+        "tag": "$META",
+        "pinId": 403
+      },
+      {
         "id": 180,
-        "tag": "$GOOGL",
+        "tag": "$QQQ",
         "pinId": 403
       },
       {
         "id": 181,
-        "tag": "$AMZN",
+        "tag": "$GOOGL",
+        "pinId": 403
+      },
+      {
+        "id": 182,
+        "tag": "$SPY",
         "pinId": 403
       }
     ],
@@ -12037,13 +12063,13 @@
     ],
     "mentions": [
       {
-        "id": 182,
-        "tag": "#Liquidity",
+        "id": 183,
+        "tag": "#Crash",
         "pinId": 416
       },
       {
-        "id": 183,
-        "tag": "#Crash",
+        "id": 184,
+        "tag": "#Liquidity",
         "pinId": 416
       }
     ],
@@ -12108,7 +12134,7 @@
     ],
     "mentions": [
       {
-        "id": 184,
+        "id": 185,
         "tag": "$AAPL",
         "pinId": 439
       }
@@ -12144,7 +12170,7 @@
     ],
     "mentions": [
       {
-        "id": 185,
+        "id": 186,
         "tag": "#Crash",
         "pinId": 224
       }
@@ -12226,13 +12252,13 @@
     ],
     "mentions": [
       {
-        "id": 186,
-        "tag": "#Crash",
+        "id": 187,
+        "tag": "#Unemployment",
         "pinId": 359
       },
       {
-        "id": 187,
-        "tag": "#Unemployment",
+        "id": 188,
+        "tag": "#Crash",
         "pinId": 359
       }
     ],
@@ -12282,7 +12308,7 @@
     ],
     "mentions": [
       {
-        "id": 188,
+        "id": 189,
         "tag": "#Strike",
         "pinId": 429
       }
@@ -12320,13 +12346,13 @@
     ],
     "mentions": [
       {
-        "id": 189,
-        "tag": "#ADP",
+        "id": 190,
+        "tag": "#Jobs",
         "pinId": 450
       },
       {
-        "id": 190,
-        "tag": "#Jobs",
+        "id": 191,
+        "tag": "#ADP",
         "pinId": 450
       }
     ],
@@ -12391,14 +12417,14 @@
     "locations": [
       {
         "id": 72,
-        "address": "Nevada",
-        "order": 1,
+        "address": "Connecticut",
+        "order": 0,
         "pinId": 463
       },
       {
         "id": 73,
-        "address": "Connecticut",
-        "order": 0,
+        "address": "Nevada",
+        "order": 1,
         "pinId": 463
       },
       {
@@ -12446,7 +12472,7 @@
     ],
     "mentions": [
       {
-        "id": 191,
+        "id": 192,
         "tag": "#EV",
         "pinId": 464
       }
@@ -12489,7 +12515,7 @@
     ],
     "mentions": [
       {
-        "id": 192,
+        "id": 193,
         "tag": "#Disinflation",
         "pinId": 478
       }
@@ -12532,7 +12558,7 @@
     ],
     "mentions": [
       {
-        "id": 193,
+        "id": 194,
         "tag": "#Disinflation",
         "pinId": 480
       }
@@ -12560,12 +12586,12 @@
     },
     "mentions": [
       {
-        "id": 194,
+        "id": 195,
         "tag": "#Liquidity",
         "pinId": 496
       },
       {
-        "id": 195,
+        "id": 196,
         "tag": "#TGA",
         "pinId": 496
       }
@@ -12618,7 +12644,7 @@
     ],
     "mentions": [
       {
-        "id": 196,
+        "id": 197,
         "tag": "#Squeeze",
         "pinId": 432
       }
@@ -12669,7 +12695,7 @@
     ],
     "mentions": [
       {
-        "id": 197,
+        "id": 198,
         "tag": "#Strike",
         "pinId": 437
       }
@@ -12702,7 +12728,7 @@
     ],
     "mentions": [
       {
-        "id": 198,
+        "id": 199,
         "tag": "#MassShooting",
         "pinId": 430
       }
@@ -12749,13 +12775,13 @@
     ],
     "mentions": [
       {
-        "id": 199,
-        "tag": "$TSLA",
+        "id": 200,
+        "tag": "$ZE594-CN",
         "pinId": 442
       },
       {
-        "id": 200,
-        "tag": "$ZE594-CN",
+        "id": 201,
+        "tag": "$TSLA",
         "pinId": 442
       }
     ],
@@ -12808,7 +12834,7 @@
     ],
     "mentions": [
       {
-        "id": 201,
+        "id": 202,
         "tag": "#InitialJoblessClaims",
         "pinId": 453
       }
@@ -12900,7 +12926,7 @@
     ],
     "mentions": [
       {
-        "id": 202,
+        "id": 203,
         "tag": "#Liquidity",
         "pinId": 461
       }
@@ -12946,7 +12972,7 @@
     ],
     "mentions": [
       {
-        "id": 203,
+        "id": 204,
         "tag": "#Strike",
         "pinId": 467
       }
@@ -12983,7 +13009,7 @@
     ],
     "mentions": [
       {
-        "id": 204,
+        "id": 205,
         "tag": "#InitialJoblessClaims",
         "pinId": 468
       }
@@ -13021,13 +13047,13 @@
     ],
     "mentions": [
       {
-        "id": 205,
-        "tag": "#inflation",
+        "id": 206,
+        "tag": "#StudentDebt",
         "pinId": 469
       },
       {
-        "id": 206,
-        "tag": "#StudentDebt",
+        "id": 207,
+        "tag": "#inflation",
         "pinId": 469
       }
     ],
@@ -13061,7 +13087,7 @@
     ],
     "mentions": [
       {
-        "id": 207,
+        "id": 208,
         "tag": "#Crash",
         "pinId": 470
       }
@@ -13096,7 +13122,7 @@
     ],
     "mentions": [
       {
-        "id": 208,
+        "id": 209,
         "tag": "#inflation",
         "pinId": 471
       }
@@ -13141,7 +13167,7 @@
     ],
     "mentions": [
       {
-        "id": 209,
+        "id": 210,
         "tag": "#inflation",
         "pinId": 472
       }
@@ -13176,7 +13202,7 @@
     ],
     "mentions": [
       {
-        "id": 210,
+        "id": 211,
         "tag": "#Bearish",
         "pinId": 475
       }
@@ -13219,7 +13245,7 @@
     ],
     "mentions": [
       {
-        "id": 211,
+        "id": 212,
         "tag": "#Bearish",
         "pinId": 477
       }
@@ -13280,12 +13306,12 @@
     ],
     "mentions": [
       {
-        "id": 212,
+        "id": 213,
         "tag": "#energy",
         "pinId": 481
       },
       {
-        "id": 213,
+        "id": 214,
         "tag": "#Oil",
         "pinId": 481
       }
@@ -13320,12 +13346,12 @@
     ],
     "mentions": [
       {
-        "id": 214,
+        "id": 215,
         "tag": "#WindFarm",
         "pinId": 482
       },
       {
-        "id": 215,
+        "id": 216,
         "tag": "#energy",
         "pinId": 482
       }
@@ -13361,13 +13387,13 @@
     ],
     "mentions": [
       {
-        "id": 216,
-        "tag": "$AAPL",
+        "id": 217,
+        "tag": "#SunnyOptical",
         "pinId": 483
       },
       {
-        "id": 217,
-        "tag": "#SunnyOptical",
+        "id": 218,
+        "tag": "$AAPL",
         "pinId": 483
       }
     ],
@@ -13404,7 +13430,7 @@
     ],
     "mentions": [
       {
-        "id": 218,
+        "id": 219,
         "tag": "#InitialJoblessClaims",
         "pinId": 484
       }
@@ -13450,7 +13476,7 @@
     ],
     "mentions": [
       {
-        "id": 219,
+        "id": 220,
         "tag": "#InstantPay",
         "pinId": 485
       }
@@ -13493,7 +13519,7 @@
     ],
     "mentions": [
       {
-        "id": 220,
+        "id": 221,
         "tag": "#Chips",
         "pinId": 486
       }
@@ -13518,12 +13544,12 @@
     },
     "mentions": [
       {
-        "id": 221,
+        "id": 222,
         "tag": "#Bearish",
         "pinId": 476
       },
       {
-        "id": 222,
+        "id": 223,
         "tag": "$CVNA",
         "pinId": 476
       }
@@ -13558,7 +13584,7 @@
     ],
     "mentions": [
       {
-        "id": 223,
+        "id": 224,
         "tag": "#VehicleRepossession",
         "pinId": 488
       }
@@ -13593,7 +13619,7 @@
     ],
     "mentions": [
       {
-        "id": 224,
+        "id": 225,
         "tag": "#rates",
         "pinId": 331
       }
@@ -13636,7 +13662,7 @@
     ],
     "mentions": [
       {
-        "id": 225,
+        "id": 226,
         "tag": "#Bearish",
         "pinId": 491
       }
@@ -13674,7 +13700,7 @@
     ],
     "mentions": [
       {
-        "id": 226,
+        "id": 227,
         "tag": "#Rate",
         "pinId": 492
       }
@@ -13719,7 +13745,7 @@
     ],
     "mentions": [
       {
-        "id": 227,
+        "id": 228,
         "tag": "#ECB",
         "pinId": 493
       }
@@ -13754,7 +13780,7 @@
     ],
     "mentions": [
       {
-        "id": 228,
+        "id": 229,
         "tag": "$VIX",
         "pinId": 498
       }
@@ -13789,12 +13815,12 @@
     ],
     "mentions": [
       {
-        "id": 229,
+        "id": 230,
         "tag": "#Yen",
         "pinId": 499
       },
       {
-        "id": 230,
+        "id": 231,
         "tag": "#Bullish",
         "pinId": 499
       }
@@ -13819,7 +13845,7 @@
     },
     "media": [
       {
-        "id": 382,
+        "id": 306,
         "originalUrl": "https://twitter.com/BurggrabenH/status/1685005354755620865",
         "type": "2",
         "authorName": "Alexander Stahel ????",
@@ -13829,7 +13855,7 @@
     ],
     "locations": [
       {
-        "id": 132,
+        "id": 91,
         "address": "Europe",
         "order": 0,
         "pinId": 502
@@ -13837,7 +13863,7 @@
     ],
     "mentions": [
       {
-        "id": 301,
+        "id": 232,
         "tag": "#energy",
         "pinId": 502
       }
@@ -13863,7 +13889,7 @@
     },
     "media": [
       {
-        "id": 306,
+        "id": 307,
         "originalUrl": "https://twitter.com/DrastikThomas/status/1681209005656485890",
         "type": "2",
         "authorName": "Thomas Drastik",
@@ -13873,7 +13899,7 @@
     ],
     "locations": [
       {
-        "id": 91,
+        "id": 92,
         "address": "Germany",
         "order": 0,
         "pinId": 474
@@ -13881,12 +13907,12 @@
     ],
     "mentions": [
       {
-        "id": 231,
+        "id": 233,
         "tag": "#RE",
         "pinId": 474
       },
       {
-        "id": 232,
+        "id": 234,
         "tag": "#Bearish",
         "pinId": 474
       }
@@ -13912,7 +13938,7 @@
     },
     "media": [
       {
-        "id": 307,
+        "id": 308,
         "thumbName": "a261ce8f-7630-4227-b199-8fc24c411a9f-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -13924,7 +13950,7 @@
     ],
     "locations": [
       {
-        "id": 92,
+        "id": 93,
         "address": "China",
         "order": 0,
         "pinId": 440
@@ -13932,19 +13958,128 @@
     ],
     "mentions": [
       {
-        "id": 233,
+        "id": 235,
         "tag": "#Chips",
         "pinId": 440
       },
       {
-        "id": 234,
+        "id": 236,
         "tag": "#Germanium",
         "pinId": 440
       },
       {
-        "id": 235,
+        "id": 237,
         "tag": "#Gallium",
         "pinId": 440
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 508,
+    "rootThread": false,
+    "title": "Job market is cooling and downward revisions of back data",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bearish</chronohash> </p>",
+    "sourceDescription": "{\"time\":1690901962320,\"blocks\":[{\"id\":\"ouk6-9RJmu\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bearish</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/Stephen_Geiger/status/1686383335537610752",
+    "utcStartDateTime": "2023-08-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-01T14:59:31.741Z",
+    "sentimentScore": -0.26672014594078064,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 309,
+        "originalUrl": "https://twitter.com/Stephen_Geiger/status/1686383335537610752",
+        "type": "2",
+        "authorName": "Stephen Geiger",
+        "authorUrl": "https://twitter.com/Stephen_Geiger",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Job market is cooling…<br><br>JOLTS Job Openings:<br>9.582m vs 9.61m exp<br><br>Previous month revised down:<br>9.824m ?? 9.616m<br><br>Hires rate down to 3.8%. Cycle low. <a href=\"https://t.co/0S2H3R0WT8\">pic.twitter.com/0S2H3R0WT8</a></p>&mdash; Stephen Geiger (@Stephen_Geiger) <a href=\"https://twitter.com/Stephen_Geiger/status/1686383335537610752?ref_src=twsrc%5Etfw\">August 1, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 238,
+        "tag": "#Bearish",
+        "pinId": 508
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 511,
+    "rootThread": false,
+    "title": "Fitch downgrades U.S. long-term rating to AA+ from AAA",
+    "description": "<p class=\"paragraph\"> Fitch Ratings cut the United States’ long-term foreign currency issuer default rating to AA+ from AAA. </p><p class=\"paragraph\"> The agency had placed the country’s rating on negative watch in May, citing the debt ceiling fight in Washington. </p><p class=\"paragraph\"> “The repeated debt-limit political standoffs and last-minute resolutions have eroded confidence in fiscal management,” Fitch said. </p><p class=\"paragraph\"> U.S. stock futures opened lower Tuesday evening after the downgrade. </p>",
+    "sourceDescription": "{\"time\":1690935997491,\"blocks\":[{\"id\":\"2ahL_Hik-v\",\"type\":\"paragraph\",\"data\":{\"text\":\"Fitch Ratings cut the United States’ long-term foreign currency issuer default rating to AA+ from AAA.\"}},{\"id\":\"aSuOk7tzan\",\"type\":\"paragraph\",\"data\":{\"text\":\"The agency had placed the country’s rating on negative watch in May, citing the debt ceiling fight in Washington.\"}},{\"id\":\"uWrIO5ExB_\",\"type\":\"paragraph\",\"data\":{\"text\":\"“The repeated debt-limit political standoffs and last-minute resolutions have eroded confidence in fiscal management,” Fitch said.\"}},{\"id\":\"ZI_Db3wGUl\",\"type\":\"paragraph\",\"data\":{\"text\":\"U.S. stock futures opened lower Tuesday evening after the downgrade.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/08/01/fitch-downgrades-us-long-term-ratings-to-aa-from-aaa.html",
+    "utcStartDateTime": "2023-08-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-02T00:27:00.227Z",
+    "sentimentScore": -0.6494056573137641,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 310,
+        "thumbName": "818187b2-eaa8-4f18-bc47-3fed4ce4151c-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107266857-1688570168592-gettyimages-1514181637-_tk_8541_l7n0eeit.jpeg?v=1690925941&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 94,
+        "address": "USA",
+        "order": 0,
+        "pinId": 511
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 512,
+    "rootThread": false,
+    "title": "US is now pissing away 14% of tax revenues in interest payments",
+    "description": "<p class=\"paragraph\"> US has hit a fiscal wall. 14% of tax revenues payed away in interest payments. This has ALWAYS and INVARIABLY led to a fiscal tightening. Party over folks. And the bond market knows! </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bearish</chronohash> </p>",
+    "sourceDescription": "{\"time\":1690953821669,\"blocks\":[{\"id\":\"LfWOAMblhY\",\"type\":\"paragraph\",\"data\":{\"text\":\"US has hit a fiscal wall. 14% of tax revenues payed away in interest payments. This has ALWAYS and INVARIABLY led to a fiscal tightening. Party over folks. And the bond market knows!\"}},{\"id\":\"BJqO6vG-bx\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bearish</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1686551218401775616",
+    "utcStartDateTime": "2023-08-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-03T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-02T05:23:22.983Z",
+    "utcUpdatedDateTime": "2023-08-02T05:23:46.328Z",
+    "sentimentScore": -0.7452670801430941,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 311,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1686551218401775616",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">dude… Bidenomics comes with a price tag and you know US is heading towards a government shutdown later this year… Their point on erosion of governance is certainly valid and so is their point on sustainability of debt trajectory - US is now pissing away 14% of tax revenues in… <a href=\"https://t.co/XGRmQhay4h\">https://t.co/XGRmQhay4h</a> <a href=\"https://t.co/ax7HZsa1zH\">pic.twitter.com/ax7HZsa1zH</a></p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1686551218401775616?ref_src=twsrc%5Etfw\">August 2, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 239,
+        "tag": "#Bearish",
+        "pinId": 512
       }
     ],
     "userId": 1
@@ -13967,7 +14102,7 @@
     },
     "media": [
       {
-        "id": 308,
+        "id": 312,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1684569204043943936",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -13977,7 +14112,7 @@
     ],
     "mentions": [
       {
-        "id": 236,
+        "id": 240,
         "tag": "#TGA",
         "pinId": 494
       }
@@ -13985,17 +14120,47 @@
     "userId": 1
   },
   {
+    "id": 165,
+    "parentId": 164,
+    "rootThread": false,
+    "title": "Baldur's Gate 3 - Gameplay Trailer | State of Play 2023",
+    "description": "<p class=\"paragraph\">  Following a 20-plus year wait, RPG fans will finally return to the Forgotten Realms of the popular Baldur's Gate franchise. But the Dungeons &amp; Dragons-based sequel has much more going for it than players' long-brimming anticipation. Developed by Larian Studios — the team behind acclaimed RPG series Divinity — Baldur's Gate III represents that rare dream pairing of a beloved property with the studio best suited to adapting it. Toss in the fact that this hotly anticipated&nbsp;<a href=\"https://www.cnn.com/cnn-underscored/electronics/best-pc-games\">PC game</a>&nbsp;has been honed over two years of fan feedback-fueled early access, and we can't wait to party up and teach those ugly mind flayers some manners.&nbsp;  </p><p class=\"paragraph\"> Baldur’s Gate 3 will leave Early Access for a full release on August 3, 2023. Baldur's Gate 3's original release date had been set for the end of the month, but Larian has pushed the timetable forward for one big reason: Starfield. Of course, we don't know if that's the official story, but with Bethesda's space RPG set to eclipse else in its release window, it seems like a reasonable explanation. </p>",
+    "sourceDescription": "{\"time\":1690930971049,\"blocks\":[{\"id\":\"LjSLfoNgJ4\",\"type\":\"paragraph\",\"data\":{\"text\":\" Following a 20-plus year wait, RPG fans will finally return to the Forgotten Realms of the popular Baldur's Gate franchise. But the Dungeons &amp; Dragons-based sequel has much more going for it than players' long-brimming anticipation. Developed by Larian Studios — the team behind acclaimed RPG series Divinity — Baldur's Gate III represents that rare dream pairing of a beloved property with the studio best suited to adapting it. Toss in the fact that this hotly anticipated&nbsp;<a href=\\\"https://www.cnn.com/cnn-underscored/electronics/best-pc-games\\\">PC game</a>&nbsp;has been honed over two years of fan feedback-fueled early access, and we can't wait to party up and teach those ugly mind flayers some manners.&nbsp; \"}},{\"id\":\"ejOqtOeO3p\",\"type\":\"paragraph\",\"data\":{\"text\":\"Baldur’s Gate 3 will leave Early Access for a full release on August 3, 2023. Baldur's Gate 3's original release date had been set for the end of the month, but Larian has pushed the timetable forward for one big reason: Starfield. Of course, we don't know if that's the official story, but with Bethesda's space RPG set to eclipse else in its release window, it seems like a reasonable explanation.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.youtube.com/watch?v=okFSR8CCOPY",
+    "price": 69.99,
+    "utcStartDateTime": "2023-08-03T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-04T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-04-30T01:18:36.259Z",
+    "utcUpdatedDateTime": "2023-08-01T23:02:58.898Z",
+    "sentimentScore": 0.8456813120283188,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 313,
+        "originalUrl": "//www.youtube.com/embed/okFSR8CCOPY",
+        "type": "3",
+        "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/okFSR8CCOPY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 490,
     "rootThread": false,
-    "title": "Goblin Slayer II",
+    "title": "Goblin Slayer Season 2",
     "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/ufYEythBd3w\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><h2>Plot</h2><p class=\"paragraph\"> Rumor has it that, in a certain guild in the middle of nowhere, there is an extraordinary man who has climbed all the way to the Silver rank just by killing goblins. At the same guild, a priestess who’s just become a new adventurer has formed her first party... and the man who ends up rescuing that party when they get into trouble is none other than the Goblin Slayer. </p>",
     "sourceDescription": "{\"time\":1690328809900,\"blocks\":[{\"id\":\"rIIbob4nvj\",\"type\":\"embed\",\"data\":{\"service\":\"youtube\",\"source\":\"https://www.youtube.com/watch?v=ufYEythBd3w\",\"embed\":\"https://www.youtube.com/embed/ufYEythBd3w\",\"width\":580,\"height\":320,\"caption\":\"Goblin Slayer Season 2 | OFFICIAL TRAILER\",\"length\":\"\"}},{\"id\":\"u8jKfNAwc5\",\"type\":\"header\",\"data\":{\"text\":\"Plot\",\"level\":2}},{\"id\":\"7P2--z4yKV\",\"type\":\"paragraph\",\"data\":{\"text\":\"Rumor has it that, in a certain guild in the middle of nowhere, there is an extraordinary man who has climbed all the way to the Silver rank just by killing goblins. At the same guild, a priestess who’s just become a new adventurer has formed her first party... and the man who ends up rescuing that party when they get into trouble is none other than the Goblin Slayer.\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://myanimelist.net/anime/47160/Goblin_Slayer_II",
     "utcStartDateTime": "2023-08-04T07:00:00.000Z",
-    "utcEndDateTime": "2023-08-05T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-06T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-07-25T23:47:24.912Z",
-    "sentimentScore": 0.27175784669816494,
+    "utcUpdatedDateTime": "2023-08-02T00:32:42.468Z",
+    "sentimentScore": 0.24131780490279195,
     "user": {
       "id": 3,
       "userName": "@PrinceAnime"
@@ -14003,28 +14168,58 @@
     "userId": 3
   },
   {
-    "id": 165,
-    "parentId": 164,
-    "rootThread": false,
-    "title": "Baldur's Gate 3 - Gameplay Trailer | State of Play 2023",
-    "description": "<p class=\"paragraph\"> Following a 20-plus year wait, RPG fans will finally return to the Forgotten Realms of the popular Baldur's Gate franchise. But the Dungeons &amp; Dragons-based sequel has much more going for it than players' long-brimming anticipation. Developed by Larian Studios — the team behind acclaimed RPG series Divinity — Baldur's Gate III represents that rare dream pairing of a beloved property with the studio best suited to adapting it. Toss in the fact that this hotly anticipated&nbsp;<a href=\"https://www.cnn.com/cnn-underscored/electronics/best-pc-games\">PC game</a>&nbsp;has been honed over two years of fan feedback-fueled early access, and we can't wait to party up and teach those ugly mind flayers some manners.&nbsp; </p>",
-    "sourceUrl": "https://www.youtube.com/watch?v=okFSR8CCOPY",
-    "price": 69.99,
-    "utcStartDateTime": "2023-08-31T07:00:00.000Z",
-    "utcEndDateTime": "2023-09-01T07:00:00.000Z",
+    "id": 507,
+    "rootThread": true,
+    "title": "Traders Brace for $102 Billion Wave of Treasury Bond Sales",
+    "description": "<p class=\"paragraph\"> The consensus of dealers’ projections shows the following for the upcoming refunding auctions: </p><ul><li>$42 billion of 3-year notes on&nbsp;Aug. 8</li><li>$37 billion of 10-year notes on Aug. 9</li><li>$23 billion of 30-year bonds on Aug. 10</li></ul><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Treasury</chronohash> </p>",
+    "sourceDescription": "{\"time\":1690828172254,\"blocks\":[{\"id\":\"I-7n6rZ4T-\",\"type\":\"paragraph\",\"data\":{\"text\":\"The consensus of dealers’ projections shows the following for the upcoming refunding auctions:\"}},{\"id\":\"k2IWjGmfuZ\",\"type\":\"list\",\"data\":{\"style\":\"unordered\",\"items\":[\"$42 billion of 3-year notes on&nbsp;Aug. 8\",\"$37 billion of 10-year notes on Aug. 9\",\"$23 billion of 30-year bonds on Aug. 10\"]}},{\"id\":\"TfumBNa07Y\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Treasury</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.bloomberg.com/news/articles/2023-07-31/traders-brace-for-102-billion-wave-of-treasury-bond-sales",
+    "utcStartDateTime": "2023-08-08T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-10T07:00:00.000Z",
     "allDay": true,
-    "utcCreatedDateTime": "2023-04-30T01:18:36.259Z",
-    "sentimentScore": 0.8618193243164569,
+    "utcCreatedDateTime": "2023-07-31T18:29:19.756Z",
+    "utcUpdatedDateTime": "2023-07-31T18:29:35.225Z",
+    "sentimentScore": 0.15863171312958002,
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
-    "media": [
+    "mentions": [
       {
-        "id": 309,
-        "originalUrl": "//www.youtube.com/embed/okFSR8CCOPY",
-        "type": "3",
-        "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/okFSR8CCOPY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+        "id": 241,
+        "tag": "#Treasury",
+        "pinId": 507
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 513,
+    "parentId": 507,
+    "rootThread": false,
+    "title": "US Ramps Up Debt Issuance, Adding Fuel to Selloff in Treasuries",
+    "description": "<p class=\"paragraph\"> Issuance plans for Treasury Inflation-Protected Securities, or TIPS, were held steady except for the 5-year maturity, where October’s new-issue auction will go up by $1 billion. Floating-rate note auction sizes were increased by $2 billion. </p><p class=\"paragraph\"> As for next week’s refunding auctions, they break down as follows: </p><ul><li>$42 billion of 3-year notes on Aug. 8,&nbsp;<a href=\"https://home.treasury.gov/news/press-releases/jy1460\" target=\"_blank\">compared with</a>&nbsp;$40 billion at the May refunding and at the last auction in July</li><li>$38 billion of 10-year notes on Aug. 9, compared with $35 billion last quarter</li><li>$23 billion of 30-year bonds on Aug. 10, versus $21 billion in May</li><li>The refunding will raise about $19 billion in new cash</li></ul><p class=\"paragraph\"> The Treasury also detailed increases to nominal debt of other maturities over coming months as follows: </p><ul><li>Sales of 2- and 5-year note auctions will each be hoisted by $3 billion per month over the next three months</li><li>Issuance of 3-year notes will rise by $2 billion a month</li><li>Increases for 7-year notes by $1 billion per month over the next three months</li><li>Lifts to both the new and reopened 20-year bond auction sizes by $1 billion, starting in August</li><li>Increases both the new and reopened 10-year note auction sizes by $3 billion, starting in August</li><li>Boosts both the new and reopened 30-year bond auction sizes by $2 billion, starting in August</li></ul><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Liquidity</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Treasury</chronohash><br> </p>",
+    "sourceDescription": "{\"time\":1691000246670,\"blocks\":[{\"id\":\"JgL1IQtyo_\",\"type\":\"paragraph\",\"data\":{\"text\":\"Issuance plans for Treasury Inflation-Protected Securities, or TIPS, were held steady except for the 5-year maturity, where October’s new-issue auction will go up by $1 billion. Floating-rate note auction sizes were increased by $2 billion.\"}},{\"id\":\"j9Ebvi--de\",\"type\":\"paragraph\",\"data\":{\"text\":\"As for next week’s refunding auctions, they break down as follows:\"}},{\"id\":\"WI8b3bsMCN\",\"type\":\"list\",\"data\":{\"style\":\"unordered\",\"items\":[\"$42 billion of 3-year notes on Aug. 8,&nbsp;<a href=\\\"https://home.treasury.gov/news/press-releases/jy1460\\\" target=\\\"_blank\\\">compared with</a>&nbsp;$40 billion at the May refunding and at the last auction in July\",\"$38 billion of 10-year notes on Aug. 9, compared with $35 billion last quarter\",\"$23 billion of 30-year bonds on Aug. 10, versus $21 billion in May\",\"The refunding will raise about $19 billion in new cash\"]}},{\"id\":\"I8UNADTiM4\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Treasury also detailed increases to nominal debt of other maturities over coming months as follows:\"}},{\"id\":\"4q-hIINXpm\",\"type\":\"list\",\"data\":{\"style\":\"unordered\",\"items\":[\"Sales of 2- and 5-year note auctions will each be hoisted by $3 billion per month over the next three months\",\"Issuance of 3-year notes will rise by $2 billion a month\",\"Increases for 7-year notes by $1 billion per month over the next three months\",\"Lifts to both the new and reopened 20-year bond auction sizes by $1 billion, starting in August\",\"Increases both the new and reopened 10-year note auction sizes by $3 billion, starting in August\",\"Boosts both the new and reopened 30-year bond auction sizes by $2 billion, starting in August\"]}},{\"id\":\"AYbugYZHRf\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Liquidity</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Treasury</chronohash><br>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.bloomberg.com/news/articles/2023-08-02/us-plans-103-billion-debt-sale-says-issuance-to-keep-rising",
+    "utcStartDateTime": "2023-08-08T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-12T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-02T18:15:44.999Z",
+    "utcUpdatedDateTime": "2023-08-02T18:17:30.970Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "mentions": [
+      {
+        "id": 242,
+        "tag": "#Liquidity",
+        "pinId": 513
+      },
+      {
+        "id": 243,
+        "tag": "#Treasury",
+        "pinId": 513
       }
     ],
     "userId": 1
@@ -14047,7 +14242,7 @@
     },
     "media": [
       {
-        "id": 310,
+        "id": 314,
         "originalUrl": "//www.youtube.com/embed/CDVH_JJIRWI",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/CDVH_JJIRWI\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -14055,15 +14250,15 @@
     ],
     "locations": [
       {
-        "id": 93,
-        "address": "South Asia Subregion",
-        "order": 0,
+        "id": 95,
+        "address": "Egypt Country",
+        "order": 1,
         "pinId": 148
       },
       {
-        "id": 94,
-        "address": "Egypt Country",
-        "order": 1,
+        "id": 96,
+        "address": "South Asia Subregion",
+        "order": 0,
         "pinId": 148
       }
     ],
@@ -14088,7 +14283,7 @@
     },
     "media": [
       {
-        "id": 311,
+        "id": 315,
         "thumbName": "9297e0e8-ca76-441c-a838-5c9af85aeb9e-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -14100,7 +14295,7 @@
     ],
     "mentions": [
       {
-        "id": 237,
+        "id": 244,
         "tag": "$TSLA",
         "pinId": 193
       }
@@ -14127,7 +14322,7 @@
     },
     "media": [
       {
-        "id": 312,
+        "id": 316,
         "originalUrl": "//www.youtube.com/embed/Dz_8n9EcslU",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Dz_8n9EcslU\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -14135,7 +14330,7 @@
     ],
     "mentions": [
       {
-        "id": 238,
+        "id": 245,
         "tag": "$AAPL",
         "pinId": 392
       }
@@ -14161,7 +14356,7 @@
     },
     "media": [
       {
-        "id": 313,
+        "id": 317,
         "thumbName": "570e934d-30af-4210-baac-3eca0e7aef4d-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -14173,7 +14368,7 @@
     ],
     "mentions": [
       {
-        "id": 239,
+        "id": 246,
         "tag": "$AAPL",
         "pinId": 393
       }
@@ -14200,7 +14395,7 @@
     },
     "media": [
       {
-        "id": 314,
+        "id": 318,
         "thumbName": "8be6207b-51b0-4116-a99b-48e13033b78c-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -14212,7 +14407,7 @@
     ],
     "mentions": [
       {
-        "id": 240,
+        "id": 247,
         "tag": "$AAPL",
         "pinId": 438
       }
@@ -14237,7 +14432,7 @@
     },
     "media": [
       {
-        "id": 315,
+        "id": 319,
         "originalUrl": "//www.youtube.com/embed/UZ6eFEjFfJ0",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/UZ6eFEjFfJ0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -14273,7 +14468,7 @@
     },
     "media": [
       {
-        "id": 316,
+        "id": 320,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1679518809055535106",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -14283,9 +14478,45 @@
     ],
     "mentions": [
       {
-        "id": 241,
+        "id": 248,
         "tag": "#InitialJoblessClaim",
         "pinId": 466
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 504,
+    "rootThread": false,
+    "title": "View of what the Fed should do this year based on core PCE in 2023-H2",
+    "description": "<p class=\"paragraph\"> Resources: </p><p class=\"paragraph\"> <a href=\"https://fred.stlouisfed.org/graph/?g=12VQD&amp;utm_campaign=myfred_referrer&amp;utm_medium=exported-chart&amp;utm_source=direct\">Personal Consumption Expenditures</a> </p><p class=\"paragraph\"> <a href=\"https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm\">2023 FOMC Meetings</a> </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Fed</chronohash> </p>",
+    "sourceDescription": "{\"time\":1690653122766,\"blocks\":[{\"id\":\"brQly9F6F0\",\"type\":\"paragraph\",\"data\":{\"text\":\"Resources:\"}},{\"id\":\"dB_GB0Lk20\",\"type\":\"paragraph\",\"data\":{\"text\":\"<a href=\\\"https://fred.stlouisfed.org/graph/?g=12VQD&amp;utm_campaign=myfred_referrer&amp;utm_medium=exported-chart&amp;utm_source=direct\\\">Personal Consumption Expenditures</a>\"}},{\"id\":\"TXsm9Pzgj2\",\"type\":\"paragraph\",\"data\":{\"text\":\"<a href=\\\"https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm\\\">2023 FOMC Meetings</a>\"}},{\"id\":\"lc0NpUmYDV\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Fed</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/jasonfurman/status/1685317346821394434",
+    "utcStartDateTime": "2023-09-20T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-22T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-29T17:51:45.044Z",
+    "utcUpdatedDateTime": "2023-07-29T17:52:07.638Z",
+    "sentimentScore": 0.0286812111735344,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 321,
+        "originalUrl": "https://twitter.com/jasonfurman/status/1685317346821394434",
+        "type": "2",
+        "authorName": "Jason Furman",
+        "authorUrl": "https://twitter.com/jasonfurman",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Rough view of what the Fed should do this year based on core PCE in 2023-H2:<br><br>1. Above 3.5%: Hike more than once.<br><br>2. At 3.5%: Hike once.<br><br>3. Below 3.5% &amp; UR &lt; 4%: No more hikes.<br><br>4. Below 3.5% &amp; UR &gt; 4%: Cut rates.</p>&mdash; Jason Furman (@jasonfurman) <a href=\"https://twitter.com/jasonfurman/status/1685317346821394434?ref_src=twsrc%5Etfw\">July 29, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 249,
+        "tag": "#Fed",
+        "pinId": 504
       }
     ],
     "userId": 1
@@ -14310,7 +14541,7 @@
     },
     "media": [
       {
-        "id": 317,
+        "id": 322,
         "originalUrl": "//www.youtube.com/embed/5AKl_cEB26c",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/5AKl_cEB26c\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -14318,7 +14549,7 @@
     ],
     "mentions": [
       {
-        "id": 242,
+        "id": 250,
         "tag": "$META",
         "pinId": 239
       }
@@ -14344,7 +14575,7 @@
     },
     "mentions": [
       {
-        "id": 243,
+        "id": 251,
         "tag": "$TSLA",
         "pinId": 206
       }
@@ -14380,7 +14611,7 @@
     },
     "media": [
       {
-        "id": 318,
+        "id": 323,
         "originalUrl": "https://twitter.com/gamer__capital/status/1663987579962945536",
         "type": "2",
         "authorName": "gamer capital ???",
@@ -14390,12 +14621,12 @@
     ],
     "mentions": [
       {
-        "id": 244,
+        "id": 252,
         "tag": "#Crash",
         "pinId": 230
       },
       {
-        "id": 245,
+        "id": 253,
         "tag": "#studentloans",
         "pinId": 230
       }
@@ -14428,7 +14659,7 @@
     },
     "media": [
       {
-        "id": 319,
+        "id": 324,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1669416501747564569",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -14438,8 +14669,16 @@
     ],
     "mentions": [
       {
-        "id": 246,
+        "id": 254,
         "tag": "#XDate",
+        "pinId": 308
+      }
+    ],
+    "favorites": [
+      {
+        "id": 12,
+        "utcCreatedDateTime": "2023-07-31T18:34:52.965Z",
+        "userId": 1,
         "pinId": 308
       }
     ],
@@ -14466,7 +14705,7 @@
     },
     "media": [
       {
-        "id": 320,
+        "id": 325,
         "thumbName": "1636b6d8-591f-4f8f-82f7-973737459bf0-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -14478,12 +14717,12 @@
     ],
     "mentions": [
       {
-        "id": 247,
+        "id": 255,
         "tag": "#Crash",
         "pinId": 343
       },
       {
-        "id": 248,
+        "id": 256,
         "tag": "#StudentLoan",
         "pinId": 343
       }
@@ -14508,7 +14747,7 @@
     },
     "media": [
       {
-        "id": 321,
+        "id": 326,
         "originalUrl": "https://twitter.com/jaredhstocks/status/1678938694953373696",
         "type": "2",
         "authorName": "Jared",
@@ -14518,7 +14757,7 @@
     ],
     "mentions": [
       {
-        "id": 249,
+        "id": 257,
         "tag": "#Recession",
         "pinId": 462
       }
@@ -14544,6 +14783,41 @@
     "userId": 3
   },
   {
+    "id": 506,
+    "rootThread": false,
+    "title": "No I am not changing my expectation of an upcoming recession and yes my timing is still q3/q4. Could it slip by a couple months? yep but it’s tracking on schedule.",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#NFP</chronohash> </p>",
+    "sourceDescription": "{\"time\":1690814280912,\"blocks\":[{\"id\":\"QyZwXXNDwp\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#NFP</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1685978869658963969",
+    "utcStartDateTime": "2023-10-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-10-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-31T14:38:08.291Z",
+    "sentimentScore": -0.08697739243507385,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 327,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1685978869658963969",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">I got asked the question many times in the last weeks. No I am not changing my expectation of an upcoming recession and yes my timing is still q3/q4. Could it slip by a couple months? yep but it’s tracking on schedule. Like always, jobs are the key metric. And services are where… <a href=\"https://t.co/5P7MqW0KEr\">pic.twitter.com/5P7MqW0KEr</a></p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1685978869658963969?ref_src=twsrc%5Etfw\">July 31, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 258,
+        "tag": "#NFP",
+        "pinId": 506
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 166,
     "parentId": 165,
     "rootThread": false,
@@ -14564,7 +14838,7 @@
     },
     "media": [
       {
-        "id": 322,
+        "id": 328,
         "thumbName": "ed30a2c1-8f8d-4394-aa81-c8378e093f9f-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -14606,7 +14880,7 @@
     },
     "media": [
       {
-        "id": 323,
+        "id": 329,
         "originalUrl": "//www.youtube.com/embed/Q2kN6LONlWw",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Q2kN6LONlWw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -14614,7 +14888,7 @@
     ],
     "locations": [
       {
-        "id": 95,
+        "id": 97,
         "address": "MSG Sphere, Las Vegas",
         "order": 0,
         "pinId": 149
@@ -14622,7 +14896,7 @@
     ],
     "mentions": [
       {
-        "id": 250,
+        "id": 259,
         "tag": "$MSGS",
         "pinId": 149
       }
@@ -14648,7 +14922,7 @@
     },
     "media": [
       {
-        "id": 324,
+        "id": 330,
         "originalUrl": "//www.youtube.com/embed/e-FuDjteXxs",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/e-FuDjteXxs\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -14692,7 +14966,7 @@
     },
     "media": [
       {
-        "id": 325,
+        "id": 331,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1669043173492940814",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -14702,7 +14976,7 @@
     ],
     "mentions": [
       {
-        "id": 251,
+        "id": 260,
         "tag": "#rates",
         "pinId": 295
       }
@@ -14729,7 +15003,7 @@
     },
     "media": [
       {
-        "id": 326,
+        "id": 332,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1669242180433592322",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -14739,12 +15013,12 @@
     ],
     "mentions": [
       {
-        "id": 252,
+        "id": 261,
         "tag": "#Crash",
         "pinId": 306
       },
       {
-        "id": 253,
+        "id": 262,
         "tag": "#UnemploymentRate",
         "pinId": 306
       }
@@ -14769,7 +15043,7 @@
     },
     "media": [
       {
-        "id": 327,
+        "id": 333,
         "originalUrl": "https://twitter.com/FinanceLancelot/status/1669204050217246720",
         "type": "2",
         "authorName": "Financelot",
@@ -14779,7 +15053,7 @@
     ],
     "mentions": [
       {
-        "id": 254,
+        "id": 263,
         "tag": "#Liquidity",
         "pinId": 309
       }
@@ -14806,12 +15080,12 @@
     },
     "mentions": [
       {
-        "id": 255,
+        "id": 264,
         "tag": "#TokyoAnimeAward",
         "pinId": 341
       },
       {
-        "id": 256,
+        "id": 265,
         "tag": "#TelevisionCategory",
         "pinId": 341
       }
@@ -14838,7 +15112,7 @@
     },
     "media": [
       {
-        "id": 328,
+        "id": 334,
         "thumbName": "9c08c3a1-9b74-4e40-9c3e-8953037a4adb-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 562,
@@ -14870,7 +15144,7 @@
     },
     "media": [
       {
-        "id": 329,
+        "id": 335,
         "thumbName": "54e3185a-3f81-4573-9f0c-1ed374ca3c77-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 523,
@@ -14882,13 +15156,13 @@
     ],
     "locations": [
       {
-        "id": 96,
+        "id": 98,
         "address": "Marcellus and Utica shale sites",
         "order": 1,
         "pinId": 376
       },
       {
-        "id": 97,
+        "id": 99,
         "address": "Mountain Valley natural gas pipeline Southern  Virginia",
         "order": 0,
         "pinId": 376
@@ -14896,23 +15170,23 @@
     ],
     "mentions": [
       {
-        "id": 257,
+        "id": 266,
         "tag": "$ETRN",
         "pinId": 376
       },
       {
-        "id": 258,
+        "id": 267,
         "tag": "$NEE",
         "pinId": 376
       },
       {
-        "id": 259,
-        "tag": "$ED",
+        "id": 268,
+        "tag": "#Pipeliine",
         "pinId": 376
       },
       {
-        "id": 260,
-        "tag": "#Pipeliine",
+        "id": 269,
+        "tag": "$ED",
         "pinId": 376
       }
     ],
@@ -14937,7 +15211,7 @@
     },
     "media": [
       {
-        "id": 330,
+        "id": 336,
         "originalUrl": "//www.youtube.com/embed/km3MVZ8HZeY",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/km3MVZ8HZeY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -14964,7 +15238,7 @@
     },
     "media": [
       {
-        "id": 331,
+        "id": 337,
         "thumbName": "f282704e-1fb1-4727-9343-955dcc17e01a-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -14976,12 +15250,12 @@
     ],
     "mentions": [
       {
-        "id": 261,
+        "id": 270,
         "tag": "$SONY",
         "pinId": 456
       },
       {
-        "id": 262,
+        "id": 271,
         "tag": "#PS5",
         "pinId": 456
       }
@@ -15005,7 +15279,7 @@
     },
     "media": [
       {
-        "id": 332,
+        "id": 338,
         "thumbName": "841b2539-69ee-46df-b177-cc70bd000a99-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -15017,17 +15291,17 @@
     ],
     "mentions": [
       {
-        "id": 263,
-        "tag": "#AI",
-        "pinId": 289
-      },
-      {
-        "id": 264,
+        "id": 272,
         "tag": "$AMD",
         "pinId": 289
       },
       {
-        "id": 265,
+        "id": 273,
+        "tag": "#AI",
+        "pinId": 289
+      },
+      {
+        "id": 274,
         "tag": "#GPU",
         "pinId": 289
       }
@@ -15053,7 +15327,7 @@
     },
     "media": [
       {
-        "id": 333,
+        "id": 339,
         "originalUrl": "https://twitter.com/PauloMacro/status/1670148000780255233",
         "type": "2",
         "authorName": "Paulo Macro",
@@ -15063,26 +15337,26 @@
     ],
     "locations": [
       {
-        "id": 98,
-        "address": "Japan",
-        "order": 1,
+        "id": 100,
+        "address": "United Sates",
+        "order": 0,
         "pinId": 342
       },
       {
-        "id": 99,
-        "address": "United Sates",
-        "order": 0,
+        "id": 101,
+        "address": "Japan",
+        "order": 1,
         "pinId": 342
       }
     ],
     "mentions": [
       {
-        "id": 266,
+        "id": 275,
         "tag": "#Crash",
         "pinId": 342
       },
       {
-        "id": 267,
+        "id": 276,
         "tag": "#CarryTrade",
         "pinId": 342
       }
@@ -15107,7 +15381,7 @@
     },
     "media": [
       {
-        "id": 334,
+        "id": 340,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1684604798346067968",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -15117,7 +15391,7 @@
     ],
     "mentions": [
       {
-        "id": 268,
+        "id": 277,
         "tag": "#rates",
         "pinId": 497
       }
@@ -15141,16 +15415,92 @@
     },
     "locations": [
       {
-        "id": 100,
+        "id": 102,
         "address": "Mandalay Bay, Las Vegas",
         "order": 0,
         "pinId": 501
       },
       {
-        "id": 101,
+        "id": 103,
         "address": "Bluewaters Island, Dubai",
         "order": 1,
         "pinId": 501
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 503,
+    "rootThread": false,
+    "title": "$SPX @ 17 times as a reasonable multiple",
+    "description": "<p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$SPX</chronodollar>&nbsp;@&nbsp;3300 </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bearish</chronohash> </p>",
+    "sourceDescription": "{\"time\":1690653828885,\"blocks\":[{\"id\":\"JaM-3kaP8S\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$SPX</chronodollar>&nbsp;@&nbsp;3300\"}},{\"id\":\"SzIw-bB5yL\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bearish</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1685238622025293824",
+    "utcStartDateTime": "2024-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-03T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-29T14:10:40.654Z",
+    "utcUpdatedDateTime": "2023-07-29T18:03:53.199Z",
+    "sentimentScore": -0.07654423266649246,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 341,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1685238622025293824",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Let’s dust off the Casio for a second and run a few numbers. <a href=\"https://twitter.com/search?q=%24SPX&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$SPX</a> FY 24 cons is $ 244, that’s up a hefty 12% from an optimistic FY 23. But let’s assume all goes to plan, until a mild recession hits in early 24, and shaves a run of the mill 20% off that totally levitational 24…</p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1685238622025293824?ref_src=twsrc%5Etfw\">July 29, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 278,
+        "tag": "#Bearish",
+        "pinId": 503
+      },
+      {
+        "id": 279,
+        "tag": "$SPX",
+        "pinId": 503
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 505,
+    "rootThread": false,
+    "title": "CRE maturities are stacked in early 24 and will start to translate into losses for the banks",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bearish</chronohash> </p>",
+    "sourceDescription": "{\"time\":1690778984810,\"blocks\":[{\"id\":\"PmHn4r7tys\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bearish</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1685775315191140352",
+    "utcStartDateTime": "2024-01-15T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-16T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-07-31T04:49:53.268Z",
+    "sentimentScore": -0.5249911639839411,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 342,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1685775315191140352",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">That’s because maturities are stacked in early 24, this is when refinancing - or impossibility thereof - will start to translate into losses for the banks <a href=\"https://t.co/BTh53Glsv8\">https://t.co/BTh53Glsv8</a></p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1685775315191140352?ref_src=twsrc%5Etfw\">July 30, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 280,
+        "tag": "#Bearish",
+        "pinId": 505
       }
     ],
     "userId": 1
@@ -15174,7 +15524,7 @@
     },
     "media": [
       {
-        "id": 335,
+        "id": 343,
         "originalUrl": "//www.youtube.com/embed/N7OVagiblPo",
         "type": "3",
         "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/N7OVagiblPo\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
@@ -15231,7 +15581,7 @@
     },
     "locations": [
       {
-        "id": 102,
+        "id": 104,
         "address": "Casa Grande, Arizona",
         "order": 0,
         "pinId": 222
@@ -15239,7 +15589,7 @@
     ],
     "mentions": [
       {
-        "id": 269,
+        "id": 281,
         "tag": "$LCID",
         "pinId": 222
       }
@@ -15264,7 +15614,7 @@
     },
     "media": [
       {
-        "id": 336,
+        "id": 344,
         "thumbName": "952524a4-7fcc-44e6-acc4-429047617af9-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -15276,7 +15626,7 @@
     ],
     "mentions": [
       {
-        "id": 270,
+        "id": 282,
         "tag": "$PRGO",
         "pinId": 465
       }
@@ -15302,7 +15652,7 @@
     },
     "media": [
       {
-        "id": 337,
+        "id": 345,
         "thumbName": "322b2670-ce5d-4439-8185-7386ac18dbbe-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 523,
@@ -15344,7 +15694,7 @@
     },
     "media": [
       {
-        "id": 338,
+        "id": 346,
         "thumbName": "7e6e4fbd-3cf9-4ec6-8e64-a0075dac4dac-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -15356,12 +15706,12 @@
     ],
     "mentions": [
       {
-        "id": 271,
+        "id": 283,
         "tag": "$NTDOY",
         "pinId": 454
       },
       {
-        "id": 272,
+        "id": 284,
         "tag": "#Switch",
         "pinId": 454
       }
@@ -15387,7 +15737,7 @@
     },
     "media": [
       {
-        "id": 339,
+        "id": 347,
         "thumbName": "e7f718cc-9190-4eed-a8df-270ec8c9d66c-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -15399,7 +15749,7 @@
     ],
     "locations": [
       {
-        "id": 103,
+        "id": 105,
         "address": "Oakville Assembly Plant in Ontario, Canada",
         "order": 0,
         "pinId": 195
@@ -15427,7 +15777,7 @@
     },
     "media": [
       {
-        "id": 340,
+        "id": 348,
         "thumbName": "4744b1cd-fc70-430d-a3a2-df642e1aea79-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 503,
@@ -15439,14 +15789,14 @@
     ],
     "mentions": [
       {
-        "id": 273,
+        "id": 285,
         "tag": "$VWAGY",
         "pinId": 212
       }
     ],
     "favorites": [
       {
-        "id": 12,
+        "id": 13,
         "utcCreatedDateTime": "2023-06-01T18:42:52.783Z",
         "userId": 1,
         "pinId": 212
@@ -15474,7 +15824,7 @@
     },
     "media": [
       {
-        "id": 341,
+        "id": 349,
         "thumbName": "d2d8fc73-b718-4495-8db8-aefecfd22feb-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -15486,7 +15836,7 @@
     ],
     "locations": [
       {
-        "id": 104,
+        "id": 106,
         "address": "Tech Zity Vilnius, Lithuania",
         "order": 0,
         "pinId": 375
@@ -15512,7 +15862,7 @@
     },
     "media": [
       {
-        "id": 342,
+        "id": 350,
         "thumbName": "2cbd04cd-9c9b-457e-a080-62a6a5a11296-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -15524,7 +15874,7 @@
     ],
     "locations": [
       {
-        "id": 105,
+        "id": 107,
         "address": "Philippines",
         "order": 0,
         "pinId": 460
@@ -15550,7 +15900,7 @@
     },
     "media": [
       {
-        "id": 343,
+        "id": 351,
         "thumbName": "1d8eacd1-1268-41d0-992c-bee0066fa60e-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -15562,7 +15912,7 @@
     ],
     "locations": [
       {
-        "id": 106,
+        "id": 108,
         "address": "USA",
         "order": 0,
         "pinId": 386
@@ -15590,7 +15940,7 @@
     },
     "media": [
       {
-        "id": 344,
+        "id": 352,
         "thumbName": "1870e18c-c013-4e68-8821-0ed0881d9d2d-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 400,
@@ -15602,7 +15952,7 @@
     ],
     "mentions": [
       {
-        "id": 274,
+        "id": 286,
         "tag": "$BA",
         "pinId": 151
       }
@@ -15628,7 +15978,7 @@
     },
     "media": [
       {
-        "id": 345,
+        "id": 353,
         "thumbName": "5ae38366-d033-4972-bc04-48f4d4b6b485-chrono-lg.webp",
         "thumbWidth": 986,
         "thumbHeight": 553,
@@ -15640,7 +15990,7 @@
     ],
     "locations": [
       {
-        "id": 107,
+        "id": 109,
         "address": "West of Colusa in the Sacramento Valley, California",
         "order": 0,
         "pinId": 192
@@ -15667,7 +16017,7 @@
     },
     "media": [
       {
-        "id": 346,
+        "id": 354,
         "thumbName": "10240ef3-a8b9-4c73-8d53-53b182f57374-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -15679,7 +16029,7 @@
     ],
     "locations": [
       {
-        "id": 108,
+        "id": 110,
         "address": "UC San Diego",
         "order": 0,
         "pinId": 209
@@ -15706,7 +16056,7 @@
     },
     "media": [
       {
-        "id": 347,
+        "id": 355,
         "thumbName": "512b7eb4-5f06-4b87-9b31-c70d51f2df46-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 471,
@@ -15738,7 +16088,7 @@
     },
     "locations": [
       {
-        "id": 109,
+        "id": 111,
         "address": "Gujarat, India. Micron",
         "order": 0,
         "pinId": 400
@@ -15746,7 +16096,7 @@
     ],
     "mentions": [
       {
-        "id": 275,
+        "id": 287,
         "tag": "$MU",
         "pinId": 400
       }
@@ -15771,7 +16121,7 @@
     },
     "media": [
       {
-        "id": 348,
+        "id": 356,
         "thumbName": "9d3fdd45-fbda-4b7c-b649-1d7c72016c63-chrono-lg.webp",
         "thumbWidth": 768,
         "thumbHeight": 545,
@@ -15801,7 +16151,7 @@
     },
     "media": [
       {
-        "id": 349,
+        "id": 357,
         "thumbName": "58441b39-2150-45ad-8f12-b36ab5f90736-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -15813,7 +16163,7 @@
     ],
     "locations": [
       {
-        "id": 110,
+        "id": 112,
         "address": "Frito-Lay’s research and development headquarters, Texas",
         "order": 0,
         "pinId": 194
@@ -15838,7 +16188,7 @@
     },
     "media": [
       {
-        "id": 350,
+        "id": 358,
         "thumbName": "3ddd9850-2551-4ade-b842-2099e75caf6c-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 308,
@@ -15869,7 +16219,7 @@
     },
     "mentions": [
       {
-        "id": 276,
+        "id": 288,
         "tag": "$INTC",
         "pinId": 399
       }
@@ -15896,7 +16246,7 @@
     },
     "media": [
       {
-        "id": 351,
+        "id": 359,
         "thumbName": "cf7f0b26-6136-4b84-9e66-860ec1e9255b-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -15908,7 +16258,7 @@
     ],
     "locations": [
       {
-        "id": 111,
+        "id": 113,
         "address": "NASA’s Kennedy Space Center, Florida",
         "order": 0,
         "pinId": 487
@@ -15916,7 +16266,7 @@
     ],
     "mentions": [
       {
-        "id": 277,
+        "id": 289,
         "tag": "$AMZN",
         "pinId": 487
       }
@@ -15942,7 +16292,7 @@
     },
     "media": [
       {
-        "id": 352,
+        "id": 360,
         "thumbName": "a40beb47-cb9a-43c6-9a0e-d1dd0f31ec9b-chrono-lg.webp",
         "thumbWidth": 591,
         "thumbHeight": 308,
@@ -15954,7 +16304,7 @@
     ],
     "locations": [
       {
-        "id": 112,
+        "id": 114,
         "address": "AISIN North Carolina Corporation (ANC) facility in Durham, North Carolina",
         "order": 0,
         "pinId": 321
@@ -15982,7 +16332,7 @@
     },
     "media": [
       {
-        "id": 353,
+        "id": 361,
         "thumbName": "17d63629-02e3-4d3f-be38-c9001a87421d-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 525,
@@ -15994,7 +16344,7 @@
     ],
     "locations": [
       {
-        "id": 113,
+        "id": 115,
         "address": "Neste  Porvoo refinery in Finland",
         "order": 0,
         "pinId": 322
@@ -16002,7 +16352,7 @@
     ],
     "mentions": [
       {
-        "id": 278,
+        "id": 290,
         "tag": "$NESTE.HE",
         "pinId": 322
       }
@@ -16028,7 +16378,7 @@
     },
     "locations": [
       {
-        "id": 114,
+        "id": 116,
         "address": "Apple Infinite Loop, Cupertino, California",
         "order": 0,
         "pinId": 390
@@ -16036,7 +16386,7 @@
     ],
     "mentions": [
       {
-        "id": 279,
+        "id": 291,
         "tag": "$APPL",
         "pinId": 390
       }
@@ -16062,7 +16412,7 @@
     },
     "media": [
       {
-        "id": 354,
+        "id": 362,
         "thumbName": "d1414c24-6dd4-46a1-82fa-359a46aa1e17-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 562,
@@ -16074,7 +16424,7 @@
     ],
     "mentions": [
       {
-        "id": 280,
+        "id": 292,
         "tag": "$AAPL",
         "pinId": 388
       }
@@ -16099,7 +16449,7 @@
     },
     "media": [
       {
-        "id": 355,
+        "id": 363,
         "thumbName": "73a872d0-5698-4599-b796-64861526dbc6-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 562,
@@ -16111,7 +16461,7 @@
     ],
     "mentions": [
       {
-        "id": 281,
+        "id": 293,
         "tag": "$AAPL",
         "pinId": 389
       }
@@ -16138,7 +16488,7 @@
     },
     "media": [
       {
-        "id": 356,
+        "id": 364,
         "thumbName": "d2e483e6-7652-467e-a87e-ceecf0dc0537-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -16150,7 +16500,7 @@
     ],
     "locations": [
       {
-        "id": 115,
+        "id": 117,
         "address": "Hudson Yards, New York",
         "order": 0,
         "pinId": 150
@@ -16178,7 +16528,7 @@
     },
     "media": [
       {
-        "id": 357,
+        "id": 365,
         "thumbName": "6535282f-7932-4bdf-8f0e-51ab0f6d2578-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -16190,14 +16540,14 @@
     ],
     "mentions": [
       {
-        "id": 282,
+        "id": 294,
         "tag": "$RIVN",
         "pinId": 216
       }
     ],
     "favorites": [
       {
-        "id": 13,
+        "id": 14,
         "utcCreatedDateTime": "2023-06-01T18:43:03.127Z",
         "userId": 1,
         "pinId": 216
@@ -16241,7 +16591,7 @@
     },
     "media": [
       {
-        "id": 358,
+        "id": 366,
         "thumbName": "f37f0f24-e347-4e0a-b805-d1a1a30dbd14-chrono-lg.webp",
         "thumbWidth": 743,
         "thumbHeight": 430,
@@ -16253,7 +16603,7 @@
     ],
     "locations": [
       {
-        "id": 116,
+        "id": 118,
         "address": "Guangdong Province",
         "order": 0,
         "pinId": 225
@@ -16280,7 +16630,7 @@
     },
     "media": [
       {
-        "id": 359,
+        "id": 367,
         "thumbName": "436caa0c-eb19-4629-8b0d-3941fc270377-chrono-lg.webp",
         "thumbWidth": 980,
         "thumbHeight": 467,
@@ -16292,12 +16642,12 @@
     ],
     "mentions": [
       {
-        "id": 283,
+        "id": 295,
         "tag": "#Chips",
         "pinId": 423
       },
       {
-        "id": 284,
+        "id": 296,
         "tag": "$EWY",
         "pinId": 423
       }
@@ -16323,7 +16673,7 @@
     },
     "media": [
       {
-        "id": 360,
+        "id": 368,
         "thumbName": "49b5fdba-9013-4950-863c-e88b8c3f3bcb-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 500,
@@ -16335,14 +16685,14 @@
     ],
     "mentions": [
       {
-        "id": 285,
+        "id": 297,
         "tag": "$MBGAF",
         "pinId": 221
       }
     ],
     "favorites": [
       {
-        "id": 14,
+        "id": 15,
         "utcCreatedDateTime": "2023-06-01T18:43:05.440Z",
         "userId": 1,
         "pinId": 221
@@ -16369,7 +16719,7 @@
     },
     "locations": [
       {
-        "id": 117,
+        "id": 119,
         "address": "Taiwan",
         "order": 0,
         "pinId": 207
@@ -16397,7 +16747,7 @@
     },
     "locations": [
       {
-        "id": 118,
+        "id": 120,
         "address": "Apple Valley",
         "order": 0,
         "pinId": 215
@@ -16424,7 +16774,7 @@
     },
     "media": [
       {
-        "id": 361,
+        "id": 369,
         "thumbName": "26f6034c-0b86-47c7-b6e6-d64d6b85b2b6-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -16436,7 +16786,7 @@
     ],
     "locations": [
       {
-        "id": 119,
+        "id": 121,
         "address": "WROCŁAW, Poland",
         "order": 0,
         "pinId": 435
@@ -16444,12 +16794,12 @@
     ],
     "mentions": [
       {
-        "id": 286,
+        "id": 298,
         "tag": "#Chips",
         "pinId": 435
       },
       {
-        "id": 287,
+        "id": 299,
         "tag": "$INTC",
         "pinId": 435
       }
@@ -16475,7 +16825,7 @@
     },
     "media": [
       {
-        "id": 362,
+        "id": 370,
         "thumbName": "a4cf2cb9-1df7-4058-89f4-11000af5cd5d-chrono-lg.webp",
         "thumbWidth": 908,
         "thumbHeight": 474,
@@ -16505,7 +16855,7 @@
     },
     "media": [
       {
-        "id": 363,
+        "id": 371,
         "thumbName": "73f7248b-3954-4aa5-aae1-e3463be1f269-chrono-lg.webp",
         "thumbWidth": 768,
         "thumbHeight": 545,
@@ -16535,7 +16885,7 @@
     },
     "media": [
       {
-        "id": 364,
+        "id": 372,
         "thumbName": "bf50f483-f7d7-4ca8-bc7e-2e3e25b773b5-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -16567,7 +16917,7 @@
     },
     "media": [
       {
-        "id": 365,
+        "id": 373,
         "thumbName": "f5556fd5-e7b8-499f-85f4-c5c3935e1094-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 667,
@@ -16579,31 +16929,31 @@
     ],
     "locations": [
       {
-        "id": 120,
-        "address": "Hwaseong",
-        "order": 1,
-        "pinId": 424
-      },
-      {
-        "id": 121,
+        "id": 122,
         "address": "Giheung",
         "order": 0,
         "pinId": 424
       },
       {
-        "id": 122,
+        "id": 123,
         "address": "Pyeongtaek",
         "order": 2,
         "pinId": 424
       },
       {
-        "id": 123,
+        "id": 124,
+        "address": "Hwaseong",
+        "order": 1,
+        "pinId": 424
+      },
+      {
+        "id": 125,
         "address": "Taylor, USA",
         "order": 4,
         "pinId": 424
       },
       {
-        "id": 124,
+        "id": 126,
         "address": "Austin, USA",
         "order": 3,
         "pinId": 424
@@ -16611,12 +16961,12 @@
     ],
     "mentions": [
       {
-        "id": 288,
+        "id": 300,
         "tag": "#Chips",
         "pinId": 424
       },
       {
-        "id": 289,
+        "id": 301,
         "tag": "$EWY",
         "pinId": 424
       }
@@ -16642,7 +16992,7 @@
     },
     "media": [
       {
-        "id": 366,
+        "id": 374,
         "thumbName": "5c7398ea-d5b4-44a8-973b-76932246a3d8-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -16654,7 +17004,7 @@
     ],
     "locations": [
       {
-        "id": 125,
+        "id": 127,
         "address": "Silicon Junction, Magdeburg, Germany",
         "order": 0,
         "pinId": 436
@@ -16662,12 +17012,12 @@
     ],
     "mentions": [
       {
-        "id": 290,
+        "id": 302,
         "tag": "#Chips",
         "pinId": 436
       },
       {
-        "id": 291,
+        "id": 303,
         "tag": "$INTC",
         "pinId": 436
       }
@@ -16690,7 +17040,7 @@
     },
     "media": [
       {
-        "id": 367,
+        "id": 375,
         "originalUrl": "https://twitter.com/INArteCarloDoss/status/1640619037251043328",
         "type": "2",
         "authorName": "KKGB Kitty",
@@ -16700,7 +17050,7 @@
     ],
     "locations": [
       {
-        "id": 126,
+        "id": 128,
         "address": "Europe",
         "order": 0,
         "pinId": 223
@@ -16727,7 +17077,7 @@
     },
     "media": [
       {
-        "id": 368,
+        "id": 376,
         "thumbName": "254502ca-a628-4597-8b9c-149098d0cc5c-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -16739,7 +17089,7 @@
     ],
     "locations": [
       {
-        "id": 127,
+        "id": 129,
         "address": "Crolles, France",
         "order": 0,
         "pinId": 434
@@ -16747,7 +17097,7 @@
     ],
     "mentions": [
       {
-        "id": 292,
+        "id": 304,
         "tag": "#Chips",
         "pinId": 434
       }
@@ -16773,7 +17123,7 @@
     },
     "media": [
       {
-        "id": 369,
+        "id": 377,
         "thumbName": "abf632e4-b6a1-408c-8fbe-8c5a21916a8e-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -16785,23 +17135,23 @@
     ],
     "mentions": [
       {
-        "id": 293,
-        "tag": "#PlayStation",
-        "pinId": 457
-      },
-      {
-        "id": 294,
-        "tag": "$SONY",
-        "pinId": 457
-      },
-      {
-        "id": 295,
+        "id": 305,
         "tag": "$MSFT",
         "pinId": 457
       },
       {
-        "id": 296,
+        "id": 306,
+        "tag": "$SONY",
+        "pinId": 457
+      },
+      {
+        "id": 307,
         "tag": "#Xbox",
+        "pinId": 457
+      },
+      {
+        "id": 308,
+        "tag": "#PlayStation",
         "pinId": 457
       }
     ],
@@ -16826,7 +17176,7 @@
     },
     "mentions": [
       {
-        "id": 297,
+        "id": 309,
         "tag": "#energy",
         "pinId": 155
       }
@@ -16850,7 +17200,7 @@
     },
     "media": [
       {
-        "id": 370,
+        "id": 378,
         "thumbName": "70cb68bb-e894-41e9-a3b8-943c8257ec69-chrono-lg.webp",
         "thumbWidth": 600,
         "thumbHeight": 400,
@@ -16882,7 +17232,7 @@
     },
     "media": [
       {
-        "id": 371,
+        "id": 379,
         "thumbName": "8c5669d4-d0ff-4a13-a8c4-faf8f5ab7a08-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -16894,21 +17244,21 @@
     ],
     "locations": [
       {
-        "id": 128,
-        "address": "Merced, CA",
-        "order": 0,
+        "id": 130,
+        "address": "Bakersfield, CA",
+        "order": 1,
         "pinId": 219
       },
       {
-        "id": 129,
-        "address": "Bakersfield, CA",
-        "order": 1,
+        "id": 131,
+        "address": "Merced, CA",
+        "order": 0,
         "pinId": 219
       }
     ],
     "favorites": [
       {
-        "id": 15,
+        "id": 16,
         "utcCreatedDateTime": "2023-06-01T18:43:24.408Z",
         "userId": 1,
         "pinId": 219
@@ -16934,7 +17284,7 @@
     },
     "media": [
       {
-        "id": 372,
+        "id": 380,
         "thumbName": "bf5d33da-73c4-4feb-b47d-a18c70c47179-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 562,
@@ -16946,7 +17296,7 @@
     ],
     "mentions": [
       {
-        "id": 298,
+        "id": 310,
         "tag": "$AAPL",
         "pinId": 387
       }
@@ -16973,7 +17323,7 @@
     },
     "media": [
       {
-        "id": 373,
+        "id": 381,
         "thumbName": "5c20b877-d87f-4773-be83-7bafedfe5c7d-chrono-lg.webp",
         "thumbWidth": 900,
         "thumbHeight": 400,
@@ -17004,7 +17354,7 @@
     },
     "media": [
       {
-        "id": 374,
+        "id": 382,
         "thumbName": "4b349fb3-9434-4c61-be29-275a1f940ffe-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -17016,7 +17366,7 @@
     ],
     "mentions": [
       {
-        "id": 299,
+        "id": 311,
         "tag": "#SocialSecurity",
         "pinId": 404
       }
@@ -17041,7 +17391,7 @@
     },
     "media": [
       {
-        "id": 375,
+        "id": 383,
         "thumbName": "994a389a-f825-4822-bfbe-53b1e279b285-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 523,
@@ -17053,7 +17403,7 @@
     ],
     "locations": [
       {
-        "id": 130,
+        "id": 132,
         "address": "China",
         "order": 0,
         "pinId": 330
@@ -17078,7 +17428,7 @@
     },
     "media": [
       {
-        "id": 376,
+        "id": 384,
         "thumbName": "7cc700a4-3b9f-41c9-aee7-4d04239f8736-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -17090,7 +17440,7 @@
     ],
     "favorites": [
       {
-        "id": 16,
+        "id": 17,
         "utcCreatedDateTime": "2023-06-01T18:43:33.799Z",
         "userId": 1,
         "pinId": 191
@@ -17115,7 +17465,7 @@
     },
     "media": [
       {
-        "id": 377,
+        "id": 385,
         "thumbName": "44d2270e-f5b2-4116-85bd-23620693c371-chrono-lg.webp",
         "thumbWidth": 150,
         "thumbHeight": 133,
@@ -17145,7 +17495,7 @@
     },
     "media": [
       {
-        "id": 378,
+        "id": 386,
         "originalUrl": "https://twitter.com/BurggrabenH/status/1657432126076141570",
         "type": "2",
         "authorName": "Alexander Stahel ????",
@@ -17174,7 +17524,7 @@
     },
     "media": [
       {
-        "id": 379,
+        "id": 387,
         "originalUrl": "https://twitter.com/CyberMagazineX/status/890816308144558080",
         "type": "2",
         "authorName": "MagX(??????????X)",
@@ -17184,9 +17534,43 @@
     ],
     "mentions": [
       {
-        "id": 300,
+        "id": 312,
         "tag": "#AI",
         "pinId": 248
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 509,
+    "rootThread": false,
+    "title": "Mexican Demographics: Where Are All the Kids? National economic drops by 2060",
+    "description": "<p class=\"paragraph\"> Mexico's demographics with the new <a href=\"https://mailchi.mp/zeihan/mexican-demographics-where-are-all-the-kids\">data</a>. Where did all the kids go? Well, a combination of the global financial crisis, COVID, and drug wars made people a tad less interested in raising kids. On top of that, America has shifted to a closed border system, which forced Mexican families to move to the US full-time instead of sending the men over for seasonal work. </p><figure class=\"fig-img\"><img loading=\"lazy\" class=\"img   \" src=\"https://chronopin.blob.core.windows.net/thumb/28636641-8fa2-479d-85a2-1819b0e36975-chrono-lg.webp\" alt=\"Mexico's demographics with the new data\" height=\"694\" width=\"1000\"><figcaption class=\"fig-cap\">Mexico's demographics with the new data</figcaption></figure><p class=\"paragraph\"> This isn't the nail in the coffin for Mexico, but they must change things up. And for the Americans, they best start treating their Mexican population like the precious resource it has become. </p>",
+    "sourceDescription": "{\"time\":1690903540716,\"blocks\":[{\"id\":\"fYop483O4X\",\"type\":\"paragraph\",\"data\":{\"text\":\"Mexico's demographics with the new <a href=\\\"https://mailchi.mp/zeihan/mexican-demographics-where-are-all-the-kids\\\">data</a>. Where did all the kids go? Well, a combination of the global financial crisis, COVID, and drug wars made people a tad less interested in raising kids. On top of that, America has shifted to a closed border system, which forced Mexican families to move to the US full-time instead of sending the men over for seasonal work.\"}},{\"id\":\"7JCcA08OMh\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/28636641-8fa2-479d-85a2-1819b0e36975-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":694}},\"caption\":\"Mexico's demographics with the new data\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"nIHA87iVoR\",\"type\":\"paragraph\",\"data\":{\"text\":\"This isn't the nail in the coffin for Mexico, but they must change things up. And for the Americans, they best start treating their Mexican population like the precious resource it has become.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.youtube.com/watch?v=w1S4Zn2yhWY",
+    "utcStartDateTime": "2060-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2060-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-01T15:25:47.349Z",
+    "sentimentScore": -0.6905861105769873,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 388,
+        "originalUrl": "//www.youtube.com/embed/w1S4Zn2yhWY",
+        "type": "3",
+        "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/w1S4Zn2yhWY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+      }
+    ],
+    "locations": [
+      {
+        "id": 133,
+        "address": "Mexico",
+        "order": 0,
+        "pinId": 509
       }
     ],
     "userId": 1
@@ -17209,7 +17593,7 @@
     },
     "media": [
       {
-        "id": 380,
+        "id": 389,
         "thumbName": "6200d6c8-224e-4f06-88f7-b630a8015f25-chrono-lg.webp",
         "thumbWidth": 1000,
         "thumbHeight": 563,
@@ -17221,7 +17605,7 @@
     ],
     "locations": [
       {
-        "id": 131,
+        "id": 134,
         "address": "India",
         "order": 0,
         "pinId": 459
@@ -17246,7 +17630,7 @@
     },
     "media": [
       {
-        "id": 381,
+        "id": 390,
         "thumbName": "96a0f58b-ba43-4ae8-861f-f3f05b74305a-chrono-lg.webp",
         "thumbWidth": 286,
         "thumbHeight": 400,

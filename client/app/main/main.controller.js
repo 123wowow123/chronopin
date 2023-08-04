@@ -88,6 +88,7 @@
         this.prevParam = this.getLinkHeader(linkHeader, "previous");
         this.nextParam = this.getLinkHeader(linkHeader, "next");
         this.loading = false;
+        this.commentJs.ayncRefresh();
         // clear Preloaded data
         window.mainPinData = null;
       } else {

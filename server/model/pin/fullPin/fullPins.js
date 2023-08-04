@@ -62,15 +62,15 @@ export default class FullPins extends BasePins {
         return pins;
     }
 
-    static queryForwardByDate(fromDateTime, userId, lastPinId, pageSize) {
-        return _queryMSSQLPinsWithSubArrays(fromDateTime, userId, lastPinId, pageSize)
+    static queryForwardByDate(fromDateTime, userId, lastPinId, offset, pageSize, followingOnly = false) {
+        return _queryMSSQLPinsWithSubArrays(fromDateTime, userId, lastPinId, offset, pageSize, followingOnly)
             .then(res => {
                 return new FullPins(res);
             });
     }
 }
 
-function _queryMSSQLPinsWithSubArrays(fromDateTime, lastPinId, offset, pageSize) {
+function _queryMSSQLPinsWithSubArrays(fromDateTime, userId, lastPinId, offset, pageSize, followingOnly) {
     return cp.getConnection()
         .then(conn => {
             return new Promise((resolve, reject) => {
@@ -79,7 +79,9 @@ function _queryMSSQLPinsWithSubArrays(fromDateTime, lastPinId, offset, pageSize)
                     .input('offset', mssql.Int, offset)
                     .input('pageSize', mssql.Int, pageSize)
                     .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
-                    .input('lastPinId', mssql.Int, lastPinId);
+                    .input('lastPinId', mssql.Int, lastPinId)
+                    .input('userId', mssql.Int, userId)
+                    .input('followingOnly', mssql.Bit, followingOnly);
 
                 request.execute(`[dbo].[${StoredProcedureName}]`,
                     (err, res, returnValue, affected) => {

@@ -42,12 +42,13 @@ function executeDropSP() {
 function executeCreateSP() {
   let sql = `
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
-            @offset       INT,
-            @pageSize     INT,
-            @userId       INT,
-            @fromDateTime DATETIME2(7),
-            @lastPinId    INT,
-            @queryCount   INT OUTPUT
+            @offset         INT,
+            @pageSize       INT,
+            @userId         INT,
+            @fromDateTime   DATETIME2(7),
+            @lastPinId      INT,
+            @followingOnly  BIT,
+            @queryCount     INT OUTPUT
         AS
           BEGIN
 
@@ -157,10 +158,8 @@ function executeCreateSP() {
                 [Location.order]
 
               FROM [dbo].[PinBaseView] AS [Pin]
-                JOIN GetPrevPinIdsPaginatedFunc(@offset, @pageSize, @fromDateTime, @lastPinId) AS nextPin
+                JOIN GetPrevPinIdsPaginatedFunc(@offset, @pageSize, @fromDateTime, @lastPinId, @userId, CAST('true' as bit), @followingOnly) AS nextPin
                   ON nextPin.id = [Pin].id
-                INNER JOIN [dbo].[Favorite] AS [Favorites]
-                  ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL AND [Favorites].[userId] = @userId
 
               ORDER BY [Pin].[utcStartDateTime] DESC, [Pin].[id] DESC, [Merchant.order], [Location.order]
 
@@ -178,3 +177,22 @@ function executeCreateSP() {
       return new Request(conn).batch(sql);
     });
 }
+
+
+// DECLARE @userId INT = 1;
+// DECLARE @offset INT = 0;
+// DECLARE @pageSize INT = 10;
+// DECLARE @lastPinId INT = 2147483647;
+// DECLARE @fromDateTime DATETIME2(7) = GETDATE();
+// DECLARE @followingOnly BIT =  CAST('false' as bit);  
+
+// DECLARE @queryCountPrev INT;
+// DECLARE @queryCountNext INT;
+
+// EXEC [dbo].[GetPinsWithFavoriteAndLikePrevFilterByHasFavorite] 
+// @offset, @pageSize, @userId, @fromDateTime, @lastPinId, @followingOnly, @queryCount = @queryCountPrev OUTPUT;
+
+
+
+// EXEC [dbo].[GetPinsWithFavoriteAndLikeNextFilterByHasFavorite] 
+// @offset, @pageSize, @userId, @fromDateTime, 0, @followingOnly, @queryCount = @queryCountNext OUTPUT;

@@ -70,10 +70,11 @@ function executeCreateTVP() {
 function executeCreateSP() {
   let sql = `
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
-           @TableTags AS tTags2 READONLY,
-           @TableUserTags AS tUTags2 READONLY,
-           @userId       INT,
-           @queryCount   INT OUTPUT
+           @TableTags         AS tTags2 READONLY,
+           @TableUserTags     AS tUTags2 READONLY,
+           @userId            INT,
+           @followingOnly     BIT,
+           @queryCount        INT OUTPUT
         AS
         BEGIN
 
@@ -97,11 +98,14 @@ function executeCreateSP() {
                   ON ([Pin].[User.userName] = paramUserTable.tag OR [Pin].[Mention.tag] = paramUserTable.tag)
                 JOIN @TableTags AS paramTable
                   ON ([Pin].[Mention.tag] = paramTable.tag)
+                LEFT JOIN [dbo].[FollowUser] AS [FollowUser]
+                  ON [Pin].userId = [FollowUser].followingUserId
                 LEFT JOIN [dbo].[Favorite] AS [Favorites]
                   ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL
-
+                  
                 WHERE [Pin].[utcDeletedDateTime] IS NULL
                   AND [Favorites].[userId] = @userId
+                  AND (COALESCE(@followingOnly, 0) = 0 OR [FollowUser].userId = @userId)
 
                 ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
 
@@ -113,16 +117,26 @@ function executeCreateSP() {
               BEGIN
         
                 SELECT
-                [Pin].*
+                [Pin].*,
+
+                (CAST((SELECT COUNT(f.id)
+                FROM [Favorite] AS f
+                  WHERE f.userId = @userId AND f.PinId = [Pin].[id] AND f.utcDeletedDateTime IS NULL) AS BIT)) AS [hasFavorite],
+                (CAST((SELECT COUNT(l.id)
+                  FROM [Like] AS l
+                    WHERE l.userId = @userId AND l.PinId = [Pin].[id] AND l.utcDeletedDateTime IS NULL) AS BIT)) AS [hasLike]
 
                 FROM [dbo].[PinBaseView] AS [Pin]
                   JOIN @TableTags AS paramTable
                     ON ([Pin].[Mention.tag] = paramTable.tag)
+                  LEFT JOIN [dbo].[FollowUser] AS [FollowUser]
+                    ON [Pin].userId = [FollowUser].followingUserId
                   LEFT JOIN [dbo].[Favorite] AS [Favorites]
                     ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL
 
                   WHERE [Pin].[utcDeletedDateTime] IS NULL
                     AND [Favorites].[userId] = @userId
+                    AND (COALESCE(@followingOnly, 0) = 0 OR [FollowUser].userId = @userId)
 
                   ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
 
@@ -134,16 +148,26 @@ function executeCreateSP() {
               BEGIN
 
                 SELECT
-                [Pin].*
+                [Pin].*,
+
+                (CAST((SELECT COUNT(f.id)
+                FROM [Favorite] AS f
+                  WHERE f.userId = @userId AND f.PinId = [Pin].[id] AND f.utcDeletedDateTime IS NULL) AS BIT)) AS [hasFavorite],
+                (CAST((SELECT COUNT(l.id)
+                  FROM [Like] AS l
+                    WHERE l.userId = @userId AND l.PinId = [Pin].[id] AND l.utcDeletedDateTime IS NULL) AS BIT)) AS [hasLike]
 
                 FROM [dbo].[PinBaseView] AS [Pin]
                   JOIN @TableUserTags AS paramUserTable
                     ON ([Pin].[User.userName] = paramUserTable.tag OR [Pin].[Mention.tag] = paramUserTable.tag)
+                  LEFT JOIN [dbo].[FollowUser] AS [FollowUser]
+                    ON [Pin].userId = [FollowUser].followingUserId
                   LEFT JOIN [dbo].[Favorite] AS [Favorites]
                     ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL
 
                   WHERE [Pin].[utcDeletedDateTime] IS NULL
                     AND [Favorites].[userId] = @userId
+                    AND (COALESCE(@followingOnly, 0) = 0 OR [FollowUser].userId = @userId)
 
                   ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
 
@@ -165,3 +189,36 @@ function executeCreateSP() {
       return new Request(conn).batch(sql);
     });
 }
+
+
+// DECLARE @TableTags         AS tTags;
+// DECLARE @TableUserTags     AS tUTags;
+// DECLARE @userId            INT = 1;
+// DECLARE @followingOnly     BIT =  CAST('false' as bit);
+// DECLARE @queryCount        INT;
+
+// INSERT INTO @TableUserTags VALUES ('@ThePinGang')
+
+// SELECT
+// [Pin].*,
+
+// (CAST((SELECT COUNT(f.id)
+// FROM [Favorite] AS f
+//     WHERE f.userId = @userId AND f.PinId = [Pin].[id] AND f.utcDeletedDateTime IS NULL) AS BIT)) AS [hasFavorite],
+// (CAST((SELECT COUNT(l.id)
+//     FROM [Like] AS l
+//     WHERE l.userId = @userId AND l.PinId = [Pin].[id] AND l.utcDeletedDateTime IS NULL) AS BIT)) AS [hasLike]
+
+// FROM [dbo].[PinBaseView] AS [Pin]
+//     JOIN @TableUserTags AS paramUserTable
+//     ON ([Pin].[User.userName] = paramUserTable.tag OR [Pin].[Mention.tag] = paramUserTable.tag)
+//     JOIN [dbo].[FollowUser] AS [FollowUser]
+//     ON [Pin].userId = [FollowUser].followingUserId
+//     LEFT JOIN [dbo].[Favorite] AS [Favorites]
+//     ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL
+
+//     WHERE [Pin].[utcDeletedDateTime] IS NULL
+//     AND [Favorites].[userId] = @userId
+//     AND (COALESCE(@followingOnly, 0) = 0 OR [FollowUser].userId = @userId)
+
+//     ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]   

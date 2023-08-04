@@ -98,6 +98,13 @@ export default class FollowUser {
       });
   }
 
+  static queryMSSQLGetAggregatePins(userId) {
+    return _queryMSSQLGetAggregatePins(userId)
+      .then(res => {
+        return new Pins(res);
+      });
+  }
+
   static updateLastCheckedAggregateUnread(userId, checkedDateTime) {
     return _queryMSSQLUpdateLastCheckedAggregateUnread(userId, checkedDateTime);
   }
@@ -333,6 +340,30 @@ function _queryMSSQLGetAggregateUnread(userId) {
     .then(conn => {
       return new Promise((resolve, reject) => {
         const StoredProcedureName = 'GetFollowUserUnread';
+        let request = new mssql.Request(conn)
+          .input('currentUserId', mssql.Int, userId)
+          .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
+            if (err) {
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${JSON.stringify(err)}`);
+            }
+
+            resolve({
+              pins: res.recordset
+            });
+          });
+      });
+    }).catch(err => {
+      // ... connect error checks
+      console.log(`${StoredProcedureName} catch err`, err);
+      throw err;
+    });
+}
+
+function _queryMSSQLGetAggregatePins(userId) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise((resolve, reject) => {
+        const StoredProcedureName = 'createGetFollowUserPinsSP';
         let request = new mssql.Request(conn)
           .input('currentUserId', mssql.Int, userId)
           .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {

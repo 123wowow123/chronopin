@@ -13,6 +13,8 @@ Before Usable Bug:
 Before Usable:
 Comment cleanup/backup +
 countdown on pin page
+use conical url for scrape page || remove hash/querystring
+
 
 link not external ++
 https://www.chronopin.com/pin/504
@@ -50,8 +52,10 @@ https://github.com/nobitagit/ng-material-floating-button
 https://stackoverflow.com/questions/29209244/css-floating-action-button
 
 animated gif height issue it's streched out ++
-show follows content only ++
 pin needs min height and remove min heigth of twitter ++
+
+A founder intro video is required to submit. +++
+Anything that shows us how the product works +++
 
 menu slide in from side
 
@@ -110,6 +114,8 @@ private group +
 Stock ticker ++
 show new pin added banner and clicking it will take to search page with only new pins +
 Show top 6 pin on main timeline with ellipsis button for show more
+Updated to pin where pin will have overlap cover on main page of original and show diff
+range pins will have line drawn infront and behind them and will show up as pin every day during the range. Can tag sections to dim other sections not part of the day.
 
 ML interest match to threads
 browser extention
@@ -414,3 +420,4 @@ Representation democracy works well when voters have the correct info to make an
 
 For sure, can't keep up with all the information and development creates decision paralysis or wrong decisions that can lead to the detriment of self and surrounding people. I'm constantly struggling with that. Here's a neat little site that tracks my bookmarked articles and events in a chronological order that I'm starting to use to at least put some order to my information overload.
 
+https://en.wikipedia.org/wiki/LNG_Canada

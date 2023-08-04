@@ -44,6 +44,8 @@ function executeCreateSP() {
         CREATE PROCEDURE [dbo].[${StoredProcedureName}]
           @searchTitle         NVARCHAR(64),
           @searchDescription   NVARCHAR(64),
+          @userId              INT,
+          @followingOnly       BIT,
           @top                 INT,
           @queryCount          INT OUTPUT
         AS
@@ -52,18 +54,21 @@ function executeCreateSP() {
         SET NOCOUNT ON;
 
         SELECT @searchTitle = RTRIM(@searchTitle) + '%';  
-        SELECT @searchDescription = RTRIM(@searchDescription) + '%';  
+        SELECT @searchDescription = RTRIM(@searchDescription) + '%';
 
         SELECT TOP (@top)
             [Pin].*
 
           FROM [dbo].[PinBaseView] AS [Pin]
-            INNER JOIN [PinView]
+            JOIN [PinView]
               ON [Pin].[id] = [PinView].[id]
+            LEFT JOIN [dbo].[FollowUser] AS [FollowUser]
+              ON [PinView].userId = [FollowUser].followingUserId
 
           WHERE [Pin].[utcDeletedDateTime] IS NULL 
-            AND [PinView].[searchTitle] LIKE @searchTitle
-            OR  [PinView].[searchDescription] LIKE @searchDescription
+            AND ([PinView].[searchTitle] LIKE @searchTitle
+            OR  [PinView].[searchDescription] LIKE @searchDescription)
+            AND (COALESCE(@followingOnly, 0) = 0 OR [FollowUser].userId = @userId)
 
             ORDER BY [Pin].[utcStartDateTime], [Pin].[id], [Merchant.order], [Location.order]
 
@@ -76,3 +81,17 @@ function executeCreateSP() {
       return new Request(conn).batch(sql);
     });
 }
+
+
+// DECLARE @test INT;
+// DECLARE @userId INT = 1;
+// DECLARE @offset INT = 0;
+// DECLARE @pageSize INT = 10;
+// DECLARE @lastPinId INT = 2147483647;
+// DECLARE @fromDateTime DATETIME2(7) = GETDATE();
+// DECLARE @followingOnly BIT =  CAST('false' as bit);
+        
+        
+// Select *
+// From [dbo].[GetPrevPinIdsPaginatedFunc] (
+// @offset, @pageSize, @fromDateTime, @lastPinId, @userId, @followingOnly)

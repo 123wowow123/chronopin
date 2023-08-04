@@ -74,15 +74,15 @@ export default class Pins extends BasePins {
     return reverse ? pins.reverse() : pins;
   }
 
-  static queryForwardByDate(fromDateTime, userId, lastPinId, pageSize) {
-    return _queryMSSQLPins(true, fromDateTime, userId, lastPinId, 0, pageSize)
+  static queryForwardByDate(fromDateTime, userId, lastPinId, pageSize, followingOnly) {
+    return _queryMSSQLPins(true, fromDateTime, userId, lastPinId, 0, pageSize, followingOnly)
       .then(res => {
         return new Pins(res);
       });
   }
 
-  static queryBackwardByDate(fromDateTime, userId, lastPinId, pageSize) {
-    return _queryMSSQLPins(false, fromDateTime, userId, lastPinId, 0, pageSize)
+  static queryBackwardByDate(fromDateTime, userId, lastPinId, pageSize, followingOnly) {
+    return _queryMSSQLPins(false, fromDateTime, userId, lastPinId, 0, pageSize, followingOnly)
       .then(res => {
         return new Pins(res);
       });
@@ -95,22 +95,22 @@ export default class Pins extends BasePins {
       });
   }
 
-  static queryForwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize) {
-    return _queryMSSQLPinsFilterByHasFavorite(true, fromDateTime, userId, lastPinId, 0, pageSize)
+  static queryForwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize, followingOnly) {
+    return _queryMSSQLPinsFilterByHasFavorite(true, fromDateTime, userId, lastPinId, 0, pageSize, followingOnly)
       .then(res => {
         return new Pins(res);
       });
   }
 
-  static queryBackwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize) {
-    return _queryMSSQLPinsFilterByHasFavorite(false, fromDateTime, userId, lastPinId, 0, pageSize)
+  static queryBackwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize, followingOnly) {
+    return _queryMSSQLPinsFilterByHasFavorite(false, fromDateTime, userId, lastPinId, 0, pageSize, followingOnly)
       .then(res => {
         return new Pins(res);
       });
   }
 
-  static queryInitialByDateFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext) {
-    return _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext)
+  static queryInitialByDateFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext, followingOnly) {
+    return _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext, followingOnly)
       .then(res => {
         return new Pins(res);
       });
@@ -145,15 +145,15 @@ export default class Pins extends BasePins {
       });
   }
 
-  static queryPinByTags(userId, allTags) {
-    return _queryPinByTags(userId, allTags)
+  static queryPinByTags(userId, allTags, followingOnly) {
+    return _queryPinByTags(userId, allTags, followingOnly)
       .then(res => {
         return new Pins(res);
       });
   }
 
-  static queryPinByTagsHasFavorite(userId, allTags) {
-    return _queryPinByTagsHasFavorite(userId, allTags)
+  static queryPinByTagsHasFavorite(userId, allTags, followingOnly) {
+    return _queryPinByTagsHasFavorite(userId, allTags, followingOnly)
       .then(res => {
         return new Pins(res);
       });
@@ -161,7 +161,7 @@ export default class Pins extends BasePins {
 
 }
 
-function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, pageSize) {
+function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, pageSize, followingOnly) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
@@ -172,6 +172,7 @@ function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, 
           .input('userId', mssql.Int, userId)
           .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
           .input('lastPinId', mssql.Int, lastPinId)
+          .input('followingOnly', mssql.Bit, followingOnly)
           .output('queryCount', mssql.Int);
 
         if (queryForward) {
@@ -218,7 +219,7 @@ function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, 
     });
 }
 
-function _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext) {
+function _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext, followingOnly) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
@@ -228,6 +229,7 @@ function _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext
           .input('pageSizeNext', mssql.Int, pageSizeNext)
           .input('userId', mssql.Int, userId)
           .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
+          .input('followingOnly', mssql.Bit, followingOnly)
           .output('queryCount', mssql.Int);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
@@ -253,7 +255,7 @@ function _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext
 }
 
 
-function _queryMSSQLPinsFilterByHasFavorite(queryForward, fromDateTime, userId, lastPinId, offset, pageSize) {
+function _queryMSSQLPinsFilterByHasFavorite(queryForward, fromDateTime, userId, lastPinId, offset, pageSize, followingOnly) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
@@ -264,6 +266,7 @@ function _queryMSSQLPinsFilterByHasFavorite(queryForward, fromDateTime, userId, 
           .input('userId', mssql.Int, userId)
           .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
           .input('lastPinId', mssql.Int, lastPinId)
+          .input('followingOnly', mssql.Bit, followingOnly)
           .output('queryCount', mssql.Int);
 
         if (queryForward) {
@@ -310,7 +313,7 @@ function _queryMSSQLPinsFilterByHasFavorite(queryForward, fromDateTime, userId, 
     });
 }
 
-function _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext) {
+function _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext, followingOnly) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
@@ -320,6 +323,7 @@ function _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSiz
           .input('pageSizeNext', mssql.Int, pageSizeNext)
           .input('userId', mssql.Int, userId)
           .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
+          .input('followingOnly', mssql.Bit, followingOnly)
           .output('queryCount', mssql.Int);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
@@ -445,7 +449,7 @@ function _queryPinByIdsAndOrderedByThread(pinId) {
     });
 }
 
-function _queryPinByTags(userId, tags) {
+function _queryPinByTags(userId, tags, followingOnly) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
@@ -477,6 +481,7 @@ function _queryPinByTags(userId, tags) {
           .input('TableTags', tvp)
           .input('TableUserTags', tvpUser)
           .input('userId', mssql.Int, userId)
+          .input('followingOnly', mssql.Bit, followingOnly)
           .output('queryCount', mssql.Int);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
@@ -500,7 +505,7 @@ function _queryPinByTags(userId, tags) {
     });
 }
 
-function _queryPinByTagsHasFavorite(userId, allTags) {
+function _queryPinByTagsHasFavorite(userId, allTags, followingOnly) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
@@ -531,6 +536,7 @@ function _queryPinByTagsHasFavorite(userId, allTags) {
           .input('TableTags', tvp)
           .input('TableUserTags', tvpUser)
           .input('userId', mssql.Int, userId)
+          .input('followingOnly', mssql.Bit, followingOnly)
           .output('queryCount', mssql.Int);
 
         request.execute(`[dbo].[${StoredProcedureName}]`,
