@@ -2237,12 +2237,12 @@
     "mentions": [
       {
         "id": 15,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 332
       },
       {
         "id": 16,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 332
       }
     ],
@@ -2522,12 +2522,12 @@
     "mentions": [
       {
         "id": 21,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 334
       },
       {
         "id": 22,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 334
       }
     ],
@@ -3151,18 +3151,18 @@
     "merchants": [
       {
         "id": 4,
-        "label": "Amazon: Modern Mouse Silver",
-        "url": "https://amzn.to/3IC8VDN",
-        "price": 37.49,
-        "order": 0,
-        "pinId": 84
-      },
-      {
-        "id": 5,
         "label": "Amazon: Modern Keyboard Silver",
         "url": "https://amzn.to/4283DqD",
         "price": 81,
         "order": 1,
+        "pinId": 84
+      },
+      {
+        "id": 5,
+        "label": "Amazon: Modern Mouse Silver",
+        "url": "https://amzn.to/3IC8VDN",
+        "price": 37.49,
+        "order": 0,
         "pinId": 84
       }
     ],
@@ -3817,12 +3817,12 @@
     "mentions": [
       {
         "id": 27,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 335
       },
       {
         "id": 28,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 335
       }
     ],
@@ -4586,12 +4586,12 @@
     "mentions": [
       {
         "id": 42,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 337
       },
       {
         "id": 43,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 337
       }
     ],
@@ -4705,14 +4705,14 @@
     "locations": [
       {
         "id": 7,
-        "address": "Gothenburg",
-        "order": 0,
+        "address": "Helsingborg",
+        "order": 1,
         "pinId": 127
       },
       {
         "id": 8,
-        "address": "Helsingborg",
-        "order": 1,
+        "address": "Gothenburg",
+        "order": 0,
         "pinId": 127
       }
     ],
@@ -5087,22 +5087,22 @@
     "mentions": [
       {
         "id": 48,
-        "tag": "$1",
-        "pinId": 135
-      },
-      {
-        "id": 49,
         "tag": "$AAPL",
         "pinId": 135
       },
       {
+        "id": 49,
+        "tag": "$1",
+        "pinId": 135
+      },
+      {
         "id": 50,
-        "tag": "$208",
+        "tag": "$100",
         "pinId": 135
       },
       {
         "id": 51,
-        "tag": "$100",
+        "tag": "$208",
         "pinId": 135
       }
     ],
@@ -5168,12 +5168,12 @@
     "mentions": [
       {
         "id": 52,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 338
       },
       {
         "id": 53,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 338
       }
     ],
@@ -5330,12 +5330,12 @@
     "mentions": [
       {
         "id": 55,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 339
       },
       {
         "id": 56,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 339
       }
     ],
@@ -6965,12 +6965,12 @@
     "mentions": [
       {
         "id": 62,
-        "tag": "#TokyoAnimeAward",
+        "tag": "#TelevisionCategory",
         "pinId": 340
       },
       {
         "id": 63,
-        "tag": "#TelevisionCategory",
+        "tag": "#TokyoAnimeAward",
         "pinId": 340
       }
     ],
@@ -7146,14 +7146,6 @@
     "merchants": [
       {
         "id": 32,
-        "label": "UPPAbaby VISTA Upper Adapters",
-        "url": "https://amzn.to/3WBMhBj",
-        "price": 29.99,
-        "order": 2,
-        "pinId": 226
-      },
-      {
-        "id": 33,
         "label": "Plushible Halloween Candy Bags",
         "url": "https://a.co/d/4jQwcnc",
         "price": 19.99,
@@ -7161,7 +7153,7 @@
         "pinId": 226
       },
       {
-        "id": 34,
+        "id": 33,
         "label": "Doctor's Best DHA 500",
         "url": "https://a.co/d/e0Ibvji",
         "price": 40.45,
@@ -7169,11 +7161,19 @@
         "pinId": 226
       },
       {
-        "id": 35,
+        "id": 34,
         "label": "Tegion Reusable Silicone Straws",
         "url": "https://a.co/d/fTIFcq4",
         "price": 11.99,
         "order": 1,
+        "pinId": 226
+      },
+      {
+        "id": 35,
+        "label": "UPPAbaby VISTA Upper Adapters",
+        "url": "https://amzn.to/3WBMhBj",
+        "price": 29.99,
+        "order": 2,
         "pinId": 226
       },
       {
@@ -7289,22 +7289,22 @@
     "mentions": [
       {
         "id": 65,
-        "tag": "$NVDA",
-        "pinId": 433
-      },
-      {
-        "id": 66,
-        "tag": "$INTC",
-        "pinId": 433
-      },
-      {
-        "id": 67,
         "tag": "$AAPL",
         "pinId": 433
       },
       {
+        "id": 66,
+        "tag": "$NVDA",
+        "pinId": 433
+      },
+      {
+        "id": 67,
+        "tag": "$INTC",
+        "pinId": 433
+      },
+      {
         "id": 68,
-        "tag": "$KLAC",
+        "tag": "#Chips",
         "pinId": 433
       },
       {
@@ -7314,12 +7314,12 @@
       },
       {
         "id": 70,
-        "tag": "$LRCX",
+        "tag": "$KLAC",
         "pinId": 433
       },
       {
         "id": 71,
-        "tag": "#Chips",
+        "tag": "$LRCX",
         "pinId": 433
       },
       {
@@ -7418,14 +7418,14 @@
     "locations": [
       {
         "id": 20,
-        "address": "Venetian, Las Vegas",
-        "order": 3,
+        "address": "LVCC Central Hall, Las Vegas",
+        "order": 0,
         "pinId": 350
       },
       {
         "id": 21,
-        "address": "ARIA, Las Vegas",
-        "order": 4,
+        "address": "LVCC West Hall, Las Vegas",
+        "order": 1,
         "pinId": 350
       },
       {
@@ -7436,14 +7436,14 @@
       },
       {
         "id": 23,
-        "address": "LVCC West Hall, Las Vegas",
-        "order": 1,
+        "address": "Venetian, Las Vegas",
+        "order": 3,
         "pinId": 350
       },
       {
         "id": 24,
-        "address": "LVCC Central Hall, Las Vegas",
-        "order": 0,
+        "address": "ARIA, Las Vegas",
+        "order": 4,
         "pinId": 350
       }
     ],
@@ -7678,12 +7678,12 @@
     "mentions": [
       {
         "id": 75,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 235
       },
       {
         "id": 76,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 235
       }
     ],
@@ -7955,14 +7955,6 @@
     "merchants": [
       {
         "id": 44,
-        "label": "Gamestop Power Up get exclusive offers, earn monthly rewards and more",
-        "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007594&type=3&subid=",
-        "price": 24.99,
-        "order": 2,
-        "pinId": 142
-      },
-      {
-        "id": 45,
         "label": "GameStop: Sony PlayStation VR2",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2%2F393118.html",
         "price": 549.99,
@@ -7970,11 +7962,19 @@
         "pinId": 142
       },
       {
-        "id": 46,
+        "id": 45,
         "label": "GameStop: Sony PlayStation VR2 Horizon Bundle",
         "url": "https://click.linksynergy.com/deeplink?id=Y1h47rHzgYg&mid=24348&murl=https%3A%2F%2Fwww.gamestop.com%2Fconsoles-hardware%2Fplaystation-5%2Fconsoles%2Fproducts%2Fsony-playstation-vr2-horizon-call-of-the-mountain-bundle%2F393119.html",
         "price": 599.99,
         "order": 1,
+        "pinId": 142
+      },
+      {
+        "id": 46,
+        "label": "Gamestop Power Up get exclusive offers, earn monthly rewards and more",
+        "url": "https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10007594&type=3&subid=",
+        "price": 24.99,
+        "order": 2,
         "pinId": 142
       }
     ],
@@ -8020,12 +8020,12 @@
     "mentions": [
       {
         "id": 80,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 234
       },
       {
         "id": 81,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 234
       }
     ],
@@ -8434,12 +8434,12 @@
     "mentions": [
       {
         "id": 89,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 232
       },
       {
         "id": 90,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 232
       }
     ],
@@ -8876,12 +8876,12 @@
     "mentions": [
       {
         "id": 93,
-        "tag": "#BTFP",
+        "tag": "#Liquidity",
         "pinId": 420
       },
       {
         "id": 94,
-        "tag": "#Liquidity",
+        "tag": "#BTFP",
         "pinId": 420
       }
     ],
@@ -9052,26 +9052,26 @@
     "locations": [
       {
         "id": 32,
-        "address": "Los Angeles",
-        "order": 3,
-        "pinId": 361
-      },
-      {
-        "id": 33,
         "address": "New York City",
         "order": 2,
         "pinId": 361
       },
       {
-        "id": 34,
+        "id": 33,
         "address": "Burbank",
         "order": 1,
         "pinId": 361
       },
       {
-        "id": 35,
+        "id": 34,
         "address": "Culver City",
         "order": 0,
+        "pinId": 361
+      },
+      {
+        "id": 35,
+        "address": "Los Angeles",
+        "order": 3,
         "pinId": 361
       }
     ],
@@ -9296,27 +9296,27 @@
     "mentions": [
       {
         "id": 102,
-        "tag": "$MSFT",
+        "tag": "$TSLA",
         "pinId": 210
       },
       {
         "id": 103,
-        "tag": "$AAPL",
-        "pinId": 210
-      },
-      {
-        "id": 104,
         "tag": "$NVDA",
         "pinId": 210
       },
       {
+        "id": 104,
+        "tag": "$MSFT",
+        "pinId": 210
+      },
+      {
         "id": 105,
-        "tag": "$AMZN",
+        "tag": "$AAPL",
         "pinId": 210
       },
       {
         "id": 106,
-        "tag": "$TSLA",
+        "tag": "$AMZN",
         "pinId": 210
       },
       {
@@ -9730,12 +9730,12 @@
     "mentions": [
       {
         "id": 115,
-        "tag": "#indicator",
+        "tag": "#CoincidentEconomicIndicator",
         "pinId": 229
       },
       {
         "id": 116,
-        "tag": "#CoincidentEconomicIndicator",
+        "tag": "#indicator",
         "pinId": 229
       }
     ],
@@ -9778,12 +9778,12 @@
     "mentions": [
       {
         "id": 117,
-        "tag": "#inflation",
+        "tag": "#Euro",
         "pinId": 327
       },
       {
         "id": 118,
-        "tag": "#Euro",
+        "tag": "#inflation",
         "pinId": 327
       }
     ],
@@ -9811,12 +9811,12 @@
     "mentions": [
       {
         "id": 119,
-        "tag": "#BTFP",
+        "tag": "#Liquidity",
         "pinId": 418
       },
       {
         "id": 120,
-        "tag": "#Liquidity",
+        "tag": "#BTFP",
         "pinId": 418
       }
     ],
@@ -10093,12 +10093,12 @@
     "mentions": [
       {
         "id": 128,
-        "tag": "#Hospitality",
+        "tag": "#Bearish",
         "pinId": 479
       },
       {
         "id": 129,
-        "tag": "#Bearish",
+        "tag": "#Hospitality",
         "pinId": 479
       }
     ],
@@ -11306,12 +11306,12 @@
       },
       {
         "id": 148,
-        "tag": "#inflation",
+        "tag": "#BOE",
         "pinId": 357
       },
       {
         "id": 149,
-        "tag": "#BOE",
+        "tag": "#inflation",
         "pinId": 357
       }
     ],
@@ -11449,27 +11449,27 @@
       },
       {
         "id": 156,
-        "tag": "#Quality",
-        "pinId": 366
-      },
-      {
-        "id": 157,
         "tag": "$TM",
         "pinId": 366
       },
       {
-        "id": 158,
-        "tag": "$F",
+        "id": 157,
+        "tag": "$PSNY",
         "pinId": 366
       },
       {
-        "id": 159,
+        "id": 158,
         "tag": "$STLA",
         "pinId": 366
       },
       {
+        "id": 159,
+        "tag": "$F",
+        "pinId": 366
+      },
+      {
         "id": 160,
-        "tag": "$PSNY",
+        "tag": "#Quality",
         "pinId": 366
       }
     ],
@@ -11802,14 +11802,14 @@
     "locations": [
       {
         "id": 59,
-        "address": "Montana",
-        "order": 5,
+        "address": "Uvalde",
+        "order": 3,
         "pinId": 401
       },
       {
         "id": 60,
-        "address": "Uvalde",
-        "order": 3,
+        "address": "Idaho",
+        "order": 6,
         "pinId": 401
       },
       {
@@ -11820,14 +11820,14 @@
       },
       {
         "id": 62,
-        "address": "Idaho",
-        "order": 6,
+        "address": "San Antonio",
+        "order": 2,
         "pinId": 401
       },
       {
         "id": 63,
-        "address": "San Antonio",
-        "order": 2,
+        "address": "Montana",
+        "order": 5,
         "pinId": 401
       },
       {
@@ -11838,14 +11838,14 @@
       },
       {
         "id": 65,
-        "address": "PHOENIX",
-        "order": 0,
+        "address": "Sevierville, Tennessee",
+        "order": 4,
         "pinId": 401
       },
       {
         "id": 66,
-        "address": "Sevierville, Tennessee",
-        "order": 4,
+        "address": "PHOENIX",
+        "order": 0,
         "pinId": 401
       }
     ],
@@ -11993,22 +11993,22 @@
     "mentions": [
       {
         "id": 175,
-        "tag": "$AAPL",
+        "tag": "$MSFT",
         "pinId": 403
       },
       {
         "id": 176,
-        "tag": "#Crash",
+        "tag": "$SPY",
         "pinId": 403
       },
       {
         "id": 177,
-        "tag": "$AMZN",
+        "tag": "#Crash",
         "pinId": 403
       },
       {
         "id": 178,
-        "tag": "$MSFT",
+        "tag": "$AMZN",
         "pinId": 403
       },
       {
@@ -12018,7 +12018,7 @@
       },
       {
         "id": 180,
-        "tag": "$QQQ",
+        "tag": "$AAPL",
         "pinId": 403
       },
       {
@@ -12028,7 +12028,7 @@
       },
       {
         "id": 182,
-        "tag": "$SPY",
+        "tag": "$QQQ",
         "pinId": 403
       }
     ],
@@ -12253,12 +12253,12 @@
     "mentions": [
       {
         "id": 187,
-        "tag": "#Unemployment",
+        "tag": "#Crash",
         "pinId": 359
       },
       {
         "id": 188,
-        "tag": "#Crash",
+        "tag": "#Unemployment",
         "pinId": 359
       }
     ],
@@ -12295,14 +12295,14 @@
     "locations": [
       {
         "id": 69,
-        "address": "Prince Rupert Port",
-        "order": 1,
+        "address": "Vancouver Port",
+        "order": 0,
         "pinId": 429
       },
       {
         "id": 70,
-        "address": "Vancouver Port",
-        "order": 0,
+        "address": "Prince Rupert Port",
+        "order": 1,
         "pinId": 429
       }
     ],
@@ -12347,12 +12347,12 @@
     "mentions": [
       {
         "id": 190,
-        "tag": "#Jobs",
+        "tag": "#ADP",
         "pinId": 450
       },
       {
         "id": 191,
-        "tag": "#ADP",
+        "tag": "#Jobs",
         "pinId": 450
       }
     ],
@@ -12417,14 +12417,14 @@
     "locations": [
       {
         "id": 72,
-        "address": "Connecticut",
-        "order": 0,
+        "address": "Nevada",
+        "order": 1,
         "pinId": 463
       },
       {
         "id": 73,
-        "address": "Nevada",
-        "order": 1,
+        "address": "Connecticut",
+        "order": 0,
         "pinId": 463
       },
       {
@@ -12776,12 +12776,12 @@
     "mentions": [
       {
         "id": 200,
-        "tag": "$ZE594-CN",
+        "tag": "$TSLA",
         "pinId": 442
       },
       {
         "id": 201,
-        "tag": "$TSLA",
+        "tag": "$ZE594-CN",
         "pinId": 442
       }
     ],
@@ -13307,12 +13307,12 @@
     "mentions": [
       {
         "id": 213,
-        "tag": "#energy",
+        "tag": "#Oil",
         "pinId": 481
       },
       {
         "id": 214,
-        "tag": "#Oil",
+        "tag": "#energy",
         "pinId": 481
       }
     ],
@@ -13347,12 +13347,12 @@
     "mentions": [
       {
         "id": 215,
-        "tag": "#WindFarm",
+        "tag": "#energy",
         "pinId": 482
       },
       {
         "id": 216,
-        "tag": "#energy",
+        "tag": "#WindFarm",
         "pinId": 482
       }
     ],
@@ -13388,12 +13388,12 @@
     "mentions": [
       {
         "id": 217,
-        "tag": "#SunnyOptical",
+        "tag": "$AAPL",
         "pinId": 483
       },
       {
         "id": 218,
-        "tag": "$AAPL",
+        "tag": "#SunnyOptical",
         "pinId": 483
       }
     ],
@@ -13816,12 +13816,12 @@
     "mentions": [
       {
         "id": 230,
-        "tag": "#Yen",
+        "tag": "#Bullish",
         "pinId": 499
       },
       {
         "id": 231,
-        "tag": "#Bullish",
+        "tag": "#Yen",
         "pinId": 499
       }
     ],
@@ -14168,6 +14168,76 @@
     "userId": 3
   },
   {
+    "id": 515,
+    "rootThread": false,
+    "title": "This only happens when the labor market is turning and become less tight",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Jobs</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691254615263,\"blocks\":[{\"id\":\"Cw2587ag70\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Jobs</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/VPatelFX/status/1687443900766576641",
+    "utcStartDateTime": "2023-08-04T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-05T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-05T16:57:09.722Z",
+    "sentimentScore": -0.2223064862191677,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 392,
+        "originalUrl": "https://twitter.com/VPatelFX/status/1687443900766576641",
+        "type": "2",
+        "authorName": "Viraj Patel",
+        "authorUrl": "https://twitter.com/VPatelFX",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">?? Here&#39;s the share of those unemployed people in the US for 15-26 weeks (purple line; white line is absolute). That went up again in July. This only happens when the labor market is turning and become less tight. Was a warning shot in &#39;00 and &#39;07/08 <a href=\"https://twitter.com/search?q=%24USD&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$USD</a> <a href=\"https://t.co/8ghcx7Cie6\">pic.twitter.com/8ghcx7Cie6</a></p>&mdash; Viraj Patel (@VPatelFX) <a href=\"https://twitter.com/VPatelFX/status/1687443900766576641?ref_src=twsrc%5Etfw\">August 4, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 315,
+        "tag": "#Jobs",
+        "pinId": 515
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 516,
+    "rootThread": true,
+    "title": "Employment (leading) declined at an accelerated rate with material negative downward revisions (June decline almost doubled upon revision)",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Jobs</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691254681181,\"blocks\":[{\"id\":\"pxj0iIFnKd\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Jobs</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1687445918314811393",
+    "utcStartDateTime": "2023-08-04T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-05T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-05T16:58:14.161Z",
+    "sentimentScore": -0.5246663689613342,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 393,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1687445918314811393",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Group went into this expecting a miss. NFP missed and 49 K negative revisions May/June <br><br>AHE small beat is irrelevant as Fed focuses on ECI <br><br>More important: temp. employment (leading) declined at an accelerated rate with material negative downward revisions (June decline almost… <a href=\"https://t.co/R7BhYjdV14\">pic.twitter.com/R7BhYjdV14</a></p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1687445918314811393?ref_src=twsrc%5Etfw\">August 4, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 316,
+        "tag": "#Jobs",
+        "pinId": 516
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 507,
     "rootThread": true,
     "title": "Traders Brace for $102 Billion Wave of Treasury Bond Sales",
@@ -14213,12 +14283,12 @@
     "mentions": [
       {
         "id": 242,
-        "tag": "#Liquidity",
+        "tag": "#Treasury",
         "pinId": 513
       },
       {
         "id": 243,
-        "tag": "#Treasury",
+        "tag": "#Liquidity",
         "pinId": 513
       }
     ],
@@ -14298,6 +14368,48 @@
         "id": 244,
         "tag": "$TSLA",
         "pinId": 193
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 514,
+    "parentId": 516,
+    "rootThread": false,
+    "title": "Average hourly earnings should get pushed up by a calendar shift, just like in July 2022, and then that undue strength should flip to a softer gain than otherwise next month",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bearish</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#AHE</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691254518639,\"blocks\":[{\"id\":\"68bCOv2h9z\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bearish</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#AHE</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/NickTimiraos/status/1687448639071993858",
+    "utcStartDateTime": "2023-09-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-03T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-05T16:55:21.565Z",
+    "utcUpdatedDateTime": "2023-08-05T16:58:36.099Z",
+    "sentimentScore": -0.3899047616869211,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 391,
+        "originalUrl": "https://twitter.com/NickTimiraos/status/1687448639071993858",
+        "type": "2",
+        "authorName": "Nick Timiraos",
+        "authorUrl": "https://twitter.com/NickTimiraos",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">From UBS last Friday: &quot;Average hourly earnings should get pushed up by a calendar shift, just like in July 2022, and then that undue strength should flip to a softer gain than otherwise next month.&quot; <a href=\"https://t.co/43PpBdTlI0\">pic.twitter.com/43PpBdTlI0</a></p>&mdash; Nick Timiraos (@NickTimiraos) <a href=\"https://twitter.com/NickTimiraos/status/1687448639071993858?ref_src=twsrc%5Etfw\">August 4, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 317,
+        "tag": "#Bearish",
+        "pinId": 514
+      },
+      {
+        "id": 318,
+        "tag": "#AHE",
+        "pinId": 514
       }
     ],
     "userId": 1
@@ -14586,6 +14698,33 @@
         "utcCreatedDateTime": "2023-06-01T18:42:42.908Z",
         "userId": 1,
         "pinId": 206
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 517,
+    "rootThread": false,
+    "title": "Nikola Surpasses 200 Orders for Hydrogen Fuel Cell Electric Trucks deliveries are expected to begin in September",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/7Okw3RZSlMY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\"> Transportation company Nikola said the company has obtained more than 200 sales orders for their Class 8 hydrogen fuel cell electric vehicles. </p><p class=\"paragraph\"> The company provides zero-emissions transportation and energy services, and Nikola’s truck orders were facilitated through its dealer network. The orders encompass purpose-built heavy-duty trucks, representing a total of 18 end customers that are planning to implement the hydrogen fuel cell electric vehicles in their fleets. These advanced trucks, designed and manufactured by Nikola, offer a range of up to 500 miles and an estimated refueling time of around 20 minutes, positioning them as leaders in zero tailpipe emission Class 8 trucks. </p><p class=\"paragraph\"> Production of Nikola’s latest model, a longer-range fuel-cell powered version of its Tre semitruck, began July 31; deliveries are expected to begin in September. </p>",
+    "sourceDescription": "{\"time\":1691255413743,\"blocks\":[{\"id\":\"71EdQrdQE_\",\"type\":\"embed\",\"data\":{\"service\":\"youtube\",\"source\":\"https://www.youtube.com/watch?v=7Okw3RZSlMY\",\"embed\":\"https://www.youtube.com/embed/7Okw3RZSlMY\",\"width\":580,\"height\":320,\"caption\":\"Winter Testing | Nikola Hydrogen Fuel Cell Electric Vehicle\",\"length\":\"\"}},{\"id\":\"E64f1plhMj\",\"type\":\"paragraph\",\"data\":{\"text\":\"Transportation company Nikola said the company has obtained more than 200 sales orders for their Class 8 hydrogen fuel cell electric vehicles.\"}},{\"id\":\"pEP7JxUHXz\",\"type\":\"paragraph\",\"data\":{\"text\":\"The company provides zero-emissions transportation and energy services, and Nikola’s truck orders were facilitated through its dealer network. The orders encompass purpose-built heavy-duty trucks, representing a total of 18 end customers that are planning to implement the hydrogen fuel cell electric vehicles in their fleets. These advanced trucks, designed and manufactured by Nikola, offer a range of up to 500 miles and an estimated refueling time of around 20 minutes, positioning them as leaders in zero tailpipe emission Class 8 trucks.\"}},{\"id\":\"4o-_jlJdBW\",\"type\":\"paragraph\",\"data\":{\"text\":\"Production of Nikola’s latest model, a longer-range fuel-cell powered version of its Tre semitruck, began July 31; deliveries are expected to begin in September.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.environmentalleader.com/2023/08/nikola-corporation-surpasses-200-sales-orders-for-hydrogen-fuel-cell-electric-trucks/",
+    "utcStartDateTime": "2023-09-30T07:00:00.000Z",
+    "utcEndDateTime": "2023-10-01T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-05T17:07:32.652Z",
+    "utcUpdatedDateTime": "2023-08-05T17:10:37.451Z",
+    "sentimentScore": 0.5737965134903789,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "locations": [
+      {
+        "id": 136,
+        "address": "Coolidge, Arizona",
+        "order": 0,
+        "pinId": 517
       }
     ],
     "userId": 1
@@ -15171,17 +15310,17 @@
     "mentions": [
       {
         "id": 266,
-        "tag": "$ETRN",
-        "pinId": 376
-      },
-      {
-        "id": 267,
         "tag": "$NEE",
         "pinId": 376
       },
       {
-        "id": 268,
+        "id": 267,
         "tag": "#Pipeliine",
+        "pinId": 376
+      },
+      {
+        "id": 268,
+        "tag": "$ETRN",
         "pinId": 376
       },
       {
@@ -15338,14 +15477,14 @@
     "locations": [
       {
         "id": 100,
-        "address": "United Sates",
-        "order": 0,
+        "address": "Japan",
+        "order": 1,
         "pinId": 342
       },
       {
         "id": 101,
-        "address": "Japan",
-        "order": 1,
+        "address": "United Sates",
+        "order": 0,
         "pinId": 342
       }
     ],
@@ -16930,32 +17069,32 @@
     "locations": [
       {
         "id": 122,
+        "address": "Austin, USA",
+        "order": 3,
+        "pinId": 424
+      },
+      {
+        "id": 123,
         "address": "Giheung",
         "order": 0,
         "pinId": 424
       },
       {
-        "id": 123,
+        "id": 124,
         "address": "Pyeongtaek",
         "order": 2,
         "pinId": 424
       },
       {
-        "id": 124,
+        "id": 125,
         "address": "Hwaseong",
         "order": 1,
         "pinId": 424
       },
       {
-        "id": 125,
+        "id": 126,
         "address": "Taylor, USA",
         "order": 4,
-        "pinId": 424
-      },
-      {
-        "id": 126,
-        "address": "Austin, USA",
-        "order": 3,
         "pinId": 424
       }
     ],
@@ -17013,12 +17152,12 @@
     "mentions": [
       {
         "id": 302,
-        "tag": "#Chips",
+        "tag": "$INTC",
         "pinId": 436
       },
       {
         "id": 303,
-        "tag": "$INTC",
+        "tag": "#Chips",
         "pinId": 436
       }
     ],
@@ -17136,22 +17275,22 @@
     "mentions": [
       {
         "id": 305,
-        "tag": "$MSFT",
-        "pinId": 457
-      },
-      {
-        "id": 306,
         "tag": "$SONY",
         "pinId": 457
       },
       {
+        "id": 306,
+        "tag": "$MSFT",
+        "pinId": 457
+      },
+      {
         "id": 307,
-        "tag": "#Xbox",
+        "tag": "#PlayStation",
         "pinId": 457
       },
       {
         "id": 308,
-        "tag": "#PlayStation",
+        "tag": "#Xbox",
         "pinId": 457
       }
     ],
@@ -17245,14 +17384,14 @@
     "locations": [
       {
         "id": 130,
-        "address": "Bakersfield, CA",
-        "order": 1,
+        "address": "Merced, CA",
+        "order": 0,
         "pinId": 219
       },
       {
         "id": 131,
-        "address": "Merced, CA",
-        "order": 0,
+        "address": "Bakersfield, CA",
+        "order": 1,
         "pinId": 219
       }
     ],
