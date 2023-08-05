@@ -54,8 +54,7 @@
             this.captureYOffset = this.ScrollUtil.captureYOffset.bind(null, scrollEl);
             this.scrollToID = this.ScrollUtil.scrollToID.bind(null, scrollEl);
             this.scrollYTo = this.ScrollUtil.scrollYTo.bind(null, scrollEl);
-            //this.adjustScrollAfterPinInsert = this.ScrollUtil.adjustScrollAfterPinInsert.bind(null, scrollEl);
-            //this.adjustScrollRelativeToCurrentView = this.ScrollUtil.adjustScrollRelativeToCurrentView.bind(null, scrollEl);
+            this.scrollToIDAsync = this.ScrollUtil.scrollToIDAsync.bind(null, scrollEl);
 
             this.sortedPins = [];
             this.viewType = $window.localStorage.getItem("viewType") || 'timeline';
@@ -113,6 +112,14 @@
                     this._setSearchPinGroups(pins);
                     return res;
                 })
+                .then(() => {
+                    if (this.viewType === 'timeline') {
+                        this.$timeout(() => {
+                            const elId = this.getTodaySearchScrollId();
+                            let promise = this._scrollAdjust(elId);
+                        });
+                    }
+                })
                 .catch(err => {
                     throw err;
                 })
@@ -129,8 +136,6 @@
             }
         }
 
-        // View functions
-
         getTimelineStatus() {
             switch (true) {
                 case this.searching:
@@ -146,9 +151,7 @@
 
         updateInView(event) {
             event.target.bag.inView = event.inView;
-        };
-
-        // Private helper functions
+        }
 
         _setSearchPinGroups(pins) {
             this.pinApp.clearSearchBags();
@@ -158,6 +161,13 @@
             this.sortedPins = pins.slice(0).sort((a, b) => {
                 return a.searchScore - b.searchScore;
             });
+        }
+
+        _scrollAdjust(elId) {
+            if (elId) {
+                return this.scrollToIDAsync(elId);
+            }
+            return Promise.resolve();
         }
 
         getTodayPinId() {
