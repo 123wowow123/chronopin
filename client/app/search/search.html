@@ -1,6 +1,6 @@
-<div ng-switch="$ctrl.getTimelineStatus()" class="main">
-  
-  <profile-block ng-if="$ctrl.userName" user-name="$ctrl.userName"></profile-block>
+<profile-block ng-if="$ctrl.userName" user-name="$ctrl.userName"></profile-block>
+
+<div ng-switch="$ctrl.getTimelineStatus()" class="main" >
 
   <div class="container-fluid main__timeline --search">
     <div class="row">
@@ -37,9 +37,7 @@
     </h3>
   </div>
 
-
-
-  <div class="toggle_view" ng-class="{'--profile-offset': $ctrl.userName}">
+  <div class="toggle_view">
     <button type="button" ng-click="$ctrl.setView('timeline')" ng-class="{'active': $ctrl.viewType === 'timeline'}"
       title="Sort By Event Date">
       <i class="fa fa-calendar-o" aria-hidden="true"></i>
@@ -50,5 +48,5 @@
     </button>
   </div>
 
-  <scroll scroll-to-id="$ctrl.getTodaySearchScrollId()"></scroll>
+  <scroll scroll-to-id="$ctrl.getTodaySearchScrollId()" offset-px="$ctrl.userName ? $ctrl.appConfig.toggleSearchOffset : 0"></scroll>
 </div>

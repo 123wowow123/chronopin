@@ -12,6 +12,7 @@ const SEARCH_CONST = {
 };
 
 exports = module.exports = config = {
+  toggleSearchOffset: 155,
   searchPrefix: {
     threadEmoji: "🧵",
     hashTag: "#"

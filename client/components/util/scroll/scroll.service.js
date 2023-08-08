@@ -43,14 +43,14 @@
                 return this;
             },
 
-            scrollToID(scrollEl, id) {
-                const pos = ScrollUtil.findYPos(ScrollUtil.getElementById(id));
+            scrollToID(scrollEl, id, offsetPx = 0) {
+                const pos = ScrollUtil.findYPos(ScrollUtil.getElementById(id)) - offsetPx;
                 return ScrollUtil.scrollYTo(scrollEl, pos);
             },
 
-            scrollToIDAsync(scrollEl, id) {
+            scrollToIDAsync(scrollEl, id, offsetPx) {
                 return initialized.then(t => {
-                    return ScrollUtil.scrollToID(scrollEl, id);
+                    return ScrollUtil.scrollToID(scrollEl, id, offsetPx);
                 });
             },
 

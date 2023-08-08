@@ -165,7 +165,7 @@
 
         _scrollAdjust(elId) {
             if (elId) {
-                return this.scrollToIDAsync(elId);
+                return this.scrollToIDAsync(elId, this.appConfig.toggleSearchOffset);
             }
             return Promise.resolve();
         }

@@ -15,6 +15,10 @@ Comment cleanup/backup +
 countdown on pin page
 use conical url for scrape page || remove hash/querystring
 
+move sorting type icon and profile need to be fixed ++++
+bell icon should have switch to all follow ++++
+create @chronopin account on threads and reddit ane etc
+
 
 link not external ++
 https://www.chronopin.com/pin/504
@@ -45,6 +49,9 @@ user submitted sentiment score
 UI for all following / follower +
 embed pin ++
 need better date data ui ++
+
+push notification reminder ++
+add twitter oauth ++ and link remindeme feature on twitter
 
 need action botton for today button +++
 https://codepen.io/brandonmcconnell/pen/PoWMboY?editors=0100

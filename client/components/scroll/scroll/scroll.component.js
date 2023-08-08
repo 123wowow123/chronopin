@@ -12,9 +12,9 @@
         $onInit() {
         }
 
-        scrollAdjust(elId) {
+        scrollAdjust(elId, offsetPx) {
             if (elId) {
-                return this.scrollToIDAsync(elId);
+                return this.scrollToIDAsync(elId, offsetPx);
             }
             return Promise.resolve();
         }
@@ -25,7 +25,8 @@
             controller: ScrollController,
             controllerAs: 'scroll',
             bindings: {
-                scrollToId: '<'
+                scrollToId: '<',
+                offsetPx: '<'
             },
             templateUrl: 'components/scroll/scroll/scroll.html',
         });

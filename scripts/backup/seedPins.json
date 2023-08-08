@@ -12599,6 +12599,54 @@
     "userId": 1
   },
   {
+    "id": 523,
+    "rootThread": false,
+    "title": "US revolving credit. Contracted in June for the first time since March 2021",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bearish</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Credit</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691437600116,\"blocks\":[{\"id\":\"jjfvZtZjeK\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bearish</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Credit</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/VPatelFX/status/1688629956882898944",
+    "utcStartDateTime": "2023-07-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-07-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-07T19:46:51.836Z",
+    "sentimentScore": -0.4873315040022134,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 399,
+        "originalUrl": "https://twitter.com/VPatelFX/status/1688629956882898944",
+        "type": "2",
+        "authorName": "Viraj Patel",
+        "authorUrl": "https://twitter.com/VPatelFX",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">?? US revolving credit. Contracted in June for the first time since March 2021. Rarely falls outside of a crisis or end-of-cycle recession <a href=\"https://twitter.com/search?q=%24USD&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$USD</a> <a href=\"https://t.co/0rytkzws63\">pic.twitter.com/0rytkzws63</a></p>&mdash; Viraj Patel (@VPatelFX) <a href=\"https://twitter.com/VPatelFX/status/1688629956882898944?ref_src=twsrc%5Etfw\">August 7, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 138,
+        "address": "USA",
+        "order": 0,
+        "pinId": 523
+      }
+    ],
+    "mentions": [
+      {
+        "id": 331,
+        "tag": "#Bearish",
+        "pinId": 523
+      },
+      {
+        "id": 332,
+        "tag": "#Credit",
+        "pinId": 523
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 316,
     "rootThread": false,
     "title": "Mushoku Tensei: Jobless Reincarnation Season 2 release date is on July 2, 2023",
@@ -14085,6 +14133,49 @@
     "userId": 1
   },
   {
+    "id": 522,
+    "rootThread": false,
+    "title": "A record number of Chinese LGFV 48 were overdue on commercial paper in July, up from 29 the previous month",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#LGFV</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691420592160,\"blocks\":[{\"id\":\"hpbbxNgouW\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#LGFV</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/RChoongWilkins/status/1688432888449318913",
+    "utcStartDateTime": "2023-08-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-07T15:04:01.452Z",
+    "sentimentScore": -0.6106024794280529,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 398,
+        "originalUrl": "https://twitter.com/RChoongWilkins/status/1688432888449318913",
+        "type": "2",
+        "authorName": "Rebecca Choong Wilkins ???",
+        "authorUrl": "https://twitter.com/RChoongWilkins",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">China&#39;s local government financing vehicles -- responsible for a hefty chunk of hidden debt -- are showing (more) signs of stress. <br><br>A record 48 were overdue on commercial paper in July, up from 29 the previous month. ?? 1/5 <a href=\"https://t.co/miAP9uyeMD\">pic.twitter.com/miAP9uyeMD</a></p>&mdash; Rebecca Choong Wilkins ??? (@RChoongWilkins) <a href=\"https://twitter.com/RChoongWilkins/status/1688432888449318913?ref_src=twsrc%5Etfw\">August 7, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 137,
+        "address": "China",
+        "order": 0,
+        "pinId": 522
+      }
+    ],
+    "mentions": [
+      {
+        "id": 328,
+        "tag": "#LGFV",
+        "pinId": 522
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 494,
     "rootThread": false,
     "title": "Refunding announcement coming in a few days (Aug 2) and will show a marked pick-up in coupon issuance. Net net there will be over $ 1 t of net additional coupons issued 24 vs 23",
@@ -14233,6 +14324,168 @@
         "id": 316,
         "tag": "#Jobs",
         "pinId": 516
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 518,
+    "rootThread": false,
+    "title": "Comments on \"Who Wants to Be Hired?\" exceeded comments on \"Who Is Hiring?\" for the first time ever, showing continued weakness in job opportunities for VC-led tech",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Jobs</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#VC</chronohash> <chronohash class=\"chrono-hash-highlight\">#CoincidentEconomicIndicator</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691337651971,\"blocks\":[{\"id\":\"4V4rpLXiXj\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Jobs</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#VC</chronohash> <chronohash class=\\\"chrono-hash-highlight\\\">#CoincidentEconomicIndicator</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1688128896581984256",
+    "utcStartDateTime": "2023-08-06T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-08T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-06T15:59:29.196Z",
+    "utcUpdatedDateTime": "2023-08-06T16:00:55.636Z",
+    "sentimentScore": -0.4539541210979223,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 394,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1688128896581984256",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">?????????? August ratio of comments on monthly Hacker News employment threads hit new highs, now far exceeding April 2020. Comments on &quot;Who Wants to Be Hired?&quot; exceeded comments on &quot;Who Is Hiring?&quot; for the first time ever, showing continued weakness in job opportunities for… <a href=\"https://t.co/YPChAxHhXh\">pic.twitter.com/YPChAxHhXh</a></p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1688128896581984256?ref_src=twsrc%5Etfw\">August 6, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 321,
+        "tag": "#Jobs",
+        "pinId": 518
+      },
+      {
+        "id": 322,
+        "tag": "#VC",
+        "pinId": 518
+      },
+      {
+        "id": 323,
+        "tag": "#CoincidentEconomicIndicator",
+        "pinId": 518
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 519,
+    "rootThread": false,
+    "title": "Swap spreads don’t confirm the steepening, traders should pay attention, especially when fundamental models are showing cheapness and when late shorts will have to cover",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Treasury</chronohash> <chronohash class=\"chrono-hash-highlight\">#Bonds</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691338725673,\"blocks\":[{\"id\":\"VtEconwkFU\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Treasury</chronohash> <chronohash class=\\\"chrono-hash-highlight\\\">#Bonds</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1688209933378945024",
+    "utcStartDateTime": "2023-08-06T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-07T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-06T16:18:55.556Z",
+    "sentimentScore": -0.5844296785071492,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 395,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1688209933378945024",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Much rubbish has been written about rates of late that it’s hard to keep up. Maybe the 2 most sticking points of contention are : some delusional claims around trading rates off predictingTerm Premium moves and the debate around Bear Steepening. On the first, it’s too obvious,…</p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1688209933378945024?ref_src=twsrc%5Etfw\">August 6, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 324,
+        "tag": "#Treasury",
+        "pinId": 519
+      },
+      {
+        "id": 325,
+        "tag": "#Bonds",
+        "pinId": 519
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 520,
+    "rootThread": false,
+    "title": "The food budget is the first line of defense. And it’s being activated",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bearish</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691419568408,\"blocks\":[{\"id\":\"qWdtjjjILD\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bearish</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/NeelyTamminga/status/1688525062834470912",
+    "utcStartDateTime": "2023-08-07T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-08T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-07T14:46:12.345Z",
+    "sentimentScore": -0.04850421845912933,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 396,
+        "originalUrl": "https://twitter.com/NeelyTamminga/status/1688525062834470912",
+        "type": "2",
+        "authorName": "Neely",
+        "authorUrl": "https://twitter.com/NeelyTamminga",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Family budget talks are happening. <br><br>Conagra CEO: folks are buying less <br>Kellogg’s CEO: folks are maximizing pantries<br>Tyson Prep’d Foods: same, same<br><br>The food budget is the first line of defense. And it’s being activated. <br><br>This isn’t just about food price inflation. <a href=\"https://t.co/L88PaXVO7F\">pic.twitter.com/L88PaXVO7F</a></p>&mdash; Neely (@NeelyTamminga) <a href=\"https://twitter.com/NeelyTamminga/status/1688525062834470912?ref_src=twsrc%5Etfw\">August 7, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 326,
+        "tag": "#Bearish",
+        "pinId": 520
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 521,
+    "rootThread": false,
+    "title": "Chart captures daily activity at US Amazon facilities based on satellite imageries. Current 2023 activity is unusually low.",
+    "description": "<p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$AMZN</chronodollar> </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bearish</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691421206960,\"blocks\":[{\"id\":\"Ko77SwK7iT\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$AMZN</chronodollar>\"}},{\"id\":\"5tLd1gThn5\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bearish</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/patrick_saner/status/1688442055033323525",
+    "utcStartDateTime": "2023-08-07T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-09T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-07T14:53:11.115Z",
+    "utcUpdatedDateTime": "2023-08-07T15:13:29.505Z",
+    "sentimentScore": -0.29690542817115784,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 397,
+        "originalUrl": "https://twitter.com/patrick_saner/status/1688442055033323525",
+        "type": "2",
+        "authorName": "Patrick Saner",
+        "authorUrl": "https://twitter.com/patrick_saner",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">When macro data is volatile and often ambiguous, it&#39;s valuable to cross-check with alternative data sources. So here is something that caught my eye: The chart captures daily activity at US Amazon facilities based on satellite imageries. Current 2023 activity is unusually low. <a href=\"https://t.co/igLPzlBgqR\">pic.twitter.com/igLPzlBgqR</a></p>&mdash; Patrick Saner (@patrick_saner) <a href=\"https://twitter.com/patrick_saner/status/1688442055033323525?ref_src=twsrc%5Etfw\">August 7, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 329,
+        "tag": "#Bearish",
+        "pinId": 521
+      },
+      {
+        "id": 330,
+        "tag": "$AMZN",
+        "pinId": 521
       }
     ],
     "userId": 1

@@ -525,45 +525,46 @@ Here I'll say "Can't wait, this game's been 20 years in the making !"
 I'll scroll down to see if there's any other recommendation pins that interest me.
 Or maybe I'll click the logo to go the main timeline and scroll down to discover more things occuring in the future
 
+
 Founder Introduction:
-Hi, my name is ______
-I am the founder and CEO and lead developer of Chronopin.
-
-From when I was a high school student, my peers and I always was looking for better ways to organize and track past, present and especially upcoming events with something that has more social features than just a calendar app or a shared excel file while bringing collaboration and the wisdom of the crowd to play. After working in the tech industry for more then 15 years I still see people using the same calendar or excel workflows to track and socialize timely content but they invariably end up in lost silos.
-
-After needing such a service myself and having observed and pondered and now prototyped a working demo app for such use case, I'd like to now additionally sprinkle some YC magic, and together we can start to disrupt the way we socialize our event calendars.
-
 
 Hi, my name is ______
-I am the founder and CEO and lead developer of Chronopin.
+I am the founder and developer of Chronopin.
 
-From when I was a high school student, my peers and I were constantly was looking for better ways to organize and track
+For as long as I'be been using the internet, I have been constantly looking for better ways to track and organize
 
-past, present and especially upcoming events. 
+past, present and especially future events. 
 
-if we just can have something that has a social element that can help with colaboration. 
-Something dare I say harness the wisdom of the crowd and anyone can equipt themselves with such wisdom through as simple reminder.
-Or better yet suggest similar events relavant to your place and time using the latest generation of AIs to always find something catchy to follow
+With Chronopin, you can now Track and Pin anything on the interent To a Date
 
-After working more then 15 years in the tech industry 
-I still see people using the same calendar or excel workflows 
-to track and socialize time sensitive content. 
-Which they invariably gets in lost silos.
+and with it's Social Featues, 
+You and Other Like Minding people can colaborate to share your Thoughts and Feelings about the Event Throughout it's Lifecycle
 
-After dreaming for such service for myself. 
-and now having create a working app for such use case, 
+In a sense Chronopin will be able to harness wisdom of the crowd 
+and Anyone can Equip Themselves with that Wisdom -
+All this is done Through as simple Pin and Reminder System.
 
-I'd like to now additionally request for some YC pixie dust, 
+It also has the Ability to Suggest similar Events, Relavant to your Time and Place 
+and it Uses the latest generation of AIs Models to always find something Interesting for you to Follow
 
-I humbly request that disrupt 
-the way we use and socialize  +++
-our event calendars. 
+After working in the Tech Industry for more then 15 years
 
-remind me bots
-location based reminder
+I still see people using the same Tired Outlook Calendar or Excel workflows 
+To Track and Socialize Time sensitive content. 
+Which they invariably get in lost Silos.
+
+
+
+ 
 
 
 ------
-start to disrupt 
-the way we use and socialize
-our event calendars. 
+After dreaming for a better replacement
+
+I Now having Create a Working App for such use case, 
+
+I'd like to Now Additionally request for some YC Pixie Dust to help Accelerate this transformation
+
+And I humbly request that we Disrupt 
+the way we Use and Socialize  +++
+our Event Calendars. 

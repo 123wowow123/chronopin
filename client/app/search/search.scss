@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 75px;
-    right: 10px;
+    bottom: 75px;
+    right: 23px;
     z-index: 5;
     opacity: 0.75;
 
@@ -43,9 +43,6 @@
     }
 }
 
-.\--profile-offset {
-    top: 75px + 158px;
-}
 
 .main__timeline.\--search {
     padding-top: 10px;
