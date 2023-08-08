@@ -1,6 +1,6 @@
 <profile-block ng-if="$ctrl.userName" user-name="$ctrl.userName"></profile-block>
 
-<div ng-switch="$ctrl.getTimelineStatus()" class="main" >
+<div ng-switch="$ctrl.getTimelineStatus()" class="main" ng-style="{'marginTop': $ctrl.userName ? $ctrl.appConfig.toggleSearchOffset + 'px' : 0 }">
 
   <div class="container-fluid main__timeline --search">
     <div class="row">
