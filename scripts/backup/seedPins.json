@@ -14176,6 +14176,94 @@
     "userId": 1
   },
   {
+    "id": 524,
+    "rootThread": false,
+    "title": "US July 2023 \"online prices dropped 1.6% compared with July 2022, and 0.9% from June 2023\"",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#CPI</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Disinflation</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691506280078,\"blocks\":[{\"id\":\"NsfbSpgmPH\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#CPI</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Disinflation</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/VPatelFX/status/1688884642701561856",
+    "utcStartDateTime": "2023-08-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-09T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-08T14:51:37.369Z",
+    "sentimentScore": -0.44141184911131853,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 400,
+        "originalUrl": "https://twitter.com/VPatelFX/status/1688884642701561856",
+        "type": "2",
+        "authorName": "Viraj Patel",
+        "authorUrl": "https://twitter.com/VPatelFX",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">US July 2023 &quot;online prices dropped 1.6% compared with July 2022, and 0.9% from June 2023&quot;<br><br>Another soft CPI print looks in the offing <a href=\"https://twitter.com/search?q=%24USD&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$USD</a><br><br>Source: Adobe <a href=\"https://t.co/HM0o5Bhk4j\">pic.twitter.com/HM0o5Bhk4j</a></p>&mdash; Viraj Patel (@VPatelFX) <a href=\"https://twitter.com/VPatelFX/status/1688884642701561856?ref_src=twsrc%5Etfw\">August 8, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 333,
+        "tag": "#CPI",
+        "pinId": 524
+      },
+      {
+        "id": 334,
+        "tag": "#Disinflation",
+        "pinId": 524
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 526,
+    "rootThread": false,
+    "title": "The US LinkedIn Hiring Rate dipped 3.3% M/M",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Jobs</chronohash> <chronohash class=\"chrono-hash-highlight\">#Bearish</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691526134619,\"blocks\":[{\"id\":\"3P0tORMyVc\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Jobs</chronohash> <chronohash class=\\\"chrono-hash-highlight\\\">#Bearish</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/EconBerger/status/1688643992467156998",
+    "utcStartDateTime": "2023-08-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-08T20:22:29.581Z",
+    "sentimentScore": -0.44233762100338936,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 402,
+        "originalUrl": "https://twitter.com/EconBerger/status/1688643992467156998",
+        "type": "2",
+        "authorName": "Guy Berger",
+        "authorUrl": "https://twitter.com/EconBerger",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">A quick recap of <a href=\"https://twitter.com/LinkedIn?ref_src=twsrc%5Etfw\">@LinkedIn</a> data for July:<br><br>1/ The US LinkedIn Hiring Rate dipped 3.3% M/M. This surprised me - we&#39;d seen a stabilization in the spring after a long uninterrupted streak of declines. I&#39;m hoping July is just a blip and we&#39;ll get renewed signs of stabilization in Aug <a href=\"https://t.co/uC2ss1F3yC\">pic.twitter.com/uC2ss1F3yC</a></p>&mdash; Guy Berger (@EconBerger) <a href=\"https://twitter.com/EconBerger/status/1688643992467156998?ref_src=twsrc%5Etfw\">August 7, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 139,
+        "address": "USA",
+        "order": 0,
+        "pinId": 526
+      }
+    ],
+    "mentions": [
+      {
+        "id": 340,
+        "tag": "#Jobs",
+        "pinId": 526
+      },
+      {
+        "id": 341,
+        "tag": "#Bearish",
+        "pinId": 526
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 494,
     "rootThread": false,
     "title": "Refunding announcement coming in a few days (Aug 2) and will show a marked pick-up in coupon issuance. Net net there will be over $ 1 t of net additional coupons issued 24 vs 23",
@@ -14525,24 +14613,213 @@
     "sourceDescription": "{\"time\":1691000246670,\"blocks\":[{\"id\":\"JgL1IQtyo_\",\"type\":\"paragraph\",\"data\":{\"text\":\"Issuance plans for Treasury Inflation-Protected Securities, or TIPS, were held steady except for the 5-year maturity, where October’s new-issue auction will go up by $1 billion. Floating-rate note auction sizes were increased by $2 billion.\"}},{\"id\":\"j9Ebvi--de\",\"type\":\"paragraph\",\"data\":{\"text\":\"As for next week’s refunding auctions, they break down as follows:\"}},{\"id\":\"WI8b3bsMCN\",\"type\":\"list\",\"data\":{\"style\":\"unordered\",\"items\":[\"$42 billion of 3-year notes on Aug. 8,&nbsp;<a href=\\\"https://home.treasury.gov/news/press-releases/jy1460\\\" target=\\\"_blank\\\">compared with</a>&nbsp;$40 billion at the May refunding and at the last auction in July\",\"$38 billion of 10-year notes on Aug. 9, compared with $35 billion last quarter\",\"$23 billion of 30-year bonds on Aug. 10, versus $21 billion in May\",\"The refunding will raise about $19 billion in new cash\"]}},{\"id\":\"I8UNADTiM4\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Treasury also detailed increases to nominal debt of other maturities over coming months as follows:\"}},{\"id\":\"4q-hIINXpm\",\"type\":\"list\",\"data\":{\"style\":\"unordered\",\"items\":[\"Sales of 2- and 5-year note auctions will each be hoisted by $3 billion per month over the next three months\",\"Issuance of 3-year notes will rise by $2 billion a month\",\"Increases for 7-year notes by $1 billion per month over the next three months\",\"Lifts to both the new and reopened 20-year bond auction sizes by $1 billion, starting in August\",\"Increases both the new and reopened 10-year note auction sizes by $3 billion, starting in August\",\"Boosts both the new and reopened 30-year bond auction sizes by $2 billion, starting in August\"]}},{\"id\":\"AYbugYZHRf\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Liquidity</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Treasury</chronohash><br>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.bloomberg.com/news/articles/2023-08-02/us-plans-103-billion-debt-sale-says-issuance-to-keep-rising",
     "utcStartDateTime": "2023-08-08T07:00:00.000Z",
-    "utcEndDateTime": "2023-08-12T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-13T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-08-02T18:15:44.999Z",
-    "utcUpdatedDateTime": "2023-08-02T18:17:30.970Z",
+    "utcUpdatedDateTime": "2023-08-09T16:35:24.312Z",
+    "sentimentScore": 0.10214600339531898,
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "mentions": [
       {
-        "id": 242,
-        "tag": "#Treasury",
+        "id": 343,
+        "tag": "#Liquidity",
         "pinId": 513
       },
       {
-        "id": 243,
-        "tag": "#Liquidity",
+        "id": 344,
+        "tag": "#Treasury",
         "pinId": 513
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 525,
+    "rootThread": false,
+    "title": "$IFF Stock is getting shot -18% after hours. A bellwether name that sells scents to manufacturers of many things commonly found in your bathroom and pantry.",
+    "description": "<p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$IFF</chronodollar>&nbsp; </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bellwether</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Bearish</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691506703063,\"blocks\":[{\"id\":\"Kub4N3i2Cr\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$IFF</chronodollar>&nbsp;\"}},{\"id\":\"xYr0QI9Z81\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bellwether</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Bearish</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/JaguarAnalytics/status/1688704952506499072",
+    "utcStartDateTime": "2023-08-08T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-10T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-08T14:58:12.374Z",
+    "utcUpdatedDateTime": "2023-08-08T14:58:25.780Z",
+    "sentimentScore": -0.8100775070488453,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 401,
+        "originalUrl": "https://twitter.com/JaguarAnalytics/status/1688704952506499072",
+        "type": "2",
+        "authorName": "JaguarAnalytics",
+        "authorUrl": "https://twitter.com/JaguarAnalytics",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\"><a href=\"https://twitter.com/search?q=%24IFF&amp;src=ctag&amp;ref_src=twsrc%5Etfw\">$IFF</a> Stock is getting shot -18% after hours. A bellwether name that sells scents to manufacturers of many things commonly found in your bathroom and pantry. Bad miss and guidance cut. Why? CEO:<br><br>“Volume is now expected to be down mid to high single digits.” <a href=\"https://t.co/a363DM2bT2\">pic.twitter.com/a363DM2bT2</a></p>&mdash; JaguarAnalytics (@JaguarAnalytics) <a href=\"https://twitter.com/JaguarAnalytics/status/1688704952506499072?ref_src=twsrc%5Etfw\">August 8, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 337,
+        "tag": "#Bellwether",
+        "pinId": 525
+      },
+      {
+        "id": 338,
+        "tag": "$IFF",
+        "pinId": 525
+      },
+      {
+        "id": 339,
+        "tag": "#Bearish",
+        "pinId": 525
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 527,
+    "rootThread": false,
+    "title": "Johnson redbook same store sales weekly yoy , core pce yoy",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bearish</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691595850960,\"blocks\":[{\"id\":\"s_bDwGS_tp\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bearish</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1689189521013735424",
+    "utcStartDateTime": "2023-08-09T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-10T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-09T15:44:29.884Z",
+    "sentimentScore": -0.05187226086854935,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 403,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1689189521013735424",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">????????????????????????<br><br>Johnson redbook same store sales weekly yoy , core pce yoy <a href=\"https://t.co/AcBXmsJLtj\">pic.twitter.com/AcBXmsJLtj</a></p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1689189521013735424?ref_src=twsrc%5Etfw\">August 9, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 140,
+        "address": "USA",
+        "order": 0,
+        "pinId": 527
+      }
+    ],
+    "mentions": [
+      {
+        "id": 342,
+        "tag": "#Bearish",
+        "pinId": 527
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 529,
+    "rootThread": false,
+    "title": "Stray Launched on Xbox and you are a Cat",
+    "description": "<div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/n0r67irlT-4\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\"> Stray is one of the most incredibly unique games you could play in 2023, and it has garnered quite the following. The main USP of the game is that&nbsp;you play as a cat, wandering around to discover a hidden civilization with many awesome stories and secrets within. You navigate an&nbsp;open world&nbsp;in the third person. Cat expert and educator&nbsp;<a target=\"_blank\" href=\"https://www.youtube.com/watch?v=mu3QoTT4Oy4\">Jackson Galaxy reacted to the game</a>&nbsp;and was pleasantly surprised with the in-game level of accuracy &amp; depiction of how cats behave. Stray is an amazing indie game that everyone should play, and it’s now launching on Xbox consoles! We have compiled all the details, including Stray’s release date and time, along with price and platform details here. </p>",
+    "sourceDescription": "{\"time\":1691689951705,\"blocks\":[{\"id\":\"H5NiLy2JaK\",\"type\":\"embed\",\"data\":{\"service\":\"youtube\",\"source\":\"https://www.youtube.com/watch?v=n0r67irlT-4\",\"embed\":\"https://www.youtube.com/embed/n0r67irlT-4\",\"width\":580,\"height\":320,\"caption\":\"Stray Review\",\"length\":\"\"}},{\"id\":\"hgncpBuvLD\",\"type\":\"paragraph\",\"data\":{\"text\":\"Stray is one of the most incredibly unique games you could play in 2023, and it has garnered quite the following. The main USP of the game is that&nbsp;you play as a cat, wandering around to discover a hidden civilization with many awesome stories and secrets within. You navigate an&nbsp;open world&nbsp;in the third person. Cat expert and educator&nbsp;<a target=\\\"_blank\\\" href=\\\"https://www.youtube.com/watch?v=mu3QoTT4Oy4\\\">Jackson Galaxy reacted to the game</a>&nbsp;and was pleasantly surprised with the in-game level of accuracy &amp; depiction of how cats behave. Stray is an amazing indie game that everyone should play, and it’s now launching on Xbox consoles! We have compiled all the details, including Stray’s release date and time, along with price and platform details here.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://beebom.com/stray-xbox-release-date-time-price-download-size/",
+    "price": 29.99,
+    "utcStartDateTime": "2023-08-10T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-12T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-10T17:51:03.490Z",
+    "utcUpdatedDateTime": "2023-08-10T17:52:41.413Z",
+    "sentimentScore": 0.9591329969698563,
+    "user": {
+      "id": 2,
+      "userName": "@PrettyGang"
+    },
+    "merchants": [
+      {
+        "id": 61,
+        "label": "Microsoft Xbox Store",
+        "url": "https://www.xbox.com/en-us/games/store/stray/9nmpdq2nrx34",
+        "price": 29.99,
+        "order": 0,
+        "pinId": 529
+      }
+    ],
+    "userId": 2
+  },
+  {
+    "id": 530,
+    "rootThread": false,
+    "title": "How Armored Core 6 is Pushing Replay Value",
+    "description": "<p class=\"paragraph\"> Armored Core 6 may have some of FromSoftware's highest replay value yet, emphasizing player choice and progression at every turn. </p><div class=\"embed\"><iframe class=\"embed-youtube\" frameborder=\"0\" src=\"https://www.youtube.com/embed/Vs2piSWfofQ\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen ></iframe></div><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Mecha</chronohash>&nbsp; </p>",
+    "sourceDescription": "{\"time\":1691725502079,\"blocks\":[{\"id\":\"MGGqVBekik\",\"type\":\"paragraph\",\"data\":{\"text\":\"Armored Core 6 may have some of FromSoftware's highest replay value yet, emphasizing player choice and progression at every turn.\"}},{\"id\":\"D2-Igxczes\",\"type\":\"embed\",\"data\":{\"service\":\"youtube\",\"source\":\"https://youtu.be/Vs2piSWfofQ\",\"embed\":\"https://www.youtube.com/embed/Vs2piSWfofQ\",\"width\":580,\"height\":320,\"caption\":\"Armored Core 6 Trailer\",\"length\":\"\"}},{\"id\":\"EZaREe4AMn\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Mecha</chronohash>&nbsp;\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://gamerant.com/armored-core-6-replay-value-runs-campaign/",
+    "utcStartDateTime": "2023-08-25T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-28T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-11T01:24:21.297Z",
+    "utcUpdatedDateTime": "2023-08-11T03:53:04.673Z",
+    "sentimentScore": 0.9081687813159078,
+    "user": {
+      "id": 2,
+      "userName": "@PrettyGang"
+    },
+    "mentions": [
+      {
+        "id": 351,
+        "tag": "#Mecha",
+        "pinId": 530
+      }
+    ],
+    "userId": 2
+  },
+  {
+    "id": 531,
+    "rootThread": false,
+    "title": "Evergrande offshore bond agreement is due at the end of August",
+    "description": "<p class=\"paragraph\"> <a href=\"https://twitter.com/hashtag/Evergrande?src=hashtag_click\">#Evergrande</a>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Bearish</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691766153192,\"blocks\":[{\"id\":\"BZarzBb9pS\",\"type\":\"paragraph\",\"data\":{\"text\":\"<a href=\\\"https://twitter.com/hashtag/Evergrande?src=hashtag_click\\\">#Evergrande</a>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Bearish</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/MLLNNLmotivator/status/1689975761677975552",
+    "utcStartDateTime": "2023-08-31T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-01T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-11T15:02:56.552Z",
+    "sentimentScore": -0.0371149443089962,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 406,
+        "originalUrl": "https://twitter.com/MLLNNLmotivator/status/1689975761677975552",
+        "type": "2",
+        "authorName": "Dan \"Millennial\" Willis ??????",
+        "authorUrl": "https://twitter.com/MLLNNLmotivator",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\"><a href=\"https://twitter.com/hashtag/Evergrande?src=hash&amp;ref_src=twsrc%5Etfw\">#Evergrande</a> offshore bond agreement is due at the end of August. They require 70% approval for both Class A and C holders. The currently have a 35% approval from the Class C and with only a faltering EV company to offer along with unbuilt residential properties its looking like a…</p>&mdash; Dan &quot;Millennial&quot; Willis ?????? (@MLLNNLmotivator) <a href=\"https://twitter.com/MLLNNLmotivator/status/1689975761677975552?ref_src=twsrc%5Etfw\">August 11, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 141,
+        "address": "China",
+        "order": 0,
+        "pinId": 531
+      }
+    ],
+    "mentions": [
+      {
+        "id": 352,
+        "tag": "#Bearish",
+        "pinId": 531
       }
     ],
     "userId": 1
@@ -14882,6 +15159,52 @@
         "id": 249,
         "tag": "#Fed",
         "pinId": 504
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 528,
+    "rootThread": false,
+    "title": "There's just a 15% chance of a September rate hike being priced into fed funds futures, and a 21% chance of one in November",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Fed</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#FOMC</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Rates</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691674168222,\"blocks\":[{\"id\":\"01XJILgb7X\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Fed</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#FOMC</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Rates</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/lisaabramowicz1/status/1689565450596720640",
+    "utcStartDateTime": "2023-09-20T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-22T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-10T13:29:17.513Z",
+    "utcUpdatedDateTime": "2023-08-10T13:29:33.545Z",
+    "sentimentScore": -0.04288614168763161,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 404,
+        "originalUrl": "https://twitter.com/lisaabramowicz1/status/1689565450596720640",
+        "type": "2",
+        "authorName": "Lisa Abramowicz",
+        "authorUrl": "https://twitter.com/lisaabramowicz1",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">The bond market is telling the Fed it&#39;s done with rate hikes. There&#39;s just a 15% chance of a September rate hike being priced into fed funds futures, and a 21% chance of one in November. The Fed is now expected to start cutting rates in early 2024, according to market pricing <a href=\"https://t.co/CgZsiaIouq\">pic.twitter.com/CgZsiaIouq</a></p>&mdash; Lisa Abramowicz (@lisaabramowicz1) <a href=\"https://twitter.com/lisaabramowicz1/status/1689565450596720640?ref_src=twsrc%5Etfw\">August 10, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 347,
+        "tag": "#Fed",
+        "pinId": 528
+      },
+      {
+        "id": 348,
+        "tag": "#FOMC",
+        "pinId": 528
+      },
+      {
+        "id": 349,
+        "tag": "#rates",
+        "pinId": 528
       }
     ],
     "userId": 1
@@ -15655,6 +15978,47 @@
     "userId": 2
   },
   {
+    "id": 532,
+    "rootThread": false,
+    "title": "Unemployment should end the year in the 4.3%-4.7% band",
+    "description": "<blockquote class=\"twitter-tweet\" class=\"embed-twitter\" ><a href=\"https://twitter.com/SteveMiran/status/1674182008233242627\"></a></blockquote> <script async src=\"//platform.twitter.com/widgets.js\" charset=\"utf-8\"></script><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bearish</chronohash> <chronohash class=\"chrono-hash-highlight\">#Jobs</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691880947075,\"blocks\":[{\"id\":\"cCbasXns4x\",\"type\":\"embed\",\"data\":{\"service\":\"twitter\",\"source\":\"https://twitter.com/SteveMiran/status/1674182008233242627\",\"embed\":\"https://twitframe.com/show?url=https://twitter.com/SteveMiran/status/1674182008233242627\",\"width\":600,\"height\":300,\"caption\":\"Could we see an unemployment rate of 4.7% by year-end\",\"length\":\"\"}},{\"id\":\"y_JUNBaiqt\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bearish</chronohash> <chronohash class=\\\"chrono-hash-highlight\\\">#Jobs</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1690030541817757696",
+    "utcStartDateTime": "2023-12-31T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-12T04:44:38.121Z",
+    "utcUpdatedDateTime": "2023-08-12T22:55:51.799Z",
+    "sentimentScore": -0.20496228896081448,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 407,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1690030541817757696",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Let’s time stamp this. UR should end the year in the 4.3%-4.7% band <br><br>?? <a href=\"https://t.co/0Tpq2COWIf\">https://t.co/0Tpq2COWIf</a></p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1690030541817757696?ref_src=twsrc%5Etfw\">August 11, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 357,
+        "tag": "#Jobs",
+        "pinId": 532
+      },
+      {
+        "id": 358,
+        "tag": "#Bearish",
+        "pinId": 532
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 289,
     "rootThread": false,
     "title": "AMD reveals the new MI300X A.I. chip to challenge Nvidia's dominance",
@@ -15952,6 +16316,55 @@
       "userName": "@PrinceAnime"
     },
     "userId": 3
+  },
+  {
+    "id": 534,
+    "rootThread": false,
+    "title": "Then two more times in 2024 they will add on",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Treasury</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Liquidity</chronohash> </p>",
+    "sourceDescription": "{\"time\":1691881576895,\"blocks\":[{\"id\":\"2a47SkAUeY\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Treasury</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Liquidity</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/dampedspring/status/1689745986628079616",
+    "utcStartDateTime": "2024-02-15T08:00:00.000Z",
+    "utcEndDateTime": "2024-03-01T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-12T23:06:34.025Z",
+    "utcUpdatedDateTime": "2023-08-12T23:06:58.713Z",
+    "sentimentScore": -0.40660375729203224,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 409,
+        "originalUrl": "https://twitter.com/dampedspring/status/1689745986628079616",
+        "type": "2",
+        "authorName": "Andy Constan",
+        "authorUrl": "https://twitter.com/dampedspring",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">one bond doesnt make sense.  So thats what they do when they have maturity proceeds in excess of the cap.  Notice the graph again over the next 5 months they will be at or below the cap.  NO ADD ons will be done in bonds and notes.  Then two more times in 2024 they will add on. <a href=\"https://t.co/0DDzOt9OCU\">pic.twitter.com/0DDzOt9OCU</a></p>&mdash; Andy Constan (@dampedspring) <a href=\"https://twitter.com/dampedspring/status/1689745986628079616?ref_src=twsrc%5Etfw\">August 10, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 145,
+        "address": "USA",
+        "order": 0,
+        "pinId": 534
+      }
+    ],
+    "mentions": [
+      {
+        "id": 363,
+        "tag": "#Treasury",
+        "pinId": 534
+      },
+      {
+        "id": 364,
+        "tag": "#Liquidity",
+        "pinId": 534
+      }
+    ],
+    "userId": 1
   },
   {
     "id": 222,

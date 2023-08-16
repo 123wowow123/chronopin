@@ -239,8 +239,8 @@ $bag-font-color: var(--bag-text-color);
         display: inline-block;
         vertical-align: top;
         margin: 0px 5px 5px; //margin-left: -10px;
-        width: calc(50% - 10px);
-        max-width: $grid-max-width-screen;
+        width: 500px;
+        max-width: 100%;
         position: relative;
         padding-bottom: 13px;
     }
@@ -388,6 +388,10 @@ $bag-font-color: var(--bag-text-color);
         align-items: center;
         justify-content: space-between;
         padding: 10px 0 0;
+        bottom: 7px;
+        left: 0;
+        right: 0;
+        position: absolute;
     }
 
     &__footer-left {

@@ -65,11 +65,10 @@
 /** timeline panels **/
 .grid__panel {
     background: var(--grid-panel-bg-color); //border: 1px solid #d4d4d4;
-    padding: 7px 0px 7px;
+    padding: 7px 0px 51px;
     position: relative;
     border-radius: 8px; //box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
     // max-height: 544px;
-    // min-height: 544px;
 
     &:focus,
     &:hover {
@@ -89,9 +88,15 @@
             // text-decoration: none;
         }
     }
+
+    &.\--twitter {
+        height: 558px;
+    }
 }
 
 pin-block {
+    //min-height: 558px;
+
     display: inline-block;
     width: 550px;
     max-width: 100%;
@@ -107,7 +112,7 @@ pin-block {
         position: relative;
         background: #fff;
         border: 1px solid rgba(201, 201, 204, 0.48);
-        box-shadow: 0 1px 3px rgba(0,0,0, .1);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
         border-radius: 6px;
         will-change: filter;
         animation: link-in 450ms 1 cubic-bezier(0.215, 0.61, 0.355, 1);

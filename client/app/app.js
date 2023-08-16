@@ -21,7 +21,6 @@ angular.module('chronopinNodeApp', [
   'validation.match',
   'angular-loading-bar',
   'ig.linkHeaderParser',
-  'angularGrid',
   'ng-sortable'
 ])
   .config(($urlRouterProvider, $locationProvider, $sceProvider) => {

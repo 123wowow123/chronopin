@@ -232,8 +232,7 @@
 
   <div class="pin_suggestions">
 
-    <ul class="dynamic-grid" angular-grid="$ctrl.pinsQuery" cssGrid="true" ag-refresh-on-img-load="false"
-      ag-reflowed="$ctrl.reflowed($event)">
+    <ul class="dynamic-grid" >
       <li id="{{pin.id}}" class="grid" data-ng-repeat="pin in $ctrl.pinsQuery">
 
         <pin-block pin="pin" config="$ctrl.appConfig"></pin-block>

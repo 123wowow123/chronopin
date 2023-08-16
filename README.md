@@ -510,23 +510,74 @@ This is a promotional article about one of the company partners with Interesting
 
 ## Merketing
 
-Demo Chronopin: 
-If your new to using Chronopin, welcome, this will be an absolute beginner's guide. Chronopin is a social event bookmarking app. An event in the Chronopin lingo stand for content that has a time component. 
+### Demo Chronopin: 
+Hello There ~
+If your New to using Chronopin, Welcome, 
+this will be an Absolute Beginner's guide on how to use Chronpin on a Mobile device. 
 
-We can access the site by typing in Chronopin.com
-Once we are on the site, right off the bat you can see pins that are taged for today. And as you scroll down you can see future events and scroll up for historical events. 
+First of all what is Chronopin? 
+Well it is a social bookmarking site that pins any content that has a time component to it
 
-https://www.chronopin.com/pin/165
-You can click a pin to see the full content and other people's comments. I like to post a comment but you need to be logged in into to do so. So I'll click login. 
+Now this can be an Article that Talks about a Game release date. 
+Or a key Financial date that might move your investments. 
+And by pinning these dates, you and other Internet Friends can Track and be Reminded of the Events when it Arrives
 
-I'll login using google and it'll bring me back to the pin once logged in.
-Here I'll say "Can't wait, this game's been 20 years in the making !"
+Now you can Go to the Site by typing in Chronopin.com
+Once we are at the site, 
+right off the bat, 
+you can see pins that are tagged for today. 
+And you can Scroll Down you can see Future events and Scroll Up shows historical events All in a Linear Timeline
 
-I'll scroll down to see if there's any other recommendation pins that interest me.
-Or maybe I'll click the logo to go the main timeline and scroll down to discover more things occuring in the future
+And you can Click on Any pin to see the full Content as well as other people's Comments 
+and if you Scroll down, you can see similar Suggested Pins you might like as well
 
+Now I like to Create a pin, so I'll First have to Login
+I'll type in my Email and Password and Submit
+And then it'll bring me back to the original Pin I was Looking at
 
-Founder Introduction:
+And to Create a Pin 
+I can either Respond to a pin by clicking here on 'Respond'
+which you will be able to Create a Thread as a continuation of this pin
+Or I can create a standalone pin.
+
+I'm going to just create a Standalone Game Release pin right now, 
+Click the 'Create' menu item on the Top right 
+and it'll ask me the Source of this Article that I like to pin which Contains the Release Date
+
+The site will do a quick Scrape of the Page and provide some suggested content to post.
+While it's Processing, I will enter the date manually
+
+Now the Scraping has Completed, I can see the Suggested Contents.
+I think the Text is good, but I'll also like Copy and Paste a Youtube Game Trailer to the content
+I can do that by by simply Pasting in the Url of the Youtube video into the Content block.
+The youtube will show up and I can give it a caption for some Contexts and for better Searchablity
+I'll also Hashtag #Mecha for easy Search as well.
+
+I'll scroll down and preview the pin
+I'll disable the Suggested Header image, as the Youtube video already provides a good Visual for the Pin
+I'll click submit to post
+
+And here I'm done
+
+It'll bring me to the Pin Posted and it looks good. 
+The AI also has Generated a Sentiment score for this pin which is Neat
+
+I can click the Top Logo to go the Main Timeline again, to see what Other things are happening.
+And that is a High Level Overview on how to use Chronopin.
+
+Thanks for watching
+
+____
+
+https://gamerant.com/armored-core-6-replay-value-runs-campaign/
+
+August 25
+
+https://www.youtube.com/watch?v=Vs2piSWfofQ
+
+ARMORED CORE VI FIRES OF RUBICON — Story Trailer
+
+### Founder Introduction:
 
 Hi, my name is ______
 I am the founder and developer of Chronopin.
@@ -535,10 +586,10 @@ For as long as I'be been using the internet, I have been constantly looking for 
 
 past, present and especially future events. 
 
-With Chronopin, you can now Track and Pin anything on the interent To a Date
+With Chronopin, you can now Track and Pin anything on the internet To a Date
 
-and with it's Social Featues, 
-You and Other Like Minding people can colaborate to share your Thoughts and Feelings about the Event Throughout it's Lifecycle
+and with it's Social Features, 
+You and Other Like Minding people can collaborate to share your Thoughts and Feelings about the Event Throughout it's Lifecycle
 
 In a sense Chronopin will be able to harness wisdom of the crowd 
 and Anyone can Equip Themselves with that Wisdom -
@@ -553,12 +604,6 @@ I still see people using the same Tired Outlook Calendar or Excel workflows
 To Track and Socialize Time sensitive content. 
 Which they invariably get in lost Silos.
 
-
-
- 
-
-
-------
 After dreaming for a better replacement
 
 I Now having Create a Working App for such use case, 
@@ -568,3 +613,13 @@ I'd like to Now Additionally request for some YC Pixie Dust to help Accelerate t
 And I humbly request that we Disrupt 
 the way we Use and Socialize  +++
 our Event Calendars. 
+
+------
+### Short Description
+
+Chronopin allows you to track and Pin anything on the internet to a date.
+It's Social Features allows you and other like minding people to collaborate and share your thoughts and feelings about an event throughout it's Lifecycle
+
+In a sense Chronopin will be able to harness the wisdom of the crowd and anyone can equip themselves with that wisdom. All this is done through an simple Pin and Reminder System.
+
+Visit: www.chronopin.com

@@ -19,6 +19,8 @@ move sorting type icon and profile need to be fixed ++++
 bell icon should have switch to all follow ++++
 create @chronopin account on threads and reddit ane etc
 
+apply other incubators +++
+
 
 link not external ++
 https://www.chronopin.com/pin/504
@@ -49,6 +51,9 @@ user submitted sentiment score
 UI for all following / follower +
 embed pin ++
 need better date data ui ++
+do not hide twitter cuttoff+++++++++++++++
+https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/
+
 
 push notification reminder ++
 add twitter oauth ++ and link remindeme feature on twitter
@@ -61,7 +66,6 @@ https://stackoverflow.com/questions/29209244/css-floating-action-button
 animated gif height issue it's streched out ++
 pin needs min height and remove min heigth of twitter ++
 
-A founder intro video is required to submit. +++
 Anything that shows us how the product works +++
 
 menu slide in from side
@@ -213,6 +217,8 @@ Build search - https://medium.com/mlearning-ai/search-rank-and-recommendations-3
 Spotlight - show right side panel of things favorited in the next 30 days. Click link to scroll to item
 Trending - same as above but for trending. Also show local trending
 Support multiple end dates per pin
+
+Treading in next 7,15,30 days use tags for sumerization AI
 
 Create a workout routine for 7 days etc with pins (can refer to 2020, 2021 etc workout routine)
 

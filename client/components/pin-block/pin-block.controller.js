@@ -187,7 +187,7 @@
             // templateUrl throws render timing off and causes issues with infinite scroll
             //templateUrl: 'components/pin-block/pin-block.html',
             template: `
-            <article class="grid__panel" ng-class="{ '\--disabled': $ctrl.disableLink }">
+            <article class="grid__panel" ng-class="{ '\--disabled': $ctrl.disableLink, '\--twitter': $ctrl.pin.media[0].type === 2 }">
             <p ng-if="$ctrl.showSearchScore">{{$ctrl.pin.searchScore}}</p>
             <div class="grid__content" ng-style="$ctrl.scrollHeightLessOne($ctrl.contentEl)">
                 <div class="grid__headline">
