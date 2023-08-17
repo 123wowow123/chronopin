@@ -14756,6 +14756,54 @@
     "userId": 2
   },
   {
+    "id": 535,
+    "rootThread": false,
+    "title": "BOJ actions in coming months is possibly the most under appreciated risk in global macro",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bearish</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Liquidity</chronohash> </p>",
+    "sourceDescription": "{\"time\":1692111362273,\"blocks\":[{\"id\":\"TdsAxMwjxe\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bearish</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Liquidity</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/PauloMacro/status/1641769531373658113",
+    "utcStartDateTime": "2023-08-15T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-16T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-15T14:56:18.589Z",
+    "sentimentScore": -0.6269345246255398,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 410,
+        "originalUrl": "https://twitter.com/PauloMacro/status/1641769531373658113",
+        "type": "2",
+        "authorName": "Paulo Macro",
+        "authorUrl": "https://twitter.com/PauloMacro",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Japan data overnight - scorching.<br><br>BOJ actions in coming months is possibly the most underappreciated risk in global macro. <a href=\"https://t.co/EHRdiJr7vL\">pic.twitter.com/EHRdiJr7vL</a></p>&mdash; Paulo Macro (@PauloMacro) <a href=\"https://twitter.com/PauloMacro/status/1641769531373658113?ref_src=twsrc%5Etfw\">March 31, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 146,
+        "address": "Japan",
+        "order": 0,
+        "pinId": 535
+      }
+    ],
+    "mentions": [
+      {
+        "id": 365,
+        "tag": "#Bearish",
+        "pinId": 535
+      },
+      {
+        "id": 366,
+        "tag": "#Liquidity",
+        "pinId": 535
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 530,
     "rootThread": false,
     "title": "How Armored Core 6 is Pushing Replay Value",
@@ -14974,6 +15022,14 @@
       {
         "id": 245,
         "tag": "$AAPL",
+        "pinId": 392
+      }
+    ],
+    "favorites": [
+      {
+        "id": 18,
+        "utcCreatedDateTime": "2023-08-17T16:49:34.785Z",
+        "userId": 1,
         "pinId": 392
       }
     ],
@@ -16522,6 +16578,59 @@
       }
     ],
     "userId": 2
+  },
+  {
+    "id": 536,
+    "rootThread": false,
+    "title": "Larger add ons will be done in bonds and notes in Feb and May in 2024",
+    "description": "<p class=\"paragraph\"> <a href=\"https://www.newyorkfed.org/markets/treasury-reinvestments-purchases-faq-190805\">FAQs: Treasury Reinvestments – Purchases</a> </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bonds</chronohash> <chronohash class=\"chrono-hash-highlight\">#Fed</chronohash> <chronohash class=\"chrono-hash-highlight\">#AddOns</chronohash> </p>",
+    "sourceDescription": "{\"time\":1692294662019,\"blocks\":[{\"id\":\"RqjKWb5ndh\",\"type\":\"paragraph\",\"data\":{\"text\":\"<a href=\\\"https://www.newyorkfed.org/markets/treasury-reinvestments-purchases-faq-190805\\\">FAQs: Treasury Reinvestments – Purchases</a>\"}},{\"id\":\"sjiQL6ksMc\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bonds</chronohash> <chronohash class=\\\"chrono-hash-highlight\\\">#Fed</chronohash> <chronohash class=\\\"chrono-hash-highlight\\\">#AddOns</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/dampedspring/status/1689745988330688513",
+    "utcStartDateTime": "2024-05-15T07:00:00.000Z",
+    "utcEndDateTime": "2024-05-16T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-17T17:51:09.643Z",
+    "sentimentScore": 0.04588765744119883,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 411,
+        "originalUrl": "https://twitter.com/dampedspring/status/1689745988330688513",
+        "type": "2",
+        "authorName": "Andy Constan",
+        "authorUrl": "https://twitter.com/dampedspring",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">See the light green bar.  Thats the Fed&#39;s holdings of TBILLS.  They add on in the tbill auction literally every day.  Also when the Blue line is below the cap they let the amount of bills necessary to get to the cap mature.  Thats the little dark green column <a href=\"https://t.co/xexlj8DfjK\">pic.twitter.com/xexlj8DfjK</a></p>&mdash; Andy Constan (@dampedspring) <a href=\"https://twitter.com/dampedspring/status/1689745988330688513?ref_src=twsrc%5Etfw\">August 10, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 147,
+        "address": "USA",
+        "order": 0,
+        "pinId": 536
+      }
+    ],
+    "mentions": [
+      {
+        "id": 367,
+        "tag": "#Bonds",
+        "pinId": 536
+      },
+      {
+        "id": 368,
+        "tag": "#Fed",
+        "pinId": 536
+      },
+      {
+        "id": 369,
+        "tag": "#AddOns",
+        "pinId": 536
+      }
+    ],
+    "userId": 1
   },
   {
     "id": 195,
