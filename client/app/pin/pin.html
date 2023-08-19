@@ -155,7 +155,6 @@
                   <button type="button" class="grid__favorite --remove" title="Remove Like Pin"
                     ng-click="!$ctrl.disableLink && $ctrl.removeLike($ctrl.pin)" ng-switch-when="true">
                     <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> {{$ctrl.pin.likeCount}}</button>
-
                 </div>
 
                 <div class="grid__tip" ng-if="$ctrl.isAdmin() || $ctrl.pinIsCreatedByUser">

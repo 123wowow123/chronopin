@@ -15,6 +15,7 @@
       padding: 0;
       height: 25px;
       width: 25px;
+
       @media only screen and (max-width: $ipad-landscape) {
         display: none;
       }
@@ -25,20 +26,23 @@
     background-color: var(--primary-bg-color);
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
   }
 
   &__preview {
     min-width: 0;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 44px;
     flex-grow: 1;
     flex-basis: $ipad-landscape / 2;
+    position: relative;
 
     &.\--wide {
       flex-basis: 100%;
     }
 
     @media only screen and (max-width: $ipad-landscape) {
-      padding: 15px 0;
+      padding: 15px 0 44px 0;
     }
   }
 
@@ -109,6 +113,7 @@
     pin-block {
       min-width: 0;
       width: 100%;
+
       img {
         max-width: 100%;
         height: auto;

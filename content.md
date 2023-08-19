@@ -35,6 +35,9 @@ create/edit/respond page needs to have auth guard +
 changing username needs to sync to comment +
 show pixel dimention / size via tooltip?? of scraped image +
 missing description validation
+fix edit button +++
+
+Per month and other denominations for MSRP
 
 quick add Q2 etc
 default does not select media but when selected it will auto check pin header media
