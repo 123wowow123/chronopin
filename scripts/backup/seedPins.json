@@ -14807,14 +14807,15 @@
     "id": 538,
     "rootThread": false,
     "title": "Monetary policy of what is still largest reserve currency, is very tight in real terms, you create an internal demand differential between US and ROW which results in a soaring $",
-    "description": "<p class=\"paragraph\"> Higher <chronodollar class=\"chrono-dollar-highlight\">$Bonds</chronodollar>&nbsp;prices Higher <chronodollar class=\"chrono-dollar-highlight\">$Dollar</chronodollar> </p>",
-    "sourceDescription": "{\"time\":1692376605182,\"blocks\":[{\"id\":\"eIzh1BBy8f\",\"type\":\"paragraph\",\"data\":{\"text\":\"Higher <chronodollar class=\\\"chrono-dollar-highlight\\\">$Bonds</chronodollar>&nbsp;prices Higher <chronodollar class=\\\"chrono-dollar-highlight\\\">$Dollar</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "description": "<p class=\"paragraph\"> Higher <chronohash class=\"chrono-hash-highlight\">#Bonds</chronohash>&nbsp;prices Higher <chronohash class=\"chrono-hash-highlight\">#Dollar</chronohash> </p>",
+    "sourceDescription": "{\"time\":1692418990133,\"blocks\":[{\"id\":\"eIzh1BBy8f\",\"type\":\"paragraph\",\"data\":{\"text\":\"Higher <chronohash class=\\\"chrono-hash-highlight\\\">#Bonds</chronohash>&nbsp;prices Higher <chronohash class=\\\"chrono-hash-highlight\\\">#Dollar</chronohash>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1692569331266150812",
     "utcStartDateTime": "2023-08-18T07:00:00.000Z",
-    "utcEndDateTime": "2023-08-19T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-20T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-08-18T16:37:10.998Z",
-    "sentimentScore": -0.05786097794771194,
+    "utcUpdatedDateTime": "2023-08-19T04:23:21.515Z",
+    "sentimentScore": -0.0817766860127449,
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -14831,13 +14832,13 @@
     ],
     "mentions": [
       {
-        "id": 370,
-        "tag": "$Bonds",
+        "id": 372,
+        "tag": "#Bonds",
         "pinId": 538
       },
       {
-        "id": 371,
-        "tag": "$Dollar",
+        "id": 373,
+        "tag": "#Dollar",
         "pinId": 538
       }
     ],
