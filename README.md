@@ -591,8 +591,8 @@ With Chronopin, you can now Track and Pin anything on the internet To a Date
 and with it's Social Features, 
 You and Other Like Minding people can collaborate to share your Thoughts and Feelings about the Event Throughout it's Lifecycle
 
-In a sense Chronopin will be able to harness wisdom of the crowd 
-and Anyone can Equip Themselves with that Wisdom -
+In a sense Chronopin will be able to harness the wisdom of the crowd 
+and Anyone can Equip Themselves with that Wisdom
 All this is done Through as simple Pin and Reminder System.
 
 It also has the Ability to Suggest similar Events, Relavant to your Time and Place 
@@ -613,6 +613,21 @@ I'd like to Now Additionally request for some YC Pixie Dust to help Accelerate t
 And I humbly request that we Disrupt 
 the way we Use and Socialize  +++
 our Event Calendars. 
+
+
+---
+
+For as long as I've been using the internet, I have been constantly looking for better ways to track and organize past, present and especially future events. With Chronopin, you can now track and pin anything on the internet to a date and with it's social features, You and other like minded people can collaborate to share your thoughts and Feelings about the event throughout it's lifecycle. In a sense Chronopin will be able to harness the wisdom of the crowd and anyone can equip themselves with that wisdom. All this is done through as simple pin and reminder system.
+
+It also has the Ability to Suggest similar Events, Relavant to your Time and Place and it Uses the latest generation of AIs Models to always find something Interesting for you to Follow. After working in the Tech Industry for more then 15 years
+
+I still see people using the same Tired Outlook Calendar or Excel workflows 
+To Track and Socialize Time sensitive content. 
+Which they invariably get in lost Silos.
+
+After dreaming for a better replacement for a reminder calendar I now have created a working app for such use case.
+
+I'd like to Now Additionally request for some YC Pixie Dust to help Accelerate this transformation
 
 ------
 ### Short Description
