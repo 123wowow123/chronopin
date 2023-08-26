@@ -9,7 +9,7 @@
         data-ad-format="auto" data-full-width-responsive="true"></ins>
     </div>
 
-    <div class="pin__preview" ng-class="{ '\--wide': $ctrl.wide}">
+    <div class="pin__preview" ng-class="{ '\--wide': $ctrl.wide, '\--merchant': $ctrl.pin.merchants }">
 
       <div class="pin__panel" ng-if="$ctrl.pinReady">
 
@@ -90,6 +90,7 @@
           <div class="grid__description" ng-if="$ctrl.pin.description">
             <compile-me html="{{$ctrl.pin.description}}"></compile-me>
           </div>
+
           <div class="grid__footer">
 
             <div class="grid__footer-left">

@@ -633,8 +633,17 @@ I'd like to Now Additionally request for some YC Pixie Dust to help Accelerate t
 ### Short Description
 
 Chronopin allows you to track and Pin anything on the internet to a date.
-It's Social Features allows you and other like minding people to collaborate and share your thoughts and feelings about an event throughout it's Lifecycle
+It's Social Features allows you and other like minding people to collaborate and share your thoughts and feelings about an event throughout it's lifecycle.
 
-In a sense Chronopin will be able to harness the wisdom of the crowd and anyone can equip themselves with that wisdom. All this is done through an simple Pin and Reminder System.
+In a sense Chronopin will be able to harness the wisdom of the crowd and anyone can equip themselves with that wisdom. All this is done through a simple Pin and Reminder System.
 
 Visit: www.chronopin.com
+
+
+### Shorter Description
+------
+Chronopin allows you to track and pin anything on the internet to a date. It allows you and other like minding people to collaborate and share your thoughts and feelings about an event throughout it's lifecycle and allows people to tap into the the wisdom of the crowd.
+
+### Winning team
+------
+I have been working in the tech industry building award winning apps at every company I have worked for so far. On top of that I was able to find time to create a working demo for my vision. I am a superbly quick learner and even though I majored in Business Management I picked up Software Engineering and ML skills on my own each not taking longer then 6 months. I will continue to grow fiercely to bring my latest venture to success. 
