@@ -9,7 +9,7 @@
         data-ad-format="auto" data-full-width-responsive="true"></ins>
     </div>
 
-    <div class="pin__preview" ng-class="{ '\--wide': $ctrl.wide, '\--merchant': $ctrl.pin.merchants }">
+    <div class="pin__preview" ng-class="{ '\--wide': $ctrl.wide, '\--merchant': $ctrl.hasMerchantPricing($ctrl.pin) }">
 
       <div class="pin__panel" ng-if="$ctrl.pinReady">
 

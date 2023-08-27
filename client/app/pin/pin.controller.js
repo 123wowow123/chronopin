@@ -168,6 +168,10 @@
       return this.shareDataMemoized(pin);
     }
 
+    hasMerchantPricing(pin) {
+      return _.get(pin, 'merchants.length') || typeof (_.get(pin, 'price')) === "number"
+    }
+
   }
 
   angular.module('chronopinNodeApp')
