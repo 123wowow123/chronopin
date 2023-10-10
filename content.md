@@ -214,6 +214,8 @@ Learn to summerize content - train using summery tag and full html body
 
 Improvement Idea:
 
+Add target price and use ml to give weight by likes, views, etc and have hud for polular metrics for certain taxonomies
+
 remind me later @memtion on twitter/reddit to autopin
 easy search - https://medium.datadriveninvestor.com/context-based-search-using-bert-8957d25feaa9
 Build search - https://medium.com/mlearning-ai/search-rank-and-recommendations-35cc717772cb
