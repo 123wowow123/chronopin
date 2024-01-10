@@ -14264,6 +14264,40 @@
     "userId": 1
   },
   {
+    "id": 540,
+    "rootThread": false,
+    "title": "Around 40% of the German PPI were in deflation in July",
+    "sourceUrl": "https://twitter.com/OliverRakau/status/1693527056468828199",
+    "utcStartDateTime": "2023-08-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-21T14:17:21.851Z",
+    "sentimentScore": -0.05790577828884125,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 413,
+        "originalUrl": "https://twitter.com/OliverRakau/status/1693527056468828199",
+        "type": "2",
+        "authorName": "Oliver Rakau",
+        "authorUrl": "https://twitter.com/OliverRakau",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Around 40% of the German PPI were in deflation in July. <a href=\"https://t.co/5Mv5idCHHe\">pic.twitter.com/5Mv5idCHHe</a></p>&mdash; Oliver Rakau (@OliverRakau) <a href=\"https://twitter.com/OliverRakau/status/1693527056468828199?ref_src=twsrc%5Etfw\">August 21, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 151,
+        "address": "Germany",
+        "order": 0,
+        "pinId": 540
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 494,
     "rootThread": false,
     "title": "Refunding announcement coming in a few days (Aug 2) and will show a marked pick-up in coupon issuance. Net net there will be over $ 1 t of net additional coupons issued 24 vs 23",
@@ -14871,6 +14905,50 @@
     "userId": 2
   },
   {
+    "id": 542,
+    "rootThread": false,
+    "title": "Employee Retention Credit (ERC) $120 billion yet to be distributed",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bullish</chronohash> </p>",
+    "sourceDescription": "{\"time\":1693005642338,\"blocks\":[{\"id\":\"5_IAYbnazK\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bullish</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/SpecialSitsNews/status/1695053783321977033",
+    "price": 120000000000,
+    "utcStartDateTime": "2023-08-25T07:00:00.000Z",
+    "utcEndDateTime": "2023-08-26T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-25T23:21:07.794Z",
+    "sentimentScore": 0.11891091614961624,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 415,
+        "originalUrl": "https://twitter.com/SpecialSitsNews/status/1695053783321977033",
+        "type": "2",
+        "authorName": "Special Situations ?? Research Newsletter (Jay)",
+        "authorUrl": "https://twitter.com/SpecialSitsNews",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">“Recently, the IRS has accelerated payouts from a pandemic-era tax benefit known as the Employee Retention Credit (ERC). We estimate over $220 billion has been disbursed so far ($130 billion this fiscal year) and data on outstanding claims suggests there’s at least another $120… <a href=\"https://t.co/PdYWyOuCP7\">pic.twitter.com/PdYWyOuCP7</a></p>&mdash; Special Situations ?? Research Newsletter (Jay) (@SpecialSitsNews) <a href=\"https://twitter.com/SpecialSitsNews/status/1695053783321977033?ref_src=twsrc%5Etfw\">August 25, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 153,
+        "address": "USA",
+        "order": 0,
+        "pinId": 542
+      }
+    ],
+    "mentions": [
+      {
+        "id": 378,
+        "tag": "#Bullish",
+        "pinId": 542
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 531,
     "rootThread": false,
     "title": "Evergrande offshore bond agreement is due at the end of August",
@@ -15034,6 +15112,87 @@
     "userId": 1
   },
   {
+    "id": 544,
+    "rootThread": false,
+    "title": "China is in trouble. Housing sales are down ~30%, starts down ~60% and home prices are down ~10-20% from their peaks in many cities",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1697576598319288561",
+    "utcStartDateTime": "2023-09-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-09-01T15:16:37.124Z",
+    "utcUpdatedDateTime": "2023-09-05T16:26:45.220Z",
+    "sentimentScore": -0.6451032003387809,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 416,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1697576598319288561",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Let me just clarify what’s happening here. It’s not « financial media report ». China is in trouble. Housing sales are down ~30%, starts down ~60% and home prices are down ~10-20% from their peaks in many cities. This is dramatic for an economy where construction (defined widely… <a href=\"https://t.co/d08ud0ss45\">https://t.co/d08ud0ss45</a></p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1697576598319288561?ref_src=twsrc%5Etfw\">September 1, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 158,
+        "address": "China",
+        "order": 0,
+        "pinId": 544
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 548,
+    "rootThread": false,
+    "title": "GlobalFoundries opens $4 billion Singapore expansion fab to meet 'demand for essential semiconductor chips'",
+    "description": "<p class=\"paragraph\"> U.S.-headquartered<a href=\"https://www.cnbc.com/quotes/GFS/\">&nbsp;GlobalFoundries</a>&nbsp;announced Tuesday the opening of its $4 billion expansion fabrication plant in Singapore as the contract chipmaker expects “growth in demand for essential semiconductor chips.” </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Chips</chronohash> </p>",
+    "sourceDescription": "{\"time\":1694497176817,\"blocks\":[{\"id\":\"ZYX2C5oHpS\",\"type\":\"paragraph\",\"data\":{\"text\":\"U.S.-headquartered<a href=\\\"https://www.cnbc.com/quotes/GFS/\\\">&nbsp;GlobalFoundries</a>&nbsp;announced Tuesday the opening of its $4 billion expansion fabrication plant in Singapore as the contract chipmaker expects “growth in demand for essential semiconductor chips.”\"}},{\"id\":\"bAJRuUIeYk\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Chips</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/09/12/globalfoundries-singapore-expansion.html",
+    "price": 4000000000,
+    "utcStartDateTime": "2023-09-11T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-12T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-09-12T05:39:39.000Z",
+    "sentimentScore": 0.45314049860462546,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 420,
+        "thumbName": "85909347-d3c6-4f43-99eb-d5e1f1c15461-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107298162-1694399900464-gettyimages-1245265681-GERMANY_GLOBALFOUNDRIES.jpeg?v=1694489405&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 161,
+        "address": "Singapore",
+        "order": 0,
+        "pinId": 548
+      }
+    ],
+    "mentions": [
+      {
+        "id": 387,
+        "tag": "#Chips",
+        "pinId": 548
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 392,
     "rootThread": true,
     "title": "iPhone 15 Anticipated Changes",
@@ -15041,12 +15200,12 @@
     "sourceDescription": "{\"time\":1687844560301,\"blocks\":[{\"id\":\"8QbL1dzAlu\",\"type\":\"header\",\"data\":{\"text\":\"USB-C\",\"level\":2}},{\"id\":\"0dUudlc1v2\",\"type\":\"paragraph\",\"data\":{\"text\":\"Apple is swapping the Lightning port on the iPhone 15 devices for a USB-C port, which will allow it to comply with new regulations implemented in Europe. These regulations require Apple to produce iPhones with USB-C ports in Europe.\"}},{\"id\":\"od7l69bJ4Q\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/8ac78eb5-81a9-4d2e-a3b7-ffc1d34f4841-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":563}},\"caption\":\"Apple is swapping the Lightning port on the iPhone 15 devices for a USB-C port\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"NTLVAgZjtt\",\"type\":\"header\",\"data\":{\"text\":\"USB-C Data Transfer Speeds\",\"level\":3}},{\"id\":\"Xk5-n0SQsS\",\"type\":\"paragraph\",\"data\":{\"text\":\"The iPhone 15 Pro models with USB-C ports will&nbsp;<a href=\\\"https://www.macrumors.com/2022/11/16/iphone-15-high-speed-data-transfer/\\\">support higher-speed data transfers</a>, while the standard iPhone 15 models will continue to feature USB 2.0 speeds, the same as Lightning, giving the Pro models an edge.\"}},{\"id\":\"Mz5w1VGRLP\",\"type\":\"paragraph\",\"data\":{\"text\":\"According to Apple analyst Ming-Chi Kuo, the iPhone 15 Pro models will support \\\"at least\\\" USB 3.2 or Thunderbolt 3. With the upgrade, iPhone 15 Pro models would be able to transfer video and other file types at much quicker speeds. USB 2.0 transfer speeds are limited to 480Mb/s, while USB 3.2 supports speeds up to 20Gb/s. If Apple offers Thunderbolt 3 support for the iPhone 15 Pro models, data transfer speeds could be up to 40Gb/s.\"}},{\"id\":\"rbUDTc5nTv\",\"type\":\"header\",\"data\":{\"text\":\"Pill-and-hole cutout will expand to the entire lineup\",\"level\":2}},{\"id\":\"N70uwsJIU7\",\"type\":\"paragraph\",\"data\":{\"text\":\"Rumors suggest the iPhone 15 models&nbsp;<a href=\\\"https://www.macrumors.com/2022/03/07/face-id-dual-hole-design-iphone-14-pro/\\\">will look similar</a>&nbsp;to the iPhone 14 models, but the pill-and-hole cutout will expand to the entire lineup. That means&nbsp;<a href=\\\"https://www.macrumors.com/2022/05/10/all-iphone-15-models-pill-and-hole-rumor/\\\">all iPhone 15 models</a>&nbsp;will have no notch, instead adopting the&nbsp;<a href=\\\"https://www.macrumors.com/2022/07/12/the-macrumors-show-ross-young/\\\">Dynamic Island</a>&nbsp;introduced in the iPhone 14 Pro models.\"}},{\"id\":\"l9tN1wkN0F\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/6638b21e-0ba5-4ae5-92f3-0c24a91af59a-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":563}},\"caption\":\"iPhone 15&nbsp;pill-and-hole cutout will expand to the entire lineup\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"BfsVI4gZY_\",\"type\":\"header\",\"data\":{\"text\":\"Camera Updates\",\"level\":2}},{\"id\":\"EOoLQOit_p\",\"type\":\"paragraph\",\"data\":{\"text\":\"Apple is expected to adopt Sony's latest \\\"state of the art\\\"&nbsp;<a href=\\\"https://www.macrumors.com/2022/11/28/iphone-15-sony-image-sensor/\\\">image sensors</a>&nbsp;for the iPhone 15 models. Compared to standard sensors, Sony's image sensor doubles the saturation signal in each pixel, allowing it to capture more light to cut down on underexposure and overexposure. The sensor will allow for improvements in portraits and other images even when strong backlighting is an issue.\"}},{\"id\":\"jzUz-Ovkpe\",\"type\":\"paragraph\",\"data\":{\"text\":\"Sony is using semiconductor architecture that puts photodiodes and transistors in separate layers, allowing for more photodiodes. It is not clear if all of the iPhone 15 models will use the new sensor technology, or if Apple will limit it to the higher-end \\\"Pro\\\" iPhone 15 models.\"}},{\"id\":\"_CqP1mKdyg\",\"type\":\"paragraph\",\"data\":{\"text\":\"The iPhone 15 and iPhone 15 Plus models&nbsp;<a href=\\\"https://www.macrumors.com/2023/05/14/iphone-15-and-15-plus-48mp-camera/\\\">could adopt</a>&nbsp;the 48-megapixel camera that was introduced in the iPhone 14 Pro models, according to analyst Jeff Pu. The updated lens has a sensor that captures more light for improved image quality.\"}},{\"id\":\"_r0SwdUqqT\",\"type\":\"header\",\"data\":{\"text\":\"Periscope Zoom Lens Technology for iPhone 15 Pro Max\",\"level\":3}},{\"id\":\"Ascdo1fcrL\",\"type\":\"paragraph\",\"data\":{\"text\":\"You've probably heard rumors about Apple's plan to adopt a&nbsp;<a href=\\\"https://www.macrumors.com/guide/periscope-lens/\\\">periscope zoom lens</a>&nbsp;for the iPhone 15, but it will be limited to the&nbsp;<a href=\\\"https://www.macrumors.com/2022/07/14/periscope-lens-iphone-15-pro-max-kuo/\\\">larger-sized iPhone 15 Pro Max</a>. The iPhone 15 Pro will get a standard zoom lens, and the iPhone 15 models will be limited to the Wide and Ultra Wide lenses.\"}},{\"id\":\"1F_GG6ZBwB\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/a43c8a48-0149-441e-98f3-b24358cfa680-chrono-lg.webp\",\"attributes\":{\"width\":800,\"height\":450}},\"caption\":\"Periscope Zoom Lens Technology for iPhone 15 Pro Max\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"xZVXRotp2V\",\"type\":\"paragraph\",\"data\":{\"text\":\"Periscope lens technology offers optical zoom capabilities that exceed those possible with a standard telephoto lens, allowing for 5x or&nbsp;<a href=\\\"https://www.macrumors.com/2022/01/03/iphone-15-pro-periscope-lens-rumor/\\\">even 10x optical zoom</a>. With a periscope lens, the iPhone's zoom capabilities would be significantly enhanced as the current Pro models are limited to 3x zoom.\"}},{\"id\":\"U9_OIqwYP3\",\"type\":\"paragraph\",\"data\":{\"text\":\"With a periscope lens, light is reflected by an angled mirror toward the image sensor in the camera. The directional shift allows for a \\\"folded\\\" telephoto lens system for improved optical zoom capabilities without the blurriness that comes with digital zoom.\"}},{\"id\":\"QsPWDFHEZX\",\"type\":\"paragraph\",\"data\":{\"text\":\"Apple competitor Samsung has come out with smartphones that use periscope lens technology that enables 4x to 10x optical zoom and up to 100x digital zoom. Apple analyst Ming-Chi Kuo believes that Apple will implement&nbsp;<a href=\\\"https://www.macrumors.com/2022/07/14/periscope-lens-iphone-15-pro-max-kuo/\\\">6x optical zoom technology</a>&nbsp;when it adopts the periscope lens.\"}},{\"id\":\"Xr-TnGfCPv\",\"type\":\"header\",\"data\":{\"text\":\"A-Series Chips\",\"level\":2}},{\"id\":\"sME-IWqbi-\",\"type\":\"paragraph\",\"data\":{\"text\":\"The iPhone 15 Pro models are expected to be the first to feature an A-series chip built on Apple supplier TSMC's next-generation 3-nanometer node. 3nm chip technology is expected to increase processing performance by 10 to 15 percent, while also reducing power consumption by&nbsp;<a href=\\\"https://www.macrumors.com/2022/12/30/iphone-15-pro-a17-bionic-battery-life/\\\">up to 35 percent</a>.\"}},{\"id\":\"Kne5wV7UHL\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/7ea3c303-fa60-4909-a4f0-e37e0e75728b-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":563}},\"caption\":\"A-series chip built on Apple supplier TSMC's next-generation 3-nanometer node\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"GQ19-Qpwaq\",\"type\":\"paragraph\",\"data\":{\"text\":\"The faster chips will be limited to the iPhone 15 Pro and Pro Max, while the iPhone 15 and iPhone 15 Plus will adopt the 4-nanometer A16 chip that was first used in the iPhone 14 Pro and iPhone 14 Pro Max.\"}},{\"id\":\"0oiFGGU6Qz\",\"type\":\"header\",\"data\":{\"text\":\"Wi-Fi 6E and UWB\",\"level\":2}},{\"id\":\"eZAin-hch6\",\"type\":\"paragraph\",\"data\":{\"text\":\"eaked&nbsp;<a href=\\\"https://www.macrumors.com/2023/01/27/wifi-6e-iphone-15-pro-models/\\\">iPhone 15 Wi-Fi chip diagrams</a>&nbsp;confirm that Apple is upgrading to Wi-Fi 6E, but it is a feature that will be limited to the iPhone 15 Pro models. The iPhone 15 Pro and iPhone 15 Pro Max will feature Wi-Fi 6E, but the standard iPhone 15 models will continue to use Wi-Fi 6.\"}},{\"id\":\"WuLxD9354P\",\"type\":\"paragraph\",\"data\":{\"text\":\"Compared to Wi-Fi 6, Wi-Fi 6E offers more bandwidth, providing faster connectivity speeds, lower latency, and increased capacity. Wi-Fi 6E provides 1.2GHz more spectrum in the 6GHz band, and it can support whole home gigabit coverage, multi-gigabit connectivity for venues, and it has the bandwidth for higher data streams like those used for AR and VR experiences.\"}},{\"id\":\"Bjl-t_ZhAz\",\"type\":\"paragraph\",\"data\":{\"text\":\"The iPhone 15 models are&nbsp;<a href=\\\"https://www.macrumors.com/2023/06/19/iphone-15-new-u1-chip-vision-pro-headset/\\\">expected to include</a>&nbsp;a next-generation Ultra Wideband chip that will integrate with the Vision Pro headset. The processor used for the chip will be upgraded to 7nm, a change that will allow for improved performance and/or reduced energy consumption.\"}},{\"id\":\"ajqU5eTCEa\",\"type\":\"header\",\"data\":{\"text\":\"Color Options\",\"level\":3}},{\"id\":\"0JwLrgaiXa\",\"type\":\"paragraph\",\"data\":{\"text\":\"The iPhone 15 models&nbsp;<a href=\\\"https://www.macrumors.com/2023/02/23/iphone-15-color-options/\\\">could be available</a>&nbsp;in dark pink and light blue color options. Apple often offers the standard iPhone models in a range of bright colors, and this year is no exception.\"}},{\"id\":\"YXj2_5yAjZ\",\"type\":\"image\",\"data\":{\"file\":{\"url\":\"https://chronopin.blob.core.windows.net/thumb/4bed5c24-ea31-4c0f-8de9-895c9b2a8d47-chrono-lg.webp\",\"attributes\":{\"width\":1000,\"height\":563}},\"caption\":\"iPhone 15 models&nbsp;could be available&nbsp;in dark pink and light blue color options\",\"withBorder\":false,\"stretched\":false,\"withBackground\":false}},{\"id\":\"WFJFkeCb1_\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$AAPL</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.macrumors.com/roundup/iphone-15/",
     "price": 799,
-    "utcStartDateTime": "2023-09-05T07:00:00.000Z",
-    "utcEndDateTime": "2023-09-08T07:00:00.000Z",
+    "utcStartDateTime": "2023-09-12T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-13T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-26T18:26:39.095Z",
-    "utcUpdatedDateTime": "2023-06-27T05:43:00.912Z",
-    "sentimentScore": 0.44753864547237754,
+    "utcUpdatedDateTime": "2023-09-05T16:24:38.921Z",
+    "sentimentScore": 0.4674933487549424,
     "user": {
       "id": 4,
       "userName": "@GadgetWorld"
@@ -15061,7 +15220,7 @@
     ],
     "mentions": [
       {
-        "id": 245,
+        "id": 380,
         "tag": "$AAPL",
         "pinId": 392
       }
@@ -15083,12 +15242,12 @@
     "description": "<h2>Apple Watch Series 9: Rumored new features</h2><p class=\"paragraph\"> The Apple Watch Series 9 isn’t expected to be a major upgrade over the last year’s models, which featured the introduction of the Apple Watch Ultra with a larger screen, rugged titanium design, and an Action button. According to&nbsp;<a href=\"https://go.redirectingat.com/?id=111346X1569486&amp;url=https://twitter.com/markgurman/status/1642624542458904576&amp;xcust=1-1-1472709-1-0-0&amp;sref=https://www.macworld.com/article/1472709/apple-watch-series-9-rumors-specs-features-price-release.html\" rel=\"nofollow\">a tweet from Mark Gurman</a>, the Apple Watch Series 9 upgrades will be “anything but major,” with the new model “poised for a more modest year.” He adds that Apple is planning “a major update to the watch hardware in 2024, complete with a larger, custom-built&nbsp;display. </p><h3>Action button</h3><p class=\"paragraph\"> Last year Apple introduced the all-new&nbsp;<a href=\"https://www.macworld.com/article/1364168/apple-watch-ultra-review.html\">Apple Watch Ultra</a>&nbsp;with a dizzying array of features and components. The newest member of the Apple Watch family featured a more rugged design, flat edges, and a slightly larger display (49mm vs 45mm on the Apple Watch Series 8), along with a surprising new feature: the Action button. </p><p class=\"paragraph\"> The Action button is located on the opposite side of the Digital Crown and would easily fit on the Apple Watch Series 9. On the Ultra you can set it to trigger specific tasks such as a stopwatch, workout, or flashlight, functionality that would be an excellent upgrade to the existing Apple Watch design. </p><h3>S9 chip</h3><p class=\"paragraph\"> If you look at the tech specs for every new Apple Watch, you’ll see a new chip listed. The Series 8 has an S8 chip, the Series 7 has an S7, and the Series 6 has an S6. The only thing that’s weird is that they’re all the same chip with different names. While the S6 delivered a 20 percent boost in performance over the Series 5, the S7 and S8 are rebranded versions of the same processor according to teardowns and Apple’s conspicuous commission of any sort of performance improvements. But the S9 is rumored to change that, with&nbsp;<a href=\"https://www.macworld.com/article/1814061/apple-watch-series-9-processor-a15-performance-battery-life.html\">a design based on the A15</a>&nbsp;that brings a boost in performance and battery life, and maybe a Neural Engine built into the chip. </p><h3>Dual-Frequency GPS&nbsp;</h3><p class=\"paragraph\"> Like the iPhone 14 Pro, the Apple Watch Ultra upgraded its GPS to include the L5 band in addition to the standard L1 for faster and more precise location tracking. Even if you’re not hiking in steep terrain, the extra band would be handy in busy city areas where the standard Watch can struggle. Apple has a habit of introducing new features on high-end models and then trickling them down to the lower-end models, and we think that very well could happen here. </p><h3>5G</h3><p class=\"paragraph\"> Thus far, Apple Watches are one of the few remaining Apple devices that hasn’t been updated to 5G—even the high-end Apple Watch Ultra has 4G LTE. With the Apple Watch moving closer toward complete independence, having the fastest connection available seems like a good idea<i>.</i> </p><h2>Apple Watch Series 9: watchOS 10</h2><p class=\"paragraph\"> One thing we know for sure about the Apple Watch Series 9 is that it will ship with watchOS 10. Like always, you can expect a few new watch faces—possibly a couple that are exclusive to the new model—and a new feature or two. However, this year’s update could be more substantial than usual. A&nbsp;<a href=\"https://www.macworld.com/article/1788333/watchos-10-apple-watch-updated-interface-enhancements.html\">report by Mark Gurman in April</a>&nbsp;claimed that watchOS 10 “will be the focus” of Apple’s 2023 watch strategy, bringing “bigger enhancements, including an updated interface.” He added that watchOS 10 “will tell you most of what you need to know about the Apple Watch in 2023,” meaning the hardware upgrades will be minor compared to the Series 8. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$AAPL</chronodollar> </p>",
     "sourceDescription": "{\"time\":1687845297107,\"blocks\":[{\"id\":\"PpnarYZdPK\",\"type\":\"header\",\"data\":{\"text\":\"Apple Watch Series 9: Rumored new features\",\"level\":2}},{\"id\":\"gZqZ8qXE7g\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Apple Watch Series 9 isn’t expected to be a major upgrade over the last year’s models, which featured the introduction of the Apple Watch Ultra with a larger screen, rugged titanium design, and an Action button. According to&nbsp;<a href=\\\"https://go.redirectingat.com/?id=111346X1569486&amp;url=https://twitter.com/markgurman/status/1642624542458904576&amp;xcust=1-1-1472709-1-0-0&amp;sref=https://www.macworld.com/article/1472709/apple-watch-series-9-rumors-specs-features-price-release.html\\\" rel=\\\"nofollow\\\">a tweet from Mark Gurman</a>, the Apple Watch Series 9 upgrades will be “anything but major,” with the new model “poised for a more modest year.” He adds that Apple is planning “a major update to the watch hardware in 2024, complete with a larger, custom-built&nbsp;display.\"}},{\"id\":\"_a449Jqr0G\",\"type\":\"header\",\"data\":{\"text\":\"Action button\",\"level\":3}},{\"id\":\"7Nl0oFfMx6\",\"type\":\"paragraph\",\"data\":{\"text\":\"Last year Apple introduced the all-new&nbsp;<a href=\\\"https://www.macworld.com/article/1364168/apple-watch-ultra-review.html\\\">Apple Watch Ultra</a>&nbsp;with a dizzying array of features and components. The newest member of the Apple Watch family featured a more rugged design, flat edges, and a slightly larger display (49mm vs 45mm on the Apple Watch Series 8), along with a surprising new feature: the Action button.\"}},{\"id\":\"9hDPpKGQj6\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Action button is located on the opposite side of the Digital Crown and would easily fit on the Apple Watch Series 9. On the Ultra you can set it to trigger specific tasks such as a stopwatch, workout, or flashlight, functionality that would be an excellent upgrade to the existing Apple Watch design.\"}},{\"id\":\"up8DrJOtmU\",\"type\":\"header\",\"data\":{\"text\":\"S9 chip\",\"level\":3}},{\"id\":\"MqK5Mfjzgh\",\"type\":\"paragraph\",\"data\":{\"text\":\"If you look at the tech specs for every new Apple Watch, you’ll see a new chip listed. The Series 8 has an S8 chip, the Series 7 has an S7, and the Series 6 has an S6. The only thing that’s weird is that they’re all the same chip with different names. While the S6 delivered a 20 percent boost in performance over the Series 5, the S7 and S8 are rebranded versions of the same processor according to teardowns and Apple’s conspicuous commission of any sort of performance improvements. But the S9 is rumored to change that, with&nbsp;<a href=\\\"https://www.macworld.com/article/1814061/apple-watch-series-9-processor-a15-performance-battery-life.html\\\">a design based on the A15</a>&nbsp;that brings a boost in performance and battery life, and maybe a Neural Engine built into the chip.\"}},{\"id\":\"i4UrbE5s-E\",\"type\":\"header\",\"data\":{\"text\":\"Dual-Frequency GPS&nbsp;\",\"level\":3}},{\"id\":\"WKX-n7sqKw\",\"type\":\"paragraph\",\"data\":{\"text\":\"Like the iPhone 14 Pro, the Apple Watch Ultra upgraded its GPS to include the L5 band in addition to the standard L1 for faster and more precise location tracking. Even if you’re not hiking in steep terrain, the extra band would be handy in busy city areas where the standard Watch can struggle. Apple has a habit of introducing new features on high-end models and then trickling them down to the lower-end models, and we think that very well could happen here.\"}},{\"id\":\"uAmx-7BcZD\",\"type\":\"header\",\"data\":{\"text\":\"5G\",\"level\":3}},{\"id\":\"V-_pqPoJPW\",\"type\":\"paragraph\",\"data\":{\"text\":\"Thus far, Apple Watches are one of the few remaining Apple devices that hasn’t been updated to 5G—even the high-end Apple Watch Ultra has 4G LTE. With the Apple Watch moving closer toward complete independence, having the fastest connection available seems like a good idea<i>.</i>\"}},{\"id\":\"CJpc-cWpgo\",\"type\":\"header\",\"data\":{\"text\":\"Apple Watch Series 9: watchOS 10\",\"level\":2}},{\"id\":\"P5CWHvExFU\",\"type\":\"paragraph\",\"data\":{\"text\":\"One thing we know for sure about the Apple Watch Series 9 is that it will ship with watchOS 10. Like always, you can expect a few new watch faces—possibly a couple that are exclusive to the new model—and a new feature or two. However, this year’s update could be more substantial than usual. A&nbsp;<a href=\\\"https://www.macworld.com/article/1788333/watchos-10-apple-watch-updated-interface-enhancements.html\\\">report by Mark Gurman in April</a>&nbsp;claimed that watchOS 10 “will be the focus” of Apple’s 2023 watch strategy, bringing “bigger enhancements, including an updated interface.” He added that watchOS 10 “will tell you most of what you need to know about the Apple Watch in 2023,” meaning the hardware upgrades will be minor compared to the Series 8.\"}},{\"id\":\"ClmNx_SpeZ\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$AAPL</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.macworld.com/article/1472709/apple-watch-series-9-rumors-specs-features-price-release.html",
-    "utcStartDateTime": "2023-09-05T07:00:00.000Z",
-    "utcEndDateTime": "2023-09-07T07:00:00.000Z",
+    "utcStartDateTime": "2023-09-12T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-13T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-06-26T18:37:04.297Z",
-    "utcUpdatedDateTime": "2023-06-27T05:55:03.535Z",
-    "sentimentScore": 0.23741156607866287,
+    "utcUpdatedDateTime": "2023-09-05T16:25:12.422Z",
+    "sentimentScore": 0.23015650454908607,
     "user": {
       "id": 4,
       "userName": "@GadgetWorld"
@@ -15107,7 +15266,7 @@
     ],
     "mentions": [
       {
-        "id": 246,
+        "id": 382,
         "tag": "$AAPL",
         "pinId": 393
       }
@@ -15122,12 +15281,12 @@
     "description": "<p class=\"paragraph\"> Apple is likely to release a USB-C charging case for AirPods Pro alongside the launch of the iPhone 15 lineup this fall, according to&nbsp;Bloomberg's Mark Gurman. </p><p class=\"paragraph\"> Writing in his latest&nbsp;<a href=\"https://www.bloomberg.com/news/newsletters/2023-07-02/apple-airpods-plans-hearing-test-body-temperature-cheaper-models-usb-c-ljlfwffu\">Power On newsletter</a>, Gurman said the shift was in line with the same switch from Lightning to USB-C that is expected to happen across the iPhone 15 series this year. </p><p class=\"paragraph\"> Apple analyst Ming-Chi Kuo reported in&nbsp;<a href=\"https://www.macrumors.com/2023/03/24/airpods-pro-2-usb-c-later-this-year/\">March</a>&nbsp;that Apple would release a second-generation AirPods Pro with a USB-C charging case later this year. Kuo said it was unclear if any other hardware changes are planned for AirPods Pro in 2023. Gurman's report suggests not. </p><p class=\"paragraph\"> Meanwhile on the software side, Gurman said Apple is developing a new hearing test feature for AirPods Pro that is designed to detect possible hearing issues. The new hearing test feature, which is coming in addition to&nbsp;<a href=\"https://www.macrumors.com/2023/06/05/airpods-gaining-adaptive-audio/\">other AirPods features arriving as part of iOS 17</a>, will \"play different tones and sounds to allow the AirPods to determine how well a person can hear,\" said the&nbsp;Bloomberg&nbsp;reporter. </p><p class=\"paragraph\"> Looking further ahead, Gurman also reiterated previous rumors that Apple is working on developing&nbsp;<a href=\"https://www.macrumors.com/2023/03/12/gurman-airpods-to-gain-hearing-health-features/\">additional health sensors</a>&nbsp;for future generations of AirPods. One is the ability to read body temperature from the ear canal, a method believed to be more accurate than reading temperature from the wrist, which is what Apple Watch Series 8 and Ultra models do while users sleep. </p><p class=\"paragraph\"> Separately, Gurman says Apple is exploring how it could better position AirPods as a hearing aid by building on existing features like&nbsp;<a href=\"https://www.macrumors.com/how-to/enable-conversation-boost-airpods-pro/\">Conversation Boost</a>&nbsp;and&nbsp;<a href=\"https://www.macrumors.com/how-to/use-live-listen-feature-with-airpods-ios-12/\">Live Listen</a>. Neither feature has regulatory approval yet, but the FDA last year eased hearing aid purchase rules, which has reportedly spurred Apple to hire engineers from traditional hearing aid makers and take advantage of the opening in the market. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$AAPL</chronodollar> </p>",
     "sourceDescription": "{\"time\":1688428741320,\"blocks\":[{\"id\":\"MDO0nfIHzf\",\"type\":\"paragraph\",\"data\":{\"text\":\"Apple is likely to release a USB-C charging case for AirPods Pro alongside the launch of the iPhone 15 lineup this fall, according to&nbsp;Bloomberg's Mark Gurman.\"}},{\"id\":\"hheBoNR0wG\",\"type\":\"paragraph\",\"data\":{\"text\":\"Writing in his latest&nbsp;<a href=\\\"https://www.bloomberg.com/news/newsletters/2023-07-02/apple-airpods-plans-hearing-test-body-temperature-cheaper-models-usb-c-ljlfwffu\\\">Power On newsletter</a>, Gurman said the shift was in line with the same switch from Lightning to USB-C that is expected to happen across the iPhone 15 series this year.\"}},{\"id\":\"I9bcGii6pJ\",\"type\":\"paragraph\",\"data\":{\"text\":\"Apple analyst Ming-Chi Kuo reported in&nbsp;<a href=\\\"https://www.macrumors.com/2023/03/24/airpods-pro-2-usb-c-later-this-year/\\\">March</a>&nbsp;that Apple would release a second-generation AirPods Pro with a USB-C charging case later this year. Kuo said it was unclear if any other hardware changes are planned for AirPods Pro in 2023. Gurman's report suggests not.\"}},{\"id\":\"cMNCZLLDcI\",\"type\":\"paragraph\",\"data\":{\"text\":\"Meanwhile on the software side, Gurman said Apple is developing a new hearing test feature for AirPods Pro that is designed to detect possible hearing issues. The new hearing test feature, which is coming in addition to&nbsp;<a href=\\\"https://www.macrumors.com/2023/06/05/airpods-gaining-adaptive-audio/\\\">other AirPods features arriving as part of iOS 17</a>, will \\\"play different tones and sounds to allow the AirPods to determine how well a person can hear,\\\" said the&nbsp;Bloomberg&nbsp;reporter.\"}},{\"id\":\"5OCPNJU3LG\",\"type\":\"paragraph\",\"data\":{\"text\":\"Looking further ahead, Gurman also reiterated previous rumors that Apple is working on developing&nbsp;<a href=\\\"https://www.macrumors.com/2023/03/12/gurman-airpods-to-gain-hearing-health-features/\\\">additional health sensors</a>&nbsp;for future generations of AirPods. One is the ability to read body temperature from the ear canal, a method believed to be more accurate than reading temperature from the wrist, which is what Apple Watch Series 8 and Ultra models do while users sleep.\"}},{\"id\":\"ZqQ1WhT3uR\",\"type\":\"paragraph\",\"data\":{\"text\":\"Separately, Gurman says Apple is exploring how it could better position AirPods as a hearing aid by building on existing features like&nbsp;<a href=\\\"https://www.macrumors.com/how-to/enable-conversation-boost-airpods-pro/\\\">Conversation Boost</a>&nbsp;and&nbsp;<a href=\\\"https://www.macrumors.com/how-to/use-live-listen-feature-with-airpods-ios-12/\\\">Live Listen</a>. Neither feature has regulatory approval yet, but the FDA last year eased hearing aid purchase rules, which has reportedly spurred Apple to hire engineers from traditional hearing aid makers and take advantage of the opening in the market.\"}},{\"id\":\"s91EoEH5Tx\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$AAPL</chronodollar>\"}}],\"version\":\"2.26.5\"}",
     "sourceUrl": "https://www.macrumors.com/2023/07/03/apple-airpods-pro-usb-c-case/",
-    "utcStartDateTime": "2023-09-05T07:00:00.000Z",
-    "utcEndDateTime": "2023-09-08T07:00:00.000Z",
+    "utcStartDateTime": "2023-09-12T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-13T07:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2023-07-03T23:58:50.428Z",
-    "utcUpdatedDateTime": "2023-07-04T00:48:04.437Z",
-    "sentimentScore": 0.26968973875045776,
+    "utcUpdatedDateTime": "2023-09-05T16:25:43.142Z",
+    "sentimentScore": 0.2602533381432295,
     "user": {
       "id": 3,
       "userName": "@PrinceAnime"
@@ -15146,12 +15305,155 @@
     ],
     "mentions": [
       {
-        "id": 247,
+        "id": 383,
         "tag": "$AAPL",
         "pinId": 438
       }
     ],
     "userId": 3
+  },
+  {
+    "id": 550,
+    "rootThread": false,
+    "title": "REAL not nominal iPhone pricesare down pretty much across",
+    "description": "<p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$AAPL</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1694618932496,\"blocks\":[{\"id\":\"1CzW0d-cY2\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$AAPL</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1701970345006084385",
+    "utcStartDateTime": "2023-09-13T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-14T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-09-13T15:29:03.633Z",
+    "sentimentScore": 0.0009334534406662,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 422,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1701970345006084385",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Shall we look at REAL not nominal iPhone prices? <br><br>They’re down pretty much across. <br><br>When renaming to bPhone for broke? just kidding ofc… Apple is invincible… <a href=\"https://t.co/M4vwPhkepf\">pic.twitter.com/M4vwPhkepf</a></p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1701970345006084385?ref_src=twsrc%5Etfw\">September 13, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 390,
+        "tag": "$AAPL",
+        "pinId": 550
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 545,
+    "rootThread": false,
+    "title": "Why auto worker strikes against GM, Ford and Stellantis seem inevitable",
+    "description": "<p class=\"paragraph\"> The union’s bulldog new leader has repeatedly vowed to drive a hard bargain with Detroit automakers&nbsp;<a href=\"https://www.cnbc.com/quotes/GM/\">General Motors</a>,&nbsp;<a href=\"https://www.cnbc.com/quotes/F/\">Ford Motor</a>&nbsp;and&nbsp;<a href=\"https://www.cnbc.com/quotes/STLA/\">Stellantis</a>&nbsp;in contract negotiations ahead of an expiration at 11:59 p.m. on Sept 14. </p><p class=\"paragraph\"> A strike against GM in 2019 during the last round of contract negotiations lasted 40 days and cost the automaker $3.6 billion in earnings that year, GM reported at the time. </p>",
+    "sourceDescription": "{\"time\":1693673495394,\"blocks\":[{\"id\":\"mcZoMwYMRN\",\"type\":\"paragraph\",\"data\":{\"text\":\"The union’s bulldog new leader has repeatedly vowed to drive a hard bargain with Detroit automakers&nbsp;<a href=\\\"https://www.cnbc.com/quotes/GM/\\\">General Motors</a>,&nbsp;<a href=\\\"https://www.cnbc.com/quotes/F/\\\">Ford Motor</a>&nbsp;and&nbsp;<a href=\\\"https://www.cnbc.com/quotes/STLA/\\\">Stellantis</a>&nbsp;in contract negotiations ahead of an expiration at 11:59 p.m. on Sept 14.\"}},{\"id\":\"STmqsFgozr\",\"type\":\"paragraph\",\"data\":{\"text\":\"A strike against GM in 2019 during the last round of contract negotiations lasted 40 days and cost the automaker $3.6 billion in earnings that year, GM reported at the time.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/09/02/uaw-strikes-at-gm-ford-stellantis-seem-inevitable.html",
+    "utcStartDateTime": "2023-09-14T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-15T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-09-02T16:51:40.065Z",
+    "sentimentScore": -0.3286016099154949,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 417,
+        "thumbName": "b6ce24dc-0135-40a2-92b2-8799d733d394-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107291710-1692904781275-IMG_7673.JPG?v=1693656001&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 156,
+        "address": "USA",
+        "order": 0,
+        "pinId": 545
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 551,
+    "rootThread": false,
+    "title": "Biggest car price drops since January:",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Disinflation</chronohash> </p>",
+    "sourceDescription": "{\"time\":1694700434354,\"blocks\":[{\"id\":\"V4tErJvIwe\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Disinflation</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/GuyDealership/status/1701949377156178149",
+    "utcStartDateTime": "2023-09-14T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-15T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-09-14T14:07:30.762Z",
+    "sentimentScore": -0.7405644245445728,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 423,
+        "originalUrl": "https://twitter.com/GuyDealership/status/1701949377156178149",
+        "type": "2",
+        "authorName": "CarDealershipGuy",
+        "authorUrl": "https://twitter.com/GuyDealership",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Biggest price drops since January: <a href=\"https://t.co/ptVxxQ6BRW\">pic.twitter.com/ptVxxQ6BRW</a></p>&mdash; CarDealershipGuy (@GuyDealership) <a href=\"https://twitter.com/GuyDealership/status/1701949377156178149?ref_src=twsrc%5Etfw\">September 13, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 391,
+        "tag": "#Disinflation",
+        "pinId": 551
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 552,
+    "rootThread": false,
+    "title": "student loans + medicaid + the infamous ERTC + Child care rolling off",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Disinflation</chronohash> </p>",
+    "sourceDescription": "{\"time\":1694876586979,\"blocks\":[{\"id\":\"1hauEw4smL\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Disinflation</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1702367462451212499",
+    "utcStartDateTime": "2023-09-14T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-15T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-09-16T15:03:27.576Z",
+    "sentimentScore": -0.6123242415487766,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 424,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1702367462451212499",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Oil price impact on inflation is secondary to it’s impact on growth this time around. This combination of Oil + $ is a wrecking ball. For EM obviously, but also for the US Consumer who managed to overcome one of the highest stress period since the early 80s (measured by…</p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1702367462451212499?ref_src=twsrc%5Etfw\">September 14, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 392,
+        "tag": "#Disinflation",
+        "pinId": 552
+      }
+    ],
+    "userId": 1
   },
   {
     "id": 213,
@@ -15307,6 +15609,40 @@
     "userId": 1
   },
   {
+    "id": 539,
+    "rootThread": false,
+    "title": "The university told the Union-Tribune that 2,343 undergraduate, graduate and professional students are on housing lists for the fall quarter",
+    "description": "<p class=\"paragraph\"> The shortage most directly affects undergraduates, which account for 1,919 of the students needing a bed. That figure is about 650 students higher than the undergraduate bed&nbsp;<a href=\"https://www.sandiegouniontribune.com/news/education/story/2021-07-18/housing-shortage-uc-san-diego\">shortage&nbsp;</a>that occurred two years ago. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Housing</chronohash> </p>",
+    "sourceDescription": "{\"time\":1692579833995,\"blocks\":[{\"id\":\"cp1mlqBl1K\",\"type\":\"paragraph\",\"data\":{\"text\":\"The shortage most directly affects undergraduates, which account for 1,919 of the students needing a bed. That figure is about 650 students higher than the undergraduate bed&nbsp;<a href=\\\"https://www.sandiegouniontribune.com/news/education/story/2021-07-18/housing-shortage-uc-san-diego\\\">shortage&nbsp;</a>that occurred two years ago.\"}},{\"id\":\"nrZ4cP8IgE\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Housing</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.sandiegouniontribune.com/news/education/story/2023-08-16/new-campus-housing-shortage-leaves-nearly-2-000-uc-san-diego-undergraduates-on-waiting-list-for-beds",
+    "utcStartDateTime": "2023-09-25T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-27T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-20T22:38:44.839Z",
+    "utcUpdatedDateTime": "2023-08-21T01:03:56.883Z",
+    "sentimentScore": -0.34915567748248577,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "locations": [
+      {
+        "id": 150,
+        "address": "San Diego",
+        "order": 0,
+        "pinId": 539
+      }
+    ],
+    "mentions": [
+      {
+        "id": 374,
+        "tag": "#Housing",
+        "pinId": 539
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 239,
     "rootThread": false,
     "title": "Meta Quest 3 Coming This Fall",
@@ -15337,6 +15673,49 @@
         "id": 250,
         "tag": "$META",
         "pinId": 239
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 149,
+    "rootThread": false,
+    "title": "The MSG Sphere is the largest sphere in the world, planned to open in Las Vegas in the second half of 2023.",
+    "description": "<p class=\"paragraph\">   The MSG Sphere is the largest spherical building in the world, providing Las Vegas' No. 1 immersive show experience. MSG Sphere interior screen measures 19,000 by 13,500 pixels covering a space that is more than three football pitches. It is 100 times crisper and more detailed than the best world-class HD TVs in the market.   </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$MSGS</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1687846740769,\"blocks\":[{\"id\":\"OR4r27YACs\",\"type\":\"paragraph\",\"data\":{\"text\":\"  The MSG Sphere is the largest spherical building in the world, providing Las Vegas' No. 1 immersive show experience. MSG Sphere interior screen measures 19,000 by 13,500 pixels covering a space that is more than three football pitches. It is 100 times crisper and more detailed than the best world-class HD TVs in the market.  \"}},{\"id\":\"MSuWWsonIP\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$MSGS</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://1oaklasvegas.com/msg-sphere-las-vegas/",
+    "price": 2000000000,
+    "utcStartDateTime": "2023-09-29T07:00:00.000Z",
+    "utcEndDateTime": "2023-09-30T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-03-11T03:18:25.589Z",
+    "utcUpdatedDateTime": "2023-11-21T06:19:13.762Z",
+    "sentimentScore": 0.8267024736851455,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 329,
+        "originalUrl": "//www.youtube.com/embed/Q2kN6LONlWw",
+        "type": "3",
+        "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Q2kN6LONlWw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+      }
+    ],
+    "locations": [
+      {
+        "id": 182,
+        "address": "MSG Sphere, Las Vegas",
+        "order": 0,
+        "pinId": 149
+      }
+    ],
+    "mentions": [
+      {
+        "id": 407,
+        "tag": "$MSGS",
+        "pinId": 149
       }
     ],
     "userId": 1
@@ -15403,6 +15782,40 @@
     "userId": 1
   },
   {
+    "id": 543,
+    "rootThread": false,
+    "title": "Funding for the federal government is set to run out on Sept. 30 unless action is taken by Congress",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#GovernmentShutdown</chronohash> </p>",
+    "sourceDescription": "{\"time\":1693580656539,\"blocks\":[{\"id\":\"cUxse6Vti9\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#GovernmentShutdown</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/08/31/white-house-asks-congress-for-short-term-funding-to-avoid-shutdown.html",
+    "utcStartDateTime": "2023-09-30T07:00:00.000Z",
+    "utcEndDateTime": "2023-10-01T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-09-01T15:05:31.227Z",
+    "utcUpdatedDateTime": "2023-09-08T04:58:13.567Z",
+    "sentimentScore": -0.6032745894044638,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "locations": [
+      {
+        "id": 160,
+        "address": "USA",
+        "order": 0,
+        "pinId": 543
+      }
+    ],
+    "mentions": [
+      {
+        "id": 385,
+        "tag": "#GovernmentShutdown",
+        "pinId": 543
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 230,
     "parentId": 224,
     "rootThread": false,
@@ -15451,6 +15864,15 @@
         "pinId": 230
       }
     ],
+    "likes": [
+      {
+        "id": 6,
+        "like": true,
+        "utcCreatedDateTime": "2023-08-26T17:06:42.573Z",
+        "userId": 1,
+        "pinId": 230
+      }
+    ],
     "userId": 1
   },
   {
@@ -15490,6 +15912,15 @@
       {
         "id": 12,
         "utcCreatedDateTime": "2023-07-31T18:34:52.965Z",
+        "userId": 1,
+        "pinId": 308
+      }
+    ],
+    "likes": [
+      {
+        "id": 5,
+        "like": true,
+        "utcCreatedDateTime": "2023-08-26T17:06:39.307Z",
         "userId": 1,
         "pinId": 308
       }
@@ -15536,6 +15967,23 @@
       {
         "id": 256,
         "tag": "#StudentLoan",
+        "pinId": 343
+      }
+    ],
+    "favorites": [
+      {
+        "id": 19,
+        "utcCreatedDateTime": "2023-08-26T17:06:23.150Z",
+        "userId": 1,
+        "pinId": 343
+      }
+    ],
+    "likes": [
+      {
+        "id": 4,
+        "like": true,
+        "utcCreatedDateTime": "2023-08-26T17:06:38.401Z",
+        "userId": 1,
         "pinId": 343
       }
     ],
@@ -15630,6 +16078,74 @@
     "userId": 1
   },
   {
+    "id": 555,
+    "rootThread": false,
+    "title": "Kaiser Permanente workers say they are unlikely to reach deal to avert strike",
+    "description": "<p class=\"paragraph\"> Earlier in September, more than 75,000 Kaiser health-care workers called for a strike from Oct. 4 to Oct.7 across California, Oregon, Washington, Colorado, Virginia and Washington DC, in what would be the largest healthcare workers’ strike, according to the coalition. </p>",
+    "sourceDescription": "{\"time\":1696224643359,\"blocks\":[{\"id\":\"GyiIyfpLvF\",\"type\":\"paragraph\",\"data\":{\"text\":\"Earlier in September, more than 75,000 Kaiser health-care workers called for a strike from Oct. 4 to Oct.7 across California, Oregon, Washington, Colorado, Virginia and Washington DC, in what would be the largest healthcare workers’ strike, according to the coalition.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/10/01/kaiser-permanente-workers-say-they-are-unlikely-to-reach-deal-to-avert-strike.html",
+    "utcStartDateTime": "2023-10-04T07:00:00.000Z",
+    "utcEndDateTime": "2023-10-08T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-10-02T05:31:59.305Z",
+    "sentimentScore": -0.5427454588934779,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 427,
+        "thumbName": "2a884abe-95f7-4299-bd40-922c23fe9984-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107303156-16951434442023-09-19t145330z_513235578_rc2qb3a285es_rtrmadp_0_usa-labor-kaiser-permanente.jpeg?v=1696191958&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 164,
+        "address": "California",
+        "order": 0,
+        "pinId": 555
+      },
+      {
+        "id": 165,
+        "address": "Oregon",
+        "order": 1,
+        "pinId": 555
+      },
+      {
+        "id": 166,
+        "address": "Washington",
+        "order": 2,
+        "pinId": 555
+      },
+      {
+        "id": 167,
+        "address": "Colorado",
+        "order": 3,
+        "pinId": 555
+      },
+      {
+        "id": 168,
+        "address": "Washington DC",
+        "order": 5,
+        "pinId": 555
+      },
+      {
+        "id": 169,
+        "address": "Virginia",
+        "order": 4,
+        "pinId": 555
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 166,
     "parentId": 165,
     "rootThread": false,
@@ -15673,44 +16189,486 @@
     "userId": 1
   },
   {
-    "id": 149,
+    "id": 563,
     "rootThread": false,
-    "title": "The MSG Sphere is the largest sphere in the world, planned to open in Las Vegas in the second half of 2023.",
-    "description": "<p class=\"paragraph\">   The MSG Sphere is the largest spherical building in the world, providing Las Vegas' No. 1 immersive show experience. MSG Sphere interior screen measures 19,000 by 13,500 pixels covering a space that is more than three football pitches. It is 100 times crisper and more detailed than the best world-class HD TVs in the market.   </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$MSGS</chronodollar> </p>",
-    "sourceDescription": "{\"time\":1687846740769,\"blocks\":[{\"id\":\"OR4r27YACs\",\"type\":\"paragraph\",\"data\":{\"text\":\"  The MSG Sphere is the largest spherical building in the world, providing Las Vegas' No. 1 immersive show experience. MSG Sphere interior screen measures 19,000 by 13,500 pixels covering a space that is more than three football pitches. It is 100 times crisper and more detailed than the best world-class HD TVs in the market.  \"}},{\"id\":\"MSuWWsonIP\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$MSGS</chronodollar>\"}}],\"version\":\"2.26.5\"}",
-    "sourceUrl": "https://1oaklasvegas.com/msg-sphere-las-vegas/",
-    "price": 2000000000,
-    "utcStartDateTime": "2023-12-31T08:00:00.000Z",
-    "utcEndDateTime": "2024-01-06T08:00:00.000Z",
-    "allDay": true,
-    "utcCreatedDateTime": "2023-03-11T03:18:25.589Z",
-    "utcUpdatedDateTime": "2023-06-27T06:19:07.407Z",
-    "sentimentScore": 0.8267024736851455,
+    "title": "Apple Announces October Event for Macs: 'Scary Fast'",
+    "description": "<p class=\"paragraph\"> Apple's upcoming \"Scary Fast\" event will focus on the M3 series MacBook Pro models, according to&nbsp;<a href=\"https://twitter.com/mingchikuo/status/1716871328794620072\">Apple analyst Ming-Chi Kuo</a>. Kuo's wording suggests that he is expecting multiple M3 chips rather than just a single M3 chip, hinting at the possibility of M3, M3 Pro, and M3 Max chips. </p><p class=\"paragraph\"> If Apple does release M3, M3 Pro, and M3 Max chips at once, we can expect to see the new chips introduced in 13-inch, 14-inch, and 16-inch MacBook Pro models. </p><p class=\"paragraph\"> Kuo says that he previously predicted that Apple would not likely introduce new MacBook Pro models in 2023 because of \"limited 4Q 23 shipments,\" and if new MacBook Pros do come out in November or December, the tight supply will last until the first quarter of 2024. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$APPL</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1698170512074,\"blocks\":[{\"id\":\"TDakAPl6kB\",\"type\":\"paragraph\",\"data\":{\"text\":\"Apple's upcoming \\\"Scary Fast\\\" event will focus on the M3 series MacBook Pro models, according to&nbsp;<a href=\\\"https://twitter.com/mingchikuo/status/1716871328794620072\\\">Apple analyst Ming-Chi Kuo</a>. Kuo's wording suggests that he is expecting multiple M3 chips rather than just a single M3 chip, hinting at the possibility of M3, M3 Pro, and M3 Max chips.\"}},{\"id\":\"-NUz49YezU\",\"type\":\"paragraph\",\"data\":{\"text\":\"If Apple does release M3, M3 Pro, and M3 Max chips at once, we can expect to see the new chips introduced in 13-inch, 14-inch, and 16-inch MacBook Pro models.\"}},{\"id\":\"MUj71RFSwR\",\"type\":\"paragraph\",\"data\":{\"text\":\"Kuo says that he previously predicted that Apple would not likely introduce new MacBook Pro models in 2023 because of \\\"limited 4Q 23 shipments,\\\" and if new MacBook Pros do come out in November or December, the tight supply will last until the first quarter of 2024.\"}},{\"id\":\"mulN3hCE4M\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$APPL</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.macrumors.com/2023/10/24/apple-october-mac-event-2023/",
+    "utcStartDateTime": "2023-10-31T00:00:00.000Z",
+    "utcEndDateTime": "2023-10-31T00:00:00.000Z",
+    "allDay": false,
+    "utcCreatedDateTime": "2023-10-24T18:02:08.043Z",
+    "sentimentScore": 0.1004948616027832,
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "media": [
       {
-        "id": 329,
-        "originalUrl": "//www.youtube.com/embed/Q2kN6LONlWw",
-        "type": "3",
-        "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/Q2kN6LONlWw\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
-      }
-    ],
-    "locations": [
-      {
-        "id": 97,
-        "address": "MSG Sphere, Las Vegas",
-        "order": 0,
-        "pinId": 149
+        "id": 434,
+        "thumbName": "400934a5-1c3c-4363-a87d-abde455ce8be-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 562,
+        "originalUrl": "https://images.macrumors.com/t/koSfRQp8Hj4Rjak2xJGXdEX4DMQ=/2500x/article-new/2023/10/apple-october-scary-fast-event.jpg",
+        "originalWidth": 2500,
+        "originalHeight": 1406,
+        "type": "1"
       }
     ],
     "mentions": [
       {
-        "id": 259,
-        "tag": "$MSGS",
-        "pinId": 149
+        "id": 400,
+        "tag": "$APPL",
+        "pinId": 563
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 547,
+    "rootThread": false,
+    "title": "A fellow group member developed a recession forecasting model solely based on Initial jobless claims for all 50 states in the US as this is a timely and leading indicator",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#RecessionIndicator</chronohash> </p>",
+    "sourceDescription": "{\"time\":1694441778114,\"blocks\":[{\"id\":\"Ufl2HxXzZp\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#RecessionIndicator</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/GeroPatterer/status/1701028879542993064",
+    "utcStartDateTime": "2023-11-01T07:00:00.000Z",
+    "utcEndDateTime": "2023-11-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-09-11T14:16:24.048Z",
+    "sentimentScore": 0.11120984889566898,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 419,
+        "originalUrl": "https://twitter.com/GeroPatterer/status/1701028879542993064",
+        "type": "2",
+        "authorName": "Gero Patterer, CFA",
+        "authorUrl": "https://twitter.com/GeroPatterer",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">15/<br><br>A fellow group member developed a recession forecasting model solely based on Initial jobless claims for all 50 states in the US as this is a timely indicator and leading compared to GDP.<br><br>The point estimate is currently fairly soon, November 2023.</p>&mdash; Gero Patterer, CFA (@GeroPatterer) <a href=\"https://twitter.com/GeroPatterer/status/1701028879542993064?ref_src=twsrc%5Etfw\">September 11, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 386,
+        "tag": "#RecessionIndicator",
+        "pinId": 547
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 566,
+    "rootThread": false,
+    "title": "GDPNow will be updated on Tuesday and will likely show another lag down from it's current 1.2% GDP estimate for Q4",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#GDP</chronohash> </p>",
+    "sourceDescription": "{\"time\":1699288631940,\"blocks\":[{\"id\":\"BYwL3SGea9\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#GDP</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/GeroPatterer/status/1721333572093489173",
+    "utcStartDateTime": "2023-11-07T08:00:00.000Z",
+    "utcEndDateTime": "2023-11-08T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-11-06T16:37:25.068Z",
+    "sentimentScore": -0.17149338871240616,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 436,
+        "originalUrl": "https://twitter.com/GeroPatterer/status/1721333572093489173",
+        "type": "2",
+        "authorName": "Gero Patterer, CFA",
+        "authorUrl": "https://twitter.com/GeroPatterer",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">4/18<br><br>Atlanta Fed&#39;s GDPNow will be updated on Tuesday and will likely show another lag down from it&#39;s current 1.2% GDP estimate for Q4, when ISM Services, NFP and the pick up in unemployment are inputted in the model.<br><br>5% GDP growth can become 0% quicker than most people think. <a href=\"https://t.co/FQuDNu8zor\">pic.twitter.com/FQuDNu8zor</a></p>&mdash; Gero Patterer, CFA (@GeroPatterer) <a href=\"https://twitter.com/GeroPatterer/status/1721333572093489173?ref_src=twsrc%5Etfw\">November 6, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 176,
+        "address": "USA",
+        "order": 0,
+        "pinId": 566
+      }
+    ],
+    "mentions": [
+      {
+        "id": 404,
+        "tag": "#GDP",
+        "pinId": 566
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 569,
+    "rootThread": false,
+    "title": "Treasury is offering $112 billion of Treasury securities to refund approximately $102.2 billion of privately-held Treasury notes maturing on November 15, 2023",
+    "description": "<p class=\"paragraph\"> The U.S. Department of the Treasury is offering $112 billion of Treasury securities to refund approximately $102.2 billion of privately-held Treasury notes maturing on November 15, 2023.&nbsp;This issuance will raise new cash from private investors of approximately $9.8 billion.&nbsp; The securities are: </p><ul><li>A 3-year note in the amount of $48 billion, maturing November 15, 2026;</li><li>A 10-year note in the amount of $40 billion, maturing November 15, 2033; and</li><li>A 30-year bond in the amount of $24 billion, maturing November 15, 2053.</li></ul><p class=\"paragraph\"> The 3-year note will be auctioned at 1:00 p.m. ET on Tuesday, November 7, 2023.&nbsp; The 10-year note will be auctioned at 1:00 p.m. ET on Wednesday, November 8, 2023.&nbsp;The 30-year bond will be auctioned at 1:00 p.m. ET on Thursday, November 9, 2023.&nbsp; All of these auctions will take place on a yield basis and will settle on Wednesday, November 15, 2023. &nbsp; </p>",
+    "sourceDescription": "{\"time\":1699332284551,\"blocks\":[{\"id\":\"HLwUdQOFed\",\"type\":\"paragraph\",\"data\":{\"text\":\"The U.S. Department of the Treasury is offering $112 billion of Treasury securities to refund approximately $102.2 billion of privately-held Treasury notes maturing on November 15, 2023.&nbsp;This issuance will raise new cash from private investors of approximately $9.8 billion.&nbsp; The securities are:\"}},{\"id\":\"DAVj58DafV\",\"type\":\"list\",\"data\":{\"style\":\"unordered\",\"items\":[\"A 3-year note in the amount of $48 billion, maturing November 15, 2026;\",\"A 10-year note in the amount of $40 billion, maturing November 15, 2033; and\",\"A 30-year bond in the amount of $24 billion, maturing November 15, 2053.\"]}},{\"id\":\"EH1vyXPeNE\",\"type\":\"paragraph\",\"data\":{\"text\":\"The 3-year note will be auctioned at 1:00 p.m. ET on Tuesday, November 7, 2023.&nbsp; The 10-year note will be auctioned at 1:00 p.m. ET on Wednesday, November 8, 2023.&nbsp;The 30-year bond will be auctioned at 1:00 p.m. ET on Thursday, November 9, 2023.&nbsp; All of these auctions will take place on a yield basis and will settle on Wednesday, November 15, 2023. &nbsp;\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://home.treasury.gov/news/press-releases/jy1864",
+    "utcStartDateTime": "2023-11-07T08:00:00.000Z",
+    "utcEndDateTime": "2023-11-10T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-11-07T04:45:59.250Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 439,
+        "thumbName": "970cddc1-07dd-4a47-9070-e18750bc7ebd-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 500,
+        "originalUrl": "https://home.treasury.gov/system/files/291/treasury-preview-1900x950.jpg",
+        "originalWidth": 1900,
+        "originalHeight": 950,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 179,
+        "address": "USA",
+        "order": 0,
+        "pinId": 569
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 558,
+    "rootThread": false,
+    "title": "Microsoft to launch its new AI chip 'Athena' at its annual event ‘Ignite’",
+    "description": "<p class=\"paragraph\"> Everybody wants an NVIDIA chip to power their AI systems, but unfortunately, they are in short supply and come with a hefty price tag. The H100 chip, which is currently the US-based chipmaker’s most powerful AI offering, is priced at $40,000. Microsoft also uses NVIDIA chips to power its large language models, which require high computing power. Producing in-house GPUs would save cost – and let's not forget that having its own chip would mean the company can push Azure ahead harder. </p><p class=\"paragraph\"> Till now, ChatGPT has been running on 10,000 NVIDIA GPUs, which have been integrated into a Microsoft supercomputer. As ChatGPT shifts from being a free service to categorizing itself as a commercial service, it would require over 30,000 NVIDIA A100 GPUs. </p>",
+    "sourceDescription": "{\"time\":1696984182410,\"blocks\":[{\"id\":\"hzqRqoMJ_M\",\"type\":\"paragraph\",\"data\":{\"text\":\"Everybody wants an NVIDIA chip to power their AI systems, but unfortunately, they are in short supply and come with a hefty price tag. The H100 chip, which is currently the US-based chipmaker’s most powerful AI offering, is priced at $40,000. Microsoft also uses NVIDIA chips to power its large language models, which require high computing power. Producing in-house GPUs would save cost – and let's not forget that having its own chip would mean the company can push Azure ahead harder.\"}},{\"id\":\"XEnsLd4fBs\",\"type\":\"paragraph\",\"data\":{\"text\":\"Till now, ChatGPT has been running on 10,000 NVIDIA GPUs, which have been integrated into a Microsoft supercomputer. As ChatGPT shifts from being a free service to categorizing itself as a commercial service, it would require over 30,000 NVIDIA A100 GPUs.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://interestingengineering.com/innovation/microsoft-launch-new-chip-athena",
+    "utcStartDateTime": "2023-11-14T08:00:00.000Z",
+    "utcEndDateTime": "2023-11-15T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-10-11T00:29:47.520Z",
+    "sentimentScore": 0.23245953768491745,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 430,
+        "thumbName": "be6b349e-8b83-4359-9c76-797b1ad4b182-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://dnd2oi6izkvoi.cloudfront.net/2023/10/10/image/png/nZAZml9bt9rImBh1VYWt8tcqnN5dMVUZRRNCbixE.jpg",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 567,
+    "rootThread": false,
+    "title": "Recession model (based solely on continuing claims) is signalling a recession start around Mid November",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#RecessionIndicator</chronohash> </p>",
+    "sourceDescription": "{\"time\":1699289187063,\"blocks\":[{\"id\":\"Y0Du1R_0rq\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#RecessionIndicator</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/GeroPatterer/status/1721333598584791197",
+    "utcStartDateTime": "2023-11-15T08:00:00.000Z",
+    "utcEndDateTime": "2023-11-16T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-11-06T16:46:55.355Z",
+    "sentimentScore": -0.3216256145387888,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 437,
+        "originalUrl": "https://twitter.com/GeroPatterer/status/1721333598584791197",
+        "type": "2",
+        "authorName": "Gero Patterer, CFA",
+        "authorUrl": "https://twitter.com/GeroPatterer",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">16/18<br><br>One of our group members&#39; recession model (based solely on continuing claims) is signalling a recession start around Mid November.<br><br>Keep in mind that the NBER backdates recessions on average with an 8 months lag. The GFC was backdated 12 months after the recession started.</p>&mdash; Gero Patterer, CFA (@GeroPatterer) <a href=\"https://twitter.com/GeroPatterer/status/1721333598584791197?ref_src=twsrc%5Etfw\">November 6, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 177,
+        "address": "USA",
+        "order": 0,
+        "pinId": 567
+      }
+    ],
+    "mentions": [
+      {
+        "id": 405,
+        "tag": "#RecessionIndicator",
+        "pinId": 567
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 554,
+    "rootThread": true,
+    "title": "Government shutdown live updates: Senate, House pass 45-day measure to keep government open",
+    "description": "<p class=\"paragraph\"> “After trying to take our government hostage, MAGA Republicans won nothing,” Senate Majority Leader&nbsp;Chuck Schumer&nbsp;said after the vote. </p><p class=\"paragraph\"> The legislation will keep the US government open through Nov. 17 and include $16 billion in disaster relief funding but not aid for Ukraine. Lawmakers in both parties who support the Ukraine funding said that would be handled separately. </p>",
+    "sourceDescription": "{\"time\":1696126030716,\"blocks\":[{\"id\":\"sQJw17a9Bt\",\"type\":\"paragraph\",\"data\":{\"text\":\"“After trying to take our government hostage, MAGA Republicans won nothing,” Senate Majority Leader&nbsp;Chuck Schumer&nbsp;said after the vote.\"}},{\"id\":\"WCFkXrrRHt\",\"type\":\"paragraph\",\"data\":{\"text\":\"The legislation will keep the US government open through Nov. 17 and include $16 billion in disaster relief funding but not aid for Ukraine. Lawmakers in both parties who support the Ukraine funding said that would be handled separately.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/09/30/government-shutdown-live-updates-congress-faces-funding-deadline.html",
+    "utcStartDateTime": "2023-11-17T08:00:00.000Z",
+    "utcEndDateTime": "2023-11-19T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-10-01T02:07:32.624Z",
+    "utcUpdatedDateTime": "2023-10-01T02:09:37.155Z",
+    "sentimentScore": -0.6508028879761696,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 426,
+        "thumbName": "47a8b35b-3d0c-4d66-9b66-b9b09a73c5d5-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107309618-1696120749583-gettyimages-1710488008-_m020355_20rmgyxb.jpeg?v=1696121223&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 163,
+        "address": "USA",
+        "order": 0,
+        "pinId": 554
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 557,
+    "parentId": 554,
+    "rootThread": false,
+    "title": "A shutdown of 6 weeks until the programmed 1% cuts kick-in would hit q4 GDP by 1.2%",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1709647414464794667",
+    "utcStartDateTime": "2023-11-17T08:00:00.000Z",
+    "utcEndDateTime": "2023-11-18T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-10-04T19:14:33.325Z",
+    "sentimentScore": -0.5692502148449421,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 429,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1709647414464794667",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">No speaker and Republican radicals demanding 10% cuts to appropriation bills means no chance in hell a deal gets cut after the one McCarthy lost his speakership over. <br><br>A shutdown of 6 weeks until the programmed 1% cuts kick-in would hit q4 GDP by 1.2%</p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1709647414464794667?ref_src=twsrc%5Etfw\">October 4, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 171,
+        "address": "USA",
+        "order": 0,
+        "pinId": 557
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 574,
+    "rootThread": false,
+    "title": "Amazon unveils new Trainium2 chip for training and running AI models",
+    "description": "<p class=\"paragraph\"> Amazon says that a cluster of 100,000 Trainium chips can train a 300-billion parameter AI large language model in weeks versus months. (“Parameters” are the parts of a model learned from training data and essentially define the skill of the model on a problem, like generating text or code.) That’s about 1.75 times the size of OpenAI’s&nbsp;<a href=\"https://techcrunch.com/tag/gpt-3/\">GPT-3</a>, the predecessor to the text-generating&nbsp;<a href=\"https://techcrunch.com/tag/gpt-4/\">GPT-4</a>. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$AMZN</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1701200775697,\"blocks\":[{\"id\":\"7IslGSf3Kw\",\"type\":\"paragraph\",\"data\":{\"text\":\"Amazon says that a cluster of 100,000 Trainium chips can train a 300-billion parameter AI large language model in weeks versus months. (“Parameters” are the parts of a model learned from training data and essentially define the skill of the model on a problem, like generating text or code.) That’s about 1.75 times the size of OpenAI’s&nbsp;<a href=\\\"https://techcrunch.com/tag/gpt-3/\\\">GPT-3</a>, the predecessor to the text-generating&nbsp;<a href=\\\"https://techcrunch.com/tag/gpt-4/\\\">GPT-4</a>.\"}},{\"id\":\"bpaHhhm2WQ\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$AMZN</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://techcrunch.com/2023/11/28/amazon-unveils-new-chips-for-training-and-running-ai-models/",
+    "utcStartDateTime": "2023-11-28T08:00:00.000Z",
+    "utcEndDateTime": "2023-11-29T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-11-28T19:47:14.217Z",
+    "sentimentScore": 0.6319391266442835,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "mentions": [
+      {
+        "id": 414,
+        "tag": "$AMZN",
+        "pinId": 574
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 561,
+    "rootThread": false,
+    "title": "Cybertruck delivery event",
+    "description": "<p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$TSLA</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1697726840153,\"blocks\":[{\"id\":\"4C5dyqRrKT\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$TSLA</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/cybertruck/status/1714740805422715301",
+    "utcStartDateTime": "2023-11-30T08:00:00.000Z",
+    "utcEndDateTime": "2023-12-01T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-10-19T14:47:49.996Z",
+    "sentimentScore": 0.1660884520970285,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 432,
+        "originalUrl": "https://twitter.com/cybertruck/status/1714740805422715301",
+        "type": "2",
+        "authorName": "Cybertruck",
+        "authorUrl": "https://twitter.com/cybertruck",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"zxx\" dir=\"ltr\"><a href=\"https://t.co/P1EE5t8EU2\">pic.twitter.com/P1EE5t8EU2</a></p>&mdash; Cybertruck (@cybertruck) <a href=\"https://twitter.com/cybertruck/status/1714740805422715301?ref_src=twsrc%5Etfw\">October 18, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 173,
+        "address": "Giga Texas",
+        "order": 0,
+        "pinId": 561
+      }
+    ],
+    "mentions": [
+      {
+        "id": 397,
+        "tag": "$TSLA",
+        "pinId": 561
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 289,
+    "rootThread": false,
+    "title": "AMD reveals the new MI300X A.I. chip to challenge Nvidia's dominance",
+    "description": "<h2>The MI300X</h2><p class=\"paragraph\">  AMD said that its new MI300X chip and its CDNA architecture were designed for large language models and other cutting-edge AI models.  </p><p class=\"paragraph\">  “At the center of this are GPUs. GPUs are enabling generative AI,” Su said.  </p><p class=\"paragraph\">  The MI300X can use up to 192GB of memory, which means it can fit even bigger AI models than other chips. Nvidia’s rival H100 only supports 120GB of memory, for example.  </p><p class=\"paragraph\">  Large language models for generative AI applications use lots of memory because they run an increasing number of calculations. AMD demoed the MI300x running a 40 billion parameter model called Falcon. OpenAI’s GPT-3 model has 175 billion parameters.  </p><p class=\"paragraph\">  “Model sizes are getting much larger, and you actually need multiple GPUs to run the latest large language models,” Su said, noting that with the added memory on AMD chips developers wouldn’t need as many GPUs.  </p><p class=\"paragraph\">  AMD also said it would offer an Infinity Architecture that combines eight of its M1300X accelerators in one system. Nvidia and Google have developed similar systems that combine eight or more GPUs in a single box for AI applications.  </p><p class=\"paragraph\">  One reason why AI developers have historically preferred Nvidia chips is that it has a well-developed software package called CUDA that enables them to access the chip’s core hardware features.  </p><p class=\"paragraph\">  AMD said on Tuesday that it has its own software for its AI chips that it calls ROCm.  </p><p class=\"paragraph\">  “Now while this is a journey, we’ve made really great progress in building a powerful software stack that works with the open ecosystem of models, libraries, frameworks and tools,” AMD president Victor Peng said.  </p><p class=\"paragraph\">  <chronohash class=\"chrono-hash-highlight\">#AI</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#GPU</chronohash>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$AMD</chronodollar>&nbsp;  </p>",
+    "sourceDescription": "{\"time\":1700547683571,\"blocks\":[{\"id\":\"7T4jW_EJZT\",\"type\":\"header\",\"data\":{\"text\":\"The MI300X\",\"level\":2}},{\"id\":\"b50JQ_BOek\",\"type\":\"paragraph\",\"data\":{\"text\":\" AMD said that its new MI300X chip and its CDNA architecture were designed for large language models and other cutting-edge AI models. \"}},{\"id\":\"IM73fz2EPT\",\"type\":\"paragraph\",\"data\":{\"text\":\" “At the center of this are GPUs. GPUs are enabling generative AI,” Su said. \"}},{\"id\":\"oNn9LHfDhr\",\"type\":\"paragraph\",\"data\":{\"text\":\" The MI300X can use up to 192GB of memory, which means it can fit even bigger AI models than other chips. Nvidia’s rival H100 only supports 120GB of memory, for example. \"}},{\"id\":\"6UkRzRlpnu\",\"type\":\"paragraph\",\"data\":{\"text\":\" Large language models for generative AI applications use lots of memory because they run an increasing number of calculations. AMD demoed the MI300x running a 40 billion parameter model called Falcon. OpenAI’s GPT-3 model has 175 billion parameters. \"}},{\"id\":\"8TqqWzhsE1\",\"type\":\"paragraph\",\"data\":{\"text\":\" “Model sizes are getting much larger, and you actually need multiple GPUs to run the latest large language models,” Su said, noting that with the added memory on AMD chips developers wouldn’t need as many GPUs. \"}},{\"id\":\"e4EW_CQ1Ru\",\"type\":\"paragraph\",\"data\":{\"text\":\" AMD also said it would offer an Infinity Architecture that combines eight of its M1300X accelerators in one system. Nvidia and Google have developed similar systems that combine eight or more GPUs in a single box for AI applications. \"}},{\"id\":\"WiT-3Aaq4r\",\"type\":\"paragraph\",\"data\":{\"text\":\" One reason why AI developers have historically preferred Nvidia chips is that it has a well-developed software package called CUDA that enables them to access the chip’s core hardware features. \"}},{\"id\":\"8q9Al7OQSj\",\"type\":\"paragraph\",\"data\":{\"text\":\" AMD said on Tuesday that it has its own software for its AI chips that it calls ROCm. \"}},{\"id\":\"UHMxZt-Iac\",\"type\":\"paragraph\",\"data\":{\"text\":\" “Now while this is a journey, we’ve made really great progress in building a powerful software stack that works with the open ecosystem of models, libraries, frameworks and tools,” AMD president Victor Peng said. \"}},{\"id\":\"ptyaEwWWQz\",\"type\":\"paragraph\",\"data\":{\"text\":\" <chronohash class=\\\"chrono-hash-highlight\\\">#AI</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#GPU</chronohash>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$AMD</chronodollar>&nbsp; \"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/06/13/amd-reveals-new-ai-chip-to-challenge-nvidias-dominance.html",
+    "utcStartDateTime": "2023-12-06T08:00:00.000Z",
+    "utcEndDateTime": "2023-12-07T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-06-14T04:07:56.507Z",
+    "utcUpdatedDateTime": "2023-11-21T06:21:43.780Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 338,
+        "thumbName": "841b2539-69ee-46df-b177-cc70bd000a99-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107255926-1686678111756-gettyimages-1454302971-_8db0157_d7a2aa99-cd40-4c93-8ff3-89725b36c318.jpeg?v=1686681791&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 408,
+        "tag": "#AI",
+        "pinId": 289
+      },
+      {
+        "id": 409,
+        "tag": "#GPU",
+        "pinId": 289
+      },
+      {
+        "id": 410,
+        "tag": "$AMD",
+        "pinId": 289
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 571,
+    "rootThread": false,
+    "title": "AMD Announces AMD Instinct MI300 AI Accelerator AI Launch Event",
+    "description": "<p class=\"paragraph\"> The MI300A and MI300X accelerators are expected to significantly bolster AMD's data center business and have the potential to generate $1 billion in sales. </p><p class=\"paragraph\"> AMD's strong position in the data center AI market, along with its investment in the ROCm software ecosystem, further supports its growth potential. </p>",
+    "sourceDescription": "{\"time\":1700547377233,\"blocks\":[{\"id\":\"joT055dVMj\",\"type\":\"paragraph\",\"data\":{\"text\":\"The MI300A and MI300X accelerators are expected to significantly bolster AMD's data center business and have the potential to generate $1 billion in sales.\"}},{\"id\":\"-i7R9H_CM7\",\"type\":\"paragraph\",\"data\":{\"text\":\"AMD's strong position in the data center AI market, along with its investment in the ROCm software ecosystem, further supports its growth potential.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://ir.amd.com/news-events/press-releases/detail/1168/amd-announces-amd-instinct-mi300-accelerator-launch-event",
+    "utcStartDateTime": "2023-12-06T08:00:00.000Z",
+    "utcEndDateTime": "2023-12-07T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-11-21T06:16:24.682Z",
+    "sentimentScore": 0.9298845266457646,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 441,
+        "thumbName": "2497d335-149e-46ad-b40f-7ae6b4ee00e5-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 523,
+        "originalUrl": "https://d1io3yog0oux5.cloudfront.net/_91c22b66967ba1a9ac51523f3d5144dd/amd/db/727/5607/social_image_resized.jpg",
+        "originalWidth": 1200,
+        "originalHeight": 627,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 181,
+        "address": "SANTA CLAR",
+        "order": 0,
+        "pinId": 571
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 560,
+    "rootThread": false,
+    "title": "Chipmaker Qualcomm to lay off over 1200 California workers",
+    "description": "<p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$QCOM</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1697295077611,\"blocks\":[{\"id\":\"9f80XMAMrx\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$QCOM</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnn.com/2023/10/12/tech/qualcomm-layoffs/index.html",
+    "utcStartDateTime": "2023-12-13T08:00:00.000Z",
+    "utcEndDateTime": "2023-12-14T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-10-14T14:51:32.774Z",
+    "sentimentScore": -0.6329454137012362,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "locations": [
+      {
+        "id": 172,
+        "address": "California",
+        "order": 0,
+        "pinId": 560
+      }
+    ],
+    "mentions": [
+      {
+        "id": 395,
+        "tag": "$QCOM",
+        "pinId": 560
       }
     ],
     "userId": 1
@@ -16116,47 +17074,115 @@
     "userId": 1
   },
   {
-    "id": 289,
+    "id": 553,
     "rootThread": false,
-    "title": "AMD reveals the new MI300X A.I. chip to challenge Nvidia's dominance",
-    "description": "<h2>The MI300X</h2><p class=\"paragraph\"> AMD said that its new MI300X chip and its CDNA architecture were designed for large language models and other cutting-edge AI models. </p><p class=\"paragraph\"> “At the center of this are GPUs. GPUs are enabling generative AI,” Su said. </p><p class=\"paragraph\"> The MI300X can use up to 192GB of memory, which means it can fit even bigger AI models than other chips. Nvidia’s rival H100 only supports 120GB of memory, for example. </p><p class=\"paragraph\"> Large language models for generative AI applications use lots of memory because they run an increasing number of calculations. AMD demoed the MI300x running a 40 billion parameter model called Falcon. OpenAI’s GPT-3 model has 175 billion parameters. </p><p class=\"paragraph\"> “Model sizes are getting much larger, and you actually need multiple GPUs to run the latest large language models,” Su said, noting that with the added memory on AMD chips developers wouldn’t need as many GPUs. </p><p class=\"paragraph\"> AMD also said it would offer an Infinity Architecture that combines eight of its M1300X accelerators in one system. Nvidia and Google have developed similar systems that combine eight or more GPUs in a single box for AI applications. </p><p class=\"paragraph\"> One reason why AI developers have historically preferred Nvidia chips is that it has a well-developed software package called CUDA that enables them to access the chip’s core hardware features. </p><p class=\"paragraph\"> AMD said on Tuesday that it has its own software for its AI chips that it calls ROCm. </p><p class=\"paragraph\"> “Now while this is a journey, we’ve made really great progress in building a powerful software stack that works with the open ecosystem of models, libraries, frameworks and tools,” AMD president Victor Peng said. </p><p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#AI</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#GPU</chronohash>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$AMD</chronodollar>&nbsp; </p>",
-    "sourceUrl": "https://www.cnbc.com/2023/06/13/amd-reveals-new-ai-chip-to-challenge-nvidias-dominance.html",
-    "utcStartDateTime": "2024-01-01T08:00:00.000Z",
+    "title": "Unemployment 3.9% for q423 (matching consensus) highly skewed to the upside. 4.6% and 9.9% u both falls in the 95%",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#UnemploymentRate</chronohash> </p>",
+    "sourceDescription": "{\"time\":1695153390435,\"blocks\":[{\"id\":\"UXEck6ouyi\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#UnemploymentRate</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/AnnaEconomist/status/1703949122917535907",
+    "utcStartDateTime": "2023-12-31T08:00:00.000Z",
     "utcEndDateTime": "2024-01-02T08:00:00.000Z",
     "allDay": true,
-    "utcCreatedDateTime": "2023-06-14T04:07:56.507Z",
-    "sentimentScore": 0.5029579089023173,
+    "utcCreatedDateTime": "2023-09-19T19:56:48.837Z",
+    "utcUpdatedDateTime": "2023-10-15T02:06:24.595Z",
+    "sentimentScore": -0.2742586564272642,
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
     },
     "media": [
       {
-        "id": 338,
-        "thumbName": "841b2539-69ee-46df-b177-cc70bd000a99-chrono-lg.webp",
-        "thumbWidth": 1000,
-        "thumbHeight": 563,
-        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107255926-1686678111756-gettyimages-1454302971-_8db0157_d7a2aa99-cd40-4c93-8ff3-89725b36c318.jpeg?v=1686681791&w=1920&h=1080",
-        "originalWidth": 1920,
-        "originalHeight": 1080,
-        "type": "1"
+        "id": 425,
+        "originalUrl": "https://twitter.com/AnnaEconomist/status/1703949122917535907",
+        "type": "2",
+        "authorName": "Anna Wong",
+        "authorUrl": "https://twitter.com/AnnaEconomist",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">(2) Fan chart (based on quantile regressions) for u forecast has risk bands around mean forecast of 3.9% for q423 (matching consensus) highly skewed to the upside. 4.6% and 9.9% u both falls in the 95% confidence interval for 2023 and 24 upside side band. <a href=\"https://t.co/N95IZpKXI3\">pic.twitter.com/N95IZpKXI3</a></p>&mdash; Anna Wong (@AnnaEconomist) <a href=\"https://twitter.com/AnnaEconomist/status/1703949122917535907?ref_src=twsrc%5Etfw\">September 19, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
       }
     ],
     "mentions": [
       {
-        "id": 272,
-        "tag": "$AMD",
-        "pinId": 289
-      },
+        "id": 396,
+        "tag": "#UnemploymentRate",
+        "pinId": 553
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 568,
+    "rootThread": false,
+    "title": "Unemployment only needs to rise by 0.1% per month and the trigger would be activated in December.",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#RecessionIndicator</chronohash> </p>",
+    "sourceDescription": "{\"time\":1699289612922,\"blocks\":[{\"id\":\"7wLaLrk6PM\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#RecessionIndicator</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/GeroPatterer/status/1721333581144887404",
+    "utcStartDateTime": "2023-12-31T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-01T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-11-06T16:54:20.469Z",
+    "sentimentScore": -0.03727030009031296,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
       {
-        "id": 273,
-        "tag": "#AI",
-        "pinId": 289
-      },
+        "id": 438,
+        "originalUrl": "https://twitter.com/GeroPatterer/status/1721333581144887404",
+        "type": "2",
+        "authorName": "Gero Patterer, CFA",
+        "authorUrl": "https://twitter.com/GeroPatterer",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">8/18<br><br>However, if we use a more realistic scenario look how quickly we can trigger the Sahm rule.<br><br>Unemployment only needs to rise by 0.1% per month and the trigger would be activated in December.<br><br>So recession start end of 2023? <a href=\"https://t.co/iAMAwurfTu\">pic.twitter.com/iAMAwurfTu</a></p>&mdash; Gero Patterer, CFA (@GeroPatterer) <a href=\"https://twitter.com/GeroPatterer/status/1721333581144887404?ref_src=twsrc%5Etfw\">November 6, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
       {
-        "id": 274,
-        "tag": "#GPU",
-        "pinId": 289
+        "id": 178,
+        "address": "USA",
+        "order": 0,
+        "pinId": 568
+      }
+    ],
+    "mentions": [
+      {
+        "id": 406,
+        "tag": "#RecessionIndicator",
+        "pinId": 568
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 576,
+    "rootThread": false,
+    "title": "4.0% print this Friday and a 4.1% a month later would trigger the Sahm rule.",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#SahmRule</chronohash> </p>",
+    "sourceDescription": "{\"time\":1701731433628,\"blocks\":[{\"id\":\"z45-zCThfu\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#SahmRule</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/GeroPatterer/status/1731503880171622791",
+    "utcStartDateTime": "2023-12-31T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-01T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-12-04T23:10:48.658Z",
+    "sentimentScore": -0.2374368421733379,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 445,
+        "originalUrl": "https://twitter.com/GeroPatterer/status/1731503880171622791",
+        "type": "2",
+        "authorName": "Gero Patterer, CFA",
+        "authorUrl": "https://twitter.com/GeroPatterer",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">The Sahm rule will not be triggered this Friday.<br><br>Why?<br>Because the 3 months low is 3.5% and we would need 4.3% to get the 3 months average to 4%.<br><br>4.3% is highly unlikely, meaning it will not happen.<br>However, a 4.0% print this Friday and a 4.1% a month later would trigger the… <a href=\"https://t.co/DdtCVanKzA\">https://t.co/DdtCVanKzA</a> <a href=\"https://t.co/SczxKKYBHw\">pic.twitter.com/SczxKKYBHw</a></p>&mdash; Gero Patterer, CFA (@GeroPatterer) <a href=\"https://twitter.com/GeroPatterer/status/1731503880171622791?ref_src=twsrc%5Etfw\">December 4, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 416,
+        "tag": "#SahmRule",
+        "pinId": 576
       }
     ],
     "userId": 1
@@ -16324,6 +17350,85 @@
     "userId": 1
   },
   {
+    "id": 549,
+    "rootThread": false,
+    "title": "Computers and accessories that use Intel's Thunderbolt 5 controller are set to become available starting in 2024",
+    "description": "<p class=\"paragraph\"> Thunderbolt 5 delivers 80 Gbps of bi-directional bandwidth and, with Bandwidth Boost, can provide up to 120 Gbps for video-intensive usage. This enables considerably better display support, allowing for more and higher-resolution displays with higher refresh rates. Thunderbolt 4 has maximum speeds of 40 Gbps, making Thunderbolt 5 a significant improvement of at least double the bandwidth. </p><p class=\"paragraph\"> The latest specification also features double the PCI Express data throughput and double the bandwidth of Thunderbolt Networking. It also uses a new signaling technology, PAM-3, to increase performance with printed circuit boards, connectors, and passive cables. </p><p class=\"paragraph\"> It is highly likely that Thunderbolt 5 will come to future Apple devices. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$AAPL</chronodollar>&nbsp;<chronodollar class=\"chrono-dollar-highlight\">$INTC</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1694535441236,\"blocks\":[{\"id\":\"Ai9Qppvu12\",\"type\":\"paragraph\",\"data\":{\"text\":\"Thunderbolt 5 delivers 80 Gbps of bi-directional bandwidth and, with Bandwidth Boost, can provide up to 120 Gbps for video-intensive usage. This enables considerably better display support, allowing for more and higher-resolution displays with higher refresh rates. Thunderbolt 4 has maximum speeds of 40 Gbps, making Thunderbolt 5 a significant improvement of at least double the bandwidth.\"}},{\"id\":\"Vtue6eJ_xG\",\"type\":\"paragraph\",\"data\":{\"text\":\"The latest specification also features double the PCI Express data throughput and double the bandwidth of Thunderbolt Networking. It also uses a new signaling technology, PAM-3, to increase performance with printed circuit boards, connectors, and passive cables.\"}},{\"id\":\"9JtcK-TKeN\",\"type\":\"paragraph\",\"data\":{\"text\":\"It is highly likely that Thunderbolt 5 will come to future Apple devices.\"}},{\"id\":\"RRAln2UMLf\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$AAPL</chronodollar>&nbsp;<chronodollar class=\\\"chrono-dollar-highlight\\\">$INTC</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.macrumors.com/2023/09/12/thunderbolt-5-announced-with-up-to-3x-bandwidth/",
+    "utcStartDateTime": "2024-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-09-12T16:17:27.205Z",
+    "sentimentScore": 0.8333131826948375,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 421,
+        "thumbName": "ced7469a-e93a-4e92-b067-c0ba8dc4377a-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://images.macrumors.com/t/7Mffa2X_YT7A4g8UzW-YQ2NXyfM=/1920x/article-new/2023/09/thunderbolt-5.jpg",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 388,
+        "tag": "$AAPL",
+        "pinId": 549
+      },
+      {
+        "id": 389,
+        "tag": "$INTC",
+        "pinId": 549
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 578,
+    "rootThread": false,
+    "title": "Intel unveils new AI chip to compete with Nvidia and AMD",
+    "description": "<p class=\"paragraph\"> Intel announced new details about PC, server, and AI chips on Thursday, including Gaudi3, an AI chip for generative AI software that will compete with Nvidia. </p><p class=\"paragraph\"> While the company was light on details, Gaudi3 will compete with Nvidia’s H100, the main choice among companies that build huge farms of the chips to power AI applications, and AMD’s forthcoming MI300X, when it starts shipping to customers in 2024. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$INTC</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1702586995911,\"blocks\":[{\"id\":\"L4m4l-TMfI\",\"type\":\"paragraph\",\"data\":{\"text\":\"Intel announced new details about PC, server, and AI chips on Thursday, including Gaudi3, an AI chip for generative AI software that will compete with Nvidia.\"}},{\"id\":\"6ESOc_4dJd\",\"type\":\"paragraph\",\"data\":{\"text\":\"While the company was light on details, Gaudi3 will compete with Nvidia’s H100, the main choice among companies that build huge farms of the chips to power AI applications, and AMD’s forthcoming MI300X, when it starts shipping to customers in 2024.\"}},{\"id\":\"TSrQnSolRW\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$INTC</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/12/14/intel-unveils-gaudi3-ai-chip-to-compete-with-nvidia-and-amd.html",
+    "utcStartDateTime": "2024-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2024-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-12-14T20:50:22.643Z",
+    "sentimentScore": 0.4944808310829103,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 447,
+        "thumbName": "c515a6ce-a12f-407f-9bbc-24cdc5ca041d-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107347905-1702580981389-gettyimages-1848352898-INTERL_AI.jpeg?v=1702581097&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 418,
+        "tag": "$INTC",
+        "pinId": 578
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 505,
     "rootThread": false,
     "title": "CRE maturities are stacked in early 24 and will start to translate into losses for the banks",
@@ -16464,6 +17569,41 @@
     "userId": 1
   },
   {
+    "id": 577,
+    "rootThread": false,
+    "title": "We could trigger the Sahm rule in February 2024.",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#SahmRule</chronohash> </p>",
+    "sourceDescription": "{\"time\":1702322926473,\"blocks\":[{\"id\":\"IKLCfbVMAL\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#SahmRule</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/GeroPatterer/status/1734264880557899862",
+    "utcStartDateTime": "2024-02-29T08:00:00.000Z",
+    "utcEndDateTime": "2024-03-01T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-12-11T19:29:17.275Z",
+    "sentimentScore": 0.18869359605014324,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 446,
+        "originalUrl": "https://twitter.com/GeroPatterer/status/1734264880557899862",
+        "type": "2",
+        "authorName": "Gero Patterer, CFA",
+        "authorUrl": "https://twitter.com/GeroPatterer",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">3/4<br><br>More realistic scenario: If we get back to 3.9% in December and increase by 0.1%/month. We could trigger the Sahm rule in February 2024.<br><br>I see it more as a fastest scenario though, with risk that it takes longer to hit the Sahm trigger as unemployment is very noisy (chart). <a href=\"https://t.co/8EgAdLeB9A\">pic.twitter.com/8EgAdLeB9A</a></p>&mdash; Gero Patterer, CFA (@GeroPatterer) <a href=\"https://twitter.com/GeroPatterer/status/1734264880557899862?ref_src=twsrc%5Etfw\">December 11, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 417,
+        "tag": "#SahmRule",
+        "pinId": 577
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 222,
     "rootThread": false,
     "title": "Lucid's Gravity SUV is taking another step toward production with tests on public roads",
@@ -16531,6 +17671,157 @@
         "id": 282,
         "tag": "$PRGO",
         "pinId": 465
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 573,
+    "rootThread": false,
+    "title": "The BTFP is intended as a temporary emergency measure and is set to wind down on March 11, 2024, unless renewed by the Federal Reserve",
+    "description": "<p class=\"paragraph\"> The Bank Term Funding Program (BTFP) is a Federal Reserve program that offers collateralized loans to banks to shore up banking liquidity in the aftermath of the Silicon Valley Bank collapse.<br><chronohash class=\"chrono-hash-highlight\">#Liquidity</chronohash> </p>",
+    "sourceDescription": "{\"time\":1700984243012,\"blocks\":[{\"id\":\"jddtDGms8L\",\"type\":\"paragraph\",\"data\":{\"text\":\"The Bank Term Funding Program (BTFP) is a Federal Reserve program that offers collateralized loans to banks to shore up banking liquidity in the aftermath of the Silicon Valley Bank collapse.<br><chronohash class=\\\"chrono-hash-highlight\\\">#Liquidity</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.investopedia.com/bank-term-funding-project-7367897",
+    "utcStartDateTime": "2024-03-11T07:00:00.000Z",
+    "utcEndDateTime": "2024-03-12T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-11-26T07:37:27.512Z",
+    "sentimentScore": -0.04730123654007912,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 443,
+        "thumbName": "ed06f389-c570-42aa-a889-8da88dcddd85-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 648,
+        "originalUrl": "https://www.investopedia.com/thmb/qWEloflPkWP23nKq6Ulp1UiGseg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-84740181-56f6a7855f9b582986673cd3.jpg",
+        "originalWidth": 1500,
+        "originalHeight": 972,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 183,
+        "address": "USA",
+        "order": 0,
+        "pinId": 573
+      }
+    ],
+    "mentions": [
+      {
+        "id": 413,
+        "tag": "#Liquidity",
+        "pinId": 573
+      }
+    ],
+    "favorites": [
+      {
+        "id": 21,
+        "utcCreatedDateTime": "2023-12-25T23:53:44.667Z",
+        "userId": 1,
+        "pinId": 573
+      }
+    ],
+    "likes": [
+      {
+        "id": 8,
+        "like": true,
+        "utcCreatedDateTime": "2023-12-25T23:53:46.385Z",
+        "userId": 1,
+        "pinId": 573
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 565,
+    "rootThread": false,
+    "title": "Market is pricing first 10bp hike for March next year for Bank of Japan",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Bonds</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#CarryTrade</chronohash> </p>",
+    "sourceDescription": "{\"time\":1698725972846,\"blocks\":[{\"id\":\"tm8F3mjeEs\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Bonds</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#CarryTrade</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/GeroPatterer/status/1718998942581490130",
+    "utcStartDateTime": "2024-03-19T07:00:00.000Z",
+    "utcEndDateTime": "2024-03-20T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-10-31T04:20:07.069Z",
+    "sentimentScore": 0.03642169013619423,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 435,
+        "originalUrl": "https://twitter.com/GeroPatterer/status/1718998942581490130",
+        "type": "2",
+        "authorName": "Gero Patterer, CFA",
+        "authorUrl": "https://twitter.com/GeroPatterer",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">16/<br><br>Japan: &quot;The BoJ won&#39;t change YCC and its policy rate, although facing downward pressure to JPY. It will fight off rise in 10y by buying JGBs&quot;<br><br>Market is pricing first 10bp hike for March next year.<br><br>Update: YCC will be tweaked so that 10y can exceed 1%. thx <a href=\"https://twitter.com/acrossthespread?ref_src=twsrc%5Etfw\">@acrossthespread</a> <a href=\"https://t.co/QBLEdnm1AM\">pic.twitter.com/QBLEdnm1AM</a></p>&mdash; Gero Patterer, CFA (@GeroPatterer) <a href=\"https://twitter.com/GeroPatterer/status/1718998942581490130?ref_src=twsrc%5Etfw\">October 30, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 175,
+        "address": "Japan",
+        "order": 0,
+        "pinId": 565
+      }
+    ],
+    "mentions": [
+      {
+        "id": 402,
+        "tag": "#Bonds",
+        "pinId": 565
+      },
+      {
+        "id": 403,
+        "tag": "#CarryTrade",
+        "pinId": 565
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 562,
+    "rootThread": false,
+    "title": "Let’s assume q1 24 real GDP comes in at -1% to zero and CPI at 2.7%, then 10s should 1.7% to 2.7%…",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Treasury</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#Bonds</chronohash> </p>",
+    "sourceDescription": "{\"time\":1698165697083,\"blocks\":[{\"id\":\"U1CusEEzQo\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Treasury</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#Bonds</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1716843442075021494",
+    "utcStartDateTime": "2024-03-31T07:00:00.000Z",
+    "utcEndDateTime": "2024-04-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-10-24T16:41:44.082Z",
+    "utcUpdatedDateTime": "2023-11-25T17:24:42.568Z",
+    "sentimentScore": -0.06490655243396759,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 433,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1716843442075021494",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">I totally agree that 10s tend to converge towards nominal growth. Problem is that too many data issues make this q3 print an oddity at best (following the post SVB stealth QE) and in any case odds of recession rising very quickly. Let’s assume q4 real GDP will be between 1% and…</p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1716843442075021494?ref_src=twsrc%5Etfw\">October 24, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 411,
+        "tag": "#Treasury",
+        "pinId": 562
+      },
+      {
+        "id": 412,
+        "tag": "#Bonds",
+        "pinId": 562
       }
     ],
     "userId": 1
@@ -16619,6 +17910,146 @@
       }
     ],
     "userId": 2
+  },
+  {
+    "id": 546,
+    "rootThread": false,
+    "title": "Hatzius is seeing a first cut in Q2 and then one cut per quarter. Hence -0.75% by end of 2024",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Rates</chronohash> </p>",
+    "sourceDescription": "{\"time\":1693958493164,\"blocks\":[{\"id\":\"B6vbx6MjpF\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Rates</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/GeroPatterer/status/1699075059460268062",
+    "utcStartDateTime": "2024-04-01T07:00:00.000Z",
+    "utcEndDateTime": "2024-04-02T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-09-06T00:04:33.001Z",
+    "sentimentScore": -0.6130250282585621,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 418,
+        "originalUrl": "https://twitter.com/GeroPatterer/status/1699075059460268062",
+        "type": "2",
+        "authorName": "Gero Patterer, CFA",
+        "authorUrl": "https://twitter.com/GeroPatterer",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">5/n<br><br>I cannot agree with Hatzius here, as profit margins are continuing to decelerate (10.4% vs 12% at its peak). Wages are a very sticky component of company expenses.<br><br>So if they want to protect their margins they will get rid of this sticky expense and fire employees. <a href=\"https://t.co/TwpZhpHpP6\">pic.twitter.com/TwpZhpHpP6</a></p>&mdash; Gero Patterer, CFA (@GeroPatterer) <a href=\"https://twitter.com/GeroPatterer/status/1699075059460268062?ref_src=twsrc%5Etfw\">September 5, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 159,
+        "address": "USA",
+        "order": 0,
+        "pinId": 546
+      }
+    ],
+    "mentions": [
+      {
+        "id": 384,
+        "tag": "#rates",
+        "pinId": 546
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 575,
+    "rootThread": false,
+    "title": "Who will cut rates first? The market is currently pricing that the ECB will cut first in April",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Rates</chronohash> </p>",
+    "sourceDescription": "{\"time\":1701584730355,\"blocks\":[{\"id\":\"iNm0tPvdgL\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Rates</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/GeroPatterer/status/1730761005456662633",
+    "utcStartDateTime": "2024-04-11T07:00:00.000Z",
+    "utcEndDateTime": "2024-04-12T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-12-03T06:25:34.426Z",
+    "sentimentScore": 0.00078472681343555,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 444,
+        "originalUrl": "https://twitter.com/GeroPatterer/status/1730761005456662633",
+        "type": "2",
+        "authorName": "Gero Patterer, CFA",
+        "authorUrl": "https://twitter.com/GeroPatterer",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">10/16<br><br>Who will cut first?<br><br>Looking at major central banks, the market is currently pricing that the ECB will cut first in April, then the US in May and the UK will follow in August, while the Japanese central bank (BoJ) would start hiking in June (1 hike in Japan = 10bp) <a href=\"https://t.co/nRnaDYdIDI\">pic.twitter.com/nRnaDYdIDI</a></p>&mdash; Gero Patterer, CFA (@GeroPatterer) <a href=\"https://twitter.com/GeroPatterer/status/1730761005456662633?ref_src=twsrc%5Etfw\">December 2, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 184,
+        "address": "Europe",
+        "order": 0,
+        "pinId": 575
+      }
+    ],
+    "mentions": [
+      {
+        "id": 415,
+        "tag": "#rates",
+        "pinId": 575
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 559,
+    "rootThread": false,
+    "title": "Bitcoin Halving the reward will drop from 6.25 BTC per block to 3.125 BTC",
+    "description": "<p class=\"paragraph\"> New bitcoins are issued by the Bitcoin network every 10 minutes. </p><p class=\"paragraph\"> For the first four years of Bitcoin's existence, the amount of new bitcoins issued every 10 minutes was 50. Every four years, this number is cut in half. The day the amount halves is called a \"<a href=\"https://buybitcoinworldwide.com/glossary/halving/\">halving</a>\" or \"halvening\". </p><ul><li>In the&nbsp;<a href=\"https://buybitcoinworldwide.com/halving/2012/\">2012 halving</a>, the amount of new bitcoins (BTC) issued every 10 minutes dropped from 50 bitcoins to 25.</li><li>In 2016, it dropped from 25 BTC to 12.5 BTC.</li><li>In the most recent&nbsp;<a href=\"https://buybitcoinworldwide.com/halving/2020/\">May 11, 2020 halving</a>, the reward dropped from 12.5 to 6.25 BTC per block.</li></ul><p class=\"paragraph\"> In the 2024 halving, the reward will drop from 6.25 BTC per block to 3.125 BTC. </p><p class=\"paragraph\"> <chronodollar class=\"chrono-dollar-highlight\">$BTC</chronodollar> </p>",
+    "sourceDescription": "{\"time\":1697128515379,\"blocks\":[{\"id\":\"FFlts8MJwX\",\"type\":\"paragraph\",\"data\":{\"text\":\"New bitcoins are issued by the Bitcoin network every 10 minutes.\"}},{\"id\":\"YssyKRdc6g\",\"type\":\"paragraph\",\"data\":{\"text\":\"For the first four years of Bitcoin's existence, the amount of new bitcoins issued every 10 minutes was 50. Every four years, this number is cut in half. The day the amount halves is called a \\\"<a href=\\\"https://buybitcoinworldwide.com/glossary/halving/\\\">halving</a>\\\" or \\\"halvening\\\".\"}},{\"id\":\"_UzXTE46Ja\",\"type\":\"list\",\"data\":{\"style\":\"unordered\",\"items\":[\"In the&nbsp;<a href=\\\"https://buybitcoinworldwide.com/halving/2012/\\\">2012 halving</a>, the amount of new bitcoins (BTC) issued every 10 minutes dropped from 50 bitcoins to 25.\",\"In 2016, it dropped from 25 BTC to 12.5 BTC.\",\"In the most recent&nbsp;<a href=\\\"https://buybitcoinworldwide.com/halving/2020/\\\">May 11, 2020 halving</a>, the reward dropped from 12.5 to 6.25 BTC per block.\"]}},{\"id\":\"aLOAp9mVIP\",\"type\":\"paragraph\",\"data\":{\"text\":\"In the 2024 halving, the reward will drop from 6.25 BTC per block to 3.125 BTC.\"}},{\"id\":\"QlWNNQ4toc\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronodollar class=\\\"chrono-dollar-highlight\\\">$BTC</chronodollar>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://buybitcoinworldwide.com/halving/",
+    "utcStartDateTime": "2024-04-16T07:00:00.000Z",
+    "utcEndDateTime": "2024-04-17T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-10-12T16:36:01.761Z",
+    "sentimentScore": -0.0979578047990799,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 431,
+        "thumbName": "798126df-84a5-4ca9-930e-d2700040adf6-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 525,
+        "originalUrl": "https://buybitcoinworldwide.com/pages/img/bitcoin-clock-og-image.png",
+        "originalWidth": 1200,
+        "originalHeight": 630,
+        "type": "1"
+      }
+    ],
+    "mentions": [
+      {
+        "id": 394,
+        "tag": "$BTC",
+        "pinId": 559
+      }
+    ],
+    "favorites": [
+      {
+        "id": 20,
+        "utcCreatedDateTime": "2023-10-12T16:36:27.308Z",
+        "userId": 1,
+        "pinId": 559
+      }
+    ],
+    "likes": [
+      {
+        "id": 7,
+        "like": true,
+        "utcCreatedDateTime": "2023-10-12T16:36:27.902Z",
+        "userId": 1,
+        "pinId": 559
+      }
+    ],
+    "userId": 1
   },
   {
     "id": 536,
@@ -16760,6 +18191,32 @@
     "userId": 1
   },
   {
+    "id": 572,
+    "rootThread": false,
+    "title": "Foreclosures Being DELAYED…AGAIN! INVENTORY ON THE RISE",
+    "description": "<p class=\"paragraph\"> All foreclosure moratoriums currently in place are supposed to end by November 30th, 2023.  However, it was just announced that if you have a VA loan and your forbearance ended in October of 2023, even if you are behind on your payments, you will not be foreclosed on until June of 2024.  Yet another delay for this housing market to get back to normal, and more kicking the can down the road. </p>",
+    "sourceDescription": "{\"time\":1700705645465,\"blocks\":[{\"id\":\"wk7vGHAfaN\",\"type\":\"paragraph\",\"data\":{\"text\":\"All foreclosure moratoriums currently in place are supposed to end by November 30th, 2023.  However, it was just announced that if you have a VA loan and your forbearance ended in October of 2023, even if you are behind on your payments, you will not be foreclosed on until June of 2024.  Yet another delay for this housing market to get back to normal, and more kicking the can down the road.\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.youtube.com/watch?v=xKeNz3iSaVE",
+    "utcStartDateTime": "2024-06-30T07:00:00.000Z",
+    "utcEndDateTime": "2024-07-01T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-11-23T02:14:44.409Z",
+    "sentimentScore": -0.6778409695252776,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 442,
+        "originalUrl": "//www.youtube.com/embed/xKeNz3iSaVE",
+        "type": "3",
+        "html": "<iframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/xKeNz3iSaVE\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 375,
     "rootThread": false,
     "title": "Check out this $110 million tech campus being built in Lithuania — the largest in Europe",
@@ -16839,7 +18296,7 @@
   },
   {
     "id": 386,
-    "rootThread": false,
+    "rootThread": true,
     "title": "Misinformation around the 2024 election is one of the biggest short-term dangers of artificial intelligence, according to Eric Schmidt, former CEO of Google",
     "description": "<p class=\"paragraph\"> Misinformation around the 2024 election will be rampant as new tools have made advanced artificial intelligence more accessible, according to Eric Schmidt, former CEO of&nbsp;<a href=\"https://www.cnbc.com/quotes/GOOGL/\">Google</a>&nbsp;who co-founded Schmidt Futures. </p><p class=\"paragraph\"> “The 2024 elections are going to be a mess because social media is not protecting us from false generated AI,” Schmidt told Andrew Ross Sorkin on CNBC’s “<a href=\"https://www.cnbc.com/squawk-box-us/\">Squawk Box</a>” on Monday. “They’re working on it, but they haven’t solved it yet. And in fact, the&nbsp;<a href=\"https://www.cnbc.com/2023/05/26/tech-companies-are-laying-off-their-ethics-and-safety-teams-.html\">trust and safety groups are getting made smaller, not larger.</a>” </p><p class=\"paragraph\"> While there’s broad concern about the long-term impacts of AI on society, including the potential for the technology to gain human-like abilities, Schmidt said that “the short-term danger is misinformation.” </p><p class=\"paragraph\"> Google recently decided to&nbsp;<a href=\"https://www.cnbc.com/2023/06/02/youtube-will-stop-removing-false-claims-about-2020-election-fraud.html\">stop removing false claims about widespread fraud in the 2020 U.S. election</a>&nbsp;<a href=\"https://www.cnbc.com/2023/06/02/youtube-will-stop-removing-false-claims-about-2020-election-fraud.html\">from YouTube</a>. It said the decision sought to balance its goals of protecting the community and being a forum for open discussion. </p><p class=\"paragraph\"> Asked about the policy change, Schmidt said that social media should allow for “free speech for humans, not computers.” </p><p class=\"paragraph\"> “What social media should do is mark all the content, know who the users are, and hold people accountable if they violate the law,” Schmidt said. “It doesn’t solve the problem of, you and I disagree on facts, but at least it establishes a basis that these are humans who are making these claims.” </p>",
     "sourceDescription": "{\"time\":1687797266616,\"blocks\":[{\"id\":\"hqQskCBCmD\",\"type\":\"paragraph\",\"data\":{\"text\":\"Misinformation around the 2024 election will be rampant as new tools have made advanced artificial intelligence more accessible, according to Eric Schmidt, former CEO of&nbsp;<a href=\\\"https://www.cnbc.com/quotes/GOOGL/\\\">Google</a>&nbsp;who co-founded Schmidt Futures.\"}},{\"id\":\"RLO_9p8IS7\",\"type\":\"paragraph\",\"data\":{\"text\":\"“The 2024 elections are going to be a mess because social media is not protecting us from false generated AI,” Schmidt told Andrew Ross Sorkin on CNBC’s “<a href=\\\"https://www.cnbc.com/squawk-box-us/\\\">Squawk Box</a>” on Monday. “They’re working on it, but they haven’t solved it yet. And in fact, the&nbsp;<a href=\\\"https://www.cnbc.com/2023/05/26/tech-companies-are-laying-off-their-ethics-and-safety-teams-.html\\\">trust and safety groups are getting made smaller, not larger.</a>”\"}},{\"id\":\"W6bIZyuWy4\",\"type\":\"paragraph\",\"data\":{\"text\":\"While there’s broad concern about the long-term impacts of AI on society, including the potential for the technology to gain human-like abilities, Schmidt said that “the short-term danger is misinformation.”\"}},{\"id\":\"yCMdP_zuK1\",\"type\":\"paragraph\",\"data\":{\"text\":\"Google recently decided to&nbsp;<a href=\\\"https://www.cnbc.com/2023/06/02/youtube-will-stop-removing-false-claims-about-2020-election-fraud.html\\\">stop removing false claims about widespread fraud in the 2020 U.S. election</a>&nbsp;<a href=\\\"https://www.cnbc.com/2023/06/02/youtube-will-stop-removing-false-claims-about-2020-election-fraud.html\\\">from YouTube</a>. It said the decision sought to balance its goals of protecting the community and being a forum for open discussion.\"}},{\"id\":\"9YW8oPuhKj\",\"type\":\"paragraph\",\"data\":{\"text\":\"Asked about the policy change, Schmidt said that social media should allow for “free speech for humans, not computers.”\"}},{\"id\":\"5ZVyhpw35V\",\"type\":\"paragraph\",\"data\":{\"text\":\"“What social media should do is mark all the content, know who the users are, and hold people accountable if they violate the law,” Schmidt said. “It doesn’t solve the problem of, you and I disagree on facts, but at least it establishes a basis that these are humans who are making these claims.”\"}}],\"version\":\"2.26.5\"}",
@@ -16871,6 +18328,60 @@
         "address": "USA",
         "order": 0,
         "pinId": 386
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 541,
+    "parentId": 386,
+    "rootThread": false,
+    "title": "Biden need is a fully fledged new COVID variant full lockdown protocol that would crush Putin’s oil revenues and hence weaken him on the battlefield, have FFR back to zero",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Election</chronohash> <chronohash class=\"chrono-hash-highlight\">#Rates</chronohash>&nbsp;<chronohash class=\"chrono-hash-highlight\">#OIl</chronohash> </p>",
+    "sourceDescription": "{\"time\":1692736230728,\"blocks\":[{\"id\":\"p29sdB8oVg\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Election</chronohash> <chronohash class=\\\"chrono-hash-highlight\\\">#Rates</chronohash>&nbsp;<chronohash class=\\\"chrono-hash-highlight\\\">#OIl</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://twitter.com/INArteCarloDoss/status/1694072713973842040",
+    "utcStartDateTime": "2024-11-05T08:00:00.000Z",
+    "utcEndDateTime": "2024-11-06T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-08-22T20:30:39.320Z",
+    "sentimentScore": -0.7167544309049845,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 414,
+        "originalUrl": "https://twitter.com/INArteCarloDoss/status/1694072713973842040",
+        "type": "2",
+        "authorName": "KKGB Kitty",
+        "authorUrl": "https://twitter.com/INArteCarloDoss",
+        "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Call me crazy, but I think Biden Administration is in such a dire position right now with a trifecta of: <br>1 - failing Ukraine counter-offensive and prospect of a never ending protracted conflict that will suck up billions in the hundreds and ammunition and hardware indefinitely…</p>&mdash; KKGB Kitty (@INArteCarloDoss) <a href=\"https://twitter.com/INArteCarloDoss/status/1694072713973842040?ref_src=twsrc%5Etfw\">August 22, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n"
+      }
+    ],
+    "locations": [
+      {
+        "id": 152,
+        "address": "USA",
+        "order": 0,
+        "pinId": 541
+      }
+    ],
+    "mentions": [
+      {
+        "id": 375,
+        "tag": "#Election",
+        "pinId": 541
+      },
+      {
+        "id": 376,
+        "tag": "#rates",
+        "pinId": 541
+      },
+      {
+        "id": 377,
+        "tag": "#Oil",
+        "pinId": 541
       }
     ],
     "userId": 1
@@ -17224,6 +18735,39 @@
         "id": 289,
         "tag": "$AMZN",
         "pinId": 487
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 564,
+    "rootThread": false,
+    "title": "South Korea Postpones 20% Crypto Tax to 2025",
+    "description": "<p class=\"paragraph\"> <chronohash class=\"chrono-hash-highlight\">#Crypto</chronohash> </p>",
+    "sourceDescription": "{\"time\":1698180074097,\"blocks\":[{\"id\":\"-X4j62y1Z4\",\"type\":\"paragraph\",\"data\":{\"text\":\"<chronohash class=\\\"chrono-hash-highlight\\\">#Crypto</chronohash>\"}}],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.coindesk.com/policy/2022/07/21/south-korea-postpones-20-crypto-tax-to-2025/",
+    "utcStartDateTime": "2025-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2025-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-10-24T20:43:30.057Z",
+    "sentimentScore": 0.05802470445632935,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "locations": [
+      {
+        "id": 174,
+        "address": "South Korea",
+        "order": 0,
+        "pinId": 564
+      }
+    ],
+    "mentions": [
+      {
+        "id": 401,
+        "tag": "#crypto",
+        "pinId": 564
       }
     ],
     "userId": 1
@@ -18455,6 +19999,44 @@
         "originalWidth": 150,
         "originalHeight": 133,
         "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 556,
+    "rootThread": false,
+    "title": "India’s elderly population will double and overtake the number of children by 2050",
+    "description": "",
+    "sourceDescription": "{\"time\":1696224837573,\"blocks\":[],\"version\":\"2.26.5\"}",
+    "sourceUrl": "https://www.cnbc.com/2023/10/02/indias-elderly-population-will-double-and-overtake-children-by-2050.html",
+    "utcStartDateTime": "2050-01-01T08:00:00.000Z",
+    "utcEndDateTime": "2050-01-02T08:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2023-10-02T05:34:26.336Z",
+    "sentimentScore": -0.00548513978719711,
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 428,
+        "thumbName": "62371647-e5e1-4dfb-b3c5-6fb766849818-chrono-lg.webp",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://image.cnbcfm.com/api/v1/image/107308883-1695963211229-gettyimages-1232092912-DSC_2674.jpeg?v=1696209290&w=1920&h=1080",
+        "originalWidth": 1920,
+        "originalHeight": 1080,
+        "type": "1"
+      }
+    ],
+    "locations": [
+      {
+        "id": 170,
+        "address": "India",
+        "order": 0,
+        "pinId": 556
       }
     ],
     "userId": 1
