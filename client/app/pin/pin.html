@@ -34,7 +34,7 @@
         <div class="grid__media" ng-switch="$ctrl.pin.media[0].type">
 
           <div ng-switch-when="1">
-            <a class="pin__asset pin__asset--link" ng-if="$ctrl.pin.media[0].thumbName"
+            <a class="pin__asset pin__asset--link pin-parallax" pin-parallax ng-if="$ctrl.pin.media[0].thumbName"
               ng-href="{{$ctrl.pin.sourceUrl}}" target="_blank">
               <img ng-src="{{$ctrl.appConfig.thumbUrlPrefix + $ctrl.pin.media[0].thumbName}}" class="pin__image"
                 data-actual-width="{{$ctrl.pin.media[0].thumbWidth}}"

@@ -1,0 +1,47 @@
+// Caps the pin image's height and lets jparallax drift it through the cap as
+// the pointer moves over it, which reveals what was cut. The two rules below
+// are the plugin's required pair (its own jquery.parallax.css calls them
+// .parallax-viewport and .parallax-layer): the port establishes the containing
+// block and clips, the layer is positioned out of flow so the plugin can drive
+// its top/margin-top.
+//
+// This is a ceiling, not a fixed height. Most pin images are shorter than it,
+// and since the layer is out of flow the box cannot shrink to fit on its own -
+// so the directive sets the height in pixels, to whichever is smaller of the
+// image and this cap. Anything shorter is shown whole, with no effect and no
+// dead space.
+$pin-parallax-max-height: 70vh;
+$pin-parallax-min-height: 420px;
+$pin-parallax-ceiling: 820px;
+
+.pin-parallax {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    max-height: clamp($pin-parallax-min-height, $pin-parallax-max-height, $pin-parallax-ceiling);
+
+    img {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: none;
+        // No transition: the plugin recalculates the offset every frame and
+        // does its own easing, so a CSS curve would only lag and fight it.
+    }
+}
+
+// With no pointer to track there is nothing to drive the effect, so leave
+// touch screens the whole image. Beats the height the directive sets inline.
+@media (hover: none) and (max-width: 700px) {
+    .pin-parallax {
+        height: auto !important;
+        max-height: none;
+
+        img {
+            position: static;
+            top: auto !important;
+            margin-top: 0 !important;
+        }
+    }
+}
