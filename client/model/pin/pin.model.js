@@ -18,6 +18,8 @@
       'priceUpperBound',
       'price',
       'tip',
+      'dateConfidence',
+      'dateConfidenceReasoning',
       {
         'utcStartDateTime': Date
       },

@@ -53,6 +53,8 @@ function executeCreateTable() {
             priceUpperBound DECIMAL(18,2),
             price DECIMAL(18,2),
             tip NVARCHAR(4000),
+            dateConfidence NVARCHAR(32),
+            dateConfidenceReasoning NVARCHAR(4000),
             utcStartDateTime DATETIME2(0) NOT NULL,
             utcEndDateTime DATETIME2(0) NOT NULL,
             allDay BIT DEFAULT 0 NOT NULL,

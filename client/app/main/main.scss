@@ -326,6 +326,13 @@ $bag-font-color: var(--bag-text-color);
         }
     }
 
+    &__date-line {
+        font-size: 11px;
+        font-style: italic;
+        opacity: 0.8;
+        margin-bottom: 6px;
+    }
+
     &__description {
         color: var(--grid-description-text-color);
         font-family: Noto Sans, Arial, sans-serif; //Georgia, 'Times New Roman', Times, serif;

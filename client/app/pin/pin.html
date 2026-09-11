@@ -13,6 +13,23 @@
 
       <div class="pin__panel" ng-if="$ctrl.pinReady">
 
+        <!-- Sits above the image so it cannot be mistaken for the event date
+             further down, which is what the pin is actually about. -->
+        <div class="grid__headline pin__posted">
+          <div class="headline-left">
+            <a class="posted-time" ui-sref="pin({id:$ctrl.pin.id})">
+              <time datetime="{{$ctrl.pin.utcCreatedDateTime}}">{{$ctrl.pin.utcCreatedDateTime | date :
+                "MM/dd/yyyy
+                'at' h:mm a" | lowercase}}
+              </time>
+            </a>
+            <span class="rubric__divider">/</span>
+            <a ng-click="$ctrl.searchService.submit($ctrl.pin.user.userName)" class="rubric">
+              <span>{{$ctrl.pin.user.userName}}</span>
+            </a>
+          </div>
+        </div>
+
         <!-- Switch between image / iframe / tweets -->
         <div class="grid__media" ng-switch="$ctrl.pin.media[0].type">
 
@@ -38,31 +55,15 @@
         <div class="grid__body">
 
           <div class="grid__meta">
-            <div class="grid__headline">
-              <div class="headline-left">
-                  <a class="posted-time" ui-sref="pin({id:$ctrl.pin.id})">
-                      <time datetime="{{$ctrl.pin.utcCreatedDateTime}}">{{$ctrl.pin.utcCreatedDateTime | date :
-                          "MM/dd/yyyy
-                          'at' h:mm a" | lowercase}}
-                      </time>
-                  </a>
-                  <span class="rubric__divider">/</span>
-                  <a ng-click="$ctrl.searchService.submit($ctrl.pin.user.userName)" class="rubric">
-                      <span>{{$ctrl.pin.user.userName}}</span>
-                  </a>
-              </div>
-          </div>
-            <div class="grid__uploaded-date --clear-margin" ng-switch="$ctrl.pin.allDay">
-              <span ng-switch-when="true">
-                <em>
-                  <span>Starts {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy"}}</span>
-                  <span> - All day</span>
-                </em>
-              </span>
-              <em ng-switch-default>
-                <span>Starts {{$ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"}}</span>
-                <span ng-if="$ctrl.pin.utcEndDateTime">to {{$ctrl.pin.utcEndDateTime | date:"MM/dd/yyyy h:mma"}}</span>
-              </em>
+            <!-- Same markup as the timeline card's date line, so both read the
+                 same way. -->
+            <div class="grid__date-line" ng-if="$ctrl.pin.utcStartDateTime">
+              <span class="grid__starts">{{$ctrl.pin.allDay
+                ? ('Starts ' + ($ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy") + ' - All day')
+                : ('Starts ' + ($ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"))}}</span>
+              <date-confidence level="{{$ctrl.pin.dateConfidence}}"
+                reasoning="{{$ctrl.pin.dateConfidenceReasoning}}"
+                show-reasoning="true"></date-confidence>
             </div>
           </div>
 

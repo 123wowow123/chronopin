@@ -1,0 +1,53 @@
+// How much to trust a pin's release/completion date, from the classifier that
+// reads the source page's own wording.
+$confidence-confirmed: #3f7d4e;
+$confidence-scheduled: #3a6b8a;
+$confidence-estimated: #8a7433;
+$confidence-delayed: #8a4338;
+$confidence-unknown: #5a5a5a;
+
+.date-confidence {
+    display: inline;
+
+    &__pill {
+        display: inline-block;
+        margin-left: 6px;
+        padding: 1px 6px;
+        border-radius: 3px;
+        font-size: 9px;
+        font-weight: bold;
+        letter-spacing: 0.04em;
+        vertical-align: 1px;
+        white-space: nowrap;
+        color: #ededed;
+        cursor: help;
+
+        &--confirmed {
+            background: $confidence-confirmed;
+        }
+
+        &--scheduled {
+            background: $confidence-scheduled;
+        }
+
+        &--estimated {
+            background: $confidence-estimated;
+        }
+
+        &--delayed {
+            background: $confidence-delayed;
+        }
+
+        &--unknown {
+            background: $confidence-unknown;
+        }
+    }
+
+    &__why {
+        display: block;
+        margin-top: 4px;
+        font-size: 11px;
+        line-height: 1.35;
+        opacity: 0.7;
+    }
+}

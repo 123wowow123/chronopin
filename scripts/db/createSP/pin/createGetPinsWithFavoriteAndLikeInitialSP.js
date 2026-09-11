@@ -66,6 +66,8 @@ function executeCreateSP() {
               priceUpperBound        DECIMAL(18, 2),
               price                  DECIMAL(18, 2),
               tip                    NVARCHAR(4000),
+              dateConfidence         NVARCHAR(32),
+              dateConfidenceReasoning NVARCHAR(4000),
               utcStartDateTime       DATETIME2,
               utcEndDateTime         DATETIME2,
               allDay                 BIT,

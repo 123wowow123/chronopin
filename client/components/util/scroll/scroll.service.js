@@ -39,9 +39,16 @@
                 return this;
             },
 
+            // Returns false when the element is not in the DOM, rather than
+            // throwing out of findYPos and breaking the caller's promise chain.
             scrollToID(scrollEl, id) {
-                const pos = ScrollUtil.findYPos(ScrollUtil.getElementById(id));
-                return ScrollUtil.scrollYTo(scrollEl, pos);
+                const el = ScrollUtil.getElementById(id);
+                if (!el) {
+                    return false;
+                }
+                const pos = ScrollUtil.findYPos(el);
+                ScrollUtil.scrollYTo(scrollEl, pos);
+                return true;
             },
 
             scrollToIDAsync(scrollEl, id) {

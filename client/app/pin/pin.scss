@@ -97,4 +97,31 @@
     }
   }
 
+  // The posted time and the event date were both ~11px and muted, so they read
+  // as two of the same thing. The event date is what the pin is about, so it
+  // leads; when it was posted is metadata; the confidence note is a footnote.
+  &__posted {
+    margin-bottom: 8px;
+  }
+
+  &__panel {
+
+    // grid__body already carries the 10px inset shared by timeline cards, and
+    // the heading and footer add their own on top - which left the title and
+    // footer 10px right of the date, reasoning and description.
+    .grid__heading,
+    .grid__footer {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .posted-time time::before {
+      content: 'Posted ';
+      opacity: 0.7;
+    }
+
+    // The date line itself is left to .grid__date-line in main.scss, shared
+    // with the timeline cards, so both read identically.
+  }
+
 }

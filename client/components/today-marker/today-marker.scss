@@ -44,9 +44,21 @@ $today-marker-bg: $timeline-countdown-today-bg;
         }
     }
 
+    // Bag circles are 35px because they head a group of content. This row has
+    // nothing under it, so a full-size circle reads as a heavy empty dot. Kept
+    // on the same centre as the others (cx 157) and centred on its own tag.
     &__circle {
         background: $today-marker-bg;
         border-color: lighten($today-marker-bg, 15%);
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        border-width: 2px;
+        top: 30px;
+        // The rail's painted line is centred 3px left of where the 35px bag
+        // circles sit; that offset is invisible on them but not on a 16px dot,
+        // so this centres on the line rather than copying their position.
+        margin-left: -9px;
     }
 }
 

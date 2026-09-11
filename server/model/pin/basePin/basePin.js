@@ -21,6 +21,8 @@ export const BasePinProp = [
     'priceUpperBound',
     'price',
     'tip',
+    'dateConfidence',
+    'dateConfidenceReasoning',
     'utcStartDateTime',
     'utcEndDateTime',
     'allDay',
