@@ -171,9 +171,12 @@
                         <span class="grid__starts">{{$ctrl.pin.allDay
                             ? ('Starts ' + ($ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy"))
                             : ('Starts ' + ($ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"))}}</span>
+                        <!-- An unverified pin's reasoning only restates that
+                             nothing was found, so the card shows the badge
+                             alone; the pin page still carries the detail. -->
                         <date-confidence level="{{$ctrl.pin.dateConfidence}}"
                             reasoning="{{$ctrl.pin.dateConfidenceReasoning}}"
-                            show-reasoning="true"></date-confidence>
+                            show-reasoning="$ctrl.pin.dateConfidence !== 'unknown'"></date-confidence>
                     </div>
                     <div class="grid__description" ng-bind-html="$ctrl.pin.description"></div>
                 </div>
