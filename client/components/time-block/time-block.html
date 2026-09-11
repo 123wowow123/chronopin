@@ -24,7 +24,7 @@
 
 <!-- Angular Grid -->
 <ul ng-if="$ctrl.bag.pins.length" class="timeline__group-section dynamic-grid">
-    <li id="{{pin.id}}" class="grid --timeline" data-ng-repeat="pin in $ctrl.bag.pins">
+    <li id="{{pin.id}}" class="grid --timeline" pin-tilt data-ng-repeat="pin in $ctrl.bag.pins">
 
         <pin-block pin="pin" config="$ctrl.config"></pin-block>
 
