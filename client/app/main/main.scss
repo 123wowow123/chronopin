@@ -457,6 +457,13 @@ $bag-font-color: var(--bag-text-color);
         margin-left: 2px;
         min-width: 20px;
 
+        // Facebook injects its button late; reserving its rendered height stops
+        // the card footer jumping when it appears.
+        [fb-like] {
+            display: block;
+            min-height: 20px;
+        }
+
         &.\--add {
             color: $timeline-content-color;
         }

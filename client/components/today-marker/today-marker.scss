@@ -10,14 +10,28 @@ $today-marker-bg: $timeline-countdown-today-bg;
     &.\--active {
         display: block;
         position: relative;
+        padding: 0.1px; // margin collapsing prevention, as on timeline__group-container
 
-        // Keeps the 42px tag rhythm across the row boundary. Tags sit at
-        // 23px + 42px * (n - 1) inside their row, so the gap to the next row's
-        // first tag is (this row's height + that row's margin-top) - 42px * (n - 1).
-        // One tag here, so 32px plus the 10px margin bag rows use lands that gap
-        // on 42px while the marker takes up a single tag's worth of height.
-        min-height: 32px;
+        // Tags sit at 23px + 42px * (n - 1) inside their row, so the gap below
+        // the last one is (this row's height + the next row's margin-top)
+        // - 42px * (n - 1). One tag here, and 36px + the 10px margin bag rows
+        // use leaves 16px of whitespace below it - what every other group
+        // boundary on the timeline uses, rather than the 12px used within a
+        // single tag stack.
+        min-height: 36px;
         margin-top: 10px;
+    }
+}
+
+// The narrow layout lays every tag of a row out on one line at top: -45px, so a
+// bag row's height is taken up by its title or cards. This row has nothing under
+// its tag, so it reserves no height at all - a bag row's 33px would just read as
+// a hole. Zero height against the next row's 45px margin, and 12px here against
+// the 33px row above, leave an even 15px on both sides.
+@media (max-width: $ipad-landscape) {
+    .timeline__today.\--active {
+        min-height: 0;
+        margin-top: 12px;
     }
 }
 

@@ -171,7 +171,11 @@
 
 twitter-pin {
   display: block;
-  min-height: 500px;
+  // Reserved before the embed loads, since a tweet's height is not known from
+  // the pin data. Twitter's widget swaps the blockquote for an iframe that
+  // renders up to ~594px here, so 500px still grew on load and shifted the
+  // page; 600px covers it.
+  min-height: 600px;
 }
 
 .twitter-pin-container {
