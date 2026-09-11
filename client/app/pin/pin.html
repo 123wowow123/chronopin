@@ -76,7 +76,6 @@
             </a>
           </h4>
           <div class="grid__description" ng-bind-html="$ctrl.pin.description"></div>
-          <pin-map address="{{$ctrl.pin.address}}" title="{{$ctrl.pin.title}}"></pin-map>
           <div class="grid__footer">
 
             <div class="grid__footer-left">
@@ -149,6 +148,13 @@
 
     <div class="pin__right_pannel">
       <div class="pin__right_pannel_content">
+        <!-- Gated on the same condition as the thread below, so the column
+             fills in one go rather than the map arriving late and pushing the
+             thread down. -->
+        <div class="pin__map" ng-if="$ctrl.pinReady">
+          <pin-map address="{{$ctrl.pin.address}}" title="{{$ctrl.pin.title}}"></pin-map>
+        </div>
+
         <div class="pin__thread">
           <thread ng-if="!!$ctrl.pin.id" pin-id="$ctrl.pin.id" config="$ctrl.appConfig"></thread>
         </div>

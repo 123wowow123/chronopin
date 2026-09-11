@@ -49,6 +49,17 @@
     margin-bottom: 15px;
   }
 
+  // The map leads the right column, so it drops the top margin it carried
+  // when it sat between the description and the footer, and takes the same
+  // gap underneath as the thread.
+  &__map {
+    margin-bottom: 15px;
+
+    .pin-map {
+      margin-top: 0;
+    }
+  }
+
   &__thread_bottom_ads {
     display: flex;
     flex-wrap: wrap;
