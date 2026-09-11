@@ -31,7 +31,7 @@
     <i class="astro" ng-class="'astro-' + ($ctrl.bag.utcStartDateTime | date:'EEE' | lowercase)"></i>
 </div>
 
-<div class="timeline__date --1">
+<div class="timeline__date --1" ng-class="{'timeline__date--today': $ctrl.bag.getDateSince() === 0}">
     <span class="timeline__tag" ng-bind="$ctrl.bag.utcStartDateTime | date:'MM/dd/yyyy'"></span>
 </div>
 <div class="timeline__countdown --2" ng-class="{'timeline__countdown--today': $ctrl.bag.getDateSince() === 0}" title="{{$ctrl.bag.getDateSpan() | timespan}}">

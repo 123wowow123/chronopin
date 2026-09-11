@@ -1,0 +1,47 @@
+// Marks where "now" sits on the timeline. Reuses the olive already defined for
+// timeline__countdown--today rather than introducing a new colour, and the
+// timeline__date / timeline__countdown tag geometry for rail alignment.
+$today-marker-bg: $timeline-countdown-today-bg;
+
+// Only the row holding the marker takes up space; the rest collapse away.
+.timeline__today {
+    display: none;
+
+    &.\--active {
+        display: block;
+        position: relative;
+
+        // Keeps the 42px tag rhythm across the row boundary. Tags sit at
+        // 23px + 42px * (n - 1) inside their row, so the gap to the next row's
+        // first tag is (this row's height + that row's margin-top) - 42px * (n - 1).
+        // One tag here, so 32px plus the 10px margin bag rows use lands that gap
+        // on 42px while the marker takes up a single tag's worth of height.
+        min-height: 32px;
+        margin-top: 10px;
+    }
+}
+
+.today-marker {
+    &__label {
+        background: $today-marker-bg;
+
+        &::after {
+            border-left-color: $today-marker-bg;
+        }
+    }
+
+    &__circle {
+        background: $today-marker-bg;
+        border-color: lighten($today-marker-bg, 15%);
+    }
+}
+
+// When a bag does fall on today, that bag is highlighted instead of inserting a
+// separate marker row, so the date tag matches its already-olive countdown tag.
+.timeline__date--today {
+    background: $today-marker-bg;
+
+    &::after {
+        border-left-color: $today-marker-bg;
+    }
+}

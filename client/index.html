@@ -29,6 +29,9 @@
   <meta property="og:url" content="https://www.chronopin.com/">
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- Leaflet, for the pin location map. From CDN like socket.io below: the
+       bower package ships source only, with no built leaflet.js. -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <!-- build:css(client) app/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
@@ -61,6 +64,7 @@
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
   <script src="https://cdn.socket.io/4.3.2/socket.io.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <!-- build:js({client,node_modules}) app/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/angular/angular.js"></script>
@@ -162,11 +166,13 @@
   <script src="components/oauth-buttons/oauth-buttons.directive.js"></script>
   <script src="components/overlap/overlap.component.js"></script>
   <script src="components/pin-block/pin-block.controller.js"></script>
+  <script src="components/pin-map/pin-map.directive.js"></script>
   <script src="components/scroll/scroll/scroll.component.js"></script>
   <script src="components/text-editor/text-editor/text-editor.directive.js"></script>
   <script src="components/text-editor/text-editor/text-editor.service.js"></script>
   <script src="components/thread/thread/thread.component.js"></script>
   <script src="components/time-block/time-block.controller.js"></script>
+  <script src="components/today-marker/today-marker.directive.js"></script>
   <script src="components/twitter/twitter-pin/twitter-pin.directive.js"></script>
   <script src="components/twitter/twitter/twitter.service.js"></script>
   <script src="components/util/global/util.service.js"></script>

@@ -3,6 +3,10 @@
 
 (function () {
 
+  // Element id of the TODAY marker row, so page load and the Today button can
+  // scroll it to the top of the page.
+  const TODAY_MARKER_ID = 'today-marker';
+
   class MainController {
 
     constructor($transitions, $scope, $stateParams, pinWebService, dateTimeWebService, mainWebService, linkHeaderParser, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, commentJs, $log, $timeout) {
@@ -49,6 +53,10 @@
       this.gettingPrev = null;
 
       this.loading = false;
+
+      // today marker
+      this.now = new Date();
+      this._todayMarker = null;
 
       // scroll properties
       // this.bagsYOffset;
@@ -129,6 +137,50 @@
       event.target.bag.inView = event.inView;
     };
 
+    // Index of the bag the TODAY marker is inserted before, or -1 when it
+    // should not appear: either a bag already falls on today, in which case
+    // that bag is highlighted instead, or there are no bags at all.
+    todayMarkerIndex() {
+      return this._resolveTodayMarker().index;
+    }
+
+    // Every bag is in the past, so the marker goes after the last one.
+    todayMarkerAtEnd() {
+      return this._resolveTodayMarker().atEnd;
+    }
+
+    // Called from ng-repeat, so the result is memoized per bag list rather
+    // than rescanned on every digest.
+    _resolveTodayMarker() {
+      const bags = this.bags;
+      const length = bags ? bags.length : 0;
+
+      if (this._todayMarker && this._todayMarker.length === length) {
+        return this._todayMarker;
+      }
+
+      let index = -1;
+      let atEnd = false;
+
+      if (length) {
+        // Bags run oldest first, so the first non-past bag decides it.
+        for (let i = 0; i < length; i++) {
+          const daysUntil = bags[i].getDateSince();
+          if (daysUntil === 0) {
+            break; // a bag is today; time-block highlights it
+          }
+          if (daysUntil > 0) {
+            index = i;
+            break;
+          }
+        }
+        atEnd = index === -1 && bags[length - 1].getDateSince() < 0;
+      }
+
+      this._todayMarker = { length, index, atEnd };
+      return this._todayMarker;
+    }
+
     // Private helper functions
 
     _scrollAdjust(elId) {
@@ -140,6 +192,13 @@
 
 
     getHomeScrollId() {
+      // Prefer the TODAY marker so "now" lands at the top of the page. When a
+      // bag falls on today there is no marker row, and that bag is the target.
+      const marker = this._resolveTodayMarker();
+      if (marker.index !== -1 || marker.atEnd) {
+        return TODAY_MARKER_ID;
+      }
+
       let firstBag = this.pinApp.findClosestFutureBagByDateTime(new Date());
       if (firstBag) {
         return firstBag.toISODateTimeString();

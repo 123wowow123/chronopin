@@ -5,11 +5,23 @@
       <div class="col-lg-12">
         <ul class="timeline">
 
+          <!-- Sits between the last past bag and the first future one. Kept as
+               its own row so its tags anchor to it rather than to a bag. -->
+          <li class="timeline__today" data-ng-repeat-start="bag in $ctrl.bags"
+            ng-class="{'\--active': $ctrl.todayMarkerIndex() === $index}">
+            <today-marker ng-if="$ctrl.todayMarkerIndex() === $index" date="$ctrl.now"></today-marker>
+          </li>
+
           <!-- Extract Into Component -->
-          <li id="{{bag.toISODateTimeString()}}" class="timeline__group-container" data-ng-repeat="bag in $ctrl.bags" waypoint="$ctrl.updateInView(event)">
+          <li id="{{bag.toISODateTimeString()}}" class="timeline__group-container" data-ng-repeat-end waypoint="$ctrl.updateInView(event)">
 
             <time-block bag="bag" config="$ctrl.appConfig"></time-block>
 
+          </li>
+
+          <!-- Every bag is in the past, so "now" belongs after all of them. -->
+          <li class="timeline__today --active" ng-if="$ctrl.todayMarkerAtEnd()">
+            <today-marker date="$ctrl.now"></today-marker>
           </li>
         </ul>
       </div>

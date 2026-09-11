@@ -490,6 +490,15 @@ $bag-font-color: var(--bag-text-color);
         }
     }
 
+    // On the timeline, .grid__content clips the card at 600px. A tall image
+    // allowed up to 510px pushed the description past that edge, leaving about
+    // one line visible. Capping lower keeps at least two lines in view; the
+    // flex centring above crops the overflow evenly top and bottom, and short
+    // images are untouched because this is only a maximum.
+    &.\--timeline &__asset {
+        max-height: 380px;
+    }
+
     &__image {
         // width: 100%;
         object-fit: cover;

@@ -11,7 +11,11 @@ exports = module.exports = {
   ],
   thumbWidth: 400,
   uploadImageWidth: 1000,
-  thumbUrlPrefix: 'https://chronopin.blob.core.windows.net/thumb/',
+  // Development serves thumbs from the local Azurite emulator; the production
+  // blobs this used to point at no longer exist.
+  thumbUrlPrefix: process.env.NODE_ENV === 'development' ?
+    'http://127.0.0.1:10000/devstoreaccount1/thumb/' :
+    'https://chronopin.blob.core.windows.net/thumb/',
   fbAppId: '560731380662615',
   gaAppId: 'UA-103783559-1',
   scrapeType: {
