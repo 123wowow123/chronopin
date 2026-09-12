@@ -4,27 +4,41 @@
 // hardcoded white pill with black text it used to be, which read as a foreign
 // element in dark mode.
 //
-// No fixed width: the label sets the size, and the horizontal padding matches
-// the filter's own buttons, so the corners stay in proportion to the box.
+// No fixed width: the label sets the size, so the corners stay in proportion
+// to the box.
+//
+// Sized off the same basis as the filter's own buttons rather than by
+// hand-copied numbers: @extend brings Bootstrap's .btn line-height with it,
+// and the font size and padding below are the filter's, so the two come out
+// the same height. It was .8em bold on a 1.6em line before, which rendered two
+// pixels smaller in type and one taller in box than the buttons next to it,
+// at a heavier weight. The weight now comes from .btn along with everything
+// else, so there is nothing here to keep in step by hand.
 #scrollHomeBtn {
+    @extend .btn;
+
     position: fixed;
     bottom: 10px;
     right: 10px;
-    line-height: 1.6em;
-    font-size: .8em;
-    font-weight: bold;
-    padding: 5px 12px;
+    font-size: 13px;
+    padding: 4px 12px;
     border-radius: 8px;
     background-color: var(--grid-panel-bg-color);
     border: 1px solid var(--primary-border-color);
     color: var(--primary-color);
-    // Replaces opacity: 0.75, which dimmed the label along with the
-    // background and left it hard to read against a busy timeline.
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+
+    // Held back over the timeline and brought up to full strength while
+    // pointed at, on the same timing as the filter. The fade is what makes
+    // 0.75 workable: this button used to sit there permanently dimmed, which
+    // washed out its label as well as its background.
+    opacity: 0.75;
+    transition: opacity 150ms ease-in-out;
 }
 
 #scrollHomeBtn:hover,
 #scrollHomeBtn:focus {
+    opacity: 1;
     background-color: var(--primary-highlight-bg-color);
     border-color: var(--primary-border-color);
     color: var(--primary-color);

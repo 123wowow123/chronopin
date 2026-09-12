@@ -12,7 +12,7 @@
   // What the panel lists. Any other span is typed into the field above them.
   // "1 day" rather than "24 hours": the same window under two labels would
   // leave whichever one was not clicked looking unselected.
-  const SPAN_OPTIONS = ['12h', '1d', '3d', '5d', '1w', '2w', '4w', '1mo', '1y'];
+  const SPAN_OPTIONS = ['12h', '1d', '3d', '5d', '1w', '1mo', '1y'];
 
   // What the combo button shows before anything has been chosen.
   const DEFAULT_SPAN = '1d';

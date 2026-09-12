@@ -18,6 +18,19 @@
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 
+    // Held back a little so it sits quietly over the timeline, and comes up
+    // to full strength while it is being used. focus-within matters as much
+    // as hover here: the panel is opened to be typed into, and the pointer
+    // often leaves the card while that happens - without it the control
+    // would fade out from under whoever is still working in it.
+    opacity: 0.75;
+    transition: opacity 150ms ease-in-out;
+
+    &:hover,
+    &:focus-within {
+        opacity: 1;
+    }
+
     // Bootstrap's .btn-default is styled for the light theme only, so the
     // themed tokens are applied here instead of inheriting its greys. Shared
     // by both halves of the split button, so the whole row reads as one
