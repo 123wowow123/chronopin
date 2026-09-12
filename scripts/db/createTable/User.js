@@ -61,6 +61,7 @@ function executeCreateTable() {
             provider NVARCHAR(255),
             salt NVARCHAR(255),
             websiteUrl NVARCHAR(500),
+            defaultFilterSpanPreference NVARCHAR(20),
             utcCreatedDateTime DATETIME2(7) DEFAULT SYSUTCDATETIME() NOT NULL,
             utcUpdatedDateTime DATETIME2(7),
             utcDeletedDateTime DATETIME2(7)

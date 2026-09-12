@@ -94,6 +94,18 @@ function _parseSpan(value, now) {
   return moment(now).subtract(span.asMilliseconds(), 'ms').toDate();
 }
 
+// Whether a span is one this module would accept as created_within. Checked
+// before a span is stored as somebody's saved default, so a value that would
+// be refused the moment it was applied cannot be saved in the first place.
+export function isValidSpan(value) {
+  try {
+    _parseSpan(value, new Date());
+    return true;
+  } catch (err) {
+    return false;
+  }
+}
+
 // The extra query params a paginated response must echo so that later pages
 // keep filtering against the very same cutoff this request resolved.
 export function linkParams(createdSince) {

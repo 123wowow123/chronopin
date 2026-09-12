@@ -24,9 +24,12 @@ export function isAuthenticated() {
     // Validate jwt
     .use(function (req, res, next) {
       // allow access_token to be passed through query parameter as well
-      if (req.query && req.query.hasOwnProperty('access_token')) {
+      // Read as values rather than with hasOwnProperty: cookie-parser builds
+      // req.cookies with Object.create(null), so calling that method on it
+      // threw and every request carrying only an Authorization header 500ed.
+      if (req.query && req.query.access_token) {
         req.headers.authorization = 'Bearer ' + req.query.access_token;
-      } else if (req.cookies && req.cookies.hasOwnProperty('token')) {
+      } else if (req.cookies && req.cookies.token) {
         req.headers.authorization = 'Bearer ' + req.cookies.token;
       }
       validateJwt(req, res, next);

@@ -36,6 +36,7 @@ let prop = [
   'provider',
   'salt',
   'websiteUrl',
+  'defaultFilterSpanPreference',
   'utcCreatedDateTime',
   'utcUpdatedDateTime',
   'utcDeletedDateTime'
@@ -361,7 +362,10 @@ function _updateMSSQL(user) {
           .input('provider', mssql.NVarChar(255), user.provider)
           .input('role', mssql.NVarChar(255), user.role)
           .input('salt', mssql.NVarChar(255), user.salt)
-          .input('websiteUrl', mssql.NVarChar(500), user.websiteUrl);
+          .input('websiteUrl', mssql.NVarChar(500), user.websiteUrl)
+          // Written from whatever the object carries, so every caller has to
+          // load the row before updating it or a saved preference is cleared.
+          .input('defaultFilterSpanPreference', mssql.NVarChar(20), user.defaultFilterSpanPreference || null);
 
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
 

@@ -6,6 +6,8 @@ import {
 } from '../../model';
 import config from '../../config/environment';
 import jwt from 'jsonwebtoken';
+import _ from 'lodash';
+import * as createdFilter from '../../util/createdFilter';
 
 import {
   EventEmitter
@@ -19,7 +21,19 @@ const pickUserProps = [
   'lastName',
   'email',
   'role',
-  'provider'
+  'provider',
+  'defaultFilterSpanPreference'
+];
+
+// What somebody may change about themselves through the generic patch route.
+// Without this, every truthy property in the model's own list is writable
+// straight from the request body - `role` included, so a signed-in user could
+// make themselves an admin by patching their own profile.
+const patchableUserProps = [
+  'userName',
+  'firstName',
+  'lastName',
+  'email'
 ];
 
 export function updateEntity(newUser) {
@@ -94,10 +108,11 @@ export function create(req, res, next) {
   newUser.provider = 'local';
   newUser.role = 'user';
 
+  // addEntity resolves the user itself, not a { user } wrapper: destructuring
+  // one here left `user` undefined, so signup answered 422 with the serialised
+  // TypeError even though the row had already been inserted.
   return addEntity(newUser)
-    .then(({
-      user
-    }) => {
+    .then(user => {
       var token = jwt.sign({
         id: user.id
       }, config.secrets.session, {
@@ -114,7 +129,7 @@ export function create(req, res, next) {
  * Patch a new user
  */
 export function patch(req, res, next) {
-  let patchUser = new User(req.body);
+  let patchUser = new User(_.pick(req.body, patchableUserProps));
 
   let userId = +req.user.id;
   return User.getById(userId)
@@ -203,6 +218,53 @@ export function changePassword(req, res, next) {
         return res.status(403).end();
       }
     });
+}
+
+/**
+ * Save the signed-in user's own preferences
+ *
+ * Deliberately narrow: it takes one named field off the body and writes it to
+ * the row the token identifies, rather than patching across whatever
+ * properties the request happens to carry.
+ */
+export function savePreferences(req, res, next) {
+  let userId = +req.user.id;
+  let raw = req.body.defaultFilterSpanPreference;
+
+  if (raw !== null && raw !== undefined && typeof raw !== 'string') {
+    return res.status(400).json({
+      message: 'defaultFilterSpanPreference must be a span string or null'
+    });
+  }
+
+  // Stored normalised even though the validator would accept "1 D": the filter
+  // reads the value back with a stricter pattern than the one that validates
+  // it here, and would show an empty button for a span it cannot parse.
+  let within = (raw || '').trim().toLowerCase().replace(/\s+/g, '') || null;
+
+  // Nothing chosen clears the preference, putting the combo back on the span
+  // it falls back to.
+  if (within && !createdFilter.isValidSpan(within)) {
+    return res.status(400).json({
+      message: `defaultFilterSpanPreference is not a span the filter accepts: '${within}'`
+    });
+  }
+
+  return User.getById(userId)
+    .then(({
+      user
+    }) => {
+      if (!user) {
+        return res.status(401).end();
+      }
+      user.defaultFilterSpanPreference = within;
+      return patchEntity(user)
+        .then(() => {
+          res.status(204).end();
+        })
+        .catch(validationError(res));
+    })
+    .catch(err => next(err));
 }
 
 /**

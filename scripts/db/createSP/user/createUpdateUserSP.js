@@ -60,7 +60,8 @@ function executeCreateSP() {
             @role          NVARCHAR(255),
             @provider      NVARCHAR(255),
             @salt          NVARCHAR(255),
-            @websiteUrl    NVARCHAR(500)
+            @websiteUrl    NVARCHAR(500),
+            @defaultFilterSpanPreference NVARCHAR(20) = NULL
         AS
           BEGIN
 
@@ -88,6 +89,7 @@ function executeCreateSP() {
               provider      = @provider,
               salt          = @salt,
               websiteUrl    = @websiteUrl,
+              defaultFilterSpanPreference = @defaultFilterSpanPreference,
               utcUpdatedDateTime = @utcUpdatedDateTime
             WHERE id = @id;
 

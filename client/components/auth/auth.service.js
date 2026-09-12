@@ -120,6 +120,26 @@
       },
 
       /**
+       * Save the current user's own preferences
+       *
+       * @param  {Object}   preferences - the preference fields to store
+       * @param  {Function} callback    - optional, function(error)
+       * @return {Promise}
+       */
+      savePreferences(preferences, callback) {
+        return User.savePreferences({
+          id: currentUser.id
+        }, preferences, function () {
+          // Folded into the cached user so a page that reads a preference
+          // straight after it was saved sees the new value without refetching.
+          angular.extend(currentUser, preferences);
+          return safeCb(callback)(null);
+        }, function (err) {
+          return safeCb(callback)(err);
+        }).$promise;
+      },
+
+      /**
        * Gets all available info on a user
        *   (synchronous)
        *

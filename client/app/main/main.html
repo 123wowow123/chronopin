@@ -5,7 +5,8 @@
        a filter in the normal flow would never be seen. Staying put also keeps
        it clickable over the fixed page_message overlay. -->
   <div class="main__filter">
-    <posted-filter within="$ctrl.postedWithin" on-change="$ctrl.setPostedWithin(within, label)"></posted-filter>
+    <posted-filter within="$ctrl.postedWithin" default-span="$ctrl.defaultFilterSpanPreference"
+      on-change="$ctrl.setPostedWithin(within, label)"></posted-filter>
   </div>
 
   <div class="container-fluid main__timeline">

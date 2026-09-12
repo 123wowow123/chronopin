@@ -36,6 +36,13 @@ angular.module('chronopinNodeApp')
         controller: 'SettingsController',
         controllerAs: 'vm',
         authenticate: true
+      })
+      .state('preferences', {
+        url: '/preferences',
+        templateUrl: 'app/account/preferences/preferences.html',
+        controller: 'PreferencesController',
+        controllerAs: 'vm',
+        authenticate: true
       });
   })
   .run(function($rootScope) {

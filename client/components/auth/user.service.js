@@ -12,6 +12,12 @@
           controller: 'password'
         }
       },
+      savePreferences: {
+        method: 'PUT',
+        params: {
+          controller: 'preferences'
+        }
+      },
       get: {
         method: 'GET',
         params: {

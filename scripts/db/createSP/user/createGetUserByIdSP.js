@@ -66,6 +66,7 @@ function executeCreateSP() {
             provider,
             salt,
             websiteUrl,
+            defaultFilterSpanPreference,
 
             utcCreatedDateTime,
             utcUpdatedDateTime

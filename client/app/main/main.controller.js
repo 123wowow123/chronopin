@@ -54,6 +54,7 @@
       this.commentJs = commentJs;
 
       // properties
+      this.Auth = Auth;
       this.isAdmin = Auth.isAdmin; //bind function so each digest loop it get re-evaluated to determin latest state
       this.appConfig = appConfig;
 
@@ -72,6 +73,12 @@
       // whole timeline.
       this.postedWithin = null;
       this.postedWithinLabel = null;
+
+      // The span the filter's combo should start on, saved per person. Read
+      // here and handed down, so the filter itself stays clear of the user
+      // service. Null until the signed-in user is known, and for a visitor who
+      // is not signed in at all.
+      this.defaultFilterSpanPreference = null;
 
       // Bumped whenever the filter changes, so a page request already in
       // flight against the previous window is dropped rather than merged into
@@ -102,6 +109,11 @@
       });
 
       this._registerBrandReset();
+
+      this.Auth.getCurrentUser()
+        .then(user => {
+          this.defaultFilterSpanPreference = user.defaultFilterSpanPreference || null;
+        });
 
       // this.$transitions.onEnter({ to: 'main' }, (transition) => {
       //   if (angular.isNumber(this.pinApp.bagsYOffset)) {
