@@ -101,8 +101,11 @@
     startChange() {
       this.$log.log(this.pin.start);
       this.datePickerEnd.options.minDate = this.pin.start;
-      if (this.pin.end) {
-        this.pin.end = this.pin.start;
+      // Clear the end date only once the new start has overtaken it, leaving
+      // the field empty to re-pick. This used to overwrite the end on any
+      // start change, throwing away a date the user had deliberately picked.
+      if (this.pin.end && this.pin.end < this.pin.start) {
+        this.pin.end = undefined;
       }
     }
 
@@ -143,18 +146,28 @@
       if (!this.pin.selectedImage) {
         this.pin.selectedImage = pin.media && pin.media[0];
       }
-      if (!this.pin.price && pin.prices && pin.prices[0]) {
-        this.pin.price = pin.prices[0];
+      // Carried so that editing a pin resubmits these rather than blanking
+      // them - the form has no inputs for them, they come from the scrape.
+      if (!this.pin.dateConfidence) {
+        this.pin.dateConfidence = pin.dateConfidence;
+        this.pin.dateConfidenceReasoning = pin.dateConfidenceReasoning;
+      }
+      if (!this.pin.longFormSummary) {
+        this.pin.longFormSummary = pin.longFormSummary;
       }
     }
 
+    // /api/scrape answers with a Pin, the same shape setPin reads. It used to
+    // be given the raw scraper envelope instead - titles and descriptions as
+    // arrays, dates[0].start, images - so indexing [0] into what is now a
+    // string set the title to its first letter, and the dates and images
+    // never arrived at all.
     setPinFromScrape(pin) {
-      //this.pin.pageUrl = pin.sourceUrl;
-      if (!this.pin.title && pin.title && pin.title[0]) {
-        this.pin.title = pin.title[0];
+      if (!this.pin.title) {
+        this.pin.title = pin.title;
       }
-      if (!this.pin.description && pin.description && pin.description[0]) {
-        this.pin.description = pin.description[0];
+      if (!this.pin.description) {
+        this.pin.description = pin.description;
       }
       if (!this.pin.address) {
         this.pin.address = pin.address;
@@ -162,21 +175,21 @@
       if (!this.pin.price) {
         this.pin.price = pin.price;
       }
-      if (!this.pin.start && pin.dates && pin.dates[0].start) {
-        this.pin.start = new Date(pin.dates[0].start);
+      if (!this.pin.start && pin.utcStartDateTime) {
+        this.pin.start = new Date(pin.utcStartDateTime);
       }
-      if (!this.pin.end && pin.dates && pin.dates[0].end) {
-        this.pin.end = new Date(pin.dates[0].end);
+      if (!this.pin.end && pin.utcEndDateTime) {
+        this.pin.end = new Date(pin.utcEndDateTime);
       }
-      // if (!this.pin.imageUrl) {
-      //   this.pin.imageUrl = pin.images[0] && pin.images[0].sourceUrl && pin.images[0].sourceUrl;
-      // }
-      this.pin.images = pin.images; //delete above
-      this.pin.selectedImage = pin.images && pin.images[0] && pin.images[0];
-
-      if (!this.pin.price && pin.prices && pin.prices[0]) {
-        this.pin.price = pin.prices[0];
+      if (!this.pin.dateConfidence) {
+        this.pin.dateConfidence = pin.dateConfidence;
+        this.pin.dateConfidenceReasoning = pin.dateConfidenceReasoning;
       }
+      if (!this.pin.longFormSummary) {
+        this.pin.longFormSummary = pin.longFormSummary;
+      }
+      this.pin.images = pin.media;
+      this.pin.selectedImage = pin.media && pin.media[0];
     }
 
     scrapePage(url) {
@@ -250,6 +263,12 @@
         });
     }
 
+    // The chosen image goes as `media`, which is the only image field the
+    // server reads - BasePin.set builds Media from it, save() sends type 1
+    // through createAndSaveToCDN to get a thumbnail, and update() diffs the
+    // list by originalUrl. The old `imageUrl` was in no prop list, so it was
+    // dropped on create, and sending no `media` at all made update() treat
+    // every existing medium as removed and delete it.
     _formatSubmitPin(pin) {
       var newPin = {
         title: pin.title,
@@ -257,9 +276,12 @@
         sourceUrl: pin.pageUrl,
         address: pin.address,
         price: pin.price,
+        dateConfidence: pin.dateConfidence,
+        dateConfidenceReasoning: pin.dateConfidenceReasoning,
+        longFormSummary: pin.longFormSummary,
         utcStartDateTime: pin.start,
-        utcEndDateTime: pin.end && undefined,
-        imageUrl: pin.selectedImage.sourceUrl,
+        utcEndDateTime: pin.end,
+        media: pin.selectedImage ? [pin.selectedImage] : [],
         allDay: !this.timePicker.show
       };
       return newPin;

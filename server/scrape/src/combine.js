@@ -1,41 +1,28 @@
-import title from './title';
-import description from './description';
+// What the page's own markup can give that reading its text cannot: images
+// with real dimensions, and embedded YouTube/Twitter media. The title,
+// description, price and date extractors that used to live here were
+// replaced by the single LLM pass in server/extract.
 import image from './image';
 import youtube from './youtube';
 import twitter from './twitter';
-import price from './price';
-import date from './date';
-import $ from 'jquery';
 
 (
   function combine() {
 
     window.cpScrapePromise = new Promise(function (resolve, reject) {
 
-      var titleRes = title();
-
-      var descriptionRes = description();
-
       var imageRes = image();
-
-      var priceRes = price();
-
-      var dateRes = date();
 
       var youtubeRes = youtube();
 
       var twitterRes = twitter();
 
-      Promise.all([titleRes, descriptionRes, imageRes, youtubeRes, twitterRes, priceRes, dateRes])
-        .then(([titleRes, descriptionRes, imageRes, youtubeRes, twitterRes, priceRes, dateRes]) => {
+      Promise.all([imageRes, youtubeRes, twitterRes])
+        .then(([imageRes, youtubeRes, twitterRes]) => {
           let res = {
-            titles: titleRes,
-            descriptions: descriptionRes,
             media: imageRes,
             youtube: youtubeRes,
-            twitter: twitterRes,
-            prices: priceRes,
-            dates: dateRes
+            twitter: twitterRes
           };
           return res; // jshint ignore:line
         })

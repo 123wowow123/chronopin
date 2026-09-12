@@ -4,6 +4,7 @@ const _ = require('lodash');
 const { _getYoutubeAndWrapInMediumSync } = require('./youtube');
 const { _getTwitterAndWrapInMediumSync } = require('./twitter');
 const config = require('../config/environment');
+const { extractPinFields, toAddress } = require('../extract');
 const mediumID = config.mediumID;
 const {
   Pin,
@@ -18,6 +19,7 @@ const defaultNavigationWait = 8000
 export function _webScrape(pageUrl) {
   let browser = null;
   let page = null;
+  let pageText = '';
   const res = puppeteer.launch({
     executablePath: process.env.CHROMIUM_PATH,
     args: ['--no-sandbox'], // This was important. Can't remember why
@@ -135,14 +137,22 @@ export function _webScrape(pageUrl) {
 
       }, scrapeJsFileJS);
     })
+    .then((scrapeRes) => {
+      // Body text for the single LLM pass below, read while the page is
+      // still open. The DOM scrapers only ever see meta tags and markup.
+      return page.evaluate(() => document.body ? document.body.innerText : '')
+        .catch(() => '')
+        .then((text) => {
+          pageText = text;
+          return scrapeRes;
+        });
+    })
     .then((res) => {
       //console.log(JSON.stringify(res));
+      // Title, description, price and dates all come from the single LLM
+      // pass in _applyExtracted below. The in-page scrapers only still run
+      // for what reading the text cannot give you: images and embeds.
       const newPin = new Pin();
-      newPin.title = _.get(res, "titles[0]")
-      newPin.description = _.get(res, "descriptions[0]")
-      newPin.utcStartDateTime = new Date(_.get(res, 'dates[0].start'));
-      newPin.utcEndDateTime = new Date(_.get(res, 'dates[0].end'));
-      newPin.allDay = _.get(res, 'dates[0].allDay');
 
       _.get(res, "media", []).forEach(m => {
         if (m.width > 150 && m.height > 150) {
@@ -204,6 +214,55 @@ export function _webScrape(pageUrl) {
     .finally(() => {
       return browser.close();
     })
+    // Runs after the browser is gone, so the page is not held open for the
+    // duration of the call.
+    .then((newPin) => {
+      return extractPinFields(pageUrl, pageText)
+        .then((fields) => _applyExtracted(newPin, fields));
+    })
 
   return res;
+}
+
+// Everything the create form reads off a scrape other than the media it
+// picks from. The DOM extractors that used to supply the title, description,
+// price and dates are gone: they read meta tags and the first "$" on the
+// page, so a cost like "CA$6.4 billion" arrived as 6.4 and a Wikipedia title
+// arrived with " - Wikipedia" still attached.
+function _applyExtracted(newPin, fields) {
+  if (!fields) return newPin;
+
+  if (fields.title) {
+    newPin.title = fields.title;
+  }
+
+  if (fields.description) {
+    newPin.description = fields.description;
+  }
+
+  if (Number.isFinite(fields.price)) {
+    newPin.price = fields.price;
+  }
+
+  const address = toAddress(fields);
+  if (address) {
+    newPin.address = address;
+  }
+
+  if (fields.dateConfidence) {
+    newPin.dateConfidence = fields.dateConfidence;
+    newPin.dateConfidenceReasoning = fields.dateConfidenceReasoning || undefined;
+  }
+
+  if (fields.longFormSummary) {
+    newPin.longFormSummary = fields.longFormSummary;
+  }
+
+  if (fields.startDateTime) {
+    newPin.utcStartDateTime = new Date(fields.startDateTime);
+    newPin.utcEndDateTime = fields.endDateTime ? new Date(fields.endDateTime) : undefined;
+    newPin.allDay = fields.allDay;
+  }
+
+  return newPin;
 }

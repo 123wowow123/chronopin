@@ -57,7 +57,7 @@ function executeCreateTable() {
             dateConfidence NVARCHAR(32),
             dateConfidenceReasoning NVARCHAR(4000),
             utcStartDateTime DATETIME2(0) NOT NULL,
-            utcEndDateTime DATETIME2(0) NOT NULL,
+            utcEndDateTime DATETIME2(0) NULL,
             allDay BIT DEFAULT 0 NOT NULL,
             userId INT NOT NULL,
             utcCreatedDateTime DATETIME2(7) DEFAULT SYSUTCDATETIME() NOT NULL,
