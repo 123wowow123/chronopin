@@ -136,7 +136,7 @@
                 <!-- Switch between image / iframe / tweets -->
                 <div class="grid__media" ng-switch="$ctrl.pin.media[0].type">
 
-                    <span class="grid__location" ng-if="$ctrl.pin.address | locationLabel">
+                    <span class="grid__location" ng-if="$ctrl.pin.media[0] && ($ctrl.pin.address | locationLabel)">
                         {{$ctrl.pin.address | locationLabel}}
                     </span>
 
@@ -181,6 +181,9 @@
                         <date-confidence level="{{$ctrl.pin.dateConfidence}}"
                             reasoning="{{$ctrl.pin.dateConfidenceReasoning}}"
                             show-reasoning="$ctrl.pin.dateConfidence !== 'unknown'"></date-confidence>
+                        <span class="grid__location --overlay" ng-if="!$ctrl.pin.media[0] && ($ctrl.pin.address | locationLabel)">
+                            {{$ctrl.pin.address | locationLabel}}
+                        </span>
                     </div>
                     <div class="grid__description" ng-bind-html="$ctrl.pin.description"></div>
                 </div>

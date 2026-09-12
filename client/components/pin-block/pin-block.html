@@ -18,7 +18,7 @@
             <a ui-sref="pin({id:$ctrl.pin.id})">
                 <div>
                     <span class="thread-icon" ng-if="!!$ctrl.pin.parentId" title="Part of thread"></span>
-                    <span class="thread-icon" ng-if="!!$ctrl.pin.rootThread" title="Firt Pin in a thread"></span>
+                    <span class="thread-icon" ng-if="!!$ctrl.pin.rootThread" title="First Pin in a thread"></span>
                 </div>
             </a>
         </div>
@@ -32,7 +32,7 @@
         <!-- Switch between image / iframe / tweets -->
         <div class="grid__media" ng-switch="$ctrl.pin.media[0].type">
 
-            <span class="grid__location" ng-if="$ctrl.pin.address | locationLabel">
+            <span class="grid__location" ng-if="$ctrl.pin.media[0] && ($ctrl.pin.address | locationLabel)">
                 {{$ctrl.pin.address | locationLabel}}
             </span>
 
@@ -77,6 +77,9 @@
                 <date-confidence level="{{$ctrl.pin.dateConfidence}}"
                     reasoning="{{$ctrl.pin.dateConfidenceReasoning}}"
                     show-reasoning="$ctrl.pin.dateConfidence !== 'unknown'"></date-confidence>
+                <span class="grid__location --overlay" ng-if="!$ctrl.pin.media[0] && ($ctrl.pin.address | locationLabel)">
+                    {{$ctrl.pin.address | locationLabel}}
+                </span>
             </div>
             <div class="grid__description" ng-bind-html="$ctrl.pin.description"></div>
         </div>
