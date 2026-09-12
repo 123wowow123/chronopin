@@ -83,9 +83,9 @@
 
               <div class="grid__merchant">
 
-                <div class="merchant merchant-price " ng-class="{'grid__price--negative': $ctrl.pin.price < 0}"
+                <div class="merchant-price " ng-class="{'grid__price--negative': $ctrl.pin.price < 0}"
                   ng-if="$ctrl.pin.price">
-                  <span class="msrp">MSRP</span>
+                  <span class="msrp">Cost:</span>
                   <span class="merchant-price">{{$ctrl.pin.price | money}}</span>
                 </div>
 
