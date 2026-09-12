@@ -67,6 +67,17 @@
 
       this.loading = false;
 
+      // The active "posted within" window: the span the API takes as
+      // created_within, plus the phrase the filter used for it. Null is the
+      // whole timeline.
+      this.postedWithin = null;
+      this.postedWithinLabel = null;
+
+      // Bumped whenever the filter changes, so a page request already in
+      // flight against the previous window is dropped rather than merged into
+      // the timeline the new one just cleared.
+      this.loadToken = 0;
+
       // today marker
       this.now = new Date();
       this._todayMarker = null;
@@ -90,6 +101,8 @@
         this.pinApp.bagsYOffset = this.captureYOffset();
       });
 
+      this._registerBrandReset();
+
       // this.$transitions.onEnter({ to: 'main' }, (transition) => {
       //   if (angular.isNumber(this.pinApp.bagsYOffset)) {
       //     setTimeout(() => {
@@ -109,29 +122,14 @@
         // clear Preloaded data
         window.mainPinData = null;
       } else {
-        this.mainWebService.list()
-          .then(res => {
-            this._setMainBagsWithPins(res.data);
-            return res;
-          })
-          .then(res => {
-            this.prevParam = this.getLinkHeader(res.data.linkHeader, "previous");
-            this.nextParam = this.getLinkHeader(res.data.linkHeader, "next");
-            return res;
-          })
-          .catch(err => {
-            throw err;
-          })
-          .finally(() => {
-            this.loading = false;
-            this.commentJs.ayncRefresh();
-          });
+        this._loadTimeline();
       }
     }
 
     $onDestroy() {
       this._unRegisterInfinitScroll();
       this._unRegisterResizeAnchor();
+      this._unRegisterBrandReset();
     }
 
     // View functions
@@ -140,11 +138,44 @@
       switch (true) {
         case this.loading:
           return 'loading';
-        case this.bags === this.pinApp.getBags() && !this.pinApp.getBags().length:
+        // An empty result under a filter is an answer, not a failure, so it
+        // gets its own message rather than the error one.
+        case this._isTimelineEmpty() && !!this.postedWithin:
+          return 'no filter match';
+        case this._isTimelineEmpty():
           return 'no match';
         default:
           return 'show';
       }
+    }
+
+    // "in the last 1 day" reads badly where "in the last day" does not, and a
+    // leading "1 " is the only case where the count adds nothing. Two-digit
+    // counts are untouched, since the space is part of the match.
+    postedWithinPhrase() {
+      return (this.postedWithinLabel || '').replace(/^1 /, '');
+    }
+
+    // Called by the filter. Reloads from the server rather than hiding pins
+    // locally: the timeline only ever holds the pages it has scrolled through,
+    // so filtering in place would search a fraction of the pins and leave
+    // infinite scroll paging through the unfiltered set.
+    setPostedWithin(within, label) {
+      if ((this.postedWithin || null) === (within || null)) {
+        return;
+      }
+      this.postedWithin = within || null;
+      this.postedWithinLabel = label || null;
+
+      this.pinApp.clearBags();
+      this.bags = this.pinApp.getBags();
+      this._todayMarker = null;
+      this.prevParam = null;
+      this.nextParam = null;
+      this.gettingNext = null;
+      this.gettingPrev = null;
+
+      this._loadTimeline();
     }
 
     updateInView(event) {
@@ -197,6 +228,71 @@
 
     // Private helper functions
 
+    // The brand link is this page's "start over": clear the filter and go back
+    // to today. It lives in the navbar, which outlives this component, so it
+    // arrives as a broadcast.
+    _registerBrandReset() {
+      this._unRegisterBrandReset();
+      this.registeredListeners['main:reset'] = this.$scope.$on('main:reset', () => {
+        this._resetToToday();
+      });
+    }
+
+    _unRegisterBrandReset() {
+      if (this.registeredListeners['main:reset']) {
+        this.registeredListeners['main:reset']();
+        delete this.registeredListeners['main:reset'];
+      }
+    }
+
+    _resetToToday() {
+      // Dropping a filter reloads, and that rebuilds the bags and scrolls to
+      // today by itself. With no filter on there is nothing to reload, so the
+      // scroll is all that is left to do.
+      if (this.postedWithin) {
+        this.setPostedWithin(null, null);
+        return;
+      }
+      this.$timeout(() => this._scrollAdjust(this.getHomeScrollId()));
+    }
+
+    _isTimelineEmpty() {
+      return this.bags === this.pinApp.getBags() && !this.pinApp.getBags().length;
+    }
+
+    // The query for a fresh first page. Later pages come from the Link header
+    // instead, which carries the window the server resolved, so every page of
+    // one scroll filters against the same instant.
+    _listParams() {
+      return this.postedWithin ? { 'created_within': this.postedWithin } : undefined;
+    }
+
+    _loadTimeline() {
+      this.loading = true;
+      const token = ++this.loadToken;
+
+      return this.mainWebService.list(this._listParams())
+        .then(res => {
+          if (token !== this.loadToken) {
+            return res;
+          }
+          this._setMainBagsWithPins(res.data);
+          this.prevParam = this.getLinkHeader(res.data.linkHeader, "previous");
+          this.nextParam = this.getLinkHeader(res.data.linkHeader, "next");
+          return res;
+        })
+        .catch(err => {
+          throw err;
+        })
+        .finally(() => {
+          if (token !== this.loadToken) {
+            return;
+          }
+          this.loading = false;
+          this.commentJs.ayncRefresh();
+        });
+    }
+
     _scrollAdjust(elId, attempt) {
       if (!elId) {
         return Promise.resolve();
@@ -244,16 +340,21 @@
       if (angular.isNumber(this.pinApp.bagsYOffset)) {
 
         // Adjust scrollheight after all dependent resources such as stylesheets, scripts, iframes, and images are loaded
-        window.addEventListener('load', () => {
-          this.$timeout(() => {
-            const elId = this.getHomeScrollId();
-            this._scrollAdjust(elId)
-              // .then(() => {
-              //   console.log("document.documentElement.scrollTop)", document.documentElement.scrollTop);
-              //   console.log("document.documentElement.scrollHeight", document.documentElement.scrollHeight);
-              // });
-          })
-        });
+        // Only worth binding for the first response: on a filter reload the
+        // load event has already fired, so this would just stack dead handlers.
+        if (!this._boundLoadScroll) {
+          this._boundLoadScroll = true;
+          window.addEventListener('load', () => {
+            this.$timeout(() => {
+              const elId = this.getHomeScrollId();
+              this._scrollAdjust(elId)
+                // .then(() => {
+                //   console.log("document.documentElement.scrollTop)", document.documentElement.scrollTop);
+                //   console.log("document.documentElement.scrollHeight", document.documentElement.scrollHeight);
+                // });
+            })
+          });
+        }
 
         this.$timeout(() => {
           const elId = this.getHomeScrollId();
@@ -274,9 +375,14 @@
           return;
         }
         this.gettingNext = true;
+        const token = this.loadToken;
         this.mainWebService.list(this.nextParam)
           .then(res => {
             // No repositioning of scroll needed for scolling down.
+
+            if (token !== this.loadToken) {
+              return; // the filter changed while this page was in flight
+            }
 
             if (res.data.pins.length || res.data.dateTimes.length) {
               this.gettingNext = false;
@@ -300,8 +406,13 @@
         }
 
         this.gettingPrev = true;
+        const token = this.loadToken;
         this.mainWebService.list(this.prevParam)
           .then(res => {
+
+            if (token !== this.loadToken) {
+              return; // the filter changed while this page was in flight
+            }
 
             if (res.data.pins.length || res.data.dateTimes.length) {
               this.gettingPrev = false;

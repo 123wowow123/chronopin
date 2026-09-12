@@ -47,6 +47,7 @@ function executeCreateSP() {
             @userId       INT,
             @fromDateTime DATETIME2(7),
             @lastPinId    INT,
+            @createdSinceDateTime DATETIME2(7) = NULL,
             @queryCount   INT OUTPUT
         AS
           BEGIN
@@ -155,8 +156,10 @@ function executeCreateSP() {
                 INNER JOIN [dbo].[Favorite] AS [Favorites]
                   ON [Pin].[id] = [Favorites].[PinId] AND [Favorites].[utcDeletedDateTime] IS NULL AND [Favorites].[userId] = @userId
 
-              WHERE [Pin].[utcStartDateTime] > @fromDateTime OR ([Pin].[utcStartDateTime] = @fromDateTime AND [Pin].[id] > @lastPinId)
+              WHERE ([Pin].[utcStartDateTime] > @fromDateTime
+                  OR ([Pin].[utcStartDateTime] = @fromDateTime AND [Pin].[id] > @lastPinId))
                 AND [Pin].[utcDeletedDateTime] IS NULL
+                AND (@createdSinceDateTime IS NULL OR [Pin].[utcCreatedDateTime] >= @createdSinceDateTime)
 
               ORDER BY [Pin].[utcStartDateTime], [Pin].[id]
                 OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY

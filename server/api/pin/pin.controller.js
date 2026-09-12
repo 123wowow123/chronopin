@@ -4,6 +4,7 @@ import config from '../../config/environment';
 import moment from 'moment';
 import * as response from '../response';
 import * as paginationHeader from '../../util/paginationHeader'
+import * as createdFilter from '../../util/createdFilter'
 
 import {
   Pin,
@@ -32,7 +33,7 @@ function _removeEntity(res) {
   };
 }
 
-export function getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTimeString) {
+export function getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTimeString, createdSince) {
   // need to cast req.query.last_pin_id to int
   let queryPromise,
     fromDateTime;
@@ -43,16 +44,16 @@ export function getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTim
       if (querydForward) {
         fromDateTime = fromDateTimeString;
         lastPinId = lastPinId || 0;
-        queryPromise = Pins.queryForwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize);
+        queryPromise = Pins.queryForwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize, createdSince);
       } else {
         lastPinId = lastPinId || 2147483647; // SQL Int Max Size
         fromDateTime = new Date(fromDateTimeString.slice(1));
         fromDateTime = moment(fromDateTime).subtract(1, 'd').toDate();
-        queryPromise = Pins.queryBackwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize);
+        queryPromise = Pins.queryBackwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize, createdSince);
       }
     } else {
       fromDateTime = new Date();
-      queryPromise = Pins.queryInitialByDateFilterByHasFavorite(fromDateTime, userId, pageSize, pageSize); // should be next 10 groups of items
+      queryPromise = Pins.queryInitialByDateFilterByHasFavorite(fromDateTime, userId, pageSize, pageSize, createdSince); // should be next 10 groups of items
     }
   } else {
     if (hasDateTime) {
@@ -60,16 +61,16 @@ export function getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTim
       if (querydForward) {
         fromDateTime = fromDateTimeString;
         lastPinId = lastPinId || 0;
-        queryPromise = Pins.queryForwardByDate(fromDateTime, userId, lastPinId, pageSize);
+        queryPromise = Pins.queryForwardByDate(fromDateTime, userId, lastPinId, pageSize, createdSince);
       } else {
         lastPinId = lastPinId || 2147483647; // SQL Int Max Size
         fromDateTime = new Date(fromDateTimeString.slice(1));
         fromDateTime = moment(fromDateTime).subtract(1, 'd').toDate();
-        queryPromise = Pins.queryBackwardByDate(fromDateTime, userId, lastPinId, pageSize);
+        queryPromise = Pins.queryBackwardByDate(fromDateTime, userId, lastPinId, pageSize, createdSince);
       }
     } else {
       fromDateTime = new Date();
-      queryPromise = Pins.queryInitialByDate(fromDateTime, userId, pageSize, pageSize); // should be next 10 groups of items
+      queryPromise = Pins.queryInitialByDate(fromDateTime, userId, pageSize, pageSize, createdSince); // should be next 10 groups of items
     }
   }
   return queryPromise;
@@ -82,13 +83,22 @@ export function index(req, res) {
     hasDateTime = !!req.query.from_date_time,
     hasFavorite = !!req.query.hasFavorite,
     fromDateTimeString = req.query.from_date_time,
-    lastPinId = +req.query.last_pin_id; // if undefined => NaN
+    lastPinId = +req.query.last_pin_id, // if undefined => NaN
+    createdSince;
 
   // console.log('hasDateTime', hasDateTime);
   // console.log('hasFavorite', hasFavorite);
 
-  return getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTimeString)
-    .then(paginationHeader.setPaginationHeader(res, req))
+  // Resolved up front rather than inside the chain: a malformed window is the
+  // caller's mistake, and this way it is reported as one.
+  try {
+    createdSince = createdFilter.resolveCreatedSince(req.query);
+  } catch (err) {
+    return response.handleError(res, 400)(err.message);
+  }
+
+  return getPins(userId, hasDateTime, hasFavorite, lastPinId, fromDateTimeString, createdSince)
+    .then(paginationHeader.setPaginationHeader(res, req, createdFilter.linkParams(createdSince)))
     .then(response.withResult(res))
     .catch(response.handleError(res));
 }

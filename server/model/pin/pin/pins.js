@@ -74,43 +74,43 @@ export default class Pins extends BasePins {
     return reverse ? pins.reverse() : pins;
   }
 
-  static queryForwardByDate(fromDateTime, userId, lastPinId, pageSize) {
-    return _queryMSSQLPins(true, fromDateTime, userId, lastPinId, 0, pageSize)
+  static queryForwardByDate(fromDateTime, userId, lastPinId, pageSize, createdSinceDateTime) {
+    return _queryMSSQLPins(true, fromDateTime, userId, lastPinId, 0, pageSize, createdSinceDateTime)
       .then(res => {
         return new Pins(res);
       });
   }
 
-  static queryBackwardByDate(fromDateTime, userId, lastPinId, pageSize) {
-    return _queryMSSQLPins(false, fromDateTime, userId, lastPinId, 0, pageSize)
+  static queryBackwardByDate(fromDateTime, userId, lastPinId, pageSize, createdSinceDateTime) {
+    return _queryMSSQLPins(false, fromDateTime, userId, lastPinId, 0, pageSize, createdSinceDateTime)
       .then(res => {
         return new Pins(res);
       });
   }
 
-  static queryInitialByDate(fromDateTime, userId, pageSizePrev, pageSizeNext) {
-    return _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext)
+  static queryInitialByDate(fromDateTime, userId, pageSizePrev, pageSizeNext, createdSinceDateTime) {
+    return _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext, createdSinceDateTime)
       .then(res => {
         return new Pins(res);
       });
   }
 
-  static queryForwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize) {
-    return _queryMSSQLPinsFilterByHasFavorite(true, fromDateTime, userId, lastPinId, 0, pageSize)
+  static queryForwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize, createdSinceDateTime) {
+    return _queryMSSQLPinsFilterByHasFavorite(true, fromDateTime, userId, lastPinId, 0, pageSize, createdSinceDateTime)
       .then(res => {
         return new Pins(res);
       });
   }
 
-  static queryBackwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize) {
-    return _queryMSSQLPinsFilterByHasFavorite(false, fromDateTime, userId, lastPinId, 0, pageSize)
+  static queryBackwardByDateFilterByHasFavorite(fromDateTime, userId, lastPinId, pageSize, createdSinceDateTime) {
+    return _queryMSSQLPinsFilterByHasFavorite(false, fromDateTime, userId, lastPinId, 0, pageSize, createdSinceDateTime)
       .then(res => {
         return new Pins(res);
       });
   }
 
-  static queryInitialByDateFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext) {
-    return _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext)
+  static queryInitialByDateFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext, createdSinceDateTime) {
+    return _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext, createdSinceDateTime)
       .then(res => {
         return new Pins(res);
       });
@@ -153,7 +153,7 @@ export default class Pins extends BasePins {
 
 }
 
-function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, pageSize) {
+function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, pageSize, createdSinceDateTime) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
@@ -163,6 +163,7 @@ function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, 
           .input('pageSize', mssql.Int, pageSize)
           .input('userId', mssql.Int, userId)
           .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
+          .input('createdSinceDateTime', mssql.DateTime2(7), createdSinceDateTime || null)
           .input('lastPinId', mssql.Int, lastPinId)
           .output('queryCount', mssql.Int);
 
@@ -217,7 +218,7 @@ function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, 
     });
 }
 
-function _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext) {
+function _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext, createdSinceDateTime) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
@@ -227,6 +228,7 @@ function _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext
           .input('pageSizeNext', mssql.Int, pageSizeNext)
           .input('userId', mssql.Int, userId)
           .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
+          .input('createdSinceDateTime', mssql.DateTime2(7), createdSinceDateTime || null)
           .output('queryCount', mssql.Int);
 
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
@@ -257,7 +259,7 @@ function _queryMSSQLPinsInitial(fromDateTime, userId, pageSizePrev, pageSizeNext
 }
 
 
-function _queryMSSQLPinsFilterByHasFavorite(queryForward, fromDateTime, userId, lastPinId, offset, pageSize) {
+function _queryMSSQLPinsFilterByHasFavorite(queryForward, fromDateTime, userId, lastPinId, offset, pageSize, createdSinceDateTime) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
@@ -267,6 +269,7 @@ function _queryMSSQLPinsFilterByHasFavorite(queryForward, fromDateTime, userId, 
           .input('pageSize', mssql.Int, pageSize)
           .input('userId', mssql.Int, userId)
           .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
+          .input('createdSinceDateTime', mssql.DateTime2(7), createdSinceDateTime || null)
           .input('lastPinId', mssql.Int, lastPinId)
           .output('queryCount', mssql.Int);
 
@@ -321,7 +324,7 @@ function _queryMSSQLPinsFilterByHasFavorite(queryForward, fromDateTime, userId, 
     });
 }
 
-function _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext) {
+function _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSizePrev, pageSizeNext, createdSinceDateTime) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
@@ -331,6 +334,7 @@ function _queryMSSQLPinsInitialFilterByHasFavorite(fromDateTime, userId, pageSiz
           .input('pageSizeNext', mssql.Int, pageSizeNext)
           .input('userId', mssql.Int, userId)
           .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
+          .input('createdSinceDateTime', mssql.DateTime2(7), createdSinceDateTime || null)
           .output('queryCount', mssql.Int);
 
         //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);

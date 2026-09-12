@@ -33,6 +33,19 @@ $grid-max-width-screen: $iphone-landscape / 2;
     //     padding-left: 10px;
     //     padding-right: 10px;
     // }
+
+    // Floats over the timeline at the top right, clear of the cards, which
+    // are left-aligned. z-index has to beat .page_message - a full-viewport
+    // fixed overlay that would otherwise swallow every click on the filter in
+    // exactly the states (loading, and a window that matched nothing) where
+    // it is needed most. Kept below the navbar's own 100 so its dropdowns
+    // still sit on top.
+    &__filter {
+        position: fixed;
+        top: $nav-offset + 12px;
+        right: 10px;
+        z-index: 99;
+    }
 }
 
 @mixin merchant {

@@ -1,0 +1,49 @@
+<div class="posted-filter">
+
+    <div class="btn-group posted-filter__presets" role="group" aria-label="Filter by when pins were posted">
+
+        <button type="button" class="btn btn-default posted-filter__preset" ng-repeat="preset in $ctrl.presets"
+            ng-class="{'\--active': $ctrl.isPresetActive(preset)}" ng-click="$ctrl.selectPreset(preset)"
+            ng-bind="preset.label"></button>
+
+        <!-- A split button: the value applies the span it is showing, the
+             caret opens the panel that changes it. -->
+        <div class="btn-group posted-filter__combo" role="group">
+
+            <button type="button" class="btn btn-default posted-filter__span"
+                ng-class="{'\--active': $ctrl.isComboActive()}" ng-click="$ctrl.applySpan()"
+                title="Filter by this span" ng-bind="$ctrl.spanLabel()"></button>
+
+            <button type="button" class="btn btn-default posted-filter__span-toggle"
+                ng-class="{'\--active': $ctrl.isComboActive()}" ng-click="$ctrl.togglePanel()"
+                title="Choose or type a span" aria-haspopup="true" aria-expanded="{{!!$ctrl.panelOpen}}"
+                aria-label="Choose or type a span">
+                <span class="caret"></span>
+            </button>
+
+            <div class="posted-filter__panel" ng-if="$ctrl.panelOpen">
+
+                <form class="posted-filter__span-form" ng-submit="$ctrl.applyTypedSpan()">
+                    <label class="sr-only" for="posted-filter-span">Span of time</label>
+                    <input type="text" id="posted-filter-span" class="posted-filter__span-input"
+                        ng-class="{'\--invalid': $ctrl.spanInvalid}" ng-model="$ctrl.spanText"
+                        ng-keydown="$ctrl.onSpanInputKeyDown($event)" placeholder="10 days" autocomplete="off">
+                    <button type="submit" class="btn btn-primary posted-filter__span-set">Set</button>
+                </form>
+
+                <ul class="posted-filter__span-options" role="listbox">
+                    <li ng-repeat="option in $ctrl.spanOptions" role="option"
+                        aria-selected="{{$ctrl.isOptionActive(option)}}">
+                        <button type="button" class="posted-filter__span-option"
+                            ng-class="{'\--active': $ctrl.isOptionActive(option)}"
+                            ng-click="$ctrl.selectSpan(option)" ng-bind="option.label"></button>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

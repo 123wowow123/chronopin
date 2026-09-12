@@ -98,7 +98,17 @@ class NavbarController {
 
   clearSearchToMain() {
     return this.clearSearch()
-      .goToMain();
+      .goToMain()
+      .resetMain();
+  }
+
+  // The timeline listens for this and drops any "posted within" filter, then
+  // puts the view back on today. Sent as a broadcast rather than relying on
+  // the state change, because ui-router treats going to the state you are
+  // already on as a no-op - so nothing about the page would otherwise move.
+  resetMain() {
+    this.$rootScope.$broadcast('main:reset');
+    return this;
   }
 
   clearSearch() {

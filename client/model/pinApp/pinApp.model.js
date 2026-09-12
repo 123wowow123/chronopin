@@ -41,6 +41,10 @@
 
             // Bags
 
+            clearBags() {
+                return this._bags = new Bags();
+            }
+
             mergeBagsWithPins(pins) {
                 return this._bags.mergePins(pins);
             }

@@ -1,21 +1,31 @@
-/*Floating Back-To-Top Button*/
+// Floating "back to today" button. The other floating control on the timeline
+// is the posted filter, so this takes the same treatment - panel background,
+// themed border, the same shadow, and the same 8px corner - rather than the
+// hardcoded white pill with black text it used to be, which read as a foreign
+// element in dark mode.
+//
+// No fixed width: the label sets the size, and the horizontal padding matches
+// the filter's own buttons, so the corners stay in proportion to the box.
 #scrollHomeBtn {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    width: 55px;
     line-height: 1.6em;
     font-size: .8em;
     font-weight: bold;
-    border-color: rgba(85, 85, 85, 0.2);
-    background-color: #FFF;
-    color: #000;
-    padding: 5px;
-    border-radius: 20px;
-    opacity: 0.75;
+    padding: 5px 12px;
+    border-radius: 8px;
+    background-color: var(--grid-panel-bg-color);
+    border: 1px solid var(--primary-border-color);
+    color: var(--primary-color);
+    // Replaces opacity: 0.75, which dimmed the label along with the
+    // background and left it hard to read against a busy timeline.
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
-/*On Hover Color Change*/
-#scrollHomeBtn:hover {
-    background-color: #7dbbf1;
+#scrollHomeBtn:hover,
+#scrollHomeBtn:focus {
+    background-color: var(--primary-highlight-bg-color);
+    border-color: var(--primary-border-color);
+    color: var(--primary-color);
 }

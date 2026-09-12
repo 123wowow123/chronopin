@@ -46,6 +46,7 @@ function executeCreateSP() {
             @pageSizeNext INT,
             @userId       INT,
             @fromDateTime DATETIME2(7),
+            @createdSinceDateTime DATETIME2(7) = NULL,
             @queryCount   INT OUTPUT
         AS
           BEGIN
@@ -101,10 +102,10 @@ function executeCreateSP() {
             );
 
             INSERT INTO @tempPinsTbl
-            EXEC [dbo].[GetPinsWithFavoriteAndLikePrev] 0, @pageSizePrev, @userId, @fromDateTime, 0, @queryCount = @queryCountPrev OUTPUT;
+            EXEC [dbo].[GetPinsWithFavoriteAndLikePrev] 0, @pageSizePrev, @userId, @fromDateTime, 0, @createdSinceDateTime = @createdSinceDateTime, @queryCount = @queryCountPrev OUTPUT;
 
             INSERT INTO @tempPinsTbl
-            EXEC [dbo].[GetPinsWithFavoriteAndLikeNext] 0, @pageSizeNext, @userId, @fromDateTime, 0, @queryCount = @queryCountNext OUTPUT;
+            EXEC [dbo].[GetPinsWithFavoriteAndLikeNext] 0, @pageSizeNext, @userId, @fromDateTime, 0, @createdSinceDateTime = @createdSinceDateTime, @queryCount = @queryCountNext OUTPUT;
 
             SELECT *
             FROM @tempPinsTbl

@@ -47,6 +47,7 @@ function executeCreateSP() {
             @userId       INT,
             @fromDateTime DATETIME2(7),
             @lastPinId    INT,
+            @createdSinceDateTime DATETIME2(7) = NULL,
             @queryCount   INT OUTPUT
         AS
           BEGIN
@@ -152,7 +153,10 @@ function executeCreateSP() {
 
               FROM [dbo].[PinBaseView] AS [Pin]
 
-              WHERE [Pin].[utcStartDateTime] > @fromDateTime OR ([Pin].[utcStartDateTime] = @fromDateTime AND [Pin].[id] > @lastPinId) AND [Pin].[utcDeletedDateTime] IS NULL
+              WHERE ([Pin].[utcStartDateTime] > @fromDateTime
+                  OR ([Pin].[utcStartDateTime] = @fromDateTime AND [Pin].[id] > @lastPinId))
+                AND [Pin].[utcDeletedDateTime] IS NULL
+                AND (@createdSinceDateTime IS NULL OR [Pin].[utcCreatedDateTime] >= @createdSinceDateTime)
 
               ORDER BY [Pin].[utcStartDateTime], [Pin].[id]
               OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY
