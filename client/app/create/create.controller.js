@@ -153,10 +153,11 @@
         return this;
       }
 
-      if (!this.pin.end) {
-        this.pin.end = newStart;
-      } else if (this.pin.end.getTime() < newStart.getTime()) {
-        this.pin.end = newStart;
+      // Clear the end date once the new start has caught up to or overtaken
+      // it, leaving the field empty to re-pick, rather than forcing end to
+      // match start.
+      if (this.pin.end && this.pin.end.getTime() <= newStart.getTime()) {
+        this.pin.end = undefined;
       }
       return this;
     }
@@ -169,12 +170,17 @@
       if (!this.pin.start) {
         this.pin.start = newEnd;
         this.startChange(newEnd);
+        return this;
+      }
+
+      if (this.pin.end && this.pin.end.getTime() === this.pin.start.getTime()) {
+        this.pin.end = undefined;
       }
       return this;
     }
 
     matchEndDateToStartDate() {
-      this.pin.end = this.pin.start;
+      this.pin.end = undefined;
       return this;
     }
 

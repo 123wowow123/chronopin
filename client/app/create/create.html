@@ -115,7 +115,7 @@
                         <label for="synctostart" class="control-label">&nbsp;</label>
                         <div class="input-group">
                           <button name="synctostart" type="button" class="btn btn-default"
-                            ng-click="$ctrl.matchEndDateToStartDate()" title="Use start date"><i
+                            ng-click="$ctrl.matchEndDateToStartDate()" title="Clear end date"><i
                               class="glyphicon glyphicon-arrow-right-down-custom"></i></button>
                         </div>
                       </div>
@@ -124,7 +124,7 @@
                       <label for="end" class="control-label">End</label>
                       <div class="input-group end"
                         ng-class="{'has-error' : pinForm.end.$invalid && pinForm.end.$dirty}">
-                        <input name="end" type="text" id="end" autocomplete="off" class="form-control" required="true"
+                        <input name="end" type="text" id="end" autocomplete="off" class="form-control"
                           ng-model="$ctrl.pin.end" ng-change="$ctrl.endChange($ctrl.pin.end)"
                           placeholder="End Date (optional)" uib-datepicker-popup="{{$ctrl.format}}"
                           is-open="$ctrl.datePickerEnd.opened" datepicker-options="$ctrl.datePickerEnd.options"

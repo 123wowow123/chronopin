@@ -101,10 +101,11 @@
     startChange() {
       this.$log.log(this.pin.start);
       this.datePickerEnd.options.minDate = this.pin.start;
-      // Clear the end date only once the new start has overtaken it, leaving
-      // the field empty to re-pick. This used to overwrite the end on any
-      // start change, throwing away a date the user had deliberately picked.
-      if (this.pin.end && this.pin.end < this.pin.start) {
+      // Clear the end date once the new start has caught up to or overtaken
+      // it, leaving the field empty to re-pick. This used to overwrite the
+      // end on any start change, throwing away a date the user had
+      // deliberately picked.
+      if (this.pin.end && this.pin.end <= this.pin.start) {
         this.pin.end = undefined;
       }
     }
