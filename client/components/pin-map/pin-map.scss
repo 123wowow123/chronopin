@@ -15,7 +15,7 @@
     // Leaflet needs an explicit height or it collapses to nothing. The map
     // leads the right column, which has room to spare below the thread, so it
     // is tall enough to place the marker in its surroundings.
-    height: 300px;
+    height: 350px;
     width: 100%;
     border-radius: 3px;
     z-index: 0; // keep tiles under the app's modals and dropdowns
@@ -34,6 +34,12 @@
 
 @media (max-width: 600px) {
   .pin-map__canvas {
-    height: 300px;
+    height: 350px;
+  }
+}
+
+@media only screen and (min-width: $wide-ad) {
+  .pin-map__canvas {
+    height: 450px;
   }
 }
