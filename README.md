@@ -365,7 +365,7 @@ https://nationaldaycalendar.com/march/
   - Scrape YouTube using something like: Reader.js
   - Set YouTube time range
 
-- Drilldown Sumery
+- Drilldown Summery
   - Sentiment
   - Summerize (or Use reading mode to show full article)
   - Mini timeline for multiple date point articles (highlight date mined for mini timeline)
@@ -535,7 +535,6 @@ This is a promotional article about one of the company partners with Interesting
 ## Bugs
 - When in specific pin view and clicking logout will show blank screen
 - Date tag mobile view broken
-- Fix loading jumpiness
 
 ## Before Usable
 - Youtube!!
