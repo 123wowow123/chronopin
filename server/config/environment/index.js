@@ -105,6 +105,12 @@ let all = {
     YOUTUBE_API_KEY: getProcessEnv('YOUTUBE_API_KEY')
   },
 
+  // Used by server/summarize to generate a pin's longFormSummary. Not wired
+  // up to an actual LLM call yet - see server/summarize/index.js.
+  anthropic: {
+    apiKey: getProcessEnv('ANTHROPIC_API_KEY') || ''
+  },
+
   elastiSearch: {
     indexPrefix: getProcessEnv('INDEXPREFIX') || '',
     serviceUrl: getProcessEnv('ELASTISEARCH_URL') || '',

@@ -13,6 +13,7 @@
       'title',
       'description',
       'sourceUrl',
+      'longFormSummary',
       'address',
       'priceLowerBound',
       'priceUpperBound',

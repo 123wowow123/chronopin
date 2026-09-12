@@ -166,6 +166,12 @@ export default class Pin extends BasePin {
     }
   }
 
+  // Persists a generated longFormSummary without going through the full
+  // client-driven update() path, which requires a request-scoped userId.
+  static updateLongFormSummary(pinId, longFormSummary) {
+    return _updateLongFormSummaryMSSQL(pinId, longFormSummary);
+  }
+
   static mapPinJoins(pin, pinRows) {
     pin = Pin.mapPinMedia(pin, pinRows);
     pin = Pin.mapPinMerchants(pin, pinRows);
@@ -266,6 +272,7 @@ function _updateMSSQL(pin, userId) {
           .input('title', mssql.NVarChar(1024), pin.title)
           .input('description', mssql.NVarChar(4000), pin.description)
           .input('sourceUrl', mssql.NVarChar(4000), pin.sourceUrl)
+          .input('longFormSummary', mssql.NVarChar(mssql.MAX), pin.longFormSummary)
           .input('address', mssql.NVarChar(4000), pin.address)
           .input('priceLowerBound', mssql.Decimal(18, 2), pin.priceLowerBound)
           .input('priceUpperBound', mssql.Decimal(18, 2), pin.priceUpperBound)
@@ -284,6 +291,29 @@ function _updateMSSQL(pin, userId) {
             // Todo: updated date time need to be updated on model
             resolve({
               pin: pin
+            });
+          });
+      });
+    });
+}
+
+function _updateLongFormSummaryMSSQL(pinId, longFormSummary) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise(function (resolve, reject) {
+        let request = new mssql.Request(conn)
+          .input('id', mssql.Int, pinId)
+          .input('longFormSummary', mssql.NVarChar(mssql.MAX), longFormSummary);
+
+        request.query(
+          `UPDATE [dbo].[Pin] SET longFormSummary = @longFormSummary, utcUpdatedDateTime = SYSUTCDATETIME() WHERE id = @id;`,
+          (err, res) => {
+            if (err) {
+              return reject(`update Pin.longFormSummary err: ${err}`);
+            }
+            resolve({
+              pinId: pinId,
+              longFormSummary: longFormSummary
             });
           });
       });

@@ -16,6 +16,7 @@ export const BasePinProp = [
     'title',
     'description',
     'sourceUrl',
+    'longFormSummary',
     'address',
     'priceLowerBound',
     'priceUpperBound',
