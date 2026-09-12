@@ -307,10 +307,28 @@ $bag-font-color: var(--bag-text-color);
 
     &__media {
         margin: 0 0 10px;
+        position: relative;
 
         &.\--create-pin {
             margin: 0 auto;
         }
+    }
+
+    &__location {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        max-width: calc(100% - 16px);
+        padding: 2px 8px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        font-size: 11px;
+        line-height: 1.4;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        z-index: 1;
     }
 
     /** panel arrows **/

@@ -32,6 +32,10 @@
         <!-- Switch between image / iframe / tweets -->
         <div class="grid__media" ng-switch="$ctrl.pin.media[0].type">
 
+            <span class="grid__location" ng-if="$ctrl.pin.address | locationLabel">
+                {{$ctrl.pin.address | locationLabel}}
+            </span>
+
             <div ng-switch-when="1">
                 <a class="grid__asset grid__asset--link"
                     ng-if="$ctrl.pin.media[0].thumbName || $ctrl.pin.media[0].originalUrl"
