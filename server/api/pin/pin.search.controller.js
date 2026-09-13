@@ -1,6 +1,7 @@
 'use strict';
 
 import * as response from '../response';
+import * as searchQuery from '../../util/searchQuery';
 //import * as fp from 'lodash/fp';
 
 import {
@@ -43,47 +44,31 @@ export function searchPins(req, res) {
     searchText = req.query.q,
     hasFavorite = req.query.f && req.query.f.toLowerCase() == 'watch';
 
-  // "category:<name>" filters to one category. It takes the whole query,
-  // because category names contain spaces ("Gaming & Entertainment").
-  const categoryMatch = /^category:(.+)$/i.exec(searchText.trim());
-  if (categoryMatch) {
-    const category = categoryMatch[1].trim();
-    return (hasFavorite
-      ? SearchPins.searchCategoryFavorite(userId, category)
-      : SearchPins.searchCategory(category))
+  const query = searchQuery.parseSearchQuery(searchText);
+  const favoriteUserId = hasFavorite ? userId : null;
+
+  // Nothing but label terms (user:, company:, category:) - answered by the
+  // database directly, which needs no search service.
+  if (searchQuery.hasFilters(query) && !query.text) {
+    return SearchPins.searchFilters(query, favoriteUserId)
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));
   }
 
-  const searchTextArray = searchText.split(" ");
-  const userNames = searchTextArray.filter(t => {
-    return t.startsWith("@");
-  });
-
-  if (userNames.length) {
-
-    if (hasFavorite) {
-      return SearchPins.searchAuthorsFavorite(userId, userNames)
-        .then(response.withResult(res, 200))
-        .catch(response.handleError(res));
-    } else {
-      return SearchPins.searchAuthors(userNames)
-        .then(response.withResult(res, 200))
-        .catch(response.handleError(res));
-    }
-
-  } else {
-    if (hasFavorite) {
-      return SearchPins.searchFavorite(userId, searchText)
-        .then(response.withResult(res, 200))
-        .catch(response.handleError(res));
-    } else {
-      return SearchPins.search(searchText)
-        .then(response.withResult(res, 200))
-        .catch(response.handleError(res));
-    }
-  }
-
+  // Free text, optionally narrowed by label terms. Only the free text goes to
+  // the search service - it would read "company:Apple" as words to match.
+  return (hasFavorite
+    ? SearchPins.searchFavorite(userId, query.text)
+    : SearchPins.search(query.text))
+    .then(pins => {
+      if (searchQuery.hasFilters(query)) {
+        pins.pins = pins.pins.filter(pin => searchQuery.matchesFilters(query, pin));
+        pins.queryCount = pins.pins.length;
+      }
+      return pins;
+    })
+    .then(response.withResult(res, 200))
+    .catch(response.handleError(res));
 }
 
 const customAutoComplete = true;

@@ -165,6 +165,15 @@ export default class Pins extends BasePins {
       });
   }
 
+  // favoriteUserId limits the results to pins that user watches; leave it
+  // out to search every pin.
+  static queryPinBySearchFilters(query, favoriteUserId) {
+    return _queryPinBySearchFilters(query, favoriteUserId)
+      .then(res => {
+        return new Pins(res);
+      });
+  }
+
 }
 
 function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, pageSize, createdSinceDateTime) {
@@ -620,4 +629,47 @@ function _queryPinByCategoryHasFavorite(userId, category) {
           });
       });
     });
+}
+
+function _queryPinBySearchFilters(query, favoriteUserId) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise(function (resolve, reject) {
+        const StoredProcedureName = 'GetPinBySearchFilters';
+
+        let request = new mssql.Request(conn)
+          .input('TableUserNames', _searchFilterValuesTable(query.userNames))
+          .input('TableCompanies', _searchFilterValuesTable(query.companies))
+          .input('TableCategories', _searchFilterValuesTable(query.categories))
+          .input('favoriteUserId', mssql.Int, favoriteUserId == null ? null : favoriteUserId)
+          .output('queryCount', mssql.Int);
+
+        request.execute(`[dbo].[${StoredProcedureName}]`,
+          function (err, res, returnValue, affected) {
+            let queryCount;
+            if (err) {
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+            }
+            try {
+              queryCount = res.output.queryCount;
+            } catch (e) {
+              queryCount = 0;
+            }
+
+            resolve({
+              pins: res.recordset,
+              queryCount: queryCount
+            });
+          });
+      });
+    });
+}
+
+function _searchFilterValuesTable(values) {
+  const tvp = new mssql.Table();
+  tvp.columns.add('value', mssql.NVarChar(255));
+  values.forEach(value => {
+    tvp.rows.add(value);
+  });
+  return tvp;
 }

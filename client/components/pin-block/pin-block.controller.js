@@ -107,7 +107,7 @@
             <div class="grid__content">
                 <div class="grid__headline">
                     <div class="headline-left">
-                        <a class="grid__category rubric" ng-if="$ctrl.pin.category" title="Show all {{$ctrl.pin.category}} pins" ng-click="$ctrl.searchService.submit('category:' + $ctrl.pin.category)">{{$ctrl.pin.category}}</a>
+                        <a class="grid__category rubric" ng-if="$ctrl.pin.category" title="Show all {{$ctrl.pin.category}} pins" ng-click="$ctrl.searchService.refine('category', $ctrl.pin.category)">{{$ctrl.pin.category}}</a>
                         <span class="rubric__divider" ng-if="$ctrl.pin.category">/</span>
                         <a class="posted-time" ui-sref="pin({id:$ctrl.pin.id})">
                             <time datetime="{{$ctrl.pin.utcCreatedDateTime}}">{{$ctrl.pin.utcCreatedDateTime | date :
@@ -116,7 +116,7 @@
                             </time>
                         </a>
                         <span class="rubric__divider">/</span>
-                        <a ng-click="$ctrl.searchService.submit($ctrl.pin.user.userName)" class="rubric">
+                        <a class="rubric" title="Show all {{$ctrl.pin.user.userName}} pins" ng-click="$ctrl.searchService.refine('user', $ctrl.pin.user.userName)">
                             <span>{{$ctrl.pin.user.userName}}</span>
                         </a>
                     </div>
@@ -144,8 +144,8 @@
 
                     <div class="grid__tags" ng-if="$ctrl.pin.media[0] && $ctrl.pin.company">
                         <span class="grid__company">
-                            <a ng-href="{{$ctrl.pin.companyWikiUrl}}" target="_blank" rel="noopener"
-                                title="{{$ctrl.pin.companyWikiUrl ? $ctrl.pin.company + ' on Wikipedia' : ''}}">
+                            <a href="" ng-click="$ctrl.searchService.refine('company', $ctrl.pin.company)"
+                                title="Show all {{$ctrl.pin.company}} pins">
                                 {{$ctrl.pin.company}}
                             </a>
                         </span>
@@ -190,8 +190,8 @@
                     <div class="grid__meta-line"
                         ng-if="!$ctrl.pin.media[0] && ($ctrl.pin.company || ($ctrl.pin.address | locationLabel))">
                         <span class="grid__company" ng-if="$ctrl.pin.company">
-                            <a ng-href="{{$ctrl.pin.companyWikiUrl}}" target="_blank" rel="noopener"
-                                title="{{$ctrl.pin.companyWikiUrl ? $ctrl.pin.company + ' on Wikipedia' : ''}}">
+                            <a href="" ng-click="$ctrl.searchService.refine('company', $ctrl.pin.company)"
+                                title="Show all {{$ctrl.pin.company}} pins">
                                 {{$ctrl.pin.company}}
                             </a>
                         </span>

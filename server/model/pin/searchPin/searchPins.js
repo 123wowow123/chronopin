@@ -155,6 +155,11 @@ export default class SearchPins extends BasePins {
         return Pins.queryPinByCategoryHasFavorite(userId, category); // TODO: should return SearchPins
     }
 
+    // A search made only of label terms (user:, company:, category:).
+    static searchFilters(query, favoriteUserId) {
+        return Pins.queryPinBySearchFilters(query, favoriteUserId); // TODO: should return SearchPins
+    }
+
     static searchFavorite(userId, searchText) {
         // TODO: should return SearchPins
         if (!searchText) {

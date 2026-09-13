@@ -146,6 +146,7 @@
     "migrate:add-pin-price-currency": "node scripts/db/migrations/addPinPriceCurrency.js",
     "migrate:add-pin-company-wiki-url": "node scripts/db/migrations/addPinCompanyWikiUrl.js",
     "migrate:add-category-filter": "node scripts/db/migrations/addPinCategoryFilter.js",
+    "migrate:add-search-filters": "node scripts/db/migrations/addPinSearchFilters.js",
     "migrate:add-created-filter": "node scripts/db/migrations/addCreatedSinceFilter.js",
     "migrate:add-filter-span-preference": "node scripts/db/migrations/addUserDefaultFilterSpanPreference.js",
     "migrate:nullable-pin-end": "node scripts/db/migrations/allowNullPinEndDateTime.js",

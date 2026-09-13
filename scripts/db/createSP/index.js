@@ -15,6 +15,7 @@ const createGetPinByAuthersFilterByHasFavoriteSP = require('./pin/createGetPinBy
 const createGetPinByAuthersSP = require('./pin/createGetPinByAuthersSP');
 const createGetPinByCategoryFilterByHasFavoriteSP = require('./pin/createGetPinByCategoryFilterByHasFavoriteSP');
 const createGetPinByCategorySP = require('./pin/createGetPinByCategorySP');
+const createGetPinBySearchFiltersSP = require('./pin/createGetPinBySearchFiltersSP');
 
 /* search pin */
 const createSearchPinSP = require('./pin/createSearchPinSP');
@@ -137,6 +138,7 @@ module.exports.setup = function (connectionPool) {
   createGetPinByAuthersSP.setup(cp);
   createGetPinByCategoryFilterByHasFavoriteSP.setup(cp);
   createGetPinByCategorySP.setup(cp);
+  createGetPinBySearchFiltersSP.setup(cp);
   createGetCommentsByPinIdSP.setup(cp);
   createGetAllCommentsSP.setup(cp);
 
@@ -212,6 +214,7 @@ module.exports.createGetPinByAuthersFilterByHasFavoriteSP = createGetPinByAuther
 module.exports.createGetPinByAuthersSP = createGetPinByAuthersSP.createSP;
 module.exports.createGetPinByCategoryFilterByHasFavoriteSP = createGetPinByCategoryFilterByHasFavoriteSP.createSP;
 module.exports.createGetPinByCategorySP = createGetPinByCategorySP.createSP;
+module.exports.createGetPinBySearchFiltersSP = createGetPinBySearchFiltersSP.createSP;
 module.exports.createGetCommentsByPinIdSP = createGetCommentsByPinIdSP.createSP;
 module.exports.createGetAllCommentsSP = createGetAllCommentsSP.createSP;
 

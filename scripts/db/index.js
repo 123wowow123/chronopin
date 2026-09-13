@@ -48,6 +48,7 @@ const createGetPinByAuthersFilterByHasFavoriteSP = createSP.createGetPinByAuther
 const createGetPinByAuthersSP = createSP.createGetPinByAuthersSP;
 const createGetPinByCategoryFilterByHasFavoriteSP = createSP.createGetPinByCategoryFilterByHasFavoriteSP;
 const createGetPinByCategorySP = createSP.createGetPinByCategorySP;
+const createGetPinBySearchFiltersSP = createSP.createGetPinBySearchFiltersSP;
 const createGetCommentsByPinIdSP = createSP.createGetCommentsByPinIdSP;
 const createGetAllCommentsSP = createSP.createGetAllCommentsSP;
 
@@ -162,6 +163,7 @@ function execute() {
         createGetPinByAuthersSP,
         createGetPinByCategoryFilterByHasFavoriteSP,
         createGetPinByCategorySP,
+        createGetPinBySearchFiltersSP,
         createGetCommentsByPinIdSP,
         createGetAllCommentsSP,
 

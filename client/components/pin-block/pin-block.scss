@@ -69,9 +69,11 @@
     color: #fff;
     background: rgba(0, 0, 0, 0.35);
 
-    // A company with no Wikipedia article of its own gets no href (ng-href
-    // drops the attribute when the url is empty), so it stays plain text
-    // rather than a link that goes nowhere - hence the [href] guard.
+    // On a card the label runs a `company:<name>` search, and carries an empty
+    // href only so it picks up this link styling. The pin page links it to
+    // Wikipedia instead, and a company with no article of its own gets no href
+    // there (ng-href drops the attribute when the url is empty), so it stays
+    // plain text rather than a link that goes nowhere - hence the [href] guard.
     a {
         color: inherit;
         text-decoration: none;
