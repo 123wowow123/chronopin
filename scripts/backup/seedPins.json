@@ -6661,6 +6661,179 @@
     "userId": 1
   },
   {
+    "id": 290,
+    "rootThread": false,
+    "title": "iOS 27 Release",
+    "description": "iOS 27 (and iPadOS 27) launches publicly September 14 for compatible devices. Two announced features are delayed because they needed more testing time: AI-powered one-tap Suggestions in Messages conversations, and automatic fixing of compromised passwords via Apple Intelligence in the Passwords app. Both were present in the beta and may arrive in an iOS 27.1 update before the October 23 iPhone Duo launch.",
+    "sourceUrl": "https://www.macrumors.com/2026/09/11/ios-27-delayed-features/",
+    "longFormSummary": "<ul><li>Free public release, September 14, 2026, for iOS 27 and iPadOS 27</li><li>Two announced features delayed: AI Suggestions in Messages (one-tap photo/task suggestions), and automatic fixing of compromised passwords in the Passwords app</li><li>Both features were present during the beta but \"need a little more time in testing\"</li><li>Delayed features may land in an iOS 27.1 update, potentially before the October 23 iPhone Duo launch</li></ul>",
+    "address": "Cupertino, California @ 37.3346, -122.0090",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Stated as firm, per macrumors.com: \"iOS 27 launches publicly on Monday, September 14.\"",
+    "utcStartDateTime": "2026-09-14T07:00:00.000Z",
+    "utcEndDateTime": "2026-09-15T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-13T04:02:30.855Z",
+    "utcUpdatedDateTime": "2026-09-13T04:17:38.283Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 271,
+        "thumbName": "62f60cb1-3b7f-4e33-9293-a0d14a80c20a.jpeg",
+        "thumbWidth": 400,
+        "thumbHeight": 225,
+        "originalUrl": "https://images.macrumors.com/t/7EuR1vsWW-yGeJtHKKPngYxrFu8=/400x0/article-new/2026/06/ios-27-passwords-auto-fix.jpg?lossy",
+        "originalWidth": 400,
+        "originalHeight": 225,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 286,
+    "rootThread": false,
+    "title": "iPhone 18 Pro and iPhone 18 Pro Max Release",
+    "description": "Apple launches the iPhone 18 Pro ($1,199, 256GB) and iPhone 18 Pro Max ($1,299), after pre-orders opened September 12. Highlights: A20 Pro chip, variable-aperture Main camera, improved vapor chamber cooling, upgraded 5G modems, longer battery life, faster charging, a smaller Dynamic Island, and storage up to 2TB. Colors: silver, black, glacier, and burgundy.",
+    "sourceUrl": "https://www.macrumors.com/2026/09/12/iphone-18-pro-available-to-pre-order/",
+    "longFormSummary": "<ul><li>iPhone 18 Pro starts at $1,199 (256GB); iPhone 18 Pro Max starts at $1,299</li><li>Storage available up to 2TB</li><li>New A20 Pro chip and upgraded 5G modems</li><li>Variable-aperture Main camera</li><li>Improved vapor chamber cooling, longer battery life, faster charging</li><li>Smaller Dynamic Island</li><li>Colors: silver, black, glacier, burgundy</li><li>Pre-orders opened September 12; ships September 18, 2026</li></ul>",
+    "address": "Cupertino, California @ 37.3346, -122.0090",
+    "priceLowerBound": 1199,
+    "priceUpperBound": 1299,
+    "price": 1199,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Stated as firm, per macrumors.com: pre-orders opened Saturday, September 12, with the phones \"launching Friday, September 18.\"",
+    "utcStartDateTime": "2026-09-18T07:00:00.000Z",
+    "utcEndDateTime": "2026-09-19T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-13T04:02:30.706Z",
+    "utcUpdatedDateTime": "2026-09-13T04:17:37.617Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 267,
+        "thumbName": "cc2d6077-4b7a-4d9d-a486-51923643b2b9.jpeg",
+        "thumbWidth": 400,
+        "thumbHeight": 225,
+        "originalUrl": "https://images.macrumors.com/t/yXoa8ue4Eajgtu-uWY4N4dlbjlE=/400x0/article-new/2026/09/iPhone-18-Pro-Pre-Orders-Feature.jpg?lossy",
+        "originalWidth": 400,
+        "originalHeight": 225,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 287,
+    "rootThread": false,
+    "title": "Apple Watch Series 12 Release",
+    "description": "Apple Watch Series 12 launches at $399, after pre-orders opened September 9. Highlights: S11 chip, a redesigned health sensing system for more accurate heart rate tracking, a new Readiness feature, Sound Recognition and Live Rewind audio intelligence, Ceramic Shield on aluminum models, and an updated Health app with Health Age and a Longevity tab. Available in aluminum, titanium, and ceramic finishes.",
+    "sourceUrl": "https://www.macrumors.com/2026/09/09/apple-watch-series-12-announced-all-day-hr-sensor/",
+    "longFormSummary": "<ul><li>Starts at $399</li><li>S11 chip with an energy-efficient always-on processor</li><li>Redesigned health sensing system for more accurate heart rate tracking</li><li>New Readiness feature analyzing activity, vitals, and sleep</li><li>Sound Recognition and Live Rewind audio intelligence</li><li>Ceramic Shield on aluminum models, 60% tougher screens</li><li>Updated Health app with Health Age and a Longevity tab</li><li>Available in aluminum, titanium, and ceramic finishes</li><li>Pre-orders opened September 9; ships September 18, 2026</li></ul>",
+    "address": "Cupertino, California @ 37.3346, -122.0090",
+    "price": 399,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Stated as firm, per macrumors.com: pre-orders began September 9 ahead of a stated launch date of September 18, 2026.",
+    "utcStartDateTime": "2026-09-18T07:00:00.000Z",
+    "utcEndDateTime": "2026-09-19T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-13T04:02:30.757Z",
+    "utcUpdatedDateTime": "2026-09-13T04:17:37.787Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 268,
+        "thumbName": "85974a00-79d9-4ed5-acc8-545b15aab5b5.jpeg",
+        "thumbWidth": 400,
+        "thumbHeight": 225,
+        "originalUrl": "https://images.macrumors.com/t/yt8CV6nltQSkXYdTHnnQZLXa3TY=/400x0/article-new/2026/09/Apple-Watch-Series-12-2up-260909-scaled.jpg?lossy",
+        "originalWidth": 400,
+        "originalHeight": 225,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 288,
+    "rootThread": false,
+    "title": "Apple Watch Ultra 4 Release",
+    "description": "Apple Watch Ultra 4 launches at $799, after pre-orders opened September 9. Apple claims up to two days of battery life, or up to 18 hours of workout tracking with full GPS and heart rate monitoring (45 hours in extended workout mode). Also new: the S11 chip, a redesigned health sensing system, a Readiness feature, Sound Recognition and Live Rewind, and a Siri Recap feature launching in beta later in 2026. Available in Black and Natural titanium with new band colors.",
+    "sourceUrl": "https://www.macrumors.com/2026/09/09/apple-watch-ultra-4-announced-battery-life/",
+    "longFormSummary": "<ul><li>Starts at $799</li><li>Up to two days of battery life; up to 18 hours of workout tracking with full GPS and heart rate (45 hours in extended workout mode)</li><li>S11 chip with improved power efficiency</li><li>Redesigned health sensing system with a larger electrode surface</li><li>New Readiness feature analyzing activity, vitals, and sleep</li><li>Sound Recognition and Live Rewind audio intelligence</li><li>Siri Recap feature launching in beta later in 2026</li><li>Available in Black and Natural titanium with new band colors</li><li>Pre-orders opened September 9; ships September 18, 2026</li></ul>",
+    "address": "Cupertino, California @ 37.3346, -122.0090",
+    "price": 799,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Stated as firm, per macrumors.com: pre-orders opened September 9 ahead of a stated launch date of September 18, 2026.",
+    "utcStartDateTime": "2026-09-18T07:00:00.000Z",
+    "utcEndDateTime": "2026-09-19T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-13T04:02:30.782Z",
+    "utcUpdatedDateTime": "2026-09-13T04:17:38.006Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 269,
+        "thumbName": "2e794a1a-64f7-40b0-965c-81f9a0d10b93.jpeg",
+        "thumbWidth": 400,
+        "thumbHeight": 225,
+        "originalUrl": "https://images.macrumors.com/t/LCaQtawTgd7zI4eSAdGdH2OJNGs=/400x0/article-new/2026/09/Apple-Watch-Ultra-4-hero-260909-scaled.jpg?lossy",
+        "originalWidth": 400,
+        "originalHeight": 225,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 289,
+    "rootThread": false,
+    "title": "AirPods 5 Release",
+    "description": "AirPods 5 launch at $129 ($149 for the Premium model), after pre-orders opened September 9. ANC removes up to 50% more external noise than AirPods 4, thanks to a redesigned acoustic architecture and updated Adaptive EQ. Also new: improved Transparency mode, Adaptive Audio, Conversation Awareness, and Live Translation support on compatible iPhones. The $149 Premium model adds swipe volume controls, up to 5 hours of ANC listening time (22 with the case), and a wireless charging case with Apple Watch and Qi support.",
+    "sourceUrl": "https://www.macrumors.com/2026/09/09/airpods-5-announced-improved-anc/",
+    "longFormSummary": "<ul><li>Starts at $129; Premium model is $149</li><li>ANC removes up to 50% more external noise than AirPods 4</li><li>Redesigned acoustic architecture with updated Adaptive EQ</li><li>Improved Transparency mode and Adaptive Audio</li><li>Conversation Awareness lowers volume when the wearer speaks</li><li>Live Translation support on compatible iPhones</li><li>Premium model adds swipe volume controls, up to 5 hours ANC listening (22 with case), and a wireless charging case with Apple Watch/Qi support</li><li>Pre-orders opened September 9; ships September 18, 2026</li></ul>",
+    "address": "Cupertino, California @ 37.3346, -122.0090",
+    "priceLowerBound": 129,
+    "priceUpperBound": 149,
+    "price": 129,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Stated as firm, per macrumors.com: pre-orders opened September 9 ahead of a stated release date of \"Friday, September 18.\"",
+    "utcStartDateTime": "2026-09-18T07:00:00.000Z",
+    "utcEndDateTime": "2026-09-19T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-13T04:02:30.819Z",
+    "utcUpdatedDateTime": "2026-09-13T04:17:38.151Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 270,
+        "thumbName": "c29b8e14-3050-4b53-869c-c8a16fec55fb.jpeg",
+        "thumbWidth": 400,
+        "thumbHeight": 225,
+        "originalUrl": "https://images.macrumors.com/t/taikwVrRRHZG9UvAH-TMK_B3d7c=/400x0/article-new/2026/09/airpods-5.jpg?lossy",
+        "originalWidth": 400,
+        "originalHeight": 225,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 277,
     "rootThread": false,
     "title": "Gordie Howe International Bridge Opens",
@@ -6722,6 +6895,40 @@
         "originalUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Grand_paris_express.svg/1280px-Grand_paris_express.svg.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
         "originalWidth": 1280,
         "originalHeight": 1067,
+        "type": "1"
+      }
+    ],
+    "userId": 1
+  },
+  {
+    "id": 291,
+    "rootThread": false,
+    "title": "iPhone Duo Release",
+    "description": "Apple launches the foldable iPhone Duo at $1,999 for 256GB (up to 2TB available), after pre-orders opened October 16. It has a 7.6-inch inner display and 5.4-inch outer display, a custom hinge with over 100 precision components, nano-texture and micro-lens finishes to minimize the fold crease, dual 48MP Fusion and ultra-wide cameras plus an under-display FaceTime camera, the A20 Pro chip with a C2 modem, dual batteries rated for up to 24 hours of mixed-screen use, IP68 water resistance, a titanium frame, and Ceramic Shield.",
+    "sourceUrl": "https://www.macrumors.com/2026/09/09/apple-announces-foldable-iphone-duo/",
+    "longFormSummary": "<ul><li>Starts at $1,999 for 256GB; up to 2TB available</li><li>Foldable design: 7.6-inch inner display, 5.4-inch outer display</li><li>Custom hinge with over 100 precision components</li><li>Nano-texture and micro-lens finishes minimize the fold crease</li><li>Dual 48MP Fusion and ultra-wide cameras, plus an under-display FaceTime camera</li><li>A20 Pro chip with C2 modem, up to 50% faster than C1X</li><li>Dual batteries rated for up to 24 hours of mixed-screen use</li><li>Titanium frame, IP68 water resistance, Ceramic Shield</li><li>Pre-orders begin October 16; ships October 23, 2026</li></ul>",
+    "address": "Cupertino, California @ 37.3346, -122.0090",
+    "price": 1999,
+    "dateConfidence": "scheduled",
+    "dateConfidenceReasoning": "Given as scheduled, per macrumors.com: pre-orders begin October 16 with availability stated for October 23, over a month ahead of the article date.",
+    "utcStartDateTime": "2026-10-23T07:00:00.000Z",
+    "utcEndDateTime": "2026-10-24T07:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-13T04:02:30.880Z",
+    "utcUpdatedDateTime": "2026-09-13T04:17:38.464Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 272,
+        "thumbName": "82045c36-fe75-43b2-bdb8-2ee64b9819d4.jpeg",
+        "thumbWidth": 400,
+        "thumbHeight": 225,
+        "originalUrl": "https://images.macrumors.com/t/a4h0iUkXuwX_hWmZSFCIFS-FEUo=/400x0/article-new/2026/09/iphone-duo.jpg?lossy",
+        "originalWidth": 400,
+        "originalHeight": 225,
         "type": "1"
       }
     ],
