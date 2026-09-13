@@ -46,6 +46,8 @@ const createGetPinAuthorThreadSP = createSP.createGetPinAuthorThreadSP;
 const createGetPinAuthorThreadWithFavoriteAndLikeSP = createSP.createGetPinAuthorThreadWithFavoriteAndLikeSP;
 const createGetPinByAuthersFilterByHasFavoriteSP = createSP.createGetPinByAuthersFilterByHasFavoriteSP;
 const createGetPinByAuthersSP = createSP.createGetPinByAuthersSP;
+const createGetPinByCategoryFilterByHasFavoriteSP = createSP.createGetPinByCategoryFilterByHasFavoriteSP;
+const createGetPinByCategorySP = createSP.createGetPinByCategorySP;
 const createGetCommentsByPinIdSP = createSP.createGetCommentsByPinIdSP;
 const createGetAllCommentsSP = createSP.createGetAllCommentsSP;
 
@@ -158,6 +160,8 @@ function execute() {
         createGetPinAuthorThreadWithFavoriteAndLikeSP,
         createGetPinByAuthersFilterByHasFavoriteSP,
         createGetPinByAuthersSP,
+        createGetPinByCategoryFilterByHasFavoriteSP,
+        createGetPinByCategorySP,
         createGetCommentsByPinIdSP,
         createGetAllCommentsSP,
 

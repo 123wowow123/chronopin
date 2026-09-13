@@ -10,8 +10,27 @@
 
       let SI_POSTFIXES = ["", "K", "M", "B", "T", "P", "E"];
 
-      return function abbreviateNumber(number, symbol) {
-        symbol = symbol || '$';
+      // ISO 4217 code -> what to print in front of the figure. A code that is
+      // not listed prints as itself ("AED 128B"), which is the honest reading
+      // for a currency with no widely recognised symbol - and far better than
+      // the "$" this used to hardcode, which mislabelled every non-dollar
+      // figure on the site.
+      let CURRENCY_SYMBOLS = {
+        USD: '$', EUR: '€', GBP: '£', JPY: '¥', CNY: 'CN¥',
+        INR: '₹', AUD: 'A$', CAD: 'C$', NZD: 'NZ$', HKD: 'HK$',
+        SGD: 'S$', KRW: '₩', RUB: '₽', BRL: 'R$', MXN: 'MX$',
+        TRY: '₺', ILS: '₪', THB: '฿', TWD: 'NT$', PHP: '₱',
+        VND: '₫', NGN: '₦', SEK: 'kr', NOK: 'kr', DKK: 'kr'
+      };
+
+      return function abbreviateNumber(number, currency) {
+        // No currency recorded means the old dollar-only data, which was all
+        // USD product prices.
+        let symbol = currency ? (CURRENCY_SYMBOLS[currency] || currency) : '$';
+        // "AED 128B" and "kr 52.6B" need the gap; "A$27B" and "€6.4B" do not.
+        if (/[A-Za-z]$/.test(symbol)) {
+          symbol = symbol + ' ';
+        }
 
         // what tier? (determines SI prefix)
         let tier = Math.log10(Math.abs(number)) / 3 | 0;

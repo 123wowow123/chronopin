@@ -151,6 +151,20 @@ export default class Pins extends BasePins {
       });
   }
 
+  static queryPinByCategory(category) {
+    return _queryPinByCategory(category)
+      .then(res => {
+        return new Pins(res);
+      });
+  }
+
+  static queryPinByCategoryHasFavorite(userId, category) {
+    return _queryPinByCategoryHasFavorite(userId, category)
+      .then(res => {
+        return new Pins(res);
+      });
+  }
+
 }
 
 function _queryMSSQLPins(queryForward, fromDateTime, userId, lastPinId, offset, pageSize, createdSinceDateTime) {
@@ -521,6 +535,69 @@ function _queryPinByAuthorsHasFavorite(userId, userNames) {
 
         let request = new mssql.Request(conn)
           .input('TableIds', tvp)
+          .input('userId', mssql.Int, userId)
+          .output('queryCount', mssql.Int);
+
+        request.execute(`[dbo].[${StoredProcedureName}]`,
+          function (err, res, returnValue, affected) {
+            let queryCount;
+            if (err) {
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+            }
+            try {
+              queryCount = res.output.queryCount;
+            } catch (e) {
+              queryCount = 0;
+            }
+
+            resolve({
+              pins: res.recordset,
+              queryCount: queryCount
+            });
+          });
+      });
+    });
+}
+
+function _queryPinByCategory(category) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise(function (resolve, reject) {
+        const StoredProcedureName = 'GetPinByCategory';
+
+        let request = new mssql.Request(conn)
+          .input('category', mssql.NVarChar(64), category)
+          .output('queryCount', mssql.Int);
+
+        request.execute(`[dbo].[${StoredProcedureName}]`,
+          function (err, res, returnValue, affected) {
+            let queryCount;
+            if (err) {
+              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
+            }
+            try {
+              queryCount = res.output.queryCount;
+            } catch (e) {
+              queryCount = 0;
+            }
+
+            resolve({
+              pins: res.recordset,
+              queryCount: queryCount
+            });
+          });
+      });
+    });
+}
+
+function _queryPinByCategoryHasFavorite(userId, category) {
+  return cp.getConnection()
+    .then(conn => {
+      return new Promise(function (resolve, reject) {
+        const StoredProcedureName = 'GetPinByCategoryFilterByHasFavorite';
+
+        let request = new mssql.Request(conn)
+          .input('category', mssql.NVarChar(64), category)
           .input('userId', mssql.Int, userId)
           .output('queryCount', mssql.Int);
 

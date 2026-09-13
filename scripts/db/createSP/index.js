@@ -13,6 +13,8 @@ const createGetPinByIdsFilterByHasFavoriteSP = require('./pin/createGetPinByIdsF
 const createGetPinsWithFavoriteAndLikeArrayNextSP = require('./pin/createGetPinsWithFavoriteAndLikeArrayNextSP');
 const createGetPinByAuthersFilterByHasFavoriteSP = require('./pin/createGetPinByAuthersFilterByHasFavoriteSP');
 const createGetPinByAuthersSP = require('./pin/createGetPinByAuthersSP');
+const createGetPinByCategoryFilterByHasFavoriteSP = require('./pin/createGetPinByCategoryFilterByHasFavoriteSP');
+const createGetPinByCategorySP = require('./pin/createGetPinByCategorySP');
 
 /* search pin */
 const createSearchPinSP = require('./pin/createSearchPinSP');
@@ -133,6 +135,8 @@ module.exports.setup = function (connectionPool) {
   createGetPinAuthorThreadWithFavoriteAndLikeSP.setup(cp);
   createGetPinByAuthersFilterByHasFavoriteSP.setup(cp);
   createGetPinByAuthersSP.setup(cp);
+  createGetPinByCategoryFilterByHasFavoriteSP.setup(cp);
+  createGetPinByCategorySP.setup(cp);
   createGetCommentsByPinIdSP.setup(cp);
   createGetAllCommentsSP.setup(cp);
 
@@ -206,6 +210,8 @@ module.exports.createGetPinAuthorThreadSP = createGetPinAuthorThreadSP.createSP;
 module.exports.createGetPinAuthorThreadWithFavoriteAndLikeSP = createGetPinAuthorThreadWithFavoriteAndLikeSP.createSP;
 module.exports.createGetPinByAuthersFilterByHasFavoriteSP = createGetPinByAuthersFilterByHasFavoriteSP.createSP;
 module.exports.createGetPinByAuthersSP = createGetPinByAuthersSP.createSP;
+module.exports.createGetPinByCategoryFilterByHasFavoriteSP = createGetPinByCategoryFilterByHasFavoriteSP.createSP;
+module.exports.createGetPinByCategorySP = createGetPinByCategorySP.createSP;
 module.exports.createGetCommentsByPinIdSP = createGetCommentsByPinIdSP.createSP;
 module.exports.createGetAllCommentsSP = createGetAllCommentsSP.createSP;
 

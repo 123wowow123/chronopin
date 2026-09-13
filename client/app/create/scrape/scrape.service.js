@@ -90,11 +90,25 @@
                 thisPin.description = pin.description;
                 thisPin.address = pin.address;
                 thisPin.price = pin.price;
+                thisPin.priceCurrency = pin.priceCurrency;
                 thisPin.start = pin.utcStartDateTime && new Date(pin.utcStartDateTime);
                 thisPin.end = pin.utcStartDateTime && new Date(pin.utcEndDateTime);
                 thisPin.allDay = pin.allDay;
                 thisPin.media = pin.media;
                 thisPin.merchants = pin.merchants;
+
+                // The form has no inputs for these, but UpdatePin writes every
+                // one of them, so anything not carried back here is saved as
+                // NULL - an unrelated edit would wipe the extracted fields.
+                thisPin.longFormSummary = pin.longFormSummary;
+                thisPin.dateConfidence = pin.dateConfidence;
+                thisPin.dateConfidenceReasoning = pin.dateConfidenceReasoning;
+                thisPin.company = pin.company;
+                thisPin.companyWikiUrl = pin.companyWikiUrl;
+                thisPin.category = pin.category;
+                thisPin.priceLowerBound = pin.priceLowerBound;
+                thisPin.priceUpperBound = pin.priceUpperBound;
+                thisPin.tip = pin.tip;
 
                 thisPin.selectedMedia = _.get(pin, 'media[0]');
                 return this;
@@ -130,6 +144,10 @@
                     endDateTime = pin.end;
                 }
 
+                // Must name every column UpdatePin writes, not just the ones
+                // the form has inputs for: a field left out of this object is
+                // absent from the request and saved as NULL, so an unrelated
+                // edit would wipe it.
                 let newPin = {
                     id: pin.id,
                     parentId: pin.parentId,
@@ -138,6 +156,16 @@
                     sourceUrl: pin.sourceUrl,
                     address: pin.address,
                     price: pin.price,
+                    priceCurrency: pin.priceCurrency,
+                    priceLowerBound: pin.priceLowerBound,
+                    priceUpperBound: pin.priceUpperBound,
+                    longFormSummary: pin.longFormSummary,
+                    dateConfidence: pin.dateConfidence,
+                    dateConfidenceReasoning: pin.dateConfidenceReasoning,
+                    company: pin.company,
+                    companyWikiUrl: pin.companyWikiUrl,
+                    category: pin.category,
+                    tip: pin.tip,
                     utcStartDateTime: startDateTime, // ISO 8601 with toJSON
                     utcEndDateTime: endDateTime,
                     allDay: allDay,

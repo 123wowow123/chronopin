@@ -364,6 +364,12 @@
       this.pin.price = this.pin.price * mult;
     }
 
+    normalizeCurrency() {
+      if (this.pin.priceCurrency) {
+        this.pin.priceCurrency = this.pin.priceCurrency.toUpperCase();
+      }
+    }
+
     _resolveActiveTabPinData() {
       const view = {
         title: (this.activeTabs['title'] === 0 ? this.pin.title : this.pinSuggestion.title),

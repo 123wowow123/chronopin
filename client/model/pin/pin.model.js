@@ -18,9 +18,13 @@
       'priceLowerBound',
       'priceUpperBound',
       'price',
+      'priceCurrency',
       'tip',
       'dateConfidence',
       'dateConfidenceReasoning',
+      'company',
+      'companyWikiUrl',
+      'category',
       {
         'utcStartDateTime': Date
       },

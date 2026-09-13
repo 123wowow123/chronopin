@@ -100,6 +100,10 @@ const SCHEMA = {
       type: ['string', 'null'],
       description: 'The company or organization this event is principally about or done by, e.g. "Apple", "SpaceX", "City of Detroit". Null when no single organization owns the event.'
     },
+    companyWikiUrl: {
+      type: ['string', 'null'],
+      description: 'Direct URL to that company\'s own English Wikipedia article, disambiguated from unrelated topics that share its name, e.g. "https://en.wikipedia.org/wiki/Apple_Inc." not "https://en.wikipedia.org/wiki/Apple" (the fruit), "https://en.wikipedia.org/wiki/Tesla,_Inc." not "https://en.wikipedia.org/wiki/Tesla" (the scientist). Null when company is null or has no Wikipedia article.'
+    },
     category: {
       type: 'string',
       enum: CATEGORIES,
@@ -133,6 +137,7 @@ const SCHEMA = {
     'dateConfidence',
     'dateConfidenceReasoning',
     'company',
+    'companyWikiUrl',
     'category',
     'startDateTime',
     'endDateTime',

@@ -148,6 +148,21 @@
       }
     }
 
+    // Whether there is something in .grid__media for the company to overlay.
+    // An image pin whose thumbnail is absent or failed to load (imageMissing,
+    // set by pin-parallax) leaves that box 0px tall, and the overlay then
+    // floats up over the posted line - so those count as image-less.
+    hasImage() {
+      let media = this.pin && this.pin.media && this.pin.media[0];
+      if (!media) {
+        return false;
+      }
+      if (String(media.type) === '1') {
+        return !!media.thumbName && !this.imageMissing;
+      }
+      return true;
+    }
+
     loadComments(pinId) {
       return this.pinWebService.getComments(pinId)
         .then(res => {

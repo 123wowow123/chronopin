@@ -12,6 +12,25 @@
     padding-bottom: 60px;
   }
 
+  // Sits where the hardcoded "$" addon used to, so the currency is set
+  // alongside the amount rather than assumed.
+  // Takes the addon slot the hardcoded "$" used to occupy, so the currency is
+  // set alongside the amount. Deliberately not a .form-control - Bootstrap's
+  // rules for those inside an input-group force it onto its own row.
+  .price-currency-addon {
+    padding: 0;
+  }
+
+  .price-currency {
+    width: 4.5em;
+    padding: 6px 8px;
+    border: none;
+    background: transparent;
+    color: inherit;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
   // child blocks
   &__text-form {
     position: relative;

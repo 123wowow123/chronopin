@@ -147,6 +147,14 @@ export default class SearchPins extends BasePins {
         return Pins.queryPinByAuthorsHasFavorite(userId, userNames); // TODO: should return SearchPins
     }
 
+    static searchCategory(category) {
+        return Pins.queryPinByCategory(category); // TODO: should return SearchPins
+    }
+
+    static searchCategoryFavorite(userId, category) {
+        return Pins.queryPinByCategoryHasFavorite(userId, category); // TODO: should return SearchPins
+    }
+
     static searchFavorite(userId, searchText) {
         // TODO: should return SearchPins
         if (!searchText) {

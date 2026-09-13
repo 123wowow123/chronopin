@@ -28,9 +28,21 @@
     .directive('pinParallax', function () {
       return {
         restrict: 'A',
-        link: function (scope, element) {
+        link: function (scope, element, attrs) {
           const crop = element[0];
           let layer = null;
+
+          // Lets the page know when the thumbnail's blob is missing, via
+          // pin-parallax-missing="expr" with `missing` as a local. The box
+          // collapses to nothing then, so anything overlaid on the image has
+          // to find somewhere else to sit.
+          function reportMissing(missing) {
+            if (attrs.pinParallaxMissing) {
+              scope.$evalAsync(function () {
+                scope.$eval(attrs.pinParallaxMissing, { missing: missing });
+              });
+            }
+          }
 
           // How tall the image renders at the current column width.
           function renderedHeight(img) {
@@ -105,8 +117,10 @@
             // the database claims for it.
             if (img.complete && img.naturalWidth === 0) {
               crop.style.height = '';
+              reportMissing(true);
               return;
             }
+            reportMissing(false);
 
             const natural = renderedHeight(img);
             if (!natural) {

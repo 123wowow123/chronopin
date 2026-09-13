@@ -27,24 +27,98 @@
 }
 
 
+// Company, overlaid on the bottom-left of a pin's image, mirroring how
+// .grid__location sits top-right over the same .grid__media.
+.grid__tags {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    max-width: calc(100% - 16px);
+}
+
+// Sits at the head of .headline-left, ahead of the posted date, and reads as
+// part of that row's "category / date / author" line - deliberately plain
+// rather than a filled badge, which shouted next to 10px muted text and
+// competed with the date-confidence pill lower down the card. The shrink and
+// ellipsis rules are for the flex row: a long value like "Infrastructure &
+// Transportation" would otherwise push the date out of a narrow card.
 .grid__category {
-    display: inline-block;
-    margin-left: 6px;
-    padding: 1px 6px;
-    border-radius: 3px;
-    font-size: 9px;
-    font-weight: bold;
-    letter-spacing: 0.04em;
-    vertical-align: 1px;
+    align-self: center;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
-    color: #ededed;
-    background: #6a6a6a;
+    color: inherit;
 }
 
 .grid__company {
-    margin-left: 6px;
+    display: inline-block;
+    max-width: 100%;
+    padding: 1px 8px;
+    border-radius: 10px;
     font-size: 11px;
-    opacity: 0.7;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.35);
+
+    // A company with no Wikipedia article of its own gets no href (ng-href
+    // drops the attribute when the url is empty), so it stays plain text
+    // rather than a link that goes nowhere - hence the [href] guard.
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &[href]:hover,
+        &[href]:focus {
+            text-decoration: underline;
+        }
+    }
+
+}
+
+// Image-less pins have nowhere to overlay company/location, so they get one
+// line of their own directly above the date line. Typography matches
+// .grid__date-line so the two read as a single block.
+.grid__meta-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 2px;
+    font-size: 11px;
+    font-style: italic;
+    opacity: 0.8;
+
+    // Flush-left plain text, not the pill these wear over an image: that
+    // styling exists for legibility against a photo, and its 8px padding
+    // left the text visibly indented against the date line below. Also
+    // un-does .grid__location's absolute top/right positioning.
+    .grid__company,
+    .grid__location {
+        position: static;
+        top: auto;
+        right: auto;
+        max-width: 100%;
+        padding: 0;
+        border-radius: 0;
+        background: none;
+        color: inherit;
+        font-size: inherit;
+    }
+
+    // Keeps "Company Location" from running together as one phrase.
+    .grid__company + .grid__location::before {
+        content: '/ ';
+        opacity: 0.7;
+    }
 }
 
 .thread-icon {
@@ -53,5 +127,39 @@
 
     &::after {
         content: '🧵';
+    }
+}
+
+// Set by the img-fallback directive when a pin's image fails to load from
+// every source. The image's link is hidden, so the company and location that
+// normally overlay it become one plain line, like .grid__meta-line.
+.grid__media--no-image {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-style: italic;
+    opacity: 0.8;
+
+    .grid__tags,
+    .grid__company,
+    .grid__location {
+        position: static;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        max-width: 100%;
+        padding: 0;
+        border-radius: 0;
+        background: none;
+        color: inherit;
+        font-size: inherit;
+    }
+
+    // Company first, as on .grid__meta-line.
+    .grid__tags {
+        order: -1;
     }
 }

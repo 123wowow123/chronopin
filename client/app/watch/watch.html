@@ -54,7 +54,7 @@
                     </div>
                     <div class="grid__description" ng-bind-html="$ctrl.pin.description"></div>
                     <div class="grid__footer">
-                      <div class="grid__price" ng-class="{'grid__price--negative': pin.price < 0}" ng-if="pin.price">{{pin.price | money}}</div>
+                      <div class="grid__price" ng-class="{'grid__price--negative': pin.price < 0}" ng-if="pin.price">{{pin.price | money:pin.priceCurrency}}</div>
 
                       <div class="grid__social">
                         <div class="grid__watch" ng-switch="!!pin.hasFavorite">

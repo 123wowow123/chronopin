@@ -150,35 +150,68 @@ export function create(req, res) {
     .catch(response.handleError(res));
 }
 
+// A Pin is editable by the person who posted it and by an admin. The routes
+// themselves only prove you are signed in, so without this any account could
+// rewrite or delete anyone's pins.
+function _canModify(user, pin) {
+  if (!user || !pin) {
+    return false;
+  }
+  return user.role === 'admin' || +pin.userId === +user.id;
+}
+
 // Updates an existing Pin in the DB
 export function update(req, res) {
-  //console.log('update pin', req.body)
   let pinId = +req.params.id,
-    user = req.user,
-    // userId = +req.user.id,
-    pin = new Pin(req.body);
+    user = req.user;
 
-  pin.setUser(user);
-  pin.id = pinId;
-
-  return pin.update()
+  return Pin.queryById(pinId)
     .then(({
-      pin
+      pin: existing
     }) => {
-      const event = "afterUpdate";
-      PinEmitter.emit(event, pin, { userId: user.id });
-      return pin;
+      if (!existing) {
+        return res.status(404).end();
+      }
+      if (!_canModify(user, existing)) {
+        return res.status(403).send('Forbidden');
+      }
+
+      let pin = new Pin(req.body);
+      pin.id = pinId;
+      // Keep whoever posted it as the author; an edit is not a transfer of
+      // ownership, and UpdatePin writes userId on every save.
+      pin.userId = existing.userId;
+
+      return pin.update()
+        .then(({
+          pin
+        }) => {
+          const event = "afterUpdate";
+          PinEmitter.emit(event, pin, { userId: user.id });
+          return pin;
+        })
+        .then(response.handleEntityNotFound(res))
+        .then(response.withResult(res));
     })
-    .then(response.handleEntityNotFound(res))
-    .then(response.withResult(res))
     .catch(response.handleError(res));
 }
 
 // Deletes a Pin from the DB
 export function destroy(req, res) {
-  return Pin.queryById(req.params.id)
-    .then(response.handleEntityNotFound(res))
-    .then(_removeEntity(res))
+  let user = req.user;
+
+  return Pin.queryById(+req.params.id)
+    .then(({
+      pin
+    }) => {
+      if (!pin) {
+        return res.status(404).end();
+      }
+      if (!_canModify(user, pin)) {
+        return res.status(403).send('Forbidden');
+      }
+      return _removeEntity(res)(pin);
+    })
     .catch(response.handleError(res));
 }
 

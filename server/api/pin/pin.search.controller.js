@@ -43,6 +43,18 @@ export function searchPins(req, res) {
     searchText = req.query.q,
     hasFavorite = req.query.f && req.query.f.toLowerCase() == 'watch';
 
+  // "category:<name>" filters to one category. It takes the whole query,
+  // because category names contain spaces ("Gaming & Entertainment").
+  const categoryMatch = /^category:(.+)$/i.exec(searchText.trim());
+  if (categoryMatch) {
+    const category = categoryMatch[1].trim();
+    return (hasFavorite
+      ? SearchPins.searchCategoryFavorite(userId, category)
+      : SearchPins.searchCategory(category))
+      .then(response.withResult(res, 200))
+      .catch(response.handleError(res));
+  }
+
   const searchTextArray = searchText.split(" ");
   const userNames = searchTextArray.filter(t => {
     return t.startsWith("@");
@@ -119,5 +131,5 @@ export function upsertPin(pin) {
 }
 
 export function deletePin(pin) {
-  return SearchPins.delete(pin.id);
+  return new SearchPin(pin).delete();
 }

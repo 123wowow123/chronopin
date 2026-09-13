@@ -329,23 +329,6 @@ $bag-font-color: var(--bag-text-color);
         text-overflow: ellipsis;
         white-space: nowrap;
         z-index: 1;
-
-        // Media-less pins have no thumbnail to sit on, so this overlays the
-        // date line instead. Anchored to the top, not the bottom: when the
-        // date-confidence reasoning renders, it adds a second line below
-        // "Starts ...", and bottom:0 would line the label up with that
-        // reasoning text instead of the start date. The default padding/
-        // line-height make a taller box than the "Starts ... ESTIMATED"
-        // row itself (measured ~15.7px), so those are trimmed here too -
-        // otherwise top:0 still overshoots down into the reasoning line.
-        &.\--overlay {
-            top: 0;
-            right: 0;
-            max-width: 60%;
-            padding: 1px 8px;
-            line-height: 1.25;
-            background: rgba(0, 0, 0, 0.35);
-        }
     }
 
     /** panel arrows **/

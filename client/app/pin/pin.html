@@ -17,6 +17,8 @@
              further down, which is what the pin is actually about. -->
         <div class="grid__headline pin__posted">
           <div class="headline-left">
+            <a class="grid__category rubric" ng-if="$ctrl.pin.category" title="Show all {{$ctrl.pin.category}} pins" ng-click="$ctrl.searchService.submit('category:' + $ctrl.pin.category)">{{$ctrl.pin.category}}</a>
+            <span class="rubric__divider" ng-if="$ctrl.pin.category">/</span>
             <a class="posted-time" ui-sref="pin({id:$ctrl.pin.id})">
               <time datetime="{{$ctrl.pin.utcCreatedDateTime}}">{{$ctrl.pin.utcCreatedDateTime | date :
                 "MM/dd/yyyy
@@ -33,10 +35,21 @@
         <!-- Switch between image / iframe / tweets -->
         <div class="grid__media" ng-switch="$ctrl.pin.media[0].type">
 
+          <div class="grid__tags" ng-if="$ctrl.hasImage() && $ctrl.pin.company">
+            <span class="grid__company">
+              <a ng-href="{{$ctrl.pin.companyWikiUrl}}" target="_blank" rel="noopener"
+                title="{{$ctrl.pin.companyWikiUrl ? $ctrl.pin.company + ' on Wikipedia' : ''}}">
+                {{$ctrl.pin.company}}
+              </a>
+            </span>
+          </div>
+
           <div ng-switch-when="1">
-            <a class="pin__asset pin__asset--link pin-parallax" pin-parallax ng-if="$ctrl.pin.media[0].thumbName"
+            <a class="pin__asset pin__asset--link pin-parallax" pin-parallax
+              pin-parallax-missing="$ctrl.imageMissing = missing" ng-if="$ctrl.pin.media[0].thumbName"
               ng-href="{{$ctrl.pin.sourceUrl}}" target="_blank">
               <img ng-src="{{$ctrl.appConfig.thumbUrlPrefix + $ctrl.pin.media[0].thumbName}}" class="pin__image"
+                img-fallback="{{$ctrl.pin.media[0].originalUrl}}"
                 data-actual-width="{{$ctrl.pin.media[0].thumbWidth}}"
                 data-actual-height="{{$ctrl.pin.media[0].thumbHeight}}" />
             </a>
@@ -53,6 +66,20 @@
 
 
         <div class="grid__body">
+
+          <!-- No image to overlay the company on, so it gets its own line
+               above the date, as on the timeline card. Kept outside
+               .grid__meta, which is a flex row and would put it beside the
+               date. Location is left out: the map in the right column covers
+               it on this page. -->
+          <div class="grid__meta-line" ng-if="!$ctrl.hasImage() && $ctrl.pin.company">
+            <span class="grid__company">
+              <a ng-href="{{$ctrl.pin.companyWikiUrl}}" target="_blank" rel="noopener"
+                title="{{$ctrl.pin.companyWikiUrl ? $ctrl.pin.company + ' on Wikipedia' : ''}}">
+                {{$ctrl.pin.company}}
+              </a>
+            </span>
+          </div>
 
           <div class="grid__meta">
             <!-- Same markup as the timeline card's date line, so both read the
@@ -86,7 +113,7 @@
                 <div class="merchant-price " ng-class="{'grid__price--negative': $ctrl.pin.price < 0}"
                   ng-if="$ctrl.pin.price">
                   <span class="msrp">Cost:</span>
-                  <span class="merchant-price">{{$ctrl.pin.price | money}}</span>
+                  <span class="merchant-price">{{$ctrl.pin.price | money:$ctrl.pin.priceCurrency}}</span>
                 </div>
 
                 <!-- Merchant Ads-->

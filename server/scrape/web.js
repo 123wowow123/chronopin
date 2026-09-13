@@ -242,6 +242,7 @@ function _applyExtracted(newPin, fields) {
 
   if (Number.isFinite(fields.price)) {
     newPin.price = fields.price;
+    newPin.priceCurrency = fields.priceCurrency || undefined;
   }
 
   const address = toAddress(fields);
@@ -256,6 +257,7 @@ function _applyExtracted(newPin, fields) {
 
   if (fields.company) {
     newPin.company = fields.company;
+    newPin.companyWikiUrl = fields.companyWikiUrl || undefined;
   }
 
   if (fields.category) {

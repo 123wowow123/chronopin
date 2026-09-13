@@ -100,9 +100,8 @@ export default class Pin extends BasePin {
     return Pin.queryById(this.id, this.userId)
       .then((res) => {
 
-        // TODO: Add to auth middleware
-        if (res.pin.userId !== this.userId || this.userId !== 1) throw "Unauthorized update";
-
+        // Who may update is decided in pin.controller.js (_canModify), the
+        // only caller.
         let beforePinMedia = res.pin.media,
           // originalUserId = beforePinMedia,
           newPinMedia = this.media,
@@ -276,11 +275,13 @@ function _updateMSSQL(pin, userId) {
           .input('dateConfidence', mssql.NVarChar(32), pin.dateConfidence)
           .input('dateConfidenceReasoning', mssql.NVarChar(4000), pin.dateConfidenceReasoning)
           .input('company', mssql.NVarChar(255), pin.company)
+          .input('companyWikiUrl', mssql.NVarChar(2048), pin.companyWikiUrl)
           .input('category', mssql.NVarChar(64), pin.category)
           .input('address', mssql.NVarChar(4000), pin.address)
           .input('priceLowerBound', mssql.Decimal(18, 2), pin.priceLowerBound)
           .input('priceUpperBound', mssql.Decimal(18, 2), pin.priceUpperBound)
           .input('price', mssql.Decimal(18, 2), pin.price)
+          .input('priceCurrency', mssql.NVarChar(3), pin.priceCurrency)
           .input('tip', mssql.NVarChar(4000), pin.tip)
           .input('utcStartDateTime', mssql.DateTime2(0), pin.utcStartDateTime)
           .input('utcEndDateTime', mssql.DateTime2(0), pin.utcEndDateTime)
@@ -328,7 +329,7 @@ function _deleteMSSQL(pin) {
   return cp.getConnection()
     .then(conn => {
       return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'UpdatePin';
+        const StoredProcedureName = 'DeletePin';
         let request = new mssql.Request(conn)
           .input('id', mssql.Int, pin.id)
           .output('utcDeletedDateTime', mssql.DateTime2(7));

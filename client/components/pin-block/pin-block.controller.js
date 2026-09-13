@@ -107,6 +107,8 @@
             <div class="grid__content">
                 <div class="grid__headline">
                     <div class="headline-left">
+                        <a class="grid__category rubric" ng-if="$ctrl.pin.category" title="Show all {{$ctrl.pin.category}} pins" ng-click="$ctrl.searchService.submit('category:' + $ctrl.pin.category)">{{$ctrl.pin.category}}</a>
+                        <span class="rubric__divider" ng-if="$ctrl.pin.category">/</span>
                         <a class="posted-time" ui-sref="pin({id:$ctrl.pin.id})">
                             <time datetime="{{$ctrl.pin.utcCreatedDateTime}}">{{$ctrl.pin.utcCreatedDateTime | date :
                                 "MM/dd/yyyy
@@ -140,11 +142,21 @@
                         {{$ctrl.pin.address | locationLabel}}
                     </span>
 
+                    <div class="grid__tags" ng-if="$ctrl.pin.media[0] && $ctrl.pin.company">
+                        <span class="grid__company">
+                            <a ng-href="{{$ctrl.pin.companyWikiUrl}}" target="_blank" rel="noopener"
+                                title="{{$ctrl.pin.companyWikiUrl ? $ctrl.pin.company + ' on Wikipedia' : ''}}">
+                                {{$ctrl.pin.company}}
+                            </a>
+                        </span>
+                    </div>
+
                     <div ng-switch-when="1">
                         <a class="grid__asset grid__asset--link"
                             ng-if="$ctrl.pin.media[0].thumbName || $ctrl.pin.media[0].originalUrl"
                             ui-sref="pin({id:$ctrl.pin.id})">
                             <img ng-src="{{$ctrl.pin.media[0].thumbName ? ($ctrl.config.thumbUrlPrefix + $ctrl.pin.media[0].thumbName) : $ctrl.pin.media[0].originalUrl}}"
+                                img-fallback="{{$ctrl.pin.media[0].thumbName ? $ctrl.pin.media[0].originalUrl : ''}}"
                                 class="grid__image" data-actual-height="{{$ctrl.pin.media[0].thumbHeight}}"
                                 data-actual-width="{{$ctrl.pin.media[0].thumbWidth}}"
                                 height="{{$ctrl.pin.media[0].thumbHeight + 'px'}}"
@@ -171,6 +183,20 @@
                                 h:mma"}}</span>
                         </em>
                     </div> -->
+                    <!-- No image to overlay these on (see .grid__tags /
+                         .grid__location in .grid__media above for the image
+                         case), so they get their own line above the date.
+                         Category is not here - it lives in the headline. -->
+                    <div class="grid__meta-line"
+                        ng-if="!$ctrl.pin.media[0] && ($ctrl.pin.company || ($ctrl.pin.address | locationLabel))">
+                        <span class="grid__company" ng-if="$ctrl.pin.company">
+                            <a ng-href="{{$ctrl.pin.companyWikiUrl}}" target="_blank" rel="noopener"
+                                title="{{$ctrl.pin.companyWikiUrl ? $ctrl.pin.company + ' on Wikipedia' : ''}}">
+                                {{$ctrl.pin.company}}
+                            </a>
+                        </span>
+                        <span class="grid__location" ng-if="$ctrl.pin.address | locationLabel">{{$ctrl.pin.address | locationLabel}}</span>
+                    </div>
                     <div class="grid__date-line" ng-if="$ctrl.pin.utcStartDateTime">
                         <span class="grid__starts">{{$ctrl.pin.allDay
                             ? ('Starts ' + ($ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy"))
@@ -181,9 +207,6 @@
                         <date-confidence level="{{$ctrl.pin.dateConfidence}}"
                             reasoning="{{$ctrl.pin.dateConfidenceReasoning}}"
                             show-reasoning="$ctrl.pin.dateConfidence !== 'unknown'"></date-confidence>
-                        <span class="grid__location --overlay" ng-if="!$ctrl.pin.media[0] && ($ctrl.pin.address | locationLabel)">
-                            {{$ctrl.pin.address | locationLabel}}
-                        </span>
                     </div>
                     <div class="grid__description" ng-bind-html="$ctrl.pin.description"></div>
                 </div>
@@ -196,7 +219,7 @@
         
             <div class="grid__footer">
                 <div class="grid__price" ng-class="{'grid__price--negative': $ctrl.pin.price < 0}">
-                    <span ng-if="$ctrl.pin.price">{{$ctrl.pin.price | money}}</span>
+                    <span ng-if="$ctrl.pin.price">{{$ctrl.pin.price | money:$ctrl.pin.priceCurrency}}</span>
                 </div>
         
                 <div class="grid__social">

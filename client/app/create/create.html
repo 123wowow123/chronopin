@@ -171,7 +171,11 @@
                 <div class="form-group">
                   <label for="price" class="control-label">MSRP Price</label>
                   <div class="input-group" ng-class="{'has-error' : pinForm.price.$invalid && pinForm.price.$dirty}">
-                    <div class="input-group-addon">$</div>
+                    <div class="input-group-addon price-currency-addon">
+                      <input name="priceCurrency" type="text" class="price-currency" id="priceCurrency"
+                        placeholder="USD" maxlength="3" ng-model="$ctrl.pin.priceCurrency"
+                        ng-change="$ctrl.normalizeCurrency()" ng-pattern="/^[A-Za-z]{3}$/" />
+                    </div>
                     <input name="price" type="number" class="form-control" id="price"
                       placeholder="MSRP Price (optional)" ng-model="$ctrl.pin.price" ng-pattern="/^-?\d*\.?\d{0,2}$/" />
                     <div class="input-group-addon" ng-click="$ctrl.multPrice(1000)">K</div>

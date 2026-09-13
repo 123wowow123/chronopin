@@ -1,0 +1,75 @@
+let cp;
+let Request;
+const StoredProcedureName = 'GetPinByCategoryFilterByHasFavorite';
+
+// Setup
+module.exports.setup = function(connectionPool) {
+  cp = connectionPool;
+  Request = cp.Request;
+  return this;
+};
+
+module.exports.createSP = function createSP() {
+  return dropCreateSP()
+    .catch(function(err) {
+      // ... connect error checks
+      console.log("err", err);
+      throw err;
+    });
+};
+
+function dropCreateSP() {
+  console.log(`Begin drop & create ${StoredProcedureName}`);
+  return Promise.resolve('begin query')
+    .then(executeDropSP)
+    .then(executeCreateSP)
+    .then(res => {
+      return `Create ${StoredProcedureName} completed`;
+    });
+}
+
+function executeDropSP() {
+  let sql = `
+        IF OBJECTPROPERTY(object_id('[dbo].[${StoredProcedureName}]'), N'IsProcedure') = 1
+          DROP PROCEDURE [dbo].[${StoredProcedureName}]
+        `;
+  return cp.getConnection()
+    .then(conn => {
+      return new Request(conn).batch(sql);
+    });
+}
+
+function executeCreateSP() {
+  let sql = `
+        CREATE PROCEDURE [dbo].[${StoredProcedureName}]
+           @category     NVARCHAR(64),
+           @userId       INT,
+           @queryCount   INT OUTPUT
+        AS
+        BEGIN
+
+        SET NOCOUNT ON;
+
+        SELECT
+              [Pin].*
+
+            FROM [dbo].[PinBaseView] AS [Pin]
+              JOIN [dbo].[Favorite] AS [Favorites]
+                ON [Pin].[id] = [Favorites].[PinId]
+                AND [Favorites].[utcDeletedDateTime] IS NULL
+                AND [Favorites].[userId] = @userId
+
+            WHERE [Pin].[utcDeletedDateTime] IS NULL
+              AND [Pin].[category] = @category
+
+            ORDER BY [Pin].[utcStartDateTime], [Pin].[id];
+
+            SET @queryCount = @@ROWCOUNT;
+        END;
+        `;
+
+  return cp.getConnection()
+    .then(conn => {
+      return new Request(conn).batch(sql);
+    });
+}
