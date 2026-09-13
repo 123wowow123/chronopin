@@ -4,7 +4,7 @@ const _ = require('lodash');
 const { _getYoutubeAndWrapInMediumSync } = require('./youtube');
 const { _getTwitterAndWrapInMediumSync } = require('./twitter');
 const config = require('../config/environment');
-const { extractPinFields, toAddress } = require('../extract');
+const { extractPinFields, toLocation } = require('../extract');
 const mediumID = config.mediumID;
 const {
   Pin,
@@ -245,9 +245,11 @@ function _applyExtracted(newPin, fields) {
     newPin.priceCurrency = fields.priceCurrency || undefined;
   }
 
-  const address = toAddress(fields);
-  if (address) {
-    newPin.address = address;
+  const location = toLocation(fields);
+  if (location) {
+    newPin.address = location.address;
+    newPin.latitude = location.latitude;
+    newPin.longitude = location.longitude;
   }
 
   if (fields.dateConfidence) {

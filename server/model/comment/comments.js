@@ -1,7 +1,6 @@
 'use strict';
 
-import * as mssql from 'mssql';
-import * as cp from '../../sqlConnectionPool';
+import * as db from '../../db';
 
 import {
   Comment
@@ -37,8 +36,8 @@ export default class Comments {
     return this;
   }
 
-  // Re-inserts each comment with its original id preserved (CreateComment
-  // uses IDENTITY_INSERT when given one - see that SP), so parentCommentId
+  // Re-inserts each comment with its original id preserved (Comment.save
+  // keeps an id it is given), so parentCommentId
   // chains still resolve correctly afterward with no remapping needed.
   // Sequential like BasePins.save(), so a parent always lands before a
   // reply that references it.
@@ -48,61 +47,49 @@ export default class Comments {
   }
 
   static getByPinId(pinId) {
-    return _getCommentsByPinIdMSSQL(pinId);
+    return _getByPinId(pinId);
   }
 
   static getAll() {
-    return _getAllCommentsMSSQL();
+    return _getAll();
   }
 }
 
-function _getAllCommentsMSSQL() {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'GetAllComments';
-        let request = new mssql.Request(conn);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let comments;
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            comments = new Comments(res.recordset || []);
-            resolve({
-              comments: comments
-            });
-          });
-      });
-    }).catch(err => {
-      console.log("getAllCommentsMSSQL catch err", err);
+// Every live comment, oldest first, so a parent always comes before its
+// replies: seeding can walk this list once.
+function _getAll() {
+  return db.query(`
+    SELECT "id", "text", "userId", "pinId", "parentCommentId", "utcCreatedDateTime", "utcUpdatedDateTime"
+    FROM "Comment"
+    WHERE "utcDeletedDateTime" IS NULL
+    ORDER BY "utcCreatedDateTime" ASC, "id" ASC`)
+    .then(rows => {
+      return {
+        comments: new Comments(rows)
+      };
+    })
+    .catch(err => {
+      console.log("Comments getAll err", err);
       throw err;
     });
 }
 
-function _getCommentsByPinIdMSSQL(pinId) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'GetCommentsByPinId';
-        let request = new mssql.Request(conn)
-          .input('pinId', mssql.Int, pinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let comments;
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            comments = new Comments(res.recordset || []);
-            resolve({
-              comments: comments
-            });
-          });
-      });
-    }).catch(err => {
-      console.log("getCommentsByPinIdMSSQL catch err", err);
+function _getByPinId(pinId) {
+  return db.query(`
+    SELECT "Comment"."id", "Comment"."text", "Comment"."userId", "Comment"."pinId",
+           "Comment"."parentCommentId", "Comment"."utcCreatedDateTime", "Comment"."utcUpdatedDateTime",
+           "User"."userName" AS "User.userName"
+    FROM "Comment"
+      LEFT JOIN "User" ON "Comment"."userId" = "User"."id"
+    WHERE "Comment"."pinId" = $1 AND "Comment"."utcDeletedDateTime" IS NULL
+    ORDER BY "Comment"."utcCreatedDateTime" ASC, "Comment"."id" ASC`, [pinId])
+    .then(rows => {
+      return {
+        comments: new Comments(rows)
+      };
+    })
+    .catch(err => {
+      console.log("Comments getByPinId err", err);
       throw err;
     });
 }

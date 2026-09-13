@@ -1,7 +1,6 @@
 'use strict';
 
-import * as mssql from 'mssql';
-import * as cp from '../../sqlConnectionPool';
+import * as db from '../../db';
 import * as _ from 'lodash';
 import {
   User,
@@ -68,7 +67,7 @@ export default class Comment {
       });
   }
 
-  // Only succeeds within the SP's edit window and for the comment's own author.
+  // Only succeeds within the edit window and for the comment's own author.
   update() {
     return _update(this)
       .catch(err => {
@@ -78,7 +77,7 @@ export default class Comment {
   }
 
   delete() {
-    return _deleteMSSQL(this)
+    return _delete(this)
       .catch(err => {
         console.log(`Comment '${this.id}' delete err:`, err);
         throw err;
@@ -108,7 +107,7 @@ export default class Comment {
   }
 
   static queryById(id) {
-    return _queryMSSQLCommentById(id);
+    return _queryById(id);
   }
 
   static delete(id, userId) {
@@ -169,7 +168,7 @@ Object.defineProperty(CommentPrototype, 'pinId', {
 });
 
 function _create(commentIn, userId, pinId) {
-  return _createMSSQL(commentIn, userId, pinId)
+  return _insert(commentIn, userId, pinId)
     .then(({
       comment
     }) => {
@@ -181,7 +180,7 @@ function _create(commentIn, userId, pinId) {
 }
 
 function _update(commentIn) {
-  return _updateMSSQL(commentIn)
+  return _updateText(commentIn)
     .then(({
       updated,
       utcUpdatedDateTime
@@ -196,125 +195,90 @@ function _update(commentIn) {
     });
 }
 
-function _queryMSSQLCommentById(id) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise((resolve, reject) => {
-        const StoredProcedureName = 'GetComment';
-        let request = new mssql.Request(conn)
-          .input('id', mssql.Int, id)
-          .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
-            let comment;
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            if (res.recordset.length) {
-              comment = new Comment(res.recordset[0]);
-            } else {
-              comment = undefined;
-            }
-            resolve({
-              comment: comment
-            });
-          });
-      });
-    }).catch(err => {
-      console.log("queryMSSQLCommentById catch err", err);
+// How long after posting a comment its author may still edit it.
+const EDIT_WINDOW_MINUTES = 5;
+
+const COMMENT_COLUMNS = `"id", "text", "userId", "pinId", "parentCommentId", "utcCreatedDateTime", "utcUpdatedDateTime"`;
+
+function _queryById(id) {
+  return db.query(`
+    SELECT ${COMMENT_COLUMNS}
+    FROM "Comment"
+    WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`, [id])
+    .then(rows => {
+      return {
+        comment: rows.length ? new Comment(rows[0]) : undefined
+      };
+    })
+    .catch(err => {
+      console.log("Comment queryById err", err);
       throw err;
     });
 }
 
-function _createMSSQL(comment, userId, pinId) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'CreateComment';
-        let request = new mssql.Request(conn)
-          .input('text', mssql.NVarChar(4000), comment.text)
-          .input('userId', mssql.Int, userId)
-          .input('pinId', mssql.Int, pinId)
-          .input('parentCommentId', mssql.Int, comment.parentCommentId)
-          .input('utcCreatedDateTime', mssql.DateTime2(7), comment.utcCreatedDateTime)
-          .input('utcUpdatedDateTime', mssql.DateTime2(7), comment.utcUpdatedDateTime)
-          // Passing comment.id here (rather than leaving it unset) is what
-          // lets CreateComment preserve the original id when restoring from
-          // a backup - see the SP for why that matters. A fresh comment has
-          // no id yet, so this is undefined/null and the SP generates one.
-          .output('id', mssql.Int, comment.id);
+// A comment that already has an id (restoring a backup) keeps it, so
+// parentCommentId chains still resolve after a reseed.
+function _insert(comment, userId, pinId) {
+  const hasId = comment.id != null;
+  const columns = ['text', 'userId', 'pinId', 'parentCommentId', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
+  const values = [comment.text, userId, pinId, comment.parentCommentId,
+    comment.utcCreatedDateTime || new Date(), comment.utcUpdatedDateTime]
+    .map(value => value === undefined ? null : value);
+  if (hasId) {
+    columns.unshift('id');
+    values.unshift(comment.id);
+  }
 
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            comment.id = res.output.id;
-
-            resolve({
-              comment: comment
-            });
-          });
-      });
+  return db.query(`
+    INSERT INTO "Comment" (${columns.map(c => `"${c}"`).join(', ')})
+    VALUES (${values.map((v, i) => `$${i + 1}`).join(', ')})
+    RETURNING "id"`, values)
+    .then(rows => {
+      comment.id = rows[0].id;
+      return hasId ? db.query(
+        `SELECT setval(pg_get_serial_sequence('"Comment"', 'id'), GREATEST((SELECT MAX("id") FROM "Comment"), 1))`) : undefined;
+    })
+    .then(() => {
+      return {
+        comment: comment
+      };
     });
 }
 
-function _updateMSSQL(comment) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'UpdateComment';
-        let request = new mssql.Request(conn)
-          .input('id', mssql.Int, comment.id)
-          .input('userId', mssql.Int, comment.userId)
-          .input('text', mssql.NVarChar(4000), comment.text)
-          .output('utcUpdatedDateTime', mssql.DateTime2(7));
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let utcUpdatedDateTime;
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            try {
-              utcUpdatedDateTime = res.output.utcUpdatedDateTime;
-            } catch (e) {
-              console.log(`[dbo].[${StoredProcedureName}]`, e);
-            }
-            resolve({
-              updated: !!utcUpdatedDateTime,
-              utcUpdatedDateTime: utcUpdatedDateTime
-            });
-          });
-      });
+// Only the author, only while the comment is live, and only within the edit
+// window. updated is false when any of those fail.
+function _updateText(comment) {
+  return db.query(`
+    UPDATE "Comment"
+    SET "text" = $3, "utcUpdatedDateTime" = now()
+    WHERE "id" = $1
+      AND "userId" = $2
+      AND "utcDeletedDateTime" IS NULL
+      AND "utcCreatedDateTime" >= now() - make_interval(mins => $4)
+    RETURNING "utcUpdatedDateTime"`,
+    [comment.id, comment.userId, comment.text, EDIT_WINDOW_MINUTES])
+    .then(rows => {
+      const utcUpdatedDateTime = rows.length ? rows[0].utcUpdatedDateTime : undefined;
+      return {
+        updated: !!utcUpdatedDateTime,
+        utcUpdatedDateTime: utcUpdatedDateTime
+      };
     });
 }
 
-function _deleteMSSQL(comment) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'DeleteComment';
-        let request = new mssql.Request(conn)
-          .input('id', mssql.Int, comment.id)
-          .input('userId', mssql.Int, comment.userId)
-          .output('utcDeletedDateTime', mssql.DateTime2(7));
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let utcDeletedDateTime;
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            try {
-              utcDeletedDateTime = res.output.utcDeletedDateTime;
-            } catch (e) {
-              console.log(`[dbo].[${StoredProcedureName}]`, e);
-            }
-            comment.utcDeletedDateTime = utcDeletedDateTime;
-            resolve({
-              utcDeletedDateTime: utcDeletedDateTime,
-              comment: comment
-            });
-          });
-      });
+// A soft delete, by the author only. utcDeletedDateTime is set on the
+// comment even when nothing matched, as it always has been.
+function _delete(comment) {
+  const utcDeletedDateTime = new Date();
+  return db.query(`
+    UPDATE "Comment" SET "utcDeletedDateTime" = $3
+    WHERE "id" = $1 AND "userId" = $2`,
+    [comment.id, comment.userId, utcDeletedDateTime])
+    .then(() => {
+      comment.utcDeletedDateTime = utcDeletedDateTime;
+      return {
+        utcDeletedDateTime: utcDeletedDateTime,
+        comment: comment
+      };
     });
 }

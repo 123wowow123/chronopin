@@ -29,7 +29,6 @@ import * as log from '../../server/util/log';
 
 
 let cp,
-  Request,
   pinFilePath,
   commentFilePath,
   aphelionFilePath,
@@ -41,7 +40,6 @@ let cp,
 // Setup
 module.exports.setup = function (seedOpt) {
   cp = seedOpt.cp;
-  Request = cp.Request;
   pinFilePath = seedOpt.pinfile;
   commentFilePath = seedOpt.commentfile;
   aphelionFilePath = seedOpt.aphelionfile;

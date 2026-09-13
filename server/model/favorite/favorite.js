@@ -1,7 +1,6 @@
 'use strict';
 
-import * as mssql from 'mssql';
-import * as cp from '../../sqlConnectionPool';
+import * as db from '../../db';
 import * as _ from 'lodash';
 import {
   User,
@@ -73,11 +72,11 @@ export default class Favorite {
   }
 
   delete() {
-    return _deleteMSSQL(this);
+    return _delete(this);
   }
 
   deleteByPinId() {
-    return _deleteByPinIdMSSQL(this);
+    return _deleteByPinId(this);
   }
 
   setUser(user) {
@@ -101,7 +100,7 @@ export default class Favorite {
   }
 
   static queryById(id) {
-    return _queryMSSQLFavoriteById(id);
+    return _queryById(id);
   }
 
   static delete(id) {
@@ -159,8 +158,10 @@ Object.defineProperty(FavoritePrototype, 'pinId', {
   configurable: false
 });
 
+// Saving the same user and pin again revives the existing row rather than
+// adding a second one.
 function _upsert(favoriteIn, userId, pinId) {
-  return _upsertMSSQL(favorite, userId, pinId)
+  return _upsertRow(favoriteIn, userId, pinId)
     .then(({
       favorite
     }) => {
@@ -171,144 +172,60 @@ function _upsert(favoriteIn, userId, pinId) {
     });
 }
 
-function _queryMSSQLFavoriteById(id) {
-  return cp.getConnection()
-    .then(conn => {
-      //console.log("queryMSSQLPinById then err", err)
-      return new Promise((resolve, reject) => {
-        const StoredProcedureName = 'GetFavorite';
-        let request = new mssql.Request(conn)
-          .input('id', mssql.Int, id)
-          .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
-            let favorite;
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            if (res.recordset.length) {
-              favorite = new Favorite(res.recordset[0]);
-            } else {
-              favorite = undefined;
-            }
-            resolve({
-              favorite: favorite
-            });
-          });
-      });
-    }).catch(err => {
-      // ... connect error checks
-      console.log("queryMSSQLFavoriteById catch err", err);
+function _queryById(id) {
+  return db.query(`
+    SELECT "id", "userId", "pinId", "utcCreatedDateTime"
+    FROM "Favorite"
+    WHERE "id" = $1`, [id])
+    .then(rows => {
+      return {
+        favorite: rows.length ? new Favorite(rows[0]) : undefined
+      };
+    })
+    .catch(err => {
+      console.log("Favorite queryById err", err);
       throw err;
     });
 }
 
-function _upsertMSSQL(favorite, userId, pinId) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'CreateMergeFavorite';
-        let request = new mssql.Request(conn)
-          .input('utcCreatedDateTime', mssql.DateTime2(7), favorite.utcCreatedDateTime)
-          .input('utcUpdatedDateTime', mssql.DateTime2(7), favorite.utcUpdatedDateTime)
-          .input('utcDeletedDateTime', mssql.DateTime2(7), favorite.utcDeletedDateTime)
-          .input('userId', mssql.Int, userId)
-          .input('pinId', mssql.Int, pinId)
-          .output('id', mssql.Int);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // ToDo: doesn't always return value
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              favorite.id = request.parameters.id.value;
-
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              throw e;
-            }
-
-            resolve({
-              favorite: favorite
-            });
-
-          });
-      });
+function _upsertRow(favorite, userId, pinId) {
+  const values = [userId, pinId, favorite.utcCreatedDateTime || new Date(), favorite.utcUpdatedDateTime, favorite.utcDeletedDateTime]
+    .map(value => value === undefined ? null : value);
+  return db.query(`
+    INSERT INTO "Favorite" ("userId", "pinId", "utcCreatedDateTime", "utcUpdatedDateTime", "utcDeletedDateTime")
+    VALUES ($1, $2, $3, $4, $5)
+    ON CONFLICT ("userId", "pinId") DO UPDATE SET
+        "utcUpdatedDateTime" = now(),
+        "utcDeletedDateTime" = NULL
+    RETURNING "id"`, values)
+    .then(rows => {
+      favorite.id = rows[0].id;
+      return {
+        favorite: favorite
+      };
     });
 }
 
-function _deleteMSSQL(favorite) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'DeleteFavorite';
-        let request = new mssql.Request(conn)
-          .input('id', mssql.Int, favorite.id)
-          .output('utcDeletedDateTime', mssql.DateTime2(7));
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              utcDeletedDateTime = request.parameters.utcDeletedDateTime.value;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              console.log(`[dbo].[${StoredProcedureName}]`, e);
-            }
-            favorite.utcDeletedDateTime = utcDeletedDateTime;
-            resolve({
-              utcDeletedDateTime: utcDeletedDateTime,
-              favorite: favorite
-            });
-          });
-      });
-    });
+// Soft deletes.
+function _delete(favorite) {
+  return db.query(
+    `UPDATE "Favorite" SET "utcDeletedDateTime" = now() WHERE "id" = $1 RETURNING "utcDeletedDateTime"`,
+    [favorite.id])
+    .then(rows => _deleted(favorite, rows));
 }
 
-function _deleteByPinIdMSSQL(favorite) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'DeleteFavoriteByPinId';
-        let request = new mssql.Request(conn)
-          .input('pinId', mssql.Int, favorite.pinId)
-          .input('userId', mssql.Int, favorite.userId)
-          .output('utcDeletedDateTime', mssql.DateTime2(7));
+function _deleteByPinId(favorite) {
+  return db.query(
+    `UPDATE "Favorite" SET "utcDeletedDateTime" = now() WHERE "pinId" = $1 AND "userId" = $2 RETURNING "utcDeletedDateTime"`,
+    [favorite.pinId, favorite.userId])
+    .then(rows => _deleted(favorite, rows));
+}
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              utcDeletedDateTime = res.output.utcDeletedDateTime;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              console.log(`[dbo].[${StoredProcedureName}]`, e);
-            }
-            favorite.utcDeletedDateTime = utcDeletedDateTime;
-            resolve({
-              utcDeletedDateTime: utcDeletedDateTime,
-              favorite: favorite
-            });
-          });
-      });
-    });
+function _deleted(favorite, rows) {
+  const utcDeletedDateTime = rows.length ? rows[0].utcDeletedDateTime : undefined;
+  favorite.utcDeletedDateTime = utcDeletedDateTime;
+  return {
+    utcDeletedDateTime: utcDeletedDateTime,
+    favorite: favorite
+  };
 }

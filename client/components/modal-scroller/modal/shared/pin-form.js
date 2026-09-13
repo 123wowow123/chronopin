@@ -146,8 +146,12 @@
       if (!this.pin.description) {
         this.pin.description = pin.description;
       }
+      // Coordinates belong to the place they came with, so they are only
+      // taken along with its address.
       if (!this.pin.address) {
         this.pin.address = pin.address;
+        this.pin.latitude = pin.latitude;
+        this.pin.longitude = pin.longitude;
       }
       if (!this.pin.price) {
         this.pin.price = pin.price;
@@ -193,8 +197,12 @@
       if (!this.pin.description) {
         this.pin.description = pin.description;
       }
+      // Coordinates belong to the place they came with, so they are only
+      // taken along with its address.
       if (!this.pin.address) {
         this.pin.address = pin.address;
+        this.pin.latitude = pin.latitude;
+        this.pin.longitude = pin.longitude;
       }
       if (!this.pin.price) {
         this.pin.price = pin.price;
@@ -248,6 +256,8 @@
       this.pin.title = undefined;
       this.pin.description = undefined;
       this.pin.address = undefined;
+      this.pin.latitude = undefined;
+      this.pin.longitude = undefined;
       this.pin.price = undefined;
       this.pin.company = undefined;
       this.pin.category = undefined;
@@ -307,6 +317,8 @@
         description: pin.description,
         sourceUrl: pin.pageUrl,
         address: pin.address,
+        latitude: pin.latitude,
+        longitude: pin.longitude,
         price: pin.price,
         company: pin.company,
         category: pin.category,

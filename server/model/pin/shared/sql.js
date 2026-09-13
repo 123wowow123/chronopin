@@ -1,59 +1,65 @@
-import * as mssql from 'mssql';
-import * as cp from '../../../sqlConnectionPool';
+import * as db from '../../../db';
 
-export function createPinMSSQL(pin, userId) {
-    return cp.getConnection()
-        .then(conn => {
-            return new Promise(function (resolve, reject) {
-                const StoredProcedureName = 'CreatePin';
-                let request = new mssql.Request(conn)
-                    .input('parentId', mssql.Int, pin.parentId)
-                    .input('title', mssql.NVarChar(1024), pin.title)
-                    .input('description', mssql.NVarChar(4000), pin.description)
-                    .input('sourceUrl', mssql.NVarChar(4000), pin.sourceUrl)
-                    .input('longFormSummary', mssql.NVarChar(mssql.MAX), pin.longFormSummary)
-                    .input('dateConfidence', mssql.NVarChar(32), pin.dateConfidence)
-                    .input('dateConfidenceReasoning', mssql.NVarChar(4000), pin.dateConfidenceReasoning)
-                    .input('company', mssql.NVarChar(255), pin.company)
-                    .input('companyWikiUrl', mssql.NVarChar(2048), pin.companyWikiUrl)
-                    .input('category', mssql.NVarChar(64), pin.category)
-                    .input('address', mssql.NVarChar(4000), pin.address)
-                    .input('priceLowerBound', mssql.Decimal(18, 2), pin.priceLowerBound)
-                    .input('priceUpperBound', mssql.Decimal(18, 2), pin.priceUpperBound)
-                    .input('price', mssql.Decimal(18, 2), pin.price)
-                    .input('priceCurrency', mssql.NVarChar(3), pin.priceCurrency)
-                    .input('tip', mssql.NVarChar(4000), pin.tip)
-                    .input('utcStartDateTime', mssql.DateTime2(0), pin.utcStartDateTime)
-                    .input('utcEndDateTime', mssql.DateTime2(0), pin.utcEndDateTime)
-                    .input('allDay', mssql.Bit, pin.allDay)
-                    .input('userId', mssql.Int, userId)
-                    .input('utcCreatedDateTime', mssql.DateTime2(7), pin.utcCreatedDateTime)
-                    .input('utcUpdatedDateTime', mssql.DateTime2(7), pin.utcUpdatedDateTime)
-                    .input('utcDeletedDateTime', mssql.DateTime2(7), pin.utcDeletedDateTime)
-                    .output('id', mssql.Int, pin.id);
+// Inserts a pin and sets pin.id. A pin that already carries an id (seeding,
+// the SQL Server transfer) keeps it; otherwise the database assigns one.
+export function createPin(pin, userId) {
+    const hasId = pin.id != null;
+    const columns = [
+        'parentId', 'title', 'description', 'sourceUrl', 'longFormSummary',
+        'dateConfidence', 'dateConfidenceReasoning', 'company', 'companyWikiUrl',
+        'category', 'address', 'priceLowerBound', 'priceUpperBound', 'price',
+        'priceCurrency', 'tip', 'utcStartDateTime', 'utcEndDateTime', 'allDay',
+        'userId', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime'
+    ];
+    const values = [
+        pin.parentId, pin.title, pin.description, pin.sourceUrl, pin.longFormSummary,
+        pin.dateConfidence, pin.dateConfidenceReasoning, pin.company, pin.companyWikiUrl,
+        pin.category, pin.address, pin.priceLowerBound, pin.priceUpperBound, pin.price,
+        pin.priceCurrency, pin.tip, pin.utcStartDateTime, pin.utcEndDateTime,
+        pin.allDay == null ? false : pin.allDay,
+        userId, pin.utcCreatedDateTime || new Date(), pin.utcUpdatedDateTime, pin.utcDeletedDateTime
+    ].map(_nullIfUndefined);
 
-                //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
+    if (hasId) {
+        columns.unshift('id');
+        values.unshift(pin.id);
+    }
 
-                request.execute(`[dbo].[${StoredProcedureName}]`,
-                    (err, res, returnValue, affected) => {
-                        if (err) {
-                            return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-                        }
-                        // ToDo: doesn't always return value
-                        try {
-                            //console.log('returnValue', returnValue); // always return 0
-                            pin.id = res.output.id;
+    const placeholders = values.map((value, i) => `$${i + 1}`);
+    values.push(_nullIfUndefined(pin.latitude), _nullIfUndefined(pin.longitude));
+    const lat = `$${values.length - 1}`;
+    const lng = `$${values.length}`;
 
-                            //console.log('queryCount', queryCount);
-                        } catch (e) {
-                            throw e;
-                        }
-
-                        resolve({
-                            pin: pin
-                        });
-
-                    });
-            });
+    return db.query(`
+        INSERT INTO "Pin" (${columns.map(c => `"${c}"`).join(', ')}, "location")
+        VALUES (${placeholders.join(', ')}, ${locationSql(lat, lng)})
+        RETURNING "id"`, values)
+        .then(rows => {
+            pin.id = rows[0].id;
+            return hasId ? advanceIdSequence('Pin') : undefined;
+        })
+        .then(() => {
+            return {
+                pin: pin
+            };
         });
+}
+
+// An insert with an explicit id does not move the identity sequence the way
+// SQL Server's IDENTITY_INSERT did, so the next ordinary insert would reuse
+// that id. Moves the sequence past the highest id in the table.
+export function advanceIdSequence(table) {
+    return db.query(
+        `SELECT setval(pg_get_serial_sequence('"${table}"', 'id'), GREATEST((SELECT MAX("id") FROM "${table}"), 1))`);
+}
+
+// A geography point from latitude/longitude parameters, or NULL when either
+// is missing - a pin with no coordinates simply has no map.
+export function locationSql(latParam, lngParam) {
+    return `CASE WHEN ${latParam}::double precision IS NULL OR ${lngParam}::double precision IS NULL THEN NULL
+        ELSE ST_SetSRID(ST_MakePoint(${lngParam}::double precision, ${latParam}::double precision), 4326)::geography END`;
+}
+
+function _nullIfUndefined(value) {
+    return value === undefined ? null : value;
 }

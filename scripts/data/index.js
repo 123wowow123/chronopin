@@ -21,7 +21,7 @@ args
   .option('solsticefile', 'Solstice file path to be used for opporation', './scripts/backup/solstice.json');
 
 const flags = args.parse(process.argv);
-const cp = require('../../server/sqlConnectionPool');
+const cp = require('../../server/db');
 
 const saveOpt = {
   cp: cp,

@@ -93,9 +93,10 @@ export function createPinComment(req, res) {
     .catch(response.handleError(res));
 }
 
-// Only the comment's own author can edit it, and only within the SP's edit
-// window (currently 5 minutes from creation) - enforced in UpdateComment
-// itself, since the window has to hold even if this check races a save.
+// Only the comment's own author can edit it, and only within the edit window
+// (currently 5 minutes from creation) - enforced in the UPDATE statement in
+// Comment's model itself, since the window has to hold even if this check
+// races a save.
 export function updatePinComment(req, res) {
   let user = req.user,
     pinId = +req.params.id,

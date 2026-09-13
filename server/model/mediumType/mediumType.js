@@ -1,7 +1,6 @@
 'use strict';
 
-import * as mssql from 'mssql';
-import * as cp from '../../sqlConnectionPool';
+import * as db from '../../db';
 import * as _ from 'lodash';
 
 const prop = [
@@ -30,7 +29,7 @@ export default class MediumType {
   }
 
   save() {
-    return _createMediumTypeMSSQL(this)
+    return _create(this)
       .then((newMediumType) => {
         return this.set(newMediumType.mediumType);
       });
@@ -45,37 +44,12 @@ export default class MediumType {
   }
 }
 
-function _createMediumTypeMSSQL(mediumType) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise((resolve, reject) => {
-        const StoredProcedureName = 'CreateMediumType';
-        let request = new mssql.Request(conn)
-          .input('type', mssql.NVarChar(255), mediumType.type)
-          .output('id', mssql.Int);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let queryCount, id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // ToDo: doesn't always return value
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              id = res.output.id;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              id = 0;
-            }
-            mediumType.id = id;
-            resolve({
-              mediumType: mediumType
-            });
-          });
-      });
+function _create(mediumType) {
+  return db.query(`INSERT INTO "MediumType" ("type") VALUES ($1) RETURNING "id"`, [mediumType.type])
+    .then(rows => {
+      mediumType.id = rows[0].id;
+      return {
+        mediumType: mediumType
+      };
     });
 }

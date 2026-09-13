@@ -3,17 +3,25 @@
 import li from 'li';
 import * as log from '../util/log';
 
+// Sends the entity as JSON. No entity means the thing asked for does not
+// exist (a pin id with no pin, say), which gets a 404 - otherwise the request
+// would never be answered at all. A handler that already responded, as
+// handleEntityNotFound does, is left alone.
 export function withResult(res, statusCode) {
   statusCode = statusCode || 200;
   return function (entity) {
-    if (entity) {
-      try {
-        res.status(statusCode).json(entity);
+    if (entity == null) {
+      if (!res.headersSent) {
+        res.status(404).end();
       }
-      catch (err) {
-        log.error('withResult', log.stringify(err));
-        handleError(res)(err.message);
-      }
+      return;
+    }
+    try {
+      res.status(statusCode).json(entity);
+    }
+    catch (err) {
+      log.error('withResult', log.stringify(err));
+      handleError(res)(err.message);
     }
   };
 }

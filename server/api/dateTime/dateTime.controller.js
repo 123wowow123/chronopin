@@ -2,7 +2,6 @@ import config from '../../config/environment';
 import moment from 'moment';
 import * as _ from 'lodash';
 import * as response from '../response';
-import * as mssql from 'mssql';
 
 // import * as initData from '../../../scripts/data';
 // import * as initDB from '../../../scripts/db';

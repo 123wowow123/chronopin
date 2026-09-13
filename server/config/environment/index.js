@@ -43,41 +43,22 @@ let all = {
     }
   },
 
-  // Sequelize connection opions
-  sequelize: {
+  // PostgreSQL (with PostGIS), used by both the query pool in server/db and
+  // the Sequelize session store. A standard connection URL; add
+  // ?sslmode=require for a hosted database that needs TLS.
+  database: {
+    url: getProcessEnv('DATABASE_URL'),
+    pool: {
+      max: 10,
+      idleTimeoutMillis: 10000
+    }
+  },
 
-    connection: {
-      dbname: getProcessEnv('SEQUELIZE_DB_NAME'),
-      username: getProcessEnv('SEQUELIZE_USER_NAME'),
-      password: getProcessEnv('SEQUELIZE_PASSWORD'),
-      options: {
-        host: getProcessEnv('SEQUELIZE_HOST'),
-        dialect: 'mssql',
-        pool: {
-          max: 5,
-          min: 0,
-          idle: 10000
-        },
-        dialectOptions: {
-          options: {
-            encrypt: true
-          }
-        }
-      }
-    },
-    // sequelize & mssql connection stringing
-    // mssql uses query parameters for additional options while sequelize does not
-    uri: getProcessEnv('SEQUELIZE_URI'),
+  // Sequelize backs only the session store (express-sequelize-session), which
+  // keeps Sequelize's defaults: a "Sessions" table with createdAt/updatedAt.
+  sequelize: {
     options: {
-      // sequalize options
-      logging: true,
-      dialectOptions: {
-        encrypt: true
-      },
-      define: {
-        timestamps: false,
-        freezeTableName: true
-      }
+      dialect: 'postgres'
     }
   },
 

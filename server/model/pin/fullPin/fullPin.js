@@ -46,7 +46,7 @@ export default class FullPin extends BasePin {
     }
 
     save() {
-        const savePinPromise = sql.createPinMSSQL(this, this.userId)
+        const savePinPromise = sql.createPin(this, this.userId)
             .then(() => {
                 // check for duplicates //upsert
                 const saveLikePromises = this.likes.map(l => {

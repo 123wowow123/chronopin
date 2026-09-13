@@ -1,8 +1,7 @@
 'use strict';
 
 import * as _ from 'lodash';
-import * as mssql from 'mssql';
-import * as cp from '../../sqlConnectionPool';
+import * as db from '../../db';
 import {
   BasePin
 } from '..';
@@ -61,11 +60,11 @@ export default class Merchant {
   }
 
   delete() {
-    return _deleteMSSQL(this);
+    return _delete(this);
   }
 
   deleteByPinId() {
-    return _deleteByPinIdMSSQL(this.pinId);
+    return _deleteByPinId(this.pinId);
   }
 
   setPin(pin) {
@@ -121,7 +120,7 @@ Object.defineProperty(MerchantPrototype, 'pinId', {
 });
 
 function _upsert(merchantIn, pinId) {
-  return _upsertMSSQL(merchantIn, pinId)
+  return _upsertRow(merchantIn, pinId)
     .then(({
       merchant
     }) => {
@@ -132,91 +131,48 @@ function _upsert(merchantIn, pinId) {
     })
 }
 
-function _upsertMSSQL(merchant, pinId) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'CreateMergeMerchant';
-        let request = new mssql.Request(conn)
-          .input('url', mssql.NVarChar(1024), merchant.url)
-          .input('label', mssql.NVarChar(1024), merchant.label)
-          .input('price', mssql.Decimal(18, 2), merchant.price)
-          .input('pinId', mssql.Int, pinId)
-          .output('id', mssql.Int, merchant.id);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // ToDo: doesn't always return value
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              merchant.id = res.output.id;
-
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              throw e;
-            }
-
-            resolve({
-              merchant
-            });
-
-          });
-      });
+// Updates the merchant row with this id on this pin, or inserts a new row
+// (with a new id) when there is none.
+function _upsertRow(merchant, pinId) {
+  const values = [merchant.label, merchant.url, merchant.price, pinId, merchant.id]
+    .map(value => value === undefined ? null : value);
+  return db.query(`
+    WITH "updated" AS (
+      UPDATE "Merchant"
+      SET "label" = $1, "url" = $2, "price" = $3
+      WHERE "pinId" = $4 AND "id" = $5
+      RETURNING "id"
+    ), "inserted" AS (
+      INSERT INTO "Merchant" ("label", "url", "price", "pinId")
+      SELECT $1, $2, $3, $4
+      WHERE NOT EXISTS (SELECT 1 FROM "updated")
+      RETURNING "id"
+    )
+    SELECT "id" FROM "updated"
+    UNION ALL
+    SELECT "id" FROM "inserted"`, values)
+    .then(rows => {
+      merchant.id = rows[0].id;
+      return {
+        merchant: merchant
+      };
     });
 }
 
-function _deleteMSSQL(merchant) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'DeleteMerchant';
-        let request = new mssql.Request(conn)
-          .input('id', mssql.Int, merchant.id);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            resolve({
-              merchant
-            });
-          });
-      });
+function _delete(merchant) {
+  return db.query(`DELETE FROM "Merchant" WHERE "id" = $1`, [merchant.id])
+    .then(() => {
+      return {
+        merchant: merchant
+      };
     });
 }
 
-function _deleteByPinIdMSSQL(pinId) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'DeleteMerchantByPinId';
-        let request = new mssql.Request(conn)
-          .input('pinId', mssql.Int, pinId);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-
-            return resolve({
-              pinId
-            });
-          });
-      });
+function _deleteByPinId(pinId) {
+  return db.query(`DELETE FROM "Merchant" WHERE "pinId" = $1`, [pinId])
+    .then(() => {
+      return {
+        pinId: pinId
+      };
     });
 }

@@ -1,7 +1,6 @@
 'use strict';
 
-import * as mssql from 'mssql';
-import * as cp from '../../sqlConnectionPool';
+import * as db from '../../db';
 import {
   User,
   BasePin
@@ -72,11 +71,11 @@ export default class Like {
   }
 
   delete() {
-    return _deleteMSSQL(this);
+    return _delete(this);
   }
 
   deleteByPinId() {
-    return _deleteByPinIdMSSQL(this);
+    return _deleteByPinId(this);
   }
 
   setUser(user) {
@@ -100,7 +99,7 @@ export default class Like {
   }
 
   static queryById(id) {
-    return _queryMSSQLLikeById(id);
+    return _queryById(id);
   }
 
   static delete(id) {
@@ -158,8 +157,10 @@ Object.defineProperty(LikePrototype, 'pinId', {
   configurable: false
 });
 
+// Saving the same user and pin again revives the existing row rather than
+// adding a second one.
 function _upsert(likeIn, userId, pinId) {
-  return _upsertMSSQL(like, userId, pinId)
+  return _upsertRow(likeIn, userId, pinId)
     .then(({
       like
     }) => {
@@ -167,148 +168,64 @@ function _upsert(likeIn, userId, pinId) {
       return {
         like: likeIn
       };
-    })
+    });
 }
 
-function _queryMSSQLLikeById(id) {
-  return cp.getConnection()
-    .then(conn => {
-      //console.log("queryMSSQLPinById then err", err)
-      return new Promise((resolve, reject) => {
-        const StoredProcedureName = 'GetLike';
-        let request = new mssql.Request(conn)
-          .input('id', mssql.Int, id)
-          .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
-            let like;
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            if (res.recordset.length) {
-              like = new Like(res.recordset[0]);
-            } else {
-              like = undefined;
-            }
-            resolve({
-              like: like
-            });
-          });
-      });
-    }).catch(err => {
-      // ... connect error checks
-      console.log("queryMSSQLLikeById catch err", err);
+function _queryById(id) {
+  return db.query(`
+    SELECT "id", "like", "userId", "pinId", "utcCreatedDateTime"
+    FROM "Like"
+    WHERE "id" = $1`, [id])
+    .then(rows => {
+      return {
+        like: rows.length ? new Like(rows[0]) : undefined
+      };
+    })
+    .catch(err => {
+      console.log("Like queryById err", err);
       throw err;
     });
 }
 
-function _upsertMSSQL(like, userId, pinId) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'CreateMergeLike';
-        let request = new mssql.Request(conn)
-          .input('like', mssql.Bit, like.like)
-          .input('userId', mssql.Int, userId)
-          .input('pinId', mssql.Int, pinId)
-          .input('utcCreatedDateTime', mssql.DateTime2(7), like.utcCreatedDateTime)
-          .input('utcUpdatedDateTime', mssql.DateTime2(7), like.utcUpdatedDateTime)
-          .input('utcDeletedDateTime', mssql.DateTime2(7), like.utcDeletedDateTime)
-          .output('id', mssql.Int);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // ToDo: doesn't always return value
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              like.id = res.output.id;
-
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              throw e;
-            }
-
-            resolve({
-              like: like
-            });
-
-          });
-      });
+function _upsertRow(like, userId, pinId) {
+  const values = [like.like, userId, pinId, like.utcCreatedDateTime || new Date(), like.utcUpdatedDateTime, like.utcDeletedDateTime]
+    .map(value => value === undefined ? null : value);
+  return db.query(`
+    INSERT INTO "Like" ("like", "userId", "pinId", "utcCreatedDateTime", "utcUpdatedDateTime", "utcDeletedDateTime")
+    VALUES ($1, $2, $3, $4, $5, $6)
+    ON CONFLICT ("userId", "pinId") DO UPDATE SET
+        "like" = EXCLUDED."like",
+        "utcUpdatedDateTime" = now(),
+        "utcDeletedDateTime" = NULL
+    RETURNING "id"`, values)
+    .then(rows => {
+      like.id = rows[0].id;
+      return {
+        like: like
+      };
     });
 }
 
-function _deleteMSSQL(like) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'DeleteLike';
-        let request = new mssql.Request(conn)
-          .input('id', mssql.Int, like.id)
-          .output('utcDeletedDateTime', mssql.DateTime2(7));
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              utcDeletedDateTime = res.output.utcDeletedDateTime;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              console.log(`[dbo].[${StoredProcedureName}]`, e);
-            }
-            like.utcDeletedDateTime = utcDeletedDateTime;
-            resolve({
-              utcDeletedDateTime: utcDeletedDateTime,
-              like: like
-            });
-          });
-      });
-    });
+// Soft deletes.
+function _delete(like) {
+  return db.query(
+    `UPDATE "Like" SET "utcDeletedDateTime" = now() WHERE "id" = $1 RETURNING "utcDeletedDateTime"`,
+    [like.id])
+    .then(rows => _deleted(like, rows));
 }
 
-function _deleteByPinIdMSSQL(like) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'DeleteLikeByPinId';
-        let request = new mssql.Request(conn)
-          .input('pinId', mssql.Int, like.pinId)
-          .input('userId', mssql.Int, like.userId)
-          .output('utcDeletedDateTime', mssql.DateTime2(7));
+function _deleteByPinId(like) {
+  return db.query(
+    `UPDATE "Like" SET "utcDeletedDateTime" = now() WHERE "pinId" = $1 AND "userId" = $2 RETURNING "utcDeletedDateTime"`,
+    [like.pinId, like.userId])
+    .then(rows => _deleted(like, rows));
+}
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              utcDeletedDateTime = res.output.utcDeletedDateTime;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              console.log(`[dbo].[${StoredProcedureName}]`, e);
-            }
-            like.utcDeletedDateTime = utcDeletedDateTime;
-            resolve({
-              utcDeletedDateTime: utcDeletedDateTime,
-              like: like
-            });
-          });
-      });
-    });
+function _deleted(like, rows) {
+  const utcDeletedDateTime = rows.length ? rows[0].utcDeletedDateTime : undefined;
+  like.utcDeletedDateTime = utcDeletedDateTime;
+  return {
+    utcDeletedDateTime: utcDeletedDateTime,
+    like: like
+  };
 }

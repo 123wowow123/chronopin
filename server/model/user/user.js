@@ -1,7 +1,6 @@
 'use strict';
 
-import * as mssql from 'mssql';
-import * as cp from '../../sqlConnectionPool';
+import * as db from '../../db';
 import crypto from 'crypto';
 import _ from 'lodash';
 import {
@@ -214,7 +213,7 @@ export default class User {
       });
     })
       .then(() => {
-        return _createMSSQL(this);
+        return _create(this);
       })
   }
 
@@ -230,20 +229,20 @@ export default class User {
       });
     })
       .then(() => {
-        return _updateMSSQL(this);
+        return _update(this);
       });
   }
 
   patchWithoutPassword() {
-    return _updateMSSQL(this);
+    return _update(this);
   }
 
   delete() {
-    return _deleteMSSQL(this);
+    return _delete(this);
   }
 
   adminDelete() {
-    return _adminDeleteMSSQL(this);
+    return _adminDelete(this);
   }
 
   pick(properties) {
@@ -256,346 +255,136 @@ export default class User {
   }
 
   static getById(id) {
-    return _getUserByIdMSSQL(id);
+    return _getOne('"id" = $1', id);
   }
 
   static getByFacebookId(facebookId) {
-    return _getUserByFacebookIdMSSQL(facebookId);
+    return _getOne('"facebookId" = $1', facebookId);
   }
 
   static getByGoogleId(googleId) {
-    return _getUserByGoogleIdMSSQL(googleId);
+    return _getOne('"googleId" = $1', googleId);
   }
 
   static getByEmail(email) {
-    return _getUserByEmailMSSQL(email);
+    return _getOne('"email" = $1', email);
   }
 
   static getUserByUserName(handle) {
-    return _getUserByUserNameMSSQL(handle);
+    return _getOne('"userName" = $1', handle);
   }
 
 }
 
-function _createMSSQL(user) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'CreateUser';
-        let request = new mssql.Request(conn)
-          // fb public attributes
-          .input('userName', mssql.NVarChar(255), user.userName)
-          .input('firstName', mssql.NVarChar(255), user.firstName)
-          .input('lastName', mssql.NVarChar(255), user.lastName)
-          .input('gender', mssql.NVarChar(255), user.gender)
-          .input('locale', mssql.NChar(5), user.locale)
-          .input('facebookId', mssql.NVarChar(25), user.facebookId)
-          .input('googleId', mssql.NVarChar(25), user.googleId)
-          .input('pictureUrl', mssql.NVarChar(1000), user.pictureUrl)
-          .input('fbUpdatedTime', mssql.DateTime2(7), user.fbUpdatedTime)
-          .input('fbVerified', mssql.Bit, user.fbVerified)
-          .input('googleVerified', mssql.Bit, user.googleVerified)
-          .input('about', mssql.NVarChar(1000), user.about)
-          // fb private attributes
-          .input('email', mssql.NVarChar(255), user.email)
-          // cp attributes
-          .input('password', mssql.NVarChar(255), user.password)
-          .input('provider', mssql.NVarChar(255), user.provider)
-          .input('role', mssql.NVarChar(255), user.role)
-          .input('salt', mssql.NVarChar(255), user.salt)
-          .input('websiteUrl', mssql.NVarChar(500), user.websiteUrl)
-          .input('utcCreatedDateTime', mssql.DateTime2(7), user.utcCreatedDateTime)
-          .input('utcUpdatedDateTime', mssql.DateTime2(7), user.utcCreatedDateTime)
-          .input('utcDeletedDateTime', mssql.DateTime2(7), user.utcDeletedDateTime)
-          .output('id', mssql.Int);
+// Every lookup loads the whole row. An update writes every column from the
+// loaded object, so a lookup that left a column out used to clear it on the
+// next save - a social login (loaded by email) wiped the saved filter
+// preference, and saving after a load by id wiped facebookId and googleId.
+// Endpoints pick what they send (pickUserProps), so loading more exposes
+// nothing.
+const USER_COLUMNS = [
+  'id', 'userName', 'firstName', 'lastName', 'gender', 'locale', 'facebookId', 'googleId',
+  'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email', 'password',
+  'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference',
+  'utcCreatedDateTime', 'utcUpdatedDateTime'
+];
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
+// The editable columns, in the order create and update bind them.
+const WRITE_COLUMNS = [
+  'userName', 'firstName', 'lastName', 'gender', 'locale', 'facebookId', 'googleId',
+  'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email',
+  'password', 'provider', 'role', 'salt', 'websiteUrl'
+];
 
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // ToDo: doesn't always return value
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              id = res.output.id;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              id = 0;
-            }
-            user.id = id;
-            resolve({
-              user: user
-            });
-          });
-      });
+function _value(value) {
+  return value === undefined ? null : value;
+}
+
+function _create(user) {
+  const columns = WRITE_COLUMNS.concat(['utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime']);
+  const values = WRITE_COLUMNS.map(c => _value(user[c]))
+    // utcUpdatedDateTime has always been written from utcCreatedDateTime.
+    .concat([user.utcCreatedDateTime || new Date(), _value(user.utcCreatedDateTime), _value(user.utcDeletedDateTime)]);
+
+  const hasId = user.id != null;
+  if (hasId) {
+    columns.unshift('id');
+    values.unshift(user.id);
+  }
+
+  return db.query(`
+    INSERT INTO "User" (${columns.map(c => `"${c}"`).join(', ')})
+    VALUES (${values.map((v, i) => `$${i + 1}`).join(', ')})
+    RETURNING "id"`, values)
+    .then(rows => {
+      user.id = rows[0].id;
+      // An explicit id (seeding) does not advance the identity sequence.
+      return hasId ? db.query(
+        `SELECT setval(pg_get_serial_sequence('"User"', 'id'), GREATEST((SELECT MAX("id") FROM "User"), 1))`) : undefined;
+    })
+    .then(() => {
+      return {
+        user: user
+      };
     });
 }
 
-function _updateMSSQL(user) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'UpdateUser';
-        let request = new mssql.Request(conn)
-          // fb public attributes
-          .input('id', mssql.Int, user.id)
-          .input('userName', mssql.NVarChar(255), user.userName)
-          .input('firstName', mssql.NVarChar(255), user.firstName)
-          .input('lastName', mssql.NVarChar(255), user.lastName)
-          .input('gender', mssql.NVarChar(255), user.gender)
-          .input('locale', mssql.NChar(5), user.locale)
-          .input('facebookId', mssql.NVarChar(25), user.facebookId)
-          .input('googleId', mssql.NVarChar(25), user.googleId)
-          .input('pictureUrl', mssql.NVarChar(1000), user.pictureUrl)
-          .input('fbUpdatedTime', mssql.DateTime2(7), user.fbUpdatedTime)
-          .input('fbVerified', mssql.Bit, user.fbVerified)
-          .input('googleVerified', mssql.Bit, user.googleVerified)
-          .input('about', mssql.NVarChar(1000), user.about)
-          // fb private attributes
-          .input('email', mssql.NVarChar(255), user.email)
-          // cp attributes
-          .input('password', mssql.NVarChar(255), user.password)
-          .input('provider', mssql.NVarChar(255), user.provider)
-          .input('role', mssql.NVarChar(255), user.role)
-          .input('salt', mssql.NVarChar(255), user.salt)
-          .input('websiteUrl', mssql.NVarChar(500), user.websiteUrl)
-          // Written from whatever the object carries, so every caller has to
-          // load the row before updating it or a saved preference is cleared.
-          .input('defaultFilterSpanPreference', mssql.NVarChar(20), user.defaultFilterSpanPreference || null);
+function _update(user) {
+  // Written from whatever the object carries, so every caller has to load the
+  // row before updating it or a saved preference is cleared.
+  const columns = WRITE_COLUMNS.concat('defaultFilterSpanPreference');
+  const values = WRITE_COLUMNS.map(c => _value(user[c]))
+    .concat(user.defaultFilterSpanPreference || null, user.id);
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            resolve({
-              user: user
-            });
-          });
-      });
+  return db.query(`
+    UPDATE "User"
+    SET ${columns.map((c, i) => `"${c}" = $${i + 1}`).join(',\n        ')},
+        "utcUpdatedDateTime" = now()
+    WHERE "id" = $${values.length}`, values)
+    .then(() => {
+      return {
+        user: user
+      };
     });
 }
 
-function _deleteMSSQL(user) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'DeleteUserById';
-        let request = new mssql.Request(conn)
-          // fb public attributes
-          .input('id', mssql.Int, user.id)
-          .output('utcDeletedDateTime', mssql.DateTime2(7));
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // ToDo: doesn't always return value
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              utcDeletedDateTime = res.output.utcDeletedDateTime;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              console.log(`[dbo].[${StoredProcedureName}]`, e);
-            }
-            user.utcDeletedDateTime = utcDeletedDateTime;
-            resolve({
-              utcDeletedDateTime: utcDeletedDateTime,
-              user: user
-            });
-          });
-      });
+// A soft delete.
+function _delete(user) {
+  return db.query(
+    `UPDATE "User" SET "utcDeletedDateTime" = now() WHERE "id" = $1 RETURNING "utcDeletedDateTime"`,
+    [user.id])
+    .then(rows => {
+      const utcDeletedDateTime = rows.length ? rows[0].utcDeletedDateTime : undefined;
+      user.utcDeletedDateTime = utcDeletedDateTime;
+      return {
+        utcDeletedDateTime: utcDeletedDateTime,
+        user: user
+      };
     });
 }
 
-function _adminDeleteMSSQL(user) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'AdminDeleteUserById';
-        let request = new mssql.Request(conn)
-          // fb public attributes
-          .input('id', mssql.Int, user.id);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // ToDo: doesn't always return value
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              utcDeletedDateTime = res.output.utcDeletedDateTime;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              console.log(`[dbo].[${StoredProcedureName}]`, e);
-            }
-            user.utcDeletedDateTime = utcDeletedDateTime;
-            resolve({
-              user: user
-            });
-          });
-      });
+// Removes the row outright.
+function _adminDelete(user) {
+  return db.query(`DELETE FROM "User" WHERE "id" = $1`, [user.id])
+    .then(() => {
+      user.utcDeletedDateTime = undefined;
+      return {
+        user: user
+      };
     });
 }
 
-function _getUserByIdMSSQL(id) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'GetUserById';
-        let user;
-        let request = new mssql.Request(conn)
-          // fb public attributes
-          .input('id', mssql.INT, id);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            if (res.recordset.length) {
-              user = new User(res.recordset[0]);
-            } else {
-              user = undefined;
-            }
-            resolve({
-              user: user
-            });
-          });
-      });
-    });
-}
-
-function _getUserByFacebookIdMSSQL(facebookId) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'GetUserByFacebookId';
-        let user;
-        let request = new mssql.Request(conn)
-          .input('facebookId', mssql.NVarChar(25), facebookId);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            if (res.recordset.length) {
-              user = new User(res.recordset[0]);
-            } else {
-              user = undefined;
-            }
-            resolve({
-              user: user
-            });
-          });
-      });
-    });
-}
-
-function _getUserByGoogleIdMSSQL(googleId) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'GetUserByGoogleId';
-        let user;
-        let request = new mssql.Request(conn)
-          .input('googleId', mssql.NVarChar(25), googleId);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            if (res.recordset.length) {
-              user = new User(res.recordset[0]);
-            } else {
-              user = undefined;
-            }
-            resolve({
-              user: user
-            });
-          });
-      });
-    });
-}
-
-function _getUserByEmailMSSQL(email) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'GetUserByEmail';
-        let user;
-        let request = new mssql.Request(conn)
-          // fb public attributes
-          .input('email', mssql.NVarChar, email);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            if (res.recordset.length) {
-              user = new User(res.recordset[0]);
-            } else {
-              user = undefined;
-            }
-            resolve({
-              user: user
-            });
-          });
-      });
-    });
-}
-
-function _getUserByUserNameMSSQL(userName) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'GetUserByUserName';
-        let user;
-        let request = new mssql.Request(conn)
-          .input('userName', mssql.NVarChar, userName);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            if (res.recordset.length) {
-              user = new User(res.recordset[0]);
-            } else {
-              user = undefined;
-            }
-            resolve({
-              user: user
-            });
-          });
-      });
+// Resolves { user } for the live (not soft-deleted) row matching where, or
+// { user: undefined }. userName and email are citext, so those lookups ignore
+// case the way SQL Server's collation did.
+function _getOne(where, param) {
+  return db.query(`
+    SELECT ${USER_COLUMNS.map(c => `"${c}"`).join(', ')}
+    FROM "User"
+    WHERE ${where} AND "utcDeletedDateTime" IS NULL`, [param])
+    .then(rows => {
+      return {
+        user: rows.length ? new User(rows[0]) : undefined
+      };
     });
 }

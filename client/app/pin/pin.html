@@ -36,7 +36,7 @@
         <div class="grid__media" ng-switch="$ctrl.pin.media[0].type">
 
           <span class="grid__location" ng-if="$ctrl.hasImage() && $ctrl.showsLocationText()">
-            {{$ctrl.pin.address | locationLabel}}
+            {{$ctrl.pin.address}}
           </span>
 
           <div class="grid__tags" ng-if="$ctrl.hasImage() && $ctrl.pin.company">
@@ -83,7 +83,7 @@
                 {{$ctrl.pin.company}}
               </a>
             </span>
-            <span class="grid__location" ng-if="$ctrl.showsLocationText()">{{$ctrl.pin.address | locationLabel}}</span>
+            <span class="grid__location" ng-if="$ctrl.showsLocationText()">{{$ctrl.pin.address}}</span>
           </div>
 
           <div class="grid__meta">
@@ -185,7 +185,8 @@
              fills in one go rather than the map arriving late and pushing the
              thread down. -->
         <div class="pin__map" ng-if="$ctrl.pinReady">
-          <pin-map address="{{$ctrl.pin.address}}" title="{{$ctrl.pin.title}}"></pin-map>
+          <pin-map address="{{$ctrl.pin.address}}" latitude="{{$ctrl.pin.latitude}}" longitude="{{$ctrl.pin.longitude}}"
+            title="{{$ctrl.pin.title}}"></pin-map>
         </div>
 
         <div class="pin__thread">

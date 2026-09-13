@@ -2,8 +2,7 @@
 
 'use strict';
 
-import * as mssql from 'mssql';
-import * as cp from '../../sqlConnectionPool';
+import * as db from '../../db';
 
 import {
   User
@@ -66,7 +65,7 @@ export default class Users {
   }
 
   static getAll(properties) {
-    return _getAllUsersMSSQL()
+    return _getAllUsers()
       .then(({
         users
       }) => {
@@ -77,26 +76,20 @@ export default class Users {
   }
 }
 
-function _getAllUsersMSSQL() {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function(resolve, reject) {
-        const StoredProcedureName = 'GetAllUserSP';
-        let request = new mssql.Request(conn);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let users;
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            users = res.recordset && new Users(res.recordset);
-            resolve({
-              users: users
-            });
-          });
-      });
+// Every live user, whole rows like User's own lookups; callers pick the
+// properties they need.
+function _getAllUsers() {
+  return db.query(`
+    SELECT "id", "userName", "firstName", "lastName", "gender", "locale", "facebookId", "googleId",
+           "pictureUrl", "fbUpdatedTime", "fbVerified", "googleVerified", "about", "email", "password",
+           "role", "provider", "salt", "websiteUrl", "defaultFilterSpanPreference",
+           "utcCreatedDateTime", "utcUpdatedDateTime"
+    FROM "User"
+    WHERE "utcDeletedDateTime" IS NULL
+    ORDER BY "id"`)
+    .then(rows => {
+      return {
+        users: new Users(rows)
+      };
     });
 }

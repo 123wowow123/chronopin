@@ -2,8 +2,7 @@
 
 'use strict';
 
-import * as mssql from 'mssql';
-import * as cp from '../../sqlConnectionPool';
+import * as db from '../../db';
 import * as _ from 'lodash';
 import {
   DateTime
@@ -61,7 +60,7 @@ export default class DateTimes {
   }
 
   static queryByStartEndDate(startDateTime, endDateTime) {
-    return _queryMSSQLDateTimesByStartEndDate(startDateTime, endDateTime)
+    return _queryByStartEndDate(startDateTime, endDateTime)
       .then(res => {
         //console.log('queryByStartEndDate', res);
         return new DateTimes(res);
@@ -70,32 +69,17 @@ export default class DateTimes {
 
 }
 
-function _queryMSSQLDateTimesByStartEndDate(startDateTime, endDateTime) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'GetDateTimesByStartEndDate';
-        let request = new mssql.Request(conn)
-          .input('startDateTime', mssql.DateTime2(7), startDateTime)
-          .input('endDateTime', mssql.DateTime2(7), endDateTime);
-
-        //console.log('GetDateTimesByStartEndDate', startDateTime, endDateTime);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          function (err, res, returnValue, affected) {
-            let queryCount;
-            //console.log('GetDateTimesByStartEndDate', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-
-            queryCount = res.recordset.length;
-
-            resolve({
-              dateTimes: res.recordset,
-              queryCount: queryCount
-            });
-          });
-      });
+// Dates starting in [startDateTime, endDateTime).
+function _queryByStartEndDate(startDateTime, endDateTime) {
+  return db.query(`
+    SELECT *
+    FROM "DateTime" AS "d"
+    WHERE $1 <= "d"."utcStartDateTime" AND $2 > "d"."utcStartDateTime"
+    ORDER BY "d"."utcStartDateTime", "d"."id"`, [startDateTime, endDateTime])
+    .then(rows => {
+      return {
+        dateTimes: rows,
+        queryCount: rows.length
+      };
     });
 }

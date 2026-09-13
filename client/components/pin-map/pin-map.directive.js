@@ -2,22 +2,19 @@
 
 (function () {
 
-  // Coordinates live at the end of the free-text Pin.address field as
-  // "Some Place @ 21.7250, 39.1080". Everything before the @ is the label.
-  const COORDS = /@\s*(-?\d{1,3}(?:\.\d+)?)\s*,\s*(-?\d{1,3}(?:\.\d+)?)\s*$/;
-
-  function parseAddress(address) {
-    if (!address) return null;
-    const match = COORDS.exec(address);
-    if (!match) return null;
-    const lat = parseFloat(match[1]);
-    const lng = parseFloat(match[2]);
+  // Draws a pin's location from its latitude/longitude (Pin.location on the
+  // server), labelled with its address. Renders nothing when either coordinate
+  // is missing or out of range.
+  function toPlace(latitude, longitude, address) {
+    if (latitude === '' || latitude == null || longitude === '' || longitude == null) return null;
+    const lat = parseFloat(latitude);
+    const lng = parseFloat(longitude);
     if (!isFinite(lat) || !isFinite(lng)) return null;
     if (lat < -90 || lat > 90 || lng < -180 || lng > 180) return null;
     return {
       lat: lat,
       lng: lng,
-      label: address.slice(0, match.index).trim().replace(/[,;]\s*$/, '')
+      label: address || ''
     };
   }
 
@@ -28,6 +25,8 @@
         restrict: 'E',
         scope: {
           address: '@',
+          latitude: '@',
+          longitude: '@',
           title: '@'
         },
         link: function (scope, element) {
@@ -68,8 +67,8 @@
             }, 250);
           }
 
-          scope.$watch('address', function (address) {
-            const place = parseAddress(address);
+          scope.$watchGroup(['latitude', 'longitude', 'address'], function (values) {
+            const place = toPlace(values[0], values[1], values[2]);
             scope.place = place;
             if (!place) {
               destroy();

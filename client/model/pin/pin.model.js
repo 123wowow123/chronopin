@@ -15,6 +15,8 @@
       'sourceUrl',
       'longFormSummary',
       'address',
+      'latitude',
+      'longitude',
       'priceLowerBound',
       'priceUpperBound',
       'price',

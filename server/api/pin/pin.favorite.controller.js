@@ -23,20 +23,26 @@ export function createPinFavorite(req, res) {
       id: pinId
     }));
 
-  return newFavorite.save()
-    .then(({
-      favorite
-    }) => {
-      return Pin.queryById(pinId, user.id);
+  return _pinExists(pinId, res)
+    .then(exists => {
+      if (!exists) {
+        return;
+      }
+      return newFavorite.save()
+        .then(({
+          favorite
+        }) => {
+          return Pin.queryById(pinId, user.id);
+        })
+        .then(({
+          pin
+        }) => {
+          const event = "afterFavorite";
+          PinFavoriteEmitter.emit(event, pin, { userId: user.id });
+          return pin;
+        })
+        .then(response.withResult(res, 201));
     })
-    .then(({
-      pin
-    }) => {
-      const event = "afterFavorite";
-      PinFavoriteEmitter.emit(event, pin, { userId: user.id });
-      return pin;
-    })
-    .then(response.withResult(res, 201))
     .catch(response.handleError(res));
 }
 
@@ -50,21 +56,41 @@ export function removePinFavorite(req, res) {
       id: pinId
     }));
 
-  return newFavorite.deleteByPinId()
-    .then(({
-      favorite
-    }) => {
-      return Pin.queryById(pinId, user.id);
+  return _pinExists(pinId, res)
+    .then(exists => {
+      if (!exists) {
+        return;
+      }
+      return newFavorite.deleteByPinId()
+        .then(({
+          favorite
+        }) => {
+          return Pin.queryById(pinId, user.id);
+        })
+        .then(({
+          pin
+        }) => {
+          const event = "afterUnfavorite";
+          PinFavoriteEmitter.emit(event, pin, { userId: user.id });
+          return pin;
+        })
+        .then(response.withResult(res, 201));
     })
+    .catch(response.handleError(res));
+}
+
+// Nothing is written for a pin that does not exist (or was deleted): the
+// request gets a 404 instead of a row pointing at no pin.
+function _pinExists(pinId, res) {
+  return Pin.queryById(pinId)
     .then(({
       pin
     }) => {
-      const event = "afterUnfavorite";
-      PinFavoriteEmitter.emit(event, pin, { userId: user.id });
-      return pin;
-    })
-    .then(response.withResult(res, 201))
-    .catch(response.handleError(res));
+      if (!pin) {
+        res.status(404).end();
+      }
+      return !!pin;
+    });
 }
 
 export {

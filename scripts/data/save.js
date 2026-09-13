@@ -14,7 +14,6 @@ const Comments = Model.Comments;
 
 
 let cp,
-  Request,
   pinFilePath,
   userFilePath,
   commentFilePath;
@@ -46,7 +45,6 @@ const pickUserProps = [
 // Setup
 module.exports.setup = function (saveOpt) {
   cp = saveOpt.cp;
-  Request = cp.Request;
   pinFilePath = saveOpt.pinfile;
   userFilePath = saveOpt.userfile;
   commentFilePath = saveOpt.commentfile;
@@ -58,7 +56,7 @@ module.exports.saveDB = function () {
   const fromDateTime = new Date(0),
     userId = 0,
     lastPinId = 0,
-    pageSize = 2147483647; // Maximum values for an integer in SQL Server
+    pageSize = 2147483647; // No limit: back up every pin
 
   return Promise.resolve('Begin Backup')
     .then(() => {

@@ -8,15 +8,11 @@ import path from 'path';
 import config from '../config/environment';
 import Sequelize from 'sequelize';
 
+// Only the session store uses Sequelize; everything else goes through
+// server/db. Both connect to the same PostgreSQL database.
 var db = {
   Sequelize,
-  //sequelize: new Sequelize(config.sequelize.uri, config.sequelize.options)
-  sequelize: new Sequelize(
-    config.sequelize.connection.dbname,
-    config.sequelize.connection.username,
-    config.sequelize.connection.password,
-    config.sequelize.connection.options
-  )
+  sequelize: new Sequelize(config.database.url, config.sequelize.options)
 };
 
 // TODO: Temperarily added to make Session Table work

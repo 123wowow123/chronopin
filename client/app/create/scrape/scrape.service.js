@@ -89,6 +89,8 @@
                 thisPin.title = pin.title;
                 thisPin.description = pin.description;
                 thisPin.address = pin.address;
+                thisPin.latitude = pin.latitude;
+                thisPin.longitude = pin.longitude;
                 thisPin.price = pin.price;
                 thisPin.priceCurrency = pin.priceCurrency;
                 thisPin.start = pin.utcStartDateTime && new Date(pin.utcStartDateTime);
@@ -97,7 +99,7 @@
                 thisPin.media = pin.media;
                 thisPin.merchants = pin.merchants;
 
-                // The form has no inputs for these, but UpdatePin writes every
+                // The form has no inputs for these, but a pin update writes every
                 // one of them, so anything not carried back here is saved as
                 // NULL - an unrelated edit would wipe the extracted fields.
                 thisPin.longFormSummary = pin.longFormSummary;
@@ -144,7 +146,7 @@
                     endDateTime = pin.end;
                 }
 
-                // Must name every column UpdatePin writes, not just the ones
+                // Must name every column a pin update writes, not just the ones
                 // the form has inputs for: a field left out of this object is
                 // absent from the request and saved as NULL, so an unrelated
                 // edit would wipe it.
@@ -155,6 +157,8 @@
                     description: pin.description,
                     sourceUrl: pin.sourceUrl,
                     address: pin.address,
+                    latitude: pin.latitude,
+                    longitude: pin.longitude,
                     price: pin.price,
                     priceCurrency: pin.priceCurrency,
                     priceLowerBound: pin.priceLowerBound,

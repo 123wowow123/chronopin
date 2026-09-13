@@ -224,7 +224,17 @@ Run `ssh -p 50000 -i chronopin_docker.pub -v wowow@20.190.57.28`
 
 ## DB Management
 
-Run `npm run create:db` for create tables and stored procedures
+The database is PostgreSQL with PostGIS. Locally it runs in Docker (native on
+both Apple Silicon and Intel):
+
+Run `docker compose -f Docker/docker-compose.dev.yml up -d` to start it on `localhost:5432`
+
+The app and scripts connect with `DATABASE_URL` (`config.database.url`), e.g.
+`postgres://chronopin:chronopin@localhost:5432/chronopin`; add `?sslmode=require` for a hosted database.
+
+Run `npm run create:db` to apply pending schema files from `scripts/db/schema` (safe to re-run; never drops data)
+
+Run `npm run db:reset` to drop everything and rebuild the schema (development only)
 
 Run `npm run create:data` for adding data
 
@@ -232,11 +242,19 @@ Run `npm run backup:data` for backing up data
 
 Run `npm run remediate:data` for remediation of data
 
+A schema change is a new numbered file in `scripts/db/schema` (e.g. `0002_add_pin_foo.sql`); never edit one that has been applied.
+
+### Moving data off SQL Server
+
+Run `npm run create:db` against an empty PostgreSQL database, then
+`npm run transfer:mssql -- --from "Server=host,1433;Database=chronopin;User Id=...;Password=...;Encrypt=true"`.
+It copies every table in one transaction, keeps ids, moves the old `" @ lat, lng"` address suffix into `Pin.location`, and prints row counts from both sides.
+
 ## Debug Node
 
 Run `node --inspect-brk server/index.js` for debugging Node
 
-Run `node --inspect-brk scripts/db/index.js` for debugging Node :: create:db
+Run `node --inspect-brk scripts/db/migrate.js` for debugging Node :: create:db
 
 Run `node --inspect-brk scripts/data/index.js --save` for debugging Node :: backup:data
 

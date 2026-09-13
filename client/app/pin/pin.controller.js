@@ -5,8 +5,8 @@
 
   let PinsQuery;
 
-  // Has to match the window UpdateComment enforces server-side - the button
-  // hiding client-side is just UX, the real cutoff is in the SP.
+  // Has to match EDIT_WINDOW_MINUTES in server/model/comment/comment.js - the
+  // button hiding client-side is just UX, the real cutoff is server-side.
   const CommentEditWindowMs = 5 * 60 * 1000;
 
   // Has to match MaxReplyDepth in pin.comment.controller.js. Root comments
@@ -14,11 +14,15 @@
   // 3 total levels.
   const MaxReplyDepth = 2;
 
+  // Whether pin-map has anything to draw.
+  function _hasCoordinates(pin) {
+    return pin.latitude != null && pin.longitude != null;
+  }
+
   class PinController {
 
-    constructor($scope, $stateParams, $interval, $filter, socket, pinWebService, searchService, Auth, appConfig, modelInjector, $log) {
+    constructor($scope, $stateParams, $interval, socket, pinWebService, searchService, Auth, appConfig, modelInjector, $log) {
       this.$interval = $interval;
-      this.$filter = $filter;
       PinsQuery = PinsQuery || modelInjector.getPinsQuery();
       this.pinWebService = pinWebService;
       this.$stateParams = $stateParams;
@@ -150,11 +154,10 @@
     }
 
     // The map in the right column labels the location itself, so the text
-    // beside the image is only for an address the map cannot draw: one with no
-    // coordinates ("Place @ lat, lng"), like a plain street address.
+    // beside the image is only for an address the map cannot draw: one whose
+    // pin has no coordinates.
     showsLocationText() {
-      const address = this.pin && this.pin.address;
-      return !!this.$filter('locationLabel')(address) && !this.$filter('hasCoordinates')(address);
+      return !!(this.pin && this.pin.address) && !_hasCoordinates(this.pin);
     }
 
     // Whether there is something in .grid__media for the company to overlay.

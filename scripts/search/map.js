@@ -15,14 +15,12 @@ import _ from 'lodash';
 import * as log from '../../server/util/log';
 
 let cp,
-    Request,
     pinMapFilePath;
 
 
 // Setup
 module.exports.setup = function (seedOpt) {
     cp = seedOpt.cp;
-    Request = cp.Request;
     pinMapFilePath = seedOpt.pinMapFilePath;
 
     return this;

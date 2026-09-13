@@ -1,7 +1,6 @@
 'use strict';
 
-import * as mssql from 'mssql';
-import * as cp from '../../../sqlConnectionPool';
+import * as db from '../../../db';
 import * as _ from 'lodash';
 const rp = require('request-promise');
 import {
@@ -137,22 +136,6 @@ export default class SearchPins extends BasePins {
             .then(pins => {
                 return Pins.queryPinByIds(pins); // TODO: should return SearchPins
             });
-    }
-
-    static searchAuthors(userNames) {
-        return Pins.queryPinByAuthors(userNames); // TODO: should return SearchPins
-    }
-
-    static searchAuthorsFavorite(userId, userNames) {
-        return Pins.queryPinByAuthorsHasFavorite(userId, userNames); // TODO: should return SearchPins
-    }
-
-    static searchCategory(category) {
-        return Pins.queryPinByCategory(category); // TODO: should return SearchPins
-    }
-
-    static searchCategoryFavorite(userId, category) {
-        return Pins.queryPinByCategoryHasFavorite(userId, category); // TODO: should return SearchPins
     }
 
     // A search made only of label terms (user:, company:, category:).
@@ -343,39 +326,23 @@ function autocompleteFavorite(userId, searchText) {
     return rp(options);
 };
 
+// Autocomplete: pins whose title or description starts with the typed text,
+// compared on their first 64 characters, case-insensitively as SQL Server
+// did. k caps the rows returned.
 function _querySearchPin(title, description, k) {
-    return cp.getConnection()
-        .then(conn => {
-            return new Promise(function (resolve, reject) {
-                const StoredProcedureName = 'SearchPin';
-
-                let request = new mssql.Request(conn)
-                    .input('searchTitle', mssql.NVarChar(64), title)
-                    .input('searchDescription', mssql.NVarChar(64), description)
-                    .input('top', mssql.Int, k)
-                    .output('queryCount', mssql.Int);
-
-                request.execute(`[dbo].[${StoredProcedureName}]`,
-                    function (err, res, returnValue, affected) {
-                        let queryCount;
-                        //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-                        if (err) {
-                            return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-                        }
-                        // ToDo: doesn't always return value
-                        try {
-                            //console.log('returnValue', returnValue); // always return 0
-                            queryCount = res.output.queryCount;
-                            //console.log('queryCount', queryCount);
-                        } catch (e) {
-                            queryCount = 0;
-                        }
-
-                        resolve({
-                            pins: res.recordset,
-                            queryCount: queryCount
-                        });
-                    });
-            });
+    return db.query(`
+        SELECT "Pin".*
+        FROM "PinBaseView" AS "Pin"
+        WHERE "Pin"."utcDeletedDateTime" IS NULL
+          AND (left("Pin"."title", 64) ILIKE rtrim(left($1, 64)) || '%'
+            OR left("Pin"."description", 64) ILIKE rtrim(left($2, 64)) || '%')
+        ORDER BY "Pin"."utcStartDateTime", "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"
+        LIMIT $3`,
+        [title, description, k])
+        .then(rows => {
+            return {
+                pins: rows,
+                queryCount: rows.length
+            };
         });
 }

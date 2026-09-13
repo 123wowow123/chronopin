@@ -2,8 +2,7 @@
 
 'use strict';
 
-import * as mssql from 'mssql';
-import * as cp from '../../../sqlConnectionPool';
+import * as db from '../../../db';
 import * as _ from 'lodash';
 
 import {
@@ -63,35 +62,27 @@ export default class FullPins extends BasePins {
     }
 
     static queryForwardByDate(fromDateTime, userId, lastPinId, pageSize) {
-        return _queryMSSQLPinsWithSubArrays(fromDateTime, userId, lastPinId, pageSize)
+        return _queryPinsWithSubArrays(fromDateTime, lastPinId, pageSize)
             .then(res => {
                 return new FullPins(res);
             });
     }
 }
 
-function _queryMSSQLPinsWithSubArrays(fromDateTime, lastPinId, offset, pageSize) {
-    return cp.getConnection()
-        .then(conn => {
-            return new Promise((resolve, reject) => {
-                const StoredProcedureName = 'GetPinsWithFavoriteAndLikeArrayNext';
-                let request = new mssql.Request(conn)
-                    .input('offset', mssql.Int, offset)
-                    .input('pageSize', mssql.Int, pageSize)
-                    .input('fromDateTime', mssql.DateTime2(7), fromDateTime)
-                    .input('lastPinId', mssql.Int, lastPinId);
-
-                request.execute(`[dbo].[${StoredProcedureName}]`,
-                    (err, res, returnValue, affected) => {
-                        if (err) {
-                            return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-                        }
-
-                        resolve({
-                            pins: res.recordset
-                        });
-                    });
-
-            });
+// Every pin after (fromDateTime, lastPinId), for backups. Soft-deleted pins
+// are included, so a backup restores them as deleted rather than losing them.
+function _queryPinsWithSubArrays(fromDateTime, lastPinId, pageSize) {
+    return db.query(`
+        SELECT "Pin".*
+        FROM "PinBaseView" AS "Pin"
+        WHERE "Pin"."utcStartDateTime" > $1
+          OR ("Pin"."utcStartDateTime" = $1 AND "Pin"."id" > $2)
+        ORDER BY "Pin"."utcStartDateTime", "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"
+        LIMIT $3`,
+        [fromDateTime, lastPinId || 0, pageSize])
+        .then(rows => {
+            return {
+                pins: rows
+            };
         });
 }

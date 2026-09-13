@@ -1,7 +1,6 @@
 'use strict';
 
-import * as mssql from 'mssql';
-import * as cp from '../../../sqlConnectionPool';
+import * as db from '../../../db';
 import * as _ from 'lodash';
 import * as sql from '../shared/sql'
 import * as mapHelper from '../shared/helper'
@@ -39,7 +38,7 @@ export default class Pin extends BasePin {
   }
 
   save() {
-    return sql.createPinMSSQL(this, this.userId)
+    return sql.createPin(this, this.userId)
       .then(({
         pin
       }) => {
@@ -145,12 +144,12 @@ export default class Pin extends BasePin {
         });
       })
       .then((pin) => {
-        return _updateMSSQL(pin, pin.userId);
+        return _update(pin, pin.userId);
       });
   }
 
   delete() {
-    return _deleteMSSQL(this);
+    return _delete(this);
   }
 
   // toJSON() {
@@ -159,16 +158,16 @@ export default class Pin extends BasePin {
 
   static queryById(pinId, userId) {
     if (userId) {
-      return _queryMSSQLPinWithFavoriteAndLikeById(pinId, userId);
+      return _queryById(pinId, userId);
     } else {
-      return _queryMSSQLPinById(pinId);
+      return _queryById(pinId, null);
     }
   }
 
   // Persists a generated longFormSummary without going through the full
   // client-driven update() path, which requires a request-scoped userId.
   static updateLongFormSummary(pinId, longFormSummary) {
-    return _updateLongFormSummaryMSSQL(pinId, longFormSummary);
+    return _updateLongFormSummary(pinId, longFormSummary);
   }
 
   static mapPinJoins(pin, pinRows) {
@@ -197,162 +196,104 @@ function _difference(baseArray, otherArray, propName) {
   });
 }
 
-function _queryMSSQLPinWithFavoriteAndLikeById(pinId, userId) {
-  return cp.getConnection()
-    .then(conn => {
-      //console.log("queryMSSQLPinById then err", err)
-      return new Promise((resolve, reject) => {
-        const StoredProcedureName = 'GetPinWithFavoriteAndLike';
-        let pin;
-        let request = new mssql.Request(conn)
-          .input('pinId', mssql.Int, pinId)
-          .input('userId', mssql.Int, userId)
-          .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            if (res.recordset.length) {
-              pin = new Pin(res.recordset[0]);
-              pin = Pin.mapPinJoins(pin, res.recordset);
-            } else {
-              pin = undefined;
-            }
-            resolve({
-              pin: pin
-            });
-          });
-      });
-    }).catch(err => {
-      // ... connect error checks
-      console.log("queryMSSQLPinById catch err", err)
-    });
-}
-
-function _queryMSSQLPinById(pinId) {
-  return cp.getConnection()
-    .then(conn => {
-      //console.log("queryMSSQLPinById then err", err)
-      return new Promise((resolve, reject) => {
-        const StoredProcedureName = 'GetPin';
-        let request = new mssql.Request(conn)
-          .input('pinId', mssql.Int, pinId)
-          .execute(`[dbo].[${StoredProcedureName}]`, (err, res, returnValue, affected) => {
-            let pin;
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            if (res.recordset.length) {
-              pin = new Pin(res.recordset[0]);
-              pin = Pin.mapPinJoins(pin, res.recordset);
-              // pin = Pin.mapPinUser(pin, res.recordset[0]);
-            } else {
-              pin = undefined;
-            }
-            resolve({
-              pin: pin
-            });
-          });
-      });
-    }).catch(err => {
-      // ... connect error checks
-      console.log("queryMSSQLPinById catch err", err);
+// userId, when given, adds whether that user watches and likes the pin.
+// Resolves { pin: undefined } for a missing or deleted pin.
+function _queryById(pinId, userId) {
+  const viewerColumns = userId ? `,
+      EXISTS (SELECT 1 FROM "Favorite" AS "f"
+              WHERE "f"."userId" = $2 AND "f"."pinId" = "Pin"."id" AND "f"."utcDeletedDateTime" IS NULL) AS "hasFavorite",
+      EXISTS (SELECT 1 FROM "Like" AS "l"
+              WHERE "l"."userId" = $2 AND "l"."pinId" = "Pin"."id" AND "l"."utcDeletedDateTime" IS NULL) AS "hasLike"` : '';
+  return db.query(`
+    SELECT "Pin".*${viewerColumns}
+    FROM "PinBaseView" AS "Pin"
+    WHERE "Pin"."id" = $1 AND "Pin"."utcDeletedDateTime" IS NULL
+    ORDER BY "Pin"."Media.id", "Pin"."Merchant.id"`,
+    userId ? [pinId, userId] : [pinId])
+    .then(rows => {
+      let pin;
+      if (rows.length) {
+        pin = new Pin(rows[0]);
+        pin = Pin.mapPinJoins(pin, rows);
+      }
+      return {
+        pin: pin
+      };
+    })
+    .catch(err => {
+      console.log("Pin queryById err", err);
       throw err;
     });
 }
 
-function _updateMSSQL(pin, userId) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'UpdatePin';
-        let request = new mssql.Request(conn)
-          .input('id', mssql.Int, pin.id)
-          .input('parentId', mssql.Int, pin.parentId)
-          .input('title', mssql.NVarChar(1024), pin.title)
-          .input('description', mssql.NVarChar(4000), pin.description)
-          .input('sourceUrl', mssql.NVarChar(4000), pin.sourceUrl)
-          .input('longFormSummary', mssql.NVarChar(mssql.MAX), pin.longFormSummary)
-          .input('dateConfidence', mssql.NVarChar(32), pin.dateConfidence)
-          .input('dateConfidenceReasoning', mssql.NVarChar(4000), pin.dateConfidenceReasoning)
-          .input('company', mssql.NVarChar(255), pin.company)
-          .input('companyWikiUrl', mssql.NVarChar(2048), pin.companyWikiUrl)
-          .input('category', mssql.NVarChar(64), pin.category)
-          .input('address', mssql.NVarChar(4000), pin.address)
-          .input('priceLowerBound', mssql.Decimal(18, 2), pin.priceLowerBound)
-          .input('priceUpperBound', mssql.Decimal(18, 2), pin.priceUpperBound)
-          .input('price', mssql.Decimal(18, 2), pin.price)
-          .input('priceCurrency', mssql.NVarChar(3), pin.priceCurrency)
-          .input('tip', mssql.NVarChar(4000), pin.tip)
-          .input('utcStartDateTime', mssql.DateTime2(0), pin.utcStartDateTime)
-          .input('utcEndDateTime', mssql.DateTime2(0), pin.utcEndDateTime)
-          .input('allDay', mssql.Bit, pin.allDay)
-          .input('userId', mssql.Int, userId);
+function _update(pin, userId) {
+  const values = [
+    pin.id, pin.parentId, pin.title, pin.description, pin.sourceUrl, pin.longFormSummary,
+    pin.dateConfidence, pin.dateConfidenceReasoning, pin.company, pin.companyWikiUrl,
+    pin.category, pin.address, pin.priceLowerBound, pin.priceUpperBound, pin.price,
+    pin.priceCurrency, pin.tip, pin.utcStartDateTime, pin.utcEndDateTime, pin.allDay,
+    userId, pin.latitude, pin.longitude
+  ].map(value => value === undefined ? null : value);
 
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // Todo: updated date time need to be updated on model
-            resolve({
-              pin: pin
-            });
-          });
-      });
+  // Every column is written, so a field missing from the pin is cleared - the
+  // edit form sends the whole pin for this reason.
+  return db.query(`
+    UPDATE "Pin"
+    SET
+      "parentId" = $2,
+      "title" = $3,
+      "description" = $4,
+      "sourceUrl" = $5,
+      "longFormSummary" = $6,
+      "dateConfidence" = $7,
+      "dateConfidenceReasoning" = $8,
+      "company" = $9,
+      "companyWikiUrl" = $10,
+      "category" = $11,
+      "address" = $12,
+      "priceLowerBound" = $13,
+      "priceUpperBound" = $14,
+      "price" = $15,
+      "priceCurrency" = $16,
+      "tip" = $17,
+      "utcStartDateTime" = $18,
+      "utcEndDateTime" = $19,
+      "allDay" = $20,
+      "userId" = $21,
+      "location" = ${sql.locationSql('$22', '$23')},
+      "utcUpdatedDateTime" = now()
+    WHERE "id" = $1`, values)
+    .then(() => {
+      // Todo: updated date time need to be updated on model
+      return {
+        pin: pin
+      };
     });
 }
 
-function _updateLongFormSummaryMSSQL(pinId, longFormSummary) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        let request = new mssql.Request(conn)
-          .input('id', mssql.Int, pinId)
-          .input('longFormSummary', mssql.NVarChar(mssql.MAX), longFormSummary);
-
-        request.query(
-          `UPDATE [dbo].[Pin] SET longFormSummary = @longFormSummary, utcUpdatedDateTime = SYSUTCDATETIME() WHERE id = @id;`,
-          (err, res) => {
-            if (err) {
-              return reject(`update Pin.longFormSummary err: ${err}`);
-            }
-            resolve({
-              pinId: pinId,
-              longFormSummary: longFormSummary
-            });
-          });
-      });
+function _updateLongFormSummary(pinId, longFormSummary) {
+  return db.query(
+    `UPDATE "Pin" SET "longFormSummary" = $2, "utcUpdatedDateTime" = now() WHERE "id" = $1`,
+    [pinId, longFormSummary])
+    .then(() => {
+      return {
+        pinId: pinId,
+        longFormSummary: longFormSummary
+      };
     });
 }
 
-function _deleteMSSQL(pin) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'DeletePin';
-        let request = new mssql.Request(conn)
-          .input('id', mssql.Int, pin.id)
-          .output('utcDeletedDateTime', mssql.DateTime2(7));
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let utcDeletedDateTime;
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              utcDeletedDateTime = res.output.utcDeletedDateTime;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              console.log(`[dbo].[${StoredProcedureName}]`, e);
-            }
-            pin.utcDeletedDateTime = utcDeletedDateTime;
-            resolve({
-              utcDeletedDateTime: utcDeletedDateTime,
-              pin: pin
-            });
-          });
-      });
+// A soft delete: the row stays, marked with when it was deleted.
+function _delete(pin) {
+  return db.query(
+    `UPDATE "Pin" SET "utcDeletedDateTime" = now() WHERE "id" = $1 RETURNING "utcDeletedDateTime"`,
+    [pin.id])
+    .then(rows => {
+      const utcDeletedDateTime = rows.length ? rows[0].utcDeletedDateTime : undefined;
+      pin.utcDeletedDateTime = utcDeletedDateTime;
+      return {
+        utcDeletedDateTime: utcDeletedDateTime,
+        pin: pin
+      };
     });
 }

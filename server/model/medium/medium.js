@@ -1,7 +1,6 @@
 'use strict';
 
-import * as mssql from 'mssql';
-import * as cp from '../../sqlConnectionPool';
+import * as db from '../../db';
 import * as image from '../../image'
 import * as _ from 'lodash';
 import { v4 as uuidv4 } from 'uuid';
@@ -67,15 +66,15 @@ export default class Medium {
           // share existing Medium to save thumb space and better analytics
           // no modification needed and just reuse db medium;
           this.set(medium);
-          return _createPinMediumMSSQL(this, this._pin.id)
+          return _createPinMedium(this, this._pin.id)
             .then(newMedium => {
               return this.set(newMedium);
             });
         } else {
           if (_.get(this, "_pin.id")) {
-            return _createPinMediumLinkMSSQL(this, this._pin.id);
+            return _createPinMediumLink(this, this._pin.id);
           } else {
-            return _createMSSQL(this);
+            return _create(this);
           }
         }
       });
@@ -92,7 +91,7 @@ export default class Medium {
   }
 
   deleteFromPin() {
-    return _deleteFromPinMSSQL(this, this._pin.id);
+    return _deleteFromPin(this, this._pin.id);
   }
 
   setPin(pin) {
@@ -109,7 +108,7 @@ export default class Medium {
   }
 
   static getByOriginalUrl(originalUrl) {
-    return _getMediumByOriginalUrlMSSQL(originalUrl);
+    return _getByOriginalUrl(originalUrl);
   }
 
   static createAndSaveToCDN(originalUrl) {
@@ -137,123 +136,59 @@ Object.defineProperty(MediumPrototype, '_pin', {
   writable: true
 });
 
-function _createPinMediumLinkMSSQL(medium, pinId) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise((resolve, reject) => {
-        const StoredProcedureName = 'CreatePinMediumLink';
-        let request = new mssql.Request(conn)
-          .input('pinId', mssql.Int, pinId)
-          .input('thumbName', mssql.NVarChar(4000), medium.thumbName)
-          .input('thumbWidth', mssql.Int, medium.thumbWidth)
-          .input('thumbHeight', mssql.Int, medium.thumbHeight)
-          .input('originalUrl', mssql.NVarChar(4000), medium.originalUrl)
-          .input('originalWidth', mssql.Int, medium.originalWidth)
-          .input('originalHeight', mssql.Int, medium.originalHeight)
-          .input('type', mssql.Int, medium.type)
-          .input('utcCreatedDateTime', mssql.DateTime2(7), medium.utcCreatedDateTime)
-          .input('utcDeletedDateTime', mssql.DateTime2(7), medium.utcDeletedDateTime)
-          .input('authorName', mssql.NVarChar(1028), medium.authorName)
-          .input('authorUrl', mssql.NVarChar(4000), medium.authorUrl)
-          .input('html', mssql.NVarChar(4000), medium.html)
+const MEDIUM_COLUMNS = ['thumbName', 'thumbWidth', 'thumbHeight', 'originalUrl', 'originalWidth',
+  'originalHeight', 'type', 'authorName', 'authorUrl', 'html'];
 
-          .output('id', mssql.Int);
+function _mediumValues(medium) {
+  return MEDIUM_COLUMNS.map(c => medium[c] === undefined ? null : medium[c]);
+}
 
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
+const MEDIUM_INSERT = `
+  INSERT INTO "Medium" (${MEDIUM_COLUMNS.map(c => `"${c}"`).join(', ')})
+  VALUES (${MEDIUM_COLUMNS.map((c, i) => `$${i + 1}`).join(', ')})
+  RETURNING "id"`;
 
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let queryCount, id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // ToDo: doesn't always return value
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              id = res.output.id;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              id = 0;
-            }
-            medium.id = id;
-            resolve(medium);
-          });
-      });
+// Creates the medium and links it to the pin in one statement, so a medium is
+// never left without its link. Resolves the medium with its new id.
+function _createPinMediumLink(medium, pinId) {
+  const values = _mediumValues(medium).concat([
+    pinId,
+    medium.utcCreatedDateTime || new Date(),
+    medium.utcDeletedDateTime === undefined ? null : medium.utcDeletedDateTime
+  ]);
+  const n = MEDIUM_COLUMNS.length;
+  return db.query(`
+    WITH "medium" AS (${MEDIUM_INSERT}),
+    "link" AS (
+      INSERT INTO "PinMedium" ("pinId", "mediumId", "utcCreatedDateTime", "utcDeletedDateTime")
+      SELECT $${n + 1}, "medium"."id", $${n + 2}, $${n + 3} FROM "medium"
+    )
+    SELECT "id" FROM "medium"`, values)
+    .then(rows => {
+      medium.id = rows[0].id;
+      return medium;
     });
 }
 
-function _createMSSQL(medium) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise((resolve, reject) => {
-        const StoredProcedureName = 'CreateMedium';
-        let request = new mssql.Request(conn)
-          .input('thumbName', mssql.NVarChar(4000), medium.thumbName)
-          .input('thumbWidth', mssql.Int, medium.thumbWidth)
-          .input('thumbHeight', mssql.Int, medium.thumbHeight)
-          .input('originalUrl', mssql.NVarChar(4000), medium.originalUrl)
-          .input('originalWidth', mssql.Int, medium.originalWidth)
-          .input('originalHeight', mssql.Int, medium.originalHeight)
-          .input('type', mssql.Int, medium.type)
-          .input('authorName', mssql.NVarChar(1028), medium.authorName)
-          .input('authorUrl', mssql.NVarChar(4000), medium.authorUrl)
-          .input('html', mssql.NVarChar(4000), medium.html)
-
-          .output('id', mssql.Int);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let queryCount, id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // ToDo: doesn't always return value
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              id = res.output.id;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              id = 0;
-            }
-            medium.id = id;
-            resolve(medium);
-          });
-      });
+function _create(medium) {
+  return db.query(MEDIUM_INSERT, _mediumValues(medium))
+    .then(rows => {
+      medium.id = rows[0].id;
+      return medium;
     });
 }
 
-function _createPinMediumMSSQL(medium, pinId) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise((resolve, reject) => {
-        const StoredProcedureName = 'CreatePinMedium';
-
-        let request = new mssql.Request(conn)
-          .input('pinId', mssql.Int, pinId)
-          .input('mediumId', mssql.Int, medium.id)
-          .input('utcCreatedDateTime', mssql.DateTime2(7), medium.utcCreatedDateTime)
-          .input('utcDeletedDateTime', mssql.DateTime2(7), medium.utcDeletedDateTime)
-          .output('id', mssql.Int);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let queryCount, id;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-
-            resolve({
-              medium: medium
-            });
-          });
-      });
+// Links an existing medium to a pin.
+function _createPinMedium(medium, pinId) {
+  return db.query(`
+    INSERT INTO "PinMedium" ("pinId", "mediumId", "utcCreatedDateTime", "utcDeletedDateTime")
+    VALUES ($1, $2, $3, $4)`,
+    [pinId, medium.id, medium.utcCreatedDateTime || new Date(),
+      medium.utcDeletedDateTime === undefined ? null : medium.utcDeletedDateTime])
+    .then(() => {
+      return {
+        medium: medium
+      };
     });
 }
 
@@ -284,68 +219,28 @@ function _getImageStatAndSaveImage(imageUrl) {
     .then(_mapAndSaveThumb);
 }
 
-function _deleteFromPinMSSQL(medium, pinId) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'DeletePinMediumByPinMediumId';
-        let request = new mssql.Request(conn)
-          // fb public attributes
-          .input('pinId', mssql.Int, pinId)
-          .input('mediumId', mssql.Int, medium.id)
-          .output('utcDeletedDateTime', mssql.DateTime2(7));
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            let utcDeletedDateTime;
-            //console.log('GetPinsWithFavoriteAndLikeNext', res.recordset);
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            // ToDo: doesn't always return value
-            try {
-              //console.log('returnValue', returnValue); // always return 0
-              utcDeletedDateTime = res.output.utcDeletedDateTime;
-              //console.log('queryCount', queryCount);
-            } catch (e) {
-              console.log(`[dbo].[${StoredProcedureName}]`, e);
-            }
-            return resolve({
-              utcDeletedDateTime: utcDeletedDateTime,
-              medium: medium
-            });
-          });
-      });
+// Removes the link and the medium row itself (not the file on the CDN).
+function _deleteFromPin(medium, pinId) {
+  const utcDeletedDateTime = new Date();
+  return db.transaction(query => query(
+      `DELETE FROM "PinMedium" WHERE "pinId" = $1 AND "mediumId" = $2`, [pinId, medium.id])
+    .then(() => query(`DELETE FROM "Medium" WHERE "id" = $1`, [medium.id])))
+    .then(() => {
+      return {
+        utcDeletedDateTime: utcDeletedDateTime,
+        medium: medium
+      };
     });
 }
 
-function _getMediumByOriginalUrlMSSQL(originalUrl) {
-  return cp.getConnection()
-    .then(conn => {
-      return new Promise(function (resolve, reject) {
-        const StoredProcedureName = 'GetMediumByOriginalUrl';
-        let medium;
-        let request = new mssql.Request(conn)
-          .input('originalUrl', mssql.NVarChar, originalUrl);
-
-        //console.log('GetPinsWithFavoriteAndLikeNext', offset, pageSize, userId, fromDateTime, lastPinId);
-
-        request.execute(`[dbo].[${StoredProcedureName}]`,
-          (err, res, returnValue, affected) => {
-            if (err) {
-              return reject(`execute [dbo].[${StoredProcedureName}] err: ${err}`);
-            }
-            if (res.recordset.length) {
-              medium = new Medium(res.recordset[0]);
-            } else {
-              medium = undefined;
-            }
-            return resolve({
-              medium: medium
-            });
-          });
-      });
+function _getByOriginalUrl(originalUrl) {
+  return db.query(`
+    SELECT "id", ${MEDIUM_COLUMNS.map(c => `"${c}"`).join(', ')}
+    FROM "Medium"
+    WHERE "originalUrl" = $1`, [originalUrl])
+    .then(rows => {
+      return {
+        medium: rows.length ? new Medium(rows[0]) : undefined
+      };
     });
 }

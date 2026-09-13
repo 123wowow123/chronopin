@@ -7,7 +7,7 @@ require('babel-register');
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 const { Pin } = require('../../server/model');
-const cp = require('../../server/sqlConnectionPool');
+const cp = require('../../server/db');
 
 const pinId = +process.argv[2];
 

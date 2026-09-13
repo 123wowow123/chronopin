@@ -25,20 +25,26 @@ export function createPinLike(req, res) {
 
     console.log(likeBody)
 
-  return newLike.save()
-    .then(({
-      like
-    }) => {
-      return Pin.queryById(pinId, user.id);
+  return _pinExists(pinId, res)
+    .then(exists => {
+      if (!exists) {
+        return;
+      }
+      return newLike.save()
+        .then(({
+          like
+        }) => {
+          return Pin.queryById(pinId, user.id);
+        })
+        .then(({
+          pin
+        }) => {
+          const event = "afterLike";
+          PinLikeEmitter.emit(event, pin, { userId: user.id });
+          return pin;
+        })
+        .then(response.withResult(res, 201));
     })
-    .then(({
-      pin
-    }) => {
-      const event = "afterLike";
-      PinLikeEmitter.emit(event, pin, { userId: user.id });
-      return pin;
-    })
-    .then(response.withResult(res, 201))
     .catch(response.handleError(res));
 }
 
@@ -51,21 +57,41 @@ export function removePinLike(req, res) {
       id: pinId
     }));
 
-  return newLike.deleteByPinId()
-    .then(({
-      like
-    }) => {
-      return Pin.queryById(pinId, user.id);
+  return _pinExists(pinId, res)
+    .then(exists => {
+      if (!exists) {
+        return;
+      }
+      return newLike.deleteByPinId()
+        .then(({
+          like
+        }) => {
+          return Pin.queryById(pinId, user.id);
+        })
+        .then(({
+          pin
+        }) => {
+          const event = "afterUnlike";
+          PinLikeEmitter.emit(event, pin, { userId: user.id });
+          return pin;
+        })
+        .then(response.withResult(res, 201));
     })
+    .catch(response.handleError(res));
+}
+
+// Nothing is written for a pin that does not exist (or was deleted): the
+// request gets a 404 instead of a row pointing at no pin.
+function _pinExists(pinId, res) {
+  return Pin.queryById(pinId)
     .then(({
       pin
     }) => {
-      const event = "afterUnlike";
-      PinLikeEmitter.emit(event, pin, { userId: user.id });
-      return pin;
-    })
-    .then(response.withResult(res, 201))
-    .catch(response.handleError(res));
+      if (!pin) {
+        res.status(404).end();
+      }
+      return !!pin;
+    });
 }
 
 export {

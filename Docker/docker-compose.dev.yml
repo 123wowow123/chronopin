@@ -1,0 +1,21 @@
+# Local services for development: `docker compose -f Docker/docker-compose.dev.yml up -d`
+#
+# The credentials are for a database that only listens on this machine; they
+# match DATABASE_URL in server/config/environment/development.js.
+services:
+  postgres:
+    build: ./postgis
+    image: chronopin-postgis:17
+    container_name: chronopin-postgres
+    environment:
+      POSTGRES_USER: chronopin
+      POSTGRES_PASSWORD: chronopin
+      POSTGRES_DB: chronopin
+    ports:
+      - "5432:5432"
+    volumes:
+      - chronopin-postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  chronopin-postgres-data:

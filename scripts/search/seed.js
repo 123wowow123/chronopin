@@ -15,7 +15,6 @@ import _ from 'lodash';
 import * as log from '../../server/util/log';
 
 let cp,
-    Request,
     pinFilePath,
     aphelionFilePath,
     solsticeFilePath,
@@ -26,7 +25,6 @@ let cp,
 // Setup
 module.exports.setup = function (seedOpt) {
     cp = seedOpt.cp;
-    Request = cp.Request;
     pinFilePath = seedOpt.pinfile;
     aphelionFilePath = seedOpt.aphelionfile;
     solsticeFilePath = seedOpt.solsticefile;

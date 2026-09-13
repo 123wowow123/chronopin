@@ -179,7 +179,7 @@ export function update(req, res) {
       let pin = new Pin(req.body);
       pin.id = pinId;
       // Keep whoever posted it as the author; an edit is not a transfer of
-      // ownership, and UpdatePin writes userId on every save.
+      // ownership, and an update writes userId on every save.
       pin.userId = existing.userId;
 
       return pin.update()

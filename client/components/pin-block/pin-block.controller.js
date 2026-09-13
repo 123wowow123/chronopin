@@ -138,8 +138,8 @@
                 <!-- Switch between image / iframe / tweets -->
                 <div class="grid__media" ng-switch="$ctrl.pin.media[0].type">
 
-                    <span class="grid__location" ng-if="$ctrl.pin.media[0] && ($ctrl.pin.address | locationLabel)">
-                        {{$ctrl.pin.address | locationLabel}}
+                    <span class="grid__location" ng-if="$ctrl.pin.media[0] && $ctrl.pin.address">
+                        {{$ctrl.pin.address}}
                     </span>
 
                     <div class="grid__tags" ng-if="$ctrl.pin.media[0] && $ctrl.pin.company">
@@ -188,14 +188,14 @@
                          case), so they get their own line above the date.
                          Category is not here - it lives in the headline. -->
                     <div class="grid__meta-line"
-                        ng-if="!$ctrl.pin.media[0] && ($ctrl.pin.company || ($ctrl.pin.address | locationLabel))">
+                        ng-if="!$ctrl.pin.media[0] && ($ctrl.pin.company || $ctrl.pin.address)">
                         <span class="grid__company" ng-if="$ctrl.pin.company">
                             <a href="" ng-click="$ctrl.searchService.refine('company', $ctrl.pin.company)"
                                 title="Show all {{$ctrl.pin.company}} pins">
                                 {{$ctrl.pin.company}}
                             </a>
                         </span>
-                        <span class="grid__location" ng-if="$ctrl.pin.address | locationLabel">{{$ctrl.pin.address | locationLabel}}</span>
+                        <span class="grid__location" ng-if="$ctrl.pin.address">{{$ctrl.pin.address}}</span>
                     </div>
                     <div class="grid__date-line" ng-if="$ctrl.pin.utcStartDateTime">
                         <span class="grid__starts">{{$ctrl.pin.allDay

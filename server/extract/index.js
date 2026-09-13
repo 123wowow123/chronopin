@@ -216,15 +216,19 @@ export function extractPinFields(pageUrl, pageText) {
 }
 
 /**
- * Coordinates live at the end of the free-text Pin.address field, which
- * client/components/pin-map parses back out to render the map. A pin whose
- * coordinates are missing or out of range gets no map, so an address is only
- * worth writing when both are present and plausible.
+ * The place a pin is about, split into the fields Pin stores: address is the
+ * label, latitude/longitude become Pin.location. Coordinates that are missing
+ * or out of range are dropped - the pin just gets no map - but the label is
+ * still worth keeping on its own.
  */
-export function toAddress(fields) {
+export function toLocation(fields) {
   if (!fields || !fields.placeLabel) return undefined;
   const { latitude: lat, longitude: lng } = fields;
-  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return fields.placeLabel;
-  if (lat < -90 || lat > 90 || lng < -180 || lng > 180) return fields.placeLabel;
-  return `${fields.placeLabel} @ ${lat.toFixed(4)}, ${lng.toFixed(4)}`;
+  const plausible = Number.isFinite(lat) && Number.isFinite(lng)
+    && lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180;
+  return {
+    address: fields.placeLabel,
+    latitude: plausible ? lat : undefined,
+    longitude: plausible ? lng : undefined
+  };
 }
