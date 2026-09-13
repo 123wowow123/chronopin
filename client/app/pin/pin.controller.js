@@ -16,8 +16,9 @@
 
   class PinController {
 
-    constructor($scope, $stateParams, $interval, socket, pinWebService, searchService, Auth, appConfig, modelInjector, $log) {
+    constructor($scope, $stateParams, $interval, $filter, socket, pinWebService, searchService, Auth, appConfig, modelInjector, $log) {
       this.$interval = $interval;
+      this.$filter = $filter;
       PinsQuery = PinsQuery || modelInjector.getPinsQuery();
       this.pinWebService = pinWebService;
       this.$stateParams = $stateParams;
@@ -146,6 +147,14 @@
             pin.hasFavorite = false;
           });
       }
+    }
+
+    // The map in the right column labels the location itself, so the text
+    // beside the image is only for an address the map cannot draw: one with no
+    // coordinates ("Place @ lat, lng"), like a plain street address.
+    showsLocationText() {
+      const address = this.pin && this.pin.address;
+      return !!this.$filter('locationLabel')(address) && !this.$filter('hasCoordinates')(address);
     }
 
     // Whether there is something in .grid__media for the company to overlay.
