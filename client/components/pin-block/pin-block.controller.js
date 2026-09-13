@@ -205,11 +205,7 @@
                             <i class="fa fa-pencil" aria-hidden="true"></i>
                         </button>
                     </div>
-        
-                    <div class="grid__comment_count">
-                        <comment-count comment-url="{{'/pin/'+$ctrl.pin.id}}"></comment-count>
-                    </div>
-        
+
                     <div class="grid__watch" ng-switch="!!$ctrl.pin.hasFavorite">
                         <button type="button" class="grid__favorite --add" ng-click="$ctrl.addFavorite($ctrl.pin)"
                             ng-switch-default>

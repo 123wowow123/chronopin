@@ -16,13 +16,12 @@
 
   class PinController {
 
-    constructor($scope, $stateParams, $interval, socket, pinWebService, searchService, Auth, appConfig, modelInjector, commentJs, $log) {
+    constructor($scope, $stateParams, $interval, socket, pinWebService, searchService, Auth, appConfig, modelInjector, $log) {
       this.$interval = $interval;
       PinsQuery = PinsQuery || modelInjector.getPinsQuery();
       this.pinWebService = pinWebService;
       this.$stateParams = $stateParams;
       this.appConfig = appConfig;
-      this.commentJs = commentJs;
       this.searchService = searchService;
 
       this.Auth = Auth;
@@ -83,8 +82,6 @@
             .catch(err => {
               this.searching = false;
               throw err;
-            }).finally(() => {
-              this.commentJs.ayncRefresh();
             });
         });
     }

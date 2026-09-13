@@ -22,7 +22,7 @@
 
   class MainController {
 
-    constructor($transitions, $scope, $stateParams, pinWebService, dateTimeWebService, mainWebService, linkHeaderParser, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, commentJs, $log, $timeout) {
+    constructor($transitions, $scope, $stateParams, pinWebService, dateTimeWebService, mainWebService, linkHeaderParser, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, $log, $timeout) {
 
       // constants
       const omitLinkHeaderProp = ['rel', 'url'];
@@ -51,7 +51,6 @@
       // model service
       this.pinApp = pinApp;
       this.bags;
-      this.commentJs = commentJs;
 
       // properties
       this.Auth = Auth;
@@ -301,7 +300,6 @@
             return;
           }
           this.loading = false;
-          this.commentJs.ayncRefresh();
         });
     }
 

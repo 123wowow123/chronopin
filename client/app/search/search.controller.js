@@ -5,7 +5,7 @@
 
     class SearchController {
 
-        constructor($stateParams, $state, $scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, commentJs, $log, $timeout) {
+        constructor($stateParams, $state, $scope, pinWebService, dateTimeWebService, mainWebService, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, $log, $timeout) {
 
             // constants
             const omitLinkHeaderProp = ['rel', 'url'];
@@ -36,7 +36,6 @@
             // model service
             this.pinApp = pinApp;
             this.bags;
-            this.commentJs = commentJs;
 
             // properties
             this.isAdmin = Auth.isAdmin; //bind function so each digest loop it get re-evaluated to determin latest state
@@ -81,7 +80,6 @@
                     throw err;
                 }).finally(() => {
                     this.searching = false;
-                    this.commentJs.ayncRefresh();
                 });
         }
 
