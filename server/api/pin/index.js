@@ -33,5 +33,11 @@ router.delete('/:id/like', auth.isAuthenticated(), controller.removePinLike);
 router.post('/:id/favorite', auth.isAuthenticated(), controller.createPinFavorite);
 router.delete('/:id/favorite', auth.isAuthenticated(), controller.removePinFavorite);
 
+// Comments on a Pin
+router.get('/:id/comment', auth.tryGetUser(), controller.getPinComments);
+router.post('/:id/comment', auth.isAuthenticated(), controller.createPinComment);
+router.patch('/:id/comment/:commentId', auth.isAuthenticated(), controller.updatePinComment);
+router.delete('/:id/comment/:commentId', auth.isAuthenticated(), controller.removePinComment);
+
 
 module.exports = router;

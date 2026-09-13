@@ -23,6 +23,9 @@ const createGetDateTimesByStartEndDateSP = require('./dateTime/createGetDateTime
 /* pin thread */
 const createGetPinAuthorThreadSP = require('./pin/createGetPinAuthorThreadSP');
 const createGetPinAuthorThreadWithFavoriteAndLikeSP = require('./pin/createGetPinAuthorThreadWithFavoriteAndLikeSP');
+/* comment */
+const createGetCommentsByPinIdSP = require('./comment/createGetCommentsByPinIdSP');
+const createGetAllCommentsSP = require('./comment/createGetAllCommentsSP');
 
 /** Returns Single Result **/
 /* pin */
@@ -36,6 +39,8 @@ const createGetUserByGoogleIdSP = require('./user/createGetUserByGoogleIdSP');
 const createGetUserByEmailSP = require('./user/createGetUserByEmailSP');
 /* medium */
 const createGetMediumByOriginalUrlSP = require('./medium/createGetMediumByOriginalUrlSP');
+/* comment */
+const createGetCommentSP = require('./comment/createGetCommentSP');
 /* like */
 const createGetLikeSP = require('./like/createGetLikeSP');
 /* favorite */
@@ -55,6 +60,8 @@ const createCreateMediumTypeSP = require('./mediumType/createCreateMediumTypeSP'
 /* pinMedium */
 const createCreatePinMediumSP = require('./pinMedium/createCreatePinMediumSP');
 const createCreatePinMediumLinkSP = require('./pinMedium/createCreatePinMediumLinkSP');
+/* comment */
+const createCreateCommentSP = require('./comment/createCreateCommentSP');
 /* like */
 //const createCreateLikeSP = require('./like/createCreateLikeSP');
 /* favorite */
@@ -67,6 +74,8 @@ const createCreateDateTimeSP = require('./dateTime/createCreateDateTimeSP');
 const createUpdateUserSP = require('./user/createUpdateUserSP');
 /* pin */
 const createUpdatePinSP = require('./pin/createUpdatePinSP');
+/* comment */
+const createUpdateCommentSP = require('./comment/createUpdateCommentSP');
 /* like */
 //const createUpdateLikeSP = require('./like/createUpdateLikeSP');
 
@@ -77,6 +86,8 @@ const createDeletePinSP = require('./pin/createDeletePinSP');
 const createDeleteUserByIdSP = require('./user/createDeleteUserByIdSP');
 /* pinMedium */
 const createDeletePinMediumByPinMediumIdSP = require('./pinMedium/createDeletePinMediumByPinMediumIdSP');
+/* comment */
+const createDeleteCommentSP = require('./comment/createDeleteCommentSP');
 /* like */
 const createDeleteLikeSP = require('./like/createDeleteLikeSP');
 const createDeleteLikeByPinIdSP = require('./like/createDeleteLikeByPinIdSP');
@@ -122,6 +133,8 @@ module.exports.setup = function (connectionPool) {
   createGetPinAuthorThreadWithFavoriteAndLikeSP.setup(cp);
   createGetPinByAuthersFilterByHasFavoriteSP.setup(cp);
   createGetPinByAuthersSP.setup(cp);
+  createGetCommentsByPinIdSP.setup(cp);
+  createGetAllCommentsSP.setup(cp);
 
   // Returns Single Result
   createGetPinWithFavoriteAndLikeSP.setup(cp);
@@ -132,6 +145,7 @@ module.exports.setup = function (connectionPool) {
   createGetUserByGoogleIdSP.setup(cp);
   createGetUserByEmailSP.setup(cp);
   createGetMediumByOriginalUrlSP.setup(cp);
+  createGetCommentSP.setup(cp);
   createGetLikeSP.setup(cp);
   createGetFavoriteSP.setup(cp);
   createGetMerchantSP.setup(cp);
@@ -143,6 +157,7 @@ module.exports.setup = function (connectionPool) {
   createCreateMediumTypeSP.setup(cp);
   createCreatePinMediumSP.setup(cp);
   createCreatePinMediumLinkSP.setup(cp);
+  createCreateCommentSP.setup(cp);
   //createCreateLikeSP.setup(cp);
   //createCreateFavoriteSP.setup(cp);
   createCreateDateTimeSP.setup(cp);
@@ -150,12 +165,14 @@ module.exports.setup = function (connectionPool) {
   // Update Record
   createUpdateUserSP.setup(cp);
   createUpdatePinSP.setup(cp);
+  createUpdateCommentSP.setup(cp);
   //createUpdateLikeSP.setup(cp);
 
   // Delete Record
   createDeletePinSP.setup(cp);
   createDeleteUserByIdSP.setup(cp);
   createDeletePinMediumByPinMediumIdSP.setup(cp);
+  createDeleteCommentSP.setup(cp);
   createDeleteLikeSP.setup(cp);
   createDeleteLikeByPinIdSP.setup(cp);
   createDeleteFavoriteSP.setup(cp);
@@ -189,6 +206,8 @@ module.exports.createGetPinAuthorThreadSP = createGetPinAuthorThreadSP.createSP;
 module.exports.createGetPinAuthorThreadWithFavoriteAndLikeSP = createGetPinAuthorThreadWithFavoriteAndLikeSP.createSP;
 module.exports.createGetPinByAuthersFilterByHasFavoriteSP = createGetPinByAuthersFilterByHasFavoriteSP.createSP;
 module.exports.createGetPinByAuthersSP = createGetPinByAuthersSP.createSP;
+module.exports.createGetCommentsByPinIdSP = createGetCommentsByPinIdSP.createSP;
+module.exports.createGetAllCommentsSP = createGetAllCommentsSP.createSP;
 
 // Returns Single Result
 module.exports.createGetPinWithFavoriteAndLikeSP = createGetPinWithFavoriteAndLikeSP.createSP;
@@ -199,6 +218,7 @@ module.exports.createGetUserByFacebookIdSP = createGetUserByFacebookIdSP.createS
 module.exports.createGetUserByGoogleIdSP = createGetUserByGoogleIdSP.createSP;
 module.exports.createGetUserByEmailSP = createGetUserByEmailSP.createSP;
 module.exports.createGetMediumByOriginalUrlSP = createGetMediumByOriginalUrlSP.createSP;
+module.exports.createGetCommentSP = createGetCommentSP.createSP;
 module.exports.createGetLikeSP = createGetLikeSP.createSP;
 module.exports.createGetFavoriteSP = createGetFavoriteSP.createSP;
 module.exports.createGetMerchantSP = createGetMerchantSP.createSP;
@@ -210,6 +230,7 @@ module.exports.createCreateMediumSP = createCreateMediumSP.createSP;
 module.exports.createCreateMediumTypeSP = createCreateMediumTypeSP.createSP;
 module.exports.createCreatePinMediumSP = createCreatePinMediumSP.createSP;
 module.exports.createCreatePinMediumLinkSP = createCreatePinMediumLinkSP.createSP;
+module.exports.createCreateCommentSP = createCreateCommentSP.createSP;
 //module.exports.createCreateLikeSP = createCreateLikeSP.createSP;
 //module.exports.createCreateFavoriteSP = createCreateFavoriteSP.createSP;
 module.exports.createCreateDateTimeSP = createCreateDateTimeSP.createSP;
@@ -217,12 +238,14 @@ module.exports.createCreateDateTimeSP = createCreateDateTimeSP.createSP;
 // Update Record
 module.exports.createUpdateUserSP = createUpdateUserSP.createSP;
 module.exports.createUpdatePinSP = createUpdatePinSP.createSP;
+module.exports.createUpdateCommentSP = createUpdateCommentSP.createSP;
 //module.exports.createUpdateLikeSP = createUpdateLikeSP.createSP;
 
 // Delete Record
 module.exports.createDeletePinSP = createDeletePinSP.createSP;
 module.exports.createDeleteUserByIdSP = createDeleteUserByIdSP.createSP;
 module.exports.createDeletePinMediumByPinMediumIdSP = createDeletePinMediumByPinMediumIdSP.createSP;
+module.exports.createDeleteCommentSP = createDeleteCommentSP.createSP;
 module.exports.createDeleteLikeSP = createDeleteLikeSP.createSP;
 module.exports.createDeleteLikeByPinIdSP = createDeleteLikeByPinIdSP.createSP;
 module.exports.createDeleteFavoriteSP = createDeleteFavoriteSP.createSP;

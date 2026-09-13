@@ -46,6 +46,8 @@ const createGetPinAuthorThreadSP = createSP.createGetPinAuthorThreadSP;
 const createGetPinAuthorThreadWithFavoriteAndLikeSP = createSP.createGetPinAuthorThreadWithFavoriteAndLikeSP;
 const createGetPinByAuthersFilterByHasFavoriteSP = createSP.createGetPinByAuthersFilterByHasFavoriteSP;
 const createGetPinByAuthersSP = createSP.createGetPinByAuthersSP;
+const createGetCommentsByPinIdSP = createSP.createGetCommentsByPinIdSP;
+const createGetAllCommentsSP = createSP.createGetAllCommentsSP;
 
 // Returns Single Result
 const createGetPinWithFavoriteAndLikeSP = createSP.createGetPinWithFavoriteAndLikeSP;
@@ -56,6 +58,7 @@ const createGetUserByGoogleIdSP = createSP.createGetUserByGoogleIdSP;
 const createGetUserByEmailSP = createSP.createGetUserByEmailSP;
 const createGetMediumByOriginalUrlSP = createSP.createGetMediumByOriginalUrlSP;
 const createGetPinSP = createSP.createGetPinSP;
+const createGetCommentSP = createSP.createGetCommentSP;
 const createGetLikeSP = createSP.createGetLikeSP;
 const createGetFavoriteSP = createSP.createGetFavoriteSP;
 const createGetMerchantSP = createSP.createGetMerchantSP;
@@ -67,6 +70,7 @@ const createCreateMediumSP = createSP.createCreateMediumSP;
 const createCreateMediumTypeSP = createSP.createCreateMediumTypeSP;
 const createCreatePinMediumSP = createSP.createCreatePinMediumSP;
 const createCreatePinMediumLinkSP = createSP.createCreatePinMediumLinkSP;
+const createCreateCommentSP = createSP.createCreateCommentSP;
 //const createCreateLikeSP = createSP.createCreateLikeSP;
 //const createCreateFavoriteSP = createSP.createCreateFavoriteSP;
 const createCreateDateTimeSP = createSP.createCreateDateTimeSP;
@@ -74,12 +78,14 @@ const createCreateDateTimeSP = createSP.createCreateDateTimeSP;
 // Update Record
 const createUpdateUserSP = createSP.createUpdateUserSP;
 const createUpdatePinSP = createSP.createUpdatePinSP;
+const createUpdateCommentSP = createSP.createUpdateCommentSP;
 //const createUpdateLikeSP = createSP.createUpdateLikeSP;
 
 // Delete Record
 const createDeleteUserByIdSP = createSP.createDeleteUserByIdSP;
 const createDeletePinMediumByPinMediumIdSP = createSP.createDeletePinMediumByPinMediumIdSP;
 const createDeletePinSP = createSP.createDeletePinSP;
+const createDeleteCommentSP = createSP.createDeleteCommentSP;
 const createDeleteLikeSP = createSP.createDeleteLikeSP;
 const createDeleteLikeByPinIdSP = createSP.createDeleteLikeByPinIdSP;
 const createDeleteFavoriteSP = createSP.createDeleteFavoriteSP;
@@ -152,6 +158,8 @@ function execute() {
         createGetPinAuthorThreadWithFavoriteAndLikeSP,
         createGetPinByAuthersFilterByHasFavoriteSP,
         createGetPinByAuthersSP,
+        createGetCommentsByPinIdSP,
+        createGetAllCommentsSP,
 
         // Returns Single Result
         createGetPinWithFavoriteAndLikeSP,
@@ -162,6 +170,7 @@ function execute() {
         createGetUserByEmailSP,
         createGetMediumByOriginalUrlSP,
         createGetPinSP,
+        createGetCommentSP,
         createGetLikeSP,
         createGetFavoriteSP,
         createGetMerchantSP,
@@ -173,6 +182,7 @@ function execute() {
         createCreateMediumTypeSP,
         createCreatePinMediumSP,
         createCreatePinMediumLinkSP,
+        createCreateCommentSP,
         //createCreateLikeSP,
         //createCreateFavoriteSP,
         createCreateDateTimeSP,
@@ -180,12 +190,14 @@ function execute() {
         // Update Record
         createUpdateUserSP,
         createUpdatePinSP,
+        createUpdateCommentSP,
         //createUpdateLikeSP,
 
         // Delete Record
         createDeleteUserByIdSP,
         createDeletePinMediumByPinMediumIdSP,
         createDeletePinSP,
+        createDeleteCommentSP,
         createDeleteLikeSP,
         createDeleteLikeByPinIdSP,
         createDeleteFavoriteSP,

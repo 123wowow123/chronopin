@@ -42,14 +42,16 @@ function executeCreateTable() {
         CREATE TABLE [dbo].[${TableName}]
         (
             id INT PRIMARY KEY NOT NULL IDENTITY(1,1),
-            facebookCommentId NVARCHAR(4000),
+            text NVARCHAR(4000) NOT NULL,
             userId INT NOT NULL,
             pinId INT NOT NULL,
+            parentCommentId INT NULL,
             utcCreatedDateTime DATETIME2(7) DEFAULT SYSUTCDATETIME() NOT NULL,
             utcUpdatedDateTime DATETIME2(7),
             utcDeletedDateTime DATETIME2(7)
             --CONSTRAINT FK_Comment_userId FOREIGN KEY (userId) REFERENCES [dbo].[User] (id),
-            --CONSTRAINT FK_Comment_pin FOREIGN KEY (pinId) REFERENCES [dbo].[Pin] (id)
+            --CONSTRAINT FK_Comment_pin FOREIGN KEY (pinId) REFERENCES [dbo].[Pin] (id),
+            --CONSTRAINT FK_Comment_parentCommentId FOREIGN KEY (parentCommentId) REFERENCES [dbo].[Comment] (id)
         );
         `;
 

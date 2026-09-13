@@ -168,6 +168,23 @@
             data-ad-slot="2802659011" data-ad-format="auto" data-full-width-responsive="true"></ins>
         </div>
 
+        <div class="pin__usercomments" ng-if="$ctrl.pinReady">
+          <h5 class="usercomments__heading">Comments</h5>
+
+          <ul class="usercomments__list">
+            <li ng-repeat="comment in $ctrl.pin.comments track by comment.id">
+              <pin-comment comment="comment" pin="$ctrl.pin" parent="null" page-ctrl="$ctrl"></pin-comment>
+            </li>
+          </ul>
+
+          <form class="usercomments__form" ng-if="$ctrl.Auth.isLoggedIn()" ng-submit="$ctrl.addComment($ctrl.pin)">
+            <textarea class="form-control usercomments__input" ng-model="$ctrl.newCommentText"
+              placeholder="Add a comment..."></textarea>
+            <div class="text-danger usercomments__error" ng-if="$ctrl.commentError">{{$ctrl.commentError}}</div>
+            <button type="submit" class="btn btn-primary usercomments__submit">Post</button>
+          </form>
+        </div>
+
         <div class="pin__comment">
           <comment comment-url="{{'/pin/'+$ctrl.pin.id}}" title="{{$ctrl.pin.title}}"></comment>
         </div>

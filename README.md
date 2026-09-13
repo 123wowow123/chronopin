@@ -537,9 +537,11 @@ This is a promotional article about one of the company partners with Interesting
 - Date tag mobile view broken
 
 ## Before Usable
+- Comment fix
+
 - Youtube!!
 - Create page image redesign with image selection in right drawer
-- Comment fix
+
 - Login fix
 - Script to refresh pins in semantic search
 - Single Pin page similarity needs to be in timeline

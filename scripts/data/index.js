@@ -14,6 +14,7 @@ args
   .option('seed', 'Seed database from JSON', false)
   .option('pinfile', 'Pin file path to be used for opporation', './scripts/backup/seedPins.json')
   .option('userfile', 'Pin file path to be used for opporation', './scripts/backup/seedUsers.json')
+  .option('commentfile', 'Comment file path to be used for opporation', './scripts/backup/seedComments.json')
   .option('aphelionfile', 'Aphelion file path to be used for opporation', './scripts/backup/aphelion.json')
   .option('equinoxfile', 'Equinox file path to be used for opporation', './scripts/backup/equinox.json')
   .option('perihelionfile', 'Perihelion file path to be used for opporation', './scripts/backup/perihelion.json')
@@ -26,12 +27,14 @@ const saveOpt = {
   cp: cp,
   pinfile: flags.pinfile,
   userfile: flags.userfile,
+  commentfile: flags.commentfile,
 };
 
 const seedOpt = {
   cp: cp,
   pinfile: flags.pinfile,
   userfile: flags.userfile,
+  commentfile: flags.commentfile,
   aphelionfile: flags.aphelionfile,
   equinoxfile: flags.equinoxfile,
   perihelionfile: flags.perihelionfile,

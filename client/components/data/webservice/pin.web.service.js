@@ -115,6 +115,22 @@
          return $http.delete('/api/pins/' + id + '/favorite', data);
        };
 
+       this.getComments = function(id) {
+         return $http.get('/api/pins/' + id + '/comment');
+       };
+
+       this.addComment = function(id, data) {
+         return $http.post('/api/pins/' + id + '/comment', data);
+       };
+
+       this.updateComment = function(id, commentId, data) {
+         return $http.patch('/api/pins/' + id + '/comment/' + commentId, data);
+       };
+
+       this.removeComment = function(id, commentId) {
+         return $http.delete('/api/pins/' + id + '/comment/' + commentId);
+       };
+
      });
 
  })();

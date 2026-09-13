@@ -52,6 +52,12 @@ export {
   default as Like
 } from './like/like';
 export {
+  default as Comment
+} from './comment/comment';
+export {
+  default as Comments
+} from './comment/comments';
+export {
   default as Merchant
 } from './merchant/merchant';
 export {

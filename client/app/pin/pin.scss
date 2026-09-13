@@ -135,4 +135,72 @@
     // with the timeline cards, so both read identically.
   }
 
+  &__usercomments {
+    margin-bottom: 15px;
+  }
+
+}
+
+.usercomments {
+
+  &__heading {
+    margin-bottom: 8px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0 0 10px;
+    padding: 0;
+  }
+
+  &__item {
+    padding: 6px 0;
+    border-bottom: 1px solid var(--timeline-color-narrow);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__author {
+    font-weight: bold;
+    margin-right: 6px;
+  }
+
+  &__remove,
+  &__edit,
+  &__reply {
+    padding: 0 0 0 6px;
+  }
+
+  &__replies {
+    margin: 6px 0 0 20px;
+    padding-left: 12px;
+    border-left: 1px solid var(--timeline-color-narrow);
+  }
+
+  &__reply-form {
+    margin-top: 6px;
+  }
+
+  &__edit-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__input {
+    resize: vertical;
+    min-height: 60px;
+  }
+
+  &__submit {
+    align-self: flex-end;
+  }
 }

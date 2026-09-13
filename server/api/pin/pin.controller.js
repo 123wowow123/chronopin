@@ -184,6 +184,7 @@ export function destroy(req, res) {
 
 export * from './pin.favorite.controller';
 export * from './pin.like.controller';
+export * from './pin.comment.controller';
 export * from './pin.search.controller';
 
 export {

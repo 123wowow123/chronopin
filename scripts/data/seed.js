@@ -9,7 +9,8 @@ import {
   User,
   FullPins,
   DateTime,
-  DateTimes
+  DateTimes,
+  Comments
 } from '../../server/model';
 
 import fs from 'fs';
@@ -30,6 +31,7 @@ import * as log from '../../server/util/log';
 let cp,
   Request,
   pinFilePath,
+  commentFilePath,
   aphelionFilePath,
   solsticeFilePath,
   equinoxFilePath,
@@ -41,6 +43,7 @@ module.exports.setup = function (seedOpt) {
   cp = seedOpt.cp;
   Request = cp.Request;
   pinFilePath = seedOpt.pinfile;
+  commentFilePath = seedOpt.commentfile;
   aphelionFilePath = seedOpt.aphelionfile;
   solsticeFilePath = seedOpt.solsticefile;
   equinoxFilePath = seedOpt.equinoxfile;
@@ -201,6 +204,16 @@ module.exports.seedDB = function () {
       return pins.save()
         .catch(error => {
           log.error('Pins Save Error', JSON.stringify(error));
+        });
+    })
+    .then(() => {
+      // Comments reference Pin/User rows created above, so they load last.
+      let commentsJSONObjs = JSON.parse(fs.readFileSync(commentFilePath, 'utf8'));
+      let comments = new Comments(commentsJSONObjs);
+
+      return comments.save()
+        .catch(error => {
+          log.error('Comments Save Error', JSON.stringify(error));
         });
     })
     .then(() => {

@@ -145,6 +145,7 @@
     "migrate:add-created-filter": "node scripts/db/migrations/addCreatedSinceFilter.js",
     "migrate:add-filter-span-preference": "node scripts/db/migrations/addUserDefaultFilterSpanPreference.js",
     "migrate:nullable-pin-end": "node scripts/db/migrations/allowNullPinEndDateTime.js",
+    "migrate:add-comment-replies": "node scripts/db/migrations/addCommentParentCommentId.js",
     "create:search": "node scripts/search/index.js --seed --map",
     "delete:search:pins": "node scripts/search/index.js --delete --index=pins",
     "remediate:data": "node scripts/remediate/index.js"

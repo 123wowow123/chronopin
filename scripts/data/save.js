@@ -10,12 +10,14 @@ const azureBlob = require('../../server/azure-blob');
 const Model = require('../../server/model');
 const FullPins = Model.FullPins;
 const Users = Model.Users;
+const Comments = Model.Comments;
 
 
 let cp,
   Request,
   pinFilePath,
-  userFilePath;
+  userFilePath,
+  commentFilePath;
 
 const pickUserProps = [
   'id',
@@ -47,6 +49,7 @@ module.exports.setup = function (saveOpt) {
   Request = cp.Request;
   pinFilePath = saveOpt.pinfile;
   userFilePath = saveOpt.userfile;
+  commentFilePath = saveOpt.commentfile;
   return this;
 };
 
@@ -78,6 +81,17 @@ module.exports.saveDB = function () {
           users
         }) => {
           return fs.writeFileSync(userFilePath, JSON.stringify(users, null, 2));
+        });
+
+    })
+    .then(() => {
+
+      console.log('Backup Comments');
+      return Comments.getAll()
+        .then(({
+          comments
+        }) => {
+          return fs.writeFileSync(commentFilePath, JSON.stringify(comments.comments, null, 2));
         });
 
     })
