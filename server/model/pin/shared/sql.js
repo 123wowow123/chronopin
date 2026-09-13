@@ -14,6 +14,8 @@ export function createPinMSSQL(pin, userId) {
                     .input('longFormSummary', mssql.NVarChar(mssql.MAX), pin.longFormSummary)
                     .input('dateConfidence', mssql.NVarChar(32), pin.dateConfidence)
                     .input('dateConfidenceReasoning', mssql.NVarChar(4000), pin.dateConfidenceReasoning)
+                    .input('company', mssql.NVarChar(255), pin.company)
+                    .input('category', mssql.NVarChar(64), pin.category)
                     .input('address', mssql.NVarChar(4000), pin.address)
                     .input('priceLowerBound', mssql.Decimal(18, 2), pin.priceLowerBound)
                     .input('priceUpperBound', mssql.Decimal(18, 2), pin.priceUpperBound)

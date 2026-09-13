@@ -24,6 +24,8 @@ export const BasePinProp = [
     'tip',
     'dateConfidence',
     'dateConfidenceReasoning',
+    'company',
+    'category',
     'utcStartDateTime',
     'utcEndDateTime',
     'allDay',

@@ -537,7 +537,6 @@ This is a promotional article about one of the company partners with Interesting
 - Date tag mobile view broken
 
 ## Before Usable
-- Comment fix
 
 - Youtube!!
 - Create page image redesign with image selection in right drawer

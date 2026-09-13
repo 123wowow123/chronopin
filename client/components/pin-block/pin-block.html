@@ -77,6 +77,8 @@
                 <date-confidence level="{{$ctrl.pin.dateConfidence}}"
                     reasoning="{{$ctrl.pin.dateConfidenceReasoning}}"
                     show-reasoning="$ctrl.pin.dateConfidence !== 'unknown'"></date-confidence>
+                <span class="grid__category" ng-if="$ctrl.pin.category">{{$ctrl.pin.category}}</span>
+                <span class="grid__company" ng-if="$ctrl.pin.company">{{$ctrl.pin.company}}</span>
                 <span class="grid__location --overlay" ng-if="!$ctrl.pin.media[0] && ($ctrl.pin.address | locationLabel)">
                     {{$ctrl.pin.address | locationLabel}}
                 </span>

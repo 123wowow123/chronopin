@@ -142,6 +142,7 @@
     "create:data": "node scripts/data/index.js --seed",
     "backup:data": "node scripts/data/index.js --save",
     "migrate:add-pin-summary": "node scripts/db/migrations/addPinLongFormSummary.js",
+    "migrate:add-pin-company-category": "node scripts/db/migrations/addPinCompanyCategory.js",
     "migrate:add-created-filter": "node scripts/db/migrations/addCreatedSinceFilter.js",
     "migrate:add-filter-span-preference": "node scripts/db/migrations/addUserDefaultFilterSpanPreference.js",
     "migrate:nullable-pin-end": "node scripts/db/migrations/allowNullPinEndDateTime.js",

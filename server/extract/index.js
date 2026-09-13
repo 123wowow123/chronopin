@@ -41,6 +41,21 @@ const MAX_PAGE_CHARS = 60000;
 
 const CONFIDENCE_LEVELS = ['confirmed', 'scheduled', 'estimated', 'delayed', 'unknown'];
 
+const CATEGORIES = [
+  'Consumer Electronics',
+  'Software',
+  'Computing & Semiconductors',
+  'Gaming & Entertainment',
+  'Space & Astronomy',
+  'Infrastructure & Transportation',
+  'Architecture & Real Estate',
+  'Automotive',
+  'Energy',
+  'Corporate & Finance',
+  'Policy & Legal',
+  'Other'
+];
+
 const SCHEMA = {
   type: 'object',
   properties: {
@@ -81,6 +96,15 @@ const SCHEMA = {
       type: ['string', 'null'],
       description: 'One sentence naming the wording that decided dateConfidence, quoting the page, e.g. \'Stated as firm, per en.wikipedia.org: "...was completed in June 2026..."\'. Null when dateConfidence is "unknown".'
     },
+    company: {
+      type: ['string', 'null'],
+      description: 'The company or organization this event is principally about or done by, e.g. "Apple", "SpaceX", "City of Detroit". Null when no single organization owns the event.'
+    },
+    category: {
+      type: 'string',
+      enum: CATEGORIES,
+      description: 'Best-fit category for this event from the fixed list. Use "Other" only when nothing else reasonably fits.'
+    },
     startDateTime: {
       type: ['string', 'null'],
       description: 'ISO 8601 UTC start of the event, e.g. "2026-09-18T12:00:00Z". Use noon UTC for all-day events. Null when no date was found.'
@@ -108,6 +132,8 @@ const SCHEMA = {
     'longitude',
     'dateConfidence',
     'dateConfidenceReasoning',
+    'company',
+    'category',
     'startDateTime',
     'endDateTime',
     'allDay',

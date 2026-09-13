@@ -56,6 +56,8 @@ function executeCreateTable() {
             tip NVARCHAR(4000),
             dateConfidence NVARCHAR(32),
             dateConfidenceReasoning NVARCHAR(4000),
+            company NVARCHAR(255),
+            category NVARCHAR(64),
             utcStartDateTime DATETIME2(0) NOT NULL,
             utcEndDateTime DATETIME2(0) NULL,
             allDay BIT DEFAULT 0 NOT NULL,

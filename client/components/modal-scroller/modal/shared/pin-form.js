@@ -58,6 +58,23 @@
         show: false
       };
 
+      // Fixed list mirrored from server/extract/index.js CATEGORIES - keep
+      // both in sync if the list ever changes.
+      this.categories = [
+        'Consumer Electronics',
+        'Software',
+        'Computing & Semiconductors',
+        'Gaming & Entertainment',
+        'Space & Astronomy',
+        'Infrastructure & Transportation',
+        'Architecture & Real Estate',
+        'Automotive',
+        'Energy',
+        'Corporate & Finance',
+        'Policy & Legal',
+        'Other'
+      ];
+
     }
 
     $onInit() {
@@ -135,6 +152,12 @@
       if (!this.pin.price) {
         this.pin.price = pin.price;
       }
+      if (!this.pin.company) {
+        this.pin.company = pin.company;
+      }
+      if (!this.pin.category) {
+        this.pin.category = pin.category;
+      }
       if (!this.pin.start && pin.utcStartDateTime) {
         this.pin.start = new Date(pin.utcStartDateTime);
       }
@@ -175,6 +198,12 @@
       }
       if (!this.pin.price) {
         this.pin.price = pin.price;
+      }
+      if (!this.pin.company) {
+        this.pin.company = pin.company;
+      }
+      if (!this.pin.category) {
+        this.pin.category = pin.category;
       }
       if (!this.pin.start && pin.utcStartDateTime) {
         this.pin.start = new Date(pin.utcStartDateTime);
@@ -220,6 +249,8 @@
       this.pin.description = undefined;
       this.pin.address = undefined;
       this.pin.price = undefined;
+      this.pin.company = undefined;
+      this.pin.category = undefined;
       this.pin.start = undefined;
       this.pin.end = undefined;
       this.pin.selectedImage = undefined;
@@ -277,6 +308,8 @@
         sourceUrl: pin.pageUrl,
         address: pin.address,
         price: pin.price,
+        company: pin.company,
+        category: pin.category,
         dateConfidence: pin.dateConfidence,
         dateConfidenceReasoning: pin.dateConfidenceReasoning,
         longFormSummary: pin.longFormSummary,

@@ -27,6 +27,26 @@
 }
 
 
+.grid__category {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    vertical-align: 1px;
+    white-space: nowrap;
+    color: #ededed;
+    background: #6a6a6a;
+}
+
+.grid__company {
+    margin-left: 6px;
+    font-size: 11px;
+    opacity: 0.7;
+}
+
 .thread-icon {
     rotate: 30deg;
     display: inline-block;

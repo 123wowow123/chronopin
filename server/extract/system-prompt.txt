@@ -10,4 +10,6 @@ Rules that decide the hard cases:
 - Do not confuse the cost with other money on the page. Trade volumes, revenue, market size, annual budgets, and unrelated comparisons are not the cost. If the page gives both a total and a phase, take the total. If it gives a range, take the midpoint.
 - placeLabel is where the thing is, not where its operator is headquartered. Give coordinates for that place. If the page is about something with no single location, return null for all three location fields.
 - startDateTime is when the event itself happens - the opening, launch, or release - not when construction started or when the article was written. Judge dateConfidence from the page's own wording about that date, not from how far away it is.
+- company is whichever single organization the event is principally about or done by, not a source or commentator quoted on the page. A product launch names its maker ("Apple"), an infrastructure project names its owner/operator ("City of Detroit"), not the contractor building it unless the page is about the contractor. Null when no single organization fits.
+- category must be one of the fixed values given in the schema. Pick the closest fit; do not invent a new value.
 - Report only what the page supports. Null is the correct answer for anything it does not state.

@@ -254,6 +254,14 @@ function _applyExtracted(newPin, fields) {
     newPin.dateConfidenceReasoning = fields.dateConfidenceReasoning || undefined;
   }
 
+  if (fields.company) {
+    newPin.company = fields.company;
+  }
+
+  if (fields.category) {
+    newPin.category = fields.category;
+  }
+
   if (fields.longFormSummary) {
     newPin.longFormSummary = fields.longFormSummary;
   }
