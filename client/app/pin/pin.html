@@ -35,6 +35,10 @@
         <!-- Switch between image / iframe / tweets -->
         <div class="grid__media" ng-switch="$ctrl.pin.media[0].type">
 
+          <span class="grid__location" ng-if="$ctrl.hasImage() && $ctrl.showsLocationText()">
+            {{$ctrl.pin.address | locationLabel}}
+          </span>
+
           <div class="grid__tags" ng-if="$ctrl.hasImage() && $ctrl.pin.company">
             <span class="grid__company">
               <a ng-href="{{$ctrl.pin.companyWikiUrl}}" target="_blank" rel="noopener"
@@ -67,18 +71,19 @@
 
         <div class="grid__body">
 
-          <!-- No image to overlay the company on, so it gets its own line
-               above the date, as on the timeline card. Kept outside
-               .grid__meta, which is a flex row and would put it beside the
-               date. Location is left out: the map in the right column covers
-               it on this page. -->
-          <div class="grid__meta-line" ng-if="!$ctrl.hasImage() && $ctrl.pin.company">
-            <span class="grid__company">
+          <!-- No image to overlay the company and location on, so they get
+               their own line above the date, as on the timeline card. Kept
+               outside .grid__meta, which is a flex row and would put it beside
+               the date. -->
+          <div class="grid__meta-line"
+            ng-if="!$ctrl.hasImage() && ($ctrl.pin.company || $ctrl.showsLocationText())">
+            <span class="grid__company" ng-if="$ctrl.pin.company">
               <a ng-href="{{$ctrl.pin.companyWikiUrl}}" target="_blank" rel="noopener"
                 title="{{$ctrl.pin.companyWikiUrl ? $ctrl.pin.company + ' on Wikipedia' : ''}}">
                 {{$ctrl.pin.company}}
               </a>
             </span>
+            <span class="grid__location" ng-if="$ctrl.showsLocationText()">{{$ctrl.pin.address | locationLabel}}</span>
           </div>
 
           <div class="grid__meta">

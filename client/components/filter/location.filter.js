@@ -12,6 +12,13 @@
         if (!address) return '';
         return address.replace(COORDS, '').trim().replace(/[,;]\s*$/, '');
       };
+    })
+    // Whether the address carries coordinates, which is what pin-map needs to
+    // draw anything. A plain street address has none, so it gets no map.
+    .filter('hasCoordinates', function () {
+      return function (address) {
+        return !!address && COORDS.test(address);
+      };
     });
 
 })();
