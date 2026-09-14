@@ -21,6 +21,8 @@
     "delete:search:pins": "tsx scripts/search/index.ts --reset",
     "init:shebang": "npm run db:refresh && npm run search:refresh",
     "companies:logos": "tsx scripts/company/logos.ts",
+    "references:list": "tsx scripts/references/list.ts",
+    "references:apply": "tsx scripts/references/apply.ts",
     "specialty-days:build": "node scripts/specialtyDays/build.cjs",
     "favicon:build": "tsx scripts/favicon/build.ts"
   },
