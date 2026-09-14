@@ -197,10 +197,12 @@ export function TimeRangeSlider({
 
   return (
     <div ref={rootRef} className="floating w-64 px-3.5 pt-2.5 pb-3 text-sm">
-      <div className="flex items-start justify-between gap-2">
+      {/* With both sides, equal outer columns keep the pencil on the centre
+          line, above "Now" and the track's midpoint, whatever the labels say. */}
+      <div className={pastOnly ? 'flex items-start justify-between gap-2' : 'grid grid-cols-[1fr_auto_1fr] items-start gap-2'}>
         <button
           type="button"
-          className="text-left"
+          className="justify-self-start text-left"
           onClick={() => applySide('past', pastLabelSpan || null)}
           title={pastLabelSpan ? `Use your default (${formatSpan(pastLabelSpan)})` : pastOnly ? 'Show pins posted at any time' : 'Show all past pins'}
         >
@@ -211,7 +213,7 @@ export function TimeRangeSlider({
           <Icon name="pencil" className="size-4" />
         </button>
         {!pastOnly ? (
-          <button type="button" className="text-right" onClick={() => applySide('future', null)} title="Show all upcoming pins">
+          <button type="button" className="justify-self-end text-right" onClick={() => applySide('future', null)} title="Show all upcoming pins">
             <span className="font-semibold text-future">Future</span>
             <span className="block text-ink">{label(future)}</span>
           </button>
