@@ -45,6 +45,13 @@
     scroll-padding-top: 3.75rem;
     scrollbar-color: var(--color-raised-2) transparent;
   }
+  /* Search results pin their sort toggle under the navbar below xl; jumps to
+     a day land below both. */
+  @media (width < 80rem) {
+    html:has([data-sticky-sort]) {
+      scroll-padding-top: 6.5rem;
+    }
+  }
 
   body {
     @apply bg-page font-sans text-muted antialiased;
@@ -93,6 +100,30 @@
   /* Text inputs, selects and textareas. */
   .field {
     @apply w-full rounded-lg bg-field px-3 py-2 text-ink ring-1 ring-line transition-shadow ring-inset placeholder:text-faint focus:ring-2 focus:ring-link focus:outline-none;
+  }
+  /* Selects and suggestion inputs draw their own chevron: the native arrows sit
+     flush against the edge (select) or render as a white triangle (datalist). */
+  select.field,
+  input.field[list] {
+    @apply bg-no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238f959d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+  }
+  select.field {
+    @apply cursor-pointer appearance-none pr-10;
+  }
+  select.field:hover {
+    @apply ring-subtle/60;
+  }
+  /* Keep the datalist opener clickable, just invisible over the drawn chevron
+     (it reserves its own space, so no extra padding). */
+  input.field[list]::-webkit-calendar-picker-indicator {
+    @apply cursor-pointer opacity-0;
+  }
+  /* Date and time pickers: a muted picker icon that brightens on hover. */
+  input.field:not([list])::-webkit-calendar-picker-indicator {
+    @apply cursor-pointer opacity-60 hover:opacity-100;
   }
   .field-label {
     @apply mb-1.5 block text-sm font-medium text-muted;

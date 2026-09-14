@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { PinCard } from '@/components/pin/PinCard';
+import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import { CATEGORIES } from '@/lib/categories';
 import { api, ApiError } from '@/lib/client/api';
@@ -274,8 +275,11 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
           </button>
         </div>
 
-        <details open={showAdvanced} onToggle={(e) => setShowAdvanced((e.target as HTMLDetailsElement).open)} className="surface p-4">
-          <summary className="cursor-pointer text-sm font-medium text-muted hover:text-ink">Location, date confidence and summary</summary>
+        <details open={showAdvanced} onToggle={(e) => setShowAdvanced((e.target as HTMLDetailsElement).open)} className="group surface p-4">
+          <summary className="flex cursor-pointer list-none items-center gap-2 text-sm font-medium text-muted hover:text-ink [&::-webkit-details-marker]:hidden">
+            <Icon name="chevron" className="size-4 -rotate-90 text-subtle transition-transform group-open:rotate-0" />
+            Location, date confidence and summary
+          </summary>
           <div className="mt-3 space-y-3">
             <div>
               <label htmlFor="address" className={labelClass}>
@@ -287,7 +291,7 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
               <input aria-label="Latitude" type="number" step="any" min={-90} max={90} placeholder="Latitude" className={inputClass} value={values.latitude} onChange={(e) => set('latitude', e.target.value)} />
               <input aria-label="Longitude" type="number" step="any" min={-180} max={180} placeholder="Longitude" className={inputClass} value={values.longitude} onChange={(e) => set('longitude', e.target.value)} />
             </div>
-            <div className="grid gap-2 sm:grid-cols-[10rem_1fr]">
+            <div className="grid gap-2 sm:grid-cols-[13rem_1fr]">
               <select aria-label="Date confidence" className={inputClass} value={values.dateConfidence} onChange={(e) => set('dateConfidence', e.target.value)}>
                 <option value="">Date confidence</option>
                 {CONFIDENCE_LEVELS.map((level) => (

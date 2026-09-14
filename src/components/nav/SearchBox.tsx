@@ -5,25 +5,26 @@ import { useEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
 import { useSession } from '@/lib/client/session';
+import { useTimeZone } from '@/lib/client/timeZone';
+import { formatStart } from '@/lib/format';
 import type { PinJson } from '@/lib/types';
 
-const CHOICES = [
-  { name: 'All', value: '' },
-  { name: 'Watched', value: 'watch' },
-];
+const WATCHED = 'watch';
 
 // The navbar search: suggestions by title as you type, Enter to search, and a
-// Watched/All choice for signed-in users.
+// Watched-only toggle for signed-in users.
 export function SearchBox() {
   const router = useRouter();
   const pathname = usePathname();
   const params = useSearchParams();
   const { isLoggedIn } = useSession();
+  const timeZone = useTimeZone('UTC');
 
   const urlQuery = pathname === '/search' ? params.get('q') || '' : '';
   const urlChoice = pathname === '/search' ? params.get('f') || '' : '';
   const [text, setText] = useState(urlQuery);
   const [choice, setChoice] = useState(urlChoice);
+  const watchedOnly = choice === WATCHED;
   const [suggestions, setSuggestions] = useState<PinJson[]>([]);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(-1);
@@ -134,35 +135,38 @@ export function SearchBox() {
       </div>
 
       {isLoggedIn ? (
-        <select
-          aria-label="Search in"
-          className="shrink-0 rounded-full bg-raised px-3 text-sm text-ink ring-1 ring-line ring-inset hover:bg-raised-2 max-sm:hidden"
-          value={choice}
-          onChange={(event) => {
-            setChoice(event.target.value);
-            submit(text, event.target.value);
+        <button
+          type="button"
+          aria-pressed={watchedOnly}
+          title={watchedOnly ? 'Showing only pins you watch — click to show all' : 'Show only pins you watch'}
+          className={`flex shrink-0 items-center gap-1.5 rounded-full px-3 text-sm font-medium ring-1 transition-colors ring-inset max-sm:hidden ${
+            watchedOnly ? 'bg-accent/15 text-link ring-accent/60' : 'bg-field text-muted ring-line hover:bg-raised hover:text-ink'
+          }`}
+          onClick={() => {
+            const next = watchedOnly ? '' : WATCHED;
+            setChoice(next);
+            submit(text, next);
           }}
         >
-          {CHOICES.map((c) => (
-            <option key={c.value} value={c.value}>
-              {c.name}
-            </option>
-          ))}
-        </select>
+          <Icon name="eye" className="size-4" />
+          Watched
+        </button>
       ) : null}
 
+      {/* On phones the search box is too narrow for titles, so the list spans
+          the screen under the header, like the notifications panel. */}
       {open ? (
         <ul
           id="search-suggestions"
           role="listbox"
-          className="floating absolute top-full right-0 left-0 z-50 mt-2 max-h-96 overflow-auto p-1.5"
+          className="floating fixed inset-x-3 top-[60px] z-50 max-h-[min(28rem,calc(100dvh-5rem))] overflow-auto p-1.5 sm:absolute sm:inset-x-0 sm:top-full sm:mt-2"
         >
           {suggestions.map((pin, index) => (
             <li
               key={pin.id}
               role="option"
               aria-selected={index === active}
-              className={`flex cursor-pointer items-center gap-2.5 truncate rounded-lg px-3 py-2 text-sm text-ink ${index === active ? 'bg-raised' : ''}`}
+              className={`flex cursor-pointer items-start gap-3 rounded-lg px-3 py-2.5 text-sm ${index === active ? 'bg-raised' : ''}`}
               onMouseEnter={() => setActive(index)}
               onMouseDown={(event) => {
                 event.preventDefault();
@@ -170,8 +174,11 @@ export function SearchBox() {
                 submit(pin.title);
               }}
             >
-              <Icon name="search" className="size-3.5 shrink-0 text-faint" />
-              <span className="truncate">{pin.title}</span>
+              <Icon name="search" className="mt-0.5 size-3.5 shrink-0 text-faint" />
+              <span className="min-w-0">
+                <span className="line-clamp-2 text-ink sm:line-clamp-1">{pin.title}</span>
+                <span className="block text-xs text-subtle">{formatStart(pin, timeZone)}</span>
+              </span>
             </li>
           ))}
         </ul>

@@ -13,6 +13,27 @@ import { FloatingControls } from './FloatingControls';
 import { TimeBlock, TodayMarker } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
 
+type SortBy = 'date' | 'relevance';
+
+function SortToggle({ value, onChange, className = '' }: { value: SortBy; onChange: (value: SortBy) => void; className?: string }) {
+  return (
+    <div role="group" aria-label="Sort results by" className={`flex items-center gap-1 p-1.5 text-sm ${className}`}>
+      <span className="px-2 text-subtle">Sort by</span>
+      {(['date', 'relevance'] as const).map((option) => (
+        <button
+          key={option}
+          type="button"
+          aria-pressed={value === option}
+          onClick={() => onChange(option)}
+          className={`flex-1 rounded-lg px-2.5 py-1 font-medium capitalize transition-colors ${value === option ? 'bg-accent text-white' : 'text-muted hover:bg-raised hover:text-ink'}`}
+        >
+          {option}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 // Search results: on the timeline by date (opening on today), or ranked by
 // relevance for free-text searches.
 export function SearchResults({
@@ -33,7 +54,7 @@ export function SearchResults({
   const timeZone = useTimeZone(serverTimeZone);
   const [postedWithin, setPostedWithin] = useState<string | null>(null);
   const hasRelevance = pins.some((p) => p.searchScore != null);
-  const [sortBy, setSortBy] = useState<'date' | 'relevance'>('date');
+  const [sortBy, setSortBy] = useState<SortBy>('date');
 
   // Results are a complete set, so "posted within" filters them in place.
   const visible = useMemo(() => {
@@ -69,22 +90,7 @@ export function SearchResults({
         onToday={sortBy === 'date' && bags.length ? scrollToToday : undefined}
       >
         <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={({ past }) => setPostedWithin(past)} />
-        {hasRelevance ? (
-          <div role="group" aria-label="Sort results by" className="floating flex items-center gap-1 p-1.5 text-sm">
-            <span className="px-2 text-subtle">Sort by</span>
-            {(['date', 'relevance'] as const).map((option) => (
-              <button
-                key={option}
-                type="button"
-                aria-pressed={sortBy === option}
-                onClick={() => setSortBy(option)}
-                className={`flex-1 rounded-lg px-2.5 py-1 font-medium capitalize transition-colors ${sortBy === option ? 'bg-accent text-white' : 'text-muted hover:bg-raised hover:text-ink'}`}
-              >
-                {option}
-              </button>
-            ))}
-          </div>
-        ) : null}
+        {hasRelevance ? <SortToggle value={sortBy} onChange={setSortBy} className="floating max-xl:hidden" /> : null}
         {searchedUser ? (
           <div className="floating flex flex-col gap-3 px-3.5 py-3">
             <div className="flex items-center gap-2 font-semibold text-ink">
@@ -95,6 +101,14 @@ export function SearchResults({
           </div>
         ) : null}
       </FloatingControls>
+
+      {/* Narrower, the floating controls fold away; sorting is too important to
+          hide with them, so it gets a bar of its own pinned under the navbar. */}
+      {hasRelevance ? (
+        <div data-sticky-sort className="sticky top-[52px] z-20 -mx-3 flex justify-center bg-header/85 px-3 py-2 shadow-[0_1px_0_var(--color-line)] backdrop-blur-md lg:-mx-4 xl:hidden">
+          <SortToggle value={sortBy} onChange={setSortBy} className="w-full max-w-sm rounded-xl bg-field ring-1 ring-line ring-inset" />
+        </div>
+      ) : null}
 
       {error ? <p className="mt-16 text-center text-lg text-subtle">Search is unavailable right now. Please try again in a bit.</p> : null}
       {!error && !visible.length ? (

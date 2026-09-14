@@ -3,13 +3,98 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { Icon } from '@/components/ui/Icon';
+import { Icon, type IconName } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { useSession } from '@/lib/client/session';
 import { NotificationBell } from './NotificationBell';
 
-const linkClass = 'block rounded-lg px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-raised hover:text-ink hover:no-underline lg:py-1.5';
-const itemClass = 'block rounded-md px-3 py-2 text-sm text-ink hover:bg-raised hover:no-underline';
+const itemClass = 'flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-ink hover:bg-raised hover:no-underline';
+const itemIconClass = 'size-4 text-subtle';
+
+type MenuItem = { href: string; label: string; icon: IconName };
+
+// The account menu, in groups separated by a rule. Admin tools only for admins.
+function accountGroups(isAdmin: boolean): MenuItem[][] {
+  const groups: MenuItem[][] = [
+    [
+      { href: '/profile', label: 'Profile', icon: 'user' },
+      { href: '/search?f=watch', label: 'Watched pins', icon: 'eye' },
+      { href: '/following', label: 'Following', icon: 'users' },
+    ],
+    [
+      { href: '/preferences', label: 'Preferences', icon: 'sliders' },
+      { href: '/settings', label: 'Change password', icon: 'lock' },
+    ],
+  ];
+  if (isAdmin) {
+    groups.push([
+      { href: '/admin', label: 'Admin', icon: 'shield' },
+      { href: '/referral', label: 'Referral links', icon: 'link' },
+    ]);
+  }
+  return groups;
+}
+
+// Timeline or Map, with the current one highlighted, so it reads as a choice
+// of view rather than two unrelated links.
+function ViewSwitch({ pathname, className = '' }: { pathname: string; className?: string }) {
+  const views = [
+    { href: '/', label: 'Timeline', icon: 'timeline', current: pathname === '/' },
+    { href: '/map', label: 'Map', icon: 'map', current: pathname.startsWith('/map') },
+  ] as const;
+  return (
+    <div className={`flex rounded-full bg-field p-0.5 ring-1 ring-line ring-inset ${className}`}>
+      {views.map((view) => (
+        <Link
+          key={view.href}
+          href={view.href}
+          aria-current={view.current ? 'page' : undefined}
+          className={`flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium transition-colors hover:no-underline ${
+            view.current ? 'bg-raised-2 text-ink shadow-sm' : 'text-muted hover:text-ink'
+          }`}
+        >
+          <Icon name={view.icon} className="size-4" />
+          {view.label}
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+function MenuLinks({ groups, logoutHref }: { groups: MenuItem[][]; logoutHref: string }) {
+  return (
+    <>
+      {groups.map((group, index) => (
+        <div key={index} className="border-b border-line py-1.5">
+          {group.map((item) => (
+            <Link key={item.href} href={item.href} className={itemClass}>
+              <Icon name={item.icon} className={itemIconClass} />
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      ))}
+      <div className="py-1.5">
+        <a href={logoutHref} className={itemClass}>
+          <Icon name="logout" className={itemIconClass} />
+          Log out
+        </a>
+      </div>
+    </>
+  );
+}
+
+function SignedInAs({ userName, pictureUrl }: { userName: string; pictureUrl?: string | null }) {
+  return (
+    <div className="flex items-center gap-2.5 border-b border-line px-3 py-2.5">
+      <UserAvatar userName={userName} pictureUrl={pictureUrl} className="size-8 text-sm" />
+      <div className="min-w-0">
+        <div className="text-xs text-subtle">Signed in as</div>
+        <div className="truncate text-sm font-semibold text-ink">{userName}</div>
+      </div>
+    </div>
+  );
+}
 
 // The right side of the navbar: what a visitor can do depends on whether they
 // are signed in, so it renders on the client from the session.
@@ -19,6 +104,7 @@ export function NavMenu() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [accountOpen, setAccountOpen] = useState(false);
   const accountRef = useRef<HTMLDivElement>(null);
+  const mobileRef = useRef<HTMLDivElement>(null);
 
   const [lastPath, setLastPath] = useState(pathname);
   if (lastPath !== pathname) {
@@ -30,110 +116,113 @@ export function NavMenu() {
   useEffect(() => {
     const close = (event: MouseEvent) => {
       if (!accountRef.current?.contains(event.target as Node)) setAccountOpen(false);
+      if (!mobileRef.current?.contains(event.target as Node)) setMenuOpen(false);
+    };
+    const escape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setAccountOpen(false);
+        setMenuOpen(false);
+      }
     };
     document.addEventListener('mousedown', close);
-    return () => document.removeEventListener('mousedown', close);
+    document.addEventListener('keydown', escape);
+    return () => {
+      document.removeEventListener('mousedown', close);
+      document.removeEventListener('keydown', escape);
+    };
   }, []);
 
-  const onMap = pathname.startsWith('/map');
   const redirect = encodeURIComponent(pathname);
+  const logoutHref = `/logout?referrer=${redirect}`;
+  const groups = accountGroups(isAdmin);
 
-  const links = (
+  const guestActions =
+    !user && status === 'ready' ? (
+      <>
+        <Link href={`/login?redirect=${redirect}`} className="btn btn-ghost py-1.5">
+          Log in
+        </Link>
+        <Link href="/signup" className="btn btn-primary py-1.5">
+          Sign up
+        </Link>
+      </>
+    ) : null;
+
+  return (
     <>
-      {isAdmin ? (
-        <Link href="/admin" className={linkClass}>
-          Admin
-        </Link>
-      ) : null}
-      {onMap ? (
-        <Link href="/" className={linkClass}>
-          Timeline
-        </Link>
-      ) : (
-        <Link href="/map" className={linkClass}>
-          Map
-        </Link>
-      )}
-      {user ? (
-        <Link href="/create" className="btn btn-primary mx-3 my-1 py-1.5 max-lg:flex lg:mx-1 lg:my-0">
-          <Icon name="plus" className="size-4" />
-          Create
-        </Link>
-      ) : status === 'ready' ? (
-        <>
-          <Link href={`/login?redirect=${redirect}`} className={linkClass}>
-            Login
+      <nav aria-label="Main" className="hidden items-center gap-2 lg:flex">
+        <ViewSwitch pathname={pathname} />
+        {user ? (
+          <Link href="/create" className="btn btn-primary py-1.5">
+            <Icon name="plus" className="size-4" />
+            Create
           </Link>
-          <Link href="/signup" className="btn btn-primary mx-3 my-1 py-1.5 max-lg:flex lg:mx-1 lg:my-0">
-            Sign up
-          </Link>
-        </>
-      ) : null}
+        ) : (
+          guestActions
+        )}
+      </nav>
+
+      {user ? <NotificationBell /> : null}
+
       {user ? (
-        <div ref={accountRef} className="relative">
-          <button type="button" className={`${linkClass} flex w-full items-center gap-2`} aria-expanded={accountOpen} onClick={() => setAccountOpen((o) => !o)}>
+        <div ref={accountRef} className="relative hidden lg:block">
+          <button
+            type="button"
+            className="flex items-center gap-2 rounded-full py-1 pr-2.5 pl-1 text-sm font-medium text-muted ring-1 ring-line transition-colors ring-inset hover:bg-raised hover:text-ink"
+            aria-expanded={accountOpen}
+            onClick={() => setAccountOpen((o) => !o)}
+          >
             <span aria-hidden className="contents">
-              <UserAvatar userName={user.userName} pictureUrl={user.pictureUrl} className="size-6 text-[11px]" />
+              <UserAvatar userName={user.userName} pictureUrl={user.pictureUrl} className="size-7 text-xs" />
             </span>
-            {user.userName}
-            <Icon name="chevron" className={`size-3.5 transition-transform ${accountOpen ? 'rotate-180' : ''}`} />
+            <span className="max-w-40 truncate">{user.userName}</span>
+            <Icon name="chevron" className={`size-3.5 text-subtle transition-transform ${accountOpen ? 'rotate-180' : ''}`} />
           </button>
           {accountOpen ? (
-            <div className="z-50 mx-3 p-1.5 lg:absolute lg:right-0 lg:mx-0 lg:mt-2 lg:min-w-48 lg:rounded-xl lg:border lg:border-white/[0.07] lg:bg-panel lg:shadow-2xl lg:shadow-black/50" role="menu">
-              {isAdmin ? (
-                <Link href="/referral" className={itemClass} role="menuitem">
-                  Referral
-                </Link>
-              ) : null}
-              {/* The navbar's Watched/All choice is hidden on phones; this reaches it anywhere. */}
-              <Link href="/search?f=watch" className={itemClass} role="menuitem">
-                Watched
-              </Link>
-              <Link href="/following" className={itemClass} role="menuitem">
-                Following
-              </Link>
-              <Link href="/preferences" className={itemClass} role="menuitem">
-                Preferences
-              </Link>
-              <Link href="/settings" className={itemClass} role="menuitem">
-                Password
-              </Link>
-              <div className="my-1.5 border-t border-line" />
-              <Link href="/profile" className={itemClass} role="menuitem">
-                Profile
-              </Link>
+            <div className="floating absolute right-0 z-50 mt-2 w-60 overflow-hidden">
+              <SignedInAs userName={user.userName} pictureUrl={user.pictureUrl} />
+              <div className="px-1.5">
+                <MenuLinks groups={groups} logoutHref={logoutHref} />
+              </div>
             </div>
           ) : null}
         </div>
       ) : null}
-      {user ? (
-        <a href={`/logout?referrer=${redirect}`} className={linkClass}>
-          Logout
-        </a>
-      ) : null}
-    </>
-  );
 
-  return (
-    <>
-      {user ? <NotificationBell /> : null}
-      <nav aria-label="Main" className="hidden items-center gap-0.5 lg:flex">
-        {links}
-      </nav>
-      <button
-        type="button"
-        className="rounded-lg p-2 text-muted hover:bg-raised hover:text-ink lg:hidden"
-        aria-label="Menu"
-        aria-expanded={menuOpen}
-        onClick={() => setMenuOpen((o) => !o)}
-      >
-        <Icon name={user ? 'user' : 'menu'} className="size-6" />
-      </button>
-      {menuOpen ? (
-        <nav aria-label="Main" className="absolute top-full right-0 left-0 z-40 border-b border-line bg-header px-1 py-2 shadow-2xl shadow-black/50 lg:hidden">
-          {links}
-        </nav>
-      ) : null}
+      <div ref={mobileRef} className="lg:hidden">
+        <button
+          type="button"
+          className="flex items-center rounded-lg p-1.5 text-muted hover:bg-raised hover:text-ink"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((o) => !o)}
+        >
+          {user && !menuOpen ? (
+            <UserAvatar userName={user.userName} pictureUrl={user.pictureUrl} className="size-7 text-xs" />
+          ) : (
+            <Icon name={menuOpen ? 'close' : 'menu'} className="size-6" />
+          )}
+        </button>
+        {menuOpen ? (
+          <nav aria-label="Main" className="absolute top-full right-0 left-0 z-40 border-b border-line bg-header px-3 pt-3 pb-1.5 shadow-2xl shadow-black/50">
+            <ViewSwitch pathname={pathname} className="mb-3" />
+            {user ? (
+              <>
+                <Link href="/create" className="btn btn-primary mb-3 flex py-2">
+                  <Icon name="plus" className="size-4" />
+                  Create a pin
+                </Link>
+                <div className="-mx-3 border-t border-line">
+                  <SignedInAs userName={user.userName} pictureUrl={user.pictureUrl} />
+                </div>
+                <MenuLinks groups={groups} logoutHref={logoutHref} />
+              </>
+            ) : (
+              <div className="mb-1.5 grid grid-cols-2 gap-2 [&>a]:justify-center">{guestActions}</div>
+            )}
+          </nav>
+        ) : null}
+      </div>
     </>
   );
 }
