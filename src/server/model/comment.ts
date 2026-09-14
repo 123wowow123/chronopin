@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import * as db from '../db';
-import type { Row } from '../db';
+import type { QueryFn, Row } from '../db';
+import Notification from './notification';
 import { advanceIdSequence } from './pinShared';
 import PinUserLink from './pinUserLink';
 import User from './user';
@@ -30,8 +31,9 @@ export default class Comment extends PinUserLink {
   }
 
   // A comment that already has an id (restoring a backup) keeps it, so
-  // parentCommentId chains still resolve after a reseed.
-  async save() {
+  // parentCommentId chains still resolve after a reseed. Saving sends no
+  // notifications; post() does.
+  async save(query: QueryFn = db.query) {
     try {
       const hasId = this.id != null;
       const columns = ['text', 'userId', 'pinId', 'parentCommentId', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
@@ -47,7 +49,7 @@ export default class Comment extends PinUserLink {
         columns.unshift('id');
         values.unshift(this.id);
       }
-      const rows = await db.query(
+      const rows = await query(
         `
         INSERT INTO "Comment" (${columns.map((c) => `"${c}"`).join(', ')})
         VALUES (${values.map((_v, i) => `$${i + 1}`).join(', ')})
@@ -65,6 +67,35 @@ export default class Comment extends PinUserLink {
       console.log(`Comment '${this.id}' save err:`, err);
       throw err;
     }
+  }
+
+  // A new comment from the site: saves it and, in the same transaction, tells
+  // the author of the comment it replies to ('reply') and the pin's author
+  // ('comment'). Nobody hears about their own comment, and someone who is both
+  // gets only the reply. Resolves { comment: undefined } when the pin is gone.
+  async post(parent?: Comment) {
+    return db.transaction(async (query) => {
+      const pins = await query<{ userId: number | null }>(
+        `SELECT "userId" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`,
+        [this.pinId],
+      );
+      if (!pins.length) {
+        return { comment: undefined };
+      }
+      await this.save(query);
+
+      const actorId = Number(this.userId);
+      const notify = { actorId, pinId: this.pinId, commentId: this.id };
+      const parentAuthorId = parent?.userId == null ? null : Number(parent.userId);
+      if (parentAuthorId != null && parentAuthorId !== actorId) {
+        await Notification.create({ ...notify, userId: parentAuthorId, type: Notification.types.reply }, query);
+      }
+      const pinAuthorId = pins[0].userId == null ? null : Number(pins[0].userId);
+      if (pinAuthorId != null && pinAuthorId !== actorId && pinAuthorId !== parentAuthorId) {
+        await Notification.create({ ...notify, userId: pinAuthorId, type: Notification.types.comment }, query);
+      }
+      return { comment: this };
+    });
   }
 
   // Only the author, only while the comment is live, and only within the edit
@@ -88,14 +119,19 @@ export default class Comment extends PinUserLink {
     return { comment: this, updated };
   }
 
-  // A soft delete, by the author only.
+  // A soft delete, by the author only. It also takes back the notifications
+  // the comment sent.
   async delete() {
     const utcDeletedDateTime = new Date();
-    await db.query(`UPDATE "Comment" SET "utcDeletedDateTime" = $3 WHERE "id" = $1 AND "userId" = $2`, [
-      this.id,
-      this.userId,
-      utcDeletedDateTime,
-    ]);
+    await db.transaction(async (query) => {
+      const rows = await query(
+        `UPDATE "Comment" SET "utcDeletedDateTime" = $3 WHERE "id" = $1 AND "userId" = $2 RETURNING "id"`,
+        [this.id, this.userId, utcDeletedDateTime],
+      );
+      if (rows.length) {
+        await Notification.retractForComment(this.id, query);
+      }
+    });
     this.utcDeletedDateTime = utcDeletedDateTime;
     return { utcDeletedDateTime, comment: this };
   }

@@ -6,6 +6,8 @@ export function OAuthButtons({ handle, validate }: { handle?: string; validate?:
   function go(provider: 'google' | 'facebook') {
     if (validate && !validate()) return;
     document.cookie = handle && handle.length > 1 ? `handle=${encodeURIComponent(handle)}; path=/; max-age=600; samesite=lax` : 'handle=; path=/; max-age=0';
+    // A full navigation: /auth/* is a route handler that redirects to the provider.
+    // eslint-disable-next-line @next/next/no-location-assign-relative-destination
     window.location.href = `/auth/${provider}`;
   }
   return (

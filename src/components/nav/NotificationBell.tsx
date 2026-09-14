@@ -6,10 +6,15 @@ import { Icon } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { api } from '@/lib/client/api';
 import { timeAgo } from '@/lib/format';
+import { pinPath } from '@/lib/seo';
 
 type Notification = {
   id: number;
   type: string;
+  pinId: number | null;
+  pinTitle: string | null;
+  commentId: number | null;
+  commentText: string | null;
   utcCreatedDateTime: string;
   read: boolean;
   followingBack: boolean;
@@ -17,6 +22,12 @@ type Notification = {
 };
 
 const POLL_MS = 60_000;
+
+// Where a comment or reply notification leads: the comment on its pin page.
+function commentHref(n: Notification): string {
+  const path = pinPath({ id: n.pinId!, title: n.pinTitle ?? '' });
+  return n.commentId ? `${path}#comment-${n.commentId}` : path;
+}
 
 // The signed-in user's notifications. The count polls every minute while the
 // tab is visible; opening the list loads it and marks everything read.
@@ -109,6 +120,13 @@ export function NotificationBell() {
                           </Link>{' '}
                           started following you
                         </span>
+                      ) : n.type === 'comment' || n.type === 'reply' ? (
+                        <Link href={commentHref(n)} className="block text-ink" onClick={() => setOpen(false)}>
+                          <span className="font-semibold">{n.actor.userName}</span>{' '}
+                          {n.type === 'reply' ? 'replied to your comment on' : 'commented on'}{' '}
+                          <span className="font-semibold">{n.pinTitle}</span>
+                          {n.commentText ? <span className="mt-0.5 line-clamp-2 block text-muted">“{n.commentText}”</span> : null}
+                        </Link>
                       ) : null}
                       <time className="block text-xs text-subtle" dateTime={n.utcCreatedDateTime}>
                         {timeAgo(n.utcCreatedDateTime)}

@@ -57,7 +57,9 @@ export function SignupForm() {
         email: form.email,
         password: form.password,
       });
-      // A full load, so every page picks up the new session.
+      // A full load, so every page picks up the new session (router.push would
+      // replay the router's remembered redirect to /login).
+      // eslint-disable-next-line @next/next/no-location-assign-relative-destination
       window.location.assign('/');
     } catch (err) {
       setError(err instanceof ApiError ? err.message : 'Something went wrong, please try again.');

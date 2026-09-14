@@ -35,8 +35,9 @@ export const POST = route(async (request: NextRequest, ctx: Ctx) => {
     throw new HttpError(400, 'Comment text is required');
   }
 
+  let parent: Comment | undefined;
   if (parentCommentId) {
-    const { comment: parent } = await Comment.queryById(parentCommentId);
+    ({ comment: parent } = await Comment.queryById(parentCommentId));
     if (!parent || Number(parent.pinId) !== pinId) {
       throw new HttpError(404, 'Parent comment not found');
     }
@@ -45,7 +46,11 @@ export const POST = route(async (request: NextRequest, ctx: Ctx) => {
     }
   }
 
-  const { comment } = await new Comment({ text, parentCommentId }, user, new Pin({ id: pinId })).save();
+  // Also notifies the pin's author and, for a reply, the parent comment's author.
+  const { comment } = await new Comment({ text, parentCommentId }, user, new Pin({ id: pinId })).post(parent);
+  if (!comment) {
+    throw new HttpError(404, 'Pin not found');
+  }
   invalidatePin(pinId);
   return json(comment, 201);
 });

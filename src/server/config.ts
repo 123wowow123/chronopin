@@ -11,10 +11,18 @@ function env(name: string): string | undefined {
 
 const domain = env('DOMAIN') || '';
 
-if (!env('SESSION_SECRET') && env('NODE_ENV') === 'production' && env('NEXT_PHASE') !== 'phase-production-build') {
-  console.warn(
-    'SESSION_SECRET is not set: sessions are signed with the default secret, which is public in this repository. Set SESSION_SECRET.',
-  );
+// Development-only fallback. It is public in this repository, so anyone could
+// sign a valid token with it: a production server refuses to start on it.
+const DEV_SESSION_SECRET = 'chronopin-node-secret';
+
+if (env('NODE_ENV') === 'production' && env('NEXT_PHASE') !== 'phase-production-build') {
+  const secret = env('SESSION_SECRET');
+  if (!secret || secret === DEV_SESSION_SECRET) {
+    throw new Error(
+      `SESSION_SECRET is ${secret ? 'the public development default' : 'not set'}. ` +
+        'Set it to a long random value (e.g. `openssl rand -base64 48`) before starting in production.',
+    );
+  }
 }
 
 export const config = {
@@ -25,9 +33,7 @@ export const config = {
   port: Number(env('PORT') || 9000),
 
   secrets: {
-    // Tokens issued by the old Express server were signed with this default,
-    // so it stays the fallback until SESSION_SECRET is set everywhere.
-    session: env('SESSION_SECRET') || 'chronopin-node-secret',
+    session: env('SESSION_SECRET') || DEV_SESSION_SECRET,
   },
 
   // PostgreSQL with PostGIS. A standard connection URL; add ?sslmode=require

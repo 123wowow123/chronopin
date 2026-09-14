@@ -3,15 +3,32 @@ import type { QueryFn } from '../db';
 
 const types = {
   follow: 'follow',
+  // Someone commented on a pin you created.
+  comment: 'comment',
+  // Someone replied to your comment.
+  reply: 'reply',
 } as const;
 
 // How many the bell lists at most; older ones are still in the table.
 const DEFAULT_LIMIT = 30;
 
+// Notification rows joined to what they mention, dropping any whose actor,
+// pin or comment is gone, so the list and the unread badge always agree.
+const VISIBLE_FROM = `
+      FROM "Notification" n
+      JOIN "User" a ON a."id" = n."actorId" AND a."utcDeletedDateTime" IS NULL
+      LEFT JOIN "Pin" p ON p."id" = n."pinId"
+      LEFT JOIN "Comment" c ON c."id" = n."commentId"
+      WHERE (n."pinId" IS NULL OR (p."id" IS NOT NULL AND p."utcDeletedDateTime" IS NULL))
+        AND (n."commentId" IS NULL OR (c."id" IS NOT NULL AND c."utcDeletedDateTime" IS NULL))`;
+
 export type NotificationItem = {
   id: number;
   type: string;
   pinId: number | null;
+  pinTitle: string | null;
+  commentId: number | null;
+  commentText: string | null;
   utcCreatedDateTime: Date;
   read: boolean;
   actor: { id: number; userName: string; firstName: string; lastName: string; pictureUrl: string | null };
@@ -19,7 +36,7 @@ export type NotificationItem = {
 };
 
 // What the navbar bell shows a signed-in user. Rows are written as a side
-// effect of something else (Follow, for now), inside that action's
+// effect of something else (a follow, a comment), inside that action's
 // transaction, so each write helper takes the transaction's query function.
 export default class Notification {
   static get types() {
@@ -27,15 +44,33 @@ export default class Notification {
   }
 
   static create(
-    { userId, actorId, type, pinId }: { userId: number; actorId: number; type: string; pinId?: number | null },
+    {
+      userId,
+      actorId,
+      type,
+      pinId,
+      commentId,
+    }: { userId: number; actorId: number; type: string; pinId?: number | null; commentId?: number | null },
     query: QueryFn = db.query,
   ) {
     return query(
       `
-      INSERT INTO "Notification" ("userId", "actorId", "type", "pinId")
-      VALUES ($1, $2, $3, $4)
+      INSERT INTO "Notification" ("userId", "actorId", "type", "pinId", "commentId")
+      VALUES ($1, $2, $3, $4, $5)
       RETURNING "id"`,
-      [userId, actorId, type, pinId == null ? null : pinId],
+      [userId, actorId, type, pinId == null ? null : pinId, commentId == null ? null : commentId],
+    );
+  }
+
+  // Soft-deletes everything a comment sent (its 'comment' and 'reply'
+  // notifications), for when that comment is deleted.
+  static retractForComment(commentId: number, query: QueryFn = db.query) {
+    return query(
+      `
+      UPDATE "Notification"
+      SET "utcDeletedDateTime" = now()
+      WHERE "commentId" = $1 AND "utcDeletedDateTime" IS NULL`,
+      [commentId],
     );
   }
 
@@ -54,13 +89,16 @@ export default class Notification {
   }
 
   // Newest first, with the actor's public handle and whether the recipient
-  // follows them back (so the bell can offer "Follow back"). Notifications
-  // from users who have since been deleted are left out.
+  // follows them back (so the bell can offer "Follow back"). Pin-shaped kinds
+  // carry the pin's title and the comment's text so the bell can link to them.
+  // Notifications from users, pins or comments that have since been deleted
+  // are left out.
   static list(userId: number, limit?: string | number | null) {
     const n = Math.min(Math.max(parseInt(String(limit), 10) || DEFAULT_LIMIT, 1), 100);
     return db.query<NotificationItem>(
       `
-      SELECT n."id", n."type", n."pinId", n."utcCreatedDateTime",
+      SELECT n."id", n."type", n."pinId", p."title" AS "pinTitle",
+             n."commentId", c."text" AS "commentText", n."utcCreatedDateTime",
              n."utcReadDateTime" IS NOT NULL AS "read",
              json_build_object(
                'id', a."id",
@@ -72,9 +110,8 @@ export default class Notification {
              EXISTS (SELECT 1 FROM "Follow" f
                WHERE f."followerId" = n."userId" AND f."followeeId" = n."actorId"
                  AND f."utcDeletedDateTime" IS NULL) AS "followingBack"
-      FROM "Notification" n
-      JOIN "User" a ON a."id" = n."actorId" AND a."utcDeletedDateTime" IS NULL
-      WHERE n."userId" = $1 AND n."utcDeletedDateTime" IS NULL
+      ${VISIBLE_FROM}
+        AND n."userId" = $1 AND n."utcDeletedDateTime" IS NULL
       ORDER BY n."utcCreatedDateTime" DESC, n."id" DESC
       LIMIT $2`,
       [userId, n],
@@ -85,9 +122,8 @@ export default class Notification {
     const rows = await db.query<{ count: number }>(
       `
       SELECT COUNT(*) AS "count"
-      FROM "Notification" n
-      JOIN "User" a ON a."id" = n."actorId" AND a."utcDeletedDateTime" IS NULL
-      WHERE n."userId" = $1 AND n."utcReadDateTime" IS NULL AND n."utcDeletedDateTime" IS NULL`,
+      ${VISIBLE_FROM}
+        AND n."userId" = $1 AND n."utcReadDateTime" IS NULL AND n."utcDeletedDateTime" IS NULL`,
       [userId],
     );
     return rows[0].count;

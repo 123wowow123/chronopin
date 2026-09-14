@@ -9,6 +9,7 @@ export function Navbar() {
     <header className="sticky top-0 z-40 bg-header/85 shadow-[0_1px_0_var(--color-line)] backdrop-blur-md">
       <div className="relative flex h-[52px] items-center gap-3 px-3 sm:px-5">
         {/* A plain link, not next/link: going home reloads the page, fresh from today. */}
+        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
         <a href="/" className="group flex shrink-0 items-center gap-2 font-display text-lg font-semibold tracking-tight text-ink hover:no-underline">
           <LogoMark className="size-7 drop-shadow-[0_2px_6px_rgb(244_63_94/0.35)]" />
           <span className="max-[380px]:sr-only">Chronopin</span>

@@ -151,7 +151,9 @@ function CommentItem({
   const [draft, setDraft] = useState('');
 
   return (
-    <li>
+    // The anchor comment notifications link to (the page's scroll-padding
+    // keeps it clear of the header).
+    <li id={`comment-${node.id}`}>
       {mode === 'edit' ? (
         <form
           onSubmit={async (event) => {

@@ -15,7 +15,7 @@ Built with [Next.js](https://nextjs.org) 16 (App Router, Cache Components), Reac
    FAISS_URL=http://localhost:5050
    AZURE_STORAGE_CONNECTION_STRING=...
    ANTHROPIC_API_KEY=...      # page scraping extraction; optional
-   SESSION_SECRET=...         # JWT signing secret; defaults to the legacy value
+   SESSION_SECRET=...         # JWT signing secret; required for npm start / production
    ```
 
 4. `npm run db:refresh` (schema + seed data), `npm run search:refresh` (search index).
