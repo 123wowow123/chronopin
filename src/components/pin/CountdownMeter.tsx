@@ -35,15 +35,15 @@ export function CountdownMeter({ start, since, allDay }: { start: string; since?
   const percent = started ? 100 : !isNaN(sinceMs) && span > 0 ? Math.min(100, Math.max(0, ((now - sinceMs) / span) * 100)) : 0;
 
   return (
-    <div className={`my-3 flex items-center gap-3 rounded border px-3 py-1 text-xs ${started ? 'border-raised-2' : 'border-[#2c5d8a] bg-[#16273a]'}`}>
-      {!started ? <span className="font-bold tracking-wider text-[#8fbde8] uppercase">Starts in</span> : null}
-      <div className="relative h-1 flex-1 rounded bg-raised-2" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(percent)} aria-label={started ? 'Started' : 'Time elapsed since posted'}>
-        <div className="absolute h-full rounded bg-[#4a92d1]" style={{ width: `${percent}%` }} />
+    <div className={`my-3 flex items-center gap-3 rounded-lg border px-3 py-1.5 text-xs ${started ? 'border-line bg-panel' : 'border-future/30 bg-future/10'}`}>
+      {!started ? <span className="font-bold tracking-wider text-future uppercase">Starts in</span> : null}
+      <div className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-raised-2" role="progressbar" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(percent)} aria-label={started ? 'Started' : 'Time elapsed since posted'}>
+        <div className="absolute h-full rounded-full bg-future" style={{ width: `${percent}%` }} />
       </div>
       {started ? (
         <span className="text-subtle">Started {timeAgo(start, now)}</span>
       ) : (
-        <span className="font-mono text-sm text-[#8fbde8]">
+        <span className="font-mono text-sm text-future tabular-nums">
           {Math.floor(remaining / DAY) > 0 ? <b className="mr-1">{Math.floor(remaining / DAY)}d</b> : null}
           {[Math.floor((remaining % DAY) / HOUR), Math.floor((remaining % HOUR) / MINUTE), Math.floor((remaining % MINUTE) / SECOND)].map(pad).join(':')}
         </span>

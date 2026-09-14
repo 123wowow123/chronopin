@@ -10,7 +10,7 @@ import { FollowButton } from '@/components/pin/FollowButton';
 import { PinAdminLink } from '@/components/pin/PinAdminLink';
 import { PinCard } from '@/components/pin/PinCard';
 import { PinMapLoader } from '@/components/pin/PinMapLoader';
-import { PinMedia } from '@/components/pin/PinMedia';
+import { PinMediaFrame } from '@/components/pin/PinMedia';
 import { PinWeather } from '@/components/pin/PinWeather';
 import { RefineLink } from '@/components/pin/RefineLink';
 import { WatchButton } from '@/components/pin/WatchButton';
@@ -40,8 +40,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default function PinPage({ params }: Props) {
   return (
-    <main className="px-3 pt-4 pb-16 sm:px-6">
-      <Suspense fallback={<div className="h-[70vh] animate-pulse rounded bg-panel" aria-busy="true" />}>
+    <main className="mx-auto max-w-7xl px-4 pt-6 pb-20 sm:px-6">
+      <Suspense fallback={<div className="h-[70vh] animate-pulse rounded-xl bg-panel" aria-busy="true" />}>
         <PinContent params={params} />
       </Suspense>
     </main>
@@ -58,7 +58,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   return (
     <>
       <JsonLd data={pinJsonLd(pin)} />
-      <div className="grid gap-8 lg:grid-cols-2">
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-10">
         <article>
           <PinBodyForViewer pin={pin} />
         </article>
@@ -67,7 +67,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           {pin.latitude != null && pin.longitude != null ? (
             <div>
               {pin.address ? (
-                <p className="mb-1 flex items-center gap-1 text-sm text-muted">
+                <p className="mb-2 flex items-center gap-1.5 text-sm text-muted">
                   <Icon name="pin" className="size-4" />
                   {pin.address}
                 </p>
@@ -119,15 +119,24 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
   // The map labels the place itself; the text is only for an address it cannot draw.
   const locationText = pin.address && !hasCoordinates ? pin.address : null;
 
+  // Company and place as plain text, for a pin without a medium to label.
+  const placeRow =
+    company || locationText ? (
+      <div className="mb-2 flex flex-wrap gap-x-3 text-sm text-muted">
+        {company}
+        {locationText ? <span>{locationText}</span> : null}
+      </div>
+    ) : null;
+
   return (
     <>
-      <div className="mb-1 flex flex-wrap items-center text-[11px] text-muted">
+      <div className="mb-3 flex flex-wrap items-center text-xs text-subtle">
         {pin.category ? (
           <>
-            <RefineLink field="category" value={pin.category} className="text-inherit hover:no-underline">
+            <RefineLink field="category" value={pin.category} className="rounded-full bg-raised px-2.5 py-0.5 font-medium text-muted ring-1 ring-line ring-inset hover:text-ink hover:no-underline">
               {pin.category}
             </RefineLink>
-            <span className="px-1">/</span>
+            <span className="px-1" />
           </>
         ) : null}
         {pin.utcCreatedDateTime ? (
@@ -137,8 +146,8 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
         ) : null}
         {pin.user?.userName ? (
           <>
-            <span className="px-1">/</span>
-            <RefineLink field="user" value={pin.user.userName} className="text-inherit hover:no-underline">
+            <span className="px-1.5 text-faint" aria-hidden>·</span>
+            <RefineLink field="user" value={pin.user.userName} className="text-inherit hover:text-ink hover:no-underline">
               {pin.user.userName}
             </RefineLink>
           </>
@@ -146,24 +155,28 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
       </div>
 
       {medium ? (
-        <div className="relative mb-3 overflow-hidden rounded">
-          {locationText ? (
-            <span className="absolute top-2 right-2 z-10 rounded-full bg-black/70 px-2 py-0.5 text-xs text-white">{locationText}</span>
-          ) : null}
-          {company ? <span className="absolute bottom-2 left-2 z-10 rounded-full bg-black/70 px-2 py-0.5 text-xs text-white">{company}</span> : null}
-          <PinMedia medium={medium} title={pin.title} href={pin.sourceUrl} external priority sizes="(max-width: 1024px) 100vw, 50vw" />
-        </div>
-      ) : null}
-
-      {!medium && (company || locationText) ? (
-        <div className="mb-1 flex flex-wrap gap-x-3 text-xs text-muted">
-          {company}
-          {locationText ? <span>{locationText}</span> : null}
-        </div>
-      ) : null}
+        <PinMediaFrame
+          className="relative mb-4 overflow-hidden rounded-xl border border-line bg-black"
+          overlay={
+            <>
+              {locationText ? <span className="media-chip absolute top-3 right-3 z-10">{locationText}</span> : null}
+              {company ? <span className="media-chip absolute bottom-3 left-3 z-10">{company}</span> : null}
+            </>
+          }
+          fallback={placeRow}
+          medium={medium}
+          title={pin.title}
+          href={pin.sourceUrl}
+          external
+          priority
+          sizes="(max-width: 1024px) 100vw, 50vw"
+        />
+      ) : (
+        placeRow
+      )}
 
       {pin.utcStartDateTime ? (
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted italic">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
           <StartTime pin={pin} serverTimeZone={timeZone} allDaySuffix />
           <DateConfidence level={pin.dateConfidence} reasoning={pin.dateConfidenceReasoning} showReasoning />
         </div>
@@ -171,13 +184,13 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
 
       {pin.utcStartDateTime ? <CountdownMeter start={pin.utcStartDateTime} since={pin.utcCreatedDateTime} allDay={pin.allDay} /> : null}
 
-      <h1 className="mt-2 mb-3 flex items-start gap-2 text-2xl leading-snug">
+      <h1 className="mt-3 mb-4 flex items-start gap-2 text-3xl leading-tight font-semibold tracking-tight text-balance">
         {pin.sourceUrl ? (
           <>
-            <a href={pin.sourceUrl} target="_blank" rel="noopener" className="text-ink hover:no-underline">
+            <a href={pin.sourceUrl} target="_blank" rel="noopener" className="text-ink transition-colors hover:text-link hover:no-underline">
               {pin.title}
             </a>
-            <a href={pin.sourceUrl} target="_blank" rel="noopener" aria-label="Open the source" className="mt-1.5 text-muted">
+            <a href={pin.sourceUrl} target="_blank" rel="noopener" aria-label="Open the source" className="mt-2 shrink-0 text-subtle hover:text-link">
               <Icon name="external" className="size-4" />
             </a>
           </>
@@ -186,24 +199,24 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
         )}
       </h1>
 
-      {pin.description ? <div className="rich-text mb-1 text-[15px] font-medium text-ink" dangerouslySetInnerHTML={{ __html: safeHtml(pin.description) }} /> : null}
-      {pin.longFormSummary ? <div className="rich-text text-[15px] leading-relaxed text-ink" dangerouslySetInnerHTML={{ __html: safeHtml(pin.longFormSummary) }} /> : null}
+      {pin.description ? <div className="rich-text mb-3 text-base leading-relaxed font-medium text-ink" dangerouslySetInnerHTML={{ __html: safeHtml(pin.description) }} /> : null}
+      {pin.longFormSummary ? <div className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: safeHtml(pin.longFormSummary) }} /> : null}
 
       {pin.user?.id && pin.user.userName ? (
-        <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-raised py-3">
+        <div className="surface mt-6 flex flex-wrap items-center justify-between gap-3 px-4 py-3">
           <RefineLink field="user" value={pin.user.userName} className="flex items-center gap-2 font-semibold text-ink hover:no-underline">
-            <UserAvatar userName={pin.user.userName} pictureUrl={pin.user.pictureUrl} className="size-7 text-sm" />
+            <UserAvatar userName={pin.user.userName} pictureUrl={pin.user.pictureUrl} className="size-9 text-sm" />
             {pin.user.userName}
           </RefineLink>
           <FollowButton userId={pin.user.id} userName={pin.user.userName} showCount />
         </div>
       ) : null}
 
-      <div className="flex items-center justify-between py-2">
+      <div className="flex items-center justify-between py-3">
         <div className={pin.price != null && pin.price < 0 ? 'text-red-400' : ''}>
           {pin.price ? (
             <>
-              <span className="text-muted">Cost:</span> <span className="text-green-400">{money(pin.price, pin.priceCurrency)}</span>
+              <span className="text-subtle">Cost</span> <span className="font-semibold text-emerald-400 tabular-nums">{money(pin.price, pin.priceCurrency)}</span>
             </>
           ) : null}
         </div>
@@ -223,8 +236,8 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
                 href={merchant.url}
                 target="_blank"
                 rel="noopener nofollow sponsored"
-                className={`flex items-center gap-2 rounded px-3 py-2 text-sm font-semibold hover:no-underline ${
-                  merchant.label === 'Amazon' ? 'bg-[#ff9900] text-black' : merchant.label === 'Best Buy' ? 'bg-[#0046be] text-white' : 'bg-raised text-ink'
+                className={`btn ${
+                  merchant.label === 'Amazon' ? 'bg-[#ff9900] text-black hover:bg-[#ffad33]' : merchant.label === 'Best Buy' ? 'bg-[#0046be] text-white hover:bg-[#1257d1]' : 'btn-secondary'
                 }`}
               >
                 <Icon name={merchant.label === 'Best Buy' ? 'tag' : 'cart'} className="size-4" />
@@ -242,24 +255,24 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
 async function Thread({ pin }: { pin: PinJson }) {
   const pins = await threadPins(pin.id);
   return (
-    <section aria-labelledby="thread-heading" className="mt-6">
+    <section aria-labelledby="thread-heading" className="surface mt-6 p-5">
       <div className="flex items-baseline justify-between">
-        <h2 id="thread-heading" className="text-xl">
+        <h2 id="thread-heading" className="text-base font-semibold">
           Thread
         </h2>
         <Link href={`/respond/${pin.id}`} className="text-sm" prefetch={false}>
           Respond to this Pin
         </Link>
       </div>
-      <ol className="mt-2 space-y-1">
+      <ol className="mt-3 space-y-1">
         {pins.map((p, index) => (
           <li key={p.id}>
             <Link
               href={pinPath(p)}
               aria-current={p.id === pin.id ? 'page' : undefined}
-              className={`flex gap-4 rounded px-4 py-3 font-semibold text-ink hover:no-underline ${p.id === pin.id ? 'bg-raised' : 'hover:bg-raised/60'}`}
+              className={`flex gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:no-underline ${p.id === pin.id ? 'bg-raised ring-1 ring-line ring-inset' : 'hover:bg-raised/60'}`}
             >
-              <span className="text-muted">{index + 1}</span>
+              <span className="w-4 shrink-0 text-right text-subtle tabular-nums">{index + 1}</span>
               {p.title}
             </Link>
           </li>
@@ -279,8 +292,8 @@ async function Related({ pin }: { pin: PinJson }) {
     return null;
   }
   return (
-    <section aria-labelledby="related-heading" className="mt-12">
-      <h2 id="related-heading" className="mb-3 text-xl">
+    <section aria-labelledby="related-heading" className="mt-16 border-t border-line pt-10">
+      <h2 id="related-heading" className="mb-4 text-xl font-semibold tracking-tight">
         More like this
       </h2>
       <ul className="gap-2.5 sm:columns-2 lg:columns-3 xl:columns-4">

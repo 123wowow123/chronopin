@@ -9,6 +9,7 @@ import { dayKeyIn } from '@/lib/format';
 import { formatSpan, SPAN_OPTIONS } from '@/lib/postedSpan';
 import { buildBags, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { CardPin, DateTimeJson, TimelinePage } from '@/lib/types';
+import { FloatingControls } from './FloatingControls';
 import { TimeBlock, TodayMarker } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
 
@@ -222,8 +223,8 @@ export function Timeline({
   const phrase = (formatSpan(postedWithin) || '').replace(/^1 /, '');
 
   return (
-    <div className="px-[max(0.75rem,env(safe-area-inset-left))] pb-24 lg:px-4">
-      <div className="fixed top-[64px] right-2.5 z-30">
+    <div className="px-[max(0.75rem,env(safe-area-inset-left))] pb-24 lg:px-4 xl:pr-[288px]">
+      <FloatingControls summary={`Posted within ${formatSpan(postedWithin) || 'All'}`} onToday={scrollToToday}>
         <TimeRangeSlider
           steps={SPAN_OPTIONS}
           past={postedWithin}
@@ -231,7 +232,7 @@ export function Timeline({
           pastLabelSpan={defaultSpan}
           onChange={({ past }) => void changePostedWithin(past)}
         />
-      </div>
+      </FloatingControls>
 
       <div ref={topRef} aria-hidden className="h-px" />
 
@@ -244,7 +245,9 @@ export function Timeline({
               todayKey={todayKey}
               specialtyDays={specialtyDays[bag.day.slice(5)] || []}
               serverTimeZone={serverTimeZone}
-              firstPinPriority={index === (marker.index === -1 ? marker.todayBagIndex : marker.index)}
+              // The first bag is what paints before hydration scrolls to
+              // today, so both hold a likely LCP image.
+              firstPinPriority={index === 0 || index === (marker.index === -1 ? marker.todayBagIndex : marker.index)}
             />
           </div>
         ))}
@@ -253,21 +256,13 @@ export function Timeline({
 
       <div ref={bottomRef} aria-hidden className="h-px" />
 
-      {status === 'loading' ? <p className="mt-16 text-center text-lg text-subtle">Loading…</p> : null}
+      {status === 'loading' ? <p className="mt-16 text-center text-subtle" role="status">Loading…</p> : null}
       {status === 'error' ? <p className="mt-16 text-center text-lg text-subtle">Oops, something went wrong. Please try again in a bit...</p> : null}
       {status === 'ready' && empty ? (
         <p className="mt-16 text-center text-lg text-subtle">
           {postedWithin ? `No pins posted in the last ${phrase}.` : 'Oops, something went wrong. Please try again in a bit...'}
         </p>
       ) : null}
-
-      <button
-        type="button"
-        onClick={scrollToToday}
-        className="fixed right-2.5 bottom-2.5 z-30 rounded bg-black/85 px-3 py-1.5 text-sm text-ink shadow hover:bg-raised"
-      >
-        Today
-      </button>
     </div>
   );
 }

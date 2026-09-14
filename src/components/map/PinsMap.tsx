@@ -129,7 +129,7 @@ export default function PinsMap() {
   return (
     <div className="relative h-[calc(100dvh-52px)]">
       <div ref={canvasRef} className="absolute inset-0 z-0" />
-      <div className="absolute top-2.5 right-2.5 z-[1000]">
+      <div className="absolute top-3 right-3 z-[1000]">
         <TimeRangeSlider
           steps={MAP_SPAN_OPTIONS}
           past={past}
@@ -141,9 +141,9 @@ export default function PinsMap() {
         />
       </div>
       {status === 'loading' ? (
-        <p className="absolute bottom-6 left-1/2 z-[1000] -translate-x-1/2 rounded bg-black/80 px-3 py-1.5 text-sm text-ink">Loading pins…</p>
+        <p role="status" className="floating absolute bottom-8 left-1/2 z-[1000] -translate-x-1/2 rounded-full px-4 py-2 text-sm text-ink">Loading pins…</p>
       ) : count === 0 ? (
-        <p className="absolute bottom-6 left-1/2 z-[1000] -translate-x-1/2 rounded bg-black/80 px-3 py-1.5 text-ink">
+        <p className="floating absolute bottom-8 left-1/2 z-[1000] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink">
           No pins with a location{hasPast ? ` in the last ${phrase(past)}` : ''}
           {hasPast && hasFuture ? ' or' : ''}
           {hasFuture ? ` in the next ${phrase(future)}` : ''}.

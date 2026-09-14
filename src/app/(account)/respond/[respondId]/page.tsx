@@ -4,6 +4,10 @@ import { PinForm } from '@/components/forms/PinForm';
 import { requireViewer } from '@/server/guard';
 import { pinById } from '@/server/services/pages';
 
+// Reads the session, so it blocks per request (see ../../layout.tsx). The layout's
+// own opt-out only covers navigations into the group, not between its pages.
+export const instant = false;
+
 export const metadata: Metadata = { title: 'Respond to Pin' };
 
 export default async function RespondPage({ params }: PageProps<'/respond/[respondId]'>) {

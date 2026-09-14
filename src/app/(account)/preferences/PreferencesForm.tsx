@@ -27,12 +27,12 @@ export function PreferencesForm({ userId, initial }: { userId: number; initial: 
   }
 
   return (
-    <form onSubmit={save} className="space-y-4">
+    <form onSubmit={save} className="surface space-y-4 p-6">
       <div>
-        <label htmlFor="span" className="mb-1 block font-semibold">
+        <label htmlFor="span" className="field-label">
           Timeline filter default
         </label>
-        <select id="span" value={value} onChange={(e) => setValue(e.target.value)} className="w-full rounded bg-black px-3 py-2 text-ink ring-1 ring-raised-2">
+        <select id="span" value={value} onChange={(e) => setValue(e.target.value)} className="field">
           <option value="">No preference ({formatSpan(DEFAULT_SPAN)})</option>
           {SPAN_OPTIONS.map((span) => (
             <option key={span} value={span}>
@@ -40,11 +40,11 @@ export function PreferencesForm({ userId, initial }: { userId: number; initial: 
             </option>
           ))}
         </select>
-        <p className="mt-1 text-sm text-subtle">The span the timeline&apos;s “posted within” filter starts on.</p>
+        <p className="mt-1.5 text-sm text-subtle">The span the timeline&apos;s “posted within” filter starts on.</p>
       </div>
-      {message ? <p role="status" className="text-green-400">{message}</p> : null}
-      {error ? <p role="alert" className="text-red-400">{error}</p> : null}
-      <button type="submit" className="rounded bg-accent px-4 py-2 text-lg text-white">
+      {message ? <p role="status" className="text-sm text-emerald-400">{message}</p> : null}
+      {error ? <p role="alert" className="text-sm text-red-400">{error}</p> : null}
+      <button type="submit" className="btn btn-primary">
         Save changes
       </button>
     </form>

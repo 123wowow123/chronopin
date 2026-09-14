@@ -34,5 +34,5 @@ export default function PinMap({ latitude, longitude, title }: { latitude: numbe
     };
   }, [latitude, longitude, title]);
 
-  return <div ref={ref} className="h-[450px] w-full bg-raised" role="img" aria-label={`Map of ${title}`} />;
+  return <div ref={ref} className="h-[360px] w-full overflow-hidden rounded-xl border border-line bg-raised sm:h-[420px]" role="img" aria-label={`Map of ${title}`} />;
 }

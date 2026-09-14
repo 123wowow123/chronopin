@@ -2,10 +2,9 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { OAuthButtons } from '@/components/forms/OAuthButtons';
+import { OAuthButtons, OrDivider } from '@/components/forms/OAuthButtons';
 import { api, ApiError } from '@/lib/client/api';
 
-const inputClass = 'w-full rounded bg-black px-3 py-2 text-ink ring-1 ring-raised-2 focus:ring-link focus:outline-none';
 const HANDLE = /^[a-zA-Z0-9-_]+$/;
 
 export function SignupForm() {
@@ -69,67 +68,62 @@ export function SignupForm() {
   return (
     <form onSubmit={submit} className="space-y-4" noValidate>
       <div>
-        <label htmlFor="handle" className="mb-1 block text-sm font-semibold">
+        <label htmlFor="handle" className="field-label">
           User Handle
         </label>
-        <div className="flex items-center rounded bg-black ring-1 ring-raised-2">
-          <span className="px-3 text-muted">@</span>
-          <input id="handle" maxLength={15} className="w-full bg-transparent py-2 pr-3 text-ink focus:outline-none" value={form.handle} onChange={set('handle')} />
+        <div className="field flex items-center p-0 focus-within:ring-2 focus-within:ring-link">
+          <span className="pl-3 text-subtle">@</span>
+          <input id="handle" maxLength={15} className="w-full bg-transparent py-2 pr-3 pl-0.5 text-ink focus:outline-none focus-visible:outline-none" value={form.handle} onChange={set('handle')} />
         </div>
-        {handleValid && available === false ? <p className="text-sm text-red-400">User handle is not available</p> : null}
+        {handleValid && available === false ? <p className="mt-1.5 text-sm text-red-400">User handle is not available</p> : null}
+        {handleValid && available ? <p className="mt-1.5 text-sm text-emerald-400">@{form.handle} is available</p> : null}
       </div>
-      <p className="text-center text-sm text-subtle">Sign up using social media or the form</p>
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label htmlFor="firstName" className="mb-1 block text-sm font-semibold">
+          <label htmlFor="firstName" className="field-label">
             First Name
           </label>
-          <input id="firstName" autoComplete="given-name" className={inputClass} value={form.firstName} onChange={set('firstName')} />
+          <input id="firstName" autoComplete="given-name" className="field" value={form.firstName} onChange={set('firstName')} />
         </div>
         <div>
-          <label htmlFor="lastName" className="mb-1 block text-sm font-semibold">
+          <label htmlFor="lastName" className="field-label">
             Last Name
           </label>
-          <input id="lastName" autoComplete="family-name" className={inputClass} value={form.lastName} onChange={set('lastName')} />
+          <input id="lastName" autoComplete="family-name" className="field" value={form.lastName} onChange={set('lastName')} />
         </div>
       </div>
       <div>
-        <label htmlFor="email" className="mb-1 block text-sm font-semibold">
+        <label htmlFor="email" className="field-label">
           Email
         </label>
-        <input id="email" type="email" autoComplete="email" className={inputClass} value={form.email} onChange={set('email')} />
+        <input id="email" type="email" autoComplete="email" className="field" value={form.email} onChange={set('email')} />
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label htmlFor="password" className="mb-1 block text-sm font-semibold">
+          <label htmlFor="password" className="field-label">
             Password
           </label>
-          <input id="password" type="password" autoComplete="new-password" className={inputClass} value={form.password} onChange={set('password')} />
+          <input id="password" type="password" autoComplete="new-password" className="field" value={form.password} onChange={set('password')} />
         </div>
         <div>
-          <label htmlFor="confirmPassword" className="mb-1 block text-sm font-semibold">
+          <label htmlFor="confirmPassword" className="field-label">
             Confirm Password
           </label>
-          <input id="confirmPassword" type="password" autoComplete="new-password" className={inputClass} value={form.confirmPassword} onChange={set('confirmPassword')} />
+          <input id="confirmPassword" type="password" autoComplete="new-password" className="field" value={form.confirmPassword} onChange={set('confirmPassword')} />
         </div>
       </div>
       {submitted && problems.length ? (
-        <ul role="alert" className="list-disc pl-5 text-sm text-red-400">
+        <ul role="alert" className="list-disc space-y-0.5 rounded-lg bg-red-500/10 py-2 pr-3 pl-7 text-sm text-red-300 ring-1 ring-red-500/20 ring-inset">
           {problems.map((p) => (
             <li key={p}>{p}</li>
           ))}
         </ul>
       ) : null}
-      {error ? <p className="text-red-400">{error}</p> : null}
-      <div className="flex gap-2">
-        <button type="submit" disabled={busy} className="rounded bg-white px-4 py-2 text-lg text-black disabled:opacity-60">
-          Sign up
-        </button>
-        <Link href="/login" className="rounded bg-white px-4 py-2 text-lg text-black hover:no-underline">
-          Login
-        </Link>
-      </div>
-      <p className="text-center text-sm text-subtle">Or</p>
+      {error ? <p className="text-sm text-red-400">{error}</p> : null}
+      <button type="submit" disabled={busy} className="btn btn-primary w-full py-2.5">
+        Sign up
+      </button>
+      <OrDivider />
       <OAuthButtons
         handle={handleValid ? `@${form.handle}` : undefined}
         validate={() => {
@@ -137,6 +131,9 @@ export function SignupForm() {
           return handleValid && available !== false;
         }}
       />
+      <p className="pt-2 text-center text-sm text-subtle">
+        Already have an account? <Link href="/login">Log in</Link>
+      </p>
     </form>
   );
 }

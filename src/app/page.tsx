@@ -81,7 +81,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
         serverNow={new Date().toISOString()}
       />
       {/* Plain links through the timeline, for crawlers and anyone without JavaScript. */}
-      <nav aria-label="Timeline pages" className="flex justify-between px-4 pb-6 text-sm lg:ml-[190px] lg:max-w-[906px]">
+      <nav aria-label="Timeline pages" className="flex justify-between px-4 pb-20 text-sm lg:ml-[190px] lg:max-w-[906px]">
         {page.links.previous ? (
           <Link href={`/${page.links.previous}`} prefetch={false} rel="prev">
             ← Pins before {firstDay ? formatDayKey(firstDay) : ''}
@@ -103,7 +103,7 @@ function TimelineSkeleton() {
   return (
     <div className="px-3 pt-6 lg:pl-[190px]" aria-busy="true" aria-label="Loading timeline">
       {[0, 1, 2].map((i) => (
-        <div key={i} className="mb-3 h-72 max-w-[448px] animate-pulse rounded-lg bg-panel" />
+        <div key={i} className="mb-3 h-72 max-w-[448px] animate-pulse rounded-xl border border-line bg-panel" />
       ))}
     </div>
   );

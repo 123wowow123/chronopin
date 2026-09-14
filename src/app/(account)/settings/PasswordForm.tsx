@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { api, ApiError } from '@/lib/client/api';
 
 const MIN_LENGTH = 3;
-const inputClass = 'w-full rounded bg-black px-3 py-2 text-ink ring-1 ring-raised-2 focus:ring-link focus:outline-none';
 
 function strength(password: string) {
   let score = 0;
@@ -45,31 +44,31 @@ export function PasswordForm({ userId, userName }: { userId: number; userName: s
 
   const s = strength(form.newPassword);
   return (
-    <form onSubmit={submit} className="mx-auto max-w-md space-y-4 rounded-lg bg-panel p-6" noValidate>
-      <h1 className="text-2xl">Change password</h1>
-      <p className="text-sm text-muted">
+    <form onSubmit={submit} className="surface mx-auto max-w-md space-y-4 p-6 sm:p-8" noValidate>
+      <h1 className="text-2xl font-semibold tracking-tight">Change password</h1>
+      <p className="text-sm text-subtle">
         Enter your current password, then choose a new one for <strong>{userName}</strong>.
       </p>
       {message ? (
-        <p role="status" className="rounded bg-green-900/50 px-3 py-2 text-green-300">
+        <p role="status" className="rounded-lg bg-emerald-500/10 px-3 py-2 text-sm text-emerald-300 ring-1 ring-emerald-500/20 ring-inset">
           {message}
         </p>
       ) : null}
       <div>
-        <label htmlFor="old" className="mb-1 block text-sm font-semibold">
+        <label htmlFor="old" className="field-label">
           Current password
         </label>
-        <input id="old" type="password" autoComplete="current-password" className={inputClass} value={form.oldPassword} onChange={set('oldPassword')} />
+        <input id="old" type="password" autoComplete="current-password" className="field" value={form.oldPassword} onChange={set('oldPassword')} />
       </div>
       <div>
-        <label htmlFor="new" className="mb-1 block text-sm font-semibold">
+        <label htmlFor="new" className="field-label">
           New password
         </label>
-        <input id="new" type="password" autoComplete="new-password" className={inputClass} value={form.newPassword} onChange={set('newPassword')} />
+        <input id="new" type="password" autoComplete="new-password" className="field" value={form.newPassword} onChange={set('newPassword')} />
         {form.newPassword ? (
           <div className="mt-2 flex items-center gap-2 text-xs">
-            <div className="h-1 flex-1 rounded bg-raised-2">
-              <div className="h-full rounded bg-link" style={{ width: `${s.percent}%` }} />
+            <div className="h-1.5 flex-1 rounded-full bg-raised-2">
+              <div className="h-full rounded-full bg-link transition-[width]" style={{ width: `${s.percent}%` }} />
             </div>
             <span>{s.label}</span>
           </div>
@@ -78,17 +77,17 @@ export function PasswordForm({ userId, userName }: { userId: number; userName: s
         )}
       </div>
       <div>
-        <label htmlFor="confirm" className="mb-1 block text-sm font-semibold">
+        <label htmlFor="confirm" className="field-label">
           Confirm new password
         </label>
-        <input id="confirm" type="password" autoComplete="new-password" className={inputClass} value={form.confirmPassword} onChange={set('confirmPassword')} />
+        <input id="confirm" type="password" autoComplete="new-password" className="field" value={form.confirmPassword} onChange={set('confirmPassword')} />
       </div>
       {error ? (
-        <p role="alert" className="text-red-400">
+        <p role="alert" className="text-sm text-red-400">
           {error}
         </p>
       ) : null}
-      <button type="submit" disabled={busy} className="w-full rounded bg-accent py-2 font-semibold text-white disabled:opacity-60">
+      <button type="submit" disabled={busy} className="btn btn-primary w-full py-2.5">
         Update password
       </button>
     </form>

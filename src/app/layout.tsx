@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { IBM_Plex_Sans, Noto_Sans } from 'next/font/google';
 import localFont from 'next/font/local';
-import Script from 'next/script';
 import { Navbar } from '@/components/nav/Navbar';
 import { TimeZoneSync } from '@/components/TimeZoneSync';
 import { siteDescription, siteName, siteUrl } from '@/lib/appConfig';
@@ -47,7 +46,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
-  themeColor: '#1a1a1b',
+  themeColor: '#13161b',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -56,17 +55,17 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className="min-h-dvh">
         <a
           href="#main"
-          className="sr-only z-50 bg-black p-2 text-ink focus:not-sr-only focus:fixed focus:top-2 focus:left-2"
+          className="sr-only z-50 rounded-lg bg-accent px-3 py-2 text-white focus:not-sr-only focus:fixed focus:top-2 focus:left-2"
         >
           Skip to content
         </a>
         <Navbar />
         <div id="main">{children}</div>
         <TimeZoneSync />
-        <Script
-          id="adsense"
+        {/* A plain async script, not next/script: AdSense warns about the
+            data-nscript attribute next/script adds. React hoists it into <head>. */}
+        <script
           async
-          strategy="lazyOnload"
           crossOrigin="anonymous"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4845333369058390"
         />

@@ -13,16 +13,16 @@ export function UserList({ initialUsers }: { initialUsers: AdminUser[] }) {
     setUsers((list) => list.filter((u) => u.id !== user.id));
   }
   return (
-    <ul className="divide-y divide-raised rounded bg-panel">
+    <ul className="surface divide-y divide-line">
       {users.map((user) => (
         <li key={user.id} className="flex items-center justify-between px-4 py-3">
           <div>
             <strong className="text-ink">{[user.firstName, user.lastName].filter(Boolean).join(' ') || 'N/A'}</strong>{' '}
             <span className="text-subtle">{user.userName}</span>
             <br />
-            <span className="text-sm">{user.email}</span>
+            <span className="text-sm text-subtle">{user.email}</span>
           </div>
-          <button type="button" onClick={() => remove(user)} className="text-sm text-red-400" title="Delete user">
+          <button type="button" onClick={() => remove(user)} className="btn btn-sm btn-ghost text-red-400 hover:bg-red-500/10 hover:text-red-300" title="Delete user">
             Delete
           </button>
         </li>

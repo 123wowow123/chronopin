@@ -17,8 +17,8 @@ import { RichTextEditor } from './RichTextEditor';
 
 const CONFIDENCE_LEVELS = ['confirmed', 'scheduled', 'estimated', 'delayed', 'unknown'];
 
-const inputClass = 'w-full rounded bg-black px-2.5 py-1.5 text-ink ring-1 ring-raised-2 focus:ring-link focus:outline-none';
-const labelClass = 'mb-1 block text-sm font-semibold text-muted';
+const inputClass = 'field';
+const labelClass = 'field-label';
 
 // Create, edit or respond to a pin. Pasting a source URL reads the page and
 // fills in whatever the author has not already typed.
@@ -101,7 +101,7 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
   return (
     <form onSubmit={submit} className="mx-auto grid max-w-6xl gap-8 px-4 py-6 lg:grid-cols-[1fr_420px]" noValidate>
       <fieldset disabled={saving} className="min-w-0 space-y-4">
-        <h1 className="text-2xl">{title}</h1>
+        <h1 className="text-2xl font-semibold tracking-tight">{title}</h1>
 
         {respondTo ? (
           <div>
@@ -135,10 +135,10 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
           {scrapeError ? <p className="mt-1 text-sm text-amber-400">{scrapeError}</p> : null}
           {mode === 'edit' ? (
             <div className="mt-2 flex gap-2">
-              <button type="button" className="rounded bg-raised px-3 py-1 text-sm text-ink" onClick={() => scrape(values.sourceUrl)} disabled={scraping}>
+              <button type="button" className="btn btn-sm btn-secondary" onClick={() => scrape(values.sourceUrl)} disabled={scraping}>
                 Scrape
               </button>
-              <button type="button" className="rounded bg-raised px-3 py-1 text-sm text-ink" onClick={() => scrape(values.sourceUrl, { onlyMedia: true })} disabled={scraping}>
+              <button type="button" className="btn btn-sm btn-secondary" onClick={() => scrape(values.sourceUrl, { onlyMedia: true })} disabled={scraping}>
                 Scrape image
               </button>
             </div>
@@ -227,7 +227,7 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
               <button
                 key={label}
                 type="button"
-                className="rounded bg-raised px-2.5 text-sm text-ink"
+                className="btn btn-secondary px-3"
                 onClick={() => set('price', values.price ? String(Number(values.price) * (factor as number)) : '')}
               >
                 {label}
@@ -264,18 +264,18 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
                 value={merchant.url ?? ''}
                 onChange={(e) => set('merchants', values.merchants.map((m, i) => (i === index ? { ...m, url: e.target.value } : m)))}
               />
-              <button type="button" aria-label="Remove merchant" className="px-2 text-subtle hover:text-red-400" onClick={() => set('merchants', values.merchants.filter((_, i) => i !== index))}>
+              <button type="button" aria-label="Remove merchant" className="rounded-lg px-2 text-subtle hover:bg-red-500/10 hover:text-red-400" onClick={() => set('merchants', values.merchants.filter((_, i) => i !== index))}>
                 ✕
               </button>
             </div>
           ))}
-          <button type="button" className="text-sm text-link" onClick={() => set('merchants', [...values.merchants, { label: '', url: '' }])}>
+          <button type="button" className="btn btn-sm btn-ghost -ml-2 text-link" onClick={() => set('merchants', [...values.merchants, { label: '', url: '' }])}>
             Add a merchant
           </button>
         </div>
 
-        <details open={showAdvanced} onToggle={(e) => setShowAdvanced((e.target as HTMLDetailsElement).open)} className="rounded bg-panel p-3">
-          <summary className="cursor-pointer text-sm font-semibold text-muted">Location, date confidence and summary</summary>
+        <details open={showAdvanced} onToggle={(e) => setShowAdvanced((e.target as HTMLDetailsElement).open)} className="surface p-4">
+          <summary className="cursor-pointer text-sm font-medium text-muted hover:text-ink">Location, date confidence and summary</summary>
           <div className="mt-3 space-y-3">
             <div>
               <label htmlFor="address" className={labelClass}>
@@ -327,15 +327,15 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
         ) : null}
 
         {error ? (
-          <p role="alert" className="text-red-400">
+          <p role="alert" className="rounded-lg bg-red-500/10 px-3 py-2 text-sm text-red-300 ring-1 ring-red-500/20 ring-inset">
             {error}
           </p>
         ) : null}
-        <div className="flex justify-end gap-2 border-t border-raised pt-4">
-          <button type="button" onClick={() => router.back()} className="rounded bg-raised px-4 py-2 text-ink">
+        <div className="flex justify-end gap-2 border-t border-line pt-5">
+          <button type="button" onClick={() => router.back()} className="btn btn-secondary">
             Cancel
           </button>
-          <button type="submit" className="rounded bg-accent px-4 py-2 font-semibold text-white disabled:opacity-60" disabled={saving}>
+          <button type="submit" className="btn btn-primary px-6" disabled={saving}>
             {saving ? 'Saving…' : 'Submit'}
           </button>
         </div>
@@ -356,7 +356,7 @@ function MediaChoice({ medium, selected, onSelect }: { medium: MediumJson; selec
       type="button"
       onClick={onSelect}
       aria-pressed={selected}
-      className={`block w-full overflow-hidden rounded ring-2 ${selected ? 'ring-link' : 'ring-transparent hover:ring-raised-2'}`}
+      className={`block w-full overflow-hidden rounded-lg ring-2 transition-shadow ${selected ? 'ring-link' : 'ring-transparent hover:ring-raised-2'}`}
       title={medium.originalWidth ? `${medium.originalWidth} × ${medium.originalHeight}` : undefined}
     >
       {String(medium.type) === '1' && src ? (

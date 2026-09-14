@@ -21,7 +21,8 @@
     "delete:search:pins": "tsx scripts/search/index.ts --reset",
     "init:shebang": "npm run db:refresh && npm run search:refresh",
     "companies:logos": "tsx scripts/company/logos.ts",
-    "specialty-days:build": "node scripts/specialtyDays/build.cjs"
+    "specialty-days:build": "node scripts/specialtyDays/build.cjs",
+    "favicon:build": "tsx scripts/favicon/build.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.125.0",

@@ -171,19 +171,19 @@ export function TimeRangeSlider({
           autoComplete="off"
           onChange={(event) => setTexts((t) => ({ ...t, [side]: event.target.value }))}
           onKeyDown={(event) => event.key === 'Escape' && setPanelOpen(false)}
-          className={`min-w-0 flex-1 rounded bg-black px-2 py-1 text-sm text-ink ring-1 ${invalid[side] ? 'ring-red-500' : 'ring-raised-2'}`}
+          className={`field min-w-0 flex-1 px-2 py-1 text-sm ${invalid[side] ? 'ring-red-500' : ''}`}
         />
-        <button type="submit" className="rounded bg-accent px-2 py-1 text-sm text-white">
+        <button type="submit" className="btn btn-sm btn-primary py-1.5">
           Set
         </button>
       </form>
       <div className="mt-1.5 mb-2 flex flex-wrap gap-1">
         {steps.map((step) => (
-          <button key={step} type="button" onClick={() => applySide(side, step)} className="rounded bg-raised px-2 py-0.5 text-xs text-ink hover:bg-raised-2">
+          <button key={step} type="button" onClick={() => applySide(side, step)} className="rounded-full bg-raised px-2.5 py-0.5 text-xs text-ink ring-1 ring-line ring-inset hover:bg-raised-2">
             {formatSpan(step)}
           </button>
         ))}
-        <button type="button" onClick={() => applySide(side, null)} className="rounded bg-raised px-2 py-0.5 text-xs text-ink hover:bg-raised-2">
+        <button type="button" onClick={() => applySide(side, null)} className="rounded-full bg-raised px-2.5 py-0.5 text-xs text-ink ring-1 ring-line ring-inset hover:bg-raised-2">
           All
         </button>
       </div>
@@ -192,11 +192,11 @@ export function TimeRangeSlider({
 
   // 20px thumbs with a 36px invisible hit area.
   const thumbClass =
-    'absolute top-1/2 size-5 -translate-x-1/2 -translate-y-1/2 cursor-grab touch-none rounded-full border-2 border-white/80 shadow after:absolute after:-inset-2 after:content-[""] focus:outline-none focus-visible:ring-2 focus-visible:ring-link active:cursor-grabbing';
-  const tickClass = 'rounded px-1 py-0.5 text-[11px] text-muted hover:bg-raised hover:text-ink';
+    'absolute top-1/2 size-5 -translate-x-1/2 -translate-y-1/2 cursor-grab touch-none rounded-full border-2 border-white shadow-md shadow-black/50 transition-transform hover:scale-110 after:absolute after:-inset-2 after:content-[""] focus:outline-none focus-visible:ring-2 focus-visible:ring-link active:cursor-grabbing';
+  const tickClass = 'rounded-md px-1 py-0.5 text-[11px] text-subtle hover:bg-raised hover:text-ink';
 
   return (
-    <div ref={rootRef} className="w-64 rounded-md bg-black/85 px-3.5 pt-2 pb-3 text-sm shadow-lg backdrop-blur">
+    <div ref={rootRef} className="floating w-64 px-3.5 pt-2.5 pb-3 text-sm">
       <div className="flex items-start justify-between gap-2">
         <button
           type="button"
@@ -207,7 +207,7 @@ export function TimeRangeSlider({
           <span className="font-semibold text-past">{pastOnly ? 'Posted within' : 'Past'}</span>{' '}
           <span className={pastOnly ? 'text-ink' : 'block text-ink'}>{label(past)}</span>
         </button>
-        <button type="button" onClick={() => setPanelOpen((o) => !o)} aria-expanded={panelOpen} aria-label="Type exact values" title="Type exact values" className="-m-1.5 p-1.5 text-muted hover:text-ink">
+        <button type="button" onClick={() => setPanelOpen((o) => !o)} aria-expanded={panelOpen} aria-label="Type exact values" title="Type exact values" className="-m-1.5 rounded-md p-1.5 text-subtle hover:bg-raised hover:text-ink">
           <Icon name="pencil" className="size-4" />
         </button>
         {!pastOnly ? (
@@ -248,12 +248,12 @@ export function TimeRangeSlider({
       {/* The track is inset by the thumb's radius, so a thumb at either end
           stays inside the panel; the whole 28px-tall strip takes a press. */}
       <div className="relative h-7 cursor-pointer touch-none px-2.5" onPointerDown={startTrackDrag}>
-        <div ref={trackRef} className="relative top-1/2 h-1 -translate-y-1/2 rounded bg-raised-2">
+        <div ref={trackRef} className="relative top-1/2 h-1.5 -translate-y-1/2 rounded-full bg-raised-2">
           <div
-            className="absolute h-full rounded bg-past"
+            className="absolute h-full rounded-full bg-past"
             style={{ left: `${pastOnly ? 0 : pastPosition}%`, width: `${(pastOnly ? pastPosition : 50) - (pastOnly ? 0 : pastPosition)}%` }}
           />
-          {!pastOnly ? <div className="absolute h-full rounded bg-future" style={{ left: '50%', width: `${futurePosition - 50}%` }} /> : null}
+          {!pastOnly ? <div className="absolute h-full rounded-full bg-future" style={{ left: '50%', width: `${futurePosition - 50}%` }} /> : null}
           {!pastOnly ? <div className="absolute top-1/2 h-3 w-px -translate-y-1/2 bg-muted" style={{ left: '50%' }} /> : null}
           <div
             role="slider"
@@ -289,7 +289,7 @@ export function TimeRangeSlider({
       </div>
 
       {panelOpen ? (
-        <div className="mt-4 border-t border-raised-2 pt-3">
+        <div className="mt-3 border-t border-line pt-3">
           {panelRow('past')}
           {!pastOnly ? panelRow('future') : null}
         </div>

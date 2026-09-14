@@ -5,6 +5,10 @@ import { toJson, type PinJson } from '@/lib/types';
 import { requireViewer } from '@/server/guard';
 import Pin from '@/server/model/pin';
 
+// Reads the session, so it blocks per request (see ../../layout.tsx). The layout's
+// own opt-out only covers navigations into the group, not between its pages.
+export const instant = false;
+
 export const metadata: Metadata = { title: 'Edit Pin' };
 
 export default async function UpdatePage({ params }: PageProps<'/update/[id]'>) {

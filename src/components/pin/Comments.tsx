@@ -90,11 +90,11 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
   );
 
   return (
-    <section aria-labelledby="comments-heading" className="mt-8">
-      <h2 id="comments-heading" className="mb-2 text-base font-semibold">
+    <section aria-labelledby="comments-heading" className="surface mt-6 p-5">
+      <h2 id="comments-heading" className="mb-3 text-base font-semibold">
         Comments
       </h2>
-      <ul className="space-y-2">{tree.map(renderNode)}</ul>
+      <ul className="space-y-3">{tree.map(renderNode)}</ul>
 
       {isLoggedIn ? (
         <form
@@ -108,17 +108,17 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
             value={text}
             onChange={(event) => setText(event.target.value)}
             placeholder="Add a comment..."
-            className="w-full rounded bg-black p-2 text-ink ring-1 ring-raised-2"
+            className="field"
             rows={3}
           />
           {error ? <div className="text-sm text-red-400">{error}</div> : null}
-          <button type="submit" className="mt-1 rounded bg-accent px-3 py-1.5 text-sm text-white">
+          <button type="submit" className="btn btn-primary mt-2">
             Post
           </button>
         </form>
       ) : status === 'ready' ? (
-        <p className="mt-3 text-muted">
-          <Link href={`/login?redirect=${encodeURIComponent(`/pin/${pinId}`)}`} className="underline">
+        <p className="mt-3 text-sm text-subtle">
+          <Link href={`/login?redirect=${encodeURIComponent(`/pin/${pinId}`)}`} className="font-medium">
             Log in
           </Link>{' '}
           {comments.length ? 'to add a comment' : 'to post the first comment on this pin'}
@@ -159,12 +159,12 @@ function CommentItem({
             if (draft.trim() && (await onEdit(draft.trim()))) setMode('view');
           }}
         >
-          <textarea value={draft} onChange={(e) => setDraft(e.target.value)} className="w-full rounded bg-black p-2 text-ink ring-1 ring-raised-2" rows={2} />
-          <div className="flex justify-end gap-2">
-            <button type="button" onClick={() => setMode('view')} className="text-sm">
+          <textarea value={draft} onChange={(e) => setDraft(e.target.value)} className="field" rows={2} />
+          <div className="mt-2 flex justify-end gap-2">
+            <button type="button" onClick={() => setMode('view')} className="btn btn-sm btn-ghost">
               Cancel
             </button>
-            <button type="submit" className="rounded bg-accent px-3 py-1 text-sm text-white">
+            <button type="submit" className="btn btn-sm btn-primary">
               Save
             </button>
           </div>
@@ -177,17 +177,17 @@ function CommentItem({
           <span className="whitespace-pre-wrap text-ink">{node.text}</span>
           <span className="ml-auto flex gap-1">
             {canReply ? (
-              <button type="button" onClick={() => { setDraft(''); setMode('reply'); }} className="text-xs text-link" title="Reply">
+              <button type="button" onClick={() => { setDraft(''); setMode('reply'); }} className="rounded-md px-1.5 py-0.5 text-xs text-link hover:bg-raised" title="Reply">
                 Reply
               </button>
             ) : null}
             {canEdit ? (
-              <button type="button" onClick={() => { setDraft(node.text); setMode('edit'); }} title="Edit comment" className="text-subtle hover:text-ink">
+              <button type="button" onClick={() => { setDraft(node.text); setMode('edit'); }} title="Edit comment" className="rounded-md p-1 text-subtle hover:bg-raised hover:text-ink">
                 <Icon name="pencil" className="size-3.5" />
               </button>
             ) : null}
             {isOwn ? (
-              <button type="button" onClick={onRemove} title="Delete comment" className="text-subtle hover:text-red-400">
+              <button type="button" onClick={onRemove} title="Delete comment" className="rounded-md p-1 text-subtle hover:bg-red-500/10 hover:text-red-400">
                 <Icon name="close" className="size-3.5" />
               </button>
             ) : null}
@@ -202,18 +202,18 @@ function CommentItem({
             if (draft.trim() && (await onReply(draft.trim()))) setMode('view');
           }}
         >
-          <textarea value={draft} onChange={(e) => setDraft(e.target.value)} placeholder="Write a reply..." className="w-full rounded bg-black p-2 text-ink ring-1 ring-raised-2" rows={2} />
-          <div className="flex justify-end gap-2">
-            <button type="button" onClick={() => setMode('view')} className="text-sm">
+          <textarea value={draft} onChange={(e) => setDraft(e.target.value)} placeholder="Write a reply..." className="field" rows={2} />
+          <div className="mt-2 flex justify-end gap-2">
+            <button type="button" onClick={() => setMode('view')} className="btn btn-sm btn-ghost">
               Cancel
             </button>
-            <button type="submit" className="rounded bg-accent px-3 py-1 text-sm text-white">
+            <button type="submit" className="btn btn-sm btn-primary">
               Reply
             </button>
           </div>
         </form>
       ) : null}
-      {node.replies.length ? <ul className="mt-2 ml-8 space-y-2">{node.replies.map(renderChild)}</ul> : null}
+      {node.replies.length ? <ul className="mt-3 ml-3 space-y-3 border-l border-line pl-5">{node.replies.map(renderChild)}</ul> : null}
     </li>
   );
 }

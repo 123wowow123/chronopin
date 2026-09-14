@@ -10,7 +10,7 @@ import { useSession } from '@/lib/client/session';
 import { pinPath } from '@/lib/seo';
 import type { CardPin } from '@/lib/types';
 import { DateConfidence } from './DateConfidence';
-import { PinMedia } from './PinMedia';
+import { PinMediaFrame } from './PinMedia';
 import { RefineLink } from './RefineLink';
 import { WatchButton } from './WatchButton';
 import { WeatherIcon } from './WeatherIcon';
@@ -47,72 +47,82 @@ export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serve
     </RefineLink>
   ) : null;
 
+  // Company and place as plain text, for a pin without a medium to label.
+  const placeRow =
+    company || pin.address ? (
+      <div className="mb-1.5 flex flex-wrap items-center gap-x-3 text-xs text-muted">
+        {company}
+        {pin.address ? <span>{pin.address}</span> : null}
+      </div>
+    ) : null;
+
   return (
-    <article className="relative rounded-lg bg-panel pt-[7px] pb-[7px] transition-shadow hover:shadow-[0_1px_6px_rgba(0,0,0,0.3)]">
+    <article className="surface relative overflow-hidden pt-2.5 pb-1.5 transition-[border-color,box-shadow] hover:border-raised-2 hover:shadow-xl hover:shadow-black/30">
       <div ref={contentRef} className="relative max-h-[600px] overflow-hidden">
-        <div className="mx-2.5 flex items-center justify-between text-[10px] text-muted [&_a]:relative [&_a]:after:absolute [&_a]:after:-inset-y-2 [&_a]:after:inset-x-0 [&_a]:after:content-['']">
-          <div className="flex min-w-0 flex-wrap items-center">
+        <div className="mx-3 flex items-center justify-between text-[11px] text-subtle [&_a]:relative [&_a]:after:absolute [&_a]:after:-inset-y-2 [&_a]:after:inset-x-0 [&_a]:after:content-['']">
+          {/* A dot before every item but the first, kept on the item's line when the row wraps. */}
+          <div className="flex min-w-0 flex-wrap items-center [&>*]:whitespace-nowrap [&>*+*]:before:px-1.5 [&>*+*]:before:text-faint [&>*+*]:before:content-['·']">
             {pin.category ? (
-              <>
-                <RefineLink field="category" value={pin.category} className="text-inherit hover:no-underline">
+              <span>
+                <RefineLink field="category" value={pin.category} className="font-medium text-muted hover:text-ink hover:no-underline">
                   {pin.category}
                 </RefineLink>
-                <span className="px-1">/</span>
-              </>
+              </span>
             ) : null}
             {pin.utcCreatedDateTime ? (
-              <Link href={href} className="text-inherit hover:no-underline">
-                <PostedTime value={pin.utcCreatedDateTime} serverTimeZone={serverTimeZone} />
-              </Link>
+              <span>
+                <Link href={href} className="text-inherit hover:text-ink hover:no-underline">
+                  <PostedTime value={pin.utcCreatedDateTime} serverTimeZone={serverTimeZone} />
+                </Link>
+              </span>
             ) : null}
             {pin.user?.userName ? (
-              <>
-                <span className="px-1">/</span>
-                <RefineLink field="user" value={pin.user.userName} className="inline-flex items-center gap-1 text-inherit hover:no-underline">
+              <span className="inline-flex items-center">
+                <RefineLink field="user" value={pin.user.userName} className="inline-flex items-center gap-1 text-inherit hover:text-ink hover:no-underline">
                   {pin.user.pictureUrl ? (
                     <UserAvatar userName={pin.user.userName} pictureUrl={pin.user.pictureUrl} className="size-4 text-[8px]" />
                   ) : null}
                   {pin.user.userName}
                 </RefineLink>
-              </>
+              </span>
             ) : null}
           </div>
           {pin.parentId || pin.rootThread ? (
-            <Link href={href} title={pin.parentId ? 'Part of thread' : 'First pin in a thread'} className="text-muted">
+            <Link href={href} title={pin.parentId ? 'Part of thread' : 'First pin in a thread'} className="text-subtle hover:text-ink">
               <Icon name="thread" className="size-3.5" />
             </Link>
           ) : null}
         </div>
 
-        <h2 className="mx-2.5 mt-1 mb-2 font-display text-xl leading-snug">
-          <Link href={href} className="text-ink hover:no-underline">
+        <h2 className="mx-3 mt-1.5 mb-2.5 font-display text-[19px] leading-snug font-medium tracking-tight text-balance">
+          <Link href={href} className="text-ink transition-colors hover:text-link hover:no-underline">
             {pin.title}
           </Link>
         </h2>
 
         {medium ? (
-          <div className="relative mb-2.5">
-            {pin.address ? (
-              <span className="absolute top-2 right-2 z-10 max-w-[70%] truncate rounded-full bg-black/70 px-2 py-0.5 text-xs text-white">
-                {pin.address}
-              </span>
-            ) : null}
-            {company ? (
-              <span className="absolute bottom-2 left-2 z-10 rounded-full bg-black/70 px-2 py-0.5 text-xs text-white">{company}</span>
-            ) : null}
-            <PinMedia medium={medium} title={pin.title} href={href} priority={priority} sizes={CARD_SIZES} />
-          </div>
+          <PinMediaFrame
+            key={medium.originalUrl ?? medium.thumbName}
+            className="relative mb-3 bg-black"
+            overlay={
+              <>
+                {pin.address ? <span className="media-chip absolute top-2 right-2 z-10 max-w-[70%] truncate">{pin.address}</span> : null}
+                {company ? <span className="media-chip absolute bottom-2 left-2 z-10">{company}</span> : null}
+              </>
+            }
+            fallback={<div className="mx-3">{placeRow}</div>}
+            medium={medium}
+            title={pin.title}
+            href={href}
+            priority={priority}
+            sizes={CARD_SIZES}
+          />
         ) : null}
 
-        <div className="mx-2.5">
-          {!medium && (company || pin.address) ? (
-            <div className="mb-1 flex flex-wrap items-center gap-x-3 text-xs text-muted">
-              {company}
-              {pin.address ? <span>{pin.address}</span> : null}
-            </div>
-          ) : null}
+        <div className="mx-3">
+          {!medium ? placeRow : null}
           {pin.utcStartDateTime ? (
-            <div className="mb-1 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs text-muted italic">
+            <div className="mb-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
               <StartTime pin={pin} serverTimeZone={serverTimeZone} />
               <WeatherIcon pinId={pin.id} hasPlace={hasPlace} />
               {/* An unverified pin's reasoning only restates that nothing was found. */}
@@ -120,22 +130,22 @@ export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serve
             </div>
           ) : null}
           {pin.safeDescription ? (
-            <div className="rich-text text-[15px] leading-relaxed text-ink" dangerouslySetInnerHTML={{ __html: pin.safeDescription }} />
+            <div className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: pin.safeDescription }} />
           ) : null}
         </div>
 
         {overflowing ? (
           <Link
             href={href}
-            className="absolute right-0 bottom-0 left-0 bg-panel px-2.5 pt-0.5 text-right text-sm before:absolute before:-top-5 before:left-0 before:h-5 before:w-full before:bg-gradient-to-b before:from-transparent before:to-panel before:content-['']"
+            className="absolute right-0 bottom-0 left-0 bg-panel px-3 pt-0.5 text-right text-sm font-medium before:absolute before:-top-8 before:left-0 before:h-8 before:w-full before:bg-gradient-to-b before:from-transparent before:to-panel before:content-['']"
           >
             show more
           </Link>
         ) : null}
       </div>
 
-      <div className="mx-2.5 mt-2 grid grid-cols-[1fr_auto_1fr] items-center">
-        <div className={`text-sm ${pin.price != null && pin.price < 0 ? 'text-red-400' : 'text-green-400'}`}>
+      <div className="mx-3 mt-2.5 grid grid-cols-[1fr_auto_1fr] items-center border-t border-line pt-1.5">
+        <div className={`text-sm font-medium tabular-nums ${pin.price != null && pin.price < 0 ? 'text-red-400' : 'text-emerald-400'}`}>
           {pin.price ? money(pin.price, pin.priceCurrency) : null}
         </div>
         <div>
@@ -150,7 +160,7 @@ export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serve
         </div>
         <div className="flex items-center justify-end gap-1">
           {isAdmin ? (
-            <Link href={`/update/${pin.id}`} className="p-1 text-subtle hover:text-ink" title="Edit pin">
+            <Link href={`/update/${pin.id}`} className="rounded-md p-1.5 text-subtle hover:bg-raised hover:text-ink" title="Edit pin">
               <Icon name="pencil" className="size-4" />
             </Link>
           ) : null}

@@ -56,7 +56,7 @@ export function FollowButton({ userId, userName, showCount }: { userId: number; 
         onClick={toggle}
         disabled={busy || (isLoggedIn && !status)}
         title={status?.following ? `Unfollow ${userName}` : `Follow ${userName}`}
-        className={`group rounded-full px-4 py-1.5 text-sm font-bold disabled:opacity-60 ${status?.following ? 'bg-raised-2 text-ink hover:bg-red-900' : 'bg-red-600 text-white hover:bg-red-700'}`}
+        className={`group btn rounded-full px-4 py-1.5 ${status?.following ? 'btn-secondary hover:bg-red-950 hover:text-red-200 hover:ring-red-900' : 'btn-primary'}`}
       >
         {status?.following ? (
           <>

@@ -1,47 +1,63 @@
 @import "tailwindcss";
 
-/* The Chronopin palette: the Angular app's dark theme, as Tailwind tokens. */
+/* The Chronopin palette: a cool, low-glare dark theme, as Tailwind tokens. */
 @theme {
   --font-sans: var(--font-noto-sans), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
   --font-astro: var(--font-astro-signs);
 
-  --color-page: #222222;
-  --color-header: #1a1a1b;
-  --color-panel: #000000;
-  --color-raised: #333333;
-  --color-raised-2: #444444;
-  --color-line: #1a1a1b;
+  --color-page: #0f1115;
+  --color-header: #13161b;
+  --color-panel: #181b21;
+  --color-field: #0c0e12;
+  --color-raised: #22262d;
+  --color-raised-2: #2f343c;
+  --color-line: #272b33;
 
-  --color-ink: #d7dadc;
-  --color-muted: #bbbbbb;
-  --color-subtle: #9a9c9e;
-  --color-faint: #888888;
+  --color-ink: #e7e9ec;
+  --color-muted: #b4b9c0;
+  --color-subtle: #8f959d;
+  --color-faint: #6c727b;
 
-  --color-link: #4a92d1;
-  --color-accent: #236aa8;
+  --color-link: #7cb3f2;
+  --color-accent: #3374d0;
+  --color-accent-hover: #3f82e0;
 
-  --color-tag: #414141;
-  --color-tag-countdown: #666666;
-  --color-tag-trivia: #5a6560;
-  --color-tag-today: #75754a;
-  --color-tag-text: #ededed;
-  --color-rail: #dddddd;
-  --color-planet: #6a8db3;
-  --color-planet-ring: #90acc7;
+  --color-tag-today: var(--color-amber-400);
+  --color-tag-trivia: var(--color-emerald-400);
+  --color-rail: #373c45;
 
-  --color-past: #d19a4a;
-  --color-future: #5b95d6;
+  --color-past: #dca75c;
+  --color-future: #6aa5e8;
+
+  /* The header logo's pins jump one after another on hover. */
+  --animate-hop: hop 0.34s ease-out both;
+  @keyframes hop {
+    40% {
+      translate: 0 -5px;
+    }
+  }
 }
 
 @layer base {
   html {
     color-scheme: dark;
     scroll-padding-top: 3.75rem;
+    scrollbar-color: var(--color-raised-2) transparent;
   }
 
   body {
     @apply bg-page font-sans text-muted antialiased;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-accent) 55%, transparent);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-link);
+    outline-offset: 2px;
   }
 
   a {
@@ -57,49 +73,105 @@
 }
 
 @layer components {
-  /* A timeline tag: a label with an arrow pointing at the rail. */
-  .tag-arrow {
-    @apply relative block w-[95px] py-[5px] text-center text-sm font-bold text-tag-text shadow-[0_0_11px_rgba(0,0,0,0.35)];
+  /* Buttons. Size and colour are separate so any pairing works. */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold whitespace-nowrap transition-colors hover:no-underline disabled:cursor-not-allowed disabled:opacity-60;
   }
-  /* The arrow is a triangle as tall as its tag (whatever its line count),
-     overlapping the tag by 1px so no seam shows between them. */
-  .tag-arrow::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: calc(100% - 1px);
-    width: 15px;
-    background: var(--tag-bg);
-    clip-path: polygon(0 0, 100% 50%, 0 100%);
+  .btn-sm {
+    @apply rounded-md px-3 py-1 text-xs;
+  }
+  .btn-primary {
+    @apply bg-accent text-white hover:bg-accent-hover;
+  }
+  .btn-secondary {
+    @apply bg-raised text-ink ring-1 ring-line ring-inset hover:bg-raised-2;
+  }
+  .btn-ghost {
+    @apply text-muted hover:bg-raised hover:text-ink;
   }
 
-  /* A row of tags. Each tag sits above the one after it, so its arrow
-     overlaps the next tag. Above the cards (narrow screens) they butt up
-     against each other, the later ones padded clear of the arrow in them. */
-  .tag-row > .tag-arrow:nth-child(1) { z-index: 8; }
-  .tag-row > .tag-arrow:nth-child(2) { z-index: 7; }
-  .tag-row > .tag-arrow:nth-child(3) { z-index: 6; }
-  .tag-row > .tag-arrow:nth-child(4) { z-index: 5; }
-  .tag-row > .tag-arrow:nth-child(5) { z-index: 4; }
-  .tag-row > .tag-arrow:nth-child(6) { z-index: 3; }
-  .tag-row > .tag-arrow:nth-child(7) { z-index: 2; }
-  .tag-row > .tag-arrow:nth-child(n + 8) { z-index: 1; }
-  @media (max-width: 63.999rem) {
-    .tag-row > .tag-arrow + .tag-arrow {
-      padding-left: 14px;
+  /* Text inputs, selects and textareas. */
+  .field {
+    @apply w-full rounded-lg bg-field px-3 py-2 text-ink ring-1 ring-line transition-shadow ring-inset placeholder:text-faint focus:ring-2 focus:ring-link focus:outline-none;
+  }
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-muted;
+  }
+
+  /* A card-like block on the page, and a panel floating over content. */
+  .surface {
+    @apply rounded-xl border border-line bg-panel;
+  }
+  .floating {
+    @apply rounded-xl border border-white/[0.07] bg-panel shadow-2xl shadow-black/50;
+  }
+
+  /* A label over an image (place, company). */
+  .media-chip {
+    @apply rounded-full bg-black/60 px-2.5 py-0.5 text-xs text-white ring-1 ring-white/10 backdrop-blur-sm;
+  }
+
+  /* A timeline tag: a rounded chip, colour set by a .tag-* variant. */
+  .tag {
+    @apply relative block min-h-7 rounded-lg px-2.5 py-1 text-center text-sm leading-5 font-semibold tabular-nums ring-1 ring-inset;
+  }
+  .tag-date {
+    @apply bg-raised text-ink ring-white/[0.06];
+  }
+  .tag-countdown {
+    @apply bg-panel text-muted ring-line;
+  }
+  .tag-today {
+    @apply bg-tag-today/15 text-amber-300 ring-tag-today/30;
+  }
+  .tag-trivia {
+    @apply bg-tag-trivia/10 text-emerald-200 ring-tag-trivia/25;
+  }
+  /* A day's weekday-planet marker on the rail: a flat disc, cut out of the
+     rail by a gap of page colour. Today's is amber, like its tags. */
+  .rail-marker {
+    @apply border border-white/10 bg-panel text-link;
+    box-shadow:
+      0 0 0 4px var(--color-page),
+      0 4px 14px 4px rgb(0 0 0 / 0.35);
+  }
+  .rail-marker-today {
+    @apply border-tag-today/40 bg-tag-today/15 text-amber-300;
+  }
+  /* Where today falls between days: a dot with a soft amber halo. */
+  .today-dot {
+    @apply bg-tag-today;
+    box-shadow:
+      0 0 0 4px color-mix(in oklab, var(--color-tag-today) 22%, var(--color-page)),
+      0 0 18px 6px color-mix(in oklab, var(--color-tag-today) 30%, transparent);
+  }
+
+  /* Beside the rail, the first tag is joined to the rail's marker by a
+     hairline --tag-reach long. */
+  @media (width >= 64rem) {
+    .tag-link::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      width: var(--tag-reach, 14px);
+      height: 1px;
+      background: var(--color-rail);
+    }
+    .tag-link.tag-today::after {
+      background: color-mix(in oklab, var(--color-tag-today) 45%, transparent);
     }
   }
 
   /* HTML a pin's summary is stored as (bulleted key points). */
   .rich-text ul {
-    @apply list-disc space-y-1 pl-5;
+    @apply list-disc space-y-1 pl-5 marker:text-faint;
   }
   .rich-text ol {
-    @apply list-decimal space-y-1 pl-5;
+    @apply list-decimal space-y-1 pl-5 marker:text-faint;
   }
   .rich-text a {
-    @apply underline;
+    @apply underline decoration-link/40 underline-offset-2 hover:decoration-link;
   }
 
   /* YouTube embeds keep a 16:9 box. */
@@ -114,4 +186,32 @@
     height: 100%;
     border: 0;
   }
+}
+
+/* Leaflet's popups and controls, in the site's colours. Leaflet's stylesheet
+   is unlayered, so these are too, one element more specific than its rules. */
+html .leaflet-container {
+  @apply font-sans;
+}
+html .leaflet-container .leaflet-popup-content-wrapper,
+html .leaflet-container .leaflet-popup-tip {
+  @apply bg-panel text-ink shadow-xl shadow-black/40;
+}
+html .leaflet-container .leaflet-popup-content-wrapper {
+  @apply rounded-xl border border-line;
+}
+html .leaflet-container a.leaflet-popup-close-button {
+  @apply text-subtle hover:text-ink;
+}
+html .leaflet-container .leaflet-bar {
+  @apply overflow-hidden rounded-lg border-line shadow-lg;
+}
+html .leaflet-container .leaflet-bar a {
+  @apply border-line bg-panel text-ink hover:bg-raised;
+}
+html .leaflet-container .leaflet-control-attribution {
+  @apply bg-panel/80 text-subtle;
+}
+html .leaflet-container .leaflet-control-attribution a {
+  @apply text-muted;
 }

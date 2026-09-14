@@ -69,7 +69,7 @@ export function WatchButton({
       aria-pressed={watching}
       aria-label={`${watching ? 'Stop watching' : 'Watch this pin'} (${count} watching)`}
       title={watching ? 'Stop watching' : 'Watch this pin'}
-      className={`inline-flex items-center gap-1 rounded px-2 py-1 text-sm ${watching ? 'text-link' : 'text-subtle hover:text-ink'}`}
+      className={`inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-sm tabular-nums transition-colors ${watching ? 'bg-accent/15 text-link' : 'text-subtle hover:bg-raised hover:text-ink'}`}
     >
       <Icon name="eye" className="size-4" />
       <span>{count}</span>

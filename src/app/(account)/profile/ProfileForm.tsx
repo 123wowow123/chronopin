@@ -7,7 +7,6 @@ import { api, ApiError } from '@/lib/client/api';
 import { refreshSession } from '@/lib/client/session';
 import type { SessionUser } from '@/lib/types';
 
-const inputClass = 'w-full rounded bg-black px-3 py-2 text-ink ring-1 ring-raised-2 focus:ring-link focus:outline-none';
 
 export function ProfileForm({ user }: { user: SessionUser }) {
   const router = useRouter();
@@ -65,58 +64,58 @@ export function ProfileForm({ user }: { user: SessionUser }) {
   }
 
   return (
-    <div className="space-y-6">
-      <div>
-        <span className="mb-2 block font-semibold">Picture</span>
+    <div className="space-y-4">
+      <div className="surface p-6">
+        <span className="field-label mb-3">Picture</span>
         <div className="flex items-center gap-4">
           <UserAvatar userName={user.userName} pictureUrl={pictureUrl} className="size-20 text-3xl" />
           <div>
-            <label className={`inline-block cursor-pointer rounded bg-raised px-3 py-1.5 text-ink ${pictureBusy ? 'opacity-50' : ''}`}>
+            <label className={`btn btn-secondary cursor-pointer ${pictureBusy ? 'opacity-50' : ''}`}>
               {pictureUrl ? 'Change picture' : 'Upload picture'}
               <input ref={fileRef} type="file" accept="image/*" className="sr-only" disabled={pictureBusy} onChange={(e) => e.target.files?.[0] && upload(e.target.files[0])} />
             </label>
             {pictureUrl ? (
-              <button type="button" onClick={removePicture} disabled={pictureBusy} className="ml-2 text-sm text-link">
+              <button type="button" onClick={removePicture} disabled={pictureBusy} className="btn btn-ghost ml-1">
                 Remove
               </button>
             ) : null}
-            <p className={`mt-1 text-sm ${pictureError ? 'text-red-400' : 'text-subtle'}`}>
+            <p className={`mt-2 text-sm ${pictureError ? 'text-red-400' : 'text-subtle'}`}>
               {pictureError || 'Shown on your pins and comments. JPEG, PNG or GIF, up to 5 MB.'}
             </p>
           </div>
         </div>
       </div>
 
-      <form onSubmit={save} className="space-y-4" noValidate>
+      <form onSubmit={save} className="surface space-y-4 p-6" noValidate>
         <div>
-          <label htmlFor="handle" className="mb-1 block font-semibold">
+          <label htmlFor="handle" className="field-label">
             User Handle
           </label>
-          <input id="handle" readOnly className={`${inputClass} opacity-70`} value={user.userName} />
+          <input id="handle" readOnly className="field text-subtle" value={user.userName} />
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
-            <label htmlFor="firstName" className="mb-1 block font-semibold">
+            <label htmlFor="firstName" className="field-label">
               First Name
             </label>
-            <input id="firstName" className={inputClass} value={form.firstName} onChange={set('firstName')} />
+            <input id="firstName" className="field" value={form.firstName} onChange={set('firstName')} />
           </div>
           <div>
-            <label htmlFor="lastName" className="mb-1 block font-semibold">
+            <label htmlFor="lastName" className="field-label">
               Last Name
             </label>
-            <input id="lastName" className={inputClass} value={form.lastName} onChange={set('lastName')} />
+            <input id="lastName" className="field" value={form.lastName} onChange={set('lastName')} />
           </div>
         </div>
         <div>
-          <label htmlFor="email" className="mb-1 block font-semibold">
+          <label htmlFor="email" className="field-label">
             Email
           </label>
-          <input id="email" type="email" className={inputClass} value={form.email} onChange={set('email')} />
+          <input id="email" type="email" className="field" value={form.email} onChange={set('email')} />
         </div>
-        {message ? <p role="status" className="text-green-400">{message}</p> : null}
-        {error ? <p role="alert" className="text-red-400">{error}</p> : null}
-        <button type="submit" className="rounded bg-accent px-4 py-2 text-lg text-white">
+        {message ? <p role="status" className="text-sm text-emerald-400">{message}</p> : null}
+        {error ? <p role="alert" className="text-sm text-red-400">{error}</p> : null}
+        <button type="submit" className="btn btn-primary">
           Save changes
         </button>
       </form>

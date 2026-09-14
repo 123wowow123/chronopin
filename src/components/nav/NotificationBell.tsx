@@ -77,27 +77,27 @@ export function NotificationBell() {
 
   return (
     <div ref={rootRef} className="relative">
-      <button type="button" onClick={toggle} aria-expanded={open} aria-label={label} title="Notifications" className="relative p-2 text-muted hover:text-ink">
+      <button type="button" onClick={toggle} aria-expanded={open} aria-label={label} title="Notifications" className="relative rounded-lg p-2 text-muted hover:bg-raised hover:text-ink">
         <Icon name="bell" className="size-5" />
         {count ? (
-          <span className="absolute top-0.5 right-0.5 min-w-4 rounded-full bg-red-600 px-1 text-center text-[10px] leading-4 font-bold text-white">
+          <span className="absolute top-1 right-1 min-w-4 rounded-full bg-red-500 px-1 text-center text-[10px] leading-4 font-bold text-white ring-2 ring-header">
             {count > 9 ? '9+' : count}
           </span>
         ) : null}
       </button>
       {open ? (
-        <div className="absolute right-0 z-50 mt-1 w-80 rounded border border-raised bg-header shadow-xl" role="menu">
-          <div className="border-b border-raised px-3 py-2 text-sm font-semibold text-ink">Notifications</div>
+        <div className="floating fixed inset-x-3 top-[60px] z-50 overflow-hidden sm:absolute sm:inset-x-auto sm:top-auto sm:right-0 sm:mt-2 sm:w-80" role="menu">
+          <div className="border-b border-line px-4 py-2.5 text-sm font-semibold text-ink">Notifications</div>
           {items === null ? (
-            <div className="px-3 py-4 text-sm text-subtle">Loading…</div>
+            <div className="px-4 py-6 text-center text-sm text-subtle">Loading…</div>
           ) : items.length === 0 ? (
-            <div className="px-3 py-4 text-sm text-subtle">No new notifications available at this time.</div>
+            <div className="px-4 py-6 text-center text-sm text-subtle">No new notifications available at this time.</div>
           ) : (
             <ul className="max-h-96 overflow-auto">
               {items.map((n) => {
                 const handle = n.actor.userName.replace(/^@+/, '');
                 return (
-                  <li key={n.id} className={`flex items-center gap-2 px-3 py-2 text-sm ${n.read ? '' : 'bg-raised/60'}`} role="menuitem">
+                  <li key={n.id} className={`flex items-center gap-3 px-4 py-2.5 text-sm ${n.read ? '' : 'bg-accent/10'}`} role="menuitem">
                     <Link href={`/search?q=user:${encodeURIComponent(handle)}`} onClick={() => setOpen(false)}>
                       <UserAvatar userName={n.actor.userName} pictureUrl={n.actor.pictureUrl} className="size-8 text-sm" />
                     </Link>
@@ -122,7 +122,7 @@ export function NotificationBell() {
                           type="button"
                           disabled={pending[n.actor.id]}
                           onClick={() => followBack(n)}
-                          className="rounded-full bg-red-600 px-3 py-1 text-xs font-bold text-white disabled:opacity-50"
+                          className="btn btn-sm btn-primary rounded-full"
                         >
                           Follow back
                         </button>

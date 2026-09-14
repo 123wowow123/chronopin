@@ -81,5 +81,5 @@ export function RichTextEditor({ value, onChange, placeholder }: { value: string
     }
   }, [value]);
 
-  return <div id={holderId} className="min-h-40 rounded bg-black px-3 py-2 text-ink ring-1 ring-raised-2" />;
+  return <div id={holderId} className="field min-h-40 focus-within:ring-2 focus-within:ring-link" />;
 }

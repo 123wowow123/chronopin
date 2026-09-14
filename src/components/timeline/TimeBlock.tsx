@@ -5,23 +5,22 @@ import type { Bag } from '@/lib/timeline';
 import { PinCard } from '@/components/pin/PinCard';
 
 // Beside the rail (lg) tags are a fixed-width column; above the cards on
-// narrow screens they share one row.
-const tagBase = 'tag-arrow shrink-0 overflow-visible max-lg:w-auto max-lg:min-w-0 max-lg:flex-1';
+// narrow screens they share one row, extra tags (date markers, specialty days)
+// shrinking into what the date and countdown leave so the date is never cut short.
+const tagBase = 'tag lg:w-full';
+const leadTag = 'shrink-0';
+const extraTag = 'min-w-0';
+const tagRow = 'absolute top-0 right-0 left-0 flex gap-1.5 overflow-hidden lg:right-auto lg:w-[110px] lg:flex-col lg:overflow-visible';
 
-function Tag({ bg, children, title, className = '' }: { bg: string; children: React.ReactNode; title?: string; className?: string }) {
+type TagVariant = 'date' | 'countdown' | 'today' | 'trivia';
+
+function Tag({ variant, children, title, className = '' }: { variant: TagVariant; children: React.ReactNode; title?: string; className?: string }) {
   return (
-    <div className={`${tagBase} ${className}`} style={{ background: bg, ['--tag-bg' as string]: bg }} title={title}>
-      <span className="block truncate px-1 leading-[1.1]">{children}</span>
+    <div className={`${tagBase} tag-${variant} ${className}`} title={title}>
+      <span className="block truncate">{children}</span>
     </div>
   );
 }
-
-export const TAG_COLORS = {
-  date: 'var(--color-tag)',
-  countdown: 'var(--color-tag-countdown)',
-  today: 'var(--color-tag-today)',
-  trivia: 'var(--color-tag-trivia)',
-};
 
 // One calendar day on the timeline: its tags (date, countdown, date markers,
 // specialty day) beside or above its cards.
@@ -40,36 +39,38 @@ export function TimeBlock({
 }) {
   const isToday = bag.day === todayKey;
   const planet = weekdayPlanet(bag.day);
+  const tagsHeight = 26 + 42 * (2 + bag.dateTimes.length + (specialtyDays.length ? 1 : 0));
 
   return (
-    <section id={`day-${bag.day}`} aria-label={formatDayKey(bag.day)} className="relative mt-2.5 pt-12 lg:pt-0">
+    <section id={`day-${bag.day}`} aria-label={formatDayKey(bag.day)} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:pt-0">
       <div
-        className="absolute top-[23px] left-[140px] z-10 -ml-4 hidden size-[35px] items-center justify-center rounded-full border-[3px] border-planet-ring bg-planet text-lg leading-none text-white lg:flex"
+        className={`rail-marker absolute top-6 left-[140px] z-10 -ml-4 hidden size-8 items-center justify-center rounded-full text-base leading-none lg:flex ${isToday ? 'rail-marker-today' : ''}`}
         title={`${planet.planet}\n${planet.weekday}`}
       >
-        <span className="font-astro opacity-80" aria-hidden>
+        <span className="font-astro" aria-hidden>
           {planet.glyph}
         </span>
         <span className="sr-only">{planet.weekday}</span>
       </div>
 
-      <div className="tag-row absolute top-0 right-0 left-0 flex overflow-hidden lg:top-[23px] lg:right-auto lg:w-[110px] lg:flex-col lg:gap-1.5 lg:overflow-visible">
-        <Tag bg={isToday ? TAG_COLORS.today : TAG_COLORS.date}>
+      <div className={`${tagRow} lg:top-[26px]`}>
+        <Tag variant={isToday ? 'today' : 'date'} className={`${leadTag} tag-link`}>
           <time dateTime={bag.day}>{formatDayKey(bag.day)}</time>
         </Tag>
-        <Tag bg={isToday ? TAG_COLORS.today : TAG_COLORS.countdown} title={timespan(todayKey, bag.day)}>
+        <Tag variant={isToday ? 'today' : 'countdown'} title={timespan(todayKey, bag.day)} className={leadTag}>
           {timespan(todayKey, bag.day, 'y')}
         </Tag>
-        {bag.dateTimes.map((dt) => (
-          <Tag key={dt.id} bg={TAG_COLORS.trivia} title={dt.description || dt.title}>
+        {/* On phones only the first extra tag fits beside the date and countdown; the rest show from sm up. */}
+        {bag.dateTimes.map((dt, i) => (
+          <Tag key={dt.id} variant="trivia" title={dt.description || dt.title} className={`${extraTag} ${i > 0 ? 'max-sm:hidden' : ''}`}>
             {dt.title}
           </Tag>
         ))}
-        {specialtyDays.length ? <SpecialtyTag names={specialtyDays} /> : null}
+        {specialtyDays.length ? <SpecialtyTag names={specialtyDays} className={bag.dateTimes.length ? 'max-sm:hidden' : ''} /> : null}
       </div>
 
       {bag.pins.length ? (
-        <ul className="gap-2.5 sm:columns-2 lg:ml-[170px] lg:max-w-[906px]" style={{ minHeight: `${23 + 42 * (2 + bag.dateTimes.length + (specialtyDays.length ? 1 : 0))}px` }}>
+        <ul className="gap-2.5 sm:columns-2 lg:ml-[170px] lg:max-w-[906px]" style={{ minHeight: `${tagsHeight}px` }}>
           {bag.pins.map((pin, i) => (
             <li key={pin.id} id={`pin-${pin.id}`} className="mb-2.5 break-inside-avoid">
               <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={firstPinPriority && i === 0} />
@@ -79,11 +80,11 @@ export function TimeBlock({
       ) : (
         <ul
           className="min-h-[120px] lg:ml-[170px]"
-          style={{ minHeight: `max(120px, ${23 + 42 * (2 + bag.dateTimes.length + (specialtyDays.length ? 1 : 0))}px)` }}
+          style={{ minHeight: `max(120px, ${tagsHeight}px)` }}
         >
           {bag.dateTimes.map((dt) => (
             <li key={dt.id} className="pb-px">
-              <div className="font-bold text-subtle">{dt.title}</div>
+              <div className="font-semibold text-muted">{dt.title}</div>
               {dt.description ? <div className="mb-2 text-subtle">{dt.description}</div> : null}
             </li>
           ))}
@@ -95,25 +96,21 @@ export function TimeBlock({
 
 // The day's first specialty day ("National Peanut Day"); the title lists them
 // all. Wraps to three lines, so it ends the stack.
-export function SpecialtyTag({ names }: { names: string[] }) {
+export function SpecialtyTag({ names, className = '' }: { names: string[]; className?: string }) {
   return (
-    <div
-      className={`${tagBase} lg:text-xs`}
-      style={{ background: TAG_COLORS.trivia, ['--tag-bg' as string]: TAG_COLORS.trivia }}
-      title={names.join('\n')}
-    >
-      <span className="block truncate px-1 leading-[1.1] lg:line-clamp-3 lg:leading-[1.2] lg:whitespace-normal">{names[0]}</span>
+    <div className={`${tagBase} tag-trivia ${extraTag} lg:text-xs lg:leading-4 ${className}`} title={names.join('\n')}>
+      <span className="block truncate lg:line-clamp-3 lg:whitespace-normal">{names[0]}</span>
     </div>
   );
 }
 
 export function TodayMarker({ specialtyDays }: { specialtyDays: string[] }) {
   return (
-    <div className="relative mt-2.5 pt-10 lg:min-h-[36px] lg:pt-0">
-      <div className="absolute top-[4px] left-[140px] z-10 -ml-[9px] hidden size-[18px] rounded-full border-2 border-tag-today bg-tag-today/60 lg:block" />
-      <div className="tag-row absolute top-0 right-0 left-0 flex lg:right-auto lg:w-[110px] lg:flex-col lg:gap-1.5">
-        <div id="today-marker" className={tagBase} style={{ background: TAG_COLORS.today, ['--tag-bg' as string]: TAG_COLORS.today }}>
-          TODAY
+    <div className="relative mt-2.5 pt-10 max-lg:mt-6 lg:min-h-[36px] lg:pt-0">
+      <div className="today-dot absolute top-[7px] left-[140px] z-10 -ml-[7px] hidden size-3.5 rounded-full lg:block" />
+      <div className={tagRow}>
+        <div id="today-marker" className={`${tagBase} ${leadTag} tag-today tag-link uppercase tracking-wider lg:text-xs`} style={{ ['--tag-reach' as string]: '23px' }}>
+          Today
         </div>
         {specialtyDays.length ? <SpecialtyTag names={specialtyDays} /> : null}
       </div>
