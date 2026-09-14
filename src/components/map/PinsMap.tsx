@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import { TILE_ATTRIBUTION, TILE_URL } from '@/components/pin/PinMap';
 import { TimeRangeSlider } from '@/components/timeline/TimeRangeSlider';
 import { parseLinkHeader } from '@/lib/client/api';
-import { formatSpan, offsetDate } from '@/lib/postedSpan';
+import { SPAN_OPTIONS, formatSpan, offsetDate } from '@/lib/postedSpan';
 import { pinPath } from '@/lib/seo';
 import type { PinJson } from '@/lib/types';
 
@@ -28,7 +28,6 @@ function pinIcon(isPast: boolean) {
     html: PIN_SVG,
     iconSize: [24, 36],
     iconAnchor: [12, 36],
-    popupAnchor: [0, -32],
   });
 }
 
@@ -39,29 +38,36 @@ function localStart(pin: PinJson) {
 
 const escapeHtml = (text: string) => text.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
-// Every pin with a location between the past and future windows around now.
+// Every pin with a location between the past and future windows around now,
+// optionally narrowed to those posted recently (as the timeline's filter).
 export default function PinsMap() {
   const canvasRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<L.Map | null>(null);
   const layerRef = useRef<L.LayerGroup | null>(null);
   const [past, setPast] = useState<string | null>(DEFAULT_SPAN);
   const [future, setFuture] = useState<string | null>(DEFAULT_SPAN);
+  const [postedWithin, setPostedWithin] = useState<string | null>(null);
   const [status, setStatus] = useState<'loading' | 'ready'>('loading');
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     const map = L.map(canvasRef.current!, { center: DEFAULT_CENTER, zoom: DEFAULT_ZOOM });
     L.tileLayer(TILE_URL, { maxZoom: 19, attribution: TILE_ATTRIBUTION }).addTo(map);
+    mapRef.current = map;
     layerRef.current = L.layerGroup().addTo(map);
     return () => {
       map.remove();
+      mapRef.current = null;
       layerRef.current = null;
     };
   }, []);
 
   useEffect(() => {
     let cancelled = false;
+    const map = mapRef.current;
     const layer = layerRef.current;
-    if (!layer) return;
+    if (!map || !layer) return;
+    map.closePopup();
     layer.clearLayers();
     setStatus('loading');
     setCount(0);
@@ -77,11 +83,33 @@ export default function PinsMap() {
         const start = new Date(pin.utcStartDateTime);
         if ((pastBoundary && start < pastBoundary) || (futureBoundary && start > futureBoundary)) continue;
         seen.add(pin.id);
-        L.marker([pin.latitude, pin.longitude], { icon: pinIcon(localStart(pin) <= now), title: pin.title })
-          .bindPopup(
+        const marker = L.marker([pin.latitude, pin.longitude], { icon: pinIcon(localStart(pin) <= now), title: pin.title });
+        // Opens on hover, and stays open while the pointer moves from the marker
+        // onto the popup so its link can be clicked. Not bindPopup: its click
+        // handler toggles, which would close a hover-opened popup (and a tap's
+        // emulated mouseover). No autoPan: panning under the pointer ends the hover.
+        // A standalone popup ignores the icon's popupAnchor: offset is Leaflet's
+        // default [0, 7] plus the 32px up to the pin's head.
+        const popup = L.popup({ autoPan: false, closeButton: false, offset: [0, -25] })
+          .setLatLng(marker.getLatLng())
+          .setContent(
             `<a href="${pinPath(pin)}" style="font-weight:600">${escapeHtml(pin.title)}</a>${pin.address ? `<br>${escapeHtml(pin.address)}` : ''}`,
-          )
-          .addTo(layer);
+          );
+        let closeTimer: ReturnType<typeof setTimeout> | undefined;
+        const open = () => {
+          clearTimeout(closeTimer);
+          map.openPopup(popup);
+          const el = popup.getElement()!;
+          el.onmouseenter = () => clearTimeout(closeTimer);
+          el.onmouseleave = closeSoon;
+        };
+        const closeSoon = () => {
+          clearTimeout(closeTimer);
+          closeTimer = setTimeout(() => {
+            if (!cancelled) map.closePopup(popup);
+          }, 200);
+        };
+        marker.on({ mouseover: open, mouseout: closeSoon, click: open }).addTo(layer);
       }
       setCount(seen.size);
     };
@@ -108,7 +136,8 @@ export default function PinsMap() {
 
     (async () => {
       try {
-        const { page, links } = await fetchPage('');
+        // Later pages' links carry the resolved cutoff, so only the first names the span.
+        const { page, links } = await fetchPage(postedWithin ? `?created_within=${encodeURIComponent(postedWithin)}` : '');
         if (cancelled) return;
         plot(page.pins);
         await Promise.all([walk('next', links.next, futureBoundary), walk('previous', links.previous, pastBoundary)]);
@@ -120,7 +149,7 @@ export default function PinsMap() {
     return () => {
       cancelled = true;
     };
-  }, [past, future]);
+  }, [past, future, postedWithin]);
 
   const phrase = (span: string | null) => (formatSpan(span) || '').replace(/^1 /, '');
   const hasPast = !!past && past !== '0d';
@@ -131,7 +160,7 @@ export default function PinsMap() {
     // must stay inside the map, under the navbar's menus and panels.
     <div className="relative isolate h-[calc(100dvh-52px)]">
       <div ref={canvasRef} className="absolute inset-0 z-0" />
-      <div className="absolute top-3 right-3 z-[1000]">
+      <div className="absolute top-3 right-3 z-[1000] flex flex-col gap-2">
         <TimeRangeSlider
           steps={MAP_SPAN_OPTIONS}
           past={past}
@@ -141,6 +170,7 @@ export default function PinsMap() {
             setFuture(value.future);
           }}
         />
+        <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={(value) => setPostedWithin(value.past)} />
       </div>
       {status === 'loading' ? (
         <p role="status" className="floating absolute bottom-8 left-1/2 z-[1000] -translate-x-1/2 rounded-full px-4 py-2 text-sm text-ink">Loading pins…</p>
@@ -148,7 +178,8 @@ export default function PinsMap() {
         <p className="floating absolute bottom-8 left-1/2 z-[1000] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink">
           No pins with a location{hasPast ? ` in the last ${phrase(past)}` : ''}
           {hasPast && hasFuture ? ' or' : ''}
-          {hasFuture ? ` in the next ${phrase(future)}` : ''}.
+          {hasFuture ? ` in the next ${phrase(future)}` : ''}
+          {postedWithin ? `, posted in the last ${phrase(postedWithin)}` : ''}.
         </p>
       ) : null}
     </div>
