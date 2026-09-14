@@ -1,7 +1,6 @@
 import downloadImage from './download';
 import * as thumb from './thumb';
 import * as azureBlob from '../azure-blob';
-import streamifier from '../util/streamifier';
 import config from '../config/environment';
 import * as url from 'url';
 import * as path from 'path';
@@ -69,14 +68,7 @@ export function createThumbFromUrl(imageUrl) {
 }
 
 export function saveThumb(thumbObj) {
-  let bufferLength = thumbObj.buffer.length,
-    pageBlobSize = Math.ceil(bufferLength / 512) * 512,
-    sf = streamifier.createReadStream(thumbObj.buffer);
-  return azureBlob.createBlock(thumbObj.thumbName, sf, pageBlobSize, {
-    contentSettings: {
-      contentType: thumbObj.mimeType //'image/png'
-    }
-  })
+  return azureBlob.uploadThumb(thumbObj.thumbName, thumbObj.buffer, thumbObj.mimeType)
     .then(() => {
       return thumbObj;
     })
