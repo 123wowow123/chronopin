@@ -14,10 +14,12 @@ const tagRow = 'absolute top-0 right-0 left-0 flex gap-1.5 overflow-hidden lg:ri
 
 type TagVariant = 'date' | 'countdown' | 'today' | 'trivia';
 
-function Tag({ variant, children, title, className = '' }: { variant: TagVariant; children: React.ReactNode; title?: string; className?: string }) {
+// Beside the rail, a `wrap` tag uses the specialty day's small type and wraps
+// to two lines (still within the 42px a tag is allowed) instead of cutting off.
+function Tag({ variant, children, title, className = '', wrap = false }: { variant: TagVariant; children: React.ReactNode; title?: string; className?: string; wrap?: boolean }) {
   return (
-    <div className={`${tagBase} tag-${variant} ${className}`} title={title}>
-      <span className="block truncate">{children}</span>
+    <div className={`${tagBase} tag-${variant} ${wrap ? 'lg:text-xs lg:leading-4' : ''} ${className}`} title={title}>
+      <span className={`block truncate ${wrap ? 'lg:line-clamp-2 lg:whitespace-normal' : ''}`}>{children}</span>
     </div>
   );
 }
@@ -65,7 +67,7 @@ export function TimeBlock({
         </Tag>
         {/* On phones only the first extra tag fits beside the date and countdown; the rest show from sm up. */}
         {bag.dateTimes.map((dt, i) => (
-          <Tag key={dt.id} variant="trivia" title={dt.description || dt.title} className={`${extraTag} ${i > 0 ? 'max-sm:hidden' : ''}`}>
+          <Tag key={dt.id} variant="trivia" wrap title={dt.description || dt.title} className={`${extraTag} ${i > 0 ? 'max-sm:hidden' : ''}`}>
             {dt.title}
           </Tag>
         ))}
@@ -81,8 +83,10 @@ export function TimeBlock({
           ))}
         </ul>
       ) : (
+        // lg:pt-7 lines the first title up with the date tag and rail marker
+        // (tags start 26px down; a 24px line centred on the 28px-tall tag).
         <ul
-          className="min-h-[120px] lg:ml-[170px]"
+          className="min-h-[120px] lg:ml-[170px] lg:pt-7"
           style={{ minHeight: `max(120px, ${tagsHeight}px)` }}
         >
           {bag.dateTimes.map((dt) => (
