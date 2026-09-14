@@ -17,6 +17,9 @@
 // moved into Pin.location here and stripped from the address, so the address
 // is only the place label.
 //
+// All-day pins were saved at the author's local midnight; they are floored to
+// 00:00Z of their day, which the "CK_Pin_allDayUtcMidnight" constraint needs.
+//
 // SQL Server kept Pin.company/companyWikiUrl as text on each pin. Those become
 // "Company" rows here, and each pin gets the matching companyId. Logos are not
 // looked up; run npm run companies:logos afterwards.
@@ -32,6 +35,7 @@ const args = require('args');
 const mssql = require('mssql');
 const config = require('../../../server/config/environment');
 const db = require('../../../server/db');
+const { normalizeAllDayDates } = require('../../../server/model/pin/shared/dates');
 
 args.option('from', 'SQL Server connection string (ADO form)', config.mssql && config.mssql.uri);
 const flags = args.parse(process.argv);
@@ -94,7 +98,7 @@ function copyTable(query, table) {
     source.request().query(`SELECT * FROM [dbo].[${table}] ORDER BY [id]`),
     targetColumns(table)
   ]).then(([result, columns]) => {
-    const rows = result.recordset.map(row => table === 'Pin' ? splitAddress(row) : row);
+    const rows = result.recordset.map(row => table === 'Pin' ? normalizeAllDayDates(splitAddress(row)) : row);
     return (table === 'Pin' ? copyCompanies(query, rows) : Promise.resolve())
       .then(() => insertRows(query, table, rows, columns));
   });

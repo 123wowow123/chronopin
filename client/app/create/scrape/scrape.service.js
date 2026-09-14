@@ -4,7 +4,7 @@
 (function () {
 
     angular.module('chronopinNodeApp')
-        .service('scrapeService', function (appConfig, $http) {
+        .service('scrapeService', function (appConfig, $http, Util) {
 
             this.scrapeImage = (thisPin, url) => {
                 let config = {
@@ -46,8 +46,9 @@
                 thisPin.type = _.get(pin, 'type');
                 thisPin.title = _.get(pin, 'title');
                 thisPin.description = _.get(pin, 'description');
-                thisPin.start = _.get(pin, 'utcStartDateTime') && new Date(_.get(pin, 'utcStartDateTime'));
-                thisPin.end = _.get(pin, 'utcEndDateTime') && new Date(_.get(pin, 'utcEndDateTime'));
+                const formDates = Util.pinToFormDates(pin);
+                thisPin.start = formDates.start;
+                thisPin.end = formDates.end;
                 thisPin.allDay = _.get(pin, 'allDay');
 
                 this.setPinImageFromScrapeAndSelect(thisPin, pin);
@@ -93,8 +94,9 @@
                 thisPin.longitude = pin.longitude;
                 thisPin.price = pin.price;
                 thisPin.priceCurrency = pin.priceCurrency;
-                thisPin.start = pin.utcStartDateTime && new Date(pin.utcStartDateTime);
-                thisPin.end = pin.utcStartDateTime && new Date(pin.utcEndDateTime);
+                const formDates = Util.pinToFormDates(pin);
+                thisPin.start = formDates.start;
+                thisPin.end = formDates.end;
                 thisPin.allDay = pin.allDay;
                 thisPin.media = pin.media;
                 thisPin.merchants = pin.merchants;
@@ -135,16 +137,8 @@
             }
 
             this.formatSubmitPin = (pin) => {
-                let startDateTime, endDateTime, allDay = pin.allDay;
-                if (allDay) {
-                    // set time portion to midnight
-                    startDateTime = this.getDateTimeToDayBegin(pin.start);
-                    // set time portion to 1 tick before midnight
-                    endDateTime = this.getDateTimeToDayEnd(pin.end);
-                } else {
-                    startDateTime = pin.start;
-                    endDateTime = pin.end;
-                }
+                let allDay = pin.allDay;
+                const dates = Util.formDatesToPin(pin.start, pin.end, allDay);
 
                 // Must name every column a pin update writes, not just the ones
                 // the form has inputs for: a field left out of this object is
@@ -170,31 +164,13 @@
                     companyWikiUrl: pin.companyWikiUrl,
                     category: pin.category,
                     tip: pin.tip,
-                    utcStartDateTime: startDateTime, // ISO 8601 with toJSON
-                    utcEndDateTime: endDateTime,
+                    utcStartDateTime: dates.utcStartDateTime, // ISO 8601 with toJSON
+                    utcEndDateTime: dates.utcEndDateTime,
                     allDay: allDay,
                     merchants: pin.merchants,
                     media: pin.useMedia && pin.selectedMedia ? [pin.selectedMedia] : undefined
                 };
                 return _.omitBy(newPin, _.isNull);
-            }
-
-            this.getDateTimeToDayBegin = (dateTime) => {
-                let newDateTime = new Date(dateTime.getTime());
-                newDateTime.setHours(0);
-                newDateTime.setMinutes(0);
-                newDateTime.setSeconds(0);
-                newDateTime.setMilliseconds(0);
-                return newDateTime;
-            }
-
-            this.getDateTimeToDayEnd = (dateTime) => {
-                let newDateTime = new Date(dateTime.getTime());
-                newDateTime.setHours(23);
-                newDateTime.setMinutes(59);
-                newDateTime.setSeconds(59);
-                newDateTime.setMilliseconds(999);
-                return newDateTime;
             }
 
         });

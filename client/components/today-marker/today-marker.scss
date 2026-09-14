@@ -23,15 +23,16 @@ $today-marker-bg: $timeline-countdown-today-bg;
     }
 }
 
-// The narrow layout lays every tag of a row out on one line at top: -45px, so a
-// bag row's height is taken up by its title or cards. This row has nothing under
-// its tag, so it reserves no height at all - a bag row's 33px would just read as
-// a hole. Zero height against the next row's 45px margin, and 12px here against
-// the 33px row above, leave an even 15px on both sides.
+// The narrow layout lays every tag of a row out on one line at top: -45px, inside
+// the 45px top margin each bag row keeps for them, so the tags start right where
+// the row above ends (its cards leave only a few px below them). This row takes
+// the same margin - any less and its tags ride up over the last card above. It
+// has nothing under its tags, so it reserves no height: its tags then end 15px
+// above the next row's, the same 15px a bag row's tags leave above its cards.
 @media (max-width: $ipad-landscape) {
     .timeline__today.\--active {
         min-height: 0;
-        margin-top: 12px;
+        margin-top: $timeline-ipad-landscape-top-alignment * -1;
     }
 }
 
@@ -59,6 +60,80 @@ $today-marker-bg: $timeline-countdown-today-bg;
         // circles sit; that offset is invisible on them but not on a 16px dot,
         // so this centres on the line rather than copying their position.
         margin-left: -9px;
+    }
+}
+
+// A date's specialty day ("National Peanut Day"), under the TODAY tag or at
+// the bottom of every bag's tags. These names run far longer than a date, so in the 95px tag it
+// wraps to up to three lines instead of cutting off after a word or two, and
+// its arrow is drawn to the tag's full height rather than the one-line size
+// tab-arrow borders give.
+.timeline__specialty {
+    font-size: 12px;
+
+    .timeline__tag {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        white-space: normal;
+        line-height: 1.2em;
+        width: 100%;
+    }
+
+    &::after {
+        top: 0;
+        bottom: 0;
+        right: -14px;
+        width: 14px;
+        padding: 0;
+        border: 0;
+        background: $timeline-trivia-bg;
+        clip-path: polygon(0 0, 100% 50%, 0 100%);
+    }
+}
+
+// The TODAY row has no content to size it, and the tag's height depends on how
+// many lines the name takes, so here the tag sits in the flow (at the --2 slot)
+// and the row grows with it. A lone TODAY tag (23px down, 30px tall) hangs 17px
+// below the row's 36px; the negative bottom margin lets this tag hang by the
+// same amount, keeping the 16px gap below the last tag.
+.timeline__today.\--active .timeline__specialty {
+    position: relative;
+    top: 0;
+    margin: 65px 0 -17px;
+}
+
+// The narrow layout puts tags side by side on one line, where there is room
+// to the right for the whole name, so it goes back to one line and takes the
+// width it needs, at the full font size so it is as tall as the tags beside it.
+@media (max-width: $ipad-landscape) {
+    .timeline .timeline__specialty,
+    .timeline__today.\--active .timeline__specialty {
+        font-size: inherit;
+        position: absolute;
+        top: $timeline-ipad-landscape-top-alignment;
+        margin: 0;
+        width: auto;
+        // The tag before it points 14px into this one. Centred tags like the
+        // countdown clear that on their own; this left-aligned name needs the
+        // arrow's width plus a gap.
+        padding-left: 22px;
+        padding-right: 5px;
+
+        // Up to the right edge, arrow included, from whichever slot it is in
+        // (--2 under TODAY; after the date, countdown and any trivia on a bag).
+        @for $i from 2 to 9 {
+            &.\--#{$i} {
+                max-width: calc(100% - #{($i - 1) * $timeline-ipad-landscape-left-alignment} - 14px);
+            }
+        }
+
+        .timeline__tag {
+            display: inline-block;
+            max-width: 100%;
+            white-space: nowrap;
+            line-height: 1em;
+        }
     }
 }
 

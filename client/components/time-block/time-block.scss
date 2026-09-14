@@ -1,0 +1,24 @@
+// A bag with no pins is only as tall as its placeholder, whose 120px fits the
+// date, countdown and one trivia tag. Every bag also ends its stack with a
+// specialty-day tag up to 53px tall (three lines), which would run into the
+// next bag's date tag, so the placeholder grows to the stack: the tag in slot
+// n ends at 23px + 42px * (n - 1) + 53px, and leaving it hanging 17px below
+// the row keeps the usual 16px gap above the next row's first tag.
+.timeline__group-section.\--placeholder {
+    @for $i from 4 to 9 {
+        &.\--specialty-#{$i} {
+            min-height: 17px + 42px * $i;
+        }
+    }
+}
+
+// The narrow layout puts the tags on one line above the row instead.
+@media (max-width: $ipad-landscape) {
+    .timeline__group-section.\--placeholder {
+        @for $i from 4 to 9 {
+            &.\--specialty-#{$i} {
+                min-height: 30px;
+            }
+        }
+    }
+}

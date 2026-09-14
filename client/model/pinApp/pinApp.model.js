@@ -120,7 +120,10 @@
 
                 socket.syncUpdates('pin', (event, item) => {
                     // debugger
-                    const itemTime = new Date(item.utcStartDateTime);
+                    const itemTime = Bags.getDateTimeKey({
+                        utcStartDateTime: new Date(item.utcStartDateTime),
+                        allDay: item.allDay
+                    });
                     const inRange = this.isWithinBagDateRange(itemTime);
                     const inSearchRange = this.isWithinSearchBagDateRange(itemTime);
 

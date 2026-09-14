@@ -4,6 +4,7 @@ import * as db from '../../../db';
 import * as _ from 'lodash';
 import * as sql from '../shared/sql'
 import * as mapHelper from '../shared/helper'
+import { normalizeAllDayDates } from '../shared/dates'
 
 import {
   BasePin,
@@ -229,6 +230,7 @@ function _queryById(pinId, userId) {
 }
 
 function _update(pin, userId) {
+  normalizeAllDayDates(pin);
   const values = [
     pin.id, pin.parentId, pin.title, pin.description, pin.sourceUrl, pin.longFormSummary,
     pin.dateConfidence, pin.dateConfidenceReasoning, pin.companyId,

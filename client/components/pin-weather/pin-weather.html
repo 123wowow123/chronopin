@@ -1,0 +1,18 @@
+<div class="pin-weather" ng-if="weather" ng-class="'pin-weather--' + weather.kind">
+    <i class="fa {{weather.icon}} pin-weather__icon" aria-hidden="true"></i>
+    <div class="pin-weather__summary">
+        <span class="pin-weather__heading">{{weather.heading}}</span>
+        <span class="pin-weather__label" ng-if="weather.label">{{weather.label}}</span>
+    </div>
+    <div class="pin-weather__stats">
+        <span class="pin-weather__temps" title="High / low, °{{weather.unit}}">
+            <span class="pin-weather__high">{{weather.high}}</span>
+            <span class="pin-weather__low">{{weather.low}}</span>
+        </span>
+        <span class="pin-weather__stat" ng-if="weather.precipitation">
+            <i class="fa fa-umbrella" aria-hidden="true"></i>{{weather.precipitation}}
+        </span>
+        <span class="pin-weather__stat" ng-if="weather.wind">Wind {{weather.wind}}</span>
+    </div>
+    <a class="pin-weather__credit" href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>
+</div>

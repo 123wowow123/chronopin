@@ -6,3 +6,8 @@
     <span class="timeline__tag">TODAY</span>
 </div>
 
+<!-- The day's first specialty day; the title lists them all. -->
+<div class="timeline__trivia --2 timeline__specialty" ng-if="specialtyDays.length"
+    title="{{specialtyDays.join('\n')}}">
+    <span class="timeline__tag" ng-bind="specialtyDays[0]"></span>
+</div>

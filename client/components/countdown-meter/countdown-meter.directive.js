@@ -13,15 +13,17 @@
 
   // Live countdown to a pin's start, with a bar that fills over the span from
   // when the pin was posted to when it starts. Once the start has passed it
-  // stops ticking and says how long ago it started.
+  // stops ticking and says how long ago it started. An all-day pin starts at
+  // the viewer's local midnight on its (UTC) date.
   angular.module('chronopinNodeApp')
-    .directive('countdownMeter', function ($interval) {
+    .directive('countdownMeter', function ($interval, Util) {
       return {
         templateUrl: 'components/countdown-meter/countdown-meter.html',
         restrict: 'E',
         scope: {
           start: '@',
-          since: '@'
+          since: '@',
+          allDay: '@'
         },
         link: function (scope) {
           let ticker = null;
@@ -34,7 +36,11 @@
           }
 
           function update() {
-            const start = new Date(scope.start).getTime();
+            const startDate = scope.start && Util.pinLocalStart({
+              utcStartDateTime: scope.start,
+              allDay: scope.allDay === 'true'
+            });
+            const start = startDate ? startDate.getTime() : NaN;
             if (isNaN(start)) {
               scope.ready = false;
               stop();
@@ -75,7 +81,7 @@
             }
           }
 
-          scope.$watchGroup(['start', 'since'], restart);
+          scope.$watchGroup(['start', 'since', 'allDay'], restart);
           scope.$on('$destroy', stop);
         }
       };

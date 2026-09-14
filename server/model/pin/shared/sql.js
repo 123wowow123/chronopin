@@ -1,10 +1,12 @@
 import * as db from '../../../db';
 import Company from '../../company/company';
+import { normalizeAllDayDates } from './dates';
 
 // Inserts a pin and sets pin.id. A pin that already carries an id (seeding,
 // the SQL Server transfer) keeps it; otherwise the database assigns one.
 // pin.company is a name; it is stored as a reference to its Company row.
 export function createPin(pin, userId) {
+    normalizeAllDayDates(pin);
     return Company.applyToPin(pin).then(() => _insertPin(pin, userId));
 }
 

@@ -1,14 +1,41 @@
-// Countdown to a pin's start, under the date line on the pin page: one slim
-// row of bar then readout.
+// Countdown to a pin's start, under the date line on the pin page. It sits
+// right above the title, so it is set apart as a tinted strip in the accent
+// colour with a monospace readout - plain text in the heading colour read as
+// part of the title.
 $countdown-from: #3a6b8a;
 $countdown-to: #5fb0e0;
+$countdown-accent-light: #2c6f99;
+$countdown-accent-dark: #7cc3ec;
 $countdown-started: #3f7d4e;
+$countdown-started-dark: #6fbf82;
 
 .countdown-meter {
+    --countdown-accent: #{$countdown-accent-light};
+
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin: 10px 0 14px;
+    gap: 10px;
+    margin: 2px 0 16px;
+    padding: 6px 10px;
+    border: 1px solid rgba($countdown-to, 0.25);
+    border-left: 3px solid var(--countdown-accent);
+    border-radius: 6px;
+    background-color: rgba($countdown-to, 0.08);
+
+    :root.\--dark & {
+        --countdown-accent: #{$countdown-accent-dark};
+    }
+
+    &__label {
+        flex: 0 0 auto;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--countdown-accent);
+        opacity: 0.85;
+    }
 
     &__track {
         position: relative;
@@ -16,7 +43,7 @@ $countdown-started: #3f7d4e;
         min-width: 60px;
         height: 3px;
         border-radius: 3px;
-        background-color: var(--primary-highlight-bg-color);
+        background-color: rgba($countdown-to, 0.2);
     }
 
     &__fill {
@@ -46,17 +73,19 @@ $countdown-started: #3f7d4e;
         display: inline-flex;
         align-items: baseline;
         gap: 5px;
-        font-size: 13px;
+        font-family: Menlo, Consolas, 'Liberation Mono', monospace;
+        font-size: 12px;
         line-height: 1;
         white-space: nowrap;
         font-variant-numeric: tabular-nums;
-        color: var(--grid-header-text-color);
+        color: var(--countdown-accent);
 
         &--started {
-            font-size: 11px;
-            letter-spacing: 0.04em;
+            font-family: inherit;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
-            opacity: 0.6;
         }
     }
 
@@ -65,9 +94,23 @@ $countdown-started: #3f7d4e;
     }
 
     &__clock {
-        font-weight: 500;
-        letter-spacing: 0.02em;
-        opacity: 0.75;
+        font-weight: 400;
+        opacity: 0.8;
+    }
+
+    &--started {
+        --countdown-accent: #{$countdown-started};
+        border-color: rgba($countdown-started, 0.3);
+        border-left-color: var(--countdown-accent);
+        background-color: rgba($countdown-started, 0.08);
+
+        :root.\--dark & {
+            --countdown-accent: #{$countdown-started-dark};
+        }
+    }
+
+    &--started &__track {
+        background-color: rgba($countdown-started, 0.2);
     }
 
     &--started &__fill {

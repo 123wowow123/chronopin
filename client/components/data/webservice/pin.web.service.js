@@ -21,6 +21,15 @@
          });
        };
 
+       // Weather at the pin's location on its start date; 204 with no body
+       // when the pin has no location or date.
+       this.weather = function(id) {
+         return $http({
+           url: '/api/pins/' + id + '/weather',
+           method: 'GET'
+         });
+       };
+
        this.list = function(data) {
          return $http({
            url: '/api/pins',

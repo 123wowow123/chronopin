@@ -94,7 +94,7 @@
                  same way. -->
             <div class="grid__date-line" ng-if="$ctrl.pin.utcStartDateTime">
               <span class="grid__starts">{{$ctrl.pin.allDay
-                ? ('Starts ' + ($ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy") + ' - All day')
+                ? ('Starts ' + ($ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy":'UTC') + ' - All day')
                 : ('Starts ' + ($ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"))}}</span>
               <date-confidence level="{{$ctrl.pin.dateConfidence}}"
                 reasoning="{{$ctrl.pin.dateConfidenceReasoning}}"
@@ -102,7 +102,7 @@
             </div>
           </div>
 
-          <countdown-meter ng-if="$ctrl.pin.utcStartDateTime" start="{{$ctrl.pin.utcStartDateTime}}"
+          <countdown-meter ng-if="$ctrl.pin.utcStartDateTime" start="{{$ctrl.pin.utcStartDateTime}}" all-day="{{$ctrl.pin.allDay}}"
             since="{{$ctrl.pin.utcCreatedDateTime}}"></countdown-meter>
 
           <h4 class="grid__heading">
@@ -192,6 +192,8 @@
         <div class="pin__map" ng-if="$ctrl.pinReady">
           <pin-map address="{{$ctrl.pin.address}}" latitude="{{$ctrl.pin.latitude}}" longitude="{{$ctrl.pin.longitude}}"
             title="{{$ctrl.pin.title}}"></pin-map>
+          <pin-weather ng-if="$ctrl.pin.utcStartDateTime" pin-id="{{$ctrl.pin.id}}" start="{{$ctrl.pin.utcStartDateTime}}"
+            latitude="{{$ctrl.pin.latitude}}" longitude="{{$ctrl.pin.longitude}}"></pin-weather>
         </div>
 
         <div class="pin__thread">

@@ -119,11 +119,11 @@ const SCHEMA = {
     },
     startDateTime: {
       type: ['string', 'null'],
-      description: 'ISO 8601 UTC start of the event, e.g. "2026-09-18T12:00:00Z". Use noon UTC for all-day events. Null when no date was found.'
+      description: 'ISO 8601 UTC start of the event, e.g. "2026-09-18T16:00:00Z". For an all-day event, midnight UTC of its date, e.g. "2026-09-18T00:00:00Z". Null when no date was found.'
     },
     endDateTime: {
       type: ['string', 'null'],
-      description: 'ISO 8601 UTC end of the event. Null when the page gives only one date.'
+      description: 'ISO 8601 UTC end of the event. For an all-day event, midnight UTC of the day after its last day, e.g. "2026-09-21T00:00:00Z" for one ending on Sep 20. Null when the page gives only one date.'
     },
     allDay: {
       type: 'boolean',

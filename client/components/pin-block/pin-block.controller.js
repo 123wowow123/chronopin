@@ -208,8 +208,10 @@
                     </div>
                     <div class="grid__date-line" ng-if="$ctrl.pin.utcStartDateTime">
                         <span class="grid__starts">{{$ctrl.pin.allDay
-                            ? ('Starts ' + ($ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy"))
+                            ? ('Starts ' + ($ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy":'UTC'))
                             : ('Starts ' + ($ctrl.pin.utcStartDateTime | date:"MM/dd/yyyy h:mma"))}}</span>
+                        <pin-weather-icon pin-id="$ctrl.pin.id" start="$ctrl.pin.utcStartDateTime"
+                            latitude="$ctrl.pin.latitude" longitude="$ctrl.pin.longitude"></pin-weather-icon>
                         <!-- An unverified pin's reasoning only restates that
                              nothing was found, so the card shows the badge
                              alone; the pin page still carries the detail. -->

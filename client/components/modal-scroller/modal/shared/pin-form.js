@@ -5,7 +5,7 @@
 
   class PinFormController {
 
-    constructor($http, $stateParams, $state, $scope, Auth, $log) {
+    constructor($http, $stateParams, $state, $scope, Auth, $log, Util) {
       //this.form.title = title;
 
       var baseDate = new Date();
@@ -28,6 +28,7 @@
       this.enableForm = true;
 
       this.$log = $log;
+      this.Util = Util;
       this.$http = $http;
       this.$stateParams = $stateParams;
       this.$state = $state;
@@ -186,11 +187,12 @@
       if (!this.pin.merchants) {
         this.pin.merchants = pin.merchants;
       }
-      if (!this.pin.start && pin.utcStartDateTime) {
-        this.pin.start = new Date(pin.utcStartDateTime);
+      const formDates = this.Util.pinToFormDates(pin);
+      if (!this.pin.start && formDates.start) {
+        this.pin.start = formDates.start;
       }
-      if (!this.pin.end && pin.utcEndDateTime) {
-        this.pin.end = new Date(pin.utcEndDateTime);
+      if (!this.pin.end && formDates.end) {
+        this.pin.end = formDates.end;
       }
       if (!this.pin.images && pin.media && pin.media[0]) {
         this.pin.images = [pin.media[0]];
@@ -243,11 +245,12 @@
       if (!this.pin.merchants) {
         this.pin.merchants = pin.merchants;
       }
-      if (!this.pin.start && pin.utcStartDateTime) {
-        this.pin.start = new Date(pin.utcStartDateTime);
+      const formDates = this.Util.pinToFormDates(pin);
+      if (!this.pin.start && formDates.start) {
+        this.pin.start = formDates.start;
       }
-      if (!this.pin.end && pin.utcEndDateTime) {
-        this.pin.end = new Date(pin.utcEndDateTime);
+      if (!this.pin.end && formDates.end) {
+        this.pin.end = formDates.end;
       }
       if (!this.pin.dateConfidence) {
         this.pin.dateConfidence = pin.dateConfidence;
@@ -359,8 +362,7 @@
         dateConfidence: pin.dateConfidence,
         dateConfidenceReasoning: pin.dateConfidenceReasoning,
         longFormSummary: pin.longFormSummary,
-        utcStartDateTime: pin.start,
-        utcEndDateTime: pin.end,
+        ...this.Util.formDatesToPin(pin.start, pin.end, !this.timePicker.show),
         media: pin.selectedImage ? [pin.selectedImage] : [],
         allDay: !this.timePicker.show
       };

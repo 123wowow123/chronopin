@@ -20,6 +20,7 @@ router.get('/autocomplete', auth.tryGetUser(), controller.autocompletePins);
 // router.patch('/search/:id', auth.isAuthenticated(), controller.update);
 
 router.get('/:id', auth.tryGetUser(), controller.show); ///:id(\\d+)/
+router.get('/:id/weather', controller.showWeather);
 
 router.put('/:id', auth.isAuthenticated(), controller.update);
 router.patch('/:id', auth.isAuthenticated(), controller.update);

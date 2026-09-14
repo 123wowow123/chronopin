@@ -83,6 +83,72 @@
         return appConfig.searchChoices[0];
       },
 
+      /**
+       * All-day pins are stored as whole UTC days: the start at 00:00Z of the
+       * first day, the end (optional, exclusive) at 00:00Z of the day after
+       * the last. Date pickers, the timeline and countdowns work in the
+       * viewer's local time, so these convert between the two.
+       */
+
+      // The viewer's local midnight on the UTC calendar date of dateTime.
+      utcDayToLocalDate(dateTime) {
+        if (!dateTime) {
+          return dateTime;
+        }
+        const d = new Date(dateTime);
+        return new Date(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
+      },
+
+      // 00:00Z on the local calendar date of dateTime, plus addDays days.
+      localDateToUtcDay(dateTime, addDays) {
+        if (!dateTime) {
+          return dateTime;
+        }
+        const d = new Date(dateTime);
+        return new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate() + (addDays || 0)));
+      },
+
+      // When a pin starts on the viewer's clock: its instant, or for an
+      // all-day pin local midnight of its date.
+      pinLocalStart(pin) {
+        const start = pin && pin.utcStartDateTime && new Date(pin.utcStartDateTime);
+        return start && pin.allDay ? Util.utcDayToLocalDate(start) : start;
+      },
+
+      // The start/end a pin form edits. An all-day pin's exclusive end
+      // becomes its last day, and is dropped when that is the start day.
+      pinToFormDates(pin) {
+        const start = pin.utcStartDateTime ? new Date(pin.utcStartDateTime) : undefined;
+        let end = pin.utcEndDateTime ? new Date(pin.utcEndDateTime) : undefined;
+        if (!pin.allDay) {
+          return { start, end };
+        }
+        const localStart = Util.utcDayToLocalDate(start);
+        let lastDay = end && Util.utcDayToLocalDate(end);
+        if (lastDay) {
+          lastDay.setDate(lastDay.getDate() - 1);
+          if (!localStart || lastDay <= localStart) {
+            lastDay = undefined;
+          }
+        }
+        return { start: localStart, end: lastDay };
+      },
+
+      // The utcStartDateTime/utcEndDateTime a pin form submits, from the
+      // local dates its pickers hold.
+      formDatesToPin(start, end, allDay) {
+        if (!allDay) {
+          return { utcStartDateTime: start, utcEndDateTime: end };
+        }
+        const utcStart = Util.localDateToUtcDay(start);
+        const utcEnd = end ? Util.localDateToUtcDay(end, 1) : undefined;
+        return {
+          utcStartDateTime: utcStart,
+          // A last day on or before the start day is just a one-day pin.
+          utcEndDateTime: utcEnd && utcStart && utcEnd > Util.localDateToUtcDay(start, 1) ? utcEnd : undefined
+        };
+      },
+
     };
 
     return Util;

@@ -5,6 +5,8 @@ import moment from 'moment';
 import * as response from '../response';
 import * as paginationHeader from '../../util/paginationHeader'
 import * as createdFilter from '../../util/createdFilter'
+import * as weather from '../../weather';
+import * as log from '../../util/log';
 
 import {
   Pin,
@@ -126,6 +128,36 @@ export function show(req, res) {
     })
     .then(response.withResult(res))
     .catch(response.handleError(res));
+}
+
+/**
+ * Weather at a pin's location on its start date: a forecast, what was
+ * recorded, or what is typical, depending on how far off the date is (see
+ * server/weather). 204 when the pin has no location or date.
+ * GET /api/pins/:id/weather
+ */
+export function showWeather(req, res) {
+  return Pin.queryById(+req.params.id, null)
+    .then(({ pin }) => {
+      if (!pin) {
+        return res.status(404).end();
+      }
+      return weather.forPin(pin)
+        .then(result => {
+          if (!result) {
+            return res.status(204).end();
+          }
+          // Matches how long server/weather keeps a forecast.
+          res.set('Cache-Control', `public, max-age=${result.kind === 'forecast' ? 900 : 3600}`);
+          return res.json(result);
+        });
+    })
+    .catch(err => {
+      log.error('showWeather', err && err.message);
+      if (!res.headersSent) {
+        res.status(502).end();
+      }
+    });
 }
 
 // Creates a new Pin in the DB

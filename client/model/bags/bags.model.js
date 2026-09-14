@@ -27,8 +27,14 @@
       return array.length;
     }
 
+    // The local midnight of the day a pin or date time sits on in the
+    // timeline. An all-day pin is stored at 00:00Z of its date, which is its
+    // day for every viewer; anything else goes on the local day of its instant.
     function _getKey(obj) {
       let dateTime = obj.utcStartDateTime;
+      if (obj.allDay) {
+        return new Date(dateTime.getUTCFullYear(), dateTime.getUTCMonth(), dateTime.getUTCDate());
+      }
       dateTime = _convertUTCDateToLocalDate(dateTime);
       return dateTime;
     }
@@ -194,8 +200,9 @@
       }
 
 
-      static getDateTimeKey(dateTime) {
-        return _getKey(dateTime);
+      // obj: a pin or date time with utcStartDateTime as a Date, and allDay.
+      static getDateTimeKey(obj) {
+        return _getKey(obj);
       }
 
     };

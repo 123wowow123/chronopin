@@ -79,6 +79,7 @@
 
       const omitLinkHeaderProp = ['rel', 'url'];
       this.getLinkHeader = Util.getLinkHeader.bind(null, omitLinkHeaderProp);
+      this.Util = Util;
 
       this.loading = false;
       this.markerCount = 0;
@@ -230,7 +231,7 @@
     }
 
     _withinBounds(pin, bounds) {
-      const d = new Date(pin.utcStartDateTime);
+      const d = this.Util.pinLocalStart(pin);
       if (bounds.pastBoundary && d < bounds.pastBoundary) return false;
       if (bounds.futureBoundary && d > bounds.futureBoundary) return false;
       return true;
@@ -324,7 +325,7 @@
         return;
       }
 
-      const isPast = new Date(pin.utcStartDateTime) <= new Date();
+      const isPast = this.Util.pinLocalStart(pin) <= new Date();
 
       // Hover gives a preview; a click (or tap, where there is no hover)
       // goes straight to the pin overlay.

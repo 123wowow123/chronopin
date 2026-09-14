@@ -7,7 +7,7 @@
 
   class CreateController {
 
-    constructor($state, $scope, Auth, $q, $stateParams, $http, pinWebService, scrapeService, appConfig /*, $log, modelInjector */) {
+    constructor($state, $scope, Auth, $q, $stateParams, $http, pinWebService, scrapeService, appConfig, Util /*, $log, modelInjector */) {
       //PinGroups || (PinGroups = modelInjector.getPinGroups());
 
       // different states of pin
@@ -38,6 +38,7 @@
       // this.mode = this.mode || 'create';
 
       this.appConfig = appConfig;
+      this.Util = Util;
       this.scrapeType = appConfig.scrapeType;
       this.pinWebService = pinWebService;
       this.scrapeService = scrapeService;
@@ -338,8 +339,8 @@
         // use default value
         user: _.get(this, 'user'),
         utcCreatedDateTime: new Date(),
-        utcStartDateTime: this.pin.start,
-        utcEndDateTime: this.pin.end,
+        // Stored form, so the preview formats dates as the saved pin will.
+        ...this.Util.formDatesToPin(this.pin.start, this.pin.end, this.pin.allDay),
         media: this.pin.useMedia && this.pin.selectedMedia ? [this.pin.selectedMedia] : undefined,
         ...this._resolveActiveTabPinData(),
       };
