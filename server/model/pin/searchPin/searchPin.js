@@ -1,17 +1,12 @@
 'use strict';
 
 import * as _ from 'lodash';
-const rp = require('request-promise');
-import { prefixSearchIndex } from './searchHelper';
-import * as config from '../../../config/environment';
+import { faissRequest } from './faiss';
 
 import {
     BasePin,
     BasePinProp
 } from '../..';
-
-const serviceUrl = config.faiss.serviceUrl;
-const faissUri = `${serviceUrl}/faiss`
 
 // media
 // favorites - will be converted to bool for client
@@ -69,191 +64,21 @@ export default class SearchPin extends BasePin {
     static resetIndex() {
         return resetIndex();
     }
-
-    static favoritePin(userId, pin) {
-        return favoritePin(userId, pin);
-    }
-
-    static unfavoritePin(userId, pin) {
-        return unfavoritePin(userId, pin);
-    }
-
-    static likePin(userId, pin) {
-        return likePin(userId, pin);
-    }
-
-    static unlikePin(userId, pin) {
-        return unlikePin(userId, pin);
-    }
 }
 
-/* Favorites Update */
-
-function favoritePin(userId, pin) {
-    // Create Pins
-    const id = pin.id;
-
-    const index = "pins";
-    const command = "_doc";
-    const uri = prefixSearchIndex(index) + "/" + command + "/" + id + "/_update";
-
-    const options = {
-        method: 'POST',
-        uri: uri,
-        body: {
-            "script": {
-                "source": "ctx._source.favorites.add(params.uId)",
-                "params": {
-                    "uId": userId
-                }
-            }
-        },
-        json: true, // Automatically stringifies the body to JSON
-        auth: config.elastiSearch.auth
-    };
-
-    console.log(JSON.stringify(options.body.script));
-    //debugger
-    const req = Object.assign({}, options);
-    console.log(req);
-    return rp(req);
-};
-
-function unfavoritePin(userId, pin) {
-    // Create Pins
-    const id = pin.id;
-
-    const index = "pins";
-    const command = "_doc";
-    const uri = prefixSearchIndex(index) + "/" + command + "/" + id + "/_update";
-
-    const options = {
-        method: 'POST',
-        uri: uri,
-        body: {
-            "script": {
-                "source": "ctx._source.favorites.removeAll(Collections.singleton(params.uId))",
-                "params": {
-                    "uId": userId
-                }
-            }
-        },
-        json: true, // Automatically stringifies the body to JSON
-        auth: config.elastiSearch.auth
-    };
-
-    console.log(JSON.stringify(options.body.script));
-    //debugger
-    const req = Object.assign({}, options);
-    console.log(req);
-    return rp(req);
-};
-
-/* Likes Update */
-
-function likePin(userId, pin) {
-    // Create Pins
-    const id = pin.id;
-
-    const index = "pins";
-    const command = "_doc";
-    const uri = prefixSearchIndex(index) + "/" + command + "/" + id + "/_update";
-
-    const options = {
-        method: 'POST',
-        uri: uri,
-        body: {
-            "script": "ctx._source.likes.add(params.uId)",
-            "params": {
-                "uId": userId
-            }
-        },
-        json: true, // Automatically stringifies the body to JSON
-        auth: config.elastiSearch.auth
-    };
-
-    //debugger
-    const req = Object.assign({}, options);
-    //console.log(req);
-    return rp(req);
-};
-
-function unlikePin(userId, pin) {
-    // Create Pins
-    const id = pin.id;
-
-    const index = "pins";
-    const command = "_doc";
-    const uri = prefixSearchIndex(index) + "/" + command + "/" + id + "/_update";
-
-    const options = {
-        method: 'POST',
-        uri: uri,
-        body: {
-            "script": {
-                "source": "ctx._source.favorites.removeAll(Collections.singleton(params.uId))",
-                "params": {
-                    "uId": userId
-                }
-            }
-        },
-        json: true, // Automatically stringifies the body to JSON
-        auth: config.elastiSearch.auth
-    };
-
-    console.log(JSON.stringify(options.body.script));
-    //debugger
-    const req = Object.assign({}, options);
-    console.log(req);
-    return rp(req);
-};
-
-/* Add & Remove Update */
-
 function upsertPin(pin) {
-    // Create Pins
-    const uri = faissUri + "/add"
-    const options = {
-        method: 'POST',
-        uri,
-        json: true, // Automatically stringifies the body to JSON
-    };
-
-    //debugger
-    const req = Object.assign({}, options, {
-        body: {
-            id: pin.id,
-            title: pin.title,
-            description: pin.description
-        }
+    return faissRequest('POST', '/add', {
+        id: pin.id,
+        title: pin.title,
+        description: pin.description
     });
-    //console.log(req);
-    return rp(req);
-};
+}
 
 function removePin(id) {
-    const uri = faissUri + "/remove"
-    const options = {
-        method: 'DELETE',
-        uri,
-        json: true, // Automatically stringifies the body to JSON
-    };
-
-    //debugger
-    const req = Object.assign({}, options, {
-        body: {
-            id
-        }
-    });
-    //console.log(req);
-    return rp(req);
-};
+    return faissRequest('DELETE', '/remove', { id });
+}
 
 // Empties the whole index, before a reseed.
 function resetIndex() {
-    return rp({
-        method: 'DELETE',
-        uri: faissUri + "/reset",
-        json: true
-    });
-};
+    return faissRequest('DELETE', '/reset');
+}

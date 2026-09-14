@@ -33,6 +33,7 @@ export default function (app) {
   app.use('/api/scrape', require('./api/scrape'));
   app.use('/api/dates', require('./api/dateTime'));
   app.use('/api/main', require('./api/main'));
+  app.use('/api/notifications', require('./api/notification'));
   app.use('/auth', require('./auth').default);
   app.use('/upload', require('./api/upload'));
 

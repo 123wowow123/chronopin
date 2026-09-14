@@ -1,0 +1,14 @@
+<span class="follow-button" ng-if="!$ctrl.isSelf()">
+  <span class="follow-button__count" ng-if="$ctrl.showCount && $ctrl.status">
+    {{$ctrl.status.followerCount}} {{$ctrl.status.followerCount === 1 ? 'follower' : 'followers'}}
+  </span>
+  <button type="button" class="follow-button__toggle"
+    ng-class="{'\--following': $ctrl.status.following}"
+    ng-disabled="$ctrl.busy || ($ctrl.Auth.isLoggedIn() && !$ctrl.status)"
+    ng-click="$ctrl.toggle()"
+    title="{{$ctrl.status.following ? 'Unfollow ' + $ctrl.userName : 'Follow ' + $ctrl.userName}}">
+    <span ng-if="!$ctrl.status.following">{{$ctrl.status.followsYou ? 'Follow back' : 'Follow'}}</span>
+    <span ng-if="$ctrl.status.following" class="follow-button__following">Following</span>
+    <span ng-if="$ctrl.status.following" class="follow-button__unfollow">Unfollow</span>
+  </button>
+</span>

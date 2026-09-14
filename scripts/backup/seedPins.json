@@ -7351,6 +7351,43 @@
     "userId": 1
   },
   {
+    "id": 385,
+    "rootThread": false,
+    "title": "TERRAMASTER F4-425 Pro NAS",
+    "description": "A 4-bay NAS with an 8-core Intel N305, 8GB RAM, dual 5GbE ports and TerraMaster's AI-native TOS 7 operating system.",
+    "sourceUrl": "https://thegadgetflow.com/product/terramaster-f4-425-pro-nas/",
+    "longFormSummary": "<ul><li>4-bay NAS with an 8-core Intel N305, 8GB RAM, three M.2 NVMe cache slots and two 5GbE ports that combine for up to 1020 MB/s.</li><li>Runs TOS 7, with a built-in OpenClaw agent that manages files from plain-language commands and runs most AI tasks locally.</li><li>Hardware 4K decoding for Plex, Emby and Jellyfin, plus TFSS snapshots and HyperLock-WORM ransomware protection.</li><li>Launched worldwide by TerraMaster on June 23, 2026, priced at $699.99.</li></ul>",
+    "address": "Shenzhen, Guangdong, China",
+    "latitude": 22.5431,
+    "longitude": 114.0579,
+    "price": 699.99,
+    "priceCurrency": "USD",
+    "dateConfidence": "confirmed",
+    "company": "TerraMaster",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/TerraMaster",
+    "category": "Consumer Electronics",
+    "utcStartDateTime": "2026-06-23T12:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-14T00:47:03.469Z",
+    "user": {
+      "id": 22,
+      "userName": "GameDesk"
+    },
+    "media": [
+      {
+        "id": 369,
+        "thumbName": "0cf57abf-8307-44b5-a349-0029b2de1870.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 562,
+        "originalUrl": "https://thegadgetflow.com/wp-content/uploads/2026/09/terramaster-f4-425-pro-nas-02.jpg",
+        "originalWidth": 2047,
+        "originalHeight": 1151,
+        "type": "1"
+      }
+    ],
+    "userId": 22
+  },
+  {
     "id": 378,
     "rootThread": false,
     "title": "Google Pixel 11 Series",

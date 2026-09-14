@@ -109,6 +109,17 @@
           </h4>
           <div class="grid__description" ng-bind-html="$ctrl.pin.description"></div>
           <div class="grid__summary" ng-if="$ctrl.pin.longFormSummary" ng-bind-html="$ctrl.pin.longFormSummary"></div>
+
+          <!-- Who posted it, with a Follow button, as on a Pinterest close-up. -->
+          <div class="pin__creator" ng-if="$ctrl.pin.user.id">
+            <a class="pin__creator-name rubric" title="Show all {{$ctrl.pin.user.userName}} pins"
+              ng-click="$ctrl.searchService.refine('user', $ctrl.pin.user.userName)">
+              <span class="pin__creator-avatar" aria-hidden="true">{{$ctrl.pin.user.userName.replace('@', '').charAt(0).toUpperCase()}}</span>
+              <span>{{$ctrl.pin.user.userName}}</span>
+            </a>
+            <follow-button user-id="$ctrl.pin.user.id" user-name="$ctrl.pin.user.userName" show-count="true"></follow-button>
+          </div>
+
           <div class="grid__footer">
 
             <div class="grid__footer-left">

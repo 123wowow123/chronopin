@@ -28,20 +28,11 @@ export {
   default as FullPins
 } from './pin/fullPin/fullPins';
 export {
-  default as ElasticSearchPin
-} from './pin/searchPin/elasticSearchPin';
-export {
   default as SearchPin
 } from './pin/searchPin/searchPin';
 export {
   default as SearchPins
 } from './pin/searchPin/searchPins';
-export {
-  default as SearchMapping
-} from './pin/searchPin/searchMapping';
-export {
-  default as SearchIndex
-} from './pin/searchPin/searchIndex';
 export {
   default as Medium
 } from './medium/medium';
@@ -69,3 +60,9 @@ export {
 export {
   default as DateTimes
 } from './dateTime/dateTimes';
+export {
+  default as Follow
+} from './follow/follow';
+export {
+  default as Notification
+} from './notification/notification';

@@ -1,0 +1,47 @@
+<div class="notification-bell" uib-dropdown auto-close="outsideClick" is-open="$ctrl.isOpen"
+  on-toggle="$ctrl.onToggle(open)">
+  <a class="notification-bell__toggle" role="button" uib-dropdown-toggle aria-haspopup="true"
+    aria-expanded="{{$ctrl.isOpen}}"
+    aria-label="Notifications{{$ctrl.unreadCount() ? ', ' + $ctrl.unreadCount() + ' unread' : ''}}"
+    title="Notifications">
+    <i class="fa fa-bell" aria-hidden="true"></i>
+    <span class="notification-bell__badge" ng-if="$ctrl.unreadCount()">{{$ctrl.badgeText()}}</span>
+  </a>
+
+  <div class="notification-bell__menu dropdown-menu dropdown-menu-right" uib-dropdown-menu role="menu">
+    <div class="notification-bell__header">Updates</div>
+
+    <div class="notification-bell__status" ng-if="$ctrl.loading">
+      <loader-pulse-bubble></loader-pulse-bubble>
+    </div>
+
+    <div class="notification-bell__status" ng-if="!$ctrl.loading && !$ctrl.notifications().length">
+      Nothing new yet. When someone follows you, you'll see it here.
+    </div>
+
+    <ul class="notification-bell__list" ng-if="!$ctrl.loading && $ctrl.notifications().length">
+      <li class="notification-bell__item" ng-repeat="n in $ctrl.notifications() track by n.id"
+        ng-class="{'\--unread': !n.read}" role="menuitem">
+
+        <a class="notification-bell__avatar" ng-click="$ctrl.showUser(n)" title="Show {{n.actor.userName}} pins">
+          <img ng-if="n.actor.pictureUrl" ng-src="{{n.actor.pictureUrl}}" alt="">
+          <span ng-if="!n.actor.pictureUrl">{{$ctrl.initial(n)}}</span>
+        </a>
+
+        <div class="notification-bell__text" ng-switch="n.type">
+          <span ng-switch-when="follow">
+            <a class="notification-bell__actor" ng-click="$ctrl.showUser(n)">{{n.actor.userName}}</a>
+            started following you
+          </span>
+          <time class="notification-bell__time" datetime="{{n.utcCreatedDateTime}}">{{n.utcCreatedDateTime | timeAgo}}</time>
+        </div>
+
+        <div class="notification-bell__action" ng-if="n.type === 'follow'">
+          <button type="button" class="follow-button__toggle" ng-if="!n.followingBack"
+            ng-disabled="$ctrl.pending[n.actor.id]" ng-click="$ctrl.followBack(n, $event)">Follow back</button>
+          <span class="notification-bell__following" ng-if="n.followingBack">Following</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

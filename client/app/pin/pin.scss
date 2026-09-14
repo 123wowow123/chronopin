@@ -139,6 +139,38 @@
     margin-bottom: 15px;
   }
 
+  &__creator {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 15px 0 5px;
+    padding: 10px 0;
+    border-top: 1px solid var(--primary-highlight-bg-color);
+  }
+
+  &__creator-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--grid-auther-text-color);
+  }
+
+  &__creator-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--grid-header-text-color);
+    background-color: var(--primary-highlight-plus-bg-color);
+  }
+
 }
 
 .usercomments {

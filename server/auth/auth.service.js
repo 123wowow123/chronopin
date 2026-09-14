@@ -3,7 +3,7 @@ import _ from 'lodash';
 import config from '../config/environment';
 import * as log from '../util/log';
 import jwt from 'jsonwebtoken';
-import expressJwt from 'express-jwt';
+import { expressjwt } from 'express-jwt';
 import compose from 'composable-middleware';
 import {
   User
@@ -11,8 +11,10 @@ import {
 
 const tokenExpiresIn = 60 * 60 * 5;
 
-let validateJwt = expressJwt({
-  secret: config.secrets.session
+let validateJwt = expressjwt({
+  secret: config.secrets.session,
+  algorithms: ['HS256'],
+  requestProperty: 'user'
 });
 
 /**

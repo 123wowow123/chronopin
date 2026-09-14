@@ -1,0 +1,61 @@
+.follow-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  &__count {
+    font-size: 0.9em;
+    color: var(--primary-color);
+    white-space: nowrap;
+  }
+
+  // Pinterest-style pill: red to follow, grey once you do.
+  &__toggle {
+    border: 0;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+    color: #FFF;
+    background-color: #E60023;
+    transition: background-color 0.15s ease;
+
+    &:hover,
+    &:focus {
+      background-color: #AD081B;
+      outline: none;
+    }
+
+    &[disabled] {
+      opacity: 0.6;
+      cursor: default;
+    }
+
+    &.\--following {
+      color: var(--grid-header-text-color);
+      background-color: var(--primary-highlight-bg-color);
+
+      &:hover,
+      &:focus {
+        background-color: var(--primary-highlight-plus-bg-color);
+      }
+    }
+  }
+
+  // "Following" turns into "Unfollow" on hover, so the toggle says what a
+  // click will do.
+  &__unfollow {
+    display: none;
+  }
+
+  &__toggle.\--following:hover {
+    .follow-button__following {
+      display: none;
+    }
+
+    .follow-button__unfollow {
+      display: inline;
+    }
+  }
+}
