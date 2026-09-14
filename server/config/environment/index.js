@@ -54,14 +54,6 @@ let all = {
     }
   },
 
-  // Sequelize backs only the session store (express-sequelize-session), which
-  // keeps Sequelize's defaults: a "Sessions" table with createdAt/updatedAt.
-  sequelize: {
-    options: {
-      dialect: 'postgres'
-    }
-  },
-
   facebook: {
     clientID: getProcessEnv('FACEBOOK_ID') || 'id',
     clientSecret: getProcessEnv('FACEBOOK_SECRET') || 'secret',

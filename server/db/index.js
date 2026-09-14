@@ -73,6 +73,7 @@ function closeConnection() {
 }
 
 module.exports = {
+  getPool,
   query,
   queryResult,
   transaction,
