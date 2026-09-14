@@ -43,6 +43,8 @@ export function SearchResults({
   searchedUser,
   specialtyDays,
   error,
+  query = '',
+  onlyWatched = false,
 }: {
   pins: CardPin[];
   serverTimeZone: string;
@@ -50,6 +52,8 @@ export function SearchResults({
   searchedUser?: { id: number; userName: string };
   specialtyDays: Record<string, string[]>;
   error?: string;
+  query?: string;
+  onlyWatched?: boolean;
 }) {
   const timeZone = useTimeZone(serverTimeZone);
   const [postedWithin, setPostedWithin] = useState<string | null>(null);
@@ -113,7 +117,13 @@ export function SearchResults({
       {error ? <p className="mt-16 text-center text-lg text-subtle">Search is unavailable right now. Please try again in a bit.</p> : null}
       {!error && !visible.length ? (
         <p className="mt-16 text-center text-lg text-subtle">
-          {postedWithin && pins.length ? `No results posted in the last ${phrase}.` : 'No results found, please try a different search'}
+          {postedWithin && pins.length
+            ? `No results posted in the last ${phrase}.`
+            : onlyWatched
+              ? query.trim()
+                ? 'None of the pins you watch match this search.'
+                : "You aren't watching any pins yet. Tap the eye on a pin to watch it."
+              : 'No results found, please try a different search'}
         </p>
       ) : null}
 

@@ -51,6 +51,11 @@ export function SearchBox() {
 
   function submit(query: string, filter = choice) {
     setOpen(false);
+    // Nothing to search for and nothing to filter by: that's the timeline.
+    if (!query.trim() && !filter) {
+      router.push('/');
+      return;
+    }
     const next = new URLSearchParams();
     if (query) next.set('q', query);
     if (filter) next.set('f', filter);

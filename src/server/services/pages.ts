@@ -71,9 +71,19 @@ export async function relatedPins(id: number, title: string): Promise<PinJson[]>
 }
 
 export async function searchPage(query: string, userId: number | null, onlyWatched: boolean): Promise<SearchPage & { error?: string }> {
+  // Watched results are one person's list and must change the moment they
+  // watch or unwatch a pin, so they skip the shared, briefly stale cache.
+  return onlyWatched && userId ? runSearch(query, userId, true) : cachedSearch(query, userId);
+}
+
+async function cachedSearch(query: string, userId: number | null) {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
+  return runSearch(query, userId, false);
+}
+
+async function runSearch(query: string, userId: number | null, onlyWatched: boolean): Promise<SearchPage & { error?: string }> {
   try {
     return toJson<SearchPage>(await searchPins(query, { userId, onlyWatched }));
   } catch (err) {

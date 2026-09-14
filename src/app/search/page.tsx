@@ -59,6 +59,8 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
         searchedUser={page.user}
         specialtyDays={days}
         error={page.error}
+        query={q}
+        onlyWatched={onlyWatched && !!user}
       />
     </>
   );
