@@ -127,7 +127,9 @@ export default function PinsMap() {
   const hasFuture = !!future && future !== '0d';
 
   return (
-    <div className="relative h-[calc(100dvh-52px)]">
+    // isolate: the controls need z-[1000] to sit over Leaflet's panes, but that
+    // must stay inside the map, under the navbar's menus and panels.
+    <div className="relative isolate h-[calc(100dvh-52px)]">
       <div ref={canvasRef} className="absolute inset-0 z-0" />
       <div className="absolute top-3 right-3 z-[1000]">
         <TimeRangeSlider

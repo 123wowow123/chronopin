@@ -34,5 +34,7 @@ export default function PinMap({ latitude, longitude, title }: { latitude: numbe
     };
   }, [latitude, longitude, title]);
 
-  return <div ref={ref} className="h-[360px] w-full overflow-hidden rounded-xl border border-line bg-raised sm:h-[420px]" role="img" aria-label={`Map of ${title}`} />;
+  // isolate: Leaflet's panes and controls use z-index 400-1000, which would
+  // otherwise scroll over the sticky navbar.
+  return <div ref={ref} className="isolate h-[360px] w-full overflow-hidden rounded-xl border border-line bg-raised sm:h-[420px]" role="img" aria-label={`Map of ${title}`} />;
 }
