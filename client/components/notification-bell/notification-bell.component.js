@@ -121,11 +121,6 @@
           delete this.pending[userId];
         });
     }
-
-    initial(notification) {
-      const actor = notification.actor;
-      return (actor.firstName || actor.userName || '?').replace(/^@+/, '').charAt(0).toUpperCase();
-    }
   }
 
   angular.module('chronopinNodeApp')

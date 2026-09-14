@@ -8,6 +8,30 @@ import config from '../../config/environment';
 import jwt from 'jsonwebtoken';
 import _ from 'lodash';
 import * as createdFilter from '../../util/createdFilter';
+import { v4 as uuidv4 } from 'uuid';
+import * as azureBlob from '../../azure-blob';
+import { squareImage } from '../../image/thumb';
+
+// Uploaded pictures are blobs in the thumb container under this prefix, and
+// pictureUrl stores the blob name rather than a full URL - the same as
+// Medium.thumbName, so the stored value does not depend on which storage
+// account (Azurite locally) the app happens to run against. A social login's
+// photo stays a full URL; the client tells the two apart by the scheme.
+const PICTURE_PREFIX = 'avatar/';
+const PICTURE_SIZE = 256;
+
+function _isUploadedPicture(pictureUrl) {
+  return typeof pictureUrl === 'string' && pictureUrl.startsWith(PICTURE_PREFIX);
+}
+
+function _deleteUploadedPicture(pictureUrl) {
+  if (!_isUploadedPicture(pictureUrl)) {
+    return Promise.resolve();
+  }
+  // A leftover blob is harmless, so a failed delete does not fail the request.
+  return azureBlob.deleteThumb(pictureUrl)
+    .catch(err => console.log(`User picture '${pictureUrl}' delete err:`, err));
+}
 
 import {
   EventEmitter
@@ -22,6 +46,7 @@ const pickUserProps = [
   'email',
   'role',
   'provider',
+  'pictureUrl',
   'defaultFilterSpanPreference'
 ];
 
@@ -263,6 +288,79 @@ export function savePreferences(req, res, next) {
           res.status(204).end();
         })
         .catch(validationError(res));
+    })
+    .catch(err => next(err));
+}
+
+/**
+ * Replace the signed-in user's picture with an uploaded image
+ *
+ * The image arrives as multipart field `picture` (held in memory by multer),
+ * is cropped to a square and stored as a blob; the previous upload, if any,
+ * is deleted once the row points at the new one.
+ */
+export function uploadPicture(req, res, next) {
+  if (!req.file || !req.file.buffer) {
+    return res.status(400).json({
+      message: 'Choose an image to upload'
+    });
+  }
+
+  let userId = +req.user.id;
+  return squareImage(req.file.buffer, PICTURE_SIZE)
+    .catch(() => {
+      const err = new Error('That file is not an image we can read');
+      err.status = 400;
+      throw err;
+    })
+    .then(({ buffer, type }) => {
+      const blobName = `${PICTURE_PREFIX}${userId}-${uuidv4()}.${type === 'image/png' ? 'png' : 'jpg'}`;
+      return azureBlob.uploadThumb(blobName, buffer, type)
+        .then(() => User.getById(userId))
+        .then(({ user }) => {
+          if (!user) {
+            const err = new Error('Unauthorized');
+            err.status = 401;
+            throw err;
+          }
+          const previous = user.pictureUrl;
+          user.pictureUrl = blobName;
+          return patchEntity(user)
+            .then(() => _deleteUploadedPicture(previous))
+            .then(() => {
+              res.json({
+                pictureUrl: blobName
+              });
+            });
+        });
+    })
+    .catch(err => {
+      if (err.status) {
+        return res.status(err.status).json({
+          message: err.message
+        });
+      }
+      next(err);
+    });
+}
+
+/**
+ * Remove the signed-in user's picture
+ */
+export function removePicture(req, res, next) {
+  let userId = +req.user.id;
+  return User.getById(userId)
+    .then(({ user }) => {
+      if (!user) {
+        return res.status(401).end();
+      }
+      const previous = user.pictureUrl;
+      user.pictureUrl = null;
+      return patchEntity(user)
+        .then(() => _deleteUploadedPicture(previous))
+        .then(() => {
+          res.status(204).end();
+        });
     })
     .catch(err => next(err));
 }

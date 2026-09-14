@@ -86,8 +86,8 @@
 
 }
 
-// On a white tile so a dark logo still shows on the pill over a photo, and a
-// light one on the plain meta line. object-fit keeps a non-square icon whole.
+// On a white tile so a light logo still shows on the plain meta line.
+// object-fit keeps a non-square icon whole.
 .grid__company-logo {
     // app.scss gives every img min-width: 100%.
     min-width: 0;
@@ -99,6 +99,13 @@
     background: #fff;
     object-fit: contain;
     vertical-align: -3px;
+}
+
+// Over an image the logo sits bare on the pill: favicons like Apple's carry
+// their own dark square, which the white tile framed in a white border.
+.grid__tags .grid__company-logo {
+    padding: 0;
+    background: none;
 }
 
 // Image-less pins have nowhere to overlay company/location, so they get one

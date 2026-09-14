@@ -203,6 +203,7 @@ const PAGE_COLUMNS = `
   "Pin"."Media.authorUrl",
   "Pin"."Media.html",
   "Pin"."User.userName",
+  "Pin"."User.pictureUrl",
   "Pin"."Merchant.id",
   "Pin"."Merchant.label",
   "Pin"."Merchant.url",

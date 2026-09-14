@@ -40,6 +40,9 @@ export const BasePinProp = [
     'utcDeletedDateTime'
 ];
 
+// What a pin may say about its author.
+const PUBLIC_USER_PROPS = ['id', 'userName', 'pictureUrl'];
+
 // user, userId, media
 export default class BasePin {
 
@@ -65,6 +68,7 @@ export default class BasePin {
             else if (Number.isInteger(pin.userId)) {
                 this.userId = pin.userId;
                 this.user.userName = BasePin.getPinUserName(pin);
+                this.user.pictureUrl = pin['User.pictureUrl'] || undefined;
             }
 
             this.media = _.get(pin, 'media', [])
@@ -160,11 +164,20 @@ export default class BasePin {
 
     toJSON() {
         // omits own and inherited properties with null values
-        return _.omitBy(this, (value, key) => {
+        const json = _.omitBy(this, (value, key) => {
             return key.startsWith('_')
                 || _.isNull(value)
                 || (Array.isArray(value) && !value.length);
         });
+        // Only the author's public fields. Creating a pin sets the signed-in
+        // user (req.user, the whole row) as its user, and the pin is then sent
+        // back in the response, logged, and broadcast over socket.io to every
+        // connected browser - which used to include the author's password
+        // hash, salt and email.
+        if (json.user) {
+            json.user = _.omitBy(_.pick(json.user, PUBLIC_USER_PROPS), _.isNil);
+        }
+        return json;
     }
 
     static getPinUserName(pinRow) {

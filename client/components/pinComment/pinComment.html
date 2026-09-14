@@ -1,5 +1,7 @@
 <div class="usercomments__item">
   <div ng-if="!$ctrl.comment.$editing">
+    <user-avatar class="usercomments__avatar" aria-hidden="true" user-name="$ctrl.comment.userName"
+      picture-url="$ctrl.comment.userPictureUrl"></user-avatar>
     <span class="usercomments__author">{{$ctrl.comment.userName}}</span>
     <span class="usercomments__text" ng-bind-html="$ctrl.comment.text"></span>
     <button type="button" class="btn btn-link usercomments__reply" ng-if="$ctrl.pageCtrl.canReply($ctrl.comment)"

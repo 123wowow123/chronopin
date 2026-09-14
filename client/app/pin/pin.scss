@@ -262,19 +262,9 @@
     color: var(--grid-auther-text-color);
   }
 
-  // Same circle as .search__user-avatar and .following__avatar.
+  // The circle itself comes from user-avatar.
   &__creator-avatar {
-    flex: 0 0 1.8em;
-    width: 1.8em;
-    height: 1.8em;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     font-size: 1.1em;
-    font-weight: 700;
-    color: var(--grid-header-text-color);
-    background-color: var(--primary-highlight-plus-bg-color);
   }
 
 }
@@ -298,6 +288,13 @@
     &:last-child {
       border-bottom: none;
     }
+  }
+
+  &__avatar {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+    font-size: 12px;
   }
 
   &__author {

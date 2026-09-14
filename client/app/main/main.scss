@@ -217,6 +217,16 @@ $bag-font-color: var(--bag-text-color);
         color: inherit;
         cursor: pointer;
 
+        // The author's picture, when they have one, ahead of their handle.
+        // Only a picture is shown here - a letter circle on every card would
+        // be noise in this deliberately plain line.
+        &__avatar {
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
+            vertical-align: -3px;
+        }
+
         &__divider {
             content: ' / ';
             display: inline;

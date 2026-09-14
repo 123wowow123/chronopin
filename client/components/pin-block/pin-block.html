@@ -12,6 +12,7 @@
                 </a>
                 <span class="rubric__divider">/</span>
                 <a class="rubric" title="Show all {{$ctrl.pin.user.userName}} pins" ng-click="$ctrl.searchService.refine('user', $ctrl.pin.user.userName)">
+                    <user-avatar class="rubric__avatar" ng-if="$ctrl.pin.user.pictureUrl" user-name="$ctrl.pin.user.userName" picture-url="$ctrl.pin.user.pictureUrl"></user-avatar>
                     <span>{{$ctrl.pin.user.userName}}</span>
                 </a>
             </div>

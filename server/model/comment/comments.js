@@ -78,7 +78,7 @@ function _getByPinId(pinId) {
   return db.query(`
     SELECT "Comment"."id", "Comment"."text", "Comment"."userId", "Comment"."pinId",
            "Comment"."parentCommentId", "Comment"."utcCreatedDateTime", "Comment"."utcUpdatedDateTime",
-           "User"."userName" AS "User.userName"
+           "User"."userName" AS "User.userName", "User"."pictureUrl" AS "User.pictureUrl"
     FROM "Comment"
       LEFT JOIN "User" ON "Comment"."userId" = "User"."id"
     WHERE "Comment"."pinId" = $1 AND "Comment"."utcDeletedDateTime" IS NULL

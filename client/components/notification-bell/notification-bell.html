@@ -24,8 +24,7 @@
         ng-class="{'\--unread': !n.read}" role="menuitem">
 
         <a class="notification-bell__avatar" ng-click="$ctrl.showUser(n)" title="Show {{n.actor.userName}} pins">
-          <img ng-if="n.actor.pictureUrl" ng-src="{{n.actor.pictureUrl}}" alt="">
-          <span ng-if="!n.actor.pictureUrl">{{$ctrl.initial(n)}}</span>
+          <user-avatar user-name="n.actor.userName" picture-url="n.actor.pictureUrl"></user-avatar>
         </a>
 
         <div class="notification-bell__text" ng-switch="n.type">

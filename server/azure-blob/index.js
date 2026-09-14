@@ -40,3 +40,7 @@ export function uploadThumb(fileName, buffer, contentType) {
       blobHTTPHeaders: { blobContentType: contentType }
     });
 }
+
+export function deleteThumb(fileName) {
+  return getThumbContainer().getBlockBlobClient(fileName).deleteIfExists();
+}

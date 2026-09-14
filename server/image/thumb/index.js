@@ -32,3 +32,18 @@ export function shrinkFromBuffer(buffer, options) {
 export function shrinkFromPath(localPath, options) {
   return shrinkImage(localPath, options);
 }
+
+// Crops to the centre square and scales it to size x size. PNG and GIF stay
+// PNG so transparency survives; everything else becomes JPEG.
+export function squareImage(bufferOrLocalPath, size) {
+  return Jimp.read(bufferOrLocalPath)
+    .then(image => {
+      const type = image.mime === 'image/png' || image.mime === 'image/gif' ? 'image/png' : 'image/jpeg';
+      image.cover({ w: size, h: size });
+      return image.getBuffer(type, type === 'image/jpeg' ? { quality: 85 } : undefined)
+        .then(buffer => ({
+          buffer,
+          type
+        }));
+    });
+}

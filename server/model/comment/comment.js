@@ -41,6 +41,9 @@ export default class Comment {
         if (comment['User.userName']) {
           this._user.userName = comment['User.userName'];
         }
+        if (comment['User.pictureUrl']) {
+          this._user.pictureUrl = comment['User.pictureUrl'];
+        }
       }
 
       if (pin instanceof BasePin) {
@@ -103,6 +106,7 @@ export default class Comment {
         || _.isNull(value);
     });
     json.userName = _.get(this, '_user.userName');
+    json.userPictureUrl = _.get(this, '_user.pictureUrl') || undefined;
     return json;
   }
 

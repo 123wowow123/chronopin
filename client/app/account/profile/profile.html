@@ -13,6 +13,25 @@
         <h1>Profile</h1>
       </div>
       <div class="col-sm-12">
+        <div class="form-group profile__picture">
+          <label class="control-label">Picture</label>
+          <div class="profile__picture-row">
+            <user-avatar class="profile__avatar" user-name="vm.user.userName" picture-url="vm.user.pictureUrl"></user-avatar>
+            <div class="profile__picture-actions">
+              <label class="btn btn-default" ng-class="{disabled: vm.pictureBusy}">
+                <i class="fa" ng-class="vm.pictureBusy ? 'fa-spinner fa-spin' : 'fa-camera'" aria-hidden="true"></i>
+                {{ vm.user.pictureUrl ? 'Change picture' : 'Upload picture' }}
+                <input type="file" class="profile__picture-input" accept="image/*"
+                  ng-disabled="vm.pictureBusy" profile-picture-input="vm.uploadPicture(input)" />
+              </label>
+              <button type="button" class="btn btn-link" ng-if="vm.user.pictureUrl" ng-disabled="vm.pictureBusy"
+                ng-click="vm.removePicture()">Remove</button>
+              <p class="help-block" ng-if="!vm.pictureError">Shown on your pins and comments. JPEG, PNG or GIF, up to 5 MB.</p>
+              <p class="help-block text-danger" ng-if="vm.pictureError">{{ vm.pictureError }}</p>
+            </div>
+          </div>
+        </div>
+
         <form class="form" name="form" ng-submit="vm.patch(form)" novalidate>
 
           <div class="form-group" ng-class="{ 'has-success': form.userNameNoPrefix.$valid,
