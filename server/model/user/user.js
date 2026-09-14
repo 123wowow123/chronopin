@@ -217,6 +217,11 @@ export default class User {
       })
   }
 
+  // Inserts a backed-up user as-is: password is already a hash with its salt.
+  restore() {
+    return _create(this);
+  }
+
   update() {
     // update will always regenerate password hash
     return new Promise((resolve, reject) => {
@@ -301,10 +306,11 @@ function _value(value) {
 }
 
 function _create(user) {
-  const columns = WRITE_COLUMNS.concat(['utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime']);
+  const columns = WRITE_COLUMNS.concat(['defaultFilterSpanPreference', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime']);
   const values = WRITE_COLUMNS.map(c => _value(user[c]))
     // utcUpdatedDateTime has always been written from utcCreatedDateTime.
-    .concat([user.utcCreatedDateTime || new Date(), _value(user.utcCreatedDateTime), _value(user.utcDeletedDateTime)]);
+    .concat([_value(user.defaultFilterSpanPreference), user.utcCreatedDateTime || new Date(),
+      _value(user.utcCreatedDateTime), _value(user.utcDeletedDateTime)]);
 
   const hasId = user.id != null;
   if (hasId) {

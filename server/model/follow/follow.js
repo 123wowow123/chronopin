@@ -76,4 +76,59 @@ export default class Follow {
       [userId, viewerId == null ? null : viewerId])
       .then(rows => rows[0]);
   }
+
+  // Who userId follows, newest first, for the "manage following" page.
+  static listFollowing(userId) {
+    return db.query(`
+      SELECT u."id", u."userName", f."utcCreatedDateTime"
+      FROM "Follow" f
+      JOIN "User" u ON u."id" = f."followeeId"
+      WHERE f."followerId" = $1 AND f."utcDeletedDateTime" IS NULL AND u."utcDeletedDateTime" IS NULL
+      ORDER BY f."utcCreatedDateTime" DESC`, [userId])
+      .then(rows => {
+        return { following: rows };
+      });
+  }
+
+  // Every live follow, oldest first, for scripts/data's backup:data.
+  static getAll() {
+    return db.query(`
+      SELECT "id", "followerId", "followeeId", "utcCreatedDateTime", "utcUpdatedDateTime"
+      FROM "Follow"
+      WHERE "utcDeletedDateTime" IS NULL
+      ORDER BY "utcCreatedDateTime" ASC, "id" ASC`)
+      .then(rows => {
+        return { follows: rows };
+      });
+  }
+
+  // Re-inserts backed-up follows with their original id/createdDateTime
+  // preserved, bypassing Follow.follow() so a reseed does not also recreate
+  // every 'follow' notification.
+  static restore(follows) {
+    return (follows || [])
+      .reduce((prev, f) => prev.then(() => _insert(f)), Promise.resolve());
+  }
+}
+
+function _insert(follow) {
+  const hasId = follow.id != null;
+  const columns = ['followerId', 'followeeId', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
+  const values = [follow.followerId, follow.followeeId,
+    follow.utcCreatedDateTime || new Date(), follow.utcUpdatedDateTime]
+    .map(value => value === undefined ? null : value);
+  if (hasId) {
+    columns.unshift('id');
+    values.unshift(follow.id);
+  }
+
+  return db.query(`
+    INSERT INTO "Follow" (${columns.map(c => `"${c}"`).join(', ')})
+    VALUES (${values.map((v, i) => `$${i + 1}`).join(', ')})
+    ON CONFLICT ("followerId", "followeeId") DO NOTHING
+    RETURNING "id"`, values)
+    .then(() => {
+      return hasId ? db.query(
+        `SELECT setval(pg_get_serial_sequence('"Follow"', 'id'), GREATEST((SELECT MAX("id") FROM "Follow"), 1))`) : undefined;
+    });
 }

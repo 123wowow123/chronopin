@@ -43,6 +43,13 @@ angular.module('chronopinNodeApp')
         controller: 'PreferencesController',
         controllerAs: 'vm',
         authenticate: true
+      })
+      .state('following', {
+        url: '/following',
+        templateUrl: 'app/account/following/following.html',
+        controller: 'FollowingController',
+        controllerAs: 'vm',
+        authenticate: true
       });
   })
   .run(function($rootScope) {

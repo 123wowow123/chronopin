@@ -162,6 +162,13 @@
       if (!this.pin.category) {
         this.pin.category = pin.category;
       }
+      // Carried for the same reason as dateConfidence/longFormSummary below -
+      // the form has no inputs for merchant links, so an edit must resubmit
+      // them or Pin.update() (which deletes and re-saves the whole list)
+      // wipes them.
+      if (!this.pin.merchants) {
+        this.pin.merchants = pin.merchants;
+      }
       if (!this.pin.start && pin.utcStartDateTime) {
         this.pin.start = new Date(pin.utcStartDateTime);
       }
@@ -213,6 +220,9 @@
       if (!this.pin.category) {
         this.pin.category = pin.category;
       }
+      if (!this.pin.merchants) {
+        this.pin.merchants = pin.merchants;
+      }
       if (!this.pin.start && pin.utcStartDateTime) {
         this.pin.start = new Date(pin.utcStartDateTime);
       }
@@ -261,6 +271,7 @@
       this.pin.price = undefined;
       this.pin.company = undefined;
       this.pin.category = undefined;
+      this.pin.merchants = undefined;
       this.pin.start = undefined;
       this.pin.end = undefined;
       this.pin.selectedImage = undefined;
@@ -322,6 +333,7 @@
         price: pin.price,
         company: pin.company,
         category: pin.category,
+        merchants: pin.merchants || [],
         dateConfidence: pin.dateConfidence,
         dateConfidenceReasoning: pin.dateConfidenceReasoning,
         longFormSummary: pin.longFormSummary,

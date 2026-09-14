@@ -163,6 +163,7 @@ button {
 
 // Component styles are injected through grunt
 /* inject:scss */
+@import 'account/following/following.scss';
 @import 'account/login/login.scss';
 @import 'account/profile/profile.scss';
 @import 'account/settings/settings.scss';

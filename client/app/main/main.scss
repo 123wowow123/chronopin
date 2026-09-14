@@ -398,9 +398,81 @@ $bag-font-color: var(--bag-text-color);
         @extend .text-muted;
     }
 
+    // The card footer: price, relevance pill, social. Equal outer columns
+    // keep the pill centred on the card whatever the price's width.
+    &__footer--split {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 8px;
+
+        .grid__social {
+            justify-self: end;
+        }
+    }
+
+    &__footer-center {
+        text-align: center;
+    }
+
     &__social {
         display: flex;
         align-items: center;
+    }
+
+    // A search hit's relevance score: the score and a small meter filled
+    // to it. A tint of one blue rather than theme colours, so it reads on
+    // both the light and dark card backgrounds.
+    &__relevance {
+        $relevance-blue: #4a90d9;
+
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 2px 9px;
+        border: 1px solid rgba($relevance-blue, 0.4);
+        border-radius: 999px;
+        background: rgba($relevance-blue, 0.12);
+        color: $relevance-blue;
+        font-size: 11px;
+        line-height: 16px;
+        white-space: nowrap;
+        cursor: help;
+        transition: background 150ms ease-in-out, border-color 150ms ease-in-out;
+
+        &:hover {
+            background: rgba($relevance-blue, 0.2);
+            border-color: rgba($relevance-blue, 0.65);
+        }
+
+        // The same blue is too faint as text on the light theme's white card.
+        :root.\--light & {
+            color: #2f6aa8;
+        }
+
+        &-score {
+            font-weight: bold;
+            font-variant-numeric: tabular-nums;
+        }
+
+        &-meter {
+            position: relative;
+            width: 28px;
+            height: 4px;
+            margin-left: 1px;
+            border-radius: 2px;
+            background: rgba($relevance-blue, 0.25);
+            overflow: hidden;
+        }
+
+        &-fill {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+            background: $relevance-blue;
+        }
     }
 
     &__price {

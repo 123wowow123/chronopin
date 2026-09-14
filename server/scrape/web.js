@@ -8,7 +8,8 @@ const { extractPinFields, toLocation } = require('../extract');
 const mediumID = config.mediumID;
 const {
   Pin,
-  Medium
+  Medium,
+  Merchant
 } = require('../model');
 
 const headless = true;
@@ -264,6 +265,14 @@ function _applyExtracted(newPin, fields) {
 
   if (fields.category) {
     newPin.category = fields.category;
+  }
+
+  if (fields.amazonUrl) {
+    newPin.addMerchant(new Merchant({ label: 'Amazon', url: fields.amazonUrl }));
+  }
+
+  if (fields.bestBuyUrl) {
+    newPin.addMerchant(new Merchant({ label: 'Best Buy', url: fields.bestBuyUrl }));
   }
 
   if (fields.longFormSummary) {

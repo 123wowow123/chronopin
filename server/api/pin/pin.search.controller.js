@@ -7,7 +7,8 @@ import * as searchQuery from '../../util/searchQuery';
 import {
   Pins,
   SearchPins,
-  SearchPin
+  SearchPin,
+  User
 } from '../../model';
 
 // Listening to pin events
@@ -38,6 +39,7 @@ export function searchPins(req, res) {
   // database directly, which needs no search service.
   if (searchQuery.hasFilters(query) && !query.text) {
     return SearchPins.searchFilters(query, favoriteUserId)
+      .then(_withSearchedUser(query))
       .then(response.withResult(res, 200))
       .catch(response.handleError(res));
   }
@@ -54,8 +56,34 @@ export function searchPins(req, res) {
       }
       return pins;
     })
+    .then(_withSearchedUser(query))
     .then(response.withResult(res, 200))
     .catch(response.handleError(res));
+}
+
+// A search that names exactly one user (user:ThePinGang, or a bare @ThePinGang)
+// also answers with that user's id and handle, so the page can show whose pins
+// these are with a Follow button - even when none of them match. The name is
+// resolved with the same parser the search itself used, so the two can never
+// disagree about which user a query means.
+function _withSearchedUser(query) {
+  return pins => {
+    if (!pins || query.userNames.length !== 1) {
+      return pins;
+    }
+    return User.getUserByUserName(query.userNames[0])
+      .then(({
+        user
+      }) => {
+        if (user) {
+          pins.user = {
+            id: user.id,
+            userName: user.userName
+          };
+        }
+        return pins;
+      });
+  };
 }
 
 export function autocompletePins(req, res) {

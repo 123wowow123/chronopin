@@ -6,7 +6,6 @@
   &__count {
     font-size: 0.9em;
     color: var(--primary-color);
-    white-space: nowrap;
   }
 
   // Pinterest-style pill: red to follow, grey once you do.
@@ -32,30 +31,46 @@
       cursor: default;
     }
 
+    // Green while following; on hover it turns into a red outline so
+    // "Unfollow" reads as a warning without looking like the solid Follow.
     &.\--following {
-      color: var(--grid-header-text-color);
-      background-color: var(--primary-highlight-bg-color);
+      color: #FFF;
+      background-color: #2E7D32;
+      box-shadow: inset 0 0 0 2px transparent;
 
       &:hover,
       &:focus {
-        background-color: var(--primary-highlight-plus-bg-color);
+        color: #FF4D5E;
+        background-color: transparent;
+        box-shadow: inset 0 0 0 2px #FF4D5E;
       }
     }
   }
 
   // "Following" turns into "Unfollow" on hover, so the toggle says what a
-  // click will do.
+  // click will do. Both labels share one grid cell and swap by visibility,
+  // so the button keeps the wider label's width and nothing around it reflows.
+  &__toggle.\--following {
+    display: inline-grid;
+    justify-items: center;
+  }
+
+  &__following,
   &__unfollow {
-    display: none;
+    grid-area: 1 / 1;
+  }
+
+  &__unfollow {
+    visibility: hidden;
   }
 
   &__toggle.\--following:hover {
     .follow-button__following {
-      display: none;
+      visibility: hidden;
     }
 
     .follow-button__unfollow {
-      display: inline;
+      visibility: visible;
     }
   }
 }

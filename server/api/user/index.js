@@ -15,6 +15,7 @@ router.put('/:id/password', auth.isAuthenticated(), controller.changePassword);
 router.put('/:id/preferences', auth.isAuthenticated(), controller.savePreferences);
 router.patch('/me', auth.isAuthenticated(), controller.patch);
 router.get('/:id/follow', auth.tryGetUser(), followController.followStatus);
+router.get('/:id/following', auth.isAuthenticated(), followController.listFollowing);
 router.post('/:id/follow', auth.isAuthenticated(), followController.follow);
 router.delete('/:id/follow', auth.isAuthenticated(), followController.unfollow);
 router.get('/:id', auth.isAuthenticated(), controller.show);

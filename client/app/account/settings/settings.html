@@ -1,48 +1,82 @@
 <div class="settings">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <h1>Change Password</h1>
-      </div>
-      <div class="col-sm-12">
-        <form class="form" name="form" ng-submit="vm.changePassword(form)" novalidate>
+  <div class="settings__card">
 
-          <div class="form-group">
-            <label>Current Password</label>
+    <header class="settings__header">
+      <span class="settings__icon" aria-hidden="true"><i class="fa fa-lock"></i></span>
+      <h1 class="settings__title">Change password</h1>
+      <p class="settings__subtitle">
+        Enter your current password, then choose a new one<span ng-if="vm.userName"> for <strong>{{ vm.userName }}</strong></span>.
+      </p>
+    </header>
 
-            <input type="password" name="password" class="form-control" ng-model="vm.user.oldPassword" mongoose-error/>
-            <p class="help-block" ng-show="form.password.$error.mongoose">
-              {{ vm.errors.other }}
-            </p>
-          </div>
-
-          <div class="form-group">
-            <label>New Password</label>
-
-            <input type="password" name="newPassword" class="form-control" ng-model="vm.user.newPassword" ng-minlength="3" required/>
-            <p class="help-block" ng-show="(form.newPassword.$error.minlength || form.newPassword.$error.required) && (form.newPassword.$dirty || vm.submitted)">
-              Password must be at least 3 characters.
-            </p>
-          </div>
-
-          <div class="form-group">
-            <label>Confirm New Password</label>
-
-            <input type="password" name="confirmPassword" class="form-control" ng-model="vm.user.confirmPassword" match="vm.user.newPassword" ng-minlength="3" required="" />
-            <p class="help-block" ng-show="form.confirmPassword.$error.match && vm.submitted">
-              Passwords must match.
-            </p>
-
-          </div>
-
-          <p class="help-block"> {{ vm.message }} </p>
-
-          <div class="form-group">
-            <button class="btn btn-lg btn-primary" type="submit">Save changes</button>
-          </div>
-          
-        </form>
-      </div>
+    <div class="settings__alert --success" role="status" ng-if="vm.message">
+      <i class="fa fa-check-circle" aria-hidden="true"></i> {{ vm.message }}
     </div>
+
+    <form class="settings__form" name="form" ng-submit="vm.changePassword(form)" novalidate>
+
+      <div class="settings__field" ng-class="{'--error': vm.errors.oldPassword}">
+        <label for="settings-old-password">Current password</label>
+        <div class="settings__input">
+          <input id="settings-old-password" type="{{ vm.show.oldPassword ? 'text' : 'password' }}" name="password"
+            class="form-control" ng-model="vm.user.oldPassword" ng-change="vm.errors.oldPassword = null"
+            autocomplete="current-password" required />
+          <button type="button" class="settings__reveal" ng-click="vm.show.oldPassword = !vm.show.oldPassword"
+            aria-label="{{ vm.show.oldPassword ? 'Hide' : 'Show' }} password">
+            <i class="fa" ng-class="vm.show.oldPassword ? 'fa-eye-slash' : 'fa-eye'" aria-hidden="true"></i>
+          </button>
+        </div>
+        <p class="settings__hint --error" ng-if="vm.errors.oldPassword">{{ vm.errors.oldPassword }}</p>
+        <p class="settings__hint --error" ng-if="!vm.errors.oldPassword && form.password.$error.required && vm.submitted">
+          Enter your current password.
+        </p>
+      </div>
+
+      <div class="settings__field" ng-class="{'--error': vm.newPasswordTooShort() && (form.newPassword.$dirty || vm.submitted)}">
+        <label for="settings-new-password">New password</label>
+        <div class="settings__input">
+          <input id="settings-new-password" type="{{ vm.show.newPassword ? 'text' : 'password' }}" name="newPassword"
+            class="form-control" ng-model="vm.user.newPassword" autocomplete="new-password" />
+          <button type="button" class="settings__reveal" ng-click="vm.show.newPassword = !vm.show.newPassword"
+            aria-label="{{ vm.show.newPassword ? 'Hide' : 'Show' }} password">
+            <i class="fa" ng-class="vm.show.newPassword ? 'fa-eye-slash' : 'fa-eye'" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="settings__strength" ng-if="vm.user.newPassword" ng-class="'--' + vm.strength().level">
+          <div class="settings__strength-bar" aria-hidden="true">
+            <span ng-style="{width: vm.strength().percent + '%'}"></span>
+          </div>
+          <span class="settings__strength-label">{{ vm.strength().label }}</span>
+        </div>
+
+        <p class="settings__hint --error" ng-if="vm.newPasswordTooShort() && (form.newPassword.$dirty || vm.submitted)">
+          Use at least {{ vm.minLength }} characters.
+        </p>
+        <p class="settings__hint" ng-if="!vm.user.newPassword && !vm.submitted">
+          Longer is stronger &mdash; mix in capitals, numbers or symbols.
+        </p>
+      </div>
+
+      <div class="settings__field" ng-class="{'--error': vm.showMismatch(form), '--ok': vm.passwordsMatch()}">
+        <label for="settings-confirm-password">Confirm new password</label>
+        <div class="settings__input">
+          <input id="settings-confirm-password" type="{{ vm.show.confirmPassword ? 'text' : 'password' }}"
+            name="confirmPassword" class="form-control" ng-model="vm.user.confirmPassword" autocomplete="new-password" />
+          <span class="settings__match" ng-if="vm.passwordsMatch()" aria-hidden="true"><i class="fa fa-check"></i></span>
+          <button type="button" class="settings__reveal" ng-click="vm.show.confirmPassword = !vm.show.confirmPassword"
+            aria-label="{{ vm.show.confirmPassword ? 'Hide' : 'Show' }} password">
+            <i class="fa" ng-class="vm.show.confirmPassword ? 'fa-eye-slash' : 'fa-eye'" aria-hidden="true"></i>
+          </button>
+        </div>
+        <p class="settings__hint --error" ng-if="vm.showMismatch(form)">Passwords don't match.</p>
+      </div>
+
+      <button class="btn btn-primary settings__submit" type="submit" ng-disabled="vm.saving">
+        <i class="fa fa-spinner fa-spin" ng-if="vm.saving" aria-hidden="true"></i>
+        {{ vm.saving ? 'Updating…' : 'Update password' }}
+      </button>
+
+    </form>
   </div>
 </div>

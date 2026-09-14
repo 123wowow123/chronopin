@@ -10,7 +10,8 @@ import {
   FullPins,
   DateTime,
   DateTimes,
-  Comments
+  Comments,
+  Follow
 } from '../../server/model';
 
 import fs from 'fs';
@@ -30,7 +31,9 @@ import * as log from '../../server/util/log';
 
 let cp,
   pinFilePath,
+  userFilePath,
   commentFilePath,
+  followFilePath,
   aphelionFilePath,
   solsticeFilePath,
   equinoxFilePath,
@@ -41,7 +44,9 @@ let cp,
 module.exports.setup = function (seedOpt) {
   cp = seedOpt.cp;
   pinFilePath = seedOpt.pinfile;
+  userFilePath = seedOpt.userfile;
   commentFilePath = seedOpt.commentfile;
+  followFilePath = seedOpt.followfile;
   aphelionFilePath = seedOpt.aphelionfile;
   solsticeFilePath = seedOpt.solsticefile;
   equinoxFilePath = seedOpt.equinoxfile;
@@ -51,8 +56,7 @@ module.exports.setup = function (seedOpt) {
 }
 
 module.exports.seedDB = function () {
-  let mainUser,
-    defaultUserObj = {
+  let defaultUserObj = {
       provider: 'facebook',
       role: 'admin',
       userName: '@ThePinGang',
@@ -61,7 +65,7 @@ module.exports.seedDB = function () {
       email: 'flynni2008@gmail.com',
       password: 'admin',
       facebookId: '10100470408434696',
-      id: 1 // ToDo: need to be dynamically linked
+      id: 1
     },
     secondaryUserObj = {
       provider: 'facebook',
@@ -72,7 +76,7 @@ module.exports.seedDB = function () {
       email: 'chenxikristy@gmail.com',
       password: 'admin',
       facebookId: '984663319826',
-      id: 2 // ToDo: need to be dynamically linked
+      id: 2
     },
     defaultMediumTypes = [
       {
@@ -164,13 +168,18 @@ module.exports.seedDB = function () {
 
       return dateTimes.save();
     })
-    .then(res => {
-      let user = new User(defaultUserObj);
-      return user.save();
-    })
-    .then(res => {
-      let user = new User(secondaryUserObj);
-      return user.save();
+    .then(() => {
+      // Users are restored with their ids, password hashes and salts intact,
+      // before anything that references them. seedUsers.json is gitignored
+      // (it holds hashes), so a fresh clone falls back to the two admins.
+      if (!fs.existsSync(userFilePath)) {
+        log.info(`${userFilePath} not found, seeding default users`);
+        return [defaultUserObj, secondaryUserObj]
+          .reduce((prev, u) => prev.then(() => new User(u).save()), Promise.resolve());
+      }
+      let usersJSONObjs = JSON.parse(fs.readFileSync(userFilePath, 'utf8'));
+      return usersJSONObjs
+        .reduce((prev, u) => prev.then(() => new User(u).restore()), Promise.resolve());
     })
     .then(res => {
       const mediumTypePromises = defaultMediumTypes.map(mt => {
@@ -203,6 +212,16 @@ module.exports.seedDB = function () {
       return comments.save()
         .catch(error => {
           log.error('Comments Save Error', JSON.stringify(error));
+        });
+    })
+    .then(() => {
+      // Follows only reference User rows, but load after Pins/Comments to
+      // keep the same "everything else first" ordering.
+      let followsJSONObjs = JSON.parse(fs.readFileSync(followFilePath, 'utf8'));
+
+      return Follow.restore(followsJSONObjs)
+        .catch(error => {
+          log.error('Follows Save Error', JSON.stringify(error));
         });
     })
     .then(() => {

@@ -65,6 +65,21 @@ export function follow(req, res) {
 }
 
 /**
+ * Who req.user follows, for the "manage following" page. :id must be the
+ * caller's own id - this is not a public "who does X follow" lookup.
+ * GET /api/users/:id/following
+ */
+export function listFollowing(req, res) {
+  const userId = +req.user.id;
+  if (Number(req.params.id) !== userId) {
+    return res.status(403).json({ message: 'you can only view your own following list' });
+  }
+  return Follow.listFollowing(userId)
+    .then(({ following }) => res.status(200).json({ following }))
+    .catch(response.handleError(res));
+}
+
+/**
  * DELETE /api/users/:id/follow
  */
 export function unfollow(req, res) {

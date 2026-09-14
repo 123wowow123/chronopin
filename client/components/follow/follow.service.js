@@ -17,6 +17,12 @@
         .then(res => res.data);
     }
 
+    // Who userId (must be the signed-in user) follows.
+    listFollowing(userId) {
+      return this.$http.get(`/api/users/${userId}/following`)
+        .then(res => res.data.following);
+    }
+
     follow(userId) {
       return this._change('POST', userId);
     }

@@ -46,9 +46,30 @@ $future-color: var(--future-color, #4a90d9);
     gap: 6px;
     margin-bottom: 16px;
 
-    // No future label: the pencil keeps the far right.
+    // No future label: the pencil keeps the far right. Pulled out past the
+    // edge by the empty space around the icon inside its 26px hit circle, so
+    // the drawn pencil lines up with the "All" label under it, which sits
+    // flush with the track's right end.
     &.\--past-only {
       grid-template-columns: 1fr auto;
+
+      .time-range-slider__edit {
+        justify-self: end;
+        margin-right: -7px;
+      }
+
+      // One line, "Posted within 12 hours", rather than the value stacked
+      // under its label as on the map's Past/Future pair. The whitespace
+      // between the two spans in the markup gives a space; the margin widens
+      // it a little so the value reads as separate from the label.
+      .time-range-slider__label-tag,
+      .time-range-slider__label-value {
+        display: inline;
+      }
+
+      .time-range-slider__label-value {
+        margin-left: 4px;
+      }
     }
   }
 
@@ -141,6 +162,12 @@ $future-color: var(--future-color, #4a90d9);
     border-radius: 2px;
     background: var(--primary-border-color);
     touch-action: none;
+
+    // The one-line "Posted within" header left the raised end labels
+    // crowding it.
+    .time-range-slider__header.\--past-only + & {
+      margin-top: 34px;
+    }
   }
 
   &__fill {
@@ -206,11 +233,11 @@ $future-color: var(--future-color, #4a90d9);
     }
 
     // The single-sided end labels: no ticks of their own, just the track's
-    // edges - the smallest step on the left, All on the right. Raised clear
-    // of the thumb when it sits at either end, right under the label.
+    // edges - the smallest step on the left, All on the right. Raised well
+    // clear of the thumb when it sits at either end, right under the label.
     &--start,
     &--end {
-      top: -22px;
+      top: -26px;
       transform: none;
     }
 

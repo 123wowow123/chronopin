@@ -58,6 +58,12 @@
             this.defaultSpan = postedSpan.DEFAULT_SPAN;
             this._searchPins = [];
 
+            // 'date' lays results out on the timeline; 'relevance' lists the
+            // same pins as one grid, best match first, by the searchScore the
+            // server puts on each hit.
+            this.sortBy = $stateParams.s === 'relevance' ? 'relevance' : 'date';
+            this.rankedPins = [];
+
             // today marker, as on the timeline
             this.now = new Date();
             this._todayMarker = null;
@@ -101,6 +107,9 @@
                 f: filterValue
             })
                 .then(res => {
+                    // Set when the query names exactly one user: the card
+                    // with their Follow button.
+                    this.searchedUser = res.data.user || null;
                     this._searchPins = res.data.pins || [];
                     this._setSearchPinGroups(this._filteredPins());
                     return res;
@@ -152,6 +161,26 @@
             this._setSearchPinGroups(this._filteredPins());
         }
 
+        // Only free-text searches are scored. A search made purely of labels
+        // (company:, category:, user:) has no relevance to sort by.
+        hasRelevance() {
+            return this._searchPins.some(pin => pin.searchScore != null);
+        }
+
+        isRelevanceSort() {
+            return this.sortBy === 'relevance' && this.hasRelevance();
+        }
+
+        // Called by the Date / Relevance toggle.
+        setSortBy(sortBy) {
+            if (this.sortBy === sortBy) {
+                return;
+            }
+            this.sortBy = sortBy;
+            this.$state.go('.', { s: sortBy === 'relevance' ? 'relevance' : null }, { location: 'replace' });
+            this._scrollToStart();
+        }
+
         todayMarkerIndex() {
             return this._resolveTodayMarker().index;
         }
@@ -190,12 +219,24 @@
 
         // Rebuilds the bags and, like the timeline, opens them on today -
         // results, and every change of the posted-within window over them.
+        // The ranked list is drawn from the bags' own pins, so both views
+        // show the same Pin objects.
         _setSearchPinGroups(pins) {
             this.pinApp.clearSearchBags();
             this.pinApp.mergeSearchBagsWithPins(pins);
             this.bags = this.pinApp.getSearchBags();
+            this.rankedPins = _.orderBy(_.flatMap(this.bags, bag => bag.pins), 'searchScore', 'desc');
+            this._scrollToStart();
+        }
+
+        // The timeline opens on today; the ranked list at its best match.
+        _scrollToStart() {
             this.$timeout(() => {
-                this.mainUtilService.scrollAdjust(this.scrollToIDAsync, this.bags, this.getHomeScrollId());
+                if (this.isRelevanceSort()) {
+                    this.scrollYTo(0);
+                } else {
+                    this.mainUtilService.scrollAdjust(this.scrollToIDAsync, this.bags, this.getHomeScrollId());
+                }
             });
         }
 

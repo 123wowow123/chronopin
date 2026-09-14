@@ -109,6 +109,14 @@ const SCHEMA = {
       enum: CATEGORIES,
       description: 'Best-fit category for this event from the fixed list. Use "Other" only when nothing else reasonably fits.'
     },
+    amazonUrl: {
+      type: ['string', 'null'],
+      description: 'Direct URL to this exact product\'s own listing on amazon.com, from your own knowledge of real Amazon listings - never a guessed or constructed URL. Null when the page is not about a specific purchasable consumer product, or you are not confident of the real listing URL.'
+    },
+    bestBuyUrl: {
+      type: ['string', 'null'],
+      description: 'Direct URL to this exact product\'s own listing on bestbuy.com, from your own knowledge of real Best Buy listings - never a guessed or constructed URL. Null when the page is not about a specific purchasable consumer product, or you are not confident of the real listing URL.'
+    },
     startDateTime: {
       type: ['string', 'null'],
       description: 'ISO 8601 UTC start of the event, e.g. "2026-09-18T12:00:00Z". Use noon UTC for all-day events. Null when no date was found.'
@@ -139,6 +147,8 @@ const SCHEMA = {
     'company',
     'companyWikiUrl',
     'category',
+    'amazonUrl',
+    'bestBuyUrl',
     'startDateTime',
     'endDateTime',
     'allDay',

@@ -9,14 +9,14 @@
   </a>
 
   <div class="notification-bell__menu dropdown-menu dropdown-menu-right" uib-dropdown-menu role="menu">
-    <div class="notification-bell__header">Updates</div>
+    <div class="notification-bell__header">Notifications</div>
 
     <div class="notification-bell__status" ng-if="$ctrl.loading">
       <loader-pulse-bubble></loader-pulse-bubble>
     </div>
 
     <div class="notification-bell__status" ng-if="!$ctrl.loading && !$ctrl.notifications().length">
-      Nothing new yet. When someone follows you, you'll see it here.
+      No new notifications available at this time.
     </div>
 
     <ul class="notification-bell__list" ng-if="!$ctrl.loading && $ctrl.notifications().length">

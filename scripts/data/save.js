@@ -11,15 +11,18 @@ const Model = require('../../server/model');
 const FullPins = Model.FullPins;
 const Users = Model.Users;
 const Comments = Model.Comments;
+const Follow = Model.Follow;
 
 
 let cp,
   pinFilePath,
   userFilePath,
-  commentFilePath;
+  commentFilePath,
+  followFilePath;
 
 const pickUserProps = [
   'id',
+  'userName',
   'firstName',
   'lastName',
   'gender',
@@ -37,6 +40,7 @@ const pickUserProps = [
   'provider',
   'salt',
   'websiteUrl',
+  'defaultFilterSpanPreference',
   'utcCreatedDateTime',
   'utcUpdatedDateTime',
   'utcDeletedDateTime'
@@ -48,6 +52,7 @@ module.exports.setup = function (saveOpt) {
   pinFilePath = saveOpt.pinfile;
   userFilePath = saveOpt.userfile;
   commentFilePath = saveOpt.commentfile;
+  followFilePath = saveOpt.followfile;
   return this;
 };
 
@@ -90,6 +95,17 @@ module.exports.saveDB = function () {
           comments
         }) => {
           return fs.writeFileSync(commentFilePath, JSON.stringify(comments.comments, null, 2));
+        });
+
+    })
+    .then(() => {
+
+      console.log('Backup Follows');
+      return Follow.getAll()
+        .then(({
+          follows
+        }) => {
+          return fs.writeFileSync(followFilePath, JSON.stringify(follows, null, 2));
         });
 
     })

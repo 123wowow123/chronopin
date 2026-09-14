@@ -18,6 +18,13 @@
             this.ScrollUtil.setInitialized(true);
         }
 
+        // How full the relevance pill's meter is: the score, 0-1, as a
+        // percentage.
+        relevancePercent() {
+            const score = this.pin.searchScore || 0;
+            return Math.round(Math.min(Math.max(score, 0), 1) * 100);
+        }
+
         // Click handlers
 
         addLike(pin) {
@@ -103,7 +110,6 @@
             //templateUrl: 'components/pin-block/pin-block.html',
             template: `
             <article class="grid__panel">
-            <!-- <p ng-if="$ctrl.Auth.isAdmin()">{{$ctrl.pin.searchScore}}</p> -->
             <div class="grid__content">
                 <div class="grid__headline">
                     <div class="headline-left">
@@ -217,11 +223,23 @@
         
             </div>
         
-            <div class="grid__footer">
+            <div class="grid__footer grid__footer--split">
                 <div class="grid__price" ng-class="{'grid__price--negative': $ctrl.pin.price < 0}">
                     <span ng-if="$ctrl.pin.price">{{$ctrl.pin.price | money:$ctrl.pin.priceCurrency}}</span>
                 </div>
-        
+
+                <!-- Always present, so the pill column stays put. Only pins
+                     from a free-text search carry a score. -->
+                <div class="grid__footer-center">
+                    <span class="grid__relevance" ng-if="$ctrl.pin.searchScore != null"
+                        title="How closely this pin matches the search - cosine similarity, higher is closer">
+                        <span class="grid__relevance-score">{{$ctrl.pin.searchScore | number:2}}</span>
+                        <span class="grid__relevance-meter" aria-hidden="true">
+                            <span class="grid__relevance-fill" ng-style="{width: $ctrl.relevancePercent() + '%'}"></span>
+                        </span>
+                    </span>
+                </div>
+
                 <div class="grid__social">
                     <div class="grid__tip" ng-if="$ctrl.isAdmin()">
                         <button class="btn btn-link" ui-sref="main.modalScroller.editPin({id:$ctrl.pin.id})">
