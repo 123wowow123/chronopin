@@ -16,6 +16,7 @@ args
   .option('userfile', 'Pin file path to be used for opporation', './scripts/backup/seedUsers.json')
   .option('commentfile', 'Comment file path to be used for opporation', './scripts/backup/seedComments.json')
   .option('followfile', 'Follow file path to be used for opporation', './scripts/backup/seedFollows.json')
+  .option('companyfile', 'Company file path to be used for opporation', './scripts/backup/seedCompanies.json')
   .option('aphelionfile', 'Aphelion file path to be used for opporation', './scripts/backup/aphelion.json')
   .option('equinoxfile', 'Equinox file path to be used for opporation', './scripts/backup/equinox.json')
   .option('perihelionfile', 'Perihelion file path to be used for opporation', './scripts/backup/perihelion.json')
@@ -30,6 +31,7 @@ const saveOpt = {
   userfile: flags.userfile,
   commentfile: flags.commentfile,
   followfile: flags.followfile,
+  companyfile: flags.companyfile,
 };
 
 const seedOpt = {
@@ -38,6 +40,7 @@ const seedOpt = {
   userfile: flags.userfile,
   commentfile: flags.commentfile,
   followfile: flags.followfile,
+  companyfile: flags.companyfile,
   aphelionfile: flags.aphelionfile,
   equinoxfile: flags.equinoxfile,
   perihelionfile: flags.perihelionfile,

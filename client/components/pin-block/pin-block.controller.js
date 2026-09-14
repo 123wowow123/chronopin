@@ -152,6 +152,7 @@
                         <span class="grid__company">
                             <a href="" ng-click="$ctrl.searchService.refine('company', $ctrl.pin.company)"
                                 title="Show all {{$ctrl.pin.company}} pins">
+                                <img class="grid__company-logo" ng-if="$ctrl.pin.companyLogoUrl" ng-src="{{$ctrl.pin.companyLogoUrl}}" hide-broken alt="" loading="lazy" referrerpolicy="no-referrer">
                                 {{$ctrl.pin.company}}
                             </a>
                         </span>
@@ -198,6 +199,7 @@
                         <span class="grid__company" ng-if="$ctrl.pin.company">
                             <a href="" ng-click="$ctrl.searchService.refine('company', $ctrl.pin.company)"
                                 title="Show all {{$ctrl.pin.company}} pins">
+                                <img class="grid__company-logo" ng-if="$ctrl.pin.companyLogoUrl" ng-src="{{$ctrl.pin.companyLogoUrl}}" hide-broken alt="" loading="lazy" referrerpolicy="no-referrer">
                                 {{$ctrl.pin.company}}
                             </a>
                         </span>

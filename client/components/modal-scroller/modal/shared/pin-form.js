@@ -78,6 +78,7 @@
     }
 
     $onInit() {
+      this._loadCompanies();
       var pinId = this.$stateParams.id;
       if (this.mode === 'edit' && pinId !== undefined) {
         this._enableForm(false);
@@ -90,6 +91,22 @@
             this._enableForm(true);
           });
       }
+    }
+
+    // Suggestions for the company field. A name that matches none of them
+    // becomes a new company when the pin is saved.
+    _loadCompanies() {
+      this.companies = [];
+      this.$http.get('/api/companies')
+        .then(res => {
+          this.companies = res.data;
+        })
+        .catch(() => undefined);
+    }
+
+    findCompany(name) {
+      var key = typeof name === 'string' ? name.trim().toLowerCase() : '';
+      return key ? this.companies.find(c => c.name.toLowerCase() === key) : undefined;
     }
 
     selectMedia(image) {
@@ -214,8 +231,11 @@
       if (!this.pin.price) {
         this.pin.price = pin.price;
       }
+      // The scrape's Wikipedia link belongs to the company name it came with,
+      // and is only sent if that name is still what the form holds.
       if (!this.pin.company) {
         this.pin.company = pin.company;
+        this.pin.scrapedCompany = pin.company ? { name: pin.company, wikiUrl: pin.companyWikiUrl } : undefined;
       }
       if (!this.pin.category) {
         this.pin.category = pin.category;
@@ -270,6 +290,7 @@
       this.pin.longitude = undefined;
       this.pin.price = undefined;
       this.pin.company = undefined;
+      this.pin.scrapedCompany = undefined;
       this.pin.category = undefined;
       this.pin.merchants = undefined;
       this.pin.start = undefined;
@@ -332,6 +353,7 @@
         longitude: pin.longitude,
         price: pin.price,
         company: pin.company,
+        companyWikiUrl: pin.scrapedCompany && pin.scrapedCompany.name === pin.company ? pin.scrapedCompany.wikiUrl : undefined,
         category: pin.category,
         merchants: pin.merchants || [],
         dateConfidence: pin.dateConfidence,

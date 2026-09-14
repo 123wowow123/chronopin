@@ -17,6 +17,10 @@
 // moved into Pin.location here and stripped from the address, so the address
 // is only the place label.
 //
+// SQL Server kept Pin.company/companyWikiUrl as text on each pin. Those become
+// "Company" rows here, and each pin gets the matching companyId. Logos are not
+// looked up; run npm run companies:logos afterwards.
+//
 // Not copied: Sessions (everyone signs in again) and Address (never read, and
 // holding SQL Server geography values with no PostgreSQL mapping).
 
@@ -68,7 +72,7 @@ if (!flags.from) {
 }
 
 function assertTargetEmpty() {
-  return Promise.all(TABLES.map(table => db.query(`SELECT COUNT(*) AS "count" FROM "${table}"`)
+  return Promise.all(TABLES.concat('Company').map(table => db.query(`SELECT COUNT(*) AS "count" FROM "${table}"`)
     .then(rows => ({ table, count: rows[0].count }))))
     .then(counts => {
       const filled = counts.filter(c => c.count > 0);
@@ -91,37 +95,67 @@ function copyTable(query, table) {
     targetColumns(table)
   ]).then(([result, columns]) => {
     const rows = result.recordset.map(row => table === 'Pin' ? splitAddress(row) : row);
-    // Only columns both sides have; "location" is filled from the address.
-    const shared = columns.filter(column => rows.length && Object.prototype.hasOwnProperty.call(rows[0], column));
-    if (table === 'Pin') {
-      shared.push('location');
-    }
-
-    const batches = [];
-    for (let i = 0; i < rows.length; i += BATCH_SIZE) {
-      batches.push(rows.slice(i, i + BATCH_SIZE));
-    }
-    console.log(`${table}: copying ${rows.length} rows`);
-
-    return batches.reduce((prev, batch) => prev.then(() => {
-      const params = [];
-      const values = batch.map(row => '(' + shared.map(column => {
-        if (column === 'location') {
-          if (row.latitude === null) {
-            return 'NULL';
-          }
-          params.push(row.longitude, row.latitude);
-          return `ST_SetSRID(ST_MakePoint($${params.length - 1}, $${params.length}), 4326)::geography`;
-        }
-        params.push(row[column]);
-        return `$${params.length}`;
-      }).join(', ') + ')');
-
-      return query(
-        `INSERT INTO "${table}" (${shared.map(c => `"${c}"`).join(', ')}) VALUES ${values.join(', ')}`,
-        params);
-    }), Promise.resolve());
+    return (table === 'Pin' ? copyCompanies(query, rows) : Promise.resolve())
+      .then(() => insertRows(query, table, rows, columns));
   });
+}
+
+// Creates a Company per distinct pin company name and sets companyId on the
+// rows. Names are matched case-insensitively, as the citext column will.
+function copyCompanies(query, rows) {
+  const companies = new Map();
+  rows.forEach(row => {
+    const name = typeof row.company === 'string' ? row.company.trim() : '';
+    if (!name) {
+      return;
+    }
+    const key = name.toLowerCase();
+    const company = companies.get(key) || { name, wikiUrl: null };
+    company.wikiUrl = company.wikiUrl || row.companyWikiUrl || null;
+    companies.set(key, company);
+  });
+  console.log(`Company: creating ${companies.size} rows from pin company names`);
+
+  return Array.from(companies.entries()).reduce((prev, [key, company]) => prev.then(() => query(
+    `INSERT INTO "Company" ("name", "wikiUrl") VALUES ($1, $2) RETURNING "id"`, [company.name, company.wikiUrl])
+    .then(inserted => { company.id = inserted[0].id; })), Promise.resolve())
+    .then(() => rows.forEach(row => {
+      const company = typeof row.company === 'string' && companies.get(row.company.trim().toLowerCase());
+      row.companyId = company ? company.id : null;
+    }));
+}
+
+function insertRows(query, table, rows, columns) {
+  // Only columns both sides have; "location" is filled from the address.
+  const shared = columns.filter(column => rows.length && Object.prototype.hasOwnProperty.call(rows[0], column));
+  if (table === 'Pin') {
+    shared.push('location');
+  }
+
+  const batches = [];
+  for (let i = 0; i < rows.length; i += BATCH_SIZE) {
+    batches.push(rows.slice(i, i + BATCH_SIZE));
+  }
+  console.log(`${table}: copying ${rows.length} rows`);
+
+  return batches.reduce((prev, batch) => prev.then(() => {
+    const params = [];
+    const values = batch.map(row => '(' + shared.map(column => {
+      if (column === 'location') {
+        if (row.latitude === null) {
+          return 'NULL';
+        }
+        params.push(row.longitude, row.latitude);
+        return `ST_SetSRID(ST_MakePoint($${params.length - 1}, $${params.length}), 4326)::geography`;
+      }
+      params.push(row[column]);
+      return `$${params.length}`;
+    }).join(', ') + ')');
+
+    return query(
+      `INSERT INTO "${table}" (${shared.map(c => `"${c}"`).join(', ')}) VALUES ${values.join(', ')}`,
+      params);
+  }), Promise.resolve());
 }
 
 function splitAddress(row) {

@@ -8,6 +8,7 @@ import * as mapHelper from '../shared/helper'
 import {
   BasePin,
   BasePinProp,
+  Company,
   Merchant
 } from '../..';
 
@@ -143,6 +144,7 @@ export default class Pin extends BasePin {
           return this;
         });
       })
+      .then((pin) => Company.applyToPin(pin))
       .then((pin) => {
         return _update(pin, pin.userId);
       });
@@ -229,7 +231,7 @@ function _queryById(pinId, userId) {
 function _update(pin, userId) {
   const values = [
     pin.id, pin.parentId, pin.title, pin.description, pin.sourceUrl, pin.longFormSummary,
-    pin.dateConfidence, pin.dateConfidenceReasoning, pin.company, pin.companyWikiUrl,
+    pin.dateConfidence, pin.dateConfidenceReasoning, pin.companyId,
     pin.category, pin.address, pin.priceLowerBound, pin.priceUpperBound, pin.price,
     pin.priceCurrency, pin.tip, pin.utcStartDateTime, pin.utcEndDateTime, pin.allDay,
     userId, pin.latitude, pin.longitude
@@ -247,20 +249,19 @@ function _update(pin, userId) {
       "longFormSummary" = $6,
       "dateConfidence" = $7,
       "dateConfidenceReasoning" = $8,
-      "company" = $9,
-      "companyWikiUrl" = $10,
-      "category" = $11,
-      "address" = $12,
-      "priceLowerBound" = $13,
-      "priceUpperBound" = $14,
-      "price" = $15,
-      "priceCurrency" = $16,
-      "tip" = $17,
-      "utcStartDateTime" = $18,
-      "utcEndDateTime" = $19,
-      "allDay" = $20,
-      "userId" = $21,
-      "location" = ${sql.locationSql('$22', '$23')},
+      "companyId" = $9,
+      "category" = $10,
+      "address" = $11,
+      "priceLowerBound" = $12,
+      "priceUpperBound" = $13,
+      "price" = $14,
+      "priceCurrency" = $15,
+      "tip" = $16,
+      "utcStartDateTime" = $17,
+      "utcEndDateTime" = $18,
+      "allDay" = $19,
+      "userId" = $20,
+      "location" = ${sql.locationSql('$21', '$22')},
       "utcUpdatedDateTime" = now()
     WHERE "id" = $1`, values)
     .then(() => {

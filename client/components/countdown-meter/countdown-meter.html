@@ -1,0 +1,12 @@
+<div class="countdown-meter" ng-if="ready" ng-class="{'countdown-meter--started': started}">
+    <div class="countdown-meter__track" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+        aria-valuenow="{{percent | number:0}}"
+        aria-label="{{started ? 'Started' : 'Time elapsed since posted'}}">
+        <div class="countdown-meter__fill" ng-style="{width: percent + '%'}"></div>
+    </div>
+    <span class="countdown-meter__readout" ng-if="!started">
+        <span class="countdown-meter__days" ng-if="days > 0">{{days}}d</span>
+        <span class="countdown-meter__clock">{{clock}}</span>
+    </span>
+    <span class="countdown-meter__readout countdown-meter__readout--started" ng-if="started">Started {{start | timeAgo}}</span>
+</div>

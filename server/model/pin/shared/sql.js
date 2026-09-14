@@ -1,19 +1,25 @@
 import * as db from '../../../db';
+import Company from '../../company/company';
 
 // Inserts a pin and sets pin.id. A pin that already carries an id (seeding,
 // the SQL Server transfer) keeps it; otherwise the database assigns one.
+// pin.company is a name; it is stored as a reference to its Company row.
 export function createPin(pin, userId) {
+    return Company.applyToPin(pin).then(() => _insertPin(pin, userId));
+}
+
+function _insertPin(pin, userId) {
     const hasId = pin.id != null;
     const columns = [
         'parentId', 'title', 'description', 'sourceUrl', 'longFormSummary',
-        'dateConfidence', 'dateConfidenceReasoning', 'company', 'companyWikiUrl',
+        'dateConfidence', 'dateConfidenceReasoning', 'companyId',
         'category', 'address', 'priceLowerBound', 'priceUpperBound', 'price',
         'priceCurrency', 'tip', 'utcStartDateTime', 'utcEndDateTime', 'allDay',
         'userId', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime'
     ];
     const values = [
         pin.parentId, pin.title, pin.description, pin.sourceUrl, pin.longFormSummary,
-        pin.dateConfidence, pin.dateConfidenceReasoning, pin.company, pin.companyWikiUrl,
+        pin.dateConfidence, pin.dateConfidenceReasoning, pin.companyId,
         pin.category, pin.address, pin.priceLowerBound, pin.priceUpperBound, pin.price,
         pin.priceCurrency, pin.tip, pin.utcStartDateTime, pin.utcEndDateTime,
         pin.allDay == null ? false : pin.allDay,

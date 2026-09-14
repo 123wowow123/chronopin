@@ -12,13 +12,15 @@ const FullPins = Model.FullPins;
 const Users = Model.Users;
 const Comments = Model.Comments;
 const Follow = Model.Follow;
+const Company = Model.Company;
 
 
 let cp,
   pinFilePath,
   userFilePath,
   commentFilePath,
-  followFilePath;
+  followFilePath,
+  companyFilePath;
 
 const pickUserProps = [
   'id',
@@ -53,6 +55,7 @@ module.exports.setup = function (saveOpt) {
   userFilePath = saveOpt.userfile;
   commentFilePath = saveOpt.commentfile;
   followFilePath = saveOpt.followfile;
+  companyFilePath = saveOpt.companyfile;
   return this;
 };
 
@@ -64,6 +67,15 @@ module.exports.saveDB = function () {
     pageSize = 2147483647; // No limit: back up every pin
 
   return Promise.resolve('Begin Backup')
+    .then(() => {
+
+      console.log('Backup Companies');
+      return Company.getAll()
+        .then(companies => {
+          return fs.writeFileSync(companyFilePath, JSON.stringify(companies, null, 2));
+        });
+
+    })
     .then(() => {
 
       console.log('Backup Pins');

@@ -1,0 +1,82 @@
+// Countdown to a pin's start, under the date line on the pin page: one slim
+// row of bar then readout.
+$countdown-from: #3a6b8a;
+$countdown-to: #5fb0e0;
+$countdown-started: #3f7d4e;
+
+.countdown-meter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0 14px;
+
+    &__track {
+        position: relative;
+        flex: 1 1 auto;
+        min-width: 60px;
+        height: 3px;
+        border-radius: 3px;
+        background-color: var(--primary-highlight-bg-color);
+    }
+
+    &__fill {
+        position: relative;
+        height: 100%;
+        border-radius: inherit;
+        background-image: linear-gradient(90deg, $countdown-from, $countdown-to);
+        transition: width 1s linear;
+
+        // Leading dot marks "now" on the posted-to-start span.
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -4px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: $countdown-to;
+            box-shadow: 0 0 0 3px rgba($countdown-to, 0.2), 0 0 8px rgba($countdown-to, 0.6);
+            transform: translateY(-50%);
+        }
+    }
+
+    &__readout {
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: baseline;
+        gap: 5px;
+        font-size: 13px;
+        line-height: 1;
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+        color: var(--grid-header-text-color);
+
+        &--started {
+            font-size: 11px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            opacity: 0.6;
+        }
+    }
+
+    &__days {
+        font-weight: 700;
+    }
+
+    &__clock {
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        opacity: 0.75;
+    }
+
+    &--started &__fill {
+        background-image: none;
+        background-color: $countdown-started;
+        opacity: 0.7;
+
+        &::after {
+            display: none;
+        }
+    }
+}

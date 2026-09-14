@@ -135,6 +135,109 @@
     // with the timeline cards, so both read identically.
   }
 
+  &__buy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  // Brand variants carry their own background and text colour, so they read
+  // the same in the light and dark themes; anything else follows the theme.
+  &__buy-link {
+    flex: 0 1 auto;
+    min-width: 180px;
+    max-width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 8px 14px;
+    border: 1px solid var(--primary-highlight-plus-bg-color);
+    border-radius: 6px;
+    background-color: var(--primary-highlight-bg-color);
+    color: var(--grid-header-text-color);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none !important;
+    transition: filter 0.15s ease, transform 0.15s ease;
+
+    &:hover,
+    &:focus {
+      color: var(--grid-header-text-color);
+      filter: brightness(1.1);
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+
+    &:focus-visible {
+      outline: 2px solid #2F8FFF;
+      outline-offset: 2px;
+    }
+
+    // The retailer pair shares one width so the two sit as a matched set.
+    &--amazon,
+    &--bestbuy {
+      flex: 1 1 180px;
+      max-width: 260px;
+    }
+
+    &--amazon {
+      &,
+      &:hover,
+      &:focus {
+        background-color: #FFA41C;
+        border-color: #FF8F00;
+        color: #0F1111;
+      }
+    }
+
+    &--bestbuy {
+      &,
+      &:hover,
+      &:focus {
+        background-color: #0046BE;
+        border-color: #003A9E;
+        color: #FFF;
+      }
+
+      .pin__buy-icon {
+        color: #FFE000;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      flex-basis: 100%;
+      max-width: none;
+    }
+  }
+
+  &__buy-main {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__buy-icon {
+    margin-right: 8px;
+    font-size: 16px;
+  }
+
+  &__buy-price {
+    font-weight: 400;
+    opacity: 0.85;
+  }
+
+  &__buy-arrow {
+    font-size: 11px;
+    opacity: 0.6;
+  }
+
   &__usercomments {
     margin-bottom: 15px;
   }
@@ -159,13 +262,16 @@
     color: var(--grid-auther-text-color);
   }
 
+  // Same circle as .search__user-avatar and .following__avatar.
   &__creator-avatar {
-    width: 36px;
-    height: 36px;
+    flex: 0 0 1.8em;
+    width: 1.8em;
+    height: 1.8em;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.1em;
     font-weight: 700;
     color: var(--grid-header-text-color);
     background-color: var(--primary-highlight-plus-bg-color);

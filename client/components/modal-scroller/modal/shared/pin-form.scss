@@ -6,3 +6,24 @@
   // position: relative;
   // z-index: -2;
 }
+
+// The matched company's logo sits inside the field, ahead of the name.
+.company-input {
+  position: relative;
+
+  &--logo .form-control {
+    padding-left: 34px;
+  }
+}
+
+.company-input__logo {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  min-width: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: -9px;
+  object-fit: contain;
+  z-index: 3;
+}

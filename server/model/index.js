@@ -66,3 +66,6 @@ export {
 export {
   default as Notification
 } from './notification/notification';
+export {
+  default as Company
+} from './company/company';

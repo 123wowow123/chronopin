@@ -43,6 +43,7 @@
             <span class="grid__company">
               <a ng-href="{{$ctrl.pin.companyWikiUrl}}" target="_blank" rel="noopener"
                 title="{{$ctrl.pin.companyWikiUrl ? $ctrl.pin.company + ' on Wikipedia' : ''}}">
+                <img class="grid__company-logo" ng-if="$ctrl.pin.companyLogoUrl" ng-src="{{$ctrl.pin.companyLogoUrl}}" hide-broken alt="" loading="lazy" referrerpolicy="no-referrer">
                 {{$ctrl.pin.company}}
               </a>
             </span>
@@ -80,6 +81,7 @@
             <span class="grid__company" ng-if="$ctrl.pin.company">
               <a ng-href="{{$ctrl.pin.companyWikiUrl}}" target="_blank" rel="noopener"
                 title="{{$ctrl.pin.companyWikiUrl ? $ctrl.pin.company + ' on Wikipedia' : ''}}">
+                <img class="grid__company-logo" ng-if="$ctrl.pin.companyLogoUrl" ng-src="{{$ctrl.pin.companyLogoUrl}}" hide-broken alt="" loading="lazy" referrerpolicy="no-referrer">
                 {{$ctrl.pin.company}}
               </a>
             </span>
@@ -98,6 +100,9 @@
                 show-reasoning="true"></date-confidence>
             </div>
           </div>
+
+          <countdown-meter ng-if="$ctrl.pin.utcStartDateTime" start="{{$ctrl.pin.utcStartDateTime}}"
+            since="{{$ctrl.pin.utcCreatedDateTime}}"></countdown-meter>
 
           <h4 class="grid__heading">
             <a href="{{$ctrl.pin.sourceUrl}}" target="_blank">
@@ -132,33 +137,6 @@
                   <span class="merchant-price">{{$ctrl.pin.price | money:$ctrl.pin.priceCurrency}}</span>
                 </div>
 
-                <!-- Merchant Ads-->
-                <!-- <a target="_blank" class="gamestop__merchant-link"
-                  href="{{$ctrl.pin.merchant.gamestop.url || 'https://click.linksynergy.com/fs-bin/click?id=Y1h47rHzgYg&offerid=1270124.10006500&type=3&subid='}}"
-                  ng-if="$ctrl.pin.merchant.gamestop.url || true">
-                  <img alt="Gamestop logo" src="https://merchant.linksynergy.com/fs/banners/24348/24348_10000852.png" />
-  
-                  <span class="merchant-price"
-                    ng-class="{'grid__price--negative': $ctrl.pin.price < 0}">{{merchant.price | money}}</span>
-                </a> -->
-                <!-- <a target="_blank" class="amazon__merchant-link" href="{{$ctrl.pin.merchant.amazon.url}}"
-                  ng-if="!!$ctrl.pin.merchant.amazon.url">
-                  <img alt="Amazon logo" src="/assets/images/OIP.jpeg" />
-  
-                  <span class="merchant-price"
-                    ng-class="{'grid__price--negative': $ctrl.pin.price < 0}">{{merchant.price | money}}</span>
-                </a> -->
-                <div class="merchant" ng-repeat="merchant in $ctrl.pin.merchants track by $index">
-                  <a target="_blank" class="merchant generic__merchant-link" href="{{merchant.url}}"
-                    ng-if="!!merchant.url">
-                    <!-- <i class="fa fa-shopping-cart" aria-hidden="true"></i> -->
-                    <span class="merchant-label" title="{{merchant.label}}">{{merchant.label}}</span>
-                    <span class="merchant-price" ng-if="merchant.price"
-                      ng-class="{'grid__price--negative': merchant.price < 0}">{{merchant.price
-                      | money}}</span>
-                  </a>
-                </div>
-
               </div>
             </div>
 
@@ -184,6 +162,20 @@
               </div>
 
             </div>
+          </div>
+
+          <div class="pin__buy" ng-if="$ctrl.pin.merchants.length">
+            <a class="pin__buy-link" ng-repeat="merchant in $ctrl.pin.merchants track by $index" ng-if="merchant.url"
+              ng-class="{'pin__buy-link--amazon': merchant.label === 'Amazon', 'pin__buy-link--bestbuy': merchant.label === 'Best Buy'}"
+              ng-href="{{merchant.url}}" target="_blank" rel="noopener nofollow" title="{{merchant.label}}">
+              <span class="pin__buy-main" ng-switch="merchant.label">
+                <span ng-switch-when="Amazon"><i class="fa fa-amazon pin__buy-icon" aria-hidden="true"></i>Buy on Amazon</span>
+                <span ng-switch-when="Best Buy"><i class="fa fa-tag pin__buy-icon" aria-hidden="true"></i>Buy at Best Buy</span>
+                <span ng-switch-default><i class="fa fa-shopping-cart pin__buy-icon" aria-hidden="true"></i>{{merchant.label}}</span>
+              </span>
+              <span class="pin__buy-price" ng-if="merchant.price">{{merchant.price | money}}</span>
+              <i class="fa fa-external-link pin__buy-arrow" aria-hidden="true"></i>
+            </a>
           </div>
         </div>
       </div>

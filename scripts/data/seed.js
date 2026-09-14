@@ -11,7 +11,8 @@ import {
   DateTime,
   DateTimes,
   Comments,
-  Follow
+  Follow,
+  Company
 } from '../../server/model';
 
 import fs from 'fs';
@@ -34,6 +35,7 @@ let cp,
   userFilePath,
   commentFilePath,
   followFilePath,
+  companyFilePath,
   aphelionFilePath,
   solsticeFilePath,
   equinoxFilePath,
@@ -47,6 +49,7 @@ module.exports.setup = function (seedOpt) {
   userFilePath = seedOpt.userfile;
   commentFilePath = seedOpt.commentfile;
   followFilePath = seedOpt.followfile;
+  companyFilePath = seedOpt.companyfile;
   aphelionFilePath = seedOpt.aphelionfile;
   solsticeFilePath = seedOpt.solsticefile;
   equinoxFilePath = seedOpt.equinoxfile;
@@ -192,9 +195,17 @@ module.exports.seedDB = function () {
           throw e;
         });
     })
-    .then(({
-      //user
-    }) => {
+    .then(() => {
+      // Companies go in with their logos before the pins that name them, so
+      // seeding does not look every logo up again. Without the file, pins
+      // create their companies as they load.
+      if (!fs.existsSync(companyFilePath)) {
+        log.info(`${companyFilePath} not found, companies will be created from pins`);
+        return;
+      }
+      return Company.restore(JSON.parse(fs.readFileSync(companyFilePath, 'utf8')));
+    })
+    .then(() => {
       // Create Pins
       let pinsJSONObjs = JSON.parse(fs.readFileSync(pinFilePath, 'utf8'));
       let pins = new FullPins(pinsJSONObjs);

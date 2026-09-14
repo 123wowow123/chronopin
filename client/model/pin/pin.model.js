@@ -24,8 +24,10 @@
       'tip',
       'dateConfidence',
       'dateConfidenceReasoning',
+      'companyId',
       'company',
       'companyWikiUrl',
+      'companyLogoUrl',
       'category',
       {
         'utcStartDateTime': Date
