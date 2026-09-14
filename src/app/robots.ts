@@ -16,7 +16,6 @@ export default function robots(): MetadataRoute.Robots {
           '/preferences',
           '/profile',
           '/following',
-          '/referral',
           '/create',
           '/update/',
           '/respond/',

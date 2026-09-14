@@ -8,6 +8,7 @@ import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { dayKeyIn } from '@/lib/format';
 import { formatSpan, SPAN_OPTIONS } from '@/lib/postedSpan';
+import { pinConfidence, pinEvidence, TIMELINE_MIN_CONFIDENCE } from '@/lib/referenceConfidence';
 import { buildBags, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { CardPin, DateTimeJson, TimelinePage } from '@/lib/types';
 import { FloatingControls } from './FloatingControls';
@@ -132,7 +133,10 @@ export function Timeline({
     const onPin = (event: MessageEvent) => {
       const changed = JSON.parse(event.data) as CardPin;
       const withHtml = { ...changed, safeDescription: safeHtmlInBrowser(changed.description) };
-      if (event.type === 'pin:remove') {
+      // A pin edited below the timeline's confidence bar leaves it, as it
+      // would on reload; a new one below the bar never joins.
+      const confidence = pinConfidence(pinEvidence(changed));
+      if (event.type === 'pin:remove' || (confidence !== undefined && confidence < TIMELINE_MIN_CONFIDENCE)) {
         setPins((list) => list.filter((p) => p.id !== changed.id));
         return;
       }

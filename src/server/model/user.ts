@@ -289,6 +289,15 @@ async function getOne(where: string, param: unknown): Promise<{ user: User | und
 export class Users {
   // Every live user, oldest first, trimmed to properties. Still User
   // instances, so nulls drop out of the JSON as they do for one user.
+  // When every account was created, deleted ones included, for the admin
+  // sign-up statistics.
+  static async listCreated(): Promise<{ utcCreatedDateTime: Date; deleted: boolean }[]> {
+    return db.query(`
+    SELECT "utcCreatedDateTime", "utcDeletedDateTime" IS NOT NULL AS "deleted"
+    FROM "User"
+    ORDER BY "utcCreatedDateTime"`);
+  }
+
   static async getAll(properties: string[]): Promise<User[]> {
     const rows = await db.query(`
     SELECT ${USER_COLUMNS.map((c) => `"${c}"`).join(', ')}

@@ -5,6 +5,10 @@ import type { PinJson, PinReferenceJson } from './types';
 // today, so a pin's confidence only changes when its references do.
 export const HALF_LIFE_DAYS = 180;
 
+// The home timeline leaves out pins scored below this. Pins with no score at
+// all still show.
+export const TIMELINE_MIN_CONFIDENCE = 70;
+
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 // How far a pin's own source supports it, read from the date confidence its
@@ -62,6 +66,8 @@ export function weighReferences<T extends Weighable>(references: T[] | undefined
 
 // The overall confidence (0-100): the references' confidence averaged,
 // weighted toward the most recent. Undefined when no reference has a confidence.
+// The SQL function "pinConfidence" (0009) repeats this and pinEvidence for the
+// timeline query - change both together.
 export function pinConfidence<T extends Weighable>(references: T[] | undefined): number | undefined {
   const weighed = weighReferences(references);
   if (!weighed.length) {

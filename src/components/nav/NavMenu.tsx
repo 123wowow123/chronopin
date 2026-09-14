@@ -27,10 +27,7 @@ function accountGroups(isAdmin: boolean): MenuItem[][] {
     ],
   ];
   if (isAdmin) {
-    groups.push([
-      { href: '/admin', label: 'Admin', icon: 'shield' },
-      { href: '/referral', label: 'Referral links', icon: 'link' },
-    ]);
+    groups.push([{ href: '/admin', label: 'Admin', icon: 'shield' }]);
   }
   return groups;
 }

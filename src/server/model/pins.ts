@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import { TIMELINE_MIN_CONFIDENCE } from '@/lib/referenceConfidence';
 import * as db from '../db';
 import type { Row } from '../db';
 import BasePins from './basePins';
@@ -99,6 +100,19 @@ export default class Pins extends BasePins<Pin> {
     );
   }
 
+  // Every live pin's confidence (null when unscored) with its category and
+  // author, for the admin statistics on what the timeline hides.
+  static async listConfidence() {
+    return db.query<{ id: number; category: string | null; userName: string | null; utcCreatedDateTime: Date; confidence: number | null }>(
+      `
+      SELECT DISTINCT ON ("id") "id", "category", "User.userName" AS "userName", "utcCreatedDateTime",
+        "pinConfidence"("references", "sourceUrl", "dateConfidence", "utcCreatedDateTime") AS "confidence"
+      FROM "PinBaseView"
+      WHERE "utcDeletedDateTime" IS NULL
+      ORDER BY "id"`,
+    );
+  }
+
   static async countLive(): Promise<number> {
     const rows = await db.query<{ count: number }>(`SELECT COUNT(*) AS "count" FROM "Pin" WHERE "utcDeletedDateTime" IS NULL`);
     return rows[0].count;
@@ -167,7 +181,9 @@ const PAGE_COLUMNS = `
 
 // One page of the timeline, walking forward (later pins) or backward from
 // (fromDateTime, lastPinId). Rows are the view's pin x medium x merchant rows,
-// so pageSize counts rows, not pins - as it always has.
+// so pageSize counts rows, not pins - as it always has. The whole timeline
+// leaves out pins scored below TIMELINE_MIN_CONFIDENCE, filtered here rather
+// than after the query so pages stay full; a watched list keeps every pin.
 function queryPage(
   queryForward: boolean,
   onlyFavorites: boolean,
@@ -195,6 +211,12 @@ function queryPage(
         OR ("Pin"."utcStartDateTime" = $2 AND "Pin"."id" ${after} $3))
       AND "Pin"."utcDeletedDateTime" IS NULL
       AND ($4::timestamptz IS NULL OR "Pin"."utcCreatedDateTime" >= $4)
+      ${
+        onlyFavorites
+          ? ''
+          : `AND COALESCE("pinConfidence"("Pin"."references", "Pin"."sourceUrl", "Pin"."dateConfidence", "Pin"."utcCreatedDateTime"),
+                      ${TIMELINE_MIN_CONFIDENCE}) >= ${TIMELINE_MIN_CONFIDENCE}`
+      }
     ORDER BY "Pin"."utcStartDateTime" ${direction}, "Pin"."id" ${direction},
       "Pin"."Media.id" ${direction}, "Pin"."Merchant.id" ${direction}
     LIMIT $5`,
