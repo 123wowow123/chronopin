@@ -11,7 +11,7 @@ console.log('process.env.NODE_ENV', env);
 
 if (env === 'development' || env === 'test' || env === 'production') {
   // Register the Babel require hook
-  require('babel-register');
+  require('@babel/register');
 }
 
 // Export the application

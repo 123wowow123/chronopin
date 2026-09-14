@@ -13,7 +13,7 @@
 // A schema change is a new file, e.g. 0002_add_pin_foo.sql. Never edit a file
 // that has already been applied somewhere.
 
-require('babel-register');
+require('@babel/register');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 

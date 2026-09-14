@@ -3,7 +3,7 @@
 // Usage: node scripts/summarize/setLongFormSummary.js <pinId> < summary.txt
 // Reads the summary text from stdin and writes it to Pin.longFormSummary.
 
-require('babel-register');
+require('@babel/register');
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 const { Pin } = require('../../server/model');

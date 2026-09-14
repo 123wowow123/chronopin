@@ -1,6 +1,6 @@
 'use strict';
 
-require('babel-register');
+require('@babel/register');
 
 const args = require('args');
 const extend = require('extend');

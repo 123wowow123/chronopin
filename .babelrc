@@ -1,10 +1,31 @@
 {
-  "passPerPreset": true,
-  "presets": [{
-    "passPerPreset": false,
-    "presets": ["env"]
-  }],
-  "plugins": ["transform-object-rest-spread", "transform-class-properties", ["babel-plugin-transform-builtin-extend", {
-    "globals": ["Error", "Array"]
-  }]]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "22"
+        }
+      }
+    ]
+  ],
+  "overrides": [
+    {
+      "test": [
+        "./client"
+      ],
+      "passPerPreset": true,
+      "plugins": [
+        "angularjs-annotate"
+      ],
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": "ie 11"
+          }
+        ]
+      ]
+    }
+  ]
 }

@@ -20,7 +20,7 @@
 // Not copied: Sessions (everyone signs in again) and Address (never read, and
 // holding SQL Server geography values with no PostgreSQL mapping).
 
-require('babel-register');
+require('@babel/register');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 

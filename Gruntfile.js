@@ -315,17 +315,6 @@ module.exports = function(grunt) {
 
     // Allow the use of non-minsafe AngularJS files. Automatically makes it
     // minsafe compatible so Uglify does not destroy the ng references
-    ngAnnotate: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/concat',
-          src: '**/*.js',
-          dest: '.tmp/concat'
-        }]
-      }
-    },
-
     // Dynamically generate angular constant `appConfig` from
     // `server/config/environment/shared.js`
     ngconstant: {
@@ -395,6 +384,7 @@ module.exports = function(grunt) {
             'assets/images/{,*/}*.{webp,ico,png,jpeg,jpg}',
             'assets/fonts/**/*',
             'index.html',
+            'mainPinData.ejs',
             // move from imagemin
             '{,*/}*.{png,jpg,jpeg,gif,svg}'
           ]
@@ -580,11 +570,6 @@ module.exports = function(grunt) {
         }]
       },
       server: {
-        options: {
-          plugins: [
-            'transform-class-properties',
-          ]
-        },
         files: [{
           expand: true,
           cwd: '<%= yeoman.server %>',
@@ -598,11 +583,6 @@ module.exports = function(grunt) {
         }]
       },
       scrapeJs: {
-        options: {
-          plugins: [
-            'transform-class-properties'
-          ]
-        },
         files: [{
           expand: true,
           cwd: '<%= yeoman.server %>',
@@ -851,7 +831,6 @@ module.exports = function(grunt) {
     'postcss',
     'ngtemplates',
     'concat',
-    'ngAnnotate',
     'copy:dist',
     'babel:server',
     'cdnify',
