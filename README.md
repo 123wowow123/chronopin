@@ -1,45 +1,62 @@
-[![Build Status](https://travis-ci.org/123wowow123/chronopin.svg?branch=master)](https://travis-ci.org/123wowow123/chronopin) [![Dependency Status](https://david-dm.org/123wowow123/chronopin.svg)](https://david-dm.org/123wowow123/chronopin) [![devDependency Status](https://david-dm.org/123wowow123/chronopin/dev-status.svg)](https://david-dm.org/123wowow123/chronopin#info=devDependencies) [![Coverage Status](https://coveralls.io/repos/github/123wowow123/chronopin/badge.svg?branch=master)](https://coveralls.io/github/123wowow123/chronopin?branch=master)
-
 # Chronopin
 
-This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.7.6.
+Discover and track upcoming release dates, events and other important dates.
 
-## Getting Started
+Built with [Next.js](https://nextjs.org) 16 (App Router, Cache Components), React 19, TypeScript and Tailwind CSS 4 on Node.js 24 LTS, backed by PostgreSQL + PostGIS and a FAISS search service. Pages render on the server for search engines; the JSON API lives in the same app under `/api`.
 
-### Developing
+## Getting started
 
-Use Node 22 (`nvm use`, see .nvmrc). Python is no longer needed; sass is pure JS.
-https://tecadmin.net/install-nvm-macos-with-homebrew/#:~:text=1%20How%20To%20Install%20NVM%20on%20macOS%20with,what%20Node%20versions%20are%20available%20to%20install.%20
+1. `nvm use` (Node 24, see `.nvmrc`), then `npm ci`.
+2. Start the local services: `docker compose -f Docker/docker-compose.dev.yml up -d` (PostgreSQL + PostGIS, FAISS). Thumbnails use the Azurite emulator on `127.0.0.1:10000`.
+3. Create `.env.local` (never committed):
 
-https://www.freecodecamp.org/news/python-version-on-mac-update/
+   ```sh
+   DATABASE_URL=postgres://chronopin:chronopin@localhost:5432/chronopin
+   FAISS_URL=http://localhost:5050
+   AZURE_STORAGE_CONNECTION_STRING=...
+   ANTHROPIC_API_KEY=...      # page scraping extraction; optional
+   SESSION_SECRET=...         # JWT signing secret; defaults to the legacy value
+   ```
 
+4. `npm run db:refresh` (schema + seed data), `npm run search:refresh` (search index).
+5. `npm run dev` and open http://localhost:3000.
 
-1. Run `npm install` to install server dependencies.
+## Scripts
 
-2. Run `bower install` to install front-end dependencies.
+| Command | What it does |
+| --- | --- |
+| `npm run dev` / `build` / `start` | Next.js development server, production build, production server |
+| `npm run typecheck` / `lint` / `test` | TypeScript, ESLint, Vitest unit tests |
+| `npm run test:e2e` | Playwright end-to-end tests against a running server (`BASE_URL`, default `http://localhost:3000`) |
+| `npm run create:db` / `db:reset` | Apply pending schema files in `scripts/db/schema` / drop everything and reapply |
+| `npm run create:data` / `backup:data` | Seed the database from / back it up to `scripts/backup/*.json` |
+| `npm run search:refresh` | Empty and refill the FAISS index |
+| `npm run companies:logos` | Look up missing company logos |
+| `npm run specialty-days:build` | Rebuild `src/server/data/specialtyDays.json` |
 
-3. Run `grunt serve` to start the development server. It should automatically open the client in your browser when ready.
+## Layout
 
-## Build & development
+- `src/app` — pages, `api/**/route.ts` JSON endpoints, `auth/**` sign-in (Google, Facebook, email), `sitemap.ts`, `robots.ts`
+- `src/components` — React components (server by default, client islands where interactive)
+- `src/server` — database, models, auth, scraping, weather, search; server-only code
+- `src/lib` — code shared by server and browser: SEO helpers, formatting, types
+- `src/proxy.ts` — canonical pin URLs (308) and real 404s before rendering
+- `scripts` — data, schema and maintenance scripts (run with `tsx`)
 
-Run `grunt build` for building and `grunt serve` for preview.
+## SEO
 
-## Run Docker Build
+- Every pin has a canonical URL `/pin/:id/:slug`; `/pin/:id` and stale slugs redirect permanently.
+- Pages carry titles, descriptions, canonical links, Open Graph/Twitter cards (a generated card at `/og/pin/:id` when a pin has no image) and JSON-LD (`Article`, `Event` for pins with a place, `BreadcrumbList`, `WebSite` search action).
+- `/sitemap.xml` lists every live pin; `/robots.txt` keeps crawlers out of the API and account pages; search and account pages are `noindex`.
+- Pin edits expire their cached page at once; timeline and sitemap refresh in the background.
 
-Run Prod Build `docker build -t chronopin -f Docker/Dockerfile .`
+## Docker
 
-Or
+Build: `docker build -f Docker/Dockerfile -t chronopin .` (no database needed at build time)
 
-Run Dev Build `docker build -t chronopin-dev -f Docker/Dev.Dockerfile .`
+Run: `docker run --rm -p 9000:9000 --env-file Docker/env.prod.list chronopin`
 
-## Run Docker Container
-
-Run Prod `docker run --rm -p 9000:9000 --name chronopin --env-file Docker/env.prod.list chronopin`
-
-Or
-
-Only mounts client and server folders for development
-Run Dev `docker run --rm -p 9000:9000 --name chronopin-dev --env-file Docker/env.dev.list -v $(pwd)/server:/code/server -v $(pwd)/client:/code/client chronopin-dev`
+The image is the Next.js standalone server on port 9000 with Chromium for the scraper. Add `SESSION_SECRET` to the Kubernetes `env-file` ConfigMap before deploying.
 
 ## Upload Docker Image
 
@@ -240,88 +257,21 @@ Run `npm run create:data` for adding data
 
 Run `npm run backup:data` for backing up data
 
-Run `npm run remediate:data` for remediation of data
-
 A schema change is a new numbered file in `scripts/db/schema` (e.g. `0002_add_pin_foo.sql`); never edit one that has been applied.
-
-### Moving data off SQL Server
-
-Run `npm run create:db` against an empty PostgreSQL database, then
-`npm run transfer:mssql -- --from "Server=host,1433;Database=chronopin;User Id=...;Password=...;Encrypt=true"`.
-It copies every table in one transaction, keeps ids, moves the old `" @ lat, lng"` address suffix into `Pin.location`, and prints row counts from both sides.
 
 ## Debug Node
 
-Run `node --inspect-brk server/index.js` for debugging Node
+Use the VS Code launch configurations in `.vscode/launch.json` (dev server, create DB, create/save data), or run `NODE_OPTIONS=--inspect npm run dev`.
 
-Run `node --inspect-brk scripts/db/migrate.js` for debugging Node :: create:db
-
-Run `node --inspect-brk scripts/data/index.js --save` for debugging Node :: backup:data
-
-Run `node --inspect-brk scripts/data/index.js --seed` for debugging Node :: create:data
-
-Run `node --inspect-brk scripts/search/index.js --delete --index=pins` for debugging Node :: delete:search:pins
-
-## Update Node
-
-Clear NPM's cache
-
-`sudo npm cache clean -f`
-
-Install a little helper called 'n'
-
-`sudo npm install -g n`
-
-Install latest stable Node.js version
-
-`sudo n stable`
-
-Check Node.js version
-
-`node --version`
-
-Run this from the command line:
-
-`node -p "process.arch"`
-
-`ECHO %PROCESSOR_ARCHITECTURE%`
-
-It will return 'arm', 'ia32', or 'x64'.
+Scripts run on `tsx`, e.g. `npx tsx --inspect-brk scripts/data/index.ts --save` for debugging `backup:data`.
 
 ## Update Node packages
 
-Install `npm install -g npm-check-updates`
-
-Run `npm-check-updates` to list what packages are out of date
-(basically the same thing as running `npm outdated`)
-
-Run `npm-check-updates -u` to update all the versions in your package.json (this is the magic sauce)
-
-Run `npm update` as usual to install the new versions of your packages based on the updated package.json
-
-## Update Bower packages
-
-Install `npm install -g npm-check-updates`
-
-Run `ncu -m bower` to list what packages are out of date
-
-Run `ncu -m bower -u` to update all the versions in your bower.json (this is the magic sauce)
-
-Run `bower update` as usual to install the new versions of your packages based on the updated bower.json
-
-## Run Sharp Hack in Azure until they support 64 bit node
-
-`npm install sharp@0.11.4 --save-dev --arch=ia32`
-
-https://github.com/lovell/sharp/issues/379
-
-https://github.com/projectkudu/kudu/issues/1914
-
-https://social.msdn.microsoft.com/Forums/en-US/871cc7c7-2917-4c96-b98d-f1e488937b43/azure-website-nodejs-doesnt-run-64-bit?forum=windowsazurewebsitespreview
+Node is pinned by `.nvmrc` (`nvm use`). Run `npm outdated` to list what packages are out of date, then `npx npm-check-updates -u && npm install`. Keep ESLint on 9 until eslint-plugin-react supports 10.
 
 ## Testing
 
-Running `npm test` will run the unit tests with karma.
+Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwright tests against a running app (`npm run build && npm start`, or `npm run dev`; `BASE_URL` picks the server).
 
 ## External API
 

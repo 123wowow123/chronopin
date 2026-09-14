@@ -1,69 +1,43 @@
-# First Stage Build
-FROM node:22-alpine AS base
- 
-## Environment Variables
-ENV PROJECT_ROOT /code
+# Chronopin: Next.js standalone server on Node.js 24 LTS.
+#
+#   docker build -f Docker/Dockerfile -t chronopin .
+#   docker run --rm -p 9000:9000 --env-file Docker/env.prod.list chronopin
+#
+# No database is needed to build: pages that read data render per request.
 
-## Create App Directory
-RUN mkdir -p $PROJECT_ROOT
-WORKDIR $PROJECT_ROOT
- 
-RUN apk add --update --no-cache curl
+# --- Dependencies and build ---------------------------------------------------
+FROM node:24-alpine AS build
+WORKDIR /code
 
-## Bundle App Source
-COPY . ${PROJECT_ROOT}
+# Chromium for the scraper comes from apk in the runtime image.
+ENV PUPPETEER_SKIP_DOWNLOAD=true \
+    NEXT_TELEMETRY_DISABLED=1
 
-# Chromium comes from apk in the prod stage
-ENV PUPPETEER_SKIP_DOWNLOAD="true"
+COPY package.json package-lock.json ./
+RUN npm ci
 
-## Install App Dependencies
-# COPY package.json $PROJECT_ROOT
-RUN npm install
-
-## Bower Setup
-# COPY bower.json $PROJECT_ROOT
-RUN apk update && apk upgrade && \
-    apk add --no-cache bash git openssh
-
-## Install Bower Libs and Compile
-RUN npm run bower:install
+COPY . .
 RUN npm run build
 
+# --- Runtime --------------------------------------------------------------------
+FROM node:24-alpine AS runtime
+WORKDIR /app
 
-# Second Stage
-FROM node:22-alpine AS prod
+# Chromium and fonts for puppeteer (page scraping); bind-tools for nslookup.
+RUN apk add --no-cache chromium nss freetype harfbuzz ca-certificates ttf-freefont bind-tools
 
-## Environment Variables
-ENV PROJECT_ROOT /code
+ENV NODE_ENV=production \
+    NEXT_TELEMETRY_DISABLED=1 \
+    PUPPETEER_SKIP_DOWNLOAD=true \
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium \
+    PORT=9000 \
+    HOSTNAME=0.0.0.0
 
-RUN mkdir -p $PROJECT_ROOT
-WORKDIR $PROJECT_ROOT
+# The standalone output is the server plus only the node_modules it uses.
+COPY --from=build /code/.next/standalone ./
+COPY --from=build /code/.next/static ./.next/static
+COPY --from=build /code/public ./public
 
-# bind-tools provides nslookup
-RUN apk add --no-cache \
-      chromium \
-      nss \
-      freetype \
-      harfbuzz \
-      ca-certificates \
-      ttf-freefont \
-      bind-tools
-
-# Puppeteer drives the apk Chromium instead of downloading its own
-ENV PUPPETEER_SKIP_DOWNLOAD="true"
-ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
-
-## Install nslookup
-# RUN apk add --update --no-cache bind-tools
-
-COPY --from=base ${PROJECT_ROOT}/dist $PROJECT_ROOT
-
-# Change this for dev
-RUN npm install --omit=dev
-
+USER node
 EXPOSE 9000
-## EXPOSE 80
-## EXPOSE 1433 
-
-ENTRYPOINT ["npm"]
-CMD ["start"]
+CMD ["node", "server.js"]

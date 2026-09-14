@@ -1,19 +1,25 @@
 node_modules
-public
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+
+# env files hold secrets (DATABASE_URL, ANTHROPIC_API_KEY, ...)
+.env*
+!.env.example
+
+# playwright
+/test-results/
+/playwright-report/
+
 .tmp
 .scrape
-.sass-cache
 .idea
-client/bower_components
-server/config/environment/development.js
-server/config/environment/production.backup.js
 npm-debug.log
 coverage
-dev.sqlite
-test.sqlite
 .DS_Store
-
-dist
 
 .terraform
 

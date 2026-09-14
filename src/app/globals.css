@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+/* The Chronopin palette: the Angular app's dark theme, as Tailwind tokens. */
+@theme {
+  --font-sans: var(--font-noto-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-astro: var(--font-astro-signs);
+
+  --color-page: #222222;
+  --color-header: #1a1a1b;
+  --color-panel: #000000;
+  --color-raised: #333333;
+  --color-raised-2: #444444;
+  --color-line: #1a1a1b;
+
+  --color-ink: #d7dadc;
+  --color-muted: #bbbbbb;
+  --color-subtle: #9a9c9e;
+  --color-faint: #888888;
+
+  --color-link: #4a92d1;
+  --color-accent: #236aa8;
+
+  --color-tag: #414141;
+  --color-tag-countdown: #666666;
+  --color-tag-trivia: #5a6560;
+  --color-tag-today: #75754a;
+  --color-tag-text: #ededed;
+  --color-rail: #dddddd;
+  --color-planet: #6a8db3;
+  --color-planet-ring: #90acc7;
+
+  --color-past: #d19a4a;
+  --color-future: #5b95d6;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-padding-top: 3.75rem;
+  }
+
+  body {
+    @apply bg-page font-sans text-muted antialiased;
+  }
+
+  a {
+    @apply text-link;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-ink;
+  }
+}
+
+@layer components {
+  /* A timeline tag: a label with an arrow pointing at the rail. */
+  .tag-arrow {
+    @apply relative block w-[95px] py-[5px] text-center text-sm font-bold text-tag-text shadow-[0_0_11px_rgba(0,0,0,0.35)];
+  }
+  /* The arrow is a triangle as tall as its tag (whatever its line count),
+     overlapping the tag by 1px so no seam shows between them. */
+  .tag-arrow::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(100% - 1px);
+    width: 15px;
+    background: var(--tag-bg);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+  }
+
+  /* A row of tags. Each tag sits above the one after it, so its arrow
+     overlaps the next tag. Above the cards (narrow screens) they butt up
+     against each other, the later ones padded clear of the arrow in them. */
+  .tag-row > .tag-arrow:nth-child(1) { z-index: 8; }
+  .tag-row > .tag-arrow:nth-child(2) { z-index: 7; }
+  .tag-row > .tag-arrow:nth-child(3) { z-index: 6; }
+  .tag-row > .tag-arrow:nth-child(4) { z-index: 5; }
+  .tag-row > .tag-arrow:nth-child(5) { z-index: 4; }
+  .tag-row > .tag-arrow:nth-child(6) { z-index: 3; }
+  .tag-row > .tag-arrow:nth-child(7) { z-index: 2; }
+  .tag-row > .tag-arrow:nth-child(n + 8) { z-index: 1; }
+  @media (max-width: 63.999rem) {
+    .tag-row > .tag-arrow + .tag-arrow {
+      padding-left: 14px;
+    }
+  }
+
+  /* HTML a pin's summary is stored as (bulleted key points). */
+  .rich-text ul {
+    @apply list-disc space-y-1 pl-5;
+  }
+  .rich-text ol {
+    @apply list-decimal space-y-1 pl-5;
+  }
+  .rich-text a {
+    @apply underline;
+  }
+
+  /* YouTube embeds keep a 16:9 box. */
+  .embed-container {
+    position: relative;
+    aspect-ratio: 16 / 9;
+  }
+  .embed-container iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
