@@ -15,9 +15,7 @@ module.exports = function(grunt) {
     express: 'grunt-express-server',
     useminPrepare: 'grunt-usemin',
     ngtemplates: 'grunt-angular-templates',
-    cdnify: 'grunt-google-cdn',
     protractor: 'grunt-protractor-runner',
-    buildcontrol: 'grunt-build-control',
     istanbul_check_coverage: 'grunt-mocha-istanbul',
     ngconstant: 'grunt-ng-constant'
   });
@@ -94,7 +92,7 @@ module.exports = function(grunt) {
       },
       sass: {
         files: ['<%= yeoman.client %>/{app,components}/**/*.{scss,sass}'],
-        tasks: ['sass', 'postcss']
+        tasks: ['sass']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -149,20 +147,6 @@ module.exports = function(grunt) {
     },
 
 
-    jscs: {
-      options: {
-        config: ".jscsrc"
-      },
-      main: {
-        files: {
-          src: [
-            '<%= yeoman.client %>/app/**/*.js',
-            '<%= yeoman.server %>/**/*.js'
-          ]
-        }
-      }
-    },
-
     // Empties folders to start fresh
     clean: {
       dist: {
@@ -186,18 +170,6 @@ module.exports = function(grunt) {
         'scripts',
         'e2e',
       ]
-    },
-
-    // Add vendor prefixed styles
-    postcss: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/',
-          src: '{,*/}*.css',
-          dest: '.tmp/'
-        }]
-      }
     },
 
     // Debugging with node inspector
@@ -302,19 +274,6 @@ module.exports = function(grunt) {
     },
 
     // The following *-min tasks produce minified files in the dist folder
-    // imagemin: {
-    //   dist: {
-    //     files: [{
-    //       expand: true,
-    //       cwd: '<%= yeoman.client %>/assets/images',
-    //       src: '{,*/}*.{png,jpg,jpeg,gif,svg}',
-    //       dest: '<%= yeoman.dist %>/<%= yeoman.client %>/assets/images'
-    //     }]
-    //   }
-    // },
-
-    // Allow the use of non-minsafe AngularJS files. Automatically makes it
-    // minsafe compatible so Uglify does not destroy the ng references
     // Dynamically generate angular constant `appConfig` from
     // `server/config/environment/shared.js`
     ngconstant: {
@@ -362,13 +321,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // Replace Google CDN references
-    cdnify: {
-      dist: {
-        html: ['<%= yeoman.dist %>/<%= yeoman.client %>/*.html']
-      }
-    },
-
     // Copies remaining files to places other tasks can use
     copy: {
       dist: {
@@ -385,7 +337,6 @@ module.exports = function(grunt) {
             'assets/fonts/**/*',
             'index.html',
             'mainPinData.ejs',
-            // move from imagemin
             '{,*/}*.{png,jpg,jpeg,gif,svg}'
           ]
         }, {
@@ -419,28 +370,6 @@ module.exports = function(grunt) {
       }
     },
 
-    buildcontrol: {
-      options: {
-        dir: '<%= yeoman.dist %>',
-        commit: true,
-        push: true,
-        connectCommits: false,
-        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-      },
-      heroku: {
-        options: {
-          remote: 'heroku',
-          branch: 'master'
-        }
-      },
-      openshift: {
-        options: {
-          remote: 'openshift',
-          branch: 'master'
-        }
-      }
-    },
-
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       pre: [
@@ -469,7 +398,6 @@ module.exports = function(grunt) {
       dist: [
         'newer:babel:client',
         'sass',
-        //'imagemin',
         //'scrape'
       ]
     },
@@ -716,7 +644,6 @@ module.exports = function(grunt) {
         'concurrent:server',
         'injector',
         'wiredep:client',
-        'postcss',
         'concurrent:debug'
       ]);
     }
@@ -728,7 +655,6 @@ module.exports = function(grunt) {
       'concurrent:server',
       'injector',
       'wiredep:client',
-      'postcss',
       'express:dev',
       'wait',
       //'open', // disabled for docker
@@ -756,7 +682,6 @@ module.exports = function(grunt) {
         'concurrent:pre',
         'concurrent:test',
         'injector',
-        'postcss',
         'wiredep:test',
         'karma'
       ]);
@@ -778,7 +703,6 @@ module.exports = function(grunt) {
           'concurrent:test',
           'injector',
           'wiredep:client',
-          'postcss',
           'express:dev',
           'protractor'
         ]);
@@ -828,12 +752,10 @@ module.exports = function(grunt) {
     'injector',
     'wiredep:client',
     'useminPrepare',
-    'postcss',
     'ngtemplates',
     'concat',
     'copy:dist',
     'babel:server',
-    'cdnify',
     'cssmin',
     'uglify',
     'filerev',
