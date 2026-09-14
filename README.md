@@ -470,7 +470,6 @@ This is a promotional article about one of the company partners with Interesting
 ## Before Usable
 
 
-- Login fix
 - Favorite needs to be grouped in folders and make public/private
 - Pinner should be able to add tags/groups to organize their pin
 - Add auto nightly scraping job 
@@ -487,10 +486,16 @@ update client for youtube and twitter
 
 - Accessory feature listing below main pin
 
-- Create watch view and should have difference groups
 
 - Prevent user from posting the same pin of same url more then once
 
 
 - provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc. <https://aztro.readthedocs.io/en/latest>
 - Check out upcoming side calendar with astrology horrospoce <https://cafeastrology.com/astrologyof2017horoscopes.html>
+
+
+
+
+
+- Create watch view and should have difference groups
+- quick category filter
