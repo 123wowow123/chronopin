@@ -23,6 +23,16 @@ export type MerchantJson = {
   price?: number;
 };
 
+export type PinReferenceJson = {
+  id?: number;
+  url: string;
+  title?: string;
+  // How strongly this link supports the pin, 0-100.
+  confidence: number;
+  publishedDate?: string; // YYYY-MM-DD
+  utcCreatedDateTime?: string;
+};
+
 export type PinUserJson = {
   id: number;
   userName?: string;
@@ -67,6 +77,7 @@ export type PinJson = {
   user?: PinUserJson;
   media?: MediumJson[];
   merchants?: MerchantJson[];
+  references?: PinReferenceJson[];
 };
 
 // A pin ready for a card: its description already sanitised (on the server

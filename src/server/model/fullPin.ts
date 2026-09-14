@@ -7,6 +7,7 @@ import Favorite from './favorite';
 import Like from './like';
 import Medium from './medium';
 import Merchant from './merchant';
+import PinReference from './pinReference';
 import type User from './user';
 import { createPin, mapSubObjectFromQuery } from './pinShared';
 
@@ -36,6 +37,9 @@ export class FullPin extends BasePin {
     }
     for (const m of this.merchants) {
       await new Merchant(m, this).save();
+    }
+    for (const r of this.references) {
+      await new PinReference(r, this).save();
     }
     return Promise.all([
       ...this.likes.map((l) =>

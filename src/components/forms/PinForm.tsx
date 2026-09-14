@@ -11,7 +11,8 @@ import { api, ApiError } from '@/lib/client/api';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useSession } from '@/lib/client/session';
 import { useTimeZone } from '@/lib/client/timeZone';
-import { applyScrape, EMPTY_FORM, formToPin, pinToForm, type PinFormValues } from '@/lib/pinForm';
+import { applyScrape, EMPTY_FORM, formToPin, pinToForm, type PinFormValues, type ReferenceFormValues } from '@/lib/pinForm';
+import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { pinPath } from '@/lib/seo';
 import type { CardPin, MediumJson, PinJson } from '@/lib/types';
 import { RichTextEditor } from './RichTextEditor';
@@ -71,6 +72,12 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
     if (!values.startDate) return setError('A start date is required.');
     if (!values.sourceUrl.trim() && mode !== 'edit') return setError('A source URL is required.');
     if (values.priceCurrency && !/^[A-Za-z]{3}$/.test(values.priceCurrency)) return setError('Currency must be a 3-letter code, like USD.');
+    for (const r of values.references) {
+      if (!r.url.trim() && !r.title.trim() && !r.confidence) continue;
+      if (!/^https?:\/\//i.test(r.url.trim())) return setError('Each reference needs a link starting with http:// or https://.');
+      const confidence = Number(r.confidence);
+      if (r.confidence.trim() === '' || isNaN(confidence) || confidence < 0 || confidence > 100) return setError('Each reference needs a confidence from 0 to 100.');
+    }
 
     setSaving(true);
     try {
@@ -275,6 +282,12 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
           </button>
         </div>
 
+        <ReferencesEditor
+          references={values.references}
+          source={{ sourceUrl: values.sourceUrl, dateConfidence: values.dateConfidence, utcCreatedDateTime: pin?.utcCreatedDateTime }}
+          onChange={(references) => set('references', references)}
+        />
+
         <details open={showAdvanced} onToggle={(e) => setShowAdvanced((e.target as HTMLDetailsElement).open)} className="group surface p-4">
           <summary className="flex cursor-pointer list-none items-center gap-2 text-sm font-medium text-muted hover:text-ink [&::-webkit-details-marker]:hidden">
             <Icon name="chevron" className="size-4 -rotate-90 text-subtle transition-transform group-open:rotate-0" />
@@ -350,6 +363,50 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
         <PinCard pin={preview} serverTimeZone="UTC" />
       </aside>
     </form>
+  );
+}
+
+function ReferencesEditor({
+  references,
+  source,
+  onChange,
+}: {
+  references: ReferenceFormValues[];
+  source: Pick<PinJson, 'sourceUrl' | 'dateConfidence' | 'utcCreatedDateTime'>;
+  onChange: (references: ReferenceFormValues[]) => void;
+}) {
+  const update = (index: number, patch: Partial<ReferenceFormValues>) => onChange(references.map((r, i) => (i === index ? { ...r, ...patch } : r)));
+  const overall = pinConfidence(
+    pinEvidence({
+      ...source,
+      references: references
+        .filter((r) => r.url.trim() && r.confidence.trim() !== '' && !isNaN(Number(r.confidence)))
+        .map((r) => ({ ...r, url: r.url.trim(), confidence: Number(r.confidence) })),
+    }),
+  );
+  return (
+    <div>
+      <span className={labelClass}>
+        References{' '}
+        <span className="font-normal text-subtle">
+          {overall !== undefined ? `(overall confidence ${overall}% with the source, newer references count more)` : '(further evidence for this pin; the source counts too)'}
+        </span>
+      </span>
+      {references.map((reference, index) => (
+        <div key={index} className="mb-2 grid grid-cols-[1fr_auto] gap-2 sm:grid-cols-[2fr_1fr_5.5rem_9.5rem_auto]">
+          <input aria-label="Reference URL" type="url" placeholder="https://…" className={`${inputClass} col-span-2 sm:col-span-1`} value={reference.url} onChange={(e) => update(index, { url: e.target.value })} />
+          <input aria-label="Reference title" placeholder="Title (optional)" className={`${inputClass} col-span-2 sm:col-span-1`} value={reference.title} onChange={(e) => update(index, { title: e.target.value })} />
+          <input aria-label="Reference confidence" type="number" min={0} max={100} step={1} placeholder="0-100" title="How strongly this reference supports the pin, 0 to 100" className={inputClass} value={reference.confidence} onChange={(e) => update(index, { confidence: e.target.value })} />
+          <input aria-label="Reference published date" type="date" title="When the reference was published" className={inputClass} value={reference.publishedDate} onChange={(e) => update(index, { publishedDate: e.target.value })} />
+          <button type="button" aria-label="Remove reference" className="rounded-lg px-2 text-subtle hover:bg-red-500/10 hover:text-red-400" onClick={() => onChange(references.filter((_, i) => i !== index))}>
+            ✕
+          </button>
+        </div>
+      ))}
+      <button type="button" className="btn btn-sm btn-ghost -ml-2 text-link" onClick={() => onChange([...references, { url: '', title: '', confidence: '', publishedDate: '' }])}>
+        Add a reference
+      </button>
+    </div>
   );
 }
 

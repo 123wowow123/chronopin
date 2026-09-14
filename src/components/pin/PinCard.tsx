@@ -9,7 +9,10 @@ import { money } from '@/lib/format';
 import { useSession } from '@/lib/client/session';
 import { pinPath } from '@/lib/seo';
 import type { CardPin } from '@/lib/types';
+import { pinEvidence } from '@/lib/referenceConfidence';
+import { CitedText } from './CitedText';
 import { DateConfidence } from './DateConfidence';
+import { PinConfidence } from './PinConfidence';
 import { PinMediaFrame } from './PinMedia';
 import { RefineLink } from './RefineLink';
 import { WatchButton } from './WatchButton';
@@ -126,7 +129,13 @@ export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serve
               <StartTime pin={pin} serverTimeZone={serverTimeZone} />
               <WeatherIcon pinId={pin.id} hasPlace={hasPlace} />
               {/* An unverified pin's reasoning only restates that nothing was found. */}
-              <DateConfidence level={pin.dateConfidence} reasoning={pin.dateConfidenceReasoning} showReasoning={pin.dateConfidence !== 'unknown'} />
+              <DateConfidence
+                level={pin.dateConfidence}
+                reasoning={pin.dateConfidenceReasoning}
+                showReasoning={pin.dateConfidence !== 'unknown'}
+                reasoningContent={pin.dateConfidenceReasoning && pin.id ? <CitedText text={pin.dateConfidenceReasoning} evidence={pinEvidence(pin)} hrefBase={href} /> : undefined}
+              />
+              <PinConfidence evidence={pinEvidence(pin)} />
             </div>
           ) : null}
           {pin.safeDescription ? (

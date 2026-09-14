@@ -6,6 +6,7 @@ export { FullPin, FullPins } from './fullPin';
 export { SearchPin, SearchPins } from './searchPin';
 export { default as Medium } from './medium';
 export { default as Merchant } from './merchant';
+export { default as PinReference } from './pinReference';
 export { default as Like } from './like';
 export { default as Favorite } from './favorite';
 export { default as Comment } from './comment';

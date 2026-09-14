@@ -2,6 +2,7 @@ import _ from 'lodash';
 import type { Row } from '../db';
 import Medium from './medium';
 import Merchant from './merchant';
+import PinReference from './pinReference';
 import User from './user';
 
 export const BasePinProp = [
@@ -51,6 +52,7 @@ export default class BasePin {
   declare userId: number | null;
   declare media: Medium[];
   declare merchants: Merchant[];
+  declare references: PinReference[];
 
   constructor(pin?: Row | null, user?: User | null, prop?: string[]) {
     this._prop = prop || BasePinProp;
@@ -79,6 +81,7 @@ export default class BasePin {
 
     this.media = _.get(pin, 'media', []).map((m: Row) => new Medium(m, this));
     this.merchants = _.get(pin, 'merchants', []).map((m: Row) => new Merchant(m, this));
+    this.references = (pin.references || []).map((r: Row) => new PinReference(r, this));
     return this;
   }
 
@@ -153,6 +156,15 @@ export default class BasePin {
       this.merchants = [];
     }
     this.merchants.push(merchant);
+    return this;
+  }
+
+  addReference(reference: PinReference): this {
+    reference.setPin(this);
+    if (!this.references) {
+      this.references = [];
+    }
+    this.references.push(reference);
     return this;
   }
 

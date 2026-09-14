@@ -326,18 +326,13 @@ https://nationaldaycalendar.com/march/
 
 - Youtube pin with time location
   - Get closed caption text
-  - Pass playing video time to drilldown view
-  - Play from beginning button
-  - Timeline auto play one video after another
-    - Show movie trailers usages
-  - Scrape YouTube using something like: Reader.js
-  - Set YouTube time range
+
 
 - Drilldown Summery
   - Sentiment
-  - Summerize (or Use reading mode to show full article)
+
   - Mini timeline for multiple date point articles (highlight date mined for mini timeline)
-  - Add other annotations to article
+
   - Historically happens on date
   - RSS/Atom summary
 
@@ -346,30 +341,23 @@ https://nationaldaycalendar.com/march/
   - Show distance
   - https://sandiego.eater.com/2017/12/11/16761732/menya-ultra-ramen-japanese-restaurant-mira-mesa
 
-- Tag
- - Auto suggest tokenized tag in tag field
- - ML suggest tag
- - Add personal timeline column with composition of tag
- - Home page with single popular timeline with flyout tag cloud
 
-- Trackable Variable per timeline
- - Then use ML to try to predict it once enough pins exist for sub (eg: price)
+
+
 
 - Filter by like threashold  
 
-- Faceted Search bubbles like Bing
 
-- Fix watch pins board
 
-- SSL
-- facebook login check for fbid and matching email in system to get user
 
-- Put location in place of "THE PIN GANG" and use google mapping cordinates
+
+
+
 - Stacking/grouping of related pins
 
 - Amazon/Ebay product cross referencing
 
-- Neo4j / Marklogic
+
 - Reminder Aside Menu by date sections
   - Sectional grouping on the bottom
   https://www.bing.com/images/search?view=detailV2&ccid=Qz5ylXJX&id=DE79D5F3DD2FE17F2542FE2F74C1163AC546B6F2&thid=OIP.Qz5ylXJX6FmKOGL7rsaBzwAAAA&mediaurl=http%3a%2f%2forgjunkie.com%2fwp-content%2fuploads%2f2016%2f04%2fReminders-app.png&exph=650&expw=366&q=reminder+app&simid=608026157405111055&selectedIndex=225&ajaxhist=0
@@ -384,11 +372,7 @@ https://nationaldaycalendar.com/march/
 
 - Faceted Navigation that slides in one by one from the left in bubble blocks (https://alistapart.com/article/design-patterns-faceted-navigation)(https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-post-filter.html)
 
-- https://en.wikipedia.org/wiki/Word2vec
-- https://wordnet.princeton.edu/
-- https://arxiv.org/pdf/1402.3722.pdf
-- https://nlp.stanford.edu/software/sempre/
-- http://jupyter.org/
+
 
 ### Map
 
@@ -398,37 +382,31 @@ https://nationaldaycalendar.com/march/
   - See who else is going in your network
   - If flight information is entered or flight booked through site then delays and be tracked and shared
 
-### Time Series
 
-- Read book for more ideas
 
-### Machine Learning
 
-- review algebra, linear algebra, analysis, stat, calculus, graph theory in that order
--- https://www.pinterest.com/mathematicsprof/
 
 ### Web Scraper
 
 - Amazon Price Scrape
 - eBay Price Scrape
-- Address Scrape
-- Weather of location for that date
-- Weather of your location for that date
-- Movie Rotten Tomato scrape
-- As you type in a url a bottom horizontal scrollable pin list will show up for closely matched existing pins. There you can immediately track or upvote
-- Editing image will delete image so make sure it's marked deleted in join table ++
-- Add price on contract icon
-- Add Free Cost Text rather then $0
-- Extract scaper code to new project
+
+
+
+
+
 
 ### Misc
 
-- Follow other people and get notified when they post
-- GeoHash grid aggregation of close events during breakdown of 1/3/5/10 days
-- Extract scrape core selector in config file
+
+
+
+
 - Pin feed needs to include if user have clicked on watch/like per min exclude deleted
-- Change Medium.type to NVarChar
+
+
 - General Sentiment Graph for a Company or Product
+
 - Search (Amazon) to buy product to support our website
 ```
 This is a promotional article about one of the company partners with Interesting Engineering. By shopping with us, you not only get the materials you need, but you’re also supporting our website.
@@ -438,84 +416,81 @@ This is a promotional article about one of the company partners with Interesting
 ### Partially Completed:
 
 - Activated Google Analytics / Facebook upgrade to non development mode
-- Flat design <http://www.androidcentral.com/> <http://spectrum.ieee.org/>
-- Check out upcoming side calendar <https://cafeastrology.com/astrologyof2017horoscopes.html>
-- provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc. <https://aztro.readthedocs.io/en/latest>
-- add flyout for different types of like (on time). Watch should show modal to add or select grouping pin will live in
-- Add unique constraint on like and favorite so one user can like / favorite a pin once
-- promise return null to suppress warnings
-- Unit / Integration test on User and Pin model
-- Change readFileSync to Async in scrape code to load scrape file or cache it
-- Prevent user from posting the same pin of same url more then once
-- Pin save should be wrapped in transaction
-- format money with comma's on pin form
-- Socket io updates - like will replace pin causing flicker ++
-- cancel scraping button ++
-- add edit ability to scraping modal ++
 
-- Create watch view ++
-- inherit main and watch view ++
-- extract timeline into directive ++
-- pin page media query
-- facebook / tweet like button and counter need to show / move watch to top right of image
-- scrape alt text for image and save
-- get title in header bound correctly per page
-- linking on watch/link and being redirected to login should fulfill request after logged in
-- Extract GA code in auth.service.js into it's own module
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - GA: Outbound link / non-interaction events / Social Interactions tracking / User Timings / set clientId on tracker creation
-- searching on anything other then main page should bring you to main page
-- multiline description support
-- Accessory feature listing below main pin
 
-- Side panel for favorite events: https://cafeastrology.com/articles/daysoftheweek.html
-- convert to use jQuery.scrollTo https://github.com/flesler/jquery.scrollTo
+
+
+
+
 - Chinese Lunar Calendar (Nong Li)
-- display error banner on create page when failed scrape
 
-- add holiday and perforated placeholder block for holiday and special events
-- search with infinit scroll
-- check scrolling to the end as link header is not responsed
 
-- Extract scrapping js to own repo and used typescript
-- side info panel with summation of 'tagged' categories of items and mode/median/mean
-- Add tags and allow upvoting of existing tags to gain meta data for search engine to process +
-- search feature bug / show tag button when searched to jump to different section like pinterest +++
-- show pixel dimention / size via tooltip?? of scraped image
+
+
+
+
+
+
+
+
+
 
 - Add FB privacy policy page
 - https://gist.github.com/muddylemon/2671176
 - https://developers.facebook.com/apps/560731380662615/settings/basic/
 
-- https://prerender.io/
+
 - facebook comment jumps @ pin page
 
 
 ## Architecture
 - Externalize image processing to AWS Lamda
-- Externalize pre render to AWS Lamda
-- Add Redis to serve prender pages
-- Convert to React
-- Grafana activity dashboard
 - [Use Firebase DB for denormalized push notification of app data] <https://www.youtube.com/watch?v=LAWjdZYrUgI>
 - GeoLite2 City: IP => City / lat:long
-- Cache main query and improve load time <https://www.patterns.dev/posts/prpl/> <https://web.dev/rendering-on-the-web/>
 
-## Bugs
-- When in specific pin view and clicking logout will show blank screen
-- Date tag mobile view broken
+
 
 ## Before Usable
 
-- Youtube!!
-- Create page image redesign with image selection in right drawer
 
 - Login fix
-- Script to refresh pins in semantic search
-- Single Pin page similarity needs to be in timeline
 - Favorite needs to be grouped in folders and make public/private
 - Pinner should be able to add tags/groups to organize their pin
-- Notification when other people comment on your post for comment reply
 - Add auto nightly scraping job 
 
+- scrape https://www.youtube.com/@TheB1M
+
+add additional reference link feature to better ground pin with additional evidence and reference link should have confidance value and final total confidance showed on pin should be calculated using weighted average with more recent reference weighing more
 
 update client for youtube and twitter
+
+- search with infinit scroll
+
+- add holiday and perforated placeholder block for holiday and special events
+
+- Accessory feature listing below main pin
+
+- Create watch view and should have difference groups
+
+- Prevent user from posting the same pin of same url more then once
+
+
+- provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc. <https://aztro.readthedocs.io/en/latest>
+- Check out upcoming side calendar with astrology horrospoce <https://cafeastrology.com/astrologyof2017horoscopes.html>

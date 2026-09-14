@@ -14876,6 +14876,70 @@
     "userId": 1
   },
   {
+    "id": 423,
+    "rootThread": false,
+    "title": "Mont Cenis Base Tunnel Opens",
+    "description": "At 57.5 km, the Mont Cenis Base Tunnel will be the world's longest rail tunnel, carrying the new Lyon–Turin railway under the Alps between Saint-Jean-de-Maurienne, France, and Susa, Italy.",
+    "sourceUrl": "https://www.youtube.com/watch?v=NFrr-L_BcC4",
+    "longFormSummary": "<ul><li>The twin-tube base tunnel is the centrepiece of the 270 km Lyon–Turin line: 45 km runs under France and 12.5 km under Italy, slightly longer than Switzerland's Gotthard Base Tunnel.</li><li>It cuts Lyon–Turin journeys from 3 h 47 min to 1 h 47 min, lets freight trains carry 2,000 tonnes instead of about 700, and raises long-distance services from 6 to 22 a day, aiming to take around a million heavy vehicles off Alpine roads each year.</li><li>Seven tunnel boring machines will dig most of the tunnel; the first, Viviana, set off in September 2025. As of July 2026, TELT had excavated 49.2 km of the 164 km of planned tunnels, including 21.6 km of the base tunnel itself.</li><li>The cross-border section, built by the Franco-Italian promoter TELT, is estimated at €11.1 billion (40% EU, 35% Italy, 25% France); the whole railway at about €25 billion. A July 2025 agreement set commissioning for the end of 2033, a year later than the earlier 2032 target.</li></ul>",
+    "address": "Val-Cenis, Savoie, France",
+    "latitude": 45.190748,
+    "longitude": 6.781311,
+    "price": 11100000000,
+    "priceCurrency": "EUR",
+    "dateConfidence": "scheduled",
+    "dateConfidenceReasoning": "Given as scheduled, per the source: the base tunnel \"is expected to be commissioned by the end of 2033\"; telt.eu confirms \"La date d'achèvement est prévue en 2033\", a year later than the earlier 2032 target.",
+    "companyId": 145,
+    "company": "TELT",
+    "companyLogoUrl": "https://www.google.com/s2/favicons?domain=telt.eu&sz=64",
+    "category": "Infrastructure & Transportation",
+    "utcStartDateTime": "2033-12-31T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-14T19:14:11.703Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang"
+    },
+    "media": [
+      {
+        "id": 394,
+        "originalUrl": "https://www.youtube.com/embed/NFrr-L_BcC4",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/NFrr-L_BcC4?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"The $29BN Megaproject in the Heart of a Mountain\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 32,
+        "url": "https://www.telt.eu/wp-content/uploads/2026/08/260805_TELT_dossier_de_presse.pdf",
+        "title": "TELT press kit (dossier de presse), August 2026",
+        "confidence": 95,
+        "publishedDate": "2026-08-05",
+        "utcCreatedDateTime": "2026-09-14T19:14:11.727538+00:00",
+        "pinId": 423
+      },
+      {
+        "id": 33,
+        "url": "https://www.railwaygazette.com/passenger/2025/12/06/europe-franco-italian-mont-cenis-base-tunnel-project-forges-ahead/",
+        "title": "Europe: Franco-Italian Mont Cenis base tunnel project forges ahead",
+        "confidence": 85,
+        "publishedDate": "2025-12-06",
+        "utcCreatedDateTime": "2026-09-14T19:14:11.729197+00:00",
+        "pinId": 423
+      },
+      {
+        "id": 34,
+        "url": "https://cinea.ec.europa.eu/featured-projects/new-alpine-rail-connection-between-lyon-and-turin_en",
+        "title": "A new Alpine rail connection between Lyon and Turin (CINEA, European Commission)",
+        "confidence": 80,
+        "publishedDate": "2025-02-01",
+        "utcCreatedDateTime": "2026-09-14T19:14:11.729883+00:00",
+        "pinId": 423
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 232,
     "rootThread": false,
     "title": "Chuo Shinkansen Maglev Tokyo to Nagoya",

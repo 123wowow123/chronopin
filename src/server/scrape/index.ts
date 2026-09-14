@@ -2,9 +2,11 @@ import getVideoId from 'get-video-id';
 import _ from 'lodash';
 import config from '../config';
 import { extractPinFields, toLocation, type ExtractedFields } from '../extract';
+import { findReferences, type FoundReference } from '../extract/references';
 import Medium from '../model/medium';
 import Merchant from '../model/merchant';
 import Pin from '../model/pin';
+import PinReference from '../model/pinReference';
 import { fetchJson } from '../util/fetchJson';
 import { IN_PAGE_SCRAPE, type InPageResult } from './inPage';
 
@@ -37,11 +39,34 @@ export async function scrape(pageUrl: string) {
   return Object.assign({}, pin.toJSON(), { type });
 }
 
+function addReferences(pin: Pin, references: FoundReference[]): Pin {
+  references.forEach((r) => pin.addReference(new PinReference(r)));
+  return pin;
+}
+
 /* Twitter */
 
 async function twitterPost(pageUrl: string) {
-  const { medium } = await twitterMedium(pageUrl);
-  return new Pin().addMedium(medium);
+  const { res, medium } = await twitterMedium(pageUrl);
+  const pin = new Pin().addMedium(medium);
+  return addReferences(pin, await findReferences(pageUrl, tweetText(res.html), 'tweet'));
+}
+
+// The tweet as plain text, its links written out so they can be followed.
+export function tweetText(html: string | undefined) {
+  return (html || '')
+    .replace(/<script[\s\S]*?<\/script>/gi, '')
+    .replace(/<a [^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi, '$2 ($1)')
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&mdash;/g, '—')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#0?39;/g, "'")
+    .replace(/[ \t]+/g, ' ')
+    .trim();
 }
 
 async function twitterMedium(pageUrl: string) {
@@ -67,7 +92,17 @@ async function youtubePost(pageUrl: string) {
   const pin = new Pin();
   pin.title = _.get(res, 'items[0].snippet.title');
   pin.description = _.get(res, 'items[0].snippet.description');
-  return pin.addMedium(medium);
+  pin.addMedium(medium);
+  // Descriptions often credit their sources or link the full story.
+  const { channelTitle, publishedAt } = _.get(res, 'items[0].snippet', {});
+  const text = [
+    `Title: ${pin.title || ''}`,
+    `Channel: ${channelTitle || ''}`,
+    `Published: ${publishedAt || ''}`,
+    '',
+    `Description:\n${pin.description || ''}`,
+  ].join('\n');
+  return addReferences(pin, await findReferences(pageUrl, text, 'YouTube video'));
 }
 
 async function youtubeMedium(pageUrl: string) {
@@ -163,8 +198,10 @@ async function webScrape(pageUrl: string) {
     await browser.close();
   }
 
-  // After the browser is gone, so the page is not held open for the call.
-  return applyExtracted(pin, await extractPinFields(pageUrl, pageText));
+  // After the browser is gone, so the page is not held open for the calls.
+  const [fields, references] = await Promise.all([extractPinFields(pageUrl, pageText), findReferences(pageUrl, pageText)]);
+  references.forEach((r) => pin.addReference(new PinReference(r)));
+  return applyExtracted(pin, fields);
 }
 
 // Embedly wraps the real player URL in its src query parameter.

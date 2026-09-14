@@ -3,6 +3,7 @@ import { getUser, isAdmin, requireUser } from '@/server/auth';
 import { emitPinEvent } from '@/server/events';
 import { HttpError, intParam, json, noContent, readJson, route } from '@/server/http';
 import Pin from '@/server/model/pin';
+import PinReference from '@/server/model/pinReference';
 import type User from '@/server/model/user';
 import { invalidatePin } from '@/server/services/cache';
 
@@ -37,6 +38,10 @@ const update = route(async (request: NextRequest, ctx: Ctx) => {
   const { user, existing } = await loadModifiable(request, ctx);
 
   const pin = new Pin(await readJson(request));
+  const referenceProblem = PinReference.problem(pin.references);
+  if (referenceProblem) {
+    throw new HttpError(400, referenceProblem);
+  }
   pin.id = existing.id;
   // Keep whoever posted it as the author; an edit is not a transfer of
   // ownership, and an update writes userId on every save.

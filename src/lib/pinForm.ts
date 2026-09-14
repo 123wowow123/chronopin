@@ -2,7 +2,7 @@
 // whole UTC days (start 00:00Z of the first day, end 00:00Z of the day after
 // the last, exclusive); the form works in the viewer's local calendar.
 
-import type { MediumJson, MerchantJson, PinJson } from './types';
+import type { MediumJson, MerchantJson, PinJson, PinReferenceJson } from './types';
 
 export type PinFormValues = {
   id?: number;
@@ -32,9 +32,17 @@ export type PinFormValues = {
   dateConfidence: string;
   dateConfidenceReasoning: string;
   merchants: MerchantJson[];
+  references: ReferenceFormValues[];
   media: MediumJson[];
   selectedMedia?: MediumJson;
   useMedia: boolean;
+};
+
+// A reference row as typed: confidence stays a string until it is sent.
+export type ReferenceFormValues = Omit<PinReferenceJson, 'confidence' | 'title' | 'publishedDate'> & {
+  title: string;
+  confidence: string;
+  publishedDate: string;
 };
 
 export const EMPTY_FORM: PinFormValues = {
@@ -59,6 +67,7 @@ export const EMPTY_FORM: PinFormValues = {
   dateConfidence: '',
   dateConfidenceReasoning: '',
   merchants: [],
+  references: [],
   media: [],
   useMedia: true,
 };
@@ -114,6 +123,13 @@ export function formToDates(values: Pick<PinFormValues, 'allDay' | 'startDate' |
 
 const str = (v: unknown) => (v == null ? '' : String(v));
 
+const referenceToForm = (r: PinReferenceJson): ReferenceFormValues => ({
+  ...r,
+  title: str(r.title),
+  confidence: str(r.confidence),
+  publishedDate: str(r.publishedDate),
+});
+
 // Every field of a stored pin, so saving the form never clears one: the
 // update writes every column, and a field the form did not carry is erased.
 export function pinToForm(pin: PinJson): PinFormValues {
@@ -142,6 +158,7 @@ export function pinToForm(pin: PinJson): PinFormValues {
     dateConfidence: str(pin.dateConfidence),
     dateConfidenceReasoning: str(pin.dateConfidenceReasoning),
     merchants: pin.merchants ? pin.merchants.map((m) => ({ ...m })) : [],
+    references: (pin.references || []).map(referenceToForm),
     media: pin.media || [],
     selectedMedia: pin.media?.[0],
     useMedia: true,
@@ -179,6 +196,13 @@ export function applyScrape(values: PinFormValues, scraped: Partial<PinJson>): P
   }
   if (!next.merchants.length && scraped.merchants?.length) {
     next.merchants = scraped.merchants.map((m) => ({ ...m }));
+  }
+  // References add to the list rather than fill it: a re-scrape can bring in
+  // new ones next to those already typed, skipping any link already there.
+  const listed = new Set(next.references.map((r) => r.url.trim()).filter(Boolean));
+  const found = (scraped.references || []).filter((r) => r.url && r.url !== next.sourceUrl.trim() && !listed.has(r.url));
+  if (found.length) {
+    next.references = [...next.references.filter((r) => r.url.trim() || r.title.trim() || r.confidence.trim()), ...found.map(referenceToForm)];
   }
   if (!next.startDate && scraped.utcStartDateTime) {
     Object.assign(next, datesToForm({ utcStartDateTime: scraped.utcStartDateTime, utcEndDateTime: scraped.utcEndDateTime, allDay: scraped.allDay }), {
@@ -224,6 +248,18 @@ export function formToPin(values: PinFormValues) {
     merchants: values.merchants
       .filter((m) => m.url || m.label)
       .map((m) => ({ id: m.id, label: m.label, url: m.url, price: m.price == null || (m.price as unknown) === '' ? undefined : Number(m.price) })),
+    references: values.references
+      .filter((r) => r.url.trim() && num(r.confidence) !== undefined)
+      .map(
+        (r): PinReferenceJson => ({
+          id: r.id,
+          url: r.url.trim(),
+          title: r.title.trim() || undefined,
+          confidence: Math.min(100, Math.max(0, Math.round(num(r.confidence)!))),
+          publishedDate: r.publishedDate || undefined,
+          utcCreatedDateTime: r.utcCreatedDateTime,
+        }),
+      ),
     media: values.useMedia && values.selectedMedia ? [values.selectedMedia] : [],
   };
 }

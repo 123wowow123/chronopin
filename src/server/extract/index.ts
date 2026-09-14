@@ -16,7 +16,7 @@ import { CATEGORIES } from '@/lib/categories';
 import log from '../util/log';
 import { SYSTEM_PROMPT } from './systemPrompt';
 
-const MODEL = 'claude-opus-5';
+export const MODEL = 'claude-opus-5';
 
 // Wikipedia articles run long and the tail is references and navigation.
 // The lede plus infobox plus body comfortably fits, and capping keeps a
@@ -161,7 +161,7 @@ const SCHEMA = {
 
 let client: Anthropic | null = null;
 
-function getClient(): Anthropic | null {
+export function getClient(): Anthropic | null {
   const apiKey = config.anthropic.apiKey;
   if (!apiKey || apiKey === 'REPLACE_WITH_ANTHROPIC_API_KEY') {
     return null;
@@ -172,7 +172,7 @@ function getClient(): Anthropic | null {
   return client;
 }
 
-function describeError(err: unknown): string {
+export function describeError(err: unknown): string {
   if (err instanceof Anthropic.AuthenticationError) return 'anthropic auth rejected - check ANTHROPIC_API_KEY';
   if (err instanceof Anthropic.RateLimitError) return 'anthropic rate limited';
   if (err instanceof Anthropic.BadRequestError) return `anthropic rejected the request: ${err.message}`;

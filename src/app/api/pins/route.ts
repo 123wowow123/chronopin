@@ -1,8 +1,9 @@
 import type { NextRequest } from 'next/server';
 import { getUser, requireUser } from '@/server/auth';
 import { emitPinEvent } from '@/server/events';
-import { json, paginationHeaders, paginationLink, readJson, route } from '@/server/http';
+import { HttpError, json, paginationHeaders, paginationLink, readJson, route } from '@/server/http';
 import Pin from '@/server/model/pin';
+import PinReference from '@/server/model/pinReference';
 import { invalidatePin } from '@/server/services/cache';
 import { getPins } from '@/server/services/timeline';
 import { linkParams, resolveCreatedSince } from '@/server/util/createdFilter';
@@ -34,6 +35,10 @@ export const POST = route(async (request: NextRequest) => {
   const user = await requireUser(request);
   const pin = new Pin(await readJson(request));
   pin.setUser(user);
+  const referenceProblem = PinReference.problem(pin.references);
+  if (referenceProblem) {
+    throw new HttpError(400, referenceProblem);
+  }
 
   const { pin: saved } = await pin.save();
   emitPinEvent('save', saved, { userId: user.id });

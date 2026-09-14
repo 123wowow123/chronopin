@@ -1,4 +1,8 @@
+import type { ReactNode } from 'react';
+
 // How firmly the source states a pin's date, as a coloured badge.
+// reasoningContent, when given, is shown in place of the plain reasoning (the
+// same text with citations).
 
 const LEVELS: Record<string, { label: string; title: string; className: string }> = {
   delayed: { label: 'DELAYED', title: 'The date has moved', className: 'bg-red-500/15 text-red-300 ring-red-500/30' },
@@ -12,10 +16,12 @@ export function DateConfidence({
   level,
   reasoning,
   showReasoning,
+  reasoningContent,
 }: {
   level?: string | null;
   reasoning?: string | null;
   showReasoning?: boolean;
+  reasoningContent?: ReactNode;
 }) {
   const meta = LEVELS[(level || '').toLowerCase()];
   if (!meta) {
@@ -29,7 +35,7 @@ export function DateConfidence({
       >
         {meta.label}
       </span>
-      {showReasoning && reasoning ? <span className="basis-full text-xs leading-relaxed text-subtle italic">{reasoning}</span> : null}
+      {showReasoning && reasoning ? <span className="basis-full text-xs leading-relaxed text-subtle italic">{reasoningContent ?? reasoning}</span> : null}
     </>
   );
 }

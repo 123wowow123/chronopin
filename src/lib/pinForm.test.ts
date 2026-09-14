@@ -25,6 +25,7 @@ const stored: PinJson = {
     { id: 1, label: 'Amazon', url: 'https://www.amazon.com/x' },
     { id: 2, label: 'Best Buy', url: 'https://www.bestbuy.com/y', price: 1299 },
   ],
+  references: [{ id: 4, url: 'https://example.com/ref', title: 'Press release', confidence: 80, publishedDate: '2026-09-01', utcCreatedDateTime: '2026-09-02T10:00:00.000Z' }],
   media: [{ id: 3, type: 1, thumbName: 't.jpg', originalUrl: 'https://example.com/i.jpg' }],
 };
 
@@ -55,6 +56,19 @@ describe('pin form round trip', () => {
       { id: 2, label: 'Best Buy', url: 'https://www.bestbuy.com/y', price: 1299 },
     ]);
     expect(body.media).toEqual(stored.media);
+    expect(body.references).toEqual(stored.references);
+  });
+
+  it('drops reference rows without a link or a confidence and clamps confidence', () => {
+    const form = {
+      ...pinToForm(stored),
+      references: [
+        { url: '', title: 'no link', confidence: '50', publishedDate: '' },
+        { url: 'https://a.com', title: '', confidence: '', publishedDate: '' },
+        { url: ' https://b.com ', title: '', confidence: '140', publishedDate: '' },
+      ],
+    };
+    expect(formToPin(form).references).toEqual([{ id: undefined, url: 'https://b.com', title: undefined, confidence: 100, publishedDate: undefined, utcCreatedDateTime: undefined }]);
   });
 
   it('drops the wiki link when the company is renamed', () => {
@@ -77,5 +91,28 @@ describe('pin form round trip', () => {
     expect(next.companyWikiUrl).toBe('w');
     expect(next.category).toBe('Energy');
     expect(next.merchants).toHaveLength(1);
+  });
+
+  it('adds scraped references after those already listed, skipping repeats and the source', () => {
+    const typed = {
+      ...EMPTY_FORM,
+      sourceUrl: 'https://src.example/a',
+      references: [
+        { url: 'https://kept.example/1', title: 'Mine', confidence: '60', publishedDate: '' },
+        { url: '', title: '', confidence: '', publishedDate: '' },
+      ],
+    };
+    const next = applyScrape(typed, {
+      references: [
+        { url: 'https://kept.example/1', title: 'Dupe', confidence: 95 },
+        { url: 'https://src.example/a', confidence: 90 },
+        { url: 'https://new.example/2', title: 'New', confidence: 85, publishedDate: '2026-09-01' },
+      ],
+    });
+    expect(next.references).toEqual([
+      { url: 'https://kept.example/1', title: 'Mine', confidence: '60', publishedDate: '' },
+      { url: 'https://new.example/2', title: 'New', confidence: '85', publishedDate: '2026-09-01' },
+    ]);
+    expect(applyScrape(typed, {}).references).toBe(typed.references);
   });
 });

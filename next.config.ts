@@ -4,6 +4,8 @@ const nextConfig: NextConfig = {
   output: 'standalone',
   reactCompiler: true,
   cacheComponents: true,
+  // Hide the "N" dev-tools badge; compile and runtime errors still show.
+  devIndicators: false,
 
   // Native or heavyweight server dependencies stay as plain Node requires
   // instead of being bundled.

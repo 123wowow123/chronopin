@@ -5,10 +5,13 @@ import { Suspense } from 'react';
 import { JsonLd } from '@/components/JsonLd';
 import { Comments } from '@/components/pin/Comments';
 import { CountdownMeter } from '@/components/pin/CountdownMeter';
+import { CitedText } from '@/components/pin/CitedText';
 import { DateConfidence } from '@/components/pin/DateConfidence';
 import { FollowButton } from '@/components/pin/FollowButton';
 import { PinAdminLink } from '@/components/pin/PinAdminLink';
 import { PinCard } from '@/components/pin/PinCard';
+import { PinConfidence } from '@/components/pin/PinConfidence';
+import { PinReferences } from '@/components/pin/PinReferences';
 import { PinMapLoader } from '@/components/pin/PinMapLoader';
 import { PinMediaFrame } from '@/components/pin/PinMedia';
 import { PinWeather } from '@/components/pin/PinWeather';
@@ -18,6 +21,7 @@ import { Icon } from '@/components/ui/Icon';
 import { PostedTime, StartTime } from '@/components/ui/LocalTime';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { money } from '@/lib/format';
+import { pinEvidence } from '@/lib/referenceConfidence';
 import { safeHtml, toCardPins } from '@/lib/sanitize';
 import { pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
 import type { PinJson } from '@/lib/types';
@@ -178,7 +182,13 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
       {pin.utcStartDateTime ? (
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
           <StartTime pin={pin} serverTimeZone={timeZone} allDaySuffix />
-          <DateConfidence level={pin.dateConfidence} reasoning={pin.dateConfidenceReasoning} showReasoning />
+          <PinConfidence evidence={pinEvidence(pin)} />
+          <DateConfidence
+            level={pin.dateConfidence}
+            reasoning={pin.dateConfidenceReasoning}
+            showReasoning
+            reasoningContent={pin.dateConfidenceReasoning ? <CitedText text={pin.dateConfidenceReasoning} evidence={pinEvidence(pin)} /> : undefined}
+          />
         </div>
       ) : null}
 
@@ -190,7 +200,7 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
             <a href={pin.sourceUrl} target="_blank" rel="noopener" className="text-ink transition-colors hover:text-link hover:no-underline">
               {pin.title}
             </a>
-            <a href={pin.sourceUrl} target="_blank" rel="noopener" aria-label="Open the source" className="mt-2 shrink-0 text-subtle hover:text-link">
+            <a href={pin.sourceUrl} target="_blank" rel="noopener" aria-label="Open the source" className="flex h-[1lh] shrink-0 items-center text-subtle hover:text-link">
               <Icon name="external" className="size-4" />
             </a>
           </>
@@ -201,6 +211,8 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
 
       {pin.description ? <div className="rich-text mb-3 text-base leading-relaxed font-medium text-ink" dangerouslySetInnerHTML={{ __html: safeHtml(pin.description) }} /> : null}
       {pin.longFormSummary ? <div className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: safeHtml(pin.longFormSummary) }} /> : null}
+
+      <PinReferences pinId={pin.id} authorId={pin.user?.id ?? pin.userId} evidence={pinEvidence(pin)} timeZone={timeZone} />
 
       {pin.user?.id && pin.user.userName ? (
         <div className="surface mt-6 flex flex-wrap items-center justify-between gap-3 px-4 py-3">

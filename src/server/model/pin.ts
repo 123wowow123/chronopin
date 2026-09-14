@@ -3,6 +3,7 @@ import type { Row } from '../db';
 import BasePin, { BasePinProp } from './basePin';
 import Company from './company';
 import Merchant from './merchant';
+import PinReference from './pinReference';
 import type User from './user';
 import { createPin, locationSql, mapSubObjectFromQuery, normalizeAllDayDates } from './pinShared';
 
@@ -25,6 +26,9 @@ export default class Pin extends BasePin {
       for (const m of this.merchants) {
         await m.save();
       }
+      for (const r of this.references) {
+        await r.save();
+      }
       await mediaSaved;
       return { pin: this };
     } catch (err) {
@@ -40,6 +44,7 @@ export default class Pin extends BasePin {
     const beforePinMedia = res.pin?.media ?? [];
     const newPinMedia = this.media;
     const newPinMerchants = this.merchants;
+    const newPinReferences = this.references;
 
     const toSaveOriginalMedia = difference(newPinMedia, beforePinMedia, 'originalUrl');
     const toDeleteOriginalMedia = difference(beforePinMedia, newPinMedia, 'originalUrl');
@@ -51,12 +56,19 @@ export default class Pin extends BasePin {
       }
     });
 
+    // References too; each keeps the utcCreatedDateTime it came with.
+    const allReferencePromise = PinReference.deleteByPinId(this.id).then(async () => {
+      for (const r of newPinReferences) {
+        await r.save();
+      }
+    });
+
     const toSaveMediaPromise = Promise.all(toSaveOriginalMedia.map((medium) => medium.createAndSaveToCDN()));
 
     // Removes the link and row; the file stays on the CDN.
     const toDeleteMediaPromise = Promise.all(toDeleteOriginalMedia.map((medium) => medium.deleteFromPin()));
 
-    await Promise.all([toSaveMediaPromise, toDeleteMediaPromise, allMerchantPromise]);
+    await Promise.all([toSaveMediaPromise, toDeleteMediaPromise, allMerchantPromise, allReferencePromise]);
     await Company.applyToPin(this);
     return updatePinRow(this, this.userId);
   }

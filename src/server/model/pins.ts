@@ -142,6 +142,7 @@ const PAGE_COLUMNS = `
   "Pin"."favoriteCount",
   "Pin"."likeCount",
   "Pin"."rootThread",
+  "Pin"."references",
   EXISTS (SELECT 1 FROM "Favorite" AS "f"
           WHERE "f"."userId" = $1 AND "f"."pinId" = "Pin"."id" AND "f"."utcDeletedDateTime" IS NULL) AS "hasFavorite",
   EXISTS (SELECT 1 FROM "Like" AS "l"
