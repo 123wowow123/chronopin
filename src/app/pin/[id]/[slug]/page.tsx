@@ -212,8 +212,6 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
       {pin.description ? <div className="rich-text mb-3 text-base leading-relaxed font-medium text-ink" dangerouslySetInnerHTML={{ __html: safeHtml(pin.description) }} /> : null}
       {pin.longFormSummary ? <div className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: safeHtml(pin.longFormSummary) }} /> : null}
 
-      <PinReferences pinId={pin.id} authorId={pin.user?.id ?? pin.userId} evidence={pinEvidence(pin)} timeZone={timeZone} />
-
       {pin.user?.id && pin.user.userName ? (
         <div className="surface mt-6 flex flex-wrap items-center justify-between gap-3 px-4 py-3">
           <RefineLink field="user" value={pin.user.userName} className="flex items-center gap-2 font-semibold text-ink hover:no-underline">
@@ -260,6 +258,8 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
             ))}
         </div>
       ) : null}
+
+      <PinReferences pinId={pin.id} authorId={pin.user?.id ?? pin.userId} evidence={pinEvidence(pin)} timeZone={timeZone} />
     </>
   );
 }
