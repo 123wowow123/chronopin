@@ -11,6 +11,7 @@ import * as db from '@/server/db';
 import { Comment, Company, DateTime, Follow, FullPins, MediumType, User, Users } from '@/server/model';
 import { fetchJson } from '@/server/util/fetchJson';
 import log from '@/server/util/log';
+import { excludeE2e } from './excludeE2e';
 
 const { values: flags } = parseArgs({
   options: {
@@ -41,22 +42,34 @@ const readJson = (file: string) => JSON.parse(readFileSync(file, 'utf8'));
 const writeJson = (file: string, data: unknown) => writeFileSync(file, JSON.stringify(data, null, 2));
 
 async function saveDB() {
-  console.log('Backup Companies');
-  writeJson(flags.companyfile, await Company.getAll());
-
-  console.log('Backup Pins');
   // No limit: back up every pin, soft-deleted ones included.
   const { pins } = await FullPins.queryForwardByDate(new Date(0), 0, 2147483647);
-  writeJson(flags.pinfile, pins);
+  const data = excludeE2e({
+    users: await Users.getAll(BACKUP_USER_PROPS),
+    pins,
+    companies: await Company.getAll(),
+    comments: await Comment.getAll(),
+    follows: (await Follow.getAll()).follows,
+  });
+  const { dropped } = data;
+  if (dropped.users) {
+    console.log(`Left out e2e test data: ${dropped.users} user(s), ${dropped.pins} pin(s), ${dropped.companies} company(ies)`);
+  }
+
+  console.log('Backup Companies');
+  writeJson(flags.companyfile, data.companies);
+
+  console.log('Backup Pins');
+  writeJson(flags.pinfile, data.pins);
 
   console.log('Backup Users');
-  writeJson(flags.userfile, await Users.getAll(BACKUP_USER_PROPS));
+  writeJson(flags.userfile, data.users);
 
   console.log('Backup Comments');
-  writeJson(flags.commentfile, await Comment.getAll());
+  writeJson(flags.commentfile, data.comments);
 
   console.log('Backup Follows');
-  writeJson(flags.followfile, (await Follow.getAll()).follows);
+  writeJson(flags.followfile, data.follows);
 
   console.log('Data Backup Complete');
 }
