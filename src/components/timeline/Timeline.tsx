@@ -4,6 +4,7 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } fr
 import { api, parseLinkHeader } from '@/lib/client/api';
 import { useNow } from '@/lib/client/now';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
+import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { dayKeyIn } from '@/lib/format';
 import { formatSpan, SPAN_OPTIONS } from '@/lib/postedSpan';
@@ -99,6 +100,8 @@ export function Timeline({
       scrolledToToday.current = true;
     }
   }, [bags, scrollToToday]);
+  // After the effect above, so the position it records on mount is today's.
+  useManualScrollRestoration();
 
   // Keep the view still when a page is added above it.
   useLayoutEffect(() => {

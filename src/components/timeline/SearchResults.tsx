@@ -2,18 +2,20 @@
 
 import { useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { FollowButton } from '@/components/pin/FollowButton';
-import { PinCard } from '@/components/pin/PinCard';
 import { UserAvatar } from '@/components/ui/UserAvatar';
+import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { dayKeyIn } from '@/lib/format';
 import { formatSpan, offsetDate, SPAN_OPTIONS } from '@/lib/postedSpan';
-import { buildBags, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
+import { type Bag, buildBags, pinDayKey, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { CardPin } from '@/lib/types';
 import { FloatingControls } from './FloatingControls';
 import { TimeBlock, TodayMarker } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
 
 type SortBy = 'date' | 'relevance';
+
+const rail = "relative lg:before:absolute lg:before:top-0 lg:before:bottom-0 lg:before:left-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']";
 
 function SortToggle({ value, onChange, className = '' }: { value: SortBy; onChange: (value: SortBy) => void; className?: string }) {
   return (
@@ -70,7 +72,19 @@ export function SearchResults({
   const todayKey = dayKeyIn(serverNow, timeZone);
   const bags = useMemo(() => buildBags(visible, [], timeZone), [visible, timeZone]);
   const marker = resolveTodayMarker(bags, todayKey);
-  const ranked = useMemo(() => [...visible].sort((a, b) => (b.searchScore ?? 0) - (a.searchScore ?? 0)), [visible]);
+  // By relevance, pins keep their timeline look but not its order: a day's
+  // block holds a run of neighbouring results, so one day can appear again.
+  const rankedBags = useMemo(() => {
+    const ranked = [...visible].sort((a, b) => (b.searchScore ?? 0) - (a.searchScore ?? 0));
+    const runs: Bag[] = [];
+    for (const pin of ranked) {
+      const day = pinDayKey(pin, timeZone);
+      const last = runs.at(-1);
+      if (last?.day === day) last.pins.push(pin);
+      else runs.push({ day, pins: [pin], dateTimes: [] });
+    }
+    return runs;
+  }, [visible, timeZone]);
 
   const scrollToToday = () => {
     const id = todayScrollId(bags, marker);
@@ -84,6 +98,8 @@ export function SearchResults({
     const id = todayScrollId(bags, marker);
     if (id) document.getElementById(id)?.scrollIntoView({ block: 'start' });
   }, [bags, marker, sortBy]);
+  // After the effect above, so the position it records on mount is today's.
+  useManualScrollRestoration();
 
   const phrase = (formatSpan(postedWithin) || '').replace(/^1 /, '');
 
@@ -128,15 +144,20 @@ export function SearchResults({
       ) : null}
 
       {sortBy === 'relevance' ? (
-        <ul className="mt-4 gap-2.5 sm:columns-2 lg:ml-[170px] lg:max-w-[906px]">
-          {ranked.map((pin) => (
-            <li key={pin.id} className="mb-2.5 break-inside-avoid">
-              <PinCard pin={pin} serverTimeZone={serverTimeZone} />
-            </li>
+        <div className={rail}>
+          {rankedBags.map((bag) => (
+            <TimeBlock
+              key={bag.pins[0].id}
+              id={`rank-${bag.pins[0].id}`}
+              bag={bag}
+              todayKey={todayKey}
+              specialtyDays={specialtyDays[bag.day.slice(5)] || []}
+              serverTimeZone={serverTimeZone}
+            />
           ))}
-        </ul>
+        </div>
       ) : (
-        <div className="relative lg:before:absolute lg:before:top-0 lg:before:bottom-0 lg:before:left-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']">
+        <div className={rail}>
           {bags.map((bag, index) => (
             <div key={bag.day}>
               {marker.index === index ? <TodayMarker specialtyDays={specialtyDays[todayKey.slice(5)] || []} /> : null}

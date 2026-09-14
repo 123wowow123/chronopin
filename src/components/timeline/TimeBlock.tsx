@@ -25,12 +25,15 @@ function Tag({ variant, children, title, className = '' }: { variant: TagVariant
 // One calendar day on the timeline: its tags (date, countdown, date markers,
 // specialty day) beside or above its cards.
 export function TimeBlock({
+  id,
   bag,
   todayKey,
   specialtyDays,
   serverTimeZone,
   firstPinPriority,
 }: {
+  // Defaults to the day's id, which is only unique in date order.
+  id?: string;
   bag: Bag;
   todayKey: string;
   specialtyDays: string[];
@@ -42,7 +45,7 @@ export function TimeBlock({
   const tagsHeight = 26 + 42 * (2 + bag.dateTimes.length + (specialtyDays.length ? 1 : 0));
 
   return (
-    <section id={`day-${bag.day}`} aria-label={formatDayKey(bag.day)} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:pt-0">
+    <section id={id ?? `day-${bag.day}`} aria-label={formatDayKey(bag.day)} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:pt-0">
       <div
         className={`rail-marker absolute top-6 left-[140px] z-10 -ml-4 hidden size-8 items-center justify-center rounded-full text-base leading-none lg:flex ${isToday ? 'rail-marker-today' : ''}`}
         title={`${planet.planet}\n${planet.weekday}`}

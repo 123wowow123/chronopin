@@ -159,8 +159,11 @@ export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serve
           ) : null}
         </div>
         <div className="flex items-center justify-end gap-1">
+          {/* The session loads after the timeline has scrolled to today, so
+              this must not change the footer's height (inline-flex, 28px like
+              the watch button) or every card above today would push it down. */}
           {isAdmin ? (
-            <Link href={`/update/${pin.id}`} className="rounded-md p-1.5 text-subtle hover:bg-raised hover:text-ink" title="Edit pin">
+            <Link href={`/update/${pin.id}`} className="inline-flex rounded-md p-1.5 text-subtle hover:bg-raised hover:text-ink" title="Edit pin">
               <Icon name="pencil" className="size-4" />
             </Link>
           ) : null}
