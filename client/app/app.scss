@@ -171,6 +171,7 @@ button {
 @import 'create/create.scss';
 @import 'data.scss';
 @import 'main/main.scss';
+@import 'map/map.scss';
 @import 'pin/pin.scss';
 @import 'search/search.scss';
 @import 'theme.scss';
@@ -191,10 +192,10 @@ button {
 @import '../components/pin-map/pin-map.scss';
 @import '../components/pin-parallax/pin-parallax.scss';
 @import '../components/pin-tilt/pin-tilt.scss';
-@import '../components/posted-filter/posted-filter.scss';
 @import '../components/scroll/scroll/scroll.scss';
 @import '../components/text-editor/text-editor/text-editor.scss';
 @import '../components/thread/thread/thread.scss';
 @import '../components/time-block/time-block.scss';
+@import '../components/time-range-slider/time-range-slider.scss';
 @import '../components/today-marker/today-marker.scss';
 /* endinject */

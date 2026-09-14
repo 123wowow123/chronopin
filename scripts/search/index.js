@@ -8,11 +8,14 @@ const args = require('args');
 const map = require('./map');
 const seed = require('./seed');
 const remove = require('./remove');
+const { SearchPin } = require('../../server/model');
+const log = require('../../server/util/log');
 
 args
     //.option('save', 'Save search into JSON', false)
     .option('map', 'Map search from JSON', false)
     .option('seed', 'Seed search from JSON', false)
+    .option('reset', 'Empty the FAISS search index', false)
     .option('delete', 'Delete "pins" search index', false)
     .option('index', 'Delete search index')
     .option('pinMapFilePath', 'Pin file path to be used for opporation', './scripts/backup/pin-map.json')
@@ -56,6 +59,14 @@ function execute(opt) {
     //   } else 
 
     let promise = Promise.resolve('begin search opperation');
+
+    if (opt.reset) {
+        promise = promise
+            .then(t => {
+                return SearchPin.resetIndex()
+                    .then(res => log.success('FAISS index reset', JSON.stringify(res)));
+            });
+    }
 
     if (opt.map) {
         promise = promise

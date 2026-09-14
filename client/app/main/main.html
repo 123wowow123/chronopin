@@ -5,8 +5,9 @@
        a filter in the normal flow would never be seen. Staying put also keeps
        it clickable over the fixed page_message overlay. -->
   <div class="main__filter">
-    <posted-filter within="$ctrl.postedWithin" default-span="$ctrl.defaultFilterSpanPreference"
-      on-change="$ctrl.setPostedWithin(within, label)"></posted-filter>
+    <time-range-slider past-only="true" past-span="$ctrl.postedWithin" steps="$ctrl.sliderSteps"
+      past-label-span="$ctrl.defaultSpan"
+      on-change="$ctrl.setPostedWithin(past, pastLabel)"></time-range-slider>
   </div>
 
   <div class="container-fluid main__timeline">

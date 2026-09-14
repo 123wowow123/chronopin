@@ -31,6 +31,11 @@
   // A bare number is read as days, the unit the default is written in.
   const BARE_NUMBER_UNIT = 'd';
 
+  // Rough day-equivalents for each unit, used only to compare two spans'
+  // relative size (e.g. the time-range-slider snapping a typed "10 days" to
+  // its nearest preset tick) - not for anything that has to be exact.
+  const UNIT_DAYS = { m: 1 / 1440, h: 1 / 24, d: 1, w: 7, mo: 30.437, y: 365.25 };
+
   function _findUnit(value) {
     return UNITS.find(unit => unit.value === value);
   }
@@ -61,7 +66,9 @@
     // Whatever someone types to wire form, or null if it is not a span.
     // Deliberately loose about the unit word: "10d", "10 days" and "10 Days"
     // are the same request, and a bare "10" means days.
-    function parseTyped(text) {
+    // allowZero is for callers where "0" means "nothing in this direction"
+    // (the map's past/future window); the API's created_within refuses it.
+    function parseTyped(text, allowZero) {
       const match = /^\s*(\d+(?:\.\d+)?)\s*([a-z]*)\s*$/i.exec(text || '');
       if (!match) {
         return null;
@@ -69,7 +76,7 @@
       // The pattern only matches digits, so this is never NaN - zero is the
       // only value left to reject.
       const count = parseFloat(match[1]);
-      if (count <= 0) {
+      if (count < 0 || (count === 0 && !allowZero)) {
         return null;
       }
       const word = match[2].toLowerCase();
@@ -93,6 +100,28 @@
       return !!format(within);
     }
 
+    // fromDate shifted by a span, backward when signum is negative and
+    // forward otherwise - the map's past/future filters use this to turn
+    // "3y" into an actual boundary date either side of now. Calendar units
+    // (months, years) go through moment's add/subtract rather than a fixed
+    // millisecond count, so "1y" lands on the same day next/last year
+    // instead of always meaning exactly 365 days.
+    function offsetDate(fromDate, within, signum) {
+      const parsed = _parseSpan(within);
+      if (!parsed) {
+        return null;
+      }
+      const amount = parsed.count * (signum < 0 ? -1 : 1);
+      return moment(fromDate).add(amount, parsed.unit.label).toDate();
+    }
+
+    // A rough day-equivalent magnitude for comparing two spans' relative
+    // size. Null when within does not parse.
+    function approxDays(within) {
+      const parsed = _parseSpan(within);
+      return parsed ? parsed.count * UNIT_DAYS[parsed.unit.value] : null;
+    }
+
     return {
       DEFAULT_SPAN: DEFAULT_SPAN,
       options: () => SPAN_OPTIONS.map(within => ({
@@ -101,7 +130,9 @@
       })),
       format: format,
       parseTyped: parseTyped,
-      isSpan: isSpan
+      isSpan: isSpan,
+      offsetDate: offsetDate,
+      approxDays: approxDays
     };
   }
 

@@ -216,6 +216,12 @@
             <div class="text-danger usercomments__error" ng-if="$ctrl.commentError">{{$ctrl.commentError}}</div>
             <button type="submit" class="btn btn-primary usercomments__submit">Post</button>
           </form>
+
+          <p class="usercomments__login" ng-if="!$ctrl.Auth.isLoggedIn()">
+            <a ui-sref="login({redirect: '/pin/' + $ctrl.pin.id})">Log in</a>
+            <span ng-if="!$ctrl.pin.comments.length">to post the first comment on this pin</span>
+            <span ng-if="$ctrl.pin.comments.length">to add a comment</span>
+          </p>
         </div>
       </div>
       <div class="pin__right_pannel_wide_ads">

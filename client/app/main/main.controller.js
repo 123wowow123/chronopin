@@ -3,10 +3,6 @@
 
 (function () {
 
-  // Element id of the TODAY marker row, so page load and the Today button can
-  // scroll it to the top of the page.
-  const TODAY_MARKER_ID = 'today-marker';
-
   // Height of the fixed navbar, matching ScrollUtil's own offset.
   const NAV_OFFSET = 52;
 
@@ -14,15 +10,9 @@
   // cover the deferred re-flow that crossing a breakpoint triggers.
   const RESIZE_HOLD_MS = 700;
 
-  // The marker row renders a moment after scrolling unblocks. Waiting for it
-  // keeps this scroll and the one on window.load aimed at the same element -
-  // aiming at different ones makes the page visibly jump seconds after load.
-  const MARKER_WAIT_TRIES = 8;
-  const MARKER_WAIT_MS = 150;
-
   class MainController {
 
-    constructor($transitions, $scope, $stateParams, pinWebService, dateTimeWebService, mainWebService, linkHeaderParser, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, $log, $timeout) {
+    constructor($transitions, $scope, $stateParams, pinWebService, dateTimeWebService, mainWebService, linkHeaderParser, ScrollUtil, Util, mainUtilService, pinApp, Auth, appConfig, postedSpan, $log, $timeout) {
 
       // constants
       const omitLinkHeaderProp = ['rel', 'url'];
@@ -47,6 +37,7 @@
       this.ScrollUtil = ScrollUtil;
       this.Util = Util;
       this.linkHeaderParser = linkHeaderParser;
+      this.postedSpan = postedSpan;
 
       // model service
       this.pinApp = pinApp;
@@ -72,12 +63,12 @@
       // whole timeline.
       this.postedWithin = null;
       this.postedWithinLabel = null;
+      this.sliderSteps = postedSpan.options().map(option => option.within);
 
-      // The span the filter's combo should start on, saved per person. Read
-      // here and handed down, so the filter itself stays clear of the user
-      // service. Null until the signed-in user is known, and for a visitor who
-      // is not signed in at all.
-      this.defaultFilterSpanPreference = null;
+      // What clicking the slider's "Posted within" label applies: the span
+      // saved in Preferences, or the same 1-day fallback that page names as
+      // "No preference". Replaced once the signed-in user is known.
+      this.defaultSpan = postedSpan.DEFAULT_SPAN;
 
       // Bumped whenever the filter changes, so a page request already in
       // flight against the previous window is dropped rather than merged into
@@ -109,9 +100,21 @@
 
       this._registerBrandReset();
 
+      // The slider always applies whatever it shows - unlike the old
+      // posted-filter combo, it has no "preview but don't apply yet" state -
+      // so a saved preference now takes effect on load rather than just
+      // pre-filling a closed control. Guarded on postedWithin still being
+      // null, so a preference arriving late never overrides a filter change
+      // someone already made while it was in flight.
       this.Auth.getCurrentUser()
         .then(user => {
-          this.defaultFilterSpanPreference = user.defaultFilterSpanPreference || null;
+          const preference = user && user.defaultFilterSpanPreference;
+          if (preference) {
+            this.defaultSpan = preference;
+          }
+          if (preference && !this.postedWithin) {
+            this.setPostedWithin(preference, this.postedSpan.format(preference));
+          }
         });
 
       // this.$transitions.onEnter({ to: 'main' }, (transition) => {
@@ -205,35 +208,8 @@
       return this._resolveTodayMarker().atEnd;
     }
 
-    // Called from ng-repeat, so the result is memoized per bag list rather
-    // than rescanned on every digest.
     _resolveTodayMarker() {
-      const bags = this.bags;
-      const length = bags ? bags.length : 0;
-
-      if (this._todayMarker && this._todayMarker.length === length) {
-        return this._todayMarker;
-      }
-
-      let index = -1;
-      let atEnd = false;
-
-      if (length) {
-        // Bags run oldest first, so the first non-past bag decides it.
-        for (let i = 0; i < length; i++) {
-          const daysUntil = bags[i].getDateSince();
-          if (daysUntil === 0) {
-            break; // a bag is today; time-block highlights it
-          }
-          if (daysUntil > 0) {
-            index = i;
-            break;
-          }
-        }
-        atEnd = index === -1 && bags[length - 1].getDateSince() < 0;
-      }
-
-      this._todayMarker = { length, index, atEnd };
+      this._todayMarker = this.mainUtilService.resolveTodayMarker(this.bags, this._todayMarker);
       return this._todayMarker;
     }
 
@@ -303,44 +279,14 @@
         });
     }
 
-    _scrollAdjust(elId, attempt) {
-      if (!elId) {
-        return Promise.resolve();
-      }
-      return this.scrollToIDAsync(elId)
-        .then(scrolled => {
-          if (scrolled !== false) {
-            return scrolled;
-          }
-          // Not rendered yet. Wait for it rather than aiming somewhere else,
-          // so every scroll to "today" lands in the same place.
-          const tries = attempt || 0;
-          if (elId === TODAY_MARKER_ID && tries < MARKER_WAIT_TRIES) {
-            return this.$timeout(() => this._scrollAdjust(elId, tries + 1), MARKER_WAIT_MS);
-          }
-          // It never appeared; settle for the bag it would sit in front of.
-          const firstBag = this.pinApp.findClosestFutureBagByDateTime(new Date());
-          if (firstBag) {
-            return this.scrollToIDAsync(firstBag.toISODateTimeString());
-          }
-          return scrolled;
-        });
+    _scrollAdjust(elId) {
+      return this.mainUtilService.scrollAdjust(this.scrollToIDAsync, this.pinApp.getBags(), elId);
     }
 
-
+    // Prefer the TODAY marker so "now" lands at the top of the page. When a
+    // bag falls on today there is no marker row, and that bag is the target.
     getHomeScrollId() {
-      // Prefer the TODAY marker so "now" lands at the top of the page. When a
-      // bag falls on today there is no marker row, and that bag is the target.
-      const marker = this._resolveTodayMarker();
-      if (marker.index !== -1 || marker.atEnd) {
-        return TODAY_MARKER_ID;
-      }
-
-      let firstBag = this.pinApp.findClosestFutureBagByDateTime(new Date());
-      if (firstBag) {
-        return firstBag.toISODateTimeString();
-      }
-      return null;
+      return this.mainUtilService.todayScrollId(this.pinApp.getBags(), this._resolveTodayMarker());
     }
 
     _setMainBagsWithPins(data) {

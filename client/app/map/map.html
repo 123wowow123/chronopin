@@ -1,0 +1,47 @@
+<div ng-switch="$ctrl.getStatus()" class="pins-map">
+
+  <!-- Floats over the canvas, same reasoning as main__filter: kept outside
+       the switch and above .page_message's full-viewport overlay so it stays
+       clickable while loading or empty. One slider, both directions - a
+       thumb either side of "Now". -->
+  <div class="pins-map__filter">
+    <time-range-slider past-span="$ctrl.pastSpan" future-span="$ctrl.futureSpan" steps="$ctrl.sliderSteps"
+      on-change="$ctrl.onRangeChange(past, pastLabel, future, futureLabel)"></time-range-slider>
+  </div>
+
+  <!-- Always rendered, even while loading or empty, so $postLink has a
+       canvas to build the Leaflet map against. -->
+  <div class="pins-map__canvas"></div>
+
+  <div class="page_message" ng-switch-when="no pins">
+    <h3 class="text-muted">
+      <!-- One line on purpose: whitespace between the spans would leave a
+           gap before the full stop when both sides are at 0. -->
+      No pins with a location<span ng-if="$ctrl.hasPastWindow()"> in the last {{$ctrl.pastSpanPhrase()}}</span><span ng-if="$ctrl.hasPastWindow() && $ctrl.hasFutureWindow()"> or</span><span ng-if="$ctrl.hasFutureWindow()"> in the next {{$ctrl.futureSpanPhrase()}}</span>.
+    </h3>
+  </div>
+
+  <div class="page_loading" ng-switch-when="loading">
+    <h3 class="text-muted">
+      <loader-pac></loader-pac>
+    </h3>
+  </div>
+
+  <!-- ng-show rather than ng-if: the ui-view has to stay put for the map.pin
+       state to render into it. Clicking the dimmed backdrop closes; clicks
+       inside the panel stop there. -->
+  <div class="pins-map__overlay" ng-show="$ctrl.isPinOpen()" ng-click="$ctrl.closePin()">
+    <div class="pins-map__overlay-panel" ng-click="$event.stopPropagation()" role="dialog" aria-modal="true">
+      <div class="pins-map__overlay-nav">
+        <button type="button" class="pins-map__overlay-back" ng-click="$ctrl.closePin()" aria-label="Back to map"
+          title="Back to map">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M21 12H3.5M10 5l-7 7 7 7" />
+          </svg>
+        </button>
+      </div>
+      <div ui-view="overlay"></div>
+    </div>
+  </div>
+
+</div>

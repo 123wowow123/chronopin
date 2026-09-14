@@ -122,6 +122,11 @@ class NavbarController {
     return this;
   }
 
+  // The nav offers whichever of map/timeline you are not currently on.
+  isOnMap() {
+    return this.$state.includes('map');
+  }
+
   searhFocusToggle(focus) {
     this.searchControlsFocus = focus;
   }

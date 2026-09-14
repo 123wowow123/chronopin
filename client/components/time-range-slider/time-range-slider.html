@@ -1,0 +1,108 @@
+<div class="time-range-slider">
+
+  <!-- Static, at fixed positions either side of the pencil - unlike the old
+       floating tooltip, these never move, so they read at a glance without
+       having to find wherever the thumb currently sits. -->
+  <div class="time-range-slider__header" ng-class="{'\--past-only': $ctrl.pastOnly}">
+    <!-- Clicking a label opens that side all the way (All) - or, for the
+         past label, to past-label-span when the caller sets one. -->
+    <button type="button" class="time-range-slider__label time-range-slider__label--past"
+      ng-click="$ctrl.onPastLabelClick()" title="{{$ctrl.pastLabelTitle()}}">
+      <span class="time-range-slider__label-tag">{{$ctrl.pastOnly ? 'Posted within' : 'Past'}}</span>
+      <span class="time-range-slider__label-value">{{$ctrl.pastLabel()}}</span>
+    </button>
+
+    <!-- A pencil rather than a cog: the panel is for typing exact values,
+         not for settings. -->
+    <button type="button" class="time-range-slider__edit" ng-click="$ctrl.togglePanel()"
+      aria-label="Type exact values" aria-expanded="{{!!$ctrl.panelOpen}}" title="Type exact values">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16v4z" />
+        <path d="M13.5 6.5l4 4" />
+      </svg>
+    </button>
+
+    <button type="button" class="time-range-slider__label time-range-slider__label--future" ng-if="!$ctrl.pastOnly"
+      ng-click="$ctrl.selectPreset('future', null)" title="Show all upcoming pins">
+      <span class="time-range-slider__label-tag">Future</span>
+      <span class="time-range-slider__label-value">{{$ctrl.futureLabel()}}</span>
+    </button>
+  </div>
+
+  <div class="time-range-slider__track">
+
+    <!-- Split at "Now" rather than one fill spanning both thumbs, so past
+         and future read as two differently-coloured halves. In single-sided
+         mode there is only the past half, stretched to fill the track. -->
+    <div class="time-range-slider__fill time-range-slider__fill--past"
+      ng-style="{left: $ctrl.pastFillLeft() + '%', width: ($ctrl.pastFillRight() - $ctrl.pastFillLeft()) + '%'}">
+    </div>
+    <div class="time-range-slider__fill time-range-slider__fill--future" ng-if="!$ctrl.pastOnly"
+      ng-style="{left: '50%', width: ($ctrl.futurePosition() - 50) + '%'}">
+    </div>
+
+    <!-- Dual mode marks "Now" at the centre. Single-sided has no "Now" to
+         mark - it only grows - so it labels its two ends instead: the
+         smallest step on the left, All on the right. -->
+    <div class="time-range-slider__tick time-range-slider__tick--now" ng-if="!$ctrl.pastOnly" style="left: 50%">
+      <button type="button" class="time-range-slider__tick-label time-range-slider__tick-label--button"
+        ng-click="$ctrl.snapToNow()" title="Bring both sides to now">Now</button>
+    </div>
+    <button type="button" class="time-range-slider__tick-label time-range-slider__tick-label--button time-range-slider__tick-label--start"
+      ng-if="$ctrl.pastOnly && $ctrl.steps.length" ng-click="$ctrl.selectPreset('past', $ctrl.steps[0])"
+      title="Show pins posted within {{$ctrl.postedSpan.format($ctrl.steps[0])}}">{{$ctrl.postedSpan.format($ctrl.steps[0])}}</button>
+    <button type="button" class="time-range-slider__tick-label time-range-slider__tick-label--button time-range-slider__tick-label--end" ng-if="$ctrl.pastOnly"
+      ng-click="$ctrl.selectPreset('past', null)" title="Show pins posted at any time">All</button>
+
+    <div class="time-range-slider__thumb time-range-slider__thumb--past" ng-style="{left: $ctrl.pastPosition() + '%'}"
+      tabindex="0" role="slider" aria-label="Show pins back to" aria-valuetext="{{$ctrl.pastLabel()}}"
+      ng-keydown="$ctrl.onKeyDown('past', $event)">
+    </div>
+
+    <div class="time-range-slider__thumb time-range-slider__thumb--future" ng-if="!$ctrl.pastOnly"
+      ng-style="{left: $ctrl.futurePosition() + '%'}" tabindex="0" role="slider" aria-label="Show pins up to"
+      aria-valuetext="{{$ctrl.futureLabel()}}" ng-keydown="$ctrl.onKeyDown('future', $event)">
+    </div>
+
+  </div>
+
+  <!-- The pencil's own panel: typing an exact span applies it exactly, even
+       when that value sits between two of the slider's own ticks - the
+       thumb then shows at whichever tick is closest, just for placement. -->
+  <div class="time-range-slider__panel" ng-if="$ctrl.panelOpen">
+
+    <form class="time-range-slider__panel-row" ng-submit="$ctrl.applyTyped('past')">
+      <span class="time-range-slider__panel-label">{{$ctrl.pastOnly ? 'Posted within' : 'Past'}}</span>
+      <input type="text" class="time-range-slider__panel-input" ng-class="{'\--invalid': $ctrl.pastInvalid}"
+        ng-model="$ctrl.pastText" ng-keydown="$ctrl.onPanelInputKeyDown($event)" placeholder="10 days"
+        autocomplete="off">
+      <button type="submit" class="btn btn-primary time-range-slider__panel-set">Set</button>
+    </form>
+    <!-- Smallest to largest, with All last: it is the far end of that scale,
+         matching where it sits on the track. -->
+    <div class="time-range-slider__panel-options">
+      <button type="button" class="time-range-slider__panel-option" ng-repeat="step in $ctrl.steps"
+        ng-click="$ctrl.selectPreset('past', step)">{{$ctrl.postedSpan.format(step)}}</button>
+      <button type="button" class="time-range-slider__panel-option"
+        ng-click="$ctrl.selectPreset('past', null)">All</button>
+    </div>
+
+    <div ng-if="!$ctrl.pastOnly">
+      <form class="time-range-slider__panel-row" ng-submit="$ctrl.applyTyped('future')">
+        <span class="time-range-slider__panel-label">Future</span>
+        <input type="text" class="time-range-slider__panel-input" ng-class="{'\--invalid': $ctrl.futureInvalid}"
+          ng-model="$ctrl.futureText" ng-keydown="$ctrl.onPanelInputKeyDown($event)" placeholder="10 days"
+          autocomplete="off">
+        <button type="submit" class="btn btn-primary time-range-slider__panel-set">Set</button>
+      </form>
+      <div class="time-range-slider__panel-options">
+        <button type="button" class="time-range-slider__panel-option" ng-repeat="step in $ctrl.steps"
+          ng-click="$ctrl.selectPreset('future', step)">{{$ctrl.postedSpan.format(step)}}</button>
+        <button type="button" class="time-range-slider__panel-option"
+          ng-click="$ctrl.selectPreset('future', null)">All</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>

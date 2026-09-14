@@ -66,6 +66,10 @@ export default class SearchPin extends BasePin {
         return removePin(this.id);
     }
 
+    static resetIndex() {
+        return resetIndex();
+    }
+
     static favoritePin(userId, pin) {
         return favoritePin(userId, pin);
     }
@@ -243,4 +247,13 @@ function removePin(id) {
     });
     //console.log(req);
     return rp(req);
+};
+
+// Empties the whole index, before a reseed.
+function resetIndex() {
+    return rp({
+        method: 'DELETE',
+        uri: faissUri + "/reset",
+        json: true
+    });
 };

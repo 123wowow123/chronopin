@@ -69,6 +69,17 @@
           <a ui-sref="admin">Admin</a>
         </li>
 
+        <!-- Always offers the other view. Two static links rather than one
+             interpolated ui-sref: ui-router links an interpolated sref once
+             and never updates its target, so the href went stale after the
+             first switch. -->
+        <li ng-if="nav.isOnMap()">
+          <a ui-sref="main">Timeline</a>
+        </li>
+        <li ng-if="!nav.isOnMap()">
+          <a ui-sref="map">Map</a>
+        </li>
+
         <li ng-show="nav.isLoggedIn()" ui-sref-active="active">
           <a ui-sref="create">
             Create
