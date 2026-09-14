@@ -1,5 +1,5 @@
 const getVideoId = require('get-video-id');
-const rp = require('request-promise');
+const { fetchJson } = require('../util/fetchJson');
 const _ = require('lodash');
 const {
     Pin,
@@ -54,12 +54,5 @@ function _youtubeEmbedToMedium(res) {
 
 function _getYoutubeEmbed(youtubeId) {
     const YOUTUBE_API_KEY = config.youtube.YOUTUBE_API_KEY;
-    const uri = `https://www.googleapis.com/youtube/v3/videos?part=player,snippet&id=${youtubeId}&maxResults=1&key=${YOUTUBE_API_KEY}`;
-    const options = {
-        method: 'GET',
-        uri: uri,
-        json: true, // Automatically stringifies the body to JSON
-    };
-
-    return rp(options);
+    return fetchJson(`https://www.googleapis.com/youtube/v3/videos?part=player,snippet&id=${encodeURIComponent(youtubeId)}&maxResults=1&key=${YOUTUBE_API_KEY}`);
 }

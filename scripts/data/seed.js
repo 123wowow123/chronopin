@@ -14,7 +14,7 @@ import {
 } from '../../server/model';
 
 import fs from 'fs';
-const rp = require('request-promise');
+import { fetchJson } from '../../server/util/fetchJson';
 import _ from 'lodash';
 
 import * as log from '../../server/util/log';
@@ -101,16 +101,7 @@ module.exports.seedDB = function () {
 
       let holidayPerYearPromise = _.range(2011, 2026)
         .map(year => {
-          let options = {
-            uri: baseUrl,
-            qs: {
-              action: "getPublicHolidaysForYear",
-              year: year,
-              country: "usa"
-            },
-            json: true
-          };
-          return rp(options)
+          return fetchJson(`${baseUrl}?action=getPublicHolidaysForYear&year=${year}&country=usa`)
             .then(holidays => {
 
               let savingHoliday = holidays

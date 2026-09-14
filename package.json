@@ -52,8 +52,6 @@
     "prerender": "^5.20.1",
     "prerender-node": "^3.5.0",
     "puppeteer": "13.5.0",
-    "request": "^2.87.0",
-    "request-promise": "^4.2.1",
     "sequelize": "^6.28.0",
     "serve-favicon": "^2.5.0",
     "socket.io": "^4.5.4",

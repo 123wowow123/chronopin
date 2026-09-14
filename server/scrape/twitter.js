@@ -1,4 +1,4 @@
-const rp = require('request-promise');
+const { fetchJson } = require('../util/fetchJson');
 const _ = require('lodash');
 const {
     Pin,
@@ -63,11 +63,5 @@ function _getTwitterId(pageUrl) {
 }
 
 function _getTwitterEmbed(twitterId) {
-    const uri = `https://publish.twitter.com/oembed?url=https://twitter.com/Interior/status/${twitterId}`;
-    const options = {
-        method: 'GET',
-        uri: uri,
-        json: true, // Automatically stringifies the body to JSON
-    };
-    return rp(options);
+    return fetchJson(`https://publish.twitter.com/oembed?url=https://twitter.com/Interior/status/${twitterId}`);
 };
