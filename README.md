@@ -8,7 +8,7 @@ This project was generated with the [Angular Full-Stack Generator](https://githu
 
 ### Developing
 
-// install these first use node 14 and python 2.7.18
+Use Node 22 (`nvm use`, see .nvmrc). Python is no longer needed; sass is pure JS.
 https://tecadmin.net/install-nvm-macos-with-homebrew/#:~:text=1%20How%20To%20Install%20NVM%20on%20macOS%20with,what%20Node%20versions%20are%20available%20to%20install.%20
 
 https://www.freecodecamp.org/news/python-version-on-mac-update/

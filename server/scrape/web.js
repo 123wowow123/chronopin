@@ -24,7 +24,7 @@ export function _webScrape(pageUrl) {
     executablePath: process.env.CHROMIUM_PATH,
     args: ['--no-sandbox'], // This was important. Can't remember why
 
-    ignoreHTTPSErrors: true,
+    acceptInsecureCerts: true,
     headless: headless,
     //devtools: !headless
     defaultViewport: {
