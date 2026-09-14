@@ -15,7 +15,6 @@ module.exports = function(grunt) {
     express: 'grunt-express-server',
     useminPrepare: 'grunt-usemin',
     ngtemplates: 'grunt-angular-templates',
-    protractor: 'grunt-protractor-runner',
     istanbul_check_coverage: 'grunt-mocha-istanbul',
     ngconstant: 'grunt-ng-constant'
   });
@@ -168,7 +167,6 @@ module.exports = function(grunt) {
         'server',
         'client',
         'scripts',
-        'e2e',
       ]
     },
 
@@ -461,19 +459,6 @@ module.exports = function(grunt) {
       }
     },
 
-    protractor: {
-      options: {
-        configFile: 'protractor.conf.js'
-      },
-      chrome: {
-        options: {
-          args: {
-            browser: 'chrome'
-          }
-        }
-      }
-    },
-
     env: {
       test: {
         NODE_ENV: 'test'
@@ -685,28 +670,6 @@ module.exports = function(grunt) {
         'wiredep:test',
         'karma'
       ]);
-    } else if (target === 'e2e') {
-      if (option === 'prod') {
-        return grunt.task.run([
-          'build',
-          'env:all',
-          'env:prod',
-          'express:prod',
-          'protractor'
-        ]);
-      } else {
-        return grunt.task.run([
-          'clean:server',
-          'env:all',
-          'env:test',
-          'concurrent:pre',
-          'concurrent:test',
-          'injector',
-          'wiredep:client',
-          'express:dev',
-          'protractor'
-        ]);
-      }
     } else if (target === 'coverage') {
       if (option === 'unit') {
         return grunt.task.run([
