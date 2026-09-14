@@ -1,5 +1,4 @@
 const AWS = require("aws-sdk");
-const Promise = require("bluebird");
 import config from '../config/environment';
 
 export function publish(arn, data) {
@@ -43,9 +42,7 @@ export function publish(arn, data) {
     region: config.aws.region
   });
 
-  const snsPublish = Promise.promisify(sns.publish, { context: sns });
-
-  return snsPublish(params)
+  return sns.publish(params).promise()
     .then((data) => {
       // console.log(data); // successful response
       return data;
