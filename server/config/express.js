@@ -19,7 +19,6 @@ import passport from 'passport';
 import session from 'express-session';
 import connectPgSimple from 'connect-pg-simple';
 import { getPool } from '../db';
-const { forceDomain } = require('forcedomain');
 const PgStore = connectPgSimple(session);
 
 export default function (app) {
@@ -39,12 +38,6 @@ export default function (app) {
   }
 
   if (env === 'production') {
-    // TODO: Causes errors
-    // app.use(forceDomain({
-    //   hostname: config.host,
-    //   protocol: 'https',
-    //   type: 'permanent'
-    // }));
     app.use(favicon(path.join(config.root, 'client/assets/images', 'favicon.ico')));
   }
 
