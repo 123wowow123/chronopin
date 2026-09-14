@@ -1378,5 +1378,535 @@
     "utcLogoCheckedDateTime": "2026-09-14T19:14:29.418Z",
     "utcCreatedDateTime": "2026-09-14T19:14:11.695Z",
     "utcUpdatedDateTime": "2026-09-14T19:14:29.418Z"
+  },
+  {
+    "id": 146,
+    "name": "Zaha Hadid Architects",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:33:46.182Z",
+    "utcCreatedDateTime": "2026-09-14T19:33:46.180Z",
+    "utcUpdatedDateTime": "2026-09-14T19:33:46.182Z"
+  },
+  {
+    "id": 147,
+    "name": "Dubai Airports",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:33:46.204Z",
+    "utcCreatedDateTime": "2026-09-14T19:33:46.202Z",
+    "utcUpdatedDateTime": "2026-09-14T19:33:46.204Z"
+  },
+  {
+    "id": 148,
+    "name": "MetroLoft",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:33:46.220Z",
+    "utcCreatedDateTime": "2026-09-14T19:33:46.218Z",
+    "utcUpdatedDateTime": "2026-09-14T19:33:46.220Z"
+  },
+  {
+    "id": 149,
+    "name": "Heathrow Airport Limited",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:33:46.260Z",
+    "utcCreatedDateTime": "2026-09-14T19:33:46.259Z",
+    "utcUpdatedDateTime": "2026-09-14T19:33:46.260Z"
+  },
+  {
+    "id": 150,
+    "name": "Brookhaven National Laboratory",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:38:41.178Z",
+    "utcCreatedDateTime": "2026-09-14T19:38:41.176Z",
+    "utcUpdatedDateTime": "2026-09-14T19:38:41.178Z"
+  },
+  {
+    "id": 151,
+    "name": "Rabina",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:38:41.199Z",
+    "utcCreatedDateTime": "2026-09-14T19:38:41.198Z",
+    "utcUpdatedDateTime": "2026-09-14T19:38:41.199Z"
+  },
+  {
+    "id": 152,
+    "name": "Fraport",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:38:41.223Z",
+    "utcCreatedDateTime": "2026-09-14T19:38:41.221Z",
+    "utcUpdatedDateTime": "2026-09-14T19:38:41.223Z"
+  },
+  {
+    "id": 153,
+    "name": "High Speed Rail Authority",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:38:41.239Z",
+    "utcCreatedDateTime": "2026-09-14T19:38:41.238Z",
+    "utcUpdatedDateTime": "2026-09-14T19:38:41.239Z"
+  },
+  {
+    "id": 154,
+    "name": "Muraba",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:42:44.692Z",
+    "utcCreatedDateTime": "2026-09-14T19:42:44.671Z",
+    "utcUpdatedDateTime": "2026-09-14T19:42:44.692Z"
+  },
+  {
+    "id": 155,
+    "name": "Ethiopian Airlines",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:42:44.755Z",
+    "utcCreatedDateTime": "2026-09-14T19:42:44.753Z",
+    "utcUpdatedDateTime": "2026-09-14T19:42:44.755Z"
+  },
+  {
+    "id": 156,
+    "name": "Pinnacle International",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:42:44.776Z",
+    "utcCreatedDateTime": "2026-09-14T19:42:44.774Z",
+    "utcUpdatedDateTime": "2026-09-14T19:42:44.776Z"
+  },
+  {
+    "id": 157,
+    "name": "US Army Corps of Engineers",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:46:11.152Z",
+    "utcCreatedDateTime": "2026-09-14T19:46:11.131Z",
+    "utcUpdatedDateTime": "2026-09-14T19:46:11.152Z"
+  },
+  {
+    "id": 158,
+    "name": "TransLink",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:46:11.212Z",
+    "utcCreatedDateTime": "2026-09-14T19:46:11.210Z",
+    "utcUpdatedDateTime": "2026-09-14T19:46:11.212Z"
+  },
+  {
+    "id": 159,
+    "name": "Société du Canal Seine-Nord Europe",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:46:11.241Z",
+    "utcCreatedDateTime": "2026-09-14T19:46:11.240Z",
+    "utcUpdatedDateTime": "2026-09-14T19:46:11.241Z"
+  },
+  {
+    "id": 160,
+    "name": "Statens Vegvesen",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:46:11.272Z",
+    "utcCreatedDateTime": "2026-09-14T19:46:11.271Z",
+    "utcUpdatedDateTime": "2026-09-14T19:46:11.272Z"
+  },
+  {
+    "id": 161,
+    "name": "Azizi Developments",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:49:21.201Z",
+    "utcCreatedDateTime": "2026-09-14T19:49:21.180Z",
+    "utcUpdatedDateTime": "2026-09-14T19:49:21.201Z"
+  },
+  {
+    "id": 162,
+    "name": "LTA Research",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:49:21.251Z",
+    "utcCreatedDateTime": "2026-09-14T19:49:21.250Z",
+    "utcUpdatedDateTime": "2026-09-14T19:49:21.251Z"
+  },
+  {
+    "id": 163,
+    "name": "Metrolinx",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:49:21.279Z",
+    "utcCreatedDateTime": "2026-09-14T19:49:21.278Z",
+    "utcUpdatedDateTime": "2026-09-14T19:49:21.279Z"
+  },
+  {
+    "id": 164,
+    "name": "Tegel Projekt",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:49:21.295Z",
+    "utcCreatedDateTime": "2026-09-14T19:49:21.294Z",
+    "utcUpdatedDateTime": "2026-09-14T19:49:21.295Z"
+  },
+  {
+    "id": 165,
+    "name": "Dubai Municipality",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:49:21.335Z",
+    "utcCreatedDateTime": "2026-09-14T19:49:21.334Z",
+    "utcUpdatedDateTime": "2026-09-14T19:49:21.335Z"
+  },
+  {
+    "id": 166,
+    "name": "Jeddah Economic Company",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:52:43.232Z",
+    "utcCreatedDateTime": "2026-09-14T19:52:43.211Z",
+    "utcUpdatedDateTime": "2026-09-14T19:52:43.232Z"
+  },
+  {
+    "id": 167,
+    "name": "Virginia Department of Transportation",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:52:43.301Z",
+    "utcCreatedDateTime": "2026-09-14T19:52:43.300Z",
+    "utcUpdatedDateTime": "2026-09-14T19:52:43.301Z"
+  },
+  {
+    "id": 168,
+    "name": "LA28",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:52:43.335Z",
+    "utcCreatedDateTime": "2026-09-14T19:52:43.334Z",
+    "utcUpdatedDateTime": "2026-09-14T19:52:43.335Z"
+  },
+  {
+    "id": 169,
+    "name": "Ministry of Water Resources and Irrigation",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ministry_of_Water_Resources_and_Irrigation",
+    "websiteUrl": "https://www.mwri.gov.eg/",
+    "logoUrl": "https://www.mwri.gov.eg/wp-content/uploads/2025/08/b19302a8-829e-45c5-ac43-f488718bd8ee.ico",
+    "utcLogoCheckedDateTime": "2026-09-14T20:05:54.124Z",
+    "utcCreatedDateTime": "2026-09-14T20:05:45.168Z",
+    "utcUpdatedDateTime": "2026-09-14T20:05:54.124Z"
+  },
+  {
+    "id": 170,
+    "name": "Rasuwagadhi Hydropower Company",
+    "wikiUrl": null,
+    "websiteUrl": "https://rghpcl.com.np/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=rghpcl.com.np&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T20:05:45.219Z",
+    "utcCreatedDateTime": "2026-09-14T20:05:45.215Z",
+    "utcUpdatedDateTime": "2026-09-14T20:05:45.219Z"
+  },
+  {
+    "id": 171,
+    "name": "Lesotho Highlands Development Authority",
+    "wikiUrl": null,
+    "websiteUrl": "https://www.lhda.org.ls/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=lhda.org.ls&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T20:05:45.232Z",
+    "utcCreatedDateTime": "2026-09-14T20:05:45.231Z",
+    "utcUpdatedDateTime": "2026-09-14T20:05:45.232Z"
+  },
+  {
+    "id": 172,
+    "name": "Ministry of Land, Infrastructure, Transport and Tourism",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ministry_of_Land,_Infrastructure,_Transport_and_Tourism",
+    "websiteUrl": "https://www.mlit.go.jp/",
+    "logoUrl": "https://www.mlit.go.jp/favicon.ico",
+    "utcLogoCheckedDateTime": "2026-09-14T20:05:46.427Z",
+    "utcCreatedDateTime": "2026-09-14T20:05:45.234Z",
+    "utcUpdatedDateTime": "2026-09-14T20:05:46.427Z"
+  },
+  {
+    "id": 177,
+    "name": "Denver Water",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:13:44.128Z",
+    "utcCreatedDateTime": "2026-09-14T20:13:44.126Z",
+    "utcUpdatedDateTime": "2026-09-14T20:13:44.128Z"
+  },
+  {
+    "id": 178,
+    "name": "Eastern & Oriental",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:13:44.157Z",
+    "utcCreatedDateTime": "2026-09-14T20:13:44.155Z",
+    "utcUpdatedDateTime": "2026-09-14T20:13:44.157Z"
+  },
+  {
+    "id": 179,
+    "name": "Tennessee Titans",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:14:18.151Z",
+    "utcCreatedDateTime": "2026-09-14T20:14:18.150Z",
+    "utcUpdatedDateTime": "2026-09-14T20:14:18.151Z"
+  },
+  {
+    "id": 180,
+    "name": "San Miguel Corporation",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:14:18.172Z",
+    "utcCreatedDateTime": "2026-09-14T20:14:18.170Z",
+    "utcUpdatedDateTime": "2026-09-14T20:14:18.172Z"
+  },
+  {
+    "id": 181,
+    "name": "Swiss Federal Roads Office (ASTRA)",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:14:23.927Z",
+    "utcCreatedDateTime": "2026-09-14T20:14:23.925Z",
+    "utcUpdatedDateTime": "2026-09-14T20:14:23.927Z"
+  },
+  {
+    "id": 190,
+    "name": "Buffalo Bills",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:16:25.229Z",
+    "utcCreatedDateTime": "2026-09-14T20:16:25.206Z",
+    "utcUpdatedDateTime": "2026-09-14T20:16:25.229Z"
+  },
+  {
+    "id": 191,
+    "name": "The Church of Jesus Christ of Latter-day Saints",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:16:25.303Z",
+    "utcCreatedDateTime": "2026-09-14T20:16:25.301Z",
+    "utcUpdatedDateTime": "2026-09-14T20:16:25.303Z"
+  },
+  {
+    "id": 192,
+    "name": "EPM",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:16:25.319Z",
+    "utcCreatedDateTime": "2026-09-14T20:16:25.318Z",
+    "utcUpdatedDateTime": "2026-09-14T20:16:25.319Z"
+  },
+  {
+    "id": 193,
+    "name": "The Walt Disney Company",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:16:25.334Z",
+    "utcCreatedDateTime": "2026-09-14T20:16:25.333Z",
+    "utcUpdatedDateTime": "2026-09-14T20:16:25.334Z"
+  },
+  {
+    "id": 332,
+    "name": "BT Group",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:37:58.627Z",
+    "utcCreatedDateTime": "2026-09-14T20:37:58.626Z",
+    "utcUpdatedDateTime": "2026-09-14T20:37:58.627Z"
+  },
+  {
+    "id": 333,
+    "name": "Metropolitan Transportation Authority",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:37:58.657Z",
+    "utcCreatedDateTime": "2026-09-14T20:37:58.655Z",
+    "utcUpdatedDateTime": "2026-09-14T20:37:58.657Z"
+  },
+  {
+    "id": 334,
+    "name": "Texas Department of Transportation",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:37:58.673Z",
+    "utcCreatedDateTime": "2026-09-14T20:37:58.672Z",
+    "utcUpdatedDateTime": "2026-09-14T20:37:58.673Z"
+  },
+  {
+    "id": 335,
+    "name": "Las Vegas Sands",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:38:03.331Z",
+    "utcCreatedDateTime": "2026-09-14T20:38:03.329Z",
+    "utcUpdatedDateTime": "2026-09-14T20:38:03.331Z"
+  },
+  {
+    "id": 336,
+    "name": "Related Midwest",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:40:48.320Z",
+    "utcCreatedDateTime": "2026-09-14T20:40:48.317Z",
+    "utcUpdatedDateTime": "2026-09-14T20:40:48.320Z"
+  },
+  {
+    "id": 337,
+    "name": "Cencosud",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:40:48.361Z",
+    "utcCreatedDateTime": "2026-09-14T20:40:48.359Z",
+    "utcUpdatedDateTime": "2026-09-14T20:40:48.361Z"
+  },
+  {
+    "id": 338,
+    "name": "Macklowe Properties",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:40:48.376Z",
+    "utcCreatedDateTime": "2026-09-14T20:40:48.375Z",
+    "utcUpdatedDateTime": "2026-09-14T20:40:48.376Z"
+  },
+  {
+    "id": 339,
+    "name": "JDS Development Group",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:42:30.987Z",
+    "utcCreatedDateTime": "2026-09-14T20:42:30.984Z",
+    "utcUpdatedDateTime": "2026-09-14T20:42:30.987Z"
+  },
+  {
+    "id": 340,
+    "name": "Orascom Construction",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:43:04.730Z",
+    "utcCreatedDateTime": "2026-09-14T20:43:04.728Z",
+    "utcUpdatedDateTime": "2026-09-14T20:43:04.730Z"
+  },
+  {
+    "id": 341,
+    "name": "Commonwealth Fusion Systems",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:43:04.754Z",
+    "utcCreatedDateTime": "2026-09-14T20:43:04.752Z",
+    "utcUpdatedDateTime": "2026-09-14T20:43:04.754Z"
+  },
+  {
+    "id": 342,
+    "name": "Five Points Development",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:43:04.786Z",
+    "utcCreatedDateTime": "2026-09-14T20:43:04.784Z",
+    "utcUpdatedDateTime": "2026-09-14T20:43:04.786Z"
+  },
+  {
+    "id": 343,
+    "name": "Mareterra",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T21:00:07.841Z",
+    "utcCreatedDateTime": "2026-09-14T21:00:07.817Z",
+    "utcUpdatedDateTime": "2026-09-14T21:00:07.841Z"
+  },
+  {
+    "id": 344,
+    "name": "Mori Building",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T21:00:07.893Z",
+    "utcCreatedDateTime": "2026-09-14T21:00:07.892Z",
+    "utcUpdatedDateTime": "2026-09-14T21:00:07.893Z"
+  },
+  {
+    "id": 355,
+    "name": "Constellation Energy",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T21:01:29.025Z",
+    "utcCreatedDateTime": "2026-09-14T21:01:29.019Z",
+    "utcUpdatedDateTime": "2026-09-14T21:01:29.025Z"
+  },
+  {
+    "id": 367,
+    "name": "Fermilab",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T21:02:00.852Z",
+    "utcCreatedDateTime": "2026-09-14T21:02:00.832Z",
+    "utcUpdatedDateTime": "2026-09-14T21:02:00.852Z"
+  },
+  {
+    "id": 372,
+    "name": "IHG Hotels & Resorts",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T21:02:35.196Z",
+    "utcCreatedDateTime": "2026-09-14T21:02:35.175Z",
+    "utcUpdatedDateTime": "2026-09-14T21:02:35.196Z"
+  },
+  {
+    "id": 380,
+    "name": "Citicorp",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:13:24.770Z",
+    "utcCreatedDateTime": "2026-09-14T23:13:24.768Z",
+    "utcUpdatedDateTime": "2026-09-14T23:13:24.770Z"
   }
 ]
