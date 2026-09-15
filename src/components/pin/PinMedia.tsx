@@ -203,7 +203,7 @@ export function PinMediaFrame({
                 onClick={() => setActiveKey(key)}
                 aria-label={`${MEDIUM_LABEL[String(medium.type)] ?? 'Medium'} ${i + 1} of ${slides.length}`}
                 aria-pressed={shown}
-                className="group p-1.5"
+                className="group p-1.5 max-lg:p-2.5"
               >
                 <span className={`block size-2 rounded-full transition-colors ${shown ? 'bg-white' : 'bg-white/40 group-hover:bg-white/70'}`} />
               </button>

@@ -36,5 +36,16 @@ export default function PinMap({ latitude, longitude, title }: { latitude: numbe
 
   // isolate: Leaflet's panes and controls use z-index 400-1000, which would
   // otherwise scroll over the sticky navbar.
-  return <div ref={ref} className="isolate h-[360px] w-full overflow-hidden rounded-xl border border-line bg-raised sm:h-[420px]" role="img" aria-label={`Map of ${title}`} />;
+  // The label goes on a wrapper: Leaflet makes its own container focusable and
+  // puts the zoom buttons inside it, so role="img" there would announce an
+  // image with focusable children.
+  return (
+    <div
+      role="group"
+      aria-label={`Map of ${title}`}
+      className="isolate h-[360px] w-full overflow-hidden rounded-xl border border-line bg-raised sm:h-[420px]"
+    >
+      <div ref={ref} className="size-full" />
+    </div>
+  );
 }

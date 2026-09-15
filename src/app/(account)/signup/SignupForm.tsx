@@ -134,7 +134,7 @@ export function SignupForm() {
         }}
       />
       <p className="pt-2 text-center text-sm text-subtle">
-        Already have an account? <Link href="/login">Log in</Link>
+        Already have an account? <Link href="/login" className="underline decoration-link/40 underline-offset-2 hover:decoration-link">Log in</Link>
       </p>
     </form>
   );

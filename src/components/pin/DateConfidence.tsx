@@ -35,7 +35,7 @@ export function DateConfidence({
       <RefineLink
         field="confidence"
         value={meta.label.toLowerCase()}
-        className={`rounded-full px-2 py-px text-[10px] font-semibold tracking-wider not-italic ring-1 ring-inset hover:no-underline hover:ring-current ${meta.className}`}
+        className={`relative rounded-full px-2 py-px text-[10px] font-semibold tracking-wider not-italic ring-1 ring-inset after:absolute after:inset-x-0 after:-inset-y-1.5 after:content-[''] hover:no-underline hover:ring-current ${meta.className}`}
         title={`${meta.title}${reasoning ? ` — ${reasoning}` : ''}\nShow all ${meta.label} pins`}
       >
         {meta.label}

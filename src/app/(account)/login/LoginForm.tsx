@@ -56,7 +56,7 @@ export function LoginForm() {
       <OrDivider />
       <OAuthButtons />
       <p className="pt-2 text-center text-sm text-subtle">
-        New to Chronopin? <Link href="/signup">Create an account</Link>
+        New to Chronopin? <Link href="/signup" className="underline decoration-link/40 underline-offset-2 hover:decoration-link">Create an account</Link>
       </p>
     </form>
   );

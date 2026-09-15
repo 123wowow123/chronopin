@@ -70,9 +70,11 @@ export function PinCard({ pin, serverTimeZone, priority, tense }: { pin: CardPin
   return (
     <article
       data-tense={tense}
-      className={`surface relative overflow-hidden bg-[var(--card-bg,var(--color-panel))] pt-2.5 pb-1.5 transition-[border-color,filter] hover:brightness-110 ${TENSE_CLASS[tense ?? 'ongoing']}`}
+      className={`surface relative overflow-hidden bg-[var(--card-bg,var(--color-panel))] pb-1.5 transition-[border-color,filter] hover:brightness-110 ${TENSE_CLASS[tense ?? 'ongoing']}`}
     >
-      <div ref={contentRef} className="relative max-h-[600px] overflow-hidden">
+      {/* pt-2.5 belongs inside the clip: the meta row's links hang their tap
+          area 8px above themselves, which overflow-hidden would cut off. */}
+      <div ref={contentRef} className="relative max-h-[600px] overflow-hidden pt-2.5">
         <div className="mx-3 flex items-center justify-between text-[11px] text-subtle [&_a]:relative [&_a]:after:absolute [&_a]:after:-inset-y-2 [&_a]:after:inset-x-0 [&_a]:after:content-['']">
           {/* A dot before every item but the first, kept on the item's line when the row wraps. */}
           <div className="flex min-w-0 flex-wrap items-center [&>*]:whitespace-nowrap [&>*+*]:before:px-1.5 [&>*+*]:before:text-faint [&>*+*]:before:content-['·']">
