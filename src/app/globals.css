@@ -336,3 +336,7 @@ html .leaflet-container .leaflet-control-attribution {
 html .leaflet-container .leaflet-control-attribution a {
   @apply text-muted;
 }
+/* The map page's attribution, narrower, rises above the floating controls' pills. */
+html .leaflet-container.pins-map .leaflet-bottom.leaflet-right {
+  @apply max-xl:bottom-16;
+}

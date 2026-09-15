@@ -121,9 +121,9 @@ function selectedCategories(query?: string) {
   return [...new Set(parseSearchQuery(query).categories.map(canonicalCategory))];
 }
 
-// The label for the floating controls' category pill.
+// The value on the floating controls' category pill (under "Category").
 export function categoryPillSummary(query?: string) {
-  return categorySummary(selectedCategories(query)) || 'Category';
+  return categorySummary(selectedCategories(query)) || 'All';
 }
 
 // The category filter on the timeline and search results. Picks are

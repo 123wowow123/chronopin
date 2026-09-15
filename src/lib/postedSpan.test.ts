@@ -1,5 +1,14 @@
 import { describe, expect, it } from 'vitest';
-import { spanFromParam, spanToParam } from './postedSpan';
+import { eventSpanSummary, spanFromParam, spanToParam } from './postedSpan';
+
+describe('eventSpanSummary', () => {
+  it('folds equal sides into one and names unbounded sides', () => {
+    expect(eventSpanSummary('1y', '1y')).toBe('±1 year');
+    expect(eventSpanSummary(null, null)).toBe('All');
+    expect(eventSpanSummary('1w', null)).toBe('−1 week +All');
+    expect(eventSpanSummary('0d', '3y')).toBe('−0 days +3 years');
+  });
+});
 
 describe('span URL parameters', () => {
   it('reads a missing or invalid value as the default and "all" as unbounded', () => {

@@ -230,7 +230,8 @@ export function Timeline({
   return (
     <div className="px-[max(0.75rem,env(safe-area-inset-left))] pb-24 lg:px-4 xl:pr-[288px]">
       <FloatingControls
-        summary={`Posted within ${spanLabel(postedWithin)}`}
+        summaryCaption="Posted within"
+        summary={spanLabel(postedWithin)}
         onToday={scrollToToday}
         category={{ summary: categoryPillSummary(), control: <SearchCategoryFilter postedWithin={postedWithin} /> }}
       >

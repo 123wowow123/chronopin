@@ -14,6 +14,13 @@ export const DEFAULT_POSTED_WITHIN: string | null = null;
 // "5d" -> "5 days"; null (unbounded) -> "All".
 export const spanLabel = (within: string | null | undefined) => formatSpan(within) || 'All';
 
+// A window of start dates around now in brief, for a pill: "±1 year",
+// "−1 week +All", "All".
+export function eventSpanSummary(past: string | null, future: string | null) {
+  if (past === future) return past ? `±${spanLabel(past)}` : 'All';
+  return `−${spanLabel(past)} +${spanLabel(future)}`;
+}
+
 type Unit = { value: string; label: string; typed: RegExp; calendar?: boolean };
 
 // The patterns are mutually exclusive: "m" is minutes and only "mo" onwards is

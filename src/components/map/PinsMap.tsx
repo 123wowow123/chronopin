@@ -5,14 +5,15 @@ import L from 'leaflet';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { TILE_ATTRIBUTION, TILE_URL } from '@/components/pin/PinMap';
-import { CategoryFilter } from '@/components/timeline/CategoryFilter';
+import { CategoryFilter, categoryPillSummary } from '@/components/timeline/CategoryFilter';
+import { FloatingControls } from '@/components/timeline/FloatingControls';
 import { TimeRangeSlider } from '@/components/timeline/TimeRangeSlider';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import { canonicalCategory } from '@/lib/categories';
 import { parseLinkHeader } from '@/lib/client/api';
 import { useQueryState } from '@/lib/client/urlState';
-import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, SPAN_OPTIONS, formatSpan, offsetDate, spanFromParam, spanToParam } from '@/lib/postedSpan';
+import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, SPAN_OPTIONS, eventSpanSummary, formatSpan, offsetDate, spanFromParam, spanLabel, spanToParam } from '@/lib/postedSpan';
 import { removeTerm, toggleTerm } from '@/lib/searchTerms';
 import { pinPath } from '@/lib/seo';
 import type { PinJson } from '@/lib/types';
@@ -348,8 +349,9 @@ export default function PinsMap() {
     // isolate: the controls need z-[1000] to sit over Leaflet's panes, but that
     // must stay inside the map, under the navbar's menus and panels.
     <div className="relative isolate h-[calc(100dvh-52px)]">
-      {/* With the back button above them, Leaflet's zoom buttons move down a row. */}
-      <div ref={canvasRef} className={`absolute inset-0 z-0 ${focusId ? '[&_.leaflet-top.leaflet-left]:pt-10' : ''}`} />
+      {/* With the back button above them, Leaflet's zoom buttons move down a
+          row; pins-map (globals.css) lifts the attribution over the pills. */}
+      <div ref={canvasRef} className={`pins-map absolute inset-0 z-0 ${focusId ? '[&_.leaflet-top.leaflet-left]:pt-10' : ''}`} />
       {focusId ? (
         // Above Leaflet's zoom buttons. Back through history when the map was
         // reached inside the app (the pin page's link), so the pin page is not
@@ -365,37 +367,54 @@ export default function PinsMap() {
           className="floating absolute top-2.5 left-2.5 z-[1000] flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium text-ink hover:no-underline"
         >
           <Icon name="back" className="size-4" />
-          {/* Just the arrow on a phone, where the filters take the rest of the row. */}
-          <span className="sr-only sm:not-sr-only">Back to pin</span>
+          Back to pin
         </a>
       ) : null}
-      <div className="absolute top-3 right-3 z-[1000] flex w-64 flex-col gap-2">
-        <CategoryFilter
-          selected={categories}
-          counts={categoryCounts}
-          onToggle={(category) => go((q) => toggleTerm(q, 'category', category))}
-          onClear={() => go((q) => categories.reduce((rest, category) => removeTerm(rest, 'category', category), q))}
-          className="w-64"
-        />
-        <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={(value) => setPostedWithin(value.past)} />
-        <TimeRangeSlider
-          steps={EVENT_SPAN_OPTIONS}
-          past={past}
-          future={future}
-          onChange={(value) => {
-            setPast(value.past);
-            setFuture(value.future);
+      {/* As on the timeline: top right on wide screens, folded behind pills at
+          the bottom narrower. Its fixed panels stack inside this z-[1000], over
+          Leaflet's panes. */}
+      <div className="relative z-[1000]">
+        <FloatingControls
+          summaryCaption="Posted within"
+          summary={spanLabel(postedWithin)}
+          category={{
+            summary: categoryPillSummary(query),
+            control: (
+              <CategoryFilter
+                selected={categories}
+                counts={categoryCounts}
+                onToggle={(category) => go((q) => toggleTerm(q, 'category', category))}
+                onClear={() => go((q) => categories.reduce((rest, category) => removeTerm(rest, 'category', category), q))}
+              />
+            ),
           }}
-        />
+          span={{
+            summary: eventSpanSummary(past, future),
+            control: (
+              <TimeRangeSlider
+                steps={EVENT_SPAN_OPTIONS}
+                past={past}
+                future={future}
+                onChange={(value) => {
+                  setPast(value.past);
+                  setFuture(value.future);
+                }}
+              />
+            ),
+          }}
+        >
+          <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={(value) => setPostedWithin(value.past)} />
+        </FloatingControls>
       </div>
+      {/* Narrower, clear of the pills at the bottom. */}
       {status === 'loading' ? (
-        <p role="status" className="floating absolute bottom-8 left-1/2 z-[1000] -translate-x-1/2 rounded-full px-4 py-2 text-sm text-ink">Loading pins…</p>
+        <p role="status" className="floating absolute bottom-24 left-1/2 z-[1000] -translate-x-1/2 rounded-full px-4 py-2 text-sm text-ink xl:bottom-8">Loading pins…</p>
       ) : status === 'error' ? (
-        <p role="alert" className="floating absolute bottom-8 left-1/2 z-[1000] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink">
+        <p role="alert" className="floating absolute bottom-24 left-1/2 z-[1000] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink xl:bottom-8">
           Search is unavailable right now. Please try again in a bit.
         </p>
       ) : count === 0 ? (
-        <p className="floating absolute bottom-8 left-1/2 z-[1000] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink">
+        <p className="floating absolute bottom-24 left-1/2 z-[1000] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink xl:bottom-8">
           No {watched ? 'watched ' : ''}pins{fetchQuery ? ` matching “${fetchQuery}”` : ''} with a location{hasPast ? ` in the last ${phrase(past)}` : ''}
           {hasPast && hasFuture ? ' or' : ''}
           {hasFuture ? ` in the next ${phrase(future)}` : ''}

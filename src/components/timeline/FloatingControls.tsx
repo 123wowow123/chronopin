@@ -1,9 +1,9 @@
 'use client';
 
 import { createContext, useContext, useEffect, useRef, useState } from 'react';
-import { Icon } from '@/components/ui/Icon';
+import { Icon, type IconName } from '@/components/ui/Icon';
 
-type Fold = 'category' | 'controls' | null;
+type Fold = 'category' | 'controls' | 'span' | null;
 
 // Whether the category fold is open (null outside floating controls), so a
 // category filter knows to show its pills without its own header. Picks
@@ -26,19 +26,24 @@ export function useInControlsFold() {
 // The controls that float over a timeline (filters, sort, a searched user).
 // On wide screens (xl) they sit top right beside the cards; narrower, they
 // would cover the cards or squeeze them to one column, so they fold behind
-// pill buttons by the "Today" button: the category filter behind its own,
-// the rest behind one saying what they are set to.
+// pill buttons by the "Today" button: the category filter and the window of
+// start dates (span) behind their own, the rest behind one saying what they
+// are set to.
 export function FloatingControls({
   children,
   category,
+  span,
   summary,
+  summaryCaption,
   summaryIsPostedWithin = true,
   onToday,
 }: {
   children: React.ReactNode;
   category?: { summary: string; control: React.ReactNode };
-  // What the folded button says ("Posted within 1 day").
+  span?: { summary: string; control: React.ReactNode };
+  // What the folded button says ("1 day"), under an optional caption ("Posted within").
   summary: string;
+  summaryCaption?: string;
   // Whether that is the posted-within span (so its slider can drop its heading).
   summaryIsPostedWithin?: boolean;
   onToday?: () => void;
@@ -82,11 +87,7 @@ export function FloatingControls({
     return () => document.removeEventListener('touchmove', hold);
   }, [open]);
 
-  // The pill whose popup is showing is tinted like a picked category.
-  const pill = (expanded: boolean) =>
-    `floating flex min-w-0 h-11 items-center gap-1.5 rounded-full px-3 text-sm lg:h-auto lg:gap-2 lg:px-3.5 lg:py-2 ${
-      expanded ? 'bg-[color-mix(in_oklab,var(--color-accent)_18%,var(--color-panel))] text-link ring-1 ring-accent/60 ring-inset' : 'text-ink hover:bg-raised'
-    }`;
+  const toggle = (fold: Exclude<Fold, null>) => setOpen(open === fold ? null : fold);
 
   return (
     <div ref={rootRef}>
@@ -99,33 +100,23 @@ export function FloatingControls({
             <CategoryFoldContext value={open === 'category'}>{category.control}</CategoryFoldContext>
           </div>
         ) : null}
-        <div id="timeline-controls" className={`flex flex-col gap-2 ${open === 'controls' ? '' : 'max-xl:hidden'}`}>
+        {/* Scrolls when taller than the room under the navbar (a searched user's card too). */}
+        <div
+          id="timeline-controls"
+          className={`flex flex-col gap-2 max-xl:max-h-[calc(100dvh-8rem)] max-xl:overflow-y-auto max-xl:overscroll-contain ${open === 'controls' ? '' : 'max-xl:hidden'}`}
+        >
           <ControlsFoldContext value={summaryIsPostedWithin}>{children}</ControlsFoldContext>
         </div>
-      </div>
-      <div className="fixed right-3 bottom-3 z-30 flex max-w-[calc(100%-1.5rem)] gap-1.5 lg:right-4 lg:gap-2 lg:bottom-4">
-        {category ? (
-          <button
-            type="button"
-            onClick={() => setOpen(open === 'category' ? null : 'category')}
-            aria-expanded={open === 'category'}
-            aria-controls="timeline-category"
-            className={`${pill(open === 'category')} xl:hidden`}
-          >
-            <Icon name="tag" className="size-4 shrink-0 text-link" />
-            <span className="truncate">{category.summary}</span>
-          </button>
+        {span ? (
+          <div id="timeline-span" className={`flex flex-col ${open === 'span' ? '' : 'max-xl:hidden'}`}>
+            {span.control}
+          </div>
         ) : null}
-        <button
-          type="button"
-          onClick={() => setOpen(open === 'controls' ? null : 'controls')}
-          aria-expanded={open === 'controls'}
-          aria-controls="timeline-controls"
-          className={`${pill(open === 'controls')} max-w-52 xl:hidden`}
-        >
-          <Icon name="sliders" className="size-4 shrink-0 text-past" />
-          <span className="truncate">{summary}</span>
-        </button>
+      </div>
+      <div className="fixed right-3 bottom-3 z-30 flex max-w-[calc(100%-1.5rem)] gap-1.5 max-sm:gap-1 lg:right-4 lg:gap-2 lg:bottom-4">
+        {category ? <FoldPill fold="category" open={open} onToggle={toggle} icon="tag" iconClass="text-link" caption="Category" label={category.summary} /> : null}
+        <FoldPill fold="controls" open={open} onToggle={toggle} icon="sliders" iconClass="text-past" caption={summaryCaption} label={summary} className="max-w-52" />
+        {span ? <FoldPill fold="span" open={open} onToggle={toggle} icon="timeline" iconClass="text-future" caption="Time span" label={span.summary} /> : null}
         {onToday ? (
           <button
             type="button"
@@ -138,5 +129,47 @@ export function FloatingControls({
         ) : null}
       </div>
     </div>
+  );
+}
+
+// A pill that opens one fold; the one whose popup is showing is tinted like a
+// picked category. On phones, where three pills share the row, its caption
+// sits small over the value rather than beside it, so neither is cut short.
+function FoldPill({
+  fold,
+  open,
+  onToggle,
+  icon,
+  iconClass,
+  caption,
+  label,
+  className = '',
+}: {
+  fold: Exclude<Fold, null>;
+  open: Fold;
+  onToggle: (fold: Exclude<Fold, null>) => void;
+  icon: IconName;
+  iconClass: string;
+  caption?: string;
+  label: string;
+  className?: string;
+}) {
+  const expanded = open === fold;
+  return (
+    <button
+      type="button"
+      onClick={() => onToggle(fold)}
+      aria-expanded={expanded}
+      aria-controls={`timeline-${fold}`}
+      className={`floating flex min-w-0 h-11 items-center gap-1.5 rounded-full px-3 text-sm max-sm:gap-1 max-sm:px-2 lg:h-auto lg:gap-2 lg:px-3.5 lg:py-2 xl:hidden ${className} ${
+        expanded ? 'bg-[color-mix(in_oklab,var(--color-accent)_18%,var(--color-panel))] text-link ring-1 ring-accent/60 ring-inset' : 'text-ink hover:bg-raised'
+      }`}
+    >
+      <Icon name={icon} className={`size-4 shrink-0 ${iconClass}`} />
+      <span className="flex min-w-0 flex-col text-left leading-tight sm:flex-row sm:gap-1 sm:leading-normal">
+        {caption ? <span className="truncate text-[11px] text-subtle sm:text-sm sm:text-current">{caption}</span> : null}
+        <span className="truncate">{label}</span>
+      </span>
+    </button>
   );
 }

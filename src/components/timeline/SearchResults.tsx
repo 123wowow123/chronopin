@@ -12,7 +12,7 @@ import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
 import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { dayKeyIn } from '@/lib/format';
-import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, formatSpan, offsetDate, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSpan';
+import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, eventSpanSummary, formatSpan, offsetDate, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSpan';
 import { buildBags, pinDayKey, pinTense, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { CardPin, SearchPage } from '@/lib/types';
 import { categoryPillSummary, SearchCategoryFilter } from './CategoryFilter';
@@ -277,7 +277,8 @@ export function SearchResults({
   return (
     <div className="px-3 pb-24 lg:px-4 xl:pr-[288px]">
       <FloatingControls
-        summary={searchedUser ? searchedUser.userName : `Posted within ${spanLabel(postedWithin)}`}
+        summaryCaption={searchedUser ? undefined : 'Posted within'}
+        summary={searchedUser ? searchedUser.userName : spanLabel(postedWithin)}
         summaryIsPostedWithin={!searchedUser}
         onToday={sortBy === 'date' && bags.length ? scrollToToday : undefined}
         category={{
@@ -290,10 +291,17 @@ export function SearchResults({
             />
           ),
         }}
+        span={
+          sortBy === 'relevance'
+            ? {
+                summary: eventSpanSummary(startSpan.past, startSpan.future),
+                control: <TimeRangeSlider steps={EVENT_SPAN_OPTIONS} past={startSpan.past} future={startSpan.future} onChange={changeStartSpan} />,
+              }
+            : undefined
+        }
       >
         {canSort ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : null}
         <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={({ past }) => changePostedWithin(past)} />
-        {sortBy === 'relevance' ? <TimeRangeSlider steps={EVENT_SPAN_OPTIONS} past={startSpan.past} future={startSpan.future} onChange={changeStartSpan} /> : null}
         {searchedUser ? (
           <div className="floating flex flex-col gap-3 px-3.5 py-3">
             <div className="flex items-center gap-2 font-semibold text-ink">
