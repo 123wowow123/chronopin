@@ -70,7 +70,9 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
     <>
       <JsonLd data={pinJsonLd(pin)} />
       <PinViewTracker pinId={pin.id} />
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-10">
+      {/* grid-cols-[minmax(0,1fr)]: the single column below lg is otherwise
+          floored by its content's min-width, which scrolls the page sideways. */}
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-10">
         <article>
           <PinBodyForViewer pin={pin} />
         </article>
