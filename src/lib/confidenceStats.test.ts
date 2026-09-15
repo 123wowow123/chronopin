@@ -16,6 +16,10 @@ describe('confidenceStats', () => {
     expect(stats).toMatchObject({ total: 6, showing: 4, hidden: 2, unscored: 1 });
   });
 
+  it('hides nothing when the filter is off', () => {
+    expect(confidenceStats(rows, null)).toMatchObject({ threshold: null, showing: 6, hidden: 0, unscored: 1 });
+  });
+
   it('bands scores by tens, with 100 in the top band', () => {
     const { bands } = confidenceStats(rows, 70);
     expect(bands.map((b) => b.showing + b.hidden)).toEqual([0, 0, 1, 0, 0, 0, 1, 1, 0, 2]);

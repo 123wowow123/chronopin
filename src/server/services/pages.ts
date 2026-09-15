@@ -7,28 +7,32 @@ import Pins from '../model/pins';
 import { toJson, type PinJson, type SearchPage, type TimelinePage } from '@/lib/types';
 import { TAGS } from './cache';
 import { searchCategoryCounts, searchPins } from './search';
-import { getTimeline } from './timeline';
+import { getTimeline, timelineMinConfidence } from './timeline';
 import { resolveCreatedSince, type CreatedQuery } from '../util/createdFilter';
 
 export type TimelineCursor = { fromDateTime?: string | null; lastPinId?: number };
 
-// A timeline page, plus the cursors for the pages either side of it.
+// A timeline page, plus the cursors for the pages either side of it and the
+// confidence bar it was filtered by (null when the filter is off).
 export async function timelinePage(
   userId: number,
   cursor: TimelineCursor,
   createdWithin: string | null,
-): Promise<TimelinePage & { links: { previous?: string; next?: string } }> {
+): Promise<TimelinePage & { links: { previous?: string; next?: string }; minConfidence: number | null }> {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
 
   const createdSince = createdWithin ? resolveCreatedSince({ created_within: createdWithin }) : null;
-  const pins = await getTimeline({
-    userId,
-    fromDateTime: cursor.fromDateTime,
-    lastPinId: cursor.lastPinId,
-    createdSince,
-  });
+  const [pins, minConfidence] = await Promise.all([
+    getTimeline({
+      userId,
+      fromDateTime: cursor.fromDateTime,
+      lastPinId: cursor.lastPinId,
+      createdSince,
+    }),
+    timelineMinConfidence(),
+  ]);
   const range = pins.minMaxDateTimePin();
   const carry = createdSince ? `&created_since=${encodeURIComponent(createdSince.toISOString())}` : '';
   const links = range
@@ -37,7 +41,7 @@ export async function timelinePage(
         next: `?from_date_time=${new Date(range.max.utcStartDateTime).toISOString()}&last_pin_id=${range.max.id}${carry}`,
       }
     : {};
-  return { ...toJson<TimelinePage>(pins), links };
+  return { ...toJson<TimelinePage>(pins), links, minConfidence };
 }
 
 // One pin as its page shows it (no per-viewer fields).
@@ -98,7 +102,7 @@ export async function timelineCategoryCounts(created: CreatedQuery): Promise<Rec
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
-  const rows = await Pins.countTimelineByCategory(resolveCreatedSince(created));
+  const rows = await Pins.countTimelineByCategory(resolveCreatedSince(created), await timelineMinConfidence());
   return Object.fromEntries(rows.map((row) => [row.category || '', row.count]));
 }
 

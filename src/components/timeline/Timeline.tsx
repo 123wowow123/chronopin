@@ -8,7 +8,7 @@ import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { dayKeyIn } from '@/lib/format';
 import { formatSpan, SPAN_OPTIONS, spanLabel } from '@/lib/postedSpan';
-import { pinConfidence, pinEvidence, TIMELINE_MIN_CONFIDENCE } from '@/lib/referenceConfidence';
+import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { buildBags, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { CardPin, DateTimeJson, TimelinePage } from '@/lib/types';
 import { SearchCategoryFilter } from './CategoryFilter';
@@ -51,6 +51,7 @@ export function Timeline({
   defaultSpan,
   initialSpecialtyDays,
   serverNow,
+  minConfidence,
 }: {
   initialPins: CardPin[];
   initialDateTimes: DateTimeJson[];
@@ -61,6 +62,8 @@ export function Timeline({
   initialSpecialtyDays: Record<string, string[]>;
   // When the server rendered, so "today" matches during hydration.
   serverNow: string;
+  // The score a pin needs to show (the admin setting), or null to show every pin.
+  minConfidence: number | null;
 }) {
   const timeZone = useTimeZone(serverTimeZone);
   const [pins, setPins] = useState(initialPins);
@@ -137,7 +140,7 @@ export function Timeline({
       // A pin edited below the timeline's confidence bar leaves it, as it
       // would on reload; a new one below the bar never joins.
       const confidence = pinConfidence(pinEvidence(changed));
-      if (event.type === 'pin:remove' || (confidence !== undefined && confidence < TIMELINE_MIN_CONFIDENCE)) {
+      if (event.type === 'pin:remove' || (minConfidence !== null && confidence !== undefined && confidence < minConfidence)) {
         setPins((list) => list.filter((p) => p.id !== changed.id));
         return;
       }
@@ -159,7 +162,7 @@ export function Timeline({
       source.addEventListener(type, onPin as EventListener);
     }
     return () => source.close();
-  }, []);
+  }, [minConfidence]);
 
   const loadMore = useCallback(
     async (direction: 'previous' | 'next') => {

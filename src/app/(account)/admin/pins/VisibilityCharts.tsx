@@ -36,7 +36,12 @@ export function VisibilityCharts({ stats }: { stats: ConfidenceStats }) {
     <div className="space-y-6">
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
         <StatTile label="Showing" swatch={SHOWING} value={stats.showing} note={`${percent(stats.showing, stats.total)} of ${stats.total} pins`} />
-        <StatTile label="Hidden" swatch={HIDDEN} value={stats.hidden} note={`${percent(stats.hidden, stats.total)} scored below ${stats.threshold}`} />
+        <StatTile
+          label="Hidden"
+          swatch={HIDDEN}
+          value={stats.hidden}
+          note={stats.threshold === null ? 'filter is off' : `${percent(stats.hidden, stats.total)} scored below ${stats.threshold}`}
+        />
         <StatTile label="Unscored" value={stats.unscored} note="shown, nothing to score" />
       </div>
 
@@ -137,9 +142,13 @@ function Histogram({ stats, tipHandlers }: { stats: ConfidenceStats; tipHandlers
             <div key={t} aria-hidden className={`absolute inset-x-0 h-px ${t === 0 ? 'bg-rail' : 'bg-line'}`} style={{ bottom: height(t) }} />
           ))}
           {/* The timeline's cutoff, placed on the 0-100 score scale. */}
-          <div aria-hidden className="absolute top-0 bottom-0 w-px bg-muted/60" style={{ left: `${stats.threshold}%` }}>
-            <span className="absolute -top-1 left-1.5 text-[11px] whitespace-nowrap text-muted">Cutoff {stats.threshold}</span>
-          </div>
+          {stats.threshold !== null ? (
+            <div aria-hidden className="absolute top-0 bottom-0 w-px bg-muted/60" style={{ left: `${stats.threshold}%` }}>
+              <span className={`absolute -top-1 text-[11px] whitespace-nowrap text-muted ${stats.threshold > 85 ? 'right-1.5' : 'left-1.5'}`}>
+                Cutoff {stats.threshold}
+              </span>
+            </div>
+          ) : null}
           <div className="absolute inset-0 grid grid-cols-10">
             {stats.bands.map((band) => {
               const total = band.showing + band.hidden;

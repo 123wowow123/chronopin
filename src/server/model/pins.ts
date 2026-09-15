@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import { TIMELINE_MIN_CONFIDENCE } from '@/lib/referenceConfidence';
 import * as db from '../db';
 import type { Row } from '../db';
 import BasePins from './basePins';
@@ -45,16 +44,17 @@ export default class Pins extends BasePins<Pin> {
     return reverse ? pins.reverse() : pins;
   }
 
-  static queryForwardByDate(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince?: Date | null) {
-    return queryPage(true, false, fromDateTime, userId, lastPinId, pageSize, createdSince).then((res) => new Pins(res));
+  // minConfidence: the score a pin needs to show, or null to show every pin.
+  static queryForwardByDate(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince: Date | null | undefined, minConfidence: number | null) {
+    return queryPage(true, false, fromDateTime, userId, lastPinId, pageSize, createdSince, minConfidence).then((res) => new Pins(res));
   }
 
-  static queryBackwardByDate(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince?: Date | null) {
-    return queryPage(false, false, fromDateTime, userId, lastPinId, pageSize, createdSince).then((res) => new Pins(res));
+  static queryBackwardByDate(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince: Date | null | undefined, minConfidence: number | null) {
+    return queryPage(false, false, fromDateTime, userId, lastPinId, pageSize, createdSince, minConfidence).then((res) => new Pins(res));
   }
 
-  static queryInitialByDate(fromDateTime: Date, userId: number, pageSizePrev: number, pageSizeNext: number, createdSince?: Date | null) {
-    return queryInitialPage(false, fromDateTime, userId, pageSizePrev, pageSizeNext, createdSince).then((res) => new Pins(res));
+  static queryInitialByDate(fromDateTime: Date, userId: number, pageSizePrev: number, pageSizeNext: number, createdSince: Date | null | undefined, minConfidence: number | null) {
+    return queryInitialPage(false, fromDateTime, userId, pageSizePrev, pageSizeNext, createdSince, minConfidence).then((res) => new Pins(res));
   }
 
   static queryForwardByDateFilterByHasFavorite(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince?: Date | null) {
@@ -115,17 +115,17 @@ export default class Pins extends BasePins<Pin> {
 
   // Pins per lowercased category across the whole timeline: the same pins
   // its pages walk (live, confident enough, created since the cutoff).
-  static async countTimelineByCategory(createdSince?: Date | null) {
+  static async countTimelineByCategory(createdSince: Date | null | undefined, minConfidence: number | null) {
     return db.query<{ category: string | null; count: number }>(
       `
       SELECT lower("category") AS "category", COUNT(DISTINCT "id")::integer AS "count"
       FROM "PinBaseView"
       WHERE "utcDeletedDateTime" IS NULL
         AND ($1::timestamptz IS NULL OR "utcCreatedDateTime" >= $1)
-        AND COALESCE("pinConfidence"("references", "sourceUrl", "dateConfidence", "utcCreatedDateTime"),
-                     ${TIMELINE_MIN_CONFIDENCE}) >= ${TIMELINE_MIN_CONFIDENCE}
+        AND ($2::integer IS NULL
+          OR COALESCE("pinConfidence"("references", "sourceUrl", "dateConfidence", "utcCreatedDateTime"), $2) >= $2)
       GROUP BY 1`,
-      [createdSince || null],
+      [createdSince || null, minConfidence],
     );
   }
 
@@ -200,8 +200,9 @@ const PAGE_COLUMNS = `
 // One page of the timeline, walking forward (later pins) or backward from
 // (fromDateTime, lastPinId). Rows are the view's pin x medium x merchant rows,
 // so pageSize counts rows, not pins - as it always has. The whole timeline
-// leaves out pins scored below TIMELINE_MIN_CONFIDENCE, filtered here rather
-// than after the query so pages stay full; a watched list keeps every pin.
+// leaves out pins scored below minConfidence (the admin setting; null shows
+// every pin), filtered here rather than after the query so pages stay full; a
+// watched list keeps every pin.
 function queryPage(
   queryForward: boolean,
   onlyFavorites: boolean,
@@ -210,6 +211,7 @@ function queryPage(
   lastPinId: number,
   pageSize: number,
   createdSince?: Date | null,
+  minConfidence: number | null = null,
 ): Promise<PageResult> {
   const after = queryForward ? '>' : '<';
   const direction = queryForward ? 'ASC' : 'DESC';
@@ -229,16 +231,12 @@ function queryPage(
         OR ("Pin"."utcStartDateTime" = $2 AND "Pin"."id" ${after} $3))
       AND "Pin"."utcDeletedDateTime" IS NULL
       AND ($4::timestamptz IS NULL OR "Pin"."utcCreatedDateTime" >= $4)
-      ${
-        onlyFavorites
-          ? ''
-          : `AND COALESCE("pinConfidence"("Pin"."references", "Pin"."sourceUrl", "Pin"."dateConfidence", "Pin"."utcCreatedDateTime"),
-                      ${TIMELINE_MIN_CONFIDENCE}) >= ${TIMELINE_MIN_CONFIDENCE}`
-      }
+      AND ($6::integer IS NULL
+        OR COALESCE("pinConfidence"("Pin"."references", "Pin"."sourceUrl", "Pin"."dateConfidence", "Pin"."utcCreatedDateTime"), $6) >= $6)
     ORDER BY "Pin"."utcStartDateTime" ${direction}, "Pin"."id" ${direction},
       "Pin"."Media.id" ${direction}, "Pin"."Merchant.id" ${direction}
     LIMIT $5`,
-      [userId, fromDateTime, lastPinId, createdSince || null, pageSize],
+      [userId, fromDateTime, lastPinId, createdSince || null, pageSize, onlyFavorites ? null : minConfidence],
     )
     .then(result);
 }
@@ -252,10 +250,11 @@ async function queryInitialPage(
   pageSizePrev: number,
   pageSizeNext: number,
   createdSince?: Date | null,
+  minConfidence: number | null = null,
 ): Promise<PageResult> {
   const [prev, next] = await Promise.all([
-    queryPage(false, onlyFavorites, fromDateTime, userId, 0, pageSizePrev, createdSince),
-    queryPage(true, onlyFavorites, fromDateTime, userId, 0, pageSizeNext, createdSince),
+    queryPage(false, onlyFavorites, fromDateTime, userId, 0, pageSizePrev, createdSince, minConfidence),
+    queryPage(true, onlyFavorites, fromDateTime, userId, 0, pageSizeNext, createdSince, minConfidence),
   ]);
   return {
     pins: prev.pins.reverse().concat(next.pins),

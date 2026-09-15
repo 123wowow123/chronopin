@@ -29,3 +29,9 @@ export function invalidatePin(id: number | string) {
 export function invalidateTimeline() {
   revalidateTag(TAGS.timeline, 'max');
 }
+
+// A setting that changes which pins every timeline page holds: expire at once,
+// so the admin sees the effect on their next load rather than after a stale one.
+export function expireTimeline() {
+  revalidateTag(TAGS.timeline, { expire: 0 });
+}

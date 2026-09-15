@@ -8,7 +8,8 @@ export type ConfidenceRow = { category: string | null; userName: string | null; 
 export type VisibilityCount = { label: string; showing: number; hidden: number };
 
 export type ConfidenceStats = {
-  threshold: number;
+  // Null when the timeline's filter is off and nothing is hidden.
+  threshold: number | null;
   total: number;
   showing: number;
   hidden: number;
@@ -22,12 +23,12 @@ export type ConfidenceStats = {
 
 const BAND_COUNT = 10;
 
-export function isHidden(confidence: number | null | undefined, threshold = TIMELINE_MIN_CONFIDENCE) {
-  return confidence != null && confidence < threshold;
+export function isHidden(confidence: number | null | undefined, threshold: number | null = TIMELINE_MIN_CONFIDENCE) {
+  return threshold != null && confidence != null && confidence < threshold;
 }
 
 // Largest groups first; past `limit` the rest fold into one "Other" row.
-function group(rows: ConfidenceRow[], key: (row: ConfidenceRow) => string, threshold: number, limit: number): VisibilityCount[] {
+function group(rows: ConfidenceRow[], key: (row: ConfidenceRow) => string, threshold: number | null, limit: number): VisibilityCount[] {
   const counts = new Map<string, VisibilityCount>();
   for (const row of rows) {
     const label = key(row);
@@ -49,7 +50,7 @@ function group(rows: ConfidenceRow[], key: (row: ConfidenceRow) => string, thres
   return [...sorted.slice(0, limit - 1), other];
 }
 
-export function confidenceStats(rows: ConfidenceRow[], threshold = TIMELINE_MIN_CONFIDENCE, limit = 12): ConfidenceStats {
+export function confidenceStats(rows: ConfidenceRow[], threshold: number | null = TIMELINE_MIN_CONFIDENCE, limit = 12): ConfidenceStats {
   const bands = Array.from({ length: BAND_COUNT }, (_, i) => ({
     from: i * 10,
     to: i === BAND_COUNT - 1 ? 100 : i * 10 + 9,

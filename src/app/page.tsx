@@ -79,6 +79,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
         defaultSpan={preference || '1d'}
         initialSpecialtyDays={days}
         serverNow={new Date().toISOString()}
+        minConfidence={page.minConfidence}
       />
       {/* Plain links through the timeline, for crawlers and anyone without JavaScript. */}
       <nav aria-label="Timeline pages" className="flex justify-between px-4 pb-20 text-sm lg:ml-[190px] lg:max-w-[906px]">
