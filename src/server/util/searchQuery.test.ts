@@ -40,7 +40,12 @@ describe('parseSearchQuery', () => {
       userNames: [],
       companies: [],
       categories: ['software'],
+      confidences: [],
       text: 'ios',
     });
+  });
+
+  it('reads confidence levels, with UNVERIFIED as the stored unknown', () => {
+    expect(parseSearchQuery('confidence:ESTIMATED confidence:unverified confidence:estimated').confidences).toEqual(['estimated', 'unknown']);
   });
 });

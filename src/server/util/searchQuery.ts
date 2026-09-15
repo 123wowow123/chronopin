@@ -3,6 +3,10 @@
 //
 //   user:ThePinGang company:"Electronic Arts" category:Software iphone
 //
+// confidence: takes a pin's date confidence level, as its badge shows it
+// (confidence:estimated); UNVERIFIED is the badge for the stored "unknown", so
+// either word works.
+//
 // user: takes a name with or without its "@" (user:@ThePinGang), and a bare
 // @ThePinGang still works on its own, as it did before user: existed.
 //
@@ -27,13 +31,14 @@ export type SearchQuery = {
   userNames: string[];
   companies: string[];
   categories: string[];
+  confidences: string[];
   text: string;
 };
 
 const SMART_DOUBLE_QUOTES = /[“”„‟″]/g;
 const SMART_SINGLE_QUOTES = /[‘’‚‛′]/g;
 
-const FIELD = '(company|category|user)';
+const FIELD = '(company|category|user|confidence)';
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -52,8 +57,10 @@ const FIELD_TERM = new RegExp(
 
 const USER_TERM = /(^|\s)(@\S+)/g;
 
+export type TermField = 'user' | 'company' | 'category' | 'confidence';
+
 export type QueryPart =
-  | { kind: 'term'; field: 'user' | 'company' | 'category'; value: string; raw: string }
+  | { kind: 'term'; field: TermField; value: string; raw: string }
   | { kind: 'text'; raw: string };
 
 // The query in order: its label terms and the free text around them, each
@@ -85,7 +92,7 @@ export function splitSearchQuery(searchText: string | null | undefined): QueryPa
     // Each alternative captures a (field, value) pair; exactly one matched.
     const groups = match.slice(2);
     const at = groups.findIndex((group, index) => index % 2 === 0 && group !== undefined);
-    const field = groups[at]!.toLowerCase() as 'user' | 'company' | 'category';
+    const field = groups[at]!.toLowerCase() as TermField;
     parts.push({ kind: 'term', field, value: groups[at + 1]!.trim(), raw: match[0].slice(match[1].length) });
     from = match.index + match[0].length;
   }
@@ -107,6 +114,7 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
     userNames: [],
     companies: [],
     categories: [],
+    confidences: [],
     text: '',
   };
 
@@ -116,6 +124,8 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
       text.push(part.raw);
     } else if (part.field === 'user') {
       addUserName(query, part.value);
+    } else if (part.field === 'confidence') {
+      addConfidence(query, part.value);
     } else if (part.value) {
       addUnique(part.field === 'company' ? query.companies : query.categories, part.value);
     }
@@ -126,19 +136,20 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
 }
 
 export function hasFilters(query: SearchQuery): boolean {
-  return !!(query.userNames.length || query.companies.length || query.categories.length);
+  return !!(query.userNames.length || query.companies.length || query.categories.length || query.confidences.length);
 }
 
 // Applies a query's terms to pins that came back from free-text search, so
 // "iphone company:Apple" means Apple pins about the iPhone.
 export function matchesFilters(
   query: SearchQuery,
-  pin: { user?: { userName?: string } | null; company?: string | null; category?: string | null },
+  pin: { user?: { userName?: string } | null; company?: string | null; category?: string | null; dateConfidence?: string | null },
 ): boolean {
   return (
     matchesAny(query.userNames, pin.user?.userName) &&
     matchesAny(query.companies, pin.company) &&
-    matchesAny(query.categories, pin.category)
+    matchesAny(query.categories, pin.category) &&
+    matchesAny(query.confidences, pin.dateConfidence)
   );
 }
 
@@ -157,6 +168,14 @@ function addUserName(query: SearchQuery, value: string) {
   const name = value.replace(/^@+/, '').trim();
   if (name) {
     addUnique(query.userNames, `@${name}`);
+  }
+}
+
+// Levels are stored lowercase; UNVERIFIED is how the badge shows "unknown".
+function addConfidence(query: SearchQuery, value: string) {
+  const level = value.trim().toLowerCase();
+  if (level) {
+    addUnique(query.confidences, level === 'unverified' ? 'unknown' : level);
   }
 }
 

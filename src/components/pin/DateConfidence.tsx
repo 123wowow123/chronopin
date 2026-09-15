@@ -1,6 +1,9 @@
 import type { ReactNode } from 'react';
+import { RefineLink } from './RefineLink';
 
-// How firmly the source states a pin's date, as a coloured badge.
+// How firmly the source states a pin's date, as a coloured badge. Clicking it
+// searches for pins at the same level (a confidence: term), like a card's
+// category label.
 // reasoningContent, when given, is shown in place of the plain reasoning (the
 // same text with citations).
 
@@ -29,12 +32,14 @@ export function DateConfidence({
   }
   return (
     <>
-      <span
-        className={`rounded-full px-2 py-px text-[10px] font-semibold tracking-wider not-italic ring-1 ring-inset ${meta.className}`}
-        title={`${meta.title}${reasoning ? ` — ${reasoning}` : ''}`}
+      <RefineLink
+        field="confidence"
+        value={meta.label.toLowerCase()}
+        className={`rounded-full px-2 py-px text-[10px] font-semibold tracking-wider not-italic ring-1 ring-inset hover:no-underline hover:ring-current ${meta.className}`}
+        title={`${meta.title}${reasoning ? ` — ${reasoning}` : ''}\nShow all ${meta.label} pins`}
       >
         {meta.label}
-      </span>
+      </RefineLink>
       {showReasoning && reasoning ? <span className="basis-full text-xs leading-relaxed text-subtle italic">{reasoningContent ?? reasoning}</span> : null}
     </>
   );

@@ -4,7 +4,7 @@ import type { Row } from '../db';
 import BasePins from './basePins';
 import Pin from './pin';
 
-export type PinSearchFilters = { userNames: string[]; companies: string[]; categories: string[] };
+export type PinSearchFilters = { userNames: string[]; companies: string[]; categories: string[]; confidences: string[] };
 
 type PageResult = { pins: Row[]; queryCount: number };
 
@@ -338,15 +338,16 @@ function queryPinBySearchFilters(query: PinSearchFilters, favoriteUserId?: numbe
       AND (cardinality($1::citext[]) = 0 OR "Pin"."User.userName" = ANY($1::citext[]))
       AND (cardinality($2::citext[]) = 0 OR "Pin"."company" = ANY($2::citext[]))
       AND (cardinality($3::citext[]) = 0 OR "Pin"."category" = ANY($3::citext[]))
+      AND (cardinality($4::citext[]) = 0 OR "Pin"."dateConfidence"::citext = ANY($4::citext[]))
       -- The Watch search choice: only pins this user watches.
-      AND ($4::integer IS NULL OR EXISTS (
+      AND ($5::integer IS NULL OR EXISTS (
         SELECT 1
         FROM "Favorite" AS "Favorites"
         WHERE "Favorites"."pinId" = "Pin"."id"
           AND "Favorites"."utcDeletedDateTime" IS NULL
-          AND "Favorites"."userId" = $4))
+          AND "Favorites"."userId" = $5))
     ORDER BY "Pin"."utcStartDateTime", "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"`,
-      [query.userNames, query.companies, query.categories, favoriteUserId == null ? null : favoriteUserId],
+      [query.userNames, query.companies, query.categories, query.confidences, favoriteUserId == null ? null : favoriteUserId],
     )
     .then(result);
 }
