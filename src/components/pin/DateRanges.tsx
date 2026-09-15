@@ -38,7 +38,7 @@ function Range({ label, range }: { label: string; range: DateRange }) {
           </span>
         ) : null}
         {isLowConfidence(best.confidence) ? (
-          <span className="font-medium text-amber-300" title="The best any source gives for this date is below the source rating 'estimated'">
+          <span className="font-medium text-warning-soft" title="The best any source gives for this date is below the source rating 'estimated'">
             Low confidence
           </span>
         ) : null}

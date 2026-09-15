@@ -1,6 +1,8 @@
 // The JSON shapes the API and server components hand to the UI. Dates are
 // ISO strings once serialised.
 
+import type { ThemePreference } from './theme';
+
 export type MediumJson = {
   id?: number;
   thumbName?: string;
@@ -136,6 +138,7 @@ export type SessionUser = {
   provider?: string;
   pictureUrl?: string;
   defaultFilterSpanPreference?: string;
+  themePreference?: ThemePreference | null;
 };
 
 // Converts a model object (with Dates and toJSON) into plain JSON data that

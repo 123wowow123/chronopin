@@ -37,7 +37,7 @@ export function PinMedia({
   }
   if (type === '3' && medium.html) {
     // Stored from the YouTube API's own embedHtml.
-    return <div className="embed-container" dangerouslySetInnerHTML={{ __html: safeEmbedHtml(medium.html) }} />;
+    return <div className="embed-container" dangerouslySetInnerHTML={{ __html: safeEmbedHtml(medium.html, `YouTube video: ${title}`) }} />;
   }
   if (unrenderable) {
     return null;

@@ -235,10 +235,10 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
       ) : null}
 
       <div className="flex items-center justify-between py-3">
-        <div className={pin.price != null && pin.price < 0 ? 'text-red-400' : ''}>
+        <div className={pin.price != null && pin.price < 0 ? 'text-danger' : ''}>
           {pin.price ? (
             <>
-              <span className="text-subtle">Cost</span> <span className="font-semibold text-emerald-400 tabular-nums">{money(pin.price, pin.priceCurrency)}</span>
+              <span className="text-subtle">Cost</span> <span className="font-semibold text-success tabular-nums">{money(pin.price, pin.priceCurrency)}</span>
             </>
           ) : null}
         </div>

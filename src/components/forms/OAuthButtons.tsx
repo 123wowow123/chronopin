@@ -12,11 +12,11 @@ export function OAuthButtons({ handle, validate }: { handle?: string; validate?:
   }
   return (
     <div className="grid gap-2.5 sm:grid-cols-2">
-      <button type="button" onClick={() => go('google')} className="btn bg-white text-neutral-900 hover:bg-neutral-200">
+      <button type="button" onClick={() => go('google')} className="btn bg-white text-neutral-900 ring-1 ring-line ring-inset hover:bg-neutral-200">
         <GoogleMark />
         Google
       </button>
-      <button type="button" onClick={() => go('facebook')} className="btn bg-[#1877f2] text-white hover:bg-[#2d86f5]">
+      <button type="button" onClick={() => go('facebook')} className="btn bg-[#1466d8] text-white hover:bg-[#1259bd]">
         <FacebookMark />
         Facebook
       </button>
@@ -45,7 +45,7 @@ function FacebookMark() {
 
 export function OrDivider({ children = 'or' }: { children?: React.ReactNode }) {
   return (
-    <div className="flex items-center gap-3 text-xs tracking-wider text-faint uppercase">
+    <div className="flex items-center gap-3 text-xs tracking-wider text-subtle uppercase">
       <span className="h-px flex-1 bg-line" />
       {children}
       <span className="h-px flex-1 bg-line" />

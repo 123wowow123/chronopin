@@ -111,7 +111,7 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
             className="field"
             rows={3}
           />
-          {error ? <div className="text-sm text-red-400">{error}</div> : null}
+          {error ? <div className="text-sm text-danger">{error}</div> : null}
           <button type="submit" className="btn btn-primary mt-2">
             Post
           </button>
@@ -189,7 +189,7 @@ function CommentItem({
               </button>
             ) : null}
             {isOwn ? (
-              <button type="button" onClick={onRemove} title="Delete comment" className="rounded-md p-1 text-subtle hover:bg-red-500/10 hover:text-red-400">
+              <button type="button" onClick={onRemove} title="Delete comment" className="rounded-md p-1 text-subtle hover:bg-red-500/10 hover:text-danger">
                 <Icon name="close" className="size-3.5" />
               </button>
             ) : null}

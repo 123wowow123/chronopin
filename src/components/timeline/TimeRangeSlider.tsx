@@ -192,7 +192,7 @@ export function TimeRangeSlider({
 
   // 20px thumbs with a 36px invisible hit area.
   const thumbClass =
-    'absolute top-1/2 size-5 -translate-x-1/2 -translate-y-1/2 cursor-grab touch-none rounded-full border-2 border-white shadow-md shadow-black/50 transition-transform hover:scale-110 after:absolute after:-inset-2 after:content-[""] focus:outline-none focus-visible:ring-2 focus-visible:ring-link active:cursor-grabbing';
+    'absolute top-1/2 size-5 -translate-x-1/2 -translate-y-1/2 cursor-grab touch-none rounded-full border-2 border-white shadow-md shadow-shade/50 transition-transform hover:scale-110 after:absolute after:-inset-2 after:content-[""] focus:outline-none focus-visible:ring-2 focus-visible:ring-link active:cursor-grabbing';
   const tickClass = 'rounded-md px-1 py-0.5 text-[11px] text-subtle hover:bg-raised hover:text-ink';
 
   return (

@@ -22,7 +22,7 @@ export function UserList({ initialUsers }: { initialUsers: AdminUser[] }) {
             <br />
             <span className="text-sm text-subtle">{user.email}</span>
           </div>
-          <button type="button" onClick={() => remove(user)} className="btn btn-sm btn-ghost text-red-400 hover:bg-red-500/10 hover:text-red-300" title="Delete user">
+          <button type="button" onClick={() => remove(user)} className="btn btn-sm btn-ghost text-danger hover:bg-red-500/10 hover:text-danger-soft" title="Delete user">
             Delete
           </button>
         </li>

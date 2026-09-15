@@ -15,8 +15,10 @@ export function safeHtml(html: string | null | undefined): string {
 }
 
 // Embeds (tweets, YouTube players) come from the providers' own APIs; only
-// their markup and the iframe/script they need survive.
-export function safeEmbedHtml(html: string | null | undefined): string {
+// their markup and the iframe/script they need survive. An iframe needs a
+// title to be named for screen readers; the YouTube API's embedHtml has none
+// (oEmbed's does), so frameTitle fills it in.
+export function safeEmbedHtml(html: string | null | undefined, frameTitle?: string): string {
   return sanitizeHtml(html || '', {
     allowedTags: ['iframe', 'blockquote', 'p', 'a', 'br'],
     allowedAttributes: {
@@ -26,6 +28,12 @@ export function safeEmbedHtml(html: string | null | undefined): string {
       a: ['href'],
     },
     allowedIframeHostnames: ['www.youtube.com', 'www.youtube-nocookie.com'],
+    transformTags: {
+      iframe: (tagName, attribs) => ({
+        tagName,
+        attribs: attribs.title?.trim() || !frameTitle ? attribs : { ...attribs, title: frameTitle },
+      }),
+    },
   });
 }
 

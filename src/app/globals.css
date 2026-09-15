@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
-/* The Chronopin palette: a cool, low-glare dark theme, as Tailwind tokens. */
+/* The Chronopin palette: a cool, low-glare dark theme, as Tailwind tokens.
+   The light theme redefines them below, under [data-theme="light"]. */
 @theme {
   --font-sans: var(--font-noto-sans), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
@@ -21,7 +22,8 @@
 
   --color-link: #7cb3f2;
   --color-accent: #3374d0;
-  --color-accent-hover: #3f82e0;
+  /* Darker, not lighter: white on anything brighter than accent drops below 4.5:1. */
+  --color-accent-hover: #2c68bd;
 
   --color-tag-today: var(--color-amber-400);
   --color-tag-trivia: var(--color-emerald-400);
@@ -30,6 +32,22 @@
   --color-past: #dca75c;
   --color-future: #6aa5e8;
 
+  /* Status text. Bright shades read on dark panels; light swaps in deep ones.
+     Their tinted backgrounds and rings (bg-red-500/15) suit both themes. */
+  --color-danger: var(--color-red-400);
+  --color-danger-soft: var(--color-red-300);
+  --color-success: var(--color-emerald-400);
+  --color-success-soft: var(--color-emerald-300);
+  --color-warning: var(--color-amber-400);
+  --color-warning-soft: var(--color-amber-300);
+  --color-info-soft: var(--color-sky-300);
+  --color-trivia-soft: var(--color-emerald-200);
+
+  /* Hairlines and washes over panels: white on dark, black on light. */
+  --color-tint: #fff;
+  /* Drop shadows. Light pages want them much fainter. */
+  --color-shade: #000;
+
   /* The header logo's pins jump one after another on hover. */
   --animate-hop: hop 0.34s ease-out both;
   @keyframes hop {
@@ -37,6 +55,47 @@
       translate: 0 -5px;
     }
   }
+}
+
+/* Tailwind's @theme puts the tokens on :root; these win on specificity. */
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --color-page: #f3f5f8;
+  --color-header: #ffffff;
+  --color-panel: #ffffff;
+  --color-field: #f7f8fa;
+  --color-raised: #eceff3;
+  --color-raised-2: #dde1e7;
+  --color-line: #dce0e6;
+
+  --color-ink: #15181d;
+  --color-muted: #3d444e;
+  --color-subtle: #5a616b;
+  --color-faint: #848b95;
+
+  --color-link: #1d62c2;
+  --color-accent: #2c6bc6;
+  --color-accent-hover: #2159ab;
+
+  --color-tag-today: var(--color-amber-500);
+  --color-tag-trivia: var(--color-emerald-500);
+  --color-rail: #cdd2d9;
+
+  --color-past: #8f5f12;
+  --color-future: #1f5eb0;
+
+  --color-danger: var(--color-red-600);
+  --color-danger-soft: var(--color-red-700);
+  --color-success: var(--color-emerald-700);
+  --color-success-soft: var(--color-emerald-800);
+  --color-warning: var(--color-amber-700);
+  --color-warning-soft: var(--color-amber-800);
+  --color-info-soft: var(--color-sky-800);
+  --color-trivia-soft: var(--color-emerald-800);
+
+  --color-tint: #000;
+  --color-shade: rgb(30 41 59 / 0.35);
 }
 
 @layer base {
@@ -99,7 +158,7 @@
 
   /* Text inputs, selects and textareas. */
   .field {
-    @apply w-full rounded-lg bg-field px-3 py-2 text-ink ring-1 ring-line transition-shadow ring-inset placeholder:text-faint focus:ring-2 focus:ring-link focus:outline-none;
+    @apply w-full rounded-lg bg-field px-3 py-2 text-ink ring-1 ring-line transition-shadow ring-inset placeholder:text-subtle focus:ring-2 focus:ring-link focus:outline-none;
   }
   /* Selects and suggestion inputs draw their own chevron: the native arrows sit
      flush against the edge (select) or render as a white triangle (datalist). */
@@ -134,7 +193,7 @@
     @apply rounded-xl border border-line bg-panel;
   }
   .floating {
-    @apply rounded-xl border border-white/[0.07] bg-panel shadow-2xl shadow-black/50;
+    @apply rounded-xl border border-tint/[0.07] bg-panel shadow-2xl shadow-shade/50;
   }
 
   /* A label over an image (place, company). */
@@ -147,27 +206,27 @@
     @apply relative block min-h-7 rounded-lg px-2.5 py-1 text-center text-sm leading-5 font-semibold tabular-nums ring-1 ring-inset;
   }
   .tag-date {
-    @apply bg-raised text-ink ring-white/[0.06];
+    @apply bg-raised text-ink ring-tint/[0.06];
   }
   .tag-countdown {
     @apply bg-panel text-muted ring-line;
   }
   .tag-today {
-    @apply bg-tag-today/15 text-amber-300 ring-tag-today/30;
+    @apply bg-tag-today/15 text-warning-soft ring-tag-today/30;
   }
   .tag-trivia {
-    @apply bg-tag-trivia/10 text-emerald-200 ring-tag-trivia/25;
+    @apply bg-tag-trivia/10 text-trivia-soft ring-tag-trivia/25;
   }
   /* A day's weekday-planet marker on the rail: a flat disc, cut out of the
      rail by a gap of page colour. Today's is amber, like its tags. */
   .rail-marker {
-    @apply border border-white/10 bg-panel text-link;
+    @apply border border-tint/10 bg-panel text-link;
     box-shadow:
       0 0 0 4px var(--color-page),
-      0 4px 14px 4px rgb(0 0 0 / 0.35);
+      0 4px 14px 4px color-mix(in oklab, var(--color-shade) 35%, transparent);
   }
   .rail-marker-today {
-    @apply border-tag-today/40 bg-tag-today/15 text-amber-300;
+    @apply border-tag-today/40 bg-tag-today/15 text-warning-soft;
   }
   /* Where today falls between days: a dot with a soft amber halo. */
   .today-dot {
@@ -226,7 +285,7 @@ html .leaflet-container {
 }
 html .leaflet-container .leaflet-popup-content-wrapper,
 html .leaflet-container .leaflet-popup-tip {
-  @apply bg-panel text-ink shadow-xl shadow-black/40;
+  @apply bg-panel text-ink shadow-xl shadow-shade/40;
 }
 html .leaflet-container .leaflet-popup-content-wrapper {
   @apply rounded-xl border border-line;

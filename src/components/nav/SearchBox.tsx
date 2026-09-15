@@ -275,7 +275,7 @@ export function SearchBox() {
       }}
       // As wide as its text (set above), never narrower; after the items it
       // also takes whatever of the row is left. An opened item is shaded.
-      className={`shrink-0 text-sm text-ink placeholder:text-faint focus:outline-none focus-visible:outline-none [&::-webkit-search-cancel-button]:hidden ${
+      className={`shrink-0 text-sm text-ink placeholder:text-subtle focus:outline-none focus-visible:outline-none [&::-webkit-search-cancel-button]:hidden ${
         editAt >= items.length ? 'min-w-[5rem] grow' : ''
       } ${editing ? 'h-7 rounded-md bg-raised px-1.5' : 'h-9 bg-transparent pr-2'}`}
       role="combobox"

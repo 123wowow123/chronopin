@@ -144,7 +144,7 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
               </a>
             ) : null}
           </div>
-          {scrapeError ? <p className="mt-1 text-sm text-amber-400">{scrapeError}</p> : null}
+          {scrapeError ? <p className="mt-1 text-sm text-warning">{scrapeError}</p> : null}
           {mode === 'edit' ? (
             <div className="mt-2 flex gap-2">
               <button type="button" className="btn btn-sm btn-secondary" onClick={() => scrape(values.sourceUrl)} disabled={scraping}>
@@ -277,7 +277,7 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
                 value={merchant.url ?? ''}
                 onChange={(e) => set('merchants', values.merchants.map((m, i) => (i === index ? { ...m, url: e.target.value } : m)))}
               />
-              <button type="button" aria-label="Remove merchant" className="rounded-lg px-2 text-subtle hover:bg-red-500/10 hover:text-red-400" onClick={() => set('merchants', values.merchants.filter((_, i) => i !== index))}>
+              <button type="button" aria-label="Remove merchant" className="rounded-lg px-2 text-subtle hover:bg-red-500/10 hover:text-danger" onClick={() => set('merchants', values.merchants.filter((_, i) => i !== index))}>
                 ✕
               </button>
             </div>
@@ -349,7 +349,7 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
         ) : null}
 
         {error ? (
-          <p role="alert" className="rounded-lg bg-red-500/10 px-3 py-2 text-sm text-red-300 ring-1 ring-red-500/20 ring-inset">
+          <p role="alert" className="rounded-lg bg-red-500/10 px-3 py-2 text-sm text-danger-soft ring-1 ring-red-500/20 ring-inset">
             {error}
           </p>
         ) : null}
@@ -411,7 +411,7 @@ function ReferencesEditor({
           <div key={index} className="mb-3">
             <div className="flex gap-2">
               <input aria-label="Reference URL" type="url" placeholder="https://…" className={inputClass} value={reference.url} onChange={(e) => update(index, { url: e.target.value })} />
-              <button type="button" aria-label="Remove reference" className="rounded-lg px-2 text-subtle hover:bg-red-500/10 hover:text-red-400" onClick={() => onChange(references.filter((_, i) => i !== index))}>
+              <button type="button" aria-label="Remove reference" className="rounded-lg px-2 text-subtle hover:bg-red-500/10 hover:text-danger" onClick={() => onChange(references.filter((_, i) => i !== index))}>
                 ✕
               </button>
             </div>
@@ -454,7 +454,7 @@ function OverriddenDates({ picked, allDay }: { picked: ReturnType<typeof formDat
           from the most confident {by.map(([side, r], i) => (
             <span key={side}>
               {i ? ' and ' : ''}
-              {side} ({hostOf(r.url)}, {r.confidence}%{isLowConfidence(r.confidence) ? <span className="text-amber-300"> - low confidence</span> : null})
+              {side} ({hostOf(r.url)}, {r.confidence}%{isLowConfidence(r.confidence) ? <span className="text-warning-soft"> - low confidence</span> : null})
             </span>
           ))}
         </>

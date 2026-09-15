@@ -37,7 +37,7 @@ export function WeatherIcon({ pinId, hasPlace }: { pinId: number; hasPlace: bool
     <span ref={ref} className="inline-flex items-center gap-1 text-xs text-muted" title={weather?.summary}>
       {weather ? (
         <>
-          <Icon name={weather.icon} className={`size-3.5 ${weather.kind === 'typical' ? 'text-subtle' : 'text-amber-400'}`} />
+          <Icon name={weather.icon} className={`size-3.5 ${weather.kind === 'typical' ? 'text-subtle' : 'text-warning'}`} />
           {weather.high ? <span>{weather.high}</span> : null}
         </>
       ) : null}

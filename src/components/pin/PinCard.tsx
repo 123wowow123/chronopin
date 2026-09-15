@@ -60,7 +60,7 @@ export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serve
     ) : null;
 
   return (
-    <article className="surface relative overflow-hidden pt-2.5 pb-1.5 transition-[border-color,box-shadow] hover:border-raised-2 hover:shadow-xl hover:shadow-black/30">
+    <article className="surface relative overflow-hidden pt-2.5 pb-1.5 transition-[border-color,box-shadow] hover:border-raised-2 hover:shadow-xl hover:shadow-shade/30">
       <div ref={contentRef} className="relative max-h-[600px] overflow-hidden">
         <div className="mx-3 flex items-center justify-between text-[11px] text-subtle [&_a]:relative [&_a]:after:absolute [&_a]:after:-inset-y-2 [&_a]:after:inset-x-0 [&_a]:after:content-['']">
           {/* A dot before every item but the first, kept on the item's line when the row wraps. */}
@@ -154,7 +154,7 @@ export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serve
       </div>
 
       <div className="mx-3 mt-2.5 grid grid-cols-[1fr_auto_1fr] items-center border-t border-line pt-1.5">
-        <div className={`text-sm font-medium tabular-nums ${pin.price != null && pin.price < 0 ? 'text-red-400' : 'text-emerald-400'}`}>
+        <div className={`text-sm font-medium tabular-nums ${pin.price != null && pin.price < 0 ? 'text-danger' : 'text-success'}`}>
           {pin.price ? money(pin.price, pin.priceCurrency) : null}
         </div>
         <div>

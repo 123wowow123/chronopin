@@ -211,7 +211,7 @@ export function NavMenu() {
           )}
         </button>
         {menuOpen ? (
-          <nav aria-label="Main" className="absolute top-full right-0 left-0 z-40 border-b border-line bg-header px-3 pt-3 pb-1.5 shadow-2xl shadow-black/50">
+          <nav aria-label="Main" className="absolute top-full right-0 left-0 z-40 border-b border-line bg-header px-3 pt-3 pb-1.5 shadow-2xl shadow-shade/50">
             <ViewSwitch pathname={pathname} className="mb-3" />
             {user ? (
               <>

@@ -50,7 +50,7 @@ export function PasswordForm({ userId, userName }: { userId: number; userName: s
         Enter your current password, then choose a new one for <strong>{userName}</strong>.
       </p>
       {message ? (
-        <p role="status" className="rounded-lg bg-emerald-500/10 px-3 py-2 text-sm text-emerald-300 ring-1 ring-emerald-500/20 ring-inset">
+        <p role="status" className="rounded-lg bg-emerald-500/10 px-3 py-2 text-sm text-success-soft ring-1 ring-emerald-500/20 ring-inset">
           {message}
         </p>
       ) : null}
@@ -83,7 +83,7 @@ export function PasswordForm({ userId, userName }: { userId: number; userName: s
         <input id="confirm" type="password" autoComplete="new-password" className="field" value={form.confirmPassword} onChange={set('confirmPassword')} />
       </div>
       {error ? (
-        <p role="alert" className="text-sm text-red-400">
+        <p role="alert" className="text-sm text-danger">
           {error}
         </p>
       ) : null}

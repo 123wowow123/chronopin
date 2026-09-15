@@ -55,7 +55,7 @@ export function FloatingControls({
         </button>
         {onToday ? (
           <button type="button" onClick={onToday} className="floating flex items-center gap-2 rounded-full px-3.5 py-2 text-sm font-medium text-ink hover:bg-raised">
-            <Icon name="target" className="size-4 text-tag-today" />
+            <Icon name="target" className="size-4 text-warning" />
             Today
           </button>
         ) : null}

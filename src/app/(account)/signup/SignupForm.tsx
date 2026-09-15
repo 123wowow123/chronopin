@@ -77,8 +77,8 @@ export function SignupForm() {
           <span className="pl-3 text-subtle">@</span>
           <input id="handle" maxLength={15} className="w-full bg-transparent py-2 pr-3 pl-0.5 text-ink focus:outline-none focus-visible:outline-none" value={form.handle} onChange={set('handle')} />
         </div>
-        {handleValid && available === false ? <p className="mt-1.5 text-sm text-red-400">User handle is not available</p> : null}
-        {handleValid && available ? <p className="mt-1.5 text-sm text-emerald-400">@{form.handle} is available</p> : null}
+        {handleValid && available === false ? <p className="mt-1.5 text-sm text-danger">User handle is not available</p> : null}
+        {handleValid && available ? <p className="mt-1.5 text-sm text-success">@{form.handle} is available</p> : null}
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
@@ -115,13 +115,13 @@ export function SignupForm() {
         </div>
       </div>
       {submitted && problems.length ? (
-        <ul role="alert" className="list-disc space-y-0.5 rounded-lg bg-red-500/10 py-2 pr-3 pl-7 text-sm text-red-300 ring-1 ring-red-500/20 ring-inset">
+        <ul role="alert" className="list-disc space-y-0.5 rounded-lg bg-red-500/10 py-2 pr-3 pl-7 text-sm text-danger-soft ring-1 ring-red-500/20 ring-inset">
           {problems.map((p) => (
             <li key={p}>{p}</li>
           ))}
         </ul>
       ) : null}
-      {error ? <p className="text-sm text-red-400">{error}</p> : null}
+      {error ? <p className="text-sm text-danger">{error}</p> : null}
       <button type="submit" disabled={busy} className="btn btn-primary w-full py-2.5">
         Sign up
       </button>

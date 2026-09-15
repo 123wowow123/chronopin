@@ -79,7 +79,7 @@ export function ProfileForm({ user }: { user: SessionUser }) {
                 Remove
               </button>
             ) : null}
-            <p className={`mt-2 text-sm ${pictureError ? 'text-red-400' : 'text-subtle'}`}>
+            <p className={`mt-2 text-sm ${pictureError ? 'text-danger' : 'text-subtle'}`}>
               {pictureError || 'Shown on your pins and comments. JPEG, PNG or GIF, up to 5 MB.'}
             </p>
           </div>
@@ -113,8 +113,8 @@ export function ProfileForm({ user }: { user: SessionUser }) {
           </label>
           <input id="email" type="email" className="field" value={form.email} onChange={set('email')} />
         </div>
-        {message ? <p role="status" className="text-sm text-emerald-400">{message}</p> : null}
-        {error ? <p role="alert" className="text-sm text-red-400">{error}</p> : null}
+        {message ? <p role="status" className="text-sm text-success">{message}</p> : null}
+        {error ? <p role="alert" className="text-sm text-danger">{error}</p> : null}
         <button type="submit" className="btn btn-primary">
           Save changes
         </button>

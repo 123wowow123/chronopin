@@ -493,6 +493,6 @@ update client for youtube and twitter
 - provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc. <https://aztro.readthedocs.io/en/latest>
 - Check out upcoming side calendar with astrology horrospoce <https://cafeastrology.com/astrologyof2017horoscopes.html>
 
-- watched view and should have different groups 
+- need job to scrape and update pin, any visit will trigger a scheduled update scape that night, along to new reference
 
-- add light theme and add user preference to change it
+- watched view and should have different groups 
