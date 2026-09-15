@@ -23,6 +23,10 @@ export function excludeE2e<P extends Row>(
   for (const pin of pins) {
     if (Array.isArray(pin.favorites)) (pin as Row).favorites = pin.favorites.filter((f: Row) => !isE2eUser(f.userId));
     if (Array.isArray(pin.likes)) (pin as Row).likes = pin.likes.filter((l: Row) => !isE2eUser(l.userId));
+    // A reference an e2e user added to a kept pin stays, uncredited: that user is not restored.
+    for (const r of Array.isArray(pin.references) ? pin.references : []) {
+      if (isE2eUser(r.addedByUserId)) Object.assign(r, { addedByUserId: null, addedByUserName: null, addedByUserPictureUrl: null });
+    }
   }
 
   // Only a company that e2e pins named and no kept pin uses; an unused company

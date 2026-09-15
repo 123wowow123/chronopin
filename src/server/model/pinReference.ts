@@ -3,7 +3,11 @@ import * as db from '../db';
 import type { Row } from '../db';
 import BasePin from './basePin';
 
-const prop = ['id', 'url', 'title', 'confidence', 'publishedDate', 'startDate', 'endDate', 'reasoning', 'utcCreatedDateTime'];
+// addedByUserName/addedByUserPictureUrl are read from the view, never written.
+const prop = [
+  'id', 'url', 'title', 'confidence', 'publishedDate', 'startDate', 'endDate', 'reasoning', 'utcCreatedDateTime',
+  'addedByUserId', 'addedByUserName', 'addedByUserPictureUrl',
+];
 
 export const REASONING_MAX = 2000;
 
@@ -13,6 +17,8 @@ export default class PinReference {
   declare _pin?: BasePin;
   declare id: number;
   declare pinId: number | undefined;
+  declare url: string;
+  declare addedByUserId: number | null | undefined;
 
   constructor(reference?: Row | null, pin?: BasePin | null) {
     if (reference) {
@@ -50,11 +56,12 @@ export default class PinReference {
       this.endDate || null,
       this.reasoning || null,
       this.utcCreatedDateTime || null,
+      this.addedByUserId || null,
     ].map((value) => (value === undefined ? null : value));
     const rows = await db.query(
       `
-      INSERT INTO "PinReference" ("pinId", "url", "title", "confidence", "publishedDate", "startDate", "endDate", "reasoning", "utcCreatedDateTime")
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, COALESCE($9::timestamptz, now()))
+      INSERT INTO "PinReference" ("pinId", "url", "title", "confidence", "publishedDate", "startDate", "endDate", "reasoning", "utcCreatedDateTime", "addedByUserId")
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, COALESCE($9::timestamptz, now()), $10)
       RETURNING "id", "utcCreatedDateTime"`,
       values,
     );

@@ -225,7 +225,7 @@ export function applyScrape(values: PinFormValues, scraped: Partial<PinJson>): P
 const num = (v: string) => (v.trim() === '' || isNaN(Number(v)) ? undefined : Number(v));
 
 // The references worth sending: a link and a confidence each.
-function formToReferences(values: Pick<PinFormValues, 'references'>): PinReferenceJson[] {
+export function formToReferences(values: Pick<PinFormValues, 'references'>): PinReferenceJson[] {
   return values.references
     .filter((r) => r.url.trim() && num(r.confidence) !== undefined)
     .map(

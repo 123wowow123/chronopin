@@ -16,6 +16,7 @@ import { applyScrape, EMPTY_FORM, formDates, formToPin, pinToForm, type PinFormV
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { pinPath } from '@/lib/seo';
 import type { CardPin, MediumJson, PinJson } from '@/lib/types';
+import { DuplicatePrompt, type DuplicateMatch } from './DuplicatePrompt';
 import { RichTextEditor } from './RichTextEditor';
 
 const CONFIDENCE_LEVELS = ['confirmed', 'scheduled', 'estimated', 'delayed', 'unknown'];
@@ -23,14 +24,28 @@ const CONFIDENCE_LEVELS = ['confirmed', 'scheduled', 'estimated', 'delayed', 'un
 const inputClass = 'field';
 const labelClass = 'field-label';
 
+// The draft as the duplicate check sees it, or '' when it has too little to check.
+function duplicateCheckKey(values: PinFormValues) {
+  const start = formDates(values).dates.utcStartDateTime;
+  return values.title.trim() && start ? JSON.stringify([values.title.trim(), values.sourceUrl.trim(), start, values.parentId ?? 0]) : '';
+}
+
 // Create, edit or respond to a pin. Pasting a source URL reads the page and
-// fills in whatever the author has not already typed.
-export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'respond'; pin?: PinJson; respondTo?: PinJson }) {
+// fills in whatever the author has not already typed. A new pin that looks
+// already pinned is held back while the author picks what to do instead.
+export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create' | 'edit' | 'respond'; pin?: PinJson; respondTo?: PinJson }) {
   const router = useRouter();
   const { user } = useSession();
   const [values, setValues] = useState<PinFormValues>(() =>
-    pin ? pinToForm(pin) : { ...EMPTY_FORM, parentId: respondTo?.id },
+    pin ? pinToForm(pin) : { ...EMPTY_FORM, parentId: respondToProp?.id },
   );
+  // Set by the page for /respond/:id, or by picking "Respond to it instead".
+  const [respondTo, setRespondTo] = useState(respondToProp);
+  const [matches, setMatches] = useState<DuplicateMatch[] | null>(null);
+  const checked = useRef<{ key: string; matches: DuplicateMatch[] }>({ key: '', matches: [] });
+  // The draft the author chose to post despite its matches.
+  const postAnyway = useRef('');
+  const formRef = useRef<HTMLFormElement>(null);
   const [scraping, setScraping] = useState(false);
   const [scrapeError, setScrapeError] = useState('');
   const [saving, setSaving] = useState(false);
@@ -49,6 +64,41 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
 
   const set = <K extends keyof PinFormValues>(key: K, value: PinFormValues[K]) => setValues((v) => ({ ...v, [key]: value }));
 
+  // Existing pins the draft would duplicate; nothing when editing, when the
+  // draft lacks a title or start, or when the check fails (it only advises).
+  async function findMatches(draft: PinFormValues): Promise<DuplicateMatch[]> {
+    const key = duplicateCheckKey(draft);
+    if (mode === 'edit' || !key) return [];
+    if (key === checked.current.key) return checked.current.matches;
+    const params = new URLSearchParams({ title: draft.title.trim(), sourceUrl: draft.sourceUrl.trim(), start: formDates(draft).dates.utcStartDateTime! });
+    if (draft.parentId) params.set('exclude', String(draft.parentId));
+    try {
+      const found = await api.get<DuplicateMatch[]>(`/api/pins/duplicates?${params}`);
+      checked.current = { key, matches: found };
+      return found;
+    } catch {
+      return [];
+    }
+  }
+
+  function respondInstead(parent: PinJson) {
+    setRespondTo(parent);
+    set('parentId', parent.id);
+    setMatches(null);
+    setError('');
+  }
+
+  function stopResponding() {
+    setRespondTo(undefined);
+    set('parentId', undefined);
+  }
+
+  function submitAnyway() {
+    postAnyway.current = duplicateCheckKey(values);
+    setMatches(null);
+    formRef.current?.requestSubmit();
+  }
+
   // A paste and the blur after it would otherwise read the page twice.
   const lastScraped = useRef('');
   async function scrape(url: string, { onlyMedia = false } = {}) {
@@ -60,6 +110,12 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
     try {
       const scraped = await api.get<Partial<PinJson>>(`/api/scrape?url=${encodeURIComponent(url.trim())}`);
       setValues((v) => (onlyMedia ? applyScrape(v, { media: scraped.media }) : applyScrape(v, scraped)));
+      // Warn as soon as the page is read rather than after the author has
+      // finished the form. (A paste fires before the field holds the URL.)
+      if (!onlyMedia && mode !== 'edit') {
+        const found = await findMatches(applyScrape({ ...values, sourceUrl: url.trim() }, scraped));
+        if (found.length) setMatches(found);
+      }
     } catch (err) {
       setScrapeError(err instanceof ApiError ? `Could not read that page (${err.status}).` : 'Could not read that page.');
     } finally {
@@ -84,6 +140,16 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
     }
 
     setSaving(true);
+    const key = duplicateCheckKey(values);
+    if (mode !== 'edit' && key !== postAnyway.current) {
+      const found = await findMatches(values);
+      if (found.length) {
+        setMatches(found);
+        setSaving(false);
+        return;
+      }
+    }
+    setMatches(null);
     try {
       const body = formToPin(values);
       const saved = mode === 'edit' ? await api.put<PinJson>(`/api/pins/${values.id}`, body) : await api.post<PinJson>('/api/pins', body);
@@ -115,10 +181,10 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
 
   const picked = useMemo(() => formDates(values), [values]);
 
-  const title = mode === 'edit' ? 'Edit Pin' : mode === 'respond' ? 'Respond to Pin' : 'Create Pin';
+  const title = mode === 'edit' ? 'Edit Pin' : respondTo ? 'Respond to Pin' : 'Create Pin';
 
   return (
-    <form onSubmit={submit} className="mx-auto grid max-w-6xl gap-8 px-4 py-6 lg:grid-cols-[1fr_420px]" noValidate>
+    <form ref={formRef} onSubmit={submit} className="mx-auto grid max-w-6xl gap-8 px-4 py-6 lg:grid-cols-[1fr_420px]" noValidate>
       <fieldset disabled={saving} className="min-w-0 space-y-4">
         <h1 className="text-2xl font-semibold tracking-tight">{title}</h1>
 
@@ -126,6 +192,11 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
           <div>
             <span className={labelClass}>Responding to</span>
             <Link href={pinPath(respondTo)}>{respondTo.title}</Link>
+            {respondToProp ? null : (
+              <button type="button" className="btn btn-ghost btn-sm ml-2" onClick={stopResponding}>
+                Post as a new pin instead
+              </button>
+            )}
           </div>
         ) : null}
 
@@ -358,6 +429,7 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
           </div>
         ) : null}
 
+        {matches?.length ? <DuplicatePrompt matches={matches} draft={values} onRespond={respondInstead} onPostAnyway={submitAnyway} /> : null}
         {error ? (
           <p role="alert" className="rounded-lg bg-red-500/10 px-3 py-2 text-sm text-danger-soft ring-1 ring-red-500/20 ring-inset">
             {error}
@@ -424,6 +496,7 @@ function ReferencesEditor({
           reference.publishedDate && `published ${formatDay(reference.publishedDate)}`,
           reference.startDate && `starts ${formatDay(reference.startDate)}`,
           reference.endDate && `ends ${formatDay(reference.endDate)}`,
+          reference.addedByUserName && `added by ${reference.addedByUserName}`,
         ].filter(Boolean);
         return (
           <div key={index} className="mb-3">

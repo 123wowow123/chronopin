@@ -7,6 +7,8 @@ const types = {
   comment: 'comment',
   // Someone replied to your comment.
   reply: 'reply',
+  // Someone added references to a pin you created, instead of pinning it again.
+  reference: 'reference',
 } as const;
 
 // How many the bell lists at most; older ones are still in the table.

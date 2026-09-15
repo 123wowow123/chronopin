@@ -4,6 +4,7 @@ import { emitPinEvent } from '@/server/events';
 import { HttpError, json, paginationHeaders, paginationLink, readJson, route } from '@/server/http';
 import Pin from '@/server/model/pin';
 import PinReference from '@/server/model/pinReference';
+import { attributeReferences } from '@/lib/referenceAttribution';
 import { rejectDuplicateSourceUrl } from '@/server/services/duplicatePin';
 import { invalidatePin } from '@/server/services/cache';
 import { getPins } from '@/server/services/timeline';
@@ -41,6 +42,8 @@ export const POST = route(async (request: NextRequest) => {
     throw new HttpError(400, referenceProblem);
   }
   await rejectDuplicateSourceUrl(pin);
+  // A new pin's references are all its author's.
+  attributeReferences(pin.references, { existing: [], editorId: user.id, authorId: user.id });
 
   const { pin: saved } = await pin.save();
   emitPinEvent('save', saved, { userId: user.id });

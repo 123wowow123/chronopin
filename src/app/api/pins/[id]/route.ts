@@ -8,6 +8,7 @@ import PinReference from '@/server/model/pinReference';
 import type User from '@/server/model/user';
 import { invalidatePin } from '@/server/services/cache';
 import { rejectDuplicateSourceUrl } from '@/server/services/duplicatePin';
+import { attributeReferences } from '@/lib/referenceAttribution';
 
 type Ctx = RouteContext<'/api/pins/[id]'>;
 
@@ -48,6 +49,9 @@ const update = route(async (request: NextRequest, ctx: Ctx) => {
   // Keep whoever posted it as the author; an edit is not a transfer of
   // ownership, and an update writes userId on every save.
   pin.userId = existing.userId;
+  // References are re-saved wholesale: the ones the pin had keep their
+  // contributor, and any new one an admin adds to someone else's pin is theirs.
+  attributeReferences(pin.references, { existing: existing.references, editorId: user.id, authorId: existing.userId });
   // Only a changed URL is checked, so pins that already share one stay editable.
   if (sameSourceUrlKey(pin.sourceUrl) !== sameSourceUrlKey(existing.sourceUrl)) {
     await rejectDuplicateSourceUrl(pin);

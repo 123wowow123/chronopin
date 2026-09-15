@@ -1,4 +1,5 @@
 import { Icon } from '@/components/ui/Icon';
+import { UserAvatar } from '@/components/ui/UserAvatar';
 import { CitedText } from './CitedText';
 import { orderEvidence } from '@/lib/citations';
 import type { DateClaim, DateRange } from '@/lib/dateClaims';
@@ -7,6 +8,7 @@ import { formatDay } from './DateRanges';
 import { EditReferencesLink } from './EditReferencesLink';
 import { ExpandableList } from './ExpandableList';
 import { confidenceClass, PinConfidence } from './PinConfidence';
+import { RefineLink } from './RefineLink';
 
 // Beyond this many, the rest of the list folds away.
 const VISIBLE = 5;
@@ -87,6 +89,16 @@ export function PinReferences({
           <div className="mt-0.5 flex flex-wrap gap-x-2 text-xs text-subtle">
             <span className="truncate">{site}</span>
             {dated ? <span>· {dated}</span> : null}
+            {/* Credited when someone other than the pin's author added it. */}
+            {!reference.isSource && reference.addedByUserName ? (
+              <span className="inline-flex items-center gap-1">
+                · Added by
+                <RefineLink field="user" value={reference.addedByUserName} className="inline-flex items-center gap-1 text-muted hover:text-ink hover:no-underline">
+                  <UserAvatar userName={reference.addedByUserName} pictureUrl={reference.addedByUserPictureUrl} className="size-4 text-[8px]" />
+                  {reference.addedByUserName}
+                </RefineLink>
+              </span>
+            ) : null}
             {dates.map(([label, claim]) => (
               <span key={label} className={claim.used ? 'font-medium text-muted' : undefined} title={claim.used ? 'The pin uses this date: it is the most confident' : undefined}>
                 · {label} {formatDay(claim.day)}

@@ -38,6 +38,10 @@ export type PinReferenceJson = {
   // Why it got that confidence: what the page says about the event and date.
   reasoning?: string;
   utcCreatedDateTime?: string;
+  // Who added it, when that was not the pin's author (set by the server).
+  addedByUserId?: number;
+  addedByUserName?: string;
+  addedByUserPictureUrl?: string;
 };
 
 export type PinUserJson = {

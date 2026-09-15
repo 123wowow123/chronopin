@@ -9,6 +9,7 @@ import { parseArgs } from 'node:util';
 import _ from 'lodash';
 import * as db from '@/server/db';
 import { Comment, Company, DateTime, Follow, FullPins, MediumType, User, Users } from '@/server/model';
+import AiFeedback from '@/server/model/aiFeedback';
 import PinDuplicate from '@/server/model/pinDuplicate';
 import { fetchJson } from '@/server/util/fetchJson';
 import log from '@/server/util/log';
@@ -23,6 +24,7 @@ const { values: flags } = parseArgs({
     commentfile: { type: 'string', default: './scripts/backup/seedComments.json' },
     followfile: { type: 'string', default: './scripts/backup/seedFollows.json' },
     duplicatefile: { type: 'string', default: './scripts/backup/seedPinDuplicates.json' },
+    aifeedbackfile: { type: 'string', default: './scripts/backup/seedAiFeedback.json' },
     companyfile: { type: 'string', default: './scripts/backup/seedCompanies.json' },
     aphelionfile: { type: 'string', default: './scripts/backup/aphelion.json' },
     equinoxfile: { type: 'string', default: './scripts/backup/equinox.json' },
@@ -79,6 +81,12 @@ async function saveDB() {
   const keptPinIds = new Set(data.pins.map((p) => p.id));
   const duplicates = (await PinDuplicate.getAll()).filter((d) => keptPinIds.has(d.pinId) && keptPinIds.has(d.otherPinId));
   writeJson(flags.duplicatefile, duplicates);
+
+  // What people told the AI a pin is missing, for kept pins by kept users.
+  console.log('Backup AI Feedback');
+  const keptUserIds = new Set(data.users.map((u) => u.id));
+  const feedback = (await AiFeedback.getAll()).filter((f) => keptPinIds.has(f.pinId) && (f.userId == null || keptUserIds.has(f.userId)));
+  writeJson(flags.aifeedbackfile, feedback);
 
   console.log('Data Backup Complete');
 }
@@ -163,6 +171,14 @@ async function seedDB() {
       await PinDuplicate.restore(readJson(flags.duplicatefile));
     } catch (error) {
       log.error('Pin Duplicates Save Error', JSON.stringify(error));
+    }
+  }
+
+  if (existsSync(flags.aifeedbackfile)) {
+    try {
+      await AiFeedback.restore(readJson(flags.aifeedbackfile));
+    } catch (error) {
+      log.error('AI Feedback Save Error', JSON.stringify(error));
     }
   }
 

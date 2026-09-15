@@ -127,6 +127,10 @@ export function NotificationBell() {
                           <span className="font-semibold">{n.pinTitle}</span>
                           {n.commentText ? <span className="mt-0.5 line-clamp-2 block text-muted">“{n.commentText}”</span> : null}
                         </Link>
+                      ) : n.type === 'reference' && n.pinId ? (
+                        <Link href={`${pinPath({ id: n.pinId, title: n.pinTitle ?? '' })}#references-heading`} className="block text-ink" onClick={() => setOpen(false)}>
+                          <span className="font-semibold">{n.actor.userName}</span> added references to <span className="font-semibold">{n.pinTitle}</span>
+                        </Link>
                       ) : null}
                       <time className="block text-xs text-subtle" dateTime={n.utcCreatedDateTime}>
                         {timeAgo(n.utcCreatedDateTime)}

@@ -1,6 +1,6 @@
 import * as db from '../db';
 import Pin, { sameSourceUrlKey } from '../model/pin';
-import PinDuplicate from '../model/pinDuplicate';
+import PinDuplicate, { type DuplicateReason } from '../model/pinDuplicate';
 import { SearchPins } from '../model/searchPin';
 import { HttpError } from '../util/httpError';
 import log from '../util/log';
@@ -26,11 +26,50 @@ export const SIMILAR_TITLE_MIN = 0.8;
 export const MAX_DAYS_APART = 1;
 const SIMILAR_CANDIDATES = 10;
 
-// Suggests duplicates for a pin: live pins starting within a day of it that
-// share its source URL or closely match its title. Earlier suggestions an
+export type DuplicateMatch = { reason: DuplicateReason; score: number | null };
+
+// Live pins (other than pinId, 0 for a pin not saved yet) starting within a
+// day of start that share the source URL or closely match the title, keyed by
+// pin id. A search service that is down only skips the title match.
+export async function findDuplicates({
+  pinId = 0,
+  title,
+  sourceUrl,
+  utcStartDateTime,
+}: {
+  pinId?: number;
+  title: string | null | undefined;
+  sourceUrl: string | null | undefined;
+  utcStartDateTime: Date | string;
+}): Promise<Map<number, DuplicateMatch>> {
+  const found = new Map<number, DuplicateMatch>();
+  const urlKey = sameSourceUrlKey(sourceUrl);
+  if (urlKey) {
+    for (const id of await PinDuplicate.sameSourceUrl(pinId, utcStartDateTime, urlKey, MAX_DAYS_APART)) {
+      found.set(id, { reason: 'sourceUrl', score: null });
+    }
+  }
+
+  if (title?.trim()) {
+    try {
+      const hits = (await SearchPins.nearest(title, SIMILAR_CANDIDATES)).filter((hit) => hit.id !== pinId && hit.score >= SIMILAR_TITLE_MIN);
+      const scores = new Map(hits.map((hit) => [hit.id, hit.score]));
+      const sameDay = await PinDuplicate.withinDays(pinId, utcStartDateTime, [...scores.keys()], MAX_DAYS_APART);
+      for (const id of sameDay) {
+        if (!found.has(id)) {
+          found.set(id, { reason: 'similar', score: scores.get(id)! });
+        }
+      }
+    } catch (err) {
+      log.warn(`duplicate title check skipped for ${pinId ? `pin ${pinId}` : 'a new pin'}:`, (err as Error).message);
+    }
+  }
+  return found;
+}
+
+// Suggests duplicates for a pin (see findDuplicates). Earlier suggestions an
 // edit's new date rules out are dropped; decided pairs are left alone.
-// A search service that is down only skips the title match. Resolves to the
-// number of new suggestions.
+// Resolves to the number of new suggestions.
 export async function suggestDuplicates(pinId: number): Promise<number> {
   const [pin] = await db.query<{ title: string; sourceUrl: string | null; utcStartDateTime: Date }>(
     `SELECT "title", "sourceUrl", "utcStartDateTime" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`,
@@ -41,28 +80,7 @@ export async function suggestDuplicates(pinId: number): Promise<number> {
   }
   await PinDuplicate.clearStaleSuggestions(pinId, MAX_DAYS_APART);
 
-  const found = new Map<number, { reason: 'similar' | 'sourceUrl'; score: number | null }>();
-  const urlKey = sameSourceUrlKey(pin.sourceUrl);
-  if (urlKey) {
-    for (const id of await PinDuplicate.sameSourceUrl(pinId, pin.utcStartDateTime, urlKey, MAX_DAYS_APART)) {
-      found.set(id, { reason: 'sourceUrl', score: null });
-    }
-  }
-
-  if (pin.title?.trim()) {
-    try {
-      const hits = (await SearchPins.nearest(pin.title, SIMILAR_CANDIDATES)).filter((hit) => hit.id !== pinId && hit.score >= SIMILAR_TITLE_MIN);
-      const scores = new Map(hits.map((hit) => [hit.id, hit.score]));
-      const sameDay = await PinDuplicate.withinDays(pinId, pin.utcStartDateTime, [...scores.keys()], MAX_DAYS_APART);
-      for (const id of sameDay) {
-        if (!found.has(id)) {
-          found.set(id, { reason: 'similar', score: scores.get(id)! });
-        }
-      }
-    } catch (err) {
-      log.warn(`duplicate title check skipped for pin ${pinId}:`, (err as Error).message);
-    }
-  }
+  const found = await findDuplicates({ pinId, ...pin });
 
   let added = 0;
   for (const [id, { reason, score }] of found) {

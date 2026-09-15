@@ -40,6 +40,11 @@ test.describe.serial('a signed-in author', () => {
     await page.getByLabel('Date confidence').selectOption('estimated');
     await page.getByLabel('Why').fill('A target, per the source');
     await page.getByRole('button', { name: 'Submit' }).click();
+    // Earlier runs leave pins with this link and date behind, so the form may
+    // first offer them as duplicates; this run posts its own pin regardless.
+    const postMine = page.getByRole('button', { name: /post my pin/ });
+    await Promise.race([page.waitForURL(/\/pin\/\d+\//), postMine.waitFor()]);
+    if (await postMine.isVisible()) await postMine.click();
 
     await expect(page).toHaveURL(/\/pin\/\d+\/e2e-launch/);
     await expect(page.getByRole('button', { name: 'Submit' })).toHaveCount(0);
