@@ -327,8 +327,10 @@ html .leaflet-container a.leaflet-popup-close-button {
 html .leaflet-container .leaflet-bar {
   @apply overflow-hidden rounded-lg border-line shadow-lg;
 }
+/* Leaflet's zoom buttons are 26px, 30px once it spots a touch screen; below
+   lg they get the 44px finger target the rest of the controls use. */
 html .leaflet-container .leaflet-bar a {
-  @apply border-line bg-panel text-ink hover:bg-raised;
+  @apply border-line bg-panel text-ink max-lg:size-11 max-lg:text-2xl max-lg:leading-11 hover:bg-raised;
 }
 html .leaflet-container .leaflet-control-attribution {
   @apply bg-panel/80 text-subtle;
