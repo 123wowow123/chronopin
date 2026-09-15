@@ -37,7 +37,14 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
   const q = first(params.q);
   const onlyWatched = first(params.f).toLowerCase() === 'watch';
   const [user, timeZone] = await Promise.all([viewerUser(), viewerTimeZone()]);
-  const page = await searchPage(q, user?.id ?? null, onlyWatched && !!user);
+  // Only a search with something typed has an order of relevance.
+  const view = {
+    sort: q.trim() && first(params.sort) === 'relevance' ? ('relevance' as const) : ('date' as const),
+    posted: spanFromParam(first(params.posted), DEFAULT_POSTED_WITHIN),
+    past: spanFromParam(first(params.past), null),
+    future: spanFromParam(first(params.future), null),
+  };
+  const page = await searchPage(q, user?.id ?? null, onlyWatched && !!user, view);
 
   const all = specialtyDays as Record<string, string[]>;
   const days: Record<string, string[]> = {};
@@ -54,7 +61,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
       <h1 className="sr-only">{q ? `Pins matching ${q}` : 'Search pins'}</h1>
       <SearchResults
         key={`${q}|${onlyWatched}`}
-        pins={toCardPins(page.pins)}
+        initialPage={{ sort: view.sort, pins: toCardPins(page.pins), links: page.links ?? {} }}
         serverTimeZone={timeZone}
         serverNow={now.toISOString()}
         searchedUser={page.user}
@@ -62,12 +69,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
         error={page.error}
         query={q}
         onlyWatched={onlyWatched && !!user}
-        initialView={{
-          sort: first(params.sort) === 'relevance' ? 'relevance' : 'date',
-          postedWithin: spanFromParam(first(params.posted), DEFAULT_POSTED_WITHIN),
-          past: spanFromParam(first(params.past), null),
-          future: spanFromParam(first(params.future), null),
-        }}
+        initialView={{ sort: view.sort, postedWithin: view.posted, past: view.past, future: view.future }}
       />
     </>
   );

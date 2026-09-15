@@ -5,6 +5,7 @@ import { parseLinkHeader } from '@/lib/client/api';
 import { useNow } from '@/lib/client/now';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
+import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
 import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { dayKeyIn } from '@/lib/format';
@@ -18,18 +19,6 @@ import { TimeBlock, TodayMarker } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
 
 type Links = { previous?: string; next?: string };
-
-// All specialty days, fetched once when a page beyond the first needs them.
-let specialtyRequest: Promise<Record<string, string[]>> | null = null;
-function loadSpecialtyDays() {
-  specialtyRequest ??= fetch('/api/specialty-days')
-    .then((res) => res.json())
-    .catch(() => {
-      specialtyRequest = null;
-      return {};
-    });
-  return specialtyRequest;
-}
 
 async function fetchPage(query: string): Promise<{ page: TimelinePage; links: Links }> {
   const res = await fetch(`/api/main${query}`, { credentials: 'same-origin' });

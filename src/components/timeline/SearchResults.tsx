@@ -1,17 +1,20 @@
 'use client';
 
-import { useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { FollowButton } from '@/components/pin/FollowButton';
 import { CARD_GRID } from '@/components/pin/cardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { UserAvatar } from '@/components/ui/UserAvatar';
+import { parseLinkHeader } from '@/lib/client/api';
+import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
+import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
 import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { dayKeyIn } from '@/lib/format';
 import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, formatSpan, offsetDate, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSpan';
-import { buildBags, pinTense, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
-import type { CardPin } from '@/lib/types';
+import { buildBags, pinDayKey, pinTense, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
+import type { CardPin, SearchPage } from '@/lib/types';
 import { SearchCategoryFilter } from './CategoryFilter';
 import { FloatingControls } from './FloatingControls';
 import { TimeBlock, TodayMarker } from './TimeBlock';
@@ -40,20 +43,41 @@ function SortToggle({ value, onChange, className = '' }: { value: SortBy; onChan
   );
 }
 
-// Search results: on the timeline by date (opening on today), or as a flat
-// list ranked by relevance for free-text searches.
+type Links = { previous?: string; next?: string };
+
+// One sort's results so far: the pages loaded and the links on from them.
+type ResultList = { pins: CardPin[]; links: Links; status: 'loading' | 'ready' | 'error' };
+
+async function fetchSearchPage(query: string): Promise<{ pins: CardPin[]; links: Links }> {
+  const res = await fetch(`/api/pins/search${query}`, { credentials: 'same-origin' });
+  if (!res.ok) {
+    throw new Error(`search page failed: ${res.status}`);
+  }
+  const page = (await res.json()) as SearchPage;
+  return {
+    pins: page.pins.map((pin) => ({ ...pin, safeDescription: safeHtmlInBrowser(pin.description) })),
+    links: parseLinkHeader(res.headers.get('link')),
+  };
+}
+
+// Search results: on the timeline by date (opening on today), or as a grid
+// ranked by relevance for free-text searches. Each arrives a page at a time:
+// by date, earlier and later pages load as the reader nears either end; by
+// relevance, the next best as they near the bottom. Each sort keeps its own
+// pages, loaded the first time it shows.
 export function SearchResults({
-  pins,
+  initialPage,
   serverTimeZone,
   serverNow,
   searchedUser,
-  specialtyDays,
+  specialtyDays: initialSpecialtyDays,
   error,
   query = '',
   onlyWatched = false,
   initialView = {},
 }: {
-  pins: CardPin[];
+  // The first page, for the sort the URL asked for.
+  initialPage: { sort: SortBy; pins: CardPin[]; links: Links };
   serverTimeZone: string;
   serverNow: string;
   searchedUser?: { id: number; userName: string };
@@ -68,11 +92,12 @@ export function SearchResults({
   const [postedWithin, setPostedWithin] = useState<string | null>(initialView.postedWithin ?? DEFAULT_POSTED_WITHIN);
   // Any search can sort: a filter-only one (category:, user:) has no scores, so
   // by relevance it keeps date order but still gets the grid and start filter.
-  const canSort = !!query.trim() || pins.some((p) => p.searchScore != null);
-  const [sortBy, setSortBy] = useState<SortBy>(canSort && initialView.sort === 'relevance' ? 'relevance' : 'date');
+  const canSort = !!query.trim();
+  const [sortBy, setSortBy] = useState<SortBy>(initialPage.sort);
   const [relevanceShown, setRelevanceShown] = useState(sortBy === 'relevance');
   // Relevance loses the timeline's sense of when, so it filters by start instead.
   const [startSpan, setStartSpan] = useState<{ past: string | null; future: string | null }>({ past: initialView.past ?? null, future: initialView.future ?? null });
+  const [specialtyDays, setSpecialtyDays] = useState(initialSpecialtyDays);
 
   useQueryState({
     sort: sortBy === 'relevance' ? 'relevance' : null,
@@ -81,37 +106,114 @@ export function SearchResults({
     future: spanToParam(startSpan.future, null),
   });
 
-  // Results are a complete set, so "posted within" filters them in place.
-  const visible = useMemo(() => {
-    if (!postedWithin) return pins;
-    const cutoff = offsetDate(new Date(serverNow), postedWithin, -1);
-    return cutoff ? pins.filter((p) => p.utcCreatedDateTime && new Date(p.utcCreatedDateTime) >= cutoff) : pins;
-  }, [pins, postedWithin, serverNow]);
+  const [lists, setLists] = useState<Partial<Record<SortBy, ResultList>>>({
+    [initialPage.sort]: { pins: initialPage.pins, links: initialPage.links, status: error ? 'error' : 'ready' },
+  });
+  // Bumped when a sort's results start over, so answers for the old ones are dropped.
+  const loadToken = useRef<Record<SortBy, number>>({ date: 0, relevance: 0 });
+  const busy = useRef(new Set<string>());
+  const scrolled = useRef(false);
+  const prependAnchor = useRef<{ height: number; top: number } | null>(null);
+
+  const datePins = lists.date?.pins;
+  const rankedPins = lists.relevance?.pins;
+  const shown = lists[sortBy];
+
+  // The filters are the server's to apply now, so a change starts the results
+  // over: the sort on screen reloads, the other when it next shows.
+  function reload(sort: SortBy, posted: string | null, span: typeof startSpan) {
+    const token = ++loadToken.current[sort];
+    if (sort === 'date') scrolled.current = false;
+    setLists((current) => ({ ...current, [sort]: { pins: [], links: {}, status: 'loading' } }));
+    const params = new URLSearchParams({ q: query, sort });
+    if (onlyWatched) params.set('f', 'watch');
+    if (posted) params.set('created_within', posted);
+    if (sort === 'relevance' && span.past) params.set('start_past', span.past);
+    if (sort === 'relevance' && span.future) params.set('start_future', span.future);
+    fetchSearchPage(`?${params.toString()}`)
+      .then(({ pins, links }) => {
+        if (token === loadToken.current[sort]) setLists((current) => ({ ...current, [sort]: { pins, links, status: 'ready' } }));
+      })
+      .catch(() => {
+        if (token === loadToken.current[sort]) setLists((current) => ({ ...current, [sort]: { pins: [], links: {}, status: 'error' } }));
+      });
+  }
+
+  const changePostedWithin = (within: string | null) => {
+    if (within === postedWithin) return;
+    setPostedWithin(within);
+    const other = sortBy === 'date' ? 'relevance' : 'date';
+    loadToken.current[other]++;
+    setLists((current) => ({ ...current, [other]: undefined }));
+    reload(sortBy, within, startSpan);
+  };
+
+  const changeStartSpan = (span: typeof startSpan) => {
+    setStartSpan(span);
+    reload('relevance', postedWithin, span);
+  };
+
+  // The latest lists for loadMore, which an observer made a render ago can call.
+  const listsRef = useRef(lists);
+  useLayoutEffect(() => {
+    listsRef.current = lists;
+  }, [lists]);
+
+  const loadMore = useCallback(
+    async (sort: SortBy, direction: 'previous' | 'next') => {
+      const query = listsRef.current[sort]?.links[direction];
+      const key = `${sort}:${direction}`;
+      if (!query || busy.current.has(key)) return;
+      busy.current.add(key);
+      const token = loadToken.current[sort];
+      try {
+        const page = await fetchSearchPage(query);
+        if (token !== loadToken.current[sort] || listsRef.current[sort]?.links[direction] !== query) return;
+        if (direction === 'previous') {
+          prependAnchor.current = { height: document.documentElement.scrollHeight, top: window.scrollY };
+        }
+        setLists((current) => {
+          const list = current[sort];
+          if (!list || list.links[direction] !== query) return current;
+          const have = new Set(list.pins.map((p) => p.id));
+          const added = page.pins.filter((p) => !have.has(p.id));
+          return {
+            ...current,
+            [sort]: {
+              ...list,
+              pins: direction === 'previous' ? [...added, ...list.pins] : [...list.pins, ...added],
+              // A page with nothing new ends that way, rather than asking again.
+              links: { ...list.links, [direction]: added.length ? page.links[direction] : undefined },
+            },
+          };
+        });
+      } catch {
+        // Try again on the next scroll.
+      } finally {
+        busy.current.delete(key);
+      }
+    },
+    // A new object each change, so the observer below is remade and checks
+    // again whether a sentinel still shows once a page is in.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [lists],
+  );
+
+  useEffect(() => {
+    if (!datePins) return;
+    const missing = datePins.some((pin) => !(pinDayKey(pin, timeZone).slice(5) in specialtyDays));
+    if (missing) loadSpecialtyDays().then((all) => setSpecialtyDays(all));
+  }, [datePins, specialtyDays, timeZone]);
 
   const todayKey = dayKeyIn(serverNow, timeZone);
-  const bags = useMemo(() => buildBags(visible, [], timeZone), [visible, timeZone]);
+  const bags = useMemo(() => buildBags(datePins ?? [], [], timeZone), [datePins, timeZone]);
   const marker = resolveTodayMarker(bags, todayKey);
-  // By relevance, pins drop the timeline's day grouping and rail entirely:
-  // just a flat ranked list.
-  const ranked = useMemo(() => {
-    const now = new Date(serverNow);
-    const from = startSpan.past ? offsetDate(now, startSpan.past, -1) : null;
-    const to = startSpan.future ? offsetDate(now, startSpan.future, 1) : null;
-    return visible
-      .filter((p) => {
-        const start = new Date(p.utcStartDateTime);
-        return !(from && start < from) && !(to && start > to);
-      })
-      .sort((a, b) => (b.searchScore ?? 0) - (a.searchScore ?? 0));
-  }, [visible, startSpan, serverNow]);
-  const shownCount = sortBy === 'relevance' ? ranked.length : visible.length;
 
   const scrollToToday = () => {
     const id = todayScrollId(bags, marker);
     if (id) document.getElementById(id)?.scrollIntoView({ block: 'start' });
   };
 
-  const scrolled = useRef(false);
   useLayoutEffect(() => {
     if (scrolled.current || sortBy !== 'date' || !bags.length) return;
     scrolled.current = true;
@@ -125,6 +227,7 @@ export function SearchResults({
     scrollBySort.current[sortBy] = window.scrollY;
     setSortBy(next);
     if (next === 'relevance') setRelevanceShown(true);
+    if (!lists[next]) reload(next, postedWithin, startSpan);
   };
   const shownSort = useRef(sortBy);
   useLayoutEffect(() => {
@@ -134,6 +237,40 @@ export function SearchResults({
   }, [sortBy]);
   // After the effects above, so the position it records on mount is today's.
   useManualScrollRestoration();
+
+  // Keep the view still when a page is added above it.
+  useLayoutEffect(() => {
+    const anchor = prependAnchor.current;
+    if (anchor) {
+      prependAnchor.current = null;
+      window.scrollTo({ top: anchor.top + (document.documentElement.scrollHeight - anchor.height) });
+    }
+  }, [datePins]);
+
+  // Sentinels at the ends of the list on screen load the next page before the
+  // reader gets there. A hidden list's sentinels never intersect.
+  const topRef = useRef<HTMLDivElement>(null);
+  const bottomRef = useRef<HTMLDivElement>(null);
+  const rankedEndRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          if (entry.target === rankedEndRef.current) {
+            void loadMore('relevance', 'next');
+          } else if (scrolled.current) {
+            void loadMore('date', entry.target === topRef.current ? 'previous' : 'next');
+          }
+        }
+      },
+      { rootMargin: '800px 0px' },
+    );
+    for (const ref of [topRef, bottomRef, rankedEndRef]) {
+      if (ref.current) observer.observe(ref.current);
+    }
+    return () => observer.disconnect();
+  }, [loadMore, sortBy]);
 
   const phrase = (formatSpan(postedWithin) || '').replace(/^1 /, '');
 
@@ -149,8 +286,8 @@ export function SearchResults({
           onlyWatched={onlyWatched}
           createdSince={postedWithin ? offsetDate(new Date(serverNow), postedWithin, -1)?.toISOString() : null}
         />
-        <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={({ past }) => setPostedWithin(past)} />
-        {sortBy === 'relevance' ? <TimeRangeSlider steps={EVENT_SPAN_OPTIONS} past={startSpan.past} future={startSpan.future} onChange={setStartSpan} /> : null}
+        <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={({ past }) => changePostedWithin(past)} />
+        {sortBy === 'relevance' ? <TimeRangeSlider steps={EVENT_SPAN_OPTIONS} past={startSpan.past} future={startSpan.future} onChange={changeStartSpan} /> : null}
         {searchedUser ? (
           <div className="floating flex flex-col gap-3 px-3.5 py-3">
             <div className="flex items-center gap-2 font-semibold text-ink">
@@ -170,12 +307,17 @@ export function SearchResults({
         </div>
       ) : null}
 
-      {error ? <p className="mt-16 text-center text-lg text-subtle">Search is unavailable right now. Please try again in a bit.</p> : null}
-      {!error && !shownCount ? (
+      {shown?.status === 'loading' ? (
+        <p className="mt-16 text-center text-lg text-subtle" role="status">
+          Searching…
+        </p>
+      ) : null}
+      {shown?.status === 'error' ? <p className="mt-16 text-center text-lg text-subtle">Search is unavailable right now. Please try again in a bit.</p> : null}
+      {shown?.status === 'ready' && !shown.pins.length ? (
         <p className="mt-16 text-center text-lg text-subtle">
-          {sortBy === 'relevance' && visible.length
+          {sortBy === 'relevance' && (startSpan.past || startSpan.future)
             ? 'No results start in this range.'
-            : postedWithin && pins.length
+            : postedWithin
             ? `No results posted in the last ${phrase}.`
             : onlyWatched
               ? query.trim()
@@ -187,14 +329,18 @@ export function SearchResults({
 
       {/* Kept mounted once shown: a remount resizes cards (embeds, media fallbacks) after the scroll is restored. */}
       {relevanceShown ? (
-        <ul hidden={sortBy !== 'relevance'} className={`mt-6 ${CARD_GRID}`}>
-          {ranked.map((pin, i) => (
-            <li key={pin.id} id={`rank-${pin.id}`}>
-              <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={i === 0} tense={pinTense(pin, serverNow, todayKey)} />
-            </li>
-          ))}
-        </ul>
+        <div hidden={sortBy !== 'relevance'}>
+          <ul className={`mt-6 ${CARD_GRID}`}>
+            {(rankedPins ?? []).map((pin, i) => (
+              <li key={pin.id} id={`rank-${pin.id}`}>
+                <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={i === 0} tense={pinTense(pin, serverNow, todayKey)} />
+              </li>
+            ))}
+          </ul>
+          <div ref={rankedEndRef} aria-hidden className="h-px" />
+        </div>
       ) : null}
+      <div ref={topRef} hidden={sortBy !== 'date'} aria-hidden className="h-px" />
       <div hidden={sortBy !== 'date'} className={rail}>
         {bags.map((bag, index) => (
           <div key={bag.day}>
@@ -204,6 +350,7 @@ export function SearchResults({
         ))}
         {marker.atEnd ? <TodayMarker specialtyDays={specialtyDays[todayKey.slice(5)] || []} /> : null}
       </div>
+      <div ref={bottomRef} hidden={sortBy !== 'date'} aria-hidden className="h-px" />
     </div>
   );
 }

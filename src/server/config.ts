@@ -64,6 +64,9 @@ export const config = {
 
   faiss: {
     serviceUrl: env('FAISS_URL'),
+    // How many of a free-text search's best matches count as its results.
+    // Semantic search scores every pin, so past this they are mostly noise.
+    maxHits: Number(env('FAISS_MAX_HITS')) || 100,
   },
 
   youtube: {
@@ -93,6 +96,8 @@ export const config = {
 
   pagination: {
     pageSize: 25,
+    // Pins per page of search results.
+    searchPageSize: 24,
   },
 };
 

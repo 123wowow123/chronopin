@@ -5,10 +5,8 @@ import config from '../config';
 import { fetchJson } from '../util/fetchJson';
 import BasePin, { BasePinProp } from './basePin';
 import BasePins from './basePins';
-import Pins, { type PinSearchFilters } from './pins';
+import Pins from './pins';
 import type User from './user';
-
-const pageSize = config.pagination.pageSize;
 
 function faissRequest<T = any>(method: string, path: string, body?: unknown) {
   return fetchJson<T>(`${config.faiss.serviceUrl}/faiss${path}`, { method, body });
@@ -117,18 +115,12 @@ export class SearchPins extends BasePins<SearchPin> {
     return hits.applySearchScores(pins);
   }
 
-  // A search made only of label terms (user:, company:, category:).
-  static searchFilters(query: PinSearchFilters, favoriteUserId?: number | null): Promise<Pins> {
-    return Pins.queryPinBySearchFilters(query, favoriteUserId);
-  }
-
-  static async searchFavorite(userId: number, searchText: string): Promise<Pins> {
-    if (!searchText) {
-      return Pins.queryInitialByDateFilterByHasFavorite(new Date(), userId, pageSize, pageSize);
-    }
-    const hits = new SearchPins().fromFaiss(await semanticSearch(searchText, SearchPins.numberOfResults));
-    const pins = await Pins.queryPinByIdsFilterByHasFavorite(hits, userId);
-    return hits.applySearchScores(pins);
+  // Every pin the search service counts as a match for the text, best first:
+  // its top config.faiss.maxHits, since semantic search ranks every pin.
+  static async hits(searchText: string): Promise<{ id: number; score: number }[]> {
+    const result = await semanticSearch(searchText, config.faiss.maxHits);
+    const seen = new Set<number>();
+    return result.res.filter((hit) => !seen.has(hit.index) && !!seen.add(hit.index)).map((hit) => ({ id: hit.index, score: hit.match }));
   }
 
   // Autocomplete: pins whose title or description starts with the typed text,

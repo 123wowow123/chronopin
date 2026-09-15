@@ -6,6 +6,26 @@ import Pin from './pin';
 
 export type PinSearchFilters = { userNames: string[]; companies: string[]; categories: string[]; confidences: string[] };
 
+// Everything a search narrows pins to. hits are a free-text search's matches
+// with their scores (null when the search has no free text).
+export type SearchFilter = PinSearchFilters & {
+  hits: { id: number; score: number }[] | null;
+  favoriteUserId?: number | null;
+  createdSince?: Date | null;
+  startFrom?: Date | null;
+  startTo?: Date | null;
+};
+
+// A pin's place in search results. start is the exact ISO text of its start.
+export type SearchRank = { id: number; score: number; start: string };
+
+// Which way a page of search results walks, from after a pin (exclusive) or
+// from the beginning. By relevance: best score first, ties oldest start first.
+// By date: later pins (next) or earlier ones (previous).
+export type SearchOrder =
+  | { sort: 'relevance'; after?: SearchRank | null }
+  | { sort: 'date'; direction: 'next' | 'previous'; after?: { start: string; id: number } | null };
+
 type PageResult = { pins: Row[]; queryCount: number };
 
 export default class Pins extends BasePins<Pin> {
@@ -70,21 +90,83 @@ export default class Pins extends BasePins<Pin> {
   }
 
   static queryPinByIds(pins: BasePins) {
-    return queryPinByIds(pins.getAllIds(), null).then((res) => new Pins(res));
-  }
-
-  static queryPinByIdsFilterByHasFavorite(pins: BasePins, userId: number) {
-    return queryPinByIds(pins.getAllIds(), userId).then((res) => new Pins(res));
+    return queryPinByIds(pins.getAllIds()).then((res) => new Pins(res));
   }
 
   static getThreadPins(pinId: number) {
     return queryPinByIdsAndOrderedByThread(pinId).then((res) => new Pins().setPinsSortBy(res.pins, 'reverseOrder', true));
   }
 
-  // favoriteUserId limits the results to pins that user watches; leave it
-  // out to search every pin.
-  static queryPinBySearchFilters(query: PinSearchFilters, favoriteUserId?: number | null) {
-    return queryPinBySearchFilters(query, favoriteUserId).then((res) => new Pins(res));
+  // The search results after `order`'s cursor, best first (or in date order
+  // the way it walks), at most limit pins - every one when limit is null.
+  // Only ids and sort keys: querySearchRanked loads the pins themselves.
+  static rankSearch(filter: SearchFilter, order: SearchOrder, limit: number | null): Promise<SearchRank[]> {
+    const { from, where, params, score } = searchClauses(filter);
+    const add = (value: unknown) => {
+      params.push(value);
+      return `$${params.length}`;
+    };
+    const start = `"Pin"."utcStartDateTime"`;
+    let orderBy: string;
+    if (order.sort === 'relevance') {
+      if (order.after) {
+        const [s, t, i] = [add(order.after.score), add(order.after.start), add(order.after.id)];
+        where.push(`(${score} < ${s}::float8 OR (${score} = ${s}::float8 AND (${start}, "Pin"."id") > (${t}::timestamptz, ${i}::integer)))`);
+      }
+      orderBy = `${score} DESC, ${start}, "Pin"."id"`;
+    } else {
+      const forward = order.direction === 'next';
+      if (order.after) {
+        where.push(`(${start}, "Pin"."id") ${forward ? '>' : '<'} (${add(order.after.start)}::timestamptz, ${add(order.after.id)}::integer)`);
+      }
+      orderBy = forward ? `${start}, "Pin"."id"` : `${start} DESC, "Pin"."id" DESC`;
+    }
+    // The start as Postgres writes it, to the microsecond: a cursor rounded to
+    // JavaScript's milliseconds would hand the same pin back page after page.
+    return db.query<SearchRank>(
+      `
+      SELECT "Pin"."id", ${score} AS "score", to_json(${start}) #>> '{}' AS "start"
+      ${from}
+      WHERE ${where.join('\n        AND ')}
+      ORDER BY ${orderBy}
+      ${limit == null ? '' : `LIMIT ${add(limit)}`}`,
+      params,
+    );
+  }
+
+  // The pins rankSearch picked, each with its search score, in rank order.
+  static async querySearchRanked(ranked: SearchRank[], userId: number): Promise<Pins> {
+    if (!ranked.length) {
+      return new Pins({ pins: [], queryCount: 0 });
+    }
+    const rows = await db.query(
+      `
+      SELECT ${PAGE_COLUMNS}
+      FROM "PinBaseView" AS "Pin"
+      WHERE "Pin"."id" = ANY($2::integer[])
+      ORDER BY "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"`,
+      [userId, ranked.map((r) => r.id)],
+    );
+    const pins = new Pins({ pins: rows, queryCount: ranked.length });
+    const rank = new Map(ranked.map((r, index) => [r.id, { index, score: r.score }]));
+    pins.pins.sort((a, b) => rank.get(a.id)!.index - rank.get(b.id)!.index);
+    pins.pins.forEach((pin) => {
+      pin.searchScore = rank.get(pin.id)!.score;
+    });
+    return pins;
+  }
+
+  // Search results per lowercased category.
+  static async countSearchByCategory(filter: SearchFilter) {
+    const { from, where, params } = searchClauses(filter);
+    return db.query<{ category: string | null; count: number }>(
+      `
+      SELECT lower("Pin"."category") AS "category", COUNT(*)::integer AS "count"
+      ${from}
+      WHERE ${where.join('\n        AND ')}
+      GROUP BY 1`,
+      params,
+    );
   }
 
   // Every live pin's id and last change, oldest first, for the sitemap.
@@ -262,8 +344,7 @@ async function queryInitialPage(
   };
 }
 
-// favoriteUserId, when given, keeps only pins that user watches.
-function queryPinByIds(ids: number[], favoriteUserId: number | null): Promise<PageResult> {
+function queryPinByIds(ids: number[]): Promise<PageResult> {
   return db
     .query(
       `
@@ -271,13 +352,8 @@ function queryPinByIds(ids: number[], favoriteUserId: number | null): Promise<Pa
     FROM "PinBaseView" AS "Pin"
     WHERE "Pin"."id" = ANY($1::integer[])
       AND "Pin"."utcDeletedDateTime" IS NULL
-      AND ($2::integer IS NULL OR EXISTS (
-        SELECT 1 FROM "Favorite" AS "Favorites"
-        WHERE "Favorites"."pinId" = "Pin"."id"
-          AND "Favorites"."utcDeletedDateTime" IS NULL
-          AND "Favorites"."userId" = $2))
     ORDER BY "Pin"."utcStartDateTime", "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"`,
-      [ids, favoriteUserId == null ? null : favoriteUserId],
+      [ids],
     )
     .then(result);
 }
@@ -325,29 +401,63 @@ function queryPinByIdsAndOrderedByThread(pinId: number): Promise<{ pins: Row[] }
     .then((rows) => ({ pins: rows }));
 }
 
-// A search made only of label terms. Each list widens its own field (any of
-// these companies) and an empty list leaves that field unfiltered; the fields
-// narrow each other. citext columns make the matches case-insensitive.
-function queryPinBySearchFilters(query: PinSearchFilters, favoriteUserId?: number | null): Promise<PageResult> {
-  return db
-    .query(
-      `
-    SELECT "Pin".*
-    FROM "PinBaseView" AS "Pin"
-    WHERE "Pin"."utcDeletedDateTime" IS NULL
-      AND (cardinality($1::citext[]) = 0 OR "Pin"."User.userName" = ANY($1::citext[]))
-      AND (cardinality($2::citext[]) = 0 OR "Pin"."company" = ANY($2::citext[]))
-      AND (cardinality($3::citext[]) = 0 OR "Pin"."category" = ANY($3::citext[]))
-      AND (cardinality($4::citext[]) = 0 OR "Pin"."dateConfidence"::citext = ANY($4::citext[]))
-      -- The Watch search choice: only pins this user watches.
-      AND ($5::integer IS NULL OR EXISTS (
-        SELECT 1
-        FROM "Favorite" AS "Favorites"
-        WHERE "Favorites"."pinId" = "Pin"."id"
-          AND "Favorites"."utcDeletedDateTime" IS NULL
-          AND "Favorites"."userId" = $5))
-    ORDER BY "Pin"."utcStartDateTime", "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"`,
-      [query.userNames, query.companies, query.categories, query.confidences, favoriteUserId == null ? null : favoriteUserId],
-    )
-    .then(result);
+// The FROM and WHERE a search's filter makes, on the Pin table itself rather
+// than the view, so a page counts pins instead of pin x medium x merchant rows.
+// Each label list widens its own field (any of these companies) and an empty
+// list leaves it unfiltered; the fields narrow each other. citext columns make
+// the matches case-insensitive. With free-text hits, only those pins are
+// candidates and each scores as the search service said; without, every pin
+// scores 1.
+function searchClauses(filter: SearchFilter) {
+  const params: unknown[] = [];
+  const add = (value: unknown) => {
+    params.push(value);
+    return `$${params.length}`;
+  };
+  const joins: string[] = [];
+  const where = ['"Pin"."utcDeletedDateTime" IS NULL'];
+
+  if (filter.hits) {
+    joins.push(
+      `INNER JOIN unnest(${add(filter.hits.map((h) => h.id))}::integer[], ${add(filter.hits.map((h) => h.score))}::float8[]) AS "hit" ("id", "score") ON "hit"."id" = "Pin"."id"`,
+    );
+  }
+  if (filter.userNames.length) {
+    joins.push('INNER JOIN "User" ON "User"."id" = "Pin"."userId"');
+    where.push(`"User"."userName" = ANY(${add(filter.userNames)}::citext[])`);
+  }
+  if (filter.companies.length) {
+    joins.push('INNER JOIN "Company" ON "Company"."id" = "Pin"."companyId"');
+    where.push(`"Company"."name" = ANY(${add(filter.companies)}::citext[])`);
+  }
+  if (filter.categories.length) {
+    where.push(`"Pin"."category" = ANY(${add(filter.categories)}::citext[])`);
+  }
+  if (filter.confidences.length) {
+    where.push(`"Pin"."dateConfidence"::citext = ANY(${add(filter.confidences)}::citext[])`);
+  }
+  // The Watch search choice: only pins this user watches.
+  if (filter.favoriteUserId != null) {
+    where.push(`EXISTS (
+          SELECT 1 FROM "Favorite" AS "Favorites"
+          WHERE "Favorites"."pinId" = "Pin"."id"
+            AND "Favorites"."utcDeletedDateTime" IS NULL
+            AND "Favorites"."userId" = ${add(filter.favoriteUserId)})`);
+  }
+  if (filter.createdSince) {
+    where.push(`"Pin"."utcCreatedDateTime" >= ${add(filter.createdSince)}`);
+  }
+  if (filter.startFrom) {
+    where.push(`"Pin"."utcStartDateTime" >= ${add(filter.startFrom)}`);
+  }
+  if (filter.startTo) {
+    where.push(`"Pin"."utcStartDateTime" <= ${add(filter.startTo)}`);
+  }
+
+  return {
+    from: ['FROM "Pin"', ...joins].join('\n      '),
+    where,
+    params,
+    score: filter.hits ? '"hit"."score"' : '1::float8',
+  };
 }

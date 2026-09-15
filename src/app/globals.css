@@ -101,15 +101,24 @@
 @layer base {
   html {
     color-scheme: dark;
-    scroll-padding-top: 3.75rem;
+    /* How far below the top a jump lands: clear of the sticky navbar. */
+    --jump-offset: 3.75rem;
     scrollbar-color: var(--color-raised-2) transparent;
   }
   /* Search results pin their sort toggle under the navbar below xl; jumps to
      a day land below both. */
   @media (width < 80rem) {
     html:has([data-sticky-sort]) {
-      scroll-padding-top: 6.5rem;
+      --jump-offset: 6.5rem;
     }
+  }
+  /* Jumps (Today, #anchors, focus moving down a page) land below the sticky
+     bars. The offset sits on the targets rather than being the page's
+     scroll-padding: that would count the navbar's own search field as hidden
+     under the navbar, and Chrome scrolled the page up on focus and on every
+     keystroke to reveal its caret. */
+  :where([id], a, button, input, select, textarea, [tabindex], [contenteditable]):not(header *, [data-sticky-sort] *) {
+    scroll-margin-top: var(--jump-offset);
   }
 
   body {

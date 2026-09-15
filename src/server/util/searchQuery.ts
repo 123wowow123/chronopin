@@ -139,30 +139,6 @@ export function hasFilters(query: SearchQuery): boolean {
   return !!(query.userNames.length || query.companies.length || query.categories.length || query.confidences.length);
 }
 
-// Applies a query's terms to pins that came back from free-text search, so
-// "iphone company:Apple" means Apple pins about the iPhone.
-export function matchesFilters(
-  query: SearchQuery,
-  pin: { user?: { userName?: string } | null; company?: string | null; category?: string | null; dateConfidence?: string | null },
-): boolean {
-  return (
-    matchesAny(query.userNames, pin.user?.userName) &&
-    matchesAny(query.companies, pin.company) &&
-    matchesAny(query.categories, pin.category) &&
-    matchesAny(query.confidences, pin.dateConfidence)
-  );
-}
-
-// Case-insensitive, like the database's citext columns, so filtering
-// free-text results agrees with what the database returns for the same terms.
-function matchesAny(values: string[], actual: string | null | undefined): boolean {
-  if (!values.length) {
-    return true;
-  }
-  const lower = String(actual || '').toLowerCase();
-  return values.some((value) => value.toLowerCase() === lower);
-}
-
 // User names are stored with their "@", so that is the form matched on.
 function addUserName(query: SearchQuery, value: string) {
   const name = value.replace(/^@+/, '').trim();

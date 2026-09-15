@@ -4,9 +4,10 @@
 import { cacheLife, cacheTag } from 'next/cache';
 import Pin from '../model/pin';
 import Pins from '../model/pins';
+import { SearchPins } from '../model/searchPin';
 import { toJson, type PinJson, type SearchPage, type TimelinePage } from '@/lib/types';
 import { TAGS } from './cache';
-import { searchCategoryCounts, searchPins } from './search';
+import { readSearchRequest, searchCategoryCounts, searchPinsPage, type SearchSort } from './search';
 import { getTimeline, timelineMinConfidence } from './timeline';
 import { resolveCreatedSince, type CreatedQuery } from '../util/createdFilter';
 
@@ -67,31 +68,41 @@ export async function relatedPins(id: number, title: string): Promise<PinJson[]>
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   try {
-    const pins = await searchPins(title);
+    const pins = await SearchPins.search(title);
     return toJson<PinJson[]>(pins.pins.filter((p) => p.id !== id)).slice(0, 12);
   } catch {
     return [];
   }
 }
 
-export async function searchPage(query: string, userId: number | null, onlyWatched: boolean): Promise<SearchPage & { error?: string }> {
+// The sort and filters a search page's URL names: spans as the sliders set them.
+export type SearchView = { sort: SearchSort; posted: string | null; past: string | null; future: string | null };
+
+// The first page of a search, and the links on to later ones.
+export async function searchPage(query: string, userId: number | null, onlyWatched: boolean, view: SearchView): Promise<SearchPage & { error?: string }> {
   // Watched results are one person's list and must change the moment they
   // watch or unwatch a pin, so they skip the shared, briefly stale cache.
-  return onlyWatched && userId ? runSearch(query, userId, true) : cachedSearch(query, userId);
+  return onlyWatched && userId ? runSearch(query, userId, true, view) : cachedSearch(query, userId, view);
 }
 
-async function cachedSearch(query: string, userId: number | null) {
+async function cachedSearch(query: string, userId: number | null, view: SearchView) {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
-  return runSearch(query, userId, false);
+  return runSearch(query, userId, false, view);
 }
 
-async function runSearch(query: string, userId: number | null, onlyWatched: boolean): Promise<SearchPage & { error?: string }> {
+async function runSearch(query: string, userId: number | null, onlyWatched: boolean, view: SearchView): Promise<SearchPage & { error?: string }> {
+  const params = new URLSearchParams({ q: query, sort: view.sort });
+  if (onlyWatched) params.set('f', 'watch');
+  if (view.posted) params.set('created_within', view.posted);
+  if (view.past) params.set('start_past', view.past);
+  if (view.future) params.set('start_future', view.future);
   try {
-    return toJson<SearchPage>(await searchPins(query, { userId, onlyWatched }));
+    const { pins, links } = await searchPinsPage(readSearchRequest(params, userId));
+    return { ...toJson<SearchPage>(pins), links };
   } catch (err) {
-    return { pins: [], error: (err as Error).message };
+    return { pins: [], links: {}, error: (err as Error).message };
   }
 }
 
