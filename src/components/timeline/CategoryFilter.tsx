@@ -57,23 +57,39 @@ export function CategoryFilter({
 
   return (
     <div className={`floating text-sm ${className}`}>
-      <div className={`flex items-center gap-2 px-3.5 py-2.5 max-lg:py-3 ${inFold ? 'max-xl:hidden' : ''}`}>
+      {/* Clearing the pick is its own button beside the chevron, so the row's
+          contents are laid out plainly and the button that opens the panel
+          lies under all of them - the whole row still opens it. */}
+      <div className={`relative flex items-center gap-2 px-3.5 py-2.5 max-lg:py-3 ${inFold ? 'max-xl:hidden' : ''}`}>
         <button
           type="button"
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-controls={optionsId}
-          className="flex min-w-0 flex-1 items-center gap-2 text-left text-ink"
-        >
-          <span className="text-subtle">Category</span>
-          <span className="truncate font-medium">{summary}</span>
-          <Icon name="chevron" className={`ml-auto size-4 shrink-0 text-subtle transition-transform ${open ? 'rotate-180' : ''}`} />
-        </button>
-        {selected.length ? (
-          <button type="button" onClick={onClear} className="-my-1 shrink-0 rounded-full p-1 text-subtle max-lg:p-2 hover:bg-raised hover:text-ink" aria-label="Clear category filter">
-            <Icon name="close" className="size-3.5" />
+          aria-label={`Category: ${summary}`}
+          className="absolute inset-0 rounded-[inherit]"
+        />
+        <span className="pointer-events-none relative text-subtle">Category</span>
+        <span className="pointer-events-none relative min-w-0 truncate font-medium text-ink">{summary}</span>
+        {/* Two matching targets. The chevron repeats what the row underneath
+            does, so it is hidden from assistive tech and the tab order - it is
+            here to be hovered and clicked, and to show which way the panel
+            goes. */}
+        <span className="pointer-events-none relative ml-auto flex shrink-0 items-center gap-1.5">
+          {selected.length ? (
+            <button
+              type="button"
+              onClick={onClear}
+              className={`${iconButton} pointer-events-auto`}
+              aria-label="Clear category filter"
+            >
+              <Icon name="filter-off" className="size-4" />
+            </button>
+          ) : null}
+          <button type="button" tabIndex={-1} aria-hidden onClick={() => setOpen(!open)} className={`${iconButton} pointer-events-auto`}>
+            <Icon name="chevron" className={`size-4 transition-transform ${open ? 'rotate-180' : ''}`} />
           </button>
-        ) : null}
+        </span>
       </div>
       {showing ? (
         <div
@@ -111,6 +127,9 @@ export function CategoryFilter({
     </div>
   );
 }
+
+// The round targets at the end of the header row (clear, open/close).
+const iconButton = '-my-1 rounded-full p-1 text-subtle max-lg:p-2 hover:bg-raised hover:text-ink';
 
 // What is picked, in brief ("Movies", "Movies +2"), or '' for nothing.
 function categorySummary(selected: string[]) {

@@ -9,6 +9,14 @@ const PATHS: Record<string, React.ReactNode> = {
     </>
   ),
   close: <path d="M6 6l12 12M18 6 6 18" />,
+  // Dropping a filter, rather than dismissing the panel it sits in - which is
+  // what a bare cross beside one reads as.
+  'filter-off': (
+    <>
+      <path d="M12.5 3.5H2l7.5 9V19l4 2v-8.5l.6-.7" />
+      <path d="m22.5 3.5-6.5 6.5M16 3.5l6.5 6.5" />
+    </>
+  ),
   plus: <path d="M12 5v14M5 12h14" />,
   chevron: <path d="m6 9 6 6 6-6" />,
   back: <path d="M19 12H5M11 6l-6 6 6 6" />,
