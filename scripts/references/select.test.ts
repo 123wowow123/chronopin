@@ -32,8 +32,15 @@ describe('freshReferences', () => {
     expect(out.map((r) => r.url)).toEqual(['https://b.com']);
   });
 
+  it('keeps well-formed start and end dates, dropping an end before the start', () => {
+    const [kept] = freshReferences([ref('https://a.com', 80, { startDate: '2014-03-01', endDate: '2014-03-03' })], [], null);
+    expect(kept).toMatchObject({ startDate: '2014-03-01', endDate: '2014-03-03' });
+    const [backwards] = freshReferences([ref('https://b.com', 80, { startDate: '2014-03-05', endDate: '2014-03-01' })], [], null);
+    expect(backwards).toMatchObject({ startDate: '2014-03-05', endDate: null });
+  });
+
   it('nulls a malformed date and an empty title, and rejects non-http urls', () => {
     const out = freshReferences([ref('https://a.com', 80, { title: '  ', publishedDate: 'May 2016' }), ref('ftp://b.com')], [], null);
-    expect(out).toEqual([{ url: 'https://a.com', title: null, confidence: 80, publishedDate: null }]);
+    expect(out).toEqual([{ url: 'https://a.com', title: null, confidence: 80, publishedDate: null, startDate: null, endDate: null, reasoning: null }]);
   });
 });

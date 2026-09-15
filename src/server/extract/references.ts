@@ -31,6 +31,9 @@ export type FoundReference = {
   title?: string;
   confidence: number;
   publishedDate?: string;
+  startDate?: string;
+  endDate?: string;
+  reasoning?: string;
 };
 
 const SYSTEM_PROMPT = `You find corroborating references for an event pin. You are given the source the pin was made from: a web page's text, a YouTube video's title and description, or a tweet. Work out the single event it is about - what happens, who does it, and when - then search the web for other pages that independently back up that event and its date. When the source alone is too thin to tell, fetch the articles it links to first.
@@ -45,7 +48,9 @@ Rate each reference's confidence, 0-100, by how strongly the page itself support
 - 50-74: the event is covered but the date is an estimate, a window, or differs.
 - below 50: weak, indirect, or contradicting.
 
-Only record references rated ${MIN_CONFIDENCE} or higher, at most ${MAX_REFERENCES}, strongest first. Copy each URL exactly as it appeared in a search or fetch result - never write one from memory or adjust it. publishedDate is the page's own publication date as YYYY-MM-DD, from the result's page age or the page itself, or null when unknown. When nothing qualifies, record an empty list.
+Then weigh the site itself: the lower its standing, the lower the confidence, whatever the page claims. A little-known blog, a small or hobbyist site, a thin rewrite of other coverage, or a site with no clear editorial record sits at least 15 points below what the same wording would earn from an established outlet, and never above 74. Say in the reasoning when the site's standing pulled the confidence down.
+
+Only record references rated ${MIN_CONFIDENCE} or higher, at most ${MAX_REFERENCES}, strongest first. Copy each URL exactly as it appeared in a search or fetch result - never write one from memory or adjust it. publishedDate is the page's own publication date as YYYY-MM-DD, from the result's page age or the page itself, or null when unknown. startDate and endDate are when that page says the event starts and ends, as YYYY-MM-DD (endDate is the last day, inclusive), each null when the page does not give a specific day - never carry a date over from the source or from another page. reasoning is one or two sentences on why that confidence, grounded in what the page itself says about the event and its date - quote its key phrase where you can, and name the site ("LTA's project page says Phase 1 opens in 2030"). When nothing qualifies, record an empty list.
 
 Finish by calling record_references exactly once.`;
 
@@ -63,10 +68,13 @@ const RECORD_TOOL: Anthropic.Beta.BetaTool = {
           properties: {
             url: { type: 'string', description: 'The page URL exactly as returned by web search or web fetch.' },
             title: { type: 'string', description: "The page's own title." },
-            confidence: { type: 'integer', description: 'How strongly this page supports the event and its date, 0-100.' },
+            confidence: { type: 'integer', description: "How strongly this page supports the event and its date, 0-100, lowered for a low-standing site." },
             publishedDate: { type: ['string', 'null'], description: 'Publication date as YYYY-MM-DD, or null when unknown.' },
+            startDate: { type: ['string', 'null'], description: 'The day this page says the event starts, as YYYY-MM-DD, or null when it gives none.' },
+            endDate: { type: ['string', 'null'], description: 'The last day this page says the event runs, as YYYY-MM-DD, or null when it gives none.' },
+            reasoning: { type: 'string', description: 'Why this confidence: what the page itself says about the event and its date, in one or two sentences.' },
           },
-          required: ['url', 'title', 'confidence', 'publishedDate'],
+          required: ['url', 'title', 'confidence', 'publishedDate', 'startDate', 'endDate', 'reasoning'],
           additionalProperties: false,
         },
       },
@@ -172,14 +180,28 @@ export function keepReferences(candidates: FoundReference[], seen: Set<string>, 
     if (!key || key === sourceKey || !seen.has(key) || kept.has(key)) continue;
     if (!Number.isFinite(confidence) || confidence < MIN_CONFIDENCE || confidence > 100) continue;
     const title = candidate.title?.trim().slice(0, 1024);
+    const { startDate, endDate } = referenceDates(candidate);
     kept.set(key, {
       url: candidate.url.trim(),
       title: title || undefined,
       confidence,
-      publishedDate: /^\d{4}-\d{2}-\d{2}$/.test(candidate.publishedDate || '') ? candidate.publishedDate : undefined,
+      publishedDate: isYmd(candidate.publishedDate) ? candidate.publishedDate : undefined,
+      startDate,
+      endDate,
+      reasoning: candidate.reasoning?.trim().slice(0, 2000) || undefined,
     });
   }
   return [...kept.values()].sort((a, b) => b.confidence - a.confidence).slice(0, MAX_REFERENCES);
+}
+
+const isYmd = (value: string | null | undefined): value is string => /^\d{4}-\d{2}-\d{2}$/.test(value || '');
+
+// A candidate's start and end days, when well formed; an end before the start
+// is dropped.
+export function referenceDates(candidate: { startDate?: string | null; endDate?: string | null }) {
+  const startDate = isYmd(candidate.startDate) ? candidate.startDate : undefined;
+  const endDate = isYmd(candidate.endDate) && !(startDate && candidate.endDate < startDate) ? candidate.endDate : undefined;
+  return { startDate, endDate };
 }
 
 // The same page however it was written: no fragment, www. or trailing slash.

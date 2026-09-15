@@ -165,6 +165,8 @@ const PAGE_COLUMNS = `
   "Pin"."category",
   "Pin"."utcStartDateTime",
   "Pin"."utcEndDateTime",
+  "Pin"."sourceStartDateTime",
+  "Pin"."sourceEndDateTime",
   "Pin"."allDay",
   "Pin"."userId",
   "Pin"."utcCreatedDateTime",

@@ -21,7 +21,7 @@ export default class Pin extends BasePin {
       // Each medium and merchant saves in place, picking up its new id. (The
       // Express version re-added the saved copies, so the create response
       // listed every medium and merchant twice.)
-      const mediaSaved = Promise.all(this.media.map((m) => (m.type === 1 ? m.createAndSaveToCDN() : m.save())));
+      const mediaSaved = Promise.all(this.media.map((m) => m.saveWithThumb()));
       // Merchants one at a time, so their ids follow the order the form lists them.
       for (const m of this.merchants) {
         await m.save();
@@ -63,7 +63,7 @@ export default class Pin extends BasePin {
       }
     });
 
-    const toSaveMediaPromise = Promise.all(toSaveOriginalMedia.map((medium) => medium.createAndSaveToCDN()));
+    const toSaveMediaPromise = Promise.all(toSaveOriginalMedia.map((medium) => medium.saveWithThumb()));
 
     // Removes the link and row; the file stays on the CDN.
     const toDeleteMediaPromise = Promise.all(toDeleteOriginalMedia.map((medium) => medium.deleteFromPin()));
@@ -139,7 +139,7 @@ async function updatePinRow(pin: Pin, userId: number | null) {
     pin.dateConfidence, pin.dateConfidenceReasoning, pin.companyId,
     pin.category, pin.address, pin.priceLowerBound, pin.priceUpperBound, pin.price,
     pin.priceCurrency, pin.tip, pin.utcStartDateTime, pin.utcEndDateTime, pin.allDay,
-    userId, pin.latitude, pin.longitude,
+    userId, pin.latitude, pin.longitude, pin.sourceStartDateTime || null, pin.sourceEndDateTime || null,
   ].map((value) => (value === undefined ? null : value));
 
   // Every column is written, so a field missing from the pin is cleared - the
@@ -168,6 +168,8 @@ async function updatePinRow(pin: Pin, userId: number | null) {
       "allDay" = $19,
       "userId" = $20,
       "location" = ${locationSql('$21', '$22')},
+      "sourceStartDateTime" = $23,
+      "sourceEndDateTime" = $24,
       "utcUpdatedDateTime" = now()
     WHERE "id" = $1`,
     values,

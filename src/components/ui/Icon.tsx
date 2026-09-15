@@ -11,6 +11,7 @@ const PATHS: Record<string, React.ReactNode> = {
   close: <path d="M6 6l12 12M18 6 6 18" />,
   plus: <path d="M12 5v14M5 12h14" />,
   chevron: <path d="m6 9 6 6 6-6" />,
+  back: <path d="M19 12H5M11 6l-6 6 6 6" />,
   sliders: <path d="M4 7h10M18 7h2M4 17h2M10 17h10M14 5v4M6 15v4" />,
   target: (
     <>

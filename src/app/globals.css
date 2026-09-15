@@ -231,6 +231,14 @@ html .leaflet-container .leaflet-popup-tip {
 html .leaflet-container .leaflet-popup-content-wrapper {
   @apply rounded-xl border border-line;
 }
+/* The map's pin popups: the picture edge to edge, no border or padding, over a
+   short caption. */
+html .leaflet-container .pin-popup .leaflet-popup-content-wrapper {
+  @apply overflow-hidden rounded-lg border-0 p-0;
+}
+html .leaflet-container .pin-popup .leaflet-popup-content {
+  @apply m-0 text-xs leading-snug;
+}
 html .leaflet-container a.leaflet-popup-close-button {
   @apply text-subtle hover:text-ink;
 }

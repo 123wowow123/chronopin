@@ -30,6 +30,11 @@ export type PinReferenceJson = {
   // How strongly this link supports the pin, 0-100.
   confidence: number;
   publishedDate?: string; // YYYY-MM-DD
+  // When this link says the event starts and ends (YYYY-MM-DD, end inclusive).
+  startDate?: string;
+  endDate?: string;
+  // Why it got that confidence: what the page says about the event and date.
+  reasoning?: string;
   utcCreatedDateTime?: string;
 };
 
@@ -64,6 +69,10 @@ export type PinJson = {
   category?: string;
   utcStartDateTime: string;
   utcEndDateTime?: string;
+  // The dates the source gave, set only while a more confident reference's
+  // dates are used instead (src/lib/dateClaims.ts).
+  sourceStartDateTime?: string;
+  sourceEndDateTime?: string;
   allDay?: boolean;
   utcCreatedDateTime?: string;
   utcUpdatedDateTime?: string;

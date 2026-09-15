@@ -1,11 +1,19 @@
 // Pure helpers for the manual reference backfill (list.ts / apply.ts), kept
 // apart from the database so they can be tested.
 
-import { MIN_CONFIDENCE, urlKey } from '@/server/extract/references';
+import { MIN_CONFIDENCE, referenceDates, urlKey } from '@/server/extract/references';
 
 export const MAX_REFERENCES = 5;
 
-export type Candidate = { url: string; title?: string | null; confidence: number; publishedDate?: string | null };
+export type Candidate = {
+  url: string;
+  title?: string | null;
+  confidence: number;
+  publishedDate?: string | null;
+  startDate?: string | null;
+  endDate?: string | null;
+  reasoning?: string | null;
+};
 
 // Round-robin, so every batch gets a mix of old and new pins.
 export function batchOf<T>(rows: T[], batch: number, of: number): T[] {
@@ -32,11 +40,15 @@ export function freshReferences(
     const confidence = Math.round(Number(c.confidence));
     if (!key || taken.has(key) || kept.has(key)) continue;
     if (!Number.isFinite(confidence) || confidence < MIN_CONFIDENCE || confidence > 100) continue;
+    const { startDate, endDate } = referenceDates(c);
     kept.set(key, {
       url: c.url.trim(),
       title: c.title?.trim().slice(0, 1024) || null,
       confidence,
       publishedDate: /^\d{4}-\d{2}-\d{2}$/.test(c.publishedDate || '') ? c.publishedDate : null,
+      startDate: startDate ?? null,
+      endDate: endDate ?? null,
+      reasoning: c.reasoning?.trim().slice(0, 2000) || null,
     });
   }
   const room = Math.max(0, MAX_REFERENCES - existingUrls.length);

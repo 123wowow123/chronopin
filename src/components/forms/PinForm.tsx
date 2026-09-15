@@ -11,7 +11,8 @@ import { api, ApiError } from '@/lib/client/api';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useSession } from '@/lib/client/session';
 import { useTimeZone } from '@/lib/client/timeZone';
-import { applyScrape, EMPTY_FORM, formToPin, pinToForm, type PinFormValues, type ReferenceFormValues } from '@/lib/pinForm';
+import { isLowConfidence } from '@/lib/dateClaims';
+import { applyScrape, EMPTY_FORM, formDates, formToPin, pinToForm, type PinFormValues, type ReferenceFormValues } from '@/lib/pinForm';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { pinPath } from '@/lib/seo';
 import type { CardPin, MediumJson, PinJson } from '@/lib/types';
@@ -77,6 +78,7 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
       if (!/^https?:\/\//i.test(r.url.trim())) return setError('Each reference needs a link starting with http:// or https://.');
       const confidence = Number(r.confidence);
       if (r.confidence.trim() === '' || isNaN(confidence) || confidence < 0 || confidence > 100) return setError('Each reference needs a confidence from 0 to 100.');
+      if (r.startDate && r.endDate && r.endDate < r.startDate) return setError("A reference's end date cannot be before its start date.");
     }
 
     setSaving(true);
@@ -103,6 +105,8 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
       safeDescription: safeHtmlInBrowser(values.description),
     } as unknown as CardPin;
   }, [values, user, pin?.utcCreatedDateTime]);
+
+  const picked = useMemo(() => formDates(values), [values]);
 
   const title = mode === 'edit' ? 'Edit Pin' : mode === 'respond' ? 'Respond to Pin' : 'Create Pin';
 
@@ -191,6 +195,7 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
           </button>
           <span className="text-subtle">{values.allDay ? 'All day' : timeZone}</span>
         </div>
+        {picked.overridden ? <OverriddenDates picked={picked} allDay={values.allDay} /> : null}
 
         <div className="grid gap-3 sm:grid-cols-2">
           <div>
@@ -392,21 +397,70 @@ function ReferencesEditor({
           {overall !== undefined ? `(overall confidence ${overall}% with the source, newer references count more)` : '(further evidence for this pin; the source counts too)'}
         </span>
       </span>
-      {references.map((reference, index) => (
-        <div key={index} className="mb-2 grid grid-cols-[1fr_auto] gap-2 sm:grid-cols-[2fr_1fr_5.5rem_9.5rem_auto]">
-          <input aria-label="Reference URL" type="url" placeholder="https://…" className={`${inputClass} col-span-2 sm:col-span-1`} value={reference.url} onChange={(e) => update(index, { url: e.target.value })} />
-          <input aria-label="Reference title" placeholder="Title (optional)" className={`${inputClass} col-span-2 sm:col-span-1`} value={reference.title} onChange={(e) => update(index, { title: e.target.value })} />
-          <input aria-label="Reference confidence" type="number" min={0} max={100} step={1} placeholder="0-100" title="How strongly this reference supports the pin, 0 to 100" className={inputClass} value={reference.confidence} onChange={(e) => update(index, { confidence: e.target.value })} />
-          <input aria-label="Reference published date" type="date" title="When the reference was published" className={inputClass} value={reference.publishedDate} onChange={(e) => update(index, { publishedDate: e.target.value })} />
-          <button type="button" aria-label="Remove reference" className="rounded-lg px-2 text-subtle hover:bg-red-500/10 hover:text-red-400" onClick={() => onChange(references.filter((_, i) => i !== index))}>
-            ✕
-          </button>
-        </div>
-      ))}
-      <button type="button" className="btn btn-sm btn-ghost -ml-2 text-link" onClick={() => onChange([...references, { url: '', title: '', confidence: '', publishedDate: '' }])}>
-        Add a reference
-      </button>
+      {references.map((reference, index) => {
+        // Only the link is editable: the rest is what the page was assessed as
+        // saying, and comes from the scrape rather than being typed.
+        const facts = [
+          reference.title,
+          reference.confidence && `${reference.confidence}% confidence`,
+          reference.publishedDate && `published ${formatDay(reference.publishedDate)}`,
+          reference.startDate && `starts ${formatDay(reference.startDate)}`,
+          reference.endDate && `ends ${formatDay(reference.endDate)}`,
+        ].filter(Boolean);
+        return (
+          <div key={index} className="mb-3">
+            <div className="flex gap-2">
+              <input aria-label="Reference URL" type="url" placeholder="https://…" className={inputClass} value={reference.url} onChange={(e) => update(index, { url: e.target.value })} />
+              <button type="button" aria-label="Remove reference" className="rounded-lg px-2 text-subtle hover:bg-red-500/10 hover:text-red-400" onClick={() => onChange(references.filter((_, i) => i !== index))}>
+                ✕
+              </button>
+            </div>
+            {facts.length > 0 && <p className="mt-1 text-xs text-subtle">{facts.join(' · ')}</p>}
+            {reference.reasoning && <p className="mt-1 text-xs text-subtle">{reference.reasoning}</p>}
+          </div>
+        );
+      })}
     </div>
+  );
+}
+
+const dayFormat = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const formatDay = (ymd: string) => dayFormat.format(new Date(`${ymd}T00:00:00Z`));
+
+function hostOf(url: string) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
+}
+
+// What the pin is saved with when a more confident reference's dates win over
+// the ones typed above (which stay as the source's dates).
+function OverriddenDates({ picked, allDay }: { picked: ReturnType<typeof formDates>; allDay: boolean }) {
+  const { utcStartDateTime: start, utcEndDateTime: end } = picked.dates;
+  if (!start) return null;
+  const when = (value: string, isEnd = false) =>
+    allDay
+      ? formatDay(new Date(new Date(value).getTime() - (isEnd ? 86400000 : 0)).toISOString().slice(0, 10))
+      : new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(value));
+  const by = [picked.startFrom && ['start', picked.startFrom], picked.endFrom && ['end', picked.endFrom]].filter(Boolean) as [string, { url: string; confidence: number }][];
+  return (
+    <p className="-mt-2 rounded-lg bg-link/10 px-3 py-2 text-sm text-muted ring-1 ring-link/20 ring-inset">
+      Saved as <span className="font-medium text-ink">{when(start)}{end ? ` – ${when(end, true)}` : ''}</span>
+      {by.length ? (
+        <>
+          {' '}
+          from the most confident {by.map(([side, r], i) => (
+            <span key={side}>
+              {i ? ' and ' : ''}
+              {side} ({hostOf(r.url)}, {r.confidence}%{isLowConfidence(r.confidence) ? <span className="text-amber-300"> - low confidence</span> : null})
+            </span>
+          ))}
+        </>
+      ) : null}
+      . The dates above are kept as the source&apos;s.
+    </p>
   );
 }
 

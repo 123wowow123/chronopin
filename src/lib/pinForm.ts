@@ -2,6 +2,7 @@
 // whole UTC days (start 00:00Z of the first day, end 00:00Z of the day after
 // the last, exclusive); the form works in the viewer's local calendar.
 
+import { addDays, pickDates } from './dateClaims';
 import type { MediumJson, MerchantJson, PinJson, PinReferenceJson } from './types';
 
 export type PinFormValues = {
@@ -12,6 +13,8 @@ export type PinFormValues = {
   description: string;
   longFormSummary: string;
   allDay: boolean;
+  // The dates the source gives. The pin is saved with the most confident
+  // reference's dates where one outranks these (formDates).
   startDate: string; // YYYY-MM-DD (local)
   startTime: string; // HH:MM (local), timed pins only
   endDate: string;
@@ -39,10 +42,13 @@ export type PinFormValues = {
 };
 
 // A reference row as typed: confidence stays a string until it is sent.
-export type ReferenceFormValues = Omit<PinReferenceJson, 'confidence' | 'title' | 'publishedDate'> & {
+export type ReferenceFormValues = Omit<PinReferenceJson, 'confidence' | 'title' | 'publishedDate' | 'startDate' | 'endDate' | 'reasoning'> & {
   title: string;
+  reasoning: string;
   confidence: string;
   publishedDate: string;
+  startDate: string;
+  endDate: string;
 };
 
 export const EMPTY_FORM: PinFormValues = {
@@ -76,11 +82,6 @@ const pad = (n: number) => String(n).padStart(2, '0');
 const localDate = (d: Date) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 const localTime = (d: Date) => `${pad(d.getHours())}:${pad(d.getMinutes())}`;
 const utcDate = (d: Date) => d.toISOString().slice(0, 10);
-
-function addDays(ymd: string, days: number): string {
-  const [y, m, d] = ymd.split('-').map(Number);
-  return new Date(Date.UTC(y, m - 1, d + days)).toISOString().slice(0, 10);
-}
 
 // The date fields for a pin. An all-day pin's exclusive end becomes its last
 // day, and is dropped when that is the start day.
@@ -128,6 +129,9 @@ const referenceToForm = (r: PinReferenceJson): ReferenceFormValues => ({
   title: str(r.title),
   confidence: str(r.confidence),
   publishedDate: str(r.publishedDate),
+  startDate: str(r.startDate),
+  endDate: str(r.endDate),
+  reasoning: str(r.reasoning),
 });
 
 // Every field of a stored pin, so saving the form never clears one: the
@@ -142,7 +146,9 @@ export function pinToForm(pin: PinJson): PinFormValues {
     description: str(pin.description),
     longFormSummary: str(pin.longFormSummary),
     allDay: !!pin.allDay,
-    ...datesToForm(pin),
+    // The form edits the source's dates; they are only stored apart from the
+    // pin's while a reference overrides them.
+    ...datesToForm(pin.sourceStartDateTime ? { utcStartDateTime: pin.sourceStartDateTime, utcEndDateTime: pin.sourceEndDateTime, allDay: pin.allDay } : pin),
     category: str(pin.category),
     company: str(pin.company),
     companyWikiFor: str(pin.company),
@@ -218,6 +224,46 @@ export function applyScrape(values: PinFormValues, scraped: Partial<PinJson>): P
 
 const num = (v: string) => (v.trim() === '' || isNaN(Number(v)) ? undefined : Number(v));
 
+// The references worth sending: a link and a confidence each.
+function formToReferences(values: Pick<PinFormValues, 'references'>): PinReferenceJson[] {
+  return values.references
+    .filter((r) => r.url.trim() && num(r.confidence) !== undefined)
+    .map(
+      (r): PinReferenceJson => ({
+        id: r.id,
+        url: r.url.trim(),
+        title: r.title.trim() || undefined,
+        confidence: Math.min(100, Math.max(0, Math.round(num(r.confidence)!))),
+        publishedDate: r.publishedDate || undefined,
+        startDate: r.startDate || undefined,
+        // An end before the start it goes with is not an end.
+        endDate: r.endDate && !(r.startDate && r.endDate < r.startDate) ? r.endDate : undefined,
+        reasoning: r.reasoning.trim() || undefined,
+        utcCreatedDateTime: r.utcCreatedDateTime,
+      }),
+    );
+}
+
+// The dates the pin is saved with: the source's date fields, or the most
+// confident reference's start and end where one outranks the source. When they
+// differ, the source's own dates go along too so they are not lost.
+export function formDates(values: PinFormValues) {
+  const picked = pickDates(values, formToReferences(values), values.dateConfidence);
+  const dates = formToDates({ ...values, ...picked });
+  const source = formToDates(values);
+  const overridden = dates.utcStartDateTime !== source.utcStartDateTime || dates.utcEndDateTime !== source.utcEndDateTime;
+  return {
+    dates: {
+      ...dates,
+      sourceStartDateTime: overridden ? source.utcStartDateTime : undefined,
+      sourceEndDateTime: overridden ? source.utcEndDateTime : undefined,
+    },
+    overridden,
+    startFrom: picked.startFrom,
+    endFrom: picked.endFrom,
+  };
+}
+
 // The request body for POST /api/pins or PUT /api/pins/:id.
 export function formToPin(values: PinFormValues) {
   const company = values.company.trim();
@@ -244,22 +290,11 @@ export function formToPin(values: PinFormValues) {
     companyWikiUrl: company && company === values.companyWikiFor ? values.companyWikiUrl || undefined : undefined,
     category: values.category || undefined,
     allDay: values.allDay,
-    ...formToDates(values),
+    ...formDates(values).dates,
     merchants: values.merchants
       .filter((m) => m.url || m.label)
       .map((m) => ({ id: m.id, label: m.label, url: m.url, price: m.price == null || (m.price as unknown) === '' ? undefined : Number(m.price) })),
-    references: values.references
-      .filter((r) => r.url.trim() && num(r.confidence) !== undefined)
-      .map(
-        (r): PinReferenceJson => ({
-          id: r.id,
-          url: r.url.trim(),
-          title: r.title.trim() || undefined,
-          confidence: Math.min(100, Math.max(0, Math.round(num(r.confidence)!))),
-          publishedDate: r.publishedDate || undefined,
-          utcCreatedDateTime: r.utcCreatedDateTime,
-        }),
-      ),
+    references: formToReferences(values),
     media: values.useMedia && values.selectedMedia ? [values.selectedMedia] : [],
   };
 }

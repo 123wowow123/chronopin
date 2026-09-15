@@ -16,8 +16,8 @@ describe('keepReferences', () => {
   it('keeps only confident references a result returned, strongest first', () => {
     const kept = keepReferences(
       [
-        { url: 'https://news.example/launch', title: ' Launch set ', confidence: 80, publishedDate: '2026-09-01' },
-        { url: 'https://maker.example/press/', title: 'Press release', confidence: 95, publishedDate: 'Sept 2026' },
+        { url: 'https://news.example/launch', title: ' Launch set ', confidence: 80, publishedDate: '2026-09-01', reasoning: '  Reports the launch for Sept 1.  ' },
+        { url: 'https://maker.example/press/', title: 'Press release', confidence: 95, publishedDate: 'Sept 2026', reasoning: '   ' },
         { url: 'https://www.news.example/launch#more', title: 'Dupe', confidence: 99 },
         { url: 'https://src.example/story', title: 'The source', confidence: 90 },
         { url: 'https://weak.example/x', title: 'Weak', confidence: MIN_CONFIDENCE - 1 },
@@ -28,7 +28,7 @@ describe('keepReferences', () => {
     );
     expect(kept).toEqual([
       { url: 'https://maker.example/press/', title: 'Press release', confidence: 95, publishedDate: undefined },
-      { url: 'https://news.example/launch', title: 'Launch set', confidence: 80, publishedDate: '2026-09-01' },
+      { url: 'https://news.example/launch', title: 'Launch set', confidence: 80, publishedDate: '2026-09-01', reasoning: 'Reports the launch for Sept 1.' },
     ]);
   });
 });

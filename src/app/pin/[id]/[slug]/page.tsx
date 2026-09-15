@@ -7,6 +7,7 @@ import { Comments } from '@/components/pin/Comments';
 import { CountdownMeter } from '@/components/pin/CountdownMeter';
 import { CitedText } from '@/components/pin/CitedText';
 import { DateConfidence } from '@/components/pin/DateConfidence';
+import { DateRanges } from '@/components/pin/DateRanges';
 import { FollowButton } from '@/components/pin/FollowButton';
 import { PinAdminLink } from '@/components/pin/PinAdminLink';
 import { PinCard } from '@/components/pin/PinCard';
@@ -20,6 +21,7 @@ import { WatchButton } from '@/components/pin/WatchButton';
 import { Icon } from '@/components/ui/Icon';
 import { PostedTime, StartTime } from '@/components/ui/LocalTime';
 import { UserAvatar } from '@/components/ui/UserAvatar';
+import { pinDateRanges } from '@/lib/dateClaims';
 import { money } from '@/lib/format';
 import { pinEvidence } from '@/lib/referenceConfidence';
 import { safeHtml, toCardPins } from '@/lib/sanitize';
@@ -70,12 +72,20 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
         <aside className="min-w-0">
           {pin.latitude != null && pin.longitude != null ? (
             <div>
-              {pin.address ? (
-                <p className="mb-2 flex items-center gap-1.5 text-sm text-muted">
-                  <Icon name="pin" className="size-4" />
-                  {pin.address}
-                </p>
-              ) : null}
+              <div className="mb-2 flex items-center justify-between gap-3 text-sm">
+                {pin.address ? (
+                  <p className="flex min-w-0 items-center gap-1.5 text-muted">
+                    <Icon name="pin" className="size-4 shrink-0" />
+                    {pin.address}
+                  </p>
+                ) : (
+                  <span />
+                )}
+                <Link href={`/map?pin=${pin.id}`} className="flex shrink-0 items-center gap-1.5 text-link">
+                  <Icon name="map" className="size-4" />
+                  Show on map
+                </Link>
+              </div>
               <PinMapLoader latitude={pin.latitude} longitude={pin.longitude} title={pin.title} />
               <PinWeather pinId={pin.id} />
             </div>
@@ -120,6 +130,7 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
       {pin.company}
     </a>
   ) : null;
+  const dateRanges = pinDateRanges(pin, timeZone);
   // The map labels the place itself; the text is only for an address it cannot draw.
   const locationText = pin.address && !hasCoordinates ? pin.address : null;
 
@@ -191,6 +202,7 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
           />
         </div>
       ) : null}
+      {pin.utcStartDateTime ? <DateRanges {...dateRanges} /> : null}
 
       {pin.utcStartDateTime ? <CountdownMeter start={pin.utcStartDateTime} since={pin.utcCreatedDateTime} allDay={pin.allDay} /> : null}
 
@@ -259,7 +271,7 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
         </div>
       ) : null}
 
-      <PinReferences pinId={pin.id} authorId={pin.user?.id ?? pin.userId} evidence={pinEvidence(pin)} timeZone={timeZone} />
+      <PinReferences pinId={pin.id} authorId={pin.user?.id ?? pin.userId} evidence={pinEvidence(pin)} sourceReasoning={pin.dateConfidenceReasoning} dateRanges={dateRanges} timeZone={timeZone} />
     </>
   );
 }

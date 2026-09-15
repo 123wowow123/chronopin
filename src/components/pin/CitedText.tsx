@@ -4,9 +4,12 @@ import type { Evidence } from '@/lib/referenceConfidence';
 
 // Text with a superscript [n] after each reference it names, linking to that
 // reference in the pin page's References panel. hrefBase is the pin's path
-// when shown away from that page.
-export function CitedText({ text, evidence, hrefBase }: { text: string; evidence: Evidence[]; hrefBase?: string }) {
-  const segments = citeReasoning(text, orderEvidence(evidence));
+// when shown away from that page. omit leaves out citations of one reference -
+// the one the text is shown next to.
+export function CitedText({ text, evidence, hrefBase, omit }: { text: string; evidence: Evidence[]; hrefBase?: string; omit?: number }) {
+  const segments = citeReasoning(text, orderEvidence(evidence))
+    .map((segment) => (typeof segment === 'string' ? segment : { cite: segment.cite.filter((n) => n !== omit) }))
+    .filter((segment) => typeof segment === 'string' || segment.cite.length);
   return (
     <>
       {segments.map((segment, i) =>

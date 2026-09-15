@@ -1,6 +1,9 @@
 import { Icon } from '@/components/ui/Icon';
+import { CitedText } from './CitedText';
 import { orderEvidence } from '@/lib/citations';
+import type { DateClaim, DateRange } from '@/lib/dateClaims';
 import { type Evidence, HALF_LIFE_DAYS, weighReferences } from '@/lib/referenceConfidence';
+import { formatDay } from './DateRanges';
 import { EditReferencesLink } from './EditReferencesLink';
 import { ExpandableList } from './ExpandableList';
 import { confidenceClass, PinConfidence } from './PinConfidence';
@@ -24,7 +27,22 @@ function hostname(url: string) {
 // Everything backing a pin - its source, then its references newest first -
 // with how much each counts toward the pin's overall confidence. Row n has the
 // id ref-n, which the [n] citations in the pin's reasoning link to.
-export function PinReferences({ pinId, authorId, evidence, timeZone }: { pinId: number; authorId?: number; evidence: Evidence[]; timeZone: string }) {
+export function PinReferences({
+  pinId,
+  authorId,
+  evidence,
+  sourceReasoning,
+  dateRanges,
+  timeZone,
+}: {
+  pinId: number;
+  authorId?: number;
+  evidence: Evidence[];
+  // The source's reasoning is the pin's dateConfidenceReasoning.
+  sourceReasoning?: string;
+  dateRanges: { start?: DateRange; end?: DateRange };
+  timeZone: string;
+}) {
   const linked = orderEvidence(evidence);
   const shares = new Map(weighReferences(linked).map(({ reference, share }) => [reference, share]));
   const added = linked.filter((e) => !e.isSource).length;
@@ -32,6 +50,13 @@ export function PinReferences({ pinId, authorId, evidence, timeZone }: { pinId: 
 
   const rows = linked.map((reference, index) => {
     const share = shares.get(reference);
+    const reasoning = reference.isSource ? sourceReasoning : reference.reasoning;
+    // The start and end this row gives, if any; the source's come from the pin.
+    const claimOf = (range?: DateRange) => range?.claims.find((c) => (reference.isSource ? c.isSource : c.url === reference.url));
+    const dates = [
+      ['Starts', claimOf(dateRanges.start)],
+      ['Ends', claimOf(dateRanges.end)],
+    ].filter(([, claim]) => claim) as [string, DateClaim][];
     const site = hostname(reference.url);
     const dated = reference.publishedDate
       ? `Published ${formatDate(reference.publishedDate, 'UTC')}`
@@ -62,12 +87,23 @@ export function PinReferences({ pinId, authorId, evidence, timeZone }: { pinId: 
           <div className="mt-0.5 flex flex-wrap gap-x-2 text-xs text-subtle">
             <span className="truncate">{site}</span>
             {dated ? <span>· {dated}</span> : null}
+            {dates.map(([label, claim]) => (
+              <span key={label} className={claim.used ? 'font-medium text-muted' : undefined} title={claim.used ? 'The pin uses this date: it is the most confident' : undefined}>
+                · {label} {formatDay(claim.day)}
+                {claim.used ? ' ✓' : ''}
+              </span>
+            ))}
             {share !== undefined ? (
               <span className="tabular-nums" title="Share of the overall confidence; newer references count more">
                 · {Math.round(share * 100)}% of score
               </span>
             ) : null}
           </div>
+          {reasoning ? (
+            <p className="mt-1 text-xs leading-relaxed text-muted italic">
+              <CitedText text={reasoning} evidence={linked} omit={index + 1} />
+            </p>
+          ) : null}
         </div>
       </li>
     );

@@ -1,8 +1,11 @@
 import { randomUUID } from 'node:crypto';
+import getVideoId from 'get-video-id';
 import _ from 'lodash';
+import { mediumID } from '@/lib/appConfig';
 import * as db from '../db';
 import type { Row } from '../db';
 import * as image from '../image';
+import log from '../util/log';
 import BasePin from './basePin';
 
 const prop = [
@@ -67,6 +70,42 @@ export default class Medium {
   async createAndSaveToCDN(): Promise<this> {
     const newMedium = await getImageStatAndSaveImage(this.originalUrl);
     return this.set(newMedium).save();
+  }
+
+  // Saves a new medium of any type with its thumb: an image's own, or a
+  // YouTube video's still, so places that cannot play the video (the map's
+  // popup) have a picture. A video without a still saves anyway.
+  async saveWithThumb(): Promise<this> {
+    const type = Number(this.type);
+    if (type === mediumID.image) {
+      return this.createAndSaveToCDN();
+    }
+    if (type === mediumID.youtube && !this.thumbName) {
+      await this.addVideoThumb().catch((err) => log.error('video-thumb error:', err));
+    }
+    return this.save();
+  }
+
+  // Stores the video's largest still on the CDN as this medium's thumb. The
+  // medium keeps its embed originalUrl, which is how pin updates match media.
+  async addVideoThumb(): Promise<this> {
+    const { id } = getVideoId(this.originalUrl?.replace(/^\/\//, 'https://') || '');
+    if (!id) {
+      throw new Error(`No YouTube video id in ${this.originalUrl}`);
+    }
+    let lastErr: unknown;
+    // maxresdefault is missing for older and low-resolution uploads; hqdefault always exists.
+    for (const size of ['maxresdefault', 'sddefault', 'hqdefault']) {
+      try {
+        const { thumbName, thumbWidth, thumbHeight } = await mapAndSaveThumb(
+          await image.createThumbFromUrl(`https://i.ytimg.com/vi/${id}/${size}.jpg`),
+        );
+        return Object.assign(this, { thumbName, thumbWidth, thumbHeight });
+      } catch (err) {
+        lastErr = err;
+      }
+    }
+    throw lastErr;
   }
 
   deleteFromPin() {

@@ -3,7 +3,9 @@ import * as db from '../db';
 import type { Row } from '../db';
 import BasePin from './basePin';
 
-const prop = ['id', 'url', 'title', 'confidence', 'publishedDate', 'utcCreatedDateTime'];
+const prop = ['id', 'url', 'title', 'confidence', 'publishedDate', 'startDate', 'endDate', 'reasoning', 'utcCreatedDateTime'];
+
+export const REASONING_MAX = 2000;
 
 // A further link backing up a pin, with how strongly it supports it (0-100).
 export default class PinReference {
@@ -44,12 +46,15 @@ export default class PinReference {
       this.title,
       this.confidence,
       this.publishedDate || null,
+      this.startDate || null,
+      this.endDate || null,
+      this.reasoning || null,
       this.utcCreatedDateTime || null,
     ].map((value) => (value === undefined ? null : value));
     const rows = await db.query(
       `
-      INSERT INTO "PinReference" ("pinId", "url", "title", "confidence", "publishedDate", "utcCreatedDateTime")
-      VALUES ($1, $2, $3, $4, $5, COALESCE($6::timestamptz, now()))
+      INSERT INTO "PinReference" ("pinId", "url", "title", "confidence", "publishedDate", "startDate", "endDate", "reasoning", "utcCreatedDateTime")
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, COALESCE($9::timestamptz, now()))
       RETURNING "id", "utcCreatedDateTime"`,
       values,
     );
@@ -80,8 +85,19 @@ export default class PinReference {
       if (r.publishedDate && !/^\d{4}-\d{2}-\d{2}$/.test(r.publishedDate)) {
         return 'A reference publishedDate must be YYYY-MM-DD.';
       }
+      for (const key of ['startDate', 'endDate']) {
+        if (r[key] && !/^\d{4}-\d{2}-\d{2}$/.test(r[key])) {
+          return `A reference ${key} must be YYYY-MM-DD.`;
+        }
+      }
+      if (r.startDate && r.endDate && r.endDate < r.startDate) {
+        return 'A reference endDate cannot be before its startDate.';
+      }
       if (r.title && (typeof r.title !== 'string' || r.title.length > 1024)) {
         return 'A reference title must be at most 1024 characters.';
+      }
+      if (r.reasoning && (typeof r.reasoning !== 'string' || r.reasoning.length > REASONING_MAX)) {
+        return `A reference reasoning must be at most ${REASONING_MAX} characters.`;
       }
     }
     return undefined;

@@ -30,6 +30,8 @@ export const BasePinProp = [
   'category',
   'utcStartDateTime',
   'utcEndDateTime',
+  'sourceStartDateTime',
+  'sourceEndDateTime',
   'allDay',
   'utcCreatedDateTime',
   'utcUpdatedDateTime',
