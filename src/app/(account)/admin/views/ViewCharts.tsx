@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
+import { blobUrl } from '@/lib/appConfig';
 import { pinPath } from '@/lib/seo';
 import { TIME_RANGES, type TimeRange } from '@/lib/timeStats';
 import { type ViewBucket, type ViewDay, viewStats } from '@/lib/viewStats';
@@ -20,8 +21,37 @@ import {
 
 export type RangeSummary = {
   viewers: number;
-  top: { id: number; title: string; views: number; viewers: number }[];
+  top: {
+    id: number;
+    title: string;
+    views: number;
+    viewers: number;
+    thumbName?: string | null;
+    originalUrl?: string | null;
+  }[];
 };
+
+// A top pin's picture: its thumb, then an image's original, then a blank tile.
+function PinThumb({ thumbName, originalUrl }: { thumbName?: string | null; originalUrl?: string | null }) {
+  const sources = [blobUrl(thumbName), originalUrl].filter((src): src is string => !!src);
+  const [failed, setFailed] = useState(0);
+  const src = sources[failed];
+  return (
+    <span className="block h-9 w-16 shrink-0 overflow-hidden rounded bg-raised-2">
+      {src ? (
+        // eslint-disable-next-line @next/next/no-img-element -- thumbs from blob storage or arbitrary hosts
+        <img
+          src={src}
+          alt=""
+          loading="lazy"
+          referrerPolicy="no-referrer"
+          className="size-full object-cover"
+          onError={() => setFailed((n) => n + 1)}
+        />
+      ) : null}
+    </span>
+  );
+}
 
 const SERIES = [
   { label: 'Signed in', color: SERIES_BLUE, value: (b: ViewBucket) => b.signedIn },
@@ -119,21 +149,22 @@ export function ViewCharts({
             <table className="w-full text-left tabular-nums">
               <thead className="text-subtle">
                 <tr>
-                  <th className="py-1 font-medium">Pin</th>
-                  <th className="py-1 pl-3 text-right font-medium">Views</th>
-                  <th className="py-1 pl-3 text-right font-medium">Viewers</th>
+                  <th className="w-full py-1 font-medium">Pin</th>
+                  <th className="py-1 pl-6 text-right font-medium whitespace-nowrap">Views</th>
+                  <th className="py-1 pl-6 text-right font-medium whitespace-nowrap">Viewers</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-line">
                 {summary.top.map((p) => (
                   <tr key={p.id}>
-                    <td className="max-w-0 py-1.5">
-                      <Link href={pinPath(p)} className="block truncate text-link">
-                        {p.title || `Pin ${p.id}`}
+                    <td className="w-full max-w-0 py-1.5">
+                      <Link href={pinPath(p)} title={p.title} className="flex items-center gap-3 text-link">
+                        <PinThumb thumbName={p.thumbName} originalUrl={p.originalUrl} />
+                        <span className="truncate">{p.title || `Pin ${p.id}`}</span>
                       </Link>
                     </td>
-                    <td className="py-1.5 pl-3 text-right">{p.views}</td>
-                    <td className="py-1.5 pl-3 text-right">{p.viewers}</td>
+                    <td className="py-1.5 pl-6 text-right">{p.views}</td>
+                    <td className="py-1.5 pl-6 text-right">{p.viewers}</td>
                   </tr>
                 ))}
               </tbody>

@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 const TABS = [
+  { href: '/admin/views', label: 'Views' },
   { href: '/admin', label: 'Users' },
   { href: '/admin/pins', label: 'Pins' },
-  { href: '/admin/views', label: 'Views' },
 ];
 
 // Switches between the admin pages; `current` is the page rendering it.

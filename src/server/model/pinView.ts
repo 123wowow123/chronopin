@@ -47,6 +47,25 @@ export default class PinView {
         [since, limit],
       ),
     ]);
-    return { viewers, top };
+    const pictures = await PinView.pictures(top.map((p) => p.id));
+    return { viewers, top: top.map((p) => ({ ...p, ...pictures.get(p.id) })) };
+  }
+
+  // Each pin's picture as the map popup picks it: a video's still first, else
+  // its first medium. originalUrl is only set for images (a fallback when the
+  // thumb is missing); a video's is the page, not a picture.
+  static async pictures(pinIds: number[]) {
+    const rows = pinIds.length
+      ? await db.query<{ pinId: number; thumbName: string | null; originalUrl: string | null }>(
+          `SELECT DISTINCT ON ("pm"."pinId") "pm"."pinId", "m"."thumbName",
+             CASE WHEN "m"."type" = '1' THEN "m"."originalUrl" END AS "originalUrl"
+           FROM "PinMedium" AS "pm"
+             JOIN "Medium" AS "m" ON "m"."id" = "pm"."mediumId"
+           WHERE "pm"."pinId" = ANY($1::integer[]) AND "pm"."utcDeletedDateTime" IS NULL
+           ORDER BY "pm"."pinId", "m"."type" = '3' DESC, "pm"."id"`,
+          [pinIds],
+        )
+      : [];
+    return new Map(rows.map(({ pinId, ...picture }) => [pinId, picture]));
   }
 }
