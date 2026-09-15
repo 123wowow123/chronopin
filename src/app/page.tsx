@@ -5,7 +5,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { Timeline } from '@/components/timeline/Timeline';
 import { siteName } from '@/lib/appConfig';
 import { formatDayKey } from '@/lib/format';
-import { isSpan } from '@/lib/postedSpan';
+import { DEFAULT_POSTED_WITHIN, isSpan } from '@/lib/postedSpan';
 import { toCardPins } from '@/lib/sanitize';
 import { websiteJsonLd } from '@/lib/seo';
 import { pinDayKey } from '@/lib/timeline';
@@ -45,7 +45,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
   const params = await searchParams;
   const [user, timeZone] = await Promise.all([viewerUser(), viewerTimeZone()]);
   const preference = user?.defaultFilterSpanPreference;
-  const postedWithin = preference && isSpan(preference) ? preference : null;
+  const postedWithin = preference && isSpan(preference) ? preference : DEFAULT_POSTED_WITHIN;
   const fromDateTime = first(params.from_date_time) || null;
 
   const page = await timelinePage(

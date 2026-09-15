@@ -4,9 +4,10 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useEffect, useRef, useState } from 'react';
 import { TILE_ATTRIBUTION, TILE_URL } from '@/components/pin/PinMap';
+import { CategoryFilter } from '@/components/timeline/CategoryFilter';
 import { TimeRangeSlider } from '@/components/timeline/TimeRangeSlider';
 import { parseLinkHeader } from '@/lib/client/api';
-import { SPAN_OPTIONS, formatSpan, offsetDate } from '@/lib/postedSpan';
+import { DEFAULT_POSTED_WITHIN, SPAN_OPTIONS, formatSpan, offsetDate } from '@/lib/postedSpan';
 import { pinPath } from '@/lib/seo';
 import type { PinJson } from '@/lib/types';
 
@@ -36,6 +37,9 @@ function localStart(pin: PinJson) {
   return pin.allDay ? new Date(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()) : d;
 }
 
+// No picks shows every pin; several show pins in any of them.
+const inCategories = (category: string, picks: string[]) => !picks.length || picks.includes(category.toLowerCase());
+
 const escapeHtml = (text: string) => text.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
 // Every pin with a location between the past and future windows around now,
@@ -44,11 +48,18 @@ export default function PinsMap() {
   const canvasRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
   const layerRef = useRef<L.LayerGroup | null>(null);
+  // Every marker in the time window with its pin's category; the category
+  // filter only shows and hides these, so a pick needs no refetch.
+  const markersRef = useRef<{ marker: L.Marker; category: string }[]>([]);
+  const categoriesRef = useRef<string[]>([]);
   const [past, setPast] = useState<string | null>(DEFAULT_SPAN);
   const [future, setFuture] = useState<string | null>(DEFAULT_SPAN);
-  const [postedWithin, setPostedWithin] = useState<string | null>(null);
+  const [postedWithin, setPostedWithin] = useState<string | null>(DEFAULT_POSTED_WITHIN);
   const [status, setStatus] = useState<'loading' | 'ready'>('loading');
   const [count, setCount] = useState(0);
+  const [categories, setCategories] = useState<string[]>([]);
+  // Markers per category in the time window, for the category pills.
+  const [categoryCounts, setCategoryCounts] = useState<Record<string, number> | null>(null);
 
   useEffect(() => {
     const map = L.map(canvasRef.current!, { center: DEFAULT_CENTER, zoom: DEFAULT_ZOOM });
@@ -69,8 +80,10 @@ export default function PinsMap() {
     if (!map || !layer) return;
     map.closePopup();
     layer.clearLayers();
+    markersRef.current = [];
     setStatus('loading');
     setCount(0);
+    setCategoryCounts(null);
 
     const now = new Date();
     const pastBoundary = past ? offsetDate(now, past, -1) : null;
@@ -109,9 +122,15 @@ export default function PinsMap() {
             if (!cancelled) map.closePopup(popup);
           }, 200);
         };
-        marker.on({ mouseover: open, mouseout: closeSoon, click: open }).addTo(layer);
+        marker.on({ mouseover: open, mouseout: closeSoon, click: open });
+        const category = (pin.category || '').toLowerCase();
+        markersRef.current.push({ marker, category });
+        if (inCategories(category, categoriesRef.current)) marker.addTo(layer);
       }
-      setCount(seen.size);
+      setCount(layer.getLayers().length);
+      const counts: Record<string, number> = {};
+      for (const { category } of markersRef.current) counts[category] = (counts[category] || 0) + 1;
+      setCategoryCounts(counts);
     };
 
     const fetchPage = async (query: string) => {
@@ -151,6 +170,20 @@ export default function PinsMap() {
     };
   }, [past, future, postedWithin]);
 
+  useEffect(() => {
+    const map = mapRef.current;
+    const layer = layerRef.current;
+    const picks = categories.map((c) => c.toLowerCase());
+    categoriesRef.current = picks;
+    if (!map || !layer) return;
+    map.closePopup();
+    for (const { marker, category } of markersRef.current) {
+      if (inCategories(category, picks)) layer.addLayer(marker);
+      else layer.removeLayer(marker);
+    }
+    setCount(layer.getLayers().length);
+  }, [categories]);
+
   const phrase = (span: string | null) => (formatSpan(span) || '').replace(/^1 /, '');
   const hasPast = !!past && past !== '0d';
   const hasFuture = !!future && future !== '0d';
@@ -171,6 +204,13 @@ export default function PinsMap() {
           }}
         />
         <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={(value) => setPostedWithin(value.past)} />
+        <CategoryFilter
+          selected={categories}
+          counts={categoryCounts}
+          onToggle={(category) => setCategories((list) => (list.includes(category) ? list.filter((c) => c !== category) : [...list, category]))}
+          onClear={() => setCategories([])}
+          className="w-64"
+        />
       </div>
       {status === 'loading' ? (
         <p role="status" className="floating absolute bottom-8 left-1/2 z-[1000] -translate-x-1/2 rounded-full px-4 py-2 text-sm text-ink">Loading pins…</p>
@@ -179,7 +219,8 @@ export default function PinsMap() {
           No pins with a location{hasPast ? ` in the last ${phrase(past)}` : ''}
           {hasPast && hasFuture ? ' or' : ''}
           {hasFuture ? ` in the next ${phrase(future)}` : ''}
-          {postedWithin ? `, posted in the last ${phrase(postedWithin)}` : ''}.
+          {postedWithin ? `, posted in the last ${phrase(postedWithin)}` : ''}
+          {categories.length ? ` in ${categories.join(' or ')}` : ''}.
         </p>
       ) : null}
     </div>

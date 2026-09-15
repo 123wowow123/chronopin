@@ -42,3 +42,25 @@ export function slugify(value: string): string {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
+
+// The list's spelling of a category typed in any case, or the value itself
+// when it is not on the list.
+export function canonicalCategory(value: string): string {
+  const lower = value.toLowerCase();
+  return CATEGORIES.find((category) => category.toLowerCase() === lower) ?? value;
+}
+
+// The category filter's pills: every category with pins (counts keyed by
+// lowercased category), plus the picked ones so they can be unpicked even
+// when nothing matches - busiest first, then by name.
+export function categoryOptions(counts: Record<string, number>, selected: string[] = []): { name: string; count: number }[] {
+  const byKey = new Map<string, { name: string; count: number }>();
+  for (const [key, count] of Object.entries(counts)) {
+    if (key && count > 0) byKey.set(key.toLowerCase(), { name: canonicalCategory(key), count });
+  }
+  for (const name of selected) {
+    const key = name.toLowerCase();
+    if (!byKey.has(key)) byKey.set(key, { name: canonicalCategory(name), count: 0 });
+  }
+  return [...byKey.values()].sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+}

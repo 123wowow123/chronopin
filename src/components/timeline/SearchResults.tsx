@@ -6,9 +6,10 @@ import { UserAvatar } from '@/components/ui/UserAvatar';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { dayKeyIn } from '@/lib/format';
-import { formatSpan, offsetDate, SPAN_OPTIONS } from '@/lib/postedSpan';
+import { DEFAULT_POSTED_WITHIN, formatSpan, offsetDate, SPAN_OPTIONS, spanLabel } from '@/lib/postedSpan';
 import { type Bag, buildBags, pinDayKey, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { CardPin } from '@/lib/types';
+import { SearchCategoryFilter } from './CategoryFilter';
 import { FloatingControls } from './FloatingControls';
 import { TimeBlock, TodayMarker } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
@@ -58,7 +59,7 @@ export function SearchResults({
   onlyWatched?: boolean;
 }) {
   const timeZone = useTimeZone(serverTimeZone);
-  const [postedWithin, setPostedWithin] = useState<string | null>(null);
+  const [postedWithin, setPostedWithin] = useState<string | null>(DEFAULT_POSTED_WITHIN);
   const hasRelevance = pins.some((p) => p.searchScore != null);
   const [sortBy, setSortBy] = useState<SortBy>('date');
 
@@ -106,10 +107,15 @@ export function SearchResults({
   return (
     <div className="px-3 pb-24 lg:px-4 xl:pr-[288px]">
       <FloatingControls
-        summary={searchedUser ? searchedUser.userName : `Posted within ${formatSpan(postedWithin) || 'All'}`}
+        summary={searchedUser ? searchedUser.userName : `Posted within ${spanLabel(postedWithin)}`}
         onToday={sortBy === 'date' && bags.length ? scrollToToday : undefined}
       >
         <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={({ past }) => setPostedWithin(past)} />
+        <SearchCategoryFilter
+          query={query}
+          onlyWatched={onlyWatched}
+          createdSince={postedWithin ? offsetDate(new Date(serverNow), postedWithin, -1)?.toISOString() : null}
+        />
         {hasRelevance ? <SortToggle value={sortBy} onChange={setSortBy} className="floating max-xl:hidden" /> : null}
         {searchedUser ? (
           <div className="floating flex flex-col gap-3 px-3.5 py-3">

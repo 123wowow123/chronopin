@@ -6,9 +6,9 @@ import Pin from '../model/pin';
 import Pins from '../model/pins';
 import { toJson, type PinJson, type SearchPage, type TimelinePage } from '@/lib/types';
 import { TAGS } from './cache';
-import { searchPins } from './search';
+import { searchCategoryCounts, searchPins } from './search';
 import { getTimeline } from './timeline';
-import { resolveCreatedSince } from '../util/createdFilter';
+import { resolveCreatedSince, type CreatedQuery } from '../util/createdFilter';
 
 export type TimelineCursor = { fromDateTime?: string | null; lastPinId?: number };
 
@@ -89,6 +89,38 @@ async function runSearch(query: string, userId: number | null, onlyWatched: bool
   } catch (err) {
     return { pins: [], error: (err as Error).message };
   }
+}
+
+// Pins per lowercased category for the category filter's pills, under the
+// page's other filters: the timeline's posted-within span, or a search's
+// other terms, watch choice and span.
+export async function timelineCategoryCounts(created: CreatedQuery): Promise<Record<string, number>> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  const rows = await Pins.countTimelineByCategory(resolveCreatedSince(created));
+  return Object.fromEntries(rows.map((row) => [row.category || '', row.count]));
+}
+
+export async function searchPageCategoryCounts(
+  query: string,
+  userId: number | null,
+  onlyWatched: boolean,
+  created: CreatedQuery,
+): Promise<Record<string, number>> {
+  return onlyWatched && userId ? runCategoryCounts(query, userId, true, created) : cachedCategoryCounts(query, created);
+}
+
+// Counts carry no per-viewer fields, so everyone shares one entry.
+async function cachedCategoryCounts(query: string, created: CreatedQuery) {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  return runCategoryCounts(query, null, false, created);
+}
+
+function runCategoryCounts(query: string, userId: number | null, onlyWatched: boolean, created: CreatedQuery) {
+  return searchCategoryCounts(query, { userId, onlyWatched, createdSince: resolveCreatedSince(created) });
 }
 
 export async function pinComments(id: number) {

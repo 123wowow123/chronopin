@@ -113,6 +113,22 @@ export default class Pins extends BasePins<Pin> {
     );
   }
 
+  // Pins per lowercased category across the whole timeline: the same pins
+  // its pages walk (live, confident enough, created since the cutoff).
+  static async countTimelineByCategory(createdSince?: Date | null) {
+    return db.query<{ category: string | null; count: number }>(
+      `
+      SELECT lower("category") AS "category", COUNT(DISTINCT "id")::integer AS "count"
+      FROM "PinBaseView"
+      WHERE "utcDeletedDateTime" IS NULL
+        AND ($1::timestamptz IS NULL OR "utcCreatedDateTime" >= $1)
+        AND COALESCE("pinConfidence"("references", "sourceUrl", "dateConfidence", "utcCreatedDateTime"),
+                     ${TIMELINE_MIN_CONFIDENCE}) >= ${TIMELINE_MIN_CONFIDENCE}
+      GROUP BY 1`,
+      [createdSince || null],
+    );
+  }
+
   static async countLive(): Promise<number> {
     const rows = await db.query<{ count: number }>(`SELECT COUNT(*) AS "count" FROM "Pin" WHERE "utcDeletedDateTime" IS NULL`);
     return rows[0].count;

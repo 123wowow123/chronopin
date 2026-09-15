@@ -3,7 +3,12 @@
 // timeline filter, the map's range and the preferences page.
 
 export const SPAN_OPTIONS = ['12h', '1d', '3d', '5d', '1w', '1mo', '1y'];
-export const DEFAULT_SPAN = '1d';
+// Where every "posted within" filter starts without a saved preference: null
+// is unbounded ("All").
+export const DEFAULT_POSTED_WITHIN: string | null = null;
+
+// "5d" -> "5 days"; null (unbounded) -> "All".
+export const spanLabel = (within: string | null | undefined) => formatSpan(within) || 'All';
 
 type Unit = { value: string; label: string; typed: RegExp; calendar?: boolean };
 

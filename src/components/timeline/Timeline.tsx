@@ -7,10 +7,11 @@ import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { dayKeyIn } from '@/lib/format';
-import { formatSpan, SPAN_OPTIONS } from '@/lib/postedSpan';
+import { formatSpan, SPAN_OPTIONS, spanLabel } from '@/lib/postedSpan';
 import { pinConfidence, pinEvidence, TIMELINE_MIN_CONFIDENCE } from '@/lib/referenceConfidence';
 import { buildBags, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { CardPin, DateTimeJson, TimelinePage } from '@/lib/types';
+import { SearchCategoryFilter } from './CategoryFilter';
 import { FloatingControls } from './FloatingControls';
 import { TimeBlock, TodayMarker } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
@@ -231,7 +232,7 @@ export function Timeline({
 
   return (
     <div className="px-[max(0.75rem,env(safe-area-inset-left))] pb-24 lg:px-4 xl:pr-[288px]">
-      <FloatingControls summary={`Posted within ${formatSpan(postedWithin) || 'All'}`} onToday={scrollToToday}>
+      <FloatingControls summary={`Posted within ${spanLabel(postedWithin)}`} onToday={scrollToToday}>
         <TimeRangeSlider
           steps={SPAN_OPTIONS}
           past={postedWithin}
@@ -239,6 +240,7 @@ export function Timeline({
           pastLabelSpan={defaultSpan}
           onChange={({ past }) => void changePostedWithin(past)}
         />
+        <SearchCategoryFilter postedWithin={postedWithin} />
       </FloatingControls>
 
       <div ref={topRef} aria-hidden className="h-px" />

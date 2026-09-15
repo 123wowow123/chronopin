@@ -497,5 +497,9 @@ update client for youtube and twitter
 
 
 
-- Create watch view and should have difference groups
-- quick category filter
+- watched view and should have different groups 
+- create quick clickable category filter
+
+and map view
+
+- pin should show on UI the range of possible start dates grounded by reference but use top confidence value
