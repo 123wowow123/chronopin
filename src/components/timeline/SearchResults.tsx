@@ -2,12 +2,13 @@
 
 import { useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { FollowButton } from '@/components/pin/FollowButton';
+import { PinCard } from '@/components/pin/PinCard';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { dayKeyIn } from '@/lib/format';
 import { DEFAULT_POSTED_WITHIN, formatSpan, offsetDate, SPAN_OPTIONS, spanLabel } from '@/lib/postedSpan';
-import { type Bag, buildBags, pinDayKey, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
+import { buildBags, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { CardPin } from '@/lib/types';
 import { SearchCategoryFilter } from './CategoryFilter';
 import { FloatingControls } from './FloatingControls';
@@ -37,8 +38,8 @@ function SortToggle({ value, onChange, className = '' }: { value: SortBy; onChan
   );
 }
 
-// Search results: on the timeline by date (opening on today), or ranked by
-// relevance for free-text searches.
+// Search results: on the timeline by date (opening on today), or as a flat
+// list ranked by relevance for free-text searches.
 export function SearchResults({
   pins,
   serverTimeZone,
@@ -62,6 +63,7 @@ export function SearchResults({
   const [postedWithin, setPostedWithin] = useState<string | null>(DEFAULT_POSTED_WITHIN);
   const hasRelevance = pins.some((p) => p.searchScore != null);
   const [sortBy, setSortBy] = useState<SortBy>('date');
+  const [relevanceShown, setRelevanceShown] = useState(false);
 
   // Results are a complete set, so "posted within" filters them in place.
   const visible = useMemo(() => {
@@ -73,19 +75,9 @@ export function SearchResults({
   const todayKey = dayKeyIn(serverNow, timeZone);
   const bags = useMemo(() => buildBags(visible, [], timeZone), [visible, timeZone]);
   const marker = resolveTodayMarker(bags, todayKey);
-  // By relevance, pins keep their timeline look but not its order: a day's
-  // block holds a run of neighbouring results, so one day can appear again.
-  const rankedBags = useMemo(() => {
-    const ranked = [...visible].sort((a, b) => (b.searchScore ?? 0) - (a.searchScore ?? 0));
-    const runs: Bag[] = [];
-    for (const pin of ranked) {
-      const day = pinDayKey(pin, timeZone);
-      const last = runs.at(-1);
-      if (last?.day === day) last.pins.push(pin);
-      else runs.push({ day, pins: [pin], dateTimes: [] });
-    }
-    return runs;
-  }, [visible, timeZone]);
+  // By relevance, pins drop the timeline's day grouping and rail entirely:
+  // just a flat ranked list.
+  const ranked = useMemo(() => [...visible].sort((a, b) => (b.searchScore ?? 0) - (a.searchScore ?? 0)), [visible]);
 
   const scrollToToday = () => {
     const id = todayScrollId(bags, marker);
@@ -99,7 +91,21 @@ export function SearchResults({
     const id = todayScrollId(bags, marker);
     if (id) document.getElementById(id)?.scrollIntoView({ block: 'start' });
   }, [bags, marker, sortBy]);
-  // After the effect above, so the position it records on mount is today's.
+  // Each sort keeps its own place; relevance first opens at the top.
+  const scrollBySort = useRef<Partial<Record<SortBy, number>>>({});
+  const changeSort = (next: SortBy) => {
+    if (next === sortBy) return;
+    scrollBySort.current[sortBy] = window.scrollY;
+    setSortBy(next);
+    if (next === 'relevance') setRelevanceShown(true);
+  };
+  const shownSort = useRef(sortBy);
+  useLayoutEffect(() => {
+    if (shownSort.current === sortBy) return;
+    shownSort.current = sortBy;
+    window.scrollTo({ top: scrollBySort.current[sortBy] ?? 0 });
+  }, [sortBy]);
+  // After the effects above, so the position it records on mount is today's.
   useManualScrollRestoration();
 
   const phrase = (formatSpan(postedWithin) || '').replace(/^1 /, '');
@@ -116,7 +122,7 @@ export function SearchResults({
           onlyWatched={onlyWatched}
           createdSince={postedWithin ? offsetDate(new Date(serverNow), postedWithin, -1)?.toISOString() : null}
         />
-        {hasRelevance ? <SortToggle value={sortBy} onChange={setSortBy} className="floating max-xl:hidden" /> : null}
+        {hasRelevance ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : null}
         {searchedUser ? (
           <div className="floating flex flex-col gap-3 px-3.5 py-3">
             <div className="flex items-center gap-2 font-semibold text-ink">
@@ -132,7 +138,7 @@ export function SearchResults({
           hide with them, so it gets a bar of its own pinned under the navbar. */}
       {hasRelevance ? (
         <div data-sticky-sort className="sticky top-[52px] z-20 -mx-3 flex justify-center bg-header/85 px-3 py-2 shadow-[0_1px_0_var(--color-line)] backdrop-blur-md lg:-mx-4 xl:hidden">
-          <SortToggle value={sortBy} onChange={setSortBy} className="w-full max-w-sm rounded-xl bg-field ring-1 ring-line ring-inset" />
+          <SortToggle value={sortBy} onChange={changeSort} className="w-full max-w-sm rounded-xl bg-field ring-1 ring-line ring-inset" />
         </div>
       ) : null}
 
@@ -149,30 +155,25 @@ export function SearchResults({
         </p>
       ) : null}
 
-      {sortBy === 'relevance' ? (
-        <div className={rail}>
-          {rankedBags.map((bag) => (
-            <TimeBlock
-              key={bag.pins[0].id}
-              id={`rank-${bag.pins[0].id}`}
-              bag={bag}
-              todayKey={todayKey}
-              specialtyDays={specialtyDays[bag.day.slice(5)] || []}
-              serverTimeZone={serverTimeZone}
-            />
+      {/* Kept mounted once shown: a remount resizes cards (embeds, media fallbacks) after the scroll is restored. */}
+      {relevanceShown ? (
+        <ul hidden={sortBy !== 'relevance'} className="mt-6 grid grid-cols-[repeat(auto-fill,minmax(min(100%,22rem),1fr))] items-start gap-2.5">
+          {ranked.map((pin, i) => (
+            <li key={pin.id} id={`rank-${pin.id}`}>
+              <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={i === 0} />
+            </li>
           ))}
-        </div>
-      ) : (
-        <div className={rail}>
-          {bags.map((bag, index) => (
-            <div key={bag.day}>
-              {marker.index === index ? <TodayMarker specialtyDays={specialtyDays[todayKey.slice(5)] || []} /> : null}
-              <TimeBlock bag={bag} todayKey={todayKey} specialtyDays={specialtyDays[bag.day.slice(5)] || []} serverTimeZone={serverTimeZone} />
-            </div>
-          ))}
-          {marker.atEnd ? <TodayMarker specialtyDays={specialtyDays[todayKey.slice(5)] || []} /> : null}
-        </div>
-      )}
+        </ul>
+      ) : null}
+      <div hidden={sortBy !== 'date'} className={rail}>
+        {bags.map((bag, index) => (
+          <div key={bag.day}>
+            {marker.index === index ? <TodayMarker specialtyDays={specialtyDays[todayKey.slice(5)] || []} /> : null}
+            <TimeBlock bag={bag} todayKey={todayKey} specialtyDays={specialtyDays[bag.day.slice(5)] || []} serverTimeZone={serverTimeZone} />
+          </div>
+        ))}
+        {marker.atEnd ? <TodayMarker specialtyDays={specialtyDays[todayKey.slice(5)] || []} /> : null}
+      </div>
     </div>
   );
 }
