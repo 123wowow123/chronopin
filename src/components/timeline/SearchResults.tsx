@@ -15,7 +15,7 @@ import { dayKeyIn } from '@/lib/format';
 import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, formatSpan, offsetDate, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSpan';
 import { buildBags, pinDayKey, pinTense, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { CardPin, SearchPage } from '@/lib/types';
-import { SearchCategoryFilter } from './CategoryFilter';
+import { categoryPillSummary, SearchCategoryFilter } from './CategoryFilter';
 import { FloatingControls } from './FloatingControls';
 import { TimeBlock, TodayMarker } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
@@ -34,7 +34,7 @@ function SortToggle({ value, onChange, className = '' }: { value: SortBy; onChan
           type="button"
           aria-pressed={value === option}
           onClick={() => onChange(option)}
-          className={`flex-1 rounded-lg px-2.5 py-1 font-medium capitalize transition-colors ${value === option ? 'bg-accent text-white' : 'text-muted hover:bg-raised hover:text-ink'}`}
+          className={`flex-1 rounded-lg px-2.5 py-1 font-medium capitalize max-lg:py-2 transition-colors ${value === option ? 'bg-accent text-white' : 'text-muted hover:bg-raised hover:text-ink'}`}
         >
           {option}
         </button>
@@ -278,14 +278,20 @@ export function SearchResults({
     <div className="px-3 pb-24 lg:px-4 xl:pr-[288px]">
       <FloatingControls
         summary={searchedUser ? searchedUser.userName : `Posted within ${spanLabel(postedWithin)}`}
+        summaryIsPostedWithin={!searchedUser}
         onToday={sortBy === 'date' && bags.length ? scrollToToday : undefined}
+        category={{
+          summary: categoryPillSummary(query),
+          control: (
+            <SearchCategoryFilter
+              query={query}
+              onlyWatched={onlyWatched}
+              createdSince={postedWithin ? offsetDate(new Date(serverNow), postedWithin, -1)?.toISOString() : null}
+            />
+          ),
+        }}
       >
         {canSort ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : null}
-        <SearchCategoryFilter
-          query={query}
-          onlyWatched={onlyWatched}
-          createdSince={postedWithin ? offsetDate(new Date(serverNow), postedWithin, -1)?.toISOString() : null}
-        />
         <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={({ past }) => changePostedWithin(past)} />
         {sortBy === 'relevance' ? <TimeRangeSlider steps={EVENT_SPAN_OPTIONS} past={startSpan.past} future={startSpan.future} onChange={changeStartSpan} /> : null}
         {searchedUser ? (

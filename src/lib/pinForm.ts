@@ -3,7 +3,11 @@
 // the last, exclusive); the form works in the viewer's local calendar.
 
 import { addDays, pickDates } from './dateClaims';
-import type { MediumJson, MerchantJson, PinJson, PinReferenceJson } from './types';
+import type { MediumJson, MerchantJson, PinJson, PinRatingJson, PinReferenceJson } from './types';
+
+// What /api/scrape answers: a draft pin, plus the promotional video it found
+// for a film, series or anime (also listed in media).
+export type ScrapedPin = Partial<PinJson> & { trailer?: MediumJson };
 
 export type PinFormValues = {
   id?: number;
@@ -39,6 +43,12 @@ export type PinFormValues = {
   media: MediumJson[];
   selectedMedia?: MediumJson;
   useMedia: boolean;
+  // Media saved alongside the heading: a stored pin's other media, and a
+  // scraped trailer. The heading picker only ever chose one medium, so
+  // without this an edit deleted every medium but the heading.
+  extraMedia: MediumJson[];
+  // Review-site scores from the scrape. Not editable, only carried.
+  ratings: PinRatingJson[];
 };
 
 // A reference row as typed: confidence stays a string until it is sent.
@@ -76,6 +86,8 @@ export const EMPTY_FORM: PinFormValues = {
   references: [],
   media: [],
   useMedia: true,
+  extraMedia: [],
+  ratings: [],
 };
 
 const pad = (n: number) => String(n).padStart(2, '0');
@@ -168,12 +180,14 @@ export function pinToForm(pin: PinJson): PinFormValues {
     media: pin.media || [],
     selectedMedia: pin.media?.[0],
     useMedia: true,
+    extraMedia: (pin.media || []).slice(1),
+    ratings: pin.ratings ? pin.ratings.map((r) => ({ ...r })) : [],
   };
 }
 
 // Fills the form's empty fields from a scrape, without overwriting what the
 // author already typed or picked.
-export function applyScrape(values: PinFormValues, scraped: Partial<PinJson>): PinFormValues {
+export function applyScrape(values: PinFormValues, scraped: ScrapedPin): PinFormValues {
   const next = { ...values };
   const fill = <K extends keyof PinFormValues>(key: K, value: PinFormValues[K] | undefined) => {
     if (value !== undefined && value !== '' && !next[key]) next[key] = value;
@@ -214,6 +228,12 @@ export function applyScrape(values: PinFormValues, scraped: Partial<PinJson>): P
     Object.assign(next, datesToForm({ utcStartDateTime: scraped.utcStartDateTime, utcEndDateTime: scraped.utcEndDateTime, allDay: scraped.allDay }), {
       allDay: !!scraped.allDay,
     });
+  }
+  if (!next.ratings.length && scraped.ratings?.length) {
+    next.ratings = scraped.ratings.map((r) => ({ ...r }));
+  }
+  if (scraped.trailer && !next.extraMedia.some((m) => m.originalUrl === scraped.trailer!.originalUrl)) {
+    next.extraMedia = [...next.extraMedia, scraped.trailer];
   }
   if (scraped.media?.length) {
     next.media = scraped.media;
@@ -295,6 +315,15 @@ export function formToPin(values: PinFormValues) {
       .filter((m) => m.url || m.label)
       .map((m) => ({ id: m.id, label: m.label, url: m.url, price: m.price == null || (m.price as unknown) === '' ? undefined : Number(m.price) })),
     references: formToReferences(values),
-    media: values.useMedia && values.selectedMedia ? [values.selectedMedia] : [],
+    media: formToMedia(values),
+    // Only saved when the pin is created; an edit leaves stored ratings alone.
+    ratings: values.ratings,
   };
+}
+
+// The heading (when used) first, then the media kept alongside it. Choosing a
+// different heading for a stored pin still replaces the old heading.
+export function formToMedia(values: Pick<PinFormValues, 'useMedia' | 'selectedMedia' | 'extraMedia'>): MediumJson[] {
+  const heading = values.useMedia && values.selectedMedia ? [values.selectedMedia] : [];
+  return [...heading, ...values.extraMedia.filter((m) => !heading.some((h) => h.originalUrl === m.originalUrl))];
 }

@@ -36,8 +36,7 @@ export function PinMedia({
     return <TweetEmbed html={medium.html} />;
   }
   if (type === '3' && medium.html) {
-    // Stored from the YouTube API's own embedHtml.
-    return <div className="embed-container" dangerouslySetInnerHTML={{ __html: safeEmbedHtml(medium.html, `YouTube video: ${title}`) }} />;
+    return <YouTubeEmbed html={medium.html} title={title} />;
   }
   if (unrenderable) {
     return null;
@@ -232,6 +231,72 @@ function MediaSlide({
 }: Omit<Parameters<typeof PinMedia>[0], 'onMissing'> & { mediumKey: string; onMissing: (key: string) => void }) {
   const onSlideMissing = useCallback(() => onMissing(mediumKey), [onMissing, mediumKey]);
   return <PinMedia {...media} onMissing={onSlideMissing} />;
+}
+
+// YouTube iframe API player states.
+const YT_PLAYING = 1;
+const YT_BUFFERING = 3;
+
+// Stored from the YouTube API's own embedHtml. A playing player pauses once it
+// scrolls fully out of view and resumes when it scrolls back; one the viewer
+// paused stays paused. Uses the iframe API that enablejsapi=1 turns on: after
+// a 'listening' handshake the player posts its state to this window.
+function YouTubeEmbed({ html, title }: { html: string; title: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const container = ref.current;
+    const iframe = container?.querySelector('iframe');
+    if (!container || !iframe?.src) return;
+    const origin = new URL(iframe.src).origin;
+    const send = (message: object) => iframe.contentWindow?.postMessage(JSON.stringify(message), origin);
+    let state: number | undefined;
+    let pausedOffscreen = false;
+
+    const onMessage = (e: MessageEvent) => {
+      if (e.source !== iframe.contentWindow || typeof e.data !== 'string') return;
+      try {
+        const data = JSON.parse(e.data);
+        const next = data.event === 'onStateChange' ? data.info : data.info?.playerState;
+        if (typeof next === 'number') state = next;
+      } catch {
+        // Not a player message.
+      }
+    };
+    window.addEventListener('message', onMessage);
+
+    // The player ignores the handshake until it is ready, so repeat it until
+    // it first reports a state (for ~10s after the effect or the frame's load).
+    let handshake: number | undefined;
+    const startHandshake = () => {
+      window.clearInterval(handshake);
+      state = undefined;
+      let tries = 0;
+      handshake = window.setInterval(() => {
+        if (state !== undefined || ++tries > 40) window.clearInterval(handshake);
+        else send({ event: 'listening' });
+      }, 250);
+    };
+    startHandshake();
+    iframe.addEventListener('load', startHandshake);
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting && (state === YT_PLAYING || state === YT_BUFFERING)) {
+        send({ event: 'command', func: 'pauseVideo', args: [] });
+        pausedOffscreen = true;
+      } else if (entry.isIntersecting && pausedOffscreen) {
+        send({ event: 'command', func: 'playVideo', args: [] });
+        pausedOffscreen = false;
+      }
+    });
+    observer.observe(container);
+    return () => {
+      observer.disconnect();
+      window.clearInterval(handshake);
+      iframe.removeEventListener('load', startHandshake);
+      window.removeEventListener('message', onMessage);
+    };
+  }, [html]);
+  return <div ref={ref} className="embed-container" dangerouslySetInnerHTML={{ __html: safeEmbedHtml(html, `YouTube video: ${title}`) }} />;
 }
 
 // Twitter's widgets script turns the stored blockquote into the full tweet.

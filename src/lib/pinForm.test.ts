@@ -59,6 +59,37 @@ describe('pin form round trip', () => {
     expect(body.references).toEqual(stored.references);
   });
 
+  it('keeps every medium of an edited pin, not just the heading', () => {
+    const video = { id: 5, type: 3, html: '<iframe src="https://www.youtube.com/embed/abc"></iframe>', originalUrl: 'https://www.youtube.com/embed/abc' };
+    const withVideo = { ...stored, media: [...stored.media!, video] };
+    expect(formToPin(pinToForm(withVideo)).media).toEqual(withVideo.media);
+    // A different heading replaces the old one; the rest stay.
+    const picked = { ...pinToForm(withVideo), selectedMedia: video };
+    expect(formToPin(picked).media).toEqual([video]);
+    expect(formToPin({ ...pinToForm(withVideo), useMedia: false }).media).toEqual([video]);
+  });
+
+  it('carries ratings through unchanged', () => {
+    const ratings = [{ id: 9, source: 'IMDb', score: 8.2, scoreMax: 10, url: 'https://www.imdb.com/title/tt1/' }];
+    expect(formToPin(pinToForm({ ...stored, ratings })).ratings).toEqual(ratings);
+  });
+
+  it('keeps a scraped trailer and ratings alongside the picked heading', () => {
+    const image = { type: 1, originalUrl: 'https://example.com/poster.jpg' };
+    const trailer = { type: 3, html: '<iframe></iframe>', originalUrl: 'https://www.youtube.com/embed/xyz' };
+    const ratings = [{ source: 'AniList', score: 91, scoreMax: 100 }];
+    const next = applyScrape(EMPTY_FORM, { media: [image, trailer], trailer, ratings });
+    expect(next.selectedMedia).toEqual(image);
+    expect(formToPin(next).media).toEqual([image, trailer]);
+    expect(formToPin(next).ratings).toEqual(ratings);
+    // Scraping again neither repeats the trailer nor replaces ratings.
+    const again = applyScrape(next, { media: [image, trailer], trailer, ratings: [{ source: 'AniList', score: 50, scoreMax: 100 }] });
+    expect(again.extraMedia).toEqual([trailer]);
+    expect(again.ratings).toEqual(ratings);
+    // The trailer picked as the heading is only sent once.
+    expect(formToPin({ ...next, selectedMedia: trailer }).media).toEqual([trailer]);
+  });
+
   it('drops reference rows without a link or a confidence and clamps confidence', () => {
     const form = {
       ...pinToForm(stored),

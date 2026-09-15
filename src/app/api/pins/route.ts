@@ -3,6 +3,7 @@ import { getUser, requireUser } from '@/server/auth';
 import { emitPinEvent } from '@/server/events';
 import { HttpError, json, paginationHeaders, paginationLink, readJson, route } from '@/server/http';
 import Pin from '@/server/model/pin';
+import PinRating from '@/server/model/pinRating';
 import PinReference from '@/server/model/pinReference';
 import { attributeReferences } from '@/lib/referenceAttribution';
 import { rejectDuplicateSourceUrl } from '@/server/services/duplicatePin';
@@ -37,9 +38,9 @@ export const POST = route(async (request: NextRequest) => {
   const user = await requireUser(request);
   const pin = new Pin(await readJson(request));
   pin.setUser(user);
-  const referenceProblem = PinReference.problem(pin.references);
-  if (referenceProblem) {
-    throw new HttpError(400, referenceProblem);
+  const problem = PinReference.problem(pin.references) ?? PinRating.problem(pin.ratings);
+  if (problem) {
+    throw new HttpError(400, problem);
   }
   await rejectDuplicateSourceUrl(pin);
   // A new pin's references are all its author's.

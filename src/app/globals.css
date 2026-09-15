@@ -111,6 +111,20 @@
     html:has([data-sticky-sort]) {
       --jump-offset: 6.5rem;
     }
+    /* An open floating-controls popup holds the page still behind it. */
+    html:has([data-scroll-lock]) {
+      overflow: hidden;
+    }
+  }
+  /* iOS Safari zooms the page into any text field under 16px when it takes
+     focus, so on phones and tablets every field is at least that, whatever
+     size its utilities give it elsewhere. */
+  @media (width < 64rem) {
+    input:not([type='checkbox'], [type='radio'], [type='range'], [type='file'], [type='color']),
+    textarea,
+    select {
+      font-size: max(1rem, 1em) !important;
+    }
   }
   /* Jumps (Today, #anchors, focus moving down a page) land below the sticky
      bars. The offset sits on the targets rather than being the page's

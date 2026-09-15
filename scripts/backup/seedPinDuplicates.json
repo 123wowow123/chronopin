@@ -1,0 +1,62 @@
+[
+  {
+    "pinId": 216,
+    "otherPinId": 541,
+    "reason": "similar",
+    "score": 0.84674007,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-15T19:24:15.128Z",
+    "utcDecidedDateTime": null
+  },
+  {
+    "pinId": 246,
+    "otherPinId": 514,
+    "reason": "similar",
+    "score": 0.822551,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-15T19:24:15.344Z",
+    "utcDecidedDateTime": null
+  },
+  {
+    "pinId": 251,
+    "otherPinId": 451,
+    "reason": "similar",
+    "score": 0.8358521,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-15T19:24:15.380Z",
+    "utcDecidedDateTime": null
+  },
+  {
+    "pinId": 279,
+    "otherPinId": 617,
+    "reason": "similar",
+    "score": 0.892862,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-15T19:24:15.639Z",
+    "utcDecidedDateTime": null
+  },
+  {
+    "pinId": 310,
+    "otherPinId": 311,
+    "reason": "similar",
+    "score": 0.8130349,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-15T19:24:15.785Z",
+    "utcDecidedDateTime": null
+  },
+  {
+    "pinId": 665,
+    "otherPinId": 902,
+    "reason": "similar",
+    "score": 0.91821754,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-15T19:24:18.192Z",
+    "utcDecidedDateTime": null
+  }
+]

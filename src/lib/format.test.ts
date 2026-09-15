@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { dayKeyIn, formatPosted, formatStart, money, plainText, timespan, weekdayPlanet } from './format';
+import { dayKeyIn, formatPosted, formatStart, money, plainText, ratingScore, timespan, weekdayPlanet } from './format';
 import { buildBags, resolveTodayMarker } from './timeline';
 
 describe('money', () => {
@@ -70,5 +70,15 @@ describe('timeline bags', () => {
     expect(resolveTodayMarker(bags, '2026-09-13')).toEqual({ index: 1, atEnd: false, todayBagIndex: -1 });
     expect(resolveTodayMarker(bags, '2026-09-25')).toEqual({ index: -1, atEnd: true, todayBagIndex: -1 });
     expect(resolveTodayMarker(bags, '2026-09-20')).toEqual({ index: -1, atEnd: false, todayBagIndex: 1 });
+  });
+});
+
+describe('ratingScore', () => {
+  it('shows each source the way the source does', () => {
+    expect(ratingScore(92, 100, 'Rotten Tomatoes')).toBe('92%');
+    expect(ratingScore(85, 100, 'AniList')).toBe('85%');
+    expect(ratingScore(82, 100, 'Metacritic')).toBe('82/100');
+    expect(ratingScore(8.67, 10, 'MyAnimeList')).toBe('8.67/10');
+    expect(ratingScore(8.2, 10, 'IMDb')).toBe('8.2/10');
   });
 });

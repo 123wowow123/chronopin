@@ -240,7 +240,7 @@ export function SearchBox() {
       type="search"
       name="q"
       autoComplete="off"
-      placeholder={items.length ? '' : 'Search pins'}
+      placeholder={items.length ? '' : 'Search'}
       value={draft}
       onChange={(event) => suggest(event.target.value)}
       onFocus={() => {
@@ -295,7 +295,7 @@ export function SearchBox() {
       }}
     >
       <label htmlFor="site-search" className="sr-only">
-        Search pins
+        Search
       </label>
       <div
         className="relative flex min-w-0 flex-1 cursor-text items-center rounded-full bg-field text-muted ring-1 ring-line transition-shadow ring-inset focus-within:ring-2 focus-within:ring-link"
@@ -325,7 +325,7 @@ export function SearchBox() {
                   aria-label={`Edit ${item.raw}`}
                   onMouseDown={keepFocus}
                   onClick={() => editItem(index)}
-                  className="shrink-0 rounded px-0.5 text-sm whitespace-nowrap text-ink hover:bg-raised"
+                  className="shrink-0 rounded px-0.5 text-sm whitespace-nowrap text-ink hover:bg-raised max-lg:text-base"
                 >
                   {item.raw}
                 </button>

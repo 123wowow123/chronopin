@@ -132,6 +132,20 @@ export function pinJsonLd(pin: PinJson) {
     publisher: { '@type': 'Organization', name: siteName, url: siteUrl },
     ...(pin.sourceUrl ? { isBasedOn: pin.sourceUrl } : {}),
     ...(event ? { about: event } : {}),
+    // Third-party critic scores (IMDb, Rotten Tomatoes, MyAnimeList, ...),
+    // each its own scale - reported as separate Reviews rather than one
+    // averaged AggregateRating, which would misrepresent sources that don't
+    // share a scale.
+    ...(pin.ratings?.length
+      ? {
+          review: pin.ratings.map((r) => ({
+            '@type': 'Review',
+            author: { '@type': 'Organization', name: r.source },
+            ...(r.url ? { url: r.url } : {}),
+            reviewRating: { '@type': 'Rating', ratingValue: r.score, bestRating: r.scoreMax, worstRating: 0 },
+          })),
+        }
+      : {}),
   };
 
   const breadcrumbs = {

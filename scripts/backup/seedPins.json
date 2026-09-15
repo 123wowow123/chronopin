@@ -1085,6 +1085,17 @@
         "originalWidth": 225,
         "originalHeight": 324,
         "type": "1"
+      },
+      {
+        "id": 1124,
+        "thumbName": "8db88a63-3361-4c5a-8785-a11b0979a970.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/Ou37P25tjJY",
+        "type": "3",
+        "authorName": "Sentai",
+        "authorUrl": "https://www.youtube.com/@SentaiFilmworks",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/Ou37P25tjJY?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Legend of the Galactic Heroes Official Trailer\"></iframe>"
       }
     ],
     "references": [
@@ -1097,6 +1108,26 @@
         "endDate": "1997-03-17",
         "reasoning": "MyAnimeList's own listing for this title (id 820) gives its exact premiere/release date and broadcast range.",
         "utcCreatedDateTime": "2026-09-15T13:27:30.48885+00:00",
+        "pinId": 773
+      }
+    ],
+    "ratings": [
+      {
+        "id": 17,
+        "source": "AniList",
+        "score": 88,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/820",
+        "utcCreatedDateTime": "2026-09-15T20:44:55.266365+00:00",
+        "pinId": 773
+      },
+      {
+        "id": 18,
+        "source": "MyAnimeList",
+        "score": 9.02,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/820/Ginga_Eiyuu_Densetsu",
+        "utcCreatedDateTime": "2026-09-15T20:44:55.270536+00:00",
         "pinId": 773
       }
     ],
@@ -1663,6 +1694,17 @@
         "originalWidth": 225,
         "originalHeight": 318,
         "type": "1"
+      },
+      {
+        "id": 1131,
+        "thumbName": "3ff1242d-5562-4aab-ae1c-e48cd7e963e7.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/vf6c6n35wr4",
+        "type": "3",
+        "authorName": "GKIDS Films",
+        "authorUrl": "https://www.youtube.com/@GKIDStv",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/vf6c6n35wr4?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"PRINCESS MONONOKE | Official English Trailer\"></iframe>"
       }
     ],
     "references": [
@@ -1674,6 +1716,44 @@
         "startDate": "1997-07-12",
         "reasoning": "MyAnimeList's own listing for this title (id 164) gives its exact premiere/release date.",
         "utcCreatedDateTime": "2026-09-15T13:27:30.938412+00:00",
+        "pinId": 780
+      }
+    ],
+    "ratings": [
+      {
+        "id": 34,
+        "source": "AniList",
+        "score": 85,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/164",
+        "utcCreatedDateTime": "2026-09-15T20:45:17.090406+00:00",
+        "pinId": 780
+      },
+      {
+        "id": 35,
+        "source": "MyAnimeList",
+        "score": 8.67,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/164/Mononoke_Hime",
+        "utcCreatedDateTime": "2026-09-15T20:45:17.092914+00:00",
+        "pinId": 780
+      },
+      {
+        "id": 36,
+        "source": "Rotten Tomatoes",
+        "score": 93,
+        "scoreMax": 100,
+        "url": "https://www.rottentomatoes.com/m/princess_mononoke",
+        "utcCreatedDateTime": "2026-09-15T20:45:17.094283+00:00",
+        "pinId": 780
+      },
+      {
+        "id": 37,
+        "source": "Metacritic",
+        "score": 76,
+        "scoreMax": 100,
+        "url": "https://www.metacritic.com/movie/princess-mononoke/",
+        "utcCreatedDateTime": "2026-09-15T20:45:17.095679+00:00",
         "pinId": 780
       }
     ],
@@ -1984,6 +2064,26 @@
         "startDate": "1999-10-20",
         "reasoning": "MyAnimeList's own listing for this title (id 21) gives its exact premiere/release date.",
         "utcCreatedDateTime": "2026-09-15T13:27:31.095555+00:00",
+        "pinId": 783
+      }
+    ],
+    "ratings": [
+      {
+        "id": 43,
+        "source": "AniList",
+        "score": 87,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/21",
+        "utcCreatedDateTime": "2026-09-15T20:45:26.469969+00:00",
+        "pinId": 783
+      },
+      {
+        "id": 44,
+        "source": "MyAnimeList",
+        "score": 8.73,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/21/One_Piece",
+        "utcCreatedDateTime": "2026-09-15T20:45:26.473797+00:00",
         "pinId": 783
       }
     ],
@@ -2453,6 +2553,17 @@
         "originalWidth": 225,
         "originalHeight": 317,
         "type": "1"
+      },
+      {
+        "id": 1130,
+        "thumbName": "125e3635-f367-450c-9331-9347fc7af25a.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/DJeUGpcle8s",
+        "type": "3",
+        "authorName": "GKIDS Films",
+        "authorUrl": "https://www.youtube.com/@GKIDStv",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/DJeUGpcle8s?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"HOWL&#39;S MOVING CASTLE | Official English Trailer\"></iframe>"
       }
     ],
     "references": [
@@ -2464,6 +2575,53 @@
         "startDate": "2004-11-20",
         "reasoning": "MyAnimeList's own listing for this title (id 431) gives its exact premiere/release date.",
         "utcCreatedDateTime": "2026-09-15T13:27:30.887393+00:00",
+        "pinId": 779
+      }
+    ],
+    "ratings": [
+      {
+        "id": 29,
+        "source": "AniList",
+        "score": 85,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/431",
+        "utcCreatedDateTime": "2026-09-15T20:45:13.951785+00:00",
+        "pinId": 779
+      },
+      {
+        "id": 30,
+        "source": "MyAnimeList",
+        "score": 8.67,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/431/Howl_no_Ugoku_Shiro",
+        "utcCreatedDateTime": "2026-09-15T20:45:13.95442+00:00",
+        "pinId": 779
+      },
+      {
+        "id": 31,
+        "source": "IMDb",
+        "score": 8.2,
+        "scoreMax": 10,
+        "url": "https://www.imdb.com/title/tt0347149/",
+        "utcCreatedDateTime": "2026-09-15T20:45:13.956449+00:00",
+        "pinId": 779
+      },
+      {
+        "id": 32,
+        "source": "Rotten Tomatoes",
+        "score": 88,
+        "scoreMax": 100,
+        "url": "https://www.rottentomatoes.com/m/howls_moving_castle",
+        "utcCreatedDateTime": "2026-09-15T20:45:13.958098+00:00",
+        "pinId": 779
+      },
+      {
+        "id": 33,
+        "source": "Metacritic",
+        "score": 82,
+        "scoreMax": 100,
+        "url": "https://www.metacritic.com/movie/howls-moving-castle/",
+        "utcCreatedDateTime": "2026-09-15T20:45:13.96002+00:00",
         "pinId": 779
       }
     ],
@@ -2882,6 +3040,17 @@
         "originalWidth": 225,
         "originalHeight": 315,
         "type": "1"
+      },
+      {
+        "id": 1126,
+        "thumbName": "59cdcfb8-1aeb-45e8-ab4a-35d29aea624d.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/Ab9ztHX-DVg",
+        "type": "3",
+        "authorName": "Crunchyroll Dubs",
+        "authorUrl": "https://www.youtube.com/@crunchyrolldubs",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/Ab9ztHX-DVg?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Code Geass (Seasons 1 and 2) – Coming Soon\"></iframe>"
       }
     ],
     "references": [
@@ -2894,6 +3063,26 @@
         "endDate": "2007-07-29",
         "reasoning": "MyAnimeList's own listing for this title (id 1575) gives its exact premiere/release date and broadcast range.",
         "utcCreatedDateTime": "2026-09-15T13:27:30.675465+00:00",
+        "pinId": 775
+      }
+    ],
+    "ratings": [
+      {
+        "id": 21,
+        "source": "AniList",
+        "score": 85,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/1575",
+        "utcCreatedDateTime": "2026-09-15T20:45:01.441284+00:00",
+        "pinId": 775
+      },
+      {
+        "id": 22,
+        "source": "MyAnimeList",
+        "score": 8.71,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/1575/Code_Geass__Hangyaku_no_Lelouch",
+        "utcCreatedDateTime": "2026-09-15T20:45:01.444887+00:00",
         "pinId": 775
       }
     ],
@@ -3130,6 +3319,17 @@
         "originalWidth": 225,
         "originalHeight": 320,
         "type": "1"
+      },
+      {
+        "id": 1132,
+        "thumbName": "1a2f19b4-16c6-4f82-a520-5e6a2badff34.jpeg",
+        "thumbWidth": 640,
+        "thumbHeight": 480,
+        "originalUrl": "https://www.youtube.com/embed/oXkkMhCuCMg",
+        "type": "3",
+        "authorName": "Aniplex USA",
+        "authorUrl": "https://www.youtube.com/@AniplexUSA",
+        "html": "<iframe width=\"600\" height=\"450\" src=\"https://www.youtube.com/embed/oXkkMhCuCMg?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Gurren Lagann Official Trailer\"></iframe>"
       }
     ],
     "references": [
@@ -3142,6 +3342,26 @@
         "endDate": "2007-09-30",
         "reasoning": "MyAnimeList's own listing for this title (id 2001) gives its exact premiere/release date and broadcast range.",
         "utcCreatedDateTime": "2026-09-15T13:27:30.984766+00:00",
+        "pinId": 781
+      }
+    ],
+    "ratings": [
+      {
+        "id": 38,
+        "source": "AniList",
+        "score": 85,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/2001",
+        "utcCreatedDateTime": "2026-09-15T20:45:20.214843+00:00",
+        "pinId": 781
+      },
+      {
+        "id": 39,
+        "source": "MyAnimeList",
+        "score": 8.65,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/2001/Tengen_Toppa_Gurren_Lagann",
+        "utcCreatedDateTime": "2026-09-15T20:45:20.218428+00:00",
         "pinId": 781
       }
     ],
@@ -3733,6 +3953,17 @@
         "originalWidth": 225,
         "originalHeight": 338,
         "type": "1"
+      },
+      {
+        "id": 1125,
+        "thumbName": "83d2832e-dc99-448a-aa86-7db8716dd13e.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/IecYMqp1N4k",
+        "type": "3",
+        "authorName": "Sentai",
+        "authorUrl": "https://www.youtube.com/@SentaiFilmworks",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/IecYMqp1N4k?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Clannad ~After Story~ Official Trailer\"></iframe>"
       }
     ],
     "references": [
@@ -3745,6 +3976,26 @@
         "endDate": "2009-03-27",
         "reasoning": "MyAnimeList's own listing for this title (id 4181) gives its exact premiere/release date and broadcast range.",
         "utcCreatedDateTime": "2026-09-15T13:27:30.54479+00:00",
+        "pinId": 774
+      }
+    ],
+    "ratings": [
+      {
+        "id": 19,
+        "source": "AniList",
+        "score": 88,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/4181",
+        "utcCreatedDateTime": "2026-09-15T20:44:58.186561+00:00",
+        "pinId": 774
+      },
+      {
+        "id": 20,
+        "source": "MyAnimeList",
+        "score": 8.93,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/4181/Clannad__After_Story",
+        "utcCreatedDateTime": "2026-09-15T20:44:58.190333+00:00",
         "pinId": 774
       }
     ],
@@ -3849,6 +4100,26 @@
         "endDate": "2010-07-04",
         "reasoning": "MyAnimeList's own listing for this title (id 5114) gives its exact premiere/release date and broadcast range.",
         "utcCreatedDateTime": "2026-09-15T13:27:30.299202+00:00",
+        "pinId": 770
+      }
+    ],
+    "ratings": [
+      {
+        "id": 12,
+        "source": "AniList",
+        "score": 90,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/5114",
+        "utcCreatedDateTime": "2026-09-15T20:44:45.576343+00:00",
+        "pinId": 770
+      },
+      {
+        "id": 13,
+        "source": "MyAnimeList",
+        "score": 9.11,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/5114/Fullmetal_Alchemist__Brotherhood",
+        "utcCreatedDateTime": "2026-09-15T20:44:45.579695+00:00",
         "pinId": 770
       }
     ],
@@ -4804,6 +5075,17 @@
         "originalWidth": 225,
         "originalHeight": 327,
         "type": "1"
+      },
+      {
+        "id": 1122,
+        "thumbName": "9ec44644-88e6-476c-8025-4979a5c92e01.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/m4en7ZkhX8c",
+        "type": "3",
+        "authorName": "Crunchyroll Dubs",
+        "authorUrl": "https://www.youtube.com/@crunchyrolldubs",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/m4en7ZkhX8c?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Steins;Gate - OFFICIAL ENGLISH DUB CAST - Trailer - Part 1\"></iframe>"
       }
     ],
     "references": [
@@ -4816,6 +5098,26 @@
         "endDate": "2011-09-14",
         "reasoning": "MyAnimeList's own listing for this title (id 9253) gives its exact premiere/release date and broadcast range.",
         "utcCreatedDateTime": "2026-09-15T13:27:30.377046+00:00",
+        "pinId": 771
+      }
+    ],
+    "ratings": [
+      {
+        "id": 14,
+        "source": "AniList",
+        "score": 89,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/9253",
+        "utcCreatedDateTime": "2026-09-15T20:44:48.933844+00:00",
+        "pinId": 771
+      },
+      {
+        "id": 15,
+        "source": "MyAnimeList",
+        "score": 9.07,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/9253/Steins_Gate",
+        "utcCreatedDateTime": "2026-09-15T20:44:48.936458+00:00",
         "pinId": 771
       }
     ],
@@ -5108,6 +5410,17 @@
         "originalWidth": 225,
         "originalHeight": 338,
         "type": "1"
+      },
+      {
+        "id": 1123,
+        "thumbName": "16bb1fb7-5799-4d68-9803-7e2f434715d5.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/d6kBeJjTGnY",
+        "type": "3",
+        "authorName": "vizmedia",
+        "authorUrl": "https://www.youtube.com/@vizmedia",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/d6kBeJjTGnY?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Hunter X Hunter Set 1- Official Extended Trailer\"></iframe>"
       }
     ],
     "references": [
@@ -5120,6 +5433,17 @@
         "endDate": "2014-09-24",
         "reasoning": "MyAnimeList's own listing for this title (id 11061) gives its exact premiere/release date and broadcast range.",
         "utcCreatedDateTime": "2026-09-15T13:27:30.445087+00:00",
+        "pinId": 772
+      }
+    ],
+    "ratings": [
+      {
+        "id": 16,
+        "source": "AniList",
+        "score": 89,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/11061",
+        "utcCreatedDateTime": "2026-09-15T20:44:52.256618+00:00",
         "pinId": 772
       }
     ],
@@ -7957,6 +8281,17 @@
         "originalWidth": 2000,
         "originalHeight": 1000,
         "type": "1"
+      },
+      {
+        "id": 1099,
+        "thumbName": "c8637f2f-8ec4-457b-a832-ff623c4d549f.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/8DQN3vngAEs",
+        "type": "3",
+        "authorName": "vizmedia",
+        "authorUrl": "https://www.youtube.com/@vizmedia",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/8DQN3vngAEs?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"SAILOR MOON CRYSTAL Set 1 - The Dark Kingdom Arc - Official Anime Trailer\"></iframe>"
       }
     ],
     "references": [
@@ -16005,6 +16340,17 @@
         "originalWidth": 225,
         "originalHeight": 315,
         "type": "1"
+      },
+      {
+        "id": 1129,
+        "thumbName": "f9ef16d8-d089-498c-aff7-9e5b3528fb1e.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/_grmduuECm4",
+        "type": "3",
+        "authorName": "Netflix Anime",
+        "authorUrl": "https://www.youtube.com/@netflixanime",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/_grmduuECm4?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Violet Evergarden | Now Streaming | Netflix\"></iframe>"
       }
     ],
     "references": [
@@ -16017,6 +16363,26 @@
         "endDate": "2018-04-05",
         "reasoning": "MyAnimeList's own listing for this title (id 33352) gives its exact premiere/release date and broadcast range.",
         "utcCreatedDateTime": "2026-09-15T13:27:30.845063+00:00",
+        "pinId": 778
+      }
+    ],
+    "ratings": [
+      {
+        "id": 27,
+        "source": "AniList",
+        "score": 85,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/21827",
+        "utcCreatedDateTime": "2026-09-15T20:45:10.541234+00:00",
+        "pinId": 778
+      },
+      {
+        "id": 28,
+        "source": "MyAnimeList",
+        "score": 8.69,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/33352/Violet_Evergarden",
+        "utcCreatedDateTime": "2026-09-15T20:45:10.543463+00:00",
         "pinId": 778
       }
     ],
@@ -23991,6 +24357,17 @@
         "originalWidth": 225,
         "originalHeight": 333,
         "type": "1"
+      },
+      {
+        "id": 1133,
+        "thumbName": "50bea0b0-0c1a-4771-a035-fd0e34a7e385.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/JtqIas3bYhg",
+        "type": "3",
+        "authorName": "Netflix",
+        "authorUrl": "https://www.youtube.com/@Netflix",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/JtqIas3bYhg?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Cyberpunk: Edgerunners | Official NSFW Trailer | Netflix\"></iframe>"
       }
     ],
     "references": [
@@ -24002,6 +24379,35 @@
         "startDate": "2022-09-13",
         "reasoning": "MyAnimeList's own listing for this title (id 42310) gives its exact premiere/release date.",
         "utcCreatedDateTime": "2026-09-15T13:27:31.034828+00:00",
+        "pinId": 782
+      }
+    ],
+    "ratings": [
+      {
+        "id": 40,
+        "source": "AniList",
+        "score": 85,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/120377",
+        "utcCreatedDateTime": "2026-09-15T20:45:23.983536+00:00",
+        "pinId": 782
+      },
+      {
+        "id": 41,
+        "source": "MyAnimeList",
+        "score": 8.62,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/42310/Cyberpunk__Edgerunners",
+        "utcCreatedDateTime": "2026-09-15T20:45:23.986118+00:00",
+        "pinId": 782
+      },
+      {
+        "id": 42,
+        "source": "Rotten Tomatoes",
+        "score": 100,
+        "scoreMax": 100,
+        "url": "https://www.rottentomatoes.com/tv/cyberpunk_edgerunners/s01",
+        "utcCreatedDateTime": "2026-09-15T20:45:23.987489+00:00",
         "pinId": 782
       }
     ],
@@ -24205,6 +24611,17 @@
         "originalWidth": 225,
         "originalHeight": 318,
         "type": "1"
+      },
+      {
+        "id": 1134,
+        "thumbName": "3e1f90c0-1b3f-4fa1-9086-32c59f4aff89.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/SyMMZF5zNW4",
+        "type": "3",
+        "authorName": "Crunchyroll",
+        "authorUrl": "https://www.youtube.com/@crunchyroll",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/SyMMZF5zNW4?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"BOCCHI THE ROCK! | OFFICIAL TRAILER\"></iframe>"
       }
     ],
     "references": [
@@ -24217,6 +24634,26 @@
         "endDate": "2022-12-25",
         "reasoning": "MyAnimeList's own listing for this title (id 47917) gives its exact premiere/release date and broadcast range.",
         "utcCreatedDateTime": "2026-09-15T13:27:31.214583+00:00",
+        "pinId": 784
+      }
+    ],
+    "ratings": [
+      {
+        "id": 45,
+        "source": "AniList",
+        "score": 87,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/130003",
+        "utcCreatedDateTime": "2026-09-15T20:45:29.363735+00:00",
+        "pinId": 784
+      },
+      {
+        "id": 46,
+        "source": "MyAnimeList",
+        "score": 8.73,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/47917/Bocchi_the_Rock",
+        "utcCreatedDateTime": "2026-09-15T20:45:29.367828+00:00",
         "pinId": 784
       }
     ],
@@ -25113,6 +25550,17 @@
         "originalWidth": 225,
         "originalHeight": 318,
         "type": "1"
+      },
+      {
+        "id": 1127,
+        "thumbName": "0ab3fb53-32cb-40ae-8df8-ac2bf0c87bdc.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/iwZYmpj81_0",
+        "type": "3",
+        "authorName": "GKIDS Films",
+        "authorUrl": "https://www.youtube.com/@GKIDStv",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/iwZYmpj81_0?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"THE FIRST SLAM DUNK | Official English Teaser\"></iframe>"
       }
     ],
     "references": [
@@ -25124,6 +25572,26 @@
         "startDate": "2022-12-03",
         "reasoning": "MyAnimeList's own listing for this title (id 45649) gives its exact premiere/release date.",
         "utcCreatedDateTime": "2026-09-15T13:27:30.738799+00:00",
+        "pinId": 776
+      }
+    ],
+    "ratings": [
+      {
+        "id": 23,
+        "source": "AniList",
+        "score": 87,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/128207",
+        "utcCreatedDateTime": "2026-09-15T20:45:04.475912+00:00",
+        "pinId": 776
+      },
+      {
+        "id": 24,
+        "source": "MyAnimeList",
+        "score": 8.7,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/45649/The_First_Slam_Dunk",
+        "utcCreatedDateTime": "2026-09-15T20:45:04.478998+00:00",
         "pinId": 776
       }
     ],
@@ -27302,6 +27770,17 @@
         "originalWidth": 225,
         "originalHeight": 312,
         "type": "1"
+      },
+      {
+        "id": 1128,
+        "thumbName": "34b3e564-e788-46f5-88c4-4fa89afadef6.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/O6qVieflwqs",
+        "type": "3",
+        "authorName": "TOHO animation チャンネル",
+        "authorUrl": "https://www.youtube.com/@TOHOanimation",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/O6qVieflwqs?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"TVアニメ『呪術廻戦』第2期「懐玉・玉折」PV第2弾｜OPテーマ：「青のすみか」キタニタツヤ｜7月6日から毎週木曜夜11時56分～MBS/TBS系列全国28局にて放送開始!!\"></iframe>"
       }
     ],
     "references": [
@@ -27314,6 +27793,26 @@
         "endDate": "2023-12-28",
         "reasoning": "MyAnimeList's own listing for this title (id 51009) gives its exact premiere/release date and broadcast range.",
         "utcCreatedDateTime": "2026-09-15T13:27:30.793487+00:00",
+        "pinId": 777
+      }
+    ],
+    "ratings": [
+      {
+        "id": 25,
+        "source": "AniList",
+        "score": 86,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/145064",
+        "utcCreatedDateTime": "2026-09-15T20:45:07.442202+00:00",
+        "pinId": 777
+      },
+      {
+        "id": 26,
+        "source": "MyAnimeList",
+        "score": 8.7,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/51009/Jujutsu_Kaisen_2nd_Season",
+        "utcCreatedDateTime": "2026-09-15T20:45:07.444853+00:00",
         "pinId": 777
       }
     ],
@@ -27566,6 +28065,17 @@
         "originalWidth": 225,
         "originalHeight": 318,
         "type": "1"
+      },
+      {
+        "id": 1121,
+        "thumbName": "5aa5e5e2-53da-44ea-aa93-5e1afaee98b6.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/Iwr1aLEDpe4",
+        "type": "3",
+        "authorName": "Crunchyroll",
+        "authorUrl": "https://www.youtube.com/@crunchyroll",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/Iwr1aLEDpe4?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Frieren: Beyond Journey&#39;s End | OFFICIAL TRAILER\"></iframe>"
       }
     ],
     "references": [
@@ -27578,6 +28088,26 @@
         "endDate": "2024-03-22",
         "reasoning": "MyAnimeList's own listing for this title (id 52991) gives its exact premiere/release date and broadcast range.",
         "utcCreatedDateTime": "2026-09-15T13:27:30.132214+00:00",
+        "pinId": 769
+      }
+    ],
+    "ratings": [
+      {
+        "id": 10,
+        "source": "AniList",
+        "score": 91,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/154587",
+        "utcCreatedDateTime": "2026-09-15T20:44:42.397655+00:00",
+        "pinId": 769
+      },
+      {
+        "id": 11,
+        "source": "MyAnimeList",
+        "score": 9.25,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/52991/Sousou_no_Frieren",
+        "utcCreatedDateTime": "2026-09-15T20:44:42.402374+00:00",
         "pinId": 769
       }
     ],
@@ -30207,6 +30737,17 @@
         "originalWidth": 225,
         "originalHeight": 318,
         "type": "1"
+      },
+      {
+        "id": 1135,
+        "thumbName": "d3e4d14e-1e44-4841-96a2-d536fe3d84df.jpeg",
+        "thumbWidth": 640,
+        "thumbHeight": 480,
+        "originalUrl": "https://www.youtube.com/embed/EBosY5GPpfw",
+        "type": "3",
+        "authorName": "スカパー・ピクチャーズ チャンネル",
+        "authorUrl": "https://www.youtube.com/@SKYPerfectPictures",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/EBosY5GPpfw?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"アニメ『チ。 ―地球の運動について―』本PV/Anime “Orb: On the Movements of the Earth” Official Trailer\"></iframe>"
       }
     ],
     "references": [
@@ -30219,6 +30760,26 @@
         "endDate": "2025-03-15",
         "reasoning": "MyAnimeList's own listing for this title (id 52215) gives its exact premiere/release date and broadcast range.",
         "utcCreatedDateTime": "2026-09-15T13:27:31.270192+00:00",
+        "pinId": 785
+      }
+    ],
+    "ratings": [
+      {
+        "id": 47,
+        "source": "AniList",
+        "score": 86,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/151514",
+        "utcCreatedDateTime": "2026-09-15T20:45:32.861336+00:00",
+        "pinId": 785
+      },
+      {
+        "id": 48,
+        "source": "MyAnimeList",
+        "score": 8.72,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/52215/Chi_Chikyuu_no_Undou_ni_Tsuite",
+        "utcCreatedDateTime": "2026-09-15T20:45:32.864209+00:00",
         "pinId": 785
       }
     ],
@@ -33523,6 +34084,17 @@
         "originalWidth": 225,
         "originalHeight": 318,
         "type": "1"
+      },
+      {
+        "id": 1136,
+        "thumbName": "e2c200f8-0280-4356-b4ea-bfa2cadc668e.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/E20clulzE5E",
+        "type": "3",
+        "authorName": "Crunchyroll",
+        "authorUrl": "https://www.youtube.com/@crunchyroll",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/E20clulzE5E?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"【OSHI NO KO】 Season 3 | Official Trailer 3 | Crunchyroll\"></iframe>"
       }
     ],
     "references": [
@@ -33535,6 +34107,26 @@
         "endDate": "2026-03-25",
         "reasoning": "MyAnimeList's own listing for this title (id 60058) gives its exact premiere/release date and broadcast range.",
         "utcCreatedDateTime": "2026-09-15T13:27:31.327842+00:00",
+        "pinId": 786
+      }
+    ],
+    "ratings": [
+      {
+        "id": 49,
+        "source": "AniList",
+        "score": 86,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/182587",
+        "utcCreatedDateTime": "2026-09-15T20:45:35.916057+00:00",
+        "pinId": 786
+      },
+      {
+        "id": 50,
+        "source": "MyAnimeList",
+        "score": 8.69,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/60058/Oshi_no_Ko_3rd_Season",
+        "utcCreatedDateTime": "2026-09-15T20:45:35.91916+00:00",
         "pinId": 786
       }
     ],
@@ -33575,6 +34167,17 @@
         "originalWidth": 260,
         "originalHeight": 385,
         "type": "1"
+      },
+      {
+        "id": 1113,
+        "thumbName": "ac4d1657-5d45-4925-a5b6-ca1b7814d645.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/Yjm-H_jqQGg",
+        "type": "3",
+        "authorName": "KinoCheck.com",
+        "authorUrl": "https://www.youtube.com/@KinoCheck.com",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/Yjm-H_jqQGg?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"28 YEARS LATER: The Bone Temple Official Trailer (2026)\"></iframe>"
       }
     ],
     "references": [
@@ -33689,6 +34292,17 @@
         "originalWidth": 259,
         "originalHeight": 365,
         "type": "1"
+      },
+      {
+        "id": 1112,
+        "thumbName": "42d5a4de-6fd1-4e91-b747-7cf8d639933b.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/n4ZfhMKssys",
+        "type": "3",
+        "authorName": "Movie Trailers Source",
+        "authorUrl": "https://www.youtube.com/@MovieTrailersSourceHD",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/n4ZfhMKssys?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"RETURN TO SILENT HILL Official Trailer (2026)\"></iframe>"
       }
     ],
     "references": [
@@ -33807,6 +34421,17 @@
         "originalWidth": 260,
         "originalHeight": 385,
         "type": "1"
+      },
+      {
+        "id": 1107,
+        "thumbName": "43c91564-faf9-44f4-8e84-3f0c77bfd6ad.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/3fLCdIYShEQ",
+        "type": "3",
+        "authorName": "Warner Bros.",
+        "authorUrl": "https://www.youtube.com/@WarnerBros",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/3fLCdIYShEQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"&quot;Wuthering Heights&quot; | Official Trailer\"></iframe>"
       }
     ],
     "references": [
@@ -33949,6 +34574,17 @@
         "originalWidth": 259,
         "originalHeight": 384,
         "type": "1"
+      },
+      {
+        "id": 1111,
+        "thumbName": "5c7a6f4c-53fc-4581-a702-f7bca8b47f68.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/UJrghaPJ0RY",
+        "type": "3",
+        "authorName": "Paramount Pictures",
+        "authorUrl": "https://www.youtube.com/@paramountpictures",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/UJrghaPJ0RY?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Scream 7 | Official Trailer (2026 Movie) – Neve Campbell, Courteney Cox\"></iframe>"
       }
     ],
     "references": [
@@ -34010,6 +34646,17 @@
         "originalWidth": 259,
         "originalHeight": 384,
         "type": "1"
+      },
+      {
+        "id": 1114,
+        "thumbName": "12ac33ad-3cc6-46e5-ad89-c048603776ff.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/IhgcUArO3Uo",
+        "type": "3",
+        "authorName": "Warner Bros.",
+        "authorUrl": "https://www.youtube.com/@WarnerBros",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/IhgcUArO3Uo?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"THE BRIDE! | Official Trailer\"></iframe>"
       }
     ],
     "references": [
@@ -34069,6 +34716,17 @@
         "originalWidth": 260,
         "originalHeight": 385,
         "type": "1"
+      },
+      {
+        "id": 1108,
+        "thumbName": "77c7a2e2-4a9a-4e7e-9230-23b0ff19faee.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/m08TxIsFTRI",
+        "type": "3",
+        "authorName": "Amazon MGM Studios",
+        "authorUrl": "https://www.youtube.com/@AmazonMGMStudios",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/m08TxIsFTRI?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Project Hail Mary - Official Trailer\"></iframe>"
       }
     ],
     "references": [
@@ -34088,6 +34746,26 @@
         "confidence": 88,
         "reasoning": "Rotten Tomatoes independently lists the theatrical release as \"Mar 20, 2026, Wide,\" matching the pin's stored date exactly, with streaming following May 12, 2026.",
         "utcCreatedDateTime": "2026-09-14T23:32:11.155798+00:00",
+        "pinId": 397
+      }
+    ],
+    "ratings": [
+      {
+        "id": 6,
+        "source": "Rotten Tomatoes",
+        "score": 95,
+        "scoreMax": 100,
+        "url": "https://www.rottentomatoes.com/m/project_hail_mary",
+        "utcCreatedDateTime": "2026-09-15T20:44:01.287641+00:00",
+        "pinId": 397
+      },
+      {
+        "id": 7,
+        "source": "Metacritic",
+        "score": 77,
+        "scoreMax": 100,
+        "url": "https://www.metacritic.com/movie/project-hail-mary/",
+        "utcCreatedDateTime": "2026-09-15T20:44:01.290682+00:00",
         "pinId": 397
       }
     ],
@@ -34314,6 +34992,17 @@
         "originalWidth": 260,
         "originalHeight": 385,
         "type": "1"
+      },
+      {
+        "id": 1104,
+        "thumbName": "e92b4a1f-f12c-445c-bd7d-5c4041453418.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/RrktXOjOtps",
+        "type": "3",
+        "authorName": "Universal Pictures UK",
+        "authorUrl": "https://www.youtube.com/@universalpicturesuk",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/RrktXOjOtps?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Michael | Official Teaser Trailer - HD\"></iframe>"
       }
     ],
     "references": [
@@ -34383,6 +35072,17 @@
         "originalWidth": 260,
         "originalHeight": 385,
         "type": "1"
+      },
+      {
+        "id": 1102,
+        "thumbName": "98a1d2e6-3e07-47a3-bc30-9d90953ac4ad.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/b24oG7qCwp4",
+        "type": "3",
+        "authorName": "Warner Bros.",
+        "authorUrl": "https://www.youtube.com/@WarnerBros",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/b24oG7qCwp4?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Mortal Kombat II | Official Trailer II\"></iframe>"
       }
     ],
     "references": [
@@ -34792,6 +35492,17 @@
         "originalWidth": 260,
         "originalHeight": 390,
         "type": "1"
+      },
+      {
+        "id": 1109,
+        "thumbName": "1acf5a54-4e7f-40b9-8ede-5c147fde6b94.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/X21JsHLHnY8",
+        "type": "3",
+        "authorName": "Amazon MGM Studios",
+        "authorUrl": "https://www.youtube.com/@AmazonMGMStudios",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/X21JsHLHnY8?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Masters of The Universe – Official Trailer\"></iframe>"
       }
     ],
     "references": [
@@ -34852,6 +35563,17 @@
         "originalWidth": 206,
         "originalHeight": 305,
         "type": "1"
+      },
+      {
+        "id": 1119,
+        "thumbName": "5a3ace5a-3a63-4b1e-b909-fa90bea2b195.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/al8eztwE_pQ",
+        "type": "3",
+        "authorName": "Paramount Pictures India",
+        "authorUrl": "https://www.youtube.com/@ParamountPicturesIndia",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/al8eztwE_pQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Scary Movie | Official Trailer (2026)\"></iframe>"
       }
     ],
     "references": [
@@ -34966,6 +35688,17 @@
         "originalWidth": 206,
         "originalHeight": 305,
         "type": "1"
+      },
+      {
+        "id": 1116,
+        "thumbName": "c3f2484a-23ef-4217-92a9-ee9cf8c9f1f0.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/c51ND9Hdbw0",
+        "type": "3",
+        "authorName": "Pixar",
+        "authorUrl": "https://www.youtube.com/@pixar",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/c51ND9Hdbw0?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Toy Story 5 | Official Trailer | In Theaters June 19\"></iframe>"
       }
     ],
     "references": [
@@ -34986,6 +35719,26 @@
         "confidence": 85,
         "reasoning": "The Numbers lists Toy Story 5's \"domestic theatrical release on June 19th, 2026 (Wide) by Walt Disney\", an exact match to the pin's stored date, noting some international markets received it two days earlier.",
         "utcCreatedDateTime": "2026-09-14T23:31:33.596475+00:00",
+        "pinId": 405
+      }
+    ],
+    "ratings": [
+      {
+        "id": 8,
+        "source": "Rotten Tomatoes",
+        "score": 92,
+        "scoreMax": 100,
+        "url": "https://www.rottentomatoes.com/m/toy_story_5",
+        "utcCreatedDateTime": "2026-09-15T20:44:24.046302+00:00",
+        "pinId": 405
+      },
+      {
+        "id": 9,
+        "source": "Metacritic",
+        "score": 73,
+        "scoreMax": 100,
+        "url": "https://www.metacritic.com/movie/toy-story-5/",
+        "utcCreatedDateTime": "2026-09-15T20:44:24.049779+00:00",
         "pinId": 405
       }
     ],
@@ -35096,6 +35849,17 @@
         "originalWidth": 260,
         "originalHeight": 385,
         "type": "1"
+      },
+      {
+        "id": 1110,
+        "thumbName": "c49ba00a-1035-4256-a105-477a5c24f607.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/PI9e89dyLt4",
+        "type": "3",
+        "authorName": "ONE Media",
+        "authorUrl": "https://www.youtube.com/@BoxofficeOneMedia",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/PI9e89dyLt4?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"SUPERGIRL Official Final Trailer (2026)\"></iframe>"
       }
     ],
     "references": [
@@ -35442,6 +36206,17 @@
         "originalWidth": 206,
         "originalHeight": 305,
         "type": "1"
+      },
+      {
+        "id": 1115,
+        "thumbName": "a3de2e0e-a298-4bd6-86e0-1688dd7717fa.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/n7f6hlKsxxo",
+        "type": "3",
+        "authorName": "Disney",
+        "authorUrl": "https://www.youtube.com/@Disney",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/n7f6hlKsxxo?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Moana | &quot;Official Trailer&quot; | In Theaters July 10\"></iframe>"
       }
     ],
     "references": [
@@ -35564,6 +36339,17 @@
         "originalWidth": 250,
         "originalHeight": 370,
         "type": "1"
+      },
+      {
+        "id": 1100,
+        "thumbName": "292ed02c-3193-4abd-b361-dff8d5e44ab0.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/f_bKjZeJBBI",
+        "type": "3",
+        "authorName": "Universal Pictures",
+        "authorUrl": "https://www.youtube.com/@UniversalPictures",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/f_bKjZeJBBI?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"The Odyssey | Official New Trailer\"></iframe>"
       }
     ],
     "references": [
@@ -35754,6 +36540,17 @@
         "originalWidth": 258,
         "originalHeight": 387,
         "type": "1"
+      },
+      {
+        "id": 1103,
+        "thumbName": "09577162-9094-45fe-ac52-4bab22af5f4b.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/1eONa8Nx_jQ",
+        "type": "3",
+        "authorName": "IGN",
+        "authorUrl": "https://www.youtube.com/@IGN",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/1eONa8Nx_jQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Spider-Man: Brand New Day - Official Final Trailer (2026) Tom Holland, Zendaya, Jon Bernthal\"></iframe>"
       }
     ],
     "references": [
@@ -35773,6 +36570,17 @@
         "confidence": 78,
         "reasoning": "Rotten Tomatoes' Movie Info section lists the theatrical release as \"Jul 31, 2026, Wide\", matching the pin's stored date exactly.",
         "utcCreatedDateTime": "2026-09-14T23:31:53.303968+00:00",
+        "pinId": 392
+      }
+    ],
+    "ratings": [
+      {
+        "id": 5,
+        "source": "Rotten Tomatoes",
+        "score": 90,
+        "scoreMax": 100,
+        "url": "https://www.rottentomatoes.com/m/spider_man_brand_new_day",
+        "utcCreatedDateTime": "2026-09-15T20:43:46.919314+00:00",
         "pinId": 392
       }
     ],
@@ -35813,6 +36621,17 @@
         "originalWidth": 206,
         "originalHeight": 305,
         "type": "1"
+      },
+      {
+        "id": 1118,
+        "thumbName": "a096cbbd-ee77-4a6a-8ad0-3dbead5e02e8.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/xgI5iYmOf5Q",
+        "type": "3",
+        "authorName": "Paramount Pictures",
+        "authorUrl": "https://www.youtube.com/@paramountpictures",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/xgI5iYmOf5Q?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"PAW Patrol: The Dino Movie | Official Trailer (2026 Movie)\"></iframe>"
       }
     ],
     "references": [
@@ -36113,6 +36932,17 @@
         "originalWidth": 206,
         "originalHeight": 305,
         "type": "1"
+      },
+      {
+        "id": 1120,
+        "thumbName": "2a6de4bc-cc81-42b3-9662-2e9bcc8a4f4f.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/fWKpUCvC_RQ",
+        "type": "3",
+        "authorName": "KinoCheck.com",
+        "authorUrl": "https://www.youtube.com/@KinoCheck.com",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/fWKpUCvC_RQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"COYOTE VS. ACME Official Final Trailer (2026) John Cena\"></iframe>"
       }
     ],
     "references": [
@@ -41786,6 +42616,17 @@
         "originalWidth": 206,
         "originalHeight": 305,
         "type": "1"
+      },
+      {
+        "id": 1117,
+        "thumbName": "84aac04c-15c7-4bb6-a341-15d4afb3c260.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/mNd1gb19A-c",
+        "type": "3",
+        "authorName": "Sony Pictures Entertainment",
+        "authorUrl": "https://www.youtube.com/@sonypictures",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/mNd1gb19A-c?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"RESIDENT EVIL – Official Trailer (4K)\"></iframe>"
       }
     ],
     "references": [
@@ -42023,6 +42864,17 @@
         "originalWidth": 225,
         "originalHeight": 318,
         "type": "1"
+      },
+      {
+        "id": 1137,
+        "thumbName": "9212fbc3-d91e-4583-9174-4546df3fc441.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/9aFlpf00KZs",
+        "type": "3",
+        "authorName": "Crunchyroll",
+        "authorUrl": "https://www.youtube.com/@crunchyroll",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/9aFlpf00KZs?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"The Apothecary Diaries Season 3 | Official Trailer | Crunchyroll\"></iframe>"
       }
     ],
     "references": [
@@ -42069,6 +42921,17 @@
         "originalWidth": 225,
         "originalHeight": 318,
         "type": "1"
+      },
+      {
+        "id": 1140,
+        "thumbName": "267fb2d6-d1e6-421a-ab74-262a7db014fc.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/3g_T3ymRKxo",
+        "type": "3",
+        "authorName": "AnimeSelect",
+        "authorUrl": "https://www.youtube.com/@TheAnimeSelect",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/3g_T3ymRKxo?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"BLACK CLOVER Season 2 — Official Main Trailer\"></iframe>"
       }
     ],
     "references": [
@@ -42161,6 +43024,17 @@
         "originalWidth": 225,
         "originalHeight": 318,
         "type": "1"
+      },
+      {
+        "id": 1144,
+        "thumbName": "8e21bd69-8a90-4b41-b4c3-13310c2eef2e.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/n0ugKku1fzc",
+        "type": "3",
+        "authorName": "Netflix Anime",
+        "authorUrl": "https://www.youtube.com/@netflixanime",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/n0ugKku1fzc?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Blue Box Season 2 | Official Trailer | Netflix\"></iframe>"
       }
     ],
     "references": [
@@ -42208,6 +43082,17 @@
         "originalWidth": 225,
         "originalHeight": 318,
         "type": "1"
+      },
+      {
+        "id": 1147,
+        "thumbName": "c8bb8b1c-c5d1-4aaf-8949-521be9d1573f.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/Q31atLvV6MM",
+        "type": "3",
+        "authorName": "Crunchyroll",
+        "authorUrl": "https://www.youtube.com/@crunchyroll",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/Q31atLvV6MM?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"The Detective Is Already Dead Season 2 | Official Trailer | Crunchyroll\"></iframe>"
       }
     ],
     "references": [
@@ -42255,6 +43140,17 @@
         "originalWidth": 225,
         "originalHeight": 318,
         "type": "1"
+      },
+      {
+        "id": 1141,
+        "thumbName": "cc399167-0051-4564-bcf4-df6e82c06abc.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/ryN2egeIPN0",
+        "type": "3",
+        "authorName": "AnimeSelect",
+        "authorUrl": "https://www.youtube.com/@TheAnimeSelect",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/ryN2egeIPN0?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Reincarnated as a Sword Season 2 — Official Trailer\"></iframe>"
       }
     ],
     "references": [
@@ -42302,6 +43198,17 @@
         "originalWidth": 225,
         "originalHeight": 317,
         "type": "1"
+      },
+      {
+        "id": 1151,
+        "thumbName": "6e587341-3a15-4df9-8ab8-1fc3055690dc.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/GtUa0uSlowI",
+        "type": "3",
+        "authorName": "Crunchyroll",
+        "authorUrl": "https://www.youtube.com/@crunchyroll",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/GtUa0uSlowI?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"A Returner&#39;s Magic Should Be Special Season 2 | Official Trailer 2 | Crunchyroll\"></iframe>"
       }
     ],
     "references": [
@@ -42353,6 +43260,17 @@
         "originalWidth": 260,
         "originalHeight": 385,
         "type": "1"
+      },
+      {
+        "id": 1106,
+        "thumbName": "4627985e-90a1-4f81-80c7-8a9ce9908657.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/T7Xy23pznXY",
+        "type": "3",
+        "authorName": "KinoCheck.com",
+        "authorUrl": "https://www.youtube.com/@KinoCheck.com",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/T7Xy23pznXY?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"STREET FIGHTER Official Trailer 2 (2026)\"></iframe>"
       }
     ],
     "references": [
@@ -42410,6 +43328,17 @@
         "originalWidth": 225,
         "originalHeight": 317,
         "type": "1"
+      },
+      {
+        "id": 1149,
+        "thumbName": "298cded7-ee4d-423e-93bc-cedc6824f762.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/sFmnbdPwbrQ",
+        "type": "3",
+        "authorName": "Aniplex USA",
+        "authorUrl": "https://www.youtube.com/@AniplexUSA",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/sFmnbdPwbrQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Rascal Does Not Dream of a Dear Friend  |  OFFICIAL TRAILER\"></iframe>"
       }
     ],
     "references": [
@@ -42457,6 +43386,17 @@
         "originalWidth": 225,
         "originalHeight": 281,
         "type": "1"
+      },
+      {
+        "id": 1139,
+        "thumbName": "146b7d5c-7547-4c2d-881e-8a195de9297b.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/SyeHKMfswHk",
+        "type": "3",
+        "authorName": "Netflix",
+        "authorUrl": "https://www.youtube.com/@Netflix",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/SyeHKMfswHk?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Cyberpunk: Edgerunners 2 | Official Teaser #3 | Netflix\"></iframe>"
       }
     ],
     "references": [
@@ -42567,6 +43507,17 @@
         "originalWidth": 225,
         "originalHeight": 323,
         "type": "1"
+      },
+      {
+        "id": 1145,
+        "thumbName": "1971fffa-0c7b-4f89-85f0-4f34905b7ba1.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/Sy7cLG6XHRY",
+        "type": "3",
+        "authorName": "KADOKAWAanime",
+        "authorUrl": "https://www.youtube.com/@KADOKAWAanime",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/Sy7cLG6XHRY?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"劇場シリーズ【第一部】メイドインアビス 目覚める神秘｜本予告\"></iframe>"
       }
     ],
     "references": [
@@ -43036,6 +43987,17 @@
         "originalWidth": 260,
         "originalHeight": 385,
         "type": "1"
+      },
+      {
+        "id": 1105,
+        "thumbName": "4710b932-78ab-4e99-98ba-c9f6214282eb.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/WJZhTP06vpU",
+        "type": "3",
+        "authorName": "ONE Media Coverage",
+        "authorUrl": "https://www.youtube.com/@OneMediaCoverage",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/WJZhTP06vpU?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"THE HUNGER GAMES: Sunrise on the Reaping Trailer 2 (2026) Mckenna Grace, Elle Fanning\"></iframe>"
       }
     ],
     "references": [
@@ -43093,6 +44055,17 @@
         "originalWidth": 225,
         "originalHeight": 318,
         "type": "1"
+      },
+      {
+        "id": 1153,
+        "thumbName": "980a2cbf-97a9-4444-931f-ba651e5ac62b.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/GwlV5-2UoeY",
+        "type": "3",
+        "authorName": "IGN",
+        "authorUrl": "https://www.youtube.com/@IGN",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/GwlV5-2UoeY?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Witch on the Holy Night - Official Trailer (2027)\"></iframe>"
       }
     ],
     "references": [
@@ -43551,6 +44524,17 @@
         "originalWidth": 250,
         "originalHeight": 377,
         "type": "1"
+      },
+      {
+        "id": 1101,
+        "thumbName": "a44aa07f-52e8-4506-9f14-cddd83e51cca.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/S5ehYTyjvrs",
+        "type": "3",
+        "authorName": "Entertainment Tonight",
+        "authorUrl": "https://www.youtube.com/@EntertainmentTonight",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/S5ehYTyjvrs?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Avengers: Doomsday | Official Trailer (2026)\"></iframe>"
       }
     ],
     "references": [
@@ -44266,6 +45250,17 @@
         "originalWidth": 225,
         "originalHeight": 318,
         "type": "1"
+      },
+      {
+        "id": 1142,
+        "thumbName": "93a386e1-6e96-48e0-b841-21443aff6548.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/ZivADyFlILE",
+        "type": "3",
+        "authorName": "Aniplex USA",
+        "authorUrl": "https://www.youtube.com/@AniplexUSA",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/ZivADyFlILE?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"MASHLE: MAGIC AND MUSCLES The Tri-Magicathlon Divine Visionary Final Exam Arc  |  FIRST LOOK\"></iframe>"
       }
     ],
     "references": [
@@ -44313,6 +45308,17 @@
         "originalWidth": 225,
         "originalHeight": 315,
         "type": "1"
+      },
+      {
+        "id": 1143,
+        "thumbName": "84550e34-6aad-4cda-a93f-b8bd3516dcb3.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/OfrzeFDCKH8",
+        "type": "3",
+        "authorName": "Crunchyroll",
+        "authorUrl": "https://www.youtube.com/@crunchyroll",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/OfrzeFDCKH8?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Shangri-La Frontier Season 3 | Official Teaser | Crunchyroll\"></iframe>"
       }
     ],
     "references": [
@@ -44360,6 +45366,17 @@
         "originalWidth": 225,
         "originalHeight": 318,
         "type": "1"
+      },
+      {
+        "id": 1148,
+        "thumbName": "1b1c9a0b-4fbb-4170-8808-df44eed353da.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/KqXEcl4Whj4",
+        "type": "3",
+        "authorName": "Netflix",
+        "authorUrl": "https://www.youtube.com/@Netflix",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/KqXEcl4Whj4?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Sakamoto Days | Season 2 Teaser Trailer | Netflix\"></iframe>"
       }
     ],
     "references": [
@@ -44465,6 +45482,17 @@
         "originalWidth": 225,
         "originalHeight": 333,
         "type": "1"
+      },
+      {
+        "id": 1152,
+        "thumbName": "581bb2b0-707d-4ca7-9329-d8c14fabae8a.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/3Gmo0EXHyKg",
+        "type": "3",
+        "authorName": "Netflix",
+        "authorUrl": "https://www.youtube.com/@Netflix",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/3Gmo0EXHyKg?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"THE ONE PIECE | Official Teaser | Netflix\"></iframe>"
       }
     ],
     "references": [
@@ -44794,6 +45822,17 @@
         "originalWidth": 225,
         "originalHeight": 318,
         "type": "1"
+      },
+      {
+        "id": 1146,
+        "thumbName": "f1ea12d0-d7c5-40c3-825d-94e8168ca8dd.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/g1pKfngmcAM",
+        "type": "3",
+        "authorName": "TOHO animation チャンネル",
+        "authorUrl": "https://www.youtube.com/@TOHOanimation",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/g1pKfngmcAM?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"【薬屋のひとりごと】2周年記念PV - TVアニメ第3期＆劇場版制作決定！\"></iframe>"
       }
     ],
     "references": [
@@ -44841,6 +45880,17 @@
         "originalWidth": 225,
         "originalHeight": 319,
         "type": "1"
+      },
+      {
+        "id": 1150,
+        "thumbName": "57b15205-b539-4419-9667-659cef494361.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/SizD56s6guU",
+        "type": "3",
+        "authorName": "DMM pictures",
+        "authorUrl": "https://www.youtube.com/@dmmpictures9719",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/SizD56s6guU?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"TVアニメ「スキップとローファー 2nd season」ティザーPV | 2027年4月放送開始！\"></iframe>"
       }
     ],
     "references": [
@@ -45485,6 +46535,17 @@
         "originalWidth": 225,
         "originalHeight": 333,
         "type": "1"
+      },
+      {
+        "id": 1138,
+        "thumbName": "874e47dd-2955-496b-8580-e9eea0d7b917.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/zxXID_zR-HY",
+        "type": "3",
+        "authorName": "AnimeSelect",
+        "authorUrl": "https://www.youtube.com/@TheAnimeSelect",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/zxXID_zR-HY?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Delicious in Dungeon Season 2 - Official Trailer\"></iframe>"
       }
     ],
     "references": [

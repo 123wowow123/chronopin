@@ -7,6 +7,7 @@ import { api } from '@/lib/client/api';
 import { categoryOptions, canonicalCategory } from '@/lib/categories';
 import { removeTerm, toggleTerm } from '@/lib/searchTerms';
 import { parseSearchQuery } from '@/server/util/searchQuery';
+import { useCategoryFoldOpen } from './FloatingControls';
 
 // Whether the panel was last left open. Search results remount with each
 // query, so without this every pick would fold the panel away.
@@ -44,14 +45,19 @@ export function CategoryFilter({
     rememberedOpen = next;
     setOpenState(next);
   };
-  useEffect(() => onOpenChange?.(open), [open, onOpenChange]);
+  // Narrower, the floating controls' category pill stands in for the header,
+  // and the pills may use the height between the navbar and that pill.
+  const folded = useCategoryFoldOpen();
+  const inFold = folded !== null;
+  const showing = open || !!folded;
+  useEffect(() => onOpenChange?.(showing), [showing, onOpenChange]);
   const isSelected = (category: string) => selected.some((s) => s.toLowerCase() === category.toLowerCase());
   const options = counts ? categoryOptions(counts, selected) : selected.map((name) => ({ name, count: null }));
-  const summary = !selected.length ? 'All' : selected.length === 1 ? selected[0] : `${selected[0]} +${selected.length - 1}`;
+  const summary = categorySummary(selected) || 'All';
 
   return (
     <div className={`floating text-sm ${className}`}>
-      <div className="flex items-center gap-2 px-3.5 py-2.5">
+      <div className={`flex items-center gap-2 px-3.5 py-2.5 max-lg:py-3 ${inFold ? 'max-xl:hidden' : ''}`}>
         <button
           type="button"
           onClick={() => setOpen(!open)}
@@ -64,13 +70,18 @@ export function CategoryFilter({
           <Icon name="chevron" className={`ml-auto size-4 shrink-0 text-subtle transition-transform ${open ? 'rotate-180' : ''}`} />
         </button>
         {selected.length ? (
-          <button type="button" onClick={onClear} className="shrink-0 rounded-full p-1 text-subtle hover:bg-raised hover:text-ink" aria-label="Clear category filter">
+          <button type="button" onClick={onClear} className="-my-1 shrink-0 rounded-full p-1 text-subtle max-lg:p-2 hover:bg-raised hover:text-ink" aria-label="Clear category filter">
             <Icon name="close" className="size-3.5" />
           </button>
         ) : null}
       </div>
-      {open ? (
-        <div id={optionsId} role="group" aria-label="Filter by category" className="flex max-h-[min(22rem,50dvh)] flex-wrap gap-1.5 overflow-y-auto px-3 pb-3">
+      {showing ? (
+        <div
+          id={optionsId}
+          role="group"
+          aria-label="Filter by category"
+          className={`flex max-h-[min(22rem,50dvh)] flex-wrap gap-1.5 overflow-y-auto overscroll-contain px-3 pb-3 max-lg:gap-2 ${inFold ? 'max-xl:max-h-[calc(100dvh-7.5rem)] max-xl:pt-3' : ''} ${open ? '' : 'xl:hidden'}`}
+        >
           {options.map(({ name: category, count }) => {
             const pressed = isSelected(category);
             return (
@@ -79,7 +90,7 @@ export function CategoryFilter({
                 type="button"
                 aria-pressed={pressed}
                 onClick={() => onToggle(category)}
-                className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ring-1 transition-colors ring-inset ${
+                className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium max-lg:px-3.5 max-lg:py-2 max-lg:text-sm ring-1 transition-colors ring-inset ${
                   pressed ? 'bg-accent/15 text-link ring-accent/60' : 'bg-field text-muted ring-line hover:bg-raised hover:text-ink'
                 } ${count === 0 && !pressed ? 'opacity-50' : ''}`}
               >
@@ -101,6 +112,20 @@ export function CategoryFilter({
   );
 }
 
+// What is picked, in brief ("Movies", "Movies +2"), or '' for nothing.
+function categorySummary(selected: string[]) {
+  return !selected.length ? '' : selected.length === 1 ? selected[0] : `${selected[0]} +${selected.length - 1}`;
+}
+
+function selectedCategories(query?: string) {
+  return [...new Set(parseSearchQuery(query).categories.map(canonicalCategory))];
+}
+
+// The label for the floating controls' category pill.
+export function categoryPillSummary(query?: string) {
+  return categorySummary(selectedCategories(query)) || 'Category';
+}
+
 // The category filter on the timeline and search results. Picks are
 // category: terms in the search query, so the navbar search box shows and
 // edits them like any other; off the search page a pick starts a search.
@@ -120,7 +145,7 @@ export function SearchCategoryFilter({
   className?: string;
 }) {
   const router = useRouter();
-  const selected = [...new Set(parseSearchQuery(query).categories.map(canonicalCategory))];
+  const selected = selectedCategories(query);
   const [open, setOpen] = useState(false);
   const [counts, setCounts] = useState<Record<string, number> | null>(() => rememberedCounts);
 

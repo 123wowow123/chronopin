@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { citeTag } from './citations';
 import type { Evidence } from './referenceConfidence';
-import { safeCitedHtml } from './sanitize';
+import { safeCitedHtml, safeEmbedHtml } from './sanitize';
 
 const source: Evidence = { url: 'https://src.example/story', isSource: true, confidence: 90, utcCreatedDateTime: '2026-09-01T00:00:00Z' };
 const older: Evidence = { url: 'https://old.example/a?x=1&y=2', confidence: 70, publishedDate: '2026-08-01' };
@@ -24,5 +24,17 @@ describe('safeCitedHtml', () => {
 
   it('leaves summaries without citations as they were', () => {
     expect(safeCitedHtml('<ul><li>Point [1]</li></ul>', [source])).toBe('<ul><li>Point [1]</li></ul>');
+  });
+});
+
+describe('safeEmbedHtml', () => {
+  it('turns on the iframe API for YouTube players and names untitled frames', () => {
+    expect(safeEmbedHtml('<iframe src="//www.youtube.com/embed/abc?feature=oembed" allowfullscreen></iframe>', 'YouTube video: x')).toBe(
+      '<iframe src="https://www.youtube.com/embed/abc?feature=oembed&amp;enablejsapi=1" allowfullscreen title="YouTube video: x"></iframe>',
+    );
+  });
+
+  it('drops iframes from other hosts', () => {
+    expect(safeEmbedHtml('<iframe src="https://evil.example/x"></iframe>')).toBe('<iframe></iframe>');
   });
 });

@@ -13,7 +13,7 @@ import { formatSpan, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSp
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { buildBags, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { CardPin, DateTimeJson, TimelinePage } from '@/lib/types';
-import { SearchCategoryFilter } from './CategoryFilter';
+import { categoryPillSummary, SearchCategoryFilter } from './CategoryFilter';
 import { FloatingControls } from './FloatingControls';
 import { TimeBlock, TodayMarker } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
@@ -229,8 +229,11 @@ export function Timeline({
 
   return (
     <div className="px-[max(0.75rem,env(safe-area-inset-left))] pb-24 lg:px-4 xl:pr-[288px]">
-      <FloatingControls summary={`Posted within ${spanLabel(postedWithin)}`} onToday={scrollToToday}>
-        <SearchCategoryFilter postedWithin={postedWithin} />
+      <FloatingControls
+        summary={`Posted within ${spanLabel(postedWithin)}`}
+        onToday={scrollToToday}
+        category={{ summary: categoryPillSummary(), control: <SearchCategoryFilter postedWithin={postedWithin} /> }}
+      >
         <TimeRangeSlider
           steps={SPAN_OPTIONS}
           past={postedWithin}

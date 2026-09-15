@@ -22,6 +22,7 @@
     "init:shebang": "npm run db:refresh && npm run search:refresh",
     "companies:logos": "tsx scripts/company/logos.ts",
     "media:video-thumbs": "tsx scripts/media/videoThumbs.ts",
+    "media:screen": "tsx scripts/media/screenDetails.ts",
     "references:list": "tsx scripts/references/list.ts",
     "references:apply": "tsx scripts/references/apply.ts",
     "references:reasoning:list": "tsx scripts/references/reasoningList.ts",

@@ -160,6 +160,19 @@ export function timeAgo(instant: string | Date, now = Date.now()): string {
   return rtf.format(seconds, 'second');
 }
 
+// A rating the way its source shows it: Rotten Tomatoes and AniList as a
+// percentage ("92%"), everyone else as a score out of its maximum ("8.67/10",
+// Metacritic's "82/100").
+const PERCENT_SOURCES = new Set(['rotten tomatoes', 'anilist']);
+
+export function ratingScore(score: number, scoreMax: number, source?: string): string {
+  if (scoreMax === 100 && PERCENT_SOURCES.has((source ?? '').toLowerCase())) {
+    return `${Math.round(score)}%`;
+  }
+  const plain = (n: number) => String(Number(n.toFixed(2)));
+  return `${plain(score)}/${plain(scoreMax)}`;
+}
+
 // Plain text from the HTML a pin description or summary may hold, for meta
 // descriptions and JSON-LD.
 export function plainText(html: string | null | undefined, maxLength?: number): string {

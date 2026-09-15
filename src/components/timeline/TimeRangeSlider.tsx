@@ -3,6 +3,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { approxDays, formatSpan, parseTypedSpan } from '@/lib/postedSpan';
+import { useInControlsFold } from './FloatingControls';
 
 type Side = 'past' | 'future';
 
@@ -32,6 +33,10 @@ export function TimeRangeSlider({
   const [texts, setTexts] = useState({ past: '', future: '' });
   const [invalid, setInvalid] = useState({ past: false, future: false });
 
+  // Folded behind a pill that already says "Posted within …", the heading
+  // would only repeat it.
+  const inFold = useInControlsFold();
+  const headless = pastOnly && inFold;
   const zeroIndex = steps.findIndex((s) => approxDays(s) === 0);
   const label = (within: string | null) => (within ? formatSpan(within) : 'All');
 
@@ -171,49 +176,49 @@ export function TimeRangeSlider({
           autoComplete="off"
           onChange={(event) => setTexts((t) => ({ ...t, [side]: event.target.value }))}
           onKeyDown={(event) => event.key === 'Escape' && setPanelOpen(false)}
-          className={`field min-w-0 flex-1 px-2 py-1 text-sm ${invalid[side] ? 'ring-red-500' : ''}`}
+          className={`field min-w-0 flex-1 px-2 py-1 text-sm max-lg:py-2 ${invalid[side] ? 'ring-red-500' : ''}`}
         />
-        <button type="submit" className="btn btn-sm btn-primary py-1.5">
+        <button type="submit" className="btn btn-sm btn-primary py-1.5 max-lg:px-4 max-lg:py-2.5">
           Set
         </button>
       </form>
-      <div className="mt-1.5 mb-2 flex flex-wrap gap-1">
+      <div className="mt-1.5 mb-2 flex flex-wrap gap-1 max-lg:mt-2.5 max-lg:gap-2">
         {steps.map((step) => (
-          <button key={step} type="button" onClick={() => applySide(side, step)} className="rounded-full bg-raised px-2.5 py-0.5 text-xs text-ink ring-1 ring-line ring-inset hover:bg-raised-2">
+          <button key={step} type="button" onClick={() => applySide(side, step)} className="rounded-full bg-raised px-2.5 py-0.5 text-xs text-ink max-lg:px-3.5 max-lg:py-2 max-lg:text-sm ring-1 ring-line ring-inset hover:bg-raised-2">
             {formatSpan(step)}
           </button>
         ))}
-        <button type="button" onClick={() => applySide(side, null)} className="rounded-full bg-raised px-2.5 py-0.5 text-xs text-ink ring-1 ring-line ring-inset hover:bg-raised-2">
+        <button type="button" onClick={() => applySide(side, null)} className="rounded-full bg-raised px-2.5 py-0.5 text-xs text-ink max-lg:px-3.5 max-lg:py-2 max-lg:text-sm ring-1 ring-line ring-inset hover:bg-raised-2">
           All
         </button>
       </div>
     </div>
   );
 
-  // 20px thumbs with a 36px invisible hit area.
+  // 20px thumbs with a 36px invisible hit area; 28px with a 44px one on touch screens.
   const thumbClass =
-    'absolute top-1/2 size-5 -translate-x-1/2 -translate-y-1/2 cursor-grab touch-none rounded-full border-2 border-white shadow-md shadow-shade/50 transition-transform hover:scale-110 after:absolute after:-inset-2 after:content-[""] focus:outline-none focus-visible:ring-2 focus-visible:ring-link active:cursor-grabbing';
-  const tickClass = 'rounded-md px-1 py-0.5 text-[11px] text-subtle hover:bg-raised hover:text-ink';
+    'absolute top-1/2 size-5 max-lg:size-7 -translate-x-1/2 -translate-y-1/2 cursor-grab touch-none rounded-full border-2 border-white shadow-md shadow-shade/50 transition-transform hover:scale-110 after:absolute after:-inset-2 after:content-[""] focus:outline-none focus-visible:ring-2 focus-visible:ring-link active:cursor-grabbing';
+  const tickClass = 'rounded-md px-1 py-0.5 text-[11px] text-subtle max-lg:px-2.5 max-lg:py-2 max-lg:text-sm hover:bg-raised hover:text-ink';
 
   return (
-    <div ref={rootRef} className="floating w-64 px-3.5 pt-2.5 pb-3 text-sm">
+    <div ref={rootRef} className="floating px-3.5 pt-2.5 pb-3 text-sm">
       {/* With both sides, equal outer columns keep the pencil on the centre
           line, above "Now" and the track's midpoint, whatever the labels say. */}
-      <div className={pastOnly ? 'flex items-start justify-between gap-2' : 'grid grid-cols-[1fr_auto_1fr] items-start gap-2'}>
+      <div className={pastOnly ? `flex items-start justify-between gap-2 ${headless ? 'max-xl:hidden' : ''}` : 'grid grid-cols-[1fr_auto_1fr] items-start gap-2'}>
         <button
           type="button"
-          className="justify-self-start text-left"
+          className="justify-self-start text-left max-lg:-my-3 max-lg:py-3"
           onClick={() => applySide('past', pastLabelSpan || null)}
           title={pastLabelSpan ? `Use your default (${formatSpan(pastLabelSpan)})` : pastOnly ? 'Show pins posted at any time' : 'Show all past pins'}
         >
           <span className="font-semibold text-past">{pastOnly ? 'Posted within' : 'Past'}</span>{' '}
           <span className={pastOnly ? 'text-ink' : 'block text-ink'}>{label(past)}</span>
         </button>
-        <button type="button" onClick={() => setPanelOpen((o) => !o)} aria-expanded={panelOpen} aria-label="Type exact values" title="Type exact values" className="-m-1.5 rounded-md p-1.5 text-subtle hover:bg-raised hover:text-ink">
+        <button type="button" onClick={() => setPanelOpen((o) => !o)} aria-expanded={panelOpen} aria-label="Type exact values" title="Type exact values" className="-m-1.5 rounded-md p-1.5 text-subtle hover:bg-raised hover:text-ink max-lg:hidden">
           <Icon name="pencil" className="size-4" />
         </button>
         {!pastOnly ? (
-          <button type="button" className="justify-self-end text-right" onClick={() => applySide('future', null)} title="Show all upcoming pins">
+          <button type="button" className="justify-self-end text-right max-lg:-my-3 max-lg:py-3" onClick={() => applySide('future', null)} title="Show all upcoming pins">
             <span className="font-semibold text-future">Future</span>
             <span className="block text-ink">{label(future)}</span>
           </button>
@@ -221,7 +226,7 @@ export function TimeRangeSlider({
       </div>
 
       {/* Labels in their own row, clear of the thumbs. */}
-      <div className="mt-2 flex items-center justify-between">
+      <div className={`mt-2 flex items-center justify-between max-lg:mb-2 ${headless ? 'max-xl:mt-0' : ''}`}>
         {pastOnly ? (
           <>
             {steps.length ? (
@@ -248,9 +253,9 @@ export function TimeRangeSlider({
       </div>
 
       {/* The track is inset by the thumb's radius, so a thumb at either end
-          stays inside the panel; the whole 28px-tall strip takes a press. */}
-      <div className="relative h-7 cursor-pointer touch-none px-2.5" onPointerDown={startTrackDrag}>
-        <div ref={trackRef} className="relative top-1/2 h-1.5 -translate-y-1/2 rounded-full bg-raised-2">
+          stays inside the panel; the whole strip (28px, 44px on touch screens) takes a press. */}
+      <div className="relative h-7 cursor-pointer touch-none px-2.5 max-lg:h-11 max-lg:px-3.5" onPointerDown={startTrackDrag}>
+        <div ref={trackRef} className="relative top-1/2 h-1.5 -translate-y-1/2 rounded-full bg-raised-2 max-lg:h-2">
           <div
             className="absolute h-full rounded-full bg-past"
             style={{ left: `${pastOnly ? 0 : pastPosition}%`, width: `${(pastOnly ? pastPosition : 50) - (pastOnly ? 0 : pastPosition)}%` }}
@@ -290,12 +295,10 @@ export function TimeRangeSlider({
         </div>
       </div>
 
-      {panelOpen ? (
-        <div className="mt-3 border-t border-line pt-3">
-          {panelRow('past')}
-          {!pastOnly ? panelRow('future') : null}
-        </div>
-      ) : null}
+      <div className={`mt-3 border-t border-line pt-3 max-lg:block ${panelOpen ? '' : 'hidden'}`}>
+        {panelRow('past')}
+        {!pastOnly ? panelRow('future') : null}
+      </div>
     </div>
   );
 }

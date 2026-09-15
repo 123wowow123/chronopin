@@ -488,12 +488,3 @@ This is a promotional article about one of the company partners with Interesting
 - watched view and should have different groups 
 
 - youtube summary should be generaed with reference to text transcript
-
-
-- rescrape anime pins to get promotional video on youtube and add to media
-- Anime/Movie/TV Shows/etc should have rating from differ imdb/rotten tomato/myanimelist etc
-
-
-- in pin creation flow if duplicate is detected it should show it to the user and ask if they would like to add it as a reference or do a response pin to it instead or add comment on what the existing one is missing
-
-- on main timeline if duplicate pins are showing in same slot then show overlapping pin style to signify multiple of the same pin exist but show the most click/watch one on top. On pin detail view show a small section on the other duplication pins from other people

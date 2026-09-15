@@ -38,6 +38,7 @@ export type ExtractedFields = {
   company: string | null;
   companyWikiUrl: string | null;
   category: string;
+  workTitle: string | null;
   amazonUrl: string | null;
   bestBuyUrl: string | null;
   startDateTime: string | null;
@@ -106,6 +107,11 @@ const SCHEMA = {
       enum: CATEGORIES,
       description: 'Best-fit category for this event from the fixed list. Use "Other" only when nothing else reasonably fits.',
     },
+    workTitle: {
+      type: ['string', 'null'],
+      description:
+        'When category is Anime, Movies or TV Series: the film\'s or show\'s own official English title, with any season or part as it is officially styled, e.g. "Jujutsu Kaisen Season 2" or "Frieren: Beyond Journey\'s End" - not the event headline. Null for any other category.',
+    },
     amazonUrl: {
       type: ['string', 'null'],
       description:
@@ -149,6 +155,7 @@ const SCHEMA = {
     'company',
     'companyWikiUrl',
     'category',
+    'workTitle',
     'amazonUrl',
     'bestBuyUrl',
     'startDateTime',

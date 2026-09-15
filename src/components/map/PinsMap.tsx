@@ -369,7 +369,7 @@ export default function PinsMap() {
           <span className="sr-only sm:not-sr-only">Back to pin</span>
         </a>
       ) : null}
-      <div className="absolute top-3 right-3 z-[1000] flex flex-col gap-2">
+      <div className="absolute top-3 right-3 z-[1000] flex w-64 flex-col gap-2">
         <CategoryFilter
           selected={categories}
           counts={categoryCounts}

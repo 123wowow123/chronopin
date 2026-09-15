@@ -6,9 +6,11 @@ import { findReferences, type FoundReferences } from '../extract/references';
 import Medium from '../model/medium';
 import Merchant from '../model/merchant';
 import Pin from '../model/pin';
+import PinRating from '../model/pinRating';
 import PinReference from '../model/pinReference';
 import { fetchJson } from '../util/fetchJson';
 import { IN_PAGE_SCRAPE, type InPageResult } from './inPage';
+import { findScreenDetails, isScreenCategory, youtubeStill, type ScreenDetails } from './screen';
 
 const { scrapeType, mediumID } = config;
 const NAVIGATION_WAIT_MS = 8000;
@@ -20,6 +22,7 @@ export async function scrape(pageUrl: string) {
   const domain = pageUrl.match(/^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/?\n]+)/)?.[1];
   let type: string;
   let pin: Pin;
+  let trailer: Medium | undefined;
   switch (domain) {
     case 'twitter.com':
     case 'x.com':
@@ -33,10 +36,12 @@ export async function scrape(pageUrl: string) {
       break;
     default:
       type = scrapeType.web;
-      pin = await webScrape(pageUrl);
+      ({ pin, trailer } = await webScrape(pageUrl));
       break;
   }
-  return Object.assign({}, pin.toJSON(), { type });
+  // trailer is also in media; the form keeps it alongside whichever picture
+  // the author picks as the heading.
+  return Object.assign({}, pin.toJSON(), { type }, trailer ? { trailer: trailer.toJSON() } : {});
 }
 
 // The references found for a pin, and the summary they ground, when one was
@@ -124,7 +129,7 @@ async function youtubeMedium(pageUrl: string) {
 
 /* Any other web page */
 
-async function webScrape(pageUrl: string) {
+async function webScrape(pageUrl: string): Promise<{ pin: Pin; trailer?: Medium }> {
   // Loaded lazily: puppeteer is heavy and only this path needs it.
   const puppeteer = (await import('puppeteer')).default;
   const browser = await puppeteer.launch({
@@ -202,8 +207,43 @@ async function webScrape(pageUrl: string) {
   }
 
   // After the browser is gone, so the page is not held open for the calls.
-  const [fields, found] = await Promise.all([extractPinFields(pageUrl, pageText), findReferences(pageUrl, pageText)]);
-  return addReferences(applyExtracted(pin, fields), found);
+  // A film, series or anime is looked up as soon as the extractor names it,
+  // alongside the reference search. A page that embeds a video of its own
+  // keeps that one rather than gaining a searched-for trailer.
+  const hasVideo = pin.media.some((m) => Number(m.type) === mediumID.youtube);
+  const [{ fields, screen }, found] = await Promise.all([
+    extractPinFields(pageUrl, pageText).then(async (fields) => ({
+      fields,
+      screen: isScreenCategory(fields?.category)
+        ? await findScreenDetails({
+            workTitle: fields!.workTitle,
+            pinTitle: fields!.title,
+            category: fields!.category,
+            year: fields!.startDateTime ? new Date(fields!.startDateTime).getUTCFullYear() : undefined,
+            skipTrailer: hasVideo,
+          })
+        : undefined,
+    })),
+    findReferences(pageUrl, pageText),
+  ]);
+  applyExtracted(pin, fields);
+  const trailer = applyScreenDetails(pin, screen);
+  return { pin: addReferences(pin, found), trailer };
+}
+
+// Ratings onto the pin, and the trailer onto the end of its media (so the
+// page's own picture stays the default heading), with the trailer's still as
+// a picture when the page had none.
+function applyScreenDetails(pin: Pin, screen: ScreenDetails | undefined): Medium | undefined {
+  if (!screen) return undefined;
+  screen.ratings.forEach((r) => pin.addRating(new PinRating(r)));
+  if (!screen.trailer) return undefined;
+  const hasImage = pin.media.some((m) => Number(m.type) === mediumID.image);
+  const still = youtubeStill(screen.trailer.originalUrl!);
+  if (!hasImage && still) pin.addMedium(new Medium(still));
+  const trailer = new Medium(screen.trailer);
+  pin.addMedium(trailer);
+  return trailer;
 }
 
 // Embedly wraps the real player URL in its src query parameter.

@@ -2,6 +2,7 @@ import _ from 'lodash';
 import type { Row } from '../db';
 import Medium from './medium';
 import Merchant from './merchant';
+import PinRating from './pinRating';
 import PinReference from './pinReference';
 import User from './user';
 
@@ -55,6 +56,7 @@ export default class BasePin {
   declare media: Medium[];
   declare merchants: Merchant[];
   declare references: PinReference[];
+  declare ratings: PinRating[];
 
   constructor(pin?: Row | null, user?: User | null, prop?: string[]) {
     this._prop = prop || BasePinProp;
@@ -84,6 +86,7 @@ export default class BasePin {
     this.media = _.get(pin, 'media', []).map((m: Row) => new Medium(m, this));
     this.merchants = _.get(pin, 'merchants', []).map((m: Row) => new Merchant(m, this));
     this.references = (pin.references || []).map((r: Row) => new PinReference(r, this));
+    this.ratings = (pin.ratings || []).map((rt: Row) => new PinRating(rt, this));
     return this;
   }
 
@@ -167,6 +170,15 @@ export default class BasePin {
       this.references = [];
     }
     this.references.push(reference);
+    return this;
+  }
+
+  addRating(rating: PinRating): this {
+    rating.setPin(this);
+    if (!this.ratings) {
+      this.ratings = [];
+    }
+    this.ratings.push(rating);
     return this;
   }
 

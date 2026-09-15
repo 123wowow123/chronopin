@@ -79,7 +79,7 @@ export function TimeBlock({
       </div>
 
       {bag.pins.length ? (
-        <ul className="gap-2.5 sm:columns-2 lg:ml-[170px] lg:max-w-[906px]" style={{ minHeight: `${tagsHeight}px` }}>
+        <ul className="gap-2.5 sm:columns-2 sm:[column-fill:auto] lg:ml-[170px] lg:min-h-(--tags-h) lg:max-w-[906px]" style={{ ['--tags-h' as string]: `${tagsHeight}px` }}>
           {stackDuplicates(bag.pins).map(({ pin, hidden }, i) => (
             <li key={pin.id} id={`pin-${pin.id}`} className="mb-2.5 break-inside-avoid">
               {hidden.length ? (
@@ -95,9 +95,11 @@ export function TimeBlock({
       ) : (
         // lg:pt-7 lines the first title up with the date tag and rail marker
         // (tags start 26px down; a 24px line centred on the 28px-tall tag).
+        // The tag column's height is only reserved beside the rail; on narrow
+        // screens the tags are one row above, so the day is just its titles.
         <ul
-          className="min-h-[120px] lg:ml-[170px] lg:pt-7"
-          style={{ minHeight: `max(120px, ${tagsHeight}px)` }}
+          className="lg:ml-[170px] lg:min-h-[max(120px,var(--tags-h))] lg:pt-7"
+          style={{ ['--tags-h' as string]: `${tagsHeight}px` }}
         >
           {bag.dateTimes.map((dt) => (
             <li key={dt.id} className="pb-px">

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { PinCard } from '@/components/pin/PinCard';
+import { PinRatings } from '@/components/pin/PinRatings';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import { CATEGORIES } from '@/lib/categories';
@@ -12,7 +13,7 @@ import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useSession } from '@/lib/client/session';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { isLowConfidence } from '@/lib/dateClaims';
-import { applyScrape, EMPTY_FORM, formDates, formToPin, pinToForm, type PinFormValues, type ReferenceFormValues } from '@/lib/pinForm';
+import { applyScrape, EMPTY_FORM, formDates, formToPin, pinToForm, type PinFormValues, type ReferenceFormValues, type ScrapedPin } from '@/lib/pinForm';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { pinPath } from '@/lib/seo';
 import type { CardPin, MediumJson, PinJson } from '@/lib/types';
@@ -108,7 +109,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
     setScraping(true);
     setScrapeError('');
     try {
-      const scraped = await api.get<Partial<PinJson>>(`/api/scrape?url=${encodeURIComponent(url.trim())}`);
+      const scraped = await api.get<ScrapedPin>(`/api/scrape?url=${encodeURIComponent(url.trim())}`);
       setValues((v) => (onlyMedia ? applyScrape(v, { media: scraped.media }) : applyScrape(v, scraped)));
       // Warn as soon as the page is read rather than after the author has
       // finished the form. (A paste fires before the field holds the URL.)
@@ -429,6 +430,37 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
           </div>
         ) : null}
 
+        {values.extraMedia.length ? (
+          <div>
+            <span className={labelClass}>Also saved with the pin</span>
+            <ul className="mt-1 space-y-1 text-sm">
+              {values.extraMedia.map((medium, index) => (
+                <li key={medium.originalUrl ?? index} className="flex items-center justify-between gap-3">
+                  {mediumPreview(medium) ? (
+                    // eslint-disable-next-line @next/next/no-img-element -- stills on YouTube's image host
+                    <img src={mediumPreview(medium)} alt="" className="aspect-video w-20 shrink-0 rounded object-cover" referrerPolicy="no-referrer" />
+                  ) : null}
+                  <span className="min-w-0 flex-1 truncate text-muted">
+                    {String(medium.type) === '3' ? 'Video' : String(medium.type) === '2' ? 'Tweet' : 'Picture'}
+                    {medium.authorName ? ` from ${medium.authorName}` : ''}
+                    {medium.originalUrl === values.selectedMedia?.originalUrl && values.useMedia ? ' (heading)' : ''}
+                  </span>
+                  <button type="button" className="shrink-0 text-xs text-link" onClick={() => set('extraMedia', values.extraMedia.filter((m) => m !== medium))}>
+                    Remove
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+
+        {values.ratings.length ? (
+          <div>
+            <span className={labelClass}>Ratings</span>
+            <PinRatings ratings={values.ratings} className="mt-1" />
+          </div>
+        ) : null}
+
         {matches?.length ? <DuplicatePrompt matches={matches} draft={values} onRespond={respondInstead} onPostAnyway={submitAnyway} /> : null}
         {error ? (
           <p role="alert" className="rounded-lg bg-red-500/10 px-3 py-2 text-sm text-danger-soft ring-1 ring-red-500/20 ring-inset">
@@ -553,6 +585,15 @@ function OverriddenDates({ picked, allDay }: { picked: ReturnType<typeof formDat
       . The dates above are kept as the source&apos;s.
     </p>
   );
+}
+
+// A picture for a medium in the form: its thumb, the image itself, or a
+// YouTube video's still, so the author can see which video will be saved.
+function mediumPreview(medium: MediumJson): string | undefined {
+  if (medium.thumbName) return blobUrl(medium.thumbName);
+  if (String(medium.type) === '1') return medium.originalUrl;
+  const id = String(medium.type) === '3' ? medium.originalUrl?.match(/\/embed\/([\w-]{6,})/)?.[1] : undefined;
+  return id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : undefined;
 }
 
 function MediaChoice({ medium, selected, onSelect }: { medium: MediumJson; selected: boolean; onSelect: () => void }) {

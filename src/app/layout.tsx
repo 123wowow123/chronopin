@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { IBM_Plex_Sans, Noto_Sans } from 'next/font/google';
 import localFont from 'next/font/local';
+import { HideDevIssues } from '@/components/HideDevIssues';
 import { Navbar } from '@/components/nav/Navbar';
 import { ThemeSync } from '@/components/ThemeSync';
 import { TimeZoneSync } from '@/components/TimeZoneSync';
@@ -70,6 +71,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <div id="main">{children}</div>
         <TimeZoneSync />
         <ThemeSync />
+        {process.env.NODE_ENV === 'development' ? <HideDevIssues /> : null}
         {/* A plain async script, not next/script: AdSense warns about the
             data-nscript attribute next/script adds. React hoists it into <head>. */}
         <script

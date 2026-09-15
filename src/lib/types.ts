@@ -44,6 +44,17 @@ export type PinReferenceJson = {
   addedByUserPictureUrl?: string;
 };
 
+export type PinRatingJson = {
+  id?: number;
+  source: string;
+  // In the source's own scale, e.g. 8.4 (IMDb, out of 10) or 92 (Rotten
+  // Tomatoes, out of 100).
+  score: number;
+  scoreMax: number;
+  url?: string;
+  utcCreatedDateTime?: string;
+};
+
 export type PinUserJson = {
   id: number;
   userName?: string;
@@ -98,6 +109,7 @@ export type PinJson = {
   media?: MediumJson[];
   merchants?: MerchantJson[];
   references?: PinReferenceJson[];
+  ratings?: PinRatingJson[];
 };
 
 // A pin ready for a card: its description already sanitised (on the server

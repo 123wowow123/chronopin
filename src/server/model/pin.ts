@@ -3,6 +3,7 @@ import type { Row } from '../db';
 import BasePin, { BasePinProp } from './basePin';
 import Company from './company';
 import Merchant from './merchant';
+import PinRating from './pinRating';
 import PinReference from './pinReference';
 import type User from './user';
 import { createPin, locationSql, mapSubObjectFromQuery, normalizeAllDayDates } from './pinShared';
@@ -29,6 +30,9 @@ export default class Pin extends BasePin {
       for (const r of this.references) {
         await r.save();
       }
+      for (const rt of this.ratings || []) {
+        await rt.save();
+      }
       await mediaSaved;
       return { pin: this };
     } catch (err) {
@@ -39,6 +43,11 @@ export default class Pin extends BasePin {
   }
 
   // Who may update is decided by the caller (canModify in the pins route).
+  // Ratings are deliberately not part of this: they are not on the edit
+  // form, so this.ratings is always empty on a PUT and replacing them
+  // wholesale here would wipe every rating the first time anyone edited the
+  // pin (the same bug merchants once had - see setRatings for how a
+  // rescrape refreshes them instead).
   async update(): Promise<{ pin: Pin }> {
     const res = await Pin.queryById(this.id, this.userId);
     const beforePinMedia = res.pin?.media ?? [];
@@ -106,6 +115,24 @@ export default class Pin extends BasePin {
       longFormSummary,
     ]);
     return { pinId, longFormSummary };
+  }
+
+  // How a scrape/backfill refreshes a pin's ratings, outside the edit form
+  // path: upserts each given rating (by source) and, when replace is true,
+  // deletes any existing source not present in ratings.
+  static async setRatings(pinId: number, ratings: Row[], { replace = false }: { replace?: boolean } = {}) {
+    if (replace) {
+      const keep = new Set(ratings.map((r) => r.source));
+      const existing = await db.query<{ source: string }>(`SELECT "source" FROM "PinRating" WHERE "pinId" = $1`, [pinId]);
+      const toRemove = existing.filter((r) => !keep.has(r.source)).map((r) => r.source);
+      if (toRemove.length) {
+        await db.query(`DELETE FROM "PinRating" WHERE "pinId" = $1 AND "source" = ANY($2::text[])`, [pinId, toRemove]);
+      }
+    }
+    for (const r of ratings) {
+      await new PinRating(r, new BasePin({ id: pinId })).save();
+    }
+    return { pinId };
   }
 
   static mapPinJoins(pin: Pin, pinRows: Row[]): Pin {

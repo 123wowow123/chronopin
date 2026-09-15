@@ -15,6 +15,7 @@ import { PinCard } from '@/components/pin/PinCard';
 import { PinConfidence } from '@/components/pin/PinConfidence';
 import { PinDuplicates } from '@/components/pin/PinDuplicates';
 import { PinViewTracker } from '@/components/pin/PinViewTracker';
+import { PinRatings } from '@/components/pin/PinRatings';
 import { PinReferences } from '@/components/pin/PinReferences';
 import { PinMapLoader } from '@/components/pin/PinMapLoader';
 import { PinMediaFrame } from '@/components/pin/PinMedia';
@@ -229,6 +230,8 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
           pin.title
         )}
       </h1>
+
+      <PinRatings ratings={pin.ratings} />
 
       {pin.description ? <div className="rich-text mb-3 text-base leading-relaxed font-medium text-ink" dangerouslySetInnerHTML={{ __html: safeHtml(pin.description) }} /> : null}
       {pin.longFormSummary ? <div className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: safeCitedHtml(pin.longFormSummary, pinEvidence(pin)) }} /> : null}
