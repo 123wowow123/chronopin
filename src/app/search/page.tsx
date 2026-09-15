@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { SearchResults } from '@/components/timeline/SearchResults';
+import { DEFAULT_POSTED_WITHIN, spanFromParam } from '@/lib/postedSpan';
 import { toCardPins } from '@/lib/sanitize';
 import { pinDayKey } from '@/lib/timeline';
 import specialtyDays from '@/server/data/specialtyDays.json';
@@ -61,6 +62,12 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
         error={page.error}
         query={q}
         onlyWatched={onlyWatched && !!user}
+        initialView={{
+          sort: first(params.sort) === 'relevance' ? 'relevance' : 'date',
+          postedWithin: spanFromParam(first(params.posted), DEFAULT_POSTED_WITHIN),
+          past: spanFromParam(first(params.past), null),
+          future: spanFromParam(first(params.future), null),
+        }}
       />
     </>
   );

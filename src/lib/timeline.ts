@@ -17,6 +17,26 @@ export function pinDayKey(pin: Pick<PinJson, 'utcStartDateTime' | 'allDay'>, tim
   return pin.allDay ? dayKeyIn(pin.utcStartDateTime, 'UTC') : dayKeyIn(pin.utcStartDateTime, timeZone);
 }
 
+export type PinTense = 'past' | 'ongoing' | 'future';
+
+// Past once it has ended (a pin without an end ends as it starts, an all-day
+// one at the end of its day), future until it starts, ongoing between.
+export function pinTense(
+  pin: Pick<PinJson, 'utcStartDateTime' | 'utcEndDateTime' | 'allDay'>,
+  now: Date | string | number,
+  todayKey: string,
+): PinTense {
+  if (pin.allDay) {
+    const startDay = dayKeyIn(pin.utcStartDateTime, 'UTC');
+    if (startDay > todayKey) return 'future';
+    const endDay = pin.utcEndDateTime ? dayKeyIn(pin.utcEndDateTime, 'UTC') : null;
+    return (endDay ? endDay <= todayKey : startDay < todayKey) ? 'past' : 'ongoing';
+  }
+  const at = new Date(now).getTime();
+  if (new Date(pin.utcStartDateTime).getTime() > at) return 'future';
+  return new Date(pin.utcEndDateTime ?? pin.utcStartDateTime).getTime() <= at ? 'past' : 'ongoing';
+}
+
 function byStart(a: { utcStartDateTime: string; id: number }, b: { utcStartDateTime: string; id: number }) {
   return new Date(a.utcStartDateTime).getTime() - new Date(b.utcStartDateTime).getTime() || a.id - b.id;
 }

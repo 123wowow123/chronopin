@@ -53,7 +53,12 @@ async function findPins(query: SearchQuery, options: SearchOptions): Promise<Pin
   const favoriteUserId = options.onlyWatched ? userId : null;
 
   if (hasFilters(query) && !query.text) {
-    return SearchPins.searchFilters(query, favoriteUserId);
+    // Every hit matches its label terms exactly, so each is a full match.
+    const pins = await SearchPins.searchFilters(query, favoriteUserId);
+    pins.pins.forEach((pin) => {
+      pin.searchScore = 1;
+    });
+    return pins;
   }
   // Only the free text goes to the search service - it would read
   // "company:Apple" as words to match.

@@ -3,6 +3,10 @@
 // timeline filter, the map's range and the preferences page.
 
 export const SPAN_OPTIONS = ['12h', '1d', '3d', '5d', '1w', '1mo', '1y'];
+// Windows around now for when pins start (the map, relevance search). A place or
+// a search match stays relevant longer than a posting window, so wider spans.
+// '0d' is "nothing on that side".
+export const EVENT_SPAN_OPTIONS = ['0d', '1d', '1w', '1mo', '1y', '3y', '5y'];
 // Where every "posted within" filter starts without a saved preference: null
 // is unbounded ("All").
 export const DEFAULT_POSTED_WITHIN: string | null = null;
@@ -55,6 +59,16 @@ export function parseTypedSpan(text: string, allowZero = false): string | null {
 
 export function isSpan(within: string | null | undefined): boolean {
   return !!formatSpan(within);
+}
+
+// A span in a URL parameter: absent means the page's default, "all" unbounded.
+export function spanFromParam(value: string | null | undefined, fallback: string | null): string | null {
+  if (value === 'all') return null;
+  return value && isSpan(value) ? value : fallback;
+}
+
+export function spanToParam(within: string | null, fallback: string | null): string | null {
+  return within === fallback ? null : (within ?? 'all');
 }
 
 export function approxDays(within: string | null | undefined): number | null {

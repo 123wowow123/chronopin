@@ -492,3 +492,7 @@ This is a promotional article about one of the company partners with Interesting
 - watched view and should have different groups 
 
 - youtube summary should be generaed with reference to text transcript
+
+- in pin creation flow if duplicate is detected it should show it to the user and ask if they would like to add it as a reference to the other one instead or add comment on what the exiting one is missing
+
+- add rating for anime

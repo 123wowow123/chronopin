@@ -11,7 +11,8 @@ import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import { canonicalCategory } from '@/lib/categories';
 import { parseLinkHeader } from '@/lib/client/api';
-import { DEFAULT_POSTED_WITHIN, SPAN_OPTIONS, formatSpan, offsetDate } from '@/lib/postedSpan';
+import { useQueryState } from '@/lib/client/urlState';
+import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, SPAN_OPTIONS, formatSpan, offsetDate, spanFromParam, spanToParam } from '@/lib/postedSpan';
 import { removeTerm, toggleTerm } from '@/lib/searchTerms';
 import { pinPath } from '@/lib/seo';
 import type { PinJson } from '@/lib/types';
@@ -22,9 +23,6 @@ const DEFAULT_CENTER: [number, number] = [39.8283, -98.5795];
 const DEFAULT_ZOOM = 4;
 // A year either side of now: every pin ever posted on one map does not scale.
 const DEFAULT_SPAN = '1y';
-// A place stays relevant for longer than a posting window, so wider spans than
-// the timeline's. '0d' is "nothing on that side".
-const MAP_SPAN_OPTIONS = ['0d', '1d', '1w', '1mo', '1y', '3y', '5y'];
 
 const PIN_SVG =
   '<svg viewBox="0 0 24 36" xmlns="http://www.w3.org/2000/svg" width="24" height="36"><path fill="currentColor" stroke="rgba(0,0,0,.35)" d="M12 0C5.373 0 0 5.373 0 12c0 9 12 24 12 24s12-15 12-24C24 5.373 18.627 0 12 0z"/><circle cx="12" cy="12" r="5" fill="#fff"/></svg>';
@@ -76,7 +74,8 @@ function popupContent(pin: PinJson) {
   content.innerHTML =
     `<div class="px-2.5 pt-1.5 pb-2"><a href="${pinPath(pin)}" class="line-clamp-2 font-semibold">${escapeHtml(pin.title)}</a>` +
     `${pin.address ? `<div class="truncate text-subtle">${escapeHtml(pin.address)}</div>` : ''}</div>`;
-  const medium = pin.media?.[0];
+  // The video's still when there is one, as the pin's media frame shows it first.
+  const medium = pin.media?.find((m) => String(m.type) === '3') ?? pin.media?.[0];
   const original = medium && String(medium.type) === '1' ? medium.originalUrl : undefined;
   const sources = [blobUrl(medium?.thumbName), original].filter((src): src is string => !!src);
   if (!sources.length) return content;
@@ -137,9 +136,14 @@ export default function PinsMap() {
   const focusedRef = useRef<number | undefined>(undefined);
   // The focused pin, once plotted, for the back button's link.
   const [focusPin, setFocusPin] = useState<PinJson | null>(null);
-  const [past, setPast] = useState<string | null>(DEFAULT_SPAN);
-  const [future, setFuture] = useState<string | null>(DEFAULT_SPAN);
-  const [postedWithin, setPostedWithin] = useState<string | null>(DEFAULT_POSTED_WITHIN);
+  const [past, setPast] = useState(() => spanFromParam(params.get('past'), DEFAULT_SPAN));
+  const [future, setFuture] = useState(() => spanFromParam(params.get('future'), DEFAULT_SPAN));
+  const [postedWithin, setPostedWithin] = useState(() => spanFromParam(params.get('posted'), DEFAULT_POSTED_WITHIN));
+  useQueryState({
+    past: spanToParam(past, DEFAULT_SPAN),
+    future: spanToParam(future, DEFAULT_SPAN),
+    posted: spanToParam(postedWithin, DEFAULT_POSTED_WITHIN),
+  });
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   const [count, setCount] = useState(0);
   // Markers per category in the time window, for the category pills.
@@ -366,22 +370,22 @@ export default function PinsMap() {
         </a>
       ) : null}
       <div className="absolute top-3 right-3 z-[1000] flex flex-col gap-2">
-        <TimeRangeSlider
-          steps={MAP_SPAN_OPTIONS}
-          past={past}
-          future={future}
-          onChange={(value) => {
-            setPast(value.past);
-            setFuture(value.future);
-          }}
-        />
-        <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={(value) => setPostedWithin(value.past)} />
         <CategoryFilter
           selected={categories}
           counts={categoryCounts}
           onToggle={(category) => go((q) => toggleTerm(q, 'category', category))}
           onClear={() => go((q) => categories.reduce((rest, category) => removeTerm(rest, 'category', category), q))}
           className="w-64"
+        />
+        <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={(value) => setPostedWithin(value.past)} />
+        <TimeRangeSlider
+          steps={EVENT_SPAN_OPTIONS}
+          past={past}
+          future={future}
+          onChange={(value) => {
+            setPast(value.past);
+            setFuture(value.future);
+          }}
         />
       </div>
       {status === 'loading' ? (

@@ -5,9 +5,10 @@ import { parseLinkHeader } from '@/lib/client/api';
 import { useNow } from '@/lib/client/now';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
+import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { dayKeyIn } from '@/lib/format';
-import { formatSpan, SPAN_OPTIONS, spanLabel } from '@/lib/postedSpan';
+import { formatSpan, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSpan';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { buildBags, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { CardPin, DateTimeJson, TimelinePage } from '@/lib/types';
@@ -48,6 +49,7 @@ export function Timeline({
   initialLinks,
   serverTimeZone,
   initialPostedWithin,
+  defaultPostedWithin,
   defaultSpan,
   initialSpecialtyDays,
   serverNow,
@@ -58,6 +60,8 @@ export function Timeline({
   initialLinks: Links;
   serverTimeZone: string;
   initialPostedWithin: string | null;
+  // The viewer's saved preference (or the site default): left out of the URL.
+  defaultPostedWithin: string | null;
   defaultSpan: string;
   initialSpecialtyDays: Record<string, string[]>;
   // When the server rendered, so "today" matches during hydration.
@@ -70,6 +74,7 @@ export function Timeline({
   const [dateTimes, setDateTimes] = useState(initialDateTimes);
   const [links, setLinks] = useState(initialLinks);
   const [postedWithin, setPostedWithin] = useState(initialPostedWithin);
+  useQueryState({ posted: spanToParam(postedWithin, defaultPostedWithin) });
   const [status, setStatus] = useState<'ready' | 'loading' | 'error'>('ready');
   const [specialtyDays, setSpecialtyDays] = useState(initialSpecialtyDays);
   // Ticks each minute, so "today" rolls over at midnight.
@@ -236,6 +241,7 @@ export function Timeline({
   return (
     <div className="px-[max(0.75rem,env(safe-area-inset-left))] pb-24 lg:px-4 xl:pr-[288px]">
       <FloatingControls summary={`Posted within ${spanLabel(postedWithin)}`} onToday={scrollToToday}>
+        <SearchCategoryFilter postedWithin={postedWithin} />
         <TimeRangeSlider
           steps={SPAN_OPTIONS}
           past={postedWithin}
@@ -243,7 +249,6 @@ export function Timeline({
           pastLabelSpan={defaultSpan}
           onChange={({ past }) => void changePostedWithin(past)}
         />
-        <SearchCategoryFilter postedWithin={postedWithin} />
       </FloatingControls>
 
       <div ref={topRef} aria-hidden className="h-px" />

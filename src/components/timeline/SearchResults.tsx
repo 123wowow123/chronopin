@@ -2,13 +2,15 @@
 
 import { useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { FollowButton } from '@/components/pin/FollowButton';
+import { CARD_GRID } from '@/components/pin/cardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
+import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { dayKeyIn } from '@/lib/format';
-import { DEFAULT_POSTED_WITHIN, formatSpan, offsetDate, SPAN_OPTIONS, spanLabel } from '@/lib/postedSpan';
-import { buildBags, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
+import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, formatSpan, offsetDate, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSpan';
+import { buildBags, pinTense, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { CardPin } from '@/lib/types';
 import { SearchCategoryFilter } from './CategoryFilter';
 import { FloatingControls } from './FloatingControls';
@@ -49,6 +51,7 @@ export function SearchResults({
   error,
   query = '',
   onlyWatched = false,
+  initialView = {},
 }: {
   pins: CardPin[];
   serverTimeZone: string;
@@ -58,12 +61,25 @@ export function SearchResults({
   error?: string;
   query?: string;
   onlyWatched?: boolean;
+  // The sort and filters as the URL had them.
+  initialView?: { sort?: SortBy; postedWithin?: string | null; past?: string | null; future?: string | null };
 }) {
   const timeZone = useTimeZone(serverTimeZone);
-  const [postedWithin, setPostedWithin] = useState<string | null>(DEFAULT_POSTED_WITHIN);
-  const hasRelevance = pins.some((p) => p.searchScore != null);
-  const [sortBy, setSortBy] = useState<SortBy>('date');
-  const [relevanceShown, setRelevanceShown] = useState(false);
+  const [postedWithin, setPostedWithin] = useState<string | null>(initialView.postedWithin ?? DEFAULT_POSTED_WITHIN);
+  // Any search can sort: a filter-only one (category:, user:) has no scores, so
+  // by relevance it keeps date order but still gets the grid and start filter.
+  const canSort = !!query.trim() || pins.some((p) => p.searchScore != null);
+  const [sortBy, setSortBy] = useState<SortBy>(canSort && initialView.sort === 'relevance' ? 'relevance' : 'date');
+  const [relevanceShown, setRelevanceShown] = useState(sortBy === 'relevance');
+  // Relevance loses the timeline's sense of when, so it filters by start instead.
+  const [startSpan, setStartSpan] = useState<{ past: string | null; future: string | null }>({ past: initialView.past ?? null, future: initialView.future ?? null });
+
+  useQueryState({
+    sort: sortBy === 'relevance' ? 'relevance' : null,
+    posted: spanToParam(postedWithin, DEFAULT_POSTED_WITHIN),
+    past: spanToParam(startSpan.past, null),
+    future: spanToParam(startSpan.future, null),
+  });
 
   // Results are a complete set, so "posted within" filters them in place.
   const visible = useMemo(() => {
@@ -77,7 +93,18 @@ export function SearchResults({
   const marker = resolveTodayMarker(bags, todayKey);
   // By relevance, pins drop the timeline's day grouping and rail entirely:
   // just a flat ranked list.
-  const ranked = useMemo(() => [...visible].sort((a, b) => (b.searchScore ?? 0) - (a.searchScore ?? 0)), [visible]);
+  const ranked = useMemo(() => {
+    const now = new Date(serverNow);
+    const from = startSpan.past ? offsetDate(now, startSpan.past, -1) : null;
+    const to = startSpan.future ? offsetDate(now, startSpan.future, 1) : null;
+    return visible
+      .filter((p) => {
+        const start = new Date(p.utcStartDateTime);
+        return !(from && start < from) && !(to && start > to);
+      })
+      .sort((a, b) => (b.searchScore ?? 0) - (a.searchScore ?? 0));
+  }, [visible, startSpan, serverNow]);
+  const shownCount = sortBy === 'relevance' ? ranked.length : visible.length;
 
   const scrollToToday = () => {
     const id = todayScrollId(bags, marker);
@@ -116,13 +143,14 @@ export function SearchResults({
         summary={searchedUser ? searchedUser.userName : `Posted within ${spanLabel(postedWithin)}`}
         onToday={sortBy === 'date' && bags.length ? scrollToToday : undefined}
       >
-        <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={({ past }) => setPostedWithin(past)} />
+        {canSort ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : null}
         <SearchCategoryFilter
           query={query}
           onlyWatched={onlyWatched}
           createdSince={postedWithin ? offsetDate(new Date(serverNow), postedWithin, -1)?.toISOString() : null}
         />
-        {hasRelevance ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : null}
+        <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={({ past }) => setPostedWithin(past)} />
+        {sortBy === 'relevance' ? <TimeRangeSlider steps={EVENT_SPAN_OPTIONS} past={startSpan.past} future={startSpan.future} onChange={setStartSpan} /> : null}
         {searchedUser ? (
           <div className="floating flex flex-col gap-3 px-3.5 py-3">
             <div className="flex items-center gap-2 font-semibold text-ink">
@@ -136,16 +164,18 @@ export function SearchResults({
 
       {/* Narrower, the floating controls fold away; sorting is too important to
           hide with them, so it gets a bar of its own pinned under the navbar. */}
-      {hasRelevance ? (
+      {canSort ? (
         <div data-sticky-sort className="sticky top-[52px] z-20 -mx-3 flex justify-center bg-header/85 px-3 py-2 shadow-[0_1px_0_var(--color-line)] backdrop-blur-md lg:-mx-4 xl:hidden">
           <SortToggle value={sortBy} onChange={changeSort} className="w-full max-w-sm rounded-xl bg-field ring-1 ring-line ring-inset" />
         </div>
       ) : null}
 
       {error ? <p className="mt-16 text-center text-lg text-subtle">Search is unavailable right now. Please try again in a bit.</p> : null}
-      {!error && !visible.length ? (
+      {!error && !shownCount ? (
         <p className="mt-16 text-center text-lg text-subtle">
-          {postedWithin && pins.length
+          {sortBy === 'relevance' && visible.length
+            ? 'No results start in this range.'
+            : postedWithin && pins.length
             ? `No results posted in the last ${phrase}.`
             : onlyWatched
               ? query.trim()
@@ -157,10 +187,10 @@ export function SearchResults({
 
       {/* Kept mounted once shown: a remount resizes cards (embeds, media fallbacks) after the scroll is restored. */}
       {relevanceShown ? (
-        <ul hidden={sortBy !== 'relevance'} className="mt-6 grid grid-cols-[repeat(auto-fill,minmax(min(100%,22rem),1fr))] items-start gap-2.5">
+        <ul hidden={sortBy !== 'relevance'} className={`mt-6 ${CARD_GRID}`}>
           {ranked.map((pin, i) => (
             <li key={pin.id} id={`rank-${pin.id}`}>
-              <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={i === 0} />
+              <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={i === 0} tense={pinTense(pin, serverNow, todayKey)} />
             </li>
           ))}
         </ul>

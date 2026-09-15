@@ -33,21 +33,28 @@ function accountGroups(isAdmin: boolean): MenuItem[][] {
 }
 
 // Timeline or Map, with the current one highlighted, so it reads as a choice
-// of view rather than two unrelated links. Switching keeps the search: a
-// search's results show on the map, and the map's search opens as results.
+// of view rather than two unrelated links. Switching keeps the search and its
+// time filters: a search's results show on the map, and the map's search opens
+// as results.
 function ViewSwitch({ pathname, className = '' }: { pathname: string; className?: string }) {
   const params = useSearchParams();
-  const search = new URLSearchParams();
-  if (pathname === '/search' || pathname.startsWith('/map')) {
-    for (const key of ['q', 'f']) {
-      const value = params.get(key);
-      if (value) search.set(key, value);
+  const carry = (keys: string[]) => {
+    const search = new URLSearchParams();
+    if (pathname === '/' || pathname === '/search' || pathname.startsWith('/map')) {
+      for (const key of keys) {
+        const value = params.get(key);
+        if (value) search.set(key, value);
+      }
     }
-  }
-  const carried = search.size ? `?${search.toString()}` : '';
+    return search;
+  };
+  const toMap = carry(['q', 'f', 'posted', 'past', 'future']);
+  const searching = !!(params.get('q') || params.get('f'));
+  const toTimeline = carry(searching ? ['q', 'f', 'sort', 'posted', 'past', 'future'] : ['posted']);
+  const query = (search: URLSearchParams) => (search.size ? `?${search.toString()}` : '');
   const views = [
-    { href: carried ? `/search${carried}` : '/', label: 'Timeline', icon: 'timeline', current: pathname === '/' || pathname === '/search' },
-    { href: `/map${carried}`, label: 'Map', icon: 'map', current: pathname.startsWith('/map') },
+    { href: `${searching ? '/search' : '/'}${query(toTimeline)}`, label: 'Timeline', icon: 'timeline', current: pathname === '/' || pathname === '/search' },
+    { href: `/map${query(toMap)}`, label: 'Map', icon: 'map', current: pathname.startsWith('/map') },
   ] as const;
   return (
     <div className={`flex rounded-full bg-field p-0.5 ring-1 ring-line ring-inset ${className}`}>

@@ -6,6 +6,7 @@ export const CATEGORIES = [
   'Software',
   'Computing & Semiconductors',
   'Gaming & Entertainment',
+  'Anime',
   'Movies',
   'TV Series',
   'Music & Audio',

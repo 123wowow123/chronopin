@@ -10,6 +10,7 @@ import { useSession } from '@/lib/client/session';
 import { pinPath } from '@/lib/seo';
 import type { CardPin } from '@/lib/types';
 import { pinEvidence } from '@/lib/referenceConfidence';
+import type { PinTense } from '@/lib/timeline';
 import { CitedText } from './CitedText';
 import { DateConfidence } from './DateConfidence';
 import { PinConfidence } from './PinConfidence';
@@ -20,11 +21,18 @@ import { WeatherIcon } from './WeatherIcon';
 
 const CARD_SIZES = '(max-width: 640px) 100vw, 448px';
 
+// A faint wash and border in the map's past/future colours; ongoing (and untensed) pins stay plain.
+const TENSE_CLASS: Record<PinTense, string> = {
+  past: 'border-past/60 hover:border-past [--card-bg:color-mix(in_oklab,var(--color-past)_12%,var(--color-panel))]',
+  future: 'border-future/60 hover:border-future [--card-bg:color-mix(in_oklab,var(--color-future)_12%,var(--color-panel))]',
+  ongoing: 'hover:border-raised-2',
+};
+
 // A pin on the timeline or in search results.
-export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serverTimeZone: string; priority?: boolean }) {
+export function PinCard({ pin, serverTimeZone, priority, tense }: { pin: CardPin; serverTimeZone: string; priority?: boolean; tense?: PinTense }) {
   const { isAdmin } = useSession();
   const href = pinPath(pin);
-  const medium = pin.media?.[0];
+  const media = pin.media ?? [];
   const hasPlace = pin.latitude != null && pin.longitude != null;
 
   // Cards are clipped at 600px; "show more" appears only when that cut text off.
@@ -60,7 +68,10 @@ export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serve
     ) : null;
 
   return (
-    <article className="surface relative overflow-hidden pt-2.5 pb-1.5 transition-[border-color,box-shadow] hover:border-raised-2 hover:shadow-xl hover:shadow-shade/30">
+    <article
+      data-tense={tense}
+      className={`surface relative overflow-hidden bg-[var(--card-bg,var(--color-panel))] pt-2.5 pb-1.5 transition-[border-color,filter] hover:brightness-110 ${TENSE_CLASS[tense ?? 'ongoing']}`}
+    >
       <div ref={contentRef} className="relative max-h-[600px] overflow-hidden">
         <div className="mx-3 flex items-center justify-between text-[11px] text-subtle [&_a]:relative [&_a]:after:absolute [&_a]:after:-inset-y-2 [&_a]:after:inset-x-0 [&_a]:after:content-['']">
           {/* A dot before every item but the first, kept on the item's line when the row wraps. */}
@@ -103,9 +114,9 @@ export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serve
           </Link>
         </h2>
 
-        {medium ? (
+        {media.length ? (
           <PinMediaFrame
-            key={medium.originalUrl ?? medium.thumbName}
+            key={media.map((m) => m.originalUrl ?? m.thumbName).join(' ')}
             className="relative mb-3 bg-black"
             overlay={
               <>
@@ -114,7 +125,7 @@ export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serve
               </>
             }
             fallback={<div className="mx-3">{placeRow}</div>}
-            medium={medium}
+            media={media}
             title={pin.title}
             href={href}
             priority={priority}
@@ -123,7 +134,7 @@ export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serve
         ) : null}
 
         <div className="mx-3">
-          {!medium ? placeRow : null}
+          {!media.length ? placeRow : null}
           {pin.utcStartDateTime ? (
             <div className="mb-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
               <StartTime pin={pin} serverTimeZone={serverTimeZone} />
@@ -146,7 +157,7 @@ export function PinCard({ pin, serverTimeZone, priority }: { pin: CardPin; serve
         {overflowing ? (
           <Link
             href={href}
-            className="absolute right-0 bottom-0 left-0 bg-panel px-3 pt-0.5 text-right text-sm font-medium before:absolute before:-top-8 before:left-0 before:h-8 before:w-full before:bg-gradient-to-b before:from-transparent before:to-panel before:content-['']"
+            className="absolute right-0 bottom-0 left-0 bg-[var(--card-bg,var(--color-panel))] px-3 pt-0.5 text-right text-sm font-medium before:absolute before:-top-8 before:left-0 before:h-8 before:w-full before:bg-gradient-to-b before:from-transparent before:to-[var(--card-bg,var(--color-panel))] before:content-['']"
           >
             show more
           </Link>

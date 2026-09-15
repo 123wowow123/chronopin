@@ -7,7 +7,7 @@ import { blobUrl } from '@/lib/appConfig';
 import { safeEmbedHtml } from '@/lib/sanitize';
 import type { MediumJson } from '@/lib/types';
 
-// A pin's first medium: its image thumbnail (falling back to the original
+// One of a pin's media: its image thumbnail (falling back to the original
 // when the thumb is missing), a tweet, or a YouTube player.
 export function PinMedia({
   medium,
@@ -133,42 +133,105 @@ function ImageMedium({
   );
 }
 
-// A pin's medium with labels (place, company) over it. Only images take the
-// labels: a video or tweet draws its own title and badges where they would
-// go. When the medium turns out to have nothing to show, the labels would sit
-// over whatever follows, so the fallback (the labels as plain text) renders
-// instead.
+const MEDIUM_LABEL: Record<string, string> = { '1': 'Image', '2': 'Tweet', '3': 'Video' };
+
+// Videos first, then the rest in the order the pin lists them (sort is stable).
+function videosFirst(media: MediumJson[]): MediumJson[] {
+  return [...media].sort((a, b) => Number(String(b.type) === '3') - Number(String(a.type) === '3'));
+}
+
+// A pin's media with labels (place, company) over them, and dots to switch
+// between them when there is more than one. A video shows first. Only images
+// take the labels: a video or tweet draws its own title and badges where they
+// would go, so when any medium is not an image the labels render as plain text
+// (the fallback) above instead - for every slide, so switching never adds or
+// removes that row. The frame takes the shown medium's height. Media with
+// nothing to show drop out; when none are left, the fallback renders alone.
 export function PinMediaFrame({
   className,
   overlay,
   fallback,
-  ...media
-}: Omit<Parameters<typeof PinMedia>[0], 'onMissing'> & {
+  media,
+  priority,
+  ...shared
+}: Omit<Parameters<typeof PinMedia>[0], 'onMissing' | 'medium'> & {
+  media: MediumJson[];
   className: string;
   overlay: React.ReactNode;
   fallback: React.ReactNode;
 }) {
-  const [missing, setMissing] = useState(false);
-  const onMissing = useCallback(() => setMissing(true), []);
-  if (missing) {
+  const [missing, setMissing] = useState<ReadonlySet<string>>(() => new Set());
+  const markMissing = useCallback((key: string) => setMissing((prev) => (prev.has(key) ? prev : new Set(prev).add(key))), []);
+  const [activeKey, setActiveKey] = useState<string>();
+
+  const slides = videosFirst(media)
+    .map((medium, i) => ({ medium, key: String(medium.id ?? medium.originalUrl ?? medium.thumbName ?? i) }))
+    .filter((slide) => !missing.has(slide.key));
+  if (!slides.length) {
     return fallback;
   }
-  if (String(media.medium.type) !== '1') {
-    return (
-      <>
-        {fallback}
-        <div className={className}>
-          <PinMedia {...media} onMissing={onMissing} />
-        </div>
-      </>
-    );
-  }
-  return (
+  const active = slides.find((slide) => slide.key === activeKey) ?? slides[0];
+  const labelled = slides.every((slide) => String(slide.medium.type) === '1');
+
+  const frame = (
     <div className={className}>
-      {overlay}
-      <PinMedia {...media} onMissing={onMissing} />
+      <div className="relative">
+        {labelled ? overlay : null}
+        {slides.map(({ medium, key }, i) => {
+          const shown = key === active.key;
+          // A hidden player is unmounted so it stops; other hidden media stay mounted.
+          if (!shown && String(medium.type) === '3' && medium.html) {
+            return null;
+          }
+          // With dots to reach, a tall image (letterboxed) or tweet (scrolled) is capped
+          // so the dots stay above a card's cut-off.
+          const capped = slides.length > 1 && String(medium.type) !== '3';
+          return (
+            <div key={key} hidden={!shown} className={capped ? 'max-h-[26rem] overflow-y-auto [&_img]:max-h-[26rem] [&_img]:object-contain' : undefined}>
+              <MediaSlide medium={medium} mediumKey={key} priority={priority && i === 0} onMissing={markMissing} {...shared} />
+            </div>
+          );
+        })}
+      </div>
+      {slides.length > 1 ? (
+        <div role="group" aria-label="Media" className="flex justify-center gap-0.5 py-1">
+          {slides.map(({ medium, key }, i) => {
+            const shown = key === active.key;
+            return (
+              <button
+                key={key}
+                type="button"
+                onClick={() => setActiveKey(key)}
+                aria-label={`${MEDIUM_LABEL[String(medium.type)] ?? 'Medium'} ${i + 1} of ${slides.length}`}
+                aria-pressed={shown}
+                className="group p-1.5"
+              >
+                <span className={`block size-2 rounded-full transition-colors ${shown ? 'bg-white' : 'bg-white/40 group-hover:bg-white/70'}`} />
+              </button>
+            );
+          })}
+        </div>
+      ) : null}
     </div>
   );
+  return labelled ? (
+    frame
+  ) : (
+    <>
+      {fallback}
+      {frame}
+    </>
+  );
+}
+
+// One medium in the frame, reporting itself missing by key.
+function MediaSlide({
+  mediumKey,
+  onMissing,
+  ...media
+}: Omit<Parameters<typeof PinMedia>[0], 'onMissing'> & { mediumKey: string; onMissing: (key: string) => void }) {
+  const onSlideMissing = useCallback(() => onMissing(mediumKey), [onMissing, mediumKey]);
+  return <PinMedia {...media} onMissing={onSlideMissing} />;
 }
 
 // Twitter's widgets script turns the stored blockquote into the full tweet.

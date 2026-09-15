@@ -10,6 +10,7 @@ import { DateConfidence } from '@/components/pin/DateConfidence';
 import { DateRanges } from '@/components/pin/DateRanges';
 import { FollowButton } from '@/components/pin/FollowButton';
 import { PinAdminLink } from '@/components/pin/PinAdminLink';
+import { CARD_GRID } from '@/components/pin/cardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { PinConfidence } from '@/components/pin/PinConfidence';
 import { PinReferences } from '@/components/pin/PinReferences';
@@ -22,10 +23,11 @@ import { Icon } from '@/components/ui/Icon';
 import { PostedTime, StartTime } from '@/components/ui/LocalTime';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { pinDateRanges } from '@/lib/dateClaims';
-import { money } from '@/lib/format';
+import { dayKeyIn, money } from '@/lib/format';
 import { pinEvidence } from '@/lib/referenceConfidence';
 import { safeCitedHtml, safeHtml, toCardPins } from '@/lib/sanitize';
 import { pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
+import { pinTense } from '@/lib/timeline';
 import type { PinJson } from '@/lib/types';
 import { pinById, pinComments, relatedPins, threadPins } from '@/server/services/pages';
 import { viewerTimeZone } from '@/server/viewer';
@@ -113,7 +115,7 @@ async function PinBodyForViewer({ pin }: { pin: PinJson }) {
 }
 
 function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
-  const medium = pin.media?.[0];
+  const media = pin.media ?? [];
   const hasCoordinates = pin.latitude != null && pin.longitude != null;
   const company = pin.company ? (
     <a
@@ -169,7 +171,7 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
         ) : null}
       </div>
 
-      {medium ? (
+      {media.length ? (
         <PinMediaFrame
           className="relative mb-4 overflow-hidden rounded-xl border border-line bg-black"
           overlay={
@@ -179,7 +181,7 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
             </>
           }
           fallback={placeRow}
-          medium={medium}
+          media={media}
           title={pin.title}
           href={pin.sourceUrl}
           external
@@ -315,15 +317,17 @@ async function Related({ pin }: { pin: PinJson }) {
   if (!pins.length) {
     return null;
   }
+  const now = new Date();
+  const todayKey = dayKeyIn(now, timeZone);
   return (
     <section aria-labelledby="related-heading" className="mt-16 border-t border-line pt-10">
       <h2 id="related-heading" className="mb-4 text-xl font-semibold tracking-tight">
         More like this
       </h2>
-      <ul className="gap-2.5 sm:columns-2 lg:columns-3 xl:columns-4">
+      <ul className={CARD_GRID}>
         {toCardPins(pins).map((p) => (
-          <li key={p.id} className="mb-2.5 break-inside-avoid">
-            <PinCard pin={p} serverTimeZone={timeZone} />
+          <li key={p.id}>
+            <PinCard pin={p} serverTimeZone={timeZone} tense={pinTense(p, now, todayKey)} />
           </li>
         ))}
       </ul>
