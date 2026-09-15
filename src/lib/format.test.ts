@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { dayKeyIn, formatPosted, formatStart, money, plainText, ratingScore, timespan, weekdayPlanet } from './format';
+import { averageRating, dayKeyIn, formatPosted, formatStart, money, plainText, ratingScore, timespan, weekdayPlanet } from './format';
 import { buildBags, resolveTodayMarker } from './timeline';
 
 describe('money', () => {
@@ -80,5 +80,42 @@ describe('ratingScore', () => {
     expect(ratingScore(82, 100, 'Metacritic')).toBe('82/100');
     expect(ratingScore(8.67, 10, 'MyAnimeList')).toBe('8.67/10');
     expect(ratingScore(8.2, 10, 'IMDb')).toBe('8.2/10');
+  });
+});
+
+describe('averageRating', () => {
+  it('averages the sources on their own scales, as a percentage', () => {
+    // Howl's Moving Castle: AniList 85, MAL 8.67/10, IMDb 8.2/10, RT 88, Metacritic 82.
+    expect(
+      averageRating([
+        { score: 85, scoreMax: 100 },
+        { score: 8.67, scoreMax: 10 },
+        { score: 8.2, scoreMax: 10 },
+        { score: 88, scoreMax: 100 },
+        { score: 82, scoreMax: 100 },
+      ]),
+    ).toBe(85);
+    expect(
+      averageRating([
+        { score: 90, scoreMax: 100 },
+        { score: 9, scoreMax: 10 },
+      ]),
+    ).toBe(90);
+  });
+
+  it('has nothing to average below two sources', () => {
+    expect(averageRating([{ score: 85, scoreMax: 100 }])).toBeUndefined();
+    expect(averageRating([])).toBeUndefined();
+    expect(averageRating(undefined)).toBeUndefined();
+  });
+
+  it('skips a source with no usable scale', () => {
+    expect(
+      averageRating([
+        { score: 80, scoreMax: 100 },
+        { score: 90, scoreMax: 100 },
+        { score: 5, scoreMax: 0 },
+      ]),
+    ).toBe(85);
   });
 });

@@ -6,7 +6,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { Comments } from '@/components/pin/Comments';
 import { CountdownMeter } from '@/components/pin/CountdownMeter';
 import { CitedText } from '@/components/pin/CitedText';
-import { DateConfidence } from '@/components/pin/DateConfidence';
+import { DateConfidence, DateConfidenceReasoning } from '@/components/pin/DateConfidence';
 import { DateRanges } from '@/components/pin/DateRanges';
 import { FollowButton } from '@/components/pin/FollowButton';
 import { PinAdminLink } from '@/components/pin/PinAdminLink';
@@ -206,13 +206,12 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
       {pin.utcStartDateTime ? (
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
           <StartTime pin={pin} serverTimeZone={timeZone} allDaySuffix />
+          <DateConfidence level={pin.dateConfidence} reasoning={pin.dateConfidenceReasoning} />
           <PinConfidence evidence={pinEvidence(pin)} />
-          <DateConfidence
-            level={pin.dateConfidence}
-            reasoning={pin.dateConfidenceReasoning}
-            showReasoning
-            reasoningContent={pin.dateConfidenceReasoning ? <CitedText text={pin.dateConfidenceReasoning} evidence={pinEvidence(pin)} /> : undefined}
-          />
+          {/* Last: the reasoning takes a line of its own below the badges. */}
+          <DateConfidenceReasoning reasoning={pin.dateConfidenceReasoning}>
+            {pin.dateConfidenceReasoning ? <CitedText text={pin.dateConfidenceReasoning} evidence={pinEvidence(pin)} /> : undefined}
+          </DateConfidenceReasoning>
         </div>
       ) : null}
       {pin.utcStartDateTime ? <DateRanges {...dateRanges} /> : null}

@@ -3,9 +3,8 @@ import { RefineLink } from './RefineLink';
 
 // How firmly the source states a pin's date, as a coloured badge. Clicking it
 // searches for pins at the same level (a confidence: term), like a card's
-// category label.
-// reasoningContent, when given, is shown in place of the plain reasoning (the
-// same text with citations).
+// category label. The reasoning only fills in the badge's title here; render
+// DateConfidenceReasoning alongside to show it.
 
 const LEVELS: Record<string, { label: string; title: string; className: string }> = {
   delayed: { label: 'DELAYED', title: 'The date has moved', className: 'bg-red-500/15 text-danger-soft ring-red-500/30' },
@@ -15,32 +14,28 @@ const LEVELS: Record<string, { label: string; title: string; className: string }
   confirmed: { label: 'CONFIRMED', title: 'Stated as firm', className: 'bg-emerald-500/15 text-success-soft ring-emerald-500/30' },
 };
 
-export function DateConfidence({
-  level,
-  reasoning,
-  showReasoning,
-  reasoningContent,
-}: {
-  level?: string | null;
-  reasoning?: string | null;
-  showReasoning?: boolean;
-  reasoningContent?: ReactNode;
-}) {
+export function DateConfidence({ level, reasoning }: { level?: string | null; reasoning?: string | null }) {
   const meta = LEVELS[(level || '').toLowerCase()];
   if (!meta) {
     return null;
   }
   return (
-    <>
-      <RefineLink
-        field="confidence"
-        value={meta.label.toLowerCase()}
-        className={`relative rounded-full px-2 py-px text-[10px] font-semibold tracking-wider not-italic ring-1 ring-inset after:absolute after:inset-x-0 after:-inset-y-1.5 after:content-[''] hover:no-underline hover:ring-current ${meta.className}`}
-        title={`${meta.title}${reasoning ? ` — ${reasoning}` : ''}\nShow all ${meta.label} pins`}
-      >
-        {meta.label}
-      </RefineLink>
-      {showReasoning && reasoning ? <span className="basis-full text-xs leading-relaxed text-subtle italic">{reasoningContent ?? reasoning}</span> : null}
-    </>
+    <RefineLink
+      field="confidence"
+      value={meta.label.toLowerCase()}
+      className={`relative rounded-full px-2 py-px text-[10px] font-semibold tracking-wider not-italic ring-1 ring-inset after:absolute after:inset-x-0 after:-inset-y-1.5 after:content-[''] hover:no-underline hover:ring-current ${meta.className}`}
+      title={`${meta.title}${reasoning ? ` — ${reasoning}` : ''}\nShow all ${meta.label} pins`}
+    >
+      {meta.label}
+    </RefineLink>
   );
+}
+
+// The reasoning on a line of its own under the badges. Split out so a row with
+// more badges after the level can keep them together and end with the reasoning.
+export function DateConfidenceReasoning({ reasoning, children }: { reasoning?: string | null; children?: ReactNode }) {
+  if (!reasoning) {
+    return null;
+  }
+  return <span className="basis-full text-xs leading-relaxed text-subtle italic">{children ?? reasoning}</span>;
 }

@@ -173,6 +173,22 @@ export function ratingScore(score: number, scoreMax: number, source?: string): s
   return `${plain(score)}/${plain(scoreMax)}`;
 }
 
+// One headline number for a pin's ratings: each source rescaled to a
+// percentage of its own maximum, then averaged. The sources measure
+// different things (a critics' aggregate, an audience mean, a site's
+// weighted average), so this is a rough consensus rather than a real
+// statistic - it is shown as an average, never as a source's own score.
+// Undefined below two sources, where an "average" would just restate the
+// single chip beside it.
+export function averageRating(ratings: { score: number; scoreMax: number }[] | undefined): number | undefined {
+  const usable = (ratings ?? []).filter((r) => Number.isFinite(r.score) && Number.isFinite(r.scoreMax) && r.scoreMax > 0);
+  if (usable.length < 2) {
+    return undefined;
+  }
+  const total = usable.reduce((sum, r) => sum + (r.score / r.scoreMax) * 100, 0);
+  return Math.round(total / usable.length);
+}
+
 // Plain text from the HTML a pin description or summary may hold, for meta
 // descriptions and JSON-LD.
 export function plainText(html: string | null | undefined, maxLength?: number): string {

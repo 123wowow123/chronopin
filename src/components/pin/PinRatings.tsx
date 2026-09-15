@@ -1,16 +1,66 @@
-import { ratingScore } from '@/lib/format';
+import { averageRating, ratingScore } from '@/lib/format';
 import type { PinRatingJson } from '@/lib/types';
 import { Icon } from '@/components/ui/Icon';
 
+// The headline number over a pin's ratings, in two sizes: the large pill that
+// leads the pin page's list, and a compact one for a timeline card. Nothing
+// renders below two sources (see averageRating).
+export function RatingAverage({
+  ratings,
+  compact = false,
+  className = '',
+}: {
+  ratings?: PinRatingJson[];
+  compact?: boolean;
+  className?: string;
+}) {
+  const average = averageRating(ratings);
+  if (average == null) {
+    return null;
+  }
+  const label = `Average of ${ratings!.length} ratings: ${average} percent`;
+  if (compact) {
+    return (
+      <span
+        className={`inline-flex items-center gap-1 rounded-full bg-amber-500/10 px-2 py-0.5 text-xs font-semibold text-ink ring-1 ring-amber-500/30 ring-inset tabular-nums ${className}`}
+        title={label}
+      >
+        <Icon name="star" className="size-3 text-amber-500" />
+        {average}%
+      </span>
+    );
+  }
+  return (
+    <span
+      className={`flex items-center gap-2 rounded-full bg-amber-500/10 py-1.5 pr-4 pl-3 ring-1 ring-amber-500/30 ring-inset ${className}`}
+      aria-label={label}
+    >
+      <Icon name="star" className="size-5 text-amber-500" />
+      <span className="text-xl leading-none font-bold text-ink tabular-nums">{average}%</span>
+      <span className="text-[11px] leading-tight text-muted">
+        average
+        <br />
+        {ratings!.length} sources
+      </span>
+    </span>
+  );
+}
+
 // Third-party scores (IMDb, Rotten Tomatoes, MyAnimeList, ...), each linking
-// out to that source's own page when known. Read-only: these come from
-// scraping, not the edit form (see PinRating's schema comment).
+// out to that source's own page when known, led by their average. Read-only:
+// these come from scraping, not the edit form (see PinRating's schema
+// comment).
 export function PinRatings({ ratings, className = '-mt-1 mb-4' }: { ratings?: PinRatingJson[]; className?: string }) {
   if (!ratings?.length) {
     return null;
   }
   return (
-    <ul className={`flex flex-wrap gap-2 ${className}`} aria-label="Ratings">
+    <ul className={`flex flex-wrap items-center gap-2 ${className}`} aria-label="Ratings">
+      {averageRating(ratings) != null ? (
+        <li>
+          <RatingAverage ratings={ratings} />
+        </li>
+      ) : null}
       {ratings.map((rating, index) => {
         const content = (
           <>

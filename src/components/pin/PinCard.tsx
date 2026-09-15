@@ -12,9 +12,10 @@ import type { CardPin } from '@/lib/types';
 import { pinEvidence } from '@/lib/referenceConfidence';
 import type { PinTense } from '@/lib/timeline';
 import { CitedText } from './CitedText';
-import { DateConfidence } from './DateConfidence';
+import { DateConfidence, DateConfidenceReasoning } from './DateConfidence';
 import { PinConfidence } from './PinConfidence';
 import { PinMediaFrame } from './PinMedia';
+import { RatingAverage } from './PinRatings';
 import { RefineLink } from './RefineLink';
 import { WatchButton } from './WatchButton';
 import { WeatherIcon } from './WeatherIcon';
@@ -137,18 +138,25 @@ export function PinCard({ pin, serverTimeZone, priority, tense }: { pin: CardPin
 
         <div className="mx-3">
           {!media.length ? placeRow : null}
-          {pin.utcStartDateTime ? (
+          {pin.utcStartDateTime || pin.ratings?.length ? (
             <div className="mb-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
-              <StartTime pin={pin} serverTimeZone={serverTimeZone} />
-              <WeatherIcon pinId={pin.id} hasPlace={hasPlace} />
-              {/* An unverified pin's reasoning only restates that nothing was found. */}
-              <DateConfidence
-                level={pin.dateConfidence}
-                reasoning={pin.dateConfidenceReasoning}
-                showReasoning={pin.dateConfidence !== 'unknown'}
-                reasoningContent={pin.dateConfidenceReasoning && pin.id ? <CitedText text={pin.dateConfidenceReasoning} evidence={pinEvidence(pin)} hrefBase={href} /> : undefined}
-              />
-              <PinConfidence evidence={pinEvidence(pin)} />
+              {pin.utcStartDateTime ? (
+                <>
+                  <StartTime pin={pin} serverTimeZone={serverTimeZone} />
+                  <WeatherIcon pinId={pin.id} hasPlace={hasPlace} />
+                  <DateConfidence level={pin.dateConfidence} reasoning={pin.dateConfidenceReasoning} />
+                  <PinConfidence evidence={pinEvidence(pin)} />
+                </>
+              ) : null}
+              {/* The review-site average, for a film, series or anime pin. */}
+              <RatingAverage ratings={pin.ratings} compact />
+              {/* Last, on a line of its own. An unverified pin's reasoning only restates
+                  that nothing was found, so it stays hidden. */}
+              {pin.utcStartDateTime && pin.dateConfidence !== 'unknown' ? (
+                <DateConfidenceReasoning reasoning={pin.dateConfidenceReasoning}>
+                  {pin.dateConfidenceReasoning && pin.id ? <CitedText text={pin.dateConfidenceReasoning} evidence={pinEvidence(pin)} hrefBase={href} /> : undefined}
+                </DateConfidenceReasoning>
+              ) : null}
             </div>
           ) : null}
           {pin.safeDescription ? (

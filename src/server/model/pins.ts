@@ -261,6 +261,7 @@ const PAGE_COLUMNS = `
   "Pin"."likeCount",
   "Pin"."rootThread",
   "Pin"."references",
+  "Pin"."ratings",
   "Pin"."viewCount",
   "Pin"."duplicateGroup",
   EXISTS (SELECT 1 FROM "Favorite" AS "f"
