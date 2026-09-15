@@ -150,6 +150,11 @@ export default function PinsMap() {
     L.tileLayer(TILE_URL, { maxZoom: 19, attribution: TILE_ATTRIBUTION }).addTo(map);
     mapRef.current = map;
     layerRef.current = L.layerGroup().addTo(map);
+    // Cache Components keeps a left page mounted and reruns its effects when
+    // it is shown again (back to the pin, "Show on map" again): the new map
+    // has not centered on anything or opened a popup yet.
+    focusedRef.current = undefined;
+    stickyRef.current = null;
     return () => {
       map.remove();
       mapRef.current = null;
