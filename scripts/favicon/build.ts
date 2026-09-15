@@ -1,0 +1,53 @@
+// Renders the header logo into src/app/favicon.ico (16/32/48px PNG frames),
+// which the App Router serves automatically. It renders the LogoMark component
+// itself, so the icon can't drift from the logo; rerun after changing it.
+//
+//   npm run favicon:build
+import { writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { createElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import sharp from 'sharp';
+import { LogoMark } from '../../src/components/ui/LogoMark';
+
+const APP = resolve(import.meta.dirname, '../../src/app');
+const ICO_SIZES = [16, 32, 48];
+
+// The logo's 32-unit box leaves the cluster (x 0.7–30.5, y 4.3–31.5) off
+// centre, so the icon uses a square viewBox around it instead.
+const VIEWBOX = '0 2.3 31.2 31.2';
+const svg = renderToStaticMarkup(createElement(LogoMark)).replace(
+  /^<svg viewBox="[^"]*"/,
+  `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${VIEWBOX}"`,
+);
+if (!svg.includes(VIEWBOX)) throw new Error(`LogoMark no longer starts <svg viewBox=…>: ${svg.slice(0, 80)}`);
+
+// An .ico is a 6-byte header, a 16-byte directory entry per image, then the
+// images; PNG-encoded frames are supported by every browser and Windows Vista+.
+function ico(pngs: { size: number; data: Buffer }[]) {
+  const header = Buffer.alloc(6 + 16 * pngs.length);
+  header.writeUInt16LE(1, 2);
+  header.writeUInt16LE(pngs.length, 4);
+  let offset = header.length;
+  pngs.forEach(({ size, data }, i) => {
+    const entry = 6 + 16 * i;
+    header[entry] = size % 256;
+    header[entry + 1] = size % 256;
+    header.writeUInt16LE(1, entry + 4);
+    header.writeUInt16LE(32, entry + 6);
+    header.writeUInt32LE(data.length, entry + 8);
+    header.writeUInt32LE(offset, entry + 12);
+    offset += data.length;
+  });
+  return Buffer.concat([header, ...pngs.map((p) => p.data)]);
+}
+
+const pngs = await Promise.all(
+  ICO_SIZES.map(async (size) => ({
+    size,
+    data: await sharp(Buffer.from(svg), { density: (72 * size) / 31.2 * 4 }).resize(size, size).png().toBuffer(),
+  })),
+);
+
+writeFileSync(resolve(APP, 'favicon.ico'), ico(pngs));
+console.log(`Wrote favicon.ico (${ICO_SIZES.join('/')}px) to ${APP}`);

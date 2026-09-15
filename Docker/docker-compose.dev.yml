@@ -1,0 +1,36 @@
+# Local services for development: `docker compose -f Docker/docker-compose.dev.yml up -d`
+#
+# The credentials are for a database that only listens on this machine; put
+# DATABASE_URL=postgres://chronopin:chronopin@localhost:5432/chronopin in
+# .env.local.
+services:
+  postgres:
+    build: ./postgis
+    image: chronopin-postgis:17
+    container_name: chronopin-postgres
+    environment:
+      POSTGRES_USER: chronopin
+      POSTGRES_PASSWORD: chronopin
+      POSTGRES_DB: chronopin
+    ports:
+      - "5432:5432"
+    volumes:
+      - chronopin-postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  # Pin search (/api/pins/search). Point the app at it with
+  # FAISS_URL=http://localhost:5050 in .env.local and fill it with
+  # `npm run create:search`.
+  faiss:
+    build: ./faiss
+    image: chronopin-faiss:latest
+    container_name: chronopin-faiss
+    ports:
+      - "5050:5050"
+    volumes:
+      - chronopin-faiss-data:/data
+    restart: unless-stopped
+
+volumes:
+  chronopin-postgres-data:
+  chronopin-faiss-data:

@@ -1,8 +1,16 @@
-server/config/environment/development.js
-server/config/environment/production.backup.js
+# Secrets never enter the image; configuration comes from the environment.
+.env*
 env.*.list
+Docker/env.*.list
+
 node_modules
-client/bower_components
-scripts
+.next
 .tmp
+build
+uploads
+coverage
+test-results
+playwright-report
+.git
 .vscode
+*.tsbuildinfo

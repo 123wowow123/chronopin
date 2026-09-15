@@ -1,0 +1,2082 @@
+[
+  {
+    "id": 1,
+    "name": "Comcast",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Comcast",
+    "websiteUrl": "https://corporate.comcast.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=corporate.comcast.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.217Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.217Z"
+  },
+  {
+    "id": 2,
+    "name": "Amazon",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Amazon_(company)",
+    "websiteUrl": "https://www.amazon.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=amazon.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.254Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.254Z"
+  },
+  {
+    "id": 3,
+    "name": "Microsoft",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Microsoft",
+    "websiteUrl": "https://www.microsoft.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=microsoft.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.260Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.260Z"
+  },
+  {
+    "id": 4,
+    "name": "TerraMaster",
+    "wikiUrl": "https://en.wikipedia.org/wiki/TerraMaster",
+    "websiteUrl": "https://www.terra-master.com/global/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=terra-master.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.266Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.266Z"
+  },
+  {
+    "id": 5,
+    "name": "EDF",
+    "wikiUrl": "https://en.wikipedia.org/wiki/%C3%89lectricit%C3%A9_de_France",
+    "websiteUrl": "https://www.edf.fr/",
+    "logoUrl": "https://www.edf.fr/favicon/default/apple-touch-icon.png",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.255Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.255Z"
+  },
+  {
+    "id": 6,
+    "name": "Universal Pictures",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Universal_Pictures",
+    "websiteUrl": "http://universalpictures.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=universalpictures.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.252Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.252Z"
+  },
+  {
+    "id": 7,
+    "name": "Ford",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ford_Motor_Company",
+    "websiteUrl": "https://www.ford.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=ford.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.253Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.253Z"
+  },
+  {
+    "id": 8,
+    "name": "KEF",
+    "wikiUrl": "https://en.wikipedia.org/wiki/KEF",
+    "websiteUrl": "http://www.kef.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=kef.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.257Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.257Z"
+  },
+  {
+    "id": 9,
+    "name": "Nest",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Google_Nest",
+    "websiteUrl": "https://store.google.com/in/category/connected_home",
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.257Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:21.520Z"
+  },
+  {
+    "id": 10,
+    "name": "Columbia Pictures",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Columbia_Pictures",
+    "websiteUrl": "https://www.sonypictures.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=sonypictures.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.256Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.256Z"
+  },
+  {
+    "id": 11,
+    "name": "BioLite",
+    "wikiUrl": "https://en.wikipedia.org/wiki/BioLite",
+    "websiteUrl": "https://www.bioliteenergy.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=bioliteenergy.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.237Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.237Z"
+  },
+  {
+    "id": 12,
+    "name": "Broadcom",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Broadcom",
+    "websiteUrl": "https://www.broadcom.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=broadcom.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.242Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.242Z"
+  },
+  {
+    "id": 13,
+    "name": "Electronic Arts",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Electronic_Arts",
+    "websiteUrl": "https://www.ea.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=ea.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.245Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.245Z"
+  },
+  {
+    "id": 14,
+    "name": "Eversolo",
+    "wikiUrl": null,
+    "websiteUrl": "https://www.eversolo.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=eversolo.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.248Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.248Z"
+  },
+  {
+    "id": 15,
+    "name": "Cloud Imperium Games",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Cloud_Imperium_Games",
+    "websiteUrl": "https://robertsspaceindustries.com/star-citizen",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=robertsspaceindustries.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.250Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.250Z"
+  },
+  {
+    "id": 16,
+    "name": "Toei Animation",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Toei_Animation",
+    "websiteUrl": "https://toei-anim.co.jp/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=toei-anim.co.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.253Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.253Z"
+  },
+  {
+    "id": 17,
+    "name": "Ketchup Entertainment",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ketchup_Entertainment",
+    "websiteUrl": "https://ketchupentertainment.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=ketchupentertainment.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.259Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.259Z"
+  },
+  {
+    "id": 18,
+    "name": "GLOBALFOUNDRIES",
+    "wikiUrl": "https://en.wikipedia.org/wiki/GlobalFoundries",
+    "websiteUrl": "https://gf.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=gf.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.263Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.263Z"
+  },
+  {
+    "id": 19,
+    "name": "McIntosh",
+    "wikiUrl": "https://en.wikipedia.org/wiki/McIntosh_Laboratory",
+    "websiteUrl": "https://www.mcintoshlabs.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=mcintoshlabs.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.263Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.263Z"
+  },
+  {
+    "id": 20,
+    "name": "2K Games",
+    "wikiUrl": "https://en.wikipedia.org/wiki/2K_(company)",
+    "websiteUrl": "https://www.2k.com/en-US/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=2k.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.266Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.266Z"
+  },
+  {
+    "id": 21,
+    "name": "Naim Audio",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Naim_Audio",
+    "websiteUrl": "https://www.naimaudio.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=naimaudio.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.266Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.266Z"
+  },
+  {
+    "id": 22,
+    "name": "Nintendo",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Nintendo",
+    "websiteUrl": "https://www.nintendo.com/jp/index.html",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=nintendo.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.268Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.268Z"
+  },
+  {
+    "id": 23,
+    "name": "Audi",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Audi",
+    "websiteUrl": "https://www.audi.fr/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=audi.fr&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.268Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.268Z"
+  },
+  {
+    "id": 24,
+    "name": "Philips",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Philips",
+    "websiteUrl": "https://philips.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=philips.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.268Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.268Z"
+  },
+  {
+    "id": 25,
+    "name": "Dotemu",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Dotemu",
+    "websiteUrl": "https://www.dotemu.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=dotemu.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.268Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.268Z"
+  },
+  {
+    "id": 26,
+    "name": "Goldman Sachs",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Goldman_Sachs",
+    "websiteUrl": "https://www.goldmansachs.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=goldmansachs.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.269Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.269Z"
+  },
+  {
+    "id": 27,
+    "name": "Intel",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Intel",
+    "websiteUrl": "https://www.intel.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=intel.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.269Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.269Z"
+  },
+  {
+    "id": 28,
+    "name": "Eli",
+    "wikiUrl": null,
+    "websiteUrl": "https://www.eli.world/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=eli.world&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.269Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.269Z"
+  },
+  {
+    "id": 29,
+    "name": "Kojima Productions",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Kojima_Productions",
+    "websiteUrl": "https://www.kojimaproductions.jp/en",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=kojimaproductions.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.270Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.270Z"
+  },
+  {
+    "id": 30,
+    "name": "Klipsch",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Klipsch_Audio_Technologies",
+    "websiteUrl": "https://www.klipsch.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=klipsch.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.271Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.271Z"
+  },
+  {
+    "id": 31,
+    "name": "Pixar Animation Studios",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Pixar",
+    "websiteUrl": "https://www.pixar.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=pixar.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.271Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.271Z"
+  },
+  {
+    "id": 32,
+    "name": "PepsiCo",
+    "wikiUrl": "https://en.wikipedia.org/wiki/PepsiCo",
+    "websiteUrl": "https://www.pepsico.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=pepsico.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.271Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.271Z"
+  },
+  {
+    "id": 33,
+    "name": "Soundpeats",
+    "wikiUrl": null,
+    "websiteUrl": "https://soundpeats.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=soundpeats.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.271Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.271Z"
+  },
+  {
+    "id": 34,
+    "name": "Razer",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Razer_Inc.",
+    "websiteUrl": "https://www.razer.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=razer.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.272Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.272Z"
+  },
+  {
+    "id": 35,
+    "name": "Yamaha",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Yamaha_Corporation",
+    "websiteUrl": "https://jp.yamaha.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=jp.yamaha.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.272Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.272Z"
+  },
+  {
+    "id": 36,
+    "name": "Einride",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Einride",
+    "websiteUrl": "http://www.einride.tech",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=einride.tech&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.272Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.272Z"
+  },
+  {
+    "id": 37,
+    "name": "Blizzard Entertainment",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Blizzard_Entertainment",
+    "websiteUrl": "https://www.blizzard.com/en-us/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=blizzard.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.272Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.272Z"
+  },
+  {
+    "id": 38,
+    "name": "Asus",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Asus",
+    "websiteUrl": "https://www.asus.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=asus.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.272Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.272Z"
+  },
+  {
+    "id": 39,
+    "name": "Sony",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Sony",
+    "websiteUrl": "https://www.sony.co.in/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=sony.co.in&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.272Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.272Z"
+  },
+  {
+    "id": 40,
+    "name": "Adobe",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Adobe_Inc.",
+    "websiteUrl": "https://www.adobe.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=adobe.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.272Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.272Z"
+  },
+  {
+    "id": 41,
+    "name": "Analogue",
+    "wikiUrl": null,
+    "websiteUrl": "https://www.analogue.co/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=analogue.co&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.272Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.272Z"
+  },
+  {
+    "id": 42,
+    "name": "DJI",
+    "wikiUrl": "https://en.wikipedia.org/wiki/DJI_(company)",
+    "websiteUrl": "https://www.dji.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=dji.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.272Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.272Z"
+  },
+  {
+    "id": 43,
+    "name": "Paramount Pictures",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Paramount_Pictures",
+    "websiteUrl": "https://www.paramountpictures.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=paramountpictures.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.273Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.273Z"
+  },
+  {
+    "id": 44,
+    "name": "Madison Square Garden Entertainment",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Madison_Square_Garden_Entertainment",
+    "websiteUrl": "https://www.msgentertainment.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=msgentertainment.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.273Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.273Z"
+  },
+  {
+    "id": 45,
+    "name": "Micron",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Micron_Technology",
+    "websiteUrl": "https://tw.micron.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=tw.micron.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.273Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.273Z"
+  },
+  {
+    "id": 46,
+    "name": "Google",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Google",
+    "websiteUrl": "https://about.google/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=about.google&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.273Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.273Z"
+  },
+  {
+    "id": 47,
+    "name": "Hivemapper",
+    "wikiUrl": null,
+    "websiteUrl": "https://hivemapper.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=hivemapper.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.273Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.273Z"
+  },
+  {
+    "id": 48,
+    "name": "Warner Bros. Games",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Warner_Bros._Games",
+    "websiteUrl": "https://www.warnerbrosgames.com",
+    "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Warner_Bros._Games_logo_%28December_2023%29.svg/120px-Warner_Bros._Games_logo_%28December_2023%29.svg.png",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.273Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.273Z"
+  },
+  {
+    "id": 49,
+    "name": "Daimler",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Mercedes-Benz_Group",
+    "websiteUrl": "https://group.mercedes-benz.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=group.mercedes-benz.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.273Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.273Z"
+  },
+  {
+    "id": 50,
+    "name": "Honolulu Authority for Rapid Transportation",
+    "wikiUrl": null,
+    "websiteUrl": "https://www.honolulu.gov/rail",
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.274Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:21.520Z"
+  },
+  {
+    "id": 51,
+    "name": "NVIDIA",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Nvidia",
+    "websiteUrl": "https://www.nvidia.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=nvidia.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.274Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.274Z"
+  },
+  {
+    "id": 52,
+    "name": "Creative Technology",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Creative_Technology",
+    "websiteUrl": "http://www.creative.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=creative.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.274Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.274Z"
+  },
+  {
+    "id": 53,
+    "name": "Ufotable",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ufotable",
+    "websiteUrl": "https://www.ufotable.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=ufotable.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.274Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.274Z"
+  },
+  {
+    "id": 54,
+    "name": "Tesla",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Tesla%2C_Inc.",
+    "websiteUrl": "https://www.tesla.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=tesla.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.274Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.274Z"
+  },
+  {
+    "id": 55,
+    "name": "UC San Diego",
+    "wikiUrl": "https://en.wikipedia.org/wiki/University_of_California%2C_San_Diego",
+    "websiteUrl": "https://ucsd.edu",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=ucsd.edu&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.275Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.275Z"
+  },
+  {
+    "id": 56,
+    "name": "Firaxis Games",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Firaxis_Games",
+    "websiteUrl": "https://www.firaxis.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=firaxis.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.275Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.275Z"
+  },
+  {
+    "id": 57,
+    "name": "Rockstar Games",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Rockstar_Games",
+    "websiteUrl": "https://www.rockstargames.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=rockstargames.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.275Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.275Z"
+  },
+  {
+    "id": 58,
+    "name": "TSMC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/TSMC",
+    "websiteUrl": "https://www.tsmc.com/japanese",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=tsmc.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.275Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.275Z"
+  },
+  {
+    "id": 59,
+    "name": "TechCrunch",
+    "wikiUrl": "https://en.wikipedia.org/wiki/TechCrunch",
+    "websiteUrl": "https://techcrunch.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.275Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.275Z"
+  },
+  {
+    "id": 60,
+    "name": "Sloclap",
+    "wikiUrl": null,
+    "websiteUrl": "https://sloclap.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=sloclap.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.275Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.275Z"
+  },
+  {
+    "id": 61,
+    "name": "Roku",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Roku,_Inc.",
+    "websiteUrl": "https://www.roku.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=roku.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.275Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.275Z"
+  },
+  {
+    "id": 62,
+    "name": "Studio Khara",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Khara_(studio)",
+    "websiteUrl": "https://www.khara.co.jp/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=khara.co.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.275Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.275Z"
+  },
+  {
+    "id": 63,
+    "name": "Warner Bros. Pictures",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Warner_Bros._Pictures",
+    "websiteUrl": "https://www.warnerbros.com/company/divisions/motion-pictures#warner-bros-pictures",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=warnerbros.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.275Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.275Z"
+  },
+  {
+    "id": 64,
+    "name": "Monitor Audio",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Monitor_Audio",
+    "websiteUrl": "http://www.monitoraudio.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=monitoraudio.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.275Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.275Z"
+  },
+  {
+    "id": 65,
+    "name": "BenQ",
+    "wikiUrl": "https://en.wikipedia.org/wiki/BenQ",
+    "websiteUrl": "https://benq.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=benq.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.276Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.276Z"
+  },
+  {
+    "id": 66,
+    "name": "Nokia",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Nokia",
+    "websiteUrl": "https://www.nokia.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=nokia.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.276Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.276Z"
+  },
+  {
+    "id": 67,
+    "name": "Goldmund",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Goldmund_(company)",
+    "websiteUrl": "https://www.goldmund.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=goldmund.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.276Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.276Z"
+  },
+  {
+    "id": 68,
+    "name": "NEOM",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Neom",
+    "websiteUrl": "https://www.neom.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=neom.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.276Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.276Z"
+  },
+  {
+    "id": 69,
+    "name": "NASA",
+    "wikiUrl": "https://en.wikipedia.org/wiki/NASA",
+    "websiteUrl": "https://www.nasa.gov/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=nasa.gov&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.276Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.276Z"
+  },
+  {
+    "id": 70,
+    "name": "Roland",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Roland_Corporation",
+    "websiteUrl": "http://www.roland.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=roland.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.276Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.276Z"
+  },
+  {
+    "id": 71,
+    "name": "Ubisoft",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ubisoft",
+    "websiteUrl": "https://www.ubisoft.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=ubisoft.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.276Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.276Z"
+  },
+  {
+    "id": 72,
+    "name": "Marvel Studios",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Marvel_Studios",
+    "websiteUrl": "https://www.marvel.com/movies",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=marvel.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.276Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.276Z"
+  },
+  {
+    "id": 73,
+    "name": "Samsung",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Samsung",
+    "websiteUrl": "https://www.samsung.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=samsung.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.276Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.276Z"
+  },
+  {
+    "id": 74,
+    "name": "Meze Audio",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Meze_Audio",
+    "websiteUrl": "https://www.mezeaudio.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=mezeaudio.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.276Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.276Z"
+  },
+  {
+    "id": 75,
+    "name": "Continental",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Continental_AG",
+    "websiteUrl": "https://continental.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=continental.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.277Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.277Z"
+  },
+  {
+    "id": 76,
+    "name": "Bose",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Bose_Corporation",
+    "websiteUrl": "https://www.bose.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=bose.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.277Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.277Z"
+  },
+  {
+    "id": 77,
+    "name": "Square Enix",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Square_Enix",
+    "websiteUrl": "https://www.jp.square-enix.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=jp.square-enix.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.277Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.277Z"
+  },
+  {
+    "id": 78,
+    "name": "Walt Disney Pictures",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Walt_Disney_Pictures",
+    "websiteUrl": "https://movies.disney.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=movies.disney.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.277Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.277Z"
+  },
+  {
+    "id": 79,
+    "name": "Pro-Ject",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Pro-Ject",
+    "websiteUrl": "https://www.project-audio.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=project-audio.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.277Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.277Z"
+  },
+  {
+    "id": 80,
+    "name": "LG",
+    "wikiUrl": "https://en.wikipedia.org/wiki/LG_Corporation",
+    "websiteUrl": "https://lg.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=lg.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.277Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.277Z"
+  },
+  {
+    "id": 81,
+    "name": "Annapurna Interactive",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Annapurna_Interactive",
+    "websiteUrl": "http://annapurna.pictures/interactive/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=annapurna.pictures&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.277Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.277Z"
+  },
+  {
+    "id": 82,
+    "name": "CERN",
+    "wikiUrl": "https://en.wikipedia.org/wiki/CERN",
+    "websiteUrl": "https://home.cern/fr",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=home.cern&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.277Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.277Z"
+  },
+  {
+    "id": 83,
+    "name": "Bluesound",
+    "wikiUrl": null,
+    "websiteUrl": "https://www.bluesound.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=bluesound.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.277Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.277Z"
+  },
+  {
+    "id": 84,
+    "name": "Sennheiser",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Sennheiser",
+    "websiteUrl": "https://www.sennheiser.com/es-mx",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=sennheiser.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.277Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.277Z"
+  },
+  {
+    "id": 85,
+    "name": "Fosi Audio",
+    "wikiUrl": null,
+    "websiteUrl": "https://fosiaudio.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=fosiaudio.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.277Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.277Z"
+  },
+  {
+    "id": 86,
+    "name": "Fitbit",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Fitbit",
+    "websiteUrl": "https://www.fitbit.com/",
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.278Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:21.520Z"
+  },
+  {
+    "id": 87,
+    "name": "ThyssenKrupp",
+    "wikiUrl": "https://en.wikipedia.org/wiki/ThyssenKrupp",
+    "websiteUrl": "https://www.thyssenkrupp.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=thyssenkrupp.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.278Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.278Z"
+  },
+  {
+    "id": 88,
+    "name": "FromSoftware",
+    "wikiUrl": "https://en.wikipedia.org/wiki/FromSoftware",
+    "websiteUrl": "https://www.fromsoftware.jp/jp/",
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.278Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.278Z"
+  },
+  {
+    "id": 89,
+    "name": "Insomniac Games",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Insomniac_Games",
+    "websiteUrl": "https://insomniac.games",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=insomniac.games&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.278Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.278Z"
+  },
+  {
+    "id": 90,
+    "name": "Thornton Tomasetti",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Thornton_Tomasetti",
+    "websiteUrl": "https://www.thorntontomasetti.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=thorntontomasetti.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.278Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.278Z"
+  },
+  {
+    "id": 91,
+    "name": "Dell",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Dell",
+    "websiteUrl": "https://www.dell.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=dell.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.278Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.278Z"
+  },
+  {
+    "id": 92,
+    "name": "Dali Loudspeakers",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Dali_(company)",
+    "websiteUrl": "https://www.dali-speakers.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=dali-speakers.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.278Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.278Z"
+  },
+  {
+    "id": 93,
+    "name": "Westinghouse",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Westinghouse_Electric_Company",
+    "websiteUrl": "https://www.westinghousenuclear.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=westinghousenuclear.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.278Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.278Z"
+  },
+  {
+    "id": 94,
+    "name": "Astell&Kern",
+    "wikiUrl": "https://en.wikipedia.org/wiki/IRiver",
+    "websiteUrl": "https://www.iriver.co.kr/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=iriver.co.kr&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.278Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.278Z"
+  },
+  {
+    "id": 95,
+    "name": "Larian Studios",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Larian_Studios",
+    "websiteUrl": "https://larian.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=larian.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.278Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.278Z"
+  },
+  {
+    "id": 96,
+    "name": "Ruka Studio",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.278Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.278Z"
+  },
+  {
+    "id": 97,
+    "name": "Amazon MGM Studios",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Amazon_MGM_Studios",
+    "websiteUrl": "https://www.mgm.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=mgm.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.279Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.279Z"
+  },
+  {
+    "id": 98,
+    "name": "Related Companies",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Related_Companies",
+    "websiteUrl": "http://www.related.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=related.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.279Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.279Z"
+  },
+  {
+    "id": 99,
+    "name": "Cineverse",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Cineverse",
+    "websiteUrl": "https://cineverse.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=cineverse.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.279Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.279Z"
+  },
+  {
+    "id": 100,
+    "name": "SolPad",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.279Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.279Z"
+  },
+  {
+    "id": 101,
+    "name": "Roll7",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Roll7",
+    "websiteUrl": "https://www.roll7.co.uk/",
+    "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Roll7_Logo.svg/120px-Roll7_Logo.svg.png",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.279Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.279Z"
+  },
+  {
+    "id": 102,
+    "name": "Insta360",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Insta360",
+    "websiteUrl": "https://www.insta360.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=insta360.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.279Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.279Z"
+  },
+  {
+    "id": 103,
+    "name": "Q Acoustics",
+    "wikiUrl": null,
+    "websiteUrl": "https://www.qacoustics.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=qacoustics.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.279Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.279Z"
+  },
+  {
+    "id": 104,
+    "name": "Lian Li",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Lian_Li",
+    "websiteUrl": "http://www.lian-li.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=lian-li.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.279Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.279Z"
+  },
+  {
+    "id": 105,
+    "name": "Activision",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Activision",
+    "websiteUrl": "https://www.activision.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=activision.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.279Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.279Z"
+  },
+  {
+    "id": 106,
+    "name": "Nothing",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Nothing_Technology",
+    "websiteUrl": "https://nothing.tech/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=nothing.tech&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.279Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.279Z"
+  },
+  {
+    "id": 107,
+    "name": "SteelSeries",
+    "wikiUrl": "https://en.wikipedia.org/wiki/SteelSeries",
+    "websiteUrl": "http://www.steelseries.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=steelseries.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.279Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.279Z"
+  },
+  {
+    "id": 108,
+    "name": "Federal Reserve",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Federal_Reserve",
+    "websiteUrl": "https://www.federalreserve.gov/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=federalreserve.gov&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.280Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.280Z"
+  },
+  {
+    "id": 109,
+    "name": "Audio-Technica",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Audio-Technica",
+    "websiteUrl": "https://www.audio-technica.co.jp/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=audio-technica.co.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.280Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.280Z"
+  },
+  {
+    "id": 110,
+    "name": "Fiio",
+    "wikiUrl": "https://en.wikipedia.org/wiki/FiiO",
+    "websiteUrl": "https://www.fiio.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=fiio.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.280Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.280Z"
+  },
+  {
+    "id": 111,
+    "name": "JBL",
+    "wikiUrl": "https://en.wikipedia.org/wiki/JBL",
+    "websiteUrl": "https://kr.jbl.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=kr.jbl.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.280Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.280Z"
+  },
+  {
+    "id": 112,
+    "name": "Lionsgate",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Lionsgate_Studios",
+    "websiteUrl": "https://www.lionsgate.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=lionsgate.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.280Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.280Z"
+  },
+  {
+    "id": 113,
+    "name": "Sonos",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Sonos",
+    "websiteUrl": "https://www.sonos.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=sonos.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.280Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.280Z"
+  },
+  {
+    "id": 114,
+    "name": "Technics",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Technics_(brand)",
+    "websiteUrl": "https://www.technics.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=technics.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.280Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.280Z"
+  },
+  {
+    "id": 115,
+    "name": "Wellograph",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.280Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.280Z"
+  },
+  {
+    "id": 116,
+    "name": "Esoteric",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.280Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.280Z"
+  },
+  {
+    "id": 117,
+    "name": "Marantz",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Marantz",
+    "websiteUrl": "http://www.marantz.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=marantz.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.280Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.280Z"
+  },
+  {
+    "id": 118,
+    "name": "Kanto Audio",
+    "wikiUrl": null,
+    "websiteUrl": "https://www.kantoaudio.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=kantoaudio.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.280Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.280Z"
+  },
+  {
+    "id": 119,
+    "name": "Buchardt Audio",
+    "wikiUrl": null,
+    "websiteUrl": "https://buchardtaudio.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=buchardtaudio.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.280Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.280Z"
+  },
+  {
+    "id": 120,
+    "name": "AMD",
+    "wikiUrl": "https://en.wikipedia.org/wiki/AMD",
+    "websiteUrl": "https://www.amd.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=amd.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.280Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.280Z"
+  },
+  {
+    "id": 121,
+    "name": "Brightline",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Brightline",
+    "websiteUrl": "https://www.gobrightline.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=gobrightline.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.281Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.281Z"
+  },
+  {
+    "id": 122,
+    "name": "Triangle Hi-Fi",
+    "wikiUrl": null,
+    "websiteUrl": "https://www.trianglehifi.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=trianglehifi.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.281Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.281Z"
+  },
+  {
+    "id": 123,
+    "name": "Playground Games",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Playground_Games",
+    "websiteUrl": "http://www.playground-games.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=playground-games.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.281Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.281Z"
+  },
+  {
+    "id": 124,
+    "name": "Bloober Team",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Bloober_Team",
+    "websiteUrl": "https://www.blooberteam.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=blooberteam.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.281Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.281Z"
+  },
+  {
+    "id": 125,
+    "name": "Apple",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Apple_Inc.",
+    "websiteUrl": "https://www.apple.com/tw",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=apple.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.281Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.281Z"
+  },
+  {
+    "id": 126,
+    "name": "Boeing",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Boeing",
+    "websiteUrl": "https://boeing.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=boeing.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.281Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.281Z"
+  },
+  {
+    "id": 127,
+    "name": "SNCF",
+    "wikiUrl": "https://en.wikipedia.org/wiki/SNCF",
+    "websiteUrl": "https://www.groupe-sncf.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=groupe-sncf.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.281Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.281Z"
+  },
+  {
+    "id": 128,
+    "name": "Striking Distance Studios",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.281Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.281Z"
+  },
+  {
+    "id": 129,
+    "name": "Capcom",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Capcom",
+    "websiteUrl": "https://capcom-germany.de/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=capcom-germany.de&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.281Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.281Z"
+  },
+  {
+    "id": 130,
+    "name": "Qualcomm",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Qualcomm",
+    "websiteUrl": "https://consumerrights.wiki/w/Qualcomm",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=consumerrights.wiki&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.281Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.281Z"
+  },
+  {
+    "id": 131,
+    "name": "SolarGaps",
+    "wikiUrl": null,
+    "websiteUrl": "https://solargaps.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=solargaps.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.281Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.281Z"
+  },
+  {
+    "id": 132,
+    "name": "Volkswagen",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Volkswagen",
+    "websiteUrl": "https://www.vw.com/en.html",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=vw.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.281Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.281Z"
+  },
+  {
+    "id": 133,
+    "name": "Focus Entertainment",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Focus_Entertainment",
+    "websiteUrl": "https://www.focus-entmt.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=focus-entmt.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.281Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.281Z"
+  },
+  {
+    "id": 134,
+    "name": "Twelve South",
+    "wikiUrl": null,
+    "websiteUrl": "https://www.twelvesouth.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=twelvesouth.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.282Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.282Z"
+  },
+  {
+    "id": 135,
+    "name": "Orange Amps",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Orange_Music_Electronic_Company",
+    "websiteUrl": "http://www.orangeamps.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=orangeamps.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.282Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.282Z"
+  },
+  {
+    "id": 136,
+    "name": "Rotel",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Rotel",
+    "websiteUrl": "https://rotel.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=rotel.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.282Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.282Z"
+  },
+  {
+    "id": 137,
+    "name": "SK hynix",
+    "wikiUrl": "https://en.wikipedia.org/wiki/SK_Hynix",
+    "websiteUrl": "https://www.skhynix.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=skhynix.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T03:49:13.282Z",
+    "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
+    "utcUpdatedDateTime": "2026-09-14T03:49:13.282Z"
+  },
+  {
+    "id": 145,
+    "name": "TELT",
+    "wikiUrl": null,
+    "websiteUrl": "https://www.telt.eu/en/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=telt.eu&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T19:14:29.418Z",
+    "utcCreatedDateTime": "2026-09-14T19:14:11.695Z",
+    "utcUpdatedDateTime": "2026-09-14T19:14:29.418Z"
+  },
+  {
+    "id": 146,
+    "name": "Zaha Hadid Architects",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:33:46.182Z",
+    "utcCreatedDateTime": "2026-09-14T19:33:46.180Z",
+    "utcUpdatedDateTime": "2026-09-14T19:33:46.182Z"
+  },
+  {
+    "id": 147,
+    "name": "Dubai Airports",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:33:46.204Z",
+    "utcCreatedDateTime": "2026-09-14T19:33:46.202Z",
+    "utcUpdatedDateTime": "2026-09-14T19:33:46.204Z"
+  },
+  {
+    "id": 148,
+    "name": "MetroLoft",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:33:46.220Z",
+    "utcCreatedDateTime": "2026-09-14T19:33:46.218Z",
+    "utcUpdatedDateTime": "2026-09-14T19:33:46.220Z"
+  },
+  {
+    "id": 149,
+    "name": "Heathrow Airport Limited",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:33:46.260Z",
+    "utcCreatedDateTime": "2026-09-14T19:33:46.259Z",
+    "utcUpdatedDateTime": "2026-09-14T19:33:46.260Z"
+  },
+  {
+    "id": 150,
+    "name": "Brookhaven National Laboratory",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:38:41.178Z",
+    "utcCreatedDateTime": "2026-09-14T19:38:41.176Z",
+    "utcUpdatedDateTime": "2026-09-14T19:38:41.178Z"
+  },
+  {
+    "id": 151,
+    "name": "Rabina",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:38:41.199Z",
+    "utcCreatedDateTime": "2026-09-14T19:38:41.198Z",
+    "utcUpdatedDateTime": "2026-09-14T19:38:41.199Z"
+  },
+  {
+    "id": 152,
+    "name": "Fraport",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:38:41.223Z",
+    "utcCreatedDateTime": "2026-09-14T19:38:41.221Z",
+    "utcUpdatedDateTime": "2026-09-14T19:38:41.223Z"
+  },
+  {
+    "id": 153,
+    "name": "High Speed Rail Authority",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:38:41.239Z",
+    "utcCreatedDateTime": "2026-09-14T19:38:41.238Z",
+    "utcUpdatedDateTime": "2026-09-14T19:38:41.239Z"
+  },
+  {
+    "id": 154,
+    "name": "Muraba",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:42:44.692Z",
+    "utcCreatedDateTime": "2026-09-14T19:42:44.671Z",
+    "utcUpdatedDateTime": "2026-09-14T19:42:44.692Z"
+  },
+  {
+    "id": 155,
+    "name": "Ethiopian Airlines",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:42:44.755Z",
+    "utcCreatedDateTime": "2026-09-14T19:42:44.753Z",
+    "utcUpdatedDateTime": "2026-09-14T19:42:44.755Z"
+  },
+  {
+    "id": 156,
+    "name": "Pinnacle International",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:42:44.776Z",
+    "utcCreatedDateTime": "2026-09-14T19:42:44.774Z",
+    "utcUpdatedDateTime": "2026-09-14T19:42:44.776Z"
+  },
+  {
+    "id": 157,
+    "name": "US Army Corps of Engineers",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:46:11.152Z",
+    "utcCreatedDateTime": "2026-09-14T19:46:11.131Z",
+    "utcUpdatedDateTime": "2026-09-14T19:46:11.152Z"
+  },
+  {
+    "id": 158,
+    "name": "TransLink",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:46:11.212Z",
+    "utcCreatedDateTime": "2026-09-14T19:46:11.210Z",
+    "utcUpdatedDateTime": "2026-09-14T19:46:11.212Z"
+  },
+  {
+    "id": 159,
+    "name": "Société du Canal Seine-Nord Europe",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:46:11.241Z",
+    "utcCreatedDateTime": "2026-09-14T19:46:11.240Z",
+    "utcUpdatedDateTime": "2026-09-14T19:46:11.241Z"
+  },
+  {
+    "id": 160,
+    "name": "Statens Vegvesen",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:46:11.272Z",
+    "utcCreatedDateTime": "2026-09-14T19:46:11.271Z",
+    "utcUpdatedDateTime": "2026-09-14T19:46:11.272Z"
+  },
+  {
+    "id": 161,
+    "name": "Azizi Developments",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:49:21.201Z",
+    "utcCreatedDateTime": "2026-09-14T19:49:21.180Z",
+    "utcUpdatedDateTime": "2026-09-14T19:49:21.201Z"
+  },
+  {
+    "id": 162,
+    "name": "LTA Research",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:49:21.251Z",
+    "utcCreatedDateTime": "2026-09-14T19:49:21.250Z",
+    "utcUpdatedDateTime": "2026-09-14T19:49:21.251Z"
+  },
+  {
+    "id": 163,
+    "name": "Metrolinx",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:49:21.279Z",
+    "utcCreatedDateTime": "2026-09-14T19:49:21.278Z",
+    "utcUpdatedDateTime": "2026-09-14T19:49:21.279Z"
+  },
+  {
+    "id": 164,
+    "name": "Tegel Projekt",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:49:21.295Z",
+    "utcCreatedDateTime": "2026-09-14T19:49:21.294Z",
+    "utcUpdatedDateTime": "2026-09-14T19:49:21.295Z"
+  },
+  {
+    "id": 165,
+    "name": "Dubai Municipality",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:49:21.335Z",
+    "utcCreatedDateTime": "2026-09-14T19:49:21.334Z",
+    "utcUpdatedDateTime": "2026-09-14T19:49:21.335Z"
+  },
+  {
+    "id": 166,
+    "name": "Jeddah Economic Company",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:52:43.232Z",
+    "utcCreatedDateTime": "2026-09-14T19:52:43.211Z",
+    "utcUpdatedDateTime": "2026-09-14T19:52:43.232Z"
+  },
+  {
+    "id": 167,
+    "name": "Virginia Department of Transportation",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:52:43.301Z",
+    "utcCreatedDateTime": "2026-09-14T19:52:43.300Z",
+    "utcUpdatedDateTime": "2026-09-14T19:52:43.301Z"
+  },
+  {
+    "id": 168,
+    "name": "LA28",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T19:52:43.335Z",
+    "utcCreatedDateTime": "2026-09-14T19:52:43.334Z",
+    "utcUpdatedDateTime": "2026-09-14T19:52:43.335Z"
+  },
+  {
+    "id": 169,
+    "name": "Ministry of Water Resources and Irrigation",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ministry_of_Water_Resources_and_Irrigation",
+    "websiteUrl": "https://www.mwri.gov.eg/",
+    "logoUrl": "https://www.mwri.gov.eg/wp-content/uploads/2025/08/b19302a8-829e-45c5-ac43-f488718bd8ee.ico",
+    "utcLogoCheckedDateTime": "2026-09-14T20:05:54.124Z",
+    "utcCreatedDateTime": "2026-09-14T20:05:45.168Z",
+    "utcUpdatedDateTime": "2026-09-14T20:05:54.124Z"
+  },
+  {
+    "id": 170,
+    "name": "Rasuwagadhi Hydropower Company",
+    "wikiUrl": null,
+    "websiteUrl": "https://rghpcl.com.np/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=rghpcl.com.np&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T20:05:45.219Z",
+    "utcCreatedDateTime": "2026-09-14T20:05:45.215Z",
+    "utcUpdatedDateTime": "2026-09-14T20:05:45.219Z"
+  },
+  {
+    "id": 171,
+    "name": "Lesotho Highlands Development Authority",
+    "wikiUrl": null,
+    "websiteUrl": "https://www.lhda.org.ls/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=lhda.org.ls&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-14T20:05:45.232Z",
+    "utcCreatedDateTime": "2026-09-14T20:05:45.231Z",
+    "utcUpdatedDateTime": "2026-09-14T20:05:45.232Z"
+  },
+  {
+    "id": 172,
+    "name": "Ministry of Land, Infrastructure, Transport and Tourism",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ministry_of_Land,_Infrastructure,_Transport_and_Tourism",
+    "websiteUrl": "https://www.mlit.go.jp/",
+    "logoUrl": "https://www.mlit.go.jp/favicon.ico",
+    "utcLogoCheckedDateTime": "2026-09-14T20:05:46.427Z",
+    "utcCreatedDateTime": "2026-09-14T20:05:45.234Z",
+    "utcUpdatedDateTime": "2026-09-14T20:05:46.427Z"
+  },
+  {
+    "id": 177,
+    "name": "Denver Water",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:13:44.128Z",
+    "utcCreatedDateTime": "2026-09-14T20:13:44.126Z",
+    "utcUpdatedDateTime": "2026-09-14T20:13:44.128Z"
+  },
+  {
+    "id": 178,
+    "name": "Eastern & Oriental",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:13:44.157Z",
+    "utcCreatedDateTime": "2026-09-14T20:13:44.155Z",
+    "utcUpdatedDateTime": "2026-09-14T20:13:44.157Z"
+  },
+  {
+    "id": 179,
+    "name": "Tennessee Titans",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:14:18.151Z",
+    "utcCreatedDateTime": "2026-09-14T20:14:18.150Z",
+    "utcUpdatedDateTime": "2026-09-14T20:14:18.151Z"
+  },
+  {
+    "id": 180,
+    "name": "San Miguel Corporation",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:14:18.172Z",
+    "utcCreatedDateTime": "2026-09-14T20:14:18.170Z",
+    "utcUpdatedDateTime": "2026-09-14T20:14:18.172Z"
+  },
+  {
+    "id": 181,
+    "name": "Swiss Federal Roads Office (ASTRA)",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:14:23.927Z",
+    "utcCreatedDateTime": "2026-09-14T20:14:23.925Z",
+    "utcUpdatedDateTime": "2026-09-14T20:14:23.927Z"
+  },
+  {
+    "id": 190,
+    "name": "Buffalo Bills",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:16:25.229Z",
+    "utcCreatedDateTime": "2026-09-14T20:16:25.206Z",
+    "utcUpdatedDateTime": "2026-09-14T20:16:25.229Z"
+  },
+  {
+    "id": 191,
+    "name": "The Church of Jesus Christ of Latter-day Saints",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:16:25.303Z",
+    "utcCreatedDateTime": "2026-09-14T20:16:25.301Z",
+    "utcUpdatedDateTime": "2026-09-14T20:16:25.303Z"
+  },
+  {
+    "id": 192,
+    "name": "EPM",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:16:25.319Z",
+    "utcCreatedDateTime": "2026-09-14T20:16:25.318Z",
+    "utcUpdatedDateTime": "2026-09-14T20:16:25.319Z"
+  },
+  {
+    "id": 193,
+    "name": "The Walt Disney Company",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:16:25.334Z",
+    "utcCreatedDateTime": "2026-09-14T20:16:25.333Z",
+    "utcUpdatedDateTime": "2026-09-14T20:16:25.334Z"
+  },
+  {
+    "id": 332,
+    "name": "BT Group",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:37:58.627Z",
+    "utcCreatedDateTime": "2026-09-14T20:37:58.626Z",
+    "utcUpdatedDateTime": "2026-09-14T20:37:58.627Z"
+  },
+  {
+    "id": 333,
+    "name": "Metropolitan Transportation Authority",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:37:58.657Z",
+    "utcCreatedDateTime": "2026-09-14T20:37:58.655Z",
+    "utcUpdatedDateTime": "2026-09-14T20:37:58.657Z"
+  },
+  {
+    "id": 334,
+    "name": "Texas Department of Transportation",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:37:58.673Z",
+    "utcCreatedDateTime": "2026-09-14T20:37:58.672Z",
+    "utcUpdatedDateTime": "2026-09-14T20:37:58.673Z"
+  },
+  {
+    "id": 335,
+    "name": "Las Vegas Sands",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:38:03.331Z",
+    "utcCreatedDateTime": "2026-09-14T20:38:03.329Z",
+    "utcUpdatedDateTime": "2026-09-14T20:38:03.331Z"
+  },
+  {
+    "id": 336,
+    "name": "Related Midwest",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:40:48.320Z",
+    "utcCreatedDateTime": "2026-09-14T20:40:48.317Z",
+    "utcUpdatedDateTime": "2026-09-14T20:40:48.320Z"
+  },
+  {
+    "id": 337,
+    "name": "Cencosud",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:40:48.361Z",
+    "utcCreatedDateTime": "2026-09-14T20:40:48.359Z",
+    "utcUpdatedDateTime": "2026-09-14T20:40:48.361Z"
+  },
+  {
+    "id": 338,
+    "name": "Macklowe Properties",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:40:48.376Z",
+    "utcCreatedDateTime": "2026-09-14T20:40:48.375Z",
+    "utcUpdatedDateTime": "2026-09-14T20:40:48.376Z"
+  },
+  {
+    "id": 339,
+    "name": "JDS Development Group",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:42:30.987Z",
+    "utcCreatedDateTime": "2026-09-14T20:42:30.984Z",
+    "utcUpdatedDateTime": "2026-09-14T20:42:30.987Z"
+  },
+  {
+    "id": 340,
+    "name": "Orascom Construction",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:43:04.730Z",
+    "utcCreatedDateTime": "2026-09-14T20:43:04.728Z",
+    "utcUpdatedDateTime": "2026-09-14T20:43:04.730Z"
+  },
+  {
+    "id": 341,
+    "name": "Commonwealth Fusion Systems",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:43:04.754Z",
+    "utcCreatedDateTime": "2026-09-14T20:43:04.752Z",
+    "utcUpdatedDateTime": "2026-09-14T20:43:04.754Z"
+  },
+  {
+    "id": 342,
+    "name": "Five Points Development",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T20:43:04.786Z",
+    "utcCreatedDateTime": "2026-09-14T20:43:04.784Z",
+    "utcUpdatedDateTime": "2026-09-14T20:43:04.786Z"
+  },
+  {
+    "id": 343,
+    "name": "Mareterra",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T21:00:07.841Z",
+    "utcCreatedDateTime": "2026-09-14T21:00:07.817Z",
+    "utcUpdatedDateTime": "2026-09-14T21:00:07.841Z"
+  },
+  {
+    "id": 344,
+    "name": "Mori Building",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T21:00:07.893Z",
+    "utcCreatedDateTime": "2026-09-14T21:00:07.892Z",
+    "utcUpdatedDateTime": "2026-09-14T21:00:07.893Z"
+  },
+  {
+    "id": 355,
+    "name": "Constellation Energy",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T21:01:29.025Z",
+    "utcCreatedDateTime": "2026-09-14T21:01:29.019Z",
+    "utcUpdatedDateTime": "2026-09-14T21:01:29.025Z"
+  },
+  {
+    "id": 367,
+    "name": "Fermilab",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T21:02:00.852Z",
+    "utcCreatedDateTime": "2026-09-14T21:02:00.832Z",
+    "utcUpdatedDateTime": "2026-09-14T21:02:00.852Z"
+  },
+  {
+    "id": 372,
+    "name": "IHG Hotels & Resorts",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T21:02:35.196Z",
+    "utcCreatedDateTime": "2026-09-14T21:02:35.175Z",
+    "utcUpdatedDateTime": "2026-09-14T21:02:35.196Z"
+  },
+  {
+    "id": 380,
+    "name": "Citicorp",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:13:24.770Z",
+    "utcCreatedDateTime": "2026-09-14T23:13:24.768Z",
+    "utcUpdatedDateTime": "2026-09-14T23:13:24.770Z"
+  },
+  {
+    "id": 410,
+    "name": "General Company for Ports of Iraq",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:25:03.477Z",
+    "utcCreatedDateTime": "2026-09-14T23:25:03.475Z",
+    "utcUpdatedDateTime": "2026-09-14T23:25:03.477Z"
+  },
+  {
+    "id": 411,
+    "name": "Flughafen Berlin Brandenburg",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:25:03.504Z",
+    "utcCreatedDateTime": "2026-09-14T23:25:03.502Z",
+    "utcUpdatedDateTime": "2026-09-14T23:25:03.504Z"
+  },
+  {
+    "id": 433,
+    "name": "Central Japan Railway",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:27:06.733Z",
+    "utcCreatedDateTime": "2026-09-14T23:27:06.712Z",
+    "utcUpdatedDateTime": "2026-09-14T23:27:06.733Z"
+  },
+  {
+    "id": 435,
+    "name": "Tokyo Metropolitan Government",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:29:02.454Z",
+    "utcCreatedDateTime": "2026-09-14T23:29:02.431Z",
+    "utcUpdatedDateTime": "2026-09-14T23:29:02.454Z"
+  },
+  {
+    "id": 436,
+    "name": "Eiffage",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:29:02.505Z",
+    "utcCreatedDateTime": "2026-09-14T23:29:02.503Z",
+    "utcUpdatedDateTime": "2026-09-14T23:29:02.505Z"
+  },
+  {
+    "id": 438,
+    "name": "Deutsche Bahn",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:29:02.543Z",
+    "utcCreatedDateTime": "2026-09-14T23:29:02.542Z",
+    "utcUpdatedDateTime": "2026-09-14T23:29:02.543Z"
+  },
+  {
+    "id": 439,
+    "name": "City of New York",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:29:02.558Z",
+    "utcCreatedDateTime": "2026-09-14T23:29:02.557Z",
+    "utcUpdatedDateTime": "2026-09-14T23:29:02.558Z"
+  },
+  {
+    "id": 456,
+    "name": "Changi Airport Group",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:31:17.792Z",
+    "utcCreatedDateTime": "2026-09-14T23:31:17.770Z",
+    "utcUpdatedDateTime": "2026-09-14T23:31:17.792Z"
+  },
+  {
+    "id": 457,
+    "name": "Western Sydney Airport",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:31:17.870Z",
+    "utcCreatedDateTime": "2026-09-14T23:31:17.868Z",
+    "utcUpdatedDateTime": "2026-09-14T23:31:17.870Z"
+  },
+  {
+    "id": 458,
+    "name": "European Southern Observatory",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:31:17.899Z",
+    "utcCreatedDateTime": "2026-09-14T23:31:17.898Z",
+    "utcUpdatedDateTime": "2026-09-14T23:31:17.899Z"
+  },
+  {
+    "id": 490,
+    "name": "Overseas Cambodia Investment Corporation",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:33:11.349Z",
+    "utcCreatedDateTime": "2026-09-14T23:33:11.326Z",
+    "utcUpdatedDateTime": "2026-09-14T23:33:11.349Z"
+  },
+  {
+    "id": 491,
+    "name": "Kansai Airports",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:33:11.408Z",
+    "utcCreatedDateTime": "2026-09-14T23:33:11.406Z",
+    "utcUpdatedDateTime": "2026-09-14T23:33:11.408Z"
+  },
+  {
+    "id": 495,
+    "name": "ITER Organization",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:37:43.442Z",
+    "utcCreatedDateTime": "2026-09-14T23:37:43.418Z",
+    "utcUpdatedDateTime": "2026-09-14T23:37:43.442Z"
+  },
+  {
+    "id": 496,
+    "name": "Gazprom",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:37:43.507Z",
+    "utcCreatedDateTime": "2026-09-14T23:37:43.506Z",
+    "utcUpdatedDateTime": "2026-09-14T23:37:43.507Z"
+  },
+  {
+    "id": 497,
+    "name": "Land Transport Authority",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:37:43.529Z",
+    "utcCreatedDateTime": "2026-09-14T23:37:43.528Z",
+    "utcUpdatedDateTime": "2026-09-14T23:37:43.529Z"
+  },
+  {
+    "id": 498,
+    "name": "National Gas",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:37:43.546Z",
+    "utcCreatedDateTime": "2026-09-14T23:37:43.544Z",
+    "utcUpdatedDateTime": "2026-09-14T23:37:43.546Z"
+  },
+  {
+    "id": 499,
+    "name": "PNB Merdeka Ventures",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-14T23:37:43.583Z",
+    "utcCreatedDateTime": "2026-09-14T23:37:43.582Z",
+    "utcUpdatedDateTime": "2026-09-14T23:37:43.583Z"
+  }
+]
