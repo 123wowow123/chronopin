@@ -15,6 +15,24 @@ export function useCategoryFoldOpen() {
   return useContext(CategoryFoldContext);
 }
 
+// How many open folds are holding the page still. More than one only while a
+// pick navigates away: the old page stays mounted, hidden, until the new one
+// is ready, so both release their hold before the page scrolls again.
+let scrollLocks = 0;
+
+// Holds the page still behind an open fold (globals.css reads the attribute).
+function useScrollLock(locked: boolean) {
+  useEffect(() => {
+    if (!locked) return;
+    scrollLocks += 1;
+    document.documentElement.dataset.scrollLock = '';
+    return () => {
+      scrollLocks -= 1;
+      if (!scrollLocks) delete document.documentElement.dataset.scrollLock;
+    };
+  }, [locked]);
+}
+
 // Whether a control sits in the fold behind a summary pill that, below xl,
 // already says what the posted-within slider is set to.
 const ControlsFoldContext = createContext(false);
@@ -87,13 +105,14 @@ export function FloatingControls({
     return () => document.removeEventListener('touchmove', hold);
   }, [open]);
 
+  useScrollLock(!!open);
+
   const toggle = (fold: Exclude<Fold, null>) => setOpen(open === fold ? null : fold);
 
   return (
     <div ref={rootRef}>
-      {/* Dims the cards behind an open fold, which would otherwise blend into
-          them, and (globals.css) stops the page scrolling under it. */}
-      {open ? <div aria-hidden data-scroll-lock onClick={() => setOpen(null)} className="fixed inset-0 z-20 touch-none bg-black/50 xl:hidden" /> : null}
+      {/* Dims the cards behind an open fold, which would otherwise blend into them. */}
+      {open ? <div aria-hidden onClick={() => setOpen(null)} className="fixed inset-0 z-20 touch-none bg-black/50 xl:hidden" /> : null}
       <div className="fixed right-3 bottom-16 left-3 z-30 flex flex-col items-stretch gap-2 lg:left-auto lg:w-64 xl:top-[68px] xl:right-4 xl:bottom-auto">
         {category ? (
           <div id="timeline-category" className={`flex flex-col ${open === 'category' ? '' : 'max-xl:hidden'}`}>

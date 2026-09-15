@@ -111,8 +111,11 @@
     html:has([data-sticky-sort]) {
       --jump-offset: 6.5rem;
     }
-    /* An open floating-controls popup holds the page still behind it. */
-    html:has([data-scroll-lock]) {
+    /* An open floating-controls popup holds the page still behind it. Set by
+       the controls rather than matched on the dimmer, so that the page being
+       navigated away from - which Next keeps mounted and hidden for a moment,
+       dimmer and all - cannot hold the lock on after its fold is shut. */
+    html[data-scroll-lock] {
       overflow: hidden;
     }
   }

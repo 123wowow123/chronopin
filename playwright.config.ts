@@ -13,6 +13,10 @@ export default defineConfig({
     timezoneId: 'America/Los_Angeles',
   },
   projects: [
-    { name: 'desktop', use: { ...devices['Desktop Chrome'], channel: process.env.PW_CHANNEL || 'chrome' } },
+    { name: 'desktop', testIgnore: /phone\.spec\.ts/, use: { ...devices['Desktop Chrome'], channel: process.env.PW_CHANNEL || 'chrome' } },
+    // What only exists on a narrow screen - the controls that fold behind
+    // pills, and the scroll lock behind them - lives in phone.spec.ts, which
+    // the desktop project skips.
+    { name: 'phone', testMatch: /phone\.spec\.ts/, use: { ...devices['Pixel 5'], channel: process.env.PW_CHANNEL || 'chrome' } },
   ],
 });
