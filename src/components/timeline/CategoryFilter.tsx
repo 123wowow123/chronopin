@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useEffect, useId, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
 import { categoryOptions, canonicalCategory } from '@/lib/categories';
@@ -40,11 +40,36 @@ export function CategoryFilter({
 }) {
   // Unique, since Next keeps the previous page's panel mounted (hidden).
   const optionsId = useId();
+  const rootRef = useRef<HTMLDivElement>(null);
   const [open, setOpenState] = useState(() => rememberedOpen);
   const setOpen = (next: boolean) => {
     rememberedOpen = next;
     setOpenState(next);
   };
+  // Clicking (or Escape) anywhere but the panel folds it away, as the fold it
+  // sits in already does narrower. Picks are inside it, so they leave it open.
+  // On the click rather than the press: the controls under the panel rise into
+  // its place as it shuts, and a press would move the one aimed at out from
+  // under the pointer before it were clicked. A target its own handler has
+  // already taken off the page was not a click beside the panel either.
+  useEffect(() => {
+    if (!open) return;
+    const shut = () => {
+      rememberedOpen = false;
+      setOpenState(false);
+    };
+    const close = (event: MouseEvent) => {
+      const target = event.target as Node | null;
+      if (target && document.contains(target) && !rootRef.current?.contains(target)) shut();
+    };
+    const escape = (event: KeyboardEvent) => event.key === 'Escape' && shut();
+    document.addEventListener('click', close);
+    document.addEventListener('keydown', escape);
+    return () => {
+      document.removeEventListener('click', close);
+      document.removeEventListener('keydown', escape);
+    };
+  }, [open]);
   // Narrower, the floating controls' category pill stands in for the header,
   // and the pills may use the height between the navbar and that pill.
   const folded = useCategoryFoldOpen();
@@ -56,7 +81,7 @@ export function CategoryFilter({
   const summary = categorySummary(selected) || 'All';
 
   return (
-    <div className={`floating text-sm ${className}`}>
+    <div ref={rootRef} className={`floating text-sm ${className}`}>
       {/* Clearing the pick is its own button beside the chevron, so the row's
           contents are laid out plainly and the button that opens the panel
           lies under all of them - the whole row still opens it. */}

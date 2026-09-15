@@ -155,6 +155,13 @@ const PATHS: Record<string, React.ReactNode> = {
     </>
   ),
   star: <path d="m12 3 2.7 5.9 6.3.7-4.7 4.4 1.2 6.4L12 17.3 6.5 20.4l1.2-6.4-4.7-4.4 6.3-.7z" />,
+  // Arrows pushing out to both ends: widening a range, not zooming a map.
+  'expand-x': (
+    <>
+      <path d="M6 12h12" />
+      <path d="m9 9-3 3 3 3M15 9l3 3-3 3" />
+    </>
+  ),
 };
 
 export type IconName = keyof typeof PATHS;

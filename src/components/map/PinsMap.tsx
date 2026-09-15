@@ -406,15 +406,16 @@ export default function PinsMap() {
           <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={(value) => setPostedWithin(value.past)} />
         </FloatingControls>
       </div>
-      {/* Narrower, clear of the pills at the bottom. */}
+      {/* Narrower, clear of the pills at the bottom, and a layer under the
+          controls so an open fold covers it rather than the other way round. */}
       {status === 'loading' ? (
-        <p role="status" className="floating absolute bottom-24 left-1/2 z-[1000] -translate-x-1/2 rounded-full px-4 py-2 text-sm text-ink xl:bottom-8">Loading pins…</p>
+        <p role="status" className="floating absolute bottom-24 left-1/2 z-[999] -translate-x-1/2 rounded-full px-4 py-2 text-sm text-ink xl:bottom-8">Loading pins…</p>
       ) : status === 'error' ? (
-        <p role="alert" className="floating absolute bottom-24 left-1/2 z-[1000] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink xl:bottom-8">
+        <p role="alert" className="floating absolute bottom-24 left-1/2 z-[999] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink xl:bottom-8">
           Search is unavailable right now. Please try again in a bit.
         </p>
       ) : count === 0 ? (
-        <p className="floating absolute bottom-24 left-1/2 z-[1000] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink xl:bottom-8">
+        <p className="floating absolute bottom-24 left-1/2 z-[999] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink xl:bottom-8">
           No {watched ? 'watched ' : ''}pins{fetchQuery ? ` matching “${fetchQuery}”` : ''} with a location{hasPast ? ` in the last ${phrase(past)}` : ''}
           {hasPast && hasFuture ? ' or' : ''}
           {hasFuture ? ` in the next ${phrase(future)}` : ''}

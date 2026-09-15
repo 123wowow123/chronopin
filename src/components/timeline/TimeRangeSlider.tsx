@@ -297,6 +297,22 @@ export function TimeRangeSlider({
         </div>
       </div>
 
+      {/* Under the midpoint, opposite the "Now" tick above it: one press throws
+          both sides wide open. */}
+      {!pastOnly ? (
+        <div className="flex justify-center max-lg:mt-2">
+          <button
+            type="button"
+            className={`${tickClass} leading-none`}
+            onClick={() => apply(null, null)}
+            aria-label="Show pins at any time, past and future"
+            title="Show pins at any time, past and future"
+          >
+            <Icon name="expand-x" className="size-4 max-lg:size-5" />
+          </button>
+        </div>
+      ) : null}
+
       <div className={`mt-3 border-t border-line pt-3 max-lg:block ${panelOpen ? '' : 'hidden'}`}>
         {panelRow('past')}
         {!pastOnly ? panelRow('future') : null}
