@@ -1442,12 +1442,12 @@
   {
     "id": 152,
     "name": "Fraport",
-    "wikiUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Fraport",
     "websiteUrl": null,
     "logoUrl": null,
     "utcLogoCheckedDateTime": "2026-09-14T19:38:41.223Z",
     "utcCreatedDateTime": "2026-09-14T19:38:41.221Z",
-    "utcUpdatedDateTime": "2026-09-14T19:38:41.223Z"
+    "utcUpdatedDateTime": "2026-09-15T13:29:55.844Z"
   },
   {
     "id": 153,
@@ -2322,12 +2322,12 @@
   {
     "id": 664,
     "name": "Royal Caribbean International",
-    "wikiUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Royal_Caribbean_International",
     "websiteUrl": null,
     "logoUrl": null,
     "utcLogoCheckedDateTime": "2026-09-15T04:27:04.730Z",
     "utcCreatedDateTime": "2026-09-15T04:27:04.702Z",
-    "utcUpdatedDateTime": "2026-09-15T04:27:04.730Z"
+    "utcUpdatedDateTime": "2026-09-15T13:43:34.041Z"
   },
   {
     "id": 665,
@@ -2998,5 +2998,1555 @@
     "utcLogoCheckedDateTime": "2026-09-15T12:54:52.973Z",
     "utcCreatedDateTime": "2026-09-15T12:54:52.971Z",
     "utcUpdatedDateTime": "2026-09-15T12:54:52.973Z"
+  },
+  {
+    "id": 750,
+    "name": "Madhouse",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Madhouse,_Inc.",
+    "websiteUrl": "http://www.madhouse.co.jp",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=madhouse.co.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:29:38.548Z",
+    "utcCreatedDateTime": "2026-09-15T13:26:48.407Z",
+    "utcUpdatedDateTime": "2026-09-15T13:29:38.548Z"
+  },
+  {
+    "id": 752,
+    "name": "Bones",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Bones_(studio)",
+    "websiteUrl": "http://www.bones.co.jp",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=bones.co.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:29:38.578Z",
+    "utcCreatedDateTime": "2026-09-15T13:27:30.293Z",
+    "utcUpdatedDateTime": "2026-09-15T13:29:38.578Z"
+  },
+  {
+    "id": 753,
+    "name": "White Fox",
+    "wikiUrl": "https://en.wikipedia.org/wiki/White_Fox",
+    "websiteUrl": "http://www.w-fox.co.jp/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=w-fox.co.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:29:38.591Z",
+    "utcCreatedDateTime": "2026-09-15T13:27:30.360Z",
+    "utcUpdatedDateTime": "2026-09-15T13:29:38.591Z"
+  },
+  {
+    "id": 755,
+    "name": "Kitty Film Mitaka Studio",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:29:38.580Z",
+    "utcCreatedDateTime": "2026-09-15T13:27:30.487Z",
+    "utcUpdatedDateTime": "2026-09-15T13:29:38.580Z"
+  },
+  {
+    "id": 756,
+    "name": "Kyoto Animation",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Kyoto_Animation",
+    "websiteUrl": "https://www.kyotoanimation.co.jp/en/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=kyotoanimation.co.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:29:38.586Z",
+    "utcCreatedDateTime": "2026-09-15T13:27:30.540Z",
+    "utcUpdatedDateTime": "2026-09-15T13:29:38.586Z"
+  },
+  {
+    "id": 757,
+    "name": "Sunrise",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Sunrise_(studio)",
+    "websiteUrl": "https://www.sunrise-inc.co.jp",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=sunrise-inc.co.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:29:38.576Z",
+    "utcCreatedDateTime": "2026-09-15T13:27:30.671Z",
+    "utcUpdatedDateTime": "2026-09-15T13:29:38.576Z"
+  },
+  {
+    "id": 759,
+    "name": "MAPPA",
+    "wikiUrl": "https://en.wikipedia.org/wiki/MAPPA",
+    "websiteUrl": "https://www.mappa.co.jp/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=mappa.co.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:29:38.581Z",
+    "utcCreatedDateTime": "2026-09-15T13:27:30.790Z",
+    "utcUpdatedDateTime": "2026-09-15T13:29:38.581Z"
+  },
+  {
+    "id": 761,
+    "name": "Studio Ghibli",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Studio_Ghibli",
+    "websiteUrl": "https://www.ghibli.jp/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=ghibli.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:29:38.585Z",
+    "utcCreatedDateTime": "2026-09-15T13:27:30.885Z",
+    "utcUpdatedDateTime": "2026-09-15T13:29:38.585Z"
+  },
+  {
+    "id": 763,
+    "name": "Gainax",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Gainax",
+    "websiteUrl": "https://www.gainax.co.jp/",
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:29:38.587Z",
+    "utcCreatedDateTime": "2026-09-15T13:27:30.983Z",
+    "utcUpdatedDateTime": "2026-09-15T13:29:38.587Z"
+  },
+  {
+    "id": 764,
+    "name": "Studio Trigger",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Studio_Trigger",
+    "websiteUrl": "http://www.st-trigger.co.jp/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=st-trigger.co.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:29:38.582Z",
+    "utcCreatedDateTime": "2026-09-15T13:27:31.032Z",
+    "utcUpdatedDateTime": "2026-09-15T13:29:38.582Z"
+  },
+  {
+    "id": 766,
+    "name": "CloverWorks",
+    "wikiUrl": "https://en.wikipedia.org/wiki/CloverWorks",
+    "websiteUrl": "http://www.cloverworks.co.jp",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=cloverworks.co.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:29:38.555Z",
+    "utcCreatedDateTime": "2026-09-15T13:27:31.210Z",
+    "utcUpdatedDateTime": "2026-09-15T13:29:38.555Z"
+  },
+  {
+    "id": 768,
+    "name": "Doga Kobo",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Doga_Kobo",
+    "websiteUrl": "http://www.dogakobo.com/",
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:29:38.567Z",
+    "utcCreatedDateTime": "2026-09-15T13:27:31.324Z",
+    "utcUpdatedDateTime": "2026-09-15T13:29:38.567Z"
+  },
+  {
+    "id": 769,
+    "name": "Vattenfall",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Vattenfall",
+    "websiteUrl": "https://www.vattenfall.se/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=vattenfall.se&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:28:33.037Z",
+    "utcCreatedDateTime": "2026-09-15T13:28:31.465Z",
+    "utcUpdatedDateTime": "2026-09-15T13:28:33.037Z"
+  },
+  {
+    "id": 770,
+    "name": "FACC",
+    "wikiUrl": "https://en.wikipedia.org/wiki/FACC_AG",
+    "websiteUrl": "https://www.facc.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=facc.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:28:33.169Z",
+    "utcCreatedDateTime": "2026-09-15T13:28:32.336Z",
+    "utcUpdatedDateTime": "2026-09-15T13:28:33.169Z"
+  },
+  {
+    "id": 771,
+    "name": "Menzi Muck",
+    "wikiUrl": "https://menzimuck.com/en/company/",
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:28:32.778Z",
+    "utcCreatedDateTime": "2026-09-15T13:28:32.762Z",
+    "utcUpdatedDateTime": "2026-09-15T13:28:32.778Z"
+  },
+  {
+    "id": 772,
+    "name": "Gardens by the Bay",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Gardens_by_the_Bay",
+    "websiteUrl": "https://www.gardensbythebay.com.sg/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=gardensbythebay.com.sg&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:28:33.910Z",
+    "utcCreatedDateTime": "2026-09-15T13:28:33.113Z",
+    "utcUpdatedDateTime": "2026-09-15T13:28:33.910Z"
+  },
+  {
+    "id": 773,
+    "name": "East Japan Railway Company",
+    "wikiUrl": "https://en.wikipedia.org/wiki/East_Japan_Railway_Company",
+    "websiteUrl": "https://www.jreast.co.jp/",
+    "logoUrl": "https://www.jreast.co.jp/assets/img/apple-touch-icon.png",
+    "utcLogoCheckedDateTime": "2026-09-15T13:28:34.893Z",
+    "utcCreatedDateTime": "2026-09-15T13:28:33.509Z",
+    "utcUpdatedDateTime": "2026-09-15T13:28:34.893Z"
+  },
+  {
+    "id": 774,
+    "name": "Antonov",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Antonov",
+    "websiteUrl": "https://www.antonov.com/en",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=antonov.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:28:37.538Z",
+    "utcCreatedDateTime": "2026-09-15T13:28:36.199Z",
+    "utcUpdatedDateTime": "2026-09-15T13:28:37.538Z"
+  },
+  {
+    "id": 775,
+    "name": "Caterpillar Inc.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Caterpillar_Inc.",
+    "websiteUrl": "https://www.caterpillar.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=caterpillar.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:28:38.083Z",
+    "utcCreatedDateTime": "2026-09-15T13:28:36.994Z",
+    "utcUpdatedDateTime": "2026-09-15T13:28:38.083Z"
+  },
+  {
+    "id": 776,
+    "name": "Carnival Cruise Line",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Carnival_Cruise_Line",
+    "websiteUrl": "https://www.carnival.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=carnival.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:28:38.249Z",
+    "utcCreatedDateTime": "2026-09-15T13:28:37.478Z",
+    "utcUpdatedDateTime": "2026-09-15T13:28:38.249Z"
+  },
+  {
+    "id": 777,
+    "name": "Interlake Steamship Company",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:28:37.832Z",
+    "utcCreatedDateTime": "2026-09-15T13:28:37.823Z",
+    "utcUpdatedDateTime": "2026-09-15T13:28:37.832Z"
+  },
+  {
+    "id": 778,
+    "name": "Airbus",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Airbus",
+    "websiteUrl": "https://airbus.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=airbus.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:28:39.125Z",
+    "utcCreatedDateTime": "2026-09-15T13:28:38.138Z",
+    "utcUpdatedDateTime": "2026-09-15T13:28:39.125Z"
+  },
+  {
+    "id": 779,
+    "name": "Port of Rotterdam Authority",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Port_of_Rotterdam_Authority",
+    "websiteUrl": "http://www.portofrotterdam.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=portofrotterdam.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:28:39.313Z",
+    "utcCreatedDateTime": "2026-09-15T13:28:38.436Z",
+    "utcUpdatedDateTime": "2026-09-15T13:28:39.313Z"
+  },
+  {
+    "id": 780,
+    "name": "RATP",
+    "wikiUrl": "https://en.wikipedia.org/wiki/RATP_Group",
+    "websiteUrl": "https://www.ratp.fr",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=ratp.fr&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:28:39.424Z",
+    "utcCreatedDateTime": "2026-09-15T13:28:38.808Z",
+    "utcUpdatedDateTime": "2026-09-15T13:28:39.424Z"
+  },
+  {
+    "id": 781,
+    "name": "Airbus Defence and Space",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Airbus_Defence_and_Space",
+    "websiteUrl": "https://www.airbus.com/en/products-services/defence",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=airbus.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:29:55.445Z",
+    "utcCreatedDateTime": "2026-09-15T13:29:54.396Z",
+    "utcUpdatedDateTime": "2026-09-15T13:29:55.445Z"
+  },
+  {
+    "id": 783,
+    "name": "Automobili Lamborghini",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Lamborghini",
+    "websiteUrl": "https://www.lamborghini.com/en-en",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=lamborghini.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:29:57.266Z",
+    "utcCreatedDateTime": "2026-09-15T13:29:56.196Z",
+    "utcUpdatedDateTime": "2026-09-15T13:29:57.266Z"
+  },
+  {
+    "id": 785,
+    "name": "Bell Textron",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Bell_Textron",
+    "websiteUrl": "https://www.bellflight.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=bellflight.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:29:57.956Z",
+    "utcCreatedDateTime": "2026-09-15T13:29:57.180Z",
+    "utcUpdatedDateTime": "2026-09-15T13:29:57.956Z"
+  },
+  {
+    "id": 786,
+    "name": "Porsche",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Porsche",
+    "websiteUrl": "https://www.porsche.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=porsche.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:29:58.284Z",
+    "utcCreatedDateTime": "2026-09-15T13:29:57.570Z",
+    "utcUpdatedDateTime": "2026-09-15T13:29:58.284Z"
+  },
+  {
+    "id": 787,
+    "name": "Chantiers de l'Atlantique",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Chantiers_de_l%27Atlantique",
+    "websiteUrl": "http://chantiers-atlantique.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=chantiers-atlantique.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:30:01.613Z",
+    "utcCreatedDateTime": "2026-09-15T13:30:00.338Z",
+    "utcUpdatedDateTime": "2026-09-15T13:30:01.613Z"
+  },
+  {
+    "id": 788,
+    "name": "Bosch",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Robert_Bosch_GmbH",
+    "websiteUrl": "https://www.bosch.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=bosch.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:30:02.412Z",
+    "utcCreatedDateTime": "2026-09-15T13:30:01.409Z",
+    "utcUpdatedDateTime": "2026-09-15T13:30:02.412Z"
+  },
+  {
+    "id": 789,
+    "name": "Rocky Mountaineer",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Rocky_Mountaineer",
+    "websiteUrl": "https://www.rockymountaineer.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=rockymountaineer.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:30:02.329Z",
+    "utcCreatedDateTime": "2026-09-15T13:30:01.900Z",
+    "utcUpdatedDateTime": "2026-09-15T13:30:02.329Z"
+  },
+  {
+    "id": 790,
+    "name": "Allseas",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Allseas",
+    "websiteUrl": "http://www.allseas.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=allseas.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:30:03.267Z",
+    "utcCreatedDateTime": "2026-09-15T13:30:02.318Z",
+    "utcUpdatedDateTime": "2026-09-15T13:30:03.267Z"
+  },
+  {
+    "id": 791,
+    "name": "Gilmour Space Technologies",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Gilmour_Space_Technologies",
+    "websiteUrl": "https://www.gspace.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=gspace.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:30:03.406Z",
+    "utcCreatedDateTime": "2026-09-15T13:30:02.723Z",
+    "utcUpdatedDateTime": "2026-09-15T13:30:03.406Z"
+  },
+  {
+    "id": 792,
+    "name": "Webuild",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Webuild",
+    "websiteUrl": "https://www.webuildgroup.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=webuildgroup.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:30:53.592Z",
+    "utcCreatedDateTime": "2026-09-15T13:30:52.526Z",
+    "utcUpdatedDateTime": "2026-09-15T13:30:53.592Z"
+  },
+  {
+    "id": 793,
+    "name": "LKAB",
+    "wikiUrl": "https://en.wikipedia.org/wiki/LKAB",
+    "websiteUrl": "http://www.lkab.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=lkab.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:30:54.252Z",
+    "utcCreatedDateTime": "2026-09-15T13:30:53.342Z",
+    "utcUpdatedDateTime": "2026-09-15T13:30:54.252Z"
+  },
+  {
+    "id": 794,
+    "name": "Northern Ocean",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:30:53.820Z",
+    "utcCreatedDateTime": "2026-09-15T13:30:53.809Z",
+    "utcUpdatedDateTime": "2026-09-15T13:30:53.820Z"
+  },
+  {
+    "id": 795,
+    "name": "Norwegian Cruise Line",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Norwegian_Cruise_Line",
+    "websiteUrl": "https://www.ncl.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=ncl.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:30:54.918Z",
+    "utcCreatedDateTime": "2026-09-15T13:30:54.260Z",
+    "utcUpdatedDateTime": "2026-09-15T13:30:54.918Z"
+  },
+  {
+    "id": 796,
+    "name": "Tod's",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Tod%27s",
+    "websiteUrl": "http://www.tods.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=tods.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:30:55.382Z",
+    "utcCreatedDateTime": "2026-09-15T13:30:54.652Z",
+    "utcUpdatedDateTime": "2026-09-15T13:30:55.382Z"
+  },
+  {
+    "id": 797,
+    "name": "Stena Line",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Stena_Line",
+    "websiteUrl": "https://www.stenaline.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=stenaline.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:30:55.732Z",
+    "utcCreatedDateTime": "2026-09-15T13:30:54.975Z",
+    "utcUpdatedDateTime": "2026-09-15T13:30:55.732Z"
+  },
+  {
+    "id": 798,
+    "name": "UPS",
+    "wikiUrl": "https://en.wikipedia.org/wiki/United_Parcel_Service",
+    "websiteUrl": "https://www.ups.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=ups.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:33:28.179Z",
+    "utcCreatedDateTime": "2026-09-15T13:33:26.630Z",
+    "utcUpdatedDateTime": "2026-09-15T13:33:28.179Z"
+  },
+  {
+    "id": 799,
+    "name": "Munich Airport",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Munich_Airport",
+    "websiteUrl": "https://www.munich-airport.de/",
+    "logoUrl": "https://www.munich-airport.de/assets/favicon-d62631d101c792621129d9ac406825b8677ca67996fe020b988effee19d0d636.svg",
+    "utcLogoCheckedDateTime": "2026-09-15T13:33:31.511Z",
+    "utcCreatedDateTime": "2026-09-15T13:33:27.485Z",
+    "utcUpdatedDateTime": "2026-09-15T13:33:31.511Z"
+  },
+  {
+    "id": 800,
+    "name": "Crystal Cruises",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Crystal_Cruises",
+    "websiteUrl": "https://www.crystalcruises.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=crystalcruises.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:33:28.293Z",
+    "utcCreatedDateTime": "2026-09-15T13:33:27.895Z",
+    "utcUpdatedDateTime": "2026-09-15T13:33:28.293Z"
+  },
+  {
+    "id": 801,
+    "name": "R. Barth und Sohn Schaustellerbetriebe",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:33:28.248Z",
+    "utcCreatedDateTime": "2026-09-15T13:33:28.235Z",
+    "utcUpdatedDateTime": "2026-09-15T13:33:28.248Z"
+  },
+  {
+    "id": 802,
+    "name": "International Swimming League",
+    "wikiUrl": "https://en.wikipedia.org/wiki/International_Swimming_League",
+    "websiteUrl": "https://isl.global/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=isl.global&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:33:29.291Z",
+    "utcCreatedDateTime": "2026-09-15T13:33:28.566Z",
+    "utcUpdatedDateTime": "2026-09-15T13:33:29.291Z"
+  },
+  {
+    "id": 803,
+    "name": "Adventure Canada",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:33:29.019Z",
+    "utcCreatedDateTime": "2026-09-15T13:33:29.018Z",
+    "utcUpdatedDateTime": "2026-09-15T13:33:29.019Z"
+  },
+  {
+    "id": 804,
+    "name": "Volvo Trucks",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Volvo_Trucks",
+    "websiteUrl": "https://www.volvotrucks.kr/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=volvotrucks.kr&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:41:04.537Z",
+    "utcCreatedDateTime": "2026-09-15T13:41:03.352Z",
+    "utcUpdatedDateTime": "2026-09-15T13:41:04.537Z"
+  },
+  {
+    "id": 805,
+    "name": "Wallenius Wilhelmsen",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Wallenius_Wilhelmsen",
+    "websiteUrl": "https://www.walleniuswilhelmsen.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=walleniuswilhelmsen.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:42:10.423Z",
+    "utcCreatedDateTime": "2026-09-15T13:42:09.185Z",
+    "utcUpdatedDateTime": "2026-09-15T13:42:10.423Z"
+  },
+  {
+    "id": 806,
+    "name": "Maersk",
+    "wikiUrl": "https://en.wikipedia.org/wiki/A.P._Moller-Maersk",
+    "websiteUrl": "https://www.maersk.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=maersk.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:42:10.683Z",
+    "utcCreatedDateTime": "2026-09-15T13:42:09.987Z",
+    "utcUpdatedDateTime": "2026-09-15T13:42:10.683Z"
+  },
+  {
+    "id": 807,
+    "name": "MSC Cruises",
+    "wikiUrl": "https://en.wikipedia.org/wiki/MSC_Cruises",
+    "websiteUrl": "https://www.msccruises.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=msccruises.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:42:11.469Z",
+    "utcCreatedDateTime": "2026-09-15T13:42:10.152Z",
+    "utcUpdatedDateTime": "2026-09-15T13:42:11.469Z"
+  },
+  {
+    "id": 808,
+    "name": "Port Waratah Coal Services",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:42:10.422Z",
+    "utcCreatedDateTime": "2026-09-15T13:42:10.412Z",
+    "utcUpdatedDateTime": "2026-09-15T13:42:10.422Z"
+  },
+  {
+    "id": 809,
+    "name": "Jumbo Maritime",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:42:11.002Z",
+    "utcCreatedDateTime": "2026-09-15T13:42:10.988Z",
+    "utcUpdatedDateTime": "2026-09-15T13:42:11.002Z"
+  },
+  {
+    "id": 810,
+    "name": "Snowy Hydro",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Snowy_Hydro",
+    "websiteUrl": "https://www.snowyhydro.com.au/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=snowyhydro.com.au&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:42:11.953Z",
+    "utcCreatedDateTime": "2026-09-15T13:42:11.493Z",
+    "utcUpdatedDateTime": "2026-09-15T13:42:11.953Z"
+  },
+  {
+    "id": 811,
+    "name": "Hopfenveredlung St. Johann",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:43:33.087Z",
+    "utcCreatedDateTime": "2026-09-15T13:43:33.065Z",
+    "utcUpdatedDateTime": "2026-09-15T13:43:33.087Z"
+  },
+  {
+    "id": 813,
+    "name": "Opel",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Opel",
+    "websiteUrl": "https://www.opel.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=opel.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:43:36.208Z",
+    "utcCreatedDateTime": "2026-09-15T13:43:34.596Z",
+    "utcUpdatedDateTime": "2026-09-15T13:43:36.208Z"
+  },
+  {
+    "id": 814,
+    "name": "Cadbury",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Cadbury",
+    "websiteUrl": "https://cadbury.co.uk/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=cadbury.co.uk&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:43:36.203Z",
+    "utcCreatedDateTime": "2026-09-15T13:43:35.126Z",
+    "utcUpdatedDateTime": "2026-09-15T13:43:36.203Z"
+  },
+  {
+    "id": 815,
+    "name": "Tropical Islands Resort",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Tropical_Islands_Resort",
+    "websiteUrl": "http://www.tropical-islands.de",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=tropical-islands.de&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:43:36.214Z",
+    "utcCreatedDateTime": "2026-09-15T13:43:35.577Z",
+    "utcUpdatedDateTime": "2026-09-15T13:43:36.214Z"
+  },
+  {
+    "id": 817,
+    "name": "Jan De Nul Group",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Jan_De_Nul",
+    "websiteUrl": "https://www.jandenul.com/ru",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=jandenul.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:45:38.630Z",
+    "utcCreatedDateTime": "2026-09-15T13:45:37.475Z",
+    "utcUpdatedDateTime": "2026-09-15T13:45:38.630Z"
+  },
+  {
+    "id": 818,
+    "name": "Emsflower",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:45:37.949Z",
+    "utcCreatedDateTime": "2026-09-15T13:45:37.937Z",
+    "utcUpdatedDateTime": "2026-09-15T13:45:37.949Z"
+  },
+  {
+    "id": 819,
+    "name": "VEB Wohnungsbaukombinat Berlin",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:45:38.565Z",
+    "utcCreatedDateTime": "2026-09-15T13:45:38.562Z",
+    "utcUpdatedDateTime": "2026-09-15T13:45:38.565Z"
+  },
+  {
+    "id": 820,
+    "name": "Adif",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Adif",
+    "websiteUrl": "https://www.adif.es/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=adif.es&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:45:39.790Z",
+    "utcCreatedDateTime": "2026-09-15T13:45:39.106Z",
+    "utcUpdatedDateTime": "2026-09-15T13:45:39.790Z"
+  },
+  {
+    "id": 821,
+    "name": "Japanese National Railways",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Japanese_National_Railways",
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:45:59.194Z",
+    "utcCreatedDateTime": "2026-09-15T13:45:58.121Z",
+    "utcUpdatedDateTime": "2026-09-15T13:45:59.194Z"
+  },
+  {
+    "id": 822,
+    "name": "109th Airlift Wing",
+    "wikiUrl": "https://en.wikipedia.org/wiki/109th_Airlift_Wing",
+    "websiteUrl": "https://www.109aw.ang.af.mil/",
+    "logoUrl": "https://www.109aw.ang.af.mil/Portals/10/109AW_fav.ico?ver=B7xMyijjO9lPebO0A3hb5A%3d%3d",
+    "utcLogoCheckedDateTime": "2026-09-15T13:46:04.063Z",
+    "utcCreatedDateTime": "2026-09-15T13:45:59.286Z",
+    "utcUpdatedDateTime": "2026-09-15T13:46:04.063Z"
+  },
+  {
+    "id": 823,
+    "name": "Coulson Aviation",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:46:00.294Z",
+    "utcCreatedDateTime": "2026-09-15T13:46:00.283Z",
+    "utcUpdatedDateTime": "2026-09-15T13:46:00.294Z"
+  },
+  {
+    "id": 824,
+    "name": "OC Waste & Recycling",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:46:00.895Z",
+    "utcCreatedDateTime": "2026-09-15T13:46:00.894Z",
+    "utcUpdatedDateTime": "2026-09-15T13:46:00.895Z"
+  },
+  {
+    "id": 825,
+    "name": "Kellogg's",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Kellogg%27s",
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:52:00.138Z",
+    "utcCreatedDateTime": "2026-09-15T13:51:59.379Z",
+    "utcUpdatedDateTime": "2026-09-15T13:52:00.138Z"
+  },
+  {
+    "id": 826,
+    "name": "Heinz",
+    "wikiUrl": "https://en.wikipedia.org/wiki/H._J._Heinz_Company",
+    "websiteUrl": "http://www.heinz.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=heinz.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:52:01.179Z",
+    "utcCreatedDateTime": "2026-09-15T13:52:00.196Z",
+    "utcUpdatedDateTime": "2026-09-15T13:52:01.179Z"
+  },
+  {
+    "id": 827,
+    "name": "Liebherr",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Liebherr_Group",
+    "websiteUrl": "https://www.liebherr.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=liebherr.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:52:01.465Z",
+    "utcCreatedDateTime": "2026-09-15T13:52:00.572Z",
+    "utcUpdatedDateTime": "2026-09-15T13:52:01.465Z"
+  },
+  {
+    "id": 829,
+    "name": "TT-Line",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:52:58.244Z",
+    "utcCreatedDateTime": "2026-09-15T13:52:58.234Z",
+    "utcUpdatedDateTime": "2026-09-15T13:52:58.244Z"
+  },
+  {
+    "id": 830,
+    "name": "ORBIS International",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:52:58.695Z",
+    "utcCreatedDateTime": "2026-09-15T13:52:58.693Z",
+    "utcUpdatedDateTime": "2026-09-15T13:52:58.695Z"
+  },
+  {
+    "id": 831,
+    "name": "OLM",
+    "wikiUrl": "https://en.wikipedia.org/wiki/OLM,_Inc.",
+    "websiteUrl": "https://www.olm.co.jp/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=olm.co.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:53:50.920Z",
+    "utcCreatedDateTime": "2026-09-15T13:53:49.917Z",
+    "utcUpdatedDateTime": "2026-09-15T13:53:50.920Z"
+  },
+  {
+    "id": 835,
+    "name": "Studio Pierrot",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Studio_Pierrot",
+    "websiteUrl": "http://en.pierrot.jp/",
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:53:52.781Z",
+    "utcCreatedDateTime": "2026-09-15T13:53:50.358Z",
+    "utcUpdatedDateTime": "2026-09-15T13:53:52.781Z"
+  },
+  {
+    "id": 836,
+    "name": "C2C",
+    "wikiUrl": "https://en.wikipedia.org/wiki/C2C_(studio)",
+    "websiteUrl": "http://www.c2c2009.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=c2c2009.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:53:51.251Z",
+    "utcCreatedDateTime": "2026-09-15T13:53:50.408Z",
+    "utcUpdatedDateTime": "2026-09-15T13:53:51.251Z"
+  },
+  {
+    "id": 837,
+    "name": "Silver Link",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Silver_Link",
+    "websiteUrl": "http://www.silverlink.co.jp/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=silverlink.co.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:53:51.377Z",
+    "utcCreatedDateTime": "2026-09-15T13:53:50.471Z",
+    "utcUpdatedDateTime": "2026-09-15T13:53:51.377Z"
+  },
+  {
+    "id": 838,
+    "name": "A-1 Pictures",
+    "wikiUrl": "https://en.wikipedia.org/wiki/A-1_Pictures",
+    "websiteUrl": "https://a1p.jp/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=a1p.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:53:51.397Z",
+    "utcCreatedDateTime": "2026-09-15T13:53:50.527Z",
+    "utcUpdatedDateTime": "2026-09-15T13:53:51.397Z"
+  },
+  {
+    "id": 840,
+    "name": "Electric Circus",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:53:50.655Z",
+    "utcCreatedDateTime": "2026-09-15T13:53:50.638Z",
+    "utcUpdatedDateTime": "2026-09-15T13:53:50.655Z"
+  },
+  {
+    "id": 841,
+    "name": "Kinema Citrus",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Kinema_Citrus",
+    "websiteUrl": "https://kinemacitrus.biz/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=kinemacitrus.biz&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:53:51.379Z",
+    "utcCreatedDateTime": "2026-09-15T13:53:50.692Z",
+    "utcUpdatedDateTime": "2026-09-15T13:53:51.379Z"
+  },
+  {
+    "id": 842,
+    "name": "TOHO animation STUDIO",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:53:50.755Z",
+    "utcCreatedDateTime": "2026-09-15T13:53:50.754Z",
+    "utcUpdatedDateTime": "2026-09-15T13:53:50.755Z"
+  },
+  {
+    "id": 843,
+    "name": "Liden Films",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Liden_Films",
+    "websiteUrl": "http://lidenfilms.jp/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=lidenfilms.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:53:51.478Z",
+    "utcCreatedDateTime": "2026-09-15T13:53:50.929Z",
+    "utcUpdatedDateTime": "2026-09-15T13:53:51.478Z"
+  },
+  {
+    "id": 844,
+    "name": "ENGI",
+    "wikiUrl": "https://en.wikipedia.org/wiki/ENGI",
+    "websiteUrl": "https://engi-st.jp/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=engi-st.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:53:51.487Z",
+    "utcCreatedDateTime": "2026-09-15T13:53:50.983Z",
+    "utcUpdatedDateTime": "2026-09-15T13:53:51.487Z"
+  },
+  {
+    "id": 845,
+    "name": "TMS Entertainment",
+    "wikiUrl": "https://en.wikipedia.org/wiki/TMS_Entertainment",
+    "websiteUrl": "https://www.tms-e.co.jp/",
+    "logoUrl": "https://www.tms-e.co.jp/apple-touch-icon.png",
+    "utcLogoCheckedDateTime": "2026-09-15T13:53:52.782Z",
+    "utcCreatedDateTime": "2026-09-15T13:53:51.032Z",
+    "utcUpdatedDateTime": "2026-09-15T13:53:52.782Z"
+  },
+  {
+    "id": 847,
+    "name": "P.A. Works",
+    "wikiUrl": "https://en.wikipedia.org/wiki/P.A._Works",
+    "websiteUrl": "https://www.pa-works.jp/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=pa-works.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:53:51.679Z",
+    "utcCreatedDateTime": "2026-09-15T13:53:51.140Z",
+    "utcUpdatedDateTime": "2026-09-15T13:53:51.679Z"
+  },
+  {
+    "id": 848,
+    "name": "Arvo Animation",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Arvo_Animation",
+    "websiteUrl": "http://www.arvo-animation.co.jp/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=arvo-animation.co.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:53:51.765Z",
+    "utcCreatedDateTime": "2026-09-15T13:53:51.192Z",
+    "utcUpdatedDateTime": "2026-09-15T13:53:51.765Z"
+  },
+  {
+    "id": 849,
+    "name": "Wit Studio",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Wit_Studio",
+    "websiteUrl": "https://www.witstudio.co.jp/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=witstudio.co.jp&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:53:52.048Z",
+    "utcCreatedDateTime": "2026-09-15T13:53:51.243Z",
+    "utcUpdatedDateTime": "2026-09-15T13:53:52.048Z"
+  },
+  {
+    "id": 851,
+    "name": "McVitie's",
+    "wikiUrl": "https://en.wikipedia.org/wiki/McVitie's",
+    "websiteUrl": "https://www.mcvities.it",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=mcvities.it&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:55:21.200Z",
+    "utcCreatedDateTime": "2026-09-15T13:55:20.264Z",
+    "utcUpdatedDateTime": "2026-09-15T13:55:21.200Z"
+  },
+  {
+    "id": 852,
+    "name": "Mr Kipling",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Mr_Kipling",
+    "websiteUrl": "http://www.mrkipling.co.uk",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=mrkipling.co.uk&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:55:21.733Z",
+    "utcCreatedDateTime": "2026-09-15T13:55:21.007Z",
+    "utcUpdatedDateTime": "2026-09-15T13:55:21.733Z"
+  },
+  {
+    "id": 853,
+    "name": "Oshkosh Corporation",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:55:31.660Z",
+    "utcCreatedDateTime": "2026-09-15T13:55:31.636Z",
+    "utcUpdatedDateTime": "2026-09-15T13:55:31.660Z"
+  },
+  {
+    "id": 854,
+    "name": "Østensjø Rederi",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:55:32.685Z",
+    "utcCreatedDateTime": "2026-09-15T13:55:32.683Z",
+    "utcUpdatedDateTime": "2026-09-15T13:55:32.685Z"
+  },
+  {
+    "id": 855,
+    "name": "Loro Parque",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:55:33.165Z",
+    "utcCreatedDateTime": "2026-09-15T13:55:33.156Z",
+    "utcUpdatedDateTime": "2026-09-15T13:55:33.165Z"
+  },
+  {
+    "id": 857,
+    "name": "Triple Five Group",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:55:33.984Z",
+    "utcCreatedDateTime": "2026-09-15T13:55:33.983Z",
+    "utcUpdatedDateTime": "2026-09-15T13:55:33.984Z"
+  },
+  {
+    "id": 858,
+    "name": "Wilhelmsen Group",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:55:55.652Z",
+    "utcCreatedDateTime": "2026-09-15T13:55:55.629Z",
+    "utcUpdatedDateTime": "2026-09-15T13:55:55.652Z"
+  },
+  {
+    "id": 859,
+    "name": "Royal Danish Navy",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:55:56.722Z",
+    "utcCreatedDateTime": "2026-09-15T13:55:56.720Z",
+    "utcUpdatedDateTime": "2026-09-15T13:55:56.722Z"
+  },
+  {
+    "id": 860,
+    "name": "Pirelli",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:55:57.377Z",
+    "utcCreatedDateTime": "2026-09-15T13:55:57.374Z",
+    "utcUpdatedDateTime": "2026-09-15T13:55:57.377Z"
+  },
+  {
+    "id": 861,
+    "name": "Ford-Werke GmbH",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:55:57.941Z",
+    "utcCreatedDateTime": "2026-09-15T13:55:57.939Z",
+    "utcUpdatedDateTime": "2026-09-15T13:55:57.941Z"
+  },
+  {
+    "id": 862,
+    "name": "Sany Heavy Industry",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:55:58.506Z",
+    "utcCreatedDateTime": "2026-09-15T13:55:58.504Z",
+    "utcUpdatedDateTime": "2026-09-15T13:55:58.506Z"
+  },
+  {
+    "id": 863,
+    "name": "Harland & Wolff",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:55:59.043Z",
+    "utcCreatedDateTime": "2026-09-15T13:55:59.041Z",
+    "utcUpdatedDateTime": "2026-09-15T13:55:59.043Z"
+  },
+  {
+    "id": 865,
+    "name": "Implenia",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Implenia",
+    "websiteUrl": "http://www.implenia.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=implenia.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:56:02.167Z",
+    "utcCreatedDateTime": "2026-09-15T13:56:00.743Z",
+    "utcUpdatedDateTime": "2026-09-15T13:56:02.167Z"
+  },
+  {
+    "id": 866,
+    "name": "Empresa de Electricidade da Madeira",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:56:01.961Z",
+    "utcCreatedDateTime": "2026-09-15T13:56:01.950Z",
+    "utcUpdatedDateTime": "2026-09-15T13:56:01.961Z"
+  },
+  {
+    "id": 867,
+    "name": "CMA CGM",
+    "wikiUrl": "https://en.wikipedia.org/wiki/CMA_CGM",
+    "websiteUrl": "https://www.cma-cgm.fr",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=cma-cgm.fr&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:56:03.384Z",
+    "utcCreatedDateTime": "2026-09-15T13:56:02.519Z",
+    "utcUpdatedDateTime": "2026-09-15T13:56:03.384Z"
+  },
+  {
+    "id": 868,
+    "name": "Gorona del Viento El Hierro",
+    "wikiUrl": "https://en.wikipedia.org/wiki/El_Hierro_(wind-pumped-storage_station)",
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T13:56:03.667Z",
+    "utcCreatedDateTime": "2026-09-15T13:56:03.519Z",
+    "utcUpdatedDateTime": "2026-09-15T13:56:03.667Z"
+  },
+  {
+    "id": 870,
+    "name": "Saab",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Saab_AB",
+    "websiteUrl": "https://www.saab.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=saab.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T13:56:05.165Z",
+    "utcCreatedDateTime": "2026-09-15T13:56:04.594Z",
+    "utcUpdatedDateTime": "2026-09-15T13:56:05.165Z"
+  },
+  {
+    "id": 871,
+    "name": "Ponant",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ponant",
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:02:04.830Z",
+    "utcCreatedDateTime": "2026-09-15T14:02:04.366Z",
+    "utcUpdatedDateTime": "2026-09-15T14:02:04.830Z"
+  },
+  {
+    "id": 872,
+    "name": "Compagnie des Établissements Eiffel",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:04:14.873Z",
+    "utcCreatedDateTime": "2026-09-15T14:04:14.862Z",
+    "utcUpdatedDateTime": "2026-09-15T14:04:14.873Z"
+  },
+  {
+    "id": 873,
+    "name": "JR Kyushu",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:04:15.220Z",
+    "utcCreatedDateTime": "2026-09-15T14:04:15.216Z",
+    "utcUpdatedDateTime": "2026-09-15T14:04:15.220Z"
+  },
+  {
+    "id": 874,
+    "name": "Scheuerle Fahrzeugfabrik",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:04:15.560Z",
+    "utcCreatedDateTime": "2026-09-15T14:04:15.559Z",
+    "utcUpdatedDateTime": "2026-09-15T14:04:15.560Z"
+  },
+  {
+    "id": 875,
+    "name": "Meyer Werft",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Meyer_Werft",
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:04:15.901Z",
+    "utcCreatedDateTime": "2026-09-15T14:04:15.900Z",
+    "utcUpdatedDateTime": "2026-09-15T14:20:14.029Z"
+  },
+  {
+    "id": 876,
+    "name": "Claas",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:04:16.312Z",
+    "utcCreatedDateTime": "2026-09-15T14:04:16.311Z",
+    "utcUpdatedDateTime": "2026-09-15T14:04:16.312Z"
+  },
+  {
+    "id": 877,
+    "name": "Rheinmetall",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Rheinmetall",
+    "websiteUrl": "https://www.rheinmetall.com/en",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=rheinmetall.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:05:01.194Z",
+    "utcCreatedDateTime": "2026-09-15T14:04:59.588Z",
+    "utcUpdatedDateTime": "2026-09-15T14:05:01.194Z"
+  },
+  {
+    "id": 878,
+    "name": "TAKRAF",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Takraf",
+    "websiteUrl": "https://www.takraf.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=takraf.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:05:01.454Z",
+    "utcCreatedDateTime": "2026-09-15T14:05:00.489Z",
+    "utcUpdatedDateTime": "2026-09-15T14:05:01.454Z"
+  },
+  {
+    "id": 879,
+    "name": "Karpowership",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Karpowership",
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:05:01.423Z",
+    "utcCreatedDateTime": "2026-09-15T14:05:00.917Z",
+    "utcUpdatedDateTime": "2026-09-15T14:05:01.423Z"
+  },
+  {
+    "id": 880,
+    "name": "Reykjavik Energy",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Reykjavik_Energy",
+    "websiteUrl": "http://www.or.is/en",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=or.is&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:05:01.990Z",
+    "utcCreatedDateTime": "2026-09-15T14:05:01.298Z",
+    "utcUpdatedDateTime": "2026-09-15T14:05:01.990Z"
+  },
+  {
+    "id": 881,
+    "name": "Electric Boat",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Electric_Boat",
+    "websiteUrl": "http://www.gdeb.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=gdeb.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:05:02.621Z",
+    "utcCreatedDateTime": "2026-09-15T14:05:01.811Z",
+    "utcUpdatedDateTime": "2026-09-15T14:05:02.621Z"
+  },
+  {
+    "id": 882,
+    "name": "European Marine Energy Centre",
+    "wikiUrl": "https://en.wikipedia.org/wiki/European_Marine_Energy_Centre",
+    "websiteUrl": "http://www.emec.org.uk/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=emec.org.uk&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:05:02.730Z",
+    "utcCreatedDateTime": "2026-09-15T14:05:02.327Z",
+    "utcUpdatedDateTime": "2026-09-15T14:05:02.730Z"
+  },
+  {
+    "id": 883,
+    "name": "Chimelong Group",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:05:27.504Z",
+    "utcCreatedDateTime": "2026-09-15T14:05:27.480Z",
+    "utcUpdatedDateTime": "2026-09-15T14:05:27.504Z"
+  },
+  {
+    "id": 884,
+    "name": "Puy du Fou",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:05:28.383Z",
+    "utcCreatedDateTime": "2026-09-15T14:05:28.382Z",
+    "utcUpdatedDateTime": "2026-09-15T14:05:28.383Z"
+  },
+  {
+    "id": 886,
+    "name": "Statoil",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:05:29.237Z",
+    "utcCreatedDateTime": "2026-09-15T14:05:29.232Z",
+    "utcUpdatedDateTime": "2026-09-15T14:05:29.237Z"
+  },
+  {
+    "id": 887,
+    "name": "Pierce Manufacturing",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Pierce_Manufacturing",
+    "websiteUrl": "http://www.piercemfg.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=piercemfg.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:06:20.682Z",
+    "utcCreatedDateTime": "2026-09-15T14:06:19.460Z",
+    "utcUpdatedDateTime": "2026-09-15T14:06:20.682Z"
+  },
+  {
+    "id": 888,
+    "name": "Europa-Park",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Europa-Park",
+    "websiteUrl": "https://www.europapark.de/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=europapark.de&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:06:20.940Z",
+    "utcCreatedDateTime": "2026-09-15T14:06:20.274Z",
+    "utcUpdatedDateTime": "2026-09-15T14:06:20.940Z"
+  },
+  {
+    "id": 889,
+    "name": "Aldar Properties",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Aldar_Properties",
+    "websiteUrl": "https://propertyforall.ae/",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Aldar_logo.png",
+    "utcLogoCheckedDateTime": "2026-09-15T14:06:21.962Z",
+    "utcCreatedDateTime": "2026-09-15T14:06:20.613Z",
+    "utcUpdatedDateTime": "2026-09-15T14:06:21.962Z"
+  },
+  {
+    "id": 890,
+    "name": "Tarmac Aerosave",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Tarmac_A%C3%A9rosave",
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:08:20.634Z",
+    "utcCreatedDateTime": "2026-09-15T14:08:20.396Z",
+    "utcUpdatedDateTime": "2026-09-15T14:08:20.634Z"
+  },
+  {
+    "id": 891,
+    "name": "John Deere",
+    "wikiUrl": "https://en.wikipedia.org/wiki/John_Deere",
+    "websiteUrl": "https://www.deere.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=deere.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:08:22.773Z",
+    "utcCreatedDateTime": "2026-09-15T14:08:21.238Z",
+    "utcUpdatedDateTime": "2026-09-15T14:08:22.773Z"
+  },
+  {
+    "id": 893,
+    "name": "Volvo Construction Equipment",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Volvo_Construction_Equipment",
+    "websiteUrl": "http://www.volvoce.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=volvoce.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:08:22.843Z",
+    "utcCreatedDateTime": "2026-09-15T14:08:21.997Z",
+    "utcUpdatedDateTime": "2026-09-15T14:08:22.843Z"
+  },
+  {
+    "id": 894,
+    "name": "Siemens",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Siemens",
+    "websiteUrl": "https://www.siemens.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=siemens.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:08:24.016Z",
+    "utcCreatedDateTime": "2026-09-15T14:08:22.423Z",
+    "utcUpdatedDateTime": "2026-09-15T14:08:24.016Z"
+  },
+  {
+    "id": 895,
+    "name": "Polymetal International",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Polymetal_International",
+    "websiteUrl": "https://www.solidcore-resources.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=solidcore-resources.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:08:24.024Z",
+    "utcCreatedDateTime": "2026-09-15T14:08:22.758Z",
+    "utcUpdatedDateTime": "2026-09-15T14:08:24.024Z"
+  },
+  {
+    "id": 896,
+    "name": "Novarka",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Chernobyl_New_Safe_Confinement",
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:16:15.669Z",
+    "utcCreatedDateTime": "2026-09-15T14:16:15.240Z",
+    "utcUpdatedDateTime": "2026-09-15T14:16:15.669Z"
+  },
+  {
+    "id": 897,
+    "name": "Arianespace",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Ariane_5",
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:16:16.455Z",
+    "utcCreatedDateTime": "2026-09-15T14:16:16.141Z",
+    "utcUpdatedDateTime": "2026-09-15T14:16:16.455Z"
+  },
+  {
+    "id": 898,
+    "name": "Consorzio Venezia Nuova",
+    "wikiUrl": "https://en.wikipedia.org/wiki/MOSE",
+    "websiteUrl": "https://www.mosevenezia.eu",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=mosevenezia.eu&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:16:17.557Z",
+    "utcCreatedDateTime": "2026-09-15T14:16:16.968Z",
+    "utcUpdatedDateTime": "2026-09-15T14:16:17.557Z"
+  },
+  {
+    "id": 900,
+    "name": "MTU",
+    "wikiUrl": "https://en.wikipedia.org/wiki/MTU_Friedrichshafen",
+    "websiteUrl": "https://www.mtu-solutions.com",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=mtu-solutions.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:16:24.987Z",
+    "utcCreatedDateTime": "2026-09-15T14:16:23.852Z",
+    "utcUpdatedDateTime": "2026-09-15T14:16:24.987Z"
+  },
+  {
+    "id": 902,
+    "name": "Dragages Singapore",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:16:45.335Z",
+    "utcCreatedDateTime": "2026-09-15T14:16:45.311Z",
+    "utcUpdatedDateTime": "2026-09-15T14:16:45.335Z"
+  },
+  {
+    "id": 903,
+    "name": "Fenton, Murray and Wood",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:16:46.169Z",
+    "utcCreatedDateTime": "2026-09-15T14:16:46.168Z",
+    "utcUpdatedDateTime": "2026-09-15T14:16:46.169Z"
+  },
+  {
+    "id": 904,
+    "name": "Network Rail",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:16:46.503Z",
+    "utcCreatedDateTime": "2026-09-15T14:16:46.496Z",
+    "utcUpdatedDateTime": "2026-09-15T14:16:46.503Z"
+  },
+  {
+    "id": 905,
+    "name": "IHC Merwede",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:16:47.030Z",
+    "utcCreatedDateTime": "2026-09-15T14:16:47.027Z",
+    "utcUpdatedDateTime": "2026-09-15T14:16:47.030Z"
+  },
+  {
+    "id": 907,
+    "name": "ExxonMobil",
+    "wikiUrl": "https://en.wikipedia.org/wiki/ExxonMobil",
+    "websiteUrl": "https://corporate.exxonmobil.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=corporate.exxonmobil.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:19:22.487Z",
+    "utcCreatedDateTime": "2026-09-15T14:18:00.570Z",
+    "utcUpdatedDateTime": "2026-09-15T14:19:22.487Z"
+  },
+  {
+    "id": 911,
+    "name": "Sir William Arrol & Co.",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Sir_William_Arrol_%26_Co.",
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:19:22.283Z",
+    "utcCreatedDateTime": "2026-09-15T14:19:21.884Z",
+    "utcUpdatedDateTime": "2026-09-15T14:19:22.283Z"
+  },
+  {
+    "id": 913,
+    "name": "Mercedes-Benz",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Mercedes-Benz",
+    "websiteUrl": "https://www.mercedes-benz.com/en/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=mercedes-benz.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:20:16.050Z",
+    "utcCreatedDateTime": "2026-09-15T14:20:14.826Z",
+    "utcUpdatedDateTime": "2026-09-15T14:20:16.050Z"
+  },
+  {
+    "id": 916,
+    "name": "Knaack-Krane",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:20:16.051Z",
+    "utcCreatedDateTime": "2026-09-15T14:20:16.041Z",
+    "utcUpdatedDateTime": "2026-09-15T14:20:16.051Z"
+  },
+  {
+    "id": 917,
+    "name": "BMW",
+    "wikiUrl": "https://en.wikipedia.org/wiki/BMW",
+    "websiteUrl": "https://www.bmw.com",
+    "logoUrl": "https://www.bmwusa.com/etc.clientlibs/bmwusa/clientlibs/clientlib-site/resources/apple-touch-icon-180x180.png",
+    "utcLogoCheckedDateTime": "2026-09-15T14:26:24.787Z",
+    "utcCreatedDateTime": "2026-09-15T14:26:21.865Z",
+    "utcUpdatedDateTime": "2026-09-15T14:26:24.787Z"
+  },
+  {
+    "id": 918,
+    "name": "City of Paris",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Paris",
+    "websiteUrl": "https://www.paris.fr/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=paris.fr&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:27:24.420Z",
+    "utcCreatedDateTime": "2026-09-15T14:27:22.959Z",
+    "utcUpdatedDateTime": "2026-09-15T14:27:24.420Z"
+  },
+  {
+    "id": 919,
+    "name": "Great Coasters International",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Great_Coasters_International",
+    "websiteUrl": "https://greatcoasters.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=greatcoasters.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:27:24.458Z",
+    "utcCreatedDateTime": "2026-09-15T14:27:23.858Z",
+    "utcUpdatedDateTime": "2026-09-15T14:27:24.458Z"
+  },
+  {
+    "id": 920,
+    "name": "SBB",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Swiss_Federal_Railways",
+    "websiteUrl": "https://www.sbb.ch/en/home.html",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=sbb.ch&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:28:14.880Z",
+    "utcCreatedDateTime": "2026-09-15T14:27:30.864Z",
+    "utcUpdatedDateTime": "2026-09-15T14:28:14.880Z"
+  },
+  {
+    "id": 922,
+    "name": "Victorian Railways",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Victorian_Railways",
+    "websiteUrl": null,
+    "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/VR_logo.svg/120px-VR_logo.svg.png",
+    "utcLogoCheckedDateTime": "2026-09-15T14:28:14.797Z",
+    "utcCreatedDateTime": "2026-09-15T14:28:14.222Z",
+    "utcUpdatedDateTime": "2026-09-15T14:28:14.797Z"
+  },
+  {
+    "id": 923,
+    "name": "Bengal-Nagpur Railway",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Bengal_Nagpur_Railway",
+    "websiteUrl": null,
+    "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Bengal_Nagpur_Railway_Logo.jpg/120px-Bengal_Nagpur_Railway_Logo.jpg",
+    "utcLogoCheckedDateTime": "2026-09-15T14:28:15.313Z",
+    "utcCreatedDateTime": "2026-09-15T14:28:14.702Z",
+    "utcUpdatedDateTime": "2026-09-15T14:28:15.313Z"
+  },
+  {
+    "id": 924,
+    "name": "Empire State Development",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Empire_State_Development",
+    "websiteUrl": "https://esd.ny.gov/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=esd.ny.gov&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:28:15.824Z",
+    "utcCreatedDateTime": "2026-09-15T14:28:15.251Z",
+    "utcUpdatedDateTime": "2026-09-15T14:28:15.824Z"
+  },
+  {
+    "id": 927,
+    "name": "The Football Association",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:30:58.175Z",
+    "utcCreatedDateTime": "2026-09-15T14:30:58.164Z",
+    "utcUpdatedDateTime": "2026-09-15T14:30:58.175Z"
+  },
+  {
+    "id": 929,
+    "name": "Sinovel Wind Group",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Sinovel",
+    "websiteUrl": "http://www.sinovel.com/en/index.aspx",
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:31:46.687Z",
+    "utcCreatedDateTime": "2026-09-15T14:31:45.753Z",
+    "utcUpdatedDateTime": "2026-09-15T14:31:46.687Z"
+  },
+  {
+    "id": 930,
+    "name": "DCNS",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:39:48.758Z",
+    "utcCreatedDateTime": "2026-09-15T14:39:48.734Z",
+    "utcUpdatedDateTime": "2026-09-15T14:39:48.758Z"
+  },
+  {
+    "id": 932,
+    "name": "Rosatom",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:39:50.046Z",
+    "utcCreatedDateTime": "2026-09-15T14:39:50.044Z",
+    "utcUpdatedDateTime": "2026-09-15T14:39:50.046Z"
+  },
+  {
+    "id": 933,
+    "name": "Hamburg Port Authority",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:39:50.440Z",
+    "utcCreatedDateTime": "2026-09-15T14:39:50.439Z",
+    "utcUpdatedDateTime": "2026-09-15T14:39:50.440Z"
+  },
+  {
+    "id": 934,
+    "name": "BHP",
+    "wikiUrl": "https://en.wikipedia.org/wiki/BHP",
+    "websiteUrl": "https://www.bhp.com/",
+    "logoUrl": "https://www.google.com/s2/favicons?domain=bhp.com&sz=64",
+    "utcLogoCheckedDateTime": "2026-09-15T14:40:09.882Z",
+    "utcCreatedDateTime": "2026-09-15T14:40:08.501Z",
+    "utcUpdatedDateTime": "2026-09-15T14:40:09.882Z"
+  },
+  {
+    "id": 936,
+    "name": "Great Indian Peninsula Railway",
+    "wikiUrl": "https://en.wikipedia.org/wiki/Great_Indian_Peninsula_Railway",
+    "websiteUrl": null,
+    "logoUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Great_Indian_Peninsula_Railway.jpg/120px-Great_Indian_Peninsula_Railway.jpg",
+    "utcLogoCheckedDateTime": "2026-09-15T14:40:10.455Z",
+    "utcCreatedDateTime": "2026-09-15T14:40:09.868Z",
+    "utcUpdatedDateTime": "2026-09-15T14:40:10.455Z"
+  },
+  {
+    "id": 937,
+    "name": "Henraux",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:44:32.365Z",
+    "utcCreatedDateTime": "2026-09-15T14:44:32.342Z",
+    "utcUpdatedDateTime": "2026-09-15T14:44:32.365Z"
+  },
+  {
+    "id": 938,
+    "name": "Krupp",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:44:33.241Z",
+    "utcCreatedDateTime": "2026-09-15T14:44:33.236Z",
+    "utcUpdatedDateTime": "2026-09-15T14:44:33.241Z"
+  },
+  {
+    "id": 939,
+    "name": "German Aerospace Center (DLR)",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:44:33.753Z",
+    "utcCreatedDateTime": "2026-09-15T14:44:33.752Z",
+    "utcUpdatedDateTime": "2026-09-15T14:44:33.753Z"
+  },
+  {
+    "id": 940,
+    "name": "General Motors",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:44:34.097Z",
+    "utcCreatedDateTime": "2026-09-15T14:44:34.095Z",
+    "utcUpdatedDateTime": "2026-09-15T14:44:34.097Z"
+  },
+  {
+    "id": 941,
+    "name": "Metropolitan Railway",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:44:34.473Z",
+    "utcCreatedDateTime": "2026-09-15T14:44:34.471Z",
+    "utcUpdatedDateTime": "2026-09-15T14:44:34.473Z"
+  },
+  {
+    "id": 942,
+    "name": "Magnavox",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-15T14:44:34.799Z",
+    "utcCreatedDateTime": "2026-09-15T14:44:34.797Z",
+    "utcUpdatedDateTime": "2026-09-15T14:44:34.799Z"
   }
 ]
