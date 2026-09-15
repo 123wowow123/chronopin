@@ -470,8 +470,10 @@ This is a promotional article about one of the company partners with Interesting
 ## Before Usable
 
 
-- Favorite needs to be grouped in folders and make public/private
+- Favorite needs to be grouped in folders and make public/private and shareable
+
 - Pinner should be able to add tags/groups to organize their pin
+
 - Add auto nightly scraping job 
 
 - scrape https://www.youtube.com/@TheB1M

@@ -5023,6 +5023,59 @@
     "userId": 1
   },
   {
+    "id": 632,
+    "rootThread": false,
+    "title": "Zaha Hadid's Port House Opens Above Antwerp's Old Fire Station",
+    "description": "The Port of Antwerp's new headquarters, a faceted glass extension perched atop a derelict 1920s fire station, opened as Zaha Hadid's last building completed after her death.",
+    "sourceUrl": "https://www.youtube.com/watch?v=2woqSzstIZM",
+    "longFormSummary": "<ul><li>Antwerp’s port authority needed a single new headquarters for 500 staff who had been scattered across separate buildings around the city.</li><li>Zaha Hadid’s studio won the commission by building up rather than around a heritage-protected but derelict fire station on the site.</li><li>The result is an angular, diamond-faceted glass volume that appears to hover above the restored brick fire station below.</li><li>Hadid died months before construction finished, and her firm completed the project posthumously as one of her final designs.</li></ul>",
+    "address": "1 Zaha Hadidplein, Antwerp, Belgium",
+    "latitude": 51.2411211,
+    "longitude": 4.4075539,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: \"The construction of the expansion began in October 2012 and the building was officially opened in September 2016.\"",
+    "companyId": 674,
+    "company": "Antwerp Port Authority",
+    "category": "Architecture & Real Estate",
+    "utcStartDateTime": "2016-09-22T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:45:48.806Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 588,
+        "thumbName": "edfea95a-f2f9-4087-9409-b6b2940bd836.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/2woqSzstIZM",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/2woqSzstIZM?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Why They Had to Build OVER This Old Building\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1394,
+        "url": "https://www.archdaily.com/795832/antwerp-port-house-zaha-hadid-architects",
+        "title": "Antwerp Port House / Zaha Hadid Architects - ArchDaily",
+        "confidence": 82,
+        "utcCreatedDateTime": "2026-09-15T04:45:48.807627+00:00",
+        "pinId": 632
+      },
+      {
+        "id": 1395,
+        "url": "https://en.wikipedia.org/wiki/Port_Authority_Building_(Antwerp)",
+        "title": "Port Authority Building (Antwerp) - Wikipedia",
+        "confidence": 80,
+        "utcCreatedDateTime": "2026-09-15T04:45:48.808358+00:00",
+        "pinId": 632
+      }
+    ],
+    "userId": 76
+  },
+  {
     "id": 67,
     "rootThread": false,
     "title": "Fifty-six percent of California voters approved Proposition 64 Legalizing Marijuana",
@@ -5483,6 +5536,61 @@
       }
     ],
     "userId": 1
+  },
+  {
+    "id": 631,
+    "rootThread": false,
+    "title": "KONE Reopens Its Deep-Mine Elevator Test Lab in Tytyri, Finland",
+    "description": "KONE finished renovating its underground elevator testing facility inside a Finnish limestone mine, extending its shafts to the world's deepest for free-fall and speed testing.",
+    "sourceUrl": "https://www.youtube.com/watch?v=IRse3W-glVs",
+    "longFormSummary": "<ul><li>KONE first opened a high-rise elevator laboratory inside the working Tytyri limestone mine near Lohja, Finland, in 1997.</li><li>After renovation work the lab reopened in 2017 with shafts reaching 350 metres deep, deeper than the Eiffel Tower is tall.</li><li>Of its eleven test shafts, seven are dedicated to super- and mega-tall elevator testing, including controlled free-fall drop tests.</li><li>The facility lets KONE validate the elevators used in buildings worldwide without needing an above-ground test tower.</li></ul>",
+    "address": "Tytyri, Lohja, Finland",
+    "latitude": 60.2636499,
+    "longitude": 24.0684505,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: \"has unveiled its renewed high-rise elevator testing facility in Tytyri, Finland, after extensive renovations.\"",
+    "companyId": 673,
+    "company": "KONE Corporation",
+    "category": "Science & Research",
+    "utcStartDateTime": "2017-03-29T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:45:48.446Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 587,
+        "thumbName": "4906b48a-dec1-40aa-a1a2-d120dbd9e521.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/IRse3W-glVs",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/IRse3W-glVs?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Inside The Lab That Tests Elevator Free-Falls\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1392,
+        "url": "https://www.kone.com/en/news-and-insights/releases/kone-opens-its-renewed-high-rise-elevator-test-laboratory-in-tytyri--finland---reaching-a-depth-of-350-meters--it-is-the-deepest-in-the-world-2017-03-29-3.aspx",
+        "title": "KONE Opens Its Renewed High-Rise Elevator Test Laboratory in Tytyri, Finland - KONE Corporation",
+        "confidence": 92,
+        "publishedDate": "2017-03-29",
+        "utcCreatedDateTime": "2026-09-15T04:45:48.448462+00:00",
+        "pinId": 631
+      },
+      {
+        "id": 1393,
+        "url": "https://elevatortoday.com/2017/03/29/kone-reopens-its-mine-elevator-test-laboratory/",
+        "title": "KONE reopens its mine elevator test laboratory - Elevator Today",
+        "confidence": 76,
+        "publishedDate": "2017-03-29",
+        "utcCreatedDateTime": "2026-09-15T04:45:48.449488+00:00",
+        "pinId": 631
+      }
+    ],
+    "userId": 76
   },
   {
     "id": 73,
@@ -8379,6 +8487,115 @@
     "userId": 1
   },
   {
+    "id": 651,
+    "rootThread": false,
+    "title": "Indonesia Opens the Bakauheni-Terbanggi Besar Toll Road, Trans Sumatera's First Major Stretch",
+    "description": "Indonesia opened the 140.9km Bakauheni-Terbanggi Besar toll road in Lampung, the flagship first section of the Trans Sumatera Toll Road network built by state contractor Hutama Karya.",
+    "sourceUrl": "https://www.youtube.com/watch?v=MPK8N8PUwrM",
+    "longFormSummary": "<ul><li>The Trans Sumatera Toll Road is a state-led plan to eventually run nearly 3,000km up the length of Sumatra, from the port of Bakauheni to Banda Aceh.</li><li>Bakauheni-Terbanggi Besar, the first major stretch to open, cuts through Sumatra's dense jungle terrain and links the island's southern ferry port toward its interior.</li><li>Hutama Karya, Indonesia's state construction company, has built the network to ease the annual mudik migration, when tens of millions travel home for Eid al-Fitr.</li><li>The road's opening was a milestone the government pointed to as proof the wider, decade-long toll road programme could deliver despite Sumatra's difficult jungle terrain.</li></ul>",
+    "address": "Bakauheni, Lampung Selatan, Lampung, Indonesia",
+    "latitude": -5.8633067,
+    "longitude": 105.7497452,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: President Joko Widodo inaugurated the toll road at the Natar toll gate, with the remaining sections becoming operational on March 8, 2019.",
+    "companyId": 685,
+    "company": "Hutama Karya",
+    "category": "Infrastructure & Transportation",
+    "utcStartDateTime": "2019-03-08T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T05:02:08.810Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 607,
+        "thumbName": "8bc055cb-b715-44c3-a134-bd6173dd9966.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/MPK8N8PUwrM",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/MPK8N8PUwrM?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"The $37BN Road That&#39;s Changing a Country\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1433,
+        "url": "https://en.wikipedia.org/wiki/Bakauheni%E2%80%93Terbanggi_Besar_Toll_Road",
+        "title": "Bakauheni–Terbanggi Besar Toll Road – Wikipedia",
+        "confidence": 76,
+        "publishedDate": "2019-03-08",
+        "utcCreatedDateTime": "2026-09-15T05:02:08.81433+00:00",
+        "pinId": 651
+      },
+      {
+        "id": 1434,
+        "url": "https://www.setneg.go.id/baca/index/presiden_resmikan_tol_bakauheni_terbanggi_besar",
+        "title": "Presiden Resmikan Tol Bakauheni-Terbanggi Besar – Sekretariat Negara",
+        "confidence": 85,
+        "publishedDate": "2019-03-08",
+        "utcCreatedDateTime": "2026-09-15T05:02:08.815211+00:00",
+        "pinId": 651
+      }
+    ],
+    "userId": 76
+  },
+  {
+    "id": 633,
+    "rootThread": false,
+    "title": "Contractor Sues Over 161 Maiden Lane's Leaning Foundation",
+    "description": "Construction manager Pizzarotti sued developer Fortis Property Group, alleging cost-cutting on the foundation left Lower Manhattan's One Seaport tower tilting toward the East River.",
+    "sourceUrl": "https://www.youtube.com/watch?v=7QrvbUxOamo",
+    "longFormSummary": "<ul><li>161 Maiden Lane (marketed as One Seaport) was meant to be the tallest residential tower on Manhattan’s eastern waterfront when construction began.</li><li>Contractor Pizzarotti claims Fortis chose cheaper soil-improvement methods over driving piles to bedrock, and the tower ended up leaning several inches north.</li><li>Pizzarotti filed suit in March 2019 and later withdrew from the job, each side blaming the other for the misaligned foundation.</li><li>Construction has remained stalled for years since, with the tower’s fate still tied up in litigation over who pays to fix it.</li></ul>",
+    "address": "161 Maiden Lane, New York, NY 10005, USA",
+    "latitude": 40.7055371,
+    "longitude": -74.0048099,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: \"Pizzarotti, the contractor on the project at 161 Maiden Lane, filed a lawsuit against Fortis in New York State Supreme Court.\"",
+    "companyId": 675,
+    "company": "Fortis Property Group",
+    "category": "Architecture & Real Estate",
+    "utcStartDateTime": "2019-03-22T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:45:49.057Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 589,
+        "thumbName": "02fe0d04-700e-45eb-8f22-7e942095cc24.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/7QrvbUxOamo",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/7QrvbUxOamo?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"The Wild Story of New York’s Abandoned Skyscraper\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1396,
+        "url": "https://therealdeal.com/new-york/2019/04/03/leaning-tower-of-pizzarotti-contractor-sues-fortis-over-alignment-issues-at-seaport-project/",
+        "title": "Contractor Sues Fortis Over Alignment Issues at Seaport Project - The Real Deal",
+        "confidence": 82,
+        "publishedDate": "2019-04-03",
+        "utcCreatedDateTime": "2026-09-15T04:45:49.058792+00:00",
+        "pinId": 633
+      },
+      {
+        "id": 1397,
+        "url": "https://www.bisnow.com/new-york/news/construction-development/fortis-fidi-condo-building-is-leaning-contractor-claims-98352",
+        "title": "The Leaning Tower Of The Seaport: Contractor Sues Fortis Over Tilting Condo Building - Bisnow",
+        "confidence": 78,
+        "utcCreatedDateTime": "2026-09-15T04:45:49.059431+00:00",
+        "pinId": 633
+      }
+    ],
+    "userId": 76
+  },
+  {
     "id": 120,
     "rootThread": false,
     "title": "Microsoft's Next-Gen HoloLens is Codenamed Sydney",
@@ -10457,6 +10674,118 @@
     "userId": 76
   },
   {
+    "id": 654,
+    "rootThread": false,
+    "title": "Times Square's Palace Theatre Finishes Its Nine-Metre Lift",
+    "description": "Engineers finished raising the landmarked Palace Theatre nine metres into the air on hydraulic jacks, clearing space beneath it for the new TSX Broadway entertainment venue in Times Square.",
+    "sourceUrl": "https://www.youtube.com/watch?v=MnIcCQR551o",
+    "longFormSummary": "<ul><li>The Palace Theatre opened in 1913 and earned New York City Landmark status in the 1980s, which blocked its demolition when a hotel was built around it instead.</li><li>Developer L&L Holding used 34 hydraulic lifting posts to raise the entire theatre box roughly six inches an hour over about 17 days.</li><li>The lift cleared the theatre's original hotel structure to make way for TSX Broadway, a 170-metre tower with a giant outdoor performance stage overlooking Times Square.</li><li>Lifting a landmarked, fully intact theatre this way was described by engineers as one of the largest building-relocation efforts ever attempted in New York City.</li></ul>",
+    "address": "Palace Theater, 1564 Broadway, Times Square, Manhattan, New York, United States",
+    "latitude": 40.7589003,
+    "longitude": -73.9846166,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: raising the theatre \"took months, starting in January 2022 and finishing in early May\" 2022.",
+    "companyId": 688,
+    "company": "L&L Holding",
+    "category": "Architecture & Real Estate",
+    "utcStartDateTime": "2022-05-05T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T05:02:09.779Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 610,
+        "thumbName": "9f10dc58-cc4f-48a2-99a0-1d1e6c39eba5.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/MnIcCQR551o",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/MnIcCQR551o?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"The Insane Plan to Lift a New York Theatre\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1439,
+        "url": "https://commercialobserver.com/2022/05/palace-theatre-tsx-broadway/",
+        "title": "How the Palace Theatre Ended Up 30 Feet Above Manhattan – Commercial Observer",
+        "confidence": 85,
+        "publishedDate": "2022-05-09",
+        "utcCreatedDateTime": "2026-09-15T05:02:09.78058+00:00",
+        "pinId": 654
+      },
+      {
+        "id": 1440,
+        "url": "https://www.broadwayworld.com/article/Palace-Theatre-Completes-Lifting-as-Part-of-TSX-Broadway-Project-20220505",
+        "title": "Palace Theatre Completes Lifting as Part of TSX Broadway Project – BroadwayWorld",
+        "confidence": 78,
+        "publishedDate": "2022-05-05",
+        "utcCreatedDateTime": "2026-09-15T05:02:09.781277+00:00",
+        "pinId": 654
+      }
+    ],
+    "userId": 76
+  },
+  {
+    "id": 650,
+    "rootThread": false,
+    "title": "Hong Kong Opens the Sha Tin to Central Link's Cross-Harbour Extension",
+    "description": "Hong Kong's MTR opened the cross-harbour section of the Sha Tin to Central Link, an immersed-tube rail tunnel under Victoria Harbour that gave Hong Kong Island a fourth rail link to Kowloon.",
+    "sourceUrl": "https://www.youtube.com/watch?v=03AtIZjziJw",
+    "longFormSummary": "<ul><li>The Sha Tin to Central Link was built in two phases: an east-west Tuen Ma line across the New Territories, then a cross-harbour extension into Hong Kong Island.</li><li>Engineers built the harbour crossing as an immersed-tube tunnel, sinking prefabricated sections onto the seabed rather than boring through rock.</li><li>The project became Hong Kong's most expensive rail line and was dogged by construction scandals over falsified inspection records at one station.</li><li>Opening the cross-harbour section added a fourth heavy-rail crossing under Victoria Harbour, easing a route the MTR said carried more than a million daily trips.</li></ul>",
+    "address": "Exhibition Centre Station, Wan Chai North, Hong Kong",
+    "latitude": 22.2816132,
+    "longitude": 114.1756895,
+    "price": 11600000000,
+    "priceCurrency": "USD",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: the cross-harbour section was set to \"fully open on May 15,\" reported days ahead of the 2022 launch.",
+    "companyId": 684,
+    "company": "MTR Corporation",
+    "category": "Infrastructure & Transportation",
+    "utcStartDateTime": "2022-05-15T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T05:02:08.529Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 606,
+        "thumbName": "d5ae45ff-856a-430e-a7d0-f4651334a0ec.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/03AtIZjziJw",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/03AtIZjziJw?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Hong Kong&#39;s $11BN Underwater Railway Explained\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1431,
+        "url": "https://www.scmp.com/news/hong-kong/transport/article/3176527/what-can-commuters-expect-cross-harbour-section-hong-kongs",
+        "title": "What can commuters expect from cross-harbour section of Hong Kong’s most expensive rail project – SCMP",
+        "confidence": 85,
+        "publishedDate": "2022-05-05",
+        "utcCreatedDateTime": "2026-09-15T05:02:08.531343+00:00",
+        "pinId": 650
+      },
+      {
+        "id": 1432,
+        "url": "https://en.wikipedia.org/wiki/Sha_Tin_to_Central_Link",
+        "title": "Sha Tin to Central Link – Wikipedia",
+        "confidence": 76,
+        "publishedDate": "2022-05-15",
+        "utcCreatedDateTime": "2026-09-15T05:02:08.53203+00:00",
+        "pinId": 650
+      }
+    ],
+    "userId": 76
+  },
+  {
     "id": 180,
     "parentId": 179,
     "rootThread": false,
@@ -11254,6 +11583,59 @@
     "userId": 76
   },
   {
+    "id": 644,
+    "rootThread": false,
+    "title": "Gatwick Completes Main Runway Resurfacing",
+    "description": "Gatwick Airport finished an overnight resurfacing of its main runway's busiest sections in September 2022, using a leaner method that cut the job to half the usual time and material.",
+    "sourceUrl": "https://www.youtube.com/watch?v=MtkWdIYPJ1o",
+    "longFormSummary": "<ul><li>Gatwick's main runway hadn't been resurfaced since 2012, but a full traditional repaving was judged wasteful since much of it still had years of life left.</li><li>Crews instead resurfaced only the most heavily trafficked touchdown and taxi-off sections, working in narrow overnight windows between flights.</li><li>The approach used about 40,000 tonnes of asphalt versus the roughly 140,000 tonnes a full repave would need, cutting cost and carbon significantly.</li><li>The project wrapped up in September 2022, in around six months versus the year a conventional resurfacing would typically take.</li></ul>",
+    "address": "London Gatwick Airport, Horley, United Kingdom",
+    "latitude": 51.1540772,
+    "longitude": -0.1823226,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: London Gatwick \"has just completed (Sept 2022) an innovative plan to resurface its main runway\".",
+    "category": "Infrastructure & Transportation",
+    "utcStartDateTime": "2022-09-30T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:55:53.121Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 600,
+        "thumbName": "d4afb193-0868-46f5-9bc2-39f4d7693192.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/MtkWdIYPJ1o",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/MtkWdIYPJ1o?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"The Unbelievable Logistics of Fixing an Airport Runway\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1418,
+        "url": "https://en.newsroom.vinci-airports.com/news/london-gatwick-completes-its-main-runway-resurfacing-e9a9-46ae7.html",
+        "title": "London Gatwick completes its main runway resurfacing",
+        "confidence": 90,
+        "publishedDate": "2022-10-05",
+        "utcCreatedDateTime": "2026-09-15T04:55:53.129561+00:00",
+        "pinId": 644
+      },
+      {
+        "id": 1419,
+        "url": "https://www.businesstraveller.com/business-travel/2022/10/11/gatwick-hails-innovative-runway-resurfacing-initiative/",
+        "title": "Gatwick hails \"innovative\" runway resurfacing initiative",
+        "confidence": 78,
+        "publishedDate": "2022-10-11",
+        "utcCreatedDateTime": "2026-09-15T04:55:53.132864+00:00",
+        "pinId": 644
+      }
+    ],
+    "userId": 76
+  },
+  {
     "id": 185,
     "parentId": 184,
     "rootThread": false,
@@ -11541,6 +11923,59 @@
       }
     ],
     "userId": 1
+  },
+  {
+    "id": 642,
+    "rootThread": false,
+    "title": "CityGate Tower Completed in Gothenburg",
+    "description": "Skanska's CityGate tower, the tallest office building in the Nordic region, was completed in Gothenburg in autumn 2022 as part of the city's long-term development plan.",
+    "sourceUrl": "https://www.youtube.com/watch?v=KA8czEmq1cM",
+    "longFormSummary": "<ul><li>CityGate rises 144 metres over 36 floors in Gothenburg's Gårda district, making it the tallest office building in Scandinavia and the third tallest building in Sweden.</li><li>The tower is one visible piece of a much larger, decades-long Gothenburg Development Strategy covering port, transit and housing investment through 2035.</li><li>Built by Skanska between 2019 and 2022, it was designed to a high sustainability standard, targeting LEED Platinum certification.</li><li>Tenants began moving in during summer 2022, with the building fully completed that autumn.</li></ul>",
+    "address": "Fabriksgatan 2, Gårda, Gothenburg, Sweden",
+    "latitude": 57.70667,
+    "longitude": 11.99278,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: Citygate \"was developed and built by Skanska and was completed in the fall of 2022\".",
+    "companyId": 679,
+    "company": "Skanska",
+    "category": "Architecture & Real Estate",
+    "utcStartDateTime": "2022-10-31T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:55:52.355Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 598,
+        "thumbName": "99633511-f956-4dd7-99cb-ada3bab1d7c8.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/KA8czEmq1cM",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/KA8czEmq1cM?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Sweden's $100BN City Upgrade\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1414,
+        "url": "https://en.wikipedia.org/wiki/Gothenburg_City_Gate",
+        "title": "Gothenburg City Gate",
+        "confidence": 80,
+        "utcCreatedDateTime": "2026-09-15T04:55:52.356668+00:00",
+        "pinId": 642
+      },
+      {
+        "id": 1415,
+        "url": "https://www.skanska.com/se/en/construction-infrastructure/our-projects/citygate-gothenburg",
+        "title": "Citygate, Gothenburg - Skanska",
+        "confidence": 88,
+        "utcCreatedDateTime": "2026-09-15T04:55:52.357947+00:00",
+        "pinId": 642
+      }
+    ],
+    "userId": 76
   },
   {
     "id": 168,
@@ -13236,6 +13671,115 @@
     "userId": 76
   },
   {
+    "id": 627,
+    "rootThread": false,
+    "title": "GFP Real Estate Wins the Flatiron Building's Second Auction",
+    "description": "After the top bidder in the Flatiron Building's court-ordered auction failed to pay, a second sale handed New York's cake-slice tower to majority owner GFP Real Estate for $161.5 million.",
+    "sourceUrl": "https://www.youtube.com/watch?v=OPUlqYN4Z-k",
+    "longFormSummary": "<ul><li>Co-owners of the 1902 Flatiron Building sued to force a sale after a dispute over its future left the building empty and under scaffolding.</li><li>The first auction winner, Jacob Garlick, bid $190 million in March 2023 but could not produce the required deposit, voiding the sale.</li><li>A second auction was held in May 2023, and majority owner Jeffrey Gural’s GFP Real Estate won with a $161.5 million bid.</li><li>The sale finally cleared the way for the long-empty landmark to be renovated for a new use.</li></ul>",
+    "address": "175 5th Avenue, New York, NY 10010, USA",
+    "latitude": 40.7410592,
+    "longitude": -73.9896416,
+    "price": 161500000,
+    "priceCurrency": "USD",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: \"Jeffrey Gural won Tuesday's auction outside 60 Centre Street in Lower Manhattan with a bid for $161 million.\"",
+    "companyId": 669,
+    "company": "GFP Real Estate",
+    "category": "Architecture & Real Estate",
+    "utcStartDateTime": "2023-05-23T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:45:47.046Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 583,
+        "thumbName": "8761da11-0ef1-4035-ba07-38382130d246.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/OPUlqYN4Z-k",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/OPUlqYN4Z-k?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"The Flatiron: The Shocking Story of New York’s Strangest Tower\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1384,
+        "url": "https://therealdeal.com/new-york/2023/05/23/gurals-group-wins-auction-for-flatiron-building/",
+        "title": "Gural Wins Auction for Flatiron Building on Second Try - The Real Deal",
+        "confidence": 85,
+        "publishedDate": "2023-05-23",
+        "utcCreatedDateTime": "2026-09-15T04:45:47.049557+00:00",
+        "pinId": 627
+      },
+      {
+        "id": 1385,
+        "url": "https://ny1.com/nyc/all-boroughs/news/2023/05/24/flatiron-building-sells-at-auction-for--161-million",
+        "title": "Flatiron building sells at auction for $161 million - NY1",
+        "confidence": 80,
+        "publishedDate": "2023-05-24",
+        "utcCreatedDateTime": "2026-09-15T04:45:47.050376+00:00",
+        "pinId": 627
+      }
+    ],
+    "userId": 76
+  },
+  {
+    "id": 640,
+    "rootThread": false,
+    "title": "SeaWorld Abu Dhabi Opens",
+    "description": "SeaWorld's first park outside the US, built around what is billed as the world's largest aquarium habitat, opened on Yas Island in Abu Dhabi.",
+    "sourceUrl": "https://www.youtube.com/watch?v=Odc5ZYF-Lyo",
+    "longFormSummary": "<ul><li>The marine-life park sits on Yas Island alongside Abu Dhabi's other theme parks, and centres on an aquarium habitat engineered to hold roughly 58 million litres of water.</li><li>Building a tank at that scale required specialised acrylic panelling able to withstand extreme water pressure while still letting in enough light for tens of thousands of animals.</li><li>Unlike other SeaWorld parks, the Abu Dhabi site does not feature orcas, focusing instead on immersive habitat-style exhibits.</li><li>The park officially opened its doors on 23 May 2023, becoming SeaWorld's first location outside the United States.</li></ul>",
+    "address": "Yas Island, Abu Dhabi, United Arab Emirates",
+    "latitude": 24.4858693,
+    "longitude": 54.6189872,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: \"SeaWorld Yas Island, Abu Dhabi to open its doors on 23 May 2023\".",
+    "category": "Gaming & Entertainment",
+    "utcStartDateTime": "2023-05-23T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:55:51.721Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 596,
+        "thumbName": "de9c0016-2dd3-48d6-9599-1e36b51b3ef8.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/Odc5ZYF-Lyo",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/Odc5ZYF-Lyo?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Why the World’s Biggest Aquarium is Being Built in Secret\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1410,
+        "url": "https://www.seaworldabudhabi.com/en/news/opening-23-may-2023",
+        "title": "Miral announces SeaWorld Yas Island, Abu Dhabi to open its doors on 23 May 2023",
+        "confidence": 92,
+        "publishedDate": "2023-03-01",
+        "utcCreatedDateTime": "2026-09-15T04:55:51.723506+00:00",
+        "pinId": 640
+      },
+      {
+        "id": 1411,
+        "url": "https://en.wikipedia.org/wiki/SeaWorld_Abu_Dhabi",
+        "title": "SeaWorld Abu Dhabi",
+        "confidence": 80,
+        "utcCreatedDateTime": "2026-09-15T04:55:51.724204+00:00",
+        "pinId": 640
+      }
+    ],
+    "userId": 76
+  },
+  {
     "id": 205,
     "rootThread": false,
     "title": "Ukraine counteroffensive: Mud season should end last week of May or first week of June before Ukraining can move",
@@ -13830,6 +14374,15 @@
         "reasoning": "Wikipedia states \"In October 2023 ... the condo was put into receivership by the lenders\" after Mizrahi Developments defaulted on roughly $1.23 billion in debt, matching the pin's stored date and description exactly.",
         "utcCreatedDateTime": "2026-09-14T23:31:17.886225+00:00",
         "pinId": 542
+      },
+      {
+        "id": 1447,
+        "url": "https://www.youtube.com/watch?v=tmNwuM6rWKo",
+        "title": "This City is the Next New York – The B1M",
+        "confidence": 50,
+        "publishedDate": "2022-05-18",
+        "utcCreatedDateTime": "2026-09-15T05:02:10.821009+00:00",
+        "pinId": 542
       }
     ],
     "userId": 76
@@ -13898,6 +14451,61 @@
     "userId": 1
   },
   {
+    "id": 656,
+    "rootThread": false,
+    "title": "The Spiral Opens at Hudson Yards",
+    "description": "Bjarke Ingels Group's The Spiral, a 314-metre office tower wrapped in cascading green terraces, opened at 66 Hudson Boulevard as Pfizer's new global headquarters.",
+    "sourceUrl": "https://www.youtube.com/watch?v=UxROuGXAo5s",
+    "longFormSummary": "<ul><li>The Spiral is a 66-storey, 2.85-million-square-foot office tower developed by Tishman Speyer at Hudson Yards on Manhattan's far west side.</li><li>Bjarke Ingels Group designed the tower's outdoor terraces to wind continuously around the facade from base to roof, giving the building its name.</li><li>Pfizer signed on as anchor tenant and began moving staff into roughly 800,000 square feet across 11 floors starting in December 2022.</li><li>The tower was the fourth supertall building to rise from the Hudson Yards platform, built over a still-active Long Island Rail Road storage yard.</li></ul>",
+    "address": "The Spiral, 66 Hudson Boulevard East, Manhattan, New York, United States",
+    "latitude": 40.7552501,
+    "longitude": -73.9995817,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: \"The Spiral — a 2.8-million-square-foot office skyscraper located at 66 Hudson Blvd. in Manhattan — has officially opened,\" reported in November 2023.",
+    "companyId": 659,
+    "company": "Tishman Speyer",
+    "category": "Architecture & Real Estate",
+    "utcStartDateTime": "2023-11-07T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T05:02:10.443Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 612,
+        "thumbName": "94895e07-40f7-40bb-a34a-fde10c0e1702.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/UxROuGXAo5s",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/UxROuGXAo5s?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"New York&#39;s Tallest New Skyscraper Explained\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1443,
+        "url": "https://en.wikipedia.org/wiki/The_Spiral_(New_York_City)",
+        "title": "The Spiral (New York City) – Wikipedia",
+        "confidence": 76,
+        "publishedDate": "2023-11-07",
+        "utcCreatedDateTime": "2026-09-15T05:02:10.445311+00:00",
+        "pinId": 656
+      },
+      {
+        "id": 1444,
+        "url": "https://www.commercialcafe.com/blog/the-spiral-a-new-icon-on-the-new-york-city-skyline/",
+        "title": "Supertall Skyscraper The Spiral Reaches Completion in NYC – CommercialCafe",
+        "confidence": 74,
+        "publishedDate": "2023-11-07",
+        "utcCreatedDateTime": "2026-09-15T05:02:10.446073+00:00",
+        "pinId": 656
+      }
+    ],
+    "userId": 76
+  },
+  {
     "id": 606,
     "rootThread": false,
     "title": "The First Las Vegas Grand Prix Races Down the Strip",
@@ -13955,6 +14563,59 @@
     "userId": 76
   },
   {
+    "id": 635,
+    "rootThread": false,
+    "title": "Azabudai Hills' Mori JP Tower Completes as Japan's Tallest Building",
+    "description": "Mori Building's earthquake-engineered Main Tower at Azabudai Hills topped out in Tokyo, becoming Japan's first supertall skyscraper at 330 metres.",
+    "sourceUrl": "https://www.youtube.com/watch?v=51VYxQ8wpfc",
+    "longFormSummary": "<ul><li>Tokyo sits in one of the world’s most seismically active zones, which had long kept the city from building true supertall towers above 300 metres.</li><li>Mori Building’s Azabudai Hills complex includes the 330-metre Mori JP Tower, engineered with advanced damping systems to withstand major earthquakes.</li><li>On completion it overtook Osaka’s Abeno Harukas as Japan’s tallest building, a title expected to pass to the Tokyo Torch tower around 2028.</li><li>The tower anchors a larger mixed-use district blending office, residential, retail and green space in central Tokyo.</li></ul>",
+    "address": "Azabudai Hills, Minato, Tokyo, Japan",
+    "latitude": 35.6614747,
+    "longitude": 139.7408267,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: \"the Azabudai Hills Mori JP Tower in the development became the tallest building in Tokyo and Japan.\"",
+    "companyId": 344,
+    "company": "Mori Building",
+    "category": "Architecture & Real Estate",
+    "utcStartDateTime": "2023-11-24T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:45:49.850Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 591,
+        "thumbName": "292cb4df-b655-4c30-b4a2-cbafe7bbdcef.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/51VYxQ8wpfc",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/51VYxQ8wpfc?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Torch Tower: The Insane Engineering of Tokyo's First Supertall Skyscraper\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1400,
+        "url": "https://edition.cnn.com/style/article/japan-tallest-skyscraper-completed-intl-hnk/index.html",
+        "title": "Japan's tallest skyscraper Azabudai Hills Mori JP Tower completed in Tokyo - CNN",
+        "confidence": 85,
+        "utcCreatedDateTime": "2026-09-15T04:45:49.851969+00:00",
+        "pinId": 635
+      },
+      {
+        "id": 1401,
+        "url": "https://www.skyscrapercenter.com/building/mori-jp-tower/35022",
+        "title": "Mori JP Tower - The Skyscraper Center (CTBUH)",
+        "confidence": 88,
+        "utcCreatedDateTime": "2026-09-15T04:45:49.852972+00:00",
+        "pinId": 635
+      }
+    ],
+    "userId": 76
+  },
+  {
     "id": 459,
     "rootThread": false,
     "title": "All 41 Workers Freed After Silkyara Tunnel Collapse",
@@ -14003,6 +14664,61 @@
         "reasoning": "WebFetch could not retrieve the NDRF's own operations page (certificate error); India's National Disaster Response Force is the lead agency credited with the rescue, so its title is consistent with the pin's claim, though the page's content could not be verified directly.",
         "utcCreatedDateTime": "2026-09-14T20:13:44.143704+00:00",
         "pinId": 459
+      }
+    ],
+    "userId": 76
+  },
+  {
+    "id": 647,
+    "rootThread": false,
+    "title": "The Exchange TRX Opens in Kuala Lumpur",
+    "description": "The Exchange TRX, Lendlease's retail and lifestyle quarter at the heart of the Tun Razak Exchange financial district, opened to the public in Kuala Lumpur.",
+    "sourceUrl": "https://www.youtube.com/watch?v=neMIGDYqpqM",
+    "longFormSummary": "<ul><li>Tun Razak Exchange (TRX) is a 70-acre district being built as Kuala Lumpur's new international financial centre, with roughly 30 buildings planned across the site.</li><li>The Exchange TRX is the district's retail and lifestyle quarter, a joint venture between Lendlease and state-owned master developer TRX City.</li><li>The mall spans 1.3 million square feet of retail space wrapped around a 10-acre public park, and is Malaysia's first retail asset to reach LEED Gold certification.</li><li>Its opening followed years of construction that also brought HSBC and Prudential's new regional headquarters to the same district.</li></ul>",
+    "address": "Tun Razak Exchange, Jalan Tun Razak, Pinggiran TRX, Kuala Lumpur, Malaysia",
+    "latitude": 3.1427699,
+    "longitude": 101.7200049,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: \"A new chapter unfolds today in the heart of Kuala Lumpur, as The Exchange TRX opens its doors,\" dated 29 Nov 2023.",
+    "companyId": 682,
+    "company": "Lendlease",
+    "category": "Architecture & Real Estate",
+    "utcStartDateTime": "2023-11-29T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T05:02:07.334Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 603,
+        "thumbName": "4d492aef-7207-43b1-9f20-bac735115254.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/neMIGDYqpqM",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/neMIGDYqpqM?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Is This Asia&#39;s Next Financial Capital?\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1425,
+        "url": "https://www.lendlease.com/media-centre/media-releases/the-exchange-trx-opens-to-public/",
+        "title": "Kuala Lumpur's New Social Heart, The Exchange TRX, Opens to the Public – Lendlease",
+        "confidence": 92,
+        "publishedDate": "2023-11-29",
+        "utcCreatedDateTime": "2026-09-15T05:02:07.336202+00:00",
+        "pinId": 647
+      },
+      {
+        "id": 1426,
+        "url": "https://en.wikipedia.org/wiki/The_Exchange_TRX",
+        "title": "The Exchange TRX – Wikipedia",
+        "confidence": 75,
+        "publishedDate": "2023-11-29",
+        "utcCreatedDateTime": "2026-09-15T05:02:07.337263+00:00",
+        "pinId": 647
       }
     ],
     "userId": 76
@@ -14121,6 +14837,63 @@
     "userId": 76
   },
   {
+    "id": 653,
+    "rootThread": false,
+    "title": "Mexico Inaugurates the First Section of the Tren Maya",
+    "description": "Mexico inaugurated the first operating section of the Tren Maya, a roughly $10BN, 1,500km railway looping the Yucatan Peninsula that had drawn years of backlash from environmentalists and indigenous communities.",
+    "sourceUrl": "https://www.youtube.com/watch?v=yVwwY8EY2jU",
+    "longFormSummary": "<ul><li>Tren Maya is run by Fonatur, Mexico's tourism development agency, and is funded largely through tourist taxes rather than general government spending.</li><li>The railway loops the Yucatan Peninsula on a route that mixes newly built track with a previous, never-finished rail corridor.</li><li>Construction, which began in 2020, faced repeated legal challenges and work stoppages from groups warning of damage to Mayan archaeological sites and jungle habitat.</li><li>The inaugural section began running passenger service between Campeche and the Cancun area, with the rest of the network's phases opening in stages afterward.</li></ul>",
+    "address": "Cancún, Quintana Roo, Mexico",
+    "latitude": 21.1527467,
+    "longitude": -86.8425761,
+    "price": 10000000000,
+    "priceCurrency": "USD",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: Tren Maya's director promised in October 2023 to inaugurate the line \"in December 2023,\" and reporting confirms a partial inauguration went ahead on December 15, 2023.",
+    "companyId": 687,
+    "company": "Fonatur",
+    "category": "Infrastructure & Transportation",
+    "utcStartDateTime": "2023-12-15T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T05:02:09.369Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 609,
+        "thumbName": "86d0d739-73f4-4bba-8de4-8f0684a0d463.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/yVwwY8EY2jU",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/yVwwY8EY2jU?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"The $10BN Railway in the Jungle\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1437,
+        "url": "https://www.railwayage.com/passenger/intercity/tren-maya-opening-december-2023/",
+        "title": "Tren Maya Opening December 2023 – Railway Age",
+        "confidence": 82,
+        "publishedDate": "2023-11-01",
+        "utcCreatedDateTime": "2026-09-15T05:02:09.371663+00:00",
+        "pinId": 653
+      },
+      {
+        "id": 1438,
+        "url": "https://mexiconewsdaily.com/travel/60-day-countdown-to-inauguration-of-maya-train-begins/",
+        "title": "60-day countdown to inauguration of Maya Train begins – Mexico News Daily",
+        "confidence": 80,
+        "publishedDate": "2023-10-16",
+        "utcCreatedDateTime": "2026-09-15T05:02:09.372263+00:00",
+        "pinId": 653
+      }
+    ],
+    "userId": 76
+  },
+  {
     "id": 497,
     "rootThread": false,
     "title": "Bhutan Unveils the Gelephu Mindfulness City",
@@ -14225,6 +14998,15 @@
         "publishedDate": "2023-12-21",
         "reasoning": "Wikipedia independently confirms \"the tunnel opened for traffic on 21 December 2023,\" matching the pin's stored date exactly, and adds that construction began in June 2019 with the two sides connected in February 2022.",
         "utcCreatedDateTime": "2026-09-15T03:45:10.424678+00:00",
+        "pinId": 582
+      },
+      {
+        "id": 1446,
+        "url": "https://www.youtube.com/watch?v=kVD0hG-_5gQ",
+        "title": "Inside The World's First Undersea Roundabout – The B1M",
+        "confidence": 75,
+        "publishedDate": "2022-07-27",
+        "utcCreatedDateTime": "2026-09-15T05:02:10.818317+00:00",
         "pinId": 582
       }
     ],
@@ -14632,6 +15414,61 @@
     "userId": 76
   },
   {
+    "id": 643,
+    "rootThread": false,
+    "title": "Vogtle Unit 4 Enters Commercial Operation",
+    "description": "Georgia's Plant Vogtle Unit 4 entered commercial operation in April 2024, completing the first new nuclear reactors built from scratch in the US in over three decades.",
+    "sourceUrl": "https://www.youtube.com/watch?v=dyQMNVSxbNo",
+    "longFormSummary": "<ul><li>Plant Vogtle's Units 3 and 4 were the first new nuclear reactors built in the US since the 1990s, and the project ran years late and roughly double its original budget.</li><li>Unit 3 entered commercial operation in July 2023, becoming the first newly built US reactor in decades, after construction delays and a 2017 Westinghouse bankruptcy along the way.</li><li>Unit 4 followed, entering commercial operation on 29 April 2024 and completing the two-reactor expansion.</li><li>Together the units add about 2,200 megawatts of carbon-free power to Georgia's grid, reviving interest in nuclear construction across the US.</li></ul>",
+    "address": "Vogtle Electric Generating Plant, Waynesboro, Georgia, USA",
+    "latitude": 33.1394457,
+    "longitude": -81.7645928,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: \"Vogtle Unit 4 enters commercial operation\" on \"April 29, 2024\".",
+    "companyId": 680,
+    "company": "Georgia Power",
+    "category": "Energy",
+    "utcStartDateTime": "2024-04-29T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:55:52.777Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 599,
+        "thumbName": "abdeddf1-b918-4b2e-8f44-240860c49308.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/dyQMNVSxbNo",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/dyQMNVSxbNo?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Why Nuclear Power is Making a Comeback\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1416,
+        "url": "https://www.georgiapower.com/news-hub/press-releases/vogtle-unit-4-enters-commercial-operation.html",
+        "title": "Vogtle Unit 4 enters commercial operation",
+        "confidence": 92,
+        "publishedDate": "2024-04-29",
+        "utcCreatedDateTime": "2026-09-15T04:55:52.780102+00:00",
+        "pinId": 643
+      },
+      {
+        "id": 1417,
+        "url": "https://www.eia.gov/todayinenergy/detail.php?id=61963",
+        "title": "Plant Vogtle Unit 4 begins commercial operation",
+        "confidence": 90,
+        "publishedDate": "2024-05-01",
+        "utcCreatedDateTime": "2026-09-15T04:55:52.780888+00:00",
+        "pinId": 643
+      }
+    ],
+    "userId": 76
+  },
+  {
     "id": 587,
     "rootThread": false,
     "title": "Austerlitz Basin Opens to Clean Up the Seine for the Olympics",
@@ -14916,6 +15753,59 @@
         "reasoning": "FreightWaves could not be fetched due to a network restriction, but its headline about the Panama Canal Authority seeing the \"Rio Indio project as answer to future droughts\" and 1 January 2025 publish date follow the Supreme Court ruling described on the pin, supporting its stored 30 June 2024 date.",
         "utcCreatedDateTime": "2026-09-15T04:14:08.232134+00:00",
         "pinId": 592
+      }
+    ],
+    "userId": 76
+  },
+  {
+    "id": 649,
+    "rootThread": false,
+    "title": "Chicago's Century and Consumers Buildings Saved From Demolition",
+    "description": "The US General Services Administration reversed course on a $52M congressional earmark to demolish two historic Chicago Loop skyscrapers, opting to reuse them instead after a sustained preservation campaign.",
+    "sourceUrl": "https://www.youtube.com/watch?v=BmiDUw-MPWA",
+    "longFormSummary": "<ul><li>The Century and Consumers Buildings, completed in the 1910s, were early examples of the steel-frame Chicago School of Architecture pioneered after the Great Chicago Fire.</li><li>Congress had earmarked $52M to demolish both towers plus a smaller building between them, citing security concerns for the neighbouring Dirksen Federal Courthouse.</li><li>A federally mandated environmental review found demolition would cause meaningful harm to the historic structures, prompting the GSA to seek adaptive-reuse proposals instead.</li><li>Both buildings went on to receive official Chicago Landmark status, closing out a preservation fight that had run for more than a decade.</li></ul>",
+    "address": "220 South State Street, Loop, Chicago, Illinois, United States",
+    "latitude": 41.8789739,
+    "longitude": -87.6281601,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: the GSA released its final environmental review, \"ultimately choosing to reuse the vacant buildings rather than demolish them,\" reported August 2, 2024.",
+    "category": "Architecture & Real Estate",
+    "utcStartDateTime": "2024-08-02T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T05:02:08.152Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 605,
+        "thumbName": "bceb2f32-40e0-4ad0-8e3f-f5bc82f5447b.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/BmiDUw-MPWA",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/BmiDUw-MPWA?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"The US Government Wants to Destroy These Towers\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1429,
+        "url": "https://chicago.suntimes.com/architecture-design/2024/08/02/century-consumers-buildings-skyscrapers-saved-gsa-federal-goverment-dirksen-security",
+        "title": "Century-old Loop skyscrapers to be preserved, federal agency decides – Chicago Sun-Times",
+        "confidence": 90,
+        "publishedDate": "2024-08-02",
+        "utcCreatedDateTime": "2026-09-15T05:02:08.15535+00:00",
+        "pinId": 649
+      },
+      {
+        "id": 1430,
+        "url": "https://www.archpaper.com/2024/08/gsa-preserve-century-consumer-buildings-chicago/",
+        "title": "GSA opts to preserve Century & Consumer Buildings in Chicago – The Architect’s Newspaper",
+        "confidence": 82,
+        "publishedDate": "2024-08-05",
+        "utcCreatedDateTime": "2026-09-15T05:02:08.155977+00:00",
+        "pinId": 649
       }
     ],
     "userId": 76
@@ -15953,6 +16843,57 @@
     "userId": 76
   },
   {
+    "id": 641,
+    "rootThread": false,
+    "title": "Egypt's Iconic Tower Completed",
+    "description": "The 394-metre Iconic Tower in Egypt's New Administrative Capital was completed in 2024, becoming Africa's first supertall skyscraper and its tallest building.",
+    "sourceUrl": "https://www.youtube.com/watch?v=rmJuBKxPnYk",
+    "longFormSummary": "<ul><li>The Iconic Tower anchors the government and business district of Egypt's New Administrative Capital, a new city being built from scratch in the desert east of Cairo.</li><li>At 394 metres and 77 storeys, it overtook Algiers' Great Mosque tower to become Africa's tallest building, and is a mixed-use structure combining offices, a hotel and residences.</li><li>Construction began in 2018 and the structure topped out in August 2021, with fit-out and finishing work continuing for several more years.</li><li>The tower reached completion in 2024, alongside the wider first-phase relocation of Egyptian government ministries to the new capital.</li></ul>",
+    "address": "New Administrative Capital, Egypt",
+    "latitude": 30.01278,
+    "longitude": 31.69389,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: the Iconic Tower's \"official completion date was 2024\".",
+    "category": "Architecture & Real Estate",
+    "utcStartDateTime": "2024-12-31T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:55:52.018Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 597,
+        "thumbName": "496df614-bf78-440d-a0b0-be72b3b4f4c1.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/rmJuBKxPnYk",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/rmJuBKxPnYk?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Egypt Built a Supertall Skyscraper in the Desert\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1412,
+        "url": "https://en.wikipedia.org/wiki/Iconic_Tower_(Egypt)",
+        "title": "Iconic Tower (Egypt)",
+        "confidence": 82,
+        "utcCreatedDateTime": "2026-09-15T04:55:52.023352+00:00",
+        "pinId": 641
+      },
+      {
+        "id": 1413,
+        "url": "https://www.skyscrapercenter.com/building/iconic-tower/34420",
+        "title": "Iconic Tower - The Skyscraper Center",
+        "confidence": 88,
+        "utcCreatedDateTime": "2026-09-15T04:55:52.02418+00:00",
+        "pinId": 641
+      }
+    ],
+    "userId": 76
+  },
+  {
     "id": 152,
     "rootThread": false,
     "title": "Robots That Make 400 Burgers an Hour May Soon Take over Fast Food Restaurants",
@@ -16867,6 +17808,61 @@
     "userId": 76
   },
   {
+    "id": 648,
+    "rootThread": false,
+    "title": "Xi'an International Football Center Hosts Its First Match",
+    "description": "Zaha Hadid Architects' 60,000-seat Xi'an International Football Center hosted its first official match, years after construction began in a city better known for ancient dynasties than football.",
+    "sourceUrl": "https://www.youtube.com/watch?v=zWiPoZ6me3w",
+    "longFormSummary": "<ul><li>The stadium sits in Xi'an's Fengdong New District, a planned area built to modernise the western Chinese region with new business and research hubs.</li><li>Zaha Hadid Architects used digital modelling and Unreal Engine simulations to shape the stadium's sweeping roof and wind-resistant facade before construction began.</li><li>A tensioned cable-net roof with a translucent membrane covers the seating bowl, cutting the amount of material needed compared with a conventional structure.</li><li>Construction started in 2020 and the stadium was structurally finished well before its 2025 opening, having originally been timed for a tournament China ultimately did not host.</li></ul>",
+    "address": "Xi'an International Football Center, Fengdong New District, Xi'an, Shaanxi, China",
+    "latitude": 34.2812236,
+    "longitude": 108.7658274,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: \"On 3 September 2025, the Xi'an International Football Center held its first official match.\"",
+    "companyId": 146,
+    "company": "Zaha Hadid Architects",
+    "category": "Sports",
+    "utcStartDateTime": "2025-09-03T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T05:02:07.768Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 604,
+        "thumbName": "87b996e3-38f8-4220-a456-7733fbbc35eb.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/zWiPoZ6me3w",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/zWiPoZ6me3w?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"China Has Reinvented the Stadium\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1427,
+        "url": "https://en.wikipedia.org/wiki/Xi'an_International_Football_Center",
+        "title": "Xi'an International Football Center – Wikipedia",
+        "confidence": 80,
+        "publishedDate": "2025-09-03",
+        "utcCreatedDateTime": "2026-09-15T05:02:07.770979+00:00",
+        "pinId": 648
+      },
+      {
+        "id": 1428,
+        "url": "https://www.archdaily.com/1036201/xian-international-football-centre-zaha-hadid-architects-plus-idea-plus-aisa",
+        "title": "Xi'an International Football Center / Zaha Hadid Architects – ArchDaily",
+        "confidence": 78,
+        "publishedDate": "2025-10-10",
+        "utcCreatedDateTime": "2026-09-15T05:02:07.771926+00:00",
+        "pinId": 648
+      }
+    ],
+    "userId": 76
+  },
+  {
     "id": 279,
     "rootThread": false,
     "title": "Grand Ethiopian Renaissance Dam Inaugurated",
@@ -17204,6 +18200,172 @@
         "reasoning": "The Cleveland Fed's district update (dated 26 March 2025) reports Pathfinder 1 was being tested in California while Akron's team supported future-airship development, not a flight from the Akron Airdock itself - tangential background predating the pin's stored 1 October 2025 date.",
         "utcCreatedDateTime": "2026-09-14T19:49:21.254686+00:00",
         "pinId": 444
+      }
+    ],
+    "userId": 76
+  },
+  {
+    "id": 646,
+    "rootThread": false,
+    "title": "FOUR Frankfurt's Tallest Tower Opens in Europe's New Skyscraper Capital",
+    "description": "FOUR Frankfurt's 233-metre Tower 1, the centrepiece of a four-tower mixed-use complex, received its occupancy certificate, capping a project that helped cement Frankfurt as continental Europe's densest skyscraper cluster.",
+    "sourceUrl": "https://www.youtube.com/watch?v=c0KepxCutTQ",
+    "longFormSummary": "<ul><li>FOUR Frankfurt is a four-tower complex rising in the city's Deutsche Bank triangle, mixing offices, a hotel, apartments and shops around a shared public plaza.</li><li>Tower 1, designed by UNStudio, is the tallest of the four at 233 metres and topped out in 2023 before finishing internal fit-out.</li><li>Frankfurt builds taller than almost anywhere else in Europe partly because a 70-kilometre green belt around the city rules out sprawling outward.</li><li>Tower 4, the smallest of the complex, opened first in November 2023, with the remaining towers following it into service.</li></ul>",
+    "address": "FOUR Frankfurt, Junghofstraße, Innenstadt, Frankfurt am Main, Hessen, Germany",
+    "latitude": 50.1123735,
+    "longitude": 8.6746988,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Confirmed by building trackers: Tower 1 topped out at its full 233-metre height in May 2023 and went on to obtain its occupancy certificate on October 10, 2025, after interior fit-out.",
+    "category": "Architecture & Real Estate",
+    "utcStartDateTime": "2025-10-10T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T05:02:06.631Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 602,
+        "thumbName": "5cc2097a-dfcf-47cd-a7f2-d8c9b5db9048.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/c0KepxCutTQ",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/c0KepxCutTQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Europe’s New Skyscraper Capital Isn’t Where You Think\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1423,
+        "url": "https://en.wikipedia.org/wiki/Four_(Frankfurt)",
+        "title": "Four (Frankfurt) – Wikipedia",
+        "confidence": 78,
+        "publishedDate": "2025-10-01",
+        "utcCreatedDateTime": "2026-09-15T05:02:06.689961+00:00",
+        "pinId": 646
+      },
+      {
+        "id": 1424,
+        "url": "https://www.skydb.net/building/90065474/four-frankfurt-tower-1/",
+        "title": "FOUR Frankfurt – Tower 1 – SKYDB",
+        "confidence": 74,
+        "publishedDate": "2025-10-10",
+        "utcCreatedDateTime": "2026-09-15T05:02:06.692464+00:00",
+        "pinId": 646
+      }
+    ],
+    "userId": 76
+  },
+  {
+    "id": 630,
+    "rootThread": false,
+    "title": "JPMorgan Chase Opens Its New 270 Park Avenue Headquarters",
+    "description": "JPMorgan Chase held a ribbon-cutting for its new Norman Foster-designed global headquarters, a supertall replacement for the demolished Union Carbide Building.",
+    "sourceUrl": "https://www.youtube.com/watch?v=kGVQilZ6_ZU",
+    "longFormSummary": "<ul><li>JPMorgan demolished its old headquarters at 270 Park Avenue, the tallest building ever voluntarily torn down, to make way for the new tower.</li><li>Designed by Foster + Partners, the 1,388-foot, 60-story building holds 2.5 million square feet of office space for roughly 14,000 employees.</li><li>The bank spent around $4 billion on the project, betting on premium office space to lure staff back after the pandemic reshaped the market.</li><li>It opened as New York’s largest all-electric office tower, powered by upstate hydroelectric power under a net-zero operations target.</li></ul>",
+    "address": "270 Park Avenue, New York, NY 10017, USA",
+    "latitude": 40.7559787,
+    "longitude": -73.9759701,
+    "price": 4000000000,
+    "priceCurrency": "USD",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: \"JPMorganChase officially opened its new global headquarters at 270 Park Avenue.\"",
+    "companyId": 672,
+    "company": "JPMorgan Chase",
+    "category": "Architecture & Real Estate",
+    "utcStartDateTime": "2025-10-21T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:45:48.124Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 586,
+        "thumbName": "567ce438-f8cb-42e8-a841-96081a0e6f60.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/kGVQilZ6_ZU",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/kGVQilZ6_ZU?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"270 Park Avenue: New York's $3BN Skyscraper Explained\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1390,
+        "url": "https://www.jpmorganchase.com/newsroom/stories/jpmc-celebrates-new-global-hq-at-270-park-ave",
+        "title": "JPMorganChase Celebrates Grand Opening of New Global Headquarters at 270 Park Avenue",
+        "confidence": 95,
+        "publishedDate": "2025-10-21",
+        "utcCreatedDateTime": "2026-09-15T04:45:48.125548+00:00",
+        "pinId": 630
+      },
+      {
+        "id": 1391,
+        "url": "https://www.cnbc.com/2025/10/21/jpmorgan-park-avenue-manhattan-headquarters.html",
+        "title": "JPMorgan seeks to attract staff with $3 billion skyscraper in New York - CNBC",
+        "confidence": 82,
+        "publishedDate": "2025-10-21",
+        "utcCreatedDateTime": "2026-09-15T04:45:48.126656+00:00",
+        "pinId": 630
+      }
+    ],
+    "userId": 76
+  },
+  {
+    "id": 628,
+    "rootThread": false,
+    "title": "Golden Gate Bridge District Approves Final $1BN Seismic Retrofit Phase",
+    "description": "The district that runs the Golden Gate Bridge signed off on roughly $1 billion in funding for the final stage of a decades-long project to keep the span standing through a major earthquake.",
+    "sourceUrl": "https://www.youtube.com/watch?v=QcV1btTEAVg",
+    "longFormSummary": "<ul><li>The Golden Gate Bridge has been undergoing a seismic retrofit in phases since the 1990s to prepare it for a major San Andreas or Hayward Fault earthquake.</li><li>In October 2025 the bridge district’s board authorized about $1 billion for the retrofit’s final contract, covering the remaining approach viaducts and towers.</li><li>The work is split into two sub-phases and is expected to keep crews on site into the mid-2030s.</li><li>Officials frame the retrofit as essential not just to preserve an icon but to keep the Bay Area’s road network functioning after a major quake.</li></ul>",
+    "address": "Golden Gate Bridge, San Francisco, CA, USA",
+    "latitude": 37.8166541,
+    "longitude": -122.4782507,
+    "price": 1010000000,
+    "priceCurrency": "USD",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: \"voted Friday to authorize about $1.01 billion in allocations toward the project.\"",
+    "companyId": 670,
+    "company": "Golden Gate Bridge, Highway and Transportation District",
+    "category": "Infrastructure & Transportation",
+    "utcStartDateTime": "2025-10-24T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:45:47.448Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 584,
+        "thumbName": "a8ea9aee-13df-421a-a8a9-42f2896c4cd6.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/QcV1btTEAVg",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/QcV1btTEAVg?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"The $1BN Race to Save The Golden Gate Bridge\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1386,
+        "url": "https://www.pressdemocrat.com/2025/10/24/golden-gate-bridge-district-approves-1b-in-seismic-retrofit-work/",
+        "title": "Golden Gate Bridge district approves $1B in seismic retrofit work - Press Democrat",
+        "confidence": 85,
+        "publishedDate": "2025-10-24",
+        "utcCreatedDateTime": "2026-09-15T04:45:47.451254+00:00",
+        "pinId": 628
+      },
+      {
+        "id": 1387,
+        "url": "https://www.roadsbridges.com/bridge-construction/news/55328513/golden-gate-bridge-seismic-retrofit-secures-1-billion-in-additional-funding-for-final-phase",
+        "title": "Golden Gate Bridge Seismic Retrofit Secures $1 Billion in Additional Funding for Final Phase - Roads & Bridges",
+        "confidence": 78,
+        "utcCreatedDateTime": "2026-09-15T04:45:47.452376+00:00",
+        "pinId": 628
       }
     ],
     "userId": 76
@@ -18880,6 +20042,60 @@
     "userId": 51
   },
   {
+    "id": 629,
+    "rootThread": false,
+    "title": "Amtrak Unveils New Design for the Penn Station Overhaul",
+    "description": "Amtrak and its newly chosen builders showed the public a first look at the redesigned Penn Station concourse, the latest step in a federal takeover of the long-delayed rebuild.",
+    "sourceUrl": "https://www.youtube.com/watch?v=EygmKG8_p4E",
+    "longFormSummary": "<ul><li>Penn Station has been criticized for decades as a cramped, low-ceilinged basement version of the grand 1910 original that was demolished in the 1960s.</li><li>New York approved a $7 billion redevelopment plan in 2021, but progress stalled for years under a mix of state and federal oversight.</li><li>In 2025 the U.S. DOT and Amtrak took control of the project from the MTA and picked a Halmar/Skanska joint venture to lead construction.</li><li>In June 2026 officials unveiled renderings of the new station design, though construction is not expected to break ground until late 2027.</li></ul>",
+    "address": "Penn Station, New York, NY, USA",
+    "latitude": 40.7503468,
+    "longitude": -73.991203,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: \"unveiled the design renderings for the once-in-a-generation redevelopment of New York Penn Station.\"",
+    "companyId": 671,
+    "company": "Amtrak",
+    "category": "Infrastructure & Transportation",
+    "utcStartDateTime": "2026-06-08T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:45:47.840Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 585,
+        "thumbName": "d97e547e-67c0-4483-889a-8391192df295.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/EygmKG8_p4E",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/EygmKG8_p4E?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Penn Station: The $7BN Plan to Save New York's Most Hated Train Station\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1388,
+        "url": "https://media.amtrak.com/2026/06/historic-again-president-trumps-transportation-secretary-sean-p-duffy-amtrak-and-penn-transformation-partners-halmar-skanska-unveil-design-for-overhaul-of-new-york-penn-station/",
+        "title": "Amtrak Unveils Design for Overhaul of New York Penn Station - Amtrak Media",
+        "confidence": 92,
+        "publishedDate": "2026-06-08",
+        "utcCreatedDateTime": "2026-09-15T04:45:47.842276+00:00",
+        "pinId": 629
+      },
+      {
+        "id": 1389,
+        "url": "https://media.amtrak.com/2026/05/penn-station-update-trumps-transportation-secretary-sean-p-duffy-amtrak-announce-penn-transformation-partners-halmar-and-skanska-as-master-developer-team-for-new-york-penn-station-renovation/",
+        "title": "Amtrak Announces Penn Transformation Partners as Master Developer - Amtrak Media",
+        "confidence": 90,
+        "utcCreatedDateTime": "2026-09-15T04:45:47.842886+00:00",
+        "pinId": 629
+      }
+    ],
+    "userId": 76
+  },
+  {
     "id": 405,
     "rootThread": false,
     "title": "Toy Story 5 Opens in Theaters",
@@ -19240,6 +20456,61 @@
         "reasoning": "Bundaberg Today's own headline, \"Premier Says Paradise Dam Will Be Rebuilt,\" carries the same 7 July 2026 date as ABC's report, independently corroborating the pin's stored date, though the article itself returned a 403 error and could not be retrieved.",
         "utcCreatedDateTime": "2026-09-15T03:31:24.497138+00:00",
         "pinId": 570
+      }
+    ],
+    "userId": 76
+  },
+  {
+    "id": 645,
+    "rootThread": false,
+    "title": "2 World Trade Center Construction Restarts",
+    "description": "After 14 years of stalled foundations, construction officially restarted on 2 World Trade Center with a groundbreaking ceremony, anchored by American Express as its future headquarters tenant.",
+    "sourceUrl": "https://www.youtube.com/watch?v=juW1fisteWE",
+    "longFormSummary": "<ul><li>2 World Trade Center is the last major tower planned for the Ground Zero site, and its foundations sat unfinished behind murals from 2012 onward after earlier tenant deals repeatedly fell through.</li><li>American Express committed in February 2026 to anchor the Foster + Partners-designed, 55-storey tower as its new global headquarters, reviving the stalled project.</li><li>A ceremonial groundbreaking marking the official restart of construction was held on 9 July 2026, timed near the 25th anniversary of the 9/11 attacks.</li><li>The building is expected to add roughly 1.95 million square feet of office space and complete the office component of the 16-acre World Trade Center campus.</li></ul>",
+    "address": "200 Greenwich Street, New York, NY, USA",
+    "latitude": 40.7122823,
+    "longitude": -74.0112433,
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Happened as dated, per the source: a \"groundbreaking ceremony held for new 2 World Trade Center\" took place on \"July 9, 2026\".",
+    "companyId": 681,
+    "company": "Silverstein Properties",
+    "category": "Architecture & Real Estate",
+    "utcStartDateTime": "2026-07-09T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:55:53.408Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 601,
+        "thumbName": "ae99d8b7-cd14-4df7-ad30-6fbe11cfadbe.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/juW1fisteWE",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/juW1fisteWE?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Why No One Wants This New York Skyscraper\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1420,
+        "url": "https://www.governor.ny.gov/news/governor-hochul-celebrates-groundbreaking-new-american-express-global-headquarters-2-world",
+        "title": "Governor Hochul Celebrates Groundbreaking for American Express HQ at 2 World Trade Center",
+        "confidence": 90,
+        "publishedDate": "2026-07-09",
+        "utcCreatedDateTime": "2026-09-15T04:55:53.410201+00:00",
+        "pinId": 645
+      },
+      {
+        "id": 1421,
+        "url": "https://ny1.com/nyc/manhattan/news/2026/07/09/groundbreaking-ceremony-held-for-new-2-world-trade-center",
+        "title": "Groundbreaking ceremony held for new 2 World Trade Center",
+        "confidence": 84,
+        "publishedDate": "2026-07-09",
+        "utcCreatedDateTime": "2026-09-15T04:55:53.410809+00:00",
+        "pinId": 645
       }
     ],
     "userId": 76
@@ -28557,6 +29828,63 @@
     "userId": 76
   },
   {
+    "id": 652,
+    "rootThread": false,
+    "title": "Denver Airport's Great Hall Program Targets 2027 Completion",
+    "description": "Denver International Airport's long-running Great Hall renovation, meant to modernise its original 1995 terminal and add new security checkpoints, is now scheduled to finish by the end of 2027.",
+    "sourceUrl": "https://www.youtube.com/watch?v=oOYqnZ9xNvc",
+    "longFormSummary": "<ul><li>Denver International Airport opened in 1995, itself 16 months late and roughly $2BN over budget, which helped spawn decades of conspiracy theories about the site.</li><li>The Great Hall Program, launched in 2018, is rebuilding the terminal's security screening, train system and public concourse to handle growth past the airport's original 50-million-passenger design.</li><li>The programme's budget and schedule shifted repeatedly over the years, including a rebid of the original construction contract early on.</li><li>A new East Security Checkpoint opened in August 2025 as part of the project's final phase, ahead of the programme's full scheduled completion.</li></ul>",
+    "address": "Denver International Airport, 8500 Peña Boulevard, Denver, Colorado, United States",
+    "latitude": 39.8606676,
+    "longitude": -104.6853673,
+    "price": 1300000000,
+    "priceCurrency": "USD",
+    "dateConfidence": "scheduled",
+    "dateConfidenceReasoning": "Given as scheduled, per the source: \"the airport says work will be completed on time and on budget in 2027.\"",
+    "companyId": 686,
+    "company": "Denver International Airport",
+    "category": "Infrastructure & Transportation",
+    "utcStartDateTime": "2027-12-31T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T05:02:09.122Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 608,
+        "thumbName": "512f0015-0a9d-4262-9891-f73b35c41040.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/oOYqnZ9xNvc",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/oOYqnZ9xNvc?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Denver Airport: $4BN Upgrade of the World’s Weirdest Airport\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1435,
+        "url": "https://www.cbsnews.com/colorado/news/denver-international-airport-final-phase-great-hall-renovation-future-projects/",
+        "title": "Denver International Airport unveils final phase of Great Hall renovation – CBS Colorado",
+        "confidence": 85,
+        "publishedDate": "2025-02-18",
+        "utcCreatedDateTime": "2026-09-15T05:02:09.133803+00:00",
+        "pinId": 652
+      },
+      {
+        "id": 1436,
+        "url": "https://www.flydenver.com/about-den/projects-and-infrastructure/great-hall-program/",
+        "title": "Great Hall Program – Denver International Airport",
+        "confidence": 90,
+        "publishedDate": "2025-02-18",
+        "utcCreatedDateTime": "2026-09-15T05:02:09.134489+00:00",
+        "pinId": 652
+      }
+    ],
+    "userId": 76
+  },
+  {
     "id": 540,
     "rootThread": false,
     "title": "Bogotá Metro Line 1 Targets 2028 Opening",
@@ -29694,6 +31022,165 @@
     "userId": 76
   },
   {
+    "id": 637,
+    "rootThread": false,
+    "title": "Sydney Western Harbour Tunnel Set to Open",
+    "description": "Sydney's Western Harbour Tunnel, redesigned mid-build from a cut-and-cover crossing to twin bored tunnels, is on track to open beneath the harbour in 2028.",
+    "sourceUrl": "https://www.youtube.com/watch?v=U2G_bLEGwmY",
+    "longFormSummary": "<ul><li>The original harbour-crossing plan was scrapped in 2022 in favour of deep-bored twin tunnels using tunnel boring machines, pushing the finish date out from 2025-26 to 2028.</li><li>The tunnels will link the WestConnex Rozelle Interchange with the Warringah Freeway at Cammeray, running six lanes beneath Sydney Harbour.</li><li>Tunnel boring machines were expected to launch under the harbour itself in mid-2026, with the crossing on track for a late-2028 opening as Australia's first tag-free toll road.</li><li>It is designed to ease chronic congestion on the Sydney Harbour Bridge and Harbour Tunnel, which together carry hundreds of thousands of vehicle trips a day.</li></ul>",
+    "address": "Warringah Freeway, Cammeray, Sydney, NSW, Australia",
+    "latitude": -33.8454102,
+    "longitude": 151.1920261,
+    "dateConfidence": "scheduled",
+    "dateConfidenceReasoning": "Given as scheduled, per the source: \"Western Harbour Tunnel remaining on track to open to traffic in 2028\".",
+    "category": "Infrastructure & Transportation",
+    "utcStartDateTime": "2028-12-31T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:55:50.227Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 593,
+        "thumbName": "064b7d48-2fa4-4266-bc77-13976418d0d5.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/U2G_bLEGwmY",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/U2G_bLEGwmY?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Sydney's $5BN Tunnel U-Turn\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1404,
+        "url": "https://www.nsw.gov.au/ministerial-releases/second-giant-tunnel-boring-machine-begins-excavating-for-western-harbour-tunnel",
+        "title": "Second giant Tunnel Boring Machine begins excavating for the Western Harbour Tunnel",
+        "confidence": 88,
+        "utcCreatedDateTime": "2026-09-15T04:55:50.279711+00:00",
+        "pinId": 637
+      },
+      {
+        "id": 1405,
+        "url": "https://www.timeout.com/sydney/news/sydneys-game-changing-new-under-harbour-tunnel-is-set-to-open-in-2028-heres-what-that-means-for-your-commute-060926",
+        "title": "Sydney's new under-harbour tunnel is set to open in 2028",
+        "confidence": 76,
+        "publishedDate": "2026-06-09",
+        "utcCreatedDateTime": "2026-09-15T04:55:50.281105+00:00",
+        "pinId": 637
+      }
+    ],
+    "userId": 76
+  },
+  {
+    "id": 655,
+    "rootThread": false,
+    "title": "The Fox: NGV Contemporary Targets a 2028 Opening in Melbourne",
+    "description": "The National Gallery of Victoria's new contemporary art wing, The Fox: NGV Contemporary, is under construction in Melbourne's Southbank arts precinct with a targeted 2028 opening, part of a rivalry with Hobart's MONA.",
+    "sourceUrl": "https://www.youtube.com/watch?v=DnP-oO1bMok",
+    "longFormSummary": "<ul><li>NGV Contemporary is planned as Australia's largest gallery dedicated to contemporary art, design, fashion and architecture, built by Lendlease in Melbourne's Southbank arts precinct.</li><li>The project is partly framed as a response to Hobart's MONA, the privately funded museum credited with reviving Tasmania's tourism economy after it opened in 2011.</li><li>Melbourne is competing with Hobart's cultural drawing power as its own population and economy have grown, aiming to reclaim ground as Australia's cultural capital.</li><li>Candalepas Associates won the design competition for the building, which broke ground in the Melbourne Arts Precinct after years of planning.</li></ul>",
+    "address": "The Fox: NGV Contemporary, 77-87 Southbank Boulevard, Southbank, Melbourne, Victoria, Australia",
+    "latitude": -37.8228679,
+    "longitude": 144.9670987,
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Given as a target, not a fixed date, per the source: NGV Contemporary \"is slated to open in 2028.\"",
+    "companyId": 689,
+    "company": "National Gallery of Victoria",
+    "category": "Architecture & Real Estate",
+    "utcStartDateTime": "2028-12-31T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T05:02:10.122Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 611,
+        "thumbName": "da41b2c6-82fb-44ab-ab76-799dbca606aa.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/DnP-oO1bMok",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/DnP-oO1bMok?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"This Is Australia’s Weirdest Construction Rivalry\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1441,
+        "url": "https://www.theartnewspaper.com/2022/04/22/national-gallery-victoria-melbourne-74m-new-contemporary-art-museum",
+        "title": "National Gallery of Victoria receives $74m to build Australia’s largest contemporary art museum – The Art Newspaper",
+        "confidence": 80,
+        "publishedDate": "2022-04-22",
+        "utcCreatedDateTime": "2026-09-15T05:02:10.124029+00:00",
+        "pinId": 655
+      },
+      {
+        "id": 1442,
+        "url": "https://www.theurbandeveloper.com/articles/melbourne-winning-nvg-contemporary-design-candalepas",
+        "title": "Victoria Unveils Winning NGV Contemporary Design – The Urban Developer",
+        "confidence": 72,
+        "publishedDate": "2022-04-01",
+        "utcCreatedDateTime": "2026-09-15T05:02:10.124577+00:00",
+        "pinId": 655
+      }
+    ],
+    "userId": 76
+  },
+  {
+    "id": 639,
+    "rootThread": false,
+    "title": "BQE Rebuild Pushed Back to a 2029 Start",
+    "description": "New York's plan to rebuild the crumbling triple-cantilever section of the Brooklyn-Queens Expressway now targets a 2029 construction start after yet another mayoral reset.",
+    "sourceUrl": "https://www.youtube.com/watch?v=1fYvVt3ckfc",
+    "longFormSummary": "<ul><li>The BQE's triple-cantilever stretch through Brooklyn Heights has been patched for decades while successive administrations shelved full reconstruction plans.</li><li>A 2022 push under Mayor Adams aimed for a design process wrapping up with construction starting in 2026, alongside interim weekend repair closures.</li><li>That timeline slipped again; Mayor Mamdani unveiled a new $4BN plan in August 2026 that keeps the existing lane configuration and adds a temporary Furman Street bypass.</li><li>Under the new plan, environmental review starts in 2028, construction begins in 2029, and the rebuilt highway is due to open by 2040.</li></ul>",
+    "address": "Brooklyn Heights Promenade, Brooklyn, New York, USA",
+    "latitude": 40.6973713,
+    "longitude": -73.9973894,
+    "dateConfidence": "delayed",
+    "dateConfidenceReasoning": "Given as scheduled, per the source: construction on the BQE Central plan is set to begin in \"2029\" with completion by \"2040\".",
+    "category": "Infrastructure & Transportation",
+    "utcStartDateTime": "2029-01-01T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:55:51.378Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 595,
+        "thumbName": "930837af-e52b-4332-b3fe-7a0fb006b0d5.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/1fYvVt3ckfc",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/1fYvVt3ckfc?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"New York's Most Hated Highway is Falling Apart\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1408,
+        "url": "https://nyc.streetsblog.org/2026/08/24/mamdani-bqe-plan-august-2026",
+        "title": "Mamdani Will Rebuild the BQE to Last Until 2080",
+        "confidence": 82,
+        "publishedDate": "2026-08-24",
+        "utcCreatedDateTime": "2026-09-15T04:55:51.380196+00:00",
+        "pinId": 639
+      },
+      {
+        "id": 1409,
+        "url": "https://www.nyc.gov/html/dot/html/infrastructure/bqecentral.shtml",
+        "title": "NYC DOT - BQE Central Project",
+        "confidence": 88,
+        "utcCreatedDateTime": "2026-09-15T04:55:51.381298+00:00",
+        "pinId": 639
+      }
+    ],
+    "userId": 76
+  },
+  {
     "id": 243,
     "rootThread": false,
     "title": "Extremely Large Telescope First Light",
@@ -29959,6 +31446,15 @@
         "publishedDate": "2026-01-01",
         "reasoning": "Reports Sund & Baelt/Femern's own statement that opening has slipped roughly two years past the pin's stored 2029 date, to no earlier than 2031, due to delays lowering the immersed tunnel segments; no single exact day has been set for the new target.",
         "utcCreatedDateTime": "2026-09-15T03:19:56.084193+00:00",
+        "pinId": 220
+      },
+      {
+        "id": 1422,
+        "url": "https://www.theb1m.com/video/building-the-fehmarn-belt-fixed-link",
+        "title": "The Insane Scale of Europe's New Mega-Tunnel (The B1M)",
+        "confidence": 74,
+        "publishedDate": "2022-11-23",
+        "utcCreatedDateTime": "2026-09-15T04:56:08.221766+00:00",
         "pinId": 220
       }
     ],
@@ -31921,6 +33417,58 @@
     "userId": 76
   },
   {
+    "id": 638,
+    "rootThread": false,
+    "title": "Thailand-China Railway's First Phase Pushed to 2030",
+    "description": "The Bangkok-to-Nakhon Ratchasima leg of Thailand's high-speed rail link to China, once due by 2026, is now targeted for 2030 after years of delays.",
+    "sourceUrl": "https://www.youtube.com/watch?v=dFBqufqTJpQ",
+    "longFormSummary": "<ul><li>Phase 1 of the line, connecting Bangkok to Nakhon Ratchasima, is meant to be the first stretch of a wider high-speed network eventually linking Kunming in China to Singapore.</li><li>Construction began in 2017, but repeated funding, contract and land disputes have repeatedly slipped the completion date, from an original 2023 goal to 2026, then further.</li><li>As of mid-2026 the 250km first phase was only around half finished, with Thailand's government confirming a new 2030 completion target after talks with China.</li><li>A second phase extending the line north to Nong Khai on the Laos border is being prepared alongside it.</li></ul>",
+    "address": "Nakhon Ratchasima, Thailand",
+    "latitude": 14.9724366,
+    "longitude": 102.0789142,
+    "dateConfidence": "delayed",
+    "dateConfidenceReasoning": "Given as scheduled, per the source: \"Thailand targets 2030 completion of first phase of high-speed rail link to China\".",
+    "category": "Infrastructure & Transportation",
+    "utcStartDateTime": "2030-12-31T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:55:51.053Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 594,
+        "thumbName": "744fac7d-1240-436c-a630-341146f10144.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/dFBqufqTJpQ",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/dFBqufqTJpQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Why China Needs This $67BN Railway in Thailand\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1406,
+        "url": "https://www.bangkokpost.com/thailand/general/3288894/thailand-targets-2030-completion-of-first-phase-of-highspeed-rail-link-to-china",
+        "title": "Thailand targets 2030 completion of first phase of high-speed rail link to China",
+        "confidence": 85,
+        "publishedDate": "2026-07-20",
+        "utcCreatedDateTime": "2026-09-15T04:55:51.056408+00:00",
+        "pinId": 638
+      },
+      {
+        "id": 1407,
+        "url": "https://en.wikipedia.org/wiki/Bangkok%E2%80%93Nong_Khai_high-speed_railway",
+        "title": "Bangkok–Nong Khai high-speed railway",
+        "confidence": 78,
+        "utcCreatedDateTime": "2026-09-15T04:55:51.059411+00:00",
+        "pinId": 638
+      }
+    ],
+    "userId": 76
+  },
+  {
     "id": 246,
     "rootThread": false,
     "title": "International Space Station Deorbit",
@@ -33011,6 +34559,59 @@
     "userId": 76
   },
   {
+    "id": 636,
+    "rootThread": false,
+    "title": "McCook Reservoir's Second Stage Delayed to 2032",
+    "description": "The next phase of Chicago's giant Deep Tunnel flood-control reservoir has slipped three years behind its original federal deadline because of a local stone shortage.",
+    "sourceUrl": "https://www.youtube.com/watch?v=2klS1diYMWU",
+    "longFormSummary": "<ul><li>Chicago’s Tunnel and Reservoir Plan (TARP), nicknamed the Deep Tunnel, has been under construction since the 1970s to stop sewage from overflowing into local waterways and Lake Michigan.</li><li>The McCook Reservoir is the project’s largest storage basin, carved out of a former limestone quarry to hold billions of gallons of stormwater.</li><li>Its first stage opened in 2017 with 3.5 billion gallons of capacity; the second stage will add another 6.5 billion gallons once mining finishes.</li><li>A federal consent decree originally set a December 2029 deadline for Stage 2, but MWRD now expects it online by the end of 2032.</li></ul>",
+    "address": "McCook, Cook County, Illinois, USA",
+    "latitude": 41.7978095,
+    "longitude": -87.8447798,
+    "dateConfidence": "delayed",
+    "dateConfidenceReasoning": "Delayed from the original 2029 deadline, per the source: \"the current estimate for McCook Stage 2 going online is now Dec. 31, 2032.\"",
+    "companyId": 678,
+    "company": "Metropolitan Water Reclamation District of Greater Chicago",
+    "category": "Infrastructure & Transportation",
+    "utcStartDateTime": "2032-12-31T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:45:50.203Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 592,
+        "thumbName": "9d3391b7-91fb-4eab-8e0e-0b1e4ca5ab1c.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/2klS1diYMWU",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/2klS1diYMWU?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"The Secret $4BN Tunnel Network Under Chicago\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1402,
+        "url": "https://mwrd.org/news/mwrd-issues-update-tunnel-and-reservoir-plan",
+        "title": "MWRD Issues Update on Tunnel and Reservoir Plan",
+        "confidence": 92,
+        "utcCreatedDateTime": "2026-09-15T04:45:50.207896+00:00",
+        "pinId": 636
+      },
+      {
+        "id": 1403,
+        "url": "https://municipalwaterleader.com/mccook-reservoir/",
+        "title": "McCook Reservoir - Municipal Water Leader Magazine",
+        "confidence": 75,
+        "utcCreatedDateTime": "2026-09-15T04:45:50.208897+00:00",
+        "pinId": 636
+      }
+    ],
+    "userId": 76
+  },
+  {
     "id": 229,
     "rootThread": false,
     "title": "California High-Speed Rail Central Valley Service",
@@ -33367,6 +34968,62 @@
         "reasoning": "The City of London Corporation's own news release, dated 1 December 2025, announces approval of the Square Mile's tallest tower, consistent with the pin's stored 2033 completion target, though the page itself could not be fetched to quote directly.",
         "utcCreatedDateTime": "2026-09-14T23:35:19.705467+00:00",
         "pinId": 547
+      }
+    ],
+    "userId": 76
+  },
+  {
+    "id": 634,
+    "rootThread": false,
+    "title": "Lyon-Turin Base Tunnel Targeted for 2033 Completion",
+    "description": "TELT, the joint French-Italian agency building the Mont d'Ambin base tunnel under the Alps, is now aiming to finish the roughly 57km bore by the end of 2033.",
+    "sourceUrl": "https://www.youtube.com/watch?v=kc29axOAzRs",
+    "longFormSummary": "<ul><li>The Fréjus rail tunnel connecting Lyon and Turin has been in use since 1871 but is too narrow and steep for modern high-speed and freight trains.</li><li>The new Mont d’Ambin base tunnel will run about 57 kilometres largely beneath the Alps, making it one of the world’s longest rail tunnels.</li><li>It forms part of EU corridors intended to eventually link Finland to Spain and southern Italy by rail.</li><li>The project has faced sustained local opposition in the Susa Valley, and its budget has grown well past early estimates as the international section alone now runs to roughly €11 billion.</li></ul>",
+    "address": "Susa, Torino, Piemonte, Italy",
+    "latitude": 45.1383808,
+    "longitude": 7.0493387,
+    "price": 11100000000,
+    "priceCurrency": "EUR",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Given as scheduled, per the source: \"The project is expected to be completed by 2033.\"",
+    "companyId": 145,
+    "company": "TELT",
+    "companyLogoUrl": "https://www.google.com/s2/favicons?domain=telt.eu&sz=64",
+    "category": "Infrastructure & Transportation",
+    "utcStartDateTime": "2033-12-31T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-15T04:45:49.481Z",
+    "user": {
+      "id": 76,
+      "userName": "@BuildDesk"
+    },
+    "media": [
+      {
+        "id": 590,
+        "thumbName": "29e00499-cb95-471d-a7c6-df776b0bbd87.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/kc29axOAzRs",
+        "type": "3",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/kc29axOAzRs?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Why Europe is Building a 57KM Tunnel Through a Mountain\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 1398,
+        "url": "https://cinea.ec.europa.eu/featured-projects/new-alpine-rail-connection-between-lyon-and-turin_en",
+        "title": "A new Alpine rail connection between Lyon and Turin - CINEA (European Commission)",
+        "confidence": 88,
+        "utcCreatedDateTime": "2026-09-15T04:45:49.482957+00:00",
+        "pinId": 634
+      },
+      {
+        "id": 1399,
+        "url": "https://en.wikipedia.org/wiki/Mont_d%27Ambin_Base_Tunnel",
+        "title": "Mont d'Ambin Base Tunnel - Wikipedia",
+        "confidence": 78,
+        "utcCreatedDateTime": "2026-09-15T04:45:49.484218+00:00",
+        "pinId": 634
       }
     ],
     "userId": 76
@@ -33889,6 +35546,15 @@
         "reasoning": "Official UK Department for Transport publication (May 2026 programme reset) gives the assured schedule range for Old Oak Common to Curzon Street as May 2036 to October 2039, superseding the pin's 2033 estimate; Transport Secretary Heidi Alexander has said there is 'no route' to a 2033 opening.",
         "utcCreatedDateTime": "2026-09-15T03:19:55.120014+00:00",
         "pinId": 227
+      },
+      {
+        "id": 1445,
+        "url": "https://www.youtube.com/watch?v=FSD5ps9bLQ0",
+        "title": "HS2: The £100BN Railway Dividing a Nation – The B1M",
+        "confidence": 60,
+        "publishedDate": "2022-08-10",
+        "utcCreatedDateTime": "2026-09-15T05:02:10.814502+00:00",
+        "pinId": 227
       }
     ],
     "userId": 1
@@ -34234,6 +35900,7 @@
     "utcEndDateTime": "2100-01-02T00:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2017-06-21T06:11:04.803Z",
+    "utcUpdatedDateTime": "2026-09-15T05:11:25.748Z",
     "user": {
       "id": 1,
       "userName": "@ThePinGang"
@@ -34248,6 +35915,17 @@
         "originalWidth": 286,
         "originalHeight": 400,
         "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 1448,
+        "url": "https://mkaku.org/home/articles/the-physics-of-extraterrestrial-civilizations/",
+        "title": "The Physics of Extraterrestrial Civilizations - Official Website of Dr. Michio Kaku",
+        "confidence": 74,
+        "reasoning": "Dr. Kaku's own site lays out the Kardashev scale and says of Type I status: \"within 200 years or so, we should attain Type I status\" - matching the pin's century-or-two estimate, though the page commits to no firm year, so it is the primary source for the idea rather than for 2100 specifically.",
+        "utcCreatedDateTime": "2026-09-15T05:11:25.746148+00:00",
+        "pinId": 158
       }
     ],
     "userId": 1
