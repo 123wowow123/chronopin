@@ -195,6 +195,7 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
           title={pin.title}
           href={pin.sourceUrl}
           external
+          selectable
           priority
           sizes="(max-width: 1024px) 100vw, 50vw"
         />

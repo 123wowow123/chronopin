@@ -139,25 +139,29 @@ function videosFirst(media: MediumJson[]): MediumJson[] {
   return [...media].sort((a, b) => Number(String(b.type) === '3') - Number(String(a.type) === '3'));
 }
 
-// A pin's media with labels (place, company) over them, and dots to switch
-// between them when there is more than one. A video shows first. Only images
-// take the labels: a video or tweet draws its own title and badges where they
-// would go, so when any medium is not an image the labels render as plain text
-// (the fallback) above instead - for every slide, so switching never adds or
-// removes that row. The frame takes the shown medium's height. Media with
-// nothing to show drop out; when none are left, the fallback renders alone.
+// A pin's media with labels (place, company) over them. With `selectable`
+// (the pin's own page) dots switch between them when there is more than one;
+// without it (a card in the timeline) only the first medium shows. A video
+// shows first. Only images take the labels: a video or tweet draws its own
+// title and badges where they would go, so when a rendered medium is not an
+// image the labels render as plain text (the fallback) above instead - for
+// every slide, so switching never adds or removes that row. The frame takes
+// the shown medium's height. Media with nothing to show drop out; when none
+// are left, the fallback renders alone.
 export function PinMediaFrame({
   className,
   overlay,
   fallback,
   media,
   priority,
+  selectable,
   ...shared
 }: Omit<Parameters<typeof PinMedia>[0], 'onMissing' | 'medium'> & {
   media: MediumJson[];
   className: string;
   overlay: React.ReactNode;
   fallback: React.ReactNode;
+  selectable?: boolean;
 }) {
   const [missing, setMissing] = useState<ReadonlySet<string>>(() => new Set());
   const markMissing = useCallback((key: string) => setMissing((prev) => (prev.has(key) ? prev : new Set(prev).add(key))), []);
@@ -169,14 +173,18 @@ export function PinMediaFrame({
   if (!slides.length) {
     return fallback;
   }
-  const active = slides.find((slide) => slide.key === activeKey) ?? slides[0];
-  const labelled = slides.every((slide) => String(slide.medium.type) === '1');
+  const active = (selectable ? slides.find((slide) => slide.key === activeKey) : undefined) ?? slides[0];
+  // Only what can be reached is drawn: every slide when the dots are there, the
+  // first one otherwise.
+  const shownSlides = selectable ? slides : slides.slice(0, 1);
+  const dots = selectable && slides.length > 1;
+  const labelled = shownSlides.every((slide) => String(slide.medium.type) === '1');
 
   const frame = (
     <div className={className}>
       <div className="relative">
         {labelled ? overlay : null}
-        {slides.map(({ medium, key }, i) => {
+        {shownSlides.map(({ medium, key }, i) => {
           const shown = key === active.key;
           // A hidden player is unmounted so it stops; other hidden media stay mounted.
           if (!shown && String(medium.type) === '3' && medium.html) {
@@ -184,7 +192,7 @@ export function PinMediaFrame({
           }
           // With dots to reach, a tall image (letterboxed) or tweet (scrolled) is capped
           // so the dots stay above a card's cut-off.
-          const capped = slides.length > 1 && String(medium.type) !== '3';
+          const capped = dots && String(medium.type) !== '3';
           return (
             <div key={key} hidden={!shown} className={capped ? 'max-h-[26rem] overflow-y-auto [&_img]:max-h-[26rem] [&_img]:object-contain' : undefined}>
               <MediaSlide medium={medium} mediumKey={key} priority={priority && i === 0} onMissing={markMissing} {...shared} />
@@ -192,7 +200,7 @@ export function PinMediaFrame({
           );
         })}
       </div>
-      {slides.length > 1 ? (
+      {dots ? (
         <div role="group" aria-label="Media" className="flex justify-center gap-0.5 py-1">
           {slides.map(({ medium, key }, i) => {
             const shown = key === active.key;
