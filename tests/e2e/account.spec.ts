@@ -96,7 +96,36 @@ test.describe.serial('a signed-in author', () => {
     await page.getByRole('button', { name: 'Login' }).click();
     await expect(page).toHaveURL(/\/preferences$/);
     await page.getByLabel('Timeline filter default').selectOption('1w');
-    await page.getByRole('button', { name: 'Save changes' }).click();
     await expect(page.getByText('Preferences saved.')).toBeVisible();
+  });
+
+  test('the light theme applies at once and follows the account to a new browser', async ({ page, browser }) => {
+    await page.goto('/login');
+    await page.getByLabel('Email').fill(email);
+    await page.getByLabel('Password').fill(password);
+    await page.getByRole('button', { name: 'Login' }).click();
+    await page.waitForURL((url) => !url.pathname.startsWith('/login'));
+
+    // Nothing chosen yet follows the device, here a dark one.
+    await page.emulateMedia({ colorScheme: 'dark' });
+    await page.goto('/preferences');
+    const html = page.locator('html');
+    await expect(html).toHaveAttribute('data-theme', 'dark');
+    await expect(page.getByRole('radio', { name: 'System' })).toHaveAttribute('aria-checked', 'true');
+    await page.getByRole('radio', { name: 'Light' }).click();
+    await expect(html).toHaveAttribute('data-theme', 'light');
+    await expect(page.getByText('Theme saved.')).toBeVisible();
+
+    // The timeline filter default saved earlier is still there.
+    await page.reload();
+    await expect(page.getByLabel('Timeline filter default')).toHaveValue('1w');
+    await expect(page.getByRole('radio', { name: 'Light' })).toHaveAttribute('aria-checked', 'true');
+
+    // Another browser with nothing stored picks the theme up from the account.
+    const other = await browser.newContext({ storageState: { cookies: await page.context().cookies(), origins: [] } });
+    const otherPage = await other.newPage();
+    await otherPage.goto('/');
+    await expect(otherPage.locator('html')).toHaveAttribute('data-theme', 'light');
+    await other.close();
   });
 });
