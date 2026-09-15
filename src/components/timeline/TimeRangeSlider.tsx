@@ -218,7 +218,9 @@ export function TimeRangeSlider({
           <Icon name="pencil" className="size-4" />
         </button>
         {!pastOnly ? (
-          <button type="button" className="justify-self-end text-right max-lg:-my-3 max-lg:py-3" onClick={() => applySide('future', null)} title="Show all upcoming pins">
+          // col-start-3: the pencil between them is hidden on touch screens,
+          // and without it this would land in the middle column.
+          <button type="button" className="col-start-3 justify-self-end text-right max-lg:-my-3 max-lg:py-3" onClick={() => applySide('future', null)} title="Show all upcoming pins">
             <span className="font-semibold text-future">Future</span>
             <span className="block text-ink">{label(future)}</span>
           </button>
