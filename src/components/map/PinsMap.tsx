@@ -2,14 +2,18 @@
 
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { TILE_ATTRIBUTION, TILE_URL } from '@/components/pin/PinMap';
 import { CategoryFilter } from '@/components/timeline/CategoryFilter';
 import { TimeRangeSlider } from '@/components/timeline/TimeRangeSlider';
+import { canonicalCategory } from '@/lib/categories';
 import { parseLinkHeader } from '@/lib/client/api';
 import { DEFAULT_POSTED_WITHIN, SPAN_OPTIONS, formatSpan, offsetDate } from '@/lib/postedSpan';
+import { removeTerm, toggleTerm } from '@/lib/searchTerms';
 import { pinPath } from '@/lib/seo';
 import type { PinJson } from '@/lib/types';
+import { joinSearchQuery, parseSearchQuery, splitSearchQuery } from '@/server/util/searchQuery';
 
 // Center of the contiguous US, so an empty or loading map has a sensible view.
 const DEFAULT_CENTER: [number, number] = [39.8283, -98.5795];
@@ -44,7 +48,18 @@ const escapeHtml = (text: string) => text.replace(/[&<>"']/g, (c) => `&#${c.char
 
 // Every pin with a location between the past and future windows around now,
 // optionally narrowed to those posted recently (as the timeline's filter).
+// The navbar search works here as on the timeline: /map?q=...&f=watch shows
+// the search's pins, and category picks are category: terms in that query.
 export default function PinsMap() {
+  const router = useRouter();
+  const params = useSearchParams();
+  const query = params.get('q') || '';
+  const watched = params.get('f')?.toLowerCase() === 'watch';
+  const categories = [...new Set(parseSearchQuery(query).categories.map(canonicalCategory))];
+  const categoryKey = categories.map((c) => c.toLowerCase()).join('|');
+  // The query less its category terms decides which pins to fetch; categories
+  // only show and hide markers, so picking one needs no refetch.
+  const fetchQuery = joinSearchQuery(splitSearchQuery(query).filter((part) => !(part.kind === 'term' && part.field === 'category')));
   const canvasRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
   const layerRef = useRef<L.LayerGroup | null>(null);
@@ -55,9 +70,8 @@ export default function PinsMap() {
   const [past, setPast] = useState<string | null>(DEFAULT_SPAN);
   const [future, setFuture] = useState<string | null>(DEFAULT_SPAN);
   const [postedWithin, setPostedWithin] = useState<string | null>(DEFAULT_POSTED_WITHIN);
-  const [status, setStatus] = useState<'loading' | 'ready'>('loading');
+  const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   const [count, setCount] = useState(0);
-  const [categories, setCategories] = useState<string[]>([]);
   // Markers per category in the time window, for the category pills.
   const [categoryCounts, setCategoryCounts] = useState<Record<string, number> | null>(null);
 
@@ -133,8 +147,9 @@ export default function PinsMap() {
       setCategoryCounts(counts);
     };
 
-    const fetchPage = async (query: string) => {
-      const res = await fetch(`/api/main${query}`);
+    // Links do not carry the watch choice, so every page asks for it.
+    const fetchPage = async (cursor: string) => {
+      const res = await fetch(`/api/main${cursor}${watched ? `${cursor ? '&' : '?'}hasFavorite=1` : ''}`);
       return { page: (await res.json()) as { pins: PinJson[] }, links: parseLinkHeader(res.headers.get('link')) };
     };
 
@@ -153,27 +168,44 @@ export default function PinsMap() {
       }
     };
 
+    // A search answers with all its pins at once; the posted-within cutoff
+    // and the time windows (in plot) narrow them here.
+    const search = async () => {
+      const searchParams = new URLSearchParams({ q: fetchQuery });
+      if (watched) searchParams.set('f', 'watch');
+      const res = await fetch(`/api/pins/search?${searchParams.toString()}`);
+      if (!res.ok) throw new Error(res.statusText);
+      const { pins } = (await res.json()) as { pins: PinJson[] };
+      const cutoff = postedWithin ? offsetDate(now, postedWithin, -1) : null;
+      if (!cancelled) plot(cutoff ? pins.filter((pin) => !pin.utcCreatedDateTime || new Date(pin.utcCreatedDateTime) >= cutoff) : pins);
+    };
+
     (async () => {
       try {
-        // Later pages' links carry the resolved cutoff, so only the first names the span.
-        const { page, links } = await fetchPage(postedWithin ? `?created_within=${encodeURIComponent(postedWithin)}` : '');
-        if (cancelled) return;
-        plot(page.pins);
-        await Promise.all([walk('next', links.next, futureBoundary), walk('previous', links.previous, pastBoundary)]);
-      } finally {
+        if (fetchQuery) {
+          await search();
+        } else {
+          // Later pages' links carry the resolved cutoff, so only the first names the span.
+          const { page, links } = await fetchPage(postedWithin ? `?created_within=${encodeURIComponent(postedWithin)}` : '');
+          if (cancelled) return;
+          plot(page.pins);
+          await Promise.all([walk('next', links.next, futureBoundary), walk('previous', links.previous, pastBoundary)]);
+        }
         if (!cancelled) setStatus('ready');
+      } catch {
+        if (!cancelled) setStatus('error');
       }
     })();
 
     return () => {
       cancelled = true;
     };
-  }, [past, future, postedWithin]);
+  }, [past, future, postedWithin, fetchQuery, watched]);
 
   useEffect(() => {
     const map = mapRef.current;
     const layer = layerRef.current;
-    const picks = categories.map((c) => c.toLowerCase());
+    const picks = categoryKey ? categoryKey.split('|') : [];
     categoriesRef.current = picks;
     if (!map || !layer) return;
     map.closePopup();
@@ -182,7 +214,16 @@ export default function PinsMap() {
       else layer.removeLayer(marker);
     }
     setCount(layer.getLayers().length);
-  }, [categories]);
+  }, [categoryKey]);
+
+  // Picks edit the query in the URL, so the navbar search box shows them.
+  function go(edit: (q: string) => string) {
+    const next = new URLSearchParams(params.toString());
+    const q = edit(query);
+    if (q) next.set('q', q);
+    else next.delete('q');
+    router.push(next.size ? `/map?${next.toString()}` : '/map');
+  }
 
   const phrase = (span: string | null) => (formatSpan(span) || '').replace(/^1 /, '');
   const hasPast = !!past && past !== '0d';
@@ -207,16 +248,20 @@ export default function PinsMap() {
         <CategoryFilter
           selected={categories}
           counts={categoryCounts}
-          onToggle={(category) => setCategories((list) => (list.includes(category) ? list.filter((c) => c !== category) : [...list, category]))}
-          onClear={() => setCategories([])}
+          onToggle={(category) => go((q) => toggleTerm(q, 'category', category))}
+          onClear={() => go((q) => categories.reduce((rest, category) => removeTerm(rest, 'category', category), q))}
           className="w-64"
         />
       </div>
       {status === 'loading' ? (
         <p role="status" className="floating absolute bottom-8 left-1/2 z-[1000] -translate-x-1/2 rounded-full px-4 py-2 text-sm text-ink">Loading pins…</p>
+      ) : status === 'error' ? (
+        <p role="alert" className="floating absolute bottom-8 left-1/2 z-[1000] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink">
+          Search is unavailable right now. Please try again in a bit.
+        </p>
       ) : count === 0 ? (
         <p className="floating absolute bottom-8 left-1/2 z-[1000] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink">
-          No pins with a location{hasPast ? ` in the last ${phrase(past)}` : ''}
+          No {watched ? 'watched ' : ''}pins{fetchQuery ? ` matching “${fetchQuery}”` : ''} with a location{hasPast ? ` in the last ${phrase(past)}` : ''}
           {hasPast && hasFuture ? ' or' : ''}
           {hasFuture ? ` in the next ${phrase(future)}` : ''}
           {postedWithin ? `, posted in the last ${phrase(postedWithin)}` : ''}

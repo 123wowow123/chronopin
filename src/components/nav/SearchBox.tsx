@@ -49,8 +49,10 @@ export function SearchBox() {
   const { isLoggedIn } = useSession();
   const timeZone = useTimeZone('UTC');
 
-  const urlQuery = pathname === '/search' ? params.get('q') || '' : '';
-  const urlChoice = pathname === '/search' ? params.get('f') || '' : '';
+  // The map searches its own pins; everywhere else a search opens /search.
+  const onMap = pathname === '/map';
+  const urlQuery = pathname === '/search' || onMap ? params.get('q') || '' : '';
+  const urlChoice = pathname === '/search' || onMap ? params.get('f') || '' : '';
   const [items, setItems] = useState(() => toItems(urlQuery));
   // The text field's position among the items, and what it holds.
   const [editAt, setEditAt] = useState(() => toItems(urlQuery).length);
@@ -160,15 +162,16 @@ export function SearchBox() {
 
   function submit(q: string, filter = choice) {
     setOpen(false);
-    // Nothing to search for and nothing to filter by: that's the timeline.
+    // Nothing to search for and nothing to filter by: that's the timeline (or
+    // the whole map).
     if (!q.trim() && !filter) {
-      router.push('/');
+      router.push(onMap ? '/map' : '/');
       return;
     }
     const next = new URLSearchParams();
     if (q) next.set('q', q);
     if (filter) next.set('f', filter);
-    router.push(`/search?${next.toString()}`);
+    router.push(`${onMap ? '/map' : '/search'}?${next.toString()}`);
   }
 
   async function suggest(value: string) {
@@ -368,7 +371,7 @@ export function SearchBox() {
               setDraft('');
               setEditing(false);
               setSuggestions([]);
-              router.push('/');
+              router.push(onMap ? '/map' : '/');
             }}
           >
             <Icon name="close" className="size-3.5" />

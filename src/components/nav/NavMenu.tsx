@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
@@ -33,17 +33,27 @@ function accountGroups(isAdmin: boolean): MenuItem[][] {
 }
 
 // Timeline or Map, with the current one highlighted, so it reads as a choice
-// of view rather than two unrelated links.
+// of view rather than two unrelated links. Switching keeps the search: a
+// search's results show on the map, and the map's search opens as results.
 function ViewSwitch({ pathname, className = '' }: { pathname: string; className?: string }) {
+  const params = useSearchParams();
+  const search = new URLSearchParams();
+  if (pathname === '/search' || pathname.startsWith('/map')) {
+    for (const key of ['q', 'f']) {
+      const value = params.get(key);
+      if (value) search.set(key, value);
+    }
+  }
+  const carried = search.size ? `?${search.toString()}` : '';
   const views = [
-    { href: '/', label: 'Timeline', icon: 'timeline', current: pathname === '/' },
-    { href: '/map', label: 'Map', icon: 'map', current: pathname.startsWith('/map') },
+    { href: carried ? `/search${carried}` : '/', label: 'Timeline', icon: 'timeline', current: pathname === '/' || pathname === '/search' },
+    { href: `/map${carried}`, label: 'Map', icon: 'map', current: pathname.startsWith('/map') },
   ] as const;
   return (
     <div className={`flex rounded-full bg-field p-0.5 ring-1 ring-line ring-inset ${className}`}>
       {views.map((view) => (
         <Link
-          key={view.href}
+          key={view.label}
           href={view.href}
           aria-current={view.current ? 'page' : undefined}
           className={`flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium transition-colors hover:no-underline ${
