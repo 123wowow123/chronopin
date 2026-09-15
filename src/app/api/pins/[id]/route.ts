@@ -3,6 +3,7 @@ import { getUser, isAdmin, requireUser } from '@/server/auth';
 import { emitPinEvent } from '@/server/events';
 import { HttpError, intParam, json, noContent, readJson, route } from '@/server/http';
 import Pin, { sameSourceUrlKey } from '@/server/model/pin';
+import PinDuplicate from '@/server/model/pinDuplicate';
 import PinReference from '@/server/model/pinReference';
 import type User from '@/server/model/user';
 import { invalidatePin } from '@/server/services/cache';
@@ -66,8 +67,12 @@ export const PATCH = update;
 // A soft delete.
 export const DELETE = route(async (request: NextRequest, ctx: Ctx) => {
   const { user, existing } = await loadModifiable(request, ctx);
+  // Its duplicates' pages list it, so they refresh too.
+  const group = await PinDuplicate.group(existing.id);
   await existing.delete();
   emitPinEvent('remove', existing, { userId: user.id });
-  invalidatePin(existing.id);
+  for (const id of group) {
+    invalidatePin(id);
+  }
   return noContent();
 });

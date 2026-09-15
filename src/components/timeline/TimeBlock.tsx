@@ -1,7 +1,11 @@
 'use client';
 
+import Link from 'next/link';
+import { stackDuplicates } from '@/lib/duplicates';
 import { formatDayKey, timespan, weekdayPlanet } from '@/lib/format';
+import { pinPath } from '@/lib/seo';
 import type { Bag } from '@/lib/timeline';
+import type { PinJson } from '@/lib/types';
 import { PinCard } from '@/components/pin/PinCard';
 
 // Beside the rail (lg) tags are a fixed-width column; above the cards on
@@ -76,9 +80,15 @@ export function TimeBlock({
 
       {bag.pins.length ? (
         <ul className="gap-2.5 sm:columns-2 lg:ml-[170px] lg:max-w-[906px]" style={{ minHeight: `${tagsHeight}px` }}>
-          {bag.pins.map((pin, i) => (
+          {stackDuplicates(bag.pins).map(({ pin, hidden }, i) => (
             <li key={pin.id} id={`pin-${pin.id}`} className="mb-2.5 break-inside-avoid">
-              <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={firstPinPriority && i === 0} />
+              {hidden.length ? (
+                <DuplicateStack pin={pin} hiddenCount={hidden.length}>
+                  <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={firstPinPriority && i === 0} />
+                </DuplicateStack>
+              ) : (
+                <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={firstPinPriority && i === 0} />
+              )}
             </li>
           ))}
         </ul>
@@ -98,6 +108,24 @@ export function TimeBlock({
         </ul>
       )}
     </section>
+  );
+}
+
+// A card with its day's duplicates stacked behind it: the edges of two cards
+// peek out below, and a link leads to the pin page's list of them.
+function DuplicateStack({ pin, hiddenCount, children }: { pin: PinJson; hiddenCount: number; children: React.ReactNode }) {
+  return (
+    <div>
+      <div className="relative pb-3">
+        <div aria-hidden className="absolute inset-x-4 bottom-0 h-8 rounded-b-xl border border-line bg-raised-2" />
+        <div aria-hidden className="absolute inset-x-2 bottom-1.5 h-8 rounded-b-xl border border-line bg-raised" />
+        <div className="relative">{children}</div>
+      </div>
+      <Link href={`${pinPath(pin)}#duplicates`} className="mt-1 flex items-center justify-center gap-1.5 text-xs font-medium text-subtle hover:text-link hover:no-underline">
+        <span className="rounded-full bg-raised px-1.5 tabular-nums ring-1 ring-line ring-inset">+{hiddenCount}</span>
+        {hiddenCount === 1 ? 'more pin of this' : 'more pins of this'}
+      </Link>
+    </div>
   );
 }
 

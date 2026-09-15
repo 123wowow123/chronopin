@@ -13,6 +13,8 @@ import { PinAdminLink } from '@/components/pin/PinAdminLink';
 import { CARD_GRID } from '@/components/pin/cardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { PinConfidence } from '@/components/pin/PinConfidence';
+import { PinDuplicates } from '@/components/pin/PinDuplicates';
+import { PinViewTracker } from '@/components/pin/PinViewTracker';
 import { PinReferences } from '@/components/pin/PinReferences';
 import { PinMapLoader } from '@/components/pin/PinMapLoader';
 import { PinMediaFrame } from '@/components/pin/PinMedia';
@@ -29,7 +31,7 @@ import { safeCitedHtml, safeHtml, toCardPins } from '@/lib/sanitize';
 import { pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
 import { pinTense } from '@/lib/timeline';
 import type { PinJson } from '@/lib/types';
-import { pinById, pinComments, relatedPins, threadPins } from '@/server/services/pages';
+import { duplicateGroupPins, pinById, pinComments, relatedPins, threadPins } from '@/server/services/pages';
 import { viewerTimeZone } from '@/server/viewer';
 
 // src/proxy.ts sends the real 308s and 404s for pin URLs before this renders.
@@ -66,6 +68,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   return (
     <>
       <JsonLd data={pinJsonLd(pin)} />
+      <PinViewTracker pinId={pin.id} />
       <div className="grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-10">
         <article>
           <PinBodyForViewer pin={pin} />
@@ -92,6 +95,10 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
               <PinWeather pinId={pin.id} />
             </div>
           ) : null}
+
+          <Suspense fallback={null}>
+            <Duplicates pin={pin} />
+          </Suspense>
 
           <Suspense fallback={null}>
             <Thread pin={pin} />
@@ -306,6 +313,13 @@ async function Thread({ pin }: { pin: PinJson }) {
       </ol>
     </section>
   );
+}
+
+// The same event pinned by others, plus (for an admin or an author) the
+// app's duplicate suggestions to review. Renders nothing when there are none.
+async function Duplicates({ pin }: { pin: PinJson }) {
+  const [group, timeZone] = await Promise.all([pin.duplicateGroup?.length ? duplicateGroupPins(pin.id, pin.duplicateGroup) : [], viewerTimeZone()]);
+  return <PinDuplicates pinId={pin.id} group={group} timeZone={timeZone} />;
 }
 
 async function PinCommentsSection({ pinId }: { pinId: number }) {

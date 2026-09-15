@@ -80,6 +80,11 @@ export type PinJson = {
   utcUpdatedDateTime?: string;
   favoriteCount?: number;
   likeCount?: number;
+  // Page views, once per viewer per day.
+  viewCount?: number;
+  // The pin and every pin confirmed as a duplicate of it, lowest id first;
+  // absent when it has none (src/lib/duplicates.ts).
+  duplicateGroup?: number[];
   hasFavorite?: boolean;
   hasLike?: boolean;
   searchScore?: number;

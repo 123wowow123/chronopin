@@ -7,7 +7,7 @@ import PinReference from './pinReference';
 import type User from './user';
 import { createPin, locationSql, mapSubObjectFromQuery, normalizeAllDayDates } from './pinShared';
 
-const prop = BasePinProp.concat(['favoriteCount', 'likeCount', 'hasFavorite', 'hasLike', 'reverseOrder']);
+const prop = BasePinProp.concat(['favoriteCount', 'likeCount', 'viewCount', 'duplicateGroup', 'hasFavorite', 'hasLike', 'reverseOrder']);
 
 export default class Pin extends BasePin {
   constructor(pin?: Row | null, user?: User | null) {

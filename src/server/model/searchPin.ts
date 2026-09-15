@@ -123,6 +123,12 @@ export class SearchPins extends BasePins<SearchPin> {
     return result.res.filter((hit) => !seen.has(hit.index) && !!seen.add(hit.index)).map((hit) => ({ id: hit.index, score: hit.match }));
   }
 
+  // The k pins closest to the text, best first.
+  static async nearest(text: string, k: number): Promise<{ id: number; score: number }[]> {
+    const result = await semanticSearch(text, k);
+    return result.res.map((hit) => ({ id: hit.index, score: hit.match }));
+  }
+
   // Autocomplete: pins whose title or description starts with the typed text,
   // compared on their first 64 characters, case-insensitively. k caps the
   // rows returned.

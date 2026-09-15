@@ -55,4 +55,13 @@ if (!g.__chronopinPinListeners) {
   };
   pinEvents.on('save', summarize);
   pinEvents.on('update', summarize);
+
+  // Duplicate suggestions for the pin's author or an admin to review.
+  const suggestDuplicates = (pin: Row) => {
+    import('./services/duplicatePin')
+      .then(({ suggestDuplicates: suggest }) => suggest(Number(pin.id)))
+      .catch((err) => log.warn(`duplicate suggestions failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', suggestDuplicates);
+  pinEvents.on('update', suggestDuplicates);
 }

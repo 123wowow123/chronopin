@@ -9,6 +9,7 @@ import { parseArgs } from 'node:util';
 import _ from 'lodash';
 import * as db from '@/server/db';
 import { Comment, Company, DateTime, Follow, FullPins, MediumType, User, Users } from '@/server/model';
+import PinDuplicate from '@/server/model/pinDuplicate';
 import { fetchJson } from '@/server/util/fetchJson';
 import log from '@/server/util/log';
 import { excludeE2e } from './excludeE2e';
@@ -21,6 +22,7 @@ const { values: flags } = parseArgs({
     userfile: { type: 'string', default: './scripts/backup/seedUsers.json' },
     commentfile: { type: 'string', default: './scripts/backup/seedComments.json' },
     followfile: { type: 'string', default: './scripts/backup/seedFollows.json' },
+    duplicatefile: { type: 'string', default: './scripts/backup/seedPinDuplicates.json' },
     companyfile: { type: 'string', default: './scripts/backup/seedCompanies.json' },
     aphelionfile: { type: 'string', default: './scripts/backup/aphelion.json' },
     equinoxfile: { type: 'string', default: './scripts/backup/equinox.json' },
@@ -70,6 +72,13 @@ async function saveDB() {
 
   console.log('Backup Follows');
   writeJson(flags.followfile, data.follows);
+
+  // Duplicate pairs and decisions (not page views, which only order stacks),
+  // for the pins kept above.
+  console.log('Backup Pin Duplicates');
+  const keptPinIds = new Set(data.pins.map((p) => p.id));
+  const duplicates = (await PinDuplicate.getAll()).filter((d) => keptPinIds.has(d.pinId) && keptPinIds.has(d.otherPinId));
+  writeJson(flags.duplicatefile, duplicates);
 
   console.log('Data Backup Complete');
 }
@@ -147,6 +156,14 @@ async function seedDB() {
     await Follow.restore(readJson(flags.followfile));
   } catch (error) {
     log.error('Follows Save Error', JSON.stringify(error));
+  }
+
+  if (existsSync(flags.duplicatefile)) {
+    try {
+      await PinDuplicate.restore(readJson(flags.duplicatefile));
+    } catch (error) {
+      log.error('Pin Duplicates Save Error', JSON.stringify(error));
+    }
   }
 
   log.info('Data Load Complete');

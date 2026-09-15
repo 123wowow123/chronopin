@@ -5,6 +5,7 @@ import { cacheLife, cacheTag } from 'next/cache';
 import Pin from '../model/pin';
 import Pins from '../model/pins';
 import { SearchPins } from '../model/searchPin';
+import { compareDuplicateRank } from '@/lib/duplicates';
 import { toJson, type PinJson, type SearchPage, type TimelinePage } from '@/lib/types';
 import { TAGS } from './cache';
 import { readSearchRequest, searchCategoryCounts, searchPinsPage, type SearchSort } from './search';
@@ -59,6 +60,16 @@ export async function threadPins(id: number): Promise<PinJson[]> {
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   return toJson<PinJson[]>((await Pins.getThreadPins(id)).pins);
+}
+
+// The pins in a pin's confirmed duplicate group, itself included, best ranked
+// first. Every member's tag is invalidated when the group changes.
+export async function duplicateGroupPins(id: number, group: number[]): Promise<PinJson[]> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  const pins = toJson<PinJson[]>((await Pins.queryByIds(group)).pins);
+  return pins.sort(compareDuplicateRank);
 }
 
 // Pins like this one, by semantic search on its title. The search service

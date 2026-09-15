@@ -93,6 +93,10 @@ export default class Pins extends BasePins<Pin> {
     return queryPinByIds(pins.getAllIds()).then((res) => new Pins(res));
   }
 
+  static queryByIds(ids: number[]) {
+    return queryPinByIds(ids).then((res) => new Pins(res));
+  }
+
   static getThreadPins(pinId: number) {
     return queryPinByIdsAndOrderedByThread(pinId).then((res) => new Pins().setPinsSortBy(res.pins, 'reverseOrder', true));
   }
@@ -257,6 +261,8 @@ const PAGE_COLUMNS = `
   "Pin"."likeCount",
   "Pin"."rootThread",
   "Pin"."references",
+  "Pin"."viewCount",
+  "Pin"."duplicateGroup",
   EXISTS (SELECT 1 FROM "Favorite" AS "f"
           WHERE "f"."userId" = $1 AND "f"."pinId" = "Pin"."id" AND "f"."utcDeletedDateTime" IS NULL) AS "hasFavorite",
   EXISTS (SELECT 1 FROM "Like" AS "l"

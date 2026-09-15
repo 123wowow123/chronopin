@@ -1,0 +1,165 @@
+import * as db from '../db';
+import type { Row } from '../db';
+
+export const DUPLICATE_STATUSES = ['suggested', 'confirmed', 'rejected'] as const;
+export type DuplicateStatus = (typeof DUPLICATE_STATUSES)[number];
+export type DuplicateReason = 'similar' | 'sourceUrl';
+
+// The other pin in a pair, as the pin page's review panel lists it.
+export type DuplicateCandidate = {
+  status: DuplicateStatus;
+  reason: DuplicateReason;
+  score: number | null;
+  pin: {
+    id: number;
+    title: string;
+    userId: number | null;
+    user?: { id: number; userName: string; pictureUrl?: string };
+    utcStartDateTime: string;
+    allDay: boolean;
+    utcCreatedDateTime: string;
+  };
+};
+
+// A pair is stored lower id first (see 0014_pin_duplicates_and_views.sql).
+function ordered(a: number, b: number): [number, number] {
+  return a < b ? [a, b] : [b, a];
+}
+
+// The UTC calendar days between a pin's start and `start`, compared in SQL.
+const DAYS_APART = `abs(("Pin"."utcStartDateTime" AT TIME ZONE 'UTC')::date - ($2::timestamptz AT TIME ZONE 'UTC')::date)`;
+
+export default class PinDuplicate {
+  // Live pins among ids (other than pinId) starting within maxDays of start.
+  static async withinDays(pinId: number, start: Date | string, ids: number[], maxDays: number): Promise<number[]> {
+    if (!ids.length) {
+      return [];
+    }
+    const rows = await db.query<{ id: number }>(
+      `SELECT "id" FROM "Pin"
+       WHERE "id" = ANY($3::integer[]) AND "id" <> $1 AND "utcDeletedDateTime" IS NULL
+         AND ${DAYS_APART} <= $4`,
+      [pinId, start, ids, maxDays],
+    );
+    return rows.map((row) => row.id);
+  }
+
+  // Live pins by anyone with the same source URL (scheme ignored, as
+  // Pin.findBySourceUrl compares), starting within maxDays of start.
+  static async sameSourceUrl(pinId: number, start: Date | string, sourceUrlKey: string, maxDays: number): Promise<number[]> {
+    const rows = await db.query<{ id: number }>(
+      `SELECT "id" FROM "Pin"
+       WHERE regexp_replace(btrim("sourceUrl"), '^https?://', '', 'i') = $3
+         AND "id" <> $1 AND "utcDeletedDateTime" IS NULL
+         AND ${DAYS_APART} <= $4`,
+      [pinId, start, sourceUrlKey, maxDays],
+    );
+    return rows.map((row) => row.id);
+  }
+
+  // Forgets the pin's undecided suggestions whose pins no longer start within
+  // maxDays of each other (an edit moved a date). Only dates: title scores are
+  // not symmetric, so the other pin's own check may be what found the pair.
+  // Confirmed and rejected pairs are people's decisions and stay.
+  static async clearStaleSuggestions(pinId: number, maxDays: number) {
+    await db.query(
+      `DELETE FROM "PinDuplicate" AS "d"
+       USING "Pin" AS "a", "Pin" AS "b"
+       WHERE "d"."status" = 'suggested' AND $1 IN ("d"."pinId", "d"."otherPinId")
+         AND "a"."id" = "d"."pinId" AND "b"."id" = "d"."otherPinId"
+         AND abs(("a"."utcStartDateTime" AT TIME ZONE 'UTC')::date - ("b"."utcStartDateTime" AT TIME ZONE 'UTC')::date) > $2`,
+      [pinId, maxDays],
+    );
+  }
+
+  // Suggests a pair unless it is already known (suggested or decided).
+  // Resolves to whether a row was added.
+  static async suggest(a: number, b: number, reason: DuplicateReason, score: number | null): Promise<boolean> {
+    const [pinId, otherPinId] = ordered(a, b);
+    const rows = await db.query(
+      `INSERT INTO "PinDuplicate" ("pinId", "otherPinId", "reason", "score")
+       VALUES ($1, $2, $3, $4)
+       ON CONFLICT ("pinId", "otherPinId") DO NOTHING
+       RETURNING "pinId"`,
+      [pinId, otherPinId, reason, score],
+    );
+    return rows.length > 0;
+  }
+
+  static async find(a: number, b: number): Promise<{ status: DuplicateStatus } | undefined> {
+    const [pinId, otherPinId] = ordered(a, b);
+    const rows = await db.query<{ status: DuplicateStatus }>(`SELECT "status" FROM "PinDuplicate" WHERE "pinId" = $1 AND "otherPinId" = $2`, [
+      pinId,
+      otherPinId,
+    ]);
+    return rows[0];
+  }
+
+  static async decide(a: number, b: number, status: DuplicateStatus, userId: number) {
+    const [pinId, otherPinId] = ordered(a, b);
+    await db.query(
+      `UPDATE "PinDuplicate"
+       SET "status" = $3, "decidedByUserId" = $4, "utcDecidedDateTime" = now()
+       WHERE "pinId" = $1 AND "otherPinId" = $2`,
+      [pinId, otherPinId, status, userId],
+    );
+  }
+
+  // The pin's confirmed group (itself included), or just the pin when it has none.
+  static async group(pinId: number): Promise<number[]> {
+    const rows = await db.query<{ group: number[] | null }>(`SELECT "pinDuplicateGroup"($1) AS "group"`, [pinId]);
+    return rows[0]?.group ?? [pinId];
+  }
+
+  // Every pair the pin is in, with the other (live) pin: suggestions first,
+  // closest match first.
+  static async listForPin(pinId: number): Promise<DuplicateCandidate[]> {
+    const rows = await db.query(
+      `
+      SELECT "d"."status", "d"."reason", "d"."score",
+        "Pin"."id", "Pin"."title", "Pin"."userId", "Pin"."utcStartDateTime", "Pin"."allDay", "Pin"."utcCreatedDateTime",
+        "User"."userName", "User"."pictureUrl"
+      FROM "PinDuplicate" AS "d"
+        JOIN "Pin"
+          ON "Pin"."id" = CASE WHEN "d"."pinId" = $1 THEN "d"."otherPinId" ELSE "d"."pinId" END
+         AND "Pin"."utcDeletedDateTime" IS NULL
+        LEFT JOIN "User" ON "User"."id" = "Pin"."userId"
+      WHERE $1 IN ("d"."pinId", "d"."otherPinId")
+      ORDER BY "d"."status" = 'suggested' DESC, "d"."score" DESC NULLS LAST, "Pin"."id"`,
+      [pinId],
+    );
+    return rows.map((row) => ({
+      status: row.status,
+      reason: row.reason,
+      score: row.score,
+      pin: {
+        id: row.id,
+        title: row.title,
+        userId: row.userId,
+        user: row.userName ? { id: row.userId, userName: row.userName, pictureUrl: row.pictureUrl ?? undefined } : undefined,
+        utcStartDateTime: row.utcStartDateTime,
+        allDay: row.allDay,
+        utcCreatedDateTime: row.utcCreatedDateTime,
+      },
+    }));
+  }
+
+  // For backups: every pair, decisions included.
+  static getAll(): Promise<Row[]> {
+    return db.query(`
+      SELECT "pinId", "otherPinId", "reason", "score", "status", "decidedByUserId", "utcCreatedDateTime", "utcDecidedDateTime"
+      FROM "PinDuplicate"
+      ORDER BY "pinId", "otherPinId"`);
+  }
+
+  static async restore(pairs: Row[] | undefined) {
+    for (const pair of pairs || []) {
+      await db.query(
+        `INSERT INTO "PinDuplicate" ("pinId", "otherPinId", "reason", "score", "status", "decidedByUserId", "utcCreatedDateTime", "utcDecidedDateTime")
+         VALUES ($1, $2, $3, $4, $5, $6, COALESCE($7, now()), $8)
+         ON CONFLICT ("pinId", "otherPinId") DO NOTHING`,
+        [pair.pinId, pair.otherPinId, pair.reason, pair.score ?? null, pair.status, pair.decidedByUserId ?? null, pair.utcCreatedDateTime ?? null, pair.utcDecidedDateTime ?? null],
+      );
+    }
+  }
+}
