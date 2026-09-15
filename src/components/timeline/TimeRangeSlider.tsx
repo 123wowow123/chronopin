@@ -1,0 +1,301 @@
+'use client';
+
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { Icon } from '@/components/ui/Icon';
+import { approxDays, formatSpan, parseTypedSpan } from '@/lib/postedSpan';
+
+type Side = 'past' | 'future';
+
+// A range of time around now, dragged in whole steps or typed exactly. The
+// timeline uses one side ("posted within"); the map uses both (past and
+// future windows around now). A null span means unbounded ("All").
+export function TimeRangeSlider({
+  steps,
+  past,
+  future = null,
+  pastOnly = false,
+  pastLabelSpan = null,
+  onChange,
+}: {
+  steps: string[];
+  past: string | null;
+  future?: string | null;
+  pastOnly?: boolean;
+  pastLabelSpan?: string | null;
+  onChange: (value: { past: string | null; future: string | null }) => void;
+}) {
+  const maxIndex = steps.length;
+  const trackRef = useRef<HTMLDivElement>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const drag = useRef<{ side: Side | null; rect: DOMRect } | null>(null);
+  const [panelOpen, setPanelOpen] = useState(false);
+  const [texts, setTexts] = useState({ past: '', future: '' });
+  const [invalid, setInvalid] = useState({ past: false, future: false });
+
+  const zeroIndex = steps.findIndex((s) => approxDays(s) === 0);
+  const label = (within: string | null) => (within ? formatSpan(within) : 'All');
+
+  // The step nearest a span on a log scale, to place a thumb for a typed value.
+  function nearestIndex(within: string | null): number {
+    if (!within) return maxIndex;
+    const target = approxDays(within);
+    if (target == null || !steps.length) return maxIndex;
+    if (target === 0) return Math.max(zeroIndex, 0);
+    let best = 0;
+    let bestDistance = Infinity;
+    steps.forEach((step, i) => {
+      const days = approxDays(step);
+      if (!days) return;
+      const distance = Math.abs(Math.log(days) - Math.log(target));
+      if (distance < bestDistance) {
+        bestDistance = distance;
+        best = i;
+      }
+    });
+    return best;
+  }
+
+  const pastIndex = nearestIndex(past);
+  const futureIndex = nearestIndex(future);
+  const fromCenter = (index: number) => (maxIndex ? (index / maxIndex) * 50 : 0);
+  const pastPosition = pastOnly ? fromCenter(pastIndex) * 2 : 50 - fromCenter(pastIndex);
+  const futurePosition = 50 + fromCenter(futureIndex);
+
+  const latest = useRef({ past, future, onChange });
+  useLayoutEffect(() => {
+    latest.current = { past, future, onChange };
+  });
+
+  function apply(nextPast: string | null, nextFuture: string | null) {
+    if (nextPast === latest.current.past && nextFuture === latest.current.future) return;
+    setTexts({ past: label(nextPast) || '', future: label(nextFuture) || '' });
+    setInvalid({ past: false, future: false });
+    latest.current.onChange({ past: nextPast, future: nextFuture });
+  }
+
+  function applySide(side: Side, within: string | null) {
+    apply(side === 'past' ? within : latest.current.past, side === 'future' ? within : latest.current.future);
+  }
+
+  const withinForIndex = (index: number) => (index >= steps.length ? null : steps[index]);
+
+  // A pointer position on the track to the nearest step on the dragged side,
+  // clamped so it never crosses "Now" onto the other side.
+  function applyPointer(clientX: number) {
+    const d = drag.current;
+    if (!d) return;
+    const percent = ((clientX - d.rect.left) / d.rect.width) * 100;
+    if (pastOnly) {
+      applySide('past', withinForIndex(Math.round((Math.min(Math.max(percent, 0), 100) / 100) * maxIndex)));
+      return;
+    }
+    if (!d.side) {
+      if (percent === 50) return;
+      d.side = percent < 50 ? 'past' : 'future';
+    }
+    const fromMid = d.side === 'past' ? Math.min(Math.max(50 - percent, 0), 50) : Math.min(Math.max(percent - 50, 0), 50);
+    applySide(d.side, withinForIndex(Math.round((fromMid / 50) * maxIndex)));
+  }
+
+  useEffect(() => {
+    const move = (event: PointerEvent) => applyPointer(event.clientX);
+    const up = () => {
+      drag.current = null;
+    };
+    const outside = (event: MouseEvent) => {
+      if (!rootRef.current?.contains(event.target as Node)) setPanelOpen(false);
+    };
+    document.addEventListener('pointermove', move);
+    document.addEventListener('pointerup', up);
+    document.addEventListener('mousedown', outside);
+    return () => {
+      document.removeEventListener('pointermove', move);
+      document.removeEventListener('pointerup', up);
+      document.removeEventListener('mousedown', outside);
+    };
+  });
+
+  function startDrag(side: Side, event: React.PointerEvent<HTMLElement>, thumb?: HTMLElement) {
+    event.preventDefault();
+    event.stopPropagation();
+    const rect = trackRef.current!.getBoundingClientRect();
+    // Stacked thumbs on "Now": the drag direction decides which side moves.
+    drag.current = { side: !pastOnly && pastIndex === 0 && futureIndex === 0 ? null : side, rect };
+    thumb?.focus();
+  }
+
+  // Pressing anywhere on the track jumps there and keeps dragging.
+  function startTrackDrag(event: React.PointerEvent<HTMLElement>) {
+    const rect = trackRef.current!.getBoundingClientRect();
+    const percent = ((event.clientX - rect.left) / rect.width) * 100;
+    const side: Side = pastOnly || percent < 50 ? 'past' : 'future';
+    startDrag(side, event, rootRef.current?.querySelector<HTMLElement>(`[data-thumb="${side}"]`) ?? undefined);
+    drag.current!.side = side;
+    applyPointer(event.clientX);
+  }
+
+  function onKeyDown(side: Side, event: React.KeyboardEvent) {
+    const delta = ({ ArrowLeft: -1, ArrowDown: -1, ArrowRight: 1, ArrowUp: 1 } as Record<string, number>)[event.key];
+    if (delta == null && event.key !== 'Home' && event.key !== 'End') return;
+    event.preventDefault();
+    const index = side === 'past' ? pastIndex : futureIndex;
+    // In dual mode the past thumb grows leftward, so arrows invert for it.
+    const signed = side === 'past' && !pastOnly ? -(delta ?? 0) : delta ?? 0;
+    const next = event.key === 'Home' ? 0 : event.key === 'End' ? maxIndex : index + signed;
+    applySide(side, withinForIndex(Math.min(Math.max(next, 0), maxIndex)));
+  }
+
+  function applyTyped(side: Side) {
+    const within = parseTypedSpan(texts[side], zeroIndex !== -1);
+    if (!within) {
+      setInvalid((v) => ({ ...v, [side]: true }));
+      return;
+    }
+    applySide(side, within);
+  }
+
+  const panelRow = (side: Side) => (
+    <div key={side}>
+      <form
+        className="flex items-center gap-2"
+        onSubmit={(event) => {
+          event.preventDefault();
+          applyTyped(side);
+        }}
+      >
+        <span className="w-24 text-xs text-muted">{pastOnly ? 'Posted within' : side === 'past' ? 'Past' : 'Future'}</span>
+        <input
+          type="text"
+          value={texts[side]}
+          placeholder="10 days"
+          autoComplete="off"
+          onChange={(event) => setTexts((t) => ({ ...t, [side]: event.target.value }))}
+          onKeyDown={(event) => event.key === 'Escape' && setPanelOpen(false)}
+          className={`field min-w-0 flex-1 px-2 py-1 text-sm ${invalid[side] ? 'ring-red-500' : ''}`}
+        />
+        <button type="submit" className="btn btn-sm btn-primary py-1.5">
+          Set
+        </button>
+      </form>
+      <div className="mt-1.5 mb-2 flex flex-wrap gap-1">
+        {steps.map((step) => (
+          <button key={step} type="button" onClick={() => applySide(side, step)} className="rounded-full bg-raised px-2.5 py-0.5 text-xs text-ink ring-1 ring-line ring-inset hover:bg-raised-2">
+            {formatSpan(step)}
+          </button>
+        ))}
+        <button type="button" onClick={() => applySide(side, null)} className="rounded-full bg-raised px-2.5 py-0.5 text-xs text-ink ring-1 ring-line ring-inset hover:bg-raised-2">
+          All
+        </button>
+      </div>
+    </div>
+  );
+
+  // 20px thumbs with a 36px invisible hit area.
+  const thumbClass =
+    'absolute top-1/2 size-5 -translate-x-1/2 -translate-y-1/2 cursor-grab touch-none rounded-full border-2 border-white shadow-md shadow-black/50 transition-transform hover:scale-110 after:absolute after:-inset-2 after:content-[""] focus:outline-none focus-visible:ring-2 focus-visible:ring-link active:cursor-grabbing';
+  const tickClass = 'rounded-md px-1 py-0.5 text-[11px] text-subtle hover:bg-raised hover:text-ink';
+
+  return (
+    <div ref={rootRef} className="floating w-64 px-3.5 pt-2.5 pb-3 text-sm">
+      {/* With both sides, equal outer columns keep the pencil on the centre
+          line, above "Now" and the track's midpoint, whatever the labels say. */}
+      <div className={pastOnly ? 'flex items-start justify-between gap-2' : 'grid grid-cols-[1fr_auto_1fr] items-start gap-2'}>
+        <button
+          type="button"
+          className="justify-self-start text-left"
+          onClick={() => applySide('past', pastLabelSpan || null)}
+          title={pastLabelSpan ? `Use your default (${formatSpan(pastLabelSpan)})` : pastOnly ? 'Show pins posted at any time' : 'Show all past pins'}
+        >
+          <span className="font-semibold text-past">{pastOnly ? 'Posted within' : 'Past'}</span>{' '}
+          <span className={pastOnly ? 'text-ink' : 'block text-ink'}>{label(past)}</span>
+        </button>
+        <button type="button" onClick={() => setPanelOpen((o) => !o)} aria-expanded={panelOpen} aria-label="Type exact values" title="Type exact values" className="-m-1.5 rounded-md p-1.5 text-subtle hover:bg-raised hover:text-ink">
+          <Icon name="pencil" className="size-4" />
+        </button>
+        {!pastOnly ? (
+          <button type="button" className="justify-self-end text-right" onClick={() => applySide('future', null)} title="Show all upcoming pins">
+            <span className="font-semibold text-future">Future</span>
+            <span className="block text-ink">{label(future)}</span>
+          </button>
+        ) : null}
+      </div>
+
+      {/* Labels in their own row, clear of the thumbs. */}
+      <div className="mt-2 flex items-center justify-between">
+        {pastOnly ? (
+          <>
+            {steps.length ? (
+              <button type="button" className={`${tickClass} -ml-1`} onClick={() => applySide('past', steps[0])} title={`Show pins posted within ${formatSpan(steps[0])}`}>
+                {formatSpan(steps[0])}
+              </button>
+            ) : (
+              <span />
+            )}
+            <button type="button" className={`${tickClass} -mr-1`} onClick={() => applySide('past', null)} title="Show pins posted at any time">
+              All
+            </button>
+          </>
+        ) : (
+          <button
+            type="button"
+            className={`${tickClass} mx-auto`}
+            onClick={() => apply(withinForIndex(Math.max(zeroIndex, 0)), steps.find((s) => (approxDays(s) ?? 0) > 0) ?? null)}
+            title="Bring both sides to now"
+          >
+            Now
+          </button>
+        )}
+      </div>
+
+      {/* The track is inset by the thumb's radius, so a thumb at either end
+          stays inside the panel; the whole 28px-tall strip takes a press. */}
+      <div className="relative h-7 cursor-pointer touch-none px-2.5" onPointerDown={startTrackDrag}>
+        <div ref={trackRef} className="relative top-1/2 h-1.5 -translate-y-1/2 rounded-full bg-raised-2">
+          <div
+            className="absolute h-full rounded-full bg-past"
+            style={{ left: `${pastOnly ? 0 : pastPosition}%`, width: `${(pastOnly ? pastPosition : 50) - (pastOnly ? 0 : pastPosition)}%` }}
+          />
+          {!pastOnly ? <div className="absolute h-full rounded-full bg-future" style={{ left: '50%', width: `${futurePosition - 50}%` }} /> : null}
+          {!pastOnly ? <div className="absolute top-1/2 h-3 w-px -translate-y-1/2 bg-muted" style={{ left: '50%' }} /> : null}
+          <div
+            role="slider"
+            tabIndex={0}
+            data-thumb="past"
+            aria-label="Show pins back to"
+            aria-valuetext={label(past) || ''}
+            aria-valuemin={0}
+            aria-valuemax={maxIndex}
+            aria-valuenow={pastIndex}
+            className={`${thumbClass} bg-past`}
+            style={{ left: `${pastPosition}%` }}
+            onPointerDown={(event) => startDrag('past', event, event.currentTarget)}
+            onKeyDown={(event) => onKeyDown('past', event)}
+          />
+          {!pastOnly ? (
+            <div
+              role="slider"
+              tabIndex={0}
+              data-thumb="future"
+              aria-label="Show pins up to"
+              aria-valuetext={label(future) || ''}
+              aria-valuemin={0}
+              aria-valuemax={maxIndex}
+              aria-valuenow={futureIndex}
+              className={`${thumbClass} bg-future`}
+              style={{ left: `${futurePosition}%` }}
+              onPointerDown={(event) => startDrag('future', event, event.currentTarget)}
+              onKeyDown={(event) => onKeyDown('future', event)}
+            />
+          ) : null}
+        </div>
+      </div>
+
+      {panelOpen ? (
+        <div className="mt-3 border-t border-line pt-3">
+          {panelRow('past')}
+          {!pastOnly ? panelRow('future') : null}
+        </div>
+      ) : null}
+    </div>
+  );
+}

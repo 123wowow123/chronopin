@@ -1,1 +1,0 @@
-export const handleValidateReg = /^[a-zA-Z0-9-_]+$/;

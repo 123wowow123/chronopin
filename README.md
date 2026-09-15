@@ -1,45 +1,62 @@
-[![Build Status](https://travis-ci.org/123wowow123/chronopin.svg?branch=master)](https://travis-ci.org/123wowow123/chronopin) [![Dependency Status](https://david-dm.org/123wowow123/chronopin.svg)](https://david-dm.org/123wowow123/chronopin) [![devDependency Status](https://david-dm.org/123wowow123/chronopin/dev-status.svg)](https://david-dm.org/123wowow123/chronopin#info=devDependencies) [![Coverage Status](https://coveralls.io/repos/github/123wowow123/chronopin/badge.svg?branch=master)](https://coveralls.io/github/123wowow123/chronopin?branch=master)
-
 # Chronopin
 
-This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.7.6.
+Discover and track upcoming release dates, events and other important dates.
 
-## Getting Started
+Built with [Next.js](https://nextjs.org) 16 (App Router, Cache Components), React 19, TypeScript and Tailwind CSS 4 on Node.js 24 LTS, backed by PostgreSQL + PostGIS and a FAISS search service. Pages render on the server for search engines; the JSON API lives in the same app under `/api`.
 
-### Developing
+## Getting started
 
-// install these first use node 14 and python 2.7.18
-https://tecadmin.net/install-nvm-macos-with-homebrew/#:~:text=1%20How%20To%20Install%20NVM%20on%20macOS%20with,what%20Node%20versions%20are%20available%20to%20install.%20
+1. `nvm use` (Node 24, see `.nvmrc`), then `npm ci`.
+2. Start the local services: `docker compose -f Docker/docker-compose.dev.yml up -d` (PostgreSQL + PostGIS, FAISS). Thumbnails use the Azurite emulator on `127.0.0.1:10000`.
+3. Create `.env.local` (never committed):
 
-https://www.freecodecamp.org/news/python-version-on-mac-update/
+   ```sh
+   DATABASE_URL=postgres://chronopin:chronopin@localhost:5432/chronopin
+   FAISS_URL=http://localhost:5050
+   AZURE_STORAGE_CONNECTION_STRING=...
+   ANTHROPIC_API_KEY=...      # page scraping extraction; optional
+   SESSION_SECRET=...         # JWT signing secret; required for npm start / production
+   ```
 
+4. `npm run db:refresh` (schema + seed data), `npm run search:refresh` (search index).
+5. `npm run dev` and open http://localhost:3000.
 
-1. Run `npm install` to install server dependencies.
+## Scripts
 
-2. Run `bower install` to install front-end dependencies.
+| Command | What it does |
+| --- | --- |
+| `npm run dev` / `build` / `start` | Next.js development server, production build, production server |
+| `npm run typecheck` / `lint` / `test` | TypeScript, ESLint, Vitest unit tests |
+| `npm run test:e2e` | Playwright end-to-end tests against a running server (`BASE_URL`, default `http://localhost:3000`) |
+| `npm run create:db` / `db:reset` | Apply pending schema files in `scripts/db/schema` / drop everything and reapply |
+| `npm run create:data` / `backup:data` | Seed the database from / back it up to `scripts/backup/*.json` |
+| `npm run search:refresh` | Empty and refill the FAISS index |
+| `npm run companies:logos` | Look up missing company logos |
+| `npm run specialty-days:build` | Rebuild `src/server/data/specialtyDays.json` |
 
-3. Run `grunt serve` to start the development server. It should automatically open the client in your browser when ready.
+## Layout
 
-## Build & development
+- `src/app` — pages, `api/**/route.ts` JSON endpoints, `auth/**` sign-in (Google, Facebook, email), `sitemap.ts`, `robots.ts`
+- `src/components` — React components (server by default, client islands where interactive)
+- `src/server` — database, models, auth, scraping, weather, search; server-only code
+- `src/lib` — code shared by server and browser: SEO helpers, formatting, types
+- `src/proxy.ts` — canonical pin URLs (308) and real 404s before rendering
+- `scripts` — data, schema and maintenance scripts (run with `tsx`)
 
-Run `grunt build` for building and `grunt serve` for preview.
+## SEO
 
-## Run Docker Build
+- Every pin has a canonical URL `/pin/:id/:slug`; `/pin/:id` and stale slugs redirect permanently.
+- Pages carry titles, descriptions, canonical links, Open Graph/Twitter cards (a generated card at `/og/pin/:id` when a pin has no image) and JSON-LD (`Article`, `Event` for pins with a place, `BreadcrumbList`, `WebSite` search action).
+- `/sitemap.xml` lists every live pin; `/robots.txt` keeps crawlers out of the API and account pages; search and account pages are `noindex`.
+- Pin edits expire their cached page at once; timeline and sitemap refresh in the background.
 
-Run Prod Build `docker build -t chronopin -f Docker/Dockerfile .`
+## Docker
 
-Or
+Build: `docker build -f Docker/Dockerfile -t chronopin .` (no database needed at build time)
 
-Run Dev Build `docker build -t chronopin-dev -f Docker/Dev.Dockerfile .`
+Run: `docker run --rm -p 9000:9000 --env-file Docker/env.prod.list chronopin`
 
-## Run Docker Container
-
-Run Prod `docker run --rm -p 9000:9000 --name chronopin --env-file Docker/env.prod.list chronopin`
-
-Or
-
-Only mounts client and server folders for development
-Run Dev `docker run --rm -p 9000:9000 --name chronopin-dev --env-file Docker/env.dev.list -v $(pwd)/server:/code/server -v $(pwd)/client:/code/client chronopin-dev`
+The image is the Next.js standalone server on port 9000 with Chromium for the scraper. Add `SESSION_SECRET` to the Kubernetes `env-file` ConfigMap before deploying.
 
 ## Upload Docker Image
 
@@ -224,86 +241,37 @@ Run `ssh -p 50000 -i chronopin_docker.pub -v wowow@20.190.57.28`
 
 ## DB Management
 
-Run `npm run create:db` for create tables and stored procedures
+The database is PostgreSQL with PostGIS. Locally it runs in Docker (native on
+both Apple Silicon and Intel):
+
+Run `docker compose -f Docker/docker-compose.dev.yml up -d` to start it on `localhost:5432`
+
+The app and scripts connect with `DATABASE_URL` (`config.database.url`), e.g.
+`postgres://chronopin:chronopin@localhost:5432/chronopin`; add `?sslmode=require` for a hosted database.
+
+Run `npm run create:db` to apply pending schema files from `scripts/db/schema` (safe to re-run; never drops data)
+
+Run `npm run db:reset` to drop everything and rebuild the schema (development only)
 
 Run `npm run create:data` for adding data
 
 Run `npm run backup:data` for backing up data
 
-Run `npm run remediate:data` for remediation of data
+A schema change is a new numbered file in `scripts/db/schema` (e.g. `0002_add_pin_foo.sql`); never edit one that has been applied.
 
 ## Debug Node
 
-Run `node --inspect-brk server/index.js` for debugging Node
+Use the VS Code launch configurations in `.vscode/launch.json` (dev server, create DB, create/save data), or run `NODE_OPTIONS=--inspect npm run dev`.
 
-Run `node --inspect-brk scripts/db/index.js` for debugging Node :: create:db
-
-Run `node --inspect-brk scripts/data/index.js --save` for debugging Node :: backup:data
-
-Run `node --inspect-brk scripts/data/index.js --seed` for debugging Node :: create:data
-
-Run `node --inspect-brk scripts/search/index.js --delete --index=pins` for debugging Node :: delete:search:pins
-
-## Update Node
-
-Clear NPM's cache
-
-`sudo npm cache clean -f`
-
-Install a little helper called 'n'
-
-`sudo npm install -g n`
-
-Install latest stable Node.js version
-
-`sudo n stable`
-
-Check Node.js version
-
-`node --version`
-
-Run this from the command line:
-
-`node -p "process.arch"`
-
-`ECHO %PROCESSOR_ARCHITECTURE%`
-
-It will return 'arm', 'ia32', or 'x64'.
+Scripts run on `tsx`, e.g. `npx tsx --inspect-brk scripts/data/index.ts --save` for debugging `backup:data`.
 
 ## Update Node packages
 
-Install `npm install -g npm-check-updates`
-
-Run `npm-check-updates` to list what packages are out of date
-(basically the same thing as running `npm outdated`)
-
-Run `npm-check-updates -u` to update all the versions in your package.json (this is the magic sauce)
-
-Run `npm update` as usual to install the new versions of your packages based on the updated package.json
-
-## Update Bower packages
-
-Install `npm install -g npm-check-updates`
-
-Run `ncu -m bower` to list what packages are out of date
-
-Run `ncu -m bower -u` to update all the versions in your bower.json (this is the magic sauce)
-
-Run `bower update` as usual to install the new versions of your packages based on the updated bower.json
-
-## Run Sharp Hack in Azure until they support 64 bit node
-
-`npm install sharp@0.11.4 --save-dev --arch=ia32`
-
-https://github.com/lovell/sharp/issues/379
-
-https://github.com/projectkudu/kudu/issues/1914
-
-https://social.msdn.microsoft.com/Forums/en-US/871cc7c7-2917-4c96-b98d-f1e488937b43/azure-website-nodejs-doesnt-run-64-bit?forum=windowsazurewebsitespreview
+Node is pinned by `.nvmrc` (`nvm use`). Run `npm outdated` to list what packages are out of date, then `npx npm-check-updates -u && npm install`. Keep ESLint on 9 until eslint-plugin-react supports 10.
 
 ## Testing
 
-Running `npm test` will run the unit tests with karma.
+Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwright tests against a running app (`npm run build && npm start`, or `npm run dev`; `BASE_URL` picks the server).
 
 ## External API
 
@@ -358,18 +326,13 @@ https://nationaldaycalendar.com/march/
 
 - Youtube pin with time location
   - Get closed caption text
-  - Pass playing video time to drilldown view
-  - Play from beginning button
-  - Timeline auto play one video after another
-    - Show movie trailers usages
-  - Scrape YouTube using something like: Reader.js
-  - Set YouTube time range
 
-- Drilldown Sumery
+
+- Drilldown Summery
   - Sentiment
-  - Summerize (or Use reading mode to show full article)
+
   - Mini timeline for multiple date point articles (highlight date mined for mini timeline)
-  - Add other annotations to article
+
   - Historically happens on date
   - RSS/Atom summary
 
@@ -378,30 +341,23 @@ https://nationaldaycalendar.com/march/
   - Show distance
   - https://sandiego.eater.com/2017/12/11/16761732/menya-ultra-ramen-japanese-restaurant-mira-mesa
 
-- Tag
- - Auto suggest tokenized tag in tag field
- - ML suggest tag
- - Add personal timeline column with composition of tag
- - Home page with single popular timeline with flyout tag cloud
 
-- Trackable Variable per timeline
- - Then use ML to try to predict it once enough pins exist for sub (eg: price)
+
+
 
 - Filter by like threashold  
 
-- Faceted Search bubbles like Bing
 
-- Fix watch pins board
 
-- SSL
-- facebook login check for fbid and matching email in system to get user
 
-- Put location in place of "THE PIN GANG" and use google mapping cordinates
+
+
+
 - Stacking/grouping of related pins
 
 - Amazon/Ebay product cross referencing
 
-- Neo4j / Marklogic
+
 - Reminder Aside Menu by date sections
   - Sectional grouping on the bottom
   https://www.bing.com/images/search?view=detailV2&ccid=Qz5ylXJX&id=DE79D5F3DD2FE17F2542FE2F74C1163AC546B6F2&thid=OIP.Qz5ylXJX6FmKOGL7rsaBzwAAAA&mediaurl=http%3a%2f%2forgjunkie.com%2fwp-content%2fuploads%2f2016%2f04%2fReminders-app.png&exph=650&expw=366&q=reminder+app&simid=608026157405111055&selectedIndex=225&ajaxhist=0
@@ -416,11 +372,7 @@ https://nationaldaycalendar.com/march/
 
 - Faceted Navigation that slides in one by one from the left in bubble blocks (https://alistapart.com/article/design-patterns-faceted-navigation)(https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-post-filter.html)
 
-- https://en.wikipedia.org/wiki/Word2vec
-- https://wordnet.princeton.edu/
-- https://arxiv.org/pdf/1402.3722.pdf
-- https://nlp.stanford.edu/software/sempre/
-- http://jupyter.org/
+
 
 ### Map
 
@@ -430,37 +382,31 @@ https://nationaldaycalendar.com/march/
   - See who else is going in your network
   - If flight information is entered or flight booked through site then delays and be tracked and shared
 
-### Time Series
 
-- Read book for more ideas
 
-### Machine Learning
 
-- review algebra, linear algebra, analysis, stat, calculus, graph theory in that order
--- https://www.pinterest.com/mathematicsprof/
 
 ### Web Scraper
 
 - Amazon Price Scrape
 - eBay Price Scrape
-- Address Scrape
-- Weather of location for that date
-- Weather of your location for that date
-- Movie Rotten Tomato scrape
-- As you type in a url a bottom horizontal scrollable pin list will show up for closely matched existing pins. There you can immediately track or upvote
-- Editing image will delete image so make sure it's marked deleted in join table ++
-- Add price on contract icon
-- Add Free Cost Text rather then $0
-- Extract scaper code to new project
+
+
+
+
+
 
 ### Misc
 
-- Follow other people and get notified when they post
-- GeoHash grid aggregation of close events during breakdown of 1/3/5/10 days
-- Extract scrape core selector in config file
+
+
+
+
 - Pin feed needs to include if user have clicked on watch/like per min exclude deleted
-- Change Medium.type to NVarChar
+
+
 - General Sentiment Graph for a Company or Product
+
 - Search (Amazon) to buy product to support our website
 ```
 This is a promotional article about one of the company partners with Interesting Engineering. By shopping with us, you not only get the materials you need, but you’re also supporting our website.
@@ -470,83 +416,83 @@ This is a promotional article about one of the company partners with Interesting
 ### Partially Completed:
 
 - Activated Google Analytics / Facebook upgrade to non development mode
-- Flat design <http://www.androidcentral.com/> <http://spectrum.ieee.org/>
-- Check out upcoming side calendar <https://cafeastrology.com/astrologyof2017horoscopes.html>
-- provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc. <https://aztro.readthedocs.io/en/latest>
-- add flyout for different types of like (on time). Watch should show modal to add or select grouping pin will live in
-- Add unique constraint on like and favorite so one user can like / favorite a pin once
-- promise return null to suppress warnings
-- Unit / Integration test on User and Pin model
-- Change readFileSync to Async in scrape code to load scrape file or cache it
-- Prevent user from posting the same pin of same url more then once
-- Pin save should be wrapped in transaction
-- format money with comma's on pin form
-- Socket io updates - like will replace pin causing flicker ++
-- cancel scraping button ++
-- add edit ability to scraping modal ++
 
-- Create watch view ++
-- inherit main and watch view ++
-- extract timeline into directive ++
-- pin page media query
-- facebook / tweet like button and counter need to show / move watch to top right of image
-- scrape alt text for image and save
-- get title in header bound correctly per page
-- linking on watch/link and being redirected to login should fulfill request after logged in
-- Extract GA code in auth.service.js into it's own module
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - GA: Outbound link / non-interaction events / Social Interactions tracking / User Timings / set clientId on tracker creation
-- searching on anything other then main page should bring you to main page
-- multiline description support
-- Accessory feature listing below main pin
 
-- Side panel for favorite events: https://cafeastrology.com/articles/daysoftheweek.html
-- convert to use jQuery.scrollTo https://github.com/flesler/jquery.scrollTo
+
+
+
+
 - Chinese Lunar Calendar (Nong Li)
-- display error banner on create page when failed scrape
 
-- add holiday and perforated placeholder block for holiday and special events
-- search with infinit scroll
-- check scrolling to the end as link header is not responsed
 
-- Extract scrapping js to own repo and used typescript
-- side info panel with summation of 'tagged' categories of items and mode/median/mean
-- Add tags and allow upvoting of existing tags to gain meta data for search engine to process +
-- search feature bug / show tag button when searched to jump to different section like pinterest +++
-- show pixel dimention / size via tooltip?? of scraped image
+
+
+
+
+
+
+
+
+
 
 - Add FB privacy policy page
 - https://gist.github.com/muddylemon/2671176
 - https://developers.facebook.com/apps/560731380662615/settings/basic/
 
-- https://prerender.io/
+
 - facebook comment jumps @ pin page
 
 
 ## Architecture
 - Externalize image processing to AWS Lamda
-- Externalize pre render to AWS Lamda
-- Add Redis to serve prender pages
-- Convert to React
-- Grafana activity dashboard
 - [Use Firebase DB for denormalized push notification of app data] <https://www.youtube.com/watch?v=LAWjdZYrUgI>
 - GeoLite2 City: IP => City / lat:long
-- Cache main query and improve load time <https://www.patterns.dev/posts/prpl/> <https://web.dev/rendering-on-the-web/>
 
-## Bugs
-- When in specific pin view and clicking logout will show blank screen
-- Date tag mobile view broken
-- Fix loading jumpiness
+
 
 ## Before Usable
-- Youtube!!
-- Create page image redesign with image selection in right drawer
-- Comment fix
-- Login fix
-- Script to refresh pins in semantic search
-- Single Pin page similarity needs to be in timeline
+
+
 - Favorite needs to be grouped in folders and make public/private
 - Pinner should be able to add tags/groups to organize their pin
-- Notification when other people comment on your post for comment reply
+- Add auto nightly scraping job 
 
+- scrape https://www.youtube.com/@TheB1M
+
+add additional reference link feature to better ground pin with additional evidence and reference link should have confidance value and final total confidance showed on pin should be calculated using weighted average with more recent reference weighing more
 
 update client for youtube and twitter
+
+- search with infinit scroll
+
+- add holiday and perforated placeholder block for holiday and special events
+
+- Accessory feature listing below main pin
+
+
+- Prevent user from posting the same pin of same url more then once
+
+
+- provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc. <https://aztro.readthedocs.io/en/latest>
+- Check out upcoming side calendar with astrology horrospoce <https://cafeastrology.com/astrologyof2017horoscopes.html>
+
+- watched view and should have different groups 
+
+- add light theme and add user preference to change it
