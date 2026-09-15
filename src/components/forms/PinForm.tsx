@@ -35,6 +35,7 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
   const [scrapeError, setScrapeError] = useState('');
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
+  const [duplicateOf, setDuplicateOf] = useState<Pick<PinJson, 'id' | 'title'> | null>(null);
   const [companies, setCompanies] = useState<{ id: number; name: string }[]>([]);
   const [showAdvanced, setShowAdvanced] = useState(mode === 'edit');
   const timeZone = useTimeZone('');
@@ -69,6 +70,7 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
   async function submit(event: React.FormEvent) {
     event.preventDefault();
     setError('');
+    setDuplicateOf(null);
     if (!values.title.trim()) return setError('A title is required.');
     if (!values.startDate) return setError('A start date is required.');
     if (!values.sourceUrl.trim() && mode !== 'edit') return setError('A source URL is required.');
@@ -87,7 +89,12 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
       const saved = mode === 'edit' ? await api.put<PinJson>(`/api/pins/${values.id}`, body) : await api.post<PinJson>('/api/pins', body);
       router.push(pinPath(saved));
     } catch (err) {
-      setError(err instanceof ApiError && err.status === 403 ? 'You can only edit your own pins.' : 'There was a problem saving this pin.');
+      if (err instanceof ApiError && err.status === 409) {
+        setError(err.message);
+        setDuplicateOf((err.body as { pin?: Pick<PinJson, 'id' | 'title'> } | null)?.pin ?? null);
+      } else {
+        setError(err instanceof ApiError && err.status === 403 ? 'You can only edit your own pins.' : 'There was a problem saving this pin.');
+      }
       setSaving(false);
     }
   }
@@ -324,6 +331,9 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
               <label htmlFor="summary" className={labelClass}>
                 Key points (HTML list)
               </label>
+              <p className="mb-1 text-xs text-subtle">
+                Cite a reference with <code>{'<cite data-ref="its link"></cite>'}</code>; it shows as [n].
+              </p>
               <textarea id="summary" rows={5} className={`${inputClass} font-mono text-xs`} value={values.longFormSummary} onChange={(e) => set('longFormSummary', e.target.value)} />
             </div>
           </div>
@@ -351,6 +361,14 @@ export function PinForm({ mode, pin, respondTo }: { mode: 'create' | 'edit' | 'r
         {error ? (
           <p role="alert" className="rounded-lg bg-red-500/10 px-3 py-2 text-sm text-danger-soft ring-1 ring-red-500/20 ring-inset">
             {error}
+            {duplicateOf ? (
+              <>
+                {' '}
+                <Link href={pinPath(duplicateOf)} className="underline">
+                  View {duplicateOf.title || 'that pin'}
+                </Link>
+              </>
+            ) : null}
           </p>
         ) : null}
         <div className="flex justify-end gap-2 border-t border-line pt-5">

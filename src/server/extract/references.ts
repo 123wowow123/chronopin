@@ -10,9 +10,14 @@
  * A URL only survives if it came back in a search or fetch result during the
  * call - never one the model typed from memory - and only references rated
  * MIN_CONFIDENCE or higher are kept.
+ *
+ * The same call writes the pin's long-form summary, since it has the source
+ * and every page it found in hand: each point cites what backs it, and those
+ * citations are stored by link (see numberCitations in src/lib/citations.ts).
  */
 
 import type Anthropic from '@anthropic-ai/sdk';
+import { citeTag, urlKey } from '@/lib/citations';
 import log from '../util/log';
 import { describeError, getClient, MODEL } from '.';
 
@@ -52,11 +57,13 @@ Then weigh the site itself: the lower its standing, the lower the confidence, wh
 
 Only record references rated ${MIN_CONFIDENCE} or higher, at most ${MAX_REFERENCES}, strongest first. Copy each URL exactly as it appeared in a search or fetch result - never write one from memory or adjust it. publishedDate is the page's own publication date as YYYY-MM-DD, from the result's page age or the page itself, or null when unknown. startDate and endDate are when that page says the event starts and ends, as YYYY-MM-DD (endDate is the last day, inclusive), each null when the page does not give a specific day - never carry a date over from the source or from another page. reasoning is one or two sentences on why that confidence, grounded in what the page itself says about the event and its date - quote its key phrase where you can, and name the site ("LTA's project page says Phase 1 opens in 2030"). When nothing qualifies, record an empty list.
 
+Also write longFormSummary: the event's key points as an HTML bulleted list, "<ul><li>...</li></ul>" - real list markup, not prose and not markdown - drawn from the source and from the references you record. Where a reference adds to or updates the source (a newer date, a cost, who is involved), include that. Ground every point: end it with a citation of each page that backs it, [S] for the source and [1], [2]... for references by their position in the list you record, e.g. "<li>Opens to traffic on 18 September 2026 [S][2]</li>". Cite only what a page actually says, and never a page you are not recording. longFormSummary is null when there is too little to summarize.
+
 Finish by calling record_references exactly once.`;
 
 const RECORD_TOOL: Anthropic.Beta.BetaTool = {
   name: 'record_references',
-  description: 'Records the corroborating references found for the pin. Call once, after searching, with every qualifying reference.',
+  description: 'Records the corroborating references found for the pin, and its cited summary. Call once, after searching, with every qualifying reference.',
   strict: true,
   input_schema: {
     type: 'object',
@@ -78,11 +85,23 @@ const RECORD_TOOL: Anthropic.Beta.BetaTool = {
           additionalProperties: false,
         },
       },
+      longFormSummary: {
+        type: ['string', 'null'],
+        description: 'Key points as an HTML bulleted list, each ending with its citations: [S] for the source, [n] for the nth recorded reference. Null when there is too little to summarize.',
+      },
     },
-    required: ['references'],
+    required: ['references', 'longFormSummary'],
     additionalProperties: false,
   },
 };
+
+export type FoundReferences = {
+  references: FoundReference[];
+  // Summary HTML whose citations are <cite data-ref> tags, or undefined.
+  longFormSummary?: string;
+};
+
+const NONE: FoundReferences = { references: [] };
 
 export type SourceKind = 'web page' | 'YouTube video' | 'tweet';
 
@@ -91,16 +110,16 @@ export type SourceKind = 'web page' | 'YouTube video' | 'tweet';
 const MIN_TEXT_CHARS: Record<SourceKind, number> = { 'web page': 200, 'YouTube video': 40, tweet: 20 };
 
 /**
- * Resolves to the references worth adding, or to an empty list when there is
- * no API key, too little text, or the search failed - references are a
- * bonus, so their absence never breaks a scrape.
+ * Resolves to the references worth adding and the cited summary, or to no
+ * references and no summary when there is no API key, too little text, or the
+ * search failed - they are a bonus, so their absence never breaks a scrape.
  */
-export async function findReferences(sourceUrl: string, sourceText: string, kind: SourceKind = 'web page'): Promise<FoundReference[]> {
+export async function findReferences(sourceUrl: string, sourceText: string, kind: SourceKind = 'web page'): Promise<FoundReferences> {
   const anthropic = getClient();
-  if (!anthropic) return [];
+  if (!anthropic) return NONE;
 
   const text = (sourceText || '').trim();
-  if (text.length < MIN_TEXT_CHARS[kind]) return [];
+  if (text.length < MIN_TEXT_CHARS[kind]) return NONE;
 
   const messages: Anthropic.Beta.BetaMessageParam[] = [
     { role: 'user', content: `Source (${kind}): ${sourceUrl}\n\n${text.slice(0, MAX_PAGE_CHARS)}` },
@@ -131,27 +150,29 @@ export async function findReferences(sourceUrl: string, sourceText: string, kind
 
       if (response.stop_reason === 'refusal') {
         log.warn('references refused', log.stringify(response.stop_details));
-        return [];
+        return NONE;
       }
       const record = response.content.find(
         (b): b is Anthropic.Beta.BetaToolUseBlock => b.type === 'tool_use' && b.name === RECORD_TOOL.name,
       );
       if (record) {
-        const candidates = (record.input as { references?: FoundReference[] }).references || [];
-        return keepReferences(candidates, seen, sourceUrl);
+        const input = record.input as { references?: FoundReference[]; longFormSummary?: string | null };
+        const candidates = input.references || [];
+        const references = keepReferences(candidates, seen, sourceUrl);
+        return { references, longFormSummary: citeSummary(input.longFormSummary, candidates, references, sourceUrl) };
       }
       if (response.stop_reason !== 'pause_turn') {
         log.warn('references ended without a record', response.stop_reason);
-        return [];
+        return NONE;
       }
       // The server paused its search loop; sending the turn back resumes it.
       messages.push({ role: 'assistant', content: response.content });
     }
     log.warn('references still searching after', MAX_CONTINUATIONS, 'continuations');
-    return [];
+    return NONE;
   } catch (err) {
     log.warn('references failed', describeError(err));
-    return [];
+    return NONE;
   }
 }
 
@@ -194,6 +215,26 @@ export function keepReferences(candidates: FoundReference[], seen: Set<string>, 
   return [...kept.values()].sort((a, b) => b.confidence - a.confidence).slice(0, MAX_REFERENCES);
 }
 
+/**
+ * The model's summary with its [S] and [n] citations written as the links
+ * they stand for: [S] the source, [n] the nth candidate it recorded. A
+ * citation of a candidate that was not kept is dropped with it.
+ */
+export function citeSummary(summary: string | null | undefined, candidates: FoundReference[], kept: FoundReference[], sourceUrl: string): string | undefined {
+  const html = summary?.trim();
+  if (!html) return undefined;
+  const keptKeys = new Set(kept.map((r) => urlKey(r.url)));
+  const urlOf = (label: string) => {
+    if (/^s$/i.test(label)) return sourceUrl;
+    const candidate = candidates[Number(label) - 1];
+    return candidate && keptKeys.has(urlKey(candidate.url)) ? candidate.url.trim() : undefined;
+  };
+  return html.replace(/(?:\s*\[\s*(?:S|\d+)(?:\s*,\s*(?:S|\d+))*\s*\])+/gi, (run) => {
+    const urls = new Set((run.match(/S|\d+/gi) || []).map(urlOf).filter((url): url is string => !!url));
+    return [...urls].map(citeTag).join('');
+  });
+}
+
 const isYmd = (value: string | null | undefined): value is string => /^\d{4}-\d{2}-\d{2}$/.test(value || '');
 
 // A candidate's start and end days, when well formed; an end before the start
@@ -202,17 +243,4 @@ export function referenceDates(candidate: { startDate?: string | null; endDate?:
   const startDate = isYmd(candidate.startDate) ? candidate.startDate : undefined;
   const endDate = isYmd(candidate.endDate) && !(startDate && candidate.endDate < startDate) ? candidate.endDate : undefined;
   return { startDate, endDate };
-}
-
-// The same page however it was written: no fragment, www. or trailing slash.
-export function urlKey(url: string): string | undefined {
-  try {
-    const u = new URL(url.trim());
-    if (u.protocol !== 'http:' && u.protocol !== 'https:') return undefined;
-    const host = u.hostname.toLowerCase().replace(/^www\./, '');
-    const path = u.pathname.replace(/\/+$/, '');
-    return `${host}${path}${u.search}`;
-  } catch {
-    return undefined;
-  }
 }

@@ -18,7 +18,7 @@ export function PinConfidence({ evidence }: { evidence: Evidence[] }) {
   return (
     <span
       className={`rounded-full px-2 py-px text-[10px] font-semibold tracking-wider tabular-nums not-italic ring-1 ring-inset ${confidenceClass(confidence)}`}
-      title={`Weighted average of ${count} reference${count === 1 ? '' : 's'}${evidence.some((e) => e.isSource && e.confidence != null) ? ', the source included' : ''}; a reference counts half as much for every ${HALF_LIFE_DAYS} days older than the newest`}
+      title={`Weighted average of how firmly ${count} reference${count === 1 ? '' : 's'}${evidence.some((e) => e.isSource && e.confidence != null) ? ', the source included,' : ''} support${count === 1 ? 's' : ''} the pin's start and end times; a reference counts half as much for every ${HALF_LIFE_DAYS} days older than the newest`}
     >
       {confidence}% CONFIDENCE
     </span>

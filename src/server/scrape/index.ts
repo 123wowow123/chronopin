@@ -2,7 +2,7 @@ import getVideoId from 'get-video-id';
 import _ from 'lodash';
 import config from '../config';
 import { extractPinFields, toLocation, type ExtractedFields } from '../extract';
-import { findReferences, type FoundReference } from '../extract/references';
+import { findReferences, type FoundReferences } from '../extract/references';
 import Medium from '../model/medium';
 import Merchant from '../model/merchant';
 import Pin from '../model/pin';
@@ -39,8 +39,11 @@ export async function scrape(pageUrl: string) {
   return Object.assign({}, pin.toJSON(), { type });
 }
 
-function addReferences(pin: Pin, references: FoundReference[]): Pin {
+// The references found for a pin, and the summary they ground, when one was
+// written - it is preferred to a summary of the source alone.
+function addReferences(pin: Pin, { references, longFormSummary }: FoundReferences): Pin {
   references.forEach((r) => pin.addReference(new PinReference(r)));
+  if (longFormSummary) pin.longFormSummary = longFormSummary;
   return pin;
 }
 
@@ -199,9 +202,8 @@ async function webScrape(pageUrl: string) {
   }
 
   // After the browser is gone, so the page is not held open for the calls.
-  const [fields, references] = await Promise.all([extractPinFields(pageUrl, pageText), findReferences(pageUrl, pageText)]);
-  references.forEach((r) => pin.addReference(new PinReference(r)));
-  return applyExtracted(pin, fields);
+  const [fields, found] = await Promise.all([extractPinFields(pageUrl, pageText), findReferences(pageUrl, pageText)]);
+  return addReferences(applyExtracted(pin, fields), found);
 }
 
 // Embedly wraps the real player URL in its src query parameter.

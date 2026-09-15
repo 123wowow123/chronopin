@@ -119,7 +119,7 @@ export function PinReferences({
       {rows.length ? (
         <>
           <p className="mt-1 text-xs text-subtle">
-            Overall confidence is a weighted average; a reference counts half as much for every {HALF_LIFE_DAYS} days older than the newest.
+            Overall confidence is a weighted average of how firmly each reference supports the start and end times used above; a reference counts half as much for every {HALF_LIFE_DAYS} days older than the newest.
           </p>
           <ExpandableList items={rows} itemIds={ids} visible={VISIBLE} noun="references" className="mt-1 divide-y divide-line" />
         </>

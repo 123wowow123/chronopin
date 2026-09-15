@@ -2,10 +2,11 @@ import type { NextRequest } from 'next/server';
 import { getUser, isAdmin, requireUser } from '@/server/auth';
 import { emitPinEvent } from '@/server/events';
 import { HttpError, intParam, json, noContent, readJson, route } from '@/server/http';
-import Pin from '@/server/model/pin';
+import Pin, { sameSourceUrlKey } from '@/server/model/pin';
 import PinReference from '@/server/model/pinReference';
 import type User from '@/server/model/user';
 import { invalidatePin } from '@/server/services/cache';
+import { rejectDuplicateSourceUrl } from '@/server/services/duplicatePin';
 
 type Ctx = RouteContext<'/api/pins/[id]'>;
 
@@ -46,6 +47,10 @@ const update = route(async (request: NextRequest, ctx: Ctx) => {
   // Keep whoever posted it as the author; an edit is not a transfer of
   // ownership, and an update writes userId on every save.
   pin.userId = existing.userId;
+  // Only a changed URL is checked, so pins that already share one stay editable.
+  if (sameSourceUrlKey(pin.sourceUrl) !== sameSourceUrlKey(existing.sourceUrl)) {
+    await rejectDuplicateSourceUrl(pin);
+  }
 
   const { pin: updated } = await pin.update();
   emitPinEvent('update', updated, { userId: user.id });

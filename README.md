@@ -476,19 +476,11 @@ This is a promotional article about one of the company partners with Interesting
 
 - scrape https://www.youtube.com/@TheB1M
 
-add additional reference link feature to better ground pin with additional evidence and reference link should have confidance value and final total confidance showed on pin should be calculated using weighted average with more recent reference weighing more
-
-update client for youtube and twitter
-
 - search with infinit scroll
 
 - add holiday and perforated placeholder block for holiday and special events
 
 - Accessory feature listing below main pin
-
-
-- Prevent user from posting the same pin of same url more then once
-
 
 - provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc. <https://aztro.readthedocs.io/en/latest>
 - Check out upcoming side calendar with astrology horrospoce <https://cafeastrology.com/astrologyof2017horoscopes.html>
@@ -496,3 +488,5 @@ update client for youtube and twitter
 - need job to scrape and update pin, any visit will trigger a scheduled update scape that night, along to new reference
 
 - watched view and should have different groups 
+
+- youtube summary should be generaed with reference to text transcript

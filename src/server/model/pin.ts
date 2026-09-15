@@ -81,6 +81,23 @@ export default class Pin extends BasePin {
     return queryPinById(pinId, userId || null);
   }
 
+  // A live pin by userId with this sourceUrl, other than exceptPinId. http and
+  // https count as the same URL.
+  static async findBySourceUrl(userId: number | null, sourceUrl: string | null | undefined, exceptPinId?: number | null) {
+    const url = sameSourceUrlKey(sourceUrl);
+    if (!url || userId == null) {
+      return undefined;
+    }
+    const rows = await db.query<{ id: number; title: string }>(
+      `SELECT "id", "title" FROM "Pin"
+       WHERE "userId" = $1 AND regexp_replace(btrim("sourceUrl"), '^https?://', '', 'i') = $2
+         AND "utcDeletedDateTime" IS NULL AND "id" <> $3
+       ORDER BY "id" LIMIT 1`,
+      [userId, url, exceptPinId ?? 0],
+    );
+    return rows[0];
+  }
+
   // Persists a generated longFormSummary without going through the full
   // edit path, which needs the author.
   static async updateLongFormSummary(pinId: number, longFormSummary: string) {
@@ -186,4 +203,9 @@ async function deletePinRow(pin: Pin) {
   const utcDeletedDateTime = rows.length ? rows[0].utcDeletedDateTime : undefined;
   pin.utcDeletedDateTime = utcDeletedDateTime;
   return { utcDeletedDateTime, pin };
+}
+
+// The part of a source URL two pins must not share: trimmed, without http(s)://.
+export function sameSourceUrlKey(sourceUrl: string | null | undefined) {
+  return (sourceUrl ?? '').trim().replace(/^https?:\/\//i, '');
 }

@@ -1,4 +1,6 @@
 import sanitizeHtml from 'sanitize-html';
+import { numberCitations, orderEvidence } from './citations';
+import type { Evidence } from './referenceConfidence';
 
 // Pin descriptions and summaries are stored as HTML (bulleted key points,
 // links). The Angular app rendered them with sanitising turned off; this keeps
@@ -11,6 +13,20 @@ export function safeHtml(html: string | null | undefined): string {
     transformTags: {
       a: sanitizeHtml.simpleTransform('a', { rel: 'noopener nofollow ugc', target: '_blank' }),
     },
+  });
+}
+
+// Summary HTML with its stored citations (see numberCitations) shown as [n]
+// links to the References panel's rows. The numbers stand in as private-use
+// markers while the rest is sanitised, which would otherwise strip <cite>.
+export function safeCitedHtml(html: string | null | undefined, evidence: Evidence[]): string {
+  const marked = numberCitations((html || '').replace(/[]/g, ''), orderEvidence(evidence), (numbers) => `${numbers.join(',')}`);
+  return safeHtml(marked).replace(/([\d,]+)/g, (_, numbers: string) => {
+    const links = numbers
+      .split(',')
+      .map((n) => `<a href="#ref-${n}" aria-label="Reference ${n}" class="font-medium no-underline">[${n}]</a>`)
+      .join('');
+    return `<sup class="ml-px not-italic">${links}</sup>`;
   });
 }
 

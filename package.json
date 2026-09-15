@@ -24,6 +24,8 @@
     "media:video-thumbs": "tsx scripts/media/videoThumbs.ts",
     "references:list": "tsx scripts/references/list.ts",
     "references:apply": "tsx scripts/references/apply.ts",
+    "references:reasoning:list": "tsx scripts/references/reasoningList.ts",
+    "references:reasoning:apply": "tsx scripts/references/reasoningApply.ts",
     "specialty-days:build": "node scripts/specialtyDays/build.cjs",
     "favicon:build": "tsx scripts/favicon/build.ts"
   },

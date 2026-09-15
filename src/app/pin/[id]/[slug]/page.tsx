@@ -24,7 +24,7 @@ import { UserAvatar } from '@/components/ui/UserAvatar';
 import { pinDateRanges } from '@/lib/dateClaims';
 import { money } from '@/lib/format';
 import { pinEvidence } from '@/lib/referenceConfidence';
-import { safeHtml, toCardPins } from '@/lib/sanitize';
+import { safeCitedHtml, safeHtml, toCardPins } from '@/lib/sanitize';
 import { pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
 import type { PinJson } from '@/lib/types';
 import { pinById, pinComments, relatedPins, threadPins } from '@/server/services/pages';
@@ -222,7 +222,7 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
       </h1>
 
       {pin.description ? <div className="rich-text mb-3 text-base leading-relaxed font-medium text-ink" dangerouslySetInnerHTML={{ __html: safeHtml(pin.description) }} /> : null}
-      {pin.longFormSummary ? <div className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: safeHtml(pin.longFormSummary) }} /> : null}
+      {pin.longFormSummary ? <div className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: safeCitedHtml(pin.longFormSummary, pinEvidence(pin)) }} /> : null}
 
       {pin.user?.id && pin.user.userName ? (
         <div className="surface mt-6 flex flex-wrap items-center justify-between gap-3 px-4 py-3">

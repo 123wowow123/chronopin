@@ -4,6 +4,7 @@ import { emitPinEvent } from '@/server/events';
 import { HttpError, json, paginationHeaders, paginationLink, readJson, route } from '@/server/http';
 import Pin from '@/server/model/pin';
 import PinReference from '@/server/model/pinReference';
+import { rejectDuplicateSourceUrl } from '@/server/services/duplicatePin';
 import { invalidatePin } from '@/server/services/cache';
 import { getPins } from '@/server/services/timeline';
 import { linkParams, resolveCreatedSince } from '@/server/util/createdFilter';
@@ -39,6 +40,7 @@ export const POST = route(async (request: NextRequest) => {
   if (referenceProblem) {
     throw new HttpError(400, referenceProblem);
   }
+  await rejectDuplicateSourceUrl(pin);
 
   const { pin: saved } = await pin.save();
   emitPinEvent('save', saved, { userId: user.id });

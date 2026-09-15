@@ -2,6 +2,46 @@ import { type Evidence, referenceTime } from './referenceConfidence';
 
 export const isHttpUrl = (url: string | undefined) => !!url && /^https?:\/\//i.test(url);
 
+// The same page however it was written: no fragment, www. or trailing slash.
+export function urlKey(url: string): string | undefined {
+  try {
+    const u = new URL(url.trim());
+    if (u.protocol !== 'http:' && u.protocol !== 'https:') return undefined;
+    const host = u.hostname.toLowerCase().replace(/^www\./, '');
+    const path = u.pathname.replace(/\/+$/, '');
+    return `${host}${path}${u.search}`;
+  } catch {
+    return undefined;
+  }
+}
+
+// A summary cites a reference by its link, <cite data-ref="https://..."></cite>,
+// not by number: numbers shift whenever a newer reference is added.
+export const citeTag = (url: string) => `<cite data-ref="${url.replace(/&/g, '&amp;').replace(/"/g, '&quot;')}"></cite>`;
+
+// One or more citations in a row.
+const CITE_RUN = /(?:\s*<cite\b[^>]*?\bdata-ref\s*=\s*(["'])(.*?)\1[^>]*>(?:\s*<\/cite>)?)+/gi;
+const CITE_ONE = /<cite\b[^>]*?\bdata-ref\s*=\s*(["'])(.*?)\1[^>]*>/gi;
+
+// Replaces each run of citations in summary HTML with render(numbers), the
+// numbers being where those links sit in `ordered`. Citations of a link that
+// is no longer among the references are dropped.
+export function numberCitations(html: string, ordered: Evidence[], render: (numbers: number[]) => string): string {
+  const numberOf = new Map<string, number>();
+  ordered.forEach((reference, index) => {
+    const key = urlKey(reference.url);
+    if (key && !numberOf.has(key)) numberOf.set(key, index + 1);
+  });
+  return html.replace(CITE_RUN, (run) => {
+    const numbers = new Set<number>();
+    for (const [, , url] of run.matchAll(CITE_ONE)) {
+      const n = numberOf.get(urlKey(url.replace(/&quot;/g, '"').replace(/&amp;/g, '&')) ?? '');
+      if (n) numbers.add(n);
+    }
+    return numbers.size ? render([...numbers].sort((a, b) => a - b)) : '';
+  });
+}
+
 // The order a pin's references are listed and numbered in: the source first,
 // then newest first. Citation [n] is the nth of these.
 export function orderEvidence(evidence: Evidence[]): Evidence[] {

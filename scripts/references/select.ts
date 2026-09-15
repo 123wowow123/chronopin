@@ -1,7 +1,8 @@
 // Pure helpers for the manual reference backfill (list.ts / apply.ts), kept
 // apart from the database so they can be tested.
 
-import { MIN_CONFIDENCE, referenceDates, urlKey } from '@/server/extract/references';
+import { urlKey } from '@/lib/citations';
+import { MIN_CONFIDENCE, referenceDates } from '@/server/extract/references';
 
 export const MAX_REFERENCES = 5;
 
