@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import { Icon } from '@/components/ui/Icon';
 import { api, ApiError } from '@/lib/client/api';
 import { type ConfidenceRow, confidenceStats, isHidden } from '@/lib/confidenceStats';
 import { minConfidence, type TimelineConfidenceSetting } from '@/lib/timelineConfidence';
@@ -45,9 +46,13 @@ export function PinsDashboard({ rows, saved, serverNow }: { rows: DashboardRow[]
 
   return (
     <>
-      <form onSubmit={save} className="surface mb-6 space-y-4 p-4 sm:p-5">
+      {/* Amber, like other status warnings: saving changes what every visitor's timeline hides. */}
+      <form onSubmit={save} className="mb-6 space-y-4 rounded-xl border border-amber-500/40 bg-amber-500/10 p-4 sm:p-5">
         <div>
-          <h2 className="text-base font-semibold">Timeline confidence filter</h2>
+          <h2 className="flex items-center gap-2 text-base font-semibold text-warning-soft">
+            <Icon name="warning" className="size-4 text-warning" />
+            Timeline confidence filter
+          </h2>
           <p className="text-sm text-subtle">
             Pins with no score always show. Watched lists, search and the map show every pin either way. The charts below preview
             your changes before you save.
@@ -59,7 +64,7 @@ export function PinsDashboard({ rows, saved, serverNow }: { rows: DashboardRow[]
             type="checkbox"
             checked={draft.enabled}
             onChange={(e) => setDraft((d) => ({ ...d, enabled: e.target.checked }))}
-            className="size-4 accent-accent"
+            className="size-4 accent-amber-500"
           />
           Hide low-confidence pins from the home timeline
         </label>
@@ -81,7 +86,7 @@ export function PinsDashboard({ rows, saved, serverNow }: { rows: DashboardRow[]
                 setDraft((d) => ({ ...d, threshold: Number(e.target.value) }));
                 setTyped(e.target.value);
               }}
-              className="min-w-0 flex-1 accent-accent"
+              className="min-w-0 flex-1 accent-amber-500"
             />
             <input
               type="number"

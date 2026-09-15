@@ -35,7 +35,6 @@ const nextConfig: NextConfig = {
     return [
       // The watch page was already disabled in the Angular app; send old links home.
       { source: '/watch', destination: '/', permanent: true },
-      { source: '/referral', destination: '/admin/referral', permanent: true },
     ];
   },
 };

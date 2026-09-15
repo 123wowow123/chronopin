@@ -3,7 +3,7 @@ import Link from 'next/link';
 const TABS = [
   { href: '/admin', label: 'Users' },
   { href: '/admin/pins', label: 'Pins' },
-  { href: '/admin/referral', label: 'Referral links', deprecated: true },
+  { href: '/admin/views', label: 'Views' },
 ];
 
 // Switches between the admin pages; `current` is the page rendering it.
@@ -20,7 +20,6 @@ export function AdminTabs({ current }: { current: string }) {
           }`}
         >
           {tab.label}
-          {tab.deprecated ? <span className="ml-1.5 text-xs font-normal text-subtle">(deprecated)</span> : null}
         </Link>
       ))}
     </nav>
