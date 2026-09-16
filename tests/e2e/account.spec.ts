@@ -94,12 +94,12 @@ test.describe.serial('a signed-in author', () => {
   });
 
   test('a signed-out visitor is sent to log in, and logging in works', async ({ page }) => {
-    await page.goto('/preferences');
-    await expect(page).toHaveURL(/\/login\?redirect=%2Fpreferences/);
+    await page.goto('/profile');
+    await expect(page).toHaveURL(/\/login\?redirect=%2Fprofile/);
     await page.getByLabel('Email').fill(email);
     await page.getByLabel('Password').fill(password);
     await page.getByRole('button', { name: 'Login' }).click();
-    await expect(page).toHaveURL(/\/preferences$/);
+    await expect(page).toHaveURL(/\/profile$/);
     await page.getByLabel('Timeline filter default').selectOption('1w');
     await expect(page.getByText('Preferences saved.')).toBeVisible();
   });
@@ -113,7 +113,11 @@ test.describe.serial('a signed-in author', () => {
 
     // Nothing chosen yet follows the device, here a dark one.
     await page.emulateMedia({ colorScheme: 'dark' });
+    // Preferences live on the profile page now; old links land on that section.
+    await page.goto('/settings');
+    await expect(page).toHaveURL(/\/profile\/password$/);
     await page.goto('/preferences');
+    await expect(page).toHaveURL(/\/profile#preferences$/);
     const html = page.locator('html');
     await expect(html).toHaveAttribute('data-theme', 'dark');
     await expect(page.getByRole('radio', { name: 'System' })).toHaveAttribute('aria-checked', 'true');

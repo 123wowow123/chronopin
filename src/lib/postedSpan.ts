@@ -1,6 +1,6 @@
 // The vocabulary of "posted within" spans: the windows on offer, the words
 // they are shown as, and what a person may type for one. Shared by the
-// timeline filter, the map's range and the preferences page.
+// timeline filter, the map's range and the profile page's preferences.
 
 export const SPAN_OPTIONS = ['12h', '1d', '3d', '5d', '1w', '1mo', '1y'];
 // Windows around now for when pins start (the map, relevance search). A place or

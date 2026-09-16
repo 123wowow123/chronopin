@@ -5,6 +5,7 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
+import { loginHref } from '@/lib/authRedirect';
 import { useSession } from '@/lib/client/session';
 import { NotificationBell } from './NotificationBell';
 
@@ -14,20 +15,13 @@ const itemIconClass = 'size-4 text-subtle';
 type MenuItem = { href: string; label: string; icon: IconName };
 
 // The account menu, in groups separated by a rule. Admin tools only for admins.
+// No Watched pins: the search box's Watched toggle sits beside it on wide screens.
 function accountGroups(isAdmin: boolean): MenuItem[][] {
   const groups: MenuItem[][] = [
-    [
-      { href: '/profile', label: 'Profile', icon: 'user' },
-      { href: '/search?f=watch', label: 'Watched pins', icon: 'eye' },
-      { href: '/following', label: 'Following', icon: 'users' },
-    ],
-    [
-      { href: '/preferences', label: 'Preferences', icon: 'sliders' },
-      { href: '/settings', label: 'Change password', icon: 'lock' },
-    ],
+    [{ href: '/profile', label: 'Profile & settings', icon: 'user' }],
   ];
   if (isAdmin) {
-    groups.push([{ href: '/admin', label: 'Admin', icon: 'shield' }]);
+    groups.push([{ href: '/admin/views', label: 'Admin', icon: 'shield' }]);
   }
   return groups;
 }
@@ -36,7 +30,7 @@ function accountGroups(isAdmin: boolean): MenuItem[][] {
 // of view rather than two unrelated links. Switching keeps the search and its
 // time filters: a search's results show on the map, and the map's search opens
 // as results.
-function ViewSwitch({ pathname, className = '' }: { pathname: string; className?: string }) {
+export function ViewSwitch({ pathname, className = '' }: { pathname: string; className?: string }) {
   const params = useSearchParams();
   const carry = (keys: string[]) => {
     const search = new URLSearchParams();
@@ -111,32 +105,26 @@ function SignedInAs({ userName, pictureUrl }: { userName: string; pictureUrl?: s
 }
 
 // The right side of the navbar: what a visitor can do depends on whether they
-// are signed in, so it renders on the client from the session.
+// are signed in, so it renders on the client from the session. Below lg it is
+// all in the drawer instead (MobileDrawer), the bell included.
 export function NavMenu() {
   const pathname = usePathname();
   const { status, user, isAdmin } = useSession();
-  const [menuOpen, setMenuOpen] = useState(false);
   const [accountOpen, setAccountOpen] = useState(false);
   const accountRef = useRef<HTMLDivElement>(null);
-  const mobileRef = useRef<HTMLDivElement>(null);
 
   const [lastPath, setLastPath] = useState(pathname);
   if (lastPath !== pathname) {
     setLastPath(pathname);
-    setMenuOpen(false);
     setAccountOpen(false);
   }
 
   useEffect(() => {
     const close = (event: MouseEvent) => {
       if (!accountRef.current?.contains(event.target as Node)) setAccountOpen(false);
-      if (!mobileRef.current?.contains(event.target as Node)) setMenuOpen(false);
     };
     const escape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setAccountOpen(false);
-        setMenuOpen(false);
-      }
+      if (event.key === 'Escape') setAccountOpen(false);
     };
     document.addEventListener('mousedown', close);
     document.addEventListener('keydown', escape);
@@ -153,7 +141,7 @@ export function NavMenu() {
   const guestActions =
     !user && status === 'ready' ? (
       <>
-        <Link href={`/login?redirect=${redirect}`} className="btn btn-ghost py-1.5">
+        <Link href={loginHref(pathname)} className="btn btn-ghost py-1.5">
           Log in
         </Link>
         <Link href="/signup" className="btn btn-primary py-1.5">
@@ -176,7 +164,7 @@ export function NavMenu() {
         )}
       </nav>
 
-      {user ? <NotificationBell /> : null}
+      {user ? <NotificationBell className="hidden lg:block" /> : null}
 
       {user ? (
         <div ref={accountRef} className="relative hidden lg:block">
@@ -202,41 +190,6 @@ export function NavMenu() {
           ) : null}
         </div>
       ) : null}
-
-      <div ref={mobileRef} className="lg:hidden">
-        <button
-          type="button"
-          className="flex items-center rounded-lg p-1.5 text-muted hover:bg-raised hover:text-ink"
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen((o) => !o)}
-        >
-          {user && !menuOpen ? (
-            <UserAvatar userName={user.userName} pictureUrl={user.pictureUrl} className="size-7 text-xs" />
-          ) : (
-            <Icon name={menuOpen ? 'close' : 'menu'} className="size-6" />
-          )}
-        </button>
-        {menuOpen ? (
-          <nav aria-label="Main" className="absolute top-full right-0 left-0 z-40 border-b border-line bg-header px-3 pt-3 pb-1.5 shadow-2xl shadow-shade/50">
-            <ViewSwitch pathname={pathname} className="mb-3" />
-            {user ? (
-              <>
-                <Link href="/create" className="btn btn-primary mb-3 flex py-2">
-                  <Icon name="plus" className="size-4" />
-                  Create a pin
-                </Link>
-                <div className="-mx-3 border-t border-line">
-                  <SignedInAs userName={user.userName} pictureUrl={user.pictureUrl} />
-                </div>
-                <MenuLinks groups={groups} logoutHref={logoutHref} />
-              </>
-            ) : (
-              <div className="mb-1.5 grid grid-cols-2 gap-2 [&>a]:justify-center">{guestActions}</div>
-            )}
-          </nav>
-        ) : null}
-      </div>
     </>
   );
 }

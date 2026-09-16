@@ -7,16 +7,21 @@ import { useSession } from '@/lib/client/session';
 
 type Status = { userId: number; followerCount: number; followingCount: number; following: boolean; followsYou: boolean };
 
-// Follow a pin's author, with their follower counts.
-export function FollowButton({ userId, userName, showCount }: { userId: number; userName: string; showCount?: boolean }) {
+// Follow a pin's author, with their follower counts. A list that already knows
+// whether the viewer follows each person passes `following`, so a long list
+// does not ask the server once per row.
+export function FollowButton({ userId, userName, showCount, following }: { userId: number; userName: string; showCount?: boolean; following?: boolean }) {
   const router = useRouter();
   const { user, isLoggedIn, status: sessionStatus } = useSession();
-  const [status, setStatus] = useState<Status | null>(null);
+  const [status, setStatus] = useState<Status | null>(
+    following === undefined ? null : { userId, followerCount: 0, followingCount: 0, following, followsYou: false },
+  );
+  const known = following !== undefined;
   const [busy, setBusy] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
-    if (sessionStatus !== 'ready') return;
+    if (known || sessionStatus !== 'ready') return;
     api
       .get<Status>(`/api/users/${userId}/follow`)
       .then((s) => !cancelled && setStatus(s))
@@ -24,7 +29,7 @@ export function FollowButton({ userId, userName, showCount }: { userId: number; 
     return () => {
       cancelled = true;
     };
-  }, [userId, sessionStatus, user?.id]);
+  }, [known, userId, sessionStatus, user?.id]);
 
   if (user && user.userName.toLowerCase() === userName.toLowerCase()) {
     return null;

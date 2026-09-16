@@ -460,7 +460,7 @@ This is a promotional article about one of the company partners with Interesting
 - need job to scrape and update pin, any visit will trigger a scheduled update scape that night, along to new reference
 
 
-
+- use left side panel slider for mobile mode like twitter
 
 
 ## Reminder: MyAnimeList top-anime scrape (in progress, resume later)

@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { expectReloadMatchesTodayButton } from './todayPosition';
 
 // The floating controls fold behind pills below xl, so these run at phone size.
 
@@ -40,7 +41,12 @@ test('a card on the timeline pictures its video instead of loading the player', 
   await expect(page.getByRole('img', { name: "Play on the pin's page" }).first()).toBeVisible();
   await expect(page.locator('iframe[src*="youtube.com"]')).toHaveCount(0);
 
-  // The pin's own page still plays it.
-  await page.locator('a[href^="/pin/"]').first().click();
+  // The pin's own page still plays it. A card's link: the trending panel's
+  // come first in the page but are hidden at this width.
+  await page.locator('article a[href^="/pin/"]').first().click();
   await expect(page).toHaveURL(/\/pin\//);
+});
+
+test('opening or reloading the timeline puts today where the Today button does', async ({ page }) => {
+  await expectReloadMatchesTodayButton(page);
 });

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 import { OAuthButtons, OrDivider } from '@/components/forms/OAuthButtons';
+import { afterLoginPath } from '@/lib/authRedirect';
 import { api, ApiError } from '@/lib/client/api';
 
 
@@ -21,10 +22,9 @@ export function LoginForm() {
     setError('');
     try {
       await api.post('/auth/local', { email, password });
-      const redirect = params.get('redirect');
       // A full load: being signed in changes what every page shows, and the
       // router may still remember the redirect that sent us here.
-      window.location.assign(redirect && redirect.startsWith('/') && !redirect.startsWith('//') ? redirect : '/');
+      window.location.assign(afterLoginPath(params.get('redirect')));
     } catch (err) {
       setError(err instanceof ApiError ? err.message : 'Something went wrong, please try again.');
       setBusy(false);

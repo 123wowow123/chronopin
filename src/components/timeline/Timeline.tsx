@@ -6,6 +6,7 @@ import { useNow } from '@/lib/client/now';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
 import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
+import { useTodayHold } from '@/lib/client/todayHold';
 import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { dayKeyIn } from '@/lib/format';
@@ -101,13 +102,17 @@ export function Timeline({
     }
   }, [bags, timeZone]);
 
+  // Opening and the Today button both hold today in place while the cards
+  // above it finish growing.
+  const holdToday = useTodayHold(scrollToToday);
+
   // Open on today, once the first page is on screen.
   useLayoutEffect(() => {
     if (!scrolledToToday.current && bags.length) {
-      scrollToToday();
+      holdToday();
       scrolledToToday.current = true;
     }
-  }, [bags, scrollToToday]);
+  }, [bags, holdToday]);
   // After the effect above, so the position it records on mount is today's.
   useManualScrollRestoration();
 
@@ -242,7 +247,7 @@ export function Timeline({
         <FloatingControls
           summaryCaption="Posted within"
           summary={spanLabel(postedWithin)}
-          onToday={scrollToToday}
+          onToday={holdToday}
           category={{ summary: categoryPillSummary(), control: <SearchCategoryFilter postedWithin={postedWithin} /> }}
           aside={<TrendingPins pins={trending.pins} days={trending.days} />}
         >

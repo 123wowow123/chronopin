@@ -8,6 +8,7 @@ import { UserAvatar } from '@/components/ui/UserAvatar';
 import { parseLinkHeader } from '@/lib/client/api';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
+import { useTodayHold } from '@/lib/client/todayHold';
 import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
 import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';
@@ -223,13 +224,15 @@ export function SearchResults({
     const id = todayScrollId(bags, marker);
     if (id) document.getElementById(id)?.scrollIntoView({ block: 'start' });
   };
+  // Opening and the Today button both hold today in place while the cards
+  // above it finish growing.
+  const holdToday = useTodayHold(scrollToToday);
 
   useLayoutEffect(() => {
     if (scrolled.current || sortBy !== 'date' || !bags.length) return;
     scrolled.current = true;
-    const id = todayScrollId(bags, marker);
-    if (id) document.getElementById(id)?.scrollIntoView({ block: 'start' });
-  }, [bags, marker, sortBy]);
+    holdToday();
+  }, [bags, holdToday, sortBy]);
   // Each sort keeps its own place; relevance first opens at the top.
   const scrollBySort = useRef<Partial<Record<SortBy, number>>>({});
   const changeSort = (next: SortBy) => {
@@ -291,7 +294,7 @@ export function SearchResults({
           summaryCaption={searchedUser ? undefined : 'Posted within'}
           summary={searchedUser ? searchedUser.userName : spanLabel(postedWithin)}
           summaryIsPostedWithin={!searchedUser}
-          onToday={sortBy === 'date' && bags.length ? scrollToToday : undefined}
+          onToday={sortBy === 'date' && bags.length ? holdToday : undefined}
           sort={canSort ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : undefined}
           category={{
             summary: categoryPillSummary(query),

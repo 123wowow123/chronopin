@@ -11,7 +11,18 @@ import { formatStart } from '@/lib/format';
 import type { PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery, type QueryPart } from '@/server/util/searchQuery';
 
-const WATCHED = 'watch';
+export const WATCHED = 'watch';
+
+// Where a search goes: /search, or the map's own when searching from it.
+// Nothing to search for and nothing to filter by is the timeline (or the
+// whole map).
+export function searchHref(onMap: boolean, q: string, filter: string) {
+  if (!q.trim() && !filter) return onMap ? '/map' : '/';
+  const next = new URLSearchParams();
+  if (q) next.set('q', q);
+  if (filter) next.set('f', filter);
+  return `${onMap ? '/map' : '/search'}?${next.toString()}`;
+}
 
 type TermPart = Extract<QueryPart, { kind: 'term' }>;
 
@@ -36,7 +47,7 @@ function termLabel(part: TermPart) {
 }
 
 // The navbar search: suggestions by title as you type, Enter to search, and a
-// Watched-only toggle for signed-in users. The query sits in the box as items:
+// Watched-only toggle for signed-in users (lg and up; below, it is in the drawer). The query sits in the box as items:
 // label terms (user:, company:, category:, @name) as pills and free text as
 // plain runs. The text field only ever holds the one item being edited -
 // clicking an item opens just that one, in its place, and leaving it (or
@@ -179,16 +190,7 @@ export function SearchBox() {
 
   function submit(q: string, filter = choice) {
     closeSuggestions();
-    // Nothing to search for and nothing to filter by: that's the timeline (or
-    // the whole map).
-    if (!q.trim() && !filter) {
-      router.push(onMap ? '/map' : '/');
-      return;
-    }
-    const next = new URLSearchParams();
-    if (q) next.set('q', q);
-    if (filter) next.set('f', filter);
-    router.push(`${onMap ? '/map' : '/search'}?${next.toString()}`);
+    router.push(searchHref(onMap, q, filter));
   }
 
   function suggest(value: string) {
@@ -404,7 +406,7 @@ export function SearchBox() {
           type="button"
           aria-pressed={watchedOnly}
           title={watchedOnly ? 'Showing only pins you watch — click to show all' : 'Show only pins you watch'}
-          className={`flex shrink-0 items-center gap-1.5 rounded-full px-3 text-sm font-medium ring-1 transition-colors ring-inset max-sm:hidden ${
+          className={`flex shrink-0 items-center gap-1.5 rounded-full px-3 text-sm font-medium ring-1 transition-colors ring-inset max-lg:hidden ${
             watchedOnly ? 'bg-accent/15 text-link ring-accent/60' : 'bg-field text-muted ring-line hover:bg-raised hover:text-ink'
           }`}
           onClick={() => {

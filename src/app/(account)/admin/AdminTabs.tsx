@@ -2,11 +2,12 @@ import Link from 'next/link';
 
 const TABS = [
   { href: '/admin/views', label: 'Views' },
-  { href: '/admin', label: 'Users' },
+  { href: '/admin/users', label: 'Users' },
   { href: '/admin/pins', label: 'Pins' },
 ];
 
-// Switches between the admin pages; `current` is the page rendering it.
+// Switches between the admin pages, Views first: /admin opens on it
+// (next.config.ts). `current` is the page rendering it.
 export function AdminTabs({ current }: { current: string }) {
   return (
     <nav aria-label="Admin" className="mb-6 flex gap-1 border-b border-line">

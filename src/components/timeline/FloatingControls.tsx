@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useEffect, useRef, useState } from 'react';
 import { Icon, type IconName } from '@/components/ui/Icon';
+import { useScrollLock } from '@/lib/client/scrollLock';
 
 type Fold = 'category' | 'controls' | 'span' | null;
 
@@ -13,24 +14,6 @@ let rememberedCategoryOpen = false;
 
 export function useCategoryFoldOpen() {
   return useContext(CategoryFoldContext);
-}
-
-// How many open folds are holding the page still. More than one only while a
-// pick navigates away: the old page stays mounted, hidden, until the new one
-// is ready, so both release their hold before the page scrolls again.
-let scrollLocks = 0;
-
-// Holds the page still behind an open fold (globals.css reads the attribute).
-function useScrollLock(locked: boolean) {
-  useEffect(() => {
-    if (!locked) return;
-    scrollLocks += 1;
-    document.documentElement.dataset.scrollLock = '';
-    return () => {
-      scrollLocks -= 1;
-      if (!scrollLocks) delete document.documentElement.dataset.scrollLock;
-    };
-  }, [locked]);
 }
 
 // Whether a control sits in the fold behind a summary pill that, below xl,

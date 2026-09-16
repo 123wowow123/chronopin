@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import { LogoMark } from '@/components/ui/LogoMark';
+import { MobileDrawer } from './MobileDrawer';
 import { NavMenu } from './NavMenu';
 import { SearchBox } from './SearchBox';
 
@@ -8,6 +9,9 @@ export function Navbar() {
     // The bottom rule is a shadow, not a border, so the bar stays exactly 52px.
     <header className="sticky top-0 z-40 bg-header/85 shadow-[0_1px_0_var(--color-line)] backdrop-blur-md">
       <div className="relative flex h-[52px] items-center gap-3 px-3 sm:px-5">
+        <Suspense fallback={<div className="size-9 shrink-0 lg:hidden" />}>
+          <MobileDrawer />
+        </Suspense>
         {/* A plain link, not next/link: going home reloads the page, fresh from today. */}
         {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
         <a href="/" className="group flex shrink-0 items-center gap-2 font-display text-lg font-semibold tracking-tight text-ink hover:no-underline">

@@ -40,6 +40,13 @@ const nextConfig: NextConfig = {
     return [
       // The watch page was already disabled in the Angular app; send old links home.
       { source: '/watch', destination: '/', permanent: true },
+      // Following and preferences merged into the profile page, and the password form moved under it.
+      { source: '/following', destination: '/profile#following', permanent: true },
+      { source: '/preferences', destination: '/profile#preferences', permanent: true },
+      { source: '/settings', destination: '/profile/password', permanent: true },
+      // The admin dashboard opens on its Views tab. Not permanent: which tab
+      // comes first may change.
+      { source: '/admin', destination: '/admin/views', permanent: false },
     ];
   },
 };

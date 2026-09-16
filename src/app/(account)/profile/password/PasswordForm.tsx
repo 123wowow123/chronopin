@@ -16,7 +16,7 @@ function strength(password: string) {
   return { label: levels[score], percent: Math.max(10, (score / 5) * 100) };
 }
 
-export function PasswordForm({ userId, userName }: { userId: number; userName: string }) {
+export function PasswordForm({ userId }: { userId: number }) {
   const [form, setForm] = useState({ oldPassword: '', newPassword: '', confirmPassword: '' });
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
@@ -44,11 +44,7 @@ export function PasswordForm({ userId, userName }: { userId: number; userName: s
 
   const s = strength(form.newPassword);
   return (
-    <form onSubmit={submit} className="surface mx-auto max-w-md space-y-4 p-6 sm:p-8" noValidate>
-      <h1 className="text-2xl font-semibold tracking-tight">Change password</h1>
-      <p className="text-sm text-subtle">
-        Enter your current password, then choose a new one for <strong>{userName}</strong>.
-      </p>
+    <form onSubmit={submit} className="surface space-y-4 p-6" noValidate>
       {message ? (
         <p role="status" className="rounded-lg bg-emerald-500/10 px-3 py-2 text-sm text-success-soft ring-1 ring-emerald-500/20 ring-inset">
           {message}

@@ -2,23 +2,23 @@ import type { Metadata } from 'next';
 import { toJson } from '@/lib/types';
 import { requireAdminViewer } from '@/server/guard';
 import { pickUserProps, Users } from '@/server/model/user';
-import { AdminTabs } from './AdminTabs';
-import { SignupCharts } from './SignupCharts';
-import { UserList } from './UserList';
+import { AdminTabs } from '../AdminTabs';
+import { SignupCharts } from '../SignupCharts';
+import { UserList } from '../UserList';
 
-// Reads the session, so it blocks per request (see ../layout.tsx). The layout's
+// Reads the session, so it blocks per request (see ../../layout.tsx). The layout's
 // own opt-out only covers navigations into the group, not between its pages.
 export const instant = false;
 
-export const metadata: Metadata = { title: 'Admin' };
+export const metadata: Metadata = { title: 'Admin users' };
 
-export default async function AdminPage() {
-  await requireAdminViewer('/admin');
+export default async function AdminUsersPage() {
+  await requireAdminViewer('/admin/users');
   const [allUsers, created] = await Promise.all([Users.getAll(pickUserProps), Users.listCreated()]);
   const users = toJson<Parameters<typeof UserList>[0]['initialUsers']>(allUsers);
   return (
     <div className="mx-auto max-w-3xl px-4 py-10">
-      <AdminTabs current="/admin" />
+      <AdminTabs current="/admin/users" />
       <h1 className="mb-1 text-2xl font-semibold tracking-tight">Users</h1>
       <p className="mb-6 text-sm text-subtle">Deleting and listing users is restricted to the admin role.</p>
       <SignupCharts
