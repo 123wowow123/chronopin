@@ -42,6 +42,8 @@
   --color-warning-soft: var(--color-amber-300);
   --color-info-soft: var(--color-sky-300);
   --color-trivia-soft: var(--color-emerald-200);
+  /* What only a pin's authors or admins see (duplicate suggestions). */
+  --color-privileged: var(--color-violet-400);
 
   /* Hairlines and washes over panels: white on dark, black on light. */
   --color-tint: #fff;
@@ -93,6 +95,7 @@
   --color-warning-soft: var(--color-amber-800);
   --color-info-soft: var(--color-sky-800);
   --color-trivia-soft: var(--color-emerald-800);
+  --color-privileged: var(--color-violet-700);
 
   --color-tint: #000;
   --color-shade: rgb(30 41 59 / 0.35);
@@ -217,6 +220,12 @@
   /* A card-like block on the page, and a panel floating over content. */
   .surface {
     @apply rounded-xl border border-line bg-panel;
+  }
+  /* A panel for what only authors or admins see: violet-washed, so it reads
+     as elevated rather than as part of the public page. */
+  .surface-privileged {
+    @apply rounded-xl border border-privileged/40;
+    background-color: color-mix(in oklab, var(--color-privileged) 8%, var(--color-panel));
   }
   .floating {
     @apply rounded-xl border border-tint/[0.07] bg-panel shadow-2xl shadow-shade/50;

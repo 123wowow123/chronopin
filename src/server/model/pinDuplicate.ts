@@ -4,12 +4,17 @@ import type { Row } from '../db';
 export const DUPLICATE_STATUSES = ['suggested', 'confirmed', 'rejected'] as const;
 export type DuplicateStatus = (typeof DUPLICATE_STATUSES)[number];
 export type DuplicateReason = 'similar' | 'sourceUrl';
+export const DUPLICATE_VERDICTS = ['same', 'different', 'unsure'] as const;
+export type DuplicateVerdict = (typeof DUPLICATE_VERDICTS)[number];
 
 // The other pin in a pair, as the pin page's review panel lists it.
 export type DuplicateCandidate = {
   status: DuplicateStatus;
   reason: DuplicateReason;
   score: number | null;
+  // Claude's read on the pair from both pins and their references; null until checked.
+  verdict: DuplicateVerdict | null;
+  verdictReasoning: string | null;
   pin: {
     id: number;
     title: string;
@@ -95,6 +100,36 @@ export default class PinDuplicate {
     return rows[0];
   }
 
+  // Records Claude's verdict on a pair.
+  static async setVerdict(a: number, b: number, verdict: DuplicateVerdict, reasoning: string) {
+    const [pinId, otherPinId] = ordered(a, b);
+    await db.query(
+      `UPDATE "PinDuplicate"
+       SET "verdict" = $3, "verdictReasoning" = $4, "utcVerifiedDateTime" = now()
+       WHERE "pinId" = $1 AND "otherPinId" = $2`,
+      [pinId, otherPinId, verdict, reasoning.slice(0, 2000)],
+    );
+  }
+
+  // The pin's undecided pairs whose verdict is missing or out of date: never
+  // checked, or either pin has gained a reference since. References keep their
+  // creation time through a save (they are re-inserted with it), so an edit
+  // that adds none does not call for another check. Closest match first.
+  static async needingVerdict(pinId: number, limit: number): Promise<[number, number][]> {
+    const rows = await db.query<{ pinId: number; otherPinId: number }>(
+      `SELECT "d"."pinId", "d"."otherPinId"
+       FROM "PinDuplicate" AS "d"
+       WHERE "d"."status" = 'suggested' AND $1 IN ("d"."pinId", "d"."otherPinId")
+         AND ("d"."utcVerifiedDateTime" IS NULL OR EXISTS (
+           SELECT 1 FROM "PinReference" AS "r"
+           WHERE "r"."pinId" IN ("d"."pinId", "d"."otherPinId") AND "r"."utcCreatedDateTime" > "d"."utcVerifiedDateTime"))
+       ORDER BY "d"."score" DESC NULLS FIRST, "d"."pinId", "d"."otherPinId"
+       LIMIT $2`,
+      [pinId, limit],
+    );
+    return rows.map((row) => [row.pinId, row.otherPinId]);
+  }
+
   static async decide(a: number, b: number, status: DuplicateStatus, userId: number) {
     const [pinId, otherPinId] = ordered(a, b);
     await db.query(
@@ -112,11 +147,12 @@ export default class PinDuplicate {
   }
 
   // Every pair the pin is in, with the other (live) pin: suggestions first,
+  // then by Claude's verdict (same, unsure, unchecked, different), then
   // closest match first.
   static async listForPin(pinId: number): Promise<DuplicateCandidate[]> {
     const rows = await db.query(
       `
-      SELECT "d"."status", "d"."reason", "d"."score",
+      SELECT "d"."status", "d"."reason", "d"."score", "d"."verdict", "d"."verdictReasoning",
         "Pin"."id", "Pin"."title", "Pin"."userId", "Pin"."utcStartDateTime", "Pin"."allDay", "Pin"."utcCreatedDateTime",
         "User"."userName", "User"."pictureUrl"
       FROM "PinDuplicate" AS "d"
@@ -125,13 +161,17 @@ export default class PinDuplicate {
          AND "Pin"."utcDeletedDateTime" IS NULL
         LEFT JOIN "User" ON "User"."id" = "Pin"."userId"
       WHERE $1 IN ("d"."pinId", "d"."otherPinId")
-      ORDER BY "d"."status" = 'suggested' DESC, "d"."score" DESC NULLS LAST, "Pin"."id"`,
+      ORDER BY "d"."status" = 'suggested' DESC,
+        CASE "d"."verdict" WHEN 'same' THEN 0 WHEN 'unsure' THEN 1 WHEN 'different' THEN 3 ELSE 2 END,
+        "d"."score" DESC NULLS LAST, "Pin"."id"`,
       [pinId],
     );
     return rows.map((row) => ({
       status: row.status,
       reason: row.reason,
       score: row.score,
+      verdict: row.verdict ?? null,
+      verdictReasoning: row.verdictReasoning ?? null,
       pin: {
         id: row.id,
         title: row.title,
@@ -147,7 +187,8 @@ export default class PinDuplicate {
   // For backups: every pair, decisions included.
   static getAll(): Promise<Row[]> {
     return db.query(`
-      SELECT "pinId", "otherPinId", "reason", "score", "status", "decidedByUserId", "utcCreatedDateTime", "utcDecidedDateTime"
+      SELECT "pinId", "otherPinId", "reason", "score", "status", "decidedByUserId", "utcCreatedDateTime", "utcDecidedDateTime",
+        "verdict", "verdictReasoning", "utcVerifiedDateTime"
       FROM "PinDuplicate"
       ORDER BY "pinId", "otherPinId"`);
   }
@@ -155,10 +196,23 @@ export default class PinDuplicate {
   static async restore(pairs: Row[] | undefined) {
     for (const pair of pairs || []) {
       await db.query(
-        `INSERT INTO "PinDuplicate" ("pinId", "otherPinId", "reason", "score", "status", "decidedByUserId", "utcCreatedDateTime", "utcDecidedDateTime")
-         VALUES ($1, $2, $3, $4, $5, $6, COALESCE($7, now()), $8)
+        `INSERT INTO "PinDuplicate" ("pinId", "otherPinId", "reason", "score", "status", "decidedByUserId", "utcCreatedDateTime", "utcDecidedDateTime",
+           "verdict", "verdictReasoning", "utcVerifiedDateTime")
+         VALUES ($1, $2, $3, $4, $5, $6, COALESCE($7, now()), $8, $9, $10, $11)
          ON CONFLICT ("pinId", "otherPinId") DO NOTHING`,
-        [pair.pinId, pair.otherPinId, pair.reason, pair.score ?? null, pair.status, pair.decidedByUserId ?? null, pair.utcCreatedDateTime ?? null, pair.utcDecidedDateTime ?? null],
+        [
+          pair.pinId,
+          pair.otherPinId,
+          pair.reason,
+          pair.score ?? null,
+          pair.status,
+          pair.decidedByUserId ?? null,
+          pair.utcCreatedDateTime ?? null,
+          pair.utcDecidedDateTime ?? null,
+          pair.verdict ?? null,
+          pair.verdictReasoning ?? null,
+          pair.utcVerifiedDateTime ?? null,
+        ],
       );
     }
   }

@@ -5,7 +5,8 @@
 //
 // Needs the search service (npm run search:refresh if it is empty). Suggested
 // pairs show on the pin page to admins and the pins' authors; decided pairs
-// are never changed.
+// are never changed. It does not ask Claude about them: that costs a call per
+// pair, so it is its own step, npm run duplicates:verify.
 
 import '../env';
 import { parseArgs } from 'node:util';
@@ -20,7 +21,7 @@ async function run() {
     : (await db.query<{ id: number }>(`SELECT "id" FROM "Pin" WHERE "utcDeletedDateTime" IS NULL ORDER BY "id"`)).map((row) => row.id);
   let added = 0;
   for (const id of ids) {
-    added += await suggestDuplicates(id);
+    added += await suggestDuplicates(id, { verify: false });
   }
   const [counts] = await db.query<{ suggested: number; confirmed: number; rejected: number }>(`
     SELECT COUNT(*) FILTER (WHERE "status" = 'suggested')::integer AS "suggested",

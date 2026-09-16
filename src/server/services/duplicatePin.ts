@@ -1,4 +1,5 @@
 import * as db from '../db';
+import { type EvidencePin, verifyDuplicatePair } from '../extract/duplicates';
 import Pin, { sameSourceUrlKey } from '../model/pin';
 import PinDuplicate, { type DuplicateReason } from '../model/pinDuplicate';
 import { SearchPins } from '../model/searchPin';
@@ -25,6 +26,9 @@ export const SIMILAR_TITLE_MIN = 0.8;
 // a timed one lands on the local date of its instant.
 export const MAX_DAYS_APART = 1;
 const SIMILAR_CANDIDATES = 10;
+// Pairs a save checks with Claude at most; the rest wait for the next save
+// or for npm run duplicates:verify.
+const VERIFY_PER_SAVE = 5;
 
 export type DuplicateMatch = { reason: DuplicateReason; score: number | null };
 
@@ -68,9 +72,10 @@ export async function findDuplicates({
 }
 
 // Suggests duplicates for a pin (see findDuplicates). Earlier suggestions an
-// edit's new date rules out are dropped; decided pairs are left alone.
+// edit's new date rules out are dropped; decided pairs are left alone. Unless
+// verify is false, Claude then checks the pin's pairs that need a verdict.
 // Resolves to the number of new suggestions.
-export async function suggestDuplicates(pinId: number): Promise<number> {
+export async function suggestDuplicates(pinId: number, { verify = true }: { verify?: boolean } = {}): Promise<number> {
   const [pin] = await db.query<{ title: string; sourceUrl: string | null; utcStartDateTime: Date }>(
     `SELECT "title", "sourceUrl", "utcStartDateTime" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`,
     [pinId],
@@ -88,7 +93,52 @@ export async function suggestDuplicates(pinId: number): Promise<number> {
       added++;
     }
   }
+
+  // New pairs, and pairs whose pins have gained references since their last check.
+  if (verify) {
+    for (const [a, b] of await PinDuplicate.needingVerdict(pinId, VERIFY_PER_SAVE)) {
+      await verifyDuplicate(a, b);
+    }
+  }
   return added;
+}
+
+// A pin as the duplicate check reads it: what it is, when and where, and
+// every reference with what that page claims.
+async function evidencePins(ids: number[]): Promise<Map<number, EvidencePin>> {
+  const rows = await db.query<EvidencePin>(
+    `SELECT "p"."id", "p"."title", "p"."description", "p"."utcStartDateTime", "p"."utcEndDateTime", "p"."allDay",
+       "p"."address", "c"."name" AS "company", "p"."category", "p"."sourceUrl",
+       COALESCE((
+         SELECT json_agg(json_build_object(
+           'url', "r"."url", 'title', "r"."title", 'confidence', "r"."confidence",
+           'publishedDate', "r"."publishedDate", 'startDate', "r"."startDate", 'endDate', "r"."endDate",
+           'reasoning', "r"."reasoning") ORDER BY "r"."confidence" DESC, "r"."id")
+         FROM "PinReference" AS "r" WHERE "r"."pinId" = "p"."id"), '[]'::json) AS "references"
+     FROM "Pin" AS "p"
+       LEFT JOIN "Company" AS "c" ON "c"."id" = "p"."companyId"
+     WHERE "p"."id" = ANY($1::integer[]) AND "p"."utcDeletedDateTime" IS NULL`,
+    [ids],
+  );
+  return new Map(rows.map((row) => [row.id, row]));
+}
+
+// Asks Claude whether a suggested pair is really one event, from both pins and
+// their references, and records the verdict for the people deciding it.
+// Resolves to whether a verdict was recorded (no API key, a failed call or a
+// deleted pin leave the pair as it was).
+export async function verifyDuplicate(a: number, b: number): Promise<boolean> {
+  const pins = await evidencePins([a, b]);
+  const [first, second] = [pins.get(a), pins.get(b)];
+  if (!first || !second) {
+    return false;
+  }
+  const verdict = await verifyDuplicatePair(first, second);
+  if (!verdict) {
+    return false;
+  }
+  await PinDuplicate.setVerdict(a, b, verdict.verdict, verdict.reasoning);
+  return true;
 }
 
 // Who may confirm or reject a pair: an admin, or the author of either pin.

@@ -28,6 +28,7 @@
     "references:reasoning:list": "tsx scripts/references/reasoningList.ts",
     "references:reasoning:apply": "tsx scripts/references/reasoningApply.ts",
     "duplicates:suggest": "tsx scripts/duplicates/suggest.ts",
+    "duplicates:verify": "tsx scripts/duplicates/verify.ts",
     "specialty-days:build": "node scripts/specialtyDays/build.cjs",
     "favicon:build": "tsx scripts/favicon/build.ts"
   },
