@@ -22,16 +22,31 @@ export function money(value: number, currency?: string | null): string {
   if (/[A-Za-z]$/.test(symbol)) {
     symbol += ' ';
   }
-  const tier = (Math.log10(Math.abs(value)) / 3) | 0;
+  return symbol + (abbreviate(value) ?? (Math.round(value * 100) / 100).toFixed(2));
+}
+
+// 1500 -> "1.5K", 2000000 -> "2M"; null under a thousand, which each caller
+// prints its own way. A figure that rounds up to the next tier takes it
+// (999950 -> "1M", not "1000K").
+function abbreviate(value: number): string | null {
+  let tier = (Math.log10(Math.abs(value)) / 3) | 0;
   if (tier <= 0) {
-    return symbol + (Math.round(value * 100) / 100).toFixed(2);
+    return null;
   }
-  const scaled = value / Math.pow(10, tier * 3);
-  let formatted = scaled.toFixed(1);
+  let formatted = (value / Math.pow(10, tier * 3)).toFixed(1);
+  if (Math.abs(Number(formatted)) >= 1000 && tier < SI_POSTFIXES.length - 1) {
+    tier += 1;
+    formatted = (value / Math.pow(10, tier * 3)).toFixed(1);
+  }
   if (/\.0$/.test(formatted)) {
     formatted = formatted.slice(0, -2);
   }
-  return symbol + formatted + SI_POSTFIXES[tier];
+  return formatted + SI_POSTFIXES[tier];
+}
+
+// A count shortened as it grows: 999 -> "999", 1500 -> "1.5K", 2300000 -> "2.3M".
+export function compactCount(value: number): string {
+  return abbreviate(value) ?? String(Math.round(value));
 }
 
 // "1 day", "3 days", "-1 days", "1.0 years" - singular only for exactly the

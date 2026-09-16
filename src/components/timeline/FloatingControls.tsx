@@ -56,6 +56,7 @@ export function FloatingControls({
   summaryCaption,
   summaryIsPostedWithin = true,
   onToday,
+  aside,
 }: {
   children: React.ReactNode;
   // Sits above the folds, at the top of the column: sorting leads the rest.
@@ -68,6 +69,9 @@ export function FloatingControls({
   // Whether that is the posted-within span (so its slider can drop its heading).
   summaryIsPostedWithin?: boolean;
   onToday?: () => void;
+  // Shown under the controls on wide screens only (trending pins): narrower,
+  // there is no room for it beside the cards.
+  aside?: React.ReactNode;
 }) {
   const [open, setOpenState] = useState<Fold>(() => (rememberedCategoryOpen ? 'category' : null));
   const setOpen = (next: Fold) => {
@@ -116,7 +120,7 @@ export function FloatingControls({
     <div ref={rootRef}>
       {/* Dims the cards behind an open fold, which would otherwise blend into them. */}
       {open ? <div aria-hidden onClick={() => setOpen(null)} className="fixed inset-0 z-20 touch-none bg-black/50 xl:hidden" /> : null}
-      <div className="fixed right-3 bottom-16 left-3 z-30 flex flex-col items-stretch gap-2 lg:left-auto lg:w-64 xl:top-[68px] xl:right-4 xl:bottom-auto">
+      <div className="fixed right-3 bottom-16 left-3 z-30 flex flex-col items-stretch gap-2 lg:left-auto lg:w-64 xl:top-[68px] xl:right-4 xl:bottom-auto xl:max-h-[calc(100dvh-8.5rem)]">
         {sort}
         {category ? (
           <div id="timeline-category" className={`flex flex-col ${open === 'category' ? '' : 'max-xl:hidden'}`}>
@@ -135,6 +139,8 @@ export function FloatingControls({
             {span.control}
           </div>
         ) : null}
+        {/* Takes whatever height the controls leave, scrolling its own list. */}
+        {aside ? <div className="flex min-h-0 flex-col max-xl:hidden">{aside}</div> : null}
       </div>
       <div className="fixed right-3 bottom-3 z-30 flex max-w-[calc(100%-1.5rem)] gap-1.5 max-sm:gap-1 lg:right-4 lg:gap-2 lg:bottom-4">
         {category ? <FoldPill fold="category" open={open} onToggle={toggle} icon="tag" iconClass="text-link" caption="Category" label={category.summary} /> : null}

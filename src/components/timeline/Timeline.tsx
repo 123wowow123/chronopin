@@ -14,11 +14,12 @@ import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
-import type { CardPin, DateTimeJson, TimelinePage } from '@/lib/types';
+import type { CardPin, DateTimeJson, TimelinePage, TrendingPin } from '@/lib/types';
 import { categoryPillSummary, SearchCategoryFilter } from './CategoryFilter';
 import { FloatingControls } from './FloatingControls';
 import { TimeBlock, TodayMarker } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
+import { TrendingPins } from './TrendingPins';
 
 type Links = { previous?: string; next?: string };
 
@@ -46,6 +47,7 @@ export function Timeline({
   serverNow,
   minConfidence,
   video,
+  trending,
 }: {
   initialPins: CardPin[];
   initialDateTimes: DateTimeJson[];
@@ -62,6 +64,8 @@ export function Timeline({
   minConfidence: number | null;
   // Whether a card here loads its video player on a phone (the admin setting).
   video: TimelineVideoSetting;
+  // The most viewed pins with rising views, beside the cards on wide screens.
+  trending: { pins: TrendingPin[]; days: number };
 }) {
   const timeZone = useTimeZone(serverTimeZone);
   const [pins, setPins] = useState(initialPins);
@@ -240,6 +244,7 @@ export function Timeline({
           summary={spanLabel(postedWithin)}
           onToday={scrollToToday}
           category={{ summary: categoryPillSummary(), control: <SearchCategoryFilter postedWithin={postedWithin} /> }}
+          aside={<TrendingPins pins={trending.pins} days={trending.days} />}
         >
           <TimeRangeSlider
             steps={SPAN_OPTIONS}

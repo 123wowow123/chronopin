@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
-import { blobUrl } from '@/lib/appConfig';
+import { PinThumb } from '@/components/pin/PinThumb';
 import { pinPath } from '@/lib/seo';
 import { TIME_RANGES, type TimeRange } from '@/lib/timeStats';
 import { type ViewBucket, type ViewDay, viewStats } from '@/lib/viewStats';
@@ -30,28 +30,6 @@ export type RangeSummary = {
     originalUrl?: string | null;
   }[];
 };
-
-// A top pin's picture: its thumb, then an image's original, then a blank tile.
-function PinThumb({ thumbName, originalUrl }: { thumbName?: string | null; originalUrl?: string | null }) {
-  const sources = [blobUrl(thumbName), originalUrl].filter((src): src is string => !!src);
-  const [failed, setFailed] = useState(0);
-  const src = sources[failed];
-  return (
-    <span className="block h-9 w-16 shrink-0 overflow-hidden rounded bg-raised-2">
-      {src ? (
-        // eslint-disable-next-line @next/next/no-img-element -- thumbs from blob storage or arbitrary hosts
-        <img
-          src={src}
-          alt=""
-          loading="lazy"
-          referrerPolicy="no-referrer"
-          className="size-full object-cover"
-          onError={() => setFailed((n) => n + 1)}
-        />
-      ) : null}
-    </span>
-  );
-}
 
 const SERIES = [
   { label: 'Signed in', color: SERIES_BLUE, value: (b: ViewBucket) => b.signedIn },

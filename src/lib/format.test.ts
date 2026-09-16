@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { averageRating, dayKeyIn, formatPosted, formatStart, money, plainText, ratingScore, timespan, weekdayPlanet } from './format';
+import { averageRating, compactCount, dayKeyIn, formatPosted, formatStart, money, plainText, ratingScore, timespan, weekdayPlanet } from './format';
 import { buildBags, resolveTodayMarker } from './timeline';
 
 describe('money', () => {
@@ -10,6 +10,20 @@ describe('money', () => {
     expect(money(999)).toBe('$999.00');
     expect(money(1_500)).toBe('$1.5K');
     expect(money(-2_300)).toBe('$-2.3K');
+    expect(money(999_950)).toBe('$1M');
+  });
+});
+
+describe('compactCount', () => {
+  it('shortens a count with K, M, B as it grows', () => {
+    expect(compactCount(0)).toBe('0');
+    expect(compactCount(999)).toBe('999');
+    expect(compactCount(1_000)).toBe('1K');
+    expect(compactCount(1_540)).toBe('1.5K');
+    expect(compactCount(38_200)).toBe('38.2K');
+    expect(compactCount(999_950)).toBe('1M');
+    expect(compactCount(2_300_000)).toBe('2.3M');
+    expect(compactCount(4_000_000_000)).toBe('4B');
   });
 });
 

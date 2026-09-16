@@ -1,4 +1,5 @@
 import * as db from '../db';
+import { pinConfidenceOf } from './pins';
 
 // Pin page views, counted once per viewer per UTC day (see 0014).
 export default class PinView {
@@ -49,6 +50,32 @@ export default class PinView {
     ]);
     const pictures = await PinView.pictures(top.map((p) => p.id));
     return { viewers, top: top.map((p) => ({ ...p, ...pictures.get(p.id) })) };
+  }
+
+  // The most viewed live pins whose views are rising: views over the last
+  // `days` UTC days (today included) against the `days` before them, keeping
+  // only pins with more now than then, busiest first. Pins the timeline hides
+  // for confidence (minConfidence, null for none) are left out here too.
+  static async trending(days: number, limit: number, minConfidence: number | null) {
+    const top = await db.query<{ id: number; title: string; views: number; previousViews: number }>(
+      `SELECT "p"."id", "p"."title", "t"."views", "t"."previousViews"
+       FROM (
+         SELECT "pinId",
+           COUNT(*) FILTER (WHERE "day" > (now() AT TIME ZONE 'UTC')::date - $1::integer)::integer AS "views",
+           COUNT(*) FILTER (WHERE "day" <= (now() AT TIME ZONE 'UTC')::date - $1::integer)::integer AS "previousViews"
+         FROM "PinView"
+         WHERE "day" > (now() AT TIME ZONE 'UTC')::date - 2 * $1::integer
+         GROUP BY "pinId"
+       ) AS "t"
+         JOIN "Pin" AS "p" ON "p"."id" = "t"."pinId" AND "p"."utcDeletedDateTime" IS NULL
+       WHERE "t"."views" > "t"."previousViews"
+         AND ($3::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $3) >= $3)
+       ORDER BY "t"."views" DESC, "t"."views" - "t"."previousViews" DESC, "p"."id" DESC
+       LIMIT $2`,
+      [days, limit, minConfidence],
+    );
+    const pictures = await PinView.pictures(top.map((p) => p.id));
+    return top.map((p) => ({ ...p, ...pictures.get(p.id) }));
   }
 
   // Each pin's picture as the map popup picks it: a video's still first, else

@@ -5,9 +5,10 @@ import { cacheLife, cacheTag } from 'next/cache';
 import { getTimelineVideo } from '../model/appSetting';
 import Pin from '../model/pin';
 import Pins from '../model/pins';
+import PinView from '../model/pinView';
 import { SearchPins } from '../model/searchPin';
 import { compareDuplicateRank } from '@/lib/duplicates';
-import { toJson, type PinJson, type SearchPage, type TimelinePage } from '@/lib/types';
+import { toJson, type PinJson, type SearchPage, type TimelinePage, type TrendingPin } from '@/lib/types';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import { TAGS } from './cache';
 import { readSearchRequest, searchCategoryCounts, searchPinsPage, type SearchSort } from './search';
@@ -22,6 +23,19 @@ export async function timelineVideo(): Promise<TimelineVideoSetting> {
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
   return getTimelineVideo();
+}
+
+// The trending panel's sliding window: views over the last 3 UTC days (today
+// included) against the 3 days before them, both moving on a day each midnight.
+export const TRENDING_DAYS = 3;
+
+// The most viewed pins with views on the rise. Views are recorded without
+// expiring anything, so this simply goes stale for a few minutes at a time.
+export async function trendingPins(): Promise<TrendingPin[]> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  return PinView.trending(TRENDING_DAYS, 5, await timelineMinConfidence());
 }
 
 export type TimelineCursor = { fromDateTime?: string | null; lastPinId?: number };

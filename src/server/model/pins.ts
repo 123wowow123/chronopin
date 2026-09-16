@@ -328,7 +328,7 @@ const leanReferences = (as: string) => `
 // "pinConfidence" cannot be inlined, and the planner then scores every
 // candidate row instead of stopping once a page is full - three times the
 // cost of this on a page, five times on a whole-table count.
-const pinConfidenceOf = (as: string) =>
+export const pinConfidenceOf = (as: string) =>
   `"pinConfidence"(${leanReferences(as)}, "${as}"."sourceUrl", "${as}"."dateConfidence", "${as}"."utcCreatedDateTime")`;
 
 // The columns a timeline page returns. Deliberately narrower than "Pin".*:

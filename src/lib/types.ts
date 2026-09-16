@@ -133,6 +133,17 @@ export type DateTimeJson = {
   alwaysShow?: boolean;
 };
 
+// A pin whose views are rising, for the timeline's trending panel: views over
+// the recent window and over the same length of time before it.
+export type TrendingPin = {
+  id: number;
+  title: string;
+  views: number;
+  previousViews: number;
+  thumbName?: string | null;
+  originalUrl?: string | null;
+};
+
 export type TimelinePage = {
   pins: PinJson[];
   dateTimes: DateTimeJson[];
