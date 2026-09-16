@@ -49,6 +49,7 @@ export function useInControlsFold() {
 // are set to.
 export function FloatingControls({
   children,
+  sort,
   category,
   span,
   summary,
@@ -57,6 +58,8 @@ export function FloatingControls({
   onToday,
 }: {
   children: React.ReactNode;
+  // Sits above the folds, at the top of the column: sorting leads the rest.
+  sort?: React.ReactNode;
   category?: { summary: string; control: React.ReactNode };
   span?: { summary: string; control: React.ReactNode };
   // What the folded button says ("1 day"), under an optional caption ("Posted within").
@@ -114,6 +117,7 @@ export function FloatingControls({
       {/* Dims the cards behind an open fold, which would otherwise blend into them. */}
       {open ? <div aria-hidden onClick={() => setOpen(null)} className="fixed inset-0 z-20 touch-none bg-black/50 xl:hidden" /> : null}
       <div className="fixed right-3 bottom-16 left-3 z-30 flex flex-col items-stretch gap-2 lg:left-auto lg:w-64 xl:top-[68px] xl:right-4 xl:bottom-auto">
+        {sort}
         {category ? (
           <div id="timeline-category" className={`flex flex-col ${open === 'category' ? '' : 'max-xl:hidden'}`}>
             <CategoryFoldContext value={open === 'category'}>{category.control}</CategoryFoldContext>

@@ -281,6 +281,7 @@ export function SearchResults({
         summary={searchedUser ? searchedUser.userName : spanLabel(postedWithin)}
         summaryIsPostedWithin={!searchedUser}
         onToday={sortBy === 'date' && bags.length ? scrollToToday : undefined}
+        sort={canSort ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : undefined}
         category={{
           summary: categoryPillSummary(query),
           control: (
@@ -300,7 +301,6 @@ export function SearchResults({
             : undefined
         }
       >
-        {canSort ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : null}
         <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={({ past }) => changePostedWithin(past)} />
         {searchedUser ? (
           <div className="floating flex flex-col gap-3 px-3.5 py-3">
