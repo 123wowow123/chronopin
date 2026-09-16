@@ -46,8 +46,8 @@ const readJson = (file: string) => JSON.parse(readFileSync(file, 'utf8'));
 const writeJson = (file: string, data: unknown) => writeFileSync(file, JSON.stringify(data, null, 2));
 
 async function saveDB() {
-  // No limit: back up every pin, soft-deleted ones included.
-  const { pins } = await FullPins.queryForwardByDate(new Date(0), 0, 2147483647);
+  // Every pin, soft-deleted ones included, however far back it starts.
+  const { pins } = await FullPins.queryAll();
   const data = excludeE2e({
     users: await Users.getAll(BACKUP_USER_PROPS),
     pins,

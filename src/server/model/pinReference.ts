@@ -70,6 +70,45 @@ export default class PinReference {
     return { reference: this };
   }
 
+  // Every reference of one pin in a single insert, in the order given - a
+  // pin's references are saved together, and doing them one at a time was a
+  // round trip each. The rows go in ORDER BY the ordinal, so the identity ids
+  // ascend in that order and sorting what comes back by id lines it up with
+  // the input again (RETURNING itself promises no order).
+  static async saveAll(references: PinReference[]): Promise<PinReference[]> {
+    if (!references.length) {
+      return references;
+    }
+    const column = <T,>(read: (r: PinReference) => T) => references.map(read);
+    const rows = await db.query<{ id: number; utcCreatedDateTime: Date }>(
+      `
+      INSERT INTO "PinReference" ("pinId", "url", "title", "confidence", "publishedDate", "startDate", "endDate", "reasoning", "utcCreatedDateTime", "addedByUserId")
+      SELECT $1, "url", "title", "confidence", "publishedDate", "startDate", "endDate", "reasoning", COALESCE("utcCreatedDateTime", now()), "addedByUserId"
+      FROM unnest($2::varchar[], $3::varchar[], $4::integer[], $5::date[], $6::date[], $7::date[], $8::varchar[], $9::timestamptz[], $10::integer[])
+        WITH ORDINALITY AS "r" ("url", "title", "confidence", "publishedDate", "startDate", "endDate", "reasoning", "utcCreatedDateTime", "addedByUserId", "ord")
+      ORDER BY "ord"
+      RETURNING "id", "utcCreatedDateTime"`,
+      [
+        references[0].pinId,
+        column((r) => r.url ?? null),
+        column((r) => r.title ?? null),
+        column((r) => r.confidence ?? null),
+        column((r) => r.publishedDate || null),
+        column((r) => r.startDate || null),
+        column((r) => r.endDate || null),
+        column((r) => r.reasoning || null),
+        column((r) => r.utcCreatedDateTime || null),
+        column((r) => r.addedByUserId ?? null),
+      ],
+    );
+    rows.sort((a, b) => a.id - b.id);
+    references.forEach((reference, i) => {
+      reference.id = rows[i].id;
+      reference.utcCreatedDateTime = rows[i].utcCreatedDateTime;
+    });
+    return references;
+  }
+
   setPin(pin: BasePin): this {
     this._pin = pin;
     return this;

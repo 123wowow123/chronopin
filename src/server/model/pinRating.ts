@@ -67,6 +67,43 @@ export default class PinRating {
     return { rating: this };
   }
 
+  // Every rating of one pin in a single insert. Matched back by source, which
+  // is unique per pin: an upsert that refreshes an existing source keeps that
+  // row's id, so the ids do not follow the order given the way an insert's do.
+  static async saveAll(ratings: PinRating[]): Promise<PinRating[]> {
+    if (!ratings.length) {
+      return ratings;
+    }
+    const column = <T,>(read: (r: PinRating) => T) => ratings.map(read);
+    const rows = await db.query<{ id: number; source: string; utcCreatedDateTime: Date }>(
+      `
+      INSERT INTO "PinRating" ("pinId", "source", "score", "scoreMax", "url")
+      SELECT $1, "source", "score", COALESCE("scoreMax", 10), "url"
+      FROM unnest($2::varchar[], $3::numeric[], $4::numeric[], $5::varchar[]) AS "r" ("source", "score", "scoreMax", "url")
+      ON CONFLICT ("pinId", "source") DO UPDATE SET
+        "score" = EXCLUDED."score",
+        "scoreMax" = EXCLUDED."scoreMax",
+        "url" = EXCLUDED."url"
+      RETURNING "id", "source", "utcCreatedDateTime"`,
+      [
+        ratings[0].pinId,
+        column((r) => r.source ?? null),
+        column((r) => r.score ?? null),
+        column((r) => r.scoreMax ?? null),
+        column((r) => r.url || null),
+      ],
+    );
+    const bySource = new Map(rows.map((row) => [row.source, row]));
+    ratings.forEach((rating) => {
+      const row = bySource.get(rating.source);
+      if (row) {
+        rating.id = row.id;
+        rating.utcCreatedDateTime = row.utcCreatedDateTime;
+      }
+    });
+    return ratings;
+  }
+
   setPin(pin: BasePin): this {
     this._pin = pin;
     return this;

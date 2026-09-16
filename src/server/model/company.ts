@@ -1,5 +1,6 @@
 import * as db from '../db';
 import type { Row } from '../db';
+import { inBackground } from '../background';
 import * as logo from '../companyLogo';
 
 const COLUMNS = `"id", "name", "wikiUrl", "websiteUrl", "logoUrl", "utcLogoCheckedDateTime"`;
@@ -36,8 +37,12 @@ export default class Company {
     );
     const company = rows[0];
     if (!company.utcLogoCheckedDateTime) {
-      Company.findLogos([company]).catch((err) =>
-        console.log(`Company '${company.name}' logo lookup err:`, err.message),
+      // Registered rather than merely started: a script that finishes first
+      // would otherwise close the pool out from under the write this makes.
+      inBackground(
+        Company.findLogos([company]).catch((err) =>
+          console.log(`Company '${company.name}' logo lookup err:`, err.message),
+        ),
       );
     }
     return company;

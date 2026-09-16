@@ -22,17 +22,13 @@ export default class Pin extends BasePin {
       // Each medium and merchant saves in place, picking up its new id. (The
       // Express version re-added the saved copies, so the create response
       // listed every medium and merchant twice.)
+      // Media keep their own path: each one fetches and uploads a thumb, which
+      // is what a new pin's time actually goes on, so they run together.
       const mediaSaved = Promise.all(this.media.map((m) => m.saveWithThumb()));
-      // Merchants one at a time, so their ids follow the order the form lists them.
-      for (const m of this.merchants) {
-        await m.save();
-      }
-      for (const r of this.references) {
-        await r.save();
-      }
-      for (const rt of this.ratings || []) {
-        await rt.save();
-      }
+      // The rest go a statement each, in the order the form lists them.
+      await Merchant.saveAll(this.merchants, this.id);
+      await PinReference.saveAll(this.references);
+      await PinRating.saveAll(this.ratings || []);
       await mediaSaved;
       return { pin: this };
     } catch (err) {
@@ -59,18 +55,10 @@ export default class Pin extends BasePin {
     const toDeleteOriginalMedia = difference(beforePinMedia, newPinMedia, 'originalUrl');
 
     // Merchants are replaced wholesale; each saves in place with a new id.
-    const allMerchantPromise = Merchant.deleteByPinId(this.id).then(async () => {
-      for (const m of newPinMerchants) {
-        await m.save();
-      }
-    });
+    const allMerchantPromise = Merchant.deleteByPinId(this.id).then(() => Merchant.saveAll(newPinMerchants, this.id));
 
     // References too; each keeps the utcCreatedDateTime it came with.
-    const allReferencePromise = PinReference.deleteByPinId(this.id).then(async () => {
-      for (const r of newPinReferences) {
-        await r.save();
-      }
-    });
+    const allReferencePromise = PinReference.deleteByPinId(this.id).then(() => PinReference.saveAll(newPinReferences));
 
     const toSaveMediaPromise = Promise.all(toSaveOriginalMedia.map((medium) => medium.saveWithThumb()));
 
@@ -129,9 +117,7 @@ export default class Pin extends BasePin {
         await db.query(`DELETE FROM "PinRating" WHERE "pinId" = $1 AND "source" = ANY($2::text[])`, [pinId, toRemove]);
       }
     }
-    for (const r of ratings) {
-      await new PinRating(r, new BasePin({ id: pinId })).save();
-    }
+    await PinRating.saveAll(ratings.map((r) => new PinRating(r, new BasePin({ id: pinId }))));
     return { pinId };
   }
 

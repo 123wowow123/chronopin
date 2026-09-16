@@ -143,6 +143,47 @@ export default class Medium {
   }
 }
 
+// Every medium of one pin, created and linked in one statement rather than
+// one apiece. Same two inserts as createPinMediumLink, fed from arrays; the
+// rows go in ordinal order so the ids ascend with the list, and sorting what
+// comes back by id restores that order. Only for media that already have
+// their thumb - saveWithThumb fetches and uploads one per medium, which is
+// where a new pin's time actually goes.
+export async function saveAllToPin(media: Medium[], pinId: number): Promise<Medium[]> {
+  if (!media.length) {
+    return media;
+  }
+  const n = MEDIUM_COLUMNS.length;
+  const columns = MEDIUM_COLUMNS.map((c) => `"${c}"`).join(', ');
+  const types = ['varchar', 'integer', 'integer', 'varchar', 'integer', 'integer', 'varchar', 'varchar', 'varchar', 'varchar'];
+  const rows = await db.query<{ id: number }>(
+    `
+    WITH "input" AS (
+      SELECT * FROM unnest(${types.map((t, i) => `$${i + 1}::${t}[]`).join(', ')})
+        WITH ORDINALITY AS "m" (${columns}, "ord")
+    ), "medium" AS (
+      INSERT INTO "Medium" (${columns})
+      SELECT ${columns} FROM "input" ORDER BY "ord"
+      RETURNING "id"
+    ), "link" AS (
+      INSERT INTO "PinMedium" ("pinId", "mediumId", "utcCreatedDateTime", "utcDeletedDateTime")
+      SELECT $${n + 1}, "medium"."id", $${n + 2}, $${n + 3} FROM "medium"
+    )
+    SELECT "id" FROM "medium"`,
+    [
+      ...MEDIUM_COLUMNS.map((c) => media.map((m) => ((m as Row)[c] === undefined ? null : (m as Row)[c]))),
+      pinId,
+      media[0].utcCreatedDateTime || new Date(),
+      media[0].utcDeletedDateTime === undefined ? null : media[0].utcDeletedDateTime,
+    ],
+  );
+  rows.sort((a, b) => a.id - b.id);
+  media.forEach((medium, i) => {
+    medium.id = rows[i].id;
+  });
+  return media;
+}
+
 const MEDIUM_COLUMNS = [
   'thumbName', 'thumbWidth', 'thumbHeight', 'originalUrl', 'originalWidth',
   'originalHeight', 'type', 'authorName', 'authorUrl', 'html',

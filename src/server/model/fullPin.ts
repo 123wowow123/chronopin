@@ -5,12 +5,12 @@ import BasePin, { BasePinProp } from './basePin';
 import BasePins from './basePins';
 import Favorite from './favorite';
 import Like from './like';
-import Medium from './medium';
+import Medium, { saveAllToPin } from './medium';
 import Merchant from './merchant';
 import PinRating from './pinRating';
 import PinReference from './pinReference';
 import type User from './user';
-import { createPin, mapSubObjectFromQuery } from './pinShared';
+import { advanceIdSequence, createPin, mapSubObjectFromQuery } from './pinShared';
 
 // A pin with everything attached (likes and favourites too), for the backup
 // and seed scripts. The site itself never loads these.
@@ -30,21 +30,13 @@ export class FullPin extends BasePin {
   }
 
   async save() {
-    await createPin(this, this.userId);
-    // Media and merchants one at a time, so they get ids in the order the pin
-    // lists them and a backup restores in the same order.
-    for (const m of this.media) {
-      await new Medium(m, this).save();
-    }
-    for (const m of this.merchants) {
-      await new Merchant(m, this).save();
-    }
-    for (const r of this.references) {
-      await new PinReference(r, this).save();
-    }
-    for (const rt of this.ratings || []) {
-      await new PinRating(rt, this).save();
-    }
+    await createPin(this, this.userId, { advanceSequence: false });
+    // One statement per kind rather than one per row, each keeping the order
+    // the pin lists them in so a backup restores with the same ids it had.
+    await saveAllToPin(this.media.map((m: Row) => new Medium(m, this)), this.id);
+    await Merchant.saveAll(this.merchants.map((m: Row) => new Merchant(m, this)), this.id);
+    await PinReference.saveAll(this.references.map((r: Row) => new PinReference(r, this)));
+    await PinRating.saveAll((this.ratings || []).map((rt: Row) => new PinRating(rt, this)));
     return Promise.all([
       ...this.likes.map((l) =>
         new Like(
@@ -83,6 +75,14 @@ export class FullPin extends BasePin {
 }
 
 export class FullPins extends BasePins<FullPin> {
+  // Each pin keeps the id it was backed up with, which leaves the identity
+  // sequence behind; moving it past them is a MAX(id) scan, so it happens
+  // once here rather than after every pin.
+  async save() {
+    await super.save();
+    await advanceIdSequence('Pin');
+  }
+
   setPins(pins: Row[]): this {
     if (!Array.isArray(pins)) {
       throw new Error('arg is not an array');
@@ -102,18 +102,22 @@ export class FullPins extends BasePins<FullPin> {
     return _.sortBy(_.sortBy(pins, 'id'), 'utcStartDateTime');
   }
 
-  // Every pin after (fromDateTime, lastPinId), for backups. Soft-deleted pins
-  // are included, so a backup restores them as deleted rather than losing them.
-  static async queryForwardByDate(fromDateTime: Date | string, lastPinId: number, pageSize: number) {
+  // Every pin, for backups. Soft-deleted ones are included, so a backup
+  // restores them as deleted rather than losing them.
+  //
+  // This used to walk forward from a date, and the backup started it at the
+  // Unix epoch - so every pin that starts before 1970 was quietly left out of
+  // seedPins.json and would not have survived a db:reset. The timeline is a
+  // record of when things happened, so it reaches back millennia: 47 pins
+  // were being dropped, the Great Pyramid and Stonehenge among them. A backup
+  // wants all of them and there is nothing to page against, so there is no
+  // cursor here any more.
+  static async queryAll() {
     const rows = await db.query(
       `
         SELECT "Pin".*
         FROM "PinBaseView" AS "Pin"
-        WHERE "Pin"."utcStartDateTime" > $1
-          OR ("Pin"."utcStartDateTime" = $1 AND "Pin"."id" > $2)
-        ORDER BY "Pin"."utcStartDateTime", "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"
-        LIMIT $3`,
-      [fromDateTime, lastPinId || 0, pageSize],
+        ORDER BY "Pin"."utcStartDateTime", "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"`,
     );
     return new FullPins({ pins: rows });
   }

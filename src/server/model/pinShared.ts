@@ -77,7 +77,11 @@ function nullIfUndefined(value: unknown) {
 // Inserts a pin and sets pin.id. A pin that already carries an id (seeding)
 // keeps it; otherwise the database assigns one. pin.company is a name; it is
 // stored as a reference to its Company row.
-export async function createPin<T extends Row>(pin: T, userId: number | null) {
+//
+// advanceSequence: false leaves the identity sequence where it is, for a
+// restore that inserts thousands of pins with their own ids and moves it once
+// at the end instead of after every row (FullPins.save).
+export async function createPin<T extends Row>(pin: T, userId: number | null, { advanceSequence = true } = {}) {
   normalizeAllDayDates(pin);
   await Company.applyToPin(pin);
 
@@ -116,7 +120,7 @@ export async function createPin<T extends Row>(pin: T, userId: number | null) {
     values,
   );
   (pin as Row).id = rows[0].id;
-  if (hasId) {
+  if (hasId && advanceSequence) {
     await advanceIdSequence('Pin');
   }
   return { pin };
