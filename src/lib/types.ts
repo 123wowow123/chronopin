@@ -116,6 +116,14 @@ export type PinJson = {
 // with sanitize-html, or in the browser for pages loaded later).
 export type CardPin = PinJson & { safeDescription?: string };
 
+// All a map marker reads: where the pin is, when it is, and what goes in its
+// popup. A subset of PinJson rather than a shape of its own, so the map can
+// plot one of these or a whole pin - the focused pin still arrives entire
+// from /api/pins/:id.
+export type MapPinJson = Pick<PinJson, 'id' | 'title' | 'address' | 'category' | 'allDay' | 'utcStartDateTime' | 'utcCreatedDateTime' | 'latitude' | 'longitude'> & {
+  media?: Pick<MediumJson, 'type' | 'thumbName' | 'originalUrl'>[];
+};
+
 export type DateTimeJson = {
   id: number;
   title: string;

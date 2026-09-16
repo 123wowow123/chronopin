@@ -11,12 +11,11 @@ import { TimeRangeSlider } from '@/components/timeline/TimeRangeSlider';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import { canonicalCategory } from '@/lib/categories';
-import { parseLinkHeader } from '@/lib/client/api';
 import { useQueryState } from '@/lib/client/urlState';
 import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, SPAN_OPTIONS, eventSpanSummary, formatSpan, offsetDate, spanFromParam, spanLabel, spanToParam } from '@/lib/postedSpan';
 import { removeTerm, toggleTerm } from '@/lib/searchTerms';
 import { pinPath } from '@/lib/seo';
-import type { PinJson } from '@/lib/types';
+import type { MapPinJson, PinJson } from '@/lib/types';
 import { joinSearchQuery, parseSearchQuery, splitSearchQuery } from '@/server/util/searchQuery';
 
 // Center of the contiguous US, so an empty or loading map has a sensible view.
@@ -37,7 +36,7 @@ function pinIcon(isPast: boolean) {
   });
 }
 
-function localStart(pin: PinJson) {
+function localStart(pin: MapPinJson) {
   const d = new Date(pin.utcStartDateTime);
   return pin.allDay ? new Date(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()) : d;
 }
@@ -54,7 +53,7 @@ const POPUP_WIDTH = 200;
 // does not fetch every pin's picture up front. A standalone popup ignores the
 // icon's popupAnchor: offset is Leaflet's default [0, 7] plus the 32px up to
 // the pin's head.
-function pinPopup(pin: PinJson, options: L.PopupOptions = {}) {
+function pinPopup(pin: MapPinJson, options: L.PopupOptions = {}) {
   return L.popup({
     autoPan: false,
     closeButton: false,
@@ -70,7 +69,7 @@ function pinPopup(pin: PinJson, options: L.PopupOptions = {}) {
 
 // A thumb that fails to load (a local production build points at deleted
 // blobs) falls back to an image's original, then goes.
-function popupContent(pin: PinJson) {
+function popupContent(pin: MapPinJson) {
   const content = document.createElement('div');
   content.innerHTML =
     `<div class="px-2.5 pt-1.5 pb-2"><a href="${pinPath(pin)}" class="line-clamp-2 font-semibold">${escapeHtml(pin.title)}</a>` +
@@ -136,7 +135,7 @@ export default function PinsMap() {
   const stickyRef = useRef<{ popup: L.Popup; pinId: number } | null>(null);
   const focusedRef = useRef<number | undefined>(undefined);
   // The focused pin, once plotted, for the back button's link.
-  const [focusPin, setFocusPin] = useState<PinJson | null>(null);
+  const [focusPin, setFocusPin] = useState<MapPinJson | null>(null);
   const [past, setPast] = useState(() => spanFromParam(params.get('past'), DEFAULT_SPAN));
   const [future, setFuture] = useState(() => spanFromParam(params.get('future'), DEFAULT_SPAN));
   const [postedWithin, setPostedWithin] = useState(() => spanFromParam(params.get('posted'), DEFAULT_POSTED_WITHIN));
@@ -188,7 +187,7 @@ export default function PinsMap() {
     // clicked, or the focused pin. autoClose off: hovering other pins opens
     // their popups beside it. The map's closePopupOnClick still closes it on a
     // click elsewhere (a marker's click does not reach the map).
-    const stick = (pin: PinJson) => {
+    const stick = (pin: MapPinJson) => {
       if (stickyRef.current?.pinId === pin.id && map.hasLayer(stickyRef.current.popup)) return;
       const sticky = pinPopup(pin, { autoClose: false });
       sticky.on('remove', () => {
@@ -199,7 +198,7 @@ export default function PinsMap() {
       sticky.openOn(map);
     };
 
-    const plot = (pins: PinJson[]) => {
+    const plot = (pins: MapPinJson[]) => {
       for (const pin of pins) {
         if (seen.has(pin.id) || pin.latitude == null || pin.longitude == null) continue;
         const focus = pin.id === focusId;
@@ -249,37 +248,21 @@ export default function PinsMap() {
       setCategoryCounts(counts);
     };
 
-    // Links do not carry the watch choice, so every page asks for it.
-    const fetchPage = async (cursor: string) => {
-      const res = await fetch(`/api/main${cursor}${watched ? `${cursor ? '&' : '?'}hasFavorite=1` : ''}`);
-      return { page: (await res.json()) as { pins: PinJson[] }, links: parseLinkHeader(res.headers.get('link')) };
-    };
-
-    // The first page straddles now; walk outward from it in both directions
-    // until each side's boundary is passed (or the pages run out).
-    const walk = async (direction: 'next' | 'previous', start: string | undefined, boundary: Date | null) => {
-      let query = start;
-      while (query && !cancelled) {
-        const { page, links } = await fetchPage(query);
-        if (cancelled || !page.pins.length) return;
-        plot(page.pins);
-        const dates = page.pins.map((p) => new Date(p.utcStartDateTime).getTime());
-        const extreme = direction === 'next' ? Math.max(...dates) : Math.min(...dates);
-        if (boundary && (direction === 'next' ? extreme >= boundary.getTime() : extreme <= boundary.getTime())) return;
-        query = links[direction];
-      }
-    };
-
-    // A search answers with all its pins at once; the posted-within cutoff
-    // and the time windows (in plot) narrow them here.
-    const search = async () => {
-      const searchParams = new URLSearchParams({ q: fetchQuery });
+    // Every pin to plot, in one request: the window, the posted-within cutoff
+    // and "has a place at all" are all the server's to apply. The boundaries
+    // go over as resolved instants so they are the same ones plot compares
+    // against. A search reaches the same endpoint through its q.
+    const load = async () => {
+      const searchParams = new URLSearchParams();
+      if (fetchQuery) searchParams.set('q', fetchQuery);
       if (watched) searchParams.set('f', 'watch');
-      const res = await fetch(`/api/pins/search?${searchParams.toString()}`);
+      if (pastBoundary) searchParams.set('from', pastBoundary.toISOString());
+      if (futureBoundary) searchParams.set('to', futureBoundary.toISOString());
+      if (postedWithin) searchParams.set('created_within', postedWithin);
+      const res = await fetch(`/api/pins/map?${searchParams.toString()}`);
       if (!res.ok) throw new Error(res.statusText);
-      const { pins } = (await res.json()) as { pins: PinJson[] };
-      const cutoff = postedWithin ? offsetDate(now, postedWithin, -1) : null;
-      if (!cancelled) plot(cutoff ? pins.filter((pin) => !pin.utcCreatedDateTime || new Date(pin.utcCreatedDateTime) >= cutoff) : pins);
+      const { pins } = (await res.json()) as { pins: MapPinJson[] };
+      if (!cancelled) plot(pins);
     };
 
     // The focused pin may fall outside the search or time window, so it is
@@ -295,15 +278,7 @@ export default function PinsMap() {
 
     (async () => {
       try {
-        if (fetchQuery) {
-          await search();
-        } else {
-          // Later pages' links carry the resolved cutoff, so only the first names the span.
-          const { page, links } = await fetchPage(postedWithin ? `?created_within=${encodeURIComponent(postedWithin)}` : '');
-          if (cancelled) return;
-          plot(page.pins);
-          await Promise.all([walk('next', links.next, futureBoundary), walk('previous', links.previous, pastBoundary)]);
-        }
+        await load();
         if (!cancelled) setStatus('ready');
       } catch {
         if (!cancelled) setStatus('error');
