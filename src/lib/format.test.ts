@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { averageRating, compactCount, dayKeyIn, formatPosted, formatStart, money, plainText, ratingScore, timespan, weekdayPlanet } from './format';
+import { averageRating, compactCount, dayKeyIn, formatPosted, formatStart, money, plainText, ratingScore, timeAgo, timespan, weekdayPlanet } from './format';
 import { buildBags, resolveTodayMarker } from './timeline';
 
 describe('money', () => {
@@ -131,5 +131,29 @@ describe('averageRating', () => {
         { score: 5, scoreMax: 0 },
       ]),
     ).toBe(85);
+  });
+});
+
+describe('timeAgo', () => {
+  const now = Date.parse('2026-09-16T12:00:00Z');
+  const ago = (seconds: number) => timeAgo(new Date(now - seconds * 1000), now);
+
+  it('uses the smallest unit that fits', () => {
+    expect(ago(30)).toBe('30 seconds ago');
+    expect(ago(5 * 60)).toBe('5 minutes ago');
+    expect(ago(3 * 3600)).toBe('3 hours ago');
+    expect(ago(2 * 86_400)).toBe('2 days ago');
+  });
+
+  it('never rounds up to a full next unit', () => {
+    expect(ago(59.6)).toBe('1 minute ago');
+    expect(ago(59 * 60 + 40)).toBe('1 hour ago');
+    expect(ago(23.6 * 3600)).toBe('yesterday');
+    expect(ago(29.6 * 86_400)).toBe('last month');
+    expect(ago(11.6 * 2_592_000)).toBe('last year');
+  });
+
+  it('formats future instants', () => {
+    expect(timeAgo(new Date(now + 59 * 60_000 + 50_000), now)).toBe('in 1 hour');
   });
 });

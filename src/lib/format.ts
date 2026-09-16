@@ -179,21 +179,25 @@ export function formatStart(
 const rtf = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
 
 export function timeAgo(instant: string | Date, now = Date.now()): string {
-  const seconds = Math.round((new Date(instant).getTime() - now) / 1000);
-  const units: [Intl.RelativeTimeFormatUnit, number][] = [
-    ['year', 31_536_000],
-    ['month', 2_592_000],
-    ['day', 86_400],
-    ['hour', 3_600],
-    ['minute', 60],
+  const seconds = (new Date(instant).getTime() - now) / 1000;
+  // Each unit's size in seconds and how many of it make the next unit up.
+  // The count is rounded before it is compared, so 59m40s reads "1 hour ago"
+  // rather than "60 minutes ago".
+  const units: [Intl.RelativeTimeFormatUnit, number, number][] = [
+    ['second', 1, 60],
+    ['minute', 60, 60],
+    ['hour', 3_600, 24],
+    ['day', 86_400, 30],
+    ['month', 2_592_000, 12],
   ];
 
-  for (const [unit, size] of units) {
-    if (Math.abs(seconds) >= size) {
-      return rtf.format(Math.round(seconds / size), unit);
+  for (const [unit, size, next] of units) {
+    const count = Math.round(seconds / size);
+    if (Math.abs(count) < next) {
+      return rtf.format(count, unit);
     }
   }
-  return rtf.format(seconds, 'second');
+  return rtf.format(Math.round(seconds / 31_536_000), 'year');
 }
 
 // A rating the way its source shows it: Rotten Tomatoes and AniList as a
