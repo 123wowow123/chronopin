@@ -97,8 +97,31 @@ export default class Pins extends BasePins<Pin> {
     return queryPinByIds(ids).then((res) => new Pins(res));
   }
 
-  static getThreadPins(pinId: number) {
-    return queryPinByIdsAndOrderedByThread(pinId).then((res) => new Pins().setPinsSortBy(res.pins, 'reverseOrder', true));
+  // The thread around a pin, its own place in it first. Two steps, as a page
+  // and a search take: the thread is walked on "Pin", then those pins are read
+  // out of the view by id. Joining the view to the walk instead left Postgres
+  // building all of it - every pin's references, ratings, views and duplicate
+  // group - before keeping the handful the thread names: 44ms to answer with
+  // a single pin.
+  static async getThreadPins(pinId: number) {
+    const order = await queryThreadOrder(pinId);
+    if (!order.length) {
+      return new Pins({ pins: [], queryCount: 0 });
+    }
+    const rows = await db.query(
+      `
+      SELECT "Pin".*
+      FROM "PinBaseView" AS "Pin"
+      WHERE "Pin"."id" = ANY($1::integer[])
+        AND "Pin"."utcDeletedDateTime" IS NULL
+      ORDER BY "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"`,
+      [order.map((o) => o.id)],
+    );
+    const place = new Map(order.map((o) => [o.id, o.reverseOrder]));
+    rows.forEach((row) => {
+      row.reverseOrder = place.get(row.id);
+    });
+    return new Pins().setPinsSortBy(rows, 'reverseOrder', true);
   }
 
   // The search results after `order`'s cursor, best first (or in date order
@@ -187,31 +210,71 @@ export default class Pins extends BasePins<Pin> {
   }
 
   // Every live pin's confidence (null when unscored) with its category and
-  // author, for the admin statistics on what the timeline hides.
+  // author, for the admin statistics on what the timeline hides. Read off
+  // "Pin" rather than the view, which had to be deduplicated with a DISTINCT
+  // ON after multiplying each pin by its media and merchants.
   static async listConfidence() {
     return db.query<{ id: number; category: string | null; userName: string | null; utcCreatedDateTime: Date; confidence: number | null }>(
       `
-      SELECT DISTINCT ON ("id") "id", "category", "User.userName" AS "userName", "utcCreatedDateTime",
-        "pinConfidence"("references", "sourceUrl", "dateConfidence", "utcCreatedDateTime") AS "confidence"
-      FROM "PinBaseView"
-      WHERE "utcDeletedDateTime" IS NULL
-      ORDER BY "id"`,
+      SELECT "p"."id", "p"."category", "User"."userName" AS "userName", "p"."utcCreatedDateTime",
+        ${pinConfidenceOf('p')} AS "confidence"
+      FROM "Pin" AS "p"
+        LEFT JOIN "User" ON "User"."id" = "p"."userId"
+      WHERE "p"."utcDeletedDateTime" IS NULL
+      ORDER BY "p"."id"`,
     );
   }
 
   // Pins per lowercased category across the whole timeline: the same pins
   // its pages walk (live, confident enough, created since the cutoff).
+  // Counted on "Pin" rather than the view, which multiplies each pin by its
+  // media and merchants only for the COUNT(DISTINCT) to undo it, and builds
+  // every pin's references, ratings, views and duplicate group on the way.
   static async countTimelineByCategory(createdSince: Date | null | undefined, minConfidence: number | null) {
     return db.query<{ category: string | null; count: number }>(
       `
-      SELECT lower("category") AS "category", COUNT(DISTINCT "id")::integer AS "count"
-      FROM "PinBaseView"
-      WHERE "utcDeletedDateTime" IS NULL
-        AND ($1::timestamptz IS NULL OR "utcCreatedDateTime" >= $1)
-        AND ($2::integer IS NULL
-          OR COALESCE("pinConfidence"("references", "sourceUrl", "dateConfidence", "utcCreatedDateTime"), $2) >= $2)
+      SELECT lower("p"."category") AS "category", COUNT(*)::integer AS "count"
+      FROM "Pin" AS "p"
+      WHERE "p"."utcDeletedDateTime" IS NULL
+        AND ($1::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $1)
+        AND ($2::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $2) >= $2)
       GROUP BY 1`,
       [createdSince || null, minConfidence],
+    );
+  }
+
+  // Every located pin a map marker needs, in one answer rather than a walk
+  // through the timeline's pages. The map used to page /api/main outward from
+  // now until it passed each boundary - about fifteen round trips for the
+  // default year either side - and threw away both the four fifths of each
+  // payload a marker never reads and the half of all pins that have no place
+  // at all. from/to bound when the pins start (null for unbounded).
+  static async queryForMap(bounds: {
+    from: Date | null;
+    to: Date | null;
+    createdSince: Date | null;
+    minConfidence: number | null;
+    favoriteUserId: number | null;
+  }): Promise<Row[]> {
+    return db.query(
+      `
+      SELECT "p"."id", "p"."title", "p"."address", "p"."category", "p"."allDay",
+        "p"."utcStartDateTime", "p"."utcCreatedDateTime",
+        ST_Y("p"."location"::geometry) AS "latitude",
+        ST_X("p"."location"::geometry) AS "longitude",
+        ${MAP_MEDIA} AS "media"
+      FROM "Pin" AS "p"
+      WHERE "p"."location" IS NOT NULL
+        AND "p"."utcDeletedDateTime" IS NULL
+        AND ($1::timestamptz IS NULL OR "p"."utcStartDateTime" >= $1)
+        AND ($2::timestamptz IS NULL OR "p"."utcStartDateTime" <= $2)
+        AND ($3::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $3)
+        AND ($4::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $4) >= $4)
+        AND ($5::integer IS NULL OR EXISTS (
+          SELECT 1 FROM "Favorite" AS "f"
+          WHERE "f"."pinId" = "p"."id" AND "f"."userId" = $5 AND "f"."utcDeletedDateTime" IS NULL))
+      ORDER BY "p"."utcStartDateTime", "p"."id"`,
+      [bounds.from, bounds.to, bounds.createdSince, bounds.minConfidence, bounds.favoriteUserId],
     );
   }
 
@@ -225,9 +288,53 @@ function result(rows: Row[]): PageResult {
   return { pins: rows, queryCount: rows.length };
 }
 
+// A marker's media, lowest id first, the order the view hands them over in.
+// A popup shows one picture - a video's still if the pin has one, else its
+// first medium - so only what picking and drawing that needs is sent.
+const MAP_MEDIA = `
+  (SELECT COALESCE(json_agg(json_build_object(
+            'type', "m"."type",
+            'thumbName', "m"."thumbName",
+            'originalUrl', "m"."originalUrl"
+          ) ORDER BY "m"."id"), '[]'::json)
+   FROM "PinMedium" AS "pm"
+     JOIN "Medium" AS "m" ON "m"."id" = "pm"."mediumId"
+   WHERE "pm"."pinId" = "p"."id" AND "pm"."utcDeletedDateTime" IS NULL)`;
+
+// The reference fields that matter anywhere but a pin's own References
+// panel: what a card's confidence badge and its [n] citations read, and
+// exactly what the SQL "pinConfidence" weighs. The view's own "references"
+// carries the rest - each one's reasoning, title, claimed dates and who added
+// it - and that is most of a page: reasoning alone was half the reference
+// bytes and a sixth of the whole payload, none of it read away from a pin's
+// page. Read off "PinReference" rather than trimmed out of the view's json,
+// which also keeps these paths off the view's join to "User".
+//
+// `as` is the alias of the row they belong to. Anything a card comes to show
+// from a reference has to be added here first.
+const leanReferences = (as: string) => `
+  (SELECT COALESCE(json_agg(json_build_object(
+            'url', "r"."url",
+            'confidence', "r"."confidence",
+            'publishedDate', to_char("r"."publishedDate", 'YYYY-MM-DD'),
+            'utcCreatedDateTime', "r"."utcCreatedDateTime"
+          ) ORDER BY "r"."id"), '[]'::json)
+   FROM "PinReference" AS "r"
+   WHERE "r"."pinId" = "${as}"."id")`;
+
+// A pin's confidence scored straight off "PinReference", for the queries that
+// filter by it before the view is involved. Spelled out here rather than
+// wrapped in a SQL function of its own: a function whose body calls
+// "pinConfidence" cannot be inlined, and the planner then scores every
+// candidate row instead of stopping once a page is full - three times the
+// cost of this on a page, five times on a whole-table count.
+const pinConfidenceOf = (as: string) =>
+  `"pinConfidence"(${leanReferences(as)}, "${as}"."sourceUrl", "${as}"."dateConfidence", "${as}"."utcCreatedDateTime")`;
+
 // The columns a timeline page returns. Deliberately narrower than "Pin".*:
 // no longFormSummary (detail page only) and no utcDeletedDateTime (always
-// null here). "Media.type" is an integer on this path, as it always has been.
+// null here), and references only as far as a card reads them. "Media.type"
+// is an integer on this path, as it always has been.
 const PAGE_COLUMNS = `
   "Pin"."id",
   "Pin"."parentId",
@@ -260,7 +367,7 @@ const PAGE_COLUMNS = `
   "Pin"."favoriteCount",
   "Pin"."likeCount",
   "Pin"."rootThread",
-  "Pin"."references",
+  ${leanReferences('Pin')} AS "references",
   "Pin"."ratings",
   "Pin"."viewCount",
   "Pin"."duplicateGroup",
@@ -287,11 +394,29 @@ const PAGE_COLUMNS = `
   "Pin"."Merchant.price"`;
 
 // One page of the timeline, walking forward (later pins) or backward from
-// (fromDateTime, lastPinId). Rows are the view's pin x medium x merchant rows,
-// so pageSize counts rows, not pins - as it always has. The whole timeline
-// leaves out pins scored below minConfidence (the admin setting; null shows
-// every pin), filtered here rather than after the query so pages stay full; a
-// watched list keeps every pin.
+// (fromDateTime, lastPinId). The whole timeline leaves out pins scored below
+// minConfidence (the admin setting; null shows every pin), filtered while the
+// page is picked rather than after it so pages stay full; a watched list keeps
+// every pin.
+//
+// Two steps, the ones search takes (rankSearch, then querySearchRanked): the
+// page's pin ids off "Pin", and then those pins out of the view. Limiting the
+// view directly cannot work - it groups and carries correlated subqueries, so
+// the limit stays above them and every pin past the cursor is built in full
+// before all but a page is thrown away, which made a page cost with the size
+// of the table rather than with the size of the page.
+//
+// The ids have to arrive as ARRAY(...), not as a CTE joined to the view: a
+// join leaves Postgres materialising the whole view and then filtering it,
+// while "id" = ANY(...) pushes down into the view's own scan of "Pin". The
+// cursor has to compare as a row, the way rankSearch does, rather than as
+// "start > $2 OR (start = $2 AND id > $3)": the OR costs the walk its ordered
+// scan of IX_Pin_utcStartDateTime, and with it the chance to stop at a full
+// page rather than score every pin past the cursor and then sort.
+//
+// pageSize counts pins; it counted the view's pin x medium x merchant rows
+// until the page stopped coming out of the view, which let a page end midway
+// through a pin's media and leave the rest of them unreachable.
 function queryPage(
   queryForward: boolean,
   onlyFavorites: boolean,
@@ -309,29 +434,31 @@ function queryPage(
       `
     SELECT ${PAGE_COLUMNS}
     FROM "PinBaseView" AS "Pin"
-    ${
-      onlyFavorites
-        ? `
-      INNER JOIN "Favorite" AS "Favorites"
-        ON "Pin"."id" = "Favorites"."pinId" AND "Favorites"."utcDeletedDateTime" IS NULL AND "Favorites"."userId" = $1`
-        : ''
-    }
-    WHERE ("Pin"."utcStartDateTime" ${after} $2
-        OR ("Pin"."utcStartDateTime" = $2 AND "Pin"."id" ${after} $3))
-      AND "Pin"."utcDeletedDateTime" IS NULL
-      AND ($4::timestamptz IS NULL OR "Pin"."utcCreatedDateTime" >= $4)
-      AND ($6::integer IS NULL
-        OR COALESCE("pinConfidence"("Pin"."references", "Pin"."sourceUrl", "Pin"."dateConfidence", "Pin"."utcCreatedDateTime"), $6) >= $6)
+    WHERE "Pin"."id" = ANY(ARRAY(
+      SELECT "p"."id"
+      FROM "Pin" AS "p"
+      ${
+        onlyFavorites
+          ? `
+        INNER JOIN "Favorite" AS "Favorites"
+          ON "p"."id" = "Favorites"."pinId" AND "Favorites"."utcDeletedDateTime" IS NULL AND "Favorites"."userId" = $1`
+          : ''
+      }
+      WHERE ("p"."utcStartDateTime", "p"."id") ${after} ($2::timestamptz, $3::integer)
+        AND "p"."utcDeletedDateTime" IS NULL
+        AND ($4::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $4)
+        AND ($6::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $6) >= $6)
+      ORDER BY "p"."utcStartDateTime" ${direction}, "p"."id" ${direction}
+      LIMIT $5))
     ORDER BY "Pin"."utcStartDateTime" ${direction}, "Pin"."id" ${direction},
-      "Pin"."Media.id" ${direction}, "Pin"."Merchant.id" ${direction}
-    LIMIT $5`,
+      "Pin"."Media.id" ${direction}, "Pin"."Merchant.id" ${direction}`,
       [userId, fromDateTime, lastPinId, createdSince || null, pageSize, onlyFavorites ? null : minConfidence],
     )
     .then(result);
 }
 
-// The first page: the pageSizePrev rows before fromDateTime and the
-// pageSizeNext rows from it on, oldest first.
+// The first page: the pageSizePrev pins before fromDateTime and the
+// pageSizeNext pins from it on, oldest first.
 async function queryInitialPage(
   onlyFavorites: boolean,
   fromDateTime: Date,
@@ -365,13 +492,13 @@ function queryPinByIds(ids: number[]): Promise<PageResult> {
     .then(result);
 }
 
-// Every pin in the thread around pinId: its ancestors (reverseOrder 1, 2...
-// walking up) and the same author's replies below it (-1, -2...), with pinId
-// itself at 0.
-function queryPinByIdsAndOrderedByThread(pinId: number): Promise<{ pins: Row[] }> {
-  return db
-    .query(
-      `
+// Every pin in the thread around pinId with its place in it: the pin's
+// ancestors (reverseOrder 1, 2... walking up) and the same author's replies
+// below it (-1, -2...), with pinId itself at 0. Ids and places only;
+// getThreadPins reads the pins themselves.
+function queryThreadOrder(pinId: number): Promise<{ id: number; reverseOrder: number }[]> {
+  return db.query<{ id: number; reverseOrder: number }>(
+    `
     WITH RECURSIVE
       "previous" ("id", "parentId", "userId", "reverseOrder") AS (
           SELECT "id", "parentId", "userId", 0
@@ -393,19 +520,12 @@ function queryPinByIdsAndOrderedByThread(pinId: number): Promise<{ pins: Row[] }
             JOIN "next" ON "Pin"."parentId" = "next"."id"
           WHERE "Pin"."utcDeletedDateTime" IS NULL
             AND "next"."userId" = "Pin"."userId"
-      ),
-      "thread" AS (
-        SELECT * FROM "previous"
-        UNION
-        SELECT * FROM "next"
       )
-    SELECT "Pin".*, "thread"."reverseOrder"
-    FROM "PinBaseView" AS "Pin"
-      JOIN "thread" ON "Pin"."id" = "thread"."id"
-    WHERE "Pin"."utcDeletedDateTime" IS NULL`,
-      [pinId],
-    )
-    .then((rows) => ({ pins: rows }));
+    SELECT "id", "reverseOrder" FROM "previous"
+    UNION
+    SELECT "id", "reverseOrder" FROM "next"`,
+    [pinId],
+  );
 }
 
 // The FROM and WHERE a search's filter makes, on the Pin table itself rather
