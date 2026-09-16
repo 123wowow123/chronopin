@@ -10,7 +10,7 @@ import { DateConfidence, DateConfidenceReasoning } from '@/components/pin/DateCo
 import { DateRanges } from '@/components/pin/DateRanges';
 import { FollowButton } from '@/components/pin/FollowButton';
 import { PinAdminLink } from '@/components/pin/PinAdminLink';
-import { CARD_GRID } from '@/components/pin/cardGrid';
+import { CardGrid } from '@/components/pin/CardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { PinConfidence } from '@/components/pin/PinConfidence';
 import { PinDuplicates } from '@/components/pin/PinDuplicates';
@@ -343,13 +343,13 @@ async function Related({ pin }: { pin: PinJson }) {
       <h2 id="related-heading" className="mb-4 text-xl font-semibold tracking-tight">
         More like this
       </h2>
-      <ul className={CARD_GRID}>
+      <CardGrid>
         {toCardPins(pins).map((p) => (
           <li key={p.id}>
             <PinCard pin={p} serverTimeZone={timeZone} tense={pinTense(p, now, todayKey)} />
           </li>
         ))}
-      </ul>
+      </CardGrid>
     </section>
   );
 }

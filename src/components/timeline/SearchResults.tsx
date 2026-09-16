@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { FollowButton } from '@/components/pin/FollowButton';
-import { CARD_GRID } from '@/components/pin/cardGrid';
+import { CardGrid } from '@/components/pin/CardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { parseLinkHeader } from '@/lib/client/api';
@@ -358,13 +358,13 @@ export function SearchResults({
         {/* Kept mounted once shown: a remount resizes cards (embeds, media fallbacks) after the scroll is restored. */}
         {relevanceShown ? (
           <div hidden={sortBy !== 'relevance'}>
-            <ul className={`mt-6 ${CARD_GRID}`}>
+            <CardGrid className="mt-6">
               {(rankedPins ?? []).map((pin, i) => (
                 <li key={pin.id} id={`rank-${pin.id}`}>
                   <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={i === 0} tense={pinTense(pin, serverNow, todayKey)} />
                 </li>
               ))}
-            </ul>
+            </CardGrid>
             <div ref={rankedEndRef} aria-hidden className="h-px" />
           </div>
         ) : null}
