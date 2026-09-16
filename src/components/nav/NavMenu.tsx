@@ -155,8 +155,11 @@ export function NavMenu() {
       <nav aria-label="Main" className="hidden items-center gap-2 lg:flex">
         <ViewSwitch pathname={pathname} />
         {user ? (
-          <Link href="/create" className="btn btn-primary py-1.5">
-            <Icon name="plus" className="size-4" />
+          <Link
+            href="/create"
+            className="btn btn-primary group gap-1.5 rounded-full py-1.5 pr-3.5 pl-2.5 font-medium shadow-sm ring-1 shadow-accent/30 ring-white/10 ring-inset"
+          >
+            <Icon name="plus" className="size-4 transition-transform duration-200 group-hover:rotate-90" />
             Create
           </Link>
         ) : (
