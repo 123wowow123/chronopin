@@ -2,15 +2,27 @@
 // here returns plain JSON (no model instances), keyed by its arguments.
 
 import { cacheLife, cacheTag } from 'next/cache';
+import { getTimelineVideo } from '../model/appSetting';
 import Pin from '../model/pin';
 import Pins from '../model/pins';
 import { SearchPins } from '../model/searchPin';
 import { compareDuplicateRank } from '@/lib/duplicates';
 import { toJson, type PinJson, type SearchPage, type TimelinePage } from '@/lib/types';
+import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import { TAGS } from './cache';
 import { readSearchRequest, searchCategoryCounts, searchPinsPage, type SearchSort } from './search';
 import { getTimeline, timelineMinConfidence } from './timeline';
 import { resolveCreatedSince, type CreatedQuery } from '../util/createdFilter';
+
+// The video setting the cards on a page of pins read. Cached (and expired)
+// with those pages rather than read per request: it is one row that changes
+// about never.
+export async function timelineVideo(): Promise<TimelineVideoSetting> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  return getTimelineVideo();
+}
 
 export type TimelineCursor = { fromDateTime?: string | null; lastPinId?: number };
 

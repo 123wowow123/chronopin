@@ -1,17 +1,21 @@
 'use client';
 
-// Sign in with Google or Facebook. On the sign-up page the chosen @handle is
-// left in a short-lived cookie for the callback to give a new account.
+// Sign in with Google, Facebook or Apple. On the sign-up page the chosen
+// @handle is left in a short-lived cookie for the callback to give a new
+// account.
 export function OAuthButtons({ handle, validate }: { handle?: string; validate?: () => boolean }) {
-  function go(provider: 'google' | 'facebook') {
+  function go(provider: 'google' | 'facebook' | 'apple') {
     if (validate && !validate()) return;
-    document.cookie = handle && handle.length > 1 ? `handle=${encodeURIComponent(handle)}; path=/; max-age=600; samesite=lax` : 'handle=; path=/; max-age=0';
+    // Apple posts its callback back cross-site, and only a SameSite=None
+    // cookie rides along with that. It is https-only, so Secure costs nothing.
+    const sameSite = provider === 'apple' ? 'samesite=none; secure' : 'samesite=lax';
+    document.cookie = handle && handle.length > 1 ? `handle=${encodeURIComponent(handle)}; path=/; max-age=600; ${sameSite}` : 'handle=; path=/; max-age=0';
     // A full navigation: /auth/* is a route handler that redirects to the provider.
     // eslint-disable-next-line @next/next/no-location-assign-relative-destination
     window.location.href = `/auth/${provider}`;
   }
   return (
-    <div className="grid gap-2.5 sm:grid-cols-2">
+    <div className="grid gap-2.5 sm:grid-cols-3">
       <button type="button" onClick={() => go('google')} className="btn bg-white text-neutral-900 ring-1 ring-line ring-inset hover:bg-neutral-200">
         <GoogleMark />
         Google
@@ -19,6 +23,10 @@ export function OAuthButtons({ handle, validate }: { handle?: string; validate?:
       <button type="button" onClick={() => go('facebook')} className="btn bg-[#1466d8] text-white hover:bg-[#1259bd]">
         <FacebookMark />
         Facebook
+      </button>
+      <button type="button" onClick={() => go('apple')} className="btn bg-black text-white hover:bg-neutral-800">
+        <AppleMark />
+        Apple
       </button>
     </div>
   );
@@ -39,6 +47,14 @@ function FacebookMark() {
   return (
     <svg viewBox="0 0 24 24" className="size-4" fill="currentColor" aria-hidden>
       <path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z" />
+    </svg>
+  );
+}
+
+function AppleMark() {
+  return (
+    <svg viewBox="0 0 24 24" className="size-4" fill="currentColor" aria-hidden>
+      <path d="M17.6 12.7c0-2.4 2-3.5 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9s-1.9-.9-3.2-.8c-1.6 0-3.1.9-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8s1.9.8 3.2.7c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.5-1-2.5-3.9zM15.2 5.6c.7-.8 1.1-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z" />
     </svg>
   );
 }

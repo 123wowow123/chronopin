@@ -32,3 +32,15 @@ test('picking a category and shutting the fold leaves the page scrolling', async
   await page.locator(foldPill).first().click();
   await expect.poll(() => scrolls(page)).toBe(true);
 });
+
+test('a card on the timeline pictures its video instead of loading the player', async ({ page }) => {
+  await page.goto('/');
+  // A still under a play badge, and no player anywhere: an iframe in the
+  // markup is already a download, so the card must never write one.
+  await expect(page.getByRole('img', { name: "Play on the pin's page" }).first()).toBeVisible();
+  await expect(page.locator('iframe[src*="youtube.com"]')).toHaveCount(0);
+
+  // The pin's own page still plays it.
+  await page.locator('a[href^="/pin/"]').first().click();
+  await expect(page).toHaveURL(/\/pin\//);
+});

@@ -9,7 +9,7 @@ import { toCardPins } from '@/lib/sanitize';
 import { websiteJsonLd } from '@/lib/seo';
 import { pinDayKey } from '@/lib/timeline';
 import specialtyDays from '@/server/data/specialtyDays.json';
-import { timelinePage } from '@/server/services/pages';
+import { timelinePage, timelineVideo } from '@/server/services/pages';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 
 type Props = PageProps<'/'>;
@@ -46,7 +46,10 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
   const postedWithin = spanFromParam(first(params.posted), defaultPostedWithin);
   const fromDateTime = first(params.from_date_time) || null;
 
-  const page = await timelinePage({ fromDateTime, lastPinId: Number(first(params.last_pin_id)) || 0 }, postedWithin);
+  const [page, video] = await Promise.all([
+    timelinePage({ fromDateTime, lastPinId: Number(first(params.last_pin_id)) || 0 }, postedWithin),
+    timelineVideo(),
+  ]);
 
   // Only the specialty days this page shows; the rest load when scrolled to.
   const days: Record<string, string[]> = {};
@@ -75,6 +78,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
         initialSpecialtyDays={days}
         serverNow={new Date().toISOString()}
         minConfidence={page.minConfidence}
+        video={video}
       />
       {/* Plain links through the timeline, for crawlers and anyone without JavaScript. */}
       <nav aria-label="Timeline pages" className="flex justify-between px-4 pb-20 text-sm lg:ml-[190px] lg:max-w-[906px]">

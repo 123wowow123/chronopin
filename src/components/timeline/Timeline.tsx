@@ -11,7 +11,9 @@ import { useTimeZone } from '@/lib/client/timeZone';
 import { dayKeyIn } from '@/lib/format';
 import { formatSpan, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSpan';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
+import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
+import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { CardPin, DateTimeJson, TimelinePage } from '@/lib/types';
 import { categoryPillSummary, SearchCategoryFilter } from './CategoryFilter';
 import { FloatingControls } from './FloatingControls';
@@ -43,6 +45,7 @@ export function Timeline({
   initialSpecialtyDays,
   serverNow,
   minConfidence,
+  video,
 }: {
   initialPins: CardPin[];
   initialDateTimes: DateTimeJson[];
@@ -57,6 +60,8 @@ export function Timeline({
   serverNow: string;
   // The score a pin needs to show (the admin setting), or null to show every pin.
   minConfidence: number | null;
+  // Whether a card here loads its video player on a phone (the admin setting).
+  video: TimelineVideoSetting;
 }) {
   const timeZone = useTimeZone(serverTimeZone);
   const [pins, setPins] = useState(initialPins);
@@ -228,51 +233,53 @@ export function Timeline({
   const phrase = (formatSpan(postedWithin) || '').replace(/^1 /, '');
 
   return (
-    <div className="px-[max(0.75rem,env(safe-area-inset-left))] pb-24 lg:px-4 xl:pr-[288px]">
-      <FloatingControls
-        summaryCaption="Posted within"
-        summary={spanLabel(postedWithin)}
-        onToday={scrollToToday}
-        category={{ summary: categoryPillSummary(), control: <SearchCategoryFilter postedWithin={postedWithin} /> }}
-      >
-        <TimeRangeSlider
-          steps={SPAN_OPTIONS}
-          past={postedWithin}
-          pastOnly
-          pastLabelSpan={defaultSpan}
-          onChange={({ past }) => void changePostedWithin(past)}
-        />
-      </FloatingControls>
+    <TimelineVideoProvider setting={video}>
+      <div className="px-[max(0.75rem,env(safe-area-inset-left))] pb-24 lg:px-4 xl:pr-[288px]">
+        <FloatingControls
+          summaryCaption="Posted within"
+          summary={spanLabel(postedWithin)}
+          onToday={scrollToToday}
+          category={{ summary: categoryPillSummary(), control: <SearchCategoryFilter postedWithin={postedWithin} /> }}
+        >
+          <TimeRangeSlider
+            steps={SPAN_OPTIONS}
+            past={postedWithin}
+            pastOnly
+            pastLabelSpan={defaultSpan}
+            onChange={({ past }) => void changePostedWithin(past)}
+          />
+        </FloatingControls>
 
-      <div ref={topRef} aria-hidden className="h-px" />
+        <div ref={topRef} aria-hidden className="h-px" />
 
-      <div className="relative lg:before:absolute lg:before:top-0 lg:before:bottom-0 lg:before:left-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']">
-        {bags.map((bag, index) => (
-          <div key={bag.day}>
-            {marker.index === index ? <TodayMarker specialtyDays={specialtyDays[todayKey.slice(5)] || []} /> : null}
-            <TimeBlock
-              bag={bag}
-              todayKey={todayKey}
-              specialtyDays={specialtyDays[bag.day.slice(5)] || []}
-              serverTimeZone={serverTimeZone}
-              // The first bag is what paints before hydration scrolls to
-              // today, so both hold a likely LCP image.
-              firstPinPriority={index === 0 || index === (marker.index === -1 ? marker.todayBagIndex : marker.index)}
-            />
-          </div>
-        ))}
-        {marker.atEnd ? <TodayMarker specialtyDays={specialtyDays[todayKey.slice(5)] || []} /> : null}
+        <div className="relative lg:before:absolute lg:before:top-0 lg:before:bottom-0 lg:before:left-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']">
+          {bags.map((bag, index) => (
+            <div key={bag.day}>
+              {marker.index === index ? <TodayMarker specialtyDays={specialtyDays[todayKey.slice(5)] || []} /> : null}
+              <TimeBlock
+                bag={bag}
+                todayKey={todayKey}
+                specialtyDays={specialtyDays[bag.day.slice(5)] || []}
+                serverTimeZone={serverTimeZone}
+                // The first bag is what paints before hydration scrolls to
+                // today, so both hold a likely LCP image.
+                firstPinPriority={index === 0 || index === (marker.index === -1 ? marker.todayBagIndex : marker.index)}
+              />
+            </div>
+          ))}
+          {marker.atEnd ? <TodayMarker specialtyDays={specialtyDays[todayKey.slice(5)] || []} /> : null}
+        </div>
+
+        <div ref={bottomRef} aria-hidden className="h-px" />
+
+        {status === 'loading' ? <p className="mt-16 text-center text-subtle" role="status">Loading…</p> : null}
+        {status === 'error' ? <p className="mt-16 text-center text-lg text-subtle">Oops, something went wrong. Please try again in a bit...</p> : null}
+        {status === 'ready' && empty ? (
+          <p className="mt-16 text-center text-lg text-subtle">
+            {postedWithin ? `No pins posted in the last ${phrase}.` : 'Oops, something went wrong. Please try again in a bit...'}
+          </p>
+        ) : null}
       </div>
-
-      <div ref={bottomRef} aria-hidden className="h-px" />
-
-      {status === 'loading' ? <p className="mt-16 text-center text-subtle" role="status">Loading…</p> : null}
-      {status === 'error' ? <p className="mt-16 text-center text-lg text-subtle">Oops, something went wrong. Please try again in a bit...</p> : null}
-      {status === 'ready' && empty ? (
-        <p className="mt-16 text-center text-lg text-subtle">
-          {postedWithin ? `No pins posted in the last ${phrase}.` : 'Oops, something went wrong. Please try again in a bit...'}
-        </p>
-      ) : null}
-    </div>
+    </TimelineVideoProvider>
   );
 }

@@ -6,12 +6,12 @@
 import '../env';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { parseArgs } from 'node:util';
+import Holidays from 'date-holidays';
 import _ from 'lodash';
 import * as db from '@/server/db';
 import { Comment, Company, DateTime, Follow, FullPins, MediumType, User, Users } from '@/server/model';
 import AiFeedback from '@/server/model/aiFeedback';
 import PinDuplicate from '@/server/model/pinDuplicate';
-import { fetchJson } from '@/server/util/fetchJson';
 import log from '@/server/util/log';
 import { excludeE2e } from './excludeE2e';
 
@@ -41,6 +41,18 @@ const BACKUP_USER_PROPS = [
   'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference',
   'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime',
 ];
+
+// The years to compute holidays for. date-holidays applies today's rules to
+// whatever year it is asked for, and Juneteenth (from 2021) is the only one it
+// gates by year: ask it for 1900 and it returns a Martin Luther King Jr. Day,
+// 39 years before King was born, on the third Monday that the Uniform Monday
+// Holiday Act would not fix until 1971. 1986 is the first year the whole set
+// is true - the year MLK Day was first observed, and past the 1971 Monday
+// shifts and the 1978 return of Veterans Day to 11-11. The rules project
+// forward without that problem, so the end matches the astronomy markers in
+// scripts/backup, which run to 2100.
+const FIRST_HOLIDAY_YEAR = 1986;
+const LAST_HOLIDAY_YEAR = 2100;
 
 const readJson = (file: string) => JSON.parse(readFileSync(file, 'utf8'));
 const writeJson = (file: string, data: unknown) => writeFileSync(file, JSON.stringify(data, null, 2));
@@ -92,22 +104,39 @@ async function saveDB() {
 }
 
 async function seedDB() {
-  // US public holidays, from the Enrico API (it covers 2011 onward).
-  const holidayBaseUrl = 'http://kayaposoft.com/enrico/json/v1.0/';
+  // US federal holidays, computed by date-holidays instead of fetched. The
+  // Enrico API this used to call still answers 200 for every year, but its US
+  // dataset has rotted down to Juneteenth alone: it seeded 5 holiday markers
+  // for the 15 years it was asked about, and an empty list is not an error, so
+  // nothing said so. Computing them locally also means seeding needs no
+  // network, and can cover every year the timeline shows rather than the 2011
+  // onwards that was all Enrico had.
+  //
+  // Read holiday.date, not holiday.start. date is the calendar date in the
+  // country's own zone ('2025-01-01 00:00:00'); start is that midnight as an
+  // instant, so it carries an Eastern offset (2025-01-01T05:00:00Z) and would
+  // put every marker five hours off the UTC midnight these rows sit on.
+  //
+  // 'public' leaves out the observances and state-optional days. Dropping
+  // substitutes leaves out the day off that moves when a holiday falls on a
+  // weekend: a 'Christmas Day (substitute day)' marker on the 24th is
+  // administrative rather than an event, and New Year's substitute day sits on
+  // 12-31, under the wrong year.
+  const holidays = new Holidays('US');
   await Promise.all(
-    _.range(2011, 2026).map(async (year) => {
-      const holidays = await fetchJson<any[]>(`${holidayBaseUrl}?action=getPublicHolidaysForYear&year=${year}&country=usa`);
-      await Promise.all(
-        holidays.map((holiday) =>
-          new DateTime({
-            title: holiday.englishName,
-            description: holiday.note,
-            utcStartDateTime: new Date(Date.UTC(holiday.date.year, holiday.date.month - 1, holiday.date.day)),
+    _.range(FIRST_HOLIDAY_YEAR, LAST_HOLIDAY_YEAR + 1).flatMap((year) =>
+      holidays
+        .getHolidays(year)
+        .filter((holiday) => holiday.type === 'public' && !holiday.substitute)
+        .map((holiday) => {
+          const [y, m, d] = holiday.date.slice(0, 10).split('-').map(Number);
+          return new DateTime({
+            title: holiday.name,
+            utcStartDateTime: new Date(Date.UTC(y, m - 1, d)),
             alwaysShow: true,
-          }).save(),
-        ),
-      );
-    }),
+          }).save();
+        }),
+    ),
   );
 
   // Aphelion, solstice, equinox and perihelion markers.

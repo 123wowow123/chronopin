@@ -10,6 +10,14 @@ test('the timeline opens on today and loads earlier pins when scrolled up', asyn
   await expect.poll(async () => page.locator('article').count(), { timeout: 15_000 }).toBeGreaterThan(before);
 });
 
+test('a wide screen swaps the still on a card for the player', async ({ page }) => {
+  // The server cannot know the screen, so every card is written with the
+  // still; a wide one mounts the players once it hydrates.
+  await page.goto('/search?q=category:Anime');
+  await expect(page.locator('article').first()).toBeVisible();
+  await expect(page.locator('iframe[src*="youtube.com"]').first()).toBeAttached({ timeout: 15_000 });
+});
+
 test('a pin card opens its page, and a label searches for its company', async ({ page }) => {
   await page.goto('/search?q=company:Apple');
   const card = page.locator('article').first();

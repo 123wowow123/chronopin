@@ -1,7 +1,9 @@
 import { DEFAULT_TIMELINE_CONFIDENCE, parseTimelineConfidence, type TimelineConfidenceSetting } from '@/lib/timelineConfidence';
+import { DEFAULT_TIMELINE_VIDEO, parseTimelineVideo, type TimelineVideoSetting } from '@/lib/timelineVideo';
 import * as db from '../db';
 
 const TIMELINE_CONFIDENCE = 'timelineConfidence';
+const TIMELINE_VIDEO = 'timelineVideo';
 
 async function read(key: string): Promise<unknown> {
   const rows = await db.query(`SELECT "value" FROM "AppSetting" WHERE "key" = $1`, [key]);
@@ -26,4 +28,14 @@ export async function getTimelineConfidence(): Promise<TimelineConfidenceSetting
 
 export function setTimelineConfidence(setting: TimelineConfidenceSetting, userId: number | null) {
   return write(TIMELINE_CONFIDENCE, setting, userId);
+}
+
+// Whether a timeline card plays video on a phone.
+export async function getTimelineVideo(): Promise<TimelineVideoSetting> {
+  const parsed = parseTimelineVideo(await read(TIMELINE_VIDEO));
+  return 'setting' in parsed ? parsed.setting : DEFAULT_TIMELINE_VIDEO;
+}
+
+export function setTimelineVideo(setting: TimelineVideoSetting, userId: number | null) {
+  return write(TIMELINE_VIDEO, setting, userId);
 }

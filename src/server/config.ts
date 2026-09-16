@@ -58,6 +58,18 @@ export const config = {
     callbackURL: domain + '/auth/google/callback',
   },
 
+  // Sign in with Apple. The client id is a Services ID rather than an app id,
+  // and there is no static secret: the server signs a short-lived one with the
+  // .p8 key downloaded from the developer account (see oauth.ts). APPLE_KEY
+  // holds that file's PEM text, with real or backslash-escaped newlines.
+  apple: {
+    clientID: env('APPLE_ID') || 'id',
+    teamID: env('APPLE_TEAM_ID') || '',
+    keyID: env('APPLE_KEY_ID') || '',
+    privateKey: (env('APPLE_KEY') || '').replace(/\\n/g, '\n'),
+    callbackURL: domain + '/auth/apple/callback',
+  },
+
   azureStorage: {
     connectionString: env('AZURE_STORAGE_CONNECTION_STRING') || '',
   },

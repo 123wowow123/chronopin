@@ -21,6 +21,33 @@ Built with [Next.js](https://nextjs.org) 16 (App Router, Cache Components), Reac
 4. `npm run db:refresh` (schema + seed data), `npm run search:refresh` (search index).
 5. `npm run dev` and open http://localhost:3000.
 
+## Sign-in providers
+
+Email and password, plus Google, Facebook and Apple through the OAuth 2.0
+authorization-code flow in `src/server/oauth.ts`. Each provider has a pair of
+routes under `src/app/auth/<provider>/`, and the callback paths are the ones
+the old Express app used, so the registered apps need no changes.
+
+```sh
+GOOGLE_ID=...         GOOGLE_SECRET=...
+FACEBOOK_ID=...       FACEBOOK_SECRET=...
+APPLE_ID=...          # the Services ID, e.g. com.chronopin.web
+APPLE_TEAM_ID=...     # the 10-character team id
+APPLE_KEY_ID=...      # the key id of the .p8 signing key
+APPLE_KEY=...         # that .p8 file's PEM text (newlines may be escaped)
+```
+
+Apple has no static client secret: the server signs a ten-minute ES256 JWT with
+the `.p8` key on each sign-in. It also refuses `http` and `localhost` redirect
+URLs, so Apple sign-in only works against a real domain or an https tunnel -
+Google and Facebook are the ones to test against `next dev`. Asking Apple for a
+name and an email forces `response_mode=form_post`, so its callback arrives as a
+cross-site POST; the `oauth_state` and `handle` cookies go out
+`SameSite=None; Secure` for Apple alone so they survive it. The name comes only
+in that first POST and never again, so a returning user is just the id_token's
+`sub` and email - a "Hide My Email" relay address, if they chose one, which is
+why Apple accounts are looked up by `appleId` before email.
+
 ## Scripts
 
 | Command | What it does |
@@ -341,22 +368,11 @@ https://nationaldaycalendar.com/march/
   - Show distance
   - https://sandiego.eater.com/2017/12/11/16761732/menya-ultra-ramen-japanese-restaurant-mira-mesa
 
-
-
-
-
 - Filter by like threashold  
-
-
-
-
-
-
 
 - Stacking/grouping of related pins
 
 - Amazon/Ebay product cross referencing
-
 
 - Reminder Aside Menu by date sections
   - Sectional grouping on the bottom
@@ -373,7 +389,6 @@ https://nationaldaycalendar.com/march/
 - Faceted Navigation that slides in one by one from the left in bubble blocks (https://alistapart.com/article/design-patterns-faceted-navigation)(https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-post-filter.html)
 
 
-
 ### Map
 
 - Plot pins on map relative to a specified date time and draw drill map time arrow indicating possible itinerary
@@ -383,27 +398,14 @@ https://nationaldaycalendar.com/march/
   - If flight information is entered or flight booked through site then delays and be tracked and shared
 
 
-
-
-
 ### Web Scraper
 
 - Amazon Price Scrape
 - eBay Price Scrape
 
-
-
-
-
-
 ### Misc
 
-
-
-
-
 - Pin feed needs to include if user have clicked on watch/like per min exclude deleted
-
 
 - General Sentiment Graph for a Company or Product
 
@@ -417,54 +419,20 @@ This is a promotional article about one of the company partners with Interesting
 
 - Activated Google Analytics / Facebook upgrade to non development mode
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - GA: Outbound link / non-interaction events / Social Interactions tracking / User Timings / set clientId on tracker creation
 
-
-
-
-
 - Chinese Lunar Calendar (Nong Li)
-
-
-
-
-
-
-
-
-
-
-
 
 - Add FB privacy policy page
 - https://gist.github.com/muddylemon/2671176
 - https://developers.facebook.com/apps/560731380662615/settings/basic/
 
-
 - facebook comment jumps @ pin page
-
 
 ## Architecture
 - Externalize image processing to AWS Lamda
 - [Use Firebase DB for denormalized push notification of app data] <https://www.youtube.com/watch?v=LAWjdZYrUgI>
 - GeoLite2 City: IP => City / lat:long
-
 
 
 ## Before Usable
@@ -484,17 +452,10 @@ This is a promotional article about one of the company partners with Interesting
 
 - amazon & bestbuy referral links to product should be created if its something purchasable 
 
-
 - provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc. <https://aztro.readthedocs.io/en/latest>
 - Check out upcoming side calendar with astrology horrospoce <https://cafeastrology.com/astrologyof2017horoscopes.html>
 - add holiday and perforated placeholder block for holiday and special events
 
-
 - Add auto nightly scraping job 
 - need job to scrape and update pin, any visit will trigger a scheduled update scape that night, along to new reference
-
-- On mobile do not load video on timeline pin. Add global configuration to toggle this. Turn off by default
-
-
-- add apple signin
 

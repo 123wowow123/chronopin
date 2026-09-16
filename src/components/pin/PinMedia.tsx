@@ -3,12 +3,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import { safeEmbedHtml } from '@/lib/sanitize';
 import type { MediumJson } from '@/lib/types';
 
+// A video this component can play, as opposed to one it can only picture.
+export function isVideo(medium: MediumJson): boolean {
+  return String(medium.type) === '3' && !!medium.html;
+}
+
 // One of a pin's media: its image thumbnail (falling back to the original
-// when the thumb is missing), a tweet, or a YouTube player.
+// when the thumb is missing), a tweet, or a YouTube player. With `poster` a
+// video shows its stored still instead of loading the player.
 export function PinMedia({
   medium,
   title,
@@ -16,6 +23,7 @@ export function PinMedia({
   external,
   priority,
   sizes,
+  poster,
   onMissing,
 }: {
   medium: MediumJson;
@@ -24,6 +32,7 @@ export function PinMedia({
   external?: boolean;
   priority?: boolean;
   sizes: string;
+  poster?: boolean;
   onMissing?: () => void;
 }) {
   const type = String(medium.type);
@@ -35,8 +44,11 @@ export function PinMedia({
   if (type === '2' && medium.html) {
     return <TweetEmbed html={medium.html} />;
   }
-  if (type === '3' && medium.html) {
-    return <YouTubeEmbed html={medium.html} title={title} />;
+  if (isVideo(medium)) {
+    if (poster) {
+      return <VideoPoster medium={medium} title={title} href={href} external={external} priority={priority} sizes={sizes} onMissing={onMissing} />;
+    }
+    return <YouTubeEmbed html={medium.html!} title={title} />;
   }
   if (unrenderable) {
     return null;
@@ -132,6 +144,26 @@ function ImageMedium({
   );
 }
 
+// A video as the still stored with it, under a play badge, so a card can show
+// what the video is without pulling the player in. The still is the only
+// picture a video medium has - its originalUrl is the video - so a video saved
+// without one simply drops out of the frame.
+function VideoPoster({ medium, ...shared }: Omit<Parameters<typeof ImageMedium>[0], 'medium'> & { medium: MediumJson }) {
+  if (!medium.thumbName) {
+    return <ImageMedium {...shared} medium={{ ...medium, originalUrl: undefined }} />;
+  }
+  return (
+    <div className="relative">
+      <ImageMedium {...shared} medium={medium} />
+      <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
+        <span className="flex size-14 items-center justify-center rounded-full bg-black/55 text-white ring-1 ring-white/40">
+          <Icon name="play" className="size-7 translate-x-0.5 fill-current" title="Play on the pin's page" />
+        </span>
+      </span>
+    </div>
+  );
+}
+
 const MEDIUM_LABEL: Record<string, string> = { '1': 'Image', '2': 'Tweet', '3': 'Video' };
 
 // Videos first, then the rest in the order the pin lists them (sort is stable).
@@ -145,9 +177,10 @@ function videosFirst(media: MediumJson[]): MediumJson[] {
 // shows first. Only images take the labels: a video or tweet draws its own
 // title and badges where they would go, so when a rendered medium is not an
 // image the labels render as plain text (the fallback) above instead - for
-// every slide, so switching never adds or removes that row. The frame takes
-// the shown medium's height. Media with nothing to show drop out; when none
-// are left, the fallback renders alone.
+// every slide, so switching never adds or removes that row - except under
+// `poster`, where a video is a picture like any other and takes the labels
+// too. The frame takes the shown medium's height. Media with nothing to show
+// drop out; when none are left, the fallback renders alone.
 export function PinMediaFrame({
   className,
   overlay,
@@ -155,6 +188,7 @@ export function PinMediaFrame({
   media,
   priority,
   selectable,
+  poster,
   ...shared
 }: Omit<Parameters<typeof PinMedia>[0], 'onMissing' | 'medium'> & {
   media: MediumJson[];
@@ -178,7 +212,10 @@ export function PinMediaFrame({
   // first one otherwise.
   const shownSlides = selectable ? slides : slides.slice(0, 1);
   const dots = selectable && slides.length > 1;
-  const labelled = shownSlides.every((slide) => String(slide.medium.type) === '1');
+  // A video showing as its still is a picture: it draws no title or badges of
+  // its own, so the labels belong over it.
+  const playing = (medium: MediumJson) => isVideo(medium) && !poster;
+  const labelled = shownSlides.every((slide) => String(slide.medium.type) === '1' || (!!poster && isVideo(slide.medium)));
 
   const frame = (
     <div className={className}>
@@ -187,15 +224,15 @@ export function PinMediaFrame({
         {shownSlides.map(({ medium, key }, i) => {
           const shown = key === active.key;
           // A hidden player is unmounted so it stops; other hidden media stay mounted.
-          if (!shown && String(medium.type) === '3' && medium.html) {
+          if (!shown && playing(medium)) {
             return null;
           }
           // With dots to reach, a tall image (letterboxed) or tweet (scrolled) is capped
           // so the dots stay above a card's cut-off.
-          const capped = dots && String(medium.type) !== '3';
+          const capped = dots && !playing(medium);
           return (
             <div key={key} hidden={!shown} className={capped ? 'max-h-[26rem] overflow-y-auto [&_img]:max-h-[26rem] [&_img]:object-contain' : undefined}>
-              <MediaSlide medium={medium} mediumKey={key} priority={priority && i === 0} onMissing={markMissing} {...shared} />
+              <MediaSlide medium={medium} mediumKey={key} priority={priority && i === 0} poster={poster} onMissing={markMissing} {...shared} />
             </div>
           );
         })}

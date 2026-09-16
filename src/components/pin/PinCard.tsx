@@ -7,6 +7,7 @@ import { PostedTime, StartTime } from '@/components/ui/LocalTime';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { money } from '@/lib/format';
 import { useSession } from '@/lib/client/session';
+import { useVideoPoster } from '@/lib/client/timelineVideo';
 import { pinPath } from '@/lib/seo';
 import type { CardPin } from '@/lib/types';
 import { pinEvidence } from '@/lib/referenceConfidence';
@@ -32,6 +33,9 @@ const TENSE_CLASS: Record<PinTense, string> = {
 // A pin on the timeline or in search results.
 export function PinCard({ pin, serverTimeZone, priority, tense }: { pin: CardPin; serverTimeZone: string; priority?: boolean; tense?: PinTense }) {
   const { isAdmin } = useSession();
+  // On a phone a card shows a video's still instead of its player, unless an
+  // admin has turned the players back on.
+  const poster = useVideoPoster();
   const href = pinPath(pin);
   const media = pin.media ?? [];
   const hasPlace = pin.latitude != null && pin.longitude != null;
@@ -132,6 +136,7 @@ export function PinCard({ pin, serverTimeZone, priority, tense }: { pin: CardPin
             title={pin.title}
             href={href}
             priority={priority}
+            poster={poster}
             sizes={CARD_SIZES}
           />
         ) : null}

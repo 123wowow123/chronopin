@@ -8,7 +8,7 @@ import { handleValidateReg, mapToUserWhenEmpty } from '../util/mapper';
 const pbkdf2Async = promisify(pbkdf2);
 const randomBytesAsync = promisify(randomBytes);
 
-const authTypes = ['github', 'twitter', 'facebook', 'google'];
+const authTypes = ['github', 'twitter', 'facebook', 'google', 'apple'];
 const PASSWORD_ITERATIONS = 10000;
 const PASSWORD_KEY_LENGTH = 64;
 const SALT_BYTES = 16;
@@ -22,6 +22,7 @@ const prop = [
   'locale',
   'facebookId',
   'googleId',
+  'appleId',
   'pictureUrl',
   'fbUpdatedTime',
   'fbVerified',
@@ -196,6 +197,10 @@ export default class User {
     return getOne('"googleId" = $1', googleId);
   }
 
+  static getByAppleId(appleId: string) {
+    return getOne('"appleId" = $1', appleId);
+  }
+
   static getByEmail(email: string | undefined) {
     return getOne('"email" = $1', email);
   }
@@ -210,7 +215,7 @@ export default class User {
 // next save. Endpoints pick what they send (pickUserProps), so loading more
 // exposes nothing.
 const USER_COLUMNS = [
-  'id', 'userName', 'firstName', 'lastName', 'gender', 'locale', 'facebookId', 'googleId',
+  'id', 'userName', 'firstName', 'lastName', 'gender', 'locale', 'facebookId', 'googleId', 'appleId',
   'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email', 'password',
   'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference',
   'utcCreatedDateTime', 'utcUpdatedDateTime',
@@ -218,7 +223,7 @@ const USER_COLUMNS = [
 
 // The editable columns, in the order create and update bind them.
 const WRITE_COLUMNS = [
-  'userName', 'firstName', 'lastName', 'gender', 'locale', 'facebookId', 'googleId',
+  'userName', 'firstName', 'lastName', 'gender', 'locale', 'facebookId', 'googleId', 'appleId',
   'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email',
   'password', 'provider', 'role', 'salt', 'websiteUrl',
 ];
@@ -344,6 +349,22 @@ export function facebookMapper(inUser: User | undefined, profile: unknown, handl
       gender: 'gender',
       fbUpdatedTime: '_json.updated_time',
       about: 'about',
+    },
+    inUser,
+    profile,
+    handle,
+  );
+}
+
+// Apple shares less than the others: no picture, no locale, and a name only
+// on the very first authorisation.
+export function appleMapper(inUser: User | undefined, profile: unknown, handle?: string) {
+  return mapProfile(
+    {
+      appleId: 'id',
+      firstName: 'name.givenName',
+      lastName: 'name.familyName',
+      email: 'emails[0].value',
     },
     inUser,
     profile,

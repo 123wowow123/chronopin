@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { requireAdminViewer } from '@/server/guard';
-import { getTimelineConfidence } from '@/server/model/appSetting';
+import { getTimelineConfidence, getTimelineVideo } from '@/server/model/appSetting';
 import Pins from '@/server/model/pins';
 import { AdminTabs } from '../AdminTabs';
 import { PinsDashboard } from './PinsDashboard';
+import { TimelineVideoForm } from './TimelineVideoForm';
 
 // Reads the session, so it blocks per request (see ../../layout.tsx).
 export const instant = false;
@@ -12,11 +13,12 @@ export const metadata: Metadata = { title: 'Admin pins' };
 
 export default async function AdminPinsPage() {
   await requireAdminViewer('/admin/pins');
-  const [rows, setting] = await Promise.all([Pins.listConfidence(), getTimelineConfidence()]);
+  const [rows, setting, video] = await Promise.all([Pins.listConfidence(), getTimelineConfidence(), getTimelineVideo()]);
   return (
     <div className="mx-auto max-w-3xl px-4 py-10">
       <AdminTabs current="/admin/pins" />
       <h1 className="mb-6 text-2xl font-semibold tracking-tight">Pins</h1>
+      <TimelineVideoForm saved={video} />
       <PinsDashboard
         rows={rows.map((r) => ({
           category: r.category,

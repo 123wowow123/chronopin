@@ -4,7 +4,7 @@ import { DEFAULT_POSTED_WITHIN, spanFromParam } from '@/lib/postedSpan';
 import { toCardPins } from '@/lib/sanitize';
 import { pinDayKey } from '@/lib/timeline';
 import specialtyDays from '@/server/data/specialtyDays.json';
-import { searchPage } from '@/server/services/pages';
+import { searchPage, timelineVideo } from '@/server/services/pages';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 
 type Props = PageProps<'/search'>;
@@ -41,7 +41,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
     past: spanFromParam(first(params.past), null),
     future: spanFromParam(first(params.future), null),
   };
-  const page = await searchPage(q, user?.id ?? null, onlyWatched && !!user, view);
+  const [page, video] = await Promise.all([searchPage(q, user?.id ?? null, onlyWatched && !!user, view), timelineVideo()]);
 
   const all = specialtyDays as Record<string, string[]>;
   const days: Record<string, string[]> = {};
@@ -67,6 +67,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
         query={q}
         onlyWatched={onlyWatched && !!user}
         initialView={{ sort: view.sort, postedWithin: view.posted, past: view.past, future: view.future }}
+        video={video}
       />
     </>
   );

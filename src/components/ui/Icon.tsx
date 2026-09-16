@@ -154,6 +154,8 @@ const PATHS: Record<string, React.ReactNode> = {
       <path d="M12 12v7a2 2 0 0 1-4 0" />
     </>
   ),
+  // Filled with `fill-current` where it needs to read as a button.
+  play: <path d="M8 5.2v13.6L19 12z" />,
   star: <path d="m12 3 2.7 5.9 6.3.7-4.7 4.4 1.2 6.4L12 17.3 6.5 20.4l1.2-6.4-4.7-4.4 6.3-.7z" />,
   // Arrows pushing out to both ends: widening a range, not zooming a map.
   'expand-x': (
