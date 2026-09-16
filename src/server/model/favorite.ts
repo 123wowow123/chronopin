@@ -44,6 +44,20 @@ export default class Favorite extends PinUserLink {
     const rows = await db.query(`SELECT "id", "userId", "pinId", "utcCreatedDateTime" FROM "Favorite" WHERE "id" = $1`, [id]);
     return { favorite: rows.length ? new Favorite(rows[0]) : undefined };
   }
+
+  // Which of these pins this user watches. Answers the whole of a page at
+  // once, so a page of cards can be cached with no viewer in it.
+  static async watchedAmong(userId: number, pinIds: number[]): Promise<number[]> {
+    if (!pinIds.length) {
+      return [];
+    }
+    const rows = await db.query<{ pinId: number }>(
+      `SELECT "pinId" FROM "Favorite"
+       WHERE "userId" = $1 AND "pinId" = ANY($2::integer[]) AND "utcDeletedDateTime" IS NULL`,
+      [userId, pinIds],
+    );
+    return rows.map((row) => row.pinId);
+  }
 }
 
 // Saving the same user and pin again revives the existing row rather than

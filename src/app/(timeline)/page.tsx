@@ -46,11 +46,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
   const postedWithin = spanFromParam(first(params.posted), defaultPostedWithin);
   const fromDateTime = first(params.from_date_time) || null;
 
-  const page = await timelinePage(
-    user?.id ?? 0,
-    { fromDateTime, lastPinId: Number(first(params.last_pin_id)) || 0 },
-    postedWithin,
-  );
+  const page = await timelinePage({ fromDateTime, lastPinId: Number(first(params.last_pin_id)) || 0 }, postedWithin);
 
   // Only the specialty days this page shows; the rest load when scrolled to.
   const days: Record<string, string[]> = {};

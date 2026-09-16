@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
 import { useSession } from '@/lib/client/session';
+import { setWatched, useWatched } from '@/lib/client/watched';
 import type { PinJson } from '@/lib/types';
 
 // Watch (favourite) a pin. The count comes back from the server, so
@@ -20,9 +21,16 @@ export function WatchButton({
 }) {
   const router = useRouter();
   const { isLoggedIn, status } = useSession();
-  const [watching, setWatching] = useState(!!pin.hasFavorite);
   const [count, setCount] = useState(pin.favoriteCount ?? 0);
   const [busy, setBusy] = useState(false);
+  // What this viewer has been told, or has just done, about watching this
+  // pin; null until either happens.
+  const [chosen, setChosen] = useState<boolean | null>(null);
+  // A card off a cached page arrives with no hasFavorite at all (rather than
+  // a false), and is looked up with the rest of its page in one request.
+  const shared = pin.hasFavorite === undefined && !loadForViewer;
+  const viewerWatches = useWatched(shared ? pin.id : undefined);
+  const watching = chosen ?? viewerWatches ?? !!pin.hasFavorite;
 
   useEffect(() => {
     if (!loadForViewer || !isLoggedIn) return;
@@ -31,7 +39,7 @@ export function WatchButton({
       .get<PinJson>(`/api/pins/${pin.id}`)
       .then((fresh) => {
         if (cancelled) return;
-        setWatching(!!fresh.hasFavorite);
+        setChosen(!!fresh.hasFavorite);
         setCount(fresh.favoriteCount ?? 0);
       })
       .catch(() => {});
@@ -48,15 +56,17 @@ export function WatchButton({
     if (busy) return;
     const next = !watching;
     setBusy(true);
-    setWatching(next);
+    setChosen(next);
     try {
       const updated = next
         ? await api.post<PinJson>(`/api/pins/${pin.id}/favorite`)
         : await api.delete<PinJson>(`/api/pins/${pin.id}/favorite`);
       setCount(updated.favoriteCount ?? 0);
-      setWatching(!!updated.hasFavorite);
+      setChosen(!!updated.hasFavorite);
+      // So the pin's other cards, and its page, agree without asking again.
+      if (pin.id) setWatched(pin.id, !!updated.hasFavorite);
     } catch {
-      setWatching(!next);
+      setChosen(watching);
     } finally {
       setBusy(false);
     }
