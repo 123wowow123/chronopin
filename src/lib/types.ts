@@ -144,6 +144,16 @@ export type TrendingPin = {
   originalUrl?: string | null;
 };
 
+// A recently added pin, for the timeline's new pins panel.
+export type NewPin = {
+  id: number;
+  title: string;
+  userName: string | null;
+  utcCreatedDateTime: string;
+  thumbName?: string | null;
+  originalUrl?: string | null;
+};
+
 export type TimelinePage = {
   pins: PinJson[];
   dateTimes: DateTimeJson[];

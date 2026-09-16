@@ -15,9 +15,10 @@ import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
-import type { CardPin, DateTimeJson, TimelinePage, TrendingPin } from '@/lib/types';
+import type { CardPin, DateTimeJson, NewPin, TimelinePage, TrendingPin } from '@/lib/types';
 import { categoryPillSummary, SearchCategoryFilter } from './CategoryFilter';
 import { FloatingControls } from './FloatingControls';
+import { NewPins } from './NewPins';
 import { TimeBlock, TodayMarker } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
 import { TrendingPins } from './TrendingPins';
@@ -49,6 +50,7 @@ export function Timeline({
   minConfidence,
   video,
   trending,
+  newPins,
 }: {
   initialPins: CardPin[];
   initialDateTimes: DateTimeJson[];
@@ -67,6 +69,8 @@ export function Timeline({
   video: TimelineVideoSetting;
   // The most viewed pins with rising views, beside the cards on wide screens.
   trending: { pins: TrendingPin[]; days: number };
+  // The pins added most recently, under trending on wide screens.
+  newPins: NewPin[];
 }) {
   const timeZone = useTimeZone(serverTimeZone);
   const [pins, setPins] = useState(initialPins);
@@ -249,7 +253,14 @@ export function Timeline({
           summary={spanLabel(postedWithin)}
           onToday={holdToday}
           category={{ summary: categoryPillSummary(), control: <SearchCategoryFilter postedWithin={postedWithin} /> }}
-          aside={<TrendingPins pins={trending.pins} days={trending.days} />}
+          aside={
+            // Needs room for trending's heading and one row (basis-28), or both
+            // panels go. Inside, new pins only shows under the whole of trending.
+            <div className="pointer-events-none flex min-h-0 grow basis-28 flex-col flex-wrap gap-2 overflow-clip [&>*]:pointer-events-auto [&>*]:w-full">
+              <TrendingPins pins={trending.pins} days={trending.days} />
+              <NewPins pins={newPins} now={now} />
+            </div>
+          }
         >
           <TimeRangeSlider
             steps={SPAN_OPTIONS}

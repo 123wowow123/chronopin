@@ -225,6 +225,23 @@ export default class Pins extends BasePins<Pin> {
     );
   }
 
+  // The most recently added live pins, newest first, with their authors'
+  // handles. Pins the timeline hides for confidence (minConfidence, null for
+  // none) are left out here too.
+  static async newest(limit: number, minConfidence: number | null) {
+    return db.query<{ id: number; title: string; userName: string | null; utcCreatedDateTime: Date }>(
+      `
+      SELECT "p"."id", "p"."title", "User"."userName" AS "userName", "p"."utcCreatedDateTime"
+      FROM "Pin" AS "p"
+        LEFT JOIN "User" ON "User"."id" = "p"."userId"
+      WHERE "p"."utcDeletedDateTime" IS NULL
+        AND ($2::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $2) >= $2)
+      ORDER BY "p"."utcCreatedDateTime" DESC, "p"."id" DESC
+      LIMIT $1`,
+      [limit, minConfidence],
+    );
+  }
+
   // Pins per lowercased category across the whole timeline: the same pins
   // its pages walk (live, confident enough, created since the cutoff).
   // Counted on "Pin" rather than the view, which multiplies each pin by its

@@ -8,7 +8,7 @@ import Pins from '../model/pins';
 import PinView from '../model/pinView';
 import { SearchPins } from '../model/searchPin';
 import { compareDuplicateRank } from '@/lib/duplicates';
-import { toJson, type PinJson, type SearchPage, type TimelinePage, type TrendingPin } from '@/lib/types';
+import { toJson, type NewPin, type PinJson, type SearchPage, type TimelinePage, type TrendingPin } from '@/lib/types';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import { TAGS } from './cache';
 import { readSearchRequest, searchCategoryCounts, searchPinsPage, type SearchSort } from './search';
@@ -36,6 +36,17 @@ export async function trendingPins(): Promise<TrendingPin[]> {
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
   return PinView.trending(TRENDING_DAYS, 5, await timelineMinConfidence());
+}
+
+// The pins added most recently. A new pin expires the timeline tag, so this
+// refreshes as pins are added rather than on a timer alone.
+export async function newPins(): Promise<NewPin[]> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  const pins = await Pins.newest(5, await timelineMinConfidence());
+  const pictures = await PinView.pictures(pins.map((p) => p.id));
+  return pins.map((p) => ({ ...p, utcCreatedDateTime: p.utcCreatedDateTime.toISOString(), ...pictures.get(p.id) }));
 }
 
 export type TimelineCursor = { fromDateTime?: string | null; lastPinId?: number };

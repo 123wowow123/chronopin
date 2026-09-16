@@ -23,9 +23,11 @@ export function TrendingPins({ pins, days }: { pins: TrendingPin[]; days: number
         <span className="font-medium text-ink">Trending</span>
         <span className="ml-auto text-xs text-subtle">Last {pluralize('day', days)}</span>
       </h2>
-      <ol className="min-h-0 overflow-y-auto overscroll-contain px-1.5 pb-1.5">
+      {/* Only whole rows, never a scrollbar: a row that does not fit wraps into
+          a second column, which the clipping hides. */}
+      <ol className="flex min-h-0 flex-col flex-wrap overflow-clip pb-1.5">
         {pins.map((pin) => (
-          <li key={pin.id}>
+          <li key={pin.id} className="w-full px-1.5">
             <Link href={pinPath(pin)} prefetch={false} className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-raised">
               <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} className="h-9 w-14" />
               <span className="flex min-w-0 flex-col">

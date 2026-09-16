@@ -52,7 +52,8 @@ export function FloatingControls({
   // Whether that is the posted-within span (so its slider can drop its heading).
   summaryIsPostedWithin?: boolean;
   onToday?: () => void;
-  // Shown under the controls on wide screens only (trending pins): narrower,
+  // Shown under the controls on wide screens only (trending and new pins), in
+  // the height they leave, and dropped when it has no room: narrower,
   // there is no room for it beside the cards.
   aside?: React.ReactNode;
 }) {
@@ -103,7 +104,12 @@ export function FloatingControls({
     <div ref={rootRef}>
       {/* Dims the cards behind an open fold, which would otherwise blend into them. */}
       {open ? <div aria-hidden onClick={() => setOpen(null)} className="fixed inset-0 z-20 touch-none bg-black/50 xl:hidden" /> : null}
-      <div className="fixed right-3 bottom-16 left-3 z-30 flex flex-col items-stretch gap-2 lg:left-auto lg:w-64 xl:top-[68px] xl:right-4 xl:bottom-auto xl:max-h-[calc(100dvh-8.5rem)]">
+      <div
+        className={`fixed right-3 bottom-16 left-3 z-30 flex flex-col items-stretch gap-2 lg:left-auto lg:w-64 xl:top-[68px] xl:right-4 xl:bottom-auto xl:max-h-[calc(100dvh-8.5rem)] ${
+          // The full height, so the panels under the controls can share out what is left.
+          aside ? 'xl:h-[calc(100dvh-8.5rem)]' : ''
+        }`}
+      >
         {sort}
         {category ? (
           <div id="timeline-category" className={`flex flex-col ${open === 'category' ? '' : 'max-xl:hidden'}`}>
@@ -122,8 +128,16 @@ export function FloatingControls({
             {span.control}
           </div>
         ) : null}
-        {/* Takes whatever height the controls leave, scrolling its own list. */}
-        {aside ? <div className="flex min-h-0 flex-col max-xl:hidden">{aside}</div> : null}
+        {/* Takes whatever height the controls leave. Whatever does not fit wraps
+            into a second column, which the clipping hides; the empty first item
+            lets even the first panel wrap away, since a column's first item never
+            wraps. */}
+        {aside ? (
+          <div className="pointer-events-none flex min-h-0 grow flex-col flex-wrap overflow-clip max-xl:hidden [&>*]:w-full">
+            <div aria-hidden className="h-0" />
+            {aside}
+          </div>
+        ) : null}
       </div>
       <div className="fixed right-3 bottom-3 z-30 flex max-w-[calc(100%-1.5rem)] gap-1.5 max-sm:gap-1 lg:right-4 lg:gap-2 lg:bottom-4">
         {category ? <FoldPill fold="category" open={open} onToggle={toggle} icon="tag" iconClass="text-link" caption="Category" label={category.summary} /> : null}
