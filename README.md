@@ -488,3 +488,7 @@ This is a promotional article about one of the company partners with Interesting
 - watched view and should have different groups 
 
 - youtube summary should be generaed with reference to text transcript
+
+- find speed up improvements
+
+- scrape anime for studio and location
