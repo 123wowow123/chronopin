@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Suspense } from 'react';
 import { SearchResults } from '@/components/timeline/SearchResults';
 import { DEFAULT_POSTED_WITHIN, spanFromParam } from '@/lib/postedSpan';
 import { toCardPins } from '@/lib/sanitize';
@@ -25,9 +24,7 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
 export default function SearchPage({ searchParams }: Props) {
   return (
     <main>
-      <Suspense fallback={<p className="mt-16 text-center text-lg text-subtle">Searching…</p>}>
-        <Results searchParams={searchParams} />
-      </Suspense>
+      <Results searchParams={searchParams} />
     </main>
   );
 }

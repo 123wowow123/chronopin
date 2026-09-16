@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useEffect, useId, useRef, useState } from 'react';
+import { useEffect, useId, useOptimistic, useRef, useState, useTransition } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
 import { categoryOptions, canonicalCategory } from '@/lib/categories';
@@ -28,6 +28,7 @@ export function CategoryFilter({
   onToggle,
   onClear,
   counts = null,
+  busy = false,
   onOpenChange,
   className = '',
 }: {
@@ -35,6 +36,8 @@ export function CategoryFilter({
   onToggle: (category: string) => void;
   onClear: () => void;
   counts?: Record<string, number> | null;
+  // Whether a pick is still being searched for, so the pills read as working.
+  busy?: boolean;
   onOpenChange?: (open: boolean) => void;
   className?: string;
 }) {
@@ -121,6 +124,7 @@ export function CategoryFilter({
           id={optionsId}
           role="group"
           aria-label="Filter by category"
+          aria-busy={busy || undefined}
           className={`flex max-h-[min(22rem,50dvh)] flex-wrap gap-1.5 overflow-y-auto overscroll-contain px-3 pb-3 max-lg:gap-2 ${inFold ? 'max-xl:max-h-[calc(100dvh-7.5rem)] max-xl:pt-3' : ''} ${open ? '' : 'xl:hidden'}`}
         >
           {options.map(({ name: category, count }) => {
@@ -165,6 +169,12 @@ function selectedCategories(query?: string) {
   return [...new Set(parseSearchQuery(query).categories.map(canonicalCategory))];
 }
 
+// What a click on a pill leaves picked, for showing before the search is in.
+function afterToggle(selected: string[], category: string) {
+  const same = (name: string) => name.toLowerCase() === category.toLowerCase();
+  return selected.some(same) ? selected.filter((name) => !same(name)) : [...selected, canonicalCategory(category)];
+}
+
 // The value on the floating controls' category pill (under "Category").
 export function categoryPillSummary(query?: string) {
   return categorySummary(selectedCategories(query)) || 'All';
@@ -189,9 +199,15 @@ export function SearchCategoryFilter({
   className?: string;
 }) {
   const router = useRouter();
-  const selected = selectedCategories(query);
   const [open, setOpen] = useState(false);
   const [counts, setCounts] = useState<Record<string, number> | null>(() => rememberedCounts);
+  // The timeline and the results share a loading boundary, so a pick leaves
+  // the page it was made on up until the results are ready. That is the point
+  // - no blink - but it also means the query behind these pills is a moment
+  // behind the click, so what was picked shows straight away and the panel
+  // says it is working.
+  const [searching, startSearch] = useTransition();
+  const [selected, setSelected] = useOptimistic(selectedCategories(query));
 
   const params = new URLSearchParams();
   if (query != null) params.set('q', query);
@@ -216,23 +232,27 @@ export function SearchCategoryFilter({
     };
   }, [open, countsUrl]);
 
-  function go(edit: (q: string) => string) {
+  function go(edit: (q: string) => string, picked: string[]) {
     const params = new URLSearchParams(window.location.pathname === '/search' ? window.location.search : '');
     const q = edit(params.get('q') || '');
     if (q) params.set('q', q);
     else params.delete('q');
-    // Nothing left to search for or filter by: that's the timeline.
-    router.push(params.size ? `/search?${params.toString()}` : '/');
+    startSearch(() => {
+      setSelected(picked);
+      // Nothing left to search for or filter by: that's the timeline.
+      router.push(params.size ? `/search?${params.toString()}` : '/');
+    });
   }
 
   return (
     <CategoryFilter
       selected={selected}
       counts={counts}
+      busy={searching}
       onOpenChange={setOpen}
       className={className}
-      onToggle={(category) => go((q) => toggleTerm(q, 'category', category))}
-      onClear={() => go((q) => selected.reduce((rest, category) => removeTerm(rest, 'category', category), q))}
+      onToggle={(category) => go((q) => toggleTerm(q, 'category', category), afterToggle(selected, category))}
+      onClear={() => go((q) => selected.reduce((rest, category) => removeTerm(rest, 'category', category), q), [])}
     />
   );
 }

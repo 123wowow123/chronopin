@@ -46,6 +46,33 @@ test('search results page in as they are scrolled, by date and by relevance', as
   expect(new Set(hrefs).size).toBe(hrefs.length);
 });
 
+// The timeline and the results share one loading boundary, so a pick keeps the
+// pins it was made over on screen until the search is in.
+test('picking a category searches without blanking the page', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('article').first()).toBeVisible();
+  await page.getByRole('button', { name: /^Category:/ }).click();
+  const pills = page.getByRole('group', { name: 'Filter by category' }).getByRole('button');
+  await expect(pills.first()).toBeVisible();
+
+  // Every frame from the click to the results: a page of its own for the
+  // search would put an empty one between them for as long as it took.
+  await page.evaluate(() => {
+    const counter = Object.assign(window, { blankFrames: 0 });
+    const tick = () => {
+      const card = document.querySelector('article');
+      if (!card || !card.getClientRects().length) counter.blankFrames += 1;
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  });
+
+  await pills.first().click();
+  await expect(page).toHaveURL(/\/search\?q=category/);
+  await expect(pills.first()).toBeVisible();
+  expect(await page.evaluate(() => (window as unknown as { blankFrames: number }).blankFrames)).toBe(0);
+});
+
 test('the map plots pins', async ({ page }) => {
   await page.goto('/map');
   await expect(page.locator('.leaflet-marker-icon').first()).toBeVisible({ timeout: 20_000 });

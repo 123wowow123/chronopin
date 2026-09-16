@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Suspense } from 'react';
 import { JsonLd } from '@/components/JsonLd';
 import { Timeline } from '@/components/timeline/Timeline';
 import { siteName } from '@/lib/appConfig';
@@ -34,9 +33,7 @@ export default function HomePage({ searchParams }: Props) {
     <main>
       <h1 className="sr-only">{siteName}: upcoming release dates, events and other important dates</h1>
       <JsonLd data={websiteJsonLd()} />
-      <Suspense fallback={<TimelineSkeleton />}>
-        <HomeTimeline searchParams={searchParams} />
-      </Suspense>
+      <HomeTimeline searchParams={searchParams} />
     </main>
   );
 }
@@ -99,15 +96,5 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
         ) : null}
       </nav>
     </>
-  );
-}
-
-function TimelineSkeleton() {
-  return (
-    <div className="px-3 pt-6 lg:pl-[190px]" aria-busy="true" aria-label="Loading timeline">
-      {[0, 1, 2].map((i) => (
-        <div key={i} className="mb-3 h-72 max-w-[448px] animate-pulse rounded-xl border border-line bg-panel" />
-      ))}
-    </div>
   );
 }
