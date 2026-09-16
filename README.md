@@ -459,3 +459,55 @@ This is a promotional article about one of the company partners with Interesting
 - Add auto nightly scraping job 
 - need job to scrape and update pin, any visit will trigger a scheduled update scape that night, along to new reference
 
+## Reminder: MyAnimeList top-anime scrape (in progress, resume later)
+
+Asked 2026-09-15: scrape everything in `myanimelist.net/topanime.php` across
+all its top-section tabs (All Anime, Top Airing, Top Upcoming, Top TV
+Series, Top Movies, Top OVAs, Top ONAs, Top Specials, Most Popular, Most
+Favorited) into Anime pins, full hand-researched write-ups.
+
+**Status as of this note:** 637 Anime pins exist (39 pre-existing +
+598 added across 6 batches of ~100). Source pool was the top 100 of each
+of the 10 tabs, deduped by MAL id -> 753 unique anime total, prioritized by
+(most tabs it appears in, then MAL score, then best rank). **~115 net-new
+titles from that original 753 are still unpinned.**
+
+The working files (deduped title lists, per-round batch splits, the
+per-batch research/insert instructions doc) lived in this session's
+scratchpad directory and will **not** exist for a future session - don't
+go looking for them. To resume:
+
+1. Re-pull the top 100 of each tab, e.g. `curl -A "<browser UA>"
+   "https://myanimelist.net/topanime.php?limit=<0|50>[&type=<airing|
+   upcoming|tv|movie|ova|ona|special|bypopularity|favorite>]"` (10 tabs x
+   2 pages), or via Jikan's `/v4/top/anime` (same tabs via `filter=`/
+   `type=` params) if it's not having one of its flaky days.
+2. Parse `<tr class="ranking-list">` rows for mal_id/title/url/rank/score,
+   dedupe by mal_id, drop anything whose MAL id already appears in
+   `scripts/backup/seedPins.json`'s `sourceUrl` (`myanimelist.net/anime/
+   <id>/...`) - that's the current 637.
+3. Rank what's left the same way (cross-tab count desc, score desc, rank
+   asc) and take the next ~100.
+4. Same pipeline as before, in batches of 10 anime per parallel subagent:
+   research each via AniList GraphQL (`graphql.anilist.co`, batch all 10
+   of a batch's lookups into one aliased request - a single bad `mal_id`
+   nulls the whole response, so binary-search it out and retry the rest),
+   Jikan as a secondary source (it was down more often than not this
+   session), Wikidata -> Wikipedia for legacy/reception facts, WebSearch
+   only as a last resort (its ~200-call quota is shared across every
+   agent running at once). Write original prose, never copy a synopsis
+   verbatim. Insert via the app's own model classes (`new Pin(...).save()`,
+   `new Medium({originalUrl}, pin).createAndSaveToCDN()`,
+   `new PinReference(...).save()`) in a one-off `tsx` script per batch,
+   category `Anime`, `userId: 101` (the `@AnimeDesk` curator), no
+   address/lat/lng. Delete the one-off script after running it.
+5. Before creating a new `Company` row, check `scripts/backup/
+   seedCompanies.json` for a close but differently-cased/spaced existing
+   variant (e.g. "Bones" vs "bones", "P.A. Works" vs "P.A.WORKS",
+   "TRIGGER" vs "Studio Trigger") and reuse the existing spelling - this
+   created several duplicate rows that had to be merged by hand
+   (`UPDATE "Pin" SET "companyId" = <keep> WHERE "companyId" = <dupe>`,
+   then delete the dupe row) across the first 6 rounds.
+6. After each ~100-pin round: `npm run media:screen -- --apply --ids=<the
+   new pin ids>` (trailer + rating backfill), then `npm run backup:data`.
+
