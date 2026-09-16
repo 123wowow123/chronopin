@@ -469,26 +469,32 @@ This is a promotional article about one of the company partners with Interesting
 
 ## Before Usable
 
+- add e2e tests
 
 - Favorite needs to be grouped in folders and make public/private and shareable
 
 - Pinner should be able to add tags/groups to organize their pin
 
-- Add auto nightly scraping job 
-
-- add holiday and perforated placeholder block for holiday and special events
-
 - Add product Accessory section feature listing below detailed pin
-
-- provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc. <https://aztro.readthedocs.io/en/latest>
-- Check out upcoming side calendar with astrology horrospoce <https://cafeastrology.com/astrologyof2017horoscopes.html>
-
-- need job to scrape and update pin, any visit will trigger a scheduled update scape that night, along to new reference
 
 - watched view and should have different groups 
 
 - youtube summary should be generaed with reference to text transcript
+- scrape anime, movie, tv show, etc for studio and location
 
-- find speed up improvements
+- amazon & bestbuy referral links to product should be created if its something purchasable 
 
-- scrape anime for studio and location
+
+- provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc. <https://aztro.readthedocs.io/en/latest>
+- Check out upcoming side calendar with astrology horrospoce <https://cafeastrology.com/astrologyof2017horoscopes.html>
+- add holiday and perforated placeholder block for holiday and special events
+
+
+- Add auto nightly scraping job 
+- need job to scrape and update pin, any visit will trigger a scheduled update scape that night, along to new reference
+
+- On mobile do not load video on timeline pin. Add global configuration to toggle this. Turn off by default
+
+
+- add apple signin
+
