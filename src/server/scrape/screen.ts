@@ -22,7 +22,7 @@ import { mediumID, siteUrl } from '@/lib/appConfig';
 import type { MediumJson, PinRatingJson } from '@/lib/types';
 import log from '../util/log';
 
-export const SCREEN_CATEGORIES = ['Anime', 'Movies', 'TV Series'];
+export const SCREEN_CATEGORIES = ['Anime', 'Anime Movie', 'Movies', 'TV Series'];
 
 export function isScreenCategory(category: string | null | undefined): boolean {
   return !!category && SCREEN_CATEGORIES.some((c) => c.toLowerCase() === category.toLowerCase());
