@@ -25,6 +25,27 @@ import { TrendingPins } from './TrendingPins';
 
 type Links = { previous?: string; next?: string };
 
+// How many pins the new pins panel keeps, matching the LIMIT newPins() in
+// src/server/services/pages.ts asks for.
+const NEW_PINS_LIMIT = 5;
+
+// The medium a broadcast pin shows in the new pins panel: a video's still
+// first, else the earliest-attached medium (mirrors PinView.pictures' SQL
+// and the same choice made client-side in PinsMap.tsx's popupContent).
+function toNewPin(pin: CardPin): NewPin {
+  const medium = pin.media?.find((m) => String(m.type) === '3') ?? pin.media?.[0];
+  return {
+    id: pin.id,
+    title: pin.title,
+    userName: pin.user?.userName ?? null,
+    // A just-saved broadcast carries no utcCreatedDateTime (PinCard.tsx
+    // guards the same gap); it was created now, so that is the best answer.
+    utcCreatedDateTime: pin.utcCreatedDateTime ?? new Date().toISOString(),
+    thumbName: medium?.thumbName,
+    originalUrl: medium && String(medium.type) === '1' ? medium.originalUrl : undefined,
+  };
+}
+
 async function fetchPage(query: string): Promise<{ page: TimelinePage; links: Links }> {
   const res = await fetch(`/api/main${query}`, { credentials: 'same-origin' });
   if (!res.ok) {
@@ -50,7 +71,7 @@ export function Timeline({
   minConfidence,
   video,
   trending,
-  newPins,
+  newPins: initialNewPins,
 }: {
   initialPins: CardPin[];
   initialDateTimes: DateTimeJson[];
@@ -69,11 +90,14 @@ export function Timeline({
   video: TimelineVideoSetting;
   // The most viewed pins with rising views, beside the cards on wide screens.
   trending: { pins: TrendingPin[]; days: number };
-  // The pins added most recently, under trending on wide screens.
+  // The pins added most recently, under trending on wide screens. Kept live
+  // from the same SSE stream as the timeline itself, so a new pin appears
+  // here without a reload or any polling of its own.
   newPins: NewPin[];
 }) {
   const timeZone = useTimeZone(serverTimeZone);
   const [pins, setPins] = useState(initialPins);
+  const [newPins, setNewPins] = useState(initialNewPins);
   const [dateTimes, setDateTimes] = useState(initialDateTimes);
   const [links, setLinks] = useState(initialLinks);
   const [postedWithin, setPostedWithin] = useState(initialPostedWithin);
@@ -152,8 +176,10 @@ export function Timeline({
       // A pin edited below the timeline's confidence bar leaves it, as it
       // would on reload; a new one below the bar never joins.
       const confidence = pinConfidence(pinEvidence(changed));
-      if (event.type === 'pin:remove' || (minConfidence !== null && confidence !== undefined && confidence < minConfidence)) {
+      const belowBar = minConfidence !== null && confidence !== undefined && confidence < minConfidence;
+      if (event.type === 'pin:remove' || belowBar) {
         setPins((list) => list.filter((p) => p.id !== changed.id));
+        setNewPins((list) => list.filter((p) => p.id !== changed.id));
         return;
       }
       setPins((list) => {
@@ -168,6 +194,18 @@ export function Timeline({
         const times = list.map((p) => new Date(p.utcStartDateTime).getTime());
         const at = new Date(changed.utcStartDateTime).getTime();
         return at >= Math.min(...times) && at <= Math.max(...times) ? [...list, withHtml] : list;
+      });
+      setNewPins((list) => {
+        const index = list.findIndex((p) => p.id === changed.id);
+        if (index === -1) {
+          return event.type === 'pin:save' ? [toNewPin(withHtml), ...list].slice(0, NEW_PINS_LIMIT) : list;
+        }
+        if (event.type !== 'pin:update') return list;
+        // An edit's broadcast is the form's pin: no author, and possibly no
+        // created time, so those stay as the panel had them.
+        const next = [...list];
+        next[index] = { ...toNewPin(withHtml), userName: list[index].userName, utcCreatedDateTime: list[index].utcCreatedDateTime };
+        return next;
       });
     };
     for (const type of ['pin:save', 'pin:update', 'pin:remove', 'pin:favorite', 'pin:unfavorite', 'pin:like', 'pin:unlike']) {

@@ -34,7 +34,9 @@ export function NewPins({ pins, now }: { pins: NewPin[]; now: number }) {
                 </span>
                 <span className="flex min-w-0 items-center gap-1.5 text-xs text-subtle">
                   <time dateTime={pin.utcCreatedDateTime} className="shrink-0">
-                    {timeAgo(pin.utcCreatedDateTime, now)}
+                    {/* now ticks each minute, so a pin pushed in since the last
+                        tick would otherwise read "in 3 seconds". */}
+                    {timeAgo(pin.utcCreatedDateTime, Math.max(now, Date.parse(pin.utcCreatedDateTime)))}
                   </time>
                   {pin.userName ? <span className="truncate">· {pin.userName}</span> : null}
                 </span>
