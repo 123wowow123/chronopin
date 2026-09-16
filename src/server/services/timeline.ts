@@ -2,7 +2,6 @@
 // cursor, with the date markers (holidays, solstices...) that fall inside
 // each page. Used by GET /api/pins, GET /api/main and the home page.
 
-import { subDays } from 'date-fns';
 import config from '../config';
 import DateTime from '../model/dateTime';
 import { getTimelineConfidence } from '../model/appSetting';
@@ -47,9 +46,15 @@ export async function getPins({ userId, fromDateTime, lastPinId, onlyFavorites, 
       : Pins.queryForwardByDate(fromDateTime, userId, last, pageSize, createdSince, min);
   }
 
-  // Walking backward starts a day before the cursor, as it always has.
+  // Backward from the cursor pin itself. This used to start a day before it,
+  // which the pre-Next.js server did too - but the cursor has always carried
+  // the pin's id alongside its start, and (start, id) < (cursor, lastPinId)
+  // already excludes the cursor pin without excluding anything else. The day
+  // it stepped back over was simply dropped: 62 of 1548 pins could not be
+  // reached by scrolling at all, 52 of them on the one day the first page
+  // happened to end in.
   const last = lastPinId || MAX_PIN_ID;
-  const from = subDays(new Date(fromDateTime.slice(1)), 1);
+  const from = new Date(fromDateTime.slice(1));
   return onlyFavorites
     ? Pins.queryBackwardByDateFilterByHasFavorite(from, userId, last, pageSize, createdSince)
     : Pins.queryBackwardByDate(from, userId, last, pageSize, createdSince, min);
