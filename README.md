@@ -459,6 +459,10 @@ This is a promotional article about one of the company partners with Interesting
 - Add auto nightly scraping job 
 - need job to scrape and update pin, any visit will trigger a scheduled update scape that night, along to new reference
 
+
+
+
+
 ## Reminder: MyAnimeList top-anime scrape (in progress, resume later)
 
 Asked 2026-09-15: scrape everything in `myanimelist.net/topanime.php` across
