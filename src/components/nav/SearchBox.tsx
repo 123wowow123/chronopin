@@ -167,8 +167,18 @@ export function SearchBox() {
     return () => document.removeEventListener('mousedown', close);
   }, []);
 
-  function submit(q: string, filter = choice) {
+  // Closes the suggestions and drops any still coming: a pause not yet over, or
+  // an answer on its way, would otherwise open them again over the results.
+  function closeSuggestions() {
+    clearTimeout(suggestTimer.current);
+    requestId.current++;
+    setSuggestions([]);
+    setActive(-1);
     setOpen(false);
+  }
+
+  function submit(q: string, filter = choice) {
+    closeSuggestions();
     // Nothing to search for and nothing to filter by: that's the timeline (or
     // the whole map).
     if (!q.trim() && !filter) {
@@ -218,8 +228,7 @@ export function SearchBox() {
     setEditAt(Math.min(target, all.length));
     setDraft(text);
     setEditing(false);
-    setSuggestions([]);
-    setOpen(false);
+    closeSuggestions();
     pendingCaret.current = caret;
   }
 
@@ -233,8 +242,7 @@ export function SearchBox() {
     setEditAt(target);
     setDraft(raw);
     setEditing(true);
-    setSuggestions([]);
-    setOpen(false);
+    closeSuggestions();
     pendingCaret.current = raw.length;
   }
 
@@ -242,7 +250,6 @@ export function SearchBox() {
     const rest = items.filter((_, i) => i !== index);
     setItems(rest);
     if (index < editAt) setEditAt(editAt - 1);
-    setSuggestions([]);
     submit(joinSearchQuery(committed(draft, rest, index < editAt ? editAt - 1 : editAt)));
   }
 
@@ -383,7 +390,7 @@ export function SearchBox() {
               setEditAt(0);
               setDraft('');
               setEditing(false);
-              setSuggestions([]);
+              closeSuggestions();
               router.push(onMap ? '/map' : '/');
             }}
           >

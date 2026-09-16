@@ -81,6 +81,26 @@ test('picking a category searches without blanking the page', async ({ page }) =
   expect(await page.evaluate(() => (window as unknown as { blankFrames: number }).blankFrames)).toBe(0);
 });
 
+// Enter can land while suggestions are still being asked for; their answer
+// must not open the list again over the results.
+test('searching with Enter closes the suggestions for good', async ({ page }) => {
+  await page.goto('/');
+  const box = page.getByRole('combobox');
+  await box.fill('apple');
+  await box.press('Enter');
+  await expect(page).toHaveURL(/\/search\?q=apple/);
+  // Long enough for the pause and the answer it was waiting on.
+  await page.waitForTimeout(1_000);
+  await expect(page.getByRole('listbox')).toBeHidden();
+
+  // And with the list already open.
+  await box.click();
+  await box.fill('apple');
+  await expect(page.getByRole('listbox')).toBeVisible();
+  await box.press('Enter');
+  await expect(page.getByRole('listbox')).toBeHidden();
+});
+
 test('the map plots pins', async ({ page }) => {
   await page.goto('/map');
   await expect(page.locator('.leaflet-marker-icon').first()).toBeVisible({ timeout: 20_000 });

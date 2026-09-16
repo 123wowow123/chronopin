@@ -30,7 +30,7 @@ function SortToggle({ value, onChange, className = '' }: { value: SortBy; onChan
   return (
     <div role="group" aria-label="Sort results by" className={`flex items-center gap-1 p-1.5 text-sm ${className}`}>
       <span className="px-2 text-subtle">Sort by</span>
-      {(['date', 'relevance'] as const).map((option) => (
+      {(['relevance', 'date'] as const).map((option) => (
         <button
           key={option}
           type="button"
@@ -77,6 +77,7 @@ export function SearchResults({
   query = '',
   onlyWatched = false,
   initialView = {},
+  defaultSort = 'date',
   video,
 }: {
   // The first page, for the sort the URL asked for.
@@ -90,6 +91,10 @@ export function SearchResults({
   onlyWatched?: boolean;
   // The sort and filters as the URL had them.
   initialView?: { sort?: SortBy; postedWithin?: string | null; past?: string | null; future?: string | null };
+  // The sort this search opens in without being asked: relevance for a search
+  // with text in it, date for one that only filters. Only the other one is
+  // written to the URL.
+  defaultSort?: SortBy;
   // Whether a card here loads its video player on a phone (the admin setting).
   video: TimelineVideoSetting;
 }) {
@@ -105,7 +110,7 @@ export function SearchResults({
   const [specialtyDays, setSpecialtyDays] = useState(initialSpecialtyDays);
 
   useQueryState({
-    sort: sortBy === 'relevance' ? 'relevance' : null,
+    sort: sortBy === defaultSort ? null : sortBy,
     posted: spanToParam(postedWithin, DEFAULT_POSTED_WITHIN),
     past: spanToParam(startSpan.past, null),
     future: spanToParam(startSpan.future, null),

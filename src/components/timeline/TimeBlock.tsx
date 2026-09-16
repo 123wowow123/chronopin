@@ -79,9 +79,9 @@ export function TimeBlock({
       </div>
 
       {bag.pins.length ? (
-        <ul className="gap-2.5 sm:columns-2 sm:[column-fill:auto] lg:ml-[170px] lg:min-h-(--tags-h) lg:max-w-[906px]" style={{ ['--tags-h' as string]: `${tagsHeight}px` }}>
+        <PinColumns tagsHeight={tagsHeight}>
           {stackDuplicates(bag.pins).map(({ pin, hidden }, i) => (
-            <li key={pin.id} id={`pin-${pin.id}`} className="mb-2.5 break-inside-avoid">
+            <div key={pin.id} id={`pin-${pin.id}`} role="listitem" className="mb-2.5" style={{ order: i }}>
               {hidden.length ? (
                 <DuplicateStack pin={pin} hiddenCount={hidden.length}>
                   <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={firstPinPriority && i === 0} />
@@ -89,9 +89,9 @@ export function TimeBlock({
               ) : (
                 <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={firstPinPriority && i === 0} />
               )}
-            </li>
+            </div>
           ))}
-        </ul>
+        </PinColumns>
       ) : (
         // lg:pt-7 lines the first title up with the date tag and rail marker
         // (tags start 26px down; a 24px line centred on the 28px-tall tag).
@@ -110,6 +110,22 @@ export function TimeBlock({
         </ul>
       )}
     </section>
+  );
+}
+
+// The day's cards fill across before down: from sm up they alternate between
+// two columns (1 left, 2 right, 3 left...), each column stacking its own cards
+// without gaps. On phones the columns dissolve (display: contents) into one
+// list, and each card's `order` puts it back in date order.
+function PinColumns({ tagsHeight, children }: { tagsHeight: number; children: React.ReactElement[] }) {
+  const column = (parity: number) => (
+    <div className="contents sm:flex sm:min-w-0 sm:flex-1 sm:flex-col">{children.filter((_, i) => i % 2 === parity)}</div>
+  );
+  return (
+    <div role="list" className="flex flex-col sm:flex-row sm:gap-2.5 lg:ml-[170px] lg:min-h-(--tags-h) lg:max-w-[906px]" style={{ ['--tags-h' as string]: `${tagsHeight}px` }}>
+      {column(0)}
+      {column(1)}
+    </div>
   );
 }
 

@@ -5,6 +5,7 @@ import { toCardPins } from '@/lib/sanitize';
 import { pinDayKey } from '@/lib/timeline';
 import specialtyDays from '@/server/data/specialtyDays.json';
 import { searchPage, timelineVideo } from '@/server/services/pages';
+import { parseSearchQuery } from '@/server/util/searchQuery';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 
 type Props = PageProps<'/search'>;
@@ -34,9 +35,13 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
   const q = first(params.q);
   const onlyWatched = first(params.f).toLowerCase() === 'watch';
   const [user, timeZone] = await Promise.all([viewerUser(), viewerTimeZone()]);
-  // Only a search with something typed has an order of relevance.
+  // Only text typed into the search has an order of relevance, and when it is
+  // there that order leads: the best matches first, the timeline a click away.
+  // A filter-only search (category:, user:) has no scores, so it opens by date.
+  const defaultSort = parseSearchQuery(q).text ? ('relevance' as const) : ('date' as const);
+  const asked = first(params.sort);
   const view = {
-    sort: q.trim() && first(params.sort) === 'relevance' ? ('relevance' as const) : ('date' as const),
+    sort: q.trim() && (asked === 'relevance' || (asked !== 'date' && defaultSort === 'relevance')) ? ('relevance' as const) : ('date' as const),
     posted: spanFromParam(first(params.posted), DEFAULT_POSTED_WITHIN),
     past: spanFromParam(first(params.past), null),
     future: spanFromParam(first(params.future), null),
@@ -67,6 +72,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
         query={q}
         onlyWatched={onlyWatched && !!user}
         initialView={{ sort: view.sort, postedWithin: view.posted, past: view.past, future: view.future }}
+        defaultSort={defaultSort}
         video={video}
       />
     </>
