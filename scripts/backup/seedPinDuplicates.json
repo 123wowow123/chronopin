@@ -7,7 +7,10 @@
     "status": "suggested",
     "decidedByUserId": null,
     "utcCreatedDateTime": "2026-09-15T19:24:15.128Z",
-    "utcDecidedDateTime": null
+    "utcDecidedDateTime": null,
+    "verdict": "same",
+    "verdictReasoning": "Both cite the Prime Minister's release that Western Sydney International Airport opens to passengers on 25 October 2026, the opening both pins mark.",
+    "utcVerifiedDateTime": "2026-09-16T18:48:54.263Z"
   },
   {
     "pinId": 246,
@@ -17,7 +20,10 @@
     "status": "suggested",
     "decidedByUserId": null,
     "utcCreatedDateTime": "2026-09-15T19:24:15.344Z",
-    "utcDecidedDateTime": null
+    "utcDecidedDateTime": null,
+    "verdict": "same",
+    "verdictReasoning": "No shared links, but both describe NASA's controlled deorbit of the ISS at the end of its operations in 2030, backed by NASA's own deorbit plans, a day apart only by how the date was estimated.",
+    "utcVerifiedDateTime": "2026-09-16T18:48:54.265Z"
   },
   {
     "pinId": 251,
@@ -27,7 +33,10 @@
     "status": "suggested",
     "decidedByUserId": null,
     "utcCreatedDateTime": "2026-09-15T19:24:15.380Z",
-    "utcDecidedDateTime": null
+    "utcDecidedDateTime": null,
+    "verdict": "unsure",
+    "verdictReasoning": "Both are dated to the Games' 14 July 2028 opening, but 451 is about LA28's no-car transit plan (its reference is LA28's transportation page) rather than the opening itself, and the only shared link is the general Wikipedia article on the Games.",
+    "utcVerifiedDateTime": "2026-09-16T18:48:54.266Z"
   },
   {
     "pinId": 279,
@@ -37,7 +46,10 @@
     "status": "suggested",
     "decidedByUserId": null,
     "utcCreatedDateTime": "2026-09-15T19:24:15.639Z",
-    "utcDecidedDateTime": null
+    "utcDecidedDateTime": null,
+    "verdict": "same",
+    "verdictReasoning": "Both cite Webuild's press release on the dam's 9 September 2025 inauguration, which is the one event both pins describe.",
+    "utcVerifiedDateTime": "2026-09-16T18:48:54.262Z"
   },
   {
     "pinId": 310,
@@ -47,7 +59,10 @@
     "status": "suggested",
     "decidedByUserId": null,
     "utcCreatedDateTime": "2026-09-15T19:24:15.785Z",
-    "utcDecidedDateTime": null
+    "utcDecidedDateTime": null,
+    "verdict": "different",
+    "verdictReasoning": "The only shared link is Apple's store page, which lists both models; one pin is the iPhone 18 Pro and the other the Pro Max, which Apple sells as separate models.",
+    "utcVerifiedDateTime": "2026-09-16T18:48:54.267Z"
   },
   {
     "pinId": 665,
@@ -57,6 +72,9 @@
     "status": "suggested",
     "decidedByUserId": null,
     "utcCreatedDateTime": "2026-09-15T19:24:18.192Z",
-    "utcDecidedDateTime": null
+    "utcDecidedDateTime": null,
+    "verdict": "same",
+    "verdictReasoning": "Both pins mark Deep Dive Dubai's July 2021 opening, and both cite its Wikipedia article alongside news coverage of that opening (Rappler, CNBC).",
+    "utcVerifiedDateTime": "2026-09-16T18:48:54.255Z"
   }
 ]

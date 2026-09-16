@@ -460,8 +460,6 @@ This is a promotional article about one of the company partners with Interesting
 - need job to scrape and update pin, any visit will trigger a scheduled update scape that night, along to new reference
 
 
-- use left side panel slider for mobile mode like twitter
-
 
 ## Reminder: MyAnimeList top-anime scrape (in progress, resume later)
 
@@ -470,11 +468,21 @@ all its top-section tabs (All Anime, Top Airing, Top Upcoming, Top TV
 Series, Top Movies, Top OVAs, Top ONAs, Top Specials, Most Popular, Most
 Favorited) into Anime pins, full hand-researched write-ups.
 
-**Status as of this note:** 637 Anime pins exist (39 pre-existing +
-598 added across 6 batches of ~100). Source pool was the top 100 of each
-of the 10 tabs, deduped by MAL id -> 753 unique anime total, prioritized by
-(most tabs it appears in, then MAL score, then best rank). **~115 net-new
-titles from that original 753 are still unpinned.**
+**Status as of this note (2026-09-16):** 667 Anime pins exist (39
+pre-existing + 598 added across 6 earlier batches of ~100 + 30 added in a
+7th, smaller round to bring the leftover count down to exactly 100 on
+request). Source pool is the top 100 of each of the 10 tabs, deduped by MAL
+id, prioritized by (most tabs it appears in, then MAL score, then best
+rank). **Exactly 100 net-new titles remain unpinned** - the next round
+finishes the original list.
+
+Note for next time: re-pulling the pool at this resume found 765 unique
+anime and 130 leftover, not the ~753 / ~115 the previous note claimed.
+The gap was a parsing bug, not pool drift - the "Top Upcoming" tab's rows
+all show score "N/A" instead of a number, which silently failed a regex
+and dropped that whole tab from the count (fixed in step 2 below). Always
+re-verify the pool size fresh rather than trusting this note's numbers -
+MAL's live rankings also shift a little day to day.
 
 The working files (deduped title lists, per-round batch splits, the
 per-batch research/insert instructions doc) lived in this session's
@@ -489,9 +497,12 @@ go looking for them. To resume:
 2. Parse `<tr class="ranking-list">` rows for mal_id/title/url/rank/score,
    dedupe by mal_id, drop anything whose MAL id already appears in
    `scripts/backup/seedPins.json`'s `sourceUrl` (`myanimelist.net/anime/
-   <id>/...`) - that's the current 637.
+   <id>/...`) - that's the current 667. Score is missing (`N/A`) for
+   unaired titles on the Top Upcoming tab - treat that as score 0 for
+   ranking rather than skipping the row, or you'll silently lose that tab.
 3. Rank what's left the same way (cross-tab count desc, score desc, rank
-   asc) and take the next ~100.
+   asc) and take the next ~100 (there are exactly 100 left as of this
+   note, so the next round finishes the original list).
 4. Same pipeline as before, in batches of 10 anime per parallel subagent:
    research each via AniList GraphQL (`graphql.anilist.co`, batch all 10
    of a batch's lookups into one aliased request - a single bad `mal_id`

@@ -5686,6 +5686,78 @@
     "userId": 101
   },
   {
+    "id": 1629,
+    "rootThread": false,
+    "title": "Nintama Rantarou Premieres",
+    "description": "One of the longest-running anime in the medium’s history, Nintama Rantarou has aired on NHK continuously since April 10, 1993, adapting Sōbē Amako's manga about Rantarou, Shinbei, and Kirimaru — first-year students at a Sengoku-era ninja academy who are more interested in food, money, and mischief than in mastering ninjutsu. Produced by Ajia-do, it packages short comic vignettes into each half-hour episode and has grown into a multi-generational institution in Japan, with an episode count now well past 2,000.",
+    "sourceUrl": "https://myanimelist.net/anime/1199/Nintama_Rantarou",
+    "longFormSummary": "<ul><li>Produced by Ajia-do, adapting Sōbē Amako's ongoing ninja-school manga.</li><li>Broadcasting on NHK continuously since Apr 10, 1993, with no end date set — one of the longest-running anime ever made.</li><li>Follows Rantarou, Shinbei, and Kirimaru, first-year Nintama students at a Sengoku-era ninja academy more interested in food and mischief than in their lessons.</li><li>Each half-hour episode packages two short comic vignettes, a format the series has kept for over three decades.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Broadcast start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 1606,
+    "company": "Ajia-do",
+    "category": "Anime",
+    "utcStartDateTime": "1993-04-10T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:52.007Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2157,
+        "thumbName": "356a79f5-f626-4376-8ccf-46742733f761.png",
+        "thumbWidth": 460,
+        "thumbHeight": 647,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1199-qguxpAkhdzap.png",
+        "originalWidth": 460,
+        "originalHeight": 647,
+        "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 2681,
+        "url": "https://myanimelist.net/anime/1199/Nintama_Rantarou",
+        "title": "Nintama Rantarou Premieres",
+        "confidence": 90,
+        "startDate": "1993-04-10",
+        "utcCreatedDateTime": "2026-09-16T19:04:52.009651+00:00",
+        "pinId": 1629
+      },
+      {
+        "id": 2682,
+        "url": "https://anilist.co/anime/1199",
+        "title": "Nintama Rantarou on AniList",
+        "confidence": 82,
+        "utcCreatedDateTime": "2026-09-16T19:04:52.009651+00:00",
+        "pinId": 1629
+      }
+    ],
+    "ratings": [
+      {
+        "id": 901,
+        "source": "AniList",
+        "score": 65,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/1199",
+        "utcCreatedDateTime": "2026-09-16T19:04:52.011226+00:00",
+        "pinId": 1629
+      },
+      {
+        "id": 934,
+        "source": "MyAnimeList",
+        "score": 7.1,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/1199/Nintama_Rantarou",
+        "utcCreatedDateTime": "2026-09-16T19:09:35.693583+00:00",
+        "pinId": 1629
+      }
+    ],
+    "userId": 101
+  },
+  {
     "id": 1143,
     "rootThread": false,
     "title": "Slam Dunk Premieres",
@@ -5950,6 +6022,72 @@
       }
     ],
     "userId": 76
+  },
+  {
+    "id": 1640,
+    "rootThread": false,
+    "title": "Chibi Maruko-chan (1995) Premieres",
+    "description": "The 1995 relaunch of Chibi Maruko-chan, Momoko Sakura's slice-of-life comedy about a scatterbrained third-grader navigating school, family and small everyday embarrassments in a quiet Japanese town. Produced by Nippon Animation, this version replaced the original 1990-1992 series and has stayed in weekly production ever since, making it one of the longest continuously running anime on air.",
+    "sourceUrl": "https://myanimelist.net/anime/6149/Chibi_Maruko-chan_1995",
+    "longFormSummary": "<ul><li>Produced by Nippon Animation, adapting Momoko Sakura's autobiographical manga.</li><li>Premiered January 8, 1995, on Sunday evenings on Fuji TV.</li><li>Follows Maruko, an ordinary elementary schooler, through everyday mishaps with family, friends and classmates.</li><li>Still in weekly production decades later, counted among the longest-running anime television series.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Broadcast start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 1209,
+    "company": "Nippon Animation",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/Nippon_Animation",
+    "companyLogoUrl": "https://www.google.com/s2/favicons?domain=nippon-animation.co.jp&sz=64",
+    "category": "Anime",
+    "utcStartDateTime": "1995-01-08T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:07:32.513Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2168,
+        "thumbName": "d34cc713-2a63-42b8-ad2e-4134c618b40a.jpeg",
+        "thumbWidth": 230,
+        "thumbHeight": 327,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b6149-w9IRcMlFkn4i.jpg",
+        "originalWidth": 230,
+        "originalHeight": 327,
+        "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 2702,
+        "url": "https://myanimelist.net/anime/6149/Chibi_Maruko-chan_1995",
+        "title": "Chibi Maruko-chan (1995) Premieres",
+        "confidence": 90,
+        "startDate": "1995-01-08",
+        "reasoning": "MyAnimeList's own listing gives the series' exact premiere date.",
+        "utcCreatedDateTime": "2026-09-16T19:07:32.51619+00:00",
+        "pinId": 1640
+      },
+      {
+        "id": 2703,
+        "url": "https://anilist.co/anime/6149",
+        "title": "Chibi Maruko-chan (1995) on AniList",
+        "confidence": 80,
+        "utcCreatedDateTime": "2026-09-16T19:07:32.51619+00:00",
+        "pinId": 1640
+      }
+    ],
+    "ratings": [
+      {
+        "id": 911,
+        "source": "AniList",
+        "score": 71,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/6149",
+        "utcCreatedDateTime": "2026-09-16T19:07:32.517584+00:00",
+        "pinId": 1640
+      }
+    ],
+    "userId": 101
   },
   {
     "id": 1360,
@@ -8269,6 +8407,49 @@
     "userId": 101
   },
   {
+    "id": 1623,
+    "rootThread": false,
+    "title": "Rurouni Kenshin OVA: Reflection (Seisou-hen) Premieres",
+    "description": "The second and concluding half of the Meiji Kenkaku Romantan OVA duology, following 1999's Trust & Betrayal, catches up with Kenshin Himura years after the main TV series as he wanders alone, still trying to atone for his past as an assassin, while his wife Kaoru waits for a return that keeps not coming. Studio DEEN trades the TV series' more forgiving tone for a somber, elegiac coda that closes out the couple's story.",
+    "sourceUrl": "https://myanimelist.net/anime/401/Rurouni_Kenshin__Meiji_Kenkaku_Romantan_-_Seisou-hen",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Premiere date confirmed on both MyAnimeList and AniList's listings.",
+    "companyId": 996,
+    "company": "Studio DEEN",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/Studio_Deen",
+    "category": "Anime",
+    "utcStartDateTime": "2001-12-03T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:10.223Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2151,
+        "thumbName": "20c74443-39f1-4fb9-b73e-a93095e11962.png",
+        "thumbWidth": 230,
+        "thumbHeight": 325,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx401-onwFZh9JNmBl.png",
+        "originalWidth": 230,
+        "originalHeight": 325,
+        "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 2674,
+        "url": "https://myanimelist.net/anime/401/Rurouni_Kenshin__Meiji_Kenkaku_Romantan_-_Seisou-hen",
+        "title": "Rurouni Kenshin OVA: Reflection (Seisou-hen) Premieres",
+        "confidence": 90,
+        "utcCreatedDateTime": "2026-09-16T19:04:10.376569+00:00",
+        "pinId": 1623
+      }
+    ],
+    "userId": 101
+  },
+  {
     "id": 1243,
     "rootThread": false,
     "title": "Hunter x Hunter: Yorknew City Premieres",
@@ -8740,6 +8921,63 @@
         "url": "https://anilist.co/anime/1257",
         "utcCreatedDateTime": "2026-09-15T23:59:43.345331+00:00",
         "pinId": 1392
+      }
+    ],
+    "userId": 101
+  },
+  {
+    "id": 1638,
+    "rootThread": false,
+    "title": "Saint Seiya: Meiou Hades Juuni Kyuu-hen - Yomigaerishi Gold Saint-tachi no Shinwa Premieres",
+    "description": "A two-episode recap special that revisits the Hades Sanctuary story from the vantage of the revived Gold Saints, trimming the Bronze Saints' scenes to focus on Shura, Camus and Saga as Athena's strongest defenders confront Hades' resurrected army. Animated by Toei Animation as part of the long-running Saint Seiya OVA cycle, it repackages existing Sanctuary-arc footage into a condensed retelling rather than new story content.",
+    "sourceUrl": "https://myanimelist.net/anime/6154/Saint_Seiya__Meiou_Hades_Juuni_Kyuu-hen_-_Yomigaerishi_Gold_Saint-tachi_no_Shinwa",
+    "longFormSummary": "<ul><li>Produced by Toei Animation as a two-episode recap special within the Saint Seiya: Hades Sanctuary OVA cycle.</li><li>Aired in 2003, condensing the Sanctuary arc's story.</li><li>Retells the battle against Hades' revived Gold Saints from Shura, Camus and Saga's perspective, dropping the Bronze Saints' subplots.</li><li>A compilation release rather than new animation, aimed at recapping the saga for viewers.</li></ul>",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "MyAnimeList's listing for this recap special gives only the year 2003 for its air date, with no exact day.",
+    "companyId": 16,
+    "company": "Toei Animation",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/Toei_Animation",
+    "companyLogoUrl": "https://www.google.com/s2/favicons?domain=toei-anim.co.jp&sz=64",
+    "category": "Anime",
+    "utcStartDateTime": "2003-01-01T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:07:32.188Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2166,
+        "thumbName": "010f25d9-8d5a-4101-9f4d-bfa8275ab3cb.jpeg",
+        "thumbWidth": 225,
+        "thumbHeight": 350,
+        "originalUrl": "https://cdn.myanimelist.net/images/anime/7/13518.jpg",
+        "originalWidth": 225,
+        "originalHeight": 350,
+        "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 2699,
+        "url": "https://myanimelist.net/anime/6154/Saint_Seiya__Meiou_Hades_Juuni_Kyuu-hen_-_Yomigaerishi_Gold_Saint-tachi_no_Shinwa",
+        "title": "Saint Seiya: Meiou Hades Juuni Kyuu-hen Recap Special",
+        "confidence": 65,
+        "reasoning": "MyAnimeList's own listing confirms this two-episode recap special exists and places it in 2003, though it gives no specific date.",
+        "utcCreatedDateTime": "2026-09-16T19:07:32.210767+00:00",
+        "pinId": 1638
+      }
+    ],
+    "ratings": [
+      {
+        "id": 909,
+        "source": "MyAnimeList",
+        "score": 7.7,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/6154/Saint_Seiya__Meiou_Hades_Juuni_Kyuu-hen_-_Yomigaerishi_Gold_Saint-tachi_no_Shinwa",
+        "utcCreatedDateTime": "2026-09-16T19:07:32.21325+00:00",
+        "pinId": 1638
       }
     ],
     "userId": 101
@@ -12129,6 +12367,80 @@
       }
     ],
     "userId": 76
+  },
+  {
+    "id": 1639,
+    "rootThread": false,
+    "title": "Rurouni Kenshin DVD-BOX Special Ending Premieres",
+    "description": "A brief bonus scene tucked into Japan's 2007 tenth-anniversary Rurouni Kenshin DVD-BOX, animated by Studio Deen — the same studio behind the original 1996 TV series. Rather than expanding the story, it restages the manga's own ending beat as a short coda for the boxed-set release.",
+    "sourceUrl": "https://myanimelist.net/anime/6591/Rurouni_Kenshin_DVD-BOX_Special_Ending",
+    "longFormSummary": "<ul><li>Produced by Studio Deen, the studio behind the original Rurouni Kenshin TV series.</li><li>Released May 7, 2007 as a bonus feature on the 10th-anniversary DVD-BOX.</li><li>A single-episode special restaging the manga's ending as a short coda scene.</li><li>Not a story continuation — a bonus extra bundled with the collector's boxed set.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Release date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 996,
+    "company": "Studio DEEN",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/Studio_Deen",
+    "category": "Anime",
+    "utcStartDateTime": "2007-05-07T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:07:32.369Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2167,
+        "thumbName": "8481d752-dcdd-434f-a80b-a67a044953d4.jpeg",
+        "thumbWidth": 225,
+        "thumbHeight": 350,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/6591.jpg",
+        "originalWidth": 225,
+        "originalHeight": 350,
+        "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 2700,
+        "url": "https://myanimelist.net/anime/6591/Rurouni_Kenshin_DVD-BOX_Special_Ending",
+        "title": "Rurouni Kenshin DVD-BOX Special Ending",
+        "confidence": 90,
+        "startDate": "2007-05-07",
+        "reasoning": "MyAnimeList's own listing gives this special's exact release date within the DVD-BOX.",
+        "utcCreatedDateTime": "2026-09-16T19:07:32.372383+00:00",
+        "pinId": 1639
+      },
+      {
+        "id": 2701,
+        "url": "https://anilist.co/anime/6591",
+        "title": "Rurouni Kenshin DVD-BOX Special Ending on AniList",
+        "confidence": 80,
+        "utcCreatedDateTime": "2026-09-16T19:07:32.372383+00:00",
+        "pinId": 1639
+      }
+    ],
+    "ratings": [
+      {
+        "id": 910,
+        "source": "AniList",
+        "score": 69,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/6591",
+        "utcCreatedDateTime": "2026-09-16T19:07:32.373798+00:00",
+        "pinId": 1639
+      },
+      {
+        "id": 948,
+        "source": "MyAnimeList",
+        "score": 7.65,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/6591/Rurouni_Kenshin_DVD-BOX_Special_Ending",
+        "utcCreatedDateTime": "2026-09-16T19:10:06.356599+00:00",
+        "pinId": 1639
+      }
+    ],
+    "userId": 101
   },
   {
     "id": 1432,
@@ -16781,6 +17093,71 @@
         "url": "https://anilist.co/anime/4901",
         "utcCreatedDateTime": "2026-09-15T23:59:18.440298+00:00",
         "pinId": 1384
+      }
+    ],
+    "userId": 101
+  },
+  {
+    "id": 1634,
+    "rootThread": false,
+    "title": "Highschool of the Dead Premieres",
+    "description": "Directed by Tetsurō Araki at Madhouse, Highschool of the Dead adapts Daisuke Satō and Shōji Satō’s manga about a high school suddenly overrun by a zombie outbreak, following a small group of students and a school nurse who fight and flee their way across a collapsing city. The 12-episode series leans hard into gratuitous horror and fan service alongside its survival-action plot, drawing reviews that praised its committed genre execution but knocked its thin characterization; its explicit content later got it named among dozens of titles China banned in 2015.",
+    "sourceUrl": "https://myanimelist.net/anime/8074/Highschool_of_the_Dead",
+    "longFormSummary": "<ul><li>Directed by Tetsurō Araki at Madhouse, adapting Daisuke Satō and Shōji Satō's manga.</li><li>Broadcast Jul 5 through Sep 20, 2010, running 12 episodes plus a 2011 bundled OVA, \"Drifters of the Dead.\"</li><li>Follows a small group of students and a school nurse fighting to survive a sudden zombie outbreak that engulfs their school and city.</li><li>Reviews praised its committed horror execution but criticized its writing; China named it among 38 titles banned in 2015 for explicit content.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Broadcast start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 750,
+    "company": "Madhouse",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/Madhouse,_Inc.",
+    "companyLogoUrl": "https://www.google.com/s2/favicons?domain=madhouse.co.jp&sz=64",
+    "category": "Anime",
+    "utcStartDateTime": "2010-07-05T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:52.900Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2162,
+        "thumbName": "a27c7ecf-5cec-484f-bb38-62052289555b.png",
+        "thumbWidth": 460,
+        "thumbHeight": 649,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx8074-YB63Ik96fjPj.png",
+        "originalWidth": 460,
+        "originalHeight": 649,
+        "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 2691,
+        "url": "https://myanimelist.net/anime/8074/Highschool_of_the_Dead",
+        "title": "Highschool of the Dead Premieres",
+        "confidence": 92,
+        "startDate": "2010-07-05",
+        "utcCreatedDateTime": "2026-09-16T19:04:52.902487+00:00",
+        "pinId": 1634
+      },
+      {
+        "id": 2692,
+        "url": "https://anilist.co/anime/8074",
+        "title": "Highschool of the Dead on AniList",
+        "confidence": 82,
+        "utcCreatedDateTime": "2026-09-16T19:04:52.902487+00:00",
+        "pinId": 1634
+      }
+    ],
+    "ratings": [
+      {
+        "id": 905,
+        "source": "AniList",
+        "score": 67,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/8074",
+        "utcCreatedDateTime": "2026-09-16T19:04:52.904063+00:00",
+        "pinId": 1634
       }
     ],
     "userId": 101
@@ -25385,6 +25762,70 @@
     "userId": 1
   },
   {
+    "id": 1626,
+    "rootThread": false,
+    "title": "Girls und Panzer: This is the Real Anzio Battle! Premieres",
+    "description": "This standalone OVA sends Oarai Girls Academy's tank team up against the Italian-themed Anzio Girls High School, a matchup only briefly referenced in the main TV series, complete with its own roster of pasta-obsessed commanders. Actas plays the encounter for broad comedy even by the franchise's standards, framing it as newly declassified \"lost footage\" of a battle fans had only heard about.",
+    "sourceUrl": "https://myanimelist.net/anime/18619/Girls___Panzer__Kore_ga_Hontou_no_Anzio-sen_desu",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Premiere date confirmed on both MyAnimeList and AniList's listings.",
+    "companyId": 1597,
+    "company": "Actas",
+    "category": "Anime",
+    "utcStartDateTime": "2014-07-05T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:10.531Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2154,
+        "thumbName": "500331f0-58a4-459c-8aab-643640a1d48b.jpeg",
+        "thumbWidth": 230,
+        "thumbHeight": 327,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx18619-HLJObts9x0rp.jpg",
+        "originalWidth": 230,
+        "originalHeight": 327,
+        "type": "1"
+      },
+      {
+        "id": 2181,
+        "thumbName": "1f8cf39e-f467-4817-8e20-3e3d5aece5ac.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/hy0sZtyXz80",
+        "type": "3",
+        "authorName": "Sentai",
+        "authorUrl": "https://www.youtube.com/@SentaiFilmworks",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/hy0sZtyXz80?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Girls und Panzer: This is the Real Anzio Battle! Official Trailer\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2677,
+        "url": "https://myanimelist.net/anime/18619/Girls___Panzer__Kore_ga_Hontou_no_Anzio-sen_desu",
+        "title": "Girls und Panzer: This is the Real Anzio Battle! Premieres",
+        "confidence": 90,
+        "utcCreatedDateTime": "2026-09-16T19:04:10.615589+00:00",
+        "pinId": 1626
+      }
+    ],
+    "ratings": [
+      {
+        "id": 928,
+        "source": "AniList",
+        "score": 76,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/18619",
+        "utcCreatedDateTime": "2026-09-16T19:09:25.873654+00:00",
+        "pinId": 1626
+      }
+    ],
+    "userId": 101
+  },
+  {
     "id": 1121,
     "rootThread": false,
     "title": "Akame ga Kill! Premieres",
@@ -28865,6 +29306,90 @@
         "url": "https://anilist.co/anime/20918",
         "utcCreatedDateTime": "2026-09-15T23:59:24.549207+00:00",
         "pinId": 1386
+      }
+    ],
+    "userId": 101
+  },
+  {
+    "id": 1636,
+    "rootThread": false,
+    "title": "Tokyo Ghoul √A Premieres",
+    "description": "Tokyo Ghoul √A is Studio Pierrot’s 12-episode second season, directed by Shūhei Morita, picking up with Ken Kaneki after he defeats Yamori and joins the ghoul faction Aogiri Tree as CCG investigators close in. Rather than adapting the manga's second half directly, the season blends its events with new material credited to original creator Sui Ishida — a divergence that drew significant criticism from manga readers for skipping and altering major plot points, and is often cited as part of why the franchise later got the more source-faithful Tokyo Ghoul:re anime.",
+    "sourceUrl": "https://myanimelist.net/anime/27899/Tokyo_Ghoul_√A",
+    "longFormSummary": "<ul><li>Produced by Studio Pierrot and directed by Shūhei Morita, Tokyo Ghoul's second season.</li><li>Broadcast Jan 9 through Mar 27, 2015, running 12 episodes.</li><li>Follows Ken Kaneki after he joins the ghoul faction Aogiri Tree, as CCG investigators close in on him.</li><li>Diverged from the manga’s second half with anime-original plotting credited to creator Sui Ishida, drawing criticism from manga readers and later ran on Adult Swim’s Toonami block in the US.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Broadcast start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 835,
+    "company": "Studio Pierrot",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/Studio_Pierrot",
+    "category": "Anime",
+    "utcStartDateTime": "2015-01-09T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:53.274Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2164,
+        "thumbName": "26568d12-2fd4-4cf6-9091-1090b014e50a.jpeg",
+        "thumbWidth": 460,
+        "thumbHeight": 650,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20850-glDf9EMKeCwe.jpg",
+        "originalWidth": 460,
+        "originalHeight": 650,
+        "type": "1"
+      },
+      {
+        "id": 2188,
+        "thumbName": "472f5507-f92e-4cc8-8a73-23a87b0b9cdb.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/M2DObpz2174",
+        "type": "3",
+        "authorName": "アニメ 音楽 2.5次元舞台 - マーベラス公式チャンネル",
+        "authorUrl": "https://www.youtube.com/@MarvelousAVCH",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/M2DObpz2174?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"「東京喰種√A」第2期　PV第2弾\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2695,
+        "url": "https://myanimelist.net/anime/27899/Tokyo_Ghoul_√A",
+        "title": "Tokyo Ghoul √A Premieres",
+        "confidence": 92,
+        "startDate": "2015-01-09",
+        "utcCreatedDateTime": "2026-09-16T19:04:53.276631+00:00",
+        "pinId": 1636
+      },
+      {
+        "id": 2696,
+        "url": "https://anilist.co/anime/20850",
+        "title": "Tokyo Ghoul √A on AniList",
+        "confidence": 82,
+        "utcCreatedDateTime": "2026-09-16T19:04:53.276631+00:00",
+        "pinId": 1636
+      }
+    ],
+    "ratings": [
+      {
+        "id": 907,
+        "source": "AniList",
+        "score": 67,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/20850",
+        "utcCreatedDateTime": "2026-09-16T19:04:53.278114+00:00",
+        "pinId": 1636
+      },
+      {
+        "id": 944,
+        "source": "MyAnimeList",
+        "score": 7.03,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/27899/Tokyo_Ghoul_√A",
+        "utcCreatedDateTime": "2026-09-16T19:09:57.614474+00:00",
+        "pinId": 1636
       }
     ],
     "userId": 101
@@ -40286,6 +40811,80 @@
     "userId": 76
   },
   {
+    "id": 1627,
+    "rootThread": false,
+    "title": "Devilman Crybaby Premieres",
+    "description": "Science SARU's Masaaki Yuasa reworks Go Nagai's 1972 manga for its creator's 50th anniversary, following teenager Akira Fudou as he merges with a demon to fight back against an ancient race reclaiming the world from humanity, gaining monstrous power while trying to hold onto his own humanity. The ten-episode Netflix series became one of the most acclaimed original anime of 2018, praised for pairing Yuasa's fluid, unconventional animation with the story's escalating violence and tragedy.",
+    "sourceUrl": "https://myanimelist.net/anime/35120/Devilman__Crybaby",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Premiere date confirmed on both MyAnimeList and AniList's listings.",
+    "companyId": 1273,
+    "company": "Science SARU",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/Science_SARU",
+    "category": "Anime",
+    "utcStartDateTime": "2018-01-05T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:10.618Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2155,
+        "thumbName": "18fa192c-1a72-4df0-a4e1-b4a33653c274.png",
+        "thumbWidth": 230,
+        "thumbHeight": 325,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx98460-bLtH2c3jd6sV.png",
+        "originalWidth": 230,
+        "originalHeight": 325,
+        "type": "1"
+      },
+      {
+        "id": 2182,
+        "thumbName": "4f652cae-0203-4380-b46d-4471a8465ef3.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/kbpmfCCdxLg",
+        "type": "3",
+        "authorName": "moviemaniacsDE",
+        "authorUrl": "https://www.youtube.com/@moviemaniacs",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/kbpmfCCdxLg?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"DEVILMAN crybaby | official trailer (2018)\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2678,
+        "url": "https://myanimelist.net/anime/35120/Devilman__Crybaby",
+        "title": "Devilman Crybaby Premieres",
+        "confidence": 90,
+        "utcCreatedDateTime": "2026-09-16T19:04:10.681104+00:00",
+        "pinId": 1627
+      }
+    ],
+    "ratings": [
+      {
+        "id": 929,
+        "source": "AniList",
+        "score": 76,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/98460",
+        "utcCreatedDateTime": "2026-09-16T19:09:29.709112+00:00",
+        "pinId": 1627
+      },
+      {
+        "id": 930,
+        "source": "MyAnimeList",
+        "score": 7.74,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/35120/Devilman__Crybaby",
+        "utcCreatedDateTime": "2026-09-16T19:09:29.709112+00:00",
+        "pinId": 1627
+      }
+    ],
+    "userId": 101
+  },
+  {
     "id": 734,
     "rootThread": false,
     "title": "Salesforce Tower Opens as San Francisco's Tallest Building",
@@ -41727,6 +42326,70 @@
         "url": "https://anilist.co/anime/107912",
         "utcCreatedDateTime": "2026-09-16T00:20:10.85788+00:00",
         "pinId": 1463
+      }
+    ],
+    "userId": 101
+  },
+  {
+    "id": 1622,
+    "rootThread": false,
+    "title": "The King's Avatar Specials Premieres",
+    "description": "This three-episode special bridges The King's Avatar's two seasons by following retired professional gamer Ye Xiu as a spectator rather than a competitor at Glory's All-Star Tournament, watching alongside teammates Tang Rou and Chen Guo. Colored Pencil Animation uses the lower-stakes setting to spotlight the wider cast of professional players introduced across the main series, while Ye Xiu finds his attempt to stay out of the spotlight tested anyway.",
+    "sourceUrl": "https://myanimelist.net/anime/37078/Quanzhi_Gaoshou_Specials",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Premiere date confirmed on both MyAnimeList and AniList's listings.",
+    "companyId": 1398,
+    "company": "Colored Pencil Animation",
+    "category": "Anime",
+    "utcStartDateTime": "2018-04-26T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:10.148Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2150,
+        "thumbName": "56135675-a300-4efa-9540-efc503f38d9a.png",
+        "thumbWidth": 230,
+        "thumbHeight": 323,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101410-DS14ggjKRPoU.png",
+        "originalWidth": 230,
+        "originalHeight": 323,
+        "type": "1"
+      },
+      {
+        "id": 2179,
+        "thumbName": "d1238bfd-8b6f-4ca9-9d84-89ee00a03602.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/tE8qg2uaqWU",
+        "type": "3",
+        "authorName": "Syncogon",
+        "authorUrl": "https://www.youtube.com/@Syncogon",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/tE8qg2uaqWU?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"全职高手 特别篇 第二支预告片释出 | The King&#39;s Avatar OVA Trailer 2\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2673,
+        "url": "https://myanimelist.net/anime/37078/Quanzhi_Gaoshou_Specials",
+        "title": "The King's Avatar Specials Premieres",
+        "confidence": 90,
+        "utcCreatedDateTime": "2026-09-16T19:04:10.220857+00:00",
+        "pinId": 1622
+      }
+    ],
+    "ratings": [
+      {
+        "id": 925,
+        "source": "AniList",
+        "score": 79,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/101410",
+        "utcCreatedDateTime": "2026-09-16T19:09:14.158934+00:00",
+        "pinId": 1622
       }
     ],
     "userId": 101
@@ -51435,6 +52098,108 @@
     "userId": 1
   },
   {
+    "id": 1619,
+    "rootThread": false,
+    "title": "Evangelion: 3.0+1.0 Thrice Upon a Time Releases in Japanese Theaters",
+    "description": "The fourth and final installment of Hideaki Anno's Rebuild of Evangelion tetralogy finds Shinji, Asuka, and Rei sheltering in one of the last untouched human settlements after the Fourth Impact, each trying to live an ordinary life while a final, world-ending Instrumentality Project looms. Studio Khara closed out the 14-year reboot project with a film that saw three separate cuts released between 2021 and 2023, each refining the visuals and effects without changing the core story.",
+    "sourceUrl": "https://myanimelist.net/anime/3786/Shin_Evangelion_Movie_||",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Theatrical release date confirmed on both MyAnimeList and AniList's listings.",
+    "companyId": 62,
+    "company": "Studio Khara",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/Khara_(studio)",
+    "companyLogoUrl": "https://www.google.com/s2/favicons?domain=khara.co.jp&sz=64",
+    "category": "Anime",
+    "utcStartDateTime": "2021-03-08T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:09.703Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2147,
+        "thumbName": "9da6f22b-26ff-4619-b8e2-359b3cdd0e9b.jpeg",
+        "thumbWidth": 230,
+        "thumbHeight": 326,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx3786-Tpt9iM72dxTv.jpg",
+        "originalWidth": 230,
+        "originalHeight": 326,
+        "type": "1"
+      },
+      {
+        "id": 2176,
+        "thumbName": "7b2d5bd4-0d07-4355-acd2-982da8e37134.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/z1klJIyx060",
+        "type": "3",
+        "authorName": "株式会社カラー khara inc.official",
+        "authorUrl": "https://www.youtube.com/@khara_official",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/z1klJIyx060?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"『シン・エヴァンゲリオン劇場版』本予告・改【公式】\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2670,
+        "url": "https://myanimelist.net/anime/3786/Shin_Evangelion_Movie_||",
+        "title": "Evangelion: 3.0+1.0 Thrice Upon a Time Releases in Japanese Theaters",
+        "confidence": 90,
+        "utcCreatedDateTime": "2026-09-16T19:04:09.932859+00:00",
+        "pinId": 1619
+      }
+    ],
+    "ratings": [
+      {
+        "id": 918,
+        "source": "AniList",
+        "score": 85,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/3786",
+        "utcCreatedDateTime": "2026-09-16T19:09:05.071083+00:00",
+        "pinId": 1619
+      },
+      {
+        "id": 919,
+        "source": "MyAnimeList",
+        "score": 8.58,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/3786/Shin_Evangelion_Movie_||",
+        "utcCreatedDateTime": "2026-09-16T19:09:05.071083+00:00",
+        "pinId": 1619
+      },
+      {
+        "id": 920,
+        "source": "IMDb",
+        "score": 8,
+        "scoreMax": 10,
+        "url": "https://www.imdb.com/title/tt2458948/",
+        "utcCreatedDateTime": "2026-09-16T19:09:05.071083+00:00",
+        "pinId": 1619
+      },
+      {
+        "id": 921,
+        "source": "Rotten Tomatoes",
+        "score": 100,
+        "scoreMax": 100,
+        "url": "https://www.rottentomatoes.com/m/evangelion_30_101_thrice_upon_a_time",
+        "utcCreatedDateTime": "2026-09-16T19:09:05.071083+00:00",
+        "pinId": 1619
+      },
+      {
+        "id": 922,
+        "source": "Metacritic",
+        "score": 85,
+        "scoreMax": 100,
+        "url": "https://www.metacritic.com/movie/evangelion-30+10-thrice-upon-a-time/",
+        "utcCreatedDateTime": "2026-09-16T19:09:05.071083+00:00",
+        "pinId": 1619
+      }
+    ],
+    "userId": 101
+  },
+  {
     "id": 746,
     "rootThread": false,
     "title": "Edinburgh's Royal Hospital for Children and Young People Finally Opens",
@@ -56524,6 +57289,72 @@
     "userId": 101
   },
   {
+    "id": 1624,
+    "rootThread": false,
+    "title": "Mobile Suit Gundam: The Witch from Mercury - Prologue Premieres",
+    "description": "Sunrise previewed its new Gundam television series with this short prologue, premiered at a fan event months ahead of the show's broadcast, showing test pilot Elnora Samaya running trials on the Gundam Lfrith at the Vanadis Institute's asteroid facility while her young daughter celebrates a birthday nearby. The prologue plants the mobile suit and mother-daughter relationship that the full series, The Witch from Mercury, builds its story around that October.",
+    "sourceUrl": "https://myanimelist.net/anime/52168/Kidou_Senshi_Gundam__Suisei_no_Majo_-_Prologue",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Premiere date confirmed on both MyAnimeList and AniList's listings.",
+    "companyId": 757,
+    "company": "Sunrise",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/Sunrise_(studio)",
+    "companyLogoUrl": "https://www.google.com/s2/favicons?domain=sunrise-inc.co.jp&sz=64",
+    "category": "Anime",
+    "utcStartDateTime": "2022-07-14T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:10.379Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2152,
+        "thumbName": "b1c348e8-d2e7-4253-94b2-2f3c5c16383e.png",
+        "thumbWidth": 230,
+        "thumbHeight": 345,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx146922-kcxcovDGRHGd.png",
+        "originalWidth": 230,
+        "originalHeight": 345,
+        "type": "1"
+      },
+      {
+        "id": 2180,
+        "thumbName": "8199d90f-7ef4-4356-901f-3285292c2c78.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/5YGW2JRxWUU",
+        "type": "3",
+        "authorName": "GUNDAM CHANNEL INTL",
+        "authorUrl": "https://www.youtube.com/@GundamInfo",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/5YGW2JRxWUU?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Mobile Suit Gundam the Witch from Mercury - 『PROLOGUE』（EN,HK,TW,CN,KR,ID,VN,TH,FR,IT sub）\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2675,
+        "url": "https://myanimelist.net/anime/52168/Kidou_Senshi_Gundam__Suisei_no_Majo_-_Prologue",
+        "title": "Mobile Suit Gundam: The Witch from Mercury - Prologue Premieres",
+        "confidence": 90,
+        "utcCreatedDateTime": "2026-09-16T19:04:10.457663+00:00",
+        "pinId": 1624
+      }
+    ],
+    "ratings": [
+      {
+        "id": 926,
+        "source": "AniList",
+        "score": 78,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/146922",
+        "utcCreatedDateTime": "2026-09-16T19:09:19.933678+00:00",
+        "pinId": 1624
+      }
+    ],
+    "userId": 101
+  },
+  {
     "id": 171,
     "parentId": 170,
     "rootThread": false,
@@ -57409,6 +58240,7 @@
     "dateConfidenceReasoning": "Episodic release start date confirmed on the title's own MyAnimeList listing.",
     "companyId": 1273,
     "company": "Science SARU",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/Science_SARU",
     "category": "Anime",
     "utcStartDateTime": "2022-09-14T00:00:00.000Z",
     "allDay": true,
@@ -63702,6 +64534,70 @@
     "userId": 101
   },
   {
+    "id": 1620,
+    "rootThread": false,
+    "title": "Girls und Panzer das Finale - Part 4 Releases in Japanese Theaters",
+    "description": "The fourth of six planned films continuing Girls und Panzer's tank-battle tournament arc finds Oarai's team reeling from an early loss and fighting uphill against Continuity Academy, while Kuromorimine's unconventional strategist Erika Itsumi squares off separately against St. Gloriana's tea-sipping commander Darjeeling. Actas keeps the series' trademark blend of meticulously animated armor combat and high-school club comedy running nearly a decade after the original TV series.",
+    "sourceUrl": "https://myanimelist.net/anime/39167/Girls___Panzer__Saishuushou_Part_4",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Theatrical release date confirmed on both MyAnimeList and AniList's listings.",
+    "companyId": 1597,
+    "company": "Actas",
+    "category": "Anime",
+    "utcStartDateTime": "2023-10-06T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:09.936Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2148,
+        "thumbName": "87daaddb-0baf-4538-8c02-cd875c3ad5c3.png",
+        "thumbWidth": 230,
+        "thumbHeight": 304,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx132420-aE5g1TCAbvUG.png",
+        "originalWidth": 230,
+        "originalHeight": 304,
+        "type": "1"
+      },
+      {
+        "id": 2177,
+        "thumbName": "0c5ef38a-75c7-45d1-aff3-2f52113077e4.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/CxNqHf8AnW0",
+        "type": "3",
+        "authorName": "バンダイナムコフィルムワークス チャンネル",
+        "authorUrl": "https://www.youtube.com/@bandainamcofilmworks",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/CxNqHf8AnW0?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"『ガールズ＆パンツァー 最終章』第4話 本予告第2弾\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2671,
+        "url": "https://myanimelist.net/anime/39167/Girls___Panzer__Saishuushou_Part_4",
+        "title": "Girls und Panzer das Finale - Part 4 Releases in Japanese Theaters",
+        "confidence": 90,
+        "utcCreatedDateTime": "2026-09-16T19:04:10.043743+00:00",
+        "pinId": 1620
+      }
+    ],
+    "ratings": [
+      {
+        "id": 923,
+        "source": "AniList",
+        "score": 82,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/132420",
+        "utcCreatedDateTime": "2026-09-16T19:09:08.284019+00:00",
+        "pinId": 1620
+      }
+    ],
+    "userId": 101
+  },
+  {
     "id": 542,
     "rootThread": false,
     "title": "The One Placed Into Receivership in Toronto",
@@ -64919,6 +65815,70 @@
     "userId": 76
   },
   {
+    "id": 1646,
+    "rootThread": false,
+    "title": "Dan Dao Zhizun Premieres",
+    "description": "Dan Dao Zhizun is a long-running Chinese cultivation-fantasy donghua from Ruo Hong Culture that has aired new episodes continuously since late 2023. Like most entries in the genre, it follows a rising alchemist-cultivator's climb through a hierarchy of sects and realms, building on a large episode count typical of the format's serialized, web-novel-driven pacing.",
+    "sourceUrl": "https://myanimelist.net/anime/57594/Dan_Dao_Zhizun",
+    "longFormSummary": "<ul><li>Produced by Ruo Hong Culture, adapting a Chinese web novel.</li><li>Began streaming December 22, 2023 and has remained in ongoing production since.</li><li>Follows a cultivator's rise through the setting's alchemy-focused sects and power hierarchy.</li><li>One of several long-running donghua from the same studio built around serialized cultivation-fantasy storytelling.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Streaming start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 1469,
+    "company": "Ruo Hong Culture",
+    "category": "Anime",
+    "utcStartDateTime": "2023-12-22T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:07:33.132Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2174,
+        "thumbName": "2339c526-4bb6-4c0a-892a-ce981fa57b5b.jpeg",
+        "thumbWidth": 230,
+        "thumbHeight": 321,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b174706-ICXnfFWkiJ3f.jpg",
+        "originalWidth": 230,
+        "originalHeight": 321,
+        "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 2714,
+        "url": "https://myanimelist.net/anime/57594/Dan_Dao_Zhizun",
+        "title": "Dan Dao Zhizun Premieres",
+        "confidence": 90,
+        "startDate": "2023-12-22",
+        "reasoning": "MyAnimeList's own listing gives the series' exact streaming start date.",
+        "utcCreatedDateTime": "2026-09-16T19:07:33.134676+00:00",
+        "pinId": 1646
+      },
+      {
+        "id": 2715,
+        "url": "https://anilist.co/anime/174706",
+        "title": "Dan Dao Zhizun on AniList",
+        "confidence": 80,
+        "utcCreatedDateTime": "2026-09-16T19:07:33.134676+00:00",
+        "pinId": 1646
+      }
+    ],
+    "ratings": [
+      {
+        "id": 916,
+        "source": "AniList",
+        "score": 59,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/174706",
+        "utcCreatedDateTime": "2026-09-16T19:07:33.136262+00:00",
+        "pinId": 1646
+      }
+    ],
+    "userId": 101
+  },
+  {
     "id": 149,
     "rootThread": false,
     "title": "The MSG Sphere is the largest sphere in the world, planned to open in Las Vegas in the second half of 2023.",
@@ -65985,6 +66945,48 @@
         "url": "https://anilist.co/anime/184624",
         "utcCreatedDateTime": "2026-09-15T23:56:40.131797+00:00",
         "pinId": 1333
+      }
+    ],
+    "userId": 101
+  },
+  {
+    "id": 1618,
+    "rootThread": false,
+    "title": "Genshin Impact: Animated Shorts Premieres",
+    "description": "miHoYo's in-house animation arm launches an ongoing string of short, self-contained episodes built around individual Genshin Impact characters, each running only a few minutes but paired with full original scoring and film-quality visuals. The shorts fill in backstory for the game's cast without requiring any prior familiarity with Teyvat, making them as much stand-alone shorts as promotional tie-ins.",
+    "sourceUrl": "https://myanimelist.net/anime/65004/Yuanshen__Donghua_Duanpian",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Premiere date of the first short confirmed on the title's own MyAnimeList listing.",
+    "companyId": 1301,
+    "company": "miHoYo Anime",
+    "category": "Anime",
+    "utcStartDateTime": "2024-04-17T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:09.540Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2146,
+        "thumbName": "eb15358c-0991-4430-9fcf-fd915421c722.jpeg",
+        "thumbWidth": 225,
+        "thumbHeight": 127,
+        "originalUrl": "https://cdn.myanimelist.net/images/anime/1771/160079.jpg",
+        "originalWidth": 225,
+        "originalHeight": 127,
+        "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 2669,
+        "url": "https://myanimelist.net/anime/65004/Yuanshen__Donghua_Duanpian",
+        "title": "Genshin Impact: Animated Shorts Premieres",
+        "confidence": 90,
+        "utcCreatedDateTime": "2026-09-16T19:04:09.699032+00:00",
+        "pinId": 1618
       }
     ],
     "userId": 101
@@ -67629,6 +68631,59 @@
     "userId": 76
   },
   {
+    "id": 1625,
+    "rootThread": false,
+    "title": "Sword of Coming Premieres",
+    "description": "Cloud Art adapts the wuxia-flavored web novel Jian Lai, following an ordinary boy whose single sword strike is powerful enough to split the sky, as he works his way up from nobody to legendary swordsman by taking on increasingly formidable opponents. The 26-episode donghua run established enough of a following to earn a second season the following year.",
+    "sourceUrl": "https://myanimelist.net/anime/59389/Jian_Lai",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Premiere date confirmed on both MyAnimeList and AniList's listings.",
+    "companyId": 1387,
+    "company": "Cloud Art",
+    "category": "Anime",
+    "utcStartDateTime": "2024-08-15T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:10.460Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2153,
+        "thumbName": "d37d5425-5687-493e-a699-49509cf5fe9c.png",
+        "thumbWidth": 230,
+        "thumbHeight": 323,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx137672-DpKhi0T6RAao.png",
+        "originalWidth": 230,
+        "originalHeight": 323,
+        "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 2676,
+        "url": "https://myanimelist.net/anime/59389/Jian_Lai",
+        "title": "Sword of Coming Premieres",
+        "confidence": 90,
+        "utcCreatedDateTime": "2026-09-16T19:04:10.52854+00:00",
+        "pinId": 1625
+      }
+    ],
+    "ratings": [
+      {
+        "id": 927,
+        "source": "AniList",
+        "score": 71,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/137672",
+        "utcCreatedDateTime": "2026-09-16T19:09:23.216771+00:00",
+        "pinId": 1625
+      }
+    ],
+    "userId": 101
+  },
+  {
     "id": 584,
     "rootThread": false,
     "title": "Sydney Metro City & Southwest Opens Under the Harbour",
@@ -69042,6 +70097,59 @@
       }
     ],
     "userId": 76
+  },
+  {
+    "id": 1641,
+    "rootThread": false,
+    "title": "Wan Jie Du Zun 3rd Season Premieres",
+    "description": "The third season of Wan Jie Du Zun, a Chinese cultivation-fantasy donghua from Ruo Hong Culture that continues its web-novel adaptation with a planned 224-episode run. The story follows its protagonist's climb through a world of competing cultivation sects and hidden immortal realms, building directly on the events of the first two seasons.",
+    "sourceUrl": "https://myanimelist.net/anime/60418/Wan_Jie_Du_Zun_3rd_Season",
+    "longFormSummary": "<ul><li>Produced by Ruo Hong Culture, adapting a Chinese web novel.</li><li>Began streaming November 30, 2024, planned for 224 episodes.</li><li>Continues the action-fantasy cultivation story picked up from the first two seasons.</li><li>Part of a wave of long-running donghua built around sect rivalries and power progression.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Streaming start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 1469,
+    "company": "Ruo Hong Culture",
+    "category": "Anime",
+    "utcStartDateTime": "2024-11-30T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:07:32.601Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2169,
+        "thumbName": "cb13aa9c-ae98-45f0-bd38-5a6258b752a2.jpeg",
+        "thumbWidth": 230,
+        "thumbHeight": 337,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b185720-aY35N0kCbiZZ.jpg",
+        "originalWidth": 230,
+        "originalHeight": 337,
+        "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 2704,
+        "url": "https://myanimelist.net/anime/60418/Wan_Jie_Du_Zun_3rd_Season",
+        "title": "Wan Jie Du Zun 3rd Season Premieres",
+        "confidence": 90,
+        "startDate": "2024-11-30",
+        "reasoning": "MyAnimeList's own listing gives the season's exact streaming start date.",
+        "utcCreatedDateTime": "2026-09-16T19:07:32.603595+00:00",
+        "pinId": 1641
+      },
+      {
+        "id": 2705,
+        "url": "https://anilist.co/anime/185720",
+        "title": "Wan Jie Du Zun 3rd Season on AniList",
+        "confidence": 80,
+        "utcCreatedDateTime": "2026-09-16T19:07:32.603595+00:00",
+        "pinId": 1641
+      }
+    ],
+    "userId": 101
   },
   {
     "id": 507,
@@ -71504,6 +72612,72 @@
     "userId": 101
   },
   {
+    "id": 1621,
+    "rootThread": false,
+    "title": "JUJUTSU KAISEN: Hidden Inventory / Premature Death – The Movie Releases in Japanese Theaters",
+    "description": "MAPPA recuts the \"Hidden Inventory/Premature Death\" arc from Jujutsu Kaisen's second season into a standalone theatrical film, adding new footage of Satoru Gojo and Suguru Geto's school days before their friendship curdled into rivalry. The arc follows the two strongest sorcerers as they're assigned to protect Riko Amanai, the Star Plasma Vessel, from a cult intent on completing her sacrifice - the mission that ultimately sets both men on their opposing paths.",
+    "sourceUrl": "https://myanimelist.net/anime/59654/Jujutsu_Kaisen__Kaigyoku_Gyokusetsu",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Theatrical release date confirmed on both MyAnimeList and AniList's listings.",
+    "companyId": 759,
+    "company": "MAPPA",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/MAPPA",
+    "companyLogoUrl": "https://www.google.com/s2/favicons?domain=mappa.co.jp&sz=64",
+    "category": "Anime",
+    "utcStartDateTime": "2025-05-30T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:10.052Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2149,
+        "thumbName": "1516064a-2b83-41f6-9422-304d34721837.jpeg",
+        "thumbWidth": 230,
+        "thumbHeight": 325,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx192809-wRlqABGsx2Qs.jpg",
+        "originalWidth": 230,
+        "originalHeight": 325,
+        "type": "1"
+      },
+      {
+        "id": 2178,
+        "thumbName": "1ba863cf-865d-48d4-a219-29548d472bd1.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/A0p4XMdWvm8",
+        "type": "3",
+        "authorName": "GKIDS Films",
+        "authorUrl": "https://www.youtube.com/@GKIDStv",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/A0p4XMdWvm8?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"JUJUTSU KAISEN: Hidden Inventory / Premature Death – The Movie | Official English Trailer\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2672,
+        "url": "https://myanimelist.net/anime/59654/Jujutsu_Kaisen__Kaigyoku_Gyokusetsu",
+        "title": "JUJUTSU KAISEN: Hidden Inventory / Premature Death – The Movie Releases in Japanese Theaters",
+        "confidence": 90,
+        "utcCreatedDateTime": "2026-09-16T19:04:10.14577+00:00",
+        "pinId": 1621
+      }
+    ],
+    "ratings": [
+      {
+        "id": 924,
+        "source": "AniList",
+        "score": 84,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/192809",
+        "utcCreatedDateTime": "2026-09-16T19:09:11.356418+00:00",
+        "pinId": 1621
+      }
+    ],
+    "userId": 101
+  },
+  {
     "id": 479,
     "rootThread": false,
     "title": "Chenab Rail Bridge Opens as World's Highest Railway Bridge",
@@ -73200,6 +74374,90 @@
     "userId": 76
   },
   {
+    "id": 1642,
+    "rootThread": false,
+    "title": "GANSO! BanG Dream Chan Premieres",
+    "description": "A chibi-style comedy spin-off inside the BanG Dream! multimedia franchise, bringing together characters from across its many in-universe bands for lighter, reunion-style skits rather than the mainline story's band drama. Animated by AtoriE, it leans on the franchise’s built-in cast recognition for quick comedic bits.",
+    "sourceUrl": "https://myanimelist.net/anime/61107/GANSO_BanG_Dream_Chan",
+    "longFormSummary": "<ul><li>Produced by AtoriE within the BanG Dream! multimedia franchise.</li><li>Began streaming October 2, 2025, running 52 short episodes.</li><li>Gathers characters from across BanG Dream!'s many bands for comedic, reunion-style skits.</li><li>A lighter spin-off format rather than a continuation of the mainline story.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Streaming start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 1619,
+    "company": "AtoriE",
+    "category": "Anime",
+    "utcStartDateTime": "2025-10-02T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:07:32.767Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2170,
+        "thumbName": "d1636f78-2441-409a-b416-cafc85e7f8c1.png",
+        "thumbWidth": 230,
+        "thumbHeight": 325,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx187166-ASfp7wErGrxQ.png",
+        "originalWidth": 230,
+        "originalHeight": 325,
+        "type": "1"
+      },
+      {
+        "id": 2190,
+        "thumbName": "f5d5f5b1-d81d-48b1-a514-f606067727d5.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/7WsRmVZspYI",
+        "type": "3",
+        "authorName": "バンドリちゃんねる☆",
+        "authorUrl": "https://www.youtube.com/@bang_dream_official",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/7WsRmVZspYI?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"【期間限定】ミニアニメ「元祖！バンドリちゃん」第1話「元祖！バンドリちゃん」\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2706,
+        "url": "https://myanimelist.net/anime/61107/GANSO_BanG_Dream_Chan",
+        "title": "GANSO! BanG Dream Chan Premieres",
+        "confidence": 90,
+        "startDate": "2025-10-02",
+        "reasoning": "MyAnimeList's own listing gives the series' exact streaming start date.",
+        "utcCreatedDateTime": "2026-09-16T19:07:32.77042+00:00",
+        "pinId": 1642
+      },
+      {
+        "id": 2707,
+        "url": "https://anilist.co/anime/187166",
+        "title": "GANSO! BanG Dream Chan on AniList",
+        "confidence": 80,
+        "utcCreatedDateTime": "2026-09-16T19:07:32.77042+00:00",
+        "pinId": 1642
+      }
+    ],
+    "ratings": [
+      {
+        "id": 912,
+        "source": "AniList",
+        "score": 68,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/187166",
+        "utcCreatedDateTime": "2026-09-16T19:07:32.772528+00:00",
+        "pinId": 1642
+      },
+      {
+        "id": 951,
+        "source": "MyAnimeList",
+        "score": 7.01,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/61107/GANSO_BanG_Dream_Chan",
+        "utcCreatedDateTime": "2026-09-16T19:10:14.79212+00:00",
+        "pinId": 1642
+      }
+    ],
+    "userId": 101
+  },
+  {
     "id": 1025,
     "rootThread": false,
     "title": "My Hero Academia FINAL SEASON Premieres",
@@ -73419,6 +74677,93 @@
         "url": "https://anilist.co/anime/190840",
         "utcCreatedDateTime": "2026-09-15T22:19:26.375672+00:00",
         "pinId": 1088
+      }
+    ],
+    "userId": 101
+  },
+  {
+    "id": 1647,
+    "rootThread": false,
+    "title": "Digimon Beatbreak Premieres",
+    "description": "The newest mainline entry in the Digimon franchise, Beatbreak imagines a world running on e-Pulse — human thoughts and emotions harvested to power AI devices called Sapotama. When Digimon start materializing out of these devices and feeding on the e-Pulse that powers them, protagonist Tomoro Tenma joins Glowing Dawn, a task force investigating the rogue creatures and the system's darker workings. Animated by Toei Animation, it positions itself as a narrative descendant of the original 1999 Digimon Adventure while building its own emotion-driven premise.",
+    "sourceUrl": "https://myanimelist.net/anime/61269/Digimon_Beatbreak",
+    "longFormSummary": "<ul><li>Produced by Toei Animation as the newest mainline Digimon TV series.</li><li>Airs October 5, 2025 through September 27, 2026, running 49 episodes.</li><li>Follows Tomoro Tenma, who joins the task force Glowing Dawn after Digimon begin materializing from emotion-powered Sapotama devices.</li><li>Framed as a narrative successor to the original 1999 Digimon Adventure within the wider franchise.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Broadcast start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 16,
+    "company": "Toei Animation",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/Toei_Animation",
+    "companyLogoUrl": "https://www.google.com/s2/favicons?domain=toei-anim.co.jp&sz=64",
+    "category": "Anime",
+    "utcStartDateTime": "2025-10-05T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:07:33.275Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2175,
+        "thumbName": "c5ce1b77-236f-4aec-b763-701c57394254.jpeg",
+        "thumbWidth": 230,
+        "thumbHeight": 345,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx188388-aXx9fsnvezBf.jpg",
+        "originalWidth": 230,
+        "originalHeight": 345,
+        "type": "1"
+      },
+      {
+        "id": 2193,
+        "thumbName": "9b50bdd3-981b-4f12-ba7e-def6a3bdcda9.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/eATChTnf090",
+        "type": "3",
+        "authorName": "IGN",
+        "authorUrl": "https://www.youtube.com/@IGN",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/eATChTnf090?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Digimon Beatbreak - Official Trailer (English Subtitles)\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2716,
+        "url": "https://myanimelist.net/anime/61269/Digimon_Beatbreak",
+        "title": "Digimon Beatbreak Premieres",
+        "confidence": 90,
+        "startDate": "2025-10-05",
+        "endDate": "2026-09-27",
+        "reasoning": "MyAnimeList's own listing gives the series' exact broadcast start and end dates.",
+        "utcCreatedDateTime": "2026-09-16T19:07:33.277743+00:00",
+        "pinId": 1647
+      },
+      {
+        "id": 2717,
+        "url": "https://anilist.co/anime/188388",
+        "title": "Digimon Beatbreak on AniList",
+        "confidence": 80,
+        "utcCreatedDateTime": "2026-09-16T19:07:33.277743+00:00",
+        "pinId": 1647
+      }
+    ],
+    "ratings": [
+      {
+        "id": 917,
+        "source": "AniList",
+        "score": 69,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/188388",
+        "utcCreatedDateTime": "2026-09-16T19:07:33.279261+00:00",
+        "pinId": 1647
+      },
+      {
+        "id": 957,
+        "source": "MyAnimeList",
+        "score": 7.13,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/61269/Digimon_Beatbreak",
+        "utcCreatedDateTime": "2026-09-16T19:10:37.497565+00:00",
+        "pinId": 1647
       }
     ],
     "userId": 101
@@ -74714,6 +76059,70 @@
         "url": "https://myanimelist.net/anime/57658/Jujutsu_Kaisen__Shimetsu_Kaiyuu_-_Zenpen",
         "utcCreatedDateTime": "2026-09-15T22:38:53.441554+00:00",
         "pinId": 1129
+      }
+    ],
+    "userId": 101
+  },
+  {
+    "id": 1645,
+    "rootThread": false,
+    "title": "Da Zhuzai: Nian Fan 2 Premieres",
+    "description": "Covering episodes 53 through 104 of the story, this installment continues Da Zhuzai (The Great Ruler), a Chinese cultivation-fantasy donghua from Motion Magic. It picks up protagonist Fang Yuan's climb through the setting's warring sects and hidden immortal factions after the ground laid in the first season.",
+    "sourceUrl": "https://myanimelist.net/anime/61556/Da_Zhuzai__Nian_Fan_2",
+    "longFormSummary": "<ul><li>Produced by Motion Magic, continuing the Da Zhuzai (The Great Ruler) donghua.</li><li>Began streaming January 9, 2026, covering episodes 53-104.</li><li>Continues protagonist Fang Yuan's cultivation-fantasy journey through the setting's rival sects and immortal factions.</li><li>A direct continuation of the first season's story rather than a spin-off.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Streaming start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 1101,
+    "company": "Motion Magic",
+    "category": "Anime",
+    "utcStartDateTime": "2026-01-09T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:07:33.036Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2173,
+        "thumbName": "1a918126-f046-43dc-bafa-0cabf2b2e4b3.jpeg",
+        "thumbWidth": 230,
+        "thumbHeight": 374,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx198706-H4PFRULtM4VH.jpg",
+        "originalWidth": 230,
+        "originalHeight": 374,
+        "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 2712,
+        "url": "https://myanimelist.net/anime/61556/Da_Zhuzai__Nian_Fan_2",
+        "title": "Da Zhuzai: Nian Fan 2 Premieres",
+        "confidence": 90,
+        "startDate": "2026-01-09",
+        "reasoning": "MyAnimeList's own listing gives this installment's exact streaming start date.",
+        "utcCreatedDateTime": "2026-09-16T19:07:33.038908+00:00",
+        "pinId": 1645
+      },
+      {
+        "id": 2713,
+        "url": "https://anilist.co/anime/198706",
+        "title": "Da Zhuzai: Nian Fan 2 on AniList",
+        "confidence": 80,
+        "utcCreatedDateTime": "2026-09-16T19:07:33.038908+00:00",
+        "pinId": 1645
+      }
+    ],
+    "ratings": [
+      {
+        "id": 915,
+        "source": "AniList",
+        "score": 60,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/198706",
+        "utcCreatedDateTime": "2026-09-16T19:07:33.040266+00:00",
+        "pinId": 1645
       }
     ],
     "userId": 101
@@ -78736,6 +80145,89 @@
     "userId": 101
   },
   {
+    "id": 1632,
+    "rootThread": false,
+    "title": "Chainsmoker Cat Premieres",
+    "description": "Chainsmoker Cat is a slice-of-life comedy animated by Bibury Animation Studios about Yani, a catgirl whose life revolves around cigarettes she can't put down — her apartment ankle-deep in butts and ash despite repeated, short-lived attempts to quit. The humor leans on her self-aware but powerless slide into bad habits rather than any larger plot, adapted from the manga published in English by Seven Seas.",
+    "sourceUrl": "https://myanimelist.net/anime/63403/Yani_Neko",
+    "longFormSummary": "<ul><li>Produced by Bibury Animation Studios, adapting the manga published in English by Seven Seas Entertainment.</li><li>Premiered July 3, 2026, running 12 episodes.</li><li>Follows Yani, a catgirl with a chain-smoking habit she keeps failing to quit, and the mess it leaves behind in her apartment.</li><li>A slice-of-life comedy built on Yani’s self-aware but repeated relapses rather than an ongoing story arc.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Broadcast start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 1358,
+    "company": "Bibury Animation Studios",
+    "category": "Anime",
+    "utcStartDateTime": "2026-07-03T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:52.546Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2160,
+        "thumbName": "467e6fd5-2176-461e-b37d-28184fe89877.jpeg",
+        "thumbWidth": 460,
+        "thumbHeight": 649,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx207141-h5q5KJPd6vaX.jpg",
+        "originalWidth": 460,
+        "originalHeight": 649,
+        "type": "1"
+      },
+      {
+        "id": 2186,
+        "thumbName": "171baf7d-4a63-43f5-a4af-7b25e55670c7.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/KYGgyQtSAdI",
+        "type": "3",
+        "authorName": "Netflix Anime",
+        "authorUrl": "https://www.youtube.com/@netflixanime",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/KYGgyQtSAdI?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Chainsmoker Cat | Official Trailer | Netflix Anime\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2687,
+        "url": "https://myanimelist.net/anime/63403/Yani_Neko",
+        "title": "Yani Neko Premieres",
+        "confidence": 90,
+        "startDate": "2026-07-03",
+        "utcCreatedDateTime": "2026-09-16T19:04:52.549301+00:00",
+        "pinId": 1632
+      },
+      {
+        "id": 2688,
+        "url": "https://anilist.co/anime/207141",
+        "title": "Yani Neko on AniList",
+        "confidence": 82,
+        "utcCreatedDateTime": "2026-09-16T19:04:52.549301+00:00",
+        "pinId": 1632
+      }
+    ],
+    "ratings": [
+      {
+        "id": 904,
+        "source": "AniList",
+        "score": 67,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/207141",
+        "utcCreatedDateTime": "2026-09-16T19:04:52.550746+00:00",
+        "pinId": 1632
+      },
+      {
+        "id": 940,
+        "source": "MyAnimeList",
+        "score": 7.13,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/63403/Yani_Neko",
+        "utcCreatedDateTime": "2026-09-16T19:09:45.102217+00:00",
+        "pinId": 1632
+      }
+    ],
+    "userId": 101
+  },
+  {
     "id": 1080,
     "rootThread": false,
     "title": "Mushoku Tensei: Jobless Reincarnation Season 3 Premieres",
@@ -78884,6 +80376,89 @@
         "url": "https://myanimelist.net/anime/63817/Hell_Mode__Yarikomizuki_no_Gamer_wa_Hai_Settei_no_Isekai_de_Musou_suru_2nd_Season",
         "utcCreatedDateTime": "2026-09-16T00:38:46.594338+00:00",
         "pinId": 1534
+      }
+    ],
+    "userId": 101
+  },
+  {
+    "id": 1635,
+    "rootThread": false,
+    "title": "Please Excuse My Younger Brothers Premieres",
+    "description": "Animated by Lay-duce, this 24-episode family comedy-drama follows high schooler Ito Hazui as her mother's sudden remarriage hands her four step-brothers to adjust to overnight. Most of the show's tension comes from her relationship with the eldest, Gen, whose standoffish manner keeps cracking to reveal quieter moments of care.",
+    "sourceUrl": "https://myanimelist.net/anime/63061/Uchi_no_Otouto-domo_ga_Sumimasen",
+    "longFormSummary": "<ul><li>Produced by Lay-duce, adapting the ongoing manga of the same name.</li><li>Premiered July 4, 2026, running 24 episodes.</li><li>Follows Ito Hazui, who gains four step-brothers overnight when her mother remarries.</li><li>Centers on her prickly-but-caring relationship with the eldest brother, Gen, as the new family finds its footing.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Broadcast start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 1383,
+    "company": "Lay-duce",
+    "category": "Anime",
+    "utcStartDateTime": "2026-07-04T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:53.135Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2163,
+        "thumbName": "8f59679e-5592-4a2e-af60-f2d263c7f3be.jpeg",
+        "thumbWidth": 460,
+        "thumbHeight": 650,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx203490-YQXiymUiDQNA.jpg",
+        "originalWidth": 460,
+        "originalHeight": 650,
+        "type": "1"
+      },
+      {
+        "id": 2187,
+        "thumbName": "c551a4c4-5a59-461f-a749-e4f113ecb827.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/d1as4Y7etI0",
+        "type": "3",
+        "authorName": "Crunchyroll",
+        "authorUrl": "https://www.youtube.com/@crunchyroll",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/d1as4Y7etI0?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Please Excuse My Younger Brothers | Official Trailer | Crunchyroll\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2693,
+        "url": "https://myanimelist.net/anime/63061/Uchi_no_Otouto-domo_ga_Sumimasen",
+        "title": "Uchi no Otouto-domo ga Sumimasen Premieres",
+        "confidence": 90,
+        "startDate": "2026-07-04",
+        "utcCreatedDateTime": "2026-09-16T19:04:53.136977+00:00",
+        "pinId": 1635
+      },
+      {
+        "id": 2694,
+        "url": "https://anilist.co/anime/203490",
+        "title": "Uchi no Otouto-domo ga Sumimasen on AniList",
+        "confidence": 82,
+        "utcCreatedDateTime": "2026-09-16T19:04:53.136977+00:00",
+        "pinId": 1635
+      }
+    ],
+    "ratings": [
+      {
+        "id": 906,
+        "source": "AniList",
+        "score": 68,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/203490",
+        "utcCreatedDateTime": "2026-09-16T19:04:53.13755+00:00",
+        "pinId": 1635
+      },
+      {
+        "id": 942,
+        "source": "MyAnimeList",
+        "score": 7,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/63061/Uchi_no_Otouto-domo_ga_Sumimasen",
+        "utcCreatedDateTime": "2026-09-16T19:09:54.15354+00:00",
+        "pinId": 1635
       }
     ],
     "userId": 101
@@ -79194,6 +80769,335 @@
         "url": "https://myanimelist.net/anime/63100/Tetsunabe_no_Jan",
         "utcCreatedDateTime": "2026-09-16T00:40:49.101068+00:00",
         "pinId": 1575
+      }
+    ],
+    "userId": 101
+  },
+  {
+    "id": 1628,
+    "rootThread": false,
+    "title": "Rich Girl Caretaker: I'm Secretly the Caregiver of the Most Popular Girl in This Rich Kid School Premieres",
+    "description": "Adapted from the light novel series by Brain's Base, this romantic comedy follows Itsuki Tomonari, an ordinary student secretly recruited to look after Hinako Konohana — the most admired girl at a prestigious academy, whose flawless public image hides a near-total inability to handle basic chores. The show plays the gap between Hinako's polished reputation and her private disasters for laughs while nudging the pair toward an unlikely romance.",
+    "sourceUrl": "https://myanimelist.net/anime/62876/Saijo_no_Osewa__Takane_no_Hanadarake_na_Meimonkou_de_Gakuin_Ichi_no_Ojousama_Seikatsu_Nouryoku_Kaimu_wo_Kagenagara_Osewa_suru_Koto_ni_Narimashita",
+    "longFormSummary": "<ul><li>Produced by Brain's Base, adapting the ongoing light novel series.</li><li>Premiered July 5, 2026, running 12 episodes.</li><li>Follows Itsuki Tomonari, secretly hired to keep the household-inept \"perfect\" young lady Hinako Konohana from being exposed at her elite school.</li><li>A comedy-romance built on the gap between Hinako’s public image and her private chaos.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Broadcast start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 1041,
+    "company": "Brain's Base",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/Brain%27s_Base",
+    "category": "Anime",
+    "utcStartDateTime": "2026-07-05T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:51.695Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2156,
+        "thumbName": "8a7a00b5-e883-4b33-bc09-4bddf21f0f29.png",
+        "thumbWidth": 460,
+        "thumbHeight": 648,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx201514-BHAeWhSbcBrT.png",
+        "originalWidth": 460,
+        "originalHeight": 648,
+        "type": "1"
+      },
+      {
+        "id": 2183,
+        "thumbName": "183be8a6-f61d-40c0-9f8b-a8096a7ca8d7.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/JoRr4dfpXIU",
+        "type": "3",
+        "authorName": "MBS animation 公式チャンネル",
+        "authorUrl": "https://www.youtube.com/@MBS-Animation",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/JoRr4dfpXIU?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"TVアニメ『才女のお世話 』第2弾PV｜2026年7月4日から放送開始\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2679,
+        "url": "https://myanimelist.net/anime/62876/Saijo_no_Osewa__Takane_no_Hanadarake_na_Meimonkou_de_Gakuin_Ichi_no_Ojousama_Seikatsu_Nouryoku_Kaimu_wo_Kagenagara_Osewa_suru_Koto_ni_Narimashita",
+        "title": "Rich Girl Caretaker Premieres",
+        "confidence": 90,
+        "startDate": "2026-07-05",
+        "utcCreatedDateTime": "2026-09-16T19:04:51.720519+00:00",
+        "pinId": 1628
+      },
+      {
+        "id": 2680,
+        "url": "https://anilist.co/anime/201514",
+        "title": "Rich Girl Caretaker on AniList",
+        "confidence": 82,
+        "utcCreatedDateTime": "2026-09-16T19:04:51.720519+00:00",
+        "pinId": 1628
+      }
+    ],
+    "ratings": [
+      {
+        "id": 900,
+        "source": "AniList",
+        "score": 69,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/201514",
+        "utcCreatedDateTime": "2026-09-16T19:04:51.722737+00:00",
+        "pinId": 1628
+      },
+      {
+        "id": 932,
+        "source": "MyAnimeList",
+        "score": 7.28,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/62876/Saijo_no_Osewa__Takane_no_Hanadarake_na_Meimonkou_de_Gakuin_Ichi_no_Ojousama_Seikatsu_Nouryoku_Kaimu_wo_Kagenagara_Osewa_suru_Koto_ni_Narimashita",
+        "utcCreatedDateTime": "2026-09-16T19:09:32.606285+00:00",
+        "pinId": 1628
+      }
+    ],
+    "userId": 101
+  },
+  {
+    "id": 1631,
+    "rootThread": false,
+    "title": "Magilumiere Magical Girls Inc. Season 2 Premieres",
+    "description": "The second season of Magilumiere Magical Girls Inc., animated by J.C.Staff, continues its corporate-workplace spin on the mahou shoujo genre: magical girls here are salaried employees, and protagonists Kana Sakuragi and Hitomi Koshigaya spend as much time on internal politics and product rollout for the company's Alice System as they do fighting. This season pits them against industry factions pushing to deregulate magic use for profit, raising the stakes beyond the first season's day-to-day office drama.",
+    "sourceUrl": "https://myanimelist.net/anime/60552/Kabushikigaisha_Magi-Lumière_2nd_Season",
+    "longFormSummary": "<ul><li>Produced by J.C.Staff, continuing the TV adaptation of the manga of the same name.</li><li>Premiered July 5, 2026, running 12 episodes.</li><li>Follows Kana Sakuragi and Hitomi Koshigaya at Magilumiere Co., a firm that supplies magical girls with combat magic through its Alice System.</li><li>This season centers on factions pushing to deregulate magic use for profit, escalating beyond the first season's workplace-comedy stakes.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Broadcast start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 1062,
+    "company": "J.C.STAFF",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/J.C.Staff",
+    "category": "Anime",
+    "utcStartDateTime": "2026-07-05T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:52.405Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2159,
+        "thumbName": "19971442-f097-4e39-b6cc-49182420df19.jpeg",
+        "thumbWidth": 460,
+        "thumbHeight": 644,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx185692-1a8huwOIx7gw.jpg",
+        "originalWidth": 460,
+        "originalHeight": 644,
+        "type": "1"
+      },
+      {
+        "id": 2185,
+        "thumbName": "f591dca9-27fa-4ce4-ad48-6f3c4086ca13.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/3w7_piPtkNY",
+        "type": "3",
+        "authorName": "TVアニメ『株式会社マジルミエ』公式チャンネル",
+        "authorUrl": "https://www.youtube.com/@MagilumiereLtd",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/3w7_piPtkNY?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"TVアニメ『株式会社マジルミエ』第2期第2弾PV｜2026年7月4日から放送開始！\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2685,
+        "url": "https://myanimelist.net/anime/60552/Kabushikigaisha_Magi-Lumière_2nd_Season",
+        "title": "Magilumiere Magical Girls Inc. Season 2 Premieres",
+        "confidence": 90,
+        "startDate": "2026-07-05",
+        "utcCreatedDateTime": "2026-09-16T19:04:52.407898+00:00",
+        "pinId": 1631
+      },
+      {
+        "id": 2686,
+        "url": "https://anilist.co/anime/185692",
+        "title": "Magilumiere Magical Girls Inc. Season 2 on AniList",
+        "confidence": 82,
+        "utcCreatedDateTime": "2026-09-16T19:04:52.407898+00:00",
+        "pinId": 1631
+      }
+    ],
+    "ratings": [
+      {
+        "id": 903,
+        "source": "AniList",
+        "score": 64,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/185692",
+        "utcCreatedDateTime": "2026-09-16T19:04:52.409543+00:00",
+        "pinId": 1631
+      },
+      {
+        "id": 938,
+        "source": "MyAnimeList",
+        "score": 7.07,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/60552/Kabushikigaisha_Magi-Lumière_2nd_Season",
+        "utcCreatedDateTime": "2026-09-16T19:09:41.763825+00:00",
+        "pinId": 1631
+      }
+    ],
+    "userId": 101
+  },
+  {
+    "id": 1637,
+    "rootThread": false,
+    "title": "Magical Girl Lyrical Nanoha EXCEEDS: Gun Blaze Vengeance Premieres",
+    "description": "EXCEEDS: Gun Blaze Vengeance is Seven Arcs’ newest entry in the long-running Magical Girl Lyrical Nanoha franchise, but it's a fresh original story rather than a continuation of Nanoha's own arc: thirty years after mysterious \"invasive alien species\" nearly destroyed the world, a UN agency called EXCEEDS fights to contain the ongoing fallout. It centers on Shina Hisase, a young extermination hunter on the remote island nation of Mizuho, trying to protect her younger sister Setsuna as the agency pulls her deeper into its operations.",
+    "sourceUrl": "https://myanimelist.net/anime/60637/Mahou_Shoujo_Lyrical_Nanoha_EXCEEDS__Gun_Blaze_Vengeance",
+    "longFormSummary": "<ul><li>Produced by Seven Arcs as an original entry in the Magical Girl Lyrical Nanoha franchise, not a continuation of Nanoha's own storyline.</li><li>Premiered July 5, 2026 with an extended ~48-minute first episode, running 12 episodes.</li><li>Follows Shina Hisase, an extermination hunter on the island nation of Mizuho, thirty years after invasive alien species nearly destroyed the world.</li><li>Centers on Shina protecting her younger sister Setsuna as the UN agency EXCEEDS pulls her into its operations against the invasive species.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Broadcast start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 1417,
+    "company": "Seven Arcs",
+    "category": "Anime",
+    "utcStartDateTime": "2026-07-05T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:53.468Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2165,
+        "thumbName": "892ef283-1184-47fd-b5f2-b39152ceef26.jpeg",
+        "thumbWidth": 460,
+        "thumbHeight": 644,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx185875-XMvDVlIUZODx.jpg",
+        "originalWidth": 460,
+        "originalHeight": 644,
+        "type": "1"
+      },
+      {
+        "id": 2189,
+        "thumbName": "854430a8-b612-47a6-bd27-13ad6a9a8501.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/npAfCvmmPHM",
+        "type": "3",
+        "authorName": "Crunchyroll",
+        "authorUrl": "https://www.youtube.com/@crunchyroll",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/npAfCvmmPHM?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Magical Girl Lyrical NANOHA EXCEEDS Gun Blaze Vengeance | Official Trailer | Crunchyroll\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2697,
+        "url": "https://myanimelist.net/anime/60637/Mahou_Shoujo_Lyrical_Nanoha_EXCEEDS__Gun_Blaze_Vengeance",
+        "title": "Mahou Shoujo Lyrical Nanoha EXCEEDS: Gun Blaze Vengeance Premieres",
+        "confidence": 90,
+        "startDate": "2026-07-05",
+        "utcCreatedDateTime": "2026-09-16T19:04:53.469539+00:00",
+        "pinId": 1637
+      },
+      {
+        "id": 2698,
+        "url": "https://anilist.co/anime/185875",
+        "title": "Mahou Shoujo Lyrical Nanoha EXCEEDS: Gun Blaze Vengeance on AniList",
+        "confidence": 82,
+        "utcCreatedDateTime": "2026-09-16T19:04:53.469539+00:00",
+        "pinId": 1637
+      }
+    ],
+    "ratings": [
+      {
+        "id": 908,
+        "source": "AniList",
+        "score": 63,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/185875",
+        "utcCreatedDateTime": "2026-09-16T19:04:53.470434+00:00",
+        "pinId": 1637
+      },
+      {
+        "id": 946,
+        "source": "MyAnimeList",
+        "score": 7.12,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/60637/Mahou_Shoujo_Lyrical_Nanoha_EXCEEDS__Gun_Blaze_Vengeance",
+        "utcCreatedDateTime": "2026-09-16T19:10:00.704158+00:00",
+        "pinId": 1637
+      }
+    ],
+    "userId": 101
+  },
+  {
+    "id": 1643,
+    "rootThread": false,
+    "title": "Grow Up Show: Himawari no Circus-dan Premieres",
+    "description": "Set during Japan's postwar economic boom, Grow Up Show follows the struggling Sunflower Circus troupe as ringmaster Maria and her performers try to keep the show running on a shoestring budget. Everything changes when they take in Mizuka Tsurumaki, a natural-born circus prodigy, and set their sights on a spot at the prestigious nationwide Circus Collection festival. Animated by A-1 Pictures, it is an original coming-of-age story built around the discipline and spectacle of circus performance.",
+    "sourceUrl": "https://myanimelist.net/anime/62051/Grow_Up_Show__Himawari_no_Circus-dan",
+    "longFormSummary": "<ul><li>Produced by A-1 Pictures as an original TV series.</li><li>Airs July 5 through September 27, 2026, running 13 episodes.</li><li>Follows the financially struggling Sunflower Circus troupe as they take in prodigy performer Mizuka Tsurumaki.</li><li>Builds toward the troupe's bid for a spot in the nationwide Circus Collection festival.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Broadcast start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 838,
+    "company": "A-1 Pictures",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/A-1_Pictures",
+    "companyLogoUrl": "https://www.google.com/s2/favicons?domain=a1p.jp&sz=64",
+    "category": "Anime",
+    "utcStartDateTime": "2026-07-05T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:07:32.860Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2171,
+        "thumbName": "1bd8a5a3-815b-4117-b9d5-531018637259.jpeg",
+        "thumbWidth": 230,
+        "thumbHeight": 325,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx196017-GynDNdbDzqzk.jpg",
+        "originalWidth": 230,
+        "originalHeight": 325,
+        "type": "1"
+      },
+      {
+        "id": 2191,
+        "thumbName": "184a88b3-95d5-4fb9-a0c7-9d77baa79eb0.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/PAneuhZLHzU",
+        "type": "3",
+        "authorName": "アニプレックス チャンネル",
+        "authorUrl": "https://www.youtube.com/@aniplex",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/PAneuhZLHzU?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"【第1弾PV】オリジナルTVアニメ「グロウアップショウ ～ひまわりのサーカス団～」2026年7月 放送開始！\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2708,
+        "url": "https://myanimelist.net/anime/62051/Grow_Up_Show__Himawari_no_Circus-dan",
+        "title": "Grow Up Show: Himawari no Circus-dan Premieres",
+        "confidence": 90,
+        "startDate": "2026-07-05",
+        "endDate": "2026-09-27",
+        "reasoning": "MyAnimeList's own listing gives the series' exact broadcast start and end dates.",
+        "utcCreatedDateTime": "2026-09-16T19:07:32.880683+00:00",
+        "pinId": 1643
+      },
+      {
+        "id": 2709,
+        "url": "https://anilist.co/anime/196017",
+        "title": "Grow Up Show: Himawari no Circus-dan on AniList",
+        "confidence": 80,
+        "utcCreatedDateTime": "2026-09-16T19:07:32.880683+00:00",
+        "pinId": 1643
+      }
+    ],
+    "ratings": [
+      {
+        "id": 913,
+        "source": "AniList",
+        "score": 71,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/196017",
+        "utcCreatedDateTime": "2026-09-16T19:07:32.882861+00:00",
+        "pinId": 1643
       }
     ],
     "userId": 101
@@ -79850,6 +81754,91 @@
     "userId": 101
   },
   {
+    "id": 1644,
+    "rootThread": false,
+    "title": "Katainaka no Ossan, Kensei ni Naru II Premieres",
+    "description": "The second season of From Old Country Bumpkin to Master Swordsman follows Beryl Gardenant settling into his new roles as a special instructor for the Royal Order of Knights and guardian to an orphaned child. That relative calm does not last: the season sends him back to the magic institute, his hometown, the kingdom’s border and a foreign land as new threats surface. Produced by Passione, it continues the light novel adaptation's blend of understated swordplay and fantasy world-building.",
+    "sourceUrl": "https://myanimelist.net/anime/61897/Katainaka_no_Ossan_Kensei_ni_Naru_II",
+    "longFormSummary": "<ul><li>Produced by Passione, continuing the light novel adaptation.</li><li>Airs July 8 through September 23, 2026, running 12 episodes.</li><li>Follows swordmaster Beryl Gardenant as a Royal Order instructor and guardian facing new threats across the kingdom.</li><li>A direct continuation of the first season's understated action-fantasy story.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Broadcast start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 1621,
+    "company": "Passione",
+    "category": "Anime",
+    "utcStartDateTime": "2026-07-08T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:07:32.963Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2172,
+        "thumbName": "62d5fddf-9fe2-4b08-8959-938138f54b8c.jpeg",
+        "thumbWidth": 230,
+        "thumbHeight": 325,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx194829-bZKwhfo60EuF.jpg",
+        "originalWidth": 230,
+        "originalHeight": 325,
+        "type": "1"
+      },
+      {
+        "id": 2192,
+        "thumbName": "bd87dd66-3b74-4255-a967-fcda55ee75a6.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/N_0FPI1a9Nw",
+        "type": "3",
+        "authorName": "NBCUniversal Anime/Music",
+        "authorUrl": "https://www.youtube.com/@NBCUniversalAnimeandMusic",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/N_0FPI1a9Nw?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"TVアニメ「片田舎のおっさん、剣聖になるII」番宣CM 30秒 | 2026.7.8～ON AIR!!\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2710,
+        "url": "https://myanimelist.net/anime/61897/Katainaka_no_Ossan_Kensei_ni_Naru_II",
+        "title": "Katainaka no Ossan, Kensei ni Naru II Premieres",
+        "confidence": 90,
+        "startDate": "2026-07-08",
+        "endDate": "2026-09-23",
+        "reasoning": "MyAnimeList's own listing gives the season's exact broadcast start and end dates.",
+        "utcCreatedDateTime": "2026-09-16T19:07:32.965143+00:00",
+        "pinId": 1644
+      },
+      {
+        "id": 2711,
+        "url": "https://anilist.co/anime/194829",
+        "title": "Katainaka no Ossan, Kensei ni Naru II on AniList",
+        "confidence": 80,
+        "utcCreatedDateTime": "2026-09-16T19:07:32.965143+00:00",
+        "pinId": 1644
+      }
+    ],
+    "ratings": [
+      {
+        "id": 914,
+        "source": "AniList",
+        "score": 70,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/194829",
+        "utcCreatedDateTime": "2026-09-16T19:07:32.966454+00:00",
+        "pinId": 1644
+      },
+      {
+        "id": 954,
+        "source": "MyAnimeList",
+        "score": 7.39,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/61897/Katainaka_no_Ossan_Kensei_ni_Naru_II",
+        "utcCreatedDateTime": "2026-09-16T19:10:21.211195+00:00",
+        "pinId": 1644
+      }
+    ],
+    "userId": 101
+  },
+  {
     "id": 645,
     "rootThread": false,
     "title": "2 World Trade Center Construction Restarts",
@@ -80126,6 +82115,91 @@
         "url": "https://myanimelist.net/anime/61240/Futsutsuka_na_Akujo_dewa_Gozaimasu_ga__Suuguu_Chouso_Torikae_Den",
         "utcCreatedDateTime": "2026-09-15T23:54:43.105476+00:00",
         "pinId": 1295
+      }
+    ],
+    "userId": 101
+  },
+  {
+    "id": 1630,
+    "rootThread": false,
+    "title": "Hanaori-san Still Wants to Fight in the Next Life Premieres",
+    "description": "Based on the manga of the same name and animated by LidenFilms, the series reimagines a defeated Demon King, Ryuūsei Narukami, living out a second life as a reclusive shut-in — until Meteor Hanaori, the hero who once struck him down, resurfaces reincarnated as an ordinary high schooler. Trying to turn his life around, Ryuūsei takes a teaching job that happens to land him at her school, and old rivalry curdles into an unlikely spark between former enemies.",
+    "sourceUrl": "https://myanimelist.net/anime/62535/Hanaori-san_wa_Tensei_shitemo_Kenka_ga_Shitai",
+    "longFormSummary": "<ul><li>Produced by LidenFilms, adapting the ongoing manga of the same name.</li><li>Premiered July 12, 2026, running 12 episodes.</li><li>Follows Ryuūsei Narukami, a shut-in former Demon King, reentering society as a teacher just as the hero who once defeated him is reincarnated as a student at his new school.</li><li>A comedy-romance built on the reversal of former mortal enemies forced back into each other’s lives.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Broadcast start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 843,
+    "company": "Liden Films",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/Liden_Films",
+    "companyLogoUrl": "https://www.google.com/s2/favicons?domain=lidenfilms.jp&sz=64",
+    "category": "Anime",
+    "utcStartDateTime": "2026-07-12T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:52.168Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2158,
+        "thumbName": "a71afa4b-4557-4e30-b4f7-debc02c1dfd9.jpeg",
+        "thumbWidth": 460,
+        "thumbHeight": 667,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx199066-YXDVsguvFZMm.jpg",
+        "originalWidth": 460,
+        "originalHeight": 667,
+        "type": "1"
+      },
+      {
+        "id": 2184,
+        "thumbName": "9a1b9f68-d75d-4a34-b9b6-58d9a1580dac.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/embed/UXgbofdm2vQ",
+        "type": "3",
+        "authorName": "Crunchyroll",
+        "authorUrl": "https://www.youtube.com/@crunchyroll",
+        "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/UXgbofdm2vQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Hanaori-san Still Wants to Fight in the Next Life | Official Trailer | Crunchyroll\"></iframe>"
+      }
+    ],
+    "references": [
+      {
+        "id": 2683,
+        "url": "https://myanimelist.net/anime/62535/Hanaori-san_wa_Tensei_shitemo_Kenka_ga_Shitai",
+        "title": "Hanaori-san wa Tensei Shitemo Kenka ga Shitai Premieres",
+        "confidence": 90,
+        "startDate": "2026-07-12",
+        "utcCreatedDateTime": "2026-09-16T19:04:52.184085+00:00",
+        "pinId": 1630
+      },
+      {
+        "id": 2684,
+        "url": "https://anilist.co/anime/199066",
+        "title": "Hanaori-san wa Tensei Shitemo Kenka ga Shitai on AniList",
+        "confidence": 82,
+        "utcCreatedDateTime": "2026-09-16T19:04:52.184085+00:00",
+        "pinId": 1630
+      }
+    ],
+    "ratings": [
+      {
+        "id": 902,
+        "source": "AniList",
+        "score": 69,
+        "scoreMax": 100,
+        "url": "https://anilist.co/anime/199066",
+        "utcCreatedDateTime": "2026-09-16T19:04:52.185685+00:00",
+        "pinId": 1630
+      },
+      {
+        "id": 936,
+        "source": "MyAnimeList",
+        "score": 7.07,
+        "scoreMax": 10,
+        "url": "https://myanimelist.net/anime/62535/Hanaori-san_wa_Tensei_shitemo_Kenka_ga_Shitai",
+        "utcCreatedDateTime": "2026-09-16T19:09:38.393198+00:00",
+        "pinId": 1630
       }
     ],
     "userId": 101
@@ -80586,6 +82660,58 @@
       }
     ],
     "userId": 1
+  },
+  {
+    "id": 1633,
+    "rootThread": false,
+    "title": "Yi Zhan Cangqiong Premieres",
+    "description": "Shenman Entertainment’s Yi Zhan Cangqiong begins streaming, a Chinese donghua following Gu An, a crippled young man who seizes the power of an ancient god at his lowest moment and turns it against the enemies who wronged him. The 26-episode ONA leans into a familiar but reliably popular power-fantasy setup — a written-off protagonist ascending to godlike strength to settle old scores.",
+    "sourceUrl": "https://myanimelist.net/anime/62789/Yi_Zhan_Cangqiong",
+    "longFormSummary": "<ul><li>Produced by Shenman Entertainment as an original Chinese donghua.</li><li>Began streaming July 28, 2026, running 26 episodes.</li><li>Follows Gu An, a crippled youth who claims the power of an ancient god during the darkest moment of the Celestial Realm and turns it on those who wronged him.</li><li>A wuxia-inflected power-fantasy in the vein of Shenman’s other cultivation-revenge donghua.</li></ul>",
+    "dateConfidence": "confirmed",
+    "dateConfidenceReasoning": "Broadcast start date confirmed on the title's own MyAnimeList listing.",
+    "companyId": 1207,
+    "company": "Shenman Entertainment",
+    "category": "Anime",
+    "utcStartDateTime": "2026-07-28T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T19:04:52.679Z",
+    "user": {
+      "id": 101,
+      "userName": "@AnimeDesk"
+    },
+    "media": [
+      {
+        "id": 2161,
+        "thumbName": "c510dff0-ea0f-4100-a437-b3959586f78b.jpeg",
+        "thumbWidth": 460,
+        "thumbHeight": 690,
+        "originalUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx206273-pqQ1tDkDILJi.jpg",
+        "originalWidth": 460,
+        "originalHeight": 690,
+        "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 2689,
+        "url": "https://myanimelist.net/anime/62789/Yi_Zhan_Cangqiong",
+        "title": "Yi Zhan Cangqiong Premieres",
+        "confidence": 90,
+        "startDate": "2026-07-28",
+        "utcCreatedDateTime": "2026-09-16T19:04:52.681827+00:00",
+        "pinId": 1633
+      },
+      {
+        "id": 2690,
+        "url": "https://anilist.co/anime/206273",
+        "title": "Yi Zhan Cangqiong on AniList",
+        "confidence": 82,
+        "utcCreatedDateTime": "2026-09-16T19:04:52.681827+00:00",
+        "pinId": 1633
+      }
+    ],
+    "userId": 101
   },
   {
     "id": 392,

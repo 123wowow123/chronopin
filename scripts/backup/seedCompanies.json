@@ -5162,12 +5162,12 @@
   {
     "id": 1273,
     "name": "Science SARU",
-    "wikiUrl": null,
+    "wikiUrl": "https://en.wikipedia.org/wiki/Science_SARU",
     "websiteUrl": null,
     "logoUrl": null,
     "utcLogoCheckedDateTime": "2026-09-15T23:49:14.330Z",
     "utcCreatedDateTime": "2026-09-15T23:49:14.308Z",
-    "utcUpdatedDateTime": "2026-09-15T23:49:14.330Z"
+    "utcUpdatedDateTime": "2026-09-16T19:04:10.617Z"
   },
   {
     "id": 1276,
@@ -5688,5 +5688,45 @@
     "utcLogoCheckedDateTime": "2026-09-16T00:34:40.327Z",
     "utcCreatedDateTime": "2026-09-16T00:34:40.325Z",
     "utcUpdatedDateTime": "2026-09-16T00:34:40.327Z"
+  },
+  {
+    "id": 1597,
+    "name": "Actas",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-16T19:04:09.951Z",
+    "utcCreatedDateTime": "2026-09-16T19:04:09.934Z",
+    "utcUpdatedDateTime": "2026-09-16T19:04:09.951Z"
+  },
+  {
+    "id": 1606,
+    "name": "Ajia-do",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-16T19:04:52.020Z",
+    "utcCreatedDateTime": "2026-09-16T19:04:52.006Z",
+    "utcUpdatedDateTime": "2026-09-16T19:04:52.020Z"
+  },
+  {
+    "id": 1619,
+    "name": "AtoriE",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-16T19:07:32.782Z",
+    "utcCreatedDateTime": "2026-09-16T19:07:32.761Z",
+    "utcUpdatedDateTime": "2026-09-16T19:07:32.782Z"
+  },
+  {
+    "id": 1621,
+    "name": "Passione",
+    "wikiUrl": null,
+    "websiteUrl": null,
+    "logoUrl": null,
+    "utcLogoCheckedDateTime": "2026-09-16T19:07:32.963Z",
+    "utcCreatedDateTime": "2026-09-16T19:07:32.961Z",
+    "utcUpdatedDateTime": "2026-09-16T19:07:32.963Z"
   }
 ]
