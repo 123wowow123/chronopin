@@ -131,16 +131,22 @@ export class SearchPins extends BasePins<SearchPin> {
 
   // Autocomplete: pins whose title or description starts with the typed text,
   // compared on their first 64 characters, case-insensitively. k caps the
-  // rows returned.
+  // pins returned.
+  //
+  // Read off "Pin", not the view. A suggestion is a title and a date in a
+  // dropdown, and this runs on every keystroke - going through the view built
+  // each candidate's references, ratings, view count and duplicate group, and
+  // the LIMIT sat above all of it. It also counted the view's rows rather than
+  // pins, so a pin with three pictures used up three of the ten suggestions.
   static async querySearchPin(title: string, description: string, k = 10): Promise<Pins> {
     const rows = await db.query(
       `
-        SELECT "Pin".*
-        FROM "PinBaseView" AS "Pin"
-        WHERE "Pin"."utcDeletedDateTime" IS NULL
-          AND (left("Pin"."title", 64) ILIKE rtrim(left($1, 64)) || '%'
-            OR left("Pin"."description", 64) ILIKE rtrim(left($2, 64)) || '%')
-        ORDER BY "Pin"."utcStartDateTime", "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"
+        SELECT "id", "title", "utcStartDateTime", "allDay"
+        FROM "Pin"
+        WHERE "utcDeletedDateTime" IS NULL
+          AND (left("title", 64) ILIKE rtrim(left($1, 64)) || '%'
+            OR left("description", 64) ILIKE rtrim(left($2, 64)) || '%')
+        ORDER BY "utcStartDateTime", "id"
         LIMIT $3`,
       [title, description, k],
     );

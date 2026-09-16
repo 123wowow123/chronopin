@@ -42,6 +42,9 @@ function termLabel(part: TermPart) {
 // clicking an item opens just that one, in its place, and leaving it (or
 // opening another) puts what was typed back as items. Otherwise the field
 // waits after the items for something new.
+// How long the typing has to pause before suggestions are asked for.
+const SUGGEST_DELAY_MS = 150;
+
 export function SearchBox() {
   const router = useRouter();
   const pathname = usePathname();
@@ -65,6 +68,7 @@ export function SearchBox() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(-1);
   const requestId = useRef(0);
+  const suggestTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const boxRef = useRef<HTMLFormElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const rowRef = useRef<HTMLDivElement>(null);
@@ -150,6 +154,9 @@ export function SearchBox() {
     return () => row.removeEventListener('wheel', onWheel);
   }, []);
 
+  // A pause waiting to be asked about does not outlive the box.
+  useEffect(() => () => clearTimeout(suggestTimer.current), []);
+
   useEffect(() => {
     const close = (event: MouseEvent) => {
       if (!boxRef.current?.contains(event.target as Node)) {
@@ -174,24 +181,30 @@ export function SearchBox() {
     router.push(`${onMap ? '/map' : '/search'}?${next.toString()}`);
   }
 
-  async function suggest(value: string) {
+  function suggest(value: string) {
     setDraft(value);
     setActive(-1);
     const id = ++requestId.current;
+    clearTimeout(suggestTimer.current);
     if (!value.trim()) {
       setSuggestions([]);
       setOpen(false);
       return;
     }
-    try {
-      const res = await api.get<{ pins: PinJson[] }>(`/api/pins/autocomplete?q=${encodeURIComponent(value)}`);
-      if (id === requestId.current) {
-        setSuggestions(res.pins || []);
-        setOpen((res.pins || []).length > 0);
+    // Suggestions wait for a break in the typing: a typed phrase asked for one
+    // list rather than one per letter, none of which was on screen long enough
+    // to read. requestId still settles answers that arrive out of order.
+    suggestTimer.current = setTimeout(async () => {
+      try {
+        const res = await api.get<{ pins: PinJson[] }>(`/api/pins/autocomplete?q=${encodeURIComponent(value)}`);
+        if (id === requestId.current) {
+          setSuggestions(res.pins || []);
+          setOpen((res.pins || []).length > 0);
+        }
+      } catch {
+        // suggestions are optional
       }
-    } catch {
-      // suggestions are optional
-    }
+    }, SUGGEST_DELAY_MS);
   }
 
   // Puts the field's text back as items and moves the field to `at` (counted
