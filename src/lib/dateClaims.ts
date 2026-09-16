@@ -1,3 +1,4 @@
+import { dateFormat } from './format';
 // When a pin starts and ends, grounded by its references. The source gives the
 // pin's dates, rated by its dateConfidence; a reference can give a start date
 // and an end date of its own (calendar dates, the end inclusive). The pin uses
@@ -114,7 +115,7 @@ function dayOf(value: string, allDay: boolean | undefined, timeZone: string, isE
   if (allDay) {
     return new Date(isEnd ? time - DAY_MS : time).toISOString().slice(0, 10);
   }
-  return new Intl.DateTimeFormat('en-CA', { year: 'numeric', month: '2-digit', day: '2-digit', timeZone }).format(time);
+  return dateFormat('en-CA', { year: 'numeric', month: '2-digit', day: '2-digit', timeZone }).format(time);
 }
 
 // Every claim on the pin's start and on its end, the source's first, and the
