@@ -3,6 +3,7 @@ import { requireUser } from '@/server/auth';
 import { emitPinEvent } from '@/server/events';
 import { HttpError, intParam, json, route } from '@/server/http';
 import Favorite from '@/server/model/favorite';
+import Notification from '@/server/model/notification';
 import Pin from '@/server/model/pin';
 import { invalidatePin } from '@/server/services/cache';
 
@@ -36,6 +37,7 @@ export const DELETE = route(async (request: NextRequest, ctx: Ctx) => {
   const pinId = await existingPin(ctx);
 
   await new Favorite({}, user, new Pin({ id: pinId })).deleteByPinId();
+  await Notification.retractWatched({ userId: user.id, pinId });
   const { pin } = await Pin.queryById(pinId, user.id);
   emitPinEvent('unfavorite', pin!, { userId: user.id });
   invalidatePin(pinId);

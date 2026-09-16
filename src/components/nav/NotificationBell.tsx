@@ -73,9 +73,15 @@ function NotificationItems({
           const handle = n.actor.userName.replace(/^@+/, '');
           return (
             <li key={n.id} className={`flex items-center gap-3 px-4 py-2.5 text-sm ${n.read ? '' : 'bg-accent/10'}`}>
-              <Link href={`/search?q=user:${encodeURIComponent(handle)}`} onClick={onNavigate}>
-                <UserAvatar userName={n.actor.userName} pictureUrl={n.actor.pictureUrl} className="size-8 text-sm" />
-              </Link>
+              {n.type === 'today' ? (
+                <span aria-hidden className="flex size-8 shrink-0 items-center justify-center rounded-full bg-tag-today/15 text-tag-today">
+                  <Icon name="target" className="size-4" />
+                </span>
+              ) : (
+                <Link href={`/search?q=user:${encodeURIComponent(handle)}`} onClick={onNavigate}>
+                  <UserAvatar userName={n.actor.userName} pictureUrl={n.actor.pictureUrl} className="size-8 text-sm" />
+                </Link>
+              )}
               <div className="min-w-0 flex-1">
                 {n.type === 'follow' ? (
                   <span>
@@ -94,6 +100,10 @@ function NotificationItems({
                 ) : n.type === 'reference' && n.pinId ? (
                   <Link href={`${pinPath({ id: n.pinId, title: n.pinTitle ?? '' })}#references-heading`} className="block text-ink" onClick={onNavigate}>
                     <span className="font-semibold">{n.actor.userName}</span> added references to <span className="font-semibold">{n.pinTitle}</span>
+                  </Link>
+                ) : n.type === 'today' && n.pinId ? (
+                  <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>
+                    <span className="font-semibold">{n.pinTitle}</span>, a pin you watch, is today
                   </Link>
                 ) : null}
                 <time className="block text-xs text-subtle" dateTime={n.utcCreatedDateTime}>

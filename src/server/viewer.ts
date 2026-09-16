@@ -9,8 +9,10 @@ const DEFAULT_TIME_ZONE = 'UTC';
 
 // The visitor's time zone from the tz cookie (set by TimeZoneSync), or UTC
 // for crawlers and first visits.
-export const viewerTimeZone = cache(async (): Promise<string> => {
-  const value = (await cookies()).get('tz')?.value;
+export const viewerTimeZone = cache(async (): Promise<string> => timeZoneOrUtc((await cookies()).get('tz')?.value));
+
+// A tz cookie's value if it names a real zone, else UTC.
+export function timeZoneOrUtc(value: string | undefined): string {
   if (!value) return DEFAULT_TIME_ZONE;
   try {
     new Intl.DateTimeFormat('en-US', { timeZone: value });
@@ -18,6 +20,6 @@ export const viewerTimeZone = cache(async (): Promise<string> => {
   } catch {
     return DEFAULT_TIME_ZONE;
   }
-});
+}
 
 export const viewerUser = cache(async (): Promise<User | null> => getUser());

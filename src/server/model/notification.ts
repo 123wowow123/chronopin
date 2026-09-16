@@ -9,6 +9,8 @@ const types = {
   reply: 'reply',
   // Someone added references to a pin you created, instead of pinning it again.
   reference: 'reference',
+  // A pin you watch lands today. The actor is the pin's author.
+  today: 'today',
 } as const;
 
 // How many the bell lists at most; older ones are still in the table.
@@ -73,6 +75,47 @@ export default class Notification {
       SET "utcDeletedDateTime" = now()
       WHERE "commentId" = $1 AND "utcDeletedDateTime" IS NULL`,
       [commentId],
+    );
+  }
+
+  // Writes a 'today' for each pin the user watches that lands on today's date
+  // in their time zone: an all-day pin on its UTC date, a timed one on the
+  // local date of its start. Safe to call on every poll: the unique index
+  // leaves one per user, pin and day, and watching a pin again the same day
+  // brings back the one unwatching took away.
+  static async notifyWatchedToday(userId: number, timeZone: string) {
+    const write = (zone: string) =>
+      db.query(
+        `
+        INSERT INTO "Notification" ("userId", "actorId", "type", "pinId", "pinDay")
+        SELECT f."userId", p."userId", 'today', p."id", (now() AT TIME ZONE $2)::date
+        FROM "Favorite" f
+        JOIN "Pin" p ON p."id" = f."pinId" AND p."utcDeletedDateTime" IS NULL
+        WHERE f."userId" = $1 AND f."utcDeletedDateTime" IS NULL
+          AND (p."utcStartDateTime" AT TIME ZONE CASE WHEN p."allDay" THEN 'UTC' ELSE $2 END)::date
+            = (now() AT TIME ZONE $2)::date
+        ON CONFLICT ("userId", "pinId", "pinDay") WHERE "type" = 'today'
+        DO UPDATE SET "utcDeletedDateTime" = NULL
+        WHERE "Notification"."utcDeletedDateTime" IS NOT NULL`,
+        [userId, zone],
+      );
+    try {
+      await write(timeZone);
+    } catch (err) {
+      // A zone the browser knows but PostgreSQL does not.
+      if (timeZone === 'UTC') throw err;
+      await write('UTC');
+    }
+  }
+
+  // Unwatching a pin takes back its 'today' notifications.
+  static retractWatched({ userId, pinId }: { userId: number; pinId: number }, query: QueryFn = db.query) {
+    return query(
+      `
+      UPDATE "Notification"
+      SET "utcDeletedDateTime" = now()
+      WHERE "userId" = $1 AND "pinId" = $2 AND "type" = 'today' AND "utcDeletedDateTime" IS NULL`,
+      [userId, pinId],
     );
   }
 
