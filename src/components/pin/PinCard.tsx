@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { PostedTime, StartTime } from '@/components/ui/LocalTime';
-import { UserAvatar } from '@/components/ui/UserAvatar';
 import { money } from '@/lib/format';
 import { useSession } from '@/lib/client/session';
 import { useVideoPoster } from '@/lib/client/timelineVideo';
@@ -98,11 +97,8 @@ export function PinCard({ pin, serverTimeZone, priority, tense }: { pin: CardPin
               </span>
             ) : null}
             {pin.user?.userName ? (
-              <span className="inline-flex items-center">
-                <RefineLink field="user" value={pin.user.userName} className="inline-flex items-center gap-1 text-inherit hover:text-ink hover:no-underline">
-                  {pin.user.pictureUrl ? (
-                    <UserAvatar userName={pin.user.userName} pictureUrl={pin.user.pictureUrl} className="size-4 text-[8px]" />
-                  ) : null}
+              <span>
+                <RefineLink field="user" value={pin.user.userName} className="text-inherit hover:text-ink hover:no-underline">
                   {pin.user.userName}
                 </RefineLink>
               </span>
