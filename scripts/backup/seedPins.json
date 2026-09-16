@@ -90181,6 +90181,71 @@
     "userId": 1
   },
   {
+    "id": 1648,
+    "rootThread": false,
+    "title": "2026 U.S. Midterm Elections Decide Control of Congress",
+    "description": "Voters nationwide decide control of the U.S. House and Senate in the first midterm election of Donald Trump's second term. Prediction markets on Polymarket and Kalshi, along with the generic congressional ballot, have swung toward Democrats over the course of 2026, a reversal from the start of the cycle, as Trump's approval rating slid and voters cited cost-of-living pressures as a top concern.",
+    "sourceUrl": "https://www.delawareonline.com/story/news/2026/09/16/who-will-win-the-2026-midterms-control-congress-2027-latest-polls-predictions-polymarket-odds-kalshi/91791712007/",
+    "longFormSummary": "<ul>\n<li>All 435 U.S. House seats and roughly a third of the Senate's 100 seats are up for election on Tuesday, November 3, 2026.</li>\n<li>Republicans head into the election holding narrow majorities in both chambers, won in the 2024 elections alongside Trump's return to the White House; Democrats need a net gain of just a handful of House seats to retake the chamber.</li>\n<li>Polymarket and Kalshi, the two largest political prediction markets, both moved toward pricing in Democratic control of at least one chamber over the course of 2026, a shift pollsters and traders tied to Trump's falling approval rating and voter frustration over prices.</li>\n<li>The new Congress elected in November 2026 is seated in January 2027, determining which party controls the chamber floors and committee gavels for the back half of Trump's term.</li>\n</ul>",
+    "address": "United States Capitol, Washington, DC",
+    "latitude": 38.8899,
+    "longitude": -77.0091,
+    "dateConfidence": "scheduled",
+    "dateConfidenceReasoning": "Election Day for federal midterms is fixed by federal law as the Tuesday after the first Monday in November; the source article states the 2026 midterms fall on Nov. 3, 2026.",
+    "category": "Policy & Legal",
+    "utcStartDateTime": "2026-11-03T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-16T23:07:04.931Z",
+    "user": {
+      "id": 1,
+      "userName": "@ThePinGang",
+      "pictureUrl": "avatar/1-b240a2cb-15e7-49ea-8b7b-acdd2930e87c.png"
+    },
+    "media": [
+      {
+        "id": 2194,
+        "thumbName": "0cea85b7-f176-4e98-aea4-6d32bb41d501.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 531,
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/US_Capitol_east_side.JPG",
+        "originalWidth": 4515,
+        "originalHeight": 2397,
+        "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 2718,
+        "url": "https://www.delawareonline.com/story/news/2026/09/16/who-will-win-the-2026-midterms-control-congress-2027-latest-polls-predictions-polymarket-odds-kalshi/91791712007/",
+        "title": "Delaware Online: Who will win the 2026 midterms?",
+        "confidence": 70,
+        "publishedDate": "2026-09-16",
+        "reasoning": "The source article itself (USA TODAY Network); paywalled, so its exact figures could not be read directly and are corroborated below instead.",
+        "utcCreatedDateTime": "2026-09-16T23:07:04.931899+00:00",
+        "pinId": 1648
+      },
+      {
+        "id": 2719,
+        "url": "https://kalshi.com/markets/controlh/house-winner/controlh-2026",
+        "title": "Kalshi: Which party will win the U.S. House?",
+        "confidence": 85,
+        "reasoning": "Kalshi's own live market page for House control, confirming the House contract exists and is being actively traded.",
+        "utcCreatedDateTime": "2026-09-16T23:07:04.931899+00:00",
+        "pinId": 1648
+      },
+      {
+        "id": 2720,
+        "url": "https://polymarket.com/event/balance-of-power-2026-midterms",
+        "title": "Polymarket: Balance of Power - 2026 Midterms",
+        "confidence": 85,
+        "reasoning": "Polymarket's own event page for House/Senate/White House balance-of-power markets, confirming the same contracts referenced in the article.",
+        "utcCreatedDateTime": "2026-09-16T23:07:04.931899+00:00",
+        "pinId": 1648
+      }
+    ],
+    "userId": 1
+  },
+  {
     "id": 296,
     "rootThread": false,
     "title": "The Legend of Zelda: Ocarina of Time Remake Sets November 5 Release",
