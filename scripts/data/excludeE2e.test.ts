@@ -45,6 +45,11 @@ describe('excludeE2e', () => {
     expect(pin.likes).toEqual([]);
   });
 
+  it('drops an account whose address names the spec it came from', () => {
+    const out = excludeE2e({ ...data(), users: [...users, { id: 90, email: 'e2e-return-mu1kmu51@example.com' }] });
+    expect(out.users.map((u) => u.id)).toEqual([1, 80]);
+  });
+
   it('keeps a company a real pin still uses, and unused companies that predate the tests', () => {
     expect(excludeE2e(data()).companies.map((c) => c.id)).toEqual([7, 200]);
   });

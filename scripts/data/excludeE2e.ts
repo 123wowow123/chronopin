@@ -5,8 +5,9 @@
 
 type Row = Record<string, any>;
 
-// tests/e2e/account.spec.ts signs up as e2e-<stamp>@example.com.
-const E2E_EMAIL = /^e2e-[a-z0-9]+@example\.com$/i;
+// The e2e specs sign up as e2e-<stamp>@example.com, some with a word of their
+// own in the middle (e2e-return-<stamp>@example.com).
+export const E2E_EMAIL = /^e2e-[a-z0-9-]+@example\.com$/i;
 
 export function e2eUserIds(users: Row[]): Set<number> {
   return new Set(users.filter((u) => typeof u.email === 'string' && E2E_EMAIL.test(u.email)).map((u) => u.id));

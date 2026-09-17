@@ -58,7 +58,8 @@ why Apple accounts are looked up by `appleId` before email.
 | --- | --- |
 | `npm run dev` / `build` / `start` | Next.js development server, production build, production server |
 | `npm run typecheck` / `lint` / `test` | TypeScript, ESLint, Vitest unit tests |
-| `npm run test:e2e` | Playwright end-to-end tests against a running server (`BASE_URL`, default `http://localhost:3000`) |
+| `npm run test:e2e` | Playwright end-to-end tests against a running server (`BASE_URL`, default `http://localhost:3000`); removes the accounts and pins it made when it finishes |
+| `npm run clean:e2e` | Remove that test residue by hand (`-- --dry-run` to only list it) |
 | `npm run create:db` / `db:reset` | Apply pending schema files in `scripts/db/schema` / drop everything and reapply |
 | `npm run create:data` / `backup:data` | Seed the database from / back it up to `scripts/backup/*.json` |
 | `npm run search:refresh` | Empty and refill the FAISS index |
@@ -302,7 +303,7 @@ Node is pinned by `.nvmrc` (`nvm use`). Run `npm outdated` to list what packages
 
 ## Testing
 
-Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwright tests against a running app (`npm run build && npm start`, or `npm run dev`; `BASE_URL` picks the server).
+Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwright tests against a running app (`npm run build && npm start`, or `npm run dev`; `BASE_URL` picks the server). The e2e specs sign up throwaway accounts and post pins as them; the run removes both when it ends (`KEEP_E2E_DATA=1` keeps them for a look at a failure, and `npm run clean:e2e` removes them later). A run against a `BASE_URL` elsewhere leaves its own database alone.
 
 ## External API
 
@@ -361,8 +362,6 @@ https://nationaldaycalendar.com/march/
 
 - Drilldown Summery
   - Sentiment
-
-  - Mini timeline for multiple date point articles (highlight date mined for mini timeline)
 
   - Historically happens on date
   - RSS/Atom summary
@@ -490,6 +489,9 @@ https://fortune.com/2026/09/11/openai-astra-chatgpt-pro-pause/
 - localization & multilingual
 
 - build list for daily scraper and add search engine trending search in the job too
+
+- scrape articles like this to make a graph of project chips to sell and variance
+https://www.cnbc.com/2026/09/17/nvidia-huang-ai-chip-guidance.html
 
 
 ## Reminder: MyAnimeList top-anime scrape (in progress, resume later)

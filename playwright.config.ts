@@ -4,6 +4,8 @@ import { defineConfig, devices } from '@playwright/test';
 // npm run dev). BASE_URL picks the server; the default is a local one.
 export default defineConfig({
   testDir: './tests/e2e',
+  // The accounts and pins the specs make are removed when the run ends.
+  globalTeardown: './tests/e2e/cleanup.ts',
   fullyParallel: false,
   retries: 0,
   reporter: 'list',
