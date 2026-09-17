@@ -38,7 +38,8 @@ function floorToUtcDay(value: unknown) {
   if (isNaN(date.getTime())) {
     return value;
   }
-  return new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+  // setUTCFullYear rather than Date.UTC, which reads years 0-99 as 1900-1999.
+  return new Date(new Date(0).setUTCFullYear(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
 }
 
 // The view returns one row per pin x medium x merchant, with the joined

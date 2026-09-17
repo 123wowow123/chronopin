@@ -3,6 +3,7 @@
 // the last, exclusive); the form works in the viewer's local calendar.
 
 import { addDays, pickDates } from './dateClaims';
+import { compareDayKeys, dayKeyOf, dayKeyParts, dayKeyToMs } from './format';
 import type { MediumJson, MerchantJson, PinJson, PinRatingJson, PinReferenceJson } from './types';
 
 // What /api/scrape answers: a draft pin, plus the promotional video it found
@@ -90,10 +91,33 @@ export const EMPTY_FORM: PinFormValues = {
   ratings: [],
 };
 
+// The form's dates are day keys (src/lib/format.ts), so a BC pin's survive
+// the round trip: 2561 BC is "-2560-01-01".
 const pad = (n: number) => String(n).padStart(2, '0');
-const localDate = (d: Date) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const localDate = (d: Date) => dayKeyOf(d.getFullYear(), d.getMonth() + 1, d.getDate());
 const localTime = (d: Date) => `${pad(d.getHours())}:${pad(d.getMinutes())}`;
-const utcDate = (d: Date) => d.toISOString().slice(0, 10);
+const utcDate = (d: Date) => dayKeyOf(d.getUTCFullYear(), d.getUTCMonth() + 1, d.getUTCDate());
+
+export type Era = 'AD' | 'BC';
+
+export function eraOf(key: string): Era {
+  return key && dayKeyParts(key)[0] <= 0 ? 'BC' : 'AD';
+}
+
+// What a date input shows for a day key: the year as written, its era beside
+// it. An <input type="date"> has no BC, so 2561 BC is shown as 2561.
+export function dateInputValue(key: string): string {
+  if (!key) return '';
+  const [y, m, d] = dayKeyParts(key);
+  return y > 0 ? key : dayKeyOf(1 - y, m, d);
+}
+
+// The day key for what a date input holds, read in an era.
+export function dayKeyFromInput(value: string, era: Era): string {
+  if (!value) return '';
+  const [y, m, d] = dayKeyParts(value);
+  return era === 'BC' ? dayKeyOf(1 - y, m, d) : dayKeyOf(y, m, d);
+}
 
 // The date fields for a pin. An all-day pin's exclusive end becomes its last
 // day, and is dropped when that is the start day.
@@ -103,7 +127,7 @@ export function datesToForm(pin: Pick<PinJson, 'utcStartDateTime' | 'utcEndDateT
   if (pin.allDay) {
     const startDate = start ? utcDate(start) : '';
     let endDate = end ? addDays(utcDate(end), -1) : '';
-    if (endDate && (!startDate || endDate <= startDate)) endDate = '';
+    if (endDate && (!startDate || compareDayKeys(endDate, startDate) <= 0)) endDate = '';
     return { startDate, startTime: '', endDate, endTime: '' };
   }
   return {
@@ -120,18 +144,22 @@ export function formToDates(values: Pick<PinFormValues, 'allDay' | 'startDate' |
     return { utcStartDateTime: undefined, utcEndDateTime: undefined };
   }
   if (values.allDay) {
-    const start = `${values.startDate}T00:00:00.000Z`;
-    const end = values.endDate && values.endDate > values.startDate ? `${addDays(values.endDate, 1)}T00:00:00.000Z` : undefined;
+    // toISOString writes a BC year as "-002560", which Date and the server read back.
+    const start = new Date(dayKeyToMs(values.startDate)).toISOString();
+    const end = values.endDate && compareDayKeys(values.endDate, values.startDate) > 0 ? new Date(dayKeyToMs(addDays(values.endDate, 1))).toISOString() : undefined;
     return { utcStartDateTime: start, utcEndDateTime: end };
   }
   const toInstant = (date: string, time: string) => {
-    const [y, m, d] = date.split('-').map(Number);
+    const [y, m, d] = dayKeyParts(date);
     const [hh, mm] = (time || '00:00').split(':').map(Number);
-    return new Date(y, m - 1, d, hh, mm).toISOString();
+    // The year set on its own: new Date(y, ...) reads years 0-99 as 1900-1999.
+    const instant = new Date(2000, 0, 1, hh, mm);
+    instant.setFullYear(y, m - 1, d);
+    return instant.toISOString();
   };
   const start = toInstant(values.startDate, values.startTime);
   const end = values.endDate ? toInstant(values.endDate, values.endTime) : undefined;
-  return { utcStartDateTime: start, utcEndDateTime: end && end > start ? end : undefined };
+  return { utcStartDateTime: start, utcEndDateTime: end && Date.parse(end) > Date.parse(start) ? end : undefined };
 }
 
 const str = (v: unknown) => (v == null ? '' : String(v));

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { formatDay } from '@/components/pin/DateRanges';
 import { PinCard } from '@/components/pin/PinCard';
 import { PinRatings } from '@/components/pin/PinRatings';
 import { Icon } from '@/components/ui/Icon';
@@ -13,7 +14,21 @@ import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useSession } from '@/lib/client/session';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { isLowConfidence } from '@/lib/dateClaims';
-import { applyScrape, EMPTY_FORM, formDates, formToPin, pinToForm, type PinFormValues, type ReferenceFormValues, type ScrapedPin } from '@/lib/pinForm';
+import { compareDayKeys, dayKeyIn } from '@/lib/format';
+import {
+  applyScrape,
+  dateInputValue,
+  dayKeyFromInput,
+  EMPTY_FORM,
+  eraOf,
+  type Era,
+  formDates,
+  formToPin,
+  pinToForm,
+  type PinFormValues,
+  type ReferenceFormValues,
+  type ScrapedPin,
+} from '@/lib/pinForm';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { pinPath } from '@/lib/seo';
 import type { CardPin, MediumJson, PinJson } from '@/lib/types';
@@ -24,6 +39,32 @@ const CONFIDENCE_LEVELS = ['confirmed', 'scheduled', 'estimated', 'delayed', 'un
 
 const inputClass = 'field';
 const labelClass = 'field-label';
+
+// A day with its era. <input type="date"> has no BC, so the year is typed as
+// written ("2561") and AD or BC is picked beside it; value is a day key.
+function DayInput({ id, label, value, onChange, required, min }: { id: string; label: string; value: string; onChange: (key: string) => void; required?: boolean; min?: string }) {
+  // The era picked before a date is typed; once typed, the date carries its own.
+  const [blankEra, setBlankEra] = useState<Era>('AD');
+  const era = value ? eraOf(value) : blankEra;
+  return (
+    <>
+      <input id={id} type="date" required={required} min={min} className={`${inputClass} min-w-[9.75rem] flex-1`} value={dateInputValue(value)} onChange={(e) => onChange(dayKeyFromInput(e.target.value, era))} />
+      <select
+        aria-label={`${label} era`}
+        className={`${inputClass} w-auto shrink-0`}
+        value={era}
+        onChange={(e) => {
+          const next = e.target.value as Era;
+          setBlankEra(next);
+          if (value) onChange(dayKeyFromInput(dateInputValue(value), next));
+        }}
+      >
+        <option value="AD">AD</option>
+        <option value="BC">BC</option>
+      </select>
+    </>
+  );
+}
 
 // The draft as the duplicate check sees it, or '' when it has too little to check.
 function duplicateCheckKey(values: PinFormValues) {
@@ -137,7 +178,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
       if (!/^https?:\/\//i.test(r.url.trim())) return setError('Each reference needs a link starting with http:// or https://.');
       const confidence = Number(r.confidence);
       if (r.confidence.trim() === '' || isNaN(confidence) || confidence < 0 || confidence > 100) return setError('Each reference needs a confidence from 0 to 100.');
-      if (r.startDate && r.endDate && r.endDate < r.startDate) return setError("A reference's end date cannot be before its start date.");
+      if (r.startDate && r.endDate && compareDayKeys(r.endDate, r.startDate) < 0) return setError("A reference's end date cannot be before its start date.");
     }
 
     setSaving(true);
@@ -253,18 +294,26 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
             <label htmlFor="startDate" className={labelClass}>
               Start
             </label>
-            <div className="flex gap-2">
-              <input id="startDate" type="date" required className={inputClass} value={values.startDate} onChange={(e) => set('startDate', e.target.value)} />
-              {!values.allDay ? <input aria-label="Start time" type="time" step={900} className={inputClass} value={values.startTime} onChange={(e) => set('startTime', e.target.value)} /> : null}
+            {/* Wraps, so a time too wide to sit beside the date and its era takes the next line. */}
+            <div className="flex flex-wrap gap-2">
+              <DayInput id="startDate" label="Start" required value={values.startDate} onChange={(key) => set('startDate', key)} />
+              {!values.allDay ? <input aria-label="Start time" type="time" step={900} className={`${inputClass} min-w-28 flex-1`} value={values.startTime} onChange={(e) => set('startTime', e.target.value)} /> : null}
             </div>
           </div>
           <div>
             <label htmlFor="endDate" className={labelClass}>
               End <span className="font-normal text-subtle">(optional)</span>
             </label>
-            <div className="flex gap-2">
-              <input id="endDate" type="date" min={values.startDate} className={inputClass} value={values.endDate} onChange={(e) => set('endDate', e.target.value)} />
-              {!values.allDay ? <input aria-label="End time" type="time" step={900} className={inputClass} value={values.endTime} onChange={(e) => set('endTime', e.target.value)} /> : null}
+            <div className="flex flex-wrap gap-2">
+              <DayInput
+                id="endDate"
+                label="End"
+                // The browser compares min as a plain AD date, so only while both are AD.
+                min={eraOf(values.startDate) === 'AD' && eraOf(values.endDate) === 'AD' ? values.startDate : undefined}
+                value={values.endDate}
+                onChange={(key) => set('endDate', key)}
+              />
+              {!values.allDay ? <input aria-label="End time" type="time" step={900} className={`${inputClass} min-w-28 flex-1`} value={values.endTime} onChange={(e) => set('endTime', e.target.value)} /> : null}
             </div>
           </div>
         </div>
@@ -547,8 +596,6 @@ function ReferencesEditor({
   );
 }
 
-const dayFormat = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
-const formatDay = (ymd: string) => dayFormat.format(new Date(`${ymd}T00:00:00Z`));
 
 function hostOf(url: string) {
   try {
@@ -565,7 +612,7 @@ function OverriddenDates({ picked, allDay }: { picked: ReturnType<typeof formDat
   if (!start) return null;
   const when = (value: string, isEnd = false) =>
     allDay
-      ? formatDay(new Date(new Date(value).getTime() - (isEnd ? 86400000 : 0)).toISOString().slice(0, 10))
+      ? formatDay(dayKeyIn(new Date(value).getTime() - (isEnd ? 86400000 : 0), 'UTC'))
       : new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(value));
   const by = [picked.startFrom && ['start', picked.startFrom], picked.endFrom && ['end', picked.endFrom]].filter(Boolean) as [string, { url: string; confidence: number }][];
   return (

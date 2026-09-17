@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { SearchResults } from '@/components/timeline/SearchResults';
+import { monthDayOf } from '@/lib/format';
 import { DEFAULT_POSTED_WITHIN, spanFromParam } from '@/lib/postedSpan';
 import { toCardPins } from '@/lib/sanitize';
 import { pinDayKey } from '@/lib/timeline';
@@ -51,7 +52,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
   const all = specialtyDays as Record<string, string[]>;
   const days: Record<string, string[]> = {};
   for (const pin of page.pins) {
-    const key = pinDayKey(pin, timeZone).slice(5);
+    const key = monthDayOf(pinDayKey(pin, timeZone));
     days[key] = all[key] || [];
   }
   const now = new Date();

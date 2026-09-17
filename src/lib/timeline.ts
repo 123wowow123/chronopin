@@ -3,11 +3,11 @@
 // instant; an all-day pin (and a date marker) is stored at 00:00Z of its date,
 // so it lands on that date wherever the viewer is.
 
-import { dayKeyIn, daysBetween } from './format';
+import { compareDayKeys, dayKeyIn, daysBetween } from './format';
 import type { DateTimeJson, PinJson } from './types';
 
 export type Bag = {
-  // "2026-09-14"
+  // "2026-09-14", or "-2560-01-01" for 2561 BC (see dayKeyOf)
   day: string;
   pins: PinJson[];
   dateTimes: DateTimeJson[];
@@ -28,9 +28,9 @@ export function pinTense(
 ): PinTense {
   if (pin.allDay) {
     const startDay = dayKeyIn(pin.utcStartDateTime, 'UTC');
-    if (startDay > todayKey) return 'future';
+    if (compareDayKeys(startDay, todayKey) > 0) return 'future';
     const endDay = pin.utcEndDateTime ? dayKeyIn(pin.utcEndDateTime, 'UTC') : null;
-    return (endDay ? endDay <= todayKey : startDay < todayKey) ? 'past' : 'ongoing';
+    return (endDay ? compareDayKeys(endDay, todayKey) <= 0 : compareDayKeys(startDay, todayKey) < 0) ? 'past' : 'ongoing';
   }
   const at = new Date(now).getTime();
   if (new Date(pin.utcStartDateTime).getTime() > at) return 'future';
@@ -72,7 +72,7 @@ export function buildBags(pins: PinJson[], dateTimes: DateTimeJson[], timeZone: 
 
   return [...bags.values()]
     .map((bag) => ({ ...bag, pins: bag.pins.sort(byStart), dateTimes: bag.dateTimes.sort(byStart) }))
-    .sort((a, b) => a.day.localeCompare(b.day));
+    .sort((a, b) => compareDayKeys(a.day, b.day));
 }
 
 export type TodayMarker = {

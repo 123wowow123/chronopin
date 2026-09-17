@@ -44,4 +44,9 @@ describe('pinDateRanges', () => {
     expect(pinDateRanges(timed, 'America/Los_Angeles').start?.earliest).toBe('2026-10-01');
     expect(pinDateRanges(timed, 'America/Los_Angeles').end).toBeUndefined();
   });
+
+  it('keeps a BC day as a day key rather than dropping its era', () => {
+    const ancient = { allDay: true, utcStartDateTime: '-002560-01-01T00:00:00.000Z', dateConfidence: 'estimated', references: [] };
+    expect(pinDateRanges(ancient, 'UTC').start?.best.day).toBe('-2560-01-01');
+  });
 });

@@ -58,10 +58,43 @@ export function pluralize(word: string, count: number | string, inclusive = true
 
 const DAY_MS = 86_400_000;
 
-// A date key ("2026-09-14") to its UTC midnight in ms.
+// Day keys ("2026-09-14") name a calendar day in the proleptic Gregorian
+// calendar. The year is astronomical and at least four digits: 1 BC is "0000"
+// and 2561 BC "-2560", so the timeline's oldest pins get keys of their own
+// rather than the year Intl prints without its era. Compare keys with
+// compareDayKeys, never as strings: "-2560" is not before "-0279" as text. The
+// month and day are always the last five characters (monthDayOf).
+
+export function dayKeyOf(year: number, month: number, day: number): string {
+  const pad = (n: number, width: number) => String(Math.abs(n)).padStart(width, '0');
+  return `${year < 0 ? '-' : ''}${pad(year, 4)}-${pad(month, 2)}-${pad(day, 2)}`;
+}
+
+export function dayKeyParts(key: string): [year: number, month: number, day: number] {
+  const match = /^(-?\d+)-(\d{2})-(\d{2})$/.exec(key);
+  if (!match) throw new Error(`Not a day key: ${key}`);
+  return [Number(match[1]), Number(match[2]), Number(match[3])];
+}
+
+// "09-14", for what recurs every year (specialty days).
+export function monthDayOf(key: string): string {
+  return key.slice(-5);
+}
+
+// UTC midnight in ms. Date.UTC reads years 0-99 as 1900-1999, so the year is
+// set on its own; months past 12 roll over as Date.UTC's do.
+function utcMidnight(year: number, month: number, day: number): number {
+  return new Date(0).setUTCFullYear(year, month - 1, day);
+}
+
+// A date key to its UTC midnight in ms.
 export function dayKeyToMs(key: string): number {
-  const [y, m, d] = key.split('-').map(Number);
-  return Date.UTC(y, m - 1, d);
+  return utcMidnight(...dayKeyParts(key));
+}
+
+// For sorting: negative when a is the earlier day.
+export function compareDayKeys(a: string, b: string): number {
+  return dayKeyToMs(a) - dayKeyToMs(b);
 }
 
 // Whole days from `fromKey` to `toKey` (positive when toKey is later).
@@ -85,12 +118,12 @@ export function timespan(fromTodayKey: string, dayKey: string, format: 'd' | 'y'
 // Fractional years between two date keys, the way moment's diff(..., 'years',
 // true) measures it: whole months, then the part month by its own length.
 function yearsBetween(fromKey: string, toKey: string): number {
-  const [fy, fm, fd] = fromKey.split('-').map(Number);
-  const [ty, tm, td] = toKey.split('-').map(Number);
+  const [fy, fm, fd] = dayKeyParts(fromKey);
+  const [ty, tm, td] = dayKeyParts(toKey);
   const wholeMonths = (ty - fy) * 12 + (tm - fm);
-  const anchor = Date.UTC(fy, fm - 1 + wholeMonths, fd);
-  const target = Date.UTC(ty, tm - 1, td);
-  const next = Date.UTC(fy, fm - 1 + wholeMonths + (target >= anchor ? 1 : -1), fd);
+  const anchor = utcMidnight(fy, fm + wholeMonths, fd);
+  const target = utcMidnight(ty, tm, td);
+  const next = utcMidnight(fy, fm + wholeMonths + (target >= anchor ? 1 : -1), fd);
   const fraction = (target - anchor) / Math.abs(next - anchor);
   return (wholeMonths + fraction) / 12;
 }
@@ -131,22 +164,38 @@ export function weekdayPlanet(dayKey: string) {
   return { ...WEEKDAYS[weekday], weekday: name };
 }
 
-// "09/14/2026" for a date key.
+// A year as people write it: "2026", "79", "2561 BC".
+function yearLabel(year: number): string {
+  return year > 0 ? String(year) : `${1 - year} BC`;
+}
+
+// "09/14/2026" for a date key; "01/01/2561 BC" before the common era.
 export function formatDayKey(dayKey: string): string {
-  const [y, m, d] = dayKey.split('-');
-  return `${m}/${d}/${y}`;
+  const [y, m, d] = dayKeyParts(dayKey);
+  return `${String(m).padStart(2, '0')}/${String(d).padStart(2, '0')}/${yearLabel(y)}`;
 }
 
 // The calendar date ("2026-09-14") an instant falls on in a time zone.
 export function dayKeyIn(instant: Date | string | number, timeZone: string): string {
   const parts = dateFormat('en-CA', {
     timeZone,
+    era: 'short',
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
   }).formatToParts(new Date(instant));
   const get = (type: string) => parts.find((p) => p.type === type)!.value;
-  return `${get('year')}-${get('month')}-${get('day')}`;
+  const year = Number(get('year'));
+  return dayKeyOf(get('era') === 'BC' ? 1 - year : year, Number(get('month')), Number(get('day')));
+}
+
+// " BC" for an instant before the common era in that zone, else nothing: for
+// the en-US dates beside a pin, which print 2561 BC as plain "2561".
+function eraSuffix(d: Date, timeZone: string): string {
+  const era = dateFormat('en-US', { timeZone, era: 'short', year: 'numeric' })
+    .formatToParts(d)
+    .find((p) => p.type === 'era')?.value;
+  return era === 'BC' ? ' BC' : '';
 }
 
 // "09/12/2026 at 9:02 pm" in a time zone.
@@ -166,10 +215,10 @@ export function formatStart(
 ): string {
   const d = new Date(pin.utcStartDateTime);
   if (pin.allDay) {
-    const date = dateFormat('en-US', { timeZone: 'UTC', month: '2-digit', day: '2-digit', year: 'numeric' }).format(d);
+    const date = dateFormat('en-US', { timeZone: 'UTC', month: '2-digit', day: '2-digit', year: 'numeric' }).format(d) + eraSuffix(d, 'UTC');
     return `Starts ${date}${allDaySuffix ? ' - All day' : ''}`;
   }
-  const date = dateFormat('en-US', { timeZone, month: '2-digit', day: '2-digit', year: 'numeric' }).format(d);
+  const date = dateFormat('en-US', { timeZone, month: '2-digit', day: '2-digit', year: 'numeric' }).format(d) + eraSuffix(d, timeZone);
   const time = dateFormat('en-US', { timeZone, hour: 'numeric', minute: '2-digit' }).format(d).replace(' ', '');
   return `Starts ${date} ${time}`;
 }

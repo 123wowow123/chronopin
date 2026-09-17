@@ -11,7 +11,7 @@ import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
 import { useTodayHold } from '@/lib/client/todayHold';
 import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';
-import { daysBetween, dayKeyIn } from '@/lib/format';
+import { daysBetween, dayKeyIn, monthDayOf } from '@/lib/format';
 import { formatSpan, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSpan';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
@@ -138,7 +138,7 @@ export function Timeline({
   const router = useRouter();
 
   useEffect(() => {
-    if (bags.some((bag) => !(bag.day.slice(5) in specialtyDays))) {
+    if (bags.some((bag) => !(monthDayOf(bag.day) in specialtyDays))) {
       loadSpecialtyDays().then((all) => setSpecialtyDays(all));
     }
   }, [bags, specialtyDays]);
@@ -376,11 +376,11 @@ export function Timeline({
         <div className="relative lg:before:absolute lg:before:top-0 lg:before:bottom-0 lg:before:left-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']">
           {bags.map((bag, index) => (
             <div key={bag.day}>
-              {marker.index === index ? <TodayMarker specialtyDays={specialtyDays[todayKey.slice(5)] || []} /> : null}
+              {marker.index === index ? <TodayMarker specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}
               <TimeBlock
                 bag={bag}
                 todayKey={todayKey}
-                specialtyDays={specialtyDays[bag.day.slice(5)] || []}
+                specialtyDays={specialtyDays[monthDayOf(bag.day)] || []}
                 serverTimeZone={serverTimeZone}
                 // The first bag is what paints before hydration scrolls to
                 // today, so both hold a likely LCP image.
@@ -388,7 +388,7 @@ export function Timeline({
               />
             </div>
           ))}
-          {marker.atEnd ? <TodayMarker specialtyDays={specialtyDays[todayKey.slice(5)] || []} /> : null}
+          {marker.atEnd ? <TodayMarker specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}
         </div>
 
         <div ref={bottomRef} aria-hidden className="h-px" />

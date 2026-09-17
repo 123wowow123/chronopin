@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { JsonLd } from '@/components/JsonLd';
 import { Timeline } from '@/components/timeline/Timeline';
 import { siteName } from '@/lib/appConfig';
-import { formatDayKey } from '@/lib/format';
+import { dayKeyIn, formatDayKey, monthDayOf } from '@/lib/format';
 import { DEFAULT_POSTED_WITHIN, isSpan, spanFromParam } from '@/lib/postedSpan';
 import { toCardPins } from '@/lib/sanitize';
 import { websiteJsonLd } from '@/lib/seo';
@@ -75,8 +75,8 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
   const days: Record<string, string[]> = {};
   const all = specialtyDays as Record<string, string[]>;
   for (const key of [
-    ...page.pins.map((p) => pinDayKey(p, timeZone).slice(5)),
-    ...page.dateTimes.map((d) => d.utcStartDateTime.slice(5, 10)),
+    ...page.pins.map((p) => monthDayOf(pinDayKey(p, timeZone))),
+    ...page.dateTimes.map((d) => monthDayOf(dayKeyIn(d.utcStartDateTime, 'UTC'))),
     new Intl.DateTimeFormat('en-CA', { timeZone, month: '2-digit', day: '2-digit' }).format(new Date()).replace('/', '-'),
   ]) {
     days[key] = all[key] || [];

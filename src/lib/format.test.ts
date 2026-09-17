@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { averageRating, compactCount, dayKeyIn, formatPosted, formatStart, money, plainText, ratingScore, timeAgo, timespan, weekdayPlanet } from './format';
-import { buildBags, resolveTodayMarker } from './timeline';
+import { averageRating, compactCount, dayKeyIn, daysBetween, formatDayKey, formatPosted, formatStart, money, monthDayOf, plainText, ratingScore, timeAgo, timespan, weekdayPlanet } from './format';
+import { buildBags, pinTense, resolveTodayMarker } from './timeline';
 
 describe('money', () => {
   it('abbreviates large figures with the currency symbol', () => {
@@ -52,6 +52,27 @@ describe('dates', () => {
     expect(formatStart({ utcStartDateTime: '2026-09-14T16:00:00Z' }, 'UTC')).toBe('Starts 09/14/2026 4:00PM');
   });
 
+  it('keys early and BC dates by astronomical year, padded to four digits', () => {
+    expect(dayKeyIn('-002560-01-01T00:00:00Z', 'UTC')).toBe('-2560-01-01');
+    expect(dayKeyIn('-000279-01-01T00:00:00Z', 'UTC')).toBe('-0279-01-01');
+    expect(dayKeyIn('0000-06-15T00:00:00Z', 'UTC')).toBe('0000-06-15');
+    expect(dayKeyIn('0079-08-24T00:00:00Z', 'UTC')).toBe('0079-08-24');
+    // Local midnight on 1 January AD 1 is still 1 BC a few hours west.
+    expect(dayKeyIn('0001-01-01T03:00:00Z', 'America/Los_Angeles')).toBe('0000-12-31');
+    expect(monthDayOf('-2560-01-01')).toBe('01-01');
+    expect(daysBetween('0000-12-31', '0001-01-01')).toBe(1);
+    expect(daysBetween('0079-08-24', '0079-08-25')).toBe(1);
+  });
+
+  it('labels early and BC dates with their era', () => {
+    expect(formatDayKey('2026-09-14')).toBe('09/14/2026');
+    expect(formatDayKey('-2560-01-01')).toBe('01/01/2561 BC');
+    expect(formatDayKey('0000-06-15')).toBe('06/15/1 BC');
+    expect(formatDayKey('0079-08-24')).toBe('08/24/79');
+    expect(formatStart({ utcStartDateTime: '-002560-01-01T00:00:00Z', allDay: true }, 'UTC')).toBe('Starts 01/01/2561 BC');
+    expect(timespan('2026-09-16', '-2560-01-01', 'y')).toBe('-4586.7 years');
+  });
+
   it('names the planet for the weekday', () => {
     expect(weekdayPlanet('2026-09-14')).toMatchObject({ planet: 'The Moon', glyph: 'A', weekday: 'Monday' });
   });
@@ -77,6 +98,16 @@ describe('timeline bags', () => {
       ['2026-09-13', [3, 1]],
       ['2026-09-14', [2]],
     ]);
+  });
+
+  it('orders BC and early AD days by date, not as text', () => {
+    const bags = buildBags(
+      [pin(1, '2026-09-14T00:00:00Z', true), pin(2, '-000279-01-01T00:00:00Z', true), pin(3, '-002560-01-01T00:00:00Z', true), pin(4, '0280-01-01T00:00:00Z', true)],
+      [],
+      'UTC',
+    );
+    expect(bags.map((b) => b.day)).toEqual(['-2560-01-01', '-0279-01-01', '0280-01-01', '2026-09-14']);
+    expect(pinTense(pin(3, '-002560-01-01T00:00:00Z', true), '2026-09-16T00:00:00Z', '2026-09-16')).toBe('past');
   });
 
   it('places the TODAY marker before the first future day', () => {

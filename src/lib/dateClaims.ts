@@ -1,4 +1,4 @@
-import { dateFormat } from './format';
+import { compareDayKeys, dayKeyIn, dayKeyOf, dayKeyToMs } from './format';
 // When a pin starts and ends, grounded by its references. The source gives the
 // pin's dates, rated by its dateConfidence; a reference can give a start date
 // and an end date of its own (calendar dates, the end inclusive). The pin uses
@@ -39,9 +39,11 @@ export function topReference<T extends Claimant>(references: T[] | undefined, ke
   return best && (sourceConfidence === undefined || Number(best.confidence) > sourceConfidence) ? best : undefined;
 }
 
-export function addDays(ymd: string, days: number): string {
-  const [y, m, d] = ymd.split('-').map(Number);
-  return new Date(Date.UTC(y, m - 1, d + days)).toISOString().slice(0, 10);
+// A day key moved by whole days (BC keys included, see dayKeyOf).
+export function addDays(key: string, days: number): string {
+  const date = new Date(dayKeyToMs(key));
+  date.setUTCDate(date.getUTCDate() + days);
+  return dayKeyOf(date.getUTCFullYear(), date.getUTCMonth() + 1, date.getUTCDate());
 }
 
 // Below this a date is shown as low confidence: under the source's
@@ -74,7 +76,7 @@ export function pickDates<T extends Claimant>(source: DateFields, references: T[
     // or at the time it starts.
     if (!source.allDay && !endTime) endTime = source.startTime;
   }
-  if (endDate && endDate < startDate) {
+  if (endDate && compareDayKeys(endDate, startDate) < 0) {
     endDate = '';
     endTime = '';
   }
@@ -84,7 +86,7 @@ export function pickDates<T extends Claimant>(source: DateFields, references: T[
 // --- Showing the range on a pin ---------------------------------------------
 
 export type DateClaim = {
-  day: string; // YYYY-MM-DD
+  day: string; // a day key: YYYY-MM-DD, or -YYYY-MM-DD before 1 BC
   confidence?: number;
   url?: string; // a reference's; none for the source
   isSource?: boolean;
@@ -112,10 +114,11 @@ function scoreOf(confidence: number | string | null | undefined): number | undef
 function dayOf(value: string, allDay: boolean | undefined, timeZone: string, isEnd = false): string | undefined {
   const time = new Date(value).getTime();
   if (isNaN(time)) return undefined;
+  // Day keys, so a BC pin's day keeps its era (see dayKeyOf).
   if (allDay) {
-    return new Date(isEnd ? time - DAY_MS : time).toISOString().slice(0, 10);
+    return dayKeyIn(isEnd ? time - DAY_MS : time, 'UTC');
   }
-  return dateFormat('en-CA', { year: 'numeric', month: '2-digit', day: '2-digit', timeZone }).format(time);
+  return dayKeyIn(time, timeZone);
 }
 
 // Every claim on the pin's start and on its end, the source's first, and the
@@ -127,7 +130,7 @@ export function pinDateRanges(pin: RangePin, timeZone: string): { start?: DateRa
   const sourceEnd = overridden ? pin.sourceEndDateTime : pin.utcEndDateTime;
   const startDay = sourceStart ? dayOf(sourceStart, pin.allDay, timeZone) : undefined;
   let endDay = sourceEnd ? dayOf(sourceEnd, pin.allDay, timeZone, true) : undefined;
-  if (endDay && startDay && endDay <= startDay && pin.allDay) endDay = undefined;
+  if (endDay && startDay && compareDayKeys(endDay, startDay) <= 0 && pin.allDay) endDay = undefined;
 
   const range = (key: DateKey, sourceDay: string | undefined): DateRange | undefined => {
     // As in pickDates, a source without this date does not compete for it.
@@ -139,7 +142,7 @@ export function pinDateRanges(pin: RangePin, timeZone: string): { start?: DateRa
       if (day && YMD.test(day)) claims.push({ day, confidence: scoreOf(reference.confidence), url: reference.url, used: reference === top });
     }
     if (!claims.length) return undefined;
-    const days = claims.map((c) => c.day).sort();
+    const days = claims.map((c) => c.day).sort(compareDayKeys);
     const used = claims.find((c) => c.used);
     return { claims, earliest: days[0], latest: days[days.length - 1], used, best: used ?? claims[0] };
   };

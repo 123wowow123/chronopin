@@ -1,10 +1,12 @@
 import { type DateClaim, type DateRange, isLowConfidence } from '@/lib/dateClaims';
+import { dayKeyParts, dayKeyToMs } from '@/lib/format';
 import { confidenceClass } from './PinConfidence';
 
 const dayFormat = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
-const toDate = (ymd: string) => new Date(`${ymd}T00:00:00Z`);
 
-export const formatDay = (ymd: string) => dayFormat.format(toDate(ymd));
+// "Jan 1, 2027"; "Jan 1, 2561 BC" for a day key before the common era, which
+// en-US prints as plain "2561".
+export const formatDay = (ymd: string) => dayFormat.format(dayKeyToMs(ymd)) + (dayKeyParts(ymd)[0] <= 0 ? ' BC' : '');
 
 function hostname(url: string) {
   try {
@@ -44,7 +46,7 @@ function Range({ label, range }: { label: string; range: DateRange }) {
         ) : null}
         <span className="text-subtle">
           from {best.isSource ? 'the source' : hostname(best.url || '')}
-          {spread ? <> · possible {dayFormat.formatRange(toDate(range.earliest), toDate(range.latest))}</> : null}
+          {spread ? <> · possible {dayFormat.formatRange(dayKeyToMs(range.earliest), dayKeyToMs(range.latest))}</> : null}
         </span>
       </dd>
     </>

@@ -12,7 +12,7 @@ import { useTodayHold } from '@/lib/client/todayHold';
 import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
 import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';
-import { dayKeyIn } from '@/lib/format';
+import { dayKeyIn, monthDayOf } from '@/lib/format';
 import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, eventSpanSummary, formatSpan, offsetDate, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSpan';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, pinDayKey, pinTense, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
@@ -212,7 +212,7 @@ export function SearchResults({
 
   useEffect(() => {
     if (!datePins) return;
-    const missing = datePins.some((pin) => !(pinDayKey(pin, timeZone).slice(5) in specialtyDays));
+    const missing = datePins.some((pin) => !(monthDayOf(pinDayKey(pin, timeZone)) in specialtyDays));
     if (missing) loadSpecialtyDays().then((all) => setSpecialtyDays(all));
   }, [datePins, specialtyDays, timeZone]);
 
@@ -372,11 +372,11 @@ export function SearchResults({
         <div hidden={sortBy !== 'date'} className={rail}>
           {bags.map((bag, index) => (
             <div key={bag.day}>
-              {marker.index === index ? <TodayMarker specialtyDays={specialtyDays[todayKey.slice(5)] || []} /> : null}
-              <TimeBlock bag={bag} todayKey={todayKey} specialtyDays={specialtyDays[bag.day.slice(5)] || []} serverTimeZone={serverTimeZone} />
+              {marker.index === index ? <TodayMarker specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}
+              <TimeBlock bag={bag} todayKey={todayKey} specialtyDays={specialtyDays[monthDayOf(bag.day)] || []} serverTimeZone={serverTimeZone} />
             </div>
           ))}
-          {marker.atEnd ? <TodayMarker specialtyDays={specialtyDays[todayKey.slice(5)] || []} /> : null}
+          {marker.atEnd ? <TodayMarker specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}
         </div>
         <div ref={bottomRef} hidden={sortBy !== 'date'} aria-hidden className="h-px" />
       </div>

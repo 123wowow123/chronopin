@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { applyScrape, EMPTY_FORM, formDates, formToDates, formToPin, pinToForm } from './pinForm';
+import { addDays } from './dateClaims';
+import { applyScrape, dateInputValue, datesToForm, dayKeyFromInput, EMPTY_FORM, eraOf, formDates, formToDates, formToPin, pinToForm } from './pinForm';
 import type { PinJson } from './types';
 
 const stored: PinJson = {
@@ -228,5 +229,41 @@ describe('dates from the most confident claim', () => {
     const picked = formDates({ ...timed, references: [reference('80', '2026-10-03', '2026-10-04')] });
     expect(picked.dates.utcStartDateTime).toBe(new Date(2026, 9, 3, 19, 30).toISOString());
     expect(picked.dates.utcEndDateTime).toBe(new Date(2026, 9, 4, 19, 30).toISOString());
+  });
+});
+
+describe('BC and early dates in the form', () => {
+  it('loads a BC all-day pin as a day key and saves the same instant back', () => {
+    const fields = datesToForm({ allDay: true, utcStartDateTime: '-002560-01-01T00:00:00.000Z', utcEndDateTime: '-002560-01-04T00:00:00.000Z' });
+    expect(fields).toEqual({ startDate: '-2560-01-01', startTime: '', endDate: '-2560-01-03', endTime: '' });
+    expect(formToDates({ allDay: true, ...fields })).toEqual({
+      utcStartDateTime: '-002560-01-01T00:00:00.000Z',
+      utcEndDateTime: '-002560-01-04T00:00:00.000Z',
+    });
+  });
+
+  it('keeps years 0-99 instead of reading them as the 1900s', () => {
+    expect(formToDates({ allDay: true, startDate: '0079-08-24', startTime: '', endDate: '', endTime: '' }).utcStartDateTime).toBe('0079-08-24T00:00:00.000Z');
+    const timed = formToDates({ allDay: false, startDate: '0079-08-24', startTime: '13:00', endDate: '', endTime: '' });
+    expect(new Date(timed.utcStartDateTime!).getFullYear()).toBe(79);
+    expect(datesToForm({ allDay: false, utcStartDateTime: timed.utcStartDateTime! }).startDate).toBe('0079-08-24');
+  });
+
+  it('shows a BC day as its written year with the era beside it', () => {
+    expect(dateInputValue('-2560-01-01')).toBe('2561-01-01');
+    expect(dateInputValue('2026-09-14')).toBe('2026-09-14');
+    expect(eraOf('-2560-01-01')).toBe('BC');
+    expect(eraOf('0000-06-15')).toBe('BC');
+    expect(eraOf('0001-06-15')).toBe('AD');
+    expect(eraOf('')).toBe('AD');
+    expect(dayKeyFromInput('2561-01-01', 'BC')).toBe('-2560-01-01');
+    expect(dayKeyFromInput('0001-06-15', 'BC')).toBe('0000-06-15');
+    expect(dayKeyFromInput('2026-09-14', 'AD')).toBe('2026-09-14');
+  });
+
+  it('moves day keys across months, years and eras', () => {
+    expect(addDays('2026-12-31', 1)).toBe('2027-01-01');
+    expect(addDays('0000-12-31', 1)).toBe('0001-01-01');
+    expect(addDays('-2560-01-01', -1)).toBe('-2561-12-31');
   });
 });
