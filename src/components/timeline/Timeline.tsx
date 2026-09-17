@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { parseLinkHeader } from '@/lib/client/api';
 import { onLive } from '@/lib/client/liveFeed';
@@ -10,12 +11,12 @@ import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
 import { useTodayHold } from '@/lib/client/todayHold';
 import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';
-import { dayKeyIn } from '@/lib/format';
+import { daysBetween, dayKeyIn } from '@/lib/format';
 import { formatSpan, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSpan';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
-import { buildBags, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
+import { buildBags, pinDayKey, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { CardPin, DateTimeJson, NewPin, TimelinePage, TrendingPin } from '@/lib/types';
 import { categoryPillSummary, SearchCategoryFilter } from './CategoryFilter';
@@ -49,6 +50,12 @@ function toNewPin(pin: CardPin): NewPin {
   };
 }
 
+// The pin a timeline opened on (the pin page's "To timeline"): the timeline
+// starts there, centred, rather than on today.
+type Focus = { id: number; utcStartDateTime: string; allDay?: boolean };
+
+const NO_TODAY_MARKER: ReturnType<typeof resolveTodayMarker> = { index: -1, atEnd: false, todayBagIndex: -1 };
+
 async function fetchPage(query: string): Promise<{ page: TimelinePage; links: Links }> {
   const res = await fetch(`/api/main${query}`, { credentials: 'same-origin' });
   if (!res.ok) {
@@ -62,6 +69,7 @@ async function fetchPage(query: string): Promise<{ page: TimelinePage; links: Li
 // The home timeline: the first page arrives server-rendered; earlier and later
 // pages load as the reader scrolls toward either end.
 export function Timeline({
+  focus,
   initialPins,
   initialDateTimes,
   initialLinks,
@@ -76,6 +84,7 @@ export function Timeline({
   trending,
   newPins: initialNewPins,
 }: {
+  focus: Focus | null;
   initialPins: CardPin[];
   initialDateTimes: DateTimeJson[];
   initialLinks: Links;
@@ -117,7 +126,16 @@ export function Timeline({
 
   const todayKey = dayKeyIn(now, timeZone);
   const bags = useMemo(() => buildBags(pins, dateTimes, timeZone), [pins, dateTimes, timeZone]);
-  const marker = resolveTodayMarker(bags, todayKey);
+  // Opened on a pin far from today, the pages loaded may not reach it yet: no
+  // TODAY marker at the edge of that stretch until they do. A timeline opened
+  // on today always reaches it.
+  const reachesToday =
+    !focus ||
+    (bags.length > 0 &&
+      (daysBetween(bags[0].day, todayKey) >= 0 || !links.previous) &&
+      (daysBetween(todayKey, bags[bags.length - 1].day) >= 0 || !links.next));
+  const marker = reachesToday ? resolveTodayMarker(bags, todayKey) : NO_TODAY_MARKER;
+  const router = useRouter();
 
   useEffect(() => {
     if (bags.some((bag) => !(bag.day.slice(5) in specialtyDays))) {
@@ -137,13 +155,55 @@ export function Timeline({
   // above it finish growing.
   const holdToday = useTodayHold(scrollToToday);
 
-  // Open on today, once the first page is on screen.
+  // The focused pin's card, or its day when the card is not drawn (hidden in
+  // a duplicate stack, or filtered out).
+  const focusTarget = useCallback(
+    () => (focus ? (document.getElementById(`pin-${focus.id}`) ?? document.getElementById(`day-${pinDayKey(focus, timeZone)}`)) : null),
+    [focus, timeZone],
+  );
+  const scrollToFocus = useCallback(() => {
+    const el = focusTarget();
+    // In the middle of the window, unless it is too tall to fit there. Only as
+    // near as the page scrolls: near either end of the timeline it stops short.
+    el?.scrollIntoView({ block: el.offsetHeight > window.innerHeight * 0.8 ? 'start' : 'center' });
+  }, [focusTarget]);
+  // Held the same way as today, while the cards above it grow.
+  const holdFocus = useTodayHold(scrollToFocus);
+  const flashed = useRef(false);
+
+  // Open on the focused pin, or on today, once the first page is on screen.
   useLayoutEffect(() => {
-    if (!scrolledToToday.current && bags.length) {
+    if (scrolledToToday.current || !bags.length) return;
+    scrolledToToday.current = true;
+    const target = focusTarget();
+    if (!target) {
       holdToday();
-      scrolledToToday.current = true;
+      return;
     }
-  }, [bags, holdToday]);
+    holdFocus();
+    // A moment's outline, so the eye lands on the card it came back to.
+    const card = target.querySelector('article');
+    if (card && !flashed.current && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      flashed.current = true;
+      const ring = getComputedStyle(document.documentElement).getPropertyValue('--color-link').trim();
+      // Delayed and long enough to outlast the page still loading around it.
+      card.animate(
+        [{ boxShadow: `0 0 0 3px ${ring}` }, { boxShadow: `0 0 0 3px ${ring}`, offset: 0.65 }, { boxShadow: '0 0 0 3px transparent' }],
+        { duration: 3000, delay: 300, easing: 'ease-out' },
+      );
+    }
+  }, [bags, focusTarget, holdFocus, holdToday]);
+
+  // Today is not among the pages loaded (the timeline opened on a pin far from
+  // it): open the timeline on today instead, keeping the posting window.
+  const goToToday = useCallback(() => {
+    if (reachesToday) {
+      holdToday();
+      return;
+    }
+    const posted = spanToParam(postedWithin, defaultPostedWithin);
+    router.push(posted ? `/?posted=${encodeURIComponent(posted)}` : '/');
+  }, [reachesToday, holdToday, postedWithin, defaultPostedWithin, router]);
   // After the effect above, so the position it records on mount is today's.
   useManualScrollRestoration();
 
@@ -291,7 +351,7 @@ export function Timeline({
         <FloatingControls
           summaryCaption="Posted within"
           summary={spanLabel(postedWithin)}
-          onToday={holdToday}
+          onToday={goToToday}
           category={{ summary: categoryPillSummary(), control: <SearchCategoryFilter postedWithin={postedWithin} /> }}
           aside={
             // Needs room for trending's heading and one row (basis-28), or both

@@ -109,7 +109,7 @@ function loadedAsMap() {
 // optionally narrowed to those posted recently (as the timeline's filter).
 // The navbar search works here as on the timeline: /map?q=...&f=watch shows
 // the search's pins, and category picks are category: terms in that query.
-// /map?pin=<id> (a pin page's "Show on map") centers on that pin, shows it
+// /map?pin=<id> (a pin page's "To map") centers on that pin, shows it
 // whatever the filters, and keeps its popup open until the map is clicked.
 export default function PinsMap() {
   const router = useRouter();
@@ -155,7 +155,7 @@ export default function PinsMap() {
     mapRef.current = map;
     layerRef.current = L.layerGroup().addTo(map);
     // Cache Components keeps a left page mounted and reruns its effects when
-    // it is shown again (back to the pin, "Show on map" again): the new map
+    // it is shown again (back to the pin, "To map" again): the new map
     // has not centered on anything or opened a popup yet.
     focusedRef.current = undefined;
     stickyRef.current = null;

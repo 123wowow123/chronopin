@@ -91,9 +91,9 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
                 ) : (
                   <span />
                 )}
-                <Link href={`/map?pin=${pin.id}`} className="flex shrink-0 items-center gap-1.5 text-link">
-                  <Icon name="map" className="size-4" />
-                  Show on map
+                <Link href={`/map?pin=${pin.id}`} className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset hover:text-ink hover:no-underline">
+                  <Icon name="map" className="size-3.5 text-link" />
+                  To map
                 </Link>
               </div>
               <PinMapLoader latitude={pin.latitude} longitude={pin.longitude} title={pin.title} />
@@ -181,6 +181,12 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
             </RefineLink>
           </>
         ) : null}
+        {/* Opens the timeline on this pin, centred, rather than on today. */}
+        {/* The same pill as the aside's "To map". */}
+        <Link href={`/?pin=${pin.id}`} className="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset hover:text-ink hover:no-underline">
+          <Icon name="timeline" className="size-3.5 text-link" />
+          To timeline
+        </Link>
       </div>
 
       {media.length ? (

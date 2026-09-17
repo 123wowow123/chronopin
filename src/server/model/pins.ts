@@ -73,8 +73,10 @@ export default class Pins extends BasePins<Pin> {
     return queryPage(false, false, fromDateTime, userId, lastPinId, pageSize, createdSince, minConfidence).then((res) => new Pins(res));
   }
 
-  static queryInitialByDate(fromDateTime: Date, userId: number, pageSizePrev: number, pageSizeNext: number, createdSince: Date | null | undefined, minConfidence: number | null) {
-    return queryInitialPage(false, fromDateTime, userId, pageSizePrev, pageSizeNext, createdSince, minConfidence).then((res) => new Pins(res));
+  // aroundPinId splits the page at that pin (starting at fromDateTime) rather
+  // than at the instant, so it is on the page however many pins share its start.
+  static queryInitialByDate(fromDateTime: Date, userId: number, pageSizePrev: number, pageSizeNext: number, createdSince: Date | null | undefined, minConfidence: number | null, aroundPinId = 0) {
+    return queryInitialPage(false, fromDateTime, userId, pageSizePrev, pageSizeNext, createdSince, minConfidence, aroundPinId).then((res) => new Pins(res));
   }
 
   static queryForwardByDateFilterByHasFavorite(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince?: Date | null) {
@@ -477,7 +479,8 @@ function queryPage(
 }
 
 // The first page: the pageSizePrev pins before fromDateTime and the
-// pageSizeNext pins from it on, oldest first.
+// pageSizeNext pins from it on, oldest first. With aroundPinId the split is at
+// that pin, which leads the later half.
 async function queryInitialPage(
   onlyFavorites: boolean,
   fromDateTime: Date,
@@ -486,10 +489,11 @@ async function queryInitialPage(
   pageSizeNext: number,
   createdSince?: Date | null,
   minConfidence: number | null = null,
+  aroundPinId = 0,
 ): Promise<PageResult> {
   const [prev, next] = await Promise.all([
-    queryPage(false, onlyFavorites, fromDateTime, userId, 0, pageSizePrev, createdSince, minConfidence),
-    queryPage(true, onlyFavorites, fromDateTime, userId, 0, pageSizeNext, createdSince, minConfidence),
+    queryPage(false, onlyFavorites, fromDateTime, userId, aroundPinId, pageSizePrev, createdSince, minConfidence),
+    queryPage(true, onlyFavorites, fromDateTime, userId, aroundPinId ? aroundPinId - 1 : 0, pageSizeNext, createdSince, minConfidence),
   ]);
   return {
     pins: prev.pins.reverse().concat(next.pins),

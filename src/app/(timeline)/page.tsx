@@ -9,7 +9,8 @@ import { toCardPins } from '@/lib/sanitize';
 import { websiteJsonLd } from '@/lib/seo';
 import { pinDayKey } from '@/lib/timeline';
 import specialtyDays from '@/server/data/specialtyDays.json';
-import { newPins, TRENDING_DAYS, timelinePage, timelineVideo, trendingPins } from '@/server/services/pages';
+import { newPins, pinById, TRENDING_DAYS, timelinePage, timelineVideo, trendingPins } from '@/server/services/pages';
+import { resolveCreatedSince } from '@/server/util/createdFilter';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 
 type Props = PageProps<'/'>;
@@ -19,7 +20,8 @@ function first(value: string | string[] | undefined) {
 }
 
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
-  const cursor = first((await searchParams).from_date_time);
+  const params = await searchParams;
+  const cursor = first(params.from_date_time) || first(params.pin);
   return {
     alternates: { canonical: '/' },
     // Paged views help crawlers reach every pin but duplicate the timeline,
@@ -43,11 +45,27 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
   const [user, timeZone] = await Promise.all([viewerUser(), viewerTimeZone()]);
   const preference = user?.defaultFilterSpanPreference;
   const defaultPostedWithin = preference && isSpan(preference) ? preference : DEFAULT_POSTED_WITHIN;
-  const postedWithin = spanFromParam(first(params.posted), defaultPostedWithin);
-  const fromDateTime = first(params.from_date_time) || null;
+  let postedWithin = spanFromParam(first(params.posted), defaultPostedWithin);
+  // ?pin=<id> (the pin page's "To timeline") opens on that pin instead of now.
+  const focusId = Number(first(params.pin));
+  const focusPin = Number.isInteger(focusId) && focusId > 0 ? await pinById(focusId) : null;
+  // The pin is what was asked for: a posting window that would hide it opens
+  // as All instead (the slider and the URL say so).
+  const since = focusPin && postedWithin ? resolveCreatedSince({ created_within: postedWithin }) : null;
+  if (since && focusPin?.utcCreatedDateTime && new Date(focusPin.utcCreatedDateTime) < since) {
+    postedWithin = null;
+  }
+  const fromDateTime = focusPin ? null : first(params.from_date_time) || null;
 
   const [page, video, trending, added] = await Promise.all([
-    timelinePage({ fromDateTime, lastPinId: Number(first(params.last_pin_id)) || 0 }, postedWithin),
+    timelinePage(
+      {
+        fromDateTime,
+        lastPinId: Number(first(params.last_pin_id)) || 0,
+        around: focusPin ? { dateTime: focusPin.utcStartDateTime, pinId: focusPin.id } : null,
+      },
+      postedWithin,
+    ),
     timelineVideo(),
     trendingPins(),
     newPins(),
@@ -70,6 +88,9 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
   return (
     <>
       <Timeline
+        // A new focus is a new timeline: its state starts from this page.
+        key={focusPin ? `pin-${focusPin.id}` : 'today'}
+        focus={focusPin ? { id: focusPin.id, utcStartDateTime: focusPin.utcStartDateTime, allDay: focusPin.allDay } : null}
         initialPins={toCardPins(page.pins)}
         initialDateTimes={page.dateTimes}
         initialLinks={page.links}

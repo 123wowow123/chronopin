@@ -16,8 +16,9 @@ const MAX_PIN_ID = 2147483647;
 export type TimelineQuery = {
   userId: number;
   // An ISO instant; a leading "-" walks backward from it. Absent means the
-  // first page around now.
+  // first page around now, or around a pin when given.
   fromDateTime?: string | null;
+  around?: { dateTime: string; pinId: number } | null;
   lastPinId?: number;
   onlyFavorites?: boolean;
   createdSince?: Date | null;
@@ -29,10 +30,13 @@ export async function timelineMinConfidence(): Promise<number | null> {
   return settingMinConfidence(await getTimelineConfidence());
 }
 
-export async function getPins({ userId, fromDateTime, lastPinId, onlyFavorites, createdSince }: TimelineQuery): Promise<Pins> {
+export async function getPins({ userId, fromDateTime, around, lastPinId, onlyFavorites, createdSince }: TimelineQuery): Promise<Pins> {
   // A watched list keeps every pin, so it never needs the setting.
   const min = onlyFavorites ? null : await timelineMinConfidence();
   if (!fromDateTime) {
+    if (around && !onlyFavorites) {
+      return Pins.queryInitialByDate(new Date(around.dateTime), userId, pageSize, pageSize, createdSince, min, around.pinId);
+    }
     const now = new Date();
     return onlyFavorites
       ? Pins.queryInitialByDateFilterByHasFavorite(now, userId, pageSize, pageSize, createdSince)

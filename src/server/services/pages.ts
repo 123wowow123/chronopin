@@ -55,7 +55,9 @@ export async function newPins(): Promise<NewPin[]> {
   }));
 }
 
-export type TimelineCursor = { fromDateTime?: string | null; lastPinId?: number };
+// around opens the first page on a pin instead of now (the pin page's "To
+// timeline").
+export type TimelineCursor = { fromDateTime?: string | null; lastPinId?: number; around?: { dateTime: string; pinId: number } | null };
 
 // hasFavorite and hasLike are the only per-viewer fields a pin carries, and
 // they are the reason a cached page used to be keyed by reader: every signed
@@ -88,6 +90,7 @@ export async function timelinePage(
     getTimeline({
       userId: NO_VIEWER,
       fromDateTime: cursor.fromDateTime,
+      around: cursor.around,
       lastPinId: cursor.lastPinId,
       createdSince,
     }),
