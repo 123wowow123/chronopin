@@ -1,6 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import { PinThumb } from '@/components/pin/PinThumb';
 import { Icon } from '@/components/ui/Icon';
+import { useWholeRows } from '@/lib/client/wholeRows';
 import { timeAgo } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
 import type { NewPin } from '@/lib/types';
@@ -13,9 +16,10 @@ import type { NewPin } from '@/lib/types';
 // and grows into what trending leaves, up to its full list. When not even that
 // much is left under the whole of trending, it wraps out of sight.
 export function NewPins({ pins, now }: { pins: NewPin[]; now: number }) {
+  const ref = useWholeRows<HTMLElement>(pins);
   if (!pins.length) return null;
   return (
-    <section aria-labelledby="new-pins-heading" className="floating flex max-h-max min-h-0 grow basis-28 flex-col text-sm">
+    <section ref={ref} aria-labelledby="new-pins-heading" className="floating flex max-h-max min-h-0 grow basis-28 flex-col text-sm">
       <h2 id="new-pins-heading" className="flex shrink-0 items-center gap-2 px-3.5 pt-2.5 pb-1.5">
         <Icon name="sparkle" className="size-4 text-link" />
         <span className="font-medium text-ink">New pins</span>

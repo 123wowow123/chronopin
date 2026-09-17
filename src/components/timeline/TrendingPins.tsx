@@ -1,6 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import { PinThumb } from '@/components/pin/PinThumb';
 import { Icon } from '@/components/ui/Icon';
+import { useWholeRows } from '@/lib/client/wholeRows';
 import { compactCount, pluralize } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
 import type { TrendingPin } from '@/lib/types';
@@ -15,9 +18,10 @@ function growth(pin: TrendingPin): string {
 // The most viewed pins whose views are rising, beside the timeline on wide
 // screens. Nothing shows until some pin is trending.
 export function TrendingPins({ pins, days }: { pins: TrendingPin[]; days: number }) {
+  const ref = useWholeRows<HTMLElement>(pins);
   if (!pins.length) return null;
   return (
-    <section aria-labelledby="trending-heading" className="floating flex min-h-0 flex-col text-sm">
+    <section ref={ref} aria-labelledby="trending-heading" className="floating flex min-h-0 flex-col text-sm">
       <h2 id="trending-heading" className="flex shrink-0 items-center gap-2 px-3.5 pt-2.5 pb-1.5">
         <Icon name="trending-up" className="size-4 text-success" />
         <span className="font-medium text-ink">Trending</span>
