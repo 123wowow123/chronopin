@@ -462,6 +462,8 @@ This is a promotional article about one of the company partners with Interesting
 
 Scape major events on Kalshi / Polymarket
 
+need tag for betting sites and should be searchable
+
 
 - use betting site to add scores for rotten tomatoes etc on game, movie, shows,etc
 https://kalshi.com/markets/kxrt/rotten-tomatoes-scores/kxrt-res
