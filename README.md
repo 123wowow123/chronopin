@@ -492,8 +492,6 @@ https://fortune.com/2026/09/11/openai-astra-chatgpt-pro-pause/
 - build list for daily scraper and add search engine trending search in the job too
 
 
-- After signin scroll location should be retained on timeline
-
 ## Reminder: MyAnimeList top-anime scrape (in progress, resume later)
 
 Asked 2026-09-15: scrape everything in `myanimelist.net/topanime.php` across

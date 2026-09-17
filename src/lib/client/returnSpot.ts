@@ -2,11 +2,11 @@
 
 import { authHref, type AuthPage } from '@/lib/authRedirect';
 
-// Where the reader was when they went to log in or sign up, so finishing comes
-// back there: the card at the top of the timeline or of a search's results, or
-// the map's view.
+// Where the reader was when they went to log in, sign up or log out, so
+// finishing comes back there: the card at the top of the timeline or of a
+// search's results, or the map's view.
 //
-// Either is a full reload, which opens the timeline and a search's dates on
+// Each of those is a full reload, which opens the timeline and a search's dates on
 // today, a search by relevance on its best match and the map on its default
 // view. The URL already brings back the page and its filters; the spot waits
 // here to put back the rest.
@@ -40,6 +40,16 @@ export function setMapViewSource(source: typeof mapView) {
 // The Log in or Sign up link for the page the reader is on right now, keeping
 // its query (a search, the filters) and saving the spot on it.
 export function authHrefHere(page: AuthPage = '/login'): string {
+  return authHref(page, saveSpotHere());
+}
+
+// The Log out link for the page the reader is on right now, the same way.
+export function logoutHrefHere(): string {
+  return `/logout?referrer=${encodeURIComponent(saveSpotHere())}`;
+}
+
+// Saves the spot on this page, and answers the page to come back to.
+function saveSpotHere(): string {
   const { pathname, search } = window.location;
   let href = pathname + search;
   let spot: CardSpot | MapSpot | null = null;
@@ -63,7 +73,7 @@ export function authHrefHere(page: AuthPage = '/login'): string {
       // Without storage the page opens as it would anyway.
     }
   }
-  return authHref(page, href);
+  return href;
 }
 
 // The timeline opening on this pin's saved distance from the top of the

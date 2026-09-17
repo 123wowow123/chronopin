@@ -10,7 +10,7 @@ import { UserAvatar } from '@/components/ui/UserAvatar';
 import { useUnreadCount } from '@/lib/client/notifications';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { useSession } from '@/lib/client/session';
-import { AuthLink } from './AuthLink';
+import { AuthLink, LogoutLink } from './AuthLink';
 import { ViewSwitch } from './NavMenu';
 import { DrawerNotifications } from './NotificationBell';
 import { searchHref, WATCHED } from './SearchBox';
@@ -122,7 +122,6 @@ export function MobileDrawer() {
     setDrag(0);
   }
 
-  const redirect = encodeURIComponent(pathname);
   const dragging = drag !== 0;
   const fullName = user ? [user.firstName, user.lastName].filter(Boolean).join(' ') : '';
 
@@ -252,10 +251,10 @@ export function MobileDrawer() {
 
         {user ? (
           <div className="border-t border-line px-2 pt-2 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
-            <a href={`/logout?referrer=${redirect}`} className={itemClass}>
+            <LogoutLink className={itemClass}>
               <Icon name="logout" className="size-6" />
               Log out
-            </a>
+            </LogoutLink>
           </div>
         ) : null}
       </div>

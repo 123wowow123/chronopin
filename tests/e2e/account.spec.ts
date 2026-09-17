@@ -24,7 +24,8 @@ test.describe.serial('a signed-in author', () => {
     await page.goto('/create');
     await page.getByLabel('Source URL').fill('https://en.wikipedia.org/wiki/Gordie_Howe_International_Bridge');
     await page.getByLabel('Title').fill(`E2E launch ${stamp}`);
-    await page.getByLabel('Start').fill('2031-05-04');
+    // Exact: a timed pin's form also has a "Start time" beside it.
+    await page.getByLabel('Start', { exact: true }).fill('2031-05-04');
     await page.getByLabel('Category').selectOption('Infrastructure & Transportation');
     await page.getByLabel('Company', { exact: true }).fill('Windsor-Detroit Bridge Authority');
     await page.getByLabel('Cost').fill('6400000000');

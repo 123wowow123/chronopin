@@ -38,6 +38,17 @@ async function scrollFarFromToday(page: Page, path = '/', direction: 1 | -1 = 1)
   return before;
 }
 
+async function signIn(page: Page) {
+  const res = await page.request.post('/auth/local', { data: { email, password } });
+  expect(res.ok(), 'signing in through the API').toBeTruthy();
+}
+
+async function logOut(page: Page) {
+  // The account menu sits beside the Main nav, not in it.
+  await page.getByRole('button', { name: `@${handle}` }).click();
+  await page.getByRole('link', { name: 'Log out' }).click();
+}
+
 async function logIn(page: Page) {
   await page.getByRole('navigation', { name: 'Main' }).getByRole('link', { name: 'Log in' }).click();
   await expect(page).toHaveURL(/\/login\?redirect=/);
@@ -55,10 +66,18 @@ async function expectBackAt(page: Page, before: { id: string; top: number }, url
   await expect.poll(async () => Math.abs((await card.boundingBox())!.y - before.top), { timeout: 15_000 }).toBeLessThanOrEqual(2);
 }
 
-// Logging in or signing up reloads the whole page, which used to open the
-// timeline and search back on today (or the best match) however far the reader
-// had scrolled, and the map on its default view.
-test.describe.serial('leaving a page to sign in', () => {
+// Logging in, signing up and logging out all reload the whole page, which used
+// to open the timeline and search back on today (or the best match) however far
+// the reader had scrolled, and the map on its default view.
+const WAYS = [
+  { name: 'logging in', signedIn: false, leave: logIn },
+  { name: 'logging out', signedIn: true, leave: logOut },
+];
+
+test.describe.serial('leaving a page to sign in or out', () => {
+  // Each of these scrolls through pages of results twice over.
+  test.describe.configure({ timeout: 90_000 });
+
   test('creating an account from the login page comes back to the card scrolled to', async ({ page }) => {
     const before = await scrollFarFromToday(page);
     await page.getByRole('navigation', { name: 'Main' }).getByRole('link', { name: 'Log in' }).click();
@@ -75,58 +94,61 @@ test.describe.serial('leaving a page to sign in', () => {
     await expectBackAt(page, before);
   });
 
-  test('logging in comes back to the card scrolled to', async ({ page }) => {
-    const before = await scrollFarFromToday(page);
-    await logIn(page);
-    await expectBackAt(page, before);
-  });
-
-  // Search has no ?pin= to open on, so its results page toward the card.
-  for (const sort of ['date', 'relevance']) {
-    test(`logging in from a search by ${sort} comes back to the card scrolled to`, async ({ page, baseURL }) => {
-      const path = `/search?q=category%3AAnime&posted=all${sort === 'relevance' ? '&sort=relevance' : ''}`;
-      // Most anime has aired: by date, the pages are behind today.
-      const before = await scrollFarFromToday(page, path, sort === 'date' ? -1 : 1);
-      const url = page.url();
-      await logIn(page);
-      await expectBackAt(page, before, url);
-      expect(new URL(url, baseURL).search).toBe(new URL(page.url()).search);
+  for (const way of WAYS) {
+    test(`${way.name} comes back to the card scrolled to`, async ({ page }) => {
+      if (way.signedIn) await signIn(page);
+      const before = await scrollFarFromToday(page);
+      await way.leave(page);
+      await expectBackAt(page, before);
     });
-  }
 
-  test('logging in from the map comes back to the same view', async ({ page }) => {
-    await page.goto('/map?past=all&future=all&posted=all');
-    const markers = page.locator('.leaflet-marker-icon');
-    await expect(markers.first()).toBeVisible();
-    const canvas = page.locator('.pins-map');
-    const box = (await canvas.boundingBox())!;
-    // Somewhere other than the default view: zoomed in off-centre.
-    await page.mouse.move(box.x + box.width * 0.7, box.y + box.height * 0.4);
-    for (let i = 0; i < 3; i++) {
-      await page.mouse.wheel(0, -300);
-      await page.waitForTimeout(400);
+    // Search has no ?pin= to open on, so its results page toward the card.
+    for (const sort of ['date', 'relevance']) {
+      test(`${way.name} from a search by ${sort} comes back to the card scrolled to`, async ({ page, baseURL }) => {
+        if (way.signedIn) await signIn(page);
+        const path = `/search?q=category%3AAnime&posted=all${sort === 'relevance' ? '&sort=relevance' : ''}`;
+        // Most anime has aired: by date, the pages are behind today.
+        const before = await scrollFarFromToday(page, path, sort === 'date' ? -1 : 1);
+        const url = page.url();
+        await way.leave(page);
+        await expectBackAt(page, before, url);
+        expect(new URL(url, baseURL).search).toBe(new URL(page.url()).search);
+      });
     }
-    await page.mouse.down();
-    await page.mouse.move(box.x + box.width * 0.4, box.y + box.height * 0.6, { steps: 10 });
-    await page.mouse.up();
-    await page.waitForTimeout(800);
-    const view = () =>
-      page.evaluate(() => {
+
+    test(`${way.name} from the map comes back to the same view`, async ({ page }) => {
+      if (way.signedIn) await signIn(page);
+      await page.goto('/map?past=all&future=all&posted=all');
+      const markers = page.locator('.leaflet-marker-icon');
+      await expect(markers.first()).toBeVisible();
+      const canvas = page.locator('.pins-map');
+      const box = (await canvas.boundingBox())!;
+      // Somewhere other than the default view: zoomed in off-centre.
+      await page.mouse.move(box.x + box.width * 0.7, box.y + box.height * 0.4);
+      for (let i = 0; i < 3; i++) {
+        await page.mouse.wheel(0, -300);
+        await page.waitForTimeout(400);
+      }
+      await page.mouse.down();
+      await page.mouse.move(box.x + box.width * 0.4, box.y + box.height * 0.6, { steps: 10 });
+      await page.mouse.up();
+      await page.waitForTimeout(800);
+      const before = await page.evaluate(() => {
         const visible = [...document.querySelectorAll<HTMLElement>('.leaflet-marker-icon')]
           .map((el) => ({ title: el.title, rect: el.getBoundingClientRect() }))
           .filter(({ rect }) => rect.top > 60 && rect.bottom < window.innerHeight && rect.left > 0 && rect.right < window.innerWidth);
         return visible.map(({ title, rect }) => ({ title, x: Math.round(rect.x), y: Math.round(rect.y) }));
       });
-    const before = await view();
-    expect(before.length).toBeGreaterThan(0);
-    const url = page.url();
-    await logIn(page);
-    await expect(page).toHaveURL(url);
-    const marker = markers.and(page.locator(`[title="${before[0].title.replace(/"/g, '\\"')}"]`)).first();
-    await expect(marker).toBeVisible();
-    await expect.poll(async () => {
-      const at = (await marker.boundingBox())!;
-      return Math.abs(at.x - before[0].x) + Math.abs(at.y - before[0].y);
-    }).toBeLessThanOrEqual(2);
-  });
+      expect(before.length).toBeGreaterThan(0);
+      const url = page.url();
+      await way.leave(page);
+      await expect(page).toHaveURL(url);
+      const marker = markers.and(page.locator(`[title="${before[0].title.replace(/"/g, '\\"')}"]`)).first();
+      await expect(marker).toBeVisible();
+      await expect.poll(async () => {
+        const at = (await marker.boundingBox())!;
+        return Math.abs(at.x - before[0].x) + Math.abs(at.y - before[0].y);
+      }).toBeLessThanOrEqual(2);
+    });
+  }
 });

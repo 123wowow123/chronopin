@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { useSession } from '@/lib/client/session';
-import { AuthLink } from './AuthLink';
+import { AuthLink, LogoutLink } from './AuthLink';
 import { NotificationBell } from './NotificationBell';
 
 const itemClass = 'flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-ink hover:bg-raised hover:no-underline';
@@ -69,7 +69,7 @@ export function ViewSwitch({ pathname, className = '' }: { pathname: string; cla
   );
 }
 
-function MenuLinks({ groups, logoutHref }: { groups: MenuItem[][]; logoutHref: string }) {
+function MenuLinks({ groups }: { groups: MenuItem[][] }) {
   return (
     <>
       {groups.map((group, index) => (
@@ -83,10 +83,10 @@ function MenuLinks({ groups, logoutHref }: { groups: MenuItem[][]; logoutHref: s
         </div>
       ))}
       <div className="py-1.5">
-        <a href={logoutHref} className={itemClass}>
+        <LogoutLink className={itemClass}>
           <Icon name="logout" className={itemIconClass} />
           Log out
-        </a>
+        </LogoutLink>
       </div>
     </>
   );
@@ -134,8 +134,6 @@ export function NavMenu() {
     };
   }, []);
 
-  const redirect = encodeURIComponent(pathname);
-  const logoutHref = `/logout?referrer=${redirect}`;
   const groups = accountGroups(isAdmin);
 
   const guestActions =
@@ -187,7 +185,7 @@ export function NavMenu() {
             <div className="floating absolute right-0 z-50 mt-2 w-60 overflow-hidden">
               <SignedInAs userName={user.userName} pictureUrl={user.pictureUrl} />
               <div className="px-1.5">
-                <MenuLinks groups={groups} logoutHref={logoutHref} />
+                <MenuLinks groups={groups} />
               </div>
             </div>
           ) : null}
