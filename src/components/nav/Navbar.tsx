@@ -18,8 +18,8 @@ export function Navbar() {
           <LogoMark className="size-7 drop-shadow-[0_2px_6px_rgb(244_63_94/0.35)]" />
           <span className="max-sm:sr-only lg:max-xl:sr-only">Chronopin</span>
         </a>
-        <div className="flex min-w-0 flex-1 justify-center">
-          <Suspense fallback={<div className="h-9 w-full max-w-xl rounded-full bg-field" />}>
+        <div className="flex min-w-0 flex-1">
+          <Suspense fallback={<div className="h-9 w-full rounded-full bg-field" />}>
             <SearchBox />
           </Suspense>
         </div>

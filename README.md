@@ -459,6 +459,7 @@ This is a promotional article about one of the company partners with Interesting
 - Add auto nightly scraping job 
 - need job to scrape and update pin, any visit will trigger a scheduled update scape that night, along to new reference
 
+For delayed start dates, try to estimate how long of a delay
 
 Scape major events on Kalshi / Polymarket
 

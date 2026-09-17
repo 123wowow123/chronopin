@@ -310,7 +310,7 @@ export function SearchBox() {
     <form
       ref={boxRef}
       role="search"
-      className="relative flex w-full max-w-xl min-w-0 items-stretch gap-1.5"
+      className="relative flex w-full min-w-0 items-stretch gap-1.5"
       onSubmit={(event) => {
         event.preventDefault();
         submit(query(active >= 0 ? suggestions[active].title : draft));
