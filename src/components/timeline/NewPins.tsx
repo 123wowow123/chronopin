@@ -7,6 +7,7 @@ import { useWholeRows } from '@/lib/client/wholeRows';
 import { timeAgo } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
 import type { NewPin } from '@/lib/types';
+import { MarketTrend } from './MarketTrend';
 
 // The pins added most recently, beside the timeline on wide screens, each with
 // who added it and how long ago. now is the timeline's ticking clock, so the
@@ -31,7 +32,11 @@ export function NewPins({ pins, now }: { pins: NewPin[]; now: number }) {
         {pins.map((pin) => (
           <li key={pin.id} className="w-full px-1.5">
             <Link href={pinPath(pin)} prefetch={false} className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-raised hover:no-underline">
-              <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} className="h-9 w-14" />
+              {pin.hasMarket ? (
+                <MarketTrend pinId={pin.id} fallback={<PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} className="h-9 w-14" />} />
+              ) : (
+                <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} className="h-9 w-14" />
+              )}
               <span className="flex min-w-0 flex-col">
                 <span className="line-clamp-2 leading-snug text-ink" title={pin.title}>
                   {pin.title}

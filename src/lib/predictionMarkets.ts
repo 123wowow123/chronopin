@@ -14,7 +14,12 @@ export type MarketOutcome = {
   // The market's chance for this outcome, 0-1.
   probability: number | null;
   volume?: number;
+  // Which price history is this outcome's, for its trend (GET /api/pins/:id/trend).
+  history?: string;
 };
+
+// A market's leading outcome over the past week: [unix seconds, chance 0-1].
+export type MarketTrend = { source: MarketSource; title: string; label: string; points: [number, number][] };
 
 export type MarketOdds = {
   source: MarketSource;

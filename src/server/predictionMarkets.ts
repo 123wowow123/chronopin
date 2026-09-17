@@ -5,11 +5,12 @@
 // /api/odds/stream). The feeds are in-process, so like the pin
 // stream this holds for a single replica.
 
-import type { MarketOdds, MarketOutcome, MarketRef } from '@/lib/predictionMarkets';
+import type { MarketOdds, MarketOutcome, MarketRef, MarketTrend } from '@/lib/predictionMarkets';
 import log from './util/log';
 
 const KALSHI_API = 'https://api.elections.kalshi.com/trade-api/v2';
 const POLYMARKET_API = 'https://gamma-api.polymarket.com';
+const POLYMARKET_CLOB = 'https://clob.polymarket.com';
 const TIMEOUT_MS = 8000;
 // Well inside a minute, so a slow or failed read still leaves a fresh push
 // within one.
@@ -83,13 +84,15 @@ async function kalshi(ref: Extract<MarketRef, { source: 'Kalshi' }>): Promise<Ma
   // An event of one market is a yes/no question: shown as its two sides, like
   // a Polymarket question.
   const yes = live.length === 1 ? kalshiChance(live[0]) : null;
-  const outcomes =
+  const series = event.series_ticker;
+  const history = (m: Json, side = '') => (series && m.ticker ? `kalshi:${series}:${m.ticker}${side}` : undefined);
+  const outcomes: MarketOutcome[] =
     live.length === 1
       ? [
-          { label: 'Yes', probability: yes },
-          { label: 'No', probability: yes == null ? null : 1 - yes },
+          { label: 'Yes', probability: yes, history: history(live[0]) },
+          { label: 'No', probability: yes == null ? null : 1 - yes, history: history(live[0], ':no') },
         ]
-      : live.map((m) => ({ label: m.yes_sub_title || m.title, probability: kalshiChance(m) }));
+      : live.map((m) => ({ label: m.yes_sub_title || m.title, probability: kalshiChance(m), history: history(m) }));
   return {
     source: 'Kalshi',
     url: ref.url,
@@ -114,7 +117,13 @@ function parseList(value: unknown): unknown[] {
 // A market's own outcomes (Yes/No, or two named sides) with their prices.
 function polymarketOutcomes(market: Json): MarketOutcome[] {
   const prices = parseList(market.outcomePrices);
-  return parseList(market.outcomes).map((label, i) => ({ label: String(label), probability: num(prices[i]) ?? null }));
+  // Each outcome trades as its own token, whose id names its price history.
+  const tokens = parseList(market.clobTokenIds);
+  return parseList(market.outcomes).map((label, i) => ({
+    label: String(label),
+    probability: num(prices[i]) ?? null,
+    history: tokens[i] ? `polymarket:${tokens[i]}` : undefined,
+  }));
 }
 
 async function polymarket(ref: Extract<MarketRef, { source: 'Polymarket' }>): Promise<MarketOdds | null> {
@@ -148,7 +157,7 @@ async function polymarket(ref: Extract<MarketRef, { source: 'Polymarket' }>): Pr
           .filter((m) => closed || !m.closed)
           .map((m) => {
             const yes = polymarketOutcomes(m).find((o) => o.label.toLowerCase() === 'yes');
-            return { label: m.groupItemTitle || m.question, probability: yes?.probability ?? null, volume: num(m.volume) };
+            return { label: m.groupItemTitle || m.question, probability: yes?.probability ?? null, volume: num(m.volume), history: yes?.history };
           });
   return {
     source: 'Polymarket',
@@ -181,6 +190,65 @@ export function oddsFor(ref: MarketRef): Promise<MarketOdds | null> {
   }
   cache.set(key, { promise, expires: now + TTL_MS });
   return promise;
+}
+
+// --- Trends ----------------------------------------------------------------
+
+const TREND_DAYS = 7;
+// History moves by the hour; a trend is re-read at most this often.
+const TREND_TTL_MS = 10 * 60_000;
+const trends: Map<string, { promise: Promise<[number, number][]>; expires: number }> = ((globalThis as any).__chronopinMarketTrends ??= new Map());
+
+// A Kalshi hour's price: its last trade, else the one before, else the midpoint
+// of the book, as kalshiChance reads a market.
+function candleChance(candle: Json): number | undefined {
+  const price = num(candle.price?.close_dollars) ?? num(candle.price?.previous_dollars);
+  if (price !== undefined) return price;
+  const bid = num(candle.yes_bid?.close_dollars);
+  const ask = num(candle.yes_ask?.close_dollars);
+  return bid !== undefined && ask !== undefined ? (bid + ask) / 2 : undefined;
+}
+
+async function readHistory(history: string): Promise<[number, number][]> {
+  const end = Math.floor(Date.now() / 1000);
+  const start = end - TREND_DAYS * 86_400;
+  const [source, ...id] = history.split(':');
+  if (source === 'kalshi') {
+    const [series, ticker, side] = id;
+    const { candlesticks = [] } = await getJson(
+      `${KALSHI_API}/series/${encodeURIComponent(series)}/markets/${encodeURIComponent(ticker)}/candlesticks?start_ts=${start}&end_ts=${end}&period_interval=60`,
+    );
+    return (candlesticks as Json[]).flatMap((candle) => {
+      const chance = candleChance(candle);
+      return chance === undefined ? [] : [[Number(candle.end_period_ts), side === 'no' ? 1 - chance : chance] as [number, number]];
+    });
+  }
+  if (source === 'polymarket') {
+    const { history: points = [] } = await getJson(`${POLYMARKET_CLOB}/prices-history?market=${encodeURIComponent(id[0])}&interval=1w&fidelity=60`);
+    return (points as Json[]).flatMap((point) => (num(point.p) === undefined ? [] : [[Number(point.t), num(point.p)!] as [number, number]]));
+  }
+  return [];
+}
+
+// The past week of a market's leading outcome, or null when it has no history.
+// Rejects when the exchange cannot be reached.
+export async function trendFor(ref: MarketRef): Promise<MarketTrend | null> {
+  const odds = await oddsFor(ref);
+  const leader = odds?.outcomes.find((outcome) => outcome.history);
+  if (!odds || !leader?.history) return null;
+  const now = Date.now();
+  let hit = trends.get(leader.history);
+  if (!hit || hit.expires <= now) {
+    const promise = readHistory(leader.history).catch((err) => {
+      trends.delete(leader.history!);
+      throw err;
+    });
+    if (trends.size >= CACHE_LIMIT) trends.delete(trends.keys().next().value!);
+    hit = { promise, expires: now + TREND_TTL_MS };
+    trends.set(leader.history, hit);
+  }
+  const points = await hit.promise;
+  return points.length > 1 ? { source: odds.source, title: odds.title, label: leader.label, points } : null;
 }
 
 type OddsListener = (odds: MarketOdds[]) => void;
