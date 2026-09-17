@@ -89257,12 +89257,12 @@
     "description": "Benjamin Cowen, founder of Into The Cryptoverse and a former NASA researcher, argues Bitcoin's current cycle should bottom around October 2026 — about a year after its October 2025 peak near $126,000, matching the gap between top and bottom in each of Bitcoin's two prior cycles. He leaves room for an earlier low around May 2026 only if a sharp capitulation event pushes the year's returns well outside the range typical of past midterm-cycle years; CryptoQuant's on-chain models point to a similar September-November window.",
     "sourceUrl": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-price-bottom-benjamin-cowen-223000084.html",
     "dateConfidence": "estimated",
-    "dateConfidenceReasoning": "Cowen's own timeline, not a confirmed date: he expects the bottom about a year after the cycle's October 2025 top, the same gap as the prior two cycles, unless a deep capitulation event pulls it forward to around May 2026.",
+    "dateConfidenceReasoning": "Cowen's own timeline, not a confirmed date: he expects the bottom about a year after the cycle's October 2025 top, the same gap as the prior two cycles, unless a deep capitulation event pulls it forward to around May 2026. He has separately named $40,000 - where Realized Price and Balanced Price converge - as the level he watches for that bottom.",
     "category": "Cryptocurrency",
     "utcStartDateTime": "2026-10-01T00:00:00.000Z",
     "allDay": true,
     "utcCreatedDateTime": "2026-09-17T03:57:43.219Z",
-    "utcUpdatedDateTime": "2026-09-17T04:00:00.286Z",
+    "utcUpdatedDateTime": "2026-09-17T04:16:19.611Z",
     "user": {
       "id": 226,
       "userName": "@MarketDesk"
@@ -89281,13 +89281,33 @@
     ],
     "references": [
       {
-        "id": 2723,
+        "id": 2727,
         "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-price-bottom-benjamin-cowen-223000084.html",
         "title": "When Will Bitcoin Price Bottom Out? Benjamin Cowen Predicts",
         "confidence": 75,
         "publishedDate": "2026-04-15",
         "reasoning": "The source article itself (BeInCrypto, republished on Yahoo Finance), reporting Cowen's on-record prediction and the CryptoQuant model range that corroborates it.",
-        "utcCreatedDateTime": "2026-09-17T03:59:59.896895+00:00",
+        "utcCreatedDateTime": "2026-09-17T04:16:19.611769+00:00",
+        "pinId": 1658
+      },
+      {
+        "id": 2728,
+        "url": "https://www.kucoin.com/news/flash/bitcoin-analyst-predicts-price-could-fall-to-40-000-and-bottom-out-in-late-2026",
+        "title": "Bitcoin Analyst Predicts Price Could Fall to $40,000 and Bottom Out in Late 2026",
+        "confidence": 70,
+        "publishedDate": "2026-06-24",
+        "reasoning": "KuCoin's flash-news writeup of Cowen's $40,000 downside target and October-November 2026 bottom call, syndicated from Bitcoinsistemi.",
+        "utcCreatedDateTime": "2026-09-17T04:16:19.611769+00:00",
+        "pinId": 1658
+      },
+      {
+        "id": 2729,
+        "url": "https://en.bitcoinsistemi.com/analyst-who-predicted-the-drop-forecasts-what-might-happen-next-with-bitcoin/",
+        "title": "Analyst Who Predicted the Drop Forecasts What Might Happen Next with Bitcoin",
+        "confidence": 72,
+        "publishedDate": "2026-06-24",
+        "reasoning": "The original Bitcoinsistemi article the KuCoin flash piece is syndicated from, with Cowen's fuller reasoning on the $40,000 Realized/Balanced Price convergence and the 2019-like cycle structure.",
+        "utcCreatedDateTime": "2026-09-17T04:16:19.611769+00:00",
         "pinId": 1658
       }
     ],
