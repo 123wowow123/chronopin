@@ -28,6 +28,7 @@ export const CATEGORIES = [
   'Automotive',
   'Energy',
   'Corporate & Finance',
+  'Cryptocurrency',
   'Policy & Legal',
   'Other',
 ] as const;

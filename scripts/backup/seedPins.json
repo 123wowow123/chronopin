@@ -89251,6 +89251,49 @@
     "userId": 1
   },
   {
+    "id": 1658,
+    "rootThread": false,
+    "title": "Benjamin Cowen Predicts Bitcoin Will Bottom in October 2026",
+    "description": "Benjamin Cowen, founder of Into The Cryptoverse and a former NASA researcher, argues Bitcoin's current cycle should bottom around October 2026 — about a year after its October 2025 peak near $126,000, matching the gap between top and bottom in each of Bitcoin's two prior cycles. He leaves room for an earlier low around May 2026 only if a sharp capitulation event pushes the year's returns well outside the range typical of past midterm-cycle years; CryptoQuant's on-chain models point to a similar September-November window.",
+    "sourceUrl": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-price-bottom-benjamin-cowen-223000084.html",
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "Cowen's own timeline, not a confirmed date: he expects the bottom about a year after the cycle's October 2025 top, the same gap as the prior two cycles, unless a deep capitulation event pulls it forward to around May 2026.",
+    "category": "Cryptocurrency",
+    "utcStartDateTime": "2026-10-01T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-17T03:57:43.219Z",
+    "utcUpdatedDateTime": "2026-09-17T04:00:00.286Z",
+    "user": {
+      "id": 226,
+      "userName": "@MarketDesk"
+    },
+    "media": [
+      {
+        "id": 2197,
+        "thumbName": "6d41a71c-e7e6-4fb2-be46-545b3c1d658a.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://s.yimg.com/lo/mysterio/api/e989e41921dc5453dfbcc0ba6d2c59fe3ffacd72c7725377b4c58bf8d5b4ba07/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fbeincrypto_us_662%2F2a2f8b10f550cc2bbef66cbfdc1e3ebd",
+        "originalWidth": 1200,
+        "originalHeight": 675,
+        "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 2723,
+        "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-price-bottom-benjamin-cowen-223000084.html",
+        "title": "When Will Bitcoin Price Bottom Out? Benjamin Cowen Predicts",
+        "confidence": 75,
+        "publishedDate": "2026-04-15",
+        "reasoning": "The source article itself (BeInCrypto, republished on Yahoo Finance), reporting Cowen's on-record prediction and the CryptoQuant model range that corroborates it.",
+        "utcCreatedDateTime": "2026-09-17T03:59:59.896895+00:00",
+        "pinId": 1658
+      }
+    ],
+    "userId": 226
+  },
+  {
     "id": 856,
     "rootThread": false,
     "title": "The Apothecary Diaries Season 3 Premieres",
