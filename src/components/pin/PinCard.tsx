@@ -136,7 +136,7 @@ export function PinCard({
             key={media.map((m) => m.originalUrl ?? m.thumbName).join(' ')}
             // A tall picture (a poster) is cropped to its middle, leaving room under
             // it for the start date and some description before the cut-off.
-            className="relative mb-3 bg-black [&_img]:max-h-[280px] [&_img]:object-cover"
+            className="relative mb-3 bg-black [&_img]:max-h-[260px] [&_img]:object-cover"
             overlay={
               <>
                 {pin.address ? <span className="media-chip absolute top-2 right-2 z-10 max-w-[70%] truncate">{pin.address}</span> : null}
