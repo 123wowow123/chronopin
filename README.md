@@ -462,6 +462,7 @@ This is a promotional article about one of the company partners with Interesting
 
 - Add auto nightly scraping job 
 - need job to scrape and update pin, any visit will trigger a scheduled update scape that night, along to new reference
+- create job to check health of pins like broken videos, image, etc
 
 For delayed start dates, try to estimate how long of a delay
 
@@ -476,6 +477,22 @@ each pin should try to have at least 3 images
 
 - use betting site to add scores for rotten tomatoes etc on game, movie, shows,etc
 https://kalshi.com/markets/kxrt/rotten-tomatoes-scores/kxrt-res
+
+scrape AI Models, good to test auto response feature. Ask it to use sparringly. But series of incremential update to the same product are good candidates. 
+https://www.anthropic.com/claude/opus
+https://help.openai.com/en/articles/9624314-model-release-notes
+
+- randomize what to show based on ranked vists to not overload date slot on timeline but always have expandable option to see all
+
+- new like this should have stock ticker on it (add ticker price when posted and price on start date and on each update of start date and current price)
+https://fortune.com/2026/09/11/openai-astra-chatgpt-pro-pause/
+
+- localization & multilingual
+
+- build list for daily scraper and add search engine trending search in the job too
+
+
+- After signin scroll location should be retained on timeline
 
 ## Reminder: MyAnimeList top-anime scrape (in progress, resume later)
 
