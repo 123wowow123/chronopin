@@ -3,7 +3,7 @@ import getVideoId from 'get-video-id';
 import _ from 'lodash';
 import { mediumID } from '@/lib/appConfig';
 import * as db from '../db';
-import type { Row } from '../db';
+import type { QueryFn, Row } from '../db';
 import * as image from '../image';
 import log from '../util/log';
 import BasePin from './basePin';
@@ -76,14 +76,21 @@ export default class Medium {
   // YouTube video's still, so places that cannot play the video (the map's
   // popup) have a picture. A video without a still saves anyway.
   async saveWithThumb(): Promise<this> {
+    await this.addThumb();
+    return this.save();
+  }
+
+  // saveWithThumb's CDN half, which writes no row: a pin update fetches its
+  // new media's thumbs before its transaction opens.
+  async addThumb(): Promise<this> {
     const type = Number(this.type);
     if (type === mediumID.image) {
-      return this.createAndSaveToCDN();
+      return this.set(await getImageStatAndSaveImage(this.originalUrl));
     }
     if (type === mediumID.youtube && !this.thumbName) {
       await this.addVideoThumb().catch((err) => log.error('video-thumb error:', err));
     }
-    return this.save();
+    return this;
   }
 
   // Stores the video's largest still on the CDN as this medium's thumb. The
@@ -108,8 +115,8 @@ export default class Medium {
     throw lastErr;
   }
 
-  deleteFromPin() {
-    return deleteFromPin(this, this._pin!.id);
+  deleteFromPin(query: QueryFn = db.query) {
+    return deleteFromPin(this, this._pin!.id, query);
   }
 
   setPin(pin: BasePin): this {
@@ -149,14 +156,14 @@ export default class Medium {
 // comes back by id restores that order. Only for media that already have
 // their thumb - saveWithThumb fetches and uploads one per medium, which is
 // where a new pin's time actually goes.
-export async function saveAllToPin(media: Medium[], pinId: number): Promise<Medium[]> {
+export async function saveAllToPin(media: Medium[], pinId: number, query: QueryFn = db.query): Promise<Medium[]> {
   if (!media.length) {
     return media;
   }
   const n = MEDIUM_COLUMNS.length;
   const columns = MEDIUM_COLUMNS.map((c) => `"${c}"`).join(', ');
   const types = ['varchar', 'integer', 'integer', 'varchar', 'integer', 'integer', 'varchar', 'varchar', 'varchar', 'varchar'];
-  const rows = await db.query<{ id: number }>(
+  const rows = await query<{ id: number }>(
     `
     WITH "input" AS (
       SELECT * FROM unnest(${types.map((t, i) => `$${i + 1}::${t}[]`).join(', ')})
@@ -250,12 +257,14 @@ async function getImageStatAndSaveImage(imageUrl: string) {
   return medium;
 }
 
-// Removes the link and the medium row itself (not the file on the CDN).
-async function deleteFromPin(medium: Medium, pinId: number) {
+// Removes the link and the medium row itself (not the file on the CDN), in
+// one statement so neither is left without the other.
+async function deleteFromPin(medium: Medium, pinId: number, query: QueryFn) {
   const utcDeletedDateTime = new Date();
-  await db.transaction(async (query) => {
-    await query(`DELETE FROM "PinMedium" WHERE "pinId" = $1 AND "mediumId" = $2`, [pinId, medium.id]);
-    await query(`DELETE FROM "Medium" WHERE "id" = $1`, [medium.id]);
-  });
+  await query(
+    `WITH "link" AS (DELETE FROM "PinMedium" WHERE "pinId" = $1 AND "mediumId" = $2)
+     DELETE FROM "Medium" WHERE "id" = $2`,
+    [pinId, medium.id],
+  );
   return { utcDeletedDateTime, medium };
 }

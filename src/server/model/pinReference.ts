@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import * as db from '../db';
-import type { Row } from '../db';
+import type { QueryFn, Row } from '../db';
 import BasePin from './basePin';
 
 // addedByUserName/addedByUserPictureUrl are read from the view, never written.
@@ -75,12 +75,12 @@ export default class PinReference {
   // round trip each. The rows go in ORDER BY the ordinal, so the identity ids
   // ascend in that order and sorting what comes back by id lines it up with
   // the input again (RETURNING itself promises no order).
-  static async saveAll(references: PinReference[]): Promise<PinReference[]> {
+  static async saveAll(references: PinReference[], query: QueryFn = db.query): Promise<PinReference[]> {
     if (!references.length) {
       return references;
     }
     const column = <T,>(read: (r: PinReference) => T) => references.map(read);
-    const rows = await db.query<{ id: number; utcCreatedDateTime: Date }>(
+    const rows = await query<{ id: number; utcCreatedDateTime: Date }>(
       `
       INSERT INTO "PinReference" ("pinId", "url", "title", "confidence", "publishedDate", "startDate", "endDate", "reasoning", "utcCreatedDateTime", "addedByUserId")
       SELECT $1, "url", "title", "confidence", "publishedDate", "startDate", "endDate", "reasoning", COALESCE("utcCreatedDateTime", now()), "addedByUserId"
@@ -149,8 +149,8 @@ export default class PinReference {
     return undefined;
   }
 
-  static async deleteByPinId(pinId: number) {
-    await db.query(`DELETE FROM "PinReference" WHERE "pinId" = $1`, [pinId]);
+  static async deleteByPinId(pinId: number, query: QueryFn = db.query) {
+    await query(`DELETE FROM "PinReference" WHERE "pinId" = $1`, [pinId]);
     return { pinId };
   }
 }

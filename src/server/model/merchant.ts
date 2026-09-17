@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import * as db from '../db';
-import type { Row } from '../db';
+import type { QueryFn, Row } from '../db';
 import BasePin from './basePin';
 
 const prop = ['id', 'label', 'url', 'price'];
@@ -67,12 +67,12 @@ export default class Merchant {
   // paths that save a set of merchants - creating a pin, and updating one,
   // which deletes them first - are always inserting, so this does not need
   // upsert's update branch; merchant.save() still has it for a single row.
-  static async saveAll(merchants: Merchant[], pinId: number | undefined): Promise<Merchant[]> {
+  static async saveAll(merchants: Merchant[], pinId: number | undefined, query: QueryFn = db.query): Promise<Merchant[]> {
     if (!merchants.length) {
       return merchants;
     }
     const column = <T,>(read: (m: Merchant) => T) => merchants.map(read);
-    const rows = await db.query<{ id: number }>(
+    const rows = await query<{ id: number }>(
       `
       INSERT INTO "Merchant" ("pinId", "label", "url", "price")
       SELECT $1, "label", "url", "price"
@@ -89,8 +89,8 @@ export default class Merchant {
     return merchants;
   }
 
-  static async deleteByPinId(pinId: number) {
-    await db.query(`DELETE FROM "Merchant" WHERE "pinId" = $1`, [pinId]);
+  static async deleteByPinId(pinId: number, query: QueryFn = db.query) {
+    await query(`DELETE FROM "Merchant" WHERE "pinId" = $1`, [pinId]);
     return { pinId };
   }
 

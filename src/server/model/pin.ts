@@ -1,7 +1,8 @@
 import * as db from '../db';
-import type { Row } from '../db';
+import type { QueryFn, Row } from '../db';
 import BasePin, { BasePinProp } from './basePin';
 import Company from './company';
+import { saveAllToPin } from './medium';
 import Merchant from './merchant';
 import PinRating from './pinRating';
 import PinReference from './pinReference';
@@ -54,20 +55,30 @@ export default class Pin extends BasePin {
     const toSaveOriginalMedia = difference(newPinMedia, beforePinMedia, 'originalUrl');
     const toDeleteOriginalMedia = difference(beforePinMedia, newPinMedia, 'originalUrl');
 
-    // Merchants are replaced wholesale; each saves in place with a new id.
-    const allMerchantPromise = Merchant.deleteByPinId(this.id).then(() => Merchant.saveAll(newPinMerchants, this.id));
-
-    // References too; each keeps the utcCreatedDateTime it came with.
-    const allReferencePromise = PinReference.deleteByPinId(this.id).then(() => PinReference.saveAll(newPinReferences));
-
-    const toSaveMediaPromise = Promise.all(toSaveOriginalMedia.map((medium) => medium.saveWithThumb()));
-
-    // Removes the link and row; the file stays on the CDN.
-    const toDeleteMediaPromise = Promise.all(toDeleteOriginalMedia.map((medium) => medium.deleteFromPin()));
-
-    await Promise.all([toSaveMediaPromise, toDeleteMediaPromise, allMerchantPromise, allReferencePromise]);
+    // The slow parts go first, outside the transaction: fetching and uploading
+    // new media's thumbs (a failure writes nothing), and the company, whose
+    // logo lookup runs in the background and must find its row committed.
+    await Promise.all(toSaveOriginalMedia.map((medium) => medium.addThumb()));
     await Company.applyToPin(this);
-    return updatePinRow(this, this.userId);
+
+    // Then everything else in one transaction, the pin row first. These used
+    // to run on their own before it, so a pin the database refused (a PUT
+    // without a title) still lost its merchants, references and media.
+    await db.transaction(async (query) => {
+      await updatePinRow(this, this.userId, query);
+      // Merchants and references are replaced wholesale; each saves with a new
+      // id, and a reference keeps the utcCreatedDateTime it came with.
+      await Merchant.deleteByPinId(this.id, query);
+      await Merchant.saveAll(newPinMerchants, this.id, query);
+      await PinReference.deleteByPinId(this.id, query);
+      await PinReference.saveAll(newPinReferences, query);
+      // Removes the link and row; the file stays on the CDN.
+      for (const medium of toDeleteOriginalMedia) {
+        await medium.deleteFromPin(query);
+      }
+      await saveAllToPin(toSaveOriginalMedia, this.id, query);
+    });
+    return { pin: this };
   }
 
   delete() {
@@ -162,7 +173,7 @@ async function queryPinById(pinId: number, userId: number | null) {
   }
 }
 
-async function updatePinRow(pin: Pin, userId: number | null) {
+async function updatePinRow(pin: Pin, userId: number | null, query: QueryFn = db.query) {
   normalizeAllDayDates(pin);
   const values = [
     pin.id, pin.parentId, pin.title, pin.description, pin.sourceUrl, pin.longFormSummary,
@@ -174,7 +185,7 @@ async function updatePinRow(pin: Pin, userId: number | null) {
 
   // Every column is written, so a field missing from the pin is cleared - the
   // edit form sends the whole pin for this reason.
-  await db.query(
+  await query(
     `
     UPDATE "Pin"
     SET
