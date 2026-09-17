@@ -5,6 +5,7 @@
 //   db.queryResult(sql, params)  -> Promise of the full pg result (rowCount...)
 //   db.transaction(run)          -> run(query) inside BEGIN/COMMIT, rolled
 //                                   back if the promise it returns rejects
+//   db.afterCommit(query, fn)    -> fn once query's writes are committed
 //   db.closeConnection()         -> ends the pool, for scripts
 //
 // Parameters are positional ($1, $2...). Identifiers in SQL are double-quoted
@@ -68,13 +69,38 @@ export function queryResult<T extends Row = Row>(text: string, params?: unknown[
 export const query: QueryFn = <T extends Row = Row>(text: string, params?: unknown[]) =>
   queryResult<T>(text, params).then((res) => res.rows);
 
+// Work waiting on each open transaction's COMMIT, keyed by its query function.
+const commitHooks = new WeakMap<QueryFn, (() => void)[]>();
+
+// Runs fn once what query wrote can be seen by everyone else: straight away
+// for the plain pool query, after COMMIT for a transaction's (and never, if it
+// rolls back). For telling others about a write, such as a live push that
+// reads the new state back.
+export function afterCommit(query: QueryFn, fn: () => void) {
+  const hooks = commitHooks.get(query);
+  if (hooks) {
+    hooks.push(fn);
+  } else {
+    fn();
+  }
+}
+
 export async function transaction<T>(run: (query: QueryFn) => Promise<T>): Promise<T> {
   const client = await getPool().connect();
   const clientQuery: QueryFn = (text, params) => client.query(text, params).then((res) => res.rows);
+  const hooks: (() => void)[] = [];
+  commitHooks.set(clientQuery, hooks);
   try {
     await client.query('BEGIN');
     const result = await run(clientQuery);
     await client.query('COMMIT');
+    for (const hook of hooks) {
+      try {
+        hook();
+      } catch (err) {
+        console.error('afterCommit hook failed:', err);
+      }
+    }
     return result;
   } catch (err) {
     await client.query('ROLLBACK').catch(() => undefined);

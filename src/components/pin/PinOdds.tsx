@@ -1,10 +1,15 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
-import type { MarketOdds, MarketOutcome } from '@/lib/predictionMarkets';
+import { useMarketOdds, watchMarketOdds } from '@/lib/client/marketOdds';
+import { pinMarketRefs, type MarketOdds, type MarketOutcome } from '@/lib/predictionMarkets';
+import type { PinJson } from '@/lib/types';
 
 const SHOWN_OUTCOMES = 6;
+// A card has room for the leaders only.
+const CARD_MARKETS = 2;
+const CARD_OUTCOMES = 2;
 // How long a move takes: the bar, the number counting and a row changing place.
 const MOVE_MS = 700;
 // How long an outcome stays green or red after it moves.
@@ -36,28 +41,8 @@ function reducedMotion() {
 // server as they refresh (at least once a minute) for as long as the page is
 // in view. Nothing when none of them answer.
 export function PinOdds({ pinId }: { pinId: number }) {
-  const [markets, setMarkets] = useState<MarketOdds[] | null>(null);
-
-  useEffect(() => {
-    let source: EventSource | null = null;
-    const open = () => {
-      if (source || document.hidden) return;
-      source = new EventSource(`/api/pins/${pinId}/odds/stream`);
-      source.addEventListener('odds', (event) => setMarkets(JSON.parse((event as MessageEvent).data) as MarketOdds[]));
-    };
-    const close = () => {
-      source?.close();
-      source = null;
-    };
-    // A hidden tab lets go, so the server stops reading markets nobody sees.
-    const onVisibility = () => (document.hidden ? close() : open());
-    open();
-    document.addEventListener('visibilitychange', onVisibility);
-    return () => {
-      document.removeEventListener('visibilitychange', onVisibility);
-      close();
-    };
-  }, [pinId]);
+  const markets = useMarketOdds(pinId);
+  useEffect(() => watchMarketOdds(pinId), [pinId]);
 
   if (!markets?.length) return null;
   return (
@@ -70,6 +55,98 @@ export function PinOdds({ pinId }: { pinId: number }) {
       ))}
     </section>
   );
+}
+
+// The same live odds on a timeline or search card, cut down to each market's
+// leaders. Only a card near the viewport follows them, so a long timeline
+// asks the server for a screenful of pins rather than all of them.
+//
+// Its height is known before any odds arrive: the links say how many markets
+// there are and on which exchange, and every market box is two rows tall, so
+// the card is drawn (on the server too) with a placeholder of the same size.
+export function PinCardOdds({ pin }: { pin: Pick<PinJson, 'id' | 'sourceUrl' | 'references'> }) {
+  const { id, sourceUrl, references } = pin;
+  const expected = useMemo(() => pinMarketRefs({ sourceUrl, references }).slice(0, CARD_MARKETS), [sourceUrl, references]);
+  const citesMarket = expected.length > 0;
+  const ref = useRef<HTMLDivElement>(null);
+  const markets = useMarketOdds(id);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!citesMarket || !el) return;
+    let stop: (() => void) | null = null;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          stop ??= watchMarketOdds(id);
+        } else {
+          stop?.();
+          stop = null;
+        }
+      },
+      { rootMargin: '300px' },
+    );
+    observer.observe(el);
+    return () => {
+      observer.disconnect();
+      stop?.();
+    };
+  }, [id, citesMarket]);
+
+  if (!citesMarket) return null;
+  // Pushed as none (dead links, or the exchanges failing before any read
+  // succeeded): only then does the card give the room back.
+  if (markets && !markets.length) return <div ref={ref} />;
+  return (
+    <div ref={ref} className="mb-2 flex flex-col gap-1.5">
+      {markets
+        ? markets.slice(0, CARD_MARKETS).map((market) => <CardMarket key={market.url} market={market} />)
+        : expected.map((market) => <CardMarket key={market.url} source={market.source} />)}
+    </div>
+  );
+}
+
+// A market on a card: its leading outcomes, or while the first push is on its
+// way the same box with empty rows, so the two are the same height.
+function CardMarket({ market, source = market?.source }: { market?: MarketOdds; source?: string }) {
+  const shown = market?.outcomes.slice(0, CARD_OUTCOMES) ?? [];
+  const listRef = useRef<HTMLUListElement>(null);
+  useRowMoves(listRef, shown.map((o) => o.label).join('\n'));
+
+  return (
+    <div className="rounded-lg border border-line px-2 py-1.5 text-xs" aria-busy={!market || undefined}>
+      <div className="mb-1 flex items-center gap-1.5 text-[11px] text-subtle">
+        <Icon name="trending-up" className="size-3 shrink-0 text-link" />
+        {market ? (
+          <a href={market.url} target="_blank" rel="noopener nofollow" title={market.title} className="min-w-0 truncate text-muted hover:text-link hover:no-underline">
+            {market.title}
+          </a>
+        ) : (
+          <span className="w-2/5 animate-pulse truncate rounded bg-raised motion-reduce:animate-none">{' '}</span>
+        )}
+        <span className="ml-auto inline-flex shrink-0 items-center gap-1.5 font-semibold tracking-wider uppercase">
+          {market?.closed ? <span className="text-warning">Closed</span> : market ? <LiveDot fetchedAt={market.fetchedAt} /> : null}
+          {source}
+        </span>
+      </div>
+      <ul ref={listRef} className="flex flex-col gap-1">
+        {shown.map((outcome) => (
+          <Outcome key={outcome.label} outcome={outcome} compact />
+        ))}
+        {/* Rows a market is short of (or all of them, before it arrives). */}
+        {Array.from({ length: CARD_OUTCOMES - shown.length }, (_, i) => (
+          <li key={`empty-${i}`} aria-hidden className={`grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-2 ${market ? 'invisible' : ''}`}>
+            <span className="relative block animate-pulse rounded bg-raised px-1.5 py-0.5 motion-reduce:animate-none">{' '}</span>
+            <span className="w-9">{' '}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function LiveDot({ fetchedAt }: { fetchedAt: string }) {
+  return <span aria-hidden title={`Updated ${updatedTime.format(new Date(fetchedAt))}`} className="size-1.5 shrink-0 animate-pulse rounded-full bg-success motion-reduce:animate-none" />;
 }
 
 function Market({ market }: { market: MarketOdds }) {
@@ -88,15 +165,15 @@ function Market({ market }: { market: MarketOdds }) {
       </div>
       <ul ref={listRef} className="flex flex-col gap-1.5">
         {shown.map((outcome) => (
-          <Outcome key={outcome.label} outcome={outcome} />
+          <Outcome key={outcome.label} outcome={outcome} compact={false} />
         ))}
       </ul>
       <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-subtle">
         {market.closed ? (
           <span className="font-semibold text-warning">Closed</span>
         ) : (
-          <span className="inline-flex items-center gap-1.5" title={`Updated ${updatedTime.format(new Date(market.fetchedAt))}`}>
-            <span aria-hidden className="size-1.5 animate-pulse rounded-full bg-success motion-reduce:animate-none" />
+          <span className="inline-flex items-center gap-1.5">
+            <LiveDot fetchedAt={market.fetchedAt} />
             Live
           </span>
         )}
@@ -114,7 +191,7 @@ function Market({ market }: { market: MarketOdds }) {
 
 // One outcome's bar and chance. On a push the bar slides to its new width, the
 // number counts to its new value, and both tint green or red for a moment.
-function Outcome({ outcome }: { outcome: MarketOutcome }) {
+function Outcome({ outcome, compact }: { outcome: MarketOutcome; compact: boolean }) {
   const target = outcome.probability;
   const [shown, setShown] = useState(target);
   const [trend, setTrend] = useState<'up' | 'down' | null>(null);
@@ -163,8 +240,8 @@ function Outcome({ outcome }: { outcome: MarketOutcome }) {
   const text = trend === 'up' ? 'text-success' : trend === 'down' ? 'text-danger' : 'text-ink';
 
   return (
-    <li className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3">
-      <span className="relative overflow-hidden rounded-md bg-raised px-2 py-1">
+    <li className={`grid grid-cols-[minmax(0,1fr)_auto] items-center ${compact ? 'gap-x-2' : 'gap-x-3'}`}>
+      <span className={`relative overflow-hidden bg-raised ${compact ? 'rounded px-1.5 py-0.5' : 'rounded-md px-2 py-1'}`}>
         <span
           ref={barRef}
           aria-hidden
@@ -175,7 +252,7 @@ function Outcome({ outcome }: { outcome: MarketOutcome }) {
           {outcome.label}
         </span>
       </span>
-      <span className={`w-11 text-right font-semibold tabular-nums transition-colors duration-700 motion-reduce:transition-none ${text}`}>
+      <span className={`text-right font-semibold tabular-nums transition-colors duration-700 motion-reduce:transition-none ${compact ? 'w-9' : 'w-11'} ${text}`}>
         {percent(shown)}
       </span>
     </li>

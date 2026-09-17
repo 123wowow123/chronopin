@@ -1,16 +1,15 @@
 'use client';
 
 // The signed-in user's unread notification count, shared by the navbar bell
-// and the mobile drawer. One poll, every minute while the tab is visible, runs
-// while anything is showing the count.
+// and the mobile drawer. Pushed over the page's live stream
+// (src/lib/client/liveFeed.ts): on connecting, and whenever a notification
+// arrives, is taken back or is read (in any tab).
 
 import { useSyncExternalStore } from 'react';
-import { api } from './api';
-
-const POLL_MS = 60_000;
+import { onLive } from './liveFeed';
 
 let unread = 0;
-let timer: ReturnType<typeof setInterval> | null = null;
+let stopFeed: (() => void) | null = null;
 const listeners = new Set<() => void>();
 
 function set(next: number) {
@@ -19,38 +18,27 @@ function set(next: number) {
   listeners.forEach((l) => l());
 }
 
-function refreshUnreadCount() {
-  api
-    .get<{ unreadCount: number }>('/api/notifications/unread-count')
-    .then((res) => set(res.unreadCount))
-    .catch(() => {});
-}
-
-// After the list has been opened and marked read.
+// After the list has been opened and marked read, ahead of the push that
+// confirms it.
 export function clearUnreadCount() {
   set(0);
 }
 
 function subscribe(listener: () => void) {
   listeners.add(listener);
-  if (!timer) {
-    refreshUnreadCount();
-    timer = setInterval(() => {
-      if (!document.hidden) refreshUnreadCount();
-    }, POLL_MS);
-  }
+  stopFeed ??= onLive<{ unreadCount: number }>('notifications', ({ unreadCount }) => set(unreadCount));
   return () => {
     listeners.delete(listener);
-    if (!listeners.size && timer) {
-      clearInterval(timer);
-      timer = null;
+    if (!listeners.size && stopFeed) {
+      stopFeed();
+      stopFeed = null;
     }
   };
 }
 
 const noSubscribe = () => () => {};
 
-// The count, or 0 without polling when there is nobody signed in to ask for.
+// The count, or 0 without listening when there is nobody signed in to ask for.
 export function useUnreadCount(signedIn: boolean) {
   const count = useSyncExternalStore(signedIn ? subscribe : noSubscribe, () => unread, () => 0);
   return signedIn ? count : 0;

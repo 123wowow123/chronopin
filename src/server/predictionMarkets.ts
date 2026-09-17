@@ -2,7 +2,7 @@
 // exchange's public read-only API (no key): Kalshi's trade API and
 // Polymarket's Gamma API. While anyone has a pin open, its feed re-reads the
 // markets every REFRESH_MS and pushes the odds to every viewer (GET
-// /api/pins/:id/odds/stream). The feeds are in-process, so like the pin
+// /api/odds/stream). The feeds are in-process, so like the pin
 // stream this holds for a single replica.
 
 import type { MarketOdds, MarketOutcome, MarketRef } from '@/lib/predictionMarkets';
@@ -79,14 +79,22 @@ async function kalshi(ref: Extract<MarketRef, { source: 'Kalshi' }>): Promise<Ma
   const { event, markets } = found;
   const closed = markets.every((m) => !KALSHI_OPEN.has(m.status));
   const closeTimes = markets.map((m) => m.close_time).filter(Boolean).sort();
+  const live = markets.filter((m) => closed || KALSHI_OPEN.has(m.status));
+  // An event of one market is a yes/no question: shown as its two sides, like
+  // a Polymarket question.
+  const yes = live.length === 1 ? kalshiChance(live[0]) : null;
+  const outcomes =
+    live.length === 1
+      ? [
+          { label: 'Yes', probability: yes },
+          { label: 'No', probability: yes == null ? null : 1 - yes },
+        ]
+      : live.map((m) => ({ label: m.yes_sub_title || m.title, probability: kalshiChance(m) }));
   return {
     source: 'Kalshi',
     url: ref.url,
     title: [event.title, event.sub_title].filter(Boolean).join(' '),
-    outcomes: markets
-      .filter((m) => closed || KALSHI_OPEN.has(m.status))
-      .map((m) => ({ label: m.yes_sub_title || m.title, probability: kalshiChance(m) }))
-      .sort(byChance),
+    outcomes: outcomes.sort(byChance),
     closeTime: closeTimes[closeTimes.length - 1],
     closed,
     fetchedAt: new Date().toISOString(),
@@ -188,14 +196,16 @@ type Feed = {
 const feeds: Map<number, Feed> = ((globalThis as any).__chronopinOddsFeeds ??= new Map());
 
 // Reads every market the pin cites and pushes what answered. A read where
-// every exchange failed pushes nothing, so viewers keep the last odds.
+// every exchange failed keeps viewers on the last odds; with none yet, it
+// pushes an empty list, so a card stops holding room for odds that aren't
+// coming.
 async function refresh(pinId: number, feed: Feed) {
   if (feed.reading) return;
   feed.reading = true;
   try {
     const results = await Promise.allSettled(feed.refs.map(oddsFor));
     results.forEach((r) => r.status === 'rejected' && log.error('pin odds', (r.reason as Error)?.message));
-    if (results.every((r) => r.status === 'rejected')) return;
+    if (feed.last && results.every((r) => r.status === 'rejected')) return;
     const odds = results.flatMap((r) => (r.status === 'fulfilled' && r.value ? [r.value] : []));
     if (feeds.get(pinId) !== feed) return;
     feed.last = odds;

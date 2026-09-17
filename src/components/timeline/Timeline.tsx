@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { parseLinkHeader } from '@/lib/client/api';
+import { onLive } from '@/lib/client/liveFeed';
 import { useNow } from '@/lib/client/now';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
@@ -167,17 +168,16 @@ export function Timeline({
   }, []);
 
   // Live changes from other people (new pins, edits, watch counts), for pins
-  // within the stretch of timeline already loaded.
+  // within the stretch of timeline already loaded and the new pins panel, over
+  // the page's one live stream.
   useEffect(() => {
-    const source = new EventSource('/api/pins/stream');
-    const onPin = (event: MessageEvent) => {
-      const changed = JSON.parse(event.data) as CardPin;
+    const onPin = (type: string, changed: CardPin) => {
       const withHtml = { ...changed, safeDescription: safeHtmlInBrowser(changed.description) };
       // A pin edited below the timeline's confidence bar leaves it, as it
       // would on reload; a new one below the bar never joins.
       const confidence = pinConfidence(pinEvidence(changed));
       const belowBar = minConfidence !== null && confidence !== undefined && confidence < minConfidence;
-      if (event.type === 'pin:remove' || belowBar) {
+      if (type === 'pin:remove' || belowBar) {
         setPins((list) => list.filter((p) => p.id !== changed.id));
         setNewPins((list) => list.filter((p) => p.id !== changed.id));
         return;
@@ -190,7 +190,7 @@ export function Timeline({
           next[index] = { ...withHtml, hasFavorite: list[index].hasFavorite };
           return next;
         }
-        if (event.type !== 'pin:save' || !list.length) return list;
+        if (type !== 'pin:save' || !list.length) return list;
         const times = list.map((p) => new Date(p.utcStartDateTime).getTime());
         const at = new Date(changed.utcStartDateTime).getTime();
         return at >= Math.min(...times) && at <= Math.max(...times) ? [...list, withHtml] : list;
@@ -198,9 +198,9 @@ export function Timeline({
       setNewPins((list) => {
         const index = list.findIndex((p) => p.id === changed.id);
         if (index === -1) {
-          return event.type === 'pin:save' ? [toNewPin(withHtml), ...list].slice(0, NEW_PINS_LIMIT) : list;
+          return type === 'pin:save' ? [toNewPin(withHtml), ...list].slice(0, NEW_PINS_LIMIT) : list;
         }
-        if (event.type !== 'pin:update') return list;
+        if (type !== 'pin:update') return list;
         // An edit's broadcast is the form's pin: no author, and possibly no
         // created time, so those stay as the panel had them.
         const next = [...list];
@@ -208,10 +208,10 @@ export function Timeline({
         return next;
       });
     };
-    for (const type of ['pin:save', 'pin:update', 'pin:remove', 'pin:favorite', 'pin:unfavorite', 'pin:like', 'pin:unlike']) {
-      source.addEventListener(type, onPin as EventListener);
-    }
-    return () => source.close();
+    const stops = ['pin:save', 'pin:update', 'pin:remove', 'pin:favorite', 'pin:unfavorite', 'pin:like', 'pin:unlike'].map((type) =>
+      onLive<CardPin>(type, (changed) => onPin(type, changed)),
+    );
+    return () => stops.forEach((stop) => stop());
   }, [minConfidence]);
 
   const loadMore = useCallback(

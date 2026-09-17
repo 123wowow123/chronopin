@@ -28,6 +28,20 @@ export function onPinEvent(event: PinEvent, listener: Listener) {
   return () => pinEvents.off(event, listener);
 }
 
+// A user's notifications changed (one arrived, was taken back or was read).
+// Carries only the user id: the live feed reads the count back for that user's
+// own connections, so nothing private goes past anyone else.
+const NOTIFICATIONS = 'notifications';
+
+export function emitNotificationsChanged(userId: number) {
+  pinEvents.emit(NOTIFICATIONS, userId);
+}
+
+export function onNotificationsChanged(listener: (userId: number) => void) {
+  pinEvents.on(NOTIFICATIONS, listener);
+  return () => pinEvents.off(NOTIFICATIONS, listener);
+}
+
 if (!g.__chronopinPinListeners) {
   g.__chronopinPinListeners = true;
 

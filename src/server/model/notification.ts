@@ -1,5 +1,16 @@
 import * as db from '../db';
-import type { QueryFn } from '../db';
+import type { QueryFn, Row } from '../db';
+import { emitNotificationsChanged } from '../events';
+
+// Tells the live feed whose notifications a write changed, once it commits.
+// rows are what the write RETURNed, so a write that changed nothing is quiet.
+function announce<T extends Row[]>(query: QueryFn, rows: T): T {
+  const userIds = new Set(rows.map((row) => Number(row.userId)));
+  if (userIds.size) {
+    db.afterCommit(query, () => userIds.forEach((userId) => emitNotificationsChanged(userId)));
+  }
+  return rows;
+}
 
 const types = {
   follow: 'follow',
@@ -61,9 +72,9 @@ export default class Notification {
       `
       INSERT INTO "Notification" ("userId", "actorId", "type", "pinId", "commentId")
       VALUES ($1, $2, $3, $4, $5)
-      RETURNING "id"`,
+      RETURNING "id", "userId"`,
       [userId, actorId, type, pinId == null ? null : pinId, commentId == null ? null : commentId],
-    );
+    ).then((rows) => announce(query, rows));
   }
 
   // Soft-deletes everything a comment sent (its 'comment' and 'reply'
@@ -73,9 +84,10 @@ export default class Notification {
       `
       UPDATE "Notification"
       SET "utcDeletedDateTime" = now()
-      WHERE "commentId" = $1 AND "utcDeletedDateTime" IS NULL`,
+      WHERE "commentId" = $1 AND "utcDeletedDateTime" IS NULL
+      RETURNING "userId"`,
       [commentId],
-    );
+    ).then((rows) => announce(query, rows));
   }
 
   // Writes a 'today' for each pin the user watches that lands on today's date
@@ -96,9 +108,10 @@ export default class Notification {
             = (now() AT TIME ZONE $2)::date
         ON CONFLICT ("userId", "pinId", "pinDay") WHERE "type" = 'today'
         DO UPDATE SET "utcDeletedDateTime" = NULL
-        WHERE "Notification"."utcDeletedDateTime" IS NOT NULL`,
+        WHERE "Notification"."utcDeletedDateTime" IS NOT NULL
+        RETURNING "userId"`,
         [userId, zone],
-      );
+      ).then((rows) => announce(db.query, rows));
     try {
       await write(timeZone);
     } catch (err) {
@@ -114,9 +127,10 @@ export default class Notification {
       `
       UPDATE "Notification"
       SET "utcDeletedDateTime" = now()
-      WHERE "userId" = $1 AND "pinId" = $2 AND "type" = 'today' AND "utcDeletedDateTime" IS NULL`,
+      WHERE "userId" = $1 AND "pinId" = $2 AND "type" = 'today' AND "utcDeletedDateTime" IS NULL
+      RETURNING "userId"`,
       [userId, pinId],
-    );
+    ).then((rows) => announce(query, rows));
   }
 
   // Soft-deletes what an undone action had sent, read or not.
@@ -128,9 +142,10 @@ export default class Notification {
       `
       UPDATE "Notification"
       SET "utcDeletedDateTime" = now()
-      WHERE "userId" = $1 AND "actorId" = $2 AND "type" = $3 AND "utcDeletedDateTime" IS NULL`,
+      WHERE "userId" = $1 AND "actorId" = $2 AND "type" = $3 AND "utcDeletedDateTime" IS NULL
+      RETURNING "userId"`,
       [userId, actorId, type],
-    );
+    ).then((rows) => announce(query, rows));
   }
 
   // Newest first, with the actor's public handle and whether the recipient
@@ -179,8 +194,9 @@ export default class Notification {
       `
       UPDATE "Notification"
       SET "utcReadDateTime" = now()
-      WHERE "userId" = $1 AND "utcReadDateTime" IS NULL AND "utcDeletedDateTime" IS NULL`,
+      WHERE "userId" = $1 AND "utcReadDateTime" IS NULL AND "utcDeletedDateTime" IS NULL
+      RETURNING "userId"`,
       [userId],
-    );
+    ).then((rows) => announce(db.query, rows));
   }
 }

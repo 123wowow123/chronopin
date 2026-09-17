@@ -14,6 +14,7 @@ import type { PinTense } from '@/lib/timeline';
 import { CitedText } from './CitedText';
 import { DateConfidence, DateConfidenceReasoning } from './DateConfidence';
 import { PinConfidence } from './PinConfidence';
+import { PinCardOdds } from './PinOdds';
 import { PinMediaFrame } from './PinMedia';
 import { RatingAverage } from './PinRatings';
 import { RefineLink } from './RefineLink';
@@ -160,6 +161,7 @@ export function PinCard({ pin, serverTimeZone, priority, tense }: { pin: CardPin
               ) : null}
             </div>
           ) : null}
+          <PinCardOdds pin={pin} />
           {pin.safeDescription ? (
             <div className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: pin.safeDescription }} />
           ) : null}
