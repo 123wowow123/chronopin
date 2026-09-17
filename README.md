@@ -465,6 +465,8 @@ This is a promotional article about one of the company partners with Interesting
 
 For delayed start dates, try to estimate how long of a delay
 
+major local events by major city scrape and more targetted by your location
+
 Scape major events on Kalshi / Polymarket
 https://kalshi.com/markets/kxfeddecision/fed-meeting/kxfeddecision-26oct
 
