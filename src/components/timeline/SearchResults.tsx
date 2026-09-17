@@ -361,7 +361,7 @@ export function SearchResults({
             <CardGrid className="mt-6">
               {(rankedPins ?? []).map((pin, i) => (
                 <li key={pin.id} id={`rank-${pin.id}`}>
-                  <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={i === 0} tense={pinTense(pin, serverNow, todayKey)} />
+                  <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={i === 0} tense={pinTense(pin, serverNow, todayKey)} todayKey={todayKey} />
                 </li>
               ))}
             </CardGrid>

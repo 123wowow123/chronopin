@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
-import { PostedTime, StartTime } from '@/components/ui/LocalTime';
+import { PostedTime, StartDistance, StartTime } from '@/components/ui/LocalTime';
 import { money } from '@/lib/format';
 import { useSession } from '@/lib/client/session';
 import { useVideoPoster } from '@/lib/client/timelineVideo';
@@ -30,8 +30,21 @@ const TENSE_CLASS: Record<PinTense, string> = {
   ongoing: 'hover:border-raised-2',
 };
 
-// A pin on the timeline or in search results.
-export function PinCard({ pin, serverTimeZone, priority, tense }: { pin: CardPin; serverTimeZone: string; priority?: boolean; tense?: PinTense }) {
+// A pin on the timeline or in search results. Away from the timeline (no day
+// tag beside it), todayKey adds how far its start is from today.
+export function PinCard({
+  pin,
+  serverTimeZone,
+  priority,
+  tense,
+  todayKey,
+}: {
+  pin: CardPin;
+  serverTimeZone: string;
+  priority?: boolean;
+  tense?: PinTense;
+  todayKey?: string;
+}) {
   const { isAdmin } = useSession();
   // On a phone a card shows a video's still instead of its player, unless an
   // admin has turned the players back on.
@@ -93,7 +106,7 @@ export function PinCard({ pin, serverTimeZone, priority, tense }: { pin: CardPin
             {pin.utcCreatedDateTime ? (
               <span>
                 <Link href={href} className="text-inherit hover:text-ink hover:no-underline">
-                  <PostedTime value={pin.utcCreatedDateTime} serverTimeZone={serverTimeZone} />
+                  <PostedTime value={pin.utcCreatedDateTime} serverTimeZone={serverTimeZone} dateOnly />
                 </Link>
               </span>
             ) : null}
@@ -112,7 +125,7 @@ export function PinCard({ pin, serverTimeZone, priority, tense }: { pin: CardPin
           ) : null}
         </div>
 
-        <h2 className="mx-3 mt-1.5 mb-2.5 font-display text-[19px] leading-snug font-medium tracking-tight text-balance">
+        <h2 className="mx-3 mt-1.5 mb-2.5 font-display text-[19px] leading-snug font-medium tracking-tight text-pretty">
           <Link href={href} className="text-ink transition-colors hover:text-link hover:no-underline">
             {pin.title}
           </Link>
@@ -121,7 +134,9 @@ export function PinCard({ pin, serverTimeZone, priority, tense }: { pin: CardPin
         {media.length ? (
           <PinMediaFrame
             key={media.map((m) => m.originalUrl ?? m.thumbName).join(' ')}
-            className="relative mb-3 bg-black"
+            // A tall picture (a poster) is cropped to its middle, leaving room under
+            // it for the start date and some description before the cut-off.
+            className="relative mb-3 bg-black [&_img]:max-h-[280px] [&_img]:object-cover"
             overlay={
               <>
                 {pin.address ? <span className="media-chip absolute top-2 right-2 z-10 max-w-[70%] truncate">{pin.address}</span> : null}
@@ -152,6 +167,8 @@ export function PinCard({ pin, serverTimeZone, priority, tense }: { pin: CardPin
               ) : null}
               {/* The review-site average, for a film, series or anime pin. */}
               <RatingAverage ratings={pin.ratings} compact />
+              {/* How far the start is from today, at the tail of the pills. */}
+              {pin.utcStartDateTime && todayKey ? <StartDistance pin={pin} todayKey={todayKey} serverTimeZone={serverTimeZone} /> : null}
               {/* Last, on a line of its own. An unverified pin's reasoning only restates
                   that nothing was found, so it stays hidden. */}
               {pin.utcStartDateTime && pin.dateConfidence !== 'unknown' ? (

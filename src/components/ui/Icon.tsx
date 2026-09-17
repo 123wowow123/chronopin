@@ -157,6 +157,13 @@ const PATHS: Record<string, React.ReactNode> = {
   // Filled with `fill-current` where it needs to read as a button.
   play: <path d="M8 5.2v13.6L19 12z" />,
   star: <path d="m12 3 2.7 5.9 6.3.7-4.7 4.4 1.2 6.4L12 17.3 6.5 20.4l1.2-6.4-4.7-4.4 6.3-.7z" />,
+  // A clock face: how long ago or until.
+  clock: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3 2" />
+    </>
+  ),
   // A four-pointed glint: something just added.
   sparkle: <path d="M12 3.5 13.9 9 19.5 11l-5.6 2L12 18.5 10.1 13 4.5 11l5.6-2z" />,
   // A line climbing to the right: views on the rise.

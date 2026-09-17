@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { averageRating, compactCount, dayKeyIn, daysBetween, formatDayKey, formatPosted, formatStart, money, monthDayOf, plainText, ratingScore, timeAgo, timespan, weekdayPlanet } from './format';
+import { averageRating, compactCount, dayKeyIn, daysAway, daysBetween, formatDayKey, formatPosted, formatStart, money, monthDayOf, plainText, ratingScore, timeAgo, timespan, weekdayPlanet } from './format';
 import { buildBags, pinTense, resolveTodayMarker } from './timeline';
 
 describe('money', () => {
@@ -46,6 +46,7 @@ describe('dates', () => {
 
   it('formats posted and start times', () => {
     expect(formatPosted('2026-09-13T04:02:00Z', 'America/Los_Angeles')).toBe('09/12/2026 at 9:02 pm');
+    expect(formatPosted('2026-09-13T04:02:00Z', 'America/Los_Angeles', { dateOnly: true })).toBe('09/12/2026');
     expect(formatStart({ utcStartDateTime: '2026-09-14T00:00:00Z', allDay: true }, 'America/Los_Angeles')).toBe(
       'Starts 09/14/2026',
     );
@@ -71,6 +72,14 @@ describe('dates', () => {
     expect(formatDayKey('0079-08-24')).toBe('08/24/79');
     expect(formatStart({ utcStartDateTime: '-002560-01-01T00:00:00Z', allDay: true }, 'UTC')).toBe('Starts 01/01/2561 BC');
     expect(timespan('2026-09-16', '-2560-01-01', 'y')).toBe('-4586.7 years');
+  });
+
+  it('says how far a day is from today', () => {
+    expect(daysAway('2026-09-16', '2026-09-16')).toBe('Today');
+    expect(daysAway('2026-09-16', '2026-09-17')).toBe('in 1 day');
+    expect(daysAway('2026-09-16', '2026-09-13')).toBe('3 days ago');
+    expect(daysAway('2026-09-16', '2027-11-16')).toBe('in 1.2 years');
+    expect(daysAway('2026-09-16', '-2560-01-01')).toBe('4586.7 years ago');
   });
 
   it('names the planet for the weekday', () => {

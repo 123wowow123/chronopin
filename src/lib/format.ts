@@ -115,6 +115,18 @@ export function timespan(fromTodayKey: string, dayKey: string, format: 'd' | 'y'
   return pluralize('day', days);
 }
 
+// How far a day is from today, for a card shown away from the timeline:
+// "Today", "in 5 days", "3 days ago", and in years once a year or more away
+// ("in 1.2 years", "4586.7 years ago").
+export function daysAway(fromTodayKey: string, dayKey: string): string {
+  const days = daysBetween(fromTodayKey, dayKey);
+  if (days === 0) {
+    return 'Today';
+  }
+  const span = Math.abs(days) >= 365 ? pluralize('year', Math.abs(yearsBetween(fromTodayKey, dayKey)).toFixed(1)) : pluralize('day', Math.abs(days));
+  return days > 0 ? `in ${span}` : `${span} ago`;
+}
+
 // Fractional years between two date keys, the way moment's diff(..., 'years',
 // true) measures it: whole months, then the part month by its own length.
 function yearsBetween(fromKey: string, toKey: string): number {
@@ -198,10 +210,13 @@ function eraSuffix(d: Date, timeZone: string): string {
   return era === 'BC' ? ' BC' : '';
 }
 
-// "09/12/2026 at 9:02 pm" in a time zone.
-export function formatPosted(instant: string | Date, timeZone: string): string {
+// "09/12/2026 at 9:02 pm" in a time zone, or "09/12/2026" with dateOnly.
+export function formatPosted(instant: string | Date, timeZone: string, { dateOnly = false }: { dateOnly?: boolean } = {}): string {
   const d = new Date(instant);
   const date = dateFormat('en-US', { timeZone, month: '2-digit', day: '2-digit', year: 'numeric' }).format(d);
+  if (dateOnly) {
+    return date;
+  }
   const time = dateFormat('en-US', { timeZone, hour: 'numeric', minute: '2-digit' }).format(d);
   return `${date} at ${time.toLowerCase()}`;
 }

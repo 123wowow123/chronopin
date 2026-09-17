@@ -33,8 +33,11 @@ export function WeatherIcon({ pinId, hasPlace }: { pinId: number; hasPlace: bool
     };
   }, [pinId, hasPlace]);
 
+  if (!hasPlace) return null;
+  // Until the weather loads the span is empty but still watched, so it sits out
+  // of the flex row (absolute) rather than adding a second gap between its neighbours.
   return (
-    <span ref={ref} className="inline-flex items-center gap-1 text-xs text-muted" title={weather?.summary}>
+    <span ref={ref} className="inline-flex items-center gap-1 text-xs text-muted empty:absolute" title={weather?.summary}>
       {weather ? (
         <>
           <Icon name={weather.icon} className={`size-3.5 ${weather.kind === 'typical' ? 'text-subtle' : 'text-warning'}`} />

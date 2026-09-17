@@ -355,7 +355,7 @@ async function Related({ pin }: { pin: PinJson }) {
       <CardGrid>
         {toCardPins(pins).map((p) => (
           <li key={p.id}>
-            <PinCard pin={p} serverTimeZone={timeZone} tense={pinTense(p, now, todayKey)} />
+            <PinCard pin={p} serverTimeZone={timeZone} tense={pinTense(p, now, todayKey)} todayKey={todayKey} />
           </li>
         ))}
       </CardGrid>

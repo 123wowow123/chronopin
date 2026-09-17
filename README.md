@@ -466,9 +466,11 @@ This is a promotional article about one of the company partners with Interesting
 For delayed start dates, try to estimate how long of a delay
 
 Scape major events on Kalshi / Polymarket
+https://kalshi.com/markets/kxfeddecision/fed-meeting/kxfeddecision-26oct
 
 need tag for betting sites and should be searchable
 
+each pin should try to have at least 3 images
 
 - use betting site to add scores for rotten tomatoes etc on game, movie, shows,etc
 https://kalshi.com/markets/kxrt/rotten-tomatoes-scores/kxrt-res
