@@ -460,6 +460,11 @@ This is a promotional article about one of the company partners with Interesting
 - need job to scrape and update pin, any visit will trigger a scheduled update scape that night, along to new reference
 
 
+Scape major events on Kalshi / Polymarket
+
+
+- use betting site to add scores for rotten tomatoes etc on game, movie, shows,etc
+https://kalshi.com/markets/kxrt/rotten-tomatoes-scores/kxrt-res
 
 ## Reminder: MyAnimeList top-anime scrape (in progress, resume later)
 
