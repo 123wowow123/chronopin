@@ -5,7 +5,6 @@ import { useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { PostedTime, StartDistance, StartTime } from '@/components/ui/LocalTime';
 import { money } from '@/lib/format';
-import { useSession } from '@/lib/client/session';
 import { useVideoPoster } from '@/lib/client/timelineVideo';
 import { pinPath } from '@/lib/seo';
 import type { CardPin } from '@/lib/types';
@@ -45,7 +44,6 @@ export function PinCard({
   tense?: PinTense;
   todayKey?: string;
 }) {
-  const { isAdmin } = useSession();
   // On a phone a card shows a video's still instead of its player, unless an
   // admin has turned the players back on.
   const poster = useVideoPoster();
@@ -209,14 +207,6 @@ export function PinCard({
           ) : null}
         </div>
         <div className="flex items-center justify-end gap-1">
-          {/* The session loads after the timeline has scrolled to today, so
-              this must not change the footer's height (inline-flex, 28px like
-              the watch button) or every card above today would push it down. */}
-          {isAdmin ? (
-            <Link href={`/update/${pin.id}`} className="inline-flex rounded-md p-1.5 text-subtle hover:bg-raised hover:text-ink" title="Edit pin">
-              <Icon name="pencil" className="size-4" />
-            </Link>
-          ) : null}
           <WatchButton pin={pin} />
         </div>
       </div>
