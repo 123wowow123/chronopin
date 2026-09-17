@@ -1,20 +1,38 @@
-// Live odds from the prediction markets a pin links to, through each
-// exchange's public read-only API (no key): Kalshi's trade API and
-// Polymarket's Gamma API. While anyone has a pin open, its feed re-reads the
-// markets every REFRESH_MS and pushes the odds to every viewer (GET
-// /api/odds/stream). The feeds are in-process, so like the pin
-// stream this holds for a single replica.
+// Live odds from the prediction markets a pin links to: Kalshi, Polymarket
+// (polymarket.com) and Polymarket US (polymarket.us). While anyone has a pin
+// open, its feed pushes the odds to every viewer over the live feed.
+//
+// Each exchange's live socket is the main feed (kalshiStream.ts and
+// polymarketUsStream.ts with their API keys, polymarketStream.ts keyless):
+// prices stream in as they change, and REST reads (signed where there is a
+// key) only pick up new markets and closes, every STREAM_REFRESH_MS. A market
+// no socket covers - no key, a socket down, or not subscribed yet - falls back
+// to being re-read every REFRESH_MS through the keyless public APIs: Kalshi's
+// trade API, Polymarket's Gamma API and Polymarket US's gateway. The feeds are
+// in-process, so like the pin stream this holds for a single replica.
 
 import type { MarketOdds, MarketOutcome, MarketRef, MarketTrend } from '@/lib/predictionMarkets';
+import { kalshiChance, kalshiHeaders, kalshiStream } from './kalshiStream';
+import type { MarketStream } from './marketSocket';
+import { polymarketStream } from './polymarketStream';
+import { polymarketUsHeaders, polymarketUsStream } from './polymarketUsStream';
 import log from './util/log';
 
 const KALSHI_API = 'https://api.elections.kalshi.com/trade-api/v2';
 const POLYMARKET_API = 'https://gamma-api.polymarket.com';
 const POLYMARKET_CLOB = 'https://clob.polymarket.com';
+// Polymarket US's keyed API and its public gateway, with the same paths.
+const POLYMARKET_US_API = 'https://api.polymarket.us/v1';
+const POLYMARKET_US_GATEWAY = 'https://gateway.polymarket.us/v1';
 const TIMEOUT_MS = 8000;
 // Well inside a minute, so a slow or failed read still leaves a fresh push
 // within one.
 export const REFRESH_MS = 30_000;
+// A market streaming its prices is re-read this often, for new markets,
+// closes and settlements, which the sockets don't reliably send.
+const STREAM_REFRESH_MS = 5 * 60_000;
+// Streamed prices this close together go out as one push.
+const PUSH_MS = 1000;
 // Shorter than a refresh: the cache only spares the exchanges when several
 // open pins cite the same market.
 const TTL_MS = 20_000;
@@ -26,11 +44,38 @@ const cache: Map<string, { promise: Promise<MarketOdds | null>; expires: number 
 
 class NotFound extends Error {}
 
-async function getJson(url: string): Promise<any> {
-  const res = await fetch(url, { headers: { Accept: 'application/json' }, signal: AbortSignal.timeout(TIMEOUT_MS) });
+function signedHeaders(url: string): Record<string, string> | null {
+  const { pathname } = new URL(url);
+  if (url.startsWith(KALSHI_API)) return kalshiHeaders('GET', pathname);
+  if (url.startsWith(POLYMARKET_US_API)) return polymarketUsHeaders('GET', pathname);
+  return null;
+}
+
+const warnedHosts = new Set<string>();
+
+async function fetchJson(url: string, headers?: Record<string, string> | null): Promise<any> {
+  const res = await fetch(url, { headers: { Accept: 'application/json', ...headers }, signal: AbortSignal.timeout(TIMEOUT_MS) });
   if (res.status === 404) throw new NotFound(url);
   if (!res.ok) throw new Error(`GET ${url} failed with ${res.status}`);
   return res.json();
+}
+
+// A read, signed when there is a key for the exchange. One without a key, or
+// that fails signed (other than not found), is read keyless: at keyless, the
+// public host, when the keyed one needs a key.
+async function getJson(url: string, keyless = url): Promise<any> {
+  const headers = signedHeaders(url);
+  if (headers) {
+    try {
+      return await fetchJson(url, headers);
+    } catch (err) {
+      if (err instanceof NotFound) throw err;
+      const host = new URL(url).host;
+      if (!warnedHosts.has(host)) log.warn(`Signed read from ${host} failed (${(err as Error).message}); reading keyless`);
+      warnedHosts.add(host);
+    }
+  }
+  return fetchJson(keyless);
 }
 
 function num(value: unknown): number | undefined {
@@ -40,18 +85,6 @@ function num(value: unknown): number | undefined {
 
 function byChance(a: MarketOutcome, b: MarketOutcome) {
   return (b.probability ?? -1) - (a.probability ?? -1);
-}
-
-// Kalshi quotes in dollars per $1 contract, so a price is the chance. The last
-// trade is what kalshi.com shows; the bid/ask midpoint stands in before one.
-function kalshiChance(market: Json): number | null {
-  if (market.result === 'yes') return 1;
-  if (market.result === 'no') return 0;
-  const last = num(market.last_price_dollars) ?? (num(market.last_price) ?? NaN) / 100;
-  if (last > 0) return last;
-  const bid = num(market.yes_bid_dollars) ?? (num(market.yes_bid) ?? NaN) / 100;
-  const ask = num(market.yes_ask_dollars) ?? (num(market.yes_ask) ?? NaN) / 100;
-  return bid > 0 && ask > 0 ? (bid + ask) / 2 : null;
 }
 
 const KALSHI_OPEN = new Set(['active', 'open', 'initialized', 'unopened']);
@@ -75,6 +108,8 @@ async function kalshiEvent(ref: Extract<MarketRef, { source: 'Kalshi' }>): Promi
 }
 
 async function kalshi(ref: Extract<MarketRef, { source: 'Kalshi' }>): Promise<MarketOdds | null> {
+  // Taken before the read, so a tick that lands during it counts as newer.
+  const fetchedAt = new Date().toISOString();
   const found = await kalshiEvent(ref);
   if (!found?.markets.length) return null;
   const { event, markets } = found;
@@ -100,7 +135,7 @@ async function kalshi(ref: Extract<MarketRef, { source: 'Kalshi' }>): Promise<Ma
     outcomes: outcomes.sort(byChance),
     closeTime: closeTimes[closeTimes.length - 1],
     closed,
-    fetchedAt: new Date().toISOString(),
+    fetchedAt,
   };
 }
 
@@ -171,15 +206,65 @@ async function polymarket(ref: Extract<MarketRef, { source: 'Polymarket' }>): Pr
   };
 }
 
+// A Polymarket US market's chance of its long side: what it settled at once
+// closed, else its current price (the bid/ask midpoint the exchange shows).
+async function polymarketUsChance(market: Json): Promise<number | null> {
+  if (market.closed) return num(market.marketSides?.find((side: Json) => side.long)?.price) ?? null;
+  const path = `/markets/${encodeURIComponent(market.slug)}/bbo`;
+  const { marketData } = await getJson(`${POLYMARKET_US_API}${path}`, `${POLYMARKET_US_GATEWAY}${path}`);
+  return num(marketData?.currentPx?.value) ?? null;
+}
+
+async function polymarketUs(ref: Extract<MarketRef, { source: 'Polymarket US' }>): Promise<MarketOdds | null> {
+  const fetchedAt = new Date().toISOString();
+  // Events are only on the public gateway.
+  const { event } = await getJson(`${POLYMARKET_US_GATEWAY}/events/slug/${encodeURIComponent(ref.slug)}`);
+  const markets: Json[] = event?.markets ?? [];
+  if (!markets.length) return null;
+  const closed = !!event.closed;
+  // An open event's settled markets are left off, as on Polymarket.
+  const live = markets.filter((m) => closed || !m.closed);
+  const chances = await Promise.all(live.map(polymarketUsChance));
+  // A market's price is its long side's; the short side is the rest.
+  const history = (m: Json, side = '') => `polymarketus:${m.slug}${side}`;
+  let outcomes: MarketOutcome[];
+  if (live.length === 1) {
+    // One market is a question (Yes/No) or a game (one team per side).
+    const [market] = live;
+    const [chance] = chances;
+    const side = (long: boolean) => market.marketSides?.find((s: Json) => !!s.long === long)?.description;
+    outcomes = [
+      { label: side(true) || 'Yes', probability: chance, history: history(market) },
+      { label: side(false) || 'No', probability: chance == null ? null : 1 - chance, history: history(market, ':short') },
+    ];
+  } else {
+    outcomes = live.map((m, i) => ({ label: m.title || m.question, probability: chances[i], history: history(m) }));
+  }
+  return {
+    source: 'Polymarket US',
+    url: ref.url,
+    title: event.title,
+    outcomes: outcomes.sort(byChance),
+    closeTime: event.endDate,
+    closed,
+    fetchedAt,
+  };
+}
+
+function refKey(ref: MarketRef) {
+  return ref.source === 'Kalshi' ? `k:${ref.kind}:${ref.ticker}` : ref.source === 'Polymarket' ? `p:${ref.kind}:${ref.slug}` : `u:${ref.slug}`;
+}
+
 // The odds a link points at, or null when the exchange has no such market.
 // Rejects when the exchange cannot be reached.
 export function oddsFor(ref: MarketRef): Promise<MarketOdds | null> {
-  const key = ref.source === 'Kalshi' ? `k:${ref.kind}:${ref.ticker}` : `p:${ref.kind}:${ref.slug}`;
+  const key = refKey(ref);
   const now = Date.now();
   const hit = cache.get(key);
   if (hit && hit.expires > now) return hit.promise;
 
-  const promise = (ref.source === 'Kalshi' ? kalshi(ref) : polymarket(ref)).catch((err) => {
+  const read = ref.source === 'Kalshi' ? kalshi(ref) : ref.source === 'Polymarket' ? polymarket(ref) : polymarketUs(ref);
+  const promise = read.catch((err) => {
     if (err instanceof NotFound) return null;
     cache.delete(key);
     throw err;
@@ -227,6 +312,19 @@ async function readHistory(history: string): Promise<[number, number][]> {
     const { history: points = [] } = await getJson(`${POLYMARKET_CLOB}/prices-history?market=${encodeURIComponent(id[0])}&interval=1w&fidelity=60`);
     return (points as Json[]).flatMap((point) => (num(point.p) === undefined ? [] : [[Number(point.t), num(point.p)!] as [number, number]]));
   }
+  if (source === 'polymarketus') {
+    const [slug, side] = id;
+    // A week comes only by the minute: kept to one point an hour.
+    const { history: points = [] } = await getJson(`${POLYMARKET_US_GATEWAY}/price-history?symbol=${encodeURIComponent(slug)}&fixedInterval=INTERVAL_1W&fidelity=1`);
+    let hour = -1;
+    return (points as Json[]).flatMap((point) => {
+      const t = Number(point.timestamp);
+      const chance = num(side === 'short' ? point.shortPrice : point.longPrice);
+      if (chance === undefined || Math.floor(t / 3600) === hour) return [];
+      hour = Math.floor(t / 3600);
+      return [[t, chance] as [number, number]];
+    });
+  }
   return [];
 }
 
@@ -253,42 +351,140 @@ export async function trendFor(ref: MarketRef): Promise<MarketTrend | null> {
 
 type OddsListener = (odds: MarketOdds[]) => void;
 
+// A market's last successful read, and when it was taken.
+type Read = { odds: MarketOdds | null; at: number };
+
 type Feed = {
   refs: MarketRef[];
   listeners: Set<OddsListener>;
+  reads: Map<string, Read>;
   last?: MarketOdds[];
   timer?: ReturnType<typeof setInterval>;
   reading: boolean;
+  // The markets the feed streams, as a key, and how to stop.
+  watching: string;
+  unwatch?: () => void;
+  pushTimer?: ReturnType<typeof setTimeout>;
 };
 
 const feeds: Map<number, Feed> = ((globalThis as any).__chronopinOddsFeeds ??= new Map());
 
-// Reads every market the pin cites and pushes what answered. A read where
-// every exchange failed keeps viewers on the last odds; with none yet, it
-// pushes an empty list, so a card stops holding room for odds that aren't
-// coming.
+// The socket an outcome's price streams from, named by its history: the
+// market's id there, and whether the outcome is that market's other side.
+function streamOf(outcome: MarketOutcome): { stream: MarketStream; id: string; flip: boolean } | null {
+  const [source, ...id] = outcome.history?.split(':') ?? [];
+  if (source === 'kalshi' && id[1]) return { stream: kalshiStream, id: id[1], flip: id[2] === 'no' };
+  if (source === 'polymarket' && id[0]) return { stream: polymarketStream, id: id[0], flip: false };
+  if (source === 'polymarketus' && id[0]) return { stream: polymarketUsStream, id: id[0], flip: id[1] === 'short' };
+  return null;
+}
+
+const STREAMS = [kalshiStream, polymarketStream, polymarketUsStream];
+
+// The open markets whose prices odds shows, by socket.
+function streamable(odds: MarketOdds | null | undefined) {
+  if (!odds || odds.closed) return [];
+  return odds.outcomes.flatMap((outcome) => streamOf(outcome) ?? []);
+}
+
+// Every refresh re-reads a market unless its sockets have covered all its
+// open markets since before its last read; then only every STREAM_REFRESH_MS.
+// (Half a refresh of slack, so timer jitter doesn't skip one.)
+function due(read: Read | undefined, now: number): boolean {
+  if (!read) return true;
+  const streamed = streamable(read.odds);
+  const streaming = streamed.length > 0 && streamed.every(({ stream, id }) => (stream.coveredSince(id) ?? Infinity) <= read.at);
+  return !streaming || now - read.at >= STREAM_REFRESH_MS - REFRESH_MS / 2;
+}
+
+// Odds with each market's price from a quote newer than the read.
+function withQuotes(odds: MarketOdds): MarketOdds {
+  if (odds.closed) return odds;
+  const readAt = Date.parse(odds.fetchedAt);
+  let latest = readAt;
+  const outcomes = odds.outcomes.map((outcome) => {
+    const streamed = streamOf(outcome);
+    const quote = streamed?.stream.quote(streamed.id);
+    if (!streamed || !quote || quote.at <= readAt) return outcome;
+    latest = Math.max(latest, quote.at);
+    return { ...outcome, probability: streamed.flip ? 1 - quote.chance : quote.chance };
+  });
+  return latest === readAt ? odds : { ...odds, outcomes: outcomes.sort(byChance), fetchedAt: new Date(latest).toISOString() };
+}
+
+// What viewers should see: each market's last read, with streamed prices.
+function current(feed: Feed): MarketOdds[] {
+  return feed.refs.flatMap((ref) => {
+    const odds = feed.reads.get(refKey(ref))?.odds;
+    return odds ? [withQuotes(odds)] : [];
+  });
+}
+
+function push(feed: Feed, odds: MarketOdds[]) {
+  feed.last = odds;
+  feed.listeners.forEach((listener) => listener(odds));
+}
+
+// A streamed price is pushed a moment later, with any that follow it, and only
+// when it changed what viewers see.
+function schedulePush(pinId: number, feed: Feed) {
+  feed.pushTimer ??= setTimeout(() => {
+    feed.pushTimer = undefined;
+    // A read under way pushes the price with it.
+    if (feeds.get(pinId) !== feed || feed.reading) return;
+    const odds = current(feed);
+    const shown = (list?: MarketOdds[]) => JSON.stringify(list, (key, value) => (key === 'fetchedAt' ? undefined : value));
+    if (shown(odds) !== shown(feed.last)) push(feed, odds);
+  }, PUSH_MS);
+}
+
+// Streams the feed's open markets, following them as reads change.
+function watch(pinId: number, feed: Feed) {
+  const ids = STREAMS.map((stream) => [
+    ...new Set(feed.refs.flatMap((ref) => streamable(feed.reads.get(refKey(ref))?.odds).flatMap((s) => (s.stream === stream ? [s.id] : [])))),
+  ].sort());
+  const key = JSON.stringify(ids);
+  if (key === feed.watching) return;
+  const previous = feed.unwatch;
+  feed.watching = key;
+  // The new set first, so markets in both stay subscribed.
+  const stops = STREAMS.map((stream, i) => stream.watch(ids[i], () => schedulePush(pinId, feed)));
+  feed.unwatch = () => stops.forEach((stop) => stop());
+  previous?.();
+}
+
+// Re-reads the markets that are due and pushes the odds. A market whose read
+// fails keeps its last one; a refresh where every read failed pushes nothing,
+// unless nothing has been pushed yet: then an empty list, so a card stops
+// holding room for odds that aren't coming.
 async function refresh(pinId: number, feed: Feed) {
   if (feed.reading) return;
   feed.reading = true;
   try {
-    const results = await Promise.allSettled(feed.refs.map(oddsFor));
-    results.forEach((r) => r.status === 'rejected' && log.error('pin odds', (r.reason as Error)?.message));
-    if (feed.last && results.every((r) => r.status === 'rejected')) return;
-    const odds = results.flatMap((r) => (r.status === 'fulfilled' && r.value ? [r.value] : []));
+    const now = Date.now();
+    const keys = new Set(feed.refs.map(refKey));
+    for (const key of feed.reads.keys()) if (!keys.has(key)) feed.reads.delete(key);
+    const stale = feed.refs.filter((ref) => due(feed.reads.get(refKey(ref)), now));
+    const results = await Promise.allSettled(stale.map(oddsFor));
     if (feeds.get(pinId) !== feed) return;
-    feed.last = odds;
-    feed.listeners.forEach((listener) => listener(odds));
+    results.forEach((r, i) => {
+      if (r.status === 'rejected') log.error('pin odds', (r.reason as Error)?.message);
+      else feed.reads.set(refKey(stale[i]), { odds: r.value, at: r.value ? Date.parse(r.value.fetchedAt) : now });
+    });
+    if (feed.last && stale.length && results.every((r) => r.status === 'rejected')) return;
+    watch(pinId, feed);
+    push(feed, current(feed));
   } finally {
     feed.reading = false;
   }
 }
 
 // Follows a pin's odds: the latest straight away (or once first read), then
-// each refresh. The feed stops reading when its last viewer leaves.
+// each refresh and streamed change. The feed stops when its last viewer leaves.
 export function subscribeOdds(pinId: number, refs: MarketRef[], listener: OddsListener): () => void {
   let feed = feeds.get(pinId);
   if (!feed) {
-    feed = { refs, listeners: new Set(), reading: false };
+    feed = { refs, listeners: new Set(), reads: new Map(), reading: false, watching: '' };
     feeds.set(pinId, feed);
     const started = feed;
     started.timer = setInterval(() => void refresh(pinId, started), REFRESH_MS);
@@ -305,6 +501,8 @@ export function subscribeOdds(pinId: number, refs: MarketRef[], listener: OddsLi
     joined.listeners.delete(listener);
     if (!joined.listeners.size) {
       clearInterval(joined.timer);
+      clearTimeout(joined.pushTimer);
+      joined.unwatch?.();
       if (feeds.get(pinId) === joined) feeds.delete(pinId);
     }
   };

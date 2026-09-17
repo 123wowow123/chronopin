@@ -1,13 +1,16 @@
-// Prediction markets a pin cites (Kalshi, Polymarket): which links point at
+// Prediction markets a pin cites (Kalshi, Polymarket, Polymarket US): which links point at
 // one, and the odds shape GET /api/pins/:id/odds answers with.
 
-export type MarketSource = 'Kalshi' | 'Polymarket';
+export type MarketSource = 'Kalshi' | 'Polymarket' | 'Polymarket US';
 
 // What a link names: a Kalshi event or series ticker (uppercase, as the API
-// wants it), or a Polymarket event or market slug.
+// wants it), a Polymarket event or market slug, or a Polymarket US event slug.
+// Polymarket US (polymarket.us) is its own exchange, with its own markets and
+// slugs, not polymarket.com's.
 export type MarketRef =
   | { source: 'Kalshi'; kind: 'event' | 'series'; ticker: string; url: string }
-  | { source: 'Polymarket'; kind: 'event' | 'market'; slug: string; url: string };
+  | { source: 'Polymarket'; kind: 'event' | 'market'; slug: string; url: string }
+  | { source: 'Polymarket US'; kind: 'event'; slug: string; url: string };
 
 export type MarketOutcome = {
   label: string;
@@ -35,6 +38,7 @@ export type MarketOdds = {
 
 // kalshi.com/markets/{series}/{slug}/{event}, or a shorter link to the series.
 // polymarket.com/[locale/]event/{slug}[/{market}] or /market/{slug}.
+// polymarket.us/event/{slug} (its only market pages).
 export function parseMarketUrl(raw: string | null | undefined): MarketRef | null {
   let url: URL;
   try {
@@ -61,7 +65,17 @@ export function parseMarketUrl(raw: string | null | undefined): MarketRef | null
       : { source: 'Polymarket', kind: 'event', slug: parts[at + 1], url: url.href };
   }
 
+  if (host === 'polymarket.us') {
+    if (parts[0] !== 'event' || !parts[1]) return null;
+    return { source: 'Polymarket US', kind: 'event', slug: parts[1], url: url.href };
+  }
+
   return null;
+}
+
+// The key a market is known by, the same for any link to it.
+export function marketRefKey(ref: MarketRef): string {
+  return ref.source === 'Kalshi' ? `k:${ref.ticker}` : ref.source === 'Polymarket' ? `p:${ref.slug}` : `u:${ref.slug}`;
 }
 
 // Each distinct market a pin links to, from its source and its references.
@@ -71,7 +85,7 @@ export function pinMarketRefs(pin: { sourceUrl?: string | null; references?: { u
   for (const link of [pin.sourceUrl, ...(pin.references ?? []).map((r) => r.url)]) {
     const ref = parseMarketUrl(link);
     if (!ref) continue;
-    const key = ref.source === 'Kalshi' ? `k:${ref.ticker}` : `p:${ref.slug}`;
+    const key = marketRefKey(ref);
     if (!seen.has(key)) {
       seen.add(key);
       refs.push(ref);

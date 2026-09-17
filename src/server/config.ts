@@ -89,6 +89,23 @@ export const config = {
     apiKey: env('ANTHROPIC_API_KEY') || '',
   },
 
+  // A Kalshi API key: the key id and the RSA private key's PEM text (newlines
+  // may be escaped). With both, Kalshi odds stream over its WebSocket and REST
+  // reads are signed; without, they fall back to the keyless public API.
+  kalshi: {
+    keyID: env('KALSHI_API_KEY_ID') || '',
+    privateKey: (env('KALSHI_PRIVATE_KEY') || '').replace(/\\n/g, '\n'),
+  },
+
+  // A Polymarket US API key: the key id and the base64 secret key. With both,
+  // polymarket.us odds stream over its WebSocket and REST reads are signed;
+  // without, they fall back to its keyless public gateway. (polymarket.com
+  // needs no key.)
+  polymarketUS: {
+    keyID: env('POLYMARKET_API_KEY_ID') || '',
+    secretKey: env('POLYMARKET_SECRET_KEY') || '',
+  },
+
   aws: {
     accessKeyId: env('AWS_ACCESS_KEY_ID'),
     secretAccessKey: env('AWS_SECRET_ACCESS_KEY'),

@@ -16,6 +16,10 @@ Built with [Next.js](https://nextjs.org) 16 (App Router, Cache Components), Reac
    AZURE_STORAGE_CONNECTION_STRING=...
    ANTHROPIC_API_KEY=...      # page scraping extraction; optional
    SESSION_SECRET=...         # JWT signing secret; required for npm start / production
+   KALSHI_API_KEY_ID=...      # Kalshi API key id; optional, streams Kalshi odds live
+   KALSHI_PRIVATE_KEY=...     # that key's RSA private key PEM (newlines may be escaped)
+   POLYMARKET_API_KEY_ID=...  # Polymarket US API key id; optional, streams polymarket.us odds live
+   POLYMARKET_SECRET_KEY=...  # that key's base64 secret key
    ```
 
 4. `npm run db:refresh` (schema + seed data), `npm run search:refresh` (search index).
