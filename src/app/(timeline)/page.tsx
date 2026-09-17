@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import { JsonLd } from '@/components/JsonLd';
 import { Timeline } from '@/components/timeline/Timeline';
 import { siteName } from '@/lib/appConfig';
 import { dayKeyIn, formatDayKey, monthDayOf } from '@/lib/format';
-import { DEFAULT_POSTED_WITHIN, isSpan, spanFromParam } from '@/lib/postedSpan';
+import { DEFAULT_POSTED_WITHIN, isSpan, spanFromParam, spanToParam } from '@/lib/postedSpan';
 import { toCardPins } from '@/lib/sanitize';
 import { websiteJsonLd } from '@/lib/seo';
 import { pinDayKey } from '@/lib/timeline';
@@ -54,6 +55,19 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
   const since = focusPin && postedWithin ? resolveCreatedSince({ created_within: postedWithin }) : null;
   if (since && focusPin?.utcCreatedDateTime && new Date(focusPin.utcCreatedDateTime) < since) {
     postedWithin = null;
+  }
+  // Opened on a pin, the URL must already say the posting window the timeline
+  // will write into it: rewritten after the jump, the router takes it as a
+  // navigation, scrolls to the top and lets go of the pin.
+  const posted = spanToParam(postedWithin, defaultPostedWithin);
+  if (focusPin && (first(params.posted) ?? null) !== posted) {
+    const query = new URLSearchParams();
+    for (const [name, value] of Object.entries(params)) {
+      if (name === 'posted' || value === undefined) continue;
+      for (const v of Array.isArray(value) ? value : [value]) query.append(name, v);
+    }
+    if (posted) query.set('posted', posted);
+    redirect(`/?${query}`);
   }
   const fromDateTime = focusPin ? null : first(params.from_date_time) || null;
 
