@@ -12,6 +12,7 @@ import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { dayKeyIn } from '@/lib/format';
 import { formatSpan, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSpan';
+import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
@@ -44,6 +45,7 @@ function toNewPin(pin: CardPin): NewPin {
     utcCreatedDateTime: pin.utcCreatedDateTime ?? new Date().toISOString(),
     thumbName: medium?.thumbName,
     originalUrl: medium && String(medium.type) === '1' ? medium.originalUrl : undefined,
+    hasMarket: pinMarketRefs(pin).length > 0,
   };
 }
 

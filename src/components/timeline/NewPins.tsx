@@ -33,6 +33,13 @@ export function NewPins({ pins, now }: { pins: NewPin[]; now: number }) {
                   {pin.title}
                 </span>
                 <span className="flex min-w-0 items-center gap-1.5 text-xs text-subtle">
+                  {/* The same pulsing dot the pin's odds show: it cites a
+                      Kalshi or Polymarket market, so has a live odds feed. */}
+                  {pin.hasMarket ? (
+                    <span title="Live market odds" className="size-1.5 shrink-0 animate-pulse rounded-full bg-success motion-reduce:animate-none">
+                      <span className="sr-only">Live market odds</span>
+                    </span>
+                  ) : null}
                   <time dateTime={pin.utcCreatedDateTime} className="shrink-0">
                     {/* now ticks each minute, so a pin pushed in since the last
                         tick would otherwise read "in 3 seconds". */}

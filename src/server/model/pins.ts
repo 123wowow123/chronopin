@@ -226,12 +226,14 @@ export default class Pins extends BasePins<Pin> {
   }
 
   // The most recently added live pins, newest first, with their authors'
-  // handles. Pins the timeline hides for confidence (minConfidence, null for
+  // handles and the links (source, references) that may name a prediction
+  // market. Pins the timeline hides for confidence (minConfidence, null for
   // none) are left out here too.
   static async newest(limit: number, minConfidence: number | null) {
-    return db.query<{ id: number; title: string; userName: string | null; utcCreatedDateTime: Date }>(
+    return db.query<{ id: number; title: string; userName: string | null; utcCreatedDateTime: Date; sourceUrl: string | null; referenceUrls: string[] }>(
       `
-      SELECT "p"."id", "p"."title", "User"."userName" AS "userName", "p"."utcCreatedDateTime"
+      SELECT "p"."id", "p"."title", "User"."userName" AS "userName", "p"."utcCreatedDateTime", "p"."sourceUrl",
+        ARRAY(SELECT "r"."url" FROM "PinReference" AS "r" WHERE "r"."pinId" = "p"."id") AS "referenceUrls"
       FROM "Pin" AS "p"
         LEFT JOIN "User" ON "User"."id" = "p"."userId"
       WHERE "p"."utcDeletedDateTime" IS NULL

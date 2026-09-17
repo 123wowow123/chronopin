@@ -152,6 +152,8 @@ export type NewPin = {
   utcCreatedDateTime: string;
   thumbName?: string | null;
   originalUrl?: string | null;
+  // Whether it links a Kalshi or Polymarket market, so has live odds.
+  hasMarket?: boolean;
 };
 
 export type TimelinePage = {

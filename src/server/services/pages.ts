@@ -8,6 +8,7 @@ import Pins from '../model/pins';
 import PinView from '../model/pinView';
 import { SearchPins } from '../model/searchPin';
 import { compareDuplicateRank } from '@/lib/duplicates';
+import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { toJson, type NewPin, type PinJson, type SearchPage, type TimelinePage, type TrendingPin } from '@/lib/types';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import { TAGS } from './cache';
@@ -46,7 +47,12 @@ export async function newPins(): Promise<NewPin[]> {
   cacheTag(TAGS.timeline);
   const pins = await Pins.newest(5, await timelineMinConfidence());
   const pictures = await PinView.pictures(pins.map((p) => p.id));
-  return pins.map((p) => ({ ...p, utcCreatedDateTime: p.utcCreatedDateTime.toISOString(), ...pictures.get(p.id) }));
+  return pins.map(({ sourceUrl, referenceUrls, ...p }) => ({
+    ...p,
+    utcCreatedDateTime: p.utcCreatedDateTime.toISOString(),
+    hasMarket: pinMarketRefs({ sourceUrl, references: referenceUrls.map((url) => ({ url })) }).length > 0,
+    ...pictures.get(p.id),
+  }));
 }
 
 export type TimelineCursor = { fromDateTime?: string | null; lastPinId?: number };
