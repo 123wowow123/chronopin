@@ -3,6 +3,7 @@
 
 import { cacheLife, cacheTag } from 'next/cache';
 import { getTimelineVideo } from '../model/appSetting';
+import Favorite from '../model/favorite';
 import Pin from '../model/pin';
 import Pins from '../model/pins';
 import PinView from '../model/pinView';
@@ -151,10 +152,20 @@ export async function relatedPins(id: number, title: string): Promise<PinJson[]>
 export type SearchView = { sort: SearchSort; posted: string | null; past: string | null; future: string | null };
 
 // The first page of a search, and the links on to later ones.
-export async function searchPage(query: string, userId: number | null, onlyWatched: boolean, view: SearchView): Promise<SearchPage & { error?: string }> {
+export async function searchPage(
+  query: string,
+  userId: number | null,
+  onlyWatched: boolean,
+  view: SearchView,
+): Promise<SearchPage & { error?: string; watchVersion?: string }> {
   // Watched results are one person's list and must change the moment they
   // watch or unwatch a pin, so they skip the shared, briefly stale cache.
-  return onlyWatched && userId ? runSearch(query, userId, true, view) : cachedSearch(query, view);
+  if (!onlyWatched || !userId) return cachedSearch(query, view);
+  // watchVersion keys the results on the page: Next keeps a page left for
+  // another mounted but hidden, so without it coming back to Watched after
+  // watching a pin elsewhere showed the list as it was.
+  const [page, watchVersion] = await Promise.all([runSearch(query, userId, true, view), Favorite.listVersion(userId)]);
+  return { ...page, watchVersion };
 }
 
 // Built with no viewer, so one entry serves everyone rather than one per

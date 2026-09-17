@@ -63,7 +63,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
     <>
       <h1 className="sr-only">{q ? `Pins matching ${q}` : 'Search pins'}</h1>
       <SearchResults
-        key={`${q}|${onlyWatched}`}
+        key={`${q}|${onlyWatched}|${page.watchVersion ?? ''}`}
         initialPage={{ sort: view.sort, pins: toCardPins(page.pins), links: page.links ?? {} }}
         serverTimeZone={timeZone}
         serverNow={now.toISOString()}
