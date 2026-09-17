@@ -11,6 +11,7 @@ import { TimeRangeSlider } from '@/components/timeline/TimeRangeSlider';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import { canonicalCategory } from '@/lib/categories';
+import { clearSpot, peekMapSpot, setMapViewSource } from '@/lib/client/returnSpot';
 import { useQueryState } from '@/lib/client/urlState';
 import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, SPAN_OPTIONS, eventSpanSummary, formatSpan, offsetDate, spanFromParam, spanLabel, spanToParam } from '@/lib/postedSpan';
 import { removeTerm, toggleTerm } from '@/lib/searchTerms';
@@ -134,6 +135,9 @@ export default function PinsMap() {
   // marker but neither recenters nor reopens a popup the viewer already closed.
   const stickyRef = useRef<{ popup: L.Popup; pinId: number } | null>(null);
   const focusedRef = useRef<number | undefined>(undefined);
+  // Back from logging in on the view the reader left: a focused pin still
+  // gets its popup, but no longer moves the map.
+  const keepViewRef = useRef(false);
   // The focused pin, once plotted, for the back button's link.
   const [focusPin, setFocusPin] = useState<MapPinJson | null>(null);
   const [past, setPast] = useState(() => spanFromParam(params.get('past'), DEFAULT_SPAN));
@@ -150,7 +154,13 @@ export default function PinsMap() {
   const [categoryCounts, setCategoryCounts] = useState<Record<string, number> | null>(null);
 
   useEffect(() => {
-    const map = L.map(canvasRef.current!, { center: DEFAULT_CENTER, zoom: DEFAULT_ZOOM });
+    const spot = peekMapSpot();
+    const map = L.map(canvasRef.current!, spot ? { center: [spot.lat, spot.lng], zoom: spot.zoom } : { center: DEFAULT_CENTER, zoom: DEFAULT_ZOOM });
+    keepViewRef.current = !!spot;
+    // Cleared once this map keeps it (see peekMapSpot).
+    const cleared = spot ? setTimeout(clearSpot) : undefined;
+    // Saved as the reader leaves to log in (AuthLink).
+    const stopViewSource = setMapViewSource(() => ({ lat: map.getCenter().lat, lng: map.getCenter().lng, zoom: map.getZoom() }));
     L.tileLayer(TILE_URL, { maxZoom: 19, attribution: TILE_ATTRIBUTION }).addTo(map);
     mapRef.current = map;
     layerRef.current = L.layerGroup().addTo(map);
@@ -160,6 +170,8 @@ export default function PinsMap() {
     focusedRef.current = undefined;
     stickyRef.current = null;
     return () => {
+      clearTimeout(cleared);
+      stopViewSource();
       map.remove();
       mapRef.current = null;
       layerRef.current = null;
@@ -238,7 +250,7 @@ export default function PinsMap() {
         if (focus && focusedRef.current !== pin.id) {
           focusedRef.current = pin.id;
           setFocusPin(pin);
-          map.setView(marker.getLatLng(), Math.max(map.getZoom(), 11));
+          if (!keepViewRef.current) map.setView(marker.getLatLng(), Math.max(map.getZoom(), 11));
           stick(pin);
         }
       }

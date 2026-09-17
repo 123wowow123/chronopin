@@ -6,6 +6,7 @@ import { CardGrid } from '@/components/pin/CardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { parseLinkHeader } from '@/lib/client/api';
+import { type CardSpot, takeSearchSpot } from '@/lib/client/returnSpot';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
 import { useTodayHold } from '@/lib/client/todayHold';
@@ -47,6 +48,10 @@ function SortToggle({ value, onChange, className = '' }: { value: SortBy; onChan
 }
 
 type Links = { previous?: string; next?: string };
+
+// How far results page toward the card left for logging in before giving up
+// on it (24 results a page).
+const MAX_RETURN_PAGES = 40;
 
 // One sort's results so far: the pages loaded and the links on from them.
 type ResultList = { pins: CardPin[]; links: Links; status: 'loading' | 'ready' | 'error' };
@@ -170,16 +175,19 @@ export function SearchResults({
     listsRef.current = lists;
   }, [lists]);
 
+  // Whether a page went in: false when there is none or it failed, null when
+  // that page is already loading or its list started over meanwhile.
   const loadMore = useCallback(
-    async (sort: SortBy, direction: 'previous' | 'next') => {
+    async (sort: SortBy, direction: 'previous' | 'next'): Promise<boolean | null> => {
       const query = listsRef.current[sort]?.links[direction];
       const key = `${sort}:${direction}`;
-      if (!query || busy.current.has(key)) return;
+      if (!query) return false;
+      if (busy.current.has(key)) return null;
       busy.current.add(key);
       const token = loadToken.current[sort];
       try {
         const page = await fetchSearchPage(query);
-        if (token !== loadToken.current[sort] || listsRef.current[sort]?.links[direction] !== query) return;
+        if (token !== loadToken.current[sort] || listsRef.current[sort]?.links[direction] !== query) return null;
         if (direction === 'previous') {
           prependAnchor.current = { height: document.documentElement.scrollHeight, top: window.scrollY };
         }
@@ -198,8 +206,10 @@ export function SearchResults({
             },
           };
         });
+        return true;
       } catch {
         // Try again on the next scroll.
+        return false;
       } finally {
         busy.current.delete(key);
       }
@@ -227,6 +237,62 @@ export function SearchResults({
   // Opening and the Today button both hold today in place while the cards
   // above it finish growing.
   const holdToday = useTodayHold(scrollToToday);
+
+  // Back from logging in: the card the reader left, paged toward while the
+  // results stay hidden, then put back as far down the window as it was and
+  // held there like today.
+  const returnTo = useRef<CardSpot | null>(null);
+  const heldSpot = useRef<CardSpot | null>(null);
+  const [restoring, setRestoring] = useState(false);
+  const holdSpot = useTodayHold(() => {
+    const spot = heldSpot.current;
+    const el = spot && document.getElementById(`${sortBy === 'date' ? 'pin' : 'rank'}-${spot.pinId}`);
+    if (el) window.scrollTo({ top: window.scrollY + el.getBoundingClientRect().top - spot.top });
+  });
+  const spotTaken = useRef(false);
+  const pagesWalked = useRef(0);
+  useLayoutEffect(() => {
+    if (spotTaken.current) return;
+    spotTaken.current = true;
+    const spot = takeSearchSpot();
+    if (!spot || error) return;
+    returnTo.current = spot;
+    // Not today: by date, the opening below stands aside and the sentinels may page.
+    scrolled.current = true;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- hidden before the first paint after hydration
+    setRestoring(true);
+  }, [error]);
+
+  useEffect(() => {
+    const spot = returnTo.current;
+    const list = lists[sortBy];
+    if (!spot || !list || list.status === 'loading') return;
+    const finish = (found: boolean) => {
+      returnTo.current = null;
+      setRestoring(false);
+      if (found) {
+        heldSpot.current = spot;
+        holdSpot();
+      } else if (sortBy === 'date') {
+        holdToday();
+      }
+    };
+    if (list.pins.some((pin) => pin.id === spot.pinId)) return finish(true);
+    // By relevance the card is further down; by date, beyond whichever end
+    // its start is past (within the dates loaded, it has gone).
+    let direction: 'previous' | 'next' | null = 'next';
+    if (sortBy === 'date' && list.pins.length) {
+      const at = new Date(spot.start ?? NaN).getTime();
+      const first = new Date(list.pins[0].utcStartDateTime).getTime();
+      const last = new Date(list.pins[list.pins.length - 1].utcStartDateTime).getTime();
+      direction = at <= first ? 'previous' : at >= last ? 'next' : null;
+    }
+    if (list.status === 'error' || !direction || !list.links[direction] || pagesWalked.current >= MAX_RETURN_PAGES) return finish(false);
+    void loadMore(sortBy, direction).then((added) => {
+      if (added) pagesWalked.current++;
+      else if (added === false && returnTo.current === spot) finish(false);
+    });
+  }, [lists, sortBy, loadMore, holdSpot, holdToday]);
 
   useLayoutEffect(() => {
     if (scrolled.current || sortBy !== 'date' || !bags.length) return;
@@ -335,7 +401,7 @@ export function SearchResults({
           </div>
         ) : null}
 
-        {shown?.status === 'loading' ? (
+        {shown?.status === 'loading' || restoring ? (
           <p className="mt-16 text-center text-lg text-subtle" role="status">
             Searching…
           </p>
@@ -357,7 +423,7 @@ export function SearchResults({
 
         {/* Kept mounted once shown: a remount resizes cards (embeds, media fallbacks) after the scroll is restored. */}
         {relevanceShown ? (
-          <div hidden={sortBy !== 'relevance'}>
+          <div hidden={sortBy !== 'relevance'} className={restoring ? 'invisible' : undefined}>
             <CardGrid className="mt-6">
               {(rankedPins ?? []).map((pin, i) => (
                 <li key={pin.id} id={`rank-${pin.id}`}>
@@ -369,7 +435,7 @@ export function SearchResults({
           </div>
         ) : null}
         <div ref={topRef} hidden={sortBy !== 'date'} aria-hidden className="h-px" />
-        <div hidden={sortBy !== 'date'} className={rail}>
+        <div hidden={sortBy !== 'date'} className={`${rail} ${restoring ? 'invisible' : ''}`}>
           {bags.map((bag, index) => (
             <div key={bag.day}>
               {marker.index === index ? <TodayMarker specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}

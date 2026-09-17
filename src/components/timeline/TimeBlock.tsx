@@ -81,7 +81,7 @@ export function TimeBlock({
       {bag.pins.length ? (
         <PinColumns tagsHeight={tagsHeight}>
           {stackDuplicates(bag.pins).map(({ pin, hidden }, i) => (
-            <div key={pin.id} id={`pin-${pin.id}`} role="listitem" className="mb-2.5" style={{ order: i }}>
+            <div key={pin.id} id={`pin-${pin.id}`} data-start={pin.utcStartDateTime} role="listitem" className="mb-2.5" style={{ order: i }}>
               {hidden.length ? (
                 <DuplicateStack pin={pin} hiddenCount={hidden.length}>
                   <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={firstPinPriority && i === 0} />

@@ -8,7 +8,7 @@ import { useNow } from '@/lib/client/now';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
 import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
-import { takeTimelineSpot } from '@/lib/client/timelineSpot';
+import { takeTimelineSpot } from '@/lib/client/returnSpot';
 import { useTodayHold } from '@/lib/client/todayHold';
 import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';

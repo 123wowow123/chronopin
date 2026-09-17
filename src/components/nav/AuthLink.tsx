@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { authHref, type AuthPage } from '@/lib/authRedirect';
-import { authHrefHere } from '@/lib/client/timelineSpot';
+import { authHrefHere } from '@/lib/client/returnSpot';
 
 // A Log in or Sign up link that comes back to this page, and on the timeline
 // to the place scrolled to, which is only known at the click.

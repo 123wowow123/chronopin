@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { api } from '@/lib/client/api';
 import { useSession } from '@/lib/client/session';
-import { authHrefHere } from '@/lib/client/timelineSpot';
+import { authHrefHere } from '@/lib/client/returnSpot';
 
 type Status = { userId: number; followerCount: number; followingCount: number; following: boolean; followsYou: boolean };
 
