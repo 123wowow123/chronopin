@@ -1,13 +1,17 @@
 'use client';
 
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { OAuthButtons, OrDivider } from '@/components/forms/OAuthButtons';
+import { afterLoginPath, authHref } from '@/lib/authRedirect';
 import { api, ApiError } from '@/lib/client/api';
 
 const HANDLE = /^[a-zA-Z0-9-_]+$/;
 
 export function SignupForm() {
+  const params = useSearchParams();
+  const redirect = afterLoginPath(params.get('redirect'));
   const [form, setForm] = useState({ handle: '', firstName: '', lastName: '', email: '', password: '', confirmPassword: '' });
   // The last availability answer, for the handle it was about.
   const [check, setCheck] = useState<{ handle: string; available: boolean } | null>(null);
@@ -59,8 +63,7 @@ export function SignupForm() {
       });
       // A full load, so every page picks up the new session (router.push would
       // replay the router's remembered redirect to /login).
-      // eslint-disable-next-line @next/next/no-location-assign-relative-destination
-      window.location.assign('/');
+      window.location.assign(redirect);
     } catch (err) {
       setError(err instanceof ApiError ? err.message : 'Something went wrong, please try again.');
       setBusy(false);
@@ -128,13 +131,14 @@ export function SignupForm() {
       <OrDivider />
       <OAuthButtons
         handle={handleValid ? `@${form.handle}` : undefined}
+        redirect={redirect}
         validate={() => {
           setSubmitted(true);
           return handleValid && available !== false;
         }}
       />
       <p className="pt-2 text-center text-sm text-subtle">
-        Already have an account? <Link href="/login" className="underline decoration-link/40 underline-offset-2 hover:decoration-link">Log in</Link>
+        Already have an account? <Link href={authHref('/login', params.get('redirect'))} className="underline decoration-link/40 underline-offset-2 hover:decoration-link">Log in</Link>
       </p>
     </form>
   );

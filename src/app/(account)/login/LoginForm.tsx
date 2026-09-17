@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 import { OAuthButtons, OrDivider } from '@/components/forms/OAuthButtons';
-import { afterLoginPath } from '@/lib/authRedirect';
+import { afterLoginPath, authHref } from '@/lib/authRedirect';
 import { api, ApiError } from '@/lib/client/api';
 
 
@@ -54,9 +54,9 @@ export function LoginForm() {
         {busy ? 'Logging in…' : 'Login'}
       </button>
       <OrDivider />
-      <OAuthButtons />
+      <OAuthButtons redirect={afterLoginPath(params.get('redirect'))} />
       <p className="pt-2 text-center text-sm text-subtle">
-        New to Chronopin? <Link href="/signup" className="underline decoration-link/40 underline-offset-2 hover:decoration-link">Create an account</Link>
+        New to Chronopin? <Link href={authHref('/signup', params.get('redirect'))} className="underline decoration-link/40 underline-offset-2 hover:decoration-link">Create an account</Link>
       </p>
     </form>
   );

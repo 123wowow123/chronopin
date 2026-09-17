@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import { SignupForm } from './SignupForm';
 
 export const metadata: Metadata = { title: 'Sign up' };
@@ -9,7 +10,9 @@ export default function SignupPage() {
       <div className="surface mx-auto max-w-lg p-6 shadow-2xl shadow-shade/30 sm:p-8">
         <h1 className="text-2xl font-semibold tracking-tight">Create your account</h1>
         <p className="mt-1 mb-6 text-sm text-subtle">Pick a handle, then sign up with Google, Facebook or email.</p>
-        <SignupForm />
+        <Suspense>
+          <SignupForm />
+        </Suspense>
       </div>
     </div>
   );

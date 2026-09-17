@@ -11,8 +11,10 @@ export function afterLoginPath(redirect: string | null | undefined): string {
   return AUTH_PATHS.some((auth) => path === auth || path.startsWith(`${auth}/`)) ? '/' : redirect;
 }
 
-// A Log in link that comes back to this page afterwards.
-export function loginHref(pathname: string): string {
+export type AuthPage = '/login' | '/signup';
+
+// A Log in or Sign up link that comes back to this page afterwards.
+export function authHref(page: AuthPage, pathname: string | null | undefined): string {
   const next = afterLoginPath(pathname);
-  return next === '/' ? '/login' : `/login?redirect=${encodeURIComponent(next)}`;
+  return next === '/' ? page : `${page}?redirect=${encodeURIComponent(next)}`;
 }

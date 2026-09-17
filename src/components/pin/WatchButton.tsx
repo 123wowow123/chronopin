@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
 import { useSession } from '@/lib/client/session';
+import { authHrefHere } from '@/lib/client/timelineSpot';
 import { setWatched, useWatched } from '@/lib/client/watched';
 import type { PinJson } from '@/lib/types';
 
@@ -50,7 +51,7 @@ export function WatchButton({
 
   async function toggle() {
     if (!isLoggedIn) {
-      if (status === 'ready') router.push(`/login?redirect=${encodeURIComponent(window.location.pathname)}`);
+      if (status === 'ready') router.push(authHrefHere());
       return;
     }
     if (busy) return;

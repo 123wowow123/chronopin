@@ -5,8 +5,8 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
-import { loginHref } from '@/lib/authRedirect';
 import { useSession } from '@/lib/client/session';
+import { AuthLink } from './AuthLink';
 import { NotificationBell } from './NotificationBell';
 
 const itemClass = 'flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-ink hover:bg-raised hover:no-underline';
@@ -141,12 +141,12 @@ export function NavMenu() {
   const guestActions =
     !user && status === 'ready' ? (
       <>
-        <Link href={loginHref(pathname)} className="btn btn-ghost py-1.5">
+        <AuthLink to="/login" className="btn btn-ghost py-1.5">
           Log in
-        </Link>
-        <Link href="/signup" className="btn btn-primary py-1.5">
+        </AuthLink>
+        <AuthLink to="/signup" className="btn btn-primary py-1.5">
           Sign up
-        </Link>
+        </AuthLink>
       </>
     ) : null;
 

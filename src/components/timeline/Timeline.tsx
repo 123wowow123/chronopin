@@ -8,6 +8,7 @@ import { useNow } from '@/lib/client/now';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
 import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
+import { takeTimelineSpot } from '@/lib/client/timelineSpot';
 import { useTodayHold } from '@/lib/client/todayHold';
 import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';
@@ -161,12 +162,18 @@ export function Timeline({
     () => (focus ? (document.getElementById(`pin-${focus.id}`) ?? document.getElementById(`day-${pinDayKey(focus, timeZone)}`)) : null),
     [focus, timeZone],
   );
+  // Back from logging in: how far down the window the focused card was.
+  const spotTop = useRef<number | null>(null);
   const scrollToFocus = useCallback(() => {
     const el = focusTarget();
+    if (el && spotTop.current !== null && el.id === `pin-${focus?.id}`) {
+      window.scrollTo({ top: window.scrollY + el.getBoundingClientRect().top - spotTop.current });
+      return;
+    }
     // In the middle of the window, unless it is too tall to fit there. Only as
     // near as the page scrolls: near either end of the timeline it stops short.
     el?.scrollIntoView({ block: el.offsetHeight > window.innerHeight * 0.8 ? 'start' : 'center' });
-  }, [focusTarget]);
+  }, [focus, focusTarget]);
   // Held the same way as today, while the cards above it grow.
   const holdFocus = useTodayHold(scrollToFocus);
   const flashed = useRef(false);
@@ -180,7 +187,10 @@ export function Timeline({
       holdToday();
       return;
     }
+    spotTop.current = focus ? takeTimelineSpot(focus.id) : null;
     holdFocus();
+    // Put back where the reader left it, the card needs no pointing out.
+    if (spotTop.current !== null) return;
     // A moment's outline, so the eye lands on the card it came back to.
     const card = target.querySelector('article');
     if (card && !flashed.current && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -192,7 +202,7 @@ export function Timeline({
         { duration: 3000, delay: 300, easing: 'ease-out' },
       );
     }
-  }, [bags, focusTarget, holdFocus, holdToday]);
+  }, [bags, focus, focusTarget, holdFocus, holdToday]);
 
   // Today is not among the pages loaded (the timeline opened on a pin far from
   // it): open the timeline on today instead, keeping the posting window.

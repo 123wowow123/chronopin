@@ -7,10 +7,10 @@ import { createPortal } from 'react-dom';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { LogoMark } from '@/components/ui/LogoMark';
 import { UserAvatar } from '@/components/ui/UserAvatar';
-import { loginHref } from '@/lib/authRedirect';
 import { useUnreadCount } from '@/lib/client/notifications';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { useSession } from '@/lib/client/session';
+import { AuthLink } from './AuthLink';
 import { ViewSwitch } from './NavMenu';
 import { DrawerNotifications } from './NotificationBell';
 import { searchHref, WATCHED } from './SearchBox';
@@ -213,12 +213,12 @@ export function MobileDrawer() {
             </Link>
           ) : (
             <div className="grid grid-cols-2 gap-2">
-              <Link href="/signup" className="btn btn-primary flex py-2.5">
+              <AuthLink to="/signup" className="btn btn-primary flex py-2.5">
                 Sign up
-              </Link>
-              <Link href={loginHref(pathname)} className="btn btn-secondary flex py-2.5">
+              </AuthLink>
+              <AuthLink to="/login" className="btn btn-secondary flex py-2.5">
                 Log in
-              </Link>
+              </AuthLink>
             </div>
           )}
         </div>

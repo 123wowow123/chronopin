@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { api } from '@/lib/client/api';
 import { useSession } from '@/lib/client/session';
+import { authHrefHere } from '@/lib/client/timelineSpot';
 
 type Status = { userId: number; followerCount: number; followingCount: number; following: boolean; followsYou: boolean };
 
@@ -37,7 +38,7 @@ export function FollowButton({ userId, userName, showCount, following }: { userI
 
   async function toggle() {
     if (!isLoggedIn) {
-      router.push(`/login?redirect=${encodeURIComponent(window.location.pathname)}`);
+      router.push(authHrefHere());
       return;
     }
     if (busy || !status) return;

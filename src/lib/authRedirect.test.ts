@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { afterLoginPath, loginHref } from './authRedirect';
+import { afterLoginPath, authHref } from './authRedirect';
 
 describe('afterLoginPath', () => {
   it('goes back to the page that sent the visitor to log in', () => {
@@ -27,11 +27,16 @@ describe('afterLoginPath', () => {
   });
 });
 
-describe('loginHref', () => {
+describe('authHref', () => {
   it('carries the current page, but not an auth page', () => {
-    expect(loginHref('/following')).toBe('/login?redirect=%2Ffollowing');
-    expect(loginHref('/signup')).toBe('/login');
-    expect(loginHref('/login')).toBe('/login');
-    expect(loginHref('/')).toBe('/login');
+    expect(authHref('/login', '/following')).toBe('/login?redirect=%2Ffollowing');
+    expect(authHref('/login', '/signup')).toBe('/login');
+    expect(authHref('/login', '/login')).toBe('/login');
+    expect(authHref('/login', '/')).toBe('/login');
+  });
+
+  it('goes to either auth page, keeping the query and the timeline pin', () => {
+    expect(authHref('/signup', '/?posted=1w&pin=42')).toBe('/signup?redirect=%2F%3Fposted%3D1w%26pin%3D42');
+    expect(authHref('/signup', null)).toBe('/signup');
   });
 });

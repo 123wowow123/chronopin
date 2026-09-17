@@ -13,6 +13,7 @@ import { randomBytes } from 'node:crypto';
 import { createRemoteJWKSet, importPKCS8, type JWTPayload, jwtVerify, SignJWT } from 'jose';
 import { cookies } from 'next/headers';
 import type { NextRequest } from 'next/server';
+import { afterLoginPath } from '@/lib/authRedirect';
 import { signToken, tokenCookie } from './auth';
 import config from './config';
 import { publicOrigin } from './http';
@@ -24,6 +25,8 @@ export type Provider = 'google' | 'facebook' | 'apple';
 const STATE_COOKIE = 'oauth_state';
 // The @handle the sign-up page stored before sending the user to the provider.
 const HANDLE_COOKIE = 'handle';
+// The page the login page was asked to go back to (OAuthButtons).
+const AFTER_LOGIN_COOKIE = 'after_login';
 const APPLE_ISSUER = 'https://appleid.apple.com';
 
 type ProviderConfig = {
@@ -114,6 +117,9 @@ export async function finishSignIn(request: NextRequest, provider: Provider): Pr
   const jar = await cookies();
   const expected = jar.get(STATE_COOKIE)?.value;
   jar.delete({ name: STATE_COOKIE, path: '/auth' });
+  // Checked again here: a cookie is as easy to write as a query string.
+  const next = afterLoginPath(jar.get(AFTER_LOGIN_COOKIE)?.value);
+  jar.delete({ name: AFTER_LOGIN_COOKIE, path: '/' });
 
   const params = await callbackParams(request);
   const code = params.get('code');
@@ -126,7 +132,7 @@ export async function finishSignIn(request: NextRequest, provider: Provider): Pr
     const profile = await fetchProfile(provider, code, redirectUri, params);
     const user = await findOrCreateUser(provider, profile, jar.get(HANDLE_COOKIE)?.value);
     jar.set(tokenCookie(await signToken(user.id, user.role)));
-    return Response.redirect(`${origin}/`, status);
+    return Response.redirect(`${origin}${next}`, status);
   } catch (err) {
     return fail((err as Error).message);
   }
