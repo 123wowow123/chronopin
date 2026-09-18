@@ -8,6 +8,7 @@ import { Icon, type IconName } from '@/components/ui/Icon';
 import { LogoMark } from '@/components/ui/LogoMark';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { useUnreadCount } from '@/lib/client/notifications';
+import { hrefKeepingDate } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { useSession } from '@/lib/client/session';
 import { AuthLink, LogoutLink } from './AuthLink';
@@ -139,7 +140,9 @@ export function MobileDrawer() {
   const watchedOnly = searching && params.get('f') === WATCHED;
   const toggleWatched = () => {
     setOpen(false);
-    router.push(searchHref(onMap, searching ? params.get('q') || '' : '', watchedOnly ? '' : WATCHED));
+    const href = searchHref(onMap, searching ? params.get('q') || '' : '', watchedOnly ? '' : WATCHED);
+    // Turning Watched off widens the search, which stays on the same date.
+    router.push(watchedOnly ? hrefKeepingDate(href) : href);
   };
 
   const drawer = (

@@ -5,6 +5,7 @@ import { Fragment, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { canonicalCategory } from '@/lib/categories';
 import { api } from '@/lib/client/api';
+import { hrefKeepingDate } from '@/lib/client/returnSpot';
 import { useSession } from '@/lib/client/session';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { formatStart } from '@/lib/format';
@@ -188,9 +189,12 @@ export function SearchBox() {
     setOpen(false);
   }
 
-  function submit(q: string, filter = choice) {
+  // widen: a filter was taken off, so the timeline or search stays on the
+  // same date rather than opening on today.
+  function submit(q: string, filter = choice, widen = false) {
     closeSuggestions();
-    router.push(searchHref(onMap, q, filter));
+    const href = searchHref(onMap, q, filter);
+    router.push(widen ? hrefKeepingDate(href) : href);
   }
 
   function suggest(value: string) {
@@ -252,7 +256,7 @@ export function SearchBox() {
     const rest = items.filter((_, i) => i !== index);
     setItems(rest);
     if (index < editAt) setEditAt(editAt - 1);
-    submit(joinSearchQuery(committed(draft, rest, index < editAt ? editAt - 1 : editAt)));
+    submit(joinSearchQuery(committed(draft, rest, index < editAt ? editAt - 1 : editAt)), choice, !draft.trim());
   }
 
   const input = (
@@ -393,7 +397,7 @@ export function SearchBox() {
               setDraft('');
               setEditing(false);
               closeSuggestions();
-              router.push(onMap ? '/map' : '/');
+              router.push(onMap ? '/map' : hrefKeepingDate('/'));
             }}
           >
             <Icon name="close" className="size-3.5" />
@@ -412,7 +416,7 @@ export function SearchBox() {
           onClick={() => {
             const next = watchedOnly ? '' : WATCHED;
             setChoice(next);
-            submit(query(), next);
+            submit(query(), next, !next);
           }}
         >
           <Icon name="eye" className="size-4" />

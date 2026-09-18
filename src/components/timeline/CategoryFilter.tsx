@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useId, useOptimistic, useRef, useState, useTransition } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
+import { hrefKeepingDate } from '@/lib/client/returnSpot';
 import { categoryOptions, canonicalCategory } from '@/lib/categories';
 import { removeTerm, toggleTerm } from '@/lib/searchTerms';
 import { parseSearchQuery } from '@/server/util/searchQuery';
@@ -237,10 +238,13 @@ export function SearchCategoryFilter({
     const q = edit(params.get('q') || '');
     if (q) params.set('q', q);
     else params.delete('q');
+    // Nothing left to search for or filter by: that's the timeline.
+    const href = params.size ? `/search?${params.toString()}` : '/';
+    // Fewer categories picked is a wider search, which stays on the same date.
+    const widened = picked.length < selected.length;
     startSearch(() => {
       setSelected(picked);
-      // Nothing left to search for or filter by: that's the timeline.
-      router.push(params.size ? `/search?${params.toString()}` : '/');
+      router.push(widened ? hrefKeepingDate(href) : href);
     });
   }
 

@@ -66,14 +66,52 @@ function saveSpotHere(): string {
   } else if (pathname === '/map' && mapView) {
     spot = { kind: 'map', ...mapView() };
   }
-  if (spot) {
-    try {
-      sessionStorage.setItem(KEY, JSON.stringify({ ...spot, href, savedAt: Date.now() } satisfies Saved));
-    } catch {
-      // Without storage the page opens as it would anyway.
+  if (spot) save(spot, href);
+  return href;
+}
+
+// Where taking a filter off goes (href: the timeline, or a search for what is
+// left), opening on the date the reader was at rather than today. Only from a
+// page of cards by date: a search by relevance has no date to keep.
+//
+// Taking a filter off only ever widens the results, so the card at the top of
+// the window is among them: the timeline opens on it (?pin=) and a search's
+// dates page toward it, and it goes back as far down the window as it was.
+// It keeps the way the search was shown (sort, date windows; on the timeline
+// the posting window).
+export function hrefKeepingDate(href: string): string {
+  const next = new URL(href, location.origin);
+  const here = window.location.pathname;
+  if ((here !== '/' && here !== '/search') || (next.pathname !== '/' && next.pathname !== '/search')) return href;
+  if (here === '/search') {
+    const current = new URLSearchParams(window.location.search);
+    // The timeline has a posting window too, and widens it itself for its pin.
+    for (const key of next.pathname === '/search' ? VIEW_PARAMS : ['posted']) {
+      const value = current.get(key);
+      if (value !== null && !next.searchParams.has(key)) next.searchParams.set(key, value);
     }
   }
-  return href;
+  const spot = cardAtTop(DATE_CARDS);
+  if (spot) {
+    if (next.pathname === '/') {
+      next.searchParams.delete('from_date_time');
+      next.searchParams.delete('last_pin_id');
+      next.searchParams.set('pin', String(spot.pinId));
+    }
+    save(spot, next.pathname + next.search);
+  }
+  return next.pathname + next.search;
+}
+
+// How a search is shown, as opposed to what it searches for.
+const VIEW_PARAMS = ['sort', 'posted', 'past', 'future'];
+
+function save(spot: CardSpot | MapSpot, href: string) {
+  try {
+    sessionStorage.setItem(KEY, JSON.stringify({ ...spot, href, savedAt: Date.now() } satisfies Saved));
+  } catch {
+    // Without storage the page opens as it would anyway.
+  }
 }
 
 // The timeline opening on this pin's saved distance from the top of the
@@ -128,14 +166,18 @@ function isHere(href: string) {
   return saved.pathname === location.pathname && sort(saved.searchParams) === sort(new URLSearchParams(location.search));
 }
 
+// Cards on a page by date (the timeline, a search's dates); by relevance they
+// are li#rank-.
+const DATE_CARDS = '[role="listitem"][id^="pin-"]';
+
 // The highest card still showing below the sticky bars. Cards sit in columns,
 // so the first in the page is not always the highest on screen; a hidden
 // list's cards have no height.
-function cardAtTop(): CardSpot | null {
+function cardAtTop(cards = `${DATE_CARDS}, li[id^="rank-"]`): CardSpot | null {
   const bars = [...document.querySelectorAll('header, [data-sticky-sort]')].map((el) => el.getBoundingClientRect().bottom);
   const covered = Math.max(0, ...bars);
   let best: CardSpot | null = null;
-  for (const el of document.querySelectorAll<HTMLElement>('[role="listitem"][id^="pin-"], li[id^="rank-"]')) {
+  for (const el of document.querySelectorAll<HTMLElement>(cards)) {
     const rect = el.getBoundingClientRect();
     const pinId = Number(el.id.slice(el.id.indexOf('-') + 1));
     if (!rect.height || rect.bottom <= covered || rect.top >= window.innerHeight || !Number.isInteger(pinId)) continue;
