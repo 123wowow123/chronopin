@@ -6,16 +6,16 @@
 //
 // The decision has to be made before the markup is written, not hidden with
 // CSS afterwards: an iframe in the HTML is already a download. So the server,
-// which cannot know the screen, renders the still and a wide screen swaps the
-// player in once it hydrates.
+// which cannot know the screen, renders the still whenever either screen size
+// wants it, and a screen allowed to play swaps the player in once it hydrates.
 
 import { createContext, useContext, useSyncExternalStore } from 'react';
-import { MOBILE_WIDTH_QUERY, type TimelineVideoSetting } from '@/lib/timelineVideo';
+import { MOBILE_WIDTH_QUERY, showsStill, type ScreenSize, type TimelineVideoSetting } from '@/lib/timelineVideo';
 
-const MobileVideoContext = createContext(true);
+const TimelineVideoContext = createContext<TimelineVideoSetting>({ mobile: true, desktop: true });
 
 export function TimelineVideoProvider({ setting, children }: { setting: TimelineVideoSetting; children: React.ReactNode }) {
-  return <MobileVideoContext.Provider value={setting.mobile}>{children}</MobileVideoContext.Provider>;
+  return <TimelineVideoContext.Provider value={setting}>{children}</TimelineVideoContext.Provider>;
 }
 
 function subscribe(listener: () => void) {
@@ -24,16 +24,15 @@ function subscribe(listener: () => void) {
   return () => query.removeEventListener('change', listener);
 }
 
-// Until the browser answers, a phone: rendering the still costs a wide screen
-// one swap, while guessing the other way would have sent the player to every
-// phone anyway.
-export function useIsMobile(): boolean {
-  return useSyncExternalStore(subscribe, () => window.matchMedia(MOBILE_WIDTH_QUERY).matches, () => true);
+function useScreenSize(): ScreenSize {
+  return useSyncExternalStore<ScreenSize>(
+    subscribe,
+    () => (window.matchMedia(MOBILE_WIDTH_QUERY).matches ? 'mobile' : 'desktop'),
+    () => 'unknown',
+  );
 }
 
 // Whether this card shows a video as its still picture instead of its player.
 export function useVideoPoster(): boolean {
-  const mobileVideo = useContext(MobileVideoContext);
-  const mobile = useIsMobile();
-  return !mobileVideo && mobile;
+  return showsStill(useContext(TimelineVideoContext), useScreenSize());
 }

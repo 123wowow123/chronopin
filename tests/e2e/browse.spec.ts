@@ -10,12 +10,13 @@ test('the timeline opens on today and loads earlier pins when scrolled up', asyn
   await expect.poll(async () => page.locator('article').count(), { timeout: 15_000 }).toBeGreaterThan(before);
 });
 
-test('a wide screen swaps the still on a card for the player', async ({ page }) => {
-  // The server cannot know the screen, so every card is written with the
-  // still; a wide one mounts the players once it hydrates.
-  await page.goto('/search?q=category:Anime');
+test('a wide screen keeps the still on a card by default', async ({ page }) => {
+  // Cards load no video player on any screen until an admin turns them on
+  // (Admin > Pins); the pin's own page still plays.
+  await page.goto('/search?q=category:Anime', { waitUntil: 'networkidle' });
   await expect(page.locator('article').first()).toBeVisible();
-  await expect(page.locator('iframe[src*="youtube.com"]').first()).toBeAttached({ timeout: 15_000 });
+  await expect(page.locator('article img').first()).toBeVisible();
+  await expect(page.locator('iframe[src*="youtube.com"]')).toHaveCount(0);
 });
 
 test('a pin card opens its page, and a label searches for its company', async ({ page }) => {
