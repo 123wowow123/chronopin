@@ -440,6 +440,8 @@ This is a promotional article about one of the company partners with Interesting
 
 ## Before Usable
 
+### Before release
+
 - add e2e tests
 
 - Favorite needs to be grouped in folders and make public/private and shareable
@@ -470,28 +472,68 @@ major local events by major city scrape and more targetted by your location
 Scape major events on Kalshi / Polymarket
 https://kalshi.com/markets/kxfeddecision/fed-meeting/kxfeddecision-26oct
 
-need tag for betting sites and should be searchable
+
+
+scrape AI Models, good to test auto response feature. Ask it to use sparringly. But series of incremential update to the same product are good candidates. 
+https://www.anthropic.com/claude/opus
+https://help.openai.com/en/articles/9624314-model-release-notes
+
+
+
+- new like this should have stock ticker on it (add ticker price when posted and price on start date and on each update of start date and current price)
+https://fortune.com/2026/09/11/openai-astra-chatgpt-pro-pause/
+
+
+
+# Injestion Methodology
+
+- scrape articles like this to make a graph of project chips to sell and variance
+https://www.cnbc.com/2026/09/17/nvidia-huang-ai-chip-guidance.html
+
+- Add tags on pin to add more metadata. Add side panel control of tags
+Test to check betting sites pin are easiser to search
 
 each pin should try to have at least 3 images
 
 - use betting site to add scores for rotten tomatoes etc on game, movie, shows,etc
 https://kalshi.com/markets/kxrt/rotten-tomatoes-scores/kxrt-res
 
-scrape AI Models, good to test auto response feature. Ask it to use sparringly. But series of incremential update to the same product are good candidates. 
-https://www.anthropic.com/claude/opus
-https://help.openai.com/en/articles/9624314-model-release-notes
-
-- randomize what to show based on ranked vists to not overload date slot on timeline but always have expandable option to see all
-
-- new like this should have stock ticker on it (add ticker price when posted and price on start date and on each update of start date and current price)
-https://fortune.com/2026/09/11/openai-astra-chatgpt-pro-pause/
-
-- localization & multilingual
+# Daily Jobs
 
 - build list for daily scraper and add search engine trending search in the job too
 
-- scrape articles like this to make a graph of project chips to sell and variance
-https://www.cnbc.com/2026/09/17/nvidia-huang-ai-chip-guidance.html
+
+
+
+# OKF
+
+Update DB Schema and API so that each scraped/injection link such as web page or youtube or podcasts will create db reference for OKF wiki so that it can be reference and rebuild the pin main summary quickly. 
+
+- create OKF on how to do scraping/injest and should match api implementation. Should link reference to that code
+
+Need linting job to update/clean/maintain wiki
+Admin will have OKF source view which built the pin article
+
+- (experimental) relationship web view - knowledge system - Obsidian - need youtube transcript - can overlay on map
+https://www.youtube.com/watch?v=sboNwYmH3AY
+
+
+Generate user wiki using OKF to capture preference and add more weight to pins they have already click. 
+Add admin toogle to enable and disable this weight adjustment
+
+# Other
+
+- localization & multilingual
+
+- scrape polymarket and should still get other reference
+https://polymarket.com/event/next-claude-opus-released-byptptpt-20260727142323912
+
+
+- should have small display that 3 pins are happing within next 7 days on botton and top of timeline. Clicking on it will scroll you to it one after another
+
+-  map pins disapear as we scroll in different direction in the map but see the same repeating continents
+
+- track impression and use that to balance show pin to show in bags while higher clicks and watch will rank higher. Will have option to see overflow on full page using date specific search query
 
 
 ## Reminder: MyAnimeList top-anime scrape (in progress, resume later)
