@@ -356,15 +356,9 @@ https://nationaldaycalendar.com/march/
 
 ### High Priority
 
-- Youtube pin with time location
-  - Get closed caption text
 
-
-- Drilldown Summery
-  - Sentiment
 
   - Historically happens on date
-  - RSS/Atom summary
 
 - Google Map
   - Localize pins in area
@@ -401,10 +395,6 @@ https://nationaldaycalendar.com/march/
   - If flight information is entered or flight booked through site then delays and be tracked and shared
 
 
-### Web Scraper
-
-- Amazon Price Scrape
-- eBay Price Scrape
 
 ### Misc
 
@@ -418,13 +408,13 @@ This is a promotional article about one of the company partners with Interesting
 ```
 - Add pin group and can see iteniary map view and invite people for each location (support open invitation where anyone can join and buy tickets).
 
-### Partially Completed:
+### Google Analytics:
 
 - Activated Google Analytics / Facebook upgrade to non development mode
 
-- GA: Outbound link / non-interaction events / Social Interactions tracking / User Timings / set clientId on tracker creation
+- Setup Google Analytics to this site. 
+GA: Outbound link / non-interaction events / Social Interactions tracking / User Timings / set clientId on tracker creation
 
-- Chinese Lunar Calendar (Nong Li)
 
 - Add FB privacy policy page
 - https://gist.github.com/muddylemon/2671176
@@ -435,14 +425,21 @@ This is a promotional article about one of the company partners with Interesting
 ## Architecture
 - Externalize image processing to AWS Lamda
 - [Use Firebase DB for denormalized push notification of app data] <https://www.youtube.com/watch?v=LAWjdZYrUgI>
-- GeoLite2 City: IP => City / lat:long
 
 
 ## Before Usable
 
 ### Before release
 
+# Monitization
+
+- amazon & bestbuy referral links to product should be created if its something purchasable 
+
+# Testing 
+
 - add e2e tests
+
+# Grouping
 
 - Favorite needs to be grouped in folders and make public/private and shareable
 
@@ -452,36 +449,13 @@ This is a promotional article about one of the company partners with Interesting
 
 - watched view and should have different groups 
 
-- youtube summary should be generaed with reference to text transcript
-- scrape anime, movie, tv show, etc for studio and location
 
-- amazon & bestbuy referral links to product should be created if its something purchasable 
+# Horoscope
 
 - provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc. <https://aztro.readthedocs.io/en/latest>
 - Check out upcoming side calendar with astrology horrospoce <https://cafeastrology.com/astrologyof2017horoscopes.html>
 - add holiday and perforated placeholder block for holiday and special events
 
-- Add auto nightly scraping job 
-- need job to scrape and update pin, any visit will trigger a scheduled update scape that night, along to new reference
-- create job to check health of pins like broken videos, image, etc
-
-For delayed start dates, try to estimate how long of a delay
-
-major local events by major city scrape and more targetted by your location
-
-Scape major events on Kalshi / Polymarket
-https://kalshi.com/markets/kxfeddecision/fed-meeting/kxfeddecision-26oct
-
-
-
-scrape AI Models, good to test auto response feature. Ask it to use sparringly. But series of incremential update to the same product are good candidates. 
-https://www.anthropic.com/claude/opus
-https://help.openai.com/en/articles/9624314-model-release-notes
-
-
-
-- new like this should have stock ticker on it (add ticker price when posted and price on start date and on each update of start date and current price)
-https://fortune.com/2026/09/11/openai-astra-chatgpt-pro-pause/
 
 
 
@@ -498,12 +472,30 @@ each pin should try to have at least 3 images
 - use betting site to add scores for rotten tomatoes etc on game, movie, shows,etc
 https://kalshi.com/markets/kxrt/rotten-tomatoes-scores/kxrt-res
 
+- youtube summary should be generaed with reference to text transcript
+- scrape anime, movie, tv show, etc for studio and location
+
+
+For delayed start dates, try to estimate how long of a delay
+
+major local events by major city scrape and more targetted by your location
+
+
+scrape AI Models, good to test auto response feature. Ask it to use sparringly. But series of incremential update to the same product are good candidates. 
+https://www.anthropic.com/claude/opus
+https://help.openai.com/en/articles/9624314-model-release-notes
+
+
+- Amazon Price Scrape
+- eBay Price Scrape
+
 # Daily Jobs
 
 - build list for daily scraper and add search engine trending search in the job too
 
+- need job to scrape and update pin, any visit will trigger a scheduled update scape that night, along to new reference
 
-
+- create job to check health of pins like broken videos, image, etc
 
 # OKF
 
@@ -521,19 +513,32 @@ https://www.youtube.com/watch?v=sboNwYmH3AY
 Generate user wiki using OKF to capture preference and add more weight to pins they have already click. 
 Add admin toogle to enable and disable this weight adjustment
 
+- Failure during scraping and generating wiki or sub wiki should be noted and later jobs should be able to retry and upate pin
+
 # Other
 
 - localization & multilingual
 
-- scrape polymarket and should still get other reference
-https://polymarket.com/event/next-claude-opus-released-byptptpt-20260727142323912
 
 
 - should have small display that 3 pins are happing within next 7 days on botton and top of timeline. Clicking on it will scroll you to it one after another
 
 -  map pins disapear as we scroll in different direction in the map but see the same repeating continents
 
-- track impression and use that to balance show pin to show in bags while higher clicks and watch will rank higher. Will have option to see overflow on full page using date specific search query
+
+- new like this should have stock ticker on it (add ticker price when posted and price on start date and on each update of start date and current price)
+https://fortune.com/2026/09/11/openai-astra-chatgpt-pro-pause/
+
+
+
+# Scraping
+
+Scape major events on Kalshi / Polymarket
+https://kalshi.com/markets/kxfeddecision/fed-meeting/kxfeddecision-26oct
+
+- scrape polymarket and should still get other reference
+https://polymarket.com/event/next-claude-opus-released-byptptpt-20260727142323912
+
 
 
 ## Reminder: MyAnimeList top-anime scrape (in progress, resume later)

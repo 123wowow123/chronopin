@@ -3,6 +3,7 @@ import { getUser } from '@/server/auth';
 import { HttpError, json, route } from '@/server/http';
 import { mapPins } from '@/server/services/mapPins';
 import { resolveCreatedSince } from '@/server/util/createdFilter';
+import { requestTimeZone } from '@/server/viewer';
 
 // Every located pin the map should plot, in one answer.
 // GET /api/pins/map?from=ISO&to=ISO&created_within=1w
@@ -22,6 +23,7 @@ export const GET = route(async (request: NextRequest) => {
     q: params.get('q') || '',
     onlyWatched: onlyWatched && !!user,
     userId: user?.id ?? null,
+    timeZone: requestTimeZone(request),
   });
   return json({ pins });
 });

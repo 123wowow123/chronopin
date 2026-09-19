@@ -14,7 +14,6 @@ import { CardGrid } from '@/components/pin/CardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { PinConfidence } from '@/components/pin/PinConfidence';
 import { PinDuplicates } from '@/components/pin/PinDuplicates';
-import { PinViewTracker } from '@/components/pin/PinViewTracker';
 import { PinOdds } from '@/components/pin/PinOdds';
 import { PinRatings } from '@/components/pin/PinRatings';
 import { PinReferences } from '@/components/pin/PinReferences';
@@ -22,6 +21,7 @@ import { PinMapLoader } from '@/components/pin/PinMapLoader';
 import { PinMediaFrame } from '@/components/pin/PinMedia';
 import { PinWeather } from '@/components/pin/PinWeather';
 import { RefineLink } from '@/components/pin/RefineLink';
+import { ViewCount } from '@/components/pin/ViewCount';
 import { WatchButton } from '@/components/pin/WatchButton';
 import { Icon } from '@/components/ui/Icon';
 import { PostedTime, StartTime } from '@/components/ui/LocalTime';
@@ -71,7 +71,6 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   return (
     <>
       <JsonLd data={pinJsonLd(pin)} />
-      <PinViewTracker pinId={pin.id} />
       {/* grid-cols-[minmax(0,1fr)]: the single column below lg is otherwise
           floored by its content's min-width, which scrolls the page sideways. */}
       <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-10">
@@ -170,7 +169,7 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
         ) : null}
         {pin.utcCreatedDateTime ? (
           <span>
-            Posted <PostedTime value={pin.utcCreatedDateTime} serverTimeZone={timeZone} />
+            Posted <PostedTime value={pin.utcCreatedDateTime} serverTimeZone={timeZone} search />
           </span>
         ) : null}
         {pin.user?.userName ? (
@@ -213,7 +212,7 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
 
       {pin.utcStartDateTime ? (
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
-          <StartTime pin={pin} serverTimeZone={timeZone} allDaySuffix />
+          <StartTime pin={pin} serverTimeZone={timeZone} allDaySuffix search />
           <DateConfidence level={pin.dateConfidence} reasoning={pin.dateConfidenceReasoning} />
           <PinConfidence evidence={pinEvidence(pin)} />
           {/* Last: the reasoning takes a line of its own below the badges. */}
@@ -266,6 +265,7 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
           ) : null}
         </div>
         <div className="flex items-center gap-1">
+          <ViewCount pinId={pin.id} initial={pin.viewCount} track />
           <WatchButton pin={pin} loadForViewer />
           <PinAdminLink pinId={pin.id} />
         </div>

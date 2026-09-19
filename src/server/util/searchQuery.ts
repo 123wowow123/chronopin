@@ -7,6 +7,13 @@
 // (confidence:estimated); UNVERIFIED is the badge for the stored "unknown", so
 // either word works.
 //
+// date: takes a day as the timeline writes it (date:2026-09-08, or
+// date:-2560-01-01 for 2561 BC): the pins starting that day as the timeline
+// places them - an all-day pin on its own date, a timed one on its date in
+// the viewer's time zone. A day's "View all" popup and a card's start date
+// link to one. posted: takes a day the same way, for the pins posted that day
+// in the viewer's time zone; a card's posted date links to one.
+//
 // user: takes a name with or without its "@" (user:@ThePinGang), and a bare
 // @ThePinGang still works on its own, as it did before user: existed.
 //
@@ -32,13 +39,18 @@ export type SearchQuery = {
   companies: string[];
   categories: string[];
   confidences: string[];
+  // Day keys ("2026-09-08"), any of them: when pins start, and when they
+  // were posted.
+  dates: string[];
+  postedDays: string[];
   text: string;
 };
 
 const SMART_DOUBLE_QUOTES = /[“”„‟″]/g;
 const SMART_SINGLE_QUOTES = /[‘’‚‛′]/g;
 
-const FIELD = '(company|category|user|confidence)';
+const FIELD = '(company|category|user|confidence|date|posted)';
+const DAY_KEY = /^-?\d{4,6}-\d{2}-\d{2}$/;
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
 
@@ -57,7 +69,7 @@ const FIELD_TERM = new RegExp(
 
 const USER_TERM = /(^|\s)(@\S+)/g;
 
-export type TermField = 'user' | 'company' | 'category' | 'confidence';
+export type TermField = 'user' | 'company' | 'category' | 'confidence' | 'date' | 'posted';
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string }
@@ -115,6 +127,8 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
     companies: [],
     categories: [],
     confidences: [],
+    dates: [],
+    postedDays: [],
     text: '',
   };
 
@@ -126,6 +140,9 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
       addUserName(query, part.value);
     } else if (part.field === 'confidence') {
       addConfidence(query, part.value);
+    } else if (part.field === 'date' || part.field === 'posted') {
+      // Anything but a day is left out rather than matching nothing.
+      if (DAY_KEY.test(part.value)) addUnique(part.field === 'date' ? query.dates : query.postedDays, part.value);
     } else if (part.value) {
       addUnique(part.field === 'company' ? query.companies : query.categories, part.value);
     }
@@ -136,7 +153,14 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
 }
 
 export function hasFilters(query: SearchQuery): boolean {
-  return !!(query.userNames.length || query.companies.length || query.categories.length || query.confidences.length);
+  return !!(query.userNames.length || query.companies.length || query.categories.length || query.confidences.length || query.dates.length || query.postedDays.length);
+}
+
+// Whether the viewer's time zone changes what the query matches: its days are
+// the viewer's own. Everything else answers the same everywhere, so it can be
+// cached once for all zones.
+export function dependsOnZone(query: SearchQuery): boolean {
+  return !!(query.dates.length || query.postedDays.length);
 }
 
 // User names are stored with their "@", so that is the form matched on.

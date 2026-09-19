@@ -2,7 +2,8 @@
 // page needs, so a tab holds a single stream however much of the site is live:
 //
 //   hello           { id }  first, naming the connection for PUT /api/live/:id/odds
-//   pin:<event>     a pin saved, updated, removed, watched or liked (everyone)
+//   pin:<event>     a pin saved, updated, removed, watched or liked (everyone);
+//                   pin:view is just { id, viewCount }
 //   odds            { pinId, markets } for the pins the page says it shows
 //   notifications   { unreadCount } for the signed-in viewer's own connections
 //

@@ -10,8 +10,10 @@ import { EventEmitter } from 'node:events';
 import type { Row } from './db';
 import log from './util/log';
 
-export type PinEvent = 'save' | 'update' | 'remove' | 'favorite' | 'unfavorite' | 'like' | 'unlike';
-export const PIN_EVENTS: PinEvent[] = ['save', 'update', 'remove', 'favorite', 'unfavorite', 'like', 'unlike'];
+// view carries only { id, viewCount }: page views are frequent, and nothing
+// but the count follows them.
+export type PinEvent = 'save' | 'update' | 'remove' | 'favorite' | 'unfavorite' | 'like' | 'unlike' | 'view';
+export const PIN_EVENTS: PinEvent[] = ['save', 'update', 'remove', 'favorite', 'unfavorite', 'like', 'unlike', 'view'];
 
 type Listener = (pin: Row, options?: { userId?: number }) => void;
 

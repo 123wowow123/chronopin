@@ -176,6 +176,31 @@ export function weekdayPlanet(dayKey: string) {
   return { ...WEEKDAYS[weekday], weekday: name };
 }
 
+const LUNAR_DAY_TENS = ['初', '十', '廿', '三'];
+const LUNAR_DAY_UNITS = ['', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十'];
+
+// 初一 .. 初十, 十一 .. 二十, 廿一 .. 三十: how a lunar day is written.
+function lunarDayName(day: number): string {
+  if (day === 20) return '二十';
+  if (day === 30) return '三十';
+  return day % 10 ? LUNAR_DAY_TENS[Math.floor(day / 10)] + LUNAR_DAY_UNITS[day % 10] : LUNAR_DAY_TENS[day / 10 - 1] + '十';
+}
+
+// The day in the Chinese lunar calendar (农历, Nong Li): "八月初八" for
+// 2026-09-18, "闰六月初八" in a leap month, with the sexagenary year for the
+// title. Intl's Chinese calendar gives the month name but writes the day as a
+// number. Null before 104 BC (astronomical -103), the Taichu reform the
+// calendar as ICU computes it descends from.
+export function lunarDate(dayKey: string): { text: string; title: string } | null {
+  if (dayKeyParts(dayKey)[0] < -103) return null;
+  const parts = dateFormat('zh-CN-u-ca-chinese', { timeZone: 'UTC', year: 'numeric', month: 'long', day: 'numeric' }).formatToParts(dayKeyToMs(dayKey));
+  const get = (type: string) => parts.find((p) => p.type === type)?.value ?? '';
+  const day = Number(get('day'));
+  if (!day) return null;
+  const text = get('month') + lunarDayName(day);
+  return { text, title: `农历 ${get('yearName')}年${text} (Nong Li, Chinese lunar calendar)` };
+}
+
 // A year as people write it: "2026", "79", "2561 BC".
 function yearLabel(year: number): string {
   return year > 0 ? String(year) : `${1 - year} BC`;
@@ -199,6 +224,27 @@ export function dayKeyIn(instant: Date | string | number, timeZone: string): str
   const get = (type: string) => parts.find((p) => p.type === type)!.value;
   const year = Number(get('year'));
   return dayKeyOf(get('era') === 'BC' ? 1 - year : year, Number(get('month')), Number(get('day')));
+}
+
+// The day after a date key.
+export function nextDayKey(dayKey: string): string {
+  return dayKeyIn(dayKeyToMs(dayKey) + 86_400_000, 'UTC');
+}
+
+// How far a zone's clocks are ahead of UTC at an instant, in ms.
+function zoneOffsetMs(instant: number, timeZone: string): number {
+  const parts = dateFormat('en-US', { timeZone, hourCycle: 'h23', hour: '2-digit', minute: '2-digit', second: '2-digit' }).formatToParts(instant);
+  const get = (type: string) => Number(parts.find((p) => p.type === type)!.value);
+  const wall = dayKeyToMs(dayKeyIn(instant, timeZone)) + ((get('hour') * 60 + get('minute')) * 60 + get('second')) * 1000;
+  return wall - Math.floor(instant / 1000) * 1000;
+}
+
+// The instant (ms) a date key's day begins in a time zone: its first moment,
+// which on a day starting in a DST gap is the end of the gap.
+export function dayStartIn(dayKey: string, timeZone: string): number {
+  const midnight = dayKeyToMs(dayKey);
+  const guess = midnight - zoneOffsetMs(midnight, timeZone);
+  return midnight - zoneOffsetMs(guess, timeZone);
 }
 
 // " BC" for an instant before the common era in that zone, else nothing: for

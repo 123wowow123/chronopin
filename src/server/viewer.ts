@@ -22,4 +22,10 @@ export function timeZoneOrUtc(value: string | undefined): string {
   }
 }
 
+// A request's zone, from the same cookie: for API routes, which search by the
+// viewer's days (date:, posted:).
+export function requestTimeZone(request: { cookies: { get(name: string): { value: string } | undefined } }): string {
+  return timeZoneOrUtc(request.cookies.get('tz')?.value);
+}
+
 export const viewerUser = cache(async (): Promise<User | null> => getUser());

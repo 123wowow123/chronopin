@@ -173,6 +173,15 @@ const PATHS: Record<string, React.ReactNode> = {
       <path d="M15 7h6v6" />
     </>
   ),
+  // The same line falling: a mood cooling off.
+  'trending-down': (
+    <>
+      <path d="m3 7 6 6 4-4 8 8" />
+      <path d="M15 17h6v-6" />
+    </>
+  ),
+  // Rising bars: how many have looked (the eye is taken by watching).
+  views: <path d="M5 20v-6M12 20V5M19 20v-10" />,
   // Arrows pushing out to both ends: widening a range, not zooming a map.
   'expand-x': (
     <>

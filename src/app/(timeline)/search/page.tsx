@@ -46,6 +46,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
     posted: spanFromParam(first(params.posted), DEFAULT_POSTED_WITHIN),
     past: spanFromParam(first(params.past), null),
     future: spanFromParam(first(params.future), null),
+    timeZone,
   };
   const [page, video] = await Promise.all([searchPage(q, user?.id ?? null, onlyWatched && !!user, view), timelineVideo()]);
 

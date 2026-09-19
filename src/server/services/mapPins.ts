@@ -18,6 +18,8 @@ export type MapQuery = {
   q: string;
   onlyWatched: boolean;
   userId: number | null;
+  // The zone a search's date: and posted: days are the viewer's in.
+  timeZone: string;
 };
 
 // Everything off a pin that a marker reads. Applied to a search's results,
@@ -42,7 +44,7 @@ export async function mapPins(query: MapQuery): Promise<MapPinJson[]> {
   // A search already answers with every match at once; it is the window and
   // the missing places that are narrowed here instead of in the browser.
   if (query.q.trim()) {
-    const found = await searchPins(query.q, { userId: query.userId, onlyWatched: query.onlyWatched });
+    const found = await searchPins(query.q, { userId: query.userId, onlyWatched: query.onlyWatched, timeZone: query.timeZone });
     return (found.pins as unknown as PinJson[])
       .filter((pin) => pin.latitude != null && pin.longitude != null)
       .filter((pin) => !query.createdSince || !pin.utcCreatedDateTime || new Date(pin.utcCreatedDateTime) >= query.createdSince!)

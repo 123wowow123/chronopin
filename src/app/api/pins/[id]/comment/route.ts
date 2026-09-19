@@ -1,8 +1,9 @@
-import type { NextRequest } from 'next/server';
+import { after, type NextRequest } from 'next/server';
 import { requireUser } from '@/server/auth';
 import { HttpError, intParam, json, readJson, route } from '@/server/http';
 import Comment from '@/server/model/comment';
 import Pin from '@/server/model/pin';
+import { refreshSentiment } from '@/server/services/commentSentiment';
 import { invalidatePin } from '@/server/services/cache';
 
 type Ctx = RouteContext<'/api/pins/[id]/comment'>;
@@ -52,5 +53,6 @@ export const POST = route(async (request: NextRequest, ctx: Ctx) => {
     throw new HttpError(404, 'Pin not found');
   }
   invalidatePin(pinId);
+  after(() => refreshSentiment(comment.id));
   return json(comment, 201);
 });

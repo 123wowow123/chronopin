@@ -9,9 +9,11 @@ import User from '../model/user';
 import { HttpError } from '../util/httpError';
 import { resolveCreatedSince } from '../util/createdFilter';
 import { hasFilters, parseSearchQuery, type SearchQuery } from '../util/searchQuery';
+import { timeZoneOrUtc } from '../viewer';
 import { isSpan, offsetDate } from '@/lib/postedSpan';
 
-type SearchOptions = { userId?: number | null; onlyWatched?: boolean };
+// timeZone: the zone date: and posted: days are the viewer's in (UTC when absent).
+type SearchOptions = { userId?: number | null; onlyWatched?: boolean; timeZone?: string };
 
 export type SearchSort = 'date' | 'relevance';
 
@@ -21,6 +23,8 @@ export type SearchRequest = {
   userId: number | null;
   onlyWatched: boolean;
   sort: SearchSort;
+  // The zone date: and posted: days are read in (the tz parameter).
+  timeZone: string;
   createdSince: Date | null;
   // When the results start, by relevance only: the timeline shows when.
   startFrom: Date | null;
@@ -81,6 +85,7 @@ export function readSearchRequest(params: URLSearchParams, userId: number | null
     userId,
     onlyWatched: params.get('f')?.toLowerCase() === 'watch' && !!userId,
     sort,
+    timeZone: timeZoneOrUtc(params.get('tz') ?? undefined),
     createdSince,
     startFrom: sort === 'relevance' ? bound('start_from', 'start_past', -1) : null,
     startTo: sort === 'relevance' ? bound('start_to', 'start_future', 1) : null,
@@ -136,6 +141,7 @@ export async function searchPinsPage(request: SearchRequest): Promise<{ pins: Pi
 function searchLink(request: SearchRequest, direction: 'previous' | 'next', last: SearchRank): string {
   const params = new URLSearchParams({ q: request.q, sort: request.sort });
   if (request.onlyWatched) params.set('f', 'watch');
+  if (request.timeZone !== 'UTC') params.set('tz', request.timeZone);
   if (request.createdSince) params.set('created_since', request.createdSince.toISOString());
   if (request.startFrom) params.set('start_from', request.startFrom.toISOString());
   if (request.startTo) params.set('start_to', request.startTo.toISOString());
@@ -170,6 +176,7 @@ async function searchFilter(query: SearchQuery, options: SearchOptions): Promise
     ...query,
     hits: query.text ? await SearchPins.hits(query.text) : null,
     favoriteUserId: options.onlyWatched ? options.userId || 0 : null,
+    timeZone: timeZoneOrUtc(options.timeZone),
   };
 }
 

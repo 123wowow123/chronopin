@@ -4,14 +4,18 @@ import { pinConfidenceOf } from './pins';
 // Pin page views, counted once per viewer per UTC day (see 0014).
 export default class PinView {
   // viewer: "u:<userId>" or "v:<anonymous visitor id>". Nothing is recorded
-  // for a pin that does not exist or was deleted.
-  static async record(pinId: number, viewer: string) {
-    await db.query(
+  // for a pin that does not exist or was deleted. Answers with the pin's view
+  // count, and whether this view was new (not yet counted today).
+  static async record(pinId: number, viewer: string): Promise<{ added: boolean; viewCount: number }> {
+    const added = await db.query(
       `INSERT INTO "PinView" ("pinId", "viewer")
        SELECT "id", $2 FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL
-       ON CONFLICT DO NOTHING`,
+       ON CONFLICT DO NOTHING
+       RETURNING "pinId"`,
       [pinId, viewer],
     );
+    const [{ count }] = await db.query<{ count: number }>(`SELECT COUNT(*)::integer AS "count" FROM "PinView" WHERE "pinId" = $1`, [pinId]);
+    return { added: added.length > 0, viewCount: count };
   }
 
   // Views per UTC day, split by signed-in users and anonymous visitors.

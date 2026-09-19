@@ -11,9 +11,9 @@ import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
 import { takeTimelineSpot } from '@/lib/client/returnSpot';
 import { useTodayHold } from '@/lib/client/todayHold';
 import { useQueryState } from '@/lib/client/urlState';
-import { useTimeZone } from '@/lib/client/timeZone';
+import { browserTimeZone, useTimeZone } from '@/lib/client/timeZone';
 import { daysBetween, dayKeyIn, monthDayOf } from '@/lib/format';
-import { formatSpan, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSpan';
+import { DEFAULT_POSTED_WITHIN, formatSpan, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSpan';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
@@ -32,6 +32,10 @@ type Links = { previous?: string; next?: string };
 // How many pins the new pins panel keeps, matching the LIMIT newPins() in
 // src/server/services/pages.ts asks for.
 const NEW_PINS_LIMIT = 5;
+
+// How long a burst of live pin changes is let settle before the days at
+// either end of the loaded stretch are counted again.
+const RECOUNT_DELAY_MS = 500;
 
 // The medium a broadcast pin shows in the new pins panel: a video's still
 // first, else the earliest-attached medium (mirrors PinView.pictures' SQL
@@ -65,6 +69,17 @@ async function fetchPage(query: string): Promise<{ page: TimelinePage; links: Li
   const page = (await res.json()) as TimelinePage;
   page.pins = page.pins.map((pin) => ({ ...pin, safeDescription: safeHtmlInBrowser(pin.description) }));
   return { page, links: parseLinkHeader(res.headers.get('link')) };
+}
+
+// How many pins one day really has, loaded or not.
+async function fetchDayCount(day: string, timeZone: string, postedWithin: string | null): Promise<number> {
+  const params = new URLSearchParams({ day, tz: timeZone });
+  if (postedWithin) params.set('created_within', postedWithin);
+  const res = await fetch(`/api/main/day?${params}`, { credentials: 'same-origin' });
+  if (!res.ok) {
+    throw new Error(`timeline day count failed: ${res.status}`);
+  }
+  return ((await res.json()) as { count: number }).count;
 }
 
 // The home timeline: the first page arrives server-rendered; earlier and later
@@ -116,6 +131,10 @@ export function Timeline({
   const [postedWithin, setPostedWithin] = useState(initialPostedWithin);
   useQueryState({ posted: spanToParam(postedWithin, defaultPostedWithin) });
   const [status, setStatus] = useState<'ready' | 'loading' | 'error'>('ready');
+  // Bumped when pins are added, edited or removed, so the days at either end
+  // of the loaded stretch are counted again: any change may have moved a pin
+  // into or out of one.
+  const [countsVersion, setCountsVersion] = useState(0);
   const [specialtyDays, setSpecialtyDays] = useState(initialSpecialtyDays);
   // Ticks each minute, so "today" rolls over at midnight.
   const now = useNow(60_000, new Date(serverNow).getTime());
@@ -243,7 +262,13 @@ export function Timeline({
   // within the stretch of timeline already loaded and the new pins panel, over
   // the page's one live stream.
   useEffect(() => {
+    // A burst of changes (a scrape adding a dozen pins) asks for counts once.
+    let recount: ReturnType<typeof setTimeout> | undefined;
     const onPin = (type: string, changed: CardPin) => {
+      if (type === 'pin:save' || type === 'pin:update' || type === 'pin:remove') {
+        clearTimeout(recount);
+        recount = setTimeout(() => setCountsVersion((v) => v + 1), RECOUNT_DELAY_MS);
+      }
       const withHtml = { ...changed, safeDescription: safeHtmlInBrowser(changed.description) };
       // A pin edited below the timeline's confidence bar leaves it, as it
       // would on reload; a new one below the bar never joins.
@@ -257,9 +282,10 @@ export function Timeline({
       setPins((list) => {
         const index = list.findIndex((p) => p.id === changed.id);
         if (index !== -1) {
-          // Broadcasts carry no viewer, so keep this viewer's own watch state.
+          // Broadcasts carry no viewer, so keep this viewer's own watch state,
+          // nor impressions, so keep the count the day's pick was drawn with.
           const next = [...list];
-          next[index] = { ...withHtml, hasFavorite: list[index].hasFavorite };
+          next[index] = { ...withHtml, hasFavorite: list[index].hasFavorite, impressionCount: list[index].impressionCount };
           return next;
         }
         if (type !== 'pin:save' || !list.length) return list;
@@ -283,7 +309,10 @@ export function Timeline({
     const stops = ['pin:save', 'pin:update', 'pin:remove', 'pin:favorite', 'pin:unfavorite', 'pin:like', 'pin:unlike'].map((type) =>
       onLive<CardPin>(type, (changed) => onPin(type, changed)),
     );
-    return () => stops.forEach((stop) => stop());
+    return () => {
+      clearTimeout(recount);
+      stops.forEach((stop) => stop());
+    };
   }, [minConfidence]);
 
   const loadMore = useCallback(
@@ -330,6 +359,50 @@ export function Timeline({
     if (bottomRef.current) observer.observe(bottomRef.current);
     return () => observer.disconnect();
   }, [loadMore]);
+
+  // A day as a search (date:), for its "View all": the same
+  // "posted within" window, written as the search page reads it.
+  const daySearchHref = useCallback(
+    (day: string) => {
+      const params = new URLSearchParams({ q: `date:${day}` });
+      const posted = spanToParam(postedWithin, DEFAULT_POSTED_WITHIN);
+      if (posted) params.set('posted', posted);
+      return `/search?${params}`;
+    },
+    [postedWithin],
+  );
+
+  // The days at either end of what is loaded, where more pages wait beyond:
+  // a page can stop partway through them, so their bags may hold only a few
+  // of their pins. Each is counted on the server, so its "View all" appears
+  // and counts the pins still to come. Counts are kept per zone and window.
+  const edgeDays = useMemo(() => {
+    const days = new Set<string>();
+    if (bags.length && links.previous) days.add(bags[0].day);
+    if (bags.length && links.next) days.add(bags[bags.length - 1].day);
+    return days;
+  }, [bags, links]);
+  const countKey = (day: string) => `${day}|${timeZone}|${postedWithin ?? ''}`;
+  const [dayCounts, setDayCounts] = useState<Record<string, number>>({});
+  const countsAsked = useRef(new Set<string>());
+  useEffect(() => {
+    if (countsVersion) countsAsked.current.clear();
+  }, [countsVersion]);
+  useEffect(() => {
+    // Hydration renders in the server's zone and switches to the browser's
+    // right after: counting in the first would only be thrown away.
+    if (timeZone !== browserTimeZone()) return;
+    for (const day of edgeDays) {
+      const key = `${day}|${timeZone}|${postedWithin ?? ''}`;
+      if (countsAsked.current.has(key)) continue;
+      countsAsked.current.add(key);
+      fetchDayCount(day, timeZone, postedWithin).then(
+        (count) => setDayCounts((counts) => ({ ...counts, [key]: count })),
+        // Asked again when the day is next at an edge.
+        () => countsAsked.current.delete(key),
+      );
+    }
+  }, [edgeDays, timeZone, postedWithin, countsVersion]);
 
   // A new "posted within" window reloads from the server: the timeline only
   // holds the pages it has scrolled through, so filtering locally would miss
@@ -395,6 +468,10 @@ export function Timeline({
                 // The first bag is what paints before hydration scrolls to
                 // today, so both hold a likely LCP image.
                 firstPinPriority={index === 0 || index === (marker.index === -1 ? marker.todayBagIndex : marker.index)}
+                sample
+                focusId={focus?.id}
+                daySearchHref={daySearchHref}
+                dayTotal={edgeDays.has(bag.day) ? dayCounts[countKey(bag.day)] : undefined}
               />
             </div>
           ))}

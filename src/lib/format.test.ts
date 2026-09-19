@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { averageRating, compactCount, dayKeyIn, daysAway, daysBetween, formatDayKey, formatPosted, formatStart, money, monthDayOf, plainText, ratingScore, timeAgo, timespan, weekdayPlanet } from './format';
+import { averageRating, compactCount, dayKeyIn, dayStartIn, daysAway, daysBetween, formatDayKey, formatPosted, formatStart, lunarDate, money, monthDayOf, nextDayKey, plainText, ratingScore, timeAgo, timespan, weekdayPlanet } from './format';
 import { buildBags, pinTense, resolveTodayMarker } from './timeline';
 
 describe('money', () => {
@@ -195,5 +195,46 @@ describe('timeAgo', () => {
 
   it('formats future instants', () => {
     expect(timeAgo(new Date(now + 59 * 60_000 + 50_000), now)).toBe('in 1 hour');
+  });
+});
+
+describe('dayStartIn', () => {
+  it('finds a day\'s first instant in a zone', () => {
+    expect(new Date(dayStartIn('2026-09-13', 'UTC')).toISOString()).toBe('2026-09-13T00:00:00.000Z');
+    expect(new Date(dayStartIn('2026-09-13', 'America/Los_Angeles')).toISOString()).toBe('2026-09-13T07:00:00.000Z');
+    expect(new Date(dayStartIn('2026-01-13', 'America/Los_Angeles')).toISOString()).toBe('2026-01-13T08:00:00.000Z');
+    expect(new Date(dayStartIn('2026-09-13', 'Pacific/Kiritimati')).toISOString()).toBe('2026-09-12T10:00:00.000Z');
+    expect(new Date(dayStartIn('2026-09-13', 'Asia/Kolkata')).toISOString()).toBe('2026-09-12T18:30:00.000Z');
+  });
+
+  it('starts the day after the DST change at the new offset', () => {
+    expect(new Date(dayStartIn('2026-03-09', 'America/New_York')).toISOString()).toBe('2026-03-09T04:00:00.000Z');
+    expect(new Date(dayStartIn('2026-11-02', 'America/New_York')).toISOString()).toBe('2026-11-02T05:00:00.000Z');
+  });
+
+  it('works for a day before the common era', () => {
+    expect(dayKeyIn(dayStartIn('-2560-01-01', 'Asia/Tokyo'), 'Asia/Tokyo')).toBe('-2560-01-01');
+    expect(nextDayKey('-2560-12-31')).toBe('-2559-01-01');
+  });
+});
+
+describe('lunarDate', () => {
+  it('writes the Chinese lunar month and day', () => {
+    expect(lunarDate('2026-09-18')?.text).toBe('八月初八');
+    expect(lunarDate('2026-02-17')?.text).toBe('正月初一');
+    expect(lunarDate('2026-10-25')?.text).toBe('九月十六');
+    expect(lunarDate('2025-08-01')?.text).toBe('闰六月初八');
+    expect(lunarDate('2026-09-18')?.title).toContain('丙午年');
+  });
+
+  it('names every day of a month', () => {
+    expect(lunarDate('2026-02-26')?.text).toBe('正月初十');
+    expect(lunarDate('2026-02-27')?.text).toBe('正月十一');
+    expect(lunarDate('2026-03-08')?.text).toBe('正月二十');
+    expect(lunarDate('2026-03-09')?.text).toBe('正月廿一');
+  });
+
+  it('has none before the Taichu calendar', () => {
+    expect(lunarDate('-2560-01-01')).toBeNull();
   });
 });

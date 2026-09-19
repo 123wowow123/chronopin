@@ -6,6 +6,8 @@ import config from '../config';
 import DateTime from '../model/dateTime';
 import { getTimelineConfidence } from '../model/appSetting';
 import Pins from '../model/pins';
+import { dayKeyToMs } from '@/lib/format';
+import { pinDayKey } from '@/lib/timeline';
 import { minConfidence as settingMinConfidence } from '@/lib/timelineConfidence';
 
 const pageSize = config.pagination.pageSize;
@@ -85,4 +87,27 @@ export async function getTimeline(query: TimelineQuery): Promise<Pins> {
   }
   pins.dateTimes = await DateTime.queryByStartEndDate(start, end);
   return pins;
+}
+
+// Clocks run from UTC-12 to UTC+14, so a day anywhere starts within this of
+// its UTC midnight.
+const ZONE_REACH_MS = 14 * 3_600_000;
+// Past this many pins a day is cut short; no day has come near it.
+const DAY_LIMIT = 500;
+
+// Every instant a pin of `day` can start at, in some time zone.
+function dayReach(day: string): [Date, Date] {
+  const midnight = dayKeyToMs(day);
+  return [new Date(midnight - ZONE_REACH_MS), new Date(midnight + 86_400_000 + ZONE_REACH_MS)];
+}
+
+// How many pins one day ("2026-09-14", or "-2560-01-01") has on the timeline,
+// as a viewer in timeZone sees it: timed pins on their local date, all-day
+// pins on their UTC date (see src/lib/timeline.ts). For the days at either end
+// of what the timeline has loaded, which the pages may cut short, so their
+// "View all" can count every pin they have.
+export async function countDayPins({ day, timeZone, createdSince }: { day: string; timeZone: string; createdSince?: Date | null }): Promise<number> {
+  const [start, end] = dayReach(day);
+  const starts = await Pins.listStartsBetween(start, end, createdSince, await timelineMinConfidence());
+  return Math.min(DAY_LIMIT, starts.filter((pin) => pinDayKey({ utcStartDateTime: pin.utcStartDateTime.toISOString(), allDay: pin.allDay }, timeZone) === day).length);
 }

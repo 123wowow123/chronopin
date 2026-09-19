@@ -1,8 +1,9 @@
-import type { NextRequest } from 'next/server';
+import { after, type NextRequest } from 'next/server';
 import { requireUser } from '@/server/auth';
 import { HttpError, intParam, json, noContent, readJson, route } from '@/server/http';
 import Comment from '@/server/model/comment';
 import type User from '@/server/model/user';
+import { refreshSentiment } from '@/server/services/commentSentiment';
 import { invalidatePin } from '@/server/services/cache';
 
 type Ctx = RouteContext<'/api/pins/[id]/comment/[commentId]'>;
@@ -38,6 +39,7 @@ export const PATCH = route(async (request: NextRequest, ctx: Ctx) => {
     throw new HttpError(403, 'Comment can no longer be edited');
   }
   invalidatePin(pinId);
+  after(() => refreshSentiment(comment.id));
   return json(comment);
 });
 

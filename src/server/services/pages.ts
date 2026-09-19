@@ -16,6 +16,7 @@ import { TAGS } from './cache';
 import { readSearchRequest, searchCategoryCounts, searchPinsPage, type SearchSort } from './search';
 import { getTimeline, timelineMinConfidence } from './timeline';
 import { resolveCreatedSince, type CreatedQuery } from '../util/createdFilter';
+import { dependsOnZone, parseSearchQuery } from '../util/searchQuery';
 
 // The video setting the cards on a page of pins read. Cached (and expired)
 // with those pages rather than read per request: it is one row that changes
@@ -149,7 +150,9 @@ export async function relatedPins(id: number, title: string): Promise<PinJson[]>
 }
 
 // The sort and filters a search page's URL names: spans as the sliders set them.
-export type SearchView = { sort: SearchSort; posted: string | null; past: string | null; future: string | null };
+// timeZone: the viewer's, for a query whose days depend on it (date:,
+// posted:), else UTC so every zone shares the cached results.
+export type SearchView = { sort: SearchSort; posted: string | null; past: string | null; future: string | null; timeZone: string };
 
 // The first page of a search, and the links on to later ones.
 export async function searchPage(
@@ -158,6 +161,7 @@ export async function searchPage(
   onlyWatched: boolean,
   view: SearchView,
 ): Promise<SearchPage & { error?: string; watchVersion?: string }> {
+  view = { ...view, timeZone: zoneFor(query, view.timeZone) };
   // Watched results are one person's list and must change the moment they
   // watch or unwatch a pin, so they skip the shared, briefly stale cache.
   if (!onlyWatched || !userId) return cachedSearch(query, view);
@@ -180,6 +184,7 @@ async function cachedSearch(query: string, view: SearchView) {
 async function runSearch(query: string, userId: number | null, onlyWatched: boolean, view: SearchView): Promise<SearchPage & { error?: string }> {
   const params = new URLSearchParams({ q: query, sort: view.sort });
   if (onlyWatched) params.set('f', 'watch');
+  params.set('tz', view.timeZone);
   if (view.posted) params.set('created_within', view.posted);
   if (view.past) params.set('start_past', view.past);
   if (view.future) params.set('start_future', view.future);
@@ -207,20 +212,28 @@ export async function searchPageCategoryCounts(
   userId: number | null,
   onlyWatched: boolean,
   created: CreatedQuery,
+  timeZone: string,
 ): Promise<Record<string, number>> {
-  return onlyWatched && userId ? runCategoryCounts(query, userId, true, created) : cachedCategoryCounts(query, created);
+  const zone = zoneFor(query, timeZone);
+  return onlyWatched && userId ? runCategoryCounts(query, userId, true, created, zone) : cachedCategoryCounts(query, created, zone);
+}
+
+// The viewer's zone if the query's days depend on it, else UTC: one cache
+// entry for every zone whenever the zone makes no difference.
+function zoneFor(query: string, timeZone: string): string {
+  return dependsOnZone(parseSearchQuery(query)) ? timeZone : 'UTC';
 }
 
 // Counts carry no per-viewer fields, so everyone shares one entry.
-async function cachedCategoryCounts(query: string, created: CreatedQuery) {
+async function cachedCategoryCounts(query: string, created: CreatedQuery, timeZone: string) {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
-  return runCategoryCounts(query, null, false, created);
+  return runCategoryCounts(query, null, false, created, timeZone);
 }
 
-function runCategoryCounts(query: string, userId: number | null, onlyWatched: boolean, created: CreatedQuery) {
-  return searchCategoryCounts(query, { userId, onlyWatched, createdSince: resolveCreatedSince(created) });
+function runCategoryCounts(query: string, userId: number | null, onlyWatched: boolean, created: CreatedQuery, timeZone: string) {
+  return searchCategoryCounts(query, { userId, onlyWatched, timeZone, createdSince: resolveCreatedSince(created) });
 }
 
 export async function pinComments(id: number) {

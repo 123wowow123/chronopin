@@ -26,6 +26,12 @@ export function invalidatePin(id: number | string) {
   revalidateTag(TAGS.sitemap, 'max');
 }
 
+// Only the pin's own page changed (a comment's score, say): the timeline and
+// sitemap do not show it.
+export function expirePinPage(id: number | string) {
+  revalidateTag(TAGS.pin(id), 'max');
+}
+
 export function invalidateTimeline() {
   revalidateTag(TAGS.timeline, 'max');
 }

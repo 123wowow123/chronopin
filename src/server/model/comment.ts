@@ -6,16 +6,18 @@ import { advanceIdSequence } from './pinShared';
 import PinUserLink from './pinUserLink';
 import User from './user';
 
-const prop = ['id', 'text', 'parentCommentId', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
+const prop = ['id', 'text', 'parentCommentId', 'sentiment', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
 
 // How long after posting a comment its author may still edit it.
 export const EDIT_WINDOW_MINUTES = 5;
 
-const COMMENT_COLUMNS = `"id", "text", "userId", "pinId", "parentCommentId", "utcCreatedDateTime", "utcUpdatedDateTime"`;
+const COMMENT_COLUMNS = `"id", "text", "userId", "pinId", "parentCommentId", "sentiment", "utcCreatedDateTime", "utcUpdatedDateTime"`;
 
 export default class Comment extends PinUserLink {
   declare text: string;
   declare parentCommentId: number | null;
+  // -1..1, null until Claude has scored it (src/server/extract/sentiment.ts).
+  declare sentiment: number | null;
 
   protected get props() {
     return prop;
@@ -36,12 +38,13 @@ export default class Comment extends PinUserLink {
   async save(query: QueryFn = db.query) {
     try {
       const hasId = this.id != null;
-      const columns = ['text', 'userId', 'pinId', 'parentCommentId', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
+      const columns = ['text', 'userId', 'pinId', 'parentCommentId', 'sentiment', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
       const values = [
         this.text,
         this.userId,
         this.pinId,
         this.parentCommentId,
+        this.sentiment,
         this.utcCreatedDateTime || new Date(),
         this.utcUpdatedDateTime,
       ].map((value) => (value === undefined ? null : value));
@@ -99,12 +102,13 @@ export default class Comment extends PinUserLink {
   }
 
   // Only the author, only while the comment is live, and only within the edit
-  // window. updated is false when any of those fail.
+  // window. updated is false when any of those fail. The new text has not been
+  // scored yet, so its sentiment goes back to null.
   async update() {
     const rows = await db.query(
       `
       UPDATE "Comment"
-      SET "text" = $3, "utcUpdatedDateTime" = now()
+      SET "text" = $3, "sentiment" = NULL, "utcUpdatedDateTime" = now()
       WHERE "id" = $1
         AND "userId" = $2
         AND "utcDeletedDateTime" IS NULL
@@ -115,6 +119,7 @@ export default class Comment extends PinUserLink {
     const updated = rows.length > 0;
     if (updated) {
       this.utcUpdatedDateTime = rows[0].utcUpdatedDateTime;
+      this.sentiment = null;
     }
     return { comment: this, updated };
   }
@@ -156,7 +161,7 @@ export default class Comment extends PinUserLink {
     const rows = await db.query(
       `
     SELECT "Comment"."id", "Comment"."text", "Comment"."userId", "Comment"."pinId",
-           "Comment"."parentCommentId", "Comment"."utcCreatedDateTime", "Comment"."utcUpdatedDateTime",
+           "Comment"."parentCommentId", "Comment"."sentiment", "Comment"."utcCreatedDateTime", "Comment"."utcUpdatedDateTime",
            "User"."userName" AS "User.userName", "User"."pictureUrl" AS "User.pictureUrl"
     FROM "Comment"
       LEFT JOIN "User" ON "Comment"."userId" = "User"."id"
@@ -165,6 +170,42 @@ export default class Comment extends PinUserLink {
       [pinId],
     );
     return rows.map((row) => new Comment(row));
+  }
+
+  // What scoring a comment's tone reads: its text, the pin it is on, and for a
+  // reply the comment it answers. Undefined when the comment is gone.
+  static async sentimentContext(id: number) {
+    const rows = await db.query<{ text: string; pinId: number; pinTitle: string; parentText: string | null }>(
+      `
+    SELECT "Comment"."text", "Comment"."pinId", "Pin"."title" AS "pinTitle", "Parent"."text" AS "parentText"
+    FROM "Comment"
+      JOIN "Pin" ON "Pin"."id" = "Comment"."pinId"
+      LEFT JOIN "Comment" AS "Parent" ON "Parent"."id" = "Comment"."parentCommentId" AND "Parent"."utcDeletedDateTime" IS NULL
+    WHERE "Comment"."id" = $1 AND "Comment"."utcDeletedDateTime" IS NULL`,
+      [id],
+    );
+    return rows[0];
+  }
+
+  // Stores a score for the text it was worked out from: when the comment was
+  // edited in the meantime, the score is for old words and is dropped
+  // (resolves false).
+  static async setSentiment(id: number, scoredText: string, sentiment: number) {
+    const rows = await db.query(`UPDATE "Comment" SET "sentiment" = $2 WHERE "id" = $1 AND "text" = $3 RETURNING "id"`, [
+      id,
+      sentiment,
+      scoredText,
+    ]);
+    return rows.length > 0;
+  }
+
+  // Live comments nobody has scored yet, oldest first (the backfill script).
+  static async unscoredIds(limit: number): Promise<number[]> {
+    const rows = await db.query<{ id: number }>(
+      `SELECT "id" FROM "Comment" WHERE "sentiment" IS NULL AND "utcDeletedDateTime" IS NULL ORDER BY "utcCreatedDateTime" ASC, "id" ASC LIMIT $1`,
+      [limit],
+    );
+    return rows.map((row) => row.id);
   }
 
   // Every live comment, oldest first, so a parent always comes before its

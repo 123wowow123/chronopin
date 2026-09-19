@@ -1,10 +1,10 @@
 // Building search queries from a pin card's labels (user, company, category,
-// date confidence).
+// date confidence, start date, posted date).
 // A click adds its term to the search already showing rather than replacing
 // it, so each click narrows the results (or, for a second company, widens
 // them). The server parses these in src/server/util/searchQuery.ts.
 
-export type LabelField = 'user' | 'company' | 'category' | 'confidence';
+export type LabelField = 'user' | 'company' | 'category' | 'confidence' | 'date' | 'posted';
 
 // Straight and smart double quotes - never part of a name, so they are
 // stripped from label values and treated alike when reading a query.

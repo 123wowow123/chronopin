@@ -17,6 +17,7 @@ import { PinCardOdds } from './PinOdds';
 import { PinMediaFrame } from './PinMedia';
 import { RatingAverage } from './PinRatings';
 import { RefineLink } from './RefineLink';
+import { ViewCount } from './ViewCount';
 import { WatchButton } from './WatchButton';
 import { WeatherIcon } from './WeatherIcon';
 
@@ -103,9 +104,7 @@ export function PinCard({
             ) : null}
             {pin.utcCreatedDateTime ? (
               <span>
-                <Link href={href} className="text-inherit hover:text-ink hover:no-underline">
-                  <PostedTime value={pin.utcCreatedDateTime} serverTimeZone={serverTimeZone} dateOnly />
-                </Link>
+                <PostedTime value={pin.utcCreatedDateTime} serverTimeZone={serverTimeZone} dateOnly search />
               </span>
             ) : null}
             {pin.user?.userName ? (
@@ -157,7 +156,7 @@ export function PinCard({
             <div className="mb-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
               {pin.utcStartDateTime ? (
                 <>
-                  <StartTime pin={pin} serverTimeZone={serverTimeZone} />
+                  <StartTime pin={pin} serverTimeZone={serverTimeZone} search />
                   <WeatherIcon pinId={pin.id} hasPlace={hasPlace} />
                   <DateConfidence level={pin.dateConfidence} reasoning={pin.dateConfidenceReasoning} />
                   <PinConfidence evidence={pinEvidence(pin)} />
@@ -207,6 +206,7 @@ export function PinCard({
           ) : null}
         </div>
         <div className="flex items-center justify-end gap-1">
+          <ViewCount pinId={pin.id} initial={pin.viewCount} />
           <WatchButton pin={pin} />
         </div>
       </div>

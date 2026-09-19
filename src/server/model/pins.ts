@@ -3,8 +3,9 @@ import * as db from '../db';
 import type { Row } from '../db';
 import BasePins from './basePins';
 import Pin from './pin';
+import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
 
-export type PinSearchFilters = { userNames: string[]; companies: string[]; categories: string[]; confidences: string[] };
+export type PinSearchFilters = { userNames: string[]; companies: string[]; categories: string[]; confidences: string[]; dates: string[]; postedDays: string[] };
 
 // Everything a search narrows pins to. hits are a free-text search's matches
 // with their scores (null when the search has no free text).
@@ -14,6 +15,8 @@ export type SearchFilter = PinSearchFilters & {
   createdSince?: Date | null;
   startFrom?: Date | null;
   startTo?: Date | null;
+  // The zone date: and posted: days are read in (UTC when absent).
+  timeZone?: string;
 };
 
 // A pin's place in search results. start is the exact ISO text of its start.
@@ -77,6 +80,27 @@ export default class Pins extends BasePins<Pin> {
   // than at the instant, so it is on the page however many pins share its start.
   static queryInitialByDate(fromDateTime: Date, userId: number, pageSizePrev: number, pageSizeNext: number, createdSince: Date | null | undefined, minConfidence: number | null, aroundPinId = 0) {
     return queryInitialPage(false, fromDateTime, userId, pageSizePrev, pageSizeNext, createdSince, minConfidence, aroundPinId).then((res) => new Pins(res));
+  }
+
+  // Every pin starting in [start, end), oldest first, at most limit of them:
+  // a crowded day's "View all" popup. Filtered as the timeline is.
+  static queryBetween(start: Date, end: Date, userId: number, limit: number, createdSince: Date | null | undefined, minConfidence: number | null) {
+    return queryBetween(start, end, userId, limit, createdSince, minConfidence).then((res) => new Pins(res));
+  }
+
+  // Just the start of every pin in [start, end), filtered as the timeline
+  // is: enough to tell which day each falls on, to count a day's pins.
+  static listStartsBetween(start: Date, end: Date, createdSince: Date | null | undefined, minConfidence: number | null) {
+    return db.query<{ utcStartDateTime: Date; allDay: boolean }>(
+      `
+      SELECT "p"."utcStartDateTime", "p"."allDay"
+      FROM "Pin" AS "p"
+      WHERE "p"."utcStartDateTime" >= $1::timestamptz AND "p"."utcStartDateTime" < $2::timestamptz
+        AND "p"."utcDeletedDateTime" IS NULL
+        AND ($3::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $3)
+        AND ($4::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $4) >= $4)`,
+      [start, end, createdSince || null, minConfidence],
+    );
   }
 
   static queryForwardByDateFilterByHasFavorite(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince?: Date | null) {
@@ -391,6 +415,7 @@ const PAGE_COLUMNS = `
   ${leanReferences('Pin')} AS "references",
   "Pin"."ratings",
   "Pin"."viewCount",
+  (SELECT COUNT(*)::integer FROM "PinImpression" AS "i" WHERE "i"."pinId" = "Pin"."id") AS "impressionCount",
   "Pin"."duplicateGroup",
   EXISTS (SELECT 1 FROM "Favorite" AS "f"
           WHERE "f"."userId" = $1 AND "f"."pinId" = "Pin"."id" AND "f"."utcDeletedDateTime" IS NULL) AS "hasFavorite",
@@ -474,6 +499,28 @@ function queryPage(
     ORDER BY "Pin"."utcStartDateTime" ${direction}, "Pin"."id" ${direction},
       "Pin"."Media.id" ${direction}, "Pin"."Merchant.id" ${direction}`,
       [userId, fromDateTime, lastPinId, createdSince || null, pageSize, onlyFavorites ? null : minConfidence],
+    )
+    .then(result);
+}
+
+// The pins starting in [start, end), the two steps queryPage takes.
+function queryBetween(start: Date, end: Date, userId: number, limit: number, createdSince: Date | null | undefined, minConfidence: number | null): Promise<PageResult> {
+  return db
+    .query(
+      `
+    SELECT ${PAGE_COLUMNS}
+    FROM "PinBaseView" AS "Pin"
+    WHERE "Pin"."id" = ANY(ARRAY(
+      SELECT "p"."id"
+      FROM "Pin" AS "p"
+      WHERE "p"."utcStartDateTime" >= $2::timestamptz AND "p"."utcStartDateTime" < $3::timestamptz
+        AND "p"."utcDeletedDateTime" IS NULL
+        AND ($4::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $4)
+        AND ($6::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $6) >= $6)
+      ORDER BY "p"."utcStartDateTime", "p"."id"
+      LIMIT $5))
+    ORDER BY "Pin"."utcStartDateTime", "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"`,
+      [userId, start, end, createdSince || null, limit, minConfidence],
     )
     .then(result);
 }
@@ -585,6 +632,22 @@ function searchClauses(filter: SearchFilter) {
   }
   if (filter.confidences.length) {
     where.push(`"Pin"."dateConfidence"::citext = ANY(${add(filter.confidences)}::citext[])`);
+  }
+  // Days as instant ranges, so the start and created indexes serve them (and
+  // BC days need no date arithmetic in SQL). A date: day is the timeline's:
+  // an all-day pin on its UTC date, a timed one on its date in the zone.
+  const zone = filter.timeZone || 'UTC';
+  const between = (column: string, from: number, to: number) => `(${column} >= ${add(new Date(from))} AND ${column} < ${add(new Date(to))})`;
+  const localDay = (column: string, day: string) => between(column, dayStartIn(day, zone), dayStartIn(nextDayKey(day), zone));
+  if (filter.dates.length) {
+    const days = filter.dates.map((day) => {
+      const utc = between('"Pin"."utcStartDateTime"', dayKeyToMs(day), dayKeyToMs(nextDayKey(day)));
+      return `(("Pin"."allDay" AND ${utc}) OR (NOT "Pin"."allDay" AND ${localDay('"Pin"."utcStartDateTime"', day)}))`;
+    });
+    where.push(`(${days.join(' OR ')})`);
+  }
+  if (filter.postedDays.length) {
+    where.push(`(${filter.postedDays.map((day) => localDay('"Pin"."utcCreatedDateTime"', day)).join(' OR ')})`);
   }
   // The Watch search choice: only pins this user watches.
   if (filter.favoriteUserId != null) {

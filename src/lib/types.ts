@@ -97,6 +97,10 @@ export type PinJson = {
   likeCount?: number;
   // Page views, once per viewer per day.
   viewCount?: number;
+  // Times its card was seen on the timeline, once per viewer per day. Only
+  // timeline pages and search results carry it (not a pin's own page, nor a
+  // live broadcast).
+  impressionCount?: number;
   // The pin and every pin confirmed as a duplicate of it, lowest id first;
   // absent when it has none (src/lib/duplicates.ts).
   duplicateGroup?: number[];
@@ -174,6 +178,8 @@ export type CommentJson = {
   id: number;
   text: string;
   parentCommentId?: number;
+  // Claude's read on its tone, -1..1; null until scored (and after an edit).
+  sentiment?: number | null;
   utcCreatedDateTime: string;
   utcUpdatedDateTime?: string;
   userId: number;

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { api } from '@/lib/client/api';
+import { commentMood, type CommentMood } from '@/lib/commentMood';
 import { useNow } from '@/lib/client/now';
 import { useSession } from '@/lib/client/session';
 import type { CommentJson } from '@/lib/types';
@@ -46,6 +47,7 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
   const now = useNow(15_000);
 
   const tree = buildTree(comments);
+  const mood = commentMood(comments);
 
   async function post(body: { text: string; parentCommentId?: number }) {
     setError('');
@@ -62,7 +64,9 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
   async function edit(comment: CommentJson, newText: string) {
     try {
       const updated = await api.patch<CommentJson>(`/api/pins/${pinId}/comment/${comment.id}`, { text: newText });
-      setComments((list) => list.map((c) => (c.id === comment.id ? { ...c, text: updated.text, utcUpdatedDateTime: updated.utcUpdatedDateTime } : c)));
+      setComments((list) =>
+        list.map((c) => (c.id === comment.id ? { ...c, text: updated.text, sentiment: null, utcUpdatedDateTime: updated.utcUpdatedDateTime } : c)),
+      );
       return true;
     } catch {
       setError('This comment can no longer be edited.');
@@ -91,9 +95,12 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
 
   return (
     <section aria-labelledby="comments-heading" className="surface mt-6 p-5">
-      <h2 id="comments-heading" className="mb-3 text-base font-semibold">
-        Comments
-      </h2>
+      <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1">
+        <h2 id="comments-heading" className="text-base font-semibold">
+          Comments
+        </h2>
+        {mood ? <MoodSummary mood={mood} /> : null}
+      </div>
       <ul className="space-y-3">{tree.map(renderNode)}</ul>
 
       {isLoggedIn ? (
@@ -125,6 +132,32 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
         </p>
       ) : null}
     </section>
+  );
+}
+
+const MOOD_LABELS = { positive: 'Mostly positive', mixed: 'Mixed', negative: 'Mostly negative' };
+const MOOD_COLOURS = { positive: 'text-success', mixed: 'text-subtle', negative: 'text-danger' };
+const TREND_LABELS = { warming: 'trending more positive', cooling: 'trending more negative', steady: 'holding steady' };
+
+// The comments' overall tone and which way the newest ones lean. Scores arrive
+// a moment after posting, so a brand-new comment joins this on the next load.
+function MoodSummary({ mood }: { mood: CommentMood }) {
+  const title = `Average tone ${mood.average.toFixed(2)} (from -1 to 1) across ${mood.scored} comment${mood.scored === 1 ? '' : 's'}`;
+  return (
+    <p className="flex items-center gap-1.5 text-sm" title={title}>
+      <span className={`font-medium ${MOOD_COLOURS[mood.mood]}`}>{MOOD_LABELS[mood.mood]}</span>
+      {mood.trend ? (
+        <span className="flex items-center gap-1 text-subtle">
+          {mood.trend !== 'steady' ? (
+            <Icon
+              name={mood.trend === 'warming' ? 'trending-up' : 'trending-down'}
+              className={`size-3.5 ${mood.trend === 'warming' ? 'text-success' : 'text-danger'}`}
+            />
+          ) : null}
+          {TREND_LABELS[mood.trend]}
+        </span>
+      ) : null}
+    </p>
   );
 }
 

@@ -1,18 +1,27 @@
 'use client';
 
-import { daysAway, daysBetween, formatPosted, formatStart } from '@/lib/format';
+import { dayKeyIn, daysAway, daysBetween, formatDayKey, formatPosted, formatStart } from '@/lib/format';
 import { pinDayKey } from '@/lib/timeline';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { Icon } from '@/components/ui/Icon';
+import { RefineLink } from '@/components/pin/RefineLink';
 
 // A date shown in the viewer's own time zone, with the instant in datetime
-// for machines. With dateOnly the time moves to the hover title.
-export function PostedTime({ value, serverTimeZone, dateOnly }: { value: string; serverTimeZone: string; dateOnly?: boolean }) {
+// for machines. With dateOnly the time moves to the hover title. With search
+// it links to the pins posted the same day (posted:, the viewer's day).
+export function PostedTime({ value, serverTimeZone, dateOnly, search }: { value: string; serverTimeZone: string; dateOnly?: boolean; search?: boolean }) {
   const timeZone = useTimeZone(serverTimeZone);
-  return (
+  const time = (
     <time dateTime={value} title={dateOnly ? `Posted ${formatPosted(value, timeZone)}` : undefined}>
       {formatPosted(value, timeZone, { dateOnly })}
     </time>
+  );
+  if (!search) return time;
+  const day = dayKeyIn(value, timeZone);
+  return (
+    <RefineLink field="posted" value={day} className="text-inherit hover:text-link hover:no-underline" title={`Show all pins posted on ${formatDayKey(day)}`}>
+      {time}
+    </RefineLink>
   );
 }
 
@@ -20,13 +29,23 @@ export function StartTime({
   pin,
   serverTimeZone,
   allDaySuffix,
+  search,
 }: {
   pin: { utcStartDateTime: string; allDay?: boolean };
   serverTimeZone: string;
   allDaySuffix?: boolean;
+  // Links to the pins starting the same day (date:, the day shown here).
+  search?: boolean;
 }) {
   const timeZone = useTimeZone(serverTimeZone);
-  return <time dateTime={pin.utcStartDateTime}>{formatStart(pin, timeZone, { allDaySuffix })}</time>;
+  const time = <time dateTime={pin.utcStartDateTime}>{formatStart(pin, timeZone, { allDaySuffix })}</time>;
+  if (!search) return time;
+  const day = pinDayKey(pin, timeZone);
+  return (
+    <RefineLink field="date" value={day} className="text-inherit hover:text-link hover:no-underline" title={`Show all pins on ${formatDayKey(day)}`}>
+      {time}
+    </RefineLink>
+  );
 }
 
 // Past pins in the map's past colour, future ones in its future colour, today in the timeline's amber.

@@ -41,8 +41,15 @@ describe('parseSearchQuery', () => {
       companies: [],
       categories: ['software'],
       confidences: [],
+      dates: [],
+      postedDays: [],
       text: 'ios',
     });
+  });
+
+  it('reads days, BC ones too, and leaves out anything else', () => {
+    expect(parseSearchQuery('date:2026-09-08 date:-2560-01-01 date:2026-09-08 date:tomorrow').dates).toEqual(['2026-09-08', '-2560-01-01']);
+    expect(parseSearchQuery('posted:2026-09-13 date:2026-09-08')).toMatchObject({ dates: ['2026-09-08'], postedDays: ['2026-09-13'] });
   });
 
   it('reads confidence levels, with UNVERIFIED as the stored unknown', () => {

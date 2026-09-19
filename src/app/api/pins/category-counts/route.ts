@@ -3,6 +3,7 @@ import { getUser } from '@/server/auth';
 import { json, route } from '@/server/http';
 import { searchPageCategoryCounts, timelineCategoryCounts } from '@/server/services/pages';
 import { resolveCreatedSince } from '@/server/util/createdFilter';
+import { requestTimeZone } from '@/server/viewer';
 
 // Pins per lowercased category, for the category filter's pills.
 // GET /api/pins/category-counts?created_within=1w                   the timeline
@@ -19,5 +20,5 @@ export const GET = route(async (request: NextRequest) => {
   }
   const user = await getUser(request);
   const onlyWatched = params.get('f')?.toLowerCase() === 'watch';
-  return json(await searchPageCategoryCounts(params.get('q') || '', user?.id ?? null, onlyWatched && !!user, created));
+  return json(await searchPageCategoryCounts(params.get('q') || '', user?.id ?? null, onlyWatched && !!user, created, requestTimeZone(request)));
 });
