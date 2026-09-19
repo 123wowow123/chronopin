@@ -18,6 +18,7 @@
  * Nothing here throws: a failed or unmatched lookup is just no score.
  */
 
+import { categoryList, hasCategory } from '@/lib/categories';
 import { siteUrl } from '@/lib/appConfig';
 import type { PinRatingJson } from '@/lib/types';
 import log from '../util/log';
@@ -45,9 +46,10 @@ const SITES: Record<ScoreSite, { series: string; slug: string; forecast: string;
 export const GAME_CATEGORIES = ['Gaming & Entertainment'];
 
 // Which site's score a pin's category is bet on, if any.
-export function scoreSiteFor(category: string | null | undefined): ScoreSite | undefined {
-  if (isScreenCategory(category)) return 'Rotten Tomatoes';
-  if (category && GAME_CATEGORIES.some((c) => c.toLowerCase() === category.toLowerCase())) return 'Metacritic';
+// One category or a pin's list of them.
+export function scoreSiteFor(categories: string | readonly (string | null | undefined)[] | null | undefined): ScoreSite | undefined {
+  if (isScreenCategory(categories)) return 'Rotten Tomatoes';
+  if (hasCategory(categoryList(categories), GAME_CATEGORIES)) return 'Metacritic';
   return undefined;
 }
 

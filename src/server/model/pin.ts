@@ -6,6 +6,7 @@ import { saveAllToPin } from './medium';
 import Merchant from './merchant';
 import PinRating from './pinRating';
 import PinReference from './pinReference';
+import PinTag from './pinTag';
 import type User from './user';
 import { createPin, locationSql, mapSubObjectFromQuery, normalizeAllDayDates } from './pinShared';
 
@@ -30,6 +31,7 @@ export default class Pin extends BasePin {
       await Merchant.saveAll(this.merchants, this.id);
       await PinReference.saveAll(this.references);
       await PinRating.saveAll(this.ratings || []);
+      if (this.categories) await PinTag.setCategories(this.id, this.categories);
       await mediaSaved;
       return { pin: this };
     } catch (err) {
@@ -78,6 +80,8 @@ export default class Pin extends BasePin {
       }
       await saveAllToPin(toSaveOriginalMedia, this.id, query);
     });
+    // Left as they are when the body sent none.
+    if (this.categories) await PinTag.setCategories(this.id, this.categories);
     return { pin: this };
   }
 
@@ -178,7 +182,7 @@ async function updatePinRow(pin: Pin, userId: number | null, query: QueryFn = db
   const values = [
     pin.id, pin.parentId, pin.title, pin.description, pin.sourceUrl, pin.longFormSummary,
     pin.dateConfidence, pin.dateConfidenceReasoning, pin.companyId,
-    pin.category, pin.address, pin.priceLowerBound, pin.priceUpperBound, pin.price,
+    pin.address, pin.priceLowerBound, pin.priceUpperBound, pin.price,
     pin.priceCurrency, pin.tip, pin.utcStartDateTime, pin.utcEndDateTime, pin.allDay,
     userId, pin.latitude, pin.longitude, pin.sourceStartDateTime || null, pin.sourceEndDateTime || null,
     pin.originalStartDate || null, pin.delayReasoning || null,
@@ -198,22 +202,21 @@ async function updatePinRow(pin: Pin, userId: number | null, query: QueryFn = db
       "dateConfidence" = $7,
       "dateConfidenceReasoning" = $8,
       "companyId" = $9,
-      "category" = $10,
-      "address" = $11,
-      "priceLowerBound" = $12,
-      "priceUpperBound" = $13,
-      "price" = $14,
-      "priceCurrency" = $15,
-      "tip" = $16,
-      "utcStartDateTime" = $17,
-      "utcEndDateTime" = $18,
-      "allDay" = $19,
-      "userId" = $20,
-      "location" = ${locationSql('$21', '$22')},
-      "sourceStartDateTime" = $23,
-      "sourceEndDateTime" = $24,
-      "originalStartDate" = $25,
-      "delayReasoning" = $26,
+      "address" = $10,
+      "priceLowerBound" = $11,
+      "priceUpperBound" = $12,
+      "price" = $13,
+      "priceCurrency" = $14,
+      "tip" = $15,
+      "utcStartDateTime" = $16,
+      "utcEndDateTime" = $17,
+      "allDay" = $18,
+      "userId" = $19,
+      "location" = ${locationSql('$20', '$21')},
+      "sourceStartDateTime" = $22,
+      "sourceEndDateTime" = $23,
+      "originalStartDate" = $24,
+      "delayReasoning" = $25,
       "utcUpdatedDateTime" = now()
     WHERE "id" = $1`,
     values,

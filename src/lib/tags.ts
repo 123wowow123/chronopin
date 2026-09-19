@@ -9,17 +9,24 @@
 //   award   one per award body and year the work won in (PinAward)
 //           and a "... Nominee" tag (kind nomination) per body and year it was only nominated in
 //
+//   user    also the pin's categories: tags of kind 'category', named from the
+//           list in src/lib/categories.ts (0043 turned the old column into these)
+//
 // Pure: parsing, naming and sizing only.
 
+import { isCategory } from './categories';
 import { pinMarketRefs } from './predictionMarkets';
 
-export type TagKind = 'award' | 'nomination' | 'topic';
+export type TagKind = 'award' | 'nomination' | 'topic' | 'category';
 export type TagSource = 'user' | 'auto' | 'award';
 
 export type PinTagJson = { name: string; kind: TagKind; source: TagSource };
-export type TagCount = { name: string; kind: TagKind; count: number };
-// A cloud entry: a lone tag, or a group of them with what it wraps.
-export type TagGroup = TagCount & { members?: TagCount[] };
+// category: the category most of the tag's pins carry (none for a category
+// tag itself), which the cloud's grouped mode files it under.
+export type TagCount = { name: string; kind: TagKind; count: number; category?: string | null };
+// A cloud entry: a lone tag, or a group of them with what it wraps - an
+// award body's years, or a category's tags (which may be groups themselves).
+export type TagGroup = TagCount & { members?: TagGroup[] };
 
 export const MAX_TAG_LENGTH = 80;
 export const MAX_TAGS = 20;
@@ -31,6 +38,7 @@ const AWARD_WORD = /\b(awards?|prize|prix|oscars?|emmys?|grammys?|tonys?|golden 
 const NOMINEE = /\bnominee$/i;
 
 export function tagKind(name: string): TagKind {
+  if (isCategory(name)) return 'category';
   if (NOMINEE.test(name)) return 'nomination';
   return AWARD_WORD.test(name) ? 'award' : 'topic';
 }
@@ -238,6 +246,11 @@ const MARKET_EXCHANGES = new Set(['kalshi', 'polymarket', 'polymarket us']);
 // counts the sum of its members' pins, so a pin carrying several of them is
 // counted for each. Where the parent is itself a tag it joins its members.
 export function groupTags(counts: TagCount[]): TagGroup[] {
+  return wrapInCategories(groupFamilies(counts));
+}
+
+// Award bodies' years and the market exchanges, each folded into one entry.
+function groupFamilies(counts: TagCount[]): TagGroup[] {
   const parents = new Map<string, { name: string; members: TagCount[] }>();
   for (const tag of counts) {
     const parent = tagParent(tag.name, tag.kind);
@@ -254,16 +267,58 @@ export function groupTags(counts: TagCount[]): TagGroup[] {
     members.forEach((m) => grouped.add(m));
     members.sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
     const kind = members.some((m) => m.kind === 'award') ? 'award' : members[0].kind;
-    groups.push({ name, kind, count: members.reduce((n, m) => n + m.count, 0), members });
+    groups.push({ name, kind, count: members.reduce((n, m) => n + m.count, 0), members, category: mostCommonCategory(members) });
   }
   return [...counts.filter((t) => !grouped.has(t)), ...groups];
+}
+
+// The category most of a group's pins carry: its members', weighted by count.
+function mostCommonCategory(members: TagCount[]): string | null {
+  const weight = new Map<string, { name: string; n: number }>();
+  for (const m of members) {
+    if (!m.category) continue;
+    const key = m.category.toLowerCase();
+    const entry = weight.get(key) ?? { name: m.category, n: 0 };
+    entry.n += m.count;
+    weight.set(key, entry);
+  }
+  return [...weight.values()].sort((a, b) => b.n - a.n)[0]?.name ?? null;
+}
+
+// Categories on top: every other entry goes under the category most of its
+// pins carry, when that category is among the tags. A category counts its own
+// pins, not its members'. One with nothing under it stays a lone tag.
+function wrapInCategories(entries: TagGroup[]): TagGroup[] {
+  const categories = new Map(entries.filter((e) => e.kind === 'category').map((e) => [e.name.toLowerCase(), { ...e, members: [] as TagGroup[] }]));
+  const loose: TagGroup[] = [];
+  for (const entry of entries) {
+    if (entry.kind === 'category') continue;
+    const home = entry.category ? categories.get(entry.category.toLowerCase()) : undefined;
+    if (home) home.members.push(entry);
+    else loose.push(entry);
+  }
+  const wrapped = [...categories.values()].map(({ members, ...category }) =>
+    members.length ? { ...category, members: members.sort((a, b) => b.count - a.count || a.name.localeCompare(b.name)) } : category,
+  );
+  return [...loose, ...wrapped];
+}
+
+// Every tag inside an entry, however deep.
+export function tagMembers(entry: TagGroup): TagGroup[] {
+  return (entry.members ?? []).flatMap((m) => [m, ...tagMembers(m)]);
 }
 
 // Which cloud entries read as picked: a group when any of its members is.
 export function groupSelection(groups: TagGroup[], selected: string[]): string[] {
   const picked = new Set(selected.map((s) => s.toLowerCase()));
   const out = new Set(selected);
-  for (const g of groups) if (g.members?.some((m) => picked.has(m.name.toLowerCase()))) out.add(g.name);
+  const visit = (g: TagGroup): boolean => {
+    let any = false;
+    for (const m of g.members ?? []) if (visit(m) || picked.has(m.name.toLowerCase())) any = true;
+    if (any) out.add(g.name);
+    return any;
+  };
+  groups.forEach(visit);
   return [...out];
 }
 

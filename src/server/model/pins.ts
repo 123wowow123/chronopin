@@ -7,7 +7,12 @@ import PinTag from './pinTag';
 import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
 import { tagGroupPatterns } from '@/lib/tags';
 
-export type PinSearchFilters = { userNames: string[]; companies: string[]; categories: string[]; confidences: string[]; dates: string[]; postedDays: string[]; tags: string[] };
+// A pin "p"'s categories (its category tags, 0043), the main one first, and
+// the main one alone.
+const CATEGORIES = `ARRAY(SELECT "c"."name"::text FROM "PinTag" AS "c" WHERE "c"."pinId" = "p"."id" AND "c"."kind" = 'category' ORDER BY "c"."id")`;
+const MAIN_CATEGORY = `(SELECT "c"."name"::text FROM "PinTag" AS "c" WHERE "c"."pinId" = "p"."id" AND "c"."kind" = 'category' ORDER BY "c"."id" LIMIT 1)`;
+
+export type PinSearchFilters = { userNames: string[]; companies: string[]; confidences: string[]; dates: string[]; postedDays: string[]; tags: string[] };
 
 // Everything a search narrows pins to. hits are a free-text search's matches
 // with their scores (null when the search has no free text).
@@ -211,26 +216,14 @@ export default class Pins extends BasePins<Pin> {
     return pins;
   }
 
-  // Search results per lowercased category.
-  static async countSearchByCategory(filter: SearchFilter) {
-    const { from, where, params } = searchClauses(filter);
-    return db.query<{ category: string | null; count: number }>(
-      `
-      SELECT lower("Pin"."category") AS "category", COUNT(*)::integer AS "count"
-      ${from}
-      WHERE ${where.join('\n        AND ')}
-      GROUP BY 1`,
-      params,
-    );
-  }
-
   // Search results' tags with how many results carry each, busiest first.
   static countSearchTags(filter: SearchFilter, limit: number) {
     const { from, where, params } = searchClauses(filter);
     return PinTag.count(from, where, params, limit);
   }
 
-  // Tags across the whole timeline (the pins countTimelineByCategory counts).
+  // Tags across the whole timeline: the pins its pages walk (live, confident
+  // enough, created since the cutoff).
   static countTimelineTags(createdSince: Date | null | undefined, minConfidence: number | null, limit: number) {
     return PinTag.count(
       'FROM "Pin"',
@@ -257,14 +250,14 @@ export default class Pins extends BasePins<Pin> {
     );
   }
 
-  // Every live pin's confidence (null when unscored) with its category and
-  // author, for the admin statistics on what the timeline hides. Read off
+  // Every live pin's confidence (null when unscored) with its main category
+  // (its first category tag) and author, for the admin statistics on what the timeline hides. Read off
   // "Pin" rather than the view, which had to be deduplicated with a DISTINCT
   // ON after multiplying each pin by its media and merchants.
   static async listConfidence() {
     return db.query<{ id: number; category: string | null; userName: string | null; utcCreatedDateTime: Date; confidence: number | null }>(
       `
-      SELECT "p"."id", "p"."category", "User"."userName" AS "userName", "p"."utcCreatedDateTime",
+      SELECT "p"."id", ${MAIN_CATEGORY} AS "category", "User"."userName" AS "userName", "p"."utcCreatedDateTime",
         ${pinConfidenceOf('p')} AS "confidence"
       FROM "Pin" AS "p"
         LEFT JOIN "User" ON "User"."id" = "p"."userId"
@@ -292,24 +285,6 @@ export default class Pins extends BasePins<Pin> {
     );
   }
 
-  // Pins per lowercased category across the whole timeline: the same pins
-  // its pages walk (live, confident enough, created since the cutoff).
-  // Counted on "Pin" rather than the view, which multiplies each pin by its
-  // media and merchants only for the COUNT(DISTINCT) to undo it, and builds
-  // every pin's references, ratings, views and duplicate group on the way.
-  static async countTimelineByCategory(createdSince: Date | null | undefined, minConfidence: number | null) {
-    return db.query<{ category: string | null; count: number }>(
-      `
-      SELECT lower("p"."category") AS "category", COUNT(*)::integer AS "count"
-      FROM "Pin" AS "p"
-      WHERE "p"."utcDeletedDateTime" IS NULL
-        AND ($1::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $1)
-        AND ($2::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $2) >= $2)
-      GROUP BY 1`,
-      [createdSince || null, minConfidence],
-    );
-  }
-
   // Every located pin a map marker needs, in one answer rather than a walk
   // through the timeline's pages. The map used to page /api/main outward from
   // now until it passed each boundary - about fifteen round trips for the
@@ -325,7 +300,7 @@ export default class Pins extends BasePins<Pin> {
   }): Promise<Row[]> {
     return db.query(
       `
-      SELECT "p"."id", "p"."title", "p"."address", "p"."category", "p"."allDay",
+      SELECT "p"."id", "p"."title", "p"."address", ${CATEGORIES} AS "categories", "p"."allDay",
         "p"."utcStartDateTime", "p"."utcCreatedDateTime",
         ST_Y("p"."location"::geometry) AS "latitude",
         ST_X("p"."location"::geometry) AS "longitude",
@@ -422,7 +397,7 @@ const PAGE_COLUMNS = `
   "Pin"."company",
   "Pin"."companyWikiUrl",
   "Pin"."companyLogoUrl",
-  "Pin"."category",
+  "Pin"."categories",
   "Pin"."utcStartDateTime",
   "Pin"."utcEndDateTime",
   "Pin"."sourceStartDateTime",
@@ -652,13 +627,11 @@ function searchClauses(filter: SearchFilter) {
     joins.push('INNER JOIN "Company" ON "Company"."id" = "Pin"."companyId"');
     where.push(`"Company"."name" = ANY(${add(filter.companies)}::citext[])`);
   }
-  if (filter.categories.length) {
-    where.push(`"Pin"."category" = ANY(${add(filter.categories)}::citext[])`);
-  }
   if (filter.confidences.length) {
     where.push(`"Pin"."dateConfidence"::citext = ANY(${add(filter.confidences)}::citext[])`);
   }
-  // Any of these tags (PinTagView: the form's, the prose's and the awards').
+  // Any of these tags (PinTagView: the form's, its categories, the prose's
+  // and the awards').
   if (filter.tags.length) {
     where.push(`EXISTS (SELECT 1 FROM "PinTagView" AS "tagged" WHERE "tagged"."pinId" = "Pin"."id" AND ("tagged"."name" = ANY(${add(filter.tags)}::citext[]) OR "tagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.tags))}::text[])))`);
   }

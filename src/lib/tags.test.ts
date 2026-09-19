@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { autoTags, awardTag, awardTagsInText, cleanTag, marketTags, cloudSteps, cloudTags, nominationTag, parseTags, splitTags, tagKind, tagParent, groupTags, tagGroupPatterns } from './tags';
+import { autoTags, awardTag, awardTagsInText, cleanTag, marketTags, cloudSteps, cloudTags, nominationTag, parseTags, splitTags, tagKind, tagParent, groupTags, groupSelection, tagGroupPatterns, tagMembers } from './tags';
 
 describe('cleanTag', () => {
   it('trims, drops a leading # and double quotes', () => {
@@ -44,6 +44,11 @@ describe('tagKind', () => {
     expect(tagKind('97th Academy Awards')).toBe('award');
     expect(tagKind('Japan Academy Film Prize 2025')).toBe('award');
     expect(tagKind('Studio Ghibli')).toBe('topic');
+  });
+
+  it('knows a category by its name on the list', () => {
+    expect(tagKind('Anime')).toBe('category');
+    expect(tagKind('space & astronomy')).toBe('category');
   });
 });
 
@@ -173,6 +178,31 @@ describe('tag groups', () => {
     expect(grouped.map((g) => g.name)).toEqual(['Lone Awards 2020', 'Artemis', 'Crunchyroll Anime Awards']);
     expect(grouped[2]).toMatchObject({ count: 5, kind: 'award' });
     expect(grouped[2].members).toHaveLength(2);
+  });
+
+  it('puts every other entry under the category most of its pins carry', () => {
+    const counts = [
+      { name: 'Anime', kind: 'category' as const, count: 650 },
+      { name: 'Movies', kind: 'category' as const, count: 20 },
+      { name: 'Music & Audio', kind: 'category' as const, count: 50 },
+      { name: 'Crunchyroll Anime Awards 2024', kind: 'award' as const, count: 3, category: 'Anime' },
+      { name: 'Crunchyroll Anime Awards 2023 Nominee', kind: 'nomination' as const, count: 2, category: 'Anime' },
+      { name: 'Studio Ghibli', kind: 'topic' as const, count: 4, category: 'Movies' },
+      { name: 'Artemis', kind: 'topic' as const, count: 5, category: 'Space & Astronomy' },
+      { name: 'Prediction Market', kind: 'topic' as const, count: 2, category: null },
+    ];
+    const grouped = groupTags(counts);
+    // Artemis's category is not among the tags, and Prediction Market has none.
+    expect(grouped.map((g) => g.name)).toEqual(['Artemis', 'Prediction Market', 'Anime', 'Movies', 'Music & Audio']);
+    const anime = grouped.find((g) => g.name === 'Anime')!;
+    // A category counts its own pins, and wraps the award body's group.
+    expect(anime.count).toBe(650);
+    expect(anime.members!.map((m) => m.name)).toEqual(['Crunchyroll Anime Awards']);
+    expect(tagMembers(anime).map((m) => m.name)).toEqual(['Crunchyroll Anime Awards', 'Crunchyroll Anime Awards 2024', 'Crunchyroll Anime Awards 2023 Nominee']);
+    // One with nothing under it stays a lone tag.
+    expect(grouped.find((g) => g.name === 'Music & Audio')!.members).toBeUndefined();
+    // Picking a year reads as picking its body and its category.
+    expect(groupSelection(grouped, ['Crunchyroll Anime Awards 2024'])).toEqual(expect.arrayContaining(['Crunchyroll Anime Awards', 'Anime']));
   });
 
   it('makes a group name match its members in search', () => {

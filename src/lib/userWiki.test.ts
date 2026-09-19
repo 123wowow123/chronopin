@@ -4,13 +4,13 @@ import { sampleBag } from './bagSample';
 import { buildPreference, CLICKED_BOOST, parsePersonalBag, personalWeigher, userWikiBundle, userWikiPage, type PreferenceSignal } from './userWiki';
 
 const now = new Date('2026-09-18T12:00:00Z');
-const signal = (pinId: number, kind: PreferenceSignal['kind'], category: string | null, company: string | null = null, at = now): PreferenceSignal => ({
+const signal = (pinId: number, kind: PreferenceSignal['kind'], category: string | string[] | null, company: string | null = null, at = now): PreferenceSignal => ({
   pinId,
   kind,
   at,
   title: `Pin ${pinId}`,
   url: `https://chronopin.test/pin/${pinId}/pin-${pinId}`,
-  category,
+  categories: category == null ? [] : Array.isArray(category) ? category : [category],
   company,
 });
 
@@ -23,6 +23,14 @@ describe('buildPreference', () => {
     ]);
     expect(pref.companies).toEqual([{ name: 'Nintendo', share: 0.2 }]);
     expect(pref.signals).toBe(3);
+  });
+
+  it('shares a pin in two categories between them', () => {
+    const pref = buildPreference([signal(1, 'open', ['Anime', 'Music & Audio']), signal(2, 'open', 'Anime')], now);
+    expect(pref.categories).toEqual([
+      { name: 'Anime', share: 0.75 },
+      { name: 'Music & Audio', share: 0.25 },
+    ]);
   });
 
   it('lists opened pins newest first, not watched-only ones', () => {
@@ -50,7 +58,9 @@ describe('personalWeigher', () => {
   it('weighs opened pins, and those in a leaned-to category or company, more', () => {
     expect(weigh({ id: 1 })).toBe(1);
     expect(weigh({ id: 7 })).toBe(1 + CLICKED_BOOST);
-    expect(weigh({ id: 1, category: 'games', company: 'SONY' })).toBe(2.5);
+    expect(weigh({ id: 1, categories: ['games'], company: 'SONY' })).toBe(2.5);
+    // Its strongest category only, not one boost per category.
+    expect(weigh({ id: 1, categories: ['Movies', 'games'] })).toBe(2);
   });
 
   it('counts an opened duplicate for the card that stands for it', () => {

@@ -12,6 +12,7 @@ import { rejectDuplicateSourceUrl } from '@/server/services/duplicatePin';
 import { delayProblem } from '@/lib/delay';
 import { attributeReferences } from '@/lib/referenceAttribution';
 import { parseScrapedStocks } from '@/lib/stocks';
+import { bodyCategories } from '@/lib/categories';
 import { parseTags } from '@/lib/tags';
 import PinTag from '@/server/model/pinTag';
 
@@ -53,6 +54,7 @@ const update = route(async (request: NextRequest, ctx: Ctx) => {
   // Tags, when sent, are the pin's whole list (the form sends them all);
   // left out, the pin keeps the ones it has.
   const tags = parseTags(body.tags);
+  pin.categories = bodyCategories(body, tags);
   const referenceProblem = PinReference.problem(pin.references) ?? delayProblem(pin);
   if (referenceProblem) {
     throw new HttpError(400, referenceProblem);

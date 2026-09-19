@@ -44,7 +44,8 @@ export type OkfPin = {
   utcStartDateTime: Date | string;
   utcEndDateTime: Date | string | null;
   allDay: boolean;
-  category: string | null;
+  // Its categories (category tags), the main one first.
+  categories: string[];
   company: string | null;
   longFormSummary: string | null;
   links: { sourceId: number; role: 'source' | 'reference' }[];
@@ -212,7 +213,7 @@ export function okfBundle(pins: OkfPin[], sources: OkfSource[], { recheckDays = 
     const footnote = new Map(links.map((l) => [urlKey(l.source!.url), `source-${l.sourceId}`]));
     const summary = pin.longFormSummary ? summaryMarkdown(pin.longFormSummary, (url) => footnote.get(urlKey(url))) : '';
     const cited = new Set([...summary.matchAll(/\[\^([\w-]+)\]/g)].map((m) => m[1]));
-    const tags = [...new Set([pin.category, pin.company, ...(pin.tags ?? []).map((t) => t.name)].filter((t): t is string => !!t).map((t) => t.toLowerCase()))];
+    const tags = [...new Set([...(pin.categories ?? []), pin.company, ...(pin.tags ?? []).map((t) => t.name)].filter((t): t is string => !!t).map((t) => t.toLowerCase()))];
     const body = [
       summary ? `# Summary\n\n${summary}` : '',
       links.length

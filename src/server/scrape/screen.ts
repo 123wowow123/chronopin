@@ -19,13 +19,15 @@
  */
 
 import { mediumID, siteUrl } from '@/lib/appConfig';
+import { categoryList, hasCategory } from '@/lib/categories';
 import type { MediumJson, PinRatingJson } from '@/lib/types';
 import log from '../util/log';
 
 export const SCREEN_CATEGORIES = ['Anime', 'Anime Movie', 'Movies', 'TV Series'];
 
-export function isScreenCategory(category: string | null | undefined): boolean {
-  return !!category && SCREEN_CATEGORIES.some((c) => c.toLowerCase() === category.toLowerCase());
+// One category or a pin's list of them.
+export function isScreenCategory(categories: string | readonly (string | null | undefined)[] | null | undefined): boolean {
+  return hasCategory(categoryList(categories), SCREEN_CATEGORIES);
 }
 
 export type ScreenQuery = {

@@ -15,7 +15,7 @@ import { toJson, type NewPin, type PinJson, type SearchPage, type TimelinePage, 
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { UserPreference } from '@/lib/userWiki';
 import { TAGS } from './cache';
-import { readSearchRequest, searchCategoryCounts, searchPinsPage, searchTagCounts, type SearchSort } from './search';
+import { readSearchRequest, searchPinsPage, searchTagCounts, type SearchSort } from './search';
 import type { TagCount } from '@/lib/tags';
 import { getTimeline, timelineMinConfidence } from './timeline';
 import { resolveCreatedSince, type CreatedQuery } from '../util/createdFilter';
@@ -210,49 +210,15 @@ async function runSearch(query: string, userId: number | null, onlyWatched: bool
   }
 }
 
-// Pins per lowercased category for the category filter's pills, under the
-// page's other filters: the timeline's posted-within span, or a search's
-// other terms, watch choice and span.
-export async function timelineCategoryCounts(created: CreatedQuery): Promise<Record<string, number>> {
-  'use cache';
-  cacheLife('minutes');
-  cacheTag(TAGS.timeline);
-  const rows = await Pins.countTimelineByCategory(resolveCreatedSince(created), await timelineMinConfidence());
-  return Object.fromEntries(rows.map((row) => [row.category || '', row.count]));
-}
-
-export async function searchPageCategoryCounts(
-  query: string,
-  userId: number | null,
-  onlyWatched: boolean,
-  created: CreatedQuery,
-  timeZone: string,
-): Promise<Record<string, number>> {
-  const zone = zoneFor(query, timeZone);
-  return onlyWatched && userId ? runCategoryCounts(query, userId, true, created, zone) : cachedCategoryCounts(query, created, zone);
-}
-
 // The viewer's zone if the query's days depend on it, else UTC: one cache
 // entry for every zone whenever the zone makes no difference.
 function zoneFor(query: string, timeZone: string): string {
   return dependsOnZone(parseSearchQuery(query)) ? timeZone : 'UTC';
 }
 
-// Counts carry no per-viewer fields, so everyone shares one entry.
-async function cachedCategoryCounts(query: string, created: CreatedQuery, timeZone: string) {
-  'use cache';
-  cacheLife('minutes');
-  cacheTag(TAGS.timeline);
-  return runCategoryCounts(query, null, false, created, timeZone);
-}
-
-function runCategoryCounts(query: string, userId: number | null, onlyWatched: boolean, created: CreatedQuery, timeZone: string) {
-  return searchCategoryCounts(query, { userId, onlyWatched, timeZone, createdSince: resolveCreatedSince(created) });
-}
-
 // The tag cloud: the most used tags on the timeline (under its posted-within
-// span) or in a search's results. Cached like the category counts, since the
-// tags carry nothing per viewer; the Watch list is read per request.
+// span) or in a search's results. Cached for everyone, since the tags carry
+// nothing per viewer; the Watch list is read per request.
 // The panel shows TAG_CLOUD_SIZE; its expanded cloud asks for up to TAG_CLOUD_MAX.
 export const TAG_CLOUD_SIZE = 60;
 export const TAG_CLOUD_MAX = 200;

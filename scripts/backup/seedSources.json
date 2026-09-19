@@ -6546,9 +6546,9 @@
       "generatedBy": null,
       "wikiVersion": 0,
       "attempts": 0,
-      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfD1dwEEZS296FqTkLNR9\"}",
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfD1fD7VG755DfXwNhdoj\"}",
       "utcFetchedDateTime": "2026-09-19T15:10:54.044Z",
-      "utcAttemptedDateTime": "2026-09-19T15:10:54.417Z",
+      "utcAttemptedDateTime": "2026-09-19T15:11:11.664Z",
       "utcBuiltDateTime": null,
       "utcCreatedDateTime": "2026-09-19T15:10:53.668Z"
     },
@@ -6564,9 +6564,9 @@
       "generatedBy": null,
       "wikiVersion": 0,
       "attempts": 0,
-      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfD1fCZ1HsAATeAxH3eTK\"}",
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfD1oHa6uwQwGepZv99tp\"}",
       "utcFetchedDateTime": "2026-09-19T15:10:53.946Z",
-      "utcAttemptedDateTime": "2026-09-19T15:11:11.465Z",
+      "utcAttemptedDateTime": "2026-09-19T15:13:01.241Z",
       "utcBuiltDateTime": null,
       "utcCreatedDateTime": "2026-09-19T15:10:53.690Z"
     },
@@ -6809,18 +6809,54 @@
       "urlKey": "podcasts.apple.com/us/podcast/may-13-2024-michael-cohen-takes-hush-money-stand-airlines/id1634135028?i=1000655472377",
       "url": "https://podcasts.apple.com/us/podcast/may-13-2024-michael-cohen-takes-hush-money-stand-airlines/id1634135028?i=1000655472377",
       "kind": "podcast",
-      "title": null,
+      "title": "May 13, 2024: Michael Cohen Takes Hush Money Stand, Airlines Sue Biden Admin, OpenAI Announces GPT-4o, Google and Apple Release Tracking Alert Feature, and More.",
       "status": "pending",
-      "textHash": null,
+      "textHash": "81c2ae4e2830b5023c0ddcc081375da24bae902ed49c2fa5d60224c00382bc99",
       "sourceModifiedDate": null,
       "generatedBy": null,
       "wikiVersion": 0,
       "attempts": 0,
-      "lastError": null,
-      "utcFetchedDateTime": null,
-      "utcAttemptedDateTime": null,
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfD1fdF4PJeJ9ih1qEGJi\"}",
+      "utcFetchedDateTime": "2026-09-19T15:11:17.003Z",
+      "utcAttemptedDateTime": "2026-09-19T15:11:17.293Z",
       "utcBuiltDateTime": null,
       "utcCreatedDateTime": "2026-09-19T15:11:11.371Z"
+    },
+    {
+      "id": 614,
+      "urlKey": "podcasts.apple.com/us/podcast/ais-quantum-leap-unpacking-openais-o1-models/id1772646909?i=1000672145592",
+      "url": "https://podcasts.apple.com/us/podcast/ais-quantum-leap-unpacking-openais-o1-models/id1772646909?i=1000672145592",
+      "kind": "podcast",
+      "title": "AI",
+      "status": "pending",
+      "textHash": "7db750b342106d30dff09e8163e554123fe511ea259a1d8e7fff3cafdd5b6212",
+      "sourceModifiedDate": null,
+      "generatedBy": null,
+      "wikiVersion": 0,
+      "attempts": 0,
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfD1kAVcmFTqxY3cqmq5o\"}",
+      "utcFetchedDateTime": "2026-09-19T15:12:18.594Z",
+      "utcAttemptedDateTime": "2026-09-19T15:12:18.896Z",
+      "utcBuiltDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T15:12:16.597Z"
+    },
+    {
+      "id": 617,
+      "urlKey": "podcasts.apple.com/us/podcast/o3-mini-model-u-s-energy-collaboration-and-softbanks/id1783414563?i=1000687594236",
+      "url": "https://podcasts.apple.com/us/podcast/o3-mini-model-u-s-energy-collaboration-and-softbanks/id1783414563?i=1000687594236",
+      "kind": "podcast",
+      "title": "o3-Mini Model, U.S. Energy Collaboration, and SoftBank",
+      "status": "pending",
+      "textHash": "d9fed891492cd8c028b80ef1e9c7d513df371f37e73be719de4f552338f22e01",
+      "sourceModifiedDate": null,
+      "generatedBy": null,
+      "wikiVersion": 0,
+      "attempts": 0,
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfD1oMk7sESBHtZj2ietE\"}",
+      "utcFetchedDateTime": "2026-09-19T15:13:01.932Z",
+      "utcAttemptedDateTime": "2026-09-19T15:13:02.107Z",
+      "utcBuiltDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T15:13:00.923Z"
     }
   ],
   "wikis": [
@@ -10055,6 +10091,14 @@
       "utcCreatedDateTime": "2026-09-19T15:10:53.796Z"
     },
     {
+      "pinId": 1800,
+      "sourceId": 614,
+      "role": "reference",
+      "summarizedWikiVersion": null,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T15:12:16.600Z"
+    },
+    {
       "pinId": 1801,
       "sourceId": 525,
       "role": "source",
@@ -10085,6 +10129,14 @@
       "summarizedWikiVersion": 1,
       "utcRemovedDateTime": null,
       "utcCreatedDateTime": "2026-09-19T15:10:53.913Z"
+    },
+    {
+      "pinId": 1804,
+      "sourceId": 617,
+      "role": "reference",
+      "summarizedWikiVersion": null,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T15:13:00.927Z"
     },
     {
       "pinId": 1805,

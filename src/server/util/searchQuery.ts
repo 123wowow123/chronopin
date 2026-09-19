@@ -1,11 +1,13 @@
 // Splits a search box query into the structured terms a pin card's labels add
 // and whatever free text is left over:
 //
-//   user:ThePinGang company:"Electronic Arts" category:Software iphone
+//   user:ThePinGang company:"Electronic Arts" tag:Software iphone
 //
 // tag: takes one of a pin's tags, as the tag cloud and the pin page write it
 // (tag:"Tokyo Anime Award Festival 2024"): what it was tagged with, the
-// awards its text names, or an award body's year its work was up for.
+// awards its text names, or an award body's year its work was up for. A
+// pin's categories are tags too (0043), so tag:Anime finds the anime; the old
+// category:Anime still works and means the same.
 //
 // confidence: takes a pin's date confidence level, as its badge shows it
 // (confidence:estimated); UNVERIFIED is the badge for the stored "unknown", so
@@ -23,7 +25,7 @@
 //
 // A value with spaces is quoted, as the labels write it. Several values for
 // one field widen the search (either company), while different fields narrow
-// it (this company and this category), so each click on a label is additive.
+// it (this company and this tag), so each click on a label is additive.
 //
 // Quoting is forgiving, since people type these too:
 //   company:"Electronic Arts"    the form the labels write
@@ -41,7 +43,6 @@
 export type SearchQuery = {
   userNames: string[];
   companies: string[];
-  categories: string[];
   confidences: string[];
   // Day keys ("2026-09-08"), any of them: when pins start, and when they
   // were posted.
@@ -130,7 +131,6 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
   const query: SearchQuery = {
     userNames: [],
     companies: [],
-    categories: [],
     confidences: [],
     dates: [],
     postedDays: [],
@@ -150,7 +150,8 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
       // Anything but a day is left out rather than matching nothing.
       if (DAY_KEY.test(part.value)) addUnique(part.field === 'date' ? query.dates : query.postedDays, part.value);
     } else if (part.value) {
-      addUnique(part.field === 'company' ? query.companies : part.field === 'tag' ? query.tags : query.categories, part.value);
+      // category: is the old name for a category's tag.
+      addUnique(part.field === 'company' ? query.companies : query.tags, part.value);
     }
   }
 
@@ -159,7 +160,7 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
 }
 
 export function hasFilters(query: SearchQuery): boolean {
-  return !!(query.userNames.length || query.companies.length || query.categories.length || query.confidences.length || query.dates.length || query.postedDays.length || query.tags.length);
+  return !!(query.userNames.length || query.companies.length || query.confidences.length || query.dates.length || query.postedDays.length || query.tags.length);
 }
 
 // Whether the viewer's time zone changes what the query matches: its days are

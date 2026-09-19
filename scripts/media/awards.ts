@@ -9,6 +9,7 @@
 
 import '../env';
 import { parseArgs } from 'node:util';
+import { inCategories } from '@/server/model/pinTag';
 import * as db from '@/server/db';
 import { SCREEN_CATEGORIES } from '@/server/scrape/screen';
 import { awardCatalogue } from '@/server/awards';
@@ -20,7 +21,7 @@ async function run() {
   const catalogue = await awardCatalogue();
   console.log(`catalogue: ${catalogue.length} award entries`);
   const pins = await db.query<{ id: number; title: string }>(
-    `SELECT "id", "title" FROM "Pin" WHERE "utcDeletedDateTime" IS NULL AND ${flags.pin ? `"id" = ANY($1::integer[])` : `"category" = ANY($1::citext[])`} ORDER BY "id"`,
+    `SELECT "id", "title" FROM "Pin" WHERE "utcDeletedDateTime" IS NULL AND ${flags.pin ? `"id" = ANY($1::integer[])` : inCategories('$1')} ORDER BY "id"`,
     [flags.pin ? flags.pin.map(Number) : SCREEN_CATEGORIES],
   );
   let withAwards = 0;

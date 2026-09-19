@@ -5,19 +5,19 @@ import L from 'leaflet';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { TILE_ATTRIBUTION, TILE_URL } from '@/components/pin/PinMap';
-import { CategoryFilter, categoryPillSummary } from '@/components/timeline/CategoryFilter';
+import { categoryPillSummary, MapCategoryFilter, queryCategories } from '@/components/map/MapCategoryFilter';
 import { FloatingControls } from '@/components/timeline/FloatingControls';
 import { TimeRangeSlider } from '@/components/timeline/TimeRangeSlider';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
-import { canonicalCategory } from '@/lib/categories';
+import { isCategory } from '@/lib/categories';
 import { clearSpot, peekMapSpot, setMapViewSource } from '@/lib/client/returnSpot';
 import { useQueryState } from '@/lib/client/urlState';
 import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, SPAN_OPTIONS, eventSpanSummary, formatSpan, offsetDate, spanFromParam, spanLabel, spanToParam } from '@/lib/postedSpan';
 import { removeTerm, toggleTerm } from '@/lib/searchTerms';
 import { pinPath } from '@/lib/seo';
 import type { MapPinJson, PinJson } from '@/lib/types';
-import { joinSearchQuery, parseSearchQuery, splitSearchQuery } from '@/server/util/searchQuery';
+import { joinSearchQuery, splitSearchQuery } from '@/server/util/searchQuery';
 
 // Center of the contiguous US, so an empty or loading map has a sensible view.
 const DEFAULT_CENTER: [number, number] = [39.8283, -98.5795];
@@ -43,7 +43,7 @@ function localStart(pin: MapPinJson) {
 }
 
 // No picks shows every pin; several show pins in any of them.
-const inCategories = (category: string, picks: string[]) => !picks.length || picks.includes(category.toLowerCase());
+const inCategories = (categories: string[], picks: string[]) => !picks.length || categories.some((c) => picks.includes(c));
 
 const escapeHtml = (text: string) => text.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
@@ -103,7 +103,7 @@ function popupContent(pin: MapPinJson) {
 // pin gets a marker (a copy) on each copy of the world in view: offset k sits
 // at its longitude + 360k. Copies are made as the view reaches them and taken
 // off as they leave it.
-type MapEntry = { pin: MapPinJson; category: string; focus: boolean; copies: Map<number, L.Marker>; make: (offset: number) => L.Marker };
+type MapEntry = { pin: MapPinJson; categories: string[]; focus: boolean; copies: Map<number, L.Marker>; make: (offset: number) => L.Marker };
 
 // The world copy of a longitude nearest another: where a pin is closest to the view.
 const nearestOffset = (lng: number, toLng: number) => Math.round((toLng - lng) / 360);
@@ -117,7 +117,7 @@ function syncCopies(map: L.Map, layer: L.LayerGroup, entries: MapEntry[], picks:
   for (const entry of entries) {
     const { latitude: lat, longitude: lng } = entry.pin;
     const wanted = new Set<number>();
-    if ((entry.focus || inCategories(entry.category, picks)) && lat! >= south && lat! <= north) {
+    if ((entry.focus || inCategories(entry.categories, picks)) && lat! >= south && lat! <= north) {
       for (let k = Math.ceil((west - lng!) / 360); k <= Math.floor((east - lng!) / 360); k++) wanted.add(k);
     }
     for (const [k, marker] of entry.copies) {
@@ -141,7 +141,7 @@ function loadedAsMap() {
 // Every pin with a location between the past and future windows around now,
 // optionally narrowed to those posted recently (as the timeline's filter).
 // The navbar search works here as on the timeline: /map?q=...&f=watch shows
-// the search's pins, and category picks are category: terms in that query.
+// the search's pins, and category picks are tag: terms naming a category.
 // /map?pin=<id> (a pin page's "To map") centers on that pin, shows it
 // whatever the filters, and keeps its popup open until the map is clicked.
 export default function PinsMap() {
@@ -150,11 +150,12 @@ export default function PinsMap() {
   const query = params.get('q') || '';
   const focusId = Number(params.get('pin')) || undefined;
   const watched = params.get('f')?.toLowerCase() === 'watch';
-  const categories = [...new Set(parseSearchQuery(query).categories.map(canonicalCategory))];
+  const categories = queryCategories(query);
   const categoryKey = categories.map((c) => c.toLowerCase()).join('|');
   // The query less its category terms decides which pins to fetch; categories
   // only show and hide markers, so picking one needs no refetch.
-  const fetchQuery = joinSearchQuery(splitSearchQuery(query).filter((part) => !(part.kind === 'term' && part.field === 'category')));
+  const isCategoryTerm = (part: ReturnType<typeof splitSearchQuery>[number]) => part.kind === 'term' && (part.field === 'category' || part.field === 'tag') && isCategory(part.value);
+  const fetchQuery = joinSearchQuery(splitSearchQuery(query).filter((part) => !isCategoryTerm(part)));
   const canvasRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
   const layerRef = useRef<L.LayerGroup | null>(null);
@@ -284,7 +285,7 @@ export default function PinsMap() {
           marker.on({ mouseover: open, mouseout: closeSoon, click });
           return marker;
         };
-        markersRef.current.push({ pin, category: (pin.category || '').toLowerCase(), focus, copies: new Map(), make });
+        markersRef.current.push({ pin, categories: (pin.categories ?? []).map((c) => c.toLowerCase()), focus, copies: new Map(), make });
         if (focus && focusedRef.current !== pin.id) {
           focusedRef.current = pin.id;
           setFocusPin(pin);
@@ -295,9 +296,9 @@ export default function PinsMap() {
         }
       }
       syncCopies(map, layer, markersRef.current, categoriesRef.current);
-      setCount(markersRef.current.filter((e) => e.focus || inCategories(e.category, categoriesRef.current)).length);
+      setCount(markersRef.current.filter((e) => e.focus || inCategories(e.categories, categoriesRef.current)).length);
       const counts: Record<string, number> = {};
-      for (const { category } of markersRef.current) counts[category] = (counts[category] || 0) + 1;
+      for (const { categories: own } of markersRef.current) for (const category of own) counts[category] = (counts[category] || 0) + 1;
       setCategoryCounts(counts);
     };
 
@@ -351,7 +352,7 @@ export default function PinsMap() {
     if (!map || !layer) return;
     map.closePopup();
     syncCopies(map, layer, markersRef.current, picks);
-    setCount(markersRef.current.filter((e) => e.focus || inCategories(e.category, picks)).length);
+    setCount(markersRef.current.filter((e) => e.focus || inCategories(e.categories, picks)).length);
   }, [categoryKey]);
 
   // Picks edit the query in the URL, so the navbar search box shows them.
@@ -402,14 +403,14 @@ export default function PinsMap() {
         <FloatingControls
           summaryCaption="Posted within"
           summary={spanLabel(postedWithin)}
-          category={{
+          tags={{
             summary: categoryPillSummary(query),
             control: (
-              <CategoryFilter
+              <MapCategoryFilter
                 selected={categories}
                 counts={categoryCounts}
-                onToggle={(category) => go((q) => toggleTerm(q, 'category', category))}
-                onClear={() => go((q) => categories.reduce((rest, category) => removeTerm(rest, 'category', category), q))}
+                onToggle={(category) => go((q) => toggleTerm(removeTerm(q, 'category', category), 'tag', category))}
+                onClear={() => go((q) => categories.reduce((rest, category) => removeTerm(removeTerm(rest, 'tag', category), 'category', category), q))}
               />
             ),
           }}

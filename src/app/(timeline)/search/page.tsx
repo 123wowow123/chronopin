@@ -38,7 +38,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
   const [user, timeZone] = await Promise.all([viewerUser(), viewerTimeZone()]);
   // Only text typed into the search has an order of relevance, and when it is
   // there that order leads: the best matches first, the timeline a click away.
-  // A filter-only search (category:, user:) has no scores, so it opens by date.
+  // A filter-only search (tag:, user:) has no scores, so it opens by date.
   const defaultSort = parseSearchQuery(q).text ? ('relevance' as const) : ('date' as const);
   const asked = first(params.sort);
   const view = {

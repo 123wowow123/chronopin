@@ -12,7 +12,7 @@ generated: { by: claude-code/claude-opus-5, at: 2026-09-19T05:00:00Z }
 | Column | Type | Description |
 | --- | --- | --- |
 | `userId` | integer | Primary key, FK to User, cascade delete |
-| `profile` | jsonb | `{ clicked, categories, companies, signals }`: the pins they opened (newest first, up to 500) and each category's and company's share of their signal weight |
+| `profile` | jsonb | `{ clicked, categories, companies, signals }`: the pins they opened (newest first, up to 500) and each category's and company's share of their signal weight (a pin in two categories gives each half) |
 | `page` | text | The same as an OKF concept (`type: Profile`), written by `chronopin-user-wiki/1` |
 | `utcBuiltDateTime` | timestamptz | Last rebuild |
 
@@ -26,7 +26,7 @@ The rebuild runs in `after()` from the routes that record a signal: a new signed
 
 # On the timeline
 
-`sampleBag` (src/lib/bagSample.ts) takes a `boost` that multiplies each pin's weight. The home page passes the viewer's profile to the timeline when the admin setting `personalBag` is on (Admin > Pins, on by default). Each card then weighs `1 + 2 × opened + 2 × (category share + company share)`, and a card counts as opened when the user opened any pin in its duplicate stack. The server and the hydrating client use the same profile, so the pick is identical on both sides. Signed-out viewers and users with no wiki yet get the shared pick.
+`sampleBag` (src/lib/bagSample.ts) takes a `boost` that multiplies each pin's weight. The home page passes the viewer's profile to the timeline when the admin setting `personalBag` is on (Admin > Pins, on by default). Each card then weighs `1 + 2 × opened + 2 × (its strongest category's share + company share)`, and a card counts as opened when the user opened any pin in its duplicate stack. The server and the hydrating client use the same profile, so the pick is identical on both sides. Signed-out viewers and users with no wiki yet get the shared pick.
 
 # API
 

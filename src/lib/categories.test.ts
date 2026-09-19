@@ -1,26 +1,36 @@
 import { describe, expect, it } from 'vitest';
-import { canonicalCategory, categoryOptions } from './categories';
+import { canonicalCategory, hasCategory, isCategory, parseCategories } from './categories';
 
-describe('categoryOptions', () => {
-  it('lists only categories with pins, busiest first, in the list spelling', () => {
-    expect(categoryOptions({ movies: 4, 'music & audio': 12, software: 0, '': 3, sports: 4 })).toEqual([
-      { name: 'Music & Audio', count: 12 },
-      { name: 'Movies', count: 4 },
-      { name: 'Sports', count: 4 },
-    ]);
-  });
-
-  it('keeps picked categories with no pins, and categories off the list', () => {
-    expect(categoryOptions({ 'deep sea': 2 }, ['marine', 'Deep Sea'])).toEqual([
-      { name: 'deep sea', count: 2 },
-      { name: 'Marine', count: 0 },
-    ]);
+describe('canonicalCategory', () => {
+  it("gives the list's spelling, or the value when it is not on the list", () => {
+    expect(canonicalCategory('tv series')).toBe('TV Series');
+    expect(canonicalCategory('Deep Sea')).toBe('Deep Sea');
   });
 });
 
-describe('canonicalCategory', () => {
-  it('matches the list in any case', () => {
-    expect(canonicalCategory('tv series')).toBe('TV Series');
-    expect(canonicalCategory('Deep Sea')).toBe('Deep Sea');
+describe('isCategory', () => {
+  it('knows the list in any case', () => {
+    expect(isCategory('anime')).toBe(true);
+    expect(isCategory(' AI Models ')).toBe(true);
+    expect(isCategory('Studio Ghibli')).toBe(false);
+    expect(isCategory(null)).toBe(false);
+  });
+});
+
+describe('hasCategory', () => {
+  it('matches any of the wanted ones in any case', () => {
+    expect(hasCategory(['Music & Audio', 'anime'], ['Anime', 'Movies'])).toBe(true);
+    expect(hasCategory(['Software'], ['Anime'])).toBe(false);
+    expect(hasCategory(undefined, ['Anime'])).toBe(false);
+  });
+});
+
+describe('parseCategories', () => {
+  it('reads a list, a comma-separated string or the old single field', () => {
+    expect(parseCategories(['anime', 'Anime', 'Studio Ghibli', 'tv series'])).toEqual(['Anime', 'TV Series']);
+    expect(parseCategories('Software, AI Models')).toEqual(['Software', 'AI Models']);
+    expect(parseCategories('Movies')).toEqual(['Movies']);
+    expect(parseCategories(undefined)).toBeUndefined();
+    expect(parseCategories(null)).toBeUndefined();
   });
 });

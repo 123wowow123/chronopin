@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { Suspense } from 'react';
+import { Fragment, Suspense } from 'react';
 import { JsonLd } from '@/components/JsonLd';
 import { Comments } from '@/components/pin/Comments';
 import { CountdownMeter } from '@/components/pin/CountdownMeter';
@@ -167,14 +167,14 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
   return (
     <>
       <div className="mb-3 flex flex-wrap items-center text-xs text-subtle">
-        {pin.category ? (
-          <>
-            <RefineLink field="category" value={pin.category} className="rounded-full bg-raised px-2.5 py-0.5 font-medium text-muted ring-1 ring-line ring-inset hover:text-ink hover:no-underline">
-              {pin.category}
+        {pin.categories?.map((category) => (
+          <Fragment key={category}>
+            <RefineLink field="tag" value={category} className="rounded-full bg-raised px-2.5 py-0.5 font-medium text-muted ring-1 ring-line ring-inset hover:text-ink hover:no-underline">
+              {category}
             </RefineLink>
             <span className="px-1" />
-          </>
-        ) : null}
+          </Fragment>
+        ))}
         {pin.utcCreatedDateTime ? (
           <span>
             Posted <PostedTime value={pin.utcCreatedDateTime} serverTimeZone={timeZone} search />

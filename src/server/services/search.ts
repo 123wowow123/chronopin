@@ -1,5 +1,5 @@
 // Pin search: free text goes to the FAISS service for its best matches; label
-// terms (user:, company:, category:, confidence:, tag:), the Watch choice and the
+// terms (user:, company:, confidence:, tag: - and category:, read as tag:), the Watch choice and the
 // time filters narrow them in the database, which also pages the results.
 
 import config from '../config';
@@ -152,21 +152,8 @@ function searchLink(request: SearchRequest, direction: 'previous' | 'next', last
   return `?${params.toString()}`;
 }
 
-// Pins per lowercased category for the category filter's pills: the search
-// with its category: terms left out, so each pill counts what picking it
-// would show. With no free text that is every pin the other terms match -
-// every live pin (or watched pin) when there are none.
-export async function searchCategoryCounts(
-  searchText: string,
-  options: SearchOptions & { createdSince?: Date | null } = {},
-): Promise<Record<string, number>> {
-  const query = { ...parseSearchQuery(searchText), categories: [] };
-  const rows = await Pins.countSearchByCategory({ ...(await searchFilter(query, options)), createdSince: options.createdSince });
-  return Object.fromEntries(rows.map((row) => [row.category || '', row.count]));
-}
-
 // The tag cloud's tags for a search: its results' tags, busiest first, with
-// its tag: terms left out as the category pills leave out category: ones.
+// its tag: terms left out, so each tag counts what picking it would add.
 export async function searchTagCounts(
   searchText: string,
   limit: number,

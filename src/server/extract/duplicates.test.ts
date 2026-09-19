@@ -10,7 +10,7 @@ const pin = (sourceUrl: string | null, urls: string[]): EvidencePin => ({
   allDay: true,
   address: null,
   company: null,
-  category: null,
+  categories: [],
   sourceUrl,
   references: urls.map((url) => ({ url, title: null, confidence: 80, publishedDate: null, startDate: null, endDate: null, reasoning: null })),
 });

@@ -15,6 +15,8 @@
 import '../env';
 import { parseArgs } from 'node:util';
 import { mediumID } from '@/lib/appConfig';
+import { firstCategoryOf } from '@/lib/categories';
+import { inCategories } from '@/server/model/pinTag';
 import * as db from '@/server/db';
 import Medium from '@/server/model/medium';
 import Pin from '@/server/model/pin';
@@ -38,7 +40,7 @@ async function run() {
   const skipTrailer = new Set(flags['skip-trailer']?.split(',').map(Number));
   const rows = await db.query<{ id: number }>(
     `SELECT "id" FROM "Pin"
-     WHERE "category" = ANY($1::citext[]) AND "utcDeletedDateTime" IS NULL ${ids?.length ? 'AND "id" = ANY($2::int[])' : ''}
+     WHERE ${inCategories('$1')} AND "utcDeletedDateTime" IS NULL ${ids?.length ? 'AND "id" = ANY($2::int[])' : ''}
      ORDER BY "id"`,
     ids?.length ? [SCREEN_CATEGORIES, ids] : [SCREEN_CATEGORIES],
   );
@@ -51,7 +53,7 @@ async function run() {
     if (!pin) continue;
     const hasVideo = pin.media.some((m) => Number(m.type) === mediumID.youtube);
     const details = await findScreenDetails(
-      { pinTitle: pin.title, category: pin.category, year: new Date(pin.utcStartDateTime).getUTCFullYear(), skipTrailer: hasVideo || skipTrailer.has(id) },
+      { pinTitle: pin.title, category: firstCategoryOf(pin.categories, SCREEN_CATEGORIES), year: new Date(pin.utcStartDateTime).getUTCFullYear(), skipTrailer: hasVideo || skipTrailer.has(id) },
       60000,
     );
 

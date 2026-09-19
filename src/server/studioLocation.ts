@@ -10,7 +10,9 @@
 //
 // Kept on the company (0035) so a studio is looked up once.
 
+import { categoryList, hasCategory } from '@/lib/categories';
 import * as db from './db';
+import { PIN_CATEGORIES } from './model/pinTag';
 import { claimValue, getJson, wikiTitle } from './companyLogo';
 import log from './util/log';
 
@@ -18,8 +20,9 @@ import log from './util/log';
 // happens nowhere in particular.
 export const STUDIO_CATEGORIES = ['Anime', 'Anime Movie', 'Movies', 'TV Series', 'Gaming & Entertainment'];
 
-export const isStudioCategory = (category: string | null | undefined) =>
-  !!category && STUDIO_CATEGORIES.some((c) => c.toLowerCase() === category.toLowerCase());
+// One category or a pin's list of them.
+export const isStudioCategory = (categories: string | readonly (string | null | undefined)[] | null | undefined) =>
+  hasCategory(categoryList(categories), STUDIO_CATEGORIES);
 
 export type StudioLocation = { address: string; latitude: number; longitude: number };
 
@@ -138,12 +141,12 @@ export async function studioLocationByName(company: string, wikiUrl: string | nu
 export async function placeAtStudio(pinId: number): Promise<boolean> {
   // A pin that names a place of its own (a premiere, a convention hall) keeps
   // it, even without coordinates: the studio is only for a pin with none.
-  const [pin] = await db.query<{ companyId: number | null; category: string | null; placed: boolean }>(
-    `SELECT "companyId", "category"::text AS "category", ("location" IS NOT NULL OR COALESCE("address", '') <> '') AS "placed"
+  const [pin] = await db.query<{ companyId: number | null; categories: string[]; placed: boolean }>(
+    `SELECT "companyId", ${PIN_CATEGORIES} AS "categories", ("location" IS NOT NULL OR COALESCE("address", '') <> '') AS "placed"
      FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`,
     [pinId],
   );
-  if (!pin || pin.placed || !pin.companyId || !isStudioCategory(pin.category)) return false;
+  if (!pin || pin.placed || !pin.companyId || !isStudioCategory(pin.categories)) return false;
   const hq = await studioLocation(pin.companyId);
   if (!hq) return false;
   const rows = await db.query(

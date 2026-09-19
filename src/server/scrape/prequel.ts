@@ -225,10 +225,10 @@ export async function setParent(pinId: number, parentId: number) {
 // than an earlier season - e.g. Season 3 answering Season 1 until Season 2 is
 // pinned. Moves them and answers what moved, from -> to.
 export async function reslotSequels(
-  pin: { id: number; sourceUrl?: string | null; category?: string | null; ratings?: PinLike['ratings'] },
+  pin: { id: number; sourceUrl?: string | null; categories?: string[] | null; ratings?: PinLike['ratings'] },
   cache: RelationCache = new Map(),
 ): Promise<{ id: number; from: number | null; to: number }[]> {
-  const malId = malIdOf(pin.sourceUrl) ?? (isScreenCategory(pin.category) ? pinMalId(pin) : undefined);
+  const malId = malIdOf(pin.sourceUrl) ?? (isScreenCategory(pin.categories) ? pinMalId(pin) : undefined);
   if (!malId) return [];
   const sequels = await relatedWorks([malId], 'sequels', cache);
   if (!sequels) return [];
@@ -245,7 +245,7 @@ export async function reslotSequels(
 }
 
 type PinLike = {
-  category?: string | null;
+  categories?: string[] | null;
   sourceUrl?: string | null;
   utcStartDateTime?: Date | string | null;
   ratings?: { source?: string | null; url?: string | null }[];
@@ -256,7 +256,7 @@ type PinLike = {
 // category it was given; with no start date yet, any earlier pin will do.
 // pageUrl: the page being scraped, when the pin does not carry it yet.
 export async function prequelPinFor(pin: PinLike, pageUrl?: string): Promise<{ id: number; title: string } | undefined> {
-  const malId = malIdOf(pageUrl) ?? malIdOf(pin.sourceUrl) ?? (isScreenCategory(pin.category) ? pinMalId(pin) : undefined);
+  const malId = malIdOf(pageUrl) ?? malIdOf(pin.sourceUrl) ?? (isScreenCategory(pin.categories) ? pinMalId(pin) : undefined);
   if (!malId) return undefined;
   try {
     const found = await findPrequelPin({ malId, start: pin.utcStartDateTime || new Date() });

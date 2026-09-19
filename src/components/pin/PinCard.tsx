@@ -102,10 +102,11 @@ export function PinCard({
         <div className="mx-3 flex items-center justify-between text-[11px] text-subtle [&_a]:relative [&_a]:after:absolute [&_a]:after:-inset-y-2 [&_a]:after:inset-x-0 [&_a]:after:content-['']">
           {/* A dot before every item but the first, kept on the item's line when the row wraps. */}
           <div className="flex min-w-0 flex-wrap items-center [&>*]:whitespace-nowrap [&>*+*]:before:px-1.5 [&>*+*]:before:text-faint [&>*+*]:before:content-['·']">
-            {pin.category ? (
+            {/* Its main category: the pin page lists the rest. */}
+            {pin.categories?.[0] ? (
               <span>
-                <RefineLink field="category" value={pin.category} className="font-medium text-muted hover:text-ink hover:no-underline">
-                  {pin.category}
+                <RefineLink field="tag" value={pin.categories[0]} className="font-medium text-muted hover:text-ink hover:no-underline">
+                  {pin.categories[0]}
                 </RefineLink>
               </span>
             ) : null}

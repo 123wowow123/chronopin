@@ -35,15 +35,14 @@ describe('joinSearchQuery', () => {
 });
 
 describe('parseSearchQuery', () => {
-  it('matches categories in any case, once each', () => {
-    expect(parseSearchQuery('category:software CATEGORY:Software ios')).toEqual({
+  it('reads the old category: terms as tags, in any case, once each', () => {
+    expect(parseSearchQuery('category:software CATEGORY:Software tag:Software ios')).toEqual({
       userNames: [],
       companies: [],
-      categories: ['software'],
       confidences: [],
       dates: [],
       postedDays: [],
-      tags: [],
+      tags: ['software'],
       text: 'ios',
     });
   });

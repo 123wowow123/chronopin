@@ -332,11 +332,36 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
         <div className="grid gap-3 sm:grid-cols-2">
           <div>
             <label htmlFor="category" className={labelClass}>
-              Category
+              Categories
             </label>
-            <select id="category" className={inputClass} value={values.category} onChange={(e) => set('category', e.target.value)}>
-              <option value="">None</option>
-              {CATEGORIES.map((c) => (
+            {/* Any number, the main one first: each is one of the pin's
+                tags, and the tag cloud's top groups. */}
+            {values.categories.length ? (
+              <ul className="mb-2 flex flex-wrap gap-1.5" aria-label="Categories">
+                {values.categories.map((c, index) => (
+                  <li key={c} className="inline-flex items-center gap-1 rounded-full bg-raised py-0.5 pr-1 pl-2.5 text-sm text-ink ring-1 ring-line ring-inset">
+                    {c}
+                    {index === 0 && values.categories.length > 1 ? <span className="text-xs text-subtle">main</span> : null}
+                    <button
+                      type="button"
+                      onClick={() => set('categories', values.categories.filter((other) => other !== c))}
+                      className="rounded-full p-0.5 text-subtle hover:bg-raised-2 hover:text-ink"
+                      aria-label={`Remove ${c}`}
+                    >
+                      <Icon name="close" className="size-3.5" />
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            <select
+              id="category"
+              className={inputClass}
+              value=""
+              onChange={(e) => e.target.value && set('categories', [...values.categories, e.target.value])}
+            >
+              <option value="">{values.categories.length ? 'Add another…' : 'Add a category…'}</option>
+              {CATEGORIES.filter((c) => !values.categories.includes(c)).map((c) => (
                 <option key={c} value={c}>
                   {c}
                 </option>

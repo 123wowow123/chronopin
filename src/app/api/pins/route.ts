@@ -8,6 +8,7 @@ import PinReference from '@/server/model/pinReference';
 import { delayProblem } from '@/lib/delay';
 import { attributeReferences } from '@/lib/referenceAttribution';
 import { parseScrapedStocks } from '@/lib/stocks';
+import { bodyCategories } from '@/lib/categories';
 import { parseTags } from '@/lib/tags';
 import PinTag from '@/server/model/pinTag';
 import { rejectDuplicateSourceUrl } from '@/server/services/duplicatePin';
@@ -45,7 +46,9 @@ export const GET = route(async (request: NextRequest) => {
 // the body may carry stocks: [{ symbol, name?, relation: company|related|
 // supplier, note? }] (a scrape's, see GET /api/scrape), which are checked on
 // Nasdaq and added once the pin is saved, and tags: ["Artemis", ...] (or one
-// comma-separated string), the pin's own tags (src/lib/tags.ts). A body with
+// comma-separated string), the pin's own tags (src/lib/tags.ts), and
+// categories: ["Anime", ...] (or the old category: "Anime"), its category
+// tags from src/lib/categories.ts - a category among its tags is one. A body with
 // no parentId at all is threaded like a scrape: a later anime season responds
 // to its earlier season's pin (server/scrape/prequel.ts), and an AI model's
 // release or update to its line's previous one (server/scrape/modelSeries.ts);
@@ -57,6 +60,7 @@ export const POST = route(async (request: NextRequest) => {
   const pin = new Pin(body);
   const stocks = parseScrapedStocks(body.stocks);
   const tags = parseTags(body.tags);
+  pin.categories = bodyCategories(body, tags);
   pin.setUser(user);
   const problem = PinReference.problem(pin.references) ?? PinRating.problem(pin.ratings) ?? delayProblem(pin);
   if (problem) {
@@ -74,7 +78,7 @@ export const POST = route(async (request: NextRequest) => {
   // A response joins its parent's thread.
   if (saved.parentId) invalidatePin(saved.parentId);
   await Promise.all([
-    reslotSequels({ id: saved.id, sourceUrl: pin.sourceUrl, category: pin.category, ratings: pin.ratings }),
+    reslotSequels({ id: saved.id, sourceUrl: pin.sourceUrl, categories: pin.categories, ratings: pin.ratings }),
     reslotSeries({ id: saved.id, title: pin.title, company: pin.company }),
   ])
     .then((results) => results.flat())

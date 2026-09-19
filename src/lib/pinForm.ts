@@ -37,7 +37,8 @@ export type PinFormValues = {
   startTime: string; // HH:MM (local), timed pins only
   endDate: string;
   endTime: string;
-  category: string;
+  // Its categories (category tags), the main one first. Always sent whole.
+  categories: string[];
   company: string;
   // The company name the wiki link below belongs to (as loaded or scraped).
   companyWikiFor: string;
@@ -98,7 +99,7 @@ export const EMPTY_FORM: PinFormValues = {
   startTime: '',
   endDate: '',
   endTime: '',
-  category: '',
+  categories: [],
   company: '',
   companyWikiFor: '',
   companyWikiUrl: '',
@@ -220,7 +221,7 @@ export function pinToForm(pin: PinJson): PinFormValues {
     // The form edits the source's dates; they are only stored apart from the
     // pin's while a reference overrides them.
     ...datesToForm(pin.sourceStartDateTime ? { utcStartDateTime: pin.sourceStartDateTime, utcEndDateTime: pin.sourceEndDateTime, allDay: pin.allDay } : pin),
-    category: str(pin.category),
+    categories: [...(pin.categories ?? [])],
     company: str(pin.company),
     companyWikiFor: str(pin.company),
     companyWikiUrl: str(pin.companyWikiUrl),
@@ -260,7 +261,7 @@ export function applyScrape(values: PinFormValues, scraped: ScrapedPin): PinForm
   fill('title', scraped.title);
   fill('description', scraped.description);
   fill('longFormSummary', scraped.longFormSummary);
-  fill('category', scraped.category);
+  if (!next.categories.length && scraped.categories?.length) next.categories = [...scraped.categories];
   if (!next.company && scraped.company) {
     next.company = scraped.company;
     next.companyWikiFor = scraped.company;
@@ -388,7 +389,7 @@ export function formToPin(values: PinFormValues) {
     // A wiki link only travels with the company name it belongs to, so a
     // renamed company never inherits the old one's article.
     companyWikiUrl: company && company === values.companyWikiFor ? values.companyWikiUrl || undefined : undefined,
-    category: values.category || undefined,
+    categories: values.categories,
     allDay: values.allDay,
     ...formDates(values).dates,
     merchants: values.merchants

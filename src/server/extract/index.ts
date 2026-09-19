@@ -39,7 +39,7 @@ export type ExtractedFields = {
   delayReasoning: string | null;
   company: string | null;
   companyWikiUrl: string | null;
-  category: string;
+  categories: string[];
   workTitle: string | null;
   amazonUrl: string | null;
   bestBuyUrl: string | null;
@@ -116,15 +116,16 @@ const SCHEMA = {
       description:
         'Direct URL to that company\'s own English Wikipedia article, disambiguated from unrelated topics that share its name, e.g. "https://en.wikipedia.org/wiki/Apple_Inc." not "https://en.wikipedia.org/wiki/Apple" (the fruit), "https://en.wikipedia.org/wiki/Tesla,_Inc." not "https://en.wikipedia.org/wiki/Tesla" (the scientist). Null when company is null or has no Wikipedia article.',
     },
-    category: {
-      type: 'string',
-      enum: CATEGORIES,
-      description: 'Best-fit category for this event from the fixed list. Use "Other" only when nothing else reasonably fits.',
+    categories: {
+      type: 'array',
+      items: { type: 'string', enum: CATEGORIES },
+      description:
+        'The categories this event belongs to from the fixed list, the best fit first. Usually one; add a second only when the event is squarely both (an anime film\'s soundtrack is "Anime Movie" and "Music & Audio"). Use "Other" only when nothing else reasonably fits.',
     },
     workTitle: {
       type: ['string', 'null'],
       description:
-        'When category is Anime, Movies or TV Series, or the pin is about one video game: the film\'s, show\'s or game\'s own official English title, with any season or part as it is officially styled, e.g. "Jujutsu Kaisen Season 2", "Frieren: Beyond Journey\'s End" or "Grand Theft Auto VI" - not the event headline. Null otherwise.',
+        'When a category is Anime, Anime Movie, Movies or TV Series, or the pin is about one video game: the film\'s, show\'s or game\'s own official English title, with any season or part as it is officially styled, e.g. "Jujutsu Kaisen Season 2", "Frieren: Beyond Journey\'s End" or "Grand Theft Auto VI" - not the event headline. Null otherwise.',
     },
     amazonUrl: {
       type: ['string', 'null'],
@@ -194,7 +195,7 @@ const SCHEMA = {
     'delayReasoning',
     'company',
     'companyWikiUrl',
-    'category',
+    'categories',
     'workTitle',
     'amazonUrl',
     'bestBuyUrl',

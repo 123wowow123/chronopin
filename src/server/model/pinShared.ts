@@ -90,14 +90,14 @@ export async function createPin<T extends Row>(pin: T, userId: number | null, { 
   const columns = [
     'parentId', 'title', 'description', 'sourceUrl', 'longFormSummary',
     'dateConfidence', 'dateConfidenceReasoning', 'companyId',
-    'category', 'address', 'priceLowerBound', 'priceUpperBound', 'price',
+    'address', 'priceLowerBound', 'priceUpperBound', 'price',
     'priceCurrency', 'tip', 'utcStartDateTime', 'utcEndDateTime', 'allDay',
     'sourceStartDateTime', 'sourceEndDateTime', 'originalStartDate', 'delayReasoning', 'userId', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime',
   ];
   const values = [
     pin.parentId, pin.title, pin.description, pin.sourceUrl, pin.longFormSummary,
     pin.dateConfidence, pin.dateConfidenceReasoning, pin.companyId,
-    pin.category, pin.address, pin.priceLowerBound, pin.priceUpperBound, pin.price,
+    pin.address, pin.priceLowerBound, pin.priceUpperBound, pin.price,
     pin.priceCurrency, pin.tip, pin.utcStartDateTime, pin.utcEndDateTime,
     pin.allDay == null ? false : pin.allDay,
     pin.sourceStartDateTime || null, pin.sourceEndDateTime || null, pin.originalStartDate || null, pin.delayReasoning || null, userId, pin.utcCreatedDateTime || new Date(), pin.utcUpdatedDateTime, pin.utcDeletedDateTime,

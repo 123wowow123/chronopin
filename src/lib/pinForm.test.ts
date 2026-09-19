@@ -12,7 +12,7 @@ const stored: PinJson = {
   utcStartDateTime: '2026-10-01T00:00:00.000Z',
   utcEndDateTime: '2026-10-04T00:00:00.000Z',
   allDay: true,
-  category: 'Consumer Electronics',
+  categories: ['Consumer Electronics', 'Music & Audio'],
   company: 'Sonos',
   companyWikiUrl: 'https://en.wikipedia.org/wiki/Sonos',
   address: 'Santa Barbara, California',
@@ -43,7 +43,7 @@ describe('pin form round trip', () => {
       utcStartDateTime: stored.utcStartDateTime,
       utcEndDateTime: stored.utcEndDateTime,
       allDay: true,
-      category: stored.category,
+      categories: stored.categories,
       company: 'Sonos',
       companyWikiUrl: stored.companyWikiUrl,
       address: stored.address,
@@ -121,11 +121,11 @@ describe('pin form round trip', () => {
 
   it('fills only empty fields from a scrape', () => {
     const typed = { ...EMPTY_FORM, title: 'Mine' };
-    const next = applyScrape(typed, { title: 'Scraped', company: 'Sonos', companyWikiUrl: 'w', category: 'Energy', merchants: [{ label: 'Amazon', url: 'u' }] });
+    const next = applyScrape(typed, { title: 'Scraped', company: 'Sonos', companyWikiUrl: 'w', categories: ['Energy'], merchants: [{ label: 'Amazon', url: 'u' }] });
     expect(next.title).toBe('Mine');
     expect(next.company).toBe('Sonos');
     expect(next.companyWikiUrl).toBe('w');
-    expect(next.category).toBe('Energy');
+    expect(next.categories).toEqual(['Energy']);
     expect(next.merchants).toHaveLength(1);
   });
 

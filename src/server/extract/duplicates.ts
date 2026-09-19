@@ -29,7 +29,7 @@ export type EvidencePin = {
   allDay: boolean;
   address: string | null;
   company: string | null;
-  category: string | null;
+  categories: string[];
   sourceUrl: string | null;
   references: {
     url: string;
@@ -77,7 +77,7 @@ function describePin(label: string, pin: EvidencePin) {
     allDay: pin.allDay,
     place: pin.address,
     company: pin.company,
-    category: pin.category,
+    categories: pin.categories,
     sourceUrl: pin.sourceUrl,
     references: pin.references.map((r) => ({
       url: r.url,

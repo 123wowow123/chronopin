@@ -4,17 +4,11 @@ import { createContext, useContext, useEffect, useRef, useState } from 'react';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { useScrollLock } from '@/lib/client/scrollLock';
 
-type Fold = 'category' | 'tags' | 'controls' | 'span' | null;
+type Fold = 'tags' | 'controls' | 'span' | null;
 
-// Whether the category fold is open (null outside floating controls), so a
-// category filter knows to show its pills without its own header. Picks
-// remount search results, so the fold remembers being open like the filter does.
-const CategoryFoldContext = createContext<boolean | null>(null);
-let rememberedCategoryOpen = false;
-
-export function useCategoryFoldOpen() {
-  return useContext(CategoryFoldContext);
-}
+// Picks remount search results, so the tags fold remembers being open like
+// the tag panel does.
+let rememberedTagsOpen = false;
 
 // Whether the tags fold is open (null outside floating controls): below xl the
 // tag cloud has its own pill, so it shows its cloud without its own header.
@@ -35,13 +29,12 @@ export function useInControlsFold() {
 // The controls that float over a timeline (filters, sort, a searched user).
 // On wide screens (xl) they sit top right beside the cards; narrower, they
 // would cover the cards or squeeze them to one column, so they fold behind
-// pill buttons by the "Today" button: the category filter, the tag cloud and
+// pill buttons by the "Today" button: the tag cloud (categories on top) and
 // the window of start dates (span) behind their own, the rest behind one
 // saying what they are set to.
 export function FloatingControls({
   children,
   sort,
-  category,
   tags,
   span,
   summary,
@@ -53,7 +46,6 @@ export function FloatingControls({
   children: React.ReactNode;
   // Sits above the folds, at the top of the column: sorting leads the rest.
   sort?: React.ReactNode;
-  category?: { summary: string; control: React.ReactNode };
   tags?: { summary: string; control: React.ReactNode };
   span?: { summary: string; control: React.ReactNode };
   // What the folded button says ("1 day"), under an optional caption ("Posted within").
@@ -67,9 +59,9 @@ export function FloatingControls({
   // there is no room for it beside the cards.
   aside?: React.ReactNode;
 }) {
-  const [open, setOpenState] = useState<Fold>(() => (rememberedCategoryOpen ? 'category' : null));
+  const [open, setOpenState] = useState<Fold>(() => (rememberedTagsOpen ? 'tags' : null));
   const setOpen = (next: Fold) => {
-    rememberedCategoryOpen = next === 'category';
+    rememberedTagsOpen = next === 'tags';
     setOpenState(next);
   };
   const rootRef = useRef<HTMLDivElement>(null);
@@ -77,7 +69,7 @@ export function FloatingControls({
   useEffect(() => {
     if (!open) return;
     const shut = () => {
-      rememberedCategoryOpen = false;
+      rememberedTagsOpen = false;
       setOpenState(null);
     };
     const close = (event: MouseEvent) => !rootRef.current?.contains(event.target as Node) && shut();
@@ -92,7 +84,7 @@ export function FloatingControls({
 
   // The scroll lock in globals.css stops wheels, but a touch drag still
   // scrolls the page on mobile browsers, so drags are stopped too - except
-  // within something that scrolls itself, like the category list.
+  // within something that scrolls itself, like the tag cloud.
   useEffect(() => {
     if (!open || !window.matchMedia('(width < 80rem)').matches) return;
     const hold = (event: TouchEvent) => {
@@ -121,11 +113,6 @@ export function FloatingControls({
         }`}
       >
         {sort}
-        {category ? (
-          <div id="timeline-category" className={`flex flex-col ${open === 'category' ? '' : 'max-xl:hidden'}`}>
-            <CategoryFoldContext value={open === 'category'}>{category.control}</CategoryFoldContext>
-          </div>
-        ) : null}
         {tags ? (
           // Open on a phone, the cloud takes the page down to the pills, however few tags it has.
           <div id="timeline-tags" className={`flex min-h-0 flex-col ${open === 'tags' ? 'max-xl:h-[calc(100dvh-8rem)]' : 'max-xl:hidden'}`}>
@@ -156,7 +143,6 @@ export function FloatingControls({
         ) : null}
       </div>
       <div className="fixed right-3 bottom-3 z-30 flex max-w-[calc(100%-1.5rem)] gap-1.5 max-sm:gap-1 lg:right-4 lg:gap-2 lg:bottom-4">
-        {category ? <FoldPill fold="category" open={open} onToggle={toggle} icon="tag" iconClass="text-link" caption="Category" label={category.summary} /> : null}
         {tags ? <FoldPill fold="tags" open={open} onToggle={toggle} icon="hash" iconClass="text-link" caption="Tags" label={tags.summary} /> : null}
         <FoldPill fold="controls" open={open} onToggle={toggle} icon="sliders" iconClass="text-past" caption={summaryCaption} label={summary} className="max-w-52" />
         {span ? <FoldPill fold="span" open={open} onToggle={toggle} icon="timeline" iconClass="text-future" caption="Time span" label={span.summary} /> : null}
@@ -176,7 +162,7 @@ export function FloatingControls({
 }
 
 // A pill that opens one fold; the one whose popup is showing is tinted like a
-// picked category. On phones, where three pills share the row, its caption
+// picked tag. On phones, where three pills share the row, its caption
 // sits small over the value rather than beside it, so neither is cut short.
 function FoldPill({
   fold,

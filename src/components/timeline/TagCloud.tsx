@@ -8,7 +8,7 @@ import { api } from '@/lib/client/api';
 import { hrefKeepingDate } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { removeTerm, toggleTerm } from '@/lib/searchTerms';
-import { cloudSteps, cloudTags, groupSelection, groupTags, type TagCount, type TagGroup } from '@/lib/tags';
+import { cloudSteps, cloudTags, groupSelection, groupTags, tagMembers, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
 import { useTagFoldOpen } from './FloatingControls';
 import { WordCloud } from './WordCloud';
@@ -39,19 +39,8 @@ export function tagPillSummary(query?: string) {
   return tagSummary(parseSearchQuery(query).tags);
 }
 
-// A trophy for a win's tag, a ribbon for a nomination's: a nomination must
-// not read as a win (a muted trophy still did).
-function Trophy({ kind, className = '' }: { kind: TagCount['kind']; className?: string }) {
-  if (kind !== 'award' && kind !== 'nomination') return null;
-  return (
-    <span aria-hidden className={className}>
-      {kind === 'nomination' ? '🎗️' : '🏆'}
-    </span>
-  );
-}
-
-// The tag filter in the floating controls, under the category filter and
-// built like it: a row saying what is picked that unfolds, in place, into a
+// The tag filter in the floating controls, the first of them, with the
+// pins' categories at the top of its grouped mode: a row saying what is picked that unfolds, in place, into a
 // cloud of the tags of the pins showing - the timeline's, or the search's
 // results with its tag: terms left out - sized by how many pins carry each.
 // Unfolded, it takes height from the panels under it (trending, new pins),
@@ -128,8 +117,8 @@ export function TagCloud({
   }, [showing, countsUrl]);
 
   // Clicking (or Escape) anywhere but the panel folds it away, as the
-  // category filter does. On the click rather than the press, and not for a
-  // target its own handler already took off the page (see CategoryFilter).
+  // other panels do. On the click rather than the press, and not for a
+  // target its own handler already took off the page (the pill's own toggle).
   // Not while the big cloud is up: it has its own Escape and its own outside.
   useEffect(() => {
     if (!open || expanded) return;
@@ -179,13 +168,20 @@ export function TagCloud({
     });
   }
 
+  const unfold = (name: string) =>
+    setUnfolded((prev) => {
+      const next = new Set(prev);
+      if (!next.delete(name)) next.add(name);
+      return next;
+    });
+
   const toggle = (name: string) =>
     go((q) => toggleTerm(q, 'tag', name), isSelected(name) ? selected.filter((s) => s.toLowerCase() !== name.toLowerCase()) : [...selected, name]);
   const clear = () => go((q) => selected.reduce((rest, name) => removeTerm(rest, 'tag', name), q), []);
 
   return (
     <div ref={rootRef} className={`floating flex min-h-0 flex-col text-sm ${inFold ? 'max-xl:h-full' : ''} ${className}`}>
-      {/* As the category filter's: clearing is its own button beside the
+      {/* Clearing is its own button beside the
           chevron, and the button that opens the panel lies under the row. */}
       <div className={`relative flex items-center gap-2 px-3.5 py-2.5 max-lg:py-3 ${inFold ? 'max-xl:hidden' : ''}`}>
         <button
@@ -235,7 +231,7 @@ export function TagCloud({
             {tags.map((tag) => {
               const members = tag.members;
               const pressed = isSelected(tag.name);
-              const partly = !pressed && !!members?.some((m) => isSelected(m.name));
+              const partly = !pressed && tagMembers(tag).some((m) => isSelected(m.name));
               const open = !!members && (unfolded.has(tag.name) || partly);
               return (
                 <Fragment key={tag.name}>
@@ -248,15 +244,15 @@ export function TagCloud({
                       className={`${STEP_CLASS[steps.get(tag.name.toLowerCase()) ?? 1]} rounded-md px-1 text-left leading-snug transition-colors ${
                         pressed
                           ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset'
-                          : tag.kind === 'award' || tag.kind === 'nomination'
+                          : tag.kind === 'award' || tag.kind === 'nomination' || tag.kind === 'category'
                             ? 'text-ink hover:text-link'
                             : 'text-muted hover:text-ink'
                       } ${tag.count === 0 && !pressed ? 'opacity-50' : ''}`}
                     >
-                      <Trophy kind={tag.kind} className="mr-0.5 text-[0.85em]" />
                       {tag.name}
-                      <span className="sr-only">
-                        , {tag.count} {tag.count === 1 ? 'pin' : 'pins'}
+                      <span className="ml-1 text-[11px] font-normal text-subtle tabular-nums">
+                        {tag.count}
+                        <span className="sr-only"> {tag.count === 1 ? 'pin' : 'pins'}</span>
                       </span>
                     </button>
                     {members ? (
@@ -265,38 +261,14 @@ export function TagCloud({
                         aria-expanded={open}
                         aria-label={`${open ? 'Hide' : 'Show'} the ${members.length} tags in ${tag.name}`}
                         title={`${members.length} tags inside`}
-                        onClick={() =>
-                          setUnfolded((prev) => {
-                            const next = new Set(prev);
-                            if (!next.delete(tag.name)) next.add(tag.name);
-                            return next;
-                          })
-                        }
+                        onClick={() => unfold(tag.name)}
                         className="ml-0.5 rounded px-0.5 text-[11px] text-subtle hover:text-ink"
                       >
                         <Icon name="chevron" className={`size-3.5 transition-transform ${open ? 'rotate-180' : ''}`} />
                       </button>
                     ) : null}
                   </span>
-                  {open ? (
-                    <span className="flex basis-full flex-wrap items-baseline gap-x-2 gap-y-1 border-l border-line pl-2.5">
-                      {members!.map((m) => (
-                        <button
-                          key={m.name}
-                          type="button"
-                          aria-pressed={isSelected(m.name)}
-                          onClick={() => toggle(m.name)}
-                          title={`${m.name}: ${m.count} ${m.count === 1 ? 'pin' : 'pins'}`}
-                          className={`rounded-md px-1 text-left text-xs leading-snug transition-colors ${
-                            isSelected(m.name) ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset' : 'text-muted hover:text-ink'
-                          }`}
-                        >
-                          {m.name}
-                          <span className="ml-1 text-subtle">{m.count}</span>
-                        </button>
-                      ))}
-                    </span>
-                  ) : null}
+                  {open ? <Members members={members!} isSelected={isSelected} onToggle={toggle} unfolded={unfolded} onUnfold={unfold} /> : null}
                 </Fragment>
               );
             })}
@@ -323,6 +295,61 @@ export function TagCloud({
         />
       ) : null}
     </div>
+  );
+}
+
+// What a group wraps, under it: a category's tags, some of them groups of
+// their own (an award body's years) that unfold in turn.
+function Members({
+  members,
+  isSelected,
+  onToggle,
+  unfolded,
+  onUnfold,
+}: {
+  members: TagGroup[];
+  isSelected: (name: string) => boolean;
+  onToggle: (name: string) => void;
+  unfolded: Set<string>;
+  onUnfold: (name: string) => void;
+}) {
+  return (
+    <span className="flex basis-full flex-wrap items-baseline gap-x-2 gap-y-1 border-l border-line pl-2.5">
+      {members.map((m) => {
+        const inner = m.members;
+        const open = !!inner && (unfolded.has(m.name) || (!isSelected(m.name) && tagMembers(m).some((t) => isSelected(t.name))));
+        return (
+          <Fragment key={m.name}>
+            <span className="inline-flex items-baseline">
+              <button
+                type="button"
+                aria-pressed={isSelected(m.name)}
+                onClick={() => onToggle(m.name)}
+                title={`${m.name}: ${m.count} ${m.count === 1 ? 'pin' : 'pins'}${inner ? `, ${inner.length} tags` : ''}`}
+                className={`rounded-md px-1 text-left text-xs leading-snug transition-colors ${
+                  isSelected(m.name) ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset' : 'text-muted hover:text-ink'
+                }`}
+              >
+                {m.name}
+                <span className="ml-1 text-subtle">{m.count}</span>
+              </button>
+              {inner ? (
+                <button
+                  type="button"
+                  aria-expanded={open}
+                  aria-label={`${open ? 'Hide' : 'Show'} the ${inner.length} tags in ${m.name}`}
+                  onClick={() => onUnfold(m.name)}
+                  className="ml-0.5 rounded px-0.5 text-subtle hover:text-ink"
+                >
+                  <Icon name="chevron" className={`size-3 transition-transform ${open ? 'rotate-180' : ''}`} />
+                </button>
+              ) : null}
+            </span>
+            {open ? <Members members={inner!} isSelected={isSelected} onToggle={onToggle} unfolded={unfolded} onUnfold={onUnfold} /> : null}
+          </Fragment>
+        );
+      })}
+    </span>
   );
 }
 
@@ -358,7 +385,7 @@ function GroupedToggle({ wrapped, onChange }: { wrapped: boolean; onChange: (wra
 // How many tags the big cloud reads.
 const VIEW_LIMIT = 200;
 
-const KIND_LABEL: Record<TagCount['kind'], string> = { award: 'Award', nomination: 'Nomination', topic: 'Tag' };
+const KIND_LABEL: Record<TagCount['kind'], string> = { award: 'Award', nomination: 'Nomination', topic: 'Tag', category: 'Category' };
 
 // The tag cloud blown up over the page, WordArt style (WordCloud): up to 200
 // tags packed into a cloud, the busiest largest, flowing around the pointer.
@@ -457,7 +484,6 @@ function TagCloudView({
         <p aria-live="polite" className="flex min-h-10 items-center gap-1.5 border-t border-line px-5 py-2.5 text-xs text-subtle max-sm:px-3 max-sm:pb-[max(0.625rem,env(safe-area-inset-bottom))]">
           {hot ? (
             <>
-              <Trophy kind={hot.kind} />
               <span className="font-semibold text-ink">{hot.name}</span>
               <span>
                 · {hot.members ? `${hot.members.length} tags` : KIND_LABEL[hot.kind]} · {hot.count} {hot.count === 1 ? 'pin' : 'pins'} · click to {selected.some((s) => s.toLowerCase() === hot.name.toLowerCase()) ? 'drop it from' : 'add it to'} the search

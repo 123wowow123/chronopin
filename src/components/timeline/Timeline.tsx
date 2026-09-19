@@ -21,7 +21,6 @@ import { buildBags, pinDayKey, resolveTodayMarker, todayScrollId } from '@/lib/t
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { CardPin, DateTimeJson, NewPin, TimelinePage, TrendingPin } from '@/lib/types';
 import { personalWeigher, type UserPreference } from '@/lib/userWiki';
-import { categoryPillSummary, SearchCategoryFilter } from './CategoryFilter';
 import { TagCloud, tagPillSummary } from './TagCloud';
 import { FloatingControls } from './FloatingControls';
 import { NewPins } from './NewPins';
@@ -442,7 +441,6 @@ export function Timeline({
           summaryCaption="Posted within"
           summary={spanLabel(postedWithin)}
           onToday={goToToday}
-          category={{ summary: categoryPillSummary(), control: <SearchCategoryFilter postedWithin={postedWithin} /> }}
           tags={{ summary: tagPillSummary(), control: <TagCloud postedWithin={postedWithin} /> }}
           aside={
             // Needs room for trending's heading and one row (basis-28), or both

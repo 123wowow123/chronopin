@@ -1,4 +1,4 @@
-// A pin's tags (0038). The form's own ("user") are replaced wholesale by a
+// A pin's tags (0038), its categories among them (0043). The form's own ("user") are replaced wholesale by a
 // create or edit that sends tags; the awards its description and summary name
 // and the prediction markets its links cite ("auto") are re-read after every save. Award tags from PinAward need no
 // writing: PinTagView derives them. See src/lib/tags.ts.
@@ -9,14 +9,24 @@ import { wordStartPattern } from '../util/searchQuery';
 
 type Stored = Exclude<TagSource, 'award'>;
 
-// Replaces the pin's tags from this source with these names. True when they changed.
-async function replace(pinId: number, source: Stored, names: string[]): Promise<boolean> {
-  const wanted = uniqueTags(names);
-  const stored = await db.query<{ name: string }>(`SELECT "name"::text AS "name" FROM "PinTag" WHERE "pinId" = $1 AND "source" = $2`, [pinId, source]);
-  const same = stored.length === wanted.length && stored.every((row) => wanted.some((name) => name === row.name));
+// SQL for a pin's categories, the main one first, in a query on "Pin" (not aliased).
+export const PIN_CATEGORIES = `ARRAY(SELECT "cat"."name"::text FROM "PinTag" AS "cat" WHERE "cat"."pinId" = "Pin"."id" AND "cat"."kind" = 'category' ORDER BY "cat"."id")`;
+
+// SQL for whether "Pin" has any of the categories in a citext[] parameter.
+export const inCategories = (param: string) =>
+  `EXISTS (SELECT 1 FROM "PinTag" AS "cat" WHERE "cat"."pinId" = "Pin"."id" AND "cat"."kind" = 'category' AND "cat"."name" = ANY(${param}::citext[]))`;
+
+// Replaces the pin's tags from this source with these names: its categories,
+// or the rest. True when they changed.
+async function replace(pinId: number, source: Stored, names: string[], categories = false): Promise<boolean> {
+  const wanted = uniqueTags(names).filter((name) => (tagKind(name) === 'category') === categories);
+  const scope = `"pinId" = $1 AND "source" = $2 AND ("kind" = 'category') = $3`;
+  const stored = await db.query<{ name: string }>(`SELECT "name"::text AS "name" FROM "PinTag" WHERE ${scope} ORDER BY "id"`, [pinId, source, categories]);
+  // Categories keep their order: the first is the pin's main one.
+  const same = stored.length === wanted.length && stored.every((row, i) => (categories ? wanted[i] === row.name : wanted.includes(row.name)));
   if (same) return false;
   await db.transaction(async (query) => {
-    await query(`DELETE FROM "PinTag" WHERE "pinId" = $1 AND "source" = $2`, [pinId, source]);
+    await query(`DELETE FROM "PinTag" WHERE ${scope}`, [pinId, source, categories]);
     if (!wanted.length) return;
     // A name the other source already holds stays theirs; the view shows it once either way.
     await query(
@@ -30,9 +40,15 @@ async function replace(pinId: number, source: Stored, names: string[]): Promise<
 }
 
 export default class PinTag {
-  // The form's tags: the whole list, so a name left out is taken off.
+  // The form's tags: the whole list, so a name left out is taken off. A
+  // category's name among them is left to setCategories.
   static setUserTags(pinId: number, names: string[]): Promise<boolean> {
     return replace(pinId, 'user', names);
+  }
+
+  // The pin's categories, the main one first: the whole list.
+  static setCategories(pinId: number, names: string[]): Promise<boolean> {
+    return replace(pinId, 'user', names, true);
   }
 
   // What the pin's own prose and links say: the awards it names and the
@@ -87,16 +103,36 @@ export default class PinTag {
 
   // Every tag's pin count across these pins (the FROM and WHERE of a search,
   // see model/pins.ts), busiest first. One spelling per name whatever its case.
+  // Each but a category also says which category most of those pins carry,
+  // for the cloud's grouped mode.
   static async count(from: string, where: string[], params: unknown[], limit: number): Promise<TagCount[]> {
     const rows = await db.query<TagCount>(
       `
-      SELECT min("tg"."name"::text) AS "name", min("tg"."kind") AS "kind", COUNT(DISTINCT "Pin"."id")::integer AS "count"
-      ${from}
-        INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "Pin"."id"
-      WHERE ${where.join('\n        AND ')}
-      GROUP BY "tg"."name"
-      ORDER BY 3 DESC, 1
-      LIMIT ${Number(limit)}`,
+      WITH "hits" AS (
+        SELECT DISTINCT "tg"."name", "tg"."kind", "Pin"."id" AS "pinId"
+        ${from}
+          INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "Pin"."id"
+        WHERE ${where.join('\n          AND ')}
+      ),
+      "counts" AS (
+        SELECT "name", min("name"::text) AS "spelling", min("kind") AS "kind", COUNT(DISTINCT "pinId")::integer AS "count"
+        FROM "hits"
+        GROUP BY "name"
+        ORDER BY 4 DESC, 2
+        LIMIT ${Number(limit)}
+      ),
+      "homes" AS (
+        SELECT "h"."name", "c"."name"::text AS "category",
+          row_number() OVER (PARTITION BY "h"."name" ORDER BY COUNT(*) DESC, min("c"."name"::text)) AS "rank"
+        FROM "hits" AS "h"
+          INNER JOIN "counts" ON "counts"."name" = "h"."name" AND "counts"."kind" <> 'category'
+          INNER JOIN "PinTag" AS "c" ON "c"."pinId" = "h"."pinId" AND "c"."kind" = 'category'
+        GROUP BY "h"."name", "c"."name"
+      )
+      SELECT "counts"."spelling" AS "name", "counts"."kind", "counts"."count", "homes"."category"
+      FROM "counts"
+        LEFT JOIN "homes" ON "homes"."name" = "counts"."name" AND "homes"."rank" = 1
+      ORDER BY "counts"."count" DESC, "counts"."spelling"`,
       params,
     );
     return rows;

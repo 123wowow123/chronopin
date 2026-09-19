@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { refineQuery, term, type LabelField } from '@/lib/searchTerms';
 
-// A pin label (author, company, category) that searches for pins sharing it.
+// A pin label (author, company, category or other tag) that searches for pins sharing it.
 // The href is a plain search for crawlers; on the search page a click adds
 // the term to the query already showing.
 export function RefineLink({

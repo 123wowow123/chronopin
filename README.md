@@ -498,7 +498,6 @@ https://www.youtube.com/watch?v=sboNwYmH3AY
 
 - add pin relationship web overlay on map and can be toggled
 
-- tags eventually wrap into category and removing category table altogether
 
 # Scraping
 

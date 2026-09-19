@@ -17,7 +17,8 @@ export type PreferenceSignal = {
   at: Date | string;
   title: string;
   url: string;
-  category: string | null;
+  // The pin's categories: a signal's weight is shared out among them.
+  categories: string[];
   company: string | null;
 };
 
@@ -62,14 +63,17 @@ export function buildPreference(signals: PreferenceSignal[], now: Date = new Dat
     const age = Math.max(0, (+now - at) / DAY_MS);
     const weight = SIGNAL_WEIGHT[signal.kind] * 0.5 ** (age / HALF_LIFE_DAYS);
     total += weight;
-    // Categories are case-insensitive in the database (citext), so here too.
-    for (const [map, name] of [
-      [categories, signal.category],
-      [companies, signal.company],
-    ] as const) {
+    // Names are case-insensitive in the database (citext), so here too. A
+    // pin in two categories gives each half its weight, so the shares still
+    // sum to at most 1.
+    const own = (signal.categories ?? []).filter(Boolean);
+    for (const [map, name, part] of [
+      ...own.map((c) => [categories, c, weight / own.length] as const),
+      [companies, signal.company, weight] as const,
+    ]) {
       if (!name) continue;
       const entry = map.get(name.toLowerCase()) ?? { name, weight: 0 };
-      entry.weight += weight;
+      entry.weight += part;
       map.set(name.toLowerCase(), entry);
     }
     if (signal.kind === 'open') opened.set(signal.pinId, Math.max(opened.get(signal.pinId) ?? 0, at));
@@ -92,7 +96,7 @@ export function buildPreference(signals: PreferenceSignal[], now: Date = new Dat
 export const CLICKED_BOOST = 2;
 export const AFFINITY_BOOST = 2;
 
-type Weighed = { id: number; category?: string | null; company?: string | null };
+type Weighed = { id: number; categories?: string[] | null; company?: string | null };
 
 // How much more a pin weighs for this user than for anyone else (1 = no
 // change). `ids` are every pin the card stands for (a duplicate stack), so
@@ -103,7 +107,9 @@ export function personalWeigher(preference: UserPreference): (pin: Weighed, ids?
   const company = new Map(preference.companies.map((a) => [a.name.toLowerCase(), a.share]));
   return (pin, ids = [pin.id]) => {
     const opened = ids.some((id) => clicked.has(id)) ? CLICKED_BOOST : 0;
-    const leaning = (pin.category ? (category.get(pin.category.toLowerCase()) ?? 0) : 0) + (pin.company ? (company.get(pin.company.toLowerCase()) ?? 0) : 0);
+    // Its strongest category, so a pin in several is not boosted for each.
+    const leaningCategory = Math.max(0, ...(pin.categories ?? []).map((c) => category.get(c.toLowerCase()) ?? 0));
+    const leaning = leaningCategory + (pin.company ? (company.get(pin.company.toLowerCase()) ?? 0) : 0);
     return 1 + opened + AFFINITY_BOOST * leaning;
   };
 }

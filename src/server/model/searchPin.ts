@@ -3,7 +3,6 @@ import * as db from '../db';
 import type { Row } from '../db';
 import config from '../config';
 import { fetchJson } from '../util/fetchJson';
-import { wordStartPattern } from '../util/searchQuery';
 import BasePin, { BasePinProp } from './basePin';
 import BasePins from './basePins';
 import Pins from './pins';
@@ -152,22 +151,6 @@ export class SearchPins extends BasePins<SearchPin> {
       [title, description, k],
     );
     return new Pins({ pins: rows, queryCount: rows.length });
-  }
-
-  // Categories with a word starting with the typed text ("sp" -> "Space &
-  // Astronomy", "Sports"), busiest first, for the search suggestions.
-  static querySuggestCategories(text: string, k = 4): Promise<{ name: string; count: number }[]> {
-    return db.query(
-      `
-        SELECT min("category") AS "name", COUNT(*)::integer AS "count"
-        FROM "Pin"
-        WHERE "utcDeletedDateTime" IS NULL
-          AND "category" ~* $1
-        GROUP BY lower("category")
-        ORDER BY 2 DESC, 1
-        LIMIT $2`,
-      [wordStartPattern(text), k],
-    );
   }
 }
 

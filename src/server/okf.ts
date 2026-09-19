@@ -1,4 +1,5 @@
 import { okfBundle, type OkfPin, type OkfSource } from '@/lib/okf';
+import { PIN_CATEGORIES } from './model/pinTag';
 import { absoluteUrl, pinPath } from '@/lib/seo';
 import type { PinTagJson } from '@/lib/tags';
 import * as db from './db';
@@ -11,7 +12,7 @@ import Source, { PinSource } from './model/source';
 export async function loadOkfBundle(pinIds?: number[]): Promise<Map<string, string>> {
   const pins = await db.query<Omit<OkfPin, 'url' | 'links'>>(
     `SELECT "Pin"."id", "Pin"."title", "Pin"."description", "Pin"."utcStartDateTime", "Pin"."utcEndDateTime", "Pin"."allDay",
-            "Pin"."category", "Company"."name" AS "company", "Pin"."longFormSummary"
+            ${PIN_CATEGORIES} AS "categories", "Company"."name" AS "company", "Pin"."longFormSummary"
      FROM "Pin" LEFT JOIN "Company" ON "Company"."id" = "Pin"."companyId"
      WHERE "Pin"."utcDeletedDateTime" IS NULL
        AND ($1::integer[] IS NULL OR "Pin"."id" = ANY($1::integer[]))

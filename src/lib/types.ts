@@ -88,7 +88,8 @@ export type PinJson = {
   company?: string;
   companyWikiUrl?: string;
   companyLogoUrl?: string;
-  category?: string;
+  // Its category tags (src/lib/categories.ts), the main one first.
+  categories?: string[];
   utcStartDateTime: string;
   utcEndDateTime?: string;
   // The dates the source gave, set only while a more confident reference's
@@ -139,7 +140,7 @@ export type CardPin = PinJson & { safeDescription?: string };
 // popup. A subset of PinJson rather than a shape of its own, so the map can
 // plot one of these or a whole pin - the focused pin still arrives entire
 // from /api/pins/:id.
-export type MapPinJson = Pick<PinJson, 'id' | 'title' | 'address' | 'category' | 'allDay' | 'utcStartDateTime' | 'utcCreatedDateTime' | 'latitude' | 'longitude'> & {
+export type MapPinJson = Pick<PinJson, 'id' | 'title' | 'address' | 'categories' | 'allDay' | 'utcStartDateTime' | 'utcCreatedDateTime' | 'latitude' | 'longitude'> & {
   media?: Pick<MediumJson, 'type' | 'thumbName' | 'originalUrl'>[];
 };
 

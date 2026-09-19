@@ -8,7 +8,9 @@ export default class UserWiki {
   // Every live pin the user has opened, watched, liked or commented on.
   static async signals(userId: number): Promise<PreferenceSignal[]> {
     const rows = await db.query<Omit<PreferenceSignal, 'url'>>(
-      `SELECT "s"."pinId", "s"."kind", "s"."at", "p"."title", "p"."category"::text AS "category", "c"."name" AS "company"
+      `SELECT "s"."pinId", "s"."kind", "s"."at", "p"."title",
+         ARRAY(SELECT "cat"."name"::text FROM "PinTag" AS "cat" WHERE "cat"."pinId" = "p"."id" AND "cat"."kind" = 'category' ORDER BY "cat"."id") AS "categories",
+         "c"."name" AS "company"
        FROM (
          SELECT "pinId", 'open' AS "kind", "day"::timestamp AT TIME ZONE 'UTC' AS "at" FROM "PinView" WHERE "viewer" = $2
          UNION ALL

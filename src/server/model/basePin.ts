@@ -28,7 +28,7 @@ export const BasePinProp = [
   'company',
   'companyWikiUrl',
   'companyLogoUrl',
-  'category',
+  'categories',
   'utcStartDateTime',
   'utcEndDateTime',
   'sourceStartDateTime',
@@ -83,6 +83,11 @@ export default class BasePin {
       this.userId = pin.userId;
       this.user!.userName = BasePin.getPinUserName(pin)!;
       this.user!.pictureUrl = pin['User.pictureUrl'] || undefined;
+    } else if (Number.isInteger(pin.user?.id)) {
+      // A pin read back from its JSON (the seed backup): the author is only
+      // its public fields, and userId is not written out. POST and PUT set
+      // the author themselves after this, so a body cannot choose one.
+      this.user = new User(_.pick(pin.user, PUBLIC_USER_PROPS));
     }
 
     this.media = _.get(pin, 'media', []).map((m: Row) => new Medium(m, this));

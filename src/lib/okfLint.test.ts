@@ -63,7 +63,7 @@ describe('lintBundle', () => {
       [
         {
           id: 1, title: 'Bridge opens', description: null, url: 'https://x.example/pin/1', utcStartDateTime: '2026-09-18T00:00:00Z', utcEndDateTime: null,
-          allDay: true, category: null, company: null, longFormSummary: '<ul><li>Opens <cite data-ref="https://a.example/x"></cite></li></ul>', links: [{ sourceId: 7, role: 'source' }],
+          allDay: true, categories: [], company: null, longFormSummary: '<ul><li>Opens <cite data-ref="https://a.example/x"></cite></li></ul>', links: [{ sourceId: 7, role: 'source' }],
         },
       ],
       [

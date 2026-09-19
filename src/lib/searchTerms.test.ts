@@ -3,8 +3,8 @@ import { hasTerm, refineQuery, removeTerm, toggleTerm } from './searchTerms';
 
 describe('refineQuery', () => {
   it('adds a quoted term once', () => {
-    expect(refineQuery('', 'category', 'Space & Astronomy')).toBe('category:"Space & Astronomy"');
-    expect(refineQuery('category:Movies', 'category', 'movies')).toBe('category:Movies');
+    expect(refineQuery('', 'tag', 'Space & Astronomy')).toBe('tag:"Space & Astronomy"');
+    expect(refineQuery('tag:Movies', 'tag', 'movies')).toBe('tag:Movies');
   });
 });
 
@@ -23,9 +23,9 @@ describe('removeTerm', () => {
 
 describe('toggleTerm', () => {
   it('adds a missing term and removes a present one', () => {
-    const added = toggleTerm('user:GameDesk', 'category', 'Gaming & Entertainment');
-    expect(added).toBe('user:GameDesk category:"Gaming & Entertainment"');
-    expect(hasTerm(added, 'category', 'Gaming & Entertainment')).toBe(true);
-    expect(toggleTerm(added, 'category', 'Gaming & Entertainment')).toBe('user:GameDesk');
+    const added = toggleTerm('user:GameDesk', 'tag', 'Gaming & Entertainment');
+    expect(added).toBe('user:GameDesk tag:"Gaming & Entertainment"');
+    expect(hasTerm(added, 'tag', 'Gaming & Entertainment')).toBe(true);
+    expect(toggleTerm(added, 'tag', 'Gaming & Entertainment')).toBe('user:GameDesk');
   });
 });

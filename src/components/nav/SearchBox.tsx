@@ -3,7 +3,7 @@
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { Fragment, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
-import { canonicalCategory } from '@/lib/categories';
+import { canonicalCategory, isCategory } from '@/lib/categories';
 import { api } from '@/lib/client/api';
 import { hrefKeepingDate } from '@/lib/client/returnSpot';
 import { useSession } from '@/lib/client/session';
@@ -46,23 +46,24 @@ function toItems(query: string): QueryPart[] {
 // spelling the site uses (the category list's, a user's leading @).
 function termLabel(part: TermPart) {
   if (part.field === 'user') return { field: null, value: `@${part.value.replace(/^@+/, '')}` };
-  return { field: part.field, value: part.field === 'category' ? canonicalCategory(part.value) : part.value };
+  return { field: part.field, value: isCategory(part.value) ? canonicalCategory(part.value) : part.value };
 }
 
-// One row of the suggestions: a category or tag to filter by, or a pin's title
-// to search for.
+// One row of the suggestions: a category or other tag to filter by (both
+// tag: terms), or a pin's title to search for.
 type Suggestion =
   | { kind: 'category'; name: string; count: number }
   | { kind: 'tag'; name: string; count: number }
   | { kind: 'pin'; pin: PinJson };
 
-type AutocompleteJson = { pins?: PinJson[]; categories?: { name: string; count: number }[]; tags?: TagCount[] };
+type AutocompleteJson = { pins?: PinJson[]; tags?: TagCount[] };
 
-// The rows in the order they show: categories, then tags, then pins.
+// The rows in the order they show: categories, then other tags, then pins.
 function toSuggestions(res: AutocompleteJson): Suggestion[] {
+  const tags = res.tags || [];
   return [
-    ...(res.categories || []).map((c): Suggestion => ({ kind: 'category', name: canonicalCategory(c.name), count: c.count })),
-    ...(res.tags || []).map((t): Suggestion => ({ kind: 'tag', name: t.name, count: t.count })),
+    ...tags.filter((t) => t.kind === 'category').map((c): Suggestion => ({ kind: 'category', name: canonicalCategory(c.name), count: c.count })),
+    ...tags.filter((t) => t.kind !== 'category').map((t): Suggestion => ({ kind: 'tag', name: t.name, count: t.count })),
     ...(res.pins || []).map((pin): Suggestion => ({ kind: 'pin', pin })),
   ];
 }
@@ -71,7 +72,7 @@ const GROUP_LABEL: Record<Suggestion['kind'], string> = { category: 'Categories'
 
 // The navbar search: suggestions (matching categories, tags and titles) as you type, Enter to search, and a
 // Watched-only toggle for signed-in users (lg and up; below, it is in the drawer). The query sits in the box as items:
-// label terms (user:, company:, category:, @name) as pills and free text as
+// label terms (user:, company:, tag:, @name) as pills and free text as
 // plain runs. The text field only ever holds the one item being edited -
 // clicking an item opens just that one, in its place, and leaving it (or
 // opening another) puts what was typed back as items. Otherwise the field
@@ -247,7 +248,7 @@ export function SearchBox() {
   }
 
   // Searches for a picked suggestion: a category or tag takes the typed text's
-  // place as a term (once), a pin's title as text.
+  // place as a tag: term (once), a pin's title as text.
   function pick(suggestion: Suggestion) {
     if (suggestion.kind === 'pin') {
       setDraft(suggestion.pin.title);
@@ -255,7 +256,7 @@ export function SearchBox() {
       return;
     }
     const rest = query('');
-    submit(hasTerm(rest, suggestion.kind, suggestion.name) ? rest : query(term(suggestion.kind, suggestion.name)));
+    submit(hasTerm(rest, 'tag', suggestion.name) ? rest : query(term('tag', suggestion.name)));
   }
 
   // Puts the field's text back as items and moves the field to `at` (counted

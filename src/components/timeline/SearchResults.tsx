@@ -19,7 +19,6 @@ import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, pinDayKey, pinTense, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { CardPin, SearchPage } from '@/lib/types';
-import { categoryPillSummary, SearchCategoryFilter } from './CategoryFilter';
 import { TagCloud, tagPillSummary } from './TagCloud';
 import { FloatingControls } from './FloatingControls';
 import { TimeBlock, TodayMarker } from './TimeBlock';
@@ -112,7 +111,7 @@ export function SearchResults({
 }) {
   const timeZone = useTimeZone(serverTimeZone);
   const [postedWithin, setPostedWithin] = useState<string | null>(initialView.postedWithin ?? DEFAULT_POSTED_WITHIN);
-  // Any search can sort: a filter-only one (category:, user:) has no scores, so
+  // Any search can sort: a filter-only one (tag:, user:) has no scores, so
   // by relevance it keeps date order but still gets the grid and start filter.
   const canSort = !!query.trim();
   const [sortBy, setSortBy] = useState<SortBy>(initialPage.sort);
@@ -385,16 +384,6 @@ export function SearchResults({
           summaryIsPostedWithin={!searchedUser}
           onToday={sortBy === 'date' && bags.length && showsToday ? holdToday : undefined}
           sort={canSort ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : undefined}
-          category={{
-            summary: categoryPillSummary(query),
-            control: (
-              <SearchCategoryFilter
-                query={query}
-                onlyWatched={onlyWatched}
-                createdSince={postedWithin ? offsetDate(new Date(serverNow), postedWithin, -1)?.toISOString() : null}
-              />
-            ),
-          }}
           tags={{
             summary: tagPillSummary(query),
             control: (

@@ -13,6 +13,7 @@ import Source from '../model/source';
 import { fetchJson } from '../util/fetchJson';
 import log from '../util/log';
 import { parseScrapedStocks, type ScrapedStock } from '@/lib/stocks';
+import { firstCategoryOf, parseCategories } from '@/lib/categories';
 import { parseTags } from '@/lib/tags';
 import { isStudioCategory, studioLocationByName } from '../studioLocation';
 import { awardsFor } from '../services/pinAwards';
@@ -20,8 +21,8 @@ import type { AwardEntry } from '@/lib/awards';
 import { sourceKind } from '@/lib/sourceKind';
 import { IN_PAGE_SCRAPE, type InPageResult } from './inPage';
 import { wikiImages } from './wikiImages';
-import { findScreenDetails, isScreenCategory, youtubeStill, type ScreenDetails } from './screen';
-import { findScoreMarket, scoreSiteFor, withScoreMarket, type ScoreMarket } from './scoreMarkets';
+import { findScreenDetails, isScreenCategory, SCREEN_CATEGORIES, youtubeStill, type ScreenDetails } from './screen';
+import { findScoreMarket, GAME_CATEGORIES, scoreSiteFor, withScoreMarket, type ScoreMarket } from './scoreMarkets';
 import { seriesPinFor } from './modelSeries';
 import { prequelPinFor } from './prequel';
 
@@ -269,15 +270,16 @@ async function webScrape(pageUrl: string): Promise<{
   const hasVideo = pin.media.some((m) => Number(m.type) === mediumID.youtube);
   const [{ fields, screen, scoreMarket }, found] = await Promise.all([
     extractPinFields(pageUrl, pageText).then(async (fields) => {
+      // The category that says what kind of work it is, of the ones it has.
       const work = {
         workTitle: fields?.workTitle,
         pinTitle: fields?.title,
-        category: fields?.category,
+        category: firstCategoryOf(fields?.categories, [...SCREEN_CATEGORIES, ...GAME_CATEGORIES]),
         year: fields?.startDateTime ? new Date(fields.startDateTime).getUTCFullYear() : undefined,
       };
       const [screen, scoreMarket] = await Promise.all([
-        isScreenCategory(fields?.category) ? findScreenDetails({ ...work, skipTrailer: hasVideo }) : undefined,
-        scoreSiteFor(fields?.category) ? findScoreMarket(work) : undefined,
+        isScreenCategory(fields?.categories) ? findScreenDetails({ ...work, skipTrailer: hasVideo }) : undefined,
+        scoreSiteFor(fields?.categories) ? findScoreMarket(work) : undefined,
       ]);
       return { fields, screen, scoreMarket };
     }),
@@ -288,7 +290,7 @@ async function webScrape(pageUrl: string): Promise<{
   const trailer = applyScreenDetails(pin, screen, scoreMarket);
   await topUpImages(pin, fields);
   // A film, series or anime's awards, by the work's own title and the pin's.
-  const awards = isScreenCategory(pin.category)
+  const awards = isScreenCategory(pin.categories)
     ? await awardsFor([fields?.workTitle, pin.title]).catch((err) => {
         log.warn('award lookup failed:', (err as Error).message);
         return [];
@@ -382,7 +384,7 @@ function unwrapEmbedly(url: string) {
 // particular: with no place from the page, it goes on the map at the
 // studio's headquarters (Wikidata, src/server/studioLocation.ts).
 async function placeAtStudioHq(pin: Pin): Promise<void> {
-  if (pin.latitude != null || pin.address || !pin.company || !isStudioCategory(pin.category)) return;
+  if (pin.latitude != null || pin.address || !pin.company || !isStudioCategory(pin.categories)) return;
   const hq = await studioLocationByName(pin.company, pin.companyWikiUrl);
   if (!hq) return;
   pin.address = hq.address;
@@ -424,7 +426,7 @@ function applyExtracted(pin: Pin, fields: ExtractedFields | null): Pin {
     pin.companyWikiUrl = fields.companyWikiUrl || undefined;
   }
 
-  if (fields.category) pin.category = fields.category;
+  if (fields.categories?.length) pin.categories = parseCategories(fields.categories);
   if (fields.amazonUrl) pin.addMerchant(new Merchant({ label: 'Amazon', url: fields.amazonUrl }));
   if (fields.bestBuyUrl) pin.addMerchant(new Merchant({ label: 'Best Buy', url: fields.bestBuyUrl }));
   if (fields.longFormSummary) pin.longFormSummary = fields.longFormSummary;

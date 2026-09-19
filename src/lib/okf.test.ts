@@ -44,7 +44,7 @@ const pin: OkfPin = {
   utcStartDateTime: '2020-10-03T00:00:00Z',
   utcEndDateTime: null,
   allDay: true,
-  category: 'Infrastructure',
+  categories: ['Infrastructure & Transportation'],
   company: 'Consorzio Venezia Nuova',
   longFormSummary:
     '<ul><li>The 78th gate is installed <cite data-ref="https://www.youtube.com/watch?v=4xnsKL8B9JA"></cite><cite data-ref="https://en.wikipedia.org/wiki/MOSE"></cite></li><li>Cost &amp; delays <cite data-ref="https://gone.example/x"></cite></li></ul>',
@@ -162,7 +162,7 @@ describe('okfBundle tags', () => {
   const concept = files.get('pins/930-consorzio-venezia-nuova-installs-the-last-of-mose-s-78-flood.md')!;
 
   it('writes the tags into the pin concept’s frontmatter and links their concepts', () => {
-    expect(concept).toContain('tags: [infrastructure, consorzio venezia nuova, tokyo anime award festival 2024, mose]');
+    expect(concept).toContain('tags: ["infrastructure & transportation", consorzio venezia nuova, tokyo anime award festival 2024, mose]');
     expect(concept).toContain('* [Tokyo Anime Award Festival 2024](/tags/tokyo-anime-award-festival-2024.md)');
   });
 

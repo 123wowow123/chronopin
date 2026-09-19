@@ -108,7 +108,9 @@ export async function suggestDuplicates(pinId: number, { verify = true }: { veri
 async function evidencePins(ids: number[]): Promise<Map<number, EvidencePin>> {
   const rows = await db.query<EvidencePin>(
     `SELECT "p"."id", "p"."title", "p"."description", "p"."utcStartDateTime", "p"."utcEndDateTime", "p"."allDay",
-       "p"."address", "c"."name" AS "company", "p"."category", "p"."sourceUrl",
+       "p"."address", "c"."name" AS "company",
+       ARRAY(SELECT "cat"."name"::text FROM "PinTag" AS "cat" WHERE "cat"."pinId" = "p"."id" AND "cat"."kind" = 'category' ORDER BY "cat"."id") AS "categories",
+       "p"."sourceUrl",
        COALESCE((
          SELECT json_agg(json_build_object(
            'url', "r"."url", 'title', "r"."title", 'confidence', "r"."confidence",

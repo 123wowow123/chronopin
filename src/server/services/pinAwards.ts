@@ -3,6 +3,7 @@
 // `npm run media:awards`. Derived data: a sync replaces the pin's rows.
 
 import { matchAwards, type AwardEntry } from '@/lib/awards';
+import { PIN_CATEGORIES } from '../model/pinTag';
 import { isScreenCategory } from '../scrape/screen';
 import { awardCatalogue } from '../awards';
 import * as db from '../db';
@@ -16,11 +17,11 @@ export async function awardsFor(titles: (string | null | undefined)[]): Promise<
 
 // True when the pin's awards changed.
 export async function syncPinAwards(pinId: number): Promise<boolean> {
-  const [pin] = await db.query<{ title: string; category: string | null }>(
-    `SELECT "title", "category"::text AS "category" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`,
+  const [pin] = await db.query<{ title: string; categories: string[] }>(
+    `SELECT "title", ${PIN_CATEGORIES} AS "categories" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`,
     [pinId],
   );
-  const found = pin && isScreenCategory(pin.category) ? await awardsFor([pin.title]) : [];
+  const found = pin && isScreenCategory(pin.categories) ? await awardsFor([pin.title]) : [];
   const key = (a: { body: string; award: string; year: number; work: string; result: string }) => `${a.body}|${a.award}|${a.year}|${a.work}|${a.result}`;
   const stored = await db.query<{ body: string; award: string; year: number; work: string; result: string }>(
     `SELECT "body", "award", "year", "work", "result" FROM "PinAward" WHERE "pinId" = $1`,

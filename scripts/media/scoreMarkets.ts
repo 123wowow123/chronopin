@@ -13,6 +13,7 @@
 
 import '../env';
 import { parseArgs } from 'node:util';
+import { inCategories } from '@/server/model/pinTag';
 import * as db from '@/server/db';
 import { GAME_CATEGORIES, scoreRating } from '@/server/scrape/scoreMarkets';
 import { SCREEN_CATEGORIES } from '@/server/scrape/screen';
@@ -34,7 +35,7 @@ async function run() {
   const categories = [...SCREEN_CATEGORIES, ...GAME_CATEGORIES];
   const rows = await db.query<{ id: number; title: string }>(
     `SELECT "id", "title" FROM "Pin"
-     WHERE "category" = ANY($1::citext[]) AND "utcDeletedDateTime" IS NULL ${ids?.length ? 'AND "id" = ANY($2::int[])' : ''}
+     WHERE ${inCategories('$1')} AND "utcDeletedDateTime" IS NULL ${ids?.length ? 'AND "id" = ANY($2::int[])' : ''}
      ORDER BY "id"`,
     ids?.length ? [categories, ids] : [categories],
   );

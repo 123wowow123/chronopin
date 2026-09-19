@@ -1,10 +1,13 @@
-// Building search queries from a pin card's labels (user, company, category,
+// Building search queries from a pin card's labels (user, company, category tag,
 // date confidence, start date, posted date) and the tag cloud.
 // A click adds its term to the search already showing rather than replacing
 // it, so each click narrows the results (or, for a second company, widens
 // them). The server parses these in src/server/util/searchQuery.ts.
 
-export type LabelField = 'user' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'tag';
+export type LabelField = 'user' | 'company' | 'confidence' | 'date' | 'posted' | 'tag';
+// Fields a query may still hold but no label writes: category: is the old
+// name for a category's tag: term, which can only be taken out.
+type AnyField = LabelField | 'category';
 
 // Straight and smart double quotes - never part of a name, so they are
 // stripped from label values and treated alike when reading a query.
@@ -14,7 +17,7 @@ const DOUBLE_QUOTES = /["“”„‟″]/g;
 const SMART_SINGLE_QUOTES = /[‘’‚‛′]/g;
 
 // User names are stored with a leading "@", which user: leaves out.
-function termValue(field: LabelField, value: string) {
+function termValue(field: AnyField, value: string) {
   return field === 'user' ? value.replace(/^@+/, '') : value;
 }
 
@@ -26,7 +29,7 @@ export function term(field: LabelField, value: string): string {
 
 // Every spelling of a term the server accepts - bare, value quoted or whole
 // term quoted, either kind of quote - lowercased, for matching a normalized query.
-function termForms(field: LabelField, value: string): string[] {
+function termForms(field: AnyField, value: string): string[] {
   const lower = termValue(field, value).toLowerCase();
   const values = field === 'user' ? [lower, `@${lower}`] : [lower];
   return values.reduce<string[]>(
@@ -49,13 +52,13 @@ function normalize(query: string) {
 
 // Whether the query already holds this term in any form the server accepts -
 // bare, value quoted or whole term quoted, either kind of quote, any case.
-export function hasTerm(query: string, field: LabelField, value: string): boolean {
+export function hasTerm(query: string, field: AnyField, value: string): boolean {
   const normalized = normalize(query);
   return termForms(field, value).some((form) => normalized.includes(` ${form} `));
 }
 
 // The query without this term, in whichever forms it was written.
-export function removeTerm(query: string, field: LabelField, value: string): string {
+export function removeTerm(query: string, field: AnyField, value: string): string {
   let rest = query;
   for (const form of termForms(field, value)) {
     let at: number;
