@@ -14,6 +14,7 @@ import AiFeedback from '@/server/model/aiFeedback';
 import PinDuplicate from '@/server/model/pinDuplicate';
 import CompanyRelation from '@/server/model/companyRelation';
 import PinTicker from '@/server/model/pinTicker';
+import PinTag from '@/server/model/pinTag';
 import Source from '@/server/model/source';
 import log from '@/server/util/log';
 import { excludeE2e } from './excludeE2e';
@@ -30,6 +31,7 @@ const { values: flags } = parseArgs({
     aifeedbackfile: { type: 'string', default: './scripts/backup/seedAiFeedback.json' },
     sourcefile: { type: 'string', default: './scripts/backup/seedSources.json' },
     stockfile: { type: 'string', default: './scripts/backup/seedStocks.json' },
+    tagfile: { type: 'string', default: './scripts/backup/seedTags.json' },
     companyfile: { type: 'string', default: './scripts/backup/seedCompanies.json' },
     aphelionfile: { type: 'string', default: './scripts/backup/aphelion.json' },
     equinoxfile: { type: 'string', default: './scripts/backup/equinox.json' },
@@ -66,7 +68,9 @@ async function saveDB() {
   // Every pin, soft-deleted ones included, however far back it starts.
   const { pins: all } = await FullPins.queryAll();
   // Tickers are in seedStocks.json; the view's copy on each pin is left out.
-  const pins = all.map(({ stocks: _stocks, ...pin }) => pin);
+  // Awards are derived (npm run media:awards puts them back). Tags are in
+  // seedTags.json, and the award ones follow the awards.
+  const pins = all.map(({ stocks: _stocks, awards: _awards, tags: _tags, ...pin }) => pin);
   const data = excludeE2e({
     users: await Users.getAll(BACKUP_USER_PROPS),
     pins,
@@ -137,6 +141,10 @@ async function saveDB() {
     prices: stocks.prices.filter((p) => keptTickerIds.has(p.pinTickerId)),
     relations: (await CompanyRelation.getAll()).filter((r) => keptCompanyIds.has(r.companyId)),
   });
+
+  // Pin tags (0038): the ones typed in the form and the awards pins' text names.
+  console.log('Backup Tags');
+  writeJson(flags.tagfile, (await PinTag.getAll()).filter((t) => keptPinIds.has(t.pinId)));
 
   console.log('Data Backup Complete');
 }
@@ -264,6 +272,14 @@ async function seedDB() {
       await PinTicker.restore(stocks);
     } catch (error) {
       log.error('Stocks Save Error', JSON.stringify(error));
+    }
+  }
+
+  if (existsSync(flags.tagfile)) {
+    try {
+      await PinTag.restore(readJson(flags.tagfile));
+    } catch (error) {
+      log.error('Tags Save Error', JSON.stringify(error));
     }
   }
 

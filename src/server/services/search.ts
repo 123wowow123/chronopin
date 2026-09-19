@@ -1,5 +1,5 @@
 // Pin search: free text goes to the FAISS service for its best matches; label
-// terms (user:, company:, category:, confidence:), the Watch choice and the
+// terms (user:, company:, category:, confidence:, tag:), the Watch choice and the
 // time filters narrow them in the database, which also pages the results.
 
 import config from '../config';
@@ -11,6 +11,7 @@ import { resolveCreatedSince } from '../util/createdFilter';
 import { hasFilters, parseSearchQuery, type SearchQuery } from '../util/searchQuery';
 import { timeZoneOrUtc } from '../viewer';
 import { isSpan, offsetDate } from '@/lib/postedSpan';
+import type { TagCount } from '@/lib/tags';
 
 // timeZone: the zone date: and posted: days are the viewer's in (UTC when absent).
 type SearchOptions = { userId?: number | null; onlyWatched?: boolean; timeZone?: string };
@@ -162,6 +163,17 @@ export async function searchCategoryCounts(
   const query = { ...parseSearchQuery(searchText), categories: [] };
   const rows = await Pins.countSearchByCategory({ ...(await searchFilter(query, options)), createdSince: options.createdSince });
   return Object.fromEntries(rows.map((row) => [row.category || '', row.count]));
+}
+
+// The tag cloud's tags for a search: its results' tags, busiest first, with
+// its tag: terms left out as the category pills leave out category: ones.
+export async function searchTagCounts(
+  searchText: string,
+  limit: number,
+  options: SearchOptions & { createdSince?: Date | null } = {},
+): Promise<TagCount[]> {
+  const query = { ...parseSearchQuery(searchText), tags: [] };
+  return Pins.countSearchTags({ ...(await searchFilter(query, options)), createdSince: options.createdSince }, limit);
 }
 
 // An empty search (not the Watch list) matches nothing, rather than every pin.

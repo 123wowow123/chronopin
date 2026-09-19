@@ -108,4 +108,38 @@ if (!g.__chronopinPinListeners) {
   };
   pinEvents.on('save', placeStudio);
   pinEvents.on('update', placeStudio);
+
+  // A film, series or anime's awards, from the award bodies' own pages
+  // (services/pinAwards.ts); a new title can match a different work.
+  const syncAwards = (pin: Row) => {
+    import('./services/pinAwards')
+      .then(({ syncPinAwards }) => syncPinAwards(Number(pin.id)))
+      .then((changed) => (changed ? import('./services/cache').then(({ invalidatePin }) => invalidatePin(Number(pin.id))) : undefined))
+      .catch((err) => log.warn(`awards sync failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', syncAwards);
+  pinEvents.on('update', syncAwards);
+
+  // A film, show or game's review score from Kalshi's markets on it
+  // (services/pinScoreMarket.ts); a pin posted by API without a scrape gets
+  // it here, and an edit refreshes a forecast.
+  const syncScoreMarket = (pin: Row) => {
+    import('./services/pinScoreMarket')
+      .then(({ syncPinScoreMarket }) => syncPinScoreMarket(Number(pin.id)))
+      .then((sync) => (sync ? import('./services/cache').then(({ invalidatePin }) => invalidatePin(Number(pin.id))) : undefined))
+      .catch((err) => log.warn(`score market sync failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', syncScoreMarket);
+  pinEvents.on('update', syncScoreMarket);
+
+  // The awards the pin's description and summary name, as tags
+  // (model/pinTag.ts); the award bodies' own tags come with syncAwards.
+  const syncAutoTags = (pin: Row) => {
+    import('./model/pinTag')
+      .then(({ default: PinTag }) => PinTag.syncAutoTags(Number(pin.id)))
+      .then((changed) => (changed ? import('./services/cache').then(({ invalidatePin }) => invalidatePin(Number(pin.id))) : undefined))
+      .catch((err) => log.warn(`tag sync failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', syncAutoTags);
+  pinEvents.on('update', syncAutoTags);
 }

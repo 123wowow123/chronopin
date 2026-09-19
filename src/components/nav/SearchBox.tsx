@@ -9,6 +9,8 @@ import { hrefKeepingDate } from '@/lib/client/returnSpot';
 import { useSession } from '@/lib/client/session';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { formatStart } from '@/lib/format';
+import { hasTerm, term } from '@/lib/searchTerms';
+import type { TagCount } from '@/lib/tags';
 import type { PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery, type QueryPart } from '@/server/util/searchQuery';
 
@@ -47,7 +49,27 @@ function termLabel(part: TermPart) {
   return { field: part.field, value: part.field === 'category' ? canonicalCategory(part.value) : part.value };
 }
 
-// The navbar search: suggestions by title as you type, Enter to search, and a
+// One row of the suggestions: a category or tag to filter by, or a pin's title
+// to search for.
+type Suggestion =
+  | { kind: 'category'; name: string; count: number }
+  | { kind: 'tag'; name: string; count: number }
+  | { kind: 'pin'; pin: PinJson };
+
+type AutocompleteJson = { pins?: PinJson[]; categories?: { name: string; count: number }[]; tags?: TagCount[] };
+
+// The rows in the order they show: categories, then tags, then pins.
+function toSuggestions(res: AutocompleteJson): Suggestion[] {
+  return [
+    ...(res.categories || []).map((c): Suggestion => ({ kind: 'category', name: canonicalCategory(c.name), count: c.count })),
+    ...(res.tags || []).map((t): Suggestion => ({ kind: 'tag', name: t.name, count: t.count })),
+    ...(res.pins || []).map((pin): Suggestion => ({ kind: 'pin', pin })),
+  ];
+}
+
+const GROUP_LABEL: Record<Suggestion['kind'], string> = { category: 'Categories', tag: 'Tags', pin: 'Pins' };
+
+// The navbar search: suggestions (matching categories, tags and titles) as you type, Enter to search, and a
 // Watched-only toggle for signed-in users (lg and up; below, it is in the drawer). The query sits in the box as items:
 // label terms (user:, company:, category:, @name) as pills and free text as
 // plain runs. The text field only ever holds the one item being edited -
@@ -76,7 +98,7 @@ export function SearchBox() {
   const [editing, setEditing] = useState(false);
   const [choice, setChoice] = useState(urlChoice);
   const watchedOnly = choice === WATCHED;
-  const [suggestions, setSuggestions] = useState<PinJson[]>([]);
+  const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(-1);
   const requestId = useRef(0);
@@ -212,15 +234,28 @@ export function SearchBox() {
     // to read. requestId still settles answers that arrive out of order.
     suggestTimer.current = setTimeout(async () => {
       try {
-        const res = await api.get<{ pins: PinJson[] }>(`/api/pins/autocomplete?q=${encodeURIComponent(value)}`);
+        const res = await api.get<AutocompleteJson>(`/api/pins/autocomplete?q=${encodeURIComponent(value)}`);
         if (id === requestId.current) {
-          setSuggestions(res.pins || []);
-          setOpen((res.pins || []).length > 0);
+          const next = toSuggestions(res);
+          setSuggestions(next);
+          setOpen(next.length > 0);
         }
       } catch {
         // suggestions are optional
       }
     }, SUGGEST_DELAY_MS);
+  }
+
+  // Searches for a picked suggestion: a category or tag takes the typed text's
+  // place as a term (once), a pin's title as text.
+  function pick(suggestion: Suggestion) {
+    if (suggestion.kind === 'pin') {
+      setDraft(suggestion.pin.title);
+      submit(query(suggestion.pin.title));
+      return;
+    }
+    const rest = query('');
+    submit(hasTerm(rest, suggestion.kind, suggestion.name) ? rest : query(term(suggestion.kind, suggestion.name)));
   }
 
   // Puts the field's text back as items and moves the field to `at` (counted
@@ -317,7 +352,8 @@ export function SearchBox() {
       className="relative flex w-full min-w-0 items-stretch gap-1.5"
       onSubmit={(event) => {
         event.preventDefault();
-        submit(query(active >= 0 ? suggestions[active].title : draft));
+        if (active >= 0) pick(suggestions[active]);
+        else submit(query());
       }}
     >
       <label htmlFor="site-search" className="sr-only">
@@ -432,26 +468,45 @@ export function SearchBox() {
           role="listbox"
           className="floating fixed inset-x-3 top-[60px] z-50 max-h-[min(28rem,calc(100dvh-5rem))] overflow-auto p-1.5 sm:absolute sm:inset-x-0 sm:top-full sm:mt-2"
         >
-          {suggestions.map((pin, index) => (
-            <li
-              key={pin.id}
-              role="option"
-              aria-selected={index === active}
-              className={`flex cursor-pointer items-start gap-3 rounded-lg px-3 py-2.5 text-sm ${index === active ? 'bg-raised' : ''}`}
-              onMouseEnter={() => setActive(index)}
-              onMouseDown={(event) => {
-                event.preventDefault();
-                setDraft(pin.title);
-                submit(query(pin.title));
-              }}
-            >
-              <Icon name="search" className="mt-0.5 size-3.5 shrink-0 text-faint" />
-              <span className="min-w-0">
-                <span className="line-clamp-2 text-ink sm:line-clamp-1">{pin.title}</span>
-                <span className="block text-xs text-subtle">{formatStart(pin, timeZone)}</span>
-              </span>
-            </li>
-          ))}
+          {suggestions.map((suggestion, index) => {
+            const key = suggestion.kind === 'pin' ? `pin:${suggestion.pin.id}` : `${suggestion.kind}:${suggestion.name}`;
+            const header = index === 0 || suggestions[index - 1].kind !== suggestion.kind;
+            return (
+              <Fragment key={key}>
+                {header ? (
+                  <li role="presentation" className={`px-3 pb-1 text-[11px] font-semibold tracking-wide text-faint uppercase ${index ? 'pt-2.5' : 'pt-1'}`}>
+                    {GROUP_LABEL[suggestion.kind]}
+                  </li>
+                ) : null}
+                <li
+                  role="option"
+                  aria-selected={index === active}
+                  className={`flex cursor-pointer items-start gap-3 rounded-lg px-3 py-2.5 text-sm ${index === active ? 'bg-raised' : ''}`}
+                  onMouseEnter={() => setActive(index)}
+                  onMouseDown={(event) => {
+                    event.preventDefault();
+                    pick(suggestion);
+                  }}
+                >
+                  {suggestion.kind === 'pin' ? (
+                    <>
+                      <Icon name="search" className="mt-0.5 size-3.5 shrink-0 text-faint" />
+                      <span className="min-w-0">
+                        <span className="line-clamp-2 text-ink sm:line-clamp-1">{suggestion.pin.title}</span>
+                        <span className="block text-xs text-subtle">{formatStart(suggestion.pin, timeZone)}</span>
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <Icon name={suggestion.kind === 'tag' ? 'tag' : 'sliders'} className="mt-0.5 size-3.5 shrink-0 text-faint" />
+                      <span className="min-w-0 flex-1 truncate text-ink">{suggestion.name}</span>
+                      <span className="shrink-0 text-xs text-subtle tabular-nums">{suggestion.count}</span>
+                    </>
+                  )}
+                </li>
+              </Fragment>
+            );
+          })}
         </ul>
       ) : null}
     </form>

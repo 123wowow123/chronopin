@@ -3,9 +3,11 @@ import * as db from '../db';
 import type { Row } from '../db';
 import BasePins from './basePins';
 import Pin from './pin';
+import PinTag from './pinTag';
 import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
+import { tagGroupPatterns } from '@/lib/tags';
 
-export type PinSearchFilters = { userNames: string[]; companies: string[]; categories: string[]; confidences: string[]; dates: string[]; postedDays: string[] };
+export type PinSearchFilters = { userNames: string[]; companies: string[]; categories: string[]; confidences: string[]; dates: string[]; postedDays: string[]; tags: string[] };
 
 // Everything a search narrows pins to. hits are a free-text search's matches
 // with their scores (null when the search has no free text).
@@ -222,6 +224,26 @@ export default class Pins extends BasePins<Pin> {
     );
   }
 
+  // Search results' tags with how many results carry each, busiest first.
+  static countSearchTags(filter: SearchFilter, limit: number) {
+    const { from, where, params } = searchClauses(filter);
+    return PinTag.count(from, where, params, limit);
+  }
+
+  // Tags across the whole timeline (the pins countTimelineByCategory counts).
+  static countTimelineTags(createdSince: Date | null | undefined, minConfidence: number | null, limit: number) {
+    return PinTag.count(
+      'FROM "Pin"',
+      [
+        '"Pin"."utcDeletedDateTime" IS NULL',
+        '($1::timestamptz IS NULL OR "Pin"."utcCreatedDateTime" >= $1)',
+        `($2::integer IS NULL OR COALESCE(${pinConfidenceOf('Pin')}, $2) >= $2)`,
+      ],
+      [createdSince || null, minConfidence],
+      limit,
+    );
+  }
+
   // Every live pin's id and last change, oldest first, for the sitemap.
   static async listForSitemap(offset: number, limit: number) {
     return db.query<{ id: number; title: string; lastModified: Date }>(
@@ -405,6 +427,8 @@ const PAGE_COLUMNS = `
   "Pin"."utcEndDateTime",
   "Pin"."sourceStartDateTime",
   "Pin"."sourceEndDateTime",
+  "Pin"."originalStartDate",
+  "Pin"."delayReasoning",
   "Pin"."allDay",
   "Pin"."userId",
   "Pin"."utcCreatedDateTime",
@@ -633,6 +657,10 @@ function searchClauses(filter: SearchFilter) {
   }
   if (filter.confidences.length) {
     where.push(`"Pin"."dateConfidence"::citext = ANY(${add(filter.confidences)}::citext[])`);
+  }
+  // Any of these tags (PinTagView: the form's, the prose's and the awards').
+  if (filter.tags.length) {
+    where.push(`EXISTS (SELECT 1 FROM "PinTagView" AS "tagged" WHERE "tagged"."pinId" = "Pin"."id" AND ("tagged"."name" = ANY(${add(filter.tags)}::citext[]) OR "tagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.tags))}::text[])))`);
   }
   // Days as instant ranges, so the start and created indexes serve them (and
   // BC days need no date arithmetic in SQL). A date: day is the timeline's:

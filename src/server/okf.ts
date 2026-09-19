@@ -1,5 +1,6 @@
 import { okfBundle, type OkfPin, type OkfSource } from '@/lib/okf';
 import { absoluteUrl, pinPath } from '@/lib/seo';
+import type { PinTagJson } from '@/lib/tags';
 import * as db from './db';
 import { getWikiRecheck } from './model/appSetting';
 import Source, { PinSource } from './model/source';
@@ -18,12 +19,20 @@ export async function loadOkfBundle(pinIds?: number[]): Promise<Map<string, stri
      ORDER BY "Pin"."id"`,
     [pinIds ?? null],
   );
+  const tagRows = pins.length
+    ? await db.query<PinTagJson & { pinId: number }>(
+        `SELECT "pinId", "name"::text AS "name", "kind", "source" FROM "PinTagView"
+         WHERE "pinId" = ANY($1::integer[]) ORDER BY "pinId", "kind" = 'award' DESC, lower("name")`,
+        [pins.map((pin) => pin.id)],
+      )
+    : [];
   const okfPins: OkfPin[] = [];
   const sourceIds = new Set<number>();
   for (const pin of pins) {
     const links = (await PinSource.forPin(pin.id)).filter((row) => !row.utcRemovedDateTime);
     links.forEach((row) => sourceIds.add(row.sourceId));
-    okfPins.push({ ...pin, url: absoluteUrl(pinPath(pin)), links: links.map(({ sourceId, role }) => ({ sourceId, role })) });
+    const tags = tagRows.filter((row) => row.pinId === pin.id).map(({ name, kind, source }) => ({ name, kind, source }));
+    okfPins.push({ ...pin, url: absoluteUrl(pinPath(pin)), links: links.map(({ sourceId, role }) => ({ sourceId, role })), tags });
   }
   const ids = [...sourceIds];
   const rows = ids.length

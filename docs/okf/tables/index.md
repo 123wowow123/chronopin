@@ -5,3 +5,4 @@
 * [OkfLintFinding](okf-lint-finding.md) - What okf:lint found, and what its costly checks last looked at
 * [PinSource](pin-source.md) - Which links a pin cites, and which wiki versions its summary has taken in
 * [UserWiki](user-wiki.md) - A signed-in user's preference wiki, which weighs their timeline's pick on crowded days
+* [PinTag](pin-tag.md) - A pin's tags, from the form, from awards its text names, and (in PinTagView) from the awards its work was up for

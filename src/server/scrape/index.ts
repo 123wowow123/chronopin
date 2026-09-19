@@ -13,11 +13,17 @@ import Source from '../model/source';
 import { fetchJson } from '../util/fetchJson';
 import log from '../util/log';
 import { parseScrapedStocks, type ScrapedStock } from '@/lib/stocks';
+import { parseTags } from '@/lib/tags';
 import { isStudioCategory, studioLocationByName } from '../studioLocation';
+import { awardsFor } from '../services/pinAwards';
+import type { AwardEntry } from '@/lib/awards';
 import { sourceKind } from '@/lib/sourceKind';
 import { IN_PAGE_SCRAPE, type InPageResult } from './inPage';
 import { wikiImages } from './wikiImages';
 import { findScreenDetails, isScreenCategory, youtubeStill, type ScreenDetails } from './screen';
+import { findScoreMarket, scoreSiteFor, withScoreMarket, type ScoreMarket } from './scoreMarkets';
+import { seriesPinFor } from './modelSeries';
+import { prequelPinFor } from './prequel';
 
 const { scrapeType, mediumID } = config;
 const NAVIGATION_WAIT_MS = 8000;
@@ -34,6 +40,9 @@ export async function scrape(pageUrl: string) {
   let pin: Pin;
   let trailer: Medium | undefined;
   let stocks: ScrapedStock[] | undefined;
+  let awards: AwardEntry[] | undefined;
+  let tags: string[] | undefined;
+  let respondTo: { id: number; title: string } | undefined;
   switch (domain) {
     case 'twitter.com':
     case 'x.com':
@@ -47,13 +56,27 @@ export async function scrape(pageUrl: string) {
       break;
     default:
       type = scrapeType.web;
-      ({ pin, trailer, stocks } = await webScrape(pageUrl));
+      ({ pin, trailer, stocks, awards, tags, respondTo } = await webScrape(pageUrl));
       break;
   }
   // trailer is also in media; the form keeps it alongside whichever picture
   // the author picks as the heading. stocks are the article's tickers, which
   // POST /api/pins adds once the pin is saved.
-  return Object.assign({}, pin.toJSON(), { type }, trailer ? { trailer: trailer.toJSON() } : {}, stocks?.length ? { stocks } : {});
+  // awards: what the work won or was nominated for, for the form to show; the
+  // pin's save matches them again from its title (services/pinAwards.ts).
+  // respondTo: the earlier season's (./prequel.ts) or model version's
+  // (./modelSeries.ts) pin this one follows on from, for the form to post it
+  // as a response to.
+  return Object.assign(
+    {},
+    pin.toJSON(),
+    { type },
+    trailer ? { trailer: trailer.toJSON() } : {},
+    stocks?.length ? { stocks } : {},
+    tags?.length ? { tags } : {},
+    awards?.length ? { awards: awards.map(({ workArticle: _article, ...a }) => a) } : {},
+    respondTo ? { respondTo } : {},
+  );
 }
 
 // The references found for a pin, and the summary they ground, when one was
@@ -157,7 +180,14 @@ export async function launchBrowser() {
   });
 }
 
-async function webScrape(pageUrl: string): Promise<{ pin: Pin; trailer?: Medium; stocks?: ScrapedStock[] }> {
+async function webScrape(pageUrl: string): Promise<{
+  pin: Pin;
+  trailer?: Medium;
+  stocks?: ScrapedStock[];
+  awards?: AwardEntry[];
+  tags?: string[];
+  respondTo?: { id: number; title: string };
+}> {
   const browser = await launchBrowser();
 
   let pageText = '';
@@ -234,28 +264,41 @@ async function webScrape(pageUrl: string): Promise<{ pin: Pin; trailer?: Medium;
   // After the browser is gone, so the page is not held open for the calls.
   // A film, series or anime is looked up as soon as the extractor names it,
   // alongside the reference search. A page that embeds a video of its own
-  // keeps that one rather than gaining a searched-for trailer.
+  // keeps that one rather than gaining a searched-for trailer. So is a
+  // film's, show's or game's review score on Kalshi (./scoreMarkets.ts).
   const hasVideo = pin.media.some((m) => Number(m.type) === mediumID.youtube);
-  const [{ fields, screen }, found] = await Promise.all([
-    extractPinFields(pageUrl, pageText).then(async (fields) => ({
-      fields,
-      screen: isScreenCategory(fields?.category)
-        ? await findScreenDetails({
-            workTitle: fields!.workTitle,
-            pinTitle: fields!.title,
-            category: fields!.category,
-            year: fields!.startDateTime ? new Date(fields!.startDateTime).getUTCFullYear() : undefined,
-            skipTrailer: hasVideo,
-          })
-        : undefined,
-    })),
+  const [{ fields, screen, scoreMarket }, found] = await Promise.all([
+    extractPinFields(pageUrl, pageText).then(async (fields) => {
+      const work = {
+        workTitle: fields?.workTitle,
+        pinTitle: fields?.title,
+        category: fields?.category,
+        year: fields?.startDateTime ? new Date(fields.startDateTime).getUTCFullYear() : undefined,
+      };
+      const [screen, scoreMarket] = await Promise.all([
+        isScreenCategory(fields?.category) ? findScreenDetails({ ...work, skipTrailer: hasVideo }) : undefined,
+        scoreSiteFor(fields?.category) ? findScoreMarket(work) : undefined,
+      ]);
+      return { fields, screen, scoreMarket };
+    }),
     findReferences(pageUrl, pageText),
   ]);
   applyExtracted(pin, fields);
   await placeAtStudioHq(pin);
-  const trailer = applyScreenDetails(pin, screen);
+  const trailer = applyScreenDetails(pin, screen, scoreMarket);
   await topUpImages(pin, fields);
-  return { pin: addReferences(pin, found), trailer, stocks: parseScrapedStocks(fields?.stocks) };
+  // A film, series or anime's awards, by the work's own title and the pin's.
+  const awards = isScreenCategory(pin.category)
+    ? await awardsFor([fields?.workTitle, pin.title]).catch((err) => {
+        log.warn('award lookup failed:', (err as Error).message);
+        return [];
+      })
+    : [];
+  // tags: the extracted ones, for the form's tags field; the awards the
+  // pin's text names are tagged again on save (model/pinTag.ts).
+  const tags = parseTags(fields?.tags) ?? [];
+  const respondTo = (await prequelPinFor(pin, pageUrl)) ?? (await seriesPinFor(pin));
+  return { pin: addReferences(pin, found), trailer, stocks: parseScrapedStocks(fields?.stocks), awards, tags, respondTo };
 }
 
 const imageCount = (pin: Pin) => pin.media.filter((m) => Number(m.type) === mediumID.image).length;
@@ -312,13 +355,12 @@ async function addLinkedImages(pin: Pin, text: string) {
   }
 }
 
-// Ratings onto the pin, and the trailer onto the end of its media (so the
-// page's own picture stays the default heading), with the trailer's still as
-// a picture when the page had none.
-function applyScreenDetails(pin: Pin, screen: ScreenDetails | undefined): Medium | undefined {
-  if (!screen) return undefined;
-  screen.ratings.forEach((r) => pin.addRating(new PinRating(r)));
-  if (!screen.trailer) return undefined;
+// Ratings onto the pin, with Kalshi's score for the work, and the trailer
+// onto the end of its media (so the page's own picture stays the default
+// heading), with the trailer's still as a picture when the page had none.
+function applyScreenDetails(pin: Pin, screen: ScreenDetails | undefined, scoreMarket: ScoreMarket | undefined): Medium | undefined {
+  withScoreMarket(screen?.ratings ?? [], scoreMarket).forEach((r) => pin.addRating(new PinRating(r)));
+  if (!screen?.trailer) return undefined;
   const hasImage = pin.media.some((m) => Number(m.type) === mediumID.image);
   const still = youtubeStill(screen.trailer.originalUrl!);
   if (!hasImage && still) pin.addMedium(new Medium(still));
@@ -371,6 +413,10 @@ function applyExtracted(pin: Pin, fields: ExtractedFields | null): Pin {
   if (fields.dateConfidence) {
     pin.dateConfidence = fields.dateConfidence;
     pin.dateConfidenceReasoning = fields.dateConfidenceReasoning || undefined;
+  }
+  if (fields.originalStartDate && /^\d{4}-\d{2}-\d{2}$/.test(fields.originalStartDate)) {
+    pin.originalStartDate = fields.originalStartDate;
+    pin.delayReasoning = fields.delayReasoning || undefined;
   }
 
   if (fields.company) {

@@ -337,7 +337,13 @@ export function timeAgo(instant: string | Date, now = Date.now()): string {
 // A rating the way its source shows it: Rotten Tomatoes and AniList as a
 // percentage ("92%"), everyone else as a score out of its maximum ("8.67/10",
 // Metacritic's "82/100").
-const PERCENT_SOURCES = new Set(['rotten tomatoes', 'anilist']);
+const PERCENT_SOURCES = new Set(['rotten tomatoes', 'anilist', 'kalshi rt forecast']);
+
+// A prediction market's forecast of a site's score (server/scrape/
+// scoreMarkets.ts): shown beside the reviews, but not a review itself.
+export function isForecastRating(rating: { source?: string }): boolean {
+  return /\bforecast$/i.test(rating.source ?? '');
+}
 
 export function ratingScore(score: number, scoreMax: number, source?: string): string {
   if (scoreMax === 100 && PERCENT_SOURCES.has((source ?? '').toLowerCase())) {
@@ -353,9 +359,13 @@ export function ratingScore(score: number, scoreMax: number, source?: string): s
 // weighted average), so this is a rough consensus rather than a real
 // statistic - it is shown as an average, never as a source's own score.
 // Undefined below two sources, where an "average" would just restate the
-// single chip beside it.
-export function averageRating(ratings: { score: number; scoreMax: number }[] | undefined): number | undefined {
-  const usable = (ratings ?? []).filter((r) => Number.isFinite(r.score) && Number.isFinite(r.scoreMax) && r.scoreMax > 0);
+// single chip beside it. A market's forecast is not a review, so not counted.
+export function reviewRatings<T extends { source?: string }>(ratings: T[] | undefined): T[] {
+  return (ratings ?? []).filter((r) => !isForecastRating(r));
+}
+
+export function averageRating(ratings: { score: number; scoreMax: number; source?: string }[] | undefined): number | undefined {
+  const usable = reviewRatings(ratings).filter((r) => Number.isFinite(r.score) && Number.isFinite(r.scoreMax) && r.scoreMax > 0);
   if (usable.length < 2) {
     return undefined;
   }

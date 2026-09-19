@@ -1018,10 +1018,10 @@
     "tickerNote": null,
     "utcTickerCheckedDateTime": "2026-09-19T05:21:11.843Z",
     "utcRelationsCheckedDateTime": null,
-    "hqAddress": null,
-    "hqLatitude": null,
-    "hqLongitude": null,
-    "utcHqCheckedDateTime": null,
+    "hqAddress": "622 Broadway, New York City, New York, United States",
+    "hqLatitude": 40.728888888889,
+    "hqLongitude": -73.99,
+    "utcHqCheckedDateTime": "2026-09-19T14:54:14.536Z",
     "utcCreatedDateTime": "2026-09-14T03:48:55.140Z",
     "utcUpdatedDateTime": "2026-09-14T03:49:13.275Z"
   },
@@ -9427,7 +9427,7 @@
     "hqAddress": null,
     "hqLatitude": null,
     "hqLongitude": null,
-    "utcHqCheckedDateTime": null,
+    "utcHqCheckedDateTime": "2026-09-19T14:41:43.828Z",
     "utcCreatedDateTime": "2026-09-15T23:50:07.565Z",
     "utcUpdatedDateTime": "2026-09-15T23:50:07.567Z"
   },
@@ -10561,7 +10561,7 @@
     "hqAddress": null,
     "hqLatitude": null,
     "hqLongitude": null,
-    "utcHqCheckedDateTime": null,
+    "utcHqCheckedDateTime": "2026-09-19T14:54:50.539Z",
     "utcCreatedDateTime": "2026-09-19T05:47:12.200Z",
     "utcUpdatedDateTime": "2026-09-19T05:47:12.203Z"
   },

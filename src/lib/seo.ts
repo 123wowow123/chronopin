@@ -3,7 +3,7 @@
 import type { Metadata } from 'next';
 import { blobUrl, siteDescription, siteName, siteUrl } from './appConfig';
 import { slugify } from './categories';
-import { plainText } from './format';
+import { plainText, reviewRatings } from './format';
 import type { PinJson } from './types';
 
 export function absoluteUrl(path: string): string {
@@ -128,6 +128,7 @@ export function pinJsonLd(pin: PinJson) {
     datePublished: pin.utcCreatedDateTime,
     dateModified: pin.utcUpdatedDateTime || pin.utcCreatedDateTime,
     ...(pin.category ? { articleSection: pin.category } : {}),
+    ...(pin.tags?.length ? { keywords: pin.tags.map((t) => t.name) } : {}),
     ...(pin.user?.userName ? { author: { '@type': 'Person', name: pin.user.userName } } : {}),
     publisher: { '@type': 'Organization', name: siteName, url: siteUrl },
     ...(pin.sourceUrl ? { isBasedOn: pin.sourceUrl } : {}),
@@ -135,10 +136,10 @@ export function pinJsonLd(pin: PinJson) {
     // Third-party critic scores (IMDb, Rotten Tomatoes, MyAnimeList, ...),
     // each its own scale - reported as separate Reviews rather than one
     // averaged AggregateRating, which would misrepresent sources that don't
-    // share a scale.
-    ...(pin.ratings?.length
+    // share a scale. A market's forecast of a score is not a review.
+    ...(reviewRatings(pin.ratings).length
       ? {
-          review: pin.ratings.map((r) => ({
+          review: reviewRatings(pin.ratings).map((r) => ({
             '@type': 'Review',
             author: { '@type': 'Organization', name: r.source },
             ...(r.url ? { url: r.url } : {}),

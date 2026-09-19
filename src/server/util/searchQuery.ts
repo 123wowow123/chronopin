@@ -3,6 +3,10 @@
 //
 //   user:ThePinGang company:"Electronic Arts" category:Software iphone
 //
+// tag: takes one of a pin's tags, as the tag cloud and the pin page write it
+// (tag:"Tokyo Anime Award Festival 2024"): what it was tagged with, the
+// awards its text names, or an award body's year its work was up for.
+//
 // confidence: takes a pin's date confidence level, as its badge shows it
 // (confidence:estimated); UNVERIFIED is the badge for the stored "unknown", so
 // either word works.
@@ -43,13 +47,14 @@ export type SearchQuery = {
   // were posted.
   dates: string[];
   postedDays: string[];
+  tags: string[];
   text: string;
 };
 
 const SMART_DOUBLE_QUOTES = /[“”„‟″]/g;
 const SMART_SINGLE_QUOTES = /[‘’‚‛′]/g;
 
-const FIELD = '(company|category|user|confidence|date|posted)';
+const FIELD = '(company|category|user|confidence|date|posted|tag)';
 const DAY_KEY = /^-?\d{4,6}-\d{2}-\d{2}$/;
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
@@ -69,7 +74,7 @@ const FIELD_TERM = new RegExp(
 
 const USER_TERM = /(^|\s)(@\S+)/g;
 
-export type TermField = 'user' | 'company' | 'category' | 'confidence' | 'date' | 'posted';
+export type TermField = 'user' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'tag';
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string }
@@ -129,6 +134,7 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
     confidences: [],
     dates: [],
     postedDays: [],
+    tags: [],
     text: '',
   };
 
@@ -144,7 +150,7 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
       // Anything but a day is left out rather than matching nothing.
       if (DAY_KEY.test(part.value)) addUnique(part.field === 'date' ? query.dates : query.postedDays, part.value);
     } else if (part.value) {
-      addUnique(part.field === 'company' ? query.companies : query.categories, part.value);
+      addUnique(part.field === 'company' ? query.companies : part.field === 'tag' ? query.tags : query.categories, part.value);
     }
   }
 
@@ -153,7 +159,7 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
 }
 
 export function hasFilters(query: SearchQuery): boolean {
-  return !!(query.userNames.length || query.companies.length || query.categories.length || query.confidences.length || query.dates.length || query.postedDays.length);
+  return !!(query.userNames.length || query.companies.length || query.categories.length || query.confidences.length || query.dates.length || query.postedDays.length || query.tags.length);
 }
 
 // Whether the viewer's time zone changes what the query matches: its days are
@@ -184,4 +190,9 @@ function addUnique(list: string[], value: string) {
   if (!list.some((existing) => existing.toLowerCase() === lower)) {
     list.push(value);
   }
+}
+
+// A Postgres regex (~*) matching text at the start of any word, the text taken literally.
+export function wordStartPattern(text: string): string {
+  return `(^|[^[:alnum:]])${text.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`;
 }

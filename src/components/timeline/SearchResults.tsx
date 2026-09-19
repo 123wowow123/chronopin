@@ -13,13 +13,14 @@ import { useTodayHold } from '@/lib/client/todayHold';
 import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
 import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';
-import { dayKeyIn, monthDayOf } from '@/lib/format';
+import { daysBetween, dayKeyIn, monthDayOf } from '@/lib/format';
 import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, eventSpanSummary, formatSpan, offsetDate, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSpan';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, pinDayKey, pinTense, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { CardPin, SearchPage } from '@/lib/types';
 import { categoryPillSummary, SearchCategoryFilter } from './CategoryFilter';
+import { TagCloud, tagPillSummary } from './TagCloud';
 import { FloatingControls } from './FloatingControls';
 import { TimeBlock, TodayMarker } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
@@ -233,7 +234,15 @@ export function SearchResults({
 
   const todayKey = dayKeyIn(serverNow, timeZone);
   const bags = useMemo(() => buildBags(datePins ?? [], [], timeZone), [datePins, timeZone]);
-  const showsToday = !searchedDays.length || searchedDays.includes(todayKey);
+  // Today only where the results cross it: some on or before it and some on
+  // or after it, loaded or on a page still to come. Results all on one side
+  // (a past award's winners) have no today in them.
+  const dateLinks = lists.date?.links;
+  const crossesToday =
+    !!bags.length &&
+    (daysBetween(bags[0].day, todayKey) >= 0 || !!dateLinks?.previous) &&
+    (daysBetween(todayKey, bags[bags.length - 1].day) >= 0 || !!dateLinks?.next);
+  const showsToday = crossesToday && (!searchedDays.length || searchedDays.includes(todayKey));
   const marker = showsToday ? resolveTodayMarker(bags, todayKey) : NO_TODAY_MARKER;
 
   const scrollToToday = () => {
@@ -380,6 +389,16 @@ export function SearchResults({
             summary: categoryPillSummary(query),
             control: (
               <SearchCategoryFilter
+                query={query}
+                onlyWatched={onlyWatched}
+                createdSince={postedWithin ? offsetDate(new Date(serverNow), postedWithin, -1)?.toISOString() : null}
+              />
+            ),
+          }}
+          tags={{
+            summary: tagPillSummary(query),
+            control: (
+              <TagCloud
                 query={query}
                 onlyWatched={onlyWatched}
                 createdSince={postedWithin ? offsetDate(new Date(serverNow), postedWithin, -1)?.toISOString() : null}

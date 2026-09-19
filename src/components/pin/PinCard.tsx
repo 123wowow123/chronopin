@@ -12,6 +12,7 @@ import { pinEvidence } from '@/lib/referenceConfidence';
 import type { PinTense } from '@/lib/timeline';
 import { CitedText } from './CitedText';
 import { DateConfidence, DateConfidenceReasoning } from './DateConfidence';
+import { DelayBadge } from './DelayBadge';
 import { PinConfidence } from './PinConfidence';
 import { CompanyTicker } from './CompanyTicker';
 import { PinCardOdds } from './PinOdds';
@@ -170,6 +171,7 @@ export function PinCard({
                   <StartTime pin={pin} serverTimeZone={serverTimeZone} search />
                   <WeatherIcon pinId={pin.id} hasPlace={hasPlace} />
                   <DateConfidence level={pin.dateConfidence} reasoning={pin.dateConfidenceReasoning} />
+                  <DelayBadge pin={pin} />
                   <PinConfidence evidence={pinEvidence(pin)} />
                 </>
               ) : null}

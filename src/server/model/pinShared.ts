@@ -92,7 +92,7 @@ export async function createPin<T extends Row>(pin: T, userId: number | null, { 
     'dateConfidence', 'dateConfidenceReasoning', 'companyId',
     'category', 'address', 'priceLowerBound', 'priceUpperBound', 'price',
     'priceCurrency', 'tip', 'utcStartDateTime', 'utcEndDateTime', 'allDay',
-    'sourceStartDateTime', 'sourceEndDateTime', 'userId', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime',
+    'sourceStartDateTime', 'sourceEndDateTime', 'originalStartDate', 'delayReasoning', 'userId', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime',
   ];
   const values = [
     pin.parentId, pin.title, pin.description, pin.sourceUrl, pin.longFormSummary,
@@ -100,7 +100,7 @@ export async function createPin<T extends Row>(pin: T, userId: number | null, { 
     pin.category, pin.address, pin.priceLowerBound, pin.priceUpperBound, pin.price,
     pin.priceCurrency, pin.tip, pin.utcStartDateTime, pin.utcEndDateTime,
     pin.allDay == null ? false : pin.allDay,
-    pin.sourceStartDateTime || null, pin.sourceEndDateTime || null, userId, pin.utcCreatedDateTime || new Date(), pin.utcUpdatedDateTime, pin.utcDeletedDateTime,
+    pin.sourceStartDateTime || null, pin.sourceEndDateTime || null, pin.originalStartDate || null, pin.delayReasoning || null, userId, pin.utcCreatedDateTime || new Date(), pin.utcUpdatedDateTime, pin.utcDeletedDateTime,
   ].map(nullIfUndefined);
 
   if (hasId) {

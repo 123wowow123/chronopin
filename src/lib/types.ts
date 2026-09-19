@@ -1,6 +1,9 @@
 // The JSON shapes the API and server components hand to the UI. Dates are
 // ISO strings once serialised.
 
+import type { PinAwardJson } from './awards';
+import type { PinTagJson } from './tags';
+
 import type { ThemePreference } from './theme';
 
 export type CardStock = { symbol: string; name: string | null; relation: 'company' | 'related' | 'supplier'; assetClass: 'stocks' | 'etf'; startPrice: number | null; startDay: string | null };
@@ -92,6 +95,10 @@ export type PinJson = {
   // dates are used instead (src/lib/dateClaims.ts).
   sourceStartDateTime?: string;
   sourceEndDateTime?: string;
+  // The day first promised before the start slipped ("2027-12-31"), and how
+  // that and the new date were found (src/lib/delay.ts).
+  originalStartDate?: string;
+  delayReasoning?: string;
   allDay?: boolean;
   utcCreatedDateTime?: string;
   utcUpdatedDateTime?: string;
@@ -118,6 +125,10 @@ export type PinJson = {
   ratings?: PinRatingJson[];
   // Its stock tickers, company first, with each one's close on the start date.
   stocks?: CardStock[];
+  // What the work won or was nominated for (film, series, anime pins).
+  awards?: PinAwardJson[];
+  // Its tags: its own, the awards its text names, its awards' bodies and years.
+  tags?: PinTagJson[];
 };
 
 // A pin ready for a card: its description already sanitised (on the server

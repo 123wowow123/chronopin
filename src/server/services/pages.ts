@@ -15,7 +15,8 @@ import { toJson, type NewPin, type PinJson, type SearchPage, type TimelinePage, 
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { UserPreference } from '@/lib/userWiki';
 import { TAGS } from './cache';
-import { readSearchRequest, searchCategoryCounts, searchPinsPage, type SearchSort } from './search';
+import { readSearchRequest, searchCategoryCounts, searchPinsPage, searchTagCounts, type SearchSort } from './search';
+import type { TagCount } from '@/lib/tags';
 import { getTimeline, timelineMinConfidence } from './timeline';
 import { resolveCreatedSince, type CreatedQuery } from '../util/createdFilter';
 import { dependsOnZone, parseSearchQuery } from '../util/searchQuery';
@@ -128,11 +129,14 @@ export async function pinById(id: number): Promise<PinJson | null> {
   return pin ? toJson<PinJson>(pin) : null;
 }
 
+// Tagged with every pin in the thread, so a change to any of them - a
+// response posted or moved (its parent's tag is invalidated too) - redraws it.
 export async function threadPins(id: number): Promise<PinJson[]> {
   'use cache';
   cacheLife('hours');
-  cacheTag(TAGS.pin(id));
-  return toJson<PinJson[]>((await Pins.getThreadPins(id)).pins);
+  const pins = toJson<PinJson[]>((await Pins.getThreadPins(id)).pins);
+  cacheTag(TAGS.pin(id), ...pins.map((p) => TAGS.pin(p.id)));
+  return pins;
 }
 
 // The pins in a pin's confirmed duplicate group, itself included, best ranked
@@ -244,6 +248,41 @@ async function cachedCategoryCounts(query: string, created: CreatedQuery, timeZo
 
 function runCategoryCounts(query: string, userId: number | null, onlyWatched: boolean, created: CreatedQuery, timeZone: string) {
   return searchCategoryCounts(query, { userId, onlyWatched, timeZone, createdSince: resolveCreatedSince(created) });
+}
+
+// The tag cloud: the most used tags on the timeline (under its posted-within
+// span) or in a search's results. Cached like the category counts, since the
+// tags carry nothing per viewer; the Watch list is read per request.
+// The panel shows TAG_CLOUD_SIZE; its expanded cloud asks for up to TAG_CLOUD_MAX.
+export const TAG_CLOUD_SIZE = 60;
+export const TAG_CLOUD_MAX = 200;
+
+export async function timelineTagCounts(created: CreatedQuery, limit = TAG_CLOUD_SIZE): Promise<TagCount[]> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  return Pins.countTimelineTags(resolveCreatedSince(created), await timelineMinConfidence(), limit);
+}
+
+export async function searchPageTagCounts(
+  query: string,
+  userId: number | null,
+  onlyWatched: boolean,
+  created: CreatedQuery,
+  timeZone: string,
+  limit = TAG_CLOUD_SIZE,
+): Promise<TagCount[]> {
+  const zone = zoneFor(query, timeZone);
+  return onlyWatched && userId
+    ? searchTagCounts(query, limit, { userId, onlyWatched: true, timeZone: zone, createdSince: resolveCreatedSince(created) })
+    : cachedTagCounts(query, created, zone, limit);
+}
+
+async function cachedTagCounts(query: string, created: CreatedQuery, timeZone: string, limit: number): Promise<TagCount[]> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  return searchTagCounts(query, limit, { userId: null, onlyWatched: false, timeZone, createdSince: resolveCreatedSince(created) });
 }
 
 export async function pinComments(id: number) {

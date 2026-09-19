@@ -9,8 +9,11 @@ import type User from '@/server/model/user';
 import { invalidatePin } from '@/server/services/cache';
 import { addPinStocksQuietly } from '@/server/services/pinStocks';
 import { rejectDuplicateSourceUrl } from '@/server/services/duplicatePin';
+import { delayProblem } from '@/lib/delay';
 import { attributeReferences } from '@/lib/referenceAttribution';
 import { parseScrapedStocks } from '@/lib/stocks';
+import { parseTags } from '@/lib/tags';
+import PinTag from '@/server/model/pinTag';
 
 type Ctx = RouteContext<'/api/pins/[id]'>;
 
@@ -47,7 +50,10 @@ const update = route(async (request: NextRequest, ctx: Ctx) => {
   // Tickers in the body are added, never replace the pin's (pin page edits
   // them); leaving them out changes nothing.
   const stocks = parseScrapedStocks(body.stocks);
-  const referenceProblem = PinReference.problem(pin.references);
+  // Tags, when sent, are the pin's whole list (the form sends them all);
+  // left out, the pin keeps the ones it has.
+  const tags = parseTags(body.tags);
+  const referenceProblem = PinReference.problem(pin.references) ?? delayProblem(pin);
   if (referenceProblem) {
     throw new HttpError(400, referenceProblem);
   }
@@ -64,8 +70,11 @@ const update = route(async (request: NextRequest, ctx: Ctx) => {
   }
 
   const { pin: updated } = await pin.update();
+  if (tags) await PinTag.setUserTags(updated.id, tags);
   emitPinEvent('update', updated, { userId: user.id });
   invalidatePin(updated.id);
+  // A response moved between threads leaves one and joins the other.
+  for (const parentId of new Set([existing.parentId, updated.parentId])) if (parentId) invalidatePin(parentId);
   if (stocks.length) after(() => addPinStocksQuietly(updated.id, stocks));
 
   const { pin: stored } = await Pin.queryById(updated.id, user.id);

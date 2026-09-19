@@ -35,6 +35,8 @@ export type ExtractedFields = {
   longitude: number | null;
   dateConfidence: (typeof CONFIDENCE_LEVELS)[number];
   dateConfidenceReasoning: string | null;
+  originalStartDate: string | null;
+  delayReasoning: string | null;
   company: string | null;
   companyWikiUrl: string | null;
   category: string;
@@ -46,6 +48,7 @@ export type ExtractedFields = {
   allDay: boolean;
   longFormSummary: string | null;
   stocks: { symbol: string; name: string; relation: 'company' | 'related' | 'supplier'; note: string }[];
+  tags: string[];
 };
 
 const SCHEMA = {
@@ -93,6 +96,16 @@ const SCHEMA = {
       description:
         'One sentence naming the wording that decided dateConfidence, quoting the page, e.g. \'Stated as firm, per en.wikipedia.org: "...was completed in June 2026..."\'. Null when dateConfidence is "unknown".',
     },
+    originalStartDate: {
+      type: ['string', 'null'],
+      description:
+        'When the date has moved: the day the event was first promised for, before any delay, as "YYYY-MM-DD" in the same convention as startDateTime (a year alone is its last day, "2027-12-31"; a month its last day). Null when the date has not moved.',
+    },
+    delayReasoning: {
+      type: ['string', 'null'],
+      description:
+        'One sentence on how long the delay is and how you know, quoting the page, e.g. \'Stated: first "slated for 2027", now "projected for 2032".\' or \'Estimated: the page says only that opening "will slip"; comparable metro extensions have slipped about two years.\'. Null when originalStartDate is null.',
+    },
     company: {
       type: ['string', 'null'],
       description:
@@ -111,7 +124,7 @@ const SCHEMA = {
     workTitle: {
       type: ['string', 'null'],
       description:
-        'When category is Anime, Movies or TV Series: the film\'s or show\'s own official English title, with any season or part as it is officially styled, e.g. "Jujutsu Kaisen Season 2" or "Frieren: Beyond Journey\'s End" - not the event headline. Null for any other category.',
+        'When category is Anime, Movies or TV Series, or the pin is about one video game: the film\'s, show\'s or game\'s own official English title, with any season or part as it is officially styled, e.g. "Jujutsu Kaisen Season 2", "Frieren: Beyond Journey\'s End" or "Grand Theft Auto VI" - not the event headline. Null otherwise.',
     },
     amazonUrl: {
       type: ['string', 'null'],
@@ -153,6 +166,12 @@ const SCHEMA = {
         additionalProperties: false,
       },
     },
+    tags: {
+      type: 'array',
+      description:
+        'Up to 8 short tags a reader would search by: every award, prize or festival the work or subject won or was nominated at, as the body and year ("Tokyo Anime Award Festival 2024", "Crunchyroll Anime Awards 2025", "97th Academy Awards"), then named franchises, series, people, programmes or places central to the story ("Artemis", "Studio Ghibli"). Not the category, company or a word from the title alone.',
+      items: { type: 'string' },
+    },
     longFormSummary: {
       type: ['string', 'null'],
       description:
@@ -161,6 +180,7 @@ const SCHEMA = {
   },
   required: [
     'stocks',
+    'tags',
     'title',
     'description',
     'price',
@@ -170,6 +190,8 @@ const SCHEMA = {
     'longitude',
     'dateConfidence',
     'dateConfidenceReasoning',
+    'originalStartDate',
+    'delayReasoning',
     'company',
     'companyWikiUrl',
     'category',

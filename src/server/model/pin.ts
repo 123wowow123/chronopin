@@ -181,6 +181,7 @@ async function updatePinRow(pin: Pin, userId: number | null, query: QueryFn = db
     pin.category, pin.address, pin.priceLowerBound, pin.priceUpperBound, pin.price,
     pin.priceCurrency, pin.tip, pin.utcStartDateTime, pin.utcEndDateTime, pin.allDay,
     userId, pin.latitude, pin.longitude, pin.sourceStartDateTime || null, pin.sourceEndDateTime || null,
+    pin.originalStartDate || null, pin.delayReasoning || null,
   ].map((value) => (value === undefined ? null : value));
 
   // Every column is written, so a field missing from the pin is cleared - the
@@ -211,6 +212,8 @@ async function updatePinRow(pin: Pin, userId: number | null, query: QueryFn = db
       "location" = ${locationSql('$21', '$22')},
       "sourceStartDateTime" = $23,
       "sourceEndDateTime" = $24,
+      "originalStartDate" = $25,
+      "delayReasoning" = $26,
       "utcUpdatedDateTime" = now()
     WHERE "id" = $1`,
     values,

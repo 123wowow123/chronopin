@@ -10,11 +10,14 @@
 //   sources/<id>-<slug>.md         a link's main page, resource = the link
 //   sources/<id>-<slug>/index.md
 //   sources/<id>-<slug>/<n>-<slug>.md   its topic or part pages, nesting the same way
+//   tags/index.md
+//   tags/<slug>.md                 type: Award or Tag; the pins tagged with it
 //
 // Pure: the server loads the rows (src/server/okf.ts) and this renders them.
 
 import { urlKey } from './citations';
 import { slugify } from './categories';
+import type { PinTagJson } from './tags';
 
 export const OKF_VERSION = '0.2';
 
@@ -45,6 +48,8 @@ export type OkfPin = {
   company: string | null;
   longFormSummary: string | null;
   links: { sourceId: number; role: 'source' | 'reference' }[];
+  // Its tags (PinTagView), which become frontmatter tags and tag concepts.
+  tags?: PinTagJson[];
 };
 
 /* YAML frontmatter */
@@ -141,6 +146,9 @@ export function summaryMarkdown(html: string, footnoteOf: (url: string) => strin
 const nameOf = (id: number | string, title: string | null | undefined, fallback: string) =>
   `${id}-${slugify(title || '').slice(0, 60).replace(/-+$/, '') || fallback}`;
 
+// A tag's concept id: its name as a slug, so "Artemis" and "artemis" share one.
+const tagPath = (name: string) => `tags/${slugify(name).slice(0, 80).replace(/-+$/, '') || 'tag'}`;
+
 const indexEntry = (href: string, title: string, description?: string | null) =>
   `* [${title.replace(/[[\]]/g, '')}](${href})${description ? ` - ${description.replace(/\s+/g, ' ').trim()}` : ''}`;
 
@@ -204,7 +212,7 @@ export function okfBundle(pins: OkfPin[], sources: OkfSource[], { recheckDays = 
     const footnote = new Map(links.map((l) => [urlKey(l.source!.url), `source-${l.sourceId}`]));
     const summary = pin.longFormSummary ? summaryMarkdown(pin.longFormSummary, (url) => footnote.get(urlKey(url))) : '';
     const cited = new Set([...summary.matchAll(/\[\^([\w-]+)\]/g)].map((m) => m[1]));
-    const tags = [pin.category, pin.company].filter((t): t is string => !!t).map((t) => t.toLowerCase());
+    const tags = [...new Set([pin.category, pin.company, ...(pin.tags ?? []).map((t) => t.name)].filter((t): t is string => !!t).map((t) => t.toLowerCase()))];
     const body = [
       summary ? `# Summary\n\n${summary}` : '',
       links.length
@@ -218,6 +226,7 @@ export function okfBundle(pins: OkfPin[], sources: OkfSource[], { recheckDays = 
             )
             .join('\n')}`
         : '',
+      pin.tags?.length ? `# Tags\n\n${pin.tags.map((t) => indexEntry(`/${tagPath(t.name)}.md`, t.name)).join('\n')}` : '',
       links
         .filter((l) => cited.has(`source-${l.sourceId}`))
         .map((l) => `[^source-${l.sourceId}]: ${l.source!.title || l.source!.url}`)
@@ -250,6 +259,36 @@ export function okfBundle(pins: OkfPin[], sources: OkfSource[], { recheckDays = 
     );
   }
 
+  // One concept per tag, whatever its case, listing the pins that carry it.
+  const tagged = new Map<string, { tag: PinTagJson; pins: { pin: OkfPin; path: string }[] }>();
+  for (const entry of pinPaths) {
+    for (const tag of entry.pin.tags ?? []) {
+      const key = tagPath(tag.name);
+      const group = tagged.get(key) ?? { tag, pins: [] };
+      group.pins.push(entry);
+      tagged.set(key, group);
+    }
+  }
+  for (const [path, { tag, pins: withTag }] of tagged) {
+    files.set(
+      `${path}.md`,
+      `${frontmatter({
+        type: tag.kind === 'award' ? 'Award' : tag.kind === 'nomination' ? 'Nomination' : 'Tag',
+        title: tag.name,
+        description: `${withTag.length} pin(s) tagged ${tag.name}`,
+      })}\n\n# Pins\n\n${withTag.map(({ pin, path: p }) => indexEntry(`/${p}.md`, pin.title, pin.description)).join('\n')}\n`,
+    );
+  }
+  if (tagged.size) {
+    files.set(
+      'tags/index.md',
+      `# Tags\n\n${[...tagged]
+        .sort(([, a], [, b]) => a.tag.name.localeCompare(b.tag.name))
+        .map(([path, { tag, pins: withTag }]) => indexEntry(`${path.slice('tags/'.length)}.md`, tag.name, `${withTag.length} pin(s)`))
+        .join('\n')}\n`,
+    );
+  }
+
   files.set('pins/index.md', `# Pins\n\n${pinPaths.map(({ pin, path }) => indexEntry(`${path.slice('pins/'.length)}.md`, pin.title, pin.description)).join('\n')}\n`);
   files.set(
     'sources/index.md',
@@ -257,7 +296,9 @@ export function okfBundle(pins: OkfPin[], sources: OkfSource[], { recheckDays = 
   );
   files.set(
     'index.md',
-    `${frontmatter({ okf_version: OKF_VERSION })}\n\n# Chronopin\n\n${indexEntry('pins/', 'Pins', `${pins.length} event pin(s), each summarized from the wikis of the links it cites`)}\n${indexEntry('sources/', 'Sources', `${withWiki.length} link(s) - web pages, videos, posts and podcast episodes - each written up as a wiki`)}\n`,
+    `${frontmatter({ okf_version: OKF_VERSION })}\n\n# Chronopin\n\n${indexEntry('pins/', 'Pins', `${pins.length} event pin(s), each summarized from the wikis of the links it cites`)}\n${indexEntry('sources/', 'Sources', `${withWiki.length} link(s) - web pages, videos, posts and podcast episodes - each written up as a wiki`)}\n${
+      tagged.size ? `${indexEntry('tags/', 'Tags', `${tagged.size} tag(s), awards among them, each listing the pins that carry it`)}\n` : ''
+    }`,
   );
 
   // Newest first, grouped by UTC day (OKF 9).

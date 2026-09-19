@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useRef, useState } from 'react';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { useScrollLock } from '@/lib/client/scrollLock';
 
-type Fold = 'category' | 'controls' | 'span' | null;
+type Fold = 'category' | 'tags' | 'controls' | 'span' | null;
 
 // Whether the category fold is open (null outside floating controls), so a
 // category filter knows to show its pills without its own header. Picks
@@ -14,6 +14,14 @@ let rememberedCategoryOpen = false;
 
 export function useCategoryFoldOpen() {
   return useContext(CategoryFoldContext);
+}
+
+// Whether the tags fold is open (null outside floating controls): below xl the
+// tag cloud has its own pill, so it shows its cloud without its own header.
+const TagFoldContext = createContext<boolean | null>(null);
+
+export function useTagFoldOpen() {
+  return useContext(TagFoldContext);
 }
 
 // Whether a control sits in the fold behind a summary pill that, below xl,
@@ -27,13 +35,14 @@ export function useInControlsFold() {
 // The controls that float over a timeline (filters, sort, a searched user).
 // On wide screens (xl) they sit top right beside the cards; narrower, they
 // would cover the cards or squeeze them to one column, so they fold behind
-// pill buttons by the "Today" button: the category filter and the window of
-// start dates (span) behind their own, the rest behind one saying what they
-// are set to.
+// pill buttons by the "Today" button: the category filter, the tag cloud and
+// the window of start dates (span) behind their own, the rest behind one
+// saying what they are set to.
 export function FloatingControls({
   children,
   sort,
   category,
+  tags,
   span,
   summary,
   summaryCaption,
@@ -45,6 +54,7 @@ export function FloatingControls({
   // Sits above the folds, at the top of the column: sorting leads the rest.
   sort?: React.ReactNode;
   category?: { summary: string; control: React.ReactNode };
+  tags?: { summary: string; control: React.ReactNode };
   span?: { summary: string; control: React.ReactNode };
   // What the folded button says ("1 day"), under an optional caption ("Posted within").
   summary: string;
@@ -116,6 +126,12 @@ export function FloatingControls({
             <CategoryFoldContext value={open === 'category'}>{category.control}</CategoryFoldContext>
           </div>
         ) : null}
+        {tags ? (
+          // Open on a phone, the cloud takes the page down to the pills, however few tags it has.
+          <div id="timeline-tags" className={`flex min-h-0 flex-col ${open === 'tags' ? 'max-xl:h-[calc(100dvh-8rem)]' : 'max-xl:hidden'}`}>
+            <TagFoldContext value={open === 'tags'}>{tags.control}</TagFoldContext>
+          </div>
+        ) : null}
         {/* Scrolls when taller than the room under the navbar (a searched user's card too). */}
         <div
           id="timeline-controls"
@@ -141,6 +157,7 @@ export function FloatingControls({
       </div>
       <div className="fixed right-3 bottom-3 z-30 flex max-w-[calc(100%-1.5rem)] gap-1.5 max-sm:gap-1 lg:right-4 lg:gap-2 lg:bottom-4">
         {category ? <FoldPill fold="category" open={open} onToggle={toggle} icon="tag" iconClass="text-link" caption="Category" label={category.summary} /> : null}
+        {tags ? <FoldPill fold="tags" open={open} onToggle={toggle} icon="hash" iconClass="text-link" caption="Tags" label={tags.summary} /> : null}
         <FoldPill fold="controls" open={open} onToggle={toggle} icon="sliders" iconClass="text-past" caption={summaryCaption} label={summary} className="max-w-52" />
         {span ? <FoldPill fold="span" open={open} onToggle={toggle} icon="timeline" iconClass="text-future" caption="Time span" label={span.summary} /> : null}
         {onToday ? (

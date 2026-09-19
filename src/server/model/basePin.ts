@@ -33,6 +33,8 @@ export const BasePinProp = [
   'utcEndDateTime',
   'sourceStartDateTime',
   'sourceEndDateTime',
+  'originalStartDate',
+  'delayReasoning',
   'allDay',
   'utcCreatedDateTime',
   'utcUpdatedDateTime',
@@ -89,6 +91,11 @@ export default class BasePin {
     this.ratings = (pin.ratings || []).map((rt: Row) => new PinRating(rt, this));
     // Read-only, from the view: tickers are saved through their own tables.
     this.stocks = Array.isArray(pin.stocks) ? pin.stocks : [];
+    // Also read-only, from the view (PinAward, kept by services/pinAwards.ts).
+    this.awards = Array.isArray(pin.awards) ? pin.awards : [];
+    // Also read-only, from the view (PinTagView): saved by the routes and
+    // model/pinTag.ts, never by the pin row's own update.
+    this.tags = Array.isArray(pin.tags) ? pin.tags : [];
     return this;
   }
 

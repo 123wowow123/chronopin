@@ -6,6 +6,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { formatDay } from '@/components/pin/DateRanges';
 import { PinCard } from '@/components/pin/PinCard';
 import { PinRatings } from '@/components/pin/PinRatings';
+import { PinAwards } from '@/components/pin/PinAwards';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import { CATEGORIES } from '@/lib/categories';
@@ -82,7 +83,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
     pin ? pinToForm(pin) : { ...EMPTY_FORM, parentId: respondToProp?.id },
   );
   // Set by the page for /respond/:id, or by picking "Respond to it instead".
-  const [respondTo, setRespondTo] = useState(respondToProp);
+  const [respondTo, setRespondTo] = useState<Pick<PinJson, 'id' | 'title'> | undefined>(respondToProp);
   const [matches, setMatches] = useState<DuplicateMatch[] | null>(null);
   const checked = useRef<{ key: string; matches: DuplicateMatch[] }>({ key: '', matches: [] });
   // The draft the author chose to post despite its matches.
@@ -123,7 +124,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
     }
   }
 
-  function respondInstead(parent: PinJson) {
+  function respondInstead(parent: Pick<PinJson, 'id' | 'title'>) {
     setRespondTo(parent);
     set('parentId', parent.id);
     setMatches(null);
@@ -132,7 +133,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
 
   function stopResponding() {
     setRespondTo(undefined);
-    set('parentId', undefined);
+    set('parentId', null);
   }
 
   function submitAnyway() {
@@ -152,6 +153,9 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
     try {
       const scraped = await api.get<ScrapedPin>(`/api/scrape?url=${encodeURIComponent(url.trim())}`);
       setValues((v) => (onlyMedia ? applyScrape(v, { media: scraped.media }) : applyScrape(v, scraped)));
+      // A later season is posted as a response to the earlier one's pin,
+      // unless the author already picked what this responds to.
+      if (!onlyMedia && mode === 'create' && !respondTo && scraped.respondTo) respondInstead(scraped.respondTo);
       // Warn as soon as the page is read rather than after the author has
       // finished the form. (A paste fires before the field holds the URL.)
       if (!onlyMedia && mode !== 'edit') {
@@ -353,6 +357,23 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
         </div>
 
         <div>
+          <label htmlFor="tags" className={labelClass}>
+            Tags
+          </label>
+          <input
+            id="tags"
+            className={inputClass}
+            value={values.tags}
+            onChange={(e) => set('tags', e.target.value)}
+            placeholder="Tokyo Anime Award Festival 2024, Studio Ghibli…"
+            aria-describedby="tags-hint"
+          />
+          <p id="tags-hint" className="mt-1 text-xs text-subtle">
+            Separate tags with commas. Awards the work won or was up for, and awards named in the description, are tagged for you.
+          </p>
+        </div>
+
+        <div>
           <label htmlFor="price" className={labelClass}>
             Cost
           </label>
@@ -448,6 +469,14 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
               </select>
               <input aria-label="Why" placeholder="Why (quote the source)" className={inputClass} value={values.dateConfidenceReasoning} onChange={(e) => set('dateConfidenceReasoning', e.target.value)} />
             </div>
+            {/* The day first promised, for a pin whose start has slipped: the
+                delay is measured from it to the pin's start (src/lib/delay.ts). */}
+            {values.dateConfidence === 'delayed' || values.originalStartDate ? (
+              <div className="grid gap-2 sm:grid-cols-[13rem_1fr]">
+                <input aria-label="Originally due" title="The day first promised, before any delay (UTC)" type="date" className={inputClass} value={values.originalStartDate} onChange={(e) => set('originalStartDate', e.target.value)} />
+                <input aria-label="How long a delay" placeholder='Delay: "Stated: ..." or "Estimated: ..."' className={inputClass} value={values.delayReasoning} onChange={(e) => set('delayReasoning', e.target.value)} />
+              </div>
+            ) : null}
             <div>
               <label htmlFor="summary" className={labelClass}>
                 Key points (HTML list)
@@ -525,6 +554,8 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
             </ul>
           </div>
         ) : null}
+
+        {values.awards.length ? <PinAwards awards={values.awards} /> : null}
 
         {values.ratings.length ? (
           <div>

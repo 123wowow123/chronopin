@@ -68,6 +68,8 @@ why Apple accounts are looked up by `appleId` before email.
 | `npm run wiki:sync` | Write OKF wikis for pins' links, retry failed ones, rebuild stale summaries ([docs/okf](docs/okf/playbooks/catch-up-and-retry.md)) |
 | `npm run okf:export` | Write pins and their link wikis out as an OKF bundle in `./okf-bundle/` (`--pin N`, `--out DIR`) |
 | `npm run okf:lint` | Check and maintain the wikis: OKF conformance, stale links, orphans, quality, contradictions between a pin's links (`--fix`; [docs/okf](docs/okf/playbooks/lint-the-wikis.md)) |
+| `npm run media:awards` | Match film, series and anime pins to the awards their work won or was nominated for, from the award bodies' Wikipedia pages (`--pin N`, `--dry-run`) |
+| `npm run tags:sync` | Tag pins with the awards their descriptions and summaries name, e.g. "Crunchyroll Anime Awards 2024" (`--pin N`, `--dry-run`); award bodies' own tags follow `media:awards` ([docs/okf](docs/okf/tables/pin-tag.md)) |
 | `npm run stocks:sync` | Look up pins' companies' US tickers and related/supplier tickers, and price the snapshots that are due (`--pin N`, `--dry-run`, `--company NAME --relate SYMBOL:related|supplier:note` to set relations by hand) |
 | `npm run user-wiki:build` | Rebuild signed-in users' preference wikis (`--user N`), `--out DIR` to also write them as an OKF bundle (private: users' pin history) |
 | `npm run wiki:export` / `wiki:apply` | With no Anthropic credit, write out the Claude jobs, do them in a Claude Code session, save the answers ([docs/okf](docs/okf/playbooks/without-api-credit.md)) |
@@ -450,8 +452,6 @@ GA: Outbound link / non-interaction events / Social Interactions tracking / User
 
 - Favorite needs to be grouped in folders and make public/private and shareable
 
-- Pinner should be able to add tags/groups to organize their pin
-
 - Add product Accessory section feature listing below detailed pin
 
 - watched view and should have different groups 
@@ -464,39 +464,18 @@ GA: Outbound link / non-interaction events / Social Interactions tracking / User
 - add holiday and perforated placeholder block for holiday and special events
 
 
-
-
 # Injestion Methodology
 
 - scrape articles like this to make a graph of project chips to sell and variance
 https://www.cnbc.com/2026/09/17/nvidia-huang-ai-chip-guidance.html
 
-- Add tags on pin to add more metadata. Add side panel control of tags
-Test to check betting sites pin are easiser to search
-
-each pin should try to have at least 3 images
-
-- use betting site to add scores for rotten tomatoes etc on game, movie, shows,etc
-https://kalshi.com/markets/kxrt/rotten-tomatoes-scores/kxrt-res
-
-- youtube summary should be generaed with reference to text transcript
-- scrape anime, movie, tv show, etc for studio and location
-
-Done: film, TV, anime and game pins go on the map at the studio that makes them. The extraction prompt now asks for the studio as the company (the animation studio, production studio or game developer, not the publisher or streaming service) and its headquarters as the place. When a page gives no place, `GET /api/scrape` and any pin saved without one fall back to the studio's headquarters from Wikidata (P159, via its Wikipedia link), stored once per company (`Company.hq*`, 0035). A pin that names a venue of its own keeps it. Existing pins are not moved yet: about 790 anime and TV pins have no location.
-
-
-For delayed start dates, try to estimate how long of a delay
 
 major local events by major city scrape and more targetted by your location
 
 
-scrape AI Models, good to test auto response feature. Ask it to use sparringly. But series of incremential update to the same product are good candidates. 
-https://www.anthropic.com/claude/opus
-https://help.openai.com/en/articles/9624314-model-release-notes
-
-
 - Amazon Price Scrape
 - eBay Price Scrape
+
 
 # Daily Jobs
 
@@ -508,15 +487,8 @@ https://help.openai.com/en/articles/9624314-model-release-notes
 
 # OKF
 
-Done, see [docs/okf](docs/okf/README.md): every scraped or added link (web page, YouTube, X post, podcast page) gets an Open Knowledge Format wiki in the DB (`Source` / `SourceWiki` / `PinSource`, 0026), fanning out to topic and part sub-wikis. Pin long-form summaries are rebuilt from those wikis when a link comes or goes, without re-scraping the other links. Failures are recorded per link and retried by `npm run wiki:sync`. `npm run okf:export` writes a standard OKF bundle. `npm run okf:lint` maintains the wikis: spec conformance, stale links re-read, orphans pruned, poor wikis rewritten, and contradictions between a pin's links flagged for review. With no Anthropic credit, the Claude steps run by hand in a Claude Code session via `wiki:export` / `wiki:apply` (pin 930 was done this way).
-
-Admin will have OKF source view which built the pin article (API ready: `GET /api/pins/:id/sources`, `GET /api/pins/:id/okf`)
-
 - (experimental) relationship web view - knowledge system - Obsidian - need youtube transcript - can overlay on map
 https://www.youtube.com/watch?v=sboNwYmH3AY
-
-
-Done, see [docs/okf](docs/okf/tables/user-wiki.md): each signed-in user gets a preference wiki (`UserWiki`, 0028), an OKF `Profile` concept rebuilt after every open, watch, like or comment. It holds the categories and companies they lean to and the pins they opened. On a crowded timeline day, a pin they opened weighs 3x, and one in a category or company they lean to weighs up to 2x its share more, so it more often lands in the two rows instead of behind "View all". The toggle is Admin > Pins > "Prefer personalization on overflow days" (on by default). They can read it at `GET /api/users/:id/wiki` (themselves or an admin), and `npm run user-wiki:build` does the backfill and export.
 
 # Other
 
@@ -524,58 +496,11 @@ Done, see [docs/okf](docs/okf/tables/user-wiki.md): each signed-in user gets a p
 
 - should have small display that 3 pins are happing within next 7 days on botton and top of timeline. Clicking on it will scroll you to it one after another
 
--  map pins disapear as we scroll in different direction in the map but see the same repeating continents
+- add pin relationship web overlay on map and can be toggled
 
-
-- new like this should have stock ticker on it (add ticker price when posted and price on start date and on each update of start date and current price)
-https://fortune.com/2026/09/11/openai-astra-chatgpt-pro-pause/
-
-Done: a pin shows stock tickers on its page, grouped as its company, related companies and suppliers (`PinTicker` / `PinTickerPrice`, 0029; `CompanyRelation`, 0030).
-- **Its company:** looked up once by name on Nasdaq. Only a stock whose name is plainly the company's counts, so OpenAI, being private, has none.
-- **Related companies and suppliers:** up to 3 of each per company (investors, partners, chips, cloud), asked of Claude once per company and checked against Nasdaq. Every pin of the company carries them. With no API credit, set them by hand with `npm run stocks:sync -- --company OpenAI --relate "MSFT:related:Largest investor"` (pin 1677, the OpenAI Pro pause, was done this way from the article's own list).
-- **Snapshots:** each ticker keeps the price when the pin was posted, and the close on its start date once that day's market has closed. A moved start date adds a close and keeps the earlier ones.
-- **Live:** the price (Nasdaq, delayed ~15 min) comes over the page's one live connection.
-- Tickers are only added automatically (the pin's company and its relations, and what a scraped article names); the page has no add button. The pin's author or an admin can take one off, and a removed one is not added back. `PUT /api/pins/:id/stocks { add }` still exists for scripts.
-- **Scraping and the API:** all three groups come through the scrape pipeline. `GET /api/scrape` returns `stocks: [{ symbol, name, relation: company|related|supplier, note }]`, where the note is the clause read after the name ("which designs the PlayStation 5 processor") and the name is the one people use. The create form shows them (each can be left out), and `POST`/`PUT /api/pins` take the same `stocks` in the body. Each is checked on Nasdaq and added, and they are only ever added. The article's line for the pin's own company, and its symbol when the name lookup found none, are kept on the company for its other pins. Related and supplier tickers from an article stay on that pin; a company's standing ones come from `CompanyRelation`.
-- `npm run stocks:sync` is the backfill. Nasdaq history covers 10 years, split-adjusted. Not on timeline cards yet. Nasdaq's API terms are unchecked, as with Kalshi and Polymarket.
-
-
+- tags eventually wrap into category and removing category table altogether
 
 # Scraping
 
-Scape major events on Kalshi / Polymarket
-https://kalshi.com/markets/kxfeddecision/fed-meeting/kxfeddecision-26oct
-
-- scrape polymarket and should still get other reference
-https://polymarket.com/event/next-claude-opus-released-byptptpt-20260727142323912
-
-
-
-## MyAnimeList top-anime scrape (done 2026-09-18)
-
-Asked 2026-09-15: scrape everything in `myanimelist.net/topanime.php` across
-all its top-section tabs (All Anime, Top Airing, Top Upcoming, Top TV
-Series, Top Movies, Top OVAs, Top ONAs, Top Specials, Most Popular, Most
-Favorited) into Anime pins.
-
-**Finished:** the last round pinned the final 104 titles (pins 1681-1784),
-bringing MAL-sourced pins to 771. The pool (top 100 of each of the 10 tabs,
-deduped by MAL id) was 765 titles when this round started, and MAL's live
-rankings drift day to day, so re-pulling it later will find a few new ones
-(`curl` each `topanime.php?type=...&limit=0|50`, parse the `ranking-list`
-rows, drop MAL ids already in `seedPins.json`'s `sourceUrl`; a Top Upcoming
-score of `N/A` counts as 0).
-
-Notes from the last round, for whoever repeats it:
-- Insert through the real `POST /api/pins` as `@AnimeDesk` (user 101), not a
-  model-class script, so the live feed, search index and duplicate checks
-  fire. Titles with no air date yet are pinned as "<Title> Announced" on the
-  sourced announcement day; year-only or month-only ones go on the first of
-  the period as `estimated`.
-- Films go under the `Anime Movie` category, everything else under `Anime`.
-- Read the `media:screen` dry run before `--apply`: it matched an episode
-  and a fan rumour upload as "trailers" (pins 1718, 1749, 1764 were skipped
-  with `--skip-trailer`).
-- Merge company spelling variants by hand after a round (this one found
-  Cypic = CygamesPictures renamed, merged into the older row).
+Backfill all missing information for all pins
 

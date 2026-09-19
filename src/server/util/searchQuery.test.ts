@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { joinSearchQuery, parseSearchQuery, splitSearchQuery } from './searchQuery';
+import { hasFilters, joinSearchQuery, parseSearchQuery, splitSearchQuery, wordStartPattern } from './searchQuery';
 
 describe('splitSearchQuery', () => {
   it('keeps terms and text in order, with what each was written as', () => {
@@ -43,8 +43,17 @@ describe('parseSearchQuery', () => {
       confidences: [],
       dates: [],
       postedDays: [],
+      tags: [],
       text: 'ios',
     });
+  });
+
+  it('reads tags, quoted like any value, once each whatever the case', () => {
+    expect(parseSearchQuery('tag:"Tokyo Anime Award Festival 2024" tag:Artemis TAG:artemis moon')).toMatchObject({
+      tags: ['Tokyo Anime Award Festival 2024', 'Artemis'],
+      text: 'moon',
+    });
+    expect(hasFilters(parseSearchQuery('tag:Artemis'))).toBe(true);
   });
 
   it('reads days, BC ones too, and leaves out anything else', () => {
@@ -54,5 +63,15 @@ describe('parseSearchQuery', () => {
 
   it('reads confidence levels, with UNVERIFIED as the stored unknown', () => {
     expect(parseSearchQuery('confidence:ESTIMATED confidence:unverified confidence:estimated').confidences).toEqual(['estimated', 'unknown']);
+  });
+});
+
+describe('wordStartPattern', () => {
+  it('matches the text at the start of any word, taken literally', () => {
+    const matches = (text: string, name: string) => new RegExp(wordStartPattern(text).replace('[:alnum:]', 'a-z0-9'), 'i').test(name);
+    expect(matches('ast', 'Space & Astronomy')).toBe(true);
+    expect(matches('pace', 'Space & Astronomy')).toBe(false);
+    expect(matches('c++', 'C++ Conference')).toBe(true);
+    expect(wordStartPattern(' a.b ')).toBe('(^|[^[:alnum:]])a\\.b');
   });
 });

@@ -159,6 +159,8 @@ describe('averageRating', () => {
 
   it('has nothing to average below two sources', () => {
     expect(averageRating([{ score: 85, scoreMax: 100 }])).toBeUndefined();
+    // A market's forecast of a score is not a review.
+    expect(averageRating([{ score: 85, scoreMax: 100 }, { source: 'Kalshi RT forecast', score: 95, scoreMax: 100 }])).toBeUndefined();
     expect(averageRating([])).toBeUndefined();
     expect(averageRating(undefined)).toBeUndefined();
   });

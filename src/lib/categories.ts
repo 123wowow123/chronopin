@@ -4,6 +4,7 @@
 export const CATEGORIES = [
   'Consumer Electronics',
   'Software',
+  'AI Models',
   'Computing & Semiconductors',
   'Gaming & Entertainment',
   'Anime',

@@ -7,6 +7,7 @@ import { Comments } from '@/components/pin/Comments';
 import { CountdownMeter } from '@/components/pin/CountdownMeter';
 import { CitedText } from '@/components/pin/CitedText';
 import { DateConfidence, DateConfidenceReasoning } from '@/components/pin/DateConfidence';
+import { DelayBadge, DelayReasoning } from '@/components/pin/DelayBadge';
 import { DateRanges } from '@/components/pin/DateRanges';
 import { FollowButton } from '@/components/pin/FollowButton';
 import { PinAdminLink } from '@/components/pin/PinAdminLink';
@@ -16,6 +17,8 @@ import { PinConfidence } from '@/components/pin/PinConfidence';
 import { PinDuplicates } from '@/components/pin/PinDuplicates';
 import { PinOdds } from '@/components/pin/PinOdds';
 import { PinStocks } from '@/components/pin/PinStocks';
+import { PinAwards } from '@/components/pin/PinAwards';
+import { PinTags } from '@/components/pin/PinTags';
 import { PinRatings } from '@/components/pin/PinRatings';
 import { PinReferences } from '@/components/pin/PinReferences';
 import { PinMapLoader } from '@/components/pin/PinMapLoader';
@@ -23,6 +26,7 @@ import { PinMediaFrame } from '@/components/pin/PinMedia';
 import { PinWeather } from '@/components/pin/PinWeather';
 import { RefineLink } from '@/components/pin/RefineLink';
 import { ViewCount } from '@/components/pin/ViewCount';
+import { ThreadSuggestion } from '@/components/pin/ThreadSuggestion';
 import { WatchButton } from '@/components/pin/WatchButton';
 import { Icon } from '@/components/ui/Icon';
 import { PostedTime, StartTime } from '@/components/ui/LocalTime';
@@ -100,6 +104,9 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
               <PinWeather pinId={pin.id} />
             </div>
           ) : null}
+
+          {/* Beside the pin on wide screens, under its map; after it on phones. */}
+          <PinTags tags={pin.tags} className={pin.latitude != null && pin.longitude != null ? 'mt-6' : ''} />
 
           <Suspense fallback={null}>
             <Duplicates pin={pin} />
@@ -215,11 +222,13 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
           <StartTime pin={pin} serverTimeZone={timeZone} allDaySuffix search />
           <DateConfidence level={pin.dateConfidence} reasoning={pin.dateConfidenceReasoning} />
+          <DelayBadge pin={pin} />
           <PinConfidence evidence={pinEvidence(pin)} />
           {/* Last: the reasoning takes a line of its own below the badges. */}
           <DateConfidenceReasoning reasoning={pin.dateConfidenceReasoning}>
             {pin.dateConfidenceReasoning ? <CitedText text={pin.dateConfidenceReasoning} evidence={pinEvidence(pin)} /> : undefined}
           </DateConfidenceReasoning>
+          <DelayReasoning pin={pin} />
         </div>
       ) : null}
       {pin.utcStartDateTime ? <DateRanges {...dateRanges} /> : null}
@@ -242,6 +251,7 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
       </h1>
 
       <PinRatings ratings={pin.ratings} />
+      <PinAwards awards={pin.awards} />
       {pinMarketRefs(pin).length ? <PinOdds pinId={pin.id} /> : null}
       <PinStocks pinId={pin.id} />
 
@@ -313,6 +323,7 @@ async function Thread({ pin }: { pin: PinJson }) {
           Respond to this Pin
         </Link>
       </div>
+      <ThreadSuggestion pinId={pin.id} />
       <ol className="mt-3 space-y-1">
         {pins.map((p, index) => (
           <li key={p.id}>

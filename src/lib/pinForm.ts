@@ -4,17 +4,28 @@
 
 import { addDays, pickDates } from './dateClaims';
 import { compareDayKeys, dayKeyOf, dayKeyParts, dayKeyToMs } from './format';
+import type { PinAwardJson } from './awards';
 import type { ScrapedStock } from './stocks';
+import { joinTags, splitTags } from './tags';
 import type { MediumJson, MerchantJson, PinJson, PinRatingJson, PinReferenceJson } from './types';
 
 // What /api/scrape answers: a draft pin, plus the promotional video it found
 // for a film, series or anime (also listed in media).
 // A scrape's stocks are the article's tickers (ScrapedStock), not a stored pin's.
-export type ScrapedPin = Omit<Partial<PinJson>, 'stocks'> & { trailer?: MediumJson; stocks?: ScrapedStock[] };
+// Its tags are the extracted names, not a stored pin's tag rows.
+export type ScrapedPin = Omit<Partial<PinJson>, 'stocks' | 'tags'> & {
+  trailer?: MediumJson;
+  stocks?: ScrapedStock[];
+  awards?: PinAwardJson[];
+  tags?: string[];
+  // The earlier season's pin this one follows on from (server/scrape/prequel.ts).
+  respondTo?: Pick<PinJson, 'id' | 'title'>;
+};
 
 export type PinFormValues = {
   id?: number;
-  parentId?: number;
+  // null: posted on its own, not threaded under an earlier season's pin.
+  parentId?: number | null;
   sourceUrl: string;
   title: string;
   description: string;
@@ -41,6 +52,10 @@ export type PinFormValues = {
   tip?: string;
   dateConfidence: string;
   dateConfidenceReasoning: string;
+  // The day first promised before the start slipped (YYYY-MM-DD, a UTC day),
+  // and how it and the new date were found.
+  originalStartDate: string;
+  delayReasoning: string;
   merchants: MerchantJson[];
   references: ReferenceFormValues[];
   media: MediumJson[];
@@ -55,6 +70,12 @@ export type PinFormValues = {
   // Stock tickers the scraped article names, sent with the pin, which adds
   // them (never removes: the pin page edits a pin's tickers). Can be dropped.
   stocks: ScrapedStock[];
+  // What the scraped work won or was nominated for, shown only: the save
+  // matches awards from the pin's title itself.
+  awards: PinAwardJson[];
+  // The pin's own tags as typed, comma-separated. Always sent, as the whole
+  // list; the awards' and the text's tags are the server's (src/lib/tags.ts).
+  tags: string;
 };
 
 // A reference row as typed: confidence stays a string until it is sent.
@@ -88,6 +109,8 @@ export const EMPTY_FORM: PinFormValues = {
   priceCurrency: '',
   dateConfidence: '',
   dateConfidenceReasoning: '',
+  originalStartDate: '',
+  delayReasoning: '',
   merchants: [],
   references: [],
   media: [],
@@ -95,6 +118,8 @@ export const EMPTY_FORM: PinFormValues = {
   extraMedia: [],
   ratings: [],
   stocks: [],
+  awards: [],
+  tags: '',
 };
 
 // The form's dates are day keys (src/lib/format.ts), so a BC pin's survive
@@ -209,6 +234,8 @@ export function pinToForm(pin: PinJson): PinFormValues {
     tip: pin.tip,
     dateConfidence: str(pin.dateConfidence),
     dateConfidenceReasoning: str(pin.dateConfidenceReasoning),
+    originalStartDate: str(pin.originalStartDate),
+    delayReasoning: str(pin.delayReasoning),
     merchants: pin.merchants ? pin.merchants.map((m) => ({ ...m })) : [],
     references: (pin.references || []).map(referenceToForm),
     media: pin.media || [],
@@ -218,6 +245,8 @@ export function pinToForm(pin: PinJson): PinFormValues {
     ratings: pin.ratings ? pin.ratings.map((r) => ({ ...r })) : [],
     // A stored pin's tickers are edited on its page, not here.
     stocks: [],
+    awards: pin.awards ? pin.awards.map((a) => ({ ...a })) : [],
+    tags: joinTags((pin.tags || []).filter((t) => t.source === 'user').map((t) => t.name)),
   };
 }
 
@@ -250,6 +279,10 @@ export function applyScrape(values: PinFormValues, scraped: ScrapedPin): PinForm
     next.dateConfidence = scraped.dateConfidence;
     next.dateConfidenceReasoning = scraped.dateConfidenceReasoning || '';
   }
+  if (!next.originalStartDate && scraped.originalStartDate) {
+    next.originalStartDate = scraped.originalStartDate;
+    next.delayReasoning = scraped.delayReasoning || '';
+  }
   if (!next.merchants.length && scraped.merchants?.length) {
     next.merchants = scraped.merchants.map((m) => ({ ...m }));
   }
@@ -264,6 +297,12 @@ export function applyScrape(values: PinFormValues, scraped: ScrapedPin): PinForm
     Object.assign(next, datesToForm({ utcStartDateTime: scraped.utcStartDateTime, utcEndDateTime: scraped.utcEndDateTime, allDay: scraped.allDay }), {
       allDay: !!scraped.allDay,
     });
+  }
+  if (!next.tags.trim() && scraped.tags?.length) {
+    next.tags = joinTags(scraped.tags);
+  }
+  if (!next.awards.length && scraped.awards?.length) {
+    next.awards = scraped.awards.map((a) => ({ ...a }));
   }
   if (!next.stocks.length && scraped.stocks?.length) {
     next.stocks = scraped.stocks.map((s) => ({ ...s }));
@@ -343,6 +382,8 @@ export function formToPin(values: PinFormValues) {
     tip: values.tip,
     dateConfidence: values.dateConfidence || undefined,
     dateConfidenceReasoning: values.dateConfidenceReasoning || undefined,
+    originalStartDate: values.originalStartDate || undefined,
+    delayReasoning: (values.originalStartDate && values.delayReasoning.trim()) || undefined,
     company: company || undefined,
     // A wiki link only travels with the company name it belongs to, so a
     // renamed company never inherits the old one's article.
@@ -358,6 +399,7 @@ export function formToPin(values: PinFormValues) {
     // Only saved when the pin is created; an edit leaves stored ratings alone.
     ratings: values.ratings,
     stocks: values.stocks.length ? values.stocks : undefined,
+    tags: splitTags(values.tags),
   };
 }
 

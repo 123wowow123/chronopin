@@ -22,6 +22,8 @@ const stored: PinJson = {
   priceCurrency: 'USD',
   dateConfidence: 'scheduled',
   dateConfidenceReasoning: 'Given as scheduled',
+  originalStartDate: '2026-04-30',
+  delayReasoning: 'Stated: first promised for April.',
   merchants: [
     { id: 1, label: 'Amazon', url: 'https://www.amazon.com/x' },
     { id: 2, label: 'Best Buy', url: 'https://www.bestbuy.com/y', price: 1299 },
@@ -51,6 +53,8 @@ describe('pin form round trip', () => {
       priceCurrency: 'USD',
       dateConfidence: 'scheduled',
       dateConfidenceReasoning: 'Given as scheduled',
+      originalStartDate: '2026-04-30',
+      delayReasoning: 'Stated: first promised for April.',
     });
     expect(body.merchants).toEqual([
       { id: 1, label: 'Amazon', url: 'https://www.amazon.com/x', price: undefined },
@@ -289,5 +293,32 @@ describe('stock tickers from a scrape', () => {
     const edit = pinToForm({ id: 1, title: 't', utcStartDateTime: '2026-09-10T00:00:00.000Z', allDay: true } as PinJson);
     expect(edit.stocks).toEqual([]);
     expect(formToPin(edit).stocks).toBeUndefined();
+  });
+});
+
+describe('tags on the form', () => {
+  const tagged = {
+    ...stored,
+    tags: [
+      { name: 'Tokyo Anime Award Festival 2024', kind: 'award', source: 'award' },
+      { name: 'Annie Awards 2023', kind: 'award', source: 'auto' },
+      { name: 'Soundbars', kind: 'topic', source: 'user' },
+      { name: 'Dolby Atmos', kind: 'topic', source: 'user' },
+    ],
+  } as PinJson;
+
+  it('edits only the pin’s own tags and sends the whole list back', () => {
+    const form = pinToForm(tagged);
+    expect(form.tags).toBe('Soundbars, Dolby Atmos');
+    expect(formToPin(form).tags).toEqual(['Soundbars', 'Dolby Atmos']);
+  });
+
+  it('sends an empty list once every tag is taken off', () => {
+    expect(formToPin({ ...pinToForm(tagged), tags: ' , ' }).tags).toEqual([]);
+  });
+
+  it('fills an empty tags field from a scrape, never over typed ones', () => {
+    expect(applyScrape(EMPTY_FORM, { tags: ['Crunchyroll Anime Awards 2025', 'Frieren'] }).tags).toBe('Crunchyroll Anime Awards 2025, Frieren');
+    expect(applyScrape({ ...EMPTY_FORM, tags: 'Mine' }, { tags: ['Theirs'] }).tags).toBe('Mine');
   });
 });

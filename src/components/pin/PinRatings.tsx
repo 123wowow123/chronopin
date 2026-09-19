@@ -1,4 +1,4 @@
-import { averageRating, ratingScore } from '@/lib/format';
+import { averageRating, ratingScore, reviewRatings } from '@/lib/format';
 import type { PinRatingJson } from '@/lib/types';
 import { Icon } from '@/components/ui/Icon';
 
@@ -18,7 +18,8 @@ export function RatingAverage({
   if (average == null) {
     return null;
   }
-  const label = `Average of ${ratings!.length} ratings: ${average} percent`;
+  const count = reviewRatings(ratings).length;
+  const label = `Average of ${count} ratings: ${average} percent`;
   if (compact) {
     return (
       <span
@@ -40,7 +41,7 @@ export function RatingAverage({
       <span className="text-[11px] leading-tight text-muted">
         average
         <br />
-        {ratings!.length} sources
+        {count} sources
       </span>
     </span>
   );

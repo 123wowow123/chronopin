@@ -148,3 +148,41 @@ describe('okfBundle', () => {
     expect(log).toContain('**Update**: Rewrote (version 2) [MOSE](/sources/2-mose.md)');
   });
 });
+
+describe('okfBundle tags', () => {
+  const tagged: OkfPin = {
+    ...pin,
+    tags: [
+      { name: 'Tokyo Anime Award Festival 2024', kind: 'award', source: 'award' },
+      { name: 'MOSE', kind: 'topic', source: 'user' },
+    ],
+  };
+  const other: OkfPin = { ...pin, id: 931, title: 'MOSE Raised for the Acqua Alta', links: [], tags: [{ name: 'mose', kind: 'topic', source: 'user' }] };
+  const files = okfBundle([tagged, other], sources);
+  const concept = files.get('pins/930-consorzio-venezia-nuova-installs-the-last-of-mose-s-78-flood.md')!;
+
+  it('writes the tags into the pin concept’s frontmatter and links their concepts', () => {
+    expect(concept).toContain('tags: [infrastructure, consorzio venezia nuova, tokyo anime award festival 2024, mose]');
+    expect(concept).toContain('* [Tokyo Anime Award Festival 2024](/tags/tokyo-anime-award-festival-2024.md)');
+  });
+
+  it('gives each tag one concept listing its pins, an award as an Award', () => {
+    const award = files.get('tags/tokyo-anime-award-festival-2024.md')!;
+    expect(award).toContain('type: Award');
+    expect(award).toContain('(/pins/930-consorzio-venezia-nuova-installs-the-last-of-mose-s-78-flood.md)');
+    const mose = files.get('tags/mose.md')!;
+    expect(mose).toContain('type: Tag');
+    expect(mose).toContain('2 pin(s) tagged MOSE');
+    expect(files.get('tags/index.md')).toContain('* [MOSE](mose.md) - 2 pin(s)');
+    expect(files.get('index.md')).toContain('(tags/)');
+  });
+
+  it('leaves the tags out of a bundle with none', () => {
+    expect([...okfBundle([pin], sources).keys()].some((p) => p.startsWith('tags/'))).toBe(false);
+  });
+
+  it('passes the conformance lint', async () => {
+    const { lintBundle } = await import('./okfLint');
+    expect(lintBundle(files).filter((i) => i.severity === 'error' || /tags\//.test(i.path) || /tags\//.test(i.message))).toEqual([]);
+  });
+});
