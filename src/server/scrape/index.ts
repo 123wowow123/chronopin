@@ -12,6 +12,7 @@ import { inBackground } from '../background';
 import Source from '../model/source';
 import { fetchJson } from '../util/fetchJson';
 import log from '../util/log';
+import { parseScrapedStocks, type ScrapedStock } from '@/lib/stocks';
 import { sourceKind } from '@/lib/sourceKind';
 import { IN_PAGE_SCRAPE, type InPageResult } from './inPage';
 import { findScreenDetails, isScreenCategory, youtubeStill, type ScreenDetails } from './screen';
@@ -27,6 +28,7 @@ export async function scrape(pageUrl: string) {
   let type: string;
   let pin: Pin;
   let trailer: Medium | undefined;
+  let stocks: ScrapedStock[] | undefined;
   switch (domain) {
     case 'twitter.com':
     case 'x.com':
@@ -40,12 +42,13 @@ export async function scrape(pageUrl: string) {
       break;
     default:
       type = scrapeType.web;
-      ({ pin, trailer } = await webScrape(pageUrl));
+      ({ pin, trailer, stocks } = await webScrape(pageUrl));
       break;
   }
   // trailer is also in media; the form keeps it alongside whichever picture
-  // the author picks as the heading.
-  return Object.assign({}, pin.toJSON(), { type }, trailer ? { trailer: trailer.toJSON() } : {});
+  // the author picks as the heading. stocks are the article's tickers, which
+  // POST /api/pins adds once the pin is saved.
+  return Object.assign({}, pin.toJSON(), { type }, trailer ? { trailer: trailer.toJSON() } : {}, stocks?.length ? { stocks } : {});
 }
 
 // The references found for a pin, and the summary they ground, when one was
@@ -146,7 +149,7 @@ export async function launchBrowser() {
   });
 }
 
-async function webScrape(pageUrl: string): Promise<{ pin: Pin; trailer?: Medium }> {
+async function webScrape(pageUrl: string): Promise<{ pin: Pin; trailer?: Medium; stocks?: ScrapedStock[] }> {
   const browser = await launchBrowser();
 
   let pageText = '';
@@ -242,7 +245,7 @@ async function webScrape(pageUrl: string): Promise<{ pin: Pin; trailer?: Medium 
   ]);
   applyExtracted(pin, fields);
   const trailer = applyScreenDetails(pin, screen);
-  return { pin: addReferences(pin, found), trailer };
+  return { pin: addReferences(pin, found), trailer, stocks: parseScrapedStocks(fields?.stocks) };
 }
 
 // Ratings onto the pin, and the trailer onto the end of its media (so the

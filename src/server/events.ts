@@ -86,4 +86,14 @@ if (!g.__chronopinPinListeners) {
       .catch((err) => log.warn(`podcast cross-check failed for pin ${pin.id}:`, (err as Error).message));
   };
   pinEvents.on('save', checkPodcasts);
+
+  // Stock tickers: the company's looked up, a price taken when posted and
+  // at each new start date (services/pinStocks.ts).
+  const syncStocks = (pin: Row) => {
+    import('./services/pinStocks')
+      .then(({ syncPinStocks }) => syncPinStocks(Number(pin.id)))
+      .catch((err) => log.warn(`stock sync failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', syncStocks);
+  pinEvents.on('update', syncStocks);
 }

@@ -462,7 +462,7 @@ export function Timeline({
 
         <div ref={topRef} aria-hidden className="h-px" />
 
-        <div className="relative lg:before:absolute lg:before:top-0 lg:before:bottom-0 lg:before:left-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']">
+        <div className="relative lg:min-h-[calc(100dvh-52px-6rem)] lg:before:absolute lg:before:top-0 lg:before:-bottom-24 lg:before:left-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']">
           {bags.map((bag, index) => (
             <div key={bag.day}>
               {marker.index === index ? <TodayMarker specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}

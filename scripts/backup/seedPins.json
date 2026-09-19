@@ -88530,6 +88530,43 @@
     "userId": 22
   },
   {
+    "id": 1677,
+    "rootThread": false,
+    "title": "OpenAI pauses new $200 ChatGPT Pro sign-ups as Astra demand strains capacity",
+    "description": "OpenAI stopped new sign-ups and upgrades to its $200-a-month ChatGPT Pro 20X plan, where its new Astra model is available, while it adds compute. Existing Pro accounts are unaffected.",
+    "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/openai-paused-200-chatgpt-sign-165706343.html",
+    "longFormSummary": "<ul><li>OpenAI paused new sign-ups and upgrades to ChatGPT Pro 20X, its $200-a-month plan, on Thursday September 10, 2026, citing unprecedented demand for its new Astra model.</li><li>Astra's computer-use feature burns through usage faster than GPT 5.6 Sol; the $200 plan puts the most strain on OpenAI's systems. Existing Pro accounts keep working.</li><li>OpenAI last paused paid sign-ups in November 2023 (ChatGPT Plus, after DevDay). Its compute grew from 0.2 GW in 2023 to about 1.9 GW in 2025.</li><li>New capacity from the second half of 2026 includes at least 10 GW of Nvidia systems, a 6 GW AMD GPU deal and 10 GW of Broadcom custom accelerators, beyond Microsoft Azure, CoreWeave and Stargate.</li></ul>",
+    "address": "San Francisco, California",
+    "latitude": 37.7749,
+    "longitude": -122.4194,
+    "companyId": 1657,
+    "company": "OpenAI",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/OpenAI",
+    "companyLogoUrl": "https://www.google.com/s2/favicons?domain=openai.com&sz=64",
+    "category": "Software",
+    "utcStartDateTime": "2026-09-10T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-19T05:17:41.117Z",
+    "utcUpdatedDateTime": "2026-09-19T05:18:04.609Z",
+    "user": {
+      "id": 276,
+      "userName": "@TechDesk"
+    },
+    "media": [
+      {
+        "id": 2200,
+        "thumbName": "0b5981e6-2501-43bc-8052-8f18316acd66.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 667,
+        "originalUrl": "https://media.zenfs.com/en/fortune_175/0659c678855d9a8f090f6e8e6d7472f9.jpg",
+        "originalWidth": 2048,
+        "originalHeight": 1365,
+        "type": "1"
+      }
+    ],
+    "userId": 276
+  },
+  {
     "id": 305,
     "rootThread": false,
     "title": "Warcraft 3 Reforged Shadow-Drops Forsaken Kingdom Campaign",
@@ -89068,6 +89105,73 @@
       }
     ],
     "userId": 51
+  },
+  {
+    "id": 1679,
+    "rootThread": false,
+    "title": "Anthropic Expected to Release Its Next Claude Opus Model",
+    "description": "Prediction-market traders expect Anthropic to ship the successor to Claude Opus 5 (released July 24, 2026) within days: Polymarket's daily market put September 21 as the single likeliest day at about 45%, with roughly 75% odds of a release by September 30 and 98% by October 31. Anthropic has not announced the model; the \"Opus 5.1\" name comes from leaked early-access identifiers and early tester reports.",
+    "sourceUrl": "https://polymarket.com/event/next-claude-opus-released-byptptpt-20260727142323912",
+    "longFormSummary": "<ul>\n<li>Polymarket's \"Next Claude Opus released by...?\" market resolves Yes when Anthropic makes a model explicitly named Opus publicly available; on September 18 it priced about 69% by September 24, 75% by September 30 and 98% by October 31.</li>\n<li>A companion daily market priced September 21 at about 45%, September 22 at 18% and September 24 at 14%, with 24.5% on no release by September 30.</li>\n<li>Anthropic has published no model card, pricing or API identifier; the \"Opus 5.1\" name is a community inference from early-access strings such as claude-marshmallow-eap that surfaced around August 21-24, and earlier rumored dates of late August and September 5 passed without a launch.</li>\n<li>It would follow Claude Opus 5 (July 24, 2026) and the September 1 launch of Claude Fable 5.1 and Mythos 5.1.</li>\n</ul>",
+    "address": "Anthropic, 500 Howard Street, San Francisco, CA",
+    "latitude": 37.7887,
+    "longitude": -122.3963,
+    "dateConfidence": "estimated",
+    "dateConfidenceReasoning": "No official date: September 21 is the day Polymarket's daily market priced highest (about 45% on September 18), with September 22 and 24 next and about a quarter of the odds on no release in September.",
+    "companyId": 1660,
+    "company": "Anthropic",
+    "category": "Software",
+    "utcStartDateTime": "2026-09-21T00:00:00.000Z",
+    "allDay": true,
+    "utcCreatedDateTime": "2026-09-19T05:29:57.459Z",
+    "user": {
+      "id": 277,
+      "userName": "@OddsDesk"
+    },
+    "media": [
+      {
+        "id": 2202,
+        "thumbName": "396ce1e2-4761-4e2c-9714-4f55abe57377.png",
+        "thumbWidth": 512,
+        "thumbHeight": 512,
+        "originalUrl": "https://polymarket-upload.s3.us-east-2.amazonaws.com/claude-4pt7-released-by-LSHFPBEUsncm.png",
+        "originalWidth": 512,
+        "originalHeight": 512,
+        "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 2735,
+        "url": "https://polymarket.com/event/next-claude-opus-released-onptptpt-20260915",
+        "title": "Polymarket: Next Claude Opus released on...?",
+        "confidence": 70,
+        "reasoning": "Polymarket's daily market is where the September 21 date comes from: it priced that day at about 45%, ahead of September 22 (18%) and September 24 (14%), with 24.5% on no release by September 30.",
+        "utcCreatedDateTime": "2026-09-19T05:29:57.468561+00:00",
+        "pinId": 1679
+      },
+      {
+        "id": 2736,
+        "url": "https://cellcog.ai/blog/claude-opus-5-1-release-date/",
+        "title": "Claude Opus 5.1 Release Date: Leaks vs What Shipped",
+        "confidence": 70,
+        "publishedDate": "2026-09-14",
+        "reasoning": "CellCog traces the \"Opus 5.1\" name to the claude-marshmallow-eap and claude-melon-eap strings seen around August 21-24, and notes \"there is no announcement, model card, API identifier, pricing page, or benchmark.\"",
+        "utcCreatedDateTime": "2026-09-19T05:29:57.468561+00:00",
+        "pinId": 1679
+      },
+      {
+        "id": 2737,
+        "url": "https://www.cometapi.com/claude-opus-5-1/",
+        "title": "Claude Opus 5.1 Is Coming Soon: What Developers Should Expect",
+        "confidence": 70,
+        "publishedDate": "2026-09-03",
+        "reasoning": "CometAPI applies the roughly 2-3 week gap from the Honeycomb early-access build to Opus 5 and says \"a public release could arrive in the coming weeks,\" while stressing the dates remain unverified.",
+        "utcCreatedDateTime": "2026-09-19T05:29:57.468561+00:00",
+        "pinId": 1679
+      }
+    ],
+    "userId": 277
   },
   {
     "id": 436,
@@ -90138,6 +90242,106 @@
       }
     ],
     "userId": 76
+  },
+  {
+    "id": 1678,
+    "rootThread": false,
+    "title": "Fed Decides Whether to Hike Rates Again at October 2026 FOMC Meeting",
+    "description": "The Federal Open Market Committee announces its October 2026 rate decision at 2:00 p.m. ET on October 28, six weeks after raising the federal funds target range a quarter point to 3.75%-4.00% on September 16, its first hike since 2023. Kalshi traders are split between holding the rate and a second 25bp hike, with cuts priced near zero.",
+    "sourceUrl": "https://kalshi.com/markets/kxfeddecision/fed-meeting/kxfeddecision-26oct",
+    "longFormSummary": "<ul>\n<li>The FOMC meets October 27-28, 2026 and releases its statement at 2:00 p.m. ET on October 28; it is not one of the meetings with a Summary of Economic Projections, so no new dot plot comes out.</li>\n<li>On September 16 the Committee voted 12-0 to raise the target range by 25bp to 3.75%-4.00%, citing inflation still running above its 2% objective.</li>\n<li>The September dot plot had 12 officials projecting a year-end 2026 range a quarter point higher than today and four projecting two more hikes.</li>\n<li>Kalshi's October market (settled from federalreserve.gov) priced a 25bp hike around 54% and a hold around 44% on September 18, with cuts or a hike larger than 25bp at 1-2%.</li>\n</ul>",
+    "address": "Marriner S. Eccles Federal Reserve Board Building, 20th St & Constitution Ave NW, Washington, DC",
+    "latitude": 38.8928,
+    "longitude": -77.0455,
+    "dateConfidence": "scheduled",
+    "dateConfidenceReasoning": "The Federal Reserve's published 2026 FOMC calendar lists the October 27-28 meeting, and the policy statement is released at 2:00 p.m. ET on the second day; Kalshi's market strikes on October 28, 2026 at 18:00 UTC.",
+    "companyId": 108,
+    "company": "Federal Reserve",
+    "companyWikiUrl": "https://en.wikipedia.org/wiki/Federal_Reserve",
+    "companyLogoUrl": "https://www.google.com/s2/favicons?domain=federalreserve.gov&sz=64",
+    "category": "Corporate & Finance",
+    "utcStartDateTime": "2026-10-28T18:00:00.000Z",
+    "allDay": false,
+    "utcCreatedDateTime": "2026-09-19T05:29:56.384Z",
+    "utcUpdatedDateTime": "2026-09-19T05:32:20.617Z",
+    "user": {
+      "id": 277,
+      "userName": "@OddsDesk"
+    },
+    "media": [
+      {
+        "id": 2201,
+        "thumbName": "2be9c879-471b-483d-862d-661a1e1761a6.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 680,
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/89/Eccles_Building_%2826088200676%29.jpg",
+        "originalWidth": 3000,
+        "originalHeight": 2041,
+        "type": "1"
+      }
+    ],
+    "references": [
+      {
+        "id": 2738,
+        "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "title": "Federal Reserve: Meeting calendars and information",
+        "confidence": 95,
+        "reasoning": "The Federal Reserve's own FOMC calendar lists the October 27-28, 2026 meeting (without a Summary of Economic Projections), confirming the decision lands on October 28.",
+        "utcCreatedDateTime": "2026-09-19T05:29:56.406253+00:00",
+        "pinId": 1678
+      },
+      {
+        "id": 2739,
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+        "title": "Federal Reserve issues FOMC statement (September 16, 2026)",
+        "confidence": 85,
+        "publishedDate": "2026-09-16",
+        "reasoning": "The Federal Reserve's September 16 statement says the Committee \"decided to raise the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent\" by a 12-0 vote, the starting point for the October decision.",
+        "utcCreatedDateTime": "2026-09-19T05:29:56.406253+00:00",
+        "pinId": 1678
+      },
+      {
+        "id": 2740,
+        "url": "https://www.bondsavvy.com/fixed-income-investments-blog/fed-dot-plot",
+        "title": "September 2026 Fed Dot Plot Sees Low 4% Fed Funds in 2027",
+        "confidence": 75,
+        "publishedDate": "2026-09-16",
+        "reasoning": "BondSavvy's dot plot breakdown says 12 participants projected a year-end 2026 range a quarter point higher than 3.75%-4.00% and four projected two more hikes, which is why an October hike is live.",
+        "utcCreatedDateTime": "2026-09-19T05:29:56.406253+00:00",
+        "pinId": 1678
+      },
+      {
+        "id": 2741,
+        "url": "https://www.raisin.com/en-us/news/fed-rate-decision-policy-breakdown-september-2026/",
+        "title": "Fed Rate Decision September 2026: Benchmark Hiked to 3.75%-4.00%",
+        "confidence": 70,
+        "publishedDate": "2026-09-16",
+        "reasoning": "Raisin reports the unanimous 25bp hike effective September 17 and the Committee's \"data-dependent\" stance entering the final quarter, but does not itself date the October meeting.",
+        "utcCreatedDateTime": "2026-09-19T05:29:56.406253+00:00",
+        "pinId": 1678
+      },
+      {
+        "id": 2742,
+        "url": "https://podcasts.apple.com/us/podcast/fed-hikes-rates-for-first-time-in-3-years-heres-why-it-matters/id1744631325?i=1000790321337",
+        "title": "Prof G Markets: Fed Hikes Rates For First Time In 3 Years — Here's Why It Matters",
+        "confidence": 75,
+        "publishedDate": "2026-09-17",
+        "reasoning": "Prof G Markets' September 17 episode says the Fed raised rates by a quarter point in a unanimous vote and that \"the Fed's forecast shows an additional hike is likely this year,\" setting up the October decision.",
+        "utcCreatedDateTime": "2026-09-19T05:32:20.617161+00:00",
+        "pinId": 1678
+      },
+      {
+        "id": 2743,
+        "url": "https://podcasts.apple.com/us/podcast/the-fed-hikes-rates/id296237493?i=1000790362221",
+        "title": "Bloomberg Surveillance: The Fed Hikes Rates",
+        "confidence": 70,
+        "publishedDate": "2026-09-17",
+        "reasoning": "Bloomberg Surveillance's September 17 episode discusses the hike with guests expecting \"a Fed hike or maybe one or two more,\" though it does not name the October meeting itself.",
+        "utcCreatedDateTime": "2026-09-19T05:32:20.617161+00:00",
+        "pinId": 1678
+      }
+    ],
+    "userId": 277
   },
   {
     "id": 712,

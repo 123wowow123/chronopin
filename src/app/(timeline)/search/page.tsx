@@ -59,6 +59,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
   const now = new Date();
   const today = new Intl.DateTimeFormat('en-CA', { timeZone, month: '2-digit', day: '2-digit' }).format(now).replace('/', '-');
   days[today] = all[today] || [];
+  const searchedDays = parseSearchQuery(q).dates;
 
   return (
     <>
@@ -70,6 +71,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
         serverNow={now.toISOString()}
         searchedUser={page.user}
         specialtyDays={days}
+        searchedDays={searchedDays}
         error={page.error}
         query={q}
         onlyWatched={onlyWatched && !!user}

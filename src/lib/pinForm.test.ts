@@ -267,3 +267,27 @@ describe('BC and early dates in the form', () => {
     expect(addDays('-2560-01-01', -1)).toBe('-2561-12-31');
   });
 });
+
+describe('stock tickers from a scrape', () => {
+  const stocks = [
+    { symbol: 'MSFT', name: 'Microsoft', relation: 'related' as const, note: 'Largest investor' },
+    { symbol: 'NVDA', name: 'NVIDIA', relation: 'supplier' as const, note: 'GPUs' },
+  ];
+
+  it('carries the scrape’s tickers to the POST body', () => {
+    const next = applyScrape(EMPTY_FORM, { stocks });
+    expect(next.stocks).toEqual(stocks);
+    expect(formToPin({ ...next, title: 't' }).stocks).toEqual(stocks);
+  });
+
+  it('keeps the tickers already there on a second scrape', () => {
+    const first = applyScrape(EMPTY_FORM, { stocks });
+    expect(applyScrape(first, { stocks: [{ symbol: 'AAPL', name: 'Apple', relation: 'company', note: null }] }).stocks).toEqual(stocks);
+  });
+
+  it('sends none from an edit, which leaves the pin’s tickers alone', () => {
+    const edit = pinToForm({ id: 1, title: 't', utcStartDateTime: '2026-09-10T00:00:00.000Z', allDay: true } as PinJson);
+    expect(edit.stocks).toEqual([]);
+    expect(formToPin(edit).stocks).toBeUndefined();
+  });
+});

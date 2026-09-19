@@ -225,7 +225,7 @@ function DayCard({
   );
 }
 
-// Below a day cut to two rows: "View all 71", the whole day as a date:
+// Below a day cut to two rows: "View all 71 pins", the whole day as a date:
 // search. Two rows are four cards from sm up and two on phones, so from sm up
 // there may be none left out (hiddenWide false), and then it shows on phones
 // only.
@@ -233,7 +233,7 @@ function ShowMore({ href, total, hiddenWide }: { href: string; total: number; hi
   return (
     <div className={`mb-2.5 flex justify-center lg:ml-[170px] lg:max-w-[906px] ${hiddenWide ? '' : 'sm:hidden'}`}>
       <Link href={href} className="rounded-full px-3 py-1 text-sm font-medium text-subtle tabular-nums ring-1 ring-line ring-inset hover:text-link hover:no-underline">
-        View all {total}
+        View all {total} {total === 1 ? 'pin' : 'pins'}
       </Link>
     </div>
   );

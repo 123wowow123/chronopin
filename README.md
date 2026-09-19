@@ -68,6 +68,7 @@ why Apple accounts are looked up by `appleId` before email.
 | `npm run wiki:sync` | Write OKF wikis for pins' links, retry failed ones, rebuild stale summaries ([docs/okf](docs/okf/playbooks/catch-up-and-retry.md)) |
 | `npm run okf:export` | Write pins and their link wikis out as an OKF bundle in `./okf-bundle/` (`--pin N`, `--out DIR`) |
 | `npm run okf:lint` | Check and maintain the wikis: OKF conformance, stale links, orphans, quality, contradictions between a pin's links (`--fix`; [docs/okf](docs/okf/playbooks/lint-the-wikis.md)) |
+| `npm run stocks:sync` | Look up pins' companies' US tickers and related/supplier tickers, and price the snapshots that are due (`--pin N`, `--dry-run`, `--company NAME --relate SYMBOL:related|supplier:note` to set relations by hand) |
 | `npm run user-wiki:build` | Rebuild signed-in users' preference wikis (`--user N`), `--out DIR` to also write them as an OKF bundle (private: users' pin history) |
 | `npm run wiki:export` / `wiki:apply` | With no Anthropic credit, write out the Claude jobs, do them in a Claude Code session, save the answers ([docs/okf](docs/okf/playbooks/without-api-credit.md)) |
 
@@ -526,6 +527,15 @@ Done, see [docs/okf](docs/okf/tables/user-wiki.md): each signed-in user gets a p
 
 - new like this should have stock ticker on it (add ticker price when posted and price on start date and on each update of start date and current price)
 https://fortune.com/2026/09/11/openai-astra-chatgpt-pro-pause/
+
+Done: a pin shows stock tickers on its page, grouped as its company, related companies and suppliers (`PinTicker` / `PinTickerPrice`, 0029; `CompanyRelation`, 0030).
+- **Its company:** looked up once by name on Nasdaq. Only a stock whose name is plainly the company's counts, so OpenAI, being private, has none.
+- **Related companies and suppliers:** up to 3 of each per company (investors, partners, chips, cloud), asked of Claude once per company and checked against Nasdaq. Every pin of the company carries them. With no API credit, set them by hand with `npm run stocks:sync -- --company OpenAI --relate "MSFT:related:Largest investor"` (pin 1677, the OpenAI Pro pause, was done this way from the article's own list).
+- **Snapshots:** each ticker keeps the price when the pin was posted, and the close on its start date once that day's market has closed. A moved start date adds a close and keeps the earlier ones.
+- **Live:** the price (Nasdaq, delayed ~15 min) comes over the page's one live connection.
+- Tickers are only added automatically (the pin's company and its relations, and what a scraped article names); the page has no add button. The pin's author or an admin can take one off, and a removed one is not added back. `PUT /api/pins/:id/stocks { add }` still exists for scripts.
+- **Scraping:** it fills in tickers too. The extraction names the listed companies the article is about, is tied to or gets supplies from. `GET /api/scrape` returns them as `stocks`, the create form shows them (each can be left out), and `POST`/`PUT /api/pins` accept `stocks: [{ symbol, relation, note }]`. Each is checked on Nasdaq and added; they are only ever added, so an edit never brings back a ticker removed on the pin page.
+- `npm run stocks:sync` is the backfill. Nasdaq history covers 10 years, split-adjusted. Not on timeline cards yet. Nasdaq's API terms are unchecked, as with Kalshi and Polymarket.
 
 
 

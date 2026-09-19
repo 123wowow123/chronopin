@@ -4,11 +4,12 @@
 
 import { addDays, pickDates } from './dateClaims';
 import { compareDayKeys, dayKeyOf, dayKeyParts, dayKeyToMs } from './format';
+import type { ScrapedStock } from './stocks';
 import type { MediumJson, MerchantJson, PinJson, PinRatingJson, PinReferenceJson } from './types';
 
 // What /api/scrape answers: a draft pin, plus the promotional video it found
 // for a film, series or anime (also listed in media).
-export type ScrapedPin = Partial<PinJson> & { trailer?: MediumJson };
+export type ScrapedPin = Partial<PinJson> & { trailer?: MediumJson; stocks?: ScrapedStock[] };
 
 export type PinFormValues = {
   id?: number;
@@ -50,6 +51,9 @@ export type PinFormValues = {
   extraMedia: MediumJson[];
   // Review-site scores from the scrape. Not editable, only carried.
   ratings: PinRatingJson[];
+  // Stock tickers the scraped article names, sent with the pin, which adds
+  // them (never removes: the pin page edits a pin's tickers). Can be dropped.
+  stocks: ScrapedStock[];
 };
 
 // A reference row as typed: confidence stays a string until it is sent.
@@ -89,6 +93,7 @@ export const EMPTY_FORM: PinFormValues = {
   useMedia: true,
   extraMedia: [],
   ratings: [],
+  stocks: [],
 };
 
 // The form's dates are day keys (src/lib/format.ts), so a BC pin's survive
@@ -210,6 +215,8 @@ export function pinToForm(pin: PinJson): PinFormValues {
     useMedia: true,
     extraMedia: (pin.media || []).slice(1),
     ratings: pin.ratings ? pin.ratings.map((r) => ({ ...r })) : [],
+    // A stored pin's tickers are edited on its page, not here.
+    stocks: [],
   };
 }
 
@@ -256,6 +263,9 @@ export function applyScrape(values: PinFormValues, scraped: ScrapedPin): PinForm
     Object.assign(next, datesToForm({ utcStartDateTime: scraped.utcStartDateTime, utcEndDateTime: scraped.utcEndDateTime, allDay: scraped.allDay }), {
       allDay: !!scraped.allDay,
     });
+  }
+  if (!next.stocks.length && scraped.stocks?.length) {
+    next.stocks = scraped.stocks.map((s) => ({ ...s }));
   }
   if (!next.ratings.length && scraped.ratings?.length) {
     next.ratings = scraped.ratings.map((r) => ({ ...r }));
@@ -346,6 +356,7 @@ export function formToPin(values: PinFormValues) {
     media: formToMedia(values),
     // Only saved when the pin is created; an edit leaves stored ratings alone.
     ratings: values.ratings,
+    stocks: values.stocks.length ? values.stocks : undefined,
   };
 }
 

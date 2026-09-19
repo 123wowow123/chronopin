@@ -26,7 +26,7 @@ import { TimeRangeSlider } from './TimeRangeSlider';
 
 type SortBy = 'date' | 'relevance';
 
-const rail = "relative lg:before:absolute lg:before:top-0 lg:before:bottom-0 lg:before:left-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']";
+const rail = "relative lg:min-h-[calc(100dvh-52px-6rem)] lg:before:absolute lg:before:top-0 lg:before:-bottom-24 lg:before:left-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']";
 
 function SortToggle({ value, onChange, className = '' }: { value: SortBy; onChange: (value: SortBy) => void; className?: string }) {
   return (
@@ -68,6 +68,8 @@ async function fetchSearchPage(query: string): Promise<{ pins: CardPin[]; links:
   };
 }
 
+const NO_TODAY_MARKER: ReturnType<typeof resolveTodayMarker> = { index: -1, atEnd: false, todayBagIndex: -1 };
+
 // Search results: on the timeline by date (opening on today), or as a grid
 // ranked by relevance for free-text searches. Each arrives a page at a time:
 // by date, earlier and later pages load as the reader nears either end; by
@@ -79,6 +81,7 @@ export function SearchResults({
   serverNow,
   searchedUser,
   specialtyDays: initialSpecialtyDays,
+  searchedDays = [],
   error,
   query = '',
   onlyWatched = false,
@@ -92,6 +95,8 @@ export function SearchResults({
   serverNow: string;
   searchedUser?: { id: number; userName: string };
   specialtyDays: Record<string, string[]>;
+  // The days a date: search keeps to; today is on the timeline only when it is one of them.
+  searchedDays?: string[];
   error?: string;
   query?: string;
   onlyWatched?: boolean;
@@ -228,7 +233,8 @@ export function SearchResults({
 
   const todayKey = dayKeyIn(serverNow, timeZone);
   const bags = useMemo(() => buildBags(datePins ?? [], [], timeZone), [datePins, timeZone]);
-  const marker = resolveTodayMarker(bags, todayKey);
+  const showsToday = !searchedDays.length || searchedDays.includes(todayKey);
+  const marker = showsToday ? resolveTodayMarker(bags, todayKey) : NO_TODAY_MARKER;
 
   const scrollToToday = () => {
     const id = todayScrollId(bags, marker);
@@ -251,10 +257,18 @@ export function SearchResults({
   });
   const spotTaken = useRef(false);
   const pagesWalked = useRef(0);
+  // The sort the page opened in (only the first layout pass reads it).
+  const openedSort = useRef(sortBy);
   useLayoutEffect(() => {
     if (spotTaken.current) return;
     spotTaken.current = true;
     const spot = takeSearchSpot();
+    // A new search by relevance starts at its best match. The router keeps
+    // the window where it was when only the query changes, so a search made
+    // from further down the last results would open part-way down the new
+    // ones. (By date it opens on today, below; a page shown again after Back
+    // is not a new mount and keeps its place.)
+    if (!spot && openedSort.current === 'relevance') window.scrollTo({ top: 0 });
     if (!spot || error) return;
     returnTo.current = spot;
     // Not today: by date, the opening below stands aside and the sentinels may page.
@@ -360,7 +374,7 @@ export function SearchResults({
           summaryCaption={searchedUser ? undefined : 'Posted within'}
           summary={searchedUser ? searchedUser.userName : spanLabel(postedWithin)}
           summaryIsPostedWithin={!searchedUser}
-          onToday={sortBy === 'date' && bags.length ? holdToday : undefined}
+          onToday={sortBy === 'date' && bags.length && showsToday ? holdToday : undefined}
           sort={canSort ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : undefined}
           category={{
             summary: categoryPillSummary(query),

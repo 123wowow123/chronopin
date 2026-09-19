@@ -45,6 +45,7 @@ export type ExtractedFields = {
   endDateTime: string | null;
   allDay: boolean;
   longFormSummary: string | null;
+  stocks: { symbol: string; name: string; relation: 'company' | 'related' | 'supplier'; note: string }[];
 };
 
 const SCHEMA = {
@@ -136,6 +137,22 @@ const SCHEMA = {
       type: 'boolean',
       description: 'True when the page gives a date but no clock time.',
     },
+    stocks: {
+      type: 'array',
+      description:
+        'US-listed stocks the story is about or would move: the company itself (relation "company"), companies it names as investors, owners, partners or rivals ("related"), and ones it names as suppliers of chips, cloud, parts or content ("supplier"). note says the tie in a few words. Empty when the page names none.',
+      items: {
+        type: 'object',
+        properties: {
+          symbol: { type: 'string', description: 'US ticker symbol, e.g. "MSFT".' },
+          name: { type: 'string' },
+          relation: { type: 'string', enum: ['company', 'related', 'supplier'] },
+          note: { type: 'string' },
+        },
+        required: ['symbol', 'name', 'relation', 'note'],
+        additionalProperties: false,
+      },
+    },
     longFormSummary: {
       type: ['string', 'null'],
       description:
@@ -143,6 +160,7 @@ const SCHEMA = {
     },
   },
   required: [
+    'stocks',
     'title',
     'description',
     'price',

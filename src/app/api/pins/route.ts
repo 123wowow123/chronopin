@@ -1,4 +1,4 @@
-import type { NextRequest } from 'next/server';
+import { after, type NextRequest } from 'next/server';
 import { getUser, requireUser } from '@/server/auth';
 import { emitPinEvent } from '@/server/events';
 import { HttpError, json, paginationHeaders, paginationLink, readJson, route } from '@/server/http';
@@ -6,8 +6,10 @@ import Pin from '@/server/model/pin';
 import PinRating from '@/server/model/pinRating';
 import PinReference from '@/server/model/pinReference';
 import { attributeReferences } from '@/lib/referenceAttribution';
+import { parseScrapedStocks } from '@/lib/stocks';
 import { rejectDuplicateSourceUrl } from '@/server/services/duplicatePin';
 import { invalidatePin } from '@/server/services/cache';
+import { addPinStocksQuietly } from '@/server/services/pinStocks';
 import { getPins } from '@/server/services/timeline';
 import { linkParams, resolveCreatedSince } from '@/server/util/createdFilter';
 
@@ -33,10 +35,15 @@ export const GET = route(async (request: NextRequest) => {
   return json(pins, 200, paginationHeaders(link, pins.queryCount));
 });
 
-// Creates a pin authored by the signed-in user.
+// Creates a pin authored by the signed-in user. Besides the pin's own fields
+// the body may carry stocks: [{ symbol, name?, relation: company|related|
+// supplier, note? }] (a scrape's, see GET /api/scrape), which are checked on
+// Nasdaq and added once the pin is saved.
 export const POST = route(async (request: NextRequest) => {
   const user = await requireUser(request);
-  const pin = new Pin(await readJson(request));
+  const body = await readJson(request);
+  const pin = new Pin(body);
+  const stocks = parseScrapedStocks(body.stocks);
   pin.setUser(user);
   const problem = PinReference.problem(pin.references) ?? PinRating.problem(pin.ratings);
   if (problem) {
@@ -49,6 +56,7 @@ export const POST = route(async (request: NextRequest) => {
   const { pin: saved } = await pin.save();
   emitPinEvent('save', saved, { userId: user.id });
   invalidatePin(saved.id);
+  if (stocks.length) after(() => addPinStocksQuietly(saved.id, stocks));
 
   // Answered from the database, so the response is exactly what a reload shows.
   const { pin: stored } = await Pin.queryById(saved.id, user.id);

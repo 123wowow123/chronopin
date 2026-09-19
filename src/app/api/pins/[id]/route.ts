@@ -1,4 +1,4 @@
-import type { NextRequest } from 'next/server';
+import { after, type NextRequest } from 'next/server';
 import { getUser, isAdmin, requireUser } from '@/server/auth';
 import { emitPinEvent } from '@/server/events';
 import { HttpError, intParam, json, noContent, readJson, route } from '@/server/http';
@@ -7,8 +7,10 @@ import PinDuplicate from '@/server/model/pinDuplicate';
 import PinReference from '@/server/model/pinReference';
 import type User from '@/server/model/user';
 import { invalidatePin } from '@/server/services/cache';
+import { addPinStocksQuietly } from '@/server/services/pinStocks';
 import { rejectDuplicateSourceUrl } from '@/server/services/duplicatePin';
 import { attributeReferences } from '@/lib/referenceAttribution';
+import { parseScrapedStocks } from '@/lib/stocks';
 
 type Ctx = RouteContext<'/api/pins/[id]'>;
 
@@ -40,7 +42,11 @@ async function loadModifiable(request: NextRequest, ctx: Ctx): Promise<{ user: U
 const update = route(async (request: NextRequest, ctx: Ctx) => {
   const { user, existing } = await loadModifiable(request, ctx);
 
-  const pin = new Pin(await readJson(request));
+  const body = await readJson(request);
+  const pin = new Pin(body);
+  // Tickers in the body are added, never replace the pin's (pin page edits
+  // them); leaving them out changes nothing.
+  const stocks = parseScrapedStocks(body.stocks);
   const referenceProblem = PinReference.problem(pin.references);
   if (referenceProblem) {
     throw new HttpError(400, referenceProblem);
@@ -60,6 +66,7 @@ const update = route(async (request: NextRequest, ctx: Ctx) => {
   const { pin: updated } = await pin.update();
   emitPinEvent('update', updated, { userId: user.id });
   invalidatePin(updated.id);
+  if (stocks.length) after(() => addPinStocksQuietly(updated.id, stocks));
 
   const { pin: stored } = await Pin.queryById(updated.id, user.id);
   return json(stored ?? updated);

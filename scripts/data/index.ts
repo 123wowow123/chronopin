@@ -12,6 +12,8 @@ import * as db from '@/server/db';
 import { Comment, Company, DateTime, Follow, FullPins, MediumType, User, Users } from '@/server/model';
 import AiFeedback from '@/server/model/aiFeedback';
 import PinDuplicate from '@/server/model/pinDuplicate';
+import CompanyRelation from '@/server/model/companyRelation';
+import PinTicker from '@/server/model/pinTicker';
 import Source from '@/server/model/source';
 import log from '@/server/util/log';
 import { excludeE2e } from './excludeE2e';
@@ -27,6 +29,7 @@ const { values: flags } = parseArgs({
     duplicatefile: { type: 'string', default: './scripts/backup/seedPinDuplicates.json' },
     aifeedbackfile: { type: 'string', default: './scripts/backup/seedAiFeedback.json' },
     sourcefile: { type: 'string', default: './scripts/backup/seedSources.json' },
+    stockfile: { type: 'string', default: './scripts/backup/seedStocks.json' },
     companyfile: { type: 'string', default: './scripts/backup/seedCompanies.json' },
     aphelionfile: { type: 'string', default: './scripts/backup/aphelion.json' },
     equinoxfile: { type: 'string', default: './scripts/backup/equinox.json' },
@@ -119,6 +122,18 @@ async function saveDB() {
     ),
     // Contradiction scans are keyed by pin, quality scans by source.
     lintScans: lintScans.filter((s) => (s.check === 'contradiction' ? keptPinIds.has(s.subjectId) : keptSourceIds.has(s.subjectId))),
+  });
+
+  // Stock tickers and their price snapshots (0029): a posted price cannot be
+  // read again later, so it is kept.
+  console.log('Backup Stocks');
+  const stocks = await PinTicker.getAll();
+  const keptCompanyIds = new Set(data.companies.map((c) => c.id));
+  const keptTickerIds = new Set(stocks.tickers.filter((t) => keptPinIds.has(t.pinId)).map((t) => t.id));
+  writeJson(flags.stockfile, {
+    tickers: stocks.tickers.filter((t) => keptTickerIds.has(t.id)),
+    prices: stocks.prices.filter((p) => keptTickerIds.has(p.pinTickerId)),
+    relations: (await CompanyRelation.getAll()).filter((r) => keptCompanyIds.has(r.companyId)),
   });
 
   console.log('Data Backup Complete');
@@ -237,6 +252,16 @@ async function seedDB() {
       await Source.restore(readJson(flags.sourcefile));
     } catch (error) {
       log.error('Sources Save Error', JSON.stringify(error));
+    }
+  }
+
+  if (existsSync(flags.stockfile)) {
+    try {
+      const stocks = readJson(flags.stockfile);
+      await CompanyRelation.restore(stocks.relations);
+      await PinTicker.restore(stocks);
+    } catch (error) {
+      log.error('Stocks Save Error', JSON.stringify(error));
     }
   }
 

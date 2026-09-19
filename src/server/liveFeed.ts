@@ -5,6 +5,7 @@
 //   pin:<event>     a pin saved, updated, removed, watched or liked (everyone);
 //                   pin:view is just { id, viewCount }
 //   odds            { pinId, markets } for the pins the page says it shows
+//   stock           a StockQuote for each ticker of the pins it asked quotes for
 //   notifications   { unreadCount } for the signed-in viewer's own connections
 //
 // Like the events it relays this lives in-process, which holds while the app
@@ -14,6 +15,8 @@ import { randomUUID } from 'node:crypto';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { PIN_EVENTS, onNotificationsChanged, onPinEvent } from './events';
 import Notification from './model/notification';
+import PinTicker from './model/pinTicker';
+import { subscribeQuote } from './stocks';
 import { subscribeOdds } from './predictionMarkets';
 import { pinById } from './services/pages';
 import log from './util/log';
@@ -40,6 +43,9 @@ type LiveConnection = {
   // Followed pins' unsubscribes, and the set the page last asked for.
   odds: Map<number, () => void>;
   oddsWanted: Set<number>;
+  // Followed symbols' unsubscribes, and the pins the page last asked about.
+  stocks: Map<string, () => void>;
+  stocksWanted: number[];
   countQueued: boolean;
   closed: boolean;
 };
@@ -91,6 +97,8 @@ export function openLiveConnection({ userId, timeZone, send }: { userId: number 
     stops: [],
     odds: new Map(),
     oddsWanted: new Set(),
+    stocks: new Map(),
+    stocksWanted: [],
     countQueued: false,
     closed: false,
   };
@@ -115,6 +123,8 @@ export function closeLiveConnection(conn: LiveConnection) {
   conn.stops.forEach((stop) => stop());
   conn.odds.forEach((stop) => stop());
   conn.odds.clear();
+  conn.stocks.forEach((stop) => stop());
+  conn.stocks.clear();
   state.connections.delete(conn.id);
   if (state.todayTimer && ![...state.connections.values()].some((c) => c.userId != null)) {
     clearInterval(state.todayTimer);
@@ -150,5 +160,29 @@ export async function setLiveOdds(id: string, pinIds: unknown[]): Promise<boolea
     }
     conn.odds.set(pinId, subscribeOdds(pinId, refs, (markets) => conn.send('odds', { pinId, markets })));
   });
+  return true;
+}
+
+// Makes a connection follow the quotes of these pins' tickers, as stored. Asked
+// again with the same pins, it re-reads their tickers (one was added or taken
+// off). False when there is no such connection.
+export async function setLiveStocks(id: string, pinIds: unknown[]): Promise<boolean> {
+  const conn = state.connections.get(id);
+  if (!conn) return false;
+  const wanted = [...new Set(pinIds.map(Number).filter((pinId) => Number.isInteger(pinId) && pinId > 0))].slice(0, MAX_ODDS_PINS);
+  conn.stocksWanted = wanted;
+  const tickers = await PinTicker.forPins(wanted);
+  // A later request may have changed the set while the tickers loaded.
+  if (conn.closed || conn.stocksWanted !== wanted) return true;
+  const symbols = new Map(tickers.map((t) => [t.symbol, t.assetClass]));
+  for (const [symbol, stop] of conn.stocks) {
+    if (!symbols.has(symbol)) {
+      stop();
+      conn.stocks.delete(symbol);
+    }
+  }
+  for (const [symbol, assetClass] of symbols) {
+    if (!conn.stocks.has(symbol)) conn.stocks.set(symbol, subscribeQuote(symbol, assetClass, (quote) => conn.send('stock', quote)));
+  }
   return true;
 }

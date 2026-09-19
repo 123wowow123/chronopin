@@ -503,6 +503,29 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
           </div>
         ) : null}
 
+        {values.stocks.length ? (
+          <div>
+            <span className={labelClass}>Stock tickers</span>
+            <p className="mt-0.5 text-xs text-subtle">From the article, added with the pin, priced when posted and on its start date.</p>
+            <ul className="mt-1 flex flex-wrap gap-1.5">
+              {values.stocks.map((stock) => (
+                <li key={stock.symbol} className="inline-flex items-center gap-1 rounded-full bg-raised px-2.5 py-1 text-xs ring-1 ring-line" title={stock.note ?? undefined}>
+                  <span className="font-semibold">{stock.symbol}</span>
+                  <span className="text-subtle">{stock.relation === 'company' ? 'company' : stock.relation}</span>
+                  <button
+                    type="button"
+                    aria-label={`Leave out ${stock.symbol}`}
+                    onClick={() => setValues((v) => ({ ...v, stocks: v.stocks.filter((s) => s.symbol !== stock.symbol) }))}
+                    className="ml-0.5 text-subtle hover:text-ink"
+                  >
+                    <Icon name="close" className="size-3" />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+
         {values.ratings.length ? (
           <div>
             <span className={labelClass}>Ratings</span>

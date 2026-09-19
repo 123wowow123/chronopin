@@ -61,7 +61,7 @@ export default class Company {
   }
 
   static getAll() {
-    return db.query(`SELECT ${COLUMNS}, "utcCreatedDateTime", "utcUpdatedDateTime" FROM "Company" ORDER BY "id"`);
+    return db.query(`SELECT ${COLUMNS}, "tickerSymbol", "utcTickerCheckedDateTime", "utcRelationsCheckedDateTime", "utcCreatedDateTime", "utcUpdatedDateTime" FROM "Company" ORDER BY "id"`);
   }
 
   // Names and logos for the pin form's company suggestions.
@@ -105,10 +105,14 @@ export default class Company {
     for (const c of companies || []) {
       await db.query(
         `
-      INSERT INTO "Company" ("id", "name", "wikiUrl", "websiteUrl", "logoUrl", "utcLogoCheckedDateTime", "utcCreatedDateTime", "utcUpdatedDateTime")
-      VALUES ($1, $2, $3, $4, $5, $6, COALESCE($7, now()), $8)
+      INSERT INTO "Company" ("id", "name", "wikiUrl", "websiteUrl", "logoUrl", "utcLogoCheckedDateTime", "utcCreatedDateTime", "utcUpdatedDateTime",
+        "tickerSymbol", "utcTickerCheckedDateTime", "utcRelationsCheckedDateTime")
+      VALUES ($1, $2, $3, $4, $5, $6, COALESCE($7, now()), $8, $9, $10, $11)
       ON CONFLICT DO NOTHING`,
-        [c.id, c.name, c.wikiUrl, c.websiteUrl, c.logoUrl, c.utcLogoCheckedDateTime, c.utcCreatedDateTime, c.utcUpdatedDateTime].map(
+        [
+          c.id, c.name, c.wikiUrl, c.websiteUrl, c.logoUrl, c.utcLogoCheckedDateTime, c.utcCreatedDateTime, c.utcUpdatedDateTime,
+          c.tickerSymbol, c.utcTickerCheckedDateTime, c.utcRelationsCheckedDateTime,
+        ].map(
           (v) => (v === undefined ? null : v),
         ),
       );
