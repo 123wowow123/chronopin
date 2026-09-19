@@ -15,8 +15,11 @@ const dayOnly = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric
 // once that day has closed. Related and supplier tickers are on the pin page
 // only. The quote is followed over the page's live stream only while the card
 // is near the screen, like its market odds. `onDark` for the pill over the
-// card's picture, which is dark in either theme.
-export function CompanyTicker({ pin, onDark = false }: { pin: Pick<PinJson, 'id' | 'stocks'>; onDark?: boolean }) {
+// card's picture, which is dark in either theme. `bare` drops the leading dot,
+// for a row of its own (the pin page's thread), which shows the start
+// close and the move since ("start was $200.99 +10.57%"), not the price now, which
+// the page already shows.
+export function CompanyTicker({ pin, onDark = false, bare = false }: { pin: Pick<PinJson, 'id' | 'stocks'>; onDark?: boolean; bare?: boolean }) {
   // A signed-in viewer can turn these off (profile preferences).
   const hidden = useSession().user?.showCardStockPrices === false;
   const stock = hidden ? undefined : pin.stocks?.find((s) => s.relation === 'company');
@@ -61,10 +64,17 @@ export function CompanyTicker({ pin, onDark = false }: { pin: Pick<PinJson, 'id'
   const down = onDark ? 'text-red-300' : 'text-danger';
   return (
     <span ref={ref} className="inline-flex items-center gap-1 tabular-nums" title={title}>
-      <span className={onDark ? 'text-white/40' : 'text-faint'} aria-hidden>
-        ·
-      </span>
-      <span>{quote ? usd.format(quote.price) : '…'}</span>
+      {bare ? null : (
+        <span className={onDark ? 'text-white/40' : 'text-faint'} aria-hidden>
+          ·
+        </span>
+      )}
+      {bare && stock.startPrice != null ? (
+        <span className="text-subtle">
+          start was {usd.format(stock.startPrice)}
+        </span>
+      ) : null}
+      {bare ? null : <span>{quote ? usd.format(quote.price) : '…'}</span>}
       {pct != null ? (
         <span className={pct > 0 ? up : pct < 0 ? down : ''}>
           {pct > 0 ? '+' : ''}
