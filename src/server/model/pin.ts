@@ -110,6 +110,21 @@ export default class Pin extends BasePin {
     return rows[0];
   }
 
+  // The live pins, by anyone, with each of these sourceUrls, keyed by the URL
+  // as given (http and https the same). The first pin wins a shared URL.
+  static async findBySourceUrls(sourceUrls: string[]) {
+    const byKey = new Map(sourceUrls.filter((u) => sameSourceUrlKey(u)).map((u) => [sameSourceUrlKey(u), u]));
+    if (!byKey.size) return new Map<string, { id: number; title: string }>();
+    const rows = await db.query<{ id: number; title: string; key: string }>(
+      `SELECT DISTINCT ON (key) "id", "title", key FROM (
+         SELECT "id", "title", regexp_replace(btrim("sourceUrl"), '^https?://', '', 'i') AS key
+         FROM "Pin" WHERE "utcDeletedDateTime" IS NULL) p
+       WHERE key = ANY($1) ORDER BY key, "id"`,
+      [[...byKey.keys()]],
+    );
+    return new Map(rows.map((r) => [byKey.get(r.key)!, { id: r.id, title: r.title }]));
+  }
+
   // Persists a generated longFormSummary without going through the full
   // edit path, which needs the author.
   static async updateLongFormSummary(pinId: number, longFormSummary: string) {

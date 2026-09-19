@@ -14,6 +14,10 @@ type Pattern = { re: RegExp; read: (m: RegExpExecArray) => { family: string; ver
 
 const VERSION = String.raw`(\d+(?:\.\d+)?)`;
 const GPT_VARIANTS = /(?:[- ](?:mini|nano|pro|instant|thinking|codex|max|sol|turbo))+/;
+// Names of the flagship itself rather than a tier beside it: GPT-5 became
+// GPT-5.2 Thinking, then GPT-5.4 Thinking and GPT-5.6 Sol, so they share
+// GPT-5's line (the model keeps its name).
+const GPT_FLAGSHIP_NAMES = new Set(['thinking', 'sol']);
 
 const PATTERNS: Pattern[] = [
   // Claude Opus 4.5 / Claude 3.5 Sonnet
@@ -50,7 +54,7 @@ export function modelReleases(title: string | null | undefined): ModelRelease[] 
         at: m.index,
         end: m.index + m[0].length,
         release: {
-          line: [family, ...variants].join(' '),
+          line: [family, ...variants.filter((v) => !(family === 'gpt' && GPT_FLAGSHIP_NAMES.has(v)))].join(' '),
           version: version.split('.').map((part) => parseInt(part, 10)),
           model: [family, version, ...variants].join(' '),
         },

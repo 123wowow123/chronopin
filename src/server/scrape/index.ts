@@ -19,8 +19,9 @@ import { isStudioCategory, studioLocationByName } from '../studioLocation';
 import { awardsFor } from '../services/pinAwards';
 import type { AwardEntry } from '@/lib/awards';
 import { sourceKind } from '@/lib/sourceKind';
-import { IN_PAGE_SCRAPE, type InPageResult } from './inPage';
-import { wikiImages } from './wikiImages';
+import { IN_PAGE_HEADINGS, IN_PAGE_SCRAPE, type InPageHeadings, type InPageResult } from './inPage';
+import { pageEntries, type PageEntry } from '@/lib/pageEntries';
+import { findPinImages, pageImage } from './findImages';
 import { findScreenDetails, isScreenCategory, SCREEN_CATEGORIES, youtubeStill, type ScreenDetails } from './screen';
 import { findScoreMarket, GAME_CATEGORIES, scoreSiteFor, withScoreMarket, type ScoreMarket } from './scoreMarkets';
 import { seriesPinFor } from './modelSeries';
@@ -44,6 +45,7 @@ export async function scrape(pageUrl: string) {
   let awards: AwardEntry[] | undefined;
   let tags: string[] | undefined;
   let respondTo: { id: number; title: string } | undefined;
+  let entries: PageEntries | undefined;
   switch (domain) {
     case 'twitter.com':
     case 'x.com':
@@ -57,7 +59,7 @@ export async function scrape(pageUrl: string) {
       break;
     default:
       type = scrapeType.web;
-      ({ pin, trailer, stocks, awards, tags, respondTo } = await webScrape(pageUrl));
+      ({ pin, trailer, stocks, awards, tags, respondTo, entries } = await webScrape(pageUrl));
       break;
   }
   // trailer is also in media; the form keeps it alongside whichever picture
@@ -68,6 +70,8 @@ export async function scrape(pageUrl: string) {
   // respondTo: the earlier season's (./prequel.ts) or model version's
   // (./modelSeries.ts) pin this one follows on from, for the form to post it
   // as a response to.
+  // entries: a release-notes or changelog page's dated entries, for the form
+  // to offer one pin per entry (src/lib/pageEntries.ts).
   return Object.assign(
     {},
     pin.toJSON(),
@@ -77,7 +81,18 @@ export async function scrape(pageUrl: string) {
     tags?.length ? { tags } : {},
     awards?.length ? { awards: awards.map(({ workArticle: _article, ...a }) => a) } : {},
     respondTo ? { respondTo } : {},
+    entries ? { entries } : {},
   );
+}
+
+type PageEntries = { pageTitle: string; list: PageEntry[] };
+
+// The page's dated entries, each marked with the pin already made from it.
+async function readEntries(pageUrl: string, read: InPageHeadings | null): Promise<PageEntries | undefined> {
+  const list = read ? pageEntries(pageUrl, read.headings) : [];
+  if (!list.length) return undefined;
+  const existing = await Pin.findBySourceUrls(list.map((e) => e.url));
+  return { pageTitle: read!.title, list: list.map((e) => (existing.has(e.url) ? { ...e, existing: existing.get(e.url) } : e)) };
 }
 
 // The references found for a pin, and the summary they ground, when one was
@@ -188,14 +203,19 @@ async function webScrape(pageUrl: string): Promise<{
   awards?: AwardEntry[];
   tags?: string[];
   respondTo?: { id: number; title: string };
+  entries?: PageEntries;
 }> {
   const browser = await launchBrowser();
 
   let pageText = '';
+  let headings: InPageHeadings | null = null;
   let pin: Pin;
   try {
     const [page] = await browser.pages();
     page.setDefaultNavigationTimeout(NAVIGATION_WAIT_MS);
+    // Cloudflare holds "HeadlessChrome" on its challenge page (help.openai.com
+    // among others); the same browser named plainly is let through.
+    await page.setUserAgent((await browser.userAgent()).replace('HeadlessChrome', 'Chrome'));
     await page.setRequestInterception(true);
     // Stay on the page asked for: block redirects and script-driven
     // navigation away from it (https://github.com/puppeteer/puppeteer/issues/823).
@@ -230,8 +250,14 @@ async function webScrape(pageUrl: string): Promise<{
     const found = (await page.evaluate(IN_PAGE_SCRAPE)) as InPageResult;
     // Body text for the LLM pass below, read while the page is still open.
     pageText = ((await page.evaluate('document.body ? document.body.innerText : ""').catch(() => '')) as string) || '';
+    headings = (await page.evaluate(IN_PAGE_HEADINGS).catch((err) => {
+      log.warn('reading headings failed:', (err as Error).message);
+      return null;
+    })) as InPageHeadings | null;
 
     pin = new Pin();
+    // A page without a usable picture or embed still gets a list to add to.
+    pin.media = [];
     (found.media || []).forEach((m) => {
       if (m.width > 150 && m.height > 150) {
         pin.addMedium(
@@ -288,6 +314,8 @@ async function webScrape(pageUrl: string): Promise<{
   applyExtracted(pin, fields);
   await placeAtStudioHq(pin);
   const trailer = applyScreenDetails(pin, screen, scoreMarket);
+  // References first: the top-up takes pictures from the day's articles.
+  addReferences(pin, found);
   await topUpImages(pin, fields);
   // A film, series or anime's awards, by the work's own title and the pin's.
   const awards = isScreenCategory(pin.categories)
@@ -300,25 +328,38 @@ async function webScrape(pageUrl: string): Promise<{
   // pin's text names are tagged again on save (model/pinTag.ts).
   const tags = parseTags(fields?.tags) ?? [];
   const respondTo = (await prequelPinFor(pin, pageUrl)) ?? (await seriesPinFor(pin));
-  return { pin: addReferences(pin, found), trailer, stocks: parseScrapedStocks(fields?.stocks), awards, tags, respondTo };
+  const entries = await readEntries(pageUrl, headings).catch((err) => {
+    log.warn('reading entries failed:', (err as Error).message);
+    return undefined;
+  });
+  return { pin, trailer, stocks: parseScrapedStocks(fields?.stocks), awards, tags, respondTo, entries };
 }
 
 const imageCount = (pin: Pin) => pin.media.filter((m) => Number(m.type) === mediumID.image).length;
 
-// Pages with few pictures of their own are topped up from the Wikipedia
-// article for the work, else the company, else the pin's title. Added after
-// the page's own media, so the page's picture stays the default heading.
+// Pages with few pictures of their own are topped up from the company's
+// announcement, the referenced articles and Wikipedia (./findImages.ts),
+// which may also bring the announcement as a reference. Added after the
+// page's own media, so the page's picture stays the default heading.
 async function topUpImages(pin: Pin, fields: ExtractedFields | null) {
-  for (const subject of [fields?.workTitle, fields?.companyWikiUrl || fields?.company, fields?.title]) {
-    const need = TARGET_IMAGES - imageCount(pin);
-    if (need <= 0) return;
-    for (const img of await wikiImages(subject, need + 2)) {
-      if (imageCount(pin) >= TARGET_IMAGES) return;
-      if (!pin.findMediumByOriginalUrl(img.originalUrl)) {
-        pin.addMedium(new Medium({ type: mediumID.image, originalWidth: img.width, originalHeight: img.height, originalUrl: img.originalUrl }));
-      }
-    }
-  }
+  const need = TARGET_IMAGES - imageCount(pin);
+  if (need <= 0) return;
+  const { images, references } = await findPinImages(
+    {
+      title: pin.title || fields?.title || '',
+      company: pin.company ?? fields?.company,
+      companyWikiUrl: pin.companyWikiUrl ?? fields?.companyWikiUrl,
+      workTitle: fields?.workTitle,
+      utcStartDateTime: pin.utcStartDateTime,
+      references: pin.references,
+    },
+    need,
+    pin.media.map((m) => m.originalUrl!),
+  );
+  images.forEach((img) =>
+    pin.addMedium(new Medium({ type: mediumID.image, originalWidth: img.width || undefined, originalHeight: img.height || undefined, originalUrl: img.originalUrl })),
+  );
+  references.forEach((r) => pin.addReference(new PinReference(r)));
 }
 
 const IMAGE_FETCH_MS = 5000;
@@ -342,18 +383,9 @@ async function addLinkedImages(pin: Pin, text: string) {
   const links = [...text.matchAll(/\((https?:\/\/[^\s)]+)\)/g)].map((m) => m[1]).filter((u) => !/\/\/(?:[\w-]+\.)?(?:twitter|x)\.com\//.test(u));
   for (const link of links.slice(0, 3)) {
     if (imageCount(pin) >= TARGET_IMAGES) return;
-    try {
-      const res = await fetch(link, { redirect: 'follow', signal: AbortSignal.timeout(IMAGE_FETCH_MS), headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ChronoPin)' } });
-      if (!res.ok || !String(res.headers.get('content-type')).includes('html')) continue;
-      const html = (await res.text()).slice(0, 200000);
-      const tag = html.match(/<meta[^>]+(?:property|name)=["'](?:og|twitter):image["'][^>]*>/i)?.[0];
-      const content = tag?.match(/content=["']([^"']+)["']/i)?.[1];
-      if (!content) continue;
-      const originalUrl = new URL(content.replace(/&amp;/g, '&'), res.url).href;
-      if (!pin.findMediumByOriginalUrl(originalUrl)) pin.addMedium(new Medium({ type: mediumID.image, originalUrl }));
-    } catch {
-      // an unreachable link just adds nothing
-    }
+    // an unreachable link just adds nothing
+    const originalUrl = await pageImage(link).catch(() => undefined);
+    if (originalUrl && !pin.findMediumByOriginalUrl(originalUrl)) pin.addMedium(new Medium({ type: mediumID.image, originalUrl }));
   }
 }
 

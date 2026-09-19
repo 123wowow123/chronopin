@@ -6546,9 +6546,9 @@
       "generatedBy": null,
       "wikiVersion": 0,
       "attempts": 0,
-      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfD1fD7VG755DfXwNhdoj\"}",
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfDMpUZVxJUHGPHt6f2Fr\"}",
       "utcFetchedDateTime": "2026-09-19T15:10:54.044Z",
-      "utcAttemptedDateTime": "2026-09-19T15:11:11.664Z",
+      "utcAttemptedDateTime": "2026-09-19T19:35:33.857Z",
       "utcBuiltDateTime": null,
       "utcCreatedDateTime": "2026-09-19T15:10:53.668Z"
     },
@@ -6564,9 +6564,9 @@
       "generatedBy": null,
       "wikiVersion": 0,
       "attempts": 0,
-      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfD1oHa6uwQwGepZv99tp\"}",
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfDMtTHicDDfHiwyzdAav\"}",
       "utcFetchedDateTime": "2026-09-19T15:10:53.946Z",
-      "utcAttemptedDateTime": "2026-09-19T15:13:01.241Z",
+      "utcAttemptedDateTime": "2026-09-19T19:36:27.725Z",
       "utcBuiltDateTime": null,
       "utcCreatedDateTime": "2026-09-19T15:10:53.690Z"
     },
@@ -6600,9 +6600,9 @@
       "generatedBy": null,
       "wikiVersion": 0,
       "attempts": 0,
-      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfD1dxMSxAkDcb87ZbtgG\"}",
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfDMpVihYaCF4LXrPisCb\"}",
       "utcFetchedDateTime": "2026-09-19T15:10:54.232Z",
-      "utcAttemptedDateTime": "2026-09-19T15:10:54.541Z",
+      "utcAttemptedDateTime": "2026-09-19T19:35:34.006Z",
       "utcBuiltDateTime": null,
       "utcCreatedDateTime": "2026-09-19T15:10:54.066Z"
     },
@@ -6618,9 +6618,9 @@
       "generatedBy": null,
       "wikiVersion": 0,
       "attempts": 0,
-      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfD1dxvS9qsvozes9UcjT\"}",
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfDMpYEm1HC6B86rLc2LH\"}",
       "utcFetchedDateTime": "2026-09-19T15:10:54.479Z",
-      "utcAttemptedDateTime": "2026-09-19T15:10:54.830Z",
+      "utcAttemptedDateTime": "2026-09-19T19:35:34.603Z",
       "utcBuiltDateTime": null,
       "utcCreatedDateTime": "2026-09-19T15:10:54.116Z"
     },
@@ -6816,9 +6816,9 @@
       "generatedBy": null,
       "wikiVersion": 0,
       "attempts": 0,
-      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfD1fdF4PJeJ9ih1qEGJi\"}",
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfDMpUdibQkr6bkErJ9sL\"}",
       "utcFetchedDateTime": "2026-09-19T15:11:17.003Z",
-      "utcAttemptedDateTime": "2026-09-19T15:11:17.293Z",
+      "utcAttemptedDateTime": "2026-09-19T19:35:33.951Z",
       "utcBuiltDateTime": null,
       "utcCreatedDateTime": "2026-09-19T15:11:11.371Z"
     },
@@ -6983,6 +6983,150 @@
       "utcAttemptedDateTime": "2026-09-19T16:28:42.974Z",
       "utcBuiltDateTime": null,
       "utcCreatedDateTime": "2026-09-19T16:20:31.649Z"
+    },
+    {
+      "id": 654,
+      "urlKey": "openai.com/index/introducing-gpt-5",
+      "url": "https://openai.com/index/introducing-gpt-5/",
+      "kind": "web",
+      "title": "Introducing GPT-5",
+      "status": "pending",
+      "textHash": "cdb17403d6dc7042a31c61aa1df224057b1dd39fce920dbea505c6ae86fde666",
+      "sourceModifiedDate": null,
+      "generatedBy": null,
+      "wikiVersion": 0,
+      "attempts": 0,
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfDMss3gmtAqWqiNGEGrJ\"}",
+      "utcFetchedDateTime": "2026-09-19T19:19:07.795Z",
+      "utcAttemptedDateTime": "2026-09-19T19:36:19.703Z",
+      "utcBuiltDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:19:06.808Z"
+    },
+    {
+      "id": 659,
+      "urlKey": "developers.openai.com/codex/changelog",
+      "url": "https://developers.openai.com/codex/changelog",
+      "kind": "web",
+      "title": "ChatGPT & Codex changelog | ChatGPT Learn",
+      "status": "pending",
+      "textHash": "fa8396edc7b7765c6330bc9314e020d16002d6e656399e4b3025c538d4e92054",
+      "sourceModifiedDate": null,
+      "generatedBy": null,
+      "wikiVersion": 0,
+      "attempts": 0,
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfDLZp7TSn9zXqHHuiaLG\"}",
+      "utcFetchedDateTime": "2026-09-19T19:19:07.765Z",
+      "utcAttemptedDateTime": "2026-09-19T19:19:08.013Z",
+      "utcBuiltDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:19:06.897Z"
+    },
+    {
+      "id": 673,
+      "urlKey": "techcrunch.com/2024/05/13/openais-newest-model-is-gpt-4o",
+      "url": "https://techcrunch.com/2024/05/13/openais-newest-model-is-gpt-4o/",
+      "kind": "web",
+      "title": "OpenAI debuts GPT-4o 'omni' model now powering ChatGPT | TechCrunch",
+      "status": "pending",
+      "textHash": "86a8a77d0326037a06f6b4dd9ed52a05cc741a29636f0637b80154cb1be9f544",
+      "sourceModifiedDate": null,
+      "generatedBy": null,
+      "wikiVersion": 0,
+      "attempts": 0,
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfDMpVS69aATLk3j9ujN6\"}",
+      "utcFetchedDateTime": "2026-09-19T19:35:33.483Z",
+      "utcAttemptedDateTime": "2026-09-19T19:35:34.289Z",
+      "utcBuiltDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:35:33.453Z"
+    },
+    {
+      "id": 677,
+      "urlKey": "techcrunch.com/2025/04/29/openai-explains-why-chatgpt-became-too-sycophantic",
+      "url": "https://techcrunch.com/2025/04/29/openai-explains-why-chatgpt-became-too-sycophantic/",
+      "kind": "web",
+      "title": "OpenAI explains why ChatGPT became too sycophantic | TechCrunch",
+      "status": "pending",
+      "textHash": "9ae23049e6c58c4644280baa6c49c774d95feba06ae252ef96ee7260c2d351ee",
+      "sourceModifiedDate": null,
+      "generatedBy": null,
+      "wikiVersion": 0,
+      "attempts": 0,
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfDMpVpQXk9mD2S22EDs6\"}",
+      "utcFetchedDateTime": "2026-09-19T19:35:33.771Z",
+      "utcAttemptedDateTime": "2026-09-19T19:35:34.290Z",
+      "utcBuiltDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:35:33.740Z"
+    },
+    {
+      "id": 683,
+      "urlKey": "community.openai.com/t/gpt-5-4-pro-and-thinking-are-here/1375799",
+      "url": "https://community.openai.com/t/gpt-5-4-pro-and-thinking-are-here/1375799",
+      "kind": "web",
+      "title": "GPT-5.4 Pro and Thinking are here! - Announcements - OpenAI Developer Community",
+      "status": "pending",
+      "textHash": "808d703b204df55e1f25bcc691b7314859db6060d2609c14b411409b02ed064e",
+      "sourceModifiedDate": null,
+      "generatedBy": null,
+      "wikiVersion": 0,
+      "attempts": 0,
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfDMqybXLSpFawiuXaWB9\"}",
+      "utcFetchedDateTime": "2026-09-19T19:35:53.795Z",
+      "utcAttemptedDateTime": "2026-09-19T19:35:54.082Z",
+      "utcBuiltDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:35:50.876Z"
+    },
+    {
+      "id": 686,
+      "urlKey": "community.openai.com/t/introducing-gpt-5-6-series-sol-terra-and-luna-coming-july-9-10am-pt/1384931",
+      "url": "https://community.openai.com/t/introducing-gpt-5-6-series-sol-terra-and-luna-coming-july-9-10am-pt/1384931",
+      "kind": "web",
+      "title": "Introducing GPT-5.6 series: Sol, Terra and Luna. Coming July 9 10am PT - Announcements - OpenAI Developer Community",
+      "status": "pending",
+      "textHash": "fe681f3cf1aa389d9570d7f95ec10e65ef840ee152e99916effb5e5195769b9f",
+      "sourceModifiedDate": null,
+      "generatedBy": null,
+      "wikiVersion": 0,
+      "attempts": 0,
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfDMqz8H1Uv11oHDC4XB8\"}",
+      "utcFetchedDateTime": "2026-09-19T19:35:53.978Z",
+      "utcAttemptedDateTime": "2026-09-19T19:35:54.214Z",
+      "utcBuiltDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:35:51.588Z"
+    },
+    {
+      "id": 689,
+      "urlKey": "techcrunch.com/2024/10/03/openai-launches-new-canvas-chatgpt-interface-tailored-to-writing-and-coding-projects",
+      "url": "https://techcrunch.com/2024/10/03/openai-launches-new-canvas-chatgpt-interface-tailored-to-writing-and-coding-projects/",
+      "kind": "web",
+      "title": "OpenAI launches new 'Canvas' ChatGPT interface tailored to writing and coding projects | TechCrunch",
+      "status": "pending",
+      "textHash": "27ec33d0e075910f2a1bcb1cf44119c098eb9a57b7b51242679c5d92042d6410",
+      "sourceModifiedDate": null,
+      "generatedBy": null,
+      "wikiVersion": 0,
+      "attempts": 0,
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfDMqqhWpBjbRBsooPCfE\"}",
+      "utcFetchedDateTime": "2026-09-19T19:35:51.983Z",
+      "utcAttemptedDateTime": "2026-09-19T19:35:52.302Z",
+      "utcBuiltDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:35:51.951Z"
+    },
+    {
+      "id": 692,
+      "urlKey": "siliconangle.com/2025/01/14/chatgpts-autonomous-capabilities-expand-scheduled-tasks-reminders",
+      "url": "https://siliconangle.com/2025/01/14/chatgpts-autonomous-capabilities-expand-scheduled-tasks-reminders/",
+      "kind": "web",
+      "title": "ChatGPT's autonomous capabilities expand with scheduled tasks and reminders - SiliconANGLE",
+      "status": "pending",
+      "textHash": "c7641ee3b24c1182557c31595af02885ccc6bc977028767c81fd6f036d523562",
+      "sourceModifiedDate": null,
+      "generatedBy": null,
+      "wikiVersion": 0,
+      "attempts": 0,
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfDMqsxhVzzudFLPTtAiQ\"}",
+      "utcFetchedDateTime": "2026-09-19T19:35:52.543Z",
+      "utcAttemptedDateTime": "2026-09-19T19:35:52.824Z",
+      "utcBuiltDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:35:52.191Z"
     }
   ],
   "wikis": [
@@ -10177,6 +10321,14 @@
       "utcCreatedDateTime": "2026-09-19T15:11:11.372Z"
     },
     {
+      "pinId": 1796,
+      "sourceId": 673,
+      "role": "reference",
+      "summarizedWikiVersion": null,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:35:33.454Z"
+    },
+    {
       "pinId": 1797,
       "sourceId": 525,
       "role": "source",
@@ -10311,6 +10463,14 @@
       "summarizedWikiVersion": 1,
       "utcRemovedDateTime": null,
       "utcCreatedDateTime": "2026-09-19T15:10:54.068Z"
+    },
+    {
+      "pinId": 1809,
+      "sourceId": 677,
+      "role": "reference",
+      "summarizedWikiVersion": null,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:35:33.746Z"
     },
     {
       "pinId": 1810,
@@ -10489,6 +10649,14 @@
       "utcCreatedDateTime": "2026-09-19T15:10:56.509Z"
     },
     {
+      "pinId": 1825,
+      "sourceId": 683,
+      "role": "reference",
+      "summarizedWikiVersion": null,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:35:50.877Z"
+    },
+    {
       "pinId": 1826,
       "sourceId": 525,
       "role": "source",
@@ -10561,6 +10729,14 @@
       "utcCreatedDateTime": "2026-09-19T15:10:57.381Z"
     },
     {
+      "pinId": 1831,
+      "sourceId": 686,
+      "role": "reference",
+      "summarizedWikiVersion": null,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:35:51.590Z"
+    },
+    {
       "pinId": 1832,
       "sourceId": 576,
       "role": "reference",
@@ -10631,6 +10807,94 @@
       "summarizedWikiVersion": 1,
       "utcRemovedDateTime": null,
       "utcCreatedDateTime": "2026-09-19T16:20:22.937Z"
+    },
+    {
+      "pinId": 1842,
+      "sourceId": 525,
+      "role": "source",
+      "summarizedWikiVersion": 1,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:19:06.668Z"
+    },
+    {
+      "pinId": 1842,
+      "sourceId": 689,
+      "role": "reference",
+      "summarizedWikiVersion": null,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:35:51.952Z"
+    },
+    {
+      "pinId": 1843,
+      "sourceId": 525,
+      "role": "source",
+      "summarizedWikiVersion": 1,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:19:06.743Z"
+    },
+    {
+      "pinId": 1843,
+      "sourceId": 692,
+      "role": "reference",
+      "summarizedWikiVersion": null,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:35:52.197Z"
+    },
+    {
+      "pinId": 1844,
+      "sourceId": 525,
+      "role": "source",
+      "summarizedWikiVersion": 1,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:19:06.814Z"
+    },
+    {
+      "pinId": 1844,
+      "sourceId": 654,
+      "role": "reference",
+      "summarizedWikiVersion": 1,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:19:06.814Z"
+    },
+    {
+      "pinId": 1845,
+      "sourceId": 525,
+      "role": "source",
+      "summarizedWikiVersion": 1,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:19:06.858Z"
+    },
+    {
+      "pinId": 1846,
+      "sourceId": 525,
+      "role": "source",
+      "summarizedWikiVersion": 1,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:19:06.900Z"
+    },
+    {
+      "pinId": 1846,
+      "sourceId": 659,
+      "role": "reference",
+      "summarizedWikiVersion": 1,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:19:06.900Z"
+    },
+    {
+      "pinId": 1847,
+      "sourceId": 525,
+      "role": "source",
+      "summarizedWikiVersion": 1,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:19:06.937Z"
+    },
+    {
+      "pinId": 1848,
+      "sourceId": 525,
+      "role": "source",
+      "summarizedWikiVersion": 1,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T19:31:17.115Z"
     }
   ],
   "lintFindings": [

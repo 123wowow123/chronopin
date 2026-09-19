@@ -24,9 +24,24 @@ export async function downloadImage(imgUrl: string): Promise<Buffer> {
   return Buffer.from(await res.arrayBuffer());
 }
 
+const PNG_SIGNATURE = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+// An empty IEND chunk: its length (0) and type; its CRC follows.
+const PNG_END = Buffer.from([0, 0, 0, 0, 0x49, 0x45, 0x4e, 0x44]);
+
+// A PNG cut off after its IEND chunk. Some (Android screenshots on Wikimedia
+// Commons) carry bytes after it, which Jimp's decoder rejects ("unrecognised
+// content at end of stream") though they are no part of the picture.
+export function trimPng(input: Buffer): Buffer {
+  if (!input.subarray(0, 8).equals(PNG_SIGNATURE)) return input;
+  const at = input.indexOf(PNG_END, 8);
+  return at > 0 && at + 12 < input.length ? input.subarray(0, at + 12) : input;
+}
+
+const readImage = (input: Buffer) => Jimp.read(trimPng(input));
+
 // Scales an image down to uploadImageWidth when it is wider, keeping its type.
 export async function shrinkImage(input: Buffer, options: typeof THUMB_OPTIONS) {
-  const image = await Jimp.read(input);
+  const image = await readImage(input);
   const originalWidth = image.bitmap.width;
   const originalHeight = image.bitmap.height;
   const mime = image.mime ?? 'image/png';
@@ -49,7 +64,7 @@ export async function shrinkImage(input: Buffer, options: typeof THUMB_OPTIONS) 
 // Crops to the centre square and scales it to size x size. PNG and GIF stay
 // PNG so transparency survives; everything else becomes JPEG.
 export async function squareImage(input: Buffer, size: number) {
-  const image = await Jimp.read(input);
+  const image = await readImage(input);
   const type = image.mime === 'image/png' || image.mime === 'image/gif' ? 'image/png' : 'image/jpeg';
   image.cover({ w: size, h: size });
   const buffer =

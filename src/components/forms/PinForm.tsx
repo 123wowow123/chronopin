@@ -34,6 +34,7 @@ import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { pinPath } from '@/lib/seo';
 import type { CardPin, MediumJson, PinJson } from '@/lib/types';
 import { DuplicatePrompt, type DuplicateMatch } from './DuplicatePrompt';
+import { PageEntriesPanel } from './PageEntriesPanel';
 import { RichTextEditor } from './RichTextEditor';
 import { PinSourceWikis } from './PinSourceWikis';
 import { useT } from '@/lib/client/i18n';
@@ -97,6 +98,8 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
   const formRef = useRef<HTMLFormElement>(null);
   const [scraping, setScraping] = useState(false);
   const [scrapeError, setScrapeError] = useState('');
+  // A release-notes or changelog page's dated entries, to pin one by one.
+  const [entries, setEntries] = useState<ScrapedPin['entries']>();
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
   const [duplicateOf, setDuplicateOf] = useState<Pick<PinJson, 'id' | 'title'> | null>(null);
@@ -162,6 +165,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
       // A later season is posted as a response to the earlier one's pin,
       // unless the author already picked what this responds to.
       if (!onlyMedia && mode === 'create' && !respondTo && scraped.respondTo) respondInstead(scraped.respondTo);
+      if (!onlyMedia && mode === 'create') setEntries(scraped.entries);
       // Warn as soon as the page is read rather than after the author has
       // finished the form. (A paste fires before the field holds the URL.)
       if (!onlyMedia && mode !== 'edit') {
@@ -277,6 +281,17 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
             ) : null}
           </div>
           {scrapeError ? <p className="mt-1 text-sm text-warning">{scrapeError}</p> : null}
+          {entries?.list.length ? (
+            <PageEntriesPanel
+              key={values.sourceUrl}
+              pageTitle={entries.pageTitle}
+              entries={entries.list}
+              shared={() => {
+                const { company, companyWikiUrl, categories, stocks, tags, address, latitude, longitude } = formToPin(values);
+                return { company, companyWikiUrl, categories, stocks, tags, address, latitude, longitude };
+              }}
+            />
+          ) : null}
           {mode === 'edit' ? (
             <div className="mt-2 flex gap-2">
               <button type="button" className="btn btn-sm btn-secondary" onClick={() => scrape(values.sourceUrl)} disabled={scraping}>

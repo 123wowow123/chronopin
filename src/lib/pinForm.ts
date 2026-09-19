@@ -6,6 +6,7 @@ import { addDays, pickDates } from './dateClaims';
 import { compareDayKeys, dayKeyOf, dayKeyParts, dayKeyToMs } from './format';
 import type { PinAwardJson } from './awards';
 import type { ScrapedStock } from './stocks';
+import type { PageEntry } from './pageEntries';
 import { joinTags, splitTags } from './tags';
 import type { MediumJson, MerchantJson, PinJson, PinRatingJson, PinReferenceJson } from './types';
 
@@ -20,6 +21,8 @@ export type ScrapedPin = Omit<Partial<PinJson>, 'stocks' | 'tags'> & {
   tags?: string[];
   // The earlier season's pin this one follows on from (server/scrape/prequel.ts).
   respondTo?: Pick<PinJson, 'id' | 'title'>;
+  // A release-notes or changelog page's dated entries (./pageEntries.ts).
+  entries?: { pageTitle: string; list: PageEntry[] };
 };
 
 export type PinFormValues = {
