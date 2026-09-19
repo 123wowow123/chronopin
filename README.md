@@ -466,12 +466,7 @@ GA: Outbound link / non-interaction events / Social Interactions tracking / User
 
 # Injestion Methodology
 
-- scrape articles like this to make a graph of project chips to sell and variance
-https://www.cnbc.com/2026/09/17/nvidia-huang-ai-chip-guidance.html
-
-
 major local events by major city scrape and more targetted by your location
-
 
 - Amazon Price Scrape
 - eBay Price Scrape
@@ -501,5 +496,5 @@ https://www.youtube.com/watch?v=sboNwYmH3AY
 
 # Scraping
 
-Backfill all missing information for all pins
+Backfill all missing information for all pins and create new pins if necessary
 
