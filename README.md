@@ -456,9 +456,6 @@ GA: Outbound link / non-interaction events / Social Interactions tracking / User
 
 - Add product Accessory section feature listing below detailed pin
 
-- watched view and should have different groups 
-
-
 # Horoscope
 
 - provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc. <https://aztro.readthedocs.io/en/latest>
@@ -470,8 +467,7 @@ GA: Outbound link / non-interaction events / Social Interactions tracking / User
 
 major local events by major city scrape and more targetted by your location
 
-- Amazon Price Scrape
-- eBay Price Scrape
+- Add api key for Amazon & eBay Price Scrape
 
 
 # Daily Jobs
@@ -492,3 +488,4 @@ major local events by major city scrape and more targetted by your location
 
 Backfill all missing information for all pins and create new pins if necessary
 
+Are all pin summary generation based off of OKF intermediary source now?

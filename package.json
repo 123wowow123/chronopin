@@ -26,6 +26,7 @@
     "media:screen": "tsx scripts/media/screenDetails.ts",
     "media:awards": "tsx scripts/media/awards.ts",
     "media:score-markets": "tsx scripts/media/scoreMarkets.ts",
+    "merchants:amazon-prices": "tsx scripts/merchants/amazonPrices.ts",
     "tags:sync": "tsx scripts/tags/sync.ts",
     "translations:sync": "tsx scripts/translations/sync.ts",
     "threads:prequels": "tsx scripts/threads/prequels.ts",
