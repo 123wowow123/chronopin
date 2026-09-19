@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { averageRating, compactCount, dayKeyIn, dayStartIn, daysAway, daysBetween, formatDayKey, formatPosted, formatStart, lunarDate, money, monthDayOf, nextDayKey, plainText, ratingScore, timeAgo, timespan, weekdayPlanet } from './format';
+import { averageRating, compactCount, dayKeyIn, dayStartIn, daysAway, daysBetween, formatDayKey, formatPosted, formatStart, lunarDate, money, moonPhase, monthDayOf, nextDayKey, plainText, ratingScore, timeAgo, timespan, weekdayPlanet } from './format';
 import { buildBags, pinTense, resolveTodayMarker } from './timeline';
 
 describe('money', () => {
@@ -236,5 +236,15 @@ describe('lunarDate', () => {
 
   it('has none before the Taichu calendar', () => {
     expect(lunarDate('-2560-01-01')).toBeNull();
+  });
+});
+
+describe('moonPhase', () => {
+  it('names the phase of known moons', () => {
+    expect(moonPhase('2026-09-11').name).toBe('New moon');
+    expect(moonPhase('2026-09-26').name).toBe('Full moon');
+    expect(moonPhase('2026-09-18').name).toBe('First quarter');
+    expect(moonPhase('2026-09-26').illumination).toBeGreaterThan(0.97);
+    expect(moonPhase('2026-09-11').illumination).toBeLessThan(0.03);
   });
 });

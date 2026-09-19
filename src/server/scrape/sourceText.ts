@@ -1,13 +1,15 @@
 import _ from 'lodash';
 import { tweetText, twitterMedium, youtubeMedium, launchBrowser } from '.';
 import { AUDIO_PATH, sourceKind, type SourceKind } from '@/lib/sourceKind';
+import { fetchPodcastTranscript } from './podcast';
 import { fetchTranscript } from './transcript';
 
 export type { SourceKind };
 
 // The text a link's wiki is written from, fetched fresh: a web page's body
 // text, a YouTube video's details and transcript, a tweet, or a podcast
-// episode's page (its show notes - audio itself is not transcribed).
+// episode's page (its show notes, plus a transcript when one can be found -
+// audio itself is not transcribed).
 
 export type SourceText = { title?: string; text: string };
 
@@ -21,7 +23,8 @@ export const MAX_SOURCE_CHARS = 240000;
 const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36';
 
 export async function fetchSourceText(url: string, kind: SourceKind = sourceKind(url)): Promise<SourceText> {
-  const found = kind === 'youtube' ? await youtubeText(url) : kind === 'tweet' ? await tweetSourceText(url) : await pageText(url);
+  const found =
+    kind === 'youtube' ? await youtubeText(url) : kind === 'tweet' ? await tweetSourceText(url) : kind === 'podcast' ? await podcastText(url) : await pageText(url);
   const text = found.text.trim().slice(0, MAX_SOURCE_CHARS);
   if (!text) {
     throw new Error(`No text found at ${url}`);
@@ -43,6 +46,13 @@ async function youtubeText(url: string): Promise<SourceText> {
     ...(transcript ? ['', `Transcript:\n${transcript.text}`] : []),
   ].join('\n');
   return { title: snippet.title, text };
+}
+
+// The episode page's show notes, and what was said when a transcript can be
+// found (scrape/podcast.ts): the publisher's own, or the show's YouTube upload.
+async function podcastText(url: string): Promise<SourceText> {
+  const [page, transcript] = await Promise.all([pageText(url), fetchPodcastTranscript(url).catch(() => undefined)]);
+  return transcript ? { title: page.title, text: `${page.text}\n\nTranscript:\n${transcript.text}` } : page;
 }
 
 async function tweetSourceText(url: string): Promise<SourceText> {

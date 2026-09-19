@@ -176,7 +176,31 @@ export function weekdayPlanet(dayKey: string) {
   return { ...WEEKDAYS[weekday], weekday: name };
 }
 
-const LUNAR_DAY_TENS = ['初', '十', '廿', '三'];
+// A known new moon (2000-01-06 18:14 UTC) and the mean synodic month.
+const NEW_MOON_MS = Date.UTC(2000, 0, 6, 18, 14);
+const SYNODIC_DAYS = 29.530588853;
+const MOON_PHASES = ['New moon', 'Waxing crescent', 'First quarter', 'Waxing gibbous', 'Full moon', 'Waning gibbous', 'Last quarter', 'Waning crescent'];
+
+// The moon at noon UTC on a day, from the mean synodic month (within about
+// a day of the true phase): its phase name, the share of the disc lit, and
+// an SVG path of the lit part of a disc of radius `r` centred at (r, r), as
+// seen from the northern hemisphere (waxing lit on the right).
+export function moonPhase(dayKey: string, r = 16): { name: string; illumination: number; path: string } {
+  const age = ((((dayKeyToMs(dayKey) + DAY_MS / 2 - NEW_MOON_MS) / DAY_MS) % SYNODIC_DAYS) + SYNODIC_DAYS) % SYNODIC_DAYS;
+  const phase = age / SYNODIC_DAYS;
+  const cos = Math.cos(2 * Math.PI * phase);
+  const waxing = phase < 0.5;
+  const gibbous = cos < 0;
+  // Half the disc's edge on the lit side, back along the terminator: an
+  // ellipse bulging into the dark half (gibbous) or the lit half (crescent).
+  const edge = waxing ? 1 : 0;
+  const terminator = waxing === gibbous ? 1 : 0;
+  const rx = (r * Math.abs(cos)).toFixed(2);
+  const path = `M${r} 0A${r} ${r} 0 0 ${edge} ${r} ${2 * r}A${rx} ${r} 0 0 ${terminator} ${r} 0Z`;
+  return { name: MOON_PHASES[Math.round(phase * 8) % 8], illumination: (1 - cos) / 2, path };
+}
+
+const LUNAR_DAY_TENS =['初', '十', '廿', '三'];
 const LUNAR_DAY_UNITS = ['', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十'];
 
 // 初一 .. 初十, 十一 .. 二十, 廿一 .. 三十: how a lunar day is written.

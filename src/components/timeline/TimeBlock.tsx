@@ -5,10 +5,11 @@ import { useRef } from 'react';
 import { BAG_LIMIT, BAG_LIMIT_PHONE, sampleBag } from '@/lib/bagSample';
 import { useImpression } from '@/lib/client/impressions';
 import { stackDuplicates, type PinStack } from '@/lib/duplicates';
-import { formatDayKey, lunarDate, timespan, weekdayPlanet } from '@/lib/format';
+import { formatDayKey, lunarDate, moonPhase, timespan, weekdayPlanet } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
 import type { Bag } from '@/lib/timeline';
 import type { PinJson } from '@/lib/types';
+import type { personalWeigher } from '@/lib/userWiki';
 import { PinCard } from '@/components/pin/PinCard';
 
 // Beside the rail (lg) tags are a fixed-width column; above the cards on
@@ -31,6 +32,11 @@ function Tag({ variant, children, title, className = '', wrap = false }: { varia
   );
 }
 
+function stackIds(stacks: PinStack<PinJson>[], id: number): number[] {
+  const stack = stacks.find((s) => s.pin.id === id);
+  return stack ? [id, ...stack.hidden.map((h) => h.id)] : [id];
+}
+
 // One calendar day on the timeline: its tags (date, countdown, date markers,
 // specialty day) beside or above its cards.
 export function TimeBlock({
@@ -44,6 +50,7 @@ export function TimeBlock({
   focusId,
   daySearchHref,
   dayTotal,
+  boost,
 }: {
   // Defaults to the day's id, which is only unique in date order.
   id?: string;
@@ -62,12 +69,16 @@ export function TimeBlock({
   // How many pins the day really has, when the loaded pages may hold only
   // some of them (a day at either end of what is loaded).
   dayTotal?: number;
+  // How much more each pin weighs for this viewer (their preference wiki).
+  boost?: ReturnType<typeof personalWeigher>;
 }) {
   const stacks = stackDuplicates(bag.pins);
   // Seeded by today and the day: the pick holds through hydration and the
   // day's reloads, and turns over each day.
   const keep = focusId == null ? null : (stacks.find((s) => s.pin.id === focusId || s.hidden.some((h) => h.id === focusId))?.pin.id ?? null);
-  const picked = sample && stacks.length > BAG_LIMIT_PHONE ? sampleBag(stacks.map((s) => s.pin), BAG_LIMIT, `${todayKey}:${bag.day}`, keep) : null;
+  // A card stands for its whole stack: opening any duplicate counts for it.
+  const weigh = boost && ((pin: PinJson) => boost(pin, stackIds(stacks, pin.id)));
+  const picked = sample && stacks.length > BAG_LIMIT_PHONE ? sampleBag(stacks.map((s) => s.pin), BAG_LIMIT, `${todayKey}:${bag.day}`, keep, weigh) : null;
   // The picked cards in date order, each with where it fell in the pick: from
   // sm up the whole pick shows, on phones only its first BAG_LIMIT_PHONE. The
   // rest are not drawn on the timeline at all, only on the day's search.
@@ -80,16 +91,21 @@ export function TimeBlock({
   const firstShown = shown.findIndex((s) => s.rank < BAG_LIMIT_PHONE);
   const isToday = bag.day === todayKey;
   const planet = weekdayPlanet(bag.day);
+  const moon = moonPhase(bag.day);
   const lunar = lunarDate(bag.day);
   const tagsHeight = 26 + 42 * (2 + (lunar ? 1 : 0) + bag.dateTimes.length + (specialtyDays.length ? 1 : 0));
 
   return (
     <section id={id ?? `day-${bag.day}`} aria-label={formatDayKey(bag.day)} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:pt-0">
       <div
-        className={`rail-marker absolute top-6 left-[140px] z-10 -ml-4 hidden size-8 items-center justify-center rounded-full text-base leading-none lg:flex ${isToday ? 'rail-marker-today' : ''}`}
-        title={`${planet.planet}\n${planet.weekday}`}
+        className={`rail-marker absolute top-6 cursor-default left-[140px] z-10 -ml-4 hidden size-8 items-center justify-center overflow-hidden rounded-full text-base leading-none lg:flex ${isToday ? 'rail-marker-today' : ''}`}
+        title={`${planet.planet}\n${planet.weekday}\n${moon.name} (${Math.round(moon.illumination * 100)}% lit)`}
       >
-        <span className="font-astro" aria-hidden>
+        {/* The circle is the day's moon: its lit part a soft tint behind the planet. */}
+        <svg viewBox="0 0 32 32" className="absolute inset-0 size-full" aria-hidden>
+          <path d={moon.path} fill="currentColor" opacity={0.22} />
+        </svg>
+        <span className="relative font-astro" aria-hidden>
           {planet.glyph}
         </span>
         <span className="sr-only">{planet.weekday}</span>

@@ -68,6 +68,7 @@ why Apple accounts are looked up by `appleId` before email.
 | `npm run wiki:sync` | Write OKF wikis for pins' links, retry failed ones, rebuild stale summaries ([docs/okf](docs/okf/playbooks/catch-up-and-retry.md)) |
 | `npm run okf:export` | Write pins and their link wikis out as an OKF bundle in `./okf-bundle/` (`--pin N`, `--out DIR`) |
 | `npm run okf:lint` | Check and maintain the wikis: OKF conformance, stale links, orphans, quality, contradictions between a pin's links (`--fix`; [docs/okf](docs/okf/playbooks/lint-the-wikis.md)) |
+| `npm run user-wiki:build` | Rebuild signed-in users' preference wikis (`--user N`), `--out DIR` to also write them as an OKF bundle (private: users' pin history) |
 | `npm run wiki:export` / `wiki:apply` | With no Anthropic credit, write out the Claude jobs, do them in a Claude Code session, save the answers ([docs/okf](docs/okf/playbooks/without-api-credit.md)) |
 
 ## Layout
@@ -500,7 +501,7 @@ https://help.openai.com/en/articles/9624314-model-release-notes
 
 - need job to scrape and update pin, any visit will trigger a scheduled update scape that night, along to new reference
 
-- create job to check health of pins like broken videos, image, etc
+- create job to check health of pins like broken videos, image, etc and new pin connection and references might be able to add
 
 # OKF
 
@@ -512,14 +513,11 @@ Admin will have OKF source view which built the pin article (API ready: `GET /ap
 https://www.youtube.com/watch?v=sboNwYmH3AY
 
 
-Generate user wiki using OKF to capture preference and add more weight to pins they have already click. 
-Add admin toogle to enable and disable this weight adjustment
+Done, see [docs/okf](docs/okf/tables/user-wiki.md): each signed-in user gets a preference wiki (`UserWiki`, 0028), an OKF `Profile` concept rebuilt after every open, watch, like or comment. It holds the categories and companies they lean to and the pins they opened. On a crowded timeline day, a pin they opened weighs 3x, and one in a category or company they lean to weighs up to 2x its share more, so it more often lands in the two rows instead of behind "View all". The toggle is Admin > Pins > "Prefer personal pick on overflow days" (on by default). They can read it at `GET /api/users/:id/wiki` (themselves or an admin), and `npm run user-wiki:build` does the backfill and export.
 
 # Other
 
 - localization & multilingual
-
-
 
 - should have small display that 3 pins are happing within next 7 days on botton and top of timeline. Clicking on it will scroll you to it one after another
 

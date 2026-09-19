@@ -1,7 +1,8 @@
-import { userAgent, type NextRequest } from 'next/server';
+import { after, userAgent, type NextRequest } from 'next/server';
 import { emitPinEvent } from '@/server/events';
 import { intParam, json, noContent, route } from '@/server/http';
 import PinView from '@/server/model/pinView';
+import UserWiki from '@/server/model/userWiki';
 import { viewerKey } from '@/server/visitor';
 
 type Ctx = RouteContext<'/api/pins/[id]/view'>;
@@ -15,7 +16,10 @@ export const POST = route(async (request: NextRequest, ctx: Ctx) => {
   if (userAgent(request).isBot) {
     return noContent();
   }
-  const { added, viewCount } = await PinView.record(pinId, await viewerKey(request));
+  const viewer = await viewerKey(request);
+  const { added, viewCount } = await PinView.record(pinId, viewer);
   if (added) emitPinEvent('view', { id: pinId, viewCount });
+  // A signed-in open is a signal for their preference wiki.
+  if (added && viewer.startsWith('u:')) after(() => UserWiki.rebuildQuietly(Number(viewer.slice(2))));
   return json({ viewCount });
 });

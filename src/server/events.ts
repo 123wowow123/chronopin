@@ -77,4 +77,13 @@ if (!g.__chronopinPinListeners) {
   };
   pinEvents.on('save', suggestDuplicates);
   pinEvents.on('update', suggestDuplicates);
+
+  // New pins only: podcast episodes around the event that back it up are
+  // added as references (services/podcastReferences.ts).
+  const checkPodcasts = (pin: Row) => {
+    import('./services/podcastReferences')
+      .then(({ crossCheckPodcasts }) => crossCheckPodcasts(Number(pin.id)))
+      .catch((err) => log.warn(`podcast cross-check failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', checkPodcasts);
 }

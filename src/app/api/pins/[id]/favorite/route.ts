@@ -1,10 +1,11 @@
-import type { NextRequest } from 'next/server';
+import { after, type NextRequest } from 'next/server';
 import { requireUser } from '@/server/auth';
 import { emitPinEvent } from '@/server/events';
 import { HttpError, intParam, json, route } from '@/server/http';
 import Favorite from '@/server/model/favorite';
 import Notification from '@/server/model/notification';
 import Pin from '@/server/model/pin';
+import UserWiki from '@/server/model/userWiki';
 import { invalidatePin } from '@/server/services/cache';
 
 type Ctx = RouteContext<'/api/pins/[id]/favorite'>;
@@ -28,6 +29,7 @@ export const POST = route(async (request: NextRequest, ctx: Ctx) => {
   const { pin } = await Pin.queryById(pinId, user.id);
   emitPinEvent('favorite', pin!, { userId: user.id });
   invalidatePin(pinId);
+  after(() => UserWiki.rebuildQuietly(user.id));
   return json(pin, 201);
 });
 
@@ -41,5 +43,6 @@ export const DELETE = route(async (request: NextRequest, ctx: Ctx) => {
   const { pin } = await Pin.queryById(pinId, user.id);
   emitPinEvent('unfavorite', pin!, { userId: user.id });
   invalidatePin(pinId);
+  after(() => UserWiki.rebuildQuietly(user.id));
   return json(pin, 201);
 });

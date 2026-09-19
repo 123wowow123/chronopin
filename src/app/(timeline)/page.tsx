@@ -10,7 +10,7 @@ import { toCardPins } from '@/lib/sanitize';
 import { websiteJsonLd } from '@/lib/seo';
 import { pinDayKey } from '@/lib/timeline';
 import specialtyDays from '@/server/data/specialtyDays.json';
-import { newPins, pinById, TRENDING_DAYS, timelinePage, timelineVideo, trendingPins } from '@/server/services/pages';
+import { newPins, pinById, TRENDING_DAYS, timelinePage, timelineVideo, trendingPins, viewerPreference } from '@/server/services/pages';
 import { resolveCreatedSince } from '@/server/util/createdFilter';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 
@@ -71,7 +71,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
   }
   const fromDateTime = focusPin ? null : first(params.from_date_time) || null;
 
-  const [page, video, trending, added] = await Promise.all([
+  const [page, video, trending, added, personal] = await Promise.all([
     timelinePage(
       {
         fromDateTime,
@@ -83,6 +83,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
     timelineVideo(),
     trendingPins(),
     newPins(),
+    viewerPreference(user?.id),
   ]);
 
   // Only the specialty days this page shows; the rest load when scrolled to.
@@ -118,6 +119,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
         video={video}
         trending={{ pins: trending, days: TRENDING_DAYS }}
         newPins={added}
+        preference={personal}
       />
       {/* Plain links through the timeline, for crawlers and anyone without JavaScript. */}
       <nav aria-label="Timeline pages" className="flex justify-between px-4 pb-20 text-sm lg:ml-[190px] lg:max-w-[906px]">

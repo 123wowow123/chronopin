@@ -3,6 +3,7 @@ import { requireUser } from '@/server/auth';
 import { HttpError, intParam, json, readJson, route } from '@/server/http';
 import Comment from '@/server/model/comment';
 import Pin from '@/server/model/pin';
+import UserWiki from '@/server/model/userWiki';
 import { refreshSentiment } from '@/server/services/commentSentiment';
 import { invalidatePin } from '@/server/services/cache';
 
@@ -54,5 +55,6 @@ export const POST = route(async (request: NextRequest, ctx: Ctx) => {
   }
   invalidatePin(pinId);
   after(() => refreshSentiment(comment.id));
+  after(() => UserWiki.rebuildQuietly(user.id));
   return json(comment, 201);
 });

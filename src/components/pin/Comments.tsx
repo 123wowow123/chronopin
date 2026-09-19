@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { api } from '@/lib/client/api';
@@ -45,6 +45,24 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
   const [error, setError] = useState('');
   // 0 on the server: the edit window is only ever judged in the browser.
   const now = useNow(15_000);
+
+  // The page's comments are cached for hours, but a comment's tone is scored
+  // after it is posted (or later, by `npm run comments:sentiment`), so the
+  // scores are read fresh once the page is up.
+  useEffect(() => {
+    let live = true;
+    api
+      .get<CommentJson[]>(`/api/pins/${pinId}/comment`)
+      .then((fresh) => {
+        if (!live) return;
+        const scores = new Map(fresh.map((c) => [c.id, c.sentiment ?? null]));
+        setComments((list) => list.map((c) => (scores.has(c.id) ? { ...c, sentiment: scores.get(c.id) } : c)));
+      })
+      .catch(() => {});
+    return () => {
+      live = false;
+    };
+  }, [pinId]);
 
   const tree = buildTree(comments);
   const mood = commentMood(comments);
@@ -95,12 +113,10 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
 
   return (
     <section aria-labelledby="comments-heading" className="surface mt-6 p-5">
-      <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1">
-        <h2 id="comments-heading" className="text-base font-semibold">
-          Comments
-        </h2>
-        {mood ? <MoodSummary mood={mood} /> : null}
-      </div>
+      <h2 id="comments-heading" className="mb-3 text-base font-semibold">
+        Comments
+      </h2>
+      {mood ? <MoodSummary mood={mood} total={comments.length} /> : null}
       <ul className="space-y-3">{tree.map(renderNode)}</ul>
 
       {isLoggedIn ? (
@@ -135,29 +151,64 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
   );
 }
 
-const MOOD_LABELS = { positive: 'Mostly positive', mixed: 'Mixed', negative: 'Mostly negative' };
-const MOOD_COLOURS = { positive: 'text-success', mixed: 'text-subtle', negative: 'text-danger' };
-const TREND_LABELS = { warming: 'trending more positive', cooling: 'trending more negative', steady: 'holding steady' };
+const MOOD_LABELS = { positive: 'Mostly positive', mixed: 'Mixed feelings', negative: 'Mostly negative' };
+const MOOD_BADGES = {
+  positive: 'bg-success/10 text-success ring-success/25',
+  mixed: 'bg-raised text-ink ring-line',
+  negative: 'bg-danger/10 text-danger ring-danger/25',
+};
+const MOOD_DOTS = { positive: 'bg-success', mixed: 'bg-subtle', negative: 'bg-danger' };
+const TRENDS = {
+  warming: { label: 'Warming up', icon: 'trending-up', className: 'text-success' },
+  cooling: { label: 'Cooling off', icon: 'trending-down', className: 'text-danger' },
+  steady: { label: 'Holding steady', icon: null, className: 'text-subtle' },
+} as const;
 
-// The comments' overall tone and which way the newest ones lean. Scores arrive
-// a moment after posting, so a brand-new comment joins this on the next load.
-function MoodSummary({ mood }: { mood: CommentMood }) {
-  const title = `Average tone ${mood.average.toFixed(2)} (from -1 to 1) across ${mood.scored} comment${mood.scored === 1 ? '' : 's'}`;
+// The comments' overall tone and which way the newest ones lean: a badge, a
+// trend chip, and a meter from negative to positive with the average marked.
+// Scores arrive a moment after posting, so a brand-new comment joins on the
+// next load.
+function MoodSummary({ mood, total }: { mood: CommentMood; total: number }) {
+  const trend = mood.trend ? TRENDS[mood.trend] : null;
+  // -1..1 onto the meter, kept off the very ends so the marker stays whole.
+  const position = 4 + ((mood.average + 1) / 2) * 92;
   return (
-    <p className="flex items-center gap-1.5 text-sm" title={title}>
-      <span className={`font-medium ${MOOD_COLOURS[mood.mood]}`}>{MOOD_LABELS[mood.mood]}</span>
-      {mood.trend ? (
-        <span className="flex items-center gap-1 text-subtle">
-          {mood.trend !== 'steady' ? (
-            <Icon
-              name={mood.trend === 'warming' ? 'trending-up' : 'trending-down'}
-              className={`size-3.5 ${mood.trend === 'warming' ? 'text-success' : 'text-danger'}`}
-            />
-          ) : null}
-          {TREND_LABELS[mood.trend]}
+    <div className="mb-4 rounded-lg border border-line bg-raised/40 px-3 py-2.5" aria-label="Comment mood">
+      <div className="flex flex-wrap items-center gap-2 text-sm">
+        <span className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 font-medium ring-1 ring-inset ${MOOD_BADGES[mood.mood]}`}>
+          <span className={`size-1.5 rounded-full ${MOOD_DOTS[mood.mood]}`} />
+          {MOOD_LABELS[mood.mood]}
         </span>
-      ) : null}
-    </p>
+        {trend ? (
+          <span className={`inline-flex items-center gap-1 text-xs font-medium ${trend.className}`}>
+            {trend.icon ? <Icon name={trend.icon} className="size-3.5" /> : null}
+            {trend.label}
+          </span>
+        ) : null}
+        <span className="ml-auto text-xs text-subtle">
+          {/* Comments still waiting on a score are counted but sit out. */}
+          from {mood.scored < total ? `${mood.scored} of ${total}` : mood.scored} comment{total === 1 ? '' : 's'}
+        </span>
+      </div>
+      <div className="mt-2.5 flex items-center gap-2 text-[11px] text-subtle">
+        <span>Negative</span>
+        <div
+          className="relative h-1.5 flex-1 rounded-full bg-linear-to-r from-danger/60 via-raised-2 to-success/60"
+          role="meter"
+          aria-valuemin={-1}
+          aria-valuemax={1}
+          aria-valuenow={Number(mood.average.toFixed(2))}
+          aria-label="Average tone"
+          title={`Average tone ${mood.average.toFixed(2)} on a scale from -1 to 1`}
+        >
+          <span
+            className={`absolute top-1/2 size-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-panel shadow ${MOOD_DOTS[mood.mood]}`}
+            style={{ left: `${position}%` }}
+          />
+        </div>
+        <span>Positive</span>
+      </div>
+    </div>
   );
 }
 

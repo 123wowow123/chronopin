@@ -2,7 +2,8 @@
 // weighted random pick, so a crowded day stays two rows tall and every pin
 // gets its turn. A pin weighs what its card earns for being shown: opens and
 // watches over times seen on the timeline, so one shown often and passed over
-// makes room, and one people open or watch keeps its place.
+// makes room, and one people open or watch keeps its place. For a signed-in
+// viewer it can weigh more still by their own preference wiki (userWiki.ts).
 
 // Two rows: two columns from sm up, one column on phones.
 export const BAG_LIMIT = 4;
@@ -39,9 +40,10 @@ function unitHash(text: string): number {
 // hashed from the seed and the pin rather than Math.random: the server and the
 // hydrating client pick the same cards, and a pin arriving later displaces at
 // most one of them instead of reshuffling the day. `keepId`, when here, is
-// always picked first (the pin the timeline opened on).
-export function sampleBag(pins: Sampled[], limit: number, seed: string, keepId?: number | null): number[] {
-  const keyed = pins.map((p) => ({ id: p.id, key: Math.log(unitHash(`${seed}:${p.id}`)) / bagWeight(p) }));
+// always picked first (the pin the timeline opened on). `boost`, when here,
+// multiplies each pin's weight (the viewer's preference).
+export function sampleBag<T extends Sampled>(pins: T[], limit: number, seed: string, keepId?: number | null, boost?: (pin: T) => number): number[] {
+  const keyed = pins.map((p) => ({ id: p.id, key: Math.log(unitHash(`${seed}:${p.id}`)) / (bagWeight(p) * (boost?.(p) ?? 1)) }));
   keyed.sort((a, b) => (a.id === keepId ? -1 : b.id === keepId ? 1 : b.key - a.key || a.id - b.id));
   return keyed.slice(0, limit).map((k) => k.id);
 }

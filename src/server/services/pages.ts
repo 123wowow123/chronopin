@@ -2,16 +2,18 @@
 // here returns plain JSON (no model instances), keyed by its arguments.
 
 import { cacheLife, cacheTag } from 'next/cache';
-import { getTimelineVideo } from '../model/appSetting';
+import { getPersonalBag, getTimelineVideo } from '../model/appSetting';
 import Favorite from '../model/favorite';
 import Pin from '../model/pin';
 import Pins from '../model/pins';
 import PinView from '../model/pinView';
 import { SearchPins } from '../model/searchPin';
+import UserWiki from '../model/userWiki';
 import { compareDuplicateRank } from '@/lib/duplicates';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { toJson, type NewPin, type PinJson, type SearchPage, type TimelinePage, type TrendingPin } from '@/lib/types';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
+import type { UserPreference } from '@/lib/userWiki';
 import { TAGS } from './cache';
 import { readSearchRequest, searchCategoryCounts, searchPinsPage, type SearchSort } from './search';
 import { getTimeline, timelineMinConfidence } from './timeline';
@@ -26,6 +28,14 @@ export async function timelineVideo(): Promise<TimelineVideoSetting> {
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
   return getTimelineVideo();
+}
+
+// The signed-in viewer's preference wiki, which a crowded day's cards are
+// weighed by; null when signed out, before their first build, or with the
+// admin setting off. Per user, so read per request rather than cached.
+export async function viewerPreference(userId: number | undefined): Promise<UserPreference | null> {
+  if (!userId || !(await getPersonalBag()).enabled) return null;
+  return UserWiki.preference(userId);
 }
 
 // The trending panel's sliding window: views over the last 3 UTC days (today

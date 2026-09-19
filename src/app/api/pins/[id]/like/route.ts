@@ -1,9 +1,10 @@
-import type { NextRequest } from 'next/server';
+import { after, type NextRequest } from 'next/server';
 import { requireUser } from '@/server/auth';
 import { emitPinEvent } from '@/server/events';
 import { HttpError, intParam, json, readJson, route } from '@/server/http';
 import Like from '@/server/model/like';
 import Pin from '@/server/model/pin';
+import UserWiki from '@/server/model/userWiki';
 import { invalidatePin } from '@/server/services/cache';
 
 type Ctx = RouteContext<'/api/pins/[id]/like'>;
@@ -29,6 +30,7 @@ export const POST = route(async (request: NextRequest, ctx: Ctx) => {
   const { pin } = await Pin.queryById(pinId, user.id);
   emitPinEvent('like', pin!, { userId: user.id });
   invalidatePin(pinId);
+  after(() => UserWiki.rebuildQuietly(user.id));
   return json(pin, 201);
 });
 
@@ -41,5 +43,6 @@ export const DELETE = route(async (request: NextRequest, ctx: Ctx) => {
   const { pin } = await Pin.queryById(pinId, user.id);
   emitPinEvent('unlike', pin!, { userId: user.id });
   invalidatePin(pinId);
+  after(() => UserWiki.rebuildQuietly(user.id));
   return json(pin, 201);
 });

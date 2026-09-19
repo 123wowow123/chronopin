@@ -20,6 +20,7 @@ import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, pinDayKey, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { CardPin, DateTimeJson, NewPin, TimelinePage, TrendingPin } from '@/lib/types';
+import { personalWeigher, type UserPreference } from '@/lib/userWiki';
 import { categoryPillSummary, SearchCategoryFilter } from './CategoryFilter';
 import { FloatingControls } from './FloatingControls';
 import { NewPins } from './NewPins';
@@ -99,6 +100,7 @@ export function Timeline({
   video,
   trending,
   newPins: initialNewPins,
+  preference,
 }: {
   focus: Focus | null;
   initialPins: CardPin[];
@@ -122,6 +124,9 @@ export function Timeline({
   // from the same SSE stream as the timeline itself, so a new pin appears
   // here without a reload or any polling of its own.
   newPins: NewPin[];
+  // The signed-in viewer's preference wiki, which weighs a crowded day's
+  // pick toward what they open and lean to; null for none.
+  preference: UserPreference | null;
 }) {
   const timeZone = useTimeZone(serverTimeZone);
   const [pins, setPins] = useState(initialPins);
@@ -146,6 +151,7 @@ export function Timeline({
 
   const todayKey = dayKeyIn(now, timeZone);
   const bags = useMemo(() => buildBags(pins, dateTimes, timeZone), [pins, dateTimes, timeZone]);
+  const boost = useMemo(() => (preference ? personalWeigher(preference) : undefined), [preference]);
   // Opened on a pin far from today, the pages loaded may not reach it yet: no
   // TODAY marker at the edge of that stretch until they do. A timeline opened
   // on today always reaches it.
@@ -470,6 +476,7 @@ export function Timeline({
                 firstPinPriority={index === 0 || index === (marker.index === -1 ? marker.todayBagIndex : marker.index)}
                 sample
                 focusId={focus?.id}
+                boost={boost}
                 daySearchHref={daySearchHref}
                 dayTotal={edgeDays.has(bag.day) ? dayCounts[countKey(bag.day)] : undefined}
               />

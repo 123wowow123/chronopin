@@ -1,11 +1,13 @@
 import { DEFAULT_TIMELINE_CONFIDENCE, parseTimelineConfidence, type TimelineConfidenceSetting } from '@/lib/timelineConfidence';
 import { DEFAULT_TIMELINE_VIDEO, parseTimelineVideo, type TimelineVideoSetting } from '@/lib/timelineVideo';
+import { DEFAULT_PERSONAL_BAG, parsePersonalBag, type PersonalBagSetting } from '@/lib/userWiki';
 import { DEFAULT_WIKI_RECHECK, parseWikiRecheck, type WikiRecheckSetting } from '@/lib/wikiRecheck';
 import * as db from '../db';
 
 const TIMELINE_CONFIDENCE = 'timelineConfidence';
 const TIMELINE_VIDEO = 'timelineVideo';
 const WIKI_RECHECK = 'wikiRecheck';
+const PERSONAL_BAG = 'personalBag';
 
 async function read(key: string): Promise<unknown> {
   const rows = await db.query(`SELECT "value" FROM "AppSetting" WHERE "key" = $1`, [key]);
@@ -50,6 +52,16 @@ export async function getWikiRecheck(): Promise<WikiRecheckSetting> {
 
 export function setWikiRecheck(setting: WikiRecheckSetting, userId: number | null) {
   return write(WIKI_RECHECK, setting, userId);
+}
+
+// Whether the timeline weighs a crowded day's cards by the viewer's preference wiki.
+export async function getPersonalBag(): Promise<PersonalBagSetting> {
+  const parsed = parsePersonalBag(await read(PERSONAL_BAG));
+  return 'setting' in parsed ? parsed.setting : DEFAULT_PERSONAL_BAG;
+}
+
+export function setPersonalBag(setting: PersonalBagSetting, userId: number | null) {
+  return write(PERSONAL_BAG, setting, userId);
 }
 
 const WIKI_RECHECK_LAST_RUN = 'wikiRecheckLastRun';
