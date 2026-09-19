@@ -60,8 +60,9 @@ export function ProfileForm({ user }: { user: SessionUser }) {
       await refreshSession();
       router.refresh();
       setMessage(t('profile.saved'));
-    } catch {
-      setError(t('profile.saveFailed'));
+    } catch (err) {
+      const code = err instanceof ApiError ? (err.body as { code?: string } | undefined)?.code : undefined;
+      setError(code === 'emailTaken' ? t('signup.emailTaken') : code === 'handleTaken' ? t('signup.handleTaken') : t('profile.saveFailed'));
     }
   }
 

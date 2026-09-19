@@ -5,6 +5,7 @@ import { loadUser } from '@/server/services/users';
 import { invalidateTimeline } from '@/server/services/cache';
 import { isValidSpan } from '@/server/util/createdFilter';
 import { isThemePreference } from '@/lib/theme';
+import { isLocale } from '@/lib/i18n/config';
 
 // Save the signed-in user's own preferences. Deliberately narrow: named
 // fields, written to the row the token identifies. A field left out of the
@@ -41,6 +42,14 @@ export const PUT = route(async (request: NextRequest) => {
       throw new HttpError(400, '', { message: "themePreference must be 'dark', 'light', 'system' or null" });
     }
     user.themePreference = theme;
+  }
+
+  if ('localePreference' in body) {
+    const locale = body.localePreference;
+    if (locale !== null && !isLocale(locale)) {
+      throw new HttpError(400, '', { message: 'localePreference must be a supported language code or null' });
+    }
+    user.localePreference = locale;
   }
 
   if ('showCardStockPrices' in body) {

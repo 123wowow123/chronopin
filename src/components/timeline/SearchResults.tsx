@@ -34,7 +34,7 @@ function SortToggle({ value, onChange, className = '' }: { value: SortBy; onChan
   const t = useT();
   return (
     <div role="group" aria-label={t('search.sortResultsBy')} className={`flex items-center gap-1 p-1.5 text-sm ${className}`}>
-      <span className="px-2 text-subtle">{t('search.sortBy')}</span>
+      <span className="px-2 whitespace-nowrap text-subtle">{t('search.sortBy')}</span>
       {(['relevance', 'date'] as const).map((option) => (
         <button
           key={option}

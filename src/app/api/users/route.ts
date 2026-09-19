@@ -3,7 +3,7 @@ import { cookies } from 'next/headers';
 import type { NextRequest } from 'next/server';
 import { requireRole, signToken, tokenCookie } from '@/server/auth';
 import { json, readJson, route } from '@/server/http';
-import User, { pickUserProps, Users } from '@/server/model/user';
+import User, { pickUserProps, takenBody, takenField, Users } from '@/server/model/user';
 
 // Every user (admin only).
 export const GET = route(async (request: NextRequest) => {
@@ -22,6 +22,8 @@ export const POST = route(async (request: NextRequest) => {
   try {
     await user.save();
   } catch (err) {
+    const taken = takenField(err);
+    if (taken) return json(takenBody(taken), 409);
     return json(err instanceof Error ? { message: err.message } : err, 422);
   }
 

@@ -47,7 +47,7 @@ const { values: flags } = parseArgs({
 const BACKUP_USER_PROPS = [
   'id', 'userName', 'firstName', 'lastName', 'gender', 'locale', 'facebookId', 'googleId',
   'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email', 'password',
-  'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference', 'showCardStockPrices',
+  'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices',
   'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime',
 ];
 

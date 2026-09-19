@@ -10,7 +10,6 @@ import { AuthLink, LogoutLink } from './AuthLink';
 import { NotificationBell } from './NotificationBell';
 import { useT } from '@/lib/client/i18n';
 import type { MessageKey } from '@/lib/i18n/translate';
-import { LanguagePicker } from './LanguagePicker';
 
 const itemClass = 'flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-ink hover:bg-raised hover:no-underline';
 const itemIconClass = 'size-4 text-subtle';
@@ -61,7 +60,7 @@ export function ViewSwitch({ pathname, className = '' }: { pathname: string; cla
           key={view.key}
           href={view.href}
           aria-current={view.current ? 'page' : undefined}
-          className={`flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium transition-colors hover:no-underline ${
+          className={`flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium whitespace-nowrap transition-colors hover:no-underline ${
             view.current ? 'bg-raised-2 text-ink shadow-sm' : 'text-muted hover:text-ink'
           }`}
         >
@@ -159,7 +158,6 @@ export function NavMenu() {
     <>
       <nav aria-label={t('nav.main')} className="hidden items-center gap-2 lg:flex">
         <ViewSwitch pathname={pathname} />
-        <LanguagePicker className="px-1" />
         {user ? (
           <Link
             href="/create"

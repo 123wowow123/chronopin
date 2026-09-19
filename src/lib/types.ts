@@ -5,6 +5,7 @@ import type { PinAwardJson } from './awards';
 import type { PinTagJson } from './tags';
 
 import type { ThemePreference } from './theme';
+import type { Locale } from './i18n/config';
 
 export type CardStock = { symbol: string; name: string | null; relation: 'company' | 'related' | 'supplier'; assetClass: 'stocks' | 'etf'; startPrice: number | null; startDay: string | null };
 
@@ -223,6 +224,8 @@ export type SessionUser = {
   pictureUrl?: string;
   defaultFilterSpanPreference?: string;
   themePreference?: ThemePreference | null;
+  // The language pages open in; null follows the browser (cookie).
+  localePreference?: Locale | null;
   // Off hides the company's stock price on pin cards.
   showCardStockPrices?: boolean;
 };

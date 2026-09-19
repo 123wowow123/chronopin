@@ -3,7 +3,7 @@ import { cookies } from 'next/headers';
 import type { NextRequest } from 'next/server';
 import { getUser, requireUser, signToken, tokenCookie } from '@/server/auth';
 import { json, readJson, route } from '@/server/http';
-import User, { patchableUserProps, pickUserProps } from '@/server/model/user';
+import User, { patchableUserProps, pickUserProps, takenBody, takenField } from '@/server/model/user';
 import { loadUser } from '@/server/services/users';
 
 // The signed-in user's own account, or null when signed out. Every page load
@@ -24,6 +24,8 @@ export const PATCH = route(async (request: NextRequest) => {
   try {
     await user.patchWithoutPassword();
   } catch (err) {
+    const taken = takenField(err);
+    if (taken) return json(takenBody(taken), 409);
     return json(err instanceof Error ? { message: err.message } : err, 422);
   }
 

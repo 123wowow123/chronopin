@@ -36,6 +36,7 @@ const prop = [
   'websiteUrl',
   'defaultFilterSpanPreference',
   'themePreference',
+  'localePreference',
   'showCardStockPrices',
   'utcCreatedDateTime',
   'utcUpdatedDateTime',
@@ -54,6 +55,7 @@ export const pickUserProps = [
   'pictureUrl',
   'defaultFilterSpanPreference',
   'themePreference',
+  'localePreference',
   'showCardStockPrices',
 ];
 
@@ -61,6 +63,24 @@ export const pickUserProps = [
 // Without this, every truthy property in the model's own list is writable
 // straight from the request body - `role` included.
 export const patchableUserProps = ['userName', 'firstName', 'lastName', 'email'];
+
+// Which unique index (0046) a failed insert or update hit: another live
+// account already has this email or @handle. Null for any other error.
+export function takenField(err: unknown): 'email' | 'userName' | null {
+  const { code, constraint } = (err ?? {}) as { code?: string; constraint?: string };
+  if (code !== '23505') return null;
+  if (constraint === 'User_email_key') return 'email';
+  if (constraint === 'User_userName_key') return 'userName';
+  return null;
+}
+
+// The 409 body for takenField: `code` for the forms to translate, `message`
+// in English for API clients.
+export function takenBody(field: 'email' | 'userName') {
+  return field === 'email'
+    ? { code: 'emailTaken', message: 'An account with this email already exists.' }
+    : { code: 'handleTaken', message: 'This user handle is taken.' };
+}
 
 export default class User {
   [key: string]: any;
@@ -74,6 +94,7 @@ export default class User {
   declare pictureUrl: string | null | undefined;
   declare defaultFilterSpanPreference: string | null | undefined;
   declare themePreference: string | null | undefined;
+  declare localePreference: string | null | undefined;
   declare showCardStockPrices: boolean | undefined;
 
   constructor(user?: Row | null) {
@@ -220,7 +241,7 @@ export default class User {
 const USER_COLUMNS = [
   'id', 'userName', 'firstName', 'lastName', 'gender', 'locale', 'facebookId', 'googleId', 'appleId',
   'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email', 'password',
-  'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference', 'showCardStockPrices',
+  'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices',
   'utcCreatedDateTime', 'utcUpdatedDateTime',
 ];
 
@@ -236,12 +257,13 @@ function value(v: unknown) {
 }
 
 async function createUser(user: User) {
-  const columns = WRITE_COLUMNS.concat(['defaultFilterSpanPreference', 'themePreference', 'showCardStockPrices', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime']);
+  const columns = WRITE_COLUMNS.concat(['defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime']);
   const values = WRITE_COLUMNS.map((c) => value(user[c]))
     // utcUpdatedDateTime has always been written from utcCreatedDateTime.
     .concat([
       value(user.defaultFilterSpanPreference),
       value(user.themePreference),
+      value(user.localePreference),
       // A boolean with a default: never written as null.
       user.showCardStockPrices !== false,
       user.utcCreatedDateTime || new Date(),
@@ -273,10 +295,11 @@ async function createUser(user: User) {
 async function updateUser(user: User) {
   // Written from whatever the object carries, so every caller has to load the
   // row before updating it or a saved preference is cleared.
-  const columns = WRITE_COLUMNS.concat('defaultFilterSpanPreference', 'themePreference', 'showCardStockPrices');
+  const columns = WRITE_COLUMNS.concat('defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices');
   const values = WRITE_COLUMNS.map((c) => value(user[c])).concat(
     user.defaultFilterSpanPreference || null,
     user.themePreference || null,
+    user.localePreference || null,
     user.showCardStockPrices !== false,
     user.id,
   );

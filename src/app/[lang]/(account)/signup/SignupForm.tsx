@@ -69,7 +69,9 @@ export function SignupForm() {
       // replay the router's remembered redirect to /login).
       window.location.assign(localize(redirect));
     } catch (err) {
-      setError(err instanceof ApiError ? err.message : t('common.somethingWrong'));
+      // By code: the server's text is English (a 422's is a raw database error).
+      const code = err instanceof ApiError ? (err.body as { code?: string } | undefined)?.code : undefined;
+      setError(code === 'emailTaken' ? t('signup.emailTaken') : code === 'handleTaken' ? t('signup.handleTaken') : t('common.somethingWrong'));
       setBusy(false);
     }
   }

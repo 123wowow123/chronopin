@@ -52,7 +52,7 @@ export function ThemePicker({ userId }: { userId: number }) {
                 role="radio"
                 aria-checked={selected}
                 onClick={() => void choose(option.value)}
-                className={`flex items-center justify-center gap-2 rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+                className={`flex items-center justify-center gap-1.5 rounded-md px-2 py-1.5 text-sm font-medium whitespace-nowrap transition-colors sm:gap-2 sm:px-3 ${
                   selected ? 'bg-raised-2 text-ink shadow-sm' : 'text-muted hover:bg-raised hover:text-ink'
                 }`}
               >

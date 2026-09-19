@@ -6,6 +6,7 @@ import { HideDevIssues } from '@/components/HideDevIssues';
 import { I18nProvider } from '@/components/I18nProvider';
 import { Navbar } from '@/components/nav/Navbar';
 import { ThemeSync } from '@/components/ThemeSync';
+import { LocaleSync } from '@/components/LocaleSync';
 import { TimeZoneSync } from '@/components/TimeZoneSync';
 import { siteName, siteUrl } from '@/lib/appConfig';
 import { INTL_LOCALES, localeOr, LOCALES } from '@/lib/i18n/config';
@@ -92,6 +93,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           <div id="main">{children}</div>
           <TimeZoneSync />
           <ThemeSync />
+          <LocaleSync />
         </I18nProvider>
         {process.env.NODE_ENV === 'development' ? <HideDevIssues /> : null}
         {/* A plain async script, not next/script: AdSense warns about the

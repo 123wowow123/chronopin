@@ -30,7 +30,8 @@ export function LoginForm() {
       // router may still remember the redirect that sent us here.
       window.location.assign(localize(afterLoginPath(params.get('redirect'))));
     } catch (err) {
-      setError(err instanceof ApiError ? err.message : t('common.somethingWrong'));
+      const code = err instanceof ApiError ? (err.body as { code?: string } | undefined)?.code : undefined;
+      setError(code === 'emailNotRegistered' ? t('account.emailNotRegistered') : code === 'wrongPassword' ? t('account.wrongPassword') : t('common.somethingWrong'));
       setBusy(false);
     }
   }

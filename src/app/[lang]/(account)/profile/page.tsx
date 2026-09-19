@@ -49,7 +49,7 @@ export default async function ProfilePage() {
         <p className="mb-6 text-sm text-subtle">{t('profile.preferencesIntro')}</p>
         <div className="space-y-4">
           <ThemePicker userId={user.id} />
-          <LanguageSetting />
+          <LanguageSetting userId={user.id} />
           <PreferencesForm userId={user.id} initial={user.defaultFilterSpanPreference ?? null} />
           <CardStockPricesToggle userId={user.id} initial={user.showCardStockPrices !== false} />
         </div>

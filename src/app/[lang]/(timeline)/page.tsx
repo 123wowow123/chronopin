@@ -134,16 +134,16 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
         preference={personal}
       />
       {/* Plain links through the timeline, for crawlers and anyone without JavaScript. */}
-      <nav aria-label={t('timeline.pagesLabel')} className="flex justify-between px-4 pb-20 text-sm lg:ml-[190px] lg:max-w-[906px]">
+      <nav aria-label={t('timeline.pagesLabel')} className="flex flex-wrap justify-between gap-x-4 gap-y-2 px-4 pb-20 text-sm lg:ml-[190px] lg:max-w-[906px]">
         {page.links.previous ? (
-          <Link href={`/${page.links.previous}`} prefetch={false} rel="prev">
+          <Link href={`/${page.links.previous}`} prefetch={false} rel="prev" className="whitespace-nowrap">
             ← {t('timeline.pinsBefore', { date: firstDay ? formatDayKey(firstDay, t.locale) : '' })}
           </Link>
         ) : (
           <span />
         )}
         {page.links.next ? (
-          <Link href={`/${page.links.next}`} prefetch={false} rel="next">
+          <Link href={`/${page.links.next}`} prefetch={false} rel="next" className="ml-auto whitespace-nowrap">
             {t('timeline.pinsAfter', { date: lastDay ? formatDayKey(lastDay, t.locale) : '' })} →
           </Link>
         ) : null}

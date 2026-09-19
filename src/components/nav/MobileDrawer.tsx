@@ -16,7 +16,6 @@ import { ViewSwitch } from './NavMenu';
 import { DrawerNotifications } from './NotificationBell';
 import { searchHref, WATCHED } from './SearchBox';
 import { useT } from '@/lib/client/i18n';
-import { LanguagePicker } from './LanguagePicker';
 
 const itemClass =
   'flex items-center gap-4 rounded-full px-3 py-2 text-[17px] font-semibold text-ink hover:bg-raised hover:no-underline aria-[current=page]:text-accent';
@@ -253,9 +252,6 @@ export function MobileDrawer() {
               {isAdmin ? <DrawerSection title={t('nav.admin')}>{link('/admin/views', 'shield', t('nav.dashboard'))}</DrawerSection> : null}
             </>
           ) : null}
-          <DrawerSection title={t('nav.language')}>
-            <LanguagePicker className="px-3 py-2 text-[17px]" />
-          </DrawerSection>
         </nav>
 
         {user ? (
