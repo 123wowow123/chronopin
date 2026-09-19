@@ -57,12 +57,13 @@ async function store(pin: Pin, image: { originalUrl: string; width?: number; hei
 
 async function run() {
   const rows = await db.query<{ id: number; media: number; images: number }>(
-    `SELECT p."id",
-            (SELECT count(*) FROM "PinMedium" pm WHERE pm."pinId" = p."id")::int AS "media",
-            (SELECT count(*) FROM "PinMedium" pm JOIN "Medium" m ON m."id" = pm."mediumId" WHERE pm."pinId" = p."id" AND m."type" = $1)::int AS "images"
-       FROM "Pin" p
-      WHERE p."utcDeletedDateTime" IS NULL AND ($2::integer[] IS NULL OR p."id" = ANY($2::integer[]))
-      ORDER BY "images" > 0, "media", p."id"`,
+    `SELECT * FROM (
+       SELECT p."id",
+              (SELECT count(*) FROM "PinMedium" pm WHERE pm."pinId" = p."id")::int AS "media",
+              (SELECT count(*) FROM "PinMedium" pm JOIN "Medium" m ON m."id" = pm."mediumId" WHERE pm."pinId" = p."id" AND m."type" = $1)::int AS "images"
+         FROM "Pin" p
+        WHERE p."utcDeletedDateTime" IS NULL AND ($2::integer[] IS NULL OR p."id" = ANY($2::integer[]))
+     ) x ORDER BY ("images" > 0), "media", "id"`,
     [String(mediumID.image), flags.pin ? flags.pin.map(Number) : null],
   );
   const todo = rows
