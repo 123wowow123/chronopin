@@ -87,6 +87,8 @@ export default class BasePin {
     this.merchants = _.get(pin, 'merchants', []).map((m: Row) => new Merchant(m, this));
     this.references = (pin.references || []).map((r: Row) => new PinReference(r, this));
     this.ratings = (pin.ratings || []).map((rt: Row) => new PinRating(rt, this));
+    // Read-only, from the view: tickers are saved through their own tables.
+    this.stocks = Array.isArray(pin.stocks) ? pin.stocks : [];
     return this;
   }
 

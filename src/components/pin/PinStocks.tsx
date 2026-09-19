@@ -3,9 +3,8 @@
 import { useEffect, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
-import { useSession } from '@/lib/client/session';
-import { refreshStockQuotes, useStockQuote, watchStockQuotes } from '@/lib/client/stockQuotes';
-import { changeSince, closeKnown, type PinStock, type StockPrice, type StockRelation } from '@/lib/stocks';
+import { useStockQuote, watchStockQuotes } from '@/lib/client/stockQuotes';
+import { changeSince, closeKnown, stockTidbit, type PinStock, type StockPrice, type StockRelation } from '@/lib/stocks';
 
 const GROUPS: { relation: StockRelation; heading: string }[] = [
   { relation: 'company', heading: 'Company' },
@@ -16,6 +15,12 @@ const GROUPS: { relation: StockRelation; heading: string }[] = [
 const usd = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
 // Closes and start days are market days: shown as the day they are, in New York.
 const marketDay = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'America/New_York' });
+const marketDayShort = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', timeZone: 'America/New_York' });
+// This year's days go without the year, so a row fits a phone.
+const priceDay = (at: string) => {
+  const d = new Date(at);
+  return d.getUTCFullYear() === new Date().getUTCFullYear() ? marketDayShort.format(d) : marketDay.format(d);
+};
 const updated = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit' });
 const dayOnly = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
@@ -41,11 +46,11 @@ function Change({ from, to, suffix }: { from: number; to: number | null | undefi
 function Snapshot({ label, price, pending, live }: { label: React.ReactNode; price: StockPrice | null; pending?: string; live: number | null }) {
   return (
     <div className="flex flex-wrap items-baseline gap-x-2">
-      <span className="w-40 shrink-0 text-subtle">{label}</span>
+      <span className="w-24 shrink-0 text-subtle sm:w-36">{label}</span>
       {price ? (
         <>
           <span className="font-medium tabular-nums">{usd.format(price.price)}</span>
-          <span className="text-xs text-subtle">({marketDay.format(new Date(price.at))})</span>
+          <span className="text-xs text-subtle">({priceDay(price.at)})</span>
           <Change from={price.price} to={live} suffix="since" />
         </>
       ) : (
@@ -55,76 +60,94 @@ function Snapshot({ label, price, pending, live }: { label: React.ReactNode; pri
   );
 }
 
-function Ticker({ stock, canEdit, onRemove }: { stock: PinStock; canEdit: boolean; onRemove: () => void }) {
+// One ticker as a pill: symbol, live price and today's move. Pressed, its
+// details open under the pills (one at a time).
+function TickerPill({ stock, open, onToggle }: { stock: PinStock; open: boolean; onToggle: () => void }) {
+  const quote = useStockQuote(stock.symbol);
+  return (
+    <button
+      type="button"
+      aria-expanded={open}
+      aria-controls="stock-details"
+      onClick={onToggle}
+      title={[stock.name, stock.note].filter(Boolean).join(' - ')}
+      className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm ring-1 transition-colors ring-inset ${
+        open ? 'bg-raised ring-link' : 'bg-panel ring-line hover:bg-raised'
+      }`}
+    >
+      <span className="font-semibold tracking-wide text-ink">{stock.symbol}</span>
+      {quote ? (
+        <>
+          <span className="tabular-nums text-ink/90">{usd.format(quote.price)}</span>
+          {quote.changePercent != null ? (
+            <span className="text-xs">
+              <Change from={100} to={100 + quote.changePercent} />
+            </span>
+          ) : null}
+        </>
+      ) : (
+        <span className="text-xs text-subtle">…</span>
+      )}
+    </button>
+  );
+}
+
+// The open pill's details: a line on why it is on the pin ("Supplier: AMD,
+// which designs the PlayStation 5 processor."), and its price when posted and
+// on each start date against the live one.
+function TickerDetails({ stock }: { stock: PinStock }) {
   const quote = useStockQuote(stock.symbol);
   const live = quote?.price ?? null;
   const [current, ...earlier] = stock.starts;
   return (
-    <div className="surface px-4 py-3 text-sm">
-      <div className="mb-2 flex flex-wrap items-baseline gap-x-2">
+    <div id="stock-details" className="surface flex flex-col gap-1 px-4 py-3 text-sm">
+      <p className="mb-1 text-ink/90">{stockTidbit(stock)}</p>
+      <Snapshot label="Posted" price={stock.posted} live={live} />
+      {current ? (
+        <Snapshot label={`Start date${current.current ? '' : ' (earlier)'}`} price={current.price} pending={missingClose(current.day)} live={live} />
+      ) : null}
+      {earlier.map((start) => (
+        <Snapshot
+          key={start.utcStartDateTime}
+          label={`Earlier start, ${dayOnly.format(new Date(`${start.day}T00:00:00Z`))}`}
+          price={start.price}
+          pending={missingClose(start.day)}
+          live={live}
+        />
+      ))}
+      <div className="mt-1 flex items-center gap-3 text-xs">
         <a
-          href={`https://www.nasdaq.com/market-activity/${stock.assetClass === 'etf' ? 'etf' : 'stocks'}/${stock.symbol.toLowerCase()}`}
+          href={`https://finance.yahoo.com/quote/${encodeURIComponent(stock.symbol.replace('.', '-'))}/`}
           target="_blank"
           rel="noopener nofollow"
-          className="font-semibold tracking-wide text-ink hover:text-link hover:no-underline"
+          className="inline-flex items-center gap-1 text-subtle hover:text-link hover:no-underline"
         >
-          {stock.symbol}
+          {stock.symbol} on Yahoo Finance
+          <Icon name="external" className="size-3" />
         </a>
-        {stock.name ? <span className="min-w-0 truncate text-subtle">{stock.name}</span> : null}
-        {stock.note ? <span className="w-full text-xs text-subtle order-last">{stock.note}</span> : null}
-        <span className="ml-auto flex items-baseline gap-2">
-          {quote ? (
-            <>
-              <span className="text-base font-semibold tabular-nums">{usd.format(quote.price)}</span>
-              {quote.changePercent != null ? <Change from={100} to={100 + quote.changePercent} suffix="today" /> : null}
-            </>
-          ) : (
-            <span className="text-subtle">Loading price…</span>
-          )}
-          {canEdit ? (
-            <button type="button" onClick={onRemove} className="self-center rounded p-0.5 text-subtle hover:bg-raised hover:text-ink" title={`Take ${stock.symbol} off this pin`}>
-              <Icon name="close" className="size-3.5" />
-            </button>
-          ) : null}
-        </span>
       </div>
-      <div className="flex flex-col gap-1">
-        <Snapshot label="When posted" price={stock.posted} live={live} />
-        {current ? (
-          <Snapshot
-            label={`On start date${current.current ? '' : ' (earlier)'}`}
-            price={current.price}
-            pending={missingClose(current.day)}
-            live={live}
-          />
-        ) : null}
-        {earlier.map((start) => (
-          <Snapshot
-            key={start.utcStartDateTime}
-            label={`Earlier start, ${dayOnly.format(new Date(`${start.day}T00:00:00Z`))}`}
-            price={start.price}
-            pending={missingClose(start.day)}
-            live={live}
-          />
-        ))}
-      </div>
-      {quote ? (
-        <p className="mt-2 text-xs text-subtle">
-          Nasdaq, delayed{quote.marketStatus ? ` · market ${quote.marketStatus.toLowerCase()}` : ''} · updated {updated.format(new Date(quote.fetchedAt))}
-        </p>
-      ) : null}
     </div>
+  );
+}
+
+// When the prices were read, once for all of them: they share a feed.
+function QuoteNote({ symbol }: { symbol: string }) {
+  const quote = useStockQuote(symbol);
+  if (!quote) return null;
+  return (
+    <p className="text-xs text-subtle">
+      Nasdaq, delayed{quote.marketStatus ? ` · market ${quote.marketStatus.toLowerCase()}` : ''} · updated {updated.format(new Date(quote.fetchedAt))}
+    </p>
   );
 }
 
 // The stocks a pin moves or is about: each ticker's live (delayed) price, the
 // price when the pin was posted and the close on its start date, with the
-// start dates it had before. The pin's author and admins can take tickers
-// off. Fetched in the browser: the page itself is cached for hours.
-export function PinStocks({ pinId, authorId }: { pinId: number; authorId?: number }) {
-  const { user, isAdmin } = useSession();
-  const canEdit = !!user && (isAdmin || (authorId != null && Number(user.id) === Number(authorId)));
+// start dates it had before. Tickers come in on their own (the company, its
+// relations, the scraped article); there is nothing to add or remove here. Fetched in the browser: the page itself is cached for hours.
+export function PinStocks({ pinId }: { pinId: number }) {
   const [stocks, setStocks] = useState<PinStock[] | null>(null);
+  const [openSymbol, setOpenSymbol] = useState<string | null>(null);
 
   useEffect(() => {
     let live = true;
@@ -140,35 +163,27 @@ export function PinStocks({ pinId, authorId }: { pinId: number; authorId?: numbe
   const hasStocks = !!stocks?.length;
   useEffect(() => (hasStocks ? watchStockQuotes(pinId) : undefined), [pinId, hasStocks]);
 
-  // Takes a ticker off (the pin's author or an admin). Tickers only come in
-  // on their own: the pin's company, and what its scraped article names.
-  const remove = async (symbol: string) => {
-    try {
-      const { stocks: next } = await api.put<{ stocks: PinStock[] }>(`/api/pins/${pinId}/stocks`, { remove: symbol });
-      setStocks(next);
-      refreshStockQuotes();
-    } catch {
-      // Left as it was; the × can be pressed again.
-    }
-  };
 
   if (!stocks?.length) return null;
+  const opened = stocks.find((stock) => stock.symbol === openSymbol);
   return (
-    <section aria-labelledby="stocks-heading" className="mb-4 flex flex-col gap-3">
+    <section aria-labelledby="stocks-heading" className="mb-4 flex flex-col gap-2">
       <h2 id="stocks-heading" className="sr-only">
         Stocks
       </h2>
       {GROUPS.map(({ relation: group, heading }) => {
         const shown = stocks.filter((stock) => stock.relation === group);
         return shown.length ? (
-          <div key={group} className="flex flex-col gap-2">
-            <h3 className="text-xs font-semibold tracking-wider text-subtle uppercase">{heading}</h3>
+          <div key={group} className="flex flex-wrap items-center gap-1.5">
+            <h3 className="mr-1 w-full text-[11px] font-semibold tracking-wider text-subtle uppercase sm:w-auto">{heading}</h3>
             {shown.map((stock) => (
-              <Ticker key={stock.symbol} stock={stock} canEdit={canEdit} onRemove={() => void remove(stock.symbol)} />
+              <TickerPill key={stock.symbol} stock={stock} open={stock.symbol === openSymbol} onToggle={() => setOpenSymbol((o) => (o === stock.symbol ? null : stock.symbol))} />
             ))}
           </div>
         ) : null;
       })}
+      {opened ? <TickerDetails stock={opened} /> : null}
+      <QuoteNote symbol={stocks[0].symbol} />
     </section>
   );
 }

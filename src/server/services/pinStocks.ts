@@ -30,12 +30,14 @@ type PinFacts = {
   utcTickerCheckedDateTime: Date | null;
   companyWikiUrl: string | null;
   utcRelationsCheckedDateTime: Date | null;
+  companyTickerNote: string | null;
 };
 
 async function pinFacts(pinId: number): Promise<PinFacts | null> {
   const [pin] = await db.query<PinFacts>(
     `SELECT "p"."id", "p"."utcCreatedDateTime", "p"."utcStartDateTime", "p"."allDay", "p"."companyId", "c"."name"::text AS "company",
-            "c"."tickerSymbol", "c"."utcTickerCheckedDateTime", "c"."wikiUrl" AS "companyWikiUrl", "c"."utcRelationsCheckedDateTime"
+            "c"."tickerSymbol", "c"."utcTickerCheckedDateTime", "c"."wikiUrl" AS "companyWikiUrl", "c"."utcRelationsCheckedDateTime",
+            "c"."tickerNote" AS "companyTickerNote"
      FROM "Pin" AS "p" LEFT JOIN "Company" AS "c" ON "c"."id" = "p"."companyId"
      WHERE "p"."id" = $1 AND "p"."utcDeletedDateTime" IS NULL`,
     [pinId],
@@ -48,8 +50,14 @@ async function companyTicker(pin: PinFacts): Promise<string | null> {
   if (!pin.companyId || !pin.company) return null;
   if (pin.utcTickerCheckedDateTime) return pin.tickerSymbol;
   const found = await lookupCompanyTicker(pin.company);
-  await db.query(`UPDATE "Company" SET "tickerSymbol" = $2, "utcTickerCheckedDateTime" = now() WHERE "id" = $1`, [pin.companyId, found?.symbol ?? null]);
-  return found?.symbol ?? null;
+  // Fills an empty one only: a ticker an article gave the company meanwhile
+  // (adoptCompanyStock, run alongside on a new pin) is not cleared by a
+  // lookup that found none.
+  const [row] = await db.query<{ tickerSymbol: string | null }>(
+    `UPDATE "Company" SET "tickerSymbol" = COALESCE("tickerSymbol", $2), "utcTickerCheckedDateTime" = now() WHERE "id" = $1 RETURNING "tickerSymbol"`,
+    [pin.companyId, found?.symbol ?? null],
+  );
+  return row?.tickerSymbol ?? null;
 }
 
 async function priceSnapshot(row: PriceRow, ticker: { symbol: string; assetClass: AssetClass }, pin: PinFacts, now: Date): Promise<StockPrice | null> {
@@ -78,9 +86,14 @@ async function companyRelations(pin: PinFacts, ownSymbol: string | null): Promis
   if (!pin.utcRelationsCheckedDateTime) {
     try {
       const found = await findCompanyRelations({ name: pin.company, ownSymbol, wikiUrl: pin.companyWikiUrl });
-      for (const r of found) {
+      // A line set by hand stands.
+      if (found.about && !pin.companyTickerNote) {
+        await db.query(`UPDATE "Company" SET "tickerNote" = $2 WHERE "id" = $1 AND "tickerNote" IS NULL`, [pin.companyId, found.about]);
+        pin.companyTickerNote = found.about;
+      }
+      for (const r of found.relations) {
         const listing = await identify(r.symbol);
-        if (listing) await CompanyRelation.set(pin.companyId, { ...r, name: listing.quote.name || r.name, assetClass: listing.assetClass, origin: 'claude' });
+        if (listing) await CompanyRelation.set(pin.companyId, { ...r, name: r.name || listing.quote.name, assetClass: listing.assetClass, origin: 'claude' });
       }
       await CompanyRelation.markChecked(pin.companyId);
     } catch (err) {
@@ -99,18 +112,28 @@ const due = (row: PriceRow, now: Date) =>
 export async function syncPinStocks(pinId: number, { lookup = true }: { lookup?: boolean } = {}): Promise<PinStock[]> {
   const pin = await pinFacts(pinId);
   if (!pin) return [];
+  let lookupAdded = false;
   if (lookup) {
     try {
       const symbol = await companyTicker(pin);
       const all = await PinTicker.forPin(pinId, { withRemoved: true });
       const has = (s: string) => all.some((t) => t.symbol === s);
       if (symbol && !has(symbol)) {
-        await PinTicker.add(pinId, { symbol, name: pin.company, assetClass: 'stocks', origin: 'company', relation: 'company', note: null });
+        await PinTicker.add(pinId, { symbol, name: pin.company, assetClass: 'stocks', origin: 'company', relation: 'company', note: pin.companyTickerNote });
+        lookupAdded = true;
+      }
+      // Relations first: asking Claude for them also writes the company's line.
+      const relations = await companyRelations(pin, symbol);
+      if (symbol && (await PinTicker.refreshFromCompany(pinId, { symbol, name: pin.company, relation: 'company', note: pin.companyTickerNote }))) {
+        lookupAdded = true;
       }
       // A ticker taken off the pin (kept, marked removed) is not added back.
-      for (const r of await companyRelations(pin, symbol)) {
+      for (const r of relations) {
         if (!has(r.symbol)) {
           await PinTicker.add(pinId, { symbol: r.symbol, name: r.name, assetClass: r.assetClass, origin: 'company', relation: r.relation, note: r.note });
+          lookupAdded = true;
+        } else if (await PinTicker.refreshFromCompany(pinId, r)) {
+          lookupAdded = true;
         }
       }
     } catch (err) {
@@ -123,6 +146,7 @@ export async function syncPinStocks(pinId: number, { lookup = true }: { lookup?:
 
   const now = new Date();
   const pending = (await PinTicker.prices(tickers.map((t) => t.id))).filter((row) => due(row, now));
+  const before = JSON.stringify(tickers.map((t) => t.symbol));
   for (const row of pending) {
     const ticker = tickers.find((t) => t.id === row.pinTickerId)!;
     try {
@@ -132,7 +156,16 @@ export async function syncPinStocks(pinId: number, { lookup = true }: { lookup?:
       log.warn(`stock price ${ticker.symbol} for pin ${pinId} failed:`, (err as Error).message);
     }
   }
-  return PinTicker.stocksOf(pinId, pin.utcStartDateTime);
+  const stocks = await PinTicker.stocksOf(pinId, pin.utcStartDateTime);
+  // Cards read tickers and start closes from cached pages: a new ticker or a
+  // price found shows there once the pin's caches are dropped.
+  if (pending.length || JSON.stringify(stocks.map((s) => s.symbol)) !== before || lookupAdded) forgetCachedPin(pinId);
+  return stocks;
+}
+
+// Outside a Next.js server (a script) there are no caches to drop.
+function forgetCachedPin(pinId: number) {
+  import('./cache').then(({ invalidatePin }) => invalidatePin(pinId)).catch(() => {});
 }
 
 // Tickers a pin was sent with (its scraped article's, or an API caller's):
@@ -151,10 +184,33 @@ export async function addPinStocks(pinId: number, stocks: ScrapedStock[]): Promi
       log.warn(`pin ${pinId}: dropped ticker ${stock.symbol}, which Nasdaq does not list`);
       continue;
     }
-    await PinTicker.add(pinId, { symbol: stock.symbol, name: listing.quote.name, assetClass: listing.assetClass, origin: 'article', relation: stock.relation, note: stock.note });
+    // The name the article or caller gave (the one people use) over Nasdaq's legal one.
+    await PinTicker.add(pinId, { symbol: stock.symbol, name: stock.name || listing.quote.name, assetClass: listing.assetClass, origin: 'article', relation: stock.relation, note: stock.note });
     room--;
   }
+  await adoptCompanyStock(pinId, stocks);
   await syncPinStocks(pinId, { lookup: false });
+}
+
+// What an article says of the pin's own company is kept on the company, for
+// its other pins, where the company has nothing yet: its ticker (the name
+// lookup can miss one, e.g. a name that is not the listing's) once Nasdaq
+// knows it, and its line ("the Japanese electronics ... group behind
+// PlayStation"). Never over what a lookup or a person already set.
+async function adoptCompanyStock(pinId: number, stocks: ScrapedStock[]): Promise<void> {
+  const own = stocks.find((s) => s.relation === 'company');
+  if (!own) return;
+  const [company] = await db.query<{ id: number; tickerSymbol: string | null; tickerNote: string | null }>(
+    `SELECT "c"."id", "c"."tickerSymbol", "c"."tickerNote" FROM "Pin" AS "p" JOIN "Company" AS "c" ON "c"."id" = "p"."companyId" WHERE "p"."id" = $1`,
+    [pinId],
+  );
+  if (!company) return;
+  if (!company.tickerSymbol && (await identify(own.symbol))) {
+    await db.query(`UPDATE "Company" SET "tickerSymbol" = $2, "utcTickerCheckedDateTime" = now() WHERE "id" = $1 AND "tickerSymbol" IS NULL`, [company.id, own.symbol]);
+  }
+  if (!company.tickerNote && own.note && (company.tickerSymbol ?? own.symbol) === own.symbol) {
+    await db.query(`UPDATE "Company" SET "tickerNote" = $2 WHERE "id" = $1 AND "tickerNote" IS NULL`, [company.id, own.note]);
+  }
 }
 
 // For after() in a route: a ticker failing must not fail the pin's save.

@@ -96,4 +96,16 @@ if (!g.__chronopinPinListeners) {
   };
   pinEvents.on('save', syncStocks);
   pinEvents.on('update', syncStocks);
+
+  // A film, series, anime or game saved with no place of its own goes on the
+  // map at its studio's headquarters (studioLocation.ts); a pin posted by API
+  // without a scrape gets it here.
+  const placeStudio = (pin: Row) => {
+    import('./studioLocation')
+      .then(({ placeAtStudio }) => placeAtStudio(Number(pin.id)))
+      .then((moved) => (moved ? import('./services/cache').then(({ invalidatePin }) => invalidatePin(Number(pin.id))) : undefined))
+      .catch((err) => log.warn(`studio location failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', placeStudio);
+  pinEvents.on('update', placeStudio);
 }

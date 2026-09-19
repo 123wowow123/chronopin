@@ -23,11 +23,17 @@ const BATCH = 50;
 const ICON_SIZE = 64;
 const MAX_ASPECT = 2;
 
-type CompanyInput = { id: number; websiteUrl?: string | null; wikiUrl?: string | null };
-export type FoundLogo = { id: number; websiteUrl: string | null; logoUrl: string | null };
+type CompanyInput = { id: number; name?: string; websiteUrl?: string | null; wikiUrl?: string | null };
+export type FoundLogo = { id: number; wikiUrl: string | null; websiteUrl: string | null; logoUrl: string | null };
 
-// Resolves one { id, websiteUrl, logoUrl } per company given; either url may be null.
+// Resolves one { id, wikiUrl, websiteUrl, logoUrl } per company given; any url may be null.
+// A company with neither a wiki link nor a website (the scrape often finds none)
+// is first looked up on Wikipedia by name, whose article leads to the website.
 export async function findLogos(companies: CompanyInput[]): Promise<FoundLogo[]> {
+  const found = await mapLimit(companies, 4, async (c) =>
+    c.wikiUrl || c.websiteUrl || !c.name ? c : { ...c, wikiUrl: await searchWikiUrl(c.name) },
+  );
+  companies = found;
   const wiki = await wikidata(companies);
   return mapLimit(companies, 4, async (company) => {
     const fromWiki = wiki[company.id] || { websiteUrl: null, logoUrl: null };
@@ -35,10 +41,45 @@ export async function findLogos(companies: CompanyInput[]): Promise<FoundLogo[]>
     const icon = (await siteIcon(websiteUrl)) || (await homePageIcon(websiteUrl));
     return {
       id: company.id,
+      wikiUrl: company.wikiUrl || null,
       websiteUrl,
       logoUrl: icon || fromWiki.logoUrl || null,
     };
   });
+}
+
+const COMPANY_WORDS = /\b(company|corporation|studio|studios|developer|publisher|manufacturer|brand|startup|laboratory|firm|conglomerate|network|airline|retailer|inc|ltd)\b/i;
+
+const plain = (text: string) => text.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '');
+
+// The Wikipedia article for a company name: a hit whose title is the name
+// (or the name plus a "(company)"-style qualifier), else null. Never a loose match.
+export async function searchWikiUrl(name: string): Promise<string | null> {
+  try {
+    const json = await getJson(
+      'https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&list=search&srlimit=5&srsearch=' +
+        encodeURIComponent(name),
+    );
+    const hits: { title: string }[] = (json.query && json.query.search) || [];
+    const base = (title: string) => plain(title.replace(/\s*\([^)]*\)\s*$/, ''));
+    const exact = hits.find((h) => plain(h.title) === plain(name));
+    const qualified = hits.find(
+      (h) => base(h.title) === plain(name) && COMPANY_WORDS.test(/\(([^)]*)\)\s*$/.exec(h.title)?.[1] || ''),
+    );
+    const hit = exact || qualified;
+    if (hit) {
+      const page = await getJson(
+        'https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=pageprops&ppprop=disambiguation&titles=' +
+          encodeURIComponent(hit.title),
+      );
+      if ((page.query?.pages || []).some((p: any) => p.pageprops && 'disambiguation' in p.pageprops)) {
+        return null;
+      }
+    }
+    return hit ? 'https://en.wikipedia.org/wiki/' + encodeURIComponent(hit.title.replace(/ /g, '_')) : null;
+  } catch {
+    return null;
+  }
 }
 
 export function faviconUrl(websiteUrl: string | null | undefined): string | null {
@@ -229,7 +270,7 @@ async function commonsThumbs(files: string[]): Promise<Record<string, string>> {
 
 // The current value of a claim: preferred rank, else the latest one without
 // an end time (a company's old logos stay listed with one), else the latest.
-function claimValue(claims: any[] | undefined) {
+export function claimValue(claims: any[] | undefined) {
   const live = (claims || []).filter((c) => c.rank !== 'deprecated' && c.mainsnak && c.mainsnak.datavalue);
   const preferred = live.filter((c) => c.rank === 'preferred');
   const current = live.filter((c) => !(c.qualifiers && c.qualifiers.P582));
@@ -237,7 +278,7 @@ function claimValue(claims: any[] | undefined) {
   return claim && claim.mainsnak.datavalue.value;
 }
 
-function wikiTitle(wikiUrl: string | null | undefined) {
+export function wikiTitle(wikiUrl: string | null | undefined) {
   if (!wikiUrl) {
     return null;
   }
@@ -269,7 +310,7 @@ function get(url: string, userAgent?: string) {
   return fetch(url, { headers: { 'User-Agent': userAgent || USER_AGENT }, signal: AbortSignal.timeout(10000) });
 }
 
-async function getJson(url: string): Promise<any> {
+export async function getJson(url: string): Promise<any> {
   const res = await get(url);
   if (!res.ok) {
     throw new Error(`GET ${url} failed with ${res.status}`);

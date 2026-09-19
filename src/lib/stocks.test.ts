@@ -12,6 +12,8 @@ import {
   normalizeSymbol,
   parseScrapedStocks,
   priceAt,
+  shortCompanyName,
+  stockTidbit,
   startMarketDay,
 } from './stocks';
 
@@ -84,6 +86,8 @@ describe('Nasdaq', () => {
     expect(isCompanyListing('Apple', { name: 'Apple Hospitality REIT, Inc. Common Shares', asset: 'STOCKS' })).toBe(false);
     expect(isCompanyListing('OpenAI', { name: 'OpenAI Lab Ecosystem ETF', asset: 'ETF' })).toBe(false);
     expect(isCompanyListing('Meta', { name: 'Metallus Inc. Common Stock', asset: 'STOCKS' })).toBe(false);
+    expect(isCompanyListing('Brightline', { name: 'Brightline Interactive, Inc. Common Stock', asset: 'STOCKS' })).toBe(false);
+    expect(isCompanyListing('Dell', { name: 'Dell Technologies Inc. Class C Common Stock', asset: 'STOCKS' })).toBe(true);
   });
 
   it('takes a ticker as typed', () => {
@@ -114,5 +118,30 @@ describe('parseScrapedStocks', () => {
   it('keeps at most MAX_PIN_TICKERS', () => {
     const many = Array.from({ length: 12 }, (_, i) => ({ symbol: `A${i}`, relation: 'related' }));
     expect(parseScrapedStocks(many)).toHaveLength(MAX_PIN_TICKERS);
+  });
+});
+
+describe('stock tidbits', () => {
+  it('shortens listing names', () => {
+    expect(shortCompanyName('Apple Inc. Common Stock')).toBe('Apple');
+    expect(shortCompanyName('Sony Group Corporation American Depositary Shares')).toBe('Sony');
+    expect(shortCompanyName('Advanced Micro Devices, Inc.')).toBe('Advanced Micro Devices');
+    expect(shortCompanyName('TSMC')).toBe('TSMC');
+  });
+
+  it('reads as one line', () => {
+    expect(stockTidbit({ symbol: 'AAPL', name: 'Apple Inc.', relation: 'related', note: "the biggest customer for Sony's camera image sensors" })).toBe(
+      "Related: Apple (AAPL), the biggest customer for Sony's camera image sensors.",
+    );
+    expect(stockTidbit({ symbol: 'AMD', name: 'AMD', relation: 'supplier', note: 'which designs the PlayStation 5 processor.' })).toBe(
+      'Supplier: AMD, which designs the PlayStation 5 processor.',
+    );
+    expect(stockTidbit({ symbol: 'MSFT', name: 'Microsoft Corporation', relation: 'related', note: "OpenAI's largest investor" })).toBe(
+      "Related: Microsoft (MSFT), OpenAI's largest investor.",
+    );
+    expect(stockTidbit({ symbol: 'SONY', name: 'Sony', relation: 'company', note: null })).toBe('Company: Sony (SONY).');
+    expect(stockTidbit({ symbol: 'NVDA', name: 'NVIDIA Corporation', relation: 'supplier', note: 'which supplies its GPUs' })).toBe(
+      'Supplier: NVIDIA (NVDA), which supplies its GPUs.',
+    );
   });
 });

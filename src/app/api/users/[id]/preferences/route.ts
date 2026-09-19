@@ -43,6 +43,13 @@ export const PUT = route(async (request: NextRequest) => {
     user.themePreference = theme;
   }
 
+  if ('showCardStockPrices' in body) {
+    if (typeof body.showCardStockPrices !== 'boolean') {
+      throw new HttpError(400, '', { message: 'showCardStockPrices must be true or false' });
+    }
+    user.showCardStockPrices = body.showCardStockPrices;
+  }
+
   await user.patchWithoutPassword();
   if (spanChanged) {
     invalidateTimeline();

@@ -76,5 +76,18 @@
     "verdict": "same",
     "verdictReasoning": "Both pins mark Deep Dive Dubai's July 2021 opening, and both cite its Wikipedia article alongside news coverage of that opening (Rappler, CNBC).",
     "utcVerifiedDateTime": "2026-09-16T18:48:54.255Z"
+  },
+  {
+    "pinId": 1766,
+    "otherPinId": 1774,
+    "reason": "similar",
+    "score": 0.8077092,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-19T05:48:19.239Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
   }
 ]

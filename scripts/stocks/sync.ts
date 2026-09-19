@@ -11,7 +11,15 @@
 // one of its pins syncs. By hand instead (no credit, or a correction), which
 // Claude never overwrites, then syncs the company's pins:
 //
-//   npm run stocks:sync -- --company OpenAI --relate "MSFT:related:Largest investor and cloud partner" --relate "NVDA:supplier:Training GPUs"
+//   npm run stocks:sync -- --company Sony --relate "AAPL=Apple:related:the biggest customer for Sony's camera image sensors" \
+//     --relate "AMD:supplier:which designs the PlayStation 5 processor"
+//
+// --about "clause" sets the company's own line the same way ("Company: Sony
+// (SONY), the Japanese electronics ... group behind PlayStation.").
+//
+// SYMBOL[=Name]:related|supplier:note. The note is the clause read after the
+// name ("Related: Apple (AAPL), the biggest customer for ..."); the name is
+// the one people use, else Nasdaq's listing name.
 
 import '../env';
 import { parseArgs } from 'node:util';
@@ -27,6 +35,7 @@ const { values: flags } = parseArgs({
     'dry-run': { type: 'boolean', default: false },
     company: { type: 'string' },
     relate: { type: 'string', multiple: true },
+    about: { type: 'string' },
   },
 });
 
@@ -34,28 +43,35 @@ const { values: flags } = parseArgs({
 const PAUSE_MS = 400;
 
 // Sets a company's relations by hand; answers the pins to sync.
-async function relate(company: string, entries: string[]): Promise<number[]> {
+async function relate(company: string, entries: string[], about?: string): Promise<number[]> {
   const [row] = await db.query<{ id: number; name: string }>(`SELECT "id", "name"::text AS "name" FROM "Company" WHERE "name" = $1`, [company]);
   if (!row) throw new Error(`no company named ${company}`);
+  if (about?.trim()) {
+    await db.query(`UPDATE "Company" SET "tickerNote" = $2 WHERE "id" = $1`, [row.id, about.trim().replace(/\.$/, '').slice(0, 300)]);
+    console.log(`${row.name}: about set`);
+  }
   for (const entry of entries) {
-    const [raw, relation, ...note] = entry.split(':');
+    const [head, relation, ...note] = entry.split(':');
+    const [raw, given] = head.split('=');
     const symbol = normalizeSymbol(raw);
     if (!symbol || (relation !== 'related' && relation !== 'supplier')) throw new Error(`--relate "${entry}" is not SYMBOL:related|supplier:note`);
     const listing = await identify(symbol);
     if (!listing) throw new Error(`Nasdaq has no US stock or ETF ${symbol}`);
-    await CompanyRelation.set(row.id, { symbol, name: listing.quote.name, assetClass: listing.assetClass, relation, note: note.join(':').trim() || null, origin: 'manual' });
-    console.log(`${row.name}: ${symbol} (${listing.quote.name}) ${relation}`);
+    const name = given?.trim() || listing.quote.name;
+    await CompanyRelation.set(row.id, { symbol, name, assetClass: listing.assetClass, relation, note: note.join(':').trim() || null, origin: 'manual' });
+    console.log(`${row.name}: ${symbol} (${name}) ${relation}`);
   }
-  // Set by hand, so not asked of Claude as well.
-  await CompanyRelation.markChecked(row.id);
+  // Relations set by hand are not asked of Claude as well. A line on its own
+  // (--about) leaves the relations to be found.
+  if (entries.length) await CompanyRelation.markChecked(row.id);
   const pins = await db.query<{ id: number }>(`SELECT "id" FROM "Pin" WHERE "companyId" = $1 AND "utcDeletedDateTime" IS NULL ORDER BY "id"`, [row.id]);
   return pins.map((p) => p.id);
 }
 
 async function run() {
-  if (flags.relate?.length || flags.company) {
-    if (!flags.company || !flags.relate?.length) throw new Error('--company and --relate go together');
-    flags.pin = (await relate(flags.company, flags.relate)).map(String);
+  if (flags.relate?.length || flags.about || flags.company) {
+    if (!flags.company || !(flags.relate?.length || flags.about)) throw new Error('--company goes with --relate and/or --about');
+    flags.pin = (await relate(flags.company, flags.relate ?? [], flags.about)).map(String);
     if (!flags.pin.length) return;
   }
   if (flags['dry-run']) {

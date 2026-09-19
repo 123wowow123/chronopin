@@ -175,8 +175,42 @@ export function isCompanyListing(company: string, hit: { name: string; asset: st
   const want = words(company);
   const name = words(hit.name);
   if (!want || !name.startsWith(want) || (name.length > want.length && name[want.length] !== ' ')) return false;
-  // What may follow: a group/holding word, a legal suffix, a share class.
+  // What may follow: a group/holding word, a legal suffix, a share class, or
+  // one of the few descriptive words big listings carry (Dell Technologies,
+  // Meta Platforms, Toyota Motor). Not ordinary words another company's name
+  // can hold: "Brightline" (the rail line, private) must not match Brightline
+  // Interactive.
   const rest = name.slice(want.length).trim().split(' ').filter(Boolean);
-  const allowed = /^(group|holdings?|co|company|corp|corporation|inc|incorporated|ltd|limited|plc|sa|ag|nv|se|the|class|[a-c]|common|ordinary|stock|shares?|american|depositary|depository|receipts?|ads|adr|each|representing|one|new|motor|platforms|technologies|entertainment|interactive|l|p|lp)$/;
+  const allowed = /^(group|holdings?|co|company|corp|corporation|inc|incorporated|ltd|limited|plc|sa|ag|nv|se|the|class|[a-c]|common|ordinary|stock|shares?|american|depositary|depository|receipts?|ads|adr|each|representing|one|new|motor|platforms|technologies|l|p|lp)$/;
   return rest.every((w) => allowed.test(w));
+}
+
+/* Tidbits */
+
+// A listing's name as people say it: "Apple Inc. Common Stock" -> "Apple",
+// "Sony Group Corporation American Depositary Shares" -> "Sony",
+// "Advanced Micro Devices, Inc." -> "Advanced Micro Devices" (a hand-set name,
+// such as "AMD" or "TSMC", is kept as given).
+export function shortCompanyName(name: string | null | undefined): string {
+  let short = (name ?? '').trim();
+  const tail =
+    /[,\s]+(common stock|class [a-c]( common stock| ordinary shares)?|ordinary shares|american depositary shares|american depository shares|ads|adr|group|holdings?|incorporated|inc\.?|corporation|corp\.?|company|co\.?|limited|ltd\.?|plc|s\.?a\.?|n\.?v\.?|ag|se)$/i;
+  for (let prev = ''; prev !== short; ) {
+    prev = short;
+    short = short.replace(tail, '').trim();
+  }
+  return short || (name ?? '').trim();
+}
+
+const RELATION_LABEL: Record<StockRelation, string> = { company: 'Company', related: 'Related', supplier: 'Supplier' };
+
+// One line on why a ticker is on a pin: "Related: Apple (AAPL), the biggest
+// customer for Sony's camera image sensors." The note is the clause that
+// follows the name, used as written (the prompts ask for it in that form);
+// the symbol is left out when the name is the symbol.
+export function stockTidbit(stock: { symbol: string; name: string | null; relation: StockRelation; note: string | null }): string {
+  const name = shortCompanyName(stock.name) || stock.symbol;
+  const who = name === stock.symbol ? name : `${name} (${stock.symbol})`;
+  const note = stock.note?.trim().replace(/[.\s]+$/, '');
+  return `${RELATION_LABEL[stock.relation]}: ${who}${note ? `, ${note}` : ''}.`;
 }

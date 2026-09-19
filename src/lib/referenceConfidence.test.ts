@@ -57,7 +57,8 @@ describe('pinEvidence', () => {
     expect(pinConfidence(evidence)).toBe(40);
   });
 
-  it('leaves the source out when a reference repeats it', () => {
-    expect(pinEvidence({ ...pin, references: [{ url: 'https://src.com/a', confidence: 10 }] })).toEqual([{ url: 'https://src.com/a', confidence: 10 }]);
+  it('marks a reference that repeats the source as the source, first', () => {
+    const evidence = pinEvidence({ ...pin, references: [{ url: 'https://r.com', confidence: 40 }, { url: 'https://src.com/a', confidence: 10 }] });
+    expect(evidence).toEqual([{ url: 'https://src.com/a', confidence: 10, isSource: true }, { url: 'https://r.com', confidence: 40 }]);
   });
 });

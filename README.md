@@ -482,6 +482,8 @@ https://kalshi.com/markets/kxrt/rotten-tomatoes-scores/kxrt-res
 - youtube summary should be generaed with reference to text transcript
 - scrape anime, movie, tv show, etc for studio and location
 
+Done: film, TV, anime and game pins go on the map at the studio that makes them. The extraction prompt now asks for the studio as the company (the animation studio, production studio or game developer, not the publisher or streaming service) and its headquarters as the place. When a page gives no place, `GET /api/scrape` and any pin saved without one fall back to the studio's headquarters from Wikidata (P159, via its Wikipedia link), stored once per company (`Company.hq*`, 0035). A pin that names a venue of its own keeps it. Existing pins are not moved yet: about 790 anime and TV pins have no location.
+
 
 For delayed start dates, try to estimate how long of a delay
 
@@ -534,7 +536,7 @@ Done: a pin shows stock tickers on its page, grouped as its company, related com
 - **Snapshots:** each ticker keeps the price when the pin was posted, and the close on its start date once that day's market has closed. A moved start date adds a close and keeps the earlier ones.
 - **Live:** the price (Nasdaq, delayed ~15 min) comes over the page's one live connection.
 - Tickers are only added automatically (the pin's company and its relations, and what a scraped article names); the page has no add button. The pin's author or an admin can take one off, and a removed one is not added back. `PUT /api/pins/:id/stocks { add }` still exists for scripts.
-- **Scraping:** it fills in tickers too. The extraction names the listed companies the article is about, is tied to or gets supplies from. `GET /api/scrape` returns them as `stocks`, the create form shows them (each can be left out), and `POST`/`PUT /api/pins` accept `stocks: [{ symbol, relation, note }]`. Each is checked on Nasdaq and added; they are only ever added, so an edit never brings back a ticker removed on the pin page.
+- **Scraping and the API:** all three groups come through the scrape pipeline. `GET /api/scrape` returns `stocks: [{ symbol, name, relation: company|related|supplier, note }]`, where the note is the clause read after the name ("which designs the PlayStation 5 processor") and the name is the one people use. The create form shows them (each can be left out), and `POST`/`PUT /api/pins` take the same `stocks` in the body. Each is checked on Nasdaq and added, and they are only ever added. The article's line for the pin's own company, and its symbol when the name lookup found none, are kept on the company for its other pins. Related and supplier tickers from an article stay on that pin; a company's standing ones come from `CompanyRelation`.
 - `npm run stocks:sync` is the backfill. Nasdaq history covers 10 years, split-adjusted. Not on timeline cards yet. Nasdaq's API terms are unchecked, as with Kalshi and Polymarket.
 
 
@@ -549,68 +551,31 @@ https://polymarket.com/event/next-claude-opus-released-byptptpt-2026072714232391
 
 
 
-## Reminder: MyAnimeList top-anime scrape (in progress, resume later)
+## MyAnimeList top-anime scrape (done 2026-09-18)
 
 Asked 2026-09-15: scrape everything in `myanimelist.net/topanime.php` across
 all its top-section tabs (All Anime, Top Airing, Top Upcoming, Top TV
 Series, Top Movies, Top OVAs, Top ONAs, Top Specials, Most Popular, Most
-Favorited) into Anime pins, full hand-researched write-ups.
+Favorited) into Anime pins.
 
-**Status as of this note (2026-09-16):** 667 Anime pins exist (39
-pre-existing + 598 added across 6 earlier batches of ~100 + 30 added in a
-7th, smaller round to bring the leftover count down to exactly 100 on
-request). Source pool is the top 100 of each of the 10 tabs, deduped by MAL
-id, prioritized by (most tabs it appears in, then MAL score, then best
-rank). **Exactly 100 net-new titles remain unpinned** - the next round
-finishes the original list.
+**Finished:** the last round pinned the final 104 titles (pins 1681-1784),
+bringing MAL-sourced pins to 771. The pool (top 100 of each of the 10 tabs,
+deduped by MAL id) was 765 titles when this round started, and MAL's live
+rankings drift day to day, so re-pulling it later will find a few new ones
+(`curl` each `topanime.php?type=...&limit=0|50`, parse the `ranking-list`
+rows, drop MAL ids already in `seedPins.json`'s `sourceUrl`; a Top Upcoming
+score of `N/A` counts as 0).
 
-Note for next time: re-pulling the pool at this resume found 765 unique
-anime and 130 leftover, not the ~753 / ~115 the previous note claimed.
-The gap was a parsing bug, not pool drift - the "Top Upcoming" tab's rows
-all show score "N/A" instead of a number, which silently failed a regex
-and dropped that whole tab from the count (fixed in step 2 below). Always
-re-verify the pool size fresh rather than trusting this note's numbers -
-MAL's live rankings also shift a little day to day.
-
-The working files (deduped title lists, per-round batch splits, the
-per-batch research/insert instructions doc) lived in this session's
-scratchpad directory and will **not** exist for a future session - don't
-go looking for them. To resume:
-
-1. Re-pull the top 100 of each tab, e.g. `curl -A "<browser UA>"
-   "https://myanimelist.net/topanime.php?limit=<0|50>[&type=<airing|
-   upcoming|tv|movie|ova|ona|special|bypopularity|favorite>]"` (10 tabs x
-   2 pages), or via Jikan's `/v4/top/anime` (same tabs via `filter=`/
-   `type=` params) if it's not having one of its flaky days.
-2. Parse `<tr class="ranking-list">` rows for mal_id/title/url/rank/score,
-   dedupe by mal_id, drop anything whose MAL id already appears in
-   `scripts/backup/seedPins.json`'s `sourceUrl` (`myanimelist.net/anime/
-   <id>/...`) - that's the current 667. Score is missing (`N/A`) for
-   unaired titles on the Top Upcoming tab - treat that as score 0 for
-   ranking rather than skipping the row, or you'll silently lose that tab.
-3. Rank what's left the same way (cross-tab count desc, score desc, rank
-   asc) and take the next ~100 (there are exactly 100 left as of this
-   note, so the next round finishes the original list).
-4. Same pipeline as before, in batches of 10 anime per parallel subagent:
-   research each via AniList GraphQL (`graphql.anilist.co`, batch all 10
-   of a batch's lookups into one aliased request - a single bad `mal_id`
-   nulls the whole response, so binary-search it out and retry the rest),
-   Jikan as a secondary source (it was down more often than not this
-   session), Wikidata -> Wikipedia for legacy/reception facts, WebSearch
-   only as a last resort (its ~200-call quota is shared across every
-   agent running at once). Write original prose, never copy a synopsis
-   verbatim. Insert via the app's own model classes (`new Pin(...).save()`,
-   `new Medium({originalUrl}, pin).createAndSaveToCDN()`,
-   `new PinReference(...).save()`) in a one-off `tsx` script per batch,
-   category `Anime`, `userId: 101` (the `@AnimeDesk` curator), no
-   address/lat/lng. Delete the one-off script after running it.
-5. Before creating a new `Company` row, check `scripts/backup/
-   seedCompanies.json` for a close but differently-cased/spaced existing
-   variant (e.g. "Bones" vs "bones", "P.A. Works" vs "P.A.WORKS",
-   "TRIGGER" vs "Studio Trigger") and reuse the existing spelling - this
-   created several duplicate rows that had to be merged by hand
-   (`UPDATE "Pin" SET "companyId" = <keep> WHERE "companyId" = <dupe>`,
-   then delete the dupe row) across the first 6 rounds.
-6. After each ~100-pin round: `npm run media:screen -- --apply --ids=<the
-   new pin ids>` (trailer + rating backfill), then `npm run backup:data`.
+Notes from the last round, for whoever repeats it:
+- Insert through the real `POST /api/pins` as `@AnimeDesk` (user 101), not a
+  model-class script, so the live feed, search index and duplicate checks
+  fire. Titles with no air date yet are pinned as "<Title> Announced" on the
+  sourced announcement day; year-only or month-only ones go on the first of
+  the period as `estimated`.
+- Films go under the `Anime Movie` category, everything else under `Anime`.
+- Read the `media:screen` dry run before `--apply`: it matched an episode
+  and a fan rumour upload as "trailers" (pins 1718, 1749, 1764 were skipped
+  with `--skip-trailer`).
+- Merge company spelling variants by hand after a round (this one found
+  Cypic = CygamesPictures renamed, merged into the older row).
 

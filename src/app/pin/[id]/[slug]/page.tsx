@@ -243,7 +243,7 @@ function PinBody({ pin, timeZone }: { pin: PinJson; timeZone: string }) {
 
       <PinRatings ratings={pin.ratings} />
       {pinMarketRefs(pin).length ? <PinOdds pinId={pin.id} /> : null}
-      <PinStocks pinId={pin.id} authorId={pin.user?.id} />
+      <PinStocks pinId={pin.id} />
 
       {pin.description ? <div className="rich-text mb-3 text-base leading-relaxed font-medium text-ink" dangerouslySetInnerHTML={{ __html: safeHtml(pin.description) }} /> : null}
       {pin.longFormSummary ? <div className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: safeCitedHtml(pin.longFormSummary, pinEvidence(pin)) }} /> : null}

@@ -61,7 +61,8 @@ export default class Company {
   }
 
   static getAll() {
-    return db.query(`SELECT ${COLUMNS}, "tickerSymbol", "utcTickerCheckedDateTime", "utcRelationsCheckedDateTime", "utcCreatedDateTime", "utcUpdatedDateTime" FROM "Company" ORDER BY "id"`);
+    return db.query(`SELECT ${COLUMNS}, "tickerSymbol", "tickerNote", "utcTickerCheckedDateTime", "utcRelationsCheckedDateTime",
+      "hqAddress", "hqLatitude", "hqLongitude", "utcHqCheckedDateTime", "utcCreatedDateTime", "utcUpdatedDateTime" FROM "Company" ORDER BY "id"`);
   }
 
   // Names and logos for the pin form's company suggestions.
@@ -88,11 +89,12 @@ export default class Company {
           `
         UPDATE "Company"
         SET "websiteUrl" = COALESCE("websiteUrl", $2),
+            "wikiUrl" = COALESCE("wikiUrl", $4),
             "logoUrl" = $3,
             "utcLogoCheckedDateTime" = now(),
             "utcUpdatedDateTime" = now()
         WHERE "id" = $1`,
-          [f.id, f.websiteUrl || null, f.logoUrl || null],
+          [f.id, f.websiteUrl || null, f.logoUrl || null, f.wikiUrl || null],
         ),
       ),
     );
@@ -106,12 +108,14 @@ export default class Company {
       await db.query(
         `
       INSERT INTO "Company" ("id", "name", "wikiUrl", "websiteUrl", "logoUrl", "utcLogoCheckedDateTime", "utcCreatedDateTime", "utcUpdatedDateTime",
-        "tickerSymbol", "utcTickerCheckedDateTime", "utcRelationsCheckedDateTime")
-      VALUES ($1, $2, $3, $4, $5, $6, COALESCE($7, now()), $8, $9, $10, $11)
+        "tickerSymbol", "utcTickerCheckedDateTime", "utcRelationsCheckedDateTime", "tickerNote",
+        "hqAddress", "hqLatitude", "hqLongitude", "utcHqCheckedDateTime")
+      VALUES ($1, $2, $3, $4, $5, $6, COALESCE($7, now()), $8, $9, $10, $11, $12, $13, $14, $15, $16)
       ON CONFLICT DO NOTHING`,
         [
           c.id, c.name, c.wikiUrl, c.websiteUrl, c.logoUrl, c.utcLogoCheckedDateTime, c.utcCreatedDateTime, c.utcUpdatedDateTime,
-          c.tickerSymbol, c.utcTickerCheckedDateTime, c.utcRelationsCheckedDateTime,
+          c.tickerSymbol, c.utcTickerCheckedDateTime, c.utcRelationsCheckedDateTime, c.tickerNote,
+          c.hqAddress, c.hqLatitude, c.hqLongitude, c.utcHqCheckedDateTime,
         ].map(
           (v) => (v === undefined ? null : v),
         ),

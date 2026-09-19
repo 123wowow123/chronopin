@@ -60,6 +60,19 @@ export default class PinTicker {
     );
   }
 
+  // A company ticker's name, relation and note as the company now has them
+  // (a relation rewritten by hand or by Claude). Taken-off ones stay off.
+  static async refreshFromCompany(pinId: number, t: { symbol: string; name: string | null; relation: StockRelation; note: string | null }): Promise<boolean> {
+    const rows = await db.query(
+      `UPDATE "PinTicker" SET "name" = $3, "relation" = $4, "note" = $5
+       WHERE "pinId" = $1 AND "symbol" = $2 AND "origin" = 'company' AND "utcRemovedDateTime" IS NULL
+         AND ("name", "relation", "note") IS DISTINCT FROM ($3, $4, $5)
+       RETURNING "id"`,
+      [pinId, t.symbol, t.name, t.relation, t.note],
+    );
+    return rows.length > 0;
+  }
+
   static async remove(pinId: number, symbol: string): Promise<boolean> {
     const rows = await db.query(
       `UPDATE "PinTicker" SET "utcRemovedDateTime" = now() WHERE "pinId" = $1 AND "symbol" = $2 AND "utcRemovedDateTime" IS NULL RETURNING "id"`,

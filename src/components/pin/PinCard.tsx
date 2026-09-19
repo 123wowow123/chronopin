@@ -13,6 +13,7 @@ import type { PinTense } from '@/lib/timeline';
 import { CitedText } from './CitedText';
 import { DateConfidence, DateConfidenceReasoning } from './DateConfidence';
 import { PinConfidence } from './PinConfidence';
+import { CompanyTicker } from './CompanyTicker';
 import { PinCardOdds } from './PinOdds';
 import { PinMediaFrame } from './PinMedia';
 import { RatingAverage } from './PinRatings';
@@ -79,7 +80,12 @@ export function PinCard({
   const placeRow =
     company || pin.address ? (
       <div className="mb-1.5 flex flex-wrap items-center gap-x-3 text-xs text-muted">
-        {company}
+        {company ? (
+          <span className="inline-flex items-center gap-1.5">
+            {company}
+            <CompanyTicker pin={pin} />
+          </span>
+        ) : null}
         {pin.address ? <span>{pin.address}</span> : null}
       </div>
     ) : null;
@@ -137,7 +143,12 @@ export function PinCard({
             overlay={
               <>
                 {pin.address ? <span className="media-chip absolute top-2 right-2 z-10 max-w-[70%] truncate">{pin.address}</span> : null}
-                {company ? <span className="media-chip absolute bottom-2 left-2 z-10">{company}</span> : null}
+                {company ? (
+                  <span className="media-chip absolute bottom-2 left-2 z-10 inline-flex items-center gap-1.5">
+                    {company}
+                    <CompanyTicker pin={pin} onDark />
+                  </span>
+                ) : null}
               </>
             }
             fallback={<div className="mx-3">{placeRow}</div>}

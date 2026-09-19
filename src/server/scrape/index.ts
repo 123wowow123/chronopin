@@ -13,12 +13,17 @@ import Source from '../model/source';
 import { fetchJson } from '../util/fetchJson';
 import log from '../util/log';
 import { parseScrapedStocks, type ScrapedStock } from '@/lib/stocks';
+import { isStudioCategory, studioLocationByName } from '../studioLocation';
 import { sourceKind } from '@/lib/sourceKind';
 import { IN_PAGE_SCRAPE, type InPageResult } from './inPage';
+import { wikiImages } from './wikiImages';
 import { findScreenDetails, isScreenCategory, youtubeStill, type ScreenDetails } from './screen';
 
 const { scrapeType, mediumID } = config;
 const NAVIGATION_WAIT_MS = 8000;
+// A pin reads best with a few pictures, so a scrape looks further afield
+// until it has this many.
+export const TARGET_IMAGES = 3;
 
 // Builds a draft pin from a URL: a tweet or YouTube video becomes a pin around
 // that embed; any other page is loaded in headless Chrome for its images and
@@ -64,7 +69,9 @@ function addReferences(pin: Pin, { references, longFormSummary }: FoundReference
 async function twitterPost(pageUrl: string) {
   const { res, medium } = await twitterMedium(pageUrl);
   const pin = new Pin().addMedium(medium);
-  return addReferences(pin, await findReferences(pageUrl, tweetText(res.html), 'tweet'));
+  const text = tweetText(res.html);
+  await addLinkedImages(pin, text);
+  return addReferences(pin, await findReferences(pageUrl, text, 'tweet'));
 }
 
 // The tweet as plain text, its links written out so they can be followed.
@@ -108,6 +115,7 @@ async function youtubePost(pageUrl: string) {
   pin.title = _.get(res, 'items[0].snippet.title');
   pin.description = _.get(res, 'items[0].snippet.description');
   pin.addMedium(medium);
+  await addVideoStills(pin, medium.originalUrl!);
   // Descriptions often credit their sources or link the full story.
   const { channelTitle, publishedAt } = _.get(res, 'items[0].snippet', {});
   const text = [
@@ -244,8 +252,64 @@ async function webScrape(pageUrl: string): Promise<{ pin: Pin; trailer?: Medium;
     findReferences(pageUrl, pageText),
   ]);
   applyExtracted(pin, fields);
+  await placeAtStudioHq(pin);
   const trailer = applyScreenDetails(pin, screen);
+  await topUpImages(pin, fields);
   return { pin: addReferences(pin, found), trailer, stocks: parseScrapedStocks(fields?.stocks) };
+}
+
+const imageCount = (pin: Pin) => pin.media.filter((m) => Number(m.type) === mediumID.image).length;
+
+// Pages with few pictures of their own are topped up from the Wikipedia
+// article for the work, else the company, else the pin's title. Added after
+// the page's own media, so the page's picture stays the default heading.
+async function topUpImages(pin: Pin, fields: ExtractedFields | null) {
+  for (const subject of [fields?.workTitle, fields?.companyWikiUrl || fields?.company, fields?.title]) {
+    const need = TARGET_IMAGES - imageCount(pin);
+    if (need <= 0) return;
+    for (const img of await wikiImages(subject, need + 2)) {
+      if (imageCount(pin) >= TARGET_IMAGES) return;
+      if (!pin.findMediumByOriginalUrl(img.originalUrl)) {
+        pin.addMedium(new Medium({ type: mediumID.image, originalWidth: img.width, originalHeight: img.height, originalUrl: img.originalUrl }));
+      }
+    }
+  }
+}
+
+const IMAGE_FETCH_MS = 5000;
+
+// Other frames of a YouTube video, as pictures. Best effort: a frame that
+// does not exist is skipped.
+async function addVideoStills(pin: Pin, embedUrl: string) {
+  const id = embedUrl.match(/\/embed\/([\w-]{6,})/)?.[1];
+  if (!id) return;
+  for (const name of ['hqdefault', 'hq1', 'hq2', 'hq3']) {
+    if (imageCount(pin) >= TARGET_IMAGES) return;
+    const originalUrl = `https://i.ytimg.com/vi/${id}/${name}.jpg`;
+    const ok = await fetch(originalUrl, { method: 'HEAD', signal: AbortSignal.timeout(IMAGE_FETCH_MS) }).then((r) => r.ok, () => false);
+    if (ok) pin.addMedium(new Medium({ type: mediumID.image, originalWidth: 480, originalHeight: 360, originalUrl }));
+  }
+}
+
+// A tweet's pictures live behind its links: the preview image of each
+// page it links to (not another tweet or a t.co / pic. redirect to one).
+async function addLinkedImages(pin: Pin, text: string) {
+  const links = [...text.matchAll(/\((https?:\/\/[^\s)]+)\)/g)].map((m) => m[1]).filter((u) => !/\/\/(?:[\w-]+\.)?(?:twitter|x)\.com\//.test(u));
+  for (const link of links.slice(0, 3)) {
+    if (imageCount(pin) >= TARGET_IMAGES) return;
+    try {
+      const res = await fetch(link, { redirect: 'follow', signal: AbortSignal.timeout(IMAGE_FETCH_MS), headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ChronoPin)' } });
+      if (!res.ok || !String(res.headers.get('content-type')).includes('html')) continue;
+      const html = (await res.text()).slice(0, 200000);
+      const tag = html.match(/<meta[^>]+(?:property|name)=["'](?:og|twitter):image["'][^>]*>/i)?.[0];
+      const content = tag?.match(/content=["']([^"']+)["']/i)?.[1];
+      if (!content) continue;
+      const originalUrl = new URL(content.replace(/&amp;/g, '&'), res.url).href;
+      if (!pin.findMediumByOriginalUrl(originalUrl)) pin.addMedium(new Medium({ type: mediumID.image, originalUrl }));
+    } catch {
+      // an unreachable link just adds nothing
+    }
+  }
 }
 
 // Ratings onto the pin, and the trailer onto the end of its media (so the
@@ -270,6 +334,18 @@ function unwrapEmbedly(url: string) {
   }
   const src = new URL(url).searchParams.get('src');
   return src ? decodeURIComponent(src.replace(/\+/g, ' ')) : url;
+}
+
+// A film, series, anime or game is made at a studio but happens nowhere in
+// particular: with no place from the page, it goes on the map at the
+// studio's headquarters (Wikidata, src/server/studioLocation.ts).
+async function placeAtStudioHq(pin: Pin): Promise<void> {
+  if (pin.latitude != null || pin.address || !pin.company || !isStudioCategory(pin.category)) return;
+  const hq = await studioLocationByName(pin.company, pin.companyWikiUrl);
+  if (!hq) return;
+  pin.address = hq.address;
+  pin.latitude = hq.latitude;
+  pin.longitude = hq.longitude;
 }
 
 // Everything the create form reads off a scrape other than the media it

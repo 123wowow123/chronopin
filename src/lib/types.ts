@@ -3,6 +3,8 @@
 
 import type { ThemePreference } from './theme';
 
+export type CardStock = { symbol: string; name: string | null; relation: 'company' | 'related' | 'supplier'; assetClass: 'stocks' | 'etf'; startPrice: number | null; startDay: string | null };
+
 export type MediumJson = {
   id?: number;
   thumbName?: string;
@@ -114,6 +116,8 @@ export type PinJson = {
   merchants?: MerchantJson[];
   references?: PinReferenceJson[];
   ratings?: PinRatingJson[];
+  // Its stock tickers, company first, with each one's close on the start date.
+  stocks?: CardStock[];
 };
 
 // A pin ready for a card: its description already sanitised (on the server
@@ -199,6 +203,8 @@ export type SessionUser = {
   pictureUrl?: string;
   defaultFilterSpanPreference?: string;
   themePreference?: ThemePreference | null;
+  // Off hides the company's stock price on pin cards.
+  showCardStockPrices?: boolean;
 };
 
 // Converts a model object (with Dates and toJSON) into plain JSON data that

@@ -140,7 +140,7 @@ const SCHEMA = {
     stocks: {
       type: 'array',
       description:
-        'US-listed stocks the story is about or would move: the company itself (relation "company"), companies it names as investors, owners, partners or rivals ("related"), and ones it names as suppliers of chips, cloud, parts or content ("supplier"). note says the tie in a few words. Empty when the page names none.',
+        'US-listed stocks the story is about or would move: the company itself (relation "company"), companies it names as investors, owners, partners or rivals ("related"), and ones it names as suppliers of chips, cloud, parts or content ("supplier"). note is the clause that follows the company\'s name, e.g. "which designs the PlayStation 5 processor". Empty when the page names none.',
       items: {
         type: 'object',
         properties: {

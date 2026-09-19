@@ -13,22 +13,27 @@ import { describeError, getClient, MODEL } from '.';
 
 const SYSTEM_PROMPT = `You list the publicly traded companies whose share price a news story about a given company is most likely to move, for a site that shows those stock prices beside the story.
 
-Give at most 3 related companies and at most 3 suppliers:
+Say what the company itself is (about), then give at most 3 related companies and at most 3 suppliers:
 - related: a parent, major investor or owner, a major strategic partner, or the main listed competitor whose shares plainly trade on this company's news. For a private company, its largest listed backers and partners.
 - supplier: a company it depends on for what it makes or runs - chips, cloud capacity, components, manufacturing, content.
 
-Only companies with shares or ADRs on a US exchange (NYSE, Nasdaq, NYSE American), by their US ticker symbol. Never the company itself, an ETF, an index or a private company. Only ties that are well established and public; leave a list short or empty rather than guess. note says the tie in a few words ("Largest investor and cloud partner", "Supplies its training GPUs").`;
+Only companies with shares or ADRs on a US exchange (NYSE, Nasdaq, NYSE American), by their US ticker symbol. Never the company itself, an ETF, an index or a private company. Only ties that are well established and public; leave a list short or empty rather than guess. note is the clause that reads after the company's name in one sentence, naming the pin's company rather than saying "its", lowercase, no final period: "the biggest customer for Sony's camera image sensors", "which designs the PlayStation 5 processor", "OpenAI's largest investor and Azure cloud partner". name is the name people use ("Apple", "AMD", "TSMC"), not the legal one.`;
 
 const SCHEMA = {
   type: 'object',
   properties: {
+    about: {
+      type: 'string',
+      description:
+        'The company itself in the same clause form, read after its name, for its own ticker: e.g. "the Japanese electronics, games and entertainment group behind PlayStation".',
+    },
     relations: {
       type: 'array',
       items: {
         type: 'object',
         properties: {
           symbol: { type: 'string', description: 'US ticker symbol, e.g. MSFT.' },
-          name: { type: 'string' },
+          name: { type: 'string', description: 'The name people use, e.g. "AMD", "TSMC".' },
           relation: { type: 'string', enum: ['related', 'supplier'] },
           note: { type: 'string' },
         },
@@ -37,11 +42,13 @@ const SCHEMA = {
       },
     },
   },
-  required: ['relations'],
+  required: ['about', 'relations'],
   additionalProperties: false,
 };
 
 export type CompanyRelationFound = { symbol: string; name: string; relation: 'related' | 'supplier'; note: string };
+
+export type CompanyRelationsFound = { about: string | null; relations: CompanyRelationFound[] };
 
 // Thrown when the model could not be asked at all (no key, no credit, an
 // outage): the company is left to be asked again, not marked as having none.
@@ -55,7 +62,7 @@ const BACKOFF_MS = 10 * 60_000;
 let unavailableUntil = 0;
 let unavailableReason = '';
 
-export async function findCompanyRelations(company: { name: string; ownSymbol?: string | null; wikiUrl?: string | null }): Promise<CompanyRelationFound[]> {
+export async function findCompanyRelations(company: { name: string; ownSymbol?: string | null; wikiUrl?: string | null }): Promise<CompanyRelationsFound> {
   const anthropic = getClient();
   if (!anthropic) throw new RelationsUnavailable('no Anthropic key');
   if (Date.now() < unavailableUntil) throw new RelationsUnavailable(unavailableReason);
@@ -80,10 +87,10 @@ export async function findCompanyRelations(company: { name: string; ownSymbol?: 
     unavailableReason = describeError(err);
     throw new RelationsUnavailable(unavailableReason);
   }
-  if (response.stop_reason === 'refusal') return [];
+  if (response.stop_reason === 'refusal') return { about: null, relations: [] };
   const block = response.content.find((c): c is Anthropic.Beta.BetaTextBlock => c.type === 'text');
-  if (!block) return [];
-  const { relations } = JSON.parse(block.text) as { relations: CompanyRelationFound[] };
+  if (!block) return { about: null, relations: [] };
+  const { about, relations } = JSON.parse(block.text) as { about?: string; relations: CompanyRelationFound[] };
   const own = company.ownSymbol?.toUpperCase();
   const kept: CompanyRelationFound[] = [];
   for (const r of relations ?? []) {
@@ -93,5 +100,5 @@ export async function findCompanyRelations(company: { name: string; ownSymbol?: 
     if (kept.filter((k) => k.relation === r.relation).length >= MAX_PER_KIND) continue;
     kept.push({ symbol, name: String(r.name || '').slice(0, 255), relation: r.relation, note: String(r.note || '').slice(0, 300) });
   }
-  return kept;
+  return { about: about?.trim().replace(/\.$/, '').slice(0, 300) || null, relations: kept };
 }

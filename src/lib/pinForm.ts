@@ -9,7 +9,8 @@ import type { MediumJson, MerchantJson, PinJson, PinRatingJson, PinReferenceJson
 
 // What /api/scrape answers: a draft pin, plus the promotional video it found
 // for a film, series or anime (also listed in media).
-export type ScrapedPin = Partial<PinJson> & { trailer?: MediumJson; stocks?: ScrapedStock[] };
+// A scrape's stocks are the article's tickers (ScrapedStock), not a stored pin's.
+export type ScrapedPin = Omit<Partial<PinJson>, 'stocks'> & { trailer?: MediumJson; stocks?: ScrapedStock[] };
 
 export type PinFormValues = {
   id?: number;

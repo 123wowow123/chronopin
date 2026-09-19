@@ -50,11 +50,30 @@ type Info = {
   primaryData?: { lastSalePrice: string; netChange: string; percentageChange: string; lastTradeTimestamp: string };
 };
 
+type ChartQuote = { symbol: string; company: string; lastSalePrice: string; netChange: string; percentageChange: string; timeAsOf: string };
+
 // The delayed quote, or null for a symbol Nasdaq does not know as this class.
+// Its quote endpoint sometimes fails one symbol for hours ("Error while
+// calling vendor", seen for SONY) while the chart endpoint, which carries the
+// same last sale and day's change, still answers: that stands in.
 export async function fetchQuote(symbol: string, assetClass: AssetClass): Promise<(StockQuote & { name: string }) | null> {
   const info = await get<Info>(`/quote/${q(symbol)}/info?assetclass=${assetClass}`);
   const price = nasdaqNumber(info?.primaryData?.lastSalePrice);
-  if (!info || price == null) return null;
+  if (!info || price == null) {
+    const chart = await get<ChartQuote>(`/quote/${q(symbol)}/chart?assetclass=${assetClass}`).catch(() => null);
+    const last = nasdaqNumber(chart?.lastSalePrice);
+    if (!chart || last == null) return null;
+    return {
+      symbol: chart.symbol.toUpperCase(),
+      name: chart.company.trim().replace(/\s+(Common Stock|Class [A-C] Common Stock|Ordinary Shares)$/i, ''),
+      price: last,
+      change: nasdaqNumber(chart.netChange),
+      changePercent: nasdaqNumber(chart.percentageChange),
+      marketStatus: null,
+      asOf: chart.timeAsOf || null,
+      fetchedAt: new Date().toISOString(),
+    };
+  }
   return {
     symbol: info.symbol.toUpperCase(),
     name: info.companyName.replace(/\s+(Common Stock|Class [A-C] Common Stock|Ordinary Shares)$/i, ''),

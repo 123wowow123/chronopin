@@ -6,6 +6,7 @@ import { requireViewer } from '@/server/guard';
 import Follow, { FOLLOWING_PAGE_SIZE } from '@/server/model/follow';
 import { pickUserProps } from '@/server/model/user';
 import { FollowingList } from './FollowingList';
+import { CardStockPricesToggle } from './CardStockPricesToggle';
 import { PreferencesForm } from './PreferencesForm';
 import { ProfileForm } from './ProfileForm';
 import { ThemePicker } from './ThemePicker';
@@ -45,6 +46,7 @@ export default async function ProfilePage() {
         <div className="space-y-4">
           <ThemePicker userId={user.id} />
           <PreferencesForm userId={user.id} initial={user.defaultFilterSpanPreference ?? null} />
+          <CardStockPricesToggle userId={user.id} initial={user.showCardStockPrices !== false} />
         </div>
       </section>
 

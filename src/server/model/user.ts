@@ -36,6 +36,7 @@ const prop = [
   'websiteUrl',
   'defaultFilterSpanPreference',
   'themePreference',
+  'showCardStockPrices',
   'utcCreatedDateTime',
   'utcUpdatedDateTime',
   'utcDeletedDateTime',
@@ -53,6 +54,7 @@ export const pickUserProps = [
   'pictureUrl',
   'defaultFilterSpanPreference',
   'themePreference',
+  'showCardStockPrices',
 ];
 
 // What somebody may change about themselves through the generic patch route.
@@ -72,6 +74,7 @@ export default class User {
   declare pictureUrl: string | null | undefined;
   declare defaultFilterSpanPreference: string | null | undefined;
   declare themePreference: string | null | undefined;
+  declare showCardStockPrices: boolean | undefined;
 
   constructor(user?: Row | null) {
     if (user) {
@@ -217,7 +220,7 @@ export default class User {
 const USER_COLUMNS = [
   'id', 'userName', 'firstName', 'lastName', 'gender', 'locale', 'facebookId', 'googleId', 'appleId',
   'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email', 'password',
-  'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference',
+  'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference', 'showCardStockPrices',
   'utcCreatedDateTime', 'utcUpdatedDateTime',
 ];
 
@@ -233,12 +236,14 @@ function value(v: unknown) {
 }
 
 async function createUser(user: User) {
-  const columns = WRITE_COLUMNS.concat(['defaultFilterSpanPreference', 'themePreference', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime']);
+  const columns = WRITE_COLUMNS.concat(['defaultFilterSpanPreference', 'themePreference', 'showCardStockPrices', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime']);
   const values = WRITE_COLUMNS.map((c) => value(user[c]))
     // utcUpdatedDateTime has always been written from utcCreatedDateTime.
     .concat([
       value(user.defaultFilterSpanPreference),
       value(user.themePreference),
+      // A boolean with a default: never written as null.
+      user.showCardStockPrices !== false,
       user.utcCreatedDateTime || new Date(),
       value(user.utcCreatedDateTime),
       value(user.utcDeletedDateTime),
@@ -268,8 +273,13 @@ async function createUser(user: User) {
 async function updateUser(user: User) {
   // Written from whatever the object carries, so every caller has to load the
   // row before updating it or a saved preference is cleared.
-  const columns = WRITE_COLUMNS.concat('defaultFilterSpanPreference', 'themePreference');
-  const values = WRITE_COLUMNS.map((c) => value(user[c])).concat(user.defaultFilterSpanPreference || null, user.themePreference || null, user.id);
+  const columns = WRITE_COLUMNS.concat('defaultFilterSpanPreference', 'themePreference', 'showCardStockPrices');
+  const values = WRITE_COLUMNS.map((c) => value(user[c])).concat(
+    user.defaultFilterSpanPreference || null,
+    user.themePreference || null,
+    user.showCardStockPrices !== false,
+    user.id,
+  );
 
   await db.query(
     `

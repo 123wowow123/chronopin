@@ -43,7 +43,7 @@ const { values: flags } = parseArgs({
 const BACKUP_USER_PROPS = [
   'id', 'userName', 'firstName', 'lastName', 'gender', 'locale', 'facebookId', 'googleId',
   'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email', 'password',
-  'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference',
+  'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference', 'showCardStockPrices',
   'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime',
 ];
 
@@ -64,7 +64,9 @@ const writeJson = (file: string, data: unknown) => writeFileSync(file, JSON.stri
 
 async function saveDB() {
   // Every pin, soft-deleted ones included, however far back it starts.
-  const { pins } = await FullPins.queryAll();
+  const { pins: all } = await FullPins.queryAll();
+  // Tickers are in seedStocks.json; the view's copy on each pin is left out.
+  const pins = all.map(({ stocks: _stocks, ...pin }) => pin);
   const data = excludeE2e({
     users: await Users.getAll(BACKUP_USER_PROPS),
     pins,

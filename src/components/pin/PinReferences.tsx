@@ -52,9 +52,9 @@ export function PinReferences({
 
   const rows = linked.map((reference, index) => {
     const share = shares.get(reference);
-    const reasoning = reference.isSource ? sourceReasoning : reference.reasoning;
+    const reasoning = reference.isSource ? sourceReasoning || reference.reasoning : reference.reasoning;
     // The start and end this row gives, if any; the source's come from the pin.
-    const claimOf = (range?: DateRange) => range?.claims.find((c) => (reference.isSource ? c.isSource : c.url === reference.url));
+    const claimOf = (range?: DateRange) => range?.claims.find((c) => ((reference.isSource && c.isSource) || c.url === reference.url));
     const dates = [
       ['Starts', claimOf(dateRanges.start)],
       ['Ends', claimOf(dateRanges.end)],
@@ -82,7 +82,6 @@ export function PinReferences({
         </span>
         <div className="min-w-0 flex-1">
           <a href={reference.url} target="_blank" rel="noopener nofollow" className="flex items-center gap-1.5 font-medium">
-            {reference.isSource ? <span className="shrink-0 rounded bg-raised px-1.5 text-[10px] font-semibold tracking-wider text-muted uppercase">Source</span> : null}
             <span className="truncate">{reference.title || reference.url.replace(/^https?:\/\/(www\.)?/i, '').replace(/\/$/, '')}</span>
             <Icon name="external" className="size-3.5 shrink-0 opacity-70" />
           </a>
@@ -131,7 +130,7 @@ export function PinReferences({
       {rows.length ? (
         <>
           <p className="mt-1 text-xs text-subtle">
-            Overall confidence is a weighted average of how firmly each reference supports the start and end times used above; a reference counts half as much for every {HALF_LIFE_DAYS} days older than the newest.
+            The first entry is always the pin&apos;s source. Overall confidence is a weighted average of how firmly each reference supports the start and end times used above; a reference counts half as much for every {HALF_LIFE_DAYS} days older than the newest.
           </p>
           <ExpandableList items={rows} itemIds={ids} visible={VISIBLE} noun="references" className="mt-1 divide-y divide-line" />
         </>

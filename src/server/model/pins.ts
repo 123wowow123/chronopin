@@ -414,6 +414,7 @@ const PAGE_COLUMNS = `
   "Pin"."rootThread",
   ${leanReferences('Pin')} AS "references",
   "Pin"."ratings",
+  "Pin"."stocks",
   "Pin"."viewCount",
   (SELECT COUNT(*)::integer FROM "PinImpression" AS "i" WHERE "i"."pinId" = "Pin"."id") AS "impressionCount",
   "Pin"."duplicateGroup",

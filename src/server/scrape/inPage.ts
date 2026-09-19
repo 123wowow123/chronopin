@@ -33,7 +33,7 @@ export const IN_PAGE_SCRAPE = `(async () => {
 
   const images = async () => {
     const urls = [];
-    document.querySelectorAll('meta[name="og:image"], meta[property="og:image"]').forEach((m) => {
+    document.querySelectorAll('meta[name="og:image"], meta[property="og:image"], meta[name="twitter:image"], meta[property="twitter:image"]').forEach((m) => {
       const content = (m.getAttribute('content') || '').trim();
       if (content) urls.push(new URL(content, location.href).href);
     });
@@ -44,7 +44,14 @@ export const IN_PAGE_SCRAPE = `(async () => {
     selectors.forEach((selector) => {
       document.querySelectorAll(selector).forEach((img) => urls.push(img.src));
     });
-    const list = unique(urls);
+    // A page with few pictures in its content areas: take the rest of its
+    // body images (the size filter drops icons and tracking pixels).
+    if (unique(urls).length < 3) {
+      document.querySelectorAll('main img, article img, figure img, img').forEach((img) => {
+        urls.push(img.currentSrc || img.src);
+      });
+    }
+    const list = unique(urls.filter((u) => /^https?:/.test(u))).slice(0, 25);
     return list.length ? Promise.all(list.map(imageSize)) : undefined;
   };
 

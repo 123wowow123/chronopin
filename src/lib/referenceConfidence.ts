@@ -27,14 +27,19 @@ export type Evidence = Omit<PinReferenceJson, 'confidence'> & { confidence?: num
 type Weighable = Pick<Evidence, 'confidence' | 'publishedDate' | 'utcCreatedDateTime'>;
 
 // Everything backing a pin: its source first (dated when the pin was posted),
-// then its references. The source is left out when a reference repeats it.
+// then its references. A reference that repeats the source stands in for it.
 export function pinEvidence(
   pin: Pick<PinJson, 'sourceUrl' | 'dateConfidence' | 'utcCreatedDateTime' | 'references'>,
 ): Evidence[] {
   const references: Evidence[] = pin.references || [];
   const sourceUrl = pin.sourceUrl?.trim();
-  if (!sourceUrl || references.some((r) => r.url === sourceUrl)) {
+  if (!sourceUrl) {
     return references;
+  }
+  // A reference that repeats the source is the source, listed first.
+  const repeated = references.find((r) => r.url === sourceUrl);
+  if (repeated) {
+    return [{ ...repeated, isSource: true }, ...references.filter((r) => r !== repeated)];
   }
   const source: Evidence = {
     url: sourceUrl,
