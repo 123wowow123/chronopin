@@ -99,6 +99,38 @@ function popupContent(pin: MapPinJson) {
   return content;
 }
 
+// A plotted pin. Leaflet repeats the world sideways but not its markers, so a
+// pin gets a marker (a copy) on each copy of the world in view: offset k sits
+// at its longitude + 360k. Copies are made as the view reaches them and taken
+// off as they leave it.
+type MapEntry = { pin: MapPinJson; category: string; focus: boolean; copies: Map<number, L.Marker>; make: (offset: number) => L.Marker };
+
+// The world copy of a longitude nearest another: where a pin is closest to the view.
+const nearestOffset = (lng: number, toLng: number) => Math.round((toLng - lng) / 360);
+
+// Which copies of each shown pin the view (padded, so a pin at the edge does
+// not pop in late) holds; a pin with none in view keeps no marker at all.
+function syncCopies(map: L.Map, layer: L.LayerGroup, entries: MapEntry[], picks: string[]) {
+  const bounds = map.getBounds().pad(0.25);
+  const [south, north] = [bounds.getSouth(), bounds.getNorth()];
+  const [west, east] = [bounds.getWest(), bounds.getEast()];
+  for (const entry of entries) {
+    const { latitude: lat, longitude: lng } = entry.pin;
+    const wanted = new Set<number>();
+    if ((entry.focus || inCategories(entry.category, picks)) && lat! >= south && lat! <= north) {
+      for (let k = Math.ceil((west - lng!) / 360); k <= Math.floor((east - lng!) / 360); k++) wanted.add(k);
+    }
+    for (const [k, marker] of entry.copies) {
+      if (wanted.has(k)) continue;
+      layer.removeLayer(marker);
+      entry.copies.delete(k);
+    }
+    for (const k of wanted) {
+      if (!entry.copies.has(k)) entry.copies.set(k, entry.make(k).addTo(layer));
+    }
+  }
+}
+
 // Whether this document was loaded on the map, rather than reaching it by a
 // client-side navigation from another page of the app.
 function loadedAsMap() {
@@ -128,7 +160,7 @@ export default function PinsMap() {
   const layerRef = useRef<L.LayerGroup | null>(null);
   // Every marker in the time window with its pin's category; the category
   // filter only shows and hides these, so a pick needs no refetch.
-  const markersRef = useRef<{ marker: L.Marker; category: string; focus: boolean }[]>([]);
+  const markersRef = useRef<MapEntry[]>([]);
   const categoriesRef = useRef<string[]>([]);
   // The popup open until a click elsewhere (a clicked or the focused pin's),
   // and which pin was last centered on: a refetch (a slider moved) re-adds the
@@ -163,7 +195,11 @@ export default function PinsMap() {
     const stopViewSource = setMapViewSource(() => ({ lat: map.getCenter().lat, lng: map.getCenter().lng, zoom: map.getZoom() }));
     L.tileLayer(TILE_URL, { maxZoom: 19, attribution: TILE_ATTRIBUTION }).addTo(map);
     mapRef.current = map;
-    layerRef.current = L.layerGroup().addTo(map);
+    const layer = L.layerGroup().addTo(map);
+    layerRef.current = layer;
+    // Moving sideways reaches other copies of the world: their pins come in, and
+    // the ones scrolled off go.
+    map.on('moveend', () => syncCopies(map, layer, markersRef.current, categoriesRef.current));
     // Cache Components keeps a left page mounted and reruns its effects when
     // it is shown again (back to the pin, "To map" again): the new map
     // has not centered on anything or opened a popup yet.
@@ -199,9 +235,9 @@ export default function PinsMap() {
     // clicked, or the focused pin. autoClose off: hovering other pins opens
     // their popups beside it. The map's closePopupOnClick still closes it on a
     // click elsewhere (a marker's click does not reach the map).
-    const stick = (pin: MapPinJson) => {
+    const stick = (pin: MapPinJson, at: L.LatLng) => {
       if (stickyRef.current?.pinId === pin.id && map.hasLayer(stickyRef.current.popup)) return;
-      const sticky = pinPopup(pin, { autoClose: false });
+      const sticky = pinPopup(pin, { autoClose: false }).setLatLng(at);
       sticky.on('remove', () => {
         if (stickyRef.current?.popup === sticky) stickyRef.current = null;
       });
@@ -217,44 +253,49 @@ export default function PinsMap() {
         const start = new Date(pin.utcStartDateTime);
         if (!focus && ((pastBoundary && start < pastBoundary) || (futureBoundary && start > futureBoundary))) continue;
         seen.add(pin.id);
-        const marker = L.marker([pin.latitude, pin.longitude], { icon: pinIcon(localStart(pin) <= now), title: pin.title });
-        // Opens on hover, and stays open while the pointer moves from the marker
-        // onto the popup so its link can be clicked. Not bindPopup: its click
-        // handler toggles, which would close a hover-opened popup (and a tap's
-        // emulated mouseover). No autoPan: panning under the pointer ends the hover.
-        const popup = pinPopup(pin);
-        let closeTimer: ReturnType<typeof setTimeout> | undefined;
-        const open = () => {
-          clearTimeout(closeTimer);
-          // Already showing, and staying until a click elsewhere.
-          if (stickyRef.current?.pinId === pin.id && map.hasLayer(stickyRef.current.popup)) return;
-          map.openPopup(popup);
-          const el = popup.getElement()!;
-          el.onmouseenter = () => clearTimeout(closeTimer);
-          el.onmouseleave = closeSoon;
+        const icon = pinIcon(localStart(pin) <= now);
+        const make = (offset: number) => {
+          const marker = L.marker([pin.latitude!, pin.longitude! + 360 * offset], { icon, title: pin.title });
+          // Opens on hover, and stays open while the pointer moves from the marker
+          // onto the popup so its link can be clicked. Not bindPopup: its click
+          // handler toggles, which would close a hover-opened popup (and a tap's
+          // emulated mouseover). No autoPan: panning under the pointer ends the hover.
+          const popup = pinPopup(pin).setLatLng(marker.getLatLng());
+          let closeTimer: ReturnType<typeof setTimeout> | undefined;
+          const open = () => {
+            clearTimeout(closeTimer);
+            // Already showing, and staying until a click elsewhere.
+            if (stickyRef.current?.pinId === pin.id && map.hasLayer(stickyRef.current.popup)) return;
+            map.openPopup(popup);
+            const el = popup.getElement()!;
+            el.onmouseenter = () => clearTimeout(closeTimer);
+            el.onmouseleave = closeSoon;
+          };
+          const closeSoon = () => {
+            clearTimeout(closeTimer);
+            closeTimer = setTimeout(() => {
+              if (!cancelled) map.closePopup(popup);
+            }, 200);
+          };
+          const click = () => {
+            clearTimeout(closeTimer);
+            stick(pin, marker.getLatLng());
+          };
+          marker.on({ mouseover: open, mouseout: closeSoon, click });
+          return marker;
         };
-        const closeSoon = () => {
-          clearTimeout(closeTimer);
-          closeTimer = setTimeout(() => {
-            if (!cancelled) map.closePopup(popup);
-          }, 200);
-        };
-        const click = () => {
-          clearTimeout(closeTimer);
-          stick(pin);
-        };
-        marker.on({ mouseover: open, mouseout: closeSoon, click });
-        const category = (pin.category || '').toLowerCase();
-        markersRef.current.push({ marker, category, focus });
-        if (focus || inCategories(category, categoriesRef.current)) marker.addTo(layer);
+        markersRef.current.push({ pin, category: (pin.category || '').toLowerCase(), focus, copies: new Map(), make });
         if (focus && focusedRef.current !== pin.id) {
           focusedRef.current = pin.id;
           setFocusPin(pin);
-          if (!keepViewRef.current) map.setView(marker.getLatLng(), Math.max(map.getZoom(), 11));
-          stick(pin);
+          // The pin's copy nearest the current view, so the map does not swing a world away.
+          const at = L.latLng(pin.latitude, pin.longitude + 360 * nearestOffset(pin.longitude, map.getCenter().lng));
+          if (!keepViewRef.current) map.setView(at, Math.max(map.getZoom(), 11));
+          stick(pin, at);
         }
       }
-      setCount(layer.getLayers().length);
+      syncCopies(map, layer, markersRef.current, categoriesRef.current);
+      setCount(markersRef.current.filter((e) => e.focus || inCategories(e.category, categoriesRef.current)).length);
       const counts: Record<string, number> = {};
       for (const { category } of markersRef.current) counts[category] = (counts[category] || 0) + 1;
       setCategoryCounts(counts);
@@ -309,11 +350,8 @@ export default function PinsMap() {
     categoriesRef.current = picks;
     if (!map || !layer) return;
     map.closePopup();
-    for (const { marker, category, focus } of markersRef.current) {
-      if (focus || inCategories(category, picks)) layer.addLayer(marker);
-      else layer.removeLayer(marker);
-    }
-    setCount(layer.getLayers().length);
+    syncCopies(map, layer, markersRef.current, picks);
+    setCount(markersRef.current.filter((e) => e.focus || inCategories(e.category, picks)).length);
   }, [categoryKey]);
 
   // Picks edit the query in the URL, so the navbar search box shows them.

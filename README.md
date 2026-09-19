@@ -513,7 +513,7 @@ Admin will have OKF source view which built the pin article (API ready: `GET /ap
 https://www.youtube.com/watch?v=sboNwYmH3AY
 
 
-Done, see [docs/okf](docs/okf/tables/user-wiki.md): each signed-in user gets a preference wiki (`UserWiki`, 0028), an OKF `Profile` concept rebuilt after every open, watch, like or comment. It holds the categories and companies they lean to and the pins they opened. On a crowded timeline day, a pin they opened weighs 3x, and one in a category or company they lean to weighs up to 2x its share more, so it more often lands in the two rows instead of behind "View all". The toggle is Admin > Pins > "Prefer personal pick on overflow days" (on by default). They can read it at `GET /api/users/:id/wiki` (themselves or an admin), and `npm run user-wiki:build` does the backfill and export.
+Done, see [docs/okf](docs/okf/tables/user-wiki.md): each signed-in user gets a preference wiki (`UserWiki`, 0028), an OKF `Profile` concept rebuilt after every open, watch, like or comment. It holds the categories and companies they lean to and the pins they opened. On a crowded timeline day, a pin they opened weighs 3x, and one in a category or company they lean to weighs up to 2x its share more, so it more often lands in the two rows instead of behind "View all". The toggle is Admin > Pins > "Prefer personalization on overflow days" (on by default). They can read it at `GET /api/users/:id/wiki` (themselves or an admin), and `npm run user-wiki:build` does the backfill and export.
 
 # Other
 

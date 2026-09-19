@@ -29,7 +29,7 @@ export function PersonalBagForm({ saved, wikis }: { saved: PersonalBagSetting; w
 
   return (
     <section className="mb-6 rounded-xl border border-line bg-panel p-4 sm:p-5">
-      <h2 className="text-base font-semibold">Prefer personal pick on overflow days</h2>
+      <h2 className="text-base font-semibold">Prefer personalization on overflow days</h2>
       <p className="mt-1 text-sm text-subtle">
         When a day has more pins than the timeline shows, the cards are a weighted pick. With this on, a signed-in viewer&apos;s
         preference wiki weighs it too: a pin they have opened counts {1 + CLICKED_BOOST}&times;, and one in a category or company they
