@@ -35,6 +35,7 @@ import { pinPath } from '@/lib/seo';
 import type { CardPin, MediumJson, PinJson } from '@/lib/types';
 import { DuplicatePrompt, type DuplicateMatch } from './DuplicatePrompt';
 import { RichTextEditor } from './RichTextEditor';
+import { PinSourceWikis } from './PinSourceWikis';
 import { useT } from '@/lib/client/i18n';
 import { INTL_LOCALES } from '@/lib/i18n/config';
 import { categoryLabel } from '@/lib/i18n/labels';
@@ -82,7 +83,7 @@ function duplicateCheckKey(values: PinFormValues) {
 // already pinned is held back while the author picks what to do instead.
 export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create' | 'edit' | 'respond'; pin?: PinJson; respondTo?: PinJson }) {
   const router = useRouter();
-  const { user } = useSession();
+  const { user, isAdmin } = useSession();
   const t = useT();
   const [values, setValues] = useState<PinFormValues>(() =>
     pin ? pinToForm(pin) : { ...EMPTY_FORM, parentId: respondToProp?.id },
@@ -231,6 +232,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
   }, [values, user, pin?.utcCreatedDateTime, t]);
 
   const picked = useMemo(() => formDates(values), [values]);
+  const hasExtras = !!(values.media.length || values.extraMedia.length || values.stocks.length || values.awards.length || values.ratings.length);
 
   const title = mode === 'edit' ? t('form.editPin') : respondTo ? t('form.respondPin') : t('form.createPin');
 
@@ -251,6 +253,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
           </div>
         ) : null}
 
+        <Section title={t('form.sectionPin')}>
         <div>
           <label htmlFor="sourceUrl" className={labelClass}>
             {t('form.sourceUrl')} {scraping ? <span className="font-normal text-subtle">({t('form.analyzing')})</span> : null}
@@ -297,7 +300,9 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
           <span className={labelClass}>{t('form.content')}</span>
           <RichTextEditor value={values.description} onChange={(html) => set('description', html)} />
         </div>
+        </Section>
 
+        <Section title={t('form.sectionWhen')}>
         <div className="grid gap-3 sm:grid-cols-2">
           <div>
             <label htmlFor="startDate" className={labelClass}>
@@ -333,7 +338,9 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
           <span className="text-subtle">{values.allDay ? t('form.allDay') : timeZone}</span>
         </div>
         {picked.overridden ? <OverriddenDates picked={picked} allDay={values.allDay} /> : null}
+        </Section>
 
+        <Section title={t('form.sectionClassify')}>
         <div className="grid gap-3 sm:grid-cols-2">
           <div>
             <label htmlFor="category" className={labelClass}>
@@ -402,7 +409,9 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
             {t('form.tagsHint')}
           </p>
         </div>
+        </Section>
 
+        <Section title={t('form.sectionCost')}>
         <div>
           <label htmlFor="price" className={labelClass}>
             {t('form.cost')}
@@ -465,12 +474,15 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
             {t('form.addMerchant')}
           </button>
         </div>
+        </Section>
 
         <ReferencesEditor
           references={values.references}
           source={{ sourceUrl: values.sourceUrl, dateConfidence: values.dateConfidence, utcCreatedDateTime: pin?.utcCreatedDateTime }}
           onChange={(references) => set('references', references)}
         />
+
+        {isAdmin && mode === 'edit' && pin && <PinSourceWikis pinId={pin.id} />}
 
         <details open={showAdvanced} onToggle={(e) => setShowAdvanced((e.target as HTMLDetailsElement).open)} className="group surface p-4">
           <summary className="flex cursor-pointer list-none items-center gap-2 text-sm font-medium text-muted hover:text-ink [&::-webkit-details-marker]:hidden">
@@ -519,6 +531,8 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
           </div>
         </details>
 
+        {hasExtras ? (
+        <Section title={t('form.sectionMedia')}>
         {values.media.length ? (
           <div>
             <div className="mb-2 flex items-center justify-between">
@@ -594,6 +608,9 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
           </div>
         ) : null}
 
+        </Section>
+        ) : null}
+
         {matches?.length ? <DuplicatePrompt matches={matches} draft={values} onRespond={respondInstead} onPostAnyway={submitAnyway} /> : null}
         {error ? (
           <p role="alert" className="rounded-lg bg-red-500/10 px-3 py-2 text-sm text-danger-soft ring-1 ring-red-500/20 ring-inset">
@@ -608,7 +625,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
             ) : null}
           </p>
         ) : null}
-        <div className="flex justify-end gap-2 border-t border-line pt-5">
+        <div className="sticky bottom-3 z-10 flex justify-end gap-2 rounded-xl border border-line bg-panel/95 p-3 shadow-lg backdrop-blur">
           <button type="button" onClick={() => router.back()} className="btn btn-secondary">
             {t('common.cancel')}
           </button>
@@ -623,6 +640,16 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
         <PinCard pin={preview} serverTimeZone="UTC" />
       </aside>
     </form>
+  );
+}
+
+// A titled card, so a long form reads as a few steps rather than one list.
+function Section({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <section className="surface space-y-4 p-4">
+      <h2 className="text-xs font-semibold tracking-wide text-subtle uppercase">{title}</h2>
+      {children}
+    </section>
   );
 }
 

@@ -486,10 +486,7 @@ major local events by major city scrape and more targetted by your location
 
 # Other
 
-
 - should have small display that 3 pins are happing within next 7 days on botton and top of timeline. Clicking on it will scroll you to it one after another
-
-- admin view that shows all the OKF wikis that goes into making the pin
 
 # Scraping
 
