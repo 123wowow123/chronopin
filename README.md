@@ -482,16 +482,11 @@ major local events by major city scrape and more targetted by your location
 
 # OKF
 
-- (experimental) relationship web view - knowledge system - Obsidian - need youtube transcript - can overlay on map
-https://www.youtube.com/watch?v=sboNwYmH3AY
-
 # Other
 
 - localization & multilingual
 
 - should have small display that 3 pins are happing within next 7 days on botton and top of timeline. Clicking on it will scroll you to it one after another
-
-- add pin relationship web overlay on map and can be toggled
 
 
 # Scraping

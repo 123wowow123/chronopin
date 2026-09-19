@@ -8,6 +8,7 @@ import { TILE_ATTRIBUTION, TILE_URL } from '@/components/pin/PinMap';
 import { categoryPillSummary, MapCategoryFilter, queryCategories } from '@/components/map/MapCategoryFilter';
 import { FloatingControls } from '@/components/timeline/FloatingControls';
 import { TimeRangeSlider } from '@/components/timeline/TimeRangeSlider';
+import { PinWebGraph } from '@/components/map/PinWebGraph';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import { isCategory } from '@/lib/categories';
@@ -16,6 +17,7 @@ import { useQueryState } from '@/lib/client/urlState';
 import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, SPAN_OPTIONS, eventSpanSummary, formatSpan, offsetDate, spanFromParam, spanLabel, spanToParam } from '@/lib/postedSpan';
 import { removeTerm, toggleTerm } from '@/lib/searchTerms';
 import { pinPath } from '@/lib/seo';
+import { WEB_KINDS, webColor, webModeFromParam, type WebEdge, type WebMode } from '@/lib/pinWeb';
 import type { MapPinJson, PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery } from '@/server/util/searchQuery';
 
@@ -181,6 +183,14 @@ export default function PinsMap() {
     future: spanToParam(future, DEFAULT_SPAN),
     posted: spanToParam(postedWithin, DEFAULT_POSTED_WITHIN),
   });
+  // The web of relations between the plotted pins: lines over the map, or
+  // those and a graph of them beside it.
+  const [web, setWeb] = useState<WebMode>(() => webModeFromParam(params.get('web')));
+  const [webEdges, setWebEdges] = useState<WebEdge[]>([]);
+  const [webNodes, setWebNodes] = useState<{ id: number; title: string }[]>([]);
+  const [webPicked, setWebPicked] = useState<number | undefined>();
+  const webLayerRef = useRef<L.LayerGroup | null>(null);
+  useQueryState({ web: web === 'off' ? null : web });
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   const [count, setCount] = useState(0);
   // Markers per category in the time window, for the category pills.
@@ -198,6 +208,9 @@ export default function PinsMap() {
     mapRef.current = map;
     const layer = L.layerGroup().addTo(map);
     layerRef.current = layer;
+    // Under the markers, so a line never hides a pin.
+    map.createPane('web').style.zIndex = '350';
+    webLayerRef.current = L.layerGroup().addTo(map);
     // Moving sideways reaches other copies of the world: their pins come in, and
     // the ones scrolled off go.
     map.on('moveend', () => syncCopies(map, layer, markersRef.current, categoriesRef.current));
@@ -212,6 +225,7 @@ export default function PinsMap() {
       map.remove();
       mapRef.current = null;
       layerRef.current = null;
+      webLayerRef.current = null;
     };
   }, []);
 
@@ -355,6 +369,50 @@ export default function PinsMap() {
     setCount(markersRef.current.filter((e) => e.focus || inCategories(e.categories, picks)).length);
   }, [categoryKey]);
 
+  // The relations among the pins the map is showing. Fetched when the web is
+  // on and the pins or the category picks change, and redrawn as lines.
+  useEffect(() => {
+    const web$ = webLayerRef.current;
+    if (!web$) return;
+    web$.clearLayers();
+    if (web === 'off' || status !== 'ready') return;
+    let cancelled = false;
+    const shown = markersRef.current.filter((e) => e.focus || inCategories(e.categories, categoriesRef.current));
+    const byId = new Map(shown.map((e) => [e.pin.id, e.pin]));
+    fetch('/api/pins/graph', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ids: [...byId.keys()].slice(0, 5000) }) })
+      .then((res) => (res.ok ? (res.json() as Promise<{ edges: WebEdge[] }>) : { edges: [] }))
+      .then(({ edges }) => {
+        if (cancelled) return;
+        for (const { a, b, kind, label } of edges) {
+          const from = byId.get(a);
+          const to = byId.get(b);
+          if (!from || !to) continue;
+          // The copy of the world where the two are nearest, so a line never crosses the map.
+          const toLng = to.longitude! + 360 * nearestOffset(to.longitude!, from.longitude!);
+          const line = L.polyline([[from.latitude!, from.longitude!], [to.latitude!, toLng]], { color: webColor(kind), weight: 2, opacity: 0.6, pane: 'web' });
+          line.bindTooltip(`${WEB_KINDS.find((k) => k.kind === kind)!.label}${label ? `: ${label}` : ''} — ${from.title} ↔ ${to.title}`, { sticky: true });
+          line.addTo(web$);
+        }
+        setWebEdges(edges);
+        setWebNodes(shown.map((e) => ({ id: e.pin.id, title: e.pin.title })));
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [web, status, categoryKey, fetchQuery, past, future, postedWithin, watched]);
+
+  // A graph node picked: the map goes to that pin.
+  function showPin(id: number) {
+    const map = mapRef.current;
+    const pin = markersRef.current.find((e) => e.pin.id === id)?.pin;
+    if (!map || !pin) return;
+    setWebPicked(id);
+    const at = L.latLng(pin.latitude!, pin.longitude! + 360 * nearestOffset(pin.longitude!, map.getCenter().lng));
+    map.setView(at, Math.max(map.getZoom(), 6));
+    pinPopup(pin, { autoClose: false }).setLatLng(at).openOn(map);
+  }
+
   // Picks edit the query in the URL, so the navbar search box shows them.
   function go(edit: (q: string) => string) {
     const next = new URLSearchParams(params.toString());
@@ -431,6 +489,39 @@ export default function PinsMap() {
         >
           <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={(value) => setPostedWithin(value.past)} />
         </FloatingControls>
+      </div>
+      {/* The web toggle, with the graph above it when it is on. Clear of the
+          pills at the bottom on narrow screens, as the status messages are. */}
+      <div className="absolute bottom-24 left-2.5 z-[999] flex w-[min(26rem,calc(100%-1.25rem))] flex-col items-start gap-2 xl:bottom-8">
+        {web === 'graph' ? (
+          <div className="floating h-72 w-full overflow-hidden">
+            <PinWebGraph nodes={webNodes} edges={webEdges} selectedId={webPicked} onSelect={showPin} />
+          </div>
+        ) : null}
+        {web !== 'off' ? (
+          <p className="floating flex flex-wrap items-center gap-x-2.5 gap-y-0.5 rounded-full px-2.5 py-1 text-xs text-subtle">
+            {WEB_KINDS.map(({ kind, label, color }) => (
+              <span key={kind} className="flex items-center gap-1">
+                <span className="inline-block h-0.5 w-3" style={{ backgroundColor: color }} />
+                {label}
+              </span>
+            ))}
+          </p>
+        ) : null}
+        <div className="floating flex items-center gap-1 rounded-full p-1 text-sm">
+          <Icon name="web" className="ml-2 size-4 text-muted" />
+          {(['off', 'lines', 'graph'] as const).map((mode) => (
+            <button
+              key={mode}
+              type="button"
+              aria-pressed={web === mode}
+              onClick={() => setWeb(mode)}
+              className={`rounded-full px-2.5 py-1 ${web === mode ? 'bg-accent text-white' : 'text-muted hover:text-ink'}`}
+            >
+              {mode === 'off' ? 'Web off' : mode === 'lines' ? 'Lines' : 'Graph'}
+            </button>
+          ))}
+        </div>
       </div>
       {/* Narrower, clear of the pills at the bottom, and a layer under the
           controls so an open fold covers it rather than the other way round. */}

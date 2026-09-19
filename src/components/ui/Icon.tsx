@@ -18,6 +18,14 @@ const PATHS: Record<string, React.ReactNode> = {
     </>
   ),
   plus: <path d="M12 5v14M5 12h14" />,
+  web: (
+    <>
+      <circle cx="5" cy="6" r="2" />
+      <circle cx="19" cy="7" r="2" />
+      <circle cx="12" cy="18" r="2" />
+      <path d="m7 6.3 10 .6M6.3 7.8l4.6 8.4M17.7 8.8l-4.6 7.4" />
+    </>
+  ),
   chevron: <path d="m6 9 6 6 6-6" />,
   expand: <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />,
   hash: <path d="M5 9h15M4 15h15M10 3 8 21M16 3l-2 18" />,
