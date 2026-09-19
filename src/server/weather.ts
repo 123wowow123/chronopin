@@ -37,6 +37,8 @@ const TTL = {
   typical: 7 * 24 * 60 * 60 * 1000,
 };
 const CACHE_LIMIT = 2000;
+// Current conditions at a viewer's place; they move faster than the forecast.
+const LOCAL_TTL = 15 * 60 * 1000;
 
 export type WeatherKind = keyof typeof TTL;
 
@@ -53,16 +55,22 @@ export type PinWeather = {
   windSpeedMax: number | null;
 };
 
+// Today's weather where the viewer is: current conditions plus the day's
+// forecast, in the place's own date.
+export type LocalWeather = PinWeather & {
+  current: { temperature: number | null; weatherCode: number | null; isDay: boolean };
+};
+
 type Place = { latitude: number; longitude: number };
 type DailyRow = Record<string, any>;
 
 // Kept on globalThis so dev reloads share one cache and one request queue.
 const state = ((globalThis as any).__chronopinWeather ??= {
-  cache: new Map<string, { promise: Promise<PinWeather | null>; expires: number }>(),
+  cache: new Map<string, { promise: Promise<unknown>; expires: number }>(),
   active: 0,
   queue: [] as (() => Promise<void>)[],
 }) as {
-  cache: Map<string, { promise: Promise<PinWeather | null>; expires: number }>;
+  cache: Map<string, { promise: Promise<unknown>; expires: number }>;
   active: number;
   queue: (() => Promise<void>)[];
 };
@@ -92,6 +100,41 @@ export function forPin(pin: Record<string, any> & {
     const url = kind === 'observed' && start.getTime() < today() - FORECAST_DAYS_BACK * DAY_MS ? ARCHIVE_URL : FORECAST_URL;
     const day = await dayAt(url, place, start, allDay, kind === 'forecast');
     return day && { kind, ...day };
+  });
+}
+
+// Resolves the weather now and today at a place (the viewer's, rounded to
+// about a kilometre by the caller). Rejects when Open-Meteo fails.
+export function forPlace(place: Place): Promise<LocalWeather | null> {
+  const key = ['local', place.latitude.toFixed(2), place.longitude.toFixed(2)].join('|');
+  return cached(key, LOCAL_TTL, async () => {
+    const data = await get(FORECAST_URL, {
+      current: 'temperature_2m,weather_code,is_day',
+      daily: DAILY.concat('precipitation_probability_max').join(','),
+      timezone: 'auto',
+      forecast_days: 1,
+      ...place,
+    });
+    const row = rows(data.daily)[0];
+    if (!row || !data.current) {
+      return null;
+    }
+    return {
+      kind: 'forecast',
+      date: row.time,
+      timezone: data.timezone as string,
+      weatherCode: row.weather_code,
+      temperatureMax: row.temperature_2m_max,
+      temperatureMin: row.temperature_2m_min,
+      precipitationSum: row.precipitation_sum,
+      precipitationProbability: row.precipitation_probability_max,
+      windSpeedMax: row.wind_speed_10m_max,
+      current: {
+        temperature: data.current.temperature_2m ?? null,
+        weatherCode: data.current.weather_code ?? null,
+        isDay: data.current.is_day !== 0,
+      },
+    };
   });
 }
 
@@ -280,10 +323,10 @@ function drain() {
 
 // Shares one lookup between everyone viewing the same pin, including requests
 // that arrive while it is still in flight. Failures are not kept.
-function cached(key: string, ttl: number, load: () => Promise<PinWeather | null>): Promise<PinWeather | null> {
+function cached<T>(key: string, ttl: number, load: () => Promise<T>): Promise<T> {
   const hit = state.cache.get(key);
   if (hit && hit.expires > Date.now()) {
-    return hit.promise;
+    return hit.promise as Promise<T>;
   }
 
   const promise = load();

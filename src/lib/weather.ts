@@ -48,6 +48,10 @@ const CONDITIONS: Record<number, [MessageKey, IconName]> = {
   99: ['weather.conditions.thunderstormWithHail', 'bolt'],
 };
 
+export type LocalWeatherJson = WeatherJson & {
+  current: { temperature: number | null; weatherCode: number | null; isDay: boolean };
+};
+
 const HEADINGS = { forecast: 'weather.forecast', observed: 'weather.recorded', typical: 'weather.typical' } as const;
 
 // Viewers in the US read Fahrenheit, inches and mph.
@@ -57,8 +61,10 @@ export function usesImperial(): boolean {
   return /-US$/i.test(locale);
 }
 
+const formatTemp = (c: number | null, imperial: boolean) => (c == null ? null : `${Math.round(imperial ? (c * 9) / 5 + 32 : c)}°`);
+
 export function formatWeather(weather: WeatherJson, imperial: boolean, t: Translator) {
-  const temp = (c: number | null) => (c == null ? null : `${Math.round(imperial ? (c * 9) / 5 + 32 : c)}°`);
+  const temp = (c: number | null) => formatTemp(c, imperial);
   const condition = weather.weatherCode != null ? CONDITIONS[weather.weatherCode] : undefined;
 
   let precipitation: string | null = null;
@@ -98,6 +104,26 @@ export function formatWeather(weather: WeatherJson, imperial: boolean, t: Transl
       .filter(Boolean)
       .join(' · '),
   };
+}
+
+// The viewer's weather: today's forecast plus the conditions right now, with
+// a moon for a clear night.
+export function formatLocalWeather(weather: LocalWeatherJson, imperial: boolean, t: Translator) {
+  const day = formatWeather(weather, imperial, t);
+  const code = weather.current.weatherCode ?? weather.weatherCode;
+  const condition = code != null ? CONDITIONS[code] : undefined;
+  const icon = (condition ? (condition[1] === 'sun' && !weather.current.isDay ? 'moon' : condition[1]) : day.icon) as IconName;
+  const now = formatTemp(weather.current.temperature, imperial);
+  const label = condition ? t(condition[0]) : day.label;
+  const summary = [
+    [label, now].filter(Boolean).join(' '),
+    [day.high, day.low].filter(Boolean).join(' / ') + day.unit,
+    day.precipitation,
+    day.wind && t('weather.wind', { speed: day.wind }),
+  ]
+    .filter(Boolean)
+    .join(' · ');
+  return { ...day, now, icon, label, summary };
 }
 
 // One request per pin for the life of the page, shared by every place it shows.

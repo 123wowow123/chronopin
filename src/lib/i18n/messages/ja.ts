@@ -206,6 +206,9 @@ const ja: Messages = {
     reasoning: '当初の予定は{date}。現在は{span}遅れています。',
   },
   weather: {
+    local: '現在地の天気',
+    showLocal: '現在地の天気を表示',
+    showLocalHint: '位置情報を約1kmに丸めて使用します',
     highLow: '最高／最低、°{unit}',
     wind: '風速 {speed}',
     forecast: '予報',
@@ -473,6 +476,7 @@ const ja: Messages = {
     allUpcoming: 'これからのピンをすべて表示',
     postedWithinSpan: '直近{span}に投稿されたピンを表示',
     bothToNow: '両側を現在に戻す',
+    sideToNow: 'この側を現在に戻す',
     now: '現在',
     backTo: '表示を始める時点',
     upTo: '表示を終える時点',

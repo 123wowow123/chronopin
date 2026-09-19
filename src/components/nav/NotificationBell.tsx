@@ -6,6 +6,8 @@ import { Icon } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { api } from '@/lib/client/api';
 import { clearUnreadCount, useUnreadCount } from '@/lib/client/notifications';
+import { refreshLocalWeather, requestLocalWeather, useLocalWeather } from '@/lib/client/localWeather';
+import { formatLocalWeather, usesImperial } from '@/lib/weather';
 import { timeAgo } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
 import { useT } from '@/lib/client/i18n';
@@ -141,6 +143,61 @@ function NotificationItems({
   );
 }
 
+// The viewer's weather in their own terms, or null until there is some.
+function useFormattedLocalWeather() {
+  const local = useLocalWeather();
+  const t = useT();
+  return { local, weather: local.status === 'ready' ? formatLocalWeather(local.weather, usesImperial(), t) : null };
+}
+
+// The top row of the bell's menu: the weather where the viewer is, or a
+// button that asks for their location. Nothing once they have said no.
+function LocalWeatherRow({ className = '' }: { className?: string }) {
+  const { local, weather } = useFormattedLocalWeather();
+  const t = useT();
+  if (local.status === 'ask') {
+    return (
+      <button type="button" onClick={requestLocalWeather} title={t('weather.showLocalHint')} className={`flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm text-muted hover:bg-raised hover:text-ink ${className}`}>
+        <span aria-hidden className="flex size-8 shrink-0 items-center justify-center rounded-full bg-warning/15 text-warning">
+          <Icon name="sun" className="size-4" />
+        </span>
+        {t('weather.showLocal')}
+      </button>
+    );
+  }
+  if (local.status === 'loading') {
+    return <div className={`px-4 py-2.5 text-sm text-subtle ${className}`}>{t('common.loading')}</div>;
+  }
+  if (!weather) return null;
+  return (
+    <div className={`flex items-center gap-3 px-4 py-2.5 text-sm ${className}`} title={weather.summary}>
+      <span aria-hidden className="flex size-8 shrink-0 items-center justify-center rounded-full bg-warning/15 text-warning">
+        <Icon name={weather.icon} className="size-4" />
+      </span>
+      <div className="min-w-0 flex-1">
+        <div className="flex items-baseline gap-2 text-ink">
+          <span className="font-semibold">{weather.now}</span>
+          <span className="truncate">{weather.label}</span>
+          <span className="ml-auto shrink-0 text-xs text-muted" title={t('weather.highLow', { unit: weather.unit })}>
+            {weather.high} <span className="text-subtle">{weather.low}</span>
+          </span>
+        </div>
+        <div className="truncate text-xs text-subtle">{[t('weather.local'), weather.precipitation].filter(Boolean).join(' · ')}</div>
+      </div>
+    </div>
+  );
+}
+
+// A peek at the weather on the bell itself, in the corner opposite the badge.
+function WeatherPeek({ className }: { className: string }) {
+  const { weather } = useFormattedLocalWeather();
+  return weather ? (
+    <span aria-hidden className={`absolute flex size-3.5 items-center justify-center rounded-full bg-header text-warning ${className}`}>
+      <Icon name={weather.icon} className="size-3" />
+    </span>
+  ) : null;
+}
+
 function UnreadBadge({ count, className }: { count: number; className: string }) {
   return count ? (
     <span className={`absolute min-w-4 rounded-full bg-red-500 px-1 text-center text-[10px] leading-4 font-bold text-white ring-2 ring-header ${className}`}>
@@ -151,14 +208,10 @@ function UnreadBadge({ count, className }: { count: number; className: string })
 
 const unreadLabel = (t: Translator, count: number) => (count ? t('notifications.unreadLabel', { count }) : t('notifications.title'));
 
-// The navbar bell (lg and up), with the list in a panel under it.
-export function NotificationBell({ className = '' }: { className?: string }) {
+// A navbar panel's open state, closed by a press anywhere outside it.
+function useDropdown() {
   const [open, setOpen] = useState(false);
-  const count = useUnreadCount(true);
-  const list = useNotificationList();
-  const t = useT();
   const rootRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const close = (event: MouseEvent) => {
       if (!rootRef.current?.contains(event.target as Node)) setOpen(false);
@@ -166,20 +219,71 @@ export function NotificationBell({ className = '' }: { className?: string }) {
     document.addEventListener('mousedown', close);
     return () => document.removeEventListener('mousedown', close);
   }, []);
+  return { open, setOpen, rootRef };
+}
+
+// In the bell's place for visitors who are not signed in (lg and up): the
+// weather icon, with the weather row in a panel under it. Nothing once they
+// have refused their location.
+export function WeatherButton({ className = '' }: { className?: string }) {
+  const { open, setOpen, rootRef } = useDropdown();
+  const { local, weather } = useFormattedLocalWeather();
+  const t = useT();
+  if (local.status === 'off') return null;
 
   function toggle() {
     setOpen(!open);
-    if (!open) void list.load();
+    if (!open) refreshLocalWeather();
   }
 
   return (
     <div ref={rootRef} className={`relative ${className}`}>
-      <button type="button" onClick={toggle} aria-expanded={open} aria-label={unreadLabel(t, count)} title={t('notifications.title')} className="relative rounded-lg p-2 text-muted hover:bg-raised hover:text-ink">
-        <Icon name="bell" className="size-5" />
-        <UnreadBadge count={count} className="top-1 right-1" />
+      <button
+        type="button"
+        onClick={toggle}
+        aria-expanded={open}
+        aria-label={weather ? weather.summary : t('weather.local')}
+        title={weather ? weather.summary : t('weather.local')}
+        className="flex items-center gap-1 rounded-lg p-2 text-muted hover:bg-raised hover:text-ink"
+      >
+        <Icon name={weather ? weather.icon : 'sun'} className={`size-5 ${weather ? 'text-warning' : ''}`} />
+        {weather?.now ? <span className="text-sm">{weather.now}</span> : null}
       </button>
       {open ? (
         <div className="floating absolute right-0 z-50 mt-2 w-80 overflow-hidden">
+          <LocalWeatherRow />
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+// The navbar bell (lg and up), with the list in a panel under it.
+export function NotificationBell({ className = '' }: { className?: string }) {
+  const { open, setOpen, rootRef } = useDropdown();
+  const count = useUnreadCount(true);
+  const list = useNotificationList();
+  const t = useT();
+  const { weather } = useFormattedLocalWeather();
+
+  function toggle() {
+    setOpen(!open);
+    if (!open) {
+      void list.load();
+      refreshLocalWeather();
+    }
+  }
+
+  return (
+    <div ref={rootRef} className={`relative ${className}`}>
+      <button type="button" onClick={toggle} aria-expanded={open} aria-label={unreadLabel(t, count)} title={weather ? `${t('notifications.title')} · ${weather.summary}` : t('notifications.title')} className="relative rounded-lg p-2 text-muted hover:bg-raised hover:text-ink">
+        <Icon name="bell" className="size-5" />
+        <UnreadBadge count={count} className="top-1 right-1" />
+        <WeatherPeek className="bottom-1 left-1" />
+      </button>
+      {open ? (
+        <div className="floating absolute right-0 z-50 mt-2 w-80 overflow-hidden">
+          <LocalWeatherRow className="border-b border-line" />
           <div className="border-b border-line px-4 py-2.5 text-sm font-semibold text-ink">{t('notifications.title')}</div>
           <NotificationItems {...list} listClassName="max-h-96 overflow-auto" onNavigate={() => setOpen(false)} />
         </div>
@@ -198,6 +302,7 @@ export function DrawerNotifications({ className, current }: { className: string;
       <span className="relative flex">
         <Icon name="bell" className="size-6" />
         <UnreadBadge count={count} className="-top-1.5 -right-2" />
+        <WeatherPeek className="-bottom-1 -left-1.5" />
       </span>
       {t('notifications.title')}
     </Link>
@@ -213,6 +318,7 @@ export function NotificationsFeed() {
   }, [load]);
   return (
     <div className="surface overflow-hidden">
+      <LocalWeatherRow className="border-b border-line" />
       <NotificationItems {...list} listClassName="divide-y divide-line" />
     </div>
   );

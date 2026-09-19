@@ -86,6 +86,9 @@ export function TimeRangeSlider({
   }
 
   const withinForIndex = (index: number) => (index >= steps.length ? null : steps[index]);
+  // Each side's step nearest now, as the "Now" tick sets them.
+  const minPast = withinForIndex(Math.max(zeroIndex, 0));
+  const minFuture = steps.find((s) => (approxDays(s) ?? 0) > 0) ?? null;
 
   // A pointer position on the track to the nearest step on the dragged side,
   // clamped so it never crosses "Now" onto the other side.
@@ -211,8 +214,17 @@ export function TimeRangeSlider({
         <button
           type="button"
           className="justify-self-start text-left max-lg:-my-3 max-lg:py-3"
-          onClick={() => applySide('past', pastLabelSpan || null)}
-          title={pastLabelSpan ? t('slider.useDefault', { span: span(pastLabelSpan) ?? '' }) : pastOnly ? t('slider.anyTime') : t('slider.allPast')}
+          // Both sides: the label toggles its side between "All" and nearest now.
+          onClick={() => applySide('past', pastOnly ? pastLabelSpan || null : past ? null : minPast)}
+          title={
+            pastOnly
+              ? pastLabelSpan
+                ? t('slider.useDefault', { span: span(pastLabelSpan) ?? '' })
+                : t('slider.anyTime')
+              : past
+                ? t('slider.allPast')
+                : t('slider.sideToNow')
+          }
         >
           <span className="font-semibold text-past">{pastOnly ? t('controls.postedWithin') : t('slider.past')}</span>{' '}
           <span className={pastOnly ? 'text-ink' : 'block text-ink'}>{label(past)}</span>
@@ -223,7 +235,7 @@ export function TimeRangeSlider({
         {!pastOnly ? (
           // col-start-3: the pencil between them is hidden on touch screens,
           // and without it this would land in the middle column.
-          <button type="button" className="col-start-3 justify-self-end text-right max-lg:-my-3 max-lg:py-3" onClick={() => applySide('future', null)} title={t('slider.allUpcoming')}>
+          <button type="button" className="col-start-3 justify-self-end text-right max-lg:-my-3 max-lg:py-3" onClick={() => applySide('future', future ? null : minFuture)} title={future ? t('slider.allUpcoming') : t('slider.sideToNow')}>
             <span className="font-semibold text-future">{t('slider.future')}</span>
             <span className="block text-ink">{label(future)}</span>
           </button>
@@ -249,7 +261,7 @@ export function TimeRangeSlider({
           <button
             type="button"
             className={`${tickClass} mx-auto`}
-            onClick={() => apply(withinForIndex(Math.max(zeroIndex, 0)), steps.find((s) => (approxDays(s) ?? 0) > 0) ?? null)}
+            onClick={() => apply(minPast, minFuture)}
             title={t('slider.bothToNow')}
           >
             {t('slider.now')}

@@ -40,9 +40,6 @@ export function PinWeather({ pinId }: { pinId: number }) {
           </span>
         ) : null}
         {weather.wind ? <span>{t('weather.wind', { speed: weather.wind })}</span> : null}
-        <a href="https://open-meteo.com/" target="_blank" rel="noopener" className="text-xs text-subtle">
-          Open-Meteo
-        </a>
       </div>
     </div>
   );

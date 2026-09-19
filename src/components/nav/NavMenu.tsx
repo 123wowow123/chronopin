@@ -7,7 +7,7 @@ import { Icon, type IconName } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { useSession } from '@/lib/client/session';
 import { AuthLink, LogoutLink } from './AuthLink';
-import { NotificationBell } from './NotificationBell';
+import { NotificationBell, WeatherButton } from './NotificationBell';
 import { useT } from '@/lib/client/i18n';
 import type { MessageKey } from '@/lib/i18n/translate';
 
@@ -167,7 +167,12 @@ export function NavMenu() {
             {t('nav.create')}
           </Link>
         ) : (
-          guestActions
+          <>
+            {/* Left of the auth buttons, where the bell sits left of the
+                account menu when there is someone signed in. */}
+            <WeatherButton />
+            {guestActions}
+          </>
         )}
       </nav>
 

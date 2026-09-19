@@ -212,6 +212,9 @@ const de: Messages = {
     reasoning: 'Ursprünglich für den {date} versprochen; jetzt {span} später.',
   },
   weather: {
+    local: 'Wetter vor Ort',
+    showLocal: 'Wetter vor Ort anzeigen',
+    showLocalHint: 'Nutzt deinen Standort, auf etwa einen Kilometer gerundet',
     highLow: 'Höchst- / Tiefstwert, °{unit}',
     wind: 'Wind {speed}',
     forecast: 'Vorhersage',
@@ -479,6 +482,7 @@ const de: Messages = {
     allUpcoming: 'Alle anstehenden Pins anzeigen',
     postedWithinSpan: 'In den letzten {span} gepostete Pins anzeigen',
     bothToNow: 'Beide Seiten auf jetzt setzen',
+    sideToNow: 'Diese Seite auf jetzt setzen',
     now: 'Jetzt',
     backTo: 'Pins zeigen ab',
     upTo: 'Pins zeigen bis',

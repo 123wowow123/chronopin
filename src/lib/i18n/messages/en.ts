@@ -206,6 +206,9 @@ const en = {
     reasoning: 'First promised for {date}; now {span} later.',
   },
   weather: {
+    local: 'Local weather',
+    showLocal: 'Show local weather',
+    showLocalHint: 'Uses your location, rounded to about a kilometre',
     highLow: 'High / low, °{unit}',
     wind: 'Wind {speed}',
     forecast: 'Forecast',
@@ -473,6 +476,7 @@ const en = {
     allUpcoming: 'Show all upcoming pins',
     postedWithinSpan: 'Show pins posted within {span}',
     bothToNow: 'Bring both sides to now',
+    sideToNow: 'Bring this side to now',
     now: 'Now',
     backTo: 'Show pins back to',
     upTo: 'Show pins up to',

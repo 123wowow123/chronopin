@@ -206,6 +206,9 @@ const zh: Messages = {
     reasoning: '最初承诺于{date}；现已推迟{span}。',
   },
   weather: {
+    local: '本地天气',
+    showLocal: '显示本地天气',
+    showLocalHint: '使用你的位置，精确到约一公里',
     highLow: '最高 / 最低，°{unit}',
     wind: '风速 {speed}',
     forecast: '预报',
@@ -473,6 +476,7 @@ const zh: Messages = {
     allUpcoming: '显示所有即将到来的图钉',
     postedWithinSpan: '显示最近{span}内发布的图钉',
     bothToNow: '将两端都拉回现在',
+    sideToNow: '将这一侧移到现在',
     now: '现在',
     backTo: '显示起点',
     upTo: '显示终点',

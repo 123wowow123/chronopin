@@ -212,6 +212,9 @@ const fr: Messages = {
     reasoning: 'Initialement promis pour le {date} ; désormais {span} plus tard.',
   },
   weather: {
+    local: 'Météo locale',
+    showLocal: 'Afficher la météo locale',
+    showLocalHint: 'Utilise votre position, arrondie à environ un kilomètre',
     highLow: 'Max. / min., °{unit}',
     wind: 'Vent {speed}',
     forecast: 'Prévision',
@@ -479,6 +482,7 @@ const fr: Messages = {
     allUpcoming: 'Afficher toutes les épingles à venir',
     postedWithinSpan: 'Afficher les épingles publiées depuis {span}',
     bothToNow: 'Ramener les deux côtés à maintenant',
+    sideToNow: 'Ramener ce côté à maintenant',
     now: 'Maintenant',
     backTo: 'Afficher les épingles depuis',
     upTo: 'Afficher les épingles jusqu’à',

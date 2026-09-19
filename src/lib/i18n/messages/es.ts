@@ -212,6 +212,9 @@ const es: Messages = {
     reasoning: 'Prometido primero para el {date}; ahora {span} más tarde.',
   },
   weather: {
+    local: 'Tiempo local',
+    showLocal: 'Mostrar el tiempo local',
+    showLocalHint: 'Usa tu ubicación, redondeada a un kilómetro aproximadamente',
     highLow: 'Máx. / mín., °{unit}',
     wind: 'Viento {speed}',
     forecast: 'Previsión',
@@ -479,6 +482,7 @@ const es: Messages = {
     allUpcoming: 'Ver todos los pines próximos',
     postedWithinSpan: 'Ver pines publicados en {span}',
     bothToNow: 'Llevar ambos lados a ahora',
+    sideToNow: 'Llevar este lado a ahora',
     now: 'Ahora',
     backTo: 'Ver pines desde',
     upTo: 'Ver pines hasta',
