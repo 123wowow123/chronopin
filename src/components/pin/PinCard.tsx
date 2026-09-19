@@ -80,12 +80,13 @@ export function PinCard({
     </RefineLink>
   ) : null;
 
-  // Company and place as plain text, for a pin without a medium to label.
+  // Company and place for a pin without a medium to label: the company in the
+  // same pill the pin page uses for its chips, the place as plain text.
   const placeRow =
     company || pin.address ? (
-      <div className="mb-1.5 flex flex-wrap items-center gap-x-3 text-xs text-muted">
+      <div className="mb-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
         {company ? (
-          <span className="inline-flex items-center gap-1.5">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-raised px-2.5 py-0.5 font-medium ring-1 ring-tint/15 ring-inset">
             {company}
             <CompanyTicker pin={pin} />
           </span>

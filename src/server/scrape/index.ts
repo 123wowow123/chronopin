@@ -1,8 +1,9 @@
 import getVideoId from 'get-video-id';
 import _ from 'lodash';
 import config from '../config';
-import { extractPinFields, toLocation, type ExtractedFields } from '../extract';
-import { findReferences, type FoundReferences } from '../extract/references';
+import { extractPinFields, extractTask, getClient, toLocation, type ExtractedFields } from '../extract';
+import { findReferences, referencesTask, type FoundReferences, type SourceKind } from '../extract/references';
+import { metadataFields } from './metadata';
 import Medium from '../model/medium';
 import Merchant from '../model/merchant';
 import Pin from '../model/pin';
@@ -19,19 +20,17 @@ import { isStudioCategory, studioLocationByName } from '../studioLocation';
 import { awardsFor } from '../services/pinAwards';
 import type { AwardEntry } from '@/lib/awards';
 import { sourceKind } from '@/lib/sourceKind';
-import { IN_PAGE_HEADINGS, IN_PAGE_SCRAPE, type InPageHeadings, type InPageResult } from './inPage';
+import { IN_PAGE_HEADINGS, IN_PAGE_META, IN_PAGE_SCRAPE, type InPageHeadings, type InPageResult, type PageMetadata } from './inPage';
 import { pageEntries, type PageEntry } from '@/lib/pageEntries';
 import { findPinImages, pageImage } from './findImages';
 import { findScreenDetails, isScreenCategory, SCREEN_CATEGORIES, youtubeStill, type ScreenDetails } from './screen';
 import { findScoreMarket, GAME_CATEGORIES, scoreSiteFor, withScoreMarket, type ScoreMarket } from './scoreMarkets';
 import { seriesPinFor } from './modelSeries';
 import { prequelPinFor } from './prequel';
+import { picturesNeeded } from '@/lib/mediaTarget';
 
 const { scrapeType, mediumID } = config;
 const NAVIGATION_WAIT_MS = 8000;
-// A pin reads best with a few pictures, so a scrape looks further afield
-// until it has this many.
-export const TARGET_IMAGES = 3;
 
 // Builds a draft pin from a URL: a tweet or YouTube video becomes a pin around
 // that embed; any other page is loaded in headless Chrome for its images and
@@ -46,20 +45,21 @@ export async function scrape(pageUrl: string) {
   let tags: string[] | undefined;
   let respondTo: { id: number; title: string } | undefined;
   let entries: PageEntries | undefined;
+  let llmTasks: LlmTask[] | undefined;
   switch (domain) {
     case 'twitter.com':
     case 'x.com':
       type = scrapeType.twitter;
-      pin = await twitterPost(pageUrl);
+      ({ pin, llmTasks } = await twitterPost(pageUrl));
       break;
     case 'youtu.be':
     case 'youtube.com':
       type = scrapeType.youtube;
-      pin = await youtubePost(pageUrl);
+      ({ pin, llmTasks } = await youtubePost(pageUrl));
       break;
     default:
       type = scrapeType.web;
-      ({ pin, trailer, stocks, awards, tags, respondTo, entries } = await webScrape(pageUrl));
+      ({ pin, trailer, stocks, awards, tags, respondTo, entries, llmTasks } = await webScrape(pageUrl));
       break;
   }
   // trailer is also in media; the form keeps it alongside whichever picture
@@ -82,10 +82,21 @@ export async function scrape(pageUrl: string) {
     awards?.length ? { awards: awards.map(({ workArticle: _article, ...a }) => a) } : {},
     respondTo ? { respondTo } : {},
     entries ? { entries } : {},
+    // No LLM answer: everything else ran, and these are what is left to do.
+    llmTasks?.length ? { llm: 'session', llmTasks } : {},
   );
 }
 
 type PageEntries = { pageTitle: string; list: PageEntry[] };
+
+// A Claude call the scrape could not make (no API key or credit): the same
+// prompt, schema and input, for a Claude Code session to answer by hand. Every
+// other stage of a scrape runs without one.
+export type LlmTask = ReturnType<typeof extractTask> | ReturnType<typeof referencesTask>;
+
+// The reference search for a source, as a task, when the API is unavailable.
+const referenceTasks = (url: string, text: string, kind: SourceKind): LlmTask[] | undefined =>
+  getClient() ? undefined : [referencesTask(url, text, kind)];
 
 // The page's dated entries, each marked with the pin already made from it.
 async function readEntries(pageUrl: string, read: InPageHeadings | null): Promise<PageEntries | undefined> {
@@ -110,7 +121,8 @@ async function twitterPost(pageUrl: string) {
   const pin = new Pin().addMedium(medium);
   const text = tweetText(res.html);
   await addLinkedImages(pin, text);
-  return addReferences(pin, await findReferences(pageUrl, text, 'tweet'));
+  const llmTasks = referenceTasks(pageUrl, text, 'tweet');
+  return { pin: addReferences(pin, await findReferences(pageUrl, text, 'tweet')), llmTasks };
 }
 
 // The tweet as plain text, its links written out so they can be followed.
@@ -164,7 +176,8 @@ async function youtubePost(pageUrl: string) {
     '',
     `Description:\n${pin.description || ''}`,
   ].join('\n');
-  return addReferences(pin, await findReferences(pageUrl, text, 'YouTube video'));
+  const llmTasks = referenceTasks(pageUrl, text, 'YouTube video');
+  return { pin: addReferences(pin, await findReferences(pageUrl, text, 'YouTube video')), llmTasks };
 }
 
 export async function youtubeMedium(pageUrl: string) {
@@ -204,11 +217,13 @@ async function webScrape(pageUrl: string): Promise<{
   tags?: string[];
   respondTo?: { id: number; title: string };
   entries?: PageEntries;
+  llmTasks?: LlmTask[];
 }> {
   const browser = await launchBrowser();
 
   let pageText = '';
   let headings: InPageHeadings | null = null;
+  let pageMeta: PageMetadata | null = null;
   let pin: Pin;
   try {
     const [page] = await browser.pages();
@@ -254,6 +269,8 @@ async function webScrape(pageUrl: string): Promise<{
       log.warn('reading headings failed:', (err as Error).message);
       return null;
     })) as InPageHeadings | null;
+
+    pageMeta = (await page.evaluate(IN_PAGE_META).catch(() => null)) as PageMetadata | null;
 
     pin = new Pin();
     // A page without a usable picture or embed still gets a list to add to.
@@ -311,12 +328,15 @@ async function webScrape(pageUrl: string): Promise<{
     }),
     findReferences(pageUrl, pageText),
   ]);
-  applyExtracted(pin, fields);
+  // With no LLM answer the page's own markup (Open Graph, meta tags, JSON-LD)
+  // still gives a title, description and whatever date it states.
+  const llmDown = !fields;
+  applyExtracted(pin, fields ?? metadataFields(pageMeta));
   await placeAtStudioHq(pin);
   const trailer = applyScreenDetails(pin, screen, scoreMarket);
   // References first: the top-up takes pictures from the day's articles.
   addReferences(pin, found);
-  await topUpImages(pin, fields);
+  await topUpImages(pin, fields, headings?.title);
   // A film, series or anime's awards, by the work's own title and the pin's.
   const awards = isScreenCategory(pin.categories)
     ? await awardsFor([fields?.workTitle, pin.title]).catch((err) => {
@@ -332,21 +352,26 @@ async function webScrape(pageUrl: string): Promise<{
     log.warn('reading entries failed:', (err as Error).message);
     return undefined;
   });
-  return { pin, trailer, stocks: parseScrapedStocks(fields?.stocks), awards, tags, respondTo, entries };
+  const llmTasks: LlmTask[] | undefined =
+    llmDown && pageText.trim().length >= 200 ? [extractTask(pageUrl, pageText), referencesTask(pageUrl, pageText)] : undefined;
+  return { pin, trailer, stocks: parseScrapedStocks(fields?.stocks), awards, tags: tags.length ? tags : metadataFields(pageMeta).tags, respondTo, entries, llmTasks };
 }
 
 const imageCount = (pin: Pin) => pin.media.filter((m) => Number(m.type) === mediumID.image).length;
+const needMore = (pin: Pin) => picturesNeeded(pin.media.length, imageCount(pin)) > 0;
 
-// Pages with few pictures of their own are topped up from the company's
+// Pages with few media of their own are topped up from the company's
 // announcement, the referenced articles and Wikipedia (./findImages.ts),
 // which may also bring the announcement as a reference. Added after the
 // page's own media, so the page's picture stays the default heading.
-async function topUpImages(pin: Pin, fields: ExtractedFields | null) {
-  const need = TARGET_IMAGES - imageCount(pin);
+// pageTitle is the page's own <title>, the search term when the extractor gave
+// no title (no API key or credit), so a scrape still looks for pictures.
+async function topUpImages(pin: Pin, fields: ExtractedFields | null, pageTitle?: string) {
+  const need = picturesNeeded(pin.media.length, imageCount(pin));
   if (need <= 0) return;
   const { images, references } = await findPinImages(
     {
-      title: pin.title || fields?.title || '',
+      title: pin.title || fields?.title || pageTitle?.trim() || '',
       company: pin.company ?? fields?.company,
       companyWikiUrl: pin.companyWikiUrl ?? fields?.companyWikiUrl,
       workTitle: fields?.workTitle,
@@ -370,7 +395,7 @@ async function addVideoStills(pin: Pin, embedUrl: string) {
   const id = embedUrl.match(/\/embed\/([\w-]{6,})/)?.[1];
   if (!id) return;
   for (const name of ['hqdefault', 'hq1', 'hq2', 'hq3']) {
-    if (imageCount(pin) >= TARGET_IMAGES) return;
+    if (!needMore(pin)) return;
     const originalUrl = `https://i.ytimg.com/vi/${id}/${name}.jpg`;
     const ok = await fetch(originalUrl, { method: 'HEAD', signal: AbortSignal.timeout(IMAGE_FETCH_MS) }).then((r) => r.ok, () => false);
     if (ok) pin.addMedium(new Medium({ type: mediumID.image, originalWidth: 480, originalHeight: 360, originalUrl }));
@@ -382,7 +407,7 @@ async function addVideoStills(pin: Pin, embedUrl: string) {
 async function addLinkedImages(pin: Pin, text: string) {
   const links = [...text.matchAll(/\((https?:\/\/[^\s)]+)\)/g)].map((m) => m[1]).filter((u) => !/\/\/(?:[\w-]+\.)?(?:twitter|x)\.com\//.test(u));
   for (const link of links.slice(0, 3)) {
-    if (imageCount(pin) >= TARGET_IMAGES) return;
+    if (!needMore(pin)) return;
     // an unreachable link just adds nothing
     const originalUrl = await pageImage(link).catch(() => undefined);
     if (originalUrl && !pin.findMediumByOriginalUrl(originalUrl)) pin.addMedium(new Medium({ type: mediumID.image, originalUrl }));
@@ -426,7 +451,7 @@ async function placeAtStudioHq(pin: Pin): Promise<void> {
 
 // Everything the create form reads off a scrape other than the media it
 // picks from.
-function applyExtracted(pin: Pin, fields: ExtractedFields | null): Pin {
+function applyExtracted(pin: Pin, fields: Partial<ExtractedFields> | null): Pin {
   if (!fields) return pin;
 
   if (fields.title) pin.title = fields.title;

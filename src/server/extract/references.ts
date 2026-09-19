@@ -27,7 +27,7 @@ const MAX_SEARCHES = 5;
 // A pause_turn hands the server's search loop back to us; resume at most this often.
 const MAX_CONTINUATIONS = 3;
 // The page only has to say what the event is; the search does the rest.
-const MAX_PAGE_CHARS = 20000;
+export const MAX_PAGE_CHARS = 20000;
 // The scrape route has 120s in all, and the browser has already used some.
 const TIMEOUT_MS = 90000;
 
@@ -94,6 +94,19 @@ const RECORD_TOOL: Anthropic.Beta.BetaTool = {
     additionalProperties: false,
   },
 };
+
+// The reference search as a task a Claude Code session can answer when the API
+// is unavailable: the same system prompt, record schema and user message. The
+// session searches and fetches itself, and may keep only URLs it actually
+// fetched (see references:apply).
+export function referencesTask(sourceUrl: string, sourceText: string, kind: SourceKind = 'web page') {
+  return {
+    stage: 'references' as const,
+    system: SYSTEM_PROMPT,
+    schema: RECORD_TOOL.input_schema,
+    input: `Source (${kind}): ${sourceUrl}\n\n${(sourceText || '').trim().slice(0, MAX_PAGE_CHARS)}`,
+  };
+}
 
 export type FoundReferences = {
   references: FoundReference[];

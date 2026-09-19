@@ -188,12 +188,15 @@ function LocalWeatherRow({ className = '' }: { className?: string }) {
   );
 }
 
-// A peek at the weather on the bell itself, in the corner opposite the badge.
-function WeatherPeek({ className }: { className: string }) {
+// The weather beside the bell rather than over it: the conditions with the
+// degrees right under them, flush on one left edge. It stands next to the
+// bell, not on it, so the bell itself stays plain to read.
+function WeatherPeek({ className = '' }: { className?: string }) {
   const { weather } = useFormattedLocalWeather();
   return weather ? (
-    <span aria-hidden className={`absolute flex size-3.5 items-center justify-center rounded-full bg-header text-warning ${className}`}>
-      <Icon name={weather.icon} className="size-3" />
+    <span aria-hidden className={`flex shrink-0 flex-col items-start gap-0.5 leading-none ${className}`} title={weather.summary}>
+      <Icon name={weather.icon} className="size-3.5 text-warning" />
+      {weather.now ? <span className="text-[10px] font-bold tabular-nums">{weather.now}</span> : null}
     </span>
   ) : null;
 }
@@ -244,10 +247,10 @@ export function WeatherButton({ className = '' }: { className?: string }) {
         aria-expanded={open}
         aria-label={weather ? weather.summary : t('weather.local')}
         title={weather ? weather.summary : t('weather.local')}
-        className="flex items-center gap-1 rounded-lg p-2 text-muted hover:bg-raised hover:text-ink"
+        className="flex flex-col items-center gap-0.5 rounded-lg px-1.5 py-1 text-muted hover:bg-raised hover:text-ink"
       >
         <Icon name={weather ? weather.icon : 'sun'} className={`size-5 ${weather ? 'text-warning' : ''}`} />
-        {weather?.now ? <span className="text-sm">{weather.now}</span> : null}
+        {weather?.now ? <span className="text-[10px] leading-none font-medium">{weather.now}</span> : null}
       </button>
       {open ? (
         <div className="floating absolute right-0 z-50 mt-2 w-80 overflow-hidden">
@@ -276,10 +279,12 @@ export function NotificationBell({ className = '' }: { className?: string }) {
 
   return (
     <div ref={rootRef} className={`relative ${className}`}>
-      <button type="button" onClick={toggle} aria-expanded={open} aria-label={unreadLabel(t, count)} title={weather ? `${t('notifications.title')} · ${weather.summary}` : t('notifications.title')} className="relative rounded-lg p-2 text-muted hover:bg-raised hover:text-ink">
-        <Icon name="bell" className="size-5" />
-        <UnreadBadge count={count} className="top-1 right-1" />
-        <WeatherPeek className="bottom-1 left-1" />
+      <button type="button" onClick={toggle} aria-expanded={open} aria-label={unreadLabel(t, count)} title={weather ? `${t('notifications.title')} · ${weather.summary}` : t('notifications.title')} className="flex h-9 items-center gap-0.5 rounded-lg px-2 text-muted hover:bg-raised hover:text-ink">
+        <WeatherPeek />
+        <span className="relative flex">
+          <Icon name="bell" className="size-5" />
+          <UnreadBadge count={count} className="-top-1 -right-1.5" />
+        </span>
       </button>
       {open ? (
         <div className="floating absolute right-0 z-50 mt-2 w-80 overflow-hidden">
@@ -302,9 +307,9 @@ export function DrawerNotifications({ className, current }: { className: string;
       <span className="relative flex">
         <Icon name="bell" className="size-6" />
         <UnreadBadge count={count} className="-top-1.5 -right-2" />
-        <WeatherPeek className="-bottom-1 -left-1.5" />
       </span>
       {t('notifications.title')}
+      <WeatherPeek className="ml-auto text-muted" />
     </Link>
   );
 }

@@ -133,3 +133,55 @@ export const IN_PAGE_HEADINGS = `(() => {
   box.remove();
   return { title: document.title, headings };
 })()`;
+
+// The page's own descriptive markup, for a scrape that has no LLM answer
+// (no API key or credit): Open Graph and meta tags, article dates, keywords
+// and the schema.org JSON-LD blocks (Event, NewsArticle, Product...).
+// src/server/scrape/metadata.ts turns it into pin fields.
+export type PageMetadata = {
+  title?: string;
+  ogTitle?: string;
+  twitterTitle?: string;
+  h1?: string;
+  siteName?: string;
+  host?: string;
+  description?: string;
+  published?: string;
+  keywords?: string[];
+  jsonLd?: Record<string, unknown>[];
+};
+
+export const IN_PAGE_META = `(() => {
+  const meta = (selector) => {
+    const el = document.querySelector(selector);
+    return el ? (el.getAttribute('content') || '').trim() : '';
+  };
+  const first = (...values) => values.find((v) => v) || undefined;
+  const jsonLd = [];
+  document.querySelectorAll('script[type="application/ld+json"]').forEach((script) => {
+    try {
+      const data = JSON.parse(script.textContent || 'null');
+      const nodes = Array.isArray(data) ? data : data && data['@graph'] ? data['@graph'] : [data];
+      nodes.forEach((node) => node && typeof node === 'object' && jsonLd.push(node));
+    } catch (err) {
+      // a malformed block is skipped
+    }
+  });
+  const keywords = [
+    ...meta('meta[name="keywords"]').split(','),
+    ...Array.from(document.querySelectorAll('meta[property="article:tag"]')).map((m) => m.getAttribute('content') || ''),
+  ].map((k) => k.trim()).filter(Boolean);
+  const h1 = document.querySelector('h1');
+  return {
+    title: document.title || undefined,
+    ogTitle: first(meta('meta[property="og:title"]'), meta('meta[name="og:title"]')),
+    twitterTitle: first(meta('meta[name="twitter:title"]'), meta('meta[property="twitter:title"]')),
+    h1: h1 ? (h1.innerText || '').trim() || undefined : undefined,
+    siteName: first(meta('meta[property="og:site_name"]')),
+    host: location.hostname,
+    description: first(meta('meta[property="og:description"]'), meta('meta[name="description"]'), meta('meta[name="twitter:description"]')),
+    published: first(meta('meta[property="article:published_time"]'), meta('meta[name="article:published_time"]'), meta('meta[itemprop="datePublished"]'), meta('meta[name="date"]'), meta('meta[name="publish-date"]')),
+    keywords: keywords.slice(0, 20),
+    jsonLd: jsonLd.slice(0, 8),
+  };
+})()`;

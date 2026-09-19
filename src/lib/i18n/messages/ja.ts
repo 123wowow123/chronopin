@@ -484,7 +484,7 @@ const ja: Messages = {
   },
   map: {
     backToPin: 'ピンに戻る',
-    webOff: 'つながり非表示',
+    webOff: 'グラフ非表示',
     lines: '線',
     graph: 'グラフ',
     web: { thread: 'スレッド', duplicate: '重複', company: '企業', source: '出典', tag: 'タグ' },

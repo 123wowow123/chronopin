@@ -484,7 +484,7 @@ const en = {
   },
   map: {
     backToPin: 'Back to pin',
-    webOff: 'Web off',
+    webOff: 'Graph off',
     lines: 'Lines',
     graph: 'Graph',
     web: { thread: 'Thread', duplicate: 'Duplicate', company: 'Company', source: 'Source', tag: 'Tag' },

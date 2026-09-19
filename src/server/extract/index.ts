@@ -21,7 +21,7 @@ export const MODEL = 'claude-opus-5';
 // Wikipedia articles run long and the tail is references and navigation.
 // The lede plus infobox plus body comfortably fits, and capping keeps a
 // pathological page from becoming a six-figure-token request.
-const MAX_PAGE_CHARS = 60000;
+export const MAX_PAGE_CHARS = 60000;
 
 const CONFIDENCE_LEVELS = ['confirmed', 'scheduled', 'estimated', 'delayed', 'unknown'] as const;
 
@@ -51,7 +51,7 @@ export type ExtractedFields = {
   tags: string[];
 };
 
-const SCHEMA = {
+export const SCHEMA = {
   type: 'object',
   properties: {
     title: {
@@ -207,6 +207,17 @@ const SCHEMA = {
   additionalProperties: false,
 };
 
+// The extraction as a task a Claude Code session can answer when the API is
+// unavailable: the same system prompt, schema and user message the call uses.
+export function extractTask(pageUrl: string, pageText: string) {
+  return {
+    stage: 'extract' as const,
+    system: SYSTEM_PROMPT,
+    schema: SCHEMA,
+    input: `Source URL: ${pageUrl}\n\nPage text:\n\n${(pageText || '').trim().slice(0, MAX_PAGE_CHARS)}`,
+  };
+}
+
 let client: Anthropic | null = null;
 
 export function getClient(): Anthropic | null {
@@ -280,7 +291,7 @@ export async function extractPinFields(pageUrl: string, pageText: string): Promi
  * or out of range are dropped - the pin just gets no map - but the label is
  * still worth keeping on its own.
  */
-export function toLocation(fields: ExtractedFields | null) {
+export function toLocation(fields: Partial<ExtractedFields> | null) {
   if (!fields || !fields.placeLabel) return undefined;
   const { latitude: lat, longitude: lng } = fields;
   const plausible =

@@ -490,7 +490,7 @@ const es: Messages = {
   },
   map: {
     backToPin: 'Volver al pin',
-    webOff: 'Red desactivada',
+    webOff: 'Grafo desactivado',
     lines: 'Líneas',
     graph: 'Grafo',
     web: { thread: 'Hilo', duplicate: 'Duplicado', company: 'Empresa', source: 'Fuente', tag: 'Etiqueta' },

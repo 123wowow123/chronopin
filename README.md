@@ -485,3 +485,41 @@ major local events by major city scrape and more targetted by your location
 - should have small display that 3 pins are happing within next 7 days on botton and top of timeline. Clicking on it will scroll you to it one after another
 
 # Scraping
+
+generate scraping stragety and save to OKF wiki to use and should be basis to build the Scraping API and can be used by session LLM to emulate behavior if API is out of credits
+
+
+scrape shows should say how many episodes too
+
+when searching by the company should show brief description and trending sentiment and can follow like person
+
+
+what are major specific products coming out of sp500 companies
+https://www.google.com/search?q=what+are+major+specific+products+coming+out+of+sp500+companies&sca_esv=8abcff31be3a7e9b&biw=1632&bih=963&sxsrf=APpeQnukcfTBmTVCu1KG9P6HSgVaFSxlzw%3A1789853840106&ei=kACvaoSLBuy6ur8P0MTpoAY&uact=5&oq=what+are+major+specific+products+coming+out+of+sp500+companies&gs_lp=Egxnd3Mtd2l6LXNlcnAiPndoYXQgYXJlIG1ham9yIHNwZWNpZmljIHByb2R1Y3RzIGNvbWluZyBvdXQgb2Ygc3A1MDAgY29tcGFuaWVzSIwYUPIKWNgVcAB4ApABAJgBoQGgAd0GqgEDNi4zuAEDyAEA-AEBmAIHoAK4BMICBBAAGEfCAgcQIxiwAhgnwgIIEAAYgAQYogTCAgUQABjvBcICCBAhGKABGMMEwgIKECEYChigARjDBJgDAOIDBRIBMSBAiAYBkAYIkgcDNi4xoAeML7IHAzUuMbgHtATCBwUyLjQuMcgHDYAIAQ&sclient=gws-wiz-serp
+
+
+upcoming movie shoudl cross reference other sources and create or update pins for all and create responce lists of individual franchise liniage
+https://x.com/GeekVibesNation/status/2099930870391902583
+
+
+https://x.com/GameGPU_com/status/2101002226625892543
+
+
+https://www.mmoexp.com/News/diablo-4-season-15-diablo-5-blizzcon-2026-release-dates-amazon-class-major-updates.html
+
+
+https://x.com/brandon1an/status/2099524263485067545
+
+space x launch schedule and get flight path and add feature to display flight path on map where as main map will show start location 
+can get flight path using sites like: 
+https://flightclub.io/ 
+https://www.heavens-above.com/
+
+
+
+https://www.spacex.com/launches
+
+
+
+
+add more prediction market pins for major events

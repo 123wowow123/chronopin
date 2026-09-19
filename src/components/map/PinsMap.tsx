@@ -531,7 +531,7 @@ export default function PinsMap() {
               key={mode}
               type="button"
               aria-pressed={web === mode}
-              onClick={() => setWeb(mode)}
+              onClick={() => setWeb(web === mode ? 'off' : mode)}
               className={`rounded-full px-2.5 py-1 ${web === mode ? 'bg-accent text-white' : 'text-muted hover:text-ink'}`}
             >
               {mode === 'off' ? t('map.webOff') : mode === 'lines' ? t('map.lines') : t('map.graph')}

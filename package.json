@@ -26,6 +26,7 @@
     "media:screen": "tsx scripts/media/screenDetails.ts",
     "media:awards": "tsx scripts/media/awards.ts",
     "media:studio-locations": "tsx scripts/media/studioLocations.ts",
+    "media:top-up": "tsx scripts/media/topUp.ts",
     "media:score-markets": "tsx scripts/media/scoreMarkets.ts",
     "merchants:amazon-prices": "tsx scripts/merchants/amazonPrices.ts",
     "tags:sync": "tsx scripts/tags/sync.ts",

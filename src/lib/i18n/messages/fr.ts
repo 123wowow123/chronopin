@@ -490,7 +490,7 @@ const fr: Messages = {
   },
   map: {
     backToPin: 'Retour à l’épingle',
-    webOff: 'Réseau désactivé',
+    webOff: 'Graphe désactivé',
     lines: 'Lignes',
     graph: 'Graphe',
     web: { thread: 'Fil', duplicate: 'Doublon', company: 'Entreprise', source: 'Source', tag: 'Tag' },

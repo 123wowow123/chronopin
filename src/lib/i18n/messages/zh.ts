@@ -484,7 +484,7 @@ const zh: Messages = {
   },
   map: {
     backToPin: '返回图钉',
-    webOff: '关闭关系网',
+    webOff: '关闭关系图',
     lines: '连线',
     graph: '关系图',
     web: { thread: '串', duplicate: '重复', company: '公司', source: '来源', tag: '标签' },

@@ -1,6 +1,11 @@
 # Update Log
 
 ## 2026-09-19
+* **Creation**: Added [Scraping without credit](/scraping/no-credit-mode.md): what a scrape still does with no key or credit, the metadata fields and the `llmTasks` response.
+* **Update**: [Strategy](/scraping/strategy.md), [Scrape without credit](/playbooks/scrape-without-credit.md) and the [Scraping API](/api/scraping-api.md) now say that only the LLM calls wait for a session: a no-credit scrape returns page-metadata fields and `llmTasks`.
+* **Update**: [Learnings](/scraping/learnings.md) records the live check of the 3-media rule and the page-title fallback for the picture top-up.
+* **Update**: The [strategy](/scraping/strategy.md) and [enrichment](/scraping/enrichment.md) pages now make reaching 3 media on every pin, with at least 1 picture, a best-effort target; the scraper counts a video toward the 3 ([mediaTarget.ts](../../src/lib/mediaTarget.ts)).
+* **Creation**: Added the [scraping](/scraping/index.md) group ([strategy](/scraping/strategy.md), [fields](/scraping/fields.md), [enrichment](/scraping/enrichment.md), [sources](/scraping/sources.md), [verticals](/scraping/verticals.md), [learnings](/scraping/learnings.md)), the [Scrape without credit](/playbooks/scrape-without-credit.md) playbook and the [Scraping API](/api/scraping-api.md) design.
 * **Creation**: Added [UserWiki](/tables/user-wiki.md), the per-user preference wiki that weighs the timeline's pick on crowded days, with its admin toggle.
 * **Update**: [Lint the wikis](/playbooks/lint-the-wikis.md) now covers the nightly re-read and its two admin options, which can be on together: viewed pins (on by default) and every N days since the last read (never by default).
 * **Creation**: Added [Lint the wikis](/playbooks/lint-the-wikis.md), [Without API credit](/playbooks/without-api-credit.md) and [OkfLintFinding](/tables/okf-lint-finding.md).
