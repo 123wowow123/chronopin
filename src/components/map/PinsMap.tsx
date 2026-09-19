@@ -72,6 +72,31 @@ function pinPopup(pin: MapPinJson, options: L.PopupOptions = {}) {
     .setContent(() => popupContent(pin));
 }
 
+// Opens a pin's popup to stay, replacing the last one that did: a marker
+// clicked, a graph node picked, or the focused pin. autoClose off: hovering
+// other pins opens their popups beside it. The map's closePopupOnClick still
+// closes it on a click elsewhere (a marker's click does not reach the map).
+// The graph's picked node follows it: set while it shows, cleared when it goes.
+function stickPopup(
+  map: L.Map,
+  stickyRef: { current: { popup: L.Popup; pinId: number } | null },
+  pin: MapPinJson,
+  at: L.LatLng,
+  pick: (id: number | undefined) => void,
+) {
+  if (stickyRef.current?.pinId === pin.id && map.hasLayer(stickyRef.current.popup)) return;
+  const sticky = pinPopup(pin, { autoClose: false }).setLatLng(at);
+  sticky.on('remove', () => {
+    if (stickyRef.current?.popup !== sticky) return;
+    stickyRef.current = null;
+    pick(undefined);
+  });
+  stickyRef.current?.popup.close();
+  stickyRef.current = { popup: sticky, pinId: pin.id };
+  pick(pin.id);
+  sticky.openOn(map);
+}
+
 // A thumb that fails to load (a local production build points at deleted
 // blobs) falls back to an image's original, then goes.
 function popupContent(pin: MapPinJson) {
@@ -249,20 +274,7 @@ export default function PinsMap() {
     const futureBoundary = future ? offsetDate(now, future, 1) : null;
     const seen = new Set<number>();
 
-    // Opens a pin's popup to stay, replacing the last one that did: a marker
-    // clicked, or the focused pin. autoClose off: hovering other pins opens
-    // their popups beside it. The map's closePopupOnClick still closes it on a
-    // click elsewhere (a marker's click does not reach the map).
-    const stick = (pin: MapPinJson, at: L.LatLng) => {
-      if (stickyRef.current?.pinId === pin.id && map.hasLayer(stickyRef.current.popup)) return;
-      const sticky = pinPopup(pin, { autoClose: false }).setLatLng(at);
-      sticky.on('remove', () => {
-        if (stickyRef.current?.popup === sticky) stickyRef.current = null;
-      });
-      stickyRef.current?.popup.close();
-      stickyRef.current = { popup: sticky, pinId: pin.id };
-      sticky.openOn(map);
-    };
+    const stick = (pin: MapPinJson, at: L.LatLng) => stickPopup(map, stickyRef, pin, at, setWebPicked);
 
     const plot = (pins: MapPinJson[]) => {
       for (const pin of pins) {
@@ -410,10 +422,11 @@ export default function PinsMap() {
     const map = mapRef.current;
     const pin = markersRef.current.find((e) => e.pin.id === id)?.pin;
     if (!map || !pin) return;
-    setWebPicked(id);
     const at = L.latLng(pin.latitude!, pin.longitude! + 360 * nearestOffset(pin.longitude!, map.getCenter().lng));
     map.setView(at, Math.max(map.getZoom(), 6));
-    pinPopup(pin, { autoClose: false }).setLatLng(at).openOn(map);
+    // Also the hover popup still open from the pointer's last pass over a marker.
+    map.closePopup();
+    stickPopup(map, stickyRef, pin, at, setWebPicked);
   }
 
   // Picks edit the query in the URL, so the navbar search box shows them.

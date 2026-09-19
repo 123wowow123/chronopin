@@ -485,7 +485,3 @@ major local events by major city scrape and more targetted by your location
 - should have small display that 3 pins are happing within next 7 days on botton and top of timeline. Clicking on it will scroll you to it one after another
 
 # Scraping
-
-Backfill all missing information for all pins and create new pins if necessary
-
-Are all pin summary generation based off of OKF intermediary source now?
