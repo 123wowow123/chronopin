@@ -3,6 +3,9 @@ import { getUser } from '@/server/auth';
 import { json, paginationHeaders, paginationLink, route } from '@/server/http';
 import { getTimeline } from '@/server/services/timeline';
 import { linkParams, resolveCreatedSince } from '@/server/util/createdFilter';
+import { requestLocale } from '@/lib/i18n/request';
+import { toJson, type PinJson } from '@/lib/types';
+import { localizePins } from '@/server/services/translations';
 
 // A page of the timeline with the date markers inside it.
 export const GET = route(async (request: NextRequest) => {
@@ -22,5 +25,8 @@ export const GET = route(async (request: NextRequest) => {
   });
 
   const link = paginationLink(request, pins, linkParams(createdSince));
-  return json(pins, 200, paginationHeaders(link, pins.queryCount));
+  // In the page's language (?lang=), like the server-rendered first page.
+  const body = toJson<{ pins: PinJson[] }>(pins);
+  await localizePins(body.pins, requestLocale(request));
+  return json(body, 200, paginationHeaders(link, pins.queryCount));
 });

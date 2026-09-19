@@ -142,4 +142,14 @@ if (!g.__chronopinPinListeners) {
   };
   pinEvents.on('save', syncAutoTags);
   pinEvents.on('update', syncAutoTags);
+
+  // The pin's words in the site's other languages (services/translations.ts),
+  // redone only for a language whose translation the edit made out of date.
+  const translate = (pin: Row) => {
+    import('./services/translations')
+      .then(({ translatePin }) => translatePin(Number(pin.id)))
+      .catch((err) => log.warn(`translation failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', translate);
+  pinEvents.on('update', translate);
 }

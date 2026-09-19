@@ -4,6 +4,7 @@
 // way do not matter to a delay counted in months.
 
 import { compareDayKeys, dayKeyIn, dayKeyParts, daysBetween } from './format';
+import { INTL_LOCALES, type Locale } from './i18n/config';
 import type { PinJson } from './types';
 
 export type PinDelay = {
@@ -14,31 +15,33 @@ export type PinDelay = {
   label: string;
 };
 
-// A whole number of the unit, or years to the half: "1 year", "2.5 years".
-function span(count: number, unit: string): string {
-  return `${count} ${count === 1 ? unit : `${unit}s`}`;
+// A whole number of the unit, or years to the half: "1 year", "2.5 years";
+// "2,5 años" and "2.5年" in other languages.
+function span(count: number, unit: 'day' | 'week' | 'month' | 'year', locale: Locale): string {
+  if (locale === 'en') return `${count} ${count === 1 ? unit : `${unit}s`}`;
+  return new Intl.NumberFormat(INTL_LOCALES[locale], { style: 'unit', unit, unitDisplay: 'long', maximumFractionDigits: 1 }).format(count);
 }
 
-export function delayLabel(fromKey: string, toKey: string): string {
+export function delayLabel(fromKey: string, toKey: string, locale: Locale = 'en'): string {
   const days = daysBetween(fromKey, toKey);
   if (days < 14) {
-    return span(days, 'day');
+    return span(days, 'day', locale);
   }
   const [fy, fm] = dayKeyParts(fromKey);
   const [ty, tm] = dayKeyParts(toKey);
   const months = (ty - fy) * 12 + (tm - fm);
   if (months < 2) {
-    return span(Math.round(days / 7), 'week');
+    return span(Math.round(days / 7), 'week', locale);
   }
   if (months < 18) {
-    return span(months, 'month');
+    return span(months, 'month', locale);
   }
-  return span(Math.round(months / 6) / 2, 'year');
+  return span(Math.round(months / 6) / 2, 'year', locale);
 }
 
 // Null when the pin has no original date, or its start is not after it (a
 // pin brought forward, or one whose delay was since made up).
-export function pinDelay(pin: Pick<PinJson, 'originalStartDate' | 'utcStartDateTime'>): PinDelay | null {
+export function pinDelay(pin: Pick<PinJson, 'originalStartDate' | 'utcStartDateTime'>, locale: Locale = 'en'): PinDelay | null {
   if (!pin.originalStartDate || !pin.utcStartDateTime) {
     return null;
   }
@@ -46,7 +49,7 @@ export function pinDelay(pin: Pick<PinJson, 'originalStartDate' | 'utcStartDateT
   if (compareDayKeys(pin.originalStartDate, now) >= 0) {
     return null;
   }
-  return { from: pin.originalStartDate, days: daysBetween(pin.originalStartDate, now), label: delayLabel(pin.originalStartDate, now) };
+  return { from: pin.originalStartDate, days: daysBetween(pin.originalStartDate, now), label: delayLabel(pin.originalStartDate, now, locale) };
 }
 
 const DELAY_REASONING_MAX = 2000;

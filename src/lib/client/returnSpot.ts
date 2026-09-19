@@ -1,6 +1,7 @@
 'use client';
 
 import { authHref, type AuthPage } from '@/lib/authRedirect';
+import { DEFAULT_LOCALE, localizePath, splitLocale } from '@/lib/i18n/config';
 
 // Where the reader was when they went to log in, sign up or log out, so
 // finishing comes back there: the card at the top of the timeline or of a
@@ -27,6 +28,13 @@ export type MapSpot = { kind: 'map'; lat: number; lng: number; zoom: number };
 // href: the page to come back to, which a spot is only for.
 type Saved = (CardSpot | MapSpot) & { href: string; savedAt: number };
 
+// Where the reader is in the app, without the language prefix ("/es/map" ->
+// "/map"): the spots and the hrefs below are app paths, which the links and
+// router put back into the page's language.
+function appPathname(): string {
+  return splitLocale(window.location.pathname).path;
+}
+
 // The map's current view, while a map is showing.
 let mapView: (() => Omit<MapSpot, 'kind'>) | null = null;
 
@@ -44,13 +52,17 @@ export function authHrefHere(page: AuthPage = '/login'): string {
 }
 
 // The Log out link for the page the reader is on right now, the same way.
+// Logging out is a route handler outside the languages, so the page to come
+// back to goes in its own language.
 export function logoutHrefHere(): string {
-  return `/logout?referrer=${encodeURIComponent(saveSpotHere())}`;
+  const locale = splitLocale(window.location.pathname).locale ?? DEFAULT_LOCALE;
+  return `/logout?referrer=${encodeURIComponent(localizePath(saveSpotHere(), locale))}`;
 }
 
 // Saves the spot on this page, and answers the page to come back to.
 function saveSpotHere(): string {
-  const { pathname, search } = window.location;
+  const { search } = window.location;
+  const pathname = appPathname();
   let href = pathname + search;
   let spot: CardSpot | MapSpot | null = null;
   if (pathname === '/' || pathname === '/search') {
@@ -81,7 +93,7 @@ function saveSpotHere(): string {
 // the posting window).
 export function hrefKeepingDate(href: string): string {
   const next = new URL(href, location.origin);
-  const here = window.location.pathname;
+  const here = appPathname();
   if ((here !== '/' && here !== '/search') || (next.pathname !== '/' && next.pathname !== '/search')) return href;
   if (here === '/search') {
     const current = new URLSearchParams(window.location.search);
@@ -163,7 +175,7 @@ function take(): Saved | null {
 function isHere(href: string) {
   const saved = new URL(href, location.origin);
   const sort = (params: URLSearchParams) => [...params].map(([k, v]) => `${k}=${v}`).sort().join('&');
-  return saved.pathname === location.pathname && sort(saved.searchParams) === sort(new URLSearchParams(location.search));
+  return saved.pathname === appPathname() && sort(saved.searchParams) === sort(new URLSearchParams(location.search));
 }
 
 // Cards on a page by date (the timeline, a search's dates); by relevance they

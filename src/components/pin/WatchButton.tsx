@@ -1,6 +1,6 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter } from '@/lib/client/navigation';
 import { useEffect, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
@@ -10,6 +10,7 @@ import { useSession } from '@/lib/client/session';
 import { authHrefHere } from '@/lib/client/returnSpot';
 import { setWatched, useWatched } from '@/lib/client/watched';
 import type { PinJson } from '@/lib/types';
+import { useT } from '@/lib/client/i18n';
 
 // Watch (favourite) a pin. The count comes back from the server, so
 // concurrent watchers stay accurate, and follows everyone else's watching
@@ -28,6 +29,7 @@ export function WatchButton({
   const [count, setCount] = useState(pin.favoriteCount ?? 0);
   const [busy, setBusy] = useState(false);
   const countRef = useCountBump<HTMLSpanElement>(count);
+  const t = useT();
   // What this viewer has been told, or has just done, about watching this
   // pin; null until either happens.
   const [chosen, setChosen] = useState<boolean | null>(null);
@@ -91,8 +93,8 @@ export function WatchButton({
       type="button"
       onClick={toggle}
       aria-pressed={watching}
-      aria-label={`${watching ? 'Stop watching' : 'Watch this pin'} (${count} watching)`}
-      title={watching ? 'Stop watching' : 'Watch this pin'}
+      aria-label={`${watching ? t('watch.stop') : t('watch.start')} (${t('watch.count', { count })})`}
+      title={watching ? t('watch.stop') : t('watch.start')}
       className={`inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-sm tabular-nums transition-colors ${watching ? 'bg-accent/15 text-link' : 'text-subtle hover:bg-raised hover:text-ink'}`}
     >
       <Icon name="eye" className="size-4" />

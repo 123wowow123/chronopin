@@ -4,6 +4,8 @@ import { HttpError, json, route } from '@/server/http';
 import { mapPins } from '@/server/services/mapPins';
 import { resolveCreatedSince } from '@/server/util/createdFilter';
 import { requestTimeZone } from '@/server/viewer';
+import { requestLocale } from '@/lib/i18n/request';
+import { localizePins } from '@/server/services/translations';
 
 // Every located pin the map should plot, in one answer.
 // GET /api/pins/map?from=ISO&to=ISO&created_within=1w
@@ -25,7 +27,7 @@ export const GET = route(async (request: NextRequest) => {
     userId: user?.id ?? null,
     timeZone: requestTimeZone(request),
   });
-  return json({ pins });
+  return json({ pins: await localizePins(pins, requestLocale(request)) });
 });
 
 function instant(value: string | null, name: string) {

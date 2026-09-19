@@ -1,5 +1,8 @@
 // Data for server-rendered pages, cached with Cache Components. Every function
-// here returns plain JSON (no model instances), keyed by its arguments.
+// here returns plain JSON (no model instances), keyed by its arguments. Those
+// that return pins take the page's language, and swap in the pins'
+// translations (services/translations.ts); English, the default, is the pins'
+// own words.
 
 import { cacheLife, cacheTag } from 'next/cache';
 import { getPersonalBag, getTimelineVideo } from '../model/appSetting';
@@ -20,6 +23,8 @@ import type { TagCount } from '@/lib/tags';
 import { getTimeline, timelineMinConfidence } from './timeline';
 import { resolveCreatedSince, type CreatedQuery } from '../util/createdFilter';
 import { dependsOnZone, parseSearchQuery } from '../util/searchQuery';
+import { DEFAULT_LOCALE, type Locale } from '@/lib/i18n/config';
+import { localizePins } from './translations';
 
 // The video setting the cards on a page of pins read. Cached (and expired)
 // with those pages rather than read per request: it is one row that changes
@@ -45,27 +50,27 @@ export const TRENDING_DAYS = 3;
 
 // The most viewed pins with views on the rise. Views are recorded without
 // expiring anything, so this simply goes stale for a few minutes at a time.
-export async function trendingPins(): Promise<TrendingPin[]> {
+export async function trendingPins(locale: Locale = DEFAULT_LOCALE): Promise<TrendingPin[]> {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
-  return PinView.trending(TRENDING_DAYS, 5, await timelineMinConfidence());
+  return localizePins(await PinView.trending(TRENDING_DAYS, 5, await timelineMinConfidence()), locale);
 }
 
 // The pins added most recently. A new pin expires the timeline tag, so this
 // refreshes as pins are added rather than on a timer alone.
-export async function newPins(): Promise<NewPin[]> {
+export async function newPins(locale: Locale = DEFAULT_LOCALE): Promise<NewPin[]> {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
   const pins = await Pins.newest(5, await timelineMinConfidence());
   const pictures = await PinView.pictures(pins.map((p) => p.id));
-  return pins.map(({ sourceUrl, referenceUrls, ...p }) => ({
+  return localizePins(pins.map(({ sourceUrl, referenceUrls, ...p }) => ({
     ...p,
     utcCreatedDateTime: p.utcCreatedDateTime.toISOString(),
     hasMarket: pinMarketRefs({ sourceUrl, references: referenceUrls.map((url) => ({ url })) }).length > 0,
     ...pictures.get(p.id),
-  }));
+  })), locale);
 }
 
 // around opens the first page on a pin instead of now (the pin page's "To
@@ -93,6 +98,7 @@ function withoutViewerState<T extends { pins: PinJson[] }>(page: T): T {
 export async function timelinePage(
   cursor: TimelineCursor,
   createdWithin: string | null,
+  locale: Locale = DEFAULT_LOCALE,
 ): Promise<TimelinePage & { links: { previous?: string; next?: string }; minConfidence: number | null }> {
   'use cache';
   cacheLife('minutes');
@@ -117,47 +123,53 @@ export async function timelinePage(
         next: `?from_date_time=${new Date(range.max.utcStartDateTime).toISOString()}&last_pin_id=${range.max.id}${carry}`,
       }
     : {};
-  return withoutViewerState({ ...toJson<TimelinePage>(pins), links, minConfidence });
+  const page = withoutViewerState({ ...toJson<TimelinePage>(pins), links, minConfidence });
+  await localizePins(page.pins, locale);
+  return page;
 }
 
-// One pin as its page shows it (no per-viewer fields).
-export async function pinById(id: number): Promise<PinJson | null> {
+// One pin as its page shows it (no per-viewer fields). In English it is the
+// pin as stored, which is also what the edit form must start from.
+export async function pinById(id: number, locale: Locale = DEFAULT_LOCALE): Promise<PinJson | null> {
   'use cache';
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   const { pin } = await Pin.queryById(id);
-  return pin ? toJson<PinJson>(pin) : null;
+  if (!pin) return null;
+  const [json] = await localizePins([toJson<PinJson>(pin)], locale);
+  return json;
 }
 
 // Tagged with every pin in the thread, so a change to any of them - a
 // response posted or moved (its parent's tag is invalidated too) - redraws it.
-export async function threadPins(id: number): Promise<PinJson[]> {
+export async function threadPins(id: number, locale: Locale = DEFAULT_LOCALE): Promise<PinJson[]> {
   'use cache';
   cacheLife('hours');
   const pins = toJson<PinJson[]>((await Pins.getThreadPins(id)).pins);
   cacheTag(TAGS.pin(id), ...pins.map((p) => TAGS.pin(p.id)));
-  return pins;
+  return localizePins(pins, locale);
 }
 
 // The pins in a pin's confirmed duplicate group, itself included, best ranked
 // first. Every member's tag is invalidated when the group changes.
-export async function duplicateGroupPins(id: number, group: number[]): Promise<PinJson[]> {
+export async function duplicateGroupPins(id: number, group: number[], locale: Locale = DEFAULT_LOCALE): Promise<PinJson[]> {
   'use cache';
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   const pins = toJson<PinJson[]>((await Pins.queryByIds(group)).pins);
-  return pins.sort(compareDuplicateRank);
+  return localizePins(pins.sort(compareDuplicateRank), locale);
 }
 
 // Pins like this one, by semantic search on its title. The search service
 // being down just means no suggestions.
-export async function relatedPins(id: number, title: string): Promise<PinJson[]> {
+// title: the pin's own, English one, which is what the search index holds.
+export async function relatedPins(id: number, title: string, locale: Locale = DEFAULT_LOCALE): Promise<PinJson[]> {
   'use cache';
   cacheLife('hours');
   cacheTag(TAGS.pin(id));
   try {
     const pins = await SearchPins.search(title);
-    return toJson<PinJson[]>(pins.pins.filter((p) => p.id !== id)).slice(0, 12);
+    return localizePins(toJson<PinJson[]>(pins.pins.filter((p) => p.id !== id)).slice(0, 12), locale);
   } catch {
     return [];
   }
@@ -174,25 +186,29 @@ export async function searchPage(
   userId: number | null,
   onlyWatched: boolean,
   view: SearchView,
+  locale: Locale = DEFAULT_LOCALE,
 ): Promise<SearchPage & { error?: string; watchVersion?: string }> {
   view = { ...view, timeZone: zoneFor(query, view.timeZone) };
   // Watched results are one person's list and must change the moment they
   // watch or unwatch a pin, so they skip the shared, briefly stale cache.
-  if (!onlyWatched || !userId) return cachedSearch(query, view);
+  if (!onlyWatched || !userId) return cachedSearch(query, view, locale);
   // watchVersion keys the results on the page: Next keeps a page left for
   // another mounted but hidden, so without it coming back to Watched after
   // watching a pin elsewhere showed the list as it was.
   const [page, watchVersion] = await Promise.all([runSearch(query, userId, true, view), Favorite.listVersion(userId)]);
+  await localizePins(page.pins, locale);
   return { ...page, watchVersion };
 }
 
 // Built with no viewer, so one entry serves everyone rather than one per
 // signed-in reader; the cards ask who watches what.
-async function cachedSearch(query: string, view: SearchView) {
+async function cachedSearch(query: string, view: SearchView, locale: Locale) {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
-  return withoutViewerState(await runSearch(query, NO_VIEWER, false, view));
+  const page = withoutViewerState(await runSearch(query, NO_VIEWER, false, view));
+  await localizePins(page.pins, locale);
+  return page;
 }
 
 async function runSearch(query: string, userId: number | null, onlyWatched: boolean, view: SearchView): Promise<SearchPage & { error?: string }> {

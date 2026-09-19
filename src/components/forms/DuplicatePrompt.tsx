@@ -1,7 +1,7 @@
 'use client';
 
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import Link from '@/components/ui/Link';
+import { useRouter } from '@/lib/client/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { StartTime } from '@/components/ui/LocalTime';
 import { UserAvatar } from '@/components/ui/UserAvatar';
@@ -10,6 +10,8 @@ import { AI_FEEDBACK_MAX, draftAsReferences } from '@/lib/duplicateDraft';
 import type { PinFormValues } from '@/lib/pinForm';
 import { pinPath } from '@/lib/seo';
 import type { PinJson } from '@/lib/types';
+import { useT } from '@/lib/client/i18n';
+import { useLocalize } from '@/lib/client/navigation';
 
 // An existing pin the draft would duplicate, as GET /api/pins/duplicates lists it.
 export type DuplicateMatch = { reason: 'similar' | 'sourceUrl'; score: number | null; pin: PinJson };
@@ -29,6 +31,7 @@ export function DuplicatePrompt({
   onPostAnyway: () => void;
 }) {
   const heading = useRef<HTMLHeadingElement>(null);
+  const t = useT();
   useEffect(() => {
     heading.current?.scrollIntoView({ block: 'center', behavior: 'smooth' });
     heading.current?.focus({ preventScroll: true });
@@ -38,12 +41,9 @@ export function DuplicatePrompt({
   return (
     <section aria-labelledby="duplicate-prompt-heading" className="rounded-xl border border-amber-500/40 bg-amber-500/10 p-4">
       <h2 id="duplicate-prompt-heading" ref={heading} tabIndex={-1} className="text-base font-semibold text-ink outline-none">
-        {one ? 'This looks already pinned' : 'This looks already pinned by others'}
+        {one ? t('duplicatePrompt.headingOne') : t('duplicatePrompt.headingMany')}
       </h2>
-      <p className="mt-1 text-sm text-muted">
-        Rather than a second pin for the same event, you can add your link to {one ? 'it' : 'one of them'}, respond to {one ? 'it' : 'one'} with your own pin, or tell
-        the AI what {one ? 'it is' : "they're"} missing.
-      </p>
+      <p className="mt-1 text-sm text-muted">{one ? t('duplicatePrompt.introOne') : t('duplicatePrompt.introMany')}</p>
       <ul className="mt-3 space-y-2">
         {matches.map((match) => (
           <MatchRow key={match.pin.id} match={match} draft={draft} onRespond={onRespond} />
@@ -51,7 +51,7 @@ export function DuplicatePrompt({
       </ul>
       <div className="mt-3 flex justify-end">
         <button type="button" className="btn btn-ghost btn-sm" onClick={onPostAnyway}>
-          {one ? "It's a different event, post my pin" : "None of these, post my pin"}
+          {one ? t('duplicatePrompt.postAnywayOne') : t('duplicatePrompt.postAnywayMany')}
         </button>
       </div>
     </section>
@@ -60,6 +60,8 @@ export function DuplicatePrompt({
 
 function MatchRow({ match, draft, onRespond }: { match: DuplicateMatch; draft: PinFormValues; onRespond: (pin: PinJson) => void }) {
   const router = useRouter();
+  const t = useT();
+  const localize = useLocalize();
   const { pin } = match;
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
@@ -69,7 +71,7 @@ function MatchRow({ match, draft, onRespond }: { match: DuplicateMatch; draft: P
   const [feedbackSent, setFeedbackSent] = useState(false);
 
   const references = draftAsReferences(draft);
-  const why = match.reason === 'sourceUrl' ? 'Same source link' : `Title ${Math.round((match.score ?? 0) * 100)}% similar`;
+  const why = match.reason === 'sourceUrl' ? t('duplicates.sameSource') : t('duplicates.titleSimilar', { percent: Math.round((match.score ?? 0) * 100) });
 
   async function addReferences() {
     setBusy(true);
@@ -81,9 +83,9 @@ function MatchRow({ match, draft, onRespond }: { match: DuplicateMatch; draft: P
         router.push(`${pinPath(pin)}#references-heading`);
         return;
       }
-      setNote('That pin already has your link and its references.');
+      setNote(t('duplicatePrompt.alreadyHas'));
     } catch (err) {
-      setError(err instanceof ApiError && err.status !== 500 ? err.message : 'Could not add your link. Please try again.');
+      setError(err instanceof ApiError && err.status !== 500 ? err.message : t('duplicatePrompt.addFailed'));
     }
     setBusy(false);
   }
@@ -96,7 +98,7 @@ function MatchRow({ match, draft, onRespond }: { match: DuplicateMatch; draft: P
       setFeedbackSent(true);
       setWriting(false);
     } catch (err) {
-      setError(err instanceof ApiError && err.status !== 500 ? err.message : 'Could not save that. Please try again.');
+      setError(err instanceof ApiError && err.status !== 500 ? err.message : t('duplicates.saveFailed'));
     }
     setBusy(false);
   }
@@ -104,7 +106,7 @@ function MatchRow({ match, draft, onRespond }: { match: DuplicateMatch; draft: P
   return (
     <li className="surface px-3 py-2.5" aria-busy={busy}>
       {/* A new tab, so the draft is not lost. */}
-      <a href={pinPath(pin)} target="_blank" rel="noopener" className="text-sm font-medium text-ink hover:text-link hover:no-underline">
+      <a href={localize(pinPath(pin))} target="_blank" rel="noopener" className="text-sm font-medium text-ink hover:text-link hover:no-underline">
         {pin.title}
       </a>
       <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-subtle">
@@ -117,7 +119,7 @@ function MatchRow({ match, draft, onRespond }: { match: DuplicateMatch; draft: P
         <StartTime pin={pin} serverTimeZone="UTC" />
         <span>{why}</span>
         <span className="tabular-nums">
-          {pin.favoriteCount ?? 0} watching · {pin.references?.length ?? 0} {pin.references?.length === 1 ? 'reference' : 'references'}
+          {t('watch.count', { count: pin.favoriteCount ?? 0 })} · {t('duplicatePrompt.references', { count: pin.references?.length ?? 0 })}
         </span>
       </div>
 
@@ -126,17 +128,17 @@ function MatchRow({ match, draft, onRespond }: { match: DuplicateMatch; draft: P
           type="button"
           className="btn btn-primary btn-sm"
           disabled={busy || !references.length}
-          title={references.length ? undefined : 'Add a source URL first'}
+          title={references.length ? undefined : t('duplicatePrompt.sourceFirst')}
           onClick={addReferences}
         >
-          {references.length > 1 ? `Add my link as a reference (+${references.length - 1} found)` : 'Add my link as a reference'}
+          {references.length > 1 ? t('duplicatePrompt.addLinkMore', { count: references.length - 1 }) : t('duplicatePrompt.addLink')}
         </button>
         <button type="button" className="btn btn-secondary btn-sm" disabled={busy} onClick={() => onRespond(pin)}>
-          Respond to it instead
+          {t('duplicatePrompt.respondInstead')}
         </button>
         {feedbackSent ? null : (
           <button type="button" className="btn btn-secondary btn-sm" disabled={busy} aria-expanded={writing} onClick={() => setWriting(!writing)}>
-            Tell the AI what it&apos;s missing
+            {t('duplicatePrompt.tellAi')}
           </button>
         )}
       </div>
@@ -144,23 +146,23 @@ function MatchRow({ match, draft, onRespond }: { match: DuplicateMatch; draft: P
       {writing ? (
         <div className="mt-2">
           <label htmlFor={`ai-feedback-${pin.id}`} className="field-label">
-            What is this pin missing or getting wrong?
+            {t('duplicatePrompt.missingLabel')}
           </label>
           <textarea
             id={`ai-feedback-${pin.id}`}
             rows={3}
             maxLength={AI_FEEDBACK_MAX}
             className="field"
-            placeholder="The launch moved to March; my link has the new date and the price."
+            placeholder={t('duplicatePrompt.missingPlaceholder')}
             value={feedback}
             onChange={(e) => setFeedback(e.target.value)}
           />
           <div className="mt-2 flex justify-end gap-2">
             <button type="button" className="btn btn-ghost btn-sm" onClick={() => setWriting(false)}>
-              Cancel
+              {t('common.cancel')}
             </button>
             <button type="button" className="btn btn-primary btn-sm" disabled={busy || !feedback.trim()} onClick={sendFeedback}>
-              Send to the AI
+              {t('duplicatePrompt.sendToAi')}
             </button>
           </div>
         </div>
@@ -168,13 +170,12 @@ function MatchRow({ match, draft, onRespond }: { match: DuplicateMatch; draft: P
 
       {feedbackSent ? (
         <p role="status" className="mt-2 text-sm text-muted">
-          Thanks, saved for the AI to work into this pin.{' '}
-          <Link href={pinPath(pin)}>View the pin</Link>
+          {t('duplicatePrompt.thanks')} <Link href={pinPath(pin)}>{t('duplicatePrompt.viewPin')}</Link>
         </p>
       ) : null}
       {note ? (
         <p role="status" className="mt-2 text-sm text-muted">
-          {note} <Link href={pinPath(pin)}>View the pin</Link>
+          {note} <Link href={pinPath(pin)}>{t('duplicatePrompt.viewPin')}</Link>
         </p>
       ) : null}
       {error ? (

@@ -5,6 +5,9 @@ import { useTagFoldOpen } from '@/components/timeline/FloatingControls';
 import { Icon } from '@/components/ui/Icon';
 import { canonicalCategory, isCategory } from '@/lib/categories';
 import { parseSearchQuery } from '@/server/util/searchQuery';
+import { useT } from '@/lib/client/i18n';
+import { categoryLabel } from '@/lib/i18n/labels';
+import type { Translator } from '@/lib/i18n/translate';
 
 // Whether the panel was last left open.
 let rememberedOpen = false;
@@ -35,6 +38,7 @@ export function MapCategoryFilter({
 }) {
   // Unique, since Next keeps the previous page's panel mounted (hidden).
   const optionsId = useId();
+  const t = useT();
   const rootRef = useRef<HTMLDivElement>(null);
   const [open, setOpenState] = useState(() => rememberedOpen);
   const setOpen = (next: boolean) => {
@@ -73,7 +77,7 @@ export function MapCategoryFilter({
   useEffect(() => onOpenChange?.(showing), [showing, onOpenChange]);
   const isSelected = (category: string) => selected.some((s) => s.toLowerCase() === category.toLowerCase());
   const options = counts ? categoryOptions(counts, selected) : selected.map((name) => ({ name, count: null }));
-  const summary = categorySummary(selected) || 'All';
+  const summary = categorySummary(selected, t) || t('common.all');
 
   return (
     <div ref={rootRef} className={`floating text-sm ${className}`}>
@@ -86,10 +90,10 @@ export function MapCategoryFilter({
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-controls={optionsId}
-          aria-label={`Category: ${summary}`}
+          aria-label={t('map.categorySummary', { summary })}
           className="absolute inset-0 rounded-[inherit]"
         />
-        <span className="pointer-events-none relative text-subtle">Category</span>
+        <span className="pointer-events-none relative text-subtle">{t('map.category')}</span>
         <span className="pointer-events-none relative min-w-0 truncate font-medium text-ink">{summary}</span>
         {/* Two matching targets. The chevron repeats what the row underneath
             does, so it is hidden from assistive tech and the tab order - it is
@@ -101,7 +105,7 @@ export function MapCategoryFilter({
               type="button"
               onClick={onClear}
               className={`${iconButton} pointer-events-auto`}
-              aria-label="Clear category filter"
+              aria-label={t('map.clearCategory')}
             >
               <Icon name="filter-off" className="size-4" />
             </button>
@@ -115,7 +119,7 @@ export function MapCategoryFilter({
         <div
           id={optionsId}
           role="group"
-          aria-label="Filter by category"
+          aria-label={t('map.filterByCategory')}
           aria-busy={busy || undefined}
           className={`flex max-h-[min(22rem,50dvh)] flex-wrap gap-1.5 overflow-y-auto overscroll-contain px-3 pb-3 max-lg:gap-2 ${inFold ? 'max-xl:max-h-[calc(100dvh-7.5rem)] max-xl:pt-3' : ''} ${open ? '' : 'xl:hidden'}`}
         >
@@ -131,17 +135,17 @@ export function MapCategoryFilter({
                   pressed ? 'bg-accent/15 text-link ring-accent/60' : 'bg-field text-muted ring-line hover:bg-raised hover:text-ink'
                 } ${count === 0 && !pressed ? 'opacity-50' : ''}`}
               >
-                {category}
+                {categoryLabel(t, category)}
                 {count != null ? <span className="text-subtle tabular-nums">{count}</span> : null}
               </button>
             );
           })}
           {!counts ? (
             <p role="status" className="px-1 py-1 text-xs text-subtle">
-              Loading categories…
+              {t('map.loadingCategories')}
             </p>
           ) : !options.length ? (
-            <p className="px-1 py-1 text-xs text-subtle">No pins to filter.</p>
+            <p className="px-1 py-1 text-xs text-subtle">{t('map.noPinsToFilter')}</p>
           ) : null}
         </div>
       ) : null}
@@ -153,8 +157,9 @@ export function MapCategoryFilter({
 const iconButton = '-my-1 rounded-full p-1 text-subtle max-lg:p-2 hover:bg-raised hover:text-ink';
 
 // What is picked, in brief ("Movies", "Movies +2"), or '' for nothing.
-function categorySummary(selected: string[]) {
-  return !selected.length ? '' : selected.length === 1 ? selected[0] : `${selected[0]} +${selected.length - 1}`;
+function categorySummary(selected: string[], t: Translator) {
+  const first = selected.length ? categoryLabel(t, selected[0]) : '';
+  return !selected.length ? '' : selected.length === 1 ? first : `${first} +${selected.length - 1}`;
 }
 
 // The categories a query picks: its tag: terms (and old category: ones) that name one.
@@ -163,8 +168,8 @@ export function queryCategories(query?: string) {
 }
 
 // The value on the floating controls' pill.
-export function categoryPillSummary(query?: string) {
-  return categorySummary(queryCategories(query)) || 'All';
+export function categoryPillSummary(query: string | undefined, t: Translator) {
+  return categorySummary(queryCategories(query), t) || t('common.all');
 }
 
 // The pills: every category with pins (counts keyed by lowercased category),

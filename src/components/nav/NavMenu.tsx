@@ -1,27 +1,30 @@
 'use client';
 
-import Link from 'next/link';
-import { usePathname, useSearchParams } from 'next/navigation';
+import Link from '@/components/ui/Link';
+import { usePathname, useSearchParams } from '@/lib/client/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { useSession } from '@/lib/client/session';
 import { AuthLink, LogoutLink } from './AuthLink';
 import { NotificationBell } from './NotificationBell';
+import { useT } from '@/lib/client/i18n';
+import type { MessageKey } from '@/lib/i18n/translate';
+import { LanguagePicker } from './LanguagePicker';
 
 const itemClass = 'flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-ink hover:bg-raised hover:no-underline';
 const itemIconClass = 'size-4 text-subtle';
 
-type MenuItem = { href: string; label: string; icon: IconName };
+type MenuItem = { href: string; label: MessageKey; icon: IconName };
 
 // The account menu, in groups separated by a rule. Admin tools only for admins.
 // No Watched pins: the search box's Watched toggle sits beside it on wide screens.
 function accountGroups(isAdmin: boolean): MenuItem[][] {
   const groups: MenuItem[][] = [
-    [{ href: '/profile', label: 'Profile & settings', icon: 'user' }],
+    [{ href: '/profile', label: 'nav.profileSettings', icon: 'user' }],
   ];
   if (isAdmin) {
-    groups.push([{ href: '/admin/views', label: 'Admin', icon: 'shield' }]);
+    groups.push([{ href: '/admin/views', label: 'nav.admin', icon: 'shield' }]);
   }
   return groups;
 }
@@ -32,6 +35,7 @@ function accountGroups(isAdmin: boolean): MenuItem[][] {
 // as results.
 export function ViewSwitch({ pathname, className = '' }: { pathname: string; className?: string }) {
   const params = useSearchParams();
+  const t = useT();
   const carry = (keys: string[]) => {
     const search = new URLSearchParams();
     if (pathname === '/' || pathname === '/search' || pathname.startsWith('/map')) {
@@ -47,14 +51,14 @@ export function ViewSwitch({ pathname, className = '' }: { pathname: string; cla
   const toTimeline = carry(searching ? ['q', 'f', 'sort', 'posted', 'past', 'future'] : ['posted']);
   const query = (search: URLSearchParams) => (search.size ? `?${search.toString()}` : '');
   const views = [
-    { href: `${searching ? '/search' : '/'}${query(toTimeline)}`, label: 'Timeline', icon: 'timeline', current: pathname === '/' || pathname === '/search' },
-    { href: `/map${query(toMap)}`, label: 'Map', icon: 'map', current: pathname.startsWith('/map') },
+    { href: `${searching ? '/search' : '/'}${query(toTimeline)}`, key: 'timeline', label: t('nav.timeline'), icon: 'timeline', current: pathname === '/' || pathname === '/search' },
+    { href: `/map${query(toMap)}`, key: 'map', label: t('nav.map'), icon: 'map', current: pathname.startsWith('/map') },
   ] as const;
   return (
     <div className={`flex rounded-full bg-field p-0.5 ring-1 ring-line ring-inset ${className}`}>
       {views.map((view) => (
         <Link
-          key={view.label}
+          key={view.key}
           href={view.href}
           aria-current={view.current ? 'page' : undefined}
           className={`flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium transition-colors hover:no-underline ${
@@ -70,6 +74,7 @@ export function ViewSwitch({ pathname, className = '' }: { pathname: string; cla
 }
 
 function MenuLinks({ groups }: { groups: MenuItem[][] }) {
+  const t = useT();
   return (
     <>
       {groups.map((group, index) => (
@@ -77,7 +82,7 @@ function MenuLinks({ groups }: { groups: MenuItem[][] }) {
           {group.map((item) => (
             <Link key={item.href} href={item.href} className={itemClass}>
               <Icon name={item.icon} className={itemIconClass} />
-              {item.label}
+              {t(item.label)}
             </Link>
           ))}
         </div>
@@ -85,7 +90,7 @@ function MenuLinks({ groups }: { groups: MenuItem[][] }) {
       <div className="py-1.5">
         <LogoutLink className={itemClass}>
           <Icon name="logout" className={itemIconClass} />
-          Log out
+          {t('nav.logOut')}
         </LogoutLink>
       </div>
     </>
@@ -93,11 +98,12 @@ function MenuLinks({ groups }: { groups: MenuItem[][] }) {
 }
 
 function SignedInAs({ userName, pictureUrl }: { userName: string; pictureUrl?: string | null }) {
+  const t = useT();
   return (
     <div className="flex items-center gap-2.5 border-b border-line px-3 py-2.5">
       <UserAvatar userName={userName} pictureUrl={pictureUrl} className="size-8 text-sm" />
       <div className="min-w-0">
-        <div className="text-xs text-subtle">Signed in as</div>
+        <div className="text-xs text-subtle">{t('nav.signedInAs')}</div>
         <div className="truncate text-sm font-semibold text-ink">{userName}</div>
       </div>
     </div>
@@ -110,6 +116,7 @@ function SignedInAs({ userName, pictureUrl }: { userName: string; pictureUrl?: s
 export function NavMenu() {
   const pathname = usePathname();
   const { status, user, isAdmin } = useSession();
+  const t = useT();
   const [accountOpen, setAccountOpen] = useState(false);
   const accountRef = useRef<HTMLDivElement>(null);
 
@@ -140,25 +147,26 @@ export function NavMenu() {
     !user && status === 'ready' ? (
       <>
         <AuthLink to="/login" className="btn btn-ghost py-1.5">
-          Log in
+          {t('nav.logIn')}
         </AuthLink>
         <AuthLink to="/signup" className="btn btn-primary py-1.5">
-          Sign up
+          {t('nav.signUp')}
         </AuthLink>
       </>
     ) : null;
 
   return (
     <>
-      <nav aria-label="Main" className="hidden items-center gap-2 lg:flex">
+      <nav aria-label={t('nav.main')} className="hidden items-center gap-2 lg:flex">
         <ViewSwitch pathname={pathname} />
+        <LanguagePicker className="px-1" />
         {user ? (
           <Link
             href="/create"
             className="btn btn-primary group gap-1.5 rounded-full py-1.5 pr-3.5 pl-2.5 font-medium shadow-sm ring-1 shadow-accent/30 ring-white/10 ring-inset"
           >
             <Icon name="plus" className="size-4 transition-transform duration-200 group-hover:rotate-90" />
-            Create
+            {t('nav.create')}
           </Link>
         ) : (
           guestActions

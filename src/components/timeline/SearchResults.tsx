@@ -14,7 +14,7 @@ import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
 import { useQueryState } from '@/lib/client/urlState';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { daysBetween, dayKeyIn, monthDayOf } from '@/lib/format';
-import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, eventSpanSummary, formatSpan, offsetDate, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSpan';
+import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, eventSpanSummary, offsetDate, SPAN_OPTIONS, spanLabel, spanPhrase, spanToParam } from '@/lib/postedSpan';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, pinDayKey, pinTense, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
@@ -23,15 +23,18 @@ import { TagCloud, tagPillSummary } from './TagCloud';
 import { FloatingControls } from './FloatingControls';
 import { TimeBlock, TodayMarker } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
+import { useT } from '@/lib/client/i18n';
+import { withPageLang } from '@/lib/client/navigation';
 
 type SortBy = 'date' | 'relevance';
 
 const rail = "relative lg:min-h-[calc(100dvh-52px-6rem)] lg:before:absolute lg:before:top-0 lg:before:-bottom-24 lg:before:left-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']";
 
 function SortToggle({ value, onChange, className = '' }: { value: SortBy; onChange: (value: SortBy) => void; className?: string }) {
+  const t = useT();
   return (
-    <div role="group" aria-label="Sort results by" className={`flex items-center gap-1 p-1.5 text-sm ${className}`}>
-      <span className="px-2 text-subtle">Sort by</span>
+    <div role="group" aria-label={t('search.sortResultsBy')} className={`flex items-center gap-1 p-1.5 text-sm ${className}`}>
+      <span className="px-2 text-subtle">{t('search.sortBy')}</span>
       {(['relevance', 'date'] as const).map((option) => (
         <button
           key={option}
@@ -40,7 +43,7 @@ function SortToggle({ value, onChange, className = '' }: { value: SortBy; onChan
           onClick={() => onChange(option)}
           className={`flex-1 rounded-lg px-2.5 py-1 font-medium capitalize max-lg:py-2 transition-colors ${value === option ? 'bg-accent text-white' : 'text-muted hover:bg-raised hover:text-ink'}`}
         >
-          {option}
+          {t(option === 'relevance' ? 'search.sortRelevance' : 'search.sortDate')}
         </button>
       ))}
     </div>
@@ -57,7 +60,7 @@ const MAX_RETURN_PAGES = 40;
 type ResultList = { pins: CardPin[]; links: Links; status: 'loading' | 'ready' | 'error' };
 
 async function fetchSearchPage(query: string): Promise<{ pins: CardPin[]; links: Links }> {
-  const res = await fetch(`/api/pins/search${query}`, { credentials: 'same-origin' });
+  const res = await fetch(withPageLang(`/api/pins/search${query}`), { credentials: 'same-origin' });
   if (!res.ok) {
     throw new Error(`search page failed: ${res.status}`);
   }
@@ -110,6 +113,7 @@ export function SearchResults({
   video: TimelineVideoSetting;
 }) {
   const timeZone = useTimeZone(serverTimeZone);
+  const t = useT();
   const [postedWithin, setPostedWithin] = useState<string | null>(initialView.postedWithin ?? DEFAULT_POSTED_WITHIN);
   // Any search can sort: a filter-only one (tag:, user:) has no scores, so
   // by relevance it keeps date order but still gets the grid and start filter.
@@ -373,19 +377,19 @@ export function SearchResults({
     return () => observer.disconnect();
   }, [loadMore, sortBy]);
 
-  const phrase = (formatSpan(postedWithin) || '').replace(/^1 /, '');
+  const phrase = spanPhrase(postedWithin, t.locale);
 
   return (
     <TimelineVideoProvider setting={video}>
       <div className="px-3 pb-24 lg:px-4 xl:pr-[288px]">
         <FloatingControls
-          summaryCaption={searchedUser ? undefined : 'Posted within'}
-          summary={searchedUser ? searchedUser.userName : spanLabel(postedWithin)}
+          summaryCaption={searchedUser ? undefined : t('controls.postedWithin')}
+          summary={searchedUser ? searchedUser.userName : spanLabel(postedWithin, t.locale)}
           summaryIsPostedWithin={!searchedUser}
           onToday={sortBy === 'date' && bags.length && showsToday ? holdToday : undefined}
           sort={canSort ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : undefined}
           tags={{
-            summary: tagPillSummary(query),
+            summary: tagPillSummary(query, t.locale),
             control: (
               <TagCloud
                 query={query}
@@ -397,7 +401,7 @@ export function SearchResults({
           span={
             sortBy === 'relevance'
               ? {
-                  summary: eventSpanSummary(startSpan.past, startSpan.future),
+                  summary: eventSpanSummary(startSpan.past, startSpan.future, t.locale),
                   control: <TimeRangeSlider steps={EVENT_SPAN_OPTIONS} past={startSpan.past} future={startSpan.future} onChange={changeStartSpan} />,
                 }
               : undefined
@@ -425,21 +429,21 @@ export function SearchResults({
 
         {shown?.status === 'loading' || restoring ? (
           <p className="mt-16 text-center text-lg text-subtle" role="status">
-            Searching…
+            {t('search.searching')}
           </p>
         ) : null}
-        {shown?.status === 'error' ? <p className="mt-16 text-center text-lg text-subtle">Search is unavailable right now. Please try again in a bit.</p> : null}
+        {shown?.status === 'error' ? <p className="mt-16 text-center text-lg text-subtle">{t('search.unavailable')}</p> : null}
         {shown?.status === 'ready' && !shown.pins.length ? (
           <p className="mt-16 text-center text-lg text-subtle">
             {sortBy === 'relevance' && (startSpan.past || startSpan.future)
-              ? 'No results start in this range.'
+              ? t('search.noneInRange')
               : postedWithin
-              ? `No results posted in the last ${phrase}.`
+              ? t('search.nonePosted', { span: phrase })
               : onlyWatched
                 ? query.trim()
-                  ? 'None of the pins you watch match this search.'
-                  : "You aren't watching any pins yet. Tap the eye on a pin to watch it."
-                : 'No results found, please try a different search'}
+                  ? t('search.noneWatchedMatch')
+                  : t('search.noneWatched')
+                : t('search.noResults')}
           </p>
         ) : null}
 

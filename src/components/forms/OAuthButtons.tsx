@@ -1,16 +1,22 @@
 'use client';
 
+import { useLocale, useT } from '@/lib/client/i18n';
+import { localizePath } from '@/lib/i18n/config';
+
 // Sign in with Google, Facebook or Apple. On the sign-up page the chosen
 // @handle is left in a short-lived cookie for the callback to give a new
 // account; on the login page, the page to go back to afterwards.
 export function OAuthButtons({ handle, redirect, validate }: { handle?: string; redirect?: string; validate?: () => boolean }) {
+  const locale = useLocale();
   function go(provider: 'google' | 'facebook' | 'apple') {
     if (validate && !validate()) return;
     // Apple posts its callback back cross-site, and only a SameSite=None
     // cookie rides along with that. It is https-only, so Secure costs nothing.
     const sameSite = provider === 'apple' ? 'samesite=none; secure' : 'samesite=lax';
     document.cookie = handle && handle.length > 1 ? `handle=${encodeURIComponent(handle)}; path=/; max-age=600; ${sameSite}` : 'handle=; path=/; max-age=0';
-    document.cookie = redirect && redirect !== '/' ? `after_login=${encodeURIComponent(redirect)}; path=/; max-age=600; ${sameSite}` : 'after_login=; path=/; max-age=0';
+    // The callback is outside the languages, so the page to come back to goes in this one.
+    const target = localizePath(redirect || '/', locale);
+    document.cookie = target !== '/' ? `after_login=${encodeURIComponent(target)}; path=/; max-age=600; ${sameSite}` : 'after_login=; path=/; max-age=0';
     // A full navigation: /auth/* is a route handler that redirects to the provider.
     // eslint-disable-next-line @next/next/no-location-assign-relative-destination
     window.location.href = `/auth/${provider}`;
@@ -60,11 +66,12 @@ function AppleMark() {
   );
 }
 
-export function OrDivider({ children = 'or' }: { children?: React.ReactNode }) {
+export function OrDivider({ children }: { children?: React.ReactNode }) {
+  const t = useT();
   return (
     <div className="flex items-center gap-3 text-xs tracking-wider text-subtle uppercase">
       <span className="h-px flex-1 bg-line" />
-      {children}
+      {children ?? t('common.or')}
       <span className="h-px flex-1 bg-line" />
     </div>
   );

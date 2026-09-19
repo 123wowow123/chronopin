@@ -1,6 +1,6 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter } from '@/lib/client/navigation';
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { parseLinkHeader } from '@/lib/client/api';
 import { onLive } from '@/lib/client/liveFeed';
@@ -13,7 +13,7 @@ import { useTodayHold } from '@/lib/client/todayHold';
 import { useQueryState } from '@/lib/client/urlState';
 import { browserTimeZone, useTimeZone } from '@/lib/client/timeZone';
 import { daysBetween, dayKeyIn, monthDayOf } from '@/lib/format';
-import { DEFAULT_POSTED_WITHIN, formatSpan, SPAN_OPTIONS, spanLabel, spanToParam } from '@/lib/postedSpan';
+import { DEFAULT_POSTED_WITHIN, SPAN_OPTIONS, spanLabel, spanPhrase, spanToParam } from '@/lib/postedSpan';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
@@ -27,6 +27,8 @@ import { NewPins } from './NewPins';
 import { TimeBlock, TodayMarker } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
 import { TrendingPins } from './TrendingPins';
+import { useT } from '@/lib/client/i18n';
+import { withPageLang } from '@/lib/client/navigation';
 
 type Links = { previous?: string; next?: string };
 
@@ -63,7 +65,7 @@ type Focus = { id: number; utcStartDateTime: string; allDay?: boolean };
 const NO_TODAY_MARKER: ReturnType<typeof resolveTodayMarker> = { index: -1, atEnd: false, todayBagIndex: -1 };
 
 async function fetchPage(query: string): Promise<{ page: TimelinePage; links: Links }> {
-  const res = await fetch(`/api/main${query}`, { credentials: 'same-origin' });
+  const res = await fetch(withPageLang(`/api/main${query}`), { credentials: 'same-origin' });
   if (!res.ok) {
     throw new Error(`timeline page failed: ${res.status}`);
   }
@@ -129,6 +131,7 @@ export function Timeline({
   preference: UserPreference | null;
 }) {
   const timeZone = useTimeZone(serverTimeZone);
+  const t = useT();
   const [pins, setPins] = useState(initialPins);
   const [newPins, setNewPins] = useState(initialNewPins);
   const [dateTimes, setDateTimes] = useState(initialDateTimes);
@@ -432,16 +435,16 @@ export function Timeline({
   }
 
   const empty = !bags.length;
-  const phrase = (formatSpan(postedWithin) || '').replace(/^1 /, '');
+  const phrase = spanPhrase(postedWithin, t.locale);
 
   return (
     <TimelineVideoProvider setting={video}>
       <div className="px-[max(0.75rem,env(safe-area-inset-left))] pb-24 lg:px-4 xl:pr-[288px]">
         <FloatingControls
-          summaryCaption="Posted within"
-          summary={spanLabel(postedWithin)}
+          summaryCaption={t('controls.postedWithin')}
+          summary={spanLabel(postedWithin, t.locale)}
           onToday={goToToday}
-          tags={{ summary: tagPillSummary(), control: <TagCloud postedWithin={postedWithin} /> }}
+          tags={{ summary: tagPillSummary(undefined, t.locale), control: <TagCloud postedWithin={postedWithin} /> }}
           aside={
             // Needs room for trending's heading and one row (basis-28), or both
             // panels go. Inside, new pins only shows under the whole of trending.
@@ -487,11 +490,11 @@ export function Timeline({
 
         <div ref={bottomRef} aria-hidden className="h-px" />
 
-        {status === 'loading' ? <p className="mt-16 text-center text-subtle" role="status">Loading…</p> : null}
-        {status === 'error' ? <p className="mt-16 text-center text-lg text-subtle">Oops, something went wrong. Please try again in a bit...</p> : null}
+        {status === 'loading' ? <p className="mt-16 text-center text-subtle" role="status">{t('common.loading')}</p> : null}
+        {status === 'error' ? <p className="mt-16 text-center text-lg text-subtle">{t('timeline.error')}</p> : null}
         {status === 'ready' && empty ? (
           <p className="mt-16 text-center text-lg text-subtle">
-            {postedWithin ? `No pins posted in the last ${phrase}.` : 'Oops, something went wrong. Please try again in a bit...'}
+            {postedWithin ? t('timeline.noPinsPosted', { span: phrase }) : t('timeline.error')}
           </p>
         ) : null}
       </div>

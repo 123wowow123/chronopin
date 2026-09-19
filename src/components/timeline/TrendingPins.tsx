@@ -1,17 +1,19 @@
 'use client';
 
-import Link from 'next/link';
+import Link from '@/components/ui/Link';
 import { PinThumb } from '@/components/pin/PinThumb';
 import { Icon } from '@/components/ui/Icon';
 import { useWholeRows } from '@/lib/client/wholeRows';
-import { compactCount, pluralize } from '@/lib/format';
+import { compactCount } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
 import type { TrendingPin } from '@/lib/types';
+import { useT } from '@/lib/client/i18n';
+import type { Translator } from '@/lib/i18n/translate';
 
 // How much a pin's views grew on the stretch before: a percentage, or "new"
 // when nobody viewed it then.
-function growth(pin: TrendingPin): string {
-  if (!pin.previousViews) return 'New';
+function growth(pin: TrendingPin, t: Translator): string {
+  if (!pin.previousViews) return t('trending.new');
   return `+${Math.round(((pin.views - pin.previousViews) / pin.previousViews) * 100)}%`;
 }
 
@@ -19,13 +21,14 @@ function growth(pin: TrendingPin): string {
 // screens. Nothing shows until some pin is trending.
 export function TrendingPins({ pins, days }: { pins: TrendingPin[]; days: number }) {
   const ref = useWholeRows<HTMLElement>(pins);
+  const t = useT();
   if (!pins.length) return null;
   return (
     <section ref={ref} aria-labelledby="trending-heading" className="floating flex min-h-0 flex-col text-sm">
       <h2 id="trending-heading" className="flex shrink-0 items-center gap-2 px-3.5 pt-2.5 pb-1.5">
         <Icon name="trending-up" className="size-4 text-success" />
-        <span className="font-medium text-ink">Trending</span>
-        <span className="ml-auto text-xs text-subtle">Last {pluralize('day', days)}</span>
+        <span className="font-medium text-ink">{t('trending.heading')}</span>
+        <span className="ml-auto text-xs text-subtle">{t('trending.lastDays', { count: days })}</span>
       </h2>
       {/* Only whole rows, never a scrollbar: a row that does not fit wraps into
           a second column, which the clipping hides. */}
@@ -39,8 +42,8 @@ export function TrendingPins({ pins, days }: { pins: TrendingPin[]; days: number
                   {pin.title}
                 </span>
                 <span className="flex items-center gap-1.5 text-xs text-subtle tabular-nums">
-                  {compactCount(pin.views)} {pluralize('view', pin.views, false)}
-                  <span className="font-medium text-success">{growth(pin)}</span>
+                  {t('trending.views', { count: pin.views, compact: compactCount(pin.views) })}
+                  <span className="font-medium text-success">{growth(pin, t)}</span>
                 </span>
               </span>
             </Link>

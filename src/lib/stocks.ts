@@ -2,6 +2,8 @@
 // reading Nasdaq's public quote API (api.nasdaq.com, keyless, US listings,
 // quotes delayed ~15 minutes). Pure: the server fetches (src/server/stocks.ts).
 
+import type { Translator } from './i18n/translate';
+
 export type AssetClass = 'stocks' | 'etf';
 
 export type StockPrice = { price: number; at: string };
@@ -208,9 +210,15 @@ const RELATION_LABEL: Record<StockRelation, string> = { company: 'Company', rela
 // customer for Sony's camera image sensors." The note is the clause that
 // follows the name, used as written (the prompts ask for it in that form);
 // the symbol is left out when the name is the symbol.
-export function stockTidbit(stock: { symbol: string; name: string | null; relation: StockRelation; note: string | null }): string {
+// With a translator the relation reads in the page's language; the note is
+// the scraper's English either way.
+export function stockTidbit(stock: { symbol: string; name: string | null; relation: StockRelation; note: string | null }, t?: Translator): string {
   const name = shortCompanyName(stock.name) || stock.symbol;
   const who = name === stock.symbol ? name : `${name} (${stock.symbol})`;
   const note = stock.note?.trim().replace(/[.\s]+$/, '');
+  if (t) {
+    const relation = t(`stocks.relations.${stock.relation}`);
+    return `${note ? t('stocks.relationNote', { relation, who, note }) : t('stocks.relation', { relation, who })}.`;
+  }
   return `${RELATION_LABEL[stock.relation]}: ${who}${note ? `, ${note}` : ''}.`;
 }

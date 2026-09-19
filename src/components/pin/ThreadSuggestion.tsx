@@ -1,11 +1,12 @@
 'use client';
 
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import Link from '@/components/ui/Link';
+import { useRouter } from '@/lib/client/navigation';
 import { useEffect, useState } from 'react';
 import { api, ApiError } from '@/lib/client/api';
 import { useSession } from '@/lib/client/session';
 import { pinPath } from '@/lib/seo';
+import { useT } from '@/lib/client/i18n';
 
 type PinRef = { id: number; title: string };
 type Suggestion = { parent?: PinRef; current?: PinRef | null };
@@ -30,6 +31,7 @@ export function ThreadSuggestion({ pinId }: { pinId: number }) {
   const [suggestion, setSuggestion] = useState<Suggestion | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const t = useT();
 
   useEffect(() => {
     if (!isLoggedIn) return;
@@ -50,7 +52,7 @@ export function ThreadSuggestion({ pinId }: { pinId: number }) {
       setSuggestion(null);
       router.refresh();
     } catch (err) {
-      setError(err instanceof ApiError ? err.message : 'Could not move it. Please try again.');
+      setError(err instanceof ApiError ? err.message : t('thread.moveFailed'));
     } finally {
       setBusy(false);
     }
@@ -66,21 +68,19 @@ export function ThreadSuggestion({ pinId }: { pinId: number }) {
   return (
     <div className="mt-3 rounded-lg bg-raised p-3 text-sm ring-1 ring-line ring-inset">
       <p>
-        {suggestion.current ? (
-          <>
-            This pin responds to <Link href={pinPath(suggestion.current)}>{suggestion.current.title}</Link>. In its show&apos;s thread it would follow{' '}
-          </>
-        ) : (
-          <>This pin stands on its own. In its show&apos;s thread it would follow </>
-        )}
-        <Link href={pinPath(parent)}>{parent.title}</Link>.
+        {suggestion.current
+          ? t.rich('thread.respondsTo', {
+              current: () => <Link href={pinPath(suggestion.current!)}>{suggestion.current!.title}</Link>,
+              parent: () => <Link href={pinPath(parent)}>{parent.title}</Link>,
+            })
+          : t.rich('thread.standsAlone', { parent: () => <Link href={pinPath(parent)}>{parent.title}</Link> })}
       </p>
       <div className="mt-2 flex gap-2">
         <button type="button" className="btn btn-secondary btn-sm" onClick={move} disabled={busy}>
-          Move it there
+          {t('thread.moveThere')}
         </button>
         <button type="button" className="btn btn-ghost btn-sm" onClick={keep} disabled={busy}>
-          Keep it here
+          {t('thread.keepHere')}
         </button>
       </div>
       {error ? <p role="alert" className="mt-2 text-xs text-danger">{error}</p> : null}

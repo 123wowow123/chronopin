@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { blobUrl, siteDescription, siteName, siteUrl } from './appConfig';
 import { slugify } from './categories';
 import { plainText, reviewRatings } from './format';
+import { DEFAULT_LOCALE, INTL_LOCALES, languageAlternates, localizePath, type Locale } from './i18n/config';
 import type { PinJson } from './types';
 
 export function absoluteUrl(path: string): string {
@@ -13,8 +14,9 @@ export function absoluteUrl(path: string): string {
 // The canonical path of a pin page: its id, then its title as a slug for
 // readable, keyword-bearing URLs. The id alone is enough to find the pin, so
 // a renamed pin's old links still resolve (and redirect to the new slug).
-export function pinPath(pin: Pick<PinJson, 'id' | 'title'>): string {
-  const slug = slugify(pin.title || '').slice(0, 80).replace(/-+$/, '');
+// A translated pin keeps its own title's slug: one slug in every language.
+export function pinPath(pin: Pick<PinJson, 'id' | 'title'> & { originalTitle?: string }): string {
+  const slug = slugify(pin.originalTitle || pin.title || '').slice(0, 80).replace(/-+$/, '');
   return slug ? `/pin/${pin.id}/${slug}` : `/pin/${pin.id}`;
 }
 
@@ -34,8 +36,9 @@ export function pinDescription(pin: PinJson): string {
   return plainText(pin.description || pin.longFormSummary || `${pin.title} on ${siteName}`, 160);
 }
 
-export function pinMetadata(pin: PinJson): Metadata {
-  const path = pinPath(pin);
+export function pinMetadata(pin: PinJson, locale: Locale = DEFAULT_LOCALE): Metadata {
+  const links = languageAlternates(pinPath(pin), locale);
+  const path = links.canonical;
   const description = pinDescription(pin);
   // The pin's own image, or a generated share card when it has none.
   const image = pinImage(pin);
@@ -46,10 +49,11 @@ export function pinMetadata(pin: PinJson): Metadata {
   return {
     title: pin.title,
     description,
-    alternates: { canonical: path },
+    alternates: links,
     openGraph: {
       type: 'article',
       url: path,
+      locale: INTL_LOCALES[locale].replace('-', '_'),
       title: pin.title,
       description,
       siteName,
@@ -70,8 +74,8 @@ export function pinMetadata(pin: PinJson): Metadata {
 // JSON-LD for a pin page: the page is an Article about the pin, and when the
 // pin has a place it is also about an Event there. Google only treats a page
 // as an event with a location, so pins without one are not marked as events.
-export function pinJsonLd(pin: PinJson) {
-  const url = absoluteUrl(pinPath(pin));
+export function pinJsonLd(pin: PinJson, locale: Locale = DEFAULT_LOCALE) {
+  const url = absoluteUrl(localizePath(pinPath(pin), locale));
   const image = pinImage(pin);
   const description = pinDescription(pin);
   const organizer = pin.company
@@ -122,6 +126,7 @@ export function pinJsonLd(pin: PinJson) {
     '@type': 'Article',
     '@id': `${url}#article`,
     mainEntityOfPage: url,
+    inLanguage: INTL_LOCALES[locale],
     headline: pin.title.slice(0, 110),
     description,
     ...(image ? { image: [image.url] } : {}),

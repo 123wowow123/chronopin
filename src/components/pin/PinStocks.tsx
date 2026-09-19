@@ -5,30 +5,32 @@ import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
 import { useStockQuote, watchStockQuotes } from '@/lib/client/stockQuotes';
 import { changeSince, closeKnown, stockTidbit, type PinStock, type StockPrice, type StockRelation } from '@/lib/stocks';
+import { useLocale, useT } from '@/lib/client/i18n';
+import { dateFormat } from '@/lib/format';
+import { INTL_LOCALES, type Locale } from '@/lib/i18n/config';
+import { stockFormats } from '@/lib/i18n/numbers';
+import type { MessageKey, Translator } from '@/lib/i18n/translate';
 
-const GROUPS: { relation: StockRelation; heading: string }[] = [
-  { relation: 'company', heading: 'Company' },
-  { relation: 'related', heading: 'Related companies' },
-  { relation: 'supplier', heading: 'Suppliers' },
+const GROUPS: { relation: StockRelation; heading: MessageKey }[] = [
+  { relation: 'company', heading: 'stocks.company' },
+  { relation: 'related', heading: 'stocks.related' },
+  { relation: 'supplier', heading: 'stocks.suppliers' },
 ];
 
-const usd = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
 // Closes and start days are market days: shown as the day they are, in New York.
-const marketDay = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'America/New_York' });
-const marketDayShort = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', timeZone: 'America/New_York' });
+const marketDay = (locale: Locale) => dateFormat(INTL_LOCALES[locale], { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'America/New_York' });
+const marketDayShort = (locale: Locale) => dateFormat(INTL_LOCALES[locale], { month: 'short', day: 'numeric', timeZone: 'America/New_York' });
 // This year's days go without the year, so a row fits a phone.
-const priceDay = (at: string) => {
+const priceDay = (at: string, locale: Locale) => {
   const d = new Date(at);
-  return d.getUTCFullYear() === new Date().getUTCFullYear() ? marketDayShort.format(d) : marketDay.format(d);
+  return d.getUTCFullYear() === new Date().getUTCFullYear() ? marketDayShort(locale).format(d) : marketDay(locale).format(d);
 };
-const updated = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit' });
-const dayOnly = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
 // Why a start date has no close: its market day has not closed yet, or it is
 // older than Nasdaq's history (10 years) or before the listing.
-function missingClose(day: string): string {
-  const date = dayOnly.format(new Date(`${day}T00:00:00Z`));
-  return closeKnown(day) ? `No close on record for ${date}` : `Close on ${date}, once the market has closed`;
+function missingClose(day: string, t: Translator): string {
+  const date = stockFormats(t.locale).dayOnly.format(new Date(`${day}T00:00:00Z`));
+  return closeKnown(day) ? t('stocks.noClose', { date }) : t('stocks.closeOnce', { date });
 }
 
 function Change({ from, to, suffix }: { from: number; to: number | null | undefined; suffix?: string }) {
@@ -44,17 +46,19 @@ function Change({ from, to, suffix }: { from: number; to: number | null | undefi
 }
 
 function Snapshot({ label, price, pending, live }: { label: React.ReactNode; price: StockPrice | null; pending?: string; live: number | null }) {
+  const t = useT();
+  const { usd } = stockFormats(t.locale);
   return (
     <div className="flex flex-wrap items-baseline gap-x-2">
       <span className="w-24 shrink-0 text-subtle sm:w-36">{label}</span>
       {price ? (
         <>
           <span className="font-medium tabular-nums">{usd.format(price.price)}</span>
-          <span className="text-xs text-subtle">({priceDay(price.at)})</span>
-          <Change from={price.price} to={live} suffix="since" />
+          <span className="text-xs text-subtle">({priceDay(price.at, t.locale)})</span>
+          <Change from={price.price} to={live} suffix={t('stocks.since')} />
         </>
       ) : (
-        <span className="text-subtle">{pending ?? 'No price on record'}</span>
+        <span className="text-subtle">{pending ?? t('stocks.noPrice')}</span>
       )}
     </div>
   );
@@ -64,6 +68,7 @@ function Snapshot({ label, price, pending, live }: { label: React.ReactNode; pri
 // details open under the pills (one at a time).
 function TickerPill({ stock, open, onToggle }: { stock: PinStock; open: boolean; onToggle: () => void }) {
   const quote = useStockQuote(stock.symbol);
+  const { usd } = stockFormats(useLocale());
   return (
     <button
       type="button"
@@ -97,21 +102,22 @@ function TickerPill({ stock, open, onToggle }: { stock: PinStock; open: boolean;
 // on each start date against the live one.
 function TickerDetails({ stock }: { stock: PinStock }) {
   const quote = useStockQuote(stock.symbol);
+  const t = useT();
   const live = quote?.price ?? null;
   const [current, ...earlier] = stock.starts;
   return (
     <div id="stock-details" className="surface flex flex-col gap-1 px-4 py-3 text-sm">
-      <p className="mb-1 text-ink/90">{stockTidbit(stock)}</p>
-      <Snapshot label="Posted" price={stock.posted} live={live} />
+      <p className="mb-1 text-ink/90">{stockTidbit(stock, t)}</p>
+      <Snapshot label={t('stocks.posted')} price={stock.posted} live={live} />
       {current ? (
-        <Snapshot label={`Start date${current.current ? '' : ' (earlier)'}`} price={current.price} pending={missingClose(current.day)} live={live} />
+        <Snapshot label={current.current ? t('stocks.startDate') : t('stocks.startDateEarlier')} price={current.price} pending={missingClose(current.day, t)} live={live} />
       ) : null}
       {earlier.map((start) => (
         <Snapshot
           key={start.utcStartDateTime}
-          label={`Earlier start, ${dayOnly.format(new Date(`${start.day}T00:00:00Z`))}`}
+          label={t('stocks.earlierStart', { date: stockFormats(t.locale).dayOnly.format(new Date(`${start.day}T00:00:00Z`)) })}
           price={start.price}
-          pending={missingClose(start.day)}
+          pending={missingClose(start.day, t)}
           live={live}
         />
       ))}
@@ -122,7 +128,7 @@ function TickerDetails({ stock }: { stock: PinStock }) {
           rel="noopener nofollow"
           className="inline-flex items-center gap-1 text-subtle hover:text-link hover:no-underline"
         >
-          {stock.symbol} on Yahoo Finance
+          {t('stocks.onYahoo', { symbol: stock.symbol })}
           <Icon name="external" className="size-3" />
         </a>
       </div>
@@ -133,10 +139,13 @@ function TickerDetails({ stock }: { stock: PinStock }) {
 // When the prices were read, once for all of them: they share a feed.
 function QuoteNote({ symbol }: { symbol: string }) {
   const quote = useStockQuote(symbol);
+  const t = useT();
   if (!quote) return null;
+  const updated = dateFormat(INTL_LOCALES[t.locale], { hour: 'numeric', minute: '2-digit' });
   return (
     <p className="text-xs text-subtle">
-      Nasdaq, delayed{quote.marketStatus ? ` · market ${quote.marketStatus.toLowerCase()}` : ''} · updated {updated.format(new Date(quote.fetchedAt))}
+      {t('stocks.nasdaqDelayed')}
+      {quote.marketStatus ? ` · ${t('stocks.market', { status: quote.marketStatus.toLowerCase() })}` : ''} · {t('stocks.updated', { time: updated.format(new Date(quote.fetchedAt)) })}
     </p>
   );
 }
@@ -148,6 +157,7 @@ function QuoteNote({ symbol }: { symbol: string }) {
 export function PinStocks({ pinId }: { pinId: number }) {
   const [stocks, setStocks] = useState<PinStock[] | null>(null);
   const [openSymbol, setOpenSymbol] = useState<string | null>(null);
+  const t = useT();
 
   useEffect(() => {
     let live = true;
@@ -169,13 +179,13 @@ export function PinStocks({ pinId }: { pinId: number }) {
   return (
     <section aria-labelledby="stocks-heading" className="mb-4 flex flex-col gap-2">
       <h2 id="stocks-heading" className="sr-only">
-        Stocks
+        {t('stocks.heading')}
       </h2>
       {GROUPS.map(({ relation: group, heading }) => {
         const shown = stocks.filter((stock) => stock.relation === group);
         return shown.length ? (
           <div key={group} className="flex flex-wrap items-center gap-1.5">
-            <h3 className="mr-1 w-full text-[11px] font-semibold tracking-wider text-subtle uppercase sm:w-auto">{heading}</h3>
+            <h3 className="mr-1 w-full text-[11px] font-semibold tracking-wider text-subtle uppercase sm:w-auto">{t(heading)}</h3>
             {shown.map((stock) => (
               <TickerPill key={stock.symbol} stock={stock} open={stock.symbol === openSymbol} onToggle={() => setOpenSymbol((o) => (o === stock.symbol ? null : stock.symbol))} />
             ))}

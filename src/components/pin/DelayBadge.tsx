@@ -1,3 +1,6 @@
+'use client';
+
+import { useT } from '@/lib/client/i18n';
 import { pinDelay } from '@/lib/delay';
 import { formatDayKey } from '@/lib/format';
 import type { PinJson } from '@/lib/types';
@@ -10,31 +13,35 @@ import type { PinJson } from '@/lib/types';
 const isEstimate = (reasoning?: string) => /^\s*estimated\b/i.test(reasoning || '');
 
 export function DelayBadge({ pin }: { pin: Pick<PinJson, 'originalStartDate' | 'utcStartDateTime' | 'delayReasoning'> }) {
-  const delay = pinDelay(pin);
+  const t = useT();
+  const delay = pinDelay(pin, t.locale);
   if (!delay) {
     return null;
   }
   const estimate = isEstimate(pin.delayReasoning);
+  const from = formatDayKey(delay.from, t.locale);
   return (
     <span
       className="rounded-full bg-red-500/15 px-2 py-px text-[10px] font-semibold tracking-wider text-danger-soft uppercase tabular-nums not-italic ring-1 ring-red-500/30 ring-inset"
-      title={`${estimate ? 'An estimated' : 'A'} ${delay.label} delay: first promised for ${formatDayKey(delay.from)}${pin.delayReasoning ? ` — ${pin.delayReasoning}` : ''}`}
+      title={t(estimate ? 'delay.titleEstimated' : 'delay.title', { span: delay.label, date: from }) + (pin.delayReasoning ? ` — ${pin.delayReasoning}` : '')}
     >
       {estimate ? '~' : ''}
-      {delay.label} late
+      {t('delay.badge', { span: delay.label })}
     </span>
   );
 }
 
 // The delay's reasoning on a line of its own, for the pin page.
 export function DelayReasoning({ pin }: { pin: Pick<PinJson, 'originalStartDate' | 'utcStartDateTime' | 'delayReasoning'> }) {
-  const delay = pinDelay(pin);
+  const t = useT();
+  const delay = pinDelay(pin, t.locale);
   if (!delay) {
     return null;
   }
   return (
     <span className="basis-full text-xs leading-relaxed text-subtle italic">
-      First promised for {formatDayKey(delay.from)}; now {delay.label} later.{pin.delayReasoning ? ` ${pin.delayReasoning}` : ''}
+      {t('delay.reasoning', { span: delay.label, date: formatDayKey(delay.from, t.locale) })}
+      {pin.delayReasoning ? ` ${pin.delayReasoning}` : ''}
     </span>
   );
 }

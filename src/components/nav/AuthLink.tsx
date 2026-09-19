@@ -1,7 +1,7 @@
 'use client';
 
-import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import Link from '@/components/ui/Link';
+import { usePathname, useRouter } from '@/lib/client/navigation';
 import { authHref, type AuthPage } from '@/lib/authRedirect';
 import { authHrefHere, logoutHrefHere } from '@/lib/client/returnSpot';
 

@@ -2,7 +2,7 @@
 
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { localizeHere, useRouter, useSearchParams, withPageLang } from '@/lib/client/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { TILE_ATTRIBUTION, TILE_URL } from '@/components/pin/PinMap';
 import { categoryPillSummary, MapCategoryFilter, queryCategories } from '@/components/map/MapCategoryFilter';
@@ -14,12 +14,14 @@ import { blobUrl } from '@/lib/appConfig';
 import { isCategory } from '@/lib/categories';
 import { clearSpot, peekMapSpot, setMapViewSource } from '@/lib/client/returnSpot';
 import { useQueryState } from '@/lib/client/urlState';
-import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, SPAN_OPTIONS, eventSpanSummary, formatSpan, offsetDate, spanFromParam, spanLabel, spanToParam } from '@/lib/postedSpan';
+import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, SPAN_OPTIONS, eventSpanSummary, offsetDate, spanFromParam, spanLabel, spanPhrase, spanToParam } from '@/lib/postedSpan';
 import { removeTerm, toggleTerm } from '@/lib/searchTerms';
 import { pinPath } from '@/lib/seo';
 import { WEB_KINDS, webColor, webModeFromParam, type WebEdge, type WebMode } from '@/lib/pinWeb';
 import type { MapPinJson, PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery } from '@/server/util/searchQuery';
+import { useT } from '@/lib/client/i18n';
+import { categoryLabel } from '@/lib/i18n/labels';
 
 // Center of the contiguous US, so an empty or loading map has a sensible view.
 const DEFAULT_CENTER: [number, number] = [39.8283, -98.5795];
@@ -75,7 +77,7 @@ function pinPopup(pin: MapPinJson, options: L.PopupOptions = {}) {
 function popupContent(pin: MapPinJson) {
   const content = document.createElement('div');
   content.innerHTML =
-    `<div class="px-2.5 pt-1.5 pb-2"><a href="${pinPath(pin)}" class="line-clamp-2 font-semibold">${escapeHtml(pin.title)}</a>` +
+    `<div class="px-2.5 pt-1.5 pb-2"><a href="${localizeHere(pinPath(pin))}" class="line-clamp-2 font-semibold">${escapeHtml(pin.title)}</a>` +
     `${pin.address ? `<div class="truncate text-subtle">${escapeHtml(pin.address)}</div>` : ''}</div>`;
   // The video's still when there is one, as the pin's media frame shows it first.
   const medium = pin.media?.find((m) => String(m.type) === '3') ?? pin.media?.[0];
@@ -84,7 +86,7 @@ function popupContent(pin: MapPinJson) {
   if (!sources.length) return content;
 
   const link = document.createElement('a');
-  link.href = pinPath(pin);
+  link.href = localizeHere(pinPath(pin));
   link.className = 'block';
   const img = document.createElement('img');
   img.alt = '';
@@ -148,6 +150,7 @@ function loadedAsMap() {
 // whatever the filters, and keeps its popup open until the map is clicked.
 export default function PinsMap() {
   const router = useRouter();
+  const t = useT();
   const params = useSearchParams();
   const query = params.get('q') || '';
   const focusId = Number(params.get('pin')) || undefined;
@@ -327,7 +330,7 @@ export default function PinsMap() {
       if (pastBoundary) searchParams.set('from', pastBoundary.toISOString());
       if (futureBoundary) searchParams.set('to', futureBoundary.toISOString());
       if (postedWithin) searchParams.set('created_within', postedWithin);
-      const res = await fetch(`/api/pins/map?${searchParams.toString()}`);
+      const res = await fetch(withPageLang(`/api/pins/map?${searchParams.toString()}`));
       if (!res.ok) throw new Error(res.statusText);
       const { pins } = (await res.json()) as { pins: MapPinJson[] };
       if (!cancelled) plot(pins);
@@ -336,7 +339,7 @@ export default function PinsMap() {
     // The focused pin may fall outside the search or time window, so it is
     // fetched on its own; whichever answer plots it first wins.
     if (focusId) {
-      fetch(`/api/pins/${focusId}`)
+      fetch(withPageLang(`/api/pins/${focusId}`))
         .then((res) => (res.ok ? (res.json() as Promise<PinJson>) : null))
         .then((pin) => {
           if (pin && !cancelled) plot([pin]);
@@ -390,7 +393,7 @@ export default function PinsMap() {
           // The copy of the world where the two are nearest, so a line never crosses the map.
           const toLng = to.longitude! + 360 * nearestOffset(to.longitude!, from.longitude!);
           const line = L.polyline([[from.latitude!, from.longitude!], [to.latitude!, toLng]], { color: webColor(kind), weight: 2, opacity: 0.6, pane: 'web' });
-          line.bindTooltip(`${WEB_KINDS.find((k) => k.kind === kind)!.label}${label ? `: ${label}` : ''} — ${from.title} ↔ ${to.title}`, { sticky: true });
+          line.bindTooltip(`${t(`map.web.${kind}`)}${label ? `: ${label}` : ''} — ${from.title} ↔ ${to.title}`, { sticky: true });
           line.addTo(web$);
         }
         setWebEdges(edges);
@@ -400,7 +403,7 @@ export default function PinsMap() {
     return () => {
       cancelled = true;
     };
-  }, [web, status, categoryKey, fetchQuery, past, future, postedWithin, watched]);
+  }, [web, status, categoryKey, fetchQuery, past, future, postedWithin, watched, t]);
 
   // A graph node picked: the map goes to that pin.
   function showPin(id: number) {
@@ -425,7 +428,7 @@ export default function PinsMap() {
     else router.push(href);
   }
 
-  const phrase = (span: string | null) => (formatSpan(span) || '').replace(/^1 /, '');
+  const phrase = (span: string | null) => spanPhrase(span, t.locale);
   const hasPast = !!past && past !== '0d';
   const hasFuture = !!future && future !== '0d';
 
@@ -442,7 +445,7 @@ export default function PinsMap() {
         // stacked twice; a real link to the pin when the page was loaded as
         // the map (a shared link, a new tab, a reload), where back leaves.
         <a
-          href={focusPin?.id === focusId ? pinPath(focusPin) : `/pin/${focusId}`}
+          href={localizeHere(focusPin?.id === focusId ? pinPath(focusPin) : `/pin/${focusId}`)}
           onClick={(event) => {
             if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0 || loadedAsMap()) return;
             event.preventDefault();
@@ -451,7 +454,7 @@ export default function PinsMap() {
           className="floating absolute top-2.5 left-2.5 z-[1000] flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium text-ink hover:no-underline"
         >
           <Icon name="back" className="size-4" />
-          Back to pin
+          {t('map.backToPin')}
         </a>
       ) : null}
       {/* As on the timeline: top right on wide screens, folded behind pills at
@@ -459,10 +462,10 @@ export default function PinsMap() {
           Leaflet's panes. */}
       <div className="relative z-[1000]">
         <FloatingControls
-          summaryCaption="Posted within"
-          summary={spanLabel(postedWithin)}
+          summaryCaption={t('controls.postedWithin')}
+          summary={spanLabel(postedWithin, t.locale)}
           tags={{
-            summary: categoryPillSummary(query),
+            summary: categoryPillSummary(query, t),
             control: (
               <MapCategoryFilter
                 selected={categories}
@@ -473,7 +476,7 @@ export default function PinsMap() {
             ),
           }}
           span={{
-            summary: eventSpanSummary(past, future),
+            summary: eventSpanSummary(past, future, t.locale),
             control: (
               <TimeRangeSlider
                 steps={EVENT_SPAN_OPTIONS}
@@ -500,10 +503,10 @@ export default function PinsMap() {
         ) : null}
         {web !== 'off' ? (
           <p className="floating flex flex-wrap items-center gap-x-2.5 gap-y-0.5 rounded-full px-2.5 py-1 text-xs text-subtle">
-            {WEB_KINDS.map(({ kind, label, color }) => (
+            {WEB_KINDS.map(({ kind, color }) => (
               <span key={kind} className="flex items-center gap-1">
                 <span className="inline-block h-0.5 w-3" style={{ backgroundColor: color }} />
-                {label}
+                {t(`map.web.${kind}`)}
               </span>
             ))}
           </p>
@@ -518,7 +521,7 @@ export default function PinsMap() {
               onClick={() => setWeb(mode)}
               className={`rounded-full px-2.5 py-1 ${web === mode ? 'bg-accent text-white' : 'text-muted hover:text-ink'}`}
             >
-              {mode === 'off' ? 'Web off' : mode === 'lines' ? 'Lines' : 'Graph'}
+              {mode === 'off' ? t('map.webOff') : mode === 'lines' ? t('map.lines') : t('map.graph')}
             </button>
           ))}
         </div>
@@ -526,18 +529,26 @@ export default function PinsMap() {
       {/* Narrower, clear of the pills at the bottom, and a layer under the
           controls so an open fold covers it rather than the other way round. */}
       {status === 'loading' ? (
-        <p role="status" className="floating absolute bottom-24 left-1/2 z-[999] -translate-x-1/2 rounded-full px-4 py-2 text-sm text-ink xl:bottom-8">Loading pins…</p>
+        <p role="status" className="floating absolute bottom-24 left-1/2 z-[999] -translate-x-1/2 rounded-full px-4 py-2 text-sm text-ink xl:bottom-8">{t('map.loadingPins')}</p>
       ) : status === 'error' ? (
         <p role="alert" className="floating absolute bottom-24 left-1/2 z-[999] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink xl:bottom-8">
-          Search is unavailable right now. Please try again in a bit.
+          {t('search.unavailable')}
         </p>
       ) : count === 0 ? (
         <p className="floating absolute bottom-24 left-1/2 z-[999] w-max max-w-[calc(100%-2rem)] -translate-x-1/2 rounded-full px-4 py-2 text-center text-sm text-ink xl:bottom-8">
-          No {watched ? 'watched ' : ''}pins{fetchQuery ? ` matching “${fetchQuery}”` : ''} with a location{hasPast ? ` in the last ${phrase(past)}` : ''}
-          {hasPast && hasFuture ? ' or' : ''}
-          {hasFuture ? ` in the next ${phrase(future)}` : ''}
-          {postedWithin ? `, posted in the last ${phrase(postedWithin)}` : ''}
-          {categories.length ? ` in ${categories.join(' or ')}` : ''}.
+          {[
+            t(watched ? 'map.noWatchedPins' : 'map.noPins'),
+            fetchQuery ? t('map.matching', { query: fetchQuery }) : '',
+            t('map.withLocation'),
+            hasPast ? t('map.inLast', { span: phrase(past) }) : '',
+            hasPast && hasFuture ? t('common.or') : '',
+            hasFuture ? t('map.inNext', { span: phrase(future) }) : '',
+          ]
+            .filter(Boolean)
+            .join(' ')}
+          {postedWithin ? t('map.postedInLast', { span: phrase(postedWithin) }) : ''}
+          {categories.length ? ` ${t('map.inCategories', { categories: categories.map((c) => categoryLabel(t, c)).join(` ${t('common.or')} `) })}` : ''}
+          {t('map.period')}
         </p>
       ) : null}
     </div>

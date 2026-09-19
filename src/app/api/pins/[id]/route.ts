@@ -15,6 +15,9 @@ import { parseScrapedStocks } from '@/lib/stocks';
 import { bodyCategories } from '@/lib/categories';
 import { parseTags } from '@/lib/tags';
 import PinTag from '@/server/model/pinTag';
+import { requestLocale } from '@/lib/i18n/request';
+import { toJson, type PinJson } from '@/lib/types';
+import { localizePins } from '@/server/services/translations';
 
 type Ctx = RouteContext<'/api/pins/[id]'>;
 
@@ -25,7 +28,9 @@ export const GET = route(async (request: NextRequest, ctx: Ctx) => {
   if (!pin) {
     throw new HttpError(404, 'Not Found');
   }
-  return json(pin);
+  // English (the pin as stored) unless the page asks for its language.
+  const [body] = await localizePins([toJson<PinJson>(pin)], requestLocale(request, { cookie: false }));
+  return json(body);
 });
 
 // A pin is editable by the person who posted it and by an admin. Signing in

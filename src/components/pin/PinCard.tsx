@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import Link from '@/components/ui/Link';
 import { useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { PostedTime, StartDistance, StartTime } from '@/components/ui/LocalTime';
@@ -22,6 +22,8 @@ import { RefineLink } from './RefineLink';
 import { ViewCount } from './ViewCount';
 import { WatchButton } from './WatchButton';
 import { WeatherIcon } from './WeatherIcon';
+import { useT } from '@/lib/client/i18n';
+import { categoryLabel } from '@/lib/i18n/labels';
 
 const CARD_SIZES = '(max-width: 640px) 100vw, 448px';
 
@@ -50,6 +52,7 @@ export function PinCard({
   // On a phone a card shows a video's still instead of its player, unless an
   // admin has turned the players back on.
   const poster = useVideoPoster();
+  const t = useT();
   const href = pinPath(pin);
   const media = pin.media ?? [];
   const hasPlace = pin.latitude != null && pin.longitude != null;
@@ -106,7 +109,7 @@ export function PinCard({
             {pin.categories?.[0] ? (
               <span>
                 <RefineLink field="tag" value={pin.categories[0]} className="font-medium text-muted hover:text-ink hover:no-underline">
-                  {pin.categories[0]}
+                  {categoryLabel(t, pin.categories[0])}
                 </RefineLink>
               </span>
             ) : null}
@@ -124,7 +127,7 @@ export function PinCard({
             ) : null}
           </div>
           {pin.parentId || pin.rootThread ? (
-            <Link href={href} title={pin.parentId ? 'Part of thread' : 'First pin in a thread'} className="text-subtle hover:text-ink">
+            <Link href={href} title={pin.parentId ? t('card.partOfThread') : t('card.firstInThread')} className="text-subtle hover:text-ink">
               <Icon name="thread" className="size-3.5" />
             </Link>
           ) : null}
@@ -200,7 +203,7 @@ export function PinCard({
             href={href}
             className="absolute right-0 bottom-0 left-0 bg-[var(--card-bg,var(--color-panel))] px-3 pt-0.5 text-right text-sm font-medium before:absolute before:-top-8 before:left-0 before:h-8 before:w-full before:bg-gradient-to-b before:from-transparent before:to-[var(--card-bg,var(--color-panel))] before:content-['']"
           >
-            show more
+            {t('card.showMore')}
           </Link>
         ) : null}
       </div>
@@ -211,7 +214,7 @@ export function PinCard({
         </div>
         <div>
           {pin.searchScore != null ? (
-            <span className="inline-flex items-center gap-1.5 text-xs text-subtle" title="How closely this pin matches the search - cosine similarity, higher is closer">
+            <span className="inline-flex items-center gap-1.5 text-xs text-subtle" title={t('card.searchScoreTitle')}>
               <span>{pin.searchScore.toFixed(2)}</span>
               <span className="h-1 w-12 overflow-hidden rounded bg-raised" aria-hidden>
                 <span className="block h-full bg-link" style={{ width: `${Math.max(0, Math.min(1, pin.searchScore)) * 100}%` }} />

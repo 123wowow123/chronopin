@@ -68,6 +68,10 @@ export type PinUserJson = {
 
 export type PinJson = {
   id: number;
+  // In a language other than English, when the pin's words are its
+  // translation: its own title (the URL slug is made from it) and the language.
+  originalTitle?: string;
+  translatedTo?: string;
   parentId?: number;
   rootThread?: boolean;
   title: string;
@@ -158,6 +162,8 @@ export type DateTimeJson = {
 export type TrendingPin = {
   id: number;
   title: string;
+  originalTitle?: string;
+  translatedTo?: string;
   views: number;
   previousViews: number;
   thumbName?: string | null;
@@ -168,6 +174,8 @@ export type TrendingPin = {
 export type NewPin = {
   id: number;
   title: string;
+  originalTitle?: string;
+  translatedTo?: string;
   userName: string | null;
   utcCreatedDateTime: string;
   thumbName?: string | null;

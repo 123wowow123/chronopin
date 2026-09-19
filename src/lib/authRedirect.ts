@@ -1,3 +1,5 @@
+import { localizePath, splitLocale } from './i18n/config';
+
 // Pages there is no point coming back to once signed in.
 const AUTH_PATHS = ['/login', '/signup', '/logout'];
 
@@ -7,8 +9,10 @@ const AUTH_PATHS = ['/login', '/signup', '/logout'];
 export function afterLoginPath(redirect: string | null | undefined): string {
   // '//host' and '/\host' both leave the site.
   if (!redirect || !redirect.startsWith('/') || redirect.startsWith('//') || redirect.startsWith('/\\')) return '/';
-  const path = redirect.split(/[?#]/)[0].toLowerCase();
-  return AUTH_PATHS.some((auth) => path === auth || path.startsWith(`${auth}/`)) ? '/' : redirect;
+  // "/es/login" is the login page too; home stays in the same language.
+  const { locale, path } = splitLocale(redirect.split(/[?#]/)[0].toLowerCase());
+  const isAuth = AUTH_PATHS.some((auth) => path === auth || path.startsWith(`${auth}/`));
+  return isAuth ? (locale ? localizePath('/', locale) : '/') : redirect;
 }
 
 export type AuthPage = '/login' | '/signup';

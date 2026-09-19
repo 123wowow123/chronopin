@@ -3,6 +3,7 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import { useMarketOdds, watchMarketOdds } from '@/lib/client/marketOdds';
 import type { MarketTrend as Trend } from '@/lib/predictionMarkets';
+import { useT } from '@/lib/client/i18n';
 
 // The tile's drawing box, in the pixels it is shown at (h-9 w-14).
 const W = 56;
@@ -62,6 +63,7 @@ function percent(chance: number): string {
 export function MarketTrend({ pinId, fallback }: { pinId: number; fallback: ReactNode }) {
   const [trend, setTrend] = useState<Trend | null | undefined>(undefined);
   const markets = useMarketOdds(pinId);
+  const t = useT();
 
   useEffect(() => {
     let cancelled = false;
@@ -95,7 +97,7 @@ export function MarketTrend({ pinId, fallback }: { pinId: number; fallback: Reac
   const line = points.map(([t, p], i) => `${i ? 'L' : 'M'}${x(t).toFixed(1)},${y(p).toFixed(1)}`).join('');
   const area = `${line}L${x(t1).toFixed(1)},${H}L${x(t0).toFixed(1)},${H}Z`;
   const change = current - points[0][1];
-  const summary = `${trend.label} ${percent(current)} on ${trend.source}, ${change >= 0 ? 'up' : 'down'} ${Math.abs(Math.round(change * 100))} points this week`;
+  const summary = t(change >= 0 ? 'odds.trendUp' : 'odds.trendDown', { label: trend.label, percent: percent(current), source: trend.source, points: Math.abs(Math.round(change * 100)) });
 
   return (
     <span role="img" aria-label={summary} title={`${trend.title}\n${summary}`} className="relative block h-9 w-14 shrink-0 overflow-hidden rounded bg-raised-2">

@@ -3,6 +3,9 @@ import { getUser } from '@/server/auth';
 import { json, publicOrigin, route } from '@/server/http';
 import { readSearchRequest, searchPins, searchPinsPage } from '@/server/services/search';
 import { requestTimeZone } from '@/server/viewer';
+import { requestLocale } from '@/lib/i18n/request';
+import { toJson, type PinJson } from '@/lib/types';
+import { localizePins } from '@/server/services/translations';
 
 // Every matching pin at once (the map):
 // GET /api/pins/search?q=iphone company:Apple&f=watch
@@ -18,17 +21,23 @@ export const GET = route(async (request: NextRequest) => {
   const params = new URLSearchParams(request.nextUrl.searchParams);
   if (!params.has('tz')) params.set('tz', requestTimeZone(request));
   const user = await getUser(request);
+  const locale = requestLocale(request);
   if (!params.has('sort')) {
-    return json(
+    const all = toJson<{ pins: PinJson[] }>(
       await searchPins(params.get('q') || '', {
         userId: user?.id,
         onlyWatched: params.get('f')?.toLowerCase() === 'watch',
         timeZone: params.get('tz')!,
       }),
     );
+    await localizePins(all.pins ?? [], locale);
+    return json(all);
   }
 
-  const { pins, links } = await searchPinsPage(readSearchRequest(params, user?.id ?? null));
+  const page = await searchPinsPage(readSearchRequest(params, user?.id ?? null));
+  const links = page.links;
+  const pins = toJson<{ pins: PinJson[] }>(page.pins);
+  await localizePins(pins.pins, locale);
   const base = publicOrigin(request) + request.nextUrl.pathname;
   const link = Object.entries(links)
     .map(([rel, query]) => `<${base}${query}>; rel="${rel}"`)

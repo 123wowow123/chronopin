@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import Link from '@/components/ui/Link';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
@@ -8,6 +8,8 @@ import { api } from '@/lib/client/api';
 import { clearUnreadCount, useUnreadCount } from '@/lib/client/notifications';
 import { timeAgo } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
+import { useT } from '@/lib/client/i18n';
+import type { Translator } from '@/lib/i18n/translate';
 
 type Notification = {
   id: number;
@@ -65,8 +67,9 @@ function NotificationItems({
   onNavigate,
   listClassName = '',
 }: ReturnType<typeof useNotificationList> & { onNavigate?: () => void; listClassName?: string }) {
-  if (items === null) return <div className="px-4 py-6 text-center text-sm text-subtle">Loading…</div>;
-  if (items.length === 0) return <div className="px-4 py-6 text-center text-sm text-subtle">No new notifications available at this time.</div>;
+  const t = useT();
+  if (items === null) return <div className="px-4 py-6 text-center text-sm text-subtle">{t('common.loading')}</div>;
+  if (items.length === 0) return <div className="px-4 py-6 text-center text-sm text-subtle">{t('notifications.empty')}</div>;
   return (
     <ul className={listClassName}>
         {items.map((n) => {
@@ -85,34 +88,41 @@ function NotificationItems({
               <div className="min-w-0 flex-1">
                 {n.type === 'follow' ? (
                   <span>
-                    <Link href={`/search?q=user:${encodeURIComponent(handle)}`} className="font-semibold text-ink" onClick={onNavigate}>
-                      {n.actor.userName}
-                    </Link>{' '}
-                    started following you
+                    {t.rich('notifications.follow', {
+                      actor: () => (
+                        <Link href={`/search?q=user:${encodeURIComponent(handle)}`} className="font-semibold text-ink" onClick={onNavigate}>
+                          {n.actor.userName}
+                        </Link>
+                      ),
+                    })}
                   </span>
                 ) : n.type === 'comment' || n.type === 'reply' ? (
                   <Link href={commentHref(n)} className="block text-ink" onClick={onNavigate}>
-                    <span className="font-semibold">{n.actor.userName}</span>{' '}
-                    {n.type === 'reply' ? 'replied to your comment on' : 'commented on'}{' '}
-                    <span className="font-semibold">{n.pinTitle}</span>
+                    {t.rich(n.type === 'reply' ? 'notifications.reply' : 'notifications.comment', {
+                      actor: () => <span className="font-semibold">{n.actor.userName}</span>,
+                      pin: () => <span className="font-semibold">{n.pinTitle}</span>,
+                    })}
                     {n.commentText ? <span className="mt-0.5 line-clamp-2 block text-muted">“{n.commentText}”</span> : null}
                   </Link>
                 ) : n.type === 'reference' && n.pinId ? (
                   <Link href={`${pinPath({ id: n.pinId, title: n.pinTitle ?? '' })}#references-heading`} className="block text-ink" onClick={onNavigate}>
-                    <span className="font-semibold">{n.actor.userName}</span> added references to <span className="font-semibold">{n.pinTitle}</span>
+                    {t.rich('notifications.reference', {
+                      actor: () => <span className="font-semibold">{n.actor.userName}</span>,
+                      pin: () => <span className="font-semibold">{n.pinTitle}</span>,
+                    })}
                   </Link>
                 ) : n.type === 'today' && n.pinId ? (
                   <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>
-                    <span className="font-semibold">{n.pinTitle}</span>, a pin you watch, is today
+                    {t.rich('notifications.today', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
                   </Link>
                 ) : null}
                 <time className="block text-xs text-subtle" dateTime={n.utcCreatedDateTime}>
-                  {timeAgo(n.utcCreatedDateTime)}
+                  {timeAgo(n.utcCreatedDateTime, undefined, t.locale)}
                 </time>
               </div>
               {n.type === 'follow' ? (
                 n.followingBack ? (
-                  <span className="text-xs text-subtle">Following</span>
+                  <span className="text-xs text-subtle">{t('notifications.following')}</span>
                 ) : (
                   <button
                     type="button"
@@ -120,7 +130,7 @@ function NotificationItems({
                     onClick={() => followBack(n)}
                     className="btn btn-sm btn-primary rounded-full"
                   >
-                    Follow back
+                    {t('notifications.followBack')}
                   </button>
                 )
               ) : null}
@@ -139,13 +149,14 @@ function UnreadBadge({ count, className }: { count: number; className: string })
   ) : null;
 }
 
-const unreadLabel = (count: number) => (count ? `Notifications, ${count} unread` : 'Notifications');
+const unreadLabel = (t: Translator, count: number) => (count ? t('notifications.unreadLabel', { count }) : t('notifications.title'));
 
 // The navbar bell (lg and up), with the list in a panel under it.
 export function NotificationBell({ className = '' }: { className?: string }) {
   const [open, setOpen] = useState(false);
   const count = useUnreadCount(true);
   const list = useNotificationList();
+  const t = useT();
   const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -163,13 +174,13 @@ export function NotificationBell({ className = '' }: { className?: string }) {
 
   return (
     <div ref={rootRef} className={`relative ${className}`}>
-      <button type="button" onClick={toggle} aria-expanded={open} aria-label={unreadLabel(count)} title="Notifications" className="relative rounded-lg p-2 text-muted hover:bg-raised hover:text-ink">
+      <button type="button" onClick={toggle} aria-expanded={open} aria-label={unreadLabel(t, count)} title={t('notifications.title')} className="relative rounded-lg p-2 text-muted hover:bg-raised hover:text-ink">
         <Icon name="bell" className="size-5" />
         <UnreadBadge count={count} className="top-1 right-1" />
       </button>
       {open ? (
         <div className="floating absolute right-0 z-50 mt-2 w-80 overflow-hidden">
-          <div className="border-b border-line px-4 py-2.5 text-sm font-semibold text-ink">Notifications</div>
+          <div className="border-b border-line px-4 py-2.5 text-sm font-semibold text-ink">{t('notifications.title')}</div>
           <NotificationItems {...list} listClassName="max-h-96 overflow-auto" onNavigate={() => setOpen(false)} />
         </div>
       ) : null}
@@ -181,13 +192,14 @@ export function NotificationBell({ className = '' }: { className?: string }) {
 // its own rather than a panel squeezed under the bell.
 export function DrawerNotifications({ className, current }: { className: string; current: boolean }) {
   const count = useUnreadCount(true);
+  const t = useT();
   return (
-    <Link href="/notifications" aria-current={current ? 'page' : undefined} aria-label={unreadLabel(count)} className={className}>
+    <Link href="/notifications" aria-current={current ? 'page' : undefined} aria-label={unreadLabel(t, count)} className={className}>
       <span className="relative flex">
         <Icon name="bell" className="size-6" />
         <UnreadBadge count={count} className="-top-1.5 -right-2" />
       </span>
-      Notifications
+      {t('notifications.title')}
     </Link>
   );
 }

@@ -27,6 +27,12 @@ const PATHS: Record<string, React.ReactNode> = {
     </>
   ),
   chevron: <path d="m6 9 6 6 6-6" />,
+  globe: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+    </>
+  ),
   expand: <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />,
   hash: <path d="M5 9h15M4 15h15M10 3 8 21M16 3l-2 18" />,
   back: <path d="M19 12H5M11 6l-6 6 6 6" />,

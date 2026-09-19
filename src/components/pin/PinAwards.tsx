@@ -1,4 +1,7 @@
+'use client';
+
 import type { PinAwardJson } from '@/lib/awards';
+import { useT } from '@/lib/client/i18n';
 
 type Group = { body: string; year: number; work: string; sourceUrl: string; awards: string[] };
 
@@ -19,6 +22,7 @@ function group(awards: PinAwardJson[]): Group[] {
 // series' awards too ("Jujutsu Kaisen Season 2" shows what Jujutsu Kaisen
 // won in 2021), and it must not read as the pin's own.
 function Line({ g, won }: { g: Group; won: boolean }) {
+  const t = useT();
   return (
     <li className="flex gap-2">
       <span aria-hidden>{won ? '🏆' : '🎗️'}</span>
@@ -27,7 +31,7 @@ function Line({ g, won }: { g: Group; won: boolean }) {
           {g.body} {g.year}
         </a>
         <span className="text-subtle">: {g.awards.join(', ')}</span>
-        <span className="text-subtle"> (for <i>{g.work}</i>)</span>
+        <span className="text-subtle"> {t.rich('awards.forWork', { work: () => <i>{g.work}</i> })}</span>
       </span>
     </li>
   );
@@ -37,6 +41,7 @@ function Line({ g, won }: { g: Group; won: boolean }) {
 // bodies' own pages (Crunchyroll Anime Awards, Tokyo Anime Award Festival,
 // Japan Academy Film Prize). Wins are listed; nominations fold away.
 export function PinAwards({ awards }: { awards?: PinAwardJson[] }) {
+  const t = useT();
   if (!awards?.length) return null;
   const won = group(awards.filter((a) => a.result === 'won'));
   const nominated = group(awards.filter((a) => a.result === 'nominated'));
@@ -44,7 +49,7 @@ export function PinAwards({ awards }: { awards?: PinAwardJson[] }) {
   return (
     <section aria-labelledby="awards-heading" className="mb-4 text-sm">
       <h2 id="awards-heading" className="mb-1.5 text-[11px] font-semibold tracking-wider text-subtle uppercase">
-        Awards
+        {t('awards.heading')}
       </h2>
       {won.length ? (
         <ul className="flex flex-col gap-1">
@@ -56,7 +61,7 @@ export function PinAwards({ awards }: { awards?: PinAwardJson[] }) {
       {nominated.length ? (
         <details className={won.length ? 'mt-1.5' : ''}>
           <summary className="cursor-pointer text-subtle hover:text-ink">
-            {won.length ? 'Also nominated' : 'Nominated'}: {nominations} {nominations === 1 ? 'nomination' : 'nominations'}
+            {t(won.length ? 'awards.alsoNominated' : 'awards.nominated', { count: nominations })}
           </summary>
           <ul className="mt-1 flex flex-col gap-1">
             {nominated.map((g) => (

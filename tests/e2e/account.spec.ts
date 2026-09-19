@@ -26,7 +26,8 @@ test.describe.serial('a signed-in author', () => {
     await page.getByLabel('Title').fill(`E2E launch ${stamp}`);
     // Exact: a timed pin's form also has a "Start time" beside it.
     await page.getByLabel('Start', { exact: true }).fill('2031-05-04');
-    await page.getByLabel('Category').selectOption('Infrastructure & Transportation');
+    // Categories are tags now, any number of them, picked one at a time.
+    await page.getByLabel('Categories', { exact: true }).selectOption('Infrastructure & Transportation');
     await page.getByLabel('Company', { exact: true }).fill('Windsor-Detroit Bridge Authority');
     await page.getByLabel('Cost').fill('6400000000');
     await page.getByLabel('Currency').fill('CAD');
@@ -65,7 +66,7 @@ test.describe.serial('a signed-in author', () => {
     const saved = await (await page.request.get(`/api/pins/${pinId}`)).json();
     expect(saved).toMatchObject({
       title: `E2E launch ${stamp} edited`,
-      category: 'Infrastructure & Transportation',
+      categories: ['Infrastructure & Transportation'],
       company: 'Windsor-Detroit Bridge Authority',
       price: 6400000000,
       priceCurrency: 'CAD',

@@ -1,3 +1,6 @@
+'use client';
+
+import { useT } from '@/lib/client/i18n';
 import { averageRating, ratingScore, reviewRatings } from '@/lib/format';
 import type { PinRatingJson } from '@/lib/types';
 import { Icon } from '@/components/ui/Icon';
@@ -14,12 +17,13 @@ export function RatingAverage({
   compact?: boolean;
   className?: string;
 }) {
+  const t = useT();
   const average = averageRating(ratings);
   if (average == null) {
     return null;
   }
   const count = reviewRatings(ratings).length;
-  const label = `Average of ${count} ratings: ${average} percent`;
+  const label = t('ratings.averageLabel', { count, average });
   if (compact) {
     return (
       <span
@@ -39,9 +43,9 @@ export function RatingAverage({
       <Icon name="star" className="size-5 text-amber-500" />
       <span className="text-xl leading-none font-bold text-ink tabular-nums">{average}%</span>
       <span className="text-[11px] leading-tight text-muted">
-        average
+        {t('ratings.average')}
         <br />
-        {count} sources
+        {t('ratings.sources', { count })}
       </span>
     </span>
   );
@@ -52,11 +56,12 @@ export function RatingAverage({
 // these come from scraping, not the edit form (see PinRating's schema
 // comment).
 export function PinRatings({ ratings, className = '-mt-1 mb-4' }: { ratings?: PinRatingJson[]; className?: string }) {
+  const t = useT();
   if (!ratings?.length) {
     return null;
   }
   return (
-    <ul className={`flex flex-wrap items-center gap-2 ${className}`} aria-label="Ratings">
+    <ul className={`flex flex-wrap items-center gap-2 ${className}`} aria-label={t('ratings.heading')}>
       {averageRating(ratings) != null ? (
         <li>
           <RatingAverage ratings={ratings} />

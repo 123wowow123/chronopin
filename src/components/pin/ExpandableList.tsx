@@ -1,6 +1,7 @@
 'use client';
 
 import { type ReactNode, useEffect, useState } from 'react';
+import { useT } from '@/lib/client/i18n';
 
 // A list showing its first `visible` items, with a toggle below for the rest.
 // Following a link to an item's id (#ref-7) unfolds the list if need be, then
@@ -20,6 +21,7 @@ export function ExpandableList({
   className?: string;
 }) {
   const [open, setOpen] = useState(false);
+  const t = useT();
 
   useEffect(() => {
     const reveal = () => {
@@ -45,7 +47,7 @@ export function ExpandableList({
       <ul className={className}>{open ? items : items.slice(0, visible)}</ul>
       {items.length > visible ? (
         <button type="button" aria-expanded={open} className="py-2 text-sm font-medium text-link" onClick={() => setOpen(!open)}>
-          {open ? 'Show fewer' : `Show all ${items.length} ${noun}`}
+          {open ? t('common.showFewer') : t('common.showAllN', { count: items.length, noun })}
         </button>
       ) : null}
     </>

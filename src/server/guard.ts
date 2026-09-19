@@ -1,4 +1,4 @@
-import { redirect } from 'next/navigation';
+import { redirect } from '@/lib/i18n/server';
 import type User from './model/user';
 import { viewerUser } from './viewer';
 
@@ -7,7 +7,7 @@ import { viewerUser } from './viewer';
 export async function requireViewer(path: string): Promise<User> {
   const user = await viewerUser();
   if (!user) {
-    redirect(`/login?redirect=${encodeURIComponent(path)}`);
+    return redirect(`/login?redirect=${encodeURIComponent(path)}`);
   }
   return user;
 }
@@ -15,7 +15,7 @@ export async function requireViewer(path: string): Promise<User> {
 export async function requireAdminViewer(path: string): Promise<User> {
   const user = await requireViewer(path);
   if (user.role !== 'admin') {
-    redirect('/');
+    return redirect('/');
   }
   return user;
 }

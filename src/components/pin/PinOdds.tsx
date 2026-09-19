@@ -5,6 +5,9 @@ import { Icon } from '@/components/ui/Icon';
 import { useMarketOdds, watchMarketOdds } from '@/lib/client/marketOdds';
 import { pinMarketRefs, type MarketOdds, type MarketOutcome } from '@/lib/predictionMarkets';
 import type { PinJson } from '@/lib/types';
+import { useT } from '@/lib/client/i18n';
+import { dateFormat } from '@/lib/format';
+import { INTL_LOCALES, type Locale } from '@/lib/i18n/config';
 
 const SHOWN_OUTCOMES = 6;
 // A card has room for the leaders only.
@@ -15,11 +18,11 @@ const MOVE_MS = 700;
 // How long an outcome stays green or red after it moves.
 const FLASH_MS = 1600;
 
-const compactUsd = new Intl.NumberFormat('en', { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 1 });
+const compactUsd = (locale: Locale) => new Intl.NumberFormat(INTL_LOCALES[locale], { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 1 });
 // In UTC: Polymarket gives an end date as midnight UTC, which reads a day
 // early anywhere west of Greenwich.
-const closeDate = new Intl.DateTimeFormat('en', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
-const updatedTime = new Intl.DateTimeFormat('en', { hour: 'numeric', minute: '2-digit', second: '2-digit' });
+const closeDate = (locale: Locale) => dateFormat(INTL_LOCALES[locale], { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const updatedTime = (locale: Locale) => dateFormat(INTL_LOCALES[locale], { hour: 'numeric', minute: '2-digit', second: '2-digit' });
 
 function percent(probability: number | null): string {
   if (probability == null) return '–';
@@ -42,13 +45,14 @@ function reducedMotion() {
 // in view. Nothing when none of them answer.
 export function PinOdds({ pinId }: { pinId: number }) {
   const markets = useMarketOdds(pinId);
+  const t = useT();
   useEffect(() => watchMarketOdds(pinId), [pinId]);
 
   if (!markets?.length) return null;
   return (
     <section aria-labelledby="odds-heading" className="mb-4 flex flex-col gap-3">
       <h2 id="odds-heading" className="sr-only">
-        Market odds
+        {t('odds.heading')}
       </h2>
       {markets.map((market) => (
         <Market key={market.url} market={market} />
@@ -111,6 +115,7 @@ export function PinCardOdds({ pin }: { pin: Pick<PinJson, 'id' | 'sourceUrl' | '
 function CardMarket({ market, source = market?.source }: { market?: MarketOdds; source?: string }) {
   const shown = market?.outcomes.slice(0, CARD_OUTCOMES) ?? [];
   const listRef = useRef<HTMLUListElement>(null);
+  const t = useT();
   useRowMoves(listRef, shown.map((o) => o.label).join('\n'));
 
   return (
@@ -125,7 +130,7 @@ function CardMarket({ market, source = market?.source }: { market?: MarketOdds; 
           <span className="w-2/5 animate-pulse truncate rounded bg-raised motion-reduce:animate-none">{' '}</span>
         )}
         <span className="ml-auto inline-flex shrink-0 items-center gap-1.5 font-semibold tracking-wider uppercase">
-          {market?.closed ? <span className="text-warning">Closed</span> : market ? <LiveDot fetchedAt={market.fetchedAt} /> : null}
+          {market?.closed ? <span className="text-warning">{t('odds.closed')}</span> : market ? <LiveDot fetchedAt={market.fetchedAt} /> : null}
           {source}
         </span>
       </div>
@@ -146,12 +151,14 @@ function CardMarket({ market, source = market?.source }: { market?: MarketOdds; 
 }
 
 function LiveDot({ fetchedAt }: { fetchedAt: string }) {
-  return <span aria-hidden title={`Updated ${updatedTime.format(new Date(fetchedAt))}`} className="size-1.5 shrink-0 animate-pulse rounded-full bg-success motion-reduce:animate-none" />;
+  const t = useT();
+  return <span aria-hidden title={t('odds.updated', { time: updatedTime(t.locale).format(new Date(fetchedAt)) })} className="size-1.5 shrink-0 animate-pulse rounded-full bg-success motion-reduce:animate-none" />;
 }
 
 function Market({ market }: { market: MarketOdds }) {
   const shown = market.outcomes.slice(0, SHOWN_OUTCOMES);
   const listRef = useRef<HTMLUListElement>(null);
+  const t = useT();
   useRowMoves(listRef, shown.map((o) => o.label).join('\n'));
 
   return (
@@ -170,18 +177,18 @@ function Market({ market }: { market: MarketOdds }) {
       </ul>
       <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-subtle">
         {market.closed ? (
-          <span className="font-semibold text-warning">Closed</span>
+          <span className="font-semibold text-warning">{t('odds.closed')}</span>
         ) : (
           <span className="inline-flex items-center gap-1.5">
             <LiveDot fetchedAt={market.fetchedAt} />
-            Live
+            {t('odds.live')}
           </span>
         )}
-        {market.outcomes.length > SHOWN_OUTCOMES ? <span>{market.outcomes.length - SHOWN_OUTCOMES} more outcomes</span> : null}
-        {market.volume ? <span>{compactUsd.format(market.volume)} traded</span> : null}
-        {market.closeTime && !market.closed ? <span>Closes {closeDate.format(new Date(market.closeTime))}</span> : null}
+        {market.outcomes.length > SHOWN_OUTCOMES ? <span>{t('odds.moreOutcomes', { count: market.outcomes.length - SHOWN_OUTCOMES })}</span> : null}
+        {market.volume ? <span>{t('odds.traded', { amount: compactUsd(t.locale).format(market.volume) })}</span> : null}
+        {market.closeTime && !market.closed ? <span>{t('odds.closes', { date: closeDate(t.locale).format(new Date(market.closeTime)) })}</span> : null}
         <a href={market.url} target="_blank" rel="noopener nofollow" className="ml-auto inline-flex items-center gap-1 text-subtle hover:text-link hover:no-underline">
-          View on {market.source}
+          {t('odds.viewOn', { source: market.source })}
           <Icon name="external" className="size-3" />
         </a>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useNow } from "@/lib/client/now";
+import { useT } from "@/lib/client/i18n";
 
 const DAY = 24 * 60 * 60 * 1000;
 
@@ -31,6 +32,7 @@ export function ThreadAge({
   allDay?: boolean;
 }) {
   const now = useNow(60_000);
+  const t = useT();
   if (!now || isNaN(new Date(start).getTime())) {
     return <span className="h-5 w-20 shrink-0" />;
   }
@@ -38,10 +40,10 @@ export function ThreadAge({
   const n = Math.abs(days);
   const text =
     days === 0
-      ? "today"
+      ? t("time.today")
       : days < 0
-        ? `${n} ${n === 1 ? "day" : "days"} ago`
-        : `in ${n} ${n === 1 ? "day" : "days"}`;
+        ? t("time.daysAgo", { count: n })
+        : t("time.inDays", { count: n });
   return (
     <span className="shrink-0 text-xs text-subtle tabular-nums">{text}</span>
   );

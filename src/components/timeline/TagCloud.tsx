@@ -1,6 +1,7 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter } from '@/lib/client/navigation';
+import { splitLocale, type Locale } from '@/lib/i18n/config';
 import { Fragment, useCallback, useEffect, useId, useMemo, useOptimistic, useRef, useState, useTransition } from 'react';
 import { createPortal } from 'react-dom';
 import { Icon } from '@/components/ui/Icon';
@@ -12,6 +13,10 @@ import { cloudSteps, cloudTags, groupSelection, groupTags, tagMembers, type TagC
 import { parseSearchQuery } from '@/server/util/searchQuery';
 import { useTagFoldOpen } from './FloatingControls';
 import { WordCloud } from './WordCloud';
+import { useT } from '@/lib/client/i18n';
+import { FORMAT_WORDS } from '@/lib/i18n/formatWords';
+import { categoryLabel } from '@/lib/i18n/labels';
+import type { MessageKey, Translator } from '@/lib/i18n/translate';
 
 // Whether the panel was last left open. Search results remount with each
 // query, so without this every pick would fold the panel away. The last
@@ -30,13 +35,13 @@ const SHOWN = 60;
 const STEP_CLASS = ['', 'text-xs', 'text-[13px]', 'text-sm', 'text-base', 'text-lg font-semibold'];
 
 // What is picked, in brief ("Artemis", "Artemis +2"), or 'All' for nothing.
-function tagSummary(selected: string[]) {
-  return !selected.length ? 'All' : selected.length === 1 ? selected[0] : `${selected[0]} +${selected.length - 1}`;
+function tagSummary(selected: string[], locale: Locale = 'en') {
+  return !selected.length ? FORMAT_WORDS[locale].all : selected.length === 1 ? selected[0] : `${selected[0]} +${selected.length - 1}`;
 }
 
 // The value on the floating controls' tags pill (under "Tags").
-export function tagPillSummary(query?: string) {
-  return tagSummary(parseSearchQuery(query).tags);
+export function tagPillSummary(query?: string, locale: Locale = 'en') {
+  return tagSummary(parseSearchQuery(query).tags, locale);
 }
 
 // The tag filter in the floating controls, the first of them, with the
@@ -61,6 +66,7 @@ export function TagCloud({
   className?: string;
 }) {
   const router = useRouter();
+  const t = useT();
   // In the floating controls' tags fold (below xl, behind its own pill): the
   // pill is the header, and the cloud shows while the fold is open.
   const folded = useTagFoldOpen();
@@ -151,10 +157,10 @@ export function TagCloud({
     return cloudTags(groups, groupSelection(groups, selected), SHOWN);
   }, [counts, groups, selected, needle, wrapped]);
   const steps = useMemo(() => cloudSteps(tags), [tags]);
-  const summary = tagSummary(selected);
+  const summary = tagSummary(selected, t.locale);
 
   function go(edit: (q: string) => string, next: string[]) {
-    const current = new URLSearchParams(window.location.pathname === '/search' ? window.location.search : '');
+    const current = new URLSearchParams(splitLocale(window.location.pathname).path === '/search' ? window.location.search : '');
     const q = edit(current.get('q') || '');
     if (q) current.set('q', q);
     else current.delete('q');
@@ -189,14 +195,14 @@ export function TagCloud({
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-controls={optionsId}
-          aria-label={`Tags: ${summary}`}
+          aria-label={t('tagCloud.tagsSummary', { summary })}
           className="absolute inset-0 rounded-[inherit]"
         />
-        <span className="pointer-events-none relative text-subtle">Tags</span>
+        <span className="pointer-events-none relative text-subtle">{t('controls.tags')}</span>
         <span className="pointer-events-none relative min-w-0 truncate font-medium text-ink">{summary}</span>
         <span className="pointer-events-none relative ml-auto flex shrink-0 items-center gap-1.5">
           {selected.length ? (
-            <button type="button" onClick={clear} className={`${iconButton} pointer-events-auto`} aria-label="Clear tag filter">
+            <button type="button" onClick={clear} className={`${iconButton} pointer-events-auto`} aria-label={t('tagCloud.clear')}>
               <Icon name="filter-off" className="size-4" />
             </button>
           ) : null}
@@ -204,8 +210,8 @@ export function TagCloud({
             type="button"
             onClick={() => setExpanded(true)}
             className={`${iconButton} pointer-events-auto`}
-            aria-label="Expand tag cloud"
-            title="Expand tag cloud"
+            aria-label={t('tagCloud.expand')}
+            title={t('tagCloud.expand')}
             aria-haspopup="dialog"
           >
             <Icon name="expand" className="size-4" />
@@ -224,7 +230,7 @@ export function TagCloud({
           </div>
           <div
             role="group"
-            aria-label="Filter by tag"
+            aria-label={t('tagCloud.filterBy')}
             aria-busy={searching || undefined}
             className={`flex max-h-[min(22rem,50dvh)] flex-wrap content-start items-baseline gap-x-2.5 gap-y-1.5 overflow-y-auto overscroll-contain px-3.5 pb-3 ${inFold ? 'max-xl:max-h-none max-xl:flex-1' : ''}`}
           >
@@ -240,7 +246,7 @@ export function TagCloud({
                       type="button"
                       aria-pressed={pressed}
                       onClick={() => toggle(tag.name)}
-                      title={`${tag.name}: ${tag.count} ${tag.count === 1 ? 'pin' : 'pins'}${members ? `, ${members.length} tags` : ''}`}
+                      title={`${tagLabel(t, tag)}: ${t('tagCloud.pins', { count: tag.count })}${members ? `, ${t('tagCloud.tags', { count: members.length })}` : ''}`}
                       className={`${STEP_CLASS[steps.get(tag.name.toLowerCase()) ?? 1]} rounded-md px-1 text-left leading-snug transition-colors ${
                         pressed
                           ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset'
@@ -249,18 +255,18 @@ export function TagCloud({
                             : 'text-muted hover:text-ink'
                       } ${tag.count === 0 && !pressed ? 'opacity-50' : ''}`}
                     >
-                      {tag.name}
+                      {tagLabel(t, tag)}
                       <span className="ml-1 text-[11px] font-normal text-subtle tabular-nums">
                         {tag.count}
-                        <span className="sr-only"> {tag.count === 1 ? 'pin' : 'pins'}</span>
+                        <span className="sr-only"> {t('tagCloud.pinsWord', { count: tag.count })}</span>
                       </span>
                     </button>
                     {members ? (
                       <button
                         type="button"
                         aria-expanded={open}
-                        aria-label={`${open ? 'Hide' : 'Show'} the ${members.length} tags in ${tag.name}`}
-                        title={`${members.length} tags inside`}
+                        aria-label={t(open ? 'tagCloud.hideMembers' : 'tagCloud.showMembers', { count: members.length, name: tagLabel(t, tag) })}
+                        title={t('tagCloud.tagsInside', { count: members.length })}
                         onClick={() => unfold(tag.name)}
                         className="ml-0.5 rounded px-0.5 text-[11px] text-subtle hover:text-ink"
                       >
@@ -274,10 +280,10 @@ export function TagCloud({
             })}
             {!counts ? (
               <p role="status" className="py-1 text-xs text-subtle">
-                Loading tags…
+                {t('tagCloud.loading')}
               </p>
             ) : !tags.length ? (
-              <p className="py-1 text-xs text-subtle">{needle ? 'No tag matches.' : 'No tags on these pins yet.'}</p>
+              <p className="py-1 text-xs text-subtle">{needle ? t('tagCloud.noMatch') : t('tagCloud.none')}</p>
             ) : null}
           </div>
         </div>
@@ -313,6 +319,7 @@ function Members({
   unfolded: Set<string>;
   onUnfold: (name: string) => void;
 }) {
+  const t = useT();
   return (
     <span className="flex basis-full flex-wrap items-baseline gap-x-2 gap-y-1 border-l border-line pl-2.5">
       {members.map((m) => {
@@ -325,7 +332,7 @@ function Members({
                 type="button"
                 aria-pressed={isSelected(m.name)}
                 onClick={() => onToggle(m.name)}
-                title={`${m.name}: ${m.count} ${m.count === 1 ? 'pin' : 'pins'}${inner ? `, ${inner.length} tags` : ''}`}
+                title={`${m.name}: ${t('tagCloud.pins', { count: m.count })}${inner ? `, ${t('tagCloud.tags', { count: inner.length })}` : ''}`}
                 className={`rounded-md px-1 text-left text-xs leading-snug transition-colors ${
                   isSelected(m.name) ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset' : 'text-muted hover:text-ink'
                 }`}
@@ -337,7 +344,7 @@ function Members({
                 <button
                   type="button"
                   aria-expanded={open}
-                  aria-label={`${open ? 'Hide' : 'Show'} the ${inner.length} tags in ${m.name}`}
+                  aria-label={t(open ? 'tagCloud.hideMembers' : 'tagCloud.showMembers', { count: inner.length, name: m.name })}
                   onClick={() => onUnfold(m.name)}
                   className="ml-0.5 rounded px-0.5 text-subtle hover:text-ink"
                 >
@@ -354,13 +361,14 @@ function Members({
 }
 
 function FindTag({ value, onChange, className = '' }: { value: string; onChange: (value: string) => void; className?: string }) {
+  const t = useT();
   return (
     <input
       type="search"
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      placeholder="Find a tag"
-      aria-label="Find a tag"
+      placeholder={t('tagCloud.find')}
+      aria-label={t('tagCloud.find')}
       className={`rounded-full bg-field px-3.5 py-1.5 text-sm text-ink ring-1 ring-line ring-inset placeholder:text-subtle focus:ring-2 focus:ring-link focus:outline-none ${className}`}
     />
   );
@@ -369,15 +377,16 @@ function FindTag({ value, onChange, className = '' }: { value: string; onChange:
 // Grouped: tags wrapped up into their larger category (an award body's
 // years, the market exchanges), or every tag on its own.
 function GroupedToggle({ wrapped, onChange }: { wrapped: boolean; onChange: (wrapped: boolean) => void }) {
+  const t = useT();
   return (
     <button
       type="button"
       aria-pressed={wrapped}
       onClick={() => onChange(!wrapped)}
       className="shrink-0 rounded-full px-2.5 py-1 text-xs font-medium text-muted ring-1 ring-line ring-inset hover:bg-raised hover:text-ink aria-pressed:bg-accent/15 aria-pressed:text-link"
-      title={wrapped ? 'Show every tag on its own' : 'Wrap tags up into larger categories'}
+      title={wrapped ? t('tagCloud.ungroupTitle') : t('tagCloud.groupTitle')}
     >
-      Grouped
+      {t('tagCloud.grouped')}
     </button>
   );
 }
@@ -385,7 +394,12 @@ function GroupedToggle({ wrapped, onChange }: { wrapped: boolean; onChange: (wra
 // How many tags the big cloud reads.
 const VIEW_LIMIT = 200;
 
-const KIND_LABEL: Record<TagCount['kind'], string> = { award: 'Award', nomination: 'Nomination', topic: 'Tag', category: 'Category' };
+const KIND_LABEL: Record<TagCount['kind'], MessageKey> = { award: 'tagCloud.kindAward', nomination: 'tagCloud.kindNomination', topic: 'tagCloud.kindTag', category: 'tagCloud.kindCategory' };
+
+// A tag as shown: a category in the page's language, any other by its own name.
+function tagLabel(t: Translator, tag: { name: string; kind?: TagCount['kind'] }) {
+  return tag.kind === 'category' ? categoryLabel(t, tag.name) : tag.name;
+}
 
 // The tag cloud blown up over the page, WordArt style (WordCloud): up to 200
 // tags packed into a cloud, the busiest largest, flowing around the pointer.
@@ -410,6 +424,7 @@ function TagCloudView({
   onClose: () => void;
 }) {
   const titleId = useId();
+  const t = useT();
   const [counts, setCounts] = useState<TagCount[] | null>(null);
   const [failed, setFailed] = useState(false);
   const [filter, setFilter] = useState('');
@@ -452,31 +467,31 @@ function TagCloudView({
         <div className="flex items-center gap-3 border-b border-line px-5 py-3 max-sm:flex-wrap max-sm:px-3 max-sm:pt-[max(0.75rem,env(safe-area-inset-top))]">
           <Icon name="tag" className="size-5 shrink-0 text-link" />
           <h2 id={titleId} className="shrink-0 text-base font-semibold text-ink">
-            Tag cloud
+            {t('tagCloud.title')}
           </h2>
-          {counts ? <span className="shrink-0 text-sm text-subtle">{counts.length} tags</span> : null}
+          {counts ? <span className="shrink-0 text-sm text-subtle">{t('tagCloud.tags', { count: counts.length })}</span> : null}
           <FindTag value={filter} onChange={setFilter} className="min-w-0 flex-1 max-sm:order-last max-sm:basis-full" />
           <span className="flex shrink-0 items-center gap-1 max-sm:ml-auto">
             <GroupedToggle wrapped={wrapped} onChange={onWrappedChange} />
             {selected.length ? (
-              <button type="button" onClick={onClear} className={iconButton} aria-label="Clear tag filter" title="Clear tag filter">
+              <button type="button" onClick={onClear} className={iconButton} aria-label={t('tagCloud.clear')} title={t('tagCloud.clear')}>
                 <Icon name="filter-off" className="size-5" />
               </button>
             ) : null}
-            <button type="button" onClick={onClose} className={iconButton} aria-label="Close tag cloud">
+            <button type="button" onClick={onClose} className={iconButton} aria-label={t('tagCloud.close')}>
               <Icon name="close" className="size-5" />
             </button>
           </span>
         </div>
         <div aria-busy={busy || undefined} className="relative min-h-60 flex-1 overflow-hidden">
           {failed ? (
-            <p className="absolute inset-0 flex items-center justify-center text-sm text-subtle">Tags are unavailable right now.</p>
+            <p className="absolute inset-0 flex items-center justify-center text-sm text-subtle">{t('tagCloud.unavailable')}</p>
           ) : !counts ? (
             <p role="status" className="absolute inset-0 flex items-center justify-center text-sm text-subtle">
-              Loading tags…
+              {t('tagCloud.loading')}
             </p>
           ) : !tags.length ? (
-            <p className="absolute inset-0 flex items-center justify-center text-sm text-subtle">{needle ? 'No tag matches.' : 'No tags on these pins yet.'}</p>
+            <p className="absolute inset-0 flex items-center justify-center text-sm text-subtle">{needle ? t('tagCloud.noMatch') : t('tagCloud.none')}</p>
           ) : (
             <WordCloud tags={tags} selected={wrapped ? groupSelection(tags, selected) : selected} onToggle={onToggle} onHot={onHot} />
           )}
@@ -484,14 +499,15 @@ function TagCloudView({
         <p aria-live="polite" className="flex min-h-10 items-center gap-1.5 border-t border-line px-5 py-2.5 text-xs text-subtle max-sm:px-3 max-sm:pb-[max(0.625rem,env(safe-area-inset-bottom))]">
           {hot ? (
             <>
-              <span className="font-semibold text-ink">{hot.name}</span>
+              <span className="font-semibold text-ink">{tagLabel(t, hot)}</span>
               <span>
-                · {hot.members ? `${hot.members.length} tags` : KIND_LABEL[hot.kind]} · {hot.count} {hot.count === 1 ? 'pin' : 'pins'} · click to {selected.some((s) => s.toLowerCase() === hot.name.toLowerCase()) ? 'drop it from' : 'add it to'} the search
-                {hot.members ? ` · wraps ${hot.members.slice(0, 4).map((m) => m.name.replace(hot.name, '').trim() || m.name).join(', ')}${hot.members.length > 4 ? '…' : ''}` : ''}
+                · {hot.members ? t('tagCloud.tags', { count: hot.members.length }) : t(KIND_LABEL[hot.kind])} · {t('tagCloud.pins', { count: hot.count })} ·{' '}
+                {selected.some((s) => s.toLowerCase() === hot.name.toLowerCase()) ? t('tagCloud.clickToDrop') : t('tagCloud.clickToAdd')}
+                {hot.members ? ` · ${t('tagCloud.wraps', { names: `${hot.members.slice(0, 4).map((m) => m.name.replace(hot.name, '').trim() || m.name).join(', ')}${hot.members.length > 4 ? '…' : ''}` })}` : ''}
               </span>
             </>
           ) : (
-            'Bigger words are on more pins. Move the pointer through the cloud, and pick tags to search for pins with any of them.'
+            t('tagCloud.hint')
           )}
         </p>
       </div>

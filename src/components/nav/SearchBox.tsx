@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from '@/lib/client/navigation';
 import { Fragment, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { canonicalCategory, isCategory } from '@/lib/categories';
@@ -13,6 +13,9 @@ import { hasTerm, term } from '@/lib/searchTerms';
 import type { TagCount } from '@/lib/tags';
 import type { PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery, type QueryPart } from '@/server/util/searchQuery';
+import { useT } from '@/lib/client/i18n';
+import { categoryLabel } from '@/lib/i18n/labels';
+import type { MessageKey, Translator } from '@/lib/i18n/translate';
 
 export const WATCHED = 'watch';
 
@@ -44,9 +47,10 @@ function toItems(query: string): QueryPart[] {
 
 // How a term reads as a pill: the field it filters, and its value in the
 // spelling the site uses (the category list's, a user's leading @).
-function termLabel(part: TermPart) {
+// The field's name is shown in the page's language; the query keeps "tag:".
+function termLabel(part: TermPart, t: Translator) {
   if (part.field === 'user') return { field: null, value: `@${part.value.replace(/^@+/, '')}` };
-  return { field: part.field, value: isCategory(part.value) ? canonicalCategory(part.value) : part.value };
+  return { field: t.dynamic(`search.fields.${part.field}`, part.field), value: isCategory(part.value) ? categoryLabel(t, part.value) : part.value };
 }
 
 // One row of the suggestions: a category or other tag to filter by (both
@@ -68,7 +72,7 @@ function toSuggestions(res: AutocompleteJson): Suggestion[] {
   ];
 }
 
-const GROUP_LABEL: Record<Suggestion['kind'], string> = { category: 'Categories', tag: 'Tags', pin: 'Pins' };
+const GROUP_LABEL = { category: 'search.groupCategories', tag: 'search.groupTags', pin: 'search.groupPins' } as const satisfies Record<Suggestion['kind'], MessageKey>;
 
 // The navbar search: suggestions (matching categories, tags and titles) as you type, Enter to search, and a
 // Watched-only toggle for signed-in users (lg and up; below, it is in the drawer). The query sits in the box as items:
@@ -86,6 +90,7 @@ export function SearchBox() {
   const params = useSearchParams();
   const { isLoggedIn } = useSession();
   const timeZone = useTimeZone('UTC');
+  const t = useT();
 
   // The map searches its own pins; everywhere else a search opens /search.
   const onMap = pathname === '/map';
@@ -302,7 +307,7 @@ export function SearchBox() {
       type="search"
       name="q"
       autoComplete="off"
-      placeholder={items.length ? '' : 'Search'}
+      placeholder={items.length ? '' : t('search.placeholder')}
       value={draft}
       onChange={(event) => suggest(event.target.value)}
       onFocus={() => {
@@ -358,7 +363,7 @@ export function SearchBox() {
       }}
     >
       <label htmlFor="site-search" className="sr-only">
-        Search
+        {t('search.placeholder')}
       </label>
       <div
         className="relative flex min-w-0 flex-1 cursor-text items-center rounded-full bg-field text-muted ring-1 ring-line transition-shadow ring-inset focus-within:ring-2 focus-within:ring-link"
@@ -385,7 +390,7 @@ export function SearchBox() {
               node = (
                 <button
                   type="button"
-                  aria-label={`Edit ${item.raw}`}
+                  aria-label={t('search.editItem', { name: item.raw })}
                   onMouseDown={keepFocus}
                   onClick={() => editItem(index)}
                   className="shrink-0 rounded px-0.5 text-sm whitespace-nowrap text-ink hover:bg-raised max-lg:text-base"
@@ -394,17 +399,17 @@ export function SearchBox() {
                 </button>
               );
             } else {
-              const { field, value } = termLabel(item);
+              const { field, value } = termLabel(item, t);
               const name = `${field ? `${field} ` : ''}${value}`;
               node = (
                 <span className="inline-flex shrink-0 items-center rounded-full bg-accent/15 text-xs font-medium whitespace-nowrap text-link ring-1 ring-accent/60 ring-inset">
-                  <button type="button" title="Edit" aria-label={`Edit ${name}`} onMouseDown={keepFocus} onClick={() => editItem(index)} className="flex items-center gap-1 py-0.5 pl-2">
+                  <button type="button" title={t('common.edit')} aria-label={t('search.editItem', { name })} onMouseDown={keepFocus} onClick={() => editItem(index)} className="flex items-center gap-1 py-0.5 pl-2">
                     {field ? <span className="text-subtle">{field}</span> : null}
                     <span>{value}</span>
                   </button>
                   <button
                     type="button"
-                    aria-label={`Remove ${name}`}
+                    aria-label={t('search.removeItem', { name })}
                     onMouseDown={keepFocus}
                     onClick={() => removeItem(index)}
                     className="mx-0.5 rounded-full p-0.5 text-subtle hover:bg-raised hover:text-ink"
@@ -427,7 +432,7 @@ export function SearchBox() {
           <button
             type="button"
             className="mr-1.5 rounded-full p-1.5 text-subtle hover:bg-raised hover:text-ink"
-            aria-label="Clear search"
+            aria-label={t('search.clear')}
             onClick={() => {
               setItems([]);
               setEditAt(0);
@@ -446,7 +451,7 @@ export function SearchBox() {
         <button
           type="button"
           aria-pressed={watchedOnly}
-          title={watchedOnly ? 'Showing only pins you watch — click to show all' : 'Show only pins you watch'}
+          title={watchedOnly ? t('search.watchedOnTitle') : t('search.watchedOffTitle')}
           className={`flex shrink-0 items-center gap-1.5 rounded-full px-3 text-sm font-medium ring-1 transition-colors ring-inset max-lg:hidden ${
             watchedOnly ? 'bg-accent/15 text-link ring-accent/60' : 'bg-field text-muted ring-line hover:bg-raised hover:text-ink'
           }`}
@@ -457,7 +462,7 @@ export function SearchBox() {
           }}
         >
           <Icon name="eye" className="size-4" />
-          Watched
+          {t('search.watched')}
         </button>
       ) : null}
 
@@ -476,7 +481,7 @@ export function SearchBox() {
               <Fragment key={key}>
                 {header ? (
                   <li role="presentation" className={`px-3 pb-1 text-[11px] font-semibold tracking-wide text-faint uppercase ${index ? 'pt-2.5' : 'pt-1'}`}>
-                    {GROUP_LABEL[suggestion.kind]}
+                    {t(GROUP_LABEL[suggestion.kind])}
                   </li>
                 ) : null}
                 <li
@@ -494,13 +499,13 @@ export function SearchBox() {
                       <Icon name="search" className="mt-0.5 size-3.5 shrink-0 text-faint" />
                       <span className="min-w-0">
                         <span className="line-clamp-2 text-ink sm:line-clamp-1">{suggestion.pin.title}</span>
-                        <span className="block text-xs text-subtle">{formatStart(suggestion.pin, timeZone)}</span>
+                        <span className="block text-xs text-subtle">{formatStart(suggestion.pin, timeZone, {}, t.locale)}</span>
                       </span>
                     </>
                   ) : (
                     <>
                       <Icon name={suggestion.kind === 'tag' ? 'tag' : 'sliders'} className="mt-0.5 size-3.5 shrink-0 text-faint" />
-                      <span className="min-w-0 flex-1 truncate text-ink">{suggestion.name}</span>
+                      <span className="min-w-0 flex-1 truncate text-ink">{suggestion.kind === 'category' ? categoryLabel(t, suggestion.name) : suggestion.name}</span>
                       <span className="shrink-0 text-xs text-subtle tabular-nums">{suggestion.count}</span>
                     </>
                   )}

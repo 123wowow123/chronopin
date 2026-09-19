@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import Link from '@/components/ui/Link';
 import { useRef } from 'react';
 import { BAG_LIMIT, BAG_LIMIT_PHONE, sampleBag } from '@/lib/bagSample';
 import { useImpression } from '@/lib/client/impressions';
@@ -11,6 +11,7 @@ import type { Bag } from '@/lib/timeline';
 import type { PinJson } from '@/lib/types';
 import type { personalWeigher } from '@/lib/userWiki';
 import { PinCard } from '@/components/pin/PinCard';
+import { useT } from '@/lib/client/i18n';
 
 // Beside the rail (lg) tags are a fixed-width column; above the cards on
 // narrow screens they share one row, extra tags (date markers, specialty days)
@@ -72,6 +73,8 @@ export function TimeBlock({
   // How much more each pin weighs for this viewer (their preference wiki).
   boost?: ReturnType<typeof personalWeigher>;
 }) {
+  const t = useT();
+  const { locale } = t;
   const stacks = stackDuplicates(bag.pins);
   // Seeded by today and the day: the pick holds through hydration and the
   // day's reloads, and turns over each day.
@@ -90,16 +93,16 @@ export function TimeBlock({
   const morePhone = stacks.length - Math.min(shown.length, BAG_LIMIT_PHONE) + unloaded;
   const firstShown = shown.findIndex((s) => s.rank < BAG_LIMIT_PHONE);
   const isToday = bag.day === todayKey;
-  const planet = weekdayPlanet(bag.day);
-  const moon = moonPhase(bag.day);
-  const lunar = lunarDate(bag.day);
+  const planet = weekdayPlanet(bag.day, locale);
+  const moon = moonPhase(bag.day, 16, locale);
+  const lunar = lunarDate(bag.day, locale);
   const tagsHeight = 26 + 42 * (2 + (lunar ? 1 : 0) + bag.dateTimes.length + (specialtyDays.length ? 1 : 0));
 
   return (
-    <section id={id ?? `day-${bag.day}`} aria-label={formatDayKey(bag.day)} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:pt-0">
+    <section id={id ?? `day-${bag.day}`} aria-label={formatDayKey(bag.day, locale)} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:pt-0">
       <div
         className={`rail-marker absolute top-6 cursor-default left-[140px] z-10 -ml-4 hidden size-8 items-center justify-center overflow-hidden rounded-full text-base leading-none lg:flex ${isToday ? 'rail-marker-today' : ''}`}
-        title={`${planet.planet}\n${planet.weekday}\n${moon.name} (${Math.round(moon.illumination * 100)}% lit)`}
+        title={`${planet.planet}\n${planet.weekday}\n${t('timeline.moonLit', { phase: moon.name, percent: Math.round(moon.illumination * 100) })}`}
       >
         {/* The circle is the day's moon: its lit part a soft tint behind the planet. */}
         <svg viewBox="0 0 32 32" className="absolute inset-0 size-full" aria-hidden>
@@ -113,10 +116,10 @@ export function TimeBlock({
 
       <div className={`${tagRow} lg:top-[26px]`}>
         <Tag variant={isToday ? 'today' : 'date'} className={`${leadTag} tag-link`}>
-          <time dateTime={bag.day}>{formatDayKey(bag.day)}</time>
+          <time dateTime={bag.day}>{formatDayKey(bag.day, locale)}</time>
         </Tag>
-        <Tag variant={isToday ? 'today' : 'countdown'} title={timespan(todayKey, bag.day)} className={leadTag}>
-          {timespan(todayKey, bag.day, 'y')}
+        <Tag variant={isToday ? 'today' : 'countdown'} title={timespan(todayKey, bag.day, 'd', locale)} className={leadTag}>
+          {timespan(todayKey, bag.day, 'y', locale)}
         </Tag>
         {/* The Chinese lunar (Nong Li) date under the countdown; phones keep their one extra tag for date markers. */}
         {lunar ? (
@@ -230,10 +233,11 @@ function DayCard({
 // there may be none left out (hiddenWide false), and then it shows on phones
 // only.
 function ShowMore({ href, total, hiddenWide }: { href: string; total: number; hiddenWide: boolean }) {
+  const t = useT();
   return (
     <div className={`mb-2.5 flex justify-center lg:ml-[170px] lg:max-w-[906px] ${hiddenWide ? '' : 'sm:hidden'}`}>
       <Link href={href} className="rounded-full px-3 py-1 text-sm font-medium text-subtle tabular-nums ring-1 ring-line ring-inset hover:text-link hover:no-underline">
-        View all {total} {total === 1 ? 'pin' : 'pins'}
+        {t('timeline.viewAll', { count: total })}
       </Link>
     </div>
   );
@@ -242,6 +246,7 @@ function ShowMore({ href, total, hiddenWide }: { href: string; total: number; hi
 // A card with its day's duplicates stacked behind it: the edges of two cards
 // peek out below, and a link leads to the pin page's list of them.
 function DuplicateStack({ pin, hiddenCount, children }: { pin: PinJson; hiddenCount: number; children: React.ReactNode }) {
+  const t = useT();
   return (
     <div>
       <div className="relative pb-3">
@@ -251,7 +256,7 @@ function DuplicateStack({ pin, hiddenCount, children }: { pin: PinJson; hiddenCo
       </div>
       <Link href={`${pinPath(pin)}#duplicates`} className="mt-1 flex items-center justify-center gap-1.5 text-xs font-medium text-subtle hover:text-link hover:no-underline">
         <span className="rounded-full bg-raised px-1.5 tabular-nums ring-1 ring-line ring-inset">+{hiddenCount}</span>
-        {hiddenCount === 1 ? 'more pin of this' : 'more pins of this'}
+        {t('timeline.morePinsOfThis', { count: hiddenCount })}
       </Link>
     </div>
   );
@@ -268,12 +273,13 @@ export function SpecialtyTag({ names, className = '' }: { names: string[]; class
 }
 
 export function TodayMarker({ specialtyDays }: { specialtyDays: string[] }) {
+  const t = useT();
   return (
     <div className="relative mt-2.5 pt-10 max-lg:mt-6 lg:min-h-[36px] lg:pt-0">
       <div className="today-dot absolute top-[7px] left-[140px] z-10 -ml-[7px] hidden size-3.5 rounded-full lg:block" />
       <div className={tagRow}>
         <div id="today-marker" className={`${tagBase} ${leadTag} tag-today tag-link uppercase tracking-wider lg:text-xs`} style={{ ['--tag-reach' as string]: '23px' }}>
-          Today
+          {t('controls.today')}
         </div>
         {specialtyDays.length ? <SpecialtyTag names={specialtyDays} /> : null}
       </div>

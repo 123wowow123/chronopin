@@ -5,9 +5,9 @@ import { useSession } from '@/lib/client/session';
 import { useStockQuote, watchStockQuotes } from '@/lib/client/stockQuotes';
 import { changeSince } from '@/lib/stocks';
 import type { PinJson } from '@/lib/types';
+import { useT } from '@/lib/client/i18n';
+import { stockFormats } from '@/lib/i18n/numbers';
 
-const usd = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2 });
-const dayOnly = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
 // The company's own stock, inside the card's company pill (no symbol: the
 // company is named just before it): its price now
@@ -22,6 +22,8 @@ const dayOnly = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric
 export function CompanyTicker({ pin, onDark = false, bare = false }: { pin: Pick<PinJson, 'id' | 'stocks'>; onDark?: boolean; bare?: boolean }) {
   // A signed-in viewer can turn these off (profile preferences).
   const hidden = useSession().user?.showCardStockPrices === false;
+  const t = useT();
+  const { usd, dayOnly } = stockFormats(t.locale);
   const stock = hidden ? undefined : pin.stocks?.find((s) => s.relation === 'company');
   const ref = useRef<HTMLSpanElement>(null);
   const { id } = pin;
@@ -56,9 +58,9 @@ export function CompanyTicker({ pin, onDark = false, bare = false }: { pin: Pick
   const startDay = stock.startDay ? dayOnly.format(new Date(`${stock.startDay}T00:00:00Z`)) : null;
   const title =
     stock.startPrice != null && startDay
-      ? `${stock.symbol}${pct == null ? '' : ` ${pct > 0 ? '+' : ''}${pct.toFixed(2)}%`} since the ${startDay} close of ${usd.format(stock.startPrice)}`
+      ? t('stocks.sinceClose', { symbol: `${stock.symbol}${pct == null ? '' : ` ${pct > 0 ? '+' : ''}${pct.toFixed(2)}%`}`, day: startDay, price: usd.format(stock.startPrice) })
       : startDay
-        ? `${stock.symbol}: the ${startDay} close is not in yet`
+        ? t('stocks.closeNotIn', { symbol: stock.symbol, day: startDay })
         : stock.symbol;
   const up = onDark ? 'text-emerald-300' : 'text-success';
   const down = onDark ? 'text-red-300' : 'text-danger';
@@ -71,7 +73,7 @@ export function CompanyTicker({ pin, onDark = false, bare = false }: { pin: Pick
       )}
       {bare && stock.startPrice != null ? (
         <span className="text-subtle">
-          start was {usd.format(stock.startPrice)}
+          {t('stocks.startWas', { price: usd.format(stock.startPrice) })}
         </span>
       ) : null}
       {bare ? null : <span>{quote ? usd.format(quote.price) : '…'}</span>}

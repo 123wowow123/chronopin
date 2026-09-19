@@ -3,7 +3,7 @@ import { expectReloadMatchesTodayButton } from './todayPosition';
 
 // The floating controls fold behind pills below xl, so these run at phone size.
 
-const foldPill = 'button[aria-controls="timeline-category"]:visible';
+const foldPill = 'button[aria-controls="timeline-tags"]:visible';
 
 // Whether the page moves under a wheel, rather than how it is held still.
 // A scripted scrollTo would not do: overflow:hidden stops the reader
@@ -18,7 +18,8 @@ async function scrolls(page: import('@playwright/test').Page) {
 test('picking a category and shutting the fold leaves the page scrolling', async ({ page }) => {
   await page.goto('/');
   await page.locator(foldPill).first().click();
-  const pills = page.getByRole('group', { name: 'Filter by category' }).getByRole('button');
+  // The tag cloud's tags (categories lead it), not the chevrons that unfold a group.
+  const pills = page.getByRole('group', { name: 'Filter by tag' }).locator('button[aria-pressed]');
   await expect(pills.first()).toBeVisible();
   // The page is held still while the fold covers it.
   expect(await scrolls(page)).toBe(false);

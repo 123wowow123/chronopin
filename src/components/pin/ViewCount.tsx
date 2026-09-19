@@ -5,6 +5,7 @@ import { Icon } from '@/components/ui/Icon';
 import { useCountBump } from '@/lib/client/countBump';
 import { onLive } from '@/lib/client/liveFeed';
 import { compactCount } from '@/lib/format';
+import { useT } from '@/lib/client/i18n';
 
 // A visit being counted, per pin, shared while it is in flight: StrictMode
 // runs the effect twice, and a first-time visitor's two requests would each
@@ -34,6 +35,7 @@ function recordView(pinId: number): Promise<number | null> {
 export function ViewCount({ pinId, initial, track = false }: { pinId: number; initial?: number; track?: boolean }) {
   const [count, setCount] = useState(initial ?? 0);
   const countRef = useCountBump<HTMLSpanElement>(count);
+  const t = useT();
 
   useEffect(() => {
     if (!track) return;
@@ -52,7 +54,7 @@ export function ViewCount({ pinId, initial, track = false }: { pinId: number; in
     });
   }, [pinId]);
 
-  const label = `${count.toLocaleString('en-US')} ${count === 1 ? 'view' : 'views'}`;
+  const label = t('pin.views', { count });
   return (
     <span className="inline-flex items-center gap-1.5 px-2 py-1 text-sm text-subtle tabular-nums" title={label} aria-label={label}>
       <Icon name="views" className="size-4" />

@@ -3,6 +3,7 @@
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useEffect, useRef } from 'react';
+import { useT } from '@/lib/client/i18n';
 
 // Leaflet's default marker images are resolved relative to its CSS, which a
 // bundler breaks; point them at the CDN copies instead.
@@ -23,6 +24,7 @@ export { icon as markerIcon };
 // A pin's place on an OpenStreetMap map.
 export default function PinMap({ latitude, longitude, title }: { latitude: number; longitude: number; title: string }) {
   const ref = useRef<HTMLDivElement>(null);
+  const t = useT();
 
   useEffect(() => {
     if (!ref.current) return;
@@ -42,7 +44,7 @@ export default function PinMap({ latitude, longitude, title }: { latitude: numbe
   return (
     <div
       role="group"
-      aria-label={`Map of ${title}`}
+      aria-label={t('pin.mapOf', { title })}
       className="isolate h-[360px] w-full overflow-hidden rounded-xl border border-line bg-raised sm:h-[420px]"
     >
       <div ref={ref} className="size-full" />

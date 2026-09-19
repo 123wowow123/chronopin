@@ -1,7 +1,7 @@
 'use client';
 
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import Link from '@/components/ui/Link';
+import { useRouter } from '@/lib/client/navigation';
 import { useCallback, useEffect, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { PostedTime } from '@/components/ui/LocalTime';
@@ -10,6 +10,7 @@ import { api, ApiError } from '@/lib/client/api';
 import { useSession } from '@/lib/client/session';
 import { pinPath } from '@/lib/seo';
 import type { PinJson, PinUserJson } from '@/lib/types';
+import { useT } from '@/lib/client/i18n';
 
 // A pair the signed-in viewer may decide, as GET /api/pins/:id/duplicates lists it.
 type Pair = {
@@ -22,7 +23,6 @@ type Pair = {
   pin: { id: number; title: string; user?: PinUserJson; utcStartDateTime: string; utcCreatedDateTime: string };
 };
 
-const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
 
 // The pin's confirmed duplicates (the same event pinned by others), for
 // everyone; for an admin or the author of either pin, also the app's
@@ -34,6 +34,7 @@ export function PinDuplicates({ pinId, group, timeZone }: { pinId: number; group
   const [pairs, setPairs] = useState<Pair[]>([]);
   const [busy, setBusy] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const t = useT();
 
   const load = useCallback(() => {
     api
@@ -53,7 +54,7 @@ export function PinDuplicates({ pinId, group, timeZone }: { pinId: number; group
       load();
       router.refresh();
     } catch (err) {
-      setError(err instanceof ApiError ? err.message : 'Could not save that. Please try again.');
+      setError(err instanceof ApiError ? err.message : t('duplicates.saveFailed'));
     } finally {
       setBusy(null);
     }
@@ -71,12 +72,12 @@ export function PinDuplicates({ pinId, group, timeZone }: { pinId: number; group
   // Pairs already dismissed, folded away under the suggestions (or on their own).
   const dismissedList = (className = '') => (
     <details className={className}>
-      <summary className="cursor-pointer text-sm text-subtle hover:text-ink">Dismissed duplicates ({dismissed.length})</summary>
+      <summary className="cursor-pointer text-sm text-subtle hover:text-ink">{t('duplicates.dismissedCount', { count: dismissed.length })}</summary>
       <ul className={`mt-3 ${SCROLL_LIST}`}>
         {dismissed.map((pair) => (
           <SuggestionRow key={pair.pin.id} pair={pair} timeZone={timeZone} busy={busy === pair.pin.id}>
             <button type="button" className="btn btn-secondary btn-sm" disabled={busy === pair.pin.id} onClick={() => decide(pair.pin.id, 'confirmed')}>
-              Same event after all
+              {t('duplicates.sameAfterAll')}
             </button>
           </SuggestionRow>
         ))}
@@ -89,7 +90,7 @@ export function PinDuplicates({ pinId, group, timeZone }: { pinId: number; group
     <section
       id="duplicates"
       aria-labelledby={others.length || suggested.length ? 'duplicates-heading' : undefined}
-      aria-label={others.length || suggested.length ? undefined : 'Dismissed duplicates'}
+      aria-label={others.length || suggested.length ? undefined : t('duplicates.dismissed')}
       // Only authors and admins get suggestions, so with nothing public to
       // show the whole panel is theirs and takes the privileged colour.
       className={`${others.length ? 'surface' : 'surface-privileged'} mt-6 p-5`}
@@ -97,11 +98,11 @@ export function PinDuplicates({ pinId, group, timeZone }: { pinId: number; group
       {others.length ? (
         <>
           <h2 id="duplicates-heading" className="text-base font-semibold">
-            Also pinned by others
+            {t('duplicates.alsoPinned')}
           </h2>
           <p className="mt-1 text-sm text-subtle">
-            The same event, pinned {plural(others.length, 'more time', 'more times')}.{' '}
-            On the timeline they stack, the most watched (then most viewed) on top{onTimeline === pinId ? ': this one.' : '.'}
+            {t('duplicates.sameEventPinned', { count: others.length })}{' '}
+            {onTimeline === pinId ? t('duplicates.stackThisOne') : t('duplicates.stack')}
           </p>
           <ul className="mt-3 space-y-1">
             {others.map((p) => (
@@ -114,14 +115,14 @@ export function PinDuplicates({ pinId, group, timeZone }: { pinId: number; group
                     <PinAuthor user={p.user} />
                     {p.utcCreatedDateTime ? <PostedTime value={p.utcCreatedDateTime} serverTimeZone={timeZone} /> : null}
                     <span className="tabular-nums">
-                      {plural(p.favoriteCount ?? 0, 'watching', 'watching')} · {plural(p.viewCount ?? 0, 'view', 'views')}
+                      {t('watch.count', { count: p.favoriteCount ?? 0 })} · {t('pin.views', { count: p.viewCount ?? 0 })}
                     </span>
-                    {p.id === onTimeline ? <span className="rounded-full bg-raised px-2 py-px text-muted ring-1 ring-line ring-inset">On the timeline</span> : null}
+                    {p.id === onTimeline ? <span className="rounded-full bg-raised px-2 py-px text-muted ring-1 ring-line ring-inset">{t('duplicates.onTimeline')}</span> : null}
                   </div>
                 </div>
                 {decidable.get(p.id)?.status === 'confirmed' ? (
                   <button type="button" className="btn btn-ghost btn-sm shrink-0" disabled={busy === p.id} onClick={() => decide(p.id, 'rejected')}>
-                    Unlink
+                    {t('duplicates.unlink')}
                   </button>
                 ) : null}
               </li>
@@ -139,23 +140,23 @@ export function PinDuplicates({ pinId, group, timeZone }: { pinId: number; group
               <summary className="flex cursor-pointer list-none items-center gap-2 [&::-webkit-details-marker]:hidden">
                 <Icon name="shield" className="size-4 shrink-0 text-privileged" />
                 <SuggestHeading id={others.length ? undefined : 'duplicates-heading'} className="text-base font-semibold">
-                  Possible duplicates
+                  {t('duplicates.possible')}
                 </SuggestHeading>
                 <span className="ml-auto rounded-full bg-raised px-2 py-px text-xs font-medium text-muted tabular-nums ring-1 ring-line ring-inset">
                   {suggested.length}
-                  <span className="sr-only"> {suggested.length === 1 ? 'suggestion' : 'suggestions'}</span>
+                  <span className="sr-only"> {t('duplicates.suggestions', { count: suggested.length })}</span>
                 </span>
                 <Icon name="chevron" className="size-4 shrink-0 text-subtle transition-transform group-open:rotate-180" />
               </summary>
-              <p className="mt-1 text-sm text-subtle">Only the pins&apos; authors and admins see these. Confirm the ones that are the same event and they stack together on the timeline.</p>
+              <p className="mt-1 text-sm text-subtle">{t('duplicates.privateNote')}</p>
               <ul className={`mt-3 ${SCROLL_LIST}`}>
                 {suggested.map((pair) => (
                   <SuggestionRow key={pair.pin.id} pair={pair} timeZone={timeZone} busy={busy === pair.pin.id}>
                     <button type="button" className="btn btn-primary btn-sm" disabled={busy === pair.pin.id} onClick={() => decide(pair.pin.id, 'confirmed')}>
-                      Same event
+                      {t('duplicates.same')}
                     </button>
                     <button type="button" className="btn btn-secondary btn-sm" disabled={busy === pair.pin.id} onClick={() => decide(pair.pin.id, 'rejected')}>
-                      Not the same
+                      {t('duplicates.notSame')}
                     </button>
                   </SuggestionRow>
                 ))}
@@ -192,13 +193,14 @@ function PinAuthor({ user }: { user?: PinUserJson }) {
 }
 
 const VERDICTS = {
-  same: { label: 'AI: same event', className: 'bg-success/15 text-success-soft ring-success/30' },
-  different: { label: 'AI: different events', className: 'bg-danger/15 text-danger-soft ring-danger/30' },
-  unsure: { label: 'AI: unsure', className: 'bg-warning/15 text-warning-soft ring-warning/30' },
+  same: { label: 'duplicates.aiSame', className: 'bg-success/15 text-success-soft ring-success/30' },
+  different: { label: 'duplicates.aiDifferent', className: 'bg-danger/15 text-danger-soft ring-danger/30' },
+  unsure: { label: 'duplicates.aiUnsure', className: 'bg-warning/15 text-warning-soft ring-warning/30' },
 } as const;
 
 function SuggestionRow({ pair, timeZone, busy, children }: { pair: Pair; timeZone: string; busy: boolean; children: React.ReactNode }) {
-  const why = pair.reason === 'sourceUrl' ? 'Same source link' : `Title ${Math.round((pair.score ?? 0) * 100)}% similar`;
+  const t = useT();
+  const why = pair.reason === 'sourceUrl' ? t('duplicates.sameSource') : t('duplicates.titleSimilar', { percent: Math.round((pair.score ?? 0) * 100) });
   return (
     <li className="rounded-lg bg-raised/60 px-3 py-2.5 ring-1 ring-line ring-inset" aria-busy={busy}>
       <Link href={pinPath(pair.pin)} className="text-sm font-medium text-ink hover:text-link hover:no-underline">
@@ -209,7 +211,7 @@ function SuggestionRow({ pair, timeZone, busy, children }: { pair: Pair; timeZon
         <PostedTime value={pair.pin.utcCreatedDateTime} serverTimeZone={timeZone} />
         <span>{why}</span>
         {pair.verdict ? (
-          <span className={`rounded-full px-2 py-px font-medium ring-1 ring-inset ${VERDICTS[pair.verdict].className}`}>{VERDICTS[pair.verdict].label}</span>
+          <span className={`rounded-full px-2 py-px font-medium ring-1 ring-inset ${VERDICTS[pair.verdict].className}`}>{t(VERDICTS[pair.verdict].label)}</span>
         ) : null}
       </div>
       {pair.verdict && pair.verdictReasoning ? <p className="mt-1.5 text-xs text-muted">{pair.verdictReasoning}</p> : null}

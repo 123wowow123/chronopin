@@ -1,4 +1,9 @@
+'use client';
+
 import { Icon } from '@/components/ui/Icon';
+import { useT } from '@/lib/client/i18n';
+import { dateFormat } from '@/lib/format';
+import { INTL_LOCALES, type Locale } from '@/lib/i18n/config';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { CitedText } from './CitedText';
 import { orderEvidence } from '@/lib/citations';
@@ -15,8 +20,8 @@ const VISIBLE = 5;
 
 // publishedDate is a calendar date, so it reads in UTC; when a link was added
 // or posted is an instant, read in the viewer's time zone.
-const formatDate = (value: string, timeZone: string) =>
-  new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone }).format(new Date(value));
+const formatDate = (value: string, timeZone: string, locale: Locale) =>
+  dateFormat(INTL_LOCALES[locale], { month: 'short', day: 'numeric', year: 'numeric', timeZone }).format(new Date(value));
 
 function hostname(url: string) {
   try {
@@ -45,6 +50,8 @@ export function PinReferences({
   dateRanges: { start?: DateRange; end?: DateRange };
   timeZone: string;
 }) {
+  const t = useT();
+  const { locale } = t;
   const linked = orderEvidence(evidence);
   const shares = new Map(weighReferences(linked).map(({ reference, share }) => [reference, share]));
   const added = linked.filter((e) => !e.isSource).length;
@@ -56,14 +63,14 @@ export function PinReferences({
     // The start and end this row gives, if any; the source's come from the pin.
     const claimOf = (range?: DateRange) => range?.claims.find((c) => ((reference.isSource && c.isSource) || c.url === reference.url));
     const dates = [
-      ['Starts', claimOf(dateRanges.start)],
-      ['Ends', claimOf(dateRanges.end)],
+      [t('references.starts'), claimOf(dateRanges.start)],
+      [t('references.ends'), claimOf(dateRanges.end)],
     ].filter(([, claim]) => claim) as [string, DateClaim][];
     const site = hostname(reference.url);
     const dated = reference.publishedDate
-      ? `Published ${formatDate(reference.publishedDate, 'UTC')}`
+      ? t('references.published', { date: formatDate(reference.publishedDate, 'UTC', locale) })
       : reference.utcCreatedDateTime
-        ? `${reference.isSource ? 'Posted' : 'Added'} ${formatDate(reference.utcCreatedDateTime, timeZone)}`
+        ? t(reference.isSource ? 'references.posted' : 'references.added', { date: formatDate(reference.utcCreatedDateTime, timeZone, locale) })
         : null;
     return (
       <li key={ids[index]} id={ids[index]} className="-mx-2 flex scroll-mt-24 items-start gap-3 rounded-lg px-2 py-2.5 transition-colors duration-500 data-cited:bg-link/15">
@@ -72,10 +79,10 @@ export function PinReferences({
           className={`mt-0.5 w-12 shrink-0 rounded-full py-px text-center text-[11px] font-semibold tabular-nums ring-1 ring-inset ${confidenceClass(reference.confidence)}`}
           title={
             reference.confidence == null
-              ? 'Not scored: the source has no date confidence'
+              ? t('references.notScored')
               : reference.isSource
-                ? 'From the date confidence the source was rated with'
-                : 'How strongly this reference supports the pin'
+                ? t('references.fromSourceRating')
+                : t('references.howStrongly')
           }
         >
           {reference.confidence == null ? '—' : `${reference.confidence}%`}
@@ -91,7 +98,7 @@ export function PinReferences({
             {/* Credited when someone other than the pin's author added it. */}
             {!reference.isSource && reference.addedByUserName ? (
               <span className="inline-flex items-center gap-1">
-                · Added by
+                · {t('references.addedBy')}
                 <RefineLink field="user" value={reference.addedByUserName} className="inline-flex items-center gap-1 text-muted hover:text-ink hover:no-underline">
                   <UserAvatar userName={reference.addedByUserName} pictureUrl={reference.addedByUserPictureUrl} className="size-4 text-[8px]" />
                   {reference.addedByUserName}
@@ -99,14 +106,14 @@ export function PinReferences({
               </span>
             ) : null}
             {dates.map(([label, claim]) => (
-              <span key={label} className={claim.used ? 'font-medium text-muted' : undefined} title={claim.used ? 'The pin uses this date: it is the most confident' : undefined}>
-                · {label} {formatDay(claim.day)}
+              <span key={label} className={claim.used ? 'font-medium text-muted' : undefined} title={claim.used ? t('references.usesDate') : undefined}>
+                · {label} {formatDay(claim.day, locale)}
                 {claim.used ? ' ✓' : ''}
               </span>
             ))}
             {share !== undefined ? (
-              <span className="tabular-nums" title="Share of the overall confidence; newer references count more">
-                · {Math.round(share * 100)}% of score
+              <span className="tabular-nums" title={t('references.shareTitle')}>
+                · {t('references.share', { percent: Math.round(share * 100) })}
               </span>
             ) : null}
           </div>
@@ -123,19 +130,19 @@ export function PinReferences({
   return (
     <section aria-labelledby="references-heading" className="surface mt-6 px-4 py-3">
       <h2 id="references-heading" className="flex flex-wrap items-center gap-2 text-base font-semibold">
-        References <span className="text-sm font-normal text-subtle tabular-nums">{rows.length}</span>
+        {t('references.heading')} <span className="text-sm font-normal text-subtle tabular-nums">{rows.length}</span>
         <PinConfidence evidence={linked} />
         <EditReferencesLink pinId={pinId} authorId={authorId} hasReferences={added > 0} />
       </h2>
       {rows.length ? (
         <>
           <p className="mt-1 text-xs text-subtle">
-            The first entry is always the pin&apos;s source. Overall confidence is a weighted average of how firmly each reference supports the start and end times used above; a reference counts half as much for every {HALF_LIFE_DAYS} days older than the newest.
+            {t('references.explainer', { days: HALF_LIFE_DAYS })}
           </p>
-          <ExpandableList items={rows} itemIds={ids} visible={VISIBLE} noun="references" className="mt-1 divide-y divide-line" />
+          <ExpandableList items={rows} itemIds={ids} visible={VISIBLE} noun={t('references.noun')} className="mt-1 divide-y divide-line" />
         </>
       ) : (
-        <p className="mt-1 pb-1 text-sm text-subtle">No references yet. Links backing up this pin, each with a confidence, show here.</p>
+        <p className="mt-1 pb-1 text-sm text-subtle">{t('references.none')}</p>
       )}
     </section>
   );

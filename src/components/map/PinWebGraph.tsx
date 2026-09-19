@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { webColor, type WebEdge } from '@/lib/pinWeb';
+import { useT } from '@/lib/client/i18n';
 
 export type WebNode = { id: number; title: string };
 
@@ -15,6 +16,7 @@ const NODE_R = 4;
 // pick one. Pins without any relation are left out; they would only be dots.
 export function PinWebGraph({ nodes, edges, selectedId, onSelect }: { nodes: WebNode[]; edges: WebEdge[]; selectedId?: number; onSelect: (id: number) => void }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const t = useT();
   const selectedRef = useRef(selectedId);
   const onSelectRef = useRef(onSelect);
   const [hover, setHover] = useState<string | null>(null);
@@ -210,9 +212,9 @@ export function PinWebGraph({ nodes, edges, selectedId, onSelect }: { nodes: Web
 
   return (
     <div className="relative h-full w-full">
-      <canvas ref={canvasRef} className="block h-full w-full cursor-grab touch-none text-ink" aria-label="Graph of related pins" />
+      <canvas ref={canvasRef} className="block h-full w-full cursor-grab touch-none text-ink" aria-label={t('map.graphLabel')} />
       {hover ? <p className="floating pointer-events-none absolute top-2 left-2 max-w-[80%] truncate px-2.5 py-1 text-xs text-ink">{hover}</p> : null}
-      {!edges.length ? <p className="absolute inset-0 grid place-items-center text-sm text-subtle">No related pins in view.</p> : null}
+      {!edges.length ? <p className="absolute inset-0 grid place-items-center text-sm text-subtle">{t('map.noRelated')}</p> : null}
     </div>
   );
 }

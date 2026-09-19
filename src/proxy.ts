@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from 'next/server';
+import { DEFAULT_LOCALE, isLocale, LOCALE_COOKIE, localizePath, negotiateLocale, splitLocale, type Locale } from '@/lib/i18n/config';
 import { pinPath } from '@/lib/seo';
 import * as db from '@/server/db';
 import { pinPathCache } from '@/server/services/cache';
@@ -33,29 +34,77 @@ async function canonicalPath(id: number): Promise<string | null> {
   return path;
 }
 
+// Every page is routed under its language (src/app/[lang]). English keeps the
+// plain paths: they are rewritten to /en here, and /en/... redirects back to
+// them, so each page has one English URL. A visitor who picked another
+// language (the locale cookie), or whose browser asks for one on a first
+// visit, is sent from a plain path to that language's.
 export async function proxy(request: NextRequest) {
-  const match = /^\/(?:map\/)?pin\/([^/]+)(?:\/([^/]*))?\/?$/.exec(request.nextUrl.pathname);
-  if (!match) {
-    return NextResponse.next();
-  }
-  const id = Number(match[1]);
-  const path = Number.isInteger(id) && id > 0 ? await canonicalPath(id).catch(() => undefined) : null;
+  const { pathname, search } = request.nextUrl;
+  const { locale: prefix, path } = splitLocale(pathname);
 
-  if (path === undefined) {
-    // The database is unreachable; let the page handle it.
-    return NextResponse.next();
+  if (prefix === DEFAULT_LOCALE) {
+    return redirectTo(request, path + search, 308);
   }
-  if (path === null) {
-    return NextResponse.rewrite(new URL('/pin-not-found', request.url), { status: 404 });
+  if (!prefix) {
+    const preferred = preferredLocale(request);
+    if (preferred !== DEFAULT_LOCALE) {
+      // Not permanent: it depends on the visitor.
+      return redirectTo(request, localizePath(path, preferred) + search, 307);
+    }
   }
-  if (path !== request.nextUrl.pathname) {
+  const locale = prefix ?? DEFAULT_LOCALE;
+
+  const pin = await checkPinPath(request, path, locale);
+  if (pin) return pin;
+
+  if (!prefix) {
     const url = request.nextUrl.clone();
-    url.pathname = path;
-    return NextResponse.redirect(url, 308);
+    url.pathname = `/${DEFAULT_LOCALE}${path === '/' ? '' : path}`;
+    return NextResponse.rewrite(url);
   }
   return NextResponse.next();
 }
 
+// The language picker's choice, else (with none made) the browser's
+// Accept-Language. Crawlers send neither and get English.
+function preferredLocale(request: NextRequest): Locale {
+  const chosen = request.cookies.get(LOCALE_COOKIE)?.value;
+  if (isLocale(chosen)) return chosen;
+  return negotiateLocale(request.headers.get('accept-language')) ?? DEFAULT_LOCALE;
+}
+
+function redirectTo(request: NextRequest, href: string, status: 307 | 308) {
+  return NextResponse.redirect(new URL(href, request.url), status);
+}
+
+// Pin URLs: a 308 to the current slug (in the same language), or a real 404.
+async function checkPinPath(request: NextRequest, path: string, locale: Locale): Promise<NextResponse | null> {
+  const match = /^\/(?:map\/)?pin\/([^/]+)(?:\/([^/]*))?\/?$/.exec(path);
+  if (!match) {
+    return null;
+  }
+  const id = Number(match[1]);
+  const canonical = Number.isInteger(id) && id > 0 ? await canonicalPath(id).catch(() => undefined) : null;
+
+  if (canonical === undefined) {
+    // The database is unreachable; let the page handle it.
+    return null;
+  }
+  if (canonical === null) {
+    return NextResponse.rewrite(new URL(`/pin-not-found?lang=${locale}`, request.url), { status: 404 });
+  }
+  if (canonical !== path) {
+    const url = request.nextUrl.clone();
+    url.pathname = localizePath(canonical, locale);
+    return NextResponse.redirect(url, 308);
+  }
+  return null;
+}
+
 export const config = {
-  matcher: ['/pin/:path*', '/map/pin/:path*'],
+  // Everything but route handlers, build assets and the files in public/.
+  matcher: [
+    '/((?!api/|_next/|auth/|logout|og/|upload/|pin-not-found|favicon\\.ico|robots\\.txt|sitemap\\.xml|ads\\.txt|privacy\\.html|termsofservice\\.html).*)',
+  ],
 };

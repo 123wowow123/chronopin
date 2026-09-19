@@ -57,11 +57,13 @@ test('search results page in as they are scrolled, by date and by relevance', as
 
 // The timeline and the results share one loading boundary, so a pick keeps the
 // pins it was made over on screen until the search is in.
+// Categories are the tag cloud's top group, and a pick is a tag: term.
 test('picking a category searches without blanking the page', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('article').first()).toBeVisible();
-  await page.getByRole('button', { name: /^Category:/ }).click();
-  const pills = page.getByRole('group', { name: 'Filter by category' }).getByRole('button');
+  await page.getByRole('button', { name: /^Tags:/ }).click();
+  // The tags themselves, not the chevrons that unfold a group.
+  const pills = page.getByRole('group', { name: 'Filter by tag' }).locator('button[aria-pressed]');
   await expect(pills.first()).toBeVisible();
 
   // Every frame from the click to the results: a page of its own for the
@@ -77,7 +79,7 @@ test('picking a category searches without blanking the page', async ({ page }) =
   });
 
   await pills.first().click();
-  await expect(page).toHaveURL(/\/search\?q=category/);
+  await expect(page).toHaveURL(/\/search\?q=tag/);
   await expect(pills.first()).toBeVisible();
   expect(await page.evaluate(() => (window as unknown as { blankFrames: number }).blankFrames)).toBe(0);
 });
@@ -86,7 +88,8 @@ test('picking a category searches without blanking the page', async ({ page }) =
 // must not open the list again over the results.
 test('searching with Enter closes the suggestions for good', async ({ page }) => {
   await page.goto('/');
-  const box = page.getByRole('combobox');
+  // By name: the navbar's language picker is a combobox too.
+  const box = page.getByRole('combobox', { name: 'Search' });
   await box.fill('apple');
   await box.press('Enter');
   await expect(page).toHaveURL(/\/search\?q=apple/);

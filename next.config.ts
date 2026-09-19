@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   // Hide the "N" dev-tools badge; compile and runtime errors still show.
   devIndicators: false,
+  // Every page is under src/app/[lang], so a URL no page matches gets
+  // src/app/global-not-found.tsx rather than a layout's not-found.
+  experimental: { globalNotFound: true },
   // Let phones on the home Wi-Fi load dev assets and HMR (http://192.168.x.x:3000).
   allowedDevOrigins: ['192.168.*.*'],
 

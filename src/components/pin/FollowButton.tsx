@@ -1,10 +1,11 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter } from '@/lib/client/navigation';
 import { useEffect, useState } from 'react';
 import { api } from '@/lib/client/api';
 import { useSession } from '@/lib/client/session';
 import { authHrefHere } from '@/lib/client/returnSpot';
+import { useT } from '@/lib/client/i18n';
 
 type Status = { userId: number; followerCount: number; followingCount: number; following: boolean; followsYou: boolean };
 
@@ -19,6 +20,7 @@ export function FollowButton({ userId, userName, showCount, following }: { userI
   );
   const known = following !== undefined;
   const [busy, setBusy] = useState(false);
+  const t = useT();
 
   useEffect(() => {
     let cancelled = false;
@@ -54,25 +56,25 @@ export function FollowButton({ userId, userName, showCount, following }: { userI
     <span className="flex items-center gap-3">
       {showCount && status ? (
         <span className="text-sm text-muted">
-          {status.followerCount} {status.followerCount === 1 ? 'follower' : 'followers'} · {status.followingCount} following
+          {t('follow.followers', { count: status.followerCount })} · {t('follow.followingCount', { count: status.followingCount })}
         </span>
       ) : null}
       <button
         type="button"
         onClick={toggle}
         disabled={busy || (isLoggedIn && !status)}
-        title={status?.following ? `Unfollow ${userName}` : `Follow ${userName}`}
+        title={status?.following ? t('follow.unfollowName', { name: userName }) : t('follow.followName', { name: userName })}
         className={`group btn rounded-full px-4 py-1.5 ${status?.following ? 'btn-secondary hover:bg-red-500/15 hover:text-danger-soft hover:ring-red-500/30' : 'btn-primary'}`}
       >
         {status?.following ? (
           <>
-            <span className="group-hover:hidden">Following</span>
-            <span className="hidden group-hover:inline">Unfollow</span>
+            <span className="group-hover:hidden">{t('follow.following')}</span>
+            <span className="hidden group-hover:inline">{t('follow.unfollow')}</span>
           </>
         ) : status?.followsYou ? (
-          'Follow back'
+          t('follow.followBack')
         ) : (
-          'Follow'
+          t('follow.follow')
         )}
       </button>
     </span>

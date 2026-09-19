@@ -2,8 +2,9 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
-import { approxDays, formatSpan, parseTypedSpan } from '@/lib/postedSpan';
+import { approxDays, formatSpan, parseTypedSpan, spanExample } from '@/lib/postedSpan';
 import { useInControlsFold } from './FloatingControls';
+import { useT } from '@/lib/client/i18n';
 
 type Side = 'past' | 'future';
 
@@ -36,9 +37,11 @@ export function TimeRangeSlider({
   // Folded behind a pill that already says "Posted within …", the heading
   // would only repeat it.
   const inFold = useInControlsFold();
+  const t = useT();
+  const span = (within: string) => formatSpan(within, t.locale);
   const headless = pastOnly && inFold;
   const zeroIndex = steps.findIndex((s) => approxDays(s) === 0);
-  const label = (within: string | null) => (within ? formatSpan(within) : 'All');
+  const label = (within: string | null) => (within ? span(within) : t('common.all'));
 
   // The step nearest a span on a log scale, to place a thumb for a typed value.
   function nearestIndex(within: string | null): number {
@@ -168,28 +171,28 @@ export function TimeRangeSlider({
           applyTyped(side);
         }}
       >
-        <span className="w-24 text-xs text-muted">{pastOnly ? 'Posted within' : side === 'past' ? 'Past' : 'Future'}</span>
+        <span className="w-24 text-xs text-muted">{pastOnly ? t('controls.postedWithin') : side === 'past' ? t('slider.past') : t('slider.future')}</span>
         <input
           type="text"
           value={texts[side]}
-          placeholder="10 days"
+          placeholder={spanExample(t.locale)}
           autoComplete="off"
           onChange={(event) => setTexts((t) => ({ ...t, [side]: event.target.value }))}
           onKeyDown={(event) => event.key === 'Escape' && setPanelOpen(false)}
           className={`field min-w-0 flex-1 px-2 py-1 text-sm max-lg:py-2 ${invalid[side] ? 'ring-red-500' : ''}`}
         />
         <button type="submit" className="btn btn-sm btn-primary py-1.5 max-lg:px-4 max-lg:py-2.5">
-          Set
+          {t('slider.set')}
         </button>
       </form>
       <div className="mt-1.5 mb-2 flex flex-wrap gap-1 max-lg:mt-2.5 max-lg:gap-2">
         {steps.map((step) => (
           <button key={step} type="button" onClick={() => applySide(side, step)} className="rounded-full bg-raised px-2.5 py-0.5 text-xs text-ink max-lg:px-3.5 max-lg:py-2 max-lg:text-sm ring-1 ring-line ring-inset hover:bg-raised-2">
-            {formatSpan(step)}
+            {span(step)}
           </button>
         ))}
         <button type="button" onClick={() => applySide(side, null)} className="rounded-full bg-raised px-2.5 py-0.5 text-xs text-ink max-lg:px-3.5 max-lg:py-2 max-lg:text-sm ring-1 ring-line ring-inset hover:bg-raised-2">
-          All
+          {t('common.all')}
         </button>
       </div>
     </div>
@@ -209,19 +212,19 @@ export function TimeRangeSlider({
           type="button"
           className="justify-self-start text-left max-lg:-my-3 max-lg:py-3"
           onClick={() => applySide('past', pastLabelSpan || null)}
-          title={pastLabelSpan ? `Use your default (${formatSpan(pastLabelSpan)})` : pastOnly ? 'Show pins posted at any time' : 'Show all past pins'}
+          title={pastLabelSpan ? t('slider.useDefault', { span: span(pastLabelSpan) ?? '' }) : pastOnly ? t('slider.anyTime') : t('slider.allPast')}
         >
-          <span className="font-semibold text-past">{pastOnly ? 'Posted within' : 'Past'}</span>{' '}
+          <span className="font-semibold text-past">{pastOnly ? t('controls.postedWithin') : t('slider.past')}</span>{' '}
           <span className={pastOnly ? 'text-ink' : 'block text-ink'}>{label(past)}</span>
         </button>
-        <button type="button" onClick={() => setPanelOpen((o) => !o)} aria-expanded={panelOpen} aria-label="Type exact values" title="Type exact values" className="-m-1.5 rounded-md p-1.5 text-subtle hover:bg-raised hover:text-ink max-lg:hidden">
+        <button type="button" onClick={() => setPanelOpen((o) => !o)} aria-expanded={panelOpen} aria-label={t('slider.typeExact')} title={t('slider.typeExact')} className="-m-1.5 rounded-md p-1.5 text-subtle hover:bg-raised hover:text-ink max-lg:hidden">
           <Icon name="pencil" className="size-4" />
         </button>
         {!pastOnly ? (
           // col-start-3: the pencil between them is hidden on touch screens,
           // and without it this would land in the middle column.
-          <button type="button" className="col-start-3 justify-self-end text-right max-lg:-my-3 max-lg:py-3" onClick={() => applySide('future', null)} title="Show all upcoming pins">
-            <span className="font-semibold text-future">Future</span>
+          <button type="button" className="col-start-3 justify-self-end text-right max-lg:-my-3 max-lg:py-3" onClick={() => applySide('future', null)} title={t('slider.allUpcoming')}>
+            <span className="font-semibold text-future">{t('slider.future')}</span>
             <span className="block text-ink">{label(future)}</span>
           </button>
         ) : null}
@@ -232,14 +235,14 @@ export function TimeRangeSlider({
         {pastOnly ? (
           <>
             {steps.length ? (
-              <button type="button" className={`${tickClass} -ml-1`} onClick={() => applySide('past', steps[0])} title={`Show pins posted within ${formatSpan(steps[0])}`}>
-                {formatSpan(steps[0])}
+              <button type="button" className={`${tickClass} -ml-1`} onClick={() => applySide('past', steps[0])} title={t('slider.postedWithinSpan', { span: span(steps[0]) ?? '' })}>
+                {span(steps[0])}
               </button>
             ) : (
               <span />
             )}
-            <button type="button" className={`${tickClass} -mr-1`} onClick={() => applySide('past', null)} title="Show pins posted at any time">
-              All
+            <button type="button" className={`${tickClass} -mr-1`} onClick={() => applySide('past', null)} title={t('slider.anyTime')}>
+              {t('common.all')}
             </button>
           </>
         ) : (
@@ -247,9 +250,9 @@ export function TimeRangeSlider({
             type="button"
             className={`${tickClass} mx-auto`}
             onClick={() => apply(withinForIndex(Math.max(zeroIndex, 0)), steps.find((s) => (approxDays(s) ?? 0) > 0) ?? null)}
-            title="Bring both sides to now"
+            title={t('slider.bothToNow')}
           >
-            Now
+            {t('slider.now')}
           </button>
         )}
       </div>
@@ -268,7 +271,7 @@ export function TimeRangeSlider({
             role="slider"
             tabIndex={0}
             data-thumb="past"
-            aria-label="Show pins back to"
+            aria-label={t('slider.backTo')}
             aria-valuetext={label(past) || ''}
             aria-valuemin={0}
             aria-valuemax={maxIndex}
@@ -283,7 +286,7 @@ export function TimeRangeSlider({
               role="slider"
               tabIndex={0}
               data-thumb="future"
-              aria-label="Show pins up to"
+              aria-label={t('slider.upTo')}
               aria-valuetext={label(future) || ''}
               aria-valuemin={0}
               aria-valuemax={maxIndex}
@@ -305,8 +308,8 @@ export function TimeRangeSlider({
             type="button"
             className={`${tickClass} leading-none`}
             onClick={() => apply(null, null)}
-            aria-label="Show pins at any time, past and future"
-            title="Show pins at any time, past and future"
+            aria-label={t('slider.anyTimeBoth')}
+            title={t('slider.anyTimeBoth')}
           >
             <Icon name="expand-x" className="size-4 max-lg:size-5" />
           </button>

@@ -3,21 +3,23 @@
 import { useEffect, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { formatWeather, loadWeather, usesImperial } from '@/lib/weather';
+import { useT } from '@/lib/client/i18n';
 
 // The weather strip under the map: forecast, recorded or typical weather at
 // the pin's place on its date. Nothing when there is none.
 export function PinWeather({ pinId }: { pinId: number }) {
   const [weather, setWeather] = useState<ReturnType<typeof formatWeather> | null>(null);
+  const t = useT();
 
   useEffect(() => {
     let cancelled = false;
     loadWeather(pinId).then((w) => {
-      if (!cancelled && w) setWeather(formatWeather(w, usesImperial()));
+      if (!cancelled && w) setWeather(formatWeather(w, usesImperial(), t));
     });
     return () => {
       cancelled = true;
     };
-  }, [pinId]);
+  }, [pinId, t]);
 
   if (!weather) return null;
   return (
@@ -28,7 +30,7 @@ export function PinWeather({ pinId }: { pinId: number }) {
         {weather.label ? <span className="text-ink">{weather.label}</span> : null}
       </div>
       <div className="ml-auto flex flex-wrap items-center gap-x-3 text-ink">
-        <span title={`High / low, °${weather.unit}`}>
+        <span title={t('weather.highLow', { unit: weather.unit })}>
           <span className="font-semibold">{weather.high}</span> <span className="text-subtle">{weather.low}</span>
         </span>
         {weather.precipitation ? (
@@ -37,7 +39,7 @@ export function PinWeather({ pinId }: { pinId: number }) {
             {weather.precipitation}
           </span>
         ) : null}
-        {weather.wind ? <span>Wind {weather.wind}</span> : null}
+        {weather.wind ? <span>{t('weather.wind', { speed: weather.wind })}</span> : null}
         <a href="https://open-meteo.com/" target="_blank" rel="noopener" className="text-xs text-subtle">
           Open-Meteo
         </a>

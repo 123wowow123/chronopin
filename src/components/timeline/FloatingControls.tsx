@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect, useRef, useState } from 'react';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { useScrollLock } from '@/lib/client/scrollLock';
+import { useT } from '@/lib/client/i18n';
 
 type Fold = 'tags' | 'controls' | 'span' | null;
 
@@ -65,6 +66,7 @@ export function FloatingControls({
     setOpenState(next);
   };
   const rootRef = useRef<HTMLDivElement>(null);
+  const t = useT();
 
   useEffect(() => {
     if (!open) return;
@@ -143,9 +145,9 @@ export function FloatingControls({
         ) : null}
       </div>
       <div className="fixed right-3 bottom-3 z-30 flex max-w-[calc(100%-1.5rem)] gap-1.5 max-sm:gap-1 lg:right-4 lg:gap-2 lg:bottom-4">
-        {tags ? <FoldPill fold="tags" open={open} onToggle={toggle} icon="hash" iconClass="text-link" caption="Tags" label={tags.summary} /> : null}
+        {tags ? <FoldPill fold="tags" open={open} onToggle={toggle} icon="hash" iconClass="text-link" caption={t('controls.tags')} label={tags.summary} /> : null}
         <FoldPill fold="controls" open={open} onToggle={toggle} icon="sliders" iconClass="text-past" caption={summaryCaption} label={summary} className="max-w-52" />
-        {span ? <FoldPill fold="span" open={open} onToggle={toggle} icon="timeline" iconClass="text-future" caption="Time span" label={span.summary} /> : null}
+        {span ? <FoldPill fold="span" open={open} onToggle={toggle} icon="timeline" iconClass="text-future" caption={t('controls.timeSpan')} label={span.summary} /> : null}
         {onToday ? (
           <button
             type="button"
@@ -153,7 +155,7 @@ export function FloatingControls({
             className="floating flex shrink-0 h-11 items-center gap-1.5 rounded-full px-3 text-sm lg:h-auto lg:gap-2 lg:px-3.5 lg:py-2 font-medium text-ink hover:bg-raised"
           >
             <Icon name="target" className="size-4 text-warning" />
-            Today
+            {t('controls.today')}
           </button>
         ) : null}
       </div>

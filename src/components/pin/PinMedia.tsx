@@ -1,12 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/ui/Link';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import { safeEmbedHtml } from '@/lib/sanitize';
 import type { MediumJson } from '@/lib/types';
+import { useT } from '@/lib/client/i18n';
+import type { MessageKey } from '@/lib/i18n/translate';
 
 // A video this component can play, as opposed to one it can only picture.
 export function isVideo(medium: MediumJson): boolean {
@@ -149,6 +151,7 @@ function ImageMedium({
 // picture a video medium has - its originalUrl is the video - so a video saved
 // without one simply drops out of the frame.
 function VideoPoster({ medium, ...shared }: Omit<Parameters<typeof ImageMedium>[0], 'medium'> & { medium: MediumJson }) {
+  const t = useT();
   if (!medium.thumbName) {
     return <ImageMedium {...shared} medium={{ ...medium, originalUrl: undefined }} />;
   }
@@ -157,14 +160,14 @@ function VideoPoster({ medium, ...shared }: Omit<Parameters<typeof ImageMedium>[
       <ImageMedium {...shared} medium={medium} />
       <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
         <span className="flex size-14 items-center justify-center rounded-full bg-black/55 text-white ring-1 ring-white/40">
-          <Icon name="play" className="size-7 translate-x-0.5 fill-current" title="Play on the pin's page" />
+          <Icon name="play" className="size-7 translate-x-0.5 fill-current" title={t('media.playOnPage')} />
         </span>
       </span>
     </div>
   );
 }
 
-const MEDIUM_LABEL: Record<string, string> = { '1': 'Image', '2': 'Tweet', '3': 'Video' };
+const MEDIUM_LABEL: Record<string, MessageKey> = { '1': 'media.image', '2': 'media.tweet', '3': 'media.video' };
 
 // Videos first, then the rest in the order the pin lists them (sort is stable).
 function videosFirst(media: MediumJson[]): MediumJson[] {
@@ -200,6 +203,7 @@ export function PinMediaFrame({
   const [missing, setMissing] = useState<ReadonlySet<string>>(() => new Set());
   const markMissing = useCallback((key: string) => setMissing((prev) => (prev.has(key) ? prev : new Set(prev).add(key))), []);
   const [activeKey, setActiveKey] = useState<string>();
+  const t = useT();
 
   const slides = videosFirst(media)
     .map((medium, i) => ({ medium, key: String(medium.id ?? medium.originalUrl ?? medium.thumbName ?? i) }))
@@ -238,7 +242,7 @@ export function PinMediaFrame({
         })}
       </div>
       {dots ? (
-        <div role="group" aria-label="Media" className="flex justify-center gap-0.5 py-1">
+        <div role="group" aria-label={t('media.label')} className="flex justify-center gap-0.5 py-1">
           {slides.map(({ medium, key }, i) => {
             const shown = key === active.key;
             return (
@@ -246,7 +250,7 @@ export function PinMediaFrame({
                 key={key}
                 type="button"
                 onClick={() => setActiveKey(key)}
-                aria-label={`${MEDIUM_LABEL[String(medium.type)] ?? 'Medium'} ${i + 1} of ${slides.length}`}
+                aria-label={t('media.nOfTotal', { kind: t(MEDIUM_LABEL[String(medium.type)] ?? 'media.medium'), n: i + 1, total: slides.length })}
                 aria-pressed={shown}
                 className="group p-1.5 max-lg:p-2.5"
               >
@@ -288,6 +292,7 @@ const YT_BUFFERING = 3;
 // a 'listening' handshake the player posts its state to this window.
 function YouTubeEmbed({ html, title }: { html: string; title: string }) {
   const ref = useRef<HTMLDivElement>(null);
+  const t = useT();
   useEffect(() => {
     const container = ref.current;
     const iframe = container?.querySelector('iframe');
@@ -341,7 +346,7 @@ function YouTubeEmbed({ html, title }: { html: string; title: string }) {
       window.removeEventListener('message', onMessage);
     };
   }, [html]);
-  return <div ref={ref} className="embed-container" dangerouslySetInnerHTML={{ __html: safeEmbedHtml(html, `YouTube video: ${title}`) }} />;
+  return <div ref={ref} className="embed-container" dangerouslySetInnerHTML={{ __html: safeEmbedHtml(html, t('media.youtubeTitle', { title })) }} />;
 }
 
 // Twitter's widgets script turns the stored blockquote into the full tweet.

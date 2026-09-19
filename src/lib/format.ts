@@ -1,5 +1,10 @@
 // Display formatting shared by server and client components. Ported from the
-// Angular filters (money, timespan, astroweek, timeAgo) and pluralize.
+// Angular filters (money, timespan, astroweek, timeAgo) and pluralize. The
+// functions that print words take the page's language last (English by
+// default); their words are in src/lib/i18n/formatWords.ts.
+
+import { INTL_LOCALES, type Locale } from './i18n/config';
+import { fillWords, FORMAT_WORDS } from './i18n/formatWords';
 
 // ISO 4217 code -> what to print in front of the figure. A code that is not
 // listed prints as itself ("AED 128B"), the honest reading for a currency with
@@ -102,26 +107,43 @@ export function daysBetween(fromKey: string, toKey: string): number {
   return Math.round((dayKeyToMs(toKey) - dayKeyToMs(fromKey)) / DAY_MS);
 }
 
+// "5 days", "1.2 years" in a language other than English.
+function unitCount(value: number, unit: 'day' | 'year', locale: Locale, fractionDigits = 0): string {
+  return new Intl.NumberFormat(INTL_LOCALES[locale], {
+    style: 'unit',
+    unit,
+    unitDisplay: 'long',
+    minimumFractionDigits: fractionDigits,
+    maximumFractionDigits: fractionDigits,
+  }).format(value);
+}
+
 // The countdown tag beside a date: "Today", "5 days", "-3 days", or in years
 // once a year or more away ("1.2 years") when format is 'y'.
-export function timespan(fromTodayKey: string, dayKey: string, format: 'd' | 'y' = 'd'): string {
+export function timespan(fromTodayKey: string, dayKey: string, format: 'd' | 'y' = 'd', locale: Locale = 'en'): string {
   const days = daysBetween(fromTodayKey, dayKey);
   if (days === 0) {
-    return 'Today';
+    return FORMAT_WORDS[locale].today;
   }
   if (format === 'y' && Math.abs(days) >= 365) {
-    return pluralize('year', yearsBetween(fromTodayKey, dayKey).toFixed(1));
+    const years = yearsBetween(fromTodayKey, dayKey);
+    return locale === 'en' ? pluralize('year', years.toFixed(1)) : unitCount(years, 'year', locale, 1);
   }
-  return pluralize('day', days);
+  return locale === 'en' ? pluralize('day', days) : unitCount(days, 'day', locale);
 }
 
 // How far a day is from today, for a card shown away from the timeline:
 // "Today", "in 5 days", "3 days ago", and in years once a year or more away
 // ("in 1.2 years", "4586.7 years ago").
-export function daysAway(fromTodayKey: string, dayKey: string): string {
+export function daysAway(fromTodayKey: string, dayKey: string, locale: Locale = 'en'): string {
   const days = daysBetween(fromTodayKey, dayKey);
   if (days === 0) {
-    return 'Today';
+    return FORMAT_WORDS[locale].today;
+  }
+  if (locale !== 'en') {
+    const years = Math.abs(days) >= 365;
+    const value = years ? Number(yearsBetween(fromTodayKey, dayKey).toFixed(1)) : days;
+    return relativeFormat(locale).format(value, years ? 'year' : 'day');
   }
   const span = Math.abs(days) >= 365 ? pluralize('year', Math.abs(yearsBetween(fromTodayKey, dayKey)).toFixed(1)) : pluralize('day', Math.abs(days));
   return days > 0 ? `in ${span}` : `${span} ago`;
@@ -140,16 +162,16 @@ function yearsBetween(fromKey: string, toKey: string): number {
   return (wholeMonths + fraction) / 12;
 }
 
-// The planet each weekday is named for, and the glyph the Astronomic Signs
-// font draws for it.
+// The glyph the Astronomic Signs font draws for the planet each weekday is
+// named for (Sunday first; the planets' names are in formatWords).
 const WEEKDAYS = [
-  { planet: 'The Sun', glyph: 'B' },
-  { planet: 'The Moon', glyph: 'A' },
-  { planet: 'Mars', glyph: 'E' },
-  { planet: 'Mercury', glyph: 'D' },
-  { planet: 'Jupiter', glyph: 'F' },
-  { planet: 'Venus', glyph: 'C' },
-  { planet: 'Saturn', glyph: 'G' },
+  { glyph: 'B' },
+  { glyph: 'A' },
+  { glyph: 'E' },
+  { glyph: 'D' },
+  { glyph: 'F' },
+  { glyph: 'C' },
+  { glyph: 'G' },
 ];
 
 // Intl formatters are expensive to build and free to reuse, and these run
@@ -170,22 +192,21 @@ export function dateFormat(locale: string, options: Intl.DateTimeFormatOptions):
   return formatter;
 }
 
-export function weekdayPlanet(dayKey: string) {
+export function weekdayPlanet(dayKey: string, locale: Locale = 'en') {
   const weekday = new Date(dayKeyToMs(dayKey)).getUTCDay();
-  const name = dateFormat('en-US', { weekday: 'long', timeZone: 'UTC' }).format(dayKeyToMs(dayKey));
-  return { ...WEEKDAYS[weekday], weekday: name };
+  const name = dateFormat(INTL_LOCALES[locale], { weekday: 'long', timeZone: 'UTC' }).format(dayKeyToMs(dayKey));
+  return { ...WEEKDAYS[weekday], planet: FORMAT_WORDS[locale].planets[weekday], weekday: name };
 }
 
 // A known new moon (2000-01-06 18:14 UTC) and the mean synodic month.
 const NEW_MOON_MS = Date.UTC(2000, 0, 6, 18, 14);
 const SYNODIC_DAYS = 29.530588853;
-const MOON_PHASES = ['New moon', 'Waxing crescent', 'First quarter', 'Waxing gibbous', 'Full moon', 'Waning gibbous', 'Last quarter', 'Waning crescent'];
 
 // The moon at noon UTC on a day, from the mean synodic month (within about
 // a day of the true phase): its phase name, the share of the disc lit, and
 // an SVG path of the lit part of a disc of radius `r` centred at (r, r), as
 // seen from the northern hemisphere (waxing lit on the right).
-export function moonPhase(dayKey: string, r = 16): { name: string; illumination: number; path: string } {
+export function moonPhase(dayKey: string, r = 16, locale: Locale = 'en'): { name: string; illumination: number; path: string } {
   const age = ((((dayKeyToMs(dayKey) + DAY_MS / 2 - NEW_MOON_MS) / DAY_MS) % SYNODIC_DAYS) + SYNODIC_DAYS) % SYNODIC_DAYS;
   const phase = age / SYNODIC_DAYS;
   const cos = Math.cos(2 * Math.PI * phase);
@@ -197,7 +218,7 @@ export function moonPhase(dayKey: string, r = 16): { name: string; illumination:
   const terminator = waxing === gibbous ? 1 : 0;
   const rx = (r * Math.abs(cos)).toFixed(2);
   const path = `M${r} 0A${r} ${r} 0 0 ${edge} ${r} ${2 * r}A${rx} ${r} 0 0 ${terminator} ${r} 0Z`;
-  return { name: MOON_PHASES[Math.round(phase * 8) % 8], illumination: (1 - cos) / 2, path };
+  return { name: FORMAT_WORDS[locale].moonPhases[Math.round(phase * 8) % 8], illumination: (1 - cos) / 2, path };
 }
 
 const LUNAR_DAY_TENS =['初', '十', '廿', '三'];
@@ -215,25 +236,33 @@ function lunarDayName(day: number): string {
 // title. Intl's Chinese calendar gives the month name but writes the day as a
 // number. Null before 104 BC (astronomical -103), the Taichu reform the
 // calendar as ICU computes it descends from.
-export function lunarDate(dayKey: string): { text: string; title: string } | null {
+export function lunarDate(dayKey: string, locale: Locale = 'en'): { text: string; title: string } | null {
   if (dayKeyParts(dayKey)[0] < -103) return null;
   const parts = dateFormat('zh-CN-u-ca-chinese', { timeZone: 'UTC', year: 'numeric', month: 'long', day: 'numeric' }).formatToParts(dayKeyToMs(dayKey));
   const get = (type: string) => parts.find((p) => p.type === type)?.value ?? '';
   const day = Number(get('day'));
   if (!day) return null;
   const text = get('month') + lunarDayName(day);
-  return { text, title: `农历 ${get('yearName')}年${text} (Nong Li, Chinese lunar calendar)` };
+  const gloss = FORMAT_WORDS[locale].lunarGloss;
+  return { text, title: `农历 ${get('yearName')}年${text}${gloss ? ` (${gloss})` : ''}` };
 }
 
 // A year as people write it: "2026", "79", "2561 BC".
-function yearLabel(year: number): string {
-  return year > 0 ? String(year) : `${1 - year} BC`;
+function yearLabel(year: number, locale: Locale = 'en'): string {
+  return year > 0 ? String(year) : fillWords(FORMAT_WORDS[locale].bc, { year: String(1 - year) });
 }
 
-// "09/14/2026" for a date key; "01/01/2561 BC" before the common era.
-export function formatDayKey(dayKey: string): string {
+// "09/14/2026" for a date key; "01/01/2561 BC" before the common era. Other
+// languages put the day or the year first ("14/09/2026", "2026/09/14").
+export function formatDayKey(dayKey: string, locale: Locale = 'en'): string {
   const [y, m, d] = dayKeyParts(dayKey);
-  return `${String(m).padStart(2, '0')}/${String(d).padStart(2, '0')}/${yearLabel(y)}`;
+  const { dateOrder, dateSeparator: sep } = FORMAT_WORDS[locale];
+  const mm = String(m).padStart(2, '0');
+  const dd = String(d).padStart(2, '0');
+  if (dateOrder === 'ymd') {
+    return y > 0 ? `${y}${sep}${mm}${sep}${dd}` : `${yearLabel(y, locale)}${sep}${mm}${sep}${dd}`;
+  }
+  return dateOrder === 'dmy' ? `${dd}${sep}${mm}${sep}${yearLabel(y, locale)}` : `${mm}${sep}${dd}${sep}${yearLabel(y, locale)}`;
 }
 
 // The calendar date ("2026-09-14") an instant falls on in a time zone.
@@ -271,24 +300,44 @@ export function dayStartIn(dayKey: string, timeZone: string): number {
   return midnight - zoneOffsetMs(guess, timeZone);
 }
 
-// " BC" for an instant before the common era in that zone, else nothing: for
-// the en-US dates beside a pin, which print 2561 BC as plain "2561".
-function eraSuffix(d: Date, timeZone: string): string {
+// Whether an instant falls before the common era in that zone: the numeric
+// dates beside a pin print 2561 BC as plain "2561".
+function isBce(d: Date, timeZone: string): boolean {
   const era = dateFormat('en-US', { timeZone, era: 'short', year: 'numeric' })
     .formatToParts(d)
     .find((p) => p.type === 'era')?.value;
-  return era === 'BC' ? ' BC' : '';
+  return era === 'BC';
+}
+
+// " BC" for an instant before the common era in that zone, else nothing.
+function eraSuffix(d: Date, timeZone: string, locale: Locale = 'en'): string {
+  if (!isBce(d, timeZone)) return '';
+  // "{year} BC" without the year: its words, on the date's side.
+  return ` ${FORMAT_WORDS[locale].bc.replace('{year}', '').trim()}`;
+}
+
+// A numeric date in a zone: "09/12/2026" in English, the language's own order elsewhere.
+function numericDate(d: Date, timeZone: string, locale: Locale): string {
+  if (locale === 'en') {
+    return dateFormat('en-US', { timeZone, month: '2-digit', day: '2-digit', year: 'numeric' }).format(d);
+  }
+  return formatDayKey(dayKeyIn(d, timeZone), locale);
+}
+
+// A clock time in a zone: "9:02 PM", "21:02".
+function clockTime(d: Date, timeZone: string, locale: Locale): string {
+  return dateFormat(INTL_LOCALES[locale], { timeZone, hour: 'numeric', minute: '2-digit' }).format(d);
 }
 
 // "09/12/2026 at 9:02 pm" in a time zone, or "09/12/2026" with dateOnly.
-export function formatPosted(instant: string | Date, timeZone: string, { dateOnly = false }: { dateOnly?: boolean } = {}): string {
+export function formatPosted(instant: string | Date, timeZone: string, { dateOnly = false }: { dateOnly?: boolean } = {}, locale: Locale = 'en'): string {
   const d = new Date(instant);
-  const date = dateFormat('en-US', { timeZone, month: '2-digit', day: '2-digit', year: 'numeric' }).format(d);
+  const date = numericDate(d, timeZone, locale);
   if (dateOnly) {
     return date;
   }
-  const time = dateFormat('en-US', { timeZone, hour: 'numeric', minute: '2-digit' }).format(d);
-  return `${date} at ${time.toLowerCase()}`;
+  const time = clockTime(d, timeZone, locale);
+  return fillWords(FORMAT_WORDS[locale].at, { date, time: locale === 'en' ? time.toLowerCase() : time });
 }
 
 // "Starts 09/14/2026" (all day, read in UTC where the date is stored) or
@@ -297,22 +346,30 @@ export function formatStart(
   pin: { utcStartDateTime: string; allDay?: boolean },
   timeZone: string,
   { allDaySuffix = false }: { allDaySuffix?: boolean } = {},
+  locale: Locale = 'en',
 ): string {
   const d = new Date(pin.utcStartDateTime);
+  const words = FORMAT_WORDS[locale];
+  // English appends the era to its month-first date; the others' formatDayKey writes it.
+  const dateIn = (zone: string) => (locale === 'en' ? numericDate(d, zone, locale) + eraSuffix(d, zone, locale) : numericDate(d, zone, locale));
   if (pin.allDay) {
-    const date = dateFormat('en-US', { timeZone: 'UTC', month: '2-digit', day: '2-digit', year: 'numeric' }).format(d) + eraSuffix(d, 'UTC');
-    return `Starts ${date}${allDaySuffix ? ' - All day' : ''}`;
+    return fillWords(words.starts, { date: dateIn('UTC') }) + (allDaySuffix ? ` - ${words.allDay}` : '');
   }
-  const date = dateFormat('en-US', { timeZone, month: '2-digit', day: '2-digit', year: 'numeric' }).format(d) + eraSuffix(d, timeZone);
-  const time = dateFormat('en-US', { timeZone, hour: 'numeric', minute: '2-digit' }).format(d).replace(' ', '');
-  return `Starts ${date} ${time}`;
+  const time = clockTime(d, timeZone, locale).replace(locale === 'en' ? ' ' : /(?!)/, '');
+  return fillWords(words.starts, { date: `${dateIn(timeZone)} ${time}` });
 }
 
-// "3 hours ago", "in 2 days".
-// No options vary, so one is built for the module.
-const rtf = new Intl.RelativeTimeFormat('en', { numeric: 'auto' });
+// "3 hours ago", "in 2 days". One formatter per language.
+const relativeFormats = new Map<Locale, Intl.RelativeTimeFormat>();
 
-export function timeAgo(instant: string | Date, now = Date.now()): string {
+function relativeFormat(locale: Locale): Intl.RelativeTimeFormat {
+  let format = relativeFormats.get(locale);
+  if (!format) relativeFormats.set(locale, (format = new Intl.RelativeTimeFormat(INTL_LOCALES[locale], { numeric: 'auto' })));
+  return format;
+}
+
+export function timeAgo(instant: string | Date, now = Date.now(), locale: Locale = 'en'): string {
+  const rtf = relativeFormat(locale);
   const seconds = (new Date(instant).getTime() - now) / 1000;
   // Each unit's size in seconds and how many of it make the next unit up.
   // The count is rounded before it is compared, so 59m40s reads "1 hour ago"

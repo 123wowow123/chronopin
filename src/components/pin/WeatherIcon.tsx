@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { formatWeather, loadWeather, usesImperial } from '@/lib/weather';
+import { useT } from '@/lib/client/i18n';
 
 // A small weather icon and high temperature on a card. Waits until the card is
 // near the viewport: the timeline holds hundreds of cards and each lookup is
@@ -10,6 +11,7 @@ import { formatWeather, loadWeather, usesImperial } from '@/lib/weather';
 export function WeatherIcon({ pinId, hasPlace }: { pinId: number; hasPlace: boolean }) {
   const ref = useRef<HTMLSpanElement>(null);
   const [weather, setWeather] = useState<ReturnType<typeof formatWeather> | null>(null);
+  const t = useT();
 
   useEffect(() => {
     const el = ref.current;
@@ -20,7 +22,7 @@ export function WeatherIcon({ pinId, hasPlace }: { pinId: number; hasPlace: bool
         if (entries.some((e) => e.isIntersecting)) {
           observer.disconnect();
           loadWeather(pinId).then((w) => {
-            if (!cancelled && w) setWeather(formatWeather(w, usesImperial()));
+            if (!cancelled && w) setWeather(formatWeather(w, usesImperial(), t));
           });
         }
       },
@@ -31,7 +33,7 @@ export function WeatherIcon({ pinId, hasPlace }: { pinId: number; hasPlace: bool
       cancelled = true;
       observer.disconnect();
     };
-  }, [pinId, hasPlace]);
+  }, [pinId, hasPlace, t]);
 
   if (!hasPlace) return null;
   // Until the weather loads the span is empty but still watched, so it sits out

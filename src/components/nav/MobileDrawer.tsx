@@ -1,7 +1,7 @@
 'use client';
 
-import Link from 'next/link';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import Link from '@/components/ui/Link';
+import { usePathname, useRouter, useSearchParams } from '@/lib/client/navigation';
 import { useEffect, useId, useRef, useState, useSyncExternalStore } from 'react';
 import { createPortal } from 'react-dom';
 import { Icon, type IconName } from '@/components/ui/Icon';
@@ -15,6 +15,8 @@ import { AuthLink, LogoutLink } from './AuthLink';
 import { ViewSwitch } from './NavMenu';
 import { DrawerNotifications } from './NotificationBell';
 import { searchHref, WATCHED } from './SearchBox';
+import { useT } from '@/lib/client/i18n';
+import { LanguagePicker } from './LanguagePicker';
 
 const itemClass =
   'flex items-center gap-4 rounded-full px-3 py-2 text-[17px] font-semibold text-ink hover:bg-raised hover:no-underline aria-[current=page]:text-accent';
@@ -47,6 +49,7 @@ export function MobileDrawer() {
   const params = useSearchParams();
   const router = useRouter();
   const { user, isAdmin } = useSession();
+  const t = useT();
   const unread = useUnreadCount(!!user);
   const [open, setOpen] = useState(false);
   // How far a swipe has pulled the drawer back, as a fraction of its width (-1..0).
@@ -172,7 +175,7 @@ export function MobileDrawer() {
         ref={panelRef}
         role="dialog"
         aria-modal="true"
-        aria-label="Menu"
+        aria-label={t('nav.menu')}
         tabIndex={-1}
         className={`fixed inset-y-0 left-0 z-50 flex w-[min(20rem,85vw)] touch-pan-y flex-col overflow-y-auto overscroll-contain bg-header pl-[env(safe-area-inset-left)] shadow-2xl shadow-shade/50 outline-none transition-[translate,visibility] duration-300 ease-out ${
           open ? 'translate-x-0' : 'invisible -translate-x-full'
@@ -199,7 +202,7 @@ export function MobileDrawer() {
           <button
             type="button"
             className="-mr-1.5 shrink-0 self-start rounded-full p-1.5 text-muted hover:bg-raised hover:text-ink"
-            aria-label="Close menu"
+            aria-label={t('nav.closeMenu')}
             onClick={() => setOpen(false)}
           >
             <Icon name="close" className="size-5" />
@@ -211,30 +214,30 @@ export function MobileDrawer() {
           {user ? (
             <Link href="/create" className="btn btn-primary flex py-2.5">
               <Icon name="plus" className="size-4" />
-              Create a pin
+              {t('nav.createPin')}
             </Link>
           ) : (
             <div className="grid grid-cols-2 gap-2">
               <AuthLink to="/signup" className="btn btn-primary flex py-2.5">
-                Sign up
+                {t('nav.signUp')}
               </AuthLink>
               <AuthLink to="/login" className="btn btn-secondary flex py-2.5">
-                Log in
+                {t('nav.logIn')}
               </AuthLink>
             </div>
           )}
         </div>
 
-        <nav aria-label="Main" className="flex-1">
+        <nav aria-label={t('nav.main')} className="flex-1">
           {/* What the page shows. */}
-          <DrawerSection title="Browse">
+          <DrawerSection title={t('nav.browse')}>
             <div className="px-1 pb-1">
               <ViewSwitch pathname={pathname} />
             </div>
             {user ? (
               <button type="button" role="switch" aria-checked={watchedOnly} onClick={toggleWatched} className={`w-full ${itemClass}`}>
                 <Icon name="eye" className={`size-6 ${watchedOnly ? 'text-link' : ''}`} />
-                Watched pins only
+                {t('nav.watchedOnly')}
                 <span aria-hidden className={`ml-auto flex h-6 w-10 shrink-0 items-center rounded-full p-0.5 transition-colors ${watchedOnly ? 'bg-accent' : 'bg-raised-2'}`}>
                   <span className={`size-5 rounded-full bg-white shadow transition-transform ${watchedOnly ? 'translate-x-4' : ''}`} />
                 </span>
@@ -243,20 +246,23 @@ export function MobileDrawer() {
           </DrawerSection>
           {user ? (
             <>
-              <DrawerSection title="You">
+              <DrawerSection title={t('nav.you')}>
                 <DrawerNotifications className={itemClass} current={pathname === '/notifications'} />
-                {link('/profile', 'user', 'Profile & settings')}
+                {link('/profile', 'user', t('nav.profileSettings'))}
               </DrawerSection>
-              {isAdmin ? <DrawerSection title="Admin">{link('/admin/views', 'shield', 'Dashboard')}</DrawerSection> : null}
+              {isAdmin ? <DrawerSection title={t('nav.admin')}>{link('/admin/views', 'shield', t('nav.dashboard'))}</DrawerSection> : null}
             </>
           ) : null}
+          <DrawerSection title={t('nav.language')}>
+            <LanguagePicker className="px-3 py-2 text-[17px]" />
+          </DrawerSection>
         </nav>
 
         {user ? (
           <div className="border-t border-line px-2 pt-2 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
             <LogoutLink className={itemClass}>
               <Icon name="logout" className="size-6" />
-              Log out
+              {t('nav.logOut')}
             </LogoutLink>
           </div>
         ) : null}
@@ -270,7 +276,7 @@ export function MobileDrawer() {
         ref={triggerRef}
         type="button"
         className="relative -ml-1 flex shrink-0 items-center rounded-full p-1 text-muted hover:bg-raised hover:text-ink lg:hidden"
-        aria-label={unread ? `Open menu, ${unread} unread notification${unread === 1 ? '' : 's'}` : 'Open menu'}
+        aria-label={unread ? t('nav.openMenuUnread', { count: unread }) : t('nav.openMenu')}
         aria-haspopup="dialog"
         aria-expanded={open}
         onClick={() => setOpen(true)}

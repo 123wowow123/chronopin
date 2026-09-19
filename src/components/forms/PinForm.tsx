@@ -1,7 +1,7 @@
 'use client';
 
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import Link from '@/components/ui/Link';
+import { useRouter } from '@/lib/client/navigation';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { formatDay } from '@/components/pin/DateRanges';
 import { PinCard } from '@/components/pin/PinCard';
@@ -35,6 +35,9 @@ import { pinPath } from '@/lib/seo';
 import type { CardPin, MediumJson, PinJson } from '@/lib/types';
 import { DuplicatePrompt, type DuplicateMatch } from './DuplicatePrompt';
 import { RichTextEditor } from './RichTextEditor';
+import { useT } from '@/lib/client/i18n';
+import { INTL_LOCALES } from '@/lib/i18n/config';
+import { categoryLabel } from '@/lib/i18n/labels';
 
 const CONFIDENCE_LEVELS = ['confirmed', 'scheduled', 'estimated', 'delayed', 'unknown'];
 
@@ -44,6 +47,7 @@ const labelClass = 'field-label';
 // A day with its era. <input type="date"> has no BC, so the year is typed as
 // written ("2561") and AD or BC is picked beside it; value is a day key.
 function DayInput({ id, label, value, onChange, required, min }: { id: string; label: string; value: string; onChange: (key: string) => void; required?: boolean; min?: string }) {
+  const t = useT();
   // The era picked before a date is typed; once typed, the date carries its own.
   const [blankEra, setBlankEra] = useState<Era>('AD');
   const era = value ? eraOf(value) : blankEra;
@@ -51,7 +55,7 @@ function DayInput({ id, label, value, onChange, required, min }: { id: string; l
     <>
       <input id={id} type="date" required={required} min={min} className={`${inputClass} min-w-[9.75rem] flex-1`} value={dateInputValue(value)} onChange={(e) => onChange(dayKeyFromInput(e.target.value, era))} />
       <select
-        aria-label={`${label} era`}
+        aria-label={t('form.era', { label })}
         className={`${inputClass} w-auto shrink-0`}
         value={era}
         onChange={(e) => {
@@ -60,8 +64,8 @@ function DayInput({ id, label, value, onChange, required, min }: { id: string; l
           if (value) onChange(dayKeyFromInput(dateInputValue(value), next));
         }}
       >
-        <option value="AD">AD</option>
-        <option value="BC">BC</option>
+        <option value="AD">{t('form.ad')}</option>
+        <option value="BC">{t('form.bc')}</option>
       </select>
     </>
   );
@@ -79,6 +83,7 @@ function duplicateCheckKey(values: PinFormValues) {
 export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create' | 'edit' | 'respond'; pin?: PinJson; respondTo?: PinJson }) {
   const router = useRouter();
   const { user } = useSession();
+  const t = useT();
   const [values, setValues] = useState<PinFormValues>(() =>
     pin ? pinToForm(pin) : { ...EMPTY_FORM, parentId: respondToProp?.id },
   );
@@ -163,7 +168,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
         if (found.length) setMatches(found);
       }
     } catch (err) {
-      setScrapeError(err instanceof ApiError ? `Could not read that page (${err.status}).` : 'Could not read that page.');
+      setScrapeError(err instanceof ApiError ? t('form.scrapeFailedStatus', { status: err.status }) : t('form.scrapeFailed'));
     } finally {
       setScraping(false);
     }
@@ -173,16 +178,16 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
     event.preventDefault();
     setError('');
     setDuplicateOf(null);
-    if (!values.title.trim()) return setError('A title is required.');
-    if (!values.startDate) return setError('A start date is required.');
-    if (!values.sourceUrl.trim() && mode !== 'edit') return setError('A source URL is required.');
-    if (values.priceCurrency && !/^[A-Za-z]{3}$/.test(values.priceCurrency)) return setError('Currency must be a 3-letter code, like USD.');
+    if (!values.title.trim()) return setError(t('form.titleRequired'));
+    if (!values.startDate) return setError(t('form.startRequired'));
+    if (!values.sourceUrl.trim() && mode !== 'edit') return setError(t('form.sourceRequired'));
+    if (values.priceCurrency && !/^[A-Za-z]{3}$/.test(values.priceCurrency)) return setError(t('form.currencyInvalid'));
     for (const r of values.references) {
       if (!r.url.trim() && !r.title.trim() && !r.confidence) continue;
-      if (!/^https?:\/\//i.test(r.url.trim())) return setError('Each reference needs a link starting with http:// or https://.');
+      if (!/^https?:\/\//i.test(r.url.trim())) return setError(t('form.referenceLink'));
       const confidence = Number(r.confidence);
-      if (r.confidence.trim() === '' || isNaN(confidence) || confidence < 0 || confidence > 100) return setError('Each reference needs a confidence from 0 to 100.');
-      if (r.startDate && r.endDate && compareDayKeys(r.endDate, r.startDate) < 0) return setError("A reference's end date cannot be before its start date.");
+      if (r.confidence.trim() === '' || isNaN(confidence) || confidence < 0 || confidence > 100) return setError(t('form.referenceConfidence'));
+      if (r.startDate && r.endDate && compareDayKeys(r.endDate, r.startDate) < 0) return setError(t('form.referenceDates'));
     }
 
     setSaving(true);
@@ -205,7 +210,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
         setError(err.message);
         setDuplicateOf((err.body as { pin?: Pick<PinJson, 'id' | 'title'> } | null)?.pin ?? null);
       } else {
-        setError(err instanceof ApiError && err.status === 403 ? 'You can only edit your own pins.' : 'There was a problem saving this pin.');
+        setError(err instanceof ApiError && err.status === 403 ? t('form.ownPinsOnly') : t('form.saveFailed'));
       }
       setSaving(false);
     }
@@ -216,18 +221,18 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
     return {
       ...body,
       id: values.id ?? 0,
-      title: body.title || 'Preview your pin',
+      title: body.title || t('form.previewTitle'),
       utcStartDateTime: body.utcStartDateTime || '',
       utcCreatedDateTime: pin?.utcCreatedDateTime,
       user: user ? { id: user.id, userName: user.userName, pictureUrl: user.pictureUrl } : undefined,
       media: body.media,
       safeDescription: safeHtmlInBrowser(values.description),
     } as unknown as CardPin;
-  }, [values, user, pin?.utcCreatedDateTime]);
+  }, [values, user, pin?.utcCreatedDateTime, t]);
 
   const picked = useMemo(() => formDates(values), [values]);
 
-  const title = mode === 'edit' ? 'Edit Pin' : respondTo ? 'Respond to Pin' : 'Create Pin';
+  const title = mode === 'edit' ? t('form.editPin') : respondTo ? t('form.respondPin') : t('form.createPin');
 
   return (
     <form ref={formRef} onSubmit={submit} className="mx-auto grid max-w-6xl gap-8 px-4 py-6 lg:grid-cols-[1fr_420px]" noValidate>
@@ -236,11 +241,11 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
 
         {respondTo ? (
           <div>
-            <span className={labelClass}>Responding to</span>
+            <span className={labelClass}>{t('form.respondingTo')}</span>
             <Link href={pinPath(respondTo)}>{respondTo.title}</Link>
             {respondToProp ? null : (
               <button type="button" className="btn btn-ghost btn-sm ml-2" onClick={stopResponding}>
-                Post as a new pin instead
+                {t('form.postAsNew')}
               </button>
             )}
           </div>
@@ -248,7 +253,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
 
         <div>
           <label htmlFor="sourceUrl" className={labelClass}>
-            Source URL {scraping ? <span className="font-normal text-subtle">(Analyzing page…)</span> : null}
+            {t('form.sourceUrl')} {scraping ? <span className="font-normal text-subtle">({t('form.analyzing')})</span> : null}
           </label>
           <div className="flex gap-2">
             <input
@@ -264,7 +269,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
             />
             {values.sourceUrl ? (
               <a href={values.sourceUrl} target="_blank" rel="noopener" className="self-center text-sm whitespace-nowrap">
-                Open link
+                {t('form.openLink')}
               </a>
             ) : null}
           </div>
@@ -272,10 +277,10 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
           {mode === 'edit' ? (
             <div className="mt-2 flex gap-2">
               <button type="button" className="btn btn-sm btn-secondary" onClick={() => scrape(values.sourceUrl)} disabled={scraping}>
-                Scrape
+                {t('form.scrape')}
               </button>
               <button type="button" className="btn btn-sm btn-secondary" onClick={() => scrape(values.sourceUrl, { onlyMedia: true })} disabled={scraping}>
-                Scrape image
+                {t('form.scrapeImage')}
               </button>
             </div>
           ) : null}
@@ -283,70 +288,70 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
 
         <div>
           <label htmlFor="title" className={labelClass}>
-            Title
+            {t('form.title')}
           </label>
-          <input id="title" required maxLength={180} className={inputClass} value={values.title} onChange={(e) => set('title', e.target.value)} placeholder="Add your title" />
+          <input id="title" required maxLength={180} className={inputClass} value={values.title} onChange={(e) => set('title', e.target.value)} placeholder={t('form.titlePlaceholder')} />
         </div>
 
         <div>
-          <span className={labelClass}>Content</span>
+          <span className={labelClass}>{t('form.content')}</span>
           <RichTextEditor value={values.description} onChange={(html) => set('description', html)} />
         </div>
 
         <div className="grid gap-3 sm:grid-cols-2">
           <div>
             <label htmlFor="startDate" className={labelClass}>
-              Start
+              {t('form.start')}
             </label>
             {/* Wraps, so a time too wide to sit beside the date and its era takes the next line. */}
             <div className="flex flex-wrap gap-2">
-              <DayInput id="startDate" label="Start" required value={values.startDate} onChange={(key) => set('startDate', key)} />
-              {!values.allDay ? <input aria-label="Start time" type="time" step={900} className={`${inputClass} min-w-28 flex-1`} value={values.startTime} onChange={(e) => set('startTime', e.target.value)} /> : null}
+              <DayInput id="startDate" label={t('form.start')} required value={values.startDate} onChange={(key) => set('startDate', key)} />
+              {!values.allDay ? <input aria-label={t('form.startTime')} type="time" step={900} className={`${inputClass} min-w-28 flex-1`} value={values.startTime} onChange={(e) => set('startTime', e.target.value)} /> : null}
             </div>
           </div>
           <div>
             <label htmlFor="endDate" className={labelClass}>
-              End <span className="font-normal text-subtle">(optional)</span>
+              {t('form.end')} <span className="font-normal text-subtle">({t('form.optional')})</span>
             </label>
             <div className="flex flex-wrap gap-2">
               <DayInput
                 id="endDate"
-                label="End"
+                label={t('form.end')}
                 // The browser compares min as a plain AD date, so only while both are AD.
                 min={eraOf(values.startDate) === 'AD' && eraOf(values.endDate) === 'AD' ? values.startDate : undefined}
                 value={values.endDate}
                 onChange={(key) => set('endDate', key)}
               />
-              {!values.allDay ? <input aria-label="End time" type="time" step={900} className={`${inputClass} min-w-28 flex-1`} value={values.endTime} onChange={(e) => set('endTime', e.target.value)} /> : null}
+              {!values.allDay ? <input aria-label={t('form.endTime')} type="time" step={900} className={`${inputClass} min-w-28 flex-1`} value={values.endTime} onChange={(e) => set('endTime', e.target.value)} /> : null}
             </div>
           </div>
         </div>
         <div className="flex justify-between text-sm">
           <button type="button" className="text-link" onClick={() => set('allDay', !values.allDay)}>
-            {values.allDay ? 'Add time' : 'Remove time'}
+            {values.allDay ? t('form.addTime') : t('form.removeTime')}
           </button>
-          <span className="text-subtle">{values.allDay ? 'All day' : timeZone}</span>
+          <span className="text-subtle">{values.allDay ? t('form.allDay') : timeZone}</span>
         </div>
         {picked.overridden ? <OverriddenDates picked={picked} allDay={values.allDay} /> : null}
 
         <div className="grid gap-3 sm:grid-cols-2">
           <div>
             <label htmlFor="category" className={labelClass}>
-              Categories
+              {t('form.categories')}
             </label>
             {/* Any number, the main one first: each is one of the pin's
                 tags, and the tag cloud's top groups. */}
             {values.categories.length ? (
-              <ul className="mb-2 flex flex-wrap gap-1.5" aria-label="Categories">
+              <ul className="mb-2 flex flex-wrap gap-1.5" aria-label={t('form.categories')}>
                 {values.categories.map((c, index) => (
                   <li key={c} className="inline-flex items-center gap-1 rounded-full bg-raised py-0.5 pr-1 pl-2.5 text-sm text-ink ring-1 ring-line ring-inset">
-                    {c}
-                    {index === 0 && values.categories.length > 1 ? <span className="text-xs text-subtle">main</span> : null}
+                    {categoryLabel(t, c)}
+                    {index === 0 && values.categories.length > 1 ? <span className="text-xs text-subtle">{t('form.main')}</span> : null}
                     <button
                       type="button"
                       onClick={() => set('categories', values.categories.filter((other) => other !== c))}
                       className="rounded-full p-0.5 text-subtle hover:bg-raised-2 hover:text-ink"
-                      aria-label={`Remove ${c}`}
+                      aria-label={t('search.removeItem', { name: categoryLabel(t, c) })}
                     >
                       <Icon name="close" className="size-3.5" />
                     </button>
@@ -360,19 +365,19 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
               value=""
               onChange={(e) => e.target.value && set('categories', [...values.categories, e.target.value])}
             >
-              <option value="">{values.categories.length ? 'Add another…' : 'Add a category…'}</option>
+              <option value="">{values.categories.length ? t('form.addAnother') : t('form.addCategory')}</option>
               {CATEGORIES.filter((c) => !values.categories.includes(c)).map((c) => (
                 <option key={c} value={c}>
-                  {c}
+                  {categoryLabel(t, c)}
                 </option>
               ))}
             </select>
           </div>
           <div>
             <label htmlFor="company" className={labelClass}>
-              Company
+              {t('form.company')}
             </label>
-            <input id="company" list="company-options" className={inputClass} value={values.company} onChange={(e) => set('company', e.target.value)} placeholder="Apple, SpaceX, City of Detroit…" />
+            <input id="company" list="company-options" className={inputClass} value={values.company} onChange={(e) => set('company', e.target.value)} placeholder={t('form.companyPlaceholder')} />
             <datalist id="company-options">
               {companies.map((c) => (
                 <option key={c.id} value={c.name} />
@@ -383,28 +388,28 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
 
         <div>
           <label htmlFor="tags" className={labelClass}>
-            Tags
+            {t('form.tags')}
           </label>
           <input
             id="tags"
             className={inputClass}
             value={values.tags}
             onChange={(e) => set('tags', e.target.value)}
-            placeholder="Tokyo Anime Award Festival 2024, Studio Ghibli…"
+            placeholder={t('form.tagsPlaceholder')}
             aria-describedby="tags-hint"
           />
           <p id="tags-hint" className="mt-1 text-xs text-subtle">
-            Separate tags with commas. Awards the work won or was up for, and awards named in the description, are tagged for you.
+            {t('form.tagsHint')}
           </p>
         </div>
 
         <div>
           <label htmlFor="price" className={labelClass}>
-            Cost
+            {t('form.cost')}
           </label>
           <div className="flex gap-2">
-            <input aria-label="Currency" maxLength={3} placeholder="USD" className={`${inputClass} w-20 uppercase`} value={values.priceCurrency} onChange={(e) => set('priceCurrency', e.target.value.toUpperCase())} />
-            <input id="price" type="number" step="0.01" placeholder="Cost (optional)" className={inputClass} value={values.price} onChange={(e) => set('price', e.target.value)} />
+            <input aria-label={t('form.currency')} maxLength={3} placeholder="USD" className={`${inputClass} w-20 uppercase`} value={values.priceCurrency} onChange={(e) => set('priceCurrency', e.target.value.toUpperCase())} />
+            <input id="price" type="number" step="0.01" placeholder={t('form.costPlaceholder')} className={inputClass} value={values.price} onChange={(e) => set('price', e.target.value)} />
             {[
               ['K', 1e3],
               ['M', 1e6],
@@ -424,40 +429,40 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
         </div>
 
         <div>
-          <span className={labelClass}>Where to buy</span>
+          <span className={labelClass}>{t('form.whereToBuy')}</span>
           {values.merchants.map((merchant, index) => (
             <div key={index} className="mb-2 grid grid-cols-[6rem_1fr_2fr_auto] gap-2">
               <input
-                aria-label="Merchant price"
+                aria-label={t('form.merchantPrice')}
                 type="number"
                 step="0.01"
-                placeholder="Price"
+                placeholder={t('form.price')}
                 className={inputClass}
                 value={merchant.price ?? ''}
                 onChange={(e) => set('merchants', values.merchants.map((m, i) => (i === index ? { ...m, price: e.target.value === '' ? undefined : Number(e.target.value) } : m)))}
               />
               <input
-                aria-label="Merchant label"
+                aria-label={t('form.merchantLabel')}
                 placeholder="Amazon"
                 className={inputClass}
                 value={merchant.label ?? ''}
                 onChange={(e) => set('merchants', values.merchants.map((m, i) => (i === index ? { ...m, label: e.target.value } : m)))}
               />
               <input
-                aria-label="Merchant URL"
+                aria-label={t('form.merchantUrl')}
                 type="url"
                 placeholder="https://www.merchant.com/…"
                 className={inputClass}
                 value={merchant.url ?? ''}
                 onChange={(e) => set('merchants', values.merchants.map((m, i) => (i === index ? { ...m, url: e.target.value } : m)))}
               />
-              <button type="button" aria-label="Remove merchant" className="rounded-lg px-2 text-subtle hover:bg-red-500/10 hover:text-danger" onClick={() => set('merchants', values.merchants.filter((_, i) => i !== index))}>
+              <button type="button" aria-label={t('form.removeMerchant')} className="rounded-lg px-2 text-subtle hover:bg-red-500/10 hover:text-danger" onClick={() => set('merchants', values.merchants.filter((_, i) => i !== index))}>
                 ✕
               </button>
             </div>
           ))}
           <button type="button" className="btn btn-sm btn-ghost -ml-2 text-link" onClick={() => set('merchants', [...values.merchants, { label: '', url: '' }])}>
-            Add a merchant
+            {t('form.addMerchant')}
           </button>
         </div>
 
@@ -470,44 +475,44 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
         <details open={showAdvanced} onToggle={(e) => setShowAdvanced((e.target as HTMLDetailsElement).open)} className="group surface p-4">
           <summary className="flex cursor-pointer list-none items-center gap-2 text-sm font-medium text-muted hover:text-ink [&::-webkit-details-marker]:hidden">
             <Icon name="chevron" className="size-4 -rotate-90 text-subtle transition-transform group-open:rotate-0" />
-            Location, date confidence and summary
+            {t('form.advanced')}
           </summary>
           <div className="mt-3 space-y-3">
             <div>
               <label htmlFor="address" className={labelClass}>
-                Place
+                {t('form.place')}
               </label>
-              <input id="address" className={inputClass} value={values.address} onChange={(e) => set('address', e.target.value)} placeholder="Detroit, Michigan" />
+              <input id="address" className={inputClass} value={values.address} onChange={(e) => set('address', e.target.value)} placeholder={t('form.placePlaceholder')} />
             </div>
             <div className="grid grid-cols-2 gap-2">
-              <input aria-label="Latitude" type="number" step="any" min={-90} max={90} placeholder="Latitude" className={inputClass} value={values.latitude} onChange={(e) => set('latitude', e.target.value)} />
-              <input aria-label="Longitude" type="number" step="any" min={-180} max={180} placeholder="Longitude" className={inputClass} value={values.longitude} onChange={(e) => set('longitude', e.target.value)} />
+              <input aria-label={t('form.latitude')} type="number" step="any" min={-90} max={90} placeholder={t('form.latitude')} className={inputClass} value={values.latitude} onChange={(e) => set('latitude', e.target.value)} />
+              <input aria-label={t('form.longitude')} type="number" step="any" min={-180} max={180} placeholder={t('form.longitude')} className={inputClass} value={values.longitude} onChange={(e) => set('longitude', e.target.value)} />
             </div>
             <div className="grid gap-2 sm:grid-cols-[13rem_1fr]">
-              <select aria-label="Date confidence" className={inputClass} value={values.dateConfidence} onChange={(e) => set('dateConfidence', e.target.value)}>
-                <option value="">Date confidence</option>
+              <select aria-label={t('form.dateConfidence')} className={inputClass} value={values.dateConfidence} onChange={(e) => set('dateConfidence', e.target.value)}>
+                <option value="">{t('form.dateConfidence')}</option>
                 {CONFIDENCE_LEVELS.map((level) => (
                   <option key={level} value={level}>
-                    {level}
+                    {t.dynamic(`dateConfidence.${level}.label`, level).toLowerCase()}
                   </option>
                 ))}
               </select>
-              <input aria-label="Why" placeholder="Why (quote the source)" className={inputClass} value={values.dateConfidenceReasoning} onChange={(e) => set('dateConfidenceReasoning', e.target.value)} />
+              <input aria-label={t('form.why')} placeholder={t('form.whyPlaceholder')} className={inputClass} value={values.dateConfidenceReasoning} onChange={(e) => set('dateConfidenceReasoning', e.target.value)} />
             </div>
             {/* The day first promised, for a pin whose start has slipped: the
                 delay is measured from it to the pin's start (src/lib/delay.ts). */}
             {values.dateConfidence === 'delayed' || values.originalStartDate ? (
               <div className="grid gap-2 sm:grid-cols-[13rem_1fr]">
-                <input aria-label="Originally due" title="The day first promised, before any delay (UTC)" type="date" className={inputClass} value={values.originalStartDate} onChange={(e) => set('originalStartDate', e.target.value)} />
-                <input aria-label="How long a delay" placeholder='Delay: "Stated: ..." or "Estimated: ..."' className={inputClass} value={values.delayReasoning} onChange={(e) => set('delayReasoning', e.target.value)} />
+                <input aria-label={t('form.originallyDue')} title={t('form.originallyDueTitle')} type="date" className={inputClass} value={values.originalStartDate} onChange={(e) => set('originalStartDate', e.target.value)} />
+                <input aria-label={t('form.delayLength')} placeholder={t('form.delayPlaceholder')} className={inputClass} value={values.delayReasoning} onChange={(e) => set('delayReasoning', e.target.value)} />
               </div>
             ) : null}
             <div>
               <label htmlFor="summary" className={labelClass}>
-                Key points (HTML list)
+                {t('form.keyPoints')}
               </label>
               <p className="mb-1 text-xs text-subtle">
-                Cite a reference with <code>{'<cite data-ref="its link"></cite>'}</code>; it shows as [n].
+                {t.rich('form.citeHint', { code: () => <code>{'<cite data-ref="its link"></cite>'}</code> })}
               </p>
               <textarea id="summary" rows={5} className={`${inputClass} font-mono text-xs`} value={values.longFormSummary} onChange={(e) => set('longFormSummary', e.target.value)} />
             </div>
@@ -517,10 +522,10 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
         {values.media.length ? (
           <div>
             <div className="mb-2 flex items-center justify-between">
-              <span className={labelClass}>Heading image</span>
+              <span className={labelClass}>{t('form.headingImage')}</span>
               <label className="flex items-center gap-2 text-sm">
                 <input type="checkbox" checked={values.useMedia} onChange={(e) => set('useMedia', e.target.checked)} />
-                Use heading image
+                {t('form.useHeadingImage')}
               </label>
             </div>
             <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3">
@@ -535,7 +540,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
 
         {values.extraMedia.length ? (
           <div>
-            <span className={labelClass}>Also saved with the pin</span>
+            <span className={labelClass}>{t('form.alsoSaved')}</span>
             <ul className="mt-1 space-y-1 text-sm">
               {values.extraMedia.map((medium, index) => (
                 <li key={medium.originalUrl ?? index} className="flex items-center justify-between gap-3">
@@ -544,12 +549,12 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
                     <img src={mediumPreview(medium)} alt="" className="aspect-video w-20 shrink-0 rounded object-cover" referrerPolicy="no-referrer" />
                   ) : null}
                   <span className="min-w-0 flex-1 truncate text-muted">
-                    {String(medium.type) === '3' ? 'Video' : String(medium.type) === '2' ? 'Tweet' : 'Picture'}
-                    {medium.authorName ? ` from ${medium.authorName}` : ''}
-                    {medium.originalUrl === values.selectedMedia?.originalUrl && values.useMedia ? ' (heading)' : ''}
+                    {String(medium.type) === '3' ? t('media.video') : String(medium.type) === '2' ? t('media.tweet') : t('form.picture')}
+                    {medium.authorName ? ` ${t('form.fromAuthor', { name: medium.authorName })}` : ''}
+                    {medium.originalUrl === values.selectedMedia?.originalUrl && values.useMedia ? ` (${t('form.heading')})` : ''}
                   </span>
                   <button type="button" className="shrink-0 text-xs text-link" onClick={() => set('extraMedia', values.extraMedia.filter((m) => m !== medium))}>
-                    Remove
+                    {t('common.remove')}
                   </button>
                 </li>
               ))}
@@ -559,16 +564,16 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
 
         {values.stocks.length ? (
           <div>
-            <span className={labelClass}>Stock tickers</span>
-            <p className="mt-0.5 text-xs text-subtle">From the article, added with the pin, priced when posted and on its start date.</p>
+            <span className={labelClass}>{t('form.stockTickers')}</span>
+            <p className="mt-0.5 text-xs text-subtle">{t('form.stockHint')}</p>
             <ul className="mt-1 flex flex-wrap gap-1.5">
               {values.stocks.map((stock) => (
                 <li key={stock.symbol} className="inline-flex items-center gap-1 rounded-full bg-raised px-2.5 py-1 text-xs ring-1 ring-line" title={stock.note ?? undefined}>
                   <span className="font-semibold">{stock.symbol}</span>
-                  <span className="text-subtle">{stock.relation === 'company' ? 'company' : stock.relation}</span>
+                  <span className="text-subtle">{t(`stocks.relations.${stock.relation}`).toLowerCase()}</span>
                   <button
                     type="button"
-                    aria-label={`Leave out ${stock.symbol}`}
+                    aria-label={t('form.leaveOut', { symbol: stock.symbol })}
                     onClick={() => setValues((v) => ({ ...v, stocks: v.stocks.filter((s) => s.symbol !== stock.symbol) }))}
                     className="ml-0.5 text-subtle hover:text-ink"
                   >
@@ -584,7 +589,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
 
         {values.ratings.length ? (
           <div>
-            <span className={labelClass}>Ratings</span>
+            <span className={labelClass}>{t('ratings.heading')}</span>
             <PinRatings ratings={values.ratings} className="mt-1" />
           </div>
         ) : null}
@@ -597,7 +602,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
               <>
                 {' '}
                 <Link href={pinPath(duplicateOf)} className="underline">
-                  View {duplicateOf.title || 'that pin'}
+                  {t('form.viewPin', { title: duplicateOf.title || t('form.thatPin') })}
                 </Link>
               </>
             ) : null}
@@ -605,16 +610,16 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
         ) : null}
         <div className="flex justify-end gap-2 border-t border-line pt-5">
           <button type="button" onClick={() => router.back()} className="btn btn-secondary">
-            Cancel
+            {t('common.cancel')}
           </button>
           <button type="submit" className="btn btn-primary px-6" disabled={saving}>
-            {saving ? 'Saving…' : 'Submit'}
+            {saving ? t('common.saving') : t('form.submit')}
           </button>
         </div>
       </fieldset>
 
       <aside className="lg:sticky lg:top-[64px] lg:self-start">
-        <span className={labelClass}>Preview</span>
+        <span className={labelClass}>{t('form.preview')}</span>
         <PinCard pin={preview} serverTimeZone="UTC" />
       </aside>
     </form>
@@ -630,6 +635,8 @@ function ReferencesEditor({
   source: Pick<PinJson, 'sourceUrl' | 'dateConfidence' | 'utcCreatedDateTime'>;
   onChange: (references: ReferenceFormValues[]) => void;
 }) {
+  const t = useT();
+  const { locale } = t;
   const update = (index: number, patch: Partial<ReferenceFormValues>) => onChange(references.map((r, i) => (i === index ? { ...r, ...patch } : r)));
   const overall = pinConfidence(
     pinEvidence({
@@ -642,9 +649,9 @@ function ReferencesEditor({
   return (
     <div>
       <span className={labelClass}>
-        References{' '}
+        {t('references.heading')}{' '}
         <span className="font-normal text-subtle">
-          {overall !== undefined ? `(overall confidence ${overall}% with the source, newer references count more)` : '(further evidence for this pin; the source counts too)'}
+          ({overall !== undefined ? t('form.overallConfidence', { percent: overall }) : t('form.furtherEvidence')})
         </span>
       </span>
       {references.map((reference, index) => {
@@ -652,17 +659,17 @@ function ReferencesEditor({
         // saying, and comes from the scrape rather than being typed.
         const facts = [
           reference.title,
-          reference.confidence && `${reference.confidence}% confidence`,
-          reference.publishedDate && `published ${formatDay(reference.publishedDate)}`,
-          reference.startDate && `starts ${formatDay(reference.startDate)}`,
-          reference.endDate && `ends ${formatDay(reference.endDate)}`,
-          reference.addedByUserName && `added by ${reference.addedByUserName}`,
+          reference.confidence && t('form.refConfidence', { percent: reference.confidence }),
+          reference.publishedDate && t('form.refPublished', { date: formatDay(reference.publishedDate, locale) }),
+          reference.startDate && t('form.refStarts', { date: formatDay(reference.startDate, locale) }),
+          reference.endDate && t('form.refEnds', { date: formatDay(reference.endDate, locale) }),
+          reference.addedByUserName && t('form.refAddedBy', { name: reference.addedByUserName }),
         ].filter(Boolean);
         return (
           <div key={index} className="mb-3">
             <div className="flex gap-2">
-              <input aria-label="Reference URL" type="url" placeholder="https://…" className={inputClass} value={reference.url} onChange={(e) => update(index, { url: e.target.value })} />
-              <button type="button" aria-label="Remove reference" className="rounded-lg px-2 text-subtle hover:bg-red-500/10 hover:text-danger" onClick={() => onChange(references.filter((_, i) => i !== index))}>
+              <input aria-label={t('form.referenceUrl')} type="url" placeholder="https://…" className={inputClass} value={reference.url} onChange={(e) => update(index, { url: e.target.value })} />
+              <button type="button" aria-label={t('form.removeReference')} className="rounded-lg px-2 text-subtle hover:bg-red-500/10 hover:text-danger" onClick={() => onChange(references.filter((_, i) => i !== index))}>
                 ✕
               </button>
             </div>
@@ -687,28 +694,30 @@ function hostOf(url: string) {
 // What the pin is saved with when a more confident reference's dates win over
 // the ones typed above (which stay as the source's dates).
 function OverriddenDates({ picked, allDay }: { picked: ReturnType<typeof formDates>; allDay: boolean }) {
+  const t = useT();
   const { utcStartDateTime: start, utcEndDateTime: end } = picked.dates;
   if (!start) return null;
   const when = (value: string, isEnd = false) =>
     allDay
-      ? formatDay(dayKeyIn(new Date(value).getTime() - (isEnd ? 86400000 : 0), 'UTC'))
-      : new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(value));
+      ? formatDay(dayKeyIn(new Date(value).getTime() - (isEnd ? 86400000 : 0), 'UTC'), t.locale)
+      : new Intl.DateTimeFormat(INTL_LOCALES[t.locale], { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(value));
   const by = [picked.startFrom && ['start', picked.startFrom], picked.endFrom && ['end', picked.endFrom]].filter(Boolean) as [string, { url: string; confidence: number }][];
   return (
     <p className="-mt-2 rounded-lg bg-link/10 px-3 py-2 text-sm text-muted ring-1 ring-link/20 ring-inset">
-      Saved as <span className="font-medium text-ink">{when(start)}{end ? ` – ${when(end, true)}` : ''}</span>
+      {t('form.savedAs')} <span className="font-medium text-ink">{when(start)}{end ? ` – ${when(end, true)}` : ''}</span>
       {by.length ? (
         <>
           {' '}
-          from the most confident {by.map(([side, r], i) => (
+          {t('form.fromMostConfident')}{' '}
+          {by.map(([side, r], i) => (
             <span key={side}>
-              {i ? ' and ' : ''}
-              {side} ({hostOf(r.url)}, {r.confidence}%{isLowConfidence(r.confidence) ? <span className="text-warning-soft"> - low confidence</span> : null})
+              {i ? ` ${t('form.and')} ` : ''}
+              {side === 'start' ? t('form.sideStart') : t('form.sideEnd')} ({hostOf(r.url)}, {r.confidence}%{isLowConfidence(r.confidence) ? <span className="text-warning-soft"> - {t('dateRanges.lowConfidence').toLowerCase()}</span> : null})
             </span>
           ))}
         </>
       ) : null}
-      . The dates above are kept as the source&apos;s.
+      . {t('form.datesKept')}
     </p>
   );
 }
@@ -723,6 +732,7 @@ function mediumPreview(medium: MediumJson): string | undefined {
 }
 
 function MediaChoice({ medium, selected, onSelect }: { medium: MediumJson; selected: boolean; onSelect: () => void }) {
+  const t = useT();
   const src = medium.thumbName ? blobUrl(medium.thumbName) : medium.originalUrl;
   return (
     <button
@@ -736,7 +746,7 @@ function MediaChoice({ medium, selected, onSelect }: { medium: MediumJson; selec
         // eslint-disable-next-line @next/next/no-img-element -- candidate images on arbitrary hosts
         <img src={src} alt="" className="aspect-video w-full object-cover" referrerPolicy="no-referrer" />
       ) : (
-        <span className="flex aspect-video items-center justify-center bg-raised text-sm text-ink">{String(medium.type) === '2' ? 'Tweet' : 'Video'}</span>
+        <span className="flex aspect-video items-center justify-center bg-raised text-sm text-ink">{String(medium.type) === '2' ? t('media.tweet') : t('media.video')}</span>
       )}
     </button>
   );

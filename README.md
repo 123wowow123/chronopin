@@ -440,6 +440,8 @@ GA: Outbound link / non-interaction events / Social Interactions tracking / User
 
 ### Before release
 
+- Use this AI to do this job: Localization is in: the site now works in English, Spanish, French, German, Japanese and Simplified Chinese. The app's own text is translated in all six, but pin text stays in English for now because the Anthropic key has no credit. 
+
 # Monitization
 
 - amazon & bestbuy referral links to product should be created if its something purchasable 
@@ -484,10 +486,10 @@ major local events by major city scrape and more targetted by your location
 
 # Other
 
-- localization & multilingual
 
 - should have small display that 3 pins are happing within next 7 days on botton and top of timeline. Clicking on it will scroll you to it one after another
 
+- admin view that shows all the OKF wikis that goes into making the pin
 
 # Scraping
 

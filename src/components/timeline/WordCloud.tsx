@@ -17,6 +17,8 @@ import {
   type PlacedWord,
   type Sprite,
 } from '@/lib/wordCloud';
+import { useT } from '@/lib/client/i18n';
+import { categoryLabel } from '@/lib/i18n/labels';
 
 // px per board cell: fine enough for small words to sit inside big ones' gaps.
 const CELL = 2;
@@ -115,6 +117,7 @@ export function WordCloud({
   onHot?: (tag: TagCount | null) => void;
 }) {
   const id = useId().replace(/:/g, '');
+  const translate = useT();
   const boxRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
   const [size, setSize] = useState<{ width: number; height: number } | null>(null);
@@ -141,8 +144,8 @@ export function WordCloud({
   const words = useMemo(() => {
     const busiest = [...tags].sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
     const weights = cloudWeights(busiest.map((t) => t.count));
-    return busiest.map((t, rank) => ({ key: t.name.toLowerCase(), text: t.name, weight: weights[rank], vertical: isVertical(t.name.toLowerCase(), rank) }));
-  }, [tags]);
+    return busiest.map((t, rank) => ({ key: t.name.toLowerCase(), text: t.kind === 'category' ? categoryLabel(translate, t.name) : t.name, weight: weights[rank], vertical: isVertical(t.name.toLowerCase(), rank) }));
+  }, [tags, translate]);
 
   useEffect(() => {
     if (!size || size.width < 80 || size.height < 80) return;
@@ -332,7 +335,7 @@ export function WordCloud({
           #${id} .word:focus-visible .ring { stroke-opacity: 1; }
         `}</style>
         {layout ? (
-          <g id={id} role="group" aria-label="Filter by tag">
+          <g id={id} role="group" aria-label={translate('tagCloud.filterBy')}>
             {layout.placed.map((p) => {
               const tag = byKey.get(p.key);
               const count = tag?.count ?? 0;
@@ -345,7 +348,7 @@ export function WordCloud({
                   role="button"
                   tabIndex={0}
                   aria-pressed={picked.has(p.key)}
-                  aria-label={`${p.text}, ${count} ${count === 1 ? 'pin' : 'pins'}`}
+                  aria-label={`${p.text}, ${translate('tagCloud.pins', { count })}`}
                   onFocus={() => focusWord(p)}
                   onBlur={(event) => {
                     const word = event.currentTarget;
