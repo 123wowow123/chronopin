@@ -12,6 +12,7 @@ import * as db from '@/server/db';
 import { Comment, Company, DateTime, Follow, FullPins, MediumType, User, Users } from '@/server/model';
 import AiFeedback from '@/server/model/aiFeedback';
 import PinDuplicate from '@/server/model/pinDuplicate';
+import Source from '@/server/model/source';
 import log from '@/server/util/log';
 import { excludeE2e } from './excludeE2e';
 
@@ -25,6 +26,7 @@ const { values: flags } = parseArgs({
     followfile: { type: 'string', default: './scripts/backup/seedFollows.json' },
     duplicatefile: { type: 'string', default: './scripts/backup/seedPinDuplicates.json' },
     aifeedbackfile: { type: 'string', default: './scripts/backup/seedAiFeedback.json' },
+    sourcefile: { type: 'string', default: './scripts/backup/seedSources.json' },
     companyfile: { type: 'string', default: './scripts/backup/seedCompanies.json' },
     aphelionfile: { type: 'string', default: './scripts/backup/aphelion.json' },
     equinoxfile: { type: 'string', default: './scripts/backup/equinox.json' },
@@ -99,6 +101,25 @@ async function saveDB() {
   const keptUserIds = new Set(data.users.map((u) => u.id));
   const feedback = (await AiFeedback.getAll()).filter((f) => keptPinIds.has(f.pinId) && (f.userId == null || keptUserIds.has(f.userId)));
   writeJson(flags.aifeedbackfile, feedback);
+
+  // Link wikis (0026) for the kept pins' links, so a restore does not pay
+  // for writing them again. Links only e2e pins cited are left out, and so is
+  // each link's fetched text, which can run to a whole transcript: a ready
+  // wiki never needs it, and --refetch reads the link again anyway.
+  console.log('Backup Sources');
+  const { sources, wikis, pinSources, lintFindings, lintScans } = await Source.getAll();
+  const keptPinSources = pinSources.filter((ps) => keptPinIds.has(ps.pinId));
+  const keptSourceIds = new Set(keptPinSources.map((ps) => ps.sourceId));
+  writeJson(flags.sourcefile, {
+    sources: sources.filter((s) => keptSourceIds.has(s.id)).map(({ text: _text, ...s }) => s),
+    wikis: wikis.filter((w) => keptSourceIds.has(w.sourceId)),
+    pinSources: keptPinSources,
+    lintFindings: lintFindings.filter(
+      (f) => (f.pinId == null || keptPinIds.has(f.pinId)) && (f.sourceId == null || keptSourceIds.has(f.sourceId)),
+    ),
+    // Contradiction scans are keyed by pin, quality scans by source.
+    lintScans: lintScans.filter((s) => (s.check === 'contradiction' ? keptPinIds.has(s.subjectId) : keptSourceIds.has(s.subjectId))),
+  });
 
   console.log('Data Backup Complete');
 }
@@ -208,6 +229,14 @@ async function seedDB() {
       await AiFeedback.restore(readJson(flags.aifeedbackfile));
     } catch (error) {
       log.error('AI Feedback Save Error', JSON.stringify(error));
+    }
+  }
+
+  if (existsSync(flags.sourcefile)) {
+    try {
+      await Source.restore(readJson(flags.sourcefile));
+    } catch (error) {
+      log.error('Sources Save Error', JSON.stringify(error));
     }
   }
 

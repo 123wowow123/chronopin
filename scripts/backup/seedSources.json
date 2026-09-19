@@ -1,0 +1,524 @@
+{
+  "sources": [
+    {
+      "id": 1,
+      "urlKey": "youtube.com/watch?v=4xnsKL8B9JA",
+      "url": "https://www.youtube.com/watch?v=4xnsKL8B9JA",
+      "kind": "youtube",
+      "title": "Ultra Heavy Lift: Installing the Walls of Venice | FD Engineering",
+      "status": "ready",
+      "textHash": "a68470eb21df0a14ae5b3b929dd66f2dd6b74fff7a648be881d7c14006cb4af1",
+      "sourceModifiedDate": "2024-08-02T07:00:00.000Z",
+      "generatedBy": "claude-code/claude-opus-5",
+      "wikiVersion": 1,
+      "attempts": 0,
+      "lastError": null,
+      "utcFetchedDateTime": "2026-09-19T01:47:13.330Z",
+      "utcAttemptedDateTime": "2026-09-19T01:47:13.330Z",
+      "utcBuiltDateTime": "2026-09-19T01:44:55.666Z",
+      "utcCreatedDateTime": "2026-09-19T01:25:59.330Z"
+    },
+    {
+      "id": 2,
+      "urlKey": "en.wikipedia.org/wiki/MOSE",
+      "url": "https://en.wikipedia.org/wiki/MOSE",
+      "kind": "web",
+      "title": "MOSE - Wikipedia",
+      "status": "ready",
+      "textHash": "7f4bedcab1f6e4c3aff44b14a2a10495b6de19aa13a86c5f0a9e2fa0d674db08",
+      "sourceModifiedDate": null,
+      "generatedBy": "claude-code/claude-opus-5",
+      "wikiVersion": 3,
+      "attempts": 0,
+      "lastError": null,
+      "utcFetchedDateTime": "2026-09-19T01:47:12.725Z",
+      "utcAttemptedDateTime": "2026-09-19T01:47:40.050Z",
+      "utcBuiltDateTime": "2026-09-19T01:47:40.050Z",
+      "utcCreatedDateTime": "2026-09-19T01:25:59.335Z"
+    },
+    {
+      "id": 3,
+      "urlKey": "heavyliftnews.com/fagiolis-big-operations-in-the-venice-lagoon",
+      "url": "https://www.heavyliftnews.com/fagiolis-big-operations-in-the-venice-lagoon/",
+      "kind": "web",
+      "title": "Fagioli's Big Operations in the Venice Lagoon – Heavy Lift News",
+      "status": "ready",
+      "textHash": "cfe49f54fb6ee7b0ea78d5fe6c4cef86984aca86d7cecd31d5f9f1d651d22de4",
+      "sourceModifiedDate": "2023-07-21T07:00:00.000Z",
+      "generatedBy": "claude-code/claude-opus-5",
+      "wikiVersion": 1,
+      "attempts": 0,
+      "lastError": null,
+      "utcFetchedDateTime": "2026-09-19T01:47:12.503Z",
+      "utcAttemptedDateTime": "2026-09-19T01:47:12.503Z",
+      "utcBuiltDateTime": "2026-09-19T01:44:55.683Z",
+      "utcCreatedDateTime": "2026-09-19T01:25:59.336Z"
+    },
+    {
+      "id": 4,
+      "urlKey": "youtube.com/watch?v=FEHUyliTBE4",
+      "url": "https://www.youtube.com/watch?v=FEHUyliTBE4",
+      "kind": "youtube",
+      "title": "Massive Construction: Building a Billion Dollar Flood Defense System | FD Engineering",
+      "status": "ready",
+      "textHash": "ba3ac0de924597d0ff2df9d0741133efb541fb6fcaa4c6e5f76f0bdfd72458bc",
+      "sourceModifiedDate": "2023-10-08T07:00:00.000Z",
+      "generatedBy": "claude-code/claude-opus-5",
+      "wikiVersion": 1,
+      "attempts": 0,
+      "lastError": null,
+      "utcFetchedDateTime": "2026-09-19T01:47:13.704Z",
+      "utcAttemptedDateTime": "2026-09-19T01:47:13.704Z",
+      "utcBuiltDateTime": "2026-09-19T01:44:55.689Z",
+      "utcCreatedDateTime": "2026-09-19T01:25:59.338Z"
+    }
+  ],
+  "wikis": [
+    {
+      "id": 3,
+      "sourceId": 1,
+      "parentId": null,
+      "position": 0,
+      "type": "YouTube Video",
+      "title": "Fagioli installs the MOSE floating barriers at Malamocco and Chioggia",
+      "summary": "Documentary on how Fagioli's purpose-built gantry crane laid the MOSE floating barriers and caissons, with project history, dimensions and cost.",
+      "body": "- Free Documentary – Engineering video, published 2 August 2024. It describes MOSE as \"nearing completion\"; the narration dates from before completion (\"around 2020 we expect the whole project to be finished\").\n- Venice has sunk about **10–13 cm** over the last century. MOSE began after the **1966** high water and was \"officially launched in 2003\".\n- Heavy-lift company **Fagioli** was engaged by the Consorzio Venezia Nuova in **2012** to lay the floating barriers and concrete housings across the Lido inlet, \"the beginning of the final phase\". The first mobile walls were installed at Lido in **2013**.\n- The Malamocco and Chioggia inlets are deeper (Malamocco **14 m** above the housings), so Fagioli built a new, taller gantry crane to lay those inlets' **58** barriers. Each barrier weighs **400–450 t**; the Malamocco barriers are **29.03 m** long.\n- In all there are **78 barriers**, plus two spares per inlet, which stand in while a barrier is out for maintenance.\n- The project leader estimated MOSE \"will have cost in the area of 5 billion euros\" once finished.\n- The video description says Fagioli laid **19 barriers \"in one session\"**, each weighing **40 tonnes**. The narration gives Lido barriers at 210 t and Malamocco/Chioggia barriers at 400+ t.",
+      "tags": [
+        "mose",
+        "venice",
+        "fagioli",
+        "heavy lift",
+        "gantry crane",
+        "strand jack"
+      ],
+      "utcCreatedDateTime": "2026-09-19T01:44:55.666Z"
+    },
+    {
+      "id": 4,
+      "sourceId": 1,
+      "parentId": 3,
+      "position": 0,
+      "type": "Topic",
+      "title": "The gantry crane for Malamocco and Chioggia",
+      "summary": "Specifications and transport of the 800-ton gantry crane Fagioli built to lay the deeper inlets' barriers.",
+      "body": "- About **50 m long, 25 m wide and 35–36 m tall**, with 26 m tubular-steel trellis legs. The legs were lengthened by **6 m** over the earlier crane's 9 m, and a mid-leg rotating frame folds them for transport.\n- Four **300 t** main strand jacks (L300), as many on the transport beam, and eight **50 t** strand jacks to fold and unfold the legs.\n- The crane weighs **800 t**. It was built at Porto Marghera, moved onto a ballasted barge with SPMTs, and placed on the caisson using a centring cone, with GPS- and winch-positioned mooring.\n- The fishing beam, hung from four 300 t strand jacks, lowered each barrier **14 m** underwater onto its hinge with millimetric positioning. Each operation took up to 15 workers.",
+      "tags": [
+        "gantry crane",
+        "fagioli",
+        "strand jack"
+      ],
+      "utcCreatedDateTime": "2026-09-19T01:44:55.666Z"
+    },
+    {
+      "id": 5,
+      "sourceId": 1,
+      "parentId": 3,
+      "position": 1,
+      "type": "Topic",
+      "title": "Caissons: the underwater housings",
+      "summary": "How the concrete caissons housing the gates were built, floated and sunk into place.",
+      "body": "- Lido caissons (each houses two barriers) were built in a drained basin and floated out. Fagioli's catamaran positioned each **12,000-ton** housing over a **12 m** trench, and four 300 t strand jacks lowered it onto bags that were then emptied for a soft landing.\n- Malamocco caissons (three barriers each) were built above sea level, rolled onto the Syncrolift and lowered into the sea.\n- The largest housings are **60 m x 40 m x 12 m**, around **22,000 t** of concrete. Access tunnels with lifts lead to a watertight room for each hinge.",
+      "tags": [
+        "caisson",
+        "mose",
+        "catamaran"
+      ],
+      "utcCreatedDateTime": "2026-09-19T01:44:55.666Z"
+    },
+    {
+      "id": 6,
+      "sourceId": 1,
+      "parentId": 3,
+      "position": 2,
+      "type": "Topic",
+      "title": "Operation and testing",
+      "summary": "How the barriers float up, and their testing status in the video.",
+      "body": "- Compressed air pumped into a water-filled barrier pushes the water out, and the barrier rotates up around its hinge and surfaces (the \"Archimedes effect\").\n- Designed for medium-high tides of **1.10 m** above average, and tides as high as the **1.96 m** of 1966 (as stated).\n- At the time of filming, \"all 20 barriers\" at one inlet had been laid and raised several times in experimental mode.\n- Anti-reflux valves were planned for St Mark's Square, which floods at tides of **70 cm**.",
+      "tags": [
+        "mose",
+        "operation"
+      ],
+      "utcCreatedDateTime": "2026-09-19T01:44:55.666Z"
+    },
+    {
+      "id": 12,
+      "sourceId": 3,
+      "parentId": null,
+      "position": 0,
+      "type": "Web Page",
+      "title": "Fagioli removes MOSE barrier gates for maintenance at the Lido-Treporti inlet",
+      "summary": "Fagioli's gantry launching system lifting MOSE barrier gates out of the Lido-Treporti inlet for maintenance, with the gates' size and weight.",
+      "body": "- Published 21 July 2023 by Heavy Lift News; source: Fagioli and MOSE.\n- MOSE is described as the project \"intended to protect the city of Venice, Italy, and the Venetian Lagoon from flooding\".\n- For this leg of the project, Fagioli was \"the inventor, the designer, the builder and final user\" of the **CV.02.EVO.C Gantry Launching System**, used to remove barrier gates for maintenance at the Bocca di Lido Treporti.\n- Operation steps:\n  1. Position the gantry launching system on the concrete caisson housing the barriers.\n  2. Lift the barrier out of the water and place it on a barge.\n  3. Carry it by sea across the lagoon, unload it, and move it by SPMT (self-propelled modular transporter) into the maintenance area.\n- Each barrier measures **20 m x 20 m x 6 m** and weighs **250 t**.\n- The first barrier section was mobilized in **three days**.\n- After maintenance, each barrier goes back to its installation area, and the cycle \"repeats all over again one by one with the remaining 77 barriers\" (78 in all).",
+      "tags": [
+        "fagioli",
+        "mose",
+        "venice",
+        "lido-treporti",
+        "heavy lift",
+        "maintenance"
+      ],
+      "utcCreatedDateTime": "2026-09-19T01:44:55.683Z"
+    },
+    {
+      "id": 13,
+      "sourceId": 4,
+      "parentId": null,
+      "position": 0,
+      "type": "YouTube Video",
+      "title": "Building the MOSE surge barrier: caissons, gates and control",
+      "summary": "Documentary on MOSE's construction: Fagioli's catamaran and Syncrolift moving the caissons, installing the gates, the Arsenal control room, costs and controversy.",
+      "body": "- Free Documentary – Engineering video, published 8 October 2023. The description says the \"7-billion-euro surge barrier\" is \"nearing completion\" and that \"today the system is fully operational\". The narration is older and gives a **June 2018** completion date.\n- Construction began in **2003**. MOSE has **78 floating steel gates** in four rows across the Lido, Malamocco and Chioggia inlets, raised when tides over **110 cm** are predicted.\n- Venice has sunk about **25 cm** relative to average sea level over the last century (sea rise of 12–13 cm plus subsidence). The **1966** flood reached **1.94 m**.\n- Cost is quoted as **€7.3 billion** (narration), \"7 billion euros\" (Legambiente's Luigi Lazzaro), and **€5–5.5 billion** for construction (the consortium), with maintenance estimated at **€30–40 million a year**.\n- The first test was in **October 2013**, when gates were raised at one inlet.\n- At the time of filming the project was about **87%** built, and the last three rows of floodgates were due to be installed by the end of 2015.",
+      "tags": [
+        "mose",
+        "venice",
+        "fagioli",
+        "caisson",
+        "surge barrier",
+        "consorzio venezia nuova"
+      ],
+      "utcCreatedDateTime": "2026-09-19T01:44:55.689Z"
+    },
+    {
+      "id": 14,
+      "sourceId": 4,
+      "parentId": 13,
+      "position": 0,
+      "type": "Topic",
+      "title": "Moving the caissons",
+      "summary": "Fagioli's catamaran and the world's largest Syncrolift moving 12,000–22,000-ton concrete caissons.",
+      "body": "- Malamocco caissons were built away from the inlet. The consortium built the world's largest **Syncrolift** (26 beams of 57 m each) to lower caissons of up to **22,000 t** into the water.\n- Fagioli built a **catamaran** from two river barges at Cremona, with 20 strand jacks of 45–294 t, to move the Lido-Treporti caissons (dry weight **12,500 t**). The first was moved in **July 2012**.\n- Caissons were sunk onto water cushions in a trench and set with millimetric precision. The consortium says it laid 18 caissons, \"one every 15 days\".",
+      "tags": [
+        "caisson",
+        "fagioli",
+        "catamaran",
+        "syncrolift"
+      ],
+      "utcCreatedDateTime": "2026-09-19T01:44:55.689Z"
+    },
+    {
+      "id": 15,
+      "sourceId": 4,
+      "parentId": 13,
+      "position": 1,
+      "type": "Topic",
+      "title": "Installing the floodgates",
+      "summary": "Rolling out and lowering each 210–250-ton yellow gate with Fagioli's fishing beam.",
+      "body": "- Each gate is a **210-ton** steel box (\"almost 250 metric tons\" as lifted). Moving one out to sea took three days.\n- A four-tower launching structure with two cross-head beams, each with four strand jacks (the \"fishing beam\"), lowered each gate onto its caisson. The operation was repeated **78 times**.",
+      "tags": [
+        "floodgate",
+        "fagioli",
+        "strand jack"
+      ],
+      "utcCreatedDateTime": "2026-09-19T01:44:55.689Z"
+    },
+    {
+      "id": 16,
+      "sourceId": 4,
+      "parentId": 13,
+      "position": 2,
+      "type": "Topic",
+      "title": "Control room and operation",
+      "summary": "The Arsenal control centre, when gates close, and how the city floods at each tide level.",
+      "body": "- Control is run from the old Arsenal. The decision to close is taken about **three hours** before the event.\n- Gates rise in groups of four and are held at about **45°**, on hinges weighing **42 t**.\n- St Mark's Square starts to flood at **80 cm**, and the city is heavily impacted at **130 cm** and very hard to get around at **140 cm**.\n- Closures could rise from about **5 a year** to 100–200 a year by 2100, which raises concerns about the lagoon's water quality.",
+      "tags": [
+        "mose",
+        "arsenal",
+        "acqua alta"
+      ],
+      "utcCreatedDateTime": "2026-09-19T01:44:55.689Z"
+    },
+    {
+      "id": 18,
+      "sourceId": 2,
+      "parentId": null,
+      "position": 0,
+      "type": "Web Page",
+      "title": "MOSE: Venice's mobile flood barrier",
+      "summary": "The MOSE system of 78 mobile gates at Venice's three lagoon inlets: design, operation, chronology, cost, delays and controversy.",
+      "body": "- **MOSE** (Modulo Sperimentale Elettromeccanico, \"Experimental Electromechanical Module\") is a project to protect Venice and the Venetian Lagoon from flooding: rows of mobile gates on the seafloor at the **Lido, Malamocco and Chioggia** inlets, raised to seal the lagoon off from the Adriatic during acqua alta.\n- Built for the Ministry of Infrastructure and Transport – Venice Water Authority by the **Consorzio Venezia Nuova**, a consortium of national and local construction companies.\n- Key dates (infobox): groundbreaking **14 May 2003**; built 2003–2019; **last barrier laid down on 30 January 2019**; inaugurated **3 October 2020**; \"Still to be completed as of November 2025\".\n- **78 gates** in four barrier rows; designed for tides of up to **3 m** and a sea-level rise of **60 cm**.\n- Estimated cost **€5.496 billion**, \"up €1.3 billion from initial cost projections\".\n- Missed completion deadlines of 2011, 2018 and 2021; \"now to be finished in 2025\".",
+      "tags": [
+        "mose",
+        "venice",
+        "venetian lagoon",
+        "flood barrier",
+        "consorzio venezia nuova",
+        "acqua alta"
+      ],
+      "utcCreatedDateTime": "2026-09-19T01:47:40.050Z"
+    },
+    {
+      "id": 19,
+      "sourceId": 2,
+      "parentId": 18,
+      "position": 0,
+      "type": "Topic",
+      "title": "Gates and how they work",
+      "summary": "The 78 gates, their rows, dimensions, hinges and raising procedure.",
+      "body": "- 78 gates in four rows: at the Lido inlet, **21** (north, Lido–Treporti) and **20** (south, Lido–San Nicolò), joined by an artificial island that houses the technical buildings; **19** at Malamocco; **18** at Chioggia.\n- Gates are steel box structures **20 m wide**, 18.5–29 m long and 3.6–5 m thick. The smallest is 18.5 x 20 x 3.6 m (Lido–Treporti) and the largest 29.5 x 20 x 4.5 m (Malamocco).\n- **156 hinges** (two per gate, plus reserves); each hinge weighs 42 tons.\n- At rest the gates are full of water. When a high tide is forecast, compressed air empties them, and they rotate up on their hinges above the water.\n- Raising takes about **30 minutes** and lowering about **15 minutes**. Inlets stay closed for **4–5 hours**.\n- Procedure is to raise the gates for tides over **110 cm**. \"As of 2023\", they are raised for tides forecast above **1.30 m**.\n- 1.6 km of mobile barriers in total. A large-ship lock at Malamocco and three small locks (two at Chioggia, one at Lido–Treporti) keep boats moving while the gates are up.",
+      "tags": [
+        "mose",
+        "gates",
+        "hinges"
+      ],
+      "utcCreatedDateTime": "2026-09-19T01:47:40.050Z"
+    },
+    {
+      "id": 20,
+      "sourceId": 2,
+      "parentId": 18,
+      "position": 1,
+      "type": "Topic",
+      "title": "Chronology and construction",
+      "summary": "From the 1966 flood through the prototype, approval, installation of the gates and first tests.",
+      "body": "- The **4 November 1966** flood (194 cm) led to the first Special Law for Venice. A 1975 tender chose no project; the \"Progettone\" followed in 1981.\n- Law no. 798/1984 set up the \"Comitatone\" and entrusted design and implementation to the Consorzio Venezia Nuova.\n- A prototype gate (the original \"MOSE\") was tested at the Lido inlet from **1988 to 1992**; the conceptual design was completed in 1992.\n- Final design in 2002. The Comitatone gave the go-ahead on **3 April 2003**, and work started simultaneously at all three inlets that year.\n- Lido north: four gates installed and first operated in **October 2013**; all 21 installed by the end of 2014. Malamocco and Chioggia housing structures positioned by **October 2014**; the Malamocco ship lock became operative in April 2014.\n- **30 January 2019**: \"the last of the 78 gates was put in place\".\n- **10 July 2020**: first full test; Prime Minister Giuseppe Conte activated the 78 barriers.\n- **3 October 2020**: first use against a real high tide, keeping parts of the city, including Piazza San Marco, from flooding. Activated 49 times within two years, against the 5 times a year the designers had estimated.\n- The control centre has been in the Venice Arsenal since 2011. About 4,000 people were employed on construction.",
+      "tags": [
+        "mose",
+        "chronology",
+        "construction"
+      ],
+      "utcCreatedDateTime": "2026-09-19T01:47:40.050Z"
+    },
+    {
+      "id": 21,
+      "sourceId": 2,
+      "parentId": 18,
+      "position": 2,
+      "type": "Topic",
+      "title": "Cost, delays and controversy",
+      "summary": "Cost overruns, missed deadlines, the 2014 corruption arrests and environmental and design criticism.",
+      "body": "- Cost estimated at **€5.496 billion**, €1.3 billion over the initial projections. In November 2019 the project was 94% complete.\n- In **2014**, 35 people were arrested on corruption charges, including Venice mayor Giorgio Orsoni, and there were allegations that €20 million in public funds went to foreign accounts. In December 2014 ANAC proposed special administration of the Consorzio, and three special CEOs were appointed.\n- Opposed by Italia Nostra and WWF. Critics cite the cost compared with Dutch and English barriers, the impact on the lagoon, and whether the system is \"gradual, experimental and reversible\". The European Commission opened an infraction procedure on 19 December 2005.\n- The IPCC's 2019 estimate of 60–110 cm of sea-level rise by 2100 exceeds MOSE's 60 cm design basis. Professor Luigi D'Alpaos called MOSE \"obsolete and philosophically wrong\".",
+      "tags": [
+        "mose",
+        "corruption",
+        "cost",
+        "criticism"
+      ],
+      "utcCreatedDateTime": "2026-09-19T01:47:40.050Z"
+    },
+    {
+      "id": 22,
+      "sourceId": 2,
+      "parentId": 18,
+      "position": 3,
+      "type": "Topic",
+      "title": "Baby MOSE at Chioggia",
+      "summary": "The smaller two-sluice barrier protecting central Chioggia, completed in 2012.",
+      "body": "- Two movable sluices (Vigo and Santa Maria) at the ends of Chioggia's Vena canal, each 18 m long, 3.3 m wide and 80 cm thick, raised in eight minutes by hydraulic motors.\n- Protects against tides of up to **130 cm**. Completed in summer 2012, in time for the October 2012 high water.",
+      "tags": [
+        "chioggia",
+        "baby mose"
+      ],
+      "utcCreatedDateTime": "2026-09-19T01:47:40.050Z"
+    }
+  ],
+  "pinSources": [
+    {
+      "pinId": 930,
+      "sourceId": 1,
+      "role": "source",
+      "summarizedWikiVersion": 1,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T01:25:59.340Z"
+    },
+    {
+      "pinId": 930,
+      "sourceId": 2,
+      "role": "reference",
+      "summarizedWikiVersion": 3,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T01:25:59.340Z"
+    },
+    {
+      "pinId": 930,
+      "sourceId": 3,
+      "role": "reference",
+      "summarizedWikiVersion": 1,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T01:25:59.340Z"
+    },
+    {
+      "pinId": 930,
+      "sourceId": 4,
+      "role": "reference",
+      "summarizedWikiVersion": 1,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-19T01:25:59.340Z"
+    }
+  ],
+  "lintFindings": [
+    {
+      "id": 10,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 930,
+      "sourceId": null,
+      "path": null,
+      "message": "Whether construction was completed: [P] the last gate completed \"two decades of construction\" vs [1] Completed: \"Last barrier laid down on January 30, 2019 ... Still to be completed as of November 2025\"; completion now \"to be finished in 2025\"",
+      "detail": {
+        "note": "The last gate went in on 30 January 2019, but Wikipedia says the system as a whole was still unfinished; the pin's description overstates it.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/MOSE",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "the last gate completed \"two decades of construction\"",
+            "label": "P"
+          },
+          {
+            "says": "Completed: \"Last barrier laid down on January 30, 2019 ... Still to be completed as of November 2025\"; completion now \"to be finished in 2025\"",
+            "label": "1"
+          }
+        ],
+        "subject": "Whether construction was completed",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-19T01:48:09.087Z"
+    },
+    {
+      "id": 11,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 930,
+      "sourceId": null,
+      "path": null,
+      "message": "When MOSE was first tested: [P] the system \"was tested for the first time in 2020\" vs [3] \"In October of 2013 the first test was conducted ... the gates were raised\" vs [1] four Lido gates \"installed and manoeuvred for the first time in October 2013\"; the \"first full test\" was 10 July 2020",
+      "detail": {
+        "note": "2020 was the first full test of all 78 gates; partial tests go back to October 2013.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/MOSE",
+          "3": "https://www.youtube.com/watch?v=FEHUyliTBE4",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "the system \"was tested for the first time in 2020\"",
+            "label": "P"
+          },
+          {
+            "says": "\"In October of 2013 the first test was conducted ... the gates were raised\"",
+            "label": "3"
+          },
+          {
+            "says": "four Lido gates \"installed and manoeuvred for the first time in October 2013\"; the \"first full test\" was 10 July 2020",
+            "label": "1"
+          }
+        ],
+        "subject": "When MOSE was first tested",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-19T01:48:09.087Z"
+    },
+    {
+      "id": 12,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 930,
+      "sourceId": null,
+      "path": null,
+      "message": "Weight of each barrier gate: [S] description: \"Each barrier weighs 40 tonnes\" (narration: 210 t at Lido, 400-450 t at Malamocco and Chioggia) vs [2] \"The dimensions of each barrier are 20m x 20m x 6m with a weight of 250t\" vs [3] \"this 210 ton steel box\"; \"almost 250 metric tons\" as lifted",
+      "detail": {
+        "note": "The video's own description disagrees with its narration; 40 tonnes is likely a typo. Gate weights vary by inlet.",
+        "links": {
+          "2": "https://www.heavyliftnews.com/fagiolis-big-operations-in-the-venice-lagoon/",
+          "3": "https://www.youtube.com/watch?v=FEHUyliTBE4",
+          "S": "https://www.youtube.com/watch?v=4xnsKL8B9JA"
+        },
+        "claims": [
+          {
+            "says": "description: \"Each barrier weighs 40 tonnes\" (narration: 210 t at Lido, 400-450 t at Malamocco and Chioggia)",
+            "label": "S"
+          },
+          {
+            "says": "\"The dimensions of each barrier are 20m x 20m x 6m with a weight of 250t\"",
+            "label": "2"
+          },
+          {
+            "says": "\"this 210 ton steel box\"; \"almost 250 metric tons\" as lifted",
+            "label": "3"
+          }
+        ],
+        "subject": "Weight of each barrier gate",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-19T01:48:09.087Z"
+    },
+    {
+      "id": 13,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 930,
+      "sourceId": null,
+      "path": null,
+      "message": "Cost of the project: [1] estimated at €5.496 billion, up €1.3 billion from initial projections vs [3] narration: \"a 7.3 billion Euro water barrier system\"; description: \"7-billion-euro surge barrier\"; the consortium: construction \"approximately 5 5.5 billion euros\" vs [S] \"will have cost in the area of 5 billion euros\"",
+      "detail": {
+        "note": "The €7 billion figures probably include the wider lagoon works and maintenance; construction alone is put at about €5–5.5 billion.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/MOSE",
+          "3": "https://www.youtube.com/watch?v=FEHUyliTBE4",
+          "S": "https://www.youtube.com/watch?v=4xnsKL8B9JA"
+        },
+        "claims": [
+          {
+            "says": "estimated at €5.496 billion, up €1.3 billion from initial projections",
+            "label": "1"
+          },
+          {
+            "says": "narration: \"a 7.3 billion Euro water barrier system\"; description: \"7-billion-euro surge barrier\"; the consortium: construction \"approximately 5 5.5 billion euros\"",
+            "label": "3"
+          },
+          {
+            "says": "\"will have cost in the area of 5 billion euros\"",
+            "label": "S"
+          }
+        ],
+        "subject": "Cost of the project",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-19T01:48:09.087Z"
+    },
+    {
+      "id": 14,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 930,
+      "sourceId": null,
+      "path": null,
+      "message": "When the last gates would be installed: [3] \"missing the last three rows of floodgates that they'll need to install by the end of 2015\"; completion set for \"June 2018\" vs [1] \"On 30 January 2019, the last of the 78 gates was put in place\"",
+      "detail": {
+        "note": "Superseded: the video's narration predates the work; Wikipedia's 30 January 2019 date is newer and matches the pin.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/MOSE",
+          "3": "https://www.youtube.com/watch?v=FEHUyliTBE4"
+        },
+        "claims": [
+          {
+            "says": "\"missing the last three rows of floodgates that they'll need to install by the end of 2015\"; completion set for \"June 2018\"",
+            "label": "3"
+          },
+          {
+            "says": "\"On 30 January 2019, the last of the 78 gates was put in place\"",
+            "label": "1"
+          }
+        ],
+        "subject": "When the last gates would be installed",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-19T01:48:09.087Z"
+    }
+  ],
+  "lintScans": [
+    {
+      "check": "contradiction",
+      "subjectId": 930,
+      "signature": "2d2cd51e099702cddf6f6b80e6288bdc85be637f996a06fee4ce447b45e236cf",
+      "utcScannedDateTime": "2026-09-19T01:48:09.090Z"
+    },
+    {
+      "check": "quality",
+      "subjectId": 2,
+      "signature": "2",
+      "utcScannedDateTime": "2026-09-19T01:47:26.035Z"
+    }
+  ]
+}

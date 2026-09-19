@@ -1,0 +1,136 @@
+import _ from 'lodash';
+import { tweetText, twitterMedium, youtubeMedium, launchBrowser } from '.';
+import { AUDIO_PATH, sourceKind, type SourceKind } from '@/lib/sourceKind';
+import { fetchTranscript } from './transcript';
+
+export type { SourceKind };
+
+// The text a link's wiki is written from, fetched fresh: a web page's body
+// text, a YouTube video's details and transcript, a tweet, or a podcast
+// episode's page (its show notes - audio itself is not transcribed).
+
+export type SourceText = { title?: string; text: string };
+
+const FETCH_TIMEOUT_MS = 15000;
+const NAVIGATION_WAIT_MS = 8000;
+// Below this, a fetched page is a script shell; load it in the browser instead.
+const MIN_STATIC_CHARS = 500;
+// A two-hour transcript runs to about 120k characters.
+export const MAX_SOURCE_CHARS = 240000;
+
+const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36';
+
+export async function fetchSourceText(url: string, kind: SourceKind = sourceKind(url)): Promise<SourceText> {
+  const found = kind === 'youtube' ? await youtubeText(url) : kind === 'tweet' ? await tweetSourceText(url) : await pageText(url);
+  const text = found.text.trim().slice(0, MAX_SOURCE_CHARS);
+  if (!text) {
+    throw new Error(`No text found at ${url}`);
+  }
+  return { title: found.title?.trim().slice(0, 1024) || undefined, text };
+}
+
+async function youtubeText(url: string): Promise<SourceText> {
+  const { res } = await youtubeMedium(url);
+  const snippet = _.get(res, 'items[0].snippet', {}) as { title?: string; channelTitle?: string; publishedAt?: string; description?: string };
+  // Captions are a bonus: plenty of videos have none.
+  const transcript = await fetchTranscript(url).catch(() => undefined);
+  const text = [
+    `Title: ${snippet.title || ''}`,
+    `Channel: ${snippet.channelTitle || ''}`,
+    `Published: ${snippet.publishedAt || ''}`,
+    '',
+    `Description:\n${snippet.description || ''}`,
+    ...(transcript ? ['', `Transcript:\n${transcript.text}`] : []),
+  ].join('\n');
+  return { title: snippet.title, text };
+}
+
+async function tweetSourceText(url: string): Promise<SourceText> {
+  const { res } = await twitterMedium(url);
+  return { title: res.author_name ? `Post by ${res.author_name}` : undefined, text: tweetText(res.html) };
+}
+
+// A plain fetch first, which serves most articles; the browser only for pages
+// that build themselves with script.
+async function pageText(url: string): Promise<SourceText> {
+  if (AUDIO_PATH.test(new URL(url).pathname)) {
+    throw new Error('Audio files are not transcribed; link the episode page instead');
+  }
+  let fetched: SourceText | undefined;
+  try {
+    const res = await fetch(url, {
+      headers: { 'user-agent': USER_AGENT, accept: 'text/html,application/xhtml+xml,text/plain;q=0.9,*/*;q=0.5' },
+      redirect: 'follow',
+      signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+    });
+    if (res.ok) {
+      const type = res.headers.get('content-type') || '';
+      if (!/html|text\/plain/i.test(type)) {
+        throw new Error(`Unsupported content type ${type || 'unknown'} at ${url}`);
+      }
+      const body = await res.text();
+      fetched = /html/i.test(type) ? { title: htmlTitle(body), text: htmlToText(body) } : { text: body };
+    }
+  } catch (err) {
+    if ((err as Error).message.startsWith('Unsupported content type')) throw err;
+    // A timeout or refused fetch may still load in the browser.
+  }
+  if (fetched && fetched.text.length >= MIN_STATIC_CHARS) {
+    return fetched;
+  }
+  const rendered = await renderedText(url);
+  return fetched && fetched.text.length > rendered.text.length ? fetched : rendered;
+}
+
+async function renderedText(url: string): Promise<SourceText> {
+  const browser = await launchBrowser();
+  try {
+    const [page] = await browser.pages();
+    page.setDefaultNavigationTimeout(NAVIGATION_WAIT_MS);
+    try {
+      await page.goto(url);
+    } catch (err) {
+      // A slow page is still worth reading for what did load.
+      if ((err as Error).name !== 'TimeoutError') throw err;
+    }
+    const text = ((await page.evaluate('document.body ? document.body.innerText : ""').catch(() => '')) as string) || '';
+    return { title: await page.title().catch(() => undefined), text };
+  } finally {
+    await browser.close();
+  }
+}
+
+const ENTITIES: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', mdash: '—', ndash: '–', hellip: '…', rsquo: '’', lsquo: '‘', rdquo: '”', ldquo: '“' };
+
+export function decodeEntities(text: string): string {
+  return text.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (whole, name: string) => {
+    if (name[0] === '#') {
+      const code = name[1].toLowerCase() === 'x' ? parseInt(name.slice(2), 16) : parseInt(name.slice(1), 10);
+      return Number.isFinite(code) && code > 0 && code < 0x110000 ? String.fromCodePoint(code) : whole;
+    }
+    return ENTITIES[name.toLowerCase()] ?? whole;
+  });
+}
+
+export function htmlTitle(html: string): string | undefined {
+  const og = html.match(/<meta[^>]+property=["']og:title["'][^>]*content=["']([^"']*)["']/i)?.[1];
+  const title = og || html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1];
+  return title ? decodeEntities(title).replace(/\s+/g, ' ').trim() || undefined : undefined;
+}
+
+// Readable text from an HTML page: scripts, styles and page chrome out, block
+// elements as line breaks.
+export function htmlToText(html: string): string {
+  return decodeEntities(
+    html
+      .replace(/<!--[\s\S]*?-->/g, ' ')
+      .replace(/<(script|style|noscript|svg|template|iframe|nav|footer|form)\b[\s\S]*?<\/\1>/gi, ' ')
+      .replace(/<(br|hr)\b[^>]*>/gi, '\n')
+      .replace(/<\/?(p|div|section|article|header|main|aside|h[1-6]|li|ul|ol|tr|table|blockquote|pre|figure|figcaption)\b[^>]*>/gi, '\n')
+      .replace(/<[^>]+>/g, ' '),
+  )
+    .replace(/[ \t\f\v\u00a0]+/g, ' ')
+    .replace(/ *\n */g, '\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+}

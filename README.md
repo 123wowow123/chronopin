@@ -65,6 +65,10 @@ why Apple accounts are looked up by `appleId` before email.
 | `npm run search:refresh` | Empty and refill the FAISS index |
 | `npm run companies:logos` | Look up missing company logos |
 | `npm run specialty-days:build` | Rebuild `src/server/data/specialtyDays.json` |
+| `npm run wiki:sync` | Write OKF wikis for pins' links, retry failed ones, rebuild stale summaries ([docs/okf](docs/okf/playbooks/catch-up-and-retry.md)) |
+| `npm run okf:export` | Write pins and their link wikis out as an OKF bundle in `./okf-bundle/` (`--pin N`, `--out DIR`) |
+| `npm run okf:lint` | Check and maintain the wikis: OKF conformance, stale links, orphans, quality, contradictions between a pin's links (`--fix`; [docs/okf](docs/okf/playbooks/lint-the-wikis.md)) |
+| `npm run wiki:export` / `wiki:apply` | With no Anthropic credit, write out the Claude jobs, do them in a Claude Code session, save the answers ([docs/okf](docs/okf/playbooks/without-api-credit.md)) |
 
 ## Layout
 
@@ -74,6 +78,7 @@ why Apple accounts are looked up by `appleId` before email.
 - `src/lib` — code shared by server and browser: SEO helpers, formatting, types
 - `src/proxy.ts` — canonical pin URLs (308) and real 404s before rendering
 - `scripts` — data, schema and maintenance scripts (run with `tsx`)
+- `docs/okf` — how link wikis and pin summaries work, written as an [Open Knowledge Format](https://github.com/GoogleCloudPlatform/open-knowledge-format) bundle ([start here](docs/okf/README.md))
 
 ## SEO
 
@@ -499,12 +504,9 @@ https://help.openai.com/en/articles/9624314-model-release-notes
 
 # OKF
 
-Update DB Schema and API so that each scraped/injection link such as web page or youtube or podcasts will create db reference for OKF wiki so that it can be reference and rebuild the pin main summary quickly. 
+Done, see [docs/okf](docs/okf/README.md): every scraped or added link (web page, YouTube, X post, podcast page) gets an Open Knowledge Format wiki in the DB (`Source` / `SourceWiki` / `PinSource`, 0026), fanning out to topic and part sub-wikis. Pin long-form summaries are rebuilt from those wikis when a link comes or goes, without re-scraping the other links. Failures are recorded per link and retried by `npm run wiki:sync`. `npm run okf:export` writes a standard OKF bundle. `npm run okf:lint` maintains the wikis: spec conformance, stale links re-read, orphans pruned, poor wikis rewritten, and contradictions between a pin's links flagged for review. With no Anthropic credit, the Claude steps run by hand in a Claude Code session via `wiki:export` / `wiki:apply` (pin 930 was done this way).
 
-- create OKF on how to do scraping/injest and should match api implementation. Should link reference to that code
-
-Need linting job to update/clean/maintain wiki
-Admin will have OKF source view which built the pin article
+Admin will have OKF source view which built the pin article (API ready: `GET /api/pins/:id/sources`, `GET /api/pins/:id/okf`)
 
 - (experimental) relationship web view - knowledge system - Obsidian - need youtube transcript - can overlay on map
 https://www.youtube.com/watch?v=sboNwYmH3AY
@@ -512,8 +514,6 @@ https://www.youtube.com/watch?v=sboNwYmH3AY
 
 Generate user wiki using OKF to capture preference and add more weight to pins they have already click. 
 Add admin toogle to enable and disable this weight adjustment
-
-- Failure during scraping and generating wiki or sub wiki should be noted and later jobs should be able to retry and upate pin
 
 # Other
 

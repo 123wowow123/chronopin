@@ -229,6 +229,12 @@ export function citeSummary(summary: string | null | undefined, candidates: Foun
     const candidate = candidates[Number(label) - 1];
     return candidate && keptKeys.has(urlKey(candidate.url)) ? candidate.url.trim() : undefined;
   };
+  return citeLabels(html, urlOf);
+}
+
+// Writes each run of [S] and [n] citations in summary HTML as the links
+// urlOf gives those labels, dropping labels it has no link for.
+export function citeLabels(html: string, urlOf: (label: string) => string | undefined): string {
   return html.replace(/(?:\s*\[\s*(?:S|\d+)(?:\s*,\s*(?:S|\d+))*\s*\])+/gi, (run) => {
     const urls = new Set((run.match(/S|\d+/gi) || []).map(urlOf).filter((url): url is string => !!url));
     return [...urls].map(citeTag).join('');

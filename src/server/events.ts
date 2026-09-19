@@ -1,5 +1,5 @@
 // Pin change events. Route handlers emit after a successful write; listeners
-// keep the search index in step, fill in summaries, and feed the live stream
+// keep the search index in step, keep summaries built from the pin's links, and feed the live stream
 // (GET /api/pins/stream) that replaced socket.io.
 //
 // The emitter and its listeners live on globalThis: Next.js can load this
@@ -58,19 +58,16 @@ if (!g.__chronopinPinListeners) {
   pinEvents.on('update', syncSearch('upsert'));
   pinEvents.on('remove', syncSearch('remove'));
 
-  // Long-form summary, generated after the request has been answered.
-  const summarize = (pin: Row) => {
-    Promise.all([import('./summarize'), import('./model/pin')])
-      .then(async ([{ generateSummary }, { default: Pin }]) => {
-        const summary = await generateSummary(pin);
-        if (summary) {
-          await Pin.updateLongFormSummary(pin.id, summary);
-        }
-      })
-      .catch((err) => log.warn('pin summarize failed:', (err as Error).message));
+  // Long-form summary, kept up with the pin's links after the request has
+  // been answered: each link gets a wiki, and the summary is rebuilt from
+  // those when a link comes or goes (services/sourceWiki.ts).
+  const refreshWiki = (pin: Row) => {
+    import('./services/sourceWiki')
+      .then(({ refreshPin }) => refreshPin(Number(pin.id)))
+      .catch((err) => log.warn(`wiki refresh failed for pin ${pin.id}:`, (err as Error).message));
   };
-  pinEvents.on('save', summarize);
-  pinEvents.on('update', summarize);
+  pinEvents.on('save', refreshWiki);
+  pinEvents.on('update', refreshWiki);
 
   // Duplicate suggestions for the pin's author or an admin to review.
   const suggestDuplicates = (pin: Row) => {

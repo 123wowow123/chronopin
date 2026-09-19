@@ -8,7 +8,11 @@ import Merchant from '../model/merchant';
 import Pin from '../model/pin';
 import PinRating from '../model/pinRating';
 import PinReference from '../model/pinReference';
+import { inBackground } from '../background';
+import Source from '../model/source';
 import { fetchJson } from '../util/fetchJson';
+import log from '../util/log';
+import { sourceKind } from '@/lib/sourceKind';
 import { IN_PAGE_SCRAPE, type InPageResult } from './inPage';
 import { findScreenDetails, isScreenCategory, youtubeStill, type ScreenDetails } from './screen';
 
@@ -77,7 +81,7 @@ export function tweetText(html: string | undefined) {
     .trim();
 }
 
-async function twitterMedium(pageUrl: string) {
+export async function twitterMedium(pageUrl: string) {
   const twitterId = pageUrl.match(/\/(\d+)$/)?.[1] || pageUrl.match(/^(\d+)$/)?.[1];
   if (!twitterId) {
     throw new Error(`No tweet id in ${pageUrl}`);
@@ -113,7 +117,7 @@ async function youtubePost(pageUrl: string) {
   return addReferences(pin, await findReferences(pageUrl, text, 'YouTube video'));
 }
 
-async function youtubeMedium(pageUrl: string) {
+export async function youtubeMedium(pageUrl: string) {
   const { id } = getVideoId(pageUrl);
   if (!id) {
     throw new Error(`No YouTube video id in ${pageUrl}`);
@@ -129,10 +133,10 @@ async function youtubeMedium(pageUrl: string) {
 
 /* Any other web page */
 
-async function webScrape(pageUrl: string): Promise<{ pin: Pin; trailer?: Medium }> {
-  // Loaded lazily: puppeteer is heavy and only this path needs it.
+export async function launchBrowser() {
+  // Loaded lazily: puppeteer is heavy and only page loads need it.
   const puppeteer = (await import('puppeteer')).default;
-  const browser = await puppeteer.launch({
+  return puppeteer.launch({
     executablePath: config.chromiumPath,
     // Chromium's sandbox needs privileges the container does not grant.
     args: ['--no-sandbox'],
@@ -140,6 +144,10 @@ async function webScrape(pageUrl: string): Promise<{ pin: Pin; trailer?: Medium 
     headless: true,
     defaultViewport: { width: 1280, height: 1200 },
   });
+}
+
+async function webScrape(pageUrl: string): Promise<{ pin: Pin; trailer?: Medium }> {
+  const browser = await launchBrowser();
 
   let pageText = '';
   let pin: Pin;
@@ -205,6 +213,12 @@ async function webScrape(pageUrl: string): Promise<{ pin: Pin; trailer?: Medium 
   } finally {
     await browser.close();
   }
+
+  // Kept for the page's wiki, written once a pin cites it, so that need not
+  // load the page again (services/sourceWiki.ts).
+  inBackground(
+    Source.rememberText(pageUrl, sourceKind(pageUrl), pageText).catch((err) => log.warn('keeping scraped text failed:', (err as Error).message)),
+  );
 
   // After the browser is gone, so the page is not held open for the calls.
   // A film, series or anime is looked up as soon as the extractor names it,

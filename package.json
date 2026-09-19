@@ -31,6 +31,11 @@
     "duplicates:suggest": "tsx scripts/duplicates/suggest.ts",
     "duplicates:verify": "tsx scripts/duplicates/verify.ts",
     "comments:sentiment": "tsx scripts/comments/sentiment.ts",
+    "wiki:sync": "tsx scripts/wiki/sync.ts",
+    "okf:export": "tsx scripts/okf/export.ts",
+    "okf:lint": "tsx scripts/okf/lint.ts",
+    "wiki:export": "tsx scripts/wiki/export.ts",
+    "wiki:apply": "tsx scripts/wiki/apply.ts",
     "specialty-days:build": "node scripts/specialtyDays/build.cjs",
     "favicon:build": "tsx scripts/favicon/build.ts"
   },
@@ -65,6 +70,7 @@
   "devDependencies": {
     "@playwright/test": "^1.63.0",
     "@tailwindcss/postcss": "^4.3.3",
+    "@types/js-yaml": "^4.0.9",
     "@types/leaflet": "^1.9.22",
     "@types/lodash": "^4.17.25",
     "@types/node": "^24",
@@ -75,6 +81,7 @@
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9.39.5",
     "eslint-config-next": "16.3.5",
+    "js-yaml": "^4.3.2",
     "schema-dts": "^2.0.0",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.23.13",
