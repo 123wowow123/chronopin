@@ -21,6 +21,9 @@ let rememberedOpen = false;
 // Likewise the big cloud, so picks made in it do not close it.
 let rememberedExpanded = false;
 let rememberedCounts: TagCount[] | null = null;
+// Grouped (tags wrapped up into their larger category) or every tag on its
+// own, shared by the panel and the big cloud.
+let rememberedWrapped = true;
 
 // How many tags the cloud shows before its filter box is needed.
 const SHOWN = 60;
@@ -91,6 +94,11 @@ export function TagCloud({
     rememberedExpanded = next;
     setExpandedState(next);
   };
+  const [wrapped, setWrappedState] = useState(() => rememberedWrapped);
+  const setWrapped = (next: boolean) => {
+    rememberedWrapped = next;
+    setWrappedState(next);
+  };
   const [searching, startSearch] = useTransition();
   const picked = useMemo(() => parseSearchQuery(query).tags, [query]);
   const [selected, setSelected] = useOptimistic(picked);
@@ -145,13 +153,14 @@ export function TagCloud({
   const needle = filter.trim().toLowerCase();
   // Tags wrap up into their larger category (an award body's years, the
   // market exchanges); finding a tag looks through the wrapped ones too.
-  const groups = useMemo(() => groupTags(counts ?? []), [counts]);
+  const groups = useMemo(() => (wrapped ? groupTags(counts ?? []) : []), [counts, wrapped]);
   const isSelected = (name: string) => selected.some((s) => s.toLowerCase() === name.toLowerCase());
   const tags = useMemo<TagGroup[]>(() => {
     if (needle) return cloudTags((counts ?? []).filter((t) => t.name.toLowerCase().includes(needle)), [], SHOWN);
+    if (!wrapped) return cloudTags(counts ?? [], selected, SHOWN);
     // Picked tags outside any shown group stay listed on their own.
     return cloudTags(groups, groupSelection(groups, selected), SHOWN);
-  }, [counts, groups, selected, needle]);
+  }, [counts, groups, selected, needle, wrapped]);
   const steps = useMemo(() => cloudSteps(tags), [tags]);
   const summary = tagSummary(selected);
 
@@ -213,8 +222,9 @@ export function TagCloud({
       {showing ? (
         // In the fold the cloud is the fold's, on phones; from xl up the header row opens it.
         <div id={optionsId} className={`flex min-h-0 flex-col ${inFold ? 'max-xl:flex-1 max-xl:pt-3' : ''} ${inFold && !open ? 'xl:hidden' : ''}`}>
-          <div className="px-3 pb-2">
-            <FindTag value={filter} onChange={setFilter} className="w-full" />
+          <div className="flex items-center gap-2 px-3 pb-2">
+            <FindTag value={filter} onChange={setFilter} className="min-w-0 flex-1" />
+            <GroupedToggle wrapped={wrapped} onChange={setWrapped} />
           </div>
           <div
             role="group"
@@ -301,7 +311,16 @@ export function TagCloud({
         </div>
       ) : null}
       {expanded ? (
-        <TagCloudView countsUrl={countsUrl} selected={selected} busy={searching} onToggle={toggle} onClear={clear} onClose={() => setExpanded(false)} />
+        <TagCloudView
+          countsUrl={countsUrl}
+          selected={selected}
+          busy={searching}
+          wrapped={wrapped}
+          onWrappedChange={setWrapped}
+          onToggle={toggle}
+          onClear={clear}
+          onClose={() => setExpanded(false)}
+        />
       ) : null}
     </div>
   );
@@ -320,6 +339,22 @@ function FindTag({ value, onChange, className = '' }: { value: string; onChange:
   );
 }
 
+// Grouped: tags wrapped up into their larger category (an award body's
+// years, the market exchanges), or every tag on its own.
+function GroupedToggle({ wrapped, onChange }: { wrapped: boolean; onChange: (wrapped: boolean) => void }) {
+  return (
+    <button
+      type="button"
+      aria-pressed={wrapped}
+      onClick={() => onChange(!wrapped)}
+      className="shrink-0 rounded-full px-2.5 py-1 text-xs font-medium text-muted ring-1 ring-line ring-inset hover:bg-raised hover:text-ink aria-pressed:bg-accent/15 aria-pressed:text-link"
+      title={wrapped ? 'Show every tag on its own' : 'Wrap tags up into larger categories'}
+    >
+      Grouped
+    </button>
+  );
+}
+
 // How many tags the big cloud reads.
 const VIEW_LIMIT = 200;
 
@@ -332,6 +367,8 @@ function TagCloudView({
   countsUrl,
   selected,
   busy,
+  wrapped,
+  onWrappedChange,
   onToggle,
   onClear,
   onClose,
@@ -339,6 +376,8 @@ function TagCloudView({
   countsUrl: string;
   selected: string[];
   busy: boolean;
+  wrapped: boolean;
+  onWrappedChange: (wrapped: boolean) => void;
   onToggle: (name: string) => void;
   onClear: () => void;
   onClose: () => void;
@@ -348,8 +387,6 @@ function TagCloudView({
   const [failed, setFailed] = useState(false);
   const [filter, setFilter] = useState('');
   const [hot, setHot] = useState<TagGroup | null>(null);
-  // Wrapped up into larger categories, or every tag on its own.
-  const [wrapped, setWrapped] = useState(true);
   const url = `${countsUrl}&limit=${VIEW_LIMIT}`;
   useScrollLock(true);
 
@@ -393,15 +430,7 @@ function TagCloudView({
           {counts ? <span className="shrink-0 text-sm text-subtle">{counts.length} tags</span> : null}
           <FindTag value={filter} onChange={setFilter} className="min-w-0 flex-1 max-sm:order-last max-sm:basis-full" />
           <span className="flex shrink-0 items-center gap-1 max-sm:ml-auto">
-            <button
-              type="button"
-              aria-pressed={wrapped}
-              onClick={() => setWrapped(!wrapped)}
-              className="rounded-full px-2.5 py-1 text-xs font-medium text-muted ring-1 ring-line ring-inset hover:bg-raised hover:text-ink aria-pressed:bg-accent/15 aria-pressed:text-link"
-              title={wrapped ? 'Show every tag on its own' : 'Wrap tags up into larger categories'}
-            >
-              Grouped
-            </button>
+            <GroupedToggle wrapped={wrapped} onChange={onWrappedChange} />
             {selected.length ? (
               <button type="button" onClick={onClear} className={iconButton} aria-label="Clear tag filter" title="Clear tag filter">
                 <Icon name="filter-off" className="size-5" />
