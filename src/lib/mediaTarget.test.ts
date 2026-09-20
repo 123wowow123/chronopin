@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { picturesNeeded } from './mediaTarget';
+import { picturesNeeded, videosNeeded } from './mediaTarget';
 
 describe('picturesNeeded', () => {
   it('tops an empty pin up to three pictures', () => {
@@ -16,5 +16,13 @@ describe('picturesNeeded', () => {
   it('asks for the difference when pictures are the only media', () => {
     expect(picturesNeeded(1, 1)).toBe(2);
     expect(picturesNeeded(2, 2)).toBe(1);
+  });
+});
+
+describe('videosNeeded', () => {
+  it('asks for one video until the pin has one', () => {
+    expect(videosNeeded(0)).toBe(1);
+    expect(videosNeeded(1)).toBe(0);
+    expect(videosNeeded(2)).toBe(0);
   });
 });

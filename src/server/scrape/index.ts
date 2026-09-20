@@ -23,11 +23,11 @@ import { sourceKind } from '@/lib/sourceKind';
 import { IN_PAGE_HEADINGS, IN_PAGE_META, IN_PAGE_SCRAPE, type InPageHeadings, type InPageResult, type PageMetadata } from './inPage';
 import { pageEntries, type PageEntry } from '@/lib/pageEntries';
 import { findPinImages, pageImage } from './findImages';
-import { findScreenDetails, isScreenCategory, malIdOf, SCREEN_CATEGORIES, youtubeStill, type ScreenDetails } from './screen';
+import { findProductVideo, findScreenDetails, isScreenCategory, malIdOf, SCREEN_CATEGORIES, youtubeStill, type ScreenDetails } from './screen';
 import { findScoreMarket, GAME_CATEGORIES, scoreSiteFor, withScoreMarket, type ScoreMarket } from './scoreMarkets';
 import { seriesPinFor } from './modelSeries';
 import { prequelPinFor } from './prequel';
-import { picturesNeeded } from '@/lib/mediaTarget';
+import { picturesNeeded, videosNeeded } from '@/lib/mediaTarget';
 
 const { scrapeType, mediumID } = config;
 const NAVIGATION_WAIT_MS = 8000;
@@ -339,6 +339,7 @@ async function webScrape(pageUrl: string): Promise<{
   // References first: the top-up takes pictures from the day's articles.
   addReferences(pin, found);
   await topUpImages(pin, fields, headings?.title);
+  await topUpVideo(pin, fields, headings?.title);
   // A film, series or anime's awards, by the work's own title and the pin's.
   const awards = isScreenCategory(pin.categories)
     ? await awardsFor([fields?.workTitle, pin.title]).catch((err) => {
@@ -387,6 +388,17 @@ async function topUpImages(pin: Pin, fields: ExtractedFields | null, pageTitle?:
     pin.addMedium(new Medium({ type: mediumID.image, originalWidth: img.width || undefined, originalHeight: img.height || undefined, originalUrl: img.originalUrl })),
   );
   references.forEach((r) => pin.addReference(new PinReference(r)));
+}
+
+// A pin with no video (its page embedded none, no trailer was found) gets an
+// official or press one from YouTube, after the pictures. Best effort: a pin
+// that finds none is saved without.
+async function topUpVideo(pin: Pin, fields: ExtractedFields | null, pageTitle?: string) {
+  if (videosNeeded(pin.media.filter((m) => Number(m.type) === mediumID.youtube).length) <= 0) return;
+  const title = pin.title || fields?.title || pageTitle?.trim();
+  if (!title) return;
+  const video = await findProductVideo({ title, company: pin.company ?? fields?.company });
+  if (video) pin.addMedium(new Medium(video));
 }
 
 const IMAGE_FETCH_MS = 5000;

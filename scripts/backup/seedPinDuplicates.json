@@ -89,5 +89,18 @@
     "verdict": null,
     "verdictReasoning": null,
     "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 1851,
+    "otherPinId": 1852,
+    "reason": "similar",
+    "score": 0.8156835,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-20T03:19:26.527Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
   }
 ]

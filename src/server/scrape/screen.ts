@@ -225,6 +225,47 @@ export function pickTrailer(candidates: VideoCandidate[], workTitle: string): Vi
   return best?.candidate;
 }
 
+const VIDEO_STOPWORDS = new Set(
+  'a an and at for from in is of on the to with begin begins shipping launch launches launched opens opened release released reveal keynote first new next now on sale gets approved by'.split(' '),
+);
+const distinctiveWords = (text: string) => normalizeTitle(text, { keepThe: true }).split(' ').filter((w) => w.length > 1 && !VIDEO_STOPWORDS.has(w));
+
+// The search result most likely to be an official or press video of a product
+// or announcement that is not a screen work: from a verified channel, most of
+// the pin's distinctive words in its title, and not a reaction, review or
+// "everything we know" video. A channel named after the company wins.
+export function pickProductVideo(candidates: VideoCandidate[], subject: { title: string; company?: string | null }): VideoCandidate | undefined {
+  const words = distinctiveWords(subject.title);
+  if (!words.length) return undefined;
+  const company = subject.company ? normalizeTitle(subject.company).split(' ')[0] : '';
+  let best: { candidate: VideoCandidate; score: number } | undefined;
+  candidates.forEach((candidate, rank) => {
+    if (!candidate.verified) return;
+    const title = ` ${normalizeTitle(candidate.title, { keepThe: true })} `;
+    if (NOT_A_TRAILER.test(title) || /\b(?:leak|leaked|rumou?rs?|vs)\b/.test(title)) return;
+    const overlap = words.filter((w) => title.includes(` ${w} `)).length / words.length;
+    if (overlap < 0.5) return;
+    const ownChannel = company && normalizeTitle(candidate.channel ?? '').includes(company) ? 1 : 0;
+    const score = overlap + ownChannel - rank * 0.05;
+    if (!best || score > best.score) best = { candidate, score };
+  });
+  return best?.candidate;
+}
+
+// A video for a pin that is not a screen work (a product, a launch, an
+// announcement): YouTube search, then oEmbed so a video that cannot be
+// embedded is skipped. Undefined when nothing passes.
+export async function findProductVideo(subject: { title: string; company?: string | null }, signal: AbortSignal = AbortSignal.timeout(15000)) {
+  try {
+    const query = [subject.company, subject.title].filter(Boolean).join(' ');
+    const picked = pickProductVideo(await searchYouTube(query, signal), subject);
+    return picked ? await youtubeEmbed(picked.videoId, signal, picked.title) : undefined;
+  } catch (err) {
+    log.warn('product video lookup failed:', (err as Error).message);
+    return undefined;
+  }
+}
+
 async function findTrailer(workTitle: string, query: ScreenQuery, signal: AbortSignal) {
   // The year tells a reboot's trailer from the original's.
   const withYear = query.year && query.category?.toLowerCase() !== 'anime' ? ` ${query.year}` : '';

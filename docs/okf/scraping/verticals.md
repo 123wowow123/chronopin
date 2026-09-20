@@ -19,6 +19,7 @@ Each recipe is a repeatable pattern. Update it when a run teaches something ([Le
 | Prediction markets | @OddsDesk | topic's own | Kalshi and Polymarket events | Market URL is `sourceUrl` so live odds show; reference `startDate` stays null |
 | AI models | @TechDesk | `AI Models` | Vendor release notes and forum announcements | Auto-threaded by model line; stocks for the maker and suppliers |
 | Product roundups | per vertical | product category | A roundup article | One pin per product with its **own** source URL, not the shared article |
+| Sneaker releases | @SneakerDesk | `Sports` (or the product's own) | X posts from sneaker accounts, Sole Retriever, Nice Kicks, House of Heat | One pin per colorway, all-day on its drop date, each with its own colorway page as `sourceUrl` (the tweet can only be one pin's source); Nike HQ Beaverton; conflicting dates go `estimated` with both quoted |
 | Infrastructure and architecture | the pool's curator | `Infrastructure & Transportation`, `Architecture & Real Estate`, `Energy`, `Space & Astronomy` | Wikipedia, trade press | Company is the owner or authority; a delayed opening carries `originalStartDate` and `delayReasoning` |
 
 # AAA games (and other server-rendered news)
@@ -32,6 +33,8 @@ Each recipe is a repeatable pattern. Update it when a run teaches something ([Le
 # Movies
 
 `WebSearch "<title> imdb"` for the real title URL as `sourceUrl`, Wikipedia (`<Film>_(2026_film)`) by plain curl for facts and the `og:image` poster, the primary studio's actual lot or office as location (Universal City, Burbank lots, Culver City, Santa Monica, Melrose Ave), category `Movies`, no `price`.
+
+Roundup of upcoming films (Geek Vibes Nation style): one pin per film with its Wikipedia page as `sourceUrl` and the roundup as a reference, then the franchise's earlier mainline films as pins in release order, each responding to the previous. Skip premiere dates, use the US wide release ([Learnings](learnings.md)).
 
 # Anime (MyAnimeList)
 
@@ -52,3 +55,8 @@ Dates: a scheduled event uses its official time (`scheduled`, timed); a "by when
 # Roundups
 
 When one article covers many things, prefer per item: a deep link (anchor or "read more"), else the maker's own product page or press release, and only then the shared article, flagged as generic.
+
+# Rocket launches (SpaceX)
+
+`npm run spacex:launches` reads Launch Library 2 (`ll.thespacedevs.com`, keyless, ~15 calls/hour) and posts one pin per launch with a day-or-better NET, at the launch pad, through the real API. The pin page draws a `flightPath` (table `PinFlightPath`, 0049) from the pad. Flight Club (`flightclub.io`) has the real trajectories but its `api.flightclub.io` needs a login, so the line is an **estimated ground track** (`src/lib/groundTrack.ts`: circular orbit at the target inclination, Earth turning under it, slow first ~9 minutes) and the pin links the launch's Flight Club page (`flightclub_url` from LL2). Heavens-Above tracks satellites, not launches. Inclination is a rule of thumb (`src/lib/launchOrbit.ts`): ISS 51.6, SSO 97.5, Starlink 53 (70 for group 15 from California), Starship 26. Missions it cannot place (GTO, lunar, unknown orbit) get a pin and no path. An already-pinned launch has only its path refreshed, so NET slips are not followed yet.
+
