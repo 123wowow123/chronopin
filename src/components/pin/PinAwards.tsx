@@ -1,5 +1,6 @@
 'use client';
 
+import { Icon } from '@/components/ui/Icon';
 import type { PinAwardJson } from '@/lib/awards';
 import { useT } from '@/lib/client/i18n';
 
@@ -27,8 +28,9 @@ function Line({ g, won }: { g: Group; won: boolean }) {
     <li className="flex gap-2">
       <span aria-hidden>{won ? '🏆' : '🎗️'}</span>
       <span>
-        <a href={g.sourceUrl} target="_blank" rel="noopener" className="font-medium text-ink hover:text-link hover:no-underline">
+        <a href={g.sourceUrl} target="_blank" rel="noopener" className="inline-flex items-center gap-1 font-medium text-ink hover:text-link hover:no-underline">
           {g.body} {g.year}
+          <Icon name="external" className="size-3 shrink-0" />
         </a>
         <span className="text-subtle">: {g.awards.join(', ')}</span>
         <span className="text-subtle"> {t.rich('awards.forWork', { work: () => <i>{g.work}</i> })}</span>

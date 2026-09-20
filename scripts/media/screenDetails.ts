@@ -1,11 +1,15 @@
 // Gives existing film, TV series and anime pins what a scrape now adds: a
-// promotional video from YouTube (when the pin has no video yet) and
-// review-site ratings (refreshed when it has some). See src/server/scrape/screen.ts.
+// promotional video from YouTube (when the pin has no video yet), review-site
+// ratings (refreshed when it has some) and, for an episodic work, how many
+// episodes it has (only when the pin has no count yet - a pin about one season
+// is counted by its own page, not by the catalogue's entry for the show).
+// See src/server/scrape/screen.ts.
 //
 //   npm run media:screen                  list what would be added
 //   npm run media:screen -- --apply       add it
 //   npm run media:screen -- --ids 769,389 --apply
 //   npm run media:screen -- --apply --skip-trailer 783   ratings only for 783
+//   npm run media:screen -- --apply --skip-trailer all   no trailer lookups at all
 //
 // Read the dry run first: a trailer is picked by title, and a title cannot
 // always tell a 1999 anime from a later live-action show of the same name.
@@ -20,13 +24,14 @@ import { inCategories } from '@/server/model/pinTag';
 import * as db from '@/server/db';
 import Medium from '@/server/model/medium';
 import Pin from '@/server/model/pin';
-import { findScreenDetails, SCREEN_CATEGORIES, youtubeStill } from '@/server/scrape/screen';
+import { findScreenDetails, malIdOf, SCREEN_CATEGORIES, youtubeStill } from '@/server/scrape/screen';
 
 const { values: flags } = parseArgs({
   options: {
     apply: { type: 'boolean', default: false },
     ids: { type: 'string' },
-    // Pins whose searched-for trailer turned out to be the wrong video.
+    // Pins whose searched-for trailer turned out to be the wrong video, or
+    // "all" for a run that is only after ratings and episode counts.
     'skip-trailer': { type: 'string' },
     // Between pins, to go easy on YouTube, AniList, Jikan and Wikidata.
     pause: { type: 'string', default: '1500' },
@@ -37,40 +42,58 @@ const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function run() {
   const ids = flags.ids?.split(',').map(Number).filter(Number.isInteger);
-  const skipTrailer = new Set(flags['skip-trailer']?.split(',').map(Number));
-  const rows = await db.query<{ id: number }>(
-    `SELECT "id" FROM "Pin"
+  const noTrailers = flags['skip-trailer']?.trim() === 'all';
+  const skipTrailer = new Set(noTrailers ? [] : flags['skip-trailer']?.split(',').map(Number));
+  const rows = await db.query<{ id: number; episodeCount: number | null }>(
+    `SELECT "id", "episodeCount" FROM "Pin"
      WHERE ${inCategories('$1')} AND "utcDeletedDateTime" IS NULL ${ids?.length ? 'AND "id" = ANY($2::int[])' : ''}
      ORDER BY "id"`,
     ids?.length ? [SCREEN_CATEGORIES, ids] : [SCREEN_CATEGORIES],
   );
   console.log(`${flags.apply ? 'Updating' : 'Dry run over'} ${rows.length} pins`);
-  const totals = { trailers: 0, ratings: 0, unmatched: 0 };
+  const totals = { trailers: 0, ratings: 0, episodes: 0, unmatched: 0 };
 
-  for (const [index, { id }] of rows.entries()) {
+  for (const [index, { id, episodeCount }] of rows.entries()) {
     if (index) await sleep(Number(flags.pause));
     const { pin } = await Pin.queryById(id);
     if (!pin) continue;
     const hasVideo = pin.media.some((m) => Number(m.type) === mediumID.youtube);
     const details = await findScreenDetails(
-      { pinTitle: pin.title, category: firstCategoryOf(pin.categories, SCREEN_CATEGORIES), year: new Date(pin.utcStartDateTime).getUTCFullYear(), skipTrailer: hasVideo || skipTrailer.has(id) },
+      {
+        pinTitle: pin.title,
+        category: firstCategoryOf(pin.categories, SCREEN_CATEGORIES),
+        year: new Date(pin.utcStartDateTime).getUTCFullYear(),
+        skipTrailer: hasVideo || noTrailers || skipTrailer.has(id),
+        // Most anime pins cite their MyAnimeList entry, which names the work
+        // outright where a "... Premieres" title matches nothing.
+        malId: malIdOf([pin.sourceUrl, ...(pin.references ?? []).map((r) => r.url)]),
+      },
       60000,
     );
 
     const ratingText = details.ratings.map((r) => `${r.source} ${r.score}/${r.scoreMax}`).join(', ') || 'no ratings';
-    const trailerText = hasVideo ? 'has a video' : details.trailer ? `"${details.trailer.videoTitle}" (${details.trailer.authorName})` : 'no trailer';
-    console.log(`${id} ${pin.title}\n    as "${details.workTitle ?? '-'}": ${ratingText}; ${trailerText}`);
+    const trailerText = hasVideo ? 'has a video' : noTrailers ? 'trailers skipped' : details.trailer ? `"${details.trailer.videoTitle}" (${details.trailer.authorName})` : 'no trailer';
+    // A pin that already has a count keeps it: its own page counted the run it
+    // is about, which a catalogue entry for the whole show would overwrite.
+    const newEpisodes = episodeCount ? undefined : details.episodes;
+    const episodeText = episodeCount ? `has ${episodeCount} episodes` : newEpisodes ? `${newEpisodes.episodeCount} episodes (${newEpisodes.episodeStatus})` : 'no episode count';
+    console.log(`${id} ${pin.title}\n    as "${details.workTitle ?? '-'}": ${ratingText}; ${trailerText}; ${episodeText}`);
     if (!details.workTitle && !details.trailer) totals.unmatched++;
 
     if (!flags.apply) {
       totals.ratings += details.ratings.length;
       totals.trailers += details.trailer ? 1 : 0;
+      totals.episodes += newEpisodes ? 1 : 0;
       continue;
     }
     try {
       if (details.ratings.length) {
         await Pin.setRatings(id, details.ratings);
         totals.ratings += details.ratings.length;
+      }
+      if (newEpisodes) {
+        await Pin.setEpisodes(id, newEpisodes);
+        totals.episodes++;
       }
       if (details.trailer) {
         const video = await new Medium(details.trailer, pin).saveWithThumb();
@@ -85,7 +108,9 @@ async function run() {
       console.log(`    failed: ${(err as Error).message}`);
     }
   }
-  console.log(`${flags.apply ? 'Added' : 'Would add'} ${totals.trailers} trailers and ${totals.ratings} ratings; ${totals.unmatched} pins matched nothing`);
+  console.log(
+    `${flags.apply ? 'Added' : 'Would add'} ${totals.trailers} trailers, ${totals.ratings} ratings and ${totals.episodes} episode counts; ${totals.unmatched} pins matched nothing`,
+  );
 }
 
 run()

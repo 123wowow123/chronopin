@@ -486,14 +486,6 @@ major local events by major city scrape and more targetted by your location
 
 # Scraping
 
-generate scraping stragety and save to OKF wiki to use and should be basis to build the Scraping API and can be used by session LLM to emulate behavior if API is out of credits
-
-
-scrape shows should say how many episodes too
-
-when searching by the company should show brief description and trending sentiment and can follow like person
-
-
 what are major specific products coming out of sp500 companies
 https://www.google.com/search?q=what+are+major+specific+products+coming+out+of+sp500+companies&sca_esv=8abcff31be3a7e9b&biw=1632&bih=963&sxsrf=APpeQnukcfTBmTVCu1KG9P6HSgVaFSxlzw%3A1789853840106&ei=kACvaoSLBuy6ur8P0MTpoAY&uact=5&oq=what+are+major+specific+products+coming+out+of+sp500+companies&gs_lp=Egxnd3Mtd2l6LXNlcnAiPndoYXQgYXJlIG1ham9yIHNwZWNpZmljIHByb2R1Y3RzIGNvbWluZyBvdXQgb2Ygc3A1MDAgY29tcGFuaWVzSIwYUPIKWNgVcAB4ApABAJgBoQGgAd0GqgEDNi4zuAEDyAEA-AEBmAIHoAK4BMICBBAAGEfCAgcQIxiwAhgnwgIIEAAYgAQYogTCAgUQABjvBcICCBAhGKABGMMEwgIKECEYChigARjDBJgDAOIDBRIBMSBAiAYBkAYIkgcDNi4xoAeML7IHAzUuMbgHtATCBwUyLjQuMcgHDYAIAQ&sclient=gws-wiz-serp
 

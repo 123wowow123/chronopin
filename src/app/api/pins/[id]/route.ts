@@ -2,6 +2,7 @@ import { after, type NextRequest } from 'next/server';
 import { getUser, isAdmin, requireUser } from '@/server/auth';
 import { emitPinEvent } from '@/server/events';
 import { HttpError, intParam, json, noContent, readJson, route } from '@/server/http';
+import CompanyFollow from '@/server/model/companyFollow';
 import Pin, { sameSourceUrlKey } from '@/server/model/pin';
 import PinDuplicate from '@/server/model/pinDuplicate';
 import PinReference from '@/server/model/pinReference';
@@ -18,6 +19,7 @@ import PinTag from '@/server/model/pinTag';
 import { requestLocale } from '@/lib/i18n/request';
 import { toJson, type PinJson } from '@/lib/types';
 import { localizePins } from '@/server/services/translations';
+import log from '@/server/util/log';
 
 type Ctx = RouteContext<'/api/pins/[id]'>;
 
@@ -79,6 +81,16 @@ const update = route(async (request: NextRequest, ctx: Ctx) => {
   const { pin: updated } = await pin.update();
   if (tags) await PinTag.setUserTags(updated.id, tags);
   emitPinEvent('update', updated, { userId: user.id });
+  // A pin that has just been given a company is news to that company's
+  // followers, as a new pin for it would be. Editing it again tells nobody
+  // twice: a follower gets one notification per pin and company.
+  if (updated.companyId && updated.companyId !== existing.companyId) {
+    after(() =>
+      CompanyFollow.notifyNewPin({ pinId: updated.id, companyId: updated.companyId, authorId: updated.userId ?? user.id }).catch((err) =>
+        log.warn('telling company followers failed:', (err as Error).message),
+      ),
+    );
+  }
   invalidatePin(updated.id);
   // A response moved between threads leaves one and joins the other.
   for (const parentId of new Set([existing.parentId, updated.parentId])) if (parentId) invalidatePin(parentId);

@@ -16,8 +16,23 @@ const DOWNLOAD_HEADERS = {
   'User-Agent': 'Mozilla/5.0 (compatible; Chronopin/1.0)',
 };
 
+// Wikimedia's policy asks a client to name itself and how to reach it, and
+// rate-limits (429) one that does not far harder.
+const WIKIMEDIA_HEADERS = {
+  'User-Agent': 'ChronoPin/1.0 (https://chronopin.com; tech@chronopin.com) image fetch',
+};
+const isWikimedia = (url: string) => /^https?:\/\/[\w.-]*wikimedia\.org\//i.test(url);
+// The longest a 429's Retry-After is waited out once before giving up.
+const MAX_RETRY_AFTER_S = 90;
+
 export async function downloadImage(imgUrl: string): Promise<Buffer> {
-  const res = await fetch(imgUrl, { headers: DOWNLOAD_HEADERS });
+  const headers = isWikimedia(imgUrl) ? WIKIMEDIA_HEADERS : DOWNLOAD_HEADERS;
+  let res = await fetch(imgUrl, { headers });
+  const wait = Number(res.headers.get('retry-after'));
+  if (res.status === 429 && wait > 0 && wait <= MAX_RETRY_AFTER_S) {
+    await new Promise((resolve) => setTimeout(resolve, wait * 1000));
+    res = await fetch(imgUrl, { headers });
+  }
   if (!res.ok) {
     throw new Error(`Image download failed with ${res.status}: ${imgUrl}`);
   }

@@ -37,6 +37,10 @@ Each recipe is a repeatable pattern. Update it when a run teaches something ([Le
 
 Parallel agents of about 10 titles each, each posting through the real `POST /api/pins` with a token signed from the session secret (`{id: <curator id>}`, HS256; Node 24). Concurrent agents reuse company rows by exact name. MAL pages are formulaic: the wiki is the page's own fields (info block, statistics, synopsis, background, related entries, themes), so summaries state only what the MAL page states.
 
+# Episodic works (TV series, anime)
+
+A pin about a series, a season or a cour carries how many episodes that run has (`episodeCount`) and what the number counts (`episodeStatus`: `complete`, `ongoing`, `planned`). Take it from the page when the page says it - the article knows which season the pin is about - and let the scrape fall back to AniList, MyAnimeList and Wikidata. A film pin never gets one. `npm run media:screen -- --apply --skip-trailer all` backfills existing pins and leaves any count already there alone.
+
 # YouTube channels
 
 `yt-dlp -J <video url>` per id gives the upload date, description, tags and categories. Some creators forbid third-party embeds (The B1M) even when `playableInEmbed` is true: flag it. `company` is whatever institution the story centres on (a ministry, a binational authority, an operator); its logo lookup often whiffs, so set `websiteUrl` and the favicon by hand. Give each parallel agent a **unique scratch file name**: two agents that defaulted to the same name in a shared prompt overwrote and even ran each other's inserts.

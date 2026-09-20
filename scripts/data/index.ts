@@ -9,7 +9,7 @@ import { parseArgs } from 'node:util';
 import Holidays from 'date-holidays';
 import _ from 'lodash';
 import * as db from '@/server/db';
-import { Comment, Company, DateTime, Follow, FullPins, MediumType, User, Users } from '@/server/model';
+import { Comment, Company, CompanyFollow, DateTime, Follow, FullPins, MediumType, User, Users } from '@/server/model';
 import AiFeedback from '@/server/model/aiFeedback';
 import PinDuplicate from '@/server/model/pinDuplicate';
 import CompanyRelation from '@/server/model/companyRelation';
@@ -28,6 +28,7 @@ const { values: flags } = parseArgs({
     userfile: { type: 'string', default: './scripts/backup/seedUsers.json' },
     commentfile: { type: 'string', default: './scripts/backup/seedComments.json' },
     followfile: { type: 'string', default: './scripts/backup/seedFollows.json' },
+    companyfollowfile: { type: 'string', default: './scripts/backup/seedCompanyFollows.json' },
     duplicatefile: { type: 'string', default: './scripts/backup/seedPinDuplicates.json' },
     aifeedbackfile: { type: 'string', default: './scripts/backup/seedAiFeedback.json' },
     sourcefile: { type: 'string', default: './scripts/backup/seedSources.json' },
@@ -79,6 +80,7 @@ async function saveDB() {
     companies: await Company.getAll(),
     comments: await Comment.getAll(),
     follows: (await Follow.getAll()).follows,
+    companyFollows: await CompanyFollow.getAll(),
   });
   const { dropped } = data;
   if (dropped.users) {
@@ -99,6 +101,10 @@ async function saveDB() {
 
   console.log('Backup Follows');
   writeJson(flags.followfile, data.follows);
+
+  // Who follows which company (0048).
+  console.log('Backup Company Follows');
+  writeJson(flags.companyfollowfile, data.companyFollows);
 
   // Duplicate pairs and decisions (not page views, which only order stacks),
   // for the pins kept above.
@@ -245,6 +251,14 @@ async function seedDB() {
     await Follow.restore(readJson(flags.followfile));
   } catch (error) {
     log.error('Follows Save Error', JSON.stringify(error));
+  }
+
+  if (existsSync(flags.companyfollowfile)) {
+    try {
+      await CompanyFollow.restore(readJson(flags.companyfollowfile));
+    } catch (error) {
+      log.error('Company Follows Save Error', JSON.stringify(error));
+    }
   }
 
   if (existsSync(flags.duplicatefile)) {

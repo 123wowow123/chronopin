@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { Icon } from '@/components/ui/Icon';
 import { api, ApiError } from '@/lib/client/api';
 
 type WikiPage = { id: number; type: string; title: string; summary: string; body: string; tags: string[]; children: WikiPage[] };
@@ -69,8 +70,9 @@ export function PinSourceWikis({ pinId }: { pinId: number }) {
             {view.sources.length === 0 && <p className="text-sm text-subtle">No links have been turned into wikis.</p>}
             {view.sources.map((source) => (
               <div key={source.id} className="rounded-lg border border-line p-3">
-                <a href={source.url} target="_blank" rel="noopener noreferrer" className="break-all text-sm text-link">
-                  {source.title || source.url}
+                <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-sm text-link">
+                  <span className="break-all">{source.title || source.url}</span>
+                  <Icon name="external" className="ml-1 inline size-3 align-[-0.1em]" />
                 </a>
                 <p className="text-xs text-subtle">
                   {source.kind} · {source.role} · {source.status}

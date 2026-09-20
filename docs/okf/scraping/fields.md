@@ -26,6 +26,8 @@ generated: { by: claude-code/claude-opus-5, at: 2026-09-19T20:00:00Z }
 | `company`, `companyWikiUrl` | string, URL | The one organisation; the disambiguated English Wikipedia article ("Apple_Inc."), null when unsure |
 | `categories` | string[] from the fixed list | Closest first; a second only when squarely both |
 | `workTitle` | string or null | Only for a film, series, anime or game: its official English title, no "Premieres" wording |
+| `episodeCount`, `episodeStatus` | number, `complete` `ongoing` `planned` | Only for a work released in episodes, and only the run the pin is about: that season's count, not the show's. Status says whether the run has finished, is what is out so far, or is an announced total |
+| `episodeCount`, `episodeStatus` | number, `complete` `planned` `ongoing` | Only for a work released as episodes (TV series, anime, web or podcast series) and only when the page says the number. The run the pin is about: one season takes that season's count, the whole show takes the show's. `complete` finished airing, `planned` the announced total of a run still to come or airing, `ongoing` episodes out so far with no announced total. Both null for a film, one-off special or non-episodic pin |
 | `amazonUrl`, `bestBuyUrl` | URL or null | Only one specific, currently sellable product, from real listings, never constructed |
 | `stocks` | `{symbol, name, relation, note}[]` | US-listed only: the company, then at most 3 related and 3 suppliers the page names |
 | `tags` | string[] (max 8) | Awards first (body + year), then franchises, people, programmes, places; not the category or company |
@@ -35,6 +37,7 @@ generated: { by: claude-code/claude-opus-5, at: 2026-09-19T20:00:00Z }
 
 - **Cost.** `"roughly CA$6.4 billion"` is `6400000000` / `CAD`. Do not confuse cost with trade volume, revenue, market size or annual budgets. A programme page takes the programme total; a pin about one terminal takes the terminal's cost.
 - **Delays.** `originalStartDate` is the date first promised, not the one before the latest slip. Where the page says the event is late but gives no new date, estimate `startDateTime` from the cause and the slip of comparable projects and start `delayReasoning` with `Estimated:`. This is the only place to go beyond the page.
+- **Episodes.** A pin about one season or cour counts that season; a pin about the whole show counts the show. `complete` only once the run has finished airing - a total announced for a run still going is `planned`, and a count with more coming and no announced total is `ongoing`. Null for a film or a one-off special.
 - **Studio pins.** Company is the studio (MAPPA, Ufotable, Naughty Dog, Paramount Pictures), not the publisher or streamer; `placeLabel` is its HQ, as a street address when known, else its ward or city.
 - **Purchase links.** Only from real listing URLs known with confidence. Both null unless the pin is one sellable product.
 - **Stocks.** Never an ETF, index or private company (OpenAI has no ticker; Microsoft, its investor, does). `note` is the clause after the company's name, naming the story's company rather than "its", lowercase, no final period.

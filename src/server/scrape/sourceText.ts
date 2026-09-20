@@ -85,25 +85,52 @@ async function pageText(url: string): Promise<SourceText> {
     if ((err as Error).message.startsWith('Unsupported content type')) throw err;
     // A timeout or refused fetch may still load in the browser.
   }
-  if (fetched && fetched.text.length >= MIN_STATIC_CHARS) {
+  if (fetched && fetched.text.length >= MIN_STATIC_CHARS && !looksBlocked(fetched.text)) {
     return fetched;
   }
   const rendered = await renderedText(url);
-  return fetched && fetched.text.length > rendered.text.length ? fetched : rendered;
+  const best = fetched && !looksBlocked(fetched.text) && fetched.text.length > rendered.text.length ? fetched : rendered;
+  if (looksBlocked(best.text)) {
+    throw new Error(`Blocked: the page is a bot check or error page, not the article (${best.text.replace(/\s+/g, ' ').slice(0, 80)})`);
+  }
+  return best;
 }
+
+// Text a bot check, block or error page serves instead of the article: a
+// Cloudflare or Akamai challenge, an access-denied or 403/404 page. A page this
+// short that says so is not the article, so it is read again in the browser,
+// and failed if it still is (a wiki written from it would be worthless).
+const BLOCKED_TEXT =
+  /just a moment|attention required|checking your browser|verify(ing)? (that )?you are (a )?human|are you a robot|access denied|you have been blocked|sorry, you have been blocked|request blocked|enable javascript and cookies|security check|403 forbidden|401 unauthorized|too many requests|error 1015|page not found|404 not found|page can.?t be found|no article with this exact name/i;
+
+export function looksBlocked(text: string): boolean {
+  const body = text.trim();
+  return body.length < 1500 && BLOCKED_TEXT.test(body);
+}
+
+// The browser's own text, once a JavaScript challenge has had time to clear.
+const CHALLENGE_WAIT_MS = 12000;
 
 async function renderedText(url: string): Promise<SourceText> {
   const browser = await launchBrowser();
   try {
     const [page] = await browser.pages();
     page.setDefaultNavigationTimeout(NAVIGATION_WAIT_MS);
+    // Cloudflare holds "HeadlessChrome"; the same browser named plainly is let through.
+    await page.setUserAgent((await browser.userAgent()).replace('HeadlessChrome', 'Chrome'));
     try {
       await page.goto(url);
     } catch (err) {
       // A slow page is still worth reading for what did load.
       if ((err as Error).name !== 'TimeoutError') throw err;
     }
-    const text = ((await page.evaluate('document.body ? document.body.innerText : ""').catch(() => '')) as string) || '';
+    const read = async () => ((await page.evaluate('document.body ? document.body.innerText : ""').catch(() => '')) as string) || '';
+    let text = await read();
+    // A JavaScript challenge resolves by itself after a few seconds.
+    for (const started = Date.now(); looksBlocked(text) && Date.now() - started < CHALLENGE_WAIT_MS; ) {
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      text = await read();
+    }
     return { title: await page.title().catch(() => undefined), text };
   } finally {
     await browser.close();

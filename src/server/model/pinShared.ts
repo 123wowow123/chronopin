@@ -2,6 +2,7 @@ import _ from 'lodash';
 import * as db from '../db';
 import type { Row } from '../db';
 import Company from './company';
+import { EPISODE_STATUSES } from '@/lib/types';
 
 // An all-day pin covers whole UTC calendar days: utcStartDateTime is 00:00Z of
 // its first day and utcEndDateTime, when set, is 00:00Z of the day after its
@@ -40,6 +41,22 @@ function floorToUtcDay(value: unknown) {
   }
   // setUTCFullYear rather than Date.UTC, which reads years 0-99 as 1900-1999.
   return new Date(new Date(0).setUTCFullYear(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+}
+
+// The episode fields a body may set: a count of whole episodes above zero,
+// and what that count is (see 0047's schema comment). Anything else is no
+// count at all, so a stray value from a scrape or an API client is dropped
+// rather than refused by the CHECK constraint. Mutates and returns pin.
+export function normalizeEpisodes<T extends Row>(pin: T): T {
+  if (!pin) {
+    return pin;
+  }
+  const count = Number(pin.episodeCount);
+  const ok = Number.isInteger(count) && count > 0;
+  (pin as Row).episodeCount = ok ? count : null;
+  const status = typeof pin.episodeStatus === 'string' ? pin.episodeStatus.trim().toLowerCase() : null;
+  (pin as Row).episodeStatus = ok && status && (EPISODE_STATUSES as readonly string[]).includes(status) ? status : null;
+  return pin;
 }
 
 // The view returns one row per pin x medium x merchant, with the joined
@@ -84,6 +101,7 @@ function nullIfUndefined(value: unknown) {
 // at the end instead of after every row (FullPins.save).
 export async function createPin<T extends Row>(pin: T, userId: number | null, { advanceSequence = true } = {}) {
   normalizeAllDayDates(pin);
+  normalizeEpisodes(pin);
   await Company.applyToPin(pin);
 
   const hasId = pin.id != null;
@@ -92,7 +110,8 @@ export async function createPin<T extends Row>(pin: T, userId: number | null, { 
     'dateConfidence', 'dateConfidenceReasoning', 'companyId',
     'address', 'priceLowerBound', 'priceUpperBound', 'price',
     'priceCurrency', 'tip', 'utcStartDateTime', 'utcEndDateTime', 'allDay',
-    'sourceStartDateTime', 'sourceEndDateTime', 'originalStartDate', 'delayReasoning', 'userId', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime',
+    'sourceStartDateTime', 'sourceEndDateTime', 'originalStartDate', 'delayReasoning',
+    'episodeCount', 'episodeStatus', 'userId', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime',
   ];
   const values = [
     pin.parentId, pin.title, pin.description, pin.sourceUrl, pin.longFormSummary,
@@ -100,7 +119,8 @@ export async function createPin<T extends Row>(pin: T, userId: number | null, { 
     pin.address, pin.priceLowerBound, pin.priceUpperBound, pin.price,
     pin.priceCurrency, pin.tip, pin.utcStartDateTime, pin.utcEndDateTime,
     pin.allDay == null ? false : pin.allDay,
-    pin.sourceStartDateTime || null, pin.sourceEndDateTime || null, pin.originalStartDate || null, pin.delayReasoning || null, userId, pin.utcCreatedDateTime || new Date(), pin.utcUpdatedDateTime, pin.utcDeletedDateTime,
+    pin.sourceStartDateTime || null, pin.sourceEndDateTime || null, pin.originalStartDate || null, pin.delayReasoning || null,
+    pin.episodeCount, pin.episodeStatus, userId, pin.utcCreatedDateTime || new Date(), pin.utcUpdatedDateTime, pin.utcDeletedDateTime,
   ].map(nullIfUndefined);
 
   if (hasId) {

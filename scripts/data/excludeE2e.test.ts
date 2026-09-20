@@ -27,6 +27,11 @@ const data = () => ({
     { id: 2, followerId: 64, followeeId: 1 },
     { id: 3, followerId: 1, followeeId: 71 },
   ],
+  companyFollows: [
+    { id: 1, userId: 1, companyId: 7 },
+    { id: 2, userId: 64, companyId: 7 },
+    { id: 3, userId: 1, companyId: 141 },
+  ],
 });
 
 describe('excludeE2e', () => {
@@ -36,6 +41,8 @@ describe('excludeE2e', () => {
     expect(out.pins.map((p) => p.id)).toEqual([277]);
     expect(out.comments.map((c) => c.id)).toEqual([1]);
     expect(out.follows.map((f) => f.id)).toEqual([1]);
+    // Follow 3 is a real user's, but of a company only e2e pins named.
+    expect(out.companyFollows.map((f) => f.id)).toEqual([1]);
     expect(out.dropped).toEqual({ users: 2, pins: 3, companies: 1 });
   });
 

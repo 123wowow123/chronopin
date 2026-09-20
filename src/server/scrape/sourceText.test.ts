@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { decodeEntities, htmlTitle, htmlToText } from './sourceText';
+import { decodeEntities, htmlTitle, htmlToText, looksBlocked } from './sourceText';
 
 describe('htmlToText', () => {
   it('keeps the words, drops scripts and page chrome, breaks at blocks', () => {
@@ -21,5 +21,18 @@ describe('htmlTitle', () => {
 describe('decodeEntities', () => {
   it('decodes numeric and named entities and leaves unknown ones', () => {
     expect(decodeEntities('&#x2014;&#8217;&rsquo;&bogus;')).toBe('—’’&bogus;');
+  });
+});
+
+describe('looksBlocked', () => {
+  it('spots a bot check or error page instead of an article', () => {
+    expect(looksBlocked('Just a moment...\nEnable JavaScript and cookies to continue')).toBe(true);
+    expect(looksBlocked('Access Denied\nYou don\'t have permission to access this server')).toBe(true);
+    expect(looksBlocked('403 Forbidden')).toBe(true);
+    expect(looksBlocked('Oops! That page can\'t be found.')).toBe(true);
+  });
+  it('leaves a real article alone, even one that mentions a 404', () => {
+    expect(looksBlocked('The tunnel opens in 2027. '.repeat(100) + 'A 404 Not Found was shown once.')).toBe(false);
+    expect(looksBlocked('The bridge opens on 28 September.')).toBe(false);
   });
 });

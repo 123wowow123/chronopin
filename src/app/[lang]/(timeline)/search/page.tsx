@@ -82,6 +82,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
         serverTimeZone={timeZone}
         serverNow={now.toISOString()}
         searchedUser={page.user}
+        searchedCompany={page.company}
         specialtyDays={days}
         searchedDays={searchedDays}
         error={page.error}

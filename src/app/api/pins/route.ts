@@ -2,6 +2,7 @@ import { after, type NextRequest } from 'next/server';
 import { getUser, requireUser } from '@/server/auth';
 import { emitPinEvent } from '@/server/events';
 import { HttpError, json, paginationHeaders, paginationLink, readJson, route } from '@/server/http';
+import CompanyFollow from '@/server/model/companyFollow';
 import Pin from '@/server/model/pin';
 import PinRating from '@/server/model/pinRating';
 import PinReference from '@/server/model/pinReference';
@@ -74,6 +75,13 @@ export const POST = route(async (request: NextRequest) => {
   const { pin: saved } = await pin.save();
   if (tags?.length) await PinTag.setUserTags(saved.id, tags);
   emitPinEvent('save', saved, { userId: user.id });
+  // Everyone following the pin's company hears about it, as a follower of its
+  // author would. Told after the response, like the stock lookup below.
+  after(() =>
+    CompanyFollow.notifyNewPin({ pinId: saved.id, companyId: saved.companyId, authorId: user.id }).catch((err) =>
+      log.warn('telling company followers failed:', (err as Error).message),
+    ),
+  );
   invalidatePin(saved.id);
   // A response joins its parent's thread.
   if (saved.parentId) invalidatePin(saved.parentId);

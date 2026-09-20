@@ -123,8 +123,9 @@ function CardMarket({ market, source = market?.source }: { market?: MarketOdds; 
       <div className="mb-1 flex items-center gap-1.5 text-[11px] text-subtle">
         <Icon name="trending-up" className="size-3 shrink-0 text-link" />
         {market ? (
-          <a href={market.url} target="_blank" rel="noopener nofollow" title={market.title} className="min-w-0 truncate text-muted hover:text-link hover:no-underline">
-            {market.title}
+          <a href={market.url} target="_blank" rel="noopener nofollow" title={market.title} className="inline-flex min-w-0 items-center gap-1 text-muted hover:text-link hover:no-underline">
+            <span className="truncate">{market.title}</span>
+            <Icon name="external" className="size-3 shrink-0" />
           </a>
         ) : (
           <span className="w-2/5 animate-pulse truncate rounded bg-raised motion-reduce:animate-none">{' '}</span>
@@ -165,8 +166,9 @@ function Market({ market }: { market: MarketOdds }) {
     <div className="surface px-4 py-3 text-sm">
       <div className="mb-2 flex items-start gap-2">
         <Icon name="trending-up" className="mt-0.5 size-4 shrink-0 text-link" />
-        <a href={market.url} target="_blank" rel="noopener nofollow" className="min-w-0 font-medium text-ink hover:text-link hover:no-underline">
+        <a href={market.url} target="_blank" rel="noopener nofollow" className="inline-flex min-w-0 items-center gap-1 font-medium text-ink hover:text-link hover:no-underline">
           {market.title}
+          <Icon name="external" className="size-3 shrink-0" />
         </a>
         <span className="ml-auto shrink-0 text-xs font-semibold tracking-wider text-subtle uppercase">{market.source}</span>
       </div>

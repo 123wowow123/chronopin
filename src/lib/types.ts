@@ -1,6 +1,7 @@
 // The JSON shapes the API and server components hand to the UI. Dates are
 // ISO strings once serialised.
 
+import type { CommentMood } from './commentMood';
 import type { PinAwardJson } from './awards';
 import type { PinTagJson } from './tags';
 
@@ -61,6 +62,12 @@ export type PinRatingJson = {
   utcCreatedDateTime?: string;
 };
 
+// What a pin's episodeCount counts (scripts/db/schema/0047_pin_episodes.sql):
+// the finished run, the episodes out so far, or the announced total of a run
+// still airing.
+export const EPISODE_STATUSES = ['complete', 'ongoing', 'planned'] as const;
+export type EpisodeStatus = (typeof EPISODE_STATUSES)[number];
+
 export type PinUserJson = {
   id: number;
   userName?: string;
@@ -105,6 +112,12 @@ export type PinJson = {
   // that and the new date were found (src/lib/delay.ts).
   originalStartDate?: string;
   delayReasoning?: string;
+  // How many episodes a work released in episodes has, and what that number
+  // counts: the finished run ("complete"), the episodes out so far with more
+  // coming ("ongoing"), or the total announced for a run still airing
+  // ("planned"). Both absent for a film or a one-off event.
+  episodeCount?: number;
+  episodeStatus?: EpisodeStatus;
   allDay?: boolean;
   utcCreatedDateTime?: string;
   utcUpdatedDateTime?: string;
@@ -191,10 +204,26 @@ export type TimelinePage = {
   queryCount?: number;
 };
 
+// The company a company: search names, for the panel it opens with (0048):
+// what the company is in a line, how its pins' comments read, and how many
+// people follow it. `mood` is null until a comment on one of its pins has
+// been scored; `commentCount` is how many comments it was read from.
+export type SearchedCompany = {
+  id: number;
+  name: string;
+  description: string | null;
+  logoUrl: string | null;
+  wikiUrl: string | null;
+  followerCount: number;
+  commentCount: number;
+  mood: CommentMood | null;
+};
+
 export type SearchPage = {
   pins: PinJson[];
   queryCount?: number;
   user?: { id: number; userName: string };
+  company?: SearchedCompany;
   // Query strings for /api/pins/search: the pages before and after this one.
   links?: { previous?: string; next?: string };
 };

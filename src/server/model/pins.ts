@@ -404,6 +404,8 @@ const PAGE_COLUMNS = `
   "Pin"."sourceEndDateTime",
   "Pin"."originalStartDate",
   "Pin"."delayReasoning",
+  "Pin"."episodeCount",
+  "Pin"."episodeStatus",
   "Pin"."allDay",
   "Pin"."userId",
   "Pin"."utcCreatedDateTime",

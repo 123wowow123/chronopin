@@ -32,6 +32,7 @@ import {
 } from '@/lib/pinForm';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { pinPath } from '@/lib/seo';
+import { EPISODE_STATUSES } from '@/lib/types';
 import type { CardPin, MediumJson, PinJson } from '@/lib/types';
 import { DuplicatePrompt, type DuplicateMatch } from './DuplicatePrompt';
 import { PageEntriesPanel } from './PageEntriesPanel';
@@ -275,8 +276,9 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
               onPaste={(e) => mode !== 'edit' && scrape(e.clipboardData.getData('text'))}
             />
             {values.sourceUrl ? (
-              <a href={values.sourceUrl} target="_blank" rel="noopener" className="self-center text-sm whitespace-nowrap">
+              <a href={values.sourceUrl} target="_blank" rel="noopener" className="inline-flex items-center gap-1 self-center text-sm whitespace-nowrap">
                 {t('form.openLink')}
+                <Icon name="external" className="size-3" />
               </a>
             ) : null}
           </div>
@@ -534,6 +536,29 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
                 <input aria-label={t('form.delayLength')} placeholder={t('form.delayPlaceholder')} className={inputClass} value={values.delayReasoning} onChange={(e) => set('delayReasoning', e.target.value)} />
               </div>
             ) : null}
+            {/* How many episodes an episodic work has, and what that number
+                counts (scripts/db/schema/0047_pin_episodes.sql). */}
+            <div className="grid gap-2 sm:grid-cols-[13rem_1fr]">
+              <input
+                aria-label={t('form.episodeCount')}
+                title={t('form.episodeCountTitle')}
+                type="number"
+                min={1}
+                step={1}
+                placeholder={t('form.episodeCount')}
+                className={inputClass}
+                value={values.episodeCount}
+                onChange={(e) => set('episodeCount', e.target.value)}
+              />
+              <select aria-label={t('form.episodeStatus')} className={inputClass} value={values.episodeStatus} onChange={(e) => set('episodeStatus', e.target.value)} disabled={!values.episodeCount}>
+                <option value="">{t('form.episodeStatus')}</option>
+                {EPISODE_STATUSES.map((status) => (
+                  <option key={status} value={status}>
+                    {t.dynamic(`form.episodeStatus${status[0].toUpperCase()}${status.slice(1)}`, status)}
+                  </option>
+                ))}
+              </select>
+            </div>
             <div>
               <label htmlFor="summary" className={labelClass}>
                 {t('form.keyPoints')}

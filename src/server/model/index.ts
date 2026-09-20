@@ -15,4 +15,5 @@ export { default as DateTime, MediumType } from './dateTime';
 export { default as Follow } from './follow';
 export { default as Notification } from './notification';
 export { default as Company } from './company';
+export { default as CompanyFollow } from './companyFollow';
 export { default as User, Users, facebookMapper, googleMapper, pickUserProps, patchableUserProps } from './user';

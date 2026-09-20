@@ -1,11 +1,28 @@
 import { expect, test } from '@playwright/test';
 
+const stamp = Date.now().toString(36);
+const handle = `e2elang${stamp}`;
+const email = `e2e-lang-${stamp}@example.com`;
+const password = 'correct horse battery';
+
 // Pages in another language: the picker moves the page into it and keeps it
 // there, links stay in it, and pins loaded as the timeline scrolls ask for it.
+// The picker is the profile's, beside the theme - the only place it lives - so
+// this needs an account of its own (the run's teardown clears it).
 test('the language picker opens the page in Spanish, and links stay in it', async ({ page, context }) => {
-  await page.goto('/map');
-  await page.getByRole('combobox', { name: 'Language' }).first().selectOption('es');
-  await expect(page).toHaveURL(/\/es\/map$/);
+  await page.goto('/signup');
+  await page.getByLabel('User Handle').fill(handle);
+  await page.getByLabel('First Name').fill('End');
+  await page.getByLabel('Last Name').fill('ToEnd');
+  await page.getByLabel('Email').fill(email);
+  await page.getByLabel('Password', { exact: true }).fill(password);
+  await page.getByLabel('Confirm Password').fill(password);
+  await page.getByRole('button', { name: 'Sign up' }).click();
+  await expect(page.getByRole('button', { name: `@${handle}` })).toBeVisible();
+
+  await page.goto('/profile');
+  await page.getByRole('combobox', { name: 'Language' }).selectOption('es');
+  await expect(page).toHaveURL(/\/es\/profile$/);
   await expect(page.locator('html')).toHaveAttribute('lang', 'es');
   expect((await context.cookies()).find((c) => c.name === 'locale')?.value).toBe('es');
 
@@ -22,18 +39,30 @@ test('the language picker opens the page in Spanish, and links stay in it', asyn
   await expect(page).toHaveURL(/\/es$/);
   await expect(page.getByRole('link', { name: 'Mapa' }).first()).toBeVisible();
 
-  await expect(page.locator('#today-marker, [id^="day-"]').first()).toBeVisible();
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await expect.poll(() => pages.length, { timeout: 15_000 }).toBeGreaterThan(0);
+  await expect(page.locator('article').first()).toBeVisible();
+  // Scrolled to the top again on every poll: the timeline settles on today
+  // once its first page is in, which undoes a scroll made before that.
+  await expect
+    .poll(
+      async () => {
+        await page.evaluate(() => window.scrollTo(0, 0));
+        return pages.length;
+      },
+      { timeout: 15_000 },
+    )
+    .toBeGreaterThan(0);
   expect(pages.every((url) => url.includes('lang=es'))).toBe(true);
 
   // A card's link stays in Spanish.
   await page.locator('article h2 a').first().click();
   await expect(page).toHaveURL(/\/es\/pin\/\d+\//);
 
-  // Back to English through the picker, which the cookie then remembers.
-  await page.getByRole('combobox', { name: 'Idioma' }).first().selectOption('en');
-  await expect(page).toHaveURL(/\/pin\/\d+\//);
+  // Back to English through the picker, which the cookie then remembers. The
+  // profile opens in Spanish on the way there, from that same cookie.
+  await page.goto('/profile');
+  await expect(page).toHaveURL(/\/es\/profile$/);
+  await page.getByRole('combobox', { name: 'Idioma' }).selectOption('en');
+  await expect(page).toHaveURL(/\/profile$/);
   await expect(page).not.toHaveURL(/\/es\//);
   await page.goto('/map');
   await expect(page).toHaveURL(/\/map$/);

@@ -8,7 +8,8 @@
  *   listed trailer is tried first for anime), checked through oEmbed, which
  *   also refuses videos whose owner has turned embedding off.
  * - AniList, and MyAnimeList through Jikan by the MAL id AniList gives, for
- *   anime. Looking MAL up by id avoids a second fuzzy title search.
+ *   anime. Looking MAL up by id avoids a second fuzzy title search. Both also
+ *   say how many episodes the work has, as does Wikidata (P1113).
  * - Wikidata's review-score statements for IMDb, Rotten Tomatoes and
  *   Metacritic. imdb.com itself answers scripts with a bot challenge.
  *
@@ -20,10 +21,16 @@
 
 import { mediumID, siteUrl } from '@/lib/appConfig';
 import { categoryList, hasCategory } from '@/lib/categories';
-import type { MediumJson, PinRatingJson } from '@/lib/types';
+import type { EpisodeStatus, MediumJson, PinRatingJson } from '@/lib/types';
 import log from '../util/log';
 
 export const SCREEN_CATEGORIES = ['Anime', 'Anime Movie', 'Movies', 'TV Series'];
+
+// The ones released in episodes, so the only ones an episode count belongs to:
+// a film has none, and a title search that lands on the series of the same
+// name ("Supergirl", "Masters of the Universe") would otherwise give the film
+// pin the series' episodes.
+const EPISODIC_CATEGORIES = ['Anime', 'TV Series'];
 
 // One category or a pin's list of them.
 export function isScreenCategory(categories: string | readonly (string | null | undefined)[] | null | undefined): boolean {
@@ -41,15 +48,25 @@ export type ScreenQuery = {
   year?: number;
   // Leave the trailer out, e.g. when the page already embedded a video.
   skipTrailer?: boolean;
+  // The work's MyAnimeList id, when a link on the pin gives one: the episode
+  // count is then looked up by id rather than by title.
+  malId?: number;
 };
+
+export type ScreenEpisodes = { episodeCount: number; episodeStatus: EpisodeStatus };
 
 export type ScreenDetails = {
   workTitle?: string;
   trailer?: MediumJson & { videoTitle?: string };
   ratings: PinRatingJson[];
+  // How many episodes the matched work has, for a series or anime; absent for
+  // a film and for anything whose count no source gives.
+  episodes?: ScreenEpisodes;
 };
 
 const REQUEST_TIMEOUT_MS = 8000;
+// How long a 429's Retry-After may ask for before the lookup gives up.
+const MAX_RETRY_WAIT_S = 70;
 const MAX_TRAILER_SEARCHES = 3;
 // The scrape route has 120s in all, shared with the browser and references.
 const DEFAULT_BUDGET_MS = 30000;
@@ -62,6 +79,10 @@ export async function findScreenDetails(query: ScreenQuery, budgetMs = DEFAULT_B
   if (!titles.length) return details;
 
   const isAnime = query.category?.toLowerCase() === 'anime';
+  // No category at all still counts as episodic: only a stated film is not.
+  const isEpisodic = !query.category || hasCategory([query.category], EPISODIC_CATEGORIES);
+  // A cited MyAnimeList id names the work outright, so it is tried first.
+  if (isEpisodic && query.malId) details.episodes = await episodesByMalId(query.malId, signal).catch(() => undefined);
   let anime: AniListMatch | undefined;
   let wikidata: WikidataMatch | undefined;
 
@@ -82,9 +103,18 @@ export async function findScreenDetails(query: ScreenQuery, budgetMs = DEFAULT_B
       details.ratings.push({ source: 'AniList', score: anime.averageScore, scoreMax: 100, url: anime.siteUrl });
     }
     const mal = anime.idMal ? await findMyAnimeList(anime.idMal, signal) : undefined;
-    if (mal) details.ratings.push(mal);
+    if (mal?.rating) details.ratings.push(mal.rating);
+    // AniList first: its counts are the better kept-up ones, and Jikan often
+    // times out. Wikidata only for what neither knew (a long-running series
+    // whose total AniList leaves open).
+    if (isEpisodic) details.episodes ??= anime.episodes ?? mal?.episodes ?? undefined;
   }
-  if (wikidata) details.ratings.push(...wikidata.ratings);
+  if (wikidata) {
+    details.ratings.push(...wikidata.ratings);
+    // Wikidata's search is the loosest of the three, so its count is only
+    // taken when the item it matched is not described as a film.
+    if (isEpisodic && !/\b(?:film|movie)\b/i.test(wikidata.description ?? '')) details.episodes ??= wikidata.episodes;
+  }
 
   if (!query.skipTrailer) {
     // The matched title first, else each guess in turn. AniList's listed
@@ -262,7 +292,7 @@ export function youtubeStill(embedUrl: string): MediumJson | undefined {
 
 /* AniList and MyAnimeList */
 
-type AniListMatch = { averageScore?: number; siteUrl?: string; idMal?: number; trailerId?: string };
+type AniListMatch = { averageScore?: number; siteUrl?: string; idMal?: number; trailerId?: string; episodes?: ScreenEpisodes };
 
 const ANILIST_QUERY = `query ($search: String) {
   Page(perPage: 10) {
@@ -270,6 +300,9 @@ const ANILIST_QUERY = `query ($search: String) {
       title { romaji english }
       synonyms
       format
+      status
+      episodes
+      nextAiringEpisode { episode }
       startDate { year }
       averageScore
       siteUrl
@@ -293,18 +326,87 @@ async function findAniList(title: string, year: number | undefined, signal: Abor
     siteUrl: match.siteUrl,
     idMal: match.idMal ?? undefined,
     trailerId: match.trailer?.site === 'youtube' ? match.trailer.id : undefined,
+    episodes: aniListEpisodes(match),
   };
 }
 
-async function findMyAnimeList(idMal: number, signal: AbortSignal): Promise<PinRatingJson | undefined> {
+// AniList's count for an entry: its announced total (still "planned" while the
+// show is airing or yet to air), else how many have gone out, which is one
+// before the episode it says airs next. A film is one "episode" and a work
+// with a single episode has no count worth showing, so both are left out.
+export function aniListEpisodes(media: {
+  format?: string | null;
+  status?: string | null;
+  episodes?: number | null;
+  nextAiringEpisode?: { episode?: number | null } | null;
+}): ScreenEpisodes | undefined {
+  if (media.format === 'MOVIE') return undefined;
+  const total = Number(media.episodes);
+  if (Number.isInteger(total) && total > 1) {
+    return { episodeCount: total, episodeStatus: media.status === 'FINISHED' ? 'complete' : 'planned' };
+  }
+  const next = Number(media.nextAiringEpisode?.episode);
+  if (Number.isInteger(next) && next > 2) return { episodeCount: next - 1, episodeStatus: 'ongoing' };
+  return undefined;
+}
+
+// The episode count of the work with this MyAnimeList id, for a pin that
+// cites MAL (most anime pins do). An id beats the title search: it tells a
+// season from its show and a remake from the original, which "Premieres"
+// wording in a pin title often does not.
+export async function episodesByMalId(idMal: number, budget?: AbortSignal): Promise<ScreenEpisodes | undefined> {
+  const signal = budget ?? AbortSignal.timeout(20000);
+  const res = await getJson<any>('https://graphql.anilist.co', signal, {}, { query: ANILIST_BY_MAL_QUERY, variables: { idMal } });
+  const media = res?.data?.Media;
+  const episodes = media ? aniListEpisodes(media) : undefined;
+  if (episodes) return episodes;
+  // AniList knows every MAL id, so this is the fallback for a show it leaves
+  // open rather than for a missing entry.
+  const mal = await findMyAnimeList(idMal, signal);
+  return mal?.episodes;
+}
+
+// The MyAnimeList id a pin's links carry, from the first myanimelist.net
+// link among them.
+export function malIdOf(urls: (string | null | undefined)[]): number | undefined {
+  for (const url of urls) {
+    const id = url?.match(/myanimelist\.net\/anime\/(\d+)/)?.[1];
+    if (id) return Number(id);
+  }
+  return undefined;
+}
+
+const ANILIST_BY_MAL_QUERY = `query ($idMal: Int) {
+  Media(idMal: $idMal, type: ANIME) {
+    format
+    status
+    episodes
+    nextAiringEpisode { episode }
+  }
+}`;
+
+async function findMyAnimeList(idMal: number, signal: AbortSignal): Promise<{ rating?: PinRatingJson; episodes?: ScreenEpisodes } | undefined> {
   const res = await getJson<any>(`https://api.jikan.moe/v4/anime/${idMal}`, signal);
-  const score = res?.data?.score;
-  return typeof score === 'number' ? { source: 'MyAnimeList', score, scoreMax: 10, url: res.data.url || `https://myanimelist.net/anime/${idMal}` } : undefined;
+  if (!res?.data) return undefined;
+  const score = res.data.score;
+  return {
+    rating: typeof score === 'number' ? { source: 'MyAnimeList', score, scoreMax: 10, url: res.data.url || `https://myanimelist.net/anime/${idMal}` } : undefined,
+    episodes: malEpisodes(res.data),
+  };
+}
+
+// MyAnimeList's count, the same reading as AniList's: "Finished Airing" is the
+// whole run, anything else is the total announced so far.
+export function malEpisodes(data: { type?: string | null; status?: string | null; episodes?: number | null }): ScreenEpisodes | undefined {
+  if (/movie/i.test(data.type ?? '')) return undefined;
+  const total = Number(data.episodes);
+  if (!Number.isInteger(total) || total < 2) return undefined;
+  return { episodeCount: total, episodeStatus: /finished/i.test(data.status ?? '') ? 'complete' : 'planned' };
 }
 
 /* Wikidata */
 
-type WikidataMatch = { description?: string; ratings: PinRatingJson[] };
+type WikidataMatch = { description?: string; ratings: PinRatingJson[]; episodes?: ScreenEpisodes };
 
 // Wikidata items for review sites (P447 "review score by"), and how to link
 // to the work on each from its identifier property.
@@ -331,10 +433,12 @@ async function findWikidata(title: string, year: number | undefined, signal: Abo
     .filter((id: string) => /^Q\d+$/.test(id));
   if (!ids.length) return undefined;
 
-  const sparql = `SELECT ?item ?description ?year ?score ?by ?methodLabel ?date ?rank ?imdb ?rt ?mc WHERE {
+  const sparql = `SELECT ?item ?description ?year ?score ?by ?methodLabel ?date ?rank ?imdb ?rt ?mc ?episodes ?ended WHERE {
     VALUES ?item { ${ids.map((id) => `wd:${id}`).join(' ')} }
     OPTIONAL { ?item schema:description ?description FILTER(LANG(?description) = "en") }
     OPTIONAL { ?item wdt:P577 ?published BIND(YEAR(?published) AS ?year) }
+    OPTIONAL { ?item wdt:P1113 ?episodes }
+    OPTIONAL { ?item wdt:P582 ?ended }
     OPTIONAL { ?item wdt:P345 ?imdb } OPTIONAL { ?item wdt:P1258 ?rt } OPTIONAL { ?item wdt:P1712 ?mc }
     OPTIONAL {
       ?item p:P444 ?st . ?st ps:P444 ?score ; pq:P447 ?by ; wikibase:rank ?rank .
@@ -355,7 +459,7 @@ async function findWikidata(title: string, year: number | undefined, signal: Abo
     const years = itemRows.map((r) => Number(r.year)).filter(Number.isFinite);
     const description = itemRows[0].description as string | undefined;
     if (!yearFits(years.length ? Math.min(...years) : undefined, year, /\b(?:series|anime|television)\b/i.test(description ?? ''))) continue;
-    return { description, ratings: wikidataRatings(itemRows) };
+    return { description, ratings: wikidataRatings(itemRows), episodes: wikidataEpisodes(itemRows) };
   }
   return undefined;
 }
@@ -380,6 +484,16 @@ export function wikidataRatings(rows: WikidataRow[]): PinRatingJson[] {
   return ratings;
 }
 
+// The work's episode count (P1113), the largest where the item states several
+// (a season count beside the series' own). A series with an end time (P582)
+// has finished, so its count is the whole run; one still running has only put
+// out that many so far.
+export function wikidataEpisodes(rows: WikidataRow[]): ScreenEpisodes | undefined {
+  const counts = rows.map((r) => Number(r.episodes)).filter((n) => Number.isInteger(n) && n > 1);
+  if (!counts.length) return undefined;
+  return { episodeCount: Math.max(...counts), episodeStatus: rows.some((r) => r.ended) ? 'complete' : 'ongoing' };
+}
+
 // "93%" -> 93/100, "8.2/10", "90/100", "4.5/5".
 export function parseScore(value: string): { score: number; scoreMax: number } | undefined {
   const percent = value.match(/^\s*(\d+(?:\.\d+)?)\s*%\s*$/);
@@ -400,7 +514,7 @@ export function yearFits(workYear: number | undefined, pinYear: number | undefin
 
 /* HTTP */
 
-async function getText(url: string, budget: AbortSignal, headers: Record<string, string> = {}, body?: unknown) {
+async function getText(url: string, budget: AbortSignal, headers: Record<string, string> = {}, body?: unknown, retry = true): Promise<string | undefined> {
   try {
     const res = await fetch(url, {
       method: body === undefined ? 'GET' : 'POST',
@@ -413,6 +527,14 @@ async function getText(url: string, budget: AbortSignal, headers: Record<string,
       signal: AbortSignal.any([budget, AbortSignal.timeout(REQUEST_TIMEOUT_MS)]),
     });
     if (!res.ok) {
+      // AniList answers 429 with the seconds to wait; one wait and one retry
+      // is worth it, because a rate-limited lookup otherwise silently gives
+      // the pin no ratings and no episode count at all.
+      const retryAfter = res.status === 429 ? Number(res.headers.get('retry-after')) : NaN;
+      if (retry && Number.isFinite(retryAfter) && retryAfter > 0 && retryAfter <= MAX_RETRY_WAIT_S) {
+        await new Promise((resolve) => setTimeout(resolve, (retryAfter + 1) * 1000));
+        return getText(url, budget, headers, body, false);
+      }
       if (res.status !== 404 && res.status !== 401) log.warn('screen lookup', res.status, url.slice(0, 120));
       return undefined;
     }

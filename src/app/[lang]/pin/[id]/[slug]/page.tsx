@@ -20,7 +20,8 @@ import { PinOdds } from '@/components/pin/PinOdds';
 import { PinStocks } from '@/components/pin/PinStocks';
 import { PinAwards } from '@/components/pin/PinAwards';
 import { PinTags } from '@/components/pin/PinTags';
-import { PinRatings } from '@/components/pin/PinRatings';
+import { PinRatings, RatingSummary } from '@/components/pin/PinRatings';
+import { EpisodeCount } from '@/components/pin/EpisodeCount';
 import { PinReferences } from '@/components/pin/PinReferences';
 import { PinMapLoader } from '@/components/pin/PinMapLoader';
 import { PinMediaFrame } from '@/components/pin/PinMedia';
@@ -150,20 +151,17 @@ async function PinBodyForViewer({ pin }: { pin: PinJson }) {
 function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Translator }) {
   const media = pin.media ?? [];
   const hasCoordinates = pin.latitude != null && pin.longitude != null;
+  // Searches for the company, as the same label on a card does. That search
+  // opens with the company's own panel - what it is, how its pins are being
+  // taken, a Follow button and the link on to its Wikipedia article.
   const company = pin.company ? (
-    <a
-      href={pin.companyWikiUrl || undefined}
-      target="_blank"
-      rel="noopener"
-      className="inline-flex items-center gap-1 text-inherit hover:no-underline"
-      title={pin.companyWikiUrl ? t('pin.onWikipedia', { name: pin.company }) : undefined}
-    >
+    <RefineLink field="company" value={pin.company} className="inline-flex items-center gap-1 text-inherit hover:no-underline">
       {pin.companyLogoUrl ? (
         // eslint-disable-next-line @next/next/no-img-element -- favicons from arbitrary hosts
         <img src={pin.companyLogoUrl} alt="" loading="lazy" referrerPolicy="no-referrer" className="size-3.5 rounded-sm" />
       ) : null}
       {pin.company}
-    </a>
+    </RefineLink>
   ) : null;
   const dateRanges = pinDateRanges(pin, timeZone);
   // The map labels the place itself; the text is only for an address it cannot draw.
@@ -273,7 +271,11 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
         </details>
       ) : null}
 
-      <PinRatings ratings={pin.ratings} />
+      {/* The scraped facts about the work, on one wrapping row. */}
+      <div className="-mt-1 mb-4 flex flex-wrap items-center gap-2 empty:hidden">
+        <PinRatings ratings={pin.ratings} className="" />
+        <EpisodeCount pin={pin} />
+      </div>
       <PinAwards awards={pin.awards} />
       {pinMarketRefs(pin).length ? <PinOdds pinId={pin.id} /> : null}
       <PinStocks pinId={pin.id} />
@@ -323,7 +325,7 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
                 <Icon name={merchant.label === 'Best Buy' ? 'tag' : 'cart'} className="size-4" />
                 {merchant.label === 'Amazon' ? t('pin.buyOnAmazon') : merchant.label === 'Best Buy' ? t('pin.buyAtBestBuy') : merchant.label}
                 {merchant.price ? <span className="font-normal">{money(merchant.price)}</span> : null}
-                <Icon name="external" className="size-3.5 opacity-70" />
+                <Icon name="external" className="size-3.5 shrink-0 opacity-70" />
               </a>
             ))}
         </div>
@@ -348,19 +350,22 @@ async function Thread({ pin }: { pin: PinJson }) {
         </Link>
       </div>
       <ThreadSuggestion pinId={pin.id} />
-      <ol className="mt-3 space-y-1">
+      <ol className="mt-4 space-y-1.5">
         {pins.map((p, index) => (
           <li key={p.id}>
             <Link
               href={pinPath(p)}
               aria-current={p.id === pin.id ? 'page' : undefined}
-              className={`flex gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:no-underline ${p.id === pin.id ? 'bg-raised ring-1 ring-line ring-inset' : 'hover:bg-raised/60'}`}
+              className={`flex gap-3 rounded-lg px-3 py-3 text-sm font-medium text-ink hover:no-underline ${p.id === pin.id ? 'bg-raised ring-1 ring-line ring-inset' : 'hover:bg-raised/60'}`}
             >
               <span className="w-4 shrink-0 text-right text-subtle tabular-nums">{index + 1}</span>
               <span className="min-w-0">
                 {p.title}
-                <span className="mt-0.5 flex flex-wrap items-center gap-x-3 text-xs font-normal">
+                <span className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs font-normal">
                   <CompanyTicker pin={p} bare />
+                  {/* A season's own score and run length, the way a card shows them. */}
+                  <RatingSummary ratings={p.ratings} />
+                  <EpisodeCount pin={p} chip />
                   <ThreadAge start={p.utcStartDateTime} allDay={p.allDay} />
                 </span>
               </span>

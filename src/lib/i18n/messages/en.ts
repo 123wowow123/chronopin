@@ -107,6 +107,7 @@ const en = {
     reply: '<actor></actor> replied to your comment on <pin></pin>',
     reference: '<actor></actor> added references to <pin></pin>',
     today: '<pin></pin>, a pin you watch, is today',
+    company: '<company></company> has a new pin: <pin></pin>',
     following: 'Following',
     followBack: 'Follow back',
   },
@@ -156,7 +157,6 @@ const en = {
   pin: {
     toMap: 'To map',
     toTimeline: 'To timeline',
-    onWikipedia: '{name} on Wikipedia',
     posted: 'Posted <time></time>',
     openSource: 'Open the source',
     cost: 'Cost',
@@ -298,6 +298,13 @@ const en = {
     followBack: 'Follow back',
     follow: 'Follow',
   },
+  // The panel a company: search opens with, and following a company.
+  company: {
+    onWikipedia: '{name} on Wikipedia',
+    followHint: 'Follow {name}',
+    unfollowHint: 'Unfollow {name}',
+    followExplainer: 'Followers are told about every new pin for this company.',
+  },
   stocks: {
     sinceClose: '{symbol} since the {day} close of {price}',
     closeNotIn: '{symbol}: the {day} close is not in yet',
@@ -324,9 +331,18 @@ const en = {
   },
   ratings: {
     averageLabel: 'Average of {count} ratings: {average} percent',
+    soleLabel: '{source} rating: {score}',
     average: 'average',
     sources: { one: '{count} source', other: '{count} sources' },
     heading: 'Ratings',
+  },
+  episodes: {
+    complete: { one: '{count} episode', other: '{count} episodes' },
+    ongoing: { one: '{count} episode so far', other: '{count} episodes so far' },
+    planned: { one: '{count} episode planned', other: '{count} episodes planned' },
+    titleComplete: 'The whole run, which has finished',
+    titleOngoing: 'Out so far; the run is still going',
+    titlePlanned: 'Announced for a run still to finish',
   },
   thread: {
     moveFailed: 'Could not move it. Please try again.',
@@ -600,6 +616,12 @@ const en = {
     originallyDueTitle: 'The day first promised, before any delay (UTC)',
     delayLength: 'How long a delay',
     delayPlaceholder: 'Delay: "Stated: ..." or "Estimated: ..."',
+    episodeCount: 'Episodes',
+    episodeCountTitle: 'How many episodes this run has, for a series, anime or podcast',
+    episodeStatus: 'What that counts',
+    episodeStatusComplete: 'the finished run',
+    episodeStatusOngoing: 'out so far',
+    episodeStatusPlanned: 'planned',
     keyPoints: 'Key points (HTML list)',
     citeHint: 'Cite a reference with <code></code>; it shows as [n].',
     headingImage: 'Heading image',

@@ -8,6 +8,7 @@ import type { PinAwardJson } from './awards';
 import type { ScrapedStock } from './stocks';
 import type { PageEntry } from './pageEntries';
 import { joinTags, splitTags } from './tags';
+import { EPISODE_STATUSES } from './types';
 import type { MediumJson, MerchantJson, PinJson, PinRatingJson, PinReferenceJson } from './types';
 
 // What /api/scrape answers: a draft pin, plus the promotional video it found
@@ -60,6 +61,10 @@ export type PinFormValues = {
   // and how it and the new date were found.
   originalStartDate: string;
   delayReasoning: string;
+  // How many episodes the work has, and what that number counts
+  // ('complete', 'ongoing', 'planned'); both empty for a one-off.
+  episodeCount: string;
+  episodeStatus: string;
   merchants: MerchantJson[];
   references: ReferenceFormValues[];
   media: MediumJson[];
@@ -115,6 +120,8 @@ export const EMPTY_FORM: PinFormValues = {
   dateConfidenceReasoning: '',
   originalStartDate: '',
   delayReasoning: '',
+  episodeCount: '',
+  episodeStatus: '',
   merchants: [],
   references: [],
   media: [],
@@ -240,6 +247,8 @@ export function pinToForm(pin: PinJson): PinFormValues {
     dateConfidenceReasoning: str(pin.dateConfidenceReasoning),
     originalStartDate: str(pin.originalStartDate),
     delayReasoning: str(pin.delayReasoning),
+    episodeCount: str(pin.episodeCount),
+    episodeStatus: str(pin.episodeStatus),
     merchants: pin.merchants ? pin.merchants.map((m) => ({ ...m })) : [],
     references: (pin.references || []).map(referenceToForm),
     media: pin.media || [],
@@ -286,6 +295,10 @@ export function applyScrape(values: PinFormValues, scraped: ScrapedPin): PinForm
   if (!next.originalStartDate && scraped.originalStartDate) {
     next.originalStartDate = scraped.originalStartDate;
     next.delayReasoning = scraped.delayReasoning || '';
+  }
+  if (!next.episodeCount && scraped.episodeCount) {
+    next.episodeCount = str(scraped.episodeCount);
+    next.episodeStatus = scraped.episodeStatus || '';
   }
   if (!next.merchants.length && scraped.merchants?.length) {
     next.merchants = scraped.merchants.map((m) => ({ ...m }));
@@ -388,6 +401,9 @@ export function formToPin(values: PinFormValues) {
     dateConfidenceReasoning: values.dateConfidenceReasoning || undefined,
     originalStartDate: values.originalStartDate || undefined,
     delayReasoning: (values.originalStartDate && values.delayReasoning.trim()) || undefined,
+    episodeCount: num(values.episodeCount),
+    // Only means anything next to a count, and only the three stored values.
+    episodeStatus: (num(values.episodeCount) && EPISODE_STATUSES.find((status) => status === values.episodeStatus)) || undefined,
     company: company || undefined,
     // A wiki link only travels with the company name it belongs to, so a
     // renamed company never inherits the old one's article.

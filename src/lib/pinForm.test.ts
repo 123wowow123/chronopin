@@ -24,6 +24,8 @@ const stored: PinJson = {
   dateConfidenceReasoning: 'Given as scheduled',
   originalStartDate: '2026-04-30',
   delayReasoning: 'Stated: first promised for April.',
+  episodeCount: 12,
+  episodeStatus: 'planned',
   merchants: [
     { id: 1, label: 'Amazon', url: 'https://www.amazon.com/x' },
     { id: 2, label: 'Best Buy', url: 'https://www.bestbuy.com/y', price: 1299 },
@@ -55,6 +57,8 @@ describe('pin form round trip', () => {
       dateConfidenceReasoning: 'Given as scheduled',
       originalStartDate: '2026-04-30',
       delayReasoning: 'Stated: first promised for April.',
+      episodeCount: 12,
+      episodeStatus: 'planned',
     });
     expect(body.merchants).toEqual([
       { id: 1, label: 'Amazon', url: 'https://www.amazon.com/x', price: undefined },
@@ -72,6 +76,20 @@ describe('pin form round trip', () => {
     const picked = { ...pinToForm(withVideo), selectedMedia: video };
     expect(formToPin(picked).media).toEqual([video]);
     expect(formToPin({ ...pinToForm(withVideo), useMedia: false }).media).toEqual([video]);
+  });
+
+  it('keeps an episode count only as a number with one of the three statuses', () => {
+    const form = pinToForm(stored);
+    expect(formToPin({ ...form, episodeStatus: 'made up' })).toMatchObject({ episodeCount: 12, episodeStatus: undefined });
+    expect(formToPin({ ...form, episodeCount: '' })).toMatchObject({ episodeCount: undefined, episodeStatus: undefined });
+    expect(formToPin({ ...form, episodeCount: 'twelve' })).toMatchObject({ episodeCount: undefined, episodeStatus: undefined });
+  });
+
+  it('takes a scraped episode count only where the author has typed none', () => {
+    const scraped = { episodeCount: 24, episodeStatus: 'complete' as const };
+    expect(applyScrape(EMPTY_FORM, scraped)).toMatchObject({ episodeCount: '24', episodeStatus: 'complete' });
+    const typed = { ...EMPTY_FORM, episodeCount: '12', episodeStatus: 'planned' };
+    expect(applyScrape(typed, scraped)).toMatchObject({ episodeCount: '12', episodeStatus: 'planned' });
   });
 
   it('carries ratings through unchanged', () => {

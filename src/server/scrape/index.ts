@@ -23,7 +23,7 @@ import { sourceKind } from '@/lib/sourceKind';
 import { IN_PAGE_HEADINGS, IN_PAGE_META, IN_PAGE_SCRAPE, type InPageHeadings, type InPageResult, type PageMetadata } from './inPage';
 import { pageEntries, type PageEntry } from '@/lib/pageEntries';
 import { findPinImages, pageImage } from './findImages';
-import { findScreenDetails, isScreenCategory, SCREEN_CATEGORIES, youtubeStill, type ScreenDetails } from './screen';
+import { findScreenDetails, isScreenCategory, malIdOf, SCREEN_CATEGORIES, youtubeStill, type ScreenDetails } from './screen';
 import { findScoreMarket, GAME_CATEGORIES, scoreSiteFor, withScoreMarket, type ScoreMarket } from './scoreMarkets';
 import { seriesPinFor } from './modelSeries';
 import { prequelPinFor } from './prequel';
@@ -319,6 +319,8 @@ async function webScrape(pageUrl: string): Promise<{
         pinTitle: fields?.title,
         category: firstCategoryOf(fields?.categories, [...SCREEN_CATEGORIES, ...GAME_CATEGORIES]),
         year: fields?.startDateTime ? new Date(fields.startDateTime).getUTCFullYear() : undefined,
+        // A MyAnimeList page names the work by id; a title cannot always.
+        malId: malIdOf([pageUrl]),
       };
       const [screen, scoreMarket] = await Promise.all([
         isScreenCategory(fields?.categories) ? findScreenDetails({ ...work, skipTrailer: hasVideo }) : undefined,
@@ -414,11 +416,17 @@ async function addLinkedImages(pin: Pin, text: string) {
   }
 }
 
-// Ratings onto the pin, with Kalshi's score for the work, and the trailer
+// Ratings and the episode count onto the pin, with Kalshi's score for the work, and the trailer
 // onto the end of its media (so the page's own picture stays the default
 // heading), with the trailer's still as a picture when the page had none.
 function applyScreenDetails(pin: Pin, screen: ScreenDetails | undefined, scoreMarket: ScoreMarket | undefined): Medium | undefined {
   withScoreMarket(screen?.ratings ?? [], scoreMarket).forEach((r) => pin.addRating(new PinRating(r)));
+  // Only when the page did not say how many episodes: AniList and Wikidata
+  // know the show, but the article knows which run the pin is about.
+  if (screen?.episodes && !pin.episodeCount) {
+    pin.episodeCount = screen.episodes.episodeCount;
+    pin.episodeStatus = screen.episodes.episodeStatus;
+  }
   if (!screen?.trailer) return undefined;
   const hasImage = pin.media.some((m) => Number(m.type) === mediumID.image);
   const still = youtubeStill(screen.trailer.originalUrl!);
@@ -476,6 +484,12 @@ function applyExtracted(pin: Pin, fields: Partial<ExtractedFields> | null): Pin 
   if (fields.originalStartDate && /^\d{4}-\d{2}-\d{2}$/.test(fields.originalStartDate)) {
     pin.originalStartDate = fields.originalStartDate;
     pin.delayReasoning = fields.delayReasoning || undefined;
+  }
+  // The page's own episode count, which beats the catalogues' below: it is
+  // the count for the run this pin is about.
+  if (Number.isInteger(fields.episodeCount) && (fields.episodeCount as number) > 0) {
+    pin.episodeCount = fields.episodeCount;
+    pin.episodeStatus = fields.episodeStatus || undefined;
   }
 
   if (fields.company) {

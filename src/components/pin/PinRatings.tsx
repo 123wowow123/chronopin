@@ -51,6 +51,28 @@ export function RatingAverage({
   );
 }
 
+// One chip for a pin listed without its sources beside it (a thread row): the
+// average where averageRating gives one, else the single source's own score,
+// named so it never reads as a consensus of one.
+export function RatingSummary({ ratings, className = '' }: { ratings?: PinRatingJson[]; className?: string }) {
+  const t = useT();
+  const sources = reviewRatings(ratings);
+  if (averageRating(ratings) != null || sources.length !== 1) {
+    return <RatingAverage ratings={ratings} compact className={className} />;
+  }
+  const [only] = sources;
+  const score = ratingScore(only.score, only.scoreMax, only.source);
+  return (
+    <span
+      className={`inline-flex items-center gap-1 rounded-full bg-amber-500/10 px-2 py-0.5 text-xs font-semibold text-ink ring-1 ring-amber-500/30 ring-inset tabular-nums ${className}`}
+      title={t('ratings.soleLabel', { source: only.source, score })}
+    >
+      <Icon name="star" className="size-3 text-amber-500" />
+      {score}
+    </span>
+  );
+}
+
 // Third-party scores (IMDb, Rotten Tomatoes, MyAnimeList, ...), each linking
 // out to that source's own page when known, led by their average. Read-only:
 // these come from scraping, not the edit form (see PinRating's schema
@@ -81,6 +103,7 @@ export function PinRatings({ ratings, className = '-mt-1 mb-4' }: { ratings?: Pi
             {rating.url ? (
               <a href={rating.url} target="_blank" rel="noopener nofollow" className={`${className} hover:ring-1 hover:ring-inset hover:ring-line`}>
                 {content}
+                <Icon name="external" className="size-3 shrink-0 opacity-70" />
               </a>
             ) : (
               <span className={className}>{content}</span>

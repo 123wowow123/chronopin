@@ -22,6 +22,8 @@ const types = {
   reference: 'reference',
   // A pin you watch lands today. The actor is the pin's author.
   today: 'today',
+  // A new pin for a company you follow. The actor is the pin's author.
+  company: 'company',
 } as const;
 
 // How many the bell lists at most; older ones are still in the table.
@@ -34,8 +36,10 @@ const VISIBLE_FROM = `
       JOIN "User" a ON a."id" = n."actorId" AND a."utcDeletedDateTime" IS NULL
       LEFT JOIN "Pin" p ON p."id" = n."pinId"
       LEFT JOIN "Comment" c ON c."id" = n."commentId"
+      LEFT JOIN "Company" co ON co."id" = n."companyId"
       WHERE (n."pinId" IS NULL OR (p."id" IS NOT NULL AND p."utcDeletedDateTime" IS NULL))
-        AND (n."commentId" IS NULL OR (c."id" IS NOT NULL AND c."utcDeletedDateTime" IS NULL))`;
+        AND (n."commentId" IS NULL OR (c."id" IS NOT NULL AND c."utcDeletedDateTime" IS NULL))
+        AND (n."companyId" IS NULL OR co."id" IS NOT NULL)`;
 
 export type NotificationItem = {
   id: number;
@@ -44,6 +48,8 @@ export type NotificationItem = {
   pinTitle: string | null;
   commentId: number | null;
   commentText: string | null;
+  companyId: number | null;
+  companyName: string | null;
   utcCreatedDateTime: Date;
   read: boolean;
   actor: { id: number; userName: string; firstName: string; lastName: string; pictureUrl: string | null };
@@ -65,15 +71,38 @@ export default class Notification {
       type,
       pinId,
       commentId,
-    }: { userId: number; actorId: number; type: string; pinId?: number | null; commentId?: number | null },
+      companyId,
+    }: { userId: number; actorId: number; type: string; pinId?: number | null; commentId?: number | null; companyId?: number | null },
     query: QueryFn = db.query,
   ) {
     return query(
       `
-      INSERT INTO "Notification" ("userId", "actorId", "type", "pinId", "commentId")
-      VALUES ($1, $2, $3, $4, $5)
+      INSERT INTO "Notification" ("userId", "actorId", "type", "pinId", "commentId", "companyId")
+      VALUES ($1, $2, $3, $4, $5, $6)
       RETURNING "id", "userId"`,
-      [userId, actorId, type, pinId == null ? null : pinId, commentId == null ? null : commentId],
+      [userId, actorId, type, pinId == null ? null : pinId, commentId == null ? null : commentId, companyId == null ? null : companyId],
+    ).then((rows) => announce(query, rows));
+  }
+
+  // One 'company' row per follower of the pin's company, written in a single
+  // insert however many follow it (CompanyFollow.notifyNewPin). The pin's own
+  // author is left out: they know. A pin saved again is told about once - the
+  // unique index leaves one row per follower, pin and company.
+  static createForCompanyFollowers(
+    { pinId, companyId, authorId }: { pinId: number; companyId: number; authorId: number },
+    query: QueryFn = db.query,
+  ) {
+    return query(
+      `
+      INSERT INTO "Notification" ("userId", "actorId", "type", "pinId", "companyId")
+      SELECT f."userId", $3, 'company', $1, $2
+      FROM "CompanyFollow" f
+      JOIN "User" u ON u."id" = f."userId" AND u."utcDeletedDateTime" IS NULL
+      WHERE f."companyId" = $2 AND f."utcDeletedDateTime" IS NULL AND f."userId" <> $3
+      ON CONFLICT ("userId", "pinId", "companyId") WHERE "type" = 'company'
+      DO NOTHING
+      RETURNING "userId"`,
+      [pinId, companyId, authorId],
     ).then((rows) => announce(query, rows));
   }
 
@@ -158,7 +187,8 @@ export default class Notification {
     return db.query<NotificationItem>(
       `
       SELECT n."id", n."type", n."pinId", p."title" AS "pinTitle",
-             n."commentId", c."text" AS "commentText", n."utcCreatedDateTime",
+             n."commentId", c."text" AS "commentText",
+             n."companyId", co."name"::text AS "companyName", n."utcCreatedDateTime",
              n."utcReadDateTime" IS NOT NULL AS "read",
              json_build_object(
                'id', a."id",

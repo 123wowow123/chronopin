@@ -20,6 +20,8 @@ type Notification = {
   pinTitle: string | null;
   commentId: number | null;
   commentText: string | null;
+  companyId: number | null;
+  companyName: string | null;
   utcCreatedDateTime: string;
   read: boolean;
   followingBack: boolean;
@@ -116,6 +118,13 @@ function NotificationItems({
                 ) : n.type === 'today' && n.pinId ? (
                   <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>
                     {t.rich('notifications.today', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
+                  </Link>
+                ) : n.type === 'company' && n.pinId ? (
+                  <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>
+                    {t.rich('notifications.company', {
+                      company: () => <span className="font-semibold">{n.companyName}</span>,
+                      pin: () => <span className="font-semibold">{n.pinTitle}</span>,
+                    })}
                   </Link>
                 ) : null}
                 <time className="block text-xs text-subtle" dateTime={n.utcCreatedDateTime}>

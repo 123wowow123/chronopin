@@ -41,6 +41,8 @@ export type ExtractedFields = {
   companyWikiUrl: string | null;
   categories: string[];
   workTitle: string | null;
+  episodeCount: number | null;
+  episodeStatus: 'complete' | 'ongoing' | 'planned' | null;
   amazonUrl: string | null;
   bestBuyUrl: string | null;
   startDateTime: string | null;
@@ -127,6 +129,16 @@ export const SCHEMA = {
       description:
         'When a category is Anime, Anime Movie, Movies or TV Series, or the pin is about one video game: the film\'s, show\'s or game\'s own official English title, with any season or part as it is officially styled, e.g. "Jujutsu Kaisen Season 2", "Frieren: Beyond Journey\'s End" or "Grand Theft Auto VI" - not the event headline. Null otherwise.',
     },
+    episodeCount: {
+      type: ['number', 'null'],
+      description:
+        'For a work released as episodes (TV series, anime, a web or podcast series): how many episodes the run this pin is about has, as a whole number. A pin about one season counts that season, not the whole show. Null for a film, a one-off event, or when the page does not say.',
+    },
+    episodeStatus: {
+      type: ['string', 'null'],
+      description:
+        'What episodeCount counts: "complete" when the run has finished airing, "planned" when that is the number announced for a run still to air or still airing, "ongoing" when it is the episodes out so far and no total has been announced. Null when episodeCount is null.',
+    },
     amazonUrl: {
       type: ['string', 'null'],
       description:
@@ -197,6 +209,8 @@ export const SCHEMA = {
     'companyWikiUrl',
     'categories',
     'workTitle',
+    'episodeCount',
+    'episodeStatus',
     'amazonUrl',
     'bestBuyUrl',
     'startDateTime',

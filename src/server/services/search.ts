@@ -3,6 +3,9 @@
 // time filters narrow them in the database, which also pages the results.
 
 import config from '../config';
+import Comment from '../model/comment';
+import Company from '../model/company';
+import CompanyFollow from '../model/companyFollow';
 import Pins, { type SearchFilter, type SearchRank } from '../model/pins';
 import { SearchPins } from '../model/searchPin';
 import User from '../model/user';
@@ -10,6 +13,7 @@ import { HttpError } from '../util/httpError';
 import { resolveCreatedSince } from '../util/createdFilter';
 import { hasFilters, parseSearchQuery, type SearchQuery } from '../util/searchQuery';
 import { timeZoneOrUtc } from '../viewer';
+import { commentMood } from '@/lib/commentMood';
 import { isSpan, offsetDate } from '@/lib/postedSpan';
 import type { TagCount } from '@/lib/tags';
 
@@ -135,7 +139,7 @@ export async function searchPinsPage(request: SearchRequest): Promise<{ pins: Pi
   }
 
   const pins = await Pins.querySearchRanked(ranked, request.userId || 0);
-  if (!cursor) await attachSearchedUser(pins, query);
+  if (!cursor) await Promise.all([attachSearchedUser(pins, query), attachSearchedCompany(pins, query)]);
   return { pins, links };
 }
 
@@ -189,4 +193,33 @@ async function attachSearchedUser(pins: Pins, query: SearchQuery) {
       (pins as Pins & { user?: unknown }).user = { id: user.id, userName: user.userName };
     }
   }
+}
+
+// How many of a company's comments its mood is read from. Plenty for a trend
+// and a bounded read however many pins the company has.
+const COMPANY_MOOD_COMMENTS = 200;
+
+// A search that names exactly one company answers with that company too: what
+// it is in a line, how the comments on its pins read lately, and how many
+// people follow it - the panel a company: search opens with. Whether the
+// viewer follows it is not here: these results are cached for everyone, so the
+// button asks for its own status (CompanyFollowButton).
+async function attachSearchedCompany(pins: Pins, query: SearchQuery) {
+  if (query.companies.length !== 1) return;
+  const company = await Company.byName(query.companies[0]);
+  if (!company) return;
+  const [comments, follow] = await Promise.all([
+    Comment.forCompany(company.id, COMPANY_MOOD_COMMENTS),
+    CompanyFollow.status(company.id, null),
+  ]);
+  (pins as Pins & { company?: unknown }).company = {
+    id: company.id,
+    name: company.name,
+    description: company.description,
+    logoUrl: company.logoUrl,
+    wikiUrl: company.wikiUrl,
+    followerCount: follow.followerCount,
+    commentCount: comments.length,
+    mood: commentMood(comments.map((c) => ({ ...c, utcCreatedDateTime: c.utcCreatedDateTime.toISOString() }))),
+  };
 }

@@ -172,6 +172,23 @@ export default class Comment extends PinUserLink {
     return rows.map((row) => new Comment(row));
   }
 
+  // The tone scores on a company's pins, newest first and at most `limit` of
+  // them: what a company: search's mood is read from (src/lib/commentMood.ts).
+  // Comments waiting on a score come too, so the panel can say how many of the
+  // comments it speaks for.
+  static forCompany(companyId: number, limit: number) {
+    return db.query<{ sentiment: number | null; utcCreatedDateTime: Date }>(
+      `
+    SELECT "Comment"."sentiment", "Comment"."utcCreatedDateTime"
+    FROM "Comment"
+      JOIN "Pin" ON "Pin"."id" = "Comment"."pinId"
+    WHERE "Pin"."companyId" = $1 AND "Pin"."utcDeletedDateTime" IS NULL AND "Comment"."utcDeletedDateTime" IS NULL
+    ORDER BY "Comment"."utcCreatedDateTime" DESC, "Comment"."id" DESC
+    LIMIT $2`,
+      [companyId, limit],
+    );
+  }
+
   // What scoring a comment's tone reads: its text, the pin it is on, and for a
   // reply the comment it answers. Undefined when the comment is gone.
   static async sentimentContext(id: number) {

@@ -1,5 +1,18 @@
 import { describe, expect, it } from 'vitest';
-import { isScreenCategory, normalizeTitle, parseScore, pickTrailer, titleCandidates, wikidataRatings, yearFits, youtubeStill } from './screen';
+import {
+  aniListEpisodes,
+  malIdOf,
+  isScreenCategory,
+  malEpisodes,
+  normalizeTitle,
+  parseScore,
+  pickTrailer,
+  titleCandidates,
+  wikidataEpisodes,
+  wikidataRatings,
+  yearFits,
+  youtubeStill,
+} from './screen';
 
 describe('normalizeTitle', () => {
   it('ignores case, punctuation, a leading "the" and ordinal seasons', () => {
@@ -117,5 +130,43 @@ describe('helpers', () => {
 
   it('makes a still image from an embed url', () => {
     expect(youtubeStill('https://www.youtube.com/embed/Iwr1aLEDpe4')).toEqual({ type: 1, originalUrl: 'https://i.ytimg.com/vi/Iwr1aLEDpe4/hqdefault.jpg' });
+  });
+});
+
+describe('episode counts', () => {
+  it('reads AniList: a finished run, a planned total, and what is out so far', () => {
+    expect(aniListEpisodes({ format: 'TV', status: 'FINISHED', episodes: 24 })).toEqual({ episodeCount: 24, episodeStatus: 'complete' });
+    expect(aniListEpisodes({ format: 'TV', status: 'NOT_YET_RELEASED', episodes: 12 })).toEqual({ episodeCount: 12, episodeStatus: 'planned' });
+    expect(aniListEpisodes({ format: 'TV', status: 'RELEASING', episodes: 12 })).toEqual({ episodeCount: 12, episodeStatus: 'planned' });
+    expect(aniListEpisodes({ format: 'TV', status: 'RELEASING', episodes: null, nextAiringEpisode: { episode: 1123 } })).toEqual({
+      episodeCount: 1122,
+      episodeStatus: 'ongoing',
+    });
+  });
+
+  it('leaves out a film and a work with nothing worth counting', () => {
+    expect(aniListEpisodes({ format: 'MOVIE', status: 'FINISHED', episodes: 1 })).toBeUndefined();
+    expect(aniListEpisodes({ format: 'TV', status: 'FINISHED', episodes: 1 })).toBeUndefined();
+    expect(aniListEpisodes({ format: 'TV', status: 'RELEASING', episodes: null, nextAiringEpisode: { episode: 1 } })).toBeUndefined();
+    expect(aniListEpisodes({ format: 'TV', status: 'RELEASING', episodes: null })).toBeUndefined();
+    expect(malEpisodes({ type: 'Movie', status: 'Finished Airing', episodes: 1 })).toBeUndefined();
+  });
+
+  it('reads MyAnimeList the same way', () => {
+    expect(malEpisodes({ type: 'TV', status: 'Finished Airing', episodes: 26 })).toEqual({ episodeCount: 26, episodeStatus: 'complete' });
+    expect(malEpisodes({ type: 'TV', status: 'Currently Airing', episodes: 12 })).toEqual({ episodeCount: 12, episodeStatus: 'planned' });
+  });
+
+  it('reads a MyAnimeList id out of a pin\'s links, the first one wins', () => {
+    expect(malIdOf([null, 'https://example.com/x', 'https://myanimelist.net/anime/55265/Tensei_Kizoku'])).toBe(55265);
+    expect(malIdOf(['https://myanimelist.net/anime/21/One_Piece', 'https://myanimelist.net/anime/1535/Death_Note'])).toBe(21);
+    expect(malIdOf(['https://myanimelist.net/manga/2/Berserk', undefined])).toBeUndefined();
+  });
+
+  it("takes Wikidata's largest count, complete only when the series has ended", () => {
+    expect(wikidataEpisodes([{ episodes: '13' }, { episodes: '86' }, { ended: '2013-09-29T00:00:00Z' }])).toEqual({ episodeCount: 86, episodeStatus: 'complete' });
+    expect(wikidataEpisodes([{ episodes: '1122' }])).toEqual({ episodeCount: 1122, episodeStatus: 'ongoing' });
+    expect(wikidataEpisodes([{ score: '93%' }])).toBeUndefined();
+    expect(wikidataEpisodes([{ episodes: '1' }])).toBeUndefined();
   });
 });

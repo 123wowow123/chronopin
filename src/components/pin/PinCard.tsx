@@ -18,6 +18,7 @@ import { CompanyTicker } from './CompanyTicker';
 import { PinCardOdds } from './PinOdds';
 import { PinMediaFrame } from './PinMedia';
 import { RatingAverage } from './PinRatings';
+import { EpisodeCount } from './EpisodeCount';
 import { RefineLink } from './RefineLink';
 import { ViewCount } from './ViewCount';
 import { WatchButton } from './WatchButton';
@@ -169,7 +170,7 @@ export function PinCard({
 
         <div className="mx-3">
           {!media.length ? placeRow : null}
-          {pin.utcStartDateTime || pin.ratings?.length ? (
+          {pin.utcStartDateTime || pin.ratings?.length || pin.episodeCount ? (
             <div className="mb-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
               {pin.utcStartDateTime ? (
                 <>
@@ -182,6 +183,8 @@ export function PinCard({
               ) : null}
               {/* The review-site average, for a film, series or anime pin. */}
               <RatingAverage ratings={pin.ratings} compact />
+              {/* How many episodes, for a series, anime or other episodic work. */}
+              <EpisodeCount pin={pin} compact />
               {/* How far the start is from today, at the tail of the pills. */}
               {pin.utcStartDateTime && todayKey ? <StartDistance pin={pin} todayKey={todayKey} serverTimeZone={serverTimeZone} /> : null}
               {/* Last, on a line of its own. An unverified pin's reasoning only restates

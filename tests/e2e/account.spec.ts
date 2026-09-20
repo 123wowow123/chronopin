@@ -41,6 +41,8 @@ test.describe.serial('a signed-in author', () => {
     await page.getByLabel('Longitude').fill('-83.1');
     await page.getByLabel('Date confidence').selectOption('estimated');
     await page.getByLabel('Why').fill('A target, per the source');
+    await page.getByLabel('Episodes').fill('8');
+    await page.getByLabel('What that counts').selectOption('planned');
     await page.getByRole('button', { name: 'Submit' }).click();
     // Earlier runs leave pins with this link and date behind, so the form may
     // first offer them as duplicates; this run posts its own pin regardless.
@@ -75,6 +77,8 @@ test.describe.serial('a signed-in author', () => {
       longitude: -83.1,
       dateConfidence: 'estimated',
       dateConfidenceReasoning: 'A target, per the source',
+      episodeCount: 8,
+      episodeStatus: 'planned',
       allDay: true,
       utcStartDateTime: '2031-05-04T00:00:00.000Z',
     });

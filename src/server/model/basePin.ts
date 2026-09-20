@@ -35,6 +35,8 @@ export const BasePinProp = [
   'sourceEndDateTime',
   'originalStartDate',
   'delayReasoning',
+  'episodeCount',
+  'episodeStatus',
   'allDay',
   'utcCreatedDateTime',
   'utcUpdatedDateTime',

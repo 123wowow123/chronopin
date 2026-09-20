@@ -1,6 +1,8 @@
 # Update Log
 
 ## 2026-09-19
+* **Update**: [Fields](/scraping/fields.md), [Enrichment](/scraping/enrichment.md), [Sources](/scraping/sources.md) and [Verticals](/scraping/verticals.md) cover the episode count an episodic pin now carries (`episodeCount`, `episodeStatus`), its three sources and why a film never gets one.
+* **Update**: [Sources](/scraping/sources.md), [Enrichment](/scraping/enrichment.md) and [Learnings](/scraping/learnings.md) cover the Wikimedia User-Agent fix, blocked-page detection and the `media:top-up` and `wiki:refetch-blocked` backfills.
 * **Creation**: Added [Scraping without credit](/scraping/no-credit-mode.md): what a scrape still does with no key or credit, the metadata fields and the `llmTasks` response.
 * **Update**: [Strategy](/scraping/strategy.md), [Scrape without credit](/playbooks/scrape-without-credit.md) and the [Scraping API](/api/scraping-api.md) now say that only the LLM calls wait for a session: a no-credit scrape returns page-metadata fields and `llmTasks`.
 * **Update**: [Learnings](/scraping/learnings.md) records the live check of the 3-media rule and the page-title fallback for the picture top-up.

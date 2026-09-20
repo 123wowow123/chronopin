@@ -18,7 +18,8 @@ import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, eventSpanSummary, offsetDate
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, pinDayKey, pinTense, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
-import type { CardPin, SearchPage } from '@/lib/types';
+import type { CardPin, SearchedCompany, SearchPage } from '@/lib/types';
+import { SearchedCompanyPanel } from './SearchedCompany';
 import { TagCloud, tagPillSummary } from './TagCloud';
 import { FloatingControls } from './FloatingControls';
 import { TimeBlock, TodayMarker } from './TimeBlock';
@@ -83,6 +84,7 @@ export function SearchResults({
   serverTimeZone,
   serverNow,
   searchedUser,
+  searchedCompany,
   specialtyDays: initialSpecialtyDays,
   searchedDays = [],
   error,
@@ -97,6 +99,8 @@ export function SearchResults({
   serverTimeZone: string;
   serverNow: string;
   searchedUser?: { id: number; userName: string };
+  // The one company a company: search names, for the panel about it.
+  searchedCompany?: SearchedCompany;
   specialtyDays: Record<string, string[]>;
   // The days a date: search keeps to; today is on the timeline only when it is one of them.
   searchedDays?: string[];
@@ -383,9 +387,9 @@ export function SearchResults({
     <TimelineVideoProvider setting={video}>
       <div className="px-3 pb-24 lg:px-4 xl:pr-[288px]">
         <FloatingControls
-          summaryCaption={searchedUser ? undefined : t('controls.postedWithin')}
-          summary={searchedUser ? searchedUser.userName : spanLabel(postedWithin, t.locale)}
-          summaryIsPostedWithin={!searchedUser}
+          summaryCaption={searchedUser || searchedCompany ? undefined : t('controls.postedWithin')}
+          summary={searchedUser ? searchedUser.userName : searchedCompany ? searchedCompany.name : spanLabel(postedWithin, t.locale)}
+          summaryIsPostedWithin={!searchedUser && !searchedCompany}
           onToday={sortBy === 'date' && bags.length && showsToday ? holdToday : undefined}
           sort={canSort ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : undefined}
           tags={{
@@ -409,7 +413,7 @@ export function SearchResults({
         >
           <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={({ past }) => changePostedWithin(past)} />
           {searchedUser ? (
-            <div className="floating flex flex-col gap-3 px-3.5 py-3">
+            <div className="floating flex flex-col gap-3 px-4 py-3.5">
               <div className="flex items-center gap-2 font-semibold text-ink">
                 <UserAvatar userName={searchedUser.userName} className="size-7 text-sm" />
                 {searchedUser.userName}
@@ -417,6 +421,7 @@ export function SearchResults({
               <FollowButton userId={searchedUser.id} userName={searchedUser.userName} showCount />
             </div>
           ) : null}
+          {searchedCompany ? <SearchedCompanyPanel company={searchedCompany} /> : null}
         </FloatingControls>
 
         {/* Narrower, the floating controls fold away; sorting is too important to
