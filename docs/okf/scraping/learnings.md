@@ -27,6 +27,51 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **Get 3 media on every pin, best effort, with at least 1 image.** Owner, 2026-09-19: the media stage should keep looking until a pin has 3 media (a video counts), not stop at the first source, and a pin always gets at least one picture. Built: `src/lib/mediaTarget.ts` replaces the pictures-only `TARGET_IMAGES`. Fewer is acceptable only when every source is exhausted, and never padded with unfetched or unrelated pictures.
 * **A market pin says how much money is on it.** Owner, 2026-09-20: prediction-market scraping records the market's dollar volume, the pin page shows it, and the timeline's weighting leans on it. Quote it beside the odds in the pin's own words, and let the app keep the stored figure ([Strategy](strategy.md#decision-rules)).
 * **Do not add write-ups to the root README.**
+* **A video embedded in a reference belongs to the pin.** Owner, 2026-09-20: pin 315 should carry the YouTube video that its own reference article embeds - as a reference *and* on the pin's media. Best effort: get the product video and bring it to both.
+* **A released product cites its MSRP from the company's own page.** Owner, 2026-09-20: for a released or on-sale product, check the company's product/store page for the MSRP and add that page as a reference.
+
+## 2026-09-20 - Pin 315 (Mac mini M6): the video its references were hiding
+
+One pin, fixed by hand after the owner noticed a video that the scrape had
+walked past.
+
+* **Learned**
+  * **A reference article's embed is invisible in the text.** Pin 315's two
+    references (MacRumors, 9to5Mac) each embed a video, and neither showed up
+    in anything the pipeline reads: the markdown conversion drops iframes.
+    `curl -A '<plain Chrome UA>' | grep -oE 'youtube(-nocookie)?\.com/(embed|watch)[^"]*'`
+    found them in seconds. MacRumors' page also lists ten `watch?v=` URLs in
+    its sidebar JSON - the `embed/` src with a `?si=` is the in-article one.
+  * **The embed was the best reference on the pin.** Apple's own upload,
+    "The new Mac mini with M6" (channel `UCE_M8A5yxnLfW0KghEeajjw`,
+    2026-08-25), is first-party at 85, above both articles at 74 and 72.
+    9to5Mac's embedded "Overtime Episode 079: The $899 Mac mini" is the
+    publisher's own podcast on the pin's subject: a reference at 72, not media.
+  * **oEmbed and `PUT /api/pins/:id` are enough to add a video by hand.**
+    `youtube.com/oembed?url=...&maxwidth=800&maxheight=450` gives `html`,
+    `author_name`, `author_url`; `originalUrl` is the iframe `src` up to the
+    `?`. GET the pin, append the medium, PUT it back: `update()` diffs media by
+    `originalUrl`, `addThumb` fetches the video's still by itself, and the
+    references route is `POST /api/pins/:id/references` (add-only, notifies the
+    author, moves an all-day pin's dates only if the reference is more
+    confident - send `startDate`/`endDate` null to leave them alone).
+  * **Apple prices nothing on the marketing page.** `apple.com/mac-mini/`
+    carries only the financing-example dollar figures ($1,199 iPhone, $399
+    Watch), which a naive price grep would take. The store page
+    `apple.com/shop/buy-mac/mac-mini` has the real MSRP in its page JSON as
+    `"currentPrice":{"amount":"$899.00","raw_amount":"899.00"}` - $899 base,
+    $1,699 M5 Pro, confirming the figure the pin already held.
+
+* **Feedback**
+  * "should have youtube reference as it's in the references reference" - an
+    embed inside a cited article is evidence the pin should cite itself.
+  * "product video should be best effort gotten and brought to pin media and
+    reference" - not either/or: the product video goes in both places.
+  * "for released products, should check company product page for MSRP price
+    and add as reference".
+
+* **Changed** [Enrichment](enrichment.md) (MSRP reference, reference-embedded
+  video in both places, grep raw HTML for the embed), standing feedback above.
 
 ## 2026-09-20 - Coverage gaps: four categories, eclipses, tournaments and a trends reader
 
@@ -954,3 +999,56 @@ Two things that did **not** work:
 * **Judging by source.** "An AniList cover and a MyAnimeList poster are the same
   key visual" holds often enough to be tempting and fails often enough to lose
   real pictures. The hash is the honest test.
+
+## 2026-09-20 - The info findings, and who the sweep is actually good at judging
+
+The 236 curator-authored `info` findings (the minor ones - heights, costs, floor
+counts) were worked through by six agents on the same verify-first brief as the
+warnings, with one extra rule: **two sources disagreeing is not by itself a
+defect in the pin.**
+
+**52 of 189 pins changed. Roughly four findings in five did not warrant a change.**
+That is the right answer, not a failure: the pin was usually already following
+the stronger source, or already disclosing the disagreement in its own
+`longFormSummary`. Agents reported that pattern over and over - "the pin's own
+summary already said so".
+
+**A useful observation from one batch:** in *every* pin it changed, the
+`longFormSummary` was already correct and only the short `description`, the
+title or the date had drifted. The bad figures look like damage at extraction
+time to the summary line, not bad sourcing. The summary is the more reliable
+artefact.
+
+**What did warrant a change** was mostly a pin stating a figure no link carries:
+a 283 m dredger that is 223 m, a pyramid tallest for 3,800 years that Wikipedia
+says 3,700, Stonehenge's sarsens "roughly 20 miles" away against English
+Heritage's 15, a limestone facade that is terracotta, a 30 m station box that is
+39 m. Several were the named video-title exception - a pin's own headline figure
+resting on nothing but a B1M title (Seine-Nord's EUR 7BN against the partners'
+EUR 5.1bn, Allegiant Stadium's $1.8BN against a $1.97bn final accounting).
+
+### The sweep is far more accurate on old pins than on new ones
+
+The same findings were checked read-only against the 37 pins on the owner's own
+accounts, and the split is nothing like the curator pins:
+
+| Set | Findings that survived checking |
+| --- | --- |
+| Curator `warning` findings | 34 of 51 (two thirds) |
+| Curator `info` findings | about 1 in 5 |
+| Owner's own pins (`warning`) | **34 of 37** |
+
+The reason is structural, not luck. The owner's pins are the oldest in the
+corpus and nearly every one is dated **to the year a source predicted something
+would finish**, or to an arbitrary day near the article, rather than to the event
+its own title describes. That is one habit showing up thirty-odd times, so there
+was little for the sources to exonerate. Newer curator pins were written against
+a prompt that had already been tightened, so their findings are mostly
+source-vs-source noise.
+
+**The measurable form of that habit: 100 live pins sit on the *first* of a month
+with an `estimated`, `scheduled` or `delayed` date**, where the house rule puts a
+month, quarter or half-year on the period's **last** day - 41 of them on the
+owner's account, 34 on @BuildDesk. `YYYY-MM-01` is not a house placeholder for
+anything. Worth a sweep of its own, and a candidate for the `imprecise` lint,
+which today only looks at 31 December and 1 January.
