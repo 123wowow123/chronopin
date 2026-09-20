@@ -95,7 +95,15 @@ async function pageText(url: string): Promise<SourceText> {
         throw new Error(`Unsupported content type ${type || 'unknown'} at ${url}`);
       }
       const body = await res.text();
-      fetched = /html/i.test(type) ? { title: htmlTitle(body), text: htmlToText(body) } : { text: body };
+      if (/html/i.test(type)) {
+        const text = htmlToText(body);
+        // Only when the rendered markup gave almost nothing: on a normal page
+        // the island repeats the article and would double it.
+        const island = text.length < MIN_STATIC_CHARS ? jsonIslandText(body) : '';
+        fetched = { title: htmlTitle(body), text: island.length > text.length ? island : text };
+      } else {
+        fetched = { text: body };
+      }
     }
   } catch (err) {
     if ((err as Error).message.startsWith('Unsupported content type')) throw err;
@@ -105,6 +113,11 @@ async function pageText(url: string): Promise<SourceText> {
     return fetched;
   }
   const rendered = await renderedText(url);
+  // The browser can hand back the same shell when a site renders its article
+  // from a JSON island client-side but paints only the heading.
+  if (fetched && rendered.text.length < MIN_STATIC_CHARS && fetched.text.length > rendered.text.length) {
+    rendered.text = fetched.text;
+  }
   const best = fetched && !looksBlocked(fetched.text) && fetched.text.length > rendered.text.length ? fetched : rendered;
   if (looksBlocked(best.text)) {
     throw new Error(`Blocked: the page is a bot check or error page, not the article (${best.text.replace(/\s+/g, ' ').slice(0, 80)})`);
@@ -173,6 +186,60 @@ export function htmlTitle(html: string): string | undefined {
 
 // Readable text from an HTML page: scripts, styles and page chrome out, block
 // elements as line breaks.
+// A page whose body never reaches the DOM as text: Next.js and its imitators
+// ship the article inside a JSON island and render it from there, so both the
+// plain fetch and the browser can come back with the headline and nothing else
+// (cosm.com returned 92 characters either way). Rather than give up on those,
+// the island is parsed and every string in it long enough to be prose is kept,
+// in document order, deduplicated. It is a fallback, not a parser: the shape of
+// the JSON differs per site, so this looks for text rather than for fields.
+const JSON_ISLAND = /<script[^>]+(?:id="__NEXT_DATA__"|type="application\/(?:ld\+)?json")[^>]*>([\s\S]*?)<\/script>/gi;
+// Short strings in these islands are keys, slugs, class names and ids; prose is
+// longer. 60 characters keeps a one-line summary and drops "hero-image-wide".
+const MIN_ISLAND_STRING = 60;
+// Islands also carry the page's own code - cosm.com ships its article as
+// compiled MDX, so the longest strings in it are JavaScript. Taking those would
+// be worse than taking nothing, because a wiki written from them looks full.
+const LOOKS_LIKE_CODE =
+  /\b(function|return|const|let|var|import|export|typeof|undefined|null)\b|=>|_jsx|\$\{|<\/?[A-Z][A-Za-z]*\s*\/?>|[{};]\s*$/;
+
+// Prose has words and sentence punctuation; a config blob has braces, colons
+// and paths. Requiring a few plain words keeps the test cheap and stable.
+function looksLikeProse(text: string): boolean {
+  if (LOOKS_LIKE_CODE.test(text)) return false;
+  const words = text.match(/\b[A-Za-z][A-Za-z'’-]{2,}\b/g) ?? [];
+  if (words.length < 8) return false;
+  const punctuation = (text.match(/[{}[\]<>|\\/=_]/g) ?? []).length;
+  return punctuation / text.length < 0.04;
+}
+
+export function jsonIslandText(html: string): string {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  const take = (value: unknown) => {
+    if (typeof value === 'string') {
+      // A string that is one long URL, or markup with no words between tags,
+      // is not prose however long it runs.
+      const text = /<[a-z][^>]*>/i.test(value) ? htmlToText(value) : value.trim();
+      if (text.length >= MIN_ISLAND_STRING && looksLikeProse(text) && !seen.has(text)) {
+        seen.add(text);
+        out.push(text);
+      }
+      return;
+    }
+    if (Array.isArray(value)) return value.forEach(take);
+    if (value && typeof value === 'object') return Object.values(value as Record<string, unknown>).forEach(take);
+  };
+  for (const match of html.matchAll(JSON_ISLAND)) {
+    try {
+      take(JSON.parse(match[1]));
+    } catch {
+      // A malformed or templated island is skipped; the others may still parse.
+    }
+  }
+  return out.join('\n\n');
+}
+
 export function htmlToText(html: string): string {
   return decodeEntities(
     html
