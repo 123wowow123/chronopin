@@ -114,7 +114,20 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
                   {t('pin.toMap')}
                 </Link>
               </div>
-              <PinMapLoader latitude={pin.latitude} longitude={pin.longitude} title={pin.title} />
+              <PinMapLoader latitude={pin.latitude} longitude={pin.longitude} title={pin.title} flightPath={pin.flightPath} />
+              {pin.flightPath ? (
+                <p className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted">
+                  <span>
+                    {t(pin.flightPath.estimated ? 'pin.flightPathEstimated' : 'pin.flightPath')}
+                    {pin.flightPath.label ? ` · ${pin.flightPath.label}` : ''}
+                  </span>
+                  {pin.flightPath.sourceUrl ? (
+                    <a href={pin.flightPath.sourceUrl} target="_blank" rel="noopener noreferrer">
+                      {t('pin.flightPathSimulation')}
+                    </a>
+                  ) : null}
+                </p>
+              ) : null}
               <PinWeather pinId={pin.id} />
             </div>
           ) : null}

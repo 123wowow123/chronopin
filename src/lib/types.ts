@@ -74,6 +74,15 @@ export type PinUserJson = {
   pictureUrl?: string;
 };
 
+export type PinFlightPathJson = {
+  label?: string | null;
+  sourceUrl?: string | null;
+  // Computed by us (src/lib/groundTrack.ts), not taken from a simulation.
+  estimated: boolean;
+  // [latitude, longitude] in flight order, starting at the pin's place.
+  points: [number, number][];
+};
+
 export type PinJson = {
   id: number;
   // In a language other than English, when the pin's words are its
@@ -148,6 +157,8 @@ export type PinJson = {
   awards?: PinAwardJson[];
   // Its tags: its own, the awards its text names, its awards' bodies and years.
   tags?: PinTagJson[];
+  // Where it goes from its place (a rocket's ground track); the map draws it on the pin's page.
+  flightPath?: PinFlightPathJson;
 };
 
 // A pin ready for a card: its description already sanitised (on the server

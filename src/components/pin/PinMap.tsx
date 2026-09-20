@@ -4,6 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useEffect, useRef } from 'react';
 import { useT } from '@/lib/client/i18n';
+import type { PinFlightPathJson } from '@/lib/types';
 
 // Leaflet's default marker images are resolved relative to its CSS, which a
 // bundler breaks; point them at the CDN copies instead.
@@ -22,7 +23,17 @@ export const TILE_ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/c
 export { icon as markerIcon };
 
 // A pin's place on an OpenStreetMap map.
-export default function PinMap({ latitude, longitude, title }: { latitude: number; longitude: number; title: string }) {
+export default function PinMap({
+  latitude,
+  longitude,
+  title,
+  flightPath,
+}: {
+  latitude: number;
+  longitude: number;
+  title: string;
+  flightPath?: PinFlightPathJson;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const t = useT();
 
@@ -31,10 +42,21 @@ export default function PinMap({ latitude, longitude, title }: { latitude: numbe
     const map = L.map(ref.current, { center: [latitude, longitude], zoom: 11, scrollWheelZoom: false });
     L.tileLayer(TILE_URL, { maxZoom: 19, attribution: TILE_ATTRIBUTION }).addTo(map);
     L.marker([latitude, longitude], { icon }).addTo(map).bindPopup(title);
+    // The path leaves the pin's place (the marker); a dashed line marks a
+    // computed estimate as opposed to a simulated trajectory.
+    if (flightPath) {
+      const line = L.polyline(flightPath.points, {
+        color: '#e11d48',
+        weight: 3,
+        opacity: 0.85,
+        dashArray: flightPath.estimated ? '8 6' : undefined,
+      }).addTo(map);
+      map.fitBounds(line.getBounds().extend([latitude, longitude]), { padding: [24, 24], maxZoom: 6 });
+    }
     return () => {
       map.remove();
     };
-  }, [latitude, longitude, title]);
+  }, [latitude, longitude, title, flightPath]);
 
   // isolate: Leaflet's panes and controls use z-index 400-1000, which would
   // otherwise scroll over the sticky navbar.

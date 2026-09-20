@@ -103,6 +103,8 @@ export default class BasePin {
     // Also read-only, from the view (PinTagView): saved by the routes and
     // model/pinTag.ts, never by the pin row's own update.
     this.tags = Array.isArray(pin.tags) ? pin.tags : [];
+    // Also read-only, from the view (PinFlightPath, src/server/services/pinFlightPath.ts).
+    this.flightPath = pin.flightPath && Array.isArray(pin.flightPath.points) ? pin.flightPath : null;
     return this;
   }
 

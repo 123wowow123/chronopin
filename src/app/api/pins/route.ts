@@ -16,6 +16,7 @@ import { rejectDuplicateSourceUrl } from '@/server/services/duplicatePin';
 import { invalidatePin } from '@/server/services/cache';
 import { reslotSeries, seriesPinFor } from '@/server/scrape/modelSeries';
 import { prequelPinFor, reslotSequels } from '@/server/scrape/prequel';
+import { flightPathProblem, saveFlightPath } from '@/server/services/pinFlightPath';
 import { addPinStocksQuietly } from '@/server/services/pinStocks';
 import { getPins } from '@/server/services/timeline';
 import log from '@/server/util/log';
@@ -53,7 +54,9 @@ export const GET = route(async (request: NextRequest) => {
 // no parentId at all is threaded like a scrape: a later anime season responds
 // to its earlier season's pin (server/scrape/prequel.ts), and an AI model's
 // release or update to its line's previous one (server/scrape/modelSeries.ts);
-// parentId: null posts it on its own. Either way, later seasons or versions
+// parentId: null posts it on its own. A flightPath: { points: [[lat, lng], ...],
+// label?, sourceUrl?, estimated? } is drawn from the pin's place on its page
+// (src/server/services/pinFlightPath.ts). Either way, later seasons or versions
 // that answered an earlier one move under this one when it now comes between.
 export const POST = route(async (request: NextRequest) => {
   const user = await requireUser(request);
@@ -63,7 +66,11 @@ export const POST = route(async (request: NextRequest) => {
   const tags = parseTags(body.tags);
   pin.categories = bodyCategories(body, tags);
   pin.setUser(user);
-  const problem = PinReference.problem(pin.references) ?? PinRating.problem(pin.ratings) ?? delayProblem(pin);
+  const problem =
+    PinReference.problem(pin.references) ??
+    PinRating.problem(pin.ratings) ??
+    delayProblem(pin) ??
+    (body.flightPath ? flightPathProblem(body.flightPath) : undefined);
   if (problem) {
     throw new HttpError(400, problem);
   }
@@ -74,6 +81,7 @@ export const POST = route(async (request: NextRequest) => {
 
   const { pin: saved } = await pin.save();
   if (tags?.length) await PinTag.setUserTags(saved.id, tags);
+  if (body.flightPath) await saveFlightPath(saved.id, body.flightPath);
   emitPinEvent('save', saved, { userId: user.id });
   // Everyone following the pin's company hears about it, as a follower of its
   // author would. Told after the response, like the stock lookup below.
