@@ -128344,7 +128344,7 @@
     "episodeStatus": null,
     "allDay": true,
     "utcCreatedDateTime": "2026-09-14T23:37:43.583Z",
-    "utcUpdatedDateTime": "2026-09-20T20:27:24.281Z",
+    "utcUpdatedDateTime": "2026-09-20T21:18:52.971Z",
     "utcDeletedDateTime": null,
     "user": {
       "id": 76,
@@ -128364,7 +128364,7 @@
     "merchants": [],
     "references": [
       {
-        "id": 947,
+        "id": 4008,
         "url": "https://en.wikipedia.org/wiki/Merdeka_118",
         "title": "Merdeka 118 – Wikipedia",
         "confidence": 82,
@@ -128374,17 +128374,7 @@
         "pinId": 554
       },
       {
-        "id": 948,
-        "url": "https://www.skyscrapercenter.com/building/merdeka-118/20642",
-        "title": "Merdeka 118 – The Skyscraper Center",
-        "confidence": 85,
-        "publishedDate": "2023-01-01",
-        "reasoning": "The Skyscraper Center could not be fetched due to a network restriction, but its title and 1 January 2023 publish date - shortly after the pin's stored 31 December 2022 date - are consistent with Merdeka 118's spire completion being logged around the turn of 2023.",
-        "utcCreatedDateTime": "2026-09-14T23:37:43.586109+00:00",
-        "pinId": 554
-      },
-      {
-        "id": 1506,
+        "id": 4009,
         "url": "https://www.youtube.com/watch?v=pnRscqkN3vw",
         "title": "Building the World's Last Megatall Skyscraper (The B1M)",
         "confidence": 70,
