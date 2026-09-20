@@ -17,7 +17,7 @@ import { PinConfidence } from './PinConfidence';
 import { CompanyTicker } from './CompanyTicker';
 import { PinCardOdds } from './PinOdds';
 import { PinMediaFrame } from './PinMedia';
-import { RatingAverage } from './PinRatings';
+import { RatingSummary } from './PinRatings';
 import { EpisodeCount } from './EpisodeCount';
 import { RefineLink } from './RefineLink';
 import { ViewCount } from './ViewCount';
@@ -181,8 +181,10 @@ export function PinCard({
                   <PinConfidence evidence={pinEvidence(pin)} />
                 </>
               ) : null}
-              {/* The review-site average, for a film, series or anime pin. */}
-              <RatingAverage ratings={pin.ratings} compact />
+              {/* The review-site average, for a film, series or anime pin, or
+                  the one source's own score where that is all the pin has -
+                  a card lists no sources beside it, same as a thread row. */}
+              <RatingSummary ratings={pin.ratings} />
               {/* How many episodes, for a series, anime or other episodic work. */}
               <EpisodeCount pin={pin} compact />
               {/* How far the start is from today, at the tail of the pills. */}

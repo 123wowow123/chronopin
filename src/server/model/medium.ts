@@ -2,9 +2,11 @@ import { randomUUID } from 'node:crypto';
 import getVideoId from 'get-video-id';
 import _ from 'lodash';
 import { mediumID } from '@/lib/appConfig';
+import * as azureBlob from '../azureBlob';
 import * as db from '../db';
 import type { QueryFn, Row } from '../db';
 import * as image from '../image';
+import { isNearDuplicate } from '../imageHash';
 import log from '../util/log';
 import BasePin from './basePin';
 
@@ -28,6 +30,11 @@ const prop = [
 export default class Medium {
   [key: string]: any;
   declare _pin?: BasePin;
+  // The picture's fingerprint (../imageHash.ts), for telling a new medium from
+  // one the pin already has. Underscored because it is worked out as the thumb
+  // is made and never stored: toJSON leaves it out, so it reaches neither the
+  // API nor the seed data.
+  declare _imageHash?: string;
   declare id: number;
   declare type: number;
   declare originalUrl: string;
@@ -68,8 +75,9 @@ export default class Medium {
   }
 
   async createAndSaveToCDN(): Promise<this> {
-    const newMedium = await getImageStatAndSaveImage(this.originalUrl);
-    return this.set(newMedium).save();
+    const { _imageHash, ...newMedium } = await getImageStatAndSaveImage(this.originalUrl);
+    this.set(newMedium)._imageHash = _imageHash;
+    return this.save();
   }
 
   // Saves a new medium of any type with its thumb: an image's own, or a
@@ -85,7 +93,9 @@ export default class Medium {
   async addThumb(): Promise<this> {
     const type = Number(this.type);
     if (type === mediumID.image) {
-      return this.set(await getImageStatAndSaveImage(this.originalUrl));
+      const { _imageHash, ...newMedium } = await getImageStatAndSaveImage(this.originalUrl);
+      this.set(newMedium)._imageHash = _imageHash;
+      return this;
     }
     if (type === mediumID.youtube && !this.thumbName) {
       await this.addVideoThumb().catch((err) => log.error('video-thumb error:', err));
@@ -154,8 +164,8 @@ export default class Medium {
 // one apiece. Same two inserts as createPinMediumLink, fed from arrays; the
 // rows go in ordinal order so the ids ascend with the list, and sorting what
 // comes back by id restores that order. Only for media that already have
-// their thumb - saveWithThumb fetches and uploads one per medium, which is
-// where a new pin's time actually goes.
+// their thumb - addThumb fetches and uploads one per medium, which is where a
+// new pin's time actually goes.
 export async function saveAllToPin(media: Medium[], pinId: number, query: QueryFn = db.query): Promise<Medium[]> {
   if (!media.length) {
     return media;
@@ -189,6 +199,61 @@ export async function saveAllToPin(media: Medium[], pinId: number, query: QueryF
     medium.id = rows[i].id;
   });
   return media;
+}
+
+// The fingerprint of a medium's picture: the one taken when its thumb was
+// made, else a reading of the thumb on the CDN, else of the original it came
+// from (production has no thumbs, and an old original can be gone from its
+// host). A medium that is not a picture, or whose picture cannot be read, has
+// none, and callers treat that as "cannot tell".
+export async function imageHashOf(medium: Medium): Promise<string | undefined> {
+  if (medium._imageHash || Number(medium.type) !== mediumID.image) {
+    return medium._imageHash;
+  }
+  const thumb = medium.thumbName ? await image.hashImageAtUrl(azureBlob.getBlobUrl(medium.thumbName)) : undefined;
+  medium._imageHash = thumb ?? (medium.originalUrl ? await image.hashImageAtUrl(medium.originalUrl) : undefined);
+  return medium._imageHash;
+}
+
+// The pictures worth adding out of adding, given the media the pin has: a
+// picture that is the one a pin already carries adds nothing to it, however
+// different its URL. It happens by the dozen - a poster from the page and the
+// same poster from the catalogue's CDN at another size, an article's og:image
+// that is the lead photo the page itself showed - and it costs the pin one of
+// the three slots it has for saying something new.
+//
+// Only pictures are weighed, and only against the pin's other pictures:
+// videos and media whose picture will not read are all kept.
+export async function withoutRepeatedPictures(
+  adding: Medium[],
+  existing: Medium[],
+): Promise<{ keep: Medium[]; dropped: { medium: Medium; like: Medium }[] }> {
+  const pictures = adding.filter((m) => Number(m.type) === mediumID.image);
+  if (!pictures.length) {
+    return { keep: adding, dropped: [] };
+  }
+  const kept = [...existing.filter((m) => Number(m.type) === mediumID.image)];
+  const dropped: { medium: Medium; like: Medium }[] = [];
+  for (const medium of pictures) {
+    const hash = await imageHashOf(medium);
+    const like = hash && (await firstNearDuplicate(hash, kept));
+    if (like) {
+      dropped.push({ medium, like });
+      log.info(`skipping ${medium.originalUrl}: the same picture as ${like.originalUrl}`);
+    } else {
+      kept.push(medium);
+    }
+  }
+  return { keep: adding.filter((m) => !dropped.some((d) => d.medium === m)), dropped };
+}
+
+async function firstNearDuplicate(hash: string, media: Medium[]): Promise<Medium | undefined> {
+  for (const other of media) {
+    if (isNearDuplicate(hash, await imageHashOf(other))) {
+      return other;
+    }
+  }
+  return undefined;
 }
 
 const MEDIUM_COLUMNS = [
@@ -239,6 +304,7 @@ type ThumbMeta = Awaited<ReturnType<typeof image.createThumbFromUrl>>;
 function mapAndSaveThumb(thumb: ThumbMeta) {
   return image.saveThumb({
     buffer: thumb.buffer,
+    hash: thumb.hash,
     thumbName: randomUUID() + thumb.extension,
     thumbWidth: thumb.thumbWidth,
     thumbHeight: thumb.thumbHeight,
@@ -252,9 +318,10 @@ function mapAndSaveThumb(thumb: ThumbMeta) {
 
 async function getImageStatAndSaveImage(imageUrl: string) {
   const saved = await mapAndSaveThumb(await image.createThumbFromUrl(imageUrl));
-  // The buffer and mime type are only needed for the upload.
-  const { buffer: _buffer, mimeType: _mimeType, ...medium } = saved;
-  return medium;
+  // The buffer and mime type are only needed for the upload; the hash is the
+  // medium's own, under the name the class keeps it by.
+  const { buffer: _buffer, mimeType: _mimeType, hash, ...medium } = saved;
+  return { ...medium, _imageHash: hash };
 }
 
 // Removes the link and the medium row itself (not the file on the CDN), in

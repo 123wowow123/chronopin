@@ -1,6 +1,7 @@
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import {
   aniListEpisodes,
+  findScreenDetails,
   malIdOf,
   isScreenCategory,
   malEpisodes,
@@ -168,5 +169,39 @@ describe('episode counts', () => {
     expect(wikidataEpisodes([{ episodes: '1122' }])).toEqual({ episodeCount: 1122, episodeStatus: 'ongoing' });
     expect(wikidataEpisodes([{ score: '93%' }])).toBeUndefined();
     expect(wikidataEpisodes([{ episodes: '1' }])).toBeUndefined();
+  });
+});
+
+describe('findScreenDetails with a cited MyAnimeList id', () => {
+  // Routes each lookup the fake way: AniList knows nothing (a doujin work it
+  // does not list), Wikidata finds nothing, Jikan has the score.
+  function stubFetch(jikan: unknown) {
+    const calls: string[] = [];
+    vi.stubGlobal('fetch', async (url: string, init?: RequestInit) => {
+      calls.push(url);
+      const body = url.includes('api.jikan.moe')
+        ? JSON.stringify(jikan)
+        : url.includes('graphql.anilist.co')
+          ? JSON.stringify({ data: { Media: null, Page: { media: [] } } })
+          : JSON.stringify({ search: [], results: { bindings: [] } });
+      void init;
+      return new Response(body, { status: 200, headers: { 'content-type': 'application/json' } });
+    });
+    return calls;
+  }
+
+  afterEach(() => vi.unstubAllGlobals());
+
+  it('takes the MyAnimeList score when AniList has no entry to match', async () => {
+    const calls = stubFetch({ data: { url: 'https://myanimelist.net/anime/55315/Gensou_Mangekyou', score: 7.64, type: 'OVA', status: 'Currently Airing', episodes: null } });
+    const details = await findScreenDetails({ pinTitle: 'Gensou Mangekyou: The Memories of Phantasm Premieres', category: 'Anime', year: 2011, malId: 55315, skipTrailer: true });
+    expect(details.ratings).toEqual([{ source: 'MyAnimeList', score: 7.64, scoreMax: 10, url: 'https://myanimelist.net/anime/55315/Gensou_Mangekyou' }]);
+    expect(calls.some((url) => url.includes('api.jikan.moe/v4/anime/55315'))).toBe(true);
+  });
+
+  it('leaves the ratings empty when neither source knows the work', async () => {
+    stubFetch({ status: 504, message: 'Jikan failed to connect to MyAnimeList' });
+    const details = await findScreenDetails({ pinTitle: 'Gensou Mangekyou: The Memories of Phantasm Premieres', category: 'Anime', year: 2011, malId: 55315, skipTrailer: true });
+    expect(details.ratings).toEqual([]);
   });
 });

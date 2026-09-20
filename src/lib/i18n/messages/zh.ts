@@ -129,6 +129,7 @@ const zh: Messages = {
     'gaming-entertainment': '游戏与娱乐',
     anime: '动画',
     'anime-movie': '动画电影',
+    manga: '漫画',
     movies: '电影',
     'tv-series': '电视剧',
     'music-audio': '音乐与音频',

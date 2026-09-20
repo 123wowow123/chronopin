@@ -3,6 +3,7 @@
 import { Jimp } from 'jimp';
 import * as azureBlob from './azureBlob';
 import config from './config';
+import { imageHash } from './imageHash';
 import log from './util/log';
 
 const THUMB_OPTIONS = {
@@ -107,6 +108,10 @@ export async function shrinkImage(input: Buffer, options: typeof THUMB_OPTIONS) 
     originalWidth,
     originalHeight,
     type: mime,
+    // Taken here, off the picture as it is stored, so the fingerprint of a
+    // medium saved now and of one re-read from the CDN later are the same
+    // reading of the same thumbnail.
+    hash: imageHash(image),
   };
 }
 
@@ -124,6 +129,7 @@ export async function squareImage(input: Buffer, size: number) {
 function toThumb(newThumb: Awaited<ReturnType<typeof shrinkImage>>, originalUrl: string | undefined) {
   return {
     buffer: newThumb.buffer,
+    hash: newThumb.hash,
     thumbWidth: newThumb.width,
     thumbHeight: newThumb.height,
     originalUrl,
@@ -156,6 +162,19 @@ export async function createThumbFromUrl(imageUrl: string) {
   } catch (err) {
     log.error('save-thumb error:', err);
     throw err;
+  }
+}
+
+// The fingerprint of a picture that is already somewhere: a thumb on the CDN,
+// or the original a medium was made from. Best effort - a picture that will
+// not download or decode has no hash, and whatever asked is left to decide
+// without one.
+export async function hashImageAtUrl(imageUrl: string): Promise<string | undefined> {
+  try {
+    return imageHash(await readImage(await downloadImage(imageUrl)));
+  } catch (err) {
+    log.warn('image-hash error:', (err as Error).message);
+    return undefined;
   }
 }
 

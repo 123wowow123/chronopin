@@ -10,6 +10,7 @@ export const CATEGORIES = [
   'Gaming & Entertainment',
   'Anime',
   'Anime Movie',
+  'Manga',
   'Movies',
   'TV Series',
   'Music & Audio',

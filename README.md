@@ -480,6 +480,8 @@ major local events by major city scrape and more targetted by your location
 
 - nightly job should be guided by LLM reasoning and guidance so it's flexible like running in current sessions 
 
+
+
 # OKF
 
 # Other
@@ -488,3 +490,11 @@ major local events by major city scrape and more targetted by your location
 
 # Scraping
 https://trends.google.com/explore
+
+
+7 ratings applied across 156 pins. 149 still have none, 95 of which have already aired, so a score exists and the lookup simply failed — 251 Jikan 504s, identical in both runs. Jikan serves cached titles and 504s the rest; One Piece answers, Mushoku Tensei doesn't. Re-run later with scratchpad/ids.txt; it's insert-or-refresh so it's free to repeat.
+
+Open
+Kaiju No. 8 Season 1 (MAL 52588) and Mission Recon (59489) aren't pinned — that's why 2316 heads its chain instead of sitting under Season 1.
+Aggregator channels outrank official ones in trailer search — hit twice today (AnimeSelect, Anime World), both skipped by hand. Worth scoring the studio's own channel above search rank.
+Offered, not started: tagging anime pins by AniList's source field (MANGA, LIGHT_NOVEL, ORIGINAL…).

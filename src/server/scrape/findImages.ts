@@ -9,6 +9,7 @@
 // Everything here is best effort: a source that fails adds nothing.
 
 import { modelReleases } from '@/lib/modelSeries';
+import { sameImageKey } from '../imageHash';
 import log from '../util/log';
 import { wikiImages, type WikiImage } from './wikiImages';
 
@@ -161,10 +162,14 @@ export async function findPinImages(
 ): Promise<{ images: FoundImage[]; references: FoundReference[] }> {
   const images: FoundImage[] = [];
   const references: FoundReference[] = [];
-  const seen = new Set(skip);
+  // By picture rather than by URL: a CDN's size suffix makes one poster look
+  // like two (see sameImageKey). What that misses - the same picture from
+  // another host - is caught once it is downloaded, in model/medium.ts.
+  const seen = new Set(skip.filter(Boolean).map(sameImageKey));
   const add = (img: FoundImage) => {
-    if (seen.has(img.originalUrl)) return;
-    seen.add(img.originalUrl);
+    const key = sameImageKey(img.originalUrl);
+    if (seen.has(key)) return;
+    seen.add(key);
     images.push(img);
   };
   if (need <= 0 || !pin.title) return { images, references };

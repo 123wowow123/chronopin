@@ -109,6 +109,17 @@ export async function findScreenDetails(query: ScreenQuery, budgetMs = DEFAULT_B
     // whose total AniList leaves open).
     if (isEpisodic) details.episodes ??= anime.episodes ?? mal?.episodes ?? undefined;
   }
+  // AniList does not list every work MyAnimeList does - doujin productions
+  // above all ("Gensou Mangekyou", which 404s there by id and by title), so
+  // without this a pin citing its own MyAnimeList page gets no score at all
+  // when AniList has no entry to match. A cited id names the work outright,
+  // the way it already does for the episode count, so no title match is
+  // needed for it.
+  if (query.malId && !details.ratings.some((r) => r.source === 'MyAnimeList')) {
+    const cited = await findMyAnimeList(query.malId, signal).catch(() => undefined);
+    if (cited?.rating) details.ratings.push(cited.rating);
+    if (isEpisodic) details.episodes ??= cited?.episodes;
+  }
   if (wikidata) {
     details.ratings.push(...wikidata.ratings);
     // Wikidata's search is the loosest of the three, so its count is only

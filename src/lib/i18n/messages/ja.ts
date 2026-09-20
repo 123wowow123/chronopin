@@ -128,6 +128,7 @@ const ja: Messages = {
     'gaming-entertainment': 'ゲーム・エンタメ',
     anime: 'アニメ',
     'anime-movie': 'アニメ映画',
+    manga: '漫画',
     movies: '映画',
     'tv-series': 'テレビシリーズ',
     'music-audio': '音楽・オーディオ',

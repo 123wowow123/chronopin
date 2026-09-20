@@ -2,7 +2,7 @@ import * as db from '../db';
 import type { QueryFn, Row } from '../db';
 import BasePin, { BasePinProp } from './basePin';
 import Company from './company';
-import { saveAllToPin } from './medium';
+import { saveAllToPin, withoutRepeatedPictures } from './medium';
 import Merchant from './merchant';
 import PinRating from './pinRating';
 import PinReference from './pinReference';
@@ -26,13 +26,19 @@ export default class Pin extends BasePin {
       // listed every medium and merchant twice.)
       // Media keep their own path: each one fetches and uploads a thumb, which
       // is what a new pin's time actually goes on, so they run together.
-      const mediaSaved = Promise.all(this.media.map((m) => m.saveWithThumb()));
+      const thumbs = Promise.all(this.media.map((m) => m.addThumb()));
       // The rest go a statement each, in the order the form lists them.
       await Merchant.saveAll(this.merchants, this.id);
       await PinReference.saveAll(this.references);
       await PinRating.saveAll(this.ratings || []);
       if (this.categories) await PinTag.setCategories(this.id, this.categories);
-      await mediaSaved;
+      await thumbs;
+      // A page and the catalogue it cites often hand over the same picture
+      // twice; only one of them is worth a slot on the pin.
+      this.media = (await withoutRepeatedPictures(this.media, [])).keep;
+      // The rows go in together once every thumb is up, in the order the pin
+      // lists them.
+      await saveAllToPin(this.media, this.id);
       return { pin: this };
     } catch (err) {
       console.log(`Pin '${this.title}' save err:`);
@@ -61,6 +67,17 @@ export default class Pin extends BasePin {
     // new media's thumbs (a failure writes nothing), and the company, whose
     // logo lookup runs in the background and must find its row committed.
     await Promise.all(toSaveOriginalMedia.map((medium) => medium.addThumb()));
+    // Whatever of that is the picture the pin already has (a rescrape finding
+    // the poster again at another size) is dropped here, before any row is
+    // written, and left out of the pin this returns.
+    const { dropped } = await withoutRepeatedPictures(
+      toSaveOriginalMedia,
+      beforePinMedia.filter((m) => !toDeleteOriginalMedia.includes(m)),
+    );
+    for (const { medium } of dropped) {
+      toSaveOriginalMedia.splice(toSaveOriginalMedia.indexOf(medium), 1);
+      this.media.splice(this.media.indexOf(medium), 1);
+    }
     await Company.applyToPin(this);
 
     // Then everything else in one transaction, the pin row first. These used

@@ -128,6 +128,7 @@ const es: Messages = {
     'gaming-entertainment': 'Videojuegos y entretenimiento',
     anime: 'Anime',
     'anime-movie': 'Película de anime',
+    manga: 'Manga',
     movies: 'Películas',
     'tv-series': 'Series de televisión',
     'music-audio': 'Música y audio',

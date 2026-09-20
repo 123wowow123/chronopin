@@ -21,7 +21,7 @@ import { parseArgs } from 'node:util';
 import { mediumID } from '@/lib/appConfig';
 import { picturesNeeded } from '@/lib/mediaTarget';
 import * as db from '@/server/db';
-import Medium from '@/server/model/medium';
+import Medium, { withoutRepeatedPictures } from '@/server/model/medium';
 import Pin from '@/server/model/pin';
 import { findPinImages } from '@/server/scrape/findImages';
 
@@ -38,10 +38,19 @@ const { values: flags } = parseArgs({
 const DELAY_MS = Number(flags.delay ?? 4) * 1000;
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
+// The thumb is made first and the picture weighed against the ones the pin
+// has: a source that hands back a picture the pin already carries at another
+// size adds nothing, and is left unstored rather than taking a slot.
 async function store(pin: Pin, image: { originalUrl: string; width?: number; height?: number }): Promise<boolean> {
   for (let attempt = 1; attempt <= 4; attempt++) {
     try {
-      await new Medium({ type: mediumID.image, originalUrl: image.originalUrl, originalWidth: image.width || undefined, originalHeight: image.height || undefined }, pin).createAndSaveToCDN();
+      const medium = new Medium({ type: mediumID.image, originalUrl: image.originalUrl, originalWidth: image.width || undefined, originalHeight: image.height || undefined }, pin);
+      await medium.addThumb();
+      if (!(await withoutRepeatedPictures([medium], pin.media)).keep.length) {
+        return false;
+      }
+      await medium.save();
+      pin.media.push(medium);
       return true;
     } catch (err) {
       const message = (err as Error).message || String(err);

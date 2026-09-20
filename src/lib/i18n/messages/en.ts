@@ -129,6 +129,7 @@ const en = {
     'gaming-entertainment': 'Gaming & Entertainment',
     anime: 'Anime',
     'anime-movie': 'Anime Movie',
+    manga: 'Manga',
     movies: 'Movies',
     'tv-series': 'TV Series',
     'music-audio': 'Music & Audio',

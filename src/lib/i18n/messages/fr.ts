@@ -128,6 +128,7 @@ const fr: Messages = {
     'gaming-entertainment': 'Jeux vidéo et divertissement',
     anime: 'Anime',
     'anime-movie': 'Film d’animation japonais',
+    manga: 'Manga',
     movies: 'Films',
     'tv-series': 'Séries télévisées',
     'music-audio': 'Musique et audio',

@@ -1,6 +1,7 @@
 # Update Log
 
 ## 2026-09-20
+* **Update**: [Enrichment](/scraping/enrichment.md) and [Learnings](/scraping/learnings.md) now say a video embedded in one of a pin's reference articles is cited as a reference *and* added to its media (grep the raw HTML - the iframe never survives the text conversion), and that a released product cites its MSRP from the company's own store page; pin 315 is the worked example.
 * **Update**: [Sources](/scraping/sources.md) and the [strategy](/scraping/strategy.md) now cover PDFs: the pipeline reads a filing's text layer and OCRs it when it is a scan ([pdfText.ts](../../src/server/scrape/pdfText.ts), `Source.kind` gains `pdf` in 0051), replacing the standing "no poppler locally, decode by hand" note.
 * **Update**: [Nightly jobs](/scraping/nightly-jobs.md) gained `astronomy:eclipses`, `sports:tournaments` and `trends:discover`, a Google Trends section explaining why that job posts nothing, and a past-against-future reading of every category - the measurement that says a vertical is finished even when its total looks healthy.
 * **Update**: [Vertical recipes](/scraping/verticals.md) added the solar-eclipse and tournament recipes, and moved sneaker releases to the new `Fashion & Apparel` category.

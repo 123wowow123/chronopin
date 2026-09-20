@@ -32,6 +32,7 @@
     "media:awards": "tsx scripts/media/awards.ts",
     "media:studio-locations": "tsx scripts/media/studioLocations.ts",
     "media:top-up": "tsx scripts/media/topUp.ts",
+    "media:dedupe": "tsx scripts/media/dedupe.ts",
     "media:score-markets": "tsx scripts/media/scoreMarkets.ts",
     "markets:volume": "tsx scripts/markets/volume.ts",
     "merchants:amazon-prices": "tsx scripts/merchants/amazonPrices.ts",
