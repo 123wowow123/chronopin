@@ -597,3 +597,360 @@ citation rule enforces it. The pin extraction prompt has no equivalent pressure,
 and the result is agents reaching past the page - summing figures, naming
 architects, strengthening "one of the largest in North America" into "largest in
 the world". Worth giving pin writing the same discipline.
+
+## 2026-09-20 - "Already available" is not a release date (71 pins on one day)
+
+Three contradiction batches independently tripped over pins parked on
+**2026-09-08** matching nothing in their own links. The date was not two bad
+pins: **71 pins**, every one @GameDesk, **65 of them `confirmed`**, all sharing
+that single start date. The busiest real day in the surrounding four months has
+twelve.
+
+- **Where it came from.** All 71 were scraped from one Gear Patrol *"September
+  Week 2, 2026"* roundup. The extractor said so itself, in
+  `dateConfidenceReasoning`, 65 times over: *"Listed as already available in Gear
+  Patrol's September Week 2, 2026 roundup."*
+- **The error.** "Already available" is a **bound**, not a day - it says the
+  release had happened by press time. The extractor converted it into a release
+  date, and resolved the roundup's *week* to its Monday. Pin 310 (iPhone 18 Pro)
+  ended up dated **the day before** Apple's own newsroom announced it; pin 315
+  (Mac mini) sat two weeks after an announcement its own references date to
+  25 August.
+- **Why nothing caught it.** The sources are manufacturer **store pages**
+  (`apple.com/shop/buy-iphone/...`, Sony, Marantz, Sonos, JBL, Yamaha), which
+  carry no event date at all. With nothing on the page to date, the extractor
+  reached for the only date in sight - the article's own publication period -
+  and, because the roundup stated availability flatly, called it `confirmed`.
+  A date inferred from *when the article ran* was being laundered into a fact
+  about the product.
+- **The tell, for next time.** One date shared by dozens of pins from six
+  unrelated manufacturers is never a real date. A `GROUP BY` on start date
+  across a scrape is a cheap check and would have caught this on day one; it is
+  worth running after any roundup job.
+
+**Fixed in `src/server/extract/systemPrompt.ts`**: a roundup, week-in-review or
+shopping guide listing something as out now gives the *latest* the release could
+be, so the pin takes that period's last day, `allDay`, `estimated` at best - and
+a date inferred from an article's publication date is never `confirmed`.
+
+This is the same family as the grounding rule above: the page did not state the
+fact, and the extractor supplied it anyway. Here it supplied a date rather than
+a figure, which is harder to notice, because a wrong date still looks like a
+date.
+
+**Outcome (same day).** All 71 re-dated from their own references by three
+agents, none left on 2026-09-08: **35 confirmed, 31 estimated, 5 unknown**. The
+corrected spread is the point - the roundup had made 65 of them `confirmed`.
+
+- **The references already held the right answer.** In most cases the pin's own
+  links stated the availability plainly and the extractor overrode them with the
+  roundup week. Thirteen of one agent's 24 pins carried a **month-only**
+  availability line ("available from September 2026", "December in North
+  America") that simply needed the period's last day.
+- **The roundup was wrong about availability itself, not just the day.** Several
+  products it listed as "already available" had not shipped at all: pin 309
+  (iPhone Duo) ships **2026-10-23**, six weeks *after* the date it carried as
+  `confirmed`; pin 384 (Razer x Xbox) 20 October; pin 367 (Ruka TD-1) is a
+  pre-order for **2027**. So a corrected date is as likely to move later as
+  earlier - do not assume the roundup date is an upper bound either.
+- **Do not batch siblings from one announcement onto one date.** A single Marantz
+  press release covered three receivers and gave the Cinema 70s (pin 372)
+  15 September where its two siblings got 12 August.
+- **"Available now" in a single article is the same bug in miniature.** Where
+  that was the only wording, the honest answer was the announcement date at
+  `unknown` (pins 338, 351, 356, 361, 332), not a confirmed release.
+
+Reasoning that still names Gear Patrol is now fine, and eight pins do: they cite
+a **dated article with a quoted availability claim**, which is evidence. It was
+the undated *week* label that was not.
+
+## 2026-09-20 - Ruling: a figure in a video title is a headline, not a claim
+
+Nearly every contradiction batch filed the same shape, and one asked outright for
+a ruling: a B1M or Free Documentary YouTube page captured as **metadata only, no
+transcript**, whose sole checkable "fact" is a cost in the video's own title -
+`$100BN`, `$40BN Kansai`, `$2.8BN Silvertown`, `AUD $125BN Suburban Rail Loop` -
+sitting against a proper figure from a text source.
+
+**The ruling: a figure that appears only in a video title is a headline, not a
+sourced claim.** Do not file it as a contradiction against a text source. Video
+titles are written to be clicked on, and they are routinely at a different scope
+from the pin: the `$2.8BN` Silvertown title against New Civil Engineer's £179M is
+an order of magnitude, and the `AUD $125BN` Suburban Rail Loop title covers
+Melbourne's whole metro programme where the pin is one line.
+
+**The exception, which is the case actually worth catching:** where a *pin's own*
+headline figure traces back to nothing but a video title, that is the pin
+treating a marketing number as fact, and it should be reported. Pin 610 is the
+example - its "$125BN Suburban Rail Loop" has no support but the title, against
+Wikipedia's $31-58bn for the scope the pin describes.
+
+**How big the class is** (measured 2026-09-20): 523 YouTube captures are `ready`,
+**104 of them thin enough to hold no transcript**, and 104 pins cite at least one.
+Only **one** pin rests solely on such captures, so the usual damage is a pin with
+one fewer usable reference rather than a pin with no evidence - less dire than
+the batch reports suggested, but it does mean a "second source" on those pins is
+often not a second source at all.
+
+The fix that would retire the class is transcripts (`npm run wiki:transcripts`),
+still blocked by YouTube's 429s. Until then, treat a transcript-less video as
+corroborating nothing.
+
+## 2026-09-20 - A wrong date hides a duplicate
+
+Running `npm run duplicates:suggest` after the 71 re-dated pins landed produced
+**12 new pairs across 2,146 pins**, and seven of them were the same Apple
+products pinned twice: @ThePinGang's "AirPods 5 Release", "Apple Watch Ultra 4
+Release", "iPhone Duo Release" (from MacRumors) against @GameDesk's "Apple
+AirPods 5", "Apple Watch Ultra 4", "Apple iPhone Duo" (from apple.com store
+pages).
+
+They had been invisible for a simple reason: the duplicate check compares pins
+**within a day of each other**, and the roundup pins were all parked on
+2026-09-08 while their twins sat on the real release dates. Correcting the dates
+dropped each pair onto the same day - 18 September, 23 October - and the check
+saw them immediately.
+
+**So a date error does not just mis-place a pin, it conceals a duplicate.** Worth
+running `duplicates:suggest` after any job that corrects dates in bulk; it is
+cheap and it only ever adds suggestions, which people confirm.
+
+Two related notes from the same run:
+
+- **Suggestions only run on save.** A pin is never re-checked against pins added
+  later, which is why Jeddah Tower had three live pins (134, 219, 448) with no
+  suggestion between any of them until the job was run by hand.
+- **Widening the day window is the wrong lever.** Adding `scheduled` to
+  `SOFT_DATES` in `services/duplicatePin.ts` (274 pins, currently a one-day
+  window) was tried and reverted: measured against the corpus it took visible
+  pairs from 5 to 49, and what it surfaced was OpenAI model-retirement pins,
+  Nike colorway releases and consecutive eclipses - all distinct by design. The
+  periodic `duplicates:suggest` run gets the real pairs without the noise.
+
+**Cross-checking the findings by source URL is a second duplicate detector.** Of
+657 source URLs named in the 431 contradiction findings, only 7 were implicated
+across more than one pin - and every one was a near-duplicate pair (Chuo
+Shinkansen, Jeddah Tower, Bogota Metro, Australia 108) except Second Avenue
+Subway, where Phase One and Phase 2 correctly share one Wikipedia article.
+
+## 2026-09-20 - A wrong season in the title costs a pin its ratings
+
+Pin 1131 was titled "Mushoku Tensei: Jobless Reincarnation **Season 2** Part 2
+Premieres", but its MyAnimeList link (anime/45576), its date (4 Oct 2021) and
+its whole summary were season 1's second cour. Everything downstream of the
+title then went wrong, quietly:
+
+- **No ratings.** `findScreenDetails` matches on exact normalised title *and*
+  year. The title sent it to the real Season 2 Part 2 (2024), the year check
+  rejected that, and the pin matched nothing at all - the dry run's `as "-": no
+  ratings` is exactly this and nothing else.
+- **The wrong trailer.** An earlier run had matched the title it was given and
+  attached Crunchyroll's *Season 2 Part 2* trailer (`wwKZYTsxIhk`) to a 2021
+  pin. Nothing flags a trailer that matched a title the pin should not have had.
+
+Fixing the title to "... Part 2 Premieres" (PUT through the real API) and
+re-running `media:screen --ids 1131 --apply` gave it AniList 85 / MAL 8.6 and
+the right trailer (`vPBU0xBjFFY`, "Cour 2"). To re-pick a trailer, first PUT the
+pin with the video dropped from `media` - the backfill only searches when the
+pin has no video.
+
+**Check a screen pin's title against its own sourceUrl and start year before
+blaming the rating sources.** A season number is the easiest thing to get wrong
+and the most expensive.
+
+### The gap the wrong title was papering over
+
+There were no pins for Season 2 (Jul 2023) or Season 2 Part 2 (Apr 2024) at all,
+so the thread ran S1 -> S1 Part 2 -> S3. Both were added as @AnimeDesk through
+`POST /api/pins` with an explicit `parentId` (the scrape's `respondTo` answered
+1131 for *both*, which would have branched). `reslotSequels` then moved Season 3
+onto the new Part 2 by itself, leaving one line: 1106 -> 1131 -> 2314 -> 2315 ->
+1080.
+
+## 2026-09-20 - AniList does not list every work MyAnimeList does
+
+Pin 1564 (Gensou Mangekyou: The Memories of Phantasm, a Touhou doujin anime) had
+no score, and could never have had one: `findScreenDetails` only fetched the
+MyAnimeList rating *through* an AniList match, and AniList 404s on this work by
+MAL id and returns nothing for its title, romaji or native. The pin's own
+sourceUrl names the MAL id outright - the code already trusted a cited id for
+the episode count, just not for the score. `src/server/scrape/screen.ts` now
+falls back to the cited id for the rating too, covered by two tests that stub
+`fetch` (the second asserts the empty case, so a 504 from Jikan stays silent).
+
+**Jikan goes down for everything, not just one title.** While fixing this it
+answered `504 Jikan failed to connect to MyAnimeList` for every id tried, having
+worked minutes earlier. Do not read a 504 as "this work is unknown".
+
+**When a source is unreachable, the fetched page text is already in the
+database.** `Source.text` holds what the link fetcher stored (`seedSourceTexts.json.gz`),
+so 1564's score came out of its own cited MAL page as captured on 19 Sep -
+`SELECT "text" FROM "Source" WHERE "url" LIKE '%anime/55315%'` and grep for
+`Score:`. Better than a blocked re-fetch, and it is the source the pin already
+cites.
+
+## 2026-09-20 - Side stories go in the chain, at their release date
+
+Ruling from Ian: an OVA, special, bonus episode or side-story entry **belongs on
+the timeline chain**, not parked as a standalone root. Mushoku Tensei's Blu-ray
+OVA (1511, "Cour 2 - Eris the Goblin Slayer", Mar 2022) had been left rootless
+while the TV seasons chained around it. It now sits in release order:
+
+    1106 (Jan 2021) -> 1131 (Oct 2021) -> 1511 (Mar 2022 OVA)
+      -> 2314 (Jul 2023) -> 2315 (Apr 2024) -> 1080 (Jul 2026)
+
+The chain is ordered by **release, not story**, and never branches, so slotting a
+side story in costs nothing - inserting it means re-parenting just the one entry
+that follows it. "This would branch" is therefore not a reason to leave a side
+story out; it only would if it were hung off the same parent as its neighbour.
+
+Re-parent with PUT (send the whole pin back with `parentId` set), from the root
+down so no cycle exists in between. PUT does not re-thread - only `POST` runs
+`reslotSequels` - so an explicit parent set this way stays put.
+
+## 2026-09-20 - A pin with one rating showed no score on its card
+
+`PinCard` rendered `<RatingAverage compact>`, which by design draws nothing below
+two sources ("an average would just restate the single chip beside it"). On a
+card there is no chip beside it, so **319 pins - every pin with exactly one
+rating - had a blank where their score should be**, while the same pin's page
+and thread rows showed it.
+
+`RatingSummary` already solved this for thread rows: average when there are two
+or more, otherwise the single source's own score, labelled so it never reads as
+a consensus of one. The card now uses it. Checked both ways afterwards - pin
+1500 (AniList only) shows `76%`, pin 1131 (two sources) still shows `86%` titled
+"Average of 2 ratings".
+
+**Worth remembering:** a missing score on a card is not always missing data.
+Check `GET /api/pins/:id` for `ratings` before re-running any backfill.
+
+## 2026-09-20 - Acting on the warnings: a third of them were wrong
+
+The sweep's 88 `warning` findings are the ones putting a pin's own claim in
+doubt. 51 are on curator accounts and were worked through by three agents told
+to **verify each finding before acting on it**, with "the finding is mistaken"
+named as a perfectly good outcome.
+
+**34 pins fixed, 17 findings rejected.** A third of the findings did not survive
+checking. That number is the reason the instruction matters: an agent told to
+"fix these 51 pins" would have introduced seventeen errors into pins that were
+already right.
+
+**What the rejections looked like** - the pin was right and the *source* was
+wrong, or the two sources described different events:
+
+- **827 MSC Divina** - Wikipedia says delivered at Marseille; the trade press,
+  reporting the ceremony, has her handed over at Saint-Nazaire. Wikipedia's own
+  infobox contradicts its text. The pin follows the better source.
+- **1640 Chibi Maruko-chan** - Japanese sources confirm the 8 January 1995
+  premiere the pin carries; AniList's August record is simply bad.
+- **2032 Harry Potter** - HBO's own release says "premiering Christmas 2026";
+  TVmaze's "premiering 2027" status line is stale.
+- **705 China's skyscraper ban** - the finding said the 250 m restriction came
+  from a 2021 order; the pin's own source video states the April 2020 notice
+  carried both. The finding had not read the pin's source.
+- **798 / 808 / 499** - the pin already disclosed the disagreement in its own
+  summary, so it was never asserting the disputed figure.
+
+**Where the pin really was wrong, the fixes were worth having:** a US-format
+dateline read as D/M (802, 1 July -> 7 January); a date taken from the practical
+completion of *a different building* (709, 20 Hanover Square); an airship pinned
+in Akron that was built and flown in California (444); a complex's opening day
+standing in for a tower's completion (635); "opens Phase 1" for what the source
+calls a ceremonial technical opening (456).
+
+**Two habits worth keeping.** Where a figure was disputed and nothing settled it,
+the fix was to **drop the claim rather than swap in another unverified number** -
+pin 915's carillon had three bell counts (48/70/72), so the pin now gives none.
+And where a date could not be established, the pin was made **honest rather than
+precise**: pin 709 moved to an end-of-2020 `estimated` with the uncertainty
+written into `dateConfidenceReasoning`, rather than inventing a day.
+
+Fixed pins need no finding cleanup: `contradictionSignature` covers the title,
+description and dates, so editing a pin changes its signature and the next
+contradiction run replaces its findings.
+
+## 2026-09-20 - Kaiju No. 8 Season 2 (pin 2316, @AnimeDesk)
+
+MAL 59177 -> pin 2316: aired 19 Jul - 27 Sep 2025, 11 episodes, Production I.G,
+placed at the studio's Musashino HQ, AniList 78. Scrape returned `llm: "session"`
+again, so the description and summary were written by hand from the cited page.
+
+**The trailer search picked a re-uploader over the show's own channel.** The dry
+run chose "KAIJU NO.8 Season 2 - Official Main Trailer | English Sub" by
+**AnimeSelect**, a verified but aggregating channel, because `pickTrailer` scores
+`official`(+2) + `trailer`(+1) and then subtracts `rank * 0.25` - and AnimeSelect
+held the top two search results while TOHO animation's own uploads sat at ranks
+3-6. The official 【Official】 titles scored the same on words and lost on rank
+alone.
+
+Fixed by hand: `--apply --skip-trailer 2316` for the ratings, then attaching
+TOHO animation's main PV (`86pUz-brRJQ`, the video AniList itself lists for the
+season) through `Medium#saveWithThumb`. Note `--skip-trailer` skips the whole
+trailer block, **including** the AniList-listed fallback, so there is no flag
+that means "use AniList's trailer, not the search's".
+
+Worth watching whether this recurs: if an aggregator routinely outranks the
+production company's channel, the fix is to score a channel named after the
+work's studio or distributor above rank, not to keep skipping by hand.
+
+### Threading: `reslotSequels` did the sequel, the side story needed a hand
+
+Posting 2316 moved 1770 ("Final Chapter Announced", Dec 2025) onto it by itself.
+But 1690 ("Narumi's Week at Work", Sep 2026) stayed a root, because **AniList
+lists no prequel edge for it at all** (`63138 -> prequels []`) - the side-story
+short is related to the show in its catalogue but not in the chain the threading
+walks. Per the side-story ruling it was re-parented by hand onto 1770, giving one
+line: 2316 -> 1770 -> 1690.
+
+So `threads:prequels` cannot be the whole answer for side stories. It only ever
+follows PREQUEL edges, and a special, short or OVA often has none.
+
+### A 429 makes `threads:prequels` report "0 pins" with no error
+
+Running the full 776-pin dry run and then a scoped one back to back rate-limited
+AniList, and every relation lookup afterwards returned `AniList relations 429`.
+`findPrequelPin` treats a failed `loadRelations` the same as "no prequel found",
+so the run still prints a confident **"Would thread 0 pins"**. The up-front
+prefetch throws on failure, but the per-pin walks after it do not.
+
+**Do not trust a 0 from this script unless the run was the first AniList traffic
+in a few minutes.** Wait for the limit to clear (30s polls; it took ~90s here)
+and re-run before concluding nothing needs threading.
+
+## 2026-09-20 - The same picture twice, on 292 pins
+
+Pin 1564 (Gensou Mangekyou) carried its MyAnimeList poster twice: the page's
+own `.../anime/1729/135900l.jpg` at 356x500 and, from the top-up that read the
+`og:image` of the reference, `.../135900.jpg` at 225x316. Same file, two sizes,
+two of the pin's three media slots - **"practically the same. need to skip
+these as they don't add value"**.
+
+Hashing every picture in the catalogue (a 64-bit difference hash off each
+thumb) and pairing them up per pin put numbers on it:
+
+| bits apart | pairs | what they are |
+| --- | --- | --- |
+| 0-6 | 292 | one picture: a poster at two sizes, or with a title band added |
+| 7-13 | 105 | still mostly one picture (AniList's cover against MyAnimeList's poster), but two photos of one event are in range by 8 |
+| 14+ | 1,040 | different pictures, with the odd same-artwork pair still hiding among them |
+
+So **6 is the limit a rule can carry**: every pair below 7 that was looked at
+was one picture. Sorting 7-13 out needs eyes, and is left to
+`npm run media:dedupe -- --distance N` when someone wants to.
+
+Three things came out of it, all in [Enrichment](enrichment.md#images-and-media):
+`sameImageKey` for the URL case (a CDN's size suffix), a hash check in the
+model so a create, an update or a top-up cannot store a picture the pin already
+has, and `npm run media:dedupe` for the 292 that predate it.
+
+Two things that did **not** work:
+
+* **A finer hash.** 256 bits (16x16) does not separate the one false positive -
+  the Intel Core 3 and Core 5 badges on pin 110, which differ in a single glyph
+  - from true repeats: the badges sit at 8 and two sizes of one MyAnimeList
+  poster reach 10. Global hashes read shape, and those two shapes are the same.
+* **Judging by source.** "An AniList cover and a MyAnimeList poster are the same
+  key visual" holds often enough to be tempting and fails often enough to lose
+  real pictures. The hash is the honest test.

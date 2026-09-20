@@ -22,7 +22,7 @@ import { ingestSource, pinLinks, refreshPin, type PinLinks } from './sourceWiki'
 //                  wikis but no summary                         version); rebuild the summary
 //   contradiction  Claude compares a pin's link wikis           report only (for an admin to review)
 
-export const LINT_CHECKS: LintCheck[] = ['conformance', 'stale', 'orphan', 'quality', 'contradiction', 'imprecise'];
+export const LINT_CHECKS: LintCheck[] = ['conformance', 'stale', 'orphan', 'quality', 'contradiction', 'imprecise', 'cluster'];
 
 export type LintOptions = {
   checks?: LintCheck[];
@@ -70,6 +70,7 @@ const CHECKS: Record<LintCheck, (options: LintOptions, refresh: Set<number>) => 
   quality: lintQuality,
   contradiction: lintContradictions,
   imprecise: lintImprecise,
+  cluster: lintCluster,
 };
 
 // A date only as precise as the year its source gave. The convention puts a
@@ -108,6 +109,57 @@ async function lintImprecise({ pinIds }: LintOptions): Promise<CheckReport> {
   }));
   await OkfLint.replace('imprecise', out.findings, pinIds ? { pinIds, sourceIds: [] } : undefined);
   out.notes.push(`${rows.length} pin(s) dated to a year alone`);
+  return out;
+}
+
+// Pins piled onto one day by a scrape that had no date to read. The Gear Patrol
+// run of 2026-09-20 put 71 pins on 2026-09-08, 65 of them 'confirmed', because
+// the roundup called each product "already available" and the extractor turned
+// that bound into a release day (see docs/okf/scraping/learnings.md).
+//
+// Volume alone does not identify it, because real clusters exist: a season's
+// anime premieres share a simulcast day, and a month-only availability line
+// properly puts a dozen pins on a month's last day. Those come from one
+// aggregator, or are honestly 'estimated'. An invented date is the combination -
+// many pins, several unrelated source hosts, and a majority calling itself
+// 'confirmed'. Year-end and year-start placeholders are excluded outright: those
+// are the house convention for "some time that year".
+//
+// Nothing here fetches or calls Claude, so it runs on every lint.
+const CLUSTER_MIN_PINS = 8;
+const CLUSTER_MIN_HOSTS = 4;
+const CLUSTER_MIN_CONFIRMED = 0.6;
+
+async function lintCluster({ pinIds }: LintOptions): Promise<CheckReport> {
+  const out = newReport();
+  const rows = await db.query<{ day: string; userId: number; userName: string; n: number; hosts: number; confirmed: number; ids: number[] }>(
+    `SELECT to_char(p."utcStartDateTime", 'YYYY-MM-DD') AS "day", u."id" AS "userId", u."userName" AS "userName",
+            COUNT(*)::int AS "n",
+            COUNT(DISTINCT split_part(split_part(p."sourceUrl", '//', 2), '/', 1))::int AS "hosts",
+            COUNT(*) FILTER (WHERE p."dateConfidence" = 'confirmed')::int AS "confirmed",
+            ARRAY_AGG(p."id" ORDER BY p."id") AS "ids"
+     FROM "Pin" p JOIN "User" u ON u."id" = p."userId"
+     WHERE p."utcDeletedDateTime" IS NULL AND p."allDay"
+       AND to_char(p."utcStartDateTime", 'MM-DD') NOT IN ($1, $2)
+       AND ($3::int[] IS NULL OR p."id" = ANY($3::int[]))
+     GROUP BY 1, 2, 3
+     HAVING COUNT(*) >= $4::int
+        AND COUNT(DISTINCT split_part(split_part(p."sourceUrl", '//', 2), '/', 1)) >= $5::int
+        AND COUNT(*) FILTER (WHERE p."dateConfidence" = 'confirmed')::numeric >= $4::numeric * $6::numeric
+     ORDER BY COUNT(*) DESC`,
+    [YEAR_END, YEAR_START, pinIds ?? null, CLUSTER_MIN_PINS, CLUSTER_MIN_HOSTS, CLUSTER_MIN_CONFIRMED],
+  );
+  out.findings = rows.flatMap((row) =>
+    row.ids.map((id) => ({
+      check: 'cluster' as const,
+      severity: 'warning' as const,
+      pinId: id,
+      message: `${row.n} of ${row.userName}'s pins start on ${row.day}, from ${row.hosts} different sites, ${row.confirmed} of them confirmed - check the date was read from each page and not from the article that listed them`,
+      detail: { day: row.day, pins: row.n, hosts: row.hosts, confirmed: row.confirmed, author: row.userName, pinIds: row.ids },
+    })),
+  );
+  await OkfLint.replace('cluster', out.findings, pinIds ? { pinIds, sourceIds: [] } : undefined);
+  out.notes.push(rows.length ? `${rows.length} suspicious date cluster(s): ${rows.map((r) => `${r.day} x${r.n}`).join(', ')}` : 'no suspicious date clusters');
   return out;
 }
 

@@ -2,7 +2,7 @@ import * as db from '../db';
 
 // okf:lint's findings and scan markers (0027_okf_lint.sql).
 
-export type LintCheck = 'conformance' | 'stale' | 'orphan' | 'quality' | 'contradiction' | 'imprecise';
+export type LintCheck = 'conformance' | 'stale' | 'orphan' | 'quality' | 'contradiction' | 'imprecise' | 'cluster';
 export type LintSeverity = 'error' | 'warning' | 'info';
 
 export type LintFinding = {
@@ -49,6 +49,36 @@ export default class OkfLint {
           OR "sourceId" IN (SELECT "sourceId" FROM "PinSource" WHERE "pinId" = $1 AND "utcRemovedDateTime" IS NULL)
        ORDER BY CASE "severity" WHEN 'error' THEN 0 WHEN 'warning' THEN 1 ELSE 2 END, "id"`,
       [pinId],
+    );
+  }
+
+  // How many findings each check holds, by severity, for the admin overview.
+  static async summary() {
+    return db.query<{ check: LintCheck; severity: LintSeverity; findings: number; pins: number }>(
+      `SELECT "check", "severity", COUNT(*)::int AS "findings", COUNT(DISTINCT "pinId")::int AS "pins"
+       FROM "OkfLintFinding"
+       GROUP BY 1, 2
+       ORDER BY CASE "severity" WHEN 'error' THEN 0 WHEN 'warning' THEN 1 ELSE 2 END, 1`,
+    );
+  }
+
+  // Open findings for the admin list, worst first, with the pin they are about.
+  // Without a filter this is every finding, so it takes a limit.
+  static async list({ check, severity, limit = 200 }: { check?: LintCheck; severity?: LintSeverity; limit?: number } = {}) {
+    return db.query<{
+      id: number; check: LintCheck; severity: LintSeverity; pinId: number | null;
+      message: string; title: string | null; userName: string | null; day: string | null;
+    }>(
+      `SELECT f."id", f."check", f."severity", f."pinId", f."message",
+              p."title", u."userName", to_char(p."utcStartDateTime", 'YYYY-MM-DD') AS "day"
+       FROM "OkfLintFinding" f
+         LEFT JOIN "Pin" p ON p."id" = f."pinId"
+         LEFT JOIN "User" u ON u."id" = p."userId"
+       WHERE ($1::text IS NULL OR f."check" = $1)
+         AND ($2::text IS NULL OR f."severity" = $2)
+       ORDER BY CASE f."severity" WHEN 'error' THEN 0 WHEN 'warning' THEN 1 ELSE 2 END, f."check", f."pinId"
+       LIMIT $3`,
+      [check ?? null, severity ?? null, limit],
     );
   }
 

@@ -4,6 +4,7 @@ const TABS = [
   { href: '/admin/views', label: 'Views' },
   { href: '/admin/users', label: 'Users' },
   { href: '/admin/pins', label: 'Pins' },
+  { href: '/admin/lint', label: 'Lint' },
 ];
 
 // Switches between the admin pages, Views first: /admin opens on it
