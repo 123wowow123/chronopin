@@ -488,3 +488,5 @@ major local events by major city scrape and more targetted by your location
 
 
 add more prediction market pins for major events
+
+upgrade node to latest stable

@@ -1,5 +1,10 @@
 # Update Log
 
+## 2026-09-20
+* **Update**: [Verticals](/scraping/verticals.md), [Sources](/scraping/sources.md) and [Learnings](/scraping/learnings.md) cover the economy, crypto, AI and space prediction-market pass (pins 1980-1993): Kalshi's `series?category=` names, the two-pass scan around a priceless events list, differencing a cumulative "by when" ladder to date a pin, non-monotonic thin rungs, keyless spot prices, and the new `Macroeconomics` category.
+* **Update**: [Verticals](/scraping/verticals.md) and [Learnings](/scraping/learnings.md) cover the politics, elections and geopolitics prediction-market pass (pins 1967-1979): finding political events through Polymarket's `tag_slug` rather than Kalshi's open list, taking the date from a market's rules text, the date a Kalshi event ticker carries, how to quote a cumulative ladder, and the new `Elections` category.
+* **Update**: [Verticals](/scraping/verticals.md) and [Learnings](/scraping/learnings.md) cover the sports and entertainment prediction-market pass (pins 1953-1966): finding near-term events through the Kalshi series catalogue and Polymarket `tag_slug`, the `*_dollars` price fields, why `expected_expiration_time` is not the event date, and the Kalshi market URL shape.
+
 ## 2026-09-19
 * **Update**: [Learnings](/scraping/learnings.md) and [Verticals](/scraping/verticals.md) cover the 2027 movie roundup: 70 pins, franchise chains, Wikipedia redirect and premiere-date traps.
 * **Update**: [Fields](/scraping/fields.md), [Enrichment](/scraping/enrichment.md), [Sources](/scraping/sources.md) and [Verticals](/scraping/verticals.md) cover the episode count an episodic pin now carries (`episodeCount`, `episodeStatus`), its three sources and why a film never gets one.

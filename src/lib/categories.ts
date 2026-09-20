@@ -17,6 +17,8 @@ export const CATEGORIES = [
   'Marine',
   'Climate & Environment',
   'Geopolitics',
+  'Elections',
+  'Macroeconomics',
   'Demographics',
   'Robotics',
   'Health & Medicine',

@@ -1,5 +1,18 @@
 [
   {
+    "pinId": 207,
+    "otherPinId": 1972,
+    "reason": "similar",
+    "score": 0.81563085,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-20T15:25:15.994Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
     "pinId": 216,
     "otherPinId": 541,
     "reason": "similar",
