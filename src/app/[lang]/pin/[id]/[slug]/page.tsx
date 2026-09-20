@@ -361,7 +361,7 @@ async function Thread({ pin }: { pin: PinJson }) {
               <span className="w-4 shrink-0 text-right text-subtle tabular-nums">{index + 1}</span>
               <span className="min-w-0">
                 {p.title}
-                <span className="mt-0.5 flex flex-wrap items-center gap-x-3 text-xs font-normal">
+                <span className="mt-1.5 flex flex-wrap items-center gap-x-3 text-xs font-normal">
                   <CompanyTicker pin={p} bare />
                   {/* A season's own score and run length, the way a card shows them. */}
                   <RatingSummary ratings={p.ratings} />
