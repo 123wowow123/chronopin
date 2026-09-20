@@ -350,18 +350,18 @@ async function Thread({ pin }: { pin: PinJson }) {
         </Link>
       </div>
       <ThreadSuggestion pinId={pin.id} />
-      <ol className="mt-4 space-y-1.5">
+      <ol className="mt-3 space-y-1">
         {pins.map((p, index) => (
           <li key={p.id}>
             <Link
               href={pinPath(p)}
               aria-current={p.id === pin.id ? 'page' : undefined}
-              className={`flex gap-3 rounded-lg px-3 py-3 text-sm font-medium text-ink hover:no-underline ${p.id === pin.id ? 'bg-raised ring-1 ring-line ring-inset' : 'hover:bg-raised/60'}`}
+              className={`flex gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ink hover:no-underline ${p.id === pin.id ? 'bg-raised ring-1 ring-line ring-inset' : 'hover:bg-raised/60'}`}
             >
               <span className="w-4 shrink-0 text-right text-subtle tabular-nums">{index + 1}</span>
               <span className="min-w-0">
                 {p.title}
-                <span className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs font-normal">
+                <span className="mt-0.5 flex flex-wrap items-center gap-x-3 text-xs font-normal">
                   <CompanyTicker pin={p} bare />
                   {/* A season's own score and run length, the way a card shows them. */}
                   <RatingSummary ratings={p.ratings} />
