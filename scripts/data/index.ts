@@ -15,6 +15,7 @@ import PinDuplicate from '@/server/model/pinDuplicate';
 import CompanyRelation from '@/server/model/companyRelation';
 import PinTicker from '@/server/model/pinTicker';
 import PinTag from '@/server/model/pinTag';
+import { allFlightPaths, restoreFlightPaths } from '@/server/services/pinFlightPath';
 import Source from '@/server/model/source';
 import log from '@/server/util/log';
 import { excludeE2e } from './excludeE2e';
@@ -34,6 +35,7 @@ const { values: flags } = parseArgs({
     sourcefile: { type: 'string', default: './scripts/backup/seedSources.json' },
     stockfile: { type: 'string', default: './scripts/backup/seedStocks.json' },
     tagfile: { type: 'string', default: './scripts/backup/seedTags.json' },
+    flightpathfile: { type: 'string', default: './scripts/backup/seedFlightPaths.json' },
     translationfile: { type: 'string', default: './scripts/backup/seedTranslations.json' },
     companyfile: { type: 'string', default: './scripts/backup/seedCompanies.json' },
     aphelionfile: { type: 'string', default: './scripts/backup/aphelion.json' },
@@ -72,8 +74,9 @@ async function saveDB() {
   const { pins: all } = await FullPins.queryAll();
   // Tickers are in seedStocks.json; the view's copy on each pin is left out.
   // Awards are derived (npm run media:awards puts them back). Tags are in
-  // seedTags.json, and the award ones follow the awards.
-  const pins = all.map(({ stocks: _stocks, awards: _awards, tags: _tags, ...pin }) => pin);
+  // seedTags.json, and the award ones follow the awards. Flight paths are in
+  // seedFlightPaths.json.
+  const pins = all.map(({ stocks: _stocks, awards: _awards, tags: _tags, flightPath: _flightPath, ...pin }) => pin);
   const data = excludeE2e({
     users: await Users.getAll(BACKUP_USER_PROPS),
     pins,
@@ -153,6 +156,10 @@ async function saveDB() {
   // Pin tags (0038): the ones typed in the form and the awards pins' text names.
   console.log('Backup Tags');
   writeJson(flags.tagfile, (await PinTag.getAll()).filter((t) => keptPinIds.has(t.pinId)));
+
+  // Flight paths (0049): computed, but regenerating them needs the launch schedule.
+  console.log('Backup Flight Paths');
+  writeJson(flags.flightpathfile, (await allFlightPaths()).filter((f) => keptPinIds.has(f.pinId)));
 
   // Pin translations (0044): each costs a Claude call to make again.
   console.log('Backup Translations');
@@ -300,6 +307,14 @@ async function seedDB() {
       await PinTag.restore(readJson(flags.tagfile));
     } catch (error) {
       log.error('Tags Save Error', JSON.stringify(error));
+    }
+  }
+
+  if (existsSync(flags.flightpathfile)) {
+    try {
+      await restoreFlightPaths(readJson(flags.flightpathfile));
+    } catch (error) {
+      log.error('Flight Paths Save Error', JSON.stringify(error));
     }
   }
 

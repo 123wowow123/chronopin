@@ -35,3 +35,21 @@ export async function saveFlightPath(pinId: number, path: FlightPathInput): Prom
     [pinId, path.label?.slice(0, 200) || null, path.sourceUrl?.slice(0, 500) || null, path.estimated ?? true, JSON.stringify(path.points)],
   );
 }
+
+export type StoredFlightPath = FlightPathInput & { pinId: number };
+
+// Every stored path, for the seed backup (scripts/data): the pins' own JSON
+// leaves the view's copy out, as with tickers.
+export function allFlightPaths(): Promise<StoredFlightPath[]> {
+  return db.query<StoredFlightPath>(
+    `SELECT "pinId", "label", "sourceUrl", "estimated", "points" FROM "PinFlightPath" ORDER BY "pinId"`,
+  );
+}
+
+// Puts backed-up paths back, for pins that exist (ones the seed left out are skipped).
+export async function restoreFlightPaths(paths: StoredFlightPath[]): Promise<void> {
+  for (const { pinId, ...path } of paths) {
+    const [pin] = await db.query(`SELECT 1 FROM "Pin" WHERE "id" = $1`, [pinId]);
+    if (pin) await saveFlightPath(pinId, path);
+  }
+}
