@@ -213729,14 +213729,3315 @@
         "dateConfidence": "estimated"
       },
       "utcCreatedDateTime": "2026-09-20T20:46:58.886Z"
+    },
+    {
+      "id": 1242,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 1,
+      "sourceId": null,
+      "path": null,
+      "message": "Date of the iPhone 5S event: [P] Pin dated 2013-09-09 to 2013-09-10 (an all-day span whose exclusive end makes the event day 9 September 2013) vs [1] 'Apple sent invites (via The Loop) for its September 10th event at 10 AM PST, hosted on campus in Cupertino; strapline \"This should brighten everyone's day\"'",
+      "detail": {
+        "note": "[1] carries the same strapline the pin uses as its description, and dates the event 10 September 2013, a day after the pin. [2]'s list only reaches September 2008 and [S] is a later capture of Apple's events page, so neither settles it.",
+        "links": {
+          "1": "https://9to5mac.com/2013/09/03/apple-announces-its-september-10-iphone-media-event/",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "Pin dated 2013-09-09 to 2013-09-10 (an all-day span whose exclusive end makes the event day 9 September 2013)",
+            "label": "P"
+          },
+          {
+            "says": "'Apple sent invites (via The Loop) for its September 10th event at 10 AM PST, hosted on campus in Cupertino; strapline \"This should brighten everyone's day\"'",
+            "label": "1"
+          }
+        ],
+        "subject": "Date of the iPhone 5S event",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.818Z"
+    },
+    {
+      "id": 1243,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 121,
+      "sourceId": null,
+      "path": null,
+      "message": "Eli Zero battery capacity, range and charging time: [P] The pin's description gives \"a 6kWh lithium-ion battery... a range of 55 miles (89km), with a recharging time of 4.5 hours at 110V\" and a Zero+ with \"a larger 8.3kWh pack\" giving 85 miles (137km) in six hours. vs [S] Ars Technica, May 1 2018: \"4kW (5.3hp) motor, 6kWh lithium-ion battery: 55 miles (89km) range, 4.5 hours charge at 110V. Zero+ with 8.3kWh pack: 85 miles (137km), six hours\". vs [1] electrive, Sept 21 2021: \"Batteries 5.8 kWh (up to 80 km range) and 8 kWh (up to 110 km); recharge at household socket in 2.5 or 3.5 hours\". vs [2] New Atlas, Sept 24 2021: \"5.8-kWh or 8-kWh battery for 50 or 70 miles (80/112 km)\".",
+      "detail": {
+        "note": "[1] and [2], reporting the September 2021 production launch that the pin is dated to, are newer than [S]'s 2018 prototype figures, which the pin's description repeats; the production packs are smaller and charge faster.",
+        "links": {
+          "1": "https://www.electrive.com/2021/09/21/eli-electric-vehicles-launches-production-of-the-zero/",
+          "2": "https://newatlas.com/automotive/eli-zero-nev-production/",
+          "P": "the pin",
+          "S": "https://arstechnica.com/cars/2018/05/the-eli-zero-might-make-neighborhood-electric-vehicles-cool/"
+        },
+        "claims": [
+          {
+            "says": "The pin's description gives \"a 6kWh lithium-ion battery... a range of 55 miles (89km), with a recharging time of 4.5 hours at 110V\" and a Zero+ with \"a larger 8.3kWh pack\" giving 85 miles (137km) in six hours.",
+            "label": "P"
+          },
+          {
+            "says": "Ars Technica, May 1 2018: \"4kW (5.3hp) motor, 6kWh lithium-ion battery: 55 miles (89km) range, 4.5 hours charge at 110V. Zero+ with 8.3kWh pack: 85 miles (137km), six hours\".",
+            "label": "S"
+          },
+          {
+            "says": "electrive, Sept 21 2021: \"Batteries 5.8 kWh (up to 80 km range) and 8 kWh (up to 110 km); recharge at household socket in 2.5 or 3.5 hours\".",
+            "label": "1"
+          },
+          {
+            "says": "New Atlas, Sept 24 2021: \"5.8-kWh or 8-kWh battery for 50 or 70 miles (80/112 km)\".",
+            "label": "2"
+          }
+        ],
+        "subject": "Eli Zero battery capacity, range and charging time",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.829Z"
+    },
+    {
+      "id": 1244,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 121,
+      "sourceId": null,
+      "path": null,
+      "message": "Where the Eli Zero is manufactured: [1] \"Production partner is to be in China.\" vs [2] \"an initial production run has now started with manufacturing partners in Europe\".",
+      "detail": {
+        "note": "Two reports of the same production start, three days apart, place manufacturing on different continents.",
+        "links": {
+          "1": "https://www.electrive.com/2021/09/21/eli-electric-vehicles-launches-production-of-the-zero/",
+          "2": "https://newatlas.com/automotive/eli-zero-nev-production/"
+        },
+        "claims": [
+          {
+            "says": "\"Production partner is to be in China.\"",
+            "label": "1"
+          },
+          {
+            "says": "\"an initial production run has now started with manufacturing partners in Europe\".",
+            "label": "2"
+          }
+        ],
+        "subject": "Where the Eli Zero is manufactured",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.829Z"
+    },
+    {
+      "id": 1245,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 121,
+      "sourceId": null,
+      "path": null,
+      "message": "Eli Zero top speed: [1] \"4 kW rated motor, top speed 45 km/h\", adding that \"At CES 2017 the top speed was 40 km/h\". vs [2] \"NEV: top speed 25 mph (40 km/h)\".",
+      "detail": {
+        "note": "Not a unit difference: [1] explicitly separates the current 45 km/h from the 40 km/h of the 2017 concept, while [2] gives 40 km/h for the production vehicle.",
+        "links": {
+          "1": "https://www.electrive.com/2021/09/21/eli-electric-vehicles-launches-production-of-the-zero/",
+          "2": "https://newatlas.com/automotive/eli-zero-nev-production/"
+        },
+        "claims": [
+          {
+            "says": "\"4 kW rated motor, top speed 45 km/h\", adding that \"At CES 2017 the top speed was 40 km/h\".",
+            "label": "1"
+          },
+          {
+            "says": "\"NEV: top speed 25 mph (40 km/h)\".",
+            "label": "2"
+          }
+        ],
+        "subject": "Eli Zero top speed",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.829Z"
+    },
+    {
+      "id": 1246,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 122,
+      "sourceId": null,
+      "path": null,
+      "message": "Target date for the first SLS launch: [P] The pin is dated 2019-11-30 to 2019-12-01. vs [S] Ars Technica (May 12, 2017): \"NASA now says not before 2019 and needs one or two months to finalize; Ars heard from two sources November 2019 for the uncrewed launch\". vs [2] The Register (Nov 9, 2017): \"NASA reconfirmed it hopes to stage the first SLS and Orion flight (EM-1) in December 2019, but conceded it could run late\".",
+      "detail": {
+        "note": "[2] is the newer of the two (November 2017 against May 2017) and gives December 2019 where [S]'s sources said November 2019.",
+        "links": {
+          "2": "https://www.theregister.com/2017/11/09/nasa_sls_set_for_2019_launch/",
+          "P": "the pin",
+          "S": "https://arstechnica.com/science/2017/05/nasa-pays-the-price-of-being-subjected-to-a-massive-expensive-rocket/"
+        },
+        "claims": [
+          {
+            "says": "The pin is dated 2019-11-30 to 2019-12-01.",
+            "label": "P"
+          },
+          {
+            "says": "Ars Technica (May 12, 2017): \"NASA now says not before 2019 and needs one or two months to finalize; Ars heard from two sources November 2019 for the uncrewed launch\".",
+            "label": "S"
+          },
+          {
+            "says": "The Register (Nov 9, 2017): \"NASA reconfirmed it hopes to stage the first SLS and Orion flight (EM-1) in December 2019, but conceded it could run late\".",
+            "label": "2"
+          }
+        ],
+        "subject": "Target date for the first SLS launch",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.837Z"
+    },
+    {
+      "id": 1247,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 133,
+      "sourceId": null,
+      "path": null,
+      "message": "Status of the first Multi installation: [S] Interesting Engineering (26 June 2017): \"ThyssenKrupp will install the world's first rope-free multi-directional elevator in Berlin, Germany 'this year'\", in OVG's East Side Tower, \"expected completion in 2020\". vs [1] thyssenkrupp's own release of 23 Oct 2017 describes MULTI as \"currently still being tested\", with the cabin displayed at the Rottweil test tower. vs [2] Dezeen (12 July 2017): Multi is \"installed in a purpose-built test tower (246 m tall, Rottweil, Germany)\", with OVG \"the first customer, planning it for the new East Side Tower in Berlin\".",
+      "detail": {
+        "note": "[S] has the Berlin installation happening during 2017; the two later links ([1] is the newest, October 2017) still have MULTI in testing at Rottweil with Berlin only planned.",
+        "links": {
+          "1": "https://www.tkelevator.com/global-en/newsroom/press-releases/thyssenkrupp-elevator-awarded-with-german-design-award-for-the-cabin-of-worlds-first-ropeless-sideways-moving-elevator-multi-73792.html",
+          "2": "https://www.dezeen.com/2017/07/12/thyssenkrupp-unveils-worlds-first-rope-less-sideways-moving-elevator-system-multi/",
+          "S": "http://interestingengineering.com/worlds-first-ropeless-multi-directional-elevator-installed-in-berlin/"
+        },
+        "claims": [
+          {
+            "says": "Interesting Engineering (26 June 2017): \"ThyssenKrupp will install the world's first rope-free multi-directional elevator in Berlin, Germany 'this year'\", in OVG's East Side Tower, \"expected completion in 2020\".",
+            "label": "S"
+          },
+          {
+            "says": "thyssenkrupp's own release of 23 Oct 2017 describes MULTI as \"currently still being tested\", with the cabin displayed at the Rottweil test tower.",
+            "label": "1"
+          },
+          {
+            "says": "Dezeen (12 July 2017): Multi is \"installed in a purpose-built test tower (246 m tall, Rottweil, Germany)\", with OVG \"the first customer, planning it for the new East Side Tower in Berlin\".",
+            "label": "2"
+          }
+        ],
+        "subject": "Status of the first Multi installation",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.843Z"
+    },
+    {
+      "id": 1248,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 149,
+      "sourceId": null,
+      "path": null,
+      "message": "When the Sphere opened: [P] Title says 'planned to open in Las Vegas in the second half of 2023'; pin dated 2023-12-31 to 2024-01-03 vs [S] 'Opened September 29, 2023 with U2: UV Achtung Baby Live at Sphere; soft debut on Independence Day 2023 with exterior visuals.' vs [2] U2 announced five fall dates 'opening the roughly $2 billion venue beginning Sept. 29'",
+      "detail": {
+        "note": "Both dated links put the opening at 29 September 2023, three months before the pin's date.",
+        "links": {
+          "2": "https://www.usatoday.com/story/entertainment/music/2023/04/24/u-2-las-vegas-sphere-concerts-date-and-tickets/11714827002/",
+          "P": "the pin",
+          "S": "https://1oaklasvegas.com/msg-sphere-las-vegas/"
+        },
+        "claims": [
+          {
+            "says": "Title says 'planned to open in Las Vegas in the second half of 2023'; pin dated 2023-12-31 to 2024-01-03",
+            "label": "P"
+          },
+          {
+            "says": "'Opened September 29, 2023 with U2: UV Achtung Baby Live at Sphere; soft debut on Independence Day 2023 with exterior visuals.'",
+            "label": "S"
+          },
+          {
+            "says": "U2 announced five fall dates 'opening the roughly $2 billion venue beginning Sept. 29'",
+            "label": "2"
+          }
+        ],
+        "subject": "When the Sphere opened",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.862Z"
+    },
+    {
+      "id": 1249,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 149,
+      "sourceId": null,
+      "path": null,
+      "message": "Seating capacity: [S] 'Seats about 18,600, up to 20,000 for some events.' vs [1] 'Total capacity is given as 18,600, up from the previous 17,500.' vs [2] '17,600 seats (article's wording; also cited as a full capacity of 20,000 fans)'",
+      "detail": {
+        "note": "[2] (April 2023) says 17,600 where [1] (January 2023) and [S] say 18,600; all three agree on about 20,000 for some events.",
+        "links": {
+          "1": "https://www.reviewjournal.com/entertainment/entertainment-columns/kats/sphere-ceo-sidesteps-u2-questions-but-promises-4-6-superstar-acts-2717327/",
+          "2": "https://www.usatoday.com/story/entertainment/music/2023/04/24/u-2-las-vegas-sphere-concerts-date-and-tickets/11714827002/",
+          "S": "https://1oaklasvegas.com/msg-sphere-las-vegas/"
+        },
+        "claims": [
+          {
+            "says": "'Seats about 18,600, up to 20,000 for some events.'",
+            "label": "S"
+          },
+          {
+            "says": "'Total capacity is given as 18,600, up from the previous 17,500.'",
+            "label": "1"
+          },
+          {
+            "says": "'17,600 seats (article's wording; also cited as a full capacity of 20,000 fans)'",
+            "label": "2"
+          }
+        ],
+        "subject": "Seating capacity",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.862Z"
+    },
+    {
+      "id": 1250,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 150,
+      "sourceId": null,
+      "path": null,
+      "message": "When the pin's event happened: [P] Pin dated 2024-12-31 to 2025-01-01, describing construction as 'well underway' and 'an update' on the site vs [S] The progress report is 'amNewYork by Winnie McCroy, posted January 29, 2015', with the Eastern Rail Yard platform still 'to finish by October 2015' vs [1] 'groundbreaking December 4, 2012; status \"Under construction\"; first phase opened March 15, 2019'",
+      "detail": {
+        "note": "The pin's description is the January 2015 amNY article, but the pin is dated end-2024; by then [1] has Phase 1 open since March 2019.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Hudson_Yards_(development)",
+          "P": "the pin",
+          "S": "https://www.amny.com/news/progress-report-hudson-yards/"
+        },
+        "claims": [
+          {
+            "says": "Pin dated 2024-12-31 to 2025-01-01, describing construction as 'well underway' and 'an update' on the site",
+            "label": "P"
+          },
+          {
+            "says": "The progress report is 'amNewYork by Winnie McCroy, posted January 29, 2015', with the Eastern Rail Yard platform still 'to finish by October 2015'",
+            "label": "S"
+          },
+          {
+            "says": "'groundbreaking December 4, 2012; status \"Under construction\"; first phase opened March 15, 2019'",
+            "label": "1"
+          }
+        ],
+        "subject": "When the pin's event happened",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.868Z"
+    },
+    {
+      "id": 1251,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 150,
+      "sourceId": null,
+      "path": null,
+      "message": "30 Hudson Yards floor count and height: [S] '30 Hudson Yards: 2.6M sq ft, 92 stories, 1,284 ft, highest outdoor observation deck' vs [1] '30 Hudson Yards: 103 stories, 2.6M sq ft, 1,296 ft, opened March 15, 2019'",
+      "detail": {
+        "note": "[1] is the newer, as-built figure; [S] is a January 2015 under-construction description.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Hudson_Yards_(development)",
+          "S": "https://www.amny.com/news/progress-report-hudson-yards/"
+        },
+        "claims": [
+          {
+            "says": "'30 Hudson Yards: 2.6M sq ft, 92 stories, 1,284 ft, highest outdoor observation deck'",
+            "label": "S"
+          },
+          {
+            "says": "'30 Hudson Yards: 103 stories, 2.6M sq ft, 1,296 ft, opened March 15, 2019'",
+            "label": "1"
+          }
+        ],
+        "subject": "30 Hudson Yards floor count and height",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.868Z"
+    },
+    {
+      "id": 1252,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 150,
+      "sourceId": null,
+      "path": null,
+      "message": "Number of residences at 15 Hudson Yards: [S] '15 Hudson Yards (70 stories, 910 ft, 385 residences, Diller Scofidio + Renfro)' vs [1] '15 Hudson Yards: construction began December 2014, topped out February 2018, opened early 2019, 285 residential units'",
+      "detail": {
+        "note": "[1] is newer and describes the finished building; [S]'s 385 is a 2015 projection.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Hudson_Yards_(development)",
+          "S": "https://www.amny.com/news/progress-report-hudson-yards/"
+        },
+        "claims": [
+          {
+            "says": "'15 Hudson Yards (70 stories, 910 ft, 385 residences, Diller Scofidio + Renfro)'",
+            "label": "S"
+          },
+          {
+            "says": "'15 Hudson Yards: construction began December 2014, topped out February 2018, opened early 2019, 285 residential units'",
+            "label": "1"
+          }
+        ],
+        "subject": "Number of residences at 15 Hudson Yards",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.868Z"
+    },
+    {
+      "id": 1253,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 150,
+      "sourceId": null,
+      "path": null,
+      "message": "When The Shed / Culture Shed was completed: [S] 'Culture Shed (DS+R/Rockwell): ETFE retractable canopy, completion 2018' vs [1] 'The Shed: arts center in the Bloomberg Building with retractable shell, opened April 5, 2019'",
+      "detail": {
+        "note": "[1] is newer; the 2018 target in [S] moved to an April 2019 opening.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Hudson_Yards_(development)",
+          "S": "https://www.amny.com/news/progress-report-hudson-yards/"
+        },
+        "claims": [
+          {
+            "says": "'Culture Shed (DS+R/Rockwell): ETFE retractable canopy, completion 2018'",
+            "label": "S"
+          },
+          {
+            "says": "'The Shed: arts center in the Bloomberg Building with retractable shell, opened April 5, 2019'",
+            "label": "1"
+          }
+        ],
+        "subject": "When The Shed / Culture Shed was completed",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.868Z"
+    },
+    {
+      "id": 1254,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 192,
+      "sourceId": null,
+      "path": null,
+      "message": "Year construction begins: [P] Title 'Sites Reservoir still on tract to break ground in 2024'; pin dated 2024-12-31 to 2025-01-01 vs [S] 'Actual construction would begin in 2025 and the reservoir would begin operations in 2031' (October 2022) vs [1] 'Construction will begin in 2024, with completion expected in 2030.' (November 2023) vs [2] 'Construction is planned to begin in 2027 with operations targeted to begin by 2034'; the infobox instead shows '2024 start; 2030 completion (proposed)' vs [3] Construction 'is set to happen in 2026' and the project does not yet have the full green light (June 2024)",
+      "detail": {
+        "note": "Four different start years across the links. [2] is the newest (it already records a January 2026 main contractor) and says 2027; [1] is the only one supporting the pin's 2024, and [2]'s own infobox still carries the stale 2024 figure.",
+        "links": {
+          "1": "https://www.capradio.org/articles/2023/11/24/sites-reservoir-project-finally-gets-green-light-construction-expected-to-begin-in-2024/",
+          "2": "https://en.wikipedia.org/wiki/Sites_Reservoir",
+          "3": "https://krcrtv.com/news/local/sites-reservoir-project-moves-forward-with-new-developments-friends-of-the-river-react",
+          "P": "the pin",
+          "S": "https://krcrtv.com/news/local/sites-reservoir-still-on-tract-to-break-ground-in-2024"
+        },
+        "claims": [
+          {
+            "says": "Title 'Sites Reservoir still on tract to break ground in 2024'; pin dated 2024-12-31 to 2025-01-01",
+            "label": "P"
+          },
+          {
+            "says": "'Actual construction would begin in 2025 and the reservoir would begin operations in 2031' (October 2022)",
+            "label": "S"
+          },
+          {
+            "says": "'Construction will begin in 2024, with completion expected in 2030.' (November 2023)",
+            "label": "1"
+          },
+          {
+            "says": "'Construction is planned to begin in 2027 with operations targeted to begin by 2034'; the infobox instead shows '2024 start; 2030 completion (proposed)'",
+            "label": "2"
+          },
+          {
+            "says": "Construction 'is set to happen in 2026' and the project does not yet have the full green light (June 2024)",
+            "label": "3"
+          }
+        ],
+        "subject": "Year construction begins",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.919Z"
+    },
+    {
+      "id": 1255,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 192,
+      "sourceId": null,
+      "path": null,
+      "message": "When the reservoir starts operating: [S] 'the reservoir would begin operations in 2031' vs [1] 'completion expected in 2030' vs [2] 'operations targeted to begin by 2034'",
+      "detail": {
+        "note": "[2] is the newest of the three and pushes operations to 2034.",
+        "links": {
+          "1": "https://www.capradio.org/articles/2023/11/24/sites-reservoir-project-finally-gets-green-light-construction-expected-to-begin-in-2024/",
+          "2": "https://en.wikipedia.org/wiki/Sites_Reservoir",
+          "S": "https://krcrtv.com/news/local/sites-reservoir-still-on-tract-to-break-ground-in-2024"
+        },
+        "claims": [
+          {
+            "says": "'the reservoir would begin operations in 2031'",
+            "label": "S"
+          },
+          {
+            "says": "'completion expected in 2030'",
+            "label": "1"
+          },
+          {
+            "says": "'operations targeted to begin by 2034'",
+            "label": "2"
+          }
+        ],
+        "subject": "When the reservoir starts operating",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.919Z"
+    },
+    {
+      "id": 1256,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 192,
+      "sourceId": null,
+      "path": null,
+      "message": "How many households the reservoir would supply: [P] 'will hold enough water to feed the needs of five million homes a year or a half million acres of farmland' vs [S] 'would hold enough for five million homes a year or half a million acres of farmland' vs [3] 'the project says it would support 3 million households' yearly usage'",
+      "detail": {
+        "note": "Both figures are attributed to the project itself; [3] (June 2024) is the newer of the two.",
+        "links": {
+          "3": "https://krcrtv.com/news/local/sites-reservoir-project-moves-forward-with-new-developments-friends-of-the-river-react",
+          "P": "the pin",
+          "S": "https://krcrtv.com/news/local/sites-reservoir-still-on-tract-to-break-ground-in-2024"
+        },
+        "claims": [
+          {
+            "says": "'will hold enough water to feed the needs of five million homes a year or a half million acres of farmland'",
+            "label": "P"
+          },
+          {
+            "says": "'would hold enough for five million homes a year or half a million acres of farmland'",
+            "label": "S"
+          },
+          {
+            "says": "'the project says it would support 3 million households' yearly usage'",
+            "label": "3"
+          }
+        ],
+        "subject": "How many households the reservoir would supply",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.919Z"
+    },
+    {
+      "id": 1257,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 196,
+      "sourceId": null,
+      "path": null,
+      "message": "Where Breath of the Wild ranks on IGN's list: [P] Title: 'The Legend of Zelda: Breath of the Wild lands top spot on IGN's 10 Best Legend of Zelda Games of All Time' vs [S] '2. Breath of the Wild (Mar 3, 2017)'; '1. Tears of the Kingdom (May 12, 2023): \"The latest entry into the Zelda series is also its best\"'",
+      "detail": {
+        "note": "The pin's own source puts Breath of the Wild second and Tears of the Kingdom first, so the pin's headline claim is wrong.",
+        "links": {
+          "P": "the pin",
+          "S": "https://www.ign.com/articles/the-10-best-legend-of-zelda-games"
+        },
+        "claims": [
+          {
+            "says": "Title: 'The Legend of Zelda: Breath of the Wild lands top spot on IGN's 10 Best Legend of Zelda Games of All Time'",
+            "label": "P"
+          },
+          {
+            "says": "'2. Breath of the Wild (Mar 3, 2017)'; '1. Tears of the Kingdom (May 12, 2023): \"The latest entry into the Zelda series is also its best\"'",
+            "label": "S"
+          }
+        ],
+        "subject": "Where Breath of the Wild ranks on IGN's list",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.924Z"
+    },
+    {
+      "id": 1258,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 205,
+      "sourceId": null,
+      "path": null,
+      "message": "When the spring mud season ends and the counteroffensive can move: [P] The pin's title says the \"Mud season should end last week of May or first week of June\" and it is dated 2023-05-29 to 2023-06-05. vs [S] DW (April 1, 2023) reports meteorologist David Helms forecasting \"Southern Ukraine dry from around mid-April, Donetsk about two weeks later, Russian-occupied Luhansk from mid-May\", and \"The loss of moisture from the soil really picks up by May 1st and beyond\".",
+      "detail": {
+        "note": "The pin's own source forecasts drying between mid-April and mid-May, two to six weeks earlier than the end-of-May/early-June window the pin's title and dates assert.",
+        "links": {
+          "P": "the pin",
+          "S": "https://www.dw.com/en/countdown-to-counteroffensive-when-will-mud-season-end-in-ukraine/a-65204612"
+        },
+        "claims": [
+          {
+            "says": "The pin's title says the \"Mud season should end last week of May or first week of June\" and it is dated 2023-05-29 to 2023-06-05.",
+            "label": "P"
+          },
+          {
+            "says": "DW (April 1, 2023) reports meteorologist David Helms forecasting \"Southern Ukraine dry from around mid-April, Donetsk about two weeks later, Russian-occupied Luhansk from mid-May\", and \"The loss of moisture from the soil really picks up by May 1st and beyond\".",
+            "label": "S"
+          }
+        ],
+        "subject": "When the spring mud season ends and the counteroffensive can move",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.942Z"
+    },
+    {
+      "id": 1259,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 209,
+      "sourceId": null,
+      "path": null,
+      "message": "Date the Regents approved the two housing projects: [P] The pin is dated 2024-12-31 to 2025-01-08 and says the Regents \"this week gave the school permission to move forward with two huge projects\". vs [S] San Diego Union-Tribune of Jan 21, 2022: \"Regents approved two projects that week\". vs [2] Erudera, published Jan 24, 2022: both projects \"were approved by the Board of Regents 'last week'\".",
+      "detail": {
+        "note": "Both links put the approval the pin describes in the week of 17 January 2022, nearly three years before the pin's own dates.",
+        "links": {
+          "2": "https://erudera.com/news/uc-san-diego-planning-to-add-3310-dorm-beds-to-prevent-housing-shortage/",
+          "P": "the pin",
+          "S": "https://www.sandiegouniontribune.com/news/education/story/2022-01-21/uc-san-diego-dorm-beds"
+        },
+        "claims": [
+          {
+            "says": "The pin is dated 2024-12-31 to 2025-01-08 and says the Regents \"this week gave the school permission to move forward with two huge projects\".",
+            "label": "P"
+          },
+          {
+            "says": "San Diego Union-Tribune of Jan 21, 2022: \"Regents approved two projects that week\".",
+            "label": "S"
+          },
+          {
+            "says": "Erudera, published Jan 24, 2022: both projects \"were approved by the Board of Regents 'last week'\".",
+            "label": "2"
+          }
+        ],
+        "subject": "Date the Regents approved the two housing projects",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.947Z"
+    },
+    {
+      "id": 1260,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 209,
+      "sourceId": null,
+      "path": null,
+      "message": "Number of beds in Pepper Canyon West: [S] \"Pepper Canyon West: 1,310 transfer and upper-division students\". vs [1] Pepper Canyon West \"will house 1,310 upper-division transfer students\". vs [2] Pepper Canyon West: \"about 1,316 transfer and upper-division undergraduates\".",
+      "detail": {
+        "note": "[2] cites [S] as its source yet gives 1,316 where [S] and the later [1] both give 1,310.",
+        "links": {
+          "1": "https://edsource.org/updates/uc-san-diego-opens-new-dorm-for-transfer-students",
+          "2": "https://erudera.com/news/uc-san-diego-planning-to-add-3310-dorm-beds-to-prevent-housing-shortage/",
+          "S": "https://www.sandiegouniontribune.com/news/education/story/2022-01-21/uc-san-diego-dorm-beds"
+        },
+        "claims": [
+          {
+            "says": "\"Pepper Canyon West: 1,310 transfer and upper-division students\".",
+            "label": "S"
+          },
+          {
+            "says": "Pepper Canyon West \"will house 1,310 upper-division transfer students\".",
+            "label": "1"
+          },
+          {
+            "says": "Pepper Canyon West: \"about 1,316 transfer and upper-division undergraduates\".",
+            "label": "2"
+          }
+        ],
+        "subject": "Number of beds in Pepper Canyon West",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.947Z"
+    },
+    {
+      "id": 1261,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 209,
+      "sourceId": null,
+      "path": null,
+      "message": "Completion date of the Thurgood Marshall College housing: [S] Thurgood Marshall College: about 2,000 beds, \"tentative completion 2025\". vs [2] Both projects \"are expected begin this summer and be completed by 2024\".",
+      "detail": {
+        "note": "[2] applies a 2024 completion to both projects; [S], its cited source, gives 2024 only for Pepper Canyon West and 2025 for Marshall.",
+        "links": {
+          "2": "https://erudera.com/news/uc-san-diego-planning-to-add-3310-dorm-beds-to-prevent-housing-shortage/",
+          "S": "https://www.sandiegouniontribune.com/news/education/story/2022-01-21/uc-san-diego-dorm-beds"
+        },
+        "claims": [
+          {
+            "says": "Thurgood Marshall College: about 2,000 beds, \"tentative completion 2025\".",
+            "label": "S"
+          },
+          {
+            "says": "Both projects \"are expected begin this summer and be completed by 2024\".",
+            "label": "2"
+          }
+        ],
+        "subject": "Completion date of the Thurgood Marshall College housing",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.947Z"
+    },
+    {
+      "id": 1262,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 220,
+      "sourceId": null,
+      "path": null,
+      "message": "When the Fehmarnbelt tunnel opens: [P] Pin dated 2029-06-01 to 2029-06-02 ('Estimated date') vs [S] 'Work began 1 January 2021; opens 2031 (NDR, Jan 2026: \"Schwieriger als geplant\")', with the revision list ending '2029 (2020), 2032 (2026 per the article)' vs [2] 16 January 2026: Sund & Baelt CEO Mikkel Hemmingsen says the tunnel will open no earlier than 2031, 'two years behind schedule'; 'last target had been 2029'",
+      "detail": {
+        "note": "[2] (January 2026) and [S] both say the 2029 target the pin uses was dropped in favour of 2031; [S] is itself inconsistent, saying 2031 in its lead and 2032 in its revision list.",
+        "links": {
+          "2": "https://www.yahoo.com/news/articles/major-tunnel-between-german-danish-151344342.html",
+          "P": "the pin",
+          "S": "https://en.wikipedia.org/wiki/Fehmarn_Belt_Fixed_Link"
+        },
+        "claims": [
+          {
+            "says": "Pin dated 2029-06-01 to 2029-06-02 ('Estimated date')",
+            "label": "P"
+          },
+          {
+            "says": "'Work began 1 January 2021; opens 2031 (NDR, Jan 2026: \"Schwieriger als geplant\")', with the revision list ending '2029 (2020), 2032 (2026 per the article)'",
+            "label": "S"
+          },
+          {
+            "says": "16 January 2026: Sund & Baelt CEO Mikkel Hemmingsen says the tunnel will open no earlier than 2031, 'two years behind schedule'; 'last target had been 2029'",
+            "label": "2"
+          }
+        ],
+        "subject": "When the Fehmarnbelt tunnel opens",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.952Z"
+    },
+    {
+      "id": 1263,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 223,
+      "sourceId": null,
+      "path": null,
+      "message": "Cost of the Ontario Line: [S] Announced April 10, 2019 at CA$10.9 billion; \"in 2026 estimated around $34 billion\". vs [1] CBC, Aug 11 2026: \"now around $34 billion per Metrolinx\", with a baseline of \"roughly $29.8 billion as of June\". vs [2] Toronto Star, Nov. 23 2022: the contracts awarded put the cost \"between $17 billion and $19 billion\".",
+      "detail": {
+        "note": "[2] is the older estimate; [S] and [1] (August 2026) are newer and roughly double it.",
+        "links": {
+          "1": "https://www.cbc.ca/news/canada/toronto/ontario-line-cost-triples-projection-9.7303077",
+          "2": "https://www.thestar.com/news/gta/2022/11/23/ontario-line-costs-nearly-double-after-awarding-of-latest-contracts.html",
+          "S": "https://en.wikipedia.org/wiki/Ontario_Line"
+        },
+        "claims": [
+          {
+            "says": "Announced April 10, 2019 at CA$10.9 billion; \"in 2026 estimated around $34 billion\".",
+            "label": "S"
+          },
+          {
+            "says": "CBC, Aug 11 2026: \"now around $34 billion per Metrolinx\", with a baseline of \"roughly $29.8 billion as of June\".",
+            "label": "1"
+          },
+          {
+            "says": "Toronto Star, Nov. 23 2022: the contracts awarded put the cost \"between $17 billion and $19 billion\".",
+            "label": "2"
+          }
+        ],
+        "subject": "Cost of the Ontario Line",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.957Z"
+    },
+    {
+      "id": 1264,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 2269,
+      "sourceId": null,
+      "path": null,
+      "message": "What actually starts running in December 2026: [P] Title 'Delhi Metro's Golden Line Starts Running to Tughlakabad'; description has the line running 29.785 km from Delhi Aerocity to Tughlakabad with 19 stations; pin dated 2026-12-31 vs [S] 'Planned opening: Line 10 (main line) December 2026'; the main route 'will be complete by the end of 2026', with 'partial operations... expected to start by the end of 2026' vs [1] 'DMRC is targeting December 2026 for the opening of the first operational section of the Golden Line between Tughlaqabad and Sangam Vihar. The 8.4-km stretch is planned as the initial section... with the remaining sections scheduled to open in phases.'",
+      "detail": {
+        "note": "[1] (16 September 2026, the newest link) says only an 8.4 km Tughlaqabad-Sangam Vihar section opens in December 2026, not the whole Aerocity-Tughlakabad line the pin describes; [S] itself hedges with 'partial operations'.",
+        "links": {
+          "1": "https://www.constructionworld.in/transport-infrastructure/metro-rail-and-railways-infrastructure/delhi-metro-golden-line-stretch-targeted-for-december-2026-opening/97398",
+          "P": "the pin",
+          "S": "https://en.wikipedia.org/wiki/Golden_Line_(Delhi_Metro)"
+        },
+        "claims": [
+          {
+            "says": "Title 'Delhi Metro's Golden Line Starts Running to Tughlakabad'; description has the line running 29.785 km from Delhi Aerocity to Tughlakabad with 19 stations; pin dated 2026-12-31",
+            "label": "P"
+          },
+          {
+            "says": "'Planned opening: Line 10 (main line) December 2026'; the main route 'will be complete by the end of 2026', with 'partial operations... expected to start by the end of 2026'",
+            "label": "S"
+          },
+          {
+            "says": "'DMRC is targeting December 2026 for the opening of the first operational section of the Golden Line between Tughlaqabad and Sangam Vihar. The 8.4-km stretch is planned as the initial section... with the remaining sections scheduled to open in phases.'",
+            "label": "1"
+          }
+        ],
+        "subject": "What actually starts running in December 2026",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.966Z"
+    },
+    {
+      "id": 1265,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 2269,
+      "sourceId": null,
+      "path": null,
+      "message": "Length of the Aerocity-Tughlakabad corridor: [P] 'runs 29.785 km from Delhi Aerocity to Tughlakabad with 19 stations' vs [S] 'Main line (Line 10): 29.785 km (18.508 mi), 19 stations - 7 elevated and 12 underground' vs [1] 'the 23.6-km Aerocity-Tughlaqabad corridor'",
+      "detail": {
+        "note": "[S] records 23.6 km as the December 2018 plan, later raised to 25.82 km in December 2023, so [1] appears to be quoting an older length.",
+        "links": {
+          "1": "https://www.constructionworld.in/transport-infrastructure/metro-rail-and-railways-infrastructure/delhi-metro-golden-line-stretch-targeted-for-december-2026-opening/97398",
+          "P": "the pin",
+          "S": "https://en.wikipedia.org/wiki/Golden_Line_(Delhi_Metro)"
+        },
+        "claims": [
+          {
+            "says": "'runs 29.785 km from Delhi Aerocity to Tughlakabad with 19 stations'",
+            "label": "P"
+          },
+          {
+            "says": "'Main line (Line 10): 29.785 km (18.508 mi), 19 stations - 7 elevated and 12 underground'",
+            "label": "S"
+          },
+          {
+            "says": "'the 23.6-km Aerocity-Tughlaqabad corridor'",
+            "label": "1"
+          }
+        ],
+        "subject": "Length of the Aerocity-Tughlakabad corridor",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.966Z"
+    },
+    {
+      "id": 1266,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 240,
+      "sourceId": null,
+      "path": null,
+      "message": "Launch date for Dragonfly: [P] Pin dated 2028-07-01 to 2028-07-02 ('Scheduled date') vs [1] 'Targeted launch period July 5, 2028 to July 25, 2028, on a SpaceX Falcon Heavy from Launch Complex 39A' vs [2] NASA authorised Phase C 'toward a July 2028 launch'",
+      "detail": {
+        "note": "The pin's 1 July falls outside the launch period [1] states; [2] only says July 2028. [S] is a disambiguation page and says nothing about the mission's date.",
+        "links": {
+          "1": "https://www.nasa.gov/news-release/nasa-awards-launch-services-contract-for-dragonfly-mission/",
+          "2": "https://dragonfly.jhuapl.edu/News-and-Resources/news/20231128.php",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "Pin dated 2028-07-01 to 2028-07-02 ('Scheduled date')",
+            "label": "P"
+          },
+          {
+            "says": "'Targeted launch period July 5, 2028 to July 25, 2028, on a SpaceX Falcon Heavy from Launch Complex 39A'",
+            "label": "1"
+          },
+          {
+            "says": "NASA authorised Phase C 'toward a July 2028 launch'",
+            "label": "2"
+          }
+        ],
+        "subject": "Launch date for Dragonfly",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.971Z"
+    },
+    {
+      "id": 1267,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 255,
+      "sourceId": null,
+      "path": null,
+      "message": "Expo 2030 theme and sub-themes: [S] Theme \"Foresight for Tomorrow\"; sub-themes \"Transformational Technology\", \"Sustainable Solutions\", \"Prosperous People\". vs [3] Main theme \"Together for a Foresighted Tomorrow\"; sub-themes \"A Different Tomorrow,\" \"Climate Action\" and \"Prosperity for All\".",
+      "detail": {
+        "note": "[3] is from the March 2023 bid stage, before the 28 November 2023 vote; [S] carries the later, post-award wording, so treat [S] as the newer.",
+        "links": {
+          "3": "https://www.argaam.com/en/article/articledetail/id/1630408",
+          "S": "https://en.wikipedia.org/wiki/Expo_2030"
+        },
+        "claims": [
+          {
+            "says": "Theme \"Foresight for Tomorrow\"; sub-themes \"Transformational Technology\", \"Sustainable Solutions\", \"Prosperous People\".",
+            "label": "S"
+          },
+          {
+            "says": "Main theme \"Together for a Foresighted Tomorrow\"; sub-themes \"A Different Tomorrow,\" \"Climate Action\" and \"Prosperity for All\".",
+            "label": "3"
+          }
+        ],
+        "subject": "Expo 2030 theme and sub-themes",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.976Z"
+    },
+    {
+      "id": 1268,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 262,
+      "sourceId": null,
+      "path": null,
+      "message": "When the bridge is delivered or opens: [P] Pin dated 2029-06-01 to 2029-06-02 ('Estimated date') vs [S] 'opening planned for the second half of 2028'; 'Two months later the ministry confirmed delivery pushed to the second half of 2028' vs [1] Minister Jessica Lopez: the bridge 'would be delivered in October 2028, \"within the established deadlines\"'; incoming minister Martin Arrau says the inauguration 'could come only in 2029 or even 2030, since after construction the project must go through technical verification and certification before operating' vs [2] Undersecretary Danilo Nunez: 'We're 58% complete, and everything indicates that we will continue to move forward on the schedule we've already defined for the second half of 2028, October 2028.'",
+      "detail": {
+        "note": "Delivery is October 2028 in [S], [1] and [2]; only the incoming minister quoted in [1] supports a 2029 opening, and he frames it as inauguration after post-construction certification rather than delivery.",
+        "links": {
+          "1": "https://www.biobiochile.cl/noticias/nacional/region-de-los-lagos/2026/02/24/ministra-lopez-preve-entrega-de-puente-chacao-en-2028-mientras-que-arrau-lo-proyecta-incluso-para-2030.shtml",
+          "2": "https://www.bnamericas.com/en/news/the-chacao-bridge-will-be-delivered-in-october-2028",
+          "P": "the pin",
+          "S": "https://en.wikipedia.org/wiki/Chacao_Channel_bridge"
+        },
+        "claims": [
+          {
+            "says": "Pin dated 2029-06-01 to 2029-06-02 ('Estimated date')",
+            "label": "P"
+          },
+          {
+            "says": "'opening planned for the second half of 2028'; 'Two months later the ministry confirmed delivery pushed to the second half of 2028'",
+            "label": "S"
+          },
+          {
+            "says": "Minister Jessica Lopez: the bridge 'would be delivered in October 2028, \"within the established deadlines\"'; incoming minister Martin Arrau says the inauguration 'could come only in 2029 or even 2030, since after construction the project must go through technical verification and certification before operating'",
+            "label": "1"
+          },
+          {
+            "says": "Undersecretary Danilo Nunez: 'We're 58% complete, and everything indicates that we will continue to move forward on the schedule we've already defined for the second half of 2028, October 2028.'",
+            "label": "2"
+          }
+        ],
+        "subject": "When the bridge is delivered or opens",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.980Z"
+    },
+    {
+      "id": 1269,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 269,
+      "sourceId": null,
+      "path": null,
+      "message": "Number of Line 3 stations: [S] Line 3 is \"a 24.5 km monorail with 11 stations under construction\", after \"Three planned stations were removed\". vs [1] \"Stations reduced to 12 of 14 originally planned over the 24.5 km route.\"",
+      "detail": {
+        "note": "Same 24.5 km route, but [S] has three of fourteen stations cut (eleven left) and [1] has two cut (twelve left).",
+        "links": {
+          "1": "https://www.prensa.com/economia/metro-actualiza-fechas-de-entrega-de-la-linea-3-primera-fase-en-2027-y-la-segunda-en-2028/",
+          "S": "https://en.wikipedia.org/wiki/Line_3_(Panama_Metro)"
+        },
+        "claims": [
+          {
+            "says": "Line 3 is \"a 24.5 km monorail with 11 stations under construction\", after \"Three planned stations were removed\".",
+            "label": "S"
+          },
+          {
+            "says": "\"Stations reduced to 12 of 14 originally planned over the 24.5 km route.\"",
+            "label": "1"
+          }
+        ],
+        "subject": "Number of Line 3 stations",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.985Z"
+    },
+    {
+      "id": 1270,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 269,
+      "sourceId": null,
+      "path": null,
+      "message": "Length of the tunnel under the Panama Canal: [P] The pin describes \"a monorail crossing the Panama Canal through a new 4 km tunnel\". vs [1] \"The underground section (6 km tunnel between Balboa and Panama Pacifico station)\". vs [2] \"a traditional 300 m tunnel, then a 100 m launch shaft at Farfan; 3 km under the Canal navigation channel to a second shaft at Balboa; finishing at Albrook station, completing a 4.5 km connection to Line 1\".",
+      "detail": {
+        "note": "Both describe the same Balboa-Panama Pacifico underground section; [1]'s 6 km is half again as long as the roughly 4-4.5 km [2] itemises and the pin states.",
+        "links": {
+          "1": "https://www.prensa.com/economia/metro-actualiza-fechas-de-entrega-de-la-linea-3-primera-fase-en-2027-y-la-segunda-en-2028/",
+          "2": "https://www.telemetro.com/nacionales/metro-panama-panama-oeste-cuando-estara-operativa-la-linea-3-n6005098",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "The pin describes \"a monorail crossing the Panama Canal through a new 4 km tunnel\".",
+            "label": "P"
+          },
+          {
+            "says": "\"The underground section (6 km tunnel between Balboa and Panama Pacifico station)\".",
+            "label": "1"
+          },
+          {
+            "says": "\"a traditional 300 m tunnel, then a 100 m launch shaft at Farfan; 3 km under the Canal navigation channel to a second shaft at Balboa; finishing at Albrook station, completing a 4.5 km connection to Line 1\".",
+            "label": "2"
+          }
+        ],
+        "subject": "Length of the tunnel under the Panama Canal",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:28.985Z"
+    },
+    {
+      "id": 1271,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 449,
+      "sourceId": null,
+      "path": null,
+      "message": "When the HRBT expansion is finished: [P] The pin is dated 2027-08-27. vs [1] VDOT's revised agreement sets \"substantial completion\" at Feb. 26, 2027 and \"final completion Aug. 27, 2027\". vs [2] A Virginia Peninsula Chamber item of Apr 6, 2026 has full completion \"expected in Spring 2027\".",
+      "detail": {
+        "note": "[2] is the newer statement (April 2026) and expects full completion in spring 2027, months before the contractual final completion date of 27 August 2027 that [1] gives and the pin uses.",
+        "links": {
+          "1": "https://www.wtkr.com/traffic/hrbt-expansion-project-completion-date-pushed-back-to-2027",
+          "2": "https://hrbtexpansion.vdot.virginia.gov/newsroom/",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "The pin is dated 2027-08-27.",
+            "label": "P"
+          },
+          {
+            "says": "VDOT's revised agreement sets \"substantial completion\" at Feb. 26, 2027 and \"final completion Aug. 27, 2027\".",
+            "label": "1"
+          },
+          {
+            "says": "A Virginia Peninsula Chamber item of Apr 6, 2026 has full completion \"expected in Spring 2027\".",
+            "label": "2"
+          }
+        ],
+        "subject": "When the HRBT expansion is finished",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.005Z"
+    },
+    {
+      "id": 1272,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 493,
+      "sourceId": null,
+      "path": null,
+      "message": "Height of the 400 Lake Shore north tower: [1] \"North Tower: 858 feet, 635 dwelling units (127 affordable)\". vs [2] \"north tower 875 ft (267 m), 72 floors, 635 apartments\".",
+      "detail": {
+        "note": "Same 72-storey tower and the same 635 units, but a 17-foot difference in height; the two agree on the south tower's 765 ft.",
+        "links": {
+          "1": "https://chicagoyimby.com/2026/01/400-lake-shore-opens-2026-ready-to-pour-the-66th-floor.html",
+          "2": "https://en.wikipedia.org/wiki/400_Lake_Shore"
+        },
+        "claims": [
+          {
+            "says": "\"North Tower: 858 feet, 635 dwelling units (127 affordable)\".",
+            "label": "1"
+          },
+          {
+            "says": "\"north tower 875 ft (267 m), 72 floors, 635 apartments\".",
+            "label": "2"
+          }
+        ],
+        "subject": "Height of the 400 Lake Shore north tower",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.022Z"
+    },
+    {
+      "id": 1273,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 496,
+      "sourceId": null,
+      "path": null,
+      "message": "How many residences the tower holds: [2] '125 condominiums; median unit sells from 10.5 to 90 million dollars' vs [3] 'Height 426 m, 104 apartments over 96 levels'",
+      "detail": {
+        "note": "[2] is the newer and more detailed account; [3] is a September 2016 video article. [1] gives no unit count, only '1 to 4 units per floor'.",
+        "links": {
+          "2": "https://en.wikipedia.org/wiki/432_Park_Avenue",
+          "3": "https://www.theb1m.com/video/room-with-a-view-432-park-avenue"
+        },
+        "claims": [
+          {
+            "says": "'125 condominiums; median unit sells from 10.5 to 90 million dollars'",
+            "label": "2"
+          },
+          {
+            "says": "'Height 426 m, 104 apartments over 96 levels'",
+            "label": "3"
+          }
+        ],
+        "subject": "How many residences the tower holds",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.027Z"
+    },
+    {
+      "id": 1274,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 499,
+      "sourceId": null,
+      "path": null,
+      "message": "When the airport opened: [P] 'opened near Ciudad Real in December 2008'; pin dated 2008-12-19 vs [1] Lead: 'opened in 2009 as Spain's first private international airport'; the failure section instead says siting problems delayed opening four years, '2008 instead of 2004' vs [2] 'opened to international flights in 2010 and shut two years later'",
+      "detail": {
+        "note": "[1] contradicts itself (2009 in the lead, 2008 in the reasons-for-failure section) and [2] dates the opening to 2010; [2]'s 2010 may be the first international scheduled flight (Ryanair) rather than the airport's opening, but its 'shut two years later' then also conflicts with [1]'s April 2012 closure being four years after opening.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Ciudad_Real_International_Airport",
+          "2": "https://www.theguardian.com/world/2015/jul/17/don-quixote-airport-building-cost-1bn-sold-china-10000",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "'opened near Ciudad Real in December 2008'; pin dated 2008-12-19",
+            "label": "P"
+          },
+          {
+            "says": "Lead: 'opened in 2009 as Spain's first private international airport'; the failure section instead says siting problems delayed opening four years, '2008 instead of 2004'",
+            "label": "1"
+          },
+          {
+            "says": "'opened to international flights in 2010 and shut two years later'",
+            "label": "2"
+          }
+        ],
+        "subject": "When the airport opened",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.032Z"
+    },
+    {
+      "id": 1275,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 509,
+      "sourceId": null,
+      "path": null,
+      "message": "Date the Guggenheim Museum Bilbao opened: [P] The pin dates the opening to 18 October 1997 (\"opened in October 1997\", start 1997-10-18). vs [1] \"inaugurated 18 October 1997 by King Juan Carlos I with an exhibition of 250 works\". vs [2] The Guggenheim's own anniversary article \"states the museum opened October 19, 1997\".",
+      "detail": {
+        "note": "A one-day disagreement about the pin's own date: [1] and the pin say 18 October, the museum's article says 19 October.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Guggenheim_Museum_Bilbao",
+          "2": "https://www.guggenheim.org/articles/checklist/architects-critics-curators-and-museum-directors-reflect-on-twenty-years-of-the-guggenheim-museum-bilbao",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "The pin dates the opening to 18 October 1997 (\"opened in October 1997\", start 1997-10-18).",
+            "label": "P"
+          },
+          {
+            "says": "\"inaugurated 18 October 1997 by King Juan Carlos I with an exhibition of 250 works\".",
+            "label": "1"
+          },
+          {
+            "says": "The Guggenheim's own anniversary article \"states the museum opened October 19, 1997\".",
+            "label": "2"
+          }
+        ],
+        "subject": "Date the Guggenheim Museum Bilbao opened",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.045Z"
+    },
+    {
+      "id": 1276,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 62,
+      "sourceId": null,
+      "path": null,
+      "message": "Release date of Far Cry 4: [P] Title 'Far Cry 4 to be released on PC, PS4, Xbox One, PS3 and Xbox 36'; pin dated 2014-11-17 to 2014-11-18 (an all-day span whose exclusive end makes the day 17 November 2014) vs [S] 'Release dates: UK 21st November; other EMEA 20th Nov; US 18th Nov.' vs [1] 'release November 18th in the US and November 20th in Europe, the Middle East and Africa' vs [2] 'Released November 18, 2014.'",
+      "detail": {
+        "note": "All three links put the earliest release on 18 November 2014; none mentions 17 November.",
+        "links": {
+          "1": "https://www.engadget.com/2014-05-15-far-cry-4.html",
+          "2": "https://en.wikipedia.org/wiki/Far_Cry_4",
+          "P": "the pin",
+          "S": "http://hexus.net/gaming/news/pc/69845-far-cry-4-announced-ubisoft/"
+        },
+        "claims": [
+          {
+            "says": "Title 'Far Cry 4 to be released on PC, PS4, Xbox One, PS3 and Xbox 36'; pin dated 2014-11-17 to 2014-11-18 (an all-day span whose exclusive end makes the day 17 November 2014)",
+            "label": "P"
+          },
+          {
+            "says": "'Release dates: UK 21st November; other EMEA 20th Nov; US 18th Nov.'",
+            "label": "S"
+          },
+          {
+            "says": "'release November 18th in the US and November 20th in Europe, the Middle East and Africa'",
+            "label": "1"
+          },
+          {
+            "says": "'Released November 18, 2014.'",
+            "label": "2"
+          }
+        ],
+        "subject": "Release date of Far Cry 4",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.078Z"
+    },
+    {
+      "id": 1277,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 62,
+      "sourceId": null,
+      "path": null,
+      "message": "Name of the pre-order Limited Edition missions: [S] 'three extra single-player missions (\"Monkey Around With Hurk\")' vs [1] 'three single-player missions \"Hurk's Redemption\" plus Hurk's harpoon gun'",
+      "detail": {
+        "note": "Same three missions and the same harpoon gun, two different names; [2] names neither.",
+        "links": {
+          "1": "https://www.engadget.com/2014-05-15-far-cry-4.html",
+          "S": "http://hexus.net/gaming/news/pc/69845-far-cry-4-announced-ubisoft/"
+        },
+        "claims": [
+          {
+            "says": "'three extra single-player missions (\"Monkey Around With Hurk\")'",
+            "label": "S"
+          },
+          {
+            "says": "'three single-player missions \"Hurk's Redemption\" plus Hurk's harpoon gun'",
+            "label": "1"
+          }
+        ],
+        "subject": "Name of the pre-order Limited Edition missions",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.078Z"
+    },
+    {
+      "id": 1278,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 64,
+      "sourceId": null,
+      "path": null,
+      "message": "Date the kill-switch law was signed: [P] The pin is dated 2015-07-31 and its description says the bill \"was today signed into law by California governor...\". vs [S] MacRumors, \"Monday August 25, 2014\": \"Governor Jerry Brown signed SB-962\"; the requirement is \"Effective July 2015\". vs [1] \"Signed by Gov. Jerry Brown Aug. 25, 2014. SB 962 (Leno) applies to smartphones manufactured after July 1, 2015\".",
+      "detail": {
+        "note": "The signing the description reports as happening \"today\" is dated 25 August 2014 by every link; the pin's date matches the law's effective date instead, which [1] and [2] put at 1 July 2015 rather than the end of the month.",
+        "links": {
+          "1": "https://consumercal.org/sb-962-governor-signs-smartphone-kill-switch-legislation/",
+          "P": "the pin",
+          "S": "http://www.macrumors.com/2014/08/25/california-kill-switch-law/"
+        },
+        "claims": [
+          {
+            "says": "The pin is dated 2015-07-31 and its description says the bill \"was today signed into law by California governor...\".",
+            "label": "P"
+          },
+          {
+            "says": "MacRumors, \"Monday August 25, 2014\": \"Governor Jerry Brown signed SB-962\"; the requirement is \"Effective July 2015\".",
+            "label": "S"
+          },
+          {
+            "says": "\"Signed by Gov. Jerry Brown Aug. 25, 2014. SB 962 (Leno) applies to smartphones manufactured after July 1, 2015\".",
+            "label": "1"
+          }
+        ],
+        "subject": "Date the kill-switch law was signed",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.082Z"
+    },
+    {
+      "id": 1279,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 67,
+      "sourceId": null,
+      "path": null,
+      "message": "Date Proposition 64 was approved: [P] Title 'Fifty-six percent of California voters approved Proposition 64'; pin dated 2016-11-09 to 2016-11-10 (an all-day span whose exclusive end makes the day 9 November 2016) vs [1] 'Initiated state statute on the Nov 8, 2016 ballot'; 'Effective dates: November 9, 2016 (possession, cultivation, use); January 1, 2018 (sale and taxation)' vs [2] 'November 8, 2016. Edison Research exit poll for AP and networks: Prop 64 passing 55 to 45 percent.'",
+      "detail": {
+        "note": "The vote was 8 November 2016 per [1] and [2]; 9 November, the pin's day, is the date the measure took effect ([S]: 'took effect November 9, 2016').",
+        "links": {
+          "1": "https://ballotpedia.org/California_Proposition_64,_Marijuana_Legalization_(2016)",
+          "2": "https://www.cbsnews.com/amp/sanfrancisco/news/californians-vote-to-legalize-pot-with-resounding-yes-on-prop-64",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "Title 'Fifty-six percent of California voters approved Proposition 64'; pin dated 2016-11-09 to 2016-11-10 (an all-day span whose exclusive end makes the day 9 November 2016)",
+            "label": "P"
+          },
+          {
+            "says": "'Initiated state statute on the Nov 8, 2016 ballot'; 'Effective dates: November 9, 2016 (possession, cultivation, use); January 1, 2018 (sale and taxation)'",
+            "label": "1"
+          },
+          {
+            "says": "'November 8, 2016. Edison Research exit poll for AP and networks: Prop 64 passing 55 to 45 percent.'",
+            "label": "2"
+          }
+        ],
+        "subject": "Date Proposition 64 was approved",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.091Z"
+    },
+    {
+      "id": 1280,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 67,
+      "sourceId": null,
+      "path": null,
+      "message": "Share of the vote in favour: [P] 'Fifty-six percent of California voters approved Proposition 64' vs [1] 'approved: Yes 7,979,041 (57.13%), No 5,987,020 (42.87%)' vs [2] 'Edison Research exit poll for AP and networks: Prop 64 passing 55 to 45 percent'",
+      "detail": {
+        "note": "[1] gives the certified count of 57.13%; [2]'s 55% is an election-night exit poll, and [1] notes pre-election polls averaged about 56, which is where the pin's figure appears to come from.",
+        "links": {
+          "1": "https://ballotpedia.org/California_Proposition_64,_Marijuana_Legalization_(2016)",
+          "2": "https://www.cbsnews.com/amp/sanfrancisco/news/californians-vote-to-legalize-pot-with-resounding-yes-on-prop-64",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "'Fifty-six percent of California voters approved Proposition 64'",
+            "label": "P"
+          },
+          {
+            "says": "'approved: Yes 7,979,041 (57.13%), No 5,987,020 (42.87%)'",
+            "label": "1"
+          },
+          {
+            "says": "'Edison Research exit poll for AP and networks: Prop 64 passing 55 to 45 percent'",
+            "label": "2"
+          }
+        ],
+        "subject": "Share of the vote in favour",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.091Z"
+    },
+    {
+      "id": 1281,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 670,
+      "sourceId": null,
+      "path": null,
+      "message": "When the LaGuardia redevelopment was completed: [P] The pin dates the full wrap-up of the $8BN redevelopment to 2025-01-31. vs [1] City & State (29 April 2024) on LaGuardia: \"substantially completed 2022 (Terminal B January 2022; Terminal C substantially June 2022, final gates 2024)\". vs [2] Construction Dive (22 Feb 2022): the overall project is \"about 95% complete\", with Terminal C \"expected to be completed in spring 2022\".",
+      "detail": {
+        "note": "No cited link puts any completion milestone in 2025; the newest of them ([1], April 2024) has the last gates opening during 2024.",
+        "links": {
+          "1": "https://www.cityandstateny.com/policy/2024/04/major-nyc-airport-upgrades-have-led-record-numbers-passengers/396087/",
+          "2": "https://www.constructiondive.com/news/laguardia-airport-new-york-4b-terminal-renovation-completed-skybridge/618836/",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "The pin dates the full wrap-up of the $8BN redevelopment to 2025-01-31.",
+            "label": "P"
+          },
+          {
+            "says": "City & State (29 April 2024) on LaGuardia: \"substantially completed 2022 (Terminal B January 2022; Terminal C substantially June 2022, final gates 2024)\".",
+            "label": "1"
+          },
+          {
+            "says": "Construction Dive (22 Feb 2022): the overall project is \"about 95% complete\", with Terminal C \"expected to be completed in spring 2022\".",
+            "label": "2"
+          }
+        ],
+        "subject": "When the LaGuardia redevelopment was completed",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.096Z"
+    },
+    {
+      "id": 1282,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 676,
+      "sourceId": null,
+      "path": null,
+      "message": "Ice class of the tanker that loaded the first cargo: [1] The first cargo went onto \"the 69,000-dwt ice-class tanker Valentin Pikul\", which is \"Arc6\". vs [2] \"First cargo loaded on a Russia-flagged Arc7 ice-class tanker at Sever.\"",
+      "detail": {
+        "note": "Two same-day reports of the same first loading give different ice classes for the vessel; [2] does not name the ship.",
+        "links": {
+          "1": "https://gcaptain.com/russia-launches-massive-vostok-oil-project-marking-new-arctic-shipping-era/",
+          "2": "https://oilprice.com/Energy/Crude-Oil/Rosneft-Ships-First-Crude-From-157-Billion-Vostok-Oil-Project.html"
+        },
+        "claims": [
+          {
+            "says": "The first cargo went onto \"the 69,000-dwt ice-class tanker Valentin Pikul\", which is \"Arc6\".",
+            "label": "1"
+          },
+          {
+            "says": "\"First cargo loaded on a Russia-flagged Arc7 ice-class tanker at Sever.\"",
+            "label": "2"
+          }
+        ],
+        "subject": "Ice class of the tanker that loaded the first cargo",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.101Z"
+    },
+    {
+      "id": 1283,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 681,
+      "sourceId": null,
+      "path": null,
+      "message": "Whether the April 2025 certificate was permanent: [P] Title: 'The Brooklyn Tower Finally Receives Its Permanent Certificate of Occupancy' vs [2] 'the building only received its official Certificate of Occupancy on April 25, 2025, as an extension of a temporary permit; residents moved in under TCOs'",
+      "detail": {
+        "note": "The only link that carries the date describes what was issued as an extension of a temporary permit rather than a permanent certificate; [1] does not mention a certificate of occupancy at all.",
+        "links": {
+          "2": "https://jdspulse.com/brooklyns-illusion-how-michael-sterns-9-dekalb-overpromised-and-underdelivered/",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "Title: 'The Brooklyn Tower Finally Receives Its Permanent Certificate of Occupancy'",
+            "label": "P"
+          },
+          {
+            "says": "'the building only received its official Certificate of Occupancy on April 25, 2025, as an extension of a temporary permit; residents moved in under TCOs'",
+            "label": "2"
+          }
+        ],
+        "subject": "Whether the April 2025 certificate was permanent",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.105Z"
+    },
+    {
+      "id": 1284,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 701,
+      "sourceId": null,
+      "path": null,
+      "message": "Number of speakers in the Infinity Screen audio system: [1] The Infinity Screen by Samsung has a \"260-speaker JBL system\". vs [2] The Infinity Screen has \"268 speakers\".",
+      "detail": {
+        "note": "Both describe the same JBL system on the same screen, so the counts are incompatible; neither link is dated as the later revision.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/SoFi_Stadium",
+          "2": "https://www.discoverlosangeles.com/things-to-do/sofi-stadium-the-story-of-an-la-icon"
+        },
+        "claims": [
+          {
+            "says": "The Infinity Screen by Samsung has a \"260-speaker JBL system\".",
+            "label": "1"
+          },
+          {
+            "says": "The Infinity Screen has \"268 speakers\".",
+            "label": "2"
+          }
+        ],
+        "subject": "Number of speakers in the Infinity Screen audio system",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.115Z"
+    },
+    {
+      "id": 1285,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 754,
+      "sourceId": null,
+      "path": null,
+      "message": "When BD Bacata topped out: [P] The pin is dated 2016-12-31 and says the tower \"reaches its final floor\". vs [2] \"south tower final slab 24 July 2015; north tower final slab 20 December 2015; structural work completed 24 February 2016 with inauguration scheduled for the following year\".",
+      "detail": {
+        "note": "[2] puts the last slabs in 2015 and the completion of structural work in February 2016, roughly ten months before the pin's date for the topping out.",
+        "links": {
+          "2": "https://en.wikipedia.org/wiki/BD_Bacat%C3%A1",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "The pin is dated 2016-12-31 and says the tower \"reaches its final floor\".",
+            "label": "P"
+          },
+          {
+            "says": "\"south tower final slab 24 July 2015; north tower final slab 20 December 2015; structural work completed 24 February 2016 with inauguration scheduled for the following year\".",
+            "label": "2"
+          }
+        ],
+        "subject": "When BD Bacata topped out",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.134Z"
+    },
+    {
+      "id": 1286,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 754,
+      "sourceId": null,
+      "path": null,
+      "message": "Number of crowdfunding investors: [P] \"Financed by roughly 5,000 small Colombian investors\". vs [S] \"Colombia's tallest building (BD Bacata) was crowdfunded by 5,000 citizens.\" vs [2] \"First crowdfunded skyscraper, financed by over 3,800 ordinary Colombians\".",
+      "detail": {
+        "note": "A gap of more than a thousand investors between the figure the pin takes from [S] and the figure in [2].",
+        "links": {
+          "2": "https://en.wikipedia.org/wiki/BD_Bacat%C3%A1",
+          "P": "the pin",
+          "S": "https://www.youtube.com/watch?v=wLD-QFFEapQ"
+        },
+        "claims": [
+          {
+            "says": "\"Financed by roughly 5,000 small Colombian investors\".",
+            "label": "P"
+          },
+          {
+            "says": "\"Colombia's tallest building (BD Bacata) was crowdfunded by 5,000 citizens.\"",
+            "label": "S"
+          },
+          {
+            "says": "\"First crowdfunded skyscraper, financed by over 3,800 ordinary Colombians\".",
+            "label": "2"
+          }
+        ],
+        "subject": "Number of crowdfunding investors",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.134Z"
+    },
+    {
+      "id": 1287,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 754,
+      "sourceId": null,
+      "path": null,
+      "message": "Number of hotel rooms: [1] \"over 115,000 m2: 405 apartments, 117 offices, 319 hotel rooms, 6,500 m2 retail, 700 parking spaces\". vs [2] \"Hotel by Eurostars (364 rooms per text; infobox lists 300)\".",
+      "detail": {
+        "note": "Three different room counts for the same hotel, two of them inside [2] itself.",
+        "links": {
+          "1": "https://www.archdaily.com/1113713/what-happened-to-bd-bacata-colombias-tallest-skyscraper",
+          "2": "https://en.wikipedia.org/wiki/BD_Bacat%C3%A1"
+        },
+        "claims": [
+          {
+            "says": "\"over 115,000 m2: 405 apartments, 117 offices, 319 hotel rooms, 6,500 m2 retail, 700 parking spaces\".",
+            "label": "1"
+          },
+          {
+            "says": "\"Hotel by Eurostars (364 rooms per text; infobox lists 300)\".",
+            "label": "2"
+          }
+        ],
+        "subject": "Number of hotel rooms",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.134Z"
+    },
+    {
+      "id": 1288,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 76,
+      "sourceId": null,
+      "path": null,
+      "message": "How long the vulnerable feature had shipped: [P] 'a vulnerability which has been open and exploitable in all its enterprise targeted Core processors - for the last nine years. Since 2008...' vs [S] 'Intel patched a vulnerability open for nine years... Since 2008 business PC processors shipped with Active Management Technology (AMT), Intel Standard Manageability (ISM) and Small Business Technology (SBT).' vs [1] 'features have been present for nearly a decade, from 2010's Intel Q57 family to this year's Kaby Lake Core parts'",
+      "detail": {
+        "note": "[1] names 2010's Q57 chipset family as the earliest affected hardware, which is seven years rather than the nine [P] and [S] claim, although [1] also calls it 'nearly a decade'.",
+        "links": {
+          "1": "https://www.theregister.com/2017/05/01/intel_amt_me_vulnerability/",
+          "P": "the pin",
+          "S": "http://hexus.net/tech/news/cpu/105202-intel-patches-nine-year-old-enterprise-cpu-vulnerability/"
+        },
+        "claims": [
+          {
+            "says": "'a vulnerability which has been open and exploitable in all its enterprise targeted Core processors - for the last nine years. Since 2008...'",
+            "label": "P"
+          },
+          {
+            "says": "'Intel patched a vulnerability open for nine years... Since 2008 business PC processors shipped with Active Management Technology (AMT), Intel Standard Manageability (ISM) and Small Business Technology (SBT).'",
+            "label": "S"
+          },
+          {
+            "says": "'features have been present for nearly a decade, from 2010's Intel Q57 family to this year's Kaby Lake Core parts'",
+            "label": "1"
+          }
+        ],
+        "subject": "How long the vulnerable feature had shipped",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.140Z"
+    },
+    {
+      "id": 1289,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 76,
+      "sourceId": null,
+      "path": null,
+      "message": "When the flaw was discovered: [1] 'Labeled CVE-2017-5689; discovered and reported in March by Maksim Malyutin at Embedi' vs [2] 'Embedi (researcher Maksim Malyutin, who discovered it in February)'",
+      "detail": {
+        "note": "Same researcher and same CVE, two different months; [2] is the later report (May 5 against May 1).",
+        "links": {
+          "1": "https://www.theregister.com/2017/05/01/intel_amt_me_vulnerability/",
+          "2": "https://cyberscoop.com/manufacturers-scramble-to-roll-out-firmware-patches-for-intel-chip-vuln/"
+        },
+        "claims": [
+          {
+            "says": "'Labeled CVE-2017-5689; discovered and reported in March by Maksim Malyutin at Embedi'",
+            "label": "1"
+          },
+          {
+            "says": "'Embedi (researcher Maksim Malyutin, who discovered it in February)'",
+            "label": "2"
+          }
+        ],
+        "subject": "When the flaw was discovered",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.140Z"
+    },
+    {
+      "id": 1290,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 787,
+      "sourceId": null,
+      "path": null,
+      "message": "Installation vessel used at DanTysk: [P] 'built with 80 turbines 70km west of Sylt using the jack-up vessel Pacific Osprey' vs [S] 'the installation vessel is named in the chapter list as the Pacific Osprey' (chapter '34:30 Life on the Pacific Osprey') vs [2] 'Swire Blue Ocean heavy-lift vessel Pacific Orca (161.9 m, 1,200 t capacity; built by Samsung Heavy Industries, delivered 2012) carried turbines from Esbjerg'",
+      "detail": {
+        "note": "Pacific Osprey and Pacific Orca are two different named vessels; [2] names Orca for the turbine installation while [P] and [S] name Osprey.",
+        "links": {
+          "2": "https://www.power-technology.com/projects/dantysk-wind-farm/",
+          "P": "the pin",
+          "S": "https://www.youtube.com/watch?v=ptCEUp445CA"
+        },
+        "claims": [
+          {
+            "says": "'built with 80 turbines 70km west of Sylt using the jack-up vessel Pacific Osprey'",
+            "label": "P"
+          },
+          {
+            "says": "'the installation vessel is named in the chapter list as the Pacific Osprey' (chapter '34:30 Life on the Pacific Osprey')",
+            "label": "S"
+          },
+          {
+            "says": "'Swire Blue Ocean heavy-lift vessel Pacific Orca (161.9 m, 1,200 t capacity; built by Samsung Heavy Industries, delivered 2012) carried turbines from Esbjerg'",
+            "label": "2"
+          }
+        ],
+        "subject": "Installation vessel used at DanTysk",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.145Z"
+    },
+    {
+      "id": 1291,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 826,
+      "sourceId": null,
+      "path": null,
+      "message": "Date Emma Maersk was handed over: [P] The pin is dated 2006-08-31 and says she \"entered service in 2006\". vs [1] \"laid down 20 January 2006, launched 18 May 2006, acquired 31 August 2006\". vs [2] \"Delivered Sept. 1, 2006 at A.P. Moller-Maersk's Odense Steel Shipyard\".",
+      "detail": {
+        "note": "One day apart for the same handover from Odense Steel Shipyard; the pin follows [1]. Both agree the maiden voyage followed in September.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Emma_M%C3%A6rsk",
+          "2": "https://www.professionalmariner.com/worlds-largest-containership-enters-service/",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "The pin is dated 2006-08-31 and says she \"entered service in 2006\".",
+            "label": "P"
+          },
+          {
+            "says": "\"laid down 20 January 2006, launched 18 May 2006, acquired 31 August 2006\".",
+            "label": "1"
+          },
+          {
+            "says": "\"Delivered Sept. 1, 2006 at A.P. Moller-Maersk's Odense Steel Shipyard\".",
+            "label": "2"
+          }
+        ],
+        "subject": "Date Emma Maersk was handed over",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.159Z"
+    },
+    {
+      "id": 1292,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 844,
+      "sourceId": null,
+      "path": null,
+      "message": "Top speed the Shinkansen ran at when it opened: [P] 'began carrying passengers between Tokyo and Osaka at over 200 km/h' vs [1] 'trains designed for 210 km/h ran at 200 km/h at first; from Nov 1, 1965 210 km/h schedules cut Hikari to 3 h 10 min' vs [2] 'The \"Series 0\" Shinkansen was the first train in the world to operate commercially at a top speed of 210 kph.'",
+      "detail": {
+        "note": "[1] is explicit that 210 km/h schedules only began on 1 November 1965, a year after the opening the pin marks; [2] attributes 210 km/h to the service from the start.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Tokaido_Shinkansen",
+          "2": "https://www.japanhouselondon.uk/whats-on/shinkansen-and-the-legacy-of-tokyo-1964/",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "'began carrying passengers between Tokyo and Osaka at over 200 km/h'",
+            "label": "P"
+          },
+          {
+            "says": "'trains designed for 210 km/h ran at 200 km/h at first; from Nov 1, 1965 210 km/h schedules cut Hikari to 3 h 10 min'",
+            "label": "1"
+          },
+          {
+            "says": "'The \"Series 0\" Shinkansen was the first train in the world to operate commercially at a top speed of 210 kph.'",
+            "label": "2"
+          }
+        ],
+        "subject": "Top speed the Shinkansen ran at when it opened",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.164Z"
+    },
+    {
+      "id": 1293,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 846,
+      "sourceId": null,
+      "path": null,
+      "message": "How many LC-130s the 109th operates: [1] 'Only 10 operational LC-130s are in U.S. Air Force service, all operated by the 109th since first fielded in 1984' vs [2] 'operates 5 LC-130 (per the article)'; elsewhere '2011-2012 season: six LC-130H flew 359 missions' and '2013-14: seven LC-130s on the ice'",
+      "detail": {
+        "note": "[2]'s own body counts six and seven aircraft deployed in single seasons, which its stated fleet of five cannot support; [1] says ten.",
+        "links": {
+          "1": "https://theaviationist.com/2025/03/09/lc-130h-skibird/",
+          "2": "https://en.wikipedia.org/wiki/109th_Airlift_Wing"
+        },
+        "claims": [
+          {
+            "says": "'Only 10 operational LC-130s are in U.S. Air Force service, all operated by the 109th since first fielded in 1984'",
+            "label": "1"
+          },
+          {
+            "says": "'operates 5 LC-130 (per the article)'; elsewhere '2011-2012 season: six LC-130H flew 359 missions' and '2013-14: seven LC-130s on the ice'",
+            "label": "2"
+          }
+        ],
+        "subject": "How many LC-130s the 109th operates",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.168Z"
+    },
+    {
+      "id": 1294,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 877,
+      "sourceId": null,
+      "path": null,
+      "message": "Year the basilica was consecrated: [P] Consecrated 1687-11-21 by Patriarch Alvise Sagredo (the pin's date) vs [1] Infobox: 'consecrated 1681; groundbreaking 1631; completed 1687'; the history section says Longhena's rotunda was 'Completed 1681, the year before his death' vs [2] 'Building took some 50 years; consecrated 21 November 1687'",
+      "detail": {
+        "note": "[1] is the odd one out and is internally inconsistent: its infobox gives completion as 1687 while its text gives 1681, so it appears to conflate the end of Longhena's work with the consecration. [P] and [2] agree on 21 November 1687.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Santa_Maria_della_Salute",
+          "2": "https://allaboutvenice.com/2019/11/25/santa-maria-della-salute/",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "Consecrated 1687-11-21 by Patriarch Alvise Sagredo (the pin's date)",
+            "label": "P"
+          },
+          {
+            "says": "Infobox: 'consecrated 1681; groundbreaking 1631; completed 1687'; the history section says Longhena's rotunda was 'Completed 1681, the year before his death'",
+            "label": "1"
+          },
+          {
+            "says": "'Building took some 50 years; consecrated 21 November 1687'",
+            "label": "2"
+          }
+        ],
+        "subject": "Year the basilica was consecrated",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.181Z"
+    },
+    {
+      "id": 1295,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 919,
+      "sourceId": null,
+      "path": null,
+      "message": "Europa-Park's ranking among European theme parks: [P] 'It has since grown into continental Europe's second-most-visited theme park.' vs [1] 'AECOM 2020: 19th of 25 most-visited parks worldwide, third in Europe after Disneyland Paris and Efteling, most visited seasonal park in the world.'",
+      "detail": {
+        "note": "Both of the parks [1] places above it - Disneyland Paris and Efteling - are in continental Europe, so [1] makes it third, not second.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Europa-Park",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "'It has since grown into continental Europe's second-most-visited theme park.'",
+            "label": "P"
+          },
+          {
+            "says": "'AECOM 2020: 19th of 25 most-visited parks worldwide, third in Europe after Disneyland Paris and Efteling, most visited seasonal park in the world.'",
+            "label": "1"
+          }
+        ],
+        "subject": "Europa-Park's ranking among European theme parks",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:31:29.190Z"
+    },
+    {
+      "id": 1296,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 112,
+      "sourceId": null,
+      "path": null,
+      "message": "Whether every 2018 iPhone would use an OLED display: [P] the pin's title is Apple planning to use OLED displays \"in all new iPhone models launched from the second half of 2018\" vs [S] Nikkei, 6 July 2017: Apple plans OLED \"in all new iPhone models launched from the second half of 2018\", tentatively three models, all OLED - while noting a Sharp executive said it is \"not likely\" every new 2018 iPhone will go OLED, and that the plans are \"subject to change\" vs [1] AppleInsider, 23 January 2018: the 2018 lineup is \"two OLED versions (5.8 and 6.5 inches) and a 6.1-inch LCD variant\", with Japan Display and LG supplying the LCD panels vs [2] Macworld, updated 5 September 2018: three models, \"5.8 and 6.5 OLED, 6.1 LCD\", the LCD model arriving \"slightly later due to its production schedule\"",
+      "detail": {
+        "note": "[1] (January 2018) and [2] (September 2018) are both newer than the July 2017 report the pin's headline rests on, and both have one of the three 2018 iPhones on LCD.",
+        "links": {
+          "1": "https://appleinsider.com/articles/18/01/23/supply-chain-rumors-again-point-to-oled-and-lcd-iphone-models-in-2018",
+          "2": "https://www.macworld.com/article/230677/iphone-2018-rumors.html",
+          "P": "the pin",
+          "S": "https://www.macrumors.com/2017/07/06/apple-three-new-oled-iphones-2018/"
+        },
+        "claims": [
+          {
+            "says": "the pin's title is Apple planning to use OLED displays \"in all new iPhone models launched from the second half of 2018\"",
+            "label": "P"
+          },
+          {
+            "says": "Nikkei, 6 July 2017: Apple plans OLED \"in all new iPhone models launched from the second half of 2018\", tentatively three models, all OLED - while noting a Sharp executive said it is \"not likely\" every new 2018 iPhone will go OLED, and that the plans are \"subject to change\"",
+            "label": "S"
+          },
+          {
+            "says": "AppleInsider, 23 January 2018: the 2018 lineup is \"two OLED versions (5.8 and 6.5 inches) and a 6.1-inch LCD variant\", with Japan Display and LG supplying the LCD panels",
+            "label": "1"
+          },
+          {
+            "says": "Macworld, updated 5 September 2018: three models, \"5.8 and 6.5 OLED, 6.1 LCD\", the LCD model arriving \"slightly later due to its production schedule\"",
+            "label": "2"
+          }
+        ],
+        "subject": "Whether every 2018 iPhone would use an OLED display",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.412Z"
+    },
+    {
+      "id": 1297,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 1861,
+      "sourceId": null,
+      "path": null,
+      "message": "Where Meta Connect 2026 is held: [S] \"Based on a map slide, it looks like Meta Connect 2026 will take place in the same building that last year's edition was held in, in San Francisco\" vs [1] \"As with previous years, the event will be held at the Menlo Park campus, with significant keynotes and announcements being streamed online\"",
+      "detail": {
+        "note": "Two venues about 30 miles apart for the same keynote; [S] hedges its reading of a map slide while [1] states Menlo Park outright. The dates (23-24 September) and the 4pm Pacific keynote time both agree.",
+        "links": {
+          "1": "https://roadtovr.com/meta-connect-2026-date-announcement/",
+          "S": "https://www.tomsguide.com/computing/smart-glasses/meta-connect-2026-kicks-off-in-september-date-time-and-mystery-new-smart-glasses-teased"
+        },
+        "claims": [
+          {
+            "says": "\"Based on a map slide, it looks like Meta Connect 2026 will take place in the same building that last year's edition was held in, in San Francisco\"",
+            "label": "S"
+          },
+          {
+            "says": "\"As with previous years, the event will be held at the Menlo Park campus, with significant keynotes and announcements being streamed online\"",
+            "label": "1"
+          }
+        ],
+        "subject": "Where Meta Connect 2026 is held",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.464Z"
+    },
+    {
+      "id": 1298,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 216,
+      "sourceId": null,
+      "path": null,
+      "message": "The day Western Sydney International opens for freight: [S] \"Opened 27 July 2026 for cargo flights\"; the timeline repeats \"27 July 2026 cargo operations began\" vs [1] \"Freight starts Sunday 26 July (Qantas Freight regular flights the following evening)\"; the release's own URL reads \"freight 26 July 2026\" vs [2] \"Freight flights 27 July 2026\" and \"Qantas Freight regular services from 27 July 2026\"",
+      "detail": {
+        "note": "One day apart, and [1] may reconcile them by putting the opening on the 26th and the first regular Qantas Freight service on the evening of the 27th. The passenger opening the pin is dated to, 25 October 2026, is the same in all three.",
+        "links": {
+          "1": "https://www.pm.gov.au/media/its-official-western-sydney-open-passengers-25-october-and-freight-26-july-2026",
+          "2": "https://www.infrastructure.gov.au/department/media/news/western-sydney-airport-set-open",
+          "S": "https://en.wikipedia.org/wiki/Western_Sydney_Airport"
+        },
+        "claims": [
+          {
+            "says": "\"Opened 27 July 2026 for cargo flights\"; the timeline repeats \"27 July 2026 cargo operations began\"",
+            "label": "S"
+          },
+          {
+            "says": "\"Freight starts Sunday 26 July (Qantas Freight regular flights the following evening)\"; the release's own URL reads \"freight 26 July 2026\"",
+            "label": "1"
+          },
+          {
+            "says": "\"Freight flights 27 July 2026\" and \"Qantas Freight regular services from 27 July 2026\"",
+            "label": "2"
+          }
+        ],
+        "subject": "The day Western Sydney International opens for freight",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.484Z"
+    },
+    {
+      "id": 1299,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 264,
+      "sourceId": null,
+      "path": null,
+      "message": "When Snowy 2.0 is fully operational: [P] the pin dates \"Snowy 2.0 Pumped Hydro Online\" to 1 December 2029 (marked \"Estimated date\") vs [S] \"Currently expected fully operational by end of 2028\"; the same article records October 2025 reporting of 67% completion and tunnelling halted in early 2025 vs [1] Snowy Hydro said full commercial operation \"may not be reached until December 2029\", \"delayed by a further 12-24 months from the current publicly released dates\" (3 May 2023) vs [2] the delay of \"a further 12-24 months\" pushes full commercial operation to \"December 2029\" (3 May 2023)",
+      "detail": {
+        "note": "[S] is the newest link but gives the earlier date, end of 2028, while the two May 2023 reports and the pin both say December 2029; a year apart on the pin's own date.",
+        "links": {
+          "1": "https://reneweconomy.com.au/snowy-2-0-project-pushed-back-to-late-2029-costs-to-blow-out-again/",
+          "2": "https://www.pv-magazine-australia.com/2023/05/03/snowy-2-0-pumped-hydro-project-faces-another-two-year-delay/",
+          "P": "the pin",
+          "S": "https://en.wikipedia.org/wiki/Snowy_2.0"
+        },
+        "claims": [
+          {
+            "says": "the pin dates \"Snowy 2.0 Pumped Hydro Online\" to 1 December 2029 (marked \"Estimated date\")",
+            "label": "P"
+          },
+          {
+            "says": "\"Currently expected fully operational by end of 2028\"; the same article records October 2025 reporting of 67% completion and tunnelling halted in early 2025",
+            "label": "S"
+          },
+          {
+            "says": "Snowy Hydro said full commercial operation \"may not be reached until December 2029\", \"delayed by a further 12-24 months from the current publicly released dates\" (3 May 2023)",
+            "label": "1"
+          },
+          {
+            "says": "the delay of \"a further 12-24 months\" pushes full commercial operation to \"December 2029\" (3 May 2023)",
+            "label": "2"
+          }
+        ],
+        "subject": "When Snowy 2.0 is fully operational",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.506Z"
+    },
+    {
+      "id": 1300,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 267,
+      "sourceId": null,
+      "path": null,
+      "message": "When the first phase of The Line is finished: [P] the pin dates \"The Line First Phase Complete\" to 1 December 2030 (marked \"Estimated date\") vs [S] \"After $50 billion spent, the aim had become to complete the first half-mile section in 2034\", and \"in May 2026 Semafor reported construction delayed until at least after 2030\"; \"By end of 2025 the project appeared suspended with no construction work\" vs [1] the \"first phase\", \"lasting until 2030\", would cost 1.2tn Saudi riyals (Guardian, 27 July 2022) vs [2] \"a 5 km central section targets 2030\" with final completion at 170 km in 2045 (AGBI, October 2024)",
+      "detail": {
+        "note": "[S] is the newest account and moves the first section to 2034 with construction delayed past 2030, which the pin's 2030 date and the older [1] and [2] targets predate.",
+        "links": {
+          "1": "https://www.theguardian.com/world/2022/jul/27/saudis-unveil-eye-popping-plan-for-mirrored-skyscraper-eco-city",
+          "2": "https://www.agbi.com/giga-projects/2024/10/neom-uses-one-fifth-of-worlds-steel/",
+          "P": "the pin",
+          "S": "https://en.wikipedia.org/wiki/The_Line,_Saudi_Arabia"
+        },
+        "claims": [
+          {
+            "says": "the pin dates \"The Line First Phase Complete\" to 1 December 2030 (marked \"Estimated date\")",
+            "label": "P"
+          },
+          {
+            "says": "\"After $50 billion spent, the aim had become to complete the first half-mile section in 2034\", and \"in May 2026 Semafor reported construction delayed until at least after 2030\"; \"By end of 2025 the project appeared suspended with no construction work\"",
+            "label": "S"
+          },
+          {
+            "says": "the \"first phase\", \"lasting until 2030\", would cost 1.2tn Saudi riyals (Guardian, 27 July 2022)",
+            "label": "1"
+          },
+          {
+            "says": "\"a 5 km central section targets 2030\" with final completion at 170 km in 2045 (AGBI, October 2024)",
+            "label": "2"
+          }
+        ],
+        "subject": "When the first phase of The Line is finished",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.510Z"
+    },
+    {
+      "id": 1301,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 267,
+      "sourceId": null,
+      "path": null,
+      "message": "How long the first section of The Line will be: [P] \"The first 2.4 km of a proposed 170 km linear city\" vs [S] the Wall Street Journal reported \"the first phase would only be 2.4 km long\", which Saudi officials denied vs [2] \"a 5 km central section targets 2030\"",
+      "detail": {
+        "note": "2.4 km against a 5 km central section for the same first stage; [S] is newer (2025-26 reporting) than [2] (October 2024), and [S] notes the Saudi denial.",
+        "links": {
+          "2": "https://www.agbi.com/giga-projects/2024/10/neom-uses-one-fifth-of-worlds-steel/",
+          "P": "the pin",
+          "S": "https://en.wikipedia.org/wiki/The_Line,_Saudi_Arabia"
+        },
+        "claims": [
+          {
+            "says": "\"The first 2.4 km of a proposed 170 km linear city\"",
+            "label": "P"
+          },
+          {
+            "says": "the Wall Street Journal reported \"the first phase would only be 2.4 km long\", which Saudi officials denied",
+            "label": "S"
+          },
+          {
+            "says": "\"a 5 km central section targets 2030\"",
+            "label": "2"
+          }
+        ],
+        "subject": "How long the first section of The Line will be",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.510Z"
+    },
+    {
+      "id": 1302,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 324,
+      "sourceId": null,
+      "path": null,
+      "message": "The day the MOMENTUM True Wireless 5 is released: [P] the pin is dated 8 September 2026 vs [S] announced 20 August 2026 and \"ships September 3 at MSRP $299.95 USD\" vs [1] \"Preorder starts today\" (21 Aug 2026) and \"ships September 3\" vs [2] reports the announcement on 20 August 2026",
+      "detail": {
+        "note": "All three links give the same ship date, 3 September 2026, and an announcement in late August; nothing in them supports the pin's 8 September date.",
+        "links": {
+          "1": "https://www.prnewswire.com/apac/news-releases/sennheiser-unveils-next-generation-true-wireless-lineup-with-the-momentum-true-wireless-5-and-accentum-clip-302857125.html",
+          "2": "https://audioxpress.com/news/sonova-announces-sennheiser-momentum-true-wireless-5-earbuds",
+          "P": "the pin",
+          "S": "https://newsroom.sennheiser.com/introducing-sennheiser-momentum-true-wireless-5-the-flagship-momentum-experience-in-your-pocket"
+        },
+        "claims": [
+          {
+            "says": "the pin is dated 8 September 2026",
+            "label": "P"
+          },
+          {
+            "says": "announced 20 August 2026 and \"ships September 3 at MSRP $299.95 USD\"",
+            "label": "S"
+          },
+          {
+            "says": "\"Preorder starts today\" (21 Aug 2026) and \"ships September 3\"",
+            "label": "1"
+          },
+          {
+            "says": "reports the announcement on 20 August 2026",
+            "label": "2"
+          }
+        ],
+        "subject": "The day the MOMENTUM True Wireless 5 is released",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.541Z"
+    },
+    {
+      "id": 1303,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 430,
+      "sourceId": null,
+      "path": null,
+      "message": "The year construction of the Electron-Ion Collider starts: [1] \"Construction of the EIC is expected to begin in 2024, with the facility beginning operations early in the next decade\" (DOE, 6 July 2021) vs [2] the project is \"scheduled to enter construction in 2026 and to begin operations in the first half of the next decade\" (CERN Courier, 3 May 2024)",
+      "detail": {
+        "note": "[2] is the newer link (2024 against 2021) and its 2026 date supersedes the DOE announcement's 2024; the two operations windows are compatible.",
+        "links": {
+          "1": "https://www.energy.gov/science/articles/electron-ion-collider-achieves-critical-decision-1-approval",
+          "2": "https://cerncourier.com/a/eic-steps-towards-construction/"
+        },
+        "claims": [
+          {
+            "says": "\"Construction of the EIC is expected to begin in 2024, with the facility beginning operations early in the next decade\" (DOE, 6 July 2021)",
+            "label": "1"
+          },
+          {
+            "says": "the project is \"scheduled to enter construction in 2026 and to begin operations in the first half of the next decade\" (CERN Courier, 3 May 2024)",
+            "label": "2"
+          }
+        ],
+        "subject": "The year construction of the Electron-Ion Collider starts",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.550Z"
+    },
+    {
+      "id": 1304,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 447,
+      "sourceId": null,
+      "path": null,
+      "message": "How many pumping stations the tunnels replace: [P] \"a patchwork system of over 150 pumping stations\" vs [1] \"more than 150 legacy pumping stations to be decommissioned\" vs [2] \"A total of 100 pumping stations are expected to be replaced\"",
+      "detail": {
+        "note": "[2] is WaterWorld of 13 July 2017; [1] is ENR of 1 July 2026 and is the newer figure the pin follows.",
+        "links": {
+          "1": "https://www.enr.com/articles/63257-dubai-selects-teams-for-key-contracts-of-22b-sewer-tunnel-megaproject",
+          "2": "https://www.waterworld.com/drinking-water-treatment/distribution/article/16203161/the-dubai-strategic-sewerage-tunnel-megaproject-to-be-development-of-the-century",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "\"a patchwork system of over 150 pumping stations\"",
+            "label": "P"
+          },
+          {
+            "says": "\"more than 150 legacy pumping stations to be decommissioned\"",
+            "label": "1"
+          },
+          {
+            "says": "\"A total of 100 pumping stations are expected to be replaced\"",
+            "label": "2"
+          }
+        ],
+        "subject": "How many pumping stations the tunnels replace",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.568Z"
+    },
+    {
+      "id": 1305,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 447,
+      "sourceId": null,
+      "path": null,
+      "message": "When construction starts: [1] Packages reconfigured and retendered in November 2025; \"Tunnel contracts expected to be awarded in January 2030\", completion of tunnel infrastructure targeted for 2030-2056 vs [2] Construction \"expected to start as soon as 2019\", running over six years in two phases",
+      "detail": {
+        "note": "A date that has moved: [2] (July 2017) predates [1] (July 2026), which is newer and still has contracts unawarded until 2030.",
+        "links": {
+          "1": "https://www.enr.com/articles/63257-dubai-selects-teams-for-key-contracts-of-22b-sewer-tunnel-megaproject",
+          "2": "https://www.waterworld.com/drinking-water-treatment/distribution/article/16203161/the-dubai-strategic-sewerage-tunnel-megaproject-to-be-development-of-the-century"
+        },
+        "claims": [
+          {
+            "says": "Packages reconfigured and retendered in November 2025; \"Tunnel contracts expected to be awarded in January 2030\", completion of tunnel infrastructure targeted for 2030-2056",
+            "label": "1"
+          },
+          {
+            "says": "Construction \"expected to start as soon as 2019\", running over six years in two phases",
+            "label": "2"
+          }
+        ],
+        "subject": "When construction starts",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.568Z"
+    },
+    {
+      "id": 1306,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 488,
+      "sourceId": null,
+      "path": null,
+      "message": "When ground was broken on the fourth tower: [P] Pin title and description put the groundbreaking on 2031-01-31 vs [1] \"The new 55-floor tower broke ground on Tuesday\" (CNN Style, published 16 July 2025); tower and venue \"expected to open in 2031\" vs [2] Las Vegas Sands held a groundbreaking \"on Jul. 15 (2025) evening\"; the development is set to open by March 2031",
+      "detail": {
+        "note": "Both links date the groundbreaking to 15 July 2025 and 2031 to the opening instead; the pin's own date is the opening, not the event its title describes.",
+        "links": {
+          "1": "https://www.cnn.com/2025/07/16/style/singapore-marina-bay-sands-expansion",
+          "2": "https://mothership.sg/2025/07/marina-bay-sands-expansion-new-hotel-arena/",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "Pin title and description put the groundbreaking on 2031-01-31",
+            "label": "P"
+          },
+          {
+            "says": "\"The new 55-floor tower broke ground on Tuesday\" (CNN Style, published 16 July 2025); tower and venue \"expected to open in 2031\"",
+            "label": "1"
+          },
+          {
+            "says": "Las Vegas Sands held a groundbreaking \"on Jul. 15 (2025) evening\"; the development is set to open by March 2031",
+            "label": "2"
+          }
+        ],
+        "subject": "When ground was broken on the fourth tower",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.576Z"
+    },
+    {
+      "id": 1307,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 490,
+      "sourceId": null,
+      "path": null,
+      "message": "How long the fire burned: [P] The strike started \"a fire that burned for weeks\" vs [1] IAEA: fire crews arrived within minutes and \"the blaze was intermittently visible for several hours\" vs [2] ChNPP: \"local fire on the cladding was put out\"; \"the situation is under control\"",
+      "detail": {
+        "note": "Both links are same-day (14 February 2025) reports and describe the fire as out within hours, against the pin's weeks.",
+        "links": {
+          "1": "https://news.un.org/en/story/2025/02/1160141",
+          "2": "https://world-nuclear-news.org/articles/chernobyl-protective-shelter-damaged-by-drone",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "The strike started \"a fire that burned for weeks\"",
+            "label": "P"
+          },
+          {
+            "says": "IAEA: fire crews arrived within minutes and \"the blaze was intermittently visible for several hours\"",
+            "label": "1"
+          },
+          {
+            "says": "ChNPP: \"local fire on the cladding was put out\"; \"the situation is under control\"",
+            "label": "2"
+          }
+        ],
+        "subject": "How long the fire burned",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.581Z"
+    },
+    {
+      "id": 1308,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 506,
+      "sourceId": null,
+      "path": null,
+      "message": "Number of storeys at 262 Fifth Avenue: [1] \"860 feet (260 m), 54 stories, 26 apartments\" vs [2] \"860 feet, 52 stories (per this article), 26 residential units\"",
+      "detail": {
+        "note": "Height and apartment count agree in both; only the storey count differs.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/262_Fifth_Avenue",
+          "2": "https://www.archdaily.com/1037382/meganom-nears-completion-of-262-fifth-avenue-residential-skyscraper-in-new-york-city"
+        },
+        "claims": [
+          {
+            "says": "\"860 feet (260 m), 54 stories, 26 apartments\"",
+            "label": "1"
+          },
+          {
+            "says": "\"860 feet, 52 stories (per this article), 26 residential units\"",
+            "label": "2"
+          }
+        ],
+        "subject": "Number of storeys at 262 Fifth Avenue",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.586Z"
+    },
+    {
+      "id": 1309,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 508,
+      "sourceId": null,
+      "path": null,
+      "message": "Shape of the aperture at the summit: [P] The circular summit opening was redesigned into a trapezoid vs [1] The original circular aperture 46 m in diameter was protested as resembling the Japanese flag; \"on 18 October 2005 KPF submitted a trapezoidal aperture instead\" vs [2] KPF's own project page describes the form as \"a square prism (earth) intersected by two cosmic arcs (heavens), carving a square sky portal at the top\"",
+      "detail": {
+        "note": "The architect's page calls the finished opening square, the encyclopedia entry (and the pin) call it trapezoidal; it is the redesign the pin is about.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Shanghai_World_Financial_Center",
+          "2": "https://www.kpf.com/project/shanghai-world-financial-center",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "The circular summit opening was redesigned into a trapezoid",
+            "label": "P"
+          },
+          {
+            "says": "The original circular aperture 46 m in diameter was protested as resembling the Japanese flag; \"on 18 October 2005 KPF submitted a trapezoidal aperture instead\"",
+            "label": "1"
+          },
+          {
+            "says": "KPF's own project page describes the form as \"a square prism (earth) intersected by two cosmic arcs (heavens), carving a square sky portal at the top\"",
+            "label": "2"
+          }
+        ],
+        "subject": "Shape of the aperture at the summit",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.590Z"
+    },
+    {
+      "id": 1310,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 511,
+      "sourceId": null,
+      "path": null,
+      "message": "When the Three Mile Island Unit 1 reactor shut down: [1] Constellation \"announced the restart in 2024 (reactor closed in 1999)\" vs [2] the \"plant was retired for economic reasons in 2019\"",
+      "detail": {
+        "note": "Twenty years apart for the closure of the same reactor the pin is about restarting; [2] is Constellation's own press release.",
+        "links": {
+          "1": "https://www.world-nuclear-news.org/articles/constellation-seeks-regulators-help-for-2027-plant-restart",
+          "2": "https://www.constellationenergy.com/news/2025/09/one-year-later-crane-clean-energy-center-still-in-the-spotlight-and-ahead-of-schedule.html"
+        },
+        "claims": [
+          {
+            "says": "Constellation \"announced the restart in 2024 (reactor closed in 1999)\"",
+            "label": "1"
+          },
+          {
+            "says": "the \"plant was retired for economic reasons in 2019\"",
+            "label": "2"
+          }
+        ],
+        "subject": "When the Three Mile Island Unit 1 reactor shut down",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.595Z"
+    },
+    {
+      "id": 1311,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 547,
+      "sourceId": null,
+      "path": null,
+      "message": "When the tower received full planning consent: [P] The tower \"finally won full planning consent after nearly a decade of delays\" vs [1] \"Full planning consent was given by the City of London Corporation in December 2025\" vs [2] City of London Corporation press release published 13 December 2024: \"The Planning Applications Sub-Committee approved proposals for what will become the City's tallest tower\"",
+      "detail": {
+        "note": "[1] (Construction Enquirer, 1 June 2026) is the newer source and dates consent a year after [2]'s own dated announcement of approval; the two may be the sub-committee resolution and the consent itself, but the links do not reconcile them. Both give the same 309.6 m height and the 2033 completion the pin uses.",
+        "links": {
+          "1": "https://www.constructionenquirer.com/2026/06/01/start-date-set-for-city-of-londons-tallest-tower/",
+          "2": "https://news.cityoflondon.gov.uk/city-of-london-corporation-approves-square-miles-tallest-tower/",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "The tower \"finally won full planning consent after nearly a decade of delays\"",
+            "label": "P"
+          },
+          {
+            "says": "\"Full planning consent was given by the City of London Corporation in December 2025\"",
+            "label": "1"
+          },
+          {
+            "says": "City of London Corporation press release published 13 December 2024: \"The Planning Applications Sub-Committee approved proposals for what will become the City's tallest tower\"",
+            "label": "2"
+          }
+        ],
+        "subject": "When the tower received full planning consent",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.617Z"
+    },
+    {
+      "id": 1312,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 588,
+      "sourceId": null,
+      "path": null,
+      "message": "When Hyper-Kamiokande starts operating: [1] \"operation scheduled to begin 2028\"; the cavern finished \"about six months behind original schedule\" vs [2] operation \"expected to start in 2027\"",
+      "detail": {
+        "note": "A date that has moved: [2] is the March 2024 Frontiers in Physics perspective, [1] the August 2025 press release marking the cavern's completion and is newer. The cavern-height figures agree: [S]'s 94 m is [1]'s 21 m dome plus 73 m cylinder.",
+        "links": {
+          "1": "https://interactions.org/press-release/excavation-of-the-colossal-cavern-for-hyper-kamiokande-completed",
+          "2": "https://frontiersin.org/journals/physics/articles/10.3389/fphy.2024.1378254/full"
+        },
+        "claims": [
+          {
+            "says": "\"operation scheduled to begin 2028\"; the cavern finished \"about six months behind original schedule\"",
+            "label": "1"
+          },
+          {
+            "says": "operation \"expected to start in 2027\"",
+            "label": "2"
+          }
+        ],
+        "subject": "When Hyper-Kamiokande starts operating",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.638Z"
+    },
+    {
+      "id": 1313,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 624,
+      "sourceId": null,
+      "path": null,
+      "message": "Date of the official opening: [P] Officially opened 2022-07-02 vs [1] \"trial opening March-May 2022; officially opened 2 July 2022\" vs [2] \"Completed ahead of an official opening then stated as 7 August 2022\"",
+      "detail": {
+        "note": "A date that has moved: [2] is Dezeen of 13 May 2022 giving the then-planned date; [1] is newer and records the opening actually held on 2 July 2022.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Taipei_Performing_Arts_Center",
+          "2": "https://www.dezeen.com/2022/05/13/taipei-performing-arts-center-completes-rem-koolhaas-oma/",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "Officially opened 2022-07-02",
+            "label": "P"
+          },
+          {
+            "says": "\"trial opening March-May 2022; officially opened 2 July 2022\"",
+            "label": "1"
+          },
+          {
+            "says": "\"Completed ahead of an official opening then stated as 7 August 2022\"",
+            "label": "2"
+          }
+        ],
+        "subject": "Date of the official opening",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.650Z"
+    },
+    {
+      "id": 1314,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 624,
+      "sourceId": null,
+      "path": null,
+      "message": "Capacity of the Blue Box theatre: [1] \"Blue Box for experimental performances (500 seats)\" vs [2] \"800-seat Blue Box\"",
+      "detail": {
+        "note": "The two links agree on the 800-seat Globe Playhouse and the 1,500-seat Grand Theater, so this is a straight disagreement about the third auditorium.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Taipei_Performing_Arts_Center",
+          "2": "https://www.dezeen.com/2022/05/13/taipei-performing-arts-center-completes-rem-koolhaas-oma/"
+        },
+        "claims": [
+          {
+            "says": "\"Blue Box for experimental performances (500 seats)\"",
+            "label": "1"
+          },
+          {
+            "says": "\"800-seat Blue Box\"",
+            "label": "2"
+          }
+        ],
+        "subject": "Capacity of the Blue Box theatre",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.650Z"
+    },
+    {
+      "id": 1315,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 624,
+      "sourceId": null,
+      "path": null,
+      "message": "When the building was originally due to be finished: [S] Clarification printed on the page: \"The project was originally scheduled to finish in 2013\", according to OMA vs [2] \"originally slated for completion in 2015\"",
+      "detail": {
+        "note": "The pin's \"decade of delayed construction\" rests on this original date; OMA (via [S]) and Dezeen give different years for the same original schedule.",
+        "links": {
+          "2": "https://www.dezeen.com/2022/05/13/taipei-performing-arts-center-completes-rem-koolhaas-oma/",
+          "S": "https://www.youtube.com/watch?v=7iZJmzffB7w"
+        },
+        "claims": [
+          {
+            "says": "Clarification printed on the page: \"The project was originally scheduled to finish in 2013\", according to OMA",
+            "label": "S"
+          },
+          {
+            "says": "\"originally slated for completion in 2015\"",
+            "label": "2"
+          }
+        ],
+        "subject": "When the building was originally due to be finished",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.650Z"
+    },
+    {
+      "id": 1316,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 624,
+      "sourceId": null,
+      "path": null,
+      "message": "Floor area of the building: [1] \"total space area 50,000 m2\" vs [2] \"59,000 m2 cultural landmark\"",
+      "detail": {
+        "note": "Same units, same building, neither figure a rounding of the other.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Taipei_Performing_Arts_Center",
+          "2": "https://www.dezeen.com/2022/05/13/taipei-performing-arts-center-completes-rem-koolhaas-oma/"
+        },
+        "claims": [
+          {
+            "says": "\"total space area 50,000 m2\"",
+            "label": "1"
+          },
+          {
+            "says": "\"59,000 m2 cultural landmark\"",
+            "label": "2"
+          }
+        ],
+        "subject": "Floor area of the building",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.650Z"
+    },
+    {
+      "id": 1317,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 626,
+      "sourceId": null,
+      "path": null,
+      "message": "Number of residences at Habitat 67: [1] 354 prefabricated modules making \"146 residences of one to eight modules each; originally 158 apartments, some since joined\" vs [2] 354 modules \"forming 148 residences (158 apartments in 1967)\"",
+      "detail": {
+        "note": "Both count the same 354 modules and the same 158 original apartments, so the 146 vs 148 figure for today's residences is a straight disagreement, not a difference of definition. [2] was updated 19 August 2024.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Habitat_67",
+          "2": "https://www.mtl.org/en/experience/revolutionary-montreal-icon-habitat-67"
+        },
+        "claims": [
+          {
+            "says": "354 prefabricated modules making \"146 residences of one to eight modules each; originally 158 apartments, some since joined\"",
+            "label": "1"
+          },
+          {
+            "says": "354 modules \"forming 148 residences (158 apartments in 1967)\"",
+            "label": "2"
+          }
+        ],
+        "subject": "Number of residences at Habitat 67",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.655Z"
+    },
+    {
+      "id": 1318,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 626,
+      "sourceId": null,
+      "path": null,
+      "message": "Moshe Safdie's age when he conceived Habitat 67: [S] Video titled \"How a 23-Year-Old Solved Urban Sprawl\"; the wiki notes the description never explains the \"23-Year-Old\" vs [2] Habitat 67 \"began as Safdie's master's thesis at McGill (he was 24 then, 29 when it opened)\"",
+      "detail": {
+        "note": "The pin's description ties the design to Safdie's student thesis, so the age at that point is at issue. [1] dates the thesis but gives no age.",
+        "links": {
+          "2": "https://www.mtl.org/en/experience/revolutionary-montreal-icon-habitat-67",
+          "S": "https://www.youtube.com/watch?v=Qwbp9T-WS-I"
+        },
+        "claims": [
+          {
+            "says": "Video titled \"How a 23-Year-Old Solved Urban Sprawl\"; the wiki notes the description never explains the \"23-Year-Old\"",
+            "label": "S"
+          },
+          {
+            "says": "Habitat 67 \"began as Safdie's master's thesis at McGill (he was 24 then, 29 when it opened)\"",
+            "label": "2"
+          }
+        ],
+        "subject": "Moshe Safdie's age when he conceived Habitat 67",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.655Z"
+    },
+    {
+      "id": 1319,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 639,
+      "sourceId": null,
+      "path": null,
+      "message": "When construction starts: [P] Pin targets a 2029 construction start (pin date 2029-01-01) vs [1] Mamdani's plan, to be unveiled 24 August 2026: \"Construction starts in 2030, wraps up in 2040\", cost $4 billion vs [2] NYC DOT BQE Central page: \"Construction is expected to begin in 2029 and finish by 2040\"",
+      "detail": {
+        "note": "[1] is Streetsblog of 24 August 2026 reporting the new mayoral plan and is newer than the DOT project page's schedule, which is where the pin's 2029 comes from. Both agree on a 2040 finish.",
+        "links": {
+          "1": "https://nyc.streetsblog.org/2026/08/24/mamdani-bqe-plan-august-2026",
+          "2": "https://www.nyc.gov/html/dot/html/infrastructure/bqecentral.shtml",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "Pin targets a 2029 construction start (pin date 2029-01-01)",
+            "label": "P"
+          },
+          {
+            "says": "Mamdani's plan, to be unveiled 24 August 2026: \"Construction starts in 2030, wraps up in 2040\", cost $4 billion",
+            "label": "1"
+          },
+          {
+            "says": "NYC DOT BQE Central page: \"Construction is expected to begin in 2029 and finish by 2040\"",
+            "label": "2"
+          }
+        ],
+        "subject": "When construction starts",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.673Z"
+    },
+    {
+      "id": 1320,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 663,
+      "sourceId": null,
+      "path": null,
+      "message": "Height of the second STH BNK tower: [1] \"plans for two twisting towers (102-storey and 68-storey) unveiled the following year\" vs [2] \"Tower 1: 102 storeys, 366 m ...; Tower 2: 59 storeys, 251 m\"",
+      "detail": {
+        "note": "Both links agree on the 102-storey tower the pin is about; they differ by nine storeys on its twin.",
+        "links": {
+          "1": "https://www.theurbandeveloper.com/articles/sth-bnk-beulah-buyer-deposit-returns-site-sale-australias-tallest-tower",
+          "2": "https://en.wikipedia.org/wiki/STH_BNK_by_Beulah"
+        },
+        "claims": [
+          {
+            "says": "\"plans for two twisting towers (102-storey and 68-storey) unveiled the following year\"",
+            "label": "1"
+          },
+          {
+            "says": "\"Tower 1: 102 storeys, 366 m ...; Tower 2: 59 storeys, 251 m\"",
+            "label": "2"
+          }
+        ],
+        "subject": "Height of the second STH BNK tower",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.683Z"
+    },
+    {
+      "id": 1321,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 664,
+      "sourceId": null,
+      "path": null,
+      "message": "When the development is finished: [P] Pin dates the final construction stage wrapping up to 2028-12-31 vs [1] \"Stage 1 (2009-2017), Stage 2 (2017-2022), Stage 3 (2022-2028)\" vs [2] Seestadt Aspern is \"due for completion in 2030\"",
+      "detail": {
+        "note": "[2] is Dezeen of 5 March 2024 and is the newer source; [1]'s stage-3 end of 2028 is the date the pin uses.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Seestadt_Aspern",
+          "2": "https://www.dezeen.com/2024/03/05/seestadt-aspern-housing-berger-parkkinen-vienna-social-housing-revival/",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "Pin dates the final construction stage wrapping up to 2028-12-31",
+            "label": "P"
+          },
+          {
+            "says": "\"Stage 1 (2009-2017), Stage 2 (2017-2022), Stage 3 (2022-2028)\"",
+            "label": "1"
+          },
+          {
+            "says": "Seestadt Aspern is \"due for completion in 2030\"",
+            "label": "2"
+          }
+        ],
+        "subject": "When the development is finished",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.687Z"
+    },
+    {
+      "id": 1322,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 664,
+      "sourceId": null,
+      "path": null,
+      "message": "How many residents the finished quarter houses: [P] \"meant to house 25,000 residents\" vs [1] \"on completion expected 25,000 residents and 20,000 jobs\" vs [2] \"homes for 20,000 people and 20,000 workplaces across 240 hectares\"",
+      "detail": {
+        "note": "Both links give 20,000 workplaces, so [2]'s 20,000 residents is not the jobs figure being restated. The area figures agree (2.4 km2 = 240 ha).",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Seestadt_Aspern",
+          "2": "https://www.dezeen.com/2024/03/05/seestadt-aspern-housing-berger-parkkinen-vienna-social-housing-revival/",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "\"meant to house 25,000 residents\"",
+            "label": "P"
+          },
+          {
+            "says": "\"on completion expected 25,000 residents and 20,000 jobs\"",
+            "label": "1"
+          },
+          {
+            "says": "\"homes for 20,000 people and 20,000 workplaces across 240 hectares\"",
+            "label": "2"
+          }
+        ],
+        "subject": "How many residents the finished quarter houses",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.687Z"
+    },
+    {
+      "id": 1323,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 684,
+      "sourceId": null,
+      "path": null,
+      "message": "How deep the Grand Central Madison caverns are: [P] the description puts the terminal \"in caverns roughly 150 feet beneath Park Avenue\" vs [1] \"The Manhattan station has two caverns, each with 1,020-foot platforms, about 100 feet deep\"",
+      "detail": {
+        "note": "Wikipedia's \"deep\" reads as depth below the street rather than cavern height, so the two figures are about the same measurement and differ by half again.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/East_Side_Access",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "the description puts the terminal \"in caverns roughly 150 feet beneath Park Avenue\"",
+            "label": "P"
+          },
+          {
+            "says": "\"The Manhattan station has two caverns, each with 1,020-foot platforms, about 100 feet deep\"",
+            "label": "1"
+          }
+        ],
+        "subject": "How deep the Grand Central Madison caverns are",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.692Z"
+    },
+    {
+      "id": 1324,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 717,
+      "sourceId": null,
+      "path": null,
+      "message": "Height of the cancelled hotel: [1] \"the 26-story AC Hotel NoMad\" vs [2] \"a 25-story, 168-key AC Hotel NoMad by Danny Forster & Architecture\"",
+      "detail": {
+        "note": "Both links agree on the 168 rooms and the 2017 filing, so the storey count is a straight disagreement.",
+        "links": {
+          "1": "https://therealdeal.com/new-york/2024/09/10/ac-hotel-nomad-modular-hotel-canceled-replaced-by-condo/",
+          "2": "https://www.cityrealty.com/nyc/market-insight/features/future-nyc/842-sixth-avenue-leafy-nomad-condo-blossoms-site-once-planned-worlds-tallest-modular-hotel/68484"
+        },
+        "claims": [
+          {
+            "says": "\"the 26-story AC Hotel NoMad\"",
+            "label": "1"
+          },
+          {
+            "says": "\"a 25-story, 168-key AC Hotel NoMad by Danny Forster & Architecture\"",
+            "label": "2"
+          }
+        ],
+        "subject": "Height of the cancelled hotel",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.705Z"
+    },
+    {
+      "id": 1325,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 717,
+      "sourceId": null,
+      "path": null,
+      "message": "Whether any construction was carried out: [P] The plan collapsed \"after years of stalled construction\" vs [1] \"Work never got off the ground; Google Maps images showed the site empty as of May 2024\" vs [2] \"construction stalled at the foundation stage after the pandemic hit\"; \"the completed foundation let construction pick up quickly\" for the condo",
+      "detail": {
+        "note": "[1] (September 2024) says nothing was built; [2] (2 April 2026) says the hotel's foundation was completed and reused by the condo.",
+        "links": {
+          "1": "https://therealdeal.com/new-york/2024/09/10/ac-hotel-nomad-modular-hotel-canceled-replaced-by-condo/",
+          "2": "https://www.cityrealty.com/nyc/market-insight/features/future-nyc/842-sixth-avenue-leafy-nomad-condo-blossoms-site-once-planned-worlds-tallest-modular-hotel/68484",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "The plan collapsed \"after years of stalled construction\"",
+            "label": "P"
+          },
+          {
+            "says": "\"Work never got off the ground; Google Maps images showed the site empty as of May 2024\"",
+            "label": "1"
+          },
+          {
+            "says": "\"construction stalled at the foundation stage after the pandemic hit\"; \"the completed foundation let construction pick up quickly\" for the condo",
+            "label": "2"
+          }
+        ],
+        "subject": "Whether any construction was carried out",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.705Z"
+    },
+    {
+      "id": 1326,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 740,
+      "sourceId": null,
+      "path": null,
+      "message": "The stone cladding the building: [1] \"Clad in 9,600 tonnes of Derbyshire sandstone with bronze ventilation fins\" vs [2] \"two triangular-plan buildings clad in Yorkshire sandstone\" (the wiki marks this \"[sic]\")",
+      "detail": {
+        "note": "Same cladding on the same building, given two different English quarry sources; everything else about the facade (bronze fins, brass/bronze ramp) agrees.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/Bloomberg_London",
+          "2": "https://www.dezeen.com/2017/10/04/norman-fosters-bloomberg-european-headquarters-london-worlds-most-sustainable-office/"
+        },
+        "claims": [
+          {
+            "says": "\"Clad in 9,600 tonnes of Derbyshire sandstone with bronze ventilation fins\"",
+            "label": "1"
+          },
+          {
+            "says": "\"two triangular-plan buildings clad in Yorkshire sandstone\" (the wiki marks this \"[sic]\")",
+            "label": "2"
+          }
+        ],
+        "subject": "The stone cladding the building",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.710Z"
+    },
+    {
+      "id": 1327,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 823,
+      "sourceId": null,
+      "path": null,
+      "message": "Year the Ghent plant became carbon-free: [P] Volvo Trucks turned its Ghent, Belgium plant fully carbon-free in September 2007 (pin date 2007-09-20) vs [S] \"Volvo Trucks in Belgium was the first carbon-neutral car factory in the world. As early as 2009.\" vs [1] Press release dated 2007-09-20: the Volvo Group \"can now present the first vehicle plant in the world that is completely free from carbon dioxide (CO2)\", Volvo Trucks' plant in Ghent vs [2] \"Volvo Trucks made the Ghent plant emissions-free in 2007\"; politicians visited in September 2007",
+      "detail": {
+        "note": "[S] is a 2025 video description; [1] is Volvo's own dated press release of 20 September 2007 and [2] Volvo's heritage page, both giving 2007, the pin's date.",
+        "links": {
+          "1": "https://www.volvogroup.com/en/news-and-media/news/2007/sep/news-29067.html",
+          "2": "https://www.volvogroup.com/en/about-us/heritage/fossil-free-operations-ghent.html",
+          "P": "the pin",
+          "S": "https://www.youtube.com/watch?v=t7RGilxjj5Y"
+        },
+        "claims": [
+          {
+            "says": "Volvo Trucks turned its Ghent, Belgium plant fully carbon-free in September 2007 (pin date 2007-09-20)",
+            "label": "P"
+          },
+          {
+            "says": "\"Volvo Trucks in Belgium was the first carbon-neutral car factory in the world. As early as 2009.\"",
+            "label": "S"
+          },
+          {
+            "says": "Press release dated 2007-09-20: the Volvo Group \"can now present the first vehicle plant in the world that is completely free from carbon dioxide (CO2)\", Volvo Trucks' plant in Ghent",
+            "label": "1"
+          },
+          {
+            "says": "\"Volvo Trucks made the Ghent plant emissions-free in 2007\"; politicians visited in September 2007",
+            "label": "2"
+          }
+        ],
+        "subject": "Year the Ghent plant became carbon-free",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.736Z"
+    },
+    {
+      "id": 1328,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 851,
+      "sourceId": null,
+      "path": null,
+      "message": "Title of the Lord Chancellor who opened the factory: [1] \"Opened 21 May 1959 by the Lord Chancellor, Earl of Kilmuir\" vs [2] \"Opened 1959 by the Lord Chancellor, Viscount Kilmuir\"",
+      "detail": {
+        "note": "Same man and same date; the links disagree only on the peerage he held at the opening, which is the pin's own event.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/H._J._Heinz,_Wigan",
+          "2": "https://www.reliableplant.com/Read/17762/heinz-factory-marks-50-years-with-visit-from-queen"
+        },
+        "claims": [
+          {
+            "says": "\"Opened 21 May 1959 by the Lord Chancellor, Earl of Kilmuir\"",
+            "label": "1"
+          },
+          {
+            "says": "\"Opened 1959 by the Lord Chancellor, Viscount Kilmuir\"",
+            "label": "2"
+          }
+        ],
+        "subject": "Title of the Lord Chancellor who opened the factory",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.741Z"
+    },
+    {
+      "id": 1329,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 90,
+      "sourceId": null,
+      "path": null,
+      "message": "The day Musk said the Solar Roof tiles were installed: [P] the pin runs 4-5 August 2017 vs [S] published \"Aug. 3, 2017\", reporting what Musk said \"On Wednesday's Q2 2017 earnings call\" vs [1] the Q2 2017 call was \"held August 2, 2017, 5:30 PM ET\"; the page is dated Aug 03, 2017",
+      "detail": {
+        "note": "The announcement the pin describes was made on 2 August and reported on 3 August; no link places anything on 4 or 5 August.",
+        "links": {
+          "1": "https://seekingalpha.com/article/4094115-tesla-tsla-q2-2017-results-earnings-call-transcript",
+          "P": "the pin",
+          "S": "https://www.inverse.com/article/35022-elon-musk-tesla-solar-roof-photos-amazing"
+        },
+        "claims": [
+          {
+            "says": "the pin runs 4-5 August 2017",
+            "label": "P"
+          },
+          {
+            "says": "published \"Aug. 3, 2017\", reporting what Musk said \"On Wednesday's Q2 2017 earnings call\"",
+            "label": "S"
+          },
+          {
+            "says": "the Q2 2017 call was \"held August 2, 2017, 5:30 PM ET\"; the page is dated Aug 03, 2017",
+            "label": "1"
+          }
+        ],
+        "subject": "The day Musk said the Solar Roof tiles were installed",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.746Z"
+    },
+    {
+      "id": 1330,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 921,
+      "sourceId": null,
+      "path": null,
+      "message": "How many A380s the new Teruel hangar holds: [P] The new hangar \"can house one A380 or four narrow-body jets at once\" vs [S] Of the new hangar at Teruel: \"From 2024, it will be able to accommodate the maintenance or scrapping of two A380s simultaneously\" vs [1] The new EUR 15 million hangar \"fits an Airbus A380 plus up to four A320s\"; it is the original Teruel hangar that \"holds two A380s\" vs [2] The hangar inaugurated on Oct. 8, 2024 \"fits one A380 or four A320s\"; the \"original A380 hangar (room for two) is fully booked\"",
+      "detail": {
+        "note": "[1] and [2] both reserve the two-A380 capacity for the original hangar; [S] attributes it to the new one. [1] and [2] also differ on whether the A380 and the four A320s fit together or instead of each other.",
+        "links": {
+          "1": "https://avitrader.com/2024/10/09/tarmac-aerosave-inaugurates-seventh-hangar/",
+          "2": "https://aviationweek.com/mro/aircraft-propulsion/tarmac-aerosave-adds-further-airbus-a380-capacity-spain",
+          "P": "the pin",
+          "S": "https://www.youtube.com/watch?v=fcI_4VBwJsI"
+        },
+        "claims": [
+          {
+            "says": "The new hangar \"can house one A380 or four narrow-body jets at once\"",
+            "label": "P"
+          },
+          {
+            "says": "Of the new hangar at Teruel: \"From 2024, it will be able to accommodate the maintenance or scrapping of two A380s simultaneously\"",
+            "label": "S"
+          },
+          {
+            "says": "The new EUR 15 million hangar \"fits an Airbus A380 plus up to four A320s\"; it is the original Teruel hangar that \"holds two A380s\"",
+            "label": "1"
+          },
+          {
+            "says": "The hangar inaugurated on Oct. 8, 2024 \"fits one A380 or four A320s\"; the \"original A380 hangar (room for two) is fully booked\"",
+            "label": "2"
+          }
+        ],
+        "subject": "How many A380s the new Teruel hangar holds",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.750Z"
+    },
+    {
+      "id": 1331,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 923,
+      "sourceId": null,
+      "path": null,
+      "message": "Maximum load capacity of the LTM 1750: [P] \"The 750-tonne-capacity crane\" vs [S] \"maximum load capacity of 800 tons with a 52-meter telescopic boom\" vs [1] \"The 750-tonne, nine-axle crane sits between the LTM 1500-8.1 and LTM 11200-9.1\" vs [2] \"750 tonne LTM 1750-9.1 all terrain\"",
+      "detail": {
+        "note": "Not a rounding or unit difference: the model designation itself (1750) and both 2012 trade reports give 750 t against [S]'s 800.",
+        "links": {
+          "1": "https://hub-4.com/news/liebherr-presents-the-new-ltm-1750-9-1-at-customer-open-days",
+          "2": "https://vertikal.net/en/news/story/15122/new-models-at-liebherr-open-days",
+          "P": "the pin",
+          "S": "https://www.youtube.com/watch?v=fxm9NCe4anc"
+        },
+        "claims": [
+          {
+            "says": "\"The 750-tonne-capacity crane\"",
+            "label": "P"
+          },
+          {
+            "says": "\"maximum load capacity of 800 tons with a 52-meter telescopic boom\"",
+            "label": "S"
+          },
+          {
+            "says": "\"The 750-tonne, nine-axle crane sits between the LTM 1500-8.1 and LTM 11200-9.1\"",
+            "label": "1"
+          },
+          {
+            "says": "\"750 tonne LTM 1750-9.1 all terrain\"",
+            "label": "2"
+          }
+        ],
+        "subject": "Maximum load capacity of the LTM 1750",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.755Z"
+    },
+    {
+      "id": 1332,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 923,
+      "sourceId": null,
+      "path": null,
+      "message": "Maximum working radius of the LTM 1750: [S] It \"can lift up to 1.8 tonnes at the maximum operating radius of 160 meters\" vs [1] \"Heights under hook up to 154 m, outreach up to 112 m; luffing fly jib to 91 m\"",
+      "detail": {
+        "note": "Both are stated as the machine's maximum reach. [2] gives 160 m as the maximum radius of the LR 13000 crawler crane launched at the same event, which [S] may have taken for the LTM 1750.",
+        "links": {
+          "1": "https://hub-4.com/news/liebherr-presents-the-new-ltm-1750-9-1-at-customer-open-days",
+          "S": "https://www.youtube.com/watch?v=fxm9NCe4anc"
+        },
+        "claims": [
+          {
+            "says": "It \"can lift up to 1.8 tonnes at the maximum operating radius of 160 meters\"",
+            "label": "S"
+          },
+          {
+            "says": "\"Heights under hook up to 154 m, outreach up to 112 m; luffing fly jib to 91 m\"",
+            "label": "1"
+          }
+        ],
+        "subject": "Maximum working radius of the LTM 1750",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.755Z"
+    },
+    {
+      "id": 1333,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 927,
+      "sourceId": null,
+      "path": null,
+      "message": "Which reactor the shelter covers: [P] The arch was built to contain \"the ruined Reactor 4\" vs [S] The contract was to \"seal off the deteriorating mountain of cement that had been poured over the second reactor of the Chernobyl plant\" vs [1] \"After the 1986 accident the ruins of Unit 4 were enclosed in the Shelter Object\"; the NSC was built over Unit 4's Shelter Object vs [2] The NSC slid 327 m into position \"enclosing the 1986 makeshift shelter\" over reactor 4",
+      "detail": {
+        "note": "[S] is the only source naming the second reactor; the plant operator's own page and the EBRD both say Unit 4.",
+        "links": {
+          "1": "https://chnpp.gov.ua/en/activity/shelter-object-transformation/project-nsc-construction",
+          "2": "https://www.ebrd.com/home/news-and-events/news/2016/unique-engineering-feat-concluded-as-chernobyl-arch-has-reached-resting-place.html",
+          "P": "the pin",
+          "S": "https://www.youtube.com/watch?v=fScXvnDpb-w"
+        },
+        "claims": [
+          {
+            "says": "The arch was built to contain \"the ruined Reactor 4\"",
+            "label": "P"
+          },
+          {
+            "says": "The contract was to \"seal off the deteriorating mountain of cement that had been poured over the second reactor of the Chernobyl plant\"",
+            "label": "S"
+          },
+          {
+            "says": "\"After the 1986 accident the ruins of Unit 4 were enclosed in the Shelter Object\"; the NSC was built over Unit 4's Shelter Object",
+            "label": "1"
+          },
+          {
+            "says": "The NSC slid 327 m into position \"enclosing the 1986 makeshift shelter\" over reactor 4",
+            "label": "2"
+          }
+        ],
+        "subject": "Which reactor the shelter covers",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.763Z"
+    },
+    {
+      "id": 1334,
+      "check": "contradiction",
+      "severity": "info",
+      "pinId": 927,
+      "sourceId": null,
+      "path": null,
+      "message": "When the original sarcophagus was poured: [S] Concrete \"had been poured over the second reactor of the Chernobyl plant in 1989\" vs [1] \"After the 1986 accident the ruins of Unit 4 were enclosed in the Shelter Object\" vs [2] The NSC encloses \"the 1986 makeshift shelter\"",
+      "detail": {
+        "note": "[S] gives 1989 for the concrete shelter that [1] and [2] both tie to the 1986 accident and its immediate aftermath.",
+        "links": {
+          "1": "https://chnpp.gov.ua/en/activity/shelter-object-transformation/project-nsc-construction",
+          "2": "https://www.ebrd.com/home/news-and-events/news/2016/unique-engineering-feat-concluded-as-chernobyl-arch-has-reached-resting-place.html",
+          "S": "https://www.youtube.com/watch?v=fScXvnDpb-w"
+        },
+        "claims": [
+          {
+            "says": "Concrete \"had been poured over the second reactor of the Chernobyl plant in 1989\"",
+            "label": "S"
+          },
+          {
+            "says": "\"After the 1986 accident the ruins of Unit 4 were enclosed in the Shelter Object\"",
+            "label": "1"
+          },
+          {
+            "says": "The NSC encloses \"the 1986 makeshift shelter\"",
+            "label": "2"
+          }
+        ],
+        "subject": "When the original sarcophagus was poured",
+        "severity": "minor"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.763Z"
+    },
+    {
+      "id": 1335,
+      "check": "contradiction",
+      "severity": "warning",
+      "pinId": 932,
+      "sourceId": null,
+      "path": null,
+      "message": "Where the company was founded: [P] Wilhelm and Karl Maybach \"found the engine works in Friedrichshafen, Germany\" on 1909-03-23 vs [1] \"Founded 23 March 1909 by Wilhelm Maybach with son Karl as Luftfahrzeug-Motorenbau GmbH (Bissingen an der Enz, part of Zeppelin corporation), making airship engines; moved to Friedrichshafen 1911/12\"",
+      "detail": {
+        "note": "The links agree on the founders and the date of 23 March 1909; only the place differs, Friedrichshafen being where the works moved two or three years later.",
+        "links": {
+          "1": "https://en.wikipedia.org/wiki/MTU_Friedrichshafen",
+          "P": "the pin"
+        },
+        "claims": [
+          {
+            "says": "Wilhelm and Karl Maybach \"found the engine works in Friedrichshafen, Germany\" on 1909-03-23",
+            "label": "P"
+          },
+          {
+            "says": "\"Founded 23 March 1909 by Wilhelm Maybach with son Karl as Luftfahrzeug-Motorenbau GmbH (Bissingen an der Enz, part of Zeppelin corporation), making airship engines; moved to Friedrichshafen 1911/12\"",
+            "label": "1"
+          }
+        ],
+        "subject": "Where the company was founded",
+        "severity": "major"
+      },
+      "utcCreatedDateTime": "2026-09-20T21:32:03.768Z"
     }
   ],
   "lintScans": [
     {
       "check": "contradiction",
+      "subjectId": 1,
+      "signature": "6b17a1c9cc90da00c4469558bbe661a560205583d85441f31b95e7d632f98d93",
+      "utcScannedDateTime": "2026-09-20T21:31:28.822Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 20,
+      "signature": "899e9bec9a815d60e26da58162e0353ad759841afcda6a85373b8d0e821f44b4",
+      "utcScannedDateTime": "2026-09-20T21:31:28.934Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 23,
+      "signature": "efaaaa779147828d1a964f28a8827e427fabb37a14f6948c861126df978c638f",
+      "utcScannedDateTime": "2026-09-20T21:32:03.497Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 41,
+      "signature": "306d83254afa13ce04d2ea40b50ac38f6f6245a5006e1b3f539f05a5ed69ae50",
+      "utcScannedDateTime": "2026-09-20T21:31:29.002Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 57,
+      "signature": "aa491eb21913b7edfc4d8ad0d8e38e0d01751421929950e66f8b12004a36d860",
+      "utcScannedDateTime": "2026-09-20T21:31:29.069Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 62,
+      "signature": "168954f10d943c750de5f6fadf0e7aa3580fb4722f3dc95f72dcdc5e1204a50d",
+      "utcScannedDateTime": "2026-09-20T21:31:29.079Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 64,
+      "signature": "76f88ef173332b630e5fb148744ac667ffbcd686b384b41d859775234ede9848",
+      "utcScannedDateTime": "2026-09-20T21:31:29.083Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 67,
+      "signature": "af43bb8ca9be7b66d428c25b4e39899caf92f39aec007389eeab9b9e812b57bf",
+      "utcScannedDateTime": "2026-09-20T21:31:29.092Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 76,
+      "signature": "d36729216a48d5ecdabcec7c210d69a05ab35f5e4f2475cccf0403773dbfe72e",
+      "utcScannedDateTime": "2026-09-20T21:31:29.141Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 82,
+      "signature": "cd2ea6d1c93b59738ce87e54efd3f60cf2d0708122617e7509d35bbfd6dc2bc5",
+      "utcScannedDateTime": "2026-09-20T21:32:03.733Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 90,
+      "signature": "d9ef6657771ae4e84f204410cd1eb3af69cf825e893c78155e96707e9095da00",
+      "utcScannedDateTime": "2026-09-20T21:32:03.747Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 100,
+      "signature": "a98bb2d48196c5faf6e3d057a13efa54d0abefdbfaf2b32ff5c668b3b9602910",
+      "utcScannedDateTime": "2026-09-20T21:32:03.404Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 112,
+      "signature": "08a6a58b7b62b842f7fe2c226e91b5b74a41b0f904374bf6f07a3c79f9e5d8ec",
+      "utcScannedDateTime": "2026-09-20T21:32:03.415Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 114,
+      "signature": "44e4a28e27d454f2e2159f7b0563ad32a391c2151ae4fe0db661c0653e2d2544",
+      "utcScannedDateTime": "2026-09-20T21:32:03.423Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 121,
+      "signature": "a390c8285d4d848c4ba0a91731afc74285da04ed34bc7ec21f328562cccdee8d",
+      "utcScannedDateTime": "2026-09-20T21:31:28.832Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 122,
+      "signature": "0375ec47867c0d63b876e875e3986e151cc40c04ee4d123c1465112f65d36af5",
+      "utcScannedDateTime": "2026-09-20T21:31:28.838Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 133,
+      "signature": "44d7aa3d2c2a123d79e7a11b96a6d159c31385d0790956fc5e4a82658bc6f7e2",
+      "utcScannedDateTime": "2026-09-20T21:31:28.845Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 137,
+      "signature": "b3c9a13ed45afb656748a85d9894bc4a3ffd92d189dac5663f60a906da91dfb7",
+      "utcScannedDateTime": "2026-09-20T21:31:28.851Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 142,
+      "signature": "7fd123dd80d8cf611e3857a4daf8dbe2ccacc3d0c2a4cb721dda67e3d33a882e",
+      "utcScannedDateTime": "2026-09-20T21:31:28.857Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 149,
+      "signature": "b838d655955bbb9366c755388a46ba1be9c3645ecba6c12a66bac1f70522e8e4",
+      "utcScannedDateTime": "2026-09-20T21:31:28.863Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 150,
+      "signature": "cdab63cc3db2e3f86662cf7654ee3763001c07a67f5bbead75b8f56c3a8ebce0",
+      "utcScannedDateTime": "2026-09-20T21:31:28.870Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 159,
+      "signature": "7eb10e497a3c010f3cd04c4e3fef1aca001169cb10a6c4578b7acfa4b91d5c83",
+      "utcScannedDateTime": "2026-09-20T21:32:03.431Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 161,
+      "signature": "9067b5eaaecf4388423401677ebde62a92bea4c0c3988cc1531c353861c15097",
+      "utcScannedDateTime": "2026-09-20T21:32:03.437Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 162,
+      "signature": "8d63f5ccf718e67653636e431eb8e7552c3d56e8884732d9a44b92e528fcc7f2",
+      "utcScannedDateTime": "2026-09-20T21:31:28.875Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 163,
+      "signature": "25286cd60d80d3c6053eb0b7f68e313425172fa1d73469b397910b0e216bf46a",
+      "utcScannedDateTime": "2026-09-20T21:31:28.879Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 169,
+      "signature": "d41bbc089657fcf09ae5d02a396993dec05877d8289f1fc93d212097e06e7cda",
+      "utcScannedDateTime": "2026-09-20T21:32:03.443Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 179,
+      "signature": "6e5b7e4da8e329d686aa41a2afbf50addd6a406e2189e1cfba93ece59fec28af",
+      "utcScannedDateTime": "2026-09-20T21:31:28.893Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 182,
+      "signature": "a87af90d109c39d9347cc76c94a2f9286b1926873b5014576108fd6963122039",
+      "utcScannedDateTime": "2026-09-20T21:31:28.910Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 184,
+      "signature": "cde115cbd94f2ffc2d323189091140eb94527556bc9162aa69460ba4aae589ce",
+      "utcScannedDateTime": "2026-09-20T21:32:03.460Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 191,
+      "signature": "8675eacb4b52e3147f0298701fc382d6034e6413fa9618a6f861077b33ba3e26",
+      "utcScannedDateTime": "2026-09-20T21:32:03.475Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 192,
+      "signature": "bb8e7a065d5d0af110fda4ebc76427e3e41231764e3f0726a59a954b7e75b606",
+      "utcScannedDateTime": "2026-09-20T21:31:28.921Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 195,
+      "signature": "d50b9ac644b11f03c8905bc7410debea9f16be3df6a914db30bab80d94597f2f",
+      "utcScannedDateTime": "2026-09-20T21:32:03.480Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 196,
+      "signature": "6959e317d54cd1725823c5744fede87a89b227f549558590fdb49795c9d01f60",
+      "utcScannedDateTime": "2026-09-20T21:31:28.926Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 205,
+      "signature": "2f366ff062f43d0b496db8ae7b9ccf901e0b5f6d2e54aeb5eeaeb12186b2e104",
+      "utcScannedDateTime": "2026-09-20T21:31:28.943Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 209,
+      "signature": "82c70f42bc1c5b310dc0726d8a7e6b465476f786ff19fec43470b52f8b36c47e",
+      "utcScannedDateTime": "2026-09-20T21:31:28.948Z"
+    },
+    {
+      "check": "contradiction",
       "subjectId": 215,
       "signature": "b0c2992f142b41661f6f79171b030d3039af6578efeef900d2ef339bab1bcc2e",
       "utcScannedDateTime": "2026-09-19T20:05:11.316Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 216,
+      "signature": "f8cf5fd83b00c0095eee19f85362b63a91e495de7f0984cddf46d6849b767d8a",
+      "utcScannedDateTime": "2026-09-20T21:32:03.485Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 220,
+      "signature": "b0785fd88d94b7fb30924a2560c0e81d190db5a00fdd19a02728b852ca1bd2b9",
+      "utcScannedDateTime": "2026-09-20T21:31:28.953Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 223,
+      "signature": "e344a3fa650bb9f88bc40e4bd25a7c00e8cf338eb1f86778126c7978bba2bd99",
+      "utcScannedDateTime": "2026-09-20T21:31:28.958Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 225,
+      "signature": "108c9f35f42050f66327077c07cbdeadb27980237b27e3e7e94347b41142532d",
+      "utcScannedDateTime": "2026-09-20T21:32:03.490Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 226,
+      "signature": "eccc45384994a236e15dde056993a43aef77bea2679a304e2400553d4fee348a",
+      "utcScannedDateTime": "2026-09-20T21:31:28.962Z"
     },
     {
       "check": "contradiction",
@@ -213764,9 +217065,159 @@
     },
     {
       "check": "contradiction",
+      "subjectId": 240,
+      "signature": "51a0fdc73202865cff01dda1f74e781a7361ca8b1f9fee956befd6b5a8c94740",
+      "utcScannedDateTime": "2026-09-20T21:31:28.972Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 246,
+      "signature": "64d9c60521e4719e23b52cce3fb55ebde10c047d9a620ce1709427444057fbe9",
+      "utcScannedDateTime": "2026-09-20T21:32:03.502Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 255,
+      "signature": "206de8e5b85870fe27b150abffb1c6f9642987cea0ee43ed027da51e2e03002d",
+      "utcScannedDateTime": "2026-09-20T21:31:28.977Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 262,
+      "signature": "d288e9daf6ae76e0623c6b8f16702f7b85eb325452b6b7fd94750972637a4cdc",
+      "utcScannedDateTime": "2026-09-20T21:31:28.982Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 264,
+      "signature": "3fa9171a0d194d6c2c48b892b2a733821ab9b653533f385fcd4f34f02b074526",
+      "utcScannedDateTime": "2026-09-20T21:32:03.507Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 267,
+      "signature": "f7f131200a7bc3592ece5f40048db585e1b06cc59305cdef2e59106b7b9cd45c",
+      "utcScannedDateTime": "2026-09-20T21:32:03.512Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 269,
+      "signature": "a320d055fc8517c6d3b13fb6a1cfc0df6849f4a8f2b0772ee2cf7684a6658398",
+      "utcScannedDateTime": "2026-09-20T21:31:28.987Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 286,
+      "signature": "4ec0eb9e4a6a2430b743f6901265ac08de9b951b1ac9f07ebaa5c2d7b0578296",
+      "utcScannedDateTime": "2026-09-20T21:32:03.516Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 289,
+      "signature": "7404419112c1530831252ab894c83da9ee0f75c13f9715f33257c84c7cdb2ff3",
+      "utcScannedDateTime": "2026-09-20T21:32:03.520Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 291,
+      "signature": "9becced77cc89be915e4395222ed4fcc8bf91b963976456f92158662af2e3c59",
+      "utcScannedDateTime": "2026-09-20T21:32:03.524Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 297,
+      "signature": "cacf77cd215bf264f51abea595e34cb68d319b9d803db3e4c0854a068849116c",
+      "utcScannedDateTime": "2026-09-20T21:32:03.529Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 310,
+      "signature": "a6a21aa926ab6f65825e9c62d8d55050b8b489df8b3ac1cbd55bdfd1e2f5c311",
+      "utcScannedDateTime": "2026-09-20T21:31:28.991Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 311,
+      "signature": "a3fdbf5e450d3e73e58000a1aefe6677f38f298cb8ebb89fea031a70ef8f3a62",
+      "utcScannedDateTime": "2026-09-20T21:32:03.533Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 319,
+      "signature": "212e3866cdb217922f81698cf6a8d807c1f6886edd165b3f12bcd5b62f919c1b",
+      "utcScannedDateTime": "2026-09-20T21:32:03.537Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 324,
+      "signature": "48d37d6bea569d1f6c4d7c4d802b60dc3679399d22049742662b4b34898df8bf",
+      "utcScannedDateTime": "2026-09-20T21:32:03.542Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 332,
+      "signature": "24e9c220f1b91bd4374f10bea364e0b2edc51653817732ed0ee1e88971b5cb3e",
+      "utcScannedDateTime": "2026-09-20T21:31:28.995Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 393,
+      "signature": "a6f7f07918834bc06975505b5bd7daff3924aa3a433af8879e21f73b5be4bde7",
+      "utcScannedDateTime": "2026-09-20T21:32:03.546Z"
+    },
+    {
+      "check": "contradiction",
       "subjectId": 424,
       "signature": "2e429f164806e3ad64f74fc6852c46ccfed34103994f6c69dcf57c4b5d9eec26",
       "utcScannedDateTime": "2026-09-19T20:05:11.341Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 430,
+      "signature": "3b3b4e94ddcb587f1ed6b314ff951b2e530324071c6b6d3a6f32d51d40028f1f",
+      "utcScannedDateTime": "2026-09-20T21:32:03.552Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 438,
+      "signature": "e4305916b3d69625bf9a70a29a27d1770ccaedf62abaa777f72c23112d450571",
+      "utcScannedDateTime": "2026-09-20T21:32:03.556Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 442,
+      "signature": "0a05549d453e41473c3e50beecb1c15578cc495e58d572074809ee3216d618fd",
+      "utcScannedDateTime": "2026-09-20T21:32:03.560Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 445,
+      "signature": "e0f3490da9b5f1c3d72f3974da711a86f3975bcc0917444c12fbe0f3c4af2822",
+      "utcScannedDateTime": "2026-09-20T21:32:03.564Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 447,
+      "signature": "9c8d473278387584e571a1f3c9ea1ecf31428bbcbdd375d26370565b77407232",
+      "utcScannedDateTime": "2026-09-20T21:32:03.569Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 449,
+      "signature": "8adece38a0bb4c059a66a79c5133b44f90b1cf4fb31e01b960bee1eca0105191",
+      "utcScannedDateTime": "2026-09-20T21:31:29.006Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 453,
+      "signature": "2189f77bac08424bbc19f23b8b607ac781be0faf17327ef9d6a7ff94f4586d8c",
+      "utcScannedDateTime": "2026-09-20T21:31:29.011Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 473,
+      "signature": "4cd62f4ba5a25d5c2af2bffc3cae4167817764afeecc3332a99e0e3c5659a21e",
+      "utcScannedDateTime": "2026-09-20T21:32:03.573Z"
     },
     {
       "check": "contradiction",
@@ -213776,9 +217227,111 @@
     },
     {
       "check": "contradiction",
+      "subjectId": 482,
+      "signature": "a201fa406509200cae9cbc7f9976ae8fc4eded46a71fe9cc668b7cf6a6d58e0a",
+      "utcScannedDateTime": "2026-09-20T21:31:29.015Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 488,
+      "signature": "c3978c4ab50190e5c1183724b2e829589cb8ae41712dbc274fff458b3b6006e6",
+      "utcScannedDateTime": "2026-09-20T21:32:03.577Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 490,
+      "signature": "fa56016f4c717328cac515179e6c78db16b39b9a9a4de7652381aa8104306445",
+      "utcScannedDateTime": "2026-09-20T21:32:03.582Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 491,
+      "signature": "805033ebabd83fd56b9943872faae9248a5bd930fee520ea994e1955f50f7fb7",
+      "utcScannedDateTime": "2026-09-20T21:31:29.019Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 493,
+      "signature": "2177f905fca41429ce41cd3a131501ddb462e11943253cefe094593dc9bb2c4d",
+      "utcScannedDateTime": "2026-09-20T21:31:29.024Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 496,
+      "signature": "f1c84a275c5c1583656bfe4070f9ab1dc0725fcda90a288e356c829f035e1a10",
+      "utcScannedDateTime": "2026-09-20T21:31:29.029Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 499,
+      "signature": "2a2288c2ba8adb688f3997bda714fe7318bb8291d8782e9585756a0ea4c6caf2",
+      "utcScannedDateTime": "2026-09-20T21:31:29.033Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 503,
+      "signature": "2c8ada3a629b611a1ffc109364253c55311894a812df5a24a726a98ed1990ebe",
+      "utcScannedDateTime": "2026-09-20T21:31:29.037Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 506,
+      "signature": "5e0de1a917c0b113b0a48d9f1994886d03a4e1a380788050c3dea2bc02205efa",
+      "utcScannedDateTime": "2026-09-20T21:32:03.587Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 507,
+      "signature": "5ba557ca567d31c0f0abe1fc3c780c7e24cafdb9de2ab1d8f678cc15a19f8ff6",
+      "utcScannedDateTime": "2026-09-20T21:31:29.042Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 508,
+      "signature": "91b06498a83c39a58586c1972bd2975b5641367ffdbff9bc6160089c68c9f899",
+      "utcScannedDateTime": "2026-09-20T21:32:03.592Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 509,
+      "signature": "a11c65e385e845fd3b6eaf583e908f194b5ea3c42d38f5f356961d420cd10b87",
+      "utcScannedDateTime": "2026-09-20T21:31:29.047Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 510,
+      "signature": "e92401a739b939aaea298210a11a8f5884f8814b71e8dabc280182867e6772d9",
+      "utcScannedDateTime": "2026-09-20T21:31:29.051Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 511,
+      "signature": "9ad4489e0b95354e06b7f071cffefb2857fd70683384f1a130e03a38033980cf",
+      "utcScannedDateTime": "2026-09-20T21:32:03.596Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 514,
+      "signature": "97f6f77c6634343cac3a57ec886974e329ac93159aa51b69bbb709ed72634f28",
+      "utcScannedDateTime": "2026-09-20T21:31:29.055Z"
+    },
+    {
+      "check": "contradiction",
       "subjectId": 518,
       "signature": "99de3b5af89ea0fbc5f3552ce3a55a1794bf9cc60daa8155ee90b2a9e04ceed3",
       "utcScannedDateTime": "2026-09-19T20:05:11.351Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 524,
+      "signature": "1134f9302a2cebe2464d0e2324af6204062a86d584a7541d74589bb9314c5ea4",
+      "utcScannedDateTime": "2026-09-20T21:32:03.601Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 525,
+      "signature": "79030acf0ac0b41ac6e33aebe3b0792220df2c943d149dcab40101f1425dbba2",
+      "utcScannedDateTime": "2026-09-20T21:32:03.605Z"
     },
     {
       "check": "contradiction",
@@ -213794,6 +217347,18 @@
     },
     {
       "check": "contradiction",
+      "subjectId": 535,
+      "signature": "17322f2c082283d97f2bf60f26d9f3527c78c799863267bc3f6d3c3996ce32ac",
+      "utcScannedDateTime": "2026-09-20T21:32:03.609Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 537,
+      "signature": "2179a64befe05d26df9e32be71d3a9f93c0a8d62e24c399e3e234a36d805aa87",
+      "utcScannedDateTime": "2026-09-20T21:32:03.613Z"
+    },
+    {
+      "check": "contradiction",
       "subjectId": 538,
       "signature": "e421feed1e3a150e9f424ec3f4b642d500743d94760276471e8afd66ef0c3100",
       "utcScannedDateTime": "2026-09-19T20:05:11.364Z"
@@ -213806,9 +217371,27 @@
     },
     {
       "check": "contradiction",
+      "subjectId": 547,
+      "signature": "b589a349487d14e30889afbfe6a026652643c829d20b3e6a04d06df896dfe746",
+      "utcScannedDateTime": "2026-09-20T21:32:03.618Z"
+    },
+    {
+      "check": "contradiction",
       "subjectId": 550,
       "signature": "88dadd20a78a5682046a0afe849b29df68e437eeea1d7e4161232a6fd828aa07",
       "utcScannedDateTime": "2026-09-19T20:05:11.374Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 566,
+      "signature": "ea320b31c5f1b9a6527e3fe3b2ed59f042e41285fa9d160be9a34f28c18e569e",
+      "utcScannedDateTime": "2026-09-20T21:31:29.060Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 569,
+      "signature": "0333dfe1bd2c2fa789124386f97637557b6d87c9c6bb6d944e27dbf9059b40d9",
+      "utcScannedDateTime": "2026-09-20T21:31:29.064Z"
     },
     {
       "check": "contradiction",
@@ -213818,9 +217401,33 @@
     },
     {
       "check": "contradiction",
+      "subjectId": 572,
+      "signature": "0f740b62cd8689035a3c16f2efe5b4f1481122eae47e90ab1a1aef85c7444ef6",
+      "utcScannedDateTime": "2026-09-20T21:31:29.074Z"
+    },
+    {
+      "check": "contradiction",
       "subjectId": 573,
       "signature": "9e9ff889b1655cb27a4614936be26584102ae997f97c9083d030319ef8ce4219",
       "utcScannedDateTime": "2026-09-19T20:05:11.383Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 574,
+      "signature": "3e727e1f2405e4eef93edaa5340f571dab65e95a8563021a8f82a737560c7062",
+      "utcScannedDateTime": "2026-09-20T21:32:03.622Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 575,
+      "signature": "e8e76dce9a482ba22867f036f1b4d813160fa06af21e8372b0e8e70a7839adbb",
+      "utcScannedDateTime": "2026-09-20T21:32:03.626Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 577,
+      "signature": "814cd477b386d76145ec591c1dad20306788161f47a16237735cd85dd4519f51",
+      "utcScannedDateTime": "2026-09-20T21:32:03.630Z"
     },
     {
       "check": "contradiction",
@@ -213836,9 +217443,33 @@
     },
     {
       "check": "contradiction",
+      "subjectId": 585,
+      "signature": "8234a44d5c83eb12d02c39a2e8994069082b74cfc9ddada880790d286b08a8db",
+      "utcScannedDateTime": "2026-09-20T21:32:03.634Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 588,
+      "signature": "7ce7afb28db55f60284da4dc46ebef582523fee212b5ba0f46afe552bec22566",
+      "utcScannedDateTime": "2026-09-20T21:32:03.639Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 600,
+      "signature": "c3d0fab635024942ebea76b8f05bc86b4813bdaad068c27526f0611e40348002",
+      "utcScannedDateTime": "2026-09-20T21:32:03.643Z"
+    },
+    {
+      "check": "contradiction",
       "subjectId": 611,
       "signature": "812650dde778bff12e10251fa5668578441b51532b1a876b382d007e02c87257",
       "utcScannedDateTime": "2026-09-19T20:05:11.397Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 619,
+      "signature": "277a198b3f932a9aa6316b0bcc34d1fa61a7e6912796bf07f0515c7894ccd064",
+      "utcScannedDateTime": "2026-09-20T21:32:03.647Z"
     },
     {
       "check": "contradiction",
@@ -213854,6 +217485,36 @@
     },
     {
       "check": "contradiction",
+      "subjectId": 624,
+      "signature": "bf47aaa7b124d00bc3a583ff8426441cda628f09542272a6848313beef1ea7c2",
+      "utcScannedDateTime": "2026-09-20T21:32:03.652Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 626,
+      "signature": "81467c4b2812cd4a0e08f1b7f23945ed17e3990756f37347af1a608184845d38",
+      "utcScannedDateTime": "2026-09-20T21:32:03.656Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 629,
+      "signature": "edd6e87440bae93f1079278fea7481bdfbfcef0ad3784d61769761e56f5b76ec",
+      "utcScannedDateTime": "2026-09-20T21:32:03.660Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 630,
+      "signature": "2446f4fcf51ce0cb7f0dd9ea42aac27996b256eb531001d7b2aed40eea7f42b1",
+      "utcScannedDateTime": "2026-09-20T21:32:03.665Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 632,
+      "signature": "7db451229d99cd9e482250d03d6766715a9df0ea98634fea8471712bc9bdf84d",
+      "utcScannedDateTime": "2026-09-20T21:32:03.669Z"
+    },
+    {
+      "check": "contradiction",
       "subjectId": 636,
       "signature": "d253334636e3cc534aadc2797c59cf3cf8d66a1b08fd7110045090876d279391",
       "utcScannedDateTime": "2026-09-19T20:05:11.410Z"
@@ -213866,9 +217527,51 @@
     },
     {
       "check": "contradiction",
+      "subjectId": 639,
+      "signature": "9b4dcbb1f90150c6ede5a762f99759363a3f64520aa3b818d7f0a8a1e0ba866d",
+      "utcScannedDateTime": "2026-09-20T21:32:03.674Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 643,
+      "signature": "eab60a00b14912bb83005cebe13c4d9afa660ff451a5cdcdb3af852b24a2a199",
+      "utcScannedDateTime": "2026-09-20T21:31:29.088Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 661,
+      "signature": "75e8496cde9f5e5fe3a06765eaa8d116dff83656673b69b4d494ab091a4809a0",
+      "utcScannedDateTime": "2026-09-20T21:32:03.679Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 663,
+      "signature": "c81b17eddbfd51f6f84f7d1cc278710bbcfda60cef47d054d8870d31a8576ca7",
+      "utcScannedDateTime": "2026-09-20T21:32:03.684Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 664,
+      "signature": "e6f04c3809a98314d79bffaeb1388f6d4a08364ddbbcd43dd33151351df024fa",
+      "utcScannedDateTime": "2026-09-20T21:32:03.688Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 670,
+      "signature": "59288826079c89c20401ebc7456292b935bd5ee11d6b4ee0d20bafff204e2ce8",
+      "utcScannedDateTime": "2026-09-20T21:31:29.097Z"
+    },
+    {
+      "check": "contradiction",
       "subjectId": 673,
       "signature": "e881915d5ae7154b6a666c12c919d55ca294fa66c700455a56cb908253f4af8f",
       "utcScannedDateTime": "2026-09-19T20:05:11.420Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 676,
+      "signature": "8b75487459ca8c339abf86b8e9708650d1e479242ee30c2b00ae7d3f98a606e6",
+      "utcScannedDateTime": "2026-09-20T21:31:29.102Z"
     },
     {
       "check": "contradiction",
@@ -213878,15 +217581,243 @@
     },
     {
       "check": "contradiction",
+      "subjectId": 681,
+      "signature": "e7fa1f52cb79a2b5344675007f2ac105c9b98126a1fde323b5e6ae70e0c5660d",
+      "utcScannedDateTime": "2026-09-20T21:31:29.107Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 684,
+      "signature": "622553a4a822fea57c80f2c57e740b2c54c66f999002e4242dcaeddd7dd742cf",
+      "utcScannedDateTime": "2026-09-20T21:32:03.693Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 688,
+      "signature": "404f6c46644e436c4b3f80504bba8d4c09e708dcab178a67dbbc7789c7c00037",
+      "utcScannedDateTime": "2026-09-20T21:32:03.698Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 699,
+      "signature": "e1654e7ad59776033911612fa7cf288e4dec168a0195fa0186138fd2eb82150b",
+      "utcScannedDateTime": "2026-09-20T21:31:29.111Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 700,
+      "signature": "d4919c838d8f583cf3566685a21aad6b6cc88e4bf28ec71d2a92262180d76331",
+      "utcScannedDateTime": "2026-09-20T21:32:03.702Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 701,
+      "signature": "2c6ea9a40488c1e4ce8aeed1d5a9afaf3ed19604661892a83dfa17e0853f9aca",
+      "utcScannedDateTime": "2026-09-20T21:31:29.117Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 707,
+      "signature": "b81e7ca75f4634cfb803e455a3346f2a93e37c2c1ae5231562f236def72e8289",
+      "utcScannedDateTime": "2026-09-20T21:31:29.121Z"
+    },
+    {
+      "check": "contradiction",
       "subjectId": 712,
       "signature": "e596464327da152973773cda08c8223aae7d12462a2d5d23f2652e4122b9dcc3",
       "utcScannedDateTime": "2026-09-19T20:05:11.429Z"
     },
     {
       "check": "contradiction",
+      "subjectId": 717,
+      "signature": "43bf12a60930ad3d98f5c4a6083794e17c5372e6b0fa0bf8cf2a20520adccc17",
+      "utcScannedDateTime": "2026-09-20T21:32:03.706Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 738,
+      "signature": "6082867109a42df07070ad95f8bd2566fef4956d1a888be7e23a305fa2d8690b",
+      "utcScannedDateTime": "2026-09-20T21:31:29.126Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 740,
+      "signature": "0696c20314555c944d5611b6a3ee3f448d3c8d76c97d2f1bba4a4d47d1151d8a",
+      "utcScannedDateTime": "2026-09-20T21:32:03.711Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 744,
+      "signature": "93f0fd023540dffa8e464f0a32dcd84b8f0cc07b6c0104cb9a12ac7b697201b8",
+      "utcScannedDateTime": "2026-09-20T21:32:03.716Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 752,
+      "signature": "9b403d05c302bd3aae7b2084dcc864928cf8bc8dd2350e00ce7bc6eb206d1ff9",
+      "utcScannedDateTime": "2026-09-20T21:31:29.131Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 753,
+      "signature": "d88e1c0670516f026475706e0fc1aa44e31e11cb0a04bb107c83f27bc22c7350",
+      "utcScannedDateTime": "2026-09-20T21:32:03.720Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 754,
+      "signature": "3fd4bdcd2819d5d241d5985a0d46a191e835ffe788cd8b82be513f134ed544b3",
+      "utcScannedDateTime": "2026-09-20T21:31:29.136Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 787,
+      "signature": "8ecc633bdc1e0ab409cf1a2c6c2a210bcfeb620b7d53dfb6bad7f2cb4684200b",
+      "utcScannedDateTime": "2026-09-20T21:31:29.146Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 791,
+      "signature": "fa8a612a28aa342702e258fe1e5df50a016db1c932361d4bec7726ab4ff83f4a",
+      "utcScannedDateTime": "2026-09-20T21:31:29.151Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 793,
+      "signature": "48540ed2761ff1f39f4933db10a440a4da8e8e158d673571a0a80f4f6cfc29e0",
+      "utcScannedDateTime": "2026-09-20T21:32:03.724Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 803,
+      "signature": "4d1a7d53bd0769fc684fb5c48c12b87d0e9644a0535ec1f4772b10e4a7a7d738",
+      "utcScannedDateTime": "2026-09-20T21:31:29.155Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 807,
+      "signature": "760377f9454d6e72425396a90e8ee50d24fdb73082d011be11775fc1339c6616",
+      "utcScannedDateTime": "2026-09-20T21:32:03.728Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 823,
+      "signature": "525aca4799af43fffe8b631fe71941d91e802be454f342b82319dabef3668f3c",
+      "utcScannedDateTime": "2026-09-20T21:32:03.738Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 826,
+      "signature": "b359fe6839d67d6566f59218e38479ea250bb33f3f33118cea2f3a0932ef04a4",
+      "utcScannedDateTime": "2026-09-20T21:31:29.160Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 844,
+      "signature": "699adf14a530570daecb5c906ed0f8988471292aa505a741a37b82db6b32edff",
+      "utcScannedDateTime": "2026-09-20T21:31:29.165Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 846,
+      "signature": "54024af5edb7ec5c69914cf383a83ba06e5258faa54790db9294f2c1281282dc",
+      "utcScannedDateTime": "2026-09-20T21:31:29.169Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 850,
+      "signature": "f044db3b0c4db7ee786659ea3e0bf3ae71609ee4f305155fc12ad833164445de",
+      "utcScannedDateTime": "2026-09-20T21:31:29.173Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 851,
+      "signature": "1f23a25b980bca76f4ec6db8af4639826e7a4b42782c2476506c765f6ff74fa0",
+      "utcScannedDateTime": "2026-09-20T21:32:03.743Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 855,
+      "signature": "4e66623eac332dd91db5ba924ea366b82a20e73953454579606619b7b36baa97",
+      "utcScannedDateTime": "2026-09-20T21:31:29.178Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 877,
+      "signature": "2470c04e29c545c9fce284a54f11cbefd84d348afc8edd1a4ff66a598413cc94",
+      "utcScannedDateTime": "2026-09-20T21:31:29.182Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 901,
+      "signature": "02aeb90d0166302e341fd7aa503742757c1d94d9ff5059aab443294859002691",
+      "utcScannedDateTime": "2026-09-20T21:31:29.187Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 919,
+      "signature": "8fb16981301c724d44c0058afd52dd3552fdb3db9502c0baa553cf2d242d2351",
+      "utcScannedDateTime": "2026-09-20T21:31:29.191Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 921,
+      "signature": "c951c9738ea50b79d16b2a2746badcbb919669d3b5377e1544e197b54ffa9933",
+      "utcScannedDateTime": "2026-09-20T21:32:03.752Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 923,
+      "signature": "1352c53fa667fcc0e91e1db55a66a9ccd030e95711eb58e69ec83a64570f5a05",
+      "utcScannedDateTime": "2026-09-20T21:32:03.756Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 925,
+      "signature": "69ab476e8bc07ef3f12874cd74070de45d98945e3201900333e5742b44837557",
+      "utcScannedDateTime": "2026-09-20T21:32:03.760Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 927,
+      "signature": "838252aa85517c2b6c3698fcc274278ff82b9592e1788d1c4085d33240e92f9b",
+      "utcScannedDateTime": "2026-09-20T21:32:03.765Z"
+    },
+    {
+      "check": "contradiction",
       "subjectId": 930,
       "signature": "2d2cd51e099702cddf6f6b80e6288bdc85be637f996a06fee4ce447b45e236cf",
       "utcScannedDateTime": "2026-09-19T01:48:09.090Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 932,
+      "signature": "9a924601b0ea33fb76a6d6f5c270c4bad7b5ebf8010535afb473bafc5682800e",
+      "utcScannedDateTime": "2026-09-20T21:32:03.770Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 950,
+      "signature": "c2ca65c0f34a4bd1b7a4724ddc03a5c014d312137e005f38cfe0d760bea4b7ab",
+      "utcScannedDateTime": "2026-09-20T21:31:29.195Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 960,
+      "signature": "64203d8ffd986a4478b92fcd7ce648f0ac1c02d83931dc6f733fb391dc26f00c",
+      "utcScannedDateTime": "2026-09-20T21:32:03.774Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 961,
+      "signature": "90288f71a4cf9979e4112afc7f7c411690901dc39117097f41f8a98049fa43ba",
+      "utcScannedDateTime": "2026-09-20T21:31:29.200Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 963,
+      "signature": "65720010bc365952e75587cc430294270337f8dd21c408367d6bd919ee04f57a",
+      "utcScannedDateTime": "2026-09-20T21:32:03.778Z"
     },
     {
       "check": "contradiction",
@@ -214107,8 +218038,8 @@
     {
       "check": "contradiction",
       "subjectId": 1715,
-      "signature": "9ece9ce38b453e6776fc708195b4100c286dff4c1c406e3930d2eaed09548b4b",
-      "utcScannedDateTime": "2026-09-19T20:05:10.922Z"
+      "signature": "af39d60051b4abdbce45a958c43c36b1fa8c853de1cd77de78173d7b6614207a",
+      "utcScannedDateTime": "2026-09-20T21:31:28.884Z"
     },
     {
       "check": "contradiction",
@@ -214407,8 +218338,8 @@
     {
       "check": "contradiction",
       "subjectId": 1768,
-      "signature": "1a5b37328dde98b9597f9373656fcd2be81f8951dbf42e0179ceac9237119a51",
-      "utcScannedDateTime": "2026-09-19T20:05:11.139Z"
+      "signature": "145d9dc6ce31a19634360e29b96dbf1144d3836c172962cf940e35960860f105",
+      "utcScannedDateTime": "2026-09-20T21:32:03.450Z"
     },
     {
       "check": "contradiction",
@@ -214503,20 +218434,20 @@
     {
       "check": "contradiction",
       "subjectId": 1784,
-      "signature": "cf98a8df597d82e296382591a104365458cdf6132e744b4cb65ff297e16c02e9",
-      "utcScannedDateTime": "2026-09-19T20:05:11.208Z"
+      "signature": "30af59b3dfc5ebefcc5fc2e4c38f29b6879f466ca7f47f187c91c8d6c46b6a4d",
+      "utcScannedDateTime": "2026-09-20T21:31:28.888Z"
     },
     {
       "check": "contradiction",
       "subjectId": 1794,
-      "signature": "2520478600f0af6470f7b7b7d9b582b70f226b1a369690004322a4bbdcdefb0d",
-      "utcScannedDateTime": "2026-09-19T20:05:11.213Z"
+      "signature": "924a3254eed934dba7abe2c46a450a133d166d86a87e33611e72bcba82a82142",
+      "utcScannedDateTime": "2026-09-20T21:31:28.897Z"
     },
     {
       "check": "contradiction",
       "subjectId": 1795,
-      "signature": "c87317d52849b6102696696af0b31a6522eab385a09bcf5602b65cb4a83348c4",
-      "utcScannedDateTime": "2026-09-19T20:05:11.217Z"
+      "signature": "fa06ad5fe09995061bcd70229e23399590fb09a234eb0ca83dbfd185c713c5e3",
+      "utcScannedDateTime": "2026-09-20T21:32:03.455Z"
     },
     {
       "check": "contradiction",
@@ -214553,6 +218484,18 @@
       "subjectId": 1811,
       "signature": "26e18ea97b9877f8260914b49a3db37b1712651777955116a9d19d71e70e1f4e",
       "utcScannedDateTime": "2026-09-19T20:05:11.242Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 1812,
+      "signature": "7572422562bcb4240058d74efa3739ecba0c4895a536ad662cdcb8cfff488c11",
+      "utcScannedDateTime": "2026-09-20T21:31:28.902Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 1815,
+      "signature": "ad8089c721188b0363103302a152443900957a5e73b697be43ba4f6458ef803c",
+      "utcScannedDateTime": "2026-09-20T21:31:28.906Z"
     },
     {
       "check": "contradiction",
@@ -214649,6 +218592,36 @@
       "subjectId": 1846,
       "signature": "858437c2b9a2426f0174055714cc707ef6d80c956b8c0e1af2d414bcf125ad13",
       "utcScannedDateTime": "2026-09-19T20:05:11.310Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 1861,
+      "signature": "17a0ea2dbd54587a0be42c9921af675f66a63e3c84e83cfb27158b2d53fcb47b",
+      "utcScannedDateTime": "2026-09-20T21:32:03.466Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 1872,
+      "signature": "743280df8efb3a8908c4b1a7d5cd96ba5645b4863ac2ba7d36897c0391635622",
+      "utcScannedDateTime": "2026-09-20T21:32:03.470Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 1986,
+      "signature": "8bad79ecdca962a7f32c30472c7e36be518891392b53697f8d406eb6287c4bfb",
+      "utcScannedDateTime": "2026-09-20T21:31:28.930Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 2013,
+      "signature": "3f14e214f39db6f1d8b9c363280886c726c784b554a4be453679e6f72b64e15f",
+      "utcScannedDateTime": "2026-09-20T21:31:28.938Z"
+    },
+    {
+      "check": "contradiction",
+      "subjectId": 2269,
+      "signature": "66c9e7994f63437c09e868120bf5474c0e39e4f1ee427ee92aee620e2253701f",
+      "utcScannedDateTime": "2026-09-20T21:31:28.967Z"
     },
     {
       "check": "quality",

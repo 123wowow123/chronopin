@@ -5,6 +5,7 @@
 
 import '../env';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { gunzipSync, gzipSync } from 'node:zlib';
 import { parseArgs } from 'node:util';
 import Holidays from 'date-holidays';
 import _ from 'lodash';
@@ -33,6 +34,7 @@ const { values: flags } = parseArgs({
     duplicatefile: { type: 'string', default: './scripts/backup/seedPinDuplicates.json' },
     aifeedbackfile: { type: 'string', default: './scripts/backup/seedAiFeedback.json' },
     sourcefile: { type: 'string', default: './scripts/backup/seedSources.json' },
+    sourcetextfile: { type: 'string', default: './scripts/backup/seedSourceTexts.json.gz' },
     stockfile: { type: 'string', default: './scripts/backup/seedStocks.json' },
     tagfile: { type: 'string', default: './scripts/backup/seedTags.json' },
     flightpathfile: { type: 'string', default: './scripts/backup/seedFlightPaths.json' },
@@ -66,8 +68,14 @@ const BACKUP_USER_PROPS = [
 const FIRST_HOLIDAY_YEAR = 1986;
 const LAST_HOLIDAY_YEAR = 2100;
 
-const readJson = (file: string) => JSON.parse(readFileSync(file, 'utf8'));
-const writeJson = (file: string, data: unknown) => writeFileSync(file, JSON.stringify(data, null, 2));
+// A .json.gz file is read and written compressed: seedSourceTexts is page
+// text and transcripts, which gzip takes to about a quarter of their size.
+const readJson = (file: string) =>
+  JSON.parse(file.endsWith('.gz') ? gunzipSync(readFileSync(file)).toString('utf8') : readFileSync(file, 'utf8'));
+const writeJson = (file: string, data: unknown) => {
+  const json = JSON.stringify(data, null, 2);
+  writeFileSync(file, file.endsWith('.gz') ? gzipSync(json, { level: 9 }) : json);
+};
 
 async function saveDB() {
   // Every pin, soft-deleted ones included, however far back it starts.
@@ -127,15 +135,25 @@ async function saveDB() {
   writeJson(flags.aifeedbackfile, feedback);
 
   // Link wikis (0026) for the kept pins' links, so a restore does not pay
-  // for writing them again. Links only e2e pins cited are left out, and so is
-  // each link's fetched text, which can run to a whole transcript: a ready
-  // wiki never needs it, and --refetch reads the link again anyway.
+  // for writing them again. Links only e2e pins cited are left out.
+  //
+  // Each link's fetched text - a page body or a whole transcript, ~60MB over
+  // every link - goes to its own file, gzipped. It is what a wiki can be
+  // rewritten from without refetching a link that may be dead or behind a bot
+  // check, so it is worth keeping, but it dwarfs the rest of the backup and
+  // changes whenever a link is refetched. Out here it never rewrites
+  // seedSources.json, and compressed it does not weigh the repository down.
   console.log('Backup Sources');
   const { sources, wikis, pinSources, lintFindings, lintScans } = await Source.getAll();
   const keptPinSources = pinSources.filter((ps) => keptPinIds.has(ps.pinId));
   const keptSourceIds = new Set(keptPinSources.map((ps) => ps.sourceId));
+  const keptSources = sources.filter((s) => keptSourceIds.has(s.id));
+  writeJson(
+    flags.sourcetextfile,
+    keptSources.filter((s) => s.text != null).map(({ id, text }) => ({ id, text })),
+  );
   writeJson(flags.sourcefile, {
-    sources: sources.filter((s) => keptSourceIds.has(s.id)).map(({ text: _text, ...s }) => s),
+    sources: keptSources.map(({ text: _text, ...s }) => s),
     wikis: wikis.filter((w) => keptSourceIds.has(w.sourceId)),
     pinSources: keptPinSources,
     lintFindings: lintFindings.filter(
@@ -290,7 +308,14 @@ async function seedDB() {
 
   if (existsSync(flags.sourcefile)) {
     try {
-      await Source.restore(readJson(flags.sourcefile));
+      const backup = readJson(flags.sourcefile);
+      // The fetched text is kept in its own file: put it back on its row, so
+      // a restored wiki can be rewritten without refetching the link.
+      if (existsSync(flags.sourcetextfile)) {
+        const texts = new Map<number, string>(readJson(flags.sourcetextfile).map((row: any) => [row.id, row.text]));
+        for (const source of backup.sources ?? []) source.text = texts.get(source.id) ?? null;
+      }
+      await Source.restore(backup);
     } catch (error) {
       log.error('Sources Save Error', JSON.stringify(error));
     }

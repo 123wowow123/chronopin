@@ -17,7 +17,7 @@ generated: { by: claude-code/claude-opus-5, at: 2026-09-19T02:00:00Z }
 | `kind` | varchar(16) | `web`, `youtube`, `tweet`, `podcast` |
 | `title` | varchar(1024) | The page's title |
 | `status` | varchar(16) | `pending` (no wiki yet), `ready`, `failed` |
-| `text` | text | The text the wiki was written from. Left out of backups |
+| `text` | text | The text the wiki was written from. Backed up gzipped to its own `scripts/backup/seedSourceTexts.json.gz`, keyed by `id`, so a restored wiki can be rewritten without refetching a link that may be dead |
 | `textHash` | varchar(64) | sha256 of `text`, so a refetch can tell whether anything changed |
 | `sourceModifiedDate` | date | The link's own publication or update date, which becomes OKF `last_modified` |
 | `generatedBy` | varchar(128) | OKF actor that wrote the wiki, `chronopin-wiki/<model>` |

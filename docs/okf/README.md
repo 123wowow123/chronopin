@@ -43,7 +43,7 @@ pin saved/updated ──► refresh the pin ──► 1. sync links     one Sour
 | `npm run okf:lint` | Check and maintain the wikis: OKF conformance, stale links, orphans, quality, contradictions between a pin's links. `--fix`, `--check`, `--pin`, `--dir`. See [Lint the wikis](playbooks/lint-the-wikis.md) |
 | `npm run wiki:export` / `wiki:apply` | With no API credit, write out the Claude jobs, do them in a Claude Code session, and save the answers. See [Without API credit](playbooks/without-api-credit.md) |
 | `npm run okf:export` | Write an OKF bundle of pins and their link wikis to `./okf-bundle/`. `--pin N` (repeatable), `--out DIR` |
-| `npm run backup:data` | Also writes `scripts/backup/seedSources.json`, without the fetched text |
+| `npm run backup:data` | Also writes `scripts/backup/seedSources.json` and, on its own because of its size, the fetched text as `seedSourceTexts.json.gz` |
 
 ## Admin API
 
