@@ -12,7 +12,7 @@ generated: { by: claude-code/claude-opus-5, at: 2026-09-19T04:00:00Z }
 | Column | Type | Description |
 | --- | --- | --- |
 | `id` | integer | Identity |
-| `check` | varchar(32) | `conformance`, `stale`, `orphan`, `quality`, `contradiction` |
+| `check` | varchar(32) | `conformance`, `stale`, `orphan`, `quality`, `contradiction`, `imprecise` (0051) |
 | `severity` | varchar(16) | `error`, `warning`, `info` |
 | `pinId` | integer | FK to Pin, cascade delete. Set for a pin-level finding |
 | `sourceId` | integer | FK to [Source](source.md), cascade delete. Set for a link-level finding |

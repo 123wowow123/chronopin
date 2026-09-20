@@ -89,6 +89,25 @@ function byChance(a: MarketOutcome, b: MarketOutcome) {
 
 const KALSHI_OPEN = new Set(['active', 'open', 'initialized', 'unopened']);
 
+// The dollars traded on a Kalshi market. Kalshi counts volume in contracts
+// (volume_fp, with the older volume in whole ones), so the money on it is
+// contracts times what they trade at - the same figure Polymarket reports
+// directly. Priced at the market's last price, so it is an estimate: the
+// contracts traded months ago changed hands at prices of their own.
+function kalshiVolume(market: Json): number | undefined {
+  const contracts = num(market.volume_fp) ?? num(market.volume);
+  // Cents on the older shape, dollars on the current one.
+  const price = num(market.last_price_dollars) ?? (num(market.last_price) !== undefined ? num(market.last_price)! / 100 : undefined);
+  return contracts === undefined || price === undefined ? undefined : contracts * price;
+}
+
+// Every market's dollars, summed - settled ones included, because that money
+// was traded too. Undefined when no market reports any.
+function kalshiEventVolume(markets: Json[]): number | undefined {
+  const dollars = markets.map(kalshiVolume).filter((v) => v !== undefined);
+  return dollars.length ? dollars.reduce((sum, v) => sum + v, 0) : undefined;
+}
+
 async function kalshiEvent(ref: Extract<MarketRef, { source: 'Kalshi' }>): Promise<{ event: Json; markets: Json[] } | null> {
   if (ref.kind === 'series') {
     const data = await getJson(`${KALSHI_API}/events?series_ticker=${encodeURIComponent(ref.ticker)}&status=open&with_nested_markets=true&limit=1`);
@@ -127,12 +146,13 @@ async function kalshi(ref: Extract<MarketRef, { source: 'Kalshi' }>): Promise<Ma
           { label: 'Yes', probability: yes, history: history(live[0]) },
           { label: 'No', probability: yes == null ? null : 1 - yes, history: history(live[0], ':no') },
         ]
-      : live.map((m) => ({ label: m.yes_sub_title || m.title, probability: kalshiChance(m), history: history(m) }));
+      : live.map((m) => ({ label: m.yes_sub_title || m.title, probability: kalshiChance(m), volume: kalshiVolume(m), history: history(m) }));
   return {
     source: 'Kalshi',
     url: ref.url,
     title: [event.title, event.sub_title].filter(Boolean).join(' '),
     outcomes: outcomes.sort(byChance),
+    volume: kalshiEventVolume(markets),
     closeTime: closeTimes[closeTimes.length - 1],
     closed,
     fetchedAt,
@@ -205,6 +225,9 @@ async function polymarket(ref: Extract<MarketRef, { source: 'Polymarket' }>): Pr
     fetchedAt,
   };
 }
+
+// Polymarket US publishes no volume, on its events or its markets, so a pin
+// citing only that exchange has no dollar figure to show or to weigh.
 
 // A Polymarket US market's chance of its long side: what it settled at once
 // closed, else its current price (the bid/ask midpoint the exchange shows).

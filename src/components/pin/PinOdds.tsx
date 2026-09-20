@@ -6,7 +6,7 @@ import { useMarketOdds, watchMarketOdds } from '@/lib/client/marketOdds';
 import { pinMarketRefs, type MarketOdds, type MarketOutcome } from '@/lib/predictionMarkets';
 import type { PinJson } from '@/lib/types';
 import { useT } from '@/lib/client/i18n';
-import { dateFormat } from '@/lib/format';
+import { compactUsd, dateFormat } from '@/lib/format';
 import { INTL_LOCALES, type Locale } from '@/lib/i18n/config';
 
 const SHOWN_OUTCOMES = 6;
@@ -18,7 +18,6 @@ const MOVE_MS = 700;
 // How long an outcome stays green or red after it moves.
 const FLASH_MS = 1600;
 
-const compactUsd = (locale: Locale) => new Intl.NumberFormat(INTL_LOCALES[locale], { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 1 });
 // In UTC: Polymarket gives an end date as midnight UTC, which reads a day
 // early anywhere west of Greenwich.
 const closeDate = (locale: Locale) => dateFormat(INTL_LOCALES[locale], { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });

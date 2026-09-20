@@ -6,12 +6,20 @@ import { SearchPins } from '../model/searchPin';
 import { HttpError } from '../util/httpError';
 import log from '../util/log';
 
-// A user may post a given source URL only once. The body names the existing
-// pin so the form can link to it.
+// A source URL may be posted once, by anyone. It used to be once per user,
+// which let a second curator pin the same page again: on 2026-09-20 a scrape
+// posted Brightline West against the URL an existing pin already cited, and
+// nothing stopped it because the authors differed. The body names the existing
+// pin so the form can link to it, and says whose it is when it is not yours,
+// because "you have already posted this" is a confusing thing to be told about
+// someone else's pin.
 export async function rejectDuplicateSourceUrl(pin: Pin) {
-  const existing = await Pin.findBySourceUrl(pin.userId, pin.sourceUrl, pin.id);
+  const existing = await Pin.findBySourceUrl(null, pin.sourceUrl, pin.id);
   if (existing) {
-    const message = 'You have already posted a pin with this source URL.';
+    const mine = Number(existing.userId) === Number(pin.userId);
+    const message = mine
+      ? 'You have already posted a pin with this source URL.'
+      : 'Another pin already cites this source URL. Add your link to it as a reference rather than pinning it again.';
     throw new HttpError(409, message, { message, pin: existing });
   }
 }
@@ -25,6 +33,17 @@ export const SIMILAR_TITLE_MIN = 0.8;
 // Pins a day apart can still be one event: an all-day pin sits at 00:00Z while
 // a timed one lands on the local date of its instant.
 export const MAX_DAYS_APART = 1;
+// When a date is only an estimate, a day apart is the wrong test. The same
+// project re-scraped a year later carries a different guess - Sydney Metro West
+// was pinned at 2032-06-01 and again at 2032-12-31, seven months apart, and the
+// check could not see the pair at all. So an estimated or delayed pin is
+// compared over a year instead, which is roughly how far a placeholder moves.
+// The title still has to match at SIMILAR_TITLE_MIN, and every pair is
+// confirmed by a person, so the wider window costs a suggestion, not a mistake.
+export const MAX_DAYS_APART_ESTIMATED = 366;
+const SOFT_DATES = new Set(['estimated', 'delayed']);
+export const daysApartFor = (dateConfidence?: string | null) =>
+  SOFT_DATES.has(String(dateConfidence)) ? MAX_DAYS_APART_ESTIMATED : MAX_DAYS_APART;
 const SIMILAR_CANDIDATES = 10;
 // Pairs a save checks with Claude at most; the rest wait for the next save
 // or for npm run duplicates:verify.
@@ -40,16 +59,19 @@ export async function findDuplicates({
   title,
   sourceUrl,
   utcStartDateTime,
+  dateConfidence,
 }: {
   pinId?: number;
   title: string | null | undefined;
   sourceUrl: string | null | undefined;
   utcStartDateTime: Date | string;
+  dateConfidence?: string | null;
 }): Promise<Map<number, DuplicateMatch>> {
   const found = new Map<number, DuplicateMatch>();
+  const maxDays = daysApartFor(dateConfidence);
   const urlKey = sameSourceUrlKey(sourceUrl);
   if (urlKey) {
-    for (const id of await PinDuplicate.sameSourceUrl(pinId, utcStartDateTime, urlKey, MAX_DAYS_APART)) {
+    for (const id of await PinDuplicate.sameSourceUrl(pinId, utcStartDateTime, urlKey, maxDays)) {
       found.set(id, { reason: 'sourceUrl', score: null });
     }
   }
@@ -58,7 +80,7 @@ export async function findDuplicates({
     try {
       const hits = (await SearchPins.nearest(title, SIMILAR_CANDIDATES)).filter((hit) => hit.id !== pinId && hit.score >= SIMILAR_TITLE_MIN);
       const scores = new Map(hits.map((hit) => [hit.id, hit.score]));
-      const sameDay = await PinDuplicate.withinDays(pinId, utcStartDateTime, [...scores.keys()], MAX_DAYS_APART);
+      const sameDay = await PinDuplicate.withinDays(pinId, utcStartDateTime, [...scores.keys()], maxDays);
       for (const id of sameDay) {
         if (!found.has(id)) {
           found.set(id, { reason: 'similar', score: scores.get(id)! });
@@ -76,14 +98,14 @@ export async function findDuplicates({
 // verify is false, Claude then checks the pin's pairs that need a verdict.
 // Resolves to the number of new suggestions.
 export async function suggestDuplicates(pinId: number, { verify = true }: { verify?: boolean } = {}): Promise<number> {
-  const [pin] = await db.query<{ title: string; sourceUrl: string | null; utcStartDateTime: Date }>(
-    `SELECT "title", "sourceUrl", "utcStartDateTime" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`,
+  const [pin] = await db.query<{ title: string; sourceUrl: string | null; utcStartDateTime: Date; dateConfidence: string | null }>(
+    `SELECT "title", "sourceUrl", "utcStartDateTime", "dateConfidence" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`,
     [pinId],
   );
   if (!pin) {
     return 0;
   }
-  await PinDuplicate.clearStaleSuggestions(pinId, MAX_DAYS_APART);
+  await PinDuplicate.clearStaleSuggestions(pinId, daysApartFor(pin.dateConfidence));
 
   const found = await findDuplicates({ pinId, ...pin });
 

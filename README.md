@@ -478,6 +478,8 @@ major local events by major city scrape and more targetted by your location
 
 - create job to check health of pins like broken videos, image, etc and new pin connection and references might be able to add
 
+- nightly job should be guided by LLM reasoning and guidance so it's flexible like running in current sessions 
+
 # OKF
 
 # Other
@@ -485,8 +487,4 @@ major local events by major city scrape and more targetted by your location
 - should have small display that 3 pins are happing within next 7 days on botton and top of timeline. Clicking on it will scroll you to it one after another
 
 # Scraping
-
-
-add more prediction market pins for major events
-
-upgrade node to latest stable
+https://trends.google.com/explore

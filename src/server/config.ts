@@ -123,6 +123,14 @@ export const config = {
 
   chromiumPath: env('CHROMIUM_PATH') || env('PUPPETEER_EXECUTABLE_PATH'),
 
+  pdf: {
+    // Reading a PDF's text layer costs milliseconds; OCR of a scan costs about
+    // five seconds a page and pins a core while it runs. The text layer is
+    // always read - this switch only decides whether a scan is worth the CPU.
+    // Set SCRAPE_PDF_OCR=0 to turn it off and let a scan read as no text.
+    ocr: env('SCRAPE_PDF_OCR') !== '0',
+  },
+
   pagination: {
     pageSize: 25,
     // Pins per page of search results.

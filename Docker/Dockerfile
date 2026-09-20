@@ -24,7 +24,15 @@ FROM node:24-alpine AS runtime
 WORKDIR /app
 
 # Chromium and fonts for puppeteer (page scraping); bind-tools for nslookup.
-RUN apk add --no-cache chromium nss freetype harfbuzz ca-certificates ttf-freefont bind-tools
+#
+# poppler-utils and tesseract-ocr are the PDF reader
+# (src/server/scrape/pdfText.ts): pdftotext and pdfinfo for a filing's text
+# layer, pdftoppm and tesseract to OCR one that is a scan. Without them a PDF
+# source fails the whole scrape, because the fetch is the one stage that may.
+# tesseract-ocr-data-eng is the English model; tesseract ships no language data
+# of its own. Measured: they add about 72MB to the image.
+RUN apk add --no-cache chromium nss freetype harfbuzz ca-certificates ttf-freefont bind-tools \
+    poppler-utils tesseract-ocr tesseract-ocr-data-eng
 
 ENV NODE_ENV=production \
     NEXT_TELEMETRY_DISABLED=1 \

@@ -2,7 +2,7 @@
 
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useT } from '@/lib/client/i18n';
 import type { PinFlightPathJson } from '@/lib/types';
 
@@ -35,11 +35,28 @@ export default function PinMap({
   flightPath?: PinFlightPathJson;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const [armed, setArmed] = useState(false);
   const t = useT();
 
   useEffect(() => {
     if (!ref.current) return;
     const map = L.map(ref.current, { center: [latitude, longitude], zoom: 11, scrollWheelZoom: false });
+    // The map sits mid-page, so the wheel only zooms once the map is
+    // deliberately in use: a click or a tab onto it arms the wheel, and
+    // leaving or blurring the map hands the wheel back to the page.
+    // The border warms to the accent while armed, so it is visible that the
+    // wheel now belongs to the map rather than to the page.
+    const arm = () => {
+      map.scrollWheelZoom.enable();
+      setArmed(true);
+    };
+    const disarm = () => {
+      map.scrollWheelZoom.disable();
+      setArmed(false);
+    };
+    map.on('click focus', arm);
+    map.on('blur', disarm);
+    map.getContainer().addEventListener('mouseleave', disarm);
     L.tileLayer(TILE_URL, { maxZoom: 19, attribution: TILE_ATTRIBUTION }).addTo(map);
     L.marker([latitude, longitude], { icon }).addTo(map).bindPopup(title);
     // The path leaves the pin's place (the marker); a dashed line marks a
@@ -54,6 +71,7 @@ export default function PinMap({
       map.fitBounds(line.getBounds().extend([latitude, longitude]), { padding: [24, 24], maxZoom: 6 });
     }
     return () => {
+      map.getContainer().removeEventListener('mouseleave', disarm);
       map.remove();
     };
   }, [latitude, longitude, title, flightPath]);
@@ -67,7 +85,11 @@ export default function PinMap({
     <div
       role="group"
       aria-label={t('pin.mapOf', { title })}
-      className="isolate h-[360px] w-full overflow-hidden rounded-xl border border-line bg-raised sm:h-[420px]"
+      className={`isolate h-[360px] w-full overflow-hidden rounded-xl border bg-raised ring-2 transition sm:h-[420px] ${
+        armed
+          ? 'border-accent ring-accent/45 shadow-lg shadow-accent/20'
+          : 'border-line ring-transparent'
+      }`}
     >
       <div ref={ref} className="size-full" />
     </div>

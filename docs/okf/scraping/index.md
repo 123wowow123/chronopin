@@ -6,4 +6,5 @@
 * [Scraping without credit](no-credit-mode.md) - What still runs with no key or credit, the fields read from a page's own markup, and the llmTasks a session answers
 * [Source-by-source notes](sources.md) - What works and what is blocked for each site, with the workaround
 * [Vertical recipes](verticals.md) - Games, movies, anime, YouTube channels, prediction markets, AI models, roundups, infrastructure
+* [Nightly scrape jobs](nightly-jobs.md) - The standing roster of scheduled jobs: vertical, source, curator, cadence and the already-pinned test
 * [Learnings and feedback](learnings.md) - Dated log of what each job taught and what the owner corrected; update after every scraping job

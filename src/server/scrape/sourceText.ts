@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import { tweetText, twitterMedium, youtubeMedium, launchBrowser } from '.';
 import { AUDIO_PATH, sourceKind, type SourceKind } from '@/lib/sourceKind';
+import { fetchPdfText, looksLikePdf } from './pdfText';
 import { fetchPodcastTranscript } from './podcast';
 import { fetchTranscript } from './transcript';
 
@@ -24,7 +25,15 @@ const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/
 
 export async function fetchSourceText(url: string, kind: SourceKind = sourceKind(url)): Promise<SourceText> {
   const found =
-    kind === 'youtube' ? await youtubeText(url) : kind === 'tweet' ? await tweetSourceText(url) : kind === 'podcast' ? await podcastText(url) : await pageText(url);
+    kind === 'youtube'
+      ? await youtubeText(url)
+      : kind === 'tweet'
+        ? await tweetSourceText(url)
+        : kind === 'podcast'
+          ? await podcastText(url)
+          : kind === 'pdf'
+            ? await fetchPdfText(url)
+            : await pageText(url);
   const text = found.text.trim().slice(0, MAX_SOURCE_CHARS);
   if (!text) {
     throw new Error(`No text found at ${url}`);
@@ -75,7 +84,14 @@ async function pageText(url: string): Promise<SourceText> {
     });
     if (res.ok) {
       const type = res.headers.get('content-type') || '';
+      // Plenty of filings are served from a URL with no .pdf on it, so the
+      // body is the other half of the test - and it is the more reliable half,
+      // because a server that serves a PDF as application/octet-stream is
+      // common. Anything that is not a web page gets its bytes read once and
+      // handed over if they begin %PDF.
       if (!/html|text\/plain/i.test(type)) {
+        const body = Buffer.from(await res.arrayBuffer());
+        if (looksLikePdf(body)) return fetchPdfText(url, body);
         throw new Error(`Unsupported content type ${type || 'unknown'} at ${url}`);
       }
       const body = await res.text();

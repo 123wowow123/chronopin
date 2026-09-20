@@ -11,7 +11,7 @@ Kept current from real runs. See [Learnings](learnings.md) for the dated log; ad
 
 # How the app fetches
 
-`sourceKind(url)` picks `youtube`, `tweet`, `podcast` or `web` from the host ([Fetch a link's text](../pipeline/fetch-link-text.md)). A web page is fetched plainly first (15 seconds, HTML converted to text); under 500 characters it is loaded in headless Chrome instead. The scraper always renders in Chrome, with the user agent `HeadlessChrome` replaced by `Chrome` because Cloudflare's challenge holds the former (help.openai.com among others), keeps the tab on the page asked for (redirects and script navigation away are blocked), presses PageDown and scrolls to wake lazy players, then reads body text, images, embeds and headings.
+`sourceKind(url)` picks `youtube`, `tweet`, `podcast`, `pdf` or `web` from the host and path ([Fetch a link's text](../pipeline/fetch-link-text.md)); a `.pdf` path is a `pdf`, and a page that turns out to be one is caught by its bytes (below). A web page is fetched plainly first (15 seconds, HTML converted to text); under 500 characters it is loaded in headless Chrome instead. The scraper always renders in Chrome, with the user agent `HeadlessChrome` replaced by `Chrome` because Cloudflare's challenge holds the former (help.openai.com among others), keeps the tab on the page asked for (redirects and script navigation away are blocked), presses PageDown and scrolls to wake lazy players, then reads body text, images, embeds and headings.
 
 # By site
 
@@ -31,11 +31,66 @@ Kept current from real runs. See [Learnings](learnings.md) for the dated log; ad
 | **Windows Central, MSN and similar aggregators** | - | Return the current front page, not the old article | Treat as blocked (the page is not the article the URL names) |
 | **openai.com, help.openai.com** | help.openai.com with the plain Chrome UA; the community forum (Discourse) for launch announcements | openai.com answers 403 to curl and WebFetch | Use the forum announcement and the help-centre release notes |
 | **gameranx.com, IGN news listings** | Server-rendered: extract links with `grep -o` on the raw HTML; IGN body from the `<article>` block | WebFetch cannot reach ign.com; WebFetch's markdown drops `<iframe>` embeds | `curl -A "<browser UA>"`, then grep raw HTML for `<iframe ... youtube ...>` |
-| **PDFs** | Flate streams decode with a zlib script | No poppler locally | Decode by hand when a filing is the only source |
+| **sandag.org, and agency sites like it** | The real path, found by grepping the homepage for `href="[^"]*<slug>"` | A guessed `/projects/<slug>` returns a 404 body at HTTP 200, and the body is nav, not content | Prefer Wikipedia for the project's history and the agency page only for today's promise |
+| **gonctd.com, san.org, health.ucsd.edu, plandesignbuild.ucsd.edu** | WebFetch reads all four | UCSD's Plan Design Build page is accordions (`href="#"`), so it has no per-project deep link | Use the owner's own project page as `sourceUrl`; for UCSD that is health.ucsd.edu, not the listing |
+| **cbs8.com** | - | 403 to WebFetch | Use the outlet the story came from, or Wikipedia |
+| **californiaconstructionnews.com** | Plain WebFetch | Its og:image is the site logo | The article's own photo is under `wp-content/uploads/<year>/<month>/` in the raw HTML |
+| **Transit and airport authorities** (mta.info, atl.com, flydenver.com, flysfo.com, changiairport.com, naa.jp, chicago.gov, engineering.lacity.gov) | The matching press release on a government or operator mirror - governor.ny.gov carries MTA's releases verbatim | 403 (Akamai/Cloudflare), or a nav-only body with the dates on another page | Take the date from the mirror, or from Wikipedia where the slip history lives |
+| **News paywalls** (japantimes.co.jp 402, lasvegassun.com 402, reviewjournal.com, cbc.ca, torontolife.com, theengineer.co.uk, railjournal.com, seatrade-cruise.com, dailyherald.com) | Headline and lede only | The body | Find the same story at an outlet that answers, or drop the candidate |
+| **cosm.com, and Next.js sites like it** | Nothing useful from the HTML | The reader captures the headline and stops - the article body lives in `__NEXT_DATA__` as Markdown content blocks, so a source comes back ~90 characters long | Check for a `__NEXT_DATA__` script before believing a short capture; a 90-character "article" is a rendering problem, not a thin page |
+| **wpcentral.com** | Nothing - the domain is retired | Every URL redirects to the Windows Central front page | Dead as a source. 15 stored links were byte-identical homepage captures; they are marked blocked. Use a web archive if a pin really needs one |
+| **clinicaltrials.gov** | The **API v2**, which the drug-readout vertical already uses | The study page renders its record in JavaScript, so a fetch captures the glossary and nav shell - identical for every study | Never wiki a study from its web page; 23 stored links were the same boilerplate and are marked blocked |
+| **PDFs** | Read by the pipeline since 2026-09-20 ([pdfText.ts](../../../src/server/scrape/pdfText.ts)): `pdftotext` for the text layer, `pdftoppm` + `tesseract` OCR when there is none | A PDF over 40MB, or one that is a scan beyond its first 5 pages | Nothing by hand. Needs poppler and tesseract on the host (`brew install poppler tesseract`); the reader names the missing binary rather than failing obscurely |
 | **Paywalled pages** | The teaser (headline and lede) | The body | A short wiki from the visible opening is acceptable; do not invent |
+
+# PDFs
+
+A filing, docket, environmental statement or regulator letter is often the only
+source a pin has, and until 2026-09-20 the reader refused them outright - the
+fetch stage is the one stage that may fail a whole scrape, so a PDF link killed
+the job. [pdfText.ts](../../../src/server/scrape/pdfText.ts) now reads them.
+
+* **The text layer first, OCR only as a last resort.** `pdftotext` is
+  milliseconds; OCR is about five seconds a page. It runs only when the text
+  layer is under 200 characters - which is a header and a page number, not a
+  document - and only over the first 5 pages.
+* **Plain `pdftotext`, never `-layout`.** `-layout` preserves the geometry,
+  which is right for a table and wrong for everything else: on a three-column
+  Federal Register notice it interleaves the columns line by line, so every
+  sentence reads as three unrelated half-sentences. Plain mode does the
+  reading-order analysis and returns column after column.
+* **Trust the bytes, not the content type.** A PDF is regularly served as
+  `application/octet-stream`, and a block page is occasionally served as
+  `application/pdf`. Anything that is not a web page has its first bytes
+  checked for `%PDF`.
+* The text is prefixed with what was read - `[PDF, 340 pages; text of the
+  first 50]`, `[Scanned PDF, 12 page(s); OCR of the first 5]` - so a summary
+  written from it is not taken for the whole document.
+* Caps: 40MB, 50 pages of text, 5 pages of OCR at 300 dpi.
 
 # Recognising a useless fetch
 
 `looksBlocked(text)` in [sourceText.ts](../../../src/server/scrape/sourceText.ts) flags a short page (under 1,500 characters) that says "Just a moment", "Attention Required", "Access Denied", "You have been blocked", "Are you a robot", "403 Forbidden", "Too Many Requests", "page not found" and the like. The reader no longer accepts such text: it loads the page in the headless browser as plain Chrome (the `HeadlessChrome` user agent is what Cloudflare holds), waits up to 12 seconds for a JavaScript challenge to clear, and fails the link with `Blocked: ...` if it is still a block page, so no wiki is written from it. `npm run wiki:refetch-blocked` reads the already-stored blocked and failed links again this way (in the first check, 3 of 5 read).
 
 Treat the text as **not the article** (record it as blocked, do not summarise it) when it is: a Cloudflare, Akamai or CloudFront challenge; a 403, 404 or 400 page; a login or age gate; a site homepage, index or listing where the URL names an article; a cookie or navigation shell with no facts about the pin's event; or the page for a different event that shares a name (a disambiguation page, a redirect to a broader article).
+
+# WebFetch is not a source
+
+WebFetch's summary is a paraphrase, and it has been caught inventing a figure that appears nowhere in the page (a cost for Shanghai Metro Line 19) and mangling a Unicode filename so the image URL 404'd. Quote numbers, dates and file names from the raw markup or the site's API, never from what WebFetch says about them. It also drops `<iframe>` embeds entirely ([Learnings](learnings.md)).
+
+# Finding a site that serves one page for every URL
+
+A host that has retired its archive, or that renders records in JavaScript,
+answers every URL with the same shell - and each capture looks plausible on its
+own. They are obvious in the aggregate:
+
+```sql
+SELECT COUNT(*), substring(min("url") from '^https?://(?:www\\.)?([^/]+)')
+FROM "Source" WHERE length("text") > 500
+GROUP BY md5("text") HAVING COUNT(*) > 2 ORDER BY 1 DESC;
+```
+
+Identical text across many distinct URLs means the fetch is worthless whatever
+it says. Run this before fanning wiki work out: it found wpcentral.com and
+clinicaltrials.gov, 38 links between them, which would otherwise have become 38
+wikis about the wrong thing.

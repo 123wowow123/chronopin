@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { bagWeight, sampleBag } from './bagSample';
+import { bagWeight, sampleBag, volumeWeight } from './bagSample';
 
 const pins = (n: number, views: (id: number) => number = () => 0) => Array.from({ length: n }, (_, i) => ({ id: i + 1, viewCount: views(i + 1) }));
 
@@ -40,6 +40,22 @@ describe('sampleBag', () => {
   });
 });
 
+describe('volumeWeight', () => {
+  it('ignores a pin with no market, and a market barely traded', () => {
+    expect(volumeWeight(undefined)).toBe(1);
+    expect(volumeWeight(null)).toBe(1);
+    expect(volumeWeight(0)).toBe(1);
+    expect(volumeWeight(9_000)).toBe(1);
+  });
+
+  it('counts half again for every tenfold, up to a cap', () => {
+    expect(volumeWeight(100_000)).toBeCloseTo(1.5);
+    expect(volumeWeight(1_000_000)).toBeCloseTo(2);
+    expect(volumeWeight(10_000_000)).toBeCloseTo(2.5);
+    expect(volumeWeight(500_000_000)).toBe(2.5);
+  });
+});
+
 describe('bagWeight', () => {
   it('starts a new pin at the prior', () => {
     expect(bagWeight({ id: 1 })).toBeCloseTo(0.1);
@@ -50,5 +66,19 @@ describe('bagWeight', () => {
     expect(bagWeight({ ...seen, viewCount: 30 })).toBeGreaterThan(bagWeight({ ...seen, viewCount: 5 }));
     expect(bagWeight({ ...seen, favoriteCount: 5 })).toBeGreaterThan(bagWeight({ ...seen, viewCount: 5 }));
     expect(bagWeight({ ...seen, viewCount: 1 })).toBeLessThan(bagWeight({ id: 2 }));
+  });
+
+  it('lifts a pin for the money on the markets it cites', () => {
+    const seen = { id: 1, impressionCount: 100, viewCount: 5 };
+    expect(bagWeight({ ...seen, marketVolume: 1_000_000 })).toBeCloseTo(bagWeight(seen) * 2);
+    expect(bagWeight({ ...seen, marketVolume: 1_000 })).toBe(bagWeight(seen));
+  });
+});
+
+describe('sampleBag with market volume', () => {
+  it('favours the pin whose markets are busiest, all else equal', () => {
+    const all = pins(10).map((p) => ({ ...p, marketVolume: p.id === 4 ? 50_000_000 : 0 }));
+    const hits = Array.from({ length: 200 }, (_, i) => sampleBag(all, 2, `seed${i}`)).filter((ids) => ids.includes(4)).length;
+    expect(hits).toBeGreaterThan(80);
   });
 });

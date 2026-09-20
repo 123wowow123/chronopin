@@ -18,6 +18,7 @@ import Notification from './model/notification';
 import PinTicker from './model/pinTicker';
 import { subscribeQuote } from './stocks';
 import { subscribeOdds } from './predictionMarkets';
+import { recordMarketVolume } from './services/pinMarketVolume';
 import { pinById } from './services/pages';
 import log from './util/log';
 
@@ -63,7 +64,7 @@ function queueUnreadCount(conn: LiveConnection) {
     conn.countQueued = false;
     if (conn.closed) return;
     try {
-      conn.send('notifications', { unreadCount: await Notification.unreadCount(conn.userId!) });
+      conn.send('notifications', { unreadCount: await Notification.unreadCount(conn.userId!, conn.timeZone) });
     } catch (err) {
       log.warn('live unread count failed:', (err as Error).message);
     }
@@ -158,7 +159,15 @@ export async function setLiveOdds(id: string, pinIds: unknown[]): Promise<boolea
       conn.odds.set(pinId, () => {});
       return;
     }
-    conn.odds.set(pinId, subscribeOdds(pinId, refs, (markets) => conn.send('odds', { pinId, markets })));
+    conn.odds.set(
+      pinId,
+      subscribeOdds(pinId, refs, (markets) => {
+        conn.send('odds', { pinId, markets });
+        // The read is already paid for: the pin keeps what its markets have
+        // traded, for the timeline's weighting (services/pinMarketVolume.ts).
+        recordMarketVolume(pinId, markets);
+      }),
+    );
   });
   return true;
 }

@@ -12,7 +12,7 @@ import { tagGroupPatterns } from '@/lib/tags';
 const CATEGORIES = `ARRAY(SELECT "c"."name"::text FROM "PinTag" AS "c" WHERE "c"."pinId" = "p"."id" AND "c"."kind" = 'category' ORDER BY "c"."id")`;
 const MAIN_CATEGORY = `(SELECT "c"."name"::text FROM "PinTag" AS "c" WHERE "c"."pinId" = "p"."id" AND "c"."kind" = 'category' ORDER BY "c"."id" LIMIT 1)`;
 
-export type PinSearchFilters = { userNames: string[]; companies: string[]; confidences: string[]; dates: string[]; postedDays: string[]; tags: string[] };
+export type PinSearchFilters = { userNames: string[]; ids: number[]; companies: string[]; confidences: string[]; dates: string[]; postedDays: string[]; tags: string[] };
 
 // Everything a search narrows pins to. hits are a free-text search's matches
 // with their scores (null when the search has no free text).
@@ -406,6 +406,9 @@ const PAGE_COLUMNS = `
   "Pin"."delayReasoning",
   "Pin"."episodeCount",
   "Pin"."episodeStatus",
+  -- The dollars on the markets it cites: the bag weight leans on it
+  -- (src/lib/bagSample.ts), so a page of cards has to carry it.
+  "Pin"."marketVolume",
   "Pin"."allDay",
   "Pin"."userId",
   "Pin"."utcCreatedDateTime",
@@ -620,6 +623,10 @@ function searchClauses(filter: SearchFilter) {
     joins.push(
       `INNER JOIN unnest(${add(filter.hits.map((h) => h.id))}::integer[], ${add(filter.hits.map((h) => h.score))}::float8[]) AS "hit" ("id", "score") ON "hit"."id" = "Pin"."id"`,
     );
+  }
+  // Named pins and no others, however they were found (a notification batch).
+  if (filter.ids.length) {
+    where.push(`"Pin"."id" = ANY(${add(filter.ids)}::integer[])`);
   }
   if (filter.userNames.length) {
     joins.push('INNER JOIN "User" ON "User"."id" = "Pin"."userId"');

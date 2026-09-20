@@ -15,6 +15,7 @@
 
 const FORECAST_URL = 'https://api.open-meteo.com/v1/forecast';
 const ARCHIVE_URL = 'https://archive-api.open-meteo.com/v1/archive';
+const GEOCODE_URL = 'https://geocoding-api.open-meteo.com/v1/search';
 const FORECAST_DAYS_AHEAD = 15;
 const FORECAST_DAYS_BACK = 91;
 const TYPICAL_YEARS = 5;
@@ -39,6 +40,8 @@ const TTL = {
 const CACHE_LIMIT = 2000;
 // Current conditions at a viewer's place; they move faster than the forecast.
 const LOCAL_TTL = 15 * 60 * 1000;
+// A time zone's city moves only when the tz database does.
+const ZONE_TTL = 30 * 24 * 60 * 60 * 1000;
 
 export type WeatherKind = keyof typeof TTL;
 
@@ -62,6 +65,8 @@ export type LocalWeather = PinWeather & {
 };
 
 type Place = { latitude: number; longitude: number };
+// A place with the name to show for it (the city a time zone is named after).
+export type NamedPlace = Place & { name: string };
 type DailyRow = Record<string, any>;
 
 // Kept on globalThis so dev reloads share one cache and one request queue.
@@ -134,6 +139,34 @@ export function forPlace(place: Place): Promise<LocalWeather | null> {
         weatherCode: data.current.weather_code ?? null,
         isDay: data.current.is_day !== 0,
       },
+    };
+  });
+}
+
+// Roughly where a viewer is, from their IANA time zone: the city the zone is
+// named after, geocoded. It is only accurate to a city, which is all a
+// forecast needs, and it asks the browser for nothing - so the weather can
+// show without a location prompt. Null for a zone that names no place
+// (UTC, Etc/GMT+3) or that geocoding does not know.
+export function placeForTimeZone(timeZone: string): Promise<NamedPlace | null> {
+  const city = timeZone.split('/').pop()?.replace(/_/g, ' ').trim();
+  if (!city || !timeZone.includes('/') || /^(Etc|SystemV)\//.test(timeZone)) {
+    return Promise.resolve(null);
+  }
+  return cached(`zone|${timeZone}`, ZONE_TTL, async () => {
+    const data = await get(GEOCODE_URL, { name: city, count: 10, language: 'en', format: 'json' });
+    const results: any[] = data.results ?? [];
+    // Cities share names (Asia/Tripoli, Africa/Tripoli); the one whose own
+    // zone matches is the viewer's. Failing that, the best-ranked one.
+    const match = results.find((r) => r.timezone === timeZone) ?? results[0];
+    if (!match || match.latitude == null || match.longitude == null) {
+      return null;
+    }
+    return {
+      // Rounded like a viewer's own coordinates, so both share a lookup.
+      latitude: Math.round(match.latitude * 100) / 100,
+      longitude: Math.round(match.longitude * 100) / 100,
+      name: (match.name as string) || city,
     };
   });
 }

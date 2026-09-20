@@ -1,9 +1,10 @@
 'use client';
 
 import { useRouter } from '@/lib/client/navigation';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { api } from '@/lib/client/api';
 import { useSession } from '@/lib/client/session';
+import { savePendingAction, usePendingAction } from '@/lib/client/pendingAction';
 import { authHrefHere } from '@/lib/client/returnSpot';
 import { useT } from '@/lib/client/i18n';
 
@@ -20,6 +21,9 @@ export function FollowButton({ userId, userName, showCount, following }: { userI
   );
   const known = following !== undefined;
   const [busy, setBusy] = useState(false);
+  // Set once this viewer follows or unfollows here, so an answer that was
+  // already on its way does not put back what they have just changed.
+  const acted = useRef(false);
   const t = useT();
 
   useEffect(() => {
@@ -27,12 +31,23 @@ export function FollowButton({ userId, userName, showCount, following }: { userI
     if (known || sessionStatus !== 'ready') return;
     api
       .get<Status>(`/api/users/${userId}/follow`)
-      .then((s) => !cancelled && setStatus(s))
-      .catch(() => !cancelled && setStatus(null));
+      .then((s) => !cancelled && !acted.current && setStatus(s))
+      .catch(() => !cancelled && !acted.current && setStatus(null));
     return () => {
       cancelled = true;
     };
   }, [known, userId, sessionStatus, user?.id]);
+
+  // The follow that sent the reader off to log in, now they are back and
+  // known: the trip finishes the click rather than losing it.
+  const buttonRef = usePendingAction<HTMLButtonElement>(
+    { kind: 'followUser', id: userId },
+    isLoggedIn,
+    useCallback(() => {
+      acted.current = true;
+      return api.post<Status>(`/api/users/${userId}/follow`).then(setStatus);
+    }, [userId]),
+  );
 
   if (user && user.userName.toLowerCase() === userName.toLowerCase()) {
     return null;
@@ -40,10 +55,16 @@ export function FollowButton({ userId, userName, showCount, following }: { userI
 
   async function toggle() {
     if (!isLoggedIn) {
-      router.push(authHrefHere());
+      if (sessionStatus === 'ready') {
+        // Kept for the way back: logging in follows them and returns to where
+        // the reader was, rather than leaving them to find it and click again.
+        savePendingAction({ kind: 'followUser', id: userId });
+        router.push(authHrefHere());
+      }
       return;
     }
     if (busy || !status) return;
+    acted.current = true;
     setBusy(true);
     try {
       setStatus(status.following ? await api.delete<Status>(`/api/users/${userId}/follow`) : await api.post<Status>(`/api/users/${userId}/follow`));
@@ -61,6 +82,7 @@ export function FollowButton({ userId, userName, showCount, following }: { userI
         </span>
       ) : null}
       <button
+        ref={buttonRef}
         type="button"
         onClick={toggle}
         disabled={busy || (isLoggedIn && !status)}

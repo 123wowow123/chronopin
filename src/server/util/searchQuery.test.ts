@@ -38,6 +38,7 @@ describe('parseSearchQuery', () => {
   it('reads the old category: terms as tags, in any case, once each', () => {
     expect(parseSearchQuery('category:software CATEGORY:Software tag:Software ios')).toEqual({
       userNames: [],
+      ids: [],
       companies: [],
       confidences: [],
       dates: [],
@@ -58,6 +59,11 @@ describe('parseSearchQuery', () => {
   it('reads days, BC ones too, and leaves out anything else', () => {
     expect(parseSearchQuery('date:2026-09-08 date:-2560-01-01 date:2026-09-08 date:tomorrow').dates).toEqual(['2026-09-08', '-2560-01-01']);
     expect(parseSearchQuery('posted:2026-09-13 date:2026-09-08')).toMatchObject({ dates: ['2026-09-08'], postedDays: ['2026-09-13'] });
+  });
+
+  it('reads pin ids, comma-separated, once each and never anything else', () => {
+    expect(parseSearchQuery('pin:1992,1991 pin:1992 pin:none pin:-3').ids).toEqual([1992, 1991]);
+    expect(hasFilters(parseSearchQuery('pin:1992'))).toBe(true);
   });
 
   it('reads confidence levels, with UNVERIFIED as the stored unknown', () => {

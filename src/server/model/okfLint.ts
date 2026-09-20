@@ -2,7 +2,7 @@ import * as db from '../db';
 
 // okf:lint's findings and scan markers (0027_okf_lint.sql).
 
-export type LintCheck = 'conformance' | 'stale' | 'orphan' | 'quality' | 'contradiction';
+export type LintCheck = 'conformance' | 'stale' | 'orphan' | 'quality' | 'contradiction' | 'imprecise';
 export type LintSeverity = 'error' | 'warning' | 'info';
 
 export type LintFinding = {

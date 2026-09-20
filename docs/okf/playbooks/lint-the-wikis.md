@@ -28,6 +28,7 @@ Findings replace the previous run's findings for the same checks and pins. They'
 | `orphan` | Links no live pin cites, first seen more than `--orphan-days` ago (default 7) | Deletes them and their wikis |
 | `quality` | Wikis whose main page is thin for the amount of text, pages with an empty title, summary or body, sub-pages that repeat their parent, untagged pages, a lone topic page. Also pins with wikis but no summary | Queues a warning-level wiki for a rewrite, at most once per wiki version. Writes missing summaries |
 | `contradiction` | A Claude call per pin with two or more wikis, comparing what the links say about its event (dates, figures, names, status, and the pin's own text as `[P]`) | Report only: `major` findings are warnings, `minor` are info, for an admin to review |
+| `imprecise` | Every future pin whose date is only as precise as the year its source gave (a bare year sits on 31 December by convention, which is a placeholder, not a claim about the day). These are the pins where one better reference buys the most: a later article naming the month or the day retires a whole year of uncertainty. Report only, and no fetch or Claude call, so it runs on every lint. Past pins are left out - a bare year on a 12th-century event is as good as it will ever get. |
 
 # Re-reading links
 

@@ -1,12 +1,13 @@
 'use client';
 
 import { useRouter } from '@/lib/client/navigation';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
 import { useCountBump } from '@/lib/client/countBump';
 import { onLive } from '@/lib/client/liveFeed';
 import { useSession } from '@/lib/client/session';
+import { savePendingAction, usePendingAction } from '@/lib/client/pendingAction';
 import { authHrefHere } from '@/lib/client/returnSpot';
 import { setWatched, useWatched } from '@/lib/client/watched';
 import type { PinJson } from '@/lib/types';
@@ -29,6 +30,9 @@ export function WatchButton({
   const [count, setCount] = useState(pin.favoriteCount ?? 0);
   const [busy, setBusy] = useState(false);
   const countRef = useCountBump<HTMLSpanElement>(count);
+  // Set once this viewer watches or unwatches the pin here, so an answer that
+  // was already on its way does not put back what they have just changed.
+  const acted = useRef(false);
   const t = useT();
   // What this viewer has been told, or has just done, about watching this
   // pin; null until either happens.
@@ -45,7 +49,7 @@ export function WatchButton({
     api
       .get<PinJson>(`/api/pins/${pin.id}`)
       .then((fresh) => {
-        if (cancelled) return;
+        if (cancelled || acted.current) return;
         setChosen(!!fresh.hasFavorite);
         setCount(fresh.favoriteCount ?? 0);
       })
@@ -64,32 +68,55 @@ export function WatchButton({
     return () => stops.forEach((stop) => stop());
   }, [pin.id]);
 
-  async function toggle() {
-    if (!isLoggedIn) {
-      if (status === 'ready') router.push(authHrefHere());
-      return;
-    }
-    if (busy) return;
-    const next = !watching;
+  // The pin as the server now sees it, after this viewer watched or unwatched it.
+  const applyPin = useCallback((updated: PinJson) => {
+    setCount(updated.favoriteCount ?? 0);
+    setChosen(!!updated.hasFavorite);
+    // So the pin's other cards, and its page, agree without asking again.
+    if (pin.id) setWatched(pin.id, !!updated.hasFavorite);
+  }, [pin.id]);
+
+  // The watch that sent the reader off to log in, now they are back and known:
+  // the trip finishes the click rather than losing it.
+  const buttonRef = usePendingAction<HTMLButtonElement>(
+    { kind: 'watch', id: pin.id },
+    isLoggedIn,
+    useCallback(() => {
+      acted.current = true;
+      return api.post<PinJson>(`/api/pins/${pin.id}/favorite`).then(applyPin);
+    }, [pin.id, applyPin]),
+  );
+
+  async function watch(next: boolean) {
+    acted.current = true;
     setBusy(true);
     setChosen(next);
     try {
-      const updated = next
-        ? await api.post<PinJson>(`/api/pins/${pin.id}/favorite`)
-        : await api.delete<PinJson>(`/api/pins/${pin.id}/favorite`);
-      setCount(updated.favoriteCount ?? 0);
-      setChosen(!!updated.hasFavorite);
-      // So the pin's other cards, and its page, agree without asking again.
-      if (pin.id) setWatched(pin.id, !!updated.hasFavorite);
+      applyPin(next ? await api.post<PinJson>(`/api/pins/${pin.id}/favorite`) : await api.delete<PinJson>(`/api/pins/${pin.id}/favorite`));
     } catch {
-      setChosen(watching);
+      setChosen(!next);
     } finally {
       setBusy(false);
     }
   }
 
+  function toggle() {
+    if (!isLoggedIn) {
+      if (status === 'ready') {
+        // Kept for the way back: logging in watches the pin and returns to
+        // this card, rather than leaving the reader to find it and click again.
+        savePendingAction({ kind: 'watch', id: pin.id });
+        router.push(authHrefHere());
+      }
+      return;
+    }
+    if (busy) return;
+    void watch(!watching);
+  }
+
   return (
     <button
+      ref={buttonRef}
       type="button"
       onClick={toggle}
       aria-pressed={watching}

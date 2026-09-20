@@ -37,6 +37,7 @@ export const BasePinProp = [
   'delayReasoning',
   'episodeCount',
   'episodeStatus',
+  'marketVolume',
   'allDay',
   'utcCreatedDateTime',
   'utcUpdatedDateTime',

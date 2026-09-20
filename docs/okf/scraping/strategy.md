@@ -26,8 +26,8 @@ Turn one source (a web page, YouTube video, X post, market page, or a topic to r
 
 | # | Stage | Input | Output | Fails soft? | Detail |
 | --- | --- | --- | --- | --- | --- |
-| 0 | **Classify the source** | URL | `web` / `youtube` / `tweet` / `podcast` / `market` and the vertical | no | [Sources](sources.md), `sourceKind()` |
-| 1 | **Fetch** | URL | Page text (body text of the rendered page), embedded YouTube/X media, page images larger than 150x150, headings | no | [Sources](sources.md) |
+| 0 | **Classify the source** | URL | `web` / `youtube` / `tweet` / `podcast` / `pdf` / `market` and the vertical | no | [Sources](sources.md), `sourceKind()` |
+| 1 | **Fetch** | URL | Page text (body text of the rendered page), embedded YouTube/X media, page images larger than 150x150, headings; a PDF's text layer, or OCR of its first pages when it is a scan | no | [Sources](sources.md#pdfs) |
 | 2 | **Extract the fields** | source URL + text (first 60,000 characters) | One JSON object: title, description, price, place, dates and their confidence, delay, company, categories, tags, stocks, work title, purchase links, summary | no (null without a key) | [Fields](fields.md) |
 | 3 | **Find references** | source URL + text (first 20,000 characters) | Up to 5 references at confidence 70 or more, and a cited summary | yes | [Enrichment](enrichment.md#references) |
 | 4 | **Screen details** | work title, category, year | Trailer, ratings (AniList, MAL, IMDb, Rotten Tomatoes, Metacritic), Kalshi score forecast | yes | [Enrichment](enrichment.md#film-tv-anime-and-game-extras) |
@@ -40,6 +40,8 @@ Turn one source (a web page, YouTube video, X post, market page, or a topic to r
 | 11 | **Save** | draft pin + stocks + tags + categories | `POST /api/pins` (sources, wikis, summary and duplicate checks follow from the save) | no | [Scraping API](../api/scraping-api.md) |
 | 12 | **Persist** | database | `npm run backup:data` so the seed data keeps it | no | - |
 
+A `market` source carries one more reading through the save: the dollars traded on every market the pin links, stored on the pin by stage 11 and refreshed afterwards (see [How much money is on a market](#decision-rules)).
+
 Stages 2 to 5 run in parallel where they do not depend on each other: the extractor and the reference search start together, and the screen details start as soon as the extractor has named the work. Stage 6 waits for the references (it takes pictures from the day's articles) and stage 8 waits for the extracted fields.
 
 # Decision rules
@@ -49,6 +51,14 @@ Stages 2 to 5 run in parallel where they do not depend on each other: the extrac
 **Which date.** `startDateTime` is when the event itself happens, not when construction began or the article ran. A scheduled event uses its official time (`scheduled`). A year alone is its last day (`estimated`, all day, `2027-12-31`), a month its last day. A rumour or report pin with no fixed date is anchored to the article's `article:published_time`. A prediction market's date is the day its daily market prices highest (`estimated`) or its strike time when scheduled. Dates are UTC; an all-day pin starts 00:00Z and ends at the exclusive 00:00Z after its last day.
 
 **Which cost.** The headline cost fully expanded (`CA$6.4 billion` is `6400000000`, `CAD`), matched to what the title says is happening: a programme's total for a programme, a part's own figure for a phase, line, terminal or building. Take the newest estimate, the midpoint of a range, and never trade volume, revenue or budgets. A film or game release carries no price (budgets and grosses go in the summary). Null when genuinely costless.
+
+**How much money is on a market.** A prediction-market pin records what the market has traded, in dollars, as well as what it prices. Volume is how a reader tells a market that means something from a market with four bets on it, and a market with $15M behind its 30% is a stronger claim about the world than one with $900. So:
+
+- **Quote it in the summary or description**, beside the odds it supports ("traders give $3,500 a 30% chance on a book that has turned over $15M"), and quote it per market when the pin cites more than one. A figure under about $10,000 is worth saying out loud as a caveat rather than left for the reader to find.
+- **Where it comes from.** Polymarket reports dollars directly (`volume` on the event and on each market in the Gamma API; `volume24hr`, `volume1wk` and `volume1mo` say how much of it is recent). Kalshi counts **contracts**, not dollars: `volume_fp` on each nested market, which becomes money as contracts x their last price (`last_price_dollars`) - an estimate at today's price, and the figure the site and the pin page both show. Polymarket US publishes no volume at all, so a pin citing only that exchange has none to quote.
+- **Never pass volume off as the pin's `price`.** The cost rule above stands: a market's turnover is not the event's cost, and a market pin has no `price`.
+- **The pin carries the figure itself.** Once saved, `Pin.marketVolume` holds the dollars across every market the pin's source and references link (schema 0053, [pinMarketVolume.ts](../../../src/server/services/pinMarketVolume.ts)). It is written on save and edit, kept up as anyone watches the pin's odds, and refreshed in bulk by `npm run markets:volume -- --apply`; nothing an author types sets it. The pin page shows it beside the pin's other facts, and the timeline's bag weight lifts a pin for it ([bagSample.ts](../../../src/lib/bagSample.ts)), so a busy market earns its place on a crowded day. That is automatic - the curator's job is only to pick markets worth citing and to say what they have traded.
+- **Prefer the liquid market** when two exchanges list the same question, and when a ladder's rungs quote out of order, the liquid rungs are the ones to date the pin from.
 
 **Which company.** The single organisation the event is chiefly about or done by: a product's maker, a project's owner or operator, an agency for a mission. For film, TV, anime and games it is the studio or developer, never the publisher, broadcaster or streamer. Reuse an existing company by exact name (a rename is merged into the older row).
 
@@ -74,6 +84,7 @@ A draft is ready to save when:
 - `sourceUrl` is the source's own URL, not a shared roundup.
 - `references` holds every reference at confidence 70 or more (never more than 5), and none is the source.
 - 3 media reached by best effort, with at least 1 video and at least 1 picture among them; fewer, or no video, only when every source was tried, with what was tried noted.
+- A prediction-market pin says what its markets have traded, in dollars, next to the odds it quotes.
 - The `longFormSummary` is an HTML bulleted list whose every point cites what backs it.
 
 # When the API is out of credit

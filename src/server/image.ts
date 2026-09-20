@@ -52,7 +52,41 @@ export function trimPng(input: Buffer): Buffer {
   return at > 0 && at + 12 < input.length ? input.subarray(0, at + 12) : input;
 }
 
-const readImage = (input: Buffer) => Jimp.read(trimPng(input));
+// jpeg-js stops decoding at 512MB of intermediate buffers and 100 megapixels.
+// A large Commons original (an 8256x5504 photo is 45MP) blows that ceiling and
+// throws "maxMemoryUsageInMB limit exceeded" before shrinkImage ever gets to
+// scale it down - the picture is rejected for being too big to shrink. Jimp
+// hands these options to the decoder for the matching mime type, so raising
+// them lets the big ones through to the resize that makes them small.
+const DECODE_OPTIONS = {
+  'image/jpeg': { maxMemoryUsageInMB: 2048, maxResolutionInMP: 300 },
+};
+
+// fromBuffer, not read: Jimp.read drops its options on the Buffer branch
+// (it forwards them only when it fetched a URL itself), so the ceilings above
+// would be silently ignored.
+//
+// The ceiling is raised, not removed, and it cannot be: jpeg-js decodes the
+// whole picture before anything can scale it down, so the memory it wants
+// grows with the original's pixels however small the thumbnail will be. 2GB
+// covers roughly 45 megapixels, which is a generous camera original; a 174MP
+// Commons scan still will not fit, and lifting the ceiling past what the
+// process has only trades a clean failure for an out-of-memory kill. So an
+// image that large fails as itself, with a message that says what to do -
+// ask the host for a smaller rendition (Wikimedia's API takes iiurlwidth).
+async function readImage(input: Buffer) {
+  try {
+    return await Jimp.fromBuffer(trimPng(input), DECODE_OPTIONS);
+  } catch (err) {
+    const message = (err as Error).message ?? '';
+    if (/maxMemoryUsageInMB|maxResolutionInMP/.test(message)) {
+      throw new Error(
+        `Picture is too large to decode (${message}). Use a smaller rendition of it - on Wikimedia, ask the API for iiurlwidth=1920 and take the thumbnail URL it returns.`,
+      );
+    }
+    throw err;
+  }
+}
 
 // Scales an image down to uploadImageWidth when it is wider, keeping its type.
 export async function shrinkImage(input: Buffer, options: typeof THUMB_OPTIONS) {

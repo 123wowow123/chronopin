@@ -50,6 +50,9 @@ const CONDITIONS: Record<number, [MessageKey, IconName]> = {
 
 export type LocalWeatherJson = WeatherJson & {
   current: { temperature: number | null; weatherCode: number | null; isDay: boolean };
+  // The city a time-zone reading is for; absent when it is the viewer's own
+  // position, which is theirs to name.
+  place?: string | null;
 };
 
 const HEADINGS = { forecast: 'weather.forecast', observed: 'weather.recorded', typical: 'weather.typical' } as const;
@@ -107,7 +110,7 @@ export function formatWeather(weather: WeatherJson, imperial: boolean, t: Transl
 }
 
 // The viewer's weather: today's forecast plus the conditions right now, with
-// a moon for a clear night.
+// a moon for a clear night, under the name of the place it is for.
 export function formatLocalWeather(weather: LocalWeatherJson, imperial: boolean, t: Translator) {
   const day = formatWeather(weather, imperial, t);
   const code = weather.current.weatherCode ?? weather.weatherCode;
@@ -115,7 +118,9 @@ export function formatLocalWeather(weather: LocalWeatherJson, imperial: boolean,
   const icon = (condition ? (condition[1] === 'sun' && !weather.current.isDay ? 'moon' : condition[1]) : day.icon) as IconName;
   const now = formatTemp(weather.current.temperature, imperial);
   const label = condition ? t(condition[0]) : day.label;
+  const place = weather.place || t('weather.local');
   const summary = [
+    place,
     [label, now].filter(Boolean).join(' '),
     [day.high, day.low].filter(Boolean).join(' / ') + day.unit,
     day.precipitation,
@@ -123,7 +128,7 @@ export function formatLocalWeather(weather: LocalWeatherJson, imperial: boolean,
   ]
     .filter(Boolean)
     .join(' · ');
-  return { ...day, now, icon, label, summary };
+  return { ...day, now, icon, label, place, summary };
 }
 
 // One request per pin for the life of the page, shared by every place it shows.

@@ -127,6 +127,12 @@ export type PinJson = {
   // ("planned"). Both absent for a film or a one-off event.
   episodeCount?: number;
   episodeStatus?: EpisodeStatus;
+  // The dollars traded on the prediction markets its links cite, as last read
+  // (schema 0053). Absent when it cites none, or when no exchange reports
+  // volume for the ones it cites. Its live per-market counterpart arrives with
+  // the odds (lib/predictionMarkets.ts); this one weighs the pin on a crowded
+  // day (lib/bagSample.ts).
+  marketVolume?: number | null;
   allDay?: boolean;
   utcCreatedDateTime?: string;
   utcUpdatedDateTime?: string;

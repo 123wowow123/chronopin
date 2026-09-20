@@ -85,11 +85,14 @@ export async function lookupStudioLocation(wikiUrl: string | null | undefined): 
   const label = (id?: string) => (id ? (id === hqId ? place?.labels?.en?.value : names[id]?.labels?.en?.value) : undefined);
   const parts = [label(hqId), label(areaId), label(countryId)].filter((part, i, all): part is string => !!part && all.indexOf(part) === i);
 
-  // Known only to the country (Kyoto Animation's claim says "Japan"): the
-  // middle of a country is no studio's address, so better none.
-  const countryOnly = !qualifierCoords && !ownCoords && !street && (!!hqId && (hqId === countryId || !countryId) && !areaId);
+  // Known only to a country or to one of its top-level regions (Kyoto
+  // Animation's claim says "Japan", FX's says "Texas"): the middle of a
+  // country or a state is no studio's address, so better none. A place that
+  // sits inside something else (P131) is a city or a ward and is fine; a
+  // place that sits inside nothing is the coarse kind.
+  const tooCoarse = !qualifierCoords && !ownCoords && !street && !!hqId && !areaId;
   const coords = qualifierCoords || ownCoords || placeCoords;
-  if (!coords || countryOnly) return null;
+  if (!coords || tooCoarse) return null;
   const address = joinAddress(street, parts);
   return address ? { address, ...coords } : null;
 }

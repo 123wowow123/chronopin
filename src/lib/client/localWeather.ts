@@ -1,16 +1,19 @@
 'use client';
 
 // The viewer's own weather, for the bell (a peek icon on it and the top row
-// of its menu). Uses the browser's location, but only asks for it when the
-// viewer presses "Show local weather": on load it is read only if permission
-// was already granted, so no page ever opens with a location prompt.
+// of its menu). It loads itself on the first page that shows it, with no
+// location prompt: the browser's position is used only where permission was
+// already granted, and otherwise the weather is the one in the city of the
+// viewer's time zone, which the browser gives away for free. The button is
+// what is left when even that finds nothing.
 
 import { useSyncExternalStore } from 'react';
+import { browserTimeZone } from './timeZone';
 import type { LocalWeatherJson } from '@/lib/weather';
 
 export type LocalWeatherState =
   | { status: 'idle' } // not checked yet
-  | { status: 'ask' } // the browser would prompt; offer the button
+  | { status: 'ask' } // nothing automatic worked; offer the button
   | { status: 'loading' }
   | { status: 'off' } // denied, unsupported or failed: show nothing
   | { status: 'ready'; weather: LocalWeatherJson };
@@ -20,6 +23,11 @@ const STALE_MS = 15 * 60 * 1000;
 
 let state: LocalWeatherState = { status: 'idle' };
 let fetchedAt = 0;
+// Whether what is shown came from the browser's own position, so a refresh
+// asks the same way again.
+let fromBrowser = false;
+// Whether pressing the button could still get a position.
+let canAsk = false;
 let started = false;
 const listeners = new Set<() => void>();
 
@@ -34,43 +42,59 @@ function position(): Promise<GeolocationCoordinates> {
   );
 }
 
-async function load() {
+// The weather where the viewer is: from their position when `browser` is set
+// (rounded here too, so no finer position leaves the device), else from the
+// city their time zone names.
+async function load(browser: boolean) {
   if (state.status !== 'ready') set({ status: 'loading' });
   try {
-    const coords = await position();
-    // Rounded here too, so no finer position leaves the device.
-    const res = await fetch(`/api/weather?lat=${coords.latitude.toFixed(2)}&lon=${coords.longitude.toFixed(2)}`);
+    let query = `tz=${encodeURIComponent(browserTimeZone())}`;
+    if (browser) {
+      const coords = await position();
+      query = `lat=${coords.latitude.toFixed(2)}&lon=${coords.longitude.toFixed(2)}`;
+    }
+    const res = await fetch(`/api/weather?${query}`);
     if (res.status !== 200) throw new Error(`weather ${res.status}`);
     fetchedAt = Date.now();
+    fromBrowser = browser;
     set({ status: 'ready', weather: (await res.json()) as LocalWeatherJson });
-  } catch (err) {
+  } catch {
     // A refresh that fails keeps the weather already shown.
-    if (state.status !== 'ready') set({ status: (err as GeolocationPositionError)?.code === 1 ? 'off' : 'ask' });
+    if (state.status === 'ready') return;
+    // No position, for whatever reason: the time zone still knows a city.
+    if (browser) return void load(false);
+    set({ status: canAsk ? 'ask' : 'off' });
+  }
+}
+
+// Whether the browser would prompt, grant or refuse a position, without
+// asking for one.
+async function permission(): Promise<PermissionState> {
+  if (!navigator.geolocation) return 'denied';
+  try {
+    return (await navigator.permissions.query({ name: 'geolocation' })).state;
+  } catch {
+    // No Permissions API: the button asks.
+    return 'prompt';
   }
 }
 
 async function start() {
   if (started || typeof navigator === 'undefined') return;
   started = true;
-  if (!navigator.geolocation) return set({ status: 'off' });
-  try {
-    const permission = await navigator.permissions.query({ name: 'geolocation' });
-    if (permission.state === 'granted') return void load();
-    set({ status: permission.state === 'denied' ? 'off' : 'ask' });
-  } catch {
-    // No Permissions API: the button asks.
-    set({ status: 'ask' });
-  }
+  const granted = await permission();
+  canAsk = granted === 'prompt';
+  void load(granted === 'granted');
 }
 
-// Asks for the location (the viewer pressed the button).
+// Asks for the position (the viewer pressed the button).
 export function requestLocalWeather() {
-  void load();
+  void load(true);
 }
 
 // Brings the weather up to date when the menu opens.
 export function refreshLocalWeather() {
-  if (state.status === 'ready' && Date.now() - fetchedAt > STALE_MS) void load();
+  if (state.status === 'ready' && Date.now() - fetchedAt > STALE_MS) void load(fromBrowser);
 }
 
 function subscribe(listener: () => void) {

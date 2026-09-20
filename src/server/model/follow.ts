@@ -1,5 +1,5 @@
 import * as db from '../db';
-import type { Row } from '../db';
+import type { QueryFn, Row } from '../db';
 import Notification from './notification';
 
 export const FOLLOWING_PAGE_SIZE = 20;
@@ -58,6 +58,14 @@ export default class Follow {
       await Notification.retract({ userId: followeeId, actorId: followerId, type: Notification.types.follow }, query);
       return { changed: true };
     });
+  }
+
+  // Tells everyone following the author that they posted a pin, in one insert
+  // (Notification.createForFollowers). The author is the actor. Quiet for an
+  // author nobody follows. Only a new pin says this: an edit does not change
+  // who wrote it, so re-telling their followers would be about nothing.
+  static async notifyNewPin({ pinId, authorId }: { pinId: number; authorId: number }, query: QueryFn = db.query) {
+    await Notification.createForFollowers({ pinId, authorId }, query);
   }
 
   // Counts for userId, plus how viewerId relates to them. Without a viewer

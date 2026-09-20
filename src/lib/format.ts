@@ -54,6 +54,13 @@ export function compactCount(value: number): string {
   return abbreviate(value) ?? String(Math.round(value));
 }
 
+// Dollars in the page's own words: "$3.9M", "3,9 Mio. $". Used for the money
+// traded on a prediction market, which runs to millions and is never worth a
+// cent of precision.
+export function compactUsd(locale: Locale): Intl.NumberFormat {
+  return new Intl.NumberFormat(INTL_LOCALES[locale], { style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 1 });
+}
+
 // "1 day", "3 days", "-1 days", "1.0 years" - singular only for exactly the
 // number 1, as the pluralize library the Angular app used did.
 export function pluralize(word: string, count: number | string, inclusive = true): string {

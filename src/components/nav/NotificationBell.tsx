@@ -2,7 +2,7 @@
 
 import Link from '@/components/ui/Link';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Icon } from '@/components/ui/Icon';
+import { Icon, type IconName } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { api } from '@/lib/client/api';
 import { clearUnreadCount, useUnreadCount } from '@/lib/client/notifications';
@@ -10,6 +10,7 @@ import { refreshLocalWeather, requestLocalWeather, useLocalWeather } from '@/lib
 import { formatLocalWeather, usesImperial } from '@/lib/weather';
 import { timeAgo } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
+import { term } from '@/lib/searchTerms';
 import { useT } from '@/lib/client/i18n';
 import type { Translator } from '@/lib/i18n/translate';
 
@@ -22,8 +23,12 @@ type Notification = {
   commentText: string | null;
   companyId: number | null;
   companyName: string | null;
+  companyLogoUrl: string | null;
   utcCreatedDateTime: string;
   read: boolean;
+  groupCount: number;
+  groupDay: string;
+  pinIds: number[];
   followingBack: boolean;
   actor: { id: number; userName: string; pictureUrl?: string | null };
 };
@@ -32,6 +37,51 @@ type Notification = {
 function commentHref(n: Notification): string {
   const path = pinPath({ id: n.pinId!, title: n.pinTitle ?? '' });
   return n.commentId ? `${path}#comment-${n.commentId}` : path;
+}
+
+// The search that opens a company's panel, where its Follow button is.
+const companyHref = (name: string) => `/search?q=${encodeURIComponent(term('company', name))}`;
+const userHref = (handle: string) => `/search?q=user:${encodeURIComponent(handle)}`;
+
+// A batch stands for pins the bell cannot name one by one, so it leads to the
+// search holding exactly them - "pin:" names them by id. A batch too big to
+// name that way (the server caps the ids it carries) falls back to whose they
+// are and the viewer's day they were posted on, the same day it was grouped
+// by: a wider net than the batch, but the only one that fits.
+function batchHref(n: Notification): string {
+  const whose = n.type === 'company' ? term('company', n.companyName ?? '') : term('user', n.actor.userName);
+  const q =
+    n.pinIds.length === n.groupCount ? term('pin', n.pinIds.join(',')) : `${whose} ${term('posted', n.groupDay)}`;
+  return `/search?q=${encodeURIComponent(q)}`;
+}
+
+// Why this notification reached the viewer at all, said under the text: the
+// watch or the follow that let it through, or the thing of theirs it happened
+// to. The actor's avatar alone cannot say it - a company's new pin wears its
+// author's face, who the viewer may not follow at all. A 'follow' says it in
+// its own words ("started following you"), so it gets no line.
+function reasonOf(n: Notification, t: Translator): { icon: IconName; label: string; href?: string } | null {
+  switch (n.type) {
+    case 'today':
+      return { icon: 'eye', label: t('notifications.whyWatch') };
+    case 'company':
+      return n.companyName
+        ? { icon: 'users', label: t('notifications.whyCompany', { company: n.companyName }), href: companyHref(n.companyName) }
+        : null;
+    case 'pin':
+      return {
+        icon: 'users',
+        label: t('notifications.whyUser', { user: n.actor.userName }),
+        href: userHref(n.actor.userName.replace(/^@+/, '')),
+      };
+    case 'comment':
+    case 'reference':
+      return { icon: 'pin', label: t('notifications.whyYourPin') };
+    case 'reply':
+      return { icon: 'thread', label: t('notifications.whyYourComment') };
+    default:
+      return null;
+  }
 }
 
 // Opening the list loads it and marks everything read; a follow notification
@@ -64,6 +114,48 @@ function useNotificationList() {
   return { items, pending, load, followBack };
 }
 
+// The face at the left of a row: a mark of its own for a pin landing today,
+// the company's logo for one of its pins (its author's avatar would look like
+// the pin came from them), otherwise the actor. A batch wears the number it
+// stands for, so a run of pins is countable straight down the left edge.
+function NotificationFace({ n, onNavigate }: { n: Notification; onNavigate?: () => void }) {
+  const handle = n.actor.userName.replace(/^@+/, '');
+  const face =
+    n.type === 'today' ? (
+      <span aria-hidden className="flex size-8 items-center justify-center rounded-full bg-tag-today/15 text-tag-today">
+        <Icon name="target" className="size-4" />
+      </span>
+    ) : n.type === 'company' && n.companyName ? (
+      <Link href={companyHref(n.companyName)} onClick={onNavigate}>
+        {n.companyLogoUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element -- favicons from arbitrary hosts
+          <img src={n.companyLogoUrl} alt="" loading="lazy" referrerPolicy="no-referrer" className="size-8 rounded bg-raised object-contain" />
+        ) : (
+          <span aria-hidden className="flex size-8 items-center justify-center rounded bg-raised text-muted">
+            <Icon name="users" className="size-4" />
+          </span>
+        )}
+      </Link>
+    ) : (
+      <Link href={userHref(handle)} onClick={onNavigate}>
+        <UserAvatar userName={n.actor.userName} pictureUrl={n.actor.pictureUrl} className="size-8 text-sm" />
+      </Link>
+    );
+  return (
+    <span className="relative shrink-0">
+      {face}
+      {n.groupCount > 1 ? (
+        <span
+          aria-hidden
+          className="absolute -right-1.5 -bottom-1 min-w-4 rounded-full bg-accent px-1 text-center text-[10px] leading-4 font-bold tabular-nums text-white ring-2 ring-panel"
+        >
+          {n.groupCount > 99 ? '99+' : n.groupCount}
+        </span>
+      ) : null}
+    </span>
+  );
+}
+
 function NotificationItems({
   items,
   pending,
@@ -78,23 +170,16 @@ function NotificationItems({
     <ul className={listClassName}>
         {items.map((n) => {
           const handle = n.actor.userName.replace(/^@+/, '');
+          const reason = reasonOf(n, t);
           return (
             <li key={n.id} className={`flex items-center gap-3 px-4 py-2.5 text-sm ${n.read ? '' : 'bg-accent/10'}`}>
-              {n.type === 'today' ? (
-                <span aria-hidden className="flex size-8 shrink-0 items-center justify-center rounded-full bg-tag-today/15 text-tag-today">
-                  <Icon name="target" className="size-4" />
-                </span>
-              ) : (
-                <Link href={`/search?q=user:${encodeURIComponent(handle)}`} onClick={onNavigate}>
-                  <UserAvatar userName={n.actor.userName} pictureUrl={n.actor.pictureUrl} className="size-8 text-sm" />
-                </Link>
-              )}
+              <NotificationFace n={n} onNavigate={onNavigate} />
               <div className="min-w-0 flex-1">
                 {n.type === 'follow' ? (
                   <span>
                     {t.rich('notifications.follow', {
                       actor: () => (
-                        <Link href={`/search?q=user:${encodeURIComponent(handle)}`} className="font-semibold text-ink" onClick={onNavigate}>
+                        <Link href={userHref(handle)} className="font-semibold text-ink" onClick={onNavigate}>
                           {n.actor.userName}
                         </Link>
                       ),
@@ -119,17 +204,59 @@ function NotificationItems({
                   <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>
                     {t.rich('notifications.today', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
                   </Link>
+                ) : n.type === 'pin' && n.pinId ? (
+                  <Link
+                    href={n.groupCount > 1 ? batchHref(n) : pinPath({ id: n.pinId, title: n.pinTitle ?? '' })}
+                    className="block text-ink"
+                    onClick={onNavigate}
+                  >
+                    {t.rich(n.groupCount > 1 ? 'notifications.pinMany' : 'notifications.pin', {
+                      count: n.groupCount,
+                      actor: () => <span className="font-semibold">{n.actor.userName}</span>,
+                      pin: () => <span className="font-semibold">{n.pinTitle}</span>,
+                      n: (chunks) => (
+                        <span className="mx-0.5 inline-block rounded-full bg-accent px-1.5 py-px text-xs leading-tight font-bold tabular-nums text-white">
+                          {chunks}
+                        </span>
+                      ),
+                    })}
+                  </Link>
                 ) : n.type === 'company' && n.pinId ? (
-                  <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>
-                    {t.rich('notifications.company', {
+                  <Link
+                    href={n.groupCount > 1 ? batchHref(n) : pinPath({ id: n.pinId, title: n.pinTitle ?? '' })}
+                    className="block text-ink"
+                    onClick={onNavigate}
+                  >
+                    {t.rich(n.groupCount > 1 ? 'notifications.companyMany' : 'notifications.company', {
+                      count: n.groupCount,
                       company: () => <span className="font-semibold">{n.companyName}</span>,
                       pin: () => <span className="font-semibold">{n.pinTitle}</span>,
+                      n: (chunks) => (
+                        <span className="mx-0.5 inline-block rounded-full bg-accent px-1.5 py-px text-xs leading-tight font-bold tabular-nums text-white">
+                          {chunks}
+                        </span>
+                      ),
                     })}
                   </Link>
                 ) : null}
-                <time className="block text-xs text-subtle" dateTime={n.utcCreatedDateTime}>
-                  {timeAgo(n.utcCreatedDateTime, undefined, t.locale)}
-                </time>
+                <div className="mt-0.5 flex items-center gap-1 text-xs text-subtle">
+                  {reason ? (
+                    <>
+                      <Icon name={reason.icon} className="size-3 shrink-0" />
+                      {reason.href ? (
+                        <Link href={reason.href} className="truncate text-subtle hover:text-ink" onClick={onNavigate}>
+                          {reason.label}
+                        </Link>
+                      ) : (
+                        <span className="truncate">{reason.label}</span>
+                      )}
+                      <span aria-hidden>·</span>
+                    </>
+                  ) : null}
+                  <time className="shrink-0" dateTime={n.utcCreatedDateTime}>
+                    {timeAgo(n.utcCreatedDateTime, undefined, t.locale)}
+                  </time>
+                </div>
               </div>
               {n.type === 'follow' ? (
                 n.followingBack ? (
@@ -159,8 +286,9 @@ function useFormattedLocalWeather() {
   return { local, weather: local.status === 'ready' ? formatLocalWeather(local.weather, usesImperial(), t) : null };
 }
 
-// The top row of the bell's menu: the weather where the viewer is, or a
-// button that asks for their location. Nothing once they have said no.
+// The top row of the bell's menu: the weather where the viewer is, which
+// loads on its own. The button is only for a viewer whose time zone named no
+// city; nothing at all once they have said no.
 function LocalWeatherRow({ className = '' }: { className?: string }) {
   const { local, weather } = useFormattedLocalWeather();
   const t = useT();
@@ -191,7 +319,7 @@ function LocalWeatherRow({ className = '' }: { className?: string }) {
             {weather.high} <span className="text-subtle">{weather.low}</span>
           </span>
         </div>
-        <div className="truncate text-xs text-subtle">{[t('weather.local'), weather.precipitation].filter(Boolean).join(' · ')}</div>
+        <div className="truncate text-xs text-subtle">{[weather.place, weather.precipitation].filter(Boolean).join(' · ')}</div>
       </div>
     </div>
   );

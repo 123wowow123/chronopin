@@ -169,7 +169,12 @@ export async function relatedPins(id: number, title: string, locale: Locale = DE
   cacheTag(TAGS.pin(id));
   try {
     const pins = await SearchPins.search(title);
-    return localizePins(toJson<PinJson[]>(pins.pins.filter((p) => p.id !== id)).slice(0, 12), locale);
+    // The service ranks the hits, but the pins themselves are loaded in date
+    // order, so sort by score before the top dozen are taken - otherwise the
+    // closest matches were as likely to be cut as shown, and the ones that
+    // survived read as an arbitrary run of dates.
+    const related = pins.pins.filter((p) => p.id !== id).sort((a, b) => (b.searchScore ?? 0) - (a.searchScore ?? 0));
+    return localizePins(toJson<PinJson[]>(related).slice(0, 12), locale);
   } catch {
     return [];
   }

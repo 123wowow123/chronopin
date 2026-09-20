@@ -1,12 +1,13 @@
 'use client';
 
-import Link from '@/components/ui/Link';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { api } from '@/lib/client/api';
 import { commentMood, type CommentMood } from '@/lib/commentMood';
 import { useNow } from '@/lib/client/now';
+import { AuthLink } from '@/components/nav/AuthLink';
+import { usePendingAction } from '@/lib/client/pendingAction';
 import { useSession } from '@/lib/client/session';
 import type { CommentJson } from '@/lib/types';
 import { useT } from '@/lib/client/i18n';
@@ -99,6 +100,17 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
     setComments((list) => list.filter((c) => c.id !== comment.id));
   }
 
+  // The comment the reader came back to write: the box they were sent off to
+  // log in from, back in front of them with the cursor in it. Nothing is
+  // posted for them - what they wanted to say is still theirs to type.
+  const boxRef = usePendingAction<HTMLTextAreaElement>(
+    { kind: 'comment', id: pinId },
+    isLoggedIn,
+    // The scrolling is the hook's, which keeps the box in view while the rest
+    // of the page loads in above it.
+    useCallback((box: HTMLTextAreaElement | null) => box?.focus({ preventScroll: true }), []),
+  );
+
   const renderNode = (node: Node) => (
     <CommentItem
       key={node.id}
@@ -130,6 +142,7 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
           }}
         >
           <textarea
+            ref={boxRef}
             value={text}
             onChange={(event) => setText(event.target.value)}
             placeholder={t('comments.addPlaceholder')}
@@ -145,9 +158,9 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
         <p className="mt-3 text-sm text-subtle">
           {t.rich(comments.length ? 'comments.logInToAdd' : 'comments.logInToPostFirst', {
             login: (chunks) => (
-              <Link href={`/login?redirect=${encodeURIComponent(`/pin/${pinId}`)}`} className="font-medium">
+              <AuthLink to="/login" className="font-medium" pending={{ kind: 'comment', id: pinId }}>
                 {chunks}
-              </Link>
+              </AuthLink>
             ),
           })}
         </p>

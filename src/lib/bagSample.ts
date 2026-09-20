@@ -2,14 +2,15 @@
 // weighted random pick, so a crowded day stays two rows tall and every pin
 // gets its turn. A pin weighs what its card earns for being shown: opens and
 // watches over times seen on the timeline, so one shown often and passed over
-// makes room, and one people open or watch keeps its place. For a signed-in
+// makes room, and one people open or watch keeps its place. A pin whose links
+// cite prediction markets also weighs the money traded on them. For a signed-in
 // viewer it can weigh more still by their own preference wiki (userWiki.ts).
 
 // Two rows: two columns from sm up, one column on phones.
 export const BAG_LIMIT = 4;
 export const BAG_LIMIT_PHONE = 2;
 
-type Sampled = { id: number; viewCount?: number; favoriteCount?: number; impressionCount?: number };
+type Sampled = { id: number; viewCount?: number; favoriteCount?: number; impressionCount?: number; marketVolume?: number | null };
 
 // A watch says more than an open.
 const WATCH_WEIGHT = 3;
@@ -19,10 +20,26 @@ const WATCH_WEIGHT = 3;
 const PRIOR_OPENS = 1;
 const PRIOR_IMPRESSIONS = 10;
 
-// Opens and watches per time seen, with the prior mixed in.
+// Money on the question is a second vote, from people who are not here: a pin
+// citing prediction markets (Pin.marketVolume, schema 0053) weighs more for
+// the dollars traded on them. A quiet market says nothing, so the boost only
+// starts at FLOOR, and from there every tenfold counts for half again - $100k
+// x1.5, $1M x2, $10M and up x2.5 - which lifts a busy market's pin over an
+// unseen one without letting it own the day.
+const VOLUME_FLOOR = 10_000;
+const VOLUME_PER_DECADE = 0.5;
+const VOLUME_MAX = 2.5;
+
+export function volumeWeight(marketVolume: number | null | undefined): number {
+  if (!marketVolume || marketVolume <= VOLUME_FLOOR) return 1;
+  return Math.min(VOLUME_MAX, 1 + Math.log10(marketVolume / VOLUME_FLOOR) * VOLUME_PER_DECADE);
+}
+
+// Opens and watches per time seen, with the prior mixed in, times what the
+// markets it cites are trading.
 export function bagWeight(pin: Sampled): number {
   const earned = Math.max(0, pin.viewCount ?? 0) + WATCH_WEIGHT * Math.max(0, pin.favoriteCount ?? 0);
-  return (earned + PRIOR_OPENS) / (Math.max(0, pin.impressionCount ?? 0) + PRIOR_IMPRESSIONS);
+  return ((earned + PRIOR_OPENS) / (Math.max(0, pin.impressionCount ?? 0) + PRIOR_IMPRESSIONS)) * volumeWeight(pin.marketVolume);
 }
 
 // FNV-1a, folded into (0, 1).

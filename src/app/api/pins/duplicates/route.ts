@@ -20,7 +20,12 @@ export const GET = route(async (request: NextRequest) => {
   }
   const exclude = Number(query.get('exclude')) || 0;
 
-  const found = await findDuplicates({ title: query.get('title'), sourceUrl: query.get('sourceUrl'), utcStartDateTime: start });
+  const found = await findDuplicates({
+    title: query.get('title'),
+    sourceUrl: query.get('sourceUrl'),
+    utcStartDateTime: start,
+    dateConfidence: query.get('dateConfidence'),
+  });
   found.delete(exclude);
   const ranked = [...found.entries()]
     .sort(([, a], [, b]) => Number(b.reason === 'sourceUrl') - Number(a.reason === 'sourceUrl') || (b.score ?? 0) - (a.score ?? 0))

@@ -93,16 +93,17 @@ export default class Pin extends BasePin {
     return queryPinById(pinId, userId || null);
   }
 
-  // A live pin by userId with this sourceUrl, other than exceptPinId. http and
-  // https count as the same URL.
+  // A live pin with this sourceUrl, other than exceptPinId: by userId, or by
+  // anyone when userId is null. http and https count as the same URL. The
+  // author comes back with it, so a caller can tell whose pin it found.
   static async findBySourceUrl(userId: number | null, sourceUrl: string | null | undefined, exceptPinId?: number | null) {
     const url = sameSourceUrlKey(sourceUrl);
-    if (!url || userId == null) {
+    if (!url) {
       return undefined;
     }
-    const rows = await db.query<{ id: number; title: string }>(
-      `SELECT "id", "title" FROM "Pin"
-       WHERE "userId" = $1 AND regexp_replace(btrim("sourceUrl"), '^https?://', '', 'i') = $2
+    const rows = await db.query<{ id: number; title: string; userId: number | null }>(
+      `SELECT "id", "title", "userId" FROM "Pin"
+       WHERE ($1::int IS NULL OR "userId" = $1) AND regexp_replace(btrim("sourceUrl"), '^https?://', '', 'i') = $2
          AND "utcDeletedDateTime" IS NULL AND "id" <> $3
        ORDER BY "id" LIMIT 1`,
       [userId, url, exceptPinId ?? 0],

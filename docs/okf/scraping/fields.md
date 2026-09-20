@@ -21,7 +21,7 @@ generated: { by: claude-code/claude-opus-5, at: 2026-09-19T20:00:00Z }
 | `placeLabel`, `latitude`, `longitude` | string, number, number | Where the thing is, not the operator's HQ. Null for something with no single place. Film, TV, anime, games: the studio's HQ |
 | `dateConfidence` | `confirmed` `scheduled` `estimated` `delayed` `unknown` | Judged from the page's wording about the date, not from how far away it is |
 | `dateConfidenceReasoning` | string or null | One sentence quoting the deciding wording; null when `unknown` |
-| `startDateTime`, `endDateTime`, `allDay` | ISO UTC, ISO UTC, bool | The event itself. All-day: 00:00Z of the date, end is 00:00Z of the day after |
+| `startDateTime`, `endDateTime`, `allDay` | ISO UTC, ISO UTC, bool | The event itself. All-day: 00:00Z of the date, end is 00:00Z of the day after. A span takes its **last** day - a bare year is 31 December, a quarter or season its final day - unless the page says the event runs *from* it, which takes the first |
 | `originalStartDate`, `delayReasoning` | `YYYY-MM-DD`, string | First promised date (before the first delay) and how long the delay is; `Stated:` or `Estimated:` |
 | `company`, `companyWikiUrl` | string, URL | The one organisation; the disambiguated English Wikipedia article ("Apple_Inc."), null when unsure |
 | `categories` | string[] from the fixed list | Closest first; a second only when squarely both |

@@ -41,12 +41,17 @@ export type SearchRequest = {
 
 export type SearchLinks = { previous?: string; next?: string };
 
-// Every pin a search matches, in date order - for the map, which plots them all.
+// Every pin a search matches - for the map, which plots them all, and for a
+// caller that named no sort. Free text is ranked by relevance: the semantic
+// pool is wide, so ordering it by event date buries the pins that actually
+// match under whichever of them happens to be oldest, and a caller reads that
+// as no match. A pure label search has nothing to rank by and stays by date.
 export async function searchPins(searchText: string, options: SearchOptions = {}) {
   const query = parseSearchQuery(searchText);
   if (asksForNothing(query, options)) return new Pins({ pins: [], queryCount: 0 });
   const filter = await searchFilter(query, options);
-  const pins = await Pins.querySearchRanked(await Pins.rankSearch(filter, { sort: 'date', direction: 'next' }, null), options.userId || 0);
+  const sort = query.text ? ('relevance' as const) : ('date' as const);
+  const pins = await Pins.querySearchRanked(await Pins.rankSearch(filter, { sort, direction: 'next' }, null), options.userId || 0);
   await attachSearchedUser(pins, query);
   return pins;
 }
@@ -56,7 +61,15 @@ export async function searchPins(searchText: string, options: SearchOptions = {}
 // its links carry the resolved instants on, so the window holds still while
 // the reader scrolls. Throws a 400 for a value it cannot read.
 export function readSearchRequest(params: URLSearchParams, userId: number | null, now = new Date()): SearchRequest {
-  const sort = params.get('sort') === 'relevance' && params.get('q')?.trim() ? 'relevance' : 'date';
+  // A free-text search answers by relevance unless the caller asks for date;
+  // a pure label search (user:, tag:, date:) has nothing to rank by, so it
+  // stays in date order. This is the rule the search page already applies
+  // (app/[lang]/(timeline)/search/page.tsx) - the API used to default to date
+  // whatever the query, so a caller that named no sort got the semantic hits
+  // ordered by event date and read the oldest pins in the pool as "no match".
+  const asked = params.get('sort');
+  const free = !!parseSearchQuery(params.get('q')).text;
+  const sort = params.get('q')?.trim() && (asked === 'relevance' || (asked !== 'date' && free)) ? 'relevance' : 'date';
   const createdSince = resolveCreatedSince({ created_since: params.get('created_since'), created_within: params.get('created_within') }, now);
 
   const fromDateTime = params.get('from_date_time');

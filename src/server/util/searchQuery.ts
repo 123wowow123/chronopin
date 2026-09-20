@@ -23,6 +23,11 @@
 // user: takes a name with or without its "@" (user:@ThePinGang), and a bare
 // @ThePinGang still works on its own, as it did before user: existed.
 //
+// pin: takes pin ids, comma-separated (pin:1992,1991,1987): exactly those
+// pins and no others. Nothing in the site writes one by hand - it is how a
+// batch of notifications links to the pins it stands for, which no day or
+// author term can name exactly. The search box shows it as "3 pins".
+//
 // A value with spaces is quoted, as the labels write it. Several values for
 // one field widen the search (either company), while different fields narrow
 // it (this company and this tag), so each click on a label is additive.
@@ -42,6 +47,8 @@
 
 export type SearchQuery = {
   userNames: string[];
+  // Pin ids, matching exactly those pins.
+  ids: number[];
   companies: string[];
   confidences: string[];
   // Day keys ("2026-09-08"), any of them: when pins start, and when they
@@ -55,7 +62,7 @@ export type SearchQuery = {
 const SMART_DOUBLE_QUOTES = /[“”„‟″]/g;
 const SMART_SINGLE_QUOTES = /[‘’‚‛′]/g;
 
-const FIELD = '(company|category|user|confidence|date|posted|tag)';
+const FIELD = '(company|category|user|confidence|date|posted|tag|pin)';
 const DAY_KEY = /^-?\d{4,6}-\d{2}-\d{2}$/;
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
@@ -75,7 +82,7 @@ const FIELD_TERM = new RegExp(
 
 const USER_TERM = /(^|\s)(@\S+)/g;
 
-export type TermField = 'user' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'tag';
+export type TermField = 'user' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'tag' | 'pin';
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string }
@@ -130,6 +137,7 @@ export function joinSearchQuery(parts: QueryPart[]): string {
 export function parseSearchQuery(searchText: string | null | undefined): SearchQuery {
   const query: SearchQuery = {
     userNames: [],
+    ids: [],
     companies: [],
     confidences: [],
     dates: [],
@@ -146,6 +154,12 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
       addUserName(query, part.value);
     } else if (part.field === 'confidence') {
       addConfidence(query, part.value);
+    } else if (part.field === 'pin') {
+      // Anything that is not a pin id is left out rather than matching nothing.
+      for (const id of part.value.split(',')) {
+        const n = Number(id.trim());
+        if (Number.isInteger(n) && n > 0 && !query.ids.includes(n)) query.ids.push(n);
+      }
     } else if (part.field === 'date' || part.field === 'posted') {
       // Anything but a day is left out rather than matching nothing.
       if (DAY_KEY.test(part.value)) addUnique(part.field === 'date' ? query.dates : query.postedDays, part.value);
@@ -160,7 +174,7 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
 }
 
 export function hasFilters(query: SearchQuery): boolean {
-  return !!(query.userNames.length || query.companies.length || query.confidences.length || query.dates.length || query.postedDays.length || query.tags.length);
+  return !!(query.userNames.length || query.ids.length || query.companies.length || query.confidences.length || query.dates.length || query.postedDays.length || query.tags.length);
 }
 
 // Whether the viewer's time zone changes what the query matches: its days are

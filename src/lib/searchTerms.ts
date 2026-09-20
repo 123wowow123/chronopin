@@ -4,7 +4,9 @@
 // it, so each click narrows the results (or, for a second company, widens
 // them). The server parses these in src/server/util/searchQuery.ts.
 
-export type LabelField = 'user' | 'company' | 'confidence' | 'date' | 'posted' | 'tag';
+// 'pin' is not a label anything on a card writes: it names pins by id, for a
+// batch of notifications linking to exactly the pins it stands for.
+export type LabelField = 'user' | 'company' | 'confidence' | 'date' | 'posted' | 'tag' | 'pin';
 // Fields a query may still hold but no label writes: category: is the old
 // name for a category's tag: term, which can only be taken out.
 type AnyField = LabelField | 'category';

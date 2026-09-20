@@ -30,7 +30,7 @@ const MAX_TAGS = 8;
 // Wiki text handed to composeSummary before sub-pages are cut to their summaries.
 const COMPOSE_BUDGET_CHARS = 120000;
 
-export const KIND_LABEL: Record<SourceKind, string> = { web: 'web page', youtube: 'YouTube video', tweet: 'post on X', podcast: 'podcast episode page' };
+export const KIND_LABEL: Record<SourceKind, string> = { web: 'web page', youtube: 'YouTube video', tweet: 'post on X', podcast: 'podcast episode page', pdf: 'PDF document' };
 
 const PAGE_RULES = `Record only what the source itself says: what happens, who does it, where, and when (quote its date wording exactly, e.g. "expected in spring 2027"), costs and figures with their units, product names and versions, and short direct quotes where they carry a fact. Keep the source's own hedges ("reportedly", "planned"). Add nothing from your own knowledge and no opinions. Leave out navigation, ads, comments, sponsor reads and calls to subscribe.
 
@@ -154,7 +154,7 @@ export function splitText(text: string, size = PART_CHARS, maxParts = MAX_PARTS)
 }
 
 // The OKF concept type of a link's main page.
-export const ROOT_TYPE: Record<SourceKind, string> = { web: 'Web Page', youtube: 'YouTube Video', tweet: 'Social Post', podcast: 'Podcast Episode' };
+export const ROOT_TYPE: Record<SourceKind, string> = { web: 'Web Page', youtube: 'YouTube Video', tweet: 'Social Post', podcast: 'Podcast Episode', pdf: 'Document' };
 export const PART_TYPE = 'Source Part';
 export const TOPIC_TYPE = 'Topic';
 // The OKF actor for a wiki written here: <producer>/<version>.

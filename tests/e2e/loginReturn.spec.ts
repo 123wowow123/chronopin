@@ -66,6 +66,21 @@ async function expectBackAt(page: Page, before: { id: string; top: number }, url
   await expect.poll(async () => Math.abs((await card.boundingBox())!.y - before.top), { timeout: 15_000 }).toBeLessThanOrEqual(2);
 }
 
+// In front of the reader, not left off the top or bottom of the page, once the
+// rest of it has settled around it.
+async function expectInView(page: Page, target: ReturnType<Page['locator']>) {
+  await expect
+    .poll(
+      async () => {
+        const box = (await target.boundingBox())!;
+        const height = page.viewportSize()!.height;
+        return box.y < height && box.y + box.height > 0;
+      },
+      { timeout: 15_000 },
+    )
+    .toBe(true);
+}
+
 // Logging in, signing up and logging out all reload the whole page, which used
 // to open the timeline and search back on today (or the best match) however far
 // the reader had scrolled, and the map on its default view.
@@ -92,6 +107,109 @@ test.describe.serial('leaving a page to sign in or out', () => {
     await page.getByRole('button', { name: 'Sign up' }).click();
     await expect(page.getByRole('button', { name: `@${handle}` })).toBeVisible();
     await expectBackAt(page, before);
+  });
+
+  test('a watch clicked signed out happens, on the card it was clicked on, after logging in', async ({ page }) => {
+    // A pin page, and a card well down its "More like this": logging in
+    // reloads the page at the top, which used to leave both the click and the
+    // card behind.
+    await page.goto('/');
+    await page.locator('[role="listitem"][id^="pin-"] h2 a').first().click();
+    await page.waitForURL(/\/pin\/\d+\//);
+    const pinUrl = page.url();
+    const cards = page.locator('section[aria-labelledby="related-heading"] article');
+    await expect(cards.first()).toBeVisible();
+    const card = cards.nth(2);
+    await card.scrollIntoViewIfNeeded();
+    const title = (await card.locator('h2').innerText()).trim();
+    const watch = card.getByRole('button', { name: /^Watch this pin/ });
+    const before = Number((await watch.innerText()).trim());
+    await watch.click();
+
+    await expect(page).toHaveURL(/\/login\?redirect=/);
+    await page.getByLabel('Email').fill(email);
+    await page.getByLabel('Password').fill(password);
+    await page.getByRole('button', { name: 'Login' }).click();
+
+    await expect(page).toHaveURL(pinUrl);
+    const back = cards.filter({ hasText: title }).first();
+    const watched = back.getByRole('button', { name: `Stop watching (${before + 1} watching)` });
+    await expect(watched).toBeVisible();
+    await expectInView(page, back);
+
+    // Leave the seed pin as it was found.
+    await watched.click();
+    await expect(back.getByRole('button', { name: /^Watch this pin/ })).toBeVisible();
+  });
+
+  test('a follow clicked signed out happens, back in view, after logging in', async ({ page }) => {
+    await page.goto('/');
+    await page.locator('[role="listitem"][id^="pin-"] h2 a').first().click();
+    await page.waitForURL(/\/pin\/\d+\//);
+    const pinUrl = page.url();
+    // The author sits well below the pin itself, so logging in used to come
+    // back above it as well as losing the click.
+    const follow = page.locator('button[title^="Follow "]').first();
+    await follow.scrollIntoViewIfNeeded();
+    await follow.click();
+
+    await expect(page).toHaveURL(/\/login\?redirect=/);
+    await page.getByLabel('Email').fill(email);
+    await page.getByLabel('Password').fill(password);
+    await page.getByRole('button', { name: 'Login' }).click();
+
+    await expect(page).toHaveURL(pinUrl);
+    const following = page.getByRole('button', { name: 'Following' }).first();
+    await expect(following).toBeVisible();
+    await expectInView(page, following);
+
+    // Leave the seed author as they were found.
+    await following.click();
+    await expect(page.locator('button[title^="Follow "]').first()).toBeVisible();
+  });
+
+  test('a company follow clicked signed out happens after logging in', async ({ page }) => {
+    // The panel a `company:` search opens with, which is the only place a
+    // company can be followed from.
+    const search = '/search?q=company%3ANintendo';
+    await page.goto(search);
+    const follow = page.getByRole('button', { name: 'Follow', exact: true }).first();
+    await expect(follow).toBeVisible();
+    await follow.click();
+
+    await expect(page).toHaveURL(/\/login\?redirect=/);
+    await page.getByLabel('Email').fill(email);
+    await page.getByLabel('Password').fill(password);
+    await page.getByRole('button', { name: 'Login' }).click();
+
+    await expect(page).toHaveURL(new RegExp(`${search.replace('?', '\\?')}$`));
+    const following = page.getByRole('button', { name: 'Following' }).first();
+    await expect(following).toBeVisible();
+    await expectInView(page, following);
+
+    // Leave the seed company as it was found.
+    await following.click();
+    await expect(page.getByRole('button', { name: 'Follow', exact: true }).first()).toBeVisible();
+  });
+
+  test('a comment started signed out comes back to the comment box after logging in', async ({ page }) => {
+    await page.goto('/');
+    await page.locator('[role="listitem"][id^="pin-"] h2 a').first().click();
+    await page.waitForURL(/\/pin\/\d+\//);
+    const pinUrl = page.url();
+    const comments = page.locator('section[aria-labelledby="comments-heading"]');
+    await comments.getByRole('link', { name: 'Log in' }).click();
+
+    await expect(page).toHaveURL(/\/login\?redirect=/);
+    await page.getByLabel('Email').fill(email);
+    await page.getByLabel('Password').fill(password);
+    await page.getByRole('button', { name: 'Login' }).click();
+
+    await expect(page).toHaveURL(pinUrl);
+    // Back at the box, ready to type, rather than at the top of the pin.
+    const box = comments.getByRole('textbox');
+    await expect(box).toBeFocused();
+    await expectInView(page, box);
   });
 
   for (const way of WAYS) {

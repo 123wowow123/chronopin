@@ -4,6 +4,8 @@ import { launchOrbit } from './launchOrbit';
 const CAPE = 28.56;
 const VANDENBERG = 34.632;
 const STARBASE = 25.997;
+const BAIKONUR = 45.996;
+const WENCHANG = 19.614;
 
 describe('launchOrbit', () => {
   it('places a crew flight on the ISS orbit', () => {
@@ -27,5 +29,17 @@ describe('launchOrbit', () => {
     expect(launchOrbit({ mission: 'NROL-97', orbit: 'Unknown', padLatitude: CAPE })).toBeNull();
     expect(launchOrbit({ mission: 'Griffin Mission One', orbit: 'Lunar Orbit', padLatitude: CAPE })).toBeNull();
     expect(launchOrbit({ mission: 'A payload', orbit: 'Low Earth Orbit', padLatitude: VANDENBERG })).toBeNull();
+  });
+
+  it('flies every station visitor on its station\'s orbit, whoever launched it', () => {
+    expect(launchOrbit({ mission: 'Progress MS-36 (97P)', orbit: 'Low Earth Orbit', padLatitude: BAIKONUR })?.inclination).toBe(51.6);
+    expect(launchOrbit({ mission: 'Soyuz MS-31', orbit: 'Low Earth Orbit', padLatitude: BAIKONUR })?.inclination).toBe(51.6);
+    expect(launchOrbit({ mission: 'Tianzhou 10', orbit: 'Low Earth Orbit', padLatitude: WENCHANG })?.inclination).toBe(41.5);
+  });
+
+  it('refuses an inclination its pad cannot reach', () => {
+    // The bare "low earth orbit" guess of 53 is below Baikonur's latitude only
+    // for a pad further north, so check the rule where it bites.
+    expect(launchOrbit({ mission: 'An unnamed payload', orbit: 'Low Earth Orbit', padLatitude: 62.93 })).toBeNull();
   });
 });

@@ -25,11 +25,302 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **Persist seed data with `npm run backup:data`**, never by hand-editing the seed JSON.
 * **When the API key has no credit, use the session LLM.** Do the LLM stages by hand with the app's own prompts and schemas and apply them through the same scripts (`wiki:export`/`wiki:apply`, `references:apply`, `POST /api/pins`); never wait for credit.
 * **Get 3 media on every pin, best effort, with at least 1 image.** Owner, 2026-09-19: the media stage should keep looking until a pin has 3 media (a video counts), not stop at the first source, and a pin always gets at least one picture. Built: `src/lib/mediaTarget.ts` replaces the pictures-only `TARGET_IMAGES`. Fewer is acceptable only when every source is exhausted, and never padded with unfetched or unrelated pictures.
+* **A market pin says how much money is on it.** Owner, 2026-09-20: prediction-market scraping records the market's dollar volume, the pin page shows it, and the timeline's weighting leans on it. Quote it beside the odds in the pin's own words, and let the app keep the stored figure ([Strategy](strategy.md#decision-rules)).
 * **Do not add write-ups to the root README.**
+
+## 2026-09-20 - Coverage gaps: four categories, eclipses, tournaments and a trends reader
+
+Asked what was missing rather than what to scrape next, so this entry starts
+with the measurement and then the three jobs it justified.
+
+* **Learned**
+  * **The gap is not a category, it is 2027-2029.** Measured over 1,963 live
+    pins: 424 were in the future, and after April 2027 the timeline ran at
+    single figures a month for two years (2027-05 had 2, 2027-07 had 3,
+    2028-01 had 1). Anime alone was 657 pins, a third of the corpus.
+  * **A category can be busy and still be dead.** Counting future pins per
+    category found verticals with a full past and no future at all: `AI Models`
+    45 pins but 2 ahead, `Automotive` 39 and 2, `Computing & Semiconductors` 29
+    and 2, `Consumer Electronics` 69 and 7, and `Food & Beverage`, `Robotics`
+    and `Climate & Environment` with none. Total pin count hides this; the pair
+    of numbers is the one worth watching.
+  * **Sneaker pins had no home.** All six Nike Caitlin 1 colorways sat in
+    `Sports` because no clothing category existed, which [Vertical
+    recipes](verticals.md) had already hedged as "`Sports` (or the product's
+    own)". Added `Fashion & Apparel`, `Telecom & Networking`,
+    `Defense & Military` and `Education & Academia`.
+  * **A new category needs a dev-server restart, not just a save.** `PUT`s that
+    set `Fashion & Apparel` silently came back `['Sports']`: `parseCategories`
+    drops a name that is not on the list, and the running `next dev` still had
+    the old module. Touching the route did not clear it. The function tested
+    correct in isolation the whole time, which is what identified it.
+  * **Eclipses are the answer to the far calendar.** NASA's catalogue is
+    computed to the second for the next thousand years; 35 central solar
+    eclipses from 2027 to 2050 went in on the first run, against a corpus that
+    had about one pin a year after 2030.
+  * **Google Trends is a signal, not a source** - see [Nightly jobs](nightly-jobs.md#google-trends).
+* **Feedback**
+  * "what other pins is interesting to post or missing categories to post" -
+    answered with the measurement above rather than a list of ideas, then the
+    gaps were filled.
+  * "also check google search trends and find interesting things to pin from
+    there" - built `npm run trends:discover`; it shortlists, it does not post.
+  * "Add this to nightly scraping job strategy OKF" - added to the roster and
+    given its own section on [Nightly jobs](nightly-jobs.md).
+* **Changed** [Nightly jobs](nightly-jobs.md) (three jobs added, Google Trends
+  section, refreshed numbers), [Vertical recipes](verticals.md) (eclipse,
+  tournament and trends recipes), `src/lib/categories.ts` and all six
+  `src/lib/i18n/messages/*.ts`. Pins 2121-2163, `backup:data` run.
+
+### The eclipse job (`npm run astronomy:eclipses`, 35 pins, @ScienceDesk)
+
+* Only central eclipses are pinned. A partial has no central path, so NASA
+  publishes no point of greatest eclipse and there is nowhere to put the pin.
+* **The decade table's clock is TD, the path page's is UT**, and they differ by
+  delta-T - about 72 seconds this century. The pin wants UT, which is what a
+  clock at the eclipse reads. The first run used TD and every pin was ~72
+  seconds late, fixed by `--refresh`.
+* The UT label is written two ways across the site, `Greatest Eclipse: Time =`
+  and `Instant of Greatest Eclipse : Time =` with a space before the colon. A
+  regex without `\s*` before the colon matched some pages and silently fell
+  back to TD on the rest.
+* **A few path pages are stubs** with no table at all - 2043 Apr 09 and 2043
+  Oct 03 - and every one is a non-central eclipse where the shadow's axis
+  misses the Earth. The five-millennium catalogue still has their position, but
+  only to the whole degree, so the pin says so.
+* NASA's regions are a fixed-width shorthand ("n N. America", "w & s Africa",
+  "midwest US", "N.Z."). Expanded into English for the title and the
+  description; the compass word in front of an ocean is part of its name (the
+  South Pacific) and in front of a continent is not (South America, never "the
+  South America").
+* **The head of NASA's central-path list is not where the eclipse is deepest.**
+  The list runs west to east, so the 2030 annular reads "Algeria" first while
+  its greatest eclipse is in Siberia. The title names the country holding the
+  point of greatest eclipse, and falls back to the head of the list only when
+  that point is at sea.
+* `--refresh` re-saves the pins the job owns by `PUT` of the whole body, and
+  leaves an eclipse pinned by hand (239 Luxor, 241 Sydney) alone.
+
+### The tournament job (`npm run sports:tournaments`, 6 pins, @SportDesk)
+
+* Wikipedia dates a tournament in its opening sentence in about five shapes
+  ("from 4 October to 21 November 2027", "from July 14 to 30, 2028", "from 10
+  to 19 September 2027"), and sometimes without the year, which then comes from
+  the article title.
+* **A bare "in <Month> <Year>" is not the tournament's date.** The 2034 World
+  Cup article says "In December 2024, Saudi Arabia was formally confirmed as
+  the host", which a loose month-only rule pinned as the tournament - ten years
+  early. The rule now requires scheduling language in the same clause and a
+  year not before the article's own.
+* **The already-pinned test has to carry the year.** Matching the event name
+  alone made "2032 Summer Olympics" find the 2028 pin and "2034 FIFA World Cup"
+  find the 2030 one: every edition looked already pinned.
+* **Not every stadium article has coordinates**, in the REST summary or the
+  query API - the Narendra Modi Stadium and Peru's National Stadium both lack
+  the template. The chain is summary, then query API, then Nominatim by name,
+  and Nominatim needs the local name ("Estadio Nacional, Lima, Peru" finds it,
+  "National Stadium of Peru" does not).
+* Wikipedia's REST summary answers 429 after about a dozen quick calls and
+  stays cross, so every call is spaced 1.6s with a backoff.
+* A tournament with no announced dates (2031 Rugby World Cup, 2031 Women's
+  World Cup, 2034 World Cup) is skipped rather than guessed, and picked up
+  whenever the job is next run.
+
 * **YouTube transcripts should feed the wikis.** Owner, 2026-09-19: pull transcripts for wiki generation. (Blocked for now by YouTube's 429; see below.)
 
 # Log
 
+## 2026-09-20 - Dollar volume on market pins
+
+The odds on a market pin said what traders think; nothing said how many of them
+there are. Kalshi's 30% on a book that has turned over $15M and Polymarket's 30%
+on $900 read identically on the page, and weighed the same on the timeline.
+
+* **What the exchanges give.** Polymarket reports dollars outright (`volume` on
+  the event and on each market, plus `volume24hr`/`1wk`/`1mo`). Kalshi does not:
+  it counts contracts, as `volume_fp` on each nested market, which becomes money
+  only as contracts x `last_price_dollars`. That product is an estimate at
+  today's price - the contracts traded in March changed hands at March's prices -
+  and it is worth saying so rather than implying the cent. Polymarket US
+  publishes no volume at all, on either object.
+* **The nested-market trap again.** As with prices, the volume fields only come
+  back from the single-event read (`GET /events/{ticker}?with_nested_markets=true`);
+  the events *list* returns them null, so a scan that reads the list alone finds
+  no volume anywhere and quietly concludes there is none.
+* **Where it lives.** `Pin.marketVolume` (schema 0053) is the dollars across every
+  market the pin's source and references link. It is written after each save and
+  edit, kept up as anyone watches the pin's odds (the read is already paid for),
+  and refreshed in bulk by `npm run markets:volume -- --apply`. No author sets it:
+  it is a reading of the exchanges, so it stays out of the form, out of the write
+  SQL and out of `seedPins.json` (the script reads it again after a refresh).
+* **What it changed.** The pin page carries a "$3.9M traded" pill beside the
+  ratings, each market box shows its own figure (Kalshi's was blank before this),
+  and `bagWeight` multiplies a pin by 1 + half a point per tenfold above $10k,
+  capped at 2.5x - $100k x1.5, $1M x2, $10M and up x2.5. A market pin no longer
+  needs to have been opened to earn a place on a crowded day; the money on it
+  says so.
+* **A Kalshi figure can go down.** Contracts only accumulate, but the price they
+  are valued at moves, so a refresh of an unchanged market can read a little
+  lower ($302,559 -> $301,242 an hour later on the Anthropic IPO ladder). That is
+  the estimate being honest, not a bug; Polymarket's reported dollars only rise.
+* **The first backfill** covered 50 pins, from $186 (a thin Kalshi ladder) to
+  $15.1M (Ethereum's year-high book). Two IPO pins share a figure because they
+  genuinely cite the same two markets, which is the right answer, not a cache bug.
+
+
+### `AI Models` had a past and no future (`npm run ai:retirements`, 11 pins, @TechDesk)
+
+45 pins, 2 of them ahead of today - the worst ratio in the corpus, and for the
+flagship vertical.
+
+* **The reason is structural.** Nobody announces a model launch in advance, so
+  the category can only ever be retrospective from launches. Vendors *do*
+  announce a model's death in advance, because developers must migrate, which
+  makes deprecation pages the one reliable future-dated AI source. 11 pins,
+  September 2026 to February 2027; `AI Models` future went 2 -> 13.
+* **One pin per announcement, not per model.** 17 snapshots going off on one
+  morning is one event.
+* **Only OpenAI could be pinned.** Its page anchors each announcement, so each
+  pin gets an honest unique `sourceUrl`. Anthropic and Azure list their future
+  retirements in one status table with a single anchor - the Nobel schedule
+  page problem again. Anthropic would be worth about ten more pins.
+* **A model cell carries the model and its aliases**, so the item is the first
+  identifier in it; counting the whole cell read one retirement as three.
+  A staged platform shutdown puts a *sentence* in that column instead, which
+  made "3 Evals Platform" - an identifier has no trailing full stop and at
+  most three words.
+* **Placement is not automatic outside the screen categories.** The first run
+  produced 11 pins with `address: null`, invisible on the map, because the
+  company-HQ placement only runs for film, TV, anime and games. The job now
+  calls `lookupStudioLocation` on the vendor's article itself, the same way
+  `health:trials` does for its sponsors.
+* These pins carry no media, on purpose: a docs page has no pictures and one
+  logo across eleven pins is padding.
+
+### PDFs enter the pipeline (`src/server/scrape/pdfText.ts`)
+
+[Sources](sources.md) had carried the row "PDFs - no poppler locally - decode
+by hand when a filing is the only source" since the page was written. Poppler
+and tesseract were installed on the machine, so the row was acted on.
+
+* **It was worse than "by hand".** `pageText()` threw `Unsupported content
+  type application/pdf`, and the fetch is the one stage that may fail a whole
+  scrape, so a PDF link did not degrade to a thin pin - it killed the job.
+* **Plain `pdftotext`, never `-layout`.** Measured on a three-column Federal
+  Register notice: `-layout` preserves the geometry and interleaves the
+  columns line by line, so every sentence reads as three unrelated
+  half-sentences. Plain mode does the reading-order analysis and returns each
+  column whole. `-layout` is right only for a document that really is a table.
+* **Trust the bytes, not the content type.** The local test server served a
+  PDF as `application/octet-stream` and the reader refused it - which is
+  exactly what a lot of agency servers do. Anything that is not a web page now
+  has its first bytes checked for `%PDF`, which also catches the reverse case,
+  a block page served as `application/pdf`.
+* **Adding a `SourceKind` is not a one-line change.** `'pdf'` had to be added
+  to the `CK_Source_kind` CHECK constraint (0051) or the save would fail after
+  a successful fetch, and to two exhaustive `Record<SourceKind, string>` maps
+  in `extract/wiki.ts` (`KIND_LABEL`, `ROOT_TYPE`), which the compiler caught.
+  `extract/references.ts` has a **different** type of the same name and needs
+  nothing.
+* OCR costs about five seconds a page, so it runs only when the text layer is
+  under 200 characters and only over the first 5 pages. A 3-page scan took 15s
+  end to end against 0.4s for a born-digital filing of the same length.
+* The text carries a prefix saying what was read - `[Scanned PDF, 12 page(s);
+  OCR of the first 5]` - so a summary written from it is not taken for the
+  whole document.
+* **This adds a host dependency, and the deploy was updated for it.**
+  [Docker/Dockerfile](../../../Docker/Dockerfile)'s runtime stage now installs
+  `poppler-utils tesseract-ocr tesseract-ocr-data-eng` beside chromium.
+  Verified in the real base image (`node:24-alpine`): all four binaries
+  resolve, `pdftotext` reads a Federal Register filing in reading order and
+  `pdftoppm` + `tesseract` OCR an image-only PDF back to its text. Measured
+  cost: **+72MB** to the image.
+  * `tesseract` ships **no language data of its own** - without
+    `tesseract-ocr-data-eng` it installs and then reads nothing.
+  * `hasBinary()` shells out to `which`, which busybox provides on Alpine;
+    checked rather than assumed.
+  * **The migration does not ride along.** The image is the Next.js standalone
+    output and carries no `scripts/`, so 0051 has to be applied to the target
+    database separately (`npm run create:db` from a machine that can reach it).
+    On the greenfield refresh it is simply part of a fresh schema.
+  * `SCRAPE_PDF_OCR=0` turns OCR off without touching the image, for when that
+    CPU is not wanted; the text layer is always read. It is optional, so the
+    `env-file` ConfigMap needs no change to deploy this.
+
+## 2026-09-20 - Six new verticals, and the nightly-job roster
+
+Asked what was worth pinning next, then told to do all of it. Coverage was
+measured first: `Anime` + `Anime Movie` was 42% of 1,855 pins, while `TV
+Series` had 2, `Science & Research` 5 and `Health & Medicine` 6; Oct 2026 and
+Jan 2027 were dense and Feb-Nov 2027 nearly empty. Six verticals were picked
+to fix both at once, and 112 pins were created (1994-2110).
+
+* **Learned - Nobel week.** Five prizes were missing (only Peace was pinned, by
+  @OddsDesk). One schedule page covers all six and the route rejects a
+  duplicate `sourceUrl`, so each prize's own YouTube announcement live stream
+  became its source. The February press release beats the schedule page: it
+  gives the hall and street address. Literature had no category, so
+  `Arts & Literature` was added - and adding a category means adding its label
+  to all six message files, which `Elections` and `Macroeconomics` had been
+  missing since they were added earlier the same day.
+* **Learned - a new category is picked up without restarting dev.** The pin
+  route accepted `Arts & Literature` immediately; Next's dev server reloaded
+  the changed module. The restart rule is for new lib *exports* and event
+  listeners, not for a changed array.
+* **Learned - launches.** `spacex:launches` was one `lsp__name=SpaceX` away
+  from covering everyone, so it became `scripts/launches/upcoming.ts` with a
+  `--provider` flag (`npm run spacex:launches` keeps its old behaviour). Only
+  10 of the next 60 launches worldwide are dated to the day: SpaceX publishes
+  a firm manifest and most other providers sit at month or quarter precision,
+  which is the case for running it nightly. Threading is now per provider -
+  one chain across providers interleaves Electron and Falcon 9 into a story
+  neither is telling.
+* **Learned - Launch Library files an unannounced launch as "Unknown Payload"
+  with a "Details TBD" description.** Two such pins were created and deleted;
+  the job now waits until a launch has a name.
+* **Learned - the orbit guess needed widening carefully.** Progress to the ISS
+  was drawn at 53 degrees by the bare "low earth orbit" fallback, which is
+  SpaceX-shaped. Station visitors now get their station's inclination (ISS
+  51.6, Tiangong 41.5) whoever launched them, and any guess below the pad's
+  own latitude is refused outright, because no rocket can fly it.
+* **Learned - TVmaze.** One call to `/schedule/full` returns every future
+  episode. Its episode counts for a *future* season are partial and must not
+  be published: 23 of the first 30 pins had a count like "The Simpsons season
+  38, 2 episodes" that had to be cleared. Its forward schedule is also
+  near-term - 202 premieres in October 2026 against about seven in all of 2027.
+* **Learned - a streaming brand has no headquarters.** Wikidata files "Prime
+  Video", "Disney+" and "Apple TV" as services with no P159, so 17 TV pins
+  landed nowhere until each pointed at its owner's article. While fixing it,
+  `lookupStudioLocation` turned out to reject a country centroid but accept a
+  *state* one - FX was placed in the middle of Texas. It now refuses any
+  headquarters place that sits inside nothing (no P131), which is a country or
+  a top-level region either way.
+* **Learned - ClinicalTrials.gov.** A good keyless health calendar: phase 3
+  primary completion dates, which are the sponsor's own estimate and are
+  pinned `estimated`. Two traps: asking for a `fields` list strips each
+  intervention's `type`, so filtering on it silently returns zero rows; and
+  naming the study drug is genuinely hard, because the shortest name gives the
+  comparator (tamoxifen over camizestrant) and skipping digits gives it too
+  (Truvada over MK-8527). First non-placebo arm, skipping dose lines, is right.
+* **Learned - a ticker note belongs to the company, not the pin.** `stocks[].note`
+  is stored on `Company.tickerNote`, so "runs the trial" was written onto ten
+  pharma companies and had to be replaced with standing descriptions.
+* **Learned - PDUFA dates cannot be scraped keylessly.** The FDA's advisory
+  committee calendar renders its table client-side and serves no rows; PDUFA
+  action dates live in company press releases. It needs a search-driven job.
+* **Learned - sport fixtures are the best filler for a far calendar.** Governing
+  bodies date tournaments years out, so six of nine pins landed between April
+  and November 2027, the emptiest stretch. Wikipedia's opening sentence gives a
+  quotable date and the venue article gives coordinates and a photograph.
+* **Learned - deleting a pin leaves its duplicate suggestions behind.** The
+  save-time check had already paired the two "Unknown Payload" launches; after
+  both were deleted the `PinDuplicate` row survived and showed up in
+  `duplicates:suggest`. Cleaned by hand.
+* **Feedback.** "put this strategy in OKF for nightly scrape jobs" - the
+  coverage analysis and the job roster are not chat, they are a page:
+  [Nightly scrape jobs](nightly-jobs.md), linked from the scraping index.
+* **Changed.** Added [Nightly scrape jobs](nightly-jobs.md); four new recipes
+  in [Vertical recipes](verticals.md); this entry.
 ## 2026-09-20 - Economy, crypto, AI and space prediction markets (pins 1980-1993)
 
 * **Learned**
@@ -178,3 +469,131 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **X post to a rumour pin (2026-09-19, pin 1872, PS6 holiday 2027).** The tweet (GameGPU) only linked an article, so the article is `sourceUrl` and the tweet photo (fxtwitter API `pbs.twimg.com/...jpg?name=orig`) is a picture; `api.fxtwitter.com/<user>/status/<id>` returns the full text and media keylessly.
   * The image pipeline cannot decode `image/webp` ("Mime type image/webp does not support decoding"): the POST still created the pin but with no media, so pick a jpg/png (tweet photo, a reference's og:image) or `PUT` the full body with `media` afterwards.
   * @GameDesk sign-in through `POST /auth/local` is blocked by the auto-mode classifier until Ian allows the call in that session.
+
+## 2026-09-20 - San Diego construction projects (5 pins, @BuildDesk, no API credit)
+* **Learned**
+  * A "what is being built in <city>?" scrape starts from the city's own authorities, not the trade press: SANDAG, NCTD, the airport authority, the university and the city each publish a dated project page, and each is a distinct `sourceUrl`. One broad WebSearch ("<city> major construction projects <years> opening completion milestone") is enough to name the projects; the dates then come from each owner's page.
+  * **Official pages go stale in the opposite direction to the press.** NCTD's own Downtown COASTER Platform page still said "construction is expected to start in fall 2025" and "open to passengers in early 2027" after the Union-Tribune reported a spring 2026 groundbreaking. Two sources disagreeing that way is a `delayed` pin, not an `estimated` one: the owner's page gives `originalStartDate`, the newer reporting gives the current date, and `delayReasoning` quotes both.
+  * Wikipedia is the better source where the history matters. Its Otay Mesa East article carries the whole slip ("as early as 2017" -> late 2024 -> 2028) in one paragraph, which is exactly what `originalStartDate` + `delayReasoning` need; the authority's page carries only today's promise.
+  * Cost figures need the side named. The Otay Mesa East article's "2 billion Mexican pesos (about 99 million US dollars)" is the Mexican half of a binational crossing, not the project, so `price` stays null rather than understating it by an order of magnitude ([[feedback-pin-cost-figure]]).
+  * sandag.org renders its project pages client-side and answers `/projects/<slug>` with a 404 body at HTTP 200; find the real path by grepping the homepage for `href="[^"]*<slug>"`. UC San Diego's Plan Design Build page is accordions (`href="#"`), so per-project deep links do not exist - use health.ucsd.edu for the project's own page.
+  * No local PDF tooling (no poppler, no pypdf), so a fact sheet only published as a PDF cannot be quoted; drop that candidate rather than pin a soft date. Pure Water San Diego Phase 1 was left out for this reason.
+  * Pictures: Commons search for "<airport> Terminal 1" returns Terminal 2 photos, so take the English Wikipedia article's own lead image (`prop=pageimages&piprop=original`) instead. A trade article's own photo is under `wp-content/uploads/<year>/<month>/`; the site's og:image is its logo.
+* **Changed** Pins 2163-2167 (SAN Terminal 1 phase 2, Otay Mesa East, Downtown COASTER platform, UC San Diego Hillcrest, Kindred Apartments), `backup:data` run.
+
+## 2026-09-20 - 32 cities of construction projects (131 pins, @BuildDesk, 16 parallel agents)
+
+* **Learned**
+  * **Read the search endpoint's sort before concluding anything from it.** `/api/pins/search` defaults to `sort=date`: it takes the semantic hit pool and orders it by *event date*, so a query for "Eglinton Crosstown" answers with Victorian railways and the pin you wanted sits far down the list. All sixteen agents read that and reported "nothing already covered"; the index had the pins all along. **Add `&sort=relevance`** and the same query returns the right pins first. A duplicate check without it is worthless.
+  * The label terms are the other half: `user:BuildDesk`, `posted:<day>` and `tag:` resolve in SQL and are always current, so they page the corpus reliably. Free text alone never does. A title regex straight against the database is the surest check of all.
+  * **The built-in duplicate check only catches same-day pairs.** `duplicates:suggest` pairs on FAISS >= 0.80 **and** +/-1 day, and found 0 of the 7 real duplicates this run produced, because a re-pinned project carries a *different estimated date* (Sydney Metro West at 2032-12-31 against an existing 2032-06-01). Cross-author duplicates also slip `rejectDuplicateSourceUrl`, which scopes to `userId`. Word-overlap over titles, scored and sorted, found all seven.
+  * `search:refresh` rebuilds the index from **seedPins.json**, not the database, so it belongs *after* `backup:data`, never before.
+  * **The media pipeline rejected large pictures outright** (`maxMemoryUsageInMB limit exceeded`) because `shrinkImage` decoded the full bitmap before resizing and jpeg-js caps at 512MB / 100MP. Fixed in `src/server/image.ts`. The first attempt at the fix did nothing: **`Jimp.read` drops its options when its input is a Buffer** and forwards them only when it fetched a URL itself, so the call had to move to `Jimp.fromBuffer`. There is a test on that difference.
+  * Owner pages go stale in the opposite direction to the press, everywhere: the Port Authority still promised JFK T1 for 2026, Mass General still said 2027, VTA still said "Spring 2025", NCTD still said "early 2027". That disagreement is the `delayed` shape, and it produced 31 of the 131 pins.
+  * A delay needs **both** halves quoted. Narita's third runway and Hong Kong's 11 SKIES were dropped precisely because the owner would not state the original date ("commercially sensitive"), and no source named a new one.
+  * **WebFetch invented a cost figure** - "93.889 billion yuan" for Shanghai Metro Line 19, which appears nowhere in the article's wikitext - and mangled a Unicode filename so the image 404'd. Take numbers and image URLs from the raw API, never from a WebFetch summary.
+  * Wikipedia's `api.php` 429s within about three rapid calls under parallel load, and returns plain text rather than JSON when it does. A real `User-Agent` plus ~6s spacing fixes it; batching titles (`titles=a|b|c`) helps more.
+  * Currency: expand crore/lakh and 億/억, keep the source's own currency, never convert. Japanese fiscal years resolve to 1 April and the pin says so in `dateConfidenceReasoning`.
+  * **PDFs read fine here.** The repeated "no PDF tooling on this box" note in this run's reports was wrong: poppler is installed and `pdftotext` is on PATH. It came from a shell test of the shape `command -v x && x ... || fallback`, which also takes the fallback when the command *runs and fails*. Owner PDFs then settled two questions no HTML page could - Mitsubishi Estate's own release gives Torch Tower "completion at the end of March 2028" against Wikipedia's uncorroborated "On hold" (pin 2251 moved to the release and 31 March), and Port Houston's October 2025 release confirms its own dredging is done while the 2029 date belongs to the whole of Project 11 (pin 2175 was right; the release is now a reference).
+  * The pipeline reads PDFs itself since today ([pdfText.ts](../../../src/server/scrape/pdfText.ts), another session). Six sources still carried the **old** `Unsupported content type application/pdf` failure and were simply retryable: `wiki:refetch-blocked --apply --id ...` read all six (an FDA approval letter, a Sydney Metro document, two investor releases, a landfill fact sheet, Hillingdon's committee papers). Sweep for that error string after any reader change.
+  * `pdfinfo` prints an absent title as a bare `Title:` label, and the title regex's `\s+` walked over the newline into the line below, so every untitled PDF came back titled "Author:". Fixed to `[^\S\n]+`, parser split out as `parsePdfInfo` and tested.
+  * There was **no house convention for a bare year** - 12-31 (61), 01-01 (53) and 06-01 (26) were all in use - so this run's agents split too. Ian settled it: **a span takes its last day, so a bare year is 31 December**, and a period the event runs *from* takes its first. Now in the extraction prompt. Only 7 pins could be moved safely: matching on reasoning text alone would have dragged Angkor Wat to December 1150 while missing genuine bare years whose wording differed, so the rest are marked instead.
+  * New `imprecise` okf:lint check (0051): every future pin dated to a year alone is a standing candidate for a better reference, because one later article naming the month retires a whole year of uncertainty. 153 pins on the first run. Past pins are left out - a bare year on something from 1150 is as good as it gets.
+* **Changed** Pins 2163-2295 less 7 folded duplicates = 131 kept (46 estimated, 43 confirmed, 31 delayed, 11 scheduled); `src/server/image.ts` decode ceiling + tests; `backup:data` then `search:refresh` run in that order.
+
+## 2026-09-20 (later) - fixing what the 32-city run exposed
+
+* **Learned**
+  * **The search was never stale.** `/api/pins/search` has a branch for a request with no `sort` at all, which called `searchPins` - hardcoded to date order. Sixteen agents read a date-ordered list of semantic hits, saw Victorian railways, and concluded the corpus was empty. Free text now ranks by relevance in both paths; a pure label search (`user:`, `tag:`, `posted:`) still answers by date, having nothing to rank by. One missing query parameter cost a whole run its duplicate checking.
+  * `rejectDuplicateSourceUrl` scoped to `userId`, so a second curator could pin a page another had already pinned. Now global, with a different message when the pin is someone else's.
+  * **A +/-1 day duplicate window cannot catch a re-scrape.** The same project pinned a year apart carries a different *estimated* date, which is the normal case, not the edge case. The window now follows the date's precision: 1 day for a firm date, a year for `estimated`/`delayed`. It found 30 pairs the old rule missed - Burj Azizi pinned twice 13 months apart, the Chuo Shinkansen, Bogota Metro, Rogun Dam, an exact-duplicate Grand Ethiopian Renaissance Dam - against 0 before. Title similarity still has to clear 0.80 and a person still confirms, so a wider window costs a suggestion, not a mistake.
+  * **The oversized-picture bug is raised, not cured**, and cannot be cured this way: jpeg-js decodes the whole image before anything scales it, so the memory it wants grows with the *original's* pixels however small the thumbnail. 2GB covers about 45MP; a 174MP Commons scan still fails, and lifting the ceiling past the process's memory only trades a clean error for an OOM kill. It now fails with a message naming the remedy - ask the host for a smaller rendition (`iiurlwidth=1920` on Wikimedia's API; hand-built `/thumb/.../1024px-` URLs 400). The first attempt at the fix did nothing at all because **`Jimp.read` drops its options whenever its input is a Buffer**; it had to move to `Jimp.fromBuffer`.
+  * The `imprecise` check first flagged any pin landing on 1 January or 31 December, which permanently listed events that genuinely fall on those days (a line opening on New Year's Day, a statutory deadline on the 31st). It now takes only `estimated` and `delayed` dates: a `scheduled` one is a day somebody announced.
+  * Applying the convention needed reading, not matching. A regex over reasoning text wanted to drag Angkor Wat to December 1150 while missing bare years phrased differently, so only the 7 pins whose reasoning says in so many words that the source gave a year were moved, and the remaining ~146 are marked for a better reference instead.
+* **Changed** Search sort default; global sourceUrl guard; precision-scaled duplicate window; 10 duplicates folded (7 from the run, 3 found by the new window); pin 224 re-dated and the Olympics duplicate folded; 7 spare pins posted (2296-2302); 5 dates sharpened by evidence; **130 OKF wikis written by hand and applied**, taking sources ready from 2,893 to 3,023 and leaving 8 of this run's 135 pins without one.
+
+## 2026-09-20 (later still) - the OKF backfill, and what grounding a summary exposes
+
+* **Learned**
+  * **1,190 wikis written by hand** across 36 agent batches took sources `ready` from 2,893 to 4,109. 264 are marked failed, each with a reason that says whether retrying is worth it.
+  * **Finishing the wikis unlocked the next stage**: summaries went from 2 due to 375, and contradiction checks from 750 to 1,074, because both need their pin's wikis first. Expect that cascade rather than treating the three job kinds as independent.
+  * **The summary stage is an audit.** Forcing every bullet to carry a citation is what exposes a claim no source supports - nothing else in the pipeline does. About two dozen pins turned out to assert things their own sources do not, in four repeatable shapes:
+    1. **A price read as a probability** (6 pins, all prediction markets - see [Vertical recipes](verticals.md)).
+    2. **A figure computed rather than stated** - pin 2184's "$865 million" is a $45M and an $820M authorisation added together, which no page prints.
+    3. **Absence asserted against presence** - three pins say "no opening venue announced" where the source names the venue in its infobox.
+    4. **The right number at the wrong reference point** - an eclipse duration *at greatest eclipse* quoted as the maximum, which on pin 2132 is 0m48s against a true greatest duration of 01m25.9s.
+    Plus plainly contradicted facts: pin 2224 reports a win where the source records a 2-2 draw.
+  * Agents were told to **record disagreements rather than reconcile them**, and that discipline is what made the audit possible. A wiki that had silently picked one of three budgets would have hidden the pin's error instead of surfacing it.
+  * **Domain knowledge prevents false positives.** Eclipse path pages use Universal Time and saros catalogues use Terrestrial Dynamical Time; TD - ΔT reconciles them exactly. One agent said so in all 18 of its summaries so the contradiction pass would not flag 18 pins for a difference that is not one.
+  * Two host families serve one page for every URL and so produce identical captures that each look plausible alone: **wpcentral.com** (homepage) and **clinicaltrials.gov** (glossary shell). A `GROUP BY md5(text) HAVING COUNT(*) > 2` finds them; see [Sources](sources.md). **`wiki:refetch-blocked` cannot tell a wrong page from a blocked one** - it "recovered" 14 wpcentral links straight back to the same homepage.
+  * Batch by **bytes, not job count**: the first split put 240KB Wikipedia articles and 2KB YouTube pages in equal-sized batches. Re-budgeting cut 735 remaining jobs from 25 batches to 9.
+  * Applying results while agents still run is safe but confusing - three agents reported their output directory being "wiped" when it was the parent's own `mv`. Verify against the **database**, not the file layout: one sweep found 22 wikis written but never applied, stranded by an apply that threw midway.
+* **Changed** Sources ready 2,893 -> 4,109; ~1,190 wikis and 375 pin summaries written by hand and applied; 264 dead captures marked with reasons; 75 eclipse `sourceModifiedDate` values cleared (a bare unlabelled footer date is not a stated date).
+
+## 2026-09-20 - what grounding 375 summaries found: a triage list
+
+Every bullet of a pin summary must end in a citation of a link that says it.
+That one rule turned the summary pass into an audit of the pins themselves, and
+it found three different problems that want three different fixes. Conflating
+them would be a mistake: only the first group means a pin is wrong.
+
+### 1. Contradicted - the linked source says something else
+
+| Pin | The pin says | The source says |
+| --- | --- | --- |
+| 2292 CDG Express | Infra co owned by SNCF + Paris Aeroport; EUR 1.7bn state loan; Alstom trains; RATP Group | Equal thirds Groupe ADP / SNCF Reseau / Banque des Territoires; "financed the entire project without public subsidies"; **CAF France**; RATP **Dev** |
+| 2224 Inter Miami | Beat Austin FC | A 2-2 draw |
+| 2170 O'Hare Concourse 1 | SOM with Ross Barney, JGMA, Arup; $8.5bn | SOM and **Norviska**; ~$12bn now, completion 2034 |
+| 889 Pirelli P Zero | Launched 1987 on the Ferrari F40 | First appeared **1985 on the Lancia Delta S4 Stradale** |
+| 1862 Boeing 777-9 | Emirates expecting May/June 2027 | Late 2027; **Lufthansa** is launch customer |
+| 2295 Tour Triangle | 42 floors | "35 des 44 etages" |
+| 2258 Shanghai East | 14 platforms | 15 platforms, 30 tracks |
+| 2259 Versova-Bandra | 9.6 km, two connectors | 9.8 km, four connectors |
+| 346 Klipsch | Seven models | Six |
+| 2212 A's ballpark | "Largest cable-net window in the world" | "One of the largest cable-glass windows in **North America**" |
+| 2204 Phoenix light rail | B Line serves south Phoenix | Runs from Metro Parkway in **north-west** Phoenix |
+| 2283 Finch West | 10.3 km | "Almost 11 kilometres" |
+
+**A whole class of its own: a market price read as a probability.** A Kalshi or
+Polymarket row shows a Chance, a Yes price and a No price - three different
+numbers. Pins 1951, 1959, 1969, 1971, 1973, 1975, 1979(1988), 1983, 1993, 1679
+and 1972 took a price for a chance. Pin 1971 gives Paxton 41%, his Buy No price,
+against a 42% chance; pin 1959 quotes a player who **has no row at all**. Now
+warned about in [Vertical recipes](verticals.md).
+
+**And one of measurement, not fact:** an eclipse duration *at greatest eclipse*
+quoted as the maximum (2126, 2132, 2155 - pin 2132 says 0m48s where the greatest
+duration is 01m25.9s), and pins naming countries the NASA pages never name, they
+give coordinates only (2123, 2126, 2150).
+
+### 2. Unsupported - true or not, no linked source carries it
+
+Around fifty pins state a figure, a date or a participant that appears in none of
+their references: 2163, 2169, 2171-2172, 2176, 2179-2183, 2185-2186, 2188,
+2190-2191, 2194, 2198, 2201, 2203, 2205-2206, 2208, 2220-2223, 2225-2226,
+2228-2229, 2231, 2234, 2236, 2241-2242, 2244-2247, 2255-2256, 2261-2262, 2265,
+2270, 2272, 2274, 2279, 2286, 2290-2291, 2293-2294, 568, 580, 591, 597, 807.
+
+This is usually **not** a wrong claim. A scrape reads several pages and pins only
+one as `sourceUrl`, so the facts are real but the evidence never made it into the
+pin. The fix is a reference, not an edit - and it is why a scrape should add the
+pages it actually read, not just the one it chose to cite.
+
+### 3. Broken capture - the source cannot vouch for anything
+
+- **2230 Cosm Atlanta** - the only source captured its headline and nothing else
+  (a Next.js page whose body is in `__NEXT_DATA__`), so every figure on the pin is
+  uncorroborated and its summary is correctly null. Re-fetch before re-running.
+- **554 / 2304 Merdeka 118** - the stored capture of
+  `skyscrapercenter.com/building/merdeka-118` is **entirely about Midtown East,
+  Tokyo**. Two agents found it independently from both sides.
+- **2205 TSMC Fab 2** - a Focus Taiwan paywall stub; backs the schedule and
+  nothing else.
+
+### What it means for the pin-writing prompt
+
+The wiki and summary prompts say "record only what the source says" and the
+citation rule enforces it. The pin extraction prompt has no equivalent pressure,
+and the result is agents reaching past the page - summing figures, naming
+architects, strengthening "one of the largest in North America" into "largest in
+the world". Worth giving pin writing the same discipline.

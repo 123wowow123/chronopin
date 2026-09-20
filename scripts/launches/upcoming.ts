@@ -1,19 +1,28 @@
-// SpaceX's launch schedule as pins, each with an estimated flight path.
-// The schedule is Launch Library 2 (thespacedevs.com, free, no key); a launch
-// becomes a pin at its launch pad, and the pin page draws the path from there
-// (src/lib/groundTrack.ts) with a link to the launch's Flight Club simulation.
-// Flight Club's own trajectory data needs a login, so the path is estimated.
+// The world's upcoming launch schedule as pins, each with an estimated flight
+// path. The schedule is Launch Library 2 (thespacedevs.com, free, no key); a
+// launch becomes a pin at its launch pad, and the pin page draws the path from
+// there (src/lib/groundTrack.ts) with a link to the launch's Flight Club
+// simulation. Flight Club's own trajectory data needs a login, so the path is
+// estimated.
+//
+// Only a launch with a day-or-better NET is pinned, which is most of SpaceX's
+// manifest and a minority of everyone else's: the rest of the world's launches
+// sit at month or quarter precision until close to the day, so a nightly run
+// picks each one up as its date firms.
 //
 // New pins go through the running app's POST /api/pins so the live feed,
 // search and duplicate checks see them; an already-pinned launch only has its
-// path refreshed. The launches form one response thread, each answering the
-// one after it by launch time, so the latest launch heads the thread (a single
-// linear chain, as a series is). Log in as a curator:
+// path refreshed. Each provider's launches form their own response thread,
+// each answering the one after it by launch time, so the latest launch heads
+// the thread (a single linear chain per provider, as a series is). Log in as a
+// curator:
 //
-//   CURATOR_EMAIL=... CURATOR_PASSWORD=... npm run spacex:launches
-//   npm run spacex:launches -- --dry-run          list what would happen
-//   npm run spacex:launches -- --limit 10         the next 10 launches
-//   npm run spacex:launches -- --base http://localhost:3000
+//   CURATOR_EMAIL=... CURATOR_PASSWORD=... npm run launches:upcoming
+//   npm run launches:upcoming -- --dry-run         list what would happen
+//   npm run launches:upcoming -- --limit 10        the next 10 launches
+//   npm run launches:upcoming -- --provider SpaceX,Rocket\ Lab
+//   npm run spacex:launches                        SpaceX alone, as before
+//   npm run launches:upcoming -- --base http://localhost:3000
 
 import '../env';
 import { parseArgs } from 'node:util';
@@ -25,12 +34,15 @@ import { saveFlightPath } from '@/server/services/pinFlightPath';
 const { values: flags } = parseArgs({
   options: {
     'dry-run': { type: 'boolean', default: false },
+    // Comma-separated launch-service-provider names exactly as Launch Library
+    // spells them ("Rocket Lab", "Arianespace"); empty means every provider.
+    provider: { type: 'string', default: '' },
     limit: { type: 'string', default: '30' },
     base: { type: 'string', default: 'http://localhost:3000' },
   },
 });
 
-const LL2 = 'https://ll.thespacedevs.com/2.3.0/launches/upcoming/?lsp__name=SpaceX&mode=detailed&ordering=net';
+const LL2 = 'https://ll.thespacedevs.com/2.3.0/launches/upcoming/?mode=detailed&ordering=net';
 // LL2's net_precision ids: 0-3 are a second up to a day; coarser ones are a
 // month, quarter or year, which the timeline cannot place.
 const DAY_PRECISION = 3;
@@ -46,18 +58,40 @@ type Launch = {
   flightclub_url: string | null;
   info_urls: { url: string }[];
   mission: { name: string; description: string | null; orbit: { name: string } | null } | null;
+  launch_service_provider: { name: string } | null;
   pad: { name: string; latitude: string | number; longitude: string | number; location: { name: string } };
   rocket: { configuration: { name: string }; launcher_stage?: { landing?: { landing_location?: { name: string } | null } | null }[] };
 };
 
-async function fetchLaunches(limit: number): Promise<Launch[]> {
-  const response = await fetch(`${LL2}&limit=${limit}`, { headers: { 'User-Agent': 'chronopin (launch schedule)' } });
+async function fetchLaunches(limit: number, providers: string[]): Promise<Launch[]> {
+  // One provider filters server-side; several are filtered here, because LL2
+  // takes only a single lsp__name and its ~15 calls an hour are worth saving.
+  const filter = providers.length === 1 ? `&lsp__name=${encodeURIComponent(providers[0])}` : '';
+  const response = await fetch(`${LL2}${filter}&limit=${limit}`, { headers: { 'User-Agent': 'chronopin (launch schedule)' } });
   if (!response.ok) throw new Error(`Launch Library ${response.status}: ${(await response.text()).slice(0, 200)}`);
-  return ((await response.json()) as { results: Launch[] }).results;
+  const results = ((await response.json()) as { results: Launch[] }).results;
+  if (providers.length < 2) return results;
+  const wanted = new Set(providers.map((p) => p.toLowerCase()));
+  return results.filter((l) => wanted.has(providerOf(l).toLowerCase()));
 }
 
+const providerOf = (l: Launch) => l.launch_service_provider?.name ?? 'Unknown';
+
+// Launch Library carries a dated slot long before the payload is announced,
+// especially for Chinese launches, and files it as "Unknown Payload" with a
+// "Details TBD" description. That is a real launch but not yet a story, and a
+// nightly run would keep re-offering it, so it waits until it has a name.
+const named = (l: Launch) => !/^\s*(unknown|tbd|classified|undisclosed)\b/i.test(l.mission?.name ?? l.name.split('|').pop() ?? '');
+
 // The launch's own page when it has one; else its Launch Library record.
-const sourceUrlOf = (l: Launch) => l.info_urls.find((u) => /spacex\.com\/launches\//.test(u.url))?.url ?? `https://ll.thespacedevs.com/2.3.0/launches/${l.id}/`;
+// Only patterns known to be one-page-per-launch are trusted, because the
+// sourceUrl is the already-pinned key and the route rejects a duplicate: a
+// provider that points every launch at one press release or a listing page
+// would make the second pin fail. Everything else falls back to the LL2
+// record, which is unique per launch by construction.
+const LAUNCH_PAGES = [/spacex\.com\/launches\//, /rocketlabcorp\.com\/missions\/launches\//];
+const sourceUrlOf = (l: Launch) =>
+  l.info_urls.find((u) => LAUNCH_PAGES.some((p) => p.test(u.url)))?.url ?? `https://ll.thespacedevs.com/2.3.0/launches/${l.id}/`;
 
 function pinBody(l: Launch) {
   const vehicle = l.rocket.configuration.name;
@@ -86,7 +120,7 @@ function pinBody(l: Launch) {
     utcEndDateTime: dayOnly ? new Date(day.getTime() + DAY_MS).toISOString() : windowEnd && windowEnd > start ? windowEnd.toISOString() : null,
     dateConfidence: 'scheduled',
     dateConfidenceReasoning: 'Launch Library 2 lists this as the no-earlier-than launch time; launches slip.',
-    company: 'SpaceX',
+    company: providerOf(l),
     categories: ['Space & Astronomy'],
     media: l.image?.image_url ? [{ type: 1, originalUrl: l.image.image_url }] : [],
   };
@@ -107,9 +141,11 @@ async function login(base: string): Promise<string> {
   return ((await response.json()) as { token: string }).token;
 }
 
-// Every launch pin answers the one launched just after it, so the thread
-// reads newest first: the latest launch is the thread's first entry and the
-// oldest the highest number. Each move is a PUT of the whole pin with its new
+// Every launch pin answers the one launched just after it *by the same
+// provider*, so each provider reads as its own thread, newest first: the
+// latest launch is the thread's first entry and the oldest the highest number.
+// One chain across providers would interleave Electron and Falcon 9 into a
+// story neither of them is telling. Each move is a PUT of the whole pin with its new
 // parent, so the live feed, search and the pages' caches hear about it (a
 // direct UPDATE left the head of the chain showing no thread). Done from the
 // latest back, so a pin is never moved under one of its own replies. Returns
@@ -136,8 +172,14 @@ async function chainLaunches(sourceUrls: string[], token: string): Promise<numbe
 }
 
 async function run() {
-  const launches = (await fetchLaunches(Number(flags.limit))).filter((l) => (l.net_precision?.id ?? 9) <= DAY_PRECISION && Number(l.pad.latitude));
-  console.log(`${launches.length} dated SpaceX launch(es) from Launch Library`);
+  const providers = flags
+    .provider!.split(',')
+    .map((p) => p.trim())
+    .filter(Boolean);
+  const all = await fetchLaunches(Number(flags.limit), providers);
+  const launches = all.filter((l) => (l.net_precision?.id ?? 9) <= DAY_PRECISION && Number(l.pad.latitude) && named(l));
+  const who = providers.length ? providers.join(', ') : 'every provider';
+  console.log(`${launches.length} of ${all.length} upcoming launch(es) from Launch Library are dated to the day or better (${who})`);
   const token = flags['dry-run'] ? '' : await login(flags.base!);
   let created = 0;
   let refreshed = 0;
@@ -163,7 +205,12 @@ async function run() {
     }
     created++;
   }
-  const moved = flags['dry-run'] ? 0 : await chainLaunches(launches.map(sourceUrlOf), token);
+  let moved = 0;
+  if (!flags['dry-run']) {
+    const byProvider = new Map<string, Launch[]>();
+    for (const l of launches) byProvider.set(providerOf(l), (byProvider.get(providerOf(l)) ?? []).concat(l));
+    for (const group of byProvider.values()) moved += await chainLaunches(group.map(sourceUrlOf), token);
+  }
   console.log(`${moved} re-threaded`);
   console.log(`${created} created, ${refreshed} refreshed${flags['dry-run'] ? ' (dry run)' : ''}`);
 }

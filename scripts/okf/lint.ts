@@ -15,6 +15,8 @@
 //   quality        thin/blank/repetitive wikis, pins w/o summary   --fix queues rewrites, writes summaries
 //   contradiction  Claude compares each pin's link wikis           report only; with no API credit, pins
 //                                                                  left over are checked by hand (wiki:export)
+//   imprecise      future pins dated to a year alone, which one    report only
+//                  better reference would sharpen
 //
 // --limit caps the links re-read and the pins checked for contradictions per run.
 

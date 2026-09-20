@@ -22,6 +22,7 @@ import { PinAwards } from '@/components/pin/PinAwards';
 import { PinTags } from '@/components/pin/PinTags';
 import { PinRatings, RatingSummary } from '@/components/pin/PinRatings';
 import { EpisodeCount } from '@/components/pin/EpisodeCount';
+import { MarketVolume } from '@/components/pin/MarketVolume';
 import { PinReferences } from '@/components/pin/PinReferences';
 import { PinMapLoader } from '@/components/pin/PinMapLoader';
 import { PinMediaFrame } from '@/components/pin/PinMedia';
@@ -288,6 +289,7 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
       <div className="-mt-1 mb-4 flex flex-wrap items-center gap-2 empty:hidden">
         <PinRatings ratings={pin.ratings} className="" />
         <EpisodeCount pin={pin} />
+        <MarketVolume pin={pin} />
       </div>
       <PinAwards awards={pin.awards} />
       {pinMarketRefs(pin).length ? <PinOdds pinId={pin.id} /> : null}

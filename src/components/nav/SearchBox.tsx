@@ -50,6 +50,11 @@ function toItems(query: string): QueryPart[] {
 // The field's name is shown in the page's language; the query keeps "tag:".
 function termLabel(part: TermPart, t: Translator) {
   if (part.field === 'user') return { field: null, value: `@${part.value.replace(/^@+/, '')}` };
+  // A list of pin ids says nothing to read; how many there are does.
+  if (part.field === 'pin') {
+    const count = part.value.split(',').filter((id) => id.trim()).length;
+    return { field: null, value: t('search.pinCount', { count }) };
+  }
   return { field: t.dynamic(`search.fields.${part.field}`, part.field), value: isCategory(part.value) ? categoryLabel(t, part.value) : part.value };
 }
 

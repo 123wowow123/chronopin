@@ -120,6 +120,18 @@ if (!g.__chronopinPinListeners) {
   pinEvents.on('save', syncAwards);
   pinEvents.on('update', syncAwards);
 
+  // The money on the prediction markets the pin links to, stored for its
+  // timeline weight (services/pinMarketVolume.ts). A scraped market pin gets
+  // its figure here, and an edit that adds or drops a market link re-reads it.
+  const syncMarketVolume = (pin: Row) => {
+    import('./services/pinMarketVolume')
+      .then(({ syncPinMarketVolume }) => syncPinMarketVolume(Number(pin.id)))
+      .then((sync) => (sync ? import('./services/cache').then(({ invalidatePin }) => invalidatePin(Number(pin.id))) : undefined))
+      .catch((err) => log.warn(`market volume sync failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', syncMarketVolume);
+  pinEvents.on('update', syncMarketVolume);
+
   // A film, show or game's review score from Kalshi's markets on it
   // (services/pinScoreMarket.ts); a pin posted by API without a scrape gets
   // it here, and an edit refreshes a forecast.

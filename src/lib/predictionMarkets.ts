@@ -16,6 +16,9 @@ export type MarketOutcome = {
   label: string;
   // The market's chance for this outcome, 0-1.
   probability: number | null;
+  // The dollars traded on this outcome's own market, where the exchange says
+  // (never for the two sides of a single yes/no market, which would count the
+  // same money twice).
   volume?: number;
   // Which price history is this outcome's, for its trend (GET /api/pins/:id/trend).
   history?: string;
@@ -29,6 +32,9 @@ export type MarketOdds = {
   url: string;
   title: string;
   outcomes: MarketOutcome[];
+  // The dollars traded on the market. Polymarket reports this; Kalshi's is
+  // its contracts at their last price, an estimate; Polymarket US publishes
+  // none, so it is undefined there.
   volume?: number;
   closeTime?: string;
   closed: boolean;
@@ -71,6 +77,14 @@ export function parseMarketUrl(raw: string | null | undefined): MarketRef | null
   }
 
   return null;
+}
+
+// The money on the markets a pin cites, in dollars: shown on the pin page
+// beside each market, and kept on the pin ("marketVolume", schema 0053) for
+// its timeline weight (lib/bagSample.ts). Markets that report no volume count
+// as nothing, so a pin citing only those stays at zero.
+export function totalMarketVolume(markets: { volume?: number }[]): number {
+  return markets.reduce((sum, market) => sum + Math.max(0, market.volume ?? 0), 0);
 }
 
 // The key a market is known by, the same for any link to it.

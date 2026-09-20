@@ -36,6 +36,15 @@ The target is **3 media per pin, by best effort, at least 1 a video and at least
 - **Kalshi score forecast:** KXRT (Rotten Tomatoes) and KXMC (Metacritic) events. While open it prices P(score > N) into a market-implied "Kalshi RT forecast", kept as its own rating, never averaged with the site's. Once settled, the event's `expiration_value` is the site's actual score.
 - **Backfill:** `npm run media:screen` (dry run by default, `--apply`, `--ids`, `--skip-trailer`, where `--skip-trailer all` looks up nothing but ratings and episode counts). A pin that already has an episode count keeps it.
 
+# Market volume
+
+A pin whose `sourceUrl` or references link Kalshi, Polymarket or Polymarket US carries the dollars traded across those markets ([pinMarketVolume.ts](../../../src/server/services/pinMarketVolume.ts), `Pin.marketVolume`, schema 0053). Like the other enrichments it runs after every save and edit, never from anything an author types.
+
+- **Where the figure comes from:** Polymarket's `volume` in dollars; Kalshi's `volume_fp` contracts priced at `last_price_dollars`, an estimate at today's price that can drift down when the price falls; nothing from Polymarket US, which publishes no volume. A market the exchange will not answer for counts as nothing and leaves the last figure standing.
+- **Kept up:** the odds feed stores what it has already read while anyone is looking at the pin (at most hourly, and only when the figure moved more than 2%), so a busy market's pin does not go stale between edits.
+- **Backfill:** `npm run markets:volume` (dry run), `-- --apply`, `-- --ids`, `-- --stale 1d` for only the figures older than that. It is left out of `seedPins.json`, so a fresh seed needs one run.
+- **What reads it:** the pin page's "traded" pill and each market box's own figure, and the timeline's bag weight ([bagSample.ts](../../../src/lib/bagSample.ts)), which multiplies a pin by 1 + half a point per tenfold above $10,000, capped at 2.5x.
+
 # Place and company
 
 For a film, TV series, anime or game with no place from the page, the pin goes on the map at its studio's headquarters ([studioLocation.ts](../../../src/server/studioLocation.ts)): Wikipedia, then Wikidata's headquarters claim (`P159`) in order of precision: the claim's own coordinates and English street address, the company's own coordinates, then the headquarters place's coordinates labelled "Ward, City, Country". A country-only answer is rejected (the middle of a country is no studio's address). The result is kept on the company (`hqAddress`, `hqLatitude`, `hqLongitude`), so a studio is looked up once. `placeAtStudio` runs after every save; `npm run media:studio-locations` backfills.

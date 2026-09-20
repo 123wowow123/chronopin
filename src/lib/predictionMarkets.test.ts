@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { parseMarketUrl, pinMarketRefs } from './predictionMarkets';
+import { parseMarketUrl, pinMarketRefs, totalMarketVolume } from './predictionMarkets';
 
 describe('parseMarketUrl', () => {
   it('reads Polymarket US event links, apart from polymarket.com ones', () => {
@@ -16,5 +16,13 @@ describe('parseMarketUrl', () => {
   it('keeps the same slug on the two exchanges as two markets', () => {
     const refs = pinMarketRefs({ sourceUrl: 'https://polymarket.com/event/same-slug', references: [{ url: 'https://polymarket.us/event/same-slug' }] });
     expect(refs.map((ref) => ref.source)).toEqual(['Polymarket', 'Polymarket US']);
+  });
+});
+
+describe('totalMarketVolume', () => {
+  it('adds up what the markets report and passes over what they do not', () => {
+    expect(totalMarketVolume([{ volume: 1_500 }, {}, { volume: 500 }])).toBe(2_000);
+    expect(totalMarketVolume([{}, {}])).toBe(0);
+    expect(totalMarketVolume([])).toBe(0);
   });
 });

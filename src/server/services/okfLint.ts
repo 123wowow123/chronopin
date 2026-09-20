@@ -22,7 +22,7 @@ import { ingestSource, pinLinks, refreshPin, type PinLinks } from './sourceWiki'
 //                  wikis but no summary                         version); rebuild the summary
 //   contradiction  Claude compares a pin's link wikis           report only (for an admin to review)
 
-export const LINT_CHECKS: LintCheck[] = ['conformance', 'stale', 'orphan', 'quality', 'contradiction'];
+export const LINT_CHECKS: LintCheck[] = ['conformance', 'stale', 'orphan', 'quality', 'contradiction', 'imprecise'];
 
 export type LintOptions = {
   checks?: LintCheck[];
@@ -69,7 +69,47 @@ const CHECKS: Record<LintCheck, (options: LintOptions, refresh: Set<number>) => 
   orphan: lintOrphans,
   quality: lintQuality,
   contradiction: lintContradictions,
+  imprecise: lintImprecise,
 };
+
+// A date only as precise as the year its source gave. The convention puts a
+// bare year on 31 December, which is a placeholder for "some time that year",
+// not a claim about the day - so these are the pins where one better reference
+// buys the most: a later article naming the month or the day retires a whole
+// year of uncertainty. Only pins still ahead of us are worth chasing; a bare
+// year on something that happened in 1150 is as good as it will ever get.
+// Only estimated and delayed dates qualify: a scheduled one is a day somebody
+// announced, so a scheduled pin landing on 1 January or 31 December is there
+// because the event is (a line opening on New Year's Day, a statutory deadline
+// on the last of December), not because nobody knew the day.
+// Nothing here fetches or calls Claude, so it runs on every lint.
+const YEAR_END = '12-31';
+const YEAR_START = '01-01';
+
+async function lintImprecise({ pinIds }: LintOptions): Promise<CheckReport> {
+  const out = newReport();
+  const rows = await db.query<{ id: number; title: string; day: string; conf: string }>(
+    `SELECT p."id", p."title", to_char(p."utcStartDateTime", 'YYYY-MM-DD') AS day, p."dateConfidence" AS conf
+     FROM "Pin" p
+     WHERE p."utcDeletedDateTime" IS NULL AND p."allDay"
+       AND p."dateConfidence" IN ('estimated', 'delayed')
+       AND to_char(p."utcStartDateTime", 'MM-DD') IN ($1, $2)
+       AND p."utcStartDateTime" > now()
+       AND ($3::int[] IS NULL OR p."id" = ANY($3::int[]))
+     ORDER BY p."utcStartDateTime"`,
+    [YEAR_END, YEAR_START, pinIds ?? null],
+  );
+  out.findings = rows.map((row) => ({
+    check: 'imprecise' as const,
+    severity: 'info' as const,
+    pinId: row.id,
+    message: `Date is year-precision only (${row.day.slice(0, 4)}, ${row.conf}); check back for a reference that names the month or the day`,
+    detail: { day: row.day, dateConfidence: row.conf },
+  }));
+  await OkfLint.replace('imprecise', out.findings, pinIds ? { pinIds, sourceIds: [] } : undefined);
+  out.notes.push(`${rows.length} pin(s) dated to a year alone`);
+  return out;
+}
 
 // The ids a bundle path is about: pins/930-x.md, sources/12-y/1-z.md.
 const idOf = (path: string, dir: 'pins' | 'sources') => {

@@ -24,7 +24,39 @@ const types = {
   today: 'today',
   // A new pin for a company you follow. The actor is the pin's author.
   company: 'company',
+  // A new pin from someone you follow. The actor is the pin's author.
+  pin: 'pin',
 } as const;
+
+// A batch of pins from one person, or for one company, on one day is one
+// entry in the bell: a curator posting thirty scraped pins should not push
+// everything else out of the list. The day is the viewer's own, so the entry
+// and the "posted:" search it links to draw the same line. Every other kind
+// stands alone, keyed by its own id.
+const groupKey = (zone: string) => `
+        concat(
+          CASE n."type"
+            WHEN 'pin' THEN concat('pin:', n."actorId")
+            WHEN 'company' THEN concat('company:', n."companyId")
+            ELSE concat('one:', n."id")
+          END,
+          ':', (n."utcCreatedDateTime" AT TIME ZONE ${zone})::date
+        )`;
+
+// Runs a query that reads dates in the viewer's zone, falling back to UTC for
+// a zone the browser knows but PostgreSQL does not.
+async function inZone<T>(timeZone: string, run: (zone: string) => Promise<T>): Promise<T> {
+  try {
+    return await run(timeZone);
+  } catch (err) {
+    if (timeZone === 'UTC') throw err;
+    return run('UTC');
+  }
+}
+
+// How many pins of a batch the entry carries, which is how many a "pin:"
+// search can name before its URL grows silly.
+const MAX_BATCH_PINS = 100;
 
 // How many the bell lists at most; older ones are still in the table.
 const DEFAULT_LIMIT = 30;
@@ -50,8 +82,16 @@ export type NotificationItem = {
   commentText: string | null;
   companyId: number | null;
   companyName: string | null;
+  companyLogoUrl: string | null;
   utcCreatedDateTime: Date;
   read: boolean;
+  // How many notifications this entry stands for (1 unless it is a batch),
+  // and the viewer's day they were posted on, for the "posted:" link.
+  groupCount: number;
+  groupDay: string;
+  // The pins it stands for, newest first, capped: past the cap a batch links
+  // to the day instead, which is the better answer for one that large anyway.
+  pinIds: number[];
   actor: { id: number; userName: string; firstName: string; lastName: string; pictureUrl: string | null };
   followingBack: boolean;
 };
@@ -106,6 +146,26 @@ export default class Notification {
     ).then((rows) => announce(query, rows));
   }
 
+  // One 'pin' row per follower of the pin's author, the person-shaped twin of
+  // createForCompanyFollowers: whoever followed them by the time the pin was
+  // saved hears about it. Nobody follows themselves, so no author is excluded
+  // by hand. A pin saved again is told about once - the unique index leaves
+  // one row per follower and pin.
+  static createForFollowers({ pinId, authorId }: { pinId: number; authorId: number }, query: QueryFn = db.query) {
+    return query(
+      `
+      INSERT INTO "Notification" ("userId", "actorId", "type", "pinId")
+      SELECT f."followerId", $2, 'pin', $1
+      FROM "Follow" f
+      JOIN "User" u ON u."id" = f."followerId" AND u."utcDeletedDateTime" IS NULL
+      WHERE f."followeeId" = $2 AND f."utcDeletedDateTime" IS NULL AND f."followerId" <> $2
+      ON CONFLICT ("userId", "pinId") WHERE "type" = 'pin'
+      DO NOTHING
+      RETURNING "userId"`,
+      [pinId, authorId],
+    ).then((rows) => announce(query, rows));
+  }
+
   // Soft-deletes everything a comment sent (its 'comment' and 'reply'
   // notifications), for when that comment is deleted.
   static retractForComment(commentId: number, query: QueryFn = db.query) {
@@ -125,7 +185,7 @@ export default class Notification {
   // leaves one per user, pin and day, and watching a pin again the same day
   // brings back the one unwatching took away.
   static async notifyWatchedToday(userId: number, timeZone: string) {
-    const write = (zone: string) =>
+    await inZone(timeZone, (zone) =>
       db.query(
         `
         INSERT INTO "Notification" ("userId", "actorId", "type", "pinId", "pinDay")
@@ -140,14 +200,8 @@ export default class Notification {
         WHERE "Notification"."utcDeletedDateTime" IS NOT NULL
         RETURNING "userId"`,
         [userId, zone],
-      ).then((rows) => announce(db.query, rows));
-    try {
-      await write(timeZone);
-    } catch (err) {
-      // A zone the browser knows but PostgreSQL does not.
-      if (timeZone === 'UTC') throw err;
-      await write('UTC');
-    }
+      ).then((rows) => announce(db.query, rows)),
+    );
   }
 
   // Unwatching a pin takes back its 'today' notifications.
@@ -181,40 +235,68 @@ export default class Notification {
   // follows them back (so the bell can offer "Follow back"). Pin-shaped kinds
   // carry the pin's title and the comment's text so the bell can link to them.
   // Notifications from users, pins or comments that have since been deleted
-  // are left out.
-  static list(userId: number, limit?: string | number | null) {
+  // are left out. A batch (see groupKey) arrives as its newest notification,
+  // carrying how many others stand behind it; the limit counts entries, not
+  // rows, so a batch never crowds the list.
+  static list(userId: number, limit?: string | number | null, timeZone = 'UTC') {
     const n = Math.min(Math.max(parseInt(String(limit), 10) || DEFAULT_LIMIT, 1), 100);
-    return db.query<NotificationItem>(
-      `
-      SELECT n."id", n."type", n."pinId", p."title" AS "pinTitle",
-             n."commentId", c."text" AS "commentText",
-             n."companyId", co."name"::text AS "companyName", n."utcCreatedDateTime",
-             n."utcReadDateTime" IS NOT NULL AS "read",
-             json_build_object(
-               'id', a."id",
-               'userName', a."userName",
-               'firstName', a."firstName",
-               'lastName', a."lastName",
-               'pictureUrl', a."pictureUrl"
-             ) AS "actor",
-             EXISTS (SELECT 1 FROM "Follow" f
-               WHERE f."followerId" = n."userId" AND f."followeeId" = n."actorId"
-                 AND f."utcDeletedDateTime" IS NULL) AS "followingBack"
-      ${VISIBLE_FROM}
-        AND n."userId" = $1 AND n."utcDeletedDateTime" IS NULL
-      ORDER BY n."utcCreatedDateTime" DESC, n."id" DESC
-      LIMIT $2`,
-      [userId, n],
+    return inZone(timeZone, (zone) =>
+      db.query<NotificationItem>(
+        `
+      WITH visible AS (
+        SELECT n."id", n."type", n."pinId", p."title" AS "pinTitle",
+               n."commentId", c."text" AS "commentText",
+               n."companyId", co."name"::text AS "companyName", co."logoUrl" AS "companyLogoUrl",
+               n."utcCreatedDateTime", n."utcReadDateTime",
+               to_char((n."utcCreatedDateTime" AT TIME ZONE $2)::date, 'YYYY-MM-DD') AS "groupDay",
+               ${groupKey('$2')} AS "groupKey",
+               json_build_object(
+                 'id', a."id",
+                 'userName', a."userName",
+                 'firstName', a."firstName",
+                 'lastName', a."lastName",
+                 'pictureUrl', a."pictureUrl"
+               ) AS "actor",
+               EXISTS (SELECT 1 FROM "Follow" f
+                 WHERE f."followerId" = n."userId" AND f."followeeId" = n."actorId"
+                   AND f."utcDeletedDateTime" IS NULL) AS "followingBack"
+        ${VISIBLE_FROM}
+          AND n."userId" = $1 AND n."utcDeletedDateTime" IS NULL
+      ),
+      entries AS (
+        -- The newest of each batch stands for it, and a batch counts as read
+        -- only once every notification in it has been.
+        SELECT DISTINCT ON ("groupKey") *,
+               COUNT(*) OVER (PARTITION BY "groupKey")::int AS "groupCount",
+               bool_and("utcReadDateTime" IS NOT NULL) OVER (PARTITION BY "groupKey") AS "read",
+               array_agg("pinId") FILTER (WHERE "pinId" IS NOT NULL)
+                 OVER (PARTITION BY "groupKey" ORDER BY "utcCreatedDateTime" DESC, "id" DESC
+                       ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS "pinIds"
+        FROM visible
+        ORDER BY "groupKey", "utcCreatedDateTime" DESC, "id" DESC
+      )
+      SELECT "id", "type", "pinId", "pinTitle", "commentId", "commentText", "companyId",
+             "companyName", "companyLogoUrl", "utcCreatedDateTime", "read", "actor",
+             "followingBack", "groupCount", "groupDay",
+             COALESCE("pinIds"[1:${MAX_BATCH_PINS}], '{}') AS "pinIds"
+      FROM entries
+      ORDER BY "utcCreatedDateTime" DESC, "id" DESC
+      LIMIT $3`,
+        [userId, zone, n],
+      ),
     );
   }
 
-  static async unreadCount(userId: number): Promise<number> {
-    const rows = await db.query<{ count: number }>(
-      `
-      SELECT COUNT(*) AS "count"
+  // Entries, not rows, so the badge agrees with what the list shows.
+  static async unreadCount(userId: number, timeZone = 'UTC'): Promise<number> {
+    const rows = await inZone(timeZone, (zone) =>
+      db.query<{ count: number }>(
+        `
+      SELECT COUNT(DISTINCT ${groupKey('$2')}) AS "count"
       ${VISIBLE_FROM}
         AND n."userId" = $1 AND n."utcReadDateTime" IS NULL AND n."utcDeletedDateTime" IS NULL`,
-      [userId],
+        [userId, zone],
+      ),
     );
     return rows[0].count;
   }

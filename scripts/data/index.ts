@@ -75,8 +75,12 @@ async function saveDB() {
   // Tickers are in seedStocks.json; the view's copy on each pin is left out.
   // Awards are derived (npm run media:awards puts them back). Tags are in
   // seedTags.json, and the award ones follow the awards. Flight paths are in
-  // seedFlightPaths.json.
-  const pins = all.map(({ stocks: _stocks, awards: _awards, tags: _tags, flightPath: _flightPath, ...pin }) => pin);
+  // seedFlightPaths.json. The money on a pin's markets is a reading of the
+  // exchanges that createPin does not restore and that goes stale by the day,
+  // so it is left out too: `npm run markets:volume -- --apply` reads it again.
+  const pins = all.map(
+    ({ stocks: _stocks, awards: _awards, tags: _tags, flightPath: _flightPath, marketVolume: _marketVolume, marketVolumeAt: _marketVolumeAt, ...pin }) => pin,
+  );
   const data = excludeE2e({
     users: await Users.getAll(BACKUP_USER_PROPS),
     pins,
