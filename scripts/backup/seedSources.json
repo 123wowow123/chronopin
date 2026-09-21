@@ -83267,6 +83267,60 @@
       "utcAttemptedDateTime": "2026-09-21T20:58:26.656Z",
       "utcBuiltDateTime": null,
       "utcCreatedDateTime": "2026-09-21T20:58:25.534Z"
+    },
+    {
+      "id": 17045,
+      "urlKey": "sandiego.eater.com/2017/12/11/16761732/menya-ultra-ramen-japanese-restaurant-mira-mesa",
+      "url": "https://sandiego.eater.com/2017/12/11/16761732/menya-ultra-ramen-japanese-restaurant-mira-mesa",
+      "kind": "web",
+      "title": null,
+      "status": "pending",
+      "textHash": "e8fe0d407c70436ff47960340043118ec77d529f3c23cbbabe683a84a2c8ffa9",
+      "sourceModifiedDate": null,
+      "generatedBy": null,
+      "wikiVersion": 0,
+      "attempts": 0,
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfHJpFa4wuFigeFSTRUvG\"}",
+      "utcFetchedDateTime": "2026-09-21T21:35:05.495Z",
+      "utcAttemptedDateTime": "2026-09-21T21:38:32.916Z",
+      "utcBuiltDateTime": null,
+      "utcCreatedDateTime": "2026-09-21T21:35:05.495Z"
+    },
+    {
+      "id": 17047,
+      "urlKey": "menya-ultra.com",
+      "url": "https://menya-ultra.com/",
+      "kind": "web",
+      "title": "Menya Ultra |",
+      "status": "pending",
+      "textHash": "ddf0721cd467d81426ea4f0a455810015e6558459be197bdb8f7aa240191f681",
+      "sourceModifiedDate": null,
+      "generatedBy": null,
+      "wikiVersion": 0,
+      "attempts": 0,
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfHJpL5vyrGLYFBAbitqR\"}",
+      "utcFetchedDateTime": "2026-09-21T21:38:33.677Z",
+      "utcAttemptedDateTime": "2026-09-21T21:38:33.850Z",
+      "utcBuiltDateTime": null,
+      "utcCreatedDateTime": "2026-09-21T21:38:32.570Z"
+    },
+    {
+      "id": 17048,
+      "urlKey": "sandiegoville.com/2018/10/ramen-sensation-menya-ultra-grand-opens.html",
+      "url": "https://www.sandiegoville.com/2018/10/ramen-sensation-menya-ultra-grand-opens.html",
+      "kind": "web",
+      "title": "SanDiegoVille: Ramen Sensation Menya Ultra Grand Opens Second San Diego Location Next Week",
+      "status": "pending",
+      "textHash": "e5948ff99b982a1b5e098bd9ac7cd1ad61931386ad58c4dc127bd46bb2a0bb85",
+      "sourceModifiedDate": null,
+      "generatedBy": null,
+      "wikiVersion": 0,
+      "attempts": 0,
+      "lastError": "anthropic rejected the request: 400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011CfHJpJoY6fsxJuP8EeJqB\"}",
+      "utcFetchedDateTime": "2026-09-21T21:38:33.362Z",
+      "utcAttemptedDateTime": "2026-09-21T21:38:33.595Z",
+      "utcBuiltDateTime": null,
+      "utcCreatedDateTime": "2026-09-21T21:38:32.576Z"
     }
   ],
   "wikis": [
@@ -224960,6 +225014,30 @@
       "summarizedWikiVersion": 1,
       "utcRemovedDateTime": null,
       "utcCreatedDateTime": "2026-09-21T20:58:25.538Z"
+    },
+    {
+      "pinId": 2455,
+      "sourceId": 17045,
+      "role": "source",
+      "summarizedWikiVersion": 1,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-21T21:38:32.578Z"
+    },
+    {
+      "pinId": 2455,
+      "sourceId": 17047,
+      "role": "reference",
+      "summarizedWikiVersion": 1,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-21T21:38:32.578Z"
+    },
+    {
+      "pinId": 2455,
+      "sourceId": 17048,
+      "role": "reference",
+      "summarizedWikiVersion": 1,
+      "utcRemovedDateTime": null,
+      "utcCreatedDateTime": "2026-09-21T21:38:32.578Z"
     }
   ],
   "lintFindings": [
