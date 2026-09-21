@@ -20,6 +20,7 @@ import { PinMediaFrame } from './PinMedia';
 import { RatingSummary } from './PinRatings';
 import { EpisodeCount } from './EpisodeCount';
 import { RefineLink } from './RefineLink';
+import { PlaceLinks } from './PlaceLinks';
 import { ViewCount } from './ViewCount';
 import { WatchButton } from './WatchButton';
 import { WeatherIcon } from './WeatherIcon';
@@ -82,7 +83,10 @@ export function PinCard({
   ) : null;
 
   // Company and place for a pin without a medium to label: the company in the
-  // same pill the pin page uses for its chips, the place as plain text.
+  // same pill the pin page uses for its chips, the place as its parts, each
+  // a search for the pins standing there. Over a picture the place stays
+  // plain text - the frame is itself a link to the pin, and a link cannot
+  // hold another.
   const placeRow =
     company || pin.address ? (
       <div className="mb-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
@@ -92,7 +96,7 @@ export function PinCard({
             <CompanyTicker pin={pin} />
           </span>
         ) : null}
-        {pin.address ? <span>{pin.address}</span> : null}
+        {pin.address ? <PlaceLinks address={pin.address} /> : null}
       </div>
     ) : null;
 

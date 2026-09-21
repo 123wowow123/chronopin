@@ -83,6 +83,7 @@ const en = {
       posted: 'posted',
       tag: 'tag',
       category: 'category',
+      place: 'place',
     },
     pinsMatching: 'Pins matching {query}',
     pinCount: { one: '{count} pin', other: '{count} pins' },

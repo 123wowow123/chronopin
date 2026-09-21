@@ -83,6 +83,7 @@ const zh: Messages = {
       posted: '发布于',
       tag: '标签',
       category: '分类',
+      place: '地点',
     },
     pinsMatching: '与“{query}”匹配的图钉',
     pinCount: '{count} 个图钉',

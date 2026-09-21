@@ -82,6 +82,7 @@ const es: Messages = {
       posted: 'publicado',
       tag: 'etiqueta',
       category: 'categoría',
+      place: 'lugar',
     },
     pinsMatching: 'Pines que coinciden con {query}',
     pinCount: { one: '{count} pin', other: '{count} pines' },

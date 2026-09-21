@@ -82,6 +82,7 @@ const fr: Messages = {
       posted: 'publié',
       tag: 'tag',
       category: 'catégorie',
+      place: 'lieu',
     },
     pinsMatching: 'Épingles correspondant à {query}',
     pinCount: { one: '{count} épingle', other: '{count} épingles' },

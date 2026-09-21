@@ -1,6 +1,8 @@
-// Pin search: free text goes to the FAISS service for its best matches; label
-// terms (user:, company:, confidence:, tag: - and category:, read as tag:), the Watch choice and the
-// time filters narrow them in the database, which also pages the results.
+// Pin search: free text goes to the FAISS service for its best matches, and
+// also finds the pins standing in the place it names; label terms (user:,
+// company:, confidence:, tag: - and category:, read as tag: - and place:),
+// the Watch choice and the time filters narrow them in the database, which
+// also pages the results.
 
 import config from '../config';
 import Comment from '../model/comment';
@@ -194,7 +196,9 @@ function asksForNothing(query: SearchQuery, options: SearchOptions) {
 }
 
 // Only the free text goes to the search service - it would read
-// "company:Apple" as words to match.
+// "company:Apple" as words to match. The text is kept on the filter too:
+// the database widens the service's hits with the pins whose address names
+// it (searchClauses).
 async function searchFilter(query: SearchQuery, options: SearchOptions): Promise<SearchFilter> {
   return {
     ...query,

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { Fragment, Suspense } from 'react';
 import { JsonLd } from '@/components/JsonLd';
 import { Comments } from '@/components/pin/Comments';
+import { PlaceLinks } from '@/components/pin/PlaceLinks';
 import { CompanyTicker } from '@/components/pin/CompanyTicker';
 import { CountdownMeter } from '@/components/pin/CountdownMeter';
 import { CitedText } from '@/components/pin/CitedText';
@@ -106,7 +107,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
                 {pin.address ? (
                   <p className="flex min-w-0 items-center gap-1.5 text-muted">
                     <Icon name="pin" className="size-4 shrink-0" />
-                    {pin.address}
+                    <PlaceLinks address={pin.address} className="min-w-0" />
                   </p>
                 ) : (
                   <span />
@@ -182,12 +183,14 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
   // The map labels the place itself; the text is only for an address it cannot draw.
   const locationText = pin.address && !hasCoordinates ? pin.address : null;
 
-  // Company and place as plain text, for a pin without a medium to label.
+  // Company and place for a pin without a medium to label, the place as its
+  // parts, each a search for the pins standing there. Over a picture it stays
+  // plain text: that frame is a link to the pin, and a link cannot hold another.
   const placeRow =
     company || locationText ? (
       <div className="mb-2 flex flex-wrap gap-x-3 text-sm text-muted">
         {company}
-        {locationText ? <span>{locationText}</span> : null}
+        {locationText ? <PlaceLinks address={locationText} /> : null}
       </div>
     ) : null;
 

@@ -20,6 +20,14 @@
 // link to one. posted: takes a day the same way, for the pins posted that day
 // in the viewer's time zone; a card's posted date links to one.
 //
+// place: takes anywhere a pin's address names - a city, a state, a postal
+// code, a country (place:Chicago, place:60601, place:Texas, place:"New
+// York"). The address is one label written by whoever placed the pin
+// ("Brooklyn Bridge, New York, NY, USA"), so a value matches when it stands
+// as its own word or words anywhere in that line; US states match under
+// either their name or their two-letter code, whichever the address used.
+// A card's place label and the pin page's write one.
+//
 // user: takes a name with or without its "@" (user:@ThePinGang), and a bare
 // @ThePinGang still works on its own, as it did before user: existed.
 //
@@ -56,13 +64,15 @@ export type SearchQuery = {
   dates: string[];
   postedDays: string[];
   tags: string[];
+  // Places an address must name: cities, states, postal codes, countries.
+  places: string[];
   text: string;
 };
 
 const SMART_DOUBLE_QUOTES = /[“”„‟″]/g;
 const SMART_SINGLE_QUOTES = /[‘’‚‛′]/g;
 
-const FIELD = '(company|category|user|confidence|date|posted|tag|pin)';
+const FIELD = '(company|category|user|confidence|date|posted|tag|pin|place)';
 const DAY_KEY = /^-?\d{4,6}-\d{2}-\d{2}$/;
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
@@ -82,7 +92,7 @@ const FIELD_TERM = new RegExp(
 
 const USER_TERM = /(^|\s)(@\S+)/g;
 
-export type TermField = 'user' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'tag' | 'pin';
+export type TermField = 'user' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'tag' | 'pin' | 'place';
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string }
@@ -143,6 +153,7 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
     dates: [],
     postedDays: [],
     tags: [],
+    places: [],
     text: '',
   };
 
@@ -163,6 +174,8 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
     } else if (part.field === 'date' || part.field === 'posted') {
       // Anything but a day is left out rather than matching nothing.
       if (DAY_KEY.test(part.value)) addUnique(part.field === 'date' ? query.dates : query.postedDays, part.value);
+    } else if (part.field === 'place') {
+      addUnique(query.places, part.value);
     } else if (part.value) {
       // category: is the old name for a category's tag.
       addUnique(part.field === 'company' ? query.companies : query.tags, part.value);
@@ -174,7 +187,16 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
 }
 
 export function hasFilters(query: SearchQuery): boolean {
-  return !!(query.userNames.length || query.ids.length || query.companies.length || query.confidences.length || query.dates.length || query.postedDays.length || query.tags.length);
+  return !!(
+    query.userNames.length ||
+    query.ids.length ||
+    query.companies.length ||
+    query.confidences.length ||
+    query.dates.length ||
+    query.postedDays.length ||
+    query.tags.length ||
+    query.places.length
+  );
 }
 
 // Whether the viewer's time zone changes what the query matches: its days are

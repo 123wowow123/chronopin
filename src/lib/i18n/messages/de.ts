@@ -82,6 +82,7 @@ const de: Messages = {
       posted: 'gepostet',
       tag: 'Tag',
       category: 'Kategorie',
+      place: 'Ort',
     },
     pinsMatching: 'Pins zu {query}',
     pinCount: { one: '{count} Pin', other: '{count} Pins' },

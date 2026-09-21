@@ -44,6 +44,7 @@ describe('parseSearchQuery', () => {
       dates: [],
       postedDays: [],
       tags: ['software'],
+      places: [],
       text: 'ios',
     });
   });
@@ -68,6 +69,14 @@ describe('parseSearchQuery', () => {
 
   it('reads confidence levels, with UNVERIFIED as the stored unknown', () => {
     expect(parseSearchQuery('confidence:ESTIMATED confidence:unverified confidence:estimated').confidences).toEqual(['estimated', 'unknown']);
+  });
+
+  it('reads places - a city, a state, a postal code - quoted like any value, once each', () => {
+    expect(parseSearchQuery('place:Chicago place:"New York" PLACE:chicago place:60601 fire')).toMatchObject({
+      places: ['Chicago', 'New York', '60601'],
+      text: 'fire',
+    });
+    expect(hasFilters(parseSearchQuery('place:Texas'))).toBe(true);
   });
 });
 

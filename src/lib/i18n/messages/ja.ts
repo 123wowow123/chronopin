@@ -82,6 +82,7 @@ const ja: Messages = {
       posted: '投稿日',
       tag: 'タグ',
       category: 'カテゴリ',
+      place: '場所',
     },
     pinsMatching: '「{query}」に一致するピン',
     pinCount: 'ピン{count}件',

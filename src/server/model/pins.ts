@@ -6,18 +6,31 @@ import Pin from './pin';
 import PinTag from './pinTag';
 import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
 import { tagGroupPatterns } from '@/lib/tags';
+import { PLACE_TEXT_SCORE, looksLikePlaceText, placePatterns, wholeWordPattern } from '../util/placeMatch';
 
 // A pin "p"'s categories (its category tags, 0043), the main one first, and
 // the main one alone.
 const CATEGORIES = `ARRAY(SELECT "c"."name"::text FROM "PinTag" AS "c" WHERE "c"."pinId" = "p"."id" AND "c"."kind" = 'category' ORDER BY "c"."id")`;
 const MAIN_CATEGORY = `(SELECT "c"."name"::text FROM "PinTag" AS "c" WHERE "c"."pinId" = "p"."id" AND "c"."kind" = 'category' ORDER BY "c"."id" LIMIT 1)`;
 
-export type PinSearchFilters = { userNames: string[]; ids: number[]; companies: string[]; confidences: string[]; dates: string[]; postedDays: string[]; tags: string[] };
+export type PinSearchFilters = {
+  userNames: string[];
+  ids: number[];
+  companies: string[];
+  confidences: string[];
+  dates: string[];
+  postedDays: string[];
+  tags: string[];
+  places: string[];
+};
 
 // Everything a search narrows pins to. hits are a free-text search's matches
 // with their scores (null when the search has no free text).
 export type SearchFilter = PinSearchFilters & {
   hits: { id: number; score: number }[] | null;
+  // The free text those hits came from, which also matches pins standing in
+  // the place it names (searchClauses).
+  text?: string;
   favoriteUserId?: number | null;
   createdSince?: Date | null;
   startFrom?: Date | null;
@@ -619,10 +632,26 @@ function searchClauses(filter: SearchFilter) {
   const joins: string[] = [];
   const where = ['"Pin"."utcDeletedDateTime" IS NULL'];
 
+  // Where a pin stands: its address line, matched a whole word at a time so
+  // that a city, a state, a postal code or a country picks it out (placeMatch).
+  const addressMatches = (patterns: string[]) => `("Pin"."address" ~* ANY(${add(patterns)}::text[]))`;
+
+  // Free text is the search service's pool of best matches, widened by every
+  // pin whose address names it: someone typing "chicago" wants what happened
+  // in Chicago, whether or not the words say so, and those pins can stand
+  // well outside the pool the semantic ranking keeps.
+  const textPlace = filter.hits && filter.text && looksLikePlaceText(filter.text) ? addressMatches([wholeWordPattern(filter.text)]) : null;
+  let score = '1::float8';
   if (filter.hits) {
-    joins.push(
-      `INNER JOIN unnest(${add(filter.hits.map((h) => h.id))}::integer[], ${add(filter.hits.map((h) => h.score))}::float8[]) AS "hit" ("id", "score") ON "hit"."id" = "Pin"."id"`,
-    );
+    const hit = `unnest(${add(filter.hits.map((h) => h.id))}::integer[], ${add(filter.hits.map((h) => h.score))}::float8[]) AS "hit" ("id", "score") ON "hit"."id" = "Pin"."id"`;
+    if (textPlace) {
+      joins.push(`LEFT JOIN ${hit}`);
+      where.push(`("hit"."id" IS NOT NULL OR ${textPlace})`);
+      score = `GREATEST(COALESCE("hit"."score", 0), CASE WHEN ${textPlace} THEN ${PLACE_TEXT_SCORE}::float8 ELSE 0 END)`;
+    } else {
+      joins.push(`INNER JOIN ${hit}`);
+      score = '"hit"."score"';
+    }
   }
   // Named pins and no others, however they were found (a notification batch).
   if (filter.ids.length) {
@@ -638,6 +667,10 @@ function searchClauses(filter: SearchFilter) {
   }
   if (filter.confidences.length) {
     where.push(`"Pin"."dateConfidence"::citext = ANY(${add(filter.confidences)}::citext[])`);
+  }
+  // Any of these places: a US state under either its name or its code.
+  if (filter.places.length) {
+    where.push(addressMatches(placePatterns(filter.places)));
   }
   // Any of these tags (PinTagView: the form's, its categories, the prose's
   // and the awards').
@@ -682,6 +715,6 @@ function searchClauses(filter: SearchFilter) {
     from: ['FROM "Pin"', ...joins].join('\n      '),
     where,
     params,
-    score: filter.hits ? '"hit"."score"' : '1::float8',
+    score,
   };
 }

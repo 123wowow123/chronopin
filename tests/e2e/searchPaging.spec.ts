@@ -21,6 +21,11 @@ import { expect, test, type APIRequestContext, type Page } from '@playwright/tes
 const FILTERED = 'category:"Infrastructure & Transportation"';
 // And one of free text, which is sent - the pins FAISS matched, ranked.
 const TEXT = 'iphone';
+// Free text naming a place, which matches two ways at once: the pins FAISS
+// ranked, each by its own score, and every pin whose address says Chicago,
+// all of them scored the same. So one walk down the ranking crosses both a
+// run of equal scores and the distinct ones around it.
+const PLACE_TEXT = 'chicago';
 
 type Result = { id: number; utcStartDateTime: string; searchScore: number | null };
 
@@ -88,6 +93,22 @@ test('paging a free-text search by relevance reaches every pin it matched, once 
   // a page: the score the cursor carries is what holds that together.
   const scores = walked.map((pin) => pin.searchScore ?? 0);
   expect(scores, 'the ranking is not in order across pages').toEqual([...scores].sort((a, b) => b - a));
+});
+
+test('paging a search for a place reaches every pin there and every pin it matched', async ({ request, baseURL }) => {
+  const all = await everything(request, baseURL, PLACE_TEXT);
+  const walked = await walk(request, baseURL, PLACE_TEXT, 'relevance');
+
+  const ids = walked.map((pin) => pin.id);
+  expect(new Set(ids).size, 'a pin was sent on two pages').toBe(ids.length);
+  expect(new Set(ids)).toEqual(new Set(all.map((pin) => pin.id)));
+
+  const scores = walked.map((pin) => pin.searchScore ?? 0);
+  expect(scores, 'the ranking is not in order across pages').toEqual([...scores].sort((a, b) => b - a));
+
+  // The pins standing in the place are what someone typing it is after, so
+  // they are not left below the whole semantic pool.
+  expect(scores[0], 'a pin in the place searched for did not rank at the top').toBeGreaterThanOrEqual(0.7);
 });
 
 // A search of labels alone scores every pin it matches the same, so by
