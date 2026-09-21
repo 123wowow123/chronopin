@@ -427,6 +427,8 @@ GA: Outbound link / non-interaction events / Social Interactions tracking / User
 
 ## Before Usable
 
+create mobile app
+
 ### Before release
 
 - Use this AI to do this job: Localization is in: the site now works in English, Spanish, French, German, Japanese and Simplified Chinese. The app's own text is translated in all six, but pin text stays in English for now because the Anthropic key has no credit. 
@@ -434,6 +436,10 @@ GA: Outbound link / non-interaction events / Social Interactions tracking / User
 # Monitization
 
 - amazon & bestbuy referral links to product should be created if its something purchasable 
+
+- upgrade user to promoter and sell tickets to local events like eventbrite. will have management portal that will have dashboard to sales and impressions, and pin click, and purchases, etc. integrade with payment company - stripe 
+- track mobile desktop location, etc. Will have google analytics integration
+- can pay to become promoted pin
 
 # Testing 
 
@@ -493,12 +499,19 @@ https://trends.google.com/explore
 
 # Scraping
 
+
+slider for range radius of event
+
+
+
+clicking on distance will take you to main map and draw a line from you to that location
+
+
 add slider to search by how late project is
 
-Add suggestion to this pin:
-info icon:
-Like request to add additonal reference URL
-Suggest start and end date with with reason and reference
+Make add suggestion to this pin feature on detailed view. example:
+Suggest and provide additonal reference URL
+Suggest different start and end date with with reason and reference
 Suggest missing or correcting information
 
 
