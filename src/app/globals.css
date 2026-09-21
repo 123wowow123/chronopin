@@ -257,6 +257,10 @@
   .tag-trivia {
     @apply bg-tag-trivia/10 text-trivia-soft ring-tag-trivia/25;
   }
+  /* A marker chip that searches the web for the day's trivia. */
+  a.tag-trivia {
+    @apply transition-colors hover:bg-tag-trivia/20 hover:no-underline hover:ring-tag-trivia/50;
+  }
   /* A day's weekday-planet marker on the rail: a flat disc, cut out of the
      rail by a gap of page colour. Today's is amber, like its tags. */
   .rail-marker {

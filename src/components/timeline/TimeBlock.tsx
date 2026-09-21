@@ -11,7 +11,7 @@ import type { Bag } from '@/lib/timeline';
 import type { PinJson } from '@/lib/types';
 import type { personalWeigher } from '@/lib/userWiki';
 import { PinCard } from '@/components/pin/PinCard';
-import { useT } from '@/lib/client/i18n';
+import { useLocale, useT } from '@/lib/client/i18n';
 
 // Beside the rail (lg) tags are a fixed-width column; above the cards on
 // narrow screens they share one row, extra tags (date markers, specialty days)
@@ -23,12 +23,25 @@ const tagRow = 'absolute top-0 right-0 left-0 flex gap-1.5 overflow-hidden lg:ri
 
 type TagVariant = 'date' | 'countdown' | 'today' | 'trivia';
 
+// A day's markers are trivia the site holds no pin for, so the chip hands the
+// name to a web search in the viewer's language.
+function triviaSearchUrl(name: string, locale: string): string {
+  return `https://www.google.com/search?q=${encodeURIComponent(name)}&hl=${locale}`;
+}
+
 // Beside the rail, a `wrap` tag uses the specialty day's small type and wraps
 // to two lines (still within the 42px a tag is allowed) instead of cutting off.
-function Tag({ variant, children, title, className = '', wrap = false }: { variant: TagVariant; children: React.ReactNode; title?: string; className?: string; wrap?: boolean }) {
-  return (
-    <div className={`${tagBase} tag-${variant} ${wrap ? 'lg:text-xs lg:leading-4' : ''} ${className}`} title={title}>
-      <span className={`block truncate ${wrap ? 'lg:line-clamp-2 lg:whitespace-normal' : ''}`}>{children}</span>
+// With an `href` the chip is that search link, opened in a new tab.
+function Tag({ variant, children, title, className = '', wrap = false, href }: { variant: TagVariant; children: React.ReactNode; title?: string; className?: string; wrap?: boolean; href?: string }) {
+  const chip = `${tagBase} tag-${variant} ${wrap ? 'lg:text-xs lg:leading-4' : ''} ${className}`;
+  const label = <span className={`block truncate ${wrap ? 'lg:line-clamp-2 lg:whitespace-normal' : ''}`}>{children}</span>;
+  return href ? (
+    <a href={href} target="_blank" rel="noopener nofollow" className={chip} title={title}>
+      {label}
+    </a>
+  ) : (
+    <div className={chip} title={title}>
+      {label}
     </div>
   );
 }
@@ -129,7 +142,7 @@ export function TimeBlock({
         ) : null}
         {/* On phones only the first extra tag fits beside the date and countdown; the rest show from sm up. */}
         {bag.dateTimes.map((dt, i) => (
-          <Tag key={dt.id} variant="trivia" wrap title={dt.description || dt.title} className={`${extraTag} ${i > 0 ? 'max-sm:hidden' : ''}`}>
+          <Tag key={dt.id} variant="trivia" wrap title={dt.description || dt.title} href={triviaSearchUrl(dt.title, locale)} className={`${extraTag} ${i > 0 ? 'max-sm:hidden' : ''}`}>
             {dt.title}
           </Tag>
         ))}
@@ -165,7 +178,9 @@ export function TimeBlock({
         >
           {bag.dateTimes.map((dt) => (
             <li key={dt.id} className="pb-px">
-              <div className="font-semibold text-muted">{dt.title}</div>
+              <a href={triviaSearchUrl(dt.title, locale)} target="_blank" rel="noopener nofollow" className="font-semibold text-muted hover:text-link">
+                {dt.title}
+              </a>
               {dt.description ? <div className="mb-2 text-subtle">{dt.description}</div> : null}
             </li>
           ))}
@@ -265,10 +280,17 @@ function DuplicateStack({ pin, hiddenCount, children }: { pin: PinJson; hiddenCo
 // The day's first specialty day ("National Peanut Day"); the title lists them
 // all. Wraps to three lines, so it ends the stack.
 export function SpecialtyTag({ names, className = '' }: { names: string[]; className?: string }) {
+  const locale = useLocale();
   return (
-    <div className={`${tagBase} tag-trivia ${extraTag} lg:text-xs lg:leading-4 ${className}`} title={names.join('\n')}>
+    <a
+      href={triviaSearchUrl(names[0], locale)}
+      target="_blank"
+      rel="noopener nofollow"
+      className={`${tagBase} tag-trivia ${extraTag} lg:text-xs lg:leading-4 ${className}`}
+      title={names.join('\n')}
+    >
       <span className="block truncate lg:line-clamp-3 lg:whitespace-normal">{names[0]}</span>
-    </div>
+    </a>
   );
 }
 
