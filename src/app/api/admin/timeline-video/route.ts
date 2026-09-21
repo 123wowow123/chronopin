@@ -5,7 +5,7 @@ import { getTimelineVideo, setTimelineVideo } from '@/server/model/appSetting';
 import { expireTimeline } from '@/server/services/cache';
 import { parseTimelineVideo } from '@/lib/timelineVideo';
 
-// Whether a card on the timeline plays video on a phone.
+// Whether a pin card plays video, on a phone and on a wider screen.
 export const GET = route(async (request: NextRequest) => {
   await requireRole('admin', request);
   return json(await getTimelineVideo());
@@ -18,7 +18,7 @@ export const PUT = route(async (request: NextRequest) => {
     throw new HttpError(400, '', { message: parsed.problem });
   }
   await setTimelineVideo(parsed.setting, admin.id);
-  // The setting rides along on every cached timeline and search page.
+  // The setting rides along on every cached page of cards.
   expireTimeline();
   return json(parsed.setting);
 });

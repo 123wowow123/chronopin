@@ -1,7 +1,8 @@
-// Whether a card on the timeline loads its video player, on a phone and on a
-// wider screen. Otherwise it shows the video's still picture. A YouTube embed
-// is by far the heaviest thing a card pulls in, and a timeline is a column of
-// cards nobody asked to play; the pin's own page always plays.
+// Whether a pin card loads its video player, on a phone and on a wider
+// screen. Otherwise it shows the video's still picture. A YouTube embed is by
+// far the heaviest thing a card pulls in, and a timeline, a page of results or
+// a "More like this" grid is a set of cards nobody asked to play; the pin's
+// own page always plays.
 // An admin setting - this is only its default.
 export type TimelineVideoSetting = { mobile: boolean; desktop: boolean };
 

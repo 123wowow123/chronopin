@@ -32,6 +32,7 @@ import { ViewCount } from '@/components/pin/ViewCount';
 import { ThreadAge } from '@/components/pin/ThreadAge';
 import { ThreadSuggestion } from '@/components/pin/ThreadSuggestion';
 import { WatchButton } from '@/components/pin/WatchButton';
+import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { Icon } from '@/components/ui/Icon';
 import { PostedTime, StartTime } from '@/components/ui/LocalTime';
 import { UserAvatar } from '@/components/ui/UserAvatar';
@@ -43,7 +44,7 @@ import { safeCitedHtml, safeHtml, toCardPins } from '@/lib/sanitize';
 import { pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
 import { pinTense } from '@/lib/timeline';
 import type { PinJson } from '@/lib/types';
-import { duplicateGroupPins, pinById, pinComments, relatedPins, threadPins } from '@/server/services/pages';
+import { duplicateGroupPins, pinById, pinComments, relatedPins, threadPins, timelineVideo } from '@/server/services/pages';
 import { viewerTimeZone } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { categoryLabel } from '@/lib/i18n/labels';
@@ -406,7 +407,11 @@ async function PinCommentsSection({ pinId }: { pinId: number }) {
 
 async function Related({ pin }: { pin: PinJson }) {
   const t = await getT();
-  const [pins, timeZone] = await Promise.all([relatedPins(pin.id, pin.originalTitle ?? pin.title, t.locale), viewerTimeZone()]);
+  const [pins, timeZone, video] = await Promise.all([
+    relatedPins(pin.id, pin.originalTitle ?? pin.title, t.locale),
+    viewerTimeZone(),
+    timelineVideo(),
+  ]);
   if (!pins.length) {
     return null;
   }
@@ -417,13 +422,17 @@ async function Related({ pin }: { pin: PinJson }) {
       <h2 id="related-heading" className="mb-4 text-xl font-semibold tracking-tight">
         {t('pin.moreLikeThis')}
       </h2>
-      <CardGrid>
-        {toCardPins(pins).map((p) => (
-          <li key={p.id}>
-            <PinCard pin={p} serverTimeZone={timeZone} tense={pinTense(p, now, todayKey)} todayKey={todayKey} />
-          </li>
-        ))}
-      </CardGrid>
+      {/* These cards are a suggestion nobody asked to play, same as a page of
+          them: the admin setting decides whether they load their players. */}
+      <TimelineVideoProvider setting={video}>
+        <CardGrid>
+          {toCardPins(pins).map((p) => (
+            <li key={p.id}>
+              <PinCard pin={p} serverTimeZone={timeZone} tense={pinTense(p, now, todayKey)} todayKey={todayKey} />
+            </li>
+          ))}
+        </CardGrid>
+      </TimelineVideoProvider>
     </section>
   );
 }

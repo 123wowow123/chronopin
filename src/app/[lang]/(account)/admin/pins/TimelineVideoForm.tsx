@@ -4,10 +4,10 @@ import { useState } from 'react';
 import { api, ApiError } from '@/lib/client/api';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 
-// Whether cards on the timeline and in search results load their video player,
-// on phones and on wider screens; otherwise a card shows the video's still and
-// the pin's own page plays it. Both are off by default: a column of cards
-// nobody asked to play is the heaviest thing the timeline can pull in.
+// Whether pin cards load their video player, on phones and on wider screens;
+// otherwise a card shows the video's still and the pin's own page plays it.
+// Both are off by default: a grid of cards nobody asked to play is the
+// heaviest thing a page of them can pull in.
 export function TimelineVideoForm({ saved }: { saved: TimelineVideoSetting }) {
   const [current, setCurrent] = useState(saved);
   const [busy, setBusy] = useState(false);
@@ -31,10 +31,10 @@ export function TimelineVideoForm({ saved }: { saved: TimelineVideoSetting }) {
 
   return (
     <section className="mb-6 rounded-xl border border-line bg-panel p-4 sm:p-5">
-      <h2 className="text-base font-semibold">Video on the timeline</h2>
+      <h2 className="text-base font-semibold">Video on pin cards</h2>
       <p className="mt-1 text-sm text-subtle">
-        A card on the timeline and in search results can show a YouTube video as its still picture instead of the player. Phones
-        are screens under 640px wide. The pin&apos;s own page always plays.
+        A card on the timeline, in search results and under &ldquo;More like this&rdquo; can show a YouTube video as its still
+        picture instead of the player. Phones are screens under 640px wide. The pin&apos;s own page always plays.
       </p>
       <label className="mt-3 flex items-center gap-2 text-sm">
         <input

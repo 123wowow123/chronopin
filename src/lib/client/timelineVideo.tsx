@@ -1,8 +1,8 @@
 'use client';
 
-// Whether a card here may load a video player. A page of cards (the timeline,
-// search results) provides the admin setting; anywhere else - a pin's own page,
-// the editor's preview - a card plays video as it always has.
+// Whether a card here may load a video player. A set of cards (the timeline,
+// search results, a pin page's "More like this") provides the admin setting;
+// anywhere else - the editor's preview - a card plays video as it always has.
 //
 // The decision has to be made before the markup is written, not hidden with
 // CSS afterwards: an iframe in the HTML is already a download. So the server,
