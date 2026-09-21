@@ -35,6 +35,50 @@ type TermPart = Extract<QueryPart, { kind: 'term' }>;
 // A term with a value to show; an empty one (category:"") stays as text.
 const isPill = (part: QueryPart): part is TermPart => part.kind === 'term' && !!part.value.replace(/^@+/, '');
 
+// Where a selection reaches to: a place among the items, and how far into
+// that one it goes. A pill is one thing, so a selection takes it whole - its
+// character is only ever 0 or the end of it.
+type Spot = { at: number; char: number };
+type Selection = { lo: Spot; hi: Spot };
+
+// Which of two places in the query comes first, and by how much.
+function compareSpots(a: Spot, b: Spot) {
+  return a.at !== b.at ? a.at - b.at : a.char - b.char;
+}
+
+// The two ends of a drag in the order they read. Nothing is selected while
+// they are still the same place.
+function ordered(anchor: Spot, focus: Spot): Selection | null {
+  const order = compareSpots(anchor, focus);
+  if (!order) return null;
+  return order < 0 ? { lo: anchor, hi: focus } : { lo: focus, hi: anchor };
+}
+
+// One place along `list` from `spot`, the way `step` goes, or nothing at the
+// end it is already at. A pill is one thing, so a step onto one takes all of
+// it, and the space between two items is not a place worth stopping at.
+function stepSpot(list: QueryPart[], spot: Spot, step: 1 | -1): Spot | null {
+  if (step < 0) {
+    if (spot.char > 0) return { at: spot.at, char: isPill(list[spot.at]) ? 0 : spot.char - 1 };
+    const at = spot.at - 1;
+    if (at < 0) return null;
+    return { at, char: isPill(list[at]) ? 0 : Math.max(list[at].raw.length - 1, 0) };
+  }
+  if (spot.char < list[spot.at].raw.length) return { at: spot.at, char: isPill(list[spot.at]) ? list[spot.at].raw.length : spot.char + 1 };
+  const at = spot.at + 1;
+  if (at >= list.length) return null;
+  return { at, char: isPill(list[at]) ? list[at].raw.length : Math.min(1, list[at].raw.length) };
+}
+
+// How much of the item at `at` a selection covers: the characters it reaches,
+// or nothing at all. The items between its ends are covered whole.
+function coverage(sel: Selection | null, at: number, raw: string): [number, number] | null {
+  if (!sel || at < sel.lo.at || at > sel.hi.at) return null;
+  const from = at === sel.lo.at ? sel.lo.char : 0;
+  const to = at === sel.hi.at ? sel.hi.char : raw.length;
+  return to > from ? [from, to] : null;
+}
+
 // A query as the box shows it, in order: label terms as pills and the free
 // text between them as plain runs.
 function toItems(query: string): QueryPart[] {
@@ -118,9 +162,13 @@ export function SearchBox() {
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(-1);
-  // Whether the whole query is selected (Ctrl/Cmd+A), items and all, rather
-  // than only the field's own text.
-  const [selectedAll, setSelectedAll] = useState(false);
+  // What a drag through the box has selected, if anything. A selection that
+  // reaches past the field cannot be the browser's own - the query is items,
+  // not one run of text - so the box keeps it and draws it itself. It only
+  // ever stands while the field is empty and the items hold the whole query,
+  // which is what makes both its ends places among the items.
+  const [range, setRange] = useState<{ anchor: Spot; focus: Spot } | null>(null);
+  const sel = range && ordered(range.anchor, range.focus);
   const requestId = useRef(0);
   const suggestTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const boxRef = useRef<HTMLFormElement>(null);
@@ -129,6 +177,12 @@ export function SearchBox() {
   // Where to put the caret once the field has moved to the item it opened.
   const pendingCaret = useRef<number | null>(null);
   const measureRef = useRef<CanvasRenderingContext2D | null>(null);
+  // Whether the mouse is down on a selection, how to stop following it (also
+  // if the box goes while the button is down), and whether the press that
+  // ends turned into a drag, whose click opens nothing.
+  const dragging = useRef(false);
+  const endDrag = useRef<() => void>(() => {});
+  const suppressClick = useRef(false);
   // The field as last sized, so the row only follows the caret on a change and
   // not on every render (it would undo scrolling the pills while typing).
   const sizedFor = useRef('');
@@ -153,12 +207,65 @@ export function SearchBox() {
   // in the place of one.
   const trailing = editAt >= items.length;
 
-  // How wide text is in the field's font.
-  function textWidth(input: HTMLInputElement, text: string) {
+  // Where an item stands once the field has given its text back to them. A
+  // selection is kept in these places rather than in the items as they are
+  // drawn, so that its ends still mean the same once the field lets go.
+  const drafted = toItems(draft).length;
+  const spotOf = (index: number) => (index < editAt ? index : index + drafted);
+
+  // Measures text as `el` draws it. The font is read once, so hunting for the
+  // character under a pointer does not ask for the computed style per letter.
+  function measure(el: HTMLElement) {
     const context = (measureRef.current ??= document.createElement('canvas').getContext('2d'));
-    if (!context) return text.length * 8;
-    context.font = getComputedStyle(input).font;
-    return context.measureText(text).width;
+    const style = getComputedStyle(el);
+    // Some browsers leave the shorthand empty where it cannot hold every part
+    // of the font, and a canvas left unset measures in a default nothing like
+    // the box's, which would put every caret in the wrong place.
+    if (context) context.font = style.font || `${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
+    return (text: string) => (context ? context.measureText(text).width : text.length * 8);
+  }
+
+  // How wide text is in the field's font.
+  function textWidth(el: HTMLElement, text: string) {
+    return measure(el)(text);
+  }
+
+  // The place in `text` a pointer at `x` points at, as `el` draws it. The
+  // width of a prefix only grows, so the hunt stops as soon as it turns away.
+  function caretAt(el: HTMLElement, text: string, x: number) {
+    const width = measure(el);
+    const left = el.getBoundingClientRect().left + parseFloat(getComputedStyle(el).paddingLeft);
+    let best = 0;
+    let closest = Infinity;
+    for (let at = 0; at <= text.length; at++) {
+      const gap = Math.abs(left + width(text.slice(0, at)) - x);
+      if (gap >= closest) break;
+      closest = gap;
+      best = at;
+    }
+    return best;
+  }
+
+  // The place in the query a pointer at `x` points at, hunted through the
+  // items as they are drawn. Past either end it is that end. The items carry
+  // the place they stand in, so the answer holds whether the field is open
+  // among them or not.
+  function spotAt(x: number): Spot | null {
+    const nodes = [...(rowRef.current?.querySelectorAll<HTMLElement>('[data-at]') ?? [])];
+    if (!nodes.length) return null;
+    for (const node of nodes) {
+      const rect = node.getBoundingClientRect();
+      if (x > rect.right) continue;
+      const at = Number(node.dataset.at);
+      const raw = node.dataset.raw ?? '';
+      // Short of it: the place in front of it.
+      if (x < rect.left) return { at, char: 0 };
+      // A pill goes whole, so a pointer within one takes the nearer side.
+      if (node.dataset.pill !== undefined) return { at, char: x < rect.left + rect.width / 2 ? 0 : raw.length };
+      return { at, char: caretAt(node, raw, x) };
+    }
+    const last = nodes[nodes.length - 1];
+    return { at: Number(last.dataset.at), char: (last.dataset.raw ?? '').length };
   }
 
   // The field never scrolls its own text, which would hide the start of a
@@ -188,7 +295,7 @@ export function SearchBox() {
     const width = textWidth(input, draft || input.placeholder) + padding + 2;
     input.style.width = trailing ? `${Math.ceil(width)}px` : `${width}px`;
     const key = `${draft}|${editAt}|${editing}`;
-    if (key !== sizedFor.current && document.activeElement === input) revealCaret();
+    if (key !== sizedFor.current && document.activeElement === input && !dragging.current) revealCaret();
     sizedFor.current = key;
   });
 
@@ -197,7 +304,7 @@ export function SearchBox() {
     if (pendingCaret.current == null || !input) return;
     input.focus();
     input.setSelectionRange(pendingCaret.current, pendingCaret.current);
-    revealCaret();
+    if (!dragging.current) revealCaret();
     pendingCaret.current = null;
   });
 
@@ -216,8 +323,10 @@ export function SearchBox() {
     return () => row.removeEventListener('wheel', onWheel);
   }, []);
 
-  // A pause waiting to be asked about does not outlive the box.
+  // A pause waiting to be asked about does not outlive the box, nor does a
+  // drag still following the mouse.
   useEffect(() => () => clearTimeout(suggestTimer.current), []);
+  useEffect(() => () => endDrag.current(), []);
 
   useEffect(() => {
     const close = (event: MouseEvent) => {
@@ -250,7 +359,7 @@ export function SearchBox() {
   function suggest(value: string) {
     setDraft(value);
     setActive(-1);
-    setSelectedAll(false);
+    setRange(null);
     const id = ++requestId.current;
     clearTimeout(suggestTimer.current);
     if (!value.trim()) {
@@ -298,7 +407,7 @@ export function SearchBox() {
     setEditAt(Math.min(target, all.length));
     setDraft(text);
     setEditing(false);
-    setSelectedAll(false);
+    setRange(null);
     closeSuggestions();
     pendingCaret.current = caret;
   }
@@ -314,25 +423,133 @@ export function SearchBox() {
     setEditAt(target);
     setDraft(raw);
     setEditing(isPill(all[target]));
+    setRange(null);
     closeSuggestions();
     pendingCaret.current = caret ?? raw.length;
   }
 
-  // Drops every item, leaving the field where the query started.
-  function clearItems() {
-    setItems([]);
-    setEditAt(0);
-    setSelectedAll(false);
+  // Follows the mouse until it is let go, selecting from `anchor`. `native`
+  // answers whether the pointer is still within the open field, where the
+  // browser's own selection does the work and nothing here has to. The moment
+  // the drag reaches another item the field gives its text back to `all` -
+  // the query as one list - and the box takes the selection over, as no
+  // selection of the browser's can leave the field it started in.
+  function beginDrag(anchor: Spot, all: QueryPart[], at: number, native?: (x: number) => boolean, emulate = true) {
+    // A press is a new drag, even if the last one's release was lost (let go
+    // of outside the window), and nothing is a drag until the mouse moves.
+    endDrag.current();
+    dragging.current = true;
+    suppressClick.current = false;
+    let spanning = false;
+    const follow = (move: MouseEvent) => {
+      const field = inputRef.current;
+      if (!dragging.current) return;
+      if (!spanning && field && native?.(move.clientX)) {
+        if (emulate) {
+          const to = caretAt(field, field.value, move.clientX);
+          field.setSelectionRange(Math.min(anchor.char, to), Math.max(anchor.char, to), to < anchor.char ? 'backward' : 'forward');
+        }
+        return;
+      }
+      const focus = spotAt(move.clientX);
+      if (!focus) return;
+      if (!spanning) {
+        // Still where it started: a press, not yet a drag.
+        if (!compareSpots(anchor, focus)) return;
+        spanning = true;
+        // The press that let go of this drag opens nothing.
+        suppressClick.current = true;
+        setItems(all);
+        setDraft('');
+        setEditing(false);
+        setEditAt(at);
+        closeSuggestions();
+        // Wherever it lands among the items the field is a new one, and the
+        // keys that act on a selection have to be put back into it.
+        pendingCaret.current = 0;
+      }
+      setRange({ anchor, focus });
+    };
+    const stop = () => {
+      dragging.current = false;
+      document.removeEventListener('mousemove', follow);
+      document.removeEventListener('mouseup', stop);
+    };
+    endDrag.current = stop;
+    document.addEventListener('mousemove', follow);
+    document.addEventListener('mouseup', stop);
   }
 
-  // Takes the whole query out of the box, as cutting a selection does.
-  function cutAll() {
-    clearItems();
+  // Pressing a run of text: the caret lands on the character pressed, and a
+  // drag from there selects as it would in any text box. The run is a button,
+  // not text the browser can select, so the field it opens into takes the
+  // drag over: it holds the same text, in the same font, in the same place.
+  function dragText(index: number, event: React.MouseEvent<HTMLElement>) {
+    const all = committed();
+    const at = spotOf(index);
+    const from = caretAt(event.currentTarget, items[index].raw, event.clientX);
+    editItem(index, from);
+    beginDrag({ at, char: from }, all, at, (x) => {
+      const rect = inputRef.current?.getBoundingClientRect();
+      return !!rect && x >= rect.left && x <= rect.right;
+    });
+  }
+
+  // Where the field's caret stands among the items once it has given its text
+  // back: within the one item that text reads as, or else the edge it waits
+  // at. `all` must not be empty.
+  function fieldSpot(all: QueryPart[], char: number): Spot {
+    if (drafted === 1) return { at: editAt, char };
+    if (editAt + drafted < all.length) return { at: editAt + drafted, char: 0 };
+    return { at: all.length - 1, char: all[all.length - 1].raw.length };
+  }
+
+  // The query a selection covers, read off the items it reaches.
+  function rangeText(range: Selection) {
+    const raws: string[] = [];
+    for (let at = range.lo.at; at <= range.hi.at; at++) {
+      const raw = items[at].raw;
+      raws.push(raw.slice(at === range.lo.at ? range.lo.char : 0, at === range.hi.at ? range.hi.char : raw.length));
+    }
+    return joinSearchQuery(raws.map((raw) => ({ kind: 'text', raw })));
+  }
+
+  // Selects the whole query, items and all. The field gives its text back
+  // first, so that the selection has items either side to stand between.
+  function selectAll() {
+    const all = committed();
+    if (!all.length) return;
+    setItems(all);
     setDraft('');
+    setEditing(false);
+    setEditAt(Math.min(editAt + drafted, all.length));
+    setRange({ anchor: { at: 0, char: 0 }, focus: { at: all.length - 1, char: all[all.length - 1].raw.length } });
     closeSuggestions();
-    // Losing the items moves the field out from among them, and it is a new
-    // one that the caret has to be put back into.
-    pendingCaret.current = 0;
+  }
+
+  // Takes a selection out of the box, with `typed` put in its place. The
+  // field takes the cut's own place, so that what is typed next carries on
+  // from there: cut out of the middle of one run it holds the two ends, which
+  // close up as they would in any text box; cut across items it holds what is
+  // left of the first, and what is left of the last stays the run it was.
+  function cutRange(range: Selection, typed = '') {
+    const within = range.lo.at === range.hi.at;
+    const head = items[range.lo.at].raw.slice(0, range.lo.char);
+    const tail = items[range.hi.at].raw.slice(range.hi.char);
+    const kept = within || !tail ? [] : [{ kind: 'text', raw: tail } as QueryPart];
+    setItems([...items.slice(0, range.lo.at), ...kept, ...items.slice(range.hi.at + 1)]);
+    setEditAt(range.lo.at);
+    setEditing(false);
+    setRange(null);
+    const text = head + typed + (within ? tail : '');
+    if (typed) suggest(text);
+    else {
+      setDraft(text);
+      closeSuggestions();
+    }
+    // The field has moved out from among the items it stood in, so it is a
+    // new one the caret has to be put back into, at the cut.
+    pendingCaret.current = head.length + typed.length;
   }
 
   // Takes an item out of the box and leaves the field where it stands. The
@@ -379,15 +596,15 @@ export function SearchBox() {
       // onKeyDown instead, as the field is usually empty and a browser raises
       // neither event with nothing of its own selected.
       onCopy={(event) => {
-        if (!selectedAll) return;
+        if (!sel) return;
         event.preventDefault();
-        event.clipboardData.setData('text/plain', query());
+        event.clipboardData.setData('text/plain', rangeText(sel));
       }}
       onCut={(event) => {
-        if (!selectedAll) return;
+        if (!sel) return;
         event.preventDefault();
-        event.clipboardData.setData('text/plain', query());
-        cutAll();
+        event.clipboardData.setData('text/plain', rangeText(sel));
+        cutRange(sel);
       }}
       onKeyDown={(event) => {
         const field = event.currentTarget;
@@ -400,41 +617,85 @@ export function SearchBox() {
         // nothing but text in the box the browser's own select-all is it.
         if (chord && key === 'a' && items.length) {
           event.preventDefault();
-          field.setSelectionRange(0, draft.length);
-          setSelectedAll(true);
-          closeSuggestions();
+          selectAll();
           return;
         }
-        // Copy or cut of a selected query.
-        if (selectedAll && chord && (key === 'c' || key === 'x')) {
+        // Copy or cut of a selected part of the query.
+        if (sel && chord && (key === 'c' || key === 'x')) {
           event.preventDefault();
-          void navigator.clipboard?.writeText(query()).catch(() => {});
-          if (key === 'x') cutAll();
+          void navigator.clipboard?.writeText(rangeText(sel)).catch(() => {});
+          if (key === 'x') cutRange(sel);
           return;
         }
-        // With the query selected, a key that would replace the field's text
-        // replaces the whole query, items and all; any other key gives the
-        // selection up. The field is emptied here rather than left to the
-        // browser: dropping the items moves it out from among them, and what
-        // it held would come through the move untouched.
-        if (selectedAll && !MODIFIERS.has(event.key)) {
-          setSelectedAll(false);
+        // Shift and an arrow reach a selection out of the field and on
+        // through the items, a place at a time, from the end it is fixed at.
+        // Within the field's own text the browser still does it.
+        if (event.shiftKey && !chord && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
+          const step = event.key === 'ArrowLeft' ? -1 : 1;
+          if (range) {
+            const next = stepSpot(items, range.focus, step);
+            if (!next) return;
+            event.preventDefault();
+            setRange({ anchor: range.anchor, focus: next });
+            return;
+          }
+          const start = field.selectionStart ?? 0;
+          const end = field.selectionEnd ?? 0;
+          const backward = field.selectionDirection === 'backward';
+          // Only once it has reached the side it is heading for, and would
+          // have to leave the field to go any further.
+          if (step < 0 ? start > 0 || (start !== end && !backward) : end < draft.length || (start !== end && backward)) return;
+          const all = committed();
+          if (!all.length) return;
+          event.preventDefault();
+          // The field gives its text back, and what it was fixed at becomes a
+          // place among the items: within its own text where the draft is the
+          // one item it reads as, and otherwise the edge it stood at.
+          const anchor = fieldSpot(all, backward ? end : start);
+          // It carries on from the side the field's own selection had already
+          // reached, rather than starting the reach over from the fixed end.
+          const reached = fieldSpot(all, backward ? start : end);
+          const next = stepSpot(all, reached, step);
+          if (!next) return;
+          setItems(all);
+          setDraft('');
+          setEditing(false);
+          setEditAt(Math.min(editAt + drafted, all.length));
+          setRange({ anchor, focus: next });
+          closeSuggestions();
+          // The field is a new one wherever it lands, and the keys that act
+          // on the selection have to be put back into it.
+          pendingCaret.current = 0;
+          return;
+        }
+        // With part of the query selected, a key that would replace the
+        // field's text replaces all of that instead, items and all; any other
+        // key gives the selection up. The cut is made here rather than left
+        // to the browser: what is selected is mostly not the field's own text.
+        if (sel && !MODIFIERS.has(event.key)) {
+          setRange(null);
           if (event.key === 'Backspace' || event.key === 'Delete') {
             event.preventDefault();
-            cutAll();
+            cutRange(sel);
             return;
           }
           if (event.key.length === 1 && !chord && !event.altKey) {
             event.preventDefault();
-            clearItems();
-            suggest(event.key);
-            pendingCaret.current = 1;
+            cutRange(sel, event.key);
             return;
           }
-          // Left and right put the caret at the end of the query they leave.
+          // Left and right put the caret at the end of the selection they
+          // leave, as they do in any text box: part way into a run, the run
+          // opens there; at either side of one, the field stands beside it.
           if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
             event.preventDefault();
-            moveField(event.key === 'ArrowLeft' ? 0 : Number.MAX_SAFE_INTEGER, '', 0);
+            const end = event.key === 'ArrowLeft' ? sel.lo : sel.hi;
+            const raw = items[end.at].raw;
+            if (end.char > 0 && end.char < raw.length) editItem(end.at, end.char);
+            else {
+              setEditAt(end.char ? Math.min(end.at + 1, items.length) : end.at);
+              pendingCaret.current = 0;
+            }
             return;
           }
         }
@@ -488,7 +749,7 @@ export function SearchBox() {
       // and, with text, the two pixels it keeps for the caret. An opened pill
       // is shaded, and keeps to its own width so the shading reads as the
       // pill.
-      className={`shrink-0 text-sm text-ink placeholder:text-subtle focus:outline-none focus-visible:outline-none [&::-webkit-search-cancel-button]:hidden ${
+      className={`shrink-0 text-sm text-ink placeholder:text-subtle focus:outline-none focus-visible:outline-none [&::-webkit-search-cancel-button]:hidden ${sel ? 'caret-transparent' : ''} ${
         trailing && !editing ? 'min-w-[5rem] grow' : ''
       } ${editing ? 'h-7 rounded-md bg-raised px-1.5' : `h-9 bg-transparent ${trailing ? 'pr-2' : draft ? 'px-0.5 -mr-[2px]' : 'px-0.5 -mx-1.5'}`}`}
       role="combobox"
@@ -516,11 +777,44 @@ export function SearchBox() {
         // A press on the box itself, not an item or button, types something new
         // after the items.
         onMouseDown={(event) => {
-          setSelectedAll(false);
-          if (event.target === inputRef.current || (event.target as Element).closest('button')) return;
+          setRange(null);
+          if ((event.target as Element).closest('button')) return;
+          const pressed = inputRef.current;
+          if (event.target === pressed && pressed) {
+            // The browser puts the caret and selects within the field's own
+            // text. The drag is followed all the same, so that reaching out
+            // of the field carries the selection on through the items.
+            const all = committed();
+            if (all.length) {
+              const bounds = () => pressed.getBoundingClientRect();
+              beginDrag(
+                fieldSpot(all, caretAt(pressed, pressed.value, event.clientX)),
+                all,
+                Math.min(editAt + drafted, all.length),
+                (x) => x >= bounds().left && x <= bounds().right,
+                false,
+              );
+            }
+            return;
+          }
           event.preventDefault();
-          if (editAt < items.length) moveField(Number.MAX_SAFE_INTEGER, '', 0);
+          const all = committed();
+          const moving = editAt < items.length;
+          if (moving) moveField(Number.MAX_SAFE_INTEGER, '', 0);
           else inputRef.current?.focus();
+          const field = inputRef.current;
+          // Nothing in the box but the field's own text: the caret goes to
+          // the character nearest the press and the selection follows the
+          // mouse from there, as it would had the press landed on the field.
+          // The whole box is the field's, so the drag never leaves it.
+          if (field && !items.length) {
+            const char = caretAt(field, field.value, event.clientX);
+            field.setSelectionRange(char, char);
+            beginDrag({ at: 0, char }, all, 0, () => true);
+            return;
+          }
+          const anchor = spotAt(event.clientX);
+          if (anchor) beginDrag(anchor, all, moving ? all.length : editAt + drafted);
         }}
       >
         <Icon name="search" className="ml-3 size-4 shrink-0 text-subtle" />
@@ -534,26 +828,69 @@ export function SearchBox() {
             // Pressing an item must not blur the field first: that would move
             // the field before this item opens.
             const keepFocus = (event: React.MouseEvent) => event.preventDefault();
+            // Where this item stands in the query, and what a selection
+            // covers of it. whitespace-pre: a run is split at the selection,
+            // and its spaces have to survive the split whole.
+            const at = spotOf(index);
+            const picked = coverage(sel, at, item.raw);
             let node;
             if (!isPill(item)) {
               node = (
                 <button
                   type="button"
+                  data-at={at}
+                  data-raw={item.raw}
                   aria-label={t('search.editItem', { name: item.raw })}
-                  onMouseDown={keepFocus}
-                  onClick={() => editItem(index)}
-                  className="shrink-0 rounded px-0.5 text-sm whitespace-nowrap text-ink hover:bg-raised max-lg:text-base"
+                  onMouseDown={(event) => {
+                    if (event.button !== 0) return;
+                    keepFocus(event);
+                    dragText(index, event);
+                  }}
+                  // The mouse already opened the run, at the character it
+                  // pressed; this is the keyboard's press (detail 0), which
+                  // opens it at the end.
+                  onClick={(event) => {
+                    if (!event.detail) editItem(index);
+                  }}
+                  className="shrink-0 rounded px-0.5 text-sm whitespace-pre text-ink hover:bg-raised max-lg:text-base"
                 >
-                  {item.raw}
+                  {picked ? (
+                    <>
+                      {item.raw.slice(0, picked[0])}
+                      <span className="rounded-[2px] bg-accent/55 text-white">{item.raw.slice(picked[0], picked[1])}</span>
+                      {item.raw.slice(picked[1])}
+                    </>
+                  ) : (
+                    item.raw
+                  )}
                 </button>
               );
             } else {
               const { field, value } = termLabel(item, t);
               const name = `${field ? `${field} ` : ''}${value}`;
               node = (
-                <span className={`inline-flex shrink-0 items-center rounded-full text-xs font-medium whitespace-nowrap ring-1 ring-inset ${selectedAll ? 'bg-accent/55 text-white ring-accent' : 'bg-accent/15 text-link ring-accent/60'}`}>
-                  <button type="button" title={t('common.edit')} aria-label={t('search.editItem', { name })} onMouseDown={keepFocus} onClick={() => editItem(index)} className="flex items-center gap-1 py-0.5 pl-2">
-                    {field ? <span className={selectedAll ? 'text-white/75' : 'text-subtle'}>{field}</span> : null}
+                <span data-at={at} data-raw={item.raw} data-pill="" className={`inline-flex shrink-0 items-center rounded-full text-xs font-medium whitespace-nowrap ring-1 ring-inset ${picked ? 'bg-accent/55 text-white ring-accent' : 'bg-accent/15 text-link ring-accent/60'}`}>
+                  <button
+                    type="button"
+                    title={t('common.edit')}
+                    aria-label={t('search.editItem', { name })}
+                    // A pill goes whole, so a drag from one selects it and
+                    // whatever else it reaches; a press that stays put opens
+                    // it, as it always did.
+                    onMouseDown={(event) => {
+                      if (event.button !== 0) return;
+                      keepFocus(event);
+                      const bounds = event.currentTarget.getBoundingClientRect();
+                      const all = committed();
+                      beginDrag({ at, char: event.clientX < bounds.left + bounds.width / 2 ? 0 : item.raw.length }, all, Math.min(editAt + drafted, all.length));
+                    }}
+                    onClick={() => {
+                      if (suppressClick.current) suppressClick.current = false;
+                      else editItem(index);
+                    }}
+                    className="flex items-center gap-1 py-0.5 pl-2"
+                  >
+                    {field ? <span className={picked ? 'text-white/75' : 'text-subtle'}>{field}</span> : null}
                     <span>{value}</span>
                   </button>
                   <button
@@ -561,7 +898,7 @@ export function SearchBox() {
                     aria-label={t('search.removeItem', { name })}
                     onMouseDown={keepFocus}
                     onClick={() => removeItem(index)}
-                    className={`mx-0.5 rounded-full p-0.5 hover:bg-raised hover:text-ink ${selectedAll ? 'text-white/75' : 'text-subtle'}`}
+                    className={`mx-0.5 rounded-full p-0.5 hover:bg-raised hover:text-ink ${picked ? 'text-white/75' : 'text-subtle'}`}
                   >
                     <Icon name="close" className="size-3" />
                   </button>
