@@ -619,6 +619,7 @@ const en = {
     addTime: 'Add time',
     removeTime: 'Remove time',
     allDay: 'All day',
+    allDayStated: 'Source says it runs all day',
     categories: 'Categories',
     main: 'main',
     addAnother: 'Add another…',

@@ -103,8 +103,14 @@ describe('formatting in other languages', () => {
 
   it('words start dates and countdowns', () => {
     const pin = { utcStartDateTime: '2026-09-14T00:00:00.000Z', allDay: true };
-    expect(formatStart(pin, 'UTC', { allDaySuffix: true }, 'es')).toBe('Empieza el 14/09/2026 - Todo el día');
+    expect(formatStart({ ...pin, allDayStated: true }, 'UTC', { allDaySuffix: true }, 'es')).toBe('Empieza el 14/09/2026 - Todo el día');
+    // Without the source's word for it the label is left off, in every language.
+    expect(formatStart(pin, 'UTC', { allDaySuffix: true }, 'es')).toBe('Empieza el 14/09/2026');
     expect(formatStart(pin, 'UTC', {}, 'zh')).toBe('开始于 2026/09/14');
+    // A run of days is worded as a span, not as a start.
+    const span = { ...pin, utcEndDateTime: '2026-09-17T00:00:00.000Z' };
+    expect(formatStart(span, 'UTC', {}, 'fr')).toBe('Du 14/09/2026 au 16/09/2026');
+    expect(formatStart(span, 'UTC', {}, 'ja')).toBe('2026/09/14〜2026/09/16');
     expect(timespan('2026-09-14', '2026-09-14', 'd', 'de')).toBe('Heute');
     expect(timespan('2026-09-14', '2026-09-19', 'd', 'es')).toBe('5 días');
     expect(daysAway('2026-09-14', '2026-09-11', 'fr')).toBe('il y a 3 jours');

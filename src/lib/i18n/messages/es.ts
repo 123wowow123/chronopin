@@ -622,6 +622,7 @@ const es: Messages = {
     addTime: 'Añadir hora',
     removeTime: 'Quitar hora',
     allDay: 'Todo el día',
+    allDayStated: 'La fuente dice que dura todo el día',
     categories: 'Categorías',
     main: 'principal',
     addAnother: 'Añadir otra…',

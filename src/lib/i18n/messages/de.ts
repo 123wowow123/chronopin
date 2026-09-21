@@ -622,6 +622,7 @@ const de: Messages = {
     addTime: 'Uhrzeit hinzufügen',
     removeTime: 'Uhrzeit entfernen',
     allDay: 'Ganztägig',
+    allDayStated: 'Quelle nennt es ganztägig',
     categories: 'Kategorien',
     main: 'Haupt',
     addAnother: 'Weitere hinzufügen…',

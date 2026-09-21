@@ -609,6 +609,7 @@ const ja: Messages = {
     addTime: '時刻を追加',
     removeTime: '時刻を削除',
     allDay: '終日',
+    allDayStated: '出典が終日と明記',
     categories: 'カテゴリ',
     main: 'メイン',
     addAnother: 'さらに追加…',

@@ -48,6 +48,7 @@ export type ExtractedFields = {
   startDateTime: string | null;
   endDateTime: string | null;
   allDay: boolean;
+  allDayStated: boolean;
   longFormSummary: string | null;
   stocks: { symbol: string; name: string; relation: 'company' | 'related' | 'supplier'; note: string }[];
   tags: string[];
@@ -163,6 +164,11 @@ export const SCHEMA = {
       type: 'boolean',
       description: 'True when the page gives a date but no clock time.',
     },
+    allDayStated: {
+      type: 'boolean',
+      description:
+        'True only when the page itself says the event takes a whole day or runs across days - a festival weekend, a sale window, a funding period, a conference. False when the page simply never gives a clock time for a moment-in-time event such as a signing, a release or a launch. This is a claim about the event, not about what the page left out, so when in doubt it is false.',
+    },
     stocks: {
       type: 'array',
       description:
@@ -216,6 +222,7 @@ export const SCHEMA = {
     'startDateTime',
     'endDateTime',
     'allDay',
+    'allDayStated',
     'longFormSummary',
   ],
   additionalProperties: false,

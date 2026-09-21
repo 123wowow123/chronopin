@@ -609,6 +609,7 @@ const zh: Messages = {
     addTime: '添加时间',
     removeTime: '移除时间',
     allDay: '全天',
+    allDayStated: '来源注明全天',
     categories: '分类',
     main: '主要',
     addAnother: '再添加一个…',

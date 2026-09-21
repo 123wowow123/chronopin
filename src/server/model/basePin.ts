@@ -39,6 +39,7 @@ export const BasePinProp = [
   'episodeStatus',
   'marketVolume',
   'allDay',
+  'allDayStated',
   'utcCreatedDateTime',
   'utcUpdatedDateTime',
   'utcDeletedDateTime',

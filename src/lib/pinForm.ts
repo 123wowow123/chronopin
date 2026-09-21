@@ -35,6 +35,9 @@ export type PinFormValues = {
   description: string;
   longFormSummary: string;
   allDay: boolean;
+  // Whether the source called it an all-day event, rather than just never
+  // giving a time. Only these are labelled "All day" on the pin page.
+  allDayStated: boolean;
   // The dates the source gives. The pin is saved with the most confident
   // reference's dates where one outranks these (formDates).
   startDate: string; // YYYY-MM-DD (local)
@@ -103,6 +106,7 @@ export const EMPTY_FORM: PinFormValues = {
   description: '',
   longFormSummary: '',
   allDay: true,
+  allDayStated: false,
   startDate: '',
   startTime: '',
   endDate: '',
@@ -228,6 +232,7 @@ export function pinToForm(pin: PinJson): PinFormValues {
     description: str(pin.description),
     longFormSummary: str(pin.longFormSummary),
     allDay: !!pin.allDay,
+    allDayStated: !!pin.allDay && !!pin.allDayStated,
     // The form edits the source's dates; they are only stored apart from the
     // pin's while a reference overrides them.
     ...datesToForm(pin.sourceStartDateTime ? { utcStartDateTime: pin.sourceStartDateTime, utcEndDateTime: pin.sourceEndDateTime, allDay: pin.allDay } : pin),
@@ -313,6 +318,7 @@ export function applyScrape(values: PinFormValues, scraped: ScrapedPin): PinForm
   if (!next.startDate && scraped.utcStartDateTime) {
     Object.assign(next, datesToForm({ utcStartDateTime: scraped.utcStartDateTime, utcEndDateTime: scraped.utcEndDateTime, allDay: scraped.allDay }), {
       allDay: !!scraped.allDay,
+      allDayStated: !!scraped.allDay && !!scraped.allDayStated,
     });
   }
   if (!next.tags.trim() && scraped.tags?.length) {
@@ -410,6 +416,8 @@ export function formToPin(values: PinFormValues) {
     companyWikiUrl: company && company === values.companyWikiFor ? values.companyWikiUrl || undefined : undefined,
     categories: values.categories,
     allDay: values.allDay,
+    // A timed pin can never claim to be all day.
+    allDayStated: values.allDay && values.allDayStated,
     ...formDates(values).dates,
     merchants: values.merchants
       .filter((m) => m.url || m.label)

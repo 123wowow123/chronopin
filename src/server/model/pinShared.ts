@@ -109,7 +109,7 @@ export async function createPin<T extends Row>(pin: T, userId: number | null, { 
     'parentId', 'title', 'description', 'sourceUrl', 'longFormSummary',
     'dateConfidence', 'dateConfidenceReasoning', 'companyId',
     'address', 'priceLowerBound', 'priceUpperBound', 'price',
-    'priceCurrency', 'tip', 'utcStartDateTime', 'utcEndDateTime', 'allDay',
+    'priceCurrency', 'tip', 'utcStartDateTime', 'utcEndDateTime', 'allDay', 'allDayStated',
     'sourceStartDateTime', 'sourceEndDateTime', 'originalStartDate', 'delayReasoning',
     'episodeCount', 'episodeStatus', 'userId', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime',
   ];
@@ -119,6 +119,8 @@ export async function createPin<T extends Row>(pin: T, userId: number | null, { 
     pin.address, pin.priceLowerBound, pin.priceUpperBound, pin.price,
     pin.priceCurrency, pin.tip, pin.utcStartDateTime, pin.utcEndDateTime,
     pin.allDay == null ? false : pin.allDay,
+    // Only a claim about an all-day pin; a timed one can never carry it.
+    pin.allDay && pin.allDayStated ? true : false,
     pin.sourceStartDateTime || null, pin.sourceEndDateTime || null, pin.originalStartDate || null, pin.delayReasoning || null,
     pin.episodeCount, pin.episodeStatus, userId, pin.utcCreatedDateTime || new Date(), pin.utcUpdatedDateTime, pin.utcDeletedDateTime,
   ].map(nullIfUndefined);

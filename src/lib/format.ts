@@ -347,10 +347,16 @@ export function formatPosted(instant: string | Date, timeZone: string, { dateOnl
   return fillWords(FORMAT_WORDS[locale].at, { date, time: locale === 'en' ? time.toLowerCase() : time });
 }
 
-// "Starts 09/14/2026" (all day, read in UTC where the date is stored) or
-// "Starts 09/14/2026 4:00PM" in the viewer's zone.
+// "Starts 09/14/2026" (all day, read in UTC where the date is stored),
+// "09/14/2026 - 09/17/2026" for an all-day pin that runs over several days,
+// or "Starts 09/14/2026 4:00PM" in the viewer's zone.
+//
+// allDaySuffix adds "- All day", and only to a pin whose source said the
+// event runs all day (allDayStated). Nearly every pin is stored all-day
+// because its page gave no clock time, and labelling those told the reader
+// about our data rather than about the event.
 export function formatStart(
-  pin: { utcStartDateTime: string; allDay?: boolean },
+  pin: { utcStartDateTime: string; utcEndDateTime?: string | null; allDay?: boolean; allDayStated?: boolean },
   timeZone: string,
   { allDaySuffix = false }: { allDaySuffix?: boolean } = {},
   locale: Locale = 'en',
@@ -358,12 +364,26 @@ export function formatStart(
   const d = new Date(pin.utcStartDateTime);
   const words = FORMAT_WORDS[locale];
   // English appends the era to its month-first date; the others' formatDayKey writes it.
-  const dateIn = (zone: string) => (locale === 'en' ? numericDate(d, zone, locale) + eraSuffix(d, zone, locale) : numericDate(d, zone, locale));
+  const dateOf = (at: Date, zone: string) => (locale === 'en' ? numericDate(at, zone, locale) + eraSuffix(at, zone, locale) : numericDate(at, zone, locale));
+  const dateIn = (zone: string) => dateOf(d, zone);
   if (pin.allDay) {
-    return fillWords(words.starts, { date: dateIn('UTC') }) + (allDaySuffix ? ` - ${words.allDay}` : '');
+    const last = lastAllDay(pin);
+    if (last) {
+      return fillWords(words.range, { start: dateIn('UTC'), end: dateOf(last, 'UTC') });
+    }
+    return fillWords(words.starts, { date: dateIn('UTC') }) + (allDaySuffix && pin.allDayStated ? ` - ${words.allDay}` : '');
   }
   const time = clockTime(d, timeZone, locale).replace(locale === 'en' ? ' ' : /(?!)/, '');
   return fillWords(words.starts, { date: `${dateIn(timeZone)} ${time}` });
+}
+
+// The last day an all-day pin covers, or null when it covers only its start.
+// The stored end is exclusive - 00:00Z of the day after (0006) - so the day
+// the reader should see is the one before it.
+function lastAllDay(pin: { utcStartDateTime: string; utcEndDateTime?: string | null }): Date | null {
+  if (!pin.utcEndDateTime) return null;
+  const last = new Date(new Date(pin.utcEndDateTime).getTime() - DAY_MS);
+  return last.getTime() > new Date(pin.utcStartDateTime).getTime() ? last : null;
 }
 
 // "3 hours ago", "in 2 days". One formatter per language.

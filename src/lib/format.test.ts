@@ -53,6 +53,25 @@ describe('dates', () => {
     expect(formatStart({ utcStartDateTime: '2026-09-14T16:00:00Z' }, 'UTC')).toBe('Starts 09/14/2026 4:00PM');
   });
 
+  it('labels a day as all day only where the source said so', () => {
+    const pin = { utcStartDateTime: '2026-09-14T00:00:00Z', allDay: true };
+    // Nearly every pin is all-day only because its page gave no clock time.
+    expect(formatStart(pin, 'UTC', { allDaySuffix: true })).toBe('Starts 09/14/2026');
+    expect(formatStart({ ...pin, allDayStated: true }, 'UTC', { allDaySuffix: true })).toBe('Starts 09/14/2026 - All day');
+    // Without the suffix asked for, a stated one is worded like any other.
+    expect(formatStart({ ...pin, allDayStated: true }, 'UTC')).toBe('Starts 09/14/2026');
+  });
+
+  it('reads a multi-day all-day pin as the span it covers', () => {
+    const start = '2026-09-02T00:00:00Z';
+    // The stored end is exclusive, so 12 December reads as running to the 11th.
+    expect(formatStart({ utcStartDateTime: start, utcEndDateTime: '2026-12-12T00:00:00Z', allDay: true }, 'UTC')).toBe('09/02/2026 - 12/11/2026');
+    // A one-day pin that happens to carry an explicit end still reads as a day.
+    expect(formatStart({ utcStartDateTime: start, utcEndDateTime: '2026-09-03T00:00:00Z', allDay: true }, 'UTC')).toBe('Starts 09/02/2026');
+    // A timed pin keeps its instant, end date or not.
+    expect(formatStart({ utcStartDateTime: '2026-09-14T16:00:00Z', utcEndDateTime: '2026-09-20T16:00:00Z' }, 'UTC')).toBe('Starts 09/14/2026 4:00PM');
+  });
+
   it('keys early and BC dates by astronomical year, padded to four digits', () => {
     expect(dayKeyIn('-002560-01-01T00:00:00Z', 'UTC')).toBe('-2560-01-01');
     expect(dayKeyIn('-000279-01-01T00:00:00Z', 'UTC')).toBe('-0279-01-01');

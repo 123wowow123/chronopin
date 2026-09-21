@@ -134,6 +134,10 @@ export type PinJson = {
   // day (lib/bagSample.ts).
   marketVolume?: number | null;
   allDay?: boolean;
+  // Whether the source said the event runs all day, rather than us simply
+  // never learning the time (schema 0057). Only an all-day pin can carry it,
+  // and only these print an "All day" label.
+  allDayStated?: boolean;
   utcCreatedDateTime?: string;
   utcUpdatedDateTime?: string;
   favoriteCount?: number;

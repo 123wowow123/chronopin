@@ -33,8 +33,9 @@ export function StartTime({
   allDaySuffix,
   search,
 }: {
-  pin: { utcStartDateTime: string; allDay?: boolean };
+  pin: { utcStartDateTime: string; utcEndDateTime?: string | null; allDay?: boolean; allDayStated?: boolean };
   serverTimeZone: string;
+  // Prints "- All day", but only where the source said so (formatStart).
   allDaySuffix?: boolean;
   // Links to the pins starting the same day (date:, the day shown here).
   search?: boolean;

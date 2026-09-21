@@ -7,6 +7,8 @@ import type { Locale } from './config';
 type Words = {
   // "Starts {date}"
   starts: string;
+  // The span of an all-day pin that runs over several days: "{start} - {end}".
+  range: string;
   allDay: string;
   // "{date} at {time}"
   at: string;
@@ -28,6 +30,7 @@ type Words = {
 export const FORMAT_WORDS: Record<Locale, Words> = {
   en: {
     starts: 'Starts {date}',
+    range: '{start} - {end}',
     allDay: 'All day',
     at: '{date} at {time}',
     today: 'Today',
@@ -41,6 +44,7 @@ export const FORMAT_WORDS: Record<Locale, Words> = {
   },
   es: {
     starts: 'Empieza el {date}',
+    range: 'Del {start} al {end}',
     allDay: 'Todo el día',
     at: '{date} a las {time}',
     today: 'Hoy',
@@ -54,6 +58,7 @@ export const FORMAT_WORDS: Record<Locale, Words> = {
   },
   fr: {
     starts: 'Commence le {date}',
+    range: 'Du {start} au {end}',
     allDay: 'Toute la journée',
     at: '{date} à {time}',
     today: "Aujourd'hui",
@@ -67,6 +72,7 @@ export const FORMAT_WORDS: Record<Locale, Words> = {
   },
   de: {
     starts: 'Beginnt am {date}',
+    range: '{start} - {end}',
     allDay: 'Ganztägig',
     at: '{date} um {time}',
     today: 'Heute',
@@ -80,6 +86,7 @@ export const FORMAT_WORDS: Record<Locale, Words> = {
   },
   ja: {
     starts: '開始 {date}',
+    range: '{start}〜{end}',
     allDay: '終日',
     at: '{date} {time}',
     today: '今日',
@@ -93,6 +100,7 @@ export const FORMAT_WORDS: Record<Locale, Words> = {
   },
   zh: {
     starts: '开始于 {date}',
+    range: '{start}至{end}',
     allDay: '全天',
     at: '{date} {time}',
     today: '今天',

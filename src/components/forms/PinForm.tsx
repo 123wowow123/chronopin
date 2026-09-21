@@ -354,6 +354,14 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
           </button>
           <span className="text-subtle">{values.allDay ? t('form.allDay') : timeZone}</span>
         </div>
+        {/* Only a pin whose source called it an all-day event is labelled one
+            on the pin page; every other dateless pin is simply missing a time. */}
+        {values.allDay ? (
+          <label className="flex items-center gap-2 text-sm text-subtle">
+            <input type="checkbox" checked={values.allDayStated} onChange={(e) => set('allDayStated', e.target.checked)} />
+            {t('form.allDayStated')}
+          </label>
+        ) : null}
         {picked.overridden ? <OverriddenDates picked={picked} allDay={values.allDay} /> : null}
         </Section>
 

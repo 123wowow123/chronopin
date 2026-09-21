@@ -12,6 +12,7 @@ const stored: PinJson = {
   utcStartDateTime: '2026-10-01T00:00:00.000Z',
   utcEndDateTime: '2026-10-04T00:00:00.000Z',
   allDay: true,
+  allDayStated: true,
   categories: ['Consumer Electronics', 'Music & Audio'],
   company: 'Sonos',
   companyWikiUrl: 'https://en.wikipedia.org/wiki/Sonos',
@@ -45,6 +46,7 @@ describe('pin form round trip', () => {
       utcStartDateTime: stored.utcStartDateTime,
       utcEndDateTime: stored.utcEndDateTime,
       allDay: true,
+      allDayStated: true,
       categories: stored.categories,
       company: 'Sonos',
       companyWikiUrl: stored.companyWikiUrl,
@@ -311,6 +313,20 @@ describe('stock tickers from a scrape', () => {
     const edit = pinToForm({ id: 1, title: 't', utcStartDateTime: '2026-09-10T00:00:00.000Z', allDay: true } as PinJson);
     expect(edit.stocks).toEqual([]);
     expect(formToPin(edit).stocks).toBeUndefined();
+  });
+});
+
+describe('the all-day claim', () => {
+  it('drops it when the pin is given a clock time', () => {
+    const timed = { ...pinToForm(stored), allDay: false, startTime: '19:30' };
+    expect(timed.allDayStated).toBe(true);
+    expect(formToPin(timed).allDayStated).toBe(false);
+  });
+
+  it('is never inherited by a pin whose source never claimed it', () => {
+    expect(pinToForm({ ...stored, allDayStated: false }).allDayStated).toBe(false);
+    expect(applyScrape(EMPTY_FORM, { utcStartDateTime: '2026-10-01T00:00:00.000Z', allDay: true }).allDayStated).toBe(false);
+    expect(applyScrape(EMPTY_FORM, { utcStartDateTime: '2026-10-01T00:00:00.000Z', allDay: true, allDayStated: true }).allDayStated).toBe(true);
   });
 });
 

@@ -518,6 +518,8 @@ function applyExtracted(pin: Pin, fields: Partial<ExtractedFields> | null): Pin 
     pin.utcStartDateTime = new Date(fields.startDateTime);
     pin.utcEndDateTime = fields.endDateTime ? new Date(fields.endDateTime) : undefined;
     pin.allDay = fields.allDay;
+    // Only a claim about an all-day pin (schema 0057).
+    pin.allDayStated = !!fields.allDay && !!fields.allDayStated;
   }
   return pin;
 }
