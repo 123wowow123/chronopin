@@ -198,6 +198,13 @@ const PATHS: Record<string, React.ReactNode> = {
   ),
   // Rising bars: how many have looked (the eye is taken by watching).
   views: <path d="M5 20v-6M12 20V5M19 20v-10" />,
+  // What a thing on the page means, told when asked for.
+  info: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 11.5v4.5M12 8h.01" />
+    </>
+  ),
   // Arrows pushing out to both ends: widening a range, not zooming a map.
   'expand-x': (
     <>

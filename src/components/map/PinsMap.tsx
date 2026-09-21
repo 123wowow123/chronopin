@@ -9,6 +9,7 @@ import { categoryPillSummary, MapCategoryFilter, queryCategories } from '@/compo
 import { FloatingControls } from '@/components/timeline/FloatingControls';
 import { TimeRangeSlider } from '@/components/timeline/TimeRangeSlider';
 import { PinWebGraph } from '@/components/map/PinWebGraph';
+import { WebLegend } from '@/components/map/WebLegend';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import { isCategory } from '@/lib/categories';
@@ -17,7 +18,7 @@ import { useQueryState } from '@/lib/client/urlState';
 import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, SPAN_OPTIONS, eventSpanSummary, offsetDate, spanFromParam, spanLabel, spanPhrase, spanToParam } from '@/lib/postedSpan';
 import { removeTerm, toggleTerm } from '@/lib/searchTerms';
 import { pinPath } from '@/lib/seo';
-import { WEB_KINDS, webColor, webModeFromParam, type WebEdge, type WebKind, type WebMode } from '@/lib/pinWeb';
+import { webColor, webIntensity, webModeFromParam, type WebEdge, type WebKind, type WebMode } from '@/lib/pinWeb';
 import type { MapPinJson, PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery } from '@/server/util/searchQuery';
 import { useT } from '@/lib/client/i18n';
@@ -162,11 +163,12 @@ function webPopupRow(pin: MapPinJson) {
 }
 
 // A web line's popup: why the two pins are joined — the kind of relation in
-// its own colour over the thing they share (the tag, the company, the source)
-// — and a row for each end, threaded by a line in the same colour so the two
-// read as the ends of one connection. Kinds with nothing shared (a thread, a
-// duplicate) put the kind itself in the headline instead.
-function webPopupContent(from: MapPinJson, to: MapPinJson, kind: WebKind, kindLabel: string, label?: string) {
+// its own colour over the thing they share (the tag, the company, the source),
+// and how much else they have in common, since a line is only drawn once a
+// pair shares enough — and a row for each end, threaded by a line in the same
+// colour so the two read as the ends of one connection. Kinds with nothing
+// shared (a thread, a duplicate) put the kind itself in the headline instead.
+function webPopupContent(from: MapPinJson, to: MapPinJson, kind: WebKind, kindLabel: string, label?: string, also?: string) {
   const color = webColor(kind);
   const content = document.createElement('div');
   content.className = 'px-3 py-2.5';
@@ -176,7 +178,8 @@ function webPopupContent(from: MapPinJson, to: MapPinJson, kind: WebKind, kindLa
     (label
       ? `<span class="truncate text-[10px] font-semibold tracking-wider uppercase text-muted">${escapeHtml(kindLabel)}</span></div>` +
         `<div class="mt-1 line-clamp-2 text-sm leading-snug font-semibold">${escapeHtml(label)}</div>`
-      : `<span class="truncate text-sm leading-snug font-semibold">${escapeHtml(kindLabel)}</span></div>`);
+      : `<span class="truncate text-sm leading-snug font-semibold">${escapeHtml(kindLabel)}</span></div>`) +
+    (also ? `<div class="mt-0.5 text-xs text-muted">${escapeHtml(also)}</div>` : '');
 
   const ends = document.createElement('div');
   ends.className = 'relative mt-2 flex flex-col gap-1';
@@ -459,17 +462,25 @@ export default function PinsMap() {
       .then((res) => (res.ok ? (res.json() as Promise<{ edges: WebEdge[] }>) : { edges: [] }))
       .then(({ edges }) => {
         if (cancelled) return;
-        for (const { a, b, kind, label } of edges) {
+        for (const { a, b, kind, label, strength, shared } of edges) {
           const from = byId.get(a);
           const to = byId.get(b);
           if (!from || !to) continue;
           // The copy of the world where the two are nearest, so a line never crosses the map.
           const toLng = to.longitude! + 360 * nearestOffset(to.longitude!, from.longitude!);
-          const line = L.polyline([[from.latitude!, from.longitude!], [to.latitude!, toLng]], { color: webColor(kind), weight: 2, opacity: 0.6, pane: 'web' });
+          // The more the two share, the heavier and more solid their line.
+          const firm = webIntensity(strength);
+          const line = L.polyline([[from.latitude!, from.longitude!], [to.latitude!, toLng]], {
+            color: webColor(kind),
+            weight: 1.5 + firm * 1.5,
+            opacity: 0.45 + firm * 0.35,
+            pane: 'web',
+          });
           // Clicked: why the two are joined, as a popup in the map's own
           // styling. Leaflet stops the click reaching the map and opens a
           // path's popup where it was clicked, so it lands on the line.
-          line.bindPopup(() => webPopupContent(from, to, kind, t(`map.web.${kind}`), label), {
+          const also = shared && shared > 1 ? t('map.web.alsoShared', { count: shared - 1 }) : undefined;
+          line.bindPopup(() => webPopupContent(from, to, kind, t(`map.web.${kind}`), label, also), {
             className: 'pin-popup',
             minWidth: WEB_POPUP_WIDTH,
             maxWidth: WEB_POPUP_WIDTH,
@@ -584,16 +595,7 @@ export default function PinsMap() {
             <PinWebGraph nodes={webNodes} edges={webEdges} selectedId={webPicked} onSelect={showPin} />
           </div>
         ) : null}
-        {web !== 'off' ? (
-          <p className="floating flex flex-wrap items-center gap-x-2.5 gap-y-0.5 rounded-full px-2.5 py-1 text-xs text-subtle">
-            {WEB_KINDS.map(({ kind, color }) => (
-              <span key={kind} className="flex items-center gap-1">
-                <span className="inline-block h-0.5 w-3" style={{ backgroundColor: color }} />
-                {t(`map.web.${kind}`)}
-              </span>
-            ))}
-          </p>
-        ) : null}
+        {web !== 'off' ? <WebLegend /> : null}
         <div className="floating flex items-center gap-1 rounded-full p-1 text-sm">
           <Icon name="web" className="ml-2 size-4 text-muted" />
           {(['off', 'lines', 'graph'] as const).map((mode) => (

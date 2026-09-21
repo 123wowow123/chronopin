@@ -525,7 +525,21 @@ const en = {
     webOff: 'Graph off',
     lines: 'Lines',
     graph: 'Graph',
-    web: { thread: 'Thread', duplicate: 'Duplicate', company: 'Company', source: 'Source', tag: 'Tag' },
+    web: {
+      thread: 'Thread',
+      duplicate: 'Duplicate',
+      company: 'Company',
+      source: 'Source',
+      tag: 'Tag',
+      alsoShared: { one: 'and {count} more thing in common', other: 'and {count} more things in common' },
+    },
+    // The ⓘ beside the legend: how a pair earns a line, since the row beside
+    // it already names the kinds. The numbers come from the map's own weights.
+    webHelpTitle: 'How a line is earned',
+    webHelpScore: 'Everything two pins share is added up: a company or an article counts {full}, a tag {tag}, each divided by log₂ of how many pins in view carry it.',
+    webHelpThreshold: 'It takes {min} to draw the line. A tag only these two carry is worth {tag}; one on {pins} pins is worth {common}, so it takes several such shares.',
+    webHelpDeclared: 'A thread or a confirmed duplicate is drawn whatever else the two share.',
+    webHelpCap: 'Each pin keeps its {links} strongest lines, and the higher the sum the heavier the line.',
     loadingPins: 'Loading pins…',
     noPins: 'No pins',
     noWatchedPins: 'No watched pins',

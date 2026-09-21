@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { webColor, type WebEdge } from '@/lib/pinWeb';
+import { webColor, webIntensity, type WebEdge } from '@/lib/pinWeb';
 import { useT } from '@/lib/client/i18n';
 
 export type WebNode = { id: number; title: string };
@@ -42,7 +42,11 @@ export function PinWebGraph({ nodes, edges, selectedId, onSelect }: { nodes: Web
         bodies.push(body);
       }
     }
-    const links = edges.filter((e) => byId.has(e.a) && byId.has(e.b)).map((e) => ({ a: byId.get(e.a)!, b: byId.get(e.b)!, kind: e.kind }));
+    // firm: how much the two pins share. It pulls them together harder and
+    // draws their line heavier, so the graph clumps around the strongest ties.
+    const links = edges
+      .filter((e) => byId.has(e.a) && byId.has(e.b))
+      .map((e) => ({ a: byId.get(e.a)!, b: byId.get(e.b)!, kind: e.kind, firm: webIntensity(e.strength) }));
     for (const l of links) {
       l.a.degree++;
       l.b.degree++;
@@ -84,11 +88,11 @@ export function PinWebGraph({ nodes, edges, selectedId, onSelect }: { nodes: Web
           b.vy -= dy * force;
         }
       }
-      for (const { a, b } of links) {
+      for (const { a, b, firm } of links) {
         const dx = b.x - a.x;
         const dy = b.y - a.y;
         const d = Math.sqrt(dx * dx + dy * dy) || 0.01;
-        const pull = ((d - 40) / d) * 0.06 * alpha;
+        const pull = ((d - 40) / d) * (0.04 + firm * 0.04) * alpha;
         a.vx += dx * pull;
         a.vy += dy * pull;
         b.vx -= dx * pull;
@@ -107,12 +111,12 @@ export function PinWebGraph({ nodes, edges, selectedId, onSelect }: { nodes: Web
     const toScreen = (x: number, y: number): [number, number] => [width / 2 + view.x + x * view.k, height / 2 + view.y + y * view.k];
     const draw = () => {
       ctx.clearRect(0, 0, width, height);
-      ctx.lineWidth = 1;
-      for (const { a, b, kind } of links) {
+      for (const { a, b, kind, firm } of links) {
         const [ax, ay] = toScreen(a.x, a.y);
         const [bx, by] = toScreen(b.x, b.y);
         ctx.strokeStyle = webColor(kind);
-        ctx.globalAlpha = 0.55;
+        ctx.lineWidth = 0.8 + firm * 1.2;
+        ctx.globalAlpha = 0.4 + firm * 0.35;
         ctx.beginPath();
         ctx.moveTo(ax, ay);
         ctx.lineTo(bx, by);
