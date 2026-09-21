@@ -21,6 +21,31 @@ const leadTag = 'shrink-0';
 const extraTag = 'min-w-0';
 const tagRow = 'absolute top-0 right-0 left-0 flex gap-1.5 overflow-hidden lg:right-auto lg:w-[110px] lg:flex-col lg:overflow-visible';
 
+// The columns a day grows past its second, in the order the window brings
+// them in: the class that puts the column on screen, how wide the day's cards
+// may then spread (n x 448 plus their gaps), and the class that takes "View
+// all" away once that width leaves nothing out. Every 400px of window past
+// 1600px fits another card (see globals.css), and Tailwind only sees classes
+// written out whole, so they are.
+const WIDE_COLUMNS = [
+  { column: '3xl:flex', row: '3xl:max-w-[1364px]', hide: '3xl:hidden' },
+  { column: '4xl:flex', row: '4xl:max-w-[1822px]', hide: '4xl:hidden' },
+  { column: '5xl:flex', row: '5xl:max-w-[2280px]', hide: '5xl:hidden' },
+  { column: '6xl:flex', row: '6xl:max-w-[2738px]', hide: '6xl:hidden' },
+];
+// Two rows of the widest ladder: what a day is picked for, however wide the
+// window is now (src/lib/bagSample.ts).
+const BAG_LIMIT_WIDE = BAG_LIMIT + 2 * WIDE_COLUMNS.length;
+// A card is never wider than the 448px two columns give it, so a quiet day
+// looks the same at every width and only a busy one grows sideways. The first
+// two columns say it again with sm: prefixes, since below sm they dissolve;
+// Tailwind reads the classes here as they are written, never assembled.
+const cardColumn = 'min-w-0 max-w-[448px] flex-1 flex-col';
+const firstColumn = 'contents sm:flex sm:min-w-0 sm:max-w-[448px] sm:flex-1 sm:flex-col';
+// How far a day may spread at each width; the "View all" link under the cards
+// takes it too, to stay centred on them.
+const rowWidth = `lg:max-w-[906px] ${WIDE_COLUMNS.map((c) => c.row).join(' ')}`;
+
 type TagVariant = 'date' | 'countdown' | 'today' | 'trivia';
 
 // A day's markers are trivia the site holds no pin for, so the chip hands the
@@ -94,22 +119,39 @@ export function TimeBlock({
   const keep = focusId == null ? null : (stacks.find((s) => s.pin.id === focusId || s.hidden.some((h) => h.id === focusId))?.pin.id ?? null);
   // A card stands for its whole stack: opening any duplicate counts for it.
   const weigh = boost && ((pin: PinJson) => boost(pin, stackIds(stacks, pin.id)));
-  const picked = sample && stacks.length > BAG_LIMIT_PHONE ? sampleBag(stacks.map((s) => s.pin), BAG_LIMIT, `${todayKey}:${bag.day}`, keep, weigh) : null;
-  // The picked cards in date order, each with where it fell in the pick: from
-  // sm up the whole pick shows, on phones only its first BAG_LIMIT_PHONE. The
-  // rest are not drawn on the timeline at all, only on the day's search.
+  const picked = sample && stacks.length > BAG_LIMIT_PHONE ? sampleBag(stacks.map((s) => s.pin), BAG_LIMIT_WIDE, `${todayKey}:${bag.day}`, keep, weigh) : null;
+  // The picked cards in date order, each with where it fell in the pick: two
+  // of them fill each column the window has room for, in that order. What is
+  // left over is not drawn on the timeline at all, only on the day's search.
   const shown = stacks.map((stack) => ({ stack, rank: picked ? picked.indexOf(stack.pin.id) : 0 })).filter((s) => s.rank >= 0);
   // Pins of the day not loaded yet count as more, too (duplicates among them
   // cannot be told apart without loading them).
   const unloaded = Math.max(0, (dayTotal ?? 0) - bag.pins.length);
-  const moreWide = stacks.length - shown.length + unloaded;
-  const morePhone = stacks.length - Math.min(shown.length, BAG_LIMIT_PHONE) + unloaded;
+  // What "View all" would still add to a day of this many columns.
+  const leftOut = (columns: number) => stacks.length + unloaded - Math.min(shown.length, 2 * columns);
+  // The link goes at the first width wide enough to leave nothing out.
+  const hiddenFrom = leftOut(2) === 0 ? 'sm:hidden' : (WIDE_COLUMNS.find((_, i) => leftOut(3 + i) === 0)?.hide ?? '');
   const firstShown = shown.findIndex((s) => s.rank < BAG_LIMIT_PHONE);
   const isToday = bag.day === todayKey;
   const planet = weekdayPlanet(bag.day, locale);
   const moon = moonPhase(bag.day, 16, locale);
   const lunar = lunarDate(bag.day, locale);
   const tagsHeight = 26 + 42 * (2 + (lunar ? 1 : 0) + bag.dateTimes.length + (specialtyDays.length ? 1 : 0));
+  // Every card the day may show, in date order; which columns they fall into
+  // is PinColumns' business, and how narrow a window still shows one is its
+  // place in the pick.
+  const cards = shown.map(({ stack, rank }, i) => (
+    <DayCard
+      key={stack.pin.id}
+      stack={stack}
+      order={i}
+      anchor
+      counted={sample}
+      className={rank >= BAG_LIMIT_PHONE ? 'max-sm:hidden' : ''}
+      serverTimeZone={serverTimeZone}
+      priority={firstPinPriority && i === firstShown}
+    />
+  ));
 
   return (
     <section id={id ?? `day-${bag.day}`} aria-label={formatDayKey(bag.day, locale)} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:pt-0">
@@ -151,21 +193,10 @@ export function TimeBlock({
 
       {bag.pins.length ? (
         <>
-          <PinColumns tagsHeight={tagsHeight}>
-            {shown.map(({ stack, rank }, i) => (
-              <DayCard
-                key={stack.pin.id}
-                stack={stack}
-                order={i}
-                anchor
-                counted={sample}
-                className={rank >= BAG_LIMIT_PHONE ? 'max-sm:hidden' : ''}
-                serverTimeZone={serverTimeZone}
-                priority={firstPinPriority && i === firstShown}
-              />
-            ))}
-          </PinColumns>
-          {sample && morePhone && daySearchHref ? <ShowMore href={daySearchHref(bag.day)} total={stacks.length + unloaded} hiddenWide={moreWide > 0} /> : null}
+          <PinColumns tagsHeight={tagsHeight} cards={cards} ranks={shown.map((s) => s.rank)} />
+          {sample && leftOut(1) > 0 && daySearchHref ? (
+            <ShowMore href={daySearchHref(bag.day)} total={stacks.length + unloaded} hiddenFrom={hiddenFrom} />
+          ) : null}
         </>
       ) : (
         // lg:pt-7 lines the first title up with the date tag and rail marker
@@ -190,18 +221,31 @@ export function TimeBlock({
   );
 }
 
-// The day's cards fill across before down: from sm up they alternate between
-// two columns (1 left, 2 right, 3 left...), each column stacking its own cards
-// without gaps. On phones the columns dissolve (display: contents) into one
-// list, and each card's `order` puts it back in date order.
-function PinColumns({ tagsHeight, children }: { tagsHeight: number; children: React.ReactElement[] }) {
-  const column = (parity: number) => (
-    <div className="contents sm:flex sm:min-w-0 sm:flex-1 sm:flex-col">{children.filter((_, i) => i % 2 === parity)}</div>
-  );
+// The day's first four cards fill across before down: from sm up they
+// alternate between two columns (1 left, 2 right, 3 left...), each column
+// stacking its own cards without gaps. On phones the columns dissolve
+// (display: contents) into one list, and each card's `order` puts it back in
+// date order. Every column after those two is the next two of the pick and
+// waits for a window wide enough (WIDE_COLUMNS), so a card keeps its column
+// as the window grows: widening only ever adds a column on the right.
+function PinColumns({ tagsHeight, cards, ranks }: { tagsHeight: number; cards: React.ReactElement[]; ranks: number[] }) {
+  const byRank = (from: number, to: number) => cards.filter((_, i) => ranks[i] >= from && ranks[i] < to);
+  const first = byRank(0, BAG_LIMIT);
   return (
-    <div role="list" className="flex flex-col sm:flex-row sm:gap-2.5 lg:ml-[170px] lg:min-h-(--tags-h) lg:max-w-[906px]" style={{ ['--tags-h' as string]: `${tagsHeight}px` }}>
-      {column(0)}
-      {column(1)}
+    <div role="list" className={`flex flex-col sm:flex-row sm:gap-2.5 lg:ml-[170px] lg:min-h-(--tags-h) ${rowWidth}`} style={{ ['--tags-h' as string]: `${tagsHeight}px` }}>
+      {[0, 1].map((parity) => (
+        <div key={parity} className={firstColumn}>
+          {first.filter((_, i) => i % 2 === parity)}
+        </div>
+      ))}
+      {WIDE_COLUMNS.map(({ column }, i) => {
+        const held = byRank(BAG_LIMIT + 2 * i, BAG_LIMIT + 2 * i + 2);
+        return held.length ? (
+          <div key={column} className={`hidden ${cardColumn} ${column}`}>
+            {held}
+          </div>
+        ) : null;
+      })}
     </div>
   );
 }
@@ -244,13 +288,12 @@ function DayCard({
 }
 
 // Below a day cut to two rows: "View all 71 pins", the whole day as a date:
-// search. Two rows are four cards from sm up and two on phones, so from sm up
-// there may be none left out (hiddenWide false), and then it shows on phones
-// only.
-function ShowMore({ href, total, hiddenWide }: { href: string; total: number; hiddenWide: boolean }) {
+// search. Two rows are two cards a column, so a wide enough window may leave
+// nothing out; `hiddenFrom` is the width where that happens and the link goes.
+function ShowMore({ href, total, hiddenFrom }: { href: string; total: number; hiddenFrom: string }) {
   const t = useT();
   return (
-    <div className={`mb-2.5 flex justify-center lg:ml-[170px] lg:max-w-[906px] ${hiddenWide ? '' : 'sm:hidden'}`}>
+    <div className={`mb-2.5 flex justify-center lg:ml-[170px] ${rowWidth} ${hiddenFrom}`}>
       <Link href={href} className="rounded-full px-3 py-1 text-sm font-medium text-subtle tabular-nums ring-1 ring-line ring-inset hover:text-link hover:no-underline">
         {t('timeline.viewAll', { count: total })}
       </Link>

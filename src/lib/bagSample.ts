@@ -6,7 +6,12 @@
 // cite prediction markets also weighs the money traded on them. For a signed-in
 // viewer it can weigh more still by their own preference wiki (userWiki.ts).
 
-// Two rows: two columns from sm up, one column on phones.
+// Two rows, however wide the window: one column on a phone, two from sm, and
+// another for every 400px of window past 1600px, to six (TimeBlock's
+// WIDE_COLUMNS, which holds the widths). A day is always picked for the widest
+// of those, and the cards a narrower window has no column for are hidden
+// rather than left out of the pick, so widening the window only ever adds
+// cards to a day - none of the ones already there move.
 export const BAG_LIMIT = 4;
 export const BAG_LIMIT_PHONE = 2;
 
