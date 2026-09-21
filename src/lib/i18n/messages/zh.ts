@@ -139,6 +139,8 @@ const zh: Messages = {
     'science-research': '科学与研究',
     marine: '海洋',
     'climate-environment': '气候与环境',
+    weather: '气象',
+    'natural-disasters': '自然灾害',
     geopolitics: '地缘政治',
     'defense-military': '国防与军事',
     elections: '选举',

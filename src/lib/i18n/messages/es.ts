@@ -138,6 +138,8 @@ const es: Messages = {
     'science-research': 'Ciencia e investigación',
     marine: 'Mar',
     'climate-environment': 'Clima y medio ambiente',
+    weather: 'Meteorología',
+    'natural-disasters': 'Desastres naturales',
     geopolitics: 'Geopolítica',
     'defense-military': 'Defensa y ejército',
     elections: 'Elecciones',

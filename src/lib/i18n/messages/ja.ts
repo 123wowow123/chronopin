@@ -138,6 +138,8 @@ const ja: Messages = {
     'science-research': '科学・研究',
     marine: '海洋',
     'climate-environment': '気候・環境',
+    weather: '気象',
+    'natural-disasters': '自然災害',
     geopolitics: '地政学',
     'defense-military': '防衛・軍事',
     elections: '選挙',

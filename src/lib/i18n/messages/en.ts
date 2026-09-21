@@ -139,6 +139,8 @@ const en = {
     'science-research': 'Science & Research',
     marine: 'Marine',
     'climate-environment': 'Climate & Environment',
+    weather: 'Weather',
+    'natural-disasters': 'Natural Disasters',
     geopolitics: 'Geopolitics',
     'defense-military': 'Defense & Military',
     elections: 'Elections',

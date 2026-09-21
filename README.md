@@ -470,31 +470,37 @@ major local events by major city scrape and more targetted by your location
 - Add api key for Amazon & eBay Price Scrape
 
 
-# Daily Jobs
+# Daily Job
 
-- build list for daily scraper and add search engine trending search in the job too
+Create OKF for pin maintenance strategy with these guidelines and add new learning to this. This will in turn create the pin maintance job in the defined run periods.
 
-- need job to scrape and update pin, any visit will trigger a scheduled update scape that night, along to new reference
 
-- create job to check health of pins like broken videos, image, etc and new pin connection and references might be able to add
+Create LLM Orchistration pipeline and add it to a daily job to scrape and update pins. This pipeline should be able to use Claude credits or VS Code session credit to kick off job. Convert anything that the LLM needs that's in the current pipeline in tools, for example, image processor or PDF reader or headless chorme. Only convert what Claude does not have native support for.
 
-- nightly job should be guided by LLM reasoning and guidance so it's flexible like running in current sessions 
-
-daily morning job to add an verify this weeks pins are up to date.
-
-daily google trend scrape and updats previous pins
+Midnight linting and new pin creation jobs :
+- Should scrape google trends and updats pins that are marked for revisiting
 https://trends.google.com/explore
 
-Create LLM Orchistration pipeline and add it to a daily job to scrape and update pins
+- Check for any category that are thin and try to add more pin on major events
 
-Midnight linting and new pin creation jobs 
-6am, 6pm job updating this weeks pins 
+- Add more major events pin for categories that have trending views
+
+- Check health of pins like broken videos, image, etc and new pin connection and references might be able to add
+
+
+6am, 6pm PST job linting and new pin creation jobs:
+
+- Check and update this week's pins to ensure it's up to date and well vetted.
+
+- Will add new sources that came out since last udpate and check if media links are broken and fix and add newer ones available
+
+- Pin any major news or events that can out
+
+
+
 
 # OKF
 
-# Other
-
-- should have small display that 3 pins are happing within next 7 days on botton and top of timeline. Clicking on it will scroll you to it one after another
 
 # Scraping
 

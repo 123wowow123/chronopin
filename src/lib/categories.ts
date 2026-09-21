@@ -19,6 +19,8 @@ export const CATEGORIES = [
   'Science & Research',
   'Marine',
   'Climate & Environment',
+  'Weather',
+  'Natural Disasters',
   'Geopolitics',
   'Defense & Military',
   'Elections',

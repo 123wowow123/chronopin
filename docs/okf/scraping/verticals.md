@@ -40,6 +40,76 @@ Each recipe is a repeatable pattern. Update it when a run teaches something ([Le
 | State visits and summits | @PoliticsDesk | `Geopolitics` | The two governments' own announcements - the host's briefing statement and the visitor's foreign ministry - then the wire copy for colour | One pin per dated *item* of the visit (the arrival, the ceremony, the signing), not one per visit; company is the host (`The White House`), placed where that item happens, and the rest of the itinerary goes in the summary |
 | Bilateral relationship history | @PoliticsDesk | `Geopolitics` (plus `Policy & Legal`, `Macroeconomics`, `Defense & Military`, `Computing & Semiconductors`) | The two governments' own archives - `history.state.gov` Milestones and FRUS, the American Presidency Project, the Federal Register, USTR, the WTO, a member's own press release | The backbone of a relationship, threaded oldest first as one linear chain; each pin takes the archive that published the document it is about, and a later pin about the same relationship is re-parented into the chain by `PUT` |
 | Aerospace | @BuildDesk | `Aerospace` (plus `Defense & Military`) | Wikipedia aircraft-type articles, manufacturer newsrooms, NASA, trade press | The pin is the flight, the certification or the delivery, placed at the airfield it happened at; `media:videos` matches none of them, so the video is a hand pick from a newsreel or the maker's own channel |
+| Natural disasters | @ScienceDesk | `Natural Disasters` (plus `Marine`, `Weather`) | USGS FDSN event catalogue, Smithsonian Global Volcanism Program, the event's own Wikipedia article | The earthquake or eruption itself, placed at its **epicentre or the volcano**, timed in UTC from the catalogue; the local date often differs from the UTC one and the reasoning has to say so |
+| Weather disasters | @ClimateDesk | `Weather` (plus `Natural Disasters`, `Climate & Environment`) | NHC Tropical Cyclone Reports, national met agencies, WMO, the event's own Wikipedia article | One pin per **landfall or failure**, not per storm's whole life; placed where it came ashore or where the dam broke; a heat wave or flood season is a period, `estimated` at month bounds |
+| Weather seasons and climate reports | @ClimateDesk | `Weather`, `Climate & Environment` | The agency that *defines* the season (NHC, BOM) and the body that schedules the report (IPCC) | A season is a **period in force**, not a day: official bounds, `scheduled`, exclusive 00:00Z end. These are the only reliably forward-dated pins this vertical has |
+
+# Weather and natural disasters
+
+Two verticals that share a shape: the pin is a **moment of physical damage**, it
+almost always lies in the past, and its authority is a government science agency
+rather than a company. Pins 2429-2454 seeded both categories in one pass -
+fourteen geological events as @ScienceDesk and twelve weather events and seasons
+as @ClimateDesk. Before it the corpus held **no** earthquake, eruption,
+hurricane or wildfire at all: a keyword sweep for every hazard word matched seven
+pins, and all seven were flood *defences*, an anime or a fighter jet.
+
+1. **The catalogue gives the instant, the article gives the story.** The USGS
+   FDSN API answers an authoritative event id, magnitude, epoch-millisecond
+   origin time, epicentre and depth for any historic earthquake; the event's
+   Wikipedia article carries the narrative, the toll and the consequences. Use
+   the first for every number in the date fields and the second as `sourceUrl`,
+   because the USGS's own human event page renders empty ([Sources](sources.md)).
+2. **A disaster has no company.** `company` is null for an earthquake, an
+   eruption, a cyclone or a flood - nobody did it. It is only set on the forward
+   pins, where the organisation *is* the event's author: the National Hurricane
+   Center for a season it defines, the Bureau of Meteorology, the IPCC for a
+   report.
+3. **The UTC day is often not the day the event is known by.** Tangshan struck at
+   03:42 local on 28 July 1976, which is 19:42 UTC on the **27th**; Haiyan made
+   landfall at 20:40 UTC on 7 November 2013, which is the 8th in the
+   Philippines; the Galveston hurricane came ashore around 8 p.m. on 8 September
+   1900, which is 02:00 UTC on the 9th. Store the UTC instant and spend a
+   sentence of `dateConfidenceReasoning` on the discrepancy - otherwise the pin
+   looks a day wrong to anyone who knows the event.
+4. **A season, a flood and a heat wave are periods; a quake is an instant.** An
+   official cyclone season takes its agency's own bounds with an exclusive 00:00Z
+   end (1 June to 30 November 2027 ends `2027-12-01T00:00:00Z`) and is
+   `scheduled`, because the agency fixes it rather than forecasting it. A flood
+   or heat wave the source bounds only by month is `estimated` across those
+   months. An earthquake or a landfall is a timed single instant with a null end.
+5. **Say when the sources disagree, rather than picking quietly.** Vesuvius is
+   the extreme case: medieval manuscripts and a 2022 re-reading of Pliny support
+   24 August 79, while autumnal fruit remains, a wind study and a charcoal
+   inscription point to October or November, and a separate 2022 study concludes
+   "between October 24th and November 1st". The pin takes the traditional date,
+   marks it `estimated` and lays out both cases. The Bhola cyclone has a smaller
+   version of the same problem - its own article's lead says 12 November 1970
+   while its track narrative implies the 11th - and the reasoning names the
+   conflict instead of resolving it.
+6. **The map is the reward.** Placing each pin at its epicentre, volcano or
+   landfall point spreads a single batch across Chile, Peru, Cameroon, Libya,
+   Bangladesh, Indonesia, the Philippines, Turkey, Haiti and Iceland - the
+   regions the corpus is thinnest in. A continent-wide event (a European heat wave, an Australian fire season) has
+   no single place; put it at the worst-hit city or, failing that, the region,
+   and say in the address label that that is what it is.
+7. **`media:videos` cannot serve this vertical, and that is structural.** Its two
+   gates are that a video announces itself (trailer, teaser, reveal) or comes
+   from the company's own channel. A disaster has neither, so the search
+   correctly rejected all 26 pins - the videos that rank for "Krakatoa" or
+   "Hurricane Katrina" are documentaries and explainers, which the `COMMENTARY`
+   filter is right to refuse. Hand-pick instead, as with
+   [Aerospace](#aerospace): a Data API search per pin, taking only the agency's
+   own channel (USGS, NOAA, NWS, IPCC) or a major outlet's **day-of** report,
+   found 9 for 26. Add it with `new Medium({type: 3, ...}, pin).saveWithThumb()`
+   rather than a `PUT`. Keep the edition rule - a 2016 season outlook is the
+   wrong moment for a 2027 season, and a standing explainer is not that season -
+   and leave a pin without a video rather than pad it.
+8. **Pictures are abundant and rate-limited.** Almost every event has a
+   public-domain lead image - a federal photograph, a satellite image, a period
+   engraving - and `npm run media:top-up` found three for most pins. Wikimedia
+   answers 429 part-way through a run of 26; re-run the pins it skipped with
+   `--delay 25` rather than assuming they have nothing.
 
 # Bilateral relationship history
 

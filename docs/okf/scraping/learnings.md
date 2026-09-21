@@ -1911,3 +1911,130 @@ of is worth a look on any pin that gets both.
 * **Feedback**: none; this was the standing scrape-without-sign-off rule.
 * **Changed**: [Sources](sources.md) - the IMDb row now covers `/news/ni.../`
   items and the syndication workaround.
+
+## 2026-09-21 - Weather and natural disasters, from nothing (pins 2429-2454)
+
+Asked for "weather and disaster related pins". A keyword sweep for every hazard
+word I could think of (hurricane, typhoon, cyclone, earthquake, tsunami,
+volcano, erupt, flood, wildfire, drought, tornado, storm, heat wave, blizzard,
+monsoon, landslide, famine, disaster, weather) matched **seven pins in 2,428**,
+and not one of them was a disaster: four flood-defence projects, an anime
+(*Weathering With You*), a Eurofighter Typhoon and a storm-surge plan. The
+domain was empty, not thin.
+
+Twenty-six pins: fourteen geological events as @ScienceDesk and twelve weather
+events and seasons as @ClimateDesk. Two new categories, `Weather` and
+`Natural Disasters`, seeded in the same pass.
+
+* **Learned**: the **USGS FDSN API** is the best source this vertical has -
+  `fdsnws/event/1/query?format=geojson&starttime=&endtime=&minmagnitude=`
+  answers the event id, magnitude, epoch-millisecond origin time, epicentre and
+  depth for anything in the catalogue, keyless. Its **human event page renders
+  empty**, though: `earthquakes/eventpage/<id>/executive` answers 200 and the
+  headless browser gets an Angular shell - nav links, a social-media list and a
+  footer, 666 characters of page text. So the catalogue supplies the facts and
+  the event's own Wikipedia article is the `sourceUrl`.
+* **Learned**: **query the catalogue by date window, never by guessed slug.**
+  Two `usgs.gov/programs/earthquake-hazards/science/<event>` paths invented from
+  the event name 404'd before I stopped guessing.
+* **Learned**: the **aftershock trap**. A one-UTC-day window around Tangshan
+  returns `usp0000hk6`, M7.4, "6 km SW of Linxi" - the *aftershock*. The M7.5
+  main shock is `usp0000hjg` at 19:42:54Z on the **previous** UTC day, because
+  the quake struck at 03:42 local on 28 July. I had the wrong event until
+  Wikipedia's "at 03:42:55 on 28 July (19:42:55, 27 July UTC)" caught it.
+* **Learned**: **the UTC day is routinely not the day the event is famous for**,
+  and this vertical hits it constantly. Tangshan is the 28 July earthquake and
+  the pin sits on 27 July; Haiyan is the 8 November typhoon and its landfall is
+  20:40Z on the 7th; the Galveston hurricane is the 8 September storm and came
+  ashore about 02:00Z on the 9th. Each of those pins spends a sentence of
+  `dateConfidenceReasoning` saying so. Without it the pin reads as a day wrong.
+* **Learned**: **`volcano.si.edu` is a reuters.com-shaped source** - 403 to
+  `curl` with a browser UA, read in full by the app's own headless scraper. Five
+  volcano numbers were confirmed by scraping them and reading the `<title>`
+  (`Global Volcanism Program | Tambora`), which matters because the numbers are
+  unguessable and citing the wrong one silently attributes the eruption to
+  another volcano.
+* **Learned**: **NOAA's NCEI HazEL database is unusable** - every path answers
+  200 with "We're sorry but HazEL doesn't work properly without JavaScript
+  enabled", which a status check passes and a byte count does not catch.
+* **Learned**: **a disaster has no company.** `company` is null on all 23
+  historical pins - nobody did it - and set only on the three forward pins,
+  where the organisation really is the event's author (National Hurricane
+  Center, Bureau of Meteorology, IPCC).
+* **Learned**: **the only forward-datable part of this vertical is the seasons
+  and the report calendar.** Disasters cannot be scheduled, so three of 26 pins
+  lie in the future: the 2027 Atlantic hurricane season (1 June to 30 November,
+  `scheduled` because the NHC *defines* the bounds rather than forecasting
+  them), the 2027-28 Australian region cyclone season (1 November to 30 April,
+  which is the only thing in this pass that lands in **November 2027**, the
+  emptiest month in the corpus) and the IPCC Special Report on Climate Change
+  and Cities in March 2027. Both seasons are periods with an exclusive 00:00Z
+  end, the same convention a law in force uses.
+* **Learned**: **say when the sources disagree instead of picking quietly.**
+  Vesuvius is the hard case - medieval manuscripts and a 2022 re-reading of
+  Pliny support 24 August 79, while autumnal fruit remains, heavy clothing on
+  victims, a 2007 wind study and an October charcoal inscription point to the
+  autumn, and a separate 2022 study concludes "between October 24th and
+  November 1st". The pin takes the traditional date, marks it `estimated` and
+  lays out both cases. The Bhola cyclone is a smaller version: its article's
+  lead says 12 November 1970 while its own track narrative implies the 11th, and
+  the reasoning names the conflict rather than resolving it.
+* **Learned**: **year 79 stores and reads back fine.** `0079-08-24T00:00:00Z`
+  passed the all-day UTC-midnight check and came back as `0079-08-24 00:00`.
+* **Learned**: **`media:videos` is structurally unable to serve this vertical**,
+  and its refusal is correct. Its two gates are that a video announces itself
+  (trailer, teaser, reveal) or comes from the company's own channel; a disaster
+  has neither, so it rejected all 26 pins and added nothing. What ranks for
+  "Krakatoa" or "Hurricane Katrina" is documentaries and explainers, which
+  `COMMENTARY` is right to refuse.
+* **Learned**: **the hand pick works well, though** - the same route Aerospace
+  uses. A Data API search per pin, restricted by eye to the agency's own channel
+  or a major outlet's contemporaneous report, found **9 videos for 26 pins**:
+  USGS's own 1906 and Mount St. Helens footage, NOAA's 2004 tsunami
+  visualisation, the NWS Lake Charles WSR-88D radar animation of Katrina's
+  landfall, the IPCC's own video on the cities report, and day-of reporting from
+  FRANCE 24 (Kahramanmaras), Rappler (Tacloban, 8 November 2013), NBC News
+  (Eyjafjallajokull) and BBC News (Derna). The other 17 get none, correctly:
+  there is no footage of Vesuvius, Lisbon, Tambora or Krakatoa, and for the rest
+  every candidate was commentary. **Apply the edition rule** - NOAA's 2016
+  season outlook is the wrong moment for a 2027 season pin, and the Bureau of
+  Meteorology's standing cyclone explainer is not the 2027-28 season, so both
+  forward season pins were left without a video rather than padded.
+* **Learned (my own error, worth recording)**: I first reported the YouTube Data
+  API key as invalid. It is fine - `config.youtube` exposes it as **`apiKey`**,
+  and my probe read `config.youtube.key`, which is `undefined` and makes Google
+  answer the identical "API key not valid" message. A missing key and a bad key
+  are indistinguishable from the error text, so check the property name against
+  [config.ts](../../../src/server/config.ts) before concluding the key is dead.
+* **Learned**: **`mediumID` is `youtube`, not `youTube`.** The wrong casing
+  yields `undefined` and the insert dies on `null value in column "type" of
+  relation "Medium"` - after the `PinMedium` link is attempted, so read the
+  error as a type-lookup bug rather than a schema problem. Adding a video to an
+  existing pin needs no `PUT`: `new Medium({type: 3, originalUrl, ...}, pin)`
+  then `saveWithThumb()` writes the medium and its still without touching the
+  pin row, which is how `media:top-up` does it and avoids the wholesale
+  reference re-save a `PUT` would trigger. The `maxresdefault`/`sddefault` 404s
+  in its output are the normal fallback chain down to `hqdefault`, not failures.
+* **Learned**: **`media:top-up` is excellent here and Wikimedia throttles it.**
+  Almost every event has a public-domain lead image - a federal photograph, a
+  satellite image, a period engraving - and the run added **39 pictures across
+  19 pins**, then started answering 429 and found nothing for seven. A re-run of
+  just those seven with `--delay 25` added 9 more. Only Tambora and Krakatoa are
+  still on one picture.
+* **Learned**: the app's Anthropic key still has **no credit** (`llm: "session"`
+  on every scrape), so extraction and references were done by hand throughout,
+  per [Scrape without credit](../playbooks/scrape-without-credit.md).
+* **Learned**: three pins are saved with **no reference** - Lisbon 1755, the 1931
+  China floods and the Bhola cyclone. NCEI HazEL would have covered the first
+  two and it is unusable; nothing authoritative and fetchable turned up for
+  Bhola, and the WMO Atlas release that quantifies the 2003 heat wave does not
+  mention it. Recorded rather than padded.
+* **Feedback**: the owner chose **two categories** over one combined
+  `Weather & Disasters`, and **splitting existing desks** (@ClimateDesk for
+  weather and storms, @ScienceDesk for earthquakes and eruptions) over opening a
+  new @HazardDesk - consistent with the batch-4 preference for reusing desks.
+  The batch was to lean historical with some forward-dated items.
+* **Changed**: [Sources](sources.md) - four new rows (USGS catalogue, Global
+  Volcanism Program, NCEI HazEL, the national weather and climate agencies).
+  [Vertical recipes](verticals.md) - three new table rows and a
+  "Weather and natural disasters" recipe.
