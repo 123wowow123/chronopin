@@ -8579,6 +8579,42 @@
       "utcRemovedDateTime": null,
       "relation": "company",
       "note": "the defense company tasked with B-21 manufacturing in a 2024 contract award"
+    },
+    {
+      "id": 744,
+      "pinId": 2395,
+      "symbol": "UPS",
+      "name": "United Parcel Service",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-09-21T15:00:19.302Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 745,
+      "pinId": 2396,
+      "symbol": "LAC",
+      "name": "Lithium Americas",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-09-21T15:00:26.590Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 746,
+      "pinId": 2397,
+      "symbol": "RIO",
+      "name": "Rio Tinto",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-09-21T15:00:34.080Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
     }
   ],
   "prices": [
@@ -24674,6 +24710,72 @@
       "utcPriceDateTime": null,
       "utcCheckedDateTime": null,
       "utcSetDateTime": "2026-09-21T05:01:23.266Z"
+    },
+    {
+      "id": 6235,
+      "pinTickerId": 744,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 95.56,
+      "utcPriceDateTime": "2026-09-21T15:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T15:00:20.241Z",
+      "utcSetDateTime": "2026-09-21T15:00:19.310Z"
+    },
+    {
+      "id": 6236,
+      "pinTickerId": 744,
+      "kind": "start",
+      "utcStartDateTime": "2028-07-31T00:00:00.000Z",
+      "day": "2028-07-31",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-09-21T15:00:19.313Z"
+    },
+    {
+      "id": 6237,
+      "pinTickerId": 745,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 2.9101,
+      "utcPriceDateTime": "2026-09-21T15:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T15:00:27.107Z",
+      "utcSetDateTime": "2026-09-21T15:00:26.600Z"
+    },
+    {
+      "id": 6238,
+      "pinTickerId": 745,
+      "kind": "start",
+      "utcStartDateTime": "2027-12-31T00:00:00.000Z",
+      "day": "2027-12-31",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-09-21T15:00:26.604Z"
+    },
+    {
+      "id": 6239,
+      "pinTickerId": 746,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 96.75,
+      "utcPriceDateTime": "2026-09-21T15:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T15:00:34.900Z",
+      "utcSetDateTime": "2026-09-21T15:00:34.087Z"
+    },
+    {
+      "id": 6240,
+      "pinTickerId": 746,
+      "kind": "start",
+      "utcStartDateTime": "2028-12-31T00:00:00.000Z",
+      "day": "2028-12-31",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-09-21T15:00:34.089Z"
     }
   ],
   "relations": [
