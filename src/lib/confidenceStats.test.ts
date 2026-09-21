@@ -28,12 +28,14 @@ describe('confidenceStats', () => {
   });
 
   it('groups largest first and folds the rest into Other', () => {
-    const { byCategory, byAuthor } = confidenceStats(rows, 70, 2);
+    const { byCategory, byAuthor, categoryCount, authorCount } = confidenceStats(rows, 70, 2);
     expect(byCategory).toEqual([
       { label: 'Tech', showing: 2, hidden: 1 },
       { label: 'Other (2)', showing: 2, hidden: 1 },
     ]);
     expect(byAuthor[0]).toEqual({ label: 'b', showing: 2, hidden: 1 });
+    // Counts every distinct group, including the ones folded into Other.
+    expect({ categoryCount, authorCount }).toEqual({ categoryCount: 3, authorCount: 3 });
   });
 });
 

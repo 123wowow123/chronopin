@@ -18,6 +18,9 @@ export function VisibilityCharts({ stats }: { stats: ConfidenceStats }) {
   const [grouping, setGrouping] = useState<'category' | 'author'>('category');
   const [view, setView] = useState<ChartView>('chart');
   const groups = grouping === 'category' ? stats.byCategory : stats.byAuthor;
+  // Every distinct group, not just the rows charted: the rest sit in "Other".
+  const groupCount = grouping === 'category' ? stats.categoryCount : stats.authorCount;
+  const groupNoun = grouping === 'category' ? (groupCount === 1 ? 'category' : 'categories') : `author${groupCount === 1 ? '' : 's'}`;
 
   // Hover and keyboard focus show the same readout.
   const tipHandlers = (title: string, count: VisibilityCount) => ({
@@ -55,7 +58,12 @@ export function VisibilityCharts({ stats }: { stats: ConfidenceStats }) {
 
       <section className="surface p-4 sm:p-5">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
-          <h2 className="text-base font-semibold">Showing and hidden by {grouping}</h2>
+          <h2 className="flex items-baseline gap-2 text-base font-semibold">
+            Showing and hidden by {grouping}
+            <span className="text-sm font-normal text-subtle tabular-nums">
+              {groupCount} {groupNoun}
+            </span>
+          </h2>
           <div className="flex flex-wrap items-center gap-3">
             {view === 'chart' ? <Legend /> : null}
             <ViewTabs view={view} onChange={setView} />
