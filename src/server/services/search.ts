@@ -124,27 +124,35 @@ export async function searchPinsPage(request: SearchRequest): Promise<{ pins: Pi
     startTo: request.startTo,
   };
   const size = config.pagination.searchPageSize;
+  // One row more than a page is asked for, purely to see whether there is
+  // another page at all: a page that fills exactly, with nothing after it,
+  // would otherwise be linked on from to nothing.
+  const probe = size + 1;
   const { cursor } = request;
   const links: SearchLinks = {};
+  // Puts the page back to its size, and links on only if that extra row was
+  // there - it belongs to the next page, not this one.
   const link = (direction: 'previous' | 'next', ranks: SearchRank[]) => {
-    if (ranks.length === size) links[direction] = searchLink(request, direction, ranks[ranks.length - 1]);
+    if (ranks.length <= size) return;
+    ranks.length = size;
+    links[direction] = searchLink(request, direction, ranks[size - 1]);
   };
 
   let ranked: SearchRank[];
   if (request.sort === 'relevance') {
     const after = cursor ? { id: cursor.id, start: cursor.start, score: cursor.score ?? 1 } : null;
-    ranked = await Pins.rankSearch(filter, { sort: 'relevance', after }, size);
+    ranked = await Pins.rankSearch(filter, { sort: 'relevance', after }, probe);
     link('next', ranked);
   } else if (cursor) {
-    ranked = await Pins.rankSearch(filter, { sort: 'date', direction: cursor.direction, after: cursor }, size);
+    ranked = await Pins.rankSearch(filter, { sort: 'date', direction: cursor.direction, after: cursor }, probe);
     link(cursor.direction, ranked);
     if (cursor.direction === 'previous') ranked.reverse();
   } else {
     // The first page straddles now, as the timeline's does.
     const now = { start: new Date().toISOString(), id: 0 };
     const [before, after] = await Promise.all([
-      Pins.rankSearch(filter, { sort: 'date', direction: 'previous', after: now }, size),
-      Pins.rankSearch(filter, { sort: 'date', direction: 'next', after: now }, size),
+      Pins.rankSearch(filter, { sort: 'date', direction: 'previous', after: now }, probe),
+      Pins.rankSearch(filter, { sort: 'date', direction: 'next', after: now }, probe),
     ]);
     link('previous', before);
     link('next', after);
