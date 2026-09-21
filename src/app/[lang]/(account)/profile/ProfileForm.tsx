@@ -3,6 +3,7 @@
 import { useRouter } from '@/lib/client/navigation';
 import { useRef, useState } from 'react';
 import { UserAvatar } from '@/components/ui/UserAvatar';
+import { birthdayProblem, birthdayToday, EARLIEST_BIRTHDAY } from '@/lib/birthday';
 import { api, ApiError } from '@/lib/client/api';
 import { refreshSession } from '@/lib/client/session';
 import type { SessionUser } from '@/lib/types';
@@ -11,7 +12,9 @@ import { useT } from '@/lib/client/i18n';
 
 export function ProfileForm({ user }: { user: SessionUser }) {
   const router = useRouter();
-  const [form, setForm] = useState({ firstName: user.firstName || '', lastName: user.lastName || '', email: user.email || '' });
+  // An empty birthday is what takes it back off the account, so the patch
+  // sends the field either way.
+  const [form, setForm] = useState({ firstName: user.firstName || '', lastName: user.lastName || '', birthday: user.birthday || '', email: user.email || '' });
   const [pictureUrl, setPictureUrl] = useState(user.pictureUrl || '');
   const [pictureBusy, setPictureBusy] = useState(false);
   const [pictureError, setPictureError] = useState('');
@@ -55,6 +58,10 @@ export function ProfileForm({ user }: { user: SessionUser }) {
     setMessage('');
     setError('');
     if (!form.firstName || !form.lastName) return setError(t('profile.namesRequired'));
+    const badBirthday = birthdayProblem(form.birthday);
+    if (badBirthday) {
+      return setError(badBirthday === 'format' ? t('signup.birthdayInvalid') : t('signup.birthdayRange', { min: EARLIEST_BIRTHDAY }));
+    }
     try {
       await api.patch('/api/users/me', form);
       await refreshSession();
@@ -109,6 +116,13 @@ export function ProfileForm({ user }: { user: SessionUser }) {
             </label>
             <input id="lastName" className="field" value={form.lastName} onChange={set('lastName')} />
           </div>
+        </div>
+        <div>
+          <label htmlFor="birthday" className="field-label">
+            {t('signup.birthday')}
+          </label>
+          <input id="birthday" type="date" autoComplete="bday" min={EARLIEST_BIRTHDAY} max={birthdayToday()} className="field" value={form.birthday} onChange={set('birthday')} />
+          <p className="mt-1.5 text-sm text-subtle">{t('signup.birthdayHint')}</p>
         </div>
         <div>
           <label htmlFor="email" className="field-label">

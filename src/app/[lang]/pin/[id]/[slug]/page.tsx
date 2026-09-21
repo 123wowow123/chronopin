@@ -16,6 +16,7 @@ import { PinAdminLink } from '@/components/pin/PinAdminLink';
 import { CardGrid } from '@/components/pin/CardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { PinConfidence } from '@/components/pin/PinConfidence';
+import { PinDistance } from '@/components/pin/PinDistance';
 import { PinDuplicates } from '@/components/pin/PinDuplicates';
 import { PinOdds } from '@/components/pin/PinOdds';
 import { PinStocks } from '@/components/pin/PinStocks';
@@ -131,6 +132,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
                   ) : null}
                 </p>
               ) : null}
+              <PinDistance latitude={pin.latitude} longitude={pin.longitude} />
               <PinWeather pinId={pin.id} />
             </div>
           ) : null}

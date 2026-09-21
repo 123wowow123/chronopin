@@ -9,12 +9,18 @@ const email = `e2e-${stamp}@example.com`;
 // earlier run left behind.
 const sourceUrl = `https://example.com/e2e/${stamp}`;
 const password = 'correct horse battery';
+// A leap day: the one date a round trip through a time zone is most likely
+// to land a day either side of.
+const birthday = '1984-02-29';
 
 async function signUp(page: Page) {
   await page.goto('/signup');
   await page.getByLabel('User Handle').fill(handle);
   await page.getByLabel('First Name').fill('End');
   await page.getByLabel('Last Name').fill('ToEnd');
+  // Optional, but a given birthday has to come back the same day (0058 is a
+  // `date`, which pg would otherwise hand back as local midnight).
+  await page.getByLabel('Birthday').fill(birthday);
   await page.getByLabel('Email').fill(email);
   await page.getByLabel('Password', { exact: true }).fill(password);
   await page.getByLabel('Confirm Password').fill(password);
@@ -111,6 +117,7 @@ test.describe.serial('a signed-in author', () => {
     await page.getByLabel('Password').fill(password);
     await page.getByRole('button', { name: 'Login' }).click();
     await expect(page).toHaveURL(/\/profile$/);
+    await expect(page.getByLabel('Birthday')).toHaveValue(birthday);
     await page.getByLabel('Timeline filter default').selectOption('1w');
     await expect(page.getByText('Preferences saved.')).toBeVisible();
   });

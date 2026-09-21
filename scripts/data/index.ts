@@ -51,7 +51,7 @@ const { values: flags } = parseArgs({
 // Every user column, password hash and salt included: seedUsers.json is
 // gitignored for that reason.
 const BACKUP_USER_PROPS = [
-  'id', 'userName', 'firstName', 'lastName', 'gender', 'locale', 'facebookId', 'googleId',
+  'id', 'userName', 'firstName', 'lastName', 'birthday', 'gender', 'locale', 'facebookId', 'googleId',
   'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email', 'password',
   'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices',
   'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime',

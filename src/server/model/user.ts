@@ -18,6 +18,7 @@ const prop = [
   'userName',
   'firstName',
   'lastName',
+  'birthday',
   'gender',
   'locale',
   'facebookId',
@@ -49,6 +50,7 @@ export const pickUserProps = [
   'userName',
   'firstName',
   'lastName',
+  'birthday',
   'email',
   'role',
   'provider',
@@ -62,7 +64,7 @@ export const pickUserProps = [
 // What somebody may change about themselves through the generic patch route.
 // Without this, every truthy property in the model's own list is writable
 // straight from the request body - `role` included.
-export const patchableUserProps = ['userName', 'firstName', 'lastName', 'email'];
+export const patchableUserProps = ['userName', 'firstName', 'lastName', 'birthday', 'email'];
 
 // Which unique index (0046) a failed insert or update hit: another live
 // account already has this email or @handle. Null for any other error.
@@ -88,6 +90,7 @@ export default class User {
   declare userName: string;
   declare email: string;
   declare role: string;
+  declare birthday: string | null | undefined;
   declare provider: string;
   declare password: string | null | undefined;
   declare salt: string | null | undefined;
@@ -239,7 +242,7 @@ export default class User {
 // next save. Endpoints pick what they send (pickUserProps), so loading more
 // exposes nothing.
 const USER_COLUMNS = [
-  'id', 'userName', 'firstName', 'lastName', 'gender', 'locale', 'facebookId', 'googleId', 'appleId',
+  'id', 'userName', 'firstName', 'lastName', 'birthday', 'gender', 'locale', 'facebookId', 'googleId', 'appleId',
   'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email', 'password',
   'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices',
   'utcCreatedDateTime', 'utcUpdatedDateTime',
@@ -247,7 +250,7 @@ const USER_COLUMNS = [
 
 // The editable columns, in the order create and update bind them.
 const WRITE_COLUMNS = [
-  'userName', 'firstName', 'lastName', 'gender', 'locale', 'facebookId', 'googleId', 'appleId',
+  'userName', 'firstName', 'lastName', 'birthday', 'gender', 'locale', 'facebookId', 'googleId', 'appleId',
   'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email',
   'password', 'provider', 'role', 'salt', 'websiteUrl',
 ];
@@ -256,9 +259,22 @@ function value(v: unknown) {
   return v === undefined ? null : v;
 }
 
+// birthday is a `date` (0058), and the empty string a cleared form field
+// sends is not one, so an empty birthday is written as a null.
+function writeValue(user: User, column: string) {
+  return column === 'birthday' ? user[column] || null : value(user[column]);
+}
+
+// pg hands a bare `date` back as the server's own local midnight, which in a
+// zone ahead of UTC is the day before. Day columns are read as day keys, as
+// the pins' dates are (0042).
+function selectColumn(column: string) {
+  return column === 'birthday' ? `to_char("birthday", 'YYYY-MM-DD') AS "birthday"` : `"${column}"`;
+}
+
 async function createUser(user: User) {
   const columns = WRITE_COLUMNS.concat(['defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime']);
-  const values = WRITE_COLUMNS.map((c) => value(user[c]))
+  const values = WRITE_COLUMNS.map((c) => writeValue(user, c))
     // utcUpdatedDateTime has always been written from utcCreatedDateTime.
     .concat([
       value(user.defaultFilterSpanPreference),
@@ -296,7 +312,7 @@ async function updateUser(user: User) {
   // Written from whatever the object carries, so every caller has to load the
   // row before updating it or a saved preference is cleared.
   const columns = WRITE_COLUMNS.concat('defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices');
-  const values = WRITE_COLUMNS.map((c) => value(user[c])).concat(
+  const values = WRITE_COLUMNS.map((c) => writeValue(user, c)).concat(
     user.defaultFilterSpanPreference || null,
     user.themePreference || null,
     user.localePreference || null,
@@ -320,7 +336,7 @@ async function updateUser(user: User) {
 async function getOne(where: string, param: unknown): Promise<{ user: User | undefined }> {
   const rows = await db.query(
     `
-    SELECT ${USER_COLUMNS.map((c) => `"${c}"`).join(', ')}
+    SELECT ${USER_COLUMNS.map(selectColumn).join(', ')}
     FROM "User"
     WHERE ${where} AND "utcDeletedDateTime" IS NULL`,
     [param],
@@ -342,7 +358,7 @@ export class Users {
 
   static async getAll(properties: string[]): Promise<User[]> {
     const rows = await db.query(`
-    SELECT ${USER_COLUMNS.map((c) => `"${c}"`).join(', ')}
+    SELECT ${USER_COLUMNS.map(selectColumn).join(', ')}
     FROM "User"
     WHERE "utcDeletedDateTime" IS NULL
     ORDER BY "id"`);

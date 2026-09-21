@@ -130,12 +130,21 @@ export async function finishSignIn(request: NextRequest, provider: Provider): Pr
   try {
     const redirectUri = callbackUrl(request, provider);
     const profile = await fetchProfile(provider, code, redirectUri, params);
-    const user = await findOrCreateUser(provider, profile, jar.get(HANDLE_COOKIE)?.value);
+    const { user, created } = await findOrCreateUser(provider, profile, jar.get(HANDLE_COOKIE)?.value);
     jar.set(tokenCookie(await signToken(user.id, user.role)));
-    return Response.redirect(`${origin}${next}`, status);
+    return Response.redirect(`${origin}${signInLanding(next, created)}`, status);
   } catch (err) {
     return fail((err as Error).message);
   }
+}
+
+// Where a finished sign-in goes. None of the three providers share a birthday,
+// so a brand-new account passes through the one question the sign-up form
+// would have asked, on the way to wherever it was headed; skipping it is a
+// click. Only a first sign-in sees it - signing in again must never nag. next
+// has already been through afterLoginPath, and the page puts it through again.
+export function signInLanding(next: string, created: boolean): string {
+  return created ? `/signup/birthday?redirect=${encodeURIComponent(next)}` : next;
 }
 
 // The code and state arrive in the query string, or - from Apple's form_post
@@ -305,8 +314,13 @@ export function appleProfileFrom(claims: JWTPayload, userField: string | null): 
 }
 
 // The existing user with the profile's email, with any empty fields filled
-// from the profile; or a new user.
-async function findOrCreateUser(provider: Provider, profile: Profile, handle: string | undefined): Promise<User> {
+// from the profile; or a new user. `created` says which, for the caller that
+// asks a new account for what the provider could not give it.
+async function findOrCreateUser(
+  provider: Provider,
+  profile: Profile,
+  handle: string | undefined,
+): Promise<{ user: User; created: boolean }> {
   const email = profile.emails[0]?.value;
   if (!email) {
     throw new Error(`${provider} did not share an email address`);
@@ -330,14 +344,14 @@ async function findOrCreateUser(provider: Provider, profile: Profile, handle: st
       log.info(`${provider} sign-in filled in:`, Object.keys(Object.assign({}, ...updatedFields)).join(', '));
       await user.patchWithoutPassword();
     }
-    return user;
+    return { user, created: false };
   }
 
   user.role = 'user';
   user.provider = provider;
   await fillRequiredFields(user, email);
   await user.save();
-  return user;
+  return { user, created: true };
 }
 
 // userName, firstName and lastName are NOT NULL, and a social profile need not

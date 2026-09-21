@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { appleProfileFrom } from './oauth';
+import { appleProfileFrom, signInLanding } from './oauth';
 
 describe('appleProfileFrom', () => {
   const claims = { sub: '001234.9f3ac4d.1517', email: 'sam@example.com', email_verified: 'true' };
@@ -34,5 +34,17 @@ describe('appleProfileFrom', () => {
   it('survives a user field that is not JSON, and a sign-in with no email', () => {
     expect(appleProfileFrom(claims, 'not json').name).toEqual({ givenName: undefined, familyName: undefined });
     expect(appleProfileFrom({ sub: 'x' }, null).emails).toEqual([]);
+  });
+});
+
+describe('signInLanding', () => {
+  it('asks a new account for the one thing no provider shares', () => {
+    expect(signInLanding('/', true)).toBe('/signup/birthday?redirect=%2F');
+    expect(signInLanding('/pin/12/a-launch', true)).toBe('/signup/birthday?redirect=%2Fpin%2F12%2Fa-launch');
+  });
+
+  it('never asks somebody signing in again', () => {
+    expect(signInLanding('/', false)).toBe('/');
+    expect(signInLanding('/pin/12/a-launch', false)).toBe('/pin/12/a-launch');
   });
 });

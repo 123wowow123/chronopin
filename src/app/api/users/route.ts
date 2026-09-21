@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import { cookies } from 'next/headers';
 import type { NextRequest } from 'next/server';
+import { birthdayMessage, birthdayProblem } from '@/lib/birthday';
 import { requireRole, signToken, tokenCookie } from '@/server/auth';
 import { json, readJson, route } from '@/server/http';
 import User, { pickUserProps, takenBody, takenField, Users } from '@/server/model/user';
@@ -15,7 +16,14 @@ export const GET = route(async (request: NextRequest) => {
 export const POST = route(async (request: NextRequest) => {
   // Only what the sign-up form asks for. The Express route took the whole
   // body, so a request could also set an id, social ids or a salt.
-  const user = new User(_.pick(await readJson(request), ['userName', 'firstName', 'lastName', 'email', 'password']));
+  const body = _.pick(await readJson(request), ['userName', 'firstName', 'lastName', 'birthday', 'email', 'password']);
+
+  // Optional, so only a birthday that was given has to make sense. The column
+  // would refuse a stray string anyway, with a raw database error.
+  const badBirthday = birthdayProblem(body.birthday);
+  if (badBirthday) return json({ code: `birthday.${badBirthday}`, message: birthdayMessage(badBirthday) }, 422);
+
+  const user = new User(body);
   user.provider = 'local';
   user.role = 'user';
 

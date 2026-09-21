@@ -5,6 +5,7 @@ import { useSearchParams } from '@/lib/client/navigation';
 import { useEffect, useState } from 'react';
 import { OAuthButtons, OrDivider } from '@/components/forms/OAuthButtons';
 import { afterLoginPath, authHref } from '@/lib/authRedirect';
+import { birthdayProblem, birthdayToday, EARLIEST_BIRTHDAY } from '@/lib/birthday';
 import { api, ApiError } from '@/lib/client/api';
 import { useT } from '@/lib/client/i18n';
 import { useLocalize } from '@/lib/client/navigation';
@@ -14,7 +15,8 @@ const HANDLE = /^[a-zA-Z0-9-_]+$/;
 export function SignupForm() {
   const params = useSearchParams();
   const redirect = afterLoginPath(params.get('redirect'));
-  const [form, setForm] = useState({ handle: '', firstName: '', lastName: '', email: '', password: '', confirmPassword: '' });
+  // birthday is the one field that may stay empty.
+  const [form, setForm] = useState({ handle: '', firstName: '', lastName: '', birthday: '', email: '', password: '', confirmPassword: '' });
   // The last availability answer, for the handle it was about.
   const [check, setCheck] = useState<{ handle: string; available: boolean } | null>(null);
   const [submitted, setSubmitted] = useState(false);
@@ -25,6 +27,9 @@ export function SignupForm() {
 
   const handleValid = !!form.handle && form.handle.length <= 15 && HANDLE.test(form.handle);
   const available = check && check.handle === form.handle ? check.available : null;
+  // The same day the API checks against, and the date input's own ceiling.
+  const today = birthdayToday();
+  const badBirthday = birthdayProblem(form.birthday, today);
 
   useEffect(() => {
     if (!handleValid) return;
@@ -46,6 +51,8 @@ export function SignupForm() {
     handleValid && available === false && t('signup.handleTaken'),
     !form.firstName && t('signup.firstNameRequired'),
     !form.lastName && t('signup.lastNameRequired'),
+    badBirthday === 'format' && t('signup.birthdayInvalid'),
+    badBirthday === 'range' && t('signup.birthdayRange', { min: EARLIEST_BIRTHDAY }),
     !/^\S+@\S+\.\S+$/.test(form.email) && t('signup.emailInvalid'),
     form.password.length < 3 && t('signup.passwordShort', { min: 3 }),
     form.password !== form.confirmPassword && t('signup.passwordsMatch'),
@@ -62,6 +69,8 @@ export function SignupForm() {
         userName: `@${form.handle}`,
         firstName: form.firstName,
         lastName: form.lastName,
+        // Left out rather than sent empty: the column takes a day or nothing.
+        birthday: form.birthday || null,
         email: form.email,
         password: form.password,
       });
@@ -102,6 +111,22 @@ export function SignupForm() {
           </label>
           <input id="lastName" autoComplete="family-name" className="field" value={form.lastName} onChange={set('lastName')} />
         </div>
+      </div>
+      <div>
+        <label htmlFor="birthday" className="field-label">
+          {t('signup.birthday')}
+        </label>
+        <input
+          id="birthday"
+          type="date"
+          autoComplete="bday"
+          min={EARLIEST_BIRTHDAY}
+          max={today}
+          className="field"
+          value={form.birthday}
+          onChange={set('birthday')}
+        />
+        <p className="mt-1.5 text-sm text-subtle">{t('signup.birthdayHint')}</p>
       </div>
       <div>
         <label htmlFor="email" className="field-label">

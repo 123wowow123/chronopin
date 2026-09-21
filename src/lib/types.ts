@@ -268,6 +268,9 @@ export type SessionUser = {
   userName: string;
   firstName?: string;
   lastName?: string;
+  // A YYYY-MM-DD day, given at sign-up or on the profile, or absent: it is
+  // optional, and never shown to anyone but the user and an admin.
+  birthday?: string | null;
   email?: string;
   role: string;
   provider?: string;
