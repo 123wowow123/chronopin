@@ -57,6 +57,10 @@ type Links = { previous?: string; next?: string };
 // on it (24 results a page).
 const MAX_RETURN_PAGES = 40;
 
+// How near the foot of the page counts as having reached it - the same reach
+// the sentinels are given below them.
+const NEAR_FOOT_PX = 800;
+
 // One sort's results so far: the pages loaded and the links on from them.
 type ResultList = { pins: CardPin[]; links: Links; status: 'loading' | 'ready' | 'error' };
 
@@ -379,6 +383,25 @@ export function SearchResults({
       if (ref.current) observer.observe(ref.current);
     }
     return () => observer.disconnect();
+  }, [loadMore, sortBy]);
+
+  // A sentinel can end up somewhere it will never be seen. What follows the
+  // list - the footer and the panels under it - is taller than the window, so
+  // with the page at its foot the end of the list stands above the window and
+  // past the margin above, where nothing is left to intersect: the results
+  // dead-ended with pages still to come, and no scroll could ask for them.
+  // The foot of the page says what the end sentinel says, so it asks too.
+  // loadMore answers for itself when there is no page to come, or one is
+  // already on its way.
+  useEffect(() => {
+    const onScroll = () => {
+      if (sortBy === 'date' && !scrolled.current) return;
+      if (document.documentElement.scrollHeight - (window.scrollY + window.innerHeight) <= NEAR_FOOT_PX) void loadMore(sortBy, 'next');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    // A list too short to fill the window sends no scroll of its own.
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
   }, [loadMore, sortBy]);
 
   const phrase = spanPhrase(postedWithin, t.locale);
