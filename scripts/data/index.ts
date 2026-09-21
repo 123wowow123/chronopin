@@ -44,6 +44,7 @@ const { values: flags } = parseArgs({
     equinoxfile: { type: 'string', default: './scripts/backup/equinox.json' },
     perihelionfile: { type: 'string', default: './scripts/backup/perihelion.json' },
     solsticefile: { type: 'string', default: './scripts/backup/solstice.json' },
+    religiousfile: { type: 'string', default: './scripts/backup/religiousDays.json' },
   },
 });
 
@@ -226,8 +227,13 @@ async function seedDB() {
     ),
   );
 
-  // Aphelion, solstice, equinox and perihelion markers.
-  for (const file of [flags.aphelionfile, flags.solsticefile, flags.equinoxfile, flags.perihelionfile]) {
+  // Aphelion, solstice, equinox, perihelion and the major religious
+  // observances. The religious set is generated from date-holidays' own
+  // Hijri, Hebrew and Easter-linked calculations, taken from the country
+  // whose calendar defines each one and renamed into English; Mawlid and
+  // Vesak are left out because the library returns them two or three times
+  // a Gregorian year with impossible spacing.
+  for (const file of [flags.aphelionfile, flags.solsticefile, flags.equinoxfile, flags.perihelionfile, flags.religiousfile]) {
     const dates: any[] = readJson(file);
     await Promise.all(dates.map((d) => new DateTime({ ...d, alwaysShow: true }).save()));
   }
