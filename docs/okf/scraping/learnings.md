@@ -2161,3 +2161,178 @@ rooms, with four MICHELIN star ratings attached.
 * **Changed**: [Enrichment](enrichment.md) - the read-back warning now names
   this recurrence, the single-word-overlap tell, and the fact that a removal is
   not durable.
+
+## 2026-09-21 - Six categories the list was missing, and a 34-pin backfill
+
+* **Learned**: with 2,281 pins, **nothing was filed under `Other` and nothing was
+  uncategorised** - which hides the gaps rather than showing them. A missing
+  category does not surface as an unclassified pin; it surfaces as a pin filed
+  under its *medium* while the event itself is a different kind of thing. The
+  tell is a category column that has to say "the show's own", as the trade-show
+  recipe in [Vertical recipes](verticals.md) did.
+* **Learned**: the corpus's own tags name the hole. All 28 pins carrying the
+  `Crime` topic tag are television procedurals - `Law & Order Season 26
+  Premieres`, `Chicago P.D.`, `NCIS` - and not one is a court event. A keyword
+  sweep for the vocabulary of a missing vertical, read against what it actually
+  matches, is a cheaper gap-finder than reading the category counts.
+* **Learned**: award ceremonies were scattered across five categories by medium
+  (99th Academy Awards under `Movies`, the 69th Grammys under `Music & Audio`,
+  the Nobel Peace Prize under `Geopolitics`, the Economics prize under
+  `Science & Research`), so award season could not be seen as one thing although
+  `PinAward` holds 1,431 rows.
+* **Changed**: added `Awards & Ceremonies`, `Conferences & Festivals`,
+  `Travel & Tourism`, `Retail & Commerce`, `Cybersecurity` and `Crime & Justice`
+  to [categories.ts](../../../src/lib/categories.ts) and all six dictionaries,
+  by the seven-file procedure in [Fields](fields.md#adding-a-category). The
+  `category labels` test caught nothing because every language was written in
+  the same pass; `tsc` and `npm test` both pass.
+* **Learned**: re-tagging an existing pin is a **whole-pin `PUT`**, and the safe
+  body is the pin's own `GET` JSON with `categories` edited and `tags`,
+  `ratings`, `stocks` and `awards` dropped. `tags` left out leaves `PinTag`'s
+  user rows alone (`setUserTags` only runs when the body sends them) while
+  `setCategories` rewrites the category rows only, so topic and award tags
+  survive. Sending `tags` back would be the dangerous move, not the safe one.
+  Fingerprinting each pin before and after (title, dates, company, media URLs,
+  merchants, reference URLs, non-category tags) proved all 34 edits were
+  category-only. The running dev server picked the new names up with no restart,
+  as [Fields](fields.md#adding-a-category) says.
+* **Changed**: 34 pins re-tagged through the real API as their own authors -
+  10 ceremonies as `Awards & Ceremonies` (@OddsDesk, @ScienceDesk), 8 shows as
+  `Conferences & Festivals` (@TechDesk, @FilmDesk, @BuildDesk, @GameDesk), 15
+  attractions, parks, cruises and hotels as `Travel & Tourism` and Mall of
+  America as `Retail & Commerce` (@BuildDesk). The new category is appended, not
+  put first: the main category stays what it was, so no card's label changed.
+* **Learned**: the line worth holding is **the event is the show, not the venue**.
+  CES 2027 opening is `Conferences & Festivals`; Boston Dynamics unveiling Atlas
+  *at* CES 2026 is not. A cruise ship *entering service* is `Travel & Tourism`;
+  the same ship *delivered at the shipyard* stays `Marine`.
+* **Learned**: pins authored by user 1 (admin, Ian's own) cannot be re-tagged by
+  a curator - Expo 2030 Riyadh (255), the Olympics pins and GDC 2014 (14) were
+  left as they are. A backfill over old pins should expect a tail it cannot
+  touch.
+* **Changed**: [Vertical recipes](verticals.md) - the trade-show and prize rows
+  now name the two new categories instead of "the show's own".
+* **Changed**: `Cybersecurity` and `Crime & Justice` were seeded in the same
+  pass (pins 2468-2479) behind two new curators, @CyberDesk (373) and @LawDesk
+  (374) - Ian chose new desks over reusing @TechDesk and @PoliticsDesk, as he
+  did for @FoodDesk. Both accounts were made through `POST /api/users`, the
+  public sign-up, which answers a token with the row, so no password reset was
+  needed.
+* **Learned**: **a category's first six pins decide what it means.** Cyber took
+  three forward regulatory dates (Windows 10 consumer ESU ending 13 October
+  2026, the Cyber Resilience Act's reporting phase on 11 September 2026 and its
+  full application on 11 December 2027, the two threaded as one chain), one
+  live breach (IDScan, 150 million driver's licences, 10 September 2026) and two
+  anchors (Colonial Pipeline, the NIST post-quantum standards). Courts took one
+  scheduled trial (Paramount-WBD, 2 March 2027) against five decided cases from
+  Nuremberg in 1946 to Bankman-Fried in 2024. A vertical of only breaches would
+  have had no future at all, which is the failure mode
+  [Nightly jobs](nightly-jobs.md) measures.
+* **Learned**: **a court event is placed at the courthouse, and it has no
+  company.** Nobody "does" a verdict, so `company` is null on all six court
+  pins, the same rule the disaster vertical follows; the address is the building
+  the jury sat in (Phillip Burton in San Francisco, the Palace of Justice in
+  Nuremberg, Hennepin County Government Center in Minneapolis). A regulatory
+  deadline is the opposite: the company is the body that set it, and the place
+  is where it sits (the Berlaymont, Microsoft's Redmond campus, NIST at
+  Gaithersburg).
+* **Learned**: **the app's own scraper reads what `curl` cannot**, again.
+  `justice.gov` press releases and `cisa.gov` advisories both answer an Akamai
+  interstitial or a 403 to `curl` while `GET /api/scrape` returns their title,
+  description and images in full - so a source that looks dead from the shell
+  is worth one scrape call before it is abandoned. `variety.com` 307s to a
+  `tollbit.variety.com` paywall proxy and `cnn.com` answers 451 to WebFetch; the
+  trade press (`screendaily.com`, `thewrap.com`) carried the same court order.
+* **Learned**: with no Anthropic credit the scrape still earns its keep as an
+  **image and metadata fetcher**: `llm: "session"` comes back with the page's
+  `og:image` candidates, which is how the Microsoft, Commission, NIST and
+  TechCrunch pins got their pictures without touching Commons. The Wikimedia
+  REST summary API (`/api/rest_v1/page/summary/<title>`) supplied the rest, with
+  its `originalimage.source` and `coordinates` in one keyless call - but it
+  429s quickly, so the calls have to be spaced, and the `?utm_source=` query it
+  appends is stripped before the URL is stored.
+* **Changed**: `Retail & Commerce` was seeded the same day (pins 2488-2493)
+  behind a third new curator, @RetailDesk (375): two Costco warehouse openings
+  dated by Costco itself, the IKEA Memphis closure, and three anchors - the
+  first Walmart in Rogers (1962), Amazon opening for business (1995) and the
+  Toys "R" Us liquidation announcement (2018).
+* **Learned**: **a chain's own per-store page is the per-item source a roundup
+  needs.** `costco.com/f/-/new-opening-<town>` exists per warehouse, which
+  solves the listicle problem for an opening run - but those pages **break the
+  headless scraper** with "Execution context was destroyed, most likely because
+  of a navigation", so the picture has to come from Commons and the date from
+  local reporting. Costco also says nothing publicly about a site until the
+  opening is two to three months away, so this vertical cannot be filled more
+  than a quarter ahead.
+* **Learned**: a delayed store opening is what `originalStartDate` is for -
+  Lee's Summit slipped from 28 August to 2 October 2026 and carries both dates.
+
+## 2026-09-21 - Tennis: the first individual matches in the corpus (pins 2480-2487)
+
+* **Learned**: @SportDesk held fourteen pins and **every one was a tournament
+  opening** - a World Cup kicking off, an Olympics opening, a Ryder Cup coming
+  to Adare Manor. The corpus had no *match*. Asked for major matches, the eight
+  Grand Slam singles finals of 2027 are the densest, most durable set: four
+  venues, two finals each, all fixed years ahead.
+* **Learned**: **each final needs its own source URL or the save is refused.**
+  `rejectDuplicateSourceUrl` blocks a second pin on the same page, so one
+  tournament site cannot source both of its finals. The tour bodies solve it
+  cleanly: the men's final takes the ATP tournament page and the women's the WTA
+  one, which is also the more honest attribution. `atptour.com` is 403 to
+  `curl` and read in full by the app's scraper; `wtatennis.com` answers `curl`
+  but renders empty to the scraper.
+* **Learned**: **the organisers publish a window, not a match day.** Tennis
+  Australia gives "11 - 31 Jan 2027" and Roland-Garros "17 May - 6 June 2027"
+  (both including the qualifying or opening week), while the ATP's 2027 calendar
+  gives the main draws, 17-31 January and 23 May-6 June. The finals fall out of
+  the convention rather than the page - men's on the closing Sunday, women's on
+  the second Saturday - so `dateConfidenceReasoning` has to quote the window and
+  name the convention, and cannot pretend the day itself was published.
+* **Learned**: the USTA had **not** published 2027 dates - `usopen.org` still
+  serves "the 2026 US Open" - so both US Open finals are `estimated` from the
+  ATP calendar's 29 August-12 September window, while the other six are
+  `scheduled`. Grep the page for the year before trusting a tournament site,
+  exactly as the trade-show recipe says.
+* **Changed**: [Vertical recipes](verticals.md) gains a Grand Slam finals row and
+  a Retail row.
+
+
+## 2026-09-21 - Motorsport, European finals and combat sports (pins 2494-2522)
+
+* **Changed**: the whole 2027 Formula 1 season went in as 24 race pins, one per
+  Grand Prix at its circuit, plus the three UEFA club finals of 2026-27, UFC 335
+  and the Fury-Joshua heavyweight fight - 29 pins, all @SportDesk.
+* **Learned**: **a calendar publishes weekends, not race days.** Formula 1 gives
+  each round as a three-day range ("12 - 14 Mar"); the Grand Prix is the last
+  day - *except Las Vegas*, which races on the Saturday, so a script that takes
+  "the Sunday" gets one round of 24 wrong. The same trap in the other direction
+  cost nothing only because it was caught before posting: adding one to the day
+  *string* for the exclusive end date produces "2027-10-32" for the Mexico City
+  round, which falls on a month end. Use date arithmetic, not string maths.
+* **Learned**: `formula1.com/en/racing/2027` is a client-rendered Next.js page -
+  the raw HTML holds **no race links at all**, though WebFetch's conversion
+  renders the full list - and the per-race pages for 2027 **do not exist yet**
+  (`/en/racing/2027/bahrain` is a 404 while `/en/racing/2026/bahrain` is a 200).
+  With no per-item page to cite, each race takes its **circuit's** article as
+  `sourceUrl`, which is unique per round, and F1's own calendar announcement as
+  the shared reference.
+* **Learned**: the Wikipedia REST summary gives a circuit's coordinates **and** a
+  track-map image in one keyless call, which is most of a motorsport pin - but
+  six circuits carry only a logo (Bahrain, Miami, Monza, the Red Bull Ring), and
+  the *Bahrain Grand Prix* article's lead image is a map of **Sepang**. Read
+  what comes back before attaching it; the Grand Prix article is not reliably
+  about the circuit it races on.
+* **Learned**: **UEFA is the cheapest forward calendar in sport.** Hosts and
+  dates for the Champions League, Europa League and Conference League finals are
+  fixed two to three years ahead - 5 June 2027 in Madrid, 26 May in Frankfurt,
+  2 June in Istanbul - long before anyone knows who will play in them. UEFA
+  also strips sponsor names for its own finals ("Frankfurt Arena" is Deutsche
+  Bank Park), so the address and the announcement disagree by design.
+* **Learned**: **combat sports are the opposite.** Nothing is scheduled years
+  out; UFC confirms a numbered card's date and arena a few months ahead, and a
+  big boxing fight has a *reported* date before it has a contracted one. The
+  Fury-Joshua pin is `estimated` on those grounds - "reported for Saturday,
+  November 28, with December 4 and 11 also in play" - and says so in its
+  reasoning rather than picking a day and looking certain.
+* **Changed**: [Vertical recipes](verticals.md) gains a Motorsport seasons row
+  and a Club finals and fight nights row.

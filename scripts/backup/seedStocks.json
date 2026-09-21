@@ -8651,6 +8651,42 @@
       "utcRemovedDateTime": null,
       "relation": "related",
       "note": "whose founder Jeff Bezos is among the tech executives invited to the state dinner"
+    },
+    {
+      "id": 750,
+      "pinId": 2468,
+      "symbol": "MSFT",
+      "name": "Microsoft",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-09-21T23:10:06.227Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the Windows, Office and Azure cloud company, and OpenAI's largest investor"
+    },
+    {
+      "id": 751,
+      "pinId": 2491,
+      "symbol": "WMT",
+      "name": "Walmart",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-09-21T23:24:07.970Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": null
+    },
+    {
+      "id": 752,
+      "pinId": 2492,
+      "symbol": "AMZN",
+      "name": "Amazon",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-09-21T23:24:07.994Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the owner of Amazon Leo."
     }
   ],
   "prices": [
@@ -24878,6 +24914,72 @@
       "utcPriceDateTime": null,
       "utcCheckedDateTime": null,
       "utcSetDateTime": "2026-09-21T19:02:40.158Z"
+    },
+    {
+      "id": 6529,
+      "pinTickerId": 750,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 501.8198,
+      "utcPriceDateTime": "2026-09-21T23:09:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T23:10:08.095Z",
+      "utcSetDateTime": "2026-09-21T23:10:06.601Z"
+    },
+    {
+      "id": 6530,
+      "pinTickerId": 750,
+      "kind": "start",
+      "utcStartDateTime": "2026-10-13T00:00:00.000Z",
+      "day": "2026-10-13",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-09-21T23:10:06.604Z"
+    },
+    {
+      "id": 6531,
+      "pinTickerId": 751,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 107.4036,
+      "utcPriceDateTime": "2026-09-21T23:21:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T23:24:09.806Z",
+      "utcSetDateTime": "2026-09-21T23:24:07.972Z"
+    },
+    {
+      "id": 6532,
+      "pinTickerId": 751,
+      "kind": "start",
+      "utcStartDateTime": "1962-07-02T00:00:00.000Z",
+      "day": "1962-07-02",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": "2026-09-21T23:24:09.129Z",
+      "utcSetDateTime": "2026-09-21T23:24:07.974Z"
+    },
+    {
+      "id": 6533,
+      "pinTickerId": 752,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 258.92,
+      "utcPriceDateTime": "2026-09-21T23:23:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T23:24:09.569Z",
+      "utcSetDateTime": "2026-09-21T23:24:08.003Z"
+    },
+    {
+      "id": 6534,
+      "pinTickerId": 752,
+      "kind": "start",
+      "utcStartDateTime": "1995-07-16T00:00:00.000Z",
+      "day": "1995-07-16",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": "2026-09-21T23:24:09.127Z",
+      "utcSetDateTime": "2026-09-21T23:24:08.006Z"
     }
   ],
   "relations": [
