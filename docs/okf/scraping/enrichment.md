@@ -27,6 +27,21 @@ The target is **3 media per pin, by best effort, at least 1 a video and at least
 
 **No picture twice:** a picture that is one the pin already has fills a slot without adding anything, and the sources repeat each other constantly - a catalogue's poster on its own page is the same poster its CDN serves at another size, an article's `og:image` is the photo the page itself showed. Two guards, in [imageHash.ts](../../../src/server/imageHash.ts): `sameImageKey` reads a CDN's size out of the URL (MyAnimeList's `l`/`t`/`v` suffix, Wikimedia's `/thumb/.../640px-`, a resizing query) so `findImages` skips the repeat before downloading it, and every picture saved gets a 64-bit difference hash, which `withoutRepeatedPictures` ([medium.ts](../../../src/server/model/medium.ts)) compares against the pin's other pictures as a pin is created, updated or topped up. Within 6 bits is the same picture: measured over this catalogue, one poster at two sizes or with a title band added comes out at 6 or less, and by 10 two different photographs of one event are in range. Only pictures are weighed, only against the same pin's, and a picture that will not download is kept. The false positive to know about is a pair of badge logos that differ in one glyph (Intel Core 3 and Core 5) - a finer hash does not tell those apart either.
 
+**Read back what a top-up attached.** `media:top-up`'s Wikipedia fallback (step 3
+above) is worse than nothing on a subject it cannot illustrate, and it fails
+silently: on the Aerospace run it put a Mars helicopter on the Wright Flyer pin,
+a Heinkel He 118 on the He 178 pin, a Boeing 787 on the de Havilland Comet pin,
+an A330 on the A350F pin and a MAX 8 on the 737-7 pin - five of seventeen
+pictures, all of them the wrong subject. Its dry run prints only a count (it
+returns before the per-pin loop), so the only way to see what it chose is to run
+it with `--apply` and then list the pins' picture filenames, which give a
+mismatch away at a glance. Take the wrong ones off with `Medium#deleteFromPin`
+(the path `media:dedupe` uses) and look the right one up on Commons
+(`action=query&list=search&srnamespace=6`, then `prop=imageinfo&iiurlwidth=1280`,
+keeping `image/jpeg` and `image/png`). Where Commons has no photograph of the
+subject - a variant not yet in service, such as the 737-7 or the A350F - leave
+the pin below the target rather than hang a lookalike on it.
+
 **Backfill:** `npm run media:dedupe` (dry run; `--apply`, `--pin`, `--distance`) takes the repeats off pins that collected them before that existed, keeping the first of each - 292 pictures on 292 pins on 2026-09-20. `npm run media:top-up` (dry run by default; `--apply`, `--min` for pins with no picture, `--limit`, `--offset`, `--pin`, `--delay`) tops existing pins up to three media with the same keyless sources, pins with no picture first, storing each through the app's medium code with retry. `npm run media:videos` (dry run by default; `--apply`, `--category`, `--pin`, `--limit`, `--offset`, `--delay`) gives pins with no video the official one through `findProductVideo`, leaving films, series and anime to `media:screen` - 21 of 66 game pins on 2026-09-20, the rest having no official video to find. **By hand:** `og:image` from the source or a Wikipedia article (decode `&amp;`); download through the app's medium code, not the raw CDN. Wikimedia needs a User-Agent that names the client and a contact ([Sources](sources.md)).
 
 # Film, TV, anime and game extras
@@ -68,3 +83,12 @@ For a film, TV series, anime or game with no place from the page, the pin goes o
 # Release-notes pages
 
 A page with three or more dated headings (release notes, changelogs) returns `entries`, one candidate pin per heading, each marked when a pin already exists for its URL. The create form posts each through `POST /api/pins`, oldest first, optionally threaded as one series. A launch's pictures are the biggest gap on these pages: the company's forum announcement, then the same-day referenced articles.
+
+# Medium types
+
+`Medium.type` is **1 = image, 2 = twitter, 3 = youtube**, and a YouTube medium
+is stored as the **embed** URL (`https://www.youtube.com/embed/<id>`), not the
+watch URL. The `MediumType` table reads 1 = youtube, 2 = image, 3 = twitter and
+is **not** what the column stores - go by the data, not that table. Posting a
+watch URL as `type: 1` fails the whole `PUT` with `Could not find MIME for
+Buffer`: the thumbnailer tries to decode the HTML page as an image.

@@ -30,6 +30,149 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **A video embedded in a reference belongs to the pin.** Owner, 2026-09-20: pin 315 should carry the YouTube video that its own reference article embeds - as a reference *and* on the pin's media. Best effort: get the product video and bring it to both.
 * **A released product cites its MSRP from the company's own page.** Owner, 2026-09-20: for a released or on-sale product, check the company's product/store page for the MSRP and add that page as a reference.
 
+## 2026-09-20 - The 2027 forward calendar, and national elections (pins 2350-2362)
+
+* **Learned.** The corpus is lopsided three ways, and only one of them matters
+  much. By **category**, `Anime` plus `Anime Movie` is 778 of 2,185 pins (36%)
+  against twelve categories on nine pins or fewer. By **place**, the anime pass
+  put 737 pins in Japan/Korea against 18 in South America and 41 in
+  Africa/the Middle East. But the damaging one is **time**: the timeline held
+  ~100 pins a month through October 2026 and then fell off a cliff - 31 in
+  November, and 19, 13, 9, **2**, 18, 6, 5 and 9 across February to September
+  2027. A timeline product runs dry about six weeks out, which no category
+  count would have shown.
+* **Learned.** The three imbalances have one cheap common fix: a vertical that
+  is thin *and* has an authoritative forward schedule *and* is spread over the
+  whole map. **National elections** are all three. Thirteen pins (2350-2362)
+  took `Elections` from 12 to 25 and `Geopolitics` from 20 to 33, and landed in
+  Nigeria, Kyrgyzstan, El Salvador, Micronesia, The Gambia, Finland, Spain,
+  Mexico, Guatemala, Mongolia, Kenya, Angola and Argentina.
+* **Learned.** Thirteen pins do **not** fix the forward hole, and the numbers
+  should be read honestly: May 2027 went from 2 pins to 3. Filling
+  November 2026 - September 2027 needs several more passes of this size, not
+  one. The geographic needle barely moved either (Africa 41 -> 45, South
+  America 18 -> 19) because a 737-pin concentration does not shift by 13.
+* **Learned.** `Medium.type` is **1 = image, 2 = twitter, 3 = youtube**, and a
+  YouTube medium is stored as the **embed** URL
+  (`https://www.youtube.com/embed/<id>`). This is *not* the `MediumType`
+  table's numbering, which reads 1 = youtube, 2 = image, 3 = twitter - the
+  table is a decoy. Posting a watch URL as `type: 1` 500s the whole `PUT` with
+  `Could not find MIME for Buffer`, because the thumbnailer tries to decode the
+  HTML page as an image.
+* **Learned.** That failure is also a clean confirmation that `Pin#update` is
+  transactional now: eight pins took the bad `PUT`, all eight 500'd, and every
+  one still had its picture afterwards. The pre-2026-09-16 bug would have
+  wiped the media before the failing write.
+* **Learned.** Wikipedia's **`2027 national electoral calendar`** page is a
+  stub - its per-month sections are empty. The populated, cited page is
+  **`List of elections in 2027`**, whose entries carry the electoral
+  commission's own announcement as a footnote. Four candidates had no article
+  at all (Estonia, the Northern Ireland Assembly, Papua New Guinea,
+  Switzerland) and were dropped rather than sourced from memory.
+* **Learned.** Reconstructing a URL from truncated console output is a
+  reliable way to save a dead link: 3 of 19 references 404'd that way
+  (Forbes Mexico, republica.com, mongoliaweekly - each real URL had an extra
+  slug or a different tail). Re-extract the full URL from the source and
+  **live-check every link before the save**. The check also caught the
+  Wikimedia 429s, which clear with the contact User-Agent already in
+  [Sources](sources.md).
+* **Learned.** Commons free-text search drifts to the wrong country on generic
+  building names: "White House Bishkek" returns the US and Moscow ones,
+  "Parliament Buildings Nairobi" returns Hungary's and British Columbia's.
+  Scope with `incategory:"..."` and filter the file title for the city or
+  country before picking by pixel size. Four venues (Bishkek, San Salvador,
+  Guatemala City, San Lazaro) only resolved through the building article's own
+  `pageimages` on the **Spanish** Wikipedia, or through Ala-Too Square as the
+  place rather than the building.
+* **Learned.** `vaalit.fi` (the Finnish Ministry of Justice's election service)
+  **403s to `curl`** but reads fully through WebFetch - worth a reference, not
+  worth a wiki from a blocked capture.
+* **Corrected a pin.** 1976 "France Votes in the 2027 Presidential Election"
+  was dated **11 April 2027**, derived from the constitutional window because
+  Polymarket said only "around April 2027". The French government announced the
+  real date after a cabinet meeting on 30 June 2026, and
+  `service-public.gouv.fr` now states "April 18 and May 2, 2027". The pin is
+  now 18 April, `scheduled`, with the government page as a reference. A market
+  pin dated by inference is worth re-checking once the organiser announces.
+* **New curator.** **@PoliticsDesk** (id 324) posts elections and referendums -
+  the vote itself, the way @SportDesk owns the fixture and @OddsDesk the market
+  on it. The thirteen pins are all its.
+* **Changed.** This page, [Vertical recipes](verticals.md) (a National
+  elections recipe and its table row), [Sources](sources.md) (Wikipedia
+  election calendars, Commons building searches, vaalit.fi) and
+  [Enrichment](enrichment.md) (the medium type numbering).
+
+## 2026-09-20 - Aerospace, a vertical with almost no future (pins 2334-2349)
+
+* **Learned.** `Aerospace` held 22 pins, 21 of them from one @BuildDesk YouTube
+  pass and **exactly one dated after today** (the 777-9 delivery, 1862). The
+  past-against-future measure in [Nightly jobs](nightly-jobs.md) is what caught
+  it: the total looked healthy and the vertical was finished. Sixteen pins fixed
+  both ends - ten landmark firsts that were simply missing (Wright Flyer 2334,
+  Lindbergh 2335, He 178 2336, Bell X-1 2337, Comet into service 2338, 747 2339,
+  Concorde 2340, A300 2341, A380 2342, 787 2343) and six recent or forward
+  milestones (X-59 supersonic 2344, 737-7 certification 2345, A350F first flight
+  2346, Paris Air Show 2027 2347, B-21 at Ellsworth 2348, GCAP demonstrator 2349).
+* **Learned.** A Wikipedia *aircraft type* article is a good source for a first
+  flight: the infobox dates it and the development section gives the pilot, the
+  airfield and the duration. Everything the ten historical pins claim came from
+  the page's own words, and the place was always named on it - Warton, Paine
+  Field, Toulouse-Blagnac, Marienehe, Muroc - so none needed a guess.
+* **Learned.** `media:videos` matched **none** of the sixteen. Its filter wants
+  most of the pin's distinctive title words in the video title, and a pin titled
+  for its event ("The Boeing 747 Makes Its First Flight") shares almost nothing
+  with a video titled "747 FIRST FLIGHT 1969 - BOEING 747 - FEBRUARY 1969". The
+  fix was a YouTube Data API search per pin and a hand pick from a verified or
+  archival channel, stored exactly as `media:videos` stores one (`Medium`,
+  `addThumb`, `save`). Fifteen of sixteen got one: British Movietone, British
+  Pathe and AP Archive for the newsreel events, Airbus and NASA Armstrong for
+  their own aircraft, CNBC and Sky News for the news ones.
+* **Learned.** **A `.jpg.webp` image is a JPEG with a suffix.** The Contentful
+  webp trap from the robotics pass has a cheap fix where the CDN names the file
+  that way: `aerospacetestinginternational.com` serves
+  `...-0316x9-1.jpg.webp`, and dropping `.webp` returns `image/jpeg` that the
+  thumbnailer takes. Where the file is natively `.webp` (aviationa2z), there is
+  nothing to strip and the picture is simply unavailable.
+* **Learned.** `media:top-up`'s **Wikipedia fallback is still worse than
+  nothing** on a page it cannot illustrate, and this run is the sharpest
+  evidence yet: it hung a *Mars helicopter* on the Wright Flyer pin, a Heinkel
+  **He 118** dive bomber on the He 178 pin, a Boeing 787 on the de Havilland
+  Comet pin, an A330 on the A350F pin and a MAX 8 on the 737-7 pin. Five of
+  seventeen top-ups were wrong subjects. **Always read back what it added** -
+  the filenames alone give it away - and remove the wrong ones
+  (`Medium#deleteFromPin`, the same path `media:dedupe` uses). Commons
+  `list=search&srnamespace=6` then found the right picture for three of them
+  (the Flyer's fourth flight, the Bundesarchiv He 178, a BOAC Comet 1 at
+  Heathrow); for the 737-7 and the A350F, Commons has **no photograph of the
+  variant at all**, so those two stay at 2 media rather than take a lookalike.
+* **Learned.** `media:top-up`'s dry run prints only the count - it returns
+  before the per-pin loop - so there is no way to preview what it will attach.
+  Run it with `--apply` and audit afterwards.
+* **Learned.** Wikimedia answers 429 after about six pins even at `--delay 7`;
+  four pins came back empty and a re-run at `--delay 25`, after a 90-second
+  pause, got all four.
+* **Learned.** A newer trade source beat the search summary on GCAP: search said
+  the demonstrator flies in 2027 (Janes, July 2025), but the programme's own
+  August 2026 update says "aircraft ready by the end-2027 with flight test
+  starting from early 2028". The pin took the 2028 date and both earlier pieces
+  became references whose reasoning says they record the older target.
+* **Learned.** A budget is not a cost, again: the B-21 article offers $4.5bn of
+  fiscal 2025 funding and a $6.1bn fiscal 2027 request, and the GCAP article a
+  GBP4.6bn design contract. None is the cost of the event being pinned, so all
+  three pins carry no `price`.
+* **Learned.** Walls met: `baesystems.com` is behind Incapsula (923 bytes of
+  iframe shell for every heritage page), `museumofflight.org` refused the
+  connection outright, and `aviationa2z.com` began answering 522 mid-run. The
+  show's own site, `siae.fr`, loads but carries almost no text - 393 characters,
+  enough to date the pin ("14.20 JUNE 2027") and nothing else - so Wikipedia
+  carried the organiser, venue history and scale as a reference.
+* **Learned.** One pin knowingly has no video: nothing exists yet about the 2027
+  Paris Air Show, and a 2025 highlights reel would be the wrong event. Three
+  pictures and no video is the honest answer there.
+* **Changed.** [Vertical recipes](verticals.md) gained the Aerospace recipe,
+  [Sources](sources.md) the new walls and the `.jpg.webp` note, and
+  [Enrichment](enrichment.md) the read-back rule for `media:top-up`.
+
 ## 2026-09-20 - Robotics, a near-empty vertical (pins 2324-2333)
 
 * **Learned.** `Robotics` held three pins before this run (Unimate 1961, a

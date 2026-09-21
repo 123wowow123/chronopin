@@ -8507,6 +8507,78 @@
       "utcRemovedDateTime": null,
       "relation": "company",
       "note": "announced the Isaac GR00T reference humanoid and supplies its Jetson Thor compute"
+    },
+    {
+      "id": 738,
+      "pinId": 2339,
+      "symbol": "BA",
+      "name": "Boeing",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-21T04:55:54.964Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the manufacturer of the 747"
+    },
+    {
+      "id": 739,
+      "pinId": 2343,
+      "symbol": "BA",
+      "name": "Boeing Commercial Airplanes",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-09-21T04:56:06.683Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the manufacturer of the 747"
+    },
+    {
+      "id": 740,
+      "pinId": 2344,
+      "symbol": "LMT",
+      "name": "Lockheed Martin",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-21T05:01:09.915Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": "whose Skunk Works division helped NASA get the X-59 to this point"
+    },
+    {
+      "id": 741,
+      "pinId": 2345,
+      "symbol": "BA",
+      "name": "Boeing",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-09-21T05:01:12.972Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the American maker of commercial jets, military aircraft and spacecraft"
+    },
+    {
+      "id": 742,
+      "pinId": 2345,
+      "symbol": "LUV",
+      "name": "Southwest Airlines",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-21T05:01:13.135Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": "the 737-7 launch customer, preparing for delivery of the first airplane"
+    },
+    {
+      "id": 743,
+      "pinId": 2348,
+      "symbol": "NOC",
+      "name": "Northrop Grumman",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-21T05:01:23.227Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the defense company tasked with B-21 manufacturing in a 2024 contract award"
     }
   ],
   "prices": [
@@ -24470,6 +24542,138 @@
       "utcPriceDateTime": "2026-06-01T20:00:00.000Z",
       "utcCheckedDateTime": "2026-09-21T03:15:44.940Z",
       "utcSetDateTime": "2026-09-21T03:15:44.344Z"
+    },
+    {
+      "id": 6199,
+      "pinTickerId": 738,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 198.6,
+      "utcPriceDateTime": "2026-09-18T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T04:55:56.176Z",
+      "utcSetDateTime": "2026-09-21T04:55:55.005Z"
+    },
+    {
+      "id": 6200,
+      "pinTickerId": 738,
+      "kind": "start",
+      "utcStartDateTime": "1969-02-09T00:00:00.000Z",
+      "day": "1969-02-09",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": "2026-09-21T04:55:55.465Z",
+      "utcSetDateTime": "2026-09-21T04:55:55.006Z"
+    },
+    {
+      "id": 6203,
+      "pinTickerId": 739,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 198.6,
+      "utcPriceDateTime": "2026-09-18T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T04:56:06.971Z",
+      "utcSetDateTime": "2026-09-21T04:56:06.693Z"
+    },
+    {
+      "id": 6204,
+      "pinTickerId": 739,
+      "kind": "start",
+      "utcStartDateTime": "2009-12-15T18:27:00.000Z",
+      "day": "2009-12-15",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": "2026-09-21T04:56:06.698Z",
+      "utcSetDateTime": "2026-09-21T04:56:06.694Z"
+    },
+    {
+      "id": 6207,
+      "pinTickerId": 740,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 534.6,
+      "utcPriceDateTime": "2026-09-18T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T05:01:10.808Z",
+      "utcSetDateTime": "2026-09-21T05:01:09.919Z"
+    },
+    {
+      "id": 6208,
+      "pinTickerId": 740,
+      "kind": "start",
+      "utcStartDateTime": "2026-06-05T18:08:00.000Z",
+      "day": "2026-06-05",
+      "price": 523.76,
+      "utcPriceDateTime": "2026-06-05T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T05:01:10.311Z",
+      "utcSetDateTime": "2026-09-21T05:01:09.921Z"
+    },
+    {
+      "id": 6209,
+      "pinTickerId": 741,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 198.6,
+      "utcPriceDateTime": "2026-09-18T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T05:01:13.134Z",
+      "utcSetDateTime": "2026-09-21T05:01:12.981Z"
+    },
+    {
+      "id": 6210,
+      "pinTickerId": 741,
+      "kind": "start",
+      "utcStartDateTime": "2026-08-03T00:00:00.000Z",
+      "day": "2026-08-03",
+      "price": 233.49,
+      "utcPriceDateTime": "2026-08-03T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T05:01:13.000Z",
+      "utcSetDateTime": "2026-09-21T05:01:12.984Z"
+    },
+    {
+      "id": 6213,
+      "pinTickerId": 742,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 41,
+      "utcPriceDateTime": "2026-09-18T23:51:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T05:01:13.923Z",
+      "utcSetDateTime": "2026-09-21T05:01:13.143Z"
+    },
+    {
+      "id": 6214,
+      "pinTickerId": 742,
+      "kind": "start",
+      "utcStartDateTime": "2026-08-03T00:00:00.000Z",
+      "day": "2026-08-03",
+      "price": 47.07,
+      "utcPriceDateTime": "2026-08-03T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T05:01:13.467Z",
+      "utcSetDateTime": "2026-09-21T05:01:13.144Z"
+    },
+    {
+      "id": 6215,
+      "pinTickerId": 743,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 523.785,
+      "utcPriceDateTime": "2026-09-18T23:49:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T05:01:24.591Z",
+      "utcSetDateTime": "2026-09-21T05:01:23.265Z"
+    },
+    {
+      "id": 6216,
+      "pinTickerId": 743,
+      "kind": "start",
+      "utcStartDateTime": "2027-12-31T00:00:00.000Z",
+      "day": "2027-12-31",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-09-21T05:01:23.266Z"
     }
   ],
   "relations": [

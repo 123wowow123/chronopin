@@ -28,6 +28,50 @@ Each recipe is a repeatable pattern. Update it when a run teaches something ([Le
 | Robotics | @TechDesk | `Robotics` | The maker's own newsroom, exchange and press-release wires, Wikipedia for a multi-organiser event | The event is a milestone (a production ramp, a factory opening, a listing, a withdrawal), not the robot; place it at the plant, hall or exchange, never the parent's HQ; a multi-organiser event takes `company: null` |
 | Trending searches | none - discovery only | n/a | Google Trends daily RSS | Shortlists subjects; posts nothing ([Nightly jobs](nightly-jobs.md#google-trends)) |
 | Infrastructure and architecture | @BuildDesk | `Infrastructure & Transportation`, `Architecture & Real Estate`, `Energy`, `Space & Astronomy` | The owner's or authority's own project page, Wikipedia, trade press | Company is the owner or authority; a delayed opening carries `originalStartDate` and `delayReasoning` |
+| National elections | @PoliticsDesk | `Elections`, `Geopolitics` | Wikipedia `List of elections in <year>`, then each election's own article and its electoral commission | One pin per national election, placed at the legislature it elects; the vote, not the market on it (@OddsDesk owns those); a month-only date is `estimated` at that month's last day |
+| Aerospace | @BuildDesk | `Aerospace` (plus `Defense & Military`) | Wikipedia aircraft-type articles, manufacturer newsrooms, NASA, trade press | The pin is the flight, the certification or the delivery, placed at the airfield it happened at; `media:videos` matches none of them, so the video is a hand pick from a newsreel or the maker's own channel |
+
+# National elections
+
+The vote itself, not the betting market on it - the same split as sport
+fixtures (@SportDesk) against their odds (@OddsDesk).
+
+1. **Start from `List of elections in <year>`**, not `<year> national
+   electoral calendar`: the calendar page's month sections are empty stubs,
+   while the list is populated and footnotes each date to the electoral
+   commission's own announcement. Pull it as wikitext
+   (`action=parse&prop=wikitext`) and read `election_date` out of each
+   election's own infobox.
+2. **Drop anything without its own article.** An election with no Wikipedia
+   page has no verifiable date to take, and the roundup line alone is not a
+   source. Four of eighteen candidates went this way.
+3. **Date and confidence.** A firm day is `scheduled` and the reasoning quotes
+   the article's own sentence ("General elections are scheduled to be held in
+   Kenya on 10 August 2027"). A month alone is `estimated` at that month's last
+   day; a stated window ("the first half of June") is `estimated` at the end of
+   the window; "by August 2027" is `estimated` at 31 August. All-day, UTC.
+4. **Place it at the legislature or seat of government** the vote decides -
+   Abuja's National Assembly Complex, the Eduskunta, San Lazaro, the Palacio
+   del Congreso. Coordinates come from Wikidata `P625` or the building
+   article's `coordinates` prop; a country centroid is not a place.
+5. **Company is the electoral commission** that runs it (INEC, IEBC, INE,
+   Camara Nacional Electoral). Disambiguate colliding names by country -
+   `Tribunal Supremo Electoral (El Salvador)` and
+   `Tribunal Supremo Electoral (Guatemala)` are two bodies, and an exact-name
+   match would merge them.
+6. **Media.** `prop=pageimages` on a legislature article returns a seal or a
+   seat-composition SVG, and Commons free-text search drifts to the wrong
+   country for any generic building name. Scope with `incategory:"..."`, filter
+   the file title for the city, then pick by pixel size; fall back to the
+   building article's lead image on the **local-language** Wikipedia, or to the
+   square in front of it. For the video, the national broadcaster or a major
+   outlet covering *this* election - an explainer about the previous election
+   is the wrong work and is worse than none.
+7. **References** are the commission's own calendar where it publishes one
+   (`inecnigeria.org/elections/calendar`, `vaalit.fi`, `fsmned.fm`), else the
+   statute setting the date, else national press. Verify every URL live before
+   saving: a URL reconstructed from a truncated capture 404s about one time in
+   six.
 
 # AAA games (and other server-rendered news)
 
@@ -190,6 +234,52 @@ needed for ugo (ugo.plus).
 # Roundups
 
 When one article covers many things, prefer per item: a deep link (anchor or "read more"), else the maker's own product page or press release, and only then the shared article, flagged as generic.
+
+# Aerospace
+
+@BuildDesk, category `Aerospace` (with `Defense & Military` for a military
+programme), sixteen pins on 2026-09-20 (2334-2349). The vertical had 22 pins
+and **one future date** before this run.
+
+**Two halves, because the vertical was short at both ends.** Ten landmark
+firsts that were simply absent from the corpus - the Wright Flyer, Lindbergh,
+the He 178, the Bell X-1, the Comet entering service, the 747, Concorde, the
+A300, the A380 and the 787 - and six recent or scheduled milestones that put
+pins in 2026, 2027 and 2028.
+
+**The pin is the flight, not the aircraft.** A type has no date; its first
+flight, its entry into service, its type certificate and its first delivery all
+do. Title them that way ("The Boeing 747 Makes Its First Flight", "The FAA
+Certifies the Boeing 737-7").
+
+**Wikipedia's aircraft-type article is a good source for a historical first.**
+The infobox dates the first flight and the development section names the pilot,
+the airfield and the duration - enough for the whole pin without going beyond
+the page. Place it where the page says the aircraft flew from (Paine Field,
+Toulouse-Blagnac, Muroc, Marienehe), never the manufacturer's head office.
+
+**Company is whoever the page names as manufacturer**, which is not always the
+modern brand: the Flyer is the Wright Cycle Company, the Spirit of St. Louis is
+Ryan Airlines, Concorde is Sud Aviation, the 747 and 787 are Boeing Commercial
+Airplanes while the 737-7 release says plain Boeing. Follow the page.
+
+**Budgets are not costs.** A defence programme page offers annual appropriations
+and design contracts; none of them is the cost of the flight or delivery being
+pinned, so these pins carry no `price`.
+
+**Video is a hand pick.** `media:videos` matched none of the sixteen because an
+event-phrased title shares almost no words with a video title. Search the
+YouTube Data API per pin and take a newsreel archive (British Movietone,
+British Pathe, AP Archive) for a historical first, the maker's or agency's own
+channel (Airbus, NASA Armstrong, Northrop Grumman) where it has one, and a news
+broadcaster for a recent regulatory event. Store it the way
+`scripts/media/productVideos.ts` does.
+
+**Read back what `media:top-up` attached.** Five of seventeen pictures it added
+were of the wrong subject entirely ([Learnings](learnings.md)). Commons
+`list=search&srnamespace=6` finds the right one for most; for an aircraft not
+yet in service (737-7, A350F) Commons has nothing, and 2 media is better than a
+lookalike.
 
 # Rocket launches (SpaceX)
 
