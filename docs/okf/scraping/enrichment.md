@@ -42,6 +42,25 @@ keeping `image/jpeg` and `image/png`). Where Commons has no photograph of the
 subject - a variant not yet in service, such as the 737-7 or the A350F - leave
 the pin below the target rather than hang a lookalike on it.
 
+It happened again on 2026-09-21, across the weather and restaurant batches, and
+the failure mode is worth naming: **the fallback matches on a word of the title,
+not on the subject.** "Chubby Cattle" fetched two portraits of **Chubby
+Checker**; "Australia Burns Through the Black Summer" fetched **Wes Borland of
+Limp Bizkit** (Black Light Burns); "Lake Nyos" fetched **Walden Pond**; the IPCC
+cities report fetched **ground elder**. Others were subtler and just as wrong -
+Hurricane **Laura**'s damage on the Katrina pin, Cyclone **Catarina** on two
+different cyclone pins, the **1793** burning of Cap-Francais on the 2010 Haiti
+earthquake, and a generic Apollo 17 Earth on two separate earthquakes. 21
+pictures over 15 pins came off. A single-word overlap is the tell: check the
+filename against the pin's *subject*, not against its title.
+
+**A removal is not durable.** `findImages` only skips pictures the pin already
+has (its `skip` argument), and nothing anywhere records that a picture was
+rejected - so the next `npm run media:top-up` over those pins will attach Chubby
+Checker again. Until there is a rejection list, re-run the top-up only with
+`--pin` for pins you are about to read back, never in bulk over pins that have
+already been cleaned.
+
 **Backfill:** `npm run media:dedupe` (dry run; `--apply`, `--pin`, `--distance`) takes the repeats off pins that collected them before that existed, keeping the first of each - 292 pictures on 292 pins on 2026-09-20. `npm run media:top-up` (dry run by default; `--apply`, `--min` for pins with no picture, `--limit`, `--offset`, `--pin`, `--delay`) tops existing pins up to three media with the same keyless sources, pins with no picture first, storing each through the app's medium code with retry. `npm run media:videos` (dry run by default; `--apply`, `--category`, `--pin`, `--limit`, `--offset`, `--delay`) gives pins with no video the official one through `findProductVideo`, leaving films, series and anime to `media:screen` - 21 of 66 game pins on 2026-09-20, the rest having no official video to find. **By hand:** `og:image` from the source or a Wikipedia article (decode `&amp;`); download through the app's medium code, not the raw CDN. Wikimedia needs a User-Agent that names the client and a contact ([Sources](sources.md)).
 
 # Film, TV, anime and game extras

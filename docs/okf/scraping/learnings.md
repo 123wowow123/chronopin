@@ -2116,3 +2116,48 @@ rooms, with four MICHELIN star ratings attached.
 * **Changed**: [Sources](sources.md) - five new rows (MICHELIN Guide, Nominatim,
   Yelp/Tripadvisor, local restaurant press, restaurant group sites).
   [Vertical recipes](verticals.md) - a Restaurants row and recipe.
+
+## 2026-09-21 - The picture top-up hung Chubby Checker on a restaurant (owner catch)
+
+* **Feedback**: Ian opened pin 2459 and said "wrong person picture as person is
+  not David Zhao nor Harby Yang". The pin is Chubby Cattle's Mira Mesa opening
+  and `media:top-up` had attached **two portraits of Chubby Checker**, the
+  singer. He had just followed Chubby Group in the UI, which is presumably how
+  he saw it.
+* **Learned**: the warning for this was **already written** in
+  [Enrichment](enrichment.md) after the Aerospace run - "Read back what a top-up
+  attached ... the only way to see what it chose is to run it with `--apply` and
+  then list the pins' picture filenames" - and I did not do it. I ran
+  `media:top-up --apply` over 36 pins across two batches, skimmed the counts in
+  the log, and never listed the filenames. Reading the doc is not the same as
+  following it.
+* **Learned**: the fallback **matches a word of the title, not the subject**, so
+  the failures are absurd rather than subtle and one listing catches them all.
+  An audit of every `wikimedia.org` picture on pins 2429-2467 found 21 wrong
+  ones over 15 pins: Chubby Checker on Chubby Cattle, Wes Borland of Limp Bizkit
+  on the Black Summer bushfires (Black Light Burns), Walden Pond on the Lake
+  Nyos limnic eruption, ground elder on the IPCC cities report, Copenhagen City
+  Hall on Noma, a generic ceviche on Maido, Lisbon's municipal flag on the 1755
+  earthquake, and Apollo 17's Earth on two different earthquakes. The subtler
+  half were the dangerous ones: Hurricane **Laura**'s damage on the Katrina pin
+  and Cyclone **Catarina** on both Katrina and Bhola are plausible enough to
+  pass a glance and are still the wrong storm.
+* **Learned**: **taking a picture off does not stop it coming back.**
+  `findImages` skips only what the pin already has, and no table records a
+  rejection, so the next bulk `media:top-up` re-attaches every one of these.
+  Flagged to the owner as a gap; until there is a rejection list, re-run the
+  top-up only with `--pin` over pins that will be read back.
+* **Learned**: one pin (2447, the 2003 European heat wave) was left with no
+  picture at all once the junk came off, because its Wikipedia article has no
+  lead image - which is exactly why the fallback fired. Commons had the right
+  ones under a French title: `Canicule Europe 2003.jpg`, the MODIS land-surface
+  comparison of July 2003 against July 2001, and
+  `2003 europe summer temperature anomaly.png` against the 1971-2000
+  climatology. Search Commons in the subject's own language before concluding it
+  has nothing.
+* **Learned**: `invalidatePin` throws outside a request context, so a
+  maintenance script that edits media cannot call it; the delete statement
+  itself is the one `Medium#deleteFromPin` uses and is safe to issue directly.
+* **Changed**: [Enrichment](enrichment.md) - the read-back warning now names
+  this recurrence, the single-word-overlap tell, and the fact that a removal is
+  not durable.
