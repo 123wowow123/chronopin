@@ -43,6 +43,64 @@ Each recipe is a repeatable pattern. Update it when a run teaches something ([Le
 | Natural disasters | @ScienceDesk | `Natural Disasters` (plus `Marine`, `Weather`) | USGS FDSN event catalogue, Smithsonian Global Volcanism Program, the event's own Wikipedia article | The earthquake or eruption itself, placed at its **epicentre or the volcano**, timed in UTC from the catalogue; the local date often differs from the UTC one and the reasoning has to say so |
 | Weather disasters | @ClimateDesk | `Weather` (plus `Natural Disasters`, `Climate & Environment`) | NHC Tropical Cyclone Reports, national met agencies, WMO, the event's own Wikipedia article | One pin per **landfall or failure**, not per storm's whole life; placed where it came ashore or where the dam broke; a heat wave or flood season is a period, `estimated` at month bounds |
 | Weather seasons and climate reports | @ClimateDesk | `Weather`, `Climate & Environment` | The agency that *defines* the season (NHC, BOM) and the body that schedules the report (IPCC) | A season is a **period in force**, not a day: official bounds, `scheduled`, exclusive 00:00Z end. These are the only reliably forward-dated pins this vertical has |
+| Restaurants | @FoodDesk | `Food & Beverage` | The restaurant's own Wikipedia article, the MICHELIN Guide, local restaurant press, the group's own site | The pin is the **opening** (or the closing, or a menu reset), placed at the restaurant, geocoded through Nominatim and reverse-geocoded for its address label; a MICHELIN star count is a `PinRating`, a Guide selection without a star is a tag |
+
+# Restaurants
+
+@FoodDesk, category `Food & Beverage`. The pin is a dated moment in a
+restaurant's life - it opened, it closed, it tore up its menu - not the
+restaurant itself. Pins 2455 and 2458-2467 seeded the vertical: two Chubby Group
+openings in San Diego and eight world-famous rooms across Denmark, Spain, Peru,
+Thailand and the United States.
+
+1. **A restaurant's own site almost never dates anything.** Chubby Group's
+   locations directory lists about 60 sites across 9 pages with nothing but a
+   `(Coming Soon)` marker, so the group site is a reference for *which brand
+   belongs to whom* and the local press is where the date comes from. Of ~60
+   Chubby Group locations only two had datable coverage.
+2. **A report that the place has already opened is dated to the report.** Where
+   the press says a restaurant "has welcomed" a new arrival and names no opening
+   day, anchor the pin to the article's own publication date and say so in
+   `dateConfidenceReasoning`. `estimated`, not `confirmed` - the day is genuinely
+   unknown.
+3. **Check whether it opened late.** A pre-opening article is a schedule, not an
+   event: Eater put Menya Ultra's Mira Mesa shop at "by mid-2018" and it
+   grand-opened on 26 October, so the pin is `delayed` with
+   `originalStartDate` at the end of the promised window. A soft opening and a
+   grand opening are different days; take the grand opening and put the soft
+   dates in the summary.
+4. **Four of twelve famous restaurants had no opening date on Wikipedia at all** -
+   Central, Osteria Francescana, Disfrutar and Sukiyabashi Jiro. They were
+   dropped rather than dated from memory, the same rule national elections use.
+   Where only a month or year is stated the pin is `estimated` at its last day,
+   which is why this vertical lands a lot of pins on 31 December.
+5. **Geocode, then reverse-geocode.** Nominatim resolves a restaurant's address
+   to the premises themselves often enough to be the first choice, and
+   reverse-geocoding the coordinate back gives an address label that is actually
+   verified. Do not type a street address: three of six written from memory in
+   this batch were wrong ([Sources](sources.md)).
+6. **Reviews are MICHELIN stars, and nothing else is reachable.** A star count is
+   a real score, so it goes in `PinRating` as
+   `{source: 'MICHELIN Guide', score: <stars>, scoreMax: 3, url: <guide page>}`.
+   A Guide selection with no star is **not** a score - Menya Ultra is in the 2026
+   Guide at `$$` and "Worth Queueing For" with no stars, and scoring that 0/3
+   would be a lie - so it is cited as a reference with the inspectors' verdict
+   quoted in the reasoning. A World's 50 Best placing is a rank, not a score, and
+   belongs in a tag. Yelp and Tripadvisor are both hard-403 with no keyless route.
+7. **Adding a rating to a pin that already exists needs a script.** `PinRating`
+   is deliberately untouched by `Pin#update` (schema 0017) and no route adds one
+   on its own, so a rating that arrives after the pin does is written with
+   `new PinRating({...}, pin).save()` against the model. The POST body's
+   `ratings` array is the route to use when the pin and the rating land together.
+8. **Company is the group, or the restaurant itself.** Chubby Group for its
+   brands, Daniel Humm Hospitality where the source names the operator,
+   otherwise the restaurant's own name - which then gets a company panel, and a
+   favicon logo from its own site since none of these has a Wikipedia-derived one.
+9. **No videos.** `media:videos` refuses restaurants for the same structural
+   reason it refuses disasters - a restaurant publishes no trailer and the search
+   finds no company channel match - and the hand pick found nothing either: what
+   ranks is documentaries, chef interviews and wire pieces about the *aftermath*
+   of a closing rather than the event. All ten are saved without one.
 
 # Weather and natural disasters
 

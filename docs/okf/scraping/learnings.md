@@ -2038,3 +2038,81 @@ events and seasons as @ClimateDesk. Two new categories, `Weather` and
   Volcanism Program, NCEI HazEL, the national weather and climate agencies).
   [Vertical recipes](verticals.md) - three new table rows and a
   "Weather and natural disasters" recipe.
+
+## 2026-09-21 - Restaurants, a new vertical and @FoodDesk (pins 2455, 2458-2467)
+
+Asked to pin Chubby Group's openings, do the same for other famous restaurants,
+and pull in reviews for the ones already open. Eleven pins: the Menya Ultra
+Mira Mesa opening, two Chubby Group sites in San Diego and eight world-famous
+rooms, with four MICHELIN star ratings attached.
+
+* **Owner's calls**: two categories was the shape for weather, but here it was
+  *one new desk* over reusing @BuildDesk - @BuildDesk's seven `Food & Beverage`
+  pins are all biscuit and cereal **factories**, and a restaurant is a different
+  vertical. Scope was "both, split across the batch" (Chubby Group + famous +
+  San Diego) and reviews were to be "MICHELIN rating + review text + tags".
+  @FoodDesk is user 372.
+* **Learned**: **`guide.michelin.com` is 202-to-`curl` and fully readable through
+  the app's own scraper** - the same AWS WAF shape as IMDb, the same
+  do-not-judge-it-by-`curl` rule as reuters.com. It gives the inspectors'
+  verdict, the price band, "Good for" flags and a "N people love this place"
+  count.
+* **Learned (the trap that nearly put a wrong rating on a pin)**: the rendered
+  Michelin page carries `Three Stars`, `Bib Gourmand` and `Green Star Community`
+  as **filter links in its own navigation**, so grepping the body for a star
+  count is worthless - it read "Green Star Community" on three-star The French
+  Laundry and "Bib Gourmand" on two-star Alinea. The **meta description** states
+  it cleanly and carries the guide year with it ("a Three Stars: Exceptional
+  cuisine restaurant in the 2026 MICHELIN Guide USA"). Read the description.
+* **Learned**: **I invented three of six street addresses and reverse geocoding
+  caught all three.** The coordinates were fetched but the address *labels* were
+  typed from memory, which is the same violation as typing a URL. Nominatim's
+  reverse lookup put The French Laundry on Creek Street (not Washington Street),
+  Gaggan on Sarasin Road (not Soi Langsuan) and Mugaritz's coordinate in
+  Astigarraga (though the Guide files it under Errenteria). Two pin descriptions
+  also carried detail the source never stated - Noma's "village of buildings
+  around a greenhouse" and Mugaritz being "named for the oak that marks the
+  line" - and were rewritten before posting. **Reverse-geocode the coordinate to
+  get the label; never write the street.**
+* **Learned**: Nominatim is the only geocoder here, the app ships none, and a
+  forward lookup of a restaurant address frequently resolves to the **premises**
+  (`type: restaurant`, its name in `display_name`), which confirms the address
+  and the point at once. It did so for Menya Ultra, Mikiya, Maido and
+  Sukiyabashi Jiro.
+* **Learned**: **a group's own site dates nothing.** Chubby Group lists ~60
+  locations over 9 pages with only a `(Coming Soon)` marker, so of all of them
+  exactly two had datable press coverage. The group site is the reference that
+  proves the brand belongs to the group; the local press is the `sourceUrl`.
+* **Learned**: **four of twelve famous restaurants have no opening date on
+  Wikipedia** - Central, Osteria Francescana, Disfrutar and Sukiyabashi Jiro -
+  so they were dropped rather than dated from memory. Losing Central cost a Lima
+  pin; Maido covers Peru instead.
+* **Learned**: **a Guide selection is not a score.** Menya Ultra is in the 2026
+  Guide with no stars, at `$$` and "Worth Queueing For"; scoring that 0/3 would
+  be a lie, so it went on as a reference quoting the inspectors' verdict. A
+  World's 50 Best placing is a rank, not a score, and went in tags. Stars
+  themselves are honest as `{source: 'MICHELIN Guide', score, scoreMax: 3}`, and
+  four pins carry one: The French Laundry 3, Eleven Madison Park 3, Alinea 2,
+  Mugaritz 2.
+* **Learned**: **no route adds a rating to an existing pin.** `PinRating` is
+  deliberately untouched by `Pin#update` (0017), so a rating that arrives after
+  the pin is written with `new PinRating({...}, pin).save()` against the model;
+  the POST body's `ratings` array handles the case where both land together.
+* **Learned**: `media:videos` refuses restaurants for the same structural reason
+  it refuses disasters, and here the **hand pick failed too** - what ranks is
+  documentaries, chef interviews and wire pieces about the *aftermath* of
+  elBulli's closing rather than the closing. All eleven are saved without a
+  video. `media:top-up` did well on pictures (19 added over three runs), with the
+  usual Wikimedia 429s needing a `--delay 28` re-run, and one Copenhagen
+  cityscape rejected outright as too large to decode.
+* **Learned**: **`backup:data` was broken mid-session by another session**, which
+  had edited `Users.getAll` to select a `birthday` column before applying its own
+  `0058_user_birthday.sql`. The fix was not to touch their work: a `git worktree`
+  at the committed HEAD has a `user.ts` that matches the database, so the dump
+  ran there and the five seed files were copied back. It had applied the
+  migration by the time of the second batch and `backup:data` worked normally.
+  Verify a dump by diffing its pin ids against `HEAD` - both dumps added exactly
+  the pins of this session and removed none.
+* **Changed**: [Sources](sources.md) - five new rows (MICHELIN Guide, Nominatim,
+  Yelp/Tripadvisor, local restaurant press, restaurant group sites).
+  [Vertical recipes](verticals.md) - a Restaurants row and recipe.
