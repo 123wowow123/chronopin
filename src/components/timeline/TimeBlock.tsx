@@ -136,7 +136,7 @@ export function TimeBlock({
         </Tag>
         {/* The Chinese lunar (Nong Li) date under the countdown; phones keep their one extra tag for date markers. */}
         {lunar ? (
-          <Tag variant="countdown" title={lunar.title} className={`${extraTag} max-sm:hidden`}>
+          <Tag variant="countdown" title={lunar.title} href={triviaSearchUrl(lunar.query, locale)} className={`${extraTag} max-sm:hidden`}>
             <span lang="zh-CN">{lunar.text}</span>
           </Tag>
         ) : null}

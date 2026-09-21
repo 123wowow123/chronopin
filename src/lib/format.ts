@@ -243,7 +243,7 @@ function lunarDayName(day: number): string {
 // title. Intl's Chinese calendar gives the month name but writes the day as a
 // number. Null before 104 BC (astronomical -103), the Taichu reform the
 // calendar as ICU computes it descends from.
-export function lunarDate(dayKey: string, locale: Locale = 'en'): { text: string; title: string } | null {
+export function lunarDate(dayKey: string, locale: Locale = 'en'): { text: string; title: string; query: string } | null {
   if (dayKeyParts(dayKey)[0] < -103) return null;
   const parts = dateFormat('zh-CN-u-ca-chinese', { timeZone: 'UTC', year: 'numeric', month: 'long', day: 'numeric' }).formatToParts(dayKeyToMs(dayKey));
   const get = (type: string) => parts.find((p) => p.type === type)?.value ?? '';
@@ -251,7 +251,10 @@ export function lunarDate(dayKey: string, locale: Locale = 'en'): { text: string
   if (!day) return null;
   const text = get('month') + lunarDayName(day);
   const gloss = FORMAT_WORDS[locale].lunarGloss;
-  return { text, title: `农历 ${get('yearName')}年${text}${gloss ? ` (${gloss})` : ''}` };
+  const year = get('yearName');
+  // What to look the day up under: the bare "八月十一" is ambiguous, so the
+  // search carries the calendar and the year stem-branch with it.
+  return { text, title: `农历 ${year}年${text}${gloss ? ` (${gloss})` : ''}`, query: `农历${year}年${text}` };
 }
 
 // A year as people write it: "2026", "79", "2561 BC".

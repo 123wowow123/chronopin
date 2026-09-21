@@ -251,6 +251,10 @@
   .tag-countdown {
     @apply bg-panel text-muted ring-line;
   }
+  /* The lunar-date chip, which searches for the day it names. */
+  a.tag-countdown {
+    @apply transition-colors hover:bg-raised hover:text-ink hover:no-underline hover:ring-subtle/60;
+  }
   .tag-today {
     @apply bg-tag-today/15 text-warning-soft ring-tag-today/30;
   }
