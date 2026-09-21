@@ -42,6 +42,103 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **A released product cites its MSRP from the company's own page.** Owner, 2026-09-20: for a released or on-sale product, check the company's product/store page for the MSRP and add that page as a reference.
 * **Tags should be relevant and catchy.** Owner, 2026-09-21: pin 2389 (US Fiscal Year 2028) was tagged `Appropriations, Federal budget, Fiscal year, United States` and was missing the thing anyone would actually search for - `Government Shutdown`. Tag the consequence and the familiar name people know the event by, not just the procedural vocabulary of the source, and title-case them (`Federal Budget`, `Fiscal Year 2028`).
 
+## 2026-09-21 - The US-China relationship as one thread (pins 2414-2426, 2428, @PoliticsDesk)
+
+Fourteen pins for the bilateral relationship itself, threaded oldest first from
+Nixon's 1972 flight to the state arrival ceremony for Xi on 24 September 2026,
+with the existing pin 2404 re-parented into the middle of the chain. The corpus
+held 42 China pins before this and almost none of them were about the
+*relationship*: bridges, stations, skyscrapers and anime, plus one Taiwan
+invasion market. Nixon in China, normalisation, the Taiwan Relations Act, PNTR,
+WTO accession, the first Section 301 tariffs, Phase One, Pelosi in Taipei, the
+October 2022 chip controls, the balloon and the Filoli summit were all missing
+outright.
+
+* **Learned - a relationship is a vertical, and its backbone is a thread.** The
+  fourteen pins are one linear chain, each answering the one before it, so the
+  thread view reads as the story of the relationship rather than fourteen
+  unrelated dates. That is the story-series rule, not the schedule rule: oldest
+  first. It also means a pin that already exists has to be threaded into the
+  middle - see the PUT note below.
+* **Learned - `history.state.gov` is the best single source for 1972-1979, and
+  it says it is retired.** Both the Milestones essays
+  (`/milestones/1969-1976/rapprochement-china`, `/milestones/1977-1980/china-policy`)
+  and the FRUS historical documents (`/historicaldocuments/frus1969-76v17/d203`,
+  the Shanghai Communiqué itself) read with plain `curl` and quote their own
+  primary text, which is what the date reasoning wants. The Milestones pages
+  carry a banner saying the series "has been retired and is no longer
+  maintained" - still citable, and worth knowing before treating it as a live
+  reference.
+* **Learned - a document's own dateline beats the received date.** FRUS prints
+  the Shanghai Communiqué under "Shanghai, February 27, 1972"; it is popularly
+  dated 28 February, the visit's last day and the day it reached American
+  readers. Pin 2415 takes the document's date and says in the reasoning why the
+  other one is common. The same question will come up for every communiqué,
+  treaty and signing statement in this vertical.
+* **Learned - the American Presidency Project gives a pre-internet event its
+  hour.** `presidency.ucsb.edu` reads with a browser UA, and the **`Note:` line
+  at the foot** of a document is where the time and place live: "the President
+  spoke at 10:12 a.m. on the South Lawn of the White House" is the whole of pin
+  2417's timing (15:12Z). Its `/advanced-search?field-keywords=...&from[date]=...`
+  URL also fetches and lists document slugs, so the right document can be found
+  without spending a WebSearch.
+* **Learned - `bis.doc.gov` press-release links redirect to the BIS homepage.**
+  The `/index.php/documents/about-bis/newsroom/press-releases/3158-.../file` URL
+  for the October 2022 chip rule answers 200 with 76KB of the *current* BIS front
+  page - the aggregator trap, not a block page, so `looksBlocked` would not catch
+  it. Go to the Federal Register instead: the API
+  (`/api/v1/documents.json?conditions[term]=...&conditions[publication_date][gte]=...`)
+  finds the rule in one call, and the document page carries the **DATES** section,
+  which is the authoritative effective date - the October 2022 controls came in
+  on three dates (7, 12 and 21 October), not one.
+* **Learned - `defense.gov` and `northcom.mil` 403 to `curl`.** Every DoD news and
+  release path tried came back 403 with a browser UA. Air & Space Forces Magazine
+  (`airandspaceforces.com`, already good per [Sources](sources.md)) carries
+  Austin's statement verbatim plus the detail no release has - the AIM-9X, the
+  58,000-foot launch altitude, the 2:39 p.m. Eastern shot - so it is the source
+  for pin 2425 and the Pentagon is quoted through it.
+* **Learned - a member's own press release outlives their office.**
+  `pelosi.house.gov/news/press-releases/pelosi-congressional-delegation-statement-on-visit-to-taiwan`
+  still serves the 2 August 2022 arrival statement, four years after she left the
+  speakership. The neighbouring slug (`pelosi-statement-on-her-visit-to-taiwan`)
+  404s, so find the exact one by search rather than guessing.
+* **Learned - `ait.org.tw` has two paths for the same page.** The long one under
+  `/our-relationship/policy-history/key-u-s-foreign-policy-documents-region/` 404s
+  (with a 143KB 404 body, so check the `<title>`, not the byte count); the short
+  `/policy-history/taiwan-relations-act/` serves it.
+* **Learned - strip the query off a Commons image URL.** `imageinfo` returns
+  `url` with `?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original`
+  attached. Stored as `originalUrl` that is a different URL from the same file
+  fetched any other way, which is exactly what the CDN-suffix and difference-hash
+  dedupe exists to catch. Split on `?` before using it.
+* **Learned - Commons search is phrasing-sensitive, and a file name says
+  nothing.** "Chinese spy balloon 2023 Montana" returned nothing while "balloon
+  high altitude 2023 United States surveillance" returned the whole DoD set;
+  `incategory:` helped for Filoli and returned nothing for three other
+  categories that exist. For an event that has not happened, the White House
+  photo stream on Commons has the same ceremony under the same president, but
+  the files are named `P20260428DT-2061.jpg` - read
+  `extmetadata.ImageDescription` before using one. That one is Trump and King
+  Charles III reviewing the troops at a State Arrival Ceremony on the South
+  Lawn, April 2026, which is the venue in the same role for pin 2428.
+* **Learned - re-parenting an existing pin is a whole-pin PUT, and it is safe.**
+  `PUT /api/pins/:id` builds `new Pin(body)` from scratch, so the body must carry
+  the entire pin. Media are diffed by `originalUrl`, so sending them back
+  unchanged touches nothing and re-fetches no thumbnail; **references are
+  replaced wholesale**, so leaving them out deletes them. Round-trip the GET,
+  add `parentId`, flatten `tags` to names and cast `media[].type` back to a
+  number. Pin 2404 kept its 3 media, 5 references, 3 tickers and categories
+  across the edit, and gained the automatic `Thread` tag.
+* **Learned - the podcast cross-check earns its place on a historical pin.** Pin
+  2425 came back from the save with a reference nobody added: Politicana's
+  6 February 2023 episode, whose title includes "U.S. Shoots Down Chinese
+  Surveillance Balloon". The keyword fallback at 70 is loose enough to be worth
+  reading, and this one was right.
+* **Changed.** [Vertical recipes](verticals.md) gains a Bilateral relationship
+  history recipe; [Sources](sources.md) gains the bis.doc.gov, defense.gov,
+  history.state.gov, presidency.ucsb.edu, pelosi.house.gov and ait.org.tw rows
+  and the Commons `utm_source` note.
+
 ## 2026-09-21 - Xi Jinping's state visit: the arrival at Joint Base Andrews (pin 2404, @PoliticsDesk)
 
 One pin from a Reuters URL handed over by the owner: Trump greeting Xi on the

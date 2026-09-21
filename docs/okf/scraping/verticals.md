@@ -38,7 +38,60 @@ Each recipe is a repeatable pattern. Update it when a run teaches something ([Le
 | Big-science milestones | @ScienceDesk | `Science & Research` (plus `Space & Astronomy` or `Energy`) | The facility's own timeline document, often a PDF | Placed at the instrument, not the operator's head office; a year-only milestone is `estimated` at that year's last day |
 | National elections | @PoliticsDesk | `Elections`, `Geopolitics` | Wikipedia `List of elections in <year>`, then each election's own article and its electoral commission | One pin per national election, placed at the legislature it elects; the vote, not the market on it (@OddsDesk owns those); a month-only date is `estimated` at that month's last day |
 | State visits and summits | @PoliticsDesk | `Geopolitics` | The two governments' own announcements - the host's briefing statement and the visitor's foreign ministry - then the wire copy for colour | One pin per dated *item* of the visit (the arrival, the ceremony, the signing), not one per visit; company is the host (`The White House`), placed where that item happens, and the rest of the itinerary goes in the summary |
+| Bilateral relationship history | @PoliticsDesk | `Geopolitics` (plus `Policy & Legal`, `Macroeconomics`, `Defense & Military`, `Computing & Semiconductors`) | The two governments' own archives - `history.state.gov` Milestones and FRUS, the American Presidency Project, the Federal Register, USTR, the WTO, a member's own press release | The backbone of a relationship, threaded oldest first as one linear chain; each pin takes the archive that published the document it is about, and a later pin about the same relationship is re-parented into the chain by `PUT` |
 | Aerospace | @BuildDesk | `Aerospace` (plus `Defense & Military`) | Wikipedia aircraft-type articles, manufacturer newsrooms, NASA, trade press | The pin is the flight, the certification or the delivery, placed at the airfield it happened at; `media:videos` matches none of them, so the video is a hand pick from a newsreel or the maker's own channel |
+
+# Bilateral relationship history
+
+A relationship between two countries is a vertical of its own, and its backbone
+is one thread. Pins 2414-2426, 2404 and 2428 run from Nixon's flight to Beijing
+in February 1972 to the state arrival ceremony for Xi Jinping on 24 September
+2026 as a single oldest-first chain, each pin answering the one before it, so
+the thread view reads as the story of the relationship rather than fourteen
+unrelated dates. Before this pass the corpus held 42 China pins and almost none
+of them were *about* the relationship: bridges, stations, skyscrapers and anime,
+plus one Taiwan invasion market.
+
+1. **Pick the turning points, not the anniversaries.** The set that carries the
+   story is the opening (Nixon's visit, the Shanghai Communiqué), the legal
+   settlement (normalisation, Deng's welcome, the Taiwan Relations Act), the
+   economic bargain (PNTR, WTO accession), its unwinding (the first Section 301
+   tariffs, Phase One, the chip export controls) and the crises (Pelosi in
+   Taipei, the balloon), ending at whatever is happening now.
+2. **Each pin takes the archive that published its own document**, which also
+   solves the shared-source problem a themed batch otherwise has: the Office of
+   the Historian for 1972 and 1979, FRUS for the communiqué itself, the American
+   Presidency Project for an arrival ceremony's remarks, the Statutes at Large
+   for an act, the WTO's member page for an accession date, USTR for a tariff
+   action, the Federal Register for a rule, the member's own press release for a
+   congressional visit. Fourteen pins, fourteen distinct source URLs, no
+   roundups.
+3. **Place it where it happened**, which spreads the pins properly: the Great
+   Hall of the People, the Jinjiang Hotel in Shanghai, the US embassy in
+   Beijing, the South Lawn, the Winder Building, the Hoover Building, the Centre
+   William Rappard in Geneva, Songshan Airport, the Atlantic off Myrtle Beach,
+   Filoli. Company is the organisation whose event it is - the host ministry for
+   a visit abroad, `The White House` for a signing or a summit it hosted,
+   `United States Congress` for an act, the agency for a rule.
+4. **A law is a period, an enactment is a day, a rule is open-ended.** The
+   Taiwan Relations Act and the October 2022 export controls carry a start and a
+   null end because neither has a sunset; PNTR, Phase One and the accession are
+   single days because the pin is the moment. Nixon's visit is the one range,
+   21-28 February 1972, because the source treats the visit as one event.
+5. **Quote the document, and say when the received date differs from it.** FRUS
+   dates the Shanghai Communiqué 27 February 1972 while it is popularly dated
+   the 28th; pin 2415 takes the dateline and says so in the reasoning. That case
+   will recur for every communiqué and signing statement in this vertical.
+6. **Threading an existing pin in is a whole-pin `PUT`.** The route builds a new
+   pin from the body, so round-trip the `GET`, add `parentId`, flatten `tags` to
+   names and cast `media[].type` back to a number. Media are diffed by
+   `originalUrl` so nothing is re-fetched; **references are replaced wholesale**,
+   so they must be in the body or they are deleted.
+7. **Media.** The archives are rich for anything before 2024 - the Nixon-Zhou
+   handshake, Deng and Carter on the South Lawn, the Phase One signing, the F-22
+   and the balloon recovery are all public-domain federal photographs. For an
+   event that has not happened, take the venue in the same role: a State Arrival
+   Ceremony on the South Lawn under the same president.
 
 # National elections
 
