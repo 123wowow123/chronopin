@@ -17,7 +17,7 @@ import { useQueryState } from '@/lib/client/urlState';
 import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, SPAN_OPTIONS, eventSpanSummary, offsetDate, spanFromParam, spanLabel, spanPhrase, spanToParam } from '@/lib/postedSpan';
 import { removeTerm, toggleTerm } from '@/lib/searchTerms';
 import { pinPath } from '@/lib/seo';
-import { WEB_KINDS, webColor, webModeFromParam, type WebEdge, type WebMode } from '@/lib/pinWeb';
+import { WEB_KINDS, webColor, webModeFromParam, type WebEdge, type WebKind, type WebMode } from '@/lib/pinWeb';
 import type { MapPinJson, PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery } from '@/server/util/searchQuery';
 import { useT } from '@/lib/client/i18n';
@@ -52,6 +52,8 @@ const inCategories = (categories: string[], picks: string[]) => !picks.length ||
 const escapeHtml = (text: string) => text.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
 const POPUP_WIDTH = 200;
+// Wider than a pin's: a web line's popup sets a picture beside each title.
+const WEB_POPUP_WIDTH = 260;
 
 // A pin's popup: its picture (an image's thumb or a video's still) edge to
 // edge over its title and address. Its content is built on open, so the map
@@ -97,34 +99,93 @@ function stickPopup(
   sticky.openOn(map);
 }
 
+// A pin's popup picture, best source first: the video's still when there is
+// one, as the pin's media frame shows it first, then an image's original for
+// a build whose thumbs are gone.
+function pictureSources(pin: MapPinJson) {
+  const medium = pin.media?.find((m) => String(m.type) === '3') ?? pin.media?.[0];
+  const original = medium && String(medium.type) === '1' ? medium.originalUrl : undefined;
+  return [blobUrl(medium?.thumbName), original].filter((src): src is string => !!src);
+}
+
 // A thumb that fails to load (a local production build points at deleted
-// blobs) falls back to an image's original, then goes.
+// blobs) falls through its sources, then calls gone() with none left.
+function pictureImg(sources: string[], className: string, gone: () => void) {
+  const img = document.createElement('img');
+  img.alt = '';
+  img.referrerPolicy = 'no-referrer';
+  img.className = className;
+  img.onerror = () => {
+    sources.shift();
+    if (sources.length) img.src = sources[0];
+    else gone();
+  };
+  img.src = sources[0];
+  return img;
+}
+
 function popupContent(pin: MapPinJson) {
   const content = document.createElement('div');
   content.innerHTML =
     `<div class="px-2.5 pt-1.5 pb-2"><a href="${localizeHere(pinPath(pin))}" class="line-clamp-2 font-semibold">${escapeHtml(pin.title)}</a>` +
     `${pin.address ? `<div class="truncate text-subtle">${escapeHtml(pin.address)}</div>` : ''}</div>`;
-  // The video's still when there is one, as the pin's media frame shows it first.
-  const medium = pin.media?.find((m) => String(m.type) === '3') ?? pin.media?.[0];
-  const original = medium && String(medium.type) === '1' ? medium.originalUrl : undefined;
-  const sources = [blobUrl(medium?.thumbName), original].filter((src): src is string => !!src);
+  const sources = pictureSources(pin);
   if (!sources.length) return content;
 
   const link = document.createElement('a');
   link.href = localizeHere(pinPath(pin));
   link.className = 'block';
-  const img = document.createElement('img');
-  img.alt = '';
-  img.referrerPolicy = 'no-referrer';
-  img.className = 'block aspect-video w-full object-cover';
-  img.onerror = () => {
-    sources.shift();
-    if (sources.length) img.src = sources[0];
-    else link.remove();
-  };
-  img.src = sources[0];
-  link.append(img);
+  link.append(pictureImg(sources, 'block aspect-video w-full object-cover', () => link.remove()));
   content.prepend(link);
+  return content;
+}
+
+// One end of a web line: its picture beside its title, as a link to the pin.
+// The picture keeps its tile when there is none or every source fails, so the
+// two rows stay aligned and the connector between them runs straight.
+function webPopupRow(pin: MapPinJson) {
+  const row = document.createElement('a');
+  row.href = localizeHere(pinPath(pin));
+  row.className = 'relative -mx-1 flex items-center gap-2.5 rounded-md px-1 py-1 hover:bg-raised hover:no-underline';
+
+  const tile = document.createElement('span');
+  tile.className = 'block aspect-video w-14 shrink-0 overflow-hidden rounded-md bg-raised ring-1 ring-line';
+  const sources = pictureSources(pin);
+  if (sources.length) tile.append(pictureImg(sources, 'block h-full w-full object-cover', () => (tile.innerHTML = '')));
+
+  const title = document.createElement('span');
+  title.className = 'line-clamp-2 font-medium';
+  title.textContent = pin.title;
+
+  row.append(tile, title);
+  return row;
+}
+
+// A web line's popup: why the two pins are joined — the kind of relation in
+// its own colour over the thing they share (the tag, the company, the source)
+// — and a row for each end, threaded by a line in the same colour so the two
+// read as the ends of one connection. Kinds with nothing shared (a thread, a
+// duplicate) put the kind itself in the headline instead.
+function webPopupContent(from: MapPinJson, to: MapPinJson, kind: WebKind, kindLabel: string, label?: string) {
+  const color = webColor(kind);
+  const content = document.createElement('div');
+  content.className = 'px-3 py-2.5';
+  content.innerHTML =
+    `<div class="flex items-center gap-1.5">` +
+    `<span class="h-1 w-4 shrink-0 rounded-full" style="background-color:${color}"></span>` +
+    (label
+      ? `<span class="truncate text-[10px] font-semibold tracking-wider uppercase text-muted">${escapeHtml(kindLabel)}</span></div>` +
+        `<div class="mt-1 line-clamp-2 text-sm leading-snug font-semibold">${escapeHtml(label)}</div>`
+      : `<span class="truncate text-sm leading-snug font-semibold">${escapeHtml(kindLabel)}</span></div>`);
+
+  const ends = document.createElement('div');
+  ends.className = 'relative mt-2 flex flex-col gap-1';
+  // Behind the rows: the opaque tiles cover it, leaving it visible in the gap.
+  const thread = document.createElement('span');
+  thread.className = 'absolute inset-y-3 left-8 w-0.5 -translate-x-1/2 rounded-full opacity-50';
+  thread.style.backgroundColor = color;
+  ends.append(thread, webPopupRow(from), webPopupRow(to));
+  content.append(ends);
   return content;
 }
 
@@ -405,7 +466,16 @@ export default function PinsMap() {
           // The copy of the world where the two are nearest, so a line never crosses the map.
           const toLng = to.longitude! + 360 * nearestOffset(to.longitude!, from.longitude!);
           const line = L.polyline([[from.latitude!, from.longitude!], [to.latitude!, toLng]], { color: webColor(kind), weight: 2, opacity: 0.6, pane: 'web' });
-          line.bindTooltip(`${t(`map.web.${kind}`)}${label ? `: ${label}` : ''} — ${from.title} ↔ ${to.title}`, { sticky: true });
+          // Clicked: why the two are joined, as a popup in the map's own
+          // styling. Leaflet stops the click reaching the map and opens a
+          // path's popup where it was clicked, so it lands on the line.
+          line.bindPopup(() => webPopupContent(from, to, kind, t(`map.web.${kind}`), label), {
+            className: 'pin-popup',
+            minWidth: WEB_POPUP_WIDTH,
+            maxWidth: WEB_POPUP_WIDTH,
+            closeButton: false,
+            autoPan: false,
+          });
           line.addTo(web$);
         }
         setWebEdges(edges);

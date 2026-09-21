@@ -344,6 +344,15 @@ html .leaflet-container .leaflet-bar {
 html .leaflet-container .leaflet-bar a {
   @apply border-line bg-panel text-ink max-lg:size-11 max-lg:text-2xl max-lg:leading-11 hover:bg-raised;
 }
+/* Clicking a web line focuses its <path>, and the global :focus-visible rule
+   then outlines the path's *bounding box* — for a diagonal line that is a
+   rectangle spanning the whole map, not the line. Leaflet gives vectors no
+   tabindex, so they are only ever focused by a click, where the sticky
+   tooltip already names the relation; markers keep their outline. */
+html .leaflet-container path.leaflet-interactive:focus,
+html .leaflet-container path.leaflet-interactive:focus-visible {
+  outline: none;
+}
 html .leaflet-container .leaflet-control-attribution {
   @apply bg-panel/80 text-subtle;
 }
