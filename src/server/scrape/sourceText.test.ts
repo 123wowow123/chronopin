@@ -31,6 +31,19 @@ describe('looksBlocked', () => {
     expect(looksBlocked('403 Forbidden')).toBe(true);
     expect(looksBlocked('Oops! That page can\'t be found.')).toBe(true);
   });
+  // Every one of these was stored as a link's text and had a wiki written
+  // from it, until the wall it came from was recognised.
+  it('spots the walls that were kept as article text', () => {
+    expect(looksBlocked('www.gamespot.com\nPerforming security verification\n\nThis website uses a security service to protect against malicious bots.')).toBe(true);
+    expect(looksBlocked("Bloomberg\nNeed help? Contact us\nWe've detected unusual activity from your computer network")).toBe(true);
+    expect(looksBlocked('SK Hynix Lists GDDR6 | TechPowerUp\nAutomated bot check in progress')).toBe(true);
+    expect(looksBlocked("400 Bad Request\nYour request has been blocked by our server's security policies.")).toBe(true);
+    expect(looksBlocked('Windows Central\nNo articles found.\n\nThe page you requested currently has no articles listed.')).toBe(true);
+    expect(looksBlocked('Not Found\nThe requested URL was not found on this server. Apache/2.4 Server at altenergymag.com')).toBe(true);
+    expect(looksBlocked('Sorry, the page you requested has been permanently removed.')).toBe(true);
+    expect(looksBlocked("We're sorry\nThe page you have requested may be outdated or is not available on our website!")).toBe(true);
+    expect(looksBlocked('🛡️ Just a quick check\nWe’re checking your connection to prevent automated abuse')).toBe(true);
+  });
   it('leaves a real article alone, even one that mentions a 404', () => {
     expect(looksBlocked('The tunnel opens in 2027. '.repeat(100) + 'A 404 Not Found was shown once.')).toBe(false);
     expect(looksBlocked('The bridge opens on 28 September.')).toBe(false);

@@ -129,8 +129,13 @@ async function pageText(url: string): Promise<SourceText> {
 // Cloudflare or Akamai challenge, an access-denied or 403/404 page. A page this
 // short that says so is not the article, so it is read again in the browser,
 // and failed if it still is (a wiki written from it would be worthless).
+// The wall wording moves with the vendor: Cloudflare's own page said "just a
+// moment" for years and now says "performing security verification", and a
+// wall that goes unrecognised is stored as though it were the article, so its
+// wiki is written from the wall. Each pattern below was read off a link that
+// had been kept that way (scripts/wiki/recoverDead.ts is the clean-up).
 const BLOCKED_TEXT =
-  /just a moment|attention required|checking your browser|verify(ing)? (that )?you are (a )?human|are you a robot|access denied|you have been blocked|sorry, you have been blocked|request blocked|enable javascript and cookies|security check|403 forbidden|401 unauthorized|too many requests|error 1015|page not found|404 not found|page can.?t be found|no article with this exact name/i;
+  /just a moment|attention required|checking your browser|verify(ing)? (that )?you are (a )?human|are you a robot|access denied|you have been blocked|sorry, you have been blocked|request blocked|enable javascript and cookies|security check|403 forbidden|401 unauthorized|too many requests|error 1015|page not found|404 not found|page can.?t be found|no article with this exact name|performing security verification|security service to protect against malicious bots|detected unusual activity from your computer network|automated bot check in progress|blocked by our server.?s security policies|no articles found|site not found|requested url was not found|permanently removed|not available on our website|just a quick check|checking your connection|prevent automated abuse/i;
 
 export function looksBlocked(text: string): boolean {
   const body = text.trim();
