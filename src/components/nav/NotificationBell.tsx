@@ -6,6 +6,7 @@ import { Icon, type IconName } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { api } from '@/lib/client/api';
 import { clearUnreadCount, useUnreadCount } from '@/lib/client/notifications';
+import { aimAtCard, dateAtTop } from '@/lib/client/returnSpot';
 import { refreshLocalWeather, requestLocalWeather, useLocalWeather } from '@/lib/client/localWeather';
 import { formatLocalWeather, usesImperial } from '@/lib/weather';
 import { timeAgo } from '@/lib/format';
@@ -29,6 +30,7 @@ type Notification = {
   groupCount: number;
   groupDay: string;
   pinIds: number[];
+  pinStarts: string[];
   followingBack: boolean;
   actor: { id: number; userName: string; pictureUrl?: string | null };
 };
@@ -53,6 +55,53 @@ function batchHref(n: Notification): string {
   const q =
     n.pinIds.length === n.groupCount ? term('pin', n.pinIds.join(',')) : `${whose} ${term('posted', n.groupDay)}`;
   return `/search?q=${encodeURIComponent(q)}`;
+}
+
+// The pins of a batch were all posted at once but happen on days of their own,
+// scattered up and down the timeline, so there is no one day the batch is on.
+// The nearest of them to where the reader already stands is: measured from the
+// date at the top of their window, or from now when they are not on a page of
+// cards by date at all - the day results open on anyway.
+function nearestPin(n: Notification): { id: number; start: string } | null {
+  const from = dateAtTop() ?? Date.now();
+  let found: { id: number; start: string } | null = null;
+  let nearest = Infinity;
+  for (const [i, id] of n.pinIds.entries()) {
+    const start = n.pinStarts?.[i] ?? '';
+    const away = Math.abs(Date.parse(start) - from);
+    if (away < nearest) {
+      nearest = away;
+      found = { id, start };
+    }
+  }
+  return found;
+}
+
+// Taken as the batch is clicked, so it measures from where the reader is then
+// and not from where they were when the list was drawn: its results are the
+// batch, but they open on the pin of it nearest that spot rather than on
+// today, which may be months from any of them.
+function aimBatch(n: Notification, href: string) {
+  const pin = nearestPin(n);
+  if (pin) aimAtCard(href, pin);
+}
+
+// Where a new-pin row leads: the pin itself, or, for a batch, the search
+// holding its pins, opened on the nearest of them.
+function PinRowLink({ n, onNavigate, children }: { n: Notification; onNavigate?: () => void; children: React.ReactNode }) {
+  const href = n.groupCount > 1 ? batchHref(n) : pinPath({ id: n.pinId!, title: n.pinTitle ?? '' });
+  return (
+    <Link
+      href={href}
+      className="block text-ink"
+      onClick={() => {
+        if (n.groupCount > 1) aimBatch(n, href);
+        onNavigate?.();
+      }}
+    >
+      {children}
+    </Link>
+  );
 }
 
 // Why this notification reached the viewer at all, said under the text: the
@@ -205,11 +254,7 @@ function NotificationItems({
                     {t.rich('notifications.today', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
                   </Link>
                 ) : n.type === 'pin' && n.pinId ? (
-                  <Link
-                    href={n.groupCount > 1 ? batchHref(n) : pinPath({ id: n.pinId, title: n.pinTitle ?? '' })}
-                    className="block text-ink"
-                    onClick={onNavigate}
-                  >
+                  <PinRowLink n={n} onNavigate={onNavigate}>
                     {t.rich(n.groupCount > 1 ? 'notifications.pinMany' : 'notifications.pin', {
                       count: n.groupCount,
                       actor: () => <span className="font-semibold">{n.actor.userName}</span>,
@@ -220,13 +265,9 @@ function NotificationItems({
                         </span>
                       ),
                     })}
-                  </Link>
+                  </PinRowLink>
                 ) : n.type === 'company' && n.pinId ? (
-                  <Link
-                    href={n.groupCount > 1 ? batchHref(n) : pinPath({ id: n.pinId, title: n.pinTitle ?? '' })}
-                    className="block text-ink"
-                    onClick={onNavigate}
-                  >
+                  <PinRowLink n={n} onNavigate={onNavigate}>
                     {t.rich(n.groupCount > 1 ? 'notifications.companyMany' : 'notifications.company', {
                       count: n.groupCount,
                       company: () => <span className="font-semibold">{n.companyName}</span>,
@@ -237,7 +278,7 @@ function NotificationItems({
                         </span>
                       ),
                     })}
-                  </Link>
+                  </PinRowLink>
                 ) : null}
                 <div className="mt-0.5 flex items-center gap-1 text-xs text-subtle">
                   {reason ? (

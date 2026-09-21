@@ -115,6 +115,29 @@ export function hrefKeepingDate(href: string): string {
   return next.pathname + next.search;
 }
 
+// Where a card sits once a page has been sent to it on purpose (rather than
+// put back where the reader left it): just under the sticky header.
+const AIMED_TOP = 72;
+
+// Sends a page of results to one of its cards rather than to today, by leaving
+// the spot it would have left on its way out. Used by the notification bell: a
+// batch's search opens on the pin of it the reader is nearest, paged toward
+// the same way as coming back from logging in.
+export function aimAtCard(href: string, pin: { id: number; start: string }) {
+  save({ kind: 'card', pinId: pin.id, top: AIMED_TOP, start: pin.start }, href);
+}
+
+// The date the reader is at on a page of cards by date, as a time in ms: the
+// start of the card at the top of the window. Null anywhere else (a pin page,
+// the map, a search by relevance), where there is no date to be at.
+export function dateAtTop(): number | null {
+  const here = appPathname();
+  if (here !== '/' && here !== '/search') return null;
+  const start = cardAtTop(DATE_CARDS)?.start;
+  const ms = start ? Date.parse(start) : NaN;
+  return Number.isNaN(ms) ? null : ms;
+}
+
 // How a search is shown, as opposed to what it searches for.
 const VIEW_PARAMS = ['sort', 'posted', 'past', 'future'];
 

@@ -92,6 +92,9 @@ export type NotificationItem = {
   // The pins it stands for, newest first, capped: past the cap a batch links
   // to the day instead, which is the better answer for one that large anyway.
   pinIds: number[];
+  // When each of those pins happens, in the same order: what the bell needs to
+  // send a batch to the one of its pins nearest where the reader already is.
+  pinStarts: Date[];
   actor: { id: number; userName: string; firstName: string; lastName: string; pictureUrl: string | null };
   followingBack: boolean;
 };
@@ -245,6 +248,7 @@ export default class Notification {
         `
       WITH visible AS (
         SELECT n."id", n."type", n."pinId", p."title" AS "pinTitle",
+               p."utcStartDateTime" AS "pinStart",
                n."commentId", c."text" AS "commentText",
                n."companyId", co."name"::text AS "companyName", co."logoUrl" AS "companyLogoUrl",
                n."utcCreatedDateTime", n."utcReadDateTime",
@@ -271,14 +275,19 @@ export default class Notification {
                bool_and("utcReadDateTime" IS NOT NULL) OVER (PARTITION BY "groupKey") AS "read",
                array_agg("pinId") FILTER (WHERE "pinId" IS NOT NULL)
                  OVER (PARTITION BY "groupKey" ORDER BY "utcCreatedDateTime" DESC, "id" DESC
-                       ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS "pinIds"
+                       ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS "pinIds",
+               -- Aggregated over the same window, so a pin and its start line up.
+               array_agg("pinStart") FILTER (WHERE "pinId" IS NOT NULL)
+                 OVER (PARTITION BY "groupKey" ORDER BY "utcCreatedDateTime" DESC, "id" DESC
+                       ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS "pinStarts"
         FROM visible
         ORDER BY "groupKey", "utcCreatedDateTime" DESC, "id" DESC
       )
       SELECT "id", "type", "pinId", "pinTitle", "commentId", "commentText", "companyId",
              "companyName", "companyLogoUrl", "utcCreatedDateTime", "read", "actor",
              "followingBack", "groupCount", "groupDay",
-             COALESCE("pinIds"[1:${MAX_BATCH_PINS}], '{}') AS "pinIds"
+             COALESCE("pinIds"[1:${MAX_BATCH_PINS}], '{}') AS "pinIds",
+             COALESCE("pinStarts"[1:${MAX_BATCH_PINS}], '{}') AS "pinStarts"
       FROM entries
       ORDER BY "utcCreatedDateTime" DESC, "id" DESC
       LIMIT $3`,
