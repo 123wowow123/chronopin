@@ -480,13 +480,12 @@ major local events by major city scrape and more targetted by your location
 
 - nightly job should be guided by LLM reasoning and guidance so it's flexible like running in current sessions 
 
-
-clicking line on map should show small popup and display reason for connection and the 2 connected pins
-
 daily morning job to add an verify this weeks pins are up to date.
 
 daily google trend scrape and updats previous pins
 https://trends.google.com/explore
+
+Create LLM Orchistration pipeline and add it to a daily job to scrape and update pins
 
 # OKF
 
@@ -498,7 +497,17 @@ https://trends.google.com/explore
 
 add slider to search by how late project is
 
-suggest to pin ai of missing or correcting information 
+Add suggestion to this pin:
+info icon:
+Like request to add additonal reference URL
+Suggest start and end date with with reason and reference
+Suggest missing or correcting information
+
+
+Product pins should have notible features in long form summary
+http://localhost:3000/pin/2346/the-airbus-a350f-makes-its-first-flight
+
+
 
 Fix: The data-quality findings — wrong references on pins 72, 202, 377, 806, 808; stale odds in the market pin descriptions; MMOExp as a primary source 
 
