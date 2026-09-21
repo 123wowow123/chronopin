@@ -3,6 +3,11 @@ import { expect, test, type Page } from '@playwright/test';
 const stamp = Date.now().toString(36);
 const handle = `e2e${stamp}`;
 const email = `e2e-${stamp}@example.com`;
+// A source URL of this run's own. Only one pin may cite a URL - the 409 in
+// rejectDuplicateSourceUrl, which no prompt gets past - so a fixed one would
+// collide with the seeded pin that already cites it, and with whatever an
+// earlier run left behind.
+const sourceUrl = `https://example.com/e2e/${stamp}`;
 const password = 'correct horse battery';
 
 async function signUp(page: Page) {
@@ -22,7 +27,7 @@ test.describe.serial('a signed-in author', () => {
     await signUp(page);
 
     await page.goto('/create');
-    await page.getByLabel('Source URL').fill('https://en.wikipedia.org/wiki/Gordie_Howe_International_Bridge');
+    await page.getByLabel('Source URL').fill(sourceUrl);
     await page.getByLabel('Title').fill(`E2E launch ${stamp}`);
     // Exact: a timed pin's form also has a "Start time" beside it.
     await page.getByLabel('Start', { exact: true }).fill('2031-05-04');

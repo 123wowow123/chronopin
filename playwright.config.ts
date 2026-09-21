@@ -7,6 +7,11 @@ export default defineConfig({
   // The accounts and pins the specs make are removed when the run ends.
   globalTeardown: './tests/e2e/cleanup.ts',
   fullyParallel: false,
+  // One worker, because there is one app and one database behind it. Files
+  // otherwise run side by side, and the specs that sign up, post and delete
+  // move the ground under the ones that count what a search answers or read
+  // the first card on a page - which failed differently on every run.
+  workers: 1,
   retries: 0,
   reporter: 'list',
   use: {
