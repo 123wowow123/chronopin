@@ -2336,3 +2336,35 @@ rooms, with four MICHELIN star ratings attached.
   reasoning rather than picking a day and looking certain.
 * **Changed**: [Vertical recipes](verticals.md) gains a Motorsport seasons row
   and a Club finals and fight nights row.
+
+## 2026-09-21 - Major disease events, a vertical of ten (pins 2523-2532)
+
+* **Learned**: `Health & Medicine` held 38 pins and **every one was a drug
+  trial readout or a device milestone** - a keyword sweep for pandemic,
+  epidemic, outbreak, cholera, plague, measles and polio matched four pins, of
+  which two were *A Plague Tale: Requiem* and Hivemapper. The category looked
+  healthy by count while holding no disease event at all.
+* **Changed**: ten pins as @HealthDesk, from the Black Death landing at Messina
+  in October 1347 to the Bangladesh measles outbreak still running now: Snow's
+  pump handle (1854), Camp Funston (1918), the Salk trial result (1955),
+  smallpox eradication (1980), the MMWR that first described AIDS (1981), the
+  West Africa Ebola emergency (2014), and COVID-19's pandemic declaration and
+  its end (2020, 2023).
+* **Learned**: **a declaration is an instant; an outbreak is a period.** The WHO
+  pins are single days because the committee met and spoke on one. The
+  Bangladesh outbreak takes a start and a **null end**, because it has not
+  finished - the same shape the cyclone-season pins use, and the honest way to
+  pin something ongoing. The Black Death covers its month rather than claiming a
+  landing day.
+* **Learned**: `stacks.cdc.gov` holds the **MMWR issues themselves**, so the
+  5 June 1981 report of five Pneumocystis cases in Los Angeles can be cited as
+  the primary document rather than an article about it - while `cdc.gov`'s own
+  pandemic pages 403 `curl` and several have been restructured away entirely
+  (`/flu/pandemic-resources/1918-pandemic-h1n1.html` is now a 404 that returns
+  200 to a fetch). `who.int` fact sheets and news items answer `curl` cleanly
+  and are the reference of choice for a disease pin.
+* **Learned**: the WHO's own speech URLs rot. The 11 March 2020 media-briefing
+  remarks 404, so the pandemic declaration cites the WHO's dated **COVID-19
+  timeline** instead - a page the organisation maintains rather than one it
+  filed and moved.
+* **Changed**: [Vertical recipes](verticals.md) gains a Disease events row.
