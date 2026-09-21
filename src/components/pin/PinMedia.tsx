@@ -290,6 +290,11 @@ const YT_BUFFERING = 3;
 // scrolls fully out of view and resumes when it scrolls back; one the viewer
 // paused stays paused. Uses the iframe API that enablejsapi=1 turns on: after
 // a 'listening' handshake the player posts its state to this window.
+// Leaving the page pauses it too: the router keeps up to three pages in the
+// document, hidden, so that going back restores them (React's <Activity>).
+// A hidden page's iframe is still there and still playing - its effects are
+// the only thing torn down - so the player is paused on the way out. Coming
+// back it stays paused, where the viewer left off.
 function YouTubeEmbed({ html, title }: { html: string; title: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const t = useT();
@@ -301,6 +306,7 @@ function YouTubeEmbed({ html, title }: { html: string; title: string }) {
     const send = (message: object) => iframe.contentWindow?.postMessage(JSON.stringify(message), origin);
     let state: number | undefined;
     let pausedOffscreen = false;
+    const playing = () => state === YT_PLAYING || state === YT_BUFFERING;
 
     const onMessage = (e: MessageEvent) => {
       if (e.source !== iframe.contentWindow || typeof e.data !== 'string') return;
@@ -330,7 +336,7 @@ function YouTubeEmbed({ html, title }: { html: string; title: string }) {
     iframe.addEventListener('load', startHandshake);
 
     const observer = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting && (state === YT_PLAYING || state === YT_BUFFERING)) {
+      if (!entry.isIntersecting && playing()) {
         send({ event: 'command', func: 'pauseVideo', args: [] });
         pausedOffscreen = true;
       } else if (entry.isIntersecting && pausedOffscreen) {
@@ -340,6 +346,7 @@ function YouTubeEmbed({ html, title }: { html: string; title: string }) {
     });
     observer.observe(container);
     return () => {
+      if (playing()) send({ event: 'command', func: 'pauseVideo', args: [] });
       observer.disconnect();
       window.clearInterval(handshake);
       iframe.removeEventListener('load', startHandshake);

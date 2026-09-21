@@ -481,7 +481,7 @@ major local events by major city scrape and more targetted by your location
 - nightly job should be guided by LLM reasoning and guidance so it's flexible like running in current sessions 
 
 
-
+clicking line on map should show small popup and display reason for connection and the 2 connected pins
 # OKF
 
 # Other
@@ -490,6 +490,10 @@ major local events by major city scrape and more targetted by your location
 
 # Scraping
 https://trends.google.com/explore
+
+
+
+see if there are major imbalance in pins and try to get more to balance more but only if they are good sources
 
 
 7 ratings applied across 156 pins. 149 still have none, 95 of which have already aired, so a score exists and the lookup simply failed — 251 Jikan 504s, identical in both runs. Jikan serves cached titles and 504s the rest; One Piece answers, Mushoku Tensei doesn't. Re-run later with scratchpad/ids.txt; it's insert-or-refresh so it's free to repeat.

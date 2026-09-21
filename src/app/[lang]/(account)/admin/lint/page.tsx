@@ -50,7 +50,7 @@ export default async function AdminLintPage({
   };
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-10">
+    <div className="mx-auto max-w-3xl px-4 py-10">
       <AdminTabs current="/admin/lint" />
       <h1 className="mb-6 text-2xl font-semibold tracking-tight">Lint</h1>
 

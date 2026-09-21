@@ -8423,6 +8423,90 @@
       "utcRemovedDateTime": null,
       "relation": "company",
       "note": "Google's parent, behind Android XR and Gemini."
+    },
+    {
+      "id": 730,
+      "pinId": 2318,
+      "symbol": "LYV",
+      "name": "Live Nation Entertainment",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-21T02:46:02.164Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "whose Ticketmaster subsidiary is the exclusive ticket seller for the tour"
+    },
+    {
+      "id": 731,
+      "pinId": 2319,
+      "symbol": "LYV",
+      "name": "Live Nation Entertainment",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-09-21T02:46:02.495Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "whose Ticketmaster subsidiary is the exclusive ticket seller for the tour"
+    },
+    {
+      "id": 732,
+      "pinId": 2320,
+      "symbol": "LYV",
+      "name": "Live Nation Entertainment",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-09-21T02:46:04.691Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "whose Ticketmaster subsidiary is the exclusive ticket seller for the tour"
+    },
+    {
+      "id": 733,
+      "pinId": 2321,
+      "symbol": "LYV",
+      "name": "Live Nation Entertainment",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-09-21T02:46:05.560Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "whose Ticketmaster subsidiary is the exclusive ticket seller for the tour"
+    },
+    {
+      "id": 734,
+      "pinId": 2324,
+      "symbol": "GOOGL",
+      "name": "Alphabet Inc.",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-21T03:15:05.972Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": "will integrate Google DeepMind foundation models into Boston Dynamics' Atlas"
+    },
+    {
+      "id": 735,
+      "pinId": 2325,
+      "symbol": "AMZN",
+      "name": "Amazon",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-09-21T03:15:06.009Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the owner of Amazon Leo."
+    },
+    {
+      "id": 736,
+      "pinId": 2329,
+      "symbol": "NVDA",
+      "name": "NVIDIA Corporation",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-21T03:15:44.338Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "announced the Isaac GR00T reference humanoid and supplies its Jetson Thor compute"
     }
   ],
   "prices": [
@@ -9017,7 +9101,7 @@
       "day": "2014-09-18",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-09-19T05:19:31.286Z",
+      "utcCheckedDateTime": "2026-09-21T03:42:12.025Z",
       "utcSetDateTime": "2026-09-19T05:12:29.571Z"
     },
     {
@@ -24232,6 +24316,160 @@
       "utcPriceDateTime": "2025-07-15T20:00:00.000Z",
       "utcCheckedDateTime": "2026-09-20T22:50:19.888Z",
       "utcSetDateTime": "2026-09-20T22:50:19.121Z"
+    },
+    {
+      "id": 6141,
+      "pinTickerId": 730,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 169.54,
+      "utcPriceDateTime": "2026-09-18T23:57:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T02:46:03.299Z",
+      "utcSetDateTime": "2026-09-21T02:46:02.472Z"
+    },
+    {
+      "id": 6142,
+      "pinTickerId": 730,
+      "kind": "start",
+      "utcStartDateTime": "2027-02-18T10:00:00.000Z",
+      "day": "2027-02-18",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-09-21T02:46:02.474Z"
+    },
+    {
+      "id": 6143,
+      "pinTickerId": 731,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 169.54,
+      "utcPriceDateTime": "2026-09-18T23:57:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T02:46:03.299Z",
+      "utcSetDateTime": "2026-09-21T02:46:02.519Z"
+    },
+    {
+      "id": 6144,
+      "pinTickerId": 731,
+      "kind": "start",
+      "utcStartDateTime": "2027-02-19T07:00:00.000Z",
+      "day": "2027-02-19",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-09-21T02:46:02.521Z"
+    },
+    {
+      "id": 6149,
+      "pinTickerId": 732,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 169.54,
+      "utcPriceDateTime": "2026-09-18T23:57:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T02:46:04.856Z",
+      "utcSetDateTime": "2026-09-21T02:46:04.708Z"
+    },
+    {
+      "id": 6150,
+      "pinTickerId": 732,
+      "kind": "start",
+      "utcStartDateTime": "2027-02-20T06:00:00.000Z",
+      "day": "2027-02-20",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-09-21T02:46:04.713Z"
+    },
+    {
+      "id": 6153,
+      "pinTickerId": 733,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 169.54,
+      "utcPriceDateTime": "2026-09-18T23:57:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T02:46:05.715Z",
+      "utcSetDateTime": "2026-09-21T02:46:05.564Z"
+    },
+    {
+      "id": 6154,
+      "pinTickerId": 733,
+      "kind": "start",
+      "utcStartDateTime": "2027-02-26T06:00:00.000Z",
+      "day": "2027-02-26",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-09-21T02:46:05.566Z"
+    },
+    {
+      "id": 6181,
+      "pinTickerId": 734,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 350.83,
+      "utcPriceDateTime": "2026-09-18T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T03:15:07.569Z",
+      "utcSetDateTime": "2026-09-21T03:15:05.986Z"
+    },
+    {
+      "id": 6182,
+      "pinTickerId": 734,
+      "kind": "start",
+      "utcStartDateTime": "2026-01-05T00:00:00.000Z",
+      "day": "2026-01-05",
+      "price": 316.54,
+      "utcPriceDateTime": "2026-01-05T21:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T03:15:06.807Z",
+      "utcSetDateTime": "2026-09-21T03:15:05.990Z"
+    },
+    {
+      "id": 6183,
+      "pinTickerId": 735,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 254.15,
+      "utcPriceDateTime": "2026-09-18T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T03:15:07.213Z",
+      "utcSetDateTime": "2026-09-21T03:15:06.040Z"
+    },
+    {
+      "id": 6184,
+      "pinTickerId": 735,
+      "kind": "start",
+      "utcStartDateTime": "2026-02-25T00:00:00.000Z",
+      "day": "2026-02-25",
+      "price": 210.64,
+      "utcPriceDateTime": "2026-02-25T21:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T03:15:06.811Z",
+      "utcSetDateTime": "2026-09-21T03:15:06.041Z"
+    },
+    {
+      "id": 6189,
+      "pinTickerId": 736,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 222.53,
+      "utcPriceDateTime": "2026-09-18T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T03:15:45.336Z",
+      "utcSetDateTime": "2026-09-21T03:15:44.343Z"
+    },
+    {
+      "id": 6190,
+      "pinTickerId": 736,
+      "kind": "start",
+      "utcStartDateTime": "2026-06-01T00:00:00.000Z",
+      "day": "2026-06-01",
+      "price": 224.36,
+      "utcPriceDateTime": "2026-06-01T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T03:15:44.940Z",
+      "utcSetDateTime": "2026-09-21T03:15:44.344Z"
     }
   ],
   "relations": [

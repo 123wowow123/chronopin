@@ -492,6 +492,7 @@ const es: Messages = {
     noMatch: 'Ninguna etiqueta coincide.',
     none: 'Estos pines aún no tienen etiquetas.',
     find: 'Buscar una etiqueta',
+    findClear: 'Borrar la búsqueda de etiquetas',
     ungroupTitle: 'Mostrar cada etiqueta por separado',
     groupTitle: 'Agrupar etiquetas en categorías más amplias',
     grouped: 'Agrupadas',

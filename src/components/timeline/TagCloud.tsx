@@ -9,7 +9,7 @@ import { api } from '@/lib/client/api';
 import { hrefKeepingDate } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { removeTerm, toggleTerm } from '@/lib/searchTerms';
-import { cloudSteps, cloudTags, groupSelection, groupTags, tagMembers, type TagCount, type TagGroup } from '@/lib/tags';
+import { cloudSteps, cloudTags, groupSelection, groupTags, tagMembers, THREAD_TAG, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
 import { useTagFoldOpen } from './FloatingControls';
 import { WordCloud } from './WordCloud';
@@ -255,6 +255,7 @@ export function TagCloud({
                             : 'text-muted hover:text-ink'
                       } ${tag.count === 0 && !pressed ? 'opacity-50' : ''}`}
                     >
+                      {threadIcon(tag.name)}
                       {tagLabel(t, tag)}
                       <span className="ml-1 text-[11px] font-normal text-subtle tabular-nums">
                         {tag.count}
@@ -337,6 +338,7 @@ function Members({
                   isSelected(m.name) ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset' : 'text-muted hover:text-ink'
                 }`}
               >
+                {threadIcon(m.name)}
                 {m.name}
                 <span className="ml-1 text-subtle">{m.count}</span>
               </button>
@@ -360,17 +362,41 @@ function Members({
   );
 }
 
+// The field that narrows the cloud. Its own clear button, not the browser's:
+// the native one is a few px of cross jammed against the field's edge, which
+// is a hard thing to hit. This one is a proper target and keeps the focus in
+// the field, so the next tag can be typed straight away.
 function FindTag({ value, onChange, className = '' }: { value: string; onChange: (value: string) => void; className?: string }) {
   const t = useT();
+  const field = useRef<HTMLInputElement>(null);
   return (
-    <input
-      type="search"
-      value={value}
-      onChange={(e) => onChange(e.target.value)}
-      placeholder={t('tagCloud.find')}
-      aria-label={t('tagCloud.find')}
-      className={`rounded-full bg-field px-3.5 py-1.5 text-sm text-ink ring-1 ring-line ring-inset placeholder:text-subtle focus:ring-2 focus:ring-link focus:outline-none ${className}`}
-    />
+    <span className={`relative inline-flex items-center ${className}`}>
+      <input
+        ref={field}
+        type="search"
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={t('tagCloud.find')}
+        aria-label={t('tagCloud.find')}
+        className="w-full rounded-full bg-field py-1.5 pr-9 pl-3.5 text-sm text-ink ring-1 ring-line ring-inset placeholder:text-subtle focus:ring-2 focus:ring-link focus:outline-none [&::-webkit-search-cancel-button]:hidden"
+      />
+      {value ? (
+        <button
+          type="button"
+          aria-label={t('tagCloud.findClear')}
+          title={t('tagCloud.findClear')}
+          onClick={() => {
+            onChange('');
+            field.current?.focus();
+          }}
+          // Sized to sit inside the field's pill: a larger circle would spill
+          // over its rounded edge on hover.
+          className="absolute right-1 flex size-7 items-center justify-center rounded-full text-subtle hover:bg-raised hover:text-ink"
+        >
+          <Icon name="close" className="size-3.5" />
+        </button>
+      ) : null}
+    </span>
   );
 }
 
@@ -399,6 +425,14 @@ const KIND_LABEL: Record<TagCount['kind'], MessageKey> = { award: 'tagCloud.kind
 // A tag as shown: a category in the page's language, any other by its own name.
 function tagLabel(t: Translator, tag: { name: string; kind?: TagCount['kind'] }) {
   return tag.kind === 'category' ? categoryLabel(t, tag.name) : tag.name;
+}
+
+// The thread tag wears the icon the cards and the pin's own chips mark a
+// thread with (src/components/pin/PinTags.tsx). Sized in em: the cloud's
+// steps set the word's size, and the icon follows it.
+function threadIcon(name: string) {
+  if (name.toLowerCase() !== THREAD_TAG.toLowerCase()) return null;
+  return <Icon name="thread" className="mr-0.5 inline size-[0.95em] align-[-0.1em]" />;
 }
 
 // The tag cloud blown up over the page, WordArt style (WordCloud): up to 200

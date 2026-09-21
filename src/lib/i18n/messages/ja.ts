@@ -486,6 +486,7 @@ const ja: Messages = {
     noMatch: '一致するタグはありません。',
     none: 'これらのピンにはまだタグがありません。',
     find: 'タグを探す',
+    findClear: 'タグ検索をクリア',
     ungroupTitle: 'タグを個別に表示',
     groupTitle: 'タグを大きなカテゴリにまとめる',
     grouped: 'グループ化',

@@ -1,13 +1,15 @@
 // A pin's tags (0038), its categories among them (0043). The form's own ("user") are replaced wholesale by a
 // create or edit that sends tags; the awards its description and summary name
 // and the prediction markets its links cite ("auto") are re-read after every save. Award tags from PinAward need no
-// writing: PinTagView derives them. See src/lib/tags.ts.
+// writing: PinTagView derives them, and so is the "Thread" tag a pin in a
+// thread carries (0056), which is a fact about two pins. See src/lib/tags.ts.
 
 import { autoTags, tagKind, uniqueTags, type TagCount, type TagSource } from '@/lib/tags';
 import * as db from '../db';
 import { wordStartPattern } from '../util/searchQuery';
 
-type Stored = Exclude<TagSource, 'award'>;
+// The sources that are rows; 'award' and 'thread' are the view's own.
+type Stored = Exclude<TagSource, 'award' | 'thread'>;
 
 // SQL for a pin's categories, the main one first, in a query on "Pin" (not aliased).
 export const PIN_CATEGORIES = `ARRAY(SELECT "cat"."name"::text FROM "PinTag" AS "cat" WHERE "cat"."pinId" = "Pin"."id" AND "cat"."kind" = 'category' ORDER BY "cat"."id")`;

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { autoTags, awardTag, awardTagsInText, cleanTag, marketTags, cloudSteps, cloudTags, nominationTag, parseTags, splitTags, tagKind, tagParent, groupTags, groupSelection, tagGroupPatterns, tagMembers } from './tags';
+import { THREAD_TAG, autoTags, awardTag, awardTagsInText, cleanTag, marketTags, cloudSteps, cloudTags, nominationTag, parseTags, splitTags, tagKind, tagParent, groupTags, groupSelection, tagGroupPatterns, tagMembers } from './tags';
 
 describe('cleanTag', () => {
   it('trims, drops a leading # and double quotes', () => {
@@ -49,6 +49,12 @@ describe('tagKind', () => {
   it('knows a category by its name on the list', () => {
     expect(tagKind('Anime')).toBe('category');
     expect(tagKind('space & astronomy')).toBe('category');
+  });
+
+  // PinTagView (0056) writes the thread tag's kind itself; it has to be the
+  // one this file would give the same name.
+  it('agrees with the kind the thread tag is derived with', () => {
+    expect(tagKind(THREAD_TAG)).toBe('topic');
   });
 });
 

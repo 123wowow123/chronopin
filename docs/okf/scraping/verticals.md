@@ -1,7 +1,7 @@
 ---
 type: Reference
 title: Vertical recipes
-description: Per-vertical recipes for the scrapes run so far - AAA games, movies, TV series, anime, YouTube channels, prediction markets, AI models, prize announcements, drug readouts, sport fixtures, product roundups and infrastructure - with the curator account and the traps met.
+description: Per-vertical recipes for the scrapes run so far - AAA games, movies, TV series, anime, YouTube channels, prediction markets, AI models, prize announcements, drug readouts, sport fixtures, concert tours, product roundups and infrastructure - with the curator account and the traps met.
 resource: ../../../src/server/scrape/index.ts
 tags: [scraping, verticals, curators]
 generated: { by: claude-code/claude-opus-5, at: 2026-09-19T20:00:00Z }
@@ -24,6 +24,8 @@ Each recipe is a repeatable pattern. Update it when a run teaches something ([Le
 | Drug readouts | @HealthDesk | `Health & Medicine` | ClinicalTrials.gov API v2 | Phase 3 primary completion dates, always `estimated`; the sponsor's ticker rides along |
 | Sport fixtures | @SportDesk | `Sports` | Wikipedia tournament articles, governing bodies | The fixture, not the betting market (@OddsDesk owns those); placed at the venue |
 | Solar eclipses | @ScienceDesk | `Space & Astronomy` | NASA eclipse catalogue | Central eclipses only; placed at the point of greatest eclipse, dated in UT not TD |
+| Concert tours | @MusicDesk | `Music & Audio` | Ticketmaster artist pages, promoter announcements | One pin per show at its venue, timed from the artist page's `schema.org` offers; company is the promoter, not the artist |
+| Robotics | @TechDesk | `Robotics` | The maker's own newsroom, exchange and press-release wires, Wikipedia for a multi-organiser event | The event is a milestone (a production ramp, a factory opening, a listing, a withdrawal), not the robot; place it at the plant, hall or exchange, never the parent's HQ; a multi-organiser event takes `company: null` |
 | Trending searches | none - discovery only | n/a | Google Trends daily RSS | Shortlists subjects; posts nothing ([Nightly jobs](nightly-jobs.md#google-trends)) |
 | Infrastructure and architecture | @BuildDesk | `Infrastructure & Transportation`, `Architecture & Real Estate`, `Energy`, `Space & Astronomy` | The owner's or authority's own project page, Wikipedia, trade press | Company is the owner or authority; a delayed opening carries `originalStartDate` and `delayReasoning` |
 
@@ -52,6 +54,29 @@ A pin about a series, a season or a cour carries how many episodes that run has 
 # YouTube channels
 
 `yt-dlp -J <video url>` per id gives the upload date, description, tags and categories. Some creators forbid third-party embeds (The B1M) even when `playableInEmbed` is true: flag it. `company` is whatever institution the story centres on (a ministry, a binational authority, an operator); its logo lookup often whiffs, so set `websiteUrl` and the favicon by hand. Give each parallel agent a **unique scratch file name**: two agents that defaulted to the same name in a shared prompt overwrote and even ran each other's inserts.
+
+# Concert tours
+
+A tour is **one pin per show**, each at its venue, not one pin for the tour.
+
+1. The announcement (Ticketmaster's `discover.` subdomain, or the promoter's
+   own post) gives the city list, the on-sale windows and the press shot.
+2. The **artist** page - `ticketmaster.com.au/<artist>-tickets/artist/<id>` -
+   carries a `schema.org` `Offer` per show in its raw HTML with that show's
+   own event URL, venue and **local start time**. Grep for it; the per-event
+   pages themselves return nothing to `curl` or to the scraper.
+3. That per-event URL is the pin's `sourceUrl` even though it will not open,
+   and the venue's Wikipedia page gives the coordinates and a photo.
+4. Convert the local start time with the venue's own zone - a February tour
+   crosses `Australia/Perth` (no DST), `Australia/Brisbane` (no DST) and
+   `Australia/Sydney` (AEDT), so three shows on consecutive days are +8, +10
+   and +11.
+5. `dateConfidence` is `scheduled`: announced, with tickets not yet sold.
+6. The press shot rides on one pin only - the difference hash drops it from
+   the rest - so the others take their venue's photo plus one official video
+   from the artist's Vevo channel.
+7. `company` is the promoter or ticketer, not the artist: a person is not an
+   organisation, and the promoter is what carries a ticker (Live Nation, LYV).
 
 # Prediction markets
 
@@ -104,6 +129,63 @@ Second pass (2026-09-20, pins 1948-1952): Nobel Peace Prize, Oscars Best Picture
 - Images: Commons `generator=search` with `gsrnamespace=6` returns nothing, so take Wikipedia's REST summary `originalimage` and space the calls (it 429s after about five). An article whose lead is an SVG can be unusable - `upload.wikimedia.org` refuses every thumb width of `Bitcoin.svg` with a 400 - so pick an article with a photograph instead.
 
 Sports and entertainment pass (2026-09-20, pins 1953-1966): World Series, Super Bowl LXI, NBA Finals, Stanley Cup, Champions League final, Ballon d'Or, Heisman, F1 constructors, The Game Awards, the Grammys, the Super Bowl halftime headliner, 2026's highest-grossing film, Spotify Wrapped and the next James Bond. Place a title race at the league's headquarters when the venue is not known yet (best-record host, undecided finalists) and at the stadium, circuit or theatre when it is. A market with one yes/no contract per name (Kalshi's halftime headliner) does not sum to 100 - say so in the summary rather than presenting the prices as shares.
+
+# Robotics
+
+@TechDesk, category `Robotics`, ten pins on 2026-09-20 (2324-2333). The vertical
+had three pins before this run, so almost anything major is new.
+
+**The pin is the milestone, not the robot.** A humanoid gets announced once and
+then reported on for two years, so a pin about "Figure 03" would have no date.
+What has a date is the *step*: a production line reaching a rate (Figure's one
+robot an hour), a factory opening (1X in Hayward), a unit count falling (AgiBot's
+10,000th), a listing (Unitree on the STAR Market), a reference design being
+published (NVIDIA's Isaac GR00T), a games meeting, and a programme being
+**withdrawn** - Amazon's Blue Jay is one of the few robotics pins that records a
+failure, and the timeline is better for it.
+
+**Where it goes on the map.** The plant, the hall or the exchange the event
+happened in, never the parent's headquarters: Figure at BotQ on North First
+Street rather than "San Jose, CA", Unitree at the Shanghai Stock Exchange rather
+than its Hangzhou office, Boston Dynamics at the Las Vegas Convention Center
+because the reveal was at CES. Wikipedia's `prop=coordinates` gives the exchange
+and the Metaplant directly; a plant with no article needs the street address from
+a leasing or property report and coordinates for it.
+
+**Sources are unusually good.** Every maker in this vertical publishes a dated
+newsroom post with Open Graph images, and the app's own scraper reads all of
+them - figure.ai, bostondynamics.com, agibot.com, 1x.tech, investor.nvidia.com,
+globenewswire, aboutamazon.com and scmp.com all came back with full text plus
+media. Trust the page's own date over a search summary: the search said NVIDIA's
+GR00T announcement was 31 May at GTC Taipei, the release itself says June 01.
+
+**An update note is an event.** Amazon's October 2025 Blue Jay announcement
+carries "Update February 25, 2026: Amazon is no longer utilizing Blue Jay in
+operations" in the body. That line is the pin, dated to the update rather than
+to the article, `confirmed` on the company's own wording.
+
+**A multi-organiser event has no company.** The World Humanoid Robot Games are
+run by China Media Group, the Beijing municipal government, the World Robot
+Cooperation Organization and the Asia-Pacific RoboCup council together, so
+`company` is null rather than one of the four; RoboCup's own events page
+corroborates dates and venue.
+
+**Stocks:** only where a US ticker is actually in the story - NVDA as the
+company on the GR00T pin, AMZN on Blue Jay, GOOGL as *related* on the Atlas pin
+because DeepMind's models are going into the robot. Hyundai, Unitree, Figure,
+1X, AgiBot and ugo are not US-listed, so those pins carry none.
+
+**Traps met:** Contentful serves `?fm=webp` variants that the thumbnailer
+rejects with "Mime type image/webp does not support decoding", and because create
+is not transactional the pin was written without its media - strip the query and
+`PUT` the whole pin back rather than re-posting into a duplicate `sourceUrl`. The
+scraper's Wikipedia image fallback is worse than nothing on a page it cannot
+illustrate: the Unitree IPO page came back with a photo of a OnePlus One and the
+Hyundai release with a Waymo car, so check what the media stage actually
+returned. An article's own image can be absent from the rendered page's image
+list (agibot.com), in which case the lead image of a reference is the way in.
+Company logos resolve from the site icon once `websiteUrl` is set by hand -
+needed for ugo (ugo.plus).
 
 # Roundups
 

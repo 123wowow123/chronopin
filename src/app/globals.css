@@ -107,6 +107,11 @@
     /* How far below the top a jump lands: clear of the sticky navbar. */
     --jump-offset: 3.75rem;
     scrollbar-color: var(--color-raised-2) transparent;
+    /* Hold the scrollbar's width whether or not a page is long enough to
+       scroll: without it a short page and a long one centre their content a
+       scrollbar apart, and moving between them - admin tabs, search pages -
+       shifts everything sideways. No effect where scrollbars overlay. */
+    scrollbar-gutter: stable;
   }
   /* Search results pin their sort toggle under the navbar below xl; jumps to
      a day land below both. */

@@ -8,6 +8,8 @@
 //           and the prediction markets its links cite (marketTags)
 //   award   one per award body and year the work won in (PinAward)
 //           and a "... Nominee" tag (kind nomination) per body and year it was only nominated in
+//   thread  THREAD_TAG on a pin that answers another pin or is answered by one
+//           (0056; derived too, so threading a pin tags both ends at once)
 //
 //   user    also the pin's categories: tags of kind 'category', named from the
 //           list in src/lib/categories.ts (0043 turned the old column into these)
@@ -18,7 +20,7 @@ import { isCategory } from './categories';
 import { pinMarketRefs } from './predictionMarkets';
 
 export type TagKind = 'award' | 'nomination' | 'topic' | 'category';
-export type TagSource = 'user' | 'auto' | 'award';
+export type TagSource = 'user' | 'auto' | 'award' | 'thread';
 
 export type PinTagJson = { name: string; kind: TagKind; source: TagSource };
 // category: the category most of the tag's pins carry (none for a category
@@ -171,6 +173,13 @@ export function awardTagsInText(text: string | null | undefined): string[] {
   }
   return uniqueTags(found);
 }
+
+/* Threads */
+
+// What a pin in a thread is tagged: it answers another pin, or one answers it.
+// PinTagView derives the tag (0056); nothing writes it, and its kind there is
+// what tagKind says here.
+export const THREAD_TAG = 'Thread';
 
 /* Prediction markets */
 

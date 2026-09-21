@@ -14,6 +14,7 @@ import { useQueryState } from '@/lib/client/urlState';
 import { browserTimeZone, useTimeZone } from '@/lib/client/timeZone';
 import { daysBetween, dayKeyIn, monthDayOf } from '@/lib/format';
 import { DEFAULT_POSTED_WITHIN, SPAN_OPTIONS, spanLabel, spanPhrase, spanToParam } from '@/lib/postedSpan';
+import { pinPicture } from '@/components/pin/PinThumb';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
@@ -40,11 +41,8 @@ const NEW_PINS_LIMIT = 5;
 // either end of the loaded stretch are counted again.
 const RECOUNT_DELAY_MS = 500;
 
-// The medium a broadcast pin shows in the new pins panel: a video's still
-// first, else the earliest-attached medium (mirrors PinView.pictures' SQL
-// and the same choice made client-side in PinsMap.tsx's popupContent).
+// A broadcast pin as the new pins panel lists it.
 function toNewPin(pin: CardPin): NewPin {
-  const medium = pin.media?.find((m) => String(m.type) === '3') ?? pin.media?.[0];
   return {
     id: pin.id,
     title: pin.title,
@@ -52,8 +50,7 @@ function toNewPin(pin: CardPin): NewPin {
     // A just-saved broadcast carries no utcCreatedDateTime (PinCard.tsx
     // guards the same gap); it was created now, so that is the best answer.
     utcCreatedDateTime: pin.utcCreatedDateTime ?? new Date().toISOString(),
-    thumbName: medium?.thumbName,
-    originalUrl: medium && String(medium.type) === '1' ? medium.originalUrl : undefined,
+    ...pinPicture(pin.media),
     hasMarket: pinMarketRefs(pin).length > 0,
   };
 }

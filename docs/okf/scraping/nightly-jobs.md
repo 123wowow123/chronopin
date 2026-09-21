@@ -165,6 +165,14 @@ date. So the job shortlists and a session decides.
   containing the word "epic".
 * It is a daily read because the feed is daily and keeps nothing: what is not
   looked at today is gone tomorrow.
+* **Its real yield is about 3%.** Run end to end on 2026-09-20, the ten
+  survivors held three unpinned dated events - a first Australian headline
+  tour, a Samsung OS rollout and one already-flagged repeat - and seven that
+  were not events at all. That is the job working, not failing.
+* **A shortlisted term can still have no date.** `landman season 3` scores
+  well and is worth the look, but the show has no announced premiere; a page
+  headlined "when does X come out" is a strong sign that X has no date yet.
+  Check for a date before scraping, not after.
 
 # Not yet scheduled
 

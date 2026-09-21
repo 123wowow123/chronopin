@@ -492,6 +492,7 @@ const de: Messages = {
     noMatch: 'Kein Tag passt.',
     none: 'Diese Pins haben noch keine Tags.',
     find: 'Tag suchen',
+    findClear: 'Tag-Suche löschen',
     ungroupTitle: 'Jeden Tag einzeln zeigen',
     groupTitle: 'Tags in größere Kategorien zusammenfassen',
     grouped: 'Gruppiert',

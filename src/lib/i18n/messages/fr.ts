@@ -492,6 +492,7 @@ const fr: Messages = {
     noMatch: 'Aucun tag ne correspond.',
     none: 'Pas encore de tags sur ces épingles.',
     find: 'Trouver un tag',
+    findClear: 'Effacer la recherche de tags',
     ungroupTitle: 'Afficher chaque tag séparément',
     groupTitle: 'Regrouper les tags en catégories plus larges',
     grouped: 'Groupés',

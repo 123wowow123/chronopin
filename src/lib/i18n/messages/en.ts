@@ -487,6 +487,7 @@ const en = {
     noMatch: 'No tag matches.',
     none: 'No tags on these pins yet.',
     find: 'Find a tag',
+    findClear: 'Clear the tag search',
     ungroupTitle: 'Show every tag on its own',
     groupTitle: 'Wrap tags up into larger categories',
     grouped: 'Grouped',

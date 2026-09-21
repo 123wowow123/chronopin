@@ -30,6 +30,82 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **A video embedded in a reference belongs to the pin.** Owner, 2026-09-20: pin 315 should carry the YouTube video that its own reference article embeds - as a reference *and* on the pin's media. Best effort: get the product video and bring it to both.
 * **A released product cites its MSRP from the company's own page.** Owner, 2026-09-20: for a released or on-sale product, check the company's product/store page for the MSRP and add that page as a reference.
 
+## 2026-09-20 - Robotics, a near-empty vertical (pins 2324-2333)
+
+* **Learned.** `Robotics` held three pins before this run (Unimate 1961, a
+  burger-robot piece and Tesla Optimus V3), so ten major events filled 2026
+  end to end: Boston Dynamics' production Atlas at CES (2324), Amazon retiring
+  Blue Jay (2325), AgiBot's 10,000th humanoid (2326), Figure's one-robot-an-hour
+  ramp at BotQ (2327), 1X's Hayward NEO factory (2328), NVIDIA's Isaac GR00T
+  reference humanoid (2329), Unitree's STAR Market debut (2330), the World
+  Humanoid Robot Games (2331), ugo Nova in Tokyo (2332) and Atlas at Hyundai's
+  Metaplant by 2028 (2333, threaded under 2324).
+* **Learned.** The pin is the *milestone*, not the robot: a humanoid has no
+  single date, but a production rate, a factory opening, a unit count, a listing
+  or a withdrawal does. Amazon's Blue Jay is the useful shape here - the event
+  is an "Update February 25, 2026" line inside an October 2025 announcement
+  saying the robot is no longer in operations, which is `confirmed` on the
+  company's own wording and dated to the update, not the article.
+* **Learned.** Robotics makers publish well: figure.ai, bostondynamics.com,
+  agibot.com, 1x.tech, investor.nvidia.com, globenewswire, aboutamazon.com and
+  scmp.com all came back from `GET /api/scrape` with full text and Open Graph
+  media. But the page's own date beats a search summary - search put NVIDIA's
+  GR00T announcement on 31 May at GTC Taipei; the release says June 01.
+* **Learned.** Place the pin where the event was, not at the parent's HQ:
+  the Las Vegas Convention Center for a CES reveal, the Shanghai Stock Exchange
+  for a listing, BotQ's North First Street address for a production ramp.
+  Wikipedia's `prop=coordinates` returns the exchange and the Metaplant
+  outright; a plant with no article needs its street address from a property
+  report.
+* **Learned.** A four-organiser event (the World Humanoid Robot Games) takes
+  `company: null` rather than one of the four, and RoboCup's own events page
+  corroborates the dates and venue.
+* **Trap.** Contentful's `?fm=webp` image variants fail the thumbnailer
+  ("Mime type image/webp does not support decoding"), a 500 on `POST /api/pins`.
+  Create is still not transactional, so pin 2327 was written without media;
+  the fix is to strip the query and `PUT` the whole pin back, never to re-POST
+  into a duplicate `sourceUrl`.
+* **Trap.** The scraper's Wikipedia image fallback can be actively wrong on a
+  page it cannot illustrate - the Unitree IPO page returned a photo of a OnePlus
+  One, the Hyundai release a Waymo car. Read the media stage's output before
+  saving it. Conversely agibot.com's own article image is absent from the
+  rendered image list, so a reference article's lead image carried that pin.
+* **Trap.** `npm run companies:logos -- --all` 429s on Wikipedia partway
+  through, which is harmless (it fills gaps, it does not clear existing logos -
+  418 with logos after, against 415 in the committed seed), but a company with
+  no Wikipedia article needs `websiteUrl` set by hand first: ugo -> ugo.plus.
+* **Learned.** Stocks only where a US ticker is genuinely in the story: NVDA as
+  company (GR00T), AMZN as company (Blue Jay), GOOGL as *related* on the Atlas
+  pin because DeepMind's models go into the robot. Hyundai, Unitree, Figure, 1X,
+  AgiBot and ugo are not US-listed and those pins carry none.
+* **OKF backfill, same day.** The app key has no credit (`llm: "session"`), so
+  the link wikis were done by hand through `wiki:export`/`wiki:apply`: 24 wiki
+  jobs (all single-part) over the 27 pin-source pairs, then a second round of 10
+  contradiction checks. No summaries were due, because these pins were saved
+  with a hand-written `longFormSummary` rather than waiting for one to be
+  composed from the wikis. Three rounds took the backlog to zero.
+* **Learned.** The contradiction check earns its place. Eight findings, all
+  minor, and two of them are the same fact twice: automate.org gives Atlas a
+  66 lb payload where Boston Dynamics' and Hyundai's own releases both say
+  110 lb / 50 kg, and Hyundai's release prints the operating range as
+  "(20C to 40 Celsius)" against Boston Dynamics' "-20 to 40 C" - a dropped
+  minus sign, caught because the Fahrenheit range matches in both. The Unitree
+  pin's finding is the useful kind: [S] reports the open (+629%, $66bn) and the
+  reference the close (+460%, ~$50bn) of the *same session*, so the pin's
+  headline valuation is the higher of two true numbers.
+* **Trap.** `wiki:export` **crashes when nothing is due** - the endpoint the
+  playbook tells you to run to - because `prompts.md` is written
+  unconditionally while the output directory is only ever created as a side
+  effect of writing a job file, so a 0-job run dies on `ENOENT ... prompts.md`
+  instead of reporting "0 wiki(s), 0 summary(ies), 0 contradiction check(s)".
+  Fixed with an `mkdirSync(out)` after the `rmSync` in
+  [export.ts](../../../scripts/wiki/export.ts).
+* **Learned.** A source's wiki can have more pages than the source has: a page
+  covering several distinct things gets topic pages, so the 27 pin-source pairs
+  hold 37 `SourceWiki` rows - robotstart's seven-company summit alone is 7.
+* **Changed.** [Vertical recipes](verticals.md) gained a `Robotics` row and a
+  full recipe section.
+
 ## 2026-09-20 - Pin 315 (Mac mini M6): the video its references were hiding
 
 One pin, fixed by hand after the owner noticed a video that the scrape had
@@ -1052,3 +1128,174 @@ month, quarter or half-year on the period's **last** day - 41 of them on the
 owner's account, 34 on @BuildDesk. `YYYY-MM-01` is not a house placeholder for
 anything. Worth a sweep of its own, and a candidate for the `imprecise` lint,
 which today only looks at 31 December and 1 January.
+
+# 2026-09-20 - Google Trends, run as a discovery job for the first time
+
+`npm run trends:discover` scored 10 of 100 terms across ten geographies as
+pointing at something dated. Three of those ten turned out to be real,
+unpinned, dated events; the other seven were a footballer's name, a
+same-day La Liga match, a currency lookup, a minister's food poisoning, a
+dance-show birthday, a tribute card at the end of a TV finale, and one term
+(`asteroid`) the job itself already flagged as pin 242. **A ~3% end-to-end
+yield is what the feed is worth**, and the job's job is to spend a session's
+attention on those three rather than on the hundred.
+
+### A trending term can be dateless even when it looks scheduled
+
+`landman season 3` scores well - a named sequel with a season number - and
+survives the filter, but there is no date to pin. Paramount+ renewed the show
+in December 2025 and filming only starts in September 2026, so every
+"release date" article is a guess at mid-to-late 2027. The lesson is that the
+filter is doing its job by shortlisting it; the session's job is to check that
+the thing the crowd is searching for **has a date**, not merely a future.
+A "when does X come out" article is a strong signal that X has *no* date.
+
+### Ticketmaster's artist page carries every show's start time in its markup
+
+The per-event pages (`ticketmaster.com.au/<slug>/event/<id>`) are useless to
+both `curl` and the scraper - the app's own `GET /api/scrape` came back with
+nothing but `{"type": "web"}`. The **artist** page
+(`/calvin-harris-tickets/artist/1149552`) is different: its raw HTML carries a
+`schema.org` `Offer` per show with the event URL, the venue and the local
+start time (`"Calvin Harris - Australia Tour 2027 | Thursday 18 Feb 2027,
+6:00 pm | Langley Park, Perth"`). That is where a tour's clock times come
+from, and the per-event URL it hands over is a valid `sourceUrl` even though
+the page behind it will not open - the same rule as IMDb.
+
+### A tour is one pin per show, not one pin per tour
+
+Four dated pins at four venues beat one pin for the tour: each is a real
+event with its own place on the map, its own on-sale URL and its own night.
+The press shot can only ride on one of them, because the difference hash
+([[image-dedupe]]) drops the same picture from the second pin onward - so the
+other three take their venue's own Wikipedia photo, which is better for a map
+anyway, plus one official video each from the artist's Vevo channel.
+
+### A rollout schedule reads like a launch schedule
+
+One UI 9 went in as two pins threaded newest-first: the 28 September date for
+the Galaxy S25 and Z7 foldables is the head, and the confirmed 16 September
+S26 rollout answers it. The two dates that came from a single regional
+newsroom post (21 September global, October for the S23 FE) stayed in the
+summary rather than becoming their own pins - one source's claim about one
+country does not support three pins, and GSMArena and SamMobile both hedge it.
+
+## 2026-09-20 - Every game pin was missing its video, and "gameplay" was why
+
+Pin 1869 (Diablo IV, Season of Hell's Legacy) had three pictures and no video,
+though the search for one runs on every pin with none (`topUpVideo`). Running
+the search by hand showed what it had thrown away: result 0 was
+**"Diablo IV | Season of Hell's Legacy | Gameplay Trailer"**, from the verified
+`@Diablo` channel, with every distinctive word of the pin's title in it.
+
+`pickProductVideo` and `pickTrailer` shared one `NOT_A_TRAILER` list, and that
+list had `gameplay|game` on it. For a film or show that is right - a video with
+"gameplay" in the title is not that film's trailer. For a game it rules out the
+only thing the studio ever publishes: a game's own announcement is almost
+always titled "Gameplay Trailer", and the press re-uploads (IGN, GameTrailers,
+PlayStation, Xbox, GameStop) all copy the phrasing. Of the catalogue's 86
+Gaming & Entertainment pins, **66 had no video at all**.
+
+The list is now split: `COMMENTARY` (reaction, review, breakdown, explained,
+recap, fan-made, parody, analysis, ...) rules a video out of both searches,
+because it is someone talking about the work rather than the work; `A_GAME_VIDEO`
+(`gameplay|game`) only applies to the screen search, where it belongs. Test in
+`src/server/scrape/productVideo.test.ts`.
+
+### The backfill: 23 of 66, and seven rounds of saying no
+
+`npm run media:videos` (`scripts/media/productVideos.ts`, dry run by default,
+`--category`, `--pin`, `--limit`, `--offset`, `--delay`) runs that same search
+over pins that have none. It leaves a film, series or anime to
+`npm run media:screen`, whose search matches the work's own title instead.
+
+The first dry run over the 66 game pins offered a tutorial upload, two IGN news
+clips, an "everything we know" roundup and a BlizzCon **2026** esports match on
+a **2017** StarCraft Remastered pin. Each round of the dry run bought one rule,
+and the rules are worth more than the backfill:
+
+| what got in | the rule |
+| --- | --- |
+| IGN covering the news | the video announces itself (trailer, teaser, reveal, announce) **or** comes from the company's own channel |
+| "The Final Preview", "Exclusive Hands-On Preview - IGN First" | `preview` announces a film, not a game - it is the press playing it early |
+| Diablo III's trailer on a Reaper of Souls pin | title overlap 0.6, then 0.7 |
+| Xbox's console trailer on a Razer accessory pin | the video must carry the pin's **leading** word, the name of the thing |
+| "BlizzCon 2026 Classic Cup" on a 2017 pin | a year in the video title must be within one of the pin's; esports words out |
+| "Elden Ring: **Tarnished Edition**" on the 2022 launch pin | an edition word the pin does not have is a different product |
+| Diablo **III**'s trailer on the Diablo **V** pin | `distinctiveWords` dropped one-character words, so "Diablo V" was just "diablo" - numerals are kept now |
+
+The overlap threshold only worked once the **headline's furniture was
+stopworded**. Half of these pins are titled "<Game> Review - IGN", and counting
+`review` and `ign` as words the video had to carry scored a real trailer at 3/5
+- the same as a sibling product's. With those words out, the right trailer
+scores 1.0 and 0.7 became a threshold that separates rather than one that
+merely trims.
+
+Rejecting the press previews **improved** six pins rather than emptying them:
+the official trailer was further down the same results page and won once the
+preview was out of the way.
+
+**21 pins kept a video**, all official trailers or the company's own upload.
+The rest got nothing, which is the right answer for a 2014 pin headlined "Xbox
+One to launch in Japan" - there is no official video of a news item, and the
+channels that rank for it are all commentary.
+
+Two were taken back off on Ian's call: pin 169 had a post-launch "Challenges of
+the Forbidden West" trailer and pin 181 a 2023 Xbox release-date trailer, both
+on 2022 review pins. **Right game, wrong moment** - and no rule here catches
+that. The year check allows a year either side, because a December trailer for
+a January launch is the normal case, and a post-launch trailer names no year at
+all. A later `media:videos` run can offer these two again; that is the honest
+cost of a search that reads titles rather than release dates.
+
+**The search is not deterministic.** Pin 1871's apply run took Diablo III's
+trailer where the dry run minutes earlier had found the Diablo V teaser -
+YouTube reorders results between requests. A dry run is a sample of what will
+happen, not a promise, so the apply output is worth reading too.
+
+### The same artwork, reframed, is not a repeat the hash can see
+
+The same pin also carried the season's key art twice: the full 1920x1080
+painting from GamesRadar, and a 2560x1440 frame from the trailer that zooms
+into the middle of that same painting. They are **24 bits apart** - a
+difference hash reads framing, and reframing is exactly what changed - and a
+sweep of 25 crops of the wide one gets no closer than 8, which is inside the
+range where two genuinely different photos of one event live (see
+[the 292-pin entry](#2026-09-20---the-same-picture-twice-on-292-pins)). No
+threshold catches this pair and still keeps real pictures, so the repeat came
+off by hand. A frame lifted from the trailer beside the art the trailer is made
+of is worth a look on any pin that gets both.
+
+## 2026-09-20 - An IMDb news link for DanMachi season 6 (pin 1727, @AnimeDesk)
+
+* **Learned**: `https://www.imdb.com/news/ni65700881/` was handed over to be
+  pinned. The news path is behind the same AWS WAF as the rest of imdb.com
+  (HTTP 202, empty body, to curl with a browser UA), but an IMDb news item is
+  only a **syndicated copy** of another outlet's story, so it does not have to
+  be read: `WebSearch` on the bare URL returned its title ("DanMachi:
+  Crunchyroll's Hit Action Fantasy Anime Officially Confirms Season 6"), and
+  searching that title found the publisher's own copy on CBR, which `curl`
+  serves in full with `article:published_time`. Cite the publisher's URL, not
+  the IMDb one - a blocked link can only ever hold a dead wiki - and say in the
+  reference's reasoning where the syndication was seen.
+* **Learned**: the story's subject already had a pin (1727, the 7 February 2026
+  "Aedes Vesta" announcement), so this went in as a **fourth reference** rather
+  than a second pin, per the standing rule.
+* **Learned**: `PUT /api/pins/:id` re-saves references wholesale, so adding one
+  by hand means sending the pin's whole body. Running the stored pin through
+  `pinToForm` -> edit -> `formToPin` (the edit modal's own round-trip) is the
+  safe way: the dry run showed the day key, the thread parent, the media and
+  the tags all coming back unchanged, where a hand-built body drops whatever it
+  forgets.
+* **Learned**: with no credit on the app key, the new link's wiki failed on
+  save (`credit balance is too low`) and the pin's summary went stale. The
+  no-credit route needs **two** `wiki:export` rounds: the first offers only the
+  wiki job, and the summary and contradiction jobs appear only on a second
+  export, after `wiki:apply` has stored that wiki.
+* **Learned**: the rebuilt summary turned up a false contradiction worth
+  recording as such - ANN's "October 4, 2024 at 24:30" and Wikipedia's and
+  CBR's "October 5, 2024" are one late-night broadcast, not two dates. Filed
+  `minor` with a note saying so, which is what the check is for.
+* **Feedback**: none; this was the standing scrape-without-sign-off rule.
+* **Changed**: [Sources](sources.md) - the IMDb row now covers `/news/ni.../`
+  items and the syndication workaround.

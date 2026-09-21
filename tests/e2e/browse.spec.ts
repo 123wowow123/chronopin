@@ -105,6 +105,49 @@ test('searching with Enter closes the suggestions for good', async ({ page }) =>
   await expect(page.getByRole('listbox')).toBeHidden();
 });
 
+// The router keeps the page behind, hidden, so that going back restores it -
+// a playing video with it, out of sight and still talking.
+test('leaving a pin page pauses its video', async ({ page }) => {
+  // A stand-in for the player, so the test turns on what the page sends it
+  // rather than on YouTube loading. It answers the handshake as a playing
+  // video does.
+  await page.route('https://www.youtube.com/embed/**', (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: 'text/html',
+      body: `<!doctype html><html><body><script>
+        window.sent = [];
+        addEventListener('message', (e) => {
+          window.sent.push(e.data);
+          try {
+            if (JSON.parse(e.data).event === 'listening') e.source.postMessage(JSON.stringify({ event: 'onStateChange', info: 1 }), '*');
+          } catch {}
+        });
+      </script></body></html>`,
+    }),
+  );
+
+  // The first anime pin with a trailer on it.
+  await page.goto('/search?q=category:Anime');
+  const links = page.locator('article h2 a');
+  await expect(links.first()).toBeVisible();
+  const hrefs = (await links.evaluateAll((all) => all.map((a) => a.getAttribute('href')))).slice(0, 6);
+  let found = false;
+  for (const href of hrefs) {
+    await page.goto(href!);
+    found = (await page.locator('iframe[src*="youtube.com/embed"]').count()) > 0;
+    if (found) break;
+  }
+  expect(found, 'no anime pin among the first few has a video').toBe(true);
+  const sent = () => page.frames().find((f) => f.url().includes('youtube.com/embed'))?.evaluate(() => (window as unknown as { sent: string[] }).sent);
+  await expect.poll(sent).toContain('{"event":"listening"}');
+
+  await page.getByRole('combobox', { name: 'Search' }).fill('gollum');
+  await page.getByRole('combobox', { name: 'Search' }).press('Enter');
+  await expect(page).toHaveURL(/\/search\?q=gollum/);
+  await expect.poll(sent).toContain('{"event":"command","func":"pauseVideo","args":[]}');
+});
+
 test('the map plots pins', async ({ page }) => {
   await page.goto('/map');
   await expect(page.locator('.leaflet-marker-icon').first()).toBeVisible({ timeout: 20_000 });

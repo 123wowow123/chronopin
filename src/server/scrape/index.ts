@@ -397,7 +397,7 @@ async function topUpVideo(pin: Pin, fields: ExtractedFields | null, pageTitle?: 
   if (videosNeeded(pin.media.filter((m) => Number(m.type) === mediumID.youtube).length) <= 0) return;
   const title = pin.title || fields?.title || pageTitle?.trim();
   if (!title) return;
-  const video = await findProductVideo({ title, company: pin.company ?? fields?.company });
+  const video = await findProductVideo({ title, company: pin.company ?? fields?.company, year: pin.utcStartDateTime?.getUTCFullYear() });
   if (video) pin.addMedium(new Medium(video));
 }
 

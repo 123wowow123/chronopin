@@ -1,5 +1,6 @@
 import * as db from '../db';
 import type { Row } from '../db';
+import PinView from './pinView';
 
 export const DUPLICATE_STATUSES = ['suggested', 'confirmed', 'rejected'] as const;
 export type DuplicateStatus = (typeof DUPLICATE_STATUSES)[number];
@@ -23,6 +24,9 @@ export type DuplicateCandidate = {
     utcStartDateTime: string;
     allDay: boolean;
     utcCreatedDateTime: string;
+    // Its picture for the review row, chosen as a card's is.
+    thumbName?: string | null;
+    originalUrl?: string | null;
   };
 };
 
@@ -166,6 +170,7 @@ export default class PinDuplicate {
         "d"."score" DESC NULLS LAST, "Pin"."id"`,
       [pinId],
     );
+    const pictures = await PinView.pictures(rows.map((row) => row.id));
     return rows.map((row) => ({
       status: row.status,
       reason: row.reason,
@@ -180,6 +185,7 @@ export default class PinDuplicate {
         utcStartDateTime: row.utcStartDateTime,
         allDay: row.allDay,
         utcCreatedDateTime: row.utcCreatedDateTime,
+        ...pictures.get(row.id),
       },
     }));
   }

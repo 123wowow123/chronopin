@@ -4,6 +4,7 @@ import Link from '@/components/ui/Link';
 import { useRouter } from '@/lib/client/navigation';
 import { useCallback, useEffect, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
+import { PinThumb, pinPicture } from '@/components/pin/PinThumb';
 import { PostedTime } from '@/components/ui/LocalTime';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { api, ApiError } from '@/lib/client/api';
@@ -20,7 +21,7 @@ type Pair = {
   // Claude's read on the pair from both pins and their references; null until checked.
   verdict: 'same' | 'different' | 'unsure' | null;
   verdictReasoning: string | null;
-  pin: { id: number; title: string; user?: PinUserJson; utcStartDateTime: string; utcCreatedDateTime: string };
+  pin: { id: number; title: string; user?: PinUserJson; utcStartDateTime: string; utcCreatedDateTime: string; thumbName?: string | null; originalUrl?: string | null };
 };
 
 
@@ -107,6 +108,7 @@ export function PinDuplicates({ pinId, group, timeZone }: { pinId: number; group
           <ul className="mt-3 space-y-1">
             {others.map((p) => (
               <li key={p.id} className="flex items-start gap-3 rounded-lg px-3 py-2.5 hover:bg-raised/60">
+                <PinThumb {...pinPicture(p.media)} className={`${THUMB} self-center`} />
                 <div className="min-w-0 flex-1">
                   <Link href={pinPath(p)} className="text-sm font-medium text-ink hover:text-link hover:no-underline">
                     {p.title}
@@ -178,6 +180,10 @@ export function PinDuplicates({ pinId, group, timeZone }: { pinId: number; group
   );
 }
 
+// The picture beside a row, as tall as its three lines of text once there is
+// room; on a phone it steps down so the title is not squeezed into a column.
+const THUMB = 'h-10 w-16 sm:h-14 sm:w-24';
+
 // A long list of suggestions scrolls inside the panel rather than pushing the
 // rest of the page down. The padding keeps the rows' rings from being clipped.
 const SCROLL_LIST = 'max-h-[28rem] space-y-2 overflow-y-auto overscroll-contain p-px pr-1';
@@ -203,16 +209,21 @@ function SuggestionRow({ pair, timeZone, busy, children }: { pair: Pair; timeZon
   const why = pair.reason === 'sourceUrl' ? t('duplicates.sameSource') : t('duplicates.titleSimilar', { percent: Math.round((pair.score ?? 0) * 100) });
   return (
     <li className="rounded-lg bg-raised/60 px-3 py-2.5 ring-1 ring-line ring-inset" aria-busy={busy}>
-      <Link href={pinPath(pair.pin)} className="text-sm font-medium text-ink hover:text-link hover:no-underline">
-        {pair.pin.title}
-      </Link>
-      <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-subtle">
-        <PinAuthor user={pair.pin.user} />
-        <PostedTime value={pair.pin.utcCreatedDateTime} serverTimeZone={timeZone} />
-        <span>{why}</span>
-        {pair.verdict ? (
-          <span className={`rounded-full px-2 py-px font-medium ring-1 ring-inset ${VERDICTS[pair.verdict].className}`}>{t(VERDICTS[pair.verdict].label)}</span>
-        ) : null}
+      <div className="flex items-center gap-3">
+        <PinThumb thumbName={pair.pin.thumbName} originalUrl={pair.pin.originalUrl} className={THUMB} />
+        <div className="min-w-0 flex-1">
+          <Link href={pinPath(pair.pin)} className="text-sm font-medium text-ink hover:text-link hover:no-underline">
+            {pair.pin.title}
+          </Link>
+          <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-subtle">
+            <PinAuthor user={pair.pin.user} />
+            <PostedTime value={pair.pin.utcCreatedDateTime} serverTimeZone={timeZone} />
+            <span>{why}</span>
+            {pair.verdict ? (
+              <span className={`rounded-full px-2 py-px font-medium ring-1 ring-inset ${VERDICTS[pair.verdict].className}`}>{t(VERDICTS[pair.verdict].label)}</span>
+            ) : null}
+          </div>
+        </div>
       </div>
       {pair.verdict && pair.verdictReasoning ? <p className="mt-1.5 text-xs text-muted">{pair.verdictReasoning}</p> : null}
       <div className="mt-2 flex flex-wrap gap-2">{children}</div>

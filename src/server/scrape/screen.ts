@@ -202,8 +202,16 @@ const seasonOf = (normalized: string) => normalized.match(/\b(?:season|part) (\d
 export type VideoCandidate = { videoId: string; title: string; channel?: string; verified?: boolean };
 
 const TRAILER_WORDS = /\b(?:trailer|teaser|pv|promo|preview|announcement)\b/;
-const NOT_A_TRAILER =
-  /\b(?:reaction|reacts?|review|breakdown|explained|recap|fan ?made|fanmade|concept|parody|gameplay|game|easter eggs|everything we know|analysis|amv)\b/;
+// Somebody talking about the work rather than the work's own video: out of
+// both searches below.
+const COMMENTARY =
+  /\b(?:reaction|reacts?|review|breakdown|explained|recap|fan ?made|fanmade|concept|parody|easter eggs|everything we know|analysis|amv|tutorial|walkthrough|lets play|speedrun|news update|cup|tournament|championship|esports|livestream|highlights|grand final|and more|looking back|rewind|retrospective|years later|history of)\b/;
+// A film or show's trailer is never a game video, but a game's own
+// announcement almost always is ("Season of Hell's Legacy | Gameplay
+// Trailer"), so only the screen search rules these out. Ruling them out of the
+// product search as well left every game pin with no video at all.
+const A_GAME_VIDEO = /\b(?:gameplay|game)\b/;
+const NOT_A_TRAILER = (title: string) => COMMENTARY.test(title) || A_GAME_VIDEO.test(title);
 const ROMAN_OR_NUMBER = /^(?:\d+|i|ii|iii|iv|v|vi|vii|viii|ix|x)$/;
 
 // The search result most likely to be the work's own trailer, if any is.
@@ -220,7 +228,7 @@ export function pickTrailer(candidates: VideoCandidate[], workTitle: string): Vi
     // Judged on the rest of the video title, so "Coyote vs. Acme" can still
     // have a trailer.
     const rest = `${title.slice(0, at)} ${title.slice(at + work.length)}`;
-    if (!TRAILER_WORDS.test(rest) || NOT_A_TRAILER.test(rest)) return;
+    if (!TRAILER_WORDS.test(rest) || NOT_A_TRAILER(rest)) return;
     // "Scream 6 Trailer" is not Scream 7's, and "Street Fighter 6" is a game.
     // Nor is "Violet Evergarden: the Movie" the series' trailer.
     const [next = '', afterNext = ''] = title.slice(at + work.length).trim().split(' ');
@@ -236,16 +244,60 @@ export function pickTrailer(candidates: VideoCandidate[], workTitle: string): Vi
   return best?.candidate;
 }
 
+// Words that are the headline's furniture rather than the thing's name, so
+// that the overlap below is measured on what the pin is about. Half of these
+// pins are titled "<Game> Review - IGN", and counting "review" and "ign" as
+// words the video has to carry put a real trailer at 3/5 - the same score a
+// sibling product's trailer gets.
 const VIDEO_STOPWORDS = new Set(
-  'a an and at for from in is of on the to with begin begins shipping launch launches launched opens opened release released reveal keynote first new next now on sale gets approved by'.split(' '),
+  ('a an and at for from in is of on the to with begin begins shipping launch launches launched opens opened release released reveal keynote first new next now on sale gets approved by'
+    + ' review reviews preview previews hands news update report ign gamespot coming arrive arrives will confirmed announced').split(' '),
 );
-const distinctiveWords = (text: string) => normalizeTitle(text, { keepThe: true }).split(' ').filter((w) => w.length > 1 && !VIDEO_STOPWORDS.has(w));
+// A one-character word is noise ("a", "x") except when it is which one this
+// is: dropping the V of "Diablo V Launches" left "diablo" as the whole of the
+// pin's name, and Diablo III's trailer matched it in full.
+const distinctiveWords = (text: string) =>
+  normalizeTitle(text, { keepThe: true })
+    .split(' ')
+    .filter((w) => (w.length > 1 || /^[0-9ivx]$/.test(w)) && !VIDEO_STOPWORDS.has(w));
+
+// What a product's own video calls itself. Narrower than TRAILER_WORDS, which
+// the screen search uses: a film's "preview" is its trailer, but a game's is
+// the press playing it early ("The Final Preview", "Exclusive Hands-On
+// Preview - IGN First"), which is somebody's coverage, not the announcement.
+const ANNOUNCES = /\b(?:trailer|teaser|promo|announce|announces|announcement|reveal|reveals|unveil|unveils)\b/;
+
+// How much of the pin's distinctive title a candidate must carry. At 0.6 a
+// sibling product gets in on the shared part of the name: the Spiritborn class
+// trailer carries three of the five words of "Diablo IV Amazon Class Pack
+// Launches", and is a different class pack.
+const MIN_TITLE_OVERLAP = 0.7;
+
+// A year in the video's title that is not the pin's year: the pin about the
+// 2017 StarCraft Remastered launch was offered "BlizzCon 2026 | Classic Cup:
+// StarCraft Remastered", which carries both its words and is an esports match
+// nine years later. A title naming no year says nothing either way.
+// A re-release is its own product: the pin about Elden Ring's 2022 launch was
+// offered the "Elden Ring: Tarnished Edition - Official Story Trailer", four
+// years later. Only one way round - a pin that says "Remastered" is entitled to
+// the remaster's trailer.
+const EDITION =
+  /\b(?:edition|remaster|remastered|remake|definitive|complete|goty|anniversary|deluxe|ultimate|collection)\b/;
+
+function wrongYear(title: string, year?: number): boolean {
+  if (!year) return false;
+  const years = [...title.matchAll(/\b(19|20)\d{2}\b/g)].map((m) => Number(m[0]));
+  return years.length > 0 && !years.some((y) => Math.abs(y - year) <= 1);
+}
 
 // The search result most likely to be an official or press video of a product
 // or announcement that is not a screen work: from a verified channel, most of
 // the pin's distinctive words in its title, and not a reaction, review or
 // "everything we know" video. A channel named after the company wins.
-export function pickProductVideo(candidates: VideoCandidate[], subject: { title: string; company?: string | null }): VideoCandidate | undefined {
+export function pickProductVideo(
+  candidates: VideoCandidate[],
+  subject: { title: string; company?: string | null; year?: number },
+): VideoCandidate | undefined {
   const words = distinctiveWords(subject.title);
   if (!words.length) return undefined;
   const company = subject.company ? normalizeTitle(subject.company).split(' ')[0] : '';
@@ -253,10 +305,27 @@ export function pickProductVideo(candidates: VideoCandidate[], subject: { title:
   candidates.forEach((candidate, rank) => {
     if (!candidate.verified) return;
     const title = ` ${normalizeTitle(candidate.title, { keepThe: true })} `;
-    if (NOT_A_TRAILER.test(title) || /\b(?:leak|leaked|rumou?rs?|vs)\b/.test(title)) return;
+    if (COMMENTARY.test(title) || /\b(?:leak|leaked|rumou?rs?|vs)\b/.test(title)) return;
     const overlap = words.filter((w) => title.includes(` ${w} `)).length / words.length;
-    if (overlap < 0.5) return;
+    // Half the words is too little: "Diablo III: Gameplay Trailer" shares
+    // exactly half of "Diablo III Reaper of Souls Launches" and is the base
+    // game's trailer, not the expansion's.
+    if (overlap < MIN_TITLE_OVERLAP) return;
+    // The pin's leading distinctive word is what the thing is called, and a
+    // video that never says it is about something else: pin 384, "Razer x Xbox
+    // 25th Anniversary Collection", carries three of its five words into "Xbox
+    // 25th Anniversary Console - Official Pre-Order Trailer", a different
+    // product. The cost is an abbreviated name ("PlayStation 5" against a video
+    // that says PS5), which loses a video rather than hanging a wrong one.
+    if (!title.includes(` ${words[0]} `)) return;
     const ownChannel = company && normalizeTitle(candidate.channel ?? '').includes(company) ? 1 : 0;
+    // Either the video announces the thing, or it comes from whoever makes it.
+    // Anything else that survives the filters above is a channel covering the
+    // news ("Xbox One Japan Release Date Finally Revealed") rather than the
+    // announcement itself.
+    if (!ownChannel && !ANNOUNCES.test(title)) return;
+    if (wrongYear(title, subject.year)) return;
+    if (EDITION.test(title) && !EDITION.test(` ${normalizeTitle(subject.title, { keepThe: true })} `)) return;
     const score = overlap + ownChannel - rank * 0.05;
     if (!best || score > best.score) best = { candidate, score };
   });
@@ -266,7 +335,10 @@ export function pickProductVideo(candidates: VideoCandidate[], subject: { title:
 // A video for a pin that is not a screen work (a product, a launch, an
 // announcement): YouTube search, then oEmbed so a video that cannot be
 // embedded is skipped. Undefined when nothing passes.
-export async function findProductVideo(subject: { title: string; company?: string | null }, signal: AbortSignal = AbortSignal.timeout(15000)) {
+export async function findProductVideo(
+  subject: { title: string; company?: string | null; year?: number },
+  signal: AbortSignal = AbortSignal.timeout(15000),
+) {
   try {
     const query = [subject.company, subject.title].filter(Boolean).join(' ');
     const picked = pickProductVideo(await searchYouTube(query, signal), subject);

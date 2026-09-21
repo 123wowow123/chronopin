@@ -486,6 +486,7 @@ const zh: Messages = {
     noMatch: '没有匹配的标签。',
     none: '这些图钉还没有标签。',
     find: '查找标签',
+    findClear: '清除标签查找',
     ungroupTitle: '单独显示每个标签',
     groupTitle: '将标签归入更大的分类',
     grouped: '分组',
