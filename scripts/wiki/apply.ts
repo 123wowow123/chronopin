@@ -4,6 +4,7 @@
 //
 //   npm run wiki:apply -- --dir /tmp/wiki-jobs
 //   npm run wiki:apply -- --dir /tmp/wiki-jobs --by claude-code/claude-opus-5
+//   npm run wiki:apply -- --dir /tmp/wiki-jobs --rewrite   replace wikis that already exist
 //
 // --by is the OKF actor recorded as the wikis' generated.by. A summary or
 // contradiction check is skipped when its pin's wikis have changed since the
@@ -22,7 +23,7 @@ import { contradictionSignature, saveContradictions } from '@/server/services/ok
 import { pinLinks, saveSummary } from '@/server/services/sourceWiki';
 
 const { values: flags } = parseArgs({
-  options: { dir: { type: 'string' }, by: { type: 'string', default: 'claude-code/claude-opus-5' } },
+  options: { dir: { type: 'string' }, by: { type: 'string', default: 'claude-code/claude-opus-5' }, rewrite: { type: 'boolean', default: false } },
 });
 
 const results = (dir: string, kind: string) => {
@@ -54,6 +55,15 @@ async function run() {
     const parts: unknown[] = data.parts ?? [data];
     if (!parts.every(isPage) || (data.root !== undefined && !isPage(data.root)) || (parts.length > 1 && !data.root)) {
       console.log(`wiki ${file}: not in the wiki page schema - skipped`);
+      continue;
+    }
+    // Applying the same directory twice rewrites every wiki in it with the
+    // same content under a new version number, and a bumped version puts each
+    // citing pin's summary behind its links again - so a second, harmless-
+    // looking run undoes the summaries the first one just built. A source that
+    // already has a wiki is left alone unless the rewrite is asked for.
+    if (source.wikiVersion > 0 && !flags.rewrite) {
+      console.log(`wiki for source ${sourceId}: already has version ${source.wikiVersion} - skipped (--rewrite to replace it)`);
       continue;
     }
     const written = wikiFromOutputs(source.kind, parts as WikiOutput[], data.root);

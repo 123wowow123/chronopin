@@ -38,12 +38,37 @@ const json = (file: string, data: unknown) => {
   writeFileSync(file, JSON.stringify(data, null, 2));
 };
 
+// wiki:recover-dead holds this while it runs (scripts/wiki/recoverDead.ts).
+// An export taken mid-recovery writes out whichever links it has not reached
+// yet with the text they are about to stop having, and whoever answers those
+// jobs then judges a page that no longer exists - marking a link unusable
+// from a wall that has since been replaced by the article. Cheaper to wait.
+const RECOVER_LOCK_KEY = 0x7a11c0de;
+
+async function recoveryIsRunning(): Promise<boolean> {
+  const client = await db.getPool().connect();
+  try {
+    const { rows } = await client.query<{ free: boolean }>('SELECT pg_try_advisory_lock($1) AS free', [RECOVER_LOCK_KEY]);
+    // Taking it proves nobody else holds it; give it straight back.
+    if (rows[0].free) await client.query('SELECT pg_advisory_unlock($1)', [RECOVER_LOCK_KEY]);
+    return !rows[0].free;
+  } finally {
+    client.release();
+  }
+}
+
 async function run() {
   if (!flags.out) throw new Error('--out DIR is required');
+  if (await recoveryIsRunning()) {
+    throw new Error('wiki:recover-dead is running - its links are still changing, so wait for it to finish before exporting');
+  }
   const out = path.resolve(flags.out);
   const limit = flags.limit ? Number(flags.limit) : 100_000;
   const pinIds = flags.pin?.map(Number);
   rmSync(out, { recursive: true, force: true });
+  // prompts.md is written even when nothing is due, and the job writers are
+  // what otherwise create the directory - so a run with 0 jobs needs it here.
+  mkdirSync(out, { recursive: true });
   if (pinIds) for (const id of pinIds) await syncPinSources(id);
 
   // Links waiting on a wiki.

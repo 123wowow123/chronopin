@@ -63,9 +63,20 @@ export async function captures(url: string, near?: Date): Promise<Capture[]> {
   }
   if (!res.ok) throw new Error(`archive.org answered ${res.status} for ${url}`);
   const body = (await res.text()).trim();
-  if (!body) return [];
-  // The first row is the header when `fl` is given.
-  const rows = JSON.parse(body) as string[][];
+  // A URL the archive has never captured comes back as an empty JSON array,
+  // not as an empty body. A body with nothing in it at all is CDX failing
+  // quietly under load, and reading that as "never captured" is how a link
+  // with captures gets called dead. Anything unparseable is treated the same
+  // way: not an answer, so the caller leaves the link alone and tries later.
+  if (!body) throw new Error(`archive.org returned an empty response for ${url}`);
+  let rows: string[][];
+  try {
+    // The first row is the header when `fl` is given.
+    rows = JSON.parse(body) as string[][];
+  } catch {
+    throw new Error(`archive.org returned ${body.length} characters that are not JSON for ${url}`);
+  }
+  if (!Array.isArray(rows)) throw new Error(`archive.org returned an unexpected shape for ${url}`);
   const found = rows.slice(1).map(([timestamp, original]) => ({ timestamp, url: original }));
   if (!near) return found.reverse().slice(0, MAX_CAPTURES);
   // A capture taken near the pin's own date is the article as the pin cited

@@ -22,6 +22,9 @@
 //   npm run wiki:recover-dead -- --apply --id 834  just those links
 //   npm run wiki:recover-dead -- --apply --live-only    skip the archive
 //   npm run wiki:recover-dead -- --apply --concurrency 6 --delay 1
+//   npm run wiki:recover-dead -- --apply --force --archive-only --id 746 --id 796
+//       read those links from the archive whatever their stored text looks
+//       like: for the ones a wiki writer found to be the site's index page
 //
 // Only one run at a time: a second is refused while the first holds the lock.
 //
@@ -34,7 +37,7 @@ import '../env';
 import { parseArgs } from 'node:util';
 import type pg from 'pg';
 import * as db from '@/server/db';
-import Source from '@/server/model/source';
+import Source, { MAX_ATTEMPTS } from '@/server/model/source';
 import { fetchArchivedText } from '@/server/scrape/archive';
 import { fetchSourceText, looksBlocked } from '@/server/scrape/sourceText';
 
@@ -45,6 +48,8 @@ const { values: flags } = parseArgs({
     offset: { type: 'string' },
     id: { type: 'string', multiple: true },
     'live-only': { type: 'boolean', default: false },
+    'archive-only': { type: 'boolean', default: false },
+    force: { type: 'boolean', default: false },
     delay: { type: 'string' },
     concurrency: { type: 'string' },
   },
@@ -137,7 +142,13 @@ async function run() {
   // A link whose stored text does read is not this script's problem: it is
   // only waiting on a wiki, and reading it again could only replace good text
   // with whatever the site serves today. Those go straight to wiki:export.
-  const needText = rows.filter((r) => unusable(r.kind, r.text));
+  // --force takes the caller's word that these links need reading again even
+  // though their stored text passes every test this script can apply. That is
+  // for the links whoever wrote the wiki found to be an index page: an old
+  // URL whose site now answers every path with its current front page hands
+  // back thousands of characters of real, live, entirely wrong text. Nothing
+  // about its shape says so - only reading it does.
+  const needText = flags.force ? rows : rows.filter((r) => unusable(r.kind, r.text));
   const haveText = rows.length - needText.length;
   const offset = Number(flags.offset ?? 0);
   const todo = needText.slice(offset, flags.limit ? offset + Number(flags.limit) : undefined);
@@ -163,15 +174,20 @@ async function run() {
   // low because each worker can launch a browser and archive.org rate-limits
   // a caller that pushes.
   const settle = async (row: Todo) => {
-    // A live read first: cheap when it works, and current.
+    // A live read first: cheap when it works, and current. Skipped with
+    // --archive-only, which goes with --force: when the live URL is known to
+    // answer with an index page, reading it again just stores that same page
+    // a second time and calls it a recovery.
     let got: { title?: string; text: string; where: string } | undefined;
-    try {
-      const fetched = await fetchSourceText(row.url, row.kind as 'web' | 'tweet' | 'youtube' | 'podcast');
-      // fetchSourceText throws on a wall it recognises, but a site can serve
-      // its own soft 404 with a 200 and no wall wording at all.
-      if (!unusable(row.kind, fetched.text)) got = { ...fetched, where: 'live' };
-    } catch {
-      // Dead, walled or timed out - the archive is the next thing to try.
+    if (!flags['archive-only']) {
+      try {
+        const fetched = await fetchSourceText(row.url, row.kind as 'web' | 'tweet' | 'youtube' | 'podcast');
+        // fetchSourceText throws on a wall it recognises, but a site can serve
+        // its own soft 404 with a 200 and no wall wording at all.
+        if (!unusable(row.kind, fetched.text)) got = { ...fetched, where: 'live' };
+      } catch {
+        // Dead, walled or timed out - the archive is the next thing to try.
+      }
     }
 
     // Told apart from "the archive has no copy": archive.org rate-limits and
@@ -205,6 +221,11 @@ async function run() {
         row.id,
         `Blocked: no readable copy of this page - the live URL serves a wall, a redirect or nothing, and the Internet Archive has no usable capture of it. Its pin's summary is built from the links that do read.`,
       );
+      // Both ways of reading a link have been tried, so this is the last
+      // word, not one failure among three. Spending the tries keeps it out of
+      // Source.needingWiki, so wiki:export neither fetches it again nor
+      // replaces this verdict with a passing fetch error.
+      await db.query(`UPDATE "Source" SET "attempts" = $2 WHERE "id" = $1`, [row.id, MAX_ATTEMPTS]);
       console.log(`source ${row.id}: DEAD                       ${row.url.slice(0, 70)}`);
     } else {
       counts.skipped++;
@@ -219,7 +240,17 @@ async function run() {
   const queue = [...todo];
   const workers = Array.from({ length: Math.min(CONCURRENCY, queue.length) }, async () => {
     for (let row = queue.shift(); row; row = queue.shift()) {
-      await settle(row);
+      // One link that cannot be settled - a page whose bytes the database
+      // will not take, a fetch that fails in a new way - is one link, and the
+      // run says so and carries on. Letting it reject would abandon the other
+      // hundred and the work already done with them.
+      try {
+        await settle(row);
+      } catch (err) {
+        counts.skipped++;
+        await Source.noteError(row.id, `recovery failed: ${(err as Error).message}`).catch(() => {});
+        console.log(`source ${row.id}: could not be settled - ${(err as Error).message.slice(0, 80)}`);
+      }
       await sleep(DELAY_MS);
     }
   });

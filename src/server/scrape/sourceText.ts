@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import { tweetText, twitterMedium, youtubeMedium, launchBrowser } from '.';
 import { AUDIO_PATH, sourceKind, type SourceKind } from '@/lib/sourceKind';
+import { clinicalTrialsId, fetchClinicalTrial } from './clinicalTrials';
 import { fetchPdfText, looksLikePdf } from './pdfText';
 import { fetchPodcastTranscript } from './podcast';
 import { fetchTranscript } from './transcript';
@@ -75,6 +76,11 @@ async function pageText(url: string): Promise<SourceText> {
   if (AUDIO_PATH.test(new URL(url).pathname)) {
     throw new Error('Audio files are not transcribed; link the episode page instead');
   }
+  // A ClinicalTrials.gov study is built in the browser from its own API call,
+  // so the HTML holds the site's glossary and footer and none of the record -
+  // identically for every study. Reading it as a page cannot work, so the
+  // record is taken from the registry's API instead (scrape/clinicalTrials.ts).
+  if (clinicalTrialsId(url)) return fetchClinicalTrial(url);
   let fetched: SourceText | undefined;
   try {
     const res = await fetch(url, {

@@ -65,6 +65,14 @@ export const sourceKey = (url: string | null | undefined): string | undefined =>
 
 export const hashText = (text: string) => createHash('sha256').update(text).digest('hex');
 
+// A scraped page can carry a NUL byte - a truncated multi-byte character, a
+// binary blob inside the markup, a mangled archive capture - and Postgres
+// rejects one in a text column outright, so the write throws rather than the
+// column holding anything odd. It is stripped here, where the text meets the
+// database, because every writer comes through these two methods. Stripped
+// before hashing, so the hash is of what is actually stored.
+export const storableText = (text: string) => text.replace(/\0/g, '');
+
 // Columns other than text, which can be long and is only needed to write a wiki.
 const META = `"id", "urlKey", "url", "kind", "title", "status", "textHash",
   to_char("sourceModifiedDate", 'YYYY-MM-DD') AS "sourceModifiedDate", "generatedBy", "wikiVersion", "attempts", "lastError",
@@ -90,7 +98,7 @@ export default class Source {
   // its wiki later needs no second fetch. Never overwrites text it has.
   static async rememberText(url: string, kind: SourceKind, text: string, title?: string) {
     const key = sourceKey(url);
-    const trimmed = text.trim();
+    const trimmed = storableText(text).trim();
     if (!key || !trimmed) return;
     await db.query(
       `INSERT INTO "Source" ("urlKey", "url", "kind", "title", "text", "textHash", "utcFetchedDateTime")
@@ -109,9 +117,10 @@ export default class Source {
   }
 
   static async setText(id: number, { text, title }: { text: string; title?: string }) {
+    const stored = storableText(text);
     await db.query(
       `UPDATE "Source" SET "text" = $2, "textHash" = $3, "title" = COALESCE($4, "title"), "utcFetchedDateTime" = now() WHERE "id" = $1`,
-      [id, text, hashText(text), title?.slice(0, 1024) ?? null],
+      [id, stored, hashText(stored), title?.slice(0, 1024) ?? null],
     );
   }
 
