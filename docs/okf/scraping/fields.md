@@ -22,6 +22,7 @@ generated: { by: claude-code/claude-opus-5, at: 2026-09-19T20:00:00Z }
 | `dateConfidence` | `confirmed` `scheduled` `estimated` `delayed` `unknown` | Judged from the page's wording about the date, not from how far away it is |
 | `dateConfidenceReasoning` | string or null | One sentence quoting the deciding wording; null when `unknown` |
 | `startDateTime`, `endDateTime`, `allDay` | ISO UTC, ISO UTC, bool | The event itself. All-day: 00:00Z of the date, end is 00:00Z of the day after. A span takes its **last** day - a bare year is 31 December, a quarter or season its final day - unless the page says the event runs *from* it, which takes the first |
+| `endDateTime` for a **thing in force** | ISO UTC | Owner, 2026-09-21: "For law and relevant pins. Should have effective start and end date." A law, stopgap, contract, authorisation, ban, mandate or fiscal year is a *period*, not a day: give it the end of the window it covers, not just the day it was signed or began. The end is the **exclusive** 00:00Z boundary, so a law in force through 11 December 2026 ends `2026-12-12T00:00:00Z` - the same convention a shutdown's last day uses. Quote the operative clause in the reasoning (H.R. 6500 section 106(3); the IIJA's FY2022-FY2026 authorisation). Leave it null only when the thing is genuinely open-ended (a ban with no sunset), and keep single-day pins single-day when the pin *is* the moment: a signing you are pinning as an event, a deadline falling due, a vote, a budget being presented |
 | `originalStartDate`, `delayReasoning` | `YYYY-MM-DD`, string | First promised date (before the first delay) and how long the delay is; `Stated:` or `Estimated:` |
 | `company`, `companyWikiUrl` | string, URL | The one organisation; the disambiguated English Wikipedia article ("Apple_Inc."), null when unsure |
 | `categories` | string[] from the fixed list | Closest first; a second only when squarely both |
@@ -49,3 +50,40 @@ generated: { by: claude-code/claude-opus-5, at: 2026-09-19T20:00:00Z }
 # By hand
 
 With no credit, read the page text yourself and produce the same JSON object, then carry on with the [by-hand playbook](../playbooks/scrape-without-credit.md). Validate the enum values and the date formats before posting; the save rejects a delayed pin without both delay fields and a reference with a malformed date.
+
+# Adding a category
+
+A category name lives in **seven files**: `categories.ts` and all six
+translation dictionaries.
+
+1. `src/lib/categories.ts` - the entry in `CATEGORIES`, placed beside its
+   neighbours rather than appended, since the list's order is the tag cloud's.
+2. `src/lib/i18n/messages/{en,de,es,fr,ja,zh}.ts` - the `categories` block, keyed
+   by `slugify(name)` (`'Religion & Belief'` -> `religion-belief`). English
+   repeats the category name exactly; the others follow their own convention -
+   German and Chinese keep the ampersand form (`Religion & Glaube`,
+   `宗教与信仰`), Spanish and French spell out the conjunction
+   (`Religión y creencias`, `Religion et croyances`), Japanese uses the middle
+   dot (`宗教・信仰`).
+
+**What enforces it is the test, not the types.** `Messages = Shape<typeof en>`
+requires of the other five languages only what `en.ts` itself declares, so a
+category added to `categories.ts` and to no dictionary at all is required of
+nobody: `tsc` passes and `categoryLabel` quietly falls back to the raw English
+name in every language. A **rename** is worse - the old key stays behind in all
+six files, nothing complains, and every language falls back to English while a
+dead key lingers. The `category labels` block in
+[i18n.test.ts](../../../src/lib/i18n/i18n.test.ts) is what actually holds the
+two lists together: every category is named in every dictionary, no dictionary
+keeps a label for a category that no longer exists, and English repeats the
+category name exactly. Run `npm test` after the edit - a forgotten language
+fails there by name, and only *then* does `tsc` add its own error if you got as
+far as `en.ts`.
+
+Nothing else needs touching: the extractor's schema, the pin form, the tag cloud
+and the `category:` search term all read the same list. The dev server picks the
+new list up without a restart, and `POST /api/pins` accepts the name
+immediately.
+
+**Do not add a category you are not going to fill.** An empty category is a dead
+entry in the tag cloud; seed each new one in the same pass that adds it.

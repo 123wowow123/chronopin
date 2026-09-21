@@ -8,6 +8,7 @@ import es from './messages/es';
 import fr from './messages/fr';
 import ja from './messages/ja';
 import zh from './messages/zh';
+import { CATEGORIES, slugify } from '../categories';
 import { createTranslator, type Messages } from './translate';
 
 describe('splitLocale', () => {
@@ -155,5 +156,37 @@ describe('dictionaries', () => {
 
   it('covers every supported language', () => {
     expect(Object.keys(others).sort()).toEqual(LOCALES.filter((l) => l !== 'en').sort());
+  });
+});
+
+// The category list and the dictionaries are two lists that have to agree, and
+// the type system only half-checks it: Shape<typeof en> requires of the other
+// languages whatever en declares, so a category added to categories.ts and to
+// no dictionary at all is required of nobody. It would render as its raw
+// English name in every language, silently. A rename is worse: the old key
+// stays behind in all six files, tsc stays happy, and every language falls back
+// to English. These assertions are what actually holds the two lists together.
+describe('category labels', () => {
+  const dictionaries: Record<string, Messages> = { en, es, fr, de, ja, zh };
+  const labels = (m: Messages) => (m as unknown as { categories: Record<string, string> }).categories;
+
+  it.each(Object.keys(dictionaries))('%s names every category', (locale) => {
+    const theirs = labels(dictionaries[locale]);
+    const missing = CATEGORIES.filter((category) => typeof theirs[slugify(category)] !== 'string');
+    expect(missing).toEqual([]);
+  });
+
+  it.each(Object.keys(dictionaries))('%s has no label for a category that no longer exists', (locale) => {
+    const slugs = new Set(CATEGORIES.map(slugify));
+    const stale = Object.keys(labels(dictionaries[locale])).filter((slug) => !slugs.has(slug));
+    expect(stale).toEqual([]);
+  });
+
+  // English is the category's own name, so a renamed category cannot leave a
+  // stale English label behind that quietly disagrees with the list.
+  it('English repeats the category name exactly', () => {
+    const theirs = labels(en);
+    const wrong = CATEGORIES.filter((category) => theirs[slugify(category)] !== category);
+    expect(wrong).toEqual([]);
   });
 });
