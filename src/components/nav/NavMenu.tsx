@@ -142,16 +142,13 @@ export function NavMenu() {
 
   const groups = accountGroups(isAdmin);
 
+  // One button, not two: the login page already offers signing up to whoever
+  // has no account yet.
   const guestActions =
     !user && status === 'ready' ? (
-      <>
-        <AuthLink to="/login" className="btn btn-ghost py-1.5">
-          {t('nav.logIn')}
-        </AuthLink>
-        <AuthLink to="/signup" className="btn btn-primary py-1.5">
-          {t('nav.signUp')}
-        </AuthLink>
-      </>
+      <AuthLink to="/login" className="btn btn-primary py-1.5">
+        {t('nav.logIn')}
+      </AuthLink>
     ) : null;
 
   return (
@@ -168,7 +165,7 @@ export function NavMenu() {
           </Link>
         ) : (
           <>
-            {/* Left of the auth buttons, where the bell sits left of the
+            {/* Left of the Log in button, where the bell sits left of the
                 account menu when there is someone signed in. */}
             <WeatherButton />
             {guestActions}

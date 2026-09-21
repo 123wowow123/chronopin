@@ -216,14 +216,9 @@ export function MobileDrawer() {
               {t('nav.createPin')}
             </Link>
           ) : (
-            <div className="grid grid-cols-2 gap-2">
-              <AuthLink to="/signup" className="btn btn-primary flex py-2.5">
-                {t('nav.signUp')}
-              </AuthLink>
-              <AuthLink to="/login" className="btn btn-secondary flex py-2.5">
-                {t('nav.logIn')}
-              </AuthLink>
-            </div>
+            <AuthLink to="/login" className="btn btn-primary flex py-2.5">
+              {t('nav.logIn')}
+            </AuthLink>
           )}
         </div>
 
