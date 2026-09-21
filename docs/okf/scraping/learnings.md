@@ -30,6 +30,86 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **A video embedded in a reference belongs to the pin.** Owner, 2026-09-20: pin 315 should carry the YouTube video that its own reference article embeds - as a reference *and* on the pin's media. Best effort: get the product video and bring it to both.
 * **A released product cites its MSRP from the company's own page.** Owner, 2026-09-20: for a released or on-sale product, check the company's product/store page for the MSRP and add that page as a reference.
 
+## 2026-09-21 - Three thin categories: the COPs, the Fed's 2027 calendar, big science (pins 2363-2377)
+
+* **Learned.** The second pass at the imbalance measured yesterday, aimed at the
+  three thinnest categories with authoritative forward schedules. Fifteen pins:
+  COP31 and COP32 (`Climate & Environment` 7 -> 9), the eight 2027 FOMC rate
+  decisions (`Macroeconomics` 5 -> 13) and five big-science milestones
+  (`Science & Research` 9 -> 14, and `Space & Astronomy` and `Energy` each +1).
+* **Learned - the sourcing trap that nearly sank the Fed batch.** The Federal
+  Reserve's FOMC calendar publishes all eight 2027 dates on **one page with no
+  per-meeting URL**: past meetings get
+  `/newsevents/pressreleases/monetary<date>a.htm`, future ones get nothing but a
+  table row. Eight pins would therefore have shared one `sourceUrl`, which is
+  both the roundup anti-pattern and an automatic 409 from
+  `rejectDuplicateSourceUrl`. The fix: Kalshi's **`KXFEDDECISION`** series has
+  one event per meeting (`KXFEDDECISION-27JAN` ...) whose strike times match the
+  Fed's published dates exactly, so each pin gets its own URL, live odds and a
+  dollar volume, with the Fed's calendar as the authoritative **reference** for
+  the date. Verified with `parseMarketUrl` + `oddsFor` against the real code,
+  per [Sources](sources.md) - all eight resolved 5 outcomes each.
+* **Learned.** Those markets are mostly **thin**: $23.5k on January but $1.4k on
+  September 2027 and under $10k on six of the eight. Each pin says so in its own
+  words rather than leaving the reader to find out, as the volume rule requires.
+  `Pin.marketVolume` was written on save without anything being typed.
+* **Feedback applied - the event, not the market.** @EconDesk (326) owns the
+  FOMC **meeting**; @OddsDesk keeps the market *question* pins (1678, 1980 are
+  "Fed Decides Whether to Hike..." - the question; 2365-2372 are "The Fed Sets
+  Rates at the ... Meeting" - the event). Same split as @SportDesk/@OddsDesk and
+  @PoliticsDesk/@OddsDesk. A market URL as `sourceUrl` is a *sourcing* choice and
+  does not by itself make a pin @OddsDesk's.
+* **Learned.** The picture-dedupe ([[image-dedupe]], difference hash at
+  distance 6) means **N pins about one recurring institution need N distinct
+  pictures** - one Eccles Building photo on eight FOMC pins would have stuck to
+  the first and been dropped from the rest. Commons has plenty once the 1930s
+  Library of Congress construction series and the NARA drawings are filtered
+  out: FOMC meeting photographs, Powell press conferences and recent
+  building shots gave eight distinct ones.
+* **Learned.** A **409 is often a prompt to find a better source.** The SKA-Mid
+  pin was rejected because pin 250 already cites the Square Kilometre Array
+  Wikipedia article. SKAO publishes a *separate* per-telescope timeline -
+  `Sciops_timeline_mid_ppt.pdf` beside `Sciops_timeline_low_ppt.pdf` - which is
+  the primary source for the AA2 dates anyway (Mid: AA2 2029, AA* 2031; Low:
+  AA2 2027, AA* 2029, Cycle 0 2030). The rejected pin came back stronger.
+* **Learned.** `skao.int` HTML **403s to both `curl` and WebFetch**, but its PDFs
+  under `/sites/default/files/documents/` serve fine to a browser UA and read
+  cleanly with `pdftotext`. Do not write the site off on the HTML alone.
+* **Learned.** A Wikipedia infobox field can be stale while the lead is right:
+  both the COP31 and COP32 articles carry `date = November 2025`, which is
+  simply wrong. The lead sentences ("from 9 to 20 November 2026", "to be held in
+  Addis Ababa") match UNFCCC and were what the pins used. Read the prose, not
+  one infobox field.
+* **Learned.** Checked and **dropped** the Nancy Grace Roman Space Telescope as a
+  2027 filler: it launched **30 August 2026**, ahead of its "by May 2027"
+  commitment, so its launch is a past event and its "science operations at the
+  beginning of 2027" milestone has no place on the map (it sits at L2). Worth
+  re-checking a mission's status before pinning its schedule.
+* **Learned.** Rubin's DR1 has **no fixed calendar date by design**: RTN-011 says
+  processing a year of LSST data "is estimated to require approximately one
+  year", implying "DR1 delivery approximately two years after the effective
+  start" (the LSST began 2026-06-29), while warning the boundaries follow
+  "survey performance and scientific readiness rather than a fixed calendar
+  date". That is exactly what `estimated` is for, and the reasoning quotes it.
+* **Learned.** Eight FOMC pins have **no video and will not get one**: there is
+  no footage of a meeting that has not happened, and a press conference from a
+  previous meeting is the wrong event - the same rule that rejected
+  previous-election explainers yesterday. The other seven took their project's
+  or host government's **own** channel (SKAO, Rubin, iterorganization, ESO, and
+  Türkiye's Climate Change Directorate for COP31).
+* **Learned.** The forward hole is closing slowly, and the honest numbers are:
+  Nov 2026 31 -> 32, Jan 2027 35 -> 38, Mar 13 -> 15, Apr 9 -> 12, Jun 18 -> 23,
+  Jul 6 -> 7, Sep 9 -> 10, Oct 9 -> 10. **May 2027 is still 3 pins** and
+  Jul/Aug 2027 still 7 - neither batch reached them. Dec 2027's 32 is mostly
+  year-end `estimated` pins landing on 31 December, not real density.
+* **New curators.** **@ClimateDesk** (325) for climate summits and environment
+  milestones; **@EconDesk** (326) for central-bank decisions and macroeconomic
+  releases.
+* **Changed.** This page, [Vertical recipes](verticals.md) (Climate summits,
+  Central-bank decisions and Big-science milestones recipes plus table rows),
+  [Sources](sources.md) (skao.int, the Fed calendar, Kalshi `KXFEDDECISION`)
+  and [Enrichment](enrichment.md) (the N-pins-N-pictures dedupe note).
+
 ## 2026-09-20 - The 2027 forward calendar, and national elections (pins 2350-2362)
 
 * **Learned.** The corpus is lopsided three ways, and only one of them matters

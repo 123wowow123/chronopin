@@ -92,3 +92,13 @@ watch URL. The `MediumType` table reads 1 = youtube, 2 = image, 3 = twitter and
 is **not** what the column stores - go by the data, not that table. Posting a
 watch URL as `type: 1` fails the whole `PUT` with `Could not find MIME for
 Buffer`: the thumbnailer tries to decode the HTML page as an image.
+
+# One picture per pin, even in a run
+
+The picture dedupe (a CDN-suffix check plus a difference hash at distance 6)
+keeps a pin from being given a picture another pin already has. So **a run of N
+pins about one recurring thing needs N distinct pictures** - eight FOMC meetings
+at the same building cannot share one photograph of it, because the hash drops
+it from the seven that follow. Gather the set up front: for a building, Commons
+usually has enough once the archival construction series and architectural
+drawings are filtered out.

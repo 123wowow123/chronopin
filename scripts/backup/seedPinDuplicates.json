@@ -78,6 +78,19 @@
     "utcVerifiedDateTime": null
   },
   {
+    "pinId": 243,
+    "otherPinId": 2376,
+    "reason": "similar",
+    "score": 0.8366257,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-21T14:14:57.715Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
     "pinId": 246,
     "otherPinId": 514,
     "reason": "similar",

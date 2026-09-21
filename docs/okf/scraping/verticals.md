@@ -28,6 +28,9 @@ Each recipe is a repeatable pattern. Update it when a run teaches something ([Le
 | Robotics | @TechDesk | `Robotics` | The maker's own newsroom, exchange and press-release wires, Wikipedia for a multi-organiser event | The event is a milestone (a production ramp, a factory opening, a listing, a withdrawal), not the robot; place it at the plant, hall or exchange, never the parent's HQ; a multi-organiser event takes `company: null` |
 | Trending searches | none - discovery only | n/a | Google Trends daily RSS | Shortlists subjects; posts nothing ([Nightly jobs](nightly-jobs.md#google-trends)) |
 | Infrastructure and architecture | @BuildDesk | `Infrastructure & Transportation`, `Architecture & Real Estate`, `Energy`, `Space & Astronomy` | The owner's or authority's own project page, Wikipedia, trade press | Company is the owner or authority; a delayed opening carries `originalStartDate` and `delayReasoning` |
+| Climate summits | @ClimateDesk | `Climate & Environment`, `Geopolitics` | unfccc.int per-COP page, the session's Wikipedia article | Placed at the host venue or city; a COP with no published days yet is `estimated` at the last day of its announced month |
+| Central-bank decisions | @EconDesk | `Macroeconomics` | The bank's own published calendar for the date, the per-meeting prediction market for the URL and odds | The meeting, not the market question (@OddsDesk owns those); timed to the decision, one distinct picture per meeting |
+| Big-science milestones | @ScienceDesk | `Science & Research` (plus `Space & Astronomy` or `Energy`) | The facility's own timeline document, often a PDF | Placed at the instrument, not the operator's head office; a year-only milestone is `estimated` at that year's last day |
 | National elections | @PoliticsDesk | `Elections`, `Geopolitics` | Wikipedia `List of elections in <year>`, then each election's own article and its electoral commission | One pin per national election, placed at the legislature it elects; the vote, not the market on it (@OddsDesk owns those); a month-only date is `estimated` at that month's last day |
 | Aerospace | @BuildDesk | `Aerospace` (plus `Defense & Military`) | Wikipedia aircraft-type articles, manufacturer newsrooms, NASA, trade press | The pin is the flight, the certification or the delivery, placed at the airfield it happened at; `media:videos` matches none of them, so the video is a hand pick from a newsreel or the maker's own channel |
 
@@ -72,6 +75,56 @@ fixtures (@SportDesk) against their odds (@OddsDesk).
    statute setting the date, else national press. Verify every URL live before
    saving: a URL reconstructed from a truncated capture 404s about one time in
    six.
+
+# Climate summits
+
+The UNFCCC gives each session its own page (`unfccc.int/cop31`, `unfccc.int/cop32`),
+which is the `sourceUrl` even before the agenda exists. Take the days from that
+page's own wording; where only the month is announced the pin is `estimated` at
+its last day, because UNFCCC normally fixes the exact dates 12 to 18 months out.
+Place the pin at the host venue when it is named (the Antalya Expo Center) and
+at the host city otherwise. Company is the UNFCCC. **Do not trust the Wikipedia
+infobox `date` field** on these articles - both the COP31 and COP32 pages carry
+a stale `November 2025` - read the lead sentence instead.
+
+# Central-bank decisions
+
+1. **The bank's calendar sets the date, the market supplies the URL.** The
+   Federal Reserve publishes all of a year's FOMC dates on **one page** with no
+   per-meeting link until the meeting has happened, so eight pins off that page
+   alone would share a `sourceUrl` and be rejected. Kalshi's `KXFEDDECISION`
+   series carries one event per meeting whose strike time matches the Fed's
+   published date, so each pin gets its own URL plus live odds; the Fed calendar
+   rides along as a 95-confidence reference and is what the reasoning quotes.
+2. **Verify each market link with the code, not a fetch** - `kalshi.com` 429s to
+   `curl`. Run `parseMarketUrl` then `oddsFor` in a `tsx` script.
+3. **Quote the volume and flag a thin book.** The 2027 FOMC markets run from
+   $23.5k down to $1.4k; six of eight are under $10,000 and each pin says so.
+4. **Timed, not all-day**: the decision lands at a known time (18:00Z in summer,
+   19:00Z in winter for a 2pm ET announcement), so `scheduled` with the time.
+   Quote the Fed's own caveat that "Each meeting date is tentative until
+   confirmed at the meeting immediately preceding it".
+5. **One distinct picture per meeting.** The dedupe hash drops a repeated
+   photograph, so a run of meetings needs a run of different pictures.
+6. **No video.** There is no footage of a meeting that has not happened, and a
+   previous meeting's press conference is the wrong event.
+
+# Big-science milestones
+
+The facility's **own timeline document** is the source, and it is often a PDF
+the pipeline reads (`pdftotext`): SKAO publishes one per telescope
+(`Sciops_timeline_low_ppt.pdf`, `Sciops_timeline_mid_ppt.pdf`), Rubin publishes
+RTN-011, ESO an announcement, ITER a baseline. These milestones are almost
+always **year-only or window-only**, so `estimated` at the end of the stated
+period is the norm and the reasoning quotes the wording - Rubin's own plan says
+the boundaries follow "survey performance and scientific readiness rather than a
+fixed calendar date", which is the clearest statement of why.
+
+Place the pin **at the instrument**: Murchison for SKA-Low, the Karoo for
+SKA-Mid, Cerro Pachon for Rubin, Cerro Armazones for the ELT, Saint-Paul-lez-Durance
+for ITER - which is also how this vertical pulls the map away from its
+Japan/North America concentration. Videos come from the project's own verified
+channel, which every one of these has.
 
 # AAA games (and other server-rendered news)
 
