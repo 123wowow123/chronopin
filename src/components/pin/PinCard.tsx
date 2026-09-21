@@ -14,6 +14,7 @@ import { CitedText } from './CitedText';
 import { DateConfidence, DateConfidenceReasoning } from './DateConfidence';
 import { DelayBadge } from './DelayBadge';
 import { PinConfidence } from './PinConfidence';
+import { PinDistance } from './PinDistance';
 import { CompanyTicker } from './CompanyTicker';
 import { PinCardOdds } from './PinOdds';
 import { PinMediaFrame } from './PinMedia';
@@ -131,6 +132,9 @@ export function PinCard({
                 </RefineLink>
               </span>
             ) : null}
+            {/* How far the pin stands from the reader, once their browser
+                knows where that is. */}
+            {pin.latitude != null && pin.longitude != null ? <PinDistance latitude={pin.latitude} longitude={pin.longitude} compact /> : null}
           </div>
           {pin.parentId || pin.rootThread ? (
             <Link href={href} title={pin.parentId ? t('card.partOfThread') : t('card.firstInThread')} className="text-subtle hover:text-ink">
