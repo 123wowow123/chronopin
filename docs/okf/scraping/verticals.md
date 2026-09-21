@@ -37,6 +37,7 @@ Each recipe is a repeatable pattern. Update it when a run teaches something ([Le
 | Central-bank decisions | @EconDesk | `Macroeconomics` | The bank's own published calendar for the date, the per-meeting prediction market for the URL and odds | The meeting, not the market question (@OddsDesk owns those); timed to the decision, one distinct picture per meeting |
 | Big-science milestones | @ScienceDesk | `Science & Research` (plus `Space & Astronomy` or `Energy`) | The facility's own timeline document, often a PDF | Placed at the instrument, not the operator's head office; a year-only milestone is `estimated` at that year's last day |
 | National elections | @PoliticsDesk | `Elections`, `Geopolitics` | Wikipedia `List of elections in <year>`, then each election's own article and its electoral commission | One pin per national election, placed at the legislature it elects; the vote, not the market on it (@OddsDesk owns those); a month-only date is `estimated` at that month's last day |
+| State visits and summits | @PoliticsDesk | `Geopolitics` | The two governments' own announcements - the host's briefing statement and the visitor's foreign ministry - then the wire copy for colour | One pin per dated *item* of the visit (the arrival, the ceremony, the signing), not one per visit; company is the host (`The White House`), placed where that item happens, and the rest of the itinerary goes in the summary |
 | Aerospace | @BuildDesk | `Aerospace` (plus `Defense & Military`) | Wikipedia aircraft-type articles, manufacturer newsrooms, NASA, trade press | The pin is the flight, the certification or the delivery, placed at the airfield it happened at; `media:videos` matches none of them, so the video is a hand pick from a newsreel or the maker's own channel |
 
 # National elections
@@ -80,6 +81,44 @@ fixtures (@SportDesk) against their odds (@OddsDesk).
    statute setting the date, else national press. Verify every URL live before
    saving: a URL reconstructed from a truncated capture 404s about one time in
    six.
+
+# State visits and summits
+
+A state visit is several events, not one. The arrival, the formal welcome
+ceremony, the bilateral meeting, the state dinner and the departure happen on
+different days in different places, and the pin is whichever of them the source
+is about - the rest belongs in its `longFormSummary`. Pin 2404 is the tarmac
+greeting at Joint Base Andrews, not the three-day visit.
+
+1. **Start from the two governments, not the wire.** The host publishes the
+   schedule (`whitehouse.gov/briefings-statements/<yyyy>/<mm>/<slug>/` reads with
+   a plain browser UA and gives the day-by-day programme, the honour cordon, the
+   flyover and the departure) and the visitor's foreign ministry publishes the
+   dates and the invitation (`fmprc.gov.cn/eng/xw/zyxw/...` for China, plain
+   `curl`). Between them the pin is fully sourced; the news copy adds the guest
+   list and the agenda.
+2. **The hour usually comes from the press, not the schedule.** Neither
+   government page gives a time of arrival. Take it from the outlet that reports
+   it, quote the wording in `dateConfidenceReasoning`, and convert to UTC
+   (4pm EDT is 20:00Z). The day is `scheduled` on the official programme even
+   when the hour is only "expected around".
+3. **Place it where that item happens** - the air base for an arrival, the South
+   Lawn or State Floor for a ceremony, the East Room for a dinner. Coordinates
+   from Wikidata `P625`.
+4. **Company is the host organisation**, `The White House` for a visit to
+   Washington - reuse the existing row by exact name rather than creating
+   "White House".
+5. **Media.** Commons has nothing of a visit that has not happened, so take the
+   venue in the same role (a previous arrival ceremony at the same base) over a
+   generic shot of it, plus a portrait of the visiting leader. For the video,
+   search a major outlet's name with the topic and
+   `order=date&publishedAfter=<a week ago>`: an unfiltered search returns footage
+   of the leader's *previous* visit, which is the wrong event. Verify the channel
+   through the Data API before using it.
+6. **References**: the foreign ministry, the host's briefing statement, the wire
+   copy (AP through ABC News when Reuters is blocked), the outlet with the
+   arrival time, and the visit's own Wikipedia article - whose title **must carry
+   the year**, since the year-less title redirects to an earlier visit.
 
 # Climate summits
 

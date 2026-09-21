@@ -42,6 +42,83 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **A released product cites its MSRP from the company's own page.** Owner, 2026-09-20: for a released or on-sale product, check the company's product/store page for the MSRP and add that page as a reference.
 * **Tags should be relevant and catchy.** Owner, 2026-09-21: pin 2389 (US Fiscal Year 2028) was tagged `Appropriations, Federal budget, Fiscal year, United States` and was missing the thing anyone would actually search for - `Government Shutdown`. Tag the consequence and the familiar name people know the event by, not just the procedural vocabulary of the source, and title-case them (`Federal Budget`, `Fiscal Year 2028`).
 
+## 2026-09-21 - Xi Jinping's state visit: the arrival at Joint Base Andrews (pin 2404, @PoliticsDesk)
+
+One pin from a Reuters URL handed over by the owner: Trump greeting Xi on the
+tarmac at Joint Base Andrews at about 4pm on 23 September 2026, the opening item
+of the 23-25 September state visit.
+
+* **Learned**: **reuters.com is blocked to a session's own tools but not to the
+  app.** `curl` with a plain Chrome UA gets `401` and a 771-byte body and WebFetch
+  answers "unable to fetch", so the pin was built from `WebSearch` plus the
+  outlets that republish the wire copy in full (ABC News carries the AP version,
+  usnews.com and mvariety.com the Reuters one). But the **headless scraper read
+  the whole article** - byline, dateline, both timestamps, and the tickers Reuters
+  tags inline (`Jeff Bezos of Amazon (AMZN.O)`, `Jensen Huang of Nvidia (NVDA.O)`),
+  which is exactly what the `stocks` field wants. It only came to light in
+  `wiki:export`, *after* the pin was saved. **Post the pin, then read the captured
+  text back out of the export before assuming a blocked site is unsourceable** -
+  or call `GET /api/scrape` first. Three reference `publishedDate`s were a day or
+  two out and had to be fixed by `PUT` once the real timestamps appeared.
+* **Learned**: for a state visit the two **official** sources both read cleanly
+  and between them settle the whole pin, so the news copy was only needed for
+  colour. `fmprc.gov.cn/eng/xw/zyxw/...` carries Beijing's announcement ("at the
+  invitation of President ... Donald J. Trump, President Xi Jinping will pay a
+  state visit to the United States from September 23 to 25") and
+  `whitehouse.gov/briefings-statements/...` carries the official schedule, down
+  to which day the President meets the guest at Andrews, the 479-strong honour
+  cordon, the B-2 and four F-22 flyover and the National Archives farewell.
+  Start from the two governments, not the wire.
+* **Learned**: the **exact time came only from SCMP** ("expected around 4pm local
+  time on September 23"); neither government page gives an hour. SCMP 403s to
+  `curl` but WebFetch reads it in full - a link checked by status code alone
+  would have been thrown away as dead.
+* **Learned**: a **year-less Wikipedia title silently redirects to the wrong
+  year**. `State_visit_by_Xi_Jinping_to_the_United_States` answers 200 and serves
+  the **2015** visit; only grepping the returned `<title>` caught it, and the
+  2026 article needed its year in the title. A status-code check is not a
+  verification for Wikipedia.
+* **Learned**: the pin is the **arrival**, not the visit. The White House
+  schedule describes three days, but the source article is about the tarmac
+  greeting, so that is the dated event (timed, `scheduled`, 20:00Z for 4pm EDT)
+  and the rest of the itinerary went into the summary. The ceremony, the state
+  dinner and the National Archives day are separate events if they are ever
+  wanted as pins.
+* **Learned**: `@PoliticsDesk` was created for national elections, but a state
+  visit is the same desk's territory and there is no diplomacy curator. Used it
+  rather than opening a seventeenth account.
+* **Learned**: Commons has no picture of this visit yet (it has not happened), so
+  the venue photo came from the base in the same role - `Joint Base Andrews (JBA),
+  Maryland supports U.S.-Africa Leadership Summit` - rather than a generic air
+  show shot. Searching `incategory:"Joint Base Andrews"` returned nothing;
+  plain free-text search on the base name worked.
+* **Learned**: the video is Bloomberg Television's summit preview, verified
+  through the Data API (channel `UCIALMKvObZNtJ6AmdCLP7Lg`, `@markets`) and
+  embedded from oEmbed. Searching the outlet name plus the topic with
+  `order=date&publishedAfter=` is what surfaced a major outlet among the
+  commentary channels; an unfiltered search returned mostly 2015 footage of Xi's
+  previous Washington arrival, which is the wrong event.
+* **Learned**: the app key still has **no Anthropic credit**, so all six link
+  wikis failed on save and were written by hand through
+  `wiki:export` -> `wiki:apply`. Only **one** export round was needed here, not the
+  usual two: the pin already had a hand-written `longFormSummary`, and a pin that
+  has a summary when its links are first synced keeps it, so no summary job ever
+  appeared - just the contradiction check on the second export.
+* **Learned**: the contradiction check found two real **minor** ones worth keeping.
+  Reuters and AP both call the 24 September arrival ceremony indoors ("an arrival
+  ceremony inside the White House"; "held indoors on the State Floor"), while the
+  White House programme of 21 September puts it "on the South Lawn, State Floor,
+  and Rose Garden" - the newer, more specific source wins. And Reuters lists
+  "Tim Cook of Apple" among "tech CEOs" where AP has him "recently stepped down as
+  the CEO of Apple". Neither touches this pin's own event, which is the reason the
+  severity is minor rather than major.
+* **Feedback**: none; this was the standing scrape-without-sign-off rule.
+* **Changed**: [Sources](sources.md) - new rows for reuters.com, scmp.com and
+  fmprc.gov.cn; the whitehouse.gov row broadened from bill signings to state-visit
+  schedules (and its `og:image` noted as a generic card); the Wikipedia row now
+  carries the wrong-year redirect trap.
+  [Vertical recipes](verticals.md) - a state visits and summits recipe.
+
 ## 2026-09-21 - The government shutdown story, six pins (2398-2403, @EconDesk)
 
 * **Learned - "add more pins for <topic>" starts with reading what the topic

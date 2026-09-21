@@ -8615,6 +8615,42 @@
       "utcRemovedDateTime": null,
       "relation": "company",
       "note": null
+    },
+    {
+      "id": 747,
+      "pinId": 2404,
+      "symbol": "NVDA",
+      "name": "NVIDIA Corporation",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-21T19:02:39.758Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": "whose chief executive Jensen Huang is on the state dinner guest list, with AI chip export policy on the summit agenda"
+    },
+    {
+      "id": 748,
+      "pinId": 2404,
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-21T19:02:39.896Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": "whose Tim Cook is among the tech executives invited to the state dinner"
+    },
+    {
+      "id": 749,
+      "pinId": 2404,
+      "symbol": "AMZN",
+      "name": "Amazon.com, Inc.",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-21T19:02:40.146Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": "whose founder Jeff Bezos is among the tech executives invited to the state dinner"
     }
   ],
   "prices": [
@@ -24776,6 +24812,72 @@
       "utcPriceDateTime": null,
       "utcCheckedDateTime": null,
       "utcSetDateTime": "2026-09-21T15:00:34.089Z"
+    },
+    {
+      "id": 6283,
+      "pinTickerId": 747,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 227.7,
+      "utcPriceDateTime": "2026-09-21T19:02:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T19:02:42.301Z",
+      "utcSetDateTime": "2026-09-21T19:02:39.871Z"
+    },
+    {
+      "id": 6284,
+      "pinTickerId": 747,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-23T20:00:00.000Z",
+      "day": "2026-09-23",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-09-21T19:02:39.874Z"
+    },
+    {
+      "id": 6287,
+      "pinTickerId": 748,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 338.44,
+      "utcPriceDateTime": "2026-09-21T19:01:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T19:02:42.170Z",
+      "utcSetDateTime": "2026-09-21T19:02:40.154Z"
+    },
+    {
+      "id": 6288,
+      "pinTickerId": 748,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-23T20:00:00.000Z",
+      "day": "2026-09-23",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-09-21T19:02:40.155Z"
+    },
+    {
+      "id": 6289,
+      "pinTickerId": 749,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 258.84,
+      "utcPriceDateTime": "2026-09-21T19:02:00.000Z",
+      "utcCheckedDateTime": "2026-09-21T19:02:41.190Z",
+      "utcSetDateTime": "2026-09-21T19:02:40.156Z"
+    },
+    {
+      "id": 6290,
+      "pinTickerId": 749,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-23T20:00:00.000Z",
+      "day": "2026-09-23",
+      "price": null,
+      "utcPriceDateTime": null,
+      "utcCheckedDateTime": null,
+      "utcSetDateTime": "2026-09-21T19:02:40.158Z"
     }
   ],
   "relations": [
