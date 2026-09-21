@@ -31,6 +31,7 @@ export function useTodayHold(scrollToToday: () => void) {
   const attach = useCallback(() => {
     if (detach.current) return;
     let heldY = window.scrollY;
+    let heldHeight = document.documentElement.scrollHeight;
     const stop = () => {
       until.current = 0;
       off();
@@ -39,8 +40,15 @@ export function useTodayHold(scrollToToday: () => void) {
       if (Date.now() >= until.current) return stop();
       scroll.current();
       heldY = window.scrollY;
+      heldHeight = document.documentElement.scrollHeight;
     });
     const onScroll = () => {
+      // A page still settling scrolls itself: Chrome's scroll anchoring moves
+      // the scroll as the cards above today grow, by a whole screen and more
+      // on a phone. That is the page moving under the hold, not the reader
+      // taking it over, and the resize behind it is about to put today back -
+      // so only a jump with the page the same size as it was counts.
+      if (document.documentElement.scrollHeight !== heldHeight) return;
       if (Math.abs(window.scrollY - heldY) > window.innerHeight) stop();
     };
     const timer = setTimeout(stop, until.current - Date.now());
