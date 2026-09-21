@@ -28,6 +28,11 @@ Each recipe is a repeatable pattern. Update it when a run teaches something ([Le
 | Robotics | @TechDesk | `Robotics` | The maker's own newsroom, exchange and press-release wires, Wikipedia for a multi-organiser event | The event is a milestone (a production ramp, a factory opening, a listing, a withdrawal), not the robot; place it at the plant, hall or exchange, never the parent's HQ; a multi-organiser event takes `company: null` |
 | Trending searches | none - discovery only | n/a | Google Trends daily RSS | Shortlists subjects; posts nothing ([Nightly jobs](nightly-jobs.md#google-trends)) |
 | Infrastructure and architecture | @BuildDesk | `Infrastructure & Transportation`, `Architecture & Real Estate`, `Energy`, `Space & Astronomy` | The owner's or authority's own project page, Wikipedia, trade press | Company is the owner or authority; a delayed opening carries `originalStartDate` and `delayReasoning` |
+| Religious observances | @FaithDesk | `Religion & Belief` | The organising body (a dicastery, a ministry, a municipal corporation) and the observance's own article | Pin the gathering, not the day - the day belongs in `DateTime` markers; a moon-sighted date is `estimated`, never `scheduled` |
+| Labour and employment | @EconDesk | `Labour & Employment` | Union announcements, the labour ministry, trade press | Contract expiry dates are public years ahead and often chosen for effect (the UAW's lands on May Day eve); statutory wage steps are `scheduled` |
+| Mining and materials | @BuildDesk | `Mining & Materials` (plus `Energy`) | The operator's own project page and the financing agency | Placed at the mine, not the head office; guidance is usually a half-year or a year, so `estimated` is the norm |
+| Trade shows and annual festivals | per vertical (@FilmDesk, @MusicDesk, @GameDesk, @BuildDesk) | the show's own | The organiser's own site, whose homepage carries the current edition's dates | Dates published 1-3 years ahead; grep the raw HTML for the year before trusting the page, and place the pin at the venue |
+| Budget calendars | @EconDesk | `Macroeconomics`, `Policy & Legal` | The statute or the convention, read through a readable mirror | Precise but few per country per year; a convention (India's 1 February) is `estimated`, a statutory deadline is `scheduled` |
 | Climate summits | @ClimateDesk | `Climate & Environment`, `Geopolitics` | unfccc.int per-COP page, the session's Wikipedia article | Placed at the host venue or city; a COP with no published days yet is `estimated` at the last day of its announced month |
 | Central-bank decisions | @EconDesk | `Macroeconomics` | The bank's own published calendar for the date, the per-meeting prediction market for the URL and odds | The meeting, not the market question (@OddsDesk owns those); timed to the decision, one distinct picture per meeting |
 | Big-science milestones | @ScienceDesk | `Science & Research` (plus `Space & Astronomy` or `Energy`) | The facility's own timeline document, often a PDF | Placed at the instrument, not the operator's head office; a year-only milestone is `estimated` at that year's last day |
@@ -125,6 +130,140 @@ SKA-Mid, Cerro Pachon for Rubin, Cerro Armazones for the ELT, Saint-Paul-lez-Dur
 for ITER - which is also how this vertical pulls the map away from its
 Japan/North America concentration. Videos come from the project's own verified
 channel, which every one of these has.
+
+# Trade shows and annual festivals
+
+The richest seam for a thin forward month: organisers fix dates one to three
+years ahead and publish them on their own sites.
+
+1. **The organiser's homepage is usually the current edition's page.**
+   `gamescom.global/en` and `edfringe.com` carry "23-29 August 2027" and
+   "06 - 30 August 2027" in their plain HTML, which makes them a legitimate
+   `sourceUrl` - unlike a news site's front page, which is the blocked-equivalent
+   case in [Sources](sources.md).
+2. **Grep the raw HTML for the year before trusting it.** A site that renders its
+   dates in JavaScript shows nothing to a plain fetch
+   (`computextaipei.com.tw`), and a guessed alternative domain may not resolve at
+   all (`computex.biz`). If the year is not in the markup, either use the
+   headless scrape or drop the candidate - do not date it from a search summary.
+3. **Where the organiser has no dated page, a trade outlet's announcement is the
+   source** (Screen for Cannes' 2027 dates, Popverse for Comic-Con's badge
+   schedule), with the organiser's own site as a reference.
+4. **Span the whole run.** A festival is an all-day pin from its first day to an
+   exclusive midnight after its last; start at the preview or pre-opening day
+   when the organiser names one (Comic-Con's Preview Night, the Biennale's
+   pre-opening).
+5. **Place it at the venue** and make the company the organiser (Koelnmesse, the
+   EBU, La Biennale di Venezia, San Diego Comic Convention), not the city.
+6. **Video: only the organiser's evergreen material.** Last year's edition is the
+   wrong work however official the channel - Cannes' 2026 teaser, gamescom's ONL
+   2026 and SDCC 2026 walkarounds were all rejected. The exception is footage
+   that explains *this* edition, such as the Eurovision performance that won a
+   country its hosting.
+
+# Budget calendars
+
+Few per country per year, but exact and never in doubt. A **statutory** date is
+`scheduled` (the US President's budget request is due the first Monday in
+February under the Budget Enforcement Act of 1990; the federal fiscal year
+begins 1 October). A **convention** is `estimated` - India has presented its
+Union Budget on 1 February every year since 2017, but the Lok Sabha Speaker
+confirms the date each session, so a future year follows the pattern rather than
+an announcement, and the reasoning says so. Note the gap between the rule and
+the practice where one exists: no US president has met the February deadline
+since 2015, which is the kind of fact the pin exists to carry.
+
+`congress.gov` 403s to every fetcher, so cite CRS reports through
+`everycrsreport.com` and confirm the mirror carries the sentence you are relying
+on before using it.
+
+# Product launches
+
+**Thin as a forward-calendar filler, and worth knowing before planning a batch
+around it.** The 2027 games calendar carries about 54 dated titles, but they
+cluster January to April and then stop - one dated release after April in the
+whole year. Publishers and consumer-electronics vendors do not date the second
+half of a year more than about nine months out, so a pass aimed at H2 will come
+back nearly empty. Take the dated releases that do exist (they are well sourced:
+Wikipedia's per-year list gives date, platforms and developer, and each title has
+its own article), place them at the **developer's** HQ from Wikidata `P159` -
+which overrules a roundup's implied city - and use the official trailer's still
+as the picture, since box art is a non-free local upload.
+
+# Religious observances
+
+The one vertical that renews itself forever, and the one whose calendar lands
+hardest on the corpus's thin spots: Hajj 2027 falls in mid-May and the Nashik
+Kumbh's first royal bath on 2 August 2027.
+
+1. **Pin the gathering, not the day.** Eid, Easter and Passover are *days* and
+   belong in the `DateTime` markers (see below). A pin needs a place and a
+   happening: the Hajj at Masjid al-Haram, World Youth Day in Seoul, a Shahi
+   Snan at Ramkund. A day with no place is a marker, not a pin.
+2. **A moon-sighted date is `estimated`, never `scheduled`**, however precisely
+   the tables give it. Saudi Arabia's Supreme Court fixes Hajj and Eid only
+   after the sighting at the start of Dhu al-Hijjah, and the reasoning says so.
+   The same goes for a Hindu lunisolar bathing date set by the akharas.
+3. **Company is the organising body**: a Vatican dicastery, a ministry of Hajj
+   and Umrah, a municipal corporation running a Kumbh. Not the faith.
+4. **Markers are separate and generated.** `scripts/backup/religiousDays.json`
+   holds 223 observance markers over 2024-2040, built from `date-holidays`'
+   Hijri, Hebrew and Easter-linked calculations, each taken from the country
+   whose calendar defines it and renamed into English. Mawlid and Vesak are
+   deliberately absent - the library returns them two or three times a Gregorian
+   year, and only sporadically, respectively. Hindu festivals are absent too:
+   India's set carries no Diwali or Holi, so they need another source.
+5. **Video: the observance is recurring, so an evergreen explainer from a major
+   broadcaster is the right work**, unlike a one-off event where last year's
+   edition would be wrong. A piece about *this* edition is better still where it
+   exists (Rome Reports on WYD 2027, News18 Marathi on the 2027 Kumbh).
+
+# US fiscal calendar and government shutdowns
+
+The budget calendar is statutory, so the forward dates are free; the shutdowns
+themselves are the story the calendar keeps producing. Pins 2388-2389 and
+2398-2403, @EconDesk.
+
+1. **Three kinds of pin, and they date differently.** A *deadline* (a
+   continuing resolution expiring, the President's budget request falling due)
+   is a single `allDay` pin at `scheduled` confidence, reasoned from the
+   statute. A *lapse* is a range: `utcStartDateTime` on the first day without
+   funding, `utcEndDateTime` at the exclusive 00:00Z after the signing,
+   `confirmed`. A *law or period in force* (an enacted act, a stopgap, a fiscal
+   year) is **also a range** - owner's rule, 2026-09-21: it carries the window
+   it covers, not only the day it was signed. Keep the start on the pin's own
+   event (the signing) and take the end from the operative clause: H.R. 6500
+   section 106(3) ends on 11 December 2026, so pin 2401 runs to
+   `2026-12-12T00:00:00Z`; fiscal 2027 runs 1 October 2026 to 30 September
+   2027; the IIJA (pin 661) was in force from its signing until its FY2022-
+   FY2026 authorisations expired on 30 September 2026.
+2. **Sources, in order.** `whitehouse.gov/briefings-statements/.../congressional-bill-h-r-NNNN-signed-into-law/`
+   for the day a bill became law (and its Related list for the neighbouring
+   ones); `crfb.org/blogs/appropriations-watch-fy-<year>` for where the twelve
+   bills stand and what the current deadline is; `everycrsreport.com` for the
+   process itself, because congress.gov 403s; GovTrack for a bill's status.
+   thehill.com is blocked - see [Sources](sources.md).
+3. **Place by whose event it is.** Congress's deadline sits at the Capitol, a
+   signing at the White House, a fiscal-year rollover at the Treasury, an
+   agency's own shutdown at that agency's headquarters (DHS at St. Elizabeths,
+   38.8547 / -77.0000). Company follows the same rule.
+4. **Thread the saga oldest first.** Shutdowns, the stopgap that ends them and
+   the next deadline are one linear story, so each pin answers the one before
+   it - not the schedule order used for launches.
+5. **Tag the consequence, not the vocabulary.** `Government Shutdown`,
+   `Shutdown Deadline`, `DHS Shutdown`, `Obamacare Subsidies`, `Federal
+   Workers` beside `Appropriations` and `Federal Budget`. Categories are
+   `Macroeconomics` and `Policy & Legal`, plus `Labour & Employment` when
+   federal workers go unpaid.
+6. **A shutdown market belongs on the deadline pin as a reference**, not as a
+   second pin on the same date: `pinMarketRefs` reads references as well as
+   `sourceUrl`, so the odds panel and `marketVolume` come for free. Check the
+   market has prices first - Kalshi's shutdown ladders are listed but untraded,
+   while Polymarket's were live.
+7. **Pictures.** Commons has photographed lapses well: closed museum entrances,
+   shuttered parks, airport signage, an agency's own shutdown notice. Use those
+   for a lapse and a plain landmark shot (Capitol, Treasury, White House) for a
+   deadline - never another event's dated photo.
 
 # AAA games (and other server-rendered news)
 

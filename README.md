@@ -482,6 +482,12 @@ major local events by major city scrape and more targetted by your location
 
 
 clicking line on map should show small popup and display reason for connection and the 2 connected pins
+
+daily morning job to add an verify this weeks pins are up to date.
+
+daily google trend scrape and updats previous pins
+https://trends.google.com/explore
+
 # OKF
 
 # Other
@@ -489,12 +495,10 @@ clicking line on map should show small popup and display reason for connection a
 - should have small display that 3 pins are happing within next 7 days on botton and top of timeline. Clicking on it will scroll you to it one after another
 
 # Scraping
-https://trends.google.com/explore
 
 add slider to search by how late project is
 
-see if there are major imbalance in pins and try to get more to balance more but only if they are good sources
-
+suggest to pin ai of missing or correcting information 
 
 Fix: The data-quality findings — wrong references on pins 72, 202, 377, 806, 808; stale odds in the market pin descriptions; MMOExp as a primary source 
 

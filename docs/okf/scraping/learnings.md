@@ -22,6 +22,17 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **Match the cost to the pin's own event.** The phase's figure over the programme's, the newest revision, null when genuinely costless.
 * **Series are one chain.** A response series is one linear story-ordered chain; if a branch seems needed, ask.
 * **A schedule of upcoming events threads newest first.** Owner, 2026-09-20: for the SpaceX launch pins the latest launch is the thread's first entry and the oldest the highest response number (each launch answers the one *after* it). Story series (anime seasons, product variants) stay oldest first; a schedule of dated launches is the other way round.
+* **A law or other thing in force gets a start *and* an end.** Owner, 2026-09-21,
+  on pin 2401: "For law and relevant pins. Should have effective start and end
+  date", confirmed as standing: "current approach is good. do this going
+  forward". Keep the start on the pin's own event (the signing) and take the end
+  from the **operative clause**, quoted in the date reasoning; the end is the
+  exclusive 00:00Z boundary. Covers laws, stopgaps, contracts, authorisations,
+  mandates, bans with a sunset and fiscal years. Null only when genuinely
+  open-ended; a deadline, a vote or a budget presentation stays a single day.
+  It uses the existing `utcEndDateTime` - **no new field**, and the owner has
+  agreed not to add one, so do not propose an `effectiveStartDate` column.
+  Details in [Fields](fields.md).
 * **Persist seed data with `npm run backup:data`**, never by hand-editing the seed JSON.
 * **When the API key has no credit, use the session LLM.** Do the LLM stages by hand with the app's own prompts and schemas and apply them through the same scripts (`wiki:export`/`wiki:apply`, `references:apply`, `POST /api/pins`); never wait for credit.
 * **Get 3 media on every pin, best effort, with at least 1 image.** Owner, 2026-09-19: the media stage should keep looking until a pin has 3 media (a video counts), not stop at the first source, and a pin always gets at least one picture. Built: `src/lib/mediaTarget.ts` replaces the pictures-only `TARGET_IMAGES`. Fewer is acceptable only when every source is exhausted, and never padded with unfetched or unrelated pictures.
@@ -29,6 +40,210 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **Do not add write-ups to the root README.**
 * **A video embedded in a reference belongs to the pin.** Owner, 2026-09-20: pin 315 should carry the YouTube video that its own reference article embeds - as a reference *and* on the pin's media. Best effort: get the product video and bring it to both.
 * **A released product cites its MSRP from the company's own page.** Owner, 2026-09-20: for a released or on-sale product, check the company's product/store page for the MSRP and add that page as a reference.
+* **Tags should be relevant and catchy.** Owner, 2026-09-21: pin 2389 (US Fiscal Year 2028) was tagged `Appropriations, Federal budget, Fiscal year, United States` and was missing the thing anyone would actually search for - `Government Shutdown`. Tag the consequence and the familiar name people know the event by, not just the procedural vocabulary of the source, and title-case them (`Federal Budget`, `Fiscal Year 2028`).
+
+## 2026-09-21 - The government shutdown story, six pins (2398-2403, @EconDesk)
+
+* **Learned - "add more pins for <topic>" starts with reading what the topic
+  already holds, and the tag search is `/api/pins/search`.**
+  `GET /api/pins?q=tag:"Government Shutdown"` answers 200 with an ordinary
+  timeline page - the timeline route ignores `q` - so it reads like a broken
+  search rather than the wrong endpoint. `GET /api/pins/search?q=tag:"..."`
+  is the one that filters. The tag had exactly one pin behind it (2389, where
+  Ian had asked for the tag), and it now returns seven in date order.
+* **Learned - the tag was a topic with no events under it.** Fiscal 2026 had
+  **three** funding lapses and not one was pinned: 43 days from 1 October to
+  12 November 2025 (the longest ever, over expiring ACA subsidies), four days
+  from 31 January to 3 February 2026 across half the government, and 76 days
+  for **DHS alone** from 14 February to 30 April 2026, the longest shutdown of
+  a single agency. A tag the owner asks for is usually a chain of events, not
+  one pin; look for the whole chain before composing.
+* **Learned - a shutdown is a range, not a day.** The three lapse pins carry
+  `utcEndDateTime` at the exclusive 00:00Z boundary (2025-11-13, 2026-02-04,
+  2026-05-01), which is what `allDay` wants, and the deadline pins (the
+  2 September signing, the 1 October rollover, the 11 December expiry) are
+  single days with a null end.
+* **Learned - whitehouse.gov's briefings index is the primary source for "when
+  was it signed".**
+  `whitehouse.gov/briefings-statements/<yyyy>/<mm>/congressional-bill-h-r-NNNN-signed-into-law/`
+  reads with a plain browser UA and states the weekday, date, bill number, the
+  act's full name and what it funds and until when. Its **Related** list is a
+  crawlable index of the neighbouring signings: one fetch gave H.R. 5371
+  (12 Nov 2025), H.R. 7148 (3 Feb 2026), H.R. 7147 (30 Apr 2026) and H.R. 6500
+  (2 Sep 2026) - every date this batch needed.
+* **Learned - thehill.com is blocked** by a HUMAN Security challenge (403 to
+  WebFetch, and a "Access to this page has been denied" shell to `curl` with a
+  browser UA). `thecentersquare.com`, `federalnewsnetwork.com` (which runs the
+  AP copy), `crfb.org`, `epicforamerica.org`, `chds.us`, `nado.org` and
+  `vcresearch.berkeley.edu` all read fully with a browser UA, so the fiscal
+  beat has plenty of unblocked sources.
+* **Learned - Kalshi lists shutdown markets that nobody has traded.**
+  `KXGOVTSHUTDOWN-26OCT01` and `KXNUMSHUTDOWNS-27JAN01` come back `active` with
+  every bid, ask, last price and volume `null`, so a link to them would draw an
+  empty odds panel. Polymarket's `government-shutdown-by-october-1-...` had
+  real prices (about 2 percent for yes on ~$15.7k) and was used instead. Check
+  for prices, not just an open event, before citing a market.
+* **Learned - a market link rides on a *reference*, not only `sourceUrl`.**
+  `pinMarketRefs` reads the source URL and every reference, so pin 2402 got
+  live odds as an @EconDesk fiscal pin: the save set `marketVolume`
+  15721.74 from the Polymarket read. That avoided a separate @OddsDesk market
+  pin on 1 October, which would have been a duplicate of the rollover pin.
+* **Learned - the fiscal-year pins want the fiscal year's own character.**
+  2389 is "US Fiscal Year 2028 Begins"; the new one is "US Fiscal Year 2027
+  Begins on a Stopgap", because that is what the 1 October 2026 rollover is -
+  not a single one of the twelve bills had passed both chambers.
+* **Feedback - a law pin needs the window it covers.** Owner, on pin 2401:
+  "For law and relevant pins. Should have effective start and end date." The
+  signing was a single day; it now runs 2 September to 11 December 2026, the
+  date named in section 106(3) of the enrolled text. Fixed the same way: pin
+  661 (the IIJA, in force from its signing until its FY2022-FY2026
+  authorisations expired on 30 September 2026 - the very authorities H.R. 6500
+  then extended, so the two pins now abut) and the fiscal-year pins 2402 and
+  2389, which now run October to September. Asked whether this needed a new
+  field, the owner confirmed the existing `utcEndDateTime` is the right home:
+  "current approach is good. do this going forward". Now a standing rule above.
+* **Feedback**: the standing scrape-without-sign-off rule covered the batch,
+  and the standing catchy-tags rule shaped every tag list - `Government
+  Shutdown`, `Shutdown Deadline`, `DHS Shutdown`, `Obamacare Subsidies`,
+  `Federal Workers` rather than `Appropriations` alone.
+* **Changed**: [Sources](sources.md) - rows for whitehouse.gov briefings,
+  thehill.com and the fiscal-policy outlets; [Vertical recipes](verticals.md) -
+  a US fiscal calendar and shutdown recipe.
+
+## 2026-09-21 - Three new categories, and religious observances as markers (pins 2390-2397)
+
+* **Learned - where the taxonomy's real gaps were.** `Other` is used **zero**
+  times, every pin carries a category and nothing is mis-filed, so the 38-name
+  list had no cleanup to do; the gaps were whole domains with no home. Three
+  were added: **`Religion & Belief`**, **`Labour & Employment`** and
+  **`Mining & Materials`**. Each was seeded in the same pass, because an empty
+  category is a dead entry in the tag cloud.
+* **Learned - Religion & Belief lands exactly on the corpus's weak points.**
+  Hajj 2027 falls **14-16 May** in Mecca and the Nashik Kumbh's first Shahi Snan
+  **2 August 2027**, with World Youth Day in Seoul **3-8 August**. That is the
+  two thinnest forward months in the two thinnest map regions, which no other
+  candidate domain managed. Religious calendars also renew themselves forever,
+  so the vertical never runs dry.
+* **Learned, then corrected.** Adding a category is **seven files**, not one:
+  `categories.ts` plus all six translation dictionaries. The first write-up of
+  this said `Messages = Shape<typeof en>` enforced it; **checking that claim
+  showed it does not**. `Shape` requires of the other five languages only what
+  `en.ts` itself declares, so a category added to `categories.ts` and to no
+  dictionary at all is required of nobody - `tsc` passes and `categoryLabel`
+  falls back to the raw English name in every language, silently. A **rename**
+  is worse: the old key stays behind in all six files, nothing complains, and
+  every language falls back to English while a dead key lingers. Verified by
+  experiment, not by reading the types: an invented `Quantum Computing`
+  category rendered as English in Japanese with a clean build.
+* **Fixed.** A `category labels` block in
+  [i18n.test.ts](../../../src/lib/i18n/i18n.test.ts) now holds the two lists
+  together - every category named in every dictionary, no dictionary keeping a
+  label for a category that no longer exists, and English repeating the category
+  name exactly. Each assertion was checked against the failure it is meant to
+  catch by breaking the tree three ways and watching it fail, then restoring.
+  [Fields](fields.md#adding-a-category) carries the corrected checklist.
+* **Learned - date-holidays is a partial fit for religious markers, and it is
+  worth knowing exactly how.** The `DateTime` markers table held 1,931 rows and
+  almost no religious observance (Christmas Day alone) because it is seeded from
+  `new Holidays('US')`. The library *does* compute the Hijri, Hebrew and
+  Easter-linked calendars correctly, but names them in the source country's
+  language, so each observance has to be taken from the country whose calendar
+  defines it and renamed. Traps found:
+  - **Mawlid is returned two or three times a Gregorian year with impossible
+    spacing** (5 Jan, 14 Aug *and* 25 Dec 2027), so it is left out.
+  - **Vesak comes back only sporadically** - 4 hits across 17 years - so it is
+    left out too.
+  - **Indonesia lists Eid over two days and Israel lists Rosh Hashanah over
+    two**; the marker is the observance, so only its first day is kept.
+  - **The Hijri calculation has a range limit**: Indonesia answers for 2050 and
+    returns nothing for 2100, which is why the generated set stops at 2040
+    rather than following the holidays block to 2100.
+  - **India's set has no Hindu festivals at all** - Diwali and Holi are not in
+    the `public` list - so Hindu observances need another source and were left
+    to pins rather than markers.
+* **Built.** `scripts/backup/religiousDays.json`, 223 markers over 2024-2040
+  across 13 observances (Eid al-Fitr, Eid al-Adha, Islamic New Year, Passover,
+  Shavuot, Rosh Hashanah, Yom Kippur, Sukkot, Epiphany, Good Friday, Easter
+  Sunday, Ascension, Pentecost), seeded by [data/index.ts](../../../scripts/data/index.ts)
+  beside the solstice and equinox files so a `db:refresh` keeps them. Two
+  independent cross-checks passed: Easter 2027 is 28 March in both the Vatican
+  set and the general calendar, and Eid al-Adha 2027 is 16 May in both the
+  library and the Hajj research done for pin 2390.
+* **Learned.** The category change was picked up by a **concurrent session**
+  within the hour: pins 2398-2401 are another session's government-shutdown
+  batch, posted as @EconDesk and two of them already filed under
+  `Labour & Employment`. Worth remembering when counting a category's pins in
+  the same session that created it - `Labour & Employment` read 5, not the 3
+  posted here.
+* **New curator.** **@FaithDesk** (327) for religious observances and
+  pilgrimages. `Labour & Employment` went to @EconDesk and
+  `Mining & Materials` to @BuildDesk, which already owns Energy and
+  infrastructure, rather than opening two more desks.
+* **Changed.** This page, [Fields](fields.md) (the add-a-category checklist),
+  [Vertical recipes](verticals.md) (a Religion & Belief recipe and rows for all
+  three categories).
+
+## 2026-09-21 - Trade shows, budget calendars and product launches (pins 2378-2389)
+
+* **Learned - the three seams are not equally rich, and it is worth saying which.**
+  Aimed at May/Jul/Aug 2027, the months the first two passes never reached.
+  **Trade shows and annual festivals are the best seam by a distance**:
+  organisers publish dates one to three years ahead on their own sites, and
+  those sites are readable. **Budget calendars are precise but few** - the dates
+  are statutory or conventional, so they are easy to source and there are only a
+  handful per country per year. **Product launches are the thinnest**: the 2027
+  games calendar carries ~54 dated titles but they stop dead after April, with
+  exactly one dated release later in the year (a Persona 4 port on 20 May).
+  Publishers do not date the second half of a year more than about nine months
+  out, and consumer electronics is the same. Do not plan a forward-calendar fill
+  around product launches.
+* **Learned.** Twelve pins: Cannes (11-22 May), the Venice Architecture Biennale
+  (8 May - 21 Nov), Eurovision in Burgas (15 May), San Diego Comic-Con (21-25
+  Jul), the Edinburgh Fringe (6-30 Aug), gamescom (23-29 Aug), three budget
+  dates (India's 1 February convention, the US budget request deadline, the
+  start of US fiscal 2028) and three dated games. **May 2027 went 3 -> 6**, July
+  7 -> 8, August 7 -> 9, February 20 -> 25. **`Arts & Literature` went 1 -> 5**,
+  the largest relative move of the three passes.
+* **Learned - a trade show's homepage is its current edition's page.**
+  `gamescom.global/en` carries "23-29 August 2027" and `edfringe.com` carries
+  "06 - 30 August 2027" in plain HTML, so for an annual show the homepage is a
+  legitimate `sourceUrl`, unlike a news site's front page. But **grep the raw
+  HTML to confirm the year is really there**: `computextaipei.com.tw` renders its
+  dates in JavaScript and a plain fetch showed nothing, and `computex.biz` does
+  not resolve at all, so Computex was dropped rather than sourced loosely. June
+  2027 was already the healthiest forward month, so nothing was lost.
+* **Learned.** `congress.gov` **403s to `curl` and to WebFetch alike**, so a CRS
+  report cannot be a `sourceUrl` from there. `everycrsreport.com` mirrors the
+  same reports and reads fine - R47088 confirmed "first Monday in February" and
+  R47235 confirmed the 1 October fiscal-year start before either was used.
+* **Learned.** `ebu.ch` 403s to `curl` but reads fully through WebFetch, the same
+  shape as `vaalit.fi`. It gave the venue and all three Eurovision show dates.
+* **Learned.** **Search the corpus by title before composing, not after.**
+  Metroid Ravenous (28 January 2027) was already pinned as 298 from its
+  announcement; a title search caught it while the batch was still a list, which
+  is cheaper than discovering it as a 409 after the media and summary are
+  written.
+* **Learned.** A game pin's picture is the **official trailer's still**
+  (`img.youtube.com/vi/<id>/maxresdefault.jpg`), because box art on en.wikipedia
+  is a non-free local upload. Pin 84 already does this, and the three game pins
+  follow it: still as the picture, the same video as the video.
+* **Learned.** Wikidata `P159` overruled the roundup on a studio HQ: the games
+  list implies Bellevue for Crystal Dynamics, `P159` says **Redwood City**. The
+  studio-location rule means P159 wins.
+* **Feedback applied - the wrong-edition video rule held up under pressure.**
+  Cannes' own 2026 teaser, gamescom's Opening Night Live 2026 and every SDCC
+  2026 walkaround were rejected: an official channel does not make last year's
+  edition the right work. Eurovision was the one real exception, and for a
+  reason specific to that pin - Bulgaria's winning 2026 performance is *why*
+  Burgas hosts in 2027, so it is on-topic rather than a stale edition. Four of
+  the twelve pins ship with no video, which is the honest outcome.
+* **Learned.** The forward hole after three passes: Nov 2026 32, Dec 45, then
+  38 / 25 / 15 / 12 / **6** / 23 / 8 / 9 / 10 / 11 / 4 for Jan-Nov 2027. May
+  doubled but is still the thinnest month of 2027, and **November 2027 (4) is
+  now the worst** - nothing has been aimed at it yet.
+* **Changed.** This page, [Vertical recipes](verticals.md) (a Trade shows and
+  annual festivals recipe, a Budget calendars note, and the product-launch
+  caveat) and [Sources](sources.md) (congress.gov, ebu.ch, trade-show homepages).
 
 ## 2026-09-21 - Three thin categories: the COPs, the Fed's 2027 calendar, big science (pins 2363-2377)
 

@@ -1,6 +1,9 @@
 # Update Log
 
 ## 2026-09-21
+* **Update**: [Learnings](/scraping/learnings.md), [Vertical recipes](/scraping/verticals.md) and [Sources](/scraping/sources.md) record the government shutdown batch (pins 2398-2403): fiscal 2026's three funding lapses, the September stopgap and the 11 December 2026 deadline, threaded oldest first under @EconDesk, with the new US fiscal calendar recipe, the whitehouse.gov briefings index as the primary source for a signing date, thehill.com's HUMAN Security block, and the rule that a market reference needs prices before it earns a place on a pin.
+* **Update**: Three new categories - `Religion & Belief`, `Labour & Employment` and `Mining & Materials` - added to [categories.ts](../../src/lib/categories.ts) and all six translation dictionaries, each seeded in the same pass (pins 2390-2397), with 223 religious-observance markers generated into `scripts/backup/religiousDays.json` and seeded beside the solstice files. [Fields](/scraping/fields.md) gains the add-a-category checklist and [Vertical recipes](/scraping/verticals.md) a Religion & Belief recipe.
+* **Update**: [Learnings](/scraping/learnings.md), [Vertical recipes](/scraping/verticals.md) and [Sources](/scraping/sources.md) record the third balance pass (pins 2378-2389): trade shows and festivals, budget calendars and dated product launches, which seam is worth planning around and which is not, plus the congress.gov and trade-show-homepage fetching notes.
 * **Update**: [Learnings](/scraping/learnings.md), [Vertical recipes](/scraping/verticals.md), [Sources](/scraping/sources.md) and [Enrichment](/scraping/enrichment.md) record the second balance pass (pins 2363-2377): COP31/COP32, the eight 2027 FOMC decisions and five big-science milestones, the new curators @ClimateDesk and @EconDesk, the Fed calendar's missing per-meeting URLs and the Kalshi series that supplies them, and the dedupe rule that makes a run of pins need a run of pictures.
 
 ## 2026-09-20
