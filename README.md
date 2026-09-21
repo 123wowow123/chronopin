@@ -487,6 +487,9 @@ https://trends.google.com/explore
 
 Create LLM Orchistration pipeline and add it to a daily job to scrape and update pins
 
+Midnight linting and new pin creation jobs 
+6am, 6pm job updating this weeks pins 
+
 # OKF
 
 # Other
