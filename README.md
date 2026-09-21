@@ -499,10 +499,9 @@ https://trends.google.com/explore
 
 # Scraping
 
+pin can have user uploadable pictures
 
 slider for range radius of event
-
-
 
 clicking on distance will take you to main map and draw a line from you to that location
 
