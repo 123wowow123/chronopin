@@ -52,6 +52,19 @@
     "utcVerifiedDateTime": null
   },
   {
+    "pinId": 221,
+    "otherPinId": 2629,
+    "reason": "similar",
+    "score": 0.8171452,
+    "status": "rejected",
+    "decidedByUserId": 76,
+    "utcCreatedDateTime": "2026-09-22T14:40:07.202Z",
+    "utcDecidedDateTime": "2026-09-22T14:40:07.202Z",
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
     "pinId": 222,
     "otherPinId": 464,
     "reason": "similar",
@@ -60,6 +73,19 @@
     "decidedByUserId": 76,
     "utcCreatedDateTime": "2026-09-20T18:55:52.831Z",
     "utcDecidedDateTime": "2026-09-20T23:30:57.841Z",
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 222,
+    "otherPinId": 2623,
+    "reason": "similar",
+    "score": 0.8676185,
+    "status": "rejected",
+    "decidedByUserId": 76,
+    "utcCreatedDateTime": "2026-09-22T14:29:45.008Z",
+    "utcDecidedDateTime": "2026-09-22T14:40:07.213Z",
     "verdict": null,
     "verdictReasoning": null,
     "utcVerifiedDateTime": null
@@ -141,6 +167,19 @@
     "verdict": "same",
     "verdictReasoning": "Both cite Webuild's press release on the dam's 9 September 2025 inauguration, which is the one event both pins describe.",
     "utcVerifiedDateTime": "2026-09-16T18:48:54.262Z"
+  },
+  {
+    "pinId": 279,
+    "otherPinId": 2634,
+    "reason": "similar",
+    "score": 0.892862,
+    "status": "confirmed",
+    "decidedByUserId": 76,
+    "utcCreatedDateTime": "2026-09-22T14:40:07.215Z",
+    "utcDecidedDateTime": "2026-09-22T14:40:07.215Z",
+    "verdict": "same",
+    "verdictReasoning": "Both cite Webuild's press release on the dam's 9 September 2025 inauguration, which is the one event both pins describe.",
+    "utcVerifiedDateTime": null
   },
   {
     "pinId": 286,
@@ -307,6 +346,71 @@
     "decidedByUserId": 101,
     "utcCreatedDateTime": "2026-09-20T16:47:03.874Z",
     "utcDecidedDateTime": "2026-09-20T22:43:43.657Z",
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 1679,
+    "otherPinId": 1819,
+    "reason": "similar",
+    "score": 0.89687085,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-22T16:01:48.067Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 1679,
+    "otherPinId": 1822,
+    "reason": "similar",
+    "score": 0.86072266,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-22T16:01:48.070Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 1679,
+    "otherPinId": 1828,
+    "reason": "similar",
+    "score": 0.8583707,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-22T16:01:48.073Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 1679,
+    "otherPinId": 1830,
+    "reason": "similar",
+    "score": 0.84413755,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-22T16:01:48.069Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 1679,
+    "otherPinId": 1832,
+    "reason": "similar",
+    "score": 0.8503578,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-22T16:01:48.074Z",
+    "utcDecidedDateTime": null,
     "verdict": null,
     "verdictReasoning": null,
     "utcVerifiedDateTime": null
@@ -531,5 +635,18 @@
     "verdict": null,
     "verdictReasoning": null,
     "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 2682,
+    "otherPinId": 2685,
+    "reason": "similar",
+    "score": 0.85113984,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-22T16:32:09.467Z",
+    "utcDecidedDateTime": null,
+    "verdict": "different",
+    "verdictReasoning": "Different events at the same address, ten months apart. 2685 is the groundbreaking: the Review-Journal reported on 28 April 2026 that the food hall \"began construction this week\", with photographs captioned Monday 27 April 2026. 2682 is the opening, which the same paper put at \"a fall 2026 opening\" and which KSNV moved to \"this winter\" on 16 September 2026, so it sits at the close of winter. The two are consecutive stages of one build and are threaded as such (2682 answers 2685); a build starting and a venue opening are not one event. Recorded by hand: the duplicates:verify Claude call had no credit.",
+    "utcVerifiedDateTime": "2026-09-22T16:35:11.757Z"
   }
 ]
