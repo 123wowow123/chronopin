@@ -2368,3 +2368,333 @@ rooms, with four MICHELIN star ratings attached.
   timeline** instead - a page the organisation maintains rather than one it
   filed and moved.
 * **Changed**: [Vertical recipes](verticals.md) gains a Disease events row.
+## 2026-09-21 - Reviews, wait times and a table on a restaurant pin
+
+Ian: "restaurant need reviews from google and yelp and current wait times and
+reservation if available". Built as `PinPlace` (schema 0059),
+`src/server/places.ts`, `/api/pins/:id/place` and `PinPlace.tsx`.
+
+* **Learned**: **a live score cannot be stored, so it must not reuse
+  `PinRating`.** Google's and Yelp's terms both cap how long their ratings and
+  review text may be kept, and a restaurant's rating moves anyway - unlike a
+  Tomatometer, which is the settled fact `PinRating` exists for. So the database
+  keeps only handles (place id, business alias, booking URL) and the numbers are
+  fetched on view behind a one-hour cache, shaped exactly like `weather.ts`. The
+  decision of *which table* was the whole design; everything else followed.
+* **Learned**: **there is no sanctioned source for a wait time.** Google
+  documents popular times, live busyness and wait times as a Maps and Search
+  display feature, not a Places API field; Yelp's waitlist endpoint needs a
+  partnership. Ian chose to scrape it anyway, knowing it breaks Google's terms.
+* **Learned**: and it did not answer, in four different ways from a datacenter
+  IP. A plain fetch of the place page returns map-tile state with the place's
+  name nowhere in it. The `/search?tbm=map&tch=1` endpoint with the page's own
+  `pb` parameter returns the name and place id but no busyness arrays.
+  `google.com/search` returns nothing without JavaScript. Headless Chromium
+  *does* load the real panel - name, 4.5, 55,434 reviews for Katz's - but with
+  no Popular times section, and a second load dropped the review count too, which
+  reads like the reduced UI Google serves a client it distrusts. The scrape is
+  kept wired behind a **circuit breaker**: three failures and it stops launching
+  Chromium for half an hour, because otherwise every restaurant pin anyone opens
+  pays for a browser to learn nothing.
+* **Learned**: **the `/search?tbm=map` endpoint hands out place ids without a
+  key.** Katz's `ChIJCar0f49ZwokR6ozLV-dHNTE` came back from an unauthenticated
+  `curl`. It does not help on its own - reading the *rating* still needs the
+  billed key - but it is the cheap half of resolving a place.
+* **Learned**: **a 200 from a reservation site means nothing.** Resy answers 200
+  for a venue path and serves an SPA shell whose `og:title` is the generic
+  "Right This Way", so the page cannot confirm the venue is the right one.
+  OpenTable refuses `curl` outright (connection failure, not a status). The
+  French Laundry's booking link is trustworthy only because it was taken from a
+  link on `thomaskeller.com/tfl` - the same "found, never constructed" rule the
+  merchant links follow.
+* **Learned**: Yelp returns `time_created`, a timestamp, where Google returns
+  "2 months ago". Printed side by side the raw date reads as a bug, so
+  `reviewWhen` formats anything parseable and passes wording through.
+* **Learned**: a new side table needs its own **seed file or a `db:refresh`
+  loses it**. A place id costs a billed search to find again and a booking link
+  is someone's own work, so neither is derivable the way awards and tags are:
+  `seedPlaces.json` follows the `seedFlightPaths.json` pattern, and `place` is
+  stripped from the pin JSON so it does not ride along in `seedPins.json` too.
+* **Then Ian said "use web scraper", and that turned out to be the better
+  design.** The app's own browser reads the Google Maps place panel with no key
+  and no per-view cost: name, rating, opening state, and the rating count when
+  Google feels like serving it. Three findings, in the order they cost time:
+  **(1) wait for the rating element, never sleep.** `networkidle2` + a fixed
+  delay gave a reduced panel - nav chips only - about half the time, and that
+  flakiness is exactly what made an earlier probe conclude the page was
+  unreadable. `waitForSelector('[aria-label*="stars"]')` read 4 of 4 across two
+  places. The earlier "Chromium can't see it" conclusion was wrong about the
+  *rating*; it remains right about busyness.
+  **(2) the first dry run reported "707 ratings" for The French Laundry** -
+  the area code of `(707) 944-2380`, because the count was matched as "the
+  first bracketed number on the page". It is now matched as a pair with the
+  rating. This is the second time in this vertical that reading the dry run
+  caught a plausible-looking wrong number; a rating nobody checks is worse than
+  no rating.
+  **(3) the count is intermittent.** The same place minutes apart gave
+  "4.6 (2,275)" and then a panel with no count, so `setScraped` COALESCEs it -
+  a null read never discards a good number. The rating itself was stable every
+  time, because it comes from the aria-label rather than the panel's layout.
+* **Learned**: **a scraped reading must be stored, which reverses the decision
+  above.** The API ratings are not stored because the terms cap it; the scraped
+  one has to be, because a Chromium launch takes ~5s and cannot sit in a page
+  request - a value never kept could never be shown. 0060 stores it with a
+  `checkedAt` (the `marketVolumeAt` shape), `npm run places:refresh` fills it,
+  and the API path still wins when a key exists. The *rating* shows at any age;
+  the *opening state* is dropped past an hour rather than calling a shut
+  restaurant open.
+* **Corrected on Ian's call ("scraped value need to be stored")**: the scraped
+  numbers now ride in `seedPlaces.json` too, not just the live table. The
+  argument for leaving them out - a month-old rating is worse than none - was
+  the wrong trade when the alternative is a `db:refresh` that shows no ratings
+  at all until a browser has visited every place. `checkedAt` travels with them
+  and is **restored as it was, not as now()**, so staleness stays visible and
+  the hour-old rule still drops an old opening state while keeping the rating.
+  Proved by wiping the table and restoring from the seed: rating and original
+  read time both survived.
+* **Learned, the second caching trap of the day**: computing the stored score
+  outside the cache but *using it inside the cached closure* meant the hour-old
+  payload kept winning and a fresh `places:refresh` stayed invisible. Only the
+  network calls are cached now; the stored scrape and the busyness are merged in
+  afterwards. Both are local readings on their own clocks and neither belongs in
+  a shared payload cache.
+* **Learned**: **Yelp has no scrape fallback.** `yelp.com/biz/...` answers 403
+  to our own headless browser as well as to curl - the MICHELIN trick does not
+  transfer - so a Yelp score needs the free Fusion key and nothing else will do.
+* **Changed**: [Vertical recipes](verticals.md) - the Restaurants section gains
+  points 10-16; point 6 no longer claims MICHELIN is the only reachable review.
+  [Sources](sources.md) gains a Google Maps rating row.
+* **Learned, by measuring**: the busyness read **must not be awaited**. A cold
+  request for a pin with a `googlePlaceId` took **4.4 seconds** - a Chromium
+  launch and a page load, all of it to learn Google serves no busyness here -
+  while the ratings and the booking link answer in milliseconds. It now reads
+  from its own cache without waiting (`busynessNow`) and is merged into the
+  response after the cached part, which took the same request to **45 ms**. A
+  first view therefore shows no busy bar even where the scrape works; the next
+  view inside the 10-minute TTL picks it up. A unit test pins the synchronous
+  contract so the 4.4s cannot come back.
+* **Learned**: the keyless place-id route paid off twice. Resolving The French
+  Laundry through `/search?tbm=map` returned `ChIJAAAAAERVhIARYeTLvbbzAxs`
+  **and**, in the same payload, Google's own `exploretock.com/tfl/` reservation
+  link - independently corroborating the booking URL already taken from
+  `thomaskeller.com/tfl`. Its Yelp alias is `the-french-laundry-yountville-7`:
+  note the trailing `-7`, Yelp's own disambiguator, which is exactly why an
+  alias must be found and never constructed.
+* **Not a bug, worth knowing**: pin 2463's address label reads *2184 Creek
+  Street* while the restaurant publishes *6640 Washington St*. Nominatim really
+  does return Creek Street for the pin's coordinate - the restaurant sits on the
+  Washington/Creek corner - so the label obeys [[never-type-place-labels]] and
+  the coordinate is right. A reverse-geocoded label and a published address are
+  not the same thing, and the resolve script's dry run prints both side by side
+  for exactly this reason.
+* **Trimmed the same day, on Ian's call**: "no need for review ... just get star
+  rating from google and yelp and link to their url". The panel now carries each
+  source's **star rating, its rating count and a link to that source's page**,
+  and reproduces no review text. Three things fall out of that: Google's
+  Enterprise `reviews` field leaves the mask (a whole billing band off the
+  bill), Yelp drops from two requests per business to one, and the attribution
+  line reads "Ratings from Google, Yelp" rather than claiming reviews it no
+  longer shows. The excerpt rendering and `reviewWhen` were deleted rather than
+  left dark - the API shapes are easy to restore from this entry if wanted.
+
+## 2026-09-21 - ALSO's Series D, and a company logo lookup that took three away
+
+One pin (2533) from `ridealso.com`, the Rivian micromobility spinout, as
+@TechDesk: the $150 million Series D of 19 August 2026, placed at the company's
+Palo Alto headquarters.
+
+* **Learned**: **a company homepage is not a pin, but its Stories rail is an
+  index of them.** `ridealso.com/` has no date on it anywhere. What it does have
+  is a rail of eleven posts - a funding round, three design awards, a DoorDash
+  partnership, a bike valet - each of which *is* a dated event. The homepage's
+  job in a scrape is to hand over `/blogs/all`; the pin's `sourceUrl` is the post.
+* **Learned**: **a Shopify storefront hides its blog body from `curl`.** All
+  eight posts fetched as ~340KB of theme shell with no article text and no date
+  metadata of any kind - no `datePublished`, no `article:published_time`, no
+  JSON-LD. The app's headless scraper read the same URL and returned the whole
+  post *and* the date, which the theme prints as a bare `08-19-2026` line in the
+  rendered body. A missing `article:published_time` is not evidence a post is
+  undated. See [Sources](sources.md).
+* **Learned**: **a funding round is not the pin's `price`.** Consistent with the
+  existing IPO pins (1987, 1988), which carry `price: null`. The round size is
+  what the event *is*, not what it cost, so it belongs in the title, the
+  description and the summary. The cost rule's "never revenue or budgets" covers
+  this case too.
+* **Learned**: **`companies:logos -- --all` can subtract logos.** ALSO has no
+  Wikipedia article, so its logo needed `Company.websiteUrl` set by hand first -
+  but the script only offers `--all`, and the background lookup on save had
+  already marked the company checked, so there was no way to re-check one row.
+  The `--all` run re-checked all 915 companies, hit a Wikipedia 429 storm
+  partway, and **nulled three logos that had been working** (Royal Commission
+  for Riyadh City, Jawaharlal Nehru Port Authority, Gaggan) while finding 465.
+  The hand-nulled traps the notes warn about (Fitbit, Nest, Honolulu HART) stayed
+  null, so the documented risk was not the one that bit.
+* **How to check it**: diff the database against the committed
+  `scripts/backup/seedCompanies.json` *before* `backup:data` overwrites it - the
+  seed file is the last known-good state, and the three losses were three lines
+  of `UPDATE` to put back. Worth a `--company <name>` flag on the script.
+* **Learned (Ian)**: **the owner wanted the homepage as `sourceUrl`, not the
+  announcement post.** The strategy doc's instinct is the publisher's page for
+  the event, and the homepage is undated - but the owner asked for the company
+  front page twice, so the pin was repinned onto `https://ridealso.com/` and the
+  announcement post moved into the references at confidence 95. Nothing is lost:
+  the date reasoning now says outright that the source carries no date and names
+  the reference the date comes from. Worth remembering that a brand's front page
+  is a legitimate source when the owner wants the pin to point at the company.
+* **Learned**: **a `PUT` cannot reorder media.** `Pin#update` diffs the body
+  against the pin by `originalUrl`: media already on the pin keep their existing
+  `PinMedium` rows untouched, and new ones are appended by `saveAllToPin`. Since
+  the pin JSON orders media by the link row id, a new picture always lands
+  **last**, whatever position the body puts it in - so the flagship bike shot
+  sent as media 0 came back as media 3, and the heading did not change.
+* **How to reorder**: two `PUT`s - one with `media: []` to drop every link, then
+  one with the full list in the order you want, which recreates the links in
+  ordinal order. Safe because `withoutRepeatedPictures` compares only against the
+  pin's own kept media, so a cleared pin re-accepts its own pictures; the cost is
+  that every thumb is re-fetched and re-uploaded under a new blob name.
+* **Learned**: **the heading image is the one the owner judges the pin by.** The
+  pin had a TM-B studio shot from the first save, but it sat second behind the
+  post's announcement card, and the feedback was still "should at least contain 1
+  image on the flagship bike". Presence is not enough - on a product or company
+  pin, lead with the product.
+* **Learned (Ian)**: **the pin was repurposed twice, and the second time changed
+  the event.** First the source moved from the announcement post to the homepage;
+  then Ian asked for `ridealso.com/products/tm-b` and "should be about the release
+  of the bike". So pin 2533 stopped being the Series D and became the TM-B Launch
+  Edition's first deliveries. Read the instruction as naming the *event*, not just
+  the URL - a product page asks for a product pin, and the funding round is simply
+  no longer pinned.
+* **Learned**: **a product page dates nothing.** `/products/tm-b` is spec and
+  marketing copy - "CLASS 3 E-BIKE STARTING @ $3500", range, assist levels,
+  Top Frame swap times - with no date anywhere. It is the right source for the
+  price and the specifications and the wrong one for when anything happened; the
+  date came from the trade press and the company's own blog.
+* **Learned**: **"next week" is a datable claim if something else closes the
+  bracket.** TechCrunch, publishing Friday 31 July 2026, said deliveries began
+  "next week", and ALSO's own post of 19 August confirmed the bike "has started
+  shipping to customers across the U.S." That brackets the start, so the pin is
+  dated Monday 3 August, `estimated`, with the reasoning naming both ends.
+* **Learned**: **release, not unveiling.** The TM-B was revealed in Oakland on
+  22 October 2025, which is the precise, well-covered date and the tempting one.
+  It is not the release: the bike reached riders nine months later. The delay is
+  the story and the schema already carries it - `originalStartDate` at 20 June
+  2026 (the last day of the "this spring" it was promised for) and a
+  `delayReasoning` quoting ALSO's supply-chain explanation, which renders as a
+  "2 MONTHS LATE" badge.
+* **Learned**: **a pin body's `stocks` are add-only, so repurposing a pin leaves
+  the old tickers behind.** Rewriting the Series D pin as a bike release sent only
+  `RIVN`, and DoorDash and Amazon stayed - correct for a funding round, irrelevant
+  to a consumer bike shipping. `PUT /api/pins/:id/stocks {"remove": "DASH"}` is the
+  supported way off (author or admin), and it re-syncs, so the remaining ticker's
+  snapshot reads null for a few seconds before it prices again. The same is true
+  right after a save: read the stocks back twice before believing a null close.
+* **Changed**: [Sources](sources.md) gains rows for Shopify storefront blogs and
+  businesswire.com (403 to WebFetch; the Yahoo Finance mirror carries the release
+  in full). [Vertical recipes](verticals.md) gains a Startup funding rounds row.
+
+## 2026-09-21 - Resolving the other nine restaurants, and four wrong matches
+
+Ian: "do for the rest of the pins". Ten restaurant pins, nine now carrying a
+Google rating. `places:resolve` learned to work without a key on the way.
+
+* **Learned**: **`Food & Beverage` is not "restaurants".** Seven of the
+  eighteen pins in that category are *factories* - a hop processing plant,
+  Cadbury's Claremont works, Kellogg's Trafford Park, Heinz Kitt Green, Carr's
+  biscuit works, Manor Bakeries. A star rating and a "Book a table" on a cereal
+  factory would be nonsense, so the vertical is the restaurant pins, not the
+  category. Filter by what the pin is, not by its tag.
+* **Learned**: **the company is the wrong name to search; the title is the
+  right one.** `searchName` preferred the company, which on a restaurant pin is
+  often the operator or group - "Daniel Humm Hospitality" for Eleven Madison
+  Park, "Chubby Group" for Mikiya Wagyu Shabu House - and finds a holding
+  company or nothing. The title *starts* with the restaurant's own name, so it
+  is cut at the first event verb and the company is only the fallback. That one
+  change fixed the name for every pin in the batch.
+* **Learned**: **`/search?tbm=map` resolves a place id with no key at all**, and
+  it works internationally - Bangkok, Copenhagen, Lima, San Sebastian all
+  matched first time. `findGooglePlaceIdKeyless` reads the `pb` parameter out of
+  the Maps search shell and calls the endpoint behind it. A text query needs the
+  town appended, because "Maido" alone is a common word.
+* **Learned, the expensive one**: **an address-only query returns the address,
+  not the business.** Chubby Cattle's first match was another branch in Irvine,
+  so it was re-searched as "Chubby Cattle 8330 Mira Mesa Blvd" - which returned
+  a place id whose address matched the pin *exactly* and which therefore looked
+  perfect. It was a **street geocode**: Google's own name for it is
+  "8330 Mira Mesa Blvd" and it has no rating, which is the only reason it was
+  caught. **An address check alone cannot tell a business from a geocode; the
+  name check can.** The two dry runs are complementary and both must be read.
+* **Learned**: chains are the whole difficulty. Menya Ultra first matched its
+  Clairemont Mesa shop rather than the pin's Mira Mesa one, and the fix was
+  confirmed not by the address but by Google's own name for it - **"Menya Ultra
+  Mira Mesa"**. Chubby Cattle has ~60 sites and three queries returned three
+  different cities; the Mira Mesa takeover has no listing yet, so that pin was
+  left unresolved rather than given a wrong one.
+* **Ruled**: **a permanently closed restaurant gets no place.** elBulli served
+  its last dinner in 2011; both queries pointed at "Carrer la Roca, 4, Roses"
+  rather than the pin's Cala Montjoi site. A panel headed "This place right now"
+  carrying a live rating and an opening state would be wrong on that pin
+  whichever id was chosen, so it has none.
+* **Flagged, not decided**: Gaggan *relocated*. The pin is the 2010 Sarasin
+  Road townhouse; Google's listing is Gaggan Anand on Sukhumvit 31. It is the
+  same chef and the same restaurant in every sense a reader cares about, so the
+  match was kept - but the pin's map point and the rating's place are different
+  addresses, and that is Ian's call to reverse.
+* **Fixed, and it refines the address rule**: pin 2466 read *Astigarraga,
+  Gipuzkoa 20115* and now reads *Aldura gunea 20, Errenteria, Gipuzkoa 20100*.
+  The **coordinate was never wrong** - it is within about 40 m of OSM's own
+  Mugaritz node - so this was a label problem alone. The catch is that
+  reverse-geocoding the bare point *still* answers "Astigarraga", because the
+  administrative boundary there is ambiguous and the nearest addressable
+  feature is on the other side of it. So "reverse-geocode the point, never type
+  the street" needs one refinement: **take the label from the geocoder's record
+  for the venue itself** (search the restaurant, then `addressdetails=1` on that
+  node), which is what both Nominatim and Google agree on. Applied by PUT
+  through the real API, so the search index followed it: `place:Errenteria`
+  finds the pin and `place:Astigarraga` now returns nothing.
+* **Changed**: `places:resolve` no longer refuses to run without a key, and
+  `searchName` prefers the title. [Sources](sources.md) gains the keyless
+  place-id route.
+
+## 2026-09-21 - Backfilling the attractions, and three bad numbers
+
+Ian: "anything else to backfill?". Answer: **Travel & Tourism**, ten of its
+fifteen located pins. Nineteen places now carry a Google rating.
+
+* **Ruled out, and this is the reusable part**: a located pin is not a
+  visitable place. **Sports** (95 located pins) is about *events* at stadiums -
+  a stadium's 4.5 on a Super Bowl pin is noise, and several are stadiums that do
+  not exist yet. **Gaming & Entertainment** (88) sits at studio HQs. Within
+  Travel & Tourism itself, five of fifteen were excluded: Icon of the Seas and
+  Crystal Serenity are **ships** (the latter's address is the *shipyard*),
+  HMS Erebus is an Arctic wreck, Seoul's Twin Eye "Targets a 2028 Opening", and
+  Olympia Looping is a *transportable* roller coaster.
+* **Learned**: the street-geocode trap repeats. Walt Disney World resolved to an
+  id Google names **"1180 Seven Seas Drive"** - the pin's own address, which is
+  exactly why it looked right. Re-searched as "Magic Kingdom Park", which is
+  what the 1971 opening actually was and where the pin sits. **The name check
+  catches this; the address check cannot.**
+* **Learned**: the payload's address field carries anything. It gave review
+  prose for Chimelong ("I loved it so much. Really so much fun...") and a
+  **date** for Magic Kingdom ("Aug 20, 2026"), because a comma and a digit is
+  all a loose pattern needs. `readPlaceId` now rejects sentences, apostrophes
+  and dates, with a test per case.
+* **Learned, the worst of the three**: **the rating count is not just
+  intermittent, it is sometimes wrong.** Star Wars: Galaxy's Edge read 685,
+  685, 42 across three loads - some renders carry a second "4.8 (42)" block, and
+  taking the first pair in the text picks it. Two fixes: `readPlace` takes the
+  **largest** pair matching the headline rating, and `setScraped` stores the
+  **greatest count ever seen** rather than the latest. Before that, a straight
+  overwrite knocked Ferrari World from 61,367 to 538 and Magic Kingdom would
+  have gone from 253,020 to 4,679. A review count only rises in practice, so
+  monotonic storage neutralises the flaky renders entirely; the cost is not
+  following a genuine decrease, which is the right trade for a number printed
+  beside a rating.
+* **Learned, about my own verification**: the monotonic CASE threw
+  `could not determine data type of parameter $3` on **every** pin - a CASE
+  needs the cast on each branch, not just one - and the run still printed every
+  rating it had read, so it looked like a success and stored nothing. **It was
+  hidden because the output was being grepped for the lines that were working.**
+  `places:refresh` now catches a store failure per pin and prints
+  `NOT STORED`, and a filtered log is not a verified one.
+* **Changed**: ratings on 19 pins across two verticals; `places:refresh` reports
+  store failures; `readPlace`/`readPlaceId` hardened with 12 tests.

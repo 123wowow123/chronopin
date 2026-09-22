@@ -7,6 +7,7 @@ import PinTag from './pinTag';
 import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
 import { tagGroupPatterns } from '@/lib/tags';
 import { PLACE_TEXT_SCORE, looksLikePlaceText, placePatterns, wholeWordPattern } from '../util/placeMatch';
+import type { NearFilter } from '../util/nearFilter';
 
 // A pin "p"'s categories (its category tags, 0043), the main one first, and
 // the main one alone.
@@ -88,29 +89,29 @@ export default class Pins extends BasePins<Pin> {
   }
 
   // minConfidence: the score a pin needs to show, or null to show every pin.
-  static queryForwardByDate(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince: Date | null | undefined, minConfidence: number | null) {
-    return queryPage(true, false, fromDateTime, userId, lastPinId, pageSize, createdSince, minConfidence).then((res) => new Pins(res));
+  static queryForwardByDate(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince: Date | null | undefined, minConfidence: number | null, near?: NearFilter | null) {
+    return queryPage(true, false, fromDateTime, userId, lastPinId, pageSize, createdSince, minConfidence, near).then((res) => new Pins(res));
   }
 
-  static queryBackwardByDate(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince: Date | null | undefined, minConfidence: number | null) {
-    return queryPage(false, false, fromDateTime, userId, lastPinId, pageSize, createdSince, minConfidence).then((res) => new Pins(res));
+  static queryBackwardByDate(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince: Date | null | undefined, minConfidence: number | null, near?: NearFilter | null) {
+    return queryPage(false, false, fromDateTime, userId, lastPinId, pageSize, createdSince, minConfidence, near).then((res) => new Pins(res));
   }
 
   // aroundPinId splits the page at that pin (starting at fromDateTime) rather
   // than at the instant, so it is on the page however many pins share its start.
-  static queryInitialByDate(fromDateTime: Date, userId: number, pageSizePrev: number, pageSizeNext: number, createdSince: Date | null | undefined, minConfidence: number | null, aroundPinId = 0) {
-    return queryInitialPage(false, fromDateTime, userId, pageSizePrev, pageSizeNext, createdSince, minConfidence, aroundPinId).then((res) => new Pins(res));
+  static queryInitialByDate(fromDateTime: Date, userId: number, pageSizePrev: number, pageSizeNext: number, createdSince: Date | null | undefined, minConfidence: number | null, aroundPinId = 0, near?: NearFilter | null) {
+    return queryInitialPage(false, fromDateTime, userId, pageSizePrev, pageSizeNext, createdSince, minConfidence, aroundPinId, near).then((res) => new Pins(res));
   }
 
   // Every pin starting in [start, end), oldest first, at most limit of them:
   // a crowded day's "View all" popup. Filtered as the timeline is.
-  static queryBetween(start: Date, end: Date, userId: number, limit: number, createdSince: Date | null | undefined, minConfidence: number | null) {
-    return queryBetween(start, end, userId, limit, createdSince, minConfidence).then((res) => new Pins(res));
+  static queryBetween(start: Date, end: Date, userId: number, limit: number, createdSince: Date | null | undefined, minConfidence: number | null, near?: NearFilter | null) {
+    return queryBetween(start, end, userId, limit, createdSince, minConfidence, near).then((res) => new Pins(res));
   }
 
   // Just the start of every pin in [start, end), filtered as the timeline
   // is: enough to tell which day each falls on, to count a day's pins.
-  static listStartsBetween(start: Date, end: Date, createdSince: Date | null | undefined, minConfidence: number | null) {
+  static listStartsBetween(start: Date, end: Date, createdSince: Date | null | undefined, minConfidence: number | null, near?: NearFilter | null) {
     return db.query<{ utcStartDateTime: Date; allDay: boolean }>(
       `
       SELECT "p"."utcStartDateTime", "p"."allDay"
@@ -118,21 +119,22 @@ export default class Pins extends BasePins<Pin> {
       WHERE "p"."utcStartDateTime" >= $1::timestamptz AND "p"."utcStartDateTime" < $2::timestamptz
         AND "p"."utcDeletedDateTime" IS NULL
         AND ($3::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $3)
-        AND ($4::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $4) >= $4)`,
-      [start, end, createdSince || null, minConfidence],
+        AND ($4::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $4) >= $4)
+        AND ${withinRing('p', 5, 6)}`,
+      [start, end, createdSince || null, minConfidence, near?.point ?? null, near?.meters ?? null],
     );
   }
 
-  static queryForwardByDateFilterByHasFavorite(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince?: Date | null) {
-    return queryPage(true, true, fromDateTime, userId, lastPinId, pageSize, createdSince).then((res) => new Pins(res));
+  static queryForwardByDateFilterByHasFavorite(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince?: Date | null, near?: NearFilter | null) {
+    return queryPage(true, true, fromDateTime, userId, lastPinId, pageSize, createdSince, null, near).then((res) => new Pins(res));
   }
 
-  static queryBackwardByDateFilterByHasFavorite(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince?: Date | null) {
-    return queryPage(false, true, fromDateTime, userId, lastPinId, pageSize, createdSince).then((res) => new Pins(res));
+  static queryBackwardByDateFilterByHasFavorite(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince?: Date | null, near?: NearFilter | null) {
+    return queryPage(false, true, fromDateTime, userId, lastPinId, pageSize, createdSince, null, near).then((res) => new Pins(res));
   }
 
-  static queryInitialByDateFilterByHasFavorite(fromDateTime: Date, userId: number, pageSizePrev: number, pageSizeNext: number, createdSince?: Date | null) {
-    return queryInitialPage(true, fromDateTime, userId, pageSizePrev, pageSizeNext, createdSince).then((res) => new Pins(res));
+  static queryInitialByDateFilterByHasFavorite(fromDateTime: Date, userId: number, pageSizePrev: number, pageSizeNext: number, createdSince?: Date | null, near?: NearFilter | null) {
+    return queryInitialPage(true, fromDateTime, userId, pageSizePrev, pageSizeNext, createdSince, null, 0, near).then((res) => new Pins(res));
   }
 
   static queryPinByIds(pins: BasePins) {
@@ -386,6 +388,13 @@ const leanReferences = (as: string) => `
 export const pinConfidenceOf = (as: string) =>
   `"pinConfidence"(${leanReferences(as)}, "${as}"."sourceUrl", "${as}"."dateConfidence", "${as}"."utcCreatedDateTime")`;
 
+// Pin "as" inside the viewer's ring: the EWKT point at $point and the radius
+// in metres at $meters, both null when the request named no ring. A pin with
+// no place on the map is not near anywhere, so a ring leaves it out -
+// ST_DWithin answers NULL for such a pin, which the filter drops.
+const withinRing = (as: string, point: number, meters: number) =>
+  `($${point}::text IS NULL OR ST_DWithin("${as}"."location", $${point}::geography, $${meters}::double precision))`;
+
 // The columns a timeline page returns. Deliberately narrower than "Pin".*:
 // no longFormSummary (detail page only) and no utcDeletedDateTime (always
 // null here), and references only as far as a card reads them. "Media.type"
@@ -490,6 +499,7 @@ function queryPage(
   pageSize: number,
   createdSince?: Date | null,
   minConfidence: number | null = null,
+  near?: NearFilter | null,
 ): Promise<PageResult> {
   const after = queryForward ? '>' : '<';
   const direction = queryForward ? 'ASC' : 'DESC';
@@ -512,17 +522,18 @@ function queryPage(
         AND "p"."utcDeletedDateTime" IS NULL
         AND ($4::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $4)
         AND ($6::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $6) >= $6)
+        AND ${withinRing('p', 7, 8)}
       ORDER BY "p"."utcStartDateTime" ${direction}, "p"."id" ${direction}
       LIMIT $5))
     ORDER BY "Pin"."utcStartDateTime" ${direction}, "Pin"."id" ${direction},
       "Pin"."Media.id" ${direction}, "Pin"."Merchant.id" ${direction}`,
-      [userId, fromDateTime, lastPinId, createdSince || null, pageSize, onlyFavorites ? null : minConfidence],
+      [userId, fromDateTime, lastPinId, createdSince || null, pageSize, onlyFavorites ? null : minConfidence, near?.point ?? null, near?.meters ?? null],
     )
     .then(result);
 }
 
 // The pins starting in [start, end), the two steps queryPage takes.
-function queryBetween(start: Date, end: Date, userId: number, limit: number, createdSince: Date | null | undefined, minConfidence: number | null): Promise<PageResult> {
+function queryBetween(start: Date, end: Date, userId: number, limit: number, createdSince: Date | null | undefined, minConfidence: number | null, near?: NearFilter | null): Promise<PageResult> {
   return db
     .query(
       `
@@ -535,10 +546,11 @@ function queryBetween(start: Date, end: Date, userId: number, limit: number, cre
         AND "p"."utcDeletedDateTime" IS NULL
         AND ($4::timestamptz IS NULL OR "p"."utcCreatedDateTime" >= $4)
         AND ($6::integer IS NULL OR COALESCE(${pinConfidenceOf('p')}, $6) >= $6)
+        AND ${withinRing('p', 7, 8)}
       ORDER BY "p"."utcStartDateTime", "p"."id"
       LIMIT $5))
     ORDER BY "Pin"."utcStartDateTime", "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"`,
-      [userId, start, end, createdSince || null, limit, minConfidence],
+      [userId, start, end, createdSince || null, limit, minConfidence, near?.point ?? null, near?.meters ?? null],
     )
     .then(result);
 }
@@ -555,10 +567,11 @@ async function queryInitialPage(
   createdSince?: Date | null,
   minConfidence: number | null = null,
   aroundPinId = 0,
+  near?: NearFilter | null,
 ): Promise<PageResult> {
   const [prev, next] = await Promise.all([
-    queryPage(false, onlyFavorites, fromDateTime, userId, aroundPinId, pageSizePrev, createdSince, minConfidence),
-    queryPage(true, onlyFavorites, fromDateTime, userId, aroundPinId ? aroundPinId - 1 : 0, pageSizeNext, createdSince, minConfidence),
+    queryPage(false, onlyFavorites, fromDateTime, userId, aroundPinId, pageSizePrev, createdSince, minConfidence, near),
+    queryPage(true, onlyFavorites, fromDateTime, userId, aroundPinId ? aroundPinId - 1 : 0, pageSizeNext, createdSince, minConfidence, near),
   ]);
   return {
     pins: prev.pins.reverse().concat(next.pins),

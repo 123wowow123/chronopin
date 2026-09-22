@@ -491,7 +491,7 @@ https://trends.google.com/explore
 
 - Pin any major news or events that can out
 
-
+work through the Food & Beverage pins by hand; it's about a dozen.
 
 
 # OKF
@@ -499,19 +499,19 @@ https://trends.google.com/explore
 
 # Scraping
 
-pin can have user uploadable pictures
+scrape highly rated restaurant in every major city in the world
 
-slider for range radius of event
+pin can have user uploadable pictures in comments? Need microsoft cloud
 
-clicking on distance will take you to main map and draw a line from you to that location
-
-
-add slider to search by how late project is
 
 Make add suggestion to this pin feature on detailed view. example:
 Suggest and provide additonal reference URL
 Suggest different start and end date with with reason and reference
 Suggest missing or correcting information
+
+This needs anther table to hold it and needs logged in user tracking
+
+AI will then analye feedback but not necessary make any changes as original sources are weighted to be the ultimate truth
 
 
 Product pins should have notible features in long form summary

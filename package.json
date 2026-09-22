@@ -37,6 +37,8 @@
     "media:score-markets": "tsx scripts/media/scoreMarkets.ts",
     "markets:volume": "tsx scripts/markets/volume.ts",
     "merchants:amazon-prices": "tsx scripts/merchants/amazonPrices.ts",
+    "places:resolve": "tsx scripts/places/resolve.ts",
+    "places:refresh": "tsx scripts/places/refresh.ts",
     "ai:retirements": "tsx scripts/ai/retirements.ts",
     "sports:tournaments": "tsx scripts/sports/tournaments.ts",
     "astronomy:eclipses": "tsx scripts/astronomy/eclipses.ts",

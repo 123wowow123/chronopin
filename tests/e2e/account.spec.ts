@@ -108,6 +108,16 @@ test.describe.serial('a signed-in author', () => {
     await expect(page.getByText('First, edited')).toBeVisible();
     await page.getByTitle('Delete comment').click();
     await expect(page.getByText('First, edited')).toHaveCount(0);
+
+    // Take the pin down again. Nothing on the pin page does this, so it goes
+    // through the API - and it has to happen here, not only in the run's
+    // teardown: deleting a pin the way the app does broadcasts its removal
+    // (src/server/events.ts), so it leaves the timeline, the new pins panel
+    // of every open tab and the search index at once. The row-level tidying
+    // in cleanup.ts runs outside the app and can tell it none of that, which
+    // is why test pins used to sit in the new pins panel after a run.
+    expect((await page.request.delete(`/api/pins/${pinId}`)).status()).toBe(204);
+    expect((await page.request.get(`/api/pins/${pinId}`)).status()).toBe(404);
   });
 
   test('a signed-out visitor is sent to log in, and logging in works', async ({ page }) => {

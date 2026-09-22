@@ -51,6 +51,7 @@ Each recipe is a repeatable pattern. Update it when a run teaches something ([Le
 | Disease events | @HealthDesk | `Health & Medicine` (plus `Science & Research`, `Geopolitics`) | WHO fact sheets, news items and the dated COVID-19 timeline; `stacks.cdc.gov` for the MMWR issue itself; the event's own article for the narrative | A WHO declaration is an **instant** at Geneva; an outbreak is a **period** and an ongoing one takes a null end. Place the pin where the event happened - Messina, Broad Street, Camp Funston, Ann Arbor - not at the reporting agency, unless the declaration *is* the event. WHO speech URLs rot, so cite the timeline the organisation maintains; `cdc.gov` 403s `curl` and has restructured whole sections away |
 | Weather seasons and climate reports | @ClimateDesk | `Weather`, `Climate & Environment` | The agency that *defines* the season (NHC, BOM) and the body that schedules the report (IPCC) | A season is a **period in force**, not a day: official bounds, `scheduled`, exclusive 00:00Z end. These are the only reliably forward-dated pins this vertical has |
 | Restaurants | @FoodDesk | `Food & Beverage` | The restaurant's own Wikipedia article, the MICHELIN Guide, local restaurant press, the group's own site | The pin is the **opening** (or the closing, or a menu reset), placed at the restaurant, geocoded through Nominatim and reverse-geocoded for its address label; a MICHELIN star count is a `PinRating`, a Guide selection without a star is a tag |
+| Startup funding rounds | @TechDesk | `Corporate & Finance` (plus the company's own sector) | The company's own newsroom post, its wire release read through a mirror, then the trade press that day | The pin is the **close of the round**, dated from the release's dateline and placed at the company's headquarters. The owner's preference is to point `sourceUrl` at **the page for the thing the pin is about** rather than at the article announcing it - the company homepage for a company-level event, the product page for a product - with the announcement post demoted to the top reference. Both of those pages are undated, so the date reasoning then has to say the source carries no date and name the reference the date came from. `price` stays **null** - the round size is what the event is, not what it cost - and the amount, the lead investor and the valuation go in the title, description and summary. A private company has no ticker, so `stocks` are the listed parties around it (the former parent, the strategic investor, the customer), all `related` |
 
 # Restaurants
 
@@ -94,6 +95,8 @@ Thailand and the United States.
    would be a lie - so it is cited as a reference with the inspectors' verdict
    quoted in the reasoning. A World's 50 Best placing is a rank, not a score, and
    belongs in a tag. Yelp and Tripadvisor are both hard-403 with no keyless route.
+   **Since 2026-09-21 the Google and Yelp scores are shown too, but they are not
+   stored** - see point 10.
 7. **Adding a rating to a pin that already exists needs a script.** `PinRating`
    is deliberately untouched by `Pin#update` (schema 0017) and no route adds one
    on its own, so a rating that arrives after the pin does is written with
@@ -108,6 +111,75 @@ Thailand and the United States.
    finds no company channel match - and the hand pick found nothing either: what
    ranks is documentaries, chef interviews and wire pieces about the *aftermath*
    of a closing rather than the event. All ten are saved without one.
+10. **The live panel is handles in the database and nothing else** (`PinPlace`,
+   schema 0059; `src/server/places.ts`). Google's and Yelp's terms both limit how
+   long their ratings and review text may be kept, so the pin page fetches them
+   on view through `/api/pins/:id/place` with a one-hour in-process cache, and
+   the database keeps only the Google place id, the Yelp business alias and a
+   booking URL. A score never goes in `PinRating` - that table is for settled
+   facts about a finished work (a Tomatometer), and a restaurant's rating moves.
+   Both halves are optional: `GOOGLE_PLACES_API_KEY` (billed per request and per
+   field group - `GOOGLE_FIELDS` in that file is the bill) and `YELP_API_KEY`
+   (free tier). With neither key the panel still shows a booking link.
+   **Since the same day the ratings are SCRAPED by default and need no key at
+   all** (point 14). **The panel carries each source's star rating, its rating
+   count and a link to that source's own page, and nothing else** - review text
+   is not reproduced.
+   That keeps Google's Enterprise `reviews` band off the bill, drops Yelp to a
+   single request per business, and leaves the reviews where their authors
+   wrote them. All of them sit in **one block**, the pin's stored MICHELIN star
+   count included: a restaurant's ratings are one fact measured several times,
+   so the pin page stops rendering `PinRatings` separately once the pin has a
+   place, and the panel renders whenever *either* a stored rating or a place
+   answer exists - a 204 from the place route must not take the MICHELIN chip
+   off the page with it.
+11. **Resolve places with `npm run places:resolve`, and read the dry run.** It
+   matches a pin to its Google place id and Yelp alias from the company name
+   (the pin's *title* is an event, not a name) biased to the pin's coordinates,
+   and prints the pin's own address beside each match's so a chain resolving to
+   the wrong branch is visible before it is saved. A row fixed by hand
+   (`resolvedBy = 'hand'`) is never overwritten by a later run.
+12. **A booking link is found, never constructed** - the merchant-link rule. The
+   French Laundry's Tock page was taken from a link on `thomaskeller.com/tfl`,
+   which is what makes it trustworthy. Resy and OpenTable venue pages answer 200
+   for *any* slug (Resy's shell returns the generic "Right This Way" title), so a
+   200 is not evidence the venue is the right one. Yelp supplies a booking link
+   of its own for businesses whose `transactions` include `restaurant_reservation`.
+14. **The rating is scraped off Google Maps, keyless** (`src/server/placeScrape.ts`,
+   `npm run places:refresh`, stored by 0060). The Places API path is still there
+   and *wins when `GOOGLE_PLACES_API_KEY` is set*, but without a key the scrape
+   supplies the rating, the rating count and the opening state for nothing.
+   Three things make it work, each learned the hard way:
+   **(a) wait for the rating element, never sleep** - `networkidle2` plus a
+   fixed delay returned a reduced panel about half the time, which is what made
+   this look impossible at first; waiting for `[aria-label*="stars"]` read 4 of
+   4. **(b) the rating comes from the `4.6 stars` aria-label**, not from the
+   panel text, because the label outlives the markup. **(c) the rating count
+   must be matched as a pair with the rating** - taking "the first number in
+   brackets" read `(707)` out of the phone number and put 707 ratings on The
+   French Laundry. Google serves the count only *some* of the time, so
+   `setScraped` COALESCEs it and a null read never wipes a good number.
+   **Yelp cannot be scraped at all**: `yelp.com/biz/...` is 403 to our own
+   browser as well as to curl, so a Yelp score needs the free Fusion key.
+15. **A scraped reading is stored; an API reading is not.** The opposite of
+   point 10, and for a plain reason: the scrape costs a five-second Chromium
+   launch, so it cannot run while someone waits for a page, and a value that is
+   never kept could never be shown. 0060 stores it with a `checkedAt` beside
+   it, the `marketVolumeAt` shape. The *rating* is served however old it is;
+   the *opening state* is dropped once the read is over an hour old, rather
+   than telling someone a shut restaurant is open. **The scraped numbers are in
+   `seedPlaces.json` with their `checkedAt`**, so a `db:refresh` comes back with
+   ratings already showing instead of needing a five-second browser visit per
+   place first; the read time is restored as it was, not as `now()`, which is
+   what keeps an old reading honest - the rating shows, the stale opening state
+   does not.
+16. **Wait times have no sanctioned source.** Google documents popular times,
+   live busyness and wait times as a Maps and Search *display* feature, not a
+   Places API field, and Yelp's waitlist endpoint needs a partnership. The Maps
+   page is scraped for it (`src/server/googleBusyness.ts`), which is against
+   Google's terms and expected to break; it is isolated behind a circuit breaker
+   so that losing it costs nothing but the busy bar. It returned nothing from a
+   datacenter IP in four different ways - see [Learnings](learnings.md).
 
 # Weather and natural disasters
 

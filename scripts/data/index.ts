@@ -17,6 +17,7 @@ import CompanyRelation from '@/server/model/companyRelation';
 import PinTicker from '@/server/model/pinTicker';
 import PinTag from '@/server/model/pinTag';
 import { allFlightPaths, restoreFlightPaths } from '@/server/services/pinFlightPath';
+import { allPlaces, restorePlaces } from '@/server/model/pinPlace';
 import Source from '@/server/model/source';
 import log from '@/server/util/log';
 import { excludeE2e } from './excludeE2e';
@@ -38,6 +39,7 @@ const { values: flags } = parseArgs({
     stockfile: { type: 'string', default: './scripts/backup/seedStocks.json' },
     tagfile: { type: 'string', default: './scripts/backup/seedTags.json' },
     flightpathfile: { type: 'string', default: './scripts/backup/seedFlightPaths.json' },
+    placefile: { type: 'string', default: './scripts/backup/seedPlaces.json' },
     translationfile: { type: 'string', default: './scripts/backup/seedTranslations.json' },
     companyfile: { type: 'string', default: './scripts/backup/seedCompanies.json' },
     aphelionfile: { type: 'string', default: './scripts/backup/aphelion.json' },
@@ -84,11 +86,13 @@ async function saveDB() {
   // Tickers are in seedStocks.json; the view's copy on each pin is left out.
   // Awards are derived (npm run media:awards puts them back). Tags are in
   // seedTags.json, and the award ones follow the awards. Flight paths are in
-  // seedFlightPaths.json. The money on a pin's markets is a reading of the
+  // seedFlightPaths.json, and each place's handles and scraped rating in
+  // seedPlaces.json. The
+  // money on a pin's markets is a reading of the
   // exchanges that createPin does not restore and that goes stale by the day,
   // so it is left out too: `npm run markets:volume -- --apply` reads it again.
   const pins = all.map(
-    ({ stocks: _stocks, awards: _awards, tags: _tags, flightPath: _flightPath, marketVolume: _marketVolume, marketVolumeAt: _marketVolumeAt, ...pin }) => pin,
+    ({ stocks: _stocks, awards: _awards, tags: _tags, flightPath: _flightPath, place: _place, marketVolume: _marketVolume, marketVolumeAt: _marketVolumeAt, ...pin }) => pin,
   );
   const data = excludeE2e({
     users: await Users.getAll(BACKUP_USER_PROPS),
@@ -183,6 +187,11 @@ async function saveDB() {
   // Flight paths (0049): computed, but regenerating them needs the launch schedule.
   console.log('Backup Flight Paths');
   writeJson(flags.flightpathfile, (await allFlightPaths()).filter((f) => keptPinIds.has(f.pinId)));
+
+  // Where each pin's place is on Google and Yelp, how to book (0059), and the
+  // rating scraped off Maps with the time it was read (0060).
+  console.log('Backup Places');
+  writeJson(flags.placefile, (await allPlaces()).filter((p) => keptPinIds.has(p.pinId)));
 
   // Pin translations (0044): each costs a Claude call to make again.
   console.log('Backup Translations');
@@ -350,6 +359,14 @@ async function seedDB() {
       await restoreFlightPaths(readJson(flags.flightpathfile));
     } catch (error) {
       log.error('Flight Paths Save Error', JSON.stringify(error));
+    }
+  }
+
+  if (existsSync(flags.placefile)) {
+    try {
+      await restorePlaces(readJson(flags.placefile));
+    } catch (error) {
+      log.error('Places Save Error', JSON.stringify(error));
     }
   }
 

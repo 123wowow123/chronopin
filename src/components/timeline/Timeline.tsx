@@ -11,6 +11,10 @@ import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
 import { takeTimelineSpot } from '@/lib/client/returnSpot';
 import { useTodayHold } from '@/lib/client/todayHold';
 import { useQueryState } from '@/lib/client/urlState';
+import { viewerPlace, type ViewerPlace } from '@/lib/client/viewerPlace';
+import { distanceKm } from '@/lib/distance';
+import { radiusFromParam, radiusLabel, radiusSteps, radiusToParam } from '@/lib/radius';
+import { usesImperial } from '@/lib/weather';
 import { browserTimeZone, useTimeZone } from '@/lib/client/timeZone';
 import { daysBetween, dayKeyIn, monthDayOf } from '@/lib/format';
 import { DEFAULT_POSTED_WITHIN, SPAN_OPTIONS, spanLabel, spanPhrase, spanToParam } from '@/lib/postedSpan';
@@ -22,6 +26,7 @@ import { buildBags, pinDayKey, resolveTodayMarker, todayScrollId } from '@/lib/t
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { CardPin, DateTimeJson, NewPin, TimelinePage, TrendingPin } from '@/lib/types';
 import { personalWeigher, type UserPreference } from '@/lib/userWiki';
+import { DistanceSlider } from './DistanceSlider';
 import { TagCloud, tagPillSummary } from './TagCloud';
 import { FloatingControls } from './FloatingControls';
 import { NewPins } from './NewPins';
@@ -61,6 +66,29 @@ type Focus = { id: number; utcStartDateTime: string; allDay?: boolean };
 
 const NO_TODAY_MARKER: ReturnType<typeof resolveTodayMarker> = { index: -1, atEnd: false, todayBagIndex: -1 };
 
+// The ring the timeline is narrowed to: how far out, and the place it is
+// measured from. Only the browser knows that place, so it travels with each
+// request rather than sitting in the URL for a shared link to hand on.
+type Ring = { km: number; place: ViewerPlace };
+
+// Whether a pin's place falls inside the ring. A pin with no place on the map
+// is not near anywhere, which is what the server's ST_DWithin says too.
+function inRing(pin: { latitude?: number; longitude?: number }, ring: Ring): boolean {
+  if (pin.latitude == null || pin.longitude == null) return false;
+  return distanceKm(ring.place, { latitude: pin.latitude, longitude: pin.longitude }) <= ring.km;
+}
+
+// The ring as the API reads it: kilometres with the unit spelled out and no
+// rounding, whatever unit the reader set it in. Only the URL a person sees is
+// tidied - a radius that shifted between requests would move the edge of the
+// ring under the pins sitting on it.
+function ringParams(params: URLSearchParams, ring: Ring | null) {
+  if (!ring) return params;
+  params.set('near', `${ring.place.latitude},${ring.place.longitude}`);
+  params.set('within', `${ring.km}km`);
+  return params;
+}
+
 async function fetchPage(query: string): Promise<{ page: TimelinePage; links: Links }> {
   const res = await fetch(withPageLang(`/api/main${query}`), { credentials: 'same-origin' });
   if (!res.ok) {
@@ -72,9 +100,10 @@ async function fetchPage(query: string): Promise<{ page: TimelinePage; links: Li
 }
 
 // How many pins one day really has, loaded or not.
-async function fetchDayCount(day: string, timeZone: string, postedWithin: string | null): Promise<number> {
+async function fetchDayCount(day: string, timeZone: string, postedWithin: string | null, ring: Ring | null): Promise<number> {
   const params = new URLSearchParams({ day, tz: timeZone });
   if (postedWithin) params.set('created_within', postedWithin);
+  ringParams(params, ring);
   const res = await fetch(`/api/main/day?${params}`, { credentials: 'same-origin' });
   if (!res.ok) {
     throw new Error(`timeline day count failed: ${res.status}`);
@@ -91,6 +120,7 @@ export function Timeline({
   initialLinks,
   serverTimeZone,
   initialPostedWithin,
+  initialWithin,
   defaultPostedWithin,
   defaultSpan,
   initialSpecialtyDays,
@@ -107,6 +137,10 @@ export function Timeline({
   initialLinks: Links;
   serverTimeZone: string;
   initialPostedWithin: string | null;
+  // The ring from the URL (?within=50km), as written. It is only resolved in
+  // the browser: the radius may be a bare number in the reader's own unit,
+  // and the place to measure from is the browser's alone.
+  initialWithin: string | null;
   // The viewer's saved preference (or the site default): left out of the URL.
   defaultPostedWithin: string | null;
   defaultSpan: string;
@@ -134,7 +168,15 @@ export function Timeline({
   const [dateTimes, setDateTimes] = useState(initialDateTimes);
   const [links, setLinks] = useState(initialLinks);
   const [postedWithin, setPostedWithin] = useState(initialPostedWithin);
-  useQueryState({ posted: spanToParam(postedWithin, defaultPostedWithin) });
+  // Miles or kilometres, and roughly where the viewer is: both the browser's
+  // to answer, so neither is known until it has hydrated and looked.
+  const [imperial, setImperial] = useState(false);
+  const [place, setPlace] = useState<ViewerPlace | null>(null);
+  const [radiusKm, setRadiusKm] = useState<number | null>(null);
+  // Memoised: the day counts and the live feed both watch it, and a fresh
+  // object each render would set them going again on every keystroke.
+  const ring = useMemo<Ring | null>(() => (radiusKm && place ? { km: radiusKm, place } : null), [radiusKm, place]);
+  useQueryState({ posted: spanToParam(postedWithin, defaultPostedWithin), within: radiusToParam(radiusKm, imperial) });
   const [status, setStatus] = useState<'ready' | 'loading' | 'error'>('ready');
   // Bumped when pins are added, edited or removed, so the days at either end
   // of the loaded stretch are counted again: any change may have moved a pin
@@ -150,7 +192,23 @@ export function Timeline({
   const prependAnchor = useRef<{ height: number; top: number } | null>(null);
 
   const todayKey = dayKeyIn(now, timeZone);
-  const bags = useMemo(() => buildBags(pins, dateTimes, timeZone), [pins, dateTimes, timeZone]);
+  // Whether the timeline is showing less than all of itself, which decides
+  // what an empty day is worth (see bags).
+  const filtered = !!postedWithin || !!ring;
+  const bags = useMemo(() => {
+    const all = buildBags(pins, dateTimes, timeZone);
+    // Narrowed to a posting window or to a ring around the viewer, the pins
+    // left are spread thin, and the days between them carry nothing but their
+    // own holidays. Each of those is a full block of empty timeline beside its
+    // markers: within 25 miles a few pages come to 667 of them against 118
+    // cards, and the cards that survived the filter are lost among them. So a
+    // filtered timeline draws only days that have a pin, and the holidays show
+    // where they always did on such a day - as tags beside its cards.
+    //
+    // Whole, the timeline keeps them: its pins are a day or two apart, so a
+    // marker's own day sits among cards as furniture rather than filler.
+    return filtered ? all.filter((bag) => bag.pins.length) : all;
+  }, [pins, dateTimes, timeZone, filtered]);
   const boost = useMemo(() => (preference ? personalWeigher(preference) : undefined), [preference]);
   // Opened on a pin far from today, the pages loaded may not reach it yet: no
   // TODAY marker at the edge of that stretch until they do. A timeline opened
@@ -168,6 +226,59 @@ export function Timeline({
       loadSpecialtyDays().then((all) => setSpecialtyDays(all));
     }
   }, [bags, specialtyDays]);
+
+  // A new window or a new ring reloads from the server: the timeline only
+  // holds the pages it has scrolled through, so filtering locally would miss
+  // pins and page through the unfiltered set.
+  const reload = useCallback(async (within: string | null, nextRing: Ring | null) => {
+    const params = new URLSearchParams();
+    if (within) params.set('created_within', within);
+    ringParams(params, nextRing);
+    const token = ++loadToken.current;
+    setStatus('loading');
+    try {
+      const { page, links: pageLinks } = await fetchPage(params.size ? `?${params}` : '');
+      if (token !== loadToken.current) return;
+      scrolledToToday.current = false;
+      setPins(page.pins);
+      setDateTimes(page.dateTimes);
+      setLinks(pageLinks);
+      setStatus('ready');
+    } catch {
+      if (token === loadToken.current) setStatus('error');
+    }
+  }, []);
+
+  // The latest posting window, for the one effect below that runs long after
+  // the render it was started in.
+  const latestPosted = useRef(postedWithin);
+  useLayoutEffect(() => {
+    latestPosted.current = postedWithin;
+  });
+
+  // Roughly where the viewer is, asked once (viewerPlace prompts for nothing),
+  // and whether they read miles. The ring is measured from that place, so a
+  // ring the URL already carries can only be applied once it is known: the
+  // server rendered the first page without it, since only the browser knows
+  // where the viewer is.
+  useEffect(() => {
+    let cancelled = false;
+    void viewerPlace().then((found) => {
+      if (cancelled || !found) return;
+      const units = usesImperial();
+      setImperial(units);
+      setPlace(found);
+      // A bare radius in the URL ("within=50") is read in the unit the reader
+      // uses, so the ring can only be resolved once that is known too.
+      const asked = radiusFromParam(initialWithin, units);
+      if (!asked) return;
+      setRadiusKm(asked);
+      void reload(latestPosted.current, { km: asked, place: found });
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [initialWithin, reload]);
 
   const scrollToToday = useCallback(() => {
     const id = todayScrollId(bags, resolveTodayMarker(bags, dayKeyIn(Date.now(), timeZone)));
@@ -236,9 +347,13 @@ export function Timeline({
       holdToday();
       return;
     }
+    const query = new URLSearchParams();
     const posted = spanToParam(postedWithin, defaultPostedWithin);
-    router.push(posted ? `/?posted=${encodeURIComponent(posted)}` : '/');
-  }, [reachesToday, holdToday, postedWithin, defaultPostedWithin, router]);
+    if (posted) query.set('posted', posted);
+    const within = radiusToParam(radiusKm, imperial);
+    if (within) query.set('within', within);
+    router.push(query.size ? `/?${query}` : '/');
+  }, [reachesToday, holdToday, postedWithin, defaultPostedWithin, radiusKm, imperial, router]);
   // After the effect above, so the position it records on mount is today's.
   useManualScrollRestoration();
 
@@ -285,20 +400,27 @@ export function Timeline({
         setNewPins((list) => list.filter((p) => p.id !== changed.id));
         return;
       }
-      setPins((list) => {
-        const index = list.findIndex((p) => p.id === changed.id);
-        if (index !== -1) {
-          // Broadcasts carry no viewer, so keep this viewer's own watch state,
-          // nor impressions, so keep the count the day's pick was drawn with.
-          const next = [...list];
-          next[index] = { ...withHtml, hasFavorite: list[index].hasFavorite, impressionCount: list[index].impressionCount };
-          return next;
-        }
-        if (type !== 'pin:save' || !list.length) return list;
-        const times = list.map((p) => new Date(p.utcStartDateTime).getTime());
-        const at = new Date(changed.utcStartDateTime).getTime();
-        return at >= Math.min(...times) && at <= Math.max(...times) ? [...list, withHtml] : list;
-      });
+      // A pin moved outside the ring the timeline is narrowed to leaves the
+      // cards, as it would on reload, and one saved outside it never joins.
+      // The new pins panel is not narrowed by distance, so it keeps both.
+      if (ring && !inRing(changed, ring)) {
+        setPins((list) => list.filter((p) => p.id !== changed.id));
+      } else {
+        setPins((list) => {
+          const index = list.findIndex((p) => p.id === changed.id);
+          if (index !== -1) {
+            // Broadcasts carry no viewer, so keep this viewer's own watch state,
+            // nor impressions, so keep the count the day's pick was drawn with.
+            const next = [...list];
+            next[index] = { ...withHtml, hasFavorite: list[index].hasFavorite, impressionCount: list[index].impressionCount };
+            return next;
+          }
+          if (type !== 'pin:save' || !list.length) return list;
+          const times = list.map((p) => new Date(p.utcStartDateTime).getTime());
+          const at = new Date(changed.utcStartDateTime).getTime();
+          return at >= Math.min(...times) && at <= Math.max(...times) ? [...list, withHtml] : list;
+        });
+      }
       setNewPins((list) => {
         const index = list.findIndex((p) => p.id === changed.id);
         if (index === -1) {
@@ -319,7 +441,7 @@ export function Timeline({
       clearTimeout(recount);
       stops.forEach((stop) => stop());
     };
-  }, [minConfidence]);
+  }, [minConfidence, ring]);
 
   const loadMore = useCallback(
     async (direction: 'previous' | 'next') => {
@@ -388,7 +510,8 @@ export function Timeline({
     if (bags.length && links.next) days.add(bags[bags.length - 1].day);
     return days;
   }, [bags, links]);
-  const countKey = (day: string) => `${day}|${timeZone}|${postedWithin ?? ''}`;
+  const ringKey = ring ? `${ring.place.latitude},${ring.place.longitude},${ring.km}` : '';
+  const countKey = (day: string) => `${day}|${timeZone}|${postedWithin ?? ''}|${ringKey}`;
   const [dayCounts, setDayCounts] = useState<Record<string, number>>({});
   const countsAsked = useRef(new Set<string>());
   useEffect(() => {
@@ -399,47 +522,47 @@ export function Timeline({
     // right after: counting in the first would only be thrown away.
     if (timeZone !== browserTimeZone()) return;
     for (const day of edgeDays) {
-      const key = `${day}|${timeZone}|${postedWithin ?? ''}`;
+      const key = `${day}|${timeZone}|${postedWithin ?? ''}|${ringKey}`;
       if (countsAsked.current.has(key)) continue;
       countsAsked.current.add(key);
-      fetchDayCount(day, timeZone, postedWithin).then(
+      fetchDayCount(day, timeZone, postedWithin, ring).then(
         (count) => setDayCounts((counts) => ({ ...counts, [key]: count })),
         // Asked again when the day is next at an edge.
         () => countsAsked.current.delete(key),
       );
     }
-  }, [edgeDays, timeZone, postedWithin, countsVersion]);
+  }, [edgeDays, timeZone, postedWithin, ring, ringKey, countsVersion]);
 
-  // A new "posted within" window reloads from the server: the timeline only
-  // holds the pages it has scrolled through, so filtering locally would miss
-  // pins and page through the unfiltered set.
-  async function changePostedWithin(within: string | null) {
+  function changePostedWithin(within: string | null) {
     if ((postedWithin || null) === (within || null)) return;
     setPostedWithin(within);
-    const token = ++loadToken.current;
-    setStatus('loading');
-    try {
-      const { page, links: pageLinks } = await fetchPage(within ? `?created_within=${encodeURIComponent(within)}` : '');
-      if (token !== loadToken.current) return;
-      scrolledToToday.current = false;
-      setPins(page.pins);
-      setDateTimes(page.dateTimes);
-      setLinks(pageLinks);
-      setStatus('ready');
-    } catch {
-      if (token === loadToken.current) setStatus('error');
-    }
+    void reload(within, ring);
+  }
+
+  function changeRadius(km: number | null) {
+    if (radiusKm === km) return;
+    setRadiusKm(km);
+    // No place to measure from (a refused lookup, a zone that names no city):
+    // the slider is not shown at all, so this cannot narrow to nothing.
+    void reload(postedWithin, km && place ? { km, place } : null);
   }
 
   const empty = !bags.length;
   const phrase = spanPhrase(postedWithin, t.locale);
+  const radiusText = radiusLabel(radiusKm, imperial, t.locale);
+  // Folded behind one pill, the two sliders share its face. With a ring set
+  // the pill has to name both, so its caption widens from "Posted within" to
+  // "Filters" - and the span slider keeps its own heading, since the pill no
+  // longer says what it alone is set to.
+  const summary = ring ? `${spanLabel(postedWithin, t.locale)} · ${radiusText}` : spanLabel(postedWithin, t.locale);
 
   return (
     <TimelineVideoProvider setting={video}>
       <div className="px-[max(0.75rem,env(safe-area-inset-left))] pb-24 lg:px-4 xl:pr-[288px]">
         <FloatingControls
-          summaryCaption={t('controls.postedWithin')}
-          summary={spanLabel(postedWithin, t.locale)}
+          summaryCaption={ring ? t('controls.filters') : t('controls.postedWithin')}
+          summary={summary}
+          summaryIsPostedWithin={!ring}
           onToday={goToToday}
           tags={{ summary: tagPillSummary(undefined, t.locale), control: <TagCloud postedWithin={postedWithin} /> }}
           aside={
@@ -456,8 +579,20 @@ export function Timeline({
             past={postedWithin}
             pastOnly
             pastLabelSpan={defaultSpan}
-            onChange={({ past }) => void changePostedWithin(past)}
+            onChange={({ past }) => changePostedWithin(past)}
           />
+          {/* Only once the browser has found somewhere to measure from: with
+              no place there is no ring to set, and a crawler or a viewer on a
+              zone that names no city sees the timeline as it always was. */}
+          {place ? (
+            <DistanceSlider
+              steps={radiusSteps(imperial)}
+              radius={radiusKm}
+              imperial={imperial}
+              placeName={place.name}
+              onChange={changeRadius}
+            />
+          ) : null}
         </FloatingControls>
 
         <div ref={topRef} aria-hidden className="h-px" />
@@ -491,7 +626,11 @@ export function Timeline({
         {status === 'error' ? <p className="mt-16 text-center text-lg text-subtle">{t('timeline.error')}</p> : null}
         {status === 'ready' && empty ? (
           <p className="mt-16 text-center text-lg text-subtle">
-            {postedWithin ? t('timeline.noPinsPosted', { span: phrase }) : t('timeline.error')}
+            {ring
+              ? t('timeline.noPinsNear', { radius: radiusText })
+              : postedWithin
+                ? t('timeline.noPinsPosted', { span: phrase })
+                : t('timeline.error')}
           </p>
         ) : null}
       </div>

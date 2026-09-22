@@ -11490,7 +11490,7 @@
     "allDay": true,
     "allDayStated": false,
     "utcCreatedDateTime": "2026-09-21T22:24:20.061Z",
-    "utcUpdatedDateTime": null,
+    "utcUpdatedDateTime": "2026-09-22T00:25:17.770Z",
     "utcDeletedDateTime": null,
     "user": {
       "id": 372,
@@ -11531,7 +11531,7 @@
     "merchants": [],
     "references": [
       {
-        "id": 4635,
+        "id": 4778,
         "url": "https://guide.michelin.com/us/en/california/yountville/restaurant/the-french-laundry",
         "title": "The French Laundry – Yountville - a MICHELIN Guide Restaurant",
         "confidence": 95,
@@ -19756,7 +19756,7 @@
     "description": "Andoni Luis Aduriz opened his Basque restaurant in Gipuzkoa in March 1998. Restaurant Magazine has counted it among the world's best since 2006, ranking it as high as fourth.",
     "sourceUrl": "https://en.wikipedia.org/wiki/Mugaritz",
     "longFormSummary": "<ul><li>Mugaritz is in Rentería (Errenteria), Gipuzkoa, Spain, and opened in March 1998 under chef Andoni Aduriz. [S]</li><li>It has been considered one of the world's best restaurants since 2006 by Restaurant Magazine, and has been ranked as high as fourth on its list. [S] [1]</li></ul>",
-    "address": "Aldura gunea aldea, Astigarraga, Gipuzkoa 20115, Basque Country, Spain",
+    "address": "Aldura gunea 20, Errenteria, Gipuzkoa 20100, Basque Country, Spain",
     "latitude": 43.272,
     "longitude": -1.917,
     "priceLowerBound": null,
@@ -19784,7 +19784,7 @@
     "allDay": true,
     "allDayStated": false,
     "utcCreatedDateTime": "2026-09-21T22:24:25.866Z",
-    "utcUpdatedDateTime": "2026-09-21T22:27:37.694Z",
+    "utcUpdatedDateTime": "2026-09-22T02:56:58.319Z",
     "utcDeletedDateTime": null,
     "user": {
       "id": 372,
@@ -19805,7 +19805,7 @@
     "merchants": [],
     "references": [
       {
-        "id": 4640,
+        "id": 4810,
         "url": "https://www.theworlds50best.com/list/1-50",
         "title": "The World's 50 Best Restaurants | The List and Awards",
         "confidence": 85,
@@ -19814,7 +19814,7 @@
         "pinId": 2466
       },
       {
-        "id": 4641,
+        "id": 4811,
         "url": "https://guide.michelin.com/en/pais-vasco/errenteria/restaurant/mugaritz",
         "title": "Mugaritz – Errenteria - a MICHELIN Guide Restaurant",
         "confidence": 95,
@@ -207714,6 +207714,170 @@
         "reasoning": "Independent trade coverage of the certification that also dates Southwest’s target for first deliveries, which Boeing’s release leaves open.",
         "utcCreatedDateTime": "2026-09-21T05:05:16.214883+00:00",
         "pinId": 2345
+      }
+    ],
+    "ratings": [],
+    "favorites": [],
+    "likes": []
+  },
+  {
+    "_prop": [
+      "id",
+      "parentId",
+      "rootThread",
+      "title",
+      "description",
+      "sourceUrl",
+      "longFormSummary",
+      "address",
+      "latitude",
+      "longitude",
+      "priceLowerBound",
+      "priceUpperBound",
+      "price",
+      "priceCurrency",
+      "tip",
+      "dateConfidence",
+      "dateConfidenceReasoning",
+      "companyId",
+      "company",
+      "companyWikiUrl",
+      "companyLogoUrl",
+      "categories",
+      "utcStartDateTime",
+      "utcEndDateTime",
+      "sourceStartDateTime",
+      "sourceEndDateTime",
+      "originalStartDate",
+      "delayReasoning",
+      "episodeCount",
+      "episodeStatus",
+      "marketVolume",
+      "allDay",
+      "allDayStated",
+      "utcCreatedDateTime",
+      "utcUpdatedDateTime",
+      "utcDeletedDateTime"
+    ],
+    "id": 2533,
+    "parentId": null,
+    "rootThread": false,
+    "title": "ALSO TM-B Launch Edition Deliveries Begin",
+    "description": "The first TM-B Launch Edition e-bikes reached US riders in the week of 3 August 2026, about six weeks later than the spring ALSO promised at the bike's unveiling. The Rivian spinout's Class 3 debut runs to 100 miles on a charge and swaps its Top Frame from cargo to passenger duty in under three seconds.",
+    "sourceUrl": "https://ridealso.com/products/tm-b",
+    "longFormSummary": "<ul><li>The <strong>TM-B Launch Edition</strong>, ALSO's first product, began reaching US customers in the week of 3 August 2026 - <strong>roughly six weeks later than promised</strong>. TechCrunch reported on 31 July 2026 that deliveries would start \"next week\"; ALSO confirmed on 19 August that the bike \"has started shipping to customers across the U.S.\" (<a href=\"https://techcrunch.com/2026/07/31/rivian-spinoff-also-to-start-delivering-e-bikes-after-months-of-delays/\">TechCrunch</a>; <a href=\"https://ridealso.com/blogs/all/also-announces-150-million-series-d-financing\">ALSO</a>).</li><li>ALSO revealed the TM-B at a launch event in <strong>Oakland on 22 October 2025</strong> at $4,500 for the Launch Edition, saying it would \"come to market this spring\" (<a href=\"https://techcrunch.com/2025/10/22/rivian-spinoff-also-reveals-a-high-end-modular-e-bike-for-4500/\">TechCrunch</a>).</li><li>The slip was <strong>supply chain</strong>. ALSO: \"A rapid, industry-wide spike in demand for raw materials and electronic components has impacted key parts required for the TM-B.\" The company declined to name the components and expected to finish the Launch Edition deliveries by September 2026 (<a href=\"https://techcrunch.com/2026/07/31/rivian-spinoff-also-to-start-delivering-e-bikes-after-months-of-delays/\">TechCrunch</a>).</li><li>It is a <strong>Class 3 e-bike</strong>: pedal assist to 28 mph, up to 100 miles of range, 10 assist levels, 0.3 g acceleration, 120 mm of suspension front and rear, on 24-inch wheels (<a href=\"https://ridealso.com/products/tm-b\">ALSO's product page</a>; <a href=\"https://techcrunch.com/2025/10/22/rivian-spinoff-also-reveals-a-high-end-modular-e-bike-for-4500/\">TechCrunch</a>).</li><li>The selling idea is <strong>modularity</strong>: a <em>Top Frame</em> swaps in under three seconds with no tools, turning one bike into a cargo, passenger or solo machine, and the 2.75-inch <em>Portal</em> touchscreen handles navigation, ride data and media while the battery doubles as a power bank (<a href=\"https://ridealso.com/products/tm-b\">ALSO</a>).</li><li>The line now <strong>starts at $3,500</strong> for the 60-mile model, with the 100-mile Performance and Standard trims opened for pre-order on 18 August 2026 and their own deliveries due in autumn (<a href=\"https://micromobility.io/news/also-raises-150m-to-accelerate-its-autonomous-vehicle-platform\">micromobility.io</a>; <a href=\"https://ridealso.com/blogs/all/also-announces-150-million-series-d-financing\">ALSO</a>).</li></ul>",
+    "address": "ALSO, 630 Hansen Way, Palo Alto, California 94306, United States",
+    "latitude": 37.4201079,
+    "longitude": -122.1401846,
+    "priceLowerBound": null,
+    "priceUpperBound": null,
+    "price": 4500,
+    "priceCurrency": "USD",
+    "tip": null,
+    "dateConfidence": "delayed",
+    "dateConfidenceReasoning": "No source names the day. TechCrunch, on Friday 31 July 2026, said deliveries start \"next week\"; ALSO confirmed on 19 August that the bike \"has started shipping to customers across the U.S.\" The pin takes Monday 3 August, the first day of that week - estimated, all-day, and the product page itself carries no date.",
+    "companyId": 3008,
+    "company": "ALSO",
+    "companyWikiUrl": null,
+    "companyLogoUrl": "https://www.google.com/s2/favicons?domain=ridealso.com&sz=64",
+    "categories": [
+      "Consumer Electronics",
+      "Infrastructure & Transportation"
+    ],
+    "utcStartDateTime": "2026-08-03T00:00:00.000Z",
+    "utcEndDateTime": "2026-08-04T00:00:00.000Z",
+    "sourceStartDateTime": null,
+    "sourceEndDateTime": null,
+    "originalStartDate": "2026-06-20",
+    "delayReasoning": "Estimated: at the 22 October 2025 unveiling ALSO said the Launch Edition would \"come to market this spring\", so the original date is 20 June 2026, spring's last day. It shipped in the week of 3 August, which ALSO blamed on \"stress on global supply chains\".",
+    "episodeCount": null,
+    "episodeStatus": null,
+    "allDay": true,
+    "allDayStated": true,
+    "utcCreatedDateTime": "2026-09-22T00:23:53.850Z",
+    "utcUpdatedDateTime": "2026-09-22T01:32:20.897Z",
+    "utcDeletedDateTime": null,
+    "user": {
+      "id": 276,
+      "userName": "@TechDesk"
+    },
+    "media": [
+      {
+        "id": 4683,
+        "thumbName": "0c1a805f-5e60-481a-bc1a-4971650e0f52.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 800,
+        "originalUrl": "https://ridealso.com/cdn/shop/files/112111-03014-1-90deg.jpg?v=1786008230&width=1200",
+        "originalWidth": 1200,
+        "originalHeight": 960,
+        "type": "1"
+      },
+      {
+        "id": 4684,
+        "thumbName": "9b2575bc-08b5-4025-a1ba-21e82b3af6bd.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 1000,
+        "originalUrl": "https://ridealso.com/cdn/shop/files/explore_TM-B.jpg?v=1787023558&width=2000",
+        "originalWidth": 2000,
+        "originalHeight": 2000,
+        "type": "1"
+      },
+      {
+        "id": 4685,
+        "thumbName": "fecab6db-b7f8-4d1a-8a60-22765ee7daba.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 1333,
+        "originalUrl": "https://ridealso.com/cdn/shop/files/tm-b-header.jpg?v=1785347126&width=1440",
+        "originalWidth": 1440,
+        "originalHeight": 1920,
+        "type": "1"
+      },
+      {
+        "id": 4686,
+        "thumbName": "d93d1bb8-b9c5-482e-a1b9-24217decfe3a.jpeg",
+        "thumbWidth": 1000,
+        "thumbHeight": 563,
+        "originalUrl": "https://www.youtube.com/watch?v=OxWH2cE2x1U",
+        "type": "3"
+      }
+    ],
+    "merchants": [],
+    "references": [
+      {
+        "id": 4806,
+        "url": "https://techcrunch.com/2026/07/31/rivian-spinoff-also-to-start-delivering-e-bikes-after-months-of-delays/",
+        "title": "Rivian spinoff Also to start delivering e-bikes after months of delays",
+        "confidence": 95,
+        "reasoning": "The report that dates the release: published 31 July 2026, it says deliveries start \"next week\", quotes ALSO's supply-chain explanation in full and notes the company expected to finish Launch Edition deliveries by September.",
+        "utcCreatedDateTime": "2026-09-22T01:32:20.897847+00:00",
+        "pinId": 2533
+      },
+      {
+        "id": 4807,
+        "url": "https://techcrunch.com/2025/10/22/rivian-spinoff-also-reveals-a-high-end-modular-e-bike-for-4500/",
+        "title": "Rivian spinoff Also reveals a high-end modular e-bike for $4,500",
+        "confidence": 92,
+        "reasoning": "The 22 October 2025 unveiling in Oakland - the source of the $4,500 Launch Edition price, the full trim ladder and the \"come to market this spring\" promise this pin is measured against.",
+        "utcCreatedDateTime": "2026-09-22T01:32:20.897847+00:00",
+        "pinId": 2533
+      },
+      {
+        "id": 4808,
+        "url": "https://ridealso.com/blogs/all/also-announces-150-million-series-d-financing",
+        "title": "ALSO announces $150 million Series D financing",
+        "confidence": 85,
+        "reasoning": "ALSO's own confirmation, on 19 August 2026, that the Launch Edition \"has started shipping to customers across the U.S.\", which closes the bracket on the delivery start date.",
+        "utcCreatedDateTime": "2026-09-22T01:32:20.897847+00:00",
+        "pinId": 2533
+      },
+      {
+        "id": 4809,
+        "url": "https://micromobility.io/news/also-raises-150m-to-accelerate-its-autonomous-vehicle-platform",
+        "title": "ALSO Raises $150M to Accelerate Its Autonomous Vehicle Platform",
+        "confidence": 75,
+        "reasoning": "Sector trade press with the current price ladder ($3,500 for 60 miles, $4,500 for 100) and the 18 August pre-order opening for the Performance and Standard trims with autumn deliveries.",
+        "utcCreatedDateTime": "2026-09-22T01:32:20.897847+00:00",
+        "pinId": 2533
       }
     ],
     "ratings": [],

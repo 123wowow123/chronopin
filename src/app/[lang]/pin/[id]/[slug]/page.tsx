@@ -19,10 +19,12 @@ import { PinConfidence } from '@/components/pin/PinConfidence';
 import { PinDistance } from '@/components/pin/PinDistance';
 import { PinDuplicates } from '@/components/pin/PinDuplicates';
 import { PinOdds } from '@/components/pin/PinOdds';
+import { PinPlace } from '@/components/pin/PinPlace';
 import { PinStocks } from '@/components/pin/PinStocks';
 import { PinAwards } from '@/components/pin/PinAwards';
 import { PinTags } from '@/components/pin/PinTags';
 import { PinRatings, RatingSummary } from '@/components/pin/PinRatings';
+import { hasPlace } from '@/lib/places';
 import { EpisodeCount } from '@/components/pin/EpisodeCount';
 import { MarketVolume } from '@/components/pin/MarketVolume';
 import { PinReferences } from '@/components/pin/PinReferences';
@@ -132,7 +134,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
                   ) : null}
                 </p>
               ) : null}
-              <PinDistance latitude={pin.latitude} longitude={pin.longitude} />
+              <PinDistance pinId={pin.id} latitude={pin.latitude} longitude={pin.longitude} />
               <PinWeather pinId={pin.id} />
             </div>
           ) : null}
@@ -267,6 +269,11 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
 
       {pin.utcStartDateTime ? <CountdownMeter start={pin.utcStartDateTime} since={pin.utcCreatedDateTime} allDay={pin.allDay} /> : null}
 
+      {/* Above the title: on a pin you can walk into, what the place scores
+          and whether it is open now is the first thing worth knowing, and the
+          headline is about an opening decades ago. */}
+      {hasPlace(pin.place) ? <PinPlace pinId={pin.id} ratings={pin.ratings} /> : null}
+
       <h1 className="mt-3 mb-4 flex items-start gap-2 text-3xl leading-tight font-semibold tracking-tight text-pretty">
         {pin.sourceUrl ? (
           <>
@@ -291,9 +298,12 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
         </details>
       ) : null}
 
-      {/* The scraped facts about the work, on one wrapping row. */}
+      {/* The scraped facts about the work, on one wrapping row. A pin with a
+          place leaves its ratings out of this row: PinPlace shows them in one
+          block with the place's live scores, so a MICHELIN star count does not
+          sit in a chip of its own above them. */}
       <div className="-mt-1 mb-4 flex flex-wrap items-center gap-2 empty:hidden">
-        <PinRatings ratings={pin.ratings} className="" />
+        {hasPlace(pin.place) ? null : <PinRatings ratings={pin.ratings} className="" />}
         <EpisodeCount pin={pin} />
         <MarketVolume pin={pin} />
       </div>

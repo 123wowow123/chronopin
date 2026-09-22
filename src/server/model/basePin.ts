@@ -107,6 +107,11 @@ export default class BasePin {
     this.tags = Array.isArray(pin.tags) ? pin.tags : [];
     // Also read-only, from the view (PinFlightPath, src/server/services/pinFlightPath.ts).
     this.flightPath = pin.flightPath && Array.isArray(pin.flightPath.points) ? pin.flightPath : null;
+    // Also read-only, from the view (PinPlace, 0059): where the pin's place is
+    // on Google and Yelp. Handles only - the scores are fetched on view, never
+    // stored - and, like the ratings, an edit cannot wipe them.
+    this.place =
+      pin.place && (pin.place.googlePlaceId || pin.place.yelpBusinessId || pin.place.reservationUrl) ? pin.place : null;
     return this;
   }
 

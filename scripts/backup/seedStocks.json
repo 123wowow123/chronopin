@@ -8687,6 +8687,42 @@
       "utcRemovedDateTime": null,
       "relation": "company",
       "note": "the owner of Amazon Leo."
+    },
+    {
+      "id": 753,
+      "pinId": 2533,
+      "symbol": "RIVN",
+      "name": "Rivian",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-22T00:23:55.861Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": null
+    },
+    {
+      "id": 754,
+      "pinId": 2533,
+      "symbol": "DASH",
+      "name": "DoorDash",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-22T00:23:56.034Z",
+      "utcRemovedDateTime": "2026-09-22T01:12:07.898Z",
+      "relation": "related",
+      "note": null
+    },
+    {
+      "id": 755,
+      "pinId": 2533,
+      "symbol": "AMZN",
+      "name": "Amazon",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-22T00:23:56.211Z",
+      "utcRemovedDateTime": "2026-09-22T01:12:07.940Z",
+      "relation": "related",
+      "note": null
     }
   ],
   "prices": [
@@ -9413,7 +9449,7 @@
       "day": "2014-10-14",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-09-19T05:19:35.124Z",
+      "utcCheckedDateTime": "2026-09-22T00:11:20.014Z",
       "utcSetDateTime": "2026-09-19T05:12:36.185Z"
     },
     {
@@ -24980,6 +25016,105 @@
       "utcPriceDateTime": null,
       "utcCheckedDateTime": "2026-09-21T23:24:09.127Z",
       "utcSetDateTime": "2026-09-21T23:24:08.006Z"
+    },
+    {
+      "id": 6563,
+      "pinTickerId": 753,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 15.38,
+      "utcPriceDateTime": "2026-09-21T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-09-22T00:23:58.145Z",
+      "utcSetDateTime": "2026-09-22T00:23:56.171Z"
+    },
+    {
+      "id": 6564,
+      "pinTickerId": 753,
+      "kind": "start",
+      "utcStartDateTime": "2026-08-19T00:00:00.000Z",
+      "day": "2026-08-19",
+      "price": 15.73,
+      "utcPriceDateTime": "2026-08-19T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-22T00:23:57.567Z",
+      "utcSetDateTime": "2026-09-22T00:23:56.173Z"
+    },
+    {
+      "id": 6565,
+      "pinTickerId": 754,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 194.61,
+      "utcPriceDateTime": "2026-09-21T23:57:00.000Z",
+      "utcCheckedDateTime": "2026-09-22T00:23:57.535Z",
+      "utcSetDateTime": "2026-09-22T00:23:56.174Z"
+    },
+    {
+      "id": 6566,
+      "pinTickerId": 754,
+      "kind": "start",
+      "utcStartDateTime": "2026-08-19T00:00:00.000Z",
+      "day": "2026-08-19",
+      "price": 220.22,
+      "utcPriceDateTime": "2026-08-19T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-22T00:23:57.421Z",
+      "utcSetDateTime": "2026-09-22T00:23:56.176Z"
+    },
+    {
+      "id": 6571,
+      "pinTickerId": 755,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 259.14,
+      "utcPriceDateTime": "2026-09-21T23:59:00.000Z",
+      "utcCheckedDateTime": "2026-09-22T00:23:57.419Z",
+      "utcSetDateTime": "2026-09-22T00:23:56.223Z"
+    },
+    {
+      "id": 6572,
+      "pinTickerId": 755,
+      "kind": "start",
+      "utcStartDateTime": "2026-08-19T00:00:00.000Z",
+      "day": "2026-08-19",
+      "price": 265.84,
+      "utcPriceDateTime": "2026-08-19T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-22T00:23:56.736Z",
+      "utcSetDateTime": "2026-09-22T00:23:56.225Z"
+    },
+    {
+      "id": 6698,
+      "pinTickerId": 753,
+      "kind": "start",
+      "utcStartDateTime": "2026-08-03T00:00:00.000Z",
+      "day": "2026-08-03",
+      "price": 15.355,
+      "utcPriceDateTime": "2026-08-03T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-22T00:50:20.419Z",
+      "utcSetDateTime": "2026-09-22T00:50:18.152Z"
+    },
+    {
+      "id": 6700,
+      "pinTickerId": 754,
+      "kind": "start",
+      "utcStartDateTime": "2026-08-03T00:00:00.000Z",
+      "day": "2026-08-03",
+      "price": 200.5,
+      "utcPriceDateTime": "2026-08-03T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-22T00:50:19.896Z",
+      "utcSetDateTime": "2026-09-22T00:50:18.154Z"
+    },
+    {
+      "id": 6702,
+      "pinTickerId": 755,
+      "kind": "start",
+      "utcStartDateTime": "2026-08-03T00:00:00.000Z",
+      "day": "2026-08-03",
+      "price": 284.02,
+      "utcPriceDateTime": "2026-08-03T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-22T00:50:19.542Z",
+      "utcSetDateTime": "2026-09-22T00:50:18.155Z"
     }
   ],
   "relations": [

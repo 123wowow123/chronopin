@@ -89,6 +89,22 @@ export const config = {
     apiKey: env('ANTHROPIC_API_KEY') || '',
   },
 
+  // Google Places API (New), for a place's own rating, review count, review
+  // excerpts and opening hours. Billed per request and per field, so the
+  // lookup is cached (src/server/places.ts) and only a pin with a resolved
+  // place id ever asks. Without a key the Google half of the panel is absent
+  // and the Yelp half still shows.
+  googlePlaces: {
+    apiKey: env('GOOGLE_PLACES_API_KEY') || '',
+  },
+
+  // Yelp Fusion, for the Yelp rating, review count, review excerpts and
+  // whether the business takes reservations through Yelp. The free tier
+  // covers this; without a key the Yelp half is simply absent.
+  yelp: {
+    apiKey: env('YELP_API_KEY') || '',
+  },
+
   // A Kalshi API key: the key id and the RSA private key's PEM text (newlines
   // may be escaped). With both, Kalshi odds stream over its WebSocket and REST
   // reads are signed; without, they fall back to the keyless public API.

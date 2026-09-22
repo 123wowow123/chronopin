@@ -22,29 +22,34 @@ const extraTag = 'min-w-0';
 const tagRow = 'absolute top-0 right-0 left-0 flex gap-1.5 overflow-hidden lg:right-auto lg:w-[110px] lg:flex-col lg:overflow-visible';
 
 // The columns a day grows past its second, in the order the window brings
-// them in: the class that puts the column on screen, how wide the day's cards
-// may then spread (n x 448 plus their gaps), and the class that takes "View
-// all" away once that width leaves nothing out. Every 400px of window past
-// 1600px fits another card (see globals.css), and Tailwind only sees classes
-// written out whole, so they are.
+// them in: the class that puts the column on screen, how many tracks the day
+// then has, how wide its cards may spread (n x 448 plus their gaps), and the
+// class that takes "View all" away once that width leaves nothing out. A
+// width only arrives once another whole 448px card fits (see globals.css),
+// and Tailwind only sees classes written out whole, so they are.
 const WIDE_COLUMNS = [
-  { column: '3xl:flex', row: '3xl:max-w-[1364px]', hide: '3xl:hidden' },
-  { column: '4xl:flex', row: '4xl:max-w-[1822px]', hide: '4xl:hidden' },
-  { column: '5xl:flex', row: '5xl:max-w-[2280px]', hide: '5xl:hidden' },
-  { column: '6xl:flex', row: '6xl:max-w-[2738px]', hide: '6xl:hidden' },
+  { column: '3xl:flex', tracks: '3xl:grid-cols-3', row: '3xl:max-w-[1364px]', hide: '3xl:hidden' },
+  { column: '4xl:flex', tracks: '4xl:grid-cols-4', row: '4xl:max-w-[1822px]', hide: '4xl:hidden' },
+  { column: '5xl:flex', tracks: '5xl:grid-cols-5', row: '5xl:max-w-[2280px]', hide: '5xl:hidden' },
+  { column: '6xl:flex', tracks: '6xl:grid-cols-6', row: '6xl:max-w-[2738px]', hide: '6xl:hidden' },
 ];
 // Two rows of the widest ladder: what a day is picked for, however wide the
 // window is now (src/lib/bagSample.ts).
 const BAG_LIMIT_WIDE = BAG_LIMIT + 2 * WIDE_COLUMNS.length;
-// A card is never wider than the 448px two columns give it, so a quiet day
-// looks the same at every width and only a busy one grows sideways. The first
-// two columns say it again with sm: prefixes, since below sm they dissolve;
-// Tailwind reads the classes here as they are written, never assembled.
-const cardColumn = 'min-w-0 max-w-[448px] flex-1 flex-col';
-const firstColumn = 'contents sm:flex sm:min-w-0 sm:max-w-[448px] sm:flex-1 sm:flex-col';
-// How far a day may spread at each width; the "View all" link under the cards
-// takes it too, to stay centred on them.
-const rowWidth = `lg:max-w-[906px] ${WIDE_COLUMNS.map((c) => c.row).join(' ')}`;
+// A day is a grid of tracks the window decides, not columns that divide the
+// day between them: a quiet day leaves its later tracks empty rather than
+// spreading into them, so a card is the same width on every date of the
+// timeline. Below sm the columns dissolve (display: contents) and the cards
+// become the single column's own rows; the first two say their part again
+// with sm: prefixes, and Tailwind reads the classes as written, never
+// assembled.
+const cardColumn = 'min-w-0 flex-col';
+const firstColumn = 'contents sm:flex sm:min-w-0 sm:flex-col';
+const rowTracks = `grid grid-cols-1 sm:grid-cols-2 sm:gap-x-2.5 ${WIDE_COLUMNS.map((c) => c.tracks).join(' ')}`;
+// How far a day may spread at each width, which is what holds a track to one
+// card's 448px; the "View all" link under the cards takes it too, to stay
+// centred on them.
+const rowWidth = `sm:max-w-[906px] ${WIDE_COLUMNS.map((c) => c.row).join(' ')}`;
 
 type TagVariant = 'date' | 'countdown' | 'today' | 'trivia';
 
@@ -227,12 +232,13 @@ export function TimeBlock({
 // (display: contents) into one list, and each card's `order` puts it back in
 // date order. Every column after those two is the next two of the pick and
 // waits for a window wide enough (WIDE_COLUMNS), so a card keeps its column
-// as the window grows: widening only ever adds a column on the right.
+// as the window grows: widening only ever adds a column on the right. A day
+// short of cards for a column simply leaves that track empty.
 function PinColumns({ tagsHeight, cards, ranks }: { tagsHeight: number; cards: React.ReactElement[]; ranks: number[] }) {
   const byRank = (from: number, to: number) => cards.filter((_, i) => ranks[i] >= from && ranks[i] < to);
   const first = byRank(0, BAG_LIMIT);
   return (
-    <div role="list" className={`flex flex-col sm:flex-row sm:gap-2.5 lg:ml-[170px] lg:min-h-(--tags-h) ${rowWidth}`} style={{ ['--tags-h' as string]: `${tagsHeight}px` }}>
+    <div role="list" className={`${rowTracks} lg:ml-[170px] lg:min-h-(--tags-h) ${rowWidth}`} style={{ ['--tags-h' as string]: `${tagsHeight}px` }}>
       {[0, 1].map((parity) => (
         <div key={parity} className={firstColumn}>
           {first.filter((_, i) => i % 2 === parity)}

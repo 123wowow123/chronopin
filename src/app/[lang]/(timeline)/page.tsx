@@ -123,6 +123,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
         initialLinks={page.links}
         serverTimeZone={timeZone}
         initialPostedWithin={postedWithin}
+        initialWithin={first(params.within) ?? null}
         defaultPostedWithin={defaultPostedWithin}
         defaultSpan={preference || '1d'}
         initialSpecialtyDays={days}

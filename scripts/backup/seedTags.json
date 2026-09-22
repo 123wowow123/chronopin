@@ -38414,5 +38414,69 @@
     "kind": "topic",
     "source": "user",
     "utcCreatedDateTime": "2026-09-21T23:47:02.410Z"
+  },
+  {
+    "id": 5269,
+    "pinId": 2533,
+    "name": "Consumer Electronics",
+    "kind": "category",
+    "source": "user",
+    "utcCreatedDateTime": "2026-09-22T00:50:18.129Z"
+  },
+  {
+    "id": 5270,
+    "pinId": 2533,
+    "name": "Infrastructure & Transportation",
+    "kind": "category",
+    "source": "user",
+    "utcCreatedDateTime": "2026-09-22T00:50:18.129Z"
+  },
+  {
+    "id": 5271,
+    "pinId": 2533,
+    "name": "E-Bike",
+    "kind": "topic",
+    "source": "user",
+    "utcCreatedDateTime": "2026-09-22T00:50:18.132Z"
+  },
+  {
+    "id": 5272,
+    "pinId": 2533,
+    "name": "Micromobility",
+    "kind": "topic",
+    "source": "user",
+    "utcCreatedDateTime": "2026-09-22T00:50:18.132Z"
+  },
+  {
+    "id": 5273,
+    "pinId": 2533,
+    "name": "Rivian Spinout",
+    "kind": "topic",
+    "source": "user",
+    "utcCreatedDateTime": "2026-09-22T00:50:18.132Z"
+  },
+  {
+    "id": 5274,
+    "pinId": 2533,
+    "name": "TM-B",
+    "kind": "topic",
+    "source": "user",
+    "utcCreatedDateTime": "2026-09-22T00:50:18.132Z"
+  },
+  {
+    "id": 5275,
+    "pinId": 2533,
+    "name": "Supply Chain Delay",
+    "kind": "topic",
+    "source": "user",
+    "utcCreatedDateTime": "2026-09-22T00:50:18.132Z"
+  },
+  {
+    "id": 5276,
+    "pinId": 2533,
+    "name": "Class 3 E-Bike",
+    "kind": "topic",
+    "source": "user",
+    "utcCreatedDateTime": "2026-09-22T00:50:18.132Z"
   }
 ]

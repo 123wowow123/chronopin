@@ -133,8 +133,11 @@ export function PinCard({
               </span>
             ) : null}
             {/* How far the pin stands from the reader, once their browser
-                knows where that is. */}
-            {pin.latitude != null && pin.longitude != null ? <PinDistance latitude={pin.latitude} longitude={pin.longitude} compact /> : null}
+                knows where that is. It is the row's last item and the one
+                that gives, cut short rather than wrapping the row (see
+                PinDistance). Nothing stands in for it while it is unknown,
+                or the row would show the dot before an empty item. */}
+            {pin.latitude != null && pin.longitude != null ? <PinDistance pinId={pin.id} latitude={pin.latitude} longitude={pin.longitude} compact /> : null}
           </div>
           {pin.parentId || pin.rootThread ? (
             <Link href={href} title={pin.parentId ? t('card.partOfThread') : t('card.firstInThread')} className="text-subtle hover:text-ink">

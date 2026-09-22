@@ -152,3 +152,82 @@ test('the map plots pins', async ({ page }) => {
   await page.goto('/map');
   await expect(page.locator('.leaflet-marker-icon').first()).toBeVisible({ timeout: 20_000 });
 });
+
+// A card's distance is worked out in the browser, from the run's time zone
+// (Los Angeles), so the link is there for every card with a place.
+test('a distance opens the map and draws the line it measured', async ({ page }) => {
+  await page.goto('/');
+  const distance = page.locator('a[href*="from=me"]').first();
+  await expect(distance).toBeVisible({ timeout: 20_000 });
+  const away = (await distance.textContent())!;
+  await distance.click();
+  await expect(page).toHaveURL(/\/map\?pin=\d+&from=me/);
+  // The line, labelled with the same distance the card gave, measured from
+  // the city the time zone names.
+  const label = page.locator('.from-line-label');
+  await expect(label).toBeVisible({ timeout: 20_000 });
+  await expect(label).toHaveText(new RegExp(away.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(' away', '')));
+  await expect(label).toContainText('Los Angeles');
+});
+
+// The ring is measured from the browser's own idea of where the viewer is,
+// which for this run is the city of its time zone (Los Angeles), so the
+// slider is there and every card it leaves has a place near it.
+test('the distance slider narrows the timeline to pins near the viewer', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('article').first()).toBeVisible();
+
+  const thumb = page.locator('[data-thumb="radius"]');
+  await expect(thumb).toBeVisible({ timeout: 20_000 });
+  const slider = page.locator('div.floating').filter({ has: thumb });
+  await expect(slider).toContainText('from Los Angeles');
+
+  // Home is the tightest ring on offer; End is no ring at all.
+  await thumb.press('Home');
+  await expect(slider).toContainText('Distance within 5 mi');
+  await expect(page).toHaveURL(/within=5mi/);
+
+  // Polled as one: the cards on screen are the ones the ring was set over
+  // until the page it asked for lands, so counting either on its own catches
+  // them mid-swap. Everything left is near enough to say so on its own card,
+  // and every card says it - a pin with no place is nowhere near anybody.
+  await expect
+    .poll(
+      async () => {
+        const drawn = await page.locator('article').count();
+        const away = await page.locator('article a[href*="from=me"]').allInnerTexts();
+        return drawn > 0 && away.length === drawn && away.every((text) => parseFloat(text) <= 5);
+      },
+      { timeout: 20_000 },
+    )
+    .toBe(true);
+
+  // Narrowed, every day drawn has a card on it: the days between the pins
+  // that are left carry nothing but their own holidays, and a page of those
+  // empty blocks would bury the few pins that survived the ring.
+  const emptyDays = await page.locator('[id^="day-"]').evaluateAll((days) => days.filter((day) => !day.querySelector('article')).map((day) => day.id));
+  expect(emptyDays, 'a day with no pins is drawn under a filter').toEqual([]);
+
+  // Opened again on the same link, the timeline comes back on the same ring.
+  await page.reload();
+  await expect(page.locator('[data-thumb="radius"]')).toBeVisible({ timeout: 20_000 });
+  await expect(page.locator('div.floating').filter({ has: page.locator('[data-thumb="radius"]') })).toContainText('Distance within 5 mi');
+
+  // Pins still page in as they do on the whole timeline: the ring rides the
+  // pagination links, so scrolling keeps reaching further out.
+  await page.locator('[data-thumb="radius"]').press('End');
+  await expect(page).not.toHaveURL(/within=/);
+});
+
+test('a ring keeps paging pins in as the timeline is scrolled', async ({ page }) => {
+  await page.goto('/?within=25mi');
+  const thumb = page.locator('[data-thumb="radius"]');
+  await expect(thumb).toBeVisible({ timeout: 20_000 });
+  await expect(page.locator('div.floating').filter({ has: thumb })).toContainText('Distance within 25 mi');
+
+  const cards = () => page.locator('article').count();
+  const before = await cards();
+  expect(before).toBeGreaterThan(0);
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await expect.poll(cards, { timeout: 20_000 }).toBeGreaterThan(before);
+});

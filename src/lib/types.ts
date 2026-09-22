@@ -7,6 +7,7 @@ import type { PinTagJson } from './tags';
 
 import type { ThemePreference } from './theme';
 import type { Locale } from './i18n/config';
+import type { PinPlaceHandlesJson } from './places';
 
 export type CardStock = { symbol: string; name: string | null; relation: 'company' | 'related' | 'supplier'; assetClass: 'stocks' | 'etf'; startPrice: number | null; startDay: string | null };
 
@@ -169,6 +170,10 @@ export type PinJson = {
   tags?: PinTagJson[];
   // Where it goes from its place (a rocket's ground track); the map draws it on the pin's page.
   flightPath?: PinFlightPathJson;
+  // Where its place is on Google and Yelp, and how to book a table. Handles
+  // only: the scores themselves are fetched live from /api/pins/:id/place,
+  // because neither source allows its ratings to be stored (PinPlace, 0059).
+  place?: PinPlaceHandlesJson;
 };
 
 // A pin ready for a card: its description already sanitised (on the server

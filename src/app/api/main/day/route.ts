@@ -2,6 +2,7 @@ import type { NextRequest } from 'next/server';
 import { HttpError, json, route } from '@/server/http';
 import { countDayPins } from '@/server/services/timeline';
 import { resolveCreatedSince } from '@/server/util/createdFilter';
+import { resolveNear } from '@/server/util/nearFilter';
 
 const DAY_KEY = /^-?\d{4,6}-\d{2}-\d{2}$/;
 
@@ -28,5 +29,6 @@ export const GET = route(async (request: NextRequest) => {
     created_since: query.get('created_since'),
     created_within: query.get('created_within'),
   });
-  return json({ count: await countDayPins({ day, timeZone, createdSince }) });
+  const near = resolveNear({ near: query.get('near'), within: query.get('within') });
+  return json({ count: await countDayPins({ day, timeZone, createdSince, near }) });
 });

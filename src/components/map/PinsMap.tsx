@@ -15,6 +15,9 @@ import { blobUrl } from '@/lib/appConfig';
 import { isCategory } from '@/lib/categories';
 import { clearSpot, peekMapSpot, setMapViewSource } from '@/lib/client/returnSpot';
 import { useQueryState } from '@/lib/client/urlState';
+import { viewerPlace } from '@/lib/client/viewerPlace';
+import { distanceKm, formatDistance, greatCirclePoints } from '@/lib/distance';
+import { usesImperial } from '@/lib/weather';
 import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, SPAN_OPTIONS, eventSpanSummary, offsetDate, spanFromParam, spanLabel, spanPhrase, spanToParam } from '@/lib/postedSpan';
 import { removeTerm, toggleTerm } from '@/lib/searchTerms';
 import { pinPath } from '@/lib/seo';
@@ -29,6 +32,10 @@ const DEFAULT_CENTER: [number, number] = [39.8283, -98.5795];
 const DEFAULT_ZOOM = 4;
 // A year either side of now: every pin ever posted on one map does not scale.
 const DEFAULT_SPAN = '1y';
+
+// The line from the viewer to the focused pin (from=me). Rose, as on a pin's
+// own map: a line the app drew rather than a relation between two pins.
+const FROM_COLOR = '#e11d48';
 
 const PIN_SVG =
   '<svg viewBox="0 0 24 36" xmlns="http://www.w3.org/2000/svg" width="24" height="36"><path fill="currentColor" stroke="rgba(0,0,0,.35)" d="M12 0C5.373 0 0 5.373 0 12c0 9 12 24 12 24s12-15 12-24C24 5.373 18.627 0 12 0z"/><circle cx="12" cy="12" r="5" fill="#fff"/></svg>';
@@ -243,6 +250,9 @@ export default function PinsMap() {
   const params = useSearchParams();
   const query = params.get('q') || '';
   const focusId = Number(params.get('pin')) || undefined;
+  // From a pin's distance, clicked: draw what it measured. The viewer's place
+  // is the browser's to work out, so the URL only asks for it.
+  const fromMe = params.get('from') === 'me';
   const watched = params.get('f')?.toLowerCase() === 'watch';
   const categories = queryCategories(query);
   const categoryKey = categories.map((c) => c.toLowerCase()).join('|');
@@ -282,6 +292,7 @@ export default function PinsMap() {
   const [webNodes, setWebNodes] = useState<{ id: number; title: string }[]>([]);
   const [webPicked, setWebPicked] = useState<number | undefined>();
   const webLayerRef = useRef<L.LayerGroup | null>(null);
+  const fromLayerRef = useRef<L.LayerGroup | null>(null);
   useQueryState({ web: web === 'off' ? null : web });
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   const [count, setCount] = useState(0);
@@ -303,6 +314,7 @@ export default function PinsMap() {
     // Under the markers, so a line never hides a pin.
     map.createPane('web').style.zIndex = '350';
     webLayerRef.current = L.layerGroup().addTo(map);
+    fromLayerRef.current = L.layerGroup().addTo(map);
     // Moving sideways reaches other copies of the world: their pins come in, and
     // the ones scrolled off go.
     map.on('moveend', () => syncCopies(map, layer, markersRef.current, categoriesRef.current));
@@ -318,6 +330,7 @@ export default function PinsMap() {
       mapRef.current = null;
       layerRef.current = null;
       webLayerRef.current = null;
+      fromLayerRef.current = null;
     };
   }, []);
 
@@ -497,6 +510,67 @@ export default function PinsMap() {
       cancelled = true;
     };
   }, [web, status, categoryKey, fetchQuery, past, future, postedWithin, watched, t]);
+
+  // "1,240 km from Los Angeles" clicked on a pin: the line it measured, from
+  // where the viewer's browser puts them to the pin, once that pin is plotted.
+  // A great circle rather than a straight segment, so the curve on the flat
+  // map is the distance the label states.
+  useEffect(() => {
+    const map = mapRef.current;
+    const layer = fromLayerRef.current;
+    if (!map || !layer) return;
+    layer.clearLayers();
+    if (!fromMe || focusPin?.latitude == null || focusPin.longitude == null) return;
+    const pin = { latitude: focusPin.latitude, longitude: focusPin.longitude };
+    let cancelled = false;
+    void viewerPlace().then((place) => {
+      if (cancelled || !place || !fromLayerRef.current) return;
+      // The copy of the world the focused pin was centered on, which is the one
+      // holding its popup, and the viewer on the copy nearest that: the line
+      // then ends at the pin the map is showing and takes the short way round
+      // rather than back across the whole map.
+      const to = { latitude: pin.latitude, longitude: pin.longitude + 360 * nearestOffset(pin.longitude, map.getCenter().lng) };
+      const from = { latitude: place.latitude, longitude: place.longitude + 360 * nearestOffset(place.longitude, to.longitude) };
+      const distance = formatDistance(distanceKm(from, to), usesImperial(), t.locale);
+      const line = L.polyline(greatCirclePoints(from, to), {
+        color: FROM_COLOR,
+        weight: 2.5,
+        opacity: 0.85,
+        dashArray: '8 6',
+        pane: 'web',
+      }).addTo(layer);
+      line.bindTooltip(place.name ? t('pin.distanceFrom', { distance, place: place.name }) : t('pin.distanceAway', { distance }), {
+        permanent: true,
+        direction: 'center',
+        className: 'from-line-label',
+      });
+      // Where the measuring started, which is a city for most viewers and
+      // never finer than about a kilometre (see viewerPlace).
+      L.circleMarker([from.latitude, from.longitude], {
+        radius: 6,
+        color: FROM_COLOR,
+        weight: 2,
+        fillColor: FROM_COLOR,
+        fillOpacity: 0.5,
+        pane: 'web',
+      })
+        .addTo(layer)
+        .bindTooltip(place.name ?? t('map.yourPlace'), { direction: 'top' });
+      // Both ends in view: the whole line is the point of coming here. The
+      // right-hand room is for the controls, which sit over the map on a wide
+      // screen and would otherwise cover the pin and its popup; narrower they
+      // fold into the pills along the bottom.
+      const wide = map.getSize().x >= 1280;
+      map.fitBounds(line.getBounds(), {
+        paddingTopLeft: [56, 56],
+        paddingBottomRight: wide ? [300, 56] : [56, 120],
+        maxZoom: 11,
+      });
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [fromMe, focusPin, t]);
 
   // A graph node picked: the map goes to that pin.
   function showPin(id: number) {
