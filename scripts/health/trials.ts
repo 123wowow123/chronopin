@@ -196,7 +196,7 @@ async function run() {
         : `ClinicalTrials.gov lists ${raw} as the estimated primary completion date; a sponsor's estimate, and trials of this size routinely slip.`,
       company: sponsor.name,
       companyWikiUrl: `https://en.wikipedia.org/wiki/${sponsor.wiki}`,
-      categories: ['Health & Medicine'],
+      categories: ['Health'],
       tags: [...new Set([drug, ...(p.conditionsModule?.conditions ?? []).slice(0, 3), 'Phase 3', 'Clinical trial'])].slice(0, 8),
       // The note is kept on the company, not the pin, so it describes the
       // company in general rather than this one trial.

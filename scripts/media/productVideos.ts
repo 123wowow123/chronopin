@@ -6,7 +6,7 @@
 //
 //   npm run media:videos                          list what it would add (dry run)
 //   npm run media:videos -- --apply
-//   npm run media:videos -- --category "Gaming & Entertainment"
+//   npm run media:videos -- --category Gaming
 //   npm run media:videos -- --apply --limit 20 --offset 40
 //   npm run media:videos -- --apply --pin 123 --pin 456
 //   npm run media:videos -- --apply --delay 6     seconds between pins (default 4)

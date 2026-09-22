@@ -18,7 +18,7 @@ import { expect, test, type APIRequestContext, type Page } from '@playwright/tes
 // A search with pins well on both sides of today, so each direction has
 // pages to hand out. It names a category, so it also stands up without the
 // search service: only free text is sent to FAISS.
-const FILTERED = 'category:"Infrastructure & Transportation"';
+const FILTERED = 'category:Transport';
 // And one of free text, which is sent - the pins FAISS matched, ranked.
 const TEXT = 'iphone';
 // Free text naming a place, which matches two ways at once: the pins FAISS

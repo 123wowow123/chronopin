@@ -24,6 +24,7 @@ import { inCategories } from '@/server/model/pinTag';
 import * as db from '@/server/db';
 import Medium from '@/server/model/medium';
 import Pin from '@/server/model/pin';
+import PinTag from '@/server/model/pinTag';
 import { findScreenDetails, malIdOf, SCREEN_CATEGORIES, youtubeStill } from '@/server/scrape/screen';
 
 const { values: flags } = parseArgs({
@@ -51,7 +52,7 @@ async function run() {
     ids?.length ? [SCREEN_CATEGORIES, ids] : [SCREEN_CATEGORIES],
   );
   console.log(`${flags.apply ? 'Updating' : 'Dry run over'} ${rows.length} pins`);
-  const totals = { trailers: 0, ratings: 0, episodes: 0, unmatched: 0 };
+  const totals = { trailers: 0, ratings: 0, episodes: 0, tags: 0, unmatched: 0 };
 
   for (const [index, { id, episodeCount }] of rows.entries()) {
     if (index) await sleep(Number(flags.pause));
@@ -67,6 +68,8 @@ async function run() {
         // Most anime pins cite their MyAnimeList entry, which names the work
         // outright where a "... Premieres" title matches nothing.
         malId: malIdOf([pin.sourceUrl, ...(pin.references ?? []).map((r) => r.url)]),
+        // The studio or licensor, so its own channel wins the trailer search.
+        company: pin.company,
       },
       60000,
     );
@@ -77,13 +80,17 @@ async function run() {
     // is about, which a catalogue entry for the whole show would overwrite.
     const newEpisodes = episodeCount ? undefined : details.episodes;
     const episodeText = episodeCount ? `has ${episodeCount} episodes` : newEpisodes ? `${newEpisodes.episodeCount} episodes (${newEpisodes.episodeStatus})` : 'no episode count';
-    console.log(`${id} ${pin.title}\n    as "${details.workTitle ?? '-'}": ${ratingText}; ${trailerText}; ${episodeText}`);
+    // What the work was adapted from, when the pin is not already tagged with it.
+    const adaptedFrom = details.adaptedFrom && !pin.tags?.some((t: { name: string }) => t.name.toLowerCase() === details.adaptedFrom!.toLowerCase()) ? details.adaptedFrom : undefined;
+    const tagText = adaptedFrom ? `from ${adaptedFrom}` : 'no adaptation tag';
+    console.log(`${id} ${pin.title}\n    as "${details.workTitle ?? '-'}": ${ratingText}; ${trailerText}; ${episodeText}; ${tagText}`);
     if (!details.workTitle && !details.trailer) totals.unmatched++;
 
     if (!flags.apply) {
       totals.ratings += details.ratings.length;
       totals.trailers += details.trailer ? 1 : 0;
       totals.episodes += newEpisodes ? 1 : 0;
+      totals.tags += adaptedFrom ? 1 : 0;
       continue;
     }
     try {
@@ -94,6 +101,10 @@ async function run() {
       if (newEpisodes) {
         await Pin.setEpisodes(id, newEpisodes);
         totals.episodes++;
+      }
+      if (adaptedFrom) {
+        await PinTag.addUserTags(id, [adaptedFrom]);
+        totals.tags++;
       }
       if (details.trailer) {
         const video = await new Medium(details.trailer, pin).saveWithThumb();
@@ -109,7 +120,8 @@ async function run() {
     }
   }
   console.log(
-    `${flags.apply ? 'Added' : 'Would add'} ${totals.trailers} trailers, ${totals.ratings} ratings and ${totals.episodes} episode counts; ${totals.unmatched} pins matched nothing`,
+    `${flags.apply ? 'Added' : 'Would add'} ${totals.trailers} trailers, ${totals.ratings} ratings, ${totals.episodes} episode counts`
+      + ` and ${totals.tags} adaptation tags; ${totals.unmatched} pins matched nothing`,
   );
 }
 

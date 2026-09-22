@@ -43,7 +43,7 @@ const SITES: Record<ScoreSite, { series: string; slug: string; forecast: string;
   },
 };
 
-export const GAME_CATEGORIES = ['Gaming & Entertainment'];
+export const GAME_CATEGORIES = ['Gaming'];
 
 // Which site's score a pin's category is bet on, if any.
 // One category or a pin's list of them.

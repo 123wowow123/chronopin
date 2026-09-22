@@ -7,6 +7,7 @@ import { createPortal } from 'react-dom';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { LogoMark } from '@/components/ui/LogoMark';
 import { UserAvatar } from '@/components/ui/UserAvatar';
+import { setControlsSlot, useHasControls } from '@/lib/client/controlsDrawer';
 import { useUnreadCount } from '@/lib/client/notifications';
 import { hrefKeepingDate } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
@@ -50,6 +51,9 @@ export function MobileDrawer() {
   const { user, isAdmin } = useSession();
   const t = useT();
   const unread = useUnreadCount(!!user);
+  // Whether the page showing has filters to lend the drawer (the timeline and
+  // search results do; a pin page does not).
+  const hasControls = useHasControls();
   const [open, setOpen] = useState(false);
   // How far a swipe has pulled the drawer back, as a fraction of its width (-1..0).
   const [drag, setDrag] = useState(0);
@@ -98,6 +102,12 @@ export function MobileDrawer() {
   }, [open]);
 
   function onTouchStart(event: React.TouchEvent) {
+    // The filter sliders in here are dragged across, so a touch that starts on
+    // one is the slider's; the drawer stays where it is.
+    if ((event.target as Element).closest('[data-no-swipe]')) {
+      swipe.current = null;
+      return;
+    }
     const touch = event.touches[0];
     swipe.current = { x: touch.clientX, y: touch.clientY, time: event.timeStamp, width: panelRef.current?.offsetWidth || 1, axis: null };
   }
@@ -176,7 +186,7 @@ export function MobileDrawer() {
         aria-modal="true"
         aria-label={t('nav.menu')}
         tabIndex={-1}
-        className={`fixed inset-y-0 left-0 z-50 flex w-[min(20rem,85vw)] touch-pan-y flex-col overflow-y-auto overscroll-contain bg-header pl-[env(safe-area-inset-left)] shadow-2xl shadow-shade/50 outline-none transition-[translate,visibility] duration-300 ease-out ${
+        className={`fixed inset-y-0 left-0 z-50 flex w-[min(26rem,90vw)] touch-pan-y flex-col overflow-y-auto overscroll-contain bg-header pl-[env(safe-area-inset-left)] shadow-2xl shadow-shade/50 outline-none transition-[translate,visibility] duration-300 ease-out ${
           open ? 'translate-x-0' : 'invisible -translate-x-full'
         }`}
         style={dragging ? { translate: `${drag * 100}% 0`, transition: 'none' } : undefined}
@@ -238,6 +248,14 @@ export function MobileDrawer() {
               </button>
             ) : null}
           </DrawerSection>
+          {/* What the timeline or the search below is filtered to: its own
+              panels, lent to the drawer while the screen is too narrow to
+              float them beside the cards. */}
+          {hasControls ? (
+            <DrawerSection title={t('controls.filters')}>
+              <div ref={setControlsSlot} className="flex flex-col gap-2 px-1 pt-1 pb-0.5" />
+            </DrawerSection>
+          ) : null}
           {user ? (
             <>
               <DrawerSection title={t('nav.you')}>

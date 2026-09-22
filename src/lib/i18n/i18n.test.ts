@@ -84,11 +84,10 @@ describe('createTranslator', () => {
 
   it('answers the key for a missing message, and a fallback for a dynamic one', () => {
     const t = createTranslator(en, 'en');
-    expect(t.dynamic('categories.space-astronomy', 'x')).toBe('Space & Astronomy');
+    expect(t.dynamic('categories.astronomy', 'x')).toBe('Astronomy');
     expect(t.dynamic('categories.not-a-category', 'Custom tag')).toBe('Custom tag');
-    // A namespace with an "other" key is not a plural message.
+    // A namespace of labels is not a plural message.
     expect(t.has('categories')).toBe(false);
-    expect(t.dynamic('categories.other', '')).toBe('Other');
   });
 });
 

@@ -3,29 +3,29 @@ import { hasTerm, refineQuery, removeTerm, toggleTerm } from './searchTerms';
 
 describe('refineQuery', () => {
   it('adds a quoted term once', () => {
-    expect(refineQuery('', 'tag', 'Space & Astronomy')).toBe('tag:"Space & Astronomy"');
-    expect(refineQuery('tag:Movies', 'tag', 'movies')).toBe('tag:Movies');
+    expect(refineQuery('', 'tag', 'Prediction Market')).toBe('tag:"Prediction Market"');
+    expect(refineQuery('tag:Movie', 'tag', 'movie')).toBe('tag:Movie');
   });
 });
 
 describe('removeTerm', () => {
   it('removes every form the server accepts, keeping the rest of the query', () => {
-    expect(removeTerm('rocket category:"Space & Astronomy" company:NASA', 'category', 'Space & Astronomy')).toBe('rocket company:NASA');
-    expect(removeTerm("category:'Space & Astronomy'", 'category', 'Space & Astronomy')).toBe('');
-    expect(removeTerm('"category:Space & Astronomy" launch', 'category', 'Space & Astronomy')).toBe('launch');
-    expect(removeTerm('CATEGORY:Movies category:movies Movies', 'category', 'Movies')).toBe('Movies');
+    expect(removeTerm('rocket category:"Astronomy" company:NASA', 'category', 'Astronomy')).toBe('rocket company:NASA');
+    expect(removeTerm("category:'Astronomy'", 'category', 'Astronomy')).toBe('');
+    expect(removeTerm('"category:Astronomy" launch', 'category', 'Astronomy')).toBe('launch');
+    expect(removeTerm('CATEGORY:Movie category:movie Movie', 'category', 'Movie')).toBe('Movie');
   });
 
   it('leaves longer values and other fields alone', () => {
-    expect(removeTerm('category:Movies2 company:Movies', 'category', 'Movies')).toBe('category:Movies2 company:Movies');
+    expect(removeTerm('category:Movie2 company:Movie', 'category', 'Movie')).toBe('category:Movie2 company:Movie');
   });
 });
 
 describe('toggleTerm', () => {
   it('adds a missing term and removes a present one', () => {
-    const added = toggleTerm('user:GameDesk', 'tag', 'Gaming & Entertainment');
-    expect(added).toBe('user:GameDesk tag:"Gaming & Entertainment"');
-    expect(hasTerm(added, 'tag', 'Gaming & Entertainment')).toBe(true);
-    expect(toggleTerm(added, 'tag', 'Gaming & Entertainment')).toBe('user:GameDesk');
+    const added = toggleTerm('user:GameDesk', 'tag', 'Prediction Market');
+    expect(added).toBe('user:GameDesk tag:"Prediction Market"');
+    expect(hasTerm(added, 'tag', 'Prediction Market')).toBe(true);
+    expect(toggleTerm(added, 'tag', 'Prediction Market')).toBe('user:GameDesk');
   });
 });

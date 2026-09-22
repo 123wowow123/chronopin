@@ -19,13 +19,13 @@ pins in the empty part of the calendar, and - the one that is easiest to miss -
 whether its category has any *future* at all.
 
 **Category weight.** Measured 2026-09-20 over 1,963 live pins. `Anime` 657 and
-`Anime Movie` 117 are 39% of the corpus, then `Infrastructure & Transportation` 205,
-`Architecture & Real Estate` 183, `Movies` 94, `Gaming & Entertainment` 86.
+`Anime` and `Movie` 117 are 39% of the corpus, then `Transport` 205,
+`Architecture` 183, `Movie` 94, `Gaming` 86.
 
 **Past against future.** A category can look healthy and be finished. Counting the
-two separately found `AI Models` at 45 pins with 2 ahead of today, `Automotive` 39
-and 2, `Computing & Semiconductors` 29 and 2, `Consumer Electronics` 69 and 7, and
-`Food & Beverage`, `Robotics` and `Climate & Environment` with a past and no future
+two separately found `AI` at 45 pins with 2 ahead of today, `Automotive` 39
+and 2, `Semiconductors` 29 and 2, `Electronics` 69 and 7, and
+`Food`, `Robotics` and `Climate` with a past and no future
 whatsoever. This pair, not the total, is what says a vertical needs a job.
 
 **Calendar holes.** 424 of 1,963 pins were in the future, and they bunch: October
@@ -39,14 +39,14 @@ ephemeris beats both.
 
 | Job | Vertical | Curator | Source (all keyless) | Cadence | Already-pinned test |
 | --- | --- | --- | --- | --- | --- |
-| Prize announcements | `Science & Research`, `Arts & Literature` | @ScienceDesk (304) | nobelprize.org announcement dates, then the API once laureates are named | Weekly Sep-Oct, else yearly | By hand; each prize's announcement live stream is its `sourceUrl` |
-| `tv:premieres` | `TV Series` | @FilmDesk (51) | TVmaze `/schedule/full` | Nightly | The premiere episode's TVmaze URL |
-| `launches:upcoming` | `Space & Astronomy` | @BuildDesk (76) | Launch Library 2 `/launches/upcoming/` | Nightly | The launch's own page, else its LL2 record |
-| `health:trials` | `Health & Medicine` | @HealthDesk (305) | ClinicalTrials.gov API v2 | Weekly | `clinicaltrials.gov/study/<NCT id>` |
-| Trade shows | `Consumer Electronics` | @TechDesk (276) | The show's own site | Quarterly, by hand | The show's site |
-| `astronomy:eclipses` | `Space & Astronomy` | @ScienceDesk (304) | NASA eclipse catalogue (`eclipse.gsfc.nasa.gov`) | Yearly | The eclipse's own NASA path page, else any eclipse pin that day |
+| Prize announcements | `Science`, `Art` | @ScienceDesk (304) | nobelprize.org announcement dates, then the API once laureates are named | Weekly Sep-Oct, else yearly | By hand; each prize's announcement live stream is its `sourceUrl` |
+| `tv:premieres` | `TV` | @FilmDesk (51) | TVmaze `/schedule/full` | Nightly | The premiere episode's TVmaze URL |
+| `launches:upcoming` | `Space` | @BuildDesk (76) | Launch Library 2 `/launches/upcoming/` | Nightly | The launch's own page, else its LL2 record |
+| `health:trials` | `Health` | @HealthDesk (305) | ClinicalTrials.gov API v2 | Weekly | `clinicaltrials.gov/study/<NCT id>` |
+| Trade shows | `Electronics` | @TechDesk (276) | The show's own site | Quarterly, by hand | The show's site |
+| `astronomy:eclipses` | `Space` | @ScienceDesk (304) | NASA eclipse catalogue (`eclipse.gsfc.nasa.gov`) | Yearly | The eclipse's own NASA path page, else any eclipse pin that day |
 | `sports:tournaments` | `Sports` | @SportDesk (306) | Wikipedia articles for a curated tournament list | Monthly | The tournament's Wikipedia article, else its name **in its own year** |
-| `ai:retirements` | `AI Models` | @TechDesk (276) | Vendor deprecation pages (OpenAI `platform.openai.com/docs/deprecations`) | Weekly | The announcement's own anchor on the page |
+| `ai:retirements` | `AI` | @TechDesk (276) | Vendor deprecation pages (OpenAI `platform.openai.com/docs/deprecations`) | Weekly | The announcement's own anchor on the page |
 | `trends:discover` | none - it posts nothing | none | Google Trends daily RSS | Daily, read by a session | n/a; it reports what is already pinned |
 
 Nightly is for a source whose rows change daily (a launch NET slips, an episode is
@@ -98,8 +98,8 @@ eventually see.
 
 # What the first run cost
 
-Run on 2026-09-20: 112 pins (1994-2110). `TV Series` went from 2 to 69,
-`Health & Medicine` from 6 to 30, `Sports` from 28 to 38, `Science & Research`
+Run on 2026-09-20: 112 pins (1994-2110). `TV` went from 2 to 69,
+`Health` from 6 to 30, `Sports` from 28 to 38, `Science`
 from 5 to 9, and six of the nine sport pins landed between April and November
 2027, the emptiest stretch of the timeline. The launch job picked up five
 non-SpaceX launches that a SpaceX-only filter had been hiding.
@@ -184,14 +184,14 @@ Worth a job once the six above are steady, in rough order of what they would fix
   press releases. It needs a search-driven job, not a feed reader.
 
 * **Policy and legal** - Supreme Court decision days, EU AI Act phase-in dates.
-  `Policy & Legal` is 12 pins and both calendars are published years ahead.
+  `Policy` is 12 pins and both calendars are published years ahead.
 * **Climate** - COP sessions, IPCC report windows, statutory emissions and
-  combustion-engine deadlines. `Climate & Environment` is 5 and none ahead.
-* **Vendor roadmaps** - `AI Models` was 45 pins with 2 in the future, the
+  combustion-engine deadlines. `Climate` is 5 and none ahead.
+* **Vendor roadmaps** - `AI` was 45 pins with 2 in the future, the
   worst ratio on the board; `ai:retirements` took it to 13 ahead of today by
   pinning the one thing vendors *do* announce in advance (see below).
   Launches remain unpinnable until someone dates them. `Automotive` and
-  `Computing & Semiconductors` are the same shape and their makers date model
+  `Semiconductors` are the same shape and their makers date model
   years and process nodes years ahead.
 * **The other vendors' retirements.** Anthropic and Azure publish future
   retirement dates in a single status table with one anchor for the lot, so

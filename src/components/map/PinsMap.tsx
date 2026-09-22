@@ -5,27 +5,33 @@ import L from 'leaflet';
 import { localizeHere, useRouter, useSearchParams, withPageLang } from '@/lib/client/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { TILE_ATTRIBUTION, TILE_URL } from '@/components/pin/PinMap';
-import { categoryPillSummary, MapCategoryFilter, queryCategories } from '@/components/map/MapCategoryFilter';
 import { FloatingControls } from '@/components/timeline/FloatingControls';
+import { TagCloud, tagPillSummary } from '@/components/timeline/TagCloud';
 import { TimeRangeSlider } from '@/components/timeline/TimeRangeSlider';
 import { PinWebGraph } from '@/components/map/PinWebGraph';
 import { WebLegend } from '@/components/map/WebLegend';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
-import { isCategory } from '@/lib/categories';
+import { canonicalCategory, isCategory } from '@/lib/categories';
 import { clearSpot, peekMapSpot, setMapViewSource } from '@/lib/client/returnSpot';
 import { useQueryState } from '@/lib/client/urlState';
 import { viewerPlace } from '@/lib/client/viewerPlace';
 import { distanceKm, formatDistance, greatCirclePoints } from '@/lib/distance';
 import { usesImperial } from '@/lib/weather';
 import { DEFAULT_POSTED_WITHIN, EVENT_SPAN_OPTIONS, SPAN_OPTIONS, eventSpanSummary, offsetDate, spanFromParam, spanLabel, spanPhrase, spanToParam } from '@/lib/postedSpan';
-import { removeTerm, toggleTerm } from '@/lib/searchTerms';
+import { parseSearchQuery } from '@/server/util/searchQuery';
 import { pinPath } from '@/lib/seo';
 import { webColor, webIntensity, webModeFromParam, type WebEdge, type WebKind, type WebMode } from '@/lib/pinWeb';
 import type { MapPinJson, PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery } from '@/server/util/searchQuery';
 import { useT } from '@/lib/client/i18n';
 import { categoryLabel } from '@/lib/i18n/labels';
+
+// The categories a query picks: its tag: terms (and old category: ones) that
+// name one. They are what the markers are shown and hidden by.
+function queryCategories(query?: string) {
+  return [...new Set(parseSearchQuery(query).tags.filter(isCategory).map(canonicalCategory))];
+}
 
 // Center of the contiguous US, so an empty or loading map has a sensible view.
 const DEFAULT_CENTER: [number, number] = [39.8283, -98.5795];
@@ -315,8 +321,6 @@ export default function PinsMap() {
   }, []);
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   const [count, setCount] = useState(0);
-  // Markers per category in the time window, for the category pills.
-  const [categoryCounts, setCategoryCounts] = useState<Record<string, number> | null>(null);
 
   useEffect(() => {
     const spot = peekMapSpot();
@@ -363,7 +367,6 @@ export default function PinsMap() {
     markersRef.current = [];
     setStatus('loading');
     setCount(0);
-    setCategoryCounts(null);
 
     const now = new Date();
     const pastBoundary = past ? offsetDate(now, past, -1) : null;
@@ -422,9 +425,6 @@ export default function PinsMap() {
       }
       syncCopies(map, layer, markersRef.current, categoriesRef.current);
       setCount(markersRef.current.filter((e) => e.focus || inCategories(e.categories, categoriesRef.current)).length);
-      const counts: Record<string, number> = {};
-      for (const { categories: own } of markersRef.current) for (const category of own) counts[category] = (counts[category] || 0) + 1;
-      setCategoryCounts(counts);
     };
 
     // Every pin to plot, in one request: the window, the posted-within cutoff
@@ -652,15 +652,11 @@ export default function PinsMap() {
           summaryCaption={t('controls.postedWithin')}
           summary={spanLabel(postedWithin, t.locale)}
           tags={{
-            summary: categoryPillSummary(query, t),
-            control: (
-              <MapCategoryFilter
-                selected={categories}
-                counts={categoryCounts}
-                onToggle={(category) => go((q) => toggleTerm(removeTerm(q, 'category', category), 'tag', category))}
-                onClear={() => go((q) => categories.reduce((rest, category) => removeTerm(removeTerm(rest, 'tag', category), 'category', category), q))}
-              />
-            ),
+            summary: tagPillSummary(query, t.locale),
+            // The timeline's own tag cloud. A pick stays on the map: it edits
+            // the query the map is showing rather than leaving for the search
+            // results, and a category pick only shows and hides markers.
+            control: <TagCloud query={query} onlyWatched={watched} postedWithin={postedWithin} onQuery={go} />,
           }}
           span={{
             summary: eventSpanSummary(past, future, t.locale),

@@ -4,6 +4,7 @@ import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { useT } from '@/lib/client/i18n';
 import { nearestRadiusIndex, parseRadius, radiusLabel } from '@/lib/radius';
+import { useInDrawerPanel } from './FloatingControls';
 import { iconButton, PanelHeader, useFold } from './PanelHeader';
 
 // A ring around the viewer, dragged in whole steps or typed exactly. The
@@ -47,6 +48,9 @@ export function DistanceSlider({
   const [text, setText] = useState('');
   const [invalid, setInvalid] = useState(false);
   const t = useT();
+  // In the nav drawer the panel folds behind its own header, as in the xl column.
+  const inDrawer = useInDrawerPanel();
+  const folds = collapsible || inDrawer;
 
   const label = (km: number | null) => radiusLabel(km, imperial, t.locale);
   const index = nearestRadiusIndex(radius, steps);
@@ -136,8 +140,8 @@ export function DistanceSlider({
   const measuredFrom = placeName ? <span className="block truncate text-xs text-muted">{t('slider.measuredFrom', { place: placeName })}</span> : null;
 
   return (
-    <div ref={rootRef} className={`floating text-sm ${collapsible ? '' : 'px-3.5 pt-2.5 pb-3'}`}>
-      {collapsible ? (
+    <div ref={rootRef} data-no-swipe className={`floating text-sm ${folds ? '' : 'px-3.5 pt-2.5 pb-3'}`}>
+      {folds ? (
         <PanelHeader
           caption={t('controls.within')}
           captionClass="font-semibold text-link"
@@ -146,17 +150,20 @@ export function DistanceSlider({
           onToggle={() => setOpen(!open)}
           controls={bodyId}
           reset={radius ? { label: t('slider.anyDistance'), onClick: () => apply(null) } : undefined}
-          className="max-xl:hidden"
+          className={inDrawer ? '' : 'max-xl:hidden'}
         >
           {typeButton(`${iconButton} pointer-events-auto max-lg:hidden`)}
         </PanelHeader>
       ) : null}
-      <div id={bodyId} className={collapsible ? `px-3.5 pb-3 max-xl:pt-2.5 ${open ? '' : 'xl:hidden'}` : ''}>
+      <div
+        id={bodyId}
+        className={folds ? `px-3.5 pb-3 ${inDrawer ? (open ? '' : 'hidden') : `max-xl:pt-2.5 ${open ? '' : 'xl:hidden'}`}` : ''}
+      >
         {/* Where the ring is measured from, which the heading carries when it
             is here and the fold's row cannot, being one line. */}
-        {collapsible ? <div className="max-xl:hidden">{measuredFrom}</div> : null}
+        {folds ? <div className={inDrawer ? '' : 'max-xl:hidden'}>{measuredFrom}</div> : null}
         {/* The heading, which the fold's own row says again from xl up. */}
-        <div className={`flex items-start justify-between gap-2 ${collapsible ? 'xl:hidden' : ''}`}>
+        <div className={`flex items-start justify-between gap-2 ${folds ? (inDrawer ? 'hidden' : 'xl:hidden') : ''}`}>
           <button
             type="button"
             className="min-w-0 justify-self-start text-left max-lg:-my-3 max-lg:py-3"
@@ -170,7 +177,7 @@ export function DistanceSlider({
         </div>
 
         {/* Labels in their own row, clear of the thumb. */}
-        <div className={`mt-2 flex items-center justify-between max-lg:mb-2 ${collapsible ? 'xl:mt-1' : ''}`}>
+        <div className={`flex items-center justify-between max-lg:mb-2 ${folds ? (inDrawer ? 'mt-1' : 'mt-2 xl:mt-1') : 'mt-2'}`}>
           {steps.length ? (
             <button type="button" className={`${tickClass} -ml-1`} onClick={() => apply(steps[0])} title={t('slider.withinRadius', { radius: label(steps[0]) })}>
               {label(steps[0])}

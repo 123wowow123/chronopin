@@ -1,7 +1,7 @@
 // The day an AI model stops answering, as pins, from the vendors' own
 // deprecation pages (keyless, plain HTTP).
 //
-// `AI Models` was the worst-shaped category in the corpus: 45 pins and 2 of
+// `AI` was the worst-shaped category in the corpus: 45 pins and 2 of
 // them ahead of today. The reason is that nobody announces a model launch in
 // advance - but they all announce a model's *death* in advance, because
 // developers have to migrate. A shutdown date is a real dated event with
@@ -200,7 +200,7 @@ function pinBody(a: Announcement, place: Place) {
     longitude: place?.longitude ?? null,
     company: a.vendor.name,
     companyWikiUrl: a.vendor.wiki,
-    categories: ['AI Models'],
+    categories: ['AI'],
     tags: ['Model retirement', a.vendor.name, 'Deprecation'],
     // No media: a documentation page carries no pictures, and the company's
     // logo on eleven pins would be the padding the quality bar forbids.

@@ -53,6 +53,18 @@ export default class PinTag {
     return replace(pinId, 'user', names, true);
   }
 
+  // Adds these to the form's tags, keeping the ones already there: for a
+  // backfill that learns one fact about a pin and must not drop what a
+  // curator typed. Categories are left to setCategories. True when they
+  // changed.
+  static async addUserTags(pinId: number, names: string[]): Promise<boolean> {
+    const stored = await db.query<{ name: string }>(
+      `SELECT "name"::text AS "name" FROM "PinTag" WHERE "pinId" = $1 AND "source" = 'user' AND "kind" <> 'category' ORDER BY "id"`,
+      [pinId],
+    );
+    return replace(pinId, 'user', [...stored.map((row) => row.name), ...names]);
+  }
+
   // What the pin's own prose and links say: the awards it names and the
   // prediction markets it cites. True when they changed.
   static async syncAutoTags(pinId: number): Promise<boolean> {

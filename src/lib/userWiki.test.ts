@@ -26,10 +26,10 @@ describe('buildPreference', () => {
   });
 
   it('shares a pin in two categories between them', () => {
-    const pref = buildPreference([signal(1, 'open', ['Anime', 'Music & Audio']), signal(2, 'open', 'Anime')], now);
+    const pref = buildPreference([signal(1, 'open', ['Anime', 'Audio']), signal(2, 'open', 'Anime')], now);
     expect(pref.categories).toEqual([
       { name: 'Anime', share: 0.75 },
-      { name: 'Music & Audio', share: 0.25 },
+      { name: 'Audio', share: 0.25 },
     ]);
   });
 

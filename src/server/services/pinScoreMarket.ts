@@ -2,12 +2,11 @@
 // with the market: run after every save and edit, so a pin posted by API
 // without a scrape gets it too, and by `npm run media:score-markets`.
 
-import { firstCategoryOf } from '@/lib/categories';
 import * as db from '../db';
 import Pin from '../model/pin';
 import { PIN_CATEGORIES } from '../model/pinTag';
 import { findScoreMarket, GAME_CATEGORIES, scoreRating, scoreSiteFor, type ScoreMarket } from '../scrape/scoreMarkets';
-import { SCREEN_CATEGORIES } from '../scrape/screen';
+import { workCategory } from '../scrape/screen';
 
 export type ScoreMarketSync = { market: ScoreMarket; kept: boolean; droppedForecast: boolean };
 
@@ -21,7 +20,7 @@ export async function syncPinScoreMarket(pinId: number, { apply = true } = {}): 
   );
   if (!pin || !scoreSiteFor(pin.categories)) return undefined;
   const market = await findScoreMarket(
-    { pinTitle: pin.title, category: firstCategoryOf(pin.categories, [...SCREEN_CATEGORIES, ...GAME_CATEGORIES]), year: new Date(pin.utcStartDateTime).getUTCFullYear() },
+    { pinTitle: pin.title, category: workCategory(pin.categories, GAME_CATEGORIES), year: new Date(pin.utcStartDateTime).getUTCFullYear() },
     60000,
   );
   if (!market) return undefined;

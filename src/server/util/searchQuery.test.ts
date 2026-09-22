@@ -15,8 +15,8 @@ describe('splitSearchQuery', () => {
   });
 
   it('reads whole-term quotes and smart quotes', () => {
-    expect(splitSearchQuery('"category:Music & Audio" company:“EA”')).toEqual([
-      { kind: 'term', field: 'category', value: 'Music & Audio', raw: '"category:Music & Audio"' },
+    expect(splitSearchQuery('"tag:Prediction Market" company:“EA”')).toEqual([
+      { kind: 'term', field: 'tag', value: 'Prediction Market', raw: '"tag:Prediction Market"' },
       { kind: 'text', raw: ' ' },
       { kind: 'term', field: 'company', value: 'EA', raw: 'company:"EA"' },
     ]);
@@ -41,6 +41,7 @@ describe('parseSearchQuery', () => {
       ids: [],
       companies: [],
       confidences: [],
+      confidenceBands: [],
       dates: [],
       postedDays: [],
       tags: ['software'],
@@ -71,6 +72,15 @@ describe('parseSearchQuery', () => {
     expect(parseSearchQuery('confidence:ESTIMATED confidence:unverified confidence:estimated').confidences).toEqual(['estimated', 'unknown']);
   });
 
+  it('reads score bands beside the levels, once each, on the same field', () => {
+    expect(parseSearchQuery('confidence:LOW confidence:low confidence:high confidence:estimated')).toMatchObject({
+      confidenceBands: ['low', 'high'],
+      confidences: ['estimated'],
+      text: '',
+    });
+    expect(hasFilters(parseSearchQuery('confidence:medium'))).toBe(true);
+  });
+
   it('reads places - a city, a state, a postal code - quoted like any value, once each', () => {
     expect(parseSearchQuery('place:Chicago place:"New York" PLACE:chicago place:60601 fire')).toMatchObject({
       places: ['Chicago', 'New York', '60601'],
@@ -83,8 +93,8 @@ describe('parseSearchQuery', () => {
 describe('wordStartPattern', () => {
   it('matches the text at the start of any word, taken literally', () => {
     const matches = (text: string, name: string) => new RegExp(wordStartPattern(text).replace('[:alnum:]', 'a-z0-9'), 'i').test(name);
-    expect(matches('ast', 'Space & Astronomy')).toBe(true);
-    expect(matches('pace', 'Space & Astronomy')).toBe(false);
+    expect(matches('ast', 'Deep Space Astronomy')).toBe(true);
+    expect(matches('pace', 'Deep Space Astronomy')).toBe(false);
     expect(matches('c++', 'C++ Conference')).toBe(true);
     expect(wordStartPattern(' a.b ')).toBe('(^|[^[:alnum:]])a\\.b');
   });

@@ -11,7 +11,11 @@
 //
 // confidence: takes a pin's date confidence level, as its badge shows it
 // (confidence:estimated); UNVERIFIED is the badge for the stored "unknown", so
-// either word works.
+// either word works. It also takes how well the pin is evidenced overall, as
+// a band of its score: confidence:low (under 50%, what the pin page flags
+// "Low confidence"), confidence:medium or confidence:high. Every score badge
+// on a pin or a card links to its own band; a pin with no score at all is in
+// no band.
 //
 // date: takes a day as the timeline writes it (date:2026-09-08, or
 // date:-2560-01-01 for 2561 BC): the pins starting that day as the timeline
@@ -53,12 +57,17 @@
 // also an apostrophe (McDonald's), so it only closes a value when a space or
 // the end of the query follows it: company:'McDonald's' is one company.
 
+import { type ConfidenceBand, isConfidenceBand } from '@/lib/referenceConfidence';
+
 export type SearchQuery = {
   userNames: string[];
   // Pin ids, matching exactly those pins.
   ids: number[];
   companies: string[];
   confidences: string[];
+  // Bands of a pin's overall score ("low", "medium", "high"), which widen the
+  // same confidence: field the levels do.
+  confidenceBands: ConfidenceBand[];
   // Day keys ("2026-09-08"), any of them: when pins start, and when they
   // were posted.
   dates: string[];
@@ -150,6 +159,7 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
     ids: [],
     companies: [],
     confidences: [],
+    confidenceBands: [],
     dates: [],
     postedDays: [],
     tags: [],
@@ -192,6 +202,7 @@ export function hasFilters(query: SearchQuery): boolean {
     query.ids.length ||
     query.companies.length ||
     query.confidences.length ||
+    query.confidenceBands.length ||
     query.dates.length ||
     query.postedDays.length ||
     query.tags.length ||
@@ -214,10 +225,16 @@ function addUserName(query: SearchQuery, value: string) {
   }
 }
 
-// Levels are stored lowercase; UNVERIFIED is how the badge shows "unknown".
+// A score band, or else a level. Levels are stored lowercase; UNVERIFIED is
+// how the badge shows "unknown".
 function addConfidence(query: SearchQuery, value: string) {
   const level = value.trim().toLowerCase();
-  if (level) {
+  if (!level) {
+    return;
+  }
+  if (isConfidenceBand(level)) {
+    if (!query.confidenceBands.includes(level)) query.confidenceBands.push(level);
+  } else {
     addUnique(query.confidences, level === 'unverified' ? 'unknown' : level);
   }
 }

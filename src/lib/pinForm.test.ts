@@ -13,7 +13,7 @@ const stored: PinJson = {
   utcEndDateTime: '2026-10-04T00:00:00.000Z',
   allDay: true,
   allDayStated: true,
-  categories: ['Consumer Electronics', 'Music & Audio'],
+  categories: ['Electronics', 'Audio'],
   company: 'Sonos',
   companyWikiUrl: 'https://en.wikipedia.org/wiki/Sonos',
   address: 'Santa Barbara, California',

@@ -18,6 +18,7 @@ import PinTicker from '@/server/model/pinTicker';
 import PinTag from '@/server/model/pinTag';
 import { allFlightPaths, restoreFlightPaths } from '@/server/services/pinFlightPath';
 import { allPlaces, restorePlaces } from '@/server/model/pinPlace';
+import { allSeries, restoreSeries } from '@/server/services/pinSeries';
 import Source from '@/server/model/source';
 import log from '@/server/util/log';
 import { excludeE2e } from './excludeE2e';
@@ -40,6 +41,7 @@ const { values: flags } = parseArgs({
     tagfile: { type: 'string', default: './scripts/backup/seedTags.json' },
     flightpathfile: { type: 'string', default: './scripts/backup/seedFlightPaths.json' },
     placefile: { type: 'string', default: './scripts/backup/seedPlaces.json' },
+    seriesfile: { type: 'string', default: './scripts/backup/seedSeries.json' },
     translationfile: { type: 'string', default: './scripts/backup/seedTranslations.json' },
     companyfile: { type: 'string', default: './scripts/backup/seedCompanies.json' },
     aphelionfile: { type: 'string', default: './scripts/backup/aphelion.json' },
@@ -192,6 +194,12 @@ async function saveDB() {
   // rating scraped off Maps with the time it was read (0060).
   console.log('Backup Places');
   writeJson(flags.placefile, (await allPlaces()).filter((p) => keptPinIds.has(p.pinId)));
+
+  // Which public data series each pin's event moves (0062). Handles only - the
+  // numbers are the publisher's and are fetched on view - but without this a
+  // refreshed database draws no charts.
+  console.log('Backup Series');
+  writeJson(flags.seriesfile, (await allSeries()).filter((s) => keptPinIds.has(s.pinId)));
 
   // Pin translations (0044): each costs a Claude call to make again.
   console.log('Backup Translations');
@@ -367,6 +375,14 @@ async function seedDB() {
       await restorePlaces(readJson(flags.placefile));
     } catch (error) {
       log.error('Places Save Error', JSON.stringify(error));
+    }
+  }
+
+  if (existsSync(flags.seriesfile)) {
+    try {
+      await restoreSeries(readJson(flags.seriesfile));
+    } catch (error) {
+      log.error('Series Save Error', JSON.stringify(error));
     }
   }
 

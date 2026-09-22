@@ -51,6 +51,43 @@ generated: { by: claude-code/claude-opus-5, at: 2026-09-19T20:00:00Z }
 
 With no credit, read the page text yourself and produce the same JSON object, then carry on with the [by-hand playbook](../playbooks/scrape-without-credit.md). Validate the enum values and the date formats before posting; the save rejects a delayed pin without both delay fields and a reference with a malformed date.
 
+# When the source does not date the event
+
+A source that states no date still gives the pin its dates, and the pin page
+shows that as a claim on the **source** row with a tick beside it - "Starts Sep
+1, 2026 ✓" - however the date was really arrived at. That tick is a lie if the
+source does not carry the date, and it is what an owner checking `#ref-1` sees
+first.
+
+Two things fix it, and both are needed:
+
+1. **Cite the page that does date it.** Whatever the
+   `dateConfidenceReasoning` names as its evidence has to be in
+   `PinReference`, or a reader following the citation lands on a page that
+   says nothing. Greppable: a reasoning naming a URL or publication that is
+   not among the pin's references.
+2. **Give that reference the `startDate`, and a confidence above the
+   source's.** `topReference` only takes a reference over the source when its
+   confidence is **strictly greater** than `SOURCE_CONFIDENCE[dateConfidence]`
+   - `confirmed` is **90**, `scheduled` 75, `estimated` 50 - and a tie goes to
+   the source. A reference that merely quotes the date in its `reasoning`,
+   with no `startDate` of its own, never competes, so the tick stays on the
+   source. Pin 2693's news-index reference sits at 92 for exactly this reason.
+
+Setting a reference's `startDate` to the day the pin already has does not move
+the pin: `overridden` compares the resulting instants, so `sourceStartDateTime`
+stays null and only the attribution changes.
+
+**And the mirror of it: when the source *does* date itself, do not give its own
+reference row a `startDate`.** The pin's source is usually also cited as
+reference 1, and the two are merged into one row. Give that row a `startDate`
+above the source tier and the reference claim wins, but the row still renders
+the *source's* claim - so the tick disappears from the list entirely while the
+tooltip says the page supplies the date. Leave it off and the source claim is
+top, which is both correct and what the page shows. Pin 2694 (Opus 5.5, whose
+header reads "September 22, 2026") is the worked example; pin 2693 (Fable 5.1,
+which carries no date at all) is the other case.
+
 # Adding a category
 
 A category name lives in **seven files**: `categories.ts` and all six
@@ -59,12 +96,14 @@ translation dictionaries.
 1. `src/lib/categories.ts` - the entry in `CATEGORIES`, placed beside its
    neighbours rather than appended, since the list's order is the tag cloud's.
 2. `src/lib/i18n/messages/{en,de,es,fr,ja,zh}.ts` - the `categories` block, keyed
-   by `slugify(name)` (`'Religion & Belief'` -> `religion-belief`). English
-   repeats the category name exactly; the others follow their own convention -
-   German and Chinese keep the ampersand form (`Religion & Glaube`,
-   `宗教与信仰`), Spanish and French spell out the conjunction
-   (`Religión y creencias`, `Religion et croyances`), Japanese uses the middle
-   dot (`宗教・信仰`).
+   by `slugify(name)`, which for a one-word name is just the lowercase word
+   (`Religion` -> `religion`). English repeats the category name exactly; the
+   others give the same single word in their own language (`Religion`,
+   `Religión`, `宗教`).
+
+A name is **one word**. A compound like "Conferences & Festivals" groups
+nothing, because half of it is always wrong for the pin under it - split it
+into the two words and let a pin carry both when it is both.
 
 **What enforces it is the test, not the types.** `Messages = Shape<typeof en>`
 requires of the other five languages only what `en.ts` itself declares, so a

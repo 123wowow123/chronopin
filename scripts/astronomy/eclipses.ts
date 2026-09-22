@@ -293,7 +293,7 @@ function pinBody(e: Eclipse, ge: GreatestEclipse, place: { label: string; countr
     latitude: ge.latitude,
     longitude: ge.longitude,
     address: place?.label ?? `Point of greatest eclipse at sea${where ? `, off ${named(first)}` : ''}`,
-    categories: ['Space & Astronomy'],
+    categories: ['Astronomy'],
     tags: ['Solar eclipse', e.type, `Saros ${e.saros}`].filter(Boolean),
     media: [{ type: 1, originalUrl: e.plotUrl }],
     references: [

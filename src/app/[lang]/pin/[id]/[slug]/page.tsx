@@ -20,6 +20,7 @@ import { PinDistance } from '@/components/pin/PinDistance';
 import { PinDuplicates } from '@/components/pin/PinDuplicates';
 import { PinOdds } from '@/components/pin/PinOdds';
 import { PinPlace } from '@/components/pin/PinPlace';
+import { PinSeriesChart } from '@/components/pin/PinSeriesChart';
 import { PinStocks } from '@/components/pin/PinStocks';
 import { PinAwards } from '@/components/pin/PinAwards';
 import { PinTags } from '@/components/pin/PinTags';
@@ -269,7 +270,7 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
       ) : null}
       {pin.utcStartDateTime ? <DateRanges {...dateRanges} /> : null}
 
-      {pin.utcStartDateTime ? <CountdownMeter start={pin.utcStartDateTime} since={pin.utcCreatedDateTime} allDay={pin.allDay} /> : null}
+      {pin.utcStartDateTime ? <CountdownMeter start={pin.utcStartDateTime} since={pin.utcCreatedDateTime} allDay={pin.allDay} originalStart={pin.originalStartDate} /> : null}
 
       {/* Above the title: on a pin you can walk into, what the place scores
           and whether it is open now is the first thing worth knowing, and the
@@ -312,6 +313,10 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
       <PinAwards awards={pin.awards} />
       {pinMarketRefs(pin).length ? <PinOdds pinId={pin.id} /> : null}
       <PinStocks pinId={pin.id} />
+      {/* The publisher's own chart for a series this event moves (PinSeries,
+          0062). The pin's JSON says whether it has one, so a pin without a
+          series never makes the request. */}
+      <PinSeriesChart pinId={pin.id} has={!!pin.series?.length} />
 
       {pin.description ? <div className="rich-text mb-3 text-base leading-relaxed font-medium text-ink" dangerouslySetInnerHTML={{ __html: safeHtml(pin.description) }} /> : null}
       {pin.longFormSummary ? <div className="rich-text text-[15px] leading-relaxed text-ink/90" dangerouslySetInnerHTML={{ __html: safeCitedHtml(pin.longFormSummary, pinEvidence(pin)) }} /> : null}

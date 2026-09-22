@@ -48,7 +48,7 @@ describe('tagKind', () => {
 
   it('knows a category by its name on the list', () => {
     expect(tagKind('Anime')).toBe('category');
-    expect(tagKind('space & astronomy')).toBe('category');
+    expect(tagKind('astronomy')).toBe('category');
   });
 
   // PinTagView (0056) writes the thread tag's kind itself; it has to be the
@@ -189,24 +189,24 @@ describe('tag groups', () => {
   it('puts every other entry under the category most of its pins carry', () => {
     const counts = [
       { name: 'Anime', kind: 'category' as const, count: 650 },
-      { name: 'Movies', kind: 'category' as const, count: 20 },
-      { name: 'Music & Audio', kind: 'category' as const, count: 50 },
+      { name: 'Movie', kind: 'category' as const, count: 20 },
+      { name: 'Audio', kind: 'category' as const, count: 50 },
       { name: 'Crunchyroll Anime Awards 2024', kind: 'award' as const, count: 3, category: 'Anime' },
       { name: 'Crunchyroll Anime Awards 2023 Nominee', kind: 'nomination' as const, count: 2, category: 'Anime' },
-      { name: 'Studio Ghibli', kind: 'topic' as const, count: 4, category: 'Movies' },
-      { name: 'Artemis', kind: 'topic' as const, count: 5, category: 'Space & Astronomy' },
+      { name: 'Studio Ghibli', kind: 'topic' as const, count: 4, category: 'Movie' },
+      { name: 'Artemis', kind: 'topic' as const, count: 5, category: 'Space' },
       { name: 'Prediction Market', kind: 'topic' as const, count: 2, category: null },
     ];
     const grouped = groupTags(counts);
     // Artemis's category is not among the tags, and Prediction Market has none.
-    expect(grouped.map((g) => g.name)).toEqual(['Artemis', 'Prediction Market', 'Anime', 'Movies', 'Music & Audio']);
+    expect(grouped.map((g) => g.name)).toEqual(['Artemis', 'Prediction Market', 'Anime', 'Movie', 'Audio']);
     const anime = grouped.find((g) => g.name === 'Anime')!;
     // A category counts its own pins, and wraps the award body's group.
     expect(anime.count).toBe(650);
     expect(anime.members!.map((m) => m.name)).toEqual(['Crunchyroll Anime Awards']);
     expect(tagMembers(anime).map((m) => m.name)).toEqual(['Crunchyroll Anime Awards', 'Crunchyroll Anime Awards 2024', 'Crunchyroll Anime Awards 2023 Nominee']);
     // One with nothing under it stays a lone tag.
-    expect(grouped.find((g) => g.name === 'Music & Audio')!.members).toBeUndefined();
+    expect(grouped.find((g) => g.name === 'Audio')!.members).toBeUndefined();
     // Picking a year reads as picking its body and its category.
     expect(groupSelection(grouped, ['Crunchyroll Anime Awards 2024'])).toEqual(expect.arrayContaining(['Crunchyroll Anime Awards', 'Anime']));
   });

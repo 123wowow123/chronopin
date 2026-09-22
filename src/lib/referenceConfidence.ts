@@ -21,6 +21,44 @@ export const SOURCE_CONFIDENCE: Record<string, number> = {
   unknown: 25,
 };
 
+// Below this a pin's score reads as low, and at or above HIGH_CONFIDENCE as
+// high: the bars its badge changes colour at (confidenceClass in
+// PinConfidence.tsx, whose amber and red both read as low), and LOW_CONFIDENCE
+// is the bar a date is flagged "Low confidence" at (LOW_DATE_CONFIDENCE).
+export const LOW_CONFIDENCE = 50;
+export const HIGH_CONFIDENCE = 75;
+
+// The bands a score falls in, low first, as the confidence: search term takes
+// them (confidence:low, beside a source's own confidence:estimated): clicking
+// a score badge searches for the pins scored like it. Ordered, so a band's
+// place here is also its bucket in SQL (searchClauses).
+export const CONFIDENCE_BANDS = [
+  { band: 'low', from: 0, to: LOW_CONFIDENCE - 1 },
+  { band: 'medium', from: LOW_CONFIDENCE, to: HIGH_CONFIDENCE - 1 },
+  { band: 'high', from: HIGH_CONFIDENCE, to: 100 },
+] as const;
+
+export type ConfidenceBand = (typeof CONFIDENCE_BANDS)[number]['band'];
+
+// The bars between the bands ([50, 75]), which SQL's width_bucket reads a
+// score's band off in one pass.
+export const CONFIDENCE_BARS: number[] = CONFIDENCE_BANDS.slice(1).map((band) => band.from);
+
+// Which band a score falls in; undefined for a pin with no score, which no
+// band matches.
+export function confidenceBand(confidence: number | null | undefined): ConfidenceBand | undefined {
+  const score = Number(confidence);
+  if (confidence == null || !Number.isFinite(score)) {
+    return undefined;
+  }
+  return (CONFIDENCE_BANDS.find((band) => score <= band.to) ?? CONFIDENCE_BANDS[CONFIDENCE_BANDS.length - 1]).band;
+}
+
+export const isConfidenceBand = (value: string): value is ConfidenceBand => CONFIDENCE_BANDS.some((band) => band.band === value);
+
+// A band's range, for the pill's "Show all pins from 50% to 74%" title.
+export const confidenceBandRange = (band: ConfidenceBand) => CONFIDENCE_BANDS.find((b) => b.band === band) ?? CONFIDENCE_BANDS[0];
+
 // A reference, or the pin's source standing in as one.
 export type Evidence = Omit<PinReferenceJson, 'confidence'> & { confidence?: number; isSource?: boolean };
 

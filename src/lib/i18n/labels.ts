@@ -4,7 +4,7 @@
 import { canonicalCategory, slugify } from '../categories';
 import type { Translator } from './translate';
 
-// "Space & Astronomy" -> "Espacio y astronomía". A tag that is not one of the
+// "Astronomy" -> "Astronomía". A tag that is not one of the
 // fixed categories keeps its own name.
 export function categoryLabel(t: Translator, name: string): string {
   const canonical = canonicalCategory(name);

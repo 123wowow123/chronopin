@@ -6,6 +6,7 @@ import Pin from './pin';
 import PinTag from './pinTag';
 import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
 import { tagGroupPatterns } from '@/lib/tags';
+import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, looksLikePlaceText, placePatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
 
@@ -19,6 +20,7 @@ export type PinSearchFilters = {
   ids: number[];
   companies: string[];
   confidences: string[];
+  confidenceBands: ConfidenceBand[];
   dates: string[];
   postedDays: string[];
   tags: string[];
@@ -90,23 +92,23 @@ export default class Pins extends BasePins<Pin> {
 
   // minConfidence: the score a pin needs to show, or null to show every pin.
   static queryForwardByDate(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince: Date | null | undefined, minConfidence: number | null, near?: NearFilter | null) {
-    return queryPage(true, false, fromDateTime, userId, lastPinId, pageSize, createdSince, minConfidence, near).then((res) => new Pins(res));
+    return queryPage(true, false, fromDateTime, userId, lastPinId, pageSize, createdSince, minConfidence, near).then((res) => withThreadConfidence(new Pins(res)));
   }
 
   static queryBackwardByDate(fromDateTime: Date | string, userId: number, lastPinId: number, pageSize: number, createdSince: Date | null | undefined, minConfidence: number | null, near?: NearFilter | null) {
-    return queryPage(false, false, fromDateTime, userId, lastPinId, pageSize, createdSince, minConfidence, near).then((res) => new Pins(res));
+    return queryPage(false, false, fromDateTime, userId, lastPinId, pageSize, createdSince, minConfidence, near).then((res) => withThreadConfidence(new Pins(res)));
   }
 
   // aroundPinId splits the page at that pin (starting at fromDateTime) rather
   // than at the instant, so it is on the page however many pins share its start.
   static queryInitialByDate(fromDateTime: Date, userId: number, pageSizePrev: number, pageSizeNext: number, createdSince: Date | null | undefined, minConfidence: number | null, aroundPinId = 0, near?: NearFilter | null) {
-    return queryInitialPage(false, fromDateTime, userId, pageSizePrev, pageSizeNext, createdSince, minConfidence, aroundPinId, near).then((res) => new Pins(res));
+    return queryInitialPage(false, fromDateTime, userId, pageSizePrev, pageSizeNext, createdSince, minConfidence, aroundPinId, near).then((res) => withThreadConfidence(new Pins(res)));
   }
 
   // Every pin starting in [start, end), oldest first, at most limit of them:
   // a crowded day's "View all" popup. Filtered as the timeline is.
   static queryBetween(start: Date, end: Date, userId: number, limit: number, createdSince: Date | null | undefined, minConfidence: number | null, near?: NearFilter | null) {
-    return queryBetween(start, end, userId, limit, createdSince, minConfidence, near).then((res) => new Pins(res));
+    return queryBetween(start, end, userId, limit, createdSince, minConfidence, near).then((res) => withThreadConfidence(new Pins(res)));
   }
 
   // Just the start of every pin in [start, end), filtered as the timeline
@@ -385,6 +387,54 @@ const leanReferences = (as: string) => `
 // "pinConfidence" cannot be inlined, and the planner then scores every
 // candidate row instead of stopping once a page is full - three times the
 // cost of this on a page, five times on a whole-table count.
+// How well the rest of a pin's thread is sourced: the mean confidence of the
+// other pins in its chain, which the bag weight leans on (src/lib/bagSample.ts)
+// so a pin in a well-evidenced story weighs more than a lone one. Null for a
+// pin in no thread, and for a chain whose other pins are all unscored - avg
+// skips nulls, and a pin weighs 1 for either.
+//
+// Seeded by the page's own ids rather than computed over the whole table, so
+// the cost follows the page and not the corpus: the walk goes both ways from
+// each seed (up through parentId, down through its answers) over IX_Pin_parentId,
+// and a page of 40 across the longest chains here measures under 5ms. The pin's
+// own confidence is left out of its thread's - it is already counted on its own.
+export async function threadConfidenceOf(ids: number[]): Promise<Map<number, number>> {
+  const seeds = ids.filter((id) => Number.isInteger(id));
+  if (!seeds.length) return new Map();
+  const rows = await db.query<{ id: number; threadConfidence: number | null }>(
+    `
+    WITH RECURSIVE "thread" ("seed", "id", "parentId") AS (
+        SELECT "id", "id", "parentId"
+        FROM "Pin"
+        WHERE "id" = ANY($1::integer[]) AND "utcDeletedDateTime" IS NULL
+      UNION
+        SELECT "t"."seed", "p"."id", "p"."parentId"
+        FROM "thread" AS "t"
+          JOIN "Pin" AS "p" ON ("p"."id" = "t"."parentId" OR "p"."parentId" = "t"."id")
+        WHERE "p"."utcDeletedDateTime" IS NULL
+    )
+    SELECT "t"."seed" AS "id", round(avg(${pinConfidenceOf('p')}))::integer AS "threadConfidence"
+    FROM "thread" AS "t"
+      JOIN "Pin" AS "p" ON "p"."id" = "t"."id"
+    WHERE "t"."id" <> "t"."seed"
+    GROUP BY "t"."seed"`,
+    [seeds],
+  );
+  return new Map(rows.filter((r) => r.threadConfidence != null).map((r) => [Number(r.id), Number(r.threadConfidence)]));
+}
+
+// Fills in each pin's threadConfidence, for the pages the timeline samples.
+// Left off search and the thread view, which show every match rather than
+// picking among them.
+async function withThreadConfidence(pins: Pins): Promise<Pins> {
+  const byId = await threadConfidenceOf(pins.pins.map((pin) => Number(pin.id)));
+  if (byId.size) pins.pins.forEach((pin) => {
+    const confidence = byId.get(Number(pin.id));
+    if (confidence != null) pin.threadConfidence = confidence;
+  });
+  return pins;
+}
+
 export const pinConfidenceOf = (as: string) =>
   `"pinConfidence"(${leanReferences(as)}, "${as}"."sourceUrl", "${as}"."dateConfidence", "${as}"."utcCreatedDateTime")`;
 
@@ -678,8 +728,21 @@ function searchClauses(filter: SearchFilter) {
     joins.push('INNER JOIN "Company" ON "Company"."id" = "Pin"."companyId"');
     where.push(`"Company"."name" = ANY(${add(filter.companies)}::citext[])`);
   }
+  // One confidence: field, so its levels and its score bands widen each other.
+  // A band is read off the score in one pass with width_bucket, which drops a
+  // score into the bar list's gaps ([50, 75] -> 0 low, 1 medium, 2 high) -
+  // CONFIDENCE_BANDS' own order. An unscored pin buckets to NULL and is in no
+  // band, as it is on the timeline.
+  const confidence: string[] = [];
   if (filter.confidences.length) {
-    where.push(`"Pin"."dateConfidence"::citext = ANY(${add(filter.confidences)}::citext[])`);
+    confidence.push(`"Pin"."dateConfidence"::citext = ANY(${add(filter.confidences)}::citext[])`);
+  }
+  if (filter.confidenceBands.length) {
+    const buckets = filter.confidenceBands.map((band) => CONFIDENCE_BANDS.findIndex((b) => b.band === band));
+    confidence.push(`width_bucket(${pinConfidenceOf('Pin')}, ${add(CONFIDENCE_BARS)}::integer[]) = ANY(${add(buckets)}::integer[])`);
+  }
+  if (confidence.length) {
+    where.push(`(${confidence.join(' OR ')})`);
   }
   // Any of these places: a US state under either its name or its code.
   if (filter.places.length) {

@@ -44,6 +44,7 @@
     "astronomy:eclipses": "tsx scripts/astronomy/eclipses.ts",
     "trends:discover": "tsx scripts/trends/discover.ts",
     "tags:sync": "tsx scripts/tags/sync.ts",
+    "series:attach": "tsx scripts/series/attach.ts",
     "translations:sync": "tsx scripts/translations/sync.ts",
     "threads:prequels": "tsx scripts/threads/prequels.ts",
     "references:list": "tsx scripts/references/list.ts",

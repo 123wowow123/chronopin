@@ -123,12 +123,12 @@ export const SCHEMA = {
       type: 'array',
       items: { type: 'string', enum: CATEGORIES },
       description:
-        'The categories this event belongs to from the fixed list, the best fit first. Usually one; add a second only when the event is squarely both (an anime film\'s soundtrack is "Anime Movie" and "Music & Audio"). Use "Other" only when nothing else reasonably fits.',
+        'The categories this event belongs to from the fixed list, the best fit first. Each name is one word, so take every word the event is squarely about: an anime film is "Anime" and "Movie", its soundtrack release is "Anime" and "Music", a new metro line is "Transport". Never force a pin into a word that only loosely covers it - two or three exact words beat one broad one.',
     },
     workTitle: {
       type: ['string', 'null'],
       description:
-        'When a category is Anime, Anime Movie, Movies or TV Series, or the pin is about one video game: the film\'s, show\'s or game\'s own official English title, with any season or part as it is officially styled, e.g. "Jujutsu Kaisen Season 2", "Frieren: Beyond Journey\'s End" or "Grand Theft Auto VI" - not the event headline. Null otherwise.',
+        'When a category is Anime, Movie or TV, or the pin is about one video game: the film\'s, show\'s or game\'s own official English title, with any season or part as it is officially styled, e.g. "Jujutsu Kaisen Season 2", "Frieren: Beyond Journey\'s End" or "Grand Theft Auto VI" - not the event headline. Null otherwise.',
     },
     episodeCount: {
       type: ['number', 'null'],

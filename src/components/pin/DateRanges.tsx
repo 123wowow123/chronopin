@@ -5,7 +5,8 @@ import { type DateClaim, type DateRange, isLowConfidence } from '@/lib/dateClaim
 import { dateFormat, dayKeyParts, dayKeyToMs } from '@/lib/format';
 import { INTL_LOCALES, type Locale } from '@/lib/i18n/config';
 import type { Translator } from '@/lib/i18n/translate';
-import { confidenceClass } from './PinConfidence';
+import { bandTitle, ConfidenceBadge, confidenceClass } from './PinConfidence';
+import { RefineLink } from './RefineLink';
 
 const dayFormat = (locale: Locale) => dateFormat(INTL_LOCALES[locale], { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
@@ -40,17 +41,25 @@ function Range({ label, range }: { label: string; range: DateRange }) {
       <dd className="flex flex-wrap items-center gap-x-2 gap-y-0.5" title={range.claims.map((c) => `${formatDay(c.day, locale)} (${whose(c, t)})${c.used ? ` - ${t('dateRanges.used')}` : ''}`).join('\n')}>
         <span className="font-medium text-muted tabular-nums">{formatDay(best.day, locale)}</span>
         {best.confidence != null ? (
-          <span
-            className={`rounded-full px-2 py-px text-[10px] font-semibold tracking-wider tabular-nums ring-1 ring-inset ${confidenceClass(best.confidence)}`}
+          <ConfidenceBadge
+            confidence={best.confidence}
+            className={confidenceClass(best.confidence)}
             title={range.claims.length > 1 ? t('dateRanges.mostConfident', { count: range.claims.length }) : t('dateRanges.onlySource')}
           >
             {t('confidence.badge', { percent: best.confidence })}
-          </span>
+          </ConfidenceBadge>
         ) : null}
+        {/* Under the bar, so always the low band: the words themselves search
+            for the pins as thinly evidenced as this one. */}
         {isLowConfidence(best.confidence) ? (
-          <span className="font-medium text-warning-soft" title={t('dateRanges.lowConfidenceTitle')}>
+          <RefineLink
+            field="confidence"
+            value="low"
+            className="font-medium text-warning-soft hover:underline hover:decoration-dotted hover:underline-offset-2"
+            title={`${t('dateRanges.lowConfidenceTitle')}\n${bandTitle('low', t)}`}
+          >
             {t('dateRanges.lowConfidence')}
-          </span>
+          </RefineLink>
         ) : null}
         <span className="text-subtle">
           {t('dateRanges.from', { who: best.isSource ? t('dateRanges.theSource') : hostname(best.url || '') })}

@@ -92,6 +92,10 @@ export type PinJson = {
   translatedTo?: string;
   parentId?: number;
   rootThread?: boolean;
+  // How well the rest of this pin's thread is sourced (0-100), on the pages
+  // the timeline samples: the mean confidence of the other pins in its chain.
+  // Absent for a pin in no thread, or one whose chain is unscored.
+  threadConfidence?: number;
   title: string;
   description?: string;
   sourceUrl?: string;
@@ -174,6 +178,18 @@ export type PinJson = {
   // only: the scores themselves are fetched live from /api/pins/:id/place,
   // because neither source allows its ratings to be stored (PinPlace, 0059).
   place?: PinPlaceHandlesJson;
+  // Which public data series this pin's event moves, so the page can draw the
+  // publisher's live chart beside it. Handles only, like the place: the
+  // numbers come from /api/pins/:id/series on view (PinSeries, 0062).
+  series?: PinSeriesHandleJson[];
+};
+
+// One series a pin's event moves, as the pin's own JSON carries it.
+export type PinSeriesHandleJson = {
+  source: string;
+  seriesId: string;
+  label: string | null;
+  sourceUrl: string | null;
 };
 
 // A pin ready for a card: its description already sanitised (on the server

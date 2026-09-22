@@ -121,7 +121,7 @@ function pinBody(l: Launch) {
     dateConfidence: 'scheduled',
     dateConfidenceReasoning: 'Launch Library 2 lists this as the no-earlier-than launch time; launches slip.',
     company: providerOf(l),
-    categories: ['Space & Astronomy'],
+    categories: ['Space'],
     media: l.image?.image_url ? [{ type: 1, originalUrl: l.image.image_url }] : [],
   };
 }

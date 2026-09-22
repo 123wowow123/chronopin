@@ -8,10 +8,10 @@ import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
 import { hrefKeepingDate } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
-import { removeTerm, toggleTerm } from '@/lib/searchTerms';
+import { refineQuery, removeTerm } from '@/lib/searchTerms';
 import { cloudSteps, cloudTags, groupSelection, groupTags, tagMembers, THREAD_TAG, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
-import { useTagFoldOpen } from './FloatingControls';
+import { useInDrawerPanel, useTagFoldOpen } from './FloatingControls';
 import { iconButton, PanelHeader } from './PanelHeader';
 import { WordCloud } from './WordCloud';
 import { useT } from '@/lib/client/i18n';
@@ -34,9 +34,9 @@ let rememberedWrapped = true;
 // How many tags the cloud shows before its filter box is needed.
 const SHOWN = 60;
 // A step up from what the cards use: the cloud is read at a glance, and its
-// smallest tags were too small to pick out. Another step up below xl, where
-// the cloud has the screen to itself behind its pill rather than a 16rem
-// column, and is read at arm's length.
+// smallest tags were too small to pick out. Another step up between lg and
+// xl, where the cloud has the screen to itself behind its pill rather than a
+// 16rem column, and is read at arm's length.
 const STEP_CLASS = [
   '',
   'text-base xl:text-sm',
@@ -45,6 +45,9 @@ const STEP_CLASS = [
   'text-xl xl:text-lg',
   'text-2xl xl:text-xl font-semibold',
 ];
+// In the nav drawer the cloud is back in a column of its own width, so it
+// takes the column's sizes whatever the screen.
+const COLUMN_STEP_CLASS = ['', 'text-sm', 'text-[15px]', 'text-base', 'text-lg', 'text-xl font-semibold'];
 
 // What is picked, in brief ("Artemis", "Artemis +2"), or 'All' for nothing.
 function tagSummary(selected: string[], locale: Locale = 'en') {
@@ -63,26 +66,35 @@ export function tagPillSummary(query?: string, locale: Locale = 'en') {
 // Unfolded, it takes height from the panels under it (trending, new pins),
 // which drop out when there is no room. A tag toggles its tag: term in the
 // search query, so it shows and is edited in the navbar's search box; off the
-// search page a pick starts a search.
+// search page a pick starts a search - unless the page takes the query
+// itself (the map does, staying where it is).
 export function TagCloud({
   query,
   onlyWatched = false,
   postedWithin = null,
   createdSince = null,
+  onQuery,
   className = '',
 }: {
   query?: string;
   onlyWatched?: boolean;
   postedWithin?: string | null;
   createdSince?: string | null;
+  // Where a pick goes when it is not a search of its own: the page is handed
+  // the edit to make to the query it already shows (the map filters its
+  // markers by it rather than leaving for the results).
+  onQuery?: (edit: (query: string) => string) => void;
   className?: string;
 }) {
   const router = useRouter();
   const t = useT();
-  // In the floating controls' tags fold (below xl, behind its own pill): the
-  // pill is the header, and the cloud shows while the fold is open.
+  // In the floating controls' tags fold (between lg and xl, behind its own
+  // pill): the pill is the header, and the cloud shows while the fold is open.
   const folded = useTagFoldOpen();
   const inFold = folded !== null;
+  // In the nav drawer (below lg) it is a panel among the drawer's rows, with
+  // its own header and the column's tag sizes.
+  const inDrawer = useInDrawerPanel();
   // Unique, since Next keeps the previous page's panel mounted (hidden).
   const optionsId = useId();
   const rootRef = useRef<HTMLDivElement>(null);
@@ -172,6 +184,13 @@ export function TagCloud({
   const summary = tagSummary(selected, t.locale);
 
   function go(edit: (q: string) => string, next: string[]) {
+    if (onQuery) {
+      startSearch(() => {
+        setSelected(next);
+        onQuery(edit);
+      });
+      return;
+    }
     const current = new URLSearchParams(splitLocale(window.location.pathname).path === '/search' ? window.location.search : '');
     const q = edit(current.get('q') || '');
     if (q) current.set('q', q);
@@ -193,9 +212,18 @@ export function TagCloud({
       return next;
     });
 
-  const toggle = (name: string) =>
-    go((q) => toggleTerm(q, 'tag', name), isSelected(name) ? selected.filter((s) => s.toLowerCase() !== name.toLowerCase()) : [...selected, name]);
-  const clear = () => go((q) => selected.reduce((rest, name) => removeTerm(rest, 'tag', name), q), []);
+  // A tag's term, taken out or put in. category: is the old name for a
+  // category's tag (0043) and a query may still hold one, so both spellings
+  // come out; what goes back in is always tag:.
+  const withoutTag = (query: string, name: string) => removeTerm(removeTerm(query, 'category', name), 'tag', name);
+  const toggle = (name: string) => {
+    const picked = isSelected(name);
+    go(
+      (q) => (picked ? withoutTag(q, name) : refineQuery(withoutTag(q, name), 'tag', name)),
+      picked ? selected.filter((s) => s.toLowerCase() !== name.toLowerCase()) : [...selected, name],
+    );
+  };
+  const clear = () => go((q) => selected.reduce(withoutTag, q), []);
 
   return (
     <div ref={rootRef} className={`floating flex min-h-0 flex-col text-sm ${inFold ? 'max-xl:h-full' : ''} ${className}`}>
@@ -223,7 +251,7 @@ export function TagCloud({
         </button>
       </PanelHeader>
       {showing ? (
-        // In the fold the cloud is the fold's, on phones; from xl up the header row opens it.
+        // In the fold the cloud is the fold's; elsewhere the header row opens it.
         <div id={optionsId} className={`flex min-h-0 flex-col ${inFold ? 'max-xl:flex-1 max-xl:pt-3' : ''} ${inFold && !open ? 'xl:hidden' : ''}`}>
           <div className="flex items-center gap-2 px-3 pb-2">
             <FindTag value={filter} onChange={setFilter} className="min-w-0 flex-1" />
@@ -248,7 +276,7 @@ export function TagCloud({
                       aria-pressed={pressed}
                       onClick={() => toggle(tag.name)}
                       title={`${tagLabel(t, tag)}: ${t('tagCloud.pins', { count: tag.count })}${members ? `, ${t('tagCloud.tags', { count: members.length })}` : ''}`}
-                      className={`${STEP_CLASS[steps.get(tag.name.toLowerCase()) ?? 1]} rounded-md px-1 text-left leading-snug transition-colors ${
+                      className={`${(inDrawer ? COLUMN_STEP_CLASS : STEP_CLASS)[steps.get(tag.name.toLowerCase()) ?? 1]} rounded-md px-1 text-left leading-snug transition-colors ${
                         pressed
                           ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset'
                           : tag.kind === 'award' || tag.kind === 'nomination' || tag.kind === 'category'

@@ -104,7 +104,7 @@ describe('entryToPin', () => {
   };
 
   it('is an all-day pin citing the entry, filed like the drafted pin', () => {
-    const pin = entryToPin(entry, { company: 'OpenAI', categories: ['AI Models'] }, 'Model Release Notes | OpenAI Help Center');
+    const pin = entryToPin(entry, { company: 'OpenAI', categories: ['AI'] }, 'Model Release Notes | OpenAI Help Center');
     expect(pin).toMatchObject({
       title: 'GPT-4o mini Released',
       description: 'Our most cost-efficient small model.',
@@ -114,7 +114,7 @@ describe('entryToPin', () => {
       allDay: true,
       dateConfidence: 'confirmed',
       company: 'OpenAI',
-      categories: ['AI Models'],
+      categories: ['AI'],
       media: [{ type: 1, originalUrl: 'https://x/y.png', originalWidth: 800, originalHeight: 400 }],
     });
     expect(pin.references[0]).toMatchObject({ url: `${PAGE}#f`, confidence: 90, startDate: '2024-07-18', title: 'Model Release Notes | OpenAI Help Center: Introducing GPT-4o mini (July 18, 2024)' });

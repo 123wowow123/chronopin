@@ -7,7 +7,7 @@
 // and animated shows above a popularity weight, because the raw schedule is
 // mostly reality and daytime strands.
 //
-// The pin carries no place of its own: it is a TV Series pin with a company,
+// The pin carries no place of its own: it is a TV pin with a company,
 // so the save puts it at the broadcaster's headquarters, the same rule that
 // places a film at its studio (src/server/studioLocation.ts).
 //
@@ -140,7 +140,7 @@ function pinBody(e: Episode, show: Show, episodeCount: number | null) {
     dateConfidenceReasoning: `TVmaze's forward schedule gives ${e.airdate} as the announced premiere${channel ? ` on ${channel}` : ''}.`,
     company: channel,
     companyWikiUrl: channel && WIKI[channel] ? `https://en.wikipedia.org/wiki/${WIKI[channel]}` : null,
-    categories: ['TV Series'],
+    categories: ['TV'],
     tags: [...new Set([...(show.genres ?? []), channel].filter(Boolean))].slice(0, 8),
     episodeCount,
     episodeStatus: episodeCount ? 'planned' : null,

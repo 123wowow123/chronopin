@@ -42,6 +42,251 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **A released product cites its MSRP from the company's own page.** Owner, 2026-09-20: for a released or on-sale product, check the company's product/store page for the MSRP and add that page as a reference.
 * **Tags should be relevant and catchy.** Owner, 2026-09-21: pin 2389 (US Fiscal Year 2028) was tagged `Appropriations, Federal budget, Fiscal year, United States` and was missing the thing anyone would actually search for - `Government Shutdown`. Tag the consequence and the familiar name people know the event by, not just the procedural vocabulary of the source, and title-case them (`Federal Budget`, `Fiscal Year 2028`).
 
+## 2026-09-22 - Claude Opus 5.5 (pin 2694, @TechDesk)
+
+* **Learned**: **the same publisher dates two announcements two different
+  ways.** Three weeks after the Fable 5.1 page that carries no date at all,
+  `anthropic.com/claude-opus-5-5` puts "Claude Opus 5.5 September 22, 2026" in
+  its own header. So the two pins are modelled differently on purpose: 2693's
+  date comes from a *reference* (the news index, rated above the source tier),
+  2694's from the source itself. Never assume a publisher's habit from one
+  page of theirs.
+* **Learned**: **do not give the source's own reference row a `startDate` when
+  the source dates itself.** Reference 1 and the source row are merged, so a
+  95%-confidence `startDate` on it beat the source's 90 and won the claim - but
+  the row renders the *source's* claim, so the list showed no tick anywhere
+  while the tooltip said the page supplied the date. Dropping the `startDate`
+  put the tick back on reference 1, where a reader looks. The rule and its
+  mirror are in [Fields](fields.md#when-the-source-does-not-date-the-event).
+* **Learned**: the model-line threading works without being asked - posting
+  with no `parentId` put Opus 5.5 under Claude Opus 5 (1832), extending
+  4.5 -> 4.6 -> 4.7 -> 4.8 -> 5 -> 5.5, and the pin picked up its derived
+  `Thread` tag on save. Fable 5.1 correctly threaded onto nothing: a different
+  model line, whose predecessor is still unpinned.
+* **Learned**: **the wordmark turns up again.** The one in-page image besides
+  the key art was `6d4a0d28...-2400x1260.jpg` - byte-for-byte the Anthropic
+  wordmark taken off pin 2693 an hour earlier. The `og:image` this time is real
+  announcement art ("Claude Opus 5.5" over a horizon), so the pin keeps that
+  and the official video from the `@claude` channel. On this publisher, check
+  every image and expect the wordmark among them.
+* **Feedback**: none; this was the standing scrape-without-sign-off rule.
+* **Changed**: [Fields](fields.md) gains the mirror rule; TechCrunch and XDA
+  read in full and both date the launch, so no blocked page was cited.
+
+## 2026-09-22 - Claude Fable 5.1 and Mythos 5.1 (pin 2693, @TechDesk)
+
+* **Learned**: **the announcement page does not date itself; the news index
+  does.** `anthropic.com/claude-fable-and-mythos-5-1` says only "September
+  2026" and "available today", and the one ISO stamp in its HTML -
+  `2026-09-22T16:27:50` - is a build timestamp for the page, not a publication
+  date. Taking it would have dated the pin **three weeks late**. The date lives
+  on the card in `anthropic.com/news`, and MacRumors' `article:published_time`
+  (`2026-09-01T19:15:16Z`) and Wikipedia's Claude Mythos infobox ("Claude
+  Mythos 5.1 / September 1, 2026") both confirm **1 September 2026**.
+* **Learned**: **parse a listing card by its anchor, not by proximity.**
+  Flattening the news index to text put the dates between the titles
+  ambiguously - one reading gave this release Sep 1, another Sep 22 (which is
+  the date of the *next* release, Claude Opus 5.5). Matching
+  `<a href="/claude-fable-and-mythos-5-1" ...>(.*?)</a>` and reading only that
+  anchor's own text settled it in one step - in the raw markup each card is a
+  self-contained anchor holding its own `<time>`, and only the *featured* card
+  puts its title before its date, which is exactly what makes the flattened
+  reading ambiguous. Worth doing for any index where the entries are links.
+* **Learned**: **the company's own launch video is not badged verified.** The
+  top YouTube result was Anthropic's own "Introducing Claude Fable 5.1" on
+  `@anthropic-ai`, and the search page carries **no verified badge** for it, so
+  `pickProductVideo` - which returns early on `!candidate.verified` - would
+  have thrown it away and taken a commentary channel or nothing. The channel
+  scoring added today does not help, because the verified gate runs first. The
+  fix worth making is to treat a channel that matches the pin's company as
+  verified enough; until then a company launch video is a hand pick.
+* **Learned**: two source notes. **anthropic.com reads in full** with a plain
+  Chrome user agent (536KB, no challenge), and its article images are Sanity
+  CDN URLs carrying their dimensions in the filename. **venturebeat.com is a
+  Vercel Security Checkpoint**, 429 to `curl` with 278 characters of challenge,
+  so its report was *not* cited - citing it would have repeated the exact
+  defect this same day's reference work was cleaning up.
+* **Learned**: **read the pictures back, even from the company's own page.**
+  Two of the four images offered were the Anthropic wordmark - the `og:image`
+  (whose `og:image:alt` says so) and an in-page 2400x1260 JPEG that looks like
+  a content figure by its dimensions and was only 30KB. The two that earned
+  their place were real research figures from the scientific-research section:
+  a Nipah G protein binder ("Overall hit rate: 18/30") and a 300m DEM of a
+  15km volcano. Filename and dimensions do not tell a logo from a figure;
+  opening it does.
+* **Learned**: **a new model line does not thread onto the old one.** Posting
+  with no `parentId` correctly left the pin unthreaded: the Claude chain in the
+  corpus is Opus (1819 -> 1822 -> 1828 -> 1830 -> 1832), and `Fable 5.1` parses
+  as a different line, so nothing matched. Fable 5 and Opus 5.5 are both
+  unpinned, so this pin heads nothing yet - flagged rather than auto-created,
+  per the standing rule about branches.
+* **Feedback**: the owner checked the pin's first reference and said **"source
+  does not say sept 1 for this pin"**. Correct, and the pin was wrong to lean on
+  it: the announcement page carries no date, so the `dateConfidenceReasoning`
+  named Anthropic's news index as the evidence while that page was **not among
+  the references**. A reader following the citation found nothing. The index is
+  now reference 4 (confidence 90), quoting the `<time>Sep 1, 2026</time>` in
+  this article's own card.
+* **Feedback**: citing the index was not enough - **"not reflecting the
+  change"**. It was reflected, but the owner was looking at the right thing:
+  the source row still read "Starts Sep 1, 2026 **✓**", so the page was still
+  saying the announcement supplied the date. A reference that only quotes a
+  date in its `reasoning` never competes for it; it needs its own `startDate`
+  **and** a confidence strictly above the source's, which for `confirmed` is
+  **90** (`SOURCE_CONFIDENCE`), a tie going to the source. The news index went
+  to 92 with `startDate: 2026-09-01` and the tick moved to it. Written up in
+  [Fields](fields.md#when-the-source-does-not-date-the-event).
+* **Learned**: the rule that falls out of it - **whatever the reasoning names as
+  the evidence for a date has to be a reference.** Naming a page in prose a
+  reader cannot click is the same dangling justification this same day's
+  reference clean-up was built to find, and it is worth checking for directly:
+  a `dateConfidenceReasoning` that names a URL or a publication absent from
+  `PinReference` is a pin whose date cannot be checked. The date itself stood -
+  in the raw markup each news card is a self-contained `<a>` holding its own
+  `<time>`, MacRumors published "Anthropic today introduced Claude Fable 5.1"
+  at `2026-09-01T19:15:16Z`, and Wikipedia's infobox agrees - but that was luck
+  rather than evidence until the link was on the pin.
+* **Changed**: [Sources](sources.md) gains anthropic.com and venturebeat.com
+  rows; [Enrichment](enrichment.md) records the unverified-company-channel gap.
+
+## 2026-09-22 - The data-quality backlog: bad references, stale odds, a gold-seller as a source
+
+* **Learned**: **a reference's own `reasoning` is a defect log, and nobody was
+  reading it.** Four of the five pins the owner flagged had reasoning that
+  already admitted the problem in writing - "the fetched page returned
+  unrelated content and no stored publish date" (pin 72), "actually covers an
+  April 2024 Manheim reading ... a year after the pin's stored May 2023 date"
+  (pin 202), "could not be fetched (403 error), but its own headline ... state"
+  (pin 377). Grepping `PinReference.reasoning` for *could not*, *unrelated*,
+  *headline* and *a year after* finds this class without reading a single page.
+* **Learned**: **the five flagged pins are a sample of about 169.** Grepping
+  `PinReference.reasoning` for its own confessions, corpus-wide:
+  **218** references say the page *could not be fetched*, 52 cite a *headline*
+  alone, 5 name a *different year*. Splitting the 218 by whether the page reads
+  today is the actionable part - **192 of them, on 148 pins, are now backed by
+  a full stored article** and only their reasoning still describes a 403 (pin
+  377's Imaging Resource citation was one of these). Those want a reasoning
+  re-written from the stored text, which is one LLM call each. The other 26
+  (14 thin, 9 failed, 3 pending) are genuinely dead and want a replacement
+  link, which is pin 72's case and needs a person. The query is in
+  [Sources](sources.md).
+* **Learned**: **a 200 is not the article.** `computerworld.com/article/3155017/`
+  still answers 200 and still renders a page - a *different* one, "Dell Wyse
+  5070 vs the Always Connected PC". `looksBlocked` cannot see this and neither
+  can a status check; what does see it is comparing the stored `Source.title`
+  with the `PinReference.title`, which differed outright. Added to
+  [Sources](sources.md).
+* **Learned**: **a fix does not update the reasoning that described the bug.**
+  Imaging Resource had since been recovered (4,707 characters of real article
+  in `Source.text`), but its reference still said it 403'd, and both of pin
+  377's reasonings still measured the article against a pin date - "8 September
+  2026" - that the pin no longer has. A recovery pass should re-write the
+  reasoning of every reference it un-blocks, or the citation lies about itself.
+* **Learned**: **a travel retailer's SEO blog will contradict the operator.**
+  Two open lint findings on pin 808 (1458, 1459) both traced to one reference:
+  Destinology dates the first Rocky Mountaineer to "7th June 1990" with "72
+  passengers", where the operator's own 30-years post says "our own story
+  officially began on May 27, 1990, when we welcomed 200 excited guests". The
+  pin was right; the *reference* was the defect. Wikipedia's infobox and its
+  "The inaugural train journey took place on May 27, 1990" (cited to the Via
+  National Timetable of that date) settled it. **A contradiction finding is not
+  automatically a finding against the pin.**
+* **Learned**: **an "April" headline is not an April 2023 headline.** Hunting a
+  replacement for pin 202 turned up two plausible-looking Manheim pieces -
+  `press.manheim.com/Manheim-Reports-Used-Vehicle-Value-Index-Results-for-April`
+  (index 124.2) and Vehicle Remarketing's "Manheim Used Vehicle Index Hits
+  Three-Year Low in April" (index 125.8) - and both are different years; April
+  2023 is 230.8. The index level is the year check. This is the same trap that
+  produced the wrong reference in the first place.
+* **Learned**: **a price quoted in prose needs the day it was read.** All 56
+  market pins whose description carried odds quoted them undated, beside a
+  `PinOdds` panel that fetches the live book every 30 seconds - so the pin read
+  "Kalshi has The Odyssey at 52%" next to a panel saying something else, and two
+  of them (1679, 1967) described events that had already happened. Refreshing
+  the numbers would only re-create the bug, so every description now says when:
+  "On 20 September 2026 Kalshi had The Odyssey at 52% ...". The rule is in
+  [Vertical recipes](verticals.md): **the live panel is the present tense; the
+  description is a dated reading.**
+* **Learned**: **an aggregator channel is verified too.** `pickTrailer` scored
+  only the video title (`official` + `trailer`) minus search rank, and
+  `candidate.channel` was captured but never read, so AnimeSelect and Anime
+  World outranked the studio's own channel twice in one day. It now scores the
+  channel: +3 for a channel named after the work, its studio or its licensor,
+  -3 for a name built only from generic words ("AnimeSelect", "Anime World"),
+  which is enough to beat the whole rank spread. Demoted, not dropped, so a
+  work whose only verified upload is an aggregator's still gets a trailer. The
+  aggregator test runs first, because a filler word is sometimes the work's own
+  ("World Trigger" against "Anime World").
+* **Learned**: **the standing note's diagnosis was half right, and the re-run
+  proved it by not working.** Re-running all 943 screen pins wrote 961 ratings
+  and moved the rating-less count by two - 306 to 304 - because every one of
+  those 961 was a *refresh* of a pin that already had one. The 96 aired anime
+  pins with nothing are not a Jikan outage on its own and not a title-match
+  failure on its own: **both have to go wrong**. `findAniList` needs an exact
+  title match, which a Chinese donghua ("Tunshi Xingkong 4th Season"), an arc
+  or a recap film never gets, and the cited-MAL-id fallback that should rescue
+  them ran through Jikan, which 504'd **1,036 times** in the run. Checked five
+  by hand: Jikan 504 on all five, AniList's `Media(idMal:)` answering with a
+  score for three.
+* **Changed**: `aniListByMalId` - AniList answers **by MAL id** for the score,
+  the site link and the adaptation source, with no title match involved, and it
+  is up when Jikan is not. The query had existed all along but asked only for
+  episode fields, so a pin citing its own MyAnimeList page could get an episode
+  count out of AniList and still be sent to Jikan for the score. It now serves
+  both, tried before Jikan.
+* **Learned - and the first version of that fix quietly lost most of it.**
+  Placed *after* the title searches, the by-id lookup was being **aborted
+  mid-flight**: `findScreenDetails` gives a pin one 60-second budget shared by
+  every call, the title loop spends it on Wikidata (8s a candidate) and AniList
+  title searches, and what is left over is what the decisive request gets. So
+  the batch added 28 ratings where running the same pins one at a time found
+  more - pin 1241 scored 79 on its own and "no ratings" in the run, with
+  `aborted due to timeout` against `graphql.anilist.co` on the line above it.
+  **A pin that cites a MAL id is usually a pin whose title matches nothing** -
+  a season, an arc, a recap, a donghua - so the title searches were always
+  going to fail *and* eat the budget first. Moving the by-id call to the front
+  (one request, before the loop) is the fix, and it also folds the old
+  `episodesByMalId` into the same call instead of a second one.
+* **Learned**: a batch result that is worse than the same work done singly is
+  the symptom to look for. Both runs "succeeded" and neither raised an error a
+  human would read - the aborts are `log.warn` lines between pins, and the
+  summary only counts what was added.
+* **Changed**: anime pins now carry **what the work was adapted from** as a tag,
+  from AniList's `source` field - `Manga Adaptation`, `Light Novel Adaptation`,
+  `Original Work`, `Game Adaptation` and so on (`adaptationTag` in
+  `src/server/scrape/screen.ts`). **The suffix is load-bearing**: the family was
+  first named for the bare medium, and `Manga` is a category name, so `tagKind`
+  filed the tag as a category and `replace` dropped it on save without a word -
+  for the single commonest source. The owner chose to suffix the whole family
+  rather than fold several hundred anime into the `Manga` category, and a test
+  now asserts no member of the family is a category name. `ANIME` and
+  `OTHER` map to no tag: an anime adapted from an anime says nothing, and
+  nothing here is ever filed under Other. The scrape appends it to the pin's
+  tags and `npm run media:screen -- --apply` backfills it through the new
+  `PinTag.addUserTags`, which adds without replacing what a curator typed.
+* **Changed**: **MMOExp is out of the corpus.** Pin 1869's `sourceUrl` is now
+  Blizzard's own "Celebrate 30 Years of Diablo in Season of Hell's Legacy", and
+  the three summary bullets that rested on MMOExp alone - Michael Goff's
+  narrative poems, the remastered Tristram Cathedral dungeons, the Mufisto the
+  Cow God event - are gone or re-sourced. Blizzard's own post carries the
+  Tristram Cathedral claim in a form it will stand behind ("echoes of Diablo
+  beneath Tristram Cathedral, Baal at Arreat Summit, and Mephisto within the
+  Durance of Hate"), so that bullet survived on better evidence. No `sourceUrl`,
+  reference or `<cite data-ref>` anywhere now points at mmoexp.com.
+* **Learned**: **two pins of a chain were simply missing.** Kaiju No. 8 Season 1
+  (MAL 52588) and the Mission Recon film (59489) were never scraped, which is
+  why Season 2 headed its own thread. Posting them oldest-first through
+  `POST /api/pins` set the film's parent at save time; only Season 2 needed a
+  `PUT` to re-parent. Jikan 504s on 59489, so AniList's `Media(idMal:)` supplied
+  the record and MyAnimeList's own page supplied the synopsis and date.
+* **Feedback**: the owner's standing list in the README, answered in full. The
+  two pins authored by user 1 (72 and 202) are left prepared but unapplied - a
+  curator is neither author nor admin, as the category backfill found before.
+* **Changed**: [Sources](sources.md) gains the repurposed-URL row and the
+  index-level year check; [Vertical recipes](verticals.md) gains the dated-odds
+  rule for market pins and the adaptation tag for anime;
+  [Enrichment](enrichment.md) gains the channel-scoring note.
+
 ## 2026-09-21 - The US-China relationship as one thread (pins 2414-2426, 2428, @PoliticsDesk)
 
 Fourteen pins for the bilateral relationship itself, threaded oldest first from
@@ -3035,3 +3280,612 @@ The restaurant pins had been created without pictures across five tranches -
   Brasileira. These are the venue, not a stand-in for it. A branch in the same
   city was accepted (Quanjude at CityWalk, Tai Ping Koon in Causeway Bay); a
   branch in another city was not (Spago Las Vegas, Nanxiang in Tokyo).
+
+## 2026-09-22 - Every category is one word now (0061)
+
+* **Changed.** The 47-name list became 57 single words
+  ([categories.ts](../../../src/lib/categories.ts)). Ian's rule: "tag/category
+  should prefer single word and more granular, not like `Conferences &
+  Festivals`". Most names simply lost their second half
+  (`Consumer Electronics` -> `Electronics`, `Health & Medicine` -> `Health`);
+  eleven were two subjects wearing one name and were split pin by pin in
+  [0061_single_word_categories.sql](../../../scripts/db/schema/0061_single_word_categories.sql),
+  which names the id lists that go to the other word.
+* **Learned - a compound name hides a judgement nobody made.** The splits were
+  not close calls. `Infrastructure & Transportation` was 289 pins of which 247
+  move people or freight and 32 are water, sewers, dams and flood defences -
+  two different verticals under one label, and neither readable from the label.
+  `Music & Audio` was 57 pieces of kit and 10 pins about music. `Space &
+  Astronomy` hid five particle-physics machines that were never either
+  (`Science`). Ten pins, never noticed while the compound name covered them,
+  moved to the word they were always about: two to `Mining`, two to
+  `Semiconductors` (chip fabs filed as infrastructure), two to `Aerospace`, one
+  to `Telecom`, and three convention centres and a business district that kept
+  only their building category.
+* **Learned - a pin carries as many words as it is about.** One word per pin
+  would have been a worse taxonomy than the compounds. An anime film is `Anime`
+  and `Movie` (118 pins gained the second word), a courtroom verdict about an
+  offence is `Crime` and `Justice`, an airport terminal is `Transport` and
+  `Architecture`. Categories have been many-per-pin since 0043; this is the
+  change that starts using it.
+* **Trap - a new category word may already be on the pin as a typed tag.** The
+  Grammys pin had a `Music` tag, the chip-export pin a `Semiconductors` tag, and
+  `UC_PinTag` is unique on `(pinId, name)`, so the rename would have failed on
+  them. The migration deletes the topic row first: the category is the stronger
+  statement of the same thing. Two categories landing on one word (a film filed
+  as both `Movies` and `Anime Movie`) drop to one the same way.
+* **Trap - the screen lookups read the category name.** `SCREEN_CATEGORIES`,
+  `EPISODIC_CATEGORIES`, `GAME_CATEGORIES` and `STUDIO_CATEGORIES` were all
+  written in the old words, and `Anime Movie` had been doing real work: it was
+  how an anime *film* stayed out of the episode lookup. Splitting it into
+  `Anime` + `Movie` made the film episodic again until `workCategory()`
+  ([screen.ts](../../../src/server/scrape/screen.ts)) took over - of the
+  categories a pin carries, `Movie` wins, so a film is looked up as a film.
+
+## 2026-09-22 - Anthropic's wet biology lab, one pin from a newsletter link (pin 2598, @TechDesk)
+
+* **Feedback - the URL handed over is the source, even when it is a rewrite.**
+  Ian pinned `therundown.ai/news/anthropic-claude-biology-lab`. The Rundown is
+  a newsletter write-up that says so itself - "This story builds on reporting
+  from The Rundown newsletter on September 21, 2026" - and its body credits and
+  deep-links TechCrunch, which in turn credits a **Reuters exclusive published
+  the same morning** (3:02 AM PDT against TechCrunch's 4:13 PM). The pin was
+  first posted with TechCrunch as `sourceUrl` on the aggregator rule, the swap
+  was offered, and Ian took it: **"yes swap"**. The Rundown page is the
+  `sourceUrl`; TechCrunch and Reuters are its top two references.
+* **Rule that emerged - the aggregator rule governs *references*, not the
+  `sourceUrl` a person hands you.** "Skip aggregators and anything that only
+  rewrites other coverage" is about what a pin cites as evidence. Which page
+  the pin points at is a different question, and the owner's answer is the page
+  he was reading. Chasing the credit chain is still the job - it is what found
+  Reuters, and the two originals sit at the top of the reference list where the
+  evidence belongs - but it is not a reason to repoint the source. Offer the
+  swap; do not make it silently.
+* **Learned - swapping a `sourceUrl` costs a reference slot.** Six links wanted
+  a place and the cap is five, so the Life Sciences Verification Program post
+  went (the least about the lab itself, and TechCrunch reports its launch
+  anyway). Its citation in the `longFormSummary` had to move to TechCrunch in
+  the same edit: a `<cite data-ref>` pointing at a link the pin no longer holds
+  is a dangling citation that nothing warns about. **Re-export after the PUT**:
+  `syncPinSources` marked the dropped link `utcRemovedDateTime` and gave the
+  new source `role: 'source'` by itself, and the export then asked for one new
+  wiki, a rebuilt summary and a fresh contradiction check - the rebuild is what
+  relabels every citation, so the hand-written summary is worth keeping only
+  until the wikis are in.
+* **Learned - `curl` and the app's scraper disagree about Reuters, and the app
+  wins.** [Sources](sources.md) already says reuters.com is 401 to `curl`; this
+  run confirmed both halves in one job. A hand fetch got 771 bytes, `WebSearch`
+  refused the domain outright ("not accessible to our user agent"), and the pin
+  was posted citing Reuters on the strength of the TechCrunch link alone. The
+  save then fetched it through the pipeline and came back with the full
+  article - byline, dateline, the whole Kauderer-Abrams interview and a $400M
+  Coefficient Bio price the Rundown never mentioned - which **confirmed the
+  headline the reference had been given from the URL slug**. The lesson is the
+  order: cite it, save, then read the captured text out of `wiki:export` and
+  correct the pin if it disagrees. It did not.
+* **Learned - a city-level place must come from the forward geocode, not the
+  reverse one.** The lab's address is undisclosed ("the San Francisco Bay
+  Area"), so the pin sits on the city. Reverse-geocoding San Francisco's own
+  centroid through Nominatim returns **"Goddess of Victory, Geary Street, Union
+  Square, Tenderloin..."** - a statue - which would have been a precise and
+  completely false address. The never-type-a-place rule is satisfied just as
+  well by the forward search's own `display_name` ("San Francisco, California,
+  United States"): reverse geocoding is for a point that *is* a premises.
+* **Learned - the video for an AI-company pin is the company's own channel, and
+  it need not be about the pin's event.** `media:videos` would match nothing
+  here (an event-phrased title shares no words with a video title, the aerospace
+  problem). YouTube Data API search for "Anthropic Model Hardware Standard"
+  returned Anthropic's own **"Model Hardware Standard: AI operating physical
+  equipment"** (`UxJZrCFzTHY`, 2026-08-28), verified through oEmbed as
+  `@anthropic-ai`. It is the piece of the stack the lab needs, not the lab, and
+  that is the right kind of video for a pin whose event is a disclosure with no
+  footage of its own. Pictures came the same way - TechCrunch's lead
+  image plus the `og:image` of two referenced Anthropic research posts, both of
+  which are on-subject where a DNA stock photo only half is. The Rundown's own
+  `og:image` is a newsletter story card credited "Image source: Anthropic", so
+  it added nothing the research posts did not.
+* **Learned - the extraction fell to the session, the wikis did too, and that
+  is now the normal path.** `GET /api/scrape` answered `llm: "session"` with
+  both `llmTasks`, so the fields, the references and the `longFormSummary` were
+  written by hand; then `wiki:export --pin 2598` produced six wiki jobs which
+  were written and applied the same way. Because the summary was already on the
+  pin, the second export asked for **no summary job** - only the contradiction
+  check. Worth knowing before planning the work: a one-pin scrape without credit
+  is six wikis, not one.
+* **Learned - the contradiction check drops a one-sided finding.** Three were
+  submitted; `cleanContradictions` recorded two. The dropped one named a single
+  link disagreeing with itself (the same Anthropic post rounding 1.6x to "nearly
+  2x" in its overview), which is not a contradiction *between* links. Put an
+  internal inconsistency in the wiki's body instead.
+* **Learned - a story can be its own contradiction, and that is worth
+  recording.** Reuters headlines the lab "as it ramps AI drug program" while
+  Anthropic's spokesperson says it is "not for drug discovery specifically";
+  both sentences are in both reports. Recorded as `minor` with the note that the
+  pin follows the spokesperson. The other kept finding is the place: Bay Area in
+  both reports, "in SF" only in a quoted X post.
+* **Changed**: [Sources](sources.md) gains rows for therundown.ai and
+  techcrunch.com; [Vertical recipes](verticals.md) gains an AI-company
+  milestones note under the AI models row; [Strategy](strategy.md)'s "Which URL
+  is the source" rule records that a URL the owner hands over stays the source.
+
+## 2026-09-22 - The Strategic Petroleum Reserve, 1975 to last month (pins 2611-2622, @EnergyDesk)
+
+* **Done.** Twelve pins as one oldest-first chain: EPCA signed (1975), the first
+  412,000 barrels going underground at West Hackberry (1977), the four
+  presidentially ordered emergency drawdowns (Desert Storm 1991, Katrina 2005,
+  the IEA's Libya action 2011, the 180-million-barrel Ukraine release 2022),
+  the 2026 Hormuz release of 172 million barrels and the four exchange tranches
+  that executed it, and the reserve falling below 300 million barrels in August.
+  Curator **@EnergyDesk**, categories `Energy` + `Policy` (plus `Geopolitics`,
+  `Disaster` or `Economy` as each pin earns them), shared tag `SPR`. Each pin
+  carries the EIA's own weekly SPR stock series, so the page draws the
+  government chart with the pin's week marked.
+* **Learned - `Energy` needed its own desk, and the owner said so.** The batch
+  first went to @EconDesk on the reasoning that a drawdown is a policy act that
+  moves an oil market, not a build like @BuildDesk's wind farms and geothermal
+  plants. Ian's ruling was simpler and better: **`Energy` belongs to
+  @EnergyDesk.** The vertical now has its own curator (user 408), and the 33
+  Energy pins @BuildDesk had authored moved across with the twelve new ones -
+  45 in all. `Energy` as a *second* category stays where it is: pin 2396
+  (Thacker Pass) is `Mining` + `Energy` and remains @BuildDesk's, because
+  Mining is its vertical.
+* **Trap - a pin's author cannot be changed.** `PUT /api/pins/:id` sets
+  `pin.userId = existing.userId` on every save ([route.ts](../../../src/app/api/pins/[id]/route.ts)),
+  by design, so moving a pin between desks means **deleting it and re-posting
+  it whole** as the new author. What that costs, measured before doing it:
+  nothing for comments, likes, favourites, ratings or thread links (these 45
+  had none), but every pin gets a **new id**, its media are re-downloaded from
+  their original URLs, and its **duplicate decisions are lost**. Snapshot every
+  pin's JSON first and re-post from the snapshot, not from a fresh scrape.
+* **Learned - the press-release trail is the spine of a government vertical.**
+  DOE's Office of Petroleum Reserves news listing
+  (`/hgeo/opr/listings/office-petroleum-reserves-news`) **404s**, but every
+  release carries *View Next Press Release* and *View Previous Press Release*
+  links at its foot, so the series walks itself once you have one release. The
+  OPR landing page `/hgeo/opr` also lists the recent ones.
+* **Learned - an RFP and its award are two events, days apart, each with its
+  own DOE release.** The 2026 exchange ran RFP (86m, 13 Mar) -> RFP (10m,
+  1 Apr) -> RFP (30m, 9 Apr) -> award (26m, 17 Apr) -> RFP (92.5m, 30 Apr) ->
+  award (53.3m, 11 May). Pinning all six would have been a list; the batch pins
+  the first two solicitations and the two awards, and cites the matching
+  solicitation as a reference on each award so the volume asked for and the
+  volume taken both appear.
+* **Trap - a search summary's date is not the page's dateline.** A WebSearch
+  result put a 4.5-million-barrel Bayou Choctaw purchase solicitation in
+  **May 2026**; the page itself (`/ceser/articles/us-department-energy-announces-new-solicitations-purchase-oil-strategic-petroleum`)
+  is dated **10 July 2024** and is a Biden-era release. Curling the page and
+  reading its own date line killed a pin that would have been two years wrong.
+* **Trap - AP Archive's "11 years ago" is the upload date, not the footage.**
+  Searching for 1991 drawdown footage returned *USA: EMERGENCY OIL TO BE
+  RELEASED*, which reads as Desert Storm and is actually **22 September 2000**
+  (Bill Richardson, heating oil), and a CNN clip that looks like the 2011 Libya
+  release is **February 2012** about Obama. Read the `shortDescription`'s
+  bracketed dateline before attaching an archive clip. Nothing usable was found
+  for 1991, 2011 or the May 2026 award, so those three pins carry pictures only.
+* **Learned - energy.gov's own pictures are worthless and Commons has a whole
+  DOE set.** Every energy.gov release's `og:image` is either the DOE seal or
+  `white-fallback_0.png`. The pictures came from Commons' *United States
+  Strategic Petroleum Reserve NNN.jpg* series - about 30 DOE photographs, each
+  with a site named in `extmetadata.ImageDescription` (032 and 059 are Bryan
+  Mound wellheads, 069 is West Hackberry's pump pad, 070-079 are Bayou Choctaw,
+  086-100 are Big Hill), so a pin can be given a picture of *its own* site.
+* **Trap - Nominatim knows three of the four SPR sites and not the fourth.**
+  Big Hill, West Hackberry and Bayou Choctaw all forward-geocode by name;
+  **Bryan Mound returns nothing**. Overpass has it as
+  `Bryan Mound Strategic Oil Reserve`, `operator=US Department of Energy`, at
+  28.9174, -95.3777. And reverse-geocoding is not always the better label here:
+  West Hackberry's point reverses to "Black Lake Road" and Big Hill's to
+  "Wilber Road", while the forward `display_name` names the facility. Both come
+  from Nominatim, so neither is a typed address.
+* **Learned - posting oldest-first sets the chain without a re-threading pass.**
+  `POST /api/pins` uses a `parentId` in the body as given, so feeding each new
+  pin's id to the next one built the whole linear chain at save time. The
+  `PUT`-per-pin re-threading in [launches.ts](../../../scripts/spacex/launches.ts)
+  is only needed when the pins already exist or the order changes.
+* **Blocked**: `iea.org` is behind Cloudflare to `curl` (the IEA's own Libya
+  announcement is cited as a reference on the strength of the search result,
+  not a fetch); `cnbc.com` is **403 to WebFetch**. `foxbusiness.com` reads with
+  a plain browser UA, and `georgewbush-whitehouse.archives.gov` and
+  `presidency.ucsb.edu` both read with no fuss.
+
+## 2026-09-22 - More media per pin, and a review I skipped
+
+Ian asked for more media on the pins. The restaurant pins went from mostly one
+picture to 37 of 58 carrying two or more. Along the way I attached nineteen
+wrong images and had to take them off again.
+
+* **The mistake, plainly**: the proposer printed 92 candidate files and I read
+  only the last 40 of them before applying the lot - immediately after writing
+  that reading the proposal is what catches bad matches. Everything in the
+  unread half that was wrong went straight onto a pin.
+* **What it put on pins**: the Suncar **Arpège**, a 1984 car, on the Paris
+  restaurant. The **Aragvi river** in Georgia on the Moscow restaurant. A band
+  called **Odette** at a Brighton festival on the Singapore dining room.
+  **Schwartz's reagent**, a chemistry molecule, on the Montreal deli. The
+  **Demel family's grave** on the Vienna café. A **work train in Savoy,
+  Illinois** on the Helsinki restaurant. A **student newspaper** called The
+  Varsity on the Atlanta drive-in.
+* **Why the filter did not save me**: it required the venue's name to appear in
+  the filename or description, which sounds strict and is **exactly the wrong
+  test for a homonym**. "Suncar Arpège" contains Arpège; "Kura and Aragvi"
+  contains Aragvi. A name test cannot separate a restaurant from a river, a car
+  or a molecule that shares its name - only a human reading the list can, and
+  the list has to be read in full.
+* **Rule for next time**: print the proposal to a file and read all of it, or
+  cap the batch at what will fit on one screen. An unread proposal is not a
+  proposal.
+* **Videos: none.** All 58 restaurant pins were searched with the repo's own
+  `findProductVideo`, which requires a verified channel. Two came back and both
+  were false positives on the same homonym pattern - a **Genshin Impact
+  character teaser** named Odette, and a Georgian **music label** called Aragvi
+  Pro. So the vertical's existing ruling that restaurants yield no video is
+  confirmed independently; `media:videos` is right to refuse them.
+* **Learned**: **YouTube rate-limits a burst and the failure reads as "no
+  results".** Fifty-eight searches at 0.9-second intervals returned `fetch
+  failed` for every one; curl and node fetch both worked fine seconds later, and
+  the same run at 3.5-second intervals with one retry went through. That is the
+  third service today - after Nominatim and the Wikipedia extracts API - where a
+  throttle or a cap is indistinguishable from an empty answer.
+
+## 2026-09-22 - Landmark science, and the 150-year hole (pins 2656-2667, @ScienceDesk)
+
+* **What the survey found.** `Science` held **22 pins**, and they were nearly all
+  one thing: colliders, telescopes and neutrino detectors, plus the four Nobel
+  announcements. **Only two pins predated 2005** - John Snow's pump handle and
+  the Salk vaccine, both filed by @HealthDesk - so the corpus had essentially no
+  history of science at all. A keyword sweep for Darwin, Mendeleev, the double
+  helix, radium, the Higgs, Dolly and the first gravitational-wave detection
+  matched **nothing**. Twelve pins went in: nine landmark firsts from 1859 to
+  2016 and three near-term events, the same two-halves shape the aerospace run
+  used, and for the same reason - the vertical was thin at both ends.
+* **Learned - a big picture can be too big to save, and the error says so.** The
+  ESO re-processing of the 1919 eclipse plate is **23800x14191**, and the save
+  failed with "Picture is too large to decode (maxResolutionInMP limit exceeded
+  by 38MP). Use a smaller rendition of it - on Wikimedia, ask the API for
+  `iiurlwidth=1920` and take the thumbnail URL it returns." That is the fix, and
+  it works. **Ask Commons for `iiurlwidth` up front** on anything over about
+  40 megapixels rather than finding out at the save.
+* **Trap - a create that fails at the media stage still leaves the pin.** `POST
+  /api/pins` is not transactional (the `PUT` was fixed in September, the create
+  was not), so pin 2660 existed with its place, dates, references and summary
+  and **no media and no tags** - `PinTag.setUserTags` runs after `pin.save()`
+  and never got there. The repair is a `PUT` of the whole pin; check for a
+  half-saved pin by id before re-posting, or a retry makes a second one.
+* **Learned - read the Commons description, every time.** Of the first round of
+  candidates, `Mendeleev-9.jpg` and `Mendeleev-2.jpg` turned out to be title
+  pages of *Principles of Chemistry* (1891) and *A Chemical Conception of the
+  Ether* (1904), and `Mendeleev Scheme 05.jpg` a 1979 poster design - three
+  plausible filenames, none of them the 1869 table. The right file was
+  `Mendeleev law.jpg`, whose description reads "Handwritten version of elements
+  system (Mendeleev's periodic law)... D.Mendeleev 17.02.1869". One candidate,
+  `Periyodik Tablo 1 Mart 1869.jpg`, is marked **"Editorial use only"** and was
+  dropped on the licence.
+* **Learned - a dead source can answer 200.** `einsteinpapers.press.princeton.edu/vol6-trans/129`
+  returns 200 and **serves a portal advertisement** ("Einstein Portal: Launching
+  September 30th"), not the 1915 paper it used to carry. It was already saved as
+  pin 2659's `sourceUrl` before the wiki export showed what the page actually
+  says. Replaced with the **Wikisource** translation, which carries the text and
+  its own publication header - "Session from November 25, 1915; published
+  December 2, 1915", Sitzungsberichte 1915 part 2, 844-847 - and so
+  **corroborated the date from a second source** instead of merely restating it.
+* **Feedback applied - a homepage is not a reference.** Two references were
+  `royalsociety.org` and `ras.ac.uk`, both society homepages that state nothing
+  about 1859 or 1919. That is the padding the quality bar forbids; they were
+  swapped for the Charles Darwin and Arthur Eddington articles. **A reference has
+  to back a sentence in the pin**, which a homepage never does - and it also
+  wastes a wiki job on a page of navigation furniture.
+* **Learned - for a historical first, the video is the institution that was
+  there.** `media:videos` matches none of these (an event-phrased title shares no
+  words with a video title, the aerospace finding). Hand-picked from the YouTube
+  Data API and verified through oEmbed: the **Royal Astronomical Society** on the
+  1919 eclipse - the society that held the meeting this pin is placed at - **The
+  Roslin Institute**'s Dolly@20 lecture by Ian Wilmut, **HHMI BioInteractive** on
+  the double helix, the **Institute for Advanced Study**'s 2015 general
+  relativity centennial, the **Royal Society** on Darwin, the **NSF** on
+  GW150914 and **ESA** on Gaia and Euclid. Two gaps worth recording: the Higgs
+  announcement survives on YouTube only as re-uploads, so the pin takes **Link
+  TV**'s broadcast of the moment rather than a personal channel's copy of the
+  seminar; and **the Curie pin has no video at all** - every result was a
+  documentary channel, a film trailer or a fan upload, and none of it is worth
+  more than nothing.
+* **Learned - geocode forward for a building, and read the label.** Nominatim
+  resolved nine of eleven to the premises themselves: "John Murray, 50, Albemarle
+  Street", "Old Cavendish Laboratory, Free School Lane", "NSF LIGO - Hanford".
+  Two needed rephrasing - Burlington House kept resolving to the **Royal Academy
+  of Arts** (right courtyard, wrong occupant) until the query became "Royal
+  Astronomical Society, London", and "Institut de France, 23 Quai de Conti" led
+  with an unrelated tenant, "Fondation Kenza". St Petersburg's label comes back
+  part-Cyrillic even with `Accept-Language: en`, and is kept as the geocoder
+  gives it.
+* **Learned - a Julian date is a trap in this corpus.** Mendeleev's presentation
+  is 6 March 1869 in Wikipedia's Gregorian rendering, while the manuscript sheet
+  is signed 17.02.1869 and the *Periodic table* article separately gives "17
+  February 1869 (1 March 1869 in the Gregorian calendar)" for when he **began**
+  arranging the elements. Three different dates for one week of work; the
+  reasoning has to say which calendar it is using and which act it is dating.
+* **Learned - `curl` is again the wrong oracle.** `cosmos.esa.int`,
+  `ligo.caltech.edu` and `royalsociety.org` all answer **000 to `curl`**, and
+  `reuters.com`-style, the app's own scraper read every one of them in full.
+  ESA's Gaia mission page then **confirmed the release date independently** -
+  "Data Release 4 (based on 66 months of data): expected December 2026" beside
+  the DR4 page's "Coming up: 2 December 2026".
+* **Trap - verify category rows after a batch, not just after the save.** Three of the twelve (2656, 2659, 2660) were found with **no `kind='category'` rows at all** at the end of the run, while their topic tags were intact and the seed would have carried the gap. Replaying the same `PUT` restored them, so the route is not at fault - `bodyCategories` reads `body.categories` correctly and the response came back `['Science']`. Another session was writing to the same database throughout ([Concurrent sessions](../../../AGENTS.md)), which is the likeliest cause, and it could not be pinned down after the fact. The lesson is cheap either way: **a batch's last step is a `SELECT` of every pin's category rows**, because nothing in the save, the lint or `backup:data` notices a pin that has lost them - `okf:lint` passed clean on all twelve while three of them were uncategorised.
+* **Scope left open.** The batch generates **36 wiki jobs, 1.76M characters**.
+  The 17 institutional pages were written and applied; the **19 long Wikipedia
+  and Darwin Online articles are pending**, and with them 6 contradiction checks
+  (the lint stopped on "credit balance is too low"). Worth knowing when planning:
+  a twelve-pin batch of well-referenced pins is three dozen wikis, not twelve.
+* **Changed**: [Vertical recipes](verticals.md) gains a Landmark science recipe;
+  [Sources](sources.md) gains rows for Commons oversized files and for
+  einsteinpapers.press.princeton.edu.
+
+## 2026-09-22 - What a re-authored pin loses, and the live EIA chart (pins 2611-2655)
+
+* **Done.** All 45 `Energy` pins now belong to **@EnergyDesk** (user 408), and
+  the twelve SPR pins carry the EIA's weekly SPR stock series, drawn on the pin
+  page with the pin's own week marked (`PinSeries`, 0062).
+* **Trap - three duplicate decisions a person had already made were lost, and
+  only one could be restored through the API.** Re-posting gives a pin a new
+  id, so its `PinDuplicate` rows point at a pin that is now deleted. The
+  duplicate scan re-suggested one of the three pairs; the other two never came
+  back, because the *deleted* twin still outranks the live one in the search
+  index (the index carries deleted pins) and pushes the real match below the
+  0.80 threshold. `PUT /api/pins/:id/duplicates/:otherId` only decides a pair
+  the app has **suggested**, so there was no route for them: the three rows
+  were restored by hand with the ids remapped, keeping their status, verdict
+  and decider. **Read `PinDuplicate` before deleting a pin.**
+* **Trap - `search:refresh` reindexes from `seedPins.json`, not the database.**
+  After the move the index still held the old ids and none of the new ones, so
+  the duplicate scan found nothing and the reason looked like a scoring change.
+  Run `npm run backup:data` *first*, then `search:refresh`.
+* **Trap - a new view column needs a dev restart.** 0062 appends `series` to
+  `PinBaseView`, and `queryPinById` is `SELECT "Pin".*`, so nothing in the SQL
+  had to change - but the running `next dev` served the pin without the field
+  and the new route 204'd until the server was restarted.
+* **Learned - EIA has no keyless API, and does not need one.** `api.eia.gov`
+  v2 wants a registered key and the "series history" download is Excel BIFF,
+  which would mean a spreadsheet dependency for one number a week. The
+  `LeafHandler.ashx` page that the series' public URL already points at carries
+  the whole history as an HTML table - Year-Month rows with (MM/DD, value)
+  pairs across the weeks - so it parses with no key and no new package, back to
+  August 1982. Two traps in the table: a value can be `W` (withheld) and must
+  be skipped rather than read as zero, and a **December row's January week
+  belongs to the next year**, because a week is dated by the Friday it ends on.
+* **Learned - the series is the pin's own evidence.** Parsing it corroborated
+  the batch: 415,442 thousand barrels on 6 March 2026 against the pins' "about
+  415 million before the release", and 284,957 on 11 September against the
+  298.7 million the August pin cites. A pin whose numbers disagree with the
+  chart beside it is a pin worth re-reading.
+* **Rule that emerged**: a published series is a **handle, never a number**.
+  `PinSeries` stores the publisher and the series id; the values are fetched on
+  view with an hour's cache, the same shape as weather, market odds and place
+  scores. A number copied into the database would be a stale claim within a
+  week, and the point of the chart is that it is live.
+
+## 2026-09-22 - Papers that changed industries, and clearing the whole wiki backlog by hand (pins 2668-2679, @ScienceDesk)
+
+* **Feedback - a credit error is never a status line.** Ian, on a report that listed
+  pending wikis because `okf:lint` had stopped on "credit balance is too low":
+  **"never stop on 'credit balance is too low' just do it by hand"**. The existing
+  rule was "switch to manual mode when the key is dry"; the correction is stronger -
+  a credit error is **never** a reason to hand work back unfinished and never a line
+  in a report. Run `wiki:export` in rounds until it says **0 jobs**, answering wikis,
+  summaries and contradiction checks each round, then `backup:data`. Do not offer to
+  do it later, and do not ask first.
+* **Changed - the backlog was cleared.** 53 wikis (76 part pages plus 26 composed
+  root pages), 3 rebuilt summaries and 24 contradiction checks, all by hand, for the
+  Science and paper batches; the two batches now carry **139 source wikis** between
+  them and `wiki:export` returns 0 jobs on all 25 pins.
+* **Learned - budget a wiki round properly.** A twelve-pin batch of well-referenced
+  pins is **three dozen wikis**; two such batches came to 53 sources and about 3.5
+  million characters of captured text. The per-source cost is wildly uneven: an
+  arXiv listing is 5k characters and a Wikipedia article can be 240k split across
+  five parts. Read the long ones for their lead and main sections rather than
+  end to end, and say in the page what the capture actually contained.
+* **Learned - part 2 of a long Wikipedia article is usually the reference list.** Of
+  the 26 multi-part jobs, most tails were citations, categories or navigation, which
+  makes them cheap pages - but they are still worth writing properly, because the
+  bibliography is often the clearest record of *what a paper was built from* (the
+  AlphaFold 2 reference list is where "Attention is all you need" shows up as an
+  ingredient). One part of the Alan Turing capture was cut inside the inline citation
+  machinery and contained no prose at all; the honest page says so.
+* **Trap - `cleanContradictions` drops a finding that names only one link.** Submitted
+  with a single claim, it is silently discarded: pin 2660's note that Einstein's 1911
+  deflection figure was half the 1915 one recorded as 0. An internal inconsistency in
+  one source belongs in that source's wiki body, not in a contradiction check.
+* **Learned - the contradiction checks earn their keep.** Twelve of 24 pins came back
+  clean; the other twelve turned up real things. The best catch: **AlexNet's own
+  NeurIPS abstract says "60 million parameters and 500,000 neurons" while Wikipedia
+  says 650,000** - same parameter count, different neuron count, and the primary
+  source is the smaller. Others worth keeping: the relational model is "first
+  described in 1969" only if you mean Codd's internal IBM paper, not the June 1970
+  CACM one; the Chicago Board Options Exchange opened on 26 April 1973, *before* the
+  May-June issue carrying Black-Scholes, so the formula cannot have created the
+  market it is credited with; and PageRank has three different author sets across
+  three sources (Brin and Page on the WWW7 paper, plus Motwani and Winograd on the
+  technical report, plus Scott Hassan in the Google Search article).
+* **Learned - a scanned two-column PDF reads out of order.** `pdftotext` interleaves
+  the columns of Codd's CACM scan and of the Diffie-Hellman IEEE reprint, breaking
+  most sentences mid-clause. Say so in the wiki and record only contiguous fragments;
+  do not reconstruct a sentence that the extraction split.
+* **Learned - the address on the paper is not the address today.** The Kohler and
+  Milstein paper prints "MRC Laboratory of Molecular Biology, Hills Road, Cambridge,
+  CB2 2QH"; the LMB moved to Francis Crick Avenue in 2013, which is what a geocoder
+  returns. Same for Codd's IBM San Jose Research Laboratory, now the Almaden Research
+  Center about ten kilometres away. Place the pin at the institution and record the
+  contemporary address in the contradiction check.
+* **Changed**: [Vertical recipes](verticals.md) gains a Landmark papers recipe;
+  [Sources](sources.md) gains a row for the publisher paywalls that block everything.
+
+## 2026-09-22 - Stix Asia at UnCommons, and reading a delay out of three datelines (pin 2682, @FoodDesk)
+
+* **Learned - a delay is usually found by reading the coverage in date order, not by
+  finding the word "delayed".** No source here says the opening slipped. It falls out
+  of three datelines: the Review-Journal on **28 April 2026** ("a fall 2026 opening is
+  planned", the week construction started), the Las Vegas Weekly on **9 July** ("set
+  for a fall opening"), and the station on **16 September** ("opening is planned for
+  this winter"). Fall and winter are incompatible, so the pin is `delayed` with
+  `originalStartDate` at the close of meteorological fall. **Always fetch the earlier
+  coverage before dating a forward opening** - the first article you are handed is
+  usually the latest revision, and only the earlier ones show that it moved.
+* **Trap - a stale "official" page is not the better source.** Stix Asia's own page
+  says "Opening 2026" and UnCommons' says "COMING 2026", which tempts an elegant
+  deduction: winter ∩ 2026 = December, so date it 31 December 2026. That was the
+  first answer here and it was wrong twice over - the UnCommons page was **last
+  modified 4 April 2025**, months before the slip, so it cannot narrow a September
+  statement; and `okf:lint` immediately flagged the result as `imprecise` ("Date is
+  year-precision only") because 31 December is indistinguishable from a bare-year
+  guess. The rule that already covers it: the **newest** statement wins, and a season
+  takes its last day - 28 February 2027.
+* **Learned - `okf:lint`'s imprecise check is a useful second opinion on a date.**
+  It cannot see the reasoning, only the date, so a date landing on 31 December or a
+  year boundary will be read as a bare-year guess. If that is not what you meant, it
+  is worth asking whether the date is right.
+* **Learned - the landlord has the address the operator's press does not.** Four of
+  five sources place the food hall only "at UnCommons"; `uncommons.com`'s own tenant
+  page carries **"STIX ASIA - 6840 Helen Toland St., Las Vegas, NV 89113"** and the
+  trading hours ("Daily 11am - 10pm"). Reverse-geocoding the plaza centroid had put
+  the pin on **Tom Rodriguez Street**, which the Review-Journal separately explains is
+  where the main entrance is, not the postal address - a real distinction for a unit
+  inside a mixed-use development. For a tenant, **check the landlord's site for the
+  street number**, then geocode it; Nominatim had the street but not the house number,
+  so the label stops at the street, which is honest.
+* **Learned - a food hall is one pin, not twelve.** Ginza Bairin, Ramen BARIO and
+  NANAMUSUBI are stalls opening on the same day inside one venue, with no dated
+  announcements of their own; they would also have had to share a `sourceUrl`, which
+  `rejectDuplicateSourceUrl` refuses. The event is the hall opening and the tenants
+  belong in the description and summary. The per-item rule is for a roundup of
+  separately dated things, not for a tenant list.
+* **Learned - `news3lv.com` carries full JSON-LD.** The `NewsArticle` block holds the
+  whole `articleBody`, the byline, both timestamps and every image with its caption,
+  so one `curl` is enough; the station's own video is a Sinclair mp4 rather than
+  YouTube, so it cannot be a medium - the video came from the Review-Journal's
+  YouTube channel covering the same announcement.
+* **Changed**: [Vertical recipes](verticals.md) - the Restaurants row gains the
+  food-hall and landlord-address notes; [Sources](sources.md) gains a news3lv.com row.
+
+## 2026-09-22 - The rest of the Stix Asia story, backwards (pins 2684-2685, @FoodDesk)
+
+Ian: **"pin more Stix Asia"**. Pin 2682 was the Las Vegas opening and had nothing
+behind it, so the two events that led to it went in and the three now read as one
+chain: **2684** the Waikiki original opening on 6 February 2023 (`confirmed`),
+**2685** the UnCommons groundbreaking on 27 April 2026 (`confirmed`), **2682** the
+Las Vegas opening on 28 February 2027 (`delayed`). Posted oldest first, so each
+`parentId` was set at save time and nothing needed re-threading.
+
+* **Learned - "pin more X" usually means the rest of X's story, not more pins like
+  X.** The useful reading was not "find other food halls" but "this pin is the last
+  act of something - where are the first two?". Both were already named inside the
+  sources pin 2682 already cited: the Review-Journal's "following the 2023 debut of
+  the original" and Las Vegas Weekly's "a wildly popular three-year-old food hall".
+  A pin's own references are the first place to look for its prequels.
+* **Learned - the same brand needs a fresh source per pin.** `rejectDuplicateSourceUrl`
+  means the Waikiki pin could not reuse any of the Las Vegas links, so the 2023
+  press had to be found on its own: Honolulu Magazine's opening-day report as the
+  source, the Star-Advertiser's preview a week earlier, and the operator's Waikiki
+  page. Las Vegas Weekly could be *referenced* by both pins - the cap is on source
+  URLs, not on references.
+* **Learned - a count is a fact about a moment.** Four numbers for one hall: 17
+  planned, 13 trading on opening day, 16 by the middle of 2023 (Honolulu Magazine's
+  later editor's note), "over 15" on the operator's undated page today. The first
+  draft blurred them into "grown past 15 stalls", which is true of all four and says
+  nothing; the pin now says "13 of a planned 17" for the day and "grown to 16" for
+  mid-2023, and the contradiction check records the whole progression with which
+  source is newest. **Read the editor's note** - it is inserted above the body and
+  silently outranks the number underneath it.
+* **Learned - a secondary outlet gets the operator's own details wrong.** Las Vegas
+  Weekly lists the Waikiki cuisines as "Japan, Taiwan, China, Korea and Vietnam";
+  the operator says "Japan, Taiwan, China, Korea and Singapore". Vietnamese is on
+  the *Las Vegas* tenant list, which is the likely bleed. The Review-Journal
+  separately calls the original "downtown Honolulu" when it is in Waikiki, two miles
+  away. Both are minor findings, and both point the same way: **for facts about a
+  venue, the venue's own page beats a story that mentions it in passing** - the
+  reverse of the rule for dates.
+* **Learned - a Hawaii location is why "first mainland U.S." is not a contradiction.**
+  Two Las Vegas tenants, NANAMUSUBI and Ramen BARIO, appear on the Waikiki list too,
+  which looks like it breaks the "first U.S. location" framing until you notice the
+  Las Vegas coverage says **mainland**. Worth checking before writing a finding.
+* **Learned - `okf:lint`'s stale check will flag page furniture, and the fix is not
+  `--fix`.** Source 18780 came back changed with exactly one relevant line: the
+  headline run together with "Skip to main content", a navigation shift and not a
+  change to the story. `--fix` would have called `ingestSource` to rewrite the wiki
+  (and it needs the app's Anthropic key). The right move is what the check's own
+  *furniture* branch does - re-read the page, `Source.setText` the new text as the
+  baseline and `markUnchanged` - after reading the changed lines and judging them
+  furniture yourself. The lines are in the finding's `detail`, in `OkfLintFinding`.
+* **Learned - there is no `SourceText` table.** A link's text is `Source.text` with
+  `Source.textHash`; `seedSourceTexts.json` is only how the backup splits it. Worth
+  knowing before writing a query against a table that does not exist.
+* **Changed**: [Vertical recipes](verticals.md) - the Restaurants row now says a
+  chain's second venue is a thread, not a loose pin; [Sources](sources.md) gains
+  rows for staradvertiser.com (premium, but the readable part carried the date, the
+  count and four stall write-ups), honolulumagazine.com (the editor's-note trap) and
+  operator sites like stixasia.com (good for an address, never for a date).
+
+## 2026-09-22 - Restaurant concepts, not restaurants (pins 2686-2692, @FoodDesk)
+
+Ian, off the Stix Asia thread: **"pin any other cool restaurant concepts like this"**. Seven
+pins, each a format rather than a kitchen: Time Out Market Lisboa (18 May 2014), Ichiran's
+solo booths in Bushwick (19 October 2016), Under five metres under the sea at Lindesnes (20
+March 2019), Eatrenalin's moving dining room at Europa-Park (4 November 2022), Punk Noir's
+20-course walk through a Dallas warehouse (2 June 2026), and the two Time Out Markets still
+to come - São Paulo (Q1 2027) and the London flagship at 10 Piccadilly (summer 2028), which
+thread behind Lisboa oldest first.
+
+* **Learned - read the category before choosing what to add.** `Food` held 70 pins and was
+  lopsided: grand cafés and fine dining from 1499 to 2015, with **two** pins after 2025 and
+  almost nothing forward. The gap was not "more restaurants" but restaurants whose *concept*
+  is the story, and a forward calendar. Listing the category by date first took ten minutes
+  and changed the whole batch.
+* **Learned - a date a source states in passing beats one nobody states.** Público's two 2014
+  previews of the Time Out Market are unreachable by every fetcher there is, and Time Out's
+  own page says "back in 2014". The day came from a **fifth-anniversary story**: "Desde que
+  abriu portas a 18 de maio de 2014". An anniversary piece is a dating source, and the
+  anniversary programme itself (16-18 May 2019, ending on the 18th) corroborated it.
+* **Learned - drop a pin rather than publish a date no source states.** LIC Food Hall was
+  meant to be the eighth. Its press said "opening this May" (2025), a later piece said the
+  grand opening was "this past August", and the operator's own Wix event page said **1
+  October 2024** - a year before the venue was previewed. Three dates, none of them a day
+  anyone stands behind, so the pin was not written. The same judgement kept CaliExpress by
+  Flippy out: the "world's first fully autonomous restaurant" opened by reservation in late
+  December 2023, media reported a January 2024 opening, and Miso Robotics was still saying
+  "CaliExpress is not yet open to the public" on 7 February 2024.
+* **Learned - a season or a quarter is a period, so take its last day, and say so in the
+  reasoning.** Q1 2027 gives 31 March 2027; "summer of 2028" gives 31 August 2028. Neither
+  tripped `okf:lint`'s imprecise check, because neither lands on a year boundary - which is a
+  useful sanity check that the rule and the linter agree.
+* **Learned - a pin can be placed on a city when there is honestly no building.** Time Out's
+  São Paulo announcement says "the exact location, first partners and cultural programme...
+  have yet to be announced", so the pin is forward-geocoded to São Paulo and the reasoning
+  says why. Better than picking a plausible address.
+* **Learned - for facts about a venue, the operator beats the press; for dates, the reverse.**
+  Gothamist put Ichiran Bushwick at 386 Johnson Avenue in 2016; the chain's own page says
+  **374**, and Nominatim has an `Ichiran` premises at 374. But Wikipedia dates that opening to
+  November 2016 where Gothamist, writing two days ahead, names Wednesday 19 October - and 19
+  October 2016 was a Wednesday. Operator for the address, contemporary press for the day.
+* **Learned - `cleanContradictions` also drops a finding where a link contradicts *itself*.**
+  Wikipedia's Ichiran article says the chain began in 1960 while its own infobox says
+  "Founded... in May 1993"; the finding cited [3] twice, so only two of the three answers for
+  that pin were recorded. Same rule as a finding naming one link - it needs two distinct
+  labels to survive, which means a single source's internal inconsistency belongs in that
+  link's **wiki**, not in a contradiction check.
+* **Learned - reconcilable is still worth recording.** Under seats "40" (Snøhetta, Wikipedia)
+  and "up to 90 guests" (Visit Norway); Punk Noir's lounge seats 46 or 64. Both reconcile
+  once you know that 40 is the dining room at the seabed and 90 is the whole three-level
+  building, and that 64 is the lounge *plus* the bar. A finding whose note explains the
+  reconciliation is more useful than silence, because the next person will hit the same two
+  numbers.
+* **Learned - the app's headless scraper is worth calling as a *reading* tool, not just a
+  pipeline step.** A six-line throwaway script around `fetchSourceText` read guide.michelin.com
+  in full when `curl` returned an empty 202 - and proved that publico.pt, wfaa.com and
+  dallasobserver.com beat all three fetchers, which is worth knowing before spending searches
+  on them.
+* **Learned - a tag that matches a category name becomes a category.** Tagging Under with
+  `Architecture` gave it `['Food', 'Architecture']`. Here that is right and `Food` still leads,
+  but it means a tag list is not a free-text field: check the category names first.
+* **Changed**: [Vertical recipes](verticals.md) - the Restaurants row now names the concept
+  pin and what its description should lead with; [Sources](sources.md) gains rows for
+  publico.pt (beats all three fetchers), gothamist.com (the tollbit redirect), Time Out's
+  corporate announcements (a quarter or a season, never a day), a Michelin addendum for when
+  the meta-description route is closed, and the Dallas outlets that read against the ones that
+  do not.

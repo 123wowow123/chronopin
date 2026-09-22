@@ -1,9 +1,10 @@
 import { expect, test } from '@playwright/test';
 import { expectReloadMatchesTodayButton } from './todayPosition';
 
-// The floating controls fold behind pills below xl, so these run at phone size.
+// Below lg the filters ride in the nav drawer, so these run at phone size.
 
-const foldPill = 'button[aria-controls="timeline-tags"]:visible';
+// The tag panel's header row inside the drawer.
+const tagsRow = 'button[aria-label^="Tags:"]';
 
 // Whether the page moves under a wheel, rather than how it is held still.
 // A scripted scrollTo would not do: overflow:hidden stops the reader
@@ -15,24 +16,29 @@ async function scrolls(page: import('@playwright/test').Page) {
   return (await page.evaluate(() => window.scrollY)) !== from;
 }
 
-test('picking a category and shutting the fold leaves the page scrolling', async ({ page }) => {
+test('picking a category in the drawer searches for it and gives the page back', async ({ page }) => {
   await page.goto('/');
-  await page.locator(foldPill).first().click();
+  const drawer = page.getByRole('dialog', { name: 'Menu' });
+  await page.getByRole('button', { name: /open menu/i }).click();
+  await expect(drawer).toBeVisible();
+  // The filters are the page's own panels, lent to the drawer.
+  await drawer.locator(tagsRow).click();
   // The tag cloud's tags (categories lead it), not the chevrons that unfold a group.
-  const pills = page.getByRole('group', { name: 'Filter by tag' }).locator('button[aria-pressed]');
+  const pills = drawer.getByRole('group', { name: 'Filter by tag' }).locator('button[aria-pressed]');
   await expect(pills.first()).toBeVisible();
-  // The page is held still while the fold covers it.
+  // The page is held still while the drawer covers it.
   expect(await scrolls(page)).toBe(false);
 
   // A pick searches for that category, which leaves the timeline page mounted
-  // and hidden for a moment - dimmer and all - behind the results.
+  // and hidden for a moment behind the results - and puts the drawer away.
   await pills.first().click();
   await expect(page).toHaveURL(/\/search\?/);
-  await expect(page.locator(foldPill).first()).toBeVisible();
-
-  // Shutting the fold gives the page back, the hidden one's dimmer included.
-  await page.locator(foldPill).first().click();
+  await expect(drawer).toBeHidden();
   await expect.poll(() => scrolls(page)).toBe(true);
+
+  // The results' own filters are in the drawer now, saying what is picked.
+  await page.getByRole('button', { name: /open menu/i }).click();
+  await expect(drawer.locator(tagsRow)).not.toHaveAttribute('aria-label', 'Tags: All');
 });
 
 test('a card on the timeline pictures its video instead of loading the player', async ({ page }) => {

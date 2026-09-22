@@ -1,5 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
+import { tagKind } from '@/lib/tags';
 import {
+  adaptationTag,
   aniListEpisodes,
   findScreenDetails,
   malIdOf,
@@ -87,6 +89,63 @@ describe('pickTrailer', () => {
   it('does not hold words in the work title against its trailer', () => {
     expect(pickTrailer([video('Coyote vs. Acme | Official Trailer')], 'Coyote vs. Acme')).toBeDefined();
   });
+
+  it('puts the studio, licensor or work channel above search rank', () => {
+    const onChannel = (title: string, channel: string, videoId = channel) => ({ videoId, title, channel, verified: true });
+    const picked = pickTrailer(
+      [
+        onChannel('Kaiju No. 8 - Official Trailer', 'AnimeSelect', 'aggregator'),
+        onChannel('Kaiju No. 8 | Official Trailer', 'Crunchyroll Collection', 'licensor'),
+      ],
+      'Kaiju No. 8',
+      'Production I.G',
+    );
+    expect(picked?.videoId).toBe('licensor');
+    // The studio's own channel, named by the company rather than by the work.
+    expect(
+      pickTrailer(
+        [onChannel('Frieren Official Trailer', 'Anime World', 'aggregator'), onChannel('Frieren Trailer', 'MADHOUSE Inc.', 'studio')],
+        'Frieren',
+        'Madhouse',
+      )?.videoId,
+    ).toBe('studio');
+  });
+
+  it('demotes an aggregator without dropping it when nothing else is offered', () => {
+    const onChannel = (title: string, channel: string) => ({ videoId: channel, title, channel, verified: true });
+    expect(pickTrailer([onChannel('Blue Box | Official Trailer', 'Anime World')], 'Blue Box')?.videoId).toBe('Anime World');
+    // A filler word the work shares does not make the aggregator its own.
+    expect(
+      pickTrailer(
+        [onChannel('World Trigger Official Trailer', 'Anime World'), onChannel('World Trigger Trailer', 'TOHO animation')],
+        'World Trigger',
+      )?.videoId,
+    ).toBe('TOHO animation');
+  });
+});
+
+describe('adaptationTag', () => {
+  it('names what an anime was made out of', () => {
+    expect(adaptationTag('MANGA')).toBe('Manga Adaptation');
+    expect(adaptationTag('LIGHT_NOVEL')).toBe('Light Novel Adaptation');
+    expect(adaptationTag('VIDEO_GAME')).toBe('Game Adaptation');
+    expect(adaptationTag('ORIGINAL')).toBe('Original Work');
+  });
+
+  // A bare "Manga" is a category name, so tagKind would file the tag as a
+  // category and the save would drop it. No name in the family may be one.
+  it('never names a tag that a category already owns', () => {
+    for (const source of ['MANGA', 'LIGHT_NOVEL', 'VISUAL_NOVEL', 'NOVEL', 'WEB_NOVEL', 'VIDEO_GAME', 'GAME', 'DOUJINSHI', 'COMIC', 'LIVE_ACTION', 'PICTURE_BOOK', 'MULTIMEDIA_PROJECT', 'ORIGINAL']) {
+      expect(tagKind(adaptationTag(source)!)).toBe('topic');
+    }
+  });
+
+  it('tags nothing for a value that would say nothing', () => {
+    expect(adaptationTag('ANIME')).toBeUndefined();
+    expect(adaptationTag('OTHER')).toBeUndefined();
+    expect(adaptationTag(null)).toBeUndefined();
+    expect(adaptationTag('SOMETHING_ANILIST_ADDED_SINCE')).toBeUndefined();
+  });
 });
 
 describe('ratings', () => {
@@ -124,8 +183,8 @@ describe('ratings', () => {
 
 describe('helpers', () => {
   it('knows the screen categories in any case', () => {
-    expect(isScreenCategory('movies')).toBe(true);
-    expect(isScreenCategory('Gaming & Entertainment')).toBe(false);
+    expect(isScreenCategory('movie')).toBe(true);
+    expect(isScreenCategory('Gaming')).toBe(false);
     expect(isScreenCategory(undefined)).toBe(false);
   });
 
@@ -203,5 +262,33 @@ describe('findScreenDetails with a cited MyAnimeList id', () => {
     stubFetch({ status: 504, message: 'Jikan failed to connect to MyAnimeList' });
     const details = await findScreenDetails({ pinTitle: 'Gensou Mangekyou: The Memories of Phantasm Premieres', category: 'Anime', year: 2011, malId: 55315, skipTrailer: true });
     expect(details.ratings).toEqual([]);
+  });
+
+  // The live shape of the gap: a title no catalogue search can place (a
+  // Chinese donghua), and Jikan down, which it is most of the time. AniList
+  // answers by MAL id without any title match, so the pin still gets a score.
+  it('scores a work by its MAL id when no title matches and Jikan is down', async () => {
+    const calls: string[] = [];
+    vi.stubGlobal('fetch', async (url: string, init?: RequestInit) => {
+      calls.push(url);
+      void init;
+      if (url.includes('api.jikan.moe')) {
+        return new Response(JSON.stringify({ status: 504, message: 'Jikan failed to connect to MyAnimeList' }), { status: 504 });
+      }
+      // The title search finds nothing; the id query answers.
+      const byId = typeof init?.body === 'string' && init.body.includes('idMal:');
+      const data = url.includes('graphql.anilist.co')
+        ? byId
+          ? { Media: { format: 'TV', status: 'FINISHED', episodes: 175, averageScore: 80, siteUrl: 'https://anilist.co/anime/163134', source: 'ORIGINAL' } }
+          : { Page: { media: [] } }
+        : undefined;
+      const body = data ? JSON.stringify({ data }) : JSON.stringify({ search: [], results: { bindings: [] } });
+      return new Response(body, { status: 200, headers: { 'content-type': 'application/json' } });
+    });
+    const details = await findScreenDetails({ pinTitle: 'Tunshi Xingkong 4th Season Premieres', category: 'Anime', year: 2023, malId: 56524, skipTrailer: true });
+    expect(details.ratings).toEqual([{ source: 'AniList', score: 80, scoreMax: 100, url: 'https://anilist.co/anime/163134' }]);
+    expect(details.workTitle).toBeUndefined();
+    expect(details.adaptedFrom).toBe('Original Work');
+    expect(details.episodes).toEqual({ episodeCount: 175, episodeStatus: 'complete' });
   });
 });

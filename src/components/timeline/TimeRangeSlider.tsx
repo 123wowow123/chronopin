@@ -3,7 +3,7 @@
 import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { approxDays, formatSpan, parseTypedSpan, spanExample } from '@/lib/postedSpan';
-import { useInControlsFold } from './FloatingControls';
+import { useInControlsFold, useInDrawerPanel } from './FloatingControls';
 import { iconButton, PanelHeader, useFold } from './PanelHeader';
 import { useT } from '@/lib/client/i18n';
 
@@ -27,8 +27,9 @@ export function TimeRangeSlider({
   // From xl up, folds the whole slider behind a row saying what it is set to,
   // as the tag panel folds behind its own: the timeline stacks several of
   // these, and a column of sliders leaves no room for what sits under them.
-  // Narrower there is no column and no room to spare - the slider is already
-  // behind a pill - so it stays out, heading and all.
+  // Between lg and xl there is no column and no room to spare - the slider is
+  // already behind a pill - so it stays out, heading and all. In the nav
+  // drawer it always folds, whatever is asked for here.
   collapsible?: boolean;
   onChange: (value: { past: string | null; future: string | null }) => void;
 }) {
@@ -47,6 +48,11 @@ export function TimeRangeSlider({
   // Folded behind a pill that already says "Posted within …", the heading
   // would only repeat it.
   const inFold = useInControlsFold();
+  // In the nav drawer every slider folds behind its own header, as a
+  // collapsible one does in the xl column: the drawer holds the nav rows and
+  // the other filters as well, and a slider unfolded takes the room they need.
+  const inDrawer = useInDrawerPanel();
+  const folds = collapsible || inDrawer;
   const t = useT();
   const span = (within: string) => formatSpan(within, t.locale);
   const headless = pastOnly && inFold;
@@ -223,8 +229,8 @@ export function TimeRangeSlider({
   );
 
   return (
-    <div ref={rootRef} className={`floating text-sm ${collapsible ? '' : 'px-3.5 pt-2.5 pb-3'}`}>
-      {collapsible ? (
+    <div ref={rootRef} data-no-swipe className={`floating text-sm ${folds ? '' : 'px-3.5 pt-2.5 pb-3'}`}>
+      {folds ? (
         <PanelHeader
           caption={pastOnly ? t('controls.postedWithin') : t('controls.timeSpan')}
           captionClass="font-semibold text-past"
@@ -233,12 +239,15 @@ export function TimeRangeSlider({
           onToggle={() => setOpen(!open)}
           controls={bodyId}
           reset={past ? { label: t('slider.anyTime'), onClick: () => applySide('past', null) } : undefined}
-          className="max-xl:hidden"
+          className={inDrawer ? '' : 'max-xl:hidden'}
         >
           {typeButton(`${iconButton} pointer-events-auto max-lg:hidden`)}
         </PanelHeader>
       ) : null}
-      <div id={bodyId} className={collapsible ? `px-3.5 pb-3 max-xl:pt-2.5 ${open ? '' : 'xl:hidden'}` : ''}>
+      <div
+        id={bodyId}
+        className={folds ? `px-3.5 pb-3 ${inDrawer ? (open ? '' : 'hidden') : `max-xl:pt-2.5 ${open ? '' : 'xl:hidden'}`}` : ''}
+      >
         {/* The heading. From xl up the fold's own row above says all this,
             so it goes; with both sides, equal outer columns keep the pencil on
             the centre line, above "Now" and the track's midpoint, whatever the
@@ -246,7 +255,7 @@ export function TimeRangeSlider({
         <div
           className={
             pastOnly
-              ? `flex items-start justify-between gap-2 ${collapsible ? 'xl:hidden' : headless ? 'max-xl:hidden' : ''}`
+              ? `flex items-start justify-between gap-2 ${folds ? (inDrawer ? 'hidden' : 'xl:hidden') : headless ? 'max-xl:hidden' : ''}`
               : 'grid grid-cols-[1fr_auto_1fr] items-start gap-2'
           }
         >
@@ -272,7 +281,11 @@ export function TimeRangeSlider({
         </div>
 
         {/* Labels in their own row, clear of the thumbs. */}
-        <div className={`mt-2 flex items-center justify-between max-lg:mb-2 ${collapsible ? 'xl:mt-0' : headless ? 'max-xl:mt-0' : ''}`}>
+        <div
+          className={`flex items-center justify-between max-lg:mb-2 ${
+            folds ? (inDrawer ? 'mt-0' : 'mt-2 xl:mt-0') : headless ? 'mt-2 max-xl:mt-0' : 'mt-2'
+          }`}
+        >
           {pastOnly ? (
             <>
               {steps.length ? (

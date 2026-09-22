@@ -507,7 +507,7 @@ Suggest and provide additonal reference URL
 Suggest different start and end date with with reason and reference
 Suggest missing or correcting information
 
-This needs anther table to hold it and needs logged in user tracking
+This needs another table to hold it and needs logged in user tracking
 
 AI will then analyse feedback but not necessary make any changes as original sources are weighted to be the ultimate truth
 
@@ -515,14 +515,9 @@ AI will then analyse feedback but not necessary make any changes as original sou
 Product pins should have notible features in long form summary
 http://localhost:3000/pin/2346/the-airbus-a350f-makes-its-first-flight
 
-tag filter need exclude feature - maybe using tabs
+tag filter need exclude tag feature 
+- maybe using tabs on control panel for this
 
-Fix: The data-quality findings — wrong references on pins 72, 202, 377, 806, 808; stale odds in the market pin descriptions; MMOExp as a primary source 
+site reserved filters like confidence should be in tag cloud styled to show it's reserved and search suggestion should show reserved tag if necessary
 
-
-7 ratings applied across 156 pins. 149 still have none, 95 of which have already aired, so a score exists and the lookup simply failed — 251 Jikan 504s, identical in both runs. Jikan serves cached titles and 504s the rest; One Piece answers, Mushoku Tensei doesn't. Re-run later with scratchpad/ids.txt; it's insert-or-refresh so it's free to repeat.
-
-Open
-Kaiju No. 8 Season 1 (MAL 52588) and Mission Recon (59489) aren't pinned — that's why 2316 heads its chain instead of sitting under Season 1.
-Aggregator channels outrank official ones in trailer search — hit twice today (AnimeSelect, Anime World), both skipped by hand. Worth scoring the studio's own channel above search rank.
-Offered, not started: tagging anime pins by AniList's source field (MANGA, LIGHT_NOVEL, ORIGINAL…).
+- Redesign create pin / respond to pin page - just need url and a description free text field?

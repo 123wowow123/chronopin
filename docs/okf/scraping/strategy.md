@@ -46,7 +46,7 @@ Stages 2 to 5 run in parallel where they do not depend on each other: the extrac
 
 # Decision rules
 
-**Which URL is the source.** Prefer the publisher's own page for the event. A video is rarely the event: pin the thing it covers, dated from the official schedule, and cite the video as a reference or the source. When a scrape finds a video or article whose subject already has a pin, add it to that pin as a reference instead of making a second pin (duplicates are suggested and confirmed, see the duplicate checks).
+**Which URL is the source.** A URL the owner hands over **is** the source, even when it is a rewrite of someone else's reporting (owner, 2026-09-22, of a Rundown write-up of a Reuters scoop: "yes swap"). Still follow its credit chain - the outlets it names go to the top of the reference list, where the evidence belongs - and offer the swap rather than making it silently. Choosing for yourself, prefer the publisher's own page for the event. A video is rarely the event: pin the thing it covers, dated from the official schedule, and cite the video as a reference or the source. When a scrape finds a video or article whose subject already has a pin, add it to that pin as a reference instead of making a second pin (duplicates are suggested and confirmed, see the duplicate checks).
 
 **Which date.** `startDateTime` is when the event itself happens, not when construction began or the article ran. A scheduled event uses its official time (`scheduled`). A year alone is its last day (`estimated`, all day, `2027-12-31`), a month its last day. A rumour or report pin with no fixed date is anchored to the article's `article:published_time`. A prediction market's date is the day its daily market prices highest (`estimated`) or its strike time when scheduled. Dates are UTC; an all-day pin starts 00:00Z and ends at the exclusive 00:00Z after its last day.
 
@@ -62,7 +62,7 @@ Stages 2 to 5 run in parallel where they do not depend on each other: the extrac
 
 **Which company.** The single organisation the event is chiefly about or done by: a product's maker, a project's owner or operator, an agency for a mission. For film, TV, anime and games it is the studio or developer, never the publisher, broadcaster or streamer. Reuse an existing company by exact name (a rename is merged into the older row).
 
-**Which category.** Only from the fixed list in [categories.ts](../../../src/lib/categories.ts), closest fit first. Never "Other": add a specific new category to the list instead. Films are `Movies`, TV shows `TV Series`, anime `Anime` and anime films `Anime Movie`.
+**Which category.** Only from the fixed list in [categories.ts](../../../src/lib/categories.ts), closest fit first. Every name is **one word**, so give a pin every word it is squarely about rather than one broad word: a film is `Movie`, a TV show `TV`, an anime film `Anime` and `Movie`, a new metro line `Transport`, a museum opening `Architecture` and `Art`. There is no "Other" - add a specific word to the list instead.
 
 **Which references.** Official announcement or press release first, then filings and government pages, then established news or trade press. Skip the source itself, aggregators, forums, social posts and SEO farms, and anything that only rewrites other coverage. A reference's `startDate`/`endDate` move the pin's dates, so leave them null unless the page firmly dates the event.
 

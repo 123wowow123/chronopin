@@ -9,7 +9,7 @@ import { compareDayKeys, dayKeyIn, dayKeyOf, dayKeyToMs } from './format';
 // not slip a day across UTC. The dates the source gave are kept on the pin
 // (sourceStartDateTime/sourceEndDateTime) whenever a reference overrides them.
 
-import { referenceTime, SOURCE_CONFIDENCE } from './referenceConfidence';
+import { LOW_CONFIDENCE, referenceTime, SOURCE_CONFIDENCE } from './referenceConfidence';
 import type { PinJson, PinReferenceJson } from './types';
 
 const YMD = /^\d{4}-\d{2}-\d{2}$/;
@@ -47,8 +47,9 @@ export function addDays(key: string, days: number): string {
 }
 
 // Below this a date is shown as low confidence: under the source's
-// "estimated", where confidenceClass turns amber.
-export const LOW_DATE_CONFIDENCE = 50;
+// "estimated", where confidenceClass turns amber and a pin's own score falls
+// in the confidence:low band.
+export const LOW_DATE_CONFIDENCE = LOW_CONFIDENCE;
 
 export const isLowConfidence = (confidence: number | undefined) => confidence !== undefined && confidence < LOW_DATE_CONFIDENCE;
 

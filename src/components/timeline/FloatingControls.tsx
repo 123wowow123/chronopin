@@ -1,7 +1,9 @@
 'use client';
 
-import { createContext, useContext, useEffect, useRef, useState } from 'react';
+import { createContext, useContext, useEffect, useRef, useState, useSyncExternalStore } from 'react';
+import { createPortal } from 'react-dom';
 import { Icon, type IconName } from '@/components/ui/Icon';
+import { registerControls, useControlsSlot, useOwnsControls } from '@/lib/client/controlsDrawer';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { useT } from '@/lib/client/i18n';
 
@@ -11,28 +13,61 @@ type Fold = 'tags' | 'controls' | 'span' | null;
 // the tag panel does.
 let rememberedTagsOpen = false;
 
-// Whether the tags fold is open (null outside floating controls): below xl the
-// tag cloud has its own pill, so it shows its cloud without its own header.
+// Whether the tags fold is open (null outside floating controls): between lg
+// and xl the tag cloud has its own pill, so it shows its cloud without its
+// own header.
 const TagFoldContext = createContext<boolean | null>(null);
 
 export function useTagFoldOpen() {
   return useContext(TagFoldContext);
 }
 
-// Whether a control sits in the fold behind a summary pill that, below xl,
-// already says what the posted-within slider is set to.
+// Whether a control sits in the fold behind a summary pill that, between lg
+// and xl, already says what the posted-within slider is set to.
 const ControlsFoldContext = createContext(false);
 
 export function useInControlsFold() {
   return useContext(ControlsFoldContext);
 }
 
+// Whether a control is riding in the nav drawer rather than floating over the
+// cards. There it is a panel among the drawer's rows, headed and folded like
+// the ones in the xl column, and sized for that column's width.
+const DrawerPanelContext = createContext(false);
+
+export function useInDrawerPanel() {
+  return useContext(DrawerPanelContext);
+}
+
+// Where the drawer's own button is (src/components/nav/MobileDrawer.tsx): on
+// anything narrower there is a drawer to put the controls in, and no pills.
+const DRAWER_WIDTH = '(width < 64rem)';
+
+function subscribeWidth(listener: () => void) {
+  const query = window.matchMedia(DRAWER_WIDTH);
+  query.addEventListener('change', listener);
+  return () => query.removeEventListener('change', listener);
+}
+
+// The server cannot know the screen, so it writes the floating column, which
+// is hidden below lg either way; the drawer is only filled once hydrated.
+function useDrawerWidth() {
+  return useSyncExternalStore(
+    subscribeWidth,
+    () => window.matchMedia(DRAWER_WIDTH).matches,
+    () => false,
+  );
+}
+
 // The controls that float over a timeline (filters, sort, a searched user).
-// On wide screens (xl) they sit top right beside the cards; narrower, they
-// would cover the cards or squeeze them to one column, so they fold behind
-// pill buttons by the "Today" button: the tag cloud (categories on top) and
-// the window of start dates (span) behind their own, the rest behind one
-// saying what they are set to.
+// On wide screens (xl) they sit top right beside the cards. Between lg and xl
+// they would cover the cards or squeeze them to one column, so they fold
+// behind pill buttons by the "Today" button: the tag cloud (categories on
+// top) and the window of start dates (span) behind their own, the rest behind
+// one saying what they are set to. Below lg - a phone, where those pills ate
+// the foot of the screen - they ride in the nav drawer instead, under
+// "Filters", as the panels they are in the xl column; only "Today" is left
+// floating over the cards.
 export function FloatingControls({
   children,
   sort,
@@ -67,6 +102,14 @@ export function FloatingControls({
   };
   const rootRef = useRef<HTMLDivElement>(null);
   const t = useT();
+  const inDrawer = useDrawerWidth();
+  const slot = useControlsSlot();
+  // These controls' claim on the drawer's Filters section. Made from an
+  // effect, so the pages React keeps mounted but hidden either side of this
+  // one - each with controls of its own - do not fill the drawer as well.
+  const [claim] = useState(() => ({}));
+  useEffect(() => registerControls(claim), [claim]);
+  const owns = useOwnsControls(claim);
 
   useEffect(() => {
     if (!open) return;
@@ -85,7 +128,7 @@ export function FloatingControls({
   }, [open]);
 
   // The scroll lock in globals.css stops wheels, but a touch drag still
-  // scrolls the page on mobile browsers, so drags are stopped too - except
+  // scrolls the page on a touch screen, so drags are stopped too - except
   // within something that scrolls itself, like the tag cloud.
   useEffect(() => {
     if (!open || !window.matchMedia('(width < 80rem)').matches) return;
@@ -104,19 +147,42 @@ export function FloatingControls({
 
   const toggle = (fold: Exclude<Fold, null>) => setOpen(open === fold ? null : fold);
 
+  // In the drawer the panels are simply stacked, each with its own header:
+  // the drawer scrolls, and its own close puts the lot away, so there is
+  // nothing for the pills or the dimmer to do.
+  if (inDrawer) {
+    return (
+      <>
+        {owns && slot
+          ? createPortal(
+              <DrawerPanelContext value={true}>
+                <div className="flex flex-col gap-2">
+                  {tags?.control}
+                  {children}
+                  {span?.control}
+                </div>
+              </DrawerPanelContext>,
+              slot,
+            )
+          : null}
+        <TodayBar onToday={onToday} />
+      </>
+    );
+  }
+
   return (
     <div ref={rootRef}>
       {/* Dims the cards behind an open fold, which would otherwise blend into them. */}
       {open ? <div aria-hidden onClick={() => setOpen(null)} className="fixed inset-0 z-20 touch-none bg-black/50 xl:hidden" /> : null}
       <div
-        className={`fixed right-3 bottom-16 left-3 z-30 flex flex-col items-stretch gap-2 lg:left-auto lg:w-64 xl:top-[68px] xl:right-4 xl:bottom-auto xl:max-h-[calc(100dvh-8.5rem)] ${
+        className={`fixed right-3 bottom-16 z-30 flex w-64 flex-col items-stretch gap-2 xl:top-[68px] xl:right-4 xl:bottom-auto xl:max-h-[calc(100dvh-8.5rem)] ${
           // The full height, so the panels under the controls can share out what is left.
           aside ? 'xl:h-[calc(100dvh-8.5rem)]' : ''
         }`}
       >
         {sort}
         {tags ? (
-          // Open on a phone, the cloud takes the page down to the pills, however few tags it has.
+          // Open behind its pill, the cloud takes the page down to it, however few tags it has.
           <div id="timeline-tags" className={`flex min-h-0 flex-col ${open === 'tags' ? 'max-xl:h-[calc(100dvh-8rem)]' : 'max-xl:hidden'}`}>
             <TagFoldContext value={open === 'tags'}>{tags.control}</TagFoldContext>
           </div>
@@ -144,21 +210,33 @@ export function FloatingControls({
           </div>
         ) : null}
       </div>
-      <div className="fixed right-3 bottom-3 z-30 flex max-w-[calc(100%-1.5rem)] gap-1.5 max-sm:gap-1 lg:right-4 lg:gap-2 lg:bottom-4">
+      <TodayBar onToday={onToday}>
         {tags ? <FoldPill fold="tags" open={open} onToggle={toggle} icon="hash" iconClass="text-link" caption={t('controls.tags')} label={tags.summary} /> : null}
         <FoldPill fold="controls" open={open} onToggle={toggle} icon="sliders" iconClass="text-past" caption={summaryCaption} label={summary} className="max-w-52" />
         {span ? <FoldPill fold="span" open={open} onToggle={toggle} icon="timeline" iconClass="text-future" caption={t('controls.timeSpan')} label={span.summary} /> : null}
-        {onToday ? (
-          <button
-            type="button"
-            onClick={onToday}
-            className="floating flex shrink-0 h-11 items-center gap-1.5 rounded-full px-3 text-sm lg:h-auto lg:gap-2 lg:px-3.5 lg:py-2 font-medium text-ink hover:bg-raised"
-          >
-            <Icon name="target" className="size-4 text-warning" />
-            {t('controls.today')}
-          </button>
-        ) : null}
-      </div>
+      </TodayBar>
+    </div>
+  );
+}
+
+// The row at the foot of the cards: the fold pills, where there are any, and
+// "Today", which stays there however the filters are reached.
+function TodayBar({ onToday, children }: { onToday?: () => void; children?: React.ReactNode }) {
+  const t = useT();
+  if (!onToday && !children) return null;
+  return (
+    <div className="fixed right-3 bottom-3 z-30 flex max-w-[calc(100%-1.5rem)] gap-1.5 max-sm:gap-1 lg:right-4 lg:gap-2 lg:bottom-4">
+      {children}
+      {onToday ? (
+        <button
+          type="button"
+          onClick={onToday}
+          className="floating flex shrink-0 h-11 items-center gap-1.5 rounded-full px-3 text-sm lg:h-auto lg:gap-2 lg:px-3.5 lg:py-2 font-medium text-ink hover:bg-raised"
+        >
+          <Icon name="target" className="size-4 text-warning" />
+          {t('controls.today')}
+        </button>
+      ) : null}
     </div>
   );
 }
@@ -192,7 +270,7 @@ function FoldPill({
       onClick={() => onToggle(fold)}
       aria-expanded={expanded}
       aria-controls={`timeline-${fold}`}
-      className={`floating flex min-w-0 h-11 items-center gap-1.5 rounded-full px-3 text-sm max-sm:gap-1 max-sm:px-2 lg:h-auto lg:gap-2 lg:px-3.5 lg:py-2 xl:hidden ${className} ${
+      className={`floating flex min-w-0 h-11 items-center gap-1.5 rounded-full px-3 text-sm max-sm:gap-1 max-sm:px-2 max-lg:hidden lg:h-auto lg:gap-2 lg:px-3.5 lg:py-2 xl:hidden ${className} ${
         expanded ? 'bg-[color-mix(in_oklab,var(--color-accent)_18%,var(--color-panel))] text-link ring-1 ring-accent/60 ring-inset' : 'text-ink hover:bg-raised'
       }`}
     >

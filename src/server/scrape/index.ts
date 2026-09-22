@@ -14,7 +14,7 @@ import Source from '../model/source';
 import { fetchJson } from '../util/fetchJson';
 import log from '../util/log';
 import { parseScrapedStocks, type ScrapedStock } from '@/lib/stocks';
-import { firstCategoryOf, parseCategories } from '@/lib/categories';
+import { parseCategories } from '@/lib/categories';
 import { parseTags } from '@/lib/tags';
 import { isStudioCategory, studioLocationByName } from '../studioLocation';
 import { awardsFor } from '../services/pinAwards';
@@ -23,7 +23,7 @@ import { sourceKind } from '@/lib/sourceKind';
 import { IN_PAGE_HEADINGS, IN_PAGE_META, IN_PAGE_SCRAPE, type InPageHeadings, type InPageResult, type PageMetadata } from './inPage';
 import { pageEntries, type PageEntry } from '@/lib/pageEntries';
 import { findPinImages, pageImage } from './findImages';
-import { findProductVideo, findScreenDetails, isScreenCategory, malIdOf, SCREEN_CATEGORIES, youtubeStill, type ScreenDetails } from './screen';
+import { findProductVideo, findScreenDetails, isScreenCategory, malIdOf, workCategory, youtubeStill, type ScreenDetails } from './screen';
 import { findScoreMarket, GAME_CATEGORIES, scoreSiteFor, withScoreMarket, type ScoreMarket } from './scoreMarkets';
 import { seriesPinFor } from './modelSeries';
 import { prequelPinFor } from './prequel';
@@ -317,10 +317,12 @@ async function webScrape(pageUrl: string): Promise<{
       const work = {
         workTitle: fields?.workTitle,
         pinTitle: fields?.title,
-        category: firstCategoryOf(fields?.categories, [...SCREEN_CATEGORIES, ...GAME_CATEGORIES]),
+        category: workCategory(fields?.categories, GAME_CATEGORIES),
         year: fields?.startDateTime ? new Date(fields.startDateTime).getUTCFullYear() : undefined,
         // A MyAnimeList page names the work by id; a title cannot always.
         malId: malIdOf([pageUrl]),
+        // The studio or licensor, so its own channel wins the trailer search.
+        company: fields?.company,
       };
       const [screen, scoreMarket] = await Promise.all([
         isScreenCategory(fields?.categories) ? findScreenDetails({ ...work, skipTrailer: hasVideo }) : undefined,
@@ -348,8 +350,11 @@ async function webScrape(pageUrl: string): Promise<{
       })
     : [];
   // tags: the extracted ones, for the form's tags field; the awards the
-  // pin's text names are tagged again on save (model/pinTag.ts).
-  const tags = parseTags(fields?.tags) ?? [];
+  // pin's text names are tagged again on save (model/pinTag.ts). What an
+  // anime was adapted from is a fact about the work rather than the page, so
+  // it comes from AniList rather than the extractor, and goes last so it
+  // never costs the page's own tags a place.
+  const tags = [...(parseTags(fields?.tags) ?? []), ...(screen?.adaptedFrom ? [screen.adaptedFrom] : [])];
   const respondTo = (await prequelPinFor(pin, pageUrl)) ?? (await seriesPinFor(pin));
   const entries = await readEntries(pageUrl, headings).catch((err) => {
     log.warn('reading entries failed:', (err as Error).message);

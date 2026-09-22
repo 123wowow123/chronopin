@@ -20,21 +20,32 @@
  */
 
 import { mediumID, siteUrl } from '@/lib/appConfig';
-import { categoryList, hasCategory } from '@/lib/categories';
+import { categoryList, firstCategoryOf, hasCategory } from '@/lib/categories';
 import type { EpisodeStatus, MediumJson, PinRatingJson } from '@/lib/types';
 import log from '../util/log';
 
-export const SCREEN_CATEGORIES = ['Anime', 'Anime Movie', 'Movies', 'TV Series'];
+export const SCREEN_CATEGORIES = ['Anime', 'Movie', 'TV'];
 
 // The ones released in episodes, so the only ones an episode count belongs to:
 // a film has none, and a title search that lands on the series of the same
 // name ("Supergirl", "Masters of the Universe") would otherwise give the film
 // pin the series' episodes.
-const EPISODIC_CATEGORIES = ['Anime', 'TV Series'];
+const EPISODIC_CATEGORIES = ['Anime', 'TV'];
 
 // One category or a pin's list of them.
 export function isScreenCategory(categories: string | readonly (string | null | undefined)[] | null | undefined): boolean {
   return hasCategory(categoryList(categories), SCREEN_CATEGORIES);
+}
+
+// The one category a lookup goes by, of the ones a pin carries: an anime film
+// is Anime and Movie both, and it is the film that says how the work is looked
+// up (no episodes, Rotten Tomatoes over a season), so Movie wins. `also` adds
+// the non-screen categories a caller looks up too, e.g. a game's.
+export function workCategory(
+  categories: string | readonly (string | null | undefined)[] | null | undefined,
+  also: readonly string[] = [],
+): string | undefined {
+  return firstCategoryOf(categories, ['Movie']) ?? firstCategoryOf(categories, [...SCREEN_CATEGORIES, ...also]);
 }
 
 export type ScreenQuery = {
@@ -51,6 +62,9 @@ export type ScreenQuery = {
   // The work's MyAnimeList id, when a link on the pin gives one: the episode
   // count is then looked up by id rather than by title.
   malId?: number;
+  // Who made or licensed the work, when the pin names one: the studio's own
+  // channel is what a trailer search should be picking out of its results.
+  company?: string | null;
 };
 
 export type ScreenEpisodes = { episodeCount: number; episodeStatus: EpisodeStatus };
@@ -62,6 +76,11 @@ export type ScreenDetails = {
   // How many episodes the matched work has, for a series or anime; absent for
   // a film and for anything whose count no source gives.
   episodes?: ScreenEpisodes;
+  // What the work was adapted from, as a tag ("Manga", "Light Novel",
+  // "Original"), from AniList's source field. Absent when AniList has no
+  // entry, says nothing, or says something that tags a pin with nothing
+  // worth searching (see adaptationTag).
+  adaptedFrom?: string;
 };
 
 const REQUEST_TIMEOUT_MS = 8000;
@@ -81,8 +100,20 @@ export async function findScreenDetails(query: ScreenQuery, budgetMs = DEFAULT_B
   const isAnime = query.category?.toLowerCase() === 'anime';
   // No category at all still counts as episodic: only a stated film is not.
   const isEpisodic = !query.category || hasCategory([query.category], EPISODIC_CATEGORIES);
-  // A cited MyAnimeList id names the work outright, so it is tried first.
-  if (isEpisodic && query.malId) details.episodes = await episodesByMalId(query.malId, signal).catch(() => undefined);
+  // A cited MyAnimeList id names the work outright, so it is settled first,
+  // in one request: the score, the episode count and what the work was adapted
+  // from, all without a title match. Before the title searches and not after,
+  // because a pin that cites an id is usually a pin whose title matches
+  // nothing - a season, an arc, a recap, a donghua - so those searches are
+  // going to fail *and* spend the budget. Pin 1241's by-id lookup used to run
+  // last and was aborted mid-flight after Wikidata had eaten its 60 seconds,
+  // leaving a pin with no score that AniList could answer for in one call.
+  const cited = query.malId ? await aniListByMalId(query.malId, signal).catch(() => undefined) : undefined;
+  // AniList knows nearly every MAL id, so Jikan is the fallback for a show it
+  // leaves open rather than for a missing entry.
+  if (isEpisodic && query.malId) {
+    details.episodes = cited?.episodes ?? (await findMyAnimeList(query.malId, signal).catch(() => undefined))?.episodes;
+  }
   let anime: AniListMatch | undefined;
   let wikidata: WikidataMatch | undefined;
 
@@ -102,6 +133,7 @@ export async function findScreenDetails(query: ScreenQuery, budgetMs = DEFAULT_B
     if (anime.averageScore != null) {
       details.ratings.push({ source: 'AniList', score: anime.averageScore, scoreMax: 100, url: anime.siteUrl });
     }
+    details.adaptedFrom = anime.source;
     const mal = anime.idMal ? await findMyAnimeList(anime.idMal, signal) : undefined;
     if (mal?.rating) details.ratings.push(mal.rating);
     // AniList first: its counts are the better kept-up ones, and Jikan often
@@ -109,12 +141,19 @@ export async function findScreenDetails(query: ScreenQuery, budgetMs = DEFAULT_B
     // whose total AniList leaves open).
     if (isEpisodic) details.episodes ??= anime.episodes ?? mal?.episodes ?? undefined;
   }
+  // What the cited id already answered, for the pins no title search could
+  // place: their score and their adaptation source come from it rather than
+  // from a match. Only when the title search found neither, so a work matched
+  // by name keeps the entry that was matched.
+  if (!details.ratings.some((r) => r.source === 'AniList') && cited?.averageScore != null) {
+    details.ratings.push({ source: 'AniList', score: cited.averageScore, scoreMax: 100, url: cited.siteUrl });
+  }
+  details.adaptedFrom ??= cited?.source;
+  if (isEpisodic) details.episodes ??= cited?.episodes;
   // AniList does not list every work MyAnimeList does - doujin productions
   // above all ("Gensou Mangekyou", which 404s there by id and by title), so
   // without this a pin citing its own MyAnimeList page gets no score at all
-  // when AniList has no entry to match. A cited id names the work outright,
-  // the way it already does for the episode count, so no title match is
-  // needed for it.
+  // when AniList has no entry to match.
   if (query.malId && !details.ratings.some((r) => r.source === 'MyAnimeList')) {
     const cited = await findMyAnimeList(query.malId, signal).catch(() => undefined);
     if (cited?.rating) details.ratings.push(cited.rating);
@@ -214,11 +253,40 @@ const A_GAME_VIDEO = /\b(?:gameplay|game)\b/;
 const NOT_A_TRAILER = (title: string) => COMMENTARY.test(title) || A_GAME_VIDEO.test(title);
 const ROMAN_OR_NUMBER = /^(?:\d+|i|ii|iii|iv|v|vi|vii|viii|ix|x)$/;
 
+// The generic words a channel that carries everybody's trailers is named out
+// of. Whoever actually made the work is named after itself instead - "TOHO
+// animation", "Crunchyroll", "Muse Asia", "ONE PIECE Official" - so a channel
+// name built from nothing but these is a re-upload feed. Written without word
+// boundaries because the names run together ("AnimeSelect").
+const CHANNEL_FILLER =
+  /(?:anime|animation|cartoons?|movies?|films?|cinemas?|trailers?|teasers?|clips?|videos?|tv|hd|4k|world|select|selection|hub|zone|central|daily|network|media|channel|studios?|official|best|top|new|all|fan|fans|otaku|plus|and|the|of)/;
+const AGGREGATOR_CHANNEL = new RegExp(`^(?:${CHANNEL_FILLER.source} ?)+$`);
+// Enough to beat the whole rank spread below, so who published a video
+// outranks where YouTube put it: an aggregator's upload is verified too, and
+// took the pick twice in one day (AnimeSelect, Anime World) from the studio
+// channel a few results further down.
+const OWN_CHANNEL = 3;
+
+// +3 for the work's own, its studio's or its licensor's channel, -3 for an
+// aggregator, 0 for a channel this cannot tell apart. The aggregator test
+// comes first because a filler word is sometimes the work's as well ("World
+// Trigger" against "Anime World"), and the channel is an aggregator either
+// way.
+function channelScore(channel: string | undefined, workWords: string[], company?: string | null): number {
+  const name = normalizeTitle(channel ?? '', { keepThe: true });
+  if (!name) return 0;
+  if (AGGREGATOR_CHANNEL.test(name)) return -OWN_CHANNEL;
+  const firm = company ? normalizeTitle(company, { keepThe: true }).split(' ')[0] : '';
+  const names = workWords.some((w) => w.length > 2 && name.includes(w)) || (firm.length > 2 && name.includes(firm));
+  return names ? OWN_CHANNEL : 0;
+}
+
 // The search result most likely to be the work's own trailer, if any is.
-export function pickTrailer(candidates: VideoCandidate[], workTitle: string): VideoCandidate | undefined {
+export function pickTrailer(candidates: VideoCandidate[], workTitle: string, company?: string | null): VideoCandidate | undefined {
   // "The One Piece" is not "One Piece", whatever the rating sites allow.
   const work = normalizeTitle(workTitle, { keepThe: true });
   const workSeason = seasonOf(work);
+  const workWords = distinctiveWords(workTitle);
   let best: { candidate: VideoCandidate; score: number } | undefined;
 
   candidates.forEach((candidate, rank) => {
@@ -238,7 +306,11 @@ export function pickTrailer(candidates: VideoCandidate[], workTitle: string): Vi
 
     // Unverified channels are mostly re-uploads, which get taken down.
     if (!candidate.verified) return;
-    const score = (/\bofficial\b/.test(title) ? 2 : 0) + (/\btrailer\b/.test(title) ? 1 : 0) - rank * 0.25;
+    const score =
+      (/\bofficial\b/.test(title) ? 2 : 0)
+      + (/\btrailer\b/.test(title) ? 1 : 0)
+      + channelScore(candidate.channel, workWords, company)
+      - rank * 0.25;
     if (!best || score > best.score) best = { candidate, score };
   });
   return best?.candidate;
@@ -353,7 +425,7 @@ async function findTrailer(workTitle: string, query: ScreenQuery, signal: AbortS
   // The year tells a reboot's trailer from the original's.
   const withYear = query.year && query.category?.toLowerCase() !== 'anime' ? ` ${query.year}` : '';
   const candidates = await searchYouTube(`${workTitle} official trailer${withYear}`, signal);
-  const picked = pickTrailer(candidates, workTitle);
+  const picked = pickTrailer(candidates, workTitle, query.company);
   return picked ? youtubeEmbed(picked.videoId, signal, picked.title) : undefined;
 }
 
@@ -416,7 +488,7 @@ export function youtubeStill(embedUrl: string): MediumJson | undefined {
 
 /* AniList and MyAnimeList */
 
-type AniListMatch = { averageScore?: number; siteUrl?: string; idMal?: number; trailerId?: string; episodes?: ScreenEpisodes };
+type AniListMatch = { averageScore?: number; siteUrl?: string; idMal?: number; trailerId?: string; episodes?: ScreenEpisodes; source?: string };
 
 const ANILIST_QUERY = `query ($search: String) {
   Page(perPage: 10) {
@@ -431,6 +503,7 @@ const ANILIST_QUERY = `query ($search: String) {
       averageScore
       siteUrl
       idMal
+      source
       trailer { id site }
     }
   }
@@ -451,7 +524,40 @@ async function findAniList(title: string, year: number | undefined, signal: Abor
     idMal: match.idMal ?? undefined,
     trailerId: match.trailer?.site === 'youtube' ? match.trailer.id : undefined,
     episodes: aniListEpisodes(match),
+    source: adaptationTag(match.source),
   };
+}
+
+// AniList's `source` as a tag a reader would search: what the anime was made
+// out of. The enum carries three values worth no tag - ANIME (an anime made
+// from an anime says nothing a pin does not already say), OTHER (which is the
+// category this project never files anything under) and a value added to the
+// enum since - so those are left off rather than guessed at.
+//
+// Each name carries "Adaptation" rather than standing as the bare medium,
+// because `Manga` is a category name (src/lib/categories.ts) and `tagKind`
+// files any tag by that name as a category: the bare tag was dropped on save,
+// silently, for the commonest source of the lot. Naming the whole family the
+// same way keeps the cloud consistent and leaves the `Manga` category meaning
+// a pin about manga rather than the several hundred anime made from one.
+const ADAPTATION_TAGS: Record<string, string> = {
+  ORIGINAL: 'Original Work',
+  MANGA: 'Manga Adaptation',
+  LIGHT_NOVEL: 'Light Novel Adaptation',
+  VISUAL_NOVEL: 'Visual Novel Adaptation',
+  NOVEL: 'Novel Adaptation',
+  WEB_NOVEL: 'Web Novel Adaptation',
+  VIDEO_GAME: 'Game Adaptation',
+  GAME: 'Game Adaptation',
+  DOUJINSHI: 'Doujinshi Adaptation',
+  COMIC: 'Comic Adaptation',
+  LIVE_ACTION: 'Live Action Adaptation',
+  PICTURE_BOOK: 'Picture Book Adaptation',
+  MULTIMEDIA_PROJECT: 'Multimedia Adaptation',
+};
+
+export function adaptationTag(source: unknown): string | undefined {
+  return typeof source === 'string' ? ADAPTATION_TAGS[source.toUpperCase()] : undefined;
 }
 
 // AniList's count for an entry: its announced total (still "planned" while the
@@ -474,22 +580,6 @@ export function aniListEpisodes(media: {
   return undefined;
 }
 
-// The episode count of the work with this MyAnimeList id, for a pin that
-// cites MAL (most anime pins do). An id beats the title search: it tells a
-// season from its show and a remake from the original, which "Premieres"
-// wording in a pin title often does not.
-export async function episodesByMalId(idMal: number, budget?: AbortSignal): Promise<ScreenEpisodes | undefined> {
-  const signal = budget ?? AbortSignal.timeout(20000);
-  const res = await getJson<any>('https://graphql.anilist.co', signal, {}, { query: ANILIST_BY_MAL_QUERY, variables: { idMal } });
-  const media = res?.data?.Media;
-  const episodes = media ? aniListEpisodes(media) : undefined;
-  if (episodes) return episodes;
-  // AniList knows every MAL id, so this is the fallback for a show it leaves
-  // open rather than for a missing entry.
-  const mal = await findMyAnimeList(idMal, signal);
-  return mal?.episodes;
-}
-
 // The MyAnimeList id a pin's links carry, from the first myanimelist.net
 // link among them.
 export function malIdOf(urls: (string | null | undefined)[]): number | undefined {
@@ -506,8 +596,31 @@ const ANILIST_BY_MAL_QUERY = `query ($idMal: Int) {
     status
     episodes
     nextAiringEpisode { episode }
+    averageScore
+    siteUrl
+    source
   }
 }`;
+
+// AniList's entry for a MyAnimeList id: the score, the link, what the work was
+// adapted from and how many episodes it has, with **no title match involved**.
+// This is the route for a pin whose title no catalogue search can find - a
+// Chinese donghua ("Tunshi Xingkong 4th Season"), an arc or a recap film - and
+// it is the only one left when Jikan is down, which it routinely is (1,036
+// 504s in one 943-pin run). AniList carries most MAL ids but not all, so an
+// empty answer is an absent entry rather than an error.
+async function aniListByMalId(idMal: number, signal: AbortSignal): Promise<AniListMatch | undefined> {
+  const res = await getJson<any>('https://graphql.anilist.co', signal, {}, { query: ANILIST_BY_MAL_QUERY, variables: { idMal } });
+  const media = res?.data?.Media;
+  if (!media) return undefined;
+  return {
+    averageScore: media.averageScore ?? undefined,
+    siteUrl: media.siteUrl,
+    idMal,
+    episodes: aniListEpisodes(media),
+    source: adaptationTag(media.source),
+  };
+}
 
 async function findMyAnimeList(idMal: number, signal: AbortSignal): Promise<{ rating?: PinRatingJson; episodes?: ScreenEpisodes } | undefined> {
   const res = await getJson<any>(`https://api.jikan.moe/v4/anime/${idMal}`, signal);

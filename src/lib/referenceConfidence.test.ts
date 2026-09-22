@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { HALF_LIFE_DAYS, pinConfidence, pinEvidence, SOURCE_CONFIDENCE, weighReferences } from './referenceConfidence';
+import { CONFIDENCE_BARS, confidenceBand, HALF_LIFE_DAYS, isConfidenceBand, pinConfidence, pinEvidence, SOURCE_CONFIDENCE, weighReferences } from './referenceConfidence';
 
 describe('pinConfidence', () => {
   it('is undefined without scored references', () => {
@@ -60,5 +60,24 @@ describe('pinEvidence', () => {
   it('marks a reference that repeats the source as the source, first', () => {
     const evidence = pinEvidence({ ...pin, references: [{ url: 'https://r.com', confidence: 40 }, { url: 'https://src.com/a', confidence: 10 }] });
     expect(evidence).toEqual([{ url: 'https://src.com/a', confidence: 10, isSource: true }, { url: 'https://r.com', confidence: 40 }]);
+  });
+});
+
+describe('confidenceBand', () => {
+  it('bands a score at the bars the badge changes colour at', () => {
+    expect([0, 49, 50, 74, 75, 100].map((score) => confidenceBand(score))).toEqual(['low', 'low', 'medium', 'medium', 'high', 'high']);
+    // The bars SQL buckets a score at, in the bands' own order.
+    expect(CONFIDENCE_BARS).toEqual([50, 75]);
+  });
+
+  it('leaves an unscored pin in no band', () => {
+    expect(confidenceBand(undefined)).toBeUndefined();
+    expect(confidenceBand(null)).toBeUndefined();
+    expect(confidenceBand(Number.NaN)).toBeUndefined();
+  });
+
+  it("tells a band from a source's own rating", () => {
+    expect(isConfidenceBand('medium')).toBe(true);
+    expect(isConfidenceBand('estimated')).toBe(false);
   });
 });

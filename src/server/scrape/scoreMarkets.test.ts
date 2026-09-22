@@ -86,9 +86,9 @@ describe('withScoreMarket', () => {
 
 describe('scoreSiteFor', () => {
   it('bets Rotten Tomatoes on screen categories and Metacritic on games', () => {
-    expect(scoreSiteFor('Movies')).toBe('Rotten Tomatoes');
-    expect(scoreSiteFor('tv series')).toBe('Rotten Tomatoes');
-    expect(scoreSiteFor('Gaming & Entertainment')).toBe('Metacritic');
+    expect(scoreSiteFor('Movie')).toBe('Rotten Tomatoes');
+    expect(scoreSiteFor('tv')).toBe('Rotten Tomatoes');
+    expect(scoreSiteFor('Gaming')).toBe('Metacritic');
     expect(scoreSiteFor('Sports')).toBeUndefined();
   });
 });

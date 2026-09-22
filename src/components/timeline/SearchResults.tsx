@@ -256,13 +256,26 @@ export function SearchResults({
   const showsToday = crossesToday && (!searchedDays.length || searchedDays.includes(todayKey));
   const marker = showsToday ? resolveTodayMarker(bags, todayKey) : NO_TODAY_MARKER;
 
-  const scrollToToday = () => {
-    const id = todayScrollId(bags, marker);
+  const scrollTo = (id: string | null) => {
     if (id) document.getElementById(id)?.scrollIntoView({ block: 'start' });
   };
-  // Opening and the Today button both hold today in place while the cards
-  // above it finish growing.
-  const holdToday = useTodayHold(scrollToToday);
+  // Where now falls among the results: today itself where they reach it, and
+  // otherwise the day nearest it - the first one still to come, or the last
+  // one behind us. Results on one side of today (a finished tour, a past
+  // award) and searches pinned to other days (date:) have no today to show,
+  // but the reader still asked to be taken back to now.
+  const nowScrollId = () => {
+    const id = todayScrollId(bags, marker);
+    if (id || !bags.length) return id;
+    const ahead = bags.findIndex((bag) => daysBetween(todayKey, bag.day) > 0);
+    return `day-${(ahead === -1 ? bags[bags.length - 1] : bags[ahead]).day}`;
+  };
+  // Opening holds today in place while the cards above it finish growing, and
+  // stands aside where the results never reach today: those open at the first
+  // of them, as they always have.
+  const holdToday = useTodayHold(() => scrollTo(todayScrollId(bags, marker)));
+  // The Today button holds the same way, with somewhere to go either way.
+  const holdNow = useTodayHold(() => scrollTo(nowScrollId()));
 
   // Back from logging in: the card the reader left, paged toward while the
   // results stay hidden, then put back as far down the window as it was and
@@ -413,7 +426,7 @@ export function SearchResults({
           summaryCaption={searchedUser || searchedCompany ? undefined : t('controls.postedWithin')}
           summary={searchedUser ? searchedUser.userName : searchedCompany ? searchedCompany.name : spanLabel(postedWithin, t.locale)}
           summaryIsPostedWithin={!searchedUser && !searchedCompany}
-          onToday={sortBy === 'date' && bags.length && showsToday ? holdToday : undefined}
+          onToday={sortBy === 'date' && bags.length ? holdNow : undefined}
           sort={canSort ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : undefined}
           tags={{
             summary: tagPillSummary(query, t.locale),

@@ -18,7 +18,7 @@ import log from './util/log';
 
 // The pins placed at their studio: what they are is made somewhere, but
 // happens nowhere in particular.
-export const STUDIO_CATEGORIES = ['Anime', 'Anime Movie', 'Movies', 'TV Series', 'Gaming & Entertainment'];
+export const STUDIO_CATEGORIES = ['Anime', 'Movie', 'TV', 'Gaming'];
 
 // One category or a pin's list of them.
 export const isStudioCategory = (categories: string | readonly (string | null | undefined)[] | null | undefined) =>

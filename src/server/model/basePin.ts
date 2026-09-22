@@ -112,6 +112,12 @@ export default class BasePin {
     // stored - and, like the ratings, an edit cannot wipe them.
     this.place =
       pin.place && (pin.place.googlePlaceId || pin.place.yelpBusinessId || pin.place.reservationUrl) ? pin.place : null;
+    // Also read-only, from the view (PinSeries, 0062): which public data
+    // series this pin's event moves. Handles only, like the place - the
+    // numbers come from the publisher on view (src/server/eiaSeries.ts) - so
+    // the page knows whether to ask before it asks, and an edit cannot wipe
+    // them.
+    this.series = Array.isArray(pin.series) ? pin.series : [];
     return this;
   }
 

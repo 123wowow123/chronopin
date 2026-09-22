@@ -68,11 +68,51 @@ already been cleaned.
 [screen.ts](../../../src/server/scrape/screen.ts) and [scoreMarkets.ts](../../../src/server/scrape/scoreMarkets.ts), all keyless:
 
 - **Trailer:** YouTube's own search results page (an AniList entry's listed trailer first for anime), checked through oEmbed, which also refuses videos whose owner turned embedding off. A page that already embeds a video keeps that one. Read the dry run of `media:screen` before applying: a trailer is picked by title and can be a fan upload, an episode, or a different adaptation with the same name (the 1999 One Piece anime versus the live-action series).
+- **Who published it beats where YouTube put it.** Only verified channels are considered, but an aggregator is verified too, and on title and rank alone AnimeSelect and Anime World beat the studio's own channel twice in one day. `pickTrailer` now scores the channel as well: **+3** for a channel whose name carries a distinctive word of the work, or the pin's company (the studio or licensor - "TOHO animation" for a Madhouse or Production I.G title, "Crunchyroll Collection", "ONE PIECE Official"), **-3** for a name built only from generic words, which is enough to outweigh the whole rank spread. It demotes rather than drops, so a work whose only verified upload is an aggregator's still gets a trailer. The generic test runs **first**: a filler word is sometimes the work's own name too ("World Trigger" against "Anime World"), and the channel is an aggregator either way.
+- **Gap - a company's own launch video may not be badged verified.** `pickProductVideo` returns early on `!candidate.verified`, and YouTube's search page carried no verified badge for Anthropic's own `@anthropic-ai` upload of "Introducing Claude Fable 5.1" - the top result for the query. The channel scoring above cannot rescue it, because the verified gate runs first. Until a channel matching the pin's company counts as verified enough, a company launch video is a hand pick (pin 2693 took one).
+- **Adaptation source:** AniList's `source` becomes a tag on the pin (`Manga Adaptation`, `Light Novel Adaptation`, `Original Work`, `Game Adaptation`, ...) through `adaptationTag`. `ANIME` and `OTHER` map to no tag. The `Adaptation`/`Work` suffix is not decoration: a bare `Manga` is a **category** name, so `tagKind` files it as one and `replace` drops it from a tag write without a word - the family is named so no member can collide, and a test asserts it. `media:screen` backfills it with `PinTag.addUserTags`, which appends rather than replacing, so a curator's own tags survive.
 - **Ratings:** AniList; MyAnimeList through Jikan by the MAL id AniList gives; Wikidata's review-score statements for IMDb, Rotten Tomatoes and Metacritic (imdb.com itself blocks scripts). A work counts as found only when a title matches exactly after normalising case, punctuation and "2nd Season"/"Season 2", and its year fits the pin's.
-- **Episode counts by id:** a pin that cites MyAnimeList (most anime pins do) is looked up by that id first - AniList's `Media(idMal:)`, then Jikan - because a pin titled "Gintama Season 2 Premieres" matches no catalogue title but its MAL link names the work outright. `malIdOf` reads the id from the source URL and the references; a MAL page scrape passes its own URL.
-- **Episode counts:** how many episodes an episodic work has, for a pin whose category is `Anime` or `TV Series` (never `Movies` or `Anime Movie`: Wikidata's title search happily answers "Supergirl" or "Masters of the Universe" with the series of the same name, which would give the film pin its episodes). AniList first (`episodes` with `status`, else `nextAiringEpisode.episode - 1` for a long-running show with no announced total), then MyAnimeList through Jikan, then Wikidata `P1113`, where an end time (`P582`) is what makes a count `complete`. The page's own count wins over all three: the article knows which season the pin is about. A count of one is no count.
+- **By the cited id, first:** a pin that cites MyAnimeList (most anime pins do) is looked up by that id **before any title search** - one AniList call that settles the score, the episode count and the adaptation source without a title match. It has to come first, not last: `findScreenDetails` shares one 60-second budget across every call a pin makes, and a pin citing an id is usually one whose title matches nothing, so the title searches both fail and spend the budget before the decisive request runs. It is AniList's `Media(idMal:)`, with Jikan the fallback only for a show AniList leaves open, and it is what saves a pin titled "Gintama Season 2 Premieres", which matches no catalogue title while its MAL link names the work outright. `malIdOf` reads the id from the source URL and the references; a MAL page scrape passes its own URL.
+- **Episode counts:** how many episodes an episodic work has, for a pin whose category is `Anime` or `TV` and not also `Movie` - an anime film carries `Anime` and `Movie` both, and `Movie` is what a lookup goes by (never a film: Wikidata's title search happily answers "Supergirl" or "Masters of the Universe" with the series of the same name, which would give the film pin its episodes). AniList first (`episodes` with `status`, else `nextAiringEpisode.episode - 1` for a long-running show with no announced total), then MyAnimeList through Jikan, then Wikidata `P1113`, where an end time (`P582`) is what makes a count `complete`. The page's own count wins over all three: the article knows which season the pin is about. A count of one is no count.
 - **Kalshi score forecast:** KXRT (Rotten Tomatoes) and KXMC (Metacritic) events. While open it prices P(score > N) into a market-implied "Kalshi RT forecast", kept as its own rating, never averaged with the site's. Once settled, the event's `expiration_value` is the site's actual score.
-- **Backfill:** `npm run media:screen` (dry run by default, `--apply`, `--ids`, `--skip-trailer`, where `--skip-trailer all` looks up nothing but ratings and episode counts). A pin that already has an episode count keeps it.
+- **Backfill:** `npm run media:screen` (dry run by default, `--apply`, `--ids`, `--skip-trailer`, where `--skip-trailer all` looks up nothing but ratings, episode counts and adaptation tags). A pin that already has an episode count keeps it. Ratings are insert-or-refresh, so the run is free to repeat. **A rating-less pin has failed the title match, and Jikan then fails to rescue it.** Both have to go wrong: `findAniList` needs an exact title match (a Chinese donghua, an arc, a recap film matches nothing), and the cited-MAL-id fallback went through Jikan, which 504s constantly - 1,036 times in one 943-pin run. `aniListByMalId` now closes that: AniList answers **by MAL id** for the score, the link and the adaptation source with no title match at all, and it is up when Jikan is not.
+
+# What the timeline's pick weighs
+
+A crowded day shows two rows and keeps the rest behind "View all", so which
+cards those are is a weighted random pick ([bagSample.ts](../../../src/lib/bagSample.ts)).
+Four things multiply into a pin's weight, and a scrape can move three of them:
+
+1. **What the card earns.** Opens and watches over times seen on the timeline,
+   with a prior so a new pin starts level with a well-liked one.
+2. **The money on the markets it cites** (`Pin.marketVolume`, above): from
+   x1 at $10,000 to x2.5 at $10M and up.
+3. **How well its own sources back it** - `pinConfidence` over its references,
+   the same number the card's badge shows. The home timeline already hides
+   anything under `TIMELINE_MIN_CONFIDENCE` (**70**), so the curve is drawn
+   across the band a reader sees: **70 counts for x1, 100 for x1.6**, and
+   below 70 it keeps falling on the same slope to a floor of x0.5 rather than
+   off a cliff - a thinly sourced pin should be rarer on a crowded day, not
+   absent from it. **An unscored pin weighs x1**, neither helped nor buried,
+   which is the rule the confidence filter already keeps.
+4. **How well its thread is sourced** - `threadConfidence`, the mean
+   confidence of the *other* pins in its chain, on the same curve at a third
+   of the strength: a perfect thread is worth **x1.2**. A chain corroborates a
+   pin without being its own evidence, so it nudges rather than decides, and
+   the pin's own confidence is left out of it because that is already counted.
+
+So the practical effect for a scrape: **a pin's references decide how often it
+is the card a busy day shows**, and a pin posted into a well-referenced chain
+inherits some of that chain's standing. It is a sampling weight, never a
+filter - nothing is hidden by it.
+
+`threadConfidence` is the one of the four the client cannot work out for
+itself, because the rest of a thread is rarely on the same page. The timeline
+query sends it (`threadConfidenceOf` in [pins.ts](../../../src/server/model/pins.ts)),
+seeded by the page's own ids so the cost follows the page and not the corpus -
+a recursive walk both ways over `IX_Pin_parentId`, under 5ms for a page of 40
+across the longest chains here. Search and the thread view do not get it: they
+show every match rather than picking among them.
 
 # Market volume
 
@@ -93,6 +133,28 @@ For a film, TV series, anime or game with no place from the page, the pin goes o
 
 `awardsFor` matches the work's title against the award bodies' own pages (anime bodies today; film and TV bodies are not in yet) and the save stores them as `PinAward` and award tags. Tags from the extractor are the user's-view tags (awards first, then franchises, people, programmes, places, at most 8); categories are tags of kind `category`, several per pin. `npm run tags:sync` refreshes the derived ones.
 
+
+# Live data series
+
+A pin whose event moves a published series carries that series, so the pin page
+draws the publisher's own chart beside the story with the pin's week marked -
+the SPR pins show the reserve's stock level falling away from the week each
+drawdown was ordered.
+
+**Only the handle is stored.** `PinSeries` (0062) holds the publisher and its
+series id; the numbers come from the publisher when someone opens the pin, with
+an hour's cache ([eiaSeries.ts](../../../src/server/eiaSeries.ts),
+`GET /api/pins/:id/series`). That is the same rule as the place's review scores
+and the market odds: a value copied into the database is a stale claim about
+the world within a week, and the point of a live chart is that it is live.
+
+| | |
+| --- | --- |
+| **Attach** | `npm run series:attach -- --tag SPR --series WCSSTUS1` (or `--id`), `--remove` to take one off, `--dry-run` to look first |
+| **Check** | the script asks the publisher for the series before saving, so a pin never points at a series that would draw an empty chart |
+| **Publishers** | `eia` today - the US Energy Information Administration's weekly petroleum series, read off its own `LeafHandler` page ([Sources](sources.md)) |
+| **Seed** | `scripts/backup/seedSeries.json`, written by `npm run backup:data`; without it a `db:refresh` leaves the pins with no chart |
+| **Window** | three years before the pin's date to two years after (or today), so the step the event made is readable; the full history is one click away on the publisher's page |
 # Threads
 
 - **Anime seasons** ([prequel.ts](../../../src/server/scrape/prequel.ts)): each season responds to the one before it, found by MyAnimeList id and AniList's prequels, walking back until a pinned one is found. Pinning a missing season later re-slots the seasons after it. One linear, story-ordered chain: never branch (the thread view only follows ancestors and descendants); if a branch is needed, ask instead of creating the pin.
