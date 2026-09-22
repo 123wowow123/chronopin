@@ -27,8 +27,11 @@ export function LoginForm() {
     try {
       await api.post('/auth/local', { email, password });
       // A full load: being signed in changes what every page shows, and the
-      // router may still remember the redirect that sent us here.
-      window.location.assign(localize(afterLoginPath(params.get('redirect'))));
+      // router may still remember the redirect that sent us here. It replaces
+      // this page rather than stacking on it, so Back goes to wherever the
+      // login link was clicked and not to a login form for the session the
+      // person is already in.
+      window.location.replace(localize(afterLoginPath(params.get('redirect'))));
     } catch (err) {
       const code = err instanceof ApiError ? (err.body as { code?: string } | undefined)?.code : undefined;
       setError(code === 'emailNotRegistered' ? t('account.emailNotRegistered') : code === 'wrongPassword' ? t('account.wrongPassword') : t('common.somethingWrong'));
@@ -63,7 +66,9 @@ export function LoginForm() {
       <p className="pt-2 text-center text-sm text-subtle">
         {t.rich('account.newTo', {
           link: (chunks) => (
-            <Link href={authHref('/signup', params.get('redirect'))} className="underline decoration-link/40 underline-offset-2 hover:decoration-link">
+            // replace: the sign-up page stands in this one's place, so
+            // signing up there does not leave a login form one Back away.
+            <Link href={authHref('/signup', params.get('redirect'))} replace className="underline decoration-link/40 underline-offset-2 hover:decoration-link">
               {chunks}
             </Link>
           ),

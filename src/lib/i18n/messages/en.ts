@@ -508,6 +508,8 @@ const en = {
     postedWithin: 'Posted within',
     within: 'Distance within',
     filters: 'Filters',
+    filter: 'Filter',
+    summary: '{caption}: {value}',
   },
   tagCloud: {
     tagsSummary: 'Tags: {summary}',
@@ -544,7 +546,6 @@ const en = {
     past: 'Past',
     future: 'Future',
     set: 'Set',
-    useDefault: 'Use your default ({span})',
     anyTime: 'Show pins posted at any time',
     allPast: 'Show all past pins',
     typeExact: 'Type exact values',

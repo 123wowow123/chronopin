@@ -125,7 +125,6 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
         initialPostedWithin={postedWithin}
         initialWithin={first(params.within) ?? null}
         defaultPostedWithin={defaultPostedWithin}
-        defaultSpan={preference || '1d'}
         initialSpecialtyDays={days}
         serverNow={new Date().toISOString()}
         minConfidence={page.minConfidence}

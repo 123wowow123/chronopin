@@ -513,6 +513,8 @@ const de: Messages = {
     postedWithin: 'Gepostet in den letzten',
     within: 'Entfernung bis',
     filters: 'Filter',
+    filter: 'Filter',
+    summary: '{caption}: {value}',
   },
   tagCloud: {
     tagsSummary: 'Tags: {summary}',
@@ -549,7 +551,6 @@ const de: Messages = {
     past: 'Vergangenheit',
     future: 'Zukunft',
     set: 'Übernehmen',
-    useDefault: 'Deinen Standard verwenden ({span})',
     anyTime: 'Pins von jedem Zeitpunkt anzeigen',
     allPast: 'Alle vergangenen Pins anzeigen',
     typeExact: 'Genaue Werte eingeben',

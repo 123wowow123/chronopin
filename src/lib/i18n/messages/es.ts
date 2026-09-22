@@ -513,6 +513,8 @@ const es: Messages = {
     postedWithin: 'Publicado en',
     within: 'Distancia hasta',
     filters: 'Filtros',
+    filter: 'Filtro',
+    summary: '{caption}: {value}',
   },
   tagCloud: {
     tagsSummary: 'Etiquetas: {summary}',
@@ -549,7 +551,6 @@ const es: Messages = {
     past: 'Pasado',
     future: 'Futuro',
     set: 'Aplicar',
-    useDefault: 'Usar tu predeterminado ({span})',
     anyTime: 'Ver pines publicados en cualquier momento',
     allPast: 'Ver todos los pines pasados',
     typeExact: 'Escribir valores exactos',

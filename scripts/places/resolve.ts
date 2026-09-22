@@ -72,7 +72,26 @@ export function searchName(pin: Pick<Candidate, 'title' | 'company'>): string {
   )[0];
   const name = cut.replace(/[,:–—-]\s*$/, '').trim();
   // A cut that ate the whole title found no verb, so it is not a name.
-  return name && name.toLowerCase() !== pin.title.toLowerCase() ? name : pin.company || name;
+  const fromTitle = name && name.toLowerCase() !== pin.title.toLowerCase() ? name : '';
+  const company = (pin.company || '').trim();
+  if (!company) {
+    return fromTitle || name;
+  }
+  // Which of the two names the venue actually is, decided by whether the
+  // company appears **in the title**:
+  //
+  //   "Wolfgang Puck Opens the First Spago..."  company "Spago" IS in the
+  //     title, so the company is the venue and the title merely opens with the
+  //     chef. Cutting at the verb gave "Wolfgang Puck", which resolved to CUT
+  //     Beverly Hills - another of his restaurants.
+  //   "Mikiya Wagyu Shabu House Opens on Convoy Street"  company "Chubby
+  //     Group" is NOT in the title, so the company is the operator and the
+  //     title holds the venue.
+  //
+  // Checking agreement between the two names instead looks equivalent and is
+  // not: it sends the Mikiya case back to the holding company.
+  const inTitle = new RegExp(`\\b${company.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i').test(pin.title);
+  return inTitle || !fromTitle ? company : fromTitle;
 }
 
 // Google's match for this pin: through the Places API when a key is set,

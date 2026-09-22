@@ -507,6 +507,8 @@ const zh: Messages = {
     postedWithin: '发布时间',
     within: '距离范围',
     filters: '筛选',
+    filter: '筛选',
+    summary: '{caption}：{value}',
   },
   tagCloud: {
     tagsSummary: '标签：{summary}',
@@ -543,7 +545,6 @@ const zh: Messages = {
     past: '过去',
     future: '未来',
     set: '设置',
-    useDefault: '使用你的默认值（{span}）',
     anyTime: '显示任意时间发布的图钉',
     allPast: '显示所有过去的图钉',
     typeExact: '输入精确值',

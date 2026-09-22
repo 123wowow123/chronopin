@@ -63,6 +63,9 @@ const POPUP_WIDTH = 200;
 // Wider than a pin's: a web line's popup sets a picture beside each title.
 const WEB_POPUP_WIDTH = 260;
 
+// Where the map has room beside the pins for the web's toggle and graph (xl).
+const WIDE = '(width >= 80rem)';
+
 // A pin's popup: its picture (an image's thumb or a video's still) edge to
 // edge over its title and address. Its content is built on open, so the map
 // does not fetch every pin's picture up front. A standalone popup ignores the
@@ -286,14 +289,30 @@ export default function PinsMap() {
     posted: spanToParam(postedWithin, DEFAULT_POSTED_WITHIN),
   });
   // The web of relations between the plotted pins: lines over the map, or
-  // those and a graph of them beside it.
-  const [web, setWeb] = useState<WebMode>(() => webModeFromParam(params.get('web')));
+  // those and a graph of them beside it. Only from xl up: narrower, its
+  // toggle, legend and graph would cover the map they are drawn over, so the
+  // web is not offered at all - and a ?web= link opened on a phone lands on a
+  // plain map rather than on lines nothing can turn off. This component only
+  // ever renders in the browser (MapLoader loads it with ssr: false), so the
+  // width is known from the first render.
+  const [wide, setWide] = useState(() => window.matchMedia(WIDE).matches);
+  const [web, setWeb] = useState<WebMode>(() => (window.matchMedia(WIDE).matches ? webModeFromParam(params.get('web')) : 'off'));
   const [webEdges, setWebEdges] = useState<WebEdge[]>([]);
   const [webNodes, setWebNodes] = useState<{ id: number; title: string }[]>([]);
   const [webPicked, setWebPicked] = useState<number | undefined>();
   const webLayerRef = useRef<L.LayerGroup | null>(null);
   const fromLayerRef = useRef<L.LayerGroup | null>(null);
   useQueryState({ web: web === 'off' ? null : web });
+  // Turned to a phone's width (a rotated tablet), the web goes with its toggle.
+  useEffect(() => {
+    const query = window.matchMedia(WIDE);
+    const resized = () => {
+      setWide(query.matches);
+      if (!query.matches) setWeb('off');
+    };
+    query.addEventListener('change', resized);
+    return () => query.removeEventListener('change', resized);
+  }, []);
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   const [count, setCount] = useState(0);
   // Markers per category in the time window, for the category pills.
@@ -661,30 +680,31 @@ export default function PinsMap() {
           <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={(value) => setPostedWithin(value.past)} />
         </FloatingControls>
       </div>
-      {/* The web toggle, with the graph above it when it is on. Clear of the
-          pills at the bottom on narrow screens, as the status messages are. */}
-      <div className="absolute bottom-24 left-2.5 z-[999] flex w-[min(26rem,calc(100%-1.25rem))] flex-col items-start gap-2 xl:bottom-8">
-        {web === 'graph' ? (
-          <div className="floating h-72 w-full overflow-hidden">
-            <PinWebGraph nodes={webNodes} edges={webEdges} selectedId={webPicked} onSelect={showPin} />
+      {/* The web toggle, with the graph above it when it is on. */}
+      {wide ? (
+        <div className="absolute bottom-8 left-2.5 z-[999] flex w-[min(26rem,calc(100%-1.25rem))] flex-col items-start gap-2">
+          {web === 'graph' ? (
+            <div className="floating h-72 w-full overflow-hidden">
+              <PinWebGraph nodes={webNodes} edges={webEdges} selectedId={webPicked} onSelect={showPin} />
+            </div>
+          ) : null}
+          {web !== 'off' ? <WebLegend /> : null}
+          <div className="floating flex items-center gap-1 rounded-full p-1 text-sm">
+            <Icon name="web" className="ml-2 size-4 text-muted" />
+            {(['off', 'lines', 'graph'] as const).map((mode) => (
+              <button
+                key={mode}
+                type="button"
+                aria-pressed={web === mode}
+                onClick={() => setWeb(web === mode ? 'off' : mode)}
+                className={`rounded-full px-2.5 py-1 ${web === mode ? 'bg-accent text-white' : 'text-muted hover:text-ink'}`}
+              >
+                {mode === 'off' ? t('map.webOff') : mode === 'lines' ? t('map.lines') : t('map.graph')}
+              </button>
+            ))}
           </div>
-        ) : null}
-        {web !== 'off' ? <WebLegend /> : null}
-        <div className="floating flex items-center gap-1 rounded-full p-1 text-sm">
-          <Icon name="web" className="ml-2 size-4 text-muted" />
-          {(['off', 'lines', 'graph'] as const).map((mode) => (
-            <button
-              key={mode}
-              type="button"
-              aria-pressed={web === mode}
-              onClick={() => setWeb(web === mode ? 'off' : mode)}
-              className={`rounded-full px-2.5 py-1 ${web === mode ? 'bg-accent text-white' : 'text-muted hover:text-ink'}`}
-            >
-              {mode === 'off' ? t('map.webOff') : mode === 'lines' ? t('map.lines') : t('map.graph')}
-            </button>
-          ))}
         </div>
-      </div>
+      ) : null}
       {/* Narrower, clear of the pills at the bottom, and a layer under the
           controls so an open fold covers it rather than the other way round. */}
       {status === 'loading' ? (

@@ -3,42 +3,28 @@ import { openFromHours, readPlace, readPlaceId } from './placeScrape';
 
 // Wording and layout taken from real Maps panels captured 2026-09-21.
 describe('readPlace', () => {
-  it('reads the name, rating, count and hours off the panel', () => {
+  it('reads the name, rating and hours off the panel', () => {
     const out = readPlace({
       labels: ['4.6 stars ', 'Write a review'],
       text: "The French Laundry\n4.6\n(2,275)\nFrench restaurant\nOpen · Closes 8 PM\n6640 Washington St\n(707) 944-2380\n",
       heading: 'The French Laundry',
     });
-    expect(out).toMatchObject({ name: 'The French Laundry', rating: 4.6, ratingCount: 2275, hours: 'Open · Closes 8 PM' });
+    expect(out).toMatchObject({ name: 'The French Laundry', rating: 4.6, hours: 'Open · Closes 8 PM' });
   });
 
-  // The bug the first real dry run caught: the phone number's area code was
-  // read as the rating count, so the pin claimed 707 ratings.
-  it('does not read a phone area code as the rating count', () => {
-    const out = readPlace({
-      labels: ['4.6 stars '],
-      text: "The French Laundry\n(707) 944-2380\n4.6\n(2,275)\nOpen · Closes 8 PM\n",
-      heading: 'The French Laundry',
-    });
-    expect(out.ratingCount).toBe(2275);
+  // Not an oversight: the panel's count could never be told from a
+  // neighbour's or a sub-rating's, so the scrape reports none at all. See the
+  // comment in placeScrape.ts for the four rules that were tried and failed.
+  it('never reports a rating count, however inviting the page looks', () => {
+    expect(
+      readPlace({ labels: ['4.6 stars '], text: 'Somewhere\n4.6\n(2,275)\n', heading: 'Somewhere' }).ratingCount,
+    ).toBeNull();
   });
 
-  // Galaxy's Edge read 685, 685, then 42: some renders carry a second
-  // "4.8 (42)" block and the first pair in the text is the wrong one.
-  it('takes the largest matching pair, not the first', () => {
-    const out = readPlace({
-      labels: ['4.8 stars '],
-      text: "Star Wars: Galaxy's Edge\n4.8\n(42)\nTheme park\n4.8\n(685)\nOpen · Closes 12 AM\n",
-      heading: "Star Wars: Galaxy's Edge",
-    });
-    expect(out.ratingCount).toBe(685);
-  });
 
-  it('leaves the count null when no number sits with the rating', () => {
-    const out = readPlace({ labels: ['4.5 stars '], text: 'Somewhere\n4.5\nDeli\n(707) 944-2380\n', heading: 'Somewhere' });
-    expect(out.rating).toBe(4.5);
-    expect(out.ratingCount).toBeNull();
-  });
+
+
+
 
   it('is all nulls for a panel with no rating, rather than guessing', () => {
     const out = readPlace({ labels: ['Write a review'], text: 'A New Place\nOpening soon\n', heading: 'A New Place' });

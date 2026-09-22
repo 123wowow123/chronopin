@@ -491,15 +491,13 @@ https://trends.google.com/explore
 
 - Pin any major news or events that can out
 
-work through the Food & Beverage pins by hand; it's about a dozen.
-
+GOOGLE_PLACES_API_KEY
+yelp key
 
 # OKF
 
 
 # Scraping
-
-scrape highly rated restaurant in every major city in the world
 
 pin can have user uploadable pictures in comments? Need microsoft cloud
 
@@ -511,13 +509,13 @@ Suggest missing or correcting information
 
 This needs anther table to hold it and needs logged in user tracking
 
-AI will then analye feedback but not necessary make any changes as original sources are weighted to be the ultimate truth
+AI will then analyse feedback but not necessary make any changes as original sources are weighted to be the ultimate truth
 
 
 Product pins should have notible features in long form summary
 http://localhost:3000/pin/2346/the-airbus-a350f-makes-its-first-flight
 
-
+tag filter need exclude feature - maybe using tabs
 
 Fix: The data-quality findings — wrong references on pins 72, 202, 377, 806, 808; stale odds in the market pin descriptions; MMOExp as a primary source 
 

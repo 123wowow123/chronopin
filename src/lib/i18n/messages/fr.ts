@@ -513,6 +513,8 @@ const fr: Messages = {
     postedWithin: 'Publié depuis',
     within: 'Distance jusqu’à',
     filters: 'Filtres',
+    filter: 'Filtre',
+    summary: '{caption} : {value}',
   },
   tagCloud: {
     tagsSummary: 'Tags : {summary}',
@@ -549,7 +551,6 @@ const fr: Messages = {
     past: 'Passé',
     future: 'Futur',
     set: 'Appliquer',
-    useDefault: 'Utiliser votre valeur par défaut ({span})',
     anyTime: 'Afficher les épingles publiées à tout moment',
     allPast: 'Afficher toutes les épingles passées',
     typeExact: 'Saisir des valeurs exactes',

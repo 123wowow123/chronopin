@@ -122,7 +122,6 @@ export function Timeline({
   initialPostedWithin,
   initialWithin,
   defaultPostedWithin,
-  defaultSpan,
   initialSpecialtyDays,
   serverNow,
   minConfidence,
@@ -143,7 +142,6 @@ export function Timeline({
   initialWithin: string | null;
   // The viewer's saved preference (or the site default): left out of the URL.
   defaultPostedWithin: string | null;
-  defaultSpan: string;
   initialSpecialtyDays: Record<string, string[]>;
   // When the server rendered, so "today" matches during hydration.
   serverNow: string;
@@ -550,19 +548,18 @@ export function Timeline({
   const empty = !bags.length;
   const phrase = spanPhrase(postedWithin, t.locale);
   const radiusText = radiusLabel(radiusKm, imperial, t.locale);
-  // Folded behind one pill, the two sliders share its face. With a ring set
-  // the pill has to name both, so its caption widens from "Posted within" to
-  // "Filters" - and the span slider keeps its own heading, since the pill no
-  // longer says what it alone is set to.
+  // Behind one pill, both sliders share its face, so it is captioned for the
+  // pair ("Filter") and says what each is set to; each keeps its own heading
+  // inside, being a row that folds its slider away like the tag panel above.
   const summary = ring ? `${spanLabel(postedWithin, t.locale)} · ${radiusText}` : spanLabel(postedWithin, t.locale);
 
   return (
     <TimelineVideoProvider setting={video}>
       <div className="px-[max(0.75rem,env(safe-area-inset-left))] pb-24 lg:px-4 xl:pr-[288px]">
         <FloatingControls
-          summaryCaption={ring ? t('controls.filters') : t('controls.postedWithin')}
+          summaryCaption={t('controls.filter')}
           summary={summary}
-          summaryIsPostedWithin={!ring}
+          summaryIsPostedWithin={false}
           onToday={goToToday}
           tags={{ summary: tagPillSummary(undefined, t.locale), control: <TagCloud postedWithin={postedWithin} /> }}
           aside={
@@ -578,7 +575,7 @@ export function Timeline({
             steps={SPAN_OPTIONS}
             past={postedWithin}
             pastOnly
-            pastLabelSpan={defaultSpan}
+            collapsible
             onChange={({ past }) => changePostedWithin(past)}
           />
           {/* Only once the browser has found somewhere to measure from: with
@@ -590,6 +587,7 @@ export function Timeline({
               radius={radiusKm}
               imperial={imperial}
               placeName={place.name}
+              collapsible
               onChange={changeRadius}
             />
           ) : null}

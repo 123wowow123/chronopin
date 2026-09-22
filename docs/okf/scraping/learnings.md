@@ -2698,3 +2698,340 @@ fifteen located pins. Nineteen places now carry a Google rating.
   `NOT STORED`, and a filtered log is not a verified one.
 * **Changed**: ratings on 19 pins across two verticals; `places:refresh` reports
   store failures; `readPlace`/`readPlaceId` hardened with 12 tests.
+
+## 2026-09-21 - The rest of Food & Beverage, and giving up on the rating count
+
+Ian: "go ahead and work through the Food & Beverage pins by hand". The ten
+restaurants were already done, so this was the nine left - and it ended by
+removing a number from every pin in the feature.
+
+* **Learned**: **"is it a factory?" is the wrong question; "can the public walk
+  in?" is the right one.** Seven `Food & Beverage` pins were dismissed as
+  factories in the earlier pass, and that was too coarse. **Emsflower** is a
+  genuine visitor attraction - "Emsflower GmbH", 4.5 from about 2,450 public
+  reviews, opening at 10 AM - and now carries a rating. What separates it from
+  the rest is **consumer opening hours plus a real public review count**:
+  "H J Heinz Co Ltd" is 4.1 and **"Open 24 hours"**, and the hop processor opens
+  at 7 AM with no public count. Those are workplace listings rated by staff and
+  hauliers, and a rating from one tells a reader nothing.
+* **Learned**: Cadbury Claremont has no visitor listing to find. Its tours ended,
+  and the searches returned a street geocode ("Cadbury Rd"), a different shop
+  ("Crisp N' Sweet") and **a cricket ground ("Cadbury Oval")**. No place.
+* **Learned**: Chubby Cattle's Mira Mesa site has no listing, over five attempts
+  that returned Irvine, Rosemead, a street geocode, and finally **"Mokkoji
+  Shabu Shabu" - a different restaurant on the same boulevard**, 4.8 with a
+  plausible count. Storing it would have put a rival's rating on the pin. Five
+  wrong answers is itself the answer.
+* **Gave up on the rating count, and that is the real outcome.** Four rules were
+  tried and each produced a wrong number that looked right:
+  "first bracketed number" read a phone area code (707 for The French Laundry);
+  "pair with the rating" gave Galaxy's Edge 685, 685, 42 across three loads;
+  "largest matching pair" knocked Ferrari World from 61,367 to 538 and let two
+  4.8 shabu restaurants on one street each report the *other's* 423, because the
+  related-places section cross-references them; "only when unambiguous" still
+  gave ICEHOTEL 259 one run and 5,204 the next, because different renders expose
+  different single candidates and there is then nothing to disambiguate against.
+  A web search could not settle Ferrari World's true count either.
+  **The rating agreed in every check ever made; the count never settled once.**
+  So the scrape reports none, the stored counts were cleared, and a count now
+  appears only for someone who sets `GOOGLE_PLACES_API_KEY`, where Google states
+  `userRatingCount` outright. A wrong count beside a right rating discredits
+  both, and the chip reads perfectly well without one.
+* **Learned about the fix that caused it**: the monotonic "a count only rises"
+  rule was itself a mistake. It was invented to defend against flaky renders,
+  and its actual effect was to make the *first* wrong number permanent. A
+  stabiliser on top of an unreliable source only preserves the error.
+* **Changed**: 20 places across three verticals; `readPlace` no longer reads a
+  count; the monotonic rule is moot for the scrape path and kept for the API one.
+
+## 2026-09-21 - Museum builds and upgrades, a new vertical (pins 2544-2548)
+
+Ian: "Scrape museum contructions or upgrades around the world". Five pins under
+@BuildDesk, spanning April 2026 to June 2027 across four countries, with the
+Anthropic key out of credit so every field was extracted by hand.
+
+* **Learned**: **this vertical needs no browser.** Museum sites are not defended
+  the way IMDb, Yelp and the MICHELIN Guide are - londonmuseum.org.uk,
+  lucasmuseum.org, lacma.org and smb.museum all read cleanly with `curl`, and
+  four of the five dates came straight from the institution's own page. A museum
+  announcing its own opening is the strongest date source there is, so it needs
+  no inference and all five pins are `confirmed`.
+* **Learned**: **the roundup finds the candidates and then gets discarded.** An
+  artnet "most anticipated openings" piece produced the shortlist in one search;
+  each pin then got its own deep link, which is the rule from the sneaker
+  listicles. Two of the five ended up citing an official press release by URL.
+* **Learned**: **geocoding a museum by name can hand you the wrong building.**
+  "London Museum" resolves to the **old** London Wall site (EC2Y 5HN) - the
+  institution the pin is about *leaving*. The new museum is the Smithfield
+  General Market, and only "Smithfield General Market, London" returns it.
+  "Pergamonmuseum, Museumsinsel, Berlin" returns nothing at all while
+  "Pergamonmuseum Berlin" returns the museum; Nominatim is sensitive to the
+  district in a way that looks arbitrary.
+* **Learned**: the place panel and this vertical fit together, and one pin
+  proved the plumbing. The **Lucas Museum's Google listing reads "Opens Tue Sep
+  22"** - Google independently corroborating the date the museum announced. The
+  **Pergamonmuseum's reads "Temporarily closed"**, which is precisely what a pin
+  about its 2027 reopening wants to say. Guggenheim Abu Dhabi gets no place:
+  Nominatim types the site `construction`, which is the honest answer.
+* **Learned**: the place lookup offers the annex. "Pergamonmuseum's North Wing"
+  first matched **"Pergamon Museum. The Panorama"** - the temporary panorama
+  building that exists *because* the museum is shut. 4.7, plausible, wrong
+  venue. The name check caught it; the address check could not have, because
+  the Panorama is across the road.
+* **Learned, the picture trap in a new form**: a Commons file can be the right
+  subject at the wrong *time*. The obvious LACMA photographs are from 2014 and
+  show the buildings the Geffen Galleries **replaced**; the correct file is
+  dated February 2026 and describes Zumthor's galleries outright. And
+  `Pergamonmuseum Berlin Portikus.jpg` reads like a photograph of the entrance
+  but is **Alfred Messel's 1909 drawing** - public domain because of its age,
+  which is the giveaway. Read `extmetadata.DateTimeOriginal` and
+  `ImageDescription` before trusting a file name.
+* **Ruled**: **Guggenheim Abu Dhabi is saved with no picture.** Commons holds
+  only 2011 architectural maquettes and a shot of the visitor centre. A
+  photograph of a model, shown as the pin's picture with no caption saying so,
+  would misinform - and a pin without a picture is better than a pin with the
+  wrong one.
+* **Changed**: [Vertical recipes](verticals.md) gains a Museum builds and
+  upgrades row and section.
+
+## 2026-09-21 - Tags prefer single words, and a vertical needs one shared tag
+
+Ian: "tags should prefer single words so the museum scrape should have a tag for
+museum on all its pins", then "so is restaurant".
+
+* **Learned**: **a tag is a browse handle, not a caption.** "Museum Openings" was
+  on all five museum pins and grouped them, but "Concrete Architecture",
+  "Pergamon Altar", "Saadiyat Island" and "Adaptive Reuse" were each unique to
+  one pin and therefore grouped nothing. They are now `Concrete`, `Pergamon`,
+  `Saadiyat` and `Restoration`. Multi-word survives only where the name is one:
+  people (`Peter Zumthor`), cities (`Abu Dhabi`), awards (`World's 50 Best`).
+* **Learned**: **every vertical needs one single-word tag naming the thing**, on
+  every pin without exception - `Museum`, `Restaurant`. The check is that
+  `tag:Museum` returns all of them: 7 of 7, and `tag:Restaurant` 11 of 11.
+* **Found while doing it**: the museum vertical was not new after all. Pins
+  **2274 (Powerhouse Parramatta)** and **2282 (Ontario Science Centre)** were
+  already museum openings, tagged lowercase plural `museums`, and so invisible
+  to anything looking for the others. Both were folded into `Museum`. **Before
+  opening a vertical, search the corpus for its subject** - a near-miss tag hides
+  existing work as effectively as no tag at all.
+* **Trap**: retag from the pin's **`kind='topic'`** rows, not from `pin.tags`.
+  The view's `tags` also carries `award` and `nomination` kinds, and PUTting
+  those back would re-file an award as a topic tag.
+* **Changed**: 18 pins retagged; the corpus's shape was 841 multi-word distinct
+  tags against 397 single-word ones, so this is a correction to the convention
+  rather than a description of it.
+
+## 2026-09-21 - Highly rated restaurants, city by city (pins 2549-2553)
+
+Ian: "scrape highly rated restaurant in every major city in the world". That is a
+rolling job, not a batch - this first tranche added five cities. Sixteen
+restaurant pins now, fourteen of them carrying a live Google rating, which is
+what actually answers "highly rated".
+
+* **Learned**: **the ranked lists themselves are the hard part, not the
+  restaurants.** `theworlds50best.com` redirects to `the50.com`, renders its list
+  in JavaScript behind a consent gate, and gives **2,461 characters of body text
+  and three navigation links** even through our own browser with six scrolls -
+  the list never renders. Wikipedia's *The World's 50 Best Restaurants* article
+  carries only the top three per year, not the fifty with their cities. So the
+  candidate list came from a search result summary, and each restaurant was then
+  confirmed against **its own Wikipedia article**, which is a per-item source.
+* **Learned**: **one Wikipedia API call checks fifteen candidates.** Batching
+  `prop=extracts&exintro` over fifteen titles and grepping each intro for an
+  opening sentence costs one request and no search quota - far better than a
+  search per restaurant, and it is how the yield became visible immediately.
+* **The yield was 6 of 15, and the six dropped for want of a date are worth
+  recording so nobody repeats the work**: **D.O.M.** (São Paulo) - its 2006 is
+  the year it was *listed*, not opened; **Lung King Heen** (Hong Kong) - a chef
+  came out of retirement "in 2002 for the Hotel", which is not an opening date;
+  **Attica** (Melbourne) - 2010 is its first list appearance. And six have no
+  English article at all: **White Rabbit** (Moscow), **Steirereck** (Vienna),
+  **DiverXO** (Madrid), **Narisawa** (Tokyo), **Quay** (Sydney), **Trèsind
+  Studio** (Dubai). Those cities need a press source, not Wikipedia.
+* **Dropped for a better reason**: **Ultraviolet** (Shanghai) has a stated
+  opening - May 2012 - and was still dropped, because its address is
+  *deliberately secret*: diners are collected and driven to an undisclosed
+  room. There is no honest point to place it at, and [never type place
+  labels](learnings.md) means inventing one is not an option.
+* **Learned**: **Nominatim can hold a restaurant's old address while Google
+  holds its new one.** Nominatim returned "Pujol, 254 Calle Francisco Petrarca";
+  Google returned Tennyson 133, which is where Pujol actually moved. The pin was
+  corrected to Tennyson. This is the reverse of the Mugaritz case, where
+  Nominatim's venue record was right and the reverse-geocode was wrong - so
+  **when the two geocoders disagree about a venue, one of them is stale, and the
+  place-resolve dry run is what surfaces it.**
+* **Convention held**: year-only dates land on 31 December and month-only on the
+  month's last day, both `estimated`, so this tranche puts four more pins on a
+  31 December. One pin is not an opening at all: **Arpège** is dated to Passard
+  *buying* L'Archestrate and renaming it, which is the dated moment that
+  restaurant has.
+* **Still uncovered** among major cities: Tokyo, Hong Kong, Shanghai, Dubai,
+  Sydney, Melbourne, Madrid, Barcelona, Rome, Berlin, Vienna, Istanbul, São
+  Paulo, Toronto, Los Angeles, San Francisco, Mumbai, Moscow.
+
+## 2026-09-21 - Nine more cities, and a bug in my own resolver (pins 2554-2562)
+
+Second tranche of "highly rated restaurant in every major city". Madrid,
+Barcelona, Vienna, San Francisco, Berkeley, Los Angeles, Melbourne, Mumbai and
+Tokyo. **25 restaurant pins now, 23 of them carrying a live Google rating.**
+
+* **Learned**: **`prop=extracts` caps full text at one page per request, and
+  fails silently.** Batching nine titles with `explaintext` and no `exintro`
+  returned *0 characters* for eight of them - not an error, just empty - which
+  reads exactly like "no article". `prop=revisions&rvprop=content` has no such
+  cap, and switching to wikitext lifted the yield from 4 of 24 to 10 of 24.
+  **An empty extract is not evidence of an empty article.**
+* **Learned**: wikitext beats prose for dates anyway, because the infobox states
+  them outright - `| established = {{Start date and age|df=yes|1975|05|26}}`
+  gave Flower Drum an exact day the article's prose only implied.
+* **Learned**: **historic institutions are the reliable seam for this vertical.**
+  A modern fine-dining room often has no article or no dated opening, while
+  Botín (1725, Guinness-recognised as the oldest in the world), Demel (1786),
+  Els Quatre Gats (12 June 1897), Swan Oyster Depot (1903) and Leopold Cafe
+  (1871) all state their founding plainly. The cities that resisted the first
+  tranche fell to this approach.
+* **Found a bug in `places:resolve` that I had written**: **a title opening with
+  a person defeats `searchName`.** "Wolfgang Puck Opens the First Spago" cut at
+  the verb to "Wolfgang Puck" and resolved to **CUT Beverly Hills**, another of
+  his restaurants; "Alice Waters Opens Chez Panisse" searched for the chef. The
+  fix is to ask whether the **company name appears in the title**: if it does,
+  the company is the venue and the title merely opens with the chef; if it does
+  not, the company is an operator and the title holds the venue.
+* **And the first fix was wrong**, which a test caught before it shipped: asking
+  whether the two names *agree* looks equivalent and sends the Mikiya Wagyu
+  Shabu House case back to "Chubby Group", the holding company - the very bug
+  fixed in the previous tranche. `scripts/places/resolve.test.ts` now pins both
+  directions, because the two cases pull against each other.
+* **Convention**: five more pins land on 31 December (year-only), two on a
+  stated day. Two pins sit at an address the restaurant moved to rather than the
+  one it opened at - Spago (Sunset Strip to Beverly Hills) and RyuGin (Roppongi
+  to Hibiya, which Google's own address confirmed) - and each says so in its
+  date reasoning.
+* **Still uncovered**: Hong Kong, Shanghai, Dubai, Sydney, Rome, Berlin,
+  Istanbul, São Paulo, Toronto, Moscow. Those need press sources, not Wikipedia.
+
+## 2026-09-21 - Eight more cities, mostly from the 18th and 19th centuries (2563-2570)
+
+Third tranche. Hong Kong, Buenos Aires, Rome, Shanghai, Toronto, Rio de Janeiro,
+Sydney and São Paulo. **33 restaurant pins across 31 cities now, 31 of them
+rated, averaging 4.38.**
+
+* **Confirmed as the method for this vertical**: the cities that beat two
+  previous passes fell to **historic institutions** in one API call. Tai Ping
+  Koon (1860), Café Tortoni (1858), Antico Caffè Greco (1760), Nanxiang (1900),
+  Barberian's (1959), Confeitaria Colombo (1894), Doyles (1885), Bar Brahma
+  (1948) - ten of twenty-four candidates dated, against four of twenty-four when
+  the same cities were tried with modern fine-dining names. A restaurant that
+  has been open for a century has a documented founding; a tasting-menu room
+  that opened last year often has no article at all.
+* **Learned**: **the place panel corroborated a claim from the article.** Antico
+  Caffè Greco's page describes a court fight with its landlord over the premises;
+  its Google listing reads **"Temporarily closed"**. Two independent sources
+  agreeing is worth more than either.
+* **Dropped, and for the clearest reason yet**: **Jumbo Kingdom**. It has the
+  best date in the batch - established 19 October 1976, an exact day from its
+  infobox - and it is unpinnable, because the restaurant was a *ship*: it closed
+  in 2020 and capsized in the South China Sea in 2022. Geocoding "Aberdeen
+  Harbour" returns a residential block, and placing a sunken floating restaurant
+  at a mansion would be a fiction. That makes three distinct reasons a
+  restaurant cannot take a place - gone for good (elBulli), address deliberately
+  secret (Ultraviolet), and **no longer physically anywhere** (Jumbo).
+* **Noted**: Nanxiang's pin is placed at a Shanghai branch rather than the
+  original premises, which its date reasoning says outright - the 1900 house was
+  in the old city and Nominatim only offered the Jing'an address. Google returned
+  the venue under its Chinese name, 南翔馒头店, which is the right business.
+* **Still uncovered**: Dubai, Berlin, Istanbul, Moscow. All four failed on both
+  the modern and the historic seam - no English article, or none with a date -
+  so they need local press and are a slower job per pin.
+
+## 2026-09-21 - Thirteen more cities in one pass (pins 2571-2583)
+
+Ian: "do all without stopping". Prague, Budapest, New Orleans, Montreal,
+Seattle, Taipei, Miami, Stockholm, Berlin, Oslo, Boston, Philadelphia, Moscow.
+**46 restaurant pins across 44 cities, 43 rated, averaging 4.37.**
+
+* **Confirmed at scale**: one wikitext batch of 40 titles returned **25 with a
+  usable date**, four of them exact days - Antoine's (3 April 1840), Union
+  Oyster House (7 October 1826), Schwartz's (31 December 1928), St-Viateur Bagel
+  (21 May 1957). The historic seam does not just work, it works in bulk, and the
+  dates are often better than the modern seam's because an institution's
+  centenary is documented.
+* **Learned**: **Nominatim throttles a long run, and the failure looks like "no
+  such place".** Fourteen geocodes fired at 1.2-second intervals returned seven
+  empty results; the same queries, shortened and spaced at two seconds, returned
+  six of the seven. **An empty geocode after a burst means try again slower, not
+  that the place does not exist** - the same shape of mistake as the empty
+  Wikipedia extract earlier today.
+* **The wrong-venue catch of the batch**: Café Kranzler resolved to **"THE BARN
+  Ku'damm"**, 4.7 - a coffee roaster that now occupies the Kranzler rotunda. The
+  pin keeps its place *empty*, because a rating belonging to the current tenant
+  shown under a Café Kranzler headline would misattribute it to a business that
+  no longer trades there. **A building outliving its restaurant is a fourth
+  reason to withhold a place**, alongside gone for good, secret address and no
+  longer physically anywhere.
+* **Also caught**: "Aragvi Moscow" resolves to a modern restaurant of that name
+  on Leninskiy Avenue, not the 1938 Tverskaya institution. The pin uses the
+  Tverskaya 6/2 address the article itself gives.
+* **Corroboration again**: Joe's Stone Crab reads **"Temporarily closed"**,
+  which is exactly right - it shuts for the summer when the stone crab season
+  does, as its own article describes.
+* **Still uncovered**: Dubai and Istanbul, which have now failed three passes on
+  both seams, and Delhi, whose Karim's would not geocode under any phrasing.
+
+## 2026-09-21 - Twelve more cities, and the vertical passes fifty (2584-2595)
+
+Naples, Dublin, Havana, Denver, Venice, Lisbon, Washington, Zurich, Atlanta,
+Beijing, Helsinki, Jakarta. **58 restaurant pins across 56 cities, 55 rated,
+averaging 4.35** - and the vertical now reaches back to 1499.
+
+* **The seam held for a fourth batch**: 26 of 40 candidates dated, including two
+  more exact days (Buckhorn Exchange 17 November 1893, Savoy Helsinki 3 June
+  1937). Across four batches the historic approach has produced roughly two
+  usable dates in three, against one in three for modern fine dining.
+* **Learned**: **the spacing fix worked.** Geocoding at 2.2-second intervals
+  returned 11 of 12 first time, against 7 of 14 at 1.2 seconds in the previous
+  batch. The one miss, Jakarta, resolved on a shorter query a minute later.
+  Nominatim's throttle is the single largest source of false "no such place"
+  answers in this work.
+* **Noted, not acted on**: the place payload's address field leaked
+  **"13,162 reviews"** for Din Tai Fung, which is prose again rather than an
+  address. It is display-only in the dry run and the name check is what actually
+  guards the match, so the pattern was left alone rather than tightened a fourth
+  time - each tightening so far has traded one false positive for another.
+* **The corpus now spans 1499 to 2022 in this vertical alone**: U Fleků (1499),
+  Caffè Florian (1720), Den Gyldene Freden (1722), Botín (1725), Port'Alba
+  (1738), Caffè Greco (1760). Dates that old cluster on 31 December by the
+  year-only convention, which is worth knowing before reading the timeline
+  around New Year.
+* **Three cities have now failed four passes**: Dubai, Istanbul and Delhi.
+  Dubai and Istanbul have no English-language article with a founding date for
+  any candidate tried; Delhi has Karim's, dated 1913, which no phrasing will
+  geocode. They need local press or a hand-placed coordinate.
+
+## 2026-09-21 - Backfilling the pictures, and what Commons will not give you
+
+The restaurant pins had been created without pictures across five tranches -
+48 of 52 pins from the day had none. 37 of 52 do now.
+
+* **Learned**: **a name-matching image search is wrong about a third of the
+  time, and confidently so.** Proposing one Commons file per venue and reading
+  the list before applying rejected **14 of 47**: a *car* for Arpège (Suncar
+  Arpège), the **Aragvi River** in Georgia for the Moscow restaurant, **Ledbury
+  Viaduct** in Herefordshire for the Notting Hill dining room, a band called
+  Odette, the musical *Flower Drum Song*, a Kandinsky for the Guggenheim, and
+  the Varsity in Rome **Georgia** - with a political photograph attached - for
+  the Atlanta drive-in. Every one of those would have looked plausible in a
+  thumbnail.
+* **Learned**: adding the city to the query does not rescue them. All fourteen
+  were retried as "venue + city" and Commons returned **nothing usable for any
+  of them**, which is the real answer: those venues have no free photograph.
+  The pins keep no picture, which is the same ruling as Guggenheim Abu Dhabi.
+* **Rule that emerged**: the automatic filter can reject the obvious classes -
+  logos, maps, menus, plaques, small files, engravings dated before 1900 - but
+  **it cannot tell a restaurant from a river of the same name.** Only reading
+  the proposal does that, and it is worth the minute it takes across fifty pins.
+* **Accepted deliberately**: a photograph of a *dish* at the right restaurant
+  (gumbo at Antoine's, fries at Schwartz's) and the Pessoa statue outside A
+  Brasileira. These are the venue, not a stand-in for it. A branch in the same
+  city was accepted (Quanjude at CityWalk, Tai Ping Koon in Causeway Bay); a
+  branch in another city was not (Spago Las Vegas, Nanxiang in Tokyo).

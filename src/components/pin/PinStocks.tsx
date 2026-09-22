@@ -185,7 +185,9 @@ export function PinStocks({ pinId }: { pinId: number }) {
         const shown = stocks.filter((stock) => stock.relation === group);
         return shown.length ? (
           <div key={group} className="flex flex-wrap items-center gap-1.5">
-            <h3 className="mr-1 w-full text-[11px] font-semibold tracking-wider text-subtle uppercase sm:w-auto">{t(heading)}</h3>
+            {/* Beside the pills, on a phone as well: one ticker and its label
+                sit on a line together, and a row of them wraps under it. */}
+            <h3 className="mr-1 text-[11px] font-semibold tracking-wider text-subtle uppercase">{t(heading)}</h3>
             {shown.map((stock) => (
               <TickerPill key={stock.symbol} stock={stock} open={stock.symbol === openSymbol} onToggle={() => setOpenSymbol((o) => (o === stock.symbol ? null : stock.symbol))} />
             ))}

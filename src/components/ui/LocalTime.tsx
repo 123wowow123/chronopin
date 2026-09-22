@@ -8,16 +8,32 @@ import { RefineLink } from '@/components/pin/RefineLink';
 import { useT } from '@/lib/client/i18n';
 
 // A date shown in the viewer's own time zone, with the instant in datetime
-// for machines. With dateOnly the time moves to the hover title. With search
-// it links to the pins posted the same day (posted:, the viewer's day).
-export function PostedTime({ value, serverTimeZone, dateOnly, search }: { value: string; serverTimeZone: string; dateOnly?: boolean; search?: boolean }) {
+// for machines. With dateOnly the time moves to the hover title, and with
+// 'phone' it does so only below sm, where the line it sits in is already
+// wrapping and the time of day is the least of what it says. With search it
+// links to the pins posted the same day (posted:, the viewer's day).
+export function PostedTime({ value, serverTimeZone, dateOnly, search }: { value: string; serverTimeZone: string; dateOnly?: boolean | 'phone'; search?: boolean }) {
   const timeZone = useTimeZone(serverTimeZone);
   const t = useT();
-  const time = (
-    <time dateTime={value} title={dateOnly ? t('time.postedAt', { time: formatPosted(value, timeZone, {}, t.locale) }) : undefined}>
-      {formatPosted(value, timeZone, { dateOnly }, t.locale)}
-    </time>
-  );
+  const full = formatPosted(value, timeZone, {}, t.locale);
+  const dayOnly = formatPosted(value, timeZone, { dateOnly: true }, t.locale);
+  const titled = t('time.postedAt', { time: full });
+  // Only one of the pair is ever laid out, so a screen reader reads one.
+  const time =
+    dateOnly === 'phone' ? (
+      <>
+        <time dateTime={value} title={titled} className="sm:hidden">
+          {dayOnly}
+        </time>
+        <time dateTime={value} className="max-sm:hidden">
+          {full}
+        </time>
+      </>
+    ) : (
+      <time dateTime={value} title={dateOnly ? titled : undefined}>
+        {dateOnly ? dayOnly : full}
+      </time>
+    );
   if (!search) return time;
   const day = dayKeyIn(value, timeZone);
   return (

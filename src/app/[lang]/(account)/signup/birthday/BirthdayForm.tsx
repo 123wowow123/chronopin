@@ -21,8 +21,9 @@ export function BirthdayForm({ next }: { next: string }) {
 
   function go() {
     // A full load, as the rest of the sign-in path uses: the session cookie is
-    // new, and every page picks it up from the server this way.
-    window.location.assign(localize(next));
+    // new, and every page picks it up from the server this way. Replacing, so
+    // the last of the sign-up pages leaves the back button alone.
+    window.location.replace(localize(next));
   }
 
   async function save(event: React.FormEvent) {

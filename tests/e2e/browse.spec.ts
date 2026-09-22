@@ -170,6 +170,19 @@ test('a distance opens the map and draws the line it measured', async ({ page })
   await expect(label).toContainText('Los Angeles');
 });
 
+
+// The sliders in the floating controls fold away behind a row saying what they
+// are set to, as the tag panel does, so the ring's thumb only exists once that
+// row is pressed - and a reload folds it away again.
+async function openRing(page: import('@playwright/test').Page) {
+  const panel = page.locator('div.floating').filter({ has: page.getByRole('button', { name: /^Distance within:/ }) });
+  await expect(panel).toBeVisible({ timeout: 20_000 });
+  const thumb = page.locator('[data-thumb="radius"]');
+  if (!(await thumb.isVisible())) await panel.getByRole('button', { name: /^Distance within:/ }).click();
+  await expect(thumb).toBeVisible();
+  return panel;
+}
+
 // The ring is measured from the browser's own idea of where the viewer is,
 // which for this run is the city of its time zone (Los Angeles), so the
 // slider is there and every card it leaves has a place near it.
@@ -177,9 +190,8 @@ test('the distance slider narrows the timeline to pins near the viewer', async (
   await page.goto('/');
   await expect(page.locator('article').first()).toBeVisible();
 
+  const slider = await openRing(page);
   const thumb = page.locator('[data-thumb="radius"]');
-  await expect(thumb).toBeVisible({ timeout: 20_000 });
-  const slider = page.locator('div.floating').filter({ has: thumb });
   await expect(slider).toContainText('from Los Angeles');
 
   // Home is the tightest ring on offer; End is no ring at all.
@@ -210,8 +222,7 @@ test('the distance slider narrows the timeline to pins near the viewer', async (
 
   // Opened again on the same link, the timeline comes back on the same ring.
   await page.reload();
-  await expect(page.locator('[data-thumb="radius"]')).toBeVisible({ timeout: 20_000 });
-  await expect(page.locator('div.floating').filter({ has: page.locator('[data-thumb="radius"]') })).toContainText('Distance within 5 mi');
+  await expect(await openRing(page)).toContainText('Distance within 5 mi');
 
   // Pins still page in as they do on the whole timeline: the ring rides the
   // pagination links, so scrolling keeps reaching further out.
@@ -221,9 +232,7 @@ test('the distance slider narrows the timeline to pins near the viewer', async (
 
 test('a ring keeps paging pins in as the timeline is scrolled', async ({ page }) => {
   await page.goto('/?within=25mi');
-  const thumb = page.locator('[data-thumb="radius"]');
-  await expect(thumb).toBeVisible({ timeout: 20_000 });
-  await expect(page.locator('div.floating').filter({ has: thumb })).toContainText('Distance within 25 mi');
+  await expect(await openRing(page)).toContainText('Distance within 25 mi');
 
   const cards = () => page.locator('article').count();
   const before = await cards();

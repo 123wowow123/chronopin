@@ -75,8 +75,10 @@ export function SignupForm() {
         password: form.password,
       });
       // A full load, so every page picks up the new session (router.push would
-      // replay the router's remembered redirect to /login).
-      window.location.assign(localize(redirect));
+      // replay the router's remembered redirect to /login), and a replacing one
+      // so Back does not come back to the sign-up form for an account that now
+      // exists.
+      window.location.replace(localize(redirect));
     } catch (err) {
       // By code: the server's text is English (a 422's is a raw database error).
       const code = err instanceof ApiError ? (err.body as { code?: string } | undefined)?.code : undefined;
@@ -171,7 +173,9 @@ export function SignupForm() {
       <p className="pt-2 text-center text-sm text-subtle">
         {t.rich('signup.haveAccount', {
           link: (chunks) => (
-            <Link href={authHref('/login', params.get('redirect'))} className="underline decoration-link/40 underline-offset-2 hover:decoration-link">
+            // replace, the same way round: the login page takes this one's
+            // place rather than stacking on it.
+            <Link href={authHref('/login', params.get('redirect'))} replace className="underline decoration-link/40 underline-offset-2 hover:decoration-link">
               {chunks}
             </Link>
           ),

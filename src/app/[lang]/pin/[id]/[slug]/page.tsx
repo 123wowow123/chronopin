@@ -140,7 +140,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           ) : null}
 
           {/* Beside the pin on wide screens, under its map; after it on phones. */}
-          <PinTags tags={pin.tags} className={pin.latitude != null && pin.longitude != null ? 'mt-6' : ''} />
+          <PinTags tags={pin.tags} categories={pin.categories?.slice(1)} className={pin.latitude != null && pin.longitude != null ? 'mt-6' : ''} />
 
           <Suspense fallback={null}>
             <Duplicates pin={pin} />
@@ -201,17 +201,19 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
   return (
     <>
       <div className="mb-3 flex flex-wrap items-center text-xs text-subtle">
-        {pin.categories?.map((category) => (
-          <Fragment key={category}>
-            <RefineLink field="tag" value={category} className="rounded-full bg-raised px-2.5 py-0.5 font-medium text-muted ring-1 ring-line ring-inset hover:text-ink hover:no-underline">
-              {categoryLabel(t, category)}
+        {/* The main category alone (the pin's categories come main-first): the
+            rest are chips in the tag section, where a pin's lesser subjects go. */}
+        {pin.categories?.length ? (
+          <>
+            <RefineLink field="tag" value={pin.categories[0]} className="rounded-full bg-raised px-2.5 py-0.5 font-medium text-muted ring-1 ring-line ring-inset hover:text-ink hover:no-underline">
+              {categoryLabel(t, pin.categories[0])}
             </RefineLink>
             <span className="px-1" />
-          </Fragment>
-        ))}
+          </>
+        ) : null}
         {pin.utcCreatedDateTime ? (
           <span>
-            {t.rich('pin.posted', { time: () => <PostedTime value={pin.utcCreatedDateTime!} serverTimeZone={timeZone} search /> })}
+            {t.rich('pin.posted', { time: () => <PostedTime value={pin.utcCreatedDateTime!} serverTimeZone={timeZone} dateOnly="phone" search /> })}
           </span>
         ) : null}
         {pin.user?.userName ? (

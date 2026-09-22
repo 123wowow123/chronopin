@@ -507,6 +507,8 @@ const ja: Messages = {
     postedWithin: '投稿期間',
     within: '距離範囲',
     filters: 'フィルター',
+    filter: 'フィルター',
+    summary: '{caption}：{value}',
   },
   tagCloud: {
     tagsSummary: 'タグ：{summary}',
@@ -543,7 +545,6 @@ const ja: Messages = {
     past: '過去',
     future: '未来',
     set: '適用',
-    useDefault: 'デフォルトを使う（{span}）',
     anyTime: 'すべての期間に投稿されたピンを表示',
     allPast: '過去のピンをすべて表示',
     typeExact: '正確な値を入力',

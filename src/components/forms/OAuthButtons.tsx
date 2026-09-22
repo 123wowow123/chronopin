@@ -17,9 +17,11 @@ export function OAuthButtons({ handle, redirect, validate }: { handle?: string; 
     // The callback is outside the languages, so the page to come back to goes in this one.
     const target = localizePath(redirect || '/', locale);
     document.cookie = target !== '/' ? `after_login=${encodeURIComponent(target)}; path=/; max-age=600; ${sameSite}` : 'after_login=; path=/; max-age=0';
-    // A full navigation: /auth/* is a route handler that redirects to the provider.
-    // eslint-disable-next-line @next/next/no-location-assign-relative-destination
-    window.location.href = `/auth/${provider}`;
+    // A full navigation: /auth/* is a route handler that redirects to the
+    // provider. Replacing, because these buttons only ever sit on the login and
+    // sign-up pages: the whole redirect chain, and the page it ends on, stand in
+    // this page's place in the history rather than after it.
+    window.location.replace(`/auth/${provider}`);
   }
   return (
     <div className="grid gap-2.5 sm:grid-cols-3">

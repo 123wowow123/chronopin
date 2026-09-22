@@ -101,21 +101,27 @@ export function readPlace({
   const starMatch = starLabel?.match(/([0-5](?:\.\d)?)/);
   const rating = starMatch ? Number(starMatch[1]) : null;
 
-  // The count sits immediately after the rating in the panel: "4.6\n(2,275)".
-  // Two rules, both learned from wrong numbers that looked plausible:
+  // **The rating count is deliberately not read from this page.** It cannot be
+  // determined reliably, and the evidence took four attempts to accept:
   //
-  // 1. It MUST be matched as a PAIR with the rating, never as "the first
-  //    number in brackets on the page" - that read (707) out of the phone
-  //    number "(707) 944-2380" and gave The French Laundry 707 ratings.
-  // 2. Take the LARGEST matching pair, not the first. Star Wars: Galaxy's
-  //    Edge read 685, 685, then 42 across three loads: some renders carry a
-  //    second "4.8 (42)" block, and the first pair in the text is then the
-  //    wrong one. A place's own total is the biggest count on its panel.
-  const counts = Array.from(text.matchAll(/([0-5](?:\.\d)?)\s*\(\s*([\d,]+)\s*\)/g))
-    .filter((m) => rating == null || Number(m[1]) === rating)
-    .map((m) => Number(m[2].replace(/,/g, '')))
-    .filter((n) => Number.isFinite(n));
-  const ratingCount = counts.length ? Math.max(...counts) : null;
+  //   "first bracketed number"  read (707) from the phone number "(707) 944-2380"
+  //   "pair with the rating"    Galaxy's Edge gave 685, 685, 42 across 3 loads
+  //   "largest matching pair"   knocked Ferrari World from 61,367 to 538, and
+  //                             two 4.8 shabu restaurants on the same street
+  //                             each returned the *other's* 423 once, because
+  //                             the related-places section cross-references them
+  //   "only when unambiguous"   still gave 259 one run and 5,204 the next for
+  //                             ICEHOTEL - different renders expose different
+  //                             single candidates, so there is nothing to
+  //                             disambiguate against
+  //
+  // Nothing external could settle which number is the venue's own total. The
+  // *rating* agreed in every check ever made; the count never settled once. A
+  // wrong count beside a right rating discredits both, and the chip renders
+  // perfectly well without one - so the scrape reports none, and a count only
+  // appears for someone who sets GOOGLE_PLACES_API_KEY, where Google states
+  // `userRatingCount` outright.
+  const ratingCount = null;
 
   // "Open · Closes 8 PM" / "Closed · Opens 5 PM Thu", as Google words it.
   const hoursMatch = text.match(/\b(Open|Closed|Closes|Opens|Open 24 hours|Temporarily closed|Permanently closed)\b[^\n]{0,40}/);

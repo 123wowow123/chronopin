@@ -12,6 +12,7 @@ import { removeTerm, toggleTerm } from '@/lib/searchTerms';
 import { cloudSteps, cloudTags, groupSelection, groupTags, tagMembers, THREAD_TAG, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
 import { useTagFoldOpen } from './FloatingControls';
+import { iconButton, PanelHeader } from './PanelHeader';
 import { WordCloud } from './WordCloud';
 import { useT } from '@/lib/client/i18n';
 import { FORMAT_WORDS } from '@/lib/i18n/formatWords';
@@ -32,7 +33,18 @@ let rememberedWrapped = true;
 
 // How many tags the cloud shows before its filter box is needed.
 const SHOWN = 60;
-const STEP_CLASS = ['', 'text-xs', 'text-[13px]', 'text-sm', 'text-base', 'text-lg font-semibold'];
+// A step up from what the cards use: the cloud is read at a glance, and its
+// smallest tags were too small to pick out. Another step up below xl, where
+// the cloud has the screen to itself behind its pill rather than a 16rem
+// column, and is read at arm's length.
+const STEP_CLASS = [
+  '',
+  'text-base xl:text-sm',
+  'text-[17px] xl:text-[15px]',
+  'text-lg xl:text-base',
+  'text-xl xl:text-lg',
+  'text-2xl xl:text-xl font-semibold',
+];
 
 // What is picked, in brief ("Artemis", "Artemis +2"), or 'All' for nothing.
 function tagSummary(selected: string[], locale: Locale = 'en') {
@@ -187,40 +199,29 @@ export function TagCloud({
 
   return (
     <div ref={rootRef} className={`floating flex min-h-0 flex-col text-sm ${inFold ? 'max-xl:h-full' : ''} ${className}`}>
-      {/* Clearing is its own button beside the
-          chevron, and the button that opens the panel lies under the row. */}
-      <div className={`relative flex items-center gap-2 px-3.5 py-2.5 max-lg:py-3 ${inFold ? 'max-xl:hidden' : ''}`}>
+      {/* The same row the sliders under it fold behind, with the big cloud's
+          button on it as well. */}
+      <PanelHeader
+        caption={t('controls.tags')}
+        value={summary}
+        open={open}
+        onToggle={() => setOpen(!open)}
+        label={t('tagCloud.tagsSummary', { summary })}
+        controls={optionsId}
+        reset={selected.length ? { label: t('tagCloud.clear'), onClick: clear } : undefined}
+        className={inFold ? 'max-xl:hidden' : ''}
+      >
         <button
           type="button"
-          onClick={() => setOpen(!open)}
-          aria-expanded={open}
-          aria-controls={optionsId}
-          aria-label={t('tagCloud.tagsSummary', { summary })}
-          className="absolute inset-0 rounded-[inherit]"
-        />
-        <span className="pointer-events-none relative text-subtle">{t('controls.tags')}</span>
-        <span className="pointer-events-none relative min-w-0 truncate font-medium text-ink">{summary}</span>
-        <span className="pointer-events-none relative ml-auto flex shrink-0 items-center gap-1.5">
-          {selected.length ? (
-            <button type="button" onClick={clear} className={`${iconButton} pointer-events-auto`} aria-label={t('tagCloud.clear')}>
-              <Icon name="filter-off" className="size-4" />
-            </button>
-          ) : null}
-          <button
-            type="button"
-            onClick={() => setExpanded(true)}
-            className={`${iconButton} pointer-events-auto`}
-            aria-label={t('tagCloud.expand')}
-            title={t('tagCloud.expand')}
-            aria-haspopup="dialog"
-          >
-            <Icon name="expand" className="size-4" />
-          </button>
-          <button type="button" tabIndex={-1} aria-hidden onClick={() => setOpen(!open)} className={`${iconButton} pointer-events-auto`}>
-            <Icon name="chevron" className={`size-4 transition-transform ${open ? 'rotate-180' : ''}`} />
-          </button>
-        </span>
-      </div>
+          onClick={() => setExpanded(true)}
+          className={`${iconButton} pointer-events-auto`}
+          aria-label={t('tagCloud.expand')}
+          title={t('tagCloud.expand')}
+          aria-haspopup="dialog"
+        >
+          <Icon name="expand" className="size-4" />
+        </button>
+      </PanelHeader>
       {showing ? (
         // In the fold the cloud is the fold's, on phones; from xl up the header row opens it.
         <div id={optionsId} className={`flex min-h-0 flex-col ${inFold ? 'max-xl:flex-1 max-xl:pt-3' : ''} ${inFold && !open ? 'xl:hidden' : ''}`}>
@@ -257,7 +258,7 @@ export function TagCloud({
                     >
                       {threadIcon(tag.name)}
                       {tagLabel(t, tag)}
-                      <span className="ml-1 text-[11px] font-normal text-subtle tabular-nums">
+                      <span className="ml-1 text-sm font-normal text-subtle tabular-nums xl:text-xs">
                         {tag.count}
                         <span className="sr-only"> {t('tagCloud.pinsWord', { count: tag.count })}</span>
                       </span>
@@ -334,13 +335,13 @@ function Members({
                 aria-pressed={isSelected(m.name)}
                 onClick={() => onToggle(m.name)}
                 title={`${m.name}: ${t('tagCloud.pins', { count: m.count })}${inner ? `, ${t('tagCloud.tags', { count: inner.length })}` : ''}`}
-                className={`rounded-md px-1 text-left text-xs leading-snug transition-colors ${
+                className={`rounded-md px-1 text-left text-base leading-snug transition-colors xl:text-sm ${
                   isSelected(m.name) ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset' : 'text-muted hover:text-ink'
                 }`}
               >
                 {threadIcon(m.name)}
                 {m.name}
-                <span className="ml-1 text-subtle">{m.count}</span>
+                <span className="ml-1 text-sm text-subtle xl:text-xs">{m.count}</span>
               </button>
               {inner ? (
                 <button
@@ -549,6 +550,3 @@ function TagCloudView({
     document.body,
   );
 }
-
-// The round targets at the end of the header row (clear, open/close).
-const iconButton = '-my-1 rounded-full p-1 text-subtle max-lg:p-2 hover:bg-raised hover:text-ink';

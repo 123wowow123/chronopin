@@ -107,6 +107,28 @@ test.describe.serial('leaving a page to sign in or out', () => {
     await page.getByRole('button', { name: 'Sign up' }).click();
     await expect(page.getByRole('button', { name: `@${handle}` })).toBeVisible();
     await expectBackAt(page, before);
+
+    // Neither page is behind the other: the login page sent the reader on to
+    // sign-up in its own place, so Back is the timeline and not a login form
+    // for the account just made.
+    await page.goBack();
+    await page.waitForLoadState('domcontentloaded');
+    expect(page.url()).not.toMatch(/\/(login|signup)/);
+  });
+
+  test('logging in leaves no login page behind the back button', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.locator('[role="listitem"][id^="pin-"]').first()).toBeVisible();
+    await logIn(page);
+    await expect(page.getByRole('button', { name: `@${handle}` })).toBeVisible();
+    const landed = page.url();
+    // Signing in stands in the place of the login page rather than after it,
+    // so Back goes to the page the Log in link was clicked on - not to a login
+    // form for the session the reader is now in.
+    await page.goBack();
+    await page.waitForLoadState('domcontentloaded');
+    expect(page.url()).not.toMatch(/\/login/);
+    expect(page.url()).not.toBe(landed);
   });
 
   test('a watch clicked signed out happens, on the card it was clicked on, after logging in', async ({ page }) => {

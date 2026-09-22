@@ -50,6 +50,7 @@ Each recipe is a repeatable pattern. Update it when a run teaches something ([Le
 | Club finals and fight nights | @SportDesk | `Sports` | UEFA's own host announcement; the promotion's confirmed card; the broadcaster's schedule page for boxing | UEFA fixes final hosts two to three years ahead, so these are the cheapest forward pins in football - and it strips sponsor names for its own finals, so the address and the announcement disagree by design. Combat sport is the opposite: a UFC card is confirmed months out, a boxing date is *reported* before it is contracted and must go in as `estimated` with the wording quoted |
 | Disease events | @HealthDesk | `Health & Medicine` (plus `Science & Research`, `Geopolitics`) | WHO fact sheets, news items and the dated COVID-19 timeline; `stacks.cdc.gov` for the MMWR issue itself; the event's own article for the narrative | A WHO declaration is an **instant** at Geneva; an outbreak is a **period** and an ongoing one takes a null end. Place the pin where the event happened - Messina, Broad Street, Camp Funston, Ann Arbor - not at the reporting agency, unless the declaration *is* the event. WHO speech URLs rot, so cite the timeline the organisation maintains; `cdc.gov` 403s `curl` and has restructured whole sections away |
 | Weather seasons and climate reports | @ClimateDesk | `Weather`, `Climate & Environment` | The agency that *defines* the season (NHC, BOM) and the body that schedules the report (IPCC) | A season is a **period in force**, not a day: official bounds, `scheduled`, exclusive 00:00Z end. These are the only reliably forward-dated pins this vertical has |
+| Museum builds and upgrades | @BuildDesk | `Architecture & Real Estate` + `Arts & Literature` | The museum's own site or press release, its parent foundation's, then architecture press (ArchDaily, Dezeen, designboom) | The pin is the **opening or reopening**, dated from the institution's own announcement; placed at the building by geocoding the venue, and given a `PinPlace` when the building already stands |
 | Restaurants | @FoodDesk | `Food & Beverage` | The restaurant's own Wikipedia article, the MICHELIN Guide, local restaurant press, the group's own site | The pin is the **opening** (or the closing, or a menu reset), placed at the restaurant, geocoded through Nominatim and reverse-geocoded for its address label; a MICHELIN star count is a `PinRating`, a Guide selection without a star is a tag |
 | Startup funding rounds | @TechDesk | `Corporate & Finance` (plus the company's own sector) | The company's own newsroom post, its wire release read through a mirror, then the trade press that day | The pin is the **close of the round**, dated from the release's dateline and placed at the company's headquarters. The owner's preference is to point `sourceUrl` at **the page for the thing the pin is about** rather than at the article announcing it - the company homepage for a company-level event, the product page for a product - with the announcement post demoted to the top reference. Both of those pages are undated, so the date reasoning then has to say the source carries no date and name the reference the date came from. `price` stays **null** - the round size is what the event is, not what it cost - and the amount, the lead investor and the valuation go in the title, description and summary. A private company has no ticker, so `stocks` are the listed parties around it (the former parent, the strategic investor, the customer), all `related` |
 
@@ -127,7 +128,8 @@ Thailand and the United States.
    is not reproduced.
    That keeps Google's Enterprise `reviews` band off the bill, drops Yelp to a
    single request per business, and leaves the reviews where their authors
-   wrote them. All of them sit in **one block**, the pin's stored MICHELIN star
+   wrote them. A rating *count* appears only with an API key. All of them sit
+   in **one block**, the pin's stored MICHELIN star
    count included: a restaurant's ratings are one fact measured several times,
    so the pin page stops rendering `PinRatings` separately once the pin has a
    place, and the panel renders whenever *either* a stored rating or a place
@@ -148,17 +150,18 @@ Thailand and the United States.
 14. **The rating is scraped off Google Maps, keyless** (`src/server/placeScrape.ts`,
    `npm run places:refresh`, stored by 0060). The Places API path is still there
    and *wins when `GOOGLE_PLACES_API_KEY` is set*, but without a key the scrape
-   supplies the rating, the rating count and the opening state for nothing.
+   supplies the rating and the opening state for nothing (not the rating
+   count - see (c) below).
    Three things make it work, each learned the hard way:
    **(a) wait for the rating element, never sleep** - `networkidle2` plus a
    fixed delay returned a reduced panel about half the time, which is what made
    this look impossible at first; waiting for `[aria-label*="stars"]` read 4 of
    4. **(b) the rating comes from the `4.6 stars` aria-label**, not from the
-   panel text, because the label outlives the markup. **(c) the rating count
-   must be matched as a pair with the rating** - taking "the first number in
-   brackets" read `(707)` out of the phone number and put 707 ratings on The
-   French Laundry. Google serves the count only *some* of the time, so
-   `setScraped` COALESCEs it and a null read never wipes a good number.
+   panel text, because the label outlives the markup. **(c) the scrape reports NO
+   rating count** - four rules were tried and every one produced wrong numbers,
+   so a count appears only with an API key. See [Learnings](learnings.md); in
+   short, a panel's count cannot be told from a neighbouring place's or a
+   sub-rating's, and the same venue gave 259 one run and 5,204 the next.
    **Yelp cannot be scraped at all**: `yelp.com/biz/...` is 403 to our own
    browser as well as to curl, so a Yelp score needs the free Fusion key.
 15. **A scraped reading is stored; an API reading is not.** The opposite of
@@ -180,6 +183,56 @@ Thailand and the United States.
    Google's terms and expected to break; it is isolated behind a circuit breaker
    so that losing it costs nothing but the busy bar. It returned nothing from a
    datacenter IP in four different ways - see [Learnings](learnings.md).
+
+# Museum builds and upgrades
+
+@BuildDesk, categories `Architecture & Real Estate` **and** `Arts & Literature`
+- a museum build is both, and categories are tags so a pin takes both. Pins
+2544-2548 opened the vertical: LACMA's David Geffen Galleries, the Lucas Museum,
+the London Museum at Smithfield, Guggenheim Abu Dhabi and the Pergamonmuseum's
+North Wing.
+
+1. **The pin is the opening, not the museum**, and "upgrade" counts: a new wing,
+   a re-hang, a renovation finishing. Two of the five are refurbishments rather
+   than new buildings.
+2. **A museum announces its own opening date, so go to the museum first.** Four
+   of the five dates came from the institution: londonmuseum.org.uk carries
+   "Opening 28 Nov 2026" in its own header, lucasmuseum.org "Opening September
+   22, 2026", the Guggenheim Foundation's press release names 11 December 2026
+   in its title, and smb.museum announces 4 June 2027 in its. All four read
+   cleanly with `curl` - museum sites are not defended the way IMDb and Yelp
+   are - so this vertical needs no browser for its dates.
+3. **A roundup finds the candidates; it must not become the source.** An artnet
+   "most anticipated openings" piece produced the whole shortlist, and then every
+   pin got its *own* deep link, per
+   [Roundup articles need per-item sourceUrl](learnings.md).
+4. **Geocode the venue, and check which building you got.** "London Museum"
+   resolves to the **old** London Wall site (EC2Y 5HN); the new museum is the
+   Smithfield General Market (51.5182842, -0.1044402), which only comes back if
+   you search for the market. "Pergamonmuseum, Museumsinsel" returns nothing
+   while "Pergamonmuseum Berlin" returns the museum.
+5. **Give the pin a `PinPlace` only where the building stands.** LACMA (4.6),
+   the Lucas Museum (4.7) and the Pergamonmuseum (4.5, **"Temporarily closed"** -
+   which is exactly the point of that pin) all have listings. The London Museum's
+   Smithfield site and Guggenheim Abu Dhabi do not: one is not open, the other is
+   still a construction site, and Nominatim types it `construction`.
+   **Google's hours corroborated a date**: the Lucas Museum's listing reads
+   "Opens Tue Sep 22", matching the museum's own announcement.
+6. **The place lookup will offer you the annex.** "Pergamonmuseum's North Wing"
+   first matched **"Pergamon Museum. The Panorama"**, the temporary panorama
+   building across the road that exists *because* the museum is shut. The name
+   check caught it; the address check would not have.
+7. **Check what a Commons photograph actually shows.** The obvious LACMA files
+   are from 2014 and show the buildings the Geffen Galleries *replaced*; the
+   right one is `LACMA-Exterior-View-ROLM-ArchEyes-5.jpg`, dated February 2026
+   and described as Zumthor's galleries. `Pergamonmuseum Berlin Portikus.jpg`
+   looks like a photograph of the entrance and is **Alfred Messel's 1909
+   drawing** - public domain precisely because of its age. Read
+   `extmetadata.DateTimeOriginal` and `ImageDescription`, not the file name.
+8. **Guggenheim Abu Dhabi is saved without a picture.** Commons has only 2011
+   architectural *maquettes* and a shot of the visitor centre, and a photograph
+   of a model shown as a finished building would misinform. A pin with no
+   picture beats a pin with the wrong one.
 
 # Weather and natural disasters
 
