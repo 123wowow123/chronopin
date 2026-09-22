@@ -40,6 +40,40 @@ function DrawerSection({ title, children }: { title: string; children: React.Rea
   );
 }
 
+// The mark at the head of the drawer, standing where the button that opened
+// it stood: the site's logo, which becomes that button's three lines as the
+// panel slides in, and the logo again as it leaves. The two share one box and
+// cross over inside the panel's own 300ms - the logo turns and shrinks away,
+// then the lines draw in from the left, each a little after the one above.
+//
+// The lines are drawn as three rules rather than the menu icon's one path
+// (16 long, 2 thick, 3 apart in a 24 box, as src/components/ui/Icon.tsx has
+// them), since a path cannot arrive a line at a time. Box for box they are
+// the navbar's button, and the row they sit in is the navbar's row, so the
+// three lines come to rest exactly over the three the reader pressed.
+function DrawerMark({ open }: { open: boolean }) {
+  return (
+    <span aria-hidden className="grid size-7 place-items-center">
+      <LogoMark
+        className={`col-start-1 row-start-1 size-7 drop-shadow-[0_2px_6px_rgb(244_63_94/0.35)] transition duration-300 ease-out motion-reduce:transition-none ${
+          open ? '-translate-x-1 scale-75 -rotate-12 opacity-0' : 'translate-x-0 scale-100 rotate-0 opacity-100'
+        }`}
+      />
+      <span className="col-start-1 row-start-1 flex size-6 flex-col justify-center gap-[3px]">
+        {[0, 1, 2].map((line) => (
+          <span
+            key={line}
+            style={{ transitionDelay: open ? `${70 + line * 70}ms` : '0ms' }}
+            className={`h-[2px] w-4 self-center rounded-full bg-current transition duration-200 ease-out motion-reduce:transition-none ${
+              open ? 'translate-x-0 opacity-100' : '-translate-x-2 opacity-0'
+            }`}
+          />
+        ))}
+      </span>
+    </span>
+  );
+}
+
 // Below lg, the menu is a drawer that slides in from the left, like Twitter's:
 // the button sits at the left of the navbar (the avatar once signed in), the
 // page dims behind the drawer, and a tap on the dimmed page, Escape, a link or
@@ -136,7 +170,6 @@ export function MobileDrawer() {
   }
 
   const dragging = drag !== 0;
-  const fullName = user ? [user.firstName, user.lastName].filter(Boolean).join(' ') : '';
 
   const link = (href: string, icon: IconName, label: string) => (
     <Link href={href} aria-current={pathname === href ? 'page' : undefined} className={itemClass}>
@@ -191,26 +224,46 @@ export function MobileDrawer() {
         }`}
         style={dragging ? { translate: `${drag * 100}% 0`, transition: 'none' } : undefined}
       >
-        <div className="flex items-center gap-3 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-3">
+        {/* Signed out, this row is the navbar's: 52px tall, the same side
+            padding, so the mark in it lands on the menu button underneath and
+            the panel reads as the bar opening out. Signed in it is a profile
+            row instead, with room for the avatar and both names. */}
+        <div className={user ? 'flex items-center gap-3 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-3' : 'flex h-[52px] items-center gap-3 px-3'}>
           {user ? (
-            <Link href="/profile" className="flex min-w-0 flex-1 items-center gap-3 hover:no-underline">
+            // The way to the account's profile and settings, as at the head
+            // of the wide screen's account menu (SignedInAs in NavMenu): the
+            // handle, with where it goes under it, rather than a row further
+            // down saying the same thing again.
+            <Link href="/profile" className="-my-1.5 -ml-2 flex min-w-0 flex-1 items-center gap-3 rounded-2xl py-1.5 pr-1 pl-2 hover:bg-raised hover:no-underline">
               <UserAvatar userName={user.userName} pictureUrl={user.pictureUrl} className="size-11 text-base" />
               <span className="min-w-0">
                 <span className="block truncate text-lg leading-tight font-bold text-ink">{user.userName}</span>
-                {fullName ? <span className="block truncate text-sm text-subtle">{fullName}</span> : null}
+                <span className="block truncate text-sm text-subtle">{t('nav.profileSettings')}</span>
               </span>
+              <Icon name="chevron" className="ml-auto size-4 shrink-0 -rotate-90 text-subtle" />
             </Link>
           ) : (
-            // A plain link, not next/link: going home reloads the page, fresh from today.
-            // eslint-disable-next-line @next/next/no-html-link-for-pages
-            <a href="/" className="flex flex-1 items-center gap-2 font-display text-lg font-semibold tracking-tight text-ink hover:no-underline">
-              <LogoMark className="size-8 drop-shadow-[0_2px_6px_rgb(244_63_94/0.35)]" />
-              Chronopin
-            </a>
+            <>
+              {/* The menu button in its open state, where the navbar's own
+                  sits: pressing it puts the drawer away again. */}
+              <button
+                type="button"
+                className="-ml-1 shrink-0 rounded-full p-1 text-muted hover:bg-raised hover:text-ink"
+                aria-label={t('nav.closeMenu')}
+                onClick={() => setOpen(false)}
+              >
+                <DrawerMark open={open} />
+              </button>
+              {/* A plain link, not next/link: going home reloads the page, fresh from today. */}
+              {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+              <a href="/" className="min-w-0 flex-1 font-display text-lg font-semibold tracking-tight text-ink hover:no-underline">
+                Chronopin
+              </a>
+            </>
           )}
           <button
             type="button"
-            className="-mr-1.5 shrink-0 self-start rounded-full p-1.5 text-muted hover:bg-raised hover:text-ink"
+            className={`-mr-1.5 shrink-0 rounded-full p-1.5 text-muted hover:bg-raised hover:text-ink ${user ? 'self-start' : ''}`}
             aria-label={t('nav.closeMenu')}
             onClick={() => setOpen(false)}
           >
@@ -235,7 +288,9 @@ export function MobileDrawer() {
         <nav aria-label={t('nav.main')} className="flex-1">
           {/* What the page shows. */}
           <DrawerSection title={t('nav.browse')}>
-            <div className="px-1 pb-1">
+            {/* Room under the switch: the watched toggle is a filter, not a
+                third view, and butted against it the two read as one control. */}
+            <div className="px-1 pb-3">
               <ViewSwitch pathname={pathname} />
             </div>
             {user ? (
@@ -260,7 +315,6 @@ export function MobileDrawer() {
             <>
               <DrawerSection title={t('nav.you')}>
                 <DrawerNotifications className={itemClass} current={pathname === '/notifications'} />
-                {link('/profile', 'user', t('nav.profileSettings'))}
               </DrawerSection>
               {isAdmin ? <DrawerSection title={t('nav.admin')}>{link('/admin/views', 'shield', t('nav.dashboard'))}</DrawerSection> : null}
             </>

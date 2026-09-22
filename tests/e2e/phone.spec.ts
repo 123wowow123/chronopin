@@ -3,7 +3,7 @@ import { expectReloadMatchesTodayButton } from './todayPosition';
 
 // Below lg the filters ride in the nav drawer, so these run at phone size.
 
-// The tag panel's header row inside the drawer.
+// The tag panel's header row, which the drawer does not carry.
 const tagsRow = 'button[aria-label^="Tags:"]';
 
 // Whether the page moves under a wheel, rather than how it is held still.
@@ -16,29 +16,66 @@ async function scrolls(page: import('@playwright/test').Page) {
   return (await page.evaluate(() => window.scrollY)) !== from;
 }
 
-test('picking a category in the drawer searches for it and gives the page back', async ({ page }) => {
+test('the drawer lends the page its filters, but not the tag cloud', async ({ page }) => {
   await page.goto('/');
   const drawer = page.getByRole('dialog', { name: 'Menu' });
   await page.getByRole('button', { name: /open menu/i }).click();
   await expect(drawer).toBeVisible();
-  // The filters are the page's own panels, lent to the drawer.
-  await drawer.locator(tagsRow).click();
-  // The tag cloud's tags (categories lead it), not the chevrons that unfold a group.
-  const pills = drawer.getByRole('group', { name: 'Filter by tag' }).locator('button[aria-pressed]');
-  await expect(pills.first()).toBeVisible();
-  // The page is held still while the drawer covers it.
+  // The filters are the page's own panels, lent to the drawer: the sliders,
+  // and not the tag cloud, which needs a column to be read in.
+  await expect(drawer.locator('button[aria-label^="Posted within"]')).toBeVisible();
+  await expect(drawer.locator(tagsRow)).toHaveCount(0);
+  // The page is held still while the drawer covers it, and moves again after.
   expect(await scrolls(page)).toBe(false);
+  // The drawer's own menu button stands exactly where the one that opened it
+  // does, so its three lines come to rest over that button's three.
+  const trigger = page.getByRole('button', { name: /open menu/i });
+  const inDrawer = drawer.getByRole('button', { name: /^close menu$/i }).first();
+  expect(await inDrawer.boundingBox()).toEqual(await trigger.boundingBox());
 
-  // A pick searches for that category, which leaves the timeline page mounted
-  // and hidden for a moment behind the results - and puts the drawer away.
-  await pills.first().click();
-  await expect(page).toHaveURL(/\/search\?/);
+  // Two close it: the menu button in its open state at the head of the
+  // drawer (three lines where the logo was), and the cross opposite it.
+  await expect(drawer.getByRole('button', { name: /^close menu$/i })).toHaveCount(2);
+  await drawer.getByRole('button', { name: /^close menu$/i }).first().click();
   await expect(drawer).toBeHidden();
   await expect.poll(() => scrolls(page)).toBe(true);
+});
 
-  // The results' own filters are in the drawer now, saying what is picked.
-  await page.getByRole('button', { name: /open menu/i }).click();
-  await expect(drawer.locator(tagsRow)).not.toHaveAttribute('aria-label', 'Tags: All');
+// A search started from the page leaves the timeline mounted and hidden for a
+// moment behind the results, rather than blanking the screen between them.
+test("tapping a card's category searches for it and gives the page back", async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('article').first()).toBeVisible();
+  // A card's category label: a plain search for the pins sharing it.
+  await page.locator('article a[href*="q=tag%3A"]').first().click();
+  await expect(page).toHaveURL(/\/search\?/);
+  await expect(page.locator('article').first()).toBeVisible();
+  await expect.poll(() => scrolls(page)).toBe(true);
+});
+
+// The sort bar used to be pinned under the navbar, where it took the top of
+// every result page; on a phone it rides in the bottom left corner instead.
+test('the sort rides in the bottom left corner, not over the results', async ({ page }) => {
+  await page.goto('/search?q=anime');
+  await expect(page.locator('article').first()).toBeVisible();
+  // One of the three SortToggles is shown at this width: the floating one.
+  const sort = page.getByRole('group', { name: 'Sort results by' });
+  await expect(sort).toHaveCount(1);
+  const box = (await sort.boundingBox())!;
+  const view = page.viewportSize()!;
+  expect(box.y).toBeGreaterThan(view.height / 2);
+  // The left corner: "Today" keeps the right one.
+  expect(box.x).toBeLessThan(view.width / 2 - box.width / 2);
+
+  // It sorts from there, and stays where it is.
+  await sort.getByRole('button', { name: 'Date' }).click();
+  await expect(page).toHaveURL(/sort=date/);
+  await expect(sort.getByRole('button', { name: 'Date' })).toHaveAttribute('aria-pressed', 'true');
+  const moved = (await sort.boundingBox())!;
+  expect(moved.y).toBeGreaterThan(view.height / 2);
+  // Sorting by date brings "Today" up beside it, which must not push it over.
+  await expect(page.getByRole('button', { name: 'Today' })).toBeVisible();
+  expect(moved.x).toBe(box.x);
 });
 
 test('a card on the timeline pictures its video instead of loading the player', async ({ page }) => {

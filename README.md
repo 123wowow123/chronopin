@@ -506,10 +506,8 @@ Make add suggestion to this pin feature on detailed view. example:
 Suggest and provide additonal reference URL
 Suggest different start and end date with with reason and reference
 Suggest missing or correcting information
-
 This needs another table to hold it and needs logged in user tracking
-
-AI will then analyse feedback but not necessary make any changes as original sources are weighted to be the ultimate truth
+AI will then analyse feedback but not necessary make any changes as original sources are weighted to be the ultimate truth. It will try to validate new sources or do web search to bring new hight quality sources in and then make updates based on your references.
 
 
 Product pins should have notible features in long form summary
@@ -517,7 +515,5 @@ http://localhost:3000/pin/2346/the-airbus-a350f-makes-its-first-flight
 
 tag filter need exclude tag feature 
 - maybe using tabs on control panel for this
-
-site reserved filters like confidence should be in tag cloud styled to show it's reserved and search suggestion should show reserved tag if necessary
 
 - Redesign create pin / respond to pin page - just need url and a description free text field?

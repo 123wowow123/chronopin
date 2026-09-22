@@ -1,5 +1,28 @@
 import { describe, expect, it } from 'vitest';
-import { THREAD_TAG, autoTags, awardTag, awardTagsInText, cleanTag, marketTags, cloudSteps, cloudTags, nominationTag, parseTags, splitTags, tagKind, tagParent, groupTags, groupSelection, tagGroupPatterns, tagMembers } from './tags';
+import {
+  THREAD_TAG,
+  autoTags,
+  awardTag,
+  awardTagsInText,
+  cleanTag,
+  marketTags,
+  cloudSteps,
+  cloudTags,
+  nominationTag,
+  parseTags,
+  reservedName,
+  reservedPicked,
+  reservedSuggestions,
+  reservedTag,
+  reservedValues,
+  splitTags,
+  tagKind,
+  tagParent,
+  groupTags,
+  groupSelection,
+  tagGroupPatterns,
+  tagMembers,
+} from './tags';
 
 describe('cleanTag', () => {
   it('trims, drops a leading # and double quotes', () => {
@@ -51,10 +74,54 @@ describe('tagKind', () => {
     expect(tagKind('astronomy')).toBe('category');
   });
 
-  // PinTagView (0056) writes the thread tag's kind itself; it has to be the
+  // PinTagView (0063) writes the thread tag's kind itself; it has to be the
   // one this file would give the same name.
   it('agrees with the kind the thread tag is derived with', () => {
-    expect(tagKind(THREAD_TAG)).toBe('topic');
+    expect(tagKind(THREAD_TAG)).toBe('reserved');
+  });
+
+  it('knows the site keeps the confidence filters to itself', () => {
+    expect(tagKind('Estimated')).toBe('reserved');
+    expect(tagKind('low confidence')).toBe('reserved');
+    expect(tagKind('Estimated delivery')).toBe('topic');
+  });
+});
+
+describe('reserved filters', () => {
+  it('writes the term a pick stands for', () => {
+    expect(reservedTag('Thread')).toMatchObject({ field: 'tag', value: 'Thread' });
+    expect(reservedTag('estimated')).toMatchObject({ field: 'confidence', value: 'estimated' });
+    expect(reservedTag('High confidence')).toMatchObject({ field: 'confidence', value: 'high' });
+    expect(reservedTag('Studio Ghibli')).toBeUndefined();
+  });
+
+  // The counts come back as the database spells them, the badge's UNVERIFIED
+  // among them ("unknown"), and as a band's own name.
+  it('names a level and a band from what was counted', () => {
+    expect(reservedName('confidence', 'unknown')).toBe('Unverified');
+    expect(reservedName('confidence', 'delayed')).toBe('Delayed');
+    expect(reservedName('band', 'medium')).toBe('Medium confidence');
+    expect(reservedName('confidence', 'nonsense')).toBeUndefined();
+  });
+
+  it('takes a level back out in either spelling', () => {
+    expect(reservedValues(reservedTag('Unverified')!)).toEqual(['unverified', 'unknown']);
+    expect(reservedValues(reservedTag('Delayed')!)).toEqual(['delayed']);
+  });
+
+  it('reads what a query already picked, in the order they are shown', () => {
+    expect(reservedPicked({ tags: ['Thread', 'Artemis'], confidences: ['unknown'], confidenceBands: ['low'] })).toEqual(['Thread', 'Unverified', 'Low confidence']);
+    expect(reservedPicked({ tags: ['Artemis'], confidences: [], confidenceBands: [] })).toEqual([]);
+  });
+
+  it('suggests the filters a typed word starts', () => {
+    expect(reservedSuggestions('thr').map((r) => r.name)).toEqual(['Thread']);
+    expect(reservedSuggestions('conf').map((r) => r.name)).toEqual(['Confirmed', 'High confidence', 'Medium confidence', 'Low confidence']);
+    expect(reservedSuggestions('low conf').map((r) => r.name)).toEqual(['Low confidence']);
+    expect(reservedSuggestions('ghibli')).toEqual([]);
+    // One letter says too little to push four of these over the tags.
+    expect(reservedSuggestions('c')).toEqual([]);
+    expect(reservedSuggestions(' ')).toEqual([]);
   });
 });
 

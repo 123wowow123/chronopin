@@ -11,6 +11,10 @@
 //   thread  THREAD_TAG on a pin that answers another pin or is answered by one
 //           (0056; derived too, so threading a pin tags both ends at once)
 //
+// The thread tag is the site's own rather than anyone's: kind 'reserved'
+// (0063). So are the filters that read as tags without being stored as any -
+// the confidence: levels and score bands - see RESERVED_TAGS below.
+//
 //   user    also the pin's categories: tags of kind 'category', named from the
 //           list in src/lib/categories.ts (0043 turned the old column into these)
 //
@@ -18,8 +22,9 @@
 
 import { isCategory } from './categories';
 import { pinMarketRefs } from './predictionMarkets';
+import { CONFIDENCE_BANDS } from './referenceConfidence';
 
-export type TagKind = 'award' | 'nomination' | 'topic' | 'category';
+export type TagKind = 'award' | 'nomination' | 'topic' | 'category' | 'reserved';
 export type TagSource = 'user' | 'auto' | 'award' | 'thread';
 
 export type PinTagJson = { name: string; kind: TagKind; source: TagSource };
@@ -40,6 +45,7 @@ const AWARD_WORD = /\b(awards?|prize|prix|oscars?|emmys?|grammys?|tonys?|golden 
 const NOMINEE = /\bnominee$/i;
 
 export function tagKind(name: string): TagKind {
+  if (isReserved(name)) return 'reserved';
   if (isCategory(name)) return 'category';
   if (NOMINEE.test(name)) return 'nomination';
   return AWARD_WORD.test(name) ? 'award' : 'topic';
@@ -178,8 +184,102 @@ export function awardTagsInText(text: string | null | undefined): string[] {
 
 // What a pin in a thread is tagged: it answers another pin, or one answers it.
 // PinTagView derives the tag (0056); nothing writes it, and its kind there is
-// what tagKind says here.
+// what tagKind says here - 'reserved' (0063), since the site alone writes it.
 export const THREAD_TAG = 'Thread';
+
+/* Reserved */
+
+// The site's own filters, which read as tags without being anyone's: the
+// thread tag, and how well a pin's date and evidence are backed (the
+// confidence: terms a date badge and a score badge write). They stand in the
+// tag cloud and in the search box's suggestions beside real tags, marked as
+// the site's, and picking one writes the term the search already understands
+// (src/lib/searchTerms.ts) rather than a tag: term.
+//
+// Nobody can tag a pin one of these names: PinTag drops them on the way in
+// (src/server/model/pinTag.ts), so what a reserved name filters by is always
+// the site's own answer and never a curator's typing.
+export type ReservedTag = {
+  // Its label's message key (reserved.<key>), since these are the site's
+  // words and are read in the page's language, as a category's name is.
+  key: string;
+  // The English name, which is what the cloud counts and suggests under.
+  name: string;
+  // The term a pick writes.
+  field: 'tag' | 'confidence';
+  value: string;
+  icon: 'thread' | 'shield';
+};
+
+// The date confidence levels, firmest first, as their badge writes them
+// (src/components/pin/DateConfidence.tsx): the stored "unknown" is the badge's
+// UNVERIFIED, and the term takes either word.
+const CONFIDENCE_LEVELS = ['confirmed', 'scheduled', 'estimated', 'delayed', 'unverified'] as const;
+// The level the term's value stands for in the database, where they differ.
+const STORED_LEVEL: Record<string, string> = { unverified: 'unknown' };
+
+// Thread first, then how firmly the date is given, then how well the pin is
+// evidenced overall (high to low): the order they are shown in, which is
+// their own and not their counts'.
+export const RESERVED_TAGS: ReservedTag[] = [
+  { key: 'thread', name: THREAD_TAG, field: 'tag', value: THREAD_TAG, icon: 'thread' },
+  ...CONFIDENCE_LEVELS.map((level): ReservedTag => ({ key: level, name: capitalize(level), field: 'confidence', value: level, icon: 'shield' })),
+  ...[...CONFIDENCE_BANDS].reverse().map(({ band }): ReservedTag => ({ key: band, name: `${capitalize(band)} confidence`, field: 'confidence', value: band, icon: 'shield' })),
+];
+
+function capitalize(word: string) {
+  return word[0].toUpperCase() + word.slice(1);
+}
+
+// The reserved filter of this name, or undefined for an ordinary tag.
+export function reservedTag(name: string): ReservedTag | undefined {
+  const wanted = String(name || '').toLowerCase();
+  return RESERVED_TAGS.find((r) => r.name.toLowerCase() === wanted);
+}
+
+export const isReserved = (name: string): boolean => !!reservedTag(name);
+
+// Which reserved filters a query already holds, in the order above: its
+// tag: terms name the thread tag, and its confidence: terms the levels and
+// bands (parseSearchQuery stores a level as the database spells it).
+export function reservedPicked(query: { tags: string[]; confidences: string[]; confidenceBands: string[] }): string[] {
+  const has = (r: ReservedTag) =>
+    r.field === 'tag'
+      ? query.tags.some((tag) => tag.toLowerCase() === r.value.toLowerCase())
+      : query.confidences.includes(STORED_LEVEL[r.value] ?? r.value) || query.confidenceBands.includes(r.value);
+  return RESERVED_TAGS.filter(has).map((r) => r.name);
+}
+
+// Every spelling of a reserved filter's term value, for taking it back out of
+// a query: a date confidence level is stored as the database spells it, so
+// confidence:unverified and confidence:unknown are the same filter.
+export function reservedValues(reserved: ReservedTag): string[] {
+  const stored = STORED_LEVEL[reserved.value];
+  return stored ? [reserved.value, stored] : [reserved.value];
+}
+
+// A reserved filter's counted name, for the counts the cloud reads: a date
+// confidence level as the database stores it ("unknown" -> "Unverified"), or
+// a score band ("low" -> "Low confidence").
+export function reservedName(field: 'confidence' | 'band', value: string): string | undefined {
+  const wanted = String(value).toLowerCase();
+  const level = Object.entries(STORED_LEVEL).find(([, stored]) => stored === wanted)?.[0] ?? wanted;
+  return RESERVED_TAGS.find((r) => r.field === 'confidence' && r.value === (field === 'band' ? wanted : level))?.name;
+}
+
+// The reserved filters a typed word starts: "conf" suggests Confirmed and
+// the three confidence bands, "thr" the thread tag, "low conf" the one band.
+// Matched a word at a time, as the tag suggestions are (wordStartPattern),
+// and from the front for a phrase. One letter is not enough: "c" would put
+// four site filters over the tags before the typing says which was meant.
+export function reservedSuggestions(text: string): ReservedTag[] {
+  const typed = String(text || '').trim().toLowerCase();
+  if (typed.length < 2) return [];
+  return RESERVED_TAGS.filter((r) => {
+    const name = r.name.toLowerCase();
+    return name.startsWith(typed) || name.split(/\s+/).some((word) => word.startsWith(typed));
+  });
+}
 
 /* Prediction markets */
 

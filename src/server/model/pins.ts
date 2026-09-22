@@ -5,7 +5,7 @@ import BasePins from './basePins';
 import Pin from './pin';
 import PinTag from './pinTag';
 import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
-import { tagGroupPatterns } from '@/lib/tags';
+import { reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, looksLikePlaceText, placePatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
@@ -236,13 +236,13 @@ export default class Pins extends BasePins<Pin> {
   // Search results' tags with how many results carry each, busiest first.
   static countSearchTags(filter: SearchFilter, limit: number) {
     const { from, where, params } = searchClauses(filter);
-    return PinTag.count(from, where, params, limit);
+    return countTags(from, where, params, limit);
   }
 
   // Tags across the whole timeline: the pins its pages walk (live, confident
   // enough, created since the cutoff).
   static countTimelineTags(createdSince: Date | null | undefined, minConfidence: number | null, limit: number) {
-    return PinTag.count(
+    return countTags(
       'FROM "Pin"',
       [
         '"Pin"."utcDeletedDateTime" IS NULL',
@@ -380,6 +380,55 @@ const leanReferences = (as: string) => `
           ) ORDER BY "r"."id"), '[]'::json)
    FROM "PinReference" AS "r"
    WHERE "r"."pinId" = "${as}"."id")`;
+
+// The tag cloud's counts over a set of pins (the FROM and WHERE of a search
+// or of the timeline): the site's own reserved filters first, then the tags
+// people wrote, busiest first.
+//
+// The two are counted apart because the reserved ones are no rows: a pin's
+// date confidence is a column and its score is read off its references, and
+// neither is in "PinTagView". They also sit outside the tag `limit`, so the
+// cloud's strip of site filters is the same few every time.
+async function countTags(from: string, where: string[], params: unknown[], limit: number): Promise<TagCount[]> {
+  const [reserved, tags] = await Promise.all([countReserved(from, where, params), PinTag.count(from, where, params, limit)]);
+  return [...reserved, ...tags];
+}
+
+// How many of these pins each reserved filter holds: the derived reserved
+// tags ("Thread"), each date confidence level, and each band of the pin's
+// own score - the same width_bucket the confidence: term filters by, so a
+// count and the search it starts agree. A pin with no score is in no band.
+async function countReserved(from: string, where: string[], params: unknown[]): Promise<TagCount[]> {
+  const bars = `$${params.length + 1}`;
+  const rows = await db.query<{ field: 'tag' | 'confidence' | 'band'; value: string; count: number }>(
+    `
+      WITH "hits" AS (
+        SELECT DISTINCT "Pin"."id",
+          "Pin"."dateConfidence"::text AS "level",
+          width_bucket(${pinConfidenceOf('Pin')}, ${bars}::integer[]) AS "band"
+        ${from}
+        WHERE ${where.join('\n          AND ')}
+      )
+      SELECT 'tag' AS "field", "tg"."name"::text AS "value", COUNT(DISTINCT "hits"."id")::integer AS "count"
+      FROM "hits"
+        INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "hits"."id" AND "tg"."kind" = 'reserved'
+      GROUP BY "tg"."name"
+      UNION ALL
+      SELECT 'confidence', "level", COUNT(*)::integer FROM "hits" WHERE "level" IS NOT NULL GROUP BY "level"
+      UNION ALL
+      SELECT 'band', "band"::text, COUNT(*)::integer FROM "hits" WHERE "band" IS NOT NULL GROUP BY "band"`,
+    [...params, CONFIDENCE_BARS],
+  );
+  const counted = new Map<string, number>();
+  for (const row of rows) {
+    // A bucket is CONFIDENCE_BANDS' own index (the bars' gaps in order), and
+    // a name the site no longer reserves (a tag left in the view) is dropped.
+    const band = row.field === 'band' ? CONFIDENCE_BANDS[Number(row.value)]?.band : null;
+    const name = row.field === 'tag' ? row.value : reservedName(row.field, band ?? row.value);
+    if (name) counted.set(name, (counted.get(name) ?? 0) + row.count);
+  }
+  return [...counted].map(([name, count]) => ({ name, kind: 'reserved' as const, count }));
+}
 
 // A pin's confidence scored straight off "PinReference", for the queries that
 // filter by it before the view is involved. Spelled out here rather than

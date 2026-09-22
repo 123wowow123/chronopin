@@ -77,6 +77,7 @@ export function FloatingControls({
   summaryCaption,
   summaryIsPostedWithin = true,
   onToday,
+  bottom,
   aside,
 }: {
   children: React.ReactNode;
@@ -90,6 +91,11 @@ export function FloatingControls({
   // Whether that is the posted-within span (so its slider can drop its heading).
   summaryIsPostedWithin?: boolean;
   onToday?: () => void;
+  // Below lg only, at the foot of the screen on the left, opposite "Today": a
+  // control that must stay to hand while the rest are shut away in the drawer
+  // (the search page's sort). Wider, the pills are already down there and it
+  // has a place of its own on the page.
+  bottom?: React.ReactNode;
   // Shown under the controls on wide screens only (trending and new pins), in
   // the height they leave, and dropped when it has no room: narrower,
   // there is no room for it beside the cards.
@@ -150,6 +156,12 @@ export function FloatingControls({
   // In the drawer the panels are simply stacked, each with its own header:
   // the drawer scrolls, and its own close puts the lot away, so there is
   // nothing for the pills or the dimmer to do.
+  //
+  // The tag cloud is not among them. It is a cloud of sixty tags sized by how
+  // many pins carry each, read at a glance across a column; in a drawer on a
+  // phone it is a wall of words that pushes the sliders under it off the
+  // screen. Tags are still filtered there by typing a tag: term, or by
+  // tapping a card's own category label.
   if (inDrawer) {
     return (
       <>
@@ -157,7 +169,6 @@ export function FloatingControls({
           ? createPortal(
               <DrawerPanelContext value={true}>
                 <div className="flex flex-col gap-2">
-                  {tags?.control}
                   {children}
                   {span?.control}
                 </div>
@@ -165,6 +176,10 @@ export function FloatingControls({
               slot,
             )
           : null}
+        {/* Its own corner rather than a place in the row on the right: the
+            reader's thumb reaches the near side of a phone, and "Today"
+            keeps the corner it has everywhere else. */}
+        {bottom ? <div className="fixed bottom-3 left-3 z-30 flex max-w-[calc(100%-1.5rem)]">{bottom}</div> : null}
         <TodayBar onToday={onToday} />
       </>
     );

@@ -3,18 +3,18 @@
 import { usePathname, useRouter, useSearchParams } from '@/lib/client/navigation';
 import { Fragment, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
-import { canonicalCategory, isCategory } from '@/lib/categories';
+import { canonicalCategory } from '@/lib/categories';
 import { api } from '@/lib/client/api';
 import { hrefKeepingDate } from '@/lib/client/returnSpot';
 import { useSession } from '@/lib/client/session';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { formatStart } from '@/lib/format';
 import { hasTerm, term } from '@/lib/searchTerms';
-import type { TagCount } from '@/lib/tags';
+import { reservedName, reservedTag, type ReservedTag, type TagCount } from '@/lib/tags';
 import type { PinJson } from '@/lib/types';
 import { joinSearchQuery, splitSearchQuery, type QueryPart } from '@/server/util/searchQuery';
 import { useT } from '@/lib/client/i18n';
-import { categoryLabel } from '@/lib/i18n/labels';
+import { categoryLabel, tagLabel } from '@/lib/i18n/labels';
 import type { MessageKey, Translator } from '@/lib/i18n/translate';
 
 export const WATCHED = 'watch';
@@ -99,29 +99,48 @@ function termLabel(part: TermPart, t: Translator) {
     const count = part.value.split(',').filter((id) => id.trim()).length;
     return { field: null, value: t('search.pinCount', { count }) };
   }
-  return { field: t.dynamic(`search.fields.${part.field}`, part.field), value: isCategory(part.value) ? categoryLabel(t, part.value) : part.value };
+  // tag:, category: and confidence: name the site's own words - a category,
+  // or one of the reserved filters - which are read in the page's language;
+  // any other value is shown as it was typed.
+  const named = part.field === 'tag' || part.field === 'category' || part.field === 'confidence';
+  const name = part.field === 'confidence' ? (reservedName('confidence', part.value) ?? part.value) : part.value;
+  return { field: t.dynamic(`search.fields.${part.field}`, part.field), value: named ? tagLabel(t, { name }) : part.value };
 }
 
 // One row of the suggestions: a category or other tag to filter by (both
-// tag: terms), or a pin's title to search for.
+// tag: terms), one of the site's own filters (RESERVED_TAGS, which writes its
+// own term), or a pin's title to search for.
 type Suggestion =
   | { kind: 'category'; name: string; count: number }
+  | { kind: 'reserved'; name: string; filter: ReservedTag }
   | { kind: 'tag'; name: string; count: number }
   | { kind: 'pin'; pin: PinJson };
 
 type AutocompleteJson = { pins?: PinJson[]; tags?: TagCount[] };
 
-// The rows in the order they show: categories, then other tags, then pins.
+// The rows in the order they show: categories, then the site's own filters
+// and the tags people wrote (one group, the site's first), then pins.
 function toSuggestions(res: AutocompleteJson): Suggestion[] {
   const tags = res.tags || [];
   return [
     ...tags.filter((t) => t.kind === 'category').map((c): Suggestion => ({ kind: 'category', name: canonicalCategory(c.name), count: c.count })),
-    ...tags.filter((t) => t.kind !== 'category').map((t): Suggestion => ({ kind: 'tag', name: t.name, count: t.count })),
+    ...tags.flatMap((t): Suggestion[] => {
+      const filter = t.kind === 'reserved' ? reservedTag(t.name) : undefined;
+      return filter ? [{ kind: 'reserved', name: filter.name, filter }] : [];
+    }),
+    ...tags.filter((t) => t.kind !== 'category' && t.kind !== 'reserved').map((t): Suggestion => ({ kind: 'tag', name: t.name, count: t.count })),
     ...(res.pins || []).map((pin): Suggestion => ({ kind: 'pin', pin })),
   ];
 }
 
-const GROUP_LABEL = { category: 'search.groupCategories', tag: 'search.groupTags', pin: 'search.groupPins' } as const satisfies Record<Suggestion['kind'], MessageKey>;
+// A site filter is a tag as far as the list reads, so it sits under the same
+// heading as the tags rather than a group of one.
+const GROUP_LABEL = {
+  category: 'search.groupCategories',
+  reserved: 'search.groupTags',
+  tag: 'search.groupTags',
+  pin: 'search.groupPins',
+} as const satisfies Record<Suggestion['kind'], MessageKey>;
 
 // The navbar search: suggestions (matching categories, tags and titles) as you type, Enter to search, and a
 // Watched-only toggle for signed-in users (lg and up; below, it is in the drawer). The query sits in the box as items:
@@ -385,15 +404,17 @@ export function SearchBox() {
   }
 
   // Searches for a picked suggestion: a category or tag takes the typed text's
-  // place as a tag: term (once), a pin's title as text.
+  // place as a tag: term (once), a site filter as the term it stands for
+  // (confidence:estimated), a pin's title as text.
   function pick(suggestion: Suggestion) {
     if (suggestion.kind === 'pin') {
       setDraft(suggestion.pin.title);
       submit(query(suggestion.pin.title));
       return;
     }
+    const { field, value } = suggestion.kind === 'reserved' ? suggestion.filter : { field: 'tag' as const, value: suggestion.name };
     const rest = query('');
-    submit(hasTerm(rest, 'tag', suggestion.name) ? rest : query(term('tag', suggestion.name)));
+    submit(hasTerm(rest, field, value) ? rest : query(term(field, value)));
   }
 
   // Puts the field's text back as items and moves the field to `at` (counted
@@ -962,7 +983,7 @@ export function SearchBox() {
         >
           {suggestions.map((suggestion, index) => {
             const key = suggestion.kind === 'pin' ? `pin:${suggestion.pin.id}` : `${suggestion.kind}:${suggestion.name}`;
-            const header = index === 0 || suggestions[index - 1].kind !== suggestion.kind;
+            const header = index === 0 || GROUP_LABEL[suggestions[index - 1].kind] !== GROUP_LABEL[suggestion.kind];
             return (
               <Fragment key={key}>
                 {header ? (
@@ -986,6 +1007,20 @@ export function SearchBox() {
                       <span className="min-w-0">
                         <span className="line-clamp-2 text-ink sm:line-clamp-1">{suggestion.pin.title}</span>
                         <span className="block text-xs text-subtle">{formatStart(suggestion.pin, timeZone, {}, t.locale)}</span>
+                      </span>
+                    </>
+                  ) : suggestion.kind === 'reserved' ? (
+                    // The site's own filter: outlined as in the tag cloud's
+                    // strip, and ending in the term it writes rather than a
+                    // count, which says both that it is the site's and what
+                    // it will do.
+                    <>
+                      <Icon name={suggestion.filter.icon} className="mt-0.5 size-3.5 shrink-0 text-faint" />
+                      <span className="min-w-0 flex-1 truncate">
+                        <span className="rounded-full border border-dashed border-line px-2 py-0.5 text-ink">{tagLabel(t, { name: suggestion.name, kind: 'reserved' })}</span>
+                      </span>
+                      <span className="shrink-0 text-xs text-subtle">
+                        {suggestion.filter.field}:{suggestion.filter.value}
                       </span>
                     </>
                   ) : (

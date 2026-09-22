@@ -4,7 +4,7 @@
 // writing: PinTagView derives them, and so is the "Thread" tag a pin in a
 // thread carries (0056), which is a fact about two pins. See src/lib/tags.ts.
 
-import { autoTags, tagKind, uniqueTags, type TagCount, type TagSource } from '@/lib/tags';
+import { autoTags, isReserved, tagKind, uniqueTags, type TagCount, type TagSource } from '@/lib/tags';
 import * as db from '../db';
 import { wordStartPattern } from '../util/searchQuery';
 
@@ -21,7 +21,10 @@ export const inCategories = (param: string) =>
 // Replaces the pin's tags from this source with these names: its categories,
 // or the rest. True when they changed.
 async function replace(pinId: number, source: Stored, names: string[], categories = false): Promise<boolean> {
-  const wanted = uniqueTags(names).filter((name) => (tagKind(name) === 'category') === categories);
+  // A reserved name is the site's own filter (RESERVED_TAGS), never a row: a
+  // stored "Thread" would outrank the derived one, and a stored "Estimated"
+  // would stand in the cloud beside the confidence filter of that name.
+  const wanted = uniqueTags(names).filter((name) => !isReserved(name) && (tagKind(name) === 'category') === categories);
   const scope = `"pinId" = $1 AND "source" = $2 AND ("kind" = 'category') = $3`;
   const stored = await db.query<{ name: string }>(`SELECT "name"::text AS "name" FROM "PinTag" WHERE ${scope} ORDER BY "id"`, [pinId, source, categories]);
   // Categories keep their order: the first is the pin's main one.
@@ -100,14 +103,15 @@ export default class PinTag {
   }
 
   // Tags with a word starting with the typed text, busiest first, for the
-  // search suggestions.
+  // search suggestions. The reserved ones are left to the route, which offers
+  // every site filter the text starts and not only those that are rows here.
   static suggest(text: string, limit: number): Promise<TagCount[]> {
     return db.query<TagCount>(
       `
       SELECT min("tg"."name"::text) AS "name", min("tg"."kind") AS "kind", COUNT(DISTINCT "Pin"."id")::integer AS "count"
       FROM "PinTagView" AS "tg"
         INNER JOIN "Pin" ON "Pin"."id" = "tg"."pinId" AND "Pin"."utcDeletedDateTime" IS NULL
-      WHERE "tg"."name"::text ~* $1
+      WHERE "tg"."name"::text ~* $1 AND "tg"."kind" <> 'reserved'
       GROUP BY "tg"."name"
       ORDER BY 3 DESC, 1
       LIMIT $2`,
@@ -118,14 +122,16 @@ export default class PinTag {
   // Every tag's pin count across these pins (the FROM and WHERE of a search,
   // see model/pins.ts), busiest first. One spelling per name whatever its case.
   // Each but a category also says which category most of those pins carry,
-  // for the cloud's grouped mode.
+  // for the cloud's grouped mode. The reserved tags are left out: they are the
+  // site's own filters and countReserved has them, outside this `limit`, so
+  // the cloud always offers the same few rather than whichever fit today.
   static async count(from: string, where: string[], params: unknown[], limit: number): Promise<TagCount[]> {
     const rows = await db.query<TagCount>(
       `
       WITH "hits" AS (
         SELECT DISTINCT "tg"."name", "tg"."kind", "Pin"."id" AS "pinId"
         ${from}
-          INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "Pin"."id"
+          INNER JOIN "PinTagView" AS "tg" ON "tg"."pinId" = "Pin"."id" AND "tg"."kind" <> 'reserved'
         WHERE ${where.join('\n          AND ')}
       ),
       "counts" AS (

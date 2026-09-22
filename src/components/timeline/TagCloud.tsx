@@ -9,15 +9,15 @@ import { api } from '@/lib/client/api';
 import { hrefKeepingDate } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { refineQuery, removeTerm } from '@/lib/searchTerms';
-import { cloudSteps, cloudTags, groupSelection, groupTags, tagMembers, THREAD_TAG, type TagCount, type TagGroup } from '@/lib/tags';
+import { cloudSteps, cloudTags, groupSelection, groupTags, isReserved, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, tagMembers, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
-import { useInDrawerPanel, useTagFoldOpen } from './FloatingControls';
+import { useTagFoldOpen } from './FloatingControls';
 import { iconButton, PanelHeader } from './PanelHeader';
 import { WordCloud } from './WordCloud';
 import { useT } from '@/lib/client/i18n';
 import { FORMAT_WORDS } from '@/lib/i18n/formatWords';
-import { categoryLabel } from '@/lib/i18n/labels';
-import type { MessageKey, Translator } from '@/lib/i18n/translate';
+import { tagLabel } from '@/lib/i18n/labels';
+import type { MessageKey } from '@/lib/i18n/translate';
 
 // Whether the panel was last left open. Search results remount with each
 // query, so without this every pick would fold the panel away. The last
@@ -45,18 +45,16 @@ const STEP_CLASS = [
   'text-xl xl:text-lg',
   'text-2xl xl:text-xl font-semibold',
 ];
-// In the nav drawer the cloud is back in a column of its own width, so it
-// takes the column's sizes whatever the screen.
-const COLUMN_STEP_CLASS = ['', 'text-sm', 'text-[15px]', 'text-base', 'text-lg', 'text-xl font-semibold'];
-
 // What is picked, in brief ("Artemis", "Artemis +2"), or 'All' for nothing.
 function tagSummary(selected: string[], locale: Locale = 'en') {
   return !selected.length ? FORMAT_WORDS[locale].all : selected.length === 1 ? selected[0] : `${selected[0]} +${selected.length - 1}`;
 }
 
-// The value on the floating controls' tags pill (under "Tags").
+// The value on the floating controls' tags pill (under "Tags"): what the
+// cloud has picked, the site's own filters among the tags.
 export function tagPillSummary(query?: string, locale: Locale = 'en') {
-  return tagSummary(parseSearchQuery(query).tags, locale);
+  const picked = parseSearchQuery(query);
+  return tagSummary([...reservedPicked(picked), ...picked.tags.filter((name) => !isReserved(name))], locale);
 }
 
 // The tag filter in the floating controls, the first of them, with the
@@ -68,6 +66,10 @@ export function tagPillSummary(query?: string, locale: Locale = 'en') {
 // search query, so it shows and is edited in the navbar's search box; off the
 // search page a pick starts a search - unless the page takes the query
 // itself (the map does, staying where it is).
+//
+// Only where there is room to read it: the xl column, or its own pill
+// between lg and xl. Below lg the other filters ride in the nav drawer and
+// this one does not (FloatingControls).
 export function TagCloud({
   query,
   onlyWatched = false,
@@ -92,9 +94,6 @@ export function TagCloud({
   // pill): the pill is the header, and the cloud shows while the fold is open.
   const folded = useTagFoldOpen();
   const inFold = folded !== null;
-  // In the nav drawer (below lg) it is a panel among the drawer's rows, with
-  // its own header and the column's tag sizes.
-  const inDrawer = useInDrawerPanel();
   // Unique, since Next keeps the previous page's panel mounted (hidden).
   const optionsId = useId();
   const rootRef = useRef<HTMLDivElement>(null);
@@ -119,8 +118,14 @@ export function TagCloud({
     setWrappedState(next);
   };
   const [searching, startSearch] = useTransition();
-  const picked = useMemo(() => parseSearchQuery(query).tags, [query]);
+  const parsed = useMemo(() => parseSearchQuery(query), [query]);
+  // What is picked, the tags and the site's own filters apart: only the tags
+  // are sized, grouped and counted against the cloud's limit, and a site
+  // filter writes a term of its own (confidence:) rather than a tag: term.
+  const picked = useMemo(() => parsed.tags.filter((name) => !isReserved(name)), [parsed]);
+  const pickedFilters = useMemo(() => reservedPicked(parsed), [parsed]);
   const [selected, setSelected] = useOptimistic(picked);
+  const [reserved, setReserved] = useOptimistic(pickedFilters);
 
   const params = new URLSearchParams();
   if (query != null) params.set('q', query);
@@ -170,23 +175,27 @@ export function TagCloud({
   }, [open, expanded]);
 
   const needle = filter.trim().toLowerCase();
+  // The site's own filters lead the cloud in a strip of their own; the rest
+  // of the counts are the tags people wrote.
+  const written = useMemo(() => (counts ?? []).filter((t) => t.kind !== 'reserved'), [counts]);
   // Tags wrap up into their larger category (an award body's years, the
   // market exchanges); finding a tag looks through the wrapped ones too.
-  const groups = useMemo(() => (wrapped ? groupTags(counts ?? []) : []), [counts, wrapped]);
+  const groups = useMemo(() => (wrapped ? groupTags(written) : []), [written, wrapped]);
   const isSelected = (name: string) => selected.some((s) => s.toLowerCase() === name.toLowerCase());
   const tags = useMemo<TagGroup[]>(() => {
-    if (needle) return cloudTags((counts ?? []).filter((t) => t.name.toLowerCase().includes(needle)), [], SHOWN);
-    if (!wrapped) return cloudTags(counts ?? [], selected, SHOWN);
+    if (needle) return cloudTags(written.filter((t) => t.name.toLowerCase().includes(needle)), [], SHOWN);
+    if (!wrapped) return cloudTags(written, selected, SHOWN);
     // Picked tags outside any shown group stay listed on their own.
     return cloudTags(groups, groupSelection(groups, selected), SHOWN);
-  }, [counts, groups, selected, needle, wrapped]);
+  }, [written, groups, selected, needle, wrapped]);
   const steps = useMemo(() => cloudSteps(tags), [tags]);
-  const summary = tagSummary(selected, t.locale);
+  const summary = tagSummary([...reserved, ...selected], t.locale);
 
-  function go(edit: (q: string) => string, next: string[]) {
+  function go(edit: (q: string) => string, next: string[], nextReserved: string[] = reserved) {
     if (onQuery) {
       startSearch(() => {
         setSelected(next);
+        setReserved(nextReserved);
         onQuery(edit);
       });
       return;
@@ -198,9 +207,10 @@ export function TagCloud({
     // Nothing left to search for or filter by: that's the timeline.
     const href = current.size ? `/search?${current.toString()}` : '/';
     // Fewer tags picked is a wider search, which stays on the same date.
-    const widened = next.length < selected.length;
+    const widened = next.length + nextReserved.length < selected.length + reserved.length;
     startSearch(() => {
       setSelected(next);
+      setReserved(nextReserved);
       router.push(widened ? hrefKeepingDate(href) : href);
     });
   }
@@ -223,7 +233,25 @@ export function TagCloud({
       picked ? selected.filter((s) => s.toLowerCase() !== name.toLowerCase()) : [...selected, name],
     );
   };
-  const clear = () => go((q) => selected.reduce(withoutTag, q), []);
+
+  // A site filter's own term, put in or taken out. Taken out in every
+  // spelling the search reads it by (confidence:unverified is the stored
+  // confidence:unknown), so one typed by hand comes out too.
+  const withoutReserved = (query: string, name: string) => {
+    const site = reservedTag(name);
+    return site ? reservedValues(site).reduce((q, value) => removeTerm(q, site.field, value), query) : query;
+  };
+  const toggleReserved = (name: string) => {
+    const site = reservedTag(name);
+    if (!site) return;
+    const on = reserved.some((r) => r.toLowerCase() === name.toLowerCase());
+    go(
+      (q) => (on ? withoutReserved(q, name) : refineQuery(withoutReserved(q, name), site.field, site.value)),
+      selected,
+      on ? reserved.filter((r) => r.toLowerCase() !== name.toLowerCase()) : [...reserved, name],
+    );
+  };
+  const clear = () => go((q) => reserved.reduce(withoutReserved, selected.reduce(withoutTag, q)), [], []);
 
   return (
     <div ref={rootRef} className={`floating flex min-h-0 flex-col text-sm ${inFold ? 'max-xl:h-full' : ''} ${className}`}>
@@ -236,7 +264,7 @@ export function TagCloud({
         onToggle={() => setOpen(!open)}
         label={t('tagCloud.tagsSummary', { summary })}
         controls={optionsId}
-        reset={selected.length ? { label: t('tagCloud.clear'), onClick: clear } : undefined}
+        reset={selected.length || reserved.length ? { label: t('tagCloud.clear'), onClick: clear } : undefined}
         className={inFold ? 'max-xl:hidden' : ''}
       >
         <button
@@ -257,64 +285,69 @@ export function TagCloud({
             <FindTag value={filter} onChange={setFilter} className="min-w-0 flex-1" />
             <GroupedToggle wrapped={wrapped} onChange={setWrapped} />
           </div>
-          <div
-            role="group"
-            aria-label={t('tagCloud.filterBy')}
-            aria-busy={searching || undefined}
-            className={`flex max-h-[min(22rem,50dvh)] flex-wrap content-start items-baseline gap-x-2.5 gap-y-1.5 overflow-y-auto overscroll-contain px-3.5 pb-3 ${inFold ? 'max-xl:max-h-none max-xl:flex-1' : ''}`}
-          >
-            {tags.map((tag) => {
-              const members = tag.members;
-              const pressed = isSelected(tag.name);
-              const partly = !pressed && tagMembers(tag).some((m) => isSelected(m.name));
-              const open = !!members && (unfolded.has(tag.name) || partly);
-              return (
-                <Fragment key={tag.name}>
-                  <span className="inline-flex items-baseline">
-                    <button
-                      type="button"
-                      aria-pressed={pressed}
-                      onClick={() => toggle(tag.name)}
-                      title={`${tagLabel(t, tag)}: ${t('tagCloud.pins', { count: tag.count })}${members ? `, ${t('tagCloud.tags', { count: members.length })}` : ''}`}
-                      className={`${(inDrawer ? COLUMN_STEP_CLASS : STEP_CLASS)[steps.get(tag.name.toLowerCase()) ?? 1]} rounded-md px-1 text-left leading-snug transition-colors ${
-                        pressed
-                          ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset'
-                          : tag.kind === 'award' || tag.kind === 'nomination' || tag.kind === 'category'
-                            ? 'text-ink hover:text-link'
-                            : 'text-muted hover:text-ink'
-                      } ${tag.count === 0 && !pressed ? 'opacity-50' : ''}`}
-                    >
-                      {threadIcon(tag.name)}
-                      {tagLabel(t, tag)}
-                      <span className="ml-1 text-sm font-normal text-subtle tabular-nums xl:text-xs">
-                        {tag.count}
-                        <span className="sr-only"> {t('tagCloud.pinsWord', { count: tag.count })}</span>
-                      </span>
-                    </button>
-                    {members ? (
+          {/* The site's filters lead the cloud inside its scroll rather than
+              standing over it: in a column this narrow, a strip that stayed
+              put would take the height the tags are read in. */}
+          <div className={`max-h-[min(22rem,50dvh)] overflow-y-auto overscroll-contain px-3.5 pb-3 ${inFold ? 'max-xl:max-h-none max-xl:flex-1' : ''}`}>
+            <ReservedFilters counts={counts ?? []} selected={reserved} needle={needle} onToggle={toggleReserved} className="pb-2.5" />
+            <div
+              role="group"
+              aria-label={t('tagCloud.filterBy')}
+              aria-busy={searching || undefined}
+              className="flex flex-wrap content-start items-baseline gap-x-2.5 gap-y-1.5"
+            >
+              {tags.map((tag) => {
+                const members = tag.members;
+                const pressed = isSelected(tag.name);
+                const partly = !pressed && tagMembers(tag).some((m) => isSelected(m.name));
+                const open = !!members && (unfolded.has(tag.name) || partly);
+                return (
+                  <Fragment key={tag.name}>
+                    <span className="inline-flex items-baseline">
                       <button
                         type="button"
-                        aria-expanded={open}
-                        aria-label={t(open ? 'tagCloud.hideMembers' : 'tagCloud.showMembers', { count: members.length, name: tagLabel(t, tag) })}
-                        title={t('tagCloud.tagsInside', { count: members.length })}
-                        onClick={() => unfold(tag.name)}
-                        className="ml-0.5 rounded px-0.5 text-[11px] text-subtle hover:text-ink"
+                        aria-pressed={pressed}
+                        onClick={() => toggle(tag.name)}
+                        title={`${tagLabel(t, tag)}: ${t('tagCloud.pins', { count: tag.count })}${members ? `, ${t('tagCloud.tags', { count: members.length })}` : ''}`}
+                        className={`${STEP_CLASS[steps.get(tag.name.toLowerCase()) ?? 1]} rounded-md px-1 text-left leading-snug transition-colors ${
+                          pressed
+                            ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset'
+                            : tag.kind === 'award' || tag.kind === 'nomination' || tag.kind === 'category'
+                              ? 'text-ink hover:text-link'
+                              : 'text-muted hover:text-ink'
+                        } ${tag.count === 0 && !pressed ? 'opacity-50' : ''}`}
                       >
-                        <Icon name="chevron" className={`size-3.5 transition-transform ${open ? 'rotate-180' : ''}`} />
+                        {tagLabel(t, tag)}
+                        <span className="ml-1 text-sm font-normal text-subtle tabular-nums xl:text-xs">
+                          {tag.count}
+                          <span className="sr-only"> {t('tagCloud.pinsWord', { count: tag.count })}</span>
+                        </span>
                       </button>
-                    ) : null}
-                  </span>
-                  {open ? <Members members={members!} isSelected={isSelected} onToggle={toggle} unfolded={unfolded} onUnfold={unfold} /> : null}
-                </Fragment>
-              );
-            })}
-            {!counts ? (
-              <p role="status" className="py-1 text-xs text-subtle">
-                {t('tagCloud.loading')}
-              </p>
-            ) : !tags.length ? (
-              <p className="py-1 text-xs text-subtle">{needle ? t('tagCloud.noMatch') : t('tagCloud.none')}</p>
-            ) : null}
+                      {members ? (
+                        <button
+                          type="button"
+                          aria-expanded={open}
+                          aria-label={t(open ? 'tagCloud.hideMembers' : 'tagCloud.showMembers', { count: members.length, name: tagLabel(t, tag) })}
+                          title={t('tagCloud.tagsInside', { count: members.length })}
+                          onClick={() => unfold(tag.name)}
+                          className="ml-0.5 rounded px-0.5 text-[11px] text-subtle hover:text-ink"
+                        >
+                          <Icon name="chevron" className={`size-3.5 transition-transform ${open ? 'rotate-180' : ''}`} />
+                        </button>
+                      ) : null}
+                    </span>
+                    {open ? <Members members={members!} isSelected={isSelected} onToggle={toggle} unfolded={unfolded} onUnfold={unfold} /> : null}
+                  </Fragment>
+                );
+              })}
+              {!counts ? (
+                <p role="status" className="py-1 text-xs text-subtle">
+                  {t('tagCloud.loading')}
+                </p>
+              ) : !tags.length ? (
+                <p className="py-1 text-xs text-subtle">{needle ? t('tagCloud.noMatch') : t('tagCloud.none')}</p>
+              ) : null}
+            </div>
           </div>
         </div>
       ) : null}
@@ -322,14 +355,76 @@ export function TagCloud({
         <TagCloudView
           countsUrl={countsUrl}
           selected={selected}
+          reserved={reserved}
           busy={searching}
           wrapped={wrapped}
           onWrappedChange={setWrapped}
           onToggle={toggle}
+          onToggleReserved={toggleReserved}
           onClear={clear}
           onClose={() => setExpanded(false)}
         />
       ) : null}
+    </div>
+  );
+}
+
+// The site's own filters (RESERVED_TAGS): the thread tag, how firmly a pin's
+// date is given, and how well the pin is evidenced. They read as tags and are
+// picked like tags, but nobody wrote them, so they lead the cloud in a strip
+// of their own - in their own order rather than by count, outlined and locked
+// rather than sized - and never stand among the words people typed. A filter
+// no pin here answers is left out, unless it is picked (which is how it is
+// unpicked again).
+function ReservedFilters({
+  counts,
+  selected,
+  needle = '',
+  onToggle,
+  className = '',
+}: {
+  counts: TagCount[];
+  selected: string[];
+  // The find box narrows these too, by the name as it is read here.
+  needle?: string;
+  onToggle: (name: string) => void;
+  className?: string;
+}) {
+  const t = useT();
+  const on = (name: string) => selected.some((s) => s.toLowerCase() === name.toLowerCase());
+  const shown = RESERVED_TAGS.map((filter) => ({
+    ...filter,
+    label: tagLabel(t, { name: filter.name, kind: 'reserved' }),
+    count: counts.find((c) => c.name.toLowerCase() === filter.name.toLowerCase())?.count ?? 0,
+  }))
+    .filter((filter) => filter.count > 0 || on(filter.name))
+    .filter((filter) => !needle || filter.label.toLowerCase().includes(needle) || filter.name.toLowerCase().includes(needle));
+  if (!shown.length) return null;
+  return (
+    <div role="group" aria-label={t('tagCloud.reserved')} className={`flex flex-wrap items-center gap-1.5 ${className}`}>
+      <span aria-hidden className="mr-0.5 inline-flex items-center gap-1 text-[11px] font-semibold tracking-wide text-faint uppercase">
+        <Icon name="lock" className="size-3" />
+        {t('tagCloud.reserved')}
+      </span>
+      {shown.map((filter) => (
+        <button
+          key={filter.name}
+          type="button"
+          aria-pressed={on(filter.name)}
+          onClick={() => onToggle(filter.name)}
+          title={`${t('tagCloud.reservedTitle', { name: filter.label })}\n${t('tagCloud.pins', { count: filter.count })}`}
+          className={`inline-flex items-center gap-1 rounded-full border border-dashed px-1.5 py-0.5 text-[11px] transition-colors ${
+            on(filter.name) ? 'border-accent/60 bg-accent/15 text-link' : 'border-line text-muted hover:border-tint/40 hover:text-ink'
+          }`}
+        >
+          <Icon name={filter.icon} className="size-3 shrink-0" />
+          {filter.label}
+          <span className="text-subtle tabular-nums">
+            {filter.count}
+            <span className="sr-only"> {t('tagCloud.pinsWord', { count: filter.count })}</span>
+          </span>
+        </button>
+      ))}
     </div>
   );
 }
@@ -367,7 +462,6 @@ function Members({
                   isSelected(m.name) ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset' : 'text-muted hover:text-ink'
                 }`}
               >
-                {threadIcon(m.name)}
                 {m.name}
                 <span className="ml-1 text-sm text-subtle xl:text-xs">{m.count}</span>
               </button>
@@ -449,20 +543,13 @@ function GroupedToggle({ wrapped, onChange }: { wrapped: boolean; onChange: (wra
 // How many tags the big cloud reads.
 const VIEW_LIMIT = 200;
 
-const KIND_LABEL: Record<TagCount['kind'], MessageKey> = { award: 'tagCloud.kindAward', nomination: 'tagCloud.kindNomination', topic: 'tagCloud.kindTag', category: 'tagCloud.kindCategory' };
-
-// A tag as shown: a category in the page's language, any other by its own name.
-function tagLabel(t: Translator, tag: { name: string; kind?: TagCount['kind'] }) {
-  return tag.kind === 'category' ? categoryLabel(t, tag.name) : tag.name;
-}
-
-// The thread tag wears the icon the cards and the pin's own chips mark a
-// thread with (src/components/pin/PinTags.tsx). Sized in em: the cloud's
-// steps set the word's size, and the icon follows it.
-function threadIcon(name: string) {
-  if (name.toLowerCase() !== THREAD_TAG.toLowerCase()) return null;
-  return <Icon name="thread" className="mr-0.5 inline size-[0.95em] align-[-0.1em]" />;
-}
+const KIND_LABEL: Record<TagCount['kind'], MessageKey> = {
+  award: 'tagCloud.kindAward',
+  nomination: 'tagCloud.kindNomination',
+  topic: 'tagCloud.kindTag',
+  category: 'tagCloud.kindCategory',
+  reserved: 'tagCloud.kindReserved',
+};
 
 // The tag cloud blown up over the page, WordArt style (WordCloud): up to 200
 // tags packed into a cloud, the busiest largest, flowing around the pointer.
@@ -470,19 +557,23 @@ function threadIcon(name: string) {
 function TagCloudView({
   countsUrl,
   selected,
+  reserved,
   busy,
   wrapped,
   onWrappedChange,
   onToggle,
+  onToggleReserved,
   onClear,
   onClose,
 }: {
   countsUrl: string;
   selected: string[];
+  reserved: string[];
   busy: boolean;
   wrapped: boolean;
   onWrappedChange: (wrapped: boolean) => void;
   onToggle: (name: string) => void;
+  onToggleReserved: (name: string) => void;
   onClear: () => void;
   onClose: () => void;
 }) {
@@ -513,12 +604,15 @@ function TagCloudView({
   }, [onClose]);
 
   const needle = filter.trim().toLowerCase();
+  // As in the panel: the site's own filters keep their strip, and the words
+  // in the cloud are the tags people wrote.
+  const written = useMemo(() => (counts ?? []).filter((t) => t.kind !== 'reserved'), [counts]);
   const tags = useMemo<TagGroup[]>(() => {
     const flat = needle || !wrapped;
-    const groups = flat ? [] : groupTags(counts ?? []);
-    const all = cloudTags(flat ? (counts ?? []) : groups, flat ? selected : groupSelection(groups, selected), VIEW_LIMIT);
+    const groups = flat ? [] : groupTags(written);
+    const all = cloudTags(flat ? written : groups, flat ? selected : groupSelection(groups, selected), VIEW_LIMIT);
     return needle ? all.filter((t) => t.name.toLowerCase().includes(needle)) : all;
-  }, [counts, selected, needle, wrapped]);
+  }, [written, selected, needle, wrapped]);
   const onHot = useCallback((tag: TagCount | null) => setHot(tag ? (tags.find((t) => t.name === tag.name) ?? tag) : null), [tags]);
 
   // Portalled to the body, above the navbar and out of the floating
@@ -532,11 +626,11 @@ function TagCloudView({
           <h2 id={titleId} className="shrink-0 text-base font-semibold text-ink">
             {t('tagCloud.title')}
           </h2>
-          {counts ? <span className="shrink-0 text-sm text-subtle">{t('tagCloud.tags', { count: counts.length })}</span> : null}
+          {counts ? <span className="shrink-0 text-sm text-subtle">{t('tagCloud.tags', { count: written.length })}</span> : null}
           <FindTag value={filter} onChange={setFilter} className="min-w-0 flex-1 max-sm:order-last max-sm:basis-full" />
           <span className="flex shrink-0 items-center gap-1 max-sm:ml-auto">
             <GroupedToggle wrapped={wrapped} onChange={onWrappedChange} />
-            {selected.length ? (
+            {selected.length || reserved.length ? (
               <button type="button" onClick={onClear} className={iconButton} aria-label={t('tagCloud.clear')} title={t('tagCloud.clear')}>
                 <Icon name="filter-off" className="size-5" />
               </button>
@@ -546,6 +640,7 @@ function TagCloudView({
             </button>
           </span>
         </div>
+        <ReservedFilters counts={counts ?? []} selected={reserved} needle={needle} onToggle={onToggleReserved} className="border-b border-line px-5 py-2 max-sm:px-3" />
         <div aria-busy={busy || undefined} className="relative min-h-60 flex-1 overflow-hidden">
           {failed ? (
             <p className="absolute inset-0 flex items-center justify-center text-sm text-subtle">{t('tagCloud.unavailable')}</p>

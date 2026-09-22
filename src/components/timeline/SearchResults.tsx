@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { FollowButton } from '@/components/pin/FollowButton';
+import { Icon, type IconName } from '@/components/ui/Icon';
 import { CardGrid } from '@/components/pin/CardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { UserAvatar } from '@/components/ui/UserAvatar';
@@ -31,20 +32,44 @@ type SortBy = 'date' | 'relevance';
 
 const rail = "relative lg:min-h-[calc(100dvh-52px-6rem)] lg:before:absolute lg:before:top-0 lg:before:-bottom-24 lg:before:left-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']";
 
-function SortToggle({ value, onChange, className = '' }: { value: SortBy; onChange: (value: SortBy) => void; className?: string }) {
+// How the results are sorted, as a segmented control. `compact` is the one in
+// the bottom left of a phone's screen, and it is built to the "Today" button
+// opposite it (TodayBar in FloatingControls): the same floating panel, the
+// same 44px capsule, the same medium ink text at px-3 - so the two corners
+// read as one row of controls rather than two designs. It carries no caption:
+// two words that say what they do need none, and a phone's row has no width
+// to spare for one. Its options fill the capsule's height, so the one in use
+// is a thumb slid under the word rather than a button inside a box.
+// What each sort is: the best matches first, or the timeline's own order.
+// Coloured as "Today" beside it colours its target, and in the bottom row's
+// own language - the timeline icon is the future blue the span pill gives it.
+// On the chosen option they lie on the accent and take its white.
+const SORT_ICON = {
+  relevance: { name: 'sparkle', className: 'text-link' },
+  date: { name: 'timeline', className: 'text-future' },
+} as const satisfies Record<SortBy, { name: IconName; className: string }>;
+
+function SortToggle({ value, onChange, compact = false, className = '' }: { value: SortBy; onChange: (value: SortBy) => void; compact?: boolean; className?: string }) {
   const t = useT();
+  const option = (chosen: boolean) =>
+    compact
+      ? `flex items-center gap-1.5 self-stretch rounded-full px-3 font-medium transition-colors ${chosen ? 'bg-accent text-white' : 'text-ink hover:bg-raised'}`
+      : // Tighter than the floating one: with the caption beside them, both
+        // options and their icons have a 16rem column to fit into.
+        `flex flex-1 items-center justify-center gap-1 rounded-lg px-2 py-1 font-medium capitalize max-lg:py-2 transition-colors ${chosen ? 'bg-accent text-white' : 'text-muted hover:bg-raised hover:text-ink'}`;
   return (
-    <div role="group" aria-label={t('search.sortResultsBy')} className={`flex items-center gap-1 p-1.5 text-sm ${className}`}>
-      <span className="px-2 whitespace-nowrap text-subtle">{t('search.sortBy')}</span>
-      {(['relevance', 'date'] as const).map((option) => (
-        <button
-          key={option}
-          type="button"
-          aria-pressed={value === option}
-          onClick={() => onChange(option)}
-          className={`flex-1 rounded-lg px-2.5 py-1 font-medium capitalize max-lg:py-2 transition-colors ${value === option ? 'bg-accent text-white' : 'text-muted hover:bg-raised hover:text-ink'}`}
-        >
-          {t(option === 'relevance' ? 'search.sortRelevance' : 'search.sortDate')}
+    <div
+      role="group"
+      aria-label={t('search.sortResultsBy')}
+      className={`flex items-center text-sm ${compact ? 'h-11 min-w-0 gap-1 rounded-full p-1' : 'gap-1 p-1.5'} ${className}`}
+    >
+      {compact ? null : <span className="px-2 whitespace-nowrap text-subtle">{t('search.sortBy')}</span>}
+      {(['relevance', 'date'] as const).map((sort) => (
+        <button key={sort} type="button" aria-pressed={value === sort} onClick={() => onChange(sort)} className={option(value === sort)}>
+          {/* On a 320px screen the two words alone leave "Today" opposite
+              them its room; the icons go rather than crowd it. */}
+          <Icon name={SORT_ICON[sort].name} className={`size-4 shrink-0 ${compact ? 'max-[359px]:hidden' : ''} ${value === sort ? '' : SORT_ICON[sort].className}`} />
+          {t(sort === 'relevance' ? 'search.sortRelevance' : 'search.sortDate')}
         </button>
       ))}
     </div>
@@ -428,6 +453,7 @@ export function SearchResults({
           summaryIsPostedWithin={!searchedUser && !searchedCompany}
           onToday={sortBy === 'date' && bags.length ? holdNow : undefined}
           sort={canSort ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : undefined}
+          bottom={canSort ? <SortToggle compact value={sortBy} onChange={changeSort} className="floating" /> : undefined}
           tags={{
             summary: tagPillSummary(query, t.locale),
             control: (
@@ -460,10 +486,13 @@ export function SearchResults({
           {searchedCompany ? <SearchedCompanyPanel company={searchedCompany} /> : null}
         </FloatingControls>
 
-        {/* Narrower, the floating controls fold away; sorting is too important to
-            hide with them, so it gets a bar of its own pinned under the navbar. */}
+        {/* Between lg and xl the floating controls fold away behind pills, and
+            sorting is too important to hide with them, so it gets a bar of its
+            own pinned under the navbar. On a phone that bar ate the top of the
+            results: there it rides in the bottom left corner instead, under
+            the thumb and opposite "Today" (the `bottom` control above). */}
         {canSort ? (
-          <div data-sticky-sort className="sticky top-[52px] z-20 -mx-3 flex justify-center bg-header/85 px-3 py-2 shadow-[0_1px_0_var(--color-line)] backdrop-blur-md lg:-mx-4 xl:hidden">
+          <div data-sticky-sort className="sticky top-[52px] z-20 -mx-3 flex justify-center bg-header/85 px-3 py-2 shadow-[0_1px_0_var(--color-line)] backdrop-blur-md max-lg:hidden lg:-mx-4 xl:hidden">
             <SortToggle value={sortBy} onChange={changeSort} className="w-full max-w-sm rounded-xl bg-field ring-1 ring-line ring-inset" />
           </div>
         ) : null}

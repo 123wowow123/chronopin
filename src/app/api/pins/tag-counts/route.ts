@@ -5,9 +5,11 @@ import { searchPageTagCounts, TAG_CLOUD_MAX, TAG_CLOUD_SIZE, timelineTagCounts }
 import { resolveCreatedSince } from '@/server/util/createdFilter';
 import { requestTimeZone } from '@/server/viewer';
 
-// The tag cloud's tags, [{ name, kind, count }], busiest first.
+// The tag cloud's tags, [{ name, kind, count }], busiest first, the site's
+// own reserved filters (kind 'reserved') first of all - they stand outside
+// `limit`, so the cloud offers the same few whatever else is busy today.
 // GET /api/pins/tag-counts?created_within=1w                    the timeline
-// GET /api/pins/tag-counts?q=anime tag:Artemis&f=watch          a search (its tag: terms are ignored)
+// GET /api/pins/tag-counts?q=anime tag:Artemis&f=watch          a search (the terms the cloud writes are ignored)
 // Either takes created_since=ISO in place of created_within, and limit=N
 // (default 60, at most 200) for how many tags.
 export const GET = route(async (request: NextRequest) => {

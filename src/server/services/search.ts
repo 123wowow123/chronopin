@@ -180,13 +180,18 @@ function searchLink(request: SearchRequest, direction: 'previous' | 'next', last
 }
 
 // The tag cloud's tags for a search: its results' tags, busiest first, with
-// its tag: terms left out, so each tag counts what picking it would add.
+// the terms the cloud writes left out, so each tag counts what picking it
+// would add. The site's reserved filters are counted too (countReserved).
 export async function searchTagCounts(
   searchText: string,
   limit: number,
   options: SearchOptions & { createdSince?: Date | null } = {},
 ): Promise<TagCount[]> {
-  const query = { ...parseSearchQuery(searchText), tags: [] };
+  // The cloud counts the pins its own picks would narrow, so it leaves out
+  // the terms it writes: the tag: ones, and the confidence: levels and bands
+  // its reserved filters stand for. Otherwise a pick would zero out every
+  // other value of the same field, and there would be no way back.
+  const query = { ...parseSearchQuery(searchText), tags: [], confidences: [], confidenceBands: [] };
   return Pins.countSearchTags({ ...(await searchFilter(query, options)), createdSince: options.createdSince }, limit);
 }
 

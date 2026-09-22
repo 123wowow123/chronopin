@@ -18,14 +18,10 @@ type MenuItem = { href: string; label: MessageKey; icon: IconName };
 
 // The account menu, in groups separated by a rule. Admin tools only for admins.
 // No Watched pins: the search box's Watched toggle sits beside it on wide screens.
+// Profile and settings are not a row here: the block at the head of the menu
+// (SignedInAs) is that link, since it already names the account they belong to.
 function accountGroups(isAdmin: boolean): MenuItem[][] {
-  const groups: MenuItem[][] = [
-    [{ href: '/profile', label: 'nav.profileSettings', icon: 'user' }],
-  ];
-  if (isAdmin) {
-    groups.push([{ href: '/admin/views', label: 'nav.admin', icon: 'shield' }]);
-  }
-  return groups;
+  return isAdmin ? [[{ href: '/admin/views', label: 'nav.admin', icon: 'shield' }]] : [];
 }
 
 // Timeline or Map, with the current one highlighted, so it reads as a choice
@@ -96,16 +92,21 @@ function MenuLinks({ groups }: { groups: MenuItem[][] }) {
   );
 }
 
+// Who is signed in, at the head of the account menu - and the way to their
+// profile and settings, which is what the account named here opens on. The
+// handle leads, with where it goes under it, rather than a separate row
+// saying the same name again.
 function SignedInAs({ userName, pictureUrl }: { userName: string; pictureUrl?: string | null }) {
   const t = useT();
   return (
-    <div className="flex items-center gap-2.5 border-b border-line px-3 py-2.5">
+    <Link href="/profile" className="flex items-center gap-2.5 border-b border-line px-3 py-2.5 hover:bg-raised hover:no-underline">
       <UserAvatar userName={userName} pictureUrl={pictureUrl} className="size-8 text-sm" />
-      <div className="min-w-0">
-        <div className="text-xs text-subtle">{t('nav.signedInAs')}</div>
-        <div className="truncate text-sm font-semibold text-ink">{userName}</div>
-      </div>
-    </div>
+      <span className="min-w-0">
+        <span className="block truncate text-sm font-semibold text-ink">{userName}</span>
+        <span className="block truncate text-xs text-subtle">{t('nav.profileSettings')}</span>
+      </span>
+      <Icon name="chevron" className="ml-auto size-3.5 shrink-0 -rotate-90 text-subtle" />
+    </Link>
   );
 }
 

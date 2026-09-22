@@ -125,12 +125,15 @@
        shifts everything sideways. No effect where scrollbars overlay. */
     scrollbar-gutter: stable;
   }
-  /* Search results pin their sort toggle under the navbar below xl; jumps to
-     a day land below both. */
-  @media (width < 80rem) {
+  /* Search results pin their sort toggle under the navbar between lg and xl;
+     jumps to a day land below both. On a phone that toggle is at the foot of
+     the screen instead, so only the navbar is in the way. */
+  @media (64rem <= width < 80rem) {
     html:has([data-sticky-sort]) {
       --jump-offset: 6.5rem;
     }
+  }
+  @media (width < 80rem) {
     /* An open floating-controls popup holds the page still behind it. Set by
        the controls rather than matched on the dimmer, so that the page being
        navigated away from - which Next keeps mounted and hidden for a moment,

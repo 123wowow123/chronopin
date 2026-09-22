@@ -31,7 +31,6 @@ const en = {
     logIn: 'Log in',
     signUp: 'Sign up',
     logOut: 'Log out',
-    signedInAs: 'Signed in as',
     profileSettings: 'Profile & settings',
     admin: 'Admin',
     dashboard: 'Dashboard',
@@ -533,6 +532,20 @@ const en = {
     filter: 'Filter',
     summary: '{caption}: {value}',
   },
+  // The site's own filters, which stand in the tag cloud and the search
+  // suggestions as tags do without being anyone's (RESERVED_TAGS in
+  // src/lib/tags.ts). The search terms behind them stay English.
+  reserved: {
+    thread: 'Thread',
+    confirmed: 'Confirmed',
+    scheduled: 'Scheduled',
+    estimated: 'Estimated',
+    delayed: 'Delayed',
+    unverified: 'Unverified',
+    high: 'High confidence',
+    medium: 'Medium confidence',
+    low: 'Low confidence',
+  },
   tagCloud: {
     tagsSummary: 'Tags: {summary}',
     clear: 'Clear tag filter',
@@ -556,6 +569,9 @@ const en = {
     kindNomination: 'Nomination',
     kindTag: 'Tag',
     kindCategory: 'Category',
+    kindReserved: 'Site filter',
+    reserved: 'Site filters',
+    reservedTitle: '{name}: the site’s own filter, not a tag anyone wrote',
     title: 'Tag cloud',
     close: 'Close tag cloud',
     unavailable: 'Tags are unavailable right now.',
