@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { connection } from 'next/server';
+import { Suspense } from 'react';
 import { siteName } from '@/lib/appConfig';
 import { alternates, getT } from '@/lib/i18n/server';
 import { sliderTyping, tagList } from '@/server/services/pages';
@@ -21,11 +23,22 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function MapPage() {
-  const [t, typing, listing] = await Promise.all([getT(), sliderTyping(), tagList()]);
+  const t = await getT();
   return (
     <main>
       <h1 className="sr-only">{t('meta.mapHeading')}</h1>
-      <MapLoader sliderTyping={typing.enabled} tagList={listing.enabled} />
+      <Suspense fallback={<div className="h-[calc(100dvh-52px)] animate-pulse bg-raised" />}>
+        <MapWithSettings />
+      </Suspense>
     </main>
   );
+}
+
+// Per request, as the timeline's settings are: prerendered, the admin
+// settings would be read from the database at build time, which a Docker
+// build has no database for.
+async function MapWithSettings() {
+  await connection();
+  const [typing, listing] = await Promise.all([sliderTyping(), tagList()]);
+  return <MapLoader sliderTyping={typing.enabled} tagList={listing.enabled} />;
 }
