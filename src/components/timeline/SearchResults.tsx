@@ -1,12 +1,13 @@
 'use client';
 
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { startTransition, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { FollowButton } from '@/components/pin/FollowButton';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { CardGrid } from '@/components/pin/CardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { parseLinkHeader } from '@/lib/client/api';
+import { createPageAhead } from '@/lib/client/pageAhead';
 import { type CardSpot, takeSearchSpot } from '@/lib/client/returnSpot';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
@@ -176,6 +177,8 @@ export function SearchResults({
   });
   // Bumped when a sort's results start over, so answers for the old ones are dropped.
   const loadToken = useRef<Record<SortBy, number>>({ date: 0, relevance: 0 });
+  // Pages fetched ahead of the reader (src/lib/client/pageAhead.ts).
+  const [ahead] = useState(() => createPageAhead(fetchSearchPage));
   const busy = useRef(new Set<string>());
   const scrolled = useRef(false);
   const prependAnchor = useRef<{ height: number; top: number } | null>(null);
@@ -188,6 +191,7 @@ export function SearchResults({
   // over: the sort on screen reloads, the other when it next shows.
   function reload(sort: SortBy, posted: string | null, span: typeof startSpan) {
     const token = ++loadToken.current[sort];
+    ahead.clear();
     if (sort === 'date') scrolled.current = false;
     setLists((current) => ({ ...current, [sort]: { pins: [], links: {}, status: 'loading' } }));
     const params = new URLSearchParams({ q: query, sort });
@@ -226,6 +230,14 @@ export function SearchResults({
 
   // Whether a page went in: false when there is none or it failed, null when
   // that page is already loading or its list started over meanwhile.
+  // The page past each end of the list on screen, fetched as soon as its
+  // link is known.
+  useEffect(() => {
+    const links = lists[sortBy]?.links;
+    ahead.warm(links?.next);
+    ahead.warm(links?.previous);
+  }, [ahead, lists, sortBy]);
+
   const loadMore = useCallback(
     async (sort: SortBy, direction: 'previous' | 'next'): Promise<boolean | null> => {
       const query = listsRef.current[sort]?.links[direction];
@@ -235,12 +247,15 @@ export function SearchResults({
       busy.current.add(key);
       const token = loadToken.current[sort];
       try {
-        const page = await fetchSearchPage(query);
+        const page = await ahead.take(query);
         if (token !== loadToken.current[sort] || listsRef.current[sort]?.links[direction] !== query) return null;
         if (direction === 'previous') {
           prependAnchor.current = { height: document.documentElement.scrollHeight, top: window.scrollY };
         }
-        setLists((current) => {
+        // Added below the reader, out of sight: drawn as a transition, which
+        // gives way to their scrolling. Added above, at once, so the view is
+        // held still from the position just read.
+        (direction === 'next' ? startTransition : (add: () => void) => add())(() => setLists((current) => {
           const list = current[sort];
           if (!list || list.links[direction] !== query) return current;
           const have = new Set(list.pins.map((p) => p.id));
@@ -254,7 +269,7 @@ export function SearchResults({
               links: { ...list.links, [direction]: added.length ? page.links[direction] : undefined },
             },
           };
-        });
+        }));
         return true;
       } catch {
         // Try again on the next scroll.
@@ -422,7 +437,7 @@ export function SearchResults({
           }
         }
       },
-      { rootMargin: '800px 0px' },
+      { rootMargin: '2500px 0px' },
     );
     for (const ref of [topRef, bottomRef, rankedEndRef]) {
       if (ref.current) observer.observe(ref.current);

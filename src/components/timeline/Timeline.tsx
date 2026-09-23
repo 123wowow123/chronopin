@@ -1,8 +1,9 @@
 'use client';
 
 import { useRouter } from '@/lib/client/navigation';
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { startTransition, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { parseLinkHeader } from '@/lib/client/api';
+import { createPageAhead } from '@/lib/client/pageAhead';
 import { onLive } from '@/lib/client/liveFeed';
 import { useNow } from '@/lib/client/now';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
@@ -191,6 +192,8 @@ export function Timeline({
   const now = useNow(60_000, new Date(serverNow).getTime());
 
   const loadToken = useRef(0);
+  // Pages fetched ahead of the reader (src/lib/client/pageAhead.ts).
+  const [ahead] = useState(() => createPageAhead(fetchPage));
   const busy = useRef({ previous: false, next: false });
   const scrolledToToday = useRef(false);
   const prependAnchor = useRef<{ height: number; top: number } | null>(null);
@@ -239,6 +242,7 @@ export function Timeline({
     if (within) params.set('created_within', within);
     ringParams(params, nextRing);
     const token = ++loadToken.current;
+    ahead.clear();
     setStatus('loading');
     try {
       const { page, links: pageLinks } = await fetchPage(params.size ? `?${params}` : '');
@@ -251,7 +255,7 @@ export function Timeline({
     } catch {
       if (token === loadToken.current) setStatus('error');
     }
-  }, []);
+  }, [ahead]);
 
   // The latest posting window, for the one effect below that runs long after
   // the render it was started in.
@@ -447,6 +451,13 @@ export function Timeline({
     };
   }, [minConfidence, ring]);
 
+  // The page past each end of what is loaded, fetched as soon as its link is
+  // known, so reaching an end shows it at once rather than waiting on it.
+  useEffect(() => {
+    ahead.warm(links.next);
+    ahead.warm(links.previous);
+  }, [ahead, links]);
+
   const loadMore = useCallback(
     async (direction: 'previous' | 'next') => {
       const query = links[direction];
@@ -454,27 +465,38 @@ export function Timeline({
       busy.current[direction] = true;
       const token = loadToken.current;
       try {
-        const { page, links: pageLinks } = await fetchPage(query);
+        const { page, links: pageLinks } = await ahead.take(query);
         if (token !== loadToken.current) return;
         if (!page.pins.length && !page.dateTimes.length) {
           setLinks((l) => ({ ...l, [direction]: undefined }));
           return;
         }
+        const add = () => {
+          merge(page);
+          setLinks((l) => ({ ...l, [direction]: pageLinks[direction] }));
+        };
         if (direction === 'previous') {
+          // Added above: drawn at once, so the view is held still from the
+          // scroll position read here.
           prependAnchor.current = { height: document.documentElement.scrollHeight, top: window.scrollY };
+          add();
+        } else {
+          // Added below the reader, out of sight: drawn as a transition, which
+          // gives way to their scrolling rather than holding up a frame.
+          startTransition(add);
         }
-        merge(page);
-        setLinks((l) => ({ ...l, [direction]: pageLinks[direction] }));
       } catch {
         // Try again on the next scroll.
       } finally {
         busy.current[direction] = false;
       }
     },
-    [links, merge],
+    [ahead, links, merge],
   );
 
-  // Sentinels at either end load the next page before the reader gets there.
+  // Sentinels at either end load the next page before the reader gets there:
+  // about three screens early, so it is in (from memory, above) well before
+  // a fast scroll reaches the end.
   const topRef = useRef<HTMLDivElement>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -485,7 +507,7 @@ export function Timeline({
           void loadMore(entry.target === topRef.current ? 'previous' : 'next');
         }
       },
-      { rootMargin: '500px 0px' },
+      { rootMargin: '2500px 0px' },
     );
     if (topRef.current) observer.observe(topRef.current);
     if (bottomRef.current) observer.observe(bottomRef.current);
