@@ -616,7 +616,7 @@ const es: Messages = {
     clickToExclude: 'haz clic de nuevo para excluirla de la búsqueda',
     leftOut: 'excluida',
     wraps: 'agrupa {names}',
-    hint: 'Las palabras más grandes están en más pines. Mueve el puntero por la nube y elige etiquetas para buscar pines con cualquiera de ellas. Elige una otra vez para excluirla.',
+    hint: 'Haz clic en una etiqueta una vez para mostrar sus pines, dos veces para ocultarlos y una tercera para quitarla.',
   },
   slider: {
     past: 'Pasado',

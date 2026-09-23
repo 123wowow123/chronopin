@@ -616,7 +616,7 @@ const fr: Messages = {
     clickToExclude: 'cliquez encore pour l’exclure de la recherche',
     leftOut: 'exclu',
     wraps: 'regroupe {names}',
-    hint: 'Les mots les plus grands figurent sur le plus d’épingles. Promenez le pointeur dans le nuage et choisissez des tags pour chercher les épingles qui en portent un. Choisissez-en un de nouveau pour l’exclure.',
+    hint: 'Cliquez une fois sur un tag pour afficher ses épingles, deux fois pour les masquer, et une troisième fois pour le retirer.',
   },
   slider: {
     past: 'Passé',

@@ -614,7 +614,7 @@ const en = {
     clickToExclude: 'click again to leave it out of the search',
     leftOut: 'left out',
     wraps: 'wraps {names}',
-    hint: 'Bigger words are on more pins. Move the pointer through the cloud, and pick tags to search for pins with any of them. Pick one again to leave it out.',
+    hint: 'Click a tag once to show pins with it, twice to hide pins with it, and a third time to clear it.',
   },
   slider: {
     past: 'Past',

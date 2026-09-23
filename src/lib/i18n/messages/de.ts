@@ -616,7 +616,7 @@ const de: Messages = {
     clickToExclude: 'noch einmal klicken, um ihn aus der Suche auszuschließen',
     leftOut: 'ausgeschlossen',
     wraps: 'umfasst {names}',
-    hint: 'Größere Wörter stehen an mehr Pins. Fahre mit dem Zeiger durch die Wolke und wähle Tags, um nach Pins mit einem davon zu suchen. Wähle einen noch einmal, um ihn auszuschließen.',
+    hint: 'Tag einmal klicken, um Pins damit zu zeigen, zweimal, um sie auszublenden, und ein drittes Mal, um ihn zu entfernen.',
   },
   slider: {
     past: 'Vergangenheit',
