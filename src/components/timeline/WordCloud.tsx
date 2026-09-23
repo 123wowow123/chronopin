@@ -118,11 +118,14 @@ function isDark() {
 export function WordCloud({
   tags,
   selected,
+  excluded = [],
   onToggle,
   onHot,
 }: {
   tags: TagCount[];
   selected: string[];
+  // Tags left out of the search (-tag:), struck through.
+  excluded?: string[];
   onToggle: (name: string) => void;
   // The tag under the pointer or focus, for the caller to describe.
   onHot?: (tag: TagCount | null) => void;
@@ -239,6 +242,7 @@ export function WordCloud({
 
   const byKey = useMemo(() => new Map(tags.map((t) => [t.name.toLowerCase(), t])), [tags]);
   const picked = useMemo(() => new Set(selected.map((s) => s.toLowerCase())), [selected]);
+  const out = useMemo(() => new Set(excluded.map((s) => s.toLowerCase())), [excluded]);
   const hotTag = hot ? (byKey.get(hot) ?? null) : null;
   // Each word's resting box (px): what the pointer is over is judged against
   // these rather than where a word has flowed to, so it holds still.
@@ -401,7 +405,7 @@ export function WordCloud({
                   role="button"
                   tabIndex={0}
                   aria-pressed={picked.has(p.key)}
-                  aria-label={`${p.text}, ${translate('tagCloud.pins', { count })}`}
+                  aria-label={`${p.text}, ${translate('tagCloud.pins', { count })}${out.has(p.key) ? `, ${translate('tagCloud.leftOut')}` : ''}`}
                   // From the keyboard only: a tap or click focuses the word
                   // too, and the pointer already says where it is (or, a
                   // finger, has nowhere to hover).
@@ -423,7 +427,7 @@ export function WordCloud({
                     }
                   }}
                 >
-                  <WordDrawing word={p} box={layout.boxes.get(p.key)!} palette={layout.palette} pressed={picked.has(p.key)} nomination={tag?.kind === 'nomination'} />
+                  <WordDrawing word={p} box={layout.boxes.get(p.key)!} palette={layout.palette} pressed={picked.has(p.key)} excluded={out.has(p.key)} nomination={tag?.kind === 'nomination'} />
                 </g>
               );
             })}
@@ -437,6 +441,7 @@ export function WordCloud({
                   box={layout.boxes.get(hotPlaced.key)!}
                   palette={layout.palette}
                   pressed={picked.has(hotPlaced.key)}
+                  excluded={out.has(hotPlaced.key)}
                   nomination={byKey.get(hotPlaced.key)?.kind === 'nomination'}
                 />
               </g>
@@ -460,7 +465,21 @@ export function WordCloud({
 
 // A word as drawn: a tinted pill behind it when picked, a ring for focus, the
 // text itself (turned for a vertical word). A nomination's is a little paler.
-function WordDrawing({ word: p, box, palette, pressed, nomination }: { word: PlacedWord; box: Box; palette: string[]; pressed: boolean; nomination: boolean }) {
+function WordDrawing({
+  word: p,
+  box,
+  palette,
+  pressed,
+  excluded = false,
+  nomination,
+}: {
+  word: PlacedWord;
+  box: Box;
+  palette: string[];
+  pressed: boolean;
+  excluded?: boolean;
+  nomination: boolean;
+}) {
   return (
     <>
       <rect
@@ -469,7 +488,7 @@ function WordDrawing({ word: p, box, palette, pressed, nomination }: { word: Pla
         width={box.maxX - box.minX + 8}
         height={box.maxY - box.minY + 6}
         rx={6}
-        className={pressed ? 'fill-accent/20 stroke-accent/70' : 'fill-transparent stroke-none'}
+        className={pressed ? 'fill-accent/20 stroke-accent/70' : excluded ? 'fill-red-500/10 stroke-red-500/60' : 'fill-transparent stroke-none'}
         strokeWidth={1.5}
       />
       <rect x={p.x + box.minX - 5} y={p.y + box.minY - 4} width={box.maxX - box.minX + 10} height={box.maxY - box.minY + 8} rx={7} className="ring fill-none stroke-link" strokeWidth={2} />
@@ -479,8 +498,8 @@ function WordDrawing({ word: p, box, palette, pressed, nomination }: { word: Pla
         fontSize={p.size}
         fontWeight={fontWeight(p.weight)}
         fill={colorFor(p.key, palette)}
-        fillOpacity={nomination && !pressed ? 0.7 : 1}
-        textDecoration={pressed ? 'underline' : undefined}
+        fillOpacity={excluded ? 0.55 : nomination && !pressed ? 0.7 : 1}
+        textDecoration={pressed ? 'underline' : excluded ? 'line-through' : undefined}
       >
         {p.text}
       </text>

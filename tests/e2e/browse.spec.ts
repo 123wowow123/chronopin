@@ -261,3 +261,37 @@ test('a ring keeps paging pins in as the timeline is scrolled', async ({ page })
   await page.evaluate(() => window.scrollTo(0, 0));
   await expect.poll(cards, { timeout: 20_000 }).toBeGreaterThan(before);
 });
+
+// A tag cycles with each click in the cloud: picked (tag:), then left out
+// (-tag:, struck through), then gone - and the search box says which.
+test('a picked tag clicked again is left out, and a third click drops it', async ({ page }) => {
+  await page.goto('/search?q=tag:Anime');
+  await expect(page.locator('article').first()).toBeVisible();
+  // The Tags row opens the big cloud (the tag list is off by default); at its
+  // left edge, since the row's clear button sits over its middle.
+  const filters = page.getByRole('button', { name: /^Filters:/ });
+  const openCloud = async () => {
+    if ((await filters.getAttribute('aria-expanded')) === 'false') await filters.click();
+    await page.getByRole('button', { name: /^Tags:/ }).first().click({ position: { x: 12, y: 10 } });
+  };
+  await openCloud();
+  const cloud = page.getByRole('dialog');
+  const anime = cloud.getByRole('button', { name: /^Anime,/ });
+  await expect(anime).toHaveAttribute('aria-pressed', 'true');
+
+  await anime.click();
+  await expect(page).toHaveURL(/[?&]q=-tag(%3A|:)Anime(&|$)/);
+  await expect(cloud.getByRole('button', { name: /^Anime,.*left out$/ })).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(page.locator('[data-pill]').filter({ hasText: 'Anime' })).toContainText('not tag');
+  await expect
+    .poll(async () => {
+      const cards = await page.locator('article').allInnerTexts();
+      return cards.length > 0 && cards.every((text) => !/\bAnime\b/.test(text));
+    })
+    .toBe(true);
+
+  await openCloud();
+  await cloud.getByRole('button', { name: /^Anime,/ }).click();
+  await expect(page).not.toHaveURL(/Anime/);
+});

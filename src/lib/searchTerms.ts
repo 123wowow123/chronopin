@@ -5,11 +5,13 @@
 // them). The server parses these in src/server/util/searchQuery.ts.
 
 // 'pin' is not a label anything on a card writes: it names pins by id, for a
-// batch of notifications linking to exactly the pins it stands for.
-export type LabelField = 'user' | 'company' | 'confidence' | 'date' | 'posted' | 'tag' | 'pin' | 'place';
+// batch of notifications linking to exactly the pins it stands for. '-tag'
+// is a tag left out (the tag cloud's second click): the field is written
+// with its minus, so every helper here handles it as a field of its own.
+export type LabelField = 'user' | 'company' | 'confidence' | 'date' | 'posted' | 'tag' | '-tag' | 'pin' | 'place';
 // Fields a query may still hold but no label writes: category: is the old
 // name for a category's tag: term, which can only be taken out.
-type AnyField = LabelField | 'category';
+type AnyField = LabelField | 'category' | '-category';
 
 // Straight and smart double quotes - never part of a name, so they are
 // stripped from label values and treated alike when reading a query.

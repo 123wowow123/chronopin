@@ -73,6 +73,8 @@ export type SearchQuery = {
   dates: string[];
   postedDays: string[];
   tags: string[];
+  // Tags a pin must not carry (-tag:Anime), matched as tags: are.
+  excludeTags: string[];
   // Places an address must name: cities, states, postal codes, countries.
   places: string[];
   text: string;
@@ -81,7 +83,9 @@ export type SearchQuery = {
 const SMART_DOUBLE_QUOTES = /[“”„‟″]/g;
 const SMART_SINGLE_QUOTES = /[‘’‚‛′]/g;
 
-const FIELD = '(company|category|user|confidence|date|posted|tag|pin|place)';
+// A leading "-" leaves out what the term would match (-tag:Anime); only tags
+// read it so far, and any other field written that way is left out.
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|tag|pin|place))';
 const DAY_KEY = /^-?\d{4,6}-\d{2}-\d{2}$/;
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
@@ -104,7 +108,7 @@ const USER_TERM = /(^|\s)(@\S+)/g;
 export type TermField = 'user' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'tag' | 'pin' | 'place';
 
 export type QueryPart =
-  | { kind: 'term'; field: TermField; value: string; raw: string }
+  | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
   | { kind: 'text'; raw: string };
 
 // The query in order: its label terms and the free text around them, each
@@ -136,8 +140,10 @@ export function splitSearchQuery(searchText: string | null | undefined): QueryPa
     // Each alternative captures a (field, value) pair; exactly one matched.
     const groups = match.slice(2);
     const at = groups.findIndex((group, index) => index % 2 === 0 && group !== undefined);
-    const field = groups[at]!.toLowerCase() as TermField;
-    parts.push({ kind: 'term', field, value: groups[at + 1]!.trim(), raw: match[0].slice(match[1].length) });
+    const written = groups[at]!.toLowerCase();
+    const negated = written.startsWith('-');
+    const field = written.replace(/^-/, '') as TermField;
+    parts.push({ kind: 'term', field, value: groups[at + 1]!.trim(), raw: match[0].slice(match[1].length), ...(negated ? { negated } : {}) });
     from = match.index + match[0].length;
   }
   addText(normalized.slice(from));
@@ -163,6 +169,7 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
     dates: [],
     postedDays: [],
     tags: [],
+    excludeTags: [],
     places: [],
     text: '',
   };
@@ -171,6 +178,9 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
   for (const part of splitSearchQuery(searchText)) {
     if (part.kind === 'text') {
       text.push(part.raw);
+    } else if (part.negated) {
+      // category: is the old name for a category's tag.
+      if ((part.field === 'tag' || part.field === 'category') && part.value) addUnique(query.excludeTags, part.value);
     } else if (part.field === 'user') {
       addUserName(query, part.value);
     } else if (part.field === 'confidence') {
@@ -206,6 +216,7 @@ export function hasFilters(query: SearchQuery): boolean {
     query.dates.length ||
     query.postedDays.length ||
     query.tags.length ||
+    query.excludeTags.length ||
     query.places.length
   );
 }

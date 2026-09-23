@@ -24,6 +24,7 @@ export type PinSearchFilters = {
   dates: string[];
   postedDays: string[];
   tags: string[];
+  excludeTags: string[];
   places: string[];
 };
 
@@ -801,6 +802,11 @@ function searchClauses(filter: SearchFilter) {
   // and the awards').
   if (filter.tags.length) {
     where.push(`EXISTS (SELECT 1 FROM "PinTagView" AS "tagged" WHERE "tagged"."pinId" = "Pin"."id" AND ("tagged"."name" = ANY(${add(filter.tags)}::citext[]) OR "tagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.tags))}::text[])))`);
+  }
+  // None of these (-tag:), each read as a tag: term is, so leaving out an
+  // award body leaves out every year of it.
+  if (filter.excludeTags.length) {
+    where.push(`NOT EXISTS (SELECT 1 FROM "PinTagView" AS "untagged" WHERE "untagged"."pinId" = "Pin"."id" AND ("untagged"."name" = ANY(${add(filter.excludeTags)}::citext[]) OR "untagged"."name"::text ~* ANY(${add(tagGroupPatterns(filter.excludeTags))}::text[])))`);
   }
   // Days as instant ranges, so the start and created indexes serve them (and
   // BC days need no date arithmetic in SQL). A date: day is the timeline's:

@@ -189,10 +189,11 @@ export async function searchTagCounts(
   options: SearchOptions & { createdSince?: Date | null } = {},
 ): Promise<TagCount[]> {
   // The cloud counts the pins its own picks would narrow, so it leaves out
-  // the terms it writes: the tag: ones, and the confidence: levels and bands
-  // its reserved filters stand for. Otherwise a pick would zero out every
-  // other value of the same field, and there would be no way back.
-  const query = { ...parseSearchQuery(searchText), tags: [], confidences: [], confidenceBands: [] };
+  // the terms it writes: the tag: and -tag: ones, and the confidence: levels
+  // and bands its reserved filters stand for. Otherwise a pick would zero out
+  // every other value of the same field, and a left-out tag would drop off
+  // the cloud with no way back.
+  const query = { ...parseSearchQuery(searchText), tags: [], excludeTags: [], confidences: [], confidenceBands: [] };
   return Pins.countSearchTags({ ...(await searchFilter(query, options)), createdSince: options.createdSince }, limit);
 }
 

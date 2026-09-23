@@ -42,6 +42,9 @@ const SHOWN = 60;
 // smallest tags were too small to pick out. Another step up between lg and
 // xl, where the cloud has the screen to itself behind its pill rather than a
 // 16rem column, and is read at arm's length.
+// A tag left out of the search (-tag:): struck through in the danger colour.
+const EXCLUDED_CLASS = 'bg-red-500/10 text-danger line-through ring-1 ring-red-500/40 ring-inset';
+
 const STEP_CLASS = [
   '',
   'text-base xl:text-sm',
@@ -136,8 +139,11 @@ export function TagCloud({
   // filter writes a term of its own (confidence:) rather than a tag: term.
   const picked = useMemo(() => parsed.tags.filter((name) => !isReserved(name)), [parsed]);
   const pickedFilters = useMemo(() => reservedPicked(parsed), [parsed]);
+  // Tags left out (-tag:): a second click on a picked tag, a third drops it.
+  const pickedOut = useMemo(() => parsed.excludeTags, [parsed]);
   const [selected, setSelected] = useOptimistic(picked);
   const [reserved, setReserved] = useOptimistic(pickedFilters);
+  const [excluded, setExcluded] = useOptimistic(pickedOut);
 
   const params = new URLSearchParams();
   if (query != null) params.set('q', query);
@@ -194,20 +200,24 @@ export function TagCloud({
   // market exchanges); finding a tag looks through the wrapped ones too.
   const groups = useMemo(() => (wrapped ? groupTags(written) : []), [written, wrapped]);
   const isSelected = (name: string) => selected.some((s) => s.toLowerCase() === name.toLowerCase());
+  const isExcluded = (name: string) => excluded.some((s) => s.toLowerCase() === name.toLowerCase());
+  // Picked or left out, a tag stays in the list, so it can be changed back.
+  const marked = useMemo(() => [...selected, ...excluded], [selected, excluded]);
   const tags = useMemo<TagGroup[]>(() => {
     if (needle) return cloudTags(written.filter((t) => t.name.toLowerCase().includes(needle)), [], SHOWN);
-    if (!wrapped) return cloudTags(written, selected, SHOWN);
+    if (!wrapped) return cloudTags(written, marked, SHOWN);
     // Picked tags outside any shown group stay listed on their own.
-    return cloudTags(groups, groupSelection(groups, selected), SHOWN);
-  }, [written, groups, selected, needle, wrapped]);
+    return cloudTags(groups, groupSelection(groups, marked), SHOWN);
+  }, [written, groups, marked, needle, wrapped]);
   const steps = useMemo(() => cloudSteps(tags), [tags]);
-  const summary = tagSummary([...reserved, ...selected], t.locale);
+  const summary = tagSummary([...reserved, ...selected, ...excluded.map((name) => `−${name}`)], t.locale);
 
-  function go(edit: (q: string) => string, next: string[], nextReserved: string[] = reserved) {
+  function go(edit: (q: string) => string, next: string[], nextReserved: string[] = reserved, nextExcluded: string[] = excluded) {
     if (onQuery) {
       startSearch(() => {
         setSelected(next);
         setReserved(nextReserved);
+        setExcluded(nextExcluded);
         onQuery(edit);
       });
       return;
@@ -219,13 +229,14 @@ export function TagCloud({
     // Nothing left to search for or filter by: that's the timeline.
     const href = current.size ? `/search?${current.toString()}` : '/';
     // Fewer tags picked is a wider search, which stays on the same date.
-    const widened = next.length + nextReserved.length < selected.length + reserved.length;
+    const widened = next.length + nextReserved.length + nextExcluded.length < selected.length + reserved.length + excluded.length;
     // A pick in the drawer's list keeps the drawer open and where it was
     // scrolled, through the change of page it makes.
     if (inDrawer) holdDrawerForPick();
     startSearch(() => {
       setSelected(next);
       setReserved(nextReserved);
+      setExcluded(nextExcluded);
       router.push(widened ? hrefKeepingDate(href) : href);
     });
   }
@@ -239,14 +250,20 @@ export function TagCloud({
 
   // A tag's term, taken out or put in. category: is the old name for a
   // category's tag (0043) and a query may still hold one, so both spellings
-  // come out; what goes back in is always tag:.
-  const withoutTag = (query: string, name: string) => removeTerm(removeTerm(query, 'category', name), 'tag', name);
+  // come out, each either way round; what goes back in is always tag: or -tag:.
+  const withoutTag = (query: string, name: string) =>
+    (['category', 'tag', '-category', '-tag'] as const).reduce((q, field) => removeTerm(q, field, name), query);
+  const others = (list: string[], name: string) => list.filter((s) => s.toLowerCase() !== name.toLowerCase());
+  // Each click moves a tag on a step: off, then picked (tag:), then left out
+  // (-tag:), then off again.
   const toggle = (name: string) => {
-    const picked = isSelected(name);
-    go(
-      (q) => (picked ? withoutTag(q, name) : refineQuery(withoutTag(q, name), 'tag', name)),
-      picked ? selected.filter((s) => s.toLowerCase() !== name.toLowerCase()) : [...selected, name],
-    );
+    if (isSelected(name)) {
+      go((q) => refineQuery(withoutTag(q, name), '-tag', name), others(selected, name), reserved, [...others(excluded, name), name]);
+    } else if (isExcluded(name)) {
+      go((q) => withoutTag(q, name), selected, reserved, others(excluded, name));
+    } else {
+      go((q) => refineQuery(withoutTag(q, name), 'tag', name), [...selected, name], reserved, others(excluded, name));
+    }
   };
 
   // A site filter's own term, put in or taken out. Taken out in every
@@ -266,7 +283,7 @@ export function TagCloud({
       on ? reserved.filter((r) => r.toLowerCase() !== name.toLowerCase()) : [...reserved, name],
     );
   };
-  const clear = () => go((q) => reserved.reduce(withoutReserved, selected.reduce(withoutTag, q)), [], []);
+  const clear = () => go((q) => reserved.reduce(withoutReserved, [...selected, ...excluded].reduce(withoutTag, q)), [], [], []);
 
   const openCloud = () => {
     // From the drawer, the cloud would open under it; closing it goes back.
@@ -293,7 +310,7 @@ export function TagCloud({
         opensDialog={!listed}
         label={t('tagCloud.tagsSummary', { summary })}
         controls={optionsId}
-        reset={selected.length || reserved.length ? { label: t('tagCloud.clear'), onClick: clear } : undefined}
+        reset={selected.length || reserved.length || excluded.length ? { label: t('tagCloud.clear'), onClick: clear } : undefined}
         className={inFold ? 'max-xl:hidden' : ''}
         fixed={merged && listed}
       >
@@ -340,7 +357,8 @@ export function TagCloud({
               {tags.map((tag) => {
                 const members = tag.members;
                 const pressed = isSelected(tag.name);
-                const partly = !pressed && tagMembers(tag).some((m) => isSelected(m.name));
+                const out = isExcluded(tag.name);
+                const partly = !pressed && !out && tagMembers(tag).some((m) => isSelected(m.name) || isExcluded(m.name));
                 const open = !!members && (unfolded.has(tag.name) || partly);
                 return (
                   <Fragment key={tag.name}>
@@ -349,16 +367,21 @@ export function TagCloud({
                         type="button"
                         aria-pressed={pressed}
                         onClick={() => toggle(tag.name)}
-                        title={`${tagLabel(t, tag)}: ${t('tagCloud.pins', { count: tag.count })}${members ? `, ${t('tagCloud.tags', { count: members.length })}` : ''}`}
+                        title={`${tagLabel(t, tag)}: ${t('tagCloud.pins', { count: tag.count })}${members ? `, ${t('tagCloud.tags', { count: members.length })}` : ''} · ${
+                          pressed ? t('tagCloud.clickToExclude') : out ? t('tagCloud.clickToDrop') : t('tagCloud.clickToAdd')
+                        }`}
                         className={`${STEP_CLASS[steps.get(tag.name.toLowerCase()) ?? 1]} rounded-md px-1 text-left leading-snug transition-colors ${
                           pressed
                             ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset'
-                            : tag.kind === 'award' || tag.kind === 'nomination' || tag.kind === 'category'
+                            : out
+                              ? EXCLUDED_CLASS
+                              : tag.kind === 'award' || tag.kind === 'nomination' || tag.kind === 'category'
                               ? 'text-ink hover:text-link'
                               : 'text-muted hover:text-ink'
-                        } ${tag.count === 0 && !pressed ? 'opacity-50' : ''}`}
+                        } ${tag.count === 0 && !pressed && !out ? 'opacity-50' : ''}`}
                       >
                         {tagLabel(t, tag)}
+                        {out ? <span className="sr-only"> ({t('tagCloud.leftOut')})</span> : null}
                         <span className="ml-1 text-sm font-normal text-subtle tabular-nums xl:text-xs">
                           {tag.count}
                           <span className="sr-only"> {t('tagCloud.pinsWord', { count: tag.count })}</span>
@@ -377,7 +400,7 @@ export function TagCloud({
                         </button>
                       ) : null}
                     </span>
-                    {open ? <Members members={members!} isSelected={isSelected} onToggle={toggle} unfolded={unfolded} onUnfold={unfold} /> : null}
+                    {open ? <Members members={members!} isSelected={isSelected} isExcluded={isExcluded} onToggle={toggle} unfolded={unfolded} onUnfold={unfold} /> : null}
                   </Fragment>
                 );
               })}
@@ -396,6 +419,7 @@ export function TagCloud({
         <TagCloudView
           countsUrl={countsUrl}
           selected={selected}
+          excluded={excluded}
           reserved={reserved}
           busy={searching}
           wrapped={wrapped}
@@ -479,12 +503,14 @@ function ReservedFilters({
 function Members({
   members,
   isSelected,
+  isExcluded,
   onToggle,
   unfolded,
   onUnfold,
 }: {
   members: TagGroup[];
   isSelected: (name: string) => boolean;
+  isExcluded: (name: string) => boolean;
   onToggle: (name: string) => void;
   unfolded: Set<string>;
   onUnfold: (name: string) => void;
@@ -494,7 +520,8 @@ function Members({
     <span className="flex basis-full flex-wrap items-baseline gap-x-2 gap-y-1 border-l border-line pl-2.5">
       {members.map((m) => {
         const inner = m.members;
-        const open = !!inner && (unfolded.has(m.name) || (!isSelected(m.name) && tagMembers(m).some((t) => isSelected(t.name))));
+        const open =
+          !!inner && (unfolded.has(m.name) || (!isSelected(m.name) && !isExcluded(m.name) && tagMembers(m).some((t) => isSelected(t.name) || isExcluded(t.name))));
         return (
           <Fragment key={m.name}>
             <span className="inline-flex items-baseline">
@@ -504,10 +531,11 @@ function Members({
                 onClick={() => onToggle(m.name)}
                 title={`${m.name}: ${t('tagCloud.pins', { count: m.count })}${inner ? `, ${t('tagCloud.tags', { count: inner.length })}` : ''}`}
                 className={`rounded-md px-1 text-left text-base leading-snug transition-colors xl:text-sm ${
-                  isSelected(m.name) ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset' : 'text-muted hover:text-ink'
+                  isSelected(m.name) ? 'bg-accent/15 text-link ring-1 ring-accent/60 ring-inset' : isExcluded(m.name) ? EXCLUDED_CLASS : 'text-muted hover:text-ink'
                 }`}
               >
                 {m.name}
+                {isExcluded(m.name) ? <span className="sr-only"> ({t('tagCloud.leftOut')})</span> : null}
                 <span className="ml-1 text-sm text-subtle xl:text-xs">{m.count}</span>
               </button>
               {inner ? (
@@ -522,7 +550,7 @@ function Members({
                 </button>
               ) : null}
             </span>
-            {open ? <Members members={inner!} isSelected={isSelected} onToggle={onToggle} unfolded={unfolded} onUnfold={onUnfold} /> : null}
+            {open ? <Members members={inner!} isSelected={isSelected} isExcluded={isExcluded} onToggle={onToggle} unfolded={unfolded} onUnfold={onUnfold} /> : null}
           </Fragment>
         );
       })}
@@ -602,6 +630,7 @@ const KIND_LABEL: Record<TagCount['kind'], MessageKey> = {
 function TagCloudView({
   countsUrl,
   selected,
+  excluded,
   reserved,
   busy,
   wrapped,
@@ -614,6 +643,7 @@ function TagCloudView({
 }: {
   countsUrl: string;
   selected: string[];
+  excluded: string[];
   reserved: string[];
   busy: boolean;
   wrapped: boolean;
@@ -741,7 +771,13 @@ function TagCloudView({
           ) : !tags.length ? (
             <p className="absolute inset-0 flex items-center justify-center text-sm text-subtle">{needle ? t('tagCloud.noMatch') : t('tagCloud.none')}</p>
           ) : (
-            <WordCloud tags={tags} selected={wrapped ? groupSelection(tags, selected) : selected} onToggle={onToggle} onHot={onHot} />
+            <WordCloud
+              tags={tags}
+              selected={wrapped ? groupSelection(tags, selected) : selected}
+              excluded={wrapped ? groupSelection(tags, excluded) : excluded}
+              onToggle={onToggle}
+              onHot={onHot}
+            />
           )}
         </div>
         {/* One height whatever it says - two lines on a phone, one wider -
@@ -753,7 +789,11 @@ function TagCloudView({
               <>
                 <span className="font-semibold text-ink">{tagLabel(t, hot)}</span>{' '}
                 · {hot.members ? t('tagCloud.tags', { count: hot.members.length }) : t(KIND_LABEL[hot.kind])} · {t('tagCloud.pins', { count: hot.count })} ·{' '}
-                {selected.some((s) => s.toLowerCase() === hot.name.toLowerCase()) ? t('tagCloud.clickToDrop') : t('tagCloud.clickToAdd')}
+                {selected.some((s) => s.toLowerCase() === hot.name.toLowerCase())
+                  ? t('tagCloud.clickToExclude')
+                  : excluded.some((s) => s.toLowerCase() === hot.name.toLowerCase())
+                    ? t('tagCloud.clickToDrop')
+                    : t('tagCloud.clickToAdd')}
                 {hot.members ? ` · ${t('tagCloud.wraps', { names: `${hot.members.slice(0, 4).map((m) => m.name.replace(hot.name, '').trim() || m.name).join(', ')}${hot.members.length > 4 ? '…' : ''}` })}` : ''}
               </>
             ) : (

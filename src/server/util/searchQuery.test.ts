@@ -45,6 +45,7 @@ describe('parseSearchQuery', () => {
       dates: [],
       postedDays: [],
       tags: ['software'],
+      excludeTags: [],
       places: [],
       text: 'ios',
     });
@@ -97,5 +98,30 @@ describe('wordStartPattern', () => {
     expect(matches('pace', 'Deep Space Astronomy')).toBe(false);
     expect(matches('c++', 'C++ Conference')).toBe(true);
     expect(wordStartPattern(' a.b ')).toBe('(^|[^[:alnum:]])a\\.b');
+  });
+});
+
+describe('excluded tags (-tag:)', () => {
+  it('reads -tag: and -category: as tags to leave out, in every quoting', () => {
+    const q = parseSearchQuery('anime -tag:Music -tag:"Grammy Awards" "-tag:Sports" -category:Movies tag:Japan');
+    expect(q.excludeTags).toEqual(['Music', 'Grammy Awards', 'Sports', 'Movies']);
+    expect(q.tags).toEqual(['Japan']);
+    expect(q.text).toBe('anime');
+  });
+
+  it('is a filter on its own, so "everything but" searches', () => {
+    expect(hasFilters(parseSearchQuery('-tag:Anime'))).toBe(true);
+  });
+
+  it('leaves out a negated field it does not read, rather than matching it', () => {
+    const q = parseSearchQuery('-company:Apple -user:someone iphone');
+    expect(q.companies).toEqual([]);
+    expect(q.userNames).toEqual([]);
+    expect(q.text).toBe('iphone');
+  });
+
+  it('keeps a hyphenated word as text, and marks the term in the split', () => {
+    expect(parseSearchQuery('t-tag:x').text).toBe('t-tag:x');
+    expect(splitSearchQuery('-tag:Anime')).toEqual([{ kind: 'term', field: 'tag', value: 'Anime', raw: '-tag:Anime', negated: true }]);
   });
 });

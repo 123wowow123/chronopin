@@ -104,7 +104,9 @@ function termLabel(part: TermPart, t: Translator) {
   // any other value is shown as it was typed.
   const named = part.field === 'tag' || part.field === 'category' || part.field === 'confidence';
   const name = part.field === 'confidence' ? (reservedName('confidence', part.value) ?? part.value) : part.value;
-  return { field: t.dynamic(`search.fields.${part.field}`, part.field), value: named ? tagLabel(t, { name }) : part.value };
+  const field = t.dynamic(`search.fields.${part.field}`, part.field);
+  // -tag: leaves the tag out, and says so: "not tag Anime".
+  return { field: part.negated ? t('search.notField', { field }) : field, value: named ? tagLabel(t, { name }) : part.value };
 }
 
 // One row of the suggestions: a category or other tag to filter by (both
@@ -896,7 +898,14 @@ export function SearchBox() {
               const { field, value } = termLabel(item, t);
               const name = `${field ? `${field} ` : ''}${value}`;
               node = (
-                <span data-at={at} data-raw={item.raw} data-pill="" className={`inline-flex shrink-0 items-center rounded-full text-xs font-medium whitespace-nowrap ring-1 ring-inset ${picked ? 'bg-accent/55 text-white ring-accent' : 'bg-accent/15 text-link ring-accent/60'}`}>
+                <span
+                  data-at={at}
+                  data-raw={item.raw}
+                  data-pill=""
+                  className={`inline-flex shrink-0 items-center rounded-full text-xs font-medium whitespace-nowrap ring-1 ring-inset ${
+                    picked ? 'bg-accent/55 text-white ring-accent' : item.negated ? 'bg-red-500/10 text-danger ring-red-500/40' : 'bg-accent/15 text-link ring-accent/60'
+                  }`}
+                >
                   <button
                     type="button"
                     title={t('common.edit')}
@@ -918,7 +927,7 @@ export function SearchBox() {
                     className="flex items-center gap-1 py-0.5 pl-2"
                   >
                     {field ? <span className={picked ? 'text-white/75' : 'text-subtle'}>{field}</span> : null}
-                    <span>{value}</span>
+                    <span className={item.negated ? 'line-through' : undefined}>{value}</span>
                   </button>
                   <button
                     type="button"
