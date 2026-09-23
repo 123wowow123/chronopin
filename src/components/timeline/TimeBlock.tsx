@@ -25,8 +25,8 @@ const tagRow = 'absolute top-0 right-0 left-0 flex gap-1.5 overflow-hidden lg:ri
 // them in: the class that puts the column on screen, how many tracks the day
 // then has, how wide its cards may spread (n x 448 plus their gaps), and the
 // class that takes "View all" away once that width leaves nothing out. A
-// width only arrives once another whole 448px card fits (see globals.css),
-// and Tailwind only sees classes written out whole, so they are.
+// width arrives once each of its cards can be 384px (see globals.css), and
+// Tailwind only sees classes written out whole, so they are.
 const WIDE_COLUMNS = [
   { column: '3xl:flex', tracks: '3xl:grid-cols-3', row: '3xl:max-w-[1364px]', hide: '3xl:hidden' },
   { column: '4xl:flex', tracks: '4xl:grid-cols-4', row: '4xl:max-w-[1822px]', hide: '4xl:hidden' },
@@ -46,8 +46,8 @@ const BAG_LIMIT_WIDE = BAG_LIMIT + 2 * WIDE_COLUMNS.length;
 const cardColumn = 'min-w-0 flex-col';
 const firstColumn = 'contents sm:flex sm:min-w-0 sm:flex-col';
 const rowTracks = `grid grid-cols-1 sm:grid-cols-2 sm:gap-x-2.5 ${WIDE_COLUMNS.map((c) => c.tracks).join(' ')}`;
-// How far a day may spread at each width, which is what holds a track to one
-// card's 448px; the "View all" link under the cards takes it too, to stay
+// How far a day may spread at each width, which is what holds a track to at
+// most one card's 448px; the "View all" link under the cards takes it too, to stay
 // centred on them.
 const rowWidth = `sm:max-w-[906px] ${WIDE_COLUMNS.map((c) => c.row).join(' ')}`;
 

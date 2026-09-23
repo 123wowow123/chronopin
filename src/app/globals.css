@@ -3,17 +3,18 @@
 /* The Chronopin palette: a cool, low-glare dark theme, as Tailwind tokens.
    The light theme redefines them below, under [data-theme="light"]. */
 @theme {
-  /* A day's cards get another column (TimeBlock's WIDE_COLUMNS) once one more
-     card of the full 448px fits, never sooner: a card is that width whatever
-     the window is, so every day of the timeline shows cards of one size. The
-     rail (170px), the page's padding and the controls panel (288px) take 474px
-     off the window, leaving n cards and their 10px gaps, plus a little for a
-     scrollbar. In rem like Tailwind's own, or it sorts a px breakpoint before
-     all of them and a lg: utility would win over a 3xl: one. */
-  --breakpoint-3xl: 116rem;
-  --breakpoint-4xl: 145rem;
-  --breakpoint-5xl: 174rem;
-  --breakpoint-6xl: 202rem;
+  /* A day's cards get another column (TimeBlock's WIDE_COLUMNS) once every
+     card can still be 384px wide with it; between one column and the next
+     they grow, up to 448px. Every day of the timeline shares the window's
+     tracks, so its cards are one size on every date. The rail (170px), the
+     page's padding and the controls panel (288px) take 474px off the window,
+     leaving n cards and their 10px gaps, plus a little for a scrollbar. In
+     rem like Tailwind's own, or it sorts a px breakpoint before all of them
+     and a lg: utility would win over a 3xl: one. */
+  --breakpoint-3xl: 104rem;
+  --breakpoint-4xl: 129rem;
+  --breakpoint-5xl: 154rem;
+  --breakpoint-6xl: 178rem;
 
   --font-sans: var(--font-noto-sans), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;

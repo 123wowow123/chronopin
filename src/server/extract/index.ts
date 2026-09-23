@@ -48,7 +48,6 @@ export type ExtractedFields = {
   episodeCount: number | null;
   episodeStatus: 'complete' | 'ongoing' | 'planned' | null;
   amazonUrl: string | null;
-  bestBuyUrl: string | null;
   startDateTime: string | null;
   endDateTime: string | null;
   allDay: boolean;
@@ -62,7 +61,7 @@ export type ExtractedFields = {
 // rejects the whole schema past that, which silently turned every extraction
 // into a session task), so these rarely-set ones are plain strings, empty when
 // the page has nothing for them. emptyAsNull turns that back into null.
-const EMPTY_AS_NULL = ['originalStartDate', 'delayReasoning', 'workTitle', 'episodeStatus', 'amazonUrl', 'bestBuyUrl'] as const;
+const EMPTY_AS_NULL = ['originalStartDate', 'delayReasoning', 'workTitle', 'episodeStatus', 'amazonUrl'] as const;
 
 export function emptyAsNull<T extends Partial<ExtractedFields>>(fields: T): T {
   const out = { ...fields } as Record<string, unknown>;
@@ -161,11 +160,6 @@ export const SCHEMA = {
       description:
         "Direct URL to this exact product's own listing on amazon.com, from your own knowledge of real Amazon listings - never a guessed or constructed URL. An empty string when the page is not about a specific purchasable consumer product, or you are not confident of the real listing URL.",
     },
-    bestBuyUrl: {
-      type: 'string',
-      description:
-        "Direct URL to this exact product's own listing on bestbuy.com, from your own knowledge of real Best Buy listings - never a guessed or constructed URL. An empty string when the page is not about a specific purchasable consumer product, or you are not confident of the real listing URL.",
-    },
     startDateTime: {
       type: ['string', 'null'],
       description:
@@ -234,7 +228,6 @@ export const SCHEMA = {
     'episodeCount',
     'episodeStatus',
     'amazonUrl',
-    'bestBuyUrl',
     'startDateTime',
     'endDateTime',
     'allDay',

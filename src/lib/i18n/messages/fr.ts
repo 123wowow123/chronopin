@@ -201,7 +201,7 @@ const fr: Messages = {
     openSource: 'Ouvrir la source',
     cost: 'Coût',
     buyOnAmazon: 'Acheter sur Amazon',
-    buyAtBestBuy: 'Acheter chez Best Buy',
+    amazonDisclosure: 'En tant que Partenaire Amazon, Chronopin réalise un bénéfice sur les achats remplissant les conditions requises.',
     thread: 'Fil',
     respond: 'Répondre à cette épingle',
     moreLikeThis: 'Dans le même genre',

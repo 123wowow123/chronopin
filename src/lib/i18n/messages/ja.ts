@@ -201,7 +201,7 @@ const ja: Messages = {
     openSource: '出典を開く',
     cost: '価格',
     buyOnAmazon: 'Amazonで購入',
-    buyAtBestBuy: 'Best Buyで購入',
+    amazonDisclosure: 'Amazonのアソシエイトとして、Chronopinは適格販売により収入を得ています。',
     thread: 'スレッド',
     respond: 'このピンに返信',
     moreLikeThis: '似たピン',

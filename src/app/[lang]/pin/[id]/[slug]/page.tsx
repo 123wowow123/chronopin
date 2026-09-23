@@ -27,6 +27,7 @@ import { PinAwards } from '@/components/pin/PinAwards';
 import { PinTags } from '@/components/pin/PinTags';
 import { PinRatings, RatingSummary } from '@/components/pin/PinRatings';
 import { hasPlace } from '@/lib/places';
+import { affiliateUrl, isAmazonStoreUrl, isPurchaseLinkShown } from '@/lib/affiliate';
 import { EpisodeCount } from '@/components/pin/EpisodeCount';
 import { MarketVolume } from '@/components/pin/MarketVolume';
 import { PinReferences } from '@/components/pin/PinReferences';
@@ -351,26 +352,28 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
         </div>
       </div>
 
-      {pin.merchants?.some((m) => m.url) ? (
-        <div className="mt-2 flex flex-wrap gap-2">
+      {pin.merchants?.some((m) => isPurchaseLinkShown(m.url)) ? (
+        <div className="mt-2 flex flex-wrap items-center gap-2">
           {pin.merchants
-            .filter((m) => m.url)
+            .filter((m) => isPurchaseLinkShown(m.url))
             .map((merchant, index) => (
               <a
                 key={merchant.id ?? index}
-                href={merchant.url}
+                href={affiliateUrl(merchant.url!)}
                 target="_blank"
                 rel="noopener nofollow sponsored"
                 className={`btn ${
-                  merchant.label === 'Amazon' ? 'bg-[#ff9900] text-black hover:bg-[#ffad33]' : merchant.label === 'Best Buy' ? 'bg-[#0046be] text-white hover:bg-[#1257d1]' : 'btn-secondary'
+                  merchant.label === 'Amazon' ? 'bg-[#ff9900] text-black hover:bg-[#ffad33]'  : 'btn-secondary'
                 }`}
               >
-                <Icon name={merchant.label === 'Best Buy' ? 'tag' : 'cart'} className="size-4" />
-                {merchant.label === 'Amazon' ? t('pin.buyOnAmazon') : merchant.label === 'Best Buy' ? t('pin.buyAtBestBuy') : merchant.label}
+                <Icon name="cart" className="size-4" />
+                {merchant.label === 'Amazon' ? t('pin.buyOnAmazon') : merchant.label}
                 {merchant.price ? <span className="font-normal">{money(merchant.price)}</span> : null}
                 <Icon name="external" className="size-3.5 shrink-0 opacity-70" />
               </a>
             ))}
+          {/* Amazon Associates asks for this wherever a tagged link is shown. */}
+          {pin.merchants.some((m) => isAmazonStoreUrl(m.url)) ? <p className="basis-full text-xs text-subtle">{t('pin.amazonDisclosure')}</p> : null}
         </div>
       ) : null}
 

@@ -202,7 +202,7 @@ const zh: Messages = {
     openSource: '打开来源',
     cost: '价格',
     buyOnAmazon: '在亚马逊购买',
-    buyAtBestBuy: '在百思买购买',
+    amazonDisclosure: '作为亚马逊联盟成员，Chronopin 从符合条件的购买中获得收入。',
     thread: '串',
     respond: '回应这个图钉',
     moreLikeThis: '相似图钉',

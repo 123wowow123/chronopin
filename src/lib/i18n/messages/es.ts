@@ -201,7 +201,7 @@ const es: Messages = {
     openSource: 'Abrir la fuente',
     cost: 'Coste',
     buyOnAmazon: 'Comprar en Amazon',
-    buyAtBestBuy: 'Comprar en Best Buy',
+    amazonDisclosure: 'Como Afiliado de Amazon, Chronopin obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables.',
     thread: 'Hilo',
     respond: 'Responder a este pin',
     moreLikeThis: 'Más como este',

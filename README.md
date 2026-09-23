@@ -256,15 +256,13 @@ tag filter need exclude tag feature
 
 - amazon & bestbuy referral links to product should be created if its something purchasable 
 
+- add ads
+
 - upgrade user to promoter and sell tickets to local events like eventbrite. will have management portal that will have dashboard to sales and impressions, and pin click, and purchases, etc. integrade with payment company - stripe 
 - track mobile desktop location, etc. Will have google analytics integration
 
-- can pay to become promoted pin
+- can pay to become promoted pin and need management page for user. Also need payment page. it's $1 per pin per day for 100 showings. Admin can change this rate.
 
-- go to: https://portal.azure.com/ and launch chronopin site on the chronopin domain.
-- use the "Windows Azure MSDN - Visual Studio Professional" for billing
-- remove the sql db and other resource groups, storage, etc and start clean 
-- set us SSL for site
-- make sure everything works
+
 - set up google/facebook/apple login flow
 - Activated Google Analytics / Facebook upgrade to non development mode

@@ -5,7 +5,7 @@ import BasePin from './basePin';
 
 const prop = ['id', 'label', 'url', 'price'];
 
-// A place to buy what a pin is about (Amazon, Best Buy...).
+// A place to buy what a pin is about (Amazon, GameStop...).
 export default class Merchant {
   [key: string]: any;
   declare _pin?: BasePin;

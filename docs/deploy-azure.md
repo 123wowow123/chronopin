@@ -73,6 +73,16 @@ docker compose -f Docker/docker-compose.prod.yml --profile tools run --rm tools 
 
 Rebuild it (`--profile tools build tools`) after a code change the script needs.
 
+## Thumbnails
+
+Seeds and dumps carry thumbnail *names*, not the images. After pins made
+locally reach production (a `db:refresh` from seeds, a restore), run
+`npm run thumbs:push` on the Mac: it uploads from Azurite every thumbnail and
+avatar the local database uses that the `thumb` container lacks. Without it a
+card falls back to the source's own image, and sites that refuse to serve
+other domains leave an empty box. The first launch skipped this, so all 5,161
+went up on 2026-09-23.
+
 ## Backups
 
 `Docker/backup.sh` runs from cron on the VM every day at 10:15 UTC

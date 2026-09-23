@@ -12,7 +12,7 @@ import type { PinJson } from './types';
 // it can weigh more still by their own preference wiki (userWiki.ts).
 
 // Two rows, however wide the window: one column on a phone, two from sm, and
-// another for every 400px of window past 1600px, to six (TimeBlock's
+// another from a 1664px window and for about every 400px past it, to six (TimeBlock's
 // WIDE_COLUMNS, which holds the widths). A day is always picked for the widest
 // of those, and the cards a narrower window has no column for are hidden
 // rather than left out of the pick, so widening the window only ever adds
