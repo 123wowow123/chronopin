@@ -108,7 +108,13 @@ adding them needs no rebuild. In each provider's console, register the
 callback `https://www.chronopin.com/auth/<google|facebook|apple>/callback`,
 then add to `Docker/env.prod.list` and `docker compose ... up -d app`:
 
-- Google: `GOOGLE_ID`, `GOOGLE_SECRET`
+- Google: `GOOGLE_ID`, `GOOGLE_SECRET` - set 2026-09-23. The client "Chronopin web"
+  lives in Google Cloud project `chronopin-web` (Google Auth Platform), owned by
+  flynni2008 with chronopin.official as Editor and as the support/contact email;
+  published to production with only openid/email/profile, so no verification
+  review. Its redirect URIs are the live callback and
+  `http://localhost:3000/auth/google/callback` for development. A new secret
+  can be added under Clients; Google shows it only once.
 - Facebook: `FACEBOOK_ID`, `FACEBOOK_SECRET`
 - Apple: `APPLE_ID` (the Services ID), `APPLE_TEAM_ID`, `APPLE_KEY_ID`,
   `APPLE_KEY` (the .p8 file's text)
