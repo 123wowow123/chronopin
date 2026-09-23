@@ -8,6 +8,7 @@ import { Navbar } from '@/components/nav/Navbar';
 import { ThemeSync } from '@/components/ThemeSync';
 import { LocaleSync } from '@/components/LocaleSync';
 import { TimeZoneSync } from '@/components/TimeZoneSync';
+import { analyticsScript } from '@/lib/analytics';
 import { siteName, siteUrl } from '@/lib/appConfig';
 import { INTL_LOCALES, localeOr, LOCALES } from '@/lib/i18n/config';
 import { getMessages } from '@/lib/i18n/messages';
@@ -82,6 +83,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             First in <body>, not in <head>: AdSense inserts its own script at
             the top of <head>, which throws hydration off. */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script dangerouslySetInnerHTML={{ __html: analyticsScript }} />
         <a
           href="#main"
           className="sr-only z-50 rounded-lg bg-accent px-3 py-2 text-white focus:not-sr-only focus:fixed focus:top-2 focus:left-2"
