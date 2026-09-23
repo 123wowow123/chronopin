@@ -3,12 +3,27 @@
 import { useLocale, useT } from '@/lib/client/i18n';
 import { localizePath } from '@/lib/i18n/config';
 
-// Sign in with Google, Facebook or Apple. On the sign-up page the chosen
-// @handle is left in a short-lived cookie for the callback to give a new
-// account; on the login page, the page to go back to afterwards.
-export function OAuthButtons({ handle, redirect, validate }: { handle?: string; redirect?: string; validate?: () => boolean }) {
+export type SignInProvider = 'google' | 'facebook' | 'apple';
+
+// Sign in with Google, Facebook or Apple - whichever the server has keys for
+// (signInProviders in src/server/oauth.ts), with the divider above them, or
+// nothing at all when none is set up. On the sign-up page the chosen @handle
+// is left in a short-lived cookie for the callback to give a new account; on
+// the login page, the page to go back to afterwards.
+export function OAuthButtons({
+  providers,
+  handle,
+  redirect,
+  validate,
+}: {
+  providers: SignInProvider[];
+  handle?: string;
+  redirect?: string;
+  validate?: () => boolean;
+}) {
   const locale = useLocale();
-  function go(provider: 'google' | 'facebook' | 'apple') {
+  if (!providers.length) return null;
+  function go(provider: SignInProvider) {
     if (validate && !validate()) return;
     // Apple posts its callback back cross-site, and only a SameSite=None
     // cookie rides along with that. It is https-only, so Secure costs nothing.
@@ -23,21 +38,31 @@ export function OAuthButtons({ handle, redirect, validate }: { handle?: string; 
     // this page's place in the history rather than after it.
     window.location.replace(`/auth/${provider}`);
   }
+  const columns = ['', 'sm:grid-cols-1', 'sm:grid-cols-2', 'sm:grid-cols-3'][providers.length];
   return (
-    <div className="grid gap-2.5 sm:grid-cols-3">
-      <button type="button" onClick={() => go('google')} className="btn bg-white text-neutral-900 ring-1 ring-line ring-inset hover:bg-neutral-200">
-        <GoogleMark />
-        Google
-      </button>
-      <button type="button" onClick={() => go('facebook')} className="btn bg-[#1466d8] text-white hover:bg-[#1259bd]">
-        <FacebookMark />
-        Facebook
-      </button>
-      <button type="button" onClick={() => go('apple')} className="btn bg-black text-white hover:bg-neutral-800">
-        <AppleMark />
-        Apple
-      </button>
-    </div>
+    <>
+      <OrDivider />
+      <div className={`grid gap-2.5 ${columns}`}>
+        {providers.includes('google') ? (
+          <button type="button" onClick={() => go('google')} className="btn bg-white text-neutral-900 ring-1 ring-line ring-inset hover:bg-neutral-200">
+            <GoogleMark />
+            Google
+          </button>
+        ) : null}
+        {providers.includes('facebook') ? (
+          <button type="button" onClick={() => go('facebook')} className="btn bg-[#1466d8] text-white hover:bg-[#1259bd]">
+            <FacebookMark />
+            Facebook
+          </button>
+        ) : null}
+        {providers.includes('apple') ? (
+          <button type="button" onClick={() => go('apple')} className="btn bg-black text-white hover:bg-neutral-800">
+            <AppleMark />
+            Apple
+          </button>
+        ) : null}
+      </div>
+    </>
   );
 }
 

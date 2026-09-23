@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
+import { connection } from 'next/server';
 import { Suspense } from 'react';
 import { getT } from '@/lib/i18n/server';
+import { signInProviders } from '@/server/oauth';
 import { LoginForm } from './LoginForm';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -15,9 +17,16 @@ export default async function LoginPage() {
         <h1 className="text-2xl font-semibold tracking-tight">{t('account.welcomeBack')}</h1>
         <p className="mt-1 mb-6 text-sm text-subtle">{t('account.loginIntro')}</p>
         <Suspense>
-          <LoginForm />
+          <LoginFormWithProviders />
         </Suspense>
       </div>
     </div>
   );
+}
+
+// Per request, so a provider's keys added to the server's environment show its
+// button without a rebuild: prerendered, the list would be whatever the build saw.
+async function LoginFormWithProviders() {
+  await connection();
+  return <LoginForm providers={signInProviders()} />;
 }

@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { appleProfileFrom, signInLanding } from './oauth';
 
 describe('appleProfileFrom', () => {
@@ -46,5 +46,39 @@ describe('signInLanding', () => {
   it('never asks somebody signing in again', () => {
     expect(signInLanding('/', false)).toBe('/');
     expect(signInLanding('/pin/12/a-launch', false)).toBe('/pin/12/a-launch');
+  });
+});
+
+describe('signInProviders', () => {
+  const keys = ['GOOGLE_ID', 'GOOGLE_SECRET', 'FACEBOOK_ID', 'FACEBOOK_SECRET', 'APPLE_ID', 'APPLE_TEAM_ID', 'APPLE_KEY_ID', 'APPLE_KEY'];
+  const saved = Object.fromEntries(keys.map((k) => [k, process.env[k]]));
+  afterEach(() => {
+    for (const k of keys) {
+      if (saved[k] === undefined) delete process.env[k];
+      else process.env[k] = saved[k];
+    }
+    vi.resetModules();
+  });
+
+  // config.ts reads the environment once, when it is first imported.
+  async function providersWith(env: Record<string, string>) {
+    for (const k of keys) delete process.env[k];
+    Object.assign(process.env, env);
+    vi.resetModules();
+    return (await import('./oauth')).signInProviders();
+  }
+
+  it('offers none without keys', async () => {
+    expect(await providersWith({})).toEqual([]);
+  });
+
+  it('offers a provider only once both its id and secret are set', async () => {
+    expect(await providersWith({ GOOGLE_ID: 'g-id' })).toEqual([]);
+    expect(await providersWith({ GOOGLE_ID: 'g-id', GOOGLE_SECRET: 'g-secret', FACEBOOK_ID: 'f-id', FACEBOOK_SECRET: 'f-secret' })).toEqual(['google', 'facebook']);
+  });
+
+  it('needs the Services ID, team, key id and key for Apple', async () => {
+    expect(await providersWith({ APPLE_ID: 'com.chronopin.web', APPLE_TEAM_ID: 'T', APPLE_KEY_ID: 'K' })).toEqual([]);
+    expect(await providersWith({ APPLE_ID: 'com.chronopin.web', APPLE_TEAM_ID: 'T', APPLE_KEY_ID: 'K', APPLE_KEY: 'pem' })).toEqual(['apple']);
   });
 });

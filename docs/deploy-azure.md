@@ -11,7 +11,7 @@ subscription with no cap, so every `az` command names the subscription.
 | VM `chronopin-web` | Ubuntu 24.04, Standard_B2s (2 vCPU, 4 GB) + 4 GB swap | $30 |
 | OS disk | 32 GB Standard SSD | $2.40 |
 | Public IP `chronopin-ip` | static, `20.109.175.187` | $3.65 |
-| Storage `chronopin` | blob container `thumb` (public read): thumbnails and avatars | cents |
+| Storage `chronopin` | container `thumb` (public read): thumbnails and avatars; container `backups` (private): nightly database dumps, deleted after 14 days | cents |
 | NSG `chronopin-web-nsg` | 22 from Ian's IP only, 80/443 from anywhere | - |
 
 On the VM, `Docker/docker-compose.prod.yml` runs the app, PostgreSQL with
@@ -73,13 +73,53 @@ docker compose -f Docker/docker-compose.prod.yml --profile tools run --rm tools 
 
 Rebuild it (`--profile tools build tools`) after a code change the script needs.
 
+## Backups
+
+`Docker/backup.sh` runs from cron on the VM every day at 10:15 UTC
+(`crontab -l`, log in `~/backup.log`): a `pg_dump` in custom format, checked
+with `pg_restore --list`, uploaded to the private `backups` container as
+`chronopin-<UTC time>.dump`. A lifecycle rule on the storage account deletes
+copies older than 14 days.
+
+The VM uploads with a SAS token in `~/chronopin/Docker/env.backup.list` that
+may only create and write: it cannot list, read or delete a backup. It expires
+2028-09-23; make a new one the same way:
+
+```sh
+KEY=$(az storage account keys list --subscription 9cbdc0e0-b85f-4267-b19a-6fd55f4e2af5 \
+  -g Chronopin-US-West -n chronopin --query "[0].value" -o tsv)
+SAS=$(az storage container generate-sas --account-name chronopin --account-key "$KEY" \
+  -n backups --permissions cw --expiry 2030-09-23T00:00Z --https-only -o tsv)
+printf 'BACKUP_CONTAINER_URL="https://chronopin.blob.core.windows.net/backups?%s"\n' "$SAS" |
+  ssh -i ~/.ssh/chronopin_azure azureuser@20.109.175.187 'umask 077; cat > chronopin/Docker/env.backup.list'
+```
+
+To restore, download a dump with the account key (`az storage blob list` /
+`az storage blob download --account-name chronopin -c backups ...`), copy it
+to the VM and `pg_restore --no-owner -d chronopin` it into the `postgres`
+container. The first backup was restored into a throwaway database to check it
+(2,744 pins, 28 users, all 71 migrations).
+
+## Social sign-in
+
+The Google, Facebook and Apple buttons appear only for a provider whose keys
+are set (`signInProviders` in `src/server/oauth.ts`), read per request, so
+adding them needs no rebuild. In each provider's console, register the
+callback `https://www.chronopin.com/auth/<google|facebook|apple>/callback`,
+then add to `Docker/env.prod.list` and `docker compose ... up -d app`:
+
+- Google: `GOOGLE_ID`, `GOOGLE_SECRET`
+- Facebook: `FACEBOOK_ID`, `FACEBOOK_SECRET`
+- Apple: `APPLE_ID` (the Services ID), `APPLE_TEAM_ID`, `APPLE_KEY_ID`,
+  `APPLE_KEY` (the .p8 file's text)
+
 ## DNS and HTTPS
 
 chronopin.com's DNS is at GoDaddy. `@` and `www` are A records pointing at the
 VM's IP; the bare domain redirects to `https://www.chronopin.com`. After
 changing the records, `docker compose ... restart caddy` makes it ask for the
-certificates at once instead of waiting out its back-off. `comment` points at
-an older Google Cloud service and is not part of this.
+certificates at once instead of waiting out its back-off. (The old
+`comment` record went with the Google Cloud project it pointed at.)
 
 Mail (Microsoft 365 MX/SPF at the root, Resend's `send`, `rsend`,
 `resend._domainkey` and `_dmarc` records) is unrelated to the web records.

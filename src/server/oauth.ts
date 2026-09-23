@@ -69,6 +69,19 @@ const PROVIDERS: Record<Provider, ProviderConfig> = {
 
 const MAPPERS = { google: googleMapper, facebook: facebookMapper, apple: appleMapper };
 
+// The providers whose app credentials are set, in button order. config.ts
+// falls back to 'id'/'secret' placeholders, which a provider rejects, so a
+// provider without its keys is left off the login and sign-up pages rather
+// than offered and failing on its consent page.
+export function signInProviders(): Provider[] {
+  const ready: Record<Provider, boolean> = {
+    google: config.google.clientID !== 'id' && config.google.clientSecret !== 'secret',
+    facebook: config.facebook.clientID !== 'id' && config.facebook.clientSecret !== 'secret',
+    apple: config.apple.clientID !== 'id' && !!config.apple.teamID && !!config.apple.keyID && !!config.apple.privateKey,
+  };
+  return (['google', 'facebook', 'apple'] as const).filter((p) => ready[p]);
+}
+
 // DOMAIN (production) or the host the request arrived on (local development).
 // Apple registers only https URLs and rejects localhost outright, so its
 // sign-in works against a real domain (or a tunnel) rather than `next dev`.
@@ -79,6 +92,10 @@ function callbackUrl(request: NextRequest, provider: Provider) {
 
 // Redirects to the provider's consent page.
 export async function startSignIn(request: NextRequest, provider: Provider): Promise<Response> {
+  // An old link or a stale page can still ask for one that is not set up.
+  if (!signInProviders().includes(provider)) {
+    return Response.redirect(`${publicOrigin(request)}/login`, 302);
+  }
   const p = PROVIDERS[provider];
   const state = randomBytes(24).toString('base64url');
   (await cookies()).set({

@@ -3,14 +3,14 @@
 import Link from '@/components/ui/Link';
 import { useSearchParams } from '@/lib/client/navigation';
 import { useState } from 'react';
-import { OAuthButtons, OrDivider } from '@/components/forms/OAuthButtons';
+import { OAuthButtons, type SignInProvider } from '@/components/forms/OAuthButtons';
 import { afterLoginPath, authHref } from '@/lib/authRedirect';
 import { api, ApiError } from '@/lib/client/api';
 import { useT } from '@/lib/client/i18n';
 import { useLocalize } from '@/lib/client/navigation';
 
 
-export function LoginForm() {
+export function LoginForm({ providers }: { providers: SignInProvider[] }) {
   const params = useSearchParams();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -61,8 +61,7 @@ export function LoginForm() {
       <button type="submit" disabled={busy} className="btn btn-primary w-full py-2.5">
         {busy ? t('account.loggingIn') : t('account.login')}
       </button>
-      <OrDivider />
-      <OAuthButtons redirect={afterLoginPath(params.get('redirect'))} />
+      <OAuthButtons providers={providers} redirect={afterLoginPath(params.get('redirect'))} />
       <p className="pt-2 text-center text-sm text-subtle">
         {t.rich('account.newTo', {
           link: (chunks) => (

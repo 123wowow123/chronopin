@@ -3,7 +3,7 @@
 import Link from '@/components/ui/Link';
 import { useSearchParams } from '@/lib/client/navigation';
 import { useEffect, useState } from 'react';
-import { OAuthButtons, OrDivider } from '@/components/forms/OAuthButtons';
+import { OAuthButtons, type SignInProvider } from '@/components/forms/OAuthButtons';
 import { afterLoginPath, authHref } from '@/lib/authRedirect';
 import { birthdayProblem, birthdayToday, EARLIEST_BIRTHDAY } from '@/lib/birthday';
 import { api, ApiError } from '@/lib/client/api';
@@ -13,7 +13,7 @@ import { useLocalize } from '@/lib/client/navigation';
 
 const HANDLE = /^[a-zA-Z0-9-_]+$/;
 
-export function SignupForm() {
+export function SignupForm({ providers }: { providers: SignInProvider[] }) {
   const params = useSearchParams();
   const redirect = afterLoginPath(params.get('redirect'));
   // birthday and phone are the fields that may stay empty.
@@ -171,8 +171,8 @@ export function SignupForm() {
       <button type="submit" disabled={busy} className="btn btn-primary w-full py-2.5">
         {t('nav.signUp')}
       </button>
-      <OrDivider />
       <OAuthButtons
+        providers={providers}
         handle={handleValid ? `@${form.handle}` : undefined}
         redirect={redirect}
         validate={() => {
