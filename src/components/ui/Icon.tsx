@@ -207,14 +207,31 @@ const PATHS: Record<string, React.ReactNode> = {
       <path d="M12 11.5v4.5M12 8h.01" />
     </>
   ),
-  // A comment's vote (Lucide's thumbs-up, ISC); flipped upside down it is the
-  // thumbs-down (-scale-y-100).
+  // A comment's Like button before the reader has reacted (Lucide's
+  // thumbs-up, ISC).
   thumb: (
     <>
       <path d="M7 10v12" />
       <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
     </>
   ),
+  // A comment's actions (Lucide's shapes, ISC): the menu they sit behind,
+  // answering it, reporting it and taking it down.
+  'dots-vertical': (
+    <>
+      <circle cx="12" cy="5" r="1" />
+      <circle cx="12" cy="12" r="1" />
+      <circle cx="12" cy="19" r="1" />
+    </>
+  ),
+  reply: (
+    <>
+      <path d="m9 17-5-5 5-5" />
+      <path d="M20 18v-2a4 4 0 0 0-4-4H4" />
+    </>
+  ),
+  flag: <path d="M4 22v-7M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />,
+  trash: <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />,
   // Arrows pushing out to both ends: widening a range, not zooming a map.
   'expand-x': (
     <>

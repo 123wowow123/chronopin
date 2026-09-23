@@ -132,7 +132,8 @@ test.describe.serial('a signed-in author', () => {
     await page.getByRole('button', { name: 'Post' }).click();
     await expect(page.getByText('First!')).toBeVisible();
     await expect(page.getByTitle('Edit comment')).toHaveCount(0);
-    await page.getByTitle('Delete comment').click();
+    await page.getByRole('button', { name: 'More actions' }).click();
+    await page.getByRole('menuitem', { name: 'Delete' }).click();
     await expect(page.getByText('First!')).toHaveCount(0);
 
     // Take the pin down again. Nothing on the pin page does this, so it goes

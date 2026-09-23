@@ -14,7 +14,7 @@ export function e2eUserIds(users: Row[]): Set<number> {
 }
 
 export function excludeE2e<P extends Row>(
-  data: { users: Row[]; pins: P[]; companies: Row[]; comments: Row[]; commentVotes?: Row[]; follows: Row[]; companyFollows: Row[] },
+  data: { users: Row[]; pins: P[]; companies: Row[]; comments: Row[]; commentReactions?: Row[]; follows: Row[]; companyFollows: Row[] },
 ) {
   const userIds = e2eUserIds(data.users);
   const isE2eUser = (id: unknown) => userIds.has(id as number);
@@ -41,8 +41,8 @@ export function excludeE2e<P extends Row>(
     pins,
     companies: data.companies.filter((c) => !droppedCompanyIds.has(c.id)),
     comments: data.comments.filter((c) => !isE2eUser(c.userId) && !droppedPinIds.has(c.pinId)),
-    // A vote goes with its voter, and with the comment it was on.
-    commentVotes: (data.commentVotes ?? []).filter((v) => {
+    // A reaction goes with whoever gave it, and with the comment it was on.
+    commentReactions: (data.commentReactions ?? []).filter((v) => {
       const comment = data.comments.find((c) => c.id === v.commentId);
       return !isE2eUser(v.userId) && !!comment && !isE2eUser(comment.userId) && !droppedPinIds.has(comment.pinId);
     }),

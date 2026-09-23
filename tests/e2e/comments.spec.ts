@@ -16,10 +16,10 @@ async function signUp(api: APIRequestContext, who: string) {
   return email;
 }
 
-// Up and down votes on comments (0073), each thumb counted apart: the author
-// cannot vote on their own, a vote shows at once and is still there after a
-// reload, and the same thumb again takes it back.
-test('a comment takes one up or down vote from each other reader', async ({ page, playwright, baseURL }) => {
+// Reactions to comments (0075), as on Facebook: the Like button likes, the
+// row of six that opens on hovering it picks another in its place, the
+// summary counts them all, and a reload keeps them.
+test('a comment takes one reaction from each reader', async ({ page, playwright, baseURL }) => {
   // The author: an account that has confirmed its email, since posting a
   // comment waits for that (the link comes from a local script, as in
   // account.spec.ts).
@@ -33,37 +33,70 @@ test('a comment takes one up or down vote from each other reader', async ({ page
     return `/pin/${pins[0].id}`;
   });
   const pinId = Number(pinPath.split('/').pop());
-  const posted = await author.post(`/api/pins/${pinId}/comment`, { data: { text: `A comment to vote on ${stamp}` } });
+  const posted = await author.post(`/api/pins/${pinId}/comment`, { data: { text: `A comment to react to ${stamp}` } });
   expect(posted.ok()).toBe(true);
   const { id } = await posted.json();
 
-  // The author's own arrows are off.
-  const own = await author.put(`/api/pins/${pinId}/comment/${id}/vote`, { data: { value: 1 } });
-  expect(own.status()).toBe(403);
+  // The author may react to their own, and only the six are taken.
+  const own = await author.put(`/api/pins/${pinId}/comment/${id}/reaction`, { data: { reaction: 'love' } });
+  expect(await own.json()).toMatchObject({ reactions: { love: 1 }, myReaction: 'love' });
+  expect((await author.put(`/api/pins/${pinId}/comment/${id}/reaction`, { data: { reaction: 'meh' } })).status()).toBe(400);
 
   // A reader, signed in on the page itself.
-  await signUp(page.request, 'cvoter');
+  await signUp(page.request, 'creactor');
   await page.goto(pinPath);
   const comment = page.locator(`#comment-${id}`);
-  const votes = comment.getByRole('group', { name: 'Votes' });
-  // Each thumb keeps its own count.
-  const ups = votes.locator('[data-count="up"]');
-  const downs = votes.locator('[data-count="down"]');
-  await expect(ups).toHaveText('0');
-  await expect(downs).toHaveText('0');
+  const total = comment.locator('[data-count="total"]');
+  await expect(total).toHaveText('1');
 
-  await votes.getByRole('button', { name: 'Upvote' }).click();
-  await expect(ups).toHaveText('1');
+  // The Like button likes.
+  await comment.getByRole('button', { name: 'Like', exact: true }).click();
+  await expect(total).toHaveText('2');
   await page.reload();
-  await expect(ups).toHaveText('1');
-  await expect(downs).toHaveText('0');
-  await expect(votes.getByRole('button', { name: 'Remove your upvote' })).toHaveAttribute('aria-pressed', 'true');
+  await expect(total).toHaveText('2');
+  const liked = comment.getByRole('button', { name: 'Remove your reaction (Like)' });
+  await expect(liked).toHaveAttribute('aria-pressed', 'true');
 
-  // Down replaces up; the same thumb again takes it back.
-  await votes.getByRole('button', { name: 'Downvote' }).click();
-  await expect(ups).toHaveText('0');
-  await expect(downs).toHaveText('1');
-  await votes.getByRole('button', { name: 'Remove your downvote' }).click();
-  await expect(downs).toHaveText('0');
+  // Hovering it opens the row; Haha takes the like's place.
+  await liked.hover();
+  const picker = comment.getByRole('group', { name: 'Choose a reaction' });
+  await picker.getByRole('button', { name: 'Haha' }).click();
+  await expect(picker).toHaveCount(0);
+  await expect(total).toHaveText('2');
+  const reactions = await author.get(`/api/pins/${pinId}/comment`).then((r) => r.json());
+  expect(reactions.find((c: { id: number }) => c.id === id)).toMatchObject({ reactions: { love: 1, haha: 1 } });
+
+  // Pressing it again takes the reaction back.
+  await comment.getByRole('button', { name: 'Remove your reaction (Haha)' }).click();
+  await expect(total).toHaveText('1');
+  await author.dispose();
+});
+
+// Reporting a comment (0074), from its three-dot menu: the reader picks why,
+// and the author has no Report on their own.
+test('a reader reports a comment from its menu', async ({ page, playwright, baseURL }) => {
+  const author = await playwright.request.newContext({ baseURL });
+  const authorEmail = await signUp(author, 'rauthor');
+  const { stdout } = await promisify(execFile)('npx', ['tsx', 'scripts/data/e2eVerifyLink.ts', authorEmail], { cwd: root });
+  await author.get(stdout.split('\n').find((line) => line.startsWith('/auth/verify-email?'))!);
+  const pins = await page.request.get('/api/pins').then(async (r) => {
+    const body = await r.json();
+    return Array.isArray(body) ? body : body.pins;
+  });
+  const pinId = pins[0].id;
+  const posted = await author.post(`/api/pins/${pinId}/comment`, { data: { text: `A comment to report ${stamp}` } });
+  const { id } = await posted.json();
+  expect((await author.post(`/api/pins/${pinId}/comment/${id}/report`, { data: { reason: 'spam' } })).status()).toBe(403);
+
+  await signUp(page.request, 'rreader');
+  await page.goto(`/pin/${pinId}`);
+  const comment = page.locator(`#comment-${id}`);
+  await comment.getByRole('button', { name: 'More actions' }).click();
+  // Not theirs, so no Delete.
+  await expect(comment.getByRole('menuitem', { name: 'Delete' })).toHaveCount(0);
+  await comment.getByRole('menuitem', { name: 'Report' }).click();
+  await comment.getByRole('menuitem', { name: 'Spam' }).click();
+  await expect(comment.getByRole('status')).toBeVisible();
+  expect((await page.request.post(`/api/pins/${pinId}/comment/${id}/report`, { data: { reason: 'nonsense' } })).status()).toBe(400);
   await author.dispose();
 });

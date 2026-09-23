@@ -1,10 +1,11 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { api, isEmailUnverified } from '@/lib/client/api';
 import { commentMood, type CommentMood } from '@/lib/commentMood';
+import { COMMENT_REACTIONS, type CommentReactionName } from '@/lib/commentReactions';
 import { AuthLink } from '@/components/nav/AuthLink';
 import { usePendingAction } from '@/lib/client/pendingAction';
 import { useSession } from '@/lib/client/session';
@@ -37,7 +38,7 @@ function buildTree(comments: CommentJson[]): Node[] {
 // A pin's comments: server-rendered for readers and crawlers, then live for
 // posting, replying and deleting your own - a comment is never edited.
 export function Comments({ pinId, initialComments }: { pinId: number; initialComments: CommentJson[] }) {
-  const { user, isLoggedIn, status } = useSession();
+  const { user, isLoggedIn, isAdmin, status } = useSession();
   const [comments, setComments] = useState(initialComments);
   const [text, setText] = useState('');
   const [error, setError] = useState('');
@@ -52,12 +53,12 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
       .get<CommentJson[]>(`/api/pins/${pinId}/comment`)
       .then((fresh) => {
         if (!live) return;
-        // The fresh read also carries the votes, and this viewer's own.
+        // The fresh read also carries the reactions, and this viewer's own.
         const byId = new Map(fresh.map((c) => [c.id, c]));
         setComments((list) =>
           list.map((c) => {
             const f = byId.get(c.id);
-            return f ? { ...c, sentiment: f.sentiment ?? null, upvotes: f.upvotes, downvotes: f.downvotes, myVote: f.myVote } : c;
+            return f ? { ...c, sentiment: f.sentiment ?? null, reactions: f.reactions, myReaction: f.myReaction } : c;
           }),
         );
       })
@@ -82,19 +83,18 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
     }
   }
 
-  // Up, down, or the same arrow again to take the vote back. Shown at once,
-  // then set to what the server counted (or put back if it refused).
-  async function vote(comment: CommentJson, value: -1 | 0 | 1) {
-    const before = { upvotes: comment.upvotes ?? 0, downvotes: comment.downvotes ?? 0, myVote: comment.myVote ?? 0 };
-    const guess = { ...before, myVote: value };
-    if (before.myVote === 1) guess.upvotes -= 1;
-    if (before.myVote === -1) guess.downvotes -= 1;
-    if (value === 1) guess.upvotes += 1;
-    if (value === -1) guess.downvotes += 1;
-    const set = (counts: typeof before) => setComments((list) => list.map((c) => (c.id === comment.id ? { ...c, ...counts } : c)));
-    set(guess);
+  // A reaction, a different one in its place, or null to take it back.
+  // Shown at once, then set to what the server counted (or put back if it
+  // refused).
+  async function react(comment: CommentJson, reaction: CommentReactionName | null) {
+    const before = { reactions: comment.reactions ?? {}, myReaction: comment.myReaction ?? null };
+    const counts = { ...before.reactions };
+    if (before.myReaction) counts[before.myReaction] = Math.max(0, (counts[before.myReaction] ?? 1) - 1);
+    if (reaction) counts[reaction] = (counts[reaction] ?? 0) + 1;
+    const set = (next: typeof before) => setComments((list) => list.map((c) => (c.id === comment.id ? { ...c, ...next } : c)));
+    set({ reactions: counts, myReaction: reaction });
     try {
-      set(await api.put<typeof before>(`/api/pins/${pinId}/comment/${comment.id}/vote`, { value }));
+      set(await api.put<typeof before>(`/api/pins/${pinId}/comment/${comment.id}/reaction`, { reaction }));
     } catch {
       set(before);
     }
@@ -121,10 +121,11 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
       key={node.id}
       node={node}
       isOwn={!!user && node.userId === user.id}
+      canDelete={!!user && (node.userId === user.id || isAdmin)}
       canReply={isLoggedIn && node.depth < MAX_REPLY_DEPTH}
       signedIn={isLoggedIn}
       pinId={pinId}
-      onVote={(value) => vote(node, value)}
+      onReact={(reaction) => react(node, reaction)}
       onReply={(replyText) => post({ text: replyText, parentCommentId: node.id })}
       onRemove={() => remove(node)}
       renderChild={renderNode}
@@ -240,20 +241,22 @@ function MoodSummary({ mood, total }: { mood: CommentMood; total: number }) {
 function CommentItem({
   node,
   isOwn,
+  canDelete,
   canReply,
   signedIn,
   pinId,
-  onVote,
+  onReact,
   onReply,
   onRemove,
   renderChild,
 }: {
   node: Node;
   isOwn: boolean;
+  canDelete: boolean;
   canReply: boolean;
   signedIn: boolean;
   pinId: number;
-  onVote: (value: -1 | 0 | 1) => void;
+  onReact: (reaction: CommentReactionName | null) => void;
   onReply: (text: string) => Promise<boolean>;
   onRemove: () => void;
   renderChild: (node: Node) => React.ReactNode;
@@ -279,17 +282,22 @@ function CommentItem({
                 rather than pushing the controls off the row. */}
             <span className="min-w-0 flex-1 truncate text-xs font-medium text-subtle">{node.userName}</span>
             <div className="flex shrink-0 items-center gap-2 text-xs sm:gap-4">
-              <Votes node={node} isOwn={isOwn} signedIn={signedIn} pinId={pinId} onVote={onVote} />
+              <Reactions node={node} signedIn={signedIn} pinId={pinId} onReact={onReact} />
               {canReply ? (
-                <button type="button" onClick={() => { setDraft(''); setMode('reply'); }} className="rounded-md px-1.5 py-0.5 text-xs text-link hover:bg-raised" title={t('comments.reply')}>
-                  {t('comments.reply')}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setDraft('');
+                    setMode('reply');
+                  }}
+                  aria-label={t('comments.reply')}
+                  title={t('comments.reply')}
+                  className="rounded-md p-1 text-subtle hover:bg-raised hover:text-link"
+                >
+                  <Icon name="reply" className="size-4" />
                 </button>
               ) : null}
-              {isOwn ? (
-                <button type="button" onClick={onRemove} title={t('comments.deleteComment')} className="rounded-md p-1 text-subtle hover:bg-red-500/10 hover:text-danger">
-                  <Icon name="close" className="size-3.5" />
-                </button>
-              ) : null}
+              <CommentMenu commentId={node.id} pinId={pinId} isOwn={isOwn} canDelete={canDelete} signedIn={signedIn} onRemove={onRemove} />
             </div>
           </div>
           {/* Plain text: comments are never rendered as HTML. */}
@@ -320,66 +328,367 @@ function CommentItem({
   );
 }
 
-// Up and down votes, each counted apart: a thumb up with how many gave one,
-// a thumb down with how many gave that. The viewer's own is lit (and filled),
-// and pressing it again takes it back. Nobody votes on their own comment, and
-// a signed-out reader is sent to log in first.
-function Votes({
+// Reactions, as on Facebook. The Like button likes the comment (or, once the
+// reader has reacted, shows their reaction and takes it back); resting the
+// pointer on it, pressing and holding it on a touch screen, or ArrowUp from
+// the keyboard opens the row of six to pick from. Beside it, the three most
+// given reactions and how many reacted in all. A signed-out reader's Like
+// sends them to log in first.
+const HOVER_OPEN_MS = 450;
+const HOVER_CLOSE_MS = 300;
+const LONG_PRESS_MS = 450;
+
+function Reactions({
   node,
-  isOwn,
   signedIn,
   pinId,
-  onVote,
+  onReact,
 }: {
   node: CommentJson;
-  isOwn: boolean;
   signedIn: boolean;
   pinId: number;
-  onVote: (value: -1 | 0 | 1) => void;
+  onReact: (reaction: CommentReactionName | null) => void;
 }) {
   const t = useT();
-  const mine = node.myVote ?? 0;
-  const thumb = (value: 1 | -1) => {
-    const on = mine === value;
-    const count = value === 1 ? (node.upvotes ?? 0) : (node.downvotes ?? 0);
-    const label = t(value === 1 ? (on ? 'comments.removeUpvote' : 'comments.upvote') : on ? 'comments.removeDownvote' : 'comments.downvote');
-    const className = `inline-flex items-center gap-1 rounded px-1.5 py-0.5 tabular-nums transition-colors ${
-      on ? (value === 1 ? 'text-success' : 'text-danger') : 'text-subtle hover:bg-raised hover:text-ink'
-    } disabled:cursor-default disabled:opacity-60 disabled:hover:bg-transparent disabled:hover:text-subtle`;
-    const face = (
-      <>
-        <Icon name="thumb" className={`size-3.5 ${value === -1 ? '-scale-y-100' : ''} ${on ? '[&_path]:fill-current/25' : ''}`} />
-        <span data-count={value === 1 ? 'up' : 'down'}>{count}</span>
-      </>
-    );
-    if (!signedIn) {
-      return (
-        <span title={t('comments.logInToVote')} className="inline-flex">
-          <AuthLink to="/login" className={className} pending={{ kind: 'comment', id: pinId }}>
+  const pickerId = useId();
+  // How the picker was opened: from the keyboard it takes the focus.
+  const [open, setOpen] = useState<false | 'pointer' | 'keys'>(false);
+  const rootRef = useRef<HTMLSpanElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
+  // A long press opens the picker; the click the finger's lift then makes
+  // must not also like the comment.
+  const pressed = useRef(false);
+
+  const counts = node.reactions ?? {};
+  const given = COMMENT_REACTIONS.filter((r) => (counts[r.name] ?? 0) > 0).sort((a, b) => (counts[b.name] ?? 0) - (counts[a.name] ?? 0));
+  const total = given.reduce((sum, r) => sum + (counts[r.name] ?? 0), 0);
+  const mine = COMMENT_REACTIONS.find((r) => r.name === node.myReaction);
+
+  const later = (fn: () => void, ms: number) => {
+    clearTimeout(timer.current);
+    timer.current = setTimeout(fn, ms);
+  };
+  const close = useCallback((refocus: boolean) => {
+    clearTimeout(timer.current);
+    setOpen(false);
+    if (refocus) buttonRef.current?.focus();
+  }, []);
+
+  useEffect(() => () => clearTimeout(timer.current), []);
+  useEffect(() => {
+    if (!open) return;
+    const outside = (event: PointerEvent) => {
+      if (!rootRef.current?.contains(event.target as Element)) close(false);
+    };
+    const key = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') close(true);
+    };
+    document.addEventListener('pointerdown', outside);
+    document.addEventListener('keydown', key);
+    return () => {
+      document.removeEventListener('pointerdown', outside);
+      document.removeEventListener('keydown', key);
+    };
+  }, [open, close]);
+
+  const pick = (reaction: CommentReactionName) => {
+    close(true);
+    onReact(reaction === node.myReaction ? null : reaction);
+  };
+
+  const summary = total ? (
+    <span
+      className="inline-flex items-center gap-1 text-subtle tabular-nums"
+      aria-label={t('comments.reactions', { count: total })}
+      title={given.map((r) => `${r.emoji} ${counts[r.name]}`).join('  ')}
+    >
+      <span className="flex" aria-hidden>
+        {given.slice(0, 3).map((r) => (
+          <span key={r.name} className="-ml-1 flex size-4.5 items-center justify-center rounded-full bg-panel text-[11px] leading-none ring-2 ring-panel first:ml-0">
+            {r.emoji}
+          </span>
+        ))}
+      </span>
+      <span data-count="total">{total}</span>
+    </span>
+  ) : null;
+
+  const face = mine ? (
+    <span className="text-base leading-none" aria-hidden>
+      {mine.emoji}
+    </span>
+  ) : (
+    <Icon name="thumb" className="size-4" />
+  );
+  const buttonClass = `inline-flex items-center rounded-md p-1 transition-colors ${
+    mine ? 'bg-raised' : 'text-subtle hover:bg-raised hover:text-link'
+  }`;
+
+  if (!signedIn) {
+    return (
+      <span className="inline-flex items-center gap-1.5">
+        {summary}
+        <span title={t('comments.logInToReact')} className="inline-flex">
+          <AuthLink to="/login" className={buttonClass} pending={{ kind: 'comment', id: pinId }}>
             {face}
-            <span className="sr-only">{label}</span>
+            <span className="sr-only">{t('comments.like')}</span>
           </AuthLink>
         </span>
-      );
-    }
-    return (
+      </span>
+    );
+  }
+
+  const label = mine ? t('comments.removeReaction', { reaction: t(mine.label) }) : t('comments.like');
+  return (
+    <span
+      ref={rootRef}
+      className="relative inline-flex items-center gap-1.5"
+      onPointerEnter={(event) => {
+        if (event.pointerType === 'mouse') later(() => setOpen((was) => was || 'pointer'), open ? 0 : HOVER_OPEN_MS);
+      }}
+      onPointerLeave={(event) => {
+        if (event.pointerType === 'mouse') later(() => setOpen(false), HOVER_CLOSE_MS);
+      }}
+    >
+      {summary}
       <button
+        ref={buttonRef}
         type="button"
         aria-label={label}
-        aria-pressed={on}
-        title={isOwn ? t('comments.ownVote') : label}
-        disabled={isOwn}
-        onClick={() => onVote(on ? 0 : value)}
-        className={className}
+        title={label}
+        aria-pressed={!!mine}
+        aria-haspopup="true"
+        aria-expanded={!!open}
+        aria-controls={open ? pickerId : undefined}
+        onPointerDown={(event) => {
+          if (event.pointerType === 'mouse') return;
+          pressed.current = false;
+          later(() => {
+            pressed.current = true;
+            setOpen('pointer');
+          }, LONG_PRESS_MS);
+        }}
+        onPointerUp={(event) => {
+          if (event.pointerType !== 'mouse' && !pressed.current) clearTimeout(timer.current);
+        }}
+        onPointerCancel={() => clearTimeout(timer.current)}
+        // A held finger would otherwise bring up the phone's own menu.
+        onContextMenu={(event) => event.preventDefault()}
+        onKeyDown={(event) => {
+          if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+            event.preventDefault();
+            setOpen('keys');
+          }
+        }}
+        onClick={() => {
+          if (pressed.current) {
+            pressed.current = false;
+            return;
+          }
+          close(false);
+          onReact(mine ? null : 'like');
+        }}
+        className={buttonClass}
       >
         {face}
       </button>
-    );
-  };
+      {open ? (
+        <ReactionPicker id={pickerId} mine={node.myReaction ?? null} takeFocus={open === 'keys'} onPick={pick} />
+      ) : null}
+    </span>
+  );
+}
+
+// The row of six, floating above the Like button. Each grows under the
+// pointer; the reader's own is ringed, and picking it again takes it back.
+// The arrow keys move along the row.
+function ReactionPicker({
+  id,
+  mine,
+  takeFocus,
+  onPick,
+}: {
+  id: string;
+  mine: CommentReactionName | null;
+  takeFocus: boolean;
+  onPick: (reaction: CommentReactionName) => void;
+}) {
+  const t = useT();
+  const rowRef = useRef<HTMLDivElement>(null);
+  // Opened from the keyboard, the focus lands on the reader's own reaction,
+  // else the first.
+  useEffect(() => {
+    if (!takeFocus) return;
+    const buttons = rowRef.current?.querySelectorAll<HTMLButtonElement>('button');
+    buttons?.[Math.max(0, COMMENT_REACTIONS.findIndex((r) => r.name === mine))]?.focus({ preventScroll: true });
+  }, [takeFocus, mine]);
   return (
-    <span className="inline-flex items-center gap-1 text-xs sm:gap-3" role="group" aria-label={t('comments.votes')}>
-      {thumb(1)}
-      {thumb(-1)}
+    <div
+      ref={rowRef}
+      id={id}
+      role="group"
+      aria-label={t('comments.chooseReaction')}
+      className="floating absolute right-0 bottom-full z-30 mb-1.5 flex gap-0.5 rounded-full p-1"
+      onKeyDown={(event) => {
+        if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+        event.preventDefault();
+        const buttons = [...(rowRef.current?.querySelectorAll<HTMLButtonElement>('button') ?? [])];
+        const at = buttons.indexOf(document.activeElement as HTMLButtonElement);
+        const next = (at + (event.key === 'ArrowRight' ? 1 : -1) + buttons.length) % buttons.length;
+        buttons[next]?.focus();
+      }}
+    >
+      {COMMENT_REACTIONS.map((r) => (
+        <button
+          key={r.name}
+          type="button"
+          aria-label={t(r.label)}
+          title={t(r.label)}
+          aria-pressed={r.name === mine}
+          onClick={() => onPick(r.name)}
+          className={`flex size-9 origin-bottom items-center justify-center rounded-full text-2xl leading-none transition-transform duration-150 hover:scale-125 focus-visible:scale-125 motion-reduce:transition-none ${
+            r.name === mine ? 'bg-raised ring-1 ring-line' : ''
+          }`}
+        >
+          <span aria-hidden>{r.emoji}</span>
+        </button>
+      ))}
+    </div>
+  );
+}
+
+const REPORT_REASONS = [
+  ['spam', 'comments.reportSpam'],
+  ['harassment', 'comments.reportHarassment'],
+  ['misleading', 'comments.reportMisleading'],
+  ['other', 'comments.reportOther'],
+] as const;
+
+// The comment's other actions, behind a vertical three-dot button: Delete for
+// its author (and an admin, on anyone's), Report for everyone else, which
+// asks why and hands it to Admin > Reports. A signed-out reader's Report
+// sends them to log in first. Escape or a click elsewhere shuts it, and the
+// focus goes back to the button.
+function CommentMenu({
+  commentId,
+  pinId,
+  isOwn,
+  canDelete,
+  signedIn,
+  onRemove,
+}: {
+  commentId: number;
+  pinId: number;
+  isOwn: boolean;
+  canDelete: boolean;
+  signedIn: boolean;
+  onRemove: () => void;
+}) {
+  const t = useT();
+  const menuId = useId();
+  const [open, setOpen] = useState(false);
+  const [view, setView] = useState<'actions' | 'reasons' | 'done' | 'failed'>('actions');
+  const rootRef = useRef<HTMLSpanElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  const close = useCallback((refocus: boolean) => {
+    setOpen(false);
+    setView('actions');
+    if (refocus) buttonRef.current?.focus();
+  }, []);
+
+  useEffect(() => {
+    if (!open) return;
+    menuRef.current?.querySelector<HTMLElement>('[role="menuitem"]')?.focus();
+    const outside = (event: MouseEvent) => {
+      if (!rootRef.current?.contains(event.target as Element)) close(false);
+    };
+    const key = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') close(true);
+    };
+    document.addEventListener('mousedown', outside);
+    document.addEventListener('keydown', key);
+    return () => {
+      document.removeEventListener('mousedown', outside);
+      document.removeEventListener('keydown', key);
+    };
+  }, [open, view, close]);
+
+  async function report(reason: string) {
+    try {
+      await api.post(`/api/pins/${pinId}/comment/${commentId}/report`, { reason });
+      setView('done');
+    } catch {
+      setView('failed');
+    }
+  }
+
+  const item = 'flex w-full items-center gap-2 rounded-md px-2.5 py-1.5 text-left text-sm hover:bg-raised focus-visible:bg-raised';
+  return (
+    <span ref={rootRef} className="relative inline-flex">
+      <button
+        ref={buttonRef}
+        type="button"
+        aria-label={t('comments.moreActions')}
+        title={t('comments.moreActions')}
+        aria-haspopup="menu"
+        aria-expanded={open}
+        aria-controls={open ? menuId : undefined}
+        onClick={() => (open ? close(false) : setOpen(true))}
+        className="rounded-md p-1 text-subtle hover:bg-raised hover:text-ink"
+      >
+        <Icon name="dots-vertical" className="size-4" />
+      </button>
+      {open ? (
+        <div ref={menuRef} id={menuId} role="menu" className="floating absolute top-full right-0 z-30 mt-1 w-56 p-1 text-ink">
+          {view === 'actions' ? (
+            <>
+              {canDelete ? (
+                <button
+                  type="button"
+                  role="menuitem"
+                  onClick={() => {
+                    close(false);
+                    onRemove();
+                  }}
+                  className={`${item} text-danger`}
+                >
+                  <Icon name="trash" className="size-4" />
+                  {t('comments.deleteComment')}
+                </button>
+              ) : null}
+              {!isOwn ? (
+                signedIn ? (
+                  <button type="button" role="menuitem" onClick={() => setView('reasons')} className={item}>
+                    <Icon name="flag" className="size-4" />
+                    {t('comments.report')}
+                  </button>
+                ) : (
+                  <AuthLink to="/login" className={item} pending={{ kind: 'comment', id: pinId }}>
+                    <Icon name="flag" className="size-4" />
+                    {t('comments.report')}
+                  </AuthLink>
+                )
+              ) : null}
+            </>
+          ) : view === 'reasons' ? (
+            <>
+              <p className="px-2.5 pt-1 pb-1.5 text-xs text-subtle">{t('comments.reportWhy')}</p>
+              {REPORT_REASONS.map(([reason, label]) => (
+                <button key={reason} type="button" role="menuitem" onClick={() => report(reason)} className={item}>
+                  {t(label)}
+                </button>
+              ))}
+            </>
+          ) : (
+            <p role="status" className={`px-2.5 py-2 text-sm ${view === 'done' ? 'text-success' : 'text-danger'}`}>
+              {view === 'done' ? t('comments.reported') : t('comments.reportFailed')}
+            </p>
+          )}
+        </div>
+      ) : null}
     </span>
   );
 }

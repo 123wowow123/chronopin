@@ -33,7 +33,7 @@ const { values: flags } = parseArgs({
     userfile: { type: 'string', default: './scripts/backup/seedUsers.json' },
     publicuserfile: { type: 'string', default: './scripts/backup/seedUsersPublic.json' },
     commentfile: { type: 'string', default: './scripts/backup/seedComments.json' },
-    commentvotefile: { type: 'string', default: './scripts/backup/seedCommentVotes.json' },
+    commentreactionfile: { type: 'string', default: './scripts/backup/seedCommentReactions.json' },
     followfile: { type: 'string', default: './scripts/backup/seedFollows.json' },
     companyfollowfile: { type: 'string', default: './scripts/backup/seedCompanyFollows.json' },
     duplicatefile: { type: 'string', default: './scripts/backup/seedPinDuplicates.json' },
@@ -112,7 +112,7 @@ async function saveDB() {
     pins,
     companies: await Company.getAll(),
     comments: await Comment.getAll(),
-    commentVotes: await Comment.getAllVotes(),
+    commentReactions: await Comment.getAllReactions(),
     follows: (await Follow.getAll()).follows,
     companyFollows: await CompanyFollow.getAll(),
   });
@@ -134,9 +134,9 @@ async function saveDB() {
   console.log('Backup Comments');
   writeJson(flags.commentfile, data.comments);
 
-  // Up and down votes on the comments (0073).
-  console.log('Backup Comment Votes');
-  writeJson(flags.commentvotefile, data.commentVotes);
+  // Reactions to the comments (0075).
+  console.log('Backup Comment Reactions');
+  writeJson(flags.commentreactionfile, data.commentReactions);
 
   console.log('Backup Follows');
   writeJson(flags.followfile, data.follows);
@@ -331,12 +331,12 @@ async function seedDB() {
     log.error('Comments Save Error', JSON.stringify(error));
   }
 
-  // Votes after the comments and users they name; a backup from before 0073 has none.
-  if (existsSync(flags.commentvotefile)) {
+  // Reactions after the comments and users they name; a backup from before 0075 has none.
+  if (existsSync(flags.commentreactionfile)) {
     try {
-      await Comment.restoreVotes(readJson(flags.commentvotefile));
+      await Comment.restoreReactions(readJson(flags.commentreactionfile));
     } catch (error) {
-      log.error('Comment Votes Save Error', JSON.stringify(error));
+      log.error('Comment Reactions Save Error', JSON.stringify(error));
     }
   }
 

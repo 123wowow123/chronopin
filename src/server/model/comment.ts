@@ -5,8 +5,12 @@ import Notification from './notification';
 import { advanceIdSequence } from './pinShared';
 import PinUserLink from './pinUserLink';
 import User from './user';
+import type { CommentReactionName } from '@/lib/commentReactions';
 
-const prop = ['id', 'text', 'parentCommentId', 'sentiment', 'upvotes', 'downvotes', 'myVote', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
+const prop = ['id', 'text', 'parentCommentId', 'sentiment', 'reactions', 'myReaction', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
+
+export const COMMENT_REPORT_REASONS = ['spam', 'harassment', 'misleading', 'other'] as const;
+export type CommentReportReason = (typeof COMMENT_REPORT_REASONS)[number];
 
 const COMMENT_COLUMNS = `"id", "text", "userId", "pinId", "parentCommentId", "sentiment", "utcCreatedDateTime", "utcUpdatedDateTime"`;
 
@@ -15,11 +19,10 @@ export default class Comment extends PinUserLink {
   declare parentCommentId: number | null;
   // -1..1, null until Claude has scored it (src/server/extract/sentiment.ts).
   declare sentiment: number | null;
-  // Its votes (0073), and the viewer's own: 1, -1, or 0 for none. Read with
-  // the pin's comments only.
-  declare upvotes: number | undefined;
-  declare downvotes: number | undefined;
-  declare myVote: number | undefined;
+  // How many gave each reaction (0075), and the viewer's own or null. Read
+  // with the pin's comments only.
+  declare reactions: Partial<Record<CommentReactionName, number>> | undefined;
+  declare myReaction: CommentReactionName | null | undefined;
 
   protected get props() {
     return prop;
@@ -136,26 +139,25 @@ export default class Comment extends PinUserLink {
     return new Comment({ id }, new User({ id: userId })).delete();
   }
 
-  // A pin's live comments, oldest first, each with its up and down votes and
-  // the viewer's own vote (0 when viewerId is null: signed out, or the cached
-  // copy every reader shares).
+  // A pin's live comments, oldest first, each with its reactions counted by
+  // kind and the viewer's own (null when viewerId is null: signed out, or the
+  // cached copy every reader shares).
   static async getByPinId(pinId: number, viewerId: number | null = null): Promise<Comment[]> {
     const rows = await db.query(
       `
     SELECT "Comment"."id", "Comment"."text", "Comment"."userId", "Comment"."pinId",
            "Comment"."parentCommentId", "Comment"."sentiment", "Comment"."utcCreatedDateTime", "Comment"."utcUpdatedDateTime",
-           COALESCE("votes"."up", 0)::integer AS "upvotes",
-           COALESCE("votes"."down", 0)::integer AS "downvotes",
-           COALESCE("mine"."value", 0)::integer AS "myVote",
+           COALESCE("counts"."reactions", '{}'::json) AS "reactions",
+           "mine"."reaction" AS "myReaction",
            "User"."userName" AS "User.userName", "User"."pictureUrl" AS "User.pictureUrl"
     FROM "Comment"
       LEFT JOIN "User" ON "Comment"."userId" = "User"."id"
       LEFT JOIN (
-        SELECT "commentId", COUNT(*) FILTER (WHERE "value" = 1) AS "up", COUNT(*) FILTER (WHERE "value" = -1) AS "down"
-        FROM "CommentVote"
+        SELECT "commentId", json_object_agg("reaction", "n") AS "reactions"
+        FROM (SELECT "commentId", "reaction", COUNT(*)::integer AS "n" FROM "CommentReaction" GROUP BY "commentId", "reaction") AS "byKind"
         GROUP BY "commentId"
-      ) AS "votes" ON "votes"."commentId" = "Comment"."id"
-      LEFT JOIN "CommentVote" AS "mine" ON "mine"."commentId" = "Comment"."id" AND "mine"."userId" = $2
+      ) AS "counts" ON "counts"."commentId" = "Comment"."id"
+      LEFT JOIN "CommentReaction" AS "mine" ON "mine"."commentId" = "Comment"."id" AND "mine"."userId" = $2
     WHERE "Comment"."pinId" = $1 AND "Comment"."utcDeletedDateTime" IS NULL
     ORDER BY "Comment"."utcCreatedDateTime" ASC, "Comment"."id" ASC`,
       [pinId, viewerId],
@@ -163,48 +165,105 @@ export default class Comment extends PinUserLink {
     return rows.map((row) => new Comment(row));
   }
 
-  // Sets the viewer's vote on a live comment of this pin: 1, -1, or 0 to take
-  // it back. Resolves the comment's counts after it, or null when there is no
-  // such comment, and 'own' for the author's own comment, which takes no vote.
-  static async vote(pinId: number, commentId: number, userId: number, value: -1 | 0 | 1) {
+  // Sets the viewer's reaction to a live comment of this pin, replacing any
+  // they gave before, or takes it back (null). Anyone may react to their own,
+  // as on Facebook. Resolves the comment's counts after it, or null when
+  // there is no such comment.
+  static async react(pinId: number, commentId: number, userId: number, reaction: CommentReactionName | null) {
+    const [comment] = await db.query(
+      `SELECT "id" FROM "Comment" WHERE "id" = $1 AND "pinId" = $2 AND "utcDeletedDateTime" IS NULL`,
+      [commentId, pinId],
+    );
+    if (!comment) return null;
+    if (reaction === null) {
+      await db.query(`DELETE FROM "CommentReaction" WHERE "commentId" = $1 AND "userId" = $2`, [commentId, userId]);
+    } else {
+      await db.query(
+        `INSERT INTO "CommentReaction" ("commentId", "userId", "reaction") VALUES ($1, $2, $3)
+         ON CONFLICT ("commentId", "userId") DO UPDATE SET "reaction" = EXCLUDED."reaction", "utcUpdatedDateTime" = now()`,
+        [commentId, userId, reaction],
+      );
+    }
+    const [counts] = await db.query<{ reactions: Partial<Record<CommentReactionName, number>> }>(
+      `SELECT COALESCE(json_object_agg("reaction", "n"), '{}'::json) AS "reactions"
+       FROM (SELECT "reaction", COUNT(*)::integer AS "n" FROM "CommentReaction" WHERE "commentId" = $1 GROUP BY "reaction") AS "byKind"`,
+      [commentId],
+    );
+    return { commentId, reactions: counts.reactions, myReaction: reaction };
+  }
+
+  // Reports a live comment of this pin for an admin to look at (0074): one per
+  // person, a second changing the reason, and reopened if an admin had
+  // dismissed it. null when there is no such comment; 'own' for the author's.
+  static async report(pinId: number, commentId: number, userId: number, reason: CommentReportReason) {
     const [comment] = await db.query<{ userId: number }>(
       `SELECT "userId" FROM "Comment" WHERE "id" = $1 AND "pinId" = $2 AND "utcDeletedDateTime" IS NULL`,
       [commentId, pinId],
     );
     if (!comment) return null;
     if (comment.userId === userId) return 'own' as const;
-    if (value === 0) {
-      await db.query(`DELETE FROM "CommentVote" WHERE "commentId" = $1 AND "userId" = $2`, [commentId, userId]);
-    } else {
-      await db.query(
-        `INSERT INTO "CommentVote" ("commentId", "userId", "value") VALUES ($1, $2, $3)
-         ON CONFLICT ("commentId", "userId") DO UPDATE SET "value" = EXCLUDED."value", "utcUpdatedDateTime" = now()`,
-        [commentId, userId, value],
-      );
-    }
-    const [counts] = await db.query<{ upvotes: number; downvotes: number }>(
-      `SELECT COUNT(*) FILTER (WHERE "value" = 1)::integer AS "upvotes", COUNT(*) FILTER (WHERE "value" = -1)::integer AS "downvotes"
-       FROM "CommentVote" WHERE "commentId" = $1`,
-      [commentId],
+    await db.query(
+      `INSERT INTO "CommentReport" ("commentId", "userId", "reason") VALUES ($1, $2, $3)
+       ON CONFLICT ("commentId", "userId") DO UPDATE
+         SET "reason" = EXCLUDED."reason", "utcCreatedDateTime" = now(), "utcDismissedDateTime" = NULL, "dismissedByUserId" = NULL`,
+      [commentId, userId, reason],
     );
-    return { commentId, ...counts, myVote: value };
+    return 'reported' as const;
   }
 
-  // Every vote on a live comment, for backups (scripts/data).
-  static getAllVotes() {
-    return db.query<{ commentId: number; userId: number; value: number; utcCreatedDateTime: Date; utcUpdatedDateTime: Date }>(`
-    SELECT "v"."commentId", "v"."userId", "v"."value", "v"."utcCreatedDateTime", "v"."utcUpdatedDateTime"
-    FROM "CommentVote" AS "v"
-      JOIN "Comment" AS "c" ON "c"."id" = "v"."commentId" AND "c"."utcDeletedDateTime" IS NULL
-    ORDER BY "v"."commentId", "v"."userId"`);
+  // Live comments with open reports, most reported first, for Admin > Reports.
+  static openReports() {
+    return db.query<{
+      commentId: number;
+      pinId: number;
+      pinTitle: string;
+      text: string;
+      authorName: string;
+      utcCreatedDateTime: Date;
+      reports: number;
+      reasons: Record<string, number>;
+      lastReportedDateTime: Date;
+    }>(`
+    SELECT "c"."id" AS "commentId", "c"."pinId", "p"."title" AS "pinTitle", "c"."text", "u"."userName" AS "authorName",
+           "c"."utcCreatedDateTime", COUNT(*)::integer AS "reports",
+           (SELECT json_object_agg("reason", "n") FROM (
+              SELECT "reason", COUNT(*)::integer AS "n" FROM "CommentReport"
+              WHERE "commentId" = "c"."id" AND "utcDismissedDateTime" IS NULL GROUP BY "reason") AS "byReason") AS "reasons",
+           MAX("r"."utcCreatedDateTime") AS "lastReportedDateTime"
+    FROM "CommentReport" AS "r"
+      JOIN "Comment" AS "c" ON "c"."id" = "r"."commentId" AND "c"."utcDeletedDateTime" IS NULL
+      JOIN "Pin" AS "p" ON "p"."id" = "c"."pinId"
+      LEFT JOIN "User" AS "u" ON "u"."id" = "c"."userId"
+    WHERE "r"."utcDismissedDateTime" IS NULL
+    GROUP BY "c"."id", "p"."title", "u"."userName"
+    ORDER BY "reports" DESC, "lastReportedDateTime" DESC`);
   }
 
-  static async restoreVotes(votes: Row[]) {
-    for (const v of votes) {
+  // An admin's "nothing wrong here": the comment's open reports are closed.
+  static async dismissReports(commentId: number, adminId: number) {
+    const rows = await db.query(
+      `UPDATE "CommentReport" SET "utcDismissedDateTime" = now(), "dismissedByUserId" = $2
+       WHERE "commentId" = $1 AND "utcDismissedDateTime" IS NULL RETURNING "commentId"`,
+      [commentId, adminId],
+    );
+    return rows.length;
+  }
+
+  // Every reaction to a live comment, for backups (scripts/data).
+  static getAllReactions() {
+    return db.query<{ commentId: number; userId: number; reaction: string; utcCreatedDateTime: Date; utcUpdatedDateTime: Date }>(`
+    SELECT "r"."commentId", "r"."userId", "r"."reaction", "r"."utcCreatedDateTime", "r"."utcUpdatedDateTime"
+    FROM "CommentReaction" AS "r"
+      JOIN "Comment" AS "c" ON "c"."id" = "r"."commentId" AND "c"."utcDeletedDateTime" IS NULL
+    ORDER BY "r"."commentId", "r"."userId"`);
+  }
+
+  static async restoreReactions(reactions: Row[]) {
+    for (const r of reactions) {
       await db.query(
-        `INSERT INTO "CommentVote" ("commentId", "userId", "value", "utcCreatedDateTime", "utcUpdatedDateTime") VALUES ($1, $2, $3, $4, $5)
+        `INSERT INTO "CommentReaction" ("commentId", "userId", "reaction", "utcCreatedDateTime", "utcUpdatedDateTime") VALUES ($1, $2, $3, $4, $5)
          ON CONFLICT DO NOTHING`,
-        [v.commentId, v.userId, v.value, v.utcCreatedDateTime, v.utcUpdatedDateTime],
+        [r.commentId, r.userId, r.reaction, r.utcCreatedDateTime, r.utcUpdatedDateTime],
       );
     }
   }
