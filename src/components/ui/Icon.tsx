@@ -217,7 +217,7 @@ const PATHS: Record<string, React.ReactNode> = {
     </>
   ),
   // A comment's actions (Lucide's shapes, ISC): the menu they sit behind,
-  // answering it, reporting it and taking it down.
+  // and answering it.
   'dots-vertical': (
     <>
       <circle cx="12" cy="5" r="1" />
@@ -231,8 +231,6 @@ const PATHS: Record<string, React.ReactNode> = {
       <path d="M20 18v-2a4 4 0 0 0-4-4H4" />
     </>
   ),
-  flag: <path d="M4 22v-7M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />,
-  trash: <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />,
   // Arrows pushing out to both ends: widening a range, not zooming a map.
   'expand-x': (
     <>

@@ -555,7 +555,7 @@ function CommentMenu({
     }
   }
 
-  const item = 'flex w-full items-center gap-2 rounded-md px-2.5 py-1.5 text-left text-sm hover:bg-raised focus-visible:bg-raised';
+  const item = 'block w-full rounded-lg px-3 py-2 text-left text-base font-medium hover:bg-raised focus-visible:bg-raised focus-visible:outline-none';
   return (
     <span ref={rootRef} className="relative inline-flex">
       <button
@@ -572,7 +572,14 @@ function CommentMenu({
         <Icon name="dots-vertical" className="size-5" />
       </button>
       {open ? (
-        <div ref={menuRef} id={menuId} role="menu" className="floating absolute top-full right-0 z-30 mt-1 w-56 p-1 text-ink">
+        // Over the button, as in Messenger, with a tail pointing down at it.
+        <div
+          ref={menuRef}
+          id={menuId}
+          role="menu"
+          className="absolute right-0 bottom-full z-30 mb-2.5 w-48 rounded-xl border border-tint/[0.07] bg-panel p-1.5 text-ink shadow-2xl shadow-shade/40"
+        >
+          <span aria-hidden className="absolute -bottom-1.5 right-3 size-3 rotate-45 border-r border-b border-tint/[0.07] bg-panel" />
           {view === 'actions' ? (
             <>
               {canDelete ? (
@@ -583,27 +590,24 @@ function CommentMenu({
                     close(false);
                     onRemove();
                   }}
-                  className={`${item} text-danger`}
+                  className={item}
                 >
-                  <Icon name="trash" className="size-4" />
                   {t('comments.deleteComment')}
                 </button>
               ) : null}
               {signedIn ? (
                 <button type="button" role="menuitem" onClick={() => setView('reasons')} className={item}>
-                  <Icon name="flag" className="size-4" />
                   {t('comments.report')}
                 </button>
               ) : (
                 <AuthLink to="/login" className={item} pending={{ kind: 'comment', id: pinId }}>
-                  <Icon name="flag" className="size-4" />
                   {t('comments.report')}
                 </AuthLink>
               )}
             </>
           ) : view === 'reasons' ? (
             <>
-              <p className="px-2.5 pt-1 pb-1.5 text-xs text-subtle">{t('comments.reportWhy')}</p>
+              <p className="px-3 pt-1.5 pb-1 text-sm text-subtle">{t('comments.reportWhy')}</p>
               {REPORT_REASONS.map(([reason, label]) => (
                 <button key={reason} type="button" role="menuitem" onClick={() => report(reason)} className={item}>
                   {t(label)}
@@ -611,7 +615,7 @@ function CommentMenu({
               ))}
             </>
           ) : (
-            <p role="status" className={`px-2.5 py-2 text-sm ${view === 'done' ? 'text-success' : 'text-danger'}`}>
+            <p role="status" className={`px-3 py-2 text-sm ${view === 'done' ? 'text-success' : 'text-danger'}`}>
               {view === 'done' ? t('comments.reported') : t('comments.reportFailed')}
             </p>
           )}
