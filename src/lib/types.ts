@@ -299,6 +299,9 @@ export type CommentJson = {
   // with the fresh read.
   reactions?: Partial<Record<CommentReactionName, number>>;
   myReaction?: CommentReactionName | null;
+  // Hidden from readers after too many reports (COMMENT_HIDE_REPORTS): its
+  // text comes empty and its tone null.
+  hidden?: boolean;
   utcCreatedDateTime: string;
   utcUpdatedDateTime?: string;
   userId: number;

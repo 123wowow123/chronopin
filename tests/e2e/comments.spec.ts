@@ -107,3 +107,103 @@ test('a reader reports a comment from its menu', async ({ page, playwright, base
   expect((await page.request.post(`/api/pins/${pinId}/comment/${id}/report`, { data: { reason: 'nonsense' } })).status()).toBe(400);
   await author.dispose();
 });
+
+// Admin > Reports (0074): a reported comment shows there with its reasons,
+// until an admin dismisses its reports (it stays up) or removes it (it leaves
+// the pin). A throwaway account is made admin for this (e2eAdmin.ts).
+test('an admin sees reported comments and dismisses or removes them', async ({ page, playwright, baseURL }) => {
+  const author = await playwright.request.newContext({ baseURL });
+  const authorEmail = await signUp(author, 'aauthor');
+  const run = (args: string[]) => promisify(execFile)('npx', ['tsx', ...args], { cwd: root });
+  const { stdout } = await run(['scripts/data/e2eVerifyLink.ts', authorEmail]);
+  await author.get(stdout.split('\n').find((line) => line.startsWith('/auth/verify-email?'))!);
+  const pins = await page.request.get('/api/pins').then(async (r) => {
+    const body = await r.json();
+    return Array.isArray(body) ? body : body.pins;
+  });
+  const pinId = pins[0].id;
+  const post = async (text: string) => (await (await author.post(`/api/pins/${pinId}/comment`, { data: { text } })).json()).id as number;
+  const keptText = `A comment that is fine ${stamp}`;
+  const goneText = `A comment that has to go ${stamp}`;
+  const kept = await post(keptText);
+  const gone = await post(goneText);
+
+  const reader = await playwright.request.newContext({ baseURL });
+  await signUp(reader, 'areader');
+  expect((await reader.post(`/api/pins/${pinId}/comment/${kept}/report`, { data: { reason: 'misleading' } })).status()).toBe(201);
+  expect((await reader.post(`/api/pins/${pinId}/comment/${gone}/report`, { data: { reason: 'harassment' } })).status()).toBe(201);
+
+  const adminEmail = await signUp(page.request, 'aadmin');
+  await run(['scripts/data/e2eAdmin.ts', adminEmail]);
+  await page.goto('/admin/reports');
+  const keptRow = page.getByRole('listitem').filter({ hasText: keptText });
+  const goneRow = page.getByRole('listitem').filter({ hasText: goneText });
+  await expect(keptRow).toContainText('1 report');
+  await expect(keptRow).toContainText('Misleading');
+  await expect(goneRow).toContainText('Harassment or hate');
+
+  await keptRow.getByRole('button', { name: 'Dismiss' }).click();
+  await expect(keptRow).toHaveCount(0);
+  await goneRow.getByRole('button', { name: 'Remove' }).click();
+  await expect(goneRow).toHaveCount(0);
+
+  // Neither is waiting any more; the dismissed one is still on the pin.
+  await page.reload();
+  await expect(page.getByText(keptText)).toHaveCount(0);
+  await expect(page.getByText(goneText)).toHaveCount(0);
+  const left = (await (await page.request.get(`/api/pins/${pinId}/comment`)).json()).map((c: { id: number }) => c.id);
+  expect(left).toContain(kept);
+  expect(left).not.toContain(gone);
+  await reader.dispose();
+  await author.dispose();
+});
+
+// Ten open reports hide a comment from readers (COMMENT_HIDE_REPORTS): it
+// keeps its place, empty, and Admin > Reports marks it Hidden. Dismissing the
+// reports brings it back.
+test('a comment reported ten times is hidden until an admin dismisses the reports', async ({ page, playwright, baseURL }) => {
+  const author = await playwright.request.newContext({ baseURL });
+  const authorEmail = await signUp(author, 'hauthor');
+  const run = (args: string[]) => promisify(execFile)('npx', ['tsx', ...args], { cwd: root });
+  const { stdout } = await run(['scripts/data/e2eVerifyLink.ts', authorEmail]);
+  await author.get(stdout.split('\n').find((line) => line.startsWith('/auth/verify-email?'))!);
+  const pins = await page.request.get('/api/pins').then(async (r) => {
+    const body = await r.json();
+    return Array.isArray(body) ? body : body.pins;
+  });
+  const pinId = pins[0].id;
+  const text = `A comment many readers dislike ${stamp}`;
+  const { id } = await (await author.post(`/api/pins/${pinId}/comment`, { data: { text } })).json();
+  const read = async () => (await (await author.get(`/api/pins/${pinId}/comment`)).json()).find((c: { id: number }) => c.id === id);
+
+  for (let n = 1; n <= 10; n++) {
+    const reader = await playwright.request.newContext({ baseURL });
+    await signUp(reader, `h${n}r`);
+    expect((await reader.post(`/api/pins/${pinId}/comment/${id}/report`, { data: { reason: 'spam' } })).status()).toBe(201);
+    await reader.dispose();
+    // Nine is not enough.
+    if (n === 9) expect(await read()).toMatchObject({ text, hidden: false });
+  }
+  const hidden = await read();
+  expect(hidden).toMatchObject({ text: '', hidden: true });
+  // No tone either (null fields are left out of the JSON).
+  expect(hidden.sentiment ?? null).toBeNull();
+
+  await page.goto(`/pin/${pinId}`);
+  const comment = page.locator(`#comment-${id}`);
+  await expect(comment).toContainText('Hidden after reports from readers.');
+  await expect(page.getByText(text)).toHaveCount(0);
+
+  const adminEmail = await signUp(page.request, 'hadmin');
+  await run(['scripts/data/e2eAdmin.ts', adminEmail]);
+  await page.goto('/admin/reports');
+  const row = page.getByRole('listitem').filter({ hasText: text });
+  await expect(row).toContainText('10 reports');
+  await expect(row).toContainText('Hidden');
+  await row.getByRole('button', { name: 'Dismiss' }).click();
+  await expect(row).toHaveCount(0);
+
+  await page.goto(`/pin/${pinId}`);
+  await expect(page.locator(`#comment-${id}`)).toContainText(text);
+  await author.dispose();
+});

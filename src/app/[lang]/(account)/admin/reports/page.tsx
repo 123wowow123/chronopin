@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { pinPath } from '@/lib/seo';
 import { toJson } from '@/lib/types';
 import { requireAdminViewer } from '@/server/guard';
-import Comment from '@/server/model/comment';
+import Comment, { COMMENT_HIDE_REPORTS } from '@/server/model/comment';
 import { AdminTabs } from '../AdminTabs';
 import { ReportList, type ReportedComment } from './ReportList';
 
@@ -20,7 +20,7 @@ export default async function AdminReportsPage() {
     <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
       <AdminTabs current="/admin/reports" />
       <h1 className="sr-only">Reports</h1>
-      <p className="mb-6 text-sm text-subtle">Comments readers reported. Delete one to take it down, or dismiss its reports to keep it.</p>
+      <p className="mb-6 text-sm text-subtle">Comments readers reported. Remove one to take it down, or dismiss its reports to keep it. At {COMMENT_HIDE_REPORTS} reports a comment is hidden from readers until you dismiss them.</p>
       <ReportList initialReports={toJson<ReportedComment[]>(reports)} />
     </div>
   );

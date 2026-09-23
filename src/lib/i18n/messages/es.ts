@@ -522,6 +522,7 @@ const es: Messages = {
     reportOther: 'Otra cosa',
     reported: 'Gracias: un administrador lo revisará.',
     reportFailed: 'No se pudo enviar la denuncia. Inténtalo de nuevo.',
+    hiddenByReports: 'Oculto tras denuncias de lectores.',
     heading: 'Comentarios',
     addPlaceholder: 'Añade un comentario...',
     post: 'Publicar',

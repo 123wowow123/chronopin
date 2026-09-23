@@ -15,6 +15,8 @@ export type ReportedComment = {
   reports: number;
   reasons: Record<string, number>;
   lastReportedDateTime: string;
+  // Hidden from readers: it has reached COMMENT_HIDE_REPORTS open reports.
+  hidden: boolean;
 };
 
 const REASON_LABELS: Record<string, string> = {
@@ -66,6 +68,11 @@ export function ReportList({ initialReports }: { initialReports: ReportedComment
             <span className="font-semibold text-danger">
               {report.reports} {report.reports === 1 ? 'report' : 'reports'}
             </span>
+            {report.hidden ? (
+              <span className="rounded-full bg-danger/10 px-2 py-0.5 font-medium text-danger ring-1 ring-danger/25 ring-inset" title="Hidden from readers until its reports are dismissed">
+                Hidden
+              </span>
+            ) : null}
             {Object.entries(report.reasons ?? {}).map(([reason, count]) => (
               <span key={reason} className="rounded-full bg-raised px-2 py-0.5 text-muted">
                 {REASON_LABELS[reason] ?? reason}
@@ -82,7 +89,7 @@ export function ReportList({ initialReports }: { initialReports: ReportedComment
                 onClick={() => act(report, 'delete')}
                 className="btn btn-sm btn-ghost text-danger hover:bg-red-500/10 hover:text-danger-soft"
               >
-                Delete comment
+                Remove
               </button>
             </span>
           </div>

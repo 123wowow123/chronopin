@@ -522,6 +522,7 @@ const fr: Messages = {
     reportOther: 'Autre chose',
     reported: 'Merci - un administrateur va regarder.',
     reportFailed: 'Le signalement n’a pas pu être envoyé. Réessayez.',
+    hiddenByReports: 'Masqué après des signalements de lecteurs.',
     heading: 'Commentaires',
     addPlaceholder: 'Ajouter un commentaire...',
     post: 'Publier',

@@ -517,6 +517,7 @@ const en = {
     reportOther: 'Something else',
     reported: 'Thanks - an admin will take a look.',
     reportFailed: "Couldn't send the report. Try again.",
+    hiddenByReports: 'Hidden after reports from readers.',
     heading: 'Comments',
     addPlaceholder: 'Add a comment...',
     post: 'Post',

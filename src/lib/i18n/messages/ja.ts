@@ -516,6 +516,7 @@ const ja: Messages = {
     reportOther: 'その他',
     reported: 'ありがとうございます。管理者が確認します。',
     reportFailed: '報告を送信できませんでした。もう一度お試しください。',
+    hiddenByReports: '読者からの報告により非表示になりました。',
     heading: 'コメント',
     addPlaceholder: 'コメントを追加…',
     post: '投稿',

@@ -7,9 +7,12 @@ import PinUserLink from './pinUserLink';
 import User from './user';
 import type { CommentReactionName } from '@/lib/commentReactions';
 
-const prop = ['id', 'text', 'parentCommentId', 'sentiment', 'reactions', 'myReaction', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
+const prop = ['id', 'text', 'parentCommentId', 'sentiment', 'reactions', 'myReaction', 'hidden', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
 
 export const COMMENT_REPORT_REASONS = ['spam', 'harassment', 'misleading', 'other'] as const;
+// Open reports that hide a comment from readers until an admin dismisses them
+// (it comes back) or removes it (Admin > Reports).
+export const COMMENT_HIDE_REPORTS = 10;
 export type CommentReportReason = (typeof COMMENT_REPORT_REASONS)[number];
 
 const COMMENT_COLUMNS = `"id", "text", "userId", "pinId", "parentCommentId", "sentiment", "utcCreatedDateTime", "utcUpdatedDateTime"`;
@@ -23,6 +26,9 @@ export default class Comment extends PinUserLink {
   // with the pin's comments only.
   declare reactions: Partial<Record<CommentReactionName, number>> | undefined;
   declare myReaction: CommentReactionName | null | undefined;
+  // Hidden after COMMENT_HIDE_REPORTS open reports: read with its words and
+  // tone blanked, so it holds its place in the thread without saying anything.
+  declare hidden: boolean | undefined;
 
   protected get props() {
     return prop;
@@ -141,12 +147,16 @@ export default class Comment extends PinUserLink {
 
   // A pin's live comments, oldest first, each with its reactions counted by
   // kind and the viewer's own (null when viewerId is null: signed out, or the
-  // cached copy every reader shares).
+  // cached copy every reader shares). One hidden after reports comes with no
+  // words or tone.
   static async getByPinId(pinId: number, viewerId: number | null = null): Promise<Comment[]> {
     const rows = await db.query(
       `
-    SELECT "Comment"."id", "Comment"."text", "Comment"."userId", "Comment"."pinId",
-           "Comment"."parentCommentId", "Comment"."sentiment", "Comment"."utcCreatedDateTime", "Comment"."utcUpdatedDateTime",
+    SELECT "Comment"."id", "Comment"."userId", "Comment"."pinId", "Comment"."parentCommentId",
+           "Comment"."utcCreatedDateTime", "Comment"."utcUpdatedDateTime",
+           COALESCE("open"."n", 0) >= $3 AS "hidden",
+           CASE WHEN COALESCE("open"."n", 0) >= $3 THEN '' ELSE "Comment"."text" END AS "text",
+           CASE WHEN COALESCE("open"."n", 0) >= $3 THEN NULL ELSE "Comment"."sentiment" END AS "sentiment",
            COALESCE("counts"."reactions", '{}'::json) AS "reactions",
            "mine"."reaction" AS "myReaction",
            "User"."userName" AS "User.userName", "User"."pictureUrl" AS "User.pictureUrl"
@@ -158,9 +168,12 @@ export default class Comment extends PinUserLink {
         GROUP BY "commentId"
       ) AS "counts" ON "counts"."commentId" = "Comment"."id"
       LEFT JOIN "CommentReaction" AS "mine" ON "mine"."commentId" = "Comment"."id" AND "mine"."userId" = $2
+      LEFT JOIN (
+        SELECT "commentId", COUNT(*)::integer AS "n" FROM "CommentReport" WHERE "utcDismissedDateTime" IS NULL GROUP BY "commentId"
+      ) AS "open" ON "open"."commentId" = "Comment"."id"
     WHERE "Comment"."pinId" = $1 AND "Comment"."utcDeletedDateTime" IS NULL
     ORDER BY "Comment"."utcCreatedDateTime" ASC, "Comment"."id" ASC`,
-      [pinId, viewerId],
+      [pinId, viewerId, COMMENT_HIDE_REPORTS],
     );
     return rows.map((row) => new Comment(row));
   }
@@ -211,6 +224,16 @@ export default class Comment extends PinUserLink {
     return 'reported' as const;
   }
 
+  // How many open reports a comment has (Admin > Reports, and whether it is
+  // hidden).
+  static async openReportCount(commentId: number) {
+    const [row] = await db.query<{ n: number }>(
+      `SELECT COUNT(*)::integer AS "n" FROM "CommentReport" WHERE "commentId" = $1 AND "utcDismissedDateTime" IS NULL`,
+      [commentId],
+    );
+    return row.n;
+  }
+
   // Live comments with open reports, most reported first, for Admin > Reports.
   static openReports() {
     return db.query<{
@@ -223,13 +246,15 @@ export default class Comment extends PinUserLink {
       reports: number;
       reasons: Record<string, number>;
       lastReportedDateTime: Date;
+      hidden: boolean;
     }>(`
     SELECT "c"."id" AS "commentId", "c"."pinId", "p"."title" AS "pinTitle", "c"."text", "u"."userName" AS "authorName",
            "c"."utcCreatedDateTime", COUNT(*)::integer AS "reports",
            (SELECT json_object_agg("reason", "n") FROM (
               SELECT "reason", COUNT(*)::integer AS "n" FROM "CommentReport"
               WHERE "commentId" = "c"."id" AND "utcDismissedDateTime" IS NULL GROUP BY "reason") AS "byReason") AS "reasons",
-           MAX("r"."utcCreatedDateTime") AS "lastReportedDateTime"
+           MAX("r"."utcCreatedDateTime") AS "lastReportedDateTime",
+           COUNT(*) >= ${COMMENT_HIDE_REPORTS} AS "hidden"
     FROM "CommentReport" AS "r"
       JOIN "Comment" AS "c" ON "c"."id" = "r"."commentId" AND "c"."utcDeletedDateTime" IS NULL
       JOIN "Pin" AS "p" ON "p"."id" = "c"."pinId"
@@ -239,14 +264,18 @@ export default class Comment extends PinUserLink {
     ORDER BY "reports" DESC, "lastReportedDateTime" DESC`);
   }
 
-  // An admin's "nothing wrong here": the comment's open reports are closed.
+  // An admin's "nothing wrong here": the comment's open reports are closed
+  // (so one hidden after reports shows again). Resolves how many were closed
+  // and the pin it is on, whose page then has to be read again.
   static async dismissReports(commentId: number, adminId: number) {
-    const rows = await db.query(
-      `UPDATE "CommentReport" SET "utcDismissedDateTime" = now(), "dismissedByUserId" = $2
-       WHERE "commentId" = $1 AND "utcDismissedDateTime" IS NULL RETURNING "commentId"`,
+    const rows = await db.query<{ pinId: number }>(
+      `UPDATE "CommentReport" AS "r" SET "utcDismissedDateTime" = now(), "dismissedByUserId" = $2
+       FROM "Comment" AS "c"
+       WHERE "r"."commentId" = $1 AND "r"."utcDismissedDateTime" IS NULL AND "c"."id" = "r"."commentId"
+       RETURNING "c"."pinId"`,
       [commentId, adminId],
     );
-    return rows.length;
+    return { dismissed: rows.length, pinId: rows[0]?.pinId ?? null };
   }
 
   // Every reaction to a live comment, for backups (scripts/data).
@@ -279,9 +308,11 @@ export default class Comment extends PinUserLink {
     FROM "Comment"
       JOIN "Pin" ON "Pin"."id" = "Comment"."pinId"
     WHERE "Pin"."companyId" = $1 AND "Pin"."utcDeletedDateTime" IS NULL AND "Comment"."utcDeletedDateTime" IS NULL
+      -- One hidden after reports sits out, as it does on the pin page.
+      AND (SELECT COUNT(*) FROM "CommentReport" WHERE "commentId" = "Comment"."id" AND "utcDismissedDateTime" IS NULL) < $3
     ORDER BY "Comment"."utcCreatedDateTime" DESC, "Comment"."id" DESC
     LIMIT $2`,
-      [companyId, limit],
+      [companyId, limit, COMMENT_HIDE_REPORTS],
     );
   }
 

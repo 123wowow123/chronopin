@@ -522,6 +522,7 @@ const de: Messages = {
     reportOther: 'Etwas anderes',
     reported: 'Danke - ein Admin sieht es sich an.',
     reportFailed: 'Die Meldung konnte nicht gesendet werden. Versuche es erneut.',
+    hiddenByReports: 'Nach Meldungen von Lesern ausgeblendet.',
     heading: 'Kommentare',
     addPlaceholder: 'Kommentar schreiben...',
     post: 'Posten',

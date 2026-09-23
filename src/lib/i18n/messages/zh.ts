@@ -516,6 +516,7 @@ const zh: Messages = {
     reportOther: '其他',
     reported: '谢谢，管理员会查看。',
     reportFailed: '举报未能发送，请重试。',
+    hiddenByReports: '因读者举报已隐藏。',
     heading: '评论',
     addPlaceholder: '添加评论…',
     post: '发布',

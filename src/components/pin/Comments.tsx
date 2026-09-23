@@ -53,12 +53,15 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
       .get<CommentJson[]>(`/api/pins/${pinId}/comment`)
       .then((fresh) => {
         if (!live) return;
-        // The fresh read also carries the reactions, and this viewer's own.
+        // The fresh read also carries the reactions, and this viewer's own, and
+        // hides a comment reported too often since the page was cached.
         const byId = new Map(fresh.map((c) => [c.id, c]));
         setComments((list) =>
           list.map((c) => {
             const f = byId.get(c.id);
-            return f ? { ...c, sentiment: f.sentiment ?? null, reactions: f.reactions, myReaction: f.myReaction } : c;
+            return f
+              ? { ...c, text: f.text, hidden: f.hidden, sentiment: f.sentiment ?? null, reactions: f.reactions, myReaction: f.myReaction }
+              : c;
           }),
         );
       })
@@ -69,7 +72,9 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
   }, [pinId]);
 
   const tree = buildTree(comments);
-  const mood = commentMood(comments);
+  // One hidden after reports says nothing, so it has no say in the mood.
+  const shown = comments.filter((c) => !c.hidden);
+  const mood = commentMood(shown);
 
   async function post(body: { text: string; parentCommentId?: number }) {
     setError('');
@@ -136,7 +141,7 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
       <h2 id="comments-heading" className="mb-3 text-base font-semibold">
         {t('comments.heading')}
       </h2>
-      {mood ? <MoodSummary mood={mood} total={comments.length} /> : null}
+      {mood ? <MoodSummary mood={mood} total={shown.length} /> : null}
       <ul className="space-y-5">{tree.map(renderNode)}</ul>
 
       {isLoggedIn ? (
@@ -284,14 +289,22 @@ function CommentItem({
         <div className="min-w-0 flex-1">
           <div className="mb-0.5 truncate pl-4 text-xs text-subtle">{node.userName}</div>
           <div className={`group/comment relative flex items-center gap-1 ${reacted ? 'mb-3' : ''}`}>
-            {/* Plain text: comments are never rendered as HTML. */}
-            <div className="relative min-w-0 rounded-[1.375rem] bg-raised px-4 py-2.5 text-base leading-snug break-words whitespace-pre-wrap text-ink">
-              {node.text}
-              <ReactionSummary node={node} />
-            </div>
+            {node.hidden ? (
+              // Reported too often: it keeps its place in the thread, empty,
+              // until an admin dismisses the reports or removes it.
+              <div className="min-w-0 rounded-[1.375rem] border border-dashed border-line px-4 py-2.5 text-sm text-subtle italic">
+                {t('comments.hiddenByReports')}
+              </div>
+            ) : (
+              // Plain text: comments are never rendered as HTML.
+              <div className="relative min-w-0 rounded-[1.375rem] bg-raised px-4 py-2.5 text-base leading-snug break-words whitespace-pre-wrap text-ink">
+                {node.text}
+                <ReactionSummary node={node} />
+              </div>
+            )}
             <div className="flex shrink-0 items-center opacity-0 transition-opacity group-hover/comment:opacity-100 has-[[aria-expanded=true]]:opacity-100 has-[:focus-visible]:opacity-100 [@media(hover:none)]:opacity-100">
-              <ReactionButton node={node} signedIn={signedIn} pinId={pinId} onReact={onReact} />
-              {canReply ? (
+              {node.hidden ? null : <ReactionButton node={node} signedIn={signedIn} pinId={pinId} onReact={onReact} />}
+              {canReply && !node.hidden ? (
                 <button
                   type="button"
                   onClick={() => {
@@ -305,7 +318,9 @@ function CommentItem({
                   <Icon name="reply" className="size-5" />
                 </button>
               ) : null}
-              <CommentMenu commentId={node.id} pinId={pinId} canDelete={canDelete} signedIn={signedIn} onRemove={onRemove} />
+              {node.hidden && !canDelete ? null : (
+                <CommentMenu commentId={node.id} pinId={pinId} canDelete={canDelete} canReport={!node.hidden} signedIn={signedIn} onRemove={onRemove} />
+              )}
             </div>
           </div>
           {mode === 'reply' ? (
@@ -506,12 +521,14 @@ function CommentMenu({
   commentId,
   pinId,
   canDelete,
+  canReport,
   signedIn,
   onRemove,
 }: {
   commentId: number;
   pinId: number;
   canDelete: boolean;
+  canReport: boolean;
   signedIn: boolean;
   onRemove: () => void;
 }) {
@@ -595,7 +612,7 @@ function CommentMenu({
                   {t('comments.deleteComment')}
                 </button>
               ) : null}
-              {signedIn ? (
+              {!canReport ? null : signedIn ? (
                 <button type="button" role="menuitem" onClick={() => setView('reasons')} className={item}>
                   {t('comments.report')}
                 </button>
