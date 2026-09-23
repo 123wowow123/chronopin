@@ -120,7 +120,6 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
     <CommentItem
       key={node.id}
       node={node}
-      isOwn={!!user && node.userId === user.id}
       canDelete={!!user && (node.userId === user.id || isAdmin)}
       canReply={isLoggedIn && node.depth < MAX_REPLY_DEPTH}
       signedIn={isLoggedIn}
@@ -241,11 +240,10 @@ function MoodSummary({ mood, total }: { mood: CommentMood; total: number }) {
 // A comment's controls, beside its bubble: round icon buttons that only take
 // a colour when the pointer is on them.
 const CONTROL =
-  'inline-flex size-8 items-center justify-center rounded-full text-subtle transition-colors hover:bg-raised hover:text-ink focus-visible:bg-raised';
+  'inline-flex size-9 items-center justify-center rounded-full text-muted transition-colors hover:bg-raised hover:text-ink focus-visible:bg-raised';
 
 function CommentItem({
   node,
-  isOwn,
   canDelete,
   canReply,
   signedIn,
@@ -256,7 +254,6 @@ function CommentItem({
   renderChild,
 }: {
   node: Node;
-  isOwn: boolean;
   canDelete: boolean;
   canReply: boolean;
   signedIn: boolean;
@@ -283,12 +280,12 @@ function CommentItem({
           keyboard's focus). A comment is never edited: its author can only
           delete it. */}
       <div className="flex gap-2">
-        <UserAvatar userName={node.userName} pictureUrl={node.userPictureUrl} className="mt-5 size-8 shrink-0 text-xs" />
+        <UserAvatar userName={node.userName} pictureUrl={node.userPictureUrl} className="mt-5 size-9 shrink-0 text-xs" />
         <div className="min-w-0 flex-1">
-          <div className="truncate pl-3 text-xs text-subtle">{node.userName}</div>
+          <div className="mb-0.5 truncate pl-4 text-xs text-subtle">{node.userName}</div>
           <div className={`group/comment relative flex items-center gap-1 ${reacted ? 'mb-3' : ''}`}>
             {/* Plain text: comments are never rendered as HTML. */}
-            <div className="relative min-w-0 rounded-2xl bg-raised px-3 py-2 break-words whitespace-pre-wrap text-ink">
+            <div className="relative min-w-0 rounded-[1.375rem] bg-raised px-4 py-2.5 text-base leading-snug break-words whitespace-pre-wrap text-ink">
               {node.text}
               <ReactionSummary node={node} />
             </div>
@@ -305,10 +302,10 @@ function CommentItem({
                   title={t('comments.reply')}
                   className={CONTROL}
                 >
-                  <Icon name="reply" className="size-4.5" />
+                  <Icon name="reply" className="size-5" />
                 </button>
               ) : null}
-              <CommentMenu commentId={node.id} pinId={pinId} isOwn={isOwn} canDelete={canDelete} signedIn={signedIn} onRemove={onRemove} />
+              <CommentMenu commentId={node.id} pinId={pinId} canDelete={canDelete} signedIn={signedIn} onRemove={onRemove} />
             </div>
           </div>
           {mode === 'reply' ? (
@@ -407,7 +404,7 @@ function ReactionButton({
     return (
       <span title={t('comments.logInToReact')} className="inline-flex">
         <AuthLink to="/login" className={CONTROL} pending={{ kind: 'comment', id: pinId }}>
-          <Icon name="smile" className="size-4.5" />
+          <Icon name="smile" className="size-5" />
           <span className="sr-only">{t('comments.chooseReaction')}</span>
         </AuthLink>
       </span>
@@ -429,7 +426,7 @@ function ReactionButton({
         onClick={() => (open ? close(false) : setOpen(true))}
         className={`${CONTROL} ${open ? 'bg-raised text-ink' : ''}`}
       >
-        <Icon name="smile" className="size-4.5" />
+        <Icon name="smile" className="size-5" />
       </button>
       {open ? (
         <ReactionPicker
@@ -501,21 +498,19 @@ const REPORT_REASONS = [
 ] as const;
 
 // The comment's other actions, behind a vertical three-dot button: Delete for
-// its author (and an admin, on anyone's), Report for everyone else, which
+// its author (and an admin, on anyone's) and Report on every comment, which
 // asks why and hands it to Admin > Reports. A signed-out reader's Report
 // sends them to log in first. Escape or a click elsewhere shuts it, and the
 // focus goes back to the button.
 function CommentMenu({
   commentId,
   pinId,
-  isOwn,
   canDelete,
   signedIn,
   onRemove,
 }: {
   commentId: number;
   pinId: number;
-  isOwn: boolean;
   canDelete: boolean;
   signedIn: boolean;
   onRemove: () => void;
@@ -574,7 +569,7 @@ function CommentMenu({
         onClick={() => (open ? close(false) : setOpen(true))}
         className={CONTROL}
       >
-        <Icon name="dots-vertical" className="size-4" />
+        <Icon name="dots-vertical" className="size-5" />
       </button>
       {open ? (
         <div ref={menuRef} id={menuId} role="menu" className="floating absolute top-full right-0 z-30 mt-1 w-56 p-1 text-ink">
@@ -594,19 +589,17 @@ function CommentMenu({
                   {t('comments.deleteComment')}
                 </button>
               ) : null}
-              {!isOwn ? (
-                signedIn ? (
-                  <button type="button" role="menuitem" onClick={() => setView('reasons')} className={item}>
-                    <Icon name="flag" className="size-4" />
-                    {t('comments.report')}
-                  </button>
-                ) : (
-                  <AuthLink to="/login" className={item} pending={{ kind: 'comment', id: pinId }}>
-                    <Icon name="flag" className="size-4" />
-                    {t('comments.report')}
-                  </AuthLink>
-                )
-              ) : null}
+              {signedIn ? (
+                <button type="button" role="menuitem" onClick={() => setView('reasons')} className={item}>
+                  <Icon name="flag" className="size-4" />
+                  {t('comments.report')}
+                </button>
+              ) : (
+                <AuthLink to="/login" className={item} pending={{ kind: 'comment', id: pinId }}>
+                  <Icon name="flag" className="size-4" />
+                  {t('comments.report')}
+                </AuthLink>
+              )}
             </>
           ) : view === 'reasons' ? (
             <>

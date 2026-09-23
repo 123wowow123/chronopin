@@ -79,8 +79,8 @@ test('a comment takes one reaction from each reader', async ({ page, playwright,
   await author.dispose();
 });
 
-// Reporting a comment (0074), from its three-dot menu: the reader picks why,
-// and the author has no Report on their own.
+// Reporting a comment (0074), from its three-dot menu: the reader picks why.
+// Every comment has Report, its author's own included.
 test('a reader reports a comment from its menu', async ({ page, playwright, baseURL }) => {
   const author = await playwright.request.newContext({ baseURL });
   const authorEmail = await signUp(author, 'rauthor');
@@ -93,7 +93,7 @@ test('a reader reports a comment from its menu', async ({ page, playwright, base
   const pinId = pins[0].id;
   const posted = await author.post(`/api/pins/${pinId}/comment`, { data: { text: `A comment to report ${stamp}` } });
   const { id } = await posted.json();
-  expect((await author.post(`/api/pins/${pinId}/comment/${id}/report`, { data: { reason: 'spam' } })).status()).toBe(403);
+  expect((await author.post(`/api/pins/${pinId}/comment/${id}/report`, { data: { reason: 'other' } })).status()).toBe(201);
 
   await signUp(page.request, 'rreader');
   await page.goto(`/pin/${pinId}`);

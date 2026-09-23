@@ -194,14 +194,14 @@ export default class Comment extends PinUserLink {
 
   // Reports a live comment of this pin for an admin to look at (0074): one per
   // person, a second changing the reason, and reopened if an admin had
-  // dismissed it. null when there is no such comment; 'own' for the author's.
+  // dismissed it. Anyone may report any comment, their own included. null
+  // when there is no such comment.
   static async report(pinId: number, commentId: number, userId: number, reason: CommentReportReason) {
-    const [comment] = await db.query<{ userId: number }>(
-      `SELECT "userId" FROM "Comment" WHERE "id" = $1 AND "pinId" = $2 AND "utcDeletedDateTime" IS NULL`,
+    const [comment] = await db.query(
+      `SELECT "id" FROM "Comment" WHERE "id" = $1 AND "pinId" = $2 AND "utcDeletedDateTime" IS NULL`,
       [commentId, pinId],
     );
     if (!comment) return null;
-    if (comment.userId === userId) return 'own' as const;
     await db.query(
       `INSERT INTO "CommentReport" ("commentId", "userId", "reason") VALUES ($1, $2, $3)
        ON CONFLICT ("commentId", "userId") DO UPDATE
