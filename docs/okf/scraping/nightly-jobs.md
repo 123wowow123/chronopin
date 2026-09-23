@@ -47,7 +47,7 @@ ephemeris beats both.
 | `astronomy:eclipses` | `Space` | @ScienceDesk (304) | NASA eclipse catalogue (`eclipse.gsfc.nasa.gov`) | Yearly | The eclipse's own NASA path page, else any eclipse pin that day |
 | `sports:tournaments` | `Sports` | @SportDesk (306) | Wikipedia articles for a curated tournament list | Monthly | The tournament's Wikipedia article, else its name **in its own year** |
 | `ai:retirements` | `AI` | @TechDesk (276) | Vendor deprecation pages (OpenAI `platform.openai.com/docs/deprecations`) | Weekly | The announcement's own anchor on the page |
-| `trends:discover` | none - it posts nothing | none | Google Trends daily RSS | Daily, read by a session | n/a; it reports what is already pinned |
+| `trends:discover` | none - it posts nothing | none | Google Trends daily RSS | Daily, read by a session and by the midnight [daily job](daily-jobs.md#trends) | n/a; it reports what is already pinned |
 
 Nightly is for a source whose rows change daily (a launch NET slips, an episode is
 scheduled). Weekly is for a calendar that is published once and then only corrected.
@@ -148,7 +148,9 @@ US terms were that day's games.
 
 What it is good for is the subject nobody thought to schedule: a car unveiled
 this morning, a policy that takes effect next year, a sequel that just got a
-date. So the job shortlists and a session decides.
+date. So the job shortlists and a session decides - since 2026-09-22 usually the
+midnight [daily job](daily-jobs.md#trends), which reads the same shortlist
+through its `google_trends` tool.
 
 * **It scores rather than blocklists.** A term earns its place by pointing at
   something dated - release, opening, ruling, launch, a month name, a year -

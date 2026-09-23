@@ -70,3 +70,19 @@ export function useHasControls() {
     () => false,
   );
 }
+
+// Asks the drawer to shut, from something its controls open that must not sit
+// under it (the big tag cloud, which stays below the navbar so the search box
+// is in reach, and so below the drawer too).
+const closers = new Set<() => void>();
+
+export function onCloseDrawer(close: () => void) {
+  closers.add(close);
+  return () => {
+    closers.delete(close);
+  };
+}
+
+export function closeDrawer() {
+  for (const close of closers) close();
+}

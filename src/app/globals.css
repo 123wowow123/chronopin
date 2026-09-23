@@ -43,6 +43,8 @@
 
   --color-past: #dca75c;
   --color-future: #6aa5e8;
+  /* The tag filter's heading and pill, apart from the sliders' amber and blue. */
+  --color-tags: oklch(74% 0.12 182);
 
   /* Status text. Bright shades read on dark panels; light swaps in deep ones.
      Their tinted backgrounds and rings (bg-red-500/15) suit both themes. */
@@ -98,6 +100,7 @@
 
   --color-past: #8f5f12;
   --color-future: #1f5eb0;
+  --color-tags: var(--color-teal-700);
 
   --color-danger: var(--color-red-600);
   --color-danger-soft: var(--color-red-700);
@@ -247,6 +250,16 @@
     @apply rounded-xl border border-privileged/40;
     background-color: color-mix(in oklab, var(--color-privileged) 8%, var(--color-panel));
   }
+  /* While the big tag cloud is open (TagCloudView), the navbar keeps only its
+     search box: the rest is blurred, and made inert there. data-cloud-dim
+     marks what sits beside the box inside its slot (the watched toggle). */
+  :root[data-tag-cloud] [data-navbar] > div > :not([data-search-slot]),
+  :root[data-tag-cloud] [data-navbar] [data-cloud-dim] {
+    filter: blur(2px);
+    opacity: 0.45;
+    pointer-events: none;
+  }
+
   .floating {
     @apply rounded-xl border border-tint/[0.07] bg-panel shadow-2xl shadow-shade/50;
   }

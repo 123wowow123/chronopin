@@ -883,7 +883,6 @@ const es: Messages = {
     followingIntro: 'Personas de cuyos pines nuevos te enteras.',
     preferences: 'Preferencias',
     preferencesIntro: 'Cómo se ve Chronopin y cómo se abre la línea de tiempo para ti.',
-    passwordIntro: 'La contraseña con la que inicias sesión.',
     language: 'Idioma',
     languageHint: 'Las páginas se abren en este idioma en todos los dispositivos donde inicies sesión. Los pines se muestran traducidos cuando hay una traducción lista.',
     uploadFailed: 'No se pudo subir esa imagen.',

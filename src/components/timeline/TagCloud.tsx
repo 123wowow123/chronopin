@@ -11,7 +11,8 @@ import { useScrollLock } from '@/lib/client/scrollLock';
 import { refineQuery, removeTerm } from '@/lib/searchTerms';
 import { cloudSteps, cloudTags, groupSelection, groupTags, isReserved, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, tagMembers, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
-import { useTagFoldOpen } from './FloatingControls';
+import { closeDrawer } from '@/lib/client/controlsDrawer';
+import { mergedSection, useInDrawerPanel, useMergedPanel, useTagFoldOpen } from './FloatingControls';
 import { iconButton, PanelHeader } from './PanelHeader';
 import { WordCloud } from './WordCloud';
 import { useT } from '@/lib/client/i18n';
@@ -94,6 +95,10 @@ export function TagCloud({
   // pill): the pill is the header, and the cloud shows while the fold is open.
   const folded = useTagFoldOpen();
   const inFold = folded !== null;
+  // A section of the xl column's one "Filters" panel: open whenever it is.
+  const mergedOpen = useMergedPanel();
+  const merged = mergedOpen !== null;
+  const inDrawer = useInDrawerPanel();
   // Unique, since Next keeps the previous page's panel mounted (hidden).
   const optionsId = useId();
   const rootRef = useRef<HTMLDivElement>(null);
@@ -134,7 +139,7 @@ export function TagCloud({
   else if (postedWithin) params.set('created_within', postedWithin);
   const countsUrl = `/api/pins/tag-counts?${params.toString()}`;
 
-  const showing = open || !!folded;
+  const showing = open || !!folded || !!mergedOpen;
   useEffect(() => {
     if (!showing) return;
     let cancelled = false;
@@ -254,11 +259,12 @@ export function TagCloud({
   const clear = () => go((q) => reserved.reduce(withoutReserved, selected.reduce(withoutTag, q)), [], []);
 
   return (
-    <div ref={rootRef} className={`floating flex min-h-0 flex-col text-sm ${inFold ? 'max-xl:h-full' : ''} ${className}`}>
+    <div ref={rootRef} className={`floating flex min-h-0 flex-col text-sm ${inFold ? 'max-xl:h-full' : ''} ${merged ? mergedSection : ''} ${className}`}>
       {/* The same row the sliders under it fold behind, with the big cloud's
           button on it as well. */}
       <PanelHeader
         caption={t('controls.tags')}
+        captionClass="font-semibold text-tags"
         value={summary}
         open={open}
         onToggle={() => setOpen(!open)}
@@ -266,10 +272,15 @@ export function TagCloud({
         controls={optionsId}
         reset={selected.length || reserved.length ? { label: t('tagCloud.clear'), onClick: clear } : undefined}
         className={inFold ? 'max-xl:hidden' : ''}
+        fixed={merged}
       >
         <button
           type="button"
-          onClick={() => setExpanded(true)}
+          onClick={() => {
+            // From the drawer, the cloud would open under it.
+            if (inDrawer) closeDrawer();
+            setExpanded(true);
+          }}
           className={`${iconButton} pointer-events-auto`}
           aria-label={t('tagCloud.expand')}
           title={t('tagCloud.expand')}
@@ -280,15 +291,23 @@ export function TagCloud({
       </PanelHeader>
       {showing ? (
         // In the fold the cloud is the fold's; elsewhere the header row opens it.
-        <div id={optionsId} className={`flex min-h-0 flex-col ${inFold ? 'max-xl:flex-1 max-xl:pt-3' : ''} ${inFold && !open ? 'xl:hidden' : ''}`}>
+        <div id={optionsId} className={`flex min-h-0 flex-col ${inFold ? 'max-xl:flex-1 max-xl:pt-3' : ''} ${inFold && !open && !merged ? 'xl:hidden' : ''}`}>
           <div className="flex items-center gap-2 px-3 pb-2">
             <FindTag value={filter} onChange={setFilter} className="min-w-0 flex-1" />
             <GroupedToggle wrapped={wrapped} onChange={setWrapped} />
           </div>
           {/* The site's filters lead the cloud inside its scroll rather than
               standing over it: in a column this narrow, a strip that stayed
-              put would take the height the tags are read in. */}
-          <div className={`max-h-[min(22rem,50dvh)] overflow-y-auto overscroll-contain px-3.5 pb-3 ${inFold ? 'max-xl:max-h-none max-xl:flex-1' : ''}`}>
+              put would take the height the tags are read in. In the merged
+              "Filters" panel there is no scroll of its own: the panel's one
+              scroll carries the cloud with the sliders under it. */}
+          <div
+            className={`px-3.5 pb-3 ${
+              merged && inDrawer
+                ? ''
+                : `max-h-[min(22rem,50dvh)] overflow-y-auto overscroll-contain ${merged ? 'xl:max-h-none xl:overflow-y-visible' : ''}`
+            } ${inFold ? 'max-xl:max-h-none max-xl:flex-1' : ''}`}
+          >
             <ReservedFilters counts={counts ?? []} selected={reserved} needle={needle} onToggle={toggleReserved} className="pb-2.5" />
             <div
               role="group"
@@ -585,6 +604,31 @@ function TagCloudView({
   const [hot, setHot] = useState<TagGroup | null>(null);
   const url = `${countsUrl}&limit=${VIEW_LIMIT}`;
   useScrollLock(true);
+  const rootRef = useRef<HTMLDivElement>(null);
+
+  // Everything but the cloud and the navbar's search box is put out of reach
+  // while it is open - blurred (globals.css, by the attribute) and inert - so
+  // the one thing to do besides picking tags is search.
+  useEffect(() => {
+    const html = document.documentElement;
+    html.setAttribute('data-tag-cloud', '');
+    const header = document.querySelector('[data-navbar]');
+    const shut: HTMLElement[] = [];
+    const inert = (el: Element) => {
+      if (el instanceof HTMLElement && !el.inert && el !== rootRef.current) {
+        el.inert = true;
+        shut.push(el);
+      }
+    };
+    for (let el = header; el && el.parentElement && el !== document.body; el = el.parentElement) {
+      for (const sibling of el.parentElement.children) if (sibling !== el) inert(sibling);
+    }
+    header?.querySelectorAll(':scope > div > :not([data-search-slot]), [data-cloud-dim]').forEach(inert);
+    return () => {
+      html.removeAttribute('data-tag-cloud');
+      for (const el of shut) el.inert = false;
+    };
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -615,13 +659,16 @@ function TagCloudView({
   }, [written, selected, needle, wrapped]);
   const onHot = useCallback((tag: TagCount | null) => setHot(tag ? (tags.find((t) => t.name === tag.name) ?? tag) : null), [tags]);
 
-  // Portalled to the body, above the navbar and out of the floating
-  // controls' stacking context. On a phone it fills the screen.
+  // Portalled to the body, out of the floating controls' stacking context.
+  // It starts under the navbar and sits below it (z-40) and its search
+  // suggestions (z-50), so the search box stays in reach while the cloud is
+  // open; above the floating controls (z-30). On a phone it fills the rest of
+  // the screen.
   return createPortal(
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 max-sm:p-0">
+    <div ref={rootRef} className="fixed inset-x-0 top-[52px] bottom-0 z-[35] flex items-center justify-center p-4 max-sm:p-0">
       <div aria-hidden onClick={onClose} className="absolute inset-0 bg-black/55 backdrop-blur-[2px]" />
-      <div role="dialog" aria-modal="true" aria-labelledby={titleId} className="floating relative flex h-[min(88dvh,56rem)] w-full max-w-6xl flex-col overflow-hidden max-sm:h-dvh max-sm:max-w-none max-sm:rounded-none max-sm:border-0">
-        <div className="flex items-center gap-3 border-b border-line px-5 py-3 max-sm:flex-wrap max-sm:px-3 max-sm:pt-[max(0.75rem,env(safe-area-inset-top))]">
+      <div role="dialog" aria-modal="true" aria-labelledby={titleId} className="floating relative flex h-[min(88dvh,56rem)] max-h-full w-full max-w-6xl flex-col overflow-hidden max-sm:h-full max-sm:max-w-none max-sm:rounded-none max-sm:border-0">
+        <div className="flex items-center gap-3 border-b border-line px-5 py-3 max-sm:flex-wrap max-sm:px-3">
           <Icon name="tag" className="size-5 shrink-0 text-link" />
           <h2 id={titleId} className="shrink-0 text-base font-semibold text-ink">
             {t('tagCloud.title')}

@@ -126,6 +126,7 @@ export function Timeline({
   serverNow,
   minConfidence,
   video,
+  sliderTyping = false,
   trending,
   newPins: initialNewPins,
   preference,
@@ -149,6 +150,8 @@ export function Timeline({
   minConfidence: number | null;
   // Whether a card here loads its video player on a phone (the admin setting).
   video: TimelineVideoSetting;
+  // Whether the filter sliders offer a typed box (the admin setting).
+  sliderTyping?: boolean;
   // The most viewed pins with rising views, beside the cards on wide screens.
   trending: { pins: TrendingPin[]; days: number };
   // The pins added most recently, under trending on wide screens. Kept live
@@ -557,6 +560,8 @@ export function Timeline({
     <TimelineVideoProvider setting={video}>
       <div className="px-[max(0.75rem,env(safe-area-inset-left))] pb-24 lg:px-4 xl:pr-[288px]">
         <FloatingControls
+          merge
+          typing={sliderTyping}
           summaryCaption={t('controls.filter')}
           summary={summary}
           summaryIsPostedWithin={false}

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Icon } from '@/components/ui/Icon';
+import { Icon, type IconName } from '@/components/ui/Icon';
 import { useT } from '@/lib/client/i18n';
 
 // Whether each panel was last left open, by name. The controls remount
@@ -28,6 +28,7 @@ export function useFold(name: string, initial = false): [boolean, (open: boolean
 export function PanelHeader({
   caption,
   captionClass = 'text-subtle',
+  icon,
   value,
   open,
   onToggle,
@@ -35,11 +36,15 @@ export function PanelHeader({
   controls,
   reset,
   className = '',
+  fixed = false,
   children,
 }: {
   caption: string;
   // The heading's own colour, where a panel has one ("Posted within" is past-coloured).
   captionClass?: string;
+  // Leads the row: the merged "Filters" panel's title carries one, so it
+  // reads apart from the section headings under it.
+  icon?: IconName;
   value: string;
   open: boolean;
   onToggle: () => void;
@@ -49,15 +54,22 @@ export function PanelHeader({
   // Widens the filter back out, shown only while it narrows anything.
   reset?: { label: string; onClick: () => void };
   className?: string;
+  // A section of the merged "Filters" panel from xl up (FloatingControls),
+  // which has no fold of its own: no press, no chevron. Only from xl up, since
+  // narrower the row is hidden anyway.
+  fixed?: boolean;
   // Anything else that belongs on the row, before the chevron.
   children?: React.ReactNode;
 }) {
   const t = useT();
   return (
     <div className={`relative flex items-center gap-2 px-3.5 py-2.5 max-lg:py-3 ${className}`}>
-      <button type="button" onClick={onToggle} aria-expanded={open} aria-controls={controls} aria-label={label ?? t('controls.summary', { caption, value })} className="absolute inset-0 rounded-[inherit]" />
+      {fixed ? null : (
+        <button type="button" onClick={onToggle} aria-expanded={open} aria-controls={controls} aria-label={label ?? t('controls.summary', { caption, value })} className="absolute inset-0 rounded-[inherit]" />
+      )}
       {/* The space is what the row reads as, copied or spoken: the gap between
           them is only a gap. */}
+      {icon ? <Icon name={icon} className="pointer-events-none relative size-4 shrink-0 text-subtle" /> : null}
       <span className={`pointer-events-none relative shrink-0 ${captionClass}`}>{caption}</span>{' '}
       <span className="pointer-events-none relative min-w-0 truncate font-medium text-ink">{value}</span>
       <span className="pointer-events-none relative ml-auto flex shrink-0 items-center gap-1.5">
@@ -67,9 +79,11 @@ export function PanelHeader({
           </button>
         ) : null}
         {children}
-        <button type="button" tabIndex={-1} aria-hidden onClick={onToggle} className={`${iconButton} pointer-events-auto`}>
-          <Icon name="chevron" className={`size-4 transition-transform ${open ? 'rotate-180' : ''}`} />
-        </button>
+        {fixed ? null : (
+          <button type="button" tabIndex={-1} aria-hidden onClick={onToggle} className={`${iconButton} pointer-events-auto`}>
+            <Icon name="chevron" className={`size-4 transition-transform ${open ? 'rotate-180' : ''}`} />
+          </button>
+        )}
       </span>
     </div>
   );

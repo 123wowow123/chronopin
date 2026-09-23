@@ -2,9 +2,9 @@
 
 import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
-import { approxDays, formatSpan, parseTypedSpan, spanExample } from '@/lib/postedSpan';
-import { useInControlsFold, useInDrawerPanel } from './FloatingControls';
-import { iconButton, PanelHeader, useFold } from './PanelHeader';
+import { approxDays, eventSpanSummary, formatSpan, parseTypedSpan, spanExample } from '@/lib/postedSpan';
+import { mergedSection, useInControlsFold, useInDrawerPanel, useMergedPanel, useSliderTyping } from './FloatingControls';
+import { PanelHeader, useFold } from './PanelHeader';
 import { useT } from '@/lib/client/i18n';
 
 type Side = 'past' | 'future';
@@ -53,6 +53,10 @@ export function TimeRangeSlider({
   // the other filters as well, and a slider unfolded takes the room they need.
   const inDrawer = useInDrawerPanel();
   const folds = collapsible || inDrawer;
+  // A section of the xl column's one "Filters" panel: always open in it.
+  const merged = useMergedPanel() !== null;
+  // The admin setting: off, no typed box, no presets and no pencil to open them.
+  const typing = useSliderTyping();
   const t = useT();
   const span = (within: string) => formatSpan(within, t.locale);
   const headless = pastOnly && inFold;
@@ -222,31 +226,39 @@ export function TimeRangeSlider({
     'absolute top-1/2 size-5 max-lg:size-7 -translate-x-1/2 -translate-y-1/2 cursor-grab touch-none rounded-full border-2 border-white shadow-md shadow-shade/50 transition-transform hover:scale-110 after:absolute after:-inset-2 after:content-[""] focus:outline-none focus-visible:ring-2 focus-visible:ring-link active:cursor-grabbing';
   const tickClass = 'rounded-md px-1 py-0.5 text-[11px] text-subtle max-lg:px-2.5 max-lg:py-2 max-lg:text-sm hover:bg-raised hover:text-ink';
 
-  const typeButton = (className: string) => (
-    <button type="button" onClick={() => setPanelOpen((o) => !o)} aria-expanded={panelOpen} aria-label={t('slider.typeExact')} title={t('slider.typeExact')} className={className}>
-      <Icon name="pencil" className="size-4" />
-    </button>
-  );
+  // Inside a fold there is no pencil: the fold is the panel, so opening it
+  // shows the typed box too, and closing it hides the lot. Elsewhere (behind
+  // the pill below xl) the pencil still opens it, and touch screens always
+  // have it.
+  const typedShown = panelOpen || inDrawer ? '' : collapsible ? 'hidden xl:block' : 'hidden';
+  // The heading's pencil, gone wherever the typed box is always out.
+  const headingPencil = inDrawer ? 'hidden' : collapsible ? 'xl:hidden' : '';
+
+  const typeButton = (className: string) =>
+    typing && (
+      <button type="button" onClick={() => setPanelOpen((o) => !o)} aria-expanded={panelOpen} aria-label={t('slider.typeExact')} title={t('slider.typeExact')} className={className}>
+        <Icon name="pencil" className="size-4" />
+      </button>
+    );
 
   return (
-    <div ref={rootRef} data-no-swipe className={`floating text-sm ${folds ? '' : 'px-3.5 pt-2.5 pb-3'}`}>
+    <div ref={rootRef} data-no-swipe className={`floating text-sm ${folds ? '' : 'px-3.5 pt-2.5 pb-3'} ${merged ? mergedSection : ''}`}>
       {folds ? (
         <PanelHeader
           caption={pastOnly ? t('controls.postedWithin') : t('controls.timeSpan')}
-          captionClass="font-semibold text-past"
-          value={label(past) || ''}
+          captionClass={pastOnly ? 'font-semibold text-past' : 'font-semibold text-ink'}
+          value={pastOnly ? label(past) || '' : eventSpanSummary(past, future, t.locale)}
           open={open}
           onToggle={() => setOpen(!open)}
           controls={bodyId}
-          reset={past ? { label: t('slider.anyTime'), onClick: () => applySide('past', null) } : undefined}
+          reset={past || future ? { label: pastOnly ? t('slider.anyTime') : t('slider.anyTimeBoth'), onClick: () => apply(null, null) } : undefined}
           className={inDrawer ? '' : 'max-xl:hidden'}
-        >
-          {typeButton(`${iconButton} pointer-events-auto max-lg:hidden`)}
-        </PanelHeader>
+          fixed={merged}
+        />
       ) : null}
       <div
         id={bodyId}
-        className={folds ? `px-3.5 pb-3 ${inDrawer ? (open ? '' : 'hidden') : `max-xl:pt-2.5 ${open ? '' : 'xl:hidden'}`}` : ''}
+        className={folds ? `px-3.5 pb-3 ${inDrawer ? (open || merged ? '' : 'hidden') : `max-xl:pt-2.5 ${open || merged ? '' : 'xl:hidden'}`}` : ''}
       >
         {/* The heading. From xl up the fold's own row above says all this,
             so it goes; with both sides, equal outer columns keep the pencil on
@@ -269,7 +281,7 @@ export function TimeRangeSlider({
             <span className="font-semibold text-past">{pastOnly ? t('controls.postedWithin') : t('slider.past')}</span>{' '}
             <span className={pastOnly ? 'text-ink' : 'block text-ink'}>{label(past)}</span>
           </button>
-          {typeButton('-m-1.5 rounded-md p-1.5 text-subtle hover:bg-raised hover:text-ink max-lg:hidden')}
+          {typeButton(`-m-1.5 rounded-md p-1.5 text-subtle hover:bg-raised hover:text-ink max-lg:hidden ${headingPencil}`)}
           {!pastOnly ? (
             // col-start-3: the pencil between them is hidden on touch screens,
             // and without it this would land in the middle column.
@@ -370,10 +382,12 @@ export function TimeRangeSlider({
           </div>
         ) : null}
 
-        <div className={`mt-3 border-t border-line pt-3 max-lg:block ${panelOpen ? '' : 'hidden'}`}>
-          {panelRow('past')}
-          {!pastOnly ? panelRow('future') : null}
-        </div>
+        {typing ? (
+          <div className={`mt-3 border-t border-line pt-3 max-lg:block ${typedShown}`}>
+            {panelRow('past')}
+            {!pastOnly ? panelRow('future') : null}
+          </div>
+        ) : null}
       </div>
     </div>
   );

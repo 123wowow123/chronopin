@@ -4,8 +4,8 @@ import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { useT } from '@/lib/client/i18n';
 import { nearestRadiusIndex, parseRadius, radiusLabel } from '@/lib/radius';
-import { useInDrawerPanel } from './FloatingControls';
-import { iconButton, PanelHeader, useFold } from './PanelHeader';
+import { mergedSection, useInDrawerPanel, useMergedPanel, useSliderTyping } from './FloatingControls';
+import { PanelHeader, useFold } from './PanelHeader';
 
 // A ring around the viewer, dragged in whole steps or typed exactly. The
 // timeline narrows to pins whose place falls inside it; a null radius means no
@@ -51,6 +51,10 @@ export function DistanceSlider({
   // In the nav drawer the panel folds behind its own header, as in the xl column.
   const inDrawer = useInDrawerPanel();
   const folds = collapsible || inDrawer;
+  // A section of the xl column's one "Filters" panel: always open in it.
+  const merged = useMergedPanel() !== null;
+  // The admin setting: off, no typed box, no presets and no pencil to open them.
+  const typing = useSliderTyping();
 
   const label = (km: number | null) => radiusLabel(km, imperial, t.locale);
   const index = nearestRadiusIndex(radius, steps);
@@ -130,17 +134,26 @@ export function DistanceSlider({
     'absolute top-1/2 size-5 max-lg:size-7 -translate-x-1/2 -translate-y-1/2 cursor-grab touch-none rounded-full border-2 border-white shadow-md shadow-shade/50 transition-transform hover:scale-110 after:absolute after:-inset-2 after:content-[""] focus:outline-none focus-visible:ring-2 focus-visible:ring-link active:cursor-grabbing';
   const tickClass = 'rounded-md px-1 py-0.5 text-[11px] text-subtle max-lg:px-2.5 max-lg:py-2 max-lg:text-sm hover:bg-raised hover:text-ink';
 
-  const typeButton = (className: string) => (
-    <button type="button" onClick={() => setPanelOpen((shown) => !shown)} aria-expanded={panelOpen} aria-label={t('slider.typeExact')} title={t('slider.typeExact')} className={className}>
-      <Icon name="pencil" className="size-4" />
-    </button>
-  );
+  // Inside a fold there is no pencil: the fold is the panel, so opening it
+  // shows the typed box too, and closing it hides the lot. Elsewhere (behind
+  // the pill below xl) the pencil still opens it, and touch screens always
+  // have it.
+  const typedShown = panelOpen || inDrawer ? '' : collapsible ? 'hidden xl:block' : 'hidden';
+  // The heading's pencil, gone wherever the typed box is always out.
+  const headingPencil = inDrawer ? 'hidden' : collapsible ? 'xl:hidden' : '';
+
+  const typeButton = (className: string) =>
+    typing && (
+      <button type="button" onClick={() => setPanelOpen((shown) => !shown)} aria-expanded={panelOpen} aria-label={t('slider.typeExact')} title={t('slider.typeExact')} className={className}>
+        <Icon name="pencil" className="size-4" />
+      </button>
+    );
   // Whose distance this is, when it is the city of a time zone rather than the
   // viewer's own position - the same thing a card's distance says in its title.
   const measuredFrom = placeName ? <span className="block truncate text-xs text-muted">{t('slider.measuredFrom', { place: placeName })}</span> : null;
 
   return (
-    <div ref={rootRef} data-no-swipe className={`floating text-sm ${folds ? '' : 'px-3.5 pt-2.5 pb-3'}`}>
+    <div ref={rootRef} data-no-swipe className={`floating text-sm ${folds ? '' : 'px-3.5 pt-2.5 pb-3'} ${merged ? mergedSection : ''}`}>
       {folds ? (
         <PanelHeader
           caption={t('controls.within')}
@@ -151,13 +164,12 @@ export function DistanceSlider({
           controls={bodyId}
           reset={radius ? { label: t('slider.anyDistance'), onClick: () => apply(null) } : undefined}
           className={inDrawer ? '' : 'max-xl:hidden'}
-        >
-          {typeButton(`${iconButton} pointer-events-auto max-lg:hidden`)}
-        </PanelHeader>
+          fixed={merged}
+        />
       ) : null}
       <div
         id={bodyId}
-        className={folds ? `px-3.5 pb-3 ${inDrawer ? (open ? '' : 'hidden') : `max-xl:pt-2.5 ${open ? '' : 'xl:hidden'}`}` : ''}
+        className={folds ? `px-3.5 pb-3 ${inDrawer ? (open || merged ? '' : 'hidden') : `max-xl:pt-2.5 ${open || merged ? '' : 'xl:hidden'}`}` : ''}
       >
         {/* Where the ring is measured from, which the heading carries when it
             is here and the fold's row cannot, being one line. */}
@@ -173,7 +185,7 @@ export function DistanceSlider({
             <span className="font-semibold text-link">{t('controls.within')}</span> <span className="text-ink">{label(radius)}</span>
             {measuredFrom}
           </button>
-          {typeButton('-m-1.5 shrink-0 rounded-md p-1.5 text-subtle hover:bg-raised hover:text-ink max-lg:hidden')}
+          {typeButton(`-m-1.5 shrink-0 rounded-md p-1.5 text-subtle hover:bg-raised hover:text-ink max-lg:hidden ${headingPencil}`)}
         </div>
 
         {/* Labels in their own row, clear of the thumb. */}
@@ -212,41 +224,43 @@ export function DistanceSlider({
           </div>
         </div>
 
-        <div className={`mt-3 border-t border-line pt-3 max-lg:block ${panelOpen ? '' : 'hidden'}`}>
-          <form
-            className="flex items-center gap-2"
-            onSubmit={(event) => {
-              event.preventDefault();
-              applyTyped();
-            }}
-          >
-            <span className="w-24 text-xs text-muted">{t('controls.within')}</span>
-            <input
-              type="text"
-              value={text}
-              placeholder={label(steps[Math.min(2, steps.length - 1)] ?? null)}
-              autoComplete="off"
-              onChange={(event) => setText(event.target.value)}
-              onKeyDown={(event) => event.key === 'Escape' && setPanelOpen(false)}
-              className={`field min-w-0 flex-1 px-2 py-1 text-sm max-lg:py-2 ${invalid ? 'ring-red-500' : ''}`}
-            />
-            <button type="submit" className="btn btn-sm btn-primary py-1.5 max-lg:px-4 max-lg:py-2.5">
-              {t('slider.set')}
-            </button>
-          </form>
-          <div className="mt-1.5 mb-2 flex flex-wrap gap-1 max-lg:mt-2.5 max-lg:gap-2">
-            {[...steps, null].map((step) => (
-              <button
-                key={step ?? 'all'}
-                type="button"
-                onClick={() => apply(step)}
-                className="rounded-full bg-raised px-2.5 py-0.5 text-xs text-ink max-lg:px-3.5 max-lg:py-2 max-lg:text-sm ring-1 ring-line ring-inset hover:bg-raised-2"
-              >
-                {label(step)}
+        {typing ? (
+          <div className={`mt-3 border-t border-line pt-3 max-lg:block ${typedShown}`}>
+            <form
+              className="flex items-center gap-2"
+              onSubmit={(event) => {
+                event.preventDefault();
+                applyTyped();
+              }}
+            >
+              <span className="w-24 text-xs text-muted">{t('controls.within')}</span>
+              <input
+                type="text"
+                value={text}
+                placeholder={label(steps[Math.min(2, steps.length - 1)] ?? null)}
+                autoComplete="off"
+                onChange={(event) => setText(event.target.value)}
+                onKeyDown={(event) => event.key === 'Escape' && setPanelOpen(false)}
+                className={`field min-w-0 flex-1 px-2 py-1 text-sm max-lg:py-2 ${invalid ? 'ring-red-500' : ''}`}
+              />
+              <button type="submit" className="btn btn-sm btn-primary py-1.5 max-lg:px-4 max-lg:py-2.5">
+                {t('slider.set')}
               </button>
-            ))}
+            </form>
+            <div className="mt-1.5 mb-2 flex flex-wrap gap-1 max-lg:mt-2.5 max-lg:gap-2">
+              {[...steps, null].map((step) => (
+                <button
+                  key={step ?? 'all'}
+                  type="button"
+                  onClick={() => apply(step)}
+                  className="rounded-full bg-raised px-2.5 py-0.5 text-xs text-ink max-lg:px-3.5 max-lg:py-2 max-lg:text-sm ring-1 ring-line ring-inset hover:bg-raised-2"
+                >
+                  {label(step)}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        ) : null}
       </div>
     </div>
   );

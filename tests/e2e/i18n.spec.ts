@@ -20,9 +20,9 @@ test('the language picker opens the page in Spanish, and links stay in it', asyn
   await page.getByRole('button', { name: 'Sign up' }).click();
   await expect(page.getByRole('button', { name: `@${handle}` })).toBeVisible();
 
-  await page.goto('/profile');
+  await page.goto('/profile/preferences');
   await page.getByRole('combobox', { name: 'Language' }).selectOption('es');
-  await expect(page).toHaveURL(/\/es\/profile$/);
+  await expect(page).toHaveURL(/\/es\/profile\/preferences$/);
   await expect(page.locator('html')).toHaveAttribute('lang', 'es');
   expect((await context.cookies()).find((c) => c.name === 'locale')?.value).toBe('es');
 
@@ -59,10 +59,10 @@ test('the language picker opens the page in Spanish, and links stay in it', asyn
 
   // Back to English through the picker, which the cookie then remembers. The
   // profile opens in Spanish on the way there, from that same cookie.
-  await page.goto('/profile');
-  await expect(page).toHaveURL(/\/es\/profile$/);
+  await page.goto('/profile/preferences');
+  await expect(page).toHaveURL(/\/es\/profile\/preferences$/);
   await page.getByRole('combobox', { name: 'Idioma' }).selectOption('en');
-  await expect(page).toHaveURL(/\/profile$/);
+  await expect(page).toHaveURL(/\/profile\/preferences$/);
   await expect(page).not.toHaveURL(/\/es\//);
   await page.goto('/map');
   await expect(page).toHaveURL(/\/map$/);

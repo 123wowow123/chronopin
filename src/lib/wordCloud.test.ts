@@ -89,18 +89,15 @@ describe('dilate', () => {
 });
 
 describe('helpers', () => {
-  it('draws a cloud with a flat bottom', () => {
-    const inside = cloudShape(1000, 600);
-    expect(inside(500, 330)).toBe(true);
-    expect(inside(5, 5)).toBe(false);
-    expect(inside(500, 590)).toBe(false);
-  });
-
-  it('draws a rounded blob in a tall box', () => {
-    const inside = cloudShape(400, 800);
-    expect(inside(200, 400)).toBe(true);
-    expect(inside(200, 60)).toBe(true);
-    expect(inside(5, 5)).toBe(false);
+  it('fills the box but its corners, wide or tall', () => {
+    for (const [w, h] of [[1000, 600], [400, 800]]) {
+      const inside = cloudShape(w, h);
+      expect(inside(w / 2, h / 2)).toBe(true);
+      expect(inside(w / 2, h * 0.02)).toBe(true);
+      expect(inside(w * 0.02, h / 2)).toBe(true);
+      expect(inside(w * 0.9, h * 0.9)).toBe(true);
+      expect(inside(5, 5)).toBe(false);
+    }
   });
 
   it('weighs counts on a log scale', () => {

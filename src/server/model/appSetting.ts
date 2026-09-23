@@ -1,3 +1,5 @@
+import { DEFAULT_DAILY_JOBS, parseDailyJobs, type DailyJobsSetting } from '@/lib/dailyJobs';
+import { DEFAULT_SLIDER_TYPING, parseSliderTyping, type SliderTypingSetting } from '@/lib/sliderTyping';
 import { DEFAULT_TIMELINE_CONFIDENCE, parseTimelineConfidence, type TimelineConfidenceSetting } from '@/lib/timelineConfidence';
 import { DEFAULT_TIMELINE_VIDEO, parseTimelineVideo, type TimelineVideoSetting } from '@/lib/timelineVideo';
 import { DEFAULT_PERSONAL_BAG, parsePersonalBag, type PersonalBagSetting } from '@/lib/userWiki';
@@ -8,6 +10,8 @@ const TIMELINE_CONFIDENCE = 'timelineConfidence';
 const TIMELINE_VIDEO = 'timelineVideo';
 const WIKI_RECHECK = 'wikiRecheck';
 const PERSONAL_BAG = 'personalBag';
+const DAILY_JOBS = 'dailyJobs';
+const SLIDER_TYPING = 'sliderTyping';
 
 async function read(key: string): Promise<unknown> {
   const rows = await db.query(`SELECT "value" FROM "AppSetting" WHERE "key" = $1`, [key]);
@@ -62,6 +66,26 @@ export async function getPersonalBag(): Promise<PersonalBagSetting> {
 
 export function setPersonalBag(setting: PersonalBagSetting, userId: number | null) {
   return write(PERSONAL_BAG, setting, userId);
+}
+
+// When the daily pin jobs run and what they do (src/server/jobs).
+export async function getDailyJobs(): Promise<DailyJobsSetting> {
+  const parsed = parseDailyJobs(await read(DAILY_JOBS));
+  return 'setting' in parsed ? parsed.setting : DEFAULT_DAILY_JOBS;
+}
+
+export function setDailyJobs(setting: DailyJobsSetting, userId: number | null) {
+  return write(DAILY_JOBS, setting, userId);
+}
+
+// Whether the filter sliders offer a typed box and preset chips under the track.
+export async function getSliderTyping(): Promise<SliderTypingSetting> {
+  const parsed = parseSliderTyping(await read(SLIDER_TYPING));
+  return 'setting' in parsed ? parsed.setting : DEFAULT_SLIDER_TYPING;
+}
+
+export function setSliderTyping(setting: SliderTypingSetting, userId: number | null) {
+  return write(SLIDER_TYPING, setting, userId);
 }
 
 const WIKI_RECHECK_LAST_RUN = 'wikiRecheckLastRun';

@@ -45,6 +45,9 @@ ENV NODE_ENV=production \
 COPY --from=build /code/.next/standalone ./
 COPY --from=build /code/.next/static ./.next/static
 COPY --from=build /code/public ./public
+# The OKF docs: the daily pin jobs read their strategy from them at run time
+# (src/server/jobs/prompt.ts).
+COPY --from=build /code/docs/okf ./docs/okf
 
 USER node
 EXPOSE 9000

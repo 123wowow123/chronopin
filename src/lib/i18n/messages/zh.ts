@@ -870,7 +870,6 @@ const zh: Messages = {
     followingIntro: '你会收到其新图钉通知的人。',
     preferences: '偏好设置',
     preferencesIntro: 'Chronopin 的外观，以及时间线为你打开的方式。',
-    passwordIntro: '你用于登录的密码。',
     language: '语言',
     languageHint: '在你登录的每台设备上都以该语言打开页面。图钉的译文准备好后会以译文显示。',
     uploadFailed: '无法上传该图片。',

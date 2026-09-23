@@ -122,6 +122,7 @@ export function SearchResults({
   initialView = {},
   defaultSort = 'date',
   video,
+  sliderTyping = false,
 }: {
   // The first page, for the sort the URL asked for.
   initialPage: { sort: SortBy; pins: CardPin[]; links: Links };
@@ -144,6 +145,8 @@ export function SearchResults({
   defaultSort?: SortBy;
   // Whether a card here loads its video player on a phone (the admin setting).
   video: TimelineVideoSetting;
+  // Whether the filter sliders offer a typed box (the admin setting).
+  sliderTyping?: boolean;
 }) {
   const timeZone = useTimeZone(serverTimeZone);
   const t = useT();
@@ -448,6 +451,9 @@ export function SearchResults({
     <TimelineVideoProvider setting={video}>
       <div className="px-3 pb-24 lg:px-4 xl:pr-[288px]">
         <FloatingControls
+          merge
+          typing={sliderTyping}
+          filterSummary={spanLabel(postedWithin, t.locale)}
           summaryCaption={searchedUser || searchedCompany ? undefined : t('controls.postedWithin')}
           summary={searchedUser ? searchedUser.userName : searchedCompany ? searchedCompany.name : spanLabel(postedWithin, t.locale)}
           summaryIsPostedWithin={!searchedUser && !searchedCompany}
@@ -468,22 +474,28 @@ export function SearchResults({
             sortBy === 'relevance'
               ? {
                   summary: eventSpanSummary(startSpan.past, startSpan.future, t.locale),
-                  control: <TimeRangeSlider steps={EVENT_SPAN_OPTIONS} past={startSpan.past} future={startSpan.future} onChange={changeStartSpan} />,
+                  control: <TimeRangeSlider steps={EVENT_SPAN_OPTIONS} past={startSpan.past} future={startSpan.future} collapsible onChange={changeStartSpan} />,
                 }
               : undefined
           }
+          cards={
+            searchedUser || searchedCompany ? (
+              <>
+                {searchedUser ? (
+                  <div className="floating flex flex-col gap-3 px-4 py-3.5">
+                    <div className="flex items-center gap-2 font-semibold text-ink">
+                      <UserAvatar userName={searchedUser.userName} className="size-7 text-sm" />
+                      {searchedUser.userName}
+                    </div>
+                    <FollowButton userId={searchedUser.id} userName={searchedUser.userName} showCount />
+                  </div>
+                ) : null}
+                {searchedCompany ? <SearchedCompanyPanel company={searchedCompany} /> : null}
+              </>
+            ) : undefined
+          }
         >
-          <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={({ past }) => changePostedWithin(past)} />
-          {searchedUser ? (
-            <div className="floating flex flex-col gap-3 px-4 py-3.5">
-              <div className="flex items-center gap-2 font-semibold text-ink">
-                <UserAvatar userName={searchedUser.userName} className="size-7 text-sm" />
-                {searchedUser.userName}
-              </div>
-              <FollowButton userId={searchedUser.id} userName={searchedUser.userName} showCount />
-            </div>
-          ) : null}
-          {searchedCompany ? <SearchedCompanyPanel company={searchedCompany} /> : null}
+          <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly collapsible onChange={({ past }) => changePostedWithin(past)} />
         </FloatingControls>
 
         {/* Between lg and xl the floating controls fold away behind pills, and

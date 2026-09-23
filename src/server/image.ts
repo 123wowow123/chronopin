@@ -169,6 +169,15 @@ export async function createThumbFromUrl(imageUrl: string) {
   }
 }
 
+// What a picture at a URL is, without storing anything: its size, type and
+// fingerprint. For the daily jobs' check_image tool (src/server/jobs/tools.ts),
+// which weighs a candidate picture before it is added to a pin.
+export async function inspectImage(imageUrl: string) {
+  const buffer = await downloadImage(imageUrl);
+  const image = await readImage(buffer);
+  return { width: image.bitmap.width, height: image.bitmap.height, type: image.mime ?? null, bytes: buffer.length, hash: imageHash(image) };
+}
+
 // The fingerprint of a picture that is already somewhere: a thumb on the CDN,
 // or the original a medium was made from. Best effort - a picture that will
 // not download or decode has no hash, and whatever asked is left to decide

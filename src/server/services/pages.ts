@@ -5,7 +5,7 @@
 // own words.
 
 import { cacheLife, cacheTag } from 'next/cache';
-import { getPersonalBag, getTimelineVideo } from '../model/appSetting';
+import { getPersonalBag, getSliderTyping, getTimelineVideo } from '../model/appSetting';
 import Favorite from '../model/favorite';
 import Pin from '../model/pin';
 import Pins from '../model/pins';
@@ -15,6 +15,7 @@ import UserWiki from '../model/userWiki';
 import { compareDuplicateRank } from '@/lib/duplicates';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { toJson, type NewPin, type PinJson, type SearchPage, type TimelinePage, type TrendingPin } from '@/lib/types';
+import type { SliderTypingSetting } from '@/lib/sliderTyping';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { UserPreference } from '@/lib/userWiki';
 import { TAGS } from './cache';
@@ -34,6 +35,14 @@ export async function timelineVideo(): Promise<TimelineVideoSetting> {
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
   return getTimelineVideo();
+}
+
+// Whether the filter sliders offer a typed box, cached and expired the same way.
+export async function sliderTyping(): Promise<SliderTypingSetting> {
+  'use cache';
+  cacheLife('minutes');
+  cacheTag(TAGS.timeline);
+  return getSliderTyping();
 }
 
 // The signed-in viewer's preference wiki, which a crowded day's cards are

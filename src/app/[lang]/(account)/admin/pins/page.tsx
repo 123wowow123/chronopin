@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import { requireAdminViewer } from '@/server/guard';
-import { getPersonalBag, getTimelineConfidence, getTimelineVideo, getWikiRecheck, getWikiRecheckLastRun } from '@/server/model/appSetting';
+import { getPersonalBag, getSliderTyping, getTimelineConfidence, getTimelineVideo, getWikiRecheck, getWikiRecheckLastRun } from '@/server/model/appSetting';
 import Pins from '@/server/model/pins';
 import UserWiki from '@/server/model/userWiki';
 import { AdminTabs } from '../AdminTabs';
 import { PersonalBagForm } from './PersonalBagForm';
 import { PinsDashboard } from './PinsDashboard';
+import { SliderTypingForm } from './SliderTypingForm';
 import { TimelineVideoForm } from './TimelineVideoForm';
 import { WikiRecheckForm } from './WikiRecheckForm';
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = { title: 'Admin pins' };
 
 export default async function AdminPinsPage() {
   await requireAdminViewer('/admin/pins');
-  const [rows, setting, video, recheck, lastRecheck, personal, wikis] = await Promise.all([
+  const [rows, setting, video, recheck, lastRecheck, personal, wikis, typing] = await Promise.all([
     Pins.listConfidence(),
     getTimelineConfidence(),
     getTimelineVideo(),
@@ -24,12 +25,14 @@ export default async function AdminPinsPage() {
     getWikiRecheckLastRun(),
     getPersonalBag(),
     UserWiki.count(),
+    getSliderTyping(),
   ]);
   return (
     <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
       <AdminTabs current="/admin/pins" />
       <h1 className="sr-only">Pins</h1>
       <TimelineVideoForm saved={video} />
+      <SliderTypingForm saved={typing} />
       <PersonalBagForm saved={personal} wikis={wikis} />
       <WikiRecheckForm saved={recheck} lastRun={lastRecheck} />
       <PinsDashboard

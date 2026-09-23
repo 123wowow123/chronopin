@@ -883,7 +883,6 @@ const de: Messages = {
     followingIntro: 'Leute, über deren neue Pins du informiert wirst.',
     preferences: 'Einstellungen',
     preferencesIntro: 'Wie Chronopin aussieht und wie sich die Zeitleiste für dich öffnet.',
-    passwordIntro: 'Das Passwort, mit dem du dich anmeldest.',
     language: 'Sprache',
     languageHint: 'Seiten öffnen sich auf jedem Gerät, auf dem du angemeldet bist, in dieser Sprache. Pins werden übersetzt angezeigt, sobald eine Übersetzung bereitsteht.',
     uploadFailed: 'Das Bild konnte nicht hochgeladen werden.',

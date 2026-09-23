@@ -14,4 +14,5 @@ export async function checkConfig() {
 // setting, so one that is off costs a query now and then.
 export function startSchedules() {
   void import('@/server/services/wikiRecheckJob').then(({ startWikiRecheckSchedule }) => startWikiRecheckSchedule());
+  void import('@/server/services/dailyJobSchedule').then(({ startDailyJobSchedule }) => startDailyJobSchedule());
 }

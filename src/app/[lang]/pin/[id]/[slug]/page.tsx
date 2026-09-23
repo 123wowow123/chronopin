@@ -13,6 +13,7 @@ import { DelayBadge, DelayReasoning } from '@/components/pin/DelayBadge';
 import { DateRanges } from '@/components/pin/DateRanges';
 import { FollowButton } from '@/components/pin/FollowButton';
 import { PinAdminLink } from '@/components/pin/PinAdminLink';
+import { PinRevisitButton } from '@/components/pin/PinRevisitButton';
 import { CardGrid } from '@/components/pin/CardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { PinConfidence } from '@/components/pin/PinConfidence';
@@ -343,6 +344,7 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
         <div className="flex items-center gap-1">
           <ViewCount pinId={pin.id} initial={pin.viewCount} track />
           <WatchButton pin={pin} loadForViewer />
+          <PinRevisitButton pinId={pin.id} />
           <PinAdminLink pinId={pin.id} />
         </div>
       </div>

@@ -429,6 +429,8 @@ GA: Outbound link / non-interaction events / Social Interactions tracking / User
 
 create mobile app
 
+Translate content to all supported languages
+
 ### Before release
 
 - Use this AI to do this job: Localization is in: the site now works in English, Spanish, French, German, Japanese and Simplified Chinese. The app's own text is translated in all six, but pin text stays in English for now because the Anthropic key has no credit. 
@@ -499,8 +501,6 @@ For the default 6am, 6pm PST linting and new pin creation jobs:
 - Will add new sources that came out since last udpate and check if media links are broken and fix and add newer ones available
 
 - Pin major news or events that came out
-
-
 
 
 # OKF

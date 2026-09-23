@@ -883,7 +883,6 @@ const en = {
     followingIntro: 'People whose new pins you hear about.',
     preferences: 'Preferences',
     preferencesIntro: 'How Chronopin looks, and how the timeline opens for you.',
-    passwordIntro: 'The password you log in with.',
     language: 'Language',
     languageHint: 'Pages open in this language on every device you sign in on. Pins are shown translated when a translation is ready.',
     uploadFailed: 'Could not upload that picture.',

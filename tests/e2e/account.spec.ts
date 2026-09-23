@@ -162,6 +162,8 @@ test.describe.serial('a signed-in author', () => {
     await expect(page).toHaveURL(/\/profile$/);
     await expect(page.getByLabel('Birthday')).toHaveValue(birthday);
     await expect(page.getByLabel('Phone Number')).toHaveValue(phone);
+    await page.getByRole('navigation', { name: 'Profile' }).getByRole('link', { name: 'Preferences' }).click();
+    await expect(page).toHaveURL(/\/profile\/preferences$/);
     await page.getByLabel('Timeline filter default').selectOption('1w');
     await expect(page.getByText('Preferences saved.')).toBeVisible();
   });
@@ -175,11 +177,11 @@ test.describe.serial('a signed-in author', () => {
 
     // Nothing chosen yet follows the device, here a dark one.
     await page.emulateMedia({ colorScheme: 'dark' });
-    // Preferences live on the profile page now; old links land on that section.
+    // Preferences are a tab of the profile now; old links land on it.
     await page.goto('/settings');
     await expect(page).toHaveURL(/\/profile\/password$/);
     await page.goto('/preferences');
-    await expect(page).toHaveURL(/\/profile#preferences$/);
+    await expect(page).toHaveURL(/\/profile\/preferences$/);
     const html = page.locator('html');
     await expect(html).toHaveAttribute('data-theme', 'dark');
     await expect(page.getByRole('radio', { name: 'System' })).toHaveAttribute('aria-checked', 'true');
@@ -256,7 +258,7 @@ test.describe.serial('a signed-in author', () => {
       const me = (await (await page.request.get('/api/users/me')).json()) as Record<string, unknown>;
       return { latitude: me.locationLatitude, longitude: me.locationLongitude, name: me.locationName, fromDevice: me.locationFromDevice };
     };
-    await page.goto('/profile');
+    await page.goto('/profile/preferences');
     const shown = page.getByTestId('default-location');
     await expect(shown).toContainText('Not set');
 

@@ -870,7 +870,6 @@ const ja: Messages = {
     followingIntro: '新しいピンの通知を受け取る人たち。',
     preferences: '設定',
     preferencesIntro: 'Chronopinの見た目と、タイムラインの開き方。',
-    passwordIntro: 'ログインに使うパスワード。',
     language: '言語',
     languageHint: 'ログインしているすべてのデバイスで、この言語でページを開きます。翻訳が用意できたピンは翻訳して表示します。',
     uploadFailed: 'その画像をアップロードできませんでした。',

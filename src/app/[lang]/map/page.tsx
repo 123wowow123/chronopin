@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { siteName } from '@/lib/appConfig';
 import { alternates, getT } from '@/lib/i18n/server';
+import { sliderTyping } from '@/server/services/pages';
 import { MapLoader } from './MapLoader';
 
 // openGraph and twitter replace the root layout's whole objects, so a share of
@@ -20,11 +21,11 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function MapPage() {
-  const t = await getT();
+  const [t, typing] = await Promise.all([getT(), sliderTyping()]);
   return (
     <main>
       <h1 className="sr-only">{t('meta.mapHeading')}</h1>
-      <MapLoader />
+      <MapLoader sliderTyping={typing.enabled} />
     </main>
   );
 }

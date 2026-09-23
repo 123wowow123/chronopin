@@ -255,7 +255,8 @@ function loadedAsMap() {
 // the search's pins, and category picks are tag: terms naming a category.
 // /map?pin=<id> (a pin page's "To map") centers on that pin, shows it
 // whatever the filters, and keeps its popup open until the map is clicked.
-export default function PinsMap() {
+// sliderTyping: whether the filter sliders offer a typed box (the admin setting).
+export default function PinsMap({ sliderTyping = false }: { sliderTyping?: boolean }) {
   const router = useRouter();
   const t = useT();
   const params = useSearchParams();
@@ -666,6 +667,8 @@ export default function PinsMap() {
           Leaflet's panes. */}
       <div className="relative z-[1000]">
         <FloatingControls
+          merge
+          typing={sliderTyping}
           summaryCaption={t('controls.postedWithin')}
           summary={spanLabel(postedWithin, t.locale)}
           tags={{
@@ -682,6 +685,7 @@ export default function PinsMap() {
                 steps={EVENT_SPAN_OPTIONS}
                 past={past}
                 future={future}
+                collapsible
                 onChange={(value) => {
                   setPast(value.past);
                   setFuture(value.future);
@@ -690,7 +694,7 @@ export default function PinsMap() {
             ),
           }}
         >
-          <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly onChange={(value) => setPostedWithin(value.past)} />
+          <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly collapsible onChange={(value) => setPostedWithin(value.past)} />
         </FloatingControls>
       </div>
       {/* The web toggle, with the graph above it when it is on. */}

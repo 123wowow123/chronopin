@@ -43,6 +43,8 @@
     "sports:tournaments": "tsx scripts/sports/tournaments.ts",
     "astronomy:eclipses": "tsx scripts/astronomy/eclipses.ts",
     "trends:discover": "tsx scripts/trends/discover.ts",
+    "jobs:run": "tsx scripts/jobs/run.ts",
+    "jobs:mcp": "tsx scripts/jobs/mcp.ts",
     "tags:sync": "tsx scripts/tags/sync.ts",
     "series:attach": "tsx scripts/series/attach.ts",
     "translations:sync": "tsx scripts/translations/sync.ts",

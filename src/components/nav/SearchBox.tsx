@@ -957,6 +957,8 @@ export function SearchBox() {
       {isLoggedIn ? (
         <button
           type="button"
+          // Put out of reach with the rest of the navbar while the big tag cloud is open.
+          data-cloud-dim
           aria-pressed={watchedOnly}
           title={watchedOnly ? t('search.watchedOnTitle') : t('search.watchedOffTitle')}
           className={`flex shrink-0 items-center gap-1.5 rounded-full px-3 text-sm font-medium ring-1 transition-colors ring-inset max-lg:hidden ${

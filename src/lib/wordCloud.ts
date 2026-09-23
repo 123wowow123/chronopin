@@ -46,10 +46,11 @@ export function scalesFrom(start: number, steps = 8, ratio = 0.9): number[] {
 
 // The scale at which the words' ink, at roughly `fill` of the shape's area,
 // would cover it: a first guess for layoutCloud. area(word) is a word's box
-// at scale 1 (px²).
-export function fitScale(areas: number[], shapeArea: number, fill = 0.42): number {
+// at scale 1 (px²). Never above `cap`; pass Infinity to let a roomy shape
+// grow the words past their scale-1 sizes.
+export function fitScale(areas: number[], shapeArea: number, fill = 0.42, cap = 1): number {
   const total = areas.reduce((sum, a) => sum + a, 0);
-  return total ? Math.min(1, Math.sqrt((shapeArea * fill) / total)) : 1;
+  return total ? Math.min(cap, Math.sqrt((shapeArea * fill) / total)) : 1;
 }
 
 // How much of the width x height box the shape covers (px²), sampled.
@@ -196,34 +197,12 @@ class Board {
 
 /* Shape, weights and colours */
 
-// A cumulus: lobes as ellipses in a unit square, flat along the bottom.
-const LOBES: [number, number, number, number][] = [
-  [0.5, 0.56, 0.47, 0.34],
-  [0.3, 0.44, 0.24, 0.3],
-  [0.53, 0.3, 0.27, 0.28],
-  [0.74, 0.44, 0.23, 0.3],
-  [0.15, 0.62, 0.15, 0.22],
-  [0.86, 0.63, 0.14, 0.2],
-];
-
-// A box taller than it is wide (a phone) gets a rounded blob instead: a
-// cumulus squeezed upright would leave long words nowhere to go.
-const TALL_LOBES: [number, number, number, number][] = [
-  [0.5, 0.5, 0.5, 0.44],
-  [0.5, 0.22, 0.4, 0.2],
-  [0.5, 0.78, 0.4, 0.2],
-];
-
+// The shape the words pack into: a squircle (|u|^5 + |v|^5 <= 1) over the
+// whole box, so the cloud fills its canvas - on a tall phone as on a wide
+// screen - with only the corners rounded off. A cumulus outline looked more
+// like a cloud but left the corners, the top and the bottom bare.
 export function cloudShape(width: number, height: number) {
-  if (height > width * 1.15) {
-    return (x: number, y: number) => TALL_LOBES.some(([cu, cv, ru, rv]) => ((x / width - cu) / ru) ** 2 + ((y / height - cv) / rv) ** 2 <= 1);
-  }
-  return (x: number, y: number) => {
-    const u = x / width;
-    const v = y / height;
-    if (v > 0.9) return false;
-    return LOBES.some(([cu, cv, ru, rv]) => ((u - cu) / ru) ** 2 + ((v - cv) / rv) ** 2 <= 1);
-  };
+  return (x: number, y: number) => Math.abs((2 * x) / width - 1) ** 5 + Math.abs((2 * y) / height - 1) ** 5 <= 1;
 }
 
 // Counts as weights between 0 and 1 on a log scale.

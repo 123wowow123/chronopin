@@ -883,7 +883,6 @@ const fr: Messages = {
     followingIntro: 'Les personnes dont vous suivez les nouvelles épingles.',
     preferences: 'Préférences',
     preferencesIntro: 'L’apparence de Chronopin et la façon dont la chronologie s’ouvre pour vous.',
-    passwordIntro: 'Le mot de passe avec lequel vous vous connectez.',
     language: 'Langue',
     languageHint: 'Les pages s’ouvrent dans cette langue sur tous les appareils où vous êtes connecté. Les épingles s’affichent traduites dès qu’une traduction est prête.',
     uploadFailed: 'Impossible de téléverser cette image.',

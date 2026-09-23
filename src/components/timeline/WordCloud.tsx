@@ -160,22 +160,46 @@ export function WordCloud({
       const minSize = width < 500 ? 11 : 12;
       const sizeFor = (weight: number, scale: number) => Math.max(10, Math.round((minSize + (maxSize - minSize) * weight ** 1.1) * scale));
       const inside = cloudShape(width, height);
-      // A first guess at how small the words must be to fit them all, from
-      // their widths at scale 1 (about 0.6em a letter in bold) and heights.
+      // A first guess at the size that fills the shape, from the words'
+      // widths at scale 1 (about 0.6em a letter in bold) and heights. Not
+      // capped at 1: a roomy box (the big cloud on a tall phone) grows them
+      // until they fill it rather than leaving a small cloud in the middle.
       const start = fitScale(
         words.map((w) => (w.text.length * 0.6 + 0.4) * sizeFor(w.weight, 1) ** 2 * 1.15),
         shapeArea(width, height, inside),
+        0.42,
+        Infinity,
       );
-      const placed = layoutCloud(words, {
-        width,
-        height,
-        cell: CELL,
-        inside,
-        sizeFor,
-        sprite: spriteMaker(family, boxes),
-        pad: 1,
-        scales: scalesFrom(Math.min(1, start * 1.15), 9, 0.9),
-      });
+      const options = { width, height, cell: CELL, inside, sizeFor, sprite: spriteMaker(family, boxes), pad: 1 };
+      // Every word at one scale, or null when any is left out.
+      const whole = (scale: number) => {
+        const out = layoutCloud(words, { ...options, scales: [scale] });
+        return out.length === words.length ? out : null;
+      };
+      // Down from a little over the guess to the first scale that places
+      // every word, then up again by halves to the largest that still does:
+      // the cloud fills its box whatever the guess.
+      let fit = 0;
+      let placed: PlacedWord[] | null = null;
+      for (const scale of scalesFrom(start * 1.3, 16, 0.9)) {
+        placed = whole(scale);
+        if (placed) {
+          fit = scale;
+          break;
+        }
+      }
+      if (placed) {
+        let over = fit * 3;
+        for (let i = 0; i < 7; i++) {
+          const mid = (fit + over) / 2;
+          const next = whole(mid);
+          if (next) [fit, placed] = [mid, next];
+          else over = mid;
+        }
+      } else {
+        // None fits them all: as many as the smallest scales allow.
+        placed = layoutCloud(words, { ...options, scales: scalesFrom(start * 0.5, 6, 0.85) });
+      }
       const kept = new Map<string, Box>();
       for (const p of placed) kept.set(p.key, boxes.get(`${p.key}|${p.size}`)!);
       setLayout({ width, height, placed, boxes: kept, palette: isDark() ? DARK_PALETTE : LIGHT_PALETTE });

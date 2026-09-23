@@ -7,7 +7,7 @@ import { createPortal } from 'react-dom';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { LogoMark } from '@/components/ui/LogoMark';
 import { UserAvatar } from '@/components/ui/UserAvatar';
-import { setControlsSlot, useHasControls } from '@/lib/client/controlsDrawer';
+import { onCloseDrawer, setControlsSlot, useHasControls } from '@/lib/client/controlsDrawer';
 import { leaveDrawer, settleDrawerMark, takeDrawerReturn } from '@/lib/client/drawerReturn';
 import { useUnreadCount } from '@/lib/client/notifications';
 import { hrefKeepingDate } from '@/lib/client/returnSpot';
@@ -29,11 +29,13 @@ type Swipe = { x: number; y: number; time: number; width: number; axis: 'x' | 'y
 const noSubscribe = () => () => {};
 
 // A titled group of drawer rows, set off from the one above by a rule.
-function DrawerSection({ title, children }: { title: string; children: React.ReactNode }) {
+// hideTitle: the section's own first row already says it (the filters'
+// panel is headed "Filters"), so the label is only for screen readers.
+function DrawerSection({ title, hideTitle = false, children }: { title: string; hideTitle?: boolean; children: React.ReactNode }) {
   const id = useId();
   return (
-    <div role="group" aria-labelledby={id} className="border-t border-line px-2 pt-2 pb-2.5">
-      <div id={id} className="px-3 pt-1 pb-1 text-xs font-semibold tracking-wider text-subtle uppercase">
+    <div role="group" aria-labelledby={id} className={`border-t border-line px-2 pb-2.5 ${hideTitle ? 'pt-2.5' : 'pt-2'}`}>
+      <div id={id} className={hideTitle ? 'sr-only' : 'px-3 pt-1 pb-1 text-xs font-semibold tracking-wider text-subtle uppercase'}>
         {title}
       </div>
       {children}
@@ -108,6 +110,8 @@ export function MobileDrawer() {
   }
 
   useScrollLock(open);
+
+  useEffect(() => onCloseDrawer(() => setOpen(false)), []);
 
   // Back from the profile page's "Menu" button: the page it was opened from
   // is showing again, so the drawer is too (src/lib/client/drawerReturn.ts).
@@ -321,8 +325,8 @@ export function MobileDrawer() {
               panels, lent to the drawer while the screen is too narrow to
               float them beside the cards. */}
           {hasControls ? (
-            <DrawerSection title={t('controls.filters')}>
-              <div ref={setControlsSlot} className="flex flex-col gap-2 px-1 pt-1 pb-0.5" />
+            <DrawerSection title={t('controls.filters')} hideTitle>
+              <div ref={setControlsSlot} className="flex flex-col gap-2 px-1 pb-0.5" />
             </DrawerSection>
           ) : null}
           {user ? (

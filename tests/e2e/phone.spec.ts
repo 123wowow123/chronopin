@@ -128,9 +128,10 @@ test.describe('the arrow back to the drawer', () => {
       await expect(page).toHaveURL(path);
       await expect(drawer).toBeHidden();
 
-      // The arrow leads the title's line.
+      // The arrow leads the title's line: the profile's is its row of tabs,
+      // the picked one standing for the title.
       const back = page.getByRole('button', { name: 'Back to the menu' });
-      const title = page.getByRole('heading', { level: 1 });
+      const title = /profile/.test(path.source) ? page.getByRole('navigation', { name: 'Profile' }).locator('[aria-current="page"]') : page.getByRole('heading', { level: 1 });
       const [arrow, heading] = [(await back.boundingBox())!, (await title.boundingBox())!];
       expect(Math.abs(arrow.y + arrow.height / 2 - (heading.y + heading.height / 2))).toBeLessThan(4);
 
