@@ -404,6 +404,23 @@ export class Users {
     ORDER BY "utcCreatedDateTime"`);
   }
 
+  // Per live user, for the admin list's sorts: the live pins they created, and
+  // the pin views they made signed in (PinView counts a viewer once per pin
+  // per UTC day, as "u:<id>").
+  static async activityCounts(): Promise<Map<number, { pinsCreated: number; pinsViewed: number }>> {
+    const rows = await db.query<{ id: number; pinsCreated: number; pinsViewed: number }>(`
+    SELECT "u"."id",
+           COALESCE("p"."n", 0)::integer AS "pinsCreated",
+           COALESCE("v"."n", 0)::integer AS "pinsViewed"
+    FROM "User" "u"
+    LEFT JOIN (SELECT "userId", COUNT(*) AS "n" FROM "Pin" WHERE "utcDeletedDateTime" IS NULL GROUP BY "userId") "p"
+      ON "p"."userId" = "u"."id"
+    LEFT JOIN (SELECT "viewer", COUNT(*) AS "n" FROM "PinView" WHERE "viewer" LIKE 'u:%' GROUP BY "viewer") "v"
+      ON "v"."viewer" = 'u:' || "u"."id"
+    WHERE "u"."utcDeletedDateTime" IS NULL`);
+    return new Map(rows.map(({ id, ...counts }) => [id, counts]));
+  }
+
   static async getAll(properties: string[]): Promise<User[]> {
     const rows = await db.query(`
     SELECT ${USER_COLUMNS.map(selectColumn).join(', ')}

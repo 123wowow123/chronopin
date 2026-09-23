@@ -14,8 +14,14 @@ export const metadata: Metadata = { title: 'Admin users' };
 
 export default async function AdminUsersPage() {
   await requireAdminViewer('/admin/users');
-  const [allUsers, created] = await Promise.all([Users.getAll([...pickUserProps, 'utcCreatedDateTime']), Users.listCreated()]);
-  const users = toJson<Parameters<typeof UserList>[0]['initialUsers']>(allUsers);
+  const [allUsers, created, activity] = await Promise.all([
+    Users.getAll([...pickUserProps, 'utcCreatedDateTime']),
+    Users.listCreated(),
+    Users.activityCounts(),
+  ]);
+  const users = toJson<Parameters<typeof UserList>[0]['initialUsers']>(
+    allUsers.map((u) => ({ ...u.pick([...pickUserProps, 'utcCreatedDateTime']), ...(activity.get(u.id) ?? { pinsCreated: 0, pinsViewed: 0 }) })),
+  );
   return (
     <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
       <AdminTabs current="/admin/users" />
