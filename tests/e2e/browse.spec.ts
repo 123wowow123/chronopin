@@ -57,13 +57,17 @@ test('search results page in as they are scrolled, by date and by relevance', as
 
 // The timeline and the results share one loading boundary, so a pick keeps the
 // pins it was made over on screen until the search is in.
-// Categories are the tag cloud's top group, and a pick is a tag: term.
+// Categories are the tag cloud's top group, and a pick is a tag: term. With
+// the tag list off (the default, src/lib/tagList.ts) the Tags row in the
+// Filters panel opens the big cloud, and the pick is made there.
 test('picking a category searches without blanking the page', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('article').first()).toBeVisible();
+  const filters = page.getByRole('button', { name: /^Filters:/ });
+  if ((await filters.getAttribute('aria-expanded')) === 'false') await filters.click();
   await page.getByRole('button', { name: /^Tags:/ }).click();
-  // The tags themselves, not the chevrons that unfold a group.
-  const pills = page.getByRole('group', { name: 'Filter by tag' }).locator('button[aria-pressed]');
+  // The cloud's words, which stay up across the search they start.
+  const pills = page.getByRole('dialog').getByRole('group', { name: 'Filter by tag' }).getByRole('button');
   await expect(pills.first()).toBeVisible();
 
   // Every frame from the click to the results: a page of its own for the

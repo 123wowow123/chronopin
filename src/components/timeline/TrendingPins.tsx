@@ -35,21 +35,30 @@ export function TrendingPins({ pins, days }: { pins: TrendingPin[]; days: number
       <ol className="flex min-h-0 flex-col flex-wrap overflow-clip pb-1.5">
         {pins.map((pin) => (
           <li key={pin.id} className="w-full px-1.5">
-            <Link href={pinPath(pin)} prefetch={false} className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-raised">
-              <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} className="h-9 w-14" />
-              <span className="flex min-w-0 flex-col">
-                <span className="line-clamp-2 leading-snug text-ink" title={pin.title}>
-                  {pin.title}
-                </span>
-                <span className="flex items-center gap-1.5 text-xs text-subtle tabular-nums">
-                  {t('trending.views', { count: pin.views, compact: compactCount(pin.views) })}
-                  <span className="font-medium text-success">{growth(pin, t)}</span>
-                </span>
-              </span>
-            </Link>
+            <TrendingRow pin={pin} />
           </li>
         ))}
       </ol>
     </section>
+  );
+}
+
+// One trending pin: its picture, title, views and how fast they grew. Also
+// the nav drawer's trending list (src/components/nav/DrawerHighlights.tsx).
+export function TrendingRow({ pin }: { pin: TrendingPin }) {
+  const t = useT();
+  return (
+    <Link href={pinPath(pin)} prefetch={false} className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-raised">
+      <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} className="h-9 w-14" />
+      <span className="flex min-w-0 flex-col">
+        <span className="line-clamp-2 leading-snug text-ink" title={pin.title}>
+          {pin.title}
+        </span>
+        <span className="flex items-center gap-1.5 text-xs text-subtle tabular-nums">
+          {t('trending.views', { count: pin.views, compact: compactCount(pin.views) })}
+          <span className="font-medium text-success">{growth(pin, t)}</span>
+        </span>
+      </span>
+    </Link>
   );
 }

@@ -1,9 +1,9 @@
 'use client';
 
-import { createContext, useContext, useEffect, useId, useRef, useState, useSyncExternalStore } from 'react';
+import { createContext, useContext, useEffect, useId, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { createPortal } from 'react-dom';
 import { Icon, type IconName } from '@/components/ui/Icon';
-import { registerControls, useControlsSlot, useOwnsControls } from '@/lib/client/controlsDrawer';
+import { openTagCloud, registerControls, restoreDrawerScroll, useControlsSlot, useOwnsControls } from '@/lib/client/controlsDrawer';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { useT } from '@/lib/client/i18n';
 import { PanelHeader, useFold } from './PanelHeader';
@@ -58,6 +58,14 @@ export function useSliderTyping() {
   return useContext(SliderTypingContext);
 }
 
+// Whether the tag panel lists its tags (the admin setting, src/lib/tagList.ts);
+// off, its row and the tags pill open the big tag cloud instead.
+const TagListContext = createContext(true);
+
+export function useTagList() {
+  return useContext(TagListContext);
+}
+
 // A section's own panel chrome, dropped from xl up inside the merged panel.
 export const mergedSection = 'xl:rounded-none xl:border-0 xl:bg-transparent xl:shadow-none';
 
@@ -105,6 +113,7 @@ export function FloatingControls({
   filterSummary,
   cards,
   typing = false,
+  tagList = true,
 }: {
   children: React.ReactNode;
   // Sits above the folds, at the top of the column: sorting leads the rest.
@@ -138,8 +147,11 @@ export function FloatingControls({
   cards?: React.ReactNode;
   // The admin setting: whether the sliders offer a typed box.
   typing?: boolean;
+  // The admin setting: whether the tag panel lists its tags, or opens the big cloud.
+  tagList?: boolean;
 }) {
-  const [open, setOpenState] = useState<Fold>(() => (rememberedTagsOpen ? 'tags' : null));
+  // With no tag list there is no tags fold to come back to.
+  const [open, setOpenState] = useState<Fold>(() => (rememberedTagsOpen && tagList ? 'tags' : null));
   const setOpen = (next: Fold) => {
     rememberedTagsOpen = next === 'tags';
     setOpenState(next);
@@ -154,6 +166,12 @@ export function FloatingControls({
   const [claim] = useState(() => ({}));
   useEffect(() => registerControls(claim), [claim]);
   const owns = useOwnsControls(claim);
+  // Filling the drawer after a tag picked in it navigated here: back to where
+  // the drawer was scrolled (src/lib/client/controlsDrawer.ts).
+  const filling = inDrawer && owns && !!slot;
+  useLayoutEffect(() => {
+    if (filling) restoreDrawerScroll();
+  }, [filling]);
   const [mergedOpen, setMergedOpen] = useFold('filters');
   const mergedId = useId();
   // What the merged row says: only the filters that narrow anything, each as
@@ -197,46 +215,48 @@ export function FloatingControls({
         {owns && slot
           ? createPortal(
               <DrawerPanelContext value={true}>
-                <SliderTypingContext value={typing}>
-                  <div className="flex flex-col gap-2">
-                    {merge ? (
-                      // One panel, as in the xl column: the "Filters" row,
-                      // then each slider under it, wholly open, stripped of
-                      // its own panel. No box of its own either: the drawer's
-                      // rules above and below already frame it, and a box
-                      // inside them reads as a double border.
-                      <div className="flex flex-col text-sm">
-                        <PanelHeader
-                          caption={t('controls.filters')}
-                          captionClass="font-semibold text-ink"
-                          icon="sliders"
-                          value={mergedSummary}
-                          open={mergedOpen}
-                          onToggle={() => setMergedOpen(!mergedOpen)}
-                          controls={mergedId}
-                        />
-                        <div
-                          id={mergedId}
-                          className={`flex-col [&>*]:rounded-none [&>*]:border-x-0 [&>*]:border-t-0 [&>*]:border-line [&>*]:bg-transparent [&>*]:shadow-none [&>*:last-child]:border-b-0 ${
-                            mergedOpen ? 'flex' : 'hidden'
-                          }`}
-                        >
-                          <MergedPanelContext value={mergedOpen}>
-                            {tags?.control}
-                            {children}
-                            {span?.control}
-                          </MergedPanelContext>
+                <TagListContext value={tagList}>
+                  <SliderTypingContext value={typing}>
+                    <div className="flex flex-col gap-2">
+                      {merge ? (
+                        // One panel, as in the xl column: the "Filters" row,
+                        // then each slider under it, wholly open, stripped of
+                        // its own panel. No box of its own either: the drawer's
+                        // rules above and below already frame it, and a box
+                        // inside them reads as a double border.
+                        <div className="flex flex-col text-sm">
+                          <PanelHeader
+                            caption={t('controls.filters')}
+                            captionClass="font-semibold text-ink"
+                            icon="sliders"
+                            value={mergedSummary}
+                            open={mergedOpen}
+                            onToggle={() => setMergedOpen(!mergedOpen)}
+                            controls={mergedId}
+                          />
+                          <div
+                            id={mergedId}
+                            className={`flex-col [&>*]:rounded-none [&>*]:border-x-0 [&>*]:border-t-0 [&>*]:border-line [&>*]:bg-transparent [&>*]:shadow-none [&>*:last-child]:border-b-0 ${
+                              mergedOpen ? 'flex' : 'hidden'
+                            }`}
+                          >
+                            <MergedPanelContext value={mergedOpen}>
+                              {tags?.control}
+                              {children}
+                              {span?.control}
+                            </MergedPanelContext>
+                          </div>
                         </div>
-                      </div>
-                    ) : (
-                      <>
-                        {children}
-                        {span?.control}
-                      </>
-                    )}
-                    {cards}
-                  </div>
-                </SliderTypingContext>
+                      ) : (
+                        <>
+                          {children}
+                          {span?.control}
+                        </>
+                      )}
+                      {cards}
+                    </div>
+                  </SliderTypingContext>
+                </TagListContext>
               </DrawerPanelContext>,
               slot,
             )
@@ -251,90 +271,104 @@ export function FloatingControls({
   }
 
   return (
-    <SliderTypingContext value={typing}>
-      <div ref={rootRef}>
-        {/* Dims the cards behind an open fold, which would otherwise blend into them. */}
-        {open ? <div aria-hidden onClick={() => setOpen(null)} className="fixed inset-0 z-20 touch-none bg-black/50 xl:hidden" /> : null}
-        <div
-          className={`fixed right-3 bottom-16 z-30 flex w-64 flex-col items-stretch gap-2 xl:top-[68px] xl:right-4 xl:bottom-auto xl:max-h-[calc(100dvh-8.5rem)] ${
-            // The full height, so the panels under the controls can share out what is left.
-            aside ? 'xl:h-[calc(100dvh-8.5rem)]' : ''
-          }`}
-        >
-          {sort}
-          {/* From xl up with merge, one panel: the "Filters" row, then every
-              section under it while it is open. Narrower the wrappers are
-              display: contents, so each section is its fold's popup as before. */}
+    <TagListContext value={tagList}>
+      <SliderTypingContext value={typing}>
+        <div ref={rootRef}>
+          {/* Dims the cards behind an open fold, which would otherwise blend into them. */}
+          {open ? <div aria-hidden onClick={() => setOpen(null)} className="fixed inset-0 z-20 touch-none bg-black/50 xl:hidden" /> : null}
           <div
-            className={
-              merge
-                ? 'contents xl:flex xl:min-h-0 xl:flex-col xl:rounded-xl xl:border xl:border-tint/[0.07] xl:bg-panel xl:text-sm xl:shadow-2xl xl:shadow-shade/50'
-                : 'contents'
-            }
+            className={`fixed right-3 bottom-16 z-30 flex w-64 flex-col items-stretch gap-2 xl:top-[68px] xl:right-4 xl:bottom-auto xl:max-h-[calc(100dvh-8.5rem)] ${
+              // The full height, so the panels under the controls can share out what is left.
+              aside ? 'xl:h-[calc(100dvh-8.5rem)]' : ''
+            }`}
           >
-            {merge ? (
-              <PanelHeader
-                caption={t('controls.filters')}
-                captionClass="font-semibold text-ink"
-                icon="sliders"
-                value={mergedSummary}
-                open={mergedOpen}
-                onToggle={() => setMergedOpen(!mergedOpen)}
-                controls={mergedId}
-                className="max-xl:hidden"
-              />
-            ) : null}
+            {sort}
+            {/* From xl up with merge, one panel: the "Filters" row, then every
+                section under it while it is open. Narrower the wrappers are
+                display: contents, so each section is its fold's popup as before. */}
             <div
-              id={mergedId}
               className={
                 merge
-                  ? `contents ${mergedOpen ? 'xl:flex xl:min-h-0 xl:flex-col xl:divide-y xl:divide-line xl:border-t xl:border-line xl:overflow-y-auto xl:overscroll-contain xl:[&>*]:shrink-0' : 'xl:hidden'}`
+                  ? 'contents xl:flex xl:min-h-0 xl:flex-col xl:rounded-xl xl:border xl:border-tint/[0.07] xl:bg-panel xl:text-sm xl:shadow-2xl xl:shadow-shade/50'
                   : 'contents'
               }
             >
-              <MergedPanelContext value={merge ? mergedOpen : null}>
-                {tags ? (
-                  // Open behind its pill, the cloud takes the page down to it, however few tags it has.
-                  <div id="timeline-tags" className={`flex min-h-0 flex-col ${open === 'tags' ? 'max-xl:h-[calc(100dvh-8rem)]' : 'max-xl:hidden'}`}>
-                    <TagFoldContext value={open === 'tags'}>{tags.control}</TagFoldContext>
+              {merge ? (
+                <PanelHeader
+                  caption={t('controls.filters')}
+                  captionClass="font-semibold text-ink"
+                  icon="sliders"
+                  value={mergedSummary}
+                  open={mergedOpen}
+                  onToggle={() => setMergedOpen(!mergedOpen)}
+                  controls={mergedId}
+                  className="max-xl:hidden"
+                />
+              ) : null}
+              <div
+                id={mergedId}
+                className={
+                  merge
+                    ? `contents ${mergedOpen ? 'xl:flex xl:min-h-0 xl:flex-col xl:divide-y xl:divide-line xl:border-t xl:border-line xl:overflow-y-auto xl:overscroll-contain xl:[&>*]:shrink-0' : 'xl:hidden'}`
+                    : 'contents'
+                }
+              >
+                <MergedPanelContext value={merge ? mergedOpen : null}>
+                  {tags ? (
+                    // Open behind its pill, the cloud takes the page down to it, however few tags it has.
+                    <div id="timeline-tags" className={`flex min-h-0 flex-col ${open === 'tags' ? 'max-xl:h-[calc(100dvh-8rem)]' : 'max-xl:hidden'}`}>
+                      <TagFoldContext value={open === 'tags'}>{tags.control}</TagFoldContext>
+                    </div>
+                  ) : null}
+                  {/* Scrolls when taller than the room under the navbar (a searched user's card too). */}
+                  <div
+                    id="timeline-controls"
+                    className={`flex flex-col gap-2 max-xl:max-h-[calc(100dvh-8rem)] max-xl:overflow-y-auto max-xl:overscroll-contain ${merge ? 'xl:gap-0 xl:divide-y xl:divide-line' : ''} ${
+                      open === 'controls' ? '' : 'max-xl:hidden'
+                    }`}
+                  >
+                    <ControlsFoldContext value={summaryIsPostedWithin}>{children}</ControlsFoldContext>
                   </div>
-                ) : null}
-                {/* Scrolls when taller than the room under the navbar (a searched user's card too). */}
-                <div
-                  id="timeline-controls"
-                  className={`flex flex-col gap-2 max-xl:max-h-[calc(100dvh-8rem)] max-xl:overflow-y-auto max-xl:overscroll-contain ${merge ? 'xl:gap-0 xl:divide-y xl:divide-line' : ''} ${
-                    open === 'controls' ? '' : 'max-xl:hidden'
-                  }`}
-                >
-                  <ControlsFoldContext value={summaryIsPostedWithin}>{children}</ControlsFoldContext>
-                </div>
-                {span ? (
-                  <div id="timeline-span" className={`flex flex-col ${open === 'span' ? '' : 'max-xl:hidden'}`}>
-                    {span.control}
-                  </div>
-                ) : null}
-              </MergedPanelContext>
+                  {span ? (
+                    <div id="timeline-span" className={`flex flex-col ${open === 'span' ? '' : 'max-xl:hidden'}`}>
+                      {span.control}
+                    </div>
+                  ) : null}
+                </MergedPanelContext>
+              </div>
             </div>
+            {cards ? <div className={`flex flex-col gap-2 ${open === 'controls' ? '' : 'max-xl:hidden'}`}>{cards}</div> : null}
+            {/* Takes whatever height the controls leave. Whatever does not fit wraps
+                into a second column, which the clipping hides; the empty first item
+                lets even the first panel wrap away, since a column's first item never
+                wraps. */}
+            {aside ? (
+              <div className="pointer-events-none flex min-h-0 grow flex-col flex-wrap overflow-clip max-xl:hidden [&>*]:w-full">
+                <div aria-hidden className="h-0" />
+                {aside}
+              </div>
+            ) : null}
           </div>
-          {cards ? <div className={`flex flex-col gap-2 ${open === 'controls' ? '' : 'max-xl:hidden'}`}>{cards}</div> : null}
-          {/* Takes whatever height the controls leave. Whatever does not fit wraps
-              into a second column, which the clipping hides; the empty first item
-              lets even the first panel wrap away, since a column's first item never
-              wraps. */}
-          {aside ? (
-            <div className="pointer-events-none flex min-h-0 grow flex-col flex-wrap overflow-clip max-xl:hidden [&>*]:w-full">
-              <div aria-hidden className="h-0" />
-              {aside}
-            </div>
-          ) : null}
+          <TodayBar onToday={onToday}>
+            {tags ? (
+              <FoldPill
+                fold="tags"
+                open={open}
+                // With no list to fold out, the pill is the tag cloud's button.
+                onToggle={tagList ? toggle : () => (setOpen(null), openTagCloud())}
+                opensDialog={!tagList}
+                icon="hash"
+                iconClass="text-tags"
+                caption={t('controls.tags')}
+                label={tags.summary}
+              />
+            ) : null}
+            <FoldPill fold="controls" open={open} onToggle={toggle} icon="sliders" iconClass="text-past" caption={summaryCaption} label={summary} className="max-w-52" />
+            {span ? <FoldPill fold="span" open={open} onToggle={toggle} icon="timeline" iconClass="text-future" caption={t('controls.timeSpan')} label={span.summary} /> : null}
+          </TodayBar>
         </div>
-        <TodayBar onToday={onToday}>
-          {tags ? <FoldPill fold="tags" open={open} onToggle={toggle} icon="hash" iconClass="text-tags" caption={t('controls.tags')} label={tags.summary} /> : null}
-          <FoldPill fold="controls" open={open} onToggle={toggle} icon="sliders" iconClass="text-past" caption={summaryCaption} label={summary} className="max-w-52" />
-          {span ? <FoldPill fold="span" open={open} onToggle={toggle} icon="timeline" iconClass="text-future" caption={t('controls.timeSpan')} label={span.summary} /> : null}
-        </TodayBar>
-      </div>
-    </SliderTypingContext>
+      </SliderTypingContext>
+    </TagListContext>
   );
 }
 
@@ -371,6 +405,7 @@ function FoldPill({
   iconClass,
   caption,
   label,
+  opensDialog = false,
   className = '',
 }: {
   fold: Exclude<Fold, null>;
@@ -380,15 +415,18 @@ function FoldPill({
   iconClass: string;
   caption?: string;
   label: string;
+  // Opens a dialog (the big tag cloud) rather than a fold of its own.
+  opensDialog?: boolean;
   className?: string;
 }) {
-  const expanded = open === fold;
+  const expanded = !opensDialog && open === fold;
   return (
     <button
       type="button"
       onClick={() => onToggle(fold)}
-      aria-expanded={expanded}
-      aria-controls={`timeline-${fold}`}
+      aria-expanded={opensDialog ? undefined : expanded}
+      aria-controls={opensDialog ? undefined : `timeline-${fold}`}
+      aria-haspopup={opensDialog ? 'dialog' : undefined}
       className={`floating flex min-w-0 h-11 items-center gap-1.5 rounded-full px-3 text-sm max-sm:gap-1 max-sm:px-2 max-lg:hidden lg:h-auto lg:gap-2 lg:px-3.5 lg:py-2 xl:hidden ${className} ${
         expanded ? 'bg-[color-mix(in_oklab,var(--color-accent)_18%,var(--color-panel))] text-link ring-1 ring-accent/60 ring-inset' : 'text-ink hover:bg-raised'
       }`}

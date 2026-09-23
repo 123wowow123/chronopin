@@ -37,6 +37,7 @@ export function PanelHeader({
   reset,
   className = '',
   fixed = false,
+  opensDialog = false,
   children,
 }: {
   caption: string;
@@ -58,6 +59,9 @@ export function PanelHeader({
   // which has no fold of its own: no press, no chevron. Only from xl up, since
   // narrower the row is hidden anyway.
   fixed?: boolean;
+  // The row opens a dialog (the big tag cloud) rather than folding anything
+  // out: no chevron, and it says so to assistive tech.
+  opensDialog?: boolean;
   // Anything else that belongs on the row, before the chevron.
   children?: React.ReactNode;
 }) {
@@ -65,7 +69,15 @@ export function PanelHeader({
   return (
     <div className={`relative flex items-center gap-2 px-3.5 py-2.5 max-lg:py-3 ${className}`}>
       {fixed ? null : (
-        <button type="button" onClick={onToggle} aria-expanded={open} aria-controls={controls} aria-label={label ?? t('controls.summary', { caption, value })} className="absolute inset-0 rounded-[inherit]" />
+        <button
+          type="button"
+          onClick={onToggle}
+          aria-expanded={opensDialog ? undefined : open}
+          aria-controls={opensDialog ? undefined : controls}
+          aria-haspopup={opensDialog ? 'dialog' : undefined}
+          aria-label={label ?? t('controls.summary', { caption, value })}
+          className="absolute inset-0 rounded-[inherit]"
+        />
       )}
       {/* The space is what the row reads as, copied or spoken: the gap between
           them is only a gap. */}
@@ -79,7 +91,7 @@ export function PanelHeader({
           </button>
         ) : null}
         {children}
-        {fixed ? null : (
+        {fixed || opensDialog ? null : (
           <button type="button" tabIndex={-1} aria-hidden onClick={onToggle} className={`${iconButton} pointer-events-auto`}>
             <Icon name="chevron" className={`size-4 transition-transform ${open ? 'rotate-180' : ''}`} />
           </button>

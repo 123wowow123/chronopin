@@ -255,8 +255,9 @@ function loadedAsMap() {
 // the search's pins, and category picks are tag: terms naming a category.
 // /map?pin=<id> (a pin page's "To map") centers on that pin, shows it
 // whatever the filters, and keeps its popup open until the map is clicked.
-// sliderTyping: whether the filter sliders offer a typed box (the admin setting).
-export default function PinsMap({ sliderTyping = false }: { sliderTyping?: boolean }) {
+// sliderTyping: whether the filter sliders offer a typed box, and tagList
+// whether the tag panel lists its tags (the admin settings).
+export default function PinsMap({ sliderTyping = false, tagList = false }: { sliderTyping?: boolean; tagList?: boolean }) {
   const router = useRouter();
   const t = useT();
   const params = useSearchParams();
@@ -669,6 +670,7 @@ export default function PinsMap({ sliderTyping = false }: { sliderTyping?: boole
         <FloatingControls
           merge
           typing={sliderTyping}
+          tagList={tagList}
           summaryCaption={t('controls.postedWithin')}
           summary={spanLabel(postedWithin, t.locale)}
           tags={{

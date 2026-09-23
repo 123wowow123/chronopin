@@ -9,7 +9,7 @@ import { toCardPins } from '@/lib/sanitize';
 import { websiteJsonLd } from '@/lib/seo';
 import { pinDayKey } from '@/lib/timeline';
 import specialtyDays from '@/server/data/specialtyDays.json';
-import { newPins, pinById, TRENDING_DAYS, sliderTyping, timelinePage, timelineVideo, trendingPins, viewerPreference } from '@/server/services/pages';
+import { newPins, pinById, TRENDING_DAYS, sliderTyping, tagList, timelinePage, timelineVideo, trendingPins, viewerPreference } from '@/server/services/pages';
 import { resolveCreatedSince } from '@/server/util/createdFilter';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { alternates, getT, redirect } from '@/lib/i18n/server';
@@ -82,7 +82,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
   }
   const fromDateTime = focusPin ? null : first(params.from_date_time) || null;
 
-  const [page, video, trending, added, personal, typing] = await Promise.all([
+  const [page, video, trending, added, personal, typing, listing] = await Promise.all([
     timelinePage(
       {
         fromDateTime,
@@ -97,6 +97,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
     newPins(t.locale),
     viewerPreference(user?.id),
     sliderTyping(),
+    tagList(),
   ]);
 
   // Only the specialty days this page shows; the rest load when scrolled to.
@@ -131,6 +132,7 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
         minConfidence={page.minConfidence}
         video={video}
         sliderTyping={typing.enabled}
+        tagList={listing.enabled}
         trending={{ pins: trending, days: TRENDING_DAYS }}
         newPins={added}
         preference={personal}

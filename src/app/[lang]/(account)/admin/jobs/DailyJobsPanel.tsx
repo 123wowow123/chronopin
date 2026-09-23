@@ -32,7 +32,9 @@ const zones = (() => {
 // shows what the recent runs did (src/server/jobs,
 // docs/okf/scraping/daily-jobs.md). Changes are kept until Save, since a job
 // has several fields worth setting together.
-export function DailyJobsPanel({ initial }: { initial: DailyJobsView }) {
+// children: the other nightly work set on this tab (the wiki re-reads), shown
+// under the daily jobs' own settings and above their run history.
+export function DailyJobsPanel({ initial, children }: { initial: DailyJobsView; children?: React.ReactNode }) {
   const [view, setView] = useState(initial);
   const [draft, setDraft] = useState<DailyJobsSetting>(initial.setting);
   const [busy, setBusy] = useState(false);
@@ -123,6 +125,8 @@ export function DailyJobsPanel({ initial }: { initial: DailyJobsView }) {
         {message ? <p className="text-sm text-success" role="status">{message}</p> : null}
         {error ? <p className="text-sm text-danger" role="alert">{error}</p> : null}
       </div>
+
+      {children}
 
       <section>
         <div className="mb-2 flex items-center justify-between">

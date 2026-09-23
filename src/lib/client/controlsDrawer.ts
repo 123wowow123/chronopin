@@ -86,3 +86,86 @@ export function onCloseDrawer(close: () => void) {
 export function closeDrawer() {
   for (const close of closers) close();
 }
+
+// A pick in the drawer's tag list is a search, so a navigation - and both
+// halves of a navigation used to move the drawer out from under the finger:
+//
+// * The drawer shuts on any change of page, and a first pick goes from the
+//   timeline to /search (and clearing the last tag back again). So a pick
+//   holds it open across the navigation it starts.
+// * The controls are the page's, portalled into the drawer, and the new
+//   page's take the slot only after the old page's are hidden. In between
+//   the search page lays itself out (its today hold's scrollIntoView), and
+//   the browser clamps the drawer's scroll to its then-empty content: back to
+//   the top. So a pick notes where the drawer was, and the new page's
+//   controls put it back as they fill the slot, before anything is painted.
+const HOLD_MS = 5000;
+let heldUntil = 0;
+let heldScroll: number | null = null;
+let scroller: HTMLElement | null = null;
+
+// The drawer's ref callback for its scrolling panel.
+export function setDrawerScroller(element: HTMLElement | null) {
+  scroller = element;
+}
+
+export function holdDrawerForPick() {
+  heldUntil = Date.now() + HOLD_MS;
+  heldScroll = scroller?.scrollTop ?? null;
+}
+
+// Whether a change of page now is a pick's, which leaves the drawer open.
+export function drawerHeld() {
+  return Date.now() < heldUntil;
+}
+
+// From the controls' layout effect once they fill the slot.
+export function restoreDrawerScroll() {
+  if (heldScroll === null || !scroller || !drawerHeld()) return;
+  scroller.scrollTop = heldScroll;
+}
+
+// The big tag cloud is opened from the drawer on a phone, and put the drawer
+// away to be seen. Closing it comes back to the drawer as it was left - its
+// scroll noted on the way out, since picks in the cloud swap the page's
+// controls in the drawer and can leave it at the top.
+const openers = new Set<() => void>();
+let leftAt: number | null = null;
+
+export function onOpenDrawer(open: () => void) {
+  openers.add(open);
+  return () => {
+    openers.delete(open);
+  };
+}
+
+export function leaveDrawerForCloud() {
+  leftAt = scroller?.scrollTop ?? null;
+  closeDrawer();
+}
+
+export function returnToDrawer() {
+  for (const open of openers) open();
+  const top = leftAt;
+  leftAt = null;
+  // Once the drawer is open again and the controls are in it.
+  requestAnimationFrame(() => {
+    if (scroller && top !== null) scroller.scrollTop = top;
+  });
+}
+
+// The big tag cloud, opened by what stands for the tag list when an admin has
+// turned the list off (src/lib/tagList.ts): the tags pill between lg and xl
+// lives in the floating controls, the cloud's state in the tag panel.
+const cloudOpeners = new Set<() => void>();
+
+export function onOpenTagCloud(open: () => void) {
+  cloudOpeners.add(open);
+  return () => {
+    cloudOpeners.delete(open);
+  };
+}
+
+export function openTagCloud() {
+  for (const open of cloudOpeners) open();
+}

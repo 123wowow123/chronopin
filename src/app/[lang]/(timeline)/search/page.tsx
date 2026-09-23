@@ -5,7 +5,7 @@ import { DEFAULT_POSTED_WITHIN, spanFromParam } from '@/lib/postedSpan';
 import { toCardPins } from '@/lib/sanitize';
 import { pinDayKey } from '@/lib/timeline';
 import specialtyDays from '@/server/data/specialtyDays.json';
-import { searchPage, sliderTyping, timelineVideo } from '@/server/services/pages';
+import { searchPage, sliderTyping, tagList, timelineVideo } from '@/server/services/pages';
 import { parseSearchQuery } from '@/server/util/searchQuery';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { getT } from '@/lib/i18n/server';
@@ -60,7 +60,12 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
     future: spanFromParam(first(params.future), null),
     timeZone,
   };
-  const [page, video, typing] = await Promise.all([searchPage(q, user?.id ?? null, onlyWatched && !!user, view, t.locale), timelineVideo(), sliderTyping()]);
+  const [page, video, typing, listing] = await Promise.all([
+    searchPage(q, user?.id ?? null, onlyWatched && !!user, view, t.locale),
+    timelineVideo(),
+    sliderTyping(),
+    tagList(),
+  ]);
 
   const all = specialtyDays as Record<string, string[]>;
   const days: Record<string, string[]> = {};
@@ -92,6 +97,7 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
         defaultSort={defaultSort}
         video={video}
         sliderTyping={typing.enabled}
+        tagList={listing.enabled}
       />
     </>
   );

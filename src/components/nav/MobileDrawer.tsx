@@ -7,13 +7,14 @@ import { createPortal } from 'react-dom';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { LogoMark } from '@/components/ui/LogoMark';
 import { UserAvatar } from '@/components/ui/UserAvatar';
-import { onCloseDrawer, setControlsSlot, useHasControls } from '@/lib/client/controlsDrawer';
+import { drawerHeld, onCloseDrawer, onOpenDrawer, setControlsSlot, setDrawerScroller, useHasControls } from '@/lib/client/controlsDrawer';
 import { leaveDrawer, settleDrawerMark, takeDrawerReturn } from '@/lib/client/drawerReturn';
 import { useUnreadCount } from '@/lib/client/notifications';
 import { hrefKeepingDate } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { useSession } from '@/lib/client/session';
 import { AuthLink, LogoutLink } from './AuthLink';
+import { DrawerHighlights } from './DrawerHighlights';
 import { ViewSwitch } from './NavMenu';
 import { DrawerNotifications } from './NotificationBell';
 import { searchHref, WATCHED } from './SearchBox';
@@ -106,12 +107,16 @@ export function MobileDrawer() {
   const [lastPath, setLastPath] = useState(pathname);
   if (lastPath !== pathname) {
     setLastPath(pathname);
-    setOpen(false);
+    // Not for a tag picked in the drawer's own filters, whose search is the
+    // change of page (src/lib/client/controlsDrawer.ts).
+    if (!drawerHeld()) setOpen(false);
   }
 
   useScrollLock(open);
 
   useEffect(() => onCloseDrawer(() => setOpen(false)), []);
+  // Back from the big tag cloud, which was opened from in here.
+  useEffect(() => onOpenDrawer(() => setOpen(true)), []);
 
   // Back from the profile page's "Menu" button: the page it was opened from
   // is showing again, so the drawer is too (src/lib/client/drawerReturn.ts).
@@ -233,7 +238,11 @@ export function MobileDrawer() {
         onClick={() => setOpen(false)}
       />
       <div
-        ref={panelRef}
+        ref={(element) => {
+          panelRef.current = element;
+          setDrawerScroller(element);
+          return () => setDrawerScroller(null);
+        }}
         role="dialog"
         aria-modal="true"
         aria-label={t('nav.menu')}
@@ -320,6 +329,8 @@ export function MobileDrawer() {
                 </span>
               </button>
             ) : null}
+            {/* Signed in, these sit under the notifications instead. */}
+            {user ? null : <DrawerHighlights drawerOpen={open} itemClass={itemClass} />}
           </DrawerSection>
           {/* What the timeline or the search below is filtered to: its own
               panels, lent to the drawer while the screen is too narrow to
@@ -333,6 +344,7 @@ export function MobileDrawer() {
             <>
               <DrawerSection title={t('nav.you')}>
                 <DrawerNotifications className={itemClass} current={pathname === '/notifications'} onClick={() => leaveDrawer('/notifications')} />
+                <DrawerHighlights drawerOpen={open} itemClass={itemClass} />
               </DrawerSection>
               {isAdmin ? <DrawerSection title={t('nav.admin')}>{link('/admin/views', 'shield', t('nav.dashboard'))}</DrawerSection> : null}
             </>

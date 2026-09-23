@@ -127,6 +127,7 @@ export function Timeline({
   minConfidence,
   video,
   sliderTyping = false,
+  tagList = false,
   trending,
   newPins: initialNewPins,
   preference,
@@ -152,6 +153,8 @@ export function Timeline({
   video: TimelineVideoSetting;
   // Whether the filter sliders offer a typed box (the admin setting).
   sliderTyping?: boolean;
+  // The admin setting: whether the tag panel lists its tags, or opens the big cloud.
+  tagList?: boolean;
   // The most viewed pins with rising views, beside the cards on wide screens.
   trending: { pins: TrendingPin[]; days: number };
   // The pins added most recently, under trending on wide screens. Kept live
@@ -562,6 +565,7 @@ export function Timeline({
         <FloatingControls
           merge
           typing={sliderTyping}
+          tagList={tagList}
           summaryCaption={t('controls.filter')}
           summary={summary}
           summaryIsPostedWithin={false}

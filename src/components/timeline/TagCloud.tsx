@@ -11,8 +11,8 @@ import { useScrollLock } from '@/lib/client/scrollLock';
 import { refineQuery, removeTerm } from '@/lib/searchTerms';
 import { cloudSteps, cloudTags, groupSelection, groupTags, isReserved, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, tagMembers, type TagCount, type TagGroup } from '@/lib/tags';
 import { parseSearchQuery } from '@/server/util/searchQuery';
-import { closeDrawer } from '@/lib/client/controlsDrawer';
-import { mergedSection, useInDrawerPanel, useMergedPanel, useTagFoldOpen } from './FloatingControls';
+import { holdDrawerForPick, leaveDrawerForCloud, onOpenTagCloud, returnToDrawer } from '@/lib/client/controlsDrawer';
+import { mergedSection, useInDrawerPanel, useMergedPanel, useTagFoldOpen, useTagList } from './FloatingControls';
 import { iconButton, PanelHeader } from './PanelHeader';
 import { WordCloud } from './WordCloud';
 import { useT } from '@/lib/client/i18n';
@@ -99,6 +99,9 @@ export function TagCloud({
   const mergedOpen = useMergedPanel();
   const merged = mergedOpen !== null;
   const inDrawer = useInDrawerPanel();
+  // Whether the panel lists its tags (an admin setting, src/lib/tagList.ts).
+  // Off, its row is the big cloud's button and nothing folds out.
+  const listed = useTagList();
   // Unique, since Next keeps the previous page's panel mounted (hidden).
   const optionsId = useId();
   const rootRef = useRef<HTMLDivElement>(null);
@@ -139,7 +142,7 @@ export function TagCloud({
   else if (postedWithin) params.set('created_within', postedWithin);
   const countsUrl = `/api/pins/tag-counts?${params.toString()}`;
 
-  const showing = open || !!folded || !!mergedOpen;
+  const showing = listed && (open || !!folded || !!mergedOpen);
   useEffect(() => {
     if (!showing) return;
     let cancelled = false;
@@ -213,6 +216,9 @@ export function TagCloud({
     const href = current.size ? `/search?${current.toString()}` : '/';
     // Fewer tags picked is a wider search, which stays on the same date.
     const widened = next.length + nextReserved.length < selected.length + reserved.length;
+    // A pick in the drawer's list keeps the drawer open and where it was
+    // scrolled, through the change of page it makes.
+    if (inDrawer) holdDrawerForPick();
     startSearch(() => {
       setSelected(next);
       setReserved(nextReserved);
@@ -258,6 +264,18 @@ export function TagCloud({
   };
   const clear = () => go((q) => reserved.reduce(withoutReserved, selected.reduce(withoutTag, q)), [], []);
 
+  const openCloud = () => {
+    // From the drawer, the cloud would open under it; closing it goes back.
+    if (inDrawer) leaveDrawerForCloud();
+    setExpanded(true);
+  };
+  const closeCloud = () => {
+    setExpanded(false);
+    if (inDrawer) returnToDrawer();
+  };
+  // The tags pill between lg and xl, when there is no list for it to fold out.
+  useEffect(() => (listed ? undefined : onOpenTagCloud(openCloud)));
+
   return (
     <div ref={rootRef} className={`floating flex min-h-0 flex-col text-sm ${inFold ? 'max-xl:h-full' : ''} ${merged ? mergedSection : ''} ${className}`}>
       {/* The same row the sliders under it fold behind, with the big cloud's
@@ -266,21 +284,18 @@ export function TagCloud({
         caption={t('controls.tags')}
         captionClass="font-semibold text-tags"
         value={summary}
-        open={open}
-        onToggle={() => setOpen(!open)}
+        open={listed && open}
+        onToggle={listed ? () => setOpen(!open) : openCloud}
+        opensDialog={!listed}
         label={t('tagCloud.tagsSummary', { summary })}
         controls={optionsId}
         reset={selected.length || reserved.length ? { label: t('tagCloud.clear'), onClick: clear } : undefined}
         className={inFold ? 'max-xl:hidden' : ''}
-        fixed={merged}
+        fixed={merged && listed}
       >
         <button
           type="button"
-          onClick={() => {
-            // From the drawer, the cloud would open under it.
-            if (inDrawer) closeDrawer();
-            setExpanded(true);
-          }}
+          onClick={openCloud}
           className={`${iconButton} pointer-events-auto`}
           aria-label={t('tagCloud.expand')}
           title={t('tagCloud.expand')}
@@ -381,7 +396,7 @@ export function TagCloud({
           onToggle={toggle}
           onToggleReserved={toggleReserved}
           onClear={clear}
-          onClose={() => setExpanded(false)}
+          onClose={closeCloud}
         />
       ) : null}
     </div>
