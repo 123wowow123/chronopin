@@ -58,8 +58,14 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
       .get<CommentJson[]>(`/api/pins/${pinId}/comment`)
       .then((fresh) => {
         if (!live) return;
-        const scores = new Map(fresh.map((c) => [c.id, c.sentiment ?? null]));
-        setComments((list) => list.map((c) => (scores.has(c.id) ? { ...c, sentiment: scores.get(c.id) } : c)));
+        // The fresh read also carries the votes, and this viewer's own.
+        const byId = new Map(fresh.map((c) => [c.id, c]));
+        setComments((list) =>
+          list.map((c) => {
+            const f = byId.get(c.id);
+            return f ? { ...c, sentiment: f.sentiment ?? null, upvotes: f.upvotes, downvotes: f.downvotes, myVote: f.myVote } : c;
+          }),
+        );
       })
       .catch(() => {});
     return () => {
@@ -95,6 +101,24 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
     }
   }
 
+  // Up, down, or the same arrow again to take the vote back. Shown at once,
+  // then set to what the server counted (or put back if it refused).
+  async function vote(comment: CommentJson, value: -1 | 0 | 1) {
+    const before = { upvotes: comment.upvotes ?? 0, downvotes: comment.downvotes ?? 0, myVote: comment.myVote ?? 0 };
+    const guess = { ...before, myVote: value };
+    if (before.myVote === 1) guess.upvotes -= 1;
+    if (before.myVote === -1) guess.downvotes -= 1;
+    if (value === 1) guess.upvotes += 1;
+    if (value === -1) guess.downvotes += 1;
+    const set = (counts: typeof before) => setComments((list) => list.map((c) => (c.id === comment.id ? { ...c, ...counts } : c)));
+    set(guess);
+    try {
+      set(await api.put<typeof before>(`/api/pins/${pinId}/comment/${comment.id}/vote`, { value }));
+    } catch {
+      set(before);
+    }
+  }
+
   async function remove(comment: CommentJson) {
     await api.delete(`/api/pins/${pinId}/comment/${comment.id}`);
     setComments((list) => list.filter((c) => c.id !== comment.id));
@@ -118,6 +142,9 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
       isOwn={!!user && node.userId === user.id}
       canEdit={!!user && node.userId === user.id && now - new Date(node.utcCreatedDateTime).getTime() < EDIT_WINDOW_MS}
       canReply={isLoggedIn && node.depth < MAX_REPLY_DEPTH}
+      signedIn={isLoggedIn}
+      pinId={pinId}
+      onVote={(value) => vote(node, value)}
       onReply={(replyText) => post({ text: replyText, parentCommentId: node.id })}
       onEdit={(newText) => edit(node, newText)}
       onRemove={() => remove(node)}
@@ -236,6 +263,9 @@ function CommentItem({
   isOwn,
   canEdit,
   canReply,
+  signedIn,
+  pinId,
+  onVote,
   onReply,
   onEdit,
   onRemove,
@@ -245,6 +275,9 @@ function CommentItem({
   isOwn: boolean;
   canEdit: boolean;
   canReply: boolean;
+  signedIn: boolean;
+  pinId: number;
+  onVote: (value: -1 | 0 | 1) => void;
   onReply: (text: string) => Promise<boolean>;
   onEdit: (text: string) => Promise<boolean>;
   onRemove: () => void;
@@ -281,7 +314,8 @@ function CommentItem({
           <span className="font-semibold text-ink">{node.userName}</span>
           {/* Plain text: comments are never rendered as HTML. */}
           <span className="whitespace-pre-wrap text-ink">{node.text}</span>
-          <span className="ml-auto flex gap-1">
+          <span className="ml-auto flex items-center gap-1">
+            <Votes node={node} isOwn={isOwn} signedIn={signedIn} pinId={pinId} onVote={onVote} />
             {canReply ? (
               <button type="button" onClick={() => { setDraft(''); setMode('reply'); }} className="rounded-md px-1.5 py-0.5 text-xs text-link hover:bg-raised" title={t('comments.reply')}>
                 {t('comments.reply')}
@@ -321,5 +355,71 @@ function CommentItem({
       ) : null}
       {node.replies.length ? <ul className="mt-3 ml-3 space-y-3 border-l border-line pl-5">{node.replies.map(renderChild)}</ul> : null}
     </li>
+  );
+}
+
+// Up and down votes: the score between two arrows, each arrow lit while it is
+// the viewer's vote and taking it back when pressed again. Nobody votes on
+// their own comment, and a signed-out reader is sent to log in first.
+function Votes({
+  node,
+  isOwn,
+  signedIn,
+  pinId,
+  onVote,
+}: {
+  node: CommentJson;
+  isOwn: boolean;
+  signedIn: boolean;
+  pinId: number;
+  onVote: (value: -1 | 0 | 1) => void;
+}) {
+  const t = useT();
+  const up = node.upvotes ?? 0;
+  const down = node.downvotes ?? 0;
+  const mine = node.myVote ?? 0;
+  const score = up - down;
+  const arrow = (value: 1 | -1) => {
+    const on = mine === value;
+    const label = t(value === 1 ? (on ? 'comments.removeUpvote' : 'comments.upvote') : on ? 'comments.removeDownvote' : 'comments.downvote');
+    const className = `rounded p-0.5 transition-colors ${
+      on ? (value === 1 ? 'text-success' : 'text-danger') : 'text-subtle hover:bg-raised hover:text-ink'
+    } disabled:cursor-default disabled:opacity-40 disabled:hover:bg-transparent disabled:hover:text-subtle`;
+    const icon = <Icon name="chevron" className={`size-4 ${value === 1 ? 'rotate-180' : ''}`} />;
+    if (!signedIn) {
+      return (
+        <span title={t('comments.logInToVote')} className="inline-flex">
+          <AuthLink to="/login" className={className} pending={{ kind: 'comment', id: pinId }}>
+            {icon}
+            <span className="sr-only">{label}</span>
+          </AuthLink>
+        </span>
+      );
+    }
+    return (
+      <button
+        type="button"
+        aria-label={label}
+        aria-pressed={on}
+        title={isOwn ? t('comments.ownVote') : label}
+        disabled={isOwn}
+        onClick={() => onVote(on ? 0 : value)}
+        className={className}
+      >
+        {icon}
+      </button>
+    );
+  };
+  return (
+    <span className="mr-1 inline-flex items-center gap-0.5 text-xs" role="group" aria-label={t('comments.votes')}>
+      {arrow(1)}
+      <span
+        className={`min-w-4 text-center font-semibold tabular-nums ${score > 0 ? 'text-success' : score < 0 ? 'text-danger' : 'text-subtle'}`}
+        title={t('comments.voteCounts', { up, down })}
+      >
+        {score}
+      </span>
+      {arrow(-1)}
+    </span>
   );
 }

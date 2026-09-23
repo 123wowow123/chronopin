@@ -1,5 +1,5 @@
 import { after, type NextRequest } from 'next/server';
-import { requireUser } from '@/server/auth';
+import { getUser, requireUser } from '@/server/auth';
 import { requireVerifiedEmail } from '@/server/emailVerification';
 import { HttpError, intParam, json, readJson, route } from '@/server/http';
 import Comment from '@/server/model/comment';
@@ -22,9 +22,11 @@ async function commentDepth(comment: Comment): Promise<number> {
   return parent ? (await commentDepth(parent)) + 1 : 0;
 }
 
-export const GET = route(async (_request: NextRequest, ctx: Ctx) => {
+// The pin's comments with their votes, and the viewer's own when signed in.
+export const GET = route(async (request: NextRequest, ctx: Ctx) => {
   const pinId = intParam((await ctx.params).id);
-  return json(await Comment.getByPinId(pinId));
+  const viewer = await getUser(request);
+  return json(await Comment.getByPinId(pinId, viewer?.id ?? null));
 });
 
 export const POST = route(async (request: NextRequest, ctx: Ctx) => {

@@ -6,7 +6,7 @@ import { advanceIdSequence } from './pinShared';
 import PinUserLink from './pinUserLink';
 import User from './user';
 
-const prop = ['id', 'text', 'parentCommentId', 'sentiment', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
+const prop = ['id', 'text', 'parentCommentId', 'sentiment', 'upvotes', 'downvotes', 'myVote', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
 
 // How long after posting a comment its author may still edit it.
 export const EDIT_WINDOW_MINUTES = 5;
@@ -18,6 +18,11 @@ export default class Comment extends PinUserLink {
   declare parentCommentId: number | null;
   // -1..1, null until Claude has scored it (src/server/extract/sentiment.ts).
   declare sentiment: number | null;
+  // Its votes (0073), and the viewer's own: 1, -1, or 0 for none. Read with
+  // the pin's comments only.
+  declare upvotes: number | undefined;
+  declare downvotes: number | undefined;
+  declare myVote: number | undefined;
 
   protected get props() {
     return prop;
@@ -157,19 +162,77 @@ export default class Comment extends PinUserLink {
     return new Comment({ id }, new User({ id: userId })).delete();
   }
 
-  static async getByPinId(pinId: number): Promise<Comment[]> {
+  // A pin's live comments, oldest first, each with its up and down votes and
+  // the viewer's own vote (0 when viewerId is null: signed out, or the cached
+  // copy every reader shares).
+  static async getByPinId(pinId: number, viewerId: number | null = null): Promise<Comment[]> {
     const rows = await db.query(
       `
     SELECT "Comment"."id", "Comment"."text", "Comment"."userId", "Comment"."pinId",
            "Comment"."parentCommentId", "Comment"."sentiment", "Comment"."utcCreatedDateTime", "Comment"."utcUpdatedDateTime",
+           COALESCE("votes"."up", 0)::integer AS "upvotes",
+           COALESCE("votes"."down", 0)::integer AS "downvotes",
+           COALESCE("mine"."value", 0)::integer AS "myVote",
            "User"."userName" AS "User.userName", "User"."pictureUrl" AS "User.pictureUrl"
     FROM "Comment"
       LEFT JOIN "User" ON "Comment"."userId" = "User"."id"
+      LEFT JOIN (
+        SELECT "commentId", COUNT(*) FILTER (WHERE "value" = 1) AS "up", COUNT(*) FILTER (WHERE "value" = -1) AS "down"
+        FROM "CommentVote"
+        GROUP BY "commentId"
+      ) AS "votes" ON "votes"."commentId" = "Comment"."id"
+      LEFT JOIN "CommentVote" AS "mine" ON "mine"."commentId" = "Comment"."id" AND "mine"."userId" = $2
     WHERE "Comment"."pinId" = $1 AND "Comment"."utcDeletedDateTime" IS NULL
     ORDER BY "Comment"."utcCreatedDateTime" ASC, "Comment"."id" ASC`,
-      [pinId],
+      [pinId, viewerId],
     );
     return rows.map((row) => new Comment(row));
+  }
+
+  // Sets the viewer's vote on a live comment of this pin: 1, -1, or 0 to take
+  // it back. Resolves the comment's counts after it, or null when there is no
+  // such comment, and 'own' for the author's own comment, which takes no vote.
+  static async vote(pinId: number, commentId: number, userId: number, value: -1 | 0 | 1) {
+    const [comment] = await db.query<{ userId: number }>(
+      `SELECT "userId" FROM "Comment" WHERE "id" = $1 AND "pinId" = $2 AND "utcDeletedDateTime" IS NULL`,
+      [commentId, pinId],
+    );
+    if (!comment) return null;
+    if (comment.userId === userId) return 'own' as const;
+    if (value === 0) {
+      await db.query(`DELETE FROM "CommentVote" WHERE "commentId" = $1 AND "userId" = $2`, [commentId, userId]);
+    } else {
+      await db.query(
+        `INSERT INTO "CommentVote" ("commentId", "userId", "value") VALUES ($1, $2, $3)
+         ON CONFLICT ("commentId", "userId") DO UPDATE SET "value" = EXCLUDED."value", "utcUpdatedDateTime" = now()`,
+        [commentId, userId, value],
+      );
+    }
+    const [counts] = await db.query<{ upvotes: number; downvotes: number }>(
+      `SELECT COUNT(*) FILTER (WHERE "value" = 1)::integer AS "upvotes", COUNT(*) FILTER (WHERE "value" = -1)::integer AS "downvotes"
+       FROM "CommentVote" WHERE "commentId" = $1`,
+      [commentId],
+    );
+    return { commentId, ...counts, myVote: value };
+  }
+
+  // Every vote on a live comment, for backups (scripts/data).
+  static getAllVotes() {
+    return db.query<{ commentId: number; userId: number; value: number; utcCreatedDateTime: Date; utcUpdatedDateTime: Date }>(`
+    SELECT "v"."commentId", "v"."userId", "v"."value", "v"."utcCreatedDateTime", "v"."utcUpdatedDateTime"
+    FROM "CommentVote" AS "v"
+      JOIN "Comment" AS "c" ON "c"."id" = "v"."commentId" AND "c"."utcDeletedDateTime" IS NULL
+    ORDER BY "v"."commentId", "v"."userId"`);
+  }
+
+  static async restoreVotes(votes: Row[]) {
+    for (const v of votes) {
+      await db.query(
+        `INSERT INTO "CommentVote" ("commentId", "userId", "value", "utcCreatedDateTime", "utcUpdatedDateTime") VALUES ($1, $2, $3, $4, $5)
+         ON CONFLICT DO NOTHING`,
+        [v.commentId, v.userId, v.value, v.utcCreatedDateTime, v.utcUpdatedDateTime],
+      );
+    }
   }
 
   // The tone scores on a company's pins, newest first and at most `limit` of

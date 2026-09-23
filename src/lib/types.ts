@@ -293,6 +293,11 @@ export type CommentJson = {
   parentCommentId?: number;
   // Claude's read on its tone, -1..1; null until scored (and after an edit).
   sentiment?: number | null;
+  // Its votes (0073), and the viewer's own: 1, -1 or 0. The page's cached
+  // copy has no viewer, so myVote comes with the fresh read.
+  upvotes?: number;
+  downvotes?: number;
+  myVote?: number;
   utcCreatedDateTime: string;
   utcUpdatedDateTime?: string;
   userId: number;
