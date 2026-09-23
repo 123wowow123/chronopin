@@ -91,7 +91,8 @@ export function setTagList(setting: TagListSetting, userId: number | null) {
 }
 
 // Whether the site is offered in its other languages. src/proxy.ts reads it
-// through multilingualEnabled() (services/cache.ts), which caches it.
+// through multilingualEnabled() (services/cache.ts), pages through
+// multilingualOffered() (services/multilingual.ts); both cache it.
 export async function getMultilingual(): Promise<MultilingualSetting> {
   const parsed = parseMultilingual(await read(MULTILINGUAL));
   return 'setting' in parsed ? parsed.setting : DEFAULT_MULTILINGUAL;
