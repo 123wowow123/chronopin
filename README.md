@@ -97,7 +97,7 @@ Build: `docker build -f Docker/Dockerfile -t chronopin .` (no database needed at
 
 Run: `docker run --rm -p 9000:9000 --env-file Docker/env.prod.list chronopin`
 
-The image is the Next.js standalone server on port 9000 with Chromium for the scraper. Add `SESSION_SECRET` to the Kubernetes `env-file` ConfigMap before deploying.
+The image is the Next.js standalone server on port 9000 with Chromium for the scraper. Production runs it on an Azure VM with Docker Compose and Caddy: see [docs/deploy-azure.md](docs/deploy-azure.md).
 
 ## Upload Docker Image
 
@@ -123,11 +123,7 @@ Run `docker-compose down` to shut it down
 
 ## Deploy to cloud
 
-Open shell that's logged in to the manager node
-
-Run `docker stack deploy -c docker-compose.yml chronopin`
-
-To remove run `docker stack rm chronopin`
+See [docs/deploy-azure.md](docs/deploy-azure.md).
 
 ## Docker Utility Commands
 
@@ -148,137 +144,6 @@ To quit the container without stopping or killing it, we can press the key combi
 Run `docker system df` to see docker disk space usage
 
 Run `docker image prune --force --all` to remove all images that are not currently in use on our system
-
-## Kubernetes Docker Hub Password Set Up
-
-Run `kubectl create secret docker-registry regcred --docker-server=https://index.docker.io/v1/ --docker-username=123wowow123 --docker-password=<password> --docker-email=flynni2008@gmail.com` to create a regcred as a Kubernetes cluster uses the Secret of docker-registry type to authenticate with a container registry to pull a private image.
-
-Run `kubectl get secret regcred --output=yaml` to inspect the Secret regcred
-
-Run `kubectl get secret regcred --output="jsonpath={.data.\.dockerconfigjson}" | base64 -D` to convert .dockerconfigjson field to a readable format and view credetials
-
-## Kubernetes 
-
-### VM
-
-Run `minikube start` 
-
-### ConfigMap
-
-Run -`kubectl create configmap env-config --from-file=kube/`-
-
-Run `kubectl create configmap env-file --from-env-file=Docker/env.dev.list`
-
-Run `kubectl get configmaps env-file -o yaml`
-
----
-
-Run `kubectl delete configmap env-config`
-
-Run `kubectl delete configmap env-file`
-
-### Pod
-
-Run `kubectl create -f pod.yaml` to create a pod
-
-Run `kubectl logs -f chronopin-pod` to see logs
-
-Run `kubectl get pods` to check if pods have been created
-
----
-
-Run `kubectl delete po/chronopin-pod` to delete created pod
-
-### Pod Utility
-
-Run `kubectl exec -it chronopin-pod -c chronopin /bin/sh`
-
-Run `kubectl exec -it chronopin-pod -- /bin/bash`
-
-Run `wget -qO - localhost:9000`
-
-Run `node` 
-    `process.env` to get env variables
-
-Run `kubectl get pods`
-    `kubectl exec -it chronopin-pod<guid> -- /bin/sh`
-    `nslookup chronopin-pod<guid>`
-
-### Deploy All
-
-Run `kubectl create -f kube/deployment.yaml` to deploy all
-
-Run `kubectl describe deployment`
-
----
-
-Run `kubectl delete deployment chronopin-dep`
-
-### Deploy/Clean All
-
-First time run `chmod +x ./kube/deploy.sh` & `chmod +x ./kube/clean.sh` to set execute permission
-
-Run `./kube/deploy.sh` to deploy deployment and services
-
-Run `./kube/clean.sh` to clean deployment and services
-
-### Rolling Update
-
-Run to start rolling update
-```sh
-kubectl set image deployment/chronopin-dep \
-    chronopin=123wowow123/chronopin:latest
-```
-
-Run to check rollout status
-`kubectl rollout status deploy/chronopin-dep`
-
-Run `rollout undo` to undo rollout
-
-### Service
-
-Run `kubectl create -f web-service.yaml`
-
-Run `minikube service chronopin-lb --url` to check url
-
-Run `minikube service chronopin-lb` to open in browser
-
-Run `kubectl get services`
-Run `IP=$(minikube ip)`
-Run `curl -4 $IP:<port>/` port is equal to NodePort value
-
----
-
-Run `kubectl delete svc/chronopin-web`
-
-### Proxy
-
-Run `kubectl proxy`
-
-Run 
-
-```sh
-export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
-echo Name of the Pod: $POD_NAME
-```
-
-Run 
-```sh
-curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/proxy/
-```
-
-## VirtualBox 
-
-Run `rm -rf ~/.minikube`
-    `minikube start` to reinstall minikube
-
-Run `minikube dashboard` to open the Kubernetes dashboard in a browser
-
-## Remote SSH to VM
-
-Run `ssh -p 50000 wowow@20.190.57.28`
-
-Run `ssh -p 50000 -i chronopin_docker.pub -v wowow@20.190.57.28`
 
 ## DB Management
 
@@ -410,14 +275,6 @@ tag filter need exclude tag feature
 # Others:
 
 
-- Activated Google Analytics / Facebook upgrade to non development mode
-
-- Setup Google Analytics to this site. 
-GA: Outbound link / non-interaction events / Social Interactions tracking / User Timings / set clientId on tracker creation
-
-
-
-
 
 - amazon & bestbuy referral links to product should be created if its something purchasable 
 
@@ -425,3 +282,11 @@ GA: Outbound link / non-interaction events / Social Interactions tracking / User
 - track mobile desktop location, etc. Will have google analytics integration
 
 - can pay to become promoted pin
+
+- go to: https://portal.azure.com/ and launch chronopin site on the chronopin domain.
+- use the "Windows Azure MSDN - Visual Studio Professional" for billing
+- remove the sql db and other resource groups, storage, etc and start clean 
+- set us SSL for site
+- make sure everything works
+- set up google/facebook/apple login flow
+- Activated Google Analytics / Facebook upgrade to non development mode

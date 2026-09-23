@@ -1,6 +1,6 @@
 // Server configuration, read from the environment. Locally, Next.js and the
-// scripts (via tsx + scripts/env.ts) load .env.local; in Kubernetes the values
-// come from the env-file ConfigMap.
+// scripts (via tsx + scripts/env.ts) load .env.local; in production the values
+// come from Docker/env.prod.list on the VM (docs/deploy-azure.md).
 
 import * as shared from '@/lib/appConfig';
 
