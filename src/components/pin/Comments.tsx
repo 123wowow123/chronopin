@@ -514,7 +514,7 @@ const REPORT_REASONS = [
 
 // The comment's other actions, behind a vertical three-dot button: Delete for
 // its author (and an admin, on anyone's) and Report on every comment, which
-// asks why and hands it to Admin > Reports. A signed-out reader's Report
+// asks why and hands it to Admin > Comments. A signed-out reader's Report
 // sends them to log in first. Escape or a click elsewhere shuts it, and the
 // focus goes back to the button.
 function CommentMenu({

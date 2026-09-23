@@ -7,7 +7,7 @@ import { TAGS } from '@/server/services/cache';
 
 type Ctx = RouteContext<'/api/pins/[id]/comment/[commentId]/report'>;
 
-// Reports a comment for an admin to look at (Admin > Reports), with why:
+// Reports a comment for an admin to look at (Admin > Comments), with why:
 // { reason: 'spam' | 'harassment' | 'misleading' | 'other' }. Signing in is
 // enough, and any comment may be reported, the reader's own included. At
 // COMMENT_HIDE_REPORTS open reports the comment is hidden from readers, so the

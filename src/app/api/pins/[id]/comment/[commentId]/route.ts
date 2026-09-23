@@ -8,7 +8,7 @@ import { invalidatePin } from '@/server/services/cache';
 type Ctx = RouteContext<'/api/pins/[id]/comment/[commentId]'>;
 
 // The comment, when it is on this pin and the signed-in user wrote it - or is
-// an admin, who may take down anyone's (Admin > Reports, and the comment's
+// an admin, who may take down anyone's (Admin > Comments, and the comment's
 // menu). The comment keeps its author, so the delete still names them.
 async function deletableComment(user: User, ctx: Ctx): Promise<{ comment: Comment; pinId: number }> {
   const params = await ctx.params;

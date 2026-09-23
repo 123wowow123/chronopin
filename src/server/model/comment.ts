@@ -11,7 +11,7 @@ const prop = ['id', 'text', 'parentCommentId', 'sentiment', 'reactions', 'myReac
 
 export const COMMENT_REPORT_REASONS = ['spam', 'harassment', 'misleading', 'other'] as const;
 // Open reports that hide a comment from readers until an admin dismisses them
-// (it comes back) or removes it (Admin > Reports).
+// (it comes back) or removes it (Admin > Comments).
 export const COMMENT_HIDE_REPORTS = 10;
 export type CommentReportReason = (typeof COMMENT_REPORT_REASONS)[number];
 
@@ -224,7 +224,7 @@ export default class Comment extends PinUserLink {
     return 'reported' as const;
   }
 
-  // How many open reports a comment has (Admin > Reports, and whether it is
+  // How many open reports a comment has (Admin > Comments, and whether it is
   // hidden).
   static async openReportCount(commentId: number) {
     const [row] = await db.query<{ n: number }>(
@@ -234,7 +234,7 @@ export default class Comment extends PinUserLink {
     return row.n;
   }
 
-  // Live comments with open reports, most reported first, for Admin > Reports.
+  // Live comments with open reports, most reported first, for Admin > Comments.
   static openReports() {
     return db.query<{
       commentId: number;

@@ -108,7 +108,7 @@ test('a reader reports a comment from its menu', async ({ page, playwright, base
   await author.dispose();
 });
 
-// Admin > Reports (0074): a reported comment shows there with its reasons,
+// Admin > Comments (0074): a reported comment shows there with its reasons,
 // until an admin dismisses its reports (it stays up) or removes it (it leaves
 // the pin). A throwaway account is made admin for this (e2eAdmin.ts).
 test('an admin sees reported comments and dismisses or removes them', async ({ page, playwright, baseURL }) => {
@@ -135,7 +135,7 @@ test('an admin sees reported comments and dismisses or removes them', async ({ p
 
   const adminEmail = await signUp(page.request, 'aadmin');
   await run(['scripts/data/e2eAdmin.ts', adminEmail]);
-  await page.goto('/admin/reports');
+  await page.goto('/admin/comments');
   const keptRow = page.getByRole('listitem').filter({ hasText: keptText });
   const goneRow = page.getByRole('listitem').filter({ hasText: goneText });
   await expect(keptRow).toContainText('1 report');
@@ -159,7 +159,7 @@ test('an admin sees reported comments and dismisses or removes them', async ({ p
 });
 
 // Ten open reports hide a comment from readers (COMMENT_HIDE_REPORTS): it
-// keeps its place, empty, and Admin > Reports marks it Hidden. Dismissing the
+// keeps its place, empty, and Admin > Comments marks it Hidden. Dismissing the
 // reports brings it back.
 test('a comment reported ten times is hidden until an admin dismisses the reports', async ({ page, playwright, baseURL }) => {
   const author = await playwright.request.newContext({ baseURL });
@@ -196,7 +196,7 @@ test('a comment reported ten times is hidden until an admin dismisses the report
 
   const adminEmail = await signUp(page.request, 'hadmin');
   await run(['scripts/data/e2eAdmin.ts', adminEmail]);
-  await page.goto('/admin/reports');
+  await page.goto('/admin/comments');
   const row = page.getByRole('listitem').filter({ hasText: text });
   await expect(row).toContainText('10 reports');
   await expect(row).toContainText('Hidden');
