@@ -205,7 +205,9 @@ test.describe.serial('leaving a page to sign in or out', () => {
     await page.getByRole('button', { name: 'Login' }).click();
 
     await expect(page).toHaveURL(new RegExp(`${search.replace('?', '\\?')}$`));
-    const following = page.getByRole('button', { name: 'Following' }).first();
+    // Exact: the panel's info button, "What following does", comes first and
+    // would match a loose name.
+    const following = page.getByRole('button', { name: 'Following', exact: true }).first();
     await expect(following).toBeVisible();
     await expectInView(page, following);
 

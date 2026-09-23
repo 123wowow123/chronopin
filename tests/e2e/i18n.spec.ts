@@ -1,9 +1,41 @@
-import { expect, test } from '@playwright/test';
+import { execFile } from 'node:child_process';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { promisify } from 'node:util';
+import { expect, request, test } from '@playwright/test';
 
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const stamp = Date.now().toString(36);
 const handle = `e2elang${stamp}`;
 const email = `e2e-lang-${stamp}@example.com`;
 const password = 'correct horse battery';
+
+// The other languages are an admin setting, off by default (src/lib/multilingual.ts):
+// off, /es and the rest go to English. This spec turns it on through the admin
+// route, as a throwaway admin, since the route also tells the running proxy at
+// once; afterwards the setting's row goes back exactly as it was (or away, if
+// it was never set) through scripts/data/e2eAppSetting.ts, not the route,
+// which would sign it with the throwaway admin.
+const run = (args: string[]) => promisify(execFile)('npx', ['tsx', ...args], { cwd: root }).then((r) => r.stdout);
+let savedSetting: string | undefined;
+
+test.beforeAll(async ({ baseURL }) => {
+  // The row as JSON, or null: the one output line that is either.
+  savedSetting = (await run(['scripts/data/e2eAppSetting.ts', 'get', 'multilingual'])).split('\n').find((line) => /^(\{|null$)/.test(line));
+  const api = await request.newContext({ baseURL });
+  const adminEmail = `e2e-langadmin-${stamp}@example.com`;
+  const signup = await api.post('/api/users', {
+    data: { userName: `@e2eladm${stamp}`, firstName: 'Lang', lastName: 'Admin', email: adminEmail, password },
+  });
+  expect(signup.ok()).toBe(true);
+  await run(['scripts/data/e2eAdmin.ts', adminEmail]);
+  expect((await api.put('/api/admin/multilingual', { data: { enabled: true } })).ok()).toBe(true);
+  await api.dispose();
+});
+
+test.afterAll(async () => {
+  if (savedSetting !== undefined) await run(['scripts/data/e2eAppSetting.ts', 'put', 'multilingual', savedSetting]);
+});
 
 // Pages in another language: the picker moves the page into it and keeps it
 // there, links stay in it, and pins loaded as the timeline scrolls ask for it.

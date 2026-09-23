@@ -16,15 +16,26 @@ async function scrolls(page: import('@playwright/test').Page) {
   return (await page.evaluate(() => window.scrollY)) !== from;
 }
 
-test('the drawer lends the page its filters, but not the tag cloud', async ({ page }) => {
+test('the drawer lends the page its filters behind one row, the tag cloud folded away', async ({ page }) => {
   await page.goto('/');
   const drawer = page.getByRole('dialog', { name: 'Menu' });
   await page.getByRole('button', { name: /open menu/i }).click();
   await expect(drawer).toBeVisible();
-  // The filters are the page's own panels, lent to the drawer: the sliders,
-  // and not the tag cloud, which needs a column to be read in.
-  await expect(drawer.locator('button[aria-label^="Posted within"]')).toBeVisible();
-  await expect(drawer.locator(tagsRow)).toHaveCount(0);
+  // The filters are the page's own panels, lent to the drawer behind one
+  // "Filters" row (FloatingControls' merged panel). Opened, the sliders are
+  // wholly there; the tag cloud - sixty tags, a wall of words on a phone -
+  // rides along only as its own folded row, never loose under the sliders.
+  const filters = drawer.getByRole('button', { name: /^Filters:/ });
+  const posted = drawer.getByRole('slider', { name: 'Show pins back to' });
+  await expect(filters).toBeVisible();
+  await expect(posted).toBeHidden();
+  await filters.click();
+  await expect(posted).toBeVisible();
+  await expect(drawer.getByRole('slider', { name: 'Show pins out to' })).toBeVisible();
+  // The cloud is a row that opens it over the page (root[data-tag-cloud]),
+  // and stays shut until that row is pressed.
+  await expect(drawer.locator(tagsRow)).toBeVisible();
+  await expect(page.locator('html')).not.toHaveAttribute('data-tag-cloud');
   // The page is held still while the drawer covers it, and moves again after.
   expect(await scrolls(page)).toBe(false);
   // The drawer's own menu button stands exactly where the one that opened it
@@ -33,10 +44,15 @@ test('the drawer lends the page its filters, but not the tag cloud', async ({ pa
   const inDrawer = drawer.getByRole('button', { name: /^close menu$/i }).first();
   expect(await inDrawer.boundingBox()).toEqual(await trigger.boundingBox());
 
-  // Two close it: the menu button in its open state at the head of the
-  // drawer (three lines where the logo was), and the cross opposite it.
-  await expect(drawer.getByRole('button', { name: /^close menu$/i })).toHaveCount(2);
-  await drawer.getByRole('button', { name: /^close menu$/i }).first().click();
+  // One button closes it - the menu mark in its open state at the head of the
+  // drawer - since the cross opposite went (9c2e2a7): the mark, the dimmed
+  // page, Escape and a swipe already put it away.
+  await expect(drawer.getByRole('button', { name: /^close menu$/i })).toHaveCount(1);
+  await page.keyboard.press('Escape');
+  await expect(drawer).toBeHidden();
+  await page.getByRole('button', { name: /open menu/i }).click();
+  await expect(drawer).toBeVisible();
+  await inDrawer.click();
   await expect(drawer).toBeHidden();
   await expect.poll(() => scrolls(page)).toBe(true);
 });

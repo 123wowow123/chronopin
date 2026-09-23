@@ -190,14 +190,18 @@ test('a distance opens the map and draws the line it measured', async ({ page })
 
 // The sliders in the floating controls fold away behind a row saying what they
 // are set to, as the tag panel does, so the ring's thumb only exists once that
-// row is pressed - and a reload folds it away again.
+// row is pressed - and a reload folds it away again. On a wide screen every
+// filter is instead folded behind one "Filters: ..." row (FloatingControls'
+// merged panel), and opening that shows each slider with no row of its own.
 async function openRing(page: import('@playwright/test').Page) {
-  const panel = page.locator('div.floating').filter({ has: page.getByRole('button', { name: /^Distance within:/ }) });
-  await expect(panel).toBeVisible({ timeout: 20_000 });
   const thumb = page.locator('[data-thumb="radius"]');
-  if (!(await thumb.isVisible())) await panel.getByRole('button', { name: /^Distance within:/ }).click();
+  const filtersRow = page.getByRole('button', { name: /^Filters:/ });
+  const ringRow = page.getByRole('button', { name: /^Distance within:/ });
+  await expect(thumb.or(filtersRow).or(ringRow).first()).toBeVisible({ timeout: 20_000 });
+  if (!(await thumb.isVisible()) && (await filtersRow.isVisible())) await filtersRow.click();
+  if (!(await thumb.isVisible()) && (await ringRow.isVisible())) await ringRow.click();
   await expect(thumb).toBeVisible();
-  return panel;
+  return page.locator('div.floating').filter({ has: thumb });
 }
 
 // The ring is measured from the browser's own idea of where the viewer is,
