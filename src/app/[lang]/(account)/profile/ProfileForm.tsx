@@ -170,11 +170,15 @@ export function ProfileForm({ user }: { user: SessionUser }) {
       </div>
 
       <form onSubmit={save} className="surface space-y-4 p-6" noValidate>
+        {/* The handle cannot be changed, so it is plain text rather than a
+            box that looks as if it takes typing. */}
         <div>
-          <label htmlFor="handle" className="field-label">
+          <p id="handle-label" className="field-label">
             {t('signup.handle')}
-          </label>
-          <input id="handle" readOnly className="field text-subtle" value={user.userName} />
+          </p>
+          <p aria-labelledby="handle-label" className="text-ink">
+            {user.userName}
+          </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           <div>

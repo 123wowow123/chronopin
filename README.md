@@ -244,25 +244,23 @@ yelp key
 
 # Scraping
 
-pin can have user uploadable pictures in comments? Need microsoft cloud
+pin can have user uploadable pictures in comments.
 
-tag filter need exclude tag feature 
+
 - maybe using tabs on control panel for this
 
 
 # Others:
 
 
-
-- amazon & bestbuy referral links to product should be created if its something purchasable 
-
 - add ads
 
 - upgrade user to promoter and sell tickets to local events like eventbrite. will have management portal that will have dashboard to sales and impressions, and pin click, and purchases, etc. integrade with payment company - stripe 
-- track mobile desktop location, etc. Will have google analytics integration
+
 
 - can pay to become promoted pin and need management page for user. Also need payment page. it's $1 per pin per day for 100 showings. Admin can change this rate.
 
 
 - set up google/facebook/apple login flow
 - Activated Google Analytics / Facebook upgrade to non development mode
+

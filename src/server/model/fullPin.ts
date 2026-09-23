@@ -112,13 +112,36 @@ export class FullPins extends BasePins<FullPin> {
   // were being dropped, the Great Pyramid and Stonehenge among them. A backup
   // wants all of them and there is nothing to page against, so there is no
   // cursor here any more.
+  //
+  // Watches and likes are read from their own tables. The view only carries
+  // their counts, so mapPinRowsToPin found no "Favorites."/"Likes." columns
+  // and every backup since the Postgres port wrote them as [] - each
+  // db:refresh emptied every watch list. Only live rows are kept: restoring
+  // goes through upsert, which revives rather than deletes.
   static async queryAll() {
-    const rows = await db.query(
-      `
+    const [rows, favorites, likes] = await Promise.all([
+      db.query(
+        `
         SELECT "Pin".*
         FROM "PinBaseCache" AS "Pin"
         ORDER BY "Pin"."utcStartDateTime", "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"`,
-    );
-    return new FullPins({ pins: rows });
+      ),
+      db.query(
+        `SELECT "userId", "pinId", "utcCreatedDateTime", "utcUpdatedDateTime" FROM "Favorite"
+         WHERE "utcDeletedDateTime" IS NULL ORDER BY "id"`,
+      ),
+      db.query(
+        `SELECT "userId", "pinId", "like", "utcCreatedDateTime", "utcUpdatedDateTime" FROM "Like"
+         WHERE "utcDeletedDateTime" IS NULL ORDER BY "id"`,
+      ),
+    ]);
+    const fullPins = new FullPins({ pins: rows });
+    const favoritesByPin = _.groupBy(favorites, 'pinId');
+    const likesByPin = _.groupBy(likes, 'pinId');
+    for (const pin of fullPins.pins) {
+      pin.favorites = (favoritesByPin[pin.id] || []).map((f) => new Favorite(f, null, pin));
+      pin.likes = (likesByPin[pin.id] || []).map((l) => new Like(l, null, pin));
+    }
+    return fullPins;
   }
 }
