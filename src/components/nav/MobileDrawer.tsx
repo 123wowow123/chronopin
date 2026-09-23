@@ -323,8 +323,6 @@ export function MobileDrawer() {
                 </span>
               </button>
             ) : null}
-            {/* Signed in, these sit under the notifications instead. */}
-            {user ? null : <DrawerHighlights drawerOpen={open} itemClass={itemClass} />}
           </DrawerSection>
           {/* What the timeline or the search below is filtered to: its own
               panels, lent to the drawer while the screen is too narrow to
@@ -334,6 +332,14 @@ export function MobileDrawer() {
               <div ref={setControlsSlot} className="flex flex-col gap-2 px-1 pb-0.5" />
             </DrawerSection>
           ) : null}
+          {/* Trending and new pins: under the filters when signed out, and
+              under the notifications when signed in. Each row names itself,
+              so the section's title is for screen readers only. */}
+          {user ? null : (
+            <DrawerSection title={`${t('trending.heading')}, ${t('newPins.heading')}`} hideTitle>
+              <DrawerHighlights drawerOpen={open} itemClass={itemClass} />
+            </DrawerSection>
+          )}
           {user ? (
             <>
               <DrawerSection title={t('nav.you')}>
