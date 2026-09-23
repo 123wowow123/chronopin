@@ -210,3 +210,101 @@ export function pinsChangedSince(since: Date, limit = 50) {
     [since, limit],
   );
 }
+
+// How well each named company is covered: its pins in total and ahead of
+// today, when a pin of it was last posted, and the tags most of its pins
+// share (the company's shared tag, `Abbott` or `J&J`, is usually first). A
+// name matches a company whose name equals it or starts with it as a whole
+// word ("Abbott" finds "Abbott Laboratories"; the reverse would let "Eli
+// Lilly" find a company called "Eli"). Stalest first -
+// never pinned, then longest since a post - so a task working through a list
+// (the Fortune 100) takes the next companies in turn rather than the same
+// few every night.
+export async function companyCoverage(names: string[]) {
+  const wanted = [...new Set(names.map((n) => n.trim()).filter(Boolean))].slice(0, 150);
+  if (!wanted.length) return [];
+  const rows = await db.query<{
+    wanted: string;
+    companies: { id: number; name: string }[] | null;
+    pins: number;
+    future: number;
+    next90: number;
+    lastPosted: Date | null;
+    latestEvent: Date | null;
+  }>(
+    `
+    WITH "w" ("wanted") AS (SELECT unnest($1::text[])),
+    "m" AS (
+      SELECT "w"."wanted", "c"."id", "c"."name"::text AS "name"
+      FROM "w" JOIN "Company" AS "c"
+        ON lower("c"."name") = lower("w"."wanted")
+        OR lower("c"."name") LIKE lower("w"."wanted") || ' %'
+    )
+    SELECT "w"."wanted",
+      (SELECT json_agg(json_build_object('id', "m"."id", 'name', "m"."name")) FROM "m" WHERE "m"."wanted" = "w"."wanted") AS "companies",
+      count("p"."id")::int AS "pins",
+      count("p"."id") FILTER (WHERE "p"."utcStartDateTime" > now())::int AS "future",
+      count("p"."id") FILTER (WHERE "p"."utcStartDateTime" > now() AND "p"."utcStartDateTime" <= now() + interval '90 days')::int AS "next90",
+      max("p"."utcCreatedDateTime") AS "lastPosted",
+      max("p"."utcStartDateTime") FILTER (WHERE "p"."utcStartDateTime" <= now()) AS "latestEvent"
+    FROM "w"
+      LEFT JOIN "m" ON "m"."wanted" = "w"."wanted"
+      LEFT JOIN "Pin" AS "p" ON "p"."companyId" = "m"."id" AND "p"."utcDeletedDateTime" IS NULL
+    GROUP BY "w"."wanted"`,
+    [wanted],
+  );
+  const ids = rows.flatMap((r) => (r.companies ?? []).map((c) => c.id));
+  const tags = ids.length
+    ? await db.query<{ companyId: number; name: string; pins: number }>(
+        `
+        SELECT "p"."companyId", "t"."name"::text AS "name", count(DISTINCT "p"."id")::int AS "pins"
+        FROM "PinTag" AS "t" JOIN "Pin" AS "p" ON "p"."id" = "t"."pinId" AND "p"."utcDeletedDateTime" IS NULL
+        WHERE "p"."companyId" = ANY($1::int[]) AND "t"."kind" = 'topic'
+        GROUP BY 1, 2`,
+        [ids],
+      )
+    : [];
+  return rows
+    .map((r) => {
+      const own = new Set((r.companies ?? []).map((c) => c.id));
+      const counts = new Map<string, number>();
+      for (const t of tags) if (own.has(t.companyId)) counts.set(t.name, (counts.get(t.name) ?? 0) + t.pins);
+      const commonTags = [...counts.entries()]
+        .filter(([, n]) => r.pins && n / r.pins >= 0.5)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 3)
+        .map(([name]) => name);
+      const iso = (d: Date | null) => (d ? new Date(d).toISOString() : null);
+      return { ...r, companies: r.companies ?? [], lastPosted: iso(r.lastPosted), latestEvent: iso(r.latestEvent), commonTags };
+    })
+    .sort((a, b) => (a.lastPosted ?? '').localeCompare(b.lastPosted ?? '') || a.pins - b.pins || a.wanted.localeCompare(b.wanted));
+}
+
+// The live pins carrying a tag (a topic or category tag, any case), newest
+// event first, with their company and source: what a standing beat (Layoffs)
+// has already pinned, so a run adds only what is missing and threads new
+// pins onto the story they continue.
+export async function taggedPins(tag: string, limit = 40) {
+  const [counts] = await db.query<{ total: number; future: number }>(
+    `
+    SELECT count(DISTINCT "p"."id")::int AS "total",
+      count(DISTINCT "p"."id") FILTER (WHERE "p"."utcStartDateTime" > now())::int AS "future"
+    FROM "PinTag" AS "t" JOIN "Pin" AS "p" ON "p"."id" = "t"."pinId" AND "p"."utcDeletedDateTime" IS NULL
+    WHERE lower("t"."name") = lower($1)`,
+    [tag],
+  );
+  const pins = await db.query(
+    `
+    SELECT DISTINCT ON ("p"."utcStartDateTime", "p"."id") "p"."id", "p"."title", "p"."utcStartDateTime", "p"."dateConfidence",
+      "c"."name" AS "company", "p"."sourceUrl", "p"."parentId", "u"."userName" AS "author"
+    FROM "PinTag" AS "t"
+      JOIN "Pin" AS "p" ON "p"."id" = "t"."pinId" AND "p"."utcDeletedDateTime" IS NULL
+      LEFT JOIN "Company" AS "c" ON "c"."id" = "p"."companyId"
+      LEFT JOIN "User" AS "u" ON "u"."id" = "p"."userId"
+    WHERE lower("t"."name") = lower($1)
+    ORDER BY "p"."utcStartDateTime" DESC, "p"."id" DESC
+    LIMIT $2`,
+    [tag, Math.min(limit, 100)],
+  );
+  return { tag, ...counts, pins };
+}

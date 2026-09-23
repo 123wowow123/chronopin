@@ -4,6 +4,11 @@ import { TIME_RANGES, type TimeRange, type TimeUnit } from '@/lib/timeStats';
 
 export const SERIES_BLUE = '#3987e5';
 export const SERIES_ORANGE = '#d95926';
+// The next categorical slots, for charts with more than two series. With blue
+// and orange they pass the palette validator in both themes; yellow is just
+// under 3:1 on the light panel, so a chart using it keeps its table view.
+export const SERIES_AQUA = '#199e70';
+export const SERIES_YELLOW = '#c98500';
 
 // A round axis top with at most four steps of 1, 2 or 5 times a power of ten,
 // never finer than 1 since everything charted here is a count.

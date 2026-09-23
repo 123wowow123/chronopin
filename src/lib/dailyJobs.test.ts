@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { DEFAULT_DAILY_JOBS, dueSlot, nextRun, parseDailyJobs } from './dailyJobs';
+import { DEFAULT_DAILY_JOBS, dueSlot, groupTasks, nextRun, parseDailyJobs, TASK_GROUPS, TASK_IDS, TASKS } from './dailyJobs';
 
 const midnight = DEFAULT_DAILY_JOBS.jobs[0];
 const news = DEFAULT_DAILY_JOBS.jobs[1];
@@ -70,5 +70,23 @@ describe('nextRun', () => {
     expect(nextRun(news, new Date('2026-09-22T13:05:00Z'))).toEqual(new Date('2026-09-23T01:00:00Z'));
     expect(nextRun(news, new Date('2026-09-23T02:00:00Z'))).toEqual(new Date('2026-09-23T13:00:00Z'));
     expect(nextRun(midnight, new Date('2026-09-22T13:05:00Z'))).toEqual(new Date('2026-09-23T07:00:00Z'));
+  });
+});
+
+describe('task groups', () => {
+  it('lists every task under one group, in run order group by group', () => {
+    expect(TASK_GROUPS.flatMap((g) => groupTasks(g.id))).toEqual(TASK_IDS);
+    expect(TASK_IDS.every((id) => TASK_GROUPS.some((g) => g.id === TASKS[id].group))).toBe(true);
+  });
+
+  it('runs the two beats at midnight', () => {
+    expect(midnight.tasks).toEqual(expect.arrayContaining(['fortune100', 'layoffs']));
+    expect(groupTasks('beats', midnight.tasks)).toEqual(['fortune100', 'layoffs']);
+    expect(groupTasks('beats', news.tasks)).toEqual([]);
+  });
+
+  it('scores new company pins last in the news job, and not at midnight', () => {
+    expect(news.tasks.at(-1)).toBe('sentiment');
+    expect(midnight.tasks).not.toContain('sentiment');
   });
 });

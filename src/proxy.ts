@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from 'next/server';
 import { DEFAULT_LOCALE, isLocale, LOCALE_COOKIE, localizePath, negotiateLocale, splitLocale, type Locale } from '@/lib/i18n/config';
 import { pinPath } from '@/lib/seo';
 import * as db from '@/server/db';
+import BotVisit from '@/server/model/botVisit';
 import { pinPathCache } from '@/server/services/cache';
 
 // Pin URLs are settled here, before rendering starts. Pages stream their
@@ -41,6 +42,15 @@ async function canonicalPath(id: number): Promise<string | null> {
 // visit, is sent from a plain path to that language's.
 export async function proxy(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
+
+  // Crawlers are counted here, on the page request itself: they rarely run
+  // the script that counts a view. Browsers pass straight through it.
+  BotVisit.record(request.headers.get('user-agent'), pathname);
+  // robots.txt and the sitemap are what a crawler reads first; they come
+  // through only to be counted.
+  if (pathname === '/robots.txt' || pathname === '/sitemap.xml') {
+    return NextResponse.next();
+  }
   const { locale: prefix, path } = splitLocale(pathname);
 
   if (prefix === DEFAULT_LOCALE) {
@@ -104,7 +114,8 @@ async function checkPinPath(request: NextRequest, path: string, locale: Locale):
 
 export const config = {
   // Everything but route handlers, build assets and the files in public/.
+  // robots.txt and sitemap.xml are let in for the bot count and nothing else.
   matcher: [
-    '/((?!api/|_next/|auth/|logout|og/|upload/|pin-not-found|favicon\\.ico|robots\\.txt|sitemap\\.xml|ads\\.txt|privacy\\.html|termsofservice\\.html).*)',
+    '/((?!api/|_next/|auth/|logout|og/|upload/|pin-not-found|favicon\\.ico|ads\\.txt|privacy\\.html|termsofservice\\.html).*)',
   ],
 };

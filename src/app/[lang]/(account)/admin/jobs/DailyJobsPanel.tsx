@@ -3,7 +3,19 @@
 import { useMemo, useState } from 'react';
 import Link from '@/components/ui/Link';
 import { api, ApiError } from '@/lib/client/api';
-import { DRIVERS, MAX_NEW_PINS, MAX_TIMES, MAX_UPDATES, TASK_IDS, TASKS, type DailyJobsSetting, type JobSetting, type TaskId } from '@/lib/dailyJobs';
+import {
+  DRIVERS,
+  groupTasks,
+  MAX_NEW_PINS,
+  MAX_TIMES,
+  MAX_UPDATES,
+  TASK_GROUPS,
+  TASK_IDS,
+  TASKS,
+  type DailyJobsSetting,
+  type JobSetting,
+  type TaskId,
+} from '@/lib/dailyJobs';
 import type { DailyJobsView, JobRunView } from '@/server/jobs/view';
 
 const DRIVER_LABEL: Record<(typeof DRIVERS)[number], string> = {
@@ -160,8 +172,9 @@ function JobCard({
   onChange: (patch: Partial<JobSetting>) => void;
   onRun: () => void;
 }) {
-  const toggleTask = (id: TaskId, on: boolean) => {
-    const tasks = on ? TASK_IDS.filter((t) => t === id || job.tasks.includes(t)) : job.tasks.filter((t) => t !== id);
+  // A job keeps at least one task, so the last one cannot be turned off.
+  const setTasks = (ids: TaskId[], on: boolean) => {
+    const tasks = on ? TASK_IDS.filter((t) => ids.includes(t) || job.tasks.includes(t)) : job.tasks.filter((t) => !ids.includes(t));
     if (tasks.length) onChange({ tasks });
   };
   const setTime = (index: number, value: string) => onChange({ times: job.times.map((t, i) => (i === index ? value : t)) });
@@ -217,19 +230,53 @@ function JobCard({
       </fieldset>
 
       <fieldset className="mt-4">
-        <legend className="text-sm font-medium">Tasks</legend>
-        <ul className="mt-2 space-y-2">
-          {TASK_IDS.map((id) => (
-            <li key={id}>
-              <label className="flex items-start gap-2 text-sm">
-                <input type="checkbox" checked={job.tasks.includes(id)} onChange={(e) => toggleTask(id, e.target.checked)} className="mt-0.5 size-4 shrink-0 accent-accent" />
-                <span>
-                  <span className="font-medium">{TASKS[id].label}</span> <span className="text-subtle">{TASKS[id].summary}</span>
-                </span>
-              </label>
-            </li>
-          ))}
-        </ul>
+        <legend className="text-sm font-medium">
+          Tasks <span className="font-normal text-subtle">- {job.tasks.length} of {TASK_IDS.length}, worked in this order</span>
+        </legend>
+        <div className="mt-2 grid gap-3 lg:grid-cols-2">
+          {TASK_GROUPS.map((group) => {
+            const ids = groupTasks(group.id);
+            const picked = groupTasks(group.id, job.tasks).length;
+            const all = picked === ids.length;
+            return (
+              <div key={group.id} className="rounded-lg border border-line p-3">
+                <div className="flex items-start justify-between gap-2">
+                  <div className="min-w-0">
+                    <h3 className="text-sm font-semibold">
+                      {group.label}{' '}
+                      <span className="font-normal text-subtle tabular-nums">
+                        {picked}/{ids.length}
+                      </span>
+                    </h3>
+                    <p className="text-xs text-subtle">{group.summary}</p>
+                  </div>
+                  {ids.length > 1 ? (
+                    <button type="button" className="btn btn-ghost btn-sm shrink-0" onClick={() => setTasks(ids, !all)} aria-label={`${all ? 'Clear' : 'Pick all of'} ${group.label}`}>
+                      {all ? 'None' : 'All'}
+                    </button>
+                  ) : null}
+                </div>
+                <ul className="mt-2 space-y-2">
+                  {ids.map((id) => (
+                    <li key={id}>
+                      <label className="flex items-start gap-2 text-sm">
+                        <input
+                          type="checkbox"
+                          checked={job.tasks.includes(id)}
+                          onChange={(e) => setTasks([id], e.target.checked)}
+                          className="mt-0.5 size-4 shrink-0 accent-accent"
+                        />
+                        <span>
+                          <span className="font-medium">{TASKS[id].label}</span> <span className="text-subtle">{TASKS[id].summary}</span>
+                        </span>
+                      </label>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
       </fieldset>
 
       <div className="mt-4 grid gap-3 sm:grid-cols-2">

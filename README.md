@@ -481,7 +481,3 @@ tag filter need exclude tag feature
 # Others:
 
 - General Sentiment Graph for a Product
-
-- pin Fortune 100 news events
-
-- pin Layoffs news events

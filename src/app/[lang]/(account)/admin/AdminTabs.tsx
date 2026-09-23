@@ -10,6 +10,7 @@ import Link from '@/components/ui/Link';
 const GROUPS = [
   [
     { href: '/admin/views', label: 'Views' },
+    { href: '/admin/bots', label: 'Bots' },
     { href: '/admin/users', label: 'Users' },
     { href: '/admin/pins', label: 'Pins' },
   ],

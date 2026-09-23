@@ -154,6 +154,21 @@ export const TOOLS: JobTool[] = [
     input_schema: obj({ days: num('Activity window, default 30'), radiusKm: num('Radius for nearby pins, default 50') }),
     run: (input) => signals.activeUserPlaces(int(input.days, 30, 1, 180), int(input.radiusKm, 50, 5, 500)),
   },
+  // --- Beats (fortune100, layoffs) -----------------------------------------
+  {
+    name: 'company_coverage',
+    description:
+      "How well each named company is already covered: its matching Company rows, its live pins in total, ahead of today and in the next 90 days, when one was last posted, and the tags most of its pins share (use its shared tag on new pins). Stalest first - never pinned, then longest since a post - so pass the whole Fortune 100 list and work down from the top. A name matches a company named the same or starting with it (\"Abbott\" finds \"Abbott Laboratories\"); an empty `companies` means none matched, so check the name the app uses (find_pins) before treating it as uncovered.",
+    input_schema: obj({ names: { type: 'array', items: { type: 'string' }, description: 'Company names, up to 150' } }, ['names']),
+    run: (input) => signals.companyCoverage(Array.isArray(input.names) ? input.names.map(String) : []),
+  },
+  {
+    name: 'tagged_pins',
+    description:
+      "The live pins carrying a tag (any case), newest event first, with company, source, parent and author, plus how many there are in all and ahead of today: what a standing beat (tag 'Layoffs') has already pinned, so a run adds only what is missing and threads a follow-up onto the pin it continues.",
+    input_schema: obj({ tag: str('The tag, e.g. Layoffs'), limit: num('At most this many, default 40') }, ['tag']),
+    run: (input) => signals.taggedPins(String(input.tag), int(input.limit, 40, 1, 100)),
+  },
   // --- Sentiment (the sentiment task) -------------------------------------
   {
     name: 'pending_sentiment',

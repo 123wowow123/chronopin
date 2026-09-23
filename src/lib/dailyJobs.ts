@@ -9,55 +9,97 @@ import { TZDate } from '@date-fns/tz';
 // into its prompt, so a lesson learned there changes the next run without a
 // deploy; the one-liners here are for the admin page.
 
+// Grouped by what a task is for, in the order a run works them: fix what is
+// there before adding to it, then look for what is missing, then the standing
+// beats, then the scores - last, so they cover the pins the run just added.
+// The admin page lists the tasks under these headings, and a run's
+// instructions name them in the same order.
+export const TASK_GROUPS = [
+  { id: 'upkeep', label: 'Keep pins right', summary: 'Re-check the pins that exist: marked ones, soft dates, broken media, new sources.' },
+  { id: 'discover', label: 'Find new events', summary: 'Look for what the timeline is missing, from what people search, read and say.' },
+  { id: 'beats', label: 'Beats', summary: 'Subjects covered every run, whatever else is in the news.' },
+  { id: 'scores', label: 'Scores', summary: 'Keep the numbers the pages graph up to date.' },
+] as const;
+
+export type TaskGroupId = (typeof TASK_GROUPS)[number]['id'];
+
+type TaskDef = { group: TaskGroupId; label: string; summary: string };
+
 export const TASKS = {
-  trends: {
-    label: 'Google Trends',
-    summary: 'Shortlist what the world is searching for and pin the dated events behind it.',
-  },
   revisits: {
+    group: 'upkeep',
     label: 'Pins marked for revisiting',
     summary: 'Work the revisit queue: re-research each marked pin, update it, and resolve the mark.',
   },
+  weekReview: {
+    group: 'upkeep',
+    label: "This week's pins",
+    summary: 'Check the pins happening this week are up to date and well vetted: dates, places, sources.',
+  },
+  freshSources: {
+    group: 'upkeep',
+    label: 'New sources and media',
+    summary: 'Add sources published since a pin was last updated, replace broken media and add newer media.',
+  },
+  pinHealth: {
+    group: 'upkeep',
+    label: 'Pin health',
+    summary: 'Find broken videos, pictures and sources; fix them, and add references and thread links that are missing.',
+  },
+  trends: {
+    group: 'discover',
+    label: 'Google Trends',
+    summary: 'Shortlist what the world is searching for and pin the dated events behind it.',
+  },
+  breakingNews: {
+    group: 'discover',
+    label: 'Major news',
+    summary: 'Pin major news and newly announced events since the last run.',
+  },
   thinCategories: {
+    group: 'discover',
     label: 'Thin categories',
     summary: 'Find categories with little or no future and add pins for their major upcoming events.',
   },
   trendingCategories: {
+    group: 'discover',
     label: 'Trending categories',
     summary: 'Add major-event pins to the categories readers are opening most right now.',
   },
-  pinHealth: {
-    label: 'Pin health',
-    summary: 'Find broken videos, pictures and sources; fix them, and add references and thread links that are missing.',
-  },
-  sentiment: {
-    label: 'Refresh sentiment',
-    summary: "Score the company pins whose title or summary changed since they were scored, or never were, and comments with no tone yet, for the company sentiment graphs.",
-  },
   commentTopics: {
+    group: 'discover',
     label: 'Comment topics',
     summary: 'Scan recent comments for subjects people keep raising that deserve a pin of their own.',
   },
   localEvents: {
+    group: 'discover',
     label: 'Local events',
-    summary: "Pin newly announced major events near where active users are.",
+    summary: 'Pin newly announced major events near where active users are.',
   },
-  weekReview: {
-    label: "This week's pins",
-    summary: "Check the pins happening this week are up to date and well vetted: dates, places, sources.",
+  fortune100: {
+    group: 'beats',
+    label: 'Fortune 100 news',
+    summary: "Take the next few Fortune 100 companies, least recently covered first, and pin their dated news: results, deals, launches, rulings, plants.",
   },
-  freshSources: {
-    label: 'New sources and media',
-    summary: 'Add sources published since a pin was last updated, replace broken media and add newer media.',
+  layoffs: {
+    group: 'beats',
+    label: 'Layoffs',
+    summary: "Pin newly announced layoffs and closures, each checked against the company's memo, SEC filing or state WARN notice.",
   },
-  breakingNews: {
-    label: 'Major news',
-    summary: 'Pin major news and newly announced events since the last run.',
+  sentiment: {
+    group: 'scores',
+    label: 'Refresh sentiment',
+    summary: 'Score the company pins whose title or summary changed since they were scored, or never were, and comments with no tone yet, for the company sentiment graphs.',
   },
-} as const;
+} as const satisfies Record<string, TaskDef>;
 
 export type TaskId = keyof typeof TASKS;
 export const TASK_IDS = Object.keys(TASKS) as TaskId[];
+
+// A group's tasks, in run order.
+export function groupTasks(group: TaskGroupId, among: readonly TaskId[] = TASK_IDS): TaskId[] {
+  return TASK_IDS.filter((id) => TASKS[id].group === group && among.includes(id));
+}
 
 export const DRIVERS = ['auto', 'api', 'session'] as const;
 export type DriverChoice = (typeof DRIVERS)[number];
@@ -94,7 +136,8 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       enabled: true,
       times: ['00:00'],
       timeZone: 'America/Los_Angeles',
-      tasks: ['trends', 'revisits', 'thinCategories', 'trendingCategories', 'pinHealth', 'sentiment', 'commentTopics', 'localEvents'],
+      // No sentiment: the news job scores new pins twice a day (owner, 2026-09-23).
+      tasks: ['revisits', 'pinHealth', 'trends', 'thinCategories', 'trendingCategories', 'commentTopics', 'localEvents', 'fortune100', 'layoffs'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,
@@ -105,7 +148,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       enabled: true,
       times: ['06:00', '18:00'],
       timeZone: 'America/Los_Angeles',
-      tasks: ['weekReview', 'freshSources', 'breakingNews'],
+      tasks: ['weekReview', 'freshSources', 'breakingNews', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,

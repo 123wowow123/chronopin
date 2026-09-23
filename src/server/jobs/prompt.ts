@@ -8,7 +8,7 @@
 
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { TASKS, type JobSetting } from '@/lib/dailyJobs';
+import { groupTasks, TASK_GROUPS, TASKS, type JobSetting } from '@/lib/dailyJobs';
 import JobRun from '../model/jobRun';
 import { OKF_ROOT, type JobContext } from './tools';
 
@@ -51,7 +51,12 @@ export async function systemPrompt(driver: Driver): Promise<string> {
 
 export async function kickoff(job: JobSetting, ctx: JobContext, now = new Date()): Promise<string> {
   const learnings = await JobRun.recentLearnings(LEARNINGS_IN_PROMPT);
-  const tasks = job.tasks.map((id) => `- ${id} (${TASKS[id].label}): ${TASKS[id].summary} See "${id}" under Tasks in daily-jobs.md.`);
+  // Under their group's heading, as the admin page and daily-jobs.md list them.
+  const tasks = TASK_GROUPS.flatMap((group) => {
+    const ids = groupTasks(group.id, job.tasks);
+    if (!ids.length) return [];
+    return [`${group.label}:`, ...ids.map((id) => `- ${id} (${TASKS[id].label}): ${TASKS[id].summary} See "${id}" under Tasks in daily-jobs.md.`)];
+  });
   return [
     `Run the "${job.label}" job (${job.id}) now: ${now.toISOString()} (${now.toLocaleString('en-US', { timeZone: job.timeZone, dateStyle: 'full', timeStyle: 'short' })} in ${job.timeZone}).`,
     `Tasks, in this order:\n${tasks.join('\n')}`,
