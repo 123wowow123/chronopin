@@ -42,8 +42,11 @@ ENV NODE_ENV=production \
     HOSTNAME=0.0.0.0
 
 # The standalone output is the server plus only the node_modules it uses.
-COPY --from=build /code/.next/standalone ./
-COPY --from=build /code/.next/static ./.next/static
+# Owned by the user the server runs as: it rewrites its prerendered pages
+# under .next/server and fills .next/cache as they revalidate, and as root's
+# they failed with EACCES and were rebuilt on every request instead.
+COPY --from=build --chown=node:node /code/.next/standalone ./
+COPY --from=build --chown=node:node /code/.next/static ./.next/static
 COPY --from=build /code/public ./public
 # The OKF docs: the daily pin jobs read their strategy from them at run time
 # (src/server/jobs/prompt.ts).
