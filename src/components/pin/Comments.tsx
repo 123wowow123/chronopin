@@ -267,32 +267,33 @@ function CommentItem({
     // every id in globals.css, keeps it clear of the header).
     <li id={`comment-${node.id}`}>
       {/* The avatar beside a column that stacks the same way for every
-          comment, long or short: the handle, the words, then the controls
-          under them - and the replies, whose avatars line up under the
-          words they answer. A comment is never edited: its author can only
-          delete it. */}
+          comment, long or short: a header row with the handle and, across
+          from it, the controls; the words under it; then the replies, whose
+          avatars line up under the words they answer. A comment is never
+          edited: its author can only delete it. */}
       <div className="flex gap-3">
         <UserAvatar userName={node.userName} pictureUrl={node.userPictureUrl} className="size-8 shrink-0 text-xs" />
         <div className="min-w-0 flex-1">
-          {/* Muted, so the comment itself is what reads first. */}
-          <div className="text-xs font-medium text-subtle">{node.userName}</div>
+          <div className="flex items-center gap-3">
+            {/* Muted, so the comment itself is what reads first; cut short
+                rather than pushing the controls off the row. */}
+            <span className="min-w-0 flex-1 truncate text-xs font-medium text-subtle">{node.userName}</span>
+            <div className="flex shrink-0 items-center gap-2 text-xs sm:gap-4">
+              <Votes node={node} isOwn={isOwn} signedIn={signedIn} pinId={pinId} onVote={onVote} />
+              {canReply ? (
+                <button type="button" onClick={() => { setDraft(''); setMode('reply'); }} className="rounded-md px-1.5 py-0.5 text-xs text-link hover:bg-raised" title={t('comments.reply')}>
+                  {t('comments.reply')}
+                </button>
+              ) : null}
+              {isOwn ? (
+                <button type="button" onClick={onRemove} title={t('comments.deleteComment')} className="rounded-md p-1 text-subtle hover:bg-red-500/10 hover:text-danger">
+                  <Icon name="close" className="size-3.5" />
+                </button>
+              ) : null}
+            </div>
+          </div>
           {/* Plain text: comments are never rendered as HTML. */}
           <p className="mt-0.5 break-words whitespace-pre-wrap text-ink">{node.text}</p>
-          {/* Pulled left by the thumbs' own padding, so their icons line up
-              with the words above. */}
-          <div className="mt-1 -ml-1.5 flex items-center gap-4 text-xs">
-            <Votes node={node} isOwn={isOwn} signedIn={signedIn} pinId={pinId} onVote={onVote} />
-            {canReply ? (
-              <button type="button" onClick={() => { setDraft(''); setMode('reply'); }} className="rounded-md px-1.5 py-0.5 text-xs text-link hover:bg-raised" title={t('comments.reply')}>
-                {t('comments.reply')}
-              </button>
-            ) : null}
-            {isOwn ? (
-              <button type="button" onClick={onRemove} title={t('comments.deleteComment')} className="rounded-md p-1 text-subtle hover:bg-red-500/10 hover:text-danger">
-                <Icon name="close" className="size-3.5" />
-              </button>
-            ) : null}
-          </div>
           {mode === 'reply' ? (
             <form
               className="mt-2"
@@ -376,7 +377,7 @@ function Votes({
     );
   };
   return (
-    <span className="inline-flex items-center gap-3 text-xs" role="group" aria-label={t('comments.votes')}>
+    <span className="inline-flex items-center gap-1 text-xs sm:gap-3" role="group" aria-label={t('comments.votes')}>
       {thumb(1)}
       {thumb(-1)}
     </span>
