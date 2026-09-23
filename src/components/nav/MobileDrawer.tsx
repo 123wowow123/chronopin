@@ -287,7 +287,8 @@ export function MobileDrawer() {
                 <span className="block truncate text-lg leading-tight font-bold text-ink">{user.userName}</span>
                 <span className="block truncate text-sm text-subtle">{t('nav.profileSettings')}</span>
               </span>
-              <Icon name="chevron" className="ml-auto size-4 shrink-0 -rotate-90 text-subtle" />
+              {/* 20px from the edge, as every other row's chevron and switch is. */}
+              <Icon name="chevron" className="mr-1 ml-auto size-4 shrink-0 -rotate-90 text-subtle" />
             </Link>
           </div>
         ) : null}
@@ -329,7 +330,7 @@ export function MobileDrawer() {
               float them beside the cards. */}
           {hasControls ? (
             <DrawerSection title={t('controls.filters')} hideTitle>
-              <div ref={setControlsSlot} className="flex flex-col gap-2 px-1 pb-0.5" />
+              <div ref={setControlsSlot} data-drawer-controls className="flex flex-col gap-2 px-1 pb-0.5" />
             </DrawerSection>
           ) : null}
           {/* Trending and new pins: under the filters when signed out, and

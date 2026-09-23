@@ -258,7 +258,7 @@ export function TimeRangeSlider({
       ) : null}
       <div
         id={bodyId}
-        className={folds ? `px-3.5 pb-3 ${inDrawer ? (open || merged ? '' : 'hidden') : `max-xl:pt-2.5 ${open || merged ? '' : 'xl:hidden'}`}` : ''}
+        className={folds ? `px-3.5 pb-3 in-[[data-drawer-controls]]:px-2 ${inDrawer ? (open || merged ? '' : 'hidden') : `max-xl:pt-2.5 ${open || merged ? '' : 'xl:hidden'}`}` : ''}
       >
         {/* The heading. From xl up the fold's own row above says all this,
             so it goes; with both sides, equal outer columns keep the pencil on

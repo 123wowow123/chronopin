@@ -69,8 +69,10 @@ export function PanelHeader({
   const t = useT();
   return (
     // A row that opens the cloud stands taller than the fold rows: it is the
-    // tags' own way in, not a heading over a slider.
-    <div className={`relative flex items-center gap-2 px-3.5 ${opensDialog ? 'py-3.5 max-lg:py-4.5' : 'py-2.5 max-lg:py-3'} ${className}`}>
+    // tags' own way in, not a heading over a slider. In the nav drawer the row
+    // lines up with the drawer's own: its icon 20px from the left edge and its
+    // chevron 20px from the right (the chevron's round target is 8px wider).
+    <div className={`relative flex items-center gap-2 px-3.5 in-[[data-drawer-controls]]:pr-0 in-[[data-drawer-controls]]:pl-2 ${opensDialog ? 'py-3.5 max-lg:py-4.5' : 'py-2.5 max-lg:py-3'} ${className}`}>
       {fixed ? null : (
         <button
           type="button"

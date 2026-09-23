@@ -169,7 +169,7 @@ export function DistanceSlider({
       ) : null}
       <div
         id={bodyId}
-        className={folds ? `px-3.5 pb-3 ${inDrawer ? (open || merged ? '' : 'hidden') : `max-xl:pt-2.5 ${open || merged ? '' : 'xl:hidden'}`}` : ''}
+        className={folds ? `px-3.5 pb-3 in-[[data-drawer-controls]]:px-2 ${inDrawer ? (open || merged ? '' : 'hidden') : `max-xl:pt-2.5 ${open || merged ? '' : 'xl:hidden'}`}` : ''}
       >
         {/* Where the ring is measured from, which the heading carries when it
             is here and the fold's row cannot, being one line. */}
