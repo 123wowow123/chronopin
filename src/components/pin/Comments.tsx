@@ -269,10 +269,11 @@ function CommentItem({
       {/* A comment is never edited: its author can only delete it. */}
       <div className="flex flex-wrap items-baseline gap-2">
         <UserAvatar userName={node.userName} pictureUrl={node.userPictureUrl} className="size-6 self-center text-xs" />
-        <span className="font-semibold text-ink">{node.userName}</span>
+        {/* Muted, so the comment itself is what reads first. */}
+        <span className="text-sm font-medium text-subtle">{node.userName}</span>
         {/* Plain text: comments are never rendered as HTML. */}
         <span className="whitespace-pre-wrap text-ink">{node.text}</span>
-        <span className="ml-auto flex items-center gap-1">
+        <span className="ml-auto flex items-center gap-4">
           <Votes node={node} isOwn={isOwn} signedIn={signedIn} pinId={pinId} onVote={onVote} />
           {canReply ? (
             <button type="button" onClick={() => { setDraft(''); setMode('reply'); }} className="rounded-md px-1.5 py-0.5 text-xs text-link hover:bg-raised" title={t('comments.reply')}>
@@ -367,7 +368,7 @@ function Votes({
     );
   };
   return (
-    <span className="mr-1 inline-flex items-center gap-0.5 text-xs" role="group" aria-label={t('comments.votes')}>
+    <span className="inline-flex items-center gap-3 text-xs" role="group" aria-label={t('comments.votes')}>
       {thumb(1)}
       {thumb(-1)}
     </span>
