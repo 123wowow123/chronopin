@@ -293,16 +293,19 @@ export function TagCloud({
         className={inFold ? 'max-xl:hidden' : ''}
         fixed={merged && listed}
       >
-        <button
-          type="button"
-          onClick={openCloud}
-          className={`${iconButton} pointer-events-auto`}
-          aria-label={t('tagCloud.expand')}
-          title={t('tagCloud.expand')}
-          aria-haspopup="dialog"
-        >
-          <Icon name="expand" className="size-4" />
-        </button>
+        {/* With no list, the row itself opens the cloud, and its chevron says so. */}
+        {listed ? (
+          <button
+            type="button"
+            onClick={openCloud}
+            className={`${iconButton} pointer-events-auto`}
+            aria-label={t('tagCloud.expand')}
+            title={t('tagCloud.expand')}
+            aria-haspopup="dialog"
+          >
+            <Icon name="expand" className="size-4" />
+          </button>
+        ) : null}
       </PanelHeader>
       {showing ? (
         // In the fold the cloud is the fold's; elsewhere the header row opens it.
@@ -397,6 +400,7 @@ export function TagCloud({
           onToggleReserved={toggleReserved}
           onClear={clear}
           onClose={closeCloud}
+          back={listed ? null : inDrawer ? t('nav.backToMenu') : t('tagCloud.close')}
         />
       ) : null}
     </div>
@@ -599,6 +603,7 @@ function TagCloudView({
   onToggleReserved,
   onClear,
   onClose,
+  back,
 }: {
   countsUrl: string;
   selected: string[];
@@ -610,6 +615,10 @@ function TagCloudView({
   onToggleReserved: (name: string) => void;
   onClear: () => void;
   onClose: () => void;
+  // With no tag list the cloud is the tags' own page rather than a view
+  // blown up from the panel, so an arrow leading its header (named this)
+  // goes back where it was opened from, in place of the close button.
+  back: string | null;
 }) {
   const titleId = useId();
   const t = useT();
@@ -684,6 +693,11 @@ function TagCloudView({
       <div aria-hidden onClick={onClose} className="absolute inset-0 bg-black/55 backdrop-blur-[2px]" />
       <div role="dialog" aria-modal="true" aria-labelledby={titleId} className="floating relative flex h-[min(88dvh,56rem)] max-h-full w-full max-w-6xl flex-col overflow-hidden max-sm:h-full max-sm:max-w-none max-sm:rounded-none max-sm:border-0">
         <div className="flex items-center gap-3 border-b border-line px-5 py-3 max-sm:flex-wrap max-sm:px-3">
+          {back ? (
+            <button type="button" onClick={onClose} className={`${iconButton} -ml-1.5 shrink-0 max-sm:-mr-1.5`} aria-label={back} title={back}>
+              <Icon name="back" className="size-5" />
+            </button>
+          ) : null}
           <Icon name="tag" className="size-5 shrink-0 text-link" />
           <h2 id={titleId} className="shrink-0 text-base font-semibold text-ink">
             {t('tagCloud.title')}
@@ -697,9 +711,11 @@ function TagCloudView({
                 <Icon name="filter-off" className="size-5" />
               </button>
             ) : null}
-            <button type="button" onClick={onClose} className={iconButton} aria-label={t('tagCloud.close')}>
-              <Icon name="close" className="size-5" />
-            </button>
+            {back ? null : (
+              <button type="button" onClick={onClose} className={iconButton} aria-label={t('tagCloud.close')}>
+                <Icon name="close" className="size-5" />
+              </button>
+            )}
           </span>
         </div>
         <ReservedFilters counts={counts ?? []} selected={reserved} needle={needle} onToggle={onToggleReserved} className="border-b border-line px-5 py-2 max-sm:px-3" />

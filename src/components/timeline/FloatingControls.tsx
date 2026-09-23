@@ -236,7 +236,7 @@ export function FloatingControls({
                           />
                           <div
                             id={mergedId}
-                            className={`flex-col [&>*]:rounded-none [&>*]:border-x-0 [&>*]:border-t-0 [&>*]:border-line [&>*]:bg-transparent [&>*]:shadow-none [&>*:last-child]:border-b-0 ${
+                            className={`flex-col border-t border-line [&>*]:rounded-none [&>*]:border-x-0 [&>*]:border-t-0 [&>*]:border-line [&>*]:bg-transparent [&>*]:shadow-none [&>*:last-child]:border-b-0 ${
                               mergedOpen ? 'flex' : 'hidden'
                             }`}
                           >

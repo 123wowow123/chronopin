@@ -271,14 +271,8 @@ export function MobileDrawer() {
           <a href="/" className="min-w-0 flex-1 font-display text-lg font-semibold tracking-tight text-ink hover:no-underline">
             Chronopin
           </a>
-          <button
-            type="button"
-            className="-mr-1.5 shrink-0 rounded-full p-1.5 text-muted hover:bg-raised hover:text-ink"
-            aria-label={t('nav.closeMenu')}
-            onClick={() => setOpen(false)}
-          >
-            <Icon name="close" className="size-5" />
-          </button>
+          {/* No close button at the far end: the menu mark above, a tap on
+              the dimmed page, Escape or a swipe all put the drawer away. */}
         </div>
 
         {/* Signed in, the account under it - and the way to its profile and

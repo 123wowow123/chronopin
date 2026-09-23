@@ -60,14 +60,17 @@ export function PanelHeader({
   // narrower the row is hidden anyway.
   fixed?: boolean;
   // The row opens a dialog (the big tag cloud) rather than folding anything
-  // out: no chevron, and it says so to assistive tech.
+  // out: its chevron points onward, as the drawer's profile row's does, and
+  // it says so to assistive tech.
   opensDialog?: boolean;
   // Anything else that belongs on the row, before the chevron.
   children?: React.ReactNode;
 }) {
   const t = useT();
   return (
-    <div className={`relative flex items-center gap-2 px-3.5 py-2.5 max-lg:py-3 ${className}`}>
+    // A row that opens the cloud stands taller than the fold rows: it is the
+    // tags' own way in, not a heading over a slider.
+    <div className={`relative flex items-center gap-2 px-3.5 ${opensDialog ? 'py-3.5 max-lg:py-4.5' : 'py-2.5 max-lg:py-3'} ${className}`}>
       {fixed ? null : (
         <button
           type="button"
@@ -84,20 +87,34 @@ export function PanelHeader({
       {icon ? <Icon name={icon} className="pointer-events-none relative size-4 shrink-0 text-subtle" /> : null}
       <span className={`pointer-events-none relative shrink-0 ${captionClass}`}>{caption}</span>{' '}
       <span className="pointer-events-none relative min-w-0 truncate font-medium text-ink">{value}</span>
+      {/* On a row that opens the cloud, the clear button follows what it
+          clears, well away from the chevron at the far end, which opens. */}
+      {reset && opensDialog ? <ResetButton reset={reset} /> : null}
       <span className="pointer-events-none relative ml-auto flex shrink-0 items-center gap-1.5">
-        {reset ? (
-          <button type="button" onClick={reset.onClick} className={`${iconButton} pointer-events-auto`} aria-label={reset.label} title={reset.label}>
-            <Icon name="filter-off" className="size-4" />
-          </button>
-        ) : null}
+        {reset && !opensDialog ? <ResetButton reset={reset} /> : null}
         {children}
-        {fixed || opensDialog ? null : (
+        {fixed ? null : opensDialog ? (
+          // The whole row is the button; the chevron only says where it goes,
+          // in the round box the other rows' chevrons have, so the row is as tall.
+          <span className="-my-1 rounded-full p-1 text-subtle max-lg:p-2">
+            <Icon name="chevron" className="size-4 -rotate-90" />
+          </span>
+        ) : (
           <button type="button" tabIndex={-1} aria-hidden onClick={onToggle} className={`${iconButton} pointer-events-auto`}>
             <Icon name="chevron" className={`size-4 transition-transform ${open ? 'rotate-180' : ''}`} />
           </button>
         )}
       </span>
     </div>
+  );
+}
+
+// Widens the filter back out.
+function ResetButton({ reset }: { reset: { label: string; onClick: () => void } }) {
+  return (
+    <button type="button" onClick={reset.onClick} className={`${iconButton} pointer-events-auto relative shrink-0`} aria-label={reset.label} title={reset.label}>
+      <Icon name="filter-off" className="size-4" />
+    </button>
   );
 }
 
