@@ -99,28 +99,6 @@ Run: `docker run --rm -p 9000:9000 --env-file Docker/env.prod.list chronopin`
 
 The image is the Next.js standalone server on port 9000 with Chromium for the scraper. Production runs it on an Azure VM with Docker Compose and Caddy: see [docs/deploy-azure.md](docs/deploy-azure.md).
 
-## Upload Docker Image
-
-Run `docker login`
-
-Or
-
-Run `docker login -u 123wowow123 -p <my secret password>`
-
-Run `docker tag chronopin 123wowow123/chronopin:latest`
-
-Run `docker push 123wowow123/chronopin:latest`
-
-## Download Docker Image
-
-Run `docker image pull docker.io/library/123wowow123/chronopin:latest`
-
-## Run Docker Service
-
-Run `docker-compose up` to build and serve site on `localhost:9000`
-
-Run `docker-compose down` to shut it down
-
 ## Deploy to cloud
 
 See [docs/deploy-azure.md](docs/deploy-azure.md).
