@@ -16,9 +16,10 @@ async function signUp(api: APIRequestContext, who: string) {
   return email;
 }
 
-// Reactions to comments (0075), as on Facebook: the Like button likes, the
-// row of six that opens on hovering it picks another in its place, the
-// summary counts them all, and a reload keeps them.
+// Reactions to comments (0075), as in Messenger: the smiley beside the bubble
+// opens the bar of six, a pick takes the place of the reader's last one and
+// picking it again takes it back, the badge counts them all, and a reload
+// keeps them.
 test('a comment takes one reaction from each reader', async ({ page, playwright, baseURL }) => {
   // The author: an account that has confirmed its email, since posting a
   // comment waits for that (the link comes from a local script, as in
@@ -48,26 +49,32 @@ test('a comment takes one reaction from each reader', async ({ page, playwright,
   const comment = page.locator(`#comment-${id}`);
   const total = comment.locator('[data-count="total"]');
   await expect(total).toHaveText('1');
+  const picker = comment.getByRole('group', { name: 'Choose a reaction' });
+  const pick = async (name: string) => {
+    await comment.hover();
+    await comment.getByRole('button', { name: 'Choose a reaction' }).click();
+    await picker.getByRole('button', { name, exact: true }).click();
+    await expect(picker).toHaveCount(0);
+  };
 
-  // The Like button likes.
-  await comment.getByRole('button', { name: 'Like', exact: true }).click();
+  await pick('Like');
   await expect(total).toHaveText('2');
   await page.reload();
   await expect(total).toHaveText('2');
-  const liked = comment.getByRole('button', { name: 'Remove your reaction (Like)' });
-  await expect(liked).toHaveAttribute('aria-pressed', 'true');
-
-  // Hovering it opens the row; Haha takes the like's place.
-  await liked.hover();
-  const picker = comment.getByRole('group', { name: 'Choose a reaction' });
-  await picker.getByRole('button', { name: 'Haha' }).click();
+  await comment.hover();
+  await comment.getByRole('button', { name: 'Choose a reaction' }).click();
+  await expect(picker.getByRole('button', { name: 'Like', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  await page.keyboard.press('Escape');
   await expect(picker).toHaveCount(0);
+
+  // Haha takes the like's place.
+  await pick('Haha');
   await expect(total).toHaveText('2');
   const reactions = await author.get(`/api/pins/${pinId}/comment`).then((r) => r.json());
   expect(reactions.find((c: { id: number }) => c.id === id)).toMatchObject({ reactions: { love: 1, haha: 1 } });
 
-  // Pressing it again takes the reaction back.
-  await comment.getByRole('button', { name: 'Remove your reaction (Haha)' }).click();
+  // Picking it again takes it back.
+  await pick('Haha');
   await expect(total).toHaveText('1');
   await author.dispose();
 });

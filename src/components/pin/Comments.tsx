@@ -238,11 +238,10 @@ function MoodSummary({ mood, total }: { mood: CommentMood; total: number }) {
   );
 }
 
-// A comment's controls: soft round-ended buttons, an icon and a word each
-// (the word only read out on a phone, where the handle needs the room), that
-// only take a colour when the pointer is on them.
+// A comment's controls, beside its bubble: round icon buttons that only take
+// a colour when the pointer is on them.
 const CONTROL =
-  'inline-flex items-center gap-1 rounded-full px-2 py-1 font-medium text-subtle transition-colors hover:bg-raised hover:text-ink focus-visible:bg-raised';
+  'inline-flex size-8 items-center justify-center rounded-full text-subtle transition-colors hover:bg-raised hover:text-ink focus-visible:bg-raised';
 
 function CommentItem({
   node,
@@ -270,25 +269,31 @@ function CommentItem({
   const [mode, setMode] = useState<'view' | 'reply'>('view');
   const [draft, setDraft] = useState('');
   const t = useT();
+  const reacted = Object.values(node.reactions ?? {}).some((n) => (n ?? 0) > 0);
 
   return (
     // The anchor comment notifications link to (its scroll-margin, set for
     // every id in globals.css, keeps it clear of the header).
     <li id={`comment-${node.id}`}>
-      {/* The avatar beside a column that stacks the same way for every
-          comment, long or short: a header row with the handle and, across
-          from it, the controls; the words under it; then the replies, whose
-          avatars line up under the words they answer. A comment is never
-          edited: its author can only delete it. */}
-      <div className="flex gap-3">
-        <UserAvatar userName={node.userName} pictureUrl={node.userPictureUrl} className="size-8 shrink-0 text-xs" />
+      {/* As in Messenger: the handle over a bubble with the words in it, the
+          avatar beside the bubble, and the reactions pinned to the bubble's
+          corner. The controls sit just past the bubble and show while the
+          pointer is on the comment (always on a touch screen, which has no
+          hover, and while one of their popups is open or they have the
+          keyboard's focus). A comment is never edited: its author can only
+          delete it. */}
+      <div className="flex gap-2">
+        <UserAvatar userName={node.userName} pictureUrl={node.userPictureUrl} className="mt-5 size-8 shrink-0 text-xs" />
         <div className="min-w-0 flex-1">
-          <div className="flex items-center gap-3">
-            {/* Muted, so the comment itself is what reads first; cut short
-                rather than pushing the controls off the row. */}
-            <span className="min-w-0 flex-1 truncate text-xs font-medium text-subtle">{node.userName}</span>
-            <div className="flex shrink-0 items-center gap-1 text-xs">
-              <Reactions node={node} signedIn={signedIn} pinId={pinId} onReact={onReact} />
+          <div className="truncate pl-3 text-xs text-subtle">{node.userName}</div>
+          <div className={`group/comment relative flex items-center gap-1 ${reacted ? 'mb-3' : ''}`}>
+            {/* Plain text: comments are never rendered as HTML. */}
+            <div className="relative min-w-0 rounded-2xl bg-raised px-3 py-2 break-words whitespace-pre-wrap text-ink">
+              {node.text}
+              <ReactionSummary node={node} />
+            </div>
+            <div className="flex shrink-0 items-center opacity-0 transition-opacity group-hover/comment:opacity-100 has-[[aria-expanded=true]]:opacity-100 has-[:focus-visible]:opacity-100 [@media(hover:none)]:opacity-100">
+              <ReactionButton node={node} signedIn={signedIn} pinId={pinId} onReact={onReact} />
               {canReply ? (
                 <button
                   type="button"
@@ -296,17 +301,16 @@ function CommentItem({
                     setDraft('');
                     setMode('reply');
                   }}
+                  aria-label={t('comments.reply')}
+                  title={t('comments.reply')}
                   className={CONTROL}
                 >
-                  <Icon name="reply" className="size-4" />
-                  <span className="sr-only sm:not-sr-only">{t('comments.reply')}</span>
+                  <Icon name="reply" className="size-4.5" />
                 </button>
               ) : null}
               <CommentMenu commentId={node.id} pinId={pinId} isOwn={isOwn} canDelete={canDelete} signedIn={signedIn} onRemove={onRemove} />
             </div>
           </div>
-          {/* Plain text: comments are never rendered as HTML. */}
-          <p className="mt-0.5 break-words whitespace-pre-wrap text-ink">{node.text}</p>
           {mode === 'reply' ? (
             <form
               className="mt-2"
@@ -326,33 +330,42 @@ function CommentItem({
               </div>
             </form>
           ) : null}
-          {node.replies.length ? <ul className="mt-3 space-y-4 border-l border-line pl-4">{node.replies.map(renderChild)}</ul> : null}
+          {node.replies.length ? <ul className="mt-3 space-y-3 border-l border-line pl-3">{node.replies.map(renderChild)}</ul> : null}
         </div>
       </div>
     </li>
   );
 }
 
-// Reactions, as on Facebook. The Like button likes the comment (or, once the
-// reader has reacted, shows their reaction and takes it back); resting the
-// pointer on it, pressing and holding it on a touch screen, or ArrowUp from
-// the keyboard opens the row of six to pick from. Beside it, the three most
-// given reactions and how many reacted in all. A signed-out reader's Like
-// sends them to log in first.
-const HOVER_OPEN_MS = 450;
-// The colour a reaction's name takes on the button once given.
-const REACTION_TONES: Record<CommentReactionName, string> = {
-  like: 'text-link',
-  love: 'text-danger',
-  haha: 'text-warning',
-  wow: 'text-warning',
-  sad: 'text-warning',
-  angry: 'text-tone-comments',
-};
-const HOVER_CLOSE_MS = 300;
-const LONG_PRESS_MS = 450;
+// The reactions a comment has, as a small badge on its bubble's bottom
+// corner: the three most given and how many reacted in all.
+function ReactionSummary({ node }: { node: CommentJson }) {
+  const t = useT();
+  const counts = node.reactions ?? {};
+  const given = COMMENT_REACTIONS.filter((r) => (counts[r.name] ?? 0) > 0).sort((a, b) => (counts[b.name] ?? 0) - (counts[a.name] ?? 0));
+  const total = given.reduce((sum, r) => sum + (counts[r.name] ?? 0), 0);
+  if (!total) return null;
+  return (
+    <span
+      className="absolute right-2 -bottom-3.5 inline-flex items-center gap-0.5 rounded-full bg-panel px-1.5 py-0.5 text-xs whitespace-nowrap text-subtle tabular-nums shadow-sm ring-1 ring-line"
+      aria-label={t('comments.reactions', { count: total })}
+      title={given.map((r) => `${r.emoji} ${counts[r.name]}`).join('  ')}
+    >
+      <span className="flex text-sm leading-none" aria-hidden>
+        {given.slice(0, 3).map((r) => (
+          <span key={r.name}>{r.emoji}</span>
+        ))}
+      </span>
+      {total > 1 ? <span data-count="total">{total}</span> : <span data-count="total" className="sr-only">{total}</span>}
+    </span>
+  );
+}
 
-function Reactions({
+// The smiley that opens the bar of reactions over the comment, as in
+// Messenger. Picking one gives it (in place of any given before); picking the
+// one already given takes it back. Escape or a click elsewhere shuts the bar.
+// A signed-out reader's smiley sends them to log in first.
+function ReactionButton({
   node,
   signedIn,
   pinId,
@@ -365,35 +378,15 @@ function Reactions({
 }) {
   const t = useT();
   const pickerId = useId();
-  // How the picker was opened: from the keyboard it takes the focus.
-  const [open, setOpen] = useState<false | 'pointer' | 'keys'>(false);
+  const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLSpanElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
-  // A long press opens the picker; the click the finger's lift then makes
-  // must not also like the comment.
-  const pressed = useRef(false);
-  // Just picked: the pointer is still on or near the Like button, and resting
-  // there must not bring the row straight back. It opens again once the
-  // pointer has been on the button and left it.
-  const quiet = useRef<false | 'picked' | 'inside'>(false);
 
-  const counts = node.reactions ?? {};
-  const given = COMMENT_REACTIONS.filter((r) => (counts[r.name] ?? 0) > 0).sort((a, b) => (counts[b.name] ?? 0) - (counts[a.name] ?? 0));
-  const total = given.reduce((sum, r) => sum + (counts[r.name] ?? 0), 0);
-  const mine = COMMENT_REACTIONS.find((r) => r.name === node.myReaction);
-
-  const later = (fn: () => void, ms: number) => {
-    clearTimeout(timer.current);
-    timer.current = setTimeout(fn, ms);
-  };
   const close = useCallback((refocus: boolean) => {
-    clearTimeout(timer.current);
     setOpen(false);
     if (refocus) buttonRef.current?.focus();
   }, []);
 
-  useEffect(() => () => clearTimeout(timer.current), []);
   useEffect(() => {
     if (!open) return;
     const outside = (event: PointerEvent) => {
@@ -410,155 +403,68 @@ function Reactions({
     };
   }, [open, close]);
 
-  const pick = (reaction: CommentReactionName) => {
-    quiet.current = 'picked';
-    close(true);
-    onReact(reaction === node.myReaction ? null : reaction);
-  };
-
-  const summary = total ? (
-    <span
-      className="inline-flex items-center gap-1 rounded-full bg-panel py-0.5 pr-2 pl-1 text-subtle tabular-nums shadow-sm ring-1 ring-line"
-      aria-label={t('comments.reactions', { count: total })}
-      title={given.map((r) => `${r.emoji} ${counts[r.name]}`).join('  ')}
-    >
-      <span className="flex" aria-hidden>
-        {given.slice(0, 3).map((r) => (
-          <span key={r.name} className="-ml-1 flex size-4.5 items-center justify-center rounded-full bg-panel text-[11px] leading-none ring-2 ring-panel first:ml-0">
-            {r.emoji}
-          </span>
-        ))}
-      </span>
-      <span data-count="total">{total}</span>
-    </span>
-  ) : null;
-
-  const face = mine ? (
-    <>
-      <span className="text-sm leading-none" aria-hidden>
-        {mine.emoji}
-      </span>
-      <span className="sr-only sm:not-sr-only">{t(mine.label)}</span>
-    </>
-  ) : (
-    <>
-      <Icon name="thumb" className="size-4" />
-      <span className="sr-only sm:not-sr-only">{t('comments.like')}</span>
-    </>
-  );
-  const buttonClass = mine ? `${CONTROL} ${REACTION_TONES[mine.name]} hover:text-current` : CONTROL;
-
   if (!signedIn) {
     return (
-      <span className="inline-flex items-center gap-1.5">
-        {summary}
-        <span title={t('comments.logInToReact')} className="inline-flex">
-          <AuthLink to="/login" className={buttonClass} pending={{ kind: 'comment', id: pinId }}>
-            {face}
-          </AuthLink>
-        </span>
+      <span title={t('comments.logInToReact')} className="inline-flex">
+        <AuthLink to="/login" className={CONTROL} pending={{ kind: 'comment', id: pinId }}>
+          <Icon name="smile" className="size-4.5" />
+          <span className="sr-only">{t('comments.chooseReaction')}</span>
+        </AuthLink>
       </span>
     );
   }
 
-  const label = mine ? t('comments.removeReaction', { reaction: t(mine.label) }) : t('comments.like');
   return (
-    <span
-      ref={rootRef}
-      className="relative inline-flex items-center gap-1.5"
-      onPointerEnter={(event) => {
-        if (event.pointerType !== 'mouse') return;
-        if (quiet.current) {
-          quiet.current = 'inside';
-          return;
-        }
-        later(() => setOpen((was) => was || 'pointer'), open ? 0 : HOVER_OPEN_MS);
-      }}
-      onPointerLeave={(event) => {
-        if (event.pointerType !== 'mouse') return;
-        if (quiet.current === 'inside') quiet.current = false;
-        later(() => setOpen(false), HOVER_CLOSE_MS);
-      }}
-    >
-      {summary}
+    // Not positioned itself, so the bar lines up with the comment's bubble
+    // (the row is the positioned box) rather than with this button.
+    <span ref={rootRef} className="inline-flex">
       <button
         ref={buttonRef}
         type="button"
-        aria-label={label}
-        title={label}
-        aria-pressed={!!mine}
+        aria-label={t('comments.chooseReaction')}
+        title={t('comments.chooseReaction')}
         aria-haspopup="true"
-        aria-expanded={!!open}
+        aria-expanded={open}
         aria-controls={open ? pickerId : undefined}
-        onPointerDown={(event) => {
-          if (event.pointerType === 'mouse') return;
-          pressed.current = false;
-          later(() => {
-            pressed.current = true;
-            setOpen('pointer');
-          }, LONG_PRESS_MS);
-        }}
-        onPointerUp={(event) => {
-          if (event.pointerType !== 'mouse' && !pressed.current) clearTimeout(timer.current);
-        }}
-        onPointerCancel={() => clearTimeout(timer.current)}
-        // A held finger would otherwise bring up the phone's own menu.
-        onContextMenu={(event) => event.preventDefault()}
-        onKeyDown={(event) => {
-          if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
-            event.preventDefault();
-            setOpen('keys');
-          }
-        }}
-        onClick={() => {
-          if (pressed.current) {
-            pressed.current = false;
-            return;
-          }
-          close(false);
-          onReact(mine ? null : 'like');
-        }}
-        className={buttonClass}
+        onClick={() => (open ? close(false) : setOpen(true))}
+        className={`${CONTROL} ${open ? 'bg-raised text-ink' : ''}`}
       >
-        {face}
+        <Icon name="smile" className="size-4.5" />
       </button>
       {open ? (
-        <ReactionPicker id={pickerId} mine={node.myReaction ?? null} takeFocus={open === 'keys'} onPick={pick} />
+        <ReactionPicker
+          id={pickerId}
+          mine={node.myReaction ?? null}
+          onPick={(reaction) => {
+            close(false);
+            onReact(reaction === node.myReaction ? null : reaction);
+          }}
+        />
       ) : null}
     </span>
   );
 }
 
-// The row of six, floating above the Like button. Each grows under the
-// pointer; the reader's own is ringed, and picking it again takes it back.
-// The arrow keys move along the row.
-function ReactionPicker({
-  id,
-  mine,
-  takeFocus,
-  onPick,
-}: {
-  id: string;
-  mine: CommentReactionName | null;
-  takeFocus: boolean;
-  onPick: (reaction: CommentReactionName) => void;
-}) {
+// The bar of six, floating over the comment's bubble. Each grows under the
+// pointer; the reader's own sits on a grey disc, and picking it again takes it
+// back. It opens with the focus on the reader's own (else the first), and
+// the arrow keys move along it.
+function ReactionPicker({ id, mine, onPick }: { id: string; mine: CommentReactionName | null; onPick: (reaction: CommentReactionName) => void }) {
   const t = useT();
   const rowRef = useRef<HTMLDivElement>(null);
-  // Opened from the keyboard, the focus lands on the reader's own reaction,
-  // else the first.
   useEffect(() => {
-    if (!takeFocus) return;
     const buttons = rowRef.current?.querySelectorAll<HTMLButtonElement>('button');
     buttons?.[Math.max(0, COMMENT_REACTIONS.findIndex((r) => r.name === mine))]?.focus({ preventScroll: true });
-  }, [takeFocus, mine]);
+    // Only when it opens: the focus is not moved again while it is up.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <div
       ref={rowRef}
       id={id}
       role="group"
       aria-label={t('comments.chooseReaction')}
-      className="floating absolute right-0 bottom-full z-30 mb-1.5 flex gap-0.5 rounded-full p-1"
+      className="absolute bottom-full left-0 z-30 mb-2 flex gap-0.5 rounded-full border border-tint/[0.07] bg-panel p-1.5 shadow-2xl shadow-shade/40"
       onKeyDown={(event) => {
         if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
         event.preventDefault();
@@ -576,8 +482,8 @@ function ReactionPicker({
           title={t(r.label)}
           aria-pressed={r.name === mine}
           onClick={() => onPick(r.name)}
-          className={`flex size-9 origin-bottom items-center justify-center rounded-full text-2xl leading-none transition-transform duration-150 hover:scale-125 focus-visible:scale-125 motion-reduce:transition-none ${
-            r.name === mine ? 'bg-raised ring-1 ring-line' : ''
+          className={`flex size-10 origin-bottom items-center justify-center rounded-full text-[26px] leading-none transition-transform duration-150 outline-none hover:scale-125 focus-visible:scale-125 motion-reduce:transition-none sm:size-12 sm:text-4xl ${
+            r.name === mine ? 'bg-raised' : ''
           }`}
         >
           <span aria-hidden>{r.emoji}</span>
@@ -666,7 +572,7 @@ function CommentMenu({
         aria-expanded={open}
         aria-controls={open ? menuId : undefined}
         onClick={() => (open ? close(false) : setOpen(true))}
-        className={`${CONTROL} px-1`}
+        className={CONTROL}
       >
         <Icon name="dots-vertical" className="size-4" />
       </button>
