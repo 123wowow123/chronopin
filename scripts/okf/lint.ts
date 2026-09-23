@@ -8,9 +8,9 @@
 //   npm run okf:lint -- --dir docs/okf            only check a bundle on disk against the OKF spec
 //
 //   conformance    the generated OKF bundle against the spec       report only
-//   stale          re-read links per the admin setting (Admin >     --fix rewrites changed wikis, rebuilds summaries
-//                  Pins; default: pins viewed since); --viewed and/or
-//                  --recheck-days N replace it
+//   stale          re-read links: --viewed (pins opened since their   --fix rewrites changed wikis, rebuilds summaries
+//                  links were read) and/or --recheck-days N;
+//                  neither, and it is skipped
 //   orphan         links no live pin cites (over --orphan-days)    --fix deletes them
 //   quality        thin/blank/repetitive wikis, pins w/o summary   --fix queues rewrites, writes summaries
 //   contradiction  Claude compares each pin's link wikis           report only; with no API credit, pins

@@ -4,12 +4,10 @@ import { DEFAULT_TAG_LIST, parseTagList, type TagListSetting } from '@/lib/tagLi
 import { DEFAULT_TIMELINE_CONFIDENCE, parseTimelineConfidence, type TimelineConfidenceSetting } from '@/lib/timelineConfidence';
 import { DEFAULT_TIMELINE_VIDEO, parseTimelineVideo, type TimelineVideoSetting } from '@/lib/timelineVideo';
 import { DEFAULT_PERSONAL_BAG, parsePersonalBag, type PersonalBagSetting } from '@/lib/userWiki';
-import { DEFAULT_WIKI_RECHECK, parseWikiRecheck, type WikiRecheckSetting } from '@/lib/wikiRecheck';
 import * as db from '../db';
 
 const TIMELINE_CONFIDENCE = 'timelineConfidence';
 const TIMELINE_VIDEO = 'timelineVideo';
-const WIKI_RECHECK = 'wikiRecheck';
 const PERSONAL_BAG = 'personalBag';
 const DAILY_JOBS = 'dailyJobs';
 const SLIDER_TYPING = 'sliderTyping';
@@ -50,16 +48,6 @@ export function setTimelineVideo(setting: TimelineVideoSetting, userId: number |
   return write(TIMELINE_VIDEO, setting, userId);
 }
 
-// When okf:lint reads links again to see whether their wikis are stale.
-export async function getWikiRecheck(): Promise<WikiRecheckSetting> {
-  const parsed = parseWikiRecheck(await read(WIKI_RECHECK));
-  return 'setting' in parsed ? parsed.setting : DEFAULT_WIKI_RECHECK;
-}
-
-export function setWikiRecheck(setting: WikiRecheckSetting, userId: number | null) {
-  return write(WIKI_RECHECK, setting, userId);
-}
-
 // Whether the timeline weighs a crowded day's cards by the viewer's preference wiki.
 export async function getPersonalBag(): Promise<PersonalBagSetting> {
   const parsed = parsePersonalBag(await read(PERSONAL_BAG));
@@ -98,27 +86,4 @@ export async function getTagList(): Promise<TagListSetting> {
 
 export function setTagList(setting: TagListSetting, userId: number | null) {
   return write(TAG_LIST, setting, userId);
-}
-
-const WIKI_RECHECK_LAST_RUN = 'wikiRecheckLastRun';
-
-// Claims the nightly re-read for a UTC day ("YYYY-MM-DD"): true for exactly
-// one caller per day, however many servers try, so it runs once.
-export async function claimWikiRecheckRun(day: string): Promise<boolean> {
-  const rows = await db.query(
-    `
-    INSERT INTO "AppSetting" ("key", "value", "userId", "utcUpdatedDateTime")
-    VALUES ($1, to_jsonb($2::text), NULL, now())
-    ON CONFLICT ("key") DO UPDATE SET "value" = EXCLUDED."value", "utcUpdatedDateTime" = now()
-      WHERE "AppSetting"."value" #>> '{}' < $2
-    RETURNING "key"`,
-    [WIKI_RECHECK_LAST_RUN, day],
-  );
-  return rows.length > 0;
-}
-
-// When the nightly re-read last ran, for the admin page; null before the first.
-export async function getWikiRecheckLastRun(): Promise<string | null> {
-  const rows = await db.query<{ utcUpdatedDateTime: Date }>(`SELECT "utcUpdatedDateTime" FROM "AppSetting" WHERE "key" = $1`, [WIKI_RECHECK_LAST_RUN]);
-  return rows[0] ? new Date(rows[0].utcUpdatedDateTime).toISOString() : null;
 }

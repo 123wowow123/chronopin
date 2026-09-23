@@ -421,7 +421,6 @@ GA: Outbound link / non-interaction events / Social Interactions tracking / User
 - facebook comment jumps @ pin page
 
 ## Architecture
-- Externalize image processing to AWS Lamda
 - [Use Firebase DB for denormalized push notification of app data] <https://www.youtube.com/watch?v=LAWjdZYrUgI>
 
 
@@ -462,8 +461,6 @@ Translate content to all supported languages
 
 # Injestion Methodology
 
-major local events by major city scrape and more targetted by your location
-
 - Add api key for Amazon & eBay Price Scrape
 
 - Add
@@ -472,35 +469,6 @@ yelp key
 
 
 # Daily Job
-
-
-Create daily jobs as per requirements below and add admin section to control the time to run for these:
-
-Use the existing OKF for pin learning and maintenance strategy with these guidelines and add new learning to this. This will in turn create the pin maintance job in the defined run periods.
-
-Create LLM Orchistration pipeline and add it to a daily job to scrape and update pins. This pipeline should be able to use Claude credits or VS Code session credit to kick off job. Convert anything that the LLM needs that's in the current pipeline in tools, for example, image processor or PDF reader or headless chrore. Only convert what Claude does not have native support for.
-
-For the default Midnight linting and new pin creation jobs :
-- Should scrape google trends and updats pins that are marked for revisiting
-https://trends.google.com/explore
-
-- Check for any category that are thin and try to add more pin on major events
-
-- Add more major events pin for categories that have trending views
-
-- Check health of pins like broken videos, image, etc and new pin connection and references might be able to add
-
-- Scan comments to see if there are any trending topics and can lead new new pins to be created
-
-- Pin major local events for active users that came out
-
-For the default 6am, 6pm PST linting and new pin creation jobs:
-
-- Check and update this week's pins to ensure it's up to date and well vetted.
-
-- Will add new sources that came out since last udpate and check if media links are broken and fix and add newer ones available
-
-- Pin major news or events that came out
 
 
 # OKF

@@ -3,7 +3,6 @@ import { PIN_CATEGORIES } from './model/pinTag';
 import { absoluteUrl, pinPath } from '@/lib/seo';
 import type { PinTagJson } from '@/lib/tags';
 import * as db from './db';
-import { getWikiRecheck } from './model/appSetting';
 import Source, { PinSource } from './model/source';
 
 // Loads pins and their links' wikis and renders them as an OKF bundle (see
@@ -45,12 +44,9 @@ export async function loadOkfBundle(pinIds?: number[]): Promise<Map<string, stri
       )
     : [];
   const wikis = await Source.wikis(ids);
-  // A link has a date it goes stale only when re-reads go by age (a view can
-  // bring its read sooner, which moves the date out again).
-  const { days } = await getWikiRecheck();
+  // Links are only re-read by hand, so none has a date it goes stale.
   return okfBundle(
     okfPins,
     rows.map((row) => ({ ...row, wiki: wikis.get(row.id) ?? null })),
-    { recheckDays: days },
   );
 }

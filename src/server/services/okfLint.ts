@@ -3,8 +3,6 @@ import { lintBundle, relevantChanges, wikiQualityIssues } from '@/lib/okfLint';
 import * as db from '../db';
 import { findContradictions } from '../extract/contradictions';
 import { ServiceError } from '../extract/wiki';
-import { recheckOff } from '@/lib/wikiRecheck';
-import { getWikiRecheck } from '../model/appSetting';
 import OkfLint, { type LintCheck, type LintFinding } from '../model/okfLint';
 import Source, { hashText, type WikiPage } from '../model/source';
 import { loadOkfBundle } from '../okf';
@@ -28,8 +26,8 @@ export type LintOptions = {
   checks?: LintCheck[];
   pinIds?: number[];
   fix?: boolean;
-  // stale: which links to read again. Without either, the admin setting
-  // decides. recheckDays re-reads links last read this long ago; viewed
+  // stale: which links to read again; without either, none (links are only
+  // re-read by hand). recheckDays re-reads links last read this long ago; viewed
   // re-reads links of pins viewed since they were last read; both may be set.
   recheckDays?: number;
   viewed?: boolean;
@@ -189,13 +187,10 @@ async function lintConformance({ pinIds }: LintOptions): Promise<CheckReport> {
 
 async function lintStale({ pinIds, fix, limit = 50, viewedBefore, ...options }: LintOptions, refresh: Set<number>): Promise<CheckReport> {
   const out = newReport();
-  const rule =
-    options.viewed || options.recheckDays != null
-      ? { viewed: !!options.viewed, days: options.recheckDays ?? null }
-      : await getWikiRecheck();
-  if (recheckOff(rule)) {
+  const rule = { viewed: !!options.viewed, days: options.recheckDays ?? null };
+  if (!rule.viewed && rule.days == null) {
     // Earlier stale findings stand until links are read again.
-    out.notes.push('skipped: re-reading links is off (Admin > Pins, or pass --viewed / --recheck-days)');
+    out.notes.push('skipped: no links asked for (pass --viewed / --recheck-days)');
     return out;
   }
   const due = await Source.dueForRecheck({
