@@ -2,6 +2,7 @@
 // ISO strings once serialised.
 
 import type { CommentMood } from './commentMood';
+import type { CompanySentiment } from './companySentiment';
 import type { PinAwardJson } from './awards';
 import type { PinTagJson } from './tags';
 
@@ -274,6 +275,7 @@ export type SearchedCompany = {
   followerCount: number;
   commentCount: number;
   mood: CommentMood | null;
+  sentiment: CompanySentiment;
 };
 
 export type SearchPage = {

@@ -43,6 +43,66 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **Tags should be relevant and catchy.** Owner, 2026-09-21: pin 2389 (US Fiscal Year 2028) was tagged `Appropriations, Federal budget, Fiscal year, United States` and was missing the thing anyone would actually search for - `Government Shutdown`. Tag the consequence and the familiar name people know the event by, not just the procedural vocabulary of the source, and title-case them (`Federal Budget`, `Fiscal Year 2028`).
 
 * **A product pin says what the product is.** Owner, 2026-09-22, on pin 2346 (the A350F first flight): "Product pins should have notable features in long form summary". A pin about an aircraft, vehicle, device, chip, game, AI model or software release gets summary points on what is new or distinctive about it and its headline specifications with units, not only the event's date and schedule. Owner, same day: the features go in **their own section** - `<h3>Notable features</h3><ul>...</ul>` after the event's list - "rather than piled into large list of bullets with other things". Built into all three summary prompts (`PRODUCT_FEATURES_RULE` in `src/server/extract/index.ts`); the wiki pages now record a product's features too. The manufacturer's product page is the usual place for the specs; add it as a reference.
+## 2026-09-22 - Layoffs, eighteen pins (2904-2924, @EconDesk)
+
+* **Done**: Ian asked to "pin Layoffs news events". Eighteen layoffs from June
+  to October 2026 - Rackspace, Robinhood, Lucid, Bungie, Monday.com, Visa,
+  Zillow, Etsy, Apple (Vision Pro and Siri), Uber, Volkswagen, Jaguar Land
+  Rover, Omnicom, Oracle, and four forward-dated closures from WARN notices
+  (Wonder's New Jersey kitchens, Zalando Erfurt, Samsung's New Jersey HQ,
+  TikTok Nashville). Four agents, one shared instructions file, posted through
+  `POST /api/pins` with an @EconDesk token. Every pin carries the shared tag
+  `Layoffs` (as Microsoft's 2852/2853 already did) and `Labour` first.
+* **Learned**: **the tracker was wrong on almost every pin.** Discovery came
+  from tracker round-ups (Yahoo's tech-layoffs tracker, search summaries), and
+  verification changed a fact on 12 of 18: Uber's memo is dated 2 September
+  not the 4th; Volkswagen did not "lay off 50,000 on September 5" - its
+  supervisory board approved about 50,000 *more planned* cuts on 3 September;
+  Omnicom's 15,000 came from the CFO at Goldman's Communacopia, not an earnings
+  call, and includes disposals and offshoring; Samsung's 739 are at Englewood
+  Cliffs, not Ridgefield Park (that is a separate 179-role SDS notice);
+  Lucid's 18% is of the *U.S.* workforce; Monday.com's letter says ~620, not
+  ~630; Apple's "at least 60" became ~200. A tracker only shortlists; the
+  filing or the memo is the fact.
+* **Learned**: **EDGAR is the fastest primary source for a listed company's
+  layoff** - an Item 2.05 8-K gives the share and the charge, the next 10-Q the
+  top-up (Oracle's $2.1B plan plus ~$700M "to reflect additional actions" is
+  the pin's price). No WebSearch needed ([Sources](sources.md)).
+* **Learned**: **WARN notices give the forward calendar.** A closure notice
+  carries a separation date weeks ahead, so four of the eighteen are
+  `scheduled` pins still to come, placed at the closing site's WARN address.
+* **Learned**: **a tag that is also a category name becomes a category.** An
+  `AI` tag turned into a fourth category on Oracle, Visa and Apple; kept,
+  because each blamed or aimed its cuts at AI.
+* **Learned**: news videos on a layoff are scarce: Omnicom, Zillow and Etsy
+  have none from an established channel (commentary channels only), so they
+  carry three pictures. Bungie's is Jason Schreier's own "Why Destiny Died",
+  from the Bloomberg reporter who broke the story, a month before the cuts.
+* **Learned**: reverse-geocoding an HQ's street point can land on a neighbour
+  (Uber's 1725 3rd St came back "Misalignment Museum", Lucid's Newark HQ a
+  building over); search the named building and reverse that, or zoom=17.
+* **Learned**: an existing Company row may be the **brand**, not the group:
+  "Volkswagen" (132) holds the ID. car and the Microbus, so the group-wide cut
+  went to a new "Volkswagen Group" row.
+* **Feedback**: none yet; the standing scrape-without-sign-off rule.
+* **Changed**: [Vertical recipes](verticals.md) gains a Layoffs row;
+  [Sources](sources.md) gains EDGAR, state WARN notices, keyless YouTube search
+  and the sites blocked to `curl`.
+
+## 2026-09-22 - Amazon news events (pins 2854-2886, twelve pins, seven curators)
+
+* **Done**: Ian's "pin Amazon news events", with no API credit (`GET /api/scrape` came back `llm: "session"`). Four research agents wrote POST bodies to a scratch dir, and the session reviewed, validated and posted each one itself as the vertical's curator: Prime Big Deal Days 6-7 Oct (2854, @RetailDesk), the $20 starting-pay raise effective 27 Sep (2855, @EconDesk), the 21 Air Flight 7598 overrun at Miami (2872) with Amazon's pause of 21 Air threaded under it (2873), the Wiwynn Socorro plant (2874) and the $18B Louisiana data-centre plan (2875, all @BuildDesk), the FTC monopoly trial on 29 Mar 2027 (2876, @LawDesk, `delayed` from 13 Oct 2026), the $20M Colorado River Basin Collaborative (2877, @ClimateDesk), Kevin Mandia's board seat (2878, @CyberDesk), and AWS's NATO RESTRICTED approval, DuckLabs acquisition and re:Invent 2026 (2884-2886, @TechDesk).
+* **Learned - the newsroom's daily roundup is the index.** `aboutamazon.com/news/company-news/amazon-news-today-top-stories-company` reads with plain `curl` and links every current story; one fetch gave the whole candidate list. Each story's own page is the `sourceUrl`, never the roundup.
+* **Learned - announcement day is not event day.** Amazon's pay post gives no effective date; the AP wire ("effective starting Sept. 27, the retailer said") does, so the pin is the 27th with that reference owning the date at 88. The Louisiana page is a February article *updated* on 18 August, and the 21 Air pause is filed on Amazon's updates page under 13 September, not the 14th that CNBC's URL suggests.
+* **Learned - a court's own scheduling order is a good source** for a trial date: CourtListener's RECAP PDFs (Dkt. 577, 700 for FTC v. Amazon) state the date and its history where MLex, Law360 and Bloomberg Law are paywalled past the lead.
+* **Learned - Nominatim 429s under parallel agents.** Three of four agents were rate-limited for the whole run and fell back to Photon (komoot, OSM data) for forward and reverse geocoding. Stagger agents' geocoding.
+* **Learned - same-day news has no video yet.** NATO (same day), DuckLabs and the Mandia board seat have none from an official or verified channel, and were posted without one rather than padded with commentary channels or an off-topic interview.
+* **Learned - Nasdaq's lookup rejects SNCY** ("Nasdaq has no US stock or ETF SNCY"), so Sun Country could not be attached to 2873.
+* **Trap - never put the owner's email in a request.** An agent fetching an SEC 8-K put Ian's address in the User-Agent (the SEC asks for a contact). SEC fetches use a generic contact string.
+* **Judgement calls to revisit**: 2874's company is Wiwynn (its plant and investment), so it is not under the Amazon company; 2872's company is 21 Air and it went to @BuildDesk because no desk owns crashes; the Q3 2026 earnings pin was not made because Amazon has not dated it; Coca-Cola was left off 2877 (only its foundation joined); a relative's salary in the Mandia 8-K was left out of 2878.
+* **Feedback**: none yet; standing scrape-without-sign-off.
+* **Changed**: [Sources](sources.md) Nominatim row (the 429 fallback and the contact rule).
+
 ## 2026-09-22 - Notable features on product pins (pin 2346, @BuildDesk)
 
 * **Feedback**: "Product pins should have notable features in long form summary" - the A350F
@@ -4041,3 +4101,481 @@ Ian said yes to moving the month-only pins to their days and adding stars.
   Restaurant Naides (`PinRating` 1/3 each), a Bib Gourmand on Komal and plain selections for
   Creepies and Bistrot Ha - neither of which is a star score, so no rating.
 * **Feedback**: "yes" to the offered dates and stars.
+
+## 2026-09-22 - Tesla news, eight pins (@TechDesk)
+
+Ian asked to "pin tesla news". Four agents posted pins 2825-2832 through `POST /api/pins`
+without API credit: the Cybercab's Austin launch (2830, threaded under 235) and NHTSA's audit of
+it (2831), the knee-airbag buyback recall (2829), the Semi factory rollout (2828), the Roadster
+reveal (2825), Q3 deliveries (2826) and earnings (2827, threaded under 2826), and the EU vote on
+FSD (Supervised) (2832). Every pin carries the tag `Tesla`.
+
+* **Learned - tesla.com and ir.tesla.com refuse every automated fetch** (Akamai 403 to curl, the
+  headless scraper and WebFetch alike, PDFs included). Take Tesla's own words from the copies
+  filed elsewhere: every press release and quarterly update is an 8-K Exhibit 99.1 on SEC EDGAR
+  (`data.sec.gov/submissions/CIK0001318605.json`, then
+  `/Archives/edgar/data/1318605/<accession>/index.json`, with a User-Agent that names a contact);
+  safety matters are on `static.nhtsa.gov`, listed per recall or audit by
+  `api.nhtsa.gov/safetyIssues/byNhtsaId?filter=recalls&nhtsaId=<id>`; announcements are on
+  Tesla's X accounts (read through the oEmbed and syndication APIs). Pictures embedded in SEC
+  filings 403 the app's image downloader, so they are not usable as media.
+* **Learned - the official filing beats the brief and the press.** NHTSA's recall report dated
+  the owner letters 5 September where coverage (and the brief) said 15 September, and named 15
+  cars; its special order dates the Cybercab's commercial service to 3 September where the press
+  says public rides opened on the 4th. Date the pin from the filing and say what the press
+  reports in the summary. A NHTSA press release carries no date in its fetched text; put the
+  special order's `startDate` on its reference so the date tick lands on the page that dates it.
+* **Learned - check a quoted time zone twice.** A Texas event reported as "8:30 p.m. local time"
+  was 8:30 p.m. Eastern (7:30 p.m. in Waco); a countdown page that prints UTC settled it.
+* **Learned - an EU committee date can be checked in the Comitology Register's JSON API**, which
+  curl reads though the Angular site renders empty to the scraper:
+  `ec.europa.eu/transparency/comitology-register/core/api/front/committees/C35300/meetings?size=500`
+  (the TCMV). A meeting the register does not list yet stays `estimated`, however many trade
+  outlets repeat the date.
+* **Learned - a quarterly earnings pin posted ahead is `estimated`,** dated from the company's
+  pattern (Tesla: deliveries on the 2nd day of the quarter, results on the Wednesday nearest the
+  22nd). The deliveries release announces the earnings date, so firm the earnings pin up to
+  `scheduled` when it comes out.
+* **Fixed - `[S]` and `[n]` citations posted by hand stayed literal.** The playbook said the save
+  converts them, but only the scrape did. `POST` and `PUT /api/pins` now link them to the source
+  and to the body's references in order (`citePostedSummary`); pins 2825-2827 and 2830-2831 were
+  repaired by a whole-pin `PUT`.
+* **Changed**: [Vertical recipes](verticals.md) - a Tesla row.
+
+
+## 2026-09-22 - Microsoft news, twelve pins across four desks
+
+Ian asked to "pin Microsoft news events". Four agents posted twelve pins through `POST /api/pins`
+without API credit, each on the desk its vertical names: @TechDesk for the company, product and
+event pins (2852 and 2853, the July cut of 4,800 jobs and today's "Continuing Our Reset" with Halo
+moving to Activision, one oldest-first chain; 2856, the April OpenAI amendment; 2857, FY27 Q1
+earnings; 2879, Ignite 2026; 2880, Windows 11 26H2; 2881, Copilot Cowork; 2882, Fairwater in
+Wisconsin), @CyberDesk for September's Patch Tuesday (2848), @LawDesk for the FTC probe (2850) and
+@GameDesk for Gears of War: E-Day (2843) and Kojima's Physint casting at TGS (2845, threaded under
+302). Every pin carries the tag `Microsoft`; the Xbox ones also `Xbox`. Every source wiki was
+written by hand and `wiki:export` returns 0 jobs on all twelve.
+
+* **Learned - Microsoft's own pages read with plain `curl` and a browser UA**:
+  blogs.microsoft.com, news.microsoft.com, news.xbox.com, xbox.com store pages (edition prices),
+  techcommunity, learn.microsoft.com, the investor-relations press releases and ignite.microsoft.com.
+  Microsoft publishes its layoff memos itself (Amy Coleman's on blogs.microsoft.com, the Xbox one on
+  Xbox Wire), so a Microsoft pin rarely needs the press as its source. The Microsoft 365 blog read
+  with curl though the app's scraper returned nothing.
+* **Learned - the brief's dates were wrong twice, and the announcement fixed both.** "Copilot Cowork
+  GA in September" was 16 June (Charles Lamanna's post: "Today we're announcing the general
+  availability"); "FTC widens the probe, 1 June" was The Verge's follow-up to a Bloomberg exclusive of
+  13 February. A search summary or aggregator (tech-insider.org) turns a follow-up into the event's
+  date. Trace every date back to the page that first said it, and never take one from a WebSearch
+  summary: one also claimed Ignite 2025 was digital-only, and it ran in person for 20,000.
+* **Learned - MSRC's Security Update Guide renders empty, but its CVRF API is keyless JSON:**
+  `api.msrc.microsoft.com/cvrf/v3.0/updates('2026-Sep')`, then `/cvrf/2026-Sep` (17 MB). It dates
+  the release and marks the exploited CVEs (a Threats entry reading `Exploited:Yes`). Cite Microsoft
+  Learn's "Update release cycle for Windows clients" for the 10:00 AM Pacific release time. The
+  outlets' flaw counts disagree (966, 974, 964, 975 depending on cloud-side fixes); follow the
+  source and say so in the summary.
+* **Learned - a Bloomberg exclusive is often mirrored in full on news.bloomberglaw.com**, same byline
+  and timestamp, readable to curl, where bloomberg.com is 403 to curl and a paywall to the scraper.
+* **Learned - Microsoft's earnings pattern:** every result since October 2024 came on the last
+  Wednesday of the month after the quarter, after the close, with the call at 2:30 p.m. PT (EDGAR
+  8-Ks with item 2.02 in `data.sec.gov/submissions/CIK0000789019.json`). Pin 2857 is `estimated` for
+  28 October until the IR home page's "next earnings release" panel names the day. Windows 11 26H2
+  (2880) is `estimated` for 31 October on the same kind of evidence (25H2 went out 30 September 2025);
+  Microsoft's 7 October Windows and Surface event may date it.
+* **Learned - a game launch can be a timed pin.** Xbox Wire's "gone gold" post gives the exact
+  worldwide launch time ("8am Pacific (15:00 UTC)"). Steam's `release_date` said 9am PT, so don't take
+  the time from Steam - and don't cite a Steam store page at all: the pipeline stores its age gate.
+* **Learned - a YouTube live-stream VOD carries `startTimestamp` and `endTimestamp` in the watch
+  page's HTML.** That gave the TGS broadcast's end; its start includes the pre-show, so take the
+  start from the announced time. Tokyo Game Show's current site is `tgs.cesa.or.jp/<year>/en`; the
+  old nikkeibp addresses redirect to 2024 or 404.
+* **Learned - four agents at once exhaust the free services.** Nominatim answered 429 to every
+  request partway through; Photon (`photon.komoot.io`, OSM data, keyless) did forward and reverse
+  geocoding instead and found the named OSM feature "Microsoft Fairwater AI Datacenter". The YouTube
+  Data API's search quota ran out too; `playlistItems` on a channel's uploads playlist (`UU` + the
+  channel id after its `UC`) still worked.
+* **Learned - verify the channel, not the name.** A search for "Halo" returned a GTA-roleplay
+  streamer called Halo; the official channel is `HALO` (`UC7NCg0venpKJg3kuJojKlbQ`, oEmbed author
+  `@Halo`). The Microsoft Security channel posts a monthly "Security Update Release Summary", a
+  ready company video for any Patch Tuesday pin.
+* **Learned - three pins could not reach a video.** No earnings video exists on Microsoft's channels
+  (2857, two pictures), and YouTube had only commentary channels for the FTC probe (2850, three
+  pictures). The layoffs pin's video (2852) is Xbox's showcase recap: company channel, not the event.
+* **Learned - the save adds podcast references on its own,** which took Gears of War (2843) to seven
+  references against the cap of five; changing a reference afterwards forces a summary rebuild.
+* **Learned - the company's stored ticker note replaces the one in the POST body** for its own
+  `relation: company` ticker; related and supplier notes are kept.
+* **Slip - an agent sent Ian's email address to Nominatim** in its first User-Agent header. Use the
+  app's own UA from `src/server/geocode.ts` for Nominatim, and a project contact
+  (`admin@chronopin.app`) for EDGAR, never the owner's address.
+* **Changed**: [Vertical recipes](verticals.md) - a Microsoft row; [Sources](sources.md) - rows for
+  Microsoft's sites, MSRC CVRF, Bloomberg Law, Photon, Steam and TGS, and Windows Central reads again.
+
+## 2026-09-22 - Abbott news, twelve pins (@HealthDesk)
+
+Ian asked to "pin Abbott Labs news events". Three agents drafted bodies without API credit and the
+lead posted them in order through `POST /api/pins` (pins 2887-2896, 2898-2899): the Exact Sciences
+deal and its close (2888 threaded under 2887), Q2 2026 results and the estimated Q3 call (2890
+under 2889), the FreeStyle Libre 3 false-low correction, the Gill/NEC and DOJ infant-formula
+settlements, the Google glucose-AI tie-up, FDA approvals of Volt PFA, TactiFlex Duo and the Libre
+Duo glucose-ketone sensor, and the Amulet 360 CE Mark. Every pin carries the tag `Abbott`.
+
+* **Learned - drafts to files, one poster.** Agents wrote bodies to `out/<key>.json` with a
+  `parentKey`; the lead reviewed and posted them in sequence, so the first post created the one
+  `Company` row (ABT adopted from its `stocks`) and the threads resolved from the ids it recorded.
+  Parallel posters would race on the company-by-name lookup.
+* **Learned - `abbott.mediaroom.com` is the whole archive in reach of `curl`**
+  (`/press-releases?l=100&o=<offset>` lists 100 a page, back to 2022). Its releases carry only the
+  logo and no video embeds, so the pictures came from cited coverage (MedTech Dive's `imgproxy`
+  images, Chicago Tribune/Quartz/Journal Sentinel photos through Yahoo) and the videos from
+  Bloomberg, local TV, NBC and Abbott's own product channels. The CE Mark release's PR Newswire
+  photos (`mmx.prnewswire.com`, 2700px) beat the FDA announcement's 400px ones.
+* **Learned - FDA records.** `accessdata.fda.gov` refuses `curl`; the openFDA API gives the PMA or
+  De Novo number, and the record page reads through WebFetch. The FDA's decision date runs ahead of
+  the company's release (Volt 19 vs 22 December 2025, TactiFlex Duo 4 vs 8 September 2026); the pin
+  takes the release day and the summary gives the FDA's.
+* **Learned - an earnings pattern can shift.** Abbott reported Q3 on the third Wednesday of October
+  for years, but every 2026 report came on a Thursday, so Q3 2026 is `estimated` on 21 October with
+  15 October named as the other likely day. The call notice due in late September settles it.
+* **Learned - geocode the HQ once.** Three agents hitting Nominatim at once got 429s for minutes,
+  and they chose two different "Abbott Park" points (the first hits are city parks). The lead should
+  geocode the shared place and hand it down.
+* **Learned - blocked trade press:** Fierce Biotech, MassDevice, MobiHealthNews, MDDI, Medical
+  Device Network, TCTMD, Investing.com and `abbottinvestor.com` all 403 to fetches.
+* **Feedback - repeat of the EDGAR rule:** a first reachability check sent the owner's address in a
+  `From:` header. The contact is a project address, never the owner's.
+* **Changed**: [Vertical recipes](verticals.md) - a medtech and health company news row.
+
+## 2026-09-22 - Eli Lilly news, ten pins (@HealthDesk)
+
+Ian asked to "pin Eli Lilly news events". Four agents posted pins 2840-2842, 2846, 2849, 2861,
+2863, 2866, 2902 and 2903 through `POST /api/pins` without API credit: the first $1 trillion
+drugmaker close (2846), three acquisitions (Centessa 2841, the three vaccine developers 2840,
+Merida 2842), retatrutide's TRIUMPH-1 readout (2861) and its Q1 2027 FDA submission (2866,
+threaded under it, with the slip from end-2026 as a delay), eloraTZP at EASD 2026 in Milan
+(2863), the Inluriyo + Verzenio approval (2902), the Houston plant groundbreaking (2903, threaded
+under the Foundayo approval 1860) and Q3 2026 earnings (2849, `estimated`). Every pin carries the
+tag `Lilly`; 1860 (@TechDesk's) was re-tagged to match. The company line and a standing NVO
+relation were set with `stocks:sync --about/--relate`, so every Lilly pin now carries NVO.
+
+* **Learned - `investor.lilly.com` and its `lilly.gcs-web.com` mirror 403 every fetch;** the PR
+  Newswire copy of each release is Lilly's own words and reads with `curl`, and Lilly's
+  newsroom list there is the quickest way to see whether an earnings date has been confirmed
+  ("Lilly confirms date and conference call for ...", about two weeks before). Its `og:image`
+  is always a logo, so pictures come from the cited coverage.
+* **Learned - trial readouts are not 8-Ks,** but the quarterly results Exhibit 99.1 (CIK 59478)
+  restates the pipeline timelines ("first quarter of 2027"), so it is the filed source for a
+  submission date.
+* **Learned - "hit $1 trillion" coverage is intraday.** Settle a close with Nasdaq's daily close
+  times the share count on the 10-Q cover (21 Nov 2025: $1,059.70 x 945.4M = $1.0018T).
+* **Learned - a completed takeover's target ticker is dropped** (CNTA, delisted when Centessa
+  closed), so the pin cannot carry it; the target's closing 8-K on EDGAR dates the completion.
+* **Learned - a company-level relation lands on every pin of the company,** even off-topic ones
+  (NVO on a breast-cancer approval). Set rivals at company level only when they fit most pins.
+* **Learned - four agents geocoding at once got Nominatim 429s for ~10 minutes;** Photon
+  (`photon.komoot.io/api` and `/reverse`) serves the same OSM data. A new plant not yet in OSM
+  was placed from the EPA ECHO stormwater permits for its ZIP (keyless `get_facilities?p_zip=`).
+* **Learned - EASD's programme PDF** (`pdftotext -layout`) gives each session's hall and time;
+  easd.org 403s `curl`, WebFetch saves the PDF. YouTube searches for a congress are dominated by
+  "ConferenceHype" AI summaries - not a news outlet, never a pin's video.
+* **Learned - a create can half-fail:** 2903's POST returned 500 "fetch failed" after the pin row
+  was saved with no media, tags or stocks; a whole-pin `PUT` of the same body completed it.
+* **Learned - one Getty photo (2092473213) leads STAT, BioPharma Dive and CNBC Lilly stories,**
+  and CNBC reuses one Reuters Lilly photo across stories; view before taking an `og:image`.
+* **Changed**: [Vertical recipes](verticals.md) - Lilly added to the health company news row.
+
+## 2026-09-22 - Johnson & Johnson news, thirteen pins (@HealthDesk, one @LawDesk)
+
+Ian asked to "pin Johnson & Johnson news events". Five agents posted their own pins through
+`POST /api/pins` without API credit and wrote every link wiki by hand (`wiki:export` at 0 jobs on
+all thirteen). Every pin carries the tag `J&J`, and `tag:"J&J"` returns all thirteen. Threads:
+the Q3 call (2864, 13 October, `scheduled`) heads Q2 results (2865), newest first as a schedule;
+the DePuy Synthes spinoff runs oldest first, announcement (2858) -> Apollo talks (2862) -> an
+`estimated` mid-2027 separation (2883, at Raynham); talc runs the $1.56B Baltimore verdict (2851,
+@LawDesk, `company: null`) -> the $5.5B ovarian settlement (2869); the TrumpRx pricing deal (2844)
+heads the Wilson, NC plant Governor Stein named the next day (2847). Standalone: the 8 December
+Enterprise Business Review (2867), Icotyde's approval (2897), Caplyta's bipolar-mania Phase 3
+(2900) and the Firefly Bio close (2901).
+
+* **Learned - parallel posters are safe on the company row.** `Company` is upserted with
+  `ON CONFLICT ("name")`, so five agents posting at once made one `Johnson & Johnson` row (JNJ
+  adopted from `stocks`, logo found). The Abbott run's single-poster pattern is not needed for
+  that; it is still the cure for Nominatim 429s, which every agent here hit for 10-15 minutes.
+  Geocode the HQ once and put the point and label in the brief.
+* **Learned - the first report is earlier than the roundups.** The Apollo/DePuy scoop was
+  Bloomberg's on Friday 11 September; the 14 September dates in the search results were
+  follow-ups. Bloomberg reads in full through its Yahoo Finance syndication ([Sources](sources.md)).
+* **Learned - an FDA letter carries the time.** openFDA gave NDA 220149 approved 2026-03-17 and
+  the signed letter reads "03/17/2026 04:12:23 PM"; J&J announced at 07:49 ET on the 18th. Pin 2897
+  is timed to the letter, where the Abbott row dates approvals to the release day - two rules for
+  one vertical, pending Ian's call.
+* **Learned - a settlement with no court step has no forward pin.** The talc proposal needs 95%
+  claimant participation, not court approval, and the MDL's only dated item is a fortnightly
+  status report; the third chain pin was skipped rather than invented.
+* **Learned - an investor-day date lives in the call transcript.** J&J's CFO named 8 December on
+  the Q2 call; no press release or events calendar carried it yet. That is the company's own word,
+  so `scheduled`, with no venue - the pin sits at HQ and says so.
+* **Learned - a POST can 500 and still create the pin.** 2847 answered "fetch failed" after the
+  row and references were saved (create is not transactional); media, tags and stocks were
+  restored by a whole-pin `PUT`. Search before re-posting after a 500.
+* **Learned - scrape media on J&J pages is junk:** a cookie-banner logo and two photos of
+  **Dwayne Johnson** from Wikipedia (the title-word match). `mms.businesswire.com`,
+  `jnjmedtech.com` press images and SEC-embedded images all 403 the downloader.
+* **Learned - blocked:** massdevice, fiercebiotech/fiercepharma (curl only; the app's scraper
+  reads them), odtmag, mddionline, investing.com, seekingalpha, drugs.com, businesswire (all
+  fetchers), The Hill (captcha, then 404). The YouTube Data API search quota ran out mid-run;
+  `channels?forHandle=` + `playlistItems` and oEmbed still work.
+* **Mistake (the lead's) - the owner's email went out in a User-Agent.** The brief told agents to
+  use a Nominatim UA naming Ian's address, overriding this page's own rule, and they sent it to
+  Nominatim, Wikimedia, SEC, Photon and Overpass. A brief multiplies a slip across every agent:
+  the contact is a project address, checked in the brief before launch.
+* **Changed**: [Vertical recipes](verticals.md) - J&J folded into the medtech and health row;
+  [Sources](sources.md) - jnj.com, investor.jnj.com's feed API, Bloomberg through Yahoo.
+
+## 2026-09-22 - HPE news, eight pins (@TechDesk, one @LawDesk)
+
+Ian asked to "pin Hewlett Packard Enterprise Company news events". Three agents posted, without API
+credit, through `POST /api/pins`: Q3 FY26 results (2868) and the estimated Q4 call (2870, answering
+2868); the Networking Investor Day (2871); Discover Las Vegas 2026 (2859) and Barcelona 2026 (2860);
+the Juniper close (2913), Judge Pitts' Tunney Act ruling on it (2917, @LawDesk, answering 2913); and
+Lux's delivery to Oak Ridge (2920). Every pin carries the tag `HPE`. HPE's company line and its
+relations (NVDA, AMD, AVGO suppliers; CSCO, DELL related) were set by hand with `stocks:sync`.
+
+* **Learned - a first pin's stock note becomes the company's line.** `adoptCompanyStock` wrote
+  the Barcelona pin's `note` ("which holds HPE Discover Barcelona as its flagship annual European
+  event") into an empty `Company.tickerNote`, so every HPE pin would have read it. When a batch
+  opens a new company, set `--about` with a company-wide clause straight after the first post.
+* **Learned - a rolling event page is the wrong source for a past edition.** hpe.com's Discover
+  Las Vegas page already showed the 2027 dates; the 2026 pin cites the 2026 on-demand page and dates
+  the event from NVIDIA's event page (a reference with its own `startDate`). Barcelona's page will do
+  the same after December.
+* **Learned - the brief's guessed time was wrong.** Q3's call was 4:30 p.m. ET, not the 5:00 the
+  brief assumed (earlier Q4 calls were at 5:00); the transcript PDF's header settled it. Read the
+  time from the company's own transcript or webcast notice, never from a brief.
+* **Learned - check whether a court has ruled before pinning a hearing.** The brief offered the
+  March hearing; the agent found the 12 August 2026 order on CourtListener and pinned the ruling.
+* **Learned - a reference `startDate` must be a bare `YYYY-MM-DD`;** a time part is a 400 before
+  anything is saved.
+* **Open**: the Investor Day venue is inferred (HPE's Sunnyvale campus, the former Juniper HQ);
+  HPE's release says only "Sunnyvale, California". The two earnings pins have no video, since HPE
+  uploads none.
+* **Feedback**: none yet.
+* **Changed**: [Vertical recipes](verticals.md) - an HPE row; [Sources](sources.md) - hpe.com,
+  investors.hpe.com, olcf.ornl.gov, CourtListener RECAP.
+
+## 2026-09-22 - Alphabet news, twelve pins (@TechDesk, @LawDesk)
+
+Ian asked to "pin Alphabet news events". Five agents posted pins 2833-2839 and 2925-2929: Gemini
+3.8 Flash (2834), Google's disclosure that Gemini broke into three outside systems (2839),
+Googlebook going on sale (2837), the EUR 13 billion Finnish data centres (2838), Judge
+Brinkema's ad-tech remedies (2835, @LawDesk) and the joint proposed final judgment due under it
+(2836, threaded), Alphabet's Q3 results (2833) and Waymo's public launches in Las Vegas, Denver,
+San Diego and Tampa plus its Singapore announcement (2925-2929). Every pin carries the tag
+`Alphabet` and its unit (`Google`, `Waymo`).
+
+* **Learned - an earnings date called "confirmed" by a calendar is usually its own estimate.**
+  TipRanks and search summaries said Alphabet reports 27 October; Alphabet had announced nothing,
+  the day is a Tuesday, and it has reported on a Wednesday for five quarters. Check the company's
+  own IR news list (abc.xyz reads through `/api/scrape`, not curl), then compare Wall Street
+  Horizon with Nasdaq's `api.nasdaq.com/api/analyst/<SYM>/earnings-date` (Zacks); here they said
+  28 October and 4 November. Broker "expectations" pages carry stale guidance: take capex
+  guidance from same-day earnings coverage (Alphabet's is $195-205B, not the $180B in the brief).
+* **Learned - read the order, not the paraphrase.** The press said both sides file proposed final
+  judgments; Brinkema's order (ECF 1857) asks for one joint filing within 30 days. CourtListener's
+  search API reads a whole docket keyless
+  (`api/rest/v4/search/?type=r&q=docketNumber:"1:23-cv-00108" court_id:vaed`), its docket page
+  shows every entry's text, and PDFs from storage.courtlistener.com read with `pdftotext`. Date a
+  ruling from its "Signed by ... on M/D/YYYY" line.
+* **Learned - a US company's announcement about Asia carries the US date.** Waymo's Singapore
+  post says 17 September; the LTA release and local coverage say the 18th, which is also the UTC
+  day. Waymo's own launches are dated on `waymo.com/updates` (curl reads it); local TV and papers
+  carry the service-area boundaries its posts leave out.
+* **Learned - an incident disclosure may be only a statement to the press** (Google's Gemini
+  intrusion: a quote from its VP of security engineering to the WSJ and others). Use the fullest
+  outlet quoting it as the source and say so in the date reasoning.
+* **Learned - Nominatim throttles the shared IP** when several agents geocode at once (429s for
+  about ten minutes). Retry with a 60-second back-off, or have one agent geocode for all.
+* **Fixed - WebP and AVIF pictures failed the save** ("Mime type image/webp does not support
+  decoding"), which blog.google and most CDNs now serve. `shrinkImage` converts them with sharp
+  (JPEG, or PNG when the picture has transparency) before Jimp reads them.
+* **Still open - a create that fails part way leaves a half-saved pin.** The pin row and its
+  references are written before its media, so a failing picture left pins 2834 and 2837 without
+  media, tags or stocks, and a retry was refused as a duplicate source. After any `POST` error,
+  search for the pin and repair it with a whole-pin `PUT` rather than posting again.
+* **Learned - related and supplier tickers are written after the save**; read the pin back about
+  ten seconds later before checking them.
+
+
+## 2026-09-22 - Babcock & Wilcox news, twenty pins (@EnergyDesk)
+
+Ian asked to "pin Babcock & Wilcox news events". Four agents posted pins 2930-2949 through
+`POST /api/pins` without API credit and wrote every link wiki by hand (`wiki:export` at 0 jobs on
+all twenty). Every pin carries the tag `B&W` and `Energy` first, so the batch went to @EnergyDesk.
+Chains, oldest first: the Applied Digital / Base Electron project (2941 LNTP -> 2944 Siemens
+Energy turbines -> 2946 $2.4B full notice to proceed -> 2948 the 20-turbine FastPower order ->
+2949 the plant going online, `delayed` from 2028 to 2030) and the earnings calls (2942 Q4 2025 ->
+2943 Q1 -> 2945 Q2 -> 2947 Q3, `estimated` 9 November 5 pm ET). Standalone: the Allen-Sherman-Hoff
+sale (2930), the $67.5M ATM raise (2931), the $40M Canadian refinery scrubber (2932), the $230M
+stock offering (2933), the $50M buyback (2934), the 2026 notes paid off (2935), Denham Capital
+(2936), Cache Power's Alberta study (2937), a SolveBright carbon-capture LNTP (2938), TerraSpark's
+West Virginia coal plant (2939) and a $130M air-quality project (2940).
+
+* **Learned - the lead's newsroom dates were wrong six times.** Pairing each release link with
+  the nearest date on B&W's list page gave neighbours' dates (Denham 10 Sep not 29 Sep, TerraSpark
+  8 Jun not July, the ATM 7 Nov not 20 Nov, the notes 14 Aug not 10 Sep, the 20-turbine order
+  11 Aug not 17 Aug). Every agent re-dated from the release's own "Posted" line and EDGAR; a
+  brief's dates are candidates, never facts. EDGAR's `data.sec.gov/submissions/CIK0001630805.json`
+  lists every 8-K with its items and acceptance time.
+* **Learned - a completion can precede its release.** The A-S-H 8-K dates the sale's close
+  31 October; the release says "has sold" on 4 November. The pin takes the close.
+* **Learned - timing a release with no time.** B&W releases carry a date only. Business Wire's
+  copy on Yahoo Finance gives it (`datePublished`; the URL suffix `-103000775.html` is 10:30:00Z),
+  and the Item 2.02 8-K's EDGAR acceptance stamp is a citable time for earnings. Morningstar's
+  Business Wire timestamps disagree with EDGAR - do not use them. B&W's results release is not
+  always on the call day: Q3 and Q4 2025 went out 6 and 12 days early, bundled with a project.
+* **Learned - the site lives in the investor deck.** No release names where the Base Electron
+  plant is; B&W's August 2026 investor overview (8-K Ex 99.2, slide 10) says near Center, North
+  Dakota. The design-build agreement is on EDGAR (Q1 10-Q Ex 10.3) with the schedule redacted, so
+  the in-service date came from Base Electron quoted in the Bismarck Tribune ("operational in
+  2030") against B&W's own "end of 2028".
+* **Learned - TownNews sites ROT47-encode their paragraphs** (Bismarck Tribune; lines starting
+  `kAm` in the raw HTML). The app's stored source text keeps the encoded form, so a credit-funded
+  wiki job would read gibberish; decode before writing the wiki.
+* **Learned - B&W pictures.** Release `og:image`s are the logo. The real picture is the card
+  image on B&W's topic and product pages (`/assets/...__FillWzQwMCwyMjZd.jpg`; drop the `__Fill`
+  or `__ResizedImage` suffix for the original), and `investors.babcock.com` hosts the current
+  investor deck as 3000px slides. SEC-hosted images 403 the app's downloader. The only HQ picture
+  is `babcock.com/assets/Nav/Exterior-view-of-Babcock-Wilcox-Akron-HQ.jpg` (400px).
+* **Learned - B&W video is one clip.** The B&W YouTube channel (`UC1gHvDVeecSAnqHMKOHEU0w`, 24
+  uploads) has the CNBC Mad Money CEO interview (aired 15 May 2026, the offering's pricing day)
+  and an NYSE Live clip; seven of the twenty pins have no video. The YouTube Data API search
+  quota ran out on the first query - `channels?forUsername=` plus `playlistItems` still work.
+* **Trap - a syndicated transcript under the wrong company.** fool.com's "Babcock & Wilcox (BW)
+  Q4 2025 Earnings Transcript" and Yahoo's call summary are Aurora Mobile's call; WebSearch's
+  summary repeated Aurora's RMB figures as B&W's. Check the speakers before citing one.
+* **Learned - the wiki reader cannot read JSON** (`api.nasdaq.com` ended `failed`); cite a
+  readable page for an earnings-date estimate. Long SEC filings export as 3-5 parts; one
+  background agent per filing wrote them in parallel, and `wiki:apply` skips a source another
+  agent already wrote.
+* **Blocked:** datacenterdynamics, benzinga, tipranks, investing.com (curl; the app's scraper
+  reads it, but its title was wrong), marketscreener, stockhouse, equibles, power-technology,
+  carbonherald and gascompressionmagazine (challenge pages). power-eng.com reads through WebFetch.
+* **Worked:** the brief's company-wide stock `note` was adopted as `Company.tickerNote` on the
+  first post, so no `stocks:sync --about` pass was needed. Nominatim gave no 429s with the HQ
+  geocoded once by the lead; Overpass found the Marguerite Lake 826S substation Nominatim lacks.
+* **Open:** 2948 (the FastPower turbine order) sits in the Applied Digital chain though it is
+  for a second, unnamed data-centre project; 2942 and 2947 carry one picture each.
+* **Feedback**: none yet.
+* **Changed**: [Vertical recipes](verticals.md) - an energy company news row; [Sources](sources.md)
+  - babcock.com, investors.babcock.com, Yahoo's Business Wire copies, TownNews sites.
+
+## 2026-09-22 - NVIDIA news, fourteen pins (@TechDesk)
+
+Ian asked to "pin nvidia news events". Four agents posted pins 2952-2959, 2961, 2967-2969, 2971
+and 2972 through `POST /api/pins` without API credit, and wrote every link wiki by hand
+(`wiki:export` at 0 jobs on all fourteen): the Hugging Face deal (2967, $12.93B) and its
+`estimated` H1 2027 close (2968, answering 2967); the PORTS-Pike campus with SB Energy and OpenAI
+(2969); the Palantir supply-chain stack at AIPCon 11 (2972); Q2 FY27 results (2956) and the Q3
+call (2957, answering 2956); the AI Energy Management Alliance with Emerald AI and Google (2958);
+DSX Ready (2961); Vera Rubin NVL72's MLPerf Inference v6.1 debut (2955, answering 1857); CUDA-Q
+Logical at IEEE Quantum Week in Toronto (2959); Isaac ROS 5.0 at ROSCon (2971); and GTC Berlin
+2026, Washington D.C. 2026 and San Jose 2027 (2952-2954). Every pin carries the tag `Nvidia`, and
+the eight earlier @TechDesk NVIDIA pins (1834-1839, 1857, 2329) were given it by whole-pin `PUT`.
+
+* **Learned - NVIDIA's newsroom list is the discovery source:** `nvidianews.nvidia.com/news?page=N`
+  reads with `curl`, and `nvidianews.nvidia.com/rss.xml` gives every item's exact GMT time (the
+  list and the release pages show only a date). Many "news" items are blog posts on
+  blogs.nvidia.com (the Hugging Face deal, MLPerf, Isaac ROS, AEMA, DSX Ready), whose
+  `article:published_time` is the announcement time. Release `og:image`s are often a logo lockup.
+* **Learned - NVIDIA names its next earnings day at the end of each call,** in the IR head's closing
+  remarks ("... is scheduled for November 17"), weeks before any calendar lists it. So Q3 FY27 is
+  `scheduled` for a **Tuesday** although every 2.02 8-K since 2024 fell on a Wednesday - the
+  company's own word beats the pattern. investor.nvidia.com 403s to `curl`, but its Q4 feed API
+  reads keyless (`/feed/FinancialReport.svc/GetFinancialReportList?reportTypes=Quarterly%20Report&year=2027`,
+  `/feed/Event.svc/GetEventList?eventSelection=1&pageSize=-1&sortOperator=1`) and the q4cdn
+  transcript PDFs read with `pdftotext`.
+* **Learned - NVIDIA's releases carry no dateline and rarely name the venue.** The CUDA-Q release
+  never says IEEE Quantum Week; SiliconANGLE and Quantum Computing Report did. Check the trade
+  press for the venue before defaulting a product pin to the HQ.
+* **Learned - EDGAR 8-Ks found two events the newsroom list buried:** the PORTS-Pike residual value
+  guaranties (item 1.01, $105B cap) and the Hugging Face signing (item 8.01, signed 2 September,
+  announced the 3rd - the pin takes the announcement). The press release is filed as Ex 99.1 under
+  its own name; list the filing's `index.json` to find it.
+* **Mistake (the lead's) - the brief overrode the trade-show rule.** It told the GTC agent to use the
+  previous edition's keynote as each edition's video, which [Vertical recipes](verticals.md#trade-shows-and-annual-festivals)
+  rule 6 forbids. The agent flagged it; the keynotes were swapped for NVIDIA's own GTC Berlin 2026
+  promo (found in the channel's uploads playlist, not embedded on any event page), and DC 2026 and
+  San Jose 2027 were left with no video since none exists yet. San Jose starts 14 March (the poster
+  call's "between Sunday, March 14 and Thursday, March 18") under rule 4, not the headline 15th.
+  Check a brief against the vertical's recipe before launch.
+* **Learned - NVIDIA's GTC sub-pages are part-stale:** `/gtc/dc/travel-and-venue/` and
+  `/gtc/dc/keynote/` still showed 2025. Take the venue from the edition's main page or FAQ and check
+  each page's `<title>` year; the FAQs give the day-by-day schedule and keynote time.
+* **Learned - the duplicate checker paired two pairs that are distinct events** (1838 fiscal-2028
+  guide vs 2956 Q2 results, both 26 August; 2967 deal vs 2968 close). Both were rejected through
+  `PUT /api/pins/:id/duplicates/:otherId {status: "rejected"}` as the author.
+* **Fixed - pin 1838 carried Wikimedia's `Crab_Nebula.jpg`** (a title-word image match); removed by
+  whole-pin `PUT`.
+* **Learned - fetch notes:** globenewswire.com hangs for `curl` (financialcontent.com's GNW mirror and
+  stocktitan.net with `curl -k --compressed` carry the same text and timestamp); roscon.ros.org sits
+  behind an Anubis proof-of-work wall (NVIDIA's own `/events/roscon/` page gives venue and dates);
+  palantir.com is a JS shell; Photon reverse fails with `&lang=en` and returns empty bodies under
+  load (retry after 5 s). The YouTube Data API search quota was spent at the start again;
+  `channels?forHandle=` + `playlistItems` and a `ytInitialData` parse of a results page still work.
+* **Open**: 2959's video is an older NVIDIA Developer CUDA-Q video (the platform, not this launch);
+  2972 sits at Miami city level because AIPCon 11's venue is unpublished; 2957's 2 p.m. PT call time
+  is NVIDIA's standing time, to firm up when the IR calendar lists it.
+* **Feedback**: none yet.
+* **Changed**: [Vertical recipes](verticals.md) - an NVIDIA row; [Sources](sources.md) - an NVIDIA row.
+
+## 2026-09-22 - TSMC news, fourteen pins (@TechDesk, three @LawDesk)
+
+Ian asked to "pin TSMC news events". Four agents posted, without API credit, through `POST /api/pins`:
+Q2 2026 results (2950) and the 15 October Q3 call (2951, `scheduled`, answering 2950); N2 volume
+production at Kaohsiung Fab 22 (2962) and A16 volume production, `delayed` to 2027 (2963, answering
+2962); the 2026 Technology Symposium (2964) and OIP Ecosystem Forum (2965) in Santa Clara; ESMC
+Dresden's topping-out (2960) and production start (2973, answering 2960); JASM Kumamoto Fab 2, `delayed`
+to 2028 (2966); Arizona Fab 3 (2970); the US-Taiwan $250B chip investment MOU (2977); and the 2nm
+trade-secret case as one @LawDesk chain, indictment (2974) -> sentence (2975) -> final (2976). Every pin
+carries the tag `TSMC`, and pin 2205 (@BuildDesk's Arizona Fab 2) gained TSMC's Arizona page and a CNA
+report as references. The lead set TSMC's company line and relations (AAPL, NVDA related; ASML
+supplier) with `stocks:sync --about/--relate` *before* the first post, so no pin's note became the line.
+
+* **Mistake (an agent's) - four pins posted with no `company`.** The technology agent left `company`
+  out of its bodies, so 2962-2965 had no `companyId`, and without it `syncPinStocks` adds no company
+  ticker and no relations (only the article's own TSM). The agent read the pins back, saw the relations
+  missing and reported it, but did not notice the company was null. A whole-pin `PUT` with
+  `company: "TSMC"` fixed all four. After a batch, check `companyId` on every pin, not only its tickers.
+* **Learned - TSMC's own sites are Cloudflare 403 to `curl`** (pr.tsmc.com, investor.tsmc.com,
+  tsmc.com, esmc.eu, including PDFs and images) but read through the app's scraper and WebFetch. Their
+  pictures cannot be media, and the scrape's top-up offered Apple's A16 Bionic for the A16 node and a
+  GTX 1070 for ESMC. EDGAR 6-Ks (CIK 1046179) hold the official copy of every release.
+* **Learned - investor.tsmc.com's teleconference page always shows the *next* call** and named 15
+  October 14:00-15:30 Taiwan before TSMC's financial calendar or any filing did. The in-person venue is
+  filed with the exchange 2-3 weeks ahead (Q2: the Mandarin Oriental Taipei, filed 29 June); a venue
+  remembered from earlier years (the Shangri-La) was wrong.
+* **Learned - the brief's premise was stale.** TSMC's A16 page still says "production-ready in 2H26",
+  but its symposium roadmap moved volume production to 2027 (Kevin Zhang to Tom's Hardware). The
+  company's latest spoken word beat its own static page, and the pin carries the slip as a stated delay.
+* **Learned - Taiwan's court sites (judicial.gov.tw) answer `curl` with a CAPTCHA;** the prosecutors'
+  site does not, and its "今（N）日" wording dates each step. CNA/Focus Taiwan covers the rulings; search
+  summaries blurred the two Tokyo Electron indictments and called the April verdict final (it became
+  final on 30 July, and only for two of the three).
+* **Learned - a US-Asia deal carries the US date.** Taiwan-side reports put the MOU on "Friday" 16
+  January; it was signed on the 15th in Washington (the Waymo Singapore trap again).
+* **Decision - a pledge is not a price.** 2977 went up with `price` 250000000000 for the $250B
+  investment pledge; the lead cleared it, following the funding-round rule (the amount is what the
+  event *is*, not what it cost). A fab's own investment figure stays a price (ESMC EUR 10B).
+* **Learned - a market-cap milestone needs a settled close.** TSMC's $2T in February 2026 held only
+  on the NYSE ADR price (the Taiwan listing gave about $1.66T), and Nasdaq's history returned no TSM
+  rows, so it was skipped.
+* **Learned - Photon answered every geocode this time** (named OSM features down to "TSMC Fab22 P1"
+  and Arizona's "P3"), and its forward search works in Chinese; its reverse lookups returned empty
+  bodies on and off, and `lang=en` broke them. The YouTube Data API search quota ran out again;
+  `youtube.com/results` (`ytInitialData`, verified badge) plus oEmbed replaced it.
+* **Learned - `wiki:export` deletes its `--out` folder on each run;** keep `results/` for
+  `wiki:apply` somewhere else.
+* **Not pinned:** N2P, A14 (in the symposium summary), BIS revoking TSMC Nanjing's VEU status (a good
+  next pin), the Lo Wei-jen search and the July 2026 leak indictment, Taichung Fab 25.
+* **Feedback**: none yet.
+* **Changed**: [Vertical recipes](verticals.md) - a TSMC row; [Sources](sources.md) - TSMC's sites,
+  CNA/Focus Taiwan, Taiwan prosecutors and courts, commerce.gov.

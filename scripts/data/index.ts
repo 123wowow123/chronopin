@@ -23,6 +23,7 @@ import Source from '@/server/model/source';
 import log from '@/server/util/log';
 import { excludeE2e } from './excludeE2e';
 import PinTranslation from '@/server/model/pinTranslation';
+import PinSentiment from '@/server/model/pinSentiment';
 
 const { values: flags } = parseArgs({
   options: {
@@ -43,6 +44,7 @@ const { values: flags } = parseArgs({
     placefile: { type: 'string', default: './scripts/backup/seedPlaces.json' },
     seriesfile: { type: 'string', default: './scripts/backup/seedSeries.json' },
     translationfile: { type: 'string', default: './scripts/backup/seedTranslations.json' },
+    sentimentfile: { type: 'string', default: './scripts/backup/seedPinSentiments.json' },
     companyfile: { type: 'string', default: './scripts/backup/seedCompanies.json' },
     aphelionfile: { type: 'string', default: './scripts/backup/aphelion.json' },
     equinoxfile: { type: 'string', default: './scripts/backup/equinox.json' },
@@ -205,6 +207,10 @@ async function saveDB() {
   // Pin translations (0044): each costs a Claude call to make again.
   console.log('Backup Translations');
   writeJson(flags.translationfile, (await PinTranslation.getAll()).filter((t) => keptPinIds.has(t.pinId)));
+
+  // How each company pin reads as news (0068): each costs a Claude call to make again.
+  console.log('Backup Pin Sentiments');
+  writeJson(flags.sentimentfile, (await PinSentiment.getAll()).filter((t) => keptPinIds.has(t.pinId)));
 
   console.log('Data Backup Complete');
 }
@@ -384,6 +390,14 @@ async function seedDB() {
       await restoreSeries(readJson(flags.seriesfile));
     } catch (error) {
       log.error('Series Save Error', JSON.stringify(error));
+    }
+  }
+
+  if (existsSync(flags.sentimentfile)) {
+    try {
+      await PinSentiment.restore(readJson(flags.sentimentfile));
+    } catch (error) {
+      log.error('Pin Sentiments Save Error', JSON.stringify(error));
     }
   }
 

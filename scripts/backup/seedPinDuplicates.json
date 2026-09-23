@@ -377,6 +377,19 @@
     "utcVerifiedDateTime": null
   },
   {
+    "pinId": 1838,
+    "otherPinId": 2956,
+    "reason": "similar",
+    "score": 0.86487186,
+    "status": "rejected",
+    "decidedByUserId": 276,
+    "utcCreatedDateTime": "2026-09-23T05:57:55.611Z",
+    "utcDecidedDateTime": "2026-09-23T06:05:44.206Z",
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
     "pinId": 1851,
     "otherPinId": 1852,
     "reason": "similar",
@@ -583,5 +596,83 @@
     "verdict": "different",
     "verdictReasoning": "Different events at the same address, ten months apart. 2685 is the groundbreaking: the Review-Journal reported on 28 April 2026 that the food hall \"began construction this week\", with photographs captioned Monday 27 April 2026. 2682 is the opening, which the same paper put at \"a fall 2026 opening\" and which KSNV moved to \"this winter\" on 16 September 2026, so it sits at the close of winter. The two are consecutive stages of one build and are threaded as such (2682 answers 2685); a build starting and a venue opening are not one event. Recorded by hand: the duplicates:verify Claude call had no credit.",
     "utcVerifiedDateTime": "2026-09-22T16:35:11.757Z"
+  },
+  {
+    "pinId": 2826,
+    "otherPinId": 2827,
+    "reason": "similar",
+    "score": 0.80471253,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-23T04:49:10.235Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 2889,
+    "otherPinId": 2890,
+    "reason": "similar",
+    "score": 0.81687164,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-23T05:21:10.467Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 2926,
+    "otherPinId": 2927,
+    "reason": "similar",
+    "score": 0.81820816,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-23T05:28:03.025Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 2926,
+    "otherPinId": 2928,
+    "reason": "similar",
+    "score": 0.8086164,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-23T05:28:04.290Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 2927,
+    "otherPinId": 2928,
+    "reason": "similar",
+    "score": 0.8138516,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-23T05:28:04.311Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 2967,
+    "otherPinId": 2968,
+    "reason": "similar",
+    "score": 0.8473891,
+    "status": "rejected",
+    "decidedByUserId": 276,
+    "utcCreatedDateTime": "2026-09-23T06:01:26.170Z",
+    "utcDecidedDateTime": "2026-09-23T06:06:45.999Z",
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
   }
 ]

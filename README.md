@@ -367,7 +367,6 @@ https://nationaldaycalendar.com/march/
 
 - Historically happens on date
 
-
 - Filter by like threashold  
 
 - Stacking/grouping of related pins
@@ -396,10 +395,6 @@ https://nationaldaycalendar.com/march/
 
 ### Misc
 
-- Pin feed needs to include if user have clicked on watch/like per min exclude deleted
-
-- General Sentiment Graph for a Company or Product
-
 - Search (Amazon) to buy product to support our website
 ```
 This is a promotional article about one of the company partners with Interesting Engineering. By shopping with us, you not only get the materials you need, but you’re also supporting our website.
@@ -421,6 +416,7 @@ GA: Outbound link / non-interaction events / Social Interactions tracking / User
 - facebook comment jumps @ pin page
 
 ## Architecture
+
 - [Use Firebase DB for denormalized push notification of app data] <https://www.youtube.com/watch?v=LAWjdZYrUgI>
 
 
@@ -483,3 +479,9 @@ tag filter need exclude tag feature
 
 
 # Others:
+
+- General Sentiment Graph for a Product
+
+- pin Fortune 100 news events
+
+- pin Layoffs news events

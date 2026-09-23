@@ -22,6 +22,7 @@ import { addPinStocksQuietly } from '@/server/services/pinStocks';
 import { getPins } from '@/server/services/timeline';
 import log from '@/server/util/log';
 import { linkParams, resolveCreatedSince } from '@/server/util/createdFilter';
+import { citePostedSummary } from '@/server/extract/references';
 
 // A page of the timeline.
 // GET /api/pins?from_date_time=[-]ISO&last_pin_id=N&hasFavorite=1&created_within=1d
@@ -66,6 +67,8 @@ export const POST = route(async (request: NextRequest) => {
   const stocks = parseScrapedStocks(body.stocks);
   const tags = parseTags(body.tags);
   pin.categories = bodyCategories(body, tags);
+  // Citations written [S] and [n] become links to the source and references.
+  pin.longFormSummary = citePostedSummary(pin.longFormSummary, pin.sourceUrl, pin.references) ?? pin.longFormSummary;
   pin.setUser(user);
   const problem =
     PinReference.problem(pin.references) ??

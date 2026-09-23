@@ -12,7 +12,7 @@ import Comment from '../model/comment';
 import log from '../util/log';
 import { describeError, getClient, MODEL } from '.';
 
-const SYSTEM_PROMPT = `You score the tone of one comment on an event timeline, where each pin is a real-world event (a launch, release, opening, match, deadline) and people comment on it.
+export const COMMENT_SENTIMENT_PROMPT = `You score the tone of one comment on an event timeline, where each pin is a real-world event (a launch, release, opening, match, deadline) and people comment on it.
 
 Score how the commenter feels about the event or the discussion, from -1 to 1:
 - 1: delighted, excited, grateful, strongly supportive
@@ -53,7 +53,7 @@ export async function scoreSentiment(input: SentimentInput): Promise<number | nu
       // A policy decline on Opus 5 is retried server-side on a fallback model.
       betas: ['server-side-fallback-2026-07-01'],
       fallbacks: 'default',
-      system: SYSTEM_PROMPT,
+      system: COMMENT_SENTIMENT_PROMPT,
       messages: [{ role: 'user', content: JSON.stringify(context, null, 2) }],
     });
 

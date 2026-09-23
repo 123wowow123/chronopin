@@ -3,6 +3,7 @@ import type { Row } from '../db';
 import { inBackground } from '../background';
 import * as logo from '../companyLogo';
 import { findDescriptions } from '../companyDescription';
+import { wordStartPattern } from '../util/searchQuery';
 
 const COLUMNS = `"id", "name", "wikiUrl", "websiteUrl", "logoUrl", "utcLogoCheckedDateTime", "description", "utcDescriptionCheckedDateTime"`;
 
@@ -80,6 +81,23 @@ export default class Company {
   static list() {
     return db.query<{ id: number; name: string; logoUrl: string | null }>(
       `SELECT "id", "name", "logoUrl" FROM "Company" ORDER BY "name"`,
+    );
+  }
+
+  // Companies with a word of their name starting with the typed text, most
+  // pins first, for the search suggestions. A company whose pins are all
+  // deleted is left out: its company: search would find nothing.
+  static suggest(text: string, limit: number) {
+    return db.query<{ name: string; logoUrl: string | null; count: number }>(
+      `
+      SELECT "Company"."name"::text AS "name", "Company"."logoUrl", COUNT(*)::integer AS "count"
+      FROM "Company"
+        INNER JOIN "Pin" ON "Pin"."companyId" = "Company"."id" AND "Pin"."utcDeletedDateTime" IS NULL
+      WHERE "Company"."name"::text ~* $1
+      GROUP BY "Company"."id"
+      ORDER BY 3 DESC, 1
+      LIMIT $2`,
+      [wordStartPattern(text), limit],
     );
   }
 

@@ -50,3 +50,23 @@ describe('shrinkImage decode limits', () => {
     expect(await shrinkImage(jpeg, OPTIONS)).toMatchObject({ width: 100, originalWidth: 300, originalHeight: 150 });
   });
 });
+
+describe('WebP and AVIF', () => {
+  it('are converted for Jimp, keeping transparency as PNG', async () => {
+    const { default: sharp } = await import('sharp');
+    const { shrinkImage, needsConversion } = await import('./image');
+    const opaque = await sharp({ create: { width: 40, height: 20, channels: 3, background: '#3374d0' } }).webp().toBuffer();
+    const clear = await sharp({ create: { width: 40, height: 20, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0.5 } } }).webp().toBuffer();
+    expect(needsConversion(opaque)).toBe(true);
+    const a = await shrinkImage(opaque, { uploadImageWidth: 800 } as never);
+    expect([a.type, a.width, a.height]).toEqual(['image/jpeg', 40, 20]);
+    const b = await shrinkImage(clear, { uploadImageWidth: 800 } as never);
+    expect(b.type).toBe('image/png');
+  });
+
+  it('leaves other formats alone', async () => {
+    const { needsConversion } = await import('./image');
+    const png = await new Jimp({ width: 4, height: 4, color: 0xffffffff }).getBuffer('image/png');
+    expect(needsConversion(png)).toBe(false);
+  });
+});

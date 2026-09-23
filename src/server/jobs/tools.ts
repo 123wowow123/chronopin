@@ -22,6 +22,11 @@ import { hashDistance, NEAR_DUPLICATE_DISTANCE } from '../imageHash';
 import JobRun from '../model/jobRun';
 import Medium, { imageHashOf } from '../model/medium';
 import PinRevisit from '../model/pinRevisit';
+import PinSentiment, { sentimentHash } from '../model/pinSentiment';
+import Comment from '../model/comment';
+import { clampSentiment, PIN_SENTIMENT_PROMPT } from '../extract/pinSentiment';
+import { COMMENT_SENTIMENT_PROMPT } from '../extract/sentiment';
+import { invalidateTimeline } from '../services/cache';
 import { fetchSourceText } from '../scrape/sourceText';
 import { CURATORS } from './curators';
 import { checkPinHealth, pinsToCheck } from './health';
@@ -148,6 +153,62 @@ export const TOOLS: JobTool[] = [
       "Where the active users are (signed-in people who opened or commented on pins in the last `days`), grouped by their saved default location, with how many pins already sit within `radiusKm` over the next 60 days. Users with no saved location are only counted - never guess their place.",
     input_schema: obj({ days: num('Activity window, default 30'), radiusKm: num('Radius for nearby pins, default 50') }),
     run: (input) => signals.activeUserPlaces(int(input.days, 30, 1, 180), int(input.radiusKm, 50, 5, 500)),
+  },
+  // --- Sentiment (the sentiment task) -------------------------------------
+  {
+    name: 'pending_sentiment',
+    description:
+      "The company pins whose title or summary changed since their tone was scored, or that were never scored, and the comments with no tone yet - with the rubric for each. Score each from -1 to 1 by its rubric and save them with record_sentiment, then ask again until nothing is left.",
+    input_schema: obj({ limit: num('At most this many of each, default 50, at most 200') }),
+    run: async (input) => {
+      const limit = int(input.limit, 50, 1, 200);
+      const [pins, commentIds] = await Promise.all([PinSentiment.unscored(100_000), Comment.unscoredIds(100_000)]);
+      const comments = (await Promise.all(commentIds.slice(0, limit).map(async (id) => ({ id, context: await Comment.sentimentContext(id) }))))
+        .filter((c) => c.context)
+        .map(({ id, context }) => ({ id, pin: context!.pinTitle, replyingTo: context!.parentText ?? undefined, text: context!.text }));
+      return {
+        pinRubric: PIN_SENTIMENT_PROMPT,
+        commentRubric: COMMENT_SENTIMENT_PROMPT,
+        pins: pins.slice(0, limit).map((p) => ({ id: p.id, company: p.company, title: p.title, summary: p.description ?? '', textHash: sentimentHash(p) })),
+        comments,
+        remaining: { pins: Math.max(0, pins.length - limit), comments: Math.max(0, commentIds.length - limit) },
+      };
+    },
+  },
+  {
+    name: 'record_sentiment',
+    description:
+      'Saves tones from pending_sentiment: pins as { id, sentiment, textHash } (textHash exactly as given) and comments as { id, sentiment, text } (text exactly as given). A pin or comment edited since it was handed out is skipped, to be scored again.',
+    input_schema: obj({
+      pins: { type: 'array', items: obj({ id: num('Pin id'), sentiment: { type: 'number', description: '-1 to 1' }, textHash: str('As given') }, ['id', 'sentiment', 'textHash']) },
+      comments: { type: 'array', items: obj({ id: num('Comment id'), sentiment: { type: 'number', description: '-1 to 1' }, text: str('As given') }, ['id', 'sentiment', 'text']) },
+    }),
+    run: async (input, ctx) => {
+      const score = (value: unknown) => (typeof value === 'number' && Number.isFinite(value) ? clampSentiment(value) : null);
+      let pins = 0;
+      let comments = 0;
+      let skipped = 0;
+      for (const p of Array.isArray(input.pins) ? input.pins : []) {
+        const value = score(p?.sentiment);
+        if (value != null && (await PinSentiment.setIfUnchanged(int(p.id, 0, 1, 2 ** 31 - 1), String(p.textHash ?? ''), value))) pins++;
+        else skipped++;
+      }
+      for (const c of Array.isArray(input.comments) ? input.comments : []) {
+        const value = score(c?.sentiment);
+        if (value != null && (await Comment.setSentiment(int(c.id, 0, 1, 2 ** 31 - 1), String(c.text ?? ''), value))) comments++;
+        else skipped++;
+      }
+      if (pins || comments) {
+        await act(ctx, { tool: 'record_sentiment', detail: `scored ${pins} pin(s) and ${comments} comment(s)${skipped ? `, ${skipped} skipped` : ''}` });
+        // The company graphs ride in the cached search results.
+        try {
+          invalidateTimeline();
+        } catch {
+          // Outside a request the cache is not ours to expire; it lapses in minutes.
+        }
+      }
+      return { pins, comments, skipped };
+    },
   },
   {
     name: 'find_pins',

@@ -10,6 +10,7 @@ import { authHrefHere } from '@/lib/client/returnSpot';
 import { useT } from '@/lib/client/i18n';
 import type { CommentMood } from '@/lib/commentMood';
 import type { SearchedCompany as Company } from '@/lib/types';
+import { CompanySentimentChart } from './CompanySentiment';
 
 type Status = { companyId: number; followerCount: number; following: boolean };
 
@@ -171,6 +172,9 @@ export function SearchedCompanyPanel({ company }: { company: Company }) {
       </div>
 
       {company.mood ? <CompanyMood mood={company.mood} commentCount={company.commentCount} /> : null}
+
+      {/* A search cached before the graph existed has no sentiment on it. */}
+      {company.sentiment ? <CompanySentimentChart name={company.name} sentiment={company.sentiment} /> : null}
 
       {/* Following, under a rule: it acts on the company rather than saying
           anything more about it, and the note belongs with the button. */}

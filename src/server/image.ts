@@ -1,6 +1,7 @@
 // Image downloads, resizing and storage for pin media and profile pictures.
 
 import { Jimp } from 'jimp';
+import sharp from 'sharp';
 import * as azureBlob from './azureBlob';
 import config from './config';
 import { imageHash } from './imageHash';
@@ -67,6 +68,28 @@ const DECODE_OPTIONS = {
   'image/jpeg': { maxMemoryUsageInMB: 2048, maxResolutionInMP: 300 },
 };
 
+// WebP and AVIF, which Jimp cannot decode ("Mime type image/webp does not
+// support decoding") and news sites now serve by default (blog.google's
+// pictures, most CDNs): sharp turns them into a JPEG, or a PNG when the
+// picture has transparency, and everything after reads that as usual.
+const RIFF = Buffer.from('RIFF');
+const WEBP = Buffer.from('WEBP');
+const FTYP = Buffer.from('ftyp');
+
+export function needsConversion(input: Buffer): boolean {
+  if (input.length < 12) return false;
+  if (input.subarray(0, 4).equals(RIFF) && input.subarray(8, 12).equals(WEBP)) return true;
+  // ISO media (AVIF, HEIC): 'ftyp' at offset 4, then the brand.
+  return input.subarray(4, 8).equals(FTYP) && /^(avi[fs]|hei[cxms]|mif1|msf1)$/.test(input.subarray(8, 12).toString('latin1'));
+}
+
+async function decodableByJimp(input: Buffer): Promise<Buffer> {
+  if (!needsConversion(input)) return input;
+  const picture = sharp(input, { failOn: 'none' }).rotate();
+  const { hasAlpha } = await picture.metadata();
+  return hasAlpha ? picture.png().toBuffer() : picture.jpeg({ quality: 90 }).toBuffer();
+}
+
 // fromBuffer, not read: Jimp.read drops its options on the Buffer branch
 // (it forwards them only when it fetched a URL itself), so the ceilings above
 // would be silently ignored.
@@ -81,7 +104,7 @@ const DECODE_OPTIONS = {
 // ask the host for a smaller rendition (Wikimedia's API takes iiurlwidth).
 async function readImage(input: Buffer) {
   try {
-    return await Jimp.fromBuffer(trimPng(input), DECODE_OPTIONS);
+    return await Jimp.fromBuffer(trimPng(await decodableByJimp(input)), DECODE_OPTIONS);
   } catch (err) {
     const message = (err as Error).message ?? '';
     if (/maxMemoryUsageInMB|maxResolutionInMP/.test(message)) {

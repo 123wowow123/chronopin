@@ -23,6 +23,7 @@
     "init:shebang": "npm run db:refresh && npm run search:refresh",
     "companies:logos": "tsx scripts/company/logos.ts",
     "companies:describe": "tsx scripts/company/descriptions.ts",
+    "companies:sentiment": "tsx scripts/company/sentiment.ts",
     "media:video-thumbs": "tsx scripts/media/videoThumbs.ts",
     "media:screen": "tsx scripts/media/screenDetails.ts",
     "launches:upcoming": "tsx scripts/launches/upcoming.ts",
@@ -98,7 +99,8 @@
     "react-dom": "^19.3.0",
     "react-leaflet": "^5.0.0",
     "sanitize-html": "^2.17.7",
-    "server-only": "^0.0.1"
+    "server-only": "^0.0.1",
+    "sharp": "^0.35.4"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",

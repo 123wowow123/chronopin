@@ -245,6 +245,16 @@ export function citeSummary(summary: string | null | undefined, candidates: Foun
   return citeLabels(html, urlOf);
 }
 
+// A summary posted with its citations still written [S] and [n] (a pin
+// drafted by hand or by a job, rather than by the scrape) gets them as links:
+// [S] the pin's source, [n] the nth reference in the body. Summaries with none
+// come back as they are.
+export function citePostedSummary(summary: string | null | undefined, sourceUrl: string | null | undefined, references: { url?: string | null }[] | null | undefined) {
+  if (!summary || !/\[\s*(?:S|\d+)(?:\s*,\s*(?:S|\d+))*\s*\]/i.test(summary)) return summary;
+  const refs = references ?? [];
+  return citeLabels(summary, (label) => (/^s$/i.test(label) ? sourceUrl?.trim() || undefined : refs[Number(label) - 1]?.url?.trim() || undefined));
+}
+
 // Writes each run of [S] and [n] citations in summary HTML as the links
 // urlOf gives those labels, dropping labels it has no link for.
 export function citeLabels(html: string, urlOf: (label: string) => string | undefined): string {

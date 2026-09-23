@@ -423,6 +423,7 @@ function ReservedFilters({
   selected,
   needle = '',
   onToggle,
+  large = false,
   className = '',
 }: {
   counts: TagCount[];
@@ -430,6 +431,8 @@ function ReservedFilters({
   // The find box narrows these too, by the name as it is read here.
   needle?: string;
   onToggle: (name: string) => void;
+  // Bigger in the big cloud, where there is room; small in the panel.
+  large?: boolean;
   className?: string;
 }) {
   const t = useT();
@@ -443,9 +446,9 @@ function ReservedFilters({
     .filter((filter) => !needle || filter.label.toLowerCase().includes(needle) || filter.name.toLowerCase().includes(needle));
   if (!shown.length) return null;
   return (
-    <div role="group" aria-label={t('tagCloud.reserved')} className={`flex flex-wrap items-center gap-1.5 ${className}`}>
-      <span aria-hidden className="mr-0.5 inline-flex items-center gap-1 text-[11px] font-semibold tracking-wide text-faint uppercase">
-        <Icon name="lock" className="size-3" />
+    <div role="group" aria-label={t('tagCloud.reserved')} className={`flex flex-wrap items-center ${large ? 'gap-2' : 'gap-1.5'} ${className}`}>
+      <span aria-hidden className={`mr-0.5 inline-flex items-center gap-1 font-semibold tracking-wide text-faint uppercase ${large ? 'text-xs' : 'text-[11px]'}`}>
+        <Icon name="lock" className={large ? 'size-3.5' : 'size-3'} />
         {t('tagCloud.reserved')}
       </span>
       {shown.map((filter) => (
@@ -455,11 +458,11 @@ function ReservedFilters({
           aria-pressed={on(filter.name)}
           onClick={() => onToggle(filter.name)}
           title={`${t('tagCloud.reservedTitle', { name: filter.label })}\n${t('tagCloud.pins', { count: filter.count })}`}
-          className={`inline-flex items-center gap-1 rounded-full border border-dashed px-1.5 py-0.5 text-[11px] transition-colors ${
+          className={`inline-flex items-center rounded-full border border-dashed transition-colors ${large ? 'gap-1.5 px-3 py-1 text-sm' : 'gap-1 px-1.5 py-0.5 text-[11px]'} ${
             on(filter.name) ? 'border-accent/60 bg-accent/15 text-link' : 'border-line text-muted hover:border-tint/40 hover:text-ink'
           }`}
         >
-          <Icon name={filter.icon} className="size-3 shrink-0" />
+          <Icon name={filter.icon} className={`shrink-0 ${large ? 'size-4' : 'size-3'}`} />
           {filter.label}
           <span className="text-subtle tabular-nums">
             {filter.count}
@@ -695,12 +698,12 @@ function TagCloudView({
   // Portalled to the body, out of the floating controls' stacking context.
   // It starts under the navbar and sits below it (z-40) and its search
   // suggestions (z-50), so the search box stays in reach while the cloud is
-  // open; above the floating controls (z-30). On a phone it fills the rest of
-  // the screen.
+  // open; above the floating controls (z-30). It fills the rest of the
+  // screen, inset by a gutter wider than a phone.
   return createPortal(
     <div ref={rootRef} className="fixed inset-x-0 top-[52px] bottom-0 z-[35] flex items-center justify-center p-4 max-sm:p-0">
       <div aria-hidden onClick={onClose} className="absolute inset-0 bg-black/55 backdrop-blur-[2px]" />
-      <div role="dialog" aria-modal="true" aria-labelledby={titleId} className="floating relative flex h-[min(88dvh,56rem)] max-h-full w-full max-w-6xl flex-col overflow-hidden max-sm:h-full max-sm:max-w-none max-sm:rounded-none max-sm:border-0">
+      <div role="dialog" aria-modal="true" aria-labelledby={titleId} className="floating relative flex size-full flex-col overflow-hidden max-sm:rounded-none max-sm:border-0">
         <div className="flex items-center gap-3 border-b border-line px-5 py-3 max-sm:flex-wrap max-sm:px-3">
           {back ? (
             // Below lg only, where there is a drawer to go back to; wider, the
@@ -727,7 +730,7 @@ function TagCloudView({
             </button>
           </span>
         </div>
-        <ReservedFilters counts={counts ?? []} selected={reserved} needle={needle} onToggle={onToggleReserved} className="border-b border-line px-5 py-2 max-sm:px-3" />
+        <ReservedFilters counts={counts ?? []} selected={reserved} needle={needle} onToggle={onToggleReserved} large className="border-b border-line px-5 py-2.5 max-sm:px-3" />
         <div aria-busy={busy || undefined} className="relative min-h-60 flex-1 overflow-hidden">
           {failed ? (
             <p className="absolute inset-0 flex items-center justify-center text-sm text-subtle">{t('tagCloud.unavailable')}</p>

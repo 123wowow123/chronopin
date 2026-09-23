@@ -20,6 +20,7 @@ import { requestLocale } from '@/lib/i18n/request';
 import { toJson, type PinJson } from '@/lib/types';
 import { localizePins } from '@/server/services/translations';
 import log from '@/server/util/log';
+import { citePostedSummary } from '@/server/extract/references';
 
 type Ctx = RouteContext<'/api/pins/[id]'>;
 
@@ -62,6 +63,8 @@ const update = route(async (request: NextRequest, ctx: Ctx) => {
   // left out, the pin keeps the ones it has.
   const tags = parseTags(body.tags);
   pin.categories = bodyCategories(body, tags);
+  // Citations written [S] and [n] become links to the source and references.
+  pin.longFormSummary = citePostedSummary(pin.longFormSummary, pin.sourceUrl, pin.references) ?? pin.longFormSummary;
   const referenceProblem = PinReference.problem(pin.references) ?? delayProblem(pin);
   if (referenceProblem) {
     throw new HttpError(400, referenceProblem);

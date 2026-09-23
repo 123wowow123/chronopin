@@ -19,7 +19,7 @@ into its instructions, so changing this page changes the next run.
 
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
-| `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | [trends](#trends), [revisits](#revisits), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [pinHealth](#pinhealth), [commentTopics](#commenttopics), [localEvents](#localevents) | 100 / 250 |
+| `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | [trends](#trends), [revisits](#revisits), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [pinHealth](#pinhealth), [sentiment](#sentiment), [commentTopics](#commenttopics), [localEvents](#localevents) | 100 / 250 |
 | `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | [weekReview](#weekreview), [freshSources](#freshsources), [breakingNews](#breakingnews) | 100 / 250 |
 
 Both are set on **/admin/jobs**: on or off, the times (up to six a day) and
@@ -180,7 +180,22 @@ revisiting with the exact fix.
 not readers. A YouTube 401 means embedding was turned off, which does break
 the pin. Never replace a picture with one that has not been viewed.
 
-## commentTopics
+## sentiment
+
+**Reads** `pending_sentiment`: the company pins whose title or summary
+changed since their tone was scored (or that never were) and the comments
+with no tone yet, each with its rubric.
+**Does** score each from -1 to 1 by its rubric - a pin by how its event reads
+as news for its company, a comment by the commenter's tone - and save them
+with `record_sentiment`, then ask again until nothing is left. The scores feed
+the sentiment graph on a company search.
+**Traps.** Saving a pin scores it at once when the app's key has credit, so
+this is the catch-up for everything that missed that: pins saved while the
+key had none, and text edited since. Pass `textHash` and `text` back exactly
+as given; a pin or comment edited in between is skipped and comes back next
+run. Judge the event for the company named, not for the world, and stay near
+0 when the summary does not say how it went.
+
 
 **Reads** `recent_comments`.
 **Does** find subjects people keep raising - an event a commenter says is

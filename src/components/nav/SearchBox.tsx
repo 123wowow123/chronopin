@@ -108,22 +108,24 @@ function termLabel(part: TermPart, t: Translator) {
 }
 
 // One row of the suggestions: a category or other tag to filter by (both
-// tag: terms), one of the site's own filters (RESERVED_TAGS, which writes its
-// own term), or a pin's title to search for.
+// tag: terms), a company (a company: term), one of the site's own filters
+// (RESERVED_TAGS, which writes its own term), or a pin's title to search for.
 type Suggestion =
   | { kind: 'category'; name: string; count: number }
+  | { kind: 'company'; name: string; logoUrl: string | null; count: number }
   | { kind: 'reserved'; name: string; filter: ReservedTag }
   | { kind: 'tag'; name: string; count: number }
   | { kind: 'pin'; pin: PinJson };
 
-type AutocompleteJson = { pins?: PinJson[]; tags?: TagCount[] };
+type AutocompleteJson = { pins?: PinJson[]; tags?: TagCount[]; companies?: { name: string; logoUrl: string | null; count: number }[] };
 
-// The rows in the order they show: categories, then the site's own filters
-// and the tags people wrote (one group, the site's first), then pins.
+// The rows in the order they show: categories, companies, then the site's own
+// filters and the tags people wrote (one group, the site's first), then pins.
 function toSuggestions(res: AutocompleteJson): Suggestion[] {
   const tags = res.tags || [];
   return [
     ...tags.filter((t) => t.kind === 'category').map((c): Suggestion => ({ kind: 'category', name: canonicalCategory(c.name), count: c.count })),
+    ...(res.companies || []).map((c): Suggestion => ({ kind: 'company', ...c })),
     ...tags.flatMap((t): Suggestion[] => {
       const filter = t.kind === 'reserved' ? reservedTag(t.name) : undefined;
       return filter ? [{ kind: 'reserved', name: filter.name, filter }] : [];
@@ -137,6 +139,7 @@ function toSuggestions(res: AutocompleteJson): Suggestion[] {
 // heading as the tags rather than a group of one.
 const GROUP_LABEL = {
   category: 'search.groupCategories',
+  company: 'search.groupCompanies',
   reserved: 'search.groupTags',
   tag: 'search.groupTags',
   pin: 'search.groupPins',
@@ -404,15 +407,18 @@ export function SearchBox() {
   }
 
   // Searches for a picked suggestion: a category or tag takes the typed text's
-  // place as a tag: term (once), a site filter as the term it stands for
-  // (confidence:estimated), a pin's title as text.
+  // place as a tag: term (once), a company as a company: term, a site filter
+  // as the term it stands for (confidence:estimated), a pin's title as text.
   function pick(suggestion: Suggestion) {
     if (suggestion.kind === 'pin') {
       setDraft(suggestion.pin.title);
       submit(query(suggestion.pin.title));
       return;
     }
-    const { field, value } = suggestion.kind === 'reserved' ? suggestion.filter : { field: 'tag' as const, value: suggestion.name };
+    const { field, value } =
+      suggestion.kind === 'reserved'
+        ? suggestion.filter
+        : { field: suggestion.kind === 'company' ? ('company' as const) : ('tag' as const), value: suggestion.name };
     const rest = query('');
     submit(hasTerm(rest, field, value) ? rest : query(term(field, value)));
   }
@@ -1010,6 +1016,28 @@ export function SearchBox() {
                         <span className="line-clamp-2 text-ink sm:line-clamp-1">{suggestion.pin.title}</span>
                         <span className="block text-xs text-subtle">{formatStart(suggestion.pin, timeZone, {}, t.locale)}</span>
                       </span>
+                    </>
+                  ) : suggestion.kind === 'company' ? (
+                    // The logo the cards show before the name, else the
+                    // generic mark; a broken logo is hidden rather than drawn.
+                    <>
+                      {suggestion.logoUrl ? (
+                        // eslint-disable-next-line @next/next/no-img-element -- favicons from arbitrary hosts
+                        <img
+                          src={suggestion.logoUrl}
+                          alt=""
+                          loading="lazy"
+                          referrerPolicy="no-referrer"
+                          className="mt-0.5 size-3.5 min-w-0 shrink-0 rounded-sm"
+                          onError={(event) => {
+                            event.currentTarget.style.visibility = 'hidden';
+                          }}
+                        />
+                      ) : (
+                        <Icon name="building" className="mt-0.5 size-3.5 shrink-0 text-faint" />
+                      )}
+                      <span className="min-w-0 flex-1 truncate text-ink">{suggestion.name}</span>
+                      <span className="shrink-0 text-xs text-subtle tabular-nums">{suggestion.count}</span>
                     </>
                   ) : suggestion.kind === 'reserved' ? (
                     // The site's own filter: outlined as in the tag cloud's

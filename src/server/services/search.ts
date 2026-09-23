@@ -8,6 +8,7 @@ import config from '../config';
 import Comment from '../model/comment';
 import Company from '../model/company';
 import CompanyFollow from '../model/companyFollow';
+import PinSentiment from '../model/pinSentiment';
 import Pins, { type SearchFilter, type SearchRank } from '../model/pins';
 import { SearchPins } from '../model/searchPin';
 import User from '../model/user';
@@ -238,9 +239,10 @@ async function attachSearchedCompany(pins: Pins, query: SearchQuery) {
   if (query.companies.length !== 1) return;
   const company = await Company.byName(query.companies[0]);
   if (!company) return;
-  const [comments, follow] = await Promise.all([
+  const [comments, follow, pinTones] = await Promise.all([
     Comment.forCompany(company.id, COMPANY_MOOD_COMMENTS),
     CompanyFollow.status(company.id, null),
+    PinSentiment.forCompany(company.id),
   ]);
   (pins as Pins & { company?: unknown }).company = {
     id: company.id,
@@ -251,5 +253,14 @@ async function attachSearchedCompany(pins: Pins, query: SearchQuery) {
     followerCount: follow.followerCount,
     commentCount: comments.length,
     mood: commentMood(comments.map((c) => ({ ...c, utcCreatedDateTime: c.utcCreatedDateTime.toISOString() }))),
+    // The graph: how its pins read as news, by when each happens, and how
+    // its comments read, by when each was written (src/lib/companySentiment.ts).
+    sentiment: {
+      pins: pinTones.map((p) => ({ id: p.id, title: p.title, at: p.utcStartDateTime.toISOString(), value: p.sentiment })),
+      comments: comments
+        .filter((c): c is typeof c & { sentiment: number } => c.sentiment != null)
+        .map((c) => ({ at: c.utcCreatedDateTime.toISOString(), value: c.sentiment }))
+        .reverse(),
+    },
   };
 }

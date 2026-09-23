@@ -77,6 +77,8 @@ const PATHS: Record<string, React.ReactNode> = {
       <circle cx="17" cy="19" r="1.3" />
     </>
   ),
+  // A company with no logo of its own.
+  building: <path d="M4 21V4h11v17M15 9h5v12M2 21h20M8 8h3M8 12h3M8 16h3" />,
   tag: (
     <>
       <path d="M3 12V4h8l10 10-8 8z" />

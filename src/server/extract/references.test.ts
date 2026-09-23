@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { urlKey } from '@/lib/citations';
-import { citeSummary, keepReferences, MIN_CONFIDENCE } from './references';
+import { citePostedSummary, citeSummary, keepReferences, MIN_CONFIDENCE } from './references';
 
 describe('urlKey', () => {
   it('reads the same page however it is written', () => {
@@ -52,5 +52,23 @@ describe('citeSummary', () => {
   it('is undefined when there is no summary', () => {
     expect(citeSummary(null, candidates, kept, 'https://src.example/story')).toBeUndefined();
     expect(citeSummary('  ', candidates, kept, 'https://src.example/story')).toBeUndefined();
+  });
+});
+
+describe('citePostedSummary', () => {
+  const refs = [{ url: 'https://a.example/one' }, { url: 'https://b.example/two' }];
+
+  it('links [S] to the source and [n] to the nth reference, runs together', () => {
+    const html = citePostedSummary('<ul><li>Opens.[S]</li><li>Late.[1][2]</li><li>Gone.[3]</li></ul>', 'https://src.example/', refs)!;
+    expect(html).toContain('data-ref="https://src.example/"');
+    expect(html).toContain('data-ref="https://a.example/one"');
+    expect(html).toContain('data-ref="https://b.example/two"');
+    expect(html).not.toMatch(/\[(S|\d)\]/);
+  });
+
+  it('leaves a summary with no labels alone', () => {
+    const html = '<ul><li>Opens.<cite data-ref="https://src.example/">1</cite></li></ul>';
+    expect(citePostedSummary(html, 'https://src.example/', refs)).toBe(html);
+    expect(citePostedSummary(null, 'https://src.example/', refs)).toBeNull();
   });
 });

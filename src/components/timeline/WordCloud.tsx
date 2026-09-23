@@ -160,8 +160,11 @@ export function WordCloud({
   // What a layout depends on besides the box, to tell whether the last one fits.
   const wordsKey = useMemo(() => words.map((w) => `${w.key}\t${w.text}\t${w.weight}\t${w.vertical ? 1 : 0}`).join('\n'), [words]);
   const reused = lastLayout && size && lastLayout.words === wordsKey && lastLayout.width === size.width && lastLayout.height === size.height ? lastLayout.layout : null;
-  // Until this cloud has laid out its own, the last one where it still fits.
-  const layout = ownLayout ?? reused;
+  // Until this cloud has laid out its own, the last one where it still fits -
+  // or, for the moment its own takes (fresh counts after a pick), the last
+  // one in this box as it stood, so the cloud never blanks between the two.
+  const held = !ownLayout && !reused && lastLayout && size && lastLayout.width === size.width && lastLayout.height === size.height ? lastLayout.layout : null;
+  const layout = ownLayout ?? reused ?? held;
 
   useEffect(() => {
     if (!size || size.width < 80 || size.height < 80) return;

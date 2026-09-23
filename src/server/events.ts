@@ -109,6 +109,16 @@ if (!g.__chronopinPinListeners) {
   pinEvents.on('save', placeStudio);
   pinEvents.on('update', placeStudio);
 
+  // How the pin reads as news for its company (extract/pinSentiment.ts), for
+  // the company search's graph; again only when its title or summary changed.
+  const scoreTone = (pin: Row) => {
+    import('./extract/pinSentiment')
+      .then(({ scorePin }) => scorePin(Number(pin.id)))
+      .catch((err) => log.warn(`sentiment scoring failed for pin ${pin.id}:`, (err as Error).message));
+  };
+  pinEvents.on('save', scoreTone);
+  pinEvents.on('update', scoreTone);
+
   // A film, series or anime's awards, from the award bodies' own pages
   // (services/pinAwards.ts); a new title can match a different work.
   const syncAwards = (pin: Row) => {

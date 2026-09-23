@@ -24,7 +24,7 @@ import { readSearchRequest, searchPinsPage, searchTagCounts, type SearchSort } f
 import type { TagCount } from '@/lib/tags';
 import { getTimeline, timelineMinConfidence } from './timeline';
 import { resolveCreatedSince, type CreatedQuery } from '../util/createdFilter';
-import { dependsOnZone, parseSearchQuery } from '../util/searchQuery';
+import { dependsOnZone, joinSearchQuery, parseSearchQuery, splitSearchQuery } from '../util/searchQuery';
 import { DEFAULT_LOCALE, type Locale } from '@/lib/i18n/config';
 import { localizePins } from './translations';
 
@@ -277,11 +277,17 @@ export async function searchPageTagCounts(
   timeZone: string,
   limit = TAG_CLOUD_SIZE,
 ): Promise<TagCount[]> {
-  const zone = zoneFor(query, timeZone);
+  // The counts leave out the terms the cloud writes (searchTagCounts), so they
+  // are cached without them too: every pick in the cloud then reads the same
+  // counts, rather than a snapshot of its own taken minutes apart, whose
+  // drift would lay the whole cloud out again.
+  const counted = joinSearchQuery(splitSearchQuery(query).filter((part) => part.kind !== 'term' || !CLOUD_FIELDS.has(part.field)));
+  const zone = zoneFor(counted, timeZone);
   return onlyWatched && userId
-    ? searchTagCounts(query, limit, { userId, onlyWatched: true, timeZone: zone, createdSince: resolveCreatedSince(created) })
-    : cachedTagCounts(query, created, zone, limit);
+    ? searchTagCounts(counted, limit, { userId, onlyWatched: true, timeZone: zone, createdSince: resolveCreatedSince(created) })
+    : cachedTagCounts(counted, created, zone, limit);
 }
+const CLOUD_FIELDS = new Set(['tag', 'category', 'confidence']);
 
 async function cachedTagCounts(query: string, created: CreatedQuery, timeZone: string, limit: number): Promise<TagCount[]> {
   'use cache';

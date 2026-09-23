@@ -30,6 +30,10 @@ export const TASKS = {
     label: 'Pin health',
     summary: 'Find broken videos, pictures and sources; fix them, and add references and thread links that are missing.',
   },
+  sentiment: {
+    label: 'Refresh sentiment',
+    summary: "Score the company pins whose title or summary changed since they were scored, or never were, and comments with no tone yet, for the company sentiment graphs.",
+  },
   commentTopics: {
     label: 'Comment topics',
     summary: 'Scan recent comments for subjects people keep raising that deserve a pin of their own.',
@@ -90,7 +94,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       enabled: true,
       times: ['00:00'],
       timeZone: 'America/Los_Angeles',
-      tasks: ['trends', 'revisits', 'thinCategories', 'trendingCategories', 'pinHealth', 'commentTopics', 'localEvents'],
+      tasks: ['trends', 'revisits', 'thinCategories', 'trendingCategories', 'pinHealth', 'sentiment', 'commentTopics', 'localEvents'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,
