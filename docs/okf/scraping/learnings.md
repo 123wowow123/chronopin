@@ -42,6 +42,64 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **A released product cites its MSRP from the company's own page.** Owner, 2026-09-20: for a released or on-sale product, check the company's product/store page for the MSRP and add that page as a reference.
 * **Tags should be relevant and catchy.** Owner, 2026-09-21: pin 2389 (US Fiscal Year 2028) was tagged `Appropriations, Federal budget, Fiscal year, United States` and was missing the thing anyone would actually search for - `Government Shutdown`. Tag the consequence and the familiar name people know the event by, not just the procedural vocabulary of the source, and title-case them (`Federal Budget`, `Fiscal Year 2028`).
 
+* **A product pin says what the product is.** Owner, 2026-09-22, on pin 2346 (the A350F first flight): "Product pins should have notable features in long form summary". A pin about an aircraft, vehicle, device, chip, game, AI model or software release gets summary points on what is new or distinctive about it and its headline specifications with units, not only the event's date and schedule. Owner, same day: the features go in **their own section** - `<h3>Notable features</h3><ul>...</ul>` after the event's list - "rather than piled into large list of bullets with other things". Built into all three summary prompts (`PRODUCT_FEATURES_RULE` in `src/server/extract/index.ts`); the wiki pages now record a product's features too. The manufacturer's product page is the usual place for the specs; add it as a reference.
+## 2026-09-22 - Notable features on product pins (pin 2346, @BuildDesk)
+
+* **Feedback**: "Product pins should have notable features in long form summary" - the A350F
+  first-flight summary covered only the certification schedule and never said what the
+  aircraft is.
+* **Learned - Airbus moved its product pages.** `aircraft.airbus.com/en/aircraft/a350/a350f`
+  is a 404; the freighter lives at `/en/aircraft/freighters/a350f` and reads with plain curl
+  (payload, range, door size, engine, dimensions in a "Key figures" block).
+* **Learned - a hand-written summary had kept its `[S]`/`[1]` labels as text.** Pin 2346 showed
+  literal "[1]" on the page; summaries must store `<cite data-ref>` tags (the prompts' labels are
+  converted by `citeLabels` only on the API path). Re-cited while rewriting it.
+* **Feedback**: "notable features should have its own section rather than piled into large list of
+  bullets with other things" - so the rule asks for an `<h3>Notable features</h3>` list after the
+  event's list; `.rich-text h3` got a style (it had none) and the OKF export writes it as `###`.
+* **Backfill, same day** (Ian: "do it"): 312 existing product pins (devices, chips, games and
+  game reviews, AI model releases, aircraft, vehicles, audio, sneakers; not infrastructure,
+  launches, markets or conferences) rewritten by 32 research agents with no API credit, then
+  saved by full-pin `PUT` as each pin's author. 186 curator pins saved, then the 125 authored by Ian's own
+  accounts (users 1/2) with an admin token he supplied: 311 of 312 done; 1 skipped (pin 300, an
+  unannounced game).
+* **Learned - most "product" summaries were already mostly features.** Agents *moved* existing
+  feature points verbatim under the heading and only researched what was missing; a checker
+  confirmed every old point survived and every point is cited.
+* **Learned - openai.com returns 403 to curl and WebFetch**; its launch posts were read and cited
+  as web.archive.org snapshots, and the model specs from `developers.openai.com/api/docs/models/`.
+  Sony, Audio-Technica, JBL and sonos.com shop pages block bots too.
+* **Learned - a pin save deletes and re-inserts its merchants, media and references**, so their
+  row ids change on every `PUT`; compare children without ids when checking a save.
+* **Fixed, same day** (Ian: "add to notes and fix"), all by full-pin `PUT`:
+  * **26 OpenAI pins cited the wrong release-notes entry.** Their summaries cited
+    `help.openai.com/.../model-release-notes#h_c54335ba28` - GPT-4o mini's anchor - instead of each
+    pin's own entry, which is its `sourceUrl`. Because `urlKey` drops the fragment the page still
+    numbered them to the source, but OKF and anyone following the link landed on the wrong model.
+    Repointed to each pin's own anchor. **Rule:** on a page of many dated entries, a citation
+    carries the pin's own anchor.
+  * **Pin 17** (Snapdragon 805 preview) was dated 31 March 2014; Tom's Hardware's metadata says the
+    preview was published 31 July 2014. Re-dated and marked confirmed - a wrong date, not a delay.
+  * **Pins 52 and 98 happened later than planned**, so they now carry the delay fields: the Xbox One
+    reached China on 29 September 2014, six days late (Game Informer, Engadget added as
+    references), and Age of Empires: Definitive Edition slipped from 19 October 2017 to 20 February
+    2018 (Wikipedia). `dateConfidence: delayed` with a "Stated:" `delayReasoning`, as earlier past
+    delays are recorded.
+  * **Pin 139** repeated Interesting Engineering's 2017 claim that the X-59 prototype would "run on
+    two engines"; the aircraft has one F414, so the claim was dropped.
+  * **Pin 796** said Lufthansa had retired its A380s. It retired all 14 in March 2020, then resumed
+    A380 flights on 1 June 2023 and flies 8 (6 sold back to Airbus) - Airways and Wikipedia's fleet
+    list. Its "first of 12" was also wrong: it was 14.
+  * **Pin 42** had a sentence broken by a link turned citation ("shoulder plates; [cite] lists
+    Health..."); reworded.
+  * **Pin 2329**'s GR00T specs had come from WebFetch's model summary of NVIDIA's investor page
+    (403 to curl). NVIDIA's newsroom page (`nvidianews.nvidia.com/news/nvidia-open-humanoid-robot-reference-design`)
+    serves the same release raw; every figure matched, and it is now cited on those points.
+    **Rule:** a figure read through WebFetch's summary is not verified - find a raw copy.
+  * A pin's re-dated start moves its stock `startDay`/`startPrice`, as it should.
+* **Changed**: the standing feedback above; the summary prompts in `extract/index.ts`,
+  `extract/references.ts` and `extract/wiki.ts`.
+
 ## 2026-09-22 - Claude Opus 5.5 (pin 2694, @TechDesk)
 
 * **Learned**: **the same publisher dates two announcements two different
@@ -3889,3 +3947,97 @@ thread behind Lisboa oldest first.
   corporate announcements (a quarter or a season, never a day), a Michelin addendum for when
   the meta-description route is closed, and the Dallas outlets that read against the ones that
   do not.
+
+## 2026-09-22 - The New York Times' Restaurant List 2026 (pins 2720-2788, @FoodDesk)
+
+Ian: "pin all top 50 ny time 'The Restaurant List 2026'". Fifty opening pins, one per
+restaurant, posted through `POST /api/pins` as @FoodDesk.
+
+* **Learned - a paywalled list can be read through the owner's own browser.** nytimes.com is
+  a paywall to every fetcher here; with Claude in Chrome connected (`@browser` in the VS Code
+  extension) the interactive rendered in full in Ian's logged-in session. Each entry's header
+  line carries `City • Cuisine • Opened <Month YYYY> • <site>`, and each entry is a `div` with
+  the slug as its `id` - so **`...best-restaurants-america.html#<slug>` is a per-item deep link**
+  and every pin gets its own `sourceUrl`, as the roundup rule asks. The tool's JS results
+  truncate at about 1,000 characters; `get_page_text` returned the whole list in one call.
+* **Learned - month-only openings, all fifty.** The list dates by month, so every pin is
+  `estimated` on the last day of its month. Exact days would need local press per restaurant;
+  not done in this pass.
+* **Learned - the app's image downloader has two blind spots.** (1) Squarespace's CDN answers
+  fetch's default `Accept: */*` with **WebP** whatever the query string says (`?format=1500w`
+  and `?format=original` alike), and Jimp cannot decode it: 19 of 49 posts 500'd. Asking for
+  `image/jpeg` gets the same picture as JPEG, so `DOWNLOAD_HEADERS` in `src/server/image.ts` now
+  sends an `Accept` naming only what Jimp decodes. (2) A WordPress host (littlebirdfairhope.com)
+  403s the `compatible; Chronopin/1.0` user agent while serving a browser UA; left alone, the pin
+  went up without the picture. **Pre-check every chosen image with the app's own headers**
+  before posting.
+* **Learned - a failed create leaves a pin behind.** Create is not transactional: each 500
+  still wrote the pin row and its references, without tags, media or the post-save hooks. The
+  repair used was `DELETE` (a soft delete, kept in the seeds like the other 71) and a fresh
+  `POST`, so the live feed, search sync and duplicate check run.
+* **Learned - a company named in the title steers `places:resolve`.** Bar Panisse carries
+  company `Chez Panisse` and a title naming it, so the resolver matched **Chez Panisse** at 1517
+  Shattuck. Set by hand. Four more (Heretik, Passage, Tin Tin, Merci) had no match from the
+  resolver but had one from the address-based keyless lookup done before posting.
+* **Learned - stale venue nodes in Nominatim.** Its "Khue's Kitchen" sits at 799 University
+  Ave; the restaurant's own site says 693 Raymond Ave, which Nominatim also has. Elemi Taqueria's
+  first Google hit was the parent Elemi on Eastlake Blvd; the taquería is at 7729 Paseo del
+  Norte. And many reverse-geocoded labels open with a *previous or neighbouring* tenant's name
+  (Sons & Daughters, Amici, Ancora Pizzeria, Holbox) - that leading name is dropped and the
+  street kept.
+* **Feedback**: none yet.
+* **Changed**: [Sources](sources.md) gains nytimes.com's interactive, the Squarespace CDN and
+  the WordPress UA block; [Vertical recipes](verticals.md) - Restaurants gains the ranked-list
+  recipe; `src/server/image.ts` sends an `Accept` header.
+
+## 2026-09-22 - Three pictures on every NYT Restaurant List pin (pins 2720-2788, @FoodDesk)
+
+Ian: "pins need 3 media". 118 pictures added across the 50 pins by round-tripping each whole pin
+through `PUT /api/pins/:id`; tags, references and places came through intact.
+
+* **Learned - where restaurant pictures come from, in yield order.** (1) A deeper crawl of the
+  restaurant's own site - the homepage plus links named gallery/about/menu/private/events - gave
+  26 pins at least one more. (2) Local press found by one search per restaurant: the article's
+  `og:image` and body images, fetched with `curl`, for 22 more. (3) The rest only through the
+  owner's Chrome: lazy-loaded WordPress images (`data-src`), **OpenTable** listings (photo ids in
+  the page as `v4/photos/<id>-<n>`; the image that downloads is
+  `resizer.otstatic.com/v2/photos/wide-huge/<n>/<id>.jpg`) and **Resy** venue pages
+  (`image.resy.com/3/003/<n>/<venue>/<hash>/jpg/640x360`). The first photo on those two is the
+  restaurant's own; later ones include diners' uploads *and reviewers' profile pictures*, which
+  must be read before use.
+* **Learned - a press page's images are not all the article's.** Sidebars and ads put hotel
+  interiors (Pendry, Z hotels), magazine covers, TV-station graphics and in one case a mugshot
+  among the candidates; a Durant's crawl offered the logos of its owners' *other* steakhouses.
+  Every picture was viewed on a contact sheet before it was used.
+* **Learned - more format traps for the thumbnailer.** `.jpg.webp` on thelocalpalate.com (drop
+  the suffix); sfstandard.com's `-S1920x1280-FWEBP` becomes JPEG as `-FJPG`; OpenTable's `v4`
+  resizer paths 404 to a direct fetch while `v2/.../wide-huge/` serves JPEG. The Claude in Chrome
+  tool also refuses to return any URL carrying a query string, so strip queries in the page script.
+* **Learned - the MICHELIN Guide renders an error page in the owner's Chrome**, and a Google Maps
+  panel for a new venue can hold no photos of its own while the page's images belong to nearby
+  places; neither was used.
+* **Feedback**: "pins need 3 media" - a restaurant pin carries three pictures.
+* **Changed**: [Vertical recipes](verticals.md) - Restaurants now asks for three pictures and
+  names the sources above.
+
+## 2026-09-22 - Exact opening days and MICHELIN stars for the NYT Restaurant List (@FoodDesk)
+
+Ian said yes to moving the month-only pins to their days and adding stars.
+
+* **Learned - an announced day is not the day.** Heretík was announced by Westword (1 May 2026)
+  for Wednesday 6 May; the Denver Gazette of Monday 11 May says it opened "on Friday" - 8 May.
+  The report written after the event wins, and the announcement stays as a lower-confidence
+  reference explaining the difference. Seven of nine days were confirmed by a report written
+  after the opening; Rye Bunny's rests on reports two days ahead plus a July review saying
+  "opened in April"; Khue's Kitchen's (6 March 2025) only on an announcement three weeks ahead,
+  so that pin stays `estimated` on the announced day.
+* **Learned - the date-claim shape, as in pin 2693.** The day goes on the pin with
+  `confirmed`, and the article stating it is added as a reference with its own `startDate` and
+  confidence 92, above the source tier; the NYT source row carries no `startDate`.
+* **Learned - the MICHELIN meta description is readable through `launchBrowser()`.** The page
+  text only ever showed stars inside related-article tags ("2 MICHELIN Stars Restaurants"), but
+  `meta[name=description]` in the app's headless browser reads "a One Star: High quality cooking
+  restaurant in the 2026 MICHELIN Guide USA". That found stars on Milpero, Meju, Albi and
+  Restaurant Naides (`PinRating` 1/3 each), a Bib Gourmand on Komal and plain selections for
+  Creepies and Bistrot Ha - neither of which is a star score, so no rating.
+* **Feedback**: "yes" to the offered dates and stars.

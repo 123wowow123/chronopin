@@ -94,3 +94,64 @@ test('a card on the timeline pictures its video instead of loading the player', 
 test('opening or reloading the timeline puts today where the Today button does', async ({ page }) => {
   await expectReloadMatchesTodayButton(page);
 });
+
+// The account's pages are opened from the drawer, and each has an arrow back
+// to it: the page the drawer was open over, with the drawer open again. Signed
+// in as a throwaway account (the run's teardown removes it), since all three
+// pages are an account's.
+test.describe('the arrow back to the drawer', () => {
+  // An account per test: each starts signed out in a browser of its own, and
+  // a handle can be taken only once.
+  test.beforeEach(async ({ page }, testInfo) => {
+    const stamp = `${Date.now().toString(36)}${testInfo.testId.slice(0, 4)}`;
+    await page.goto('/signup');
+    await page.getByLabel('User Handle').fill(`e2eback${stamp}`);
+    await page.getByLabel('First Name').fill('End');
+    await page.getByLabel('Last Name').fill('ToEnd');
+    await page.getByLabel('Email').fill(`e2e-back-${stamp}@example.com`);
+    await page.getByLabel('Password', { exact: true }).fill('correct horse battery');
+    await page.getByLabel('Confirm Password').fill('correct horse battery');
+    await page.getByRole('button', { name: 'Sign up' }).click();
+    await expect(page).not.toHaveURL(/\/signup/);
+  });
+
+  for (const [row, path] of [
+    [/Profile & settings/, /\/profile$/],
+    [/Notifications/, /\/notifications$/],
+  ] as const) {
+    test(`goes from ${path.source.replace(/\\|\$/g, '')} to the page the drawer was open over`, async ({ page }) => {
+      await page.goto('/search?q=anime');
+      await expect(page.locator('article').first()).toBeVisible();
+      const drawer = page.getByRole('dialog', { name: 'Menu' });
+      await page.getByRole('button', { name: /open menu/i }).click();
+      await drawer.getByRole('link', { name: row }).click();
+      await expect(page).toHaveURL(path);
+      await expect(drawer).toBeHidden();
+
+      // The arrow leads the title's line.
+      const back = page.getByRole('button', { name: 'Back to the menu' });
+      const title = page.getByRole('heading', { level: 1 });
+      const [arrow, heading] = [(await back.boundingBox())!, (await title.boundingBox())!];
+      expect(Math.abs(arrow.y + arrow.height / 2 - (heading.y + heading.height / 2))).toBeLessThan(4);
+
+      await back.click();
+      await expect(page).toHaveURL(/\/search\?q=anime/);
+      await expect(drawer).toBeVisible();
+    });
+  }
+
+  // Reached without the drawer, there is no page behind to go back to: the
+  // arrow opens the drawer over the timeline.
+  test('opens the drawer over the timeline when the page was reached directly', async ({ page }) => {
+    await page.goto('/profile');
+    await page.getByRole('button', { name: 'Back to the menu' }).click();
+    await expect(page).toHaveURL((url) => url.pathname === '/');
+    await expect(page.getByRole('dialog', { name: 'Menu' })).toBeVisible();
+
+    // And a later change of page, not through the arrow, leaves it shut.
+    await page.getByRole('dialog', { name: 'Menu' }).getByRole('button', { name: /^close menu$/i }).first().click();
+    await page.goto('/map');
+    await page.waitForTimeout(500);
+    await expect(page.getByRole('dialog', { name: 'Menu' })).toBeHidden();
+  });
+});

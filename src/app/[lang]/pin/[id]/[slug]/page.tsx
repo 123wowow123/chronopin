@@ -29,6 +29,7 @@ import { hasPlace } from '@/lib/places';
 import { EpisodeCount } from '@/components/pin/EpisodeCount';
 import { MarketVolume } from '@/components/pin/MarketVolume';
 import { PinReferences } from '@/components/pin/PinReferences';
+import { PinSuggest } from '@/components/pin/PinSuggest';
 import { PinMapLoader } from '@/components/pin/PinMapLoader';
 import { PinMediaFrame } from '@/components/pin/PinMedia';
 import { PinWeather } from '@/components/pin/PinWeather';
@@ -370,6 +371,9 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
       ) : null}
 
       <PinReferences pinId={pin.id} authorId={pin.user?.id ?? pin.userId} evidence={pinEvidence(pin)} sourceReasoning={pin.dateConfidenceReasoning} dateRanges={dateRanges} timeZone={timeZone} />
+      {/* Right under what backs the pin: a missing link, date or fact goes to
+          the AI, which adds whatever page backs it up to the list above. */}
+      <PinSuggest pinId={pin.id} />
     </>
   );
 }

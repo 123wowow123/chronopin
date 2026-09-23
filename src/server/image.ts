@@ -13,8 +13,12 @@ const THUMB_OPTIONS = {
 
 // Wikimedia's CDN (thumb.wikimedia.org, and others) 403s any request with no
 // User-Agent. A browser-like UA is enough to pass.
+// Accept names only what Jimp decodes: Squarespace's CDN answers fetch's
+// default `*/*` with WebP, which the thumbnailer rejects, but serves the
+// same picture as JPEG when asked for it.
 const DOWNLOAD_HEADERS = {
   'User-Agent': 'Mozilla/5.0 (compatible; Chronopin/1.0)',
+  Accept: 'image/jpeg,image/png,image/gif;q=0.9,*/*;q=0.5',
 };
 
 // Wikimedia's policy asks a client to name itself and how to reach it, and

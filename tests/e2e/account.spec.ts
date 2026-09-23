@@ -12,6 +12,8 @@ const password = 'correct horse battery';
 // A leap day: the one date a round trip through a time zone is most likely
 // to land a day either side of.
 const birthday = '1984-02-29';
+// Saved with its whitespace tidied, not reformatted (src/lib/phone.ts).
+const phone = '+1 (415) 555-0132';
 
 async function signUp(page: Page) {
   await page.goto('/signup');
@@ -21,6 +23,7 @@ async function signUp(page: Page) {
   // Optional, but a given birthday has to come back the same day (0058 is a
   // `date`, which pg would otherwise hand back as local midnight).
   await page.getByLabel('Birthday').fill(birthday);
+  await page.getByLabel('Phone Number').fill(phone);
   await page.getByLabel('Email').fill(email);
   await page.getByLabel('Password', { exact: true }).fill(password);
   await page.getByLabel('Confirm Password').fill(password);
@@ -30,10 +33,17 @@ async function signUp(page: Page) {
 
 test.describe.serial('a signed-in author', () => {
   test('signs up, creates a pin, and edits it without losing any field', async ({ page }) => {
+    test.setTimeout(240_000);
     await signUp(page);
 
+    // The page asks only for a link and a note. This test wants every field:
+    // its link has no date for the AI to find, so the full form opens with
+    // what was read, and the rest is filled in there.
     await page.goto('/create');
-    await page.getByLabel('Source URL').fill(sourceUrl);
+    await page.getByLabel('Link').fill(sourceUrl);
+    await page.getByRole('button', { name: 'Create pin' }).click();
+    await expect(page.getByRole('button', { name: 'Submit' })).toBeVisible({ timeout: 150_000 });
+    await expect(page.getByLabel('Source URL')).toHaveValue(sourceUrl);
     await page.getByLabel('Title').fill(`E2E launch ${stamp}`);
     // Exact: a timed pin's form also has a "Start time" beside it.
     await page.getByLabel('Start', { exact: true }).fill('2031-05-04');
@@ -120,6 +130,29 @@ test.describe.serial('a signed-in author', () => {
     expect((await page.request.get(`/api/pins/${pinId}`)).status()).toBe(404);
   });
 
+  // A link the AI cannot make a pin of (here, no date on the page) opens the
+  // full form with what was read and the author's note, to finish by hand.
+  test('a link the AI cannot finish opens the full form, filled in', async ({ page }) => {
+    test.setTimeout(180_000);
+    await page.goto('/login');
+    await page.getByLabel('Email').fill(email);
+    await page.getByLabel('Password').fill(password);
+    await page.getByRole('button', { name: 'Login' }).click();
+    await page.waitForURL((url) => !url.pathname.startsWith('/login'));
+
+    await page.goto('/create');
+    await page.getByLabel('Link').fill(`${sourceUrl}-quick`);
+    await page.getByLabel(/What is this pin about/).fill('The bridge opening, not the groundbreaking');
+    await page.getByRole('button', { name: 'Create pin' }).click();
+    await expect(page.getByRole('status')).toContainText('Reading the page');
+
+    await expect(page.getByText(/The AI (is not available|could not find)/)).toBeVisible({ timeout: 150_000 });
+    await expect(page.getByLabel('Source URL')).toHaveValue(`${sourceUrl}-quick`);
+    // The note starts the description (the editor; the preview card shows it too).
+    await expect(page.locator('[contenteditable="true"]').first()).toContainText('The bridge opening, not the groundbreaking');
+    await expect(page.getByRole('button', { name: 'Submit' })).toBeVisible();
+  });
+
   test('a signed-out visitor is sent to log in, and logging in works', async ({ page }) => {
     await page.goto('/profile');
     await expect(page).toHaveURL(/\/login\?redirect=%2Fprofile/);
@@ -128,6 +161,7 @@ test.describe.serial('a signed-in author', () => {
     await page.getByRole('button', { name: 'Login' }).click();
     await expect(page).toHaveURL(/\/profile$/);
     await expect(page.getByLabel('Birthday')).toHaveValue(birthday);
+    await expect(page.getByLabel('Phone Number')).toHaveValue(phone);
     await page.getByLabel('Timeline filter default').selectOption('1w');
     await expect(page.getByText('Preferences saved.')).toBeVisible();
   });
@@ -165,4 +199,120 @@ test.describe.serial('a signed-in author', () => {
     await expect(otherPage.locator('html')).toHaveAttribute('data-theme', 'light');
     await other.close();
   });
+
+  // Removing a picture can be taken back while the Undo stands in for the
+  // button; leaving the page with it up lets the removal go through.
+  test('a removed picture can be taken back until the page is left', async ({ page }) => {
+    await page.goto('/login');
+    await page.getByLabel('Email').fill(email);
+    await page.getByLabel('Password').fill(password);
+    await page.getByRole('button', { name: 'Login' }).click();
+    await page.waitForURL((url) => !url.pathname.startsWith('/login'));
+    await page.goto('/profile');
+
+    await page.locator('input[type=file]').setInputFiles({ name: 'me.png', mimeType: 'image/png', buffer: onePixelPng() });
+    const remove = page.getByRole('button', { name: 'Remove picture' });
+    const undo = page.getByRole('button', { name: 'Undo' });
+    await expect(remove).toBeVisible();
+    const picture = async () => ((await (await page.request.get('/api/users/me')).json()) as { pictureUrl?: string | null }).pictureUrl;
+    const uploaded = await picture();
+    expect(uploaded).toBeTruthy();
+
+    // Taken off the page at once, but nothing sent: the account still has it.
+    await remove.click();
+    await expect(undo).toBeVisible();
+    await expect(remove).toHaveCount(0);
+    await expect(page.getByText('Picture removed.')).toBeVisible();
+    expect(await picture()).toBe(uploaded);
+
+    await undo.click();
+    await expect(remove).toBeVisible();
+    await expect(undo).toHaveCount(0);
+
+    // Removed again and the page left: that is the Undo lapsing.
+    await remove.click();
+    await expect(undo).toBeVisible();
+    await page.goto('/');
+    await expect.poll(picture).toBeFalsy();
+    await page.goto('/profile');
+    await expect(page.getByText('Upload picture')).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Undo' })).toHaveCount(0);
+  });
+
+  // The default location (0066): picked from a search, taken from the device,
+  // and cleared, each saved on its own. The search answer is stubbed, so the
+  // test does not depend on the geocoder; the device's point is rounded to
+  // two decimals before it is kept.
+  test('the default location is set from a search or the device, and cleared', async ({ page, context }) => {
+    await page.goto('/login');
+    await page.getByLabel('Email').fill(email);
+    await page.getByLabel('Password').fill(password);
+    await page.getByRole('button', { name: 'Login' }).click();
+    await page.waitForURL((url) => !url.pathname.startsWith('/login'));
+    await page.route('**/api/place/search?*', (route) =>
+      route.fulfill({ json: [{ latitude: 45.52, longitude: -122.68, name: 'Portland, Oregon, United States' }] }),
+    );
+    const saved = async () => {
+      const me = (await (await page.request.get('/api/users/me')).json()) as Record<string, unknown>;
+      return { latitude: me.locationLatitude, longitude: me.locationLongitude, name: me.locationName, fromDevice: me.locationFromDevice };
+    };
+    await page.goto('/profile');
+    const shown = page.getByTestId('default-location');
+    await expect(shown).toContainText('Not set');
+
+    await page.getByLabel('Or search for a place').fill('Portl');
+    await page.getByRole('button', { name: 'Portland, Oregon, United States' }).click();
+    await expect(shown).toContainText('Portland, Oregon, United States');
+    expect(await saved()).toEqual({ latitude: 45.52, longitude: -122.68, name: 'Portland, Oregon, United States', fromDevice: false });
+    await expect(page.getByLabel('Keep it updated from this device')).not.toBeChecked();
+
+    await context.grantPermissions(['geolocation']);
+    await context.setGeolocation({ latitude: 51.507351, longitude: -0.127758 });
+    await page.getByRole('button', { name: 'Use my current location' }).click();
+    await expect(page.getByText('Default location saved.')).toBeVisible();
+    await expect.poll(async () => (await saved()).latitude).toBe(51.51);
+    expect(await saved()).toMatchObject({ longitude: -0.13, fromDevice: true });
+    await expect(page.getByLabel('Keep it updated from this device')).toBeChecked();
+
+    await page.getByRole('button', { name: 'Clear location' }).click();
+    await expect(shown).toContainText('Not set');
+    expect(await saved()).toEqual({ latitude: null, longitude: null, name: null, fromDevice: false });
+  });
 });
+
+// What a first Google, Facebook or Apple sign-in lands on (signInLanding):
+// the provider shares no birthday or phone, so the page asks for them and
+// goes on to where the sign-in was headed. The OAuth round trip itself cannot
+// run here, so the account is made through the API, which has neither.
+test('a new account without a birthday or phone is asked for them, and goes on', async ({ page }) => {
+  const other = `e2d${stamp}`;
+  const res = await page.request.post('/api/users', {
+    data: { userName: `@${other}`, firstName: 'Oauth', lastName: 'Like', email: `e2e-d${stamp}@example.com`, password },
+  });
+  expect(res.ok()).toBe(true);
+
+  await page.goto('/signup/details?redirect=%2Fprofile');
+  await expect(page.getByRole('heading', { name: 'A little more about you' })).toBeVisible();
+  await page.getByLabel('Phone Number').fill('12');
+  await page.getByRole('button', { name: 'Save' }).click();
+  await expect(page.getByText('Please enter a phone number of 7 to 15 digits')).toBeVisible();
+
+  await page.getByLabel('Phone Number').fill(phone);
+  await page.getByRole('button', { name: 'Save' }).click();
+  await expect(page).toHaveURL(/\/profile$/);
+  await expect(page.getByLabel('Phone Number')).toHaveValue(phone);
+  // Skipped, the birthday stays empty rather than being cleared to anything.
+  await expect(page.getByLabel('Birthday')).toHaveValue('');
+
+  // With only the birthday left to give, the page still asks; the phone
+  // already on the account comes back filled in.
+  await page.goto('/signup/details?redirect=%2Fprofile');
+  await expect(page.getByLabel('Phone Number')).toHaveValue(phone);
+  await page.getByRole('button', { name: 'Skip for now' }).click();
+  await expect(page).toHaveURL(/\/profile$/);
+});
+
+// A 1x1 PNG, enough for the picture upload (which squares and re-encodes it).
+function onePixelPng(): Buffer {
+  return Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==', 'base64');
+}

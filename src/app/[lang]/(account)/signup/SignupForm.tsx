@@ -7,6 +7,7 @@ import { OAuthButtons, OrDivider } from '@/components/forms/OAuthButtons';
 import { afterLoginPath, authHref } from '@/lib/authRedirect';
 import { birthdayProblem, birthdayToday, EARLIEST_BIRTHDAY } from '@/lib/birthday';
 import { api, ApiError } from '@/lib/client/api';
+import { phoneProblem } from '@/lib/phone';
 import { useT } from '@/lib/client/i18n';
 import { useLocalize } from '@/lib/client/navigation';
 
@@ -15,8 +16,8 @@ const HANDLE = /^[a-zA-Z0-9-_]+$/;
 export function SignupForm() {
   const params = useSearchParams();
   const redirect = afterLoginPath(params.get('redirect'));
-  // birthday is the one field that may stay empty.
-  const [form, setForm] = useState({ handle: '', firstName: '', lastName: '', birthday: '', email: '', password: '', confirmPassword: '' });
+  // birthday and phone are the fields that may stay empty.
+  const [form, setForm] = useState({ handle: '', firstName: '', lastName: '', birthday: '', phone: '', email: '', password: '', confirmPassword: '' });
   // The last availability answer, for the handle it was about.
   const [check, setCheck] = useState<{ handle: string; available: boolean } | null>(null);
   const [submitted, setSubmitted] = useState(false);
@@ -53,6 +54,7 @@ export function SignupForm() {
     !form.lastName && t('signup.lastNameRequired'),
     badBirthday === 'format' && t('signup.birthdayInvalid'),
     badBirthday === 'range' && t('signup.birthdayRange', { min: EARLIEST_BIRTHDAY }),
+    phoneProblem(form.phone) && t('signup.phoneInvalid'),
     !/^\S+@\S+\.\S+$/.test(form.email) && t('signup.emailInvalid'),
     form.password.length < 3 && t('signup.passwordShort', { min: 3 }),
     form.password !== form.confirmPassword && t('signup.passwordsMatch'),
@@ -71,6 +73,7 @@ export function SignupForm() {
         lastName: form.lastName,
         // Left out rather than sent empty: the column takes a day or nothing.
         birthday: form.birthday || null,
+        phone: form.phone || null,
         email: form.email,
         password: form.password,
       });
@@ -129,6 +132,13 @@ export function SignupForm() {
           onChange={set('birthday')}
         />
         <p className="mt-1.5 text-sm text-subtle">{t('signup.birthdayHint')}</p>
+      </div>
+      <div>
+        <label htmlFor="phone" className="field-label">
+          {t('signup.phone')}
+        </label>
+        <input id="phone" type="tel" autoComplete="tel" className="field" value={form.phone} onChange={set('phone')} />
+        <p className="mt-1.5 text-sm text-subtle">{t('signup.phoneHint')}</p>
       </div>
       <div>
         <label htmlFor="email" className="field-label">

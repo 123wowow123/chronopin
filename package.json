@@ -55,6 +55,7 @@
     "duplicates:suggest": "tsx scripts/duplicates/suggest.ts",
     "duplicates:verify": "tsx scripts/duplicates/verify.ts",
     "comments:sentiment": "tsx scripts/comments/sentiment.ts",
+    "suggestions:review": "tsx scripts/suggestions/review.ts",
     "wiki:sync": "tsx scripts/wiki/sync.ts",
     "wiki:transcripts": "tsx scripts/wiki/transcripts.ts",
     "wiki:refetch-blocked": "tsx scripts/wiki/refetchBlocked.ts",

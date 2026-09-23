@@ -19,6 +19,7 @@ const prop = [
   'firstName',
   'lastName',
   'birthday',
+  'phone',
   'gender',
   'locale',
   'facebookId',
@@ -39,6 +40,10 @@ const prop = [
   'themePreference',
   'localePreference',
   'showCardStockPrices',
+  'locationLatitude',
+  'locationLongitude',
+  'locationName',
+  'locationFromDevice',
   'utcCreatedDateTime',
   'utcUpdatedDateTime',
   'utcDeletedDateTime',
@@ -51,6 +56,7 @@ export const pickUserProps = [
   'firstName',
   'lastName',
   'birthday',
+  'phone',
   'email',
   'role',
   'provider',
@@ -59,12 +65,16 @@ export const pickUserProps = [
   'themePreference',
   'localePreference',
   'showCardStockPrices',
+  'locationLatitude',
+  'locationLongitude',
+  'locationName',
+  'locationFromDevice',
 ];
 
 // What somebody may change about themselves through the generic patch route.
 // Without this, every truthy property in the model's own list is writable
 // straight from the request body - `role` included.
-export const patchableUserProps = ['userName', 'firstName', 'lastName', 'birthday', 'email'];
+export const patchableUserProps = ['userName', 'firstName', 'lastName', 'birthday', 'phone', 'email'];
 
 // Which unique index (0046) a failed insert or update hit: another live
 // account already has this email or @handle. Null for any other error.
@@ -91,6 +101,7 @@ export default class User {
   declare email: string;
   declare role: string;
   declare birthday: string | null | undefined;
+  declare phone: string | null | undefined;
   declare provider: string;
   declare password: string | null | undefined;
   declare salt: string | null | undefined;
@@ -99,6 +110,12 @@ export default class User {
   declare themePreference: string | null | undefined;
   declare localePreference: string | null | undefined;
   declare showCardStockPrices: boolean | undefined;
+  // The default location (0066): a rounded point and the geocoder's name for
+  // it, or all null; see src/lib/location.ts.
+  declare locationLatitude: number | null | undefined;
+  declare locationLongitude: number | null | undefined;
+  declare locationName: string | null | undefined;
+  declare locationFromDevice: boolean | undefined;
 
   constructor(user?: Row | null) {
     if (user) {
@@ -242,17 +259,19 @@ export default class User {
 // next save. Endpoints pick what they send (pickUserProps), so loading more
 // exposes nothing.
 const USER_COLUMNS = [
-  'id', 'userName', 'firstName', 'lastName', 'birthday', 'gender', 'locale', 'facebookId', 'googleId', 'appleId',
+  'id', 'userName', 'firstName', 'lastName', 'birthday', 'phone', 'gender', 'locale', 'facebookId', 'googleId', 'appleId',
   'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email', 'password',
   'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices',
+  'locationLatitude', 'locationLongitude', 'locationName', 'locationFromDevice',
   'utcCreatedDateTime', 'utcUpdatedDateTime',
 ];
 
 // The editable columns, in the order create and update bind them.
 const WRITE_COLUMNS = [
-  'userName', 'firstName', 'lastName', 'birthday', 'gender', 'locale', 'facebookId', 'googleId', 'appleId',
+  'userName', 'firstName', 'lastName', 'birthday', 'phone', 'gender', 'locale', 'facebookId', 'googleId', 'appleId',
   'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email',
   'password', 'provider', 'role', 'salt', 'websiteUrl',
+  'locationLatitude', 'locationLongitude', 'locationName', 'locationFromDevice',
 ];
 
 function value(v: unknown) {
@@ -260,9 +279,13 @@ function value(v: unknown) {
 }
 
 // birthday is a `date` (0058), and the empty string a cleared form field
-// sends is not one, so an empty birthday is written as a null.
+// sends is not one, so an empty birthday is written as a null. An empty phone
+// (0065) is "not given" too, and its CHECK would refuse the empty string.
+// The location's name has a length CHECK too (0066), and its "follows the
+// device" flag is a boolean with a default, never written as null.
 function writeValue(user: User, column: string) {
-  return column === 'birthday' ? user[column] || null : value(user[column]);
+  if (column === 'locationFromDevice') return user.locationFromDevice !== false;
+  return column === 'birthday' || column === 'phone' || column === 'locationName' ? user[column] || null : value(user[column]);
 }
 
 // pg hands a bare `date` back as the server's own local midnight, which in a

@@ -477,11 +477,11 @@ export function NotificationBell({ className = '' }: { className?: string }) {
 
 // The drawer's Notifications row (below lg): phones get the list as a page of
 // its own rather than a panel squeezed under the bell.
-export function DrawerNotifications({ className, current }: { className: string; current: boolean }) {
+export function DrawerNotifications({ className, current, onClick }: { className: string; current: boolean; onClick?: () => void }) {
   const count = useUnreadCount(true);
   const t = useT();
   return (
-    <Link href="/notifications" aria-current={current ? 'page' : undefined} aria-label={unreadLabel(t, count)} className={className}>
+    <Link href="/notifications" aria-current={current ? 'page' : undefined} aria-label={unreadLabel(t, count)} onClick={onClick} className={className}>
       <span className="relative flex">
         <Icon name="bell" className="size-6" />
         <UnreadBadge count={count} className="-top-1.5 -right-2" />

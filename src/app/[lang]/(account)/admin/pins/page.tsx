@@ -26,9 +26,9 @@ export default async function AdminPinsPage() {
     UserWiki.count(),
   ]);
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10">
+    <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
       <AdminTabs current="/admin/pins" />
-      <h1 className="mb-6 text-2xl font-semibold tracking-tight">Pins</h1>
+      <h1 className="sr-only">Pins</h1>
       <TimelineVideoForm saved={video} />
       <PersonalBagForm saved={personal} wikis={wikis} />
       <WikiRecheckForm saved={recheck} lastRun={lastRecheck} />

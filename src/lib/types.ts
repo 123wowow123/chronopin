@@ -52,6 +52,21 @@ export type PinReferenceJson = {
   addedByUserPictureUrl?: string;
 };
 
+// A suggestion someone left on a pin (AiFeedback), as its author sees it: open
+// while the AI reviews it, then applied (it added references) or dismissed.
+export type SuggestionJson = {
+  id: number;
+  pinId: number;
+  feedback: string;
+  sourceUrl?: string | null;
+  status: 'open' | 'applied' | 'dismissed';
+  aiVerdict?: 'supported' | 'partly' | 'unsupported' | 'unclear' | null;
+  aiReasoning?: string | null;
+  aiReferences?: { url: string; title: string | null; confidence: number }[] | null;
+  utcCreatedDateTime: string;
+  utcResolvedDateTime?: string | null;
+};
+
 export type PinRatingJson = {
   id?: number;
   source: string;
@@ -292,6 +307,8 @@ export type SessionUser = {
   // A YYYY-MM-DD day, given at sign-up or on the profile, or absent: it is
   // optional, and never shown to anyone but the user and an admin.
   birthday?: string | null;
+  // Given at sign-up or on the profile, or absent; seen by the same two.
+  phone?: string | null;
   email?: string;
   role: string;
   provider?: string;
@@ -302,6 +319,14 @@ export type SessionUser = {
   localePreference?: Locale | null;
   // Off hides the company's stock price on pin cards.
   showCardStockPrices?: boolean;
+  // The default location (0066): where distances are measured from, the
+  // weather is for and the map opens on when the browser gives no position.
+  // Null when not set; see src/lib/location.ts.
+  locationLatitude?: number | null;
+  locationLongitude?: number | null;
+  locationName?: string | null;
+  // Whether the device may keep it up to date.
+  locationFromDevice?: boolean;
 };
 
 // Converts a model object (with Dates and toJSON) into plain JSON data that

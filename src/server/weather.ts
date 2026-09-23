@@ -171,6 +171,26 @@ export function placeForTimeZone(timeZone: string): Promise<NamedPlace | null> {
   });
 }
 
+// Places whose name starts with what someone typed, for picking a default
+// location on the profile: the same geocoder the time-zone lookup uses, and a
+// name built from what it returns ("Portland, Oregon, United States"), never
+// from the query. At most `count`, best-ranked first.
+export function searchPlaces(query: string, language = 'en', count = 6): Promise<NamedPlace[]> {
+  const name = query.trim().slice(0, 100);
+  if (name.length < 2) return Promise.resolve([]);
+  return cached(`search|${language}|${name.toLowerCase()}`, ZONE_TTL, async () => {
+    const data = await get(GEOCODE_URL, { name, count, language, format: 'json' });
+    const results: any[] = data.results ?? [];
+    return results
+      .filter((r) => r.latitude != null && r.longitude != null && r.name)
+      .map((r) => ({
+        latitude: Math.round(r.latitude * 100) / 100,
+        longitude: Math.round(r.longitude * 100) / 100,
+        name: [r.name, r.admin1 && r.admin1 !== r.name ? r.admin1 : null, r.country].filter(Boolean).join(', '),
+      }));
+  });
+}
+
 function utcDay(ms: number): number {
   return Math.floor(ms / DAY_MS) * DAY_MS;
 }

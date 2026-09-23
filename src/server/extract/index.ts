@@ -23,6 +23,10 @@ export const MODEL = 'claude-opus-5';
 // pathological page from becoming a six-figure-token request.
 export const MAX_PAGE_CHARS = 60000;
 
+// Shared by every prompt that writes a long-form summary: a product's pin
+// should say what the thing is, not only when it happens.
+export const PRODUCT_FEATURES_RULE = `When the event is about a product - an aircraft, vehicle, device, chip, game, AI model or software release - follow the event's list with a section of its own, "<h3>Notable features</h3><ul><li>...</li></ul>": what the product is and what is new or distinctive over what it replaces or competes with, and its headline specifications (size, capacity, range, performance, price) with their units, cited like every other point. The event's list above it keeps to the event itself (dates, schedule, who is involved).`;
+
 const CONFIDENCE_LEVELS = ['confirmed', 'scheduled', 'estimated', 'delayed', 'unknown'] as const;
 
 export type ExtractedFields = {
@@ -194,7 +198,7 @@ export const SCHEMA = {
     longFormSummary: {
       type: ['string', 'null'],
       description:
-        'Key points as an HTML bulleted list, "<ul><li>...</li></ul>" - rendered as HTML on the pin page, so real list markup, not prose and not markdown. Null when the page has too little to summarize.',
+        `Key points as an HTML bulleted list, "<ul><li>...</li></ul>" - rendered as HTML on the pin page, so real list markup, not prose and not markdown. ${PRODUCT_FEATURES_RULE} Null when the page has too little to summarize.`,
     },
   },
   required: [
@@ -230,13 +234,23 @@ export const SCHEMA = {
 
 // The extraction as a task a Claude Code session can answer when the API is
 // unavailable: the same system prompt, schema and user message the call uses.
-export function extractTask(pageUrl: string, pageText: string) {
+export function extractTask(pageUrl: string, pageText: string, note?: string) {
   return {
     stage: 'extract' as const,
     system: SYSTEM_PROMPT,
     schema: SCHEMA,
-    input: `Source URL: ${pageUrl}\n\nPage text:\n\n${(pageText || '').trim().slice(0, MAX_PAGE_CHARS)}`,
+    input: withNote(`Source URL: ${pageUrl}\n\nPage text:\n\n${(pageText || '').trim().slice(0, MAX_PAGE_CHARS)}`, note),
   };
+}
+
+// The longest note someone pinning a page may give the AI with it.
+export const NOTE_MAX = 2000;
+
+// A request's content with the note of the person pinning the page after it,
+// marked as theirs rather than the page's. Unchanged without one.
+export function withNote(content: string, note?: string | null): string {
+  const text = (note || '').trim().slice(0, NOTE_MAX).replace(/"""/g, '"');
+  return text ? `${content}\n\nThe note of the person pinning this (theirs, not the page's):\n"""\n${text}\n"""` : content;
 }
 
 let client: Anthropic | null = null;
@@ -266,7 +280,7 @@ export function describeError(err: unknown): string {
  * page had no usable text, or the call failed. Callers keep whatever the DOM
  * scrapers found in that case - a missing key must not break scraping.
  */
-export async function extractPinFields(pageUrl: string, pageText: string): Promise<ExtractedFields | null> {
+export async function extractPinFields(pageUrl: string, pageText: string, note?: string): Promise<ExtractedFields | null> {
   const anthropic = getClient();
   if (!anthropic) return null;
 
@@ -289,7 +303,7 @@ export async function extractPinFields(pageUrl: string, pageText: string): Promi
       messages: [
         {
           role: 'user',
-          content: `Source URL: ${pageUrl}\n\nPage text:\n\n${text.slice(0, MAX_PAGE_CHARS)}`,
+          content: withNote(`Source URL: ${pageUrl}\n\nPage text:\n\n${text.slice(0, MAX_PAGE_CHARS)}`, note),
         },
       ],
     });

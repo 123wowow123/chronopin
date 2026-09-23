@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PinForm } from '@/components/forms/PinForm';
+import { QuickPinForm } from '@/components/forms/QuickPinForm';
 import { requireViewer } from '@/server/guard';
 import { getT } from '@/lib/i18n/server';
 
@@ -13,5 +13,5 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function CreatePage() {
   await requireViewer('/create');
-  return <PinForm mode="create" />;
+  return <QuickPinForm />;
 }

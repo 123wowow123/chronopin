@@ -2,6 +2,7 @@ import _ from 'lodash';
 import { cookies } from 'next/headers';
 import type { NextRequest } from 'next/server';
 import { birthdayMessage, birthdayProblem } from '@/lib/birthday';
+import { normalizePhone, phoneMessage, phoneProblem } from '@/lib/phone';
 import { getUser, requireUser, signToken, tokenCookie } from '@/server/auth';
 import { json, readJson, route } from '@/server/http';
 import User, { patchableUserProps, pickUserProps, takenBody, takenField } from '@/server/model/user';
@@ -15,7 +16,7 @@ export const GET = route(async (request: NextRequest) => {
   return json(user ? user.pick(pickUserProps) : null);
 });
 
-// Change handle, name, birthday or email. Only those: a patch that took every
+// Change handle, name, birthday, phone or email. Only those: a patch that took every
 // field would let anyone make themselves an admin.
 export const PATCH = route(async (request: NextRequest) => {
   const signedIn = await requireUser(request);
@@ -23,11 +24,15 @@ export const PATCH = route(async (request: NextRequest) => {
 
   const badBirthday = birthdayProblem(body.birthday);
   if (badBirthday) return json({ code: `birthday.${badBirthday}`, message: birthdayMessage(badBirthday) }, 422);
+  const badPhone = phoneProblem(body.phone);
+  if (badPhone) return json({ code: `phone.${badPhone}`, message: phoneMessage() }, 422);
+  if ('phone' in body) body.phone = normalizePhone(body.phone);
 
   const user = (await loadUser(signedIn.id)).patchSet(new User(body));
-  // patchSet copies only what is truthy, so taking an optional birthday back
-  // off the account has to be said outright.
+  // patchSet copies only what is truthy, so taking an optional birthday or
+  // phone back off the account has to be said outright.
   if ('birthday' in body && !body.birthday) user.birthday = null;
+  if ('phone' in body && !body.phone) user.phone = null;
 
   try {
     await user.patchWithoutPassword();

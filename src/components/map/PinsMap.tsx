@@ -36,6 +36,8 @@ function queryCategories(query?: string) {
 // Center of the contiguous US, so an empty or loading map has a sensible view.
 const DEFAULT_CENTER: [number, number] = [39.8283, -98.5795];
 const DEFAULT_ZOOM = 4;
+// Opening on the viewer's own place: their region, with the pins around it.
+const HOME_ZOOM = 6;
 // A year either side of now: every pin ever posted on one map does not scale.
 const DEFAULT_SPAN = '1y';
 
@@ -346,7 +348,22 @@ export default function PinsMap() {
     // has not centered on anything or opened a popup yet.
     focusedRef.current = undefined;
     stickyRef.current = null;
+    // A map with nothing better to show opens where the viewer is: their
+    // granted position, or the default location on their account. Not the
+    // time zone's city, which is a guess too coarse to move a map for; and
+    // only while the map is still on the default view - no saved spot, no
+    // pin being shown, not yet moved by the reader.
+    let unmounted = false;
+    if (!spot) {
+      void viewerPlace().then((place) => {
+        if (unmounted || !place || place.source === 'timeZone' || mapRef.current !== map || focusedRef.current !== undefined) return;
+        const center = map.getCenter();
+        if (map.getZoom() !== DEFAULT_ZOOM || center.lat !== DEFAULT_CENTER[0] || center.lng !== DEFAULT_CENTER[1]) return;
+        map.setView([place.latitude, place.longitude], HOME_ZOOM);
+      });
+    }
     return () => {
+      unmounted = true;
       clearTimeout(cleared);
       stopViewSource();
       map.remove();

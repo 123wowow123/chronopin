@@ -1,11 +1,13 @@
 import type { NextRequest } from 'next/server';
 import { requireUser } from '@/server/auth';
-import { HttpError, noContent, readJson, route } from '@/server/http';
+import { HttpError, json, noContent, readJson, route } from '@/server/http';
+import { nameForPoint } from '@/server/geocode';
 import { loadUser } from '@/server/services/users';
 import { invalidateTimeline } from '@/server/services/cache';
 import { isValidSpan } from '@/server/util/createdFilter';
 import { isThemePreference } from '@/lib/theme';
 import { isLocale } from '@/lib/i18n/config';
+import { locationMessage, locationProblem, roundCoordinate, userLocation } from '@/lib/location';
 
 // Save the signed-in user's own preferences. Deliberately narrow: named
 // fields, written to the row the token identifies. A field left out of the
@@ -59,9 +61,52 @@ export const PUT = route(async (request: NextRequest) => {
     user.showCardStockPrices = body.showCardStockPrices;
   }
 
+  // The default location (0066). null clears it, and stops the device from
+  // setting it again straight away - clearing it is saying not to keep one.
+  // A point from the device is named here, by the geocoder; a point picked
+  // from the search arrives with the geocoder's name for it already.
+  const locationChanged = 'location' in body;
+  if (locationChanged) {
+    const location = body.location;
+    if (location === null) {
+      user.locationLatitude = null;
+      user.locationLongitude = null;
+      user.locationName = null;
+      user.locationFromDevice = false;
+    } else {
+      if (!location || typeof location !== 'object' || Array.isArray(location)) {
+        throw new HttpError(400, '', { message: 'location must be an object or null' });
+      }
+      const problem = locationProblem(location);
+      if (problem) throw new HttpError(400, '', { message: locationMessage(problem) });
+      if (location.fromDevice !== undefined && typeof location.fromDevice !== 'boolean') {
+        throw new HttpError(400, '', { message: 'location.fromDevice must be true or false' });
+      }
+      const latitude = roundCoordinate(location.latitude);
+      const longitude = roundCoordinate(location.longitude);
+      const fromDevice = location.fromDevice === true;
+      const given = typeof location.name === 'string' ? location.name.trim() : '';
+      user.locationLatitude = latitude;
+      user.locationLongitude = longitude;
+      user.locationName = (!fromDevice && given) || (await nameForPoint(latitude, longitude, user.localePreference || 'en'));
+      user.locationFromDevice = fromDevice;
+    }
+  }
+
+  if ('locationFromDevice' in body) {
+    if (typeof body.locationFromDevice !== 'boolean') {
+      throw new HttpError(400, '', { message: 'locationFromDevice must be true or false' });
+    }
+    user.locationFromDevice = body.locationFromDevice;
+  }
+
   await user.patchWithoutPassword();
   if (spanChanged) {
     invalidateTimeline();
+  }
+  // A changed location comes back as it was saved: rounded, and named.
+  if (locationChanged) {
+    return json({ location: userLocation(user), locationFromDevice: user.locationFromDevice !== false });
   }
   return noContent();
 });

@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "id": 4,
+    "pinId": 2323,
+    "userId": 1,
+    "feedback": "Add video: https://www.youtube.com/watch?v=eaYFhjf9bmg",
+    "sourceUrl": null,
+    "status": "open",
+    "aiVerdict": null,
+    "aiReasoning": null,
+    "aiReferences": null,
+    "aiModel": null,
+    "reviewAttempts": 0,
+    "utcCreatedDateTime": "2026-09-22T22:54:13.970Z",
+    "utcResolvedDateTime": null
+  },
+  {
+    "id": 5,
+    "pinId": 2323,
+    "userId": 1,
+    "feedback": "Add video\nhttps://www.youtube.com/watch?v=tI--eDLZlng",
+    "sourceUrl": null,
+    "status": "open",
+    "aiVerdict": null,
+    "aiReasoning": null,
+    "aiReferences": null,
+    "aiModel": null,
+    "reviewAttempts": 0,
+    "utcCreatedDateTime": "2026-09-22T22:55:04.640Z",
+    "utcResolvedDateTime": null
+  }
+]

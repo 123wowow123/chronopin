@@ -50,9 +50,9 @@ export default async function AdminLintPage({
   };
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10">
+    <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
       <AdminTabs current="/admin/lint" />
-      <h1 className="mb-6 text-2xl font-semibold tracking-tight">Lint</h1>
+      <h1 className="sr-only">Lint</h1>
 
       <div className="mb-6 flex flex-wrap gap-2 text-sm">
         <Link href={href({ severity })} aria-current={check ? undefined : 'page'} className={`rounded border px-2 py-1 ${check ? 'border-line text-subtle' : 'border-accent text-ink'}`}>

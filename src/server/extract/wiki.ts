@@ -20,7 +20,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import type { WikiDraft, WikiPage } from '../model/source';
 import type { SourceKind } from '@/lib/sourceKind';
 import { citeLabels } from './references';
-import { describeError, getClient, MODEL } from '.';
+import { describeError, getClient, MODEL, PRODUCT_FEATURES_RULE } from '.';
 
 // Text per wiki call; a longer source is split into parts of about this size.
 export const PART_CHARS = 60000;
@@ -32,7 +32,7 @@ const COMPOSE_BUDGET_CHARS = 120000;
 
 export const KIND_LABEL: Record<SourceKind, string> = { web: 'web page', youtube: 'YouTube video', tweet: 'post on X', podcast: 'podcast episode page', pdf: 'PDF document' };
 
-const PAGE_RULES = `Record only what the source itself says: what happens, who does it, where, and when (quote its date wording exactly, e.g. "expected in spring 2027"), costs and figures with their units, product names and versions, and short direct quotes where they carry a fact. Keep the source's own hedges ("reportedly", "planned"). Add nothing from your own knowledge and no opinions. Leave out navigation, ads, comments, sponsor reads and calls to subscribe.
+const PAGE_RULES = `Record only what the source itself says: what happens, who does it, where, and when (quote its date wording exactly, e.g. "expected in spring 2027"), costs and figures with their units, product names and versions and what a product can do (its features and specifications), and short direct quotes where they carry a fact. Keep the source's own hedges ("reportedly", "planned"). Add nothing from your own knowledge and no opinions. Leave out navigation, ads, comments, sponsor reads and calls to subscribe.
 
 title is what the page covers, not the site name. summary is one sentence saying what the page covers, used to decide whether to read it. body is Markdown - short sections or bullets, facts first. tags are up to ${MAX_TAGS} short lowercase subjects the page is about - organizations, places, products, people, kinds of event (e.g. "apple", "venice", "flood barrier") - for grouping pages across sources.`;
 
@@ -51,7 +51,7 @@ Give the overview of the whole source and the facts that matter most, drawn only
 
 export const COMPOSE_PROMPT = `You write the long-form summary of an event pin on a timeline, from wikis already written about each link the pin cites. The pin's own title, description and dates say which event it is; a wiki may cover more than this event (a roundup, a long video), so use only what is about this pin's event.
 
-Write the event's key points as an HTML bulleted list, "<ul><li>...</li></ul>" - real list markup, not prose and not markdown. Where one link adds to or updates another (a newer date, a cost, who is involved), say so, favouring the newer and more authoritative. Ground every point: end it with a citation of each link that backs it, by the label the link is given ([S] for the pin's source, [1], [2]... for the others), e.g. "<li>Opens to traffic on 18 September 2026 [S][2]</li>". Cite only what a link's wiki actually says. longFormSummary is null when the wikis hold too little about this event to summarize.`;
+Write the event's key points as an HTML bulleted list, "<ul><li>...</li></ul>" - real list markup, not prose and not markdown. Where one link adds to or updates another (a newer date, a cost, who is involved), say so, favouring the newer and more authoritative. ${PRODUCT_FEATURES_RULE} Ground every point: end it with a citation of each link that backs it, by the label the link is given ([S] for the pin's source, [1], [2]... for the others), e.g. "<li>Opens to traffic on 18 September 2026 [S][2]</li>". Cite only what a link's wiki actually says. longFormSummary is null when the wikis hold too little about this event to summarize.`;
 
 const TAGS = { type: 'array', items: { type: 'string' } };
 
@@ -93,7 +93,7 @@ export const COMPOSE_SCHEMA = {
 // outage): nothing to do with the link, so it should not use up its tries.
 export class ServiceError extends Error {}
 
-const isServiceFault = (err: unknown) =>
+export const isServiceFault = (err: unknown) =>
   err instanceof Anthropic.AuthenticationError ||
   err instanceof Anthropic.PermissionDeniedError ||
   err instanceof Anthropic.RateLimitError ||

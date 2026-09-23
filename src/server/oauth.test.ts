@@ -38,9 +38,9 @@ describe('appleProfileFrom', () => {
 });
 
 describe('signInLanding', () => {
-  it('asks a new account for the one thing no provider shares', () => {
-    expect(signInLanding('/', true)).toBe('/signup/birthday?redirect=%2F');
-    expect(signInLanding('/pin/12/a-launch', true)).toBe('/signup/birthday?redirect=%2Fpin%2F12%2Fa-launch');
+  it('asks a new account for what no provider shares', () => {
+    expect(signInLanding('/', true)).toBe('/signup/details?redirect=%2F');
+    expect(signInLanding('/pin/12/a-launch', true)).toBe('/signup/details?redirect=%2Fpin%2F12%2Fa-launch');
   });
 
   it('never asks somebody signing in again', () => {

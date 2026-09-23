@@ -17,9 +17,9 @@ export default async function AdminUsersPage() {
   const [allUsers, created] = await Promise.all([Users.getAll(pickUserProps), Users.listCreated()]);
   const users = toJson<Parameters<typeof UserList>[0]['initialUsers']>(allUsers);
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10">
+    <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
       <AdminTabs current="/admin/users" />
-      <h1 className="mb-1 text-2xl font-semibold tracking-tight">Users</h1>
+      <h1 className="sr-only">Users</h1>
       <p className="mb-6 text-sm text-subtle">Deleting and listing users is restricted to the admin role.</p>
       <SignupCharts
         createdTimes={created.map((u) => new Date(u.utcCreatedDateTime).toISOString())}

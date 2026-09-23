@@ -21,9 +21,9 @@ export default async function AdminViewsPage() {
     ...TIME_RANGES.map((r) => PinView.summarize(rangeStartDay(r.id, now))),
   ]);
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10">
+    <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
       <AdminTabs current="/admin/views" />
-      <h1 className="mb-1 text-2xl font-semibold tracking-tight">Views</h1>
+      <h1 className="sr-only">Views</h1>
       <p className="mb-6 text-sm text-subtle">
         Pin page visits, counted once per viewer per pin per UTC day. Crawlers, card impressions and outbound clicks are not counted.
       </p>

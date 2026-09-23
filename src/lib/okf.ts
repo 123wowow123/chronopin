@@ -131,9 +131,10 @@ export function summaryMarkdown(html: string, footnoteOf: (url: string) => strin
       .replace(/<a\b[^>]*?href\s*=\s*(["'])(.*?)\1[^>]*>([\s\S]*?)<\/a>/gi, '[$3]($2)')
       .replace(/<\/?(strong|b)>/gi, '**')
       .replace(/<\/?(em|i)>/gi, '_')
+      .replace(/<h([34])\b[^>]*>/gi, (_m, level: string) => `\n${'#'.repeat(Number(level))} `)
       .replace(/<li\b[^>]*>/gi, '\n- ')
       .replace(/<br\s*\/?>/gi, '\n')
-      .replace(/<\/(p|ul|ol|li)>/gi, '\n')
+      .replace(/<\/(p|ul|ol|li|h3|h4)>/gi, '\n')
       .replace(/<[^>]+>/g, ''),
   )
     .replace(/[ \t]+\n/g, '\n')

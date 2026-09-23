@@ -138,13 +138,14 @@ export async function finishSignIn(request: NextRequest, provider: Provider): Pr
   }
 }
 
-// Where a finished sign-in goes. None of the three providers share a birthday,
-// so a brand-new account passes through the one question the sign-up form
-// would have asked, on the way to wherever it was headed; skipping it is a
-// click. Only a first sign-in sees it - signing in again must never nag. next
-// has already been through afterLoginPath, and the page puts it through again.
+// Where a finished sign-in goes. None of the three providers share a birthday
+// or a phone number, so a brand-new account passes through the questions the
+// sign-up form would have asked, on the way to wherever it was headed;
+// skipping them is a click. Only a first sign-in sees it - signing in again
+// must never nag. next has already been through afterLoginPath, and the page
+// puts it through again.
 export function signInLanding(next: string, created: boolean): string {
-  return created ? `/signup/birthday?redirect=${encodeURIComponent(next)}` : next;
+  return created ? `/signup/details?redirect=${encodeURIComponent(next)}` : next;
 }
 
 // The code and state arrive in the query string, or - from Apple's form_post

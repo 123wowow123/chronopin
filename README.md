@@ -464,15 +464,21 @@ major local events by major city scrape and more targetted by your location
 
 - Add api key for Amazon & eBay Price Scrape
 
+- Add
+GOOGLE_PLACES_API_KEY
+yelp key
+
 
 # Daily Job
 
-Create OKF for pin maintenance strategy with these guidelines and add new learning to this. This will in turn create the pin maintance job in the defined run periods.
 
+Create daily jobs as per requirements below and add admin section to control the time to run for these:
 
-Create LLM Orchistration pipeline and add it to a daily job to scrape and update pins. This pipeline should be able to use Claude credits or VS Code session credit to kick off job. Convert anything that the LLM needs that's in the current pipeline in tools, for example, image processor or PDF reader or headless chorme. Only convert what Claude does not have native support for.
+Use the existing OKF for pin learning and maintenance strategy with these guidelines and add new learning to this. This will in turn create the pin maintance job in the defined run periods.
 
-Midnight linting and new pin creation jobs :
+Create LLM Orchistration pipeline and add it to a daily job to scrape and update pins. This pipeline should be able to use Claude credits or VS Code session credit to kick off job. Convert anything that the LLM needs that's in the current pipeline in tools, for example, image processor or PDF reader or headless chrore. Only convert what Claude does not have native support for.
+
+For the default Midnight linting and new pin creation jobs :
 - Should scrape google trends and updats pins that are marked for revisiting
 https://trends.google.com/explore
 
@@ -482,17 +488,20 @@ https://trends.google.com/explore
 
 - Check health of pins like broken videos, image, etc and new pin connection and references might be able to add
 
+- Scan comments to see if there are any trending topics and can lead new new pins to be created
 
-6am, 6pm PST job linting and new pin creation jobs:
+- Pin major local events for active users that came out
+
+For the default 6am, 6pm PST linting and new pin creation jobs:
 
 - Check and update this week's pins to ensure it's up to date and well vetted.
 
 - Will add new sources that came out since last udpate and check if media links are broken and fix and add newer ones available
 
-- Pin any major news or events that can out
+- Pin major news or events that came out
 
-GOOGLE_PLACES_API_KEY
-yelp key
+
+
 
 # OKF
 
@@ -501,19 +510,8 @@ yelp key
 
 pin can have user uploadable pictures in comments? Need microsoft cloud
 
-
-Make add suggestion to this pin feature on detailed view. example:
-Suggest and provide additonal reference URL
-Suggest different start and end date with with reason and reference
-Suggest missing or correcting information
-This needs another table to hold it and needs logged in user tracking
-AI will then analyse feedback but not necessary make any changes as original sources are weighted to be the ultimate truth. It will try to validate new sources or do web search to bring new hight quality sources in and then make updates based on your references.
-
-
-Product pins should have notible features in long form summary
-http://localhost:3000/pin/2346/the-airbus-a350f-makes-its-first-flight
-
 tag filter need exclude tag feature 
 - maybe using tabs on control panel for this
 
-- Redesign create pin / respond to pin page - just need url and a description free text field?
+
+# Others:

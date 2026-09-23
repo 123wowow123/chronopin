@@ -89,6 +89,11 @@ describe('summaryMarkdown', () => {
     const keys: Record<string, string> = { 'https://en.wikipedia.org/wiki/MOSE': 'source-2' };
     expect(summaryMarkdown(pin.longFormSummary!, (url) => keys[url])).toBe('- The 78th gate is installed [^source-2]\n- Cost & delays');
   });
+
+  it("keeps a product's features section as a heading over its own list", () => {
+    const html = '<ul><li>First flight in September</li></ul><h3>Notable features</h3><ul><li>111 t payload</li></ul>';
+    expect(summaryMarkdown(html, () => undefined)).toBe('- First flight in September\n### Notable features\n- 111 t payload');
+  });
 });
 
 describe('okfBundle', () => {

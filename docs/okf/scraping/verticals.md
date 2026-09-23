@@ -189,6 +189,21 @@ Thailand and the United States.
    so that losing it costs nothing but the busy bar. It returned nothing from a
    datacenter IP in four different ways - see [Learnings](learnings.md).
 
+17. **A publication's ranked list is a candidate set with a deep link per entry.** The New
+   York Times' Restaurant List 2026 (pins 2720-2788) gave all fifty names, cities and opening
+   months in one read of the owner's logged-in browser, and each entry's `#slug` anchor is its
+   pin's `sourceUrl`. Month-only openings go on the month's last day as `estimated`; the list's
+   write-up is paraphrased, never quoted at length. The shared tag is `NYT Restaurant List`
+   alongside `Restaurant`. Resolve the Google place id from the *address* before posting - it
+   caught four venues the post-hoc resolver missed and one it got wrong (Bar Panisse matched
+   Chez Panisse next door).
+
+18. **Three pictures per restaurant pin** (Ian, 2026-09-22). In order of yield: the restaurant's
+   own site crawled past the homepage, local press (`og:image` plus body images), then the
+   OpenTable and Resy listings read in the owner's browser - their first photo is the
+   restaurant's own. View every candidate: press pages mix in ads and sidebars, and booking
+   sites mix in reviewers' profile pictures.
+
 # Museum builds and upgrades
 
 @BuildDesk, categories `Architecture` **and** `Art`

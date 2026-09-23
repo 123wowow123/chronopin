@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { PinForm } from '@/components/forms/PinForm';
+import { QuickPinForm } from '@/components/forms/QuickPinForm';
 import { requireViewer } from '@/server/guard';
 import { pinById } from '@/server/services/pages';
 import { getT } from '@/lib/i18n/server';
@@ -20,5 +20,5 @@ export default async function RespondPage({ params }: PageProps<'/[lang]/respond
   if (!parent) {
     notFound();
   }
-  return <PinForm mode="respond" respondTo={parent} />;
+  return <QuickPinForm respondTo={parent} />;
 }

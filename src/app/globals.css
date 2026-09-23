@@ -326,6 +326,16 @@
   .rich-text a {
     @apply underline decoration-link/40 underline-offset-2 hover:decoration-link;
   }
+  /* A summary's own sections, e.g. a product's "Notable features". */
+  .rich-text h3 {
+    @apply mt-5 mb-2 text-base font-semibold text-ink;
+  }
+  .rich-text h4 {
+    @apply mt-4 mb-1 font-semibold text-ink;
+  }
+  .rich-text > :first-child {
+    @apply mt-0;
+  }
 
   /* YouTube embeds keep a 16:9 box. */
   .embed-container {

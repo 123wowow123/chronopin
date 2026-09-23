@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { TitleWithBack } from '@/components/nav/BackToMenu';
 import { NotificationsFeed } from '@/components/nav/NotificationBell';
 import { requireViewer } from '@/server/guard';
 import { getT } from '@/lib/i18n/server';
@@ -18,7 +19,7 @@ export default async function NotificationsPage() {
   const t = await getT();
   return (
     <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10">
-      <h1 className="mb-4 text-2xl font-semibold tracking-tight sm:mb-6">{t('notifications.title')}</h1>
+      <TitleWithBack className="mb-4 sm:mb-6">{t('notifications.title')}</TitleWithBack>
       <NotificationsFeed />
     </div>
   );

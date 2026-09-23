@@ -32,6 +32,7 @@ import {
 } from '@/lib/pinForm';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { pinPath } from '@/lib/seo';
+import { expireSavedPin } from '@/server/services/cacheActions';
 import { EPISODE_STATUSES } from '@/lib/types';
 import type { CardPin, MediumJson, PinJson } from '@/lib/types';
 import { DuplicatePrompt, type DuplicateMatch } from './DuplicatePrompt';
@@ -80,18 +81,38 @@ function duplicateCheckKey(values: PinFormValues) {
   return values.title.trim() && start ? JSON.stringify([values.title.trim(), values.sourceUrl.trim(), start, values.parentId ?? 0]) : '';
 }
 
+// A draft the quick form (./QuickPinForm.tsx) read but could not post on its
+// own, handed over to be finished by hand: its values, the page's dated
+// entries, the pin it follows on from, and why it needs the author.
+export type PinDraft = {
+  values: PinFormValues;
+  entries?: ScrapedPin['entries'];
+  respondTo?: Pick<PinJson, 'id' | 'title'>;
+  notice?: string;
+};
+
 // Create, edit or respond to a pin. Pasting a source URL reads the page and
 // fills in whatever the author has not already typed. A new pin that looks
 // already pinned is held back while the author picks what to do instead.
-export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create' | 'edit' | 'respond'; pin?: PinJson; respondTo?: PinJson }) {
+export function PinForm({
+  mode,
+  pin,
+  respondTo: respondToProp,
+  draft,
+}: {
+  mode: 'create' | 'edit' | 'respond';
+  pin?: PinJson;
+  respondTo?: PinJson;
+  draft?: PinDraft;
+}) {
   const router = useRouter();
   const { user, isAdmin } = useSession();
   const t = useT();
   const [values, setValues] = useState<PinFormValues>(() =>
-    pin ? pinToForm(pin) : { ...EMPTY_FORM, parentId: respondToProp?.id },
+    pin ? pinToForm(pin) : (draft?.values ?? { ...EMPTY_FORM, parentId: respondToProp?.id }),
   );
   // Set by the page for /respond/:id, or by picking "Respond to it instead".
-  const [respondTo, setRespondTo] = useState<Pick<PinJson, 'id' | 'title'> | undefined>(respondToProp);
+  const [respondTo, setRespondTo] = useState<Pick<PinJson, 'id' | 'title'> | undefined>(respondToProp ?? draft?.respondTo);
   const [matches, setMatches] = useState<DuplicateMatch[] | null>(null);
   const checked = useRef<{ key: string; matches: DuplicateMatch[] }>({ key: '', matches: [] });
   // The draft the author chose to post despite its matches.
@@ -100,7 +121,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
   const [scraping, setScraping] = useState(false);
   const [scrapeError, setScrapeError] = useState('');
   // A release-notes or changelog page's dated entries, to pin one by one.
-  const [entries, setEntries] = useState<ScrapedPin['entries']>();
+  const [entries, setEntries] = useState<ScrapedPin['entries']>(draft?.entries);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
   const [duplicateOf, setDuplicateOf] = useState<Pick<PinJson, 'id' | 'title'> | null>(null);
@@ -153,7 +174,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
   }
 
   // A paste and the blur after it would otherwise read the page twice.
-  const lastScraped = useRef('');
+  const lastScraped = useRef(draft?.values.sourceUrl.trim() ?? '');
   async function scrape(url: string, { onlyMedia = false } = {}) {
     if (!/^https?:\/\//i.test(url.trim())) return;
     if (!onlyMedia && mode !== 'edit' && lastScraped.current === url.trim()) return;
@@ -210,6 +231,9 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
     try {
       const body = formToPin(values);
       const saved = mode === 'edit' ? await api.put<PinJson>(`/api/pins/${values.id}`, body) : await api.post<PinJson>('/api/pins', body);
+      // The API's own invalidation lands just after its response; waiting for
+      // this one means the pin page shows the save, not the copy before it.
+      await expireSavedPin(saved.id);
       router.push(pinPath(saved));
     } catch (err) {
       if (err instanceof ApiError && err.status === 409) {
@@ -245,6 +269,7 @@ export function PinForm({ mode, pin, respondTo: respondToProp }: { mode: 'create
     <form ref={formRef} onSubmit={submit} className="mx-auto grid max-w-6xl gap-8 px-4 py-6 lg:grid-cols-[1fr_420px]" noValidate>
       <fieldset disabled={saving} className="min-w-0 space-y-4">
         <h1 className="text-2xl font-semibold tracking-tight">{title}</h1>
+        {draft?.notice ? <p className="rounded-lg bg-link/10 px-3 py-2 text-sm text-muted ring-1 ring-link/20 ring-inset">{draft.notice}</p> : null}
 
         {respondTo ? (
           <div>

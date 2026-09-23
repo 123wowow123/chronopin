@@ -3,15 +3,18 @@ import Link from '@/components/ui/Link';
 import { Icon } from '@/components/ui/Icon';
 import { toJson, type SessionUser } from '@/lib/types';
 import { requireViewer } from '@/server/guard';
+import { userLocation } from '@/lib/location';
 import Follow, { FOLLOWING_PAGE_SIZE } from '@/server/model/follow';
 import { pickUserProps } from '@/server/model/user';
 import { FollowingList } from './FollowingList';
 import { CardStockPricesToggle } from './CardStockPricesToggle';
+import { DefaultLocationSetting } from './DefaultLocationSetting';
 import { PreferencesForm } from './PreferencesForm';
 import { ProfileForm } from './ProfileForm';
 import { ThemePicker } from './ThemePicker';
 import { getT } from '@/lib/i18n/server';
 import { LanguageSetting } from './LanguageSetting';
+import { TitleWithBack } from '@/components/nav/BackToMenu';
 
 // Reads the session, so it blocks per request (see ../layout.tsx). The layout's
 // own opt-out only covers navigations into the group, not between its pages.
@@ -28,8 +31,8 @@ export default async function ProfilePage() {
   const user = await requireViewer('/profile');
   const [following, t] = await Promise.all([Follow.listFollowing(user.id), getT()]);
   return (
-    <div className="mx-auto max-w-2xl px-4 py-10">
-      <h1 className="mb-1 text-2xl font-semibold tracking-tight">{t('account.profile')}</h1>
+    <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10">
+      <TitleWithBack className="mb-1">{t('account.profile')}</TitleWithBack>
       <p className="mb-6 text-sm text-subtle">{t('profile.intro')}</p>
       <ProfileForm user={toJson<SessionUser>(user.pick(pickUserProps))} />
 
@@ -52,6 +55,7 @@ export default async function ProfilePage() {
           <LanguageSetting userId={user.id} />
           <PreferencesForm userId={user.id} initial={user.defaultFilterSpanPreference ?? null} />
           <CardStockPricesToggle userId={user.id} initial={user.showCardStockPrices !== false} />
+          <DefaultLocationSetting userId={user.id} initial={{ location: userLocation(user), locationFromDevice: user.locationFromDevice !== false }} />
         </div>
       </section>
 

@@ -28,14 +28,22 @@ import { findScoreMarket, GAME_CATEGORIES, scoreSiteFor, withScoreMarket, type S
 import { seriesPinFor } from './modelSeries';
 import { prequelPinFor } from './prequel';
 import { picturesNeeded, videosNeeded } from '@/lib/mediaTarget';
+import { noteLinks, type NoteLink } from './noteLinks';
 
 const { scrapeType, mediumID } = config;
 const NAVIGATION_WAIT_MS = 8000;
 
 // Builds a draft pin from a URL: a tweet or YouTube video becomes a pin around
 // that embed; any other page is loaded in headless Chrome for its images and
-// embeds, then read by the LLM extractor for everything else.
-export async function scrape(pageUrl: string) {
+// embeds, then read by the LLM extractor for everything else. note is what the
+// person pinning it said about it: which event they mean, what matters.
+export async function scrape(pageUrl: string, { note }: { note?: string } = {}) {
+  // Links in the note: its media join the pin's (addNoteMedia); the rest are
+  // for the reference search, which reads them from the note itself.
+  const links = noteLinks(note, pageUrl).catch((err) => {
+    log.warn('reading the note\'s links failed:', (err as Error).message);
+    return [] as NoteLink[];
+  });
   const domain = pageUrl.match(/^(?:https?:\/\/)?(?:[^@/\n]+@)?(?:www\.)?([^:/?\n]+)/)?.[1];
   let type: string;
   let pin: Pin;
@@ -50,16 +58,16 @@ export async function scrape(pageUrl: string) {
     case 'twitter.com':
     case 'x.com':
       type = scrapeType.twitter;
-      ({ pin, llmTasks } = await twitterPost(pageUrl));
+      ({ pin, llmTasks } = await twitterPost(pageUrl, note, links));
       break;
     case 'youtu.be':
     case 'youtube.com':
       type = scrapeType.youtube;
-      ({ pin, llmTasks } = await youtubePost(pageUrl));
+      ({ pin, llmTasks } = await youtubePost(pageUrl, note, links));
       break;
     default:
       type = scrapeType.web;
-      ({ pin, trailer, stocks, awards, tags, respondTo, entries, llmTasks } = await webScrape(pageUrl));
+      ({ pin, trailer, stocks, awards, tags, respondTo, entries, llmTasks } = await webScrape(pageUrl, note, links));
       break;
   }
   // trailer is also in media; the form keeps it alongside whichever picture
@@ -95,8 +103,8 @@ type PageEntries = { pageTitle: string; list: PageEntry[] };
 export type LlmTask = ReturnType<typeof extractTask> | ReturnType<typeof referencesTask>;
 
 // The reference search for a source, as a task, when the API is unavailable.
-const referenceTasks = (url: string, text: string, kind: SourceKind): LlmTask[] | undefined =>
-  getClient() ? undefined : [referencesTask(url, text, kind)];
+const referenceTasks = (url: string, text: string, kind: SourceKind, note?: string): LlmTask[] | undefined =>
+  getClient() ? undefined : [referencesTask(url, text, kind, note)];
 
 // The page's dated entries, each marked with the pin already made from it.
 async function readEntries(pageUrl: string, read: InPageHeadings | null): Promise<PageEntries | undefined> {
@@ -116,13 +124,14 @@ function addReferences(pin: Pin, { references, longFormSummary }: FoundReference
 
 /* Twitter */
 
-async function twitterPost(pageUrl: string) {
+async function twitterPost(pageUrl: string, note?: string, links?: Promise<NoteLink[]>) {
   const { res, medium } = await twitterMedium(pageUrl);
   const pin = new Pin().addMedium(medium);
   const text = tweetText(res.html);
   await addLinkedImages(pin, text);
-  const llmTasks = referenceTasks(pageUrl, text, 'tweet');
-  return { pin: addReferences(pin, await findReferences(pageUrl, text, 'tweet')), llmTasks };
+  await addNoteMedia(pin, (await links) ?? []);
+  const llmTasks = referenceTasks(pageUrl, text, 'tweet', note);
+  return { pin: addReferences(pin, await findReferences(pageUrl, text, 'tweet', note)), llmTasks };
 }
 
 // The tweet as plain text, its links written out so they can be followed.
@@ -160,13 +169,14 @@ export async function twitterMedium(pageUrl: string) {
 
 /* YouTube */
 
-async function youtubePost(pageUrl: string) {
+async function youtubePost(pageUrl: string, note?: string, links?: Promise<NoteLink[]>) {
   const { res, medium } = await youtubeMedium(pageUrl);
   const pin = new Pin();
   pin.title = _.get(res, 'items[0].snippet.title');
   pin.description = _.get(res, 'items[0].snippet.description');
   pin.addMedium(medium);
   await addVideoStills(pin, medium.originalUrl!);
+  await addNoteMedia(pin, (await links) ?? []);
   // Descriptions often credit their sources or link the full story.
   const { channelTitle, publishedAt } = _.get(res, 'items[0].snippet', {});
   const text = [
@@ -176,8 +186,8 @@ async function youtubePost(pageUrl: string) {
     '',
     `Description:\n${pin.description || ''}`,
   ].join('\n');
-  const llmTasks = referenceTasks(pageUrl, text, 'YouTube video');
-  return { pin: addReferences(pin, await findReferences(pageUrl, text, 'YouTube video')), llmTasks };
+  const llmTasks = referenceTasks(pageUrl, text, 'YouTube video', note);
+  return { pin: addReferences(pin, await findReferences(pageUrl, text, 'YouTube video', note)), llmTasks };
 }
 
 export async function youtubeMedium(pageUrl: string) {
@@ -209,7 +219,7 @@ export async function launchBrowser() {
   });
 }
 
-async function webScrape(pageUrl: string): Promise<{
+async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLink[]>): Promise<{
   pin: Pin;
   trailer?: Medium;
   stocks?: ScrapedStock[];
@@ -305,6 +315,10 @@ async function webScrape(pageUrl: string): Promise<{
     Source.rememberText(pageUrl, sourceKind(pageUrl), pageText).catch((err) => log.warn('keeping scraped text failed:', (err as Error).message)),
   );
 
+  // The author's own media lead the page's, and count toward how many
+  // pictures and videos the top-ups below look for.
+  await addNoteMedia(pin, (await links) ?? [], { lead: true });
+
   // After the browser is gone, so the page is not held open for the calls.
   // A film, series or anime is looked up as soon as the extractor names it,
   // alongside the reference search. A page that embeds a video of its own
@@ -312,7 +326,7 @@ async function webScrape(pageUrl: string): Promise<{
   // film's, show's or game's review score on Kalshi (./scoreMarkets.ts).
   const hasVideo = pin.media.some((m) => Number(m.type) === mediumID.youtube);
   const [{ fields, screen, scoreMarket }, found] = await Promise.all([
-    extractPinFields(pageUrl, pageText).then(async (fields) => {
+    extractPinFields(pageUrl, pageText, note).then(async (fields) => {
       // The category that says what kind of work it is, of the ones it has.
       const work = {
         workTitle: fields?.workTitle,
@@ -330,7 +344,7 @@ async function webScrape(pageUrl: string): Promise<{
       ]);
       return { fields, screen, scoreMarket };
     }),
-    findReferences(pageUrl, pageText),
+    findReferences(pageUrl, pageText, 'web page', note),
   ]);
   // With no LLM answer the page's own markup (Open Graph, meta tags, JSON-LD)
   // still gives a title, description and whatever date it states.
@@ -361,7 +375,7 @@ async function webScrape(pageUrl: string): Promise<{
     return undefined;
   });
   const llmTasks: LlmTask[] | undefined =
-    llmDown && pageText.trim().length >= 200 ? [extractTask(pageUrl, pageText), referencesTask(pageUrl, pageText)] : undefined;
+    llmDown && pageText.trim().length >= 200 ? [extractTask(pageUrl, pageText, note), referencesTask(pageUrl, pageText, 'web page', note)] : undefined;
   return { pin, trailer, stocks: parseScrapedStocks(fields?.stocks), awards, tags: tags.length ? tags : metadataFields(pageMeta).tags, respondTo, entries, llmTasks };
 }
 
@@ -407,6 +421,41 @@ async function topUpVideo(pin: Pin, fields: ExtractedFields | null, pageTitle?: 
 }
 
 const IMAGE_FETCH_MS = 5000;
+
+// The media links in the note of the person pinning the page, through the
+// same steps as the page's own: a YouTube video as its embed and stills, a
+// tweet as its embed and the pictures of the pages it links to, a picture as
+// it is (saving the pin downloads, sizes and de-duplicates it like any
+// other). lead puts them before the page's media, so the author's first is
+// the pin's heading. A link that cannot be read is skipped.
+async function addNoteMedia(pin: Pin, links: NoteLink[], { lead = false } = {}) {
+  const primary: Medium[] = [];
+  const extras: (() => Promise<void>)[] = [];
+  for (const { url, kind } of links) {
+    try {
+      if (kind === 'youtube') {
+        const { medium } = await youtubeMedium(url);
+        primary.push(medium);
+        extras.push(() => addVideoStills(pin, medium.originalUrl!));
+      } else if (kind === 'tweet') {
+        // twitterMedium wants the bare status id at the end of the link.
+        const id = url.match(/\/status(?:es)?\/(\d+)/)![1];
+        const { res, medium } = await twitterMedium(`https://x.com/i/status/${id}`);
+        primary.push(medium);
+        extras.push(() => addLinkedImages(pin, tweetText(res.html)));
+      } else if (kind === 'image') {
+        primary.push(new Medium({ type: mediumID.image, originalUrl: url }));
+      }
+    } catch (err) {
+      log.warn(`note link ${url} skipped:`, (err as Error).message);
+    }
+  }
+  const taken = new Set((pin.media || []).map((m) => m.originalUrl));
+  const fresh = primary.filter((m) => m.originalUrl && !taken.has(m.originalUrl) && taken.add(m.originalUrl));
+  if (lead) [...fresh].reverse().forEach((m) => pin.unshiftMedium(m));
+  else fresh.forEach((m) => pin.addMedium(m));
+  for (const extra of extras) await extra();
+}
 
 // Other frames of a YouTube video, as pictures. Best effort: a frame that
 // does not exist is skipped.
