@@ -28,6 +28,10 @@ let rememberedOpen = false;
 // Likewise the big cloud, so picks made in it do not close it.
 let rememberedExpanded = false;
 let rememberedCounts: TagCount[] | null = null;
+// And the big cloud's, which reads more tags than the panel: a pick in it is
+// a new page with a new cloud, which would otherwise start at "Loading" and
+// flash before redrawing.
+let rememberedViewCounts: TagCount[] | null = null;
 // Grouped (tags wrapped up into their larger category) or every tag on its
 // own, shared by the panel and the big cloud.
 let rememberedWrapped = true;
@@ -616,13 +620,13 @@ function TagCloudView({
   onClear: () => void;
   onClose: () => void;
   // With no tag list the cloud is the tags' own page rather than a view
-  // blown up from the panel, so an arrow leading its header (named this)
-  // goes back where it was opened from, in place of the close button.
+  // blown up from the panel, so below lg an arrow leading its header (named
+  // this) goes back where it was opened from, in place of the close button.
   back: string | null;
 }) {
   const titleId = useId();
   const t = useT();
-  const [counts, setCounts] = useState<TagCount[] | null>(null);
+  const [counts, setCounts] = useState<TagCount[] | null>(() => rememberedViewCounts);
   const [failed, setFailed] = useState(false);
   const [filter, setFilter] = useState('');
   const [hot, setHot] = useState<TagGroup | null>(null);
@@ -657,7 +661,12 @@ function TagCloudView({
   useEffect(() => {
     let cancelled = false;
     api.get<TagCount[]>(url).then(
-      (next) => !cancelled && (setCounts(next), setFailed(false)),
+      (next) => {
+        if (cancelled) return;
+        rememberedViewCounts = next;
+        setCounts(next);
+        setFailed(false);
+      },
       () => !cancelled && setFailed(true),
     );
     return () => {
@@ -694,7 +703,9 @@ function TagCloudView({
       <div role="dialog" aria-modal="true" aria-labelledby={titleId} className="floating relative flex h-[min(88dvh,56rem)] max-h-full w-full max-w-6xl flex-col overflow-hidden max-sm:h-full max-sm:max-w-none max-sm:rounded-none max-sm:border-0">
         <div className="flex items-center gap-3 border-b border-line px-5 py-3 max-sm:flex-wrap max-sm:px-3">
           {back ? (
-            <button type="button" onClick={onClose} className={`${iconButton} -ml-1.5 shrink-0 max-sm:-mr-1.5`} aria-label={back} title={back}>
+            // Below lg only, where there is a drawer to go back to; wider, the
+            // close button at the other end stays.
+            <button type="button" onClick={onClose} className={`${iconButton} -ml-1.5 shrink-0 max-sm:-mr-1.5 lg:hidden`} aria-label={back} title={back}>
               <Icon name="back" className="size-5" />
             </button>
           ) : null}
@@ -704,18 +715,16 @@ function TagCloudView({
           </h2>
           {counts ? <span className="shrink-0 text-sm text-subtle">{t('tagCloud.tags', { count: written.length })}</span> : null}
           <FindTag value={filter} onChange={setFilter} className="min-w-0 flex-1 max-sm:order-last max-sm:basis-full" />
-          <span className="flex shrink-0 items-center gap-1 max-sm:ml-auto">
+          <span className="flex shrink-0 items-center gap-3 max-sm:ml-auto">
             <GroupedToggle wrapped={wrapped} onChange={onWrappedChange} />
             {selected.length || reserved.length ? (
               <button type="button" onClick={onClear} className={iconButton} aria-label={t('tagCloud.clear')} title={t('tagCloud.clear')}>
                 <Icon name="filter-off" className="size-5" />
               </button>
             ) : null}
-            {back ? null : (
-              <button type="button" onClick={onClose} className={iconButton} aria-label={t('tagCloud.close')}>
-                <Icon name="close" className="size-5" />
-              </button>
-            )}
+            <button type="button" onClick={onClose} className={`${iconButton} ${back ? 'max-lg:hidden' : ''}`} aria-label={t('tagCloud.close')}>
+              <Icon name="close" className="size-5" />
+            </button>
           </span>
         </div>
         <ReservedFilters counts={counts ?? []} selected={reserved} needle={needle} onToggle={onToggleReserved} className="border-b border-line px-5 py-2 max-sm:px-3" />
@@ -732,19 +741,22 @@ function TagCloudView({
             <WordCloud tags={tags} selected={wrapped ? groupSelection(tags, selected) : selected} onToggle={onToggle} onHot={onHot} />
           )}
         </div>
-        <p aria-live="polite" className="flex min-h-10 items-center gap-1.5 border-t border-line px-5 py-2.5 text-xs text-subtle max-sm:px-3 max-sm:pb-[max(0.625rem,env(safe-area-inset-bottom))]">
-          {hot ? (
-            <>
-              <span className="font-semibold text-ink">{tagLabel(t, hot)}</span>
-              <span>
+        {/* One height whatever it says - two lines on a phone, one wider -
+            so the cloud's box above it keeps its size as the pointer moves
+            and across a pick, and its layout still fits the next page's. */}
+        <p aria-live="polite" className="flex items-center border-t border-line px-5 py-2.5 text-xs text-subtle max-sm:px-3 max-sm:pb-[max(0.625rem,env(safe-area-inset-bottom))]">
+          <span className="line-clamp-2 min-h-8 sm:line-clamp-1 sm:min-h-4">
+            {hot ? (
+              <>
+                <span className="font-semibold text-ink">{tagLabel(t, hot)}</span>{' '}
                 · {hot.members ? t('tagCloud.tags', { count: hot.members.length }) : t(KIND_LABEL[hot.kind])} · {t('tagCloud.pins', { count: hot.count })} ·{' '}
                 {selected.some((s) => s.toLowerCase() === hot.name.toLowerCase()) ? t('tagCloud.clickToDrop') : t('tagCloud.clickToAdd')}
                 {hot.members ? ` · ${t('tagCloud.wraps', { names: `${hot.members.slice(0, 4).map((m) => m.name.replace(hot.name, '').trim() || m.name).join(', ')}${hot.members.length > 4 ? '…' : ''}` })}` : ''}
-              </span>
-            </>
-          ) : (
-            t('tagCloud.hint')
-          )}
+              </>
+            ) : (
+              t('tagCloud.hint')
+            )}
+          </span>
         </p>
       </div>
     </div>,

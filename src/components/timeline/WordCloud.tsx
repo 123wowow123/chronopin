@@ -39,9 +39,20 @@ const EASE = 0.18;
 // remount would replace the word. Only for a moment, so a later blur stands.
 let refocusKey: string | null = null;
 let refocusUntil = 0;
+// Likewise the word picked with the pointer, and where the pointer was: the
+// new cloud starts with it hot and the rest faded, as the pointer left them,
+// rather than every word lighting up until the pointer next moves.
+let carried: { key: string; at: { x: number; y: number } | null; drift: { x: number; y: number }; until: number } | null = null;
+const carriedNow = () => (carried && Date.now() < carried.until ? carried : null);
 
 type Box = { cx: number; cy: number; minX: number; maxX: number; minY: number; maxY: number };
 type Layout = { width: number; height: number; placed: PlacedWord[]; boxes: Map<string, Box>; palette: string[] };
+
+// The last layout, with the words and box it was made for. A pick in the big
+// cloud is a search, so a new page and a new cloud, which would otherwise
+// wait for its box's size and lay every word out again, blank meanwhile. The
+// same words in the same box take this one as it stands instead.
+let lastLayout: { words: string; width: number; height: number; layout: Layout } | null = null;
 
 const fontWeight = (weight: number) => (weight > 0.66 ? 800 : weight > 0.33 ? 700 : 600);
 
@@ -120,9 +131,9 @@ export function WordCloud({
   const translate = useT();
   const boxRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
-  const [size, setSize] = useState<{ width: number; height: number } | null>(null);
-  const [layout, setLayout] = useState<Layout | null>(null);
-  const [hot, setHot] = useState<string | null>(null);
+  const [size, setSize] = useState<{ width: number; height: number } | null>(() => (lastLayout ? { width: lastLayout.width, height: lastLayout.height } : null));
+  const [ownLayout, setLayout] = useState<Layout | null>(null);
+  const [hot, setHot] = useState<string | null>(() => carriedNow()?.key ?? null);
 
   // Follows the box's size, settling before a layout rather than on every frame of a resize.
   useEffect(() => {
@@ -146,9 +157,15 @@ export function WordCloud({
     const weights = cloudWeights(busiest.map((t) => t.count));
     return busiest.map((t, rank) => ({ key: t.name.toLowerCase(), text: t.kind === 'category' ? categoryLabel(translate, t.name) : t.name, weight: weights[rank], vertical: isVertical(t.name.toLowerCase(), rank) }));
   }, [tags, translate]);
+  // What a layout depends on besides the box, to tell whether the last one fits.
+  const wordsKey = useMemo(() => words.map((w) => `${w.key}\t${w.text}\t${w.weight}\t${w.vertical ? 1 : 0}`).join('\n'), [words]);
+  const reused = lastLayout && size && lastLayout.words === wordsKey && lastLayout.width === size.width && lastLayout.height === size.height ? lastLayout.layout : null;
+  // Until this cloud has laid out its own, the last one where it still fits.
+  const layout = ownLayout ?? reused;
 
   useEffect(() => {
     if (!size || size.width < 80 || size.height < 80) return;
+    if (reused) return;
     let cancelled = false;
     // Measured in the font the words are drawn in, once it has loaded.
     document.fonts.ready.then(() => {
@@ -202,12 +219,14 @@ export function WordCloud({
       }
       const kept = new Map<string, Box>();
       for (const p of placed) kept.set(p.key, boxes.get(`${p.key}|${p.size}`)!);
-      setLayout({ width, height, placed, boxes: kept, palette: isDark() ? DARK_PALETTE : LIGHT_PALETTE });
+      const next = { width, height, placed, boxes: kept, palette: isDark() ? DARK_PALETTE : LIGHT_PALETTE };
+      lastLayout = { words: wordsKey, width, height, layout: next };
+      setLayout(next);
     });
     return () => {
       cancelled = true;
     };
-  }, [size, words]);
+  }, [size, words, wordsKey, reused]);
 
   useEffect(() => {
     if (!layout || !refocusKey) return;
@@ -232,11 +251,11 @@ export function WordCloud({
 
   // The flow, driven outside React: each frame eases every word toward where
   // the pointer wants it and stops once nothing is still moving.
-  const pointer = useRef<{ x: number; y: number } | null>(null);
+  const pointer = useRef<{ x: number; y: number } | null>(carriedNow()?.at ?? null);
   const hotRef = useRef<string | null>(null);
   const kick = useRef<() => void>(() => {});
   // The cloud's current drift, taken off the pointer before it is judged.
-  const drift = useRef({ x: 0, y: 0 });
+  const drift = useRef(carriedNow()?.drift ?? { x: 0, y: 0 });
   useEffect(() => {
     hotRef.current = hot;
     kick.current();
@@ -311,7 +330,10 @@ export function WordCloud({
     const at = { x: event.clientX - rect.left - drift.current.x, y: event.clientY - rect.top - drift.current.y };
     return { at, over: rects.find((r) => at.x >= r.left - 3 && at.x <= r.right + 3 && at.y >= r.top - 3 && at.y <= r.bottom + 3) };
   };
+  // A mouse's (or pen's) only: a finger has no hover, and the flow set off by
+  // a tap only swells the words it lands on as the search takes them away.
   const movePointer = (event: React.PointerEvent) => {
+    if (event.pointerType === 'touch') return;
     const { at, over } = wordAt(event);
     pointer.current = at;
     setHot(over?.key ?? null);
@@ -324,9 +346,13 @@ export function WordCloud({
     const drawn = (event.target as Element).closest?.('[data-flow]')?.getAttribute('data-flow');
     const key = drawn ?? wordAt(event).over?.key;
     const tag = key && byKey.get(key);
-    if (tag) onToggle(tag.name);
+    if (!tag) return;
+    // Only a pointer that hovers: a tap leaves nothing lit on the next page.
+    carried = pointer.current ? { key, at: pointer.current, drift: { ...drift.current }, until: Date.now() + 3000 } : null;
+    onToggle(tag.name);
   };
   const leave = () => {
+    carried = null;
     pointer.current = null;
     setHot(null);
     kick.current();
@@ -373,7 +399,10 @@ export function WordCloud({
                   tabIndex={0}
                   aria-pressed={picked.has(p.key)}
                   aria-label={`${p.text}, ${translate('tagCloud.pins', { count })}`}
-                  onFocus={() => focusWord(p)}
+                  // From the keyboard only: a tap or click focuses the word
+                  // too, and the pointer already says where it is (or, a
+                  // finger, has nowhere to hover).
+                  onFocus={(event) => event.currentTarget.matches(':focus-visible') && focusWord(p)}
                   onBlur={(event) => {
                     const word = event.currentTarget;
                     if (refocusKey === p.key && !event.relatedTarget && Date.now() < refocusUntil) {
