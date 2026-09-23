@@ -99,8 +99,8 @@ test('a reader reports a comment from its menu', async ({ page, playwright, base
   await page.goto(`/pin/${pinId}`);
   const comment = page.locator(`#comment-${id}`);
   await comment.getByRole('button', { name: 'More actions' }).click();
-  // Not theirs, so no Delete.
-  await expect(comment.getByRole('menuitem', { name: 'Delete' })).toHaveCount(0);
+  // Not theirs, so no Remove.
+  await expect(comment.getByRole('menuitem', { name: 'Remove' })).toHaveCount(0);
   await comment.getByRole('menuitem', { name: 'Report' }).click();
   await comment.getByRole('menuitem', { name: 'Spam' }).click();
   await expect(comment.getByRole('status')).toBeVisible();

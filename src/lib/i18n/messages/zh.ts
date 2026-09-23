@@ -535,7 +535,7 @@ const zh: Messages = {
     averageTone: '平均语气',
     averageToneTitle: '平均语气 {value}（范围 -1 到 1）',
     reply: '回复',
-    deleteComment: '删除',
+    deleteComment: '移除',
     replyPlaceholder: '写下回复…',
   },
   duplicates: {

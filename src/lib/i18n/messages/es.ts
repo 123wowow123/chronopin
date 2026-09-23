@@ -541,7 +541,7 @@ const es: Messages = {
     averageTone: 'Tono medio',
     averageToneTitle: 'Tono medio {value} en una escala de -1 a 1',
     reply: 'Responder',
-    deleteComment: 'Eliminar',
+    deleteComment: 'Quitar',
     replyPlaceholder: 'Escribe una respuesta...',
   },
   duplicates: {

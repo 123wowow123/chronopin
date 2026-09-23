@@ -536,7 +536,7 @@ const en = {
     averageTone: 'Average tone',
     averageToneTitle: 'Average tone {value} on a scale from -1 to 1',
     reply: 'Reply',
-    deleteComment: 'Delete',
+    deleteComment: 'Remove',
     replyPlaceholder: 'Write a reply...',
   },
   duplicates: {
