@@ -167,10 +167,14 @@ if (!g.__chronopinPinListeners) {
 
   // The pin's words in the site's other languages (services/translations.ts),
   // redone only for a language whose translation the edit made out of date.
+  // Not while the site is English only (src/lib/multilingual.ts).
   const translate = (pin: Row) => {
-    import('./services/translations')
-      .then(({ translatePin }) => translatePin(Number(pin.id)))
-      .catch((err) => log.warn(`translation failed for pin ${pin.id}:`, (err as Error).message));
+    (async () => {
+      const { multilingualEnabled } = await import('./services/cache');
+      if (!(await multilingualEnabled())) return;
+      const { translatePin } = await import('./services/translations');
+      await translatePin(Number(pin.id));
+    })().catch((err) => log.warn(`translation failed for pin ${pin.id}:`, (err as Error).message));
   };
   pinEvents.on('save', translate);
   pinEvents.on('update', translate);

@@ -3,7 +3,10 @@
 import { useState } from 'react';
 import { api } from '@/lib/client/api';
 
-type AdminUser = { id: number; userName?: string; firstName?: string; lastName?: string; email?: string; role?: string };
+type AdminUser = { id: number; userName?: string; firstName?: string; lastName?: string; email?: string; role?: string; utcCreatedDateTime?: string };
+
+// UTC, like the signup charts, so the server and client render the same day.
+const joined = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
 
 export function UserList({ initialUsers }: { initialUsers: AdminUser[] }) {
   const [users, setUsers] = useState(initialUsers);
@@ -21,6 +24,12 @@ export function UserList({ initialUsers }: { initialUsers: AdminUser[] }) {
             <span className="text-subtle">{user.userName}</span>
             <br />
             <span className="text-sm text-subtle">{user.email}</span>
+            {user.utcCreatedDateTime && (
+              <>
+                <br />
+                <span className="text-xs text-subtle">Signed up {joined.format(new Date(user.utcCreatedDateTime))}</span>
+              </>
+            )}
           </div>
           <button type="button" onClick={() => remove(user)} className="btn btn-sm btn-ghost text-danger hover:bg-red-500/10 hover:text-danger-soft" title="Delete user">
             Delete

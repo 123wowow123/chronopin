@@ -1,7 +1,8 @@
 // Per-request facts about the visitor, for server components.
 
-import { cookies } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 import { cache } from 'react';
+import { identifyBot } from '@/lib/bots';
 import { getUser } from './auth';
 import type User from './model/user';
 
@@ -29,3 +30,8 @@ export function requestTimeZone(request: { cookies: { get(name: string): { value
 }
 
 export const viewerUser = cache(async (): Promise<User | null> => getUser());
+
+// Whether the visitor is a crawler or script by its user agent (a request
+// with none counts as one). Work a page read would start on the Anthropic key
+// is for people only: crawlers must never spend credit.
+export const viewerIsBot = cache(async (): Promise<boolean> => identifyBot((await headers()).get('user-agent')) != null);

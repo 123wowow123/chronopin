@@ -31,6 +31,7 @@ const { values: flags } = parseArgs({
     seed: { type: 'boolean', default: false },
     pinfile: { type: 'string', default: './scripts/backup/seedPins.json' },
     userfile: { type: 'string', default: './scripts/backup/seedUsers.json' },
+    publicuserfile: { type: 'string', default: './scripts/backup/seedUsersPublic.json' },
     commentfile: { type: 'string', default: './scripts/backup/seedComments.json' },
     followfile: { type: 'string', default: './scripts/backup/seedFollows.json' },
     companyfollowfile: { type: 'string', default: './scripts/backup/seedCompanyFollows.json' },
@@ -63,6 +64,12 @@ const BACKUP_USER_PROPS = [
   'locationLatitude', 'locationLongitude', 'locationName', 'locationFromDevice', 'emailVerifiedDateTime',
   'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime',
 ];
+
+// The part of each account the site shows anyway, for seedUsersPublic.json,
+// which is committed (the repository is public): no email, password hash,
+// salt, social ids, birthday, phone or location. A clone without
+// seedUsers.json seeds its users from it, so every pin keeps its author.
+const PUBLIC_USER_PROPS = ['id', 'userName', 'firstName', 'lastName', 'pictureUrl', 'role', 'utcCreatedDateTime'];
 
 // The years to compute holidays for. date-holidays applies today's rules to
 // whatever year it is asked for, and Juneteenth (from 2021) is the only one it
@@ -120,6 +127,7 @@ async function saveDB() {
 
   console.log('Backup Users');
   writeJson(flags.userfile, data.users);
+  writeJson(flags.publicuserfile, data.users.map((user) => _.pick(user, PUBLIC_USER_PROPS)));
 
   console.log('Backup Comments');
   writeJson(flags.commentfile, data.comments);
@@ -264,15 +272,26 @@ async function seedDB() {
 
   // Users are restored with their ids, password hashes and salts intact,
   // before anything that references them. seedUsers.json is gitignored (it
-  // holds hashes), so a fresh clone falls back to the two admins.
+  // holds hashes), so a fresh clone seeds seedUsersPublic.json instead:
+  // the same accounts with nothing to sign in with, except the two admins,
+  // who get the development defaults below. With neither file, just those two.
   if (!existsSync(flags.userfile)) {
-    log.info(`${flags.userfile} not found, seeding default users`);
     const defaults = [
       { provider: 'facebook', role: 'admin', userName: '@ThePinGang', firstName: 'Ian', lastName: 'Flynn', email: 'flynni2008@gmail.com', password: 'admin', facebookId: '10100470408434696', emailVerifiedDateTime: new Date(), id: 1 },
       { provider: 'facebook', role: 'admin', userName: '@PrettyGang', firstName: 'Serena', lastName: 'Chen', email: 'chenxikristy@gmail.com', password: 'admin', facebookId: '984663319826', emailVerifiedDateTime: new Date(), id: 2 },
     ];
-    for (const u of defaults) {
-      await new User(u).save();
+    if (existsSync(flags.publicuserfile)) {
+      log.info(`${flags.userfile} not found, seeding ${flags.publicuserfile} (no emails or passwords)`);
+      for (const u of readJson(flags.publicuserfile)) {
+        const admin = defaults.find((d) => d.id === u.id);
+        if (admin) await new User({ ...admin, ...u }).save();
+        else await new User(u).restore();
+      }
+    } else {
+      log.info(`${flags.userfile} not found, seeding default users`);
+      for (const u of defaults) {
+        await new User(u).save();
+      }
     }
   } else {
     for (const u of readJson(flags.userfile)) {

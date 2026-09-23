@@ -3,24 +3,25 @@ import { cacheLife, cacheTag } from 'next/cache';
 import { connection } from 'next/server';
 import { absoluteUrl, pinPath } from '@/lib/seo';
 import Pins from '@/server/model/pins';
-import { TAGS } from '@/server/services/cache';
+import { multilingualEnabled, TAGS } from '@/server/services/cache';
 import { DEFAULT_LOCALE, languageAlternates } from '@/lib/i18n/config';
 
 // Google reads at most 50,000 URLs from one sitemap. Chronopin is far below
 // that; past it, split this file with generateSitemaps. Each entry is the
-// English page, with its other languages as hreflang alternates.
+// English page, with its other languages as hreflang alternates (none while
+// they are switched off, src/lib/multilingual.ts).
 const MAX_URLS = 50_000;
 
-function inEveryLanguage(path: string) {
-  const { languages } = languageAlternates(path, DEFAULT_LOCALE);
-  return { languages: Object.fromEntries(Object.entries(languages).map(([lang, href]) => [lang, absoluteUrl(href)])) };
-}
-
-async function sitemapEntries(): Promise<MetadataRoute.Sitemap> {
+async function sitemapEntries(multilingual: boolean): Promise<MetadataRoute.Sitemap> {
   'use cache';
   cacheLife('hours');
   cacheTag(TAGS.sitemap);
   const pins = await Pins.listForSitemap(0, MAX_URLS - 2);
+  const inEveryLanguage = (path: string) => {
+    if (!multilingual) return undefined;
+    const { languages = {} } = languageAlternates(path, DEFAULT_LOCALE);
+    return { languages: Object.fromEntries(Object.entries(languages).map(([lang, href]) => [lang, absoluteUrl(href)])) };
+  };
   return [
     { url: absoluteUrl('/'), changeFrequency: 'hourly', priority: 1, alternates: inEveryLanguage('/') },
     { url: absoluteUrl('/map'), changeFrequency: 'daily', priority: 0.5, alternates: inEveryLanguage('/map') },
@@ -37,5 +38,5 @@ async function sitemapEntries(): Promise<MetadataRoute.Sitemap> {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Rendered per request (then cached), so building the app needs no database.
   await connection();
-  return sitemapEntries();
+  return sitemapEntries(await multilingualEnabled());
 }

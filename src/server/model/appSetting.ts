@@ -1,4 +1,5 @@
 import { DEFAULT_DAILY_JOBS, parseDailyJobs, type DailyJobsSetting } from '@/lib/dailyJobs';
+import { DEFAULT_MULTILINGUAL, parseMultilingual, type MultilingualSetting } from '@/lib/multilingual';
 import { DEFAULT_SLIDER_TYPING, parseSliderTyping, type SliderTypingSetting } from '@/lib/sliderTyping';
 import { DEFAULT_TAG_LIST, parseTagList, type TagListSetting } from '@/lib/tagList';
 import { DEFAULT_TIMELINE_CONFIDENCE, parseTimelineConfidence, type TimelineConfidenceSetting } from '@/lib/timelineConfidence';
@@ -12,6 +13,7 @@ const PERSONAL_BAG = 'personalBag';
 const DAILY_JOBS = 'dailyJobs';
 const SLIDER_TYPING = 'sliderTyping';
 const TAG_LIST = 'tagList';
+const MULTILINGUAL = 'multilingual';
 
 async function read(key: string): Promise<unknown> {
   const rows = await db.query(`SELECT "value" FROM "AppSetting" WHERE "key" = $1`, [key]);
@@ -86,4 +88,15 @@ export async function getTagList(): Promise<TagListSetting> {
 
 export function setTagList(setting: TagListSetting, userId: number | null) {
   return write(TAG_LIST, setting, userId);
+}
+
+// Whether the site is offered in its other languages. src/proxy.ts reads it
+// through multilingualEnabled() (services/cache.ts), which caches it.
+export async function getMultilingual(): Promise<MultilingualSetting> {
+  const parsed = parseMultilingual(await read(MULTILINGUAL));
+  return 'setting' in parsed ? parsed.setting : DEFAULT_MULTILINGUAL;
+}
+
+export function setMultilingual(setting: MultilingualSetting, userId: number | null) {
+  return write(MULTILINGUAL, setting, userId);
 }

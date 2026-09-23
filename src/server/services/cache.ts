@@ -2,6 +2,8 @@
 // these so the next visitor (and crawler) sees the change.
 
 import { revalidateTag } from 'next/cache';
+import { DEFAULT_MULTILINGUAL } from '@/lib/multilingual';
+import { getMultilingual } from '../model/appSetting';
 
 export const TAGS = {
   timeline: 'timeline',
@@ -14,6 +16,37 @@ export const TAGS = {
 export function pinPathCache(): Map<number, { path: string | null; expires: number }> {
   const g = globalThis as unknown as { __chronopinPinPaths?: Map<number, { path: string | null; expires: number }> };
   return (g.__chronopinPinPaths ??= new Map());
+}
+
+// Whether the site is offered in its other languages (src/lib/multilingual.ts).
+// src/proxy.ts asks on every page request, so the answer is kept for a while
+// on globalThis, shared with the route handler that changes it (which sets it
+// at once). Unreadable - the database down, or a build with none - it is the
+// last answer, else the default.
+const MULTILINGUAL_TTL_MS = 30_000;
+
+type MultilingualCache = { enabled: boolean; expires: number };
+
+function multilingualCache(): MultilingualCache {
+  const g = globalThis as unknown as { __chronopinMultilingual?: MultilingualCache };
+  return (g.__chronopinMultilingual ??= { enabled: DEFAULT_MULTILINGUAL.enabled, expires: 0 });
+}
+
+export async function multilingualEnabled(): Promise<boolean> {
+  const cache = multilingualCache();
+  if (cache.expires <= Date.now()) {
+    cache.enabled = await getMultilingual().then((s) => s.enabled, () => cache.enabled);
+    cache.expires = Date.now() + MULTILINGUAL_TTL_MS;
+  }
+  return cache.enabled;
+}
+
+// After the admin setting changes: the proxy follows at once, and the cached
+// pages and sitemap drop (or regain) their other languages.
+export function setMultilingualEnabled(enabled: boolean) {
+  Object.assign(multilingualCache(), { enabled, expires: Date.now() + MULTILINGUAL_TTL_MS });
+  revalidateTag(TAGS.timeline, { expire: 0 });
+  revalidateTag(TAGS.sitemap, { expire: 0 });
 }
 
 // The pin's own page expires at once, so its author sees the edit they just

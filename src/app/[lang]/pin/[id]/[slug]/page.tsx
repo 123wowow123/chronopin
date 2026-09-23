@@ -52,11 +52,12 @@ import { pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
 import { pinTense } from '@/lib/timeline';
 import type { PinJson } from '@/lib/types';
 import { duplicateGroupPins, pinById, pinComments, relatedPins, threadPins, timelineVideo } from '@/server/services/pages';
-import { viewerTimeZone } from '@/server/viewer';
+import { viewerIsBot, viewerTimeZone } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { categoryLabel } from '@/lib/i18n/labels';
 import type { Translator } from '@/lib/i18n/translate';
 import { after } from 'next/server';
+import { multilingualEnabled } from '@/server/services/cache';
 import { needsTranslation, requestTranslation } from '@/server/services/translations';
 
 // src/proxy.ts sends the real 308s and 404s for pin URLs before this renders.
@@ -70,8 +71,8 @@ async function loadPin(params: Props['params']) {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const [pin, t] = await Promise.all([loadPin(params), getT()]);
-  return pin ? pinMetadata(pin, t.locale) : { title: t('meta.pinNotFound'), robots: { index: false } };
+  const [pin, t, multilingual] = await Promise.all([loadPin(params), getT(), multilingualEnabled()]);
+  return pin ? pinMetadata(pin, t.locale, multilingual) : { title: t('meta.pinNotFound'), robots: { index: false } };
 }
 
 export default function PinPage({ params }: Props) {
@@ -91,8 +92,9 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
     notFound();
   }
   // Read in a language it has no words in yet: translated once the page has
-  // been answered, for the next reader.
-  if (needsTranslation(pin, t.locale)) {
+  // been answered, for the next reader. Only a person's read asks: a crawler
+  // walking every language would spend the key's credit on the whole site.
+  if (needsTranslation(pin, t.locale) && !(await viewerIsBot())) {
     after(() => requestTranslation(pin.id));
   }
 

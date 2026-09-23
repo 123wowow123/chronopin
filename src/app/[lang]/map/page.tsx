@@ -8,7 +8,9 @@ import { MapLoader } from './MapLoader';
 
 // openGraph and twitter replace the root layout's whole objects, so a share of
 // /map would otherwise show the home page's title, description and URL.
+// Per request too: the hreflang list follows the admin's language setting.
 export async function generateMetadata(): Promise<Metadata> {
+  await connection();
   const t = await getT();
   const title = `${t('meta.mapTitle')} · ${siteName}`;
   const description = t('meta.mapDescription');

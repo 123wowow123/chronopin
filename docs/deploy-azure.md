@@ -100,6 +100,33 @@ to the VM and `pg_restore --no-owner -d chronopin` it into the `postgres`
 container. The first backup was restored into a throwaway database to check it
 (2,744 pins, 28 users, all 71 migrations).
 
+## Pulling production to local
+
+`npm run db:pull-prod` replaces the local development database with
+production's (`scripts/db/pullProd.sh`):
+
+1. a fresh `pg_dump` from the VM over SSH, or with `-- --nightly` the newest
+   blob in `backups` (needs `az login`, works when SSH is closed to your IP),
+   or with `-- --file <dump>` one already on disk;
+2. `pg_restore --list` checks the dump is whole;
+3. after you confirm (`-- --yes` skips it), the local database is dumped first;
+4. the dump restores into `chronopin_incoming`, which replaces `chronopin` only
+   once the restore succeeded;
+5. `npm run create:db` applies schema files this branch has and prod does not,
+   `npm run search:refresh:db` reindexes search from the database's pins, and
+   `npm run backup:data` rewrites the seed files (`scripts/backup/*.json`) from
+   them (`-- --no-seeds` to skip), ready to commit.
+
+Dumps go to `~/chronopin-backups` (`BACKUP_DIR` to change it). They hold real
+accounts, so they stay outside the repository, away from git and the deploy's
+`rsync --delete`. To undo a pull, pass `-- --file ~/chronopin-backups/local-<time>.dump`.
+`LOCAL_DB=chronopin_prod` restores into a side database and leaves `chronopin`
+alone. Add `-- --no-search --no-seeds` too, because the search index and seed
+files are shared with it.
+
+Blobs (avatars, thumbnails) are not copied, so the local Azurite has none of
+production's uploads.
+
 ## Social sign-in
 
 The Google, Facebook and Apple buttons appear only for a provider whose keys

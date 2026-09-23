@@ -60,9 +60,13 @@ describe('languageAlternates', () => {
   it('gives the canonical path in the language and every hreflang', () => {
     const links = languageAlternates('/pin/1/x', 'es');
     expect(links.canonical).toBe('/es/pin/1/x');
-    expect(links.languages['en-US']).toBe('/pin/1/x');
-    expect(links.languages['zh-CN']).toBe('/zh/pin/1/x');
-    expect(links.languages['x-default']).toBe('/pin/1/x');
+    expect(links.languages?.['en-US']).toBe('/pin/1/x');
+    expect(links.languages?.['zh-CN']).toBe('/zh/pin/1/x');
+    expect(links.languages?.['x-default']).toBe('/pin/1/x');
+  });
+
+  it('lists no other languages while they are switched off', () => {
+    expect(languageAlternates('/pin/1/x', 'en', false)).toEqual({ canonical: '/pin/1/x' });
   });
 });
 

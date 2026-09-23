@@ -98,8 +98,10 @@ export function negotiateLocale(header: string | null | undefined): Locale | nul
 }
 
 // A page's canonical path in its language, and the same page in the others
-// (hreflang), for its metadata. x-default is the English page.
-export function languageAlternates(path: string, locale: Locale) {
+// (hreflang), for its metadata. x-default is the English page. With the other
+// languages switched off (src/lib/multilingual.ts) there are none to list.
+export function languageAlternates(path: string, locale: Locale, multilingual = true): { canonical: string; languages?: Record<string, string> } {
+  if (!multilingual) return { canonical: localizePath(path, locale) };
   const languages: Record<string, string> = {};
   for (const l of LOCALES) languages[INTL_LOCALES[l]] = localizePath(path, l);
   languages['x-default'] = localizePath(path, DEFAULT_LOCALE);

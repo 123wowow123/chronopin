@@ -3,7 +3,7 @@ import { DEFAULT_LOCALE, isLocale, LOCALE_COOKIE, localizePath, negotiateLocale,
 import { pinPath } from '@/lib/seo';
 import * as db from '@/server/db';
 import BotVisit from '@/server/model/botVisit';
-import { pinPathCache } from '@/server/services/cache';
+import { multilingualEnabled, pinPathCache } from '@/server/services/cache';
 
 // Pin URLs are settled here, before rendering starts. Pages stream their
 // shell as soon as a request arrives, after which neither a redirect nor a
@@ -56,7 +56,13 @@ export async function proxy(request: NextRequest) {
   if (prefix === DEFAULT_LOCALE) {
     return redirectTo(request, path + search, 308);
   }
-  if (!prefix) {
+  // With the other languages switched off (src/lib/multilingual.ts), every
+  // page is the English one. Not permanent: the admin can switch them back.
+  const multilingual = await multilingualEnabled();
+  if (prefix && !multilingual) {
+    return redirectTo(request, path + search, 307);
+  }
+  if (!prefix && multilingual) {
     const preferred = preferredLocale(request);
     if (preferred !== DEFAULT_LOCALE) {
       // Not permanent: it depends on the visitor.
