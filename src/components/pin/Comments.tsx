@@ -238,6 +238,12 @@ function MoodSummary({ mood, total }: { mood: CommentMood; total: number }) {
   );
 }
 
+// A comment's controls: soft round-ended buttons, an icon and a word each
+// (the word only read out on a phone, where the handle needs the room), that
+// only take a colour when the pointer is on them.
+const CONTROL =
+  'inline-flex items-center gap-1 rounded-full px-2 py-1 font-medium text-subtle transition-colors hover:bg-raised hover:text-ink focus-visible:bg-raised';
+
 function CommentItem({
   node,
   isOwn,
@@ -281,7 +287,7 @@ function CommentItem({
             {/* Muted, so the comment itself is what reads first; cut short
                 rather than pushing the controls off the row. */}
             <span className="min-w-0 flex-1 truncate text-xs font-medium text-subtle">{node.userName}</span>
-            <div className="flex shrink-0 items-center gap-2 text-xs sm:gap-4">
+            <div className="flex shrink-0 items-center gap-1 text-xs">
               <Reactions node={node} signedIn={signedIn} pinId={pinId} onReact={onReact} />
               {canReply ? (
                 <button
@@ -290,11 +296,10 @@ function CommentItem({
                     setDraft('');
                     setMode('reply');
                   }}
-                  aria-label={t('comments.reply')}
-                  title={t('comments.reply')}
-                  className="rounded-md p-1 text-subtle hover:bg-raised hover:text-link"
+                  className={CONTROL}
                 >
                   <Icon name="reply" className="size-4" />
+                  <span className="sr-only sm:not-sr-only">{t('comments.reply')}</span>
                 </button>
               ) : null}
               <CommentMenu commentId={node.id} pinId={pinId} isOwn={isOwn} canDelete={canDelete} signedIn={signedIn} onRemove={onRemove} />
@@ -335,6 +340,15 @@ function CommentItem({
 // given reactions and how many reacted in all. A signed-out reader's Like
 // sends them to log in first.
 const HOVER_OPEN_MS = 450;
+// The colour a reaction's name takes on the button once given.
+const REACTION_TONES: Record<CommentReactionName, string> = {
+  like: 'text-link',
+  love: 'text-danger',
+  haha: 'text-warning',
+  wow: 'text-warning',
+  sad: 'text-warning',
+  angry: 'text-tone-comments',
+};
 const HOVER_CLOSE_MS = 300;
 const LONG_PRESS_MS = 450;
 
@@ -359,6 +373,10 @@ function Reactions({
   // A long press opens the picker; the click the finger's lift then makes
   // must not also like the comment.
   const pressed = useRef(false);
+  // Just picked: the pointer is still on or near the Like button, and resting
+  // there must not bring the row straight back. It opens again once the
+  // pointer has been on the button and left it.
+  const quiet = useRef<false | 'picked' | 'inside'>(false);
 
   const counts = node.reactions ?? {};
   const given = COMMENT_REACTIONS.filter((r) => (counts[r.name] ?? 0) > 0).sort((a, b) => (counts[b.name] ?? 0) - (counts[a.name] ?? 0));
@@ -393,13 +411,14 @@ function Reactions({
   }, [open, close]);
 
   const pick = (reaction: CommentReactionName) => {
+    quiet.current = 'picked';
     close(true);
     onReact(reaction === node.myReaction ? null : reaction);
   };
 
   const summary = total ? (
     <span
-      className="inline-flex items-center gap-1 text-subtle tabular-nums"
+      className="inline-flex items-center gap-1 rounded-full bg-panel py-0.5 pr-2 pl-1 text-subtle tabular-nums shadow-sm ring-1 ring-line"
       aria-label={t('comments.reactions', { count: total })}
       title={given.map((r) => `${r.emoji} ${counts[r.name]}`).join('  ')}
     >
@@ -415,15 +434,19 @@ function Reactions({
   ) : null;
 
   const face = mine ? (
-    <span className="text-base leading-none" aria-hidden>
-      {mine.emoji}
-    </span>
+    <>
+      <span className="text-sm leading-none" aria-hidden>
+        {mine.emoji}
+      </span>
+      <span className="sr-only sm:not-sr-only">{t(mine.label)}</span>
+    </>
   ) : (
-    <Icon name="thumb" className="size-4" />
+    <>
+      <Icon name="thumb" className="size-4" />
+      <span className="sr-only sm:not-sr-only">{t('comments.like')}</span>
+    </>
   );
-  const buttonClass = `inline-flex items-center rounded-md p-1 transition-colors ${
-    mine ? 'bg-raised' : 'text-subtle hover:bg-raised hover:text-link'
-  }`;
+  const buttonClass = mine ? `${CONTROL} ${REACTION_TONES[mine.name]} hover:text-current` : CONTROL;
 
   if (!signedIn) {
     return (
@@ -432,7 +455,6 @@ function Reactions({
         <span title={t('comments.logInToReact')} className="inline-flex">
           <AuthLink to="/login" className={buttonClass} pending={{ kind: 'comment', id: pinId }}>
             {face}
-            <span className="sr-only">{t('comments.like')}</span>
           </AuthLink>
         </span>
       </span>
@@ -445,10 +467,17 @@ function Reactions({
       ref={rootRef}
       className="relative inline-flex items-center gap-1.5"
       onPointerEnter={(event) => {
-        if (event.pointerType === 'mouse') later(() => setOpen((was) => was || 'pointer'), open ? 0 : HOVER_OPEN_MS);
+        if (event.pointerType !== 'mouse') return;
+        if (quiet.current) {
+          quiet.current = 'inside';
+          return;
+        }
+        later(() => setOpen((was) => was || 'pointer'), open ? 0 : HOVER_OPEN_MS);
       }}
       onPointerLeave={(event) => {
-        if (event.pointerType === 'mouse') later(() => setOpen(false), HOVER_CLOSE_MS);
+        if (event.pointerType !== 'mouse') return;
+        if (quiet.current === 'inside') quiet.current = false;
+        later(() => setOpen(false), HOVER_CLOSE_MS);
       }}
     >
       {summary}
@@ -637,7 +666,7 @@ function CommentMenu({
         aria-expanded={open}
         aria-controls={open ? menuId : undefined}
         onClick={() => (open ? close(false) : setOpen(true))}
-        className="rounded-md p-1 text-subtle hover:bg-raised hover:text-ink"
+        className={`${CONTROL} px-1`}
       >
         <Icon name="dots-vertical" className="size-4" />
       </button>
