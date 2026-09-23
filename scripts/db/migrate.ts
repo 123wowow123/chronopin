@@ -44,6 +44,7 @@ async function run() {
   if (!pending.length) {
     console.log('No pending schema files');
   }
+  let viewChanged = false;
   for (const file of pending) {
     console.log(`Applying ${file}`);
     const sql = readFileSync(path.join(SCHEMA_DIR, file), 'utf8');
@@ -51,6 +52,15 @@ async function run() {
       await query(sql);
       await query('INSERT INTO "schemaMigrations" ("name") VALUES ($1)', [file]);
     });
+    viewChanged ||= /VIEW\s+"PinBaseView"/.test(sql) && file >= '0072';
+  }
+
+  // PinBaseCache (0072) is PinBaseView materialized with the view's own
+  // columns, so a file that redefines the view leaves it the old shape until
+  // it is rebuilt - and the app reads the cache.
+  if (viewChanged) {
+    console.log('Rebuilding PinBaseCache for the new PinBaseView');
+    await db.query('SELECT "pinBaseCacheRebuild"()');
   }
 }
 

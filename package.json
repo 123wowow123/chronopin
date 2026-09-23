@@ -15,6 +15,7 @@
     "create:db": "tsx scripts/db/migrate.ts",
     "db:reset": "tsx scripts/db/migrate.ts --reset",
     "db:refresh": "npm run create:db && npm run create:data",
+    "db:check-pin-cache": "tsx scripts/db/checkPinCache.ts",
     "db:pull-prod": "sh scripts/db/pullProd.sh",
     "create:data": "tsx scripts/data/index.ts --seed",
     "backup:data": "tsx scripts/data/index.ts --save",

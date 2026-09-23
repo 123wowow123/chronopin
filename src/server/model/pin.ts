@@ -209,7 +209,7 @@ async function queryPinById(pinId: number, userId: number | null) {
     const rows = await db.query(
       `
     SELECT "Pin".*${viewerColumns}
-    FROM "PinBaseView" AS "Pin"
+    FROM "PinBaseCache" AS "Pin"
     WHERE "Pin"."id" = $1 AND "Pin"."utcDeletedDateTime" IS NULL
     ORDER BY "Pin"."Media.id", "Pin"."Merchant.id"`,
       userId ? [pinId, userId] : [pinId],

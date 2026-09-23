@@ -161,7 +161,7 @@ export default class Pins extends BasePins<Pin> {
     const rows = await db.query(
       `
       SELECT "Pin".*
-      FROM "PinBaseView" AS "Pin"
+      FROM "PinBaseCache" AS "Pin"
       WHERE "Pin"."id" = ANY($1::integer[])
         AND "Pin"."utcDeletedDateTime" IS NULL
       ORDER BY "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"`,
@@ -219,7 +219,7 @@ export default class Pins extends BasePins<Pin> {
     const rows = await db.query(
       `
       SELECT ${PAGE_COLUMNS}
-      FROM "PinBaseView" AS "Pin"
+      FROM "PinBaseCache" AS "Pin"
       WHERE "Pin"."id" = ANY($2::integer[])
       ORDER BY "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"`,
       [userId, ranked.map((r) => r.id)],
@@ -606,7 +606,7 @@ function queryPage(
     .query(
       `
     SELECT ${PAGE_COLUMNS}
-    FROM "PinBaseView" AS "Pin"
+    FROM "PinBaseCache" AS "Pin"
     WHERE "Pin"."id" = ANY(ARRAY(
       SELECT "p"."id"
       FROM "Pin" AS "p"
@@ -637,7 +637,7 @@ function queryBetween(start: Date, end: Date, userId: number, limit: number, cre
     .query(
       `
     SELECT ${PAGE_COLUMNS}
-    FROM "PinBaseView" AS "Pin"
+    FROM "PinBaseCache" AS "Pin"
     WHERE "Pin"."id" = ANY(ARRAY(
       SELECT "p"."id"
       FROM "Pin" AS "p"
@@ -683,7 +683,7 @@ function queryPinByIds(ids: number[]): Promise<PageResult> {
     .query(
       `
     SELECT "Pin".*
-    FROM "PinBaseView" AS "Pin"
+    FROM "PinBaseCache" AS "Pin"
     WHERE "Pin"."id" = ANY($1::integer[])
       AND "Pin"."utcDeletedDateTime" IS NULL
     ORDER BY "Pin"."utcStartDateTime", "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"`,

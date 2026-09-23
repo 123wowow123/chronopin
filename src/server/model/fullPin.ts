@@ -116,7 +116,7 @@ export class FullPins extends BasePins<FullPin> {
     const rows = await db.query(
       `
         SELECT "Pin".*
-        FROM "PinBaseView" AS "Pin"
+        FROM "PinBaseCache" AS "Pin"
         ORDER BY "Pin"."utcStartDateTime", "Pin"."id", "Pin"."Media.id", "Pin"."Merchant.id"`,
     );
     return new FullPins({ pins: rows });
