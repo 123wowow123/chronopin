@@ -13,11 +13,11 @@ const TONE: Record<LintSeverity, string> = {
 const isCheck = (value?: string): value is LintCheck => CHECKS.includes(value as LintCheck);
 const isSeverity = (value?: string): value is LintSeverity => SEVERITIES.includes(value as LintSeverity);
 
-// Every okf:lint finding in one place, under the daily jobs whose runs they
-// check. The per-pin admin panel shows a pin's own findings, which is no use
-// for working through a run of them: after a sweep the only way to find the 88
-// warnings was to open 88 pins. This lists them worst first, links each one to
-// its pin, and narrows by check and severity (?check=, ?severity=).
+// Every okf:lint finding in one place (Jobs > Lint). The per-pin admin panel
+// shows a pin's own findings, which is no use for working through a run of
+// them: after a sweep the only way to find the 88 warnings was to open 88
+// pins. This lists them worst first, links each one to its pin, and narrows by
+// check and severity (?check=, ?severity=).
 export async function LintFindings({ check: checkParam, severity: severityParam }: { check?: string; severity?: string }) {
   const check = isCheck(checkParam) ? checkParam : undefined;
   const severity = isSeverity(severityParam) ? severityParam : undefined;
@@ -31,18 +31,16 @@ export async function LintFindings({ check: checkParam, severity: severityParam 
       pins: prev.pins + row.pins,
     });
   }
-  // Back to this section, not the top of the page, when a filter is picked.
   const href = (next: { check?: LintCheck; severity?: LintSeverity }) => {
     const query = new URLSearchParams();
     if (next.check) query.set('check', next.check);
     if (next.severity) query.set('severity', next.severity);
     const rest = query.toString();
-    return `/admin/jobs${rest ? `?${rest}` : ''}#lint`;
+    return `/admin/jobs/lint${rest ? `?${rest}` : ''}`;
   };
 
   return (
-    <section id="lint" className="mt-10 scroll-mt-20">
-      <h2 className="mb-4 text-base font-semibold">Lint findings</h2>
+    <section>
       <div className="mb-6 flex flex-wrap gap-2 text-sm">
         <Link
           href={href({ severity })}
