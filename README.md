@@ -314,16 +314,6 @@ Node is pinned by `.nvmrc` (`nvm use`). Run `npm outdated` to list what packages
 
 Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwright tests against a running app (`npm run build && npm start`, or `npm run dev`; `BASE_URL` picks the server). The e2e specs sign up throwaway accounts and post pins as them; the run removes both when it ends (`KEEP_E2E_DATA=1` keeps them for a look at a failure, and `npm run clean:e2e` removes them later). A run against a `BASE_URL` elsewhere leaves its own database alone.
 
-## External API
-
-[Public holidays](http://kayaposoft.com/enrico/) eg: <http://kayaposoft.com/enrico/json/v1.0/?action=getPublicHolidaysForYear&year=2020&country=usa>
-[Rise & set times for the Sun and the Moon, twilight start & end, day length, moon phases, and more.](https://www.timeanddate.com/services/api/) eg: <https://www.timeanddate.com/services/api/>
-
-## ICO Images
-
-[Calendar Clock Icon](http://www.iconarchive.com/show/small-n-flat-icons-by-paomedia/calendar-clock-icon.html)
-[Clock-icon](http://www.iconarchive.com/show/childish-icons-by-double-j-design/Clock-icon.html)
-[Blue clock Icon](http://www.iconarchive.com/show/origami-colored-pencil-icons-by-double-j-design/blue-clock-icon.html)
 
 ## Cool Things
 
@@ -334,32 +324,6 @@ Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwrig
 <https://codepen.io/hexagonest/pen/waaGqj>
 <https://codepen.io/jonitrythall/pen/dNJRRK>
 
-## Good Design
-
-<https://www.anker.com/>
-<https://images.template.net/wp-content/uploads/2015/07/Timeline-Web-Element-Template-PSD.jpg>
-<http://www.grubstreet.com/>
-<https://flipboard.com/>
-<https://news360.com/home>
-Use of top banner news feed: <http://www.latimes.com/entertainment/arts/la-et-cm-hammer-made-paggett-wiegmann-20180606-story.html>
-
-## Practical Design
-
-<https://www.msn.com/en-us/health/wellness/10-minute-moves-for-strength-speed-and-agility/ss-AAzWFok?OCID=ansmsnnews11>
-
-## Email Templates
-
-<https://elements.envato.com/web-templates/email-templates>
-
-### API Endpoints used
-
-Equinoxes, Solstices, Perihelion, and Aphelion:
-<http://aa.usno.navy.mil/data/docs/EarthSeasons.php>
-<https://github.com/barrycarter/bcapps/blob/master/ASTRO/solstices-and-equinoxes.txt.bz2>
-
-### DB data needed
-
-https://nationaldaycalendar.com/march/
 
 ## To Do
 
@@ -371,16 +335,7 @@ https://nationaldaycalendar.com/march/
 
 - Stacking/grouping of related pins
 
-- Amazon/Ebay product cross referencing
-
-- Reminder Aside Menu by date sections
-  - Sectional grouping on the bottom
-  https://www.bing.com/images/search?view=detailV2&ccid=Qz5ylXJX&id=DE79D5F3DD2FE17F2542FE2F74C1163AC546B6F2&thid=OIP.Qz5ylXJX6FmKOGL7rsaBzwAAAA&mediaurl=http%3a%2f%2forgjunkie.com%2fwp-content%2fuploads%2f2016%2f04%2fReminders-app.png&exph=650&expw=366&q=reminder+app&simid=608026157405111055&selectedIndex=225&ajaxhist=0
-  https://www.bing.com/images/search?view=detailV2&ccid=Qz5ylXJX&id=DE79D5F3DD2FE17F2542FE2F74C1163AC546B6F2&thid=OIP.Qz5ylXJX6FmKOGL7rsaBzwAAAA&mediaurl=http%3a%2f%2forgjunkie.com%2fwp-content%2fuploads%2f2016%2f04%2fReminders-app.png&exph=650&expw=366&q=reminder+app&simid=608026157405111055&selectedIndex=225&ajaxhist=0
-  https://www.bing.com/images/search?view=detailV2&ccid=K4SNUA5w&id=EB2F67702626BA4754DEBE73062FF73D98C88888&thid=OIP.K4SNUA5wdr1AIr8Ac4LfaAAAAA&mediaurl=http%3a%2f%2fa3.mzstatic.com%2fus%2fr30%2fPurple71%2fv4%2f4f%2f10%2faf%2f4f10af0e-ec9e-210e-f53c-62c42d63c45b%2fscreen696x696.jpeg&exph=696&expw=392&q=reminder+app&simid=607992622330676635&selectedIndex=770&ajaxhist=0
-  https://www.bing.com/images/search?view=detailV2&ccid=C3mXxt8Q&id=0AE073778932A6B23CA9542B7B24A2796CD57848&thid=OIP.C3mXxt8QSMmBHdR8S4TSuQHaMW&mediaurl=https%3a%2f%2flh3.googleusercontent.com%2fTK2tG4ci4kbOy9BPz8o88ohQDOUR2Cpo07bk05MERRhw8jgC95F5KXXZF-O3-yo7WEs%3dh900&exph=900&expw=540&q=reminder+app&simid=608050170612222716&selectedIndex=93
-  https://www.bing.com/images/search?view=detailV2&ccid=02xN%2bVaI&id=A3188565487997B0E1AFB447FC0156441FECBB42&thid=OIP.02xN-VaISVatDExN5BiimgAAAA&mediaurl=http%3a%2f%2fa1.mzstatic.com%2fus%2fr30%2fPurple127%2fv4%2f52%2ffa%2fdf%2f52fadfe0-04de-8924-9178-b8920102e7b7%2fscreen696x696.jpeg&exph=696&expw=392&q=reminder+app&simid=608011172316253708&selectedIndex=249
-  https://www.bing.com/images/search?view=detailV2&ccid=Puea8PZt&id=7EC1A129853AB342972F331E720A8F140ECDC010&thid=OIP.Puea8PZtmHSKlBaLFVd-1QHaNL&mediaurl=https%3a%2f%2flh4.ggpht.com%2fkSVYScpGNgwoH2vsTKla23eN4jnjT_kkZS3kxe6KYQE-hMgjI6doZxLDYojQ1Fph_38j%3dh900&exph=900&expw=506&q=reminder+app&simid=607993687487089105&selectedIndex=340
+- Amazon/Ebay product price check and show deals
 
 
 ### Map
@@ -391,29 +346,11 @@ https://nationaldaycalendar.com/march/
   - See who else is going in your network
   - If flight information is entered or flight booked through site then delays and be tracked and shared
 
-
-
 ### Misc
 
-- Search (Amazon) to buy product to support our website
-```
-This is a promotional article about one of the company partners with Interesting Engineering. By shopping with us, you not only get the materials you need, but you’re also supporting our website.
-```
+
 - Add pin group and can see iteniary map view and invite people for each location (support open invitation where anyone can join and buy tickets).
 
-### Google Analytics:
-
-- Activated Google Analytics / Facebook upgrade to non development mode
-
-- Setup Google Analytics to this site. 
-GA: Outbound link / non-interaction events / Social Interactions tracking / User Timings / set clientId on tracker creation
-
-
-- Add FB privacy policy page
-- https://gist.github.com/muddylemon/2671176
-- https://developers.facebook.com/apps/560731380662615/settings/basic/
-
-- facebook comment jumps @ pin page
 
 ## Architecture
 
@@ -422,21 +359,13 @@ GA: Outbound link / non-interaction events / Social Interactions tracking / User
 
 ## Before Usable
 
-create mobile app
+- create mobile app
 
-Translate content to all supported languages
-
-### Before release
-
-- Use this AI to do this job: Localization is in: the site now works in English, Spanish, French, German, Japanese and Simplified Chinese. The app's own text is translated in all six, but pin text stays in English for now because the Anthropic key has no credit. 
+- Use this session ai to do this job: Localization is in: the site now works in English, Spanish, French, German, Japanese and Simplified Chinese.
 
 # Monitization
 
-- amazon & bestbuy referral links to product should be created if its something purchasable 
 
-- upgrade user to promoter and sell tickets to local events like eventbrite. will have management portal that will have dashboard to sales and impressions, and pin click, and purchases, etc. integrade with payment company - stripe 
-- track mobile desktop location, etc. Will have google analytics integration
-- can pay to become promoted pin
 
 # Testing 
 
@@ -480,4 +409,19 @@ tag filter need exclude tag feature
 
 # Others:
 
-- General Sentiment Graph for a Product
+
+- Activated Google Analytics / Facebook upgrade to non development mode
+
+- Setup Google Analytics to this site. 
+GA: Outbound link / non-interaction events / Social Interactions tracking / User Timings / set clientId on tracker creation
+
+
+
+
+
+- amazon & bestbuy referral links to product should be created if its something purchasable 
+
+- upgrade user to promoter and sell tickets to local events like eventbrite. will have management portal that will have dashboard to sales and impressions, and pin click, and purchases, etc. integrade with payment company - stripe 
+- track mobile desktop location, etc. Will have google analytics integration
+
+- can pay to become promoted pin

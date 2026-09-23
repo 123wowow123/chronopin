@@ -58,6 +58,18 @@ export type ExtractedFields = {
   tags: string[];
 };
 
+// Structured output allows at most 16 fields that can be null (the API
+// rejects the whole schema past that, which silently turned every extraction
+// into a session task), so these rarely-set ones are plain strings, empty when
+// the page has nothing for them. emptyAsNull turns that back into null.
+const EMPTY_AS_NULL = ['originalStartDate', 'delayReasoning', 'workTitle', 'episodeStatus', 'amazonUrl', 'bestBuyUrl'] as const;
+
+export function emptyAsNull<T extends Partial<ExtractedFields>>(fields: T): T {
+  const out = { ...fields } as Record<string, unknown>;
+  for (const key of EMPTY_AS_NULL) if (typeof out[key] === 'string' && !(out[key] as string).trim()) out[key] = null;
+  return out as T;
+}
+
 export const SCHEMA = {
   type: 'object',
   properties: {
@@ -104,14 +116,14 @@ export const SCHEMA = {
         'One sentence naming the wording that decided dateConfidence, quoting the page, e.g. \'Stated as firm, per en.wikipedia.org: "...was completed in June 2026..."\'. Null when dateConfidence is "unknown".',
     },
     originalStartDate: {
-      type: ['string', 'null'],
+      type: 'string',
       description:
-        'When the date has moved: the day the event was first promised for, before any delay, as "YYYY-MM-DD" in the same convention as startDateTime (a year alone is its last day, "2027-12-31"; a month its last day). Null when the date has not moved.',
+        'When the date has moved: the day the event was first promised for, before any delay, as "YYYY-MM-DD" in the same convention as startDateTime (a year alone is its last day, "2027-12-31"; a month its last day). Empty ("") when the date has not moved.',
     },
     delayReasoning: {
-      type: ['string', 'null'],
+      type: 'string',
       description:
-        'One sentence on how long the delay is and how you know, quoting the page, e.g. \'Stated: first "slated for 2027", now "projected for 2032".\' or \'Estimated: the page says only that opening "will slip"; comparable metro extensions have slipped about two years.\'. Null when originalStartDate is null.',
+        'One sentence on how long the delay is and how you know, quoting the page, e.g. \'Stated: first "slated for 2027", now "projected for 2032".\' or \'Estimated: the page says only that opening "will slip"; comparable metro extensions have slipped about two years.\'. Empty ("") when originalStartDate is null.',
     },
     company: {
       type: ['string', 'null'],
@@ -130,9 +142,9 @@ export const SCHEMA = {
         'The categories this event belongs to from the fixed list, the best fit first. Each name is one word, so take every word the event is squarely about: an anime film is "Anime" and "Movie", its soundtrack release is "Anime" and "Music", a new metro line is "Transport". Never force a pin into a word that only loosely covers it - two or three exact words beat one broad one.',
     },
     workTitle: {
-      type: ['string', 'null'],
+      type: 'string',
       description:
-        'When a category is Anime, Movie or TV, or the pin is about one video game: the film\'s, show\'s or game\'s own official English title, with any season or part as it is officially styled, e.g. "Jujutsu Kaisen Season 2", "Frieren: Beyond Journey\'s End" or "Grand Theft Auto VI" - not the event headline. Null otherwise.',
+        'When a category is Anime, Movie or TV, or the pin is about one video game: the film\'s, show\'s or game\'s own official English title, with any season or part as it is officially styled, e.g. "Jujutsu Kaisen Season 2", "Frieren: Beyond Journey\'s End" or "Grand Theft Auto VI" - not the event headline. Empty ("") otherwise.',
     },
     episodeCount: {
       type: ['number', 'null'],
@@ -140,19 +152,19 @@ export const SCHEMA = {
         'For a work released as episodes (TV series, anime, a web or podcast series): how many episodes the run this pin is about has, as a whole number. A pin about one season counts that season, not the whole show. Null for a film, a one-off event, or when the page does not say.',
     },
     episodeStatus: {
-      type: ['string', 'null'],
+      type: 'string',
       description:
-        'What episodeCount counts: "complete" when the run has finished airing, "planned" when that is the number announced for a run still to air or still airing, "ongoing" when it is the episodes out so far and no total has been announced. Null when episodeCount is null.',
+        'What episodeCount counts: "complete" when the run has finished airing, "planned" when that is the number announced for a run still to air or still airing, "ongoing" when it is the episodes out so far and no total has been announced. Empty ("") when episodeCount is null.',
     },
     amazonUrl: {
-      type: ['string', 'null'],
+      type: 'string',
       description:
-        "Direct URL to this exact product's own listing on amazon.com, from your own knowledge of real Amazon listings - never a guessed or constructed URL. Null when the page is not about a specific purchasable consumer product, or you are not confident of the real listing URL.",
+        "Direct URL to this exact product's own listing on amazon.com, from your own knowledge of real Amazon listings - never a guessed or constructed URL. An empty string when the page is not about a specific purchasable consumer product, or you are not confident of the real listing URL.",
     },
     bestBuyUrl: {
-      type: ['string', 'null'],
+      type: 'string',
       description:
-        "Direct URL to this exact product's own listing on bestbuy.com, from your own knowledge of real Best Buy listings - never a guessed or constructed URL. Null when the page is not about a specific purchasable consumer product, or you are not confident of the real listing URL.",
+        "Direct URL to this exact product's own listing on bestbuy.com, from your own knowledge of real Best Buy listings - never a guessed or constructed URL. An empty string when the page is not about a specific purchasable consumer product, or you are not confident of the real listing URL.",
     },
     startDateTime: {
       type: ['string', 'null'],
@@ -313,7 +325,7 @@ export async function extractPinFields(pageUrl: string, pageText: string, note?:
       return null;
     }
     const block = response.content.find((b): b is Anthropic.Beta.BetaTextBlock => b.type === 'text');
-    return block ? (JSON.parse(block.text) as ExtractedFields) : null;
+    return block ? emptyAsNull(JSON.parse(block.text) as ExtractedFields) : null;
   } catch (err) {
     log.warn('extract failed', describeError(err));
     return null;

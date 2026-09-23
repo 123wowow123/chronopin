@@ -3,7 +3,7 @@
 import Link from '@/components/ui/Link';
 import { useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
-import { api, ApiError } from '@/lib/client/api';
+import { api, ApiError, isEmailUnverified } from '@/lib/client/api';
 import { useT } from '@/lib/client/i18n';
 import { useRouter } from '@/lib/client/navigation';
 import { useNow } from '@/lib/client/now';
@@ -77,6 +77,9 @@ export function QuickPinForm({ respondTo }: { respondTo?: PinJson }) {
         setError(err.message);
         setDuplicateOf((err.body as { pin?: Pick<PinJson, 'id' | 'title'> } | null)?.pin ?? null);
         setPhase('input');
+      } else if (isEmailUnverified(err)) {
+        setError(t('verifyEmail.required'));
+        setPhase('input');
       } else {
         finishByHand({ values: next, respondTo: thread, notice: t('quickPin.saveFailed') });
       }
@@ -96,6 +99,11 @@ export function QuickPinForm({ respondTo }: { respondTo?: PinJson }) {
     try {
       scraped = await api.post<Scraped>('/api/scrape', { url: link, note: note.trim() || undefined });
     } catch (err) {
+      // The form by hand would be refused too.
+      if (isEmailUnverified(err)) {
+        setError(t('verifyEmail.required'));
+        return setPhase('input');
+      }
       const reason = err instanceof ApiError ? t('form.scrapeFailedStatus', { status: err.status }) : t('form.scrapeFailed');
       return finishByHand({ values: blank(), notice: `${reason} ${t('quickPin.byHand')}` });
     }

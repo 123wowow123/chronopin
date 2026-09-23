@@ -329,6 +329,9 @@ export type SessionUser = {
   locationName?: string | null;
   // Whether the device may keep it up to date.
   locationFromDevice?: boolean;
+  // When the email was confirmed (0071); absent or null until then, and an
+  // unconfirmed account cannot post pins or comments.
+  emailVerifiedDateTime?: string | null;
 };
 
 // Converts a model object (with Dates and toJSON) into plain JSON data that

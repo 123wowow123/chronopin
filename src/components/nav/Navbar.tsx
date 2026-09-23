@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import { EmailVerifyBanner } from '@/components/EmailVerifyBanner';
 import { LogoMark } from '@/components/ui/LogoMark';
 import { MobileDrawer } from './MobileDrawer';
 import { NavMenu } from './NavMenu';
@@ -7,6 +8,7 @@ import { SearchBox } from './SearchBox';
 export function Navbar() {
   return (
     // The bottom rule is a shadow, not a border, so the bar stays exactly 52px.
+    // The unconfirmed-email strip hangs below it, over the page.
     <header data-navbar className="sticky top-0 z-40 bg-header/85 shadow-[0_1px_0_var(--color-line)] backdrop-blur-md">
       <div className="relative flex h-[52px] items-center gap-3 px-3 sm:px-5">
         <Suspense fallback={<div className="size-9 shrink-0 lg:hidden" />}>
@@ -28,6 +30,7 @@ export function Navbar() {
           <NavMenu />
         </Suspense>
       </div>
+      <EmailVerifyBanner />
     </header>
   );
 }

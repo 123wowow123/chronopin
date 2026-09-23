@@ -162,7 +162,14 @@ export function CompanySentimentChart({ name, sentiment }: { name: string; senti
             {showToday ? (
               <g>
                 <line x1={x(now)} x2={x(now)} y1={0} y2={HEIGHT} className="stroke-line" strokeWidth={1} />
-                <text x={x(now) + 3} y={PAD_Y - 1} dominantBaseline="middle" className="fill-subtle text-[10px]">
+                {/* Beside the line, on its left when the right edge is too near. */}
+                <text
+                  x={x(now) > width - 36 ? x(now) - 3 : x(now) + 3}
+                  y={PAD_Y - 1}
+                  dominantBaseline="middle"
+                  textAnchor={x(now) > width - 36 ? 'end' : 'start'}
+                  className="fill-subtle text-[10px]"
+                >
                   {t('company.sentimentToday')}
                 </text>
               </g>

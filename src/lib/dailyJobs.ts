@@ -124,16 +124,16 @@ export const MAX_NEW_PINS = 100;
 export const MAX_UPDATES = 250;
 export const MAX_TIMES = 6;
 
-// The two jobs the owner asked for: on by default, with up to 100 new pins
-// and 250 updates a run (owner, 2026-09-22). There is no dry run - every run
-// writes ("no dry run needed", "remove dry run option"); an admin can turn
-// either job off.
+// The two jobs the owner asked for, with up to 100 new pins and 250 updates
+// a run (owner, 2026-09-22). Both ship off (owner, 2026-09-23: "turn off
+// nightly jobs by default"); an admin turns them on at /admin/jobs. There is
+// no dry run - every run writes ("no dry run needed", "remove dry run option").
 export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
   jobs: [
     {
       id: 'midnight',
       label: 'Midnight maintenance and new pins',
-      enabled: true,
+      enabled: false,
       times: ['00:00'],
       timeZone: 'America/Los_Angeles',
       // No sentiment: the news job scores new pins twice a day (owner, 2026-09-23).
@@ -145,7 +145,7 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
     {
       id: 'news',
       label: 'Morning and evening news check',
-      enabled: true,
+      enabled: false,
       times: ['06:00', '18:00'],
       timeZone: 'America/Los_Angeles',
       tasks: ['weekReview', 'freshSources', 'breakingNews', 'sentiment'],

@@ -29,6 +29,19 @@ test('a pin card opens its page, and a label searches for its company', async ({
   await expect(page.getByRole('heading', { level: 1 })).toContainText(title);
 });
 
+test('a company search lists its major products, each opening its own graph', async ({ page }) => {
+  // A wide screen: the company's panels sit beside the results.
+  await page.setViewportSize({ width: 1600, height: 1000 });
+  await page.goto('/search?q=company:Microsoft');
+  const products = page.locator('section').filter({ has: page.getByRole('heading', { name: 'Major products' }) });
+  await expect(products).toBeVisible();
+  const first = products.locator('li > button').first();
+  await expect(first).toHaveAttribute('aria-expanded', 'false');
+  await first.click();
+  await expect(first).toHaveAttribute('aria-expanded', 'true');
+  await expect(products.getByRole('img')).toBeVisible();
+});
+
 test('search results page in as they are scrolled, by date and by relevance', async ({ page }) => {
   // Every pin a curator account posted: several pages' worth in the seed data,
   // most of them before today.

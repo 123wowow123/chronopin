@@ -4,6 +4,7 @@ import type { NextRequest } from 'next/server';
 import { birthdayMessage, birthdayProblem } from '@/lib/birthday';
 import { normalizePhone, phoneMessage, phoneProblem } from '@/lib/phone';
 import { getUser, requireUser, signToken, tokenCookie } from '@/server/auth';
+import { sendVerificationEmailInBackground } from '@/server/emailVerification';
 import { json, readJson, route } from '@/server/http';
 import User, { patchableUserProps, pickUserProps, takenBody, takenField } from '@/server/model/user';
 import { loadUser } from '@/server/services/users';
@@ -29,6 +30,8 @@ export const PATCH = route(async (request: NextRequest) => {
   if ('phone' in body) body.phone = normalizePhone(body.phone);
 
   const user = (await loadUser(signedIn.id)).patchSet(new User(body));
+  // citext: a change of case is the same address, and stays confirmed.
+  const emailChanged = String(user.email ?? '').toLowerCase() !== String(signedIn.email ?? '').toLowerCase();
   // patchSet copies only what is truthy, so taking an optional birthday or
   // phone back off the account has to be said outright.
   if ('birthday' in body && !body.birthday) user.birthday = null;
@@ -41,6 +44,8 @@ export const PATCH = route(async (request: NextRequest) => {
     if (taken) return json(takenBody(taken), 409);
     return json(err instanceof Error ? { message: err.message } : err, 422);
   }
+  // The update cleared the confirmation (0071); the new address gets a link.
+  if (emailChanged) sendVerificationEmailInBackground(user, request);
 
   const token = await signToken(user.id, user.role);
   (await cookies()).set(tokenCookie(token));

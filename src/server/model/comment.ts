@@ -177,9 +177,9 @@ export default class Comment extends PinUserLink {
   // Comments waiting on a score come too, so the panel can say how many of the
   // comments it speaks for.
   static forCompany(companyId: number, limit: number) {
-    return db.query<{ sentiment: number | null; utcCreatedDateTime: Date }>(
+    return db.query<{ pinId: number; sentiment: number | null; utcCreatedDateTime: Date }>(
       `
-    SELECT "Comment"."sentiment", "Comment"."utcCreatedDateTime"
+    SELECT "Comment"."pinId", "Comment"."sentiment", "Comment"."utcCreatedDateTime"
     FROM "Comment"
       JOIN "Pin" ON "Pin"."id" = "Comment"."pinId"
     WHERE "Pin"."companyId" = $1 AND "Pin"."utcDeletedDateTime" IS NULL AND "Comment"."utcDeletedDateTime" IS NULL

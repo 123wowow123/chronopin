@@ -4,6 +4,7 @@ import type { NextRequest } from 'next/server';
 import { birthdayMessage, birthdayProblem } from '@/lib/birthday';
 import { normalizePhone, phoneMessage, phoneProblem } from '@/lib/phone';
 import { requireRole, signToken, tokenCookie } from '@/server/auth';
+import { sendVerificationEmailInBackground } from '@/server/emailVerification';
 import { json, readJson, route } from '@/server/http';
 import User, { pickUserProps, takenBody, takenField, Users } from '@/server/model/user';
 
@@ -38,6 +39,9 @@ export const POST = route(async (request: NextRequest) => {
     if (taken) return json(takenBody(taken), 409);
     return json(err instanceof Error ? { message: err.message } : err, 422);
   }
+
+  // Signed in straight away; posting waits for the link in this email.
+  sendVerificationEmailInBackground(user, request);
 
   const token = await signToken(user.id, user.role);
   (await cookies()).set(tokenCookie(token));

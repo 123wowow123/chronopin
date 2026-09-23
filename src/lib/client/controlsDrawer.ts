@@ -42,6 +42,24 @@ export function useControlsSlot() {
   );
 }
 
+// What rides with the filters without being one (the search page's searched
+// user and company) has a section of its own, above the filters, so it reads
+// as what the page is about rather than one more thing to narrow it by.
+let cardsSlot: HTMLElement | null = null;
+
+export function setCardsSlot(element: HTMLElement | null) {
+  cardsSlot = element;
+  emit();
+}
+
+export function useCardsSlot() {
+  return useSyncExternalStore(
+    subscribe,
+    () => cardsSlot,
+    () => null,
+  );
+}
+
 // Called from an effect with a token of the page's own; it lets go when the
 // page unmounts or is hidden.
 export function registerControls(claim: object) {

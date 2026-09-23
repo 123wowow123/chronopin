@@ -89,6 +89,15 @@ export const config = {
     apiKey: env('ANTHROPIC_API_KEY') || '',
   },
 
+  // Resend, for the account emails (src/server/email.ts). The free tier is
+  // 3,000 a month and 100 a day, from a domain verified in Resend's dashboard
+  // (its DKIM and SPF records sit on chronopin.com at GoDaddy). Without a key
+  // nothing is sent: the message, link included, goes to the server log.
+  email: {
+    resendApiKey: env('RESEND_API_KEY') || '',
+    from: env('EMAIL_FROM') || 'Chronopin <noreply@chronopin.com>',
+  },
+
   // Google Places API (New), for a place's own rating, review count, review
   // excerpts and opening hours. Billed per request and per field, so the
   // lookup is cached (src/server/places.ts) and only a pin with a resolved

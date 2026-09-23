@@ -345,6 +345,7 @@ async function findOrCreateUser(
       log.info(`${provider} sign-in filled in:`, Object.keys(Object.assign({}, ...updatedFields)).join(', '));
       await user.patchWithoutPassword();
     }
+    await confirmProviderEmail(user, profile, email);
     return { user, created: false };
   }
 
@@ -352,7 +353,18 @@ async function findOrCreateUser(
   user.provider = provider;
   await fillRequiredFields(user, email);
   await user.save();
+  await confirmProviderEmail(user, profile, email);
   return { user, created: true };
+}
+
+// A provider that vouches for the address confirms it (0071), so a social
+// sign-up never waits for a link, and a password account left unconfirmed is
+// confirmed by signing in with Google on the same address. Google and Apple
+// say so outright; Facebook shares only confirmed addresses and sends no flag.
+// markEmailVerified checks the address is still the account's own.
+async function confirmProviderEmail(user: User, profile: Profile, email: string) {
+  if (user.emailVerifiedDateTime || profile.emails[0]?.verified === false) return;
+  await user.markEmailVerified(email);
 }
 
 // userName, firstName and lastName are NOT NULL, and a social profile need not

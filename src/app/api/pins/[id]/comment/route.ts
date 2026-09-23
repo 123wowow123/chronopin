@@ -1,5 +1,6 @@
 import { after, type NextRequest } from 'next/server';
 import { requireUser } from '@/server/auth';
+import { requireVerifiedEmail } from '@/server/emailVerification';
 import { HttpError, intParam, json, readJson, route } from '@/server/http';
 import Comment from '@/server/model/comment';
 import Pin from '@/server/model/pin';
@@ -28,6 +29,7 @@ export const GET = route(async (_request: NextRequest, ctx: Ctx) => {
 
 export const POST = route(async (request: NextRequest, ctx: Ctx) => {
   const user = await requireUser(request);
+  requireVerifiedEmail(user);
   const pinId = intParam((await ctx.params).id);
   const body = await readJson(request);
   const text = typeof body.text === 'string' ? body.text.trim() : '';

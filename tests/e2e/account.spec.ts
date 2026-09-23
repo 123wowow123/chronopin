@@ -1,4 +1,10 @@
+import { execFile } from 'node:child_process';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { promisify } from 'node:util';
 import { expect, test, type Page } from '@playwright/test';
+
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 
 const stamp = Date.now().toString(36);
 const handle = `e2e${stamp}`;
@@ -29,6 +35,18 @@ async function signUp(page: Page) {
   await page.getByLabel('Confirm Password').fill(password);
   await page.getByRole('button', { name: 'Sign up' }).click();
   await expect(page.getByRole('button', { name: `@${handle}` })).toBeVisible();
+  await confirmEmail(page);
+}
+
+// Posting waits for the link in the sign-up email (0071). The link comes from
+// a local script rather than an inbox, and is followed the way a click would.
+async function confirmEmail(page: Page) {
+  await expect(page.getByText('Confirm your email to post pins and comments')).toBeVisible();
+  const { stdout } = await promisify(execFile)('npx', ['tsx', 'scripts/data/e2eVerifyLink.ts', email], { cwd: root });
+  await page.goto(stdout.split('\n').find((line) => line.startsWith('/auth/verify-email?'))!);
+  await expect(page.getByText('Your email is confirmed')).toBeVisible();
+  await page.goto('/');
+  await expect(page.getByText('Confirm your email to post pins and comments')).toBeHidden();
 }
 
 test.describe.serial('a signed-in author', () => {

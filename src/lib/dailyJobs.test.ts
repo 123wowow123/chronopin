@@ -5,9 +5,9 @@ const midnight = DEFAULT_DAILY_JOBS.jobs[0];
 const news = DEFAULT_DAILY_JOBS.jobs[1];
 
 describe('parseDailyJobs', () => {
-  it('accepts its own default: on, at the top limits', () => {
+  it('accepts its own default: off, at the top limits', () => {
     expect(parseDailyJobs(DEFAULT_DAILY_JOBS)).toEqual({ setting: DEFAULT_DAILY_JOBS });
-    expect(DEFAULT_DAILY_JOBS.jobs.every((j) => j.enabled && j.maxNewPins === 100 && j.maxUpdates === 250)).toBe(true);
+    expect(DEFAULT_DAILY_JOBS.jobs.every((j) => !j.enabled && j.maxNewPins === 100 && j.maxUpdates === 250)).toBe(true);
   });
 
   it('sorts and de-duplicates times and keeps tasks in catalogue order', () => {

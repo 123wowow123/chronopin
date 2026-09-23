@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { averageByPeriod, bucketUnit, explainSentiment } from './companySentiment';
+import { averageByPeriod, bucketUnit, explainSentiment, majorProducts } from './companySentiment';
 
 const at = (day: string) => Date.parse(`${day}T00:00:00Z`);
 
@@ -75,5 +75,35 @@ describe('explainSentiment', () => {
     expect(explained.trend).toBeNull();
     expect(explained.lifting.map((p) => p.id)).toEqual([1]);
     expect(explained.dragging.map((p) => p.id)).toEqual([2]);
+  });
+});
+
+describe('majorProducts', () => {
+  const pin = (id: number, day: string, value: number, product: string | null) => ({ id, title: `Pin ${id}`, at: `${day}T00:00:00Z`, value, product });
+
+  it('groups pins by product whatever the case, most pinned first, with their comments', () => {
+    const products = majorProducts({
+      pins: [
+        pin(1, '2025-01-01', 0.5, 'iPhone'),
+        pin(2, '2025-06-01', -0.5, 'Vision Pro'),
+        pin(3, '2026-01-01', 0.25, 'iphone'),
+        pin(4, '2026-02-01', 0.75, 'iPhone'),
+        pin(5, '2026-03-01', -0.25, null),
+        pin(6, '2026-04-01', 0.5, 'AirPods'),
+      ],
+      comments: [
+        { at: '2026-01-02T00:00:00Z', value: 1, pinId: 3 },
+        { at: '2026-03-02T00:00:00Z', value: -1, pinId: 5 },
+        { at: '2026-03-03T00:00:00Z', value: 0 },
+      ],
+    });
+    expect(products.map((p) => p.name)).toEqual(['iPhone', 'AirPods', 'Vision Pro']);
+    expect(products[0].average).toBe(0.5);
+    expect(products[0].sentiment.pins.map((p) => p.id)).toEqual([1, 3, 4]);
+    expect(products[0].sentiment.comments).toEqual([{ at: '2026-01-02T00:00:00Z', value: 1, pinId: 3 }]);
+  });
+
+  it('is empty when no pin has a product', () => {
+    expect(majorProducts({ pins: [pin(1, '2025-01-01', 0.5, null)], comments: [] })).toEqual([]);
   });
 });

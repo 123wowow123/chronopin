@@ -10,7 +10,7 @@ import { PinAwards } from '@/components/pin/PinAwards';
 import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import { CATEGORIES } from '@/lib/categories';
-import { api, ApiError } from '@/lib/client/api';
+import { api, ApiError, isEmailUnverified } from '@/lib/client/api';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useSession } from '@/lib/client/session';
 import { useTimeZone } from '@/lib/client/timeZone';
@@ -240,7 +240,7 @@ export function PinForm({
         setError(err.message);
         setDuplicateOf((err.body as { pin?: Pick<PinJson, 'id' | 'title'> } | null)?.pin ?? null);
       } else {
-        setError(err instanceof ApiError && err.status === 403 ? t('form.ownPinsOnly') : t('form.saveFailed'));
+        setError(isEmailUnverified(err) ? t('verifyEmail.required') : err instanceof ApiError && err.status === 403 ? t('form.ownPinsOnly') : t('form.saveFailed'));
       }
       setSaving(false);
     }

@@ -44,6 +44,7 @@ const prop = [
   'locationLongitude',
   'locationName',
   'locationFromDevice',
+  'emailVerifiedDateTime',
   'utcCreatedDateTime',
   'utcUpdatedDateTime',
   'utcDeletedDateTime',
@@ -69,6 +70,7 @@ export const pickUserProps = [
   'locationLongitude',
   'locationName',
   'locationFromDevice',
+  'emailVerifiedDateTime',
 ];
 
 // What somebody may change about themselves through the generic patch route.
@@ -116,6 +118,8 @@ export default class User {
   declare locationLongitude: number | null | undefined;
   declare locationName: string | null | undefined;
   declare locationFromDevice: boolean | undefined;
+  // When the email was confirmed (0071), or null while it is not.
+  declare emailVerifiedDateTime: Date | string | null | undefined;
 
   constructor(user?: Row | null) {
     if (user) {
@@ -190,8 +194,25 @@ export default class User {
   }
 
   // Inserts a backed-up user as-is: password is already a hash with its salt.
+  // A seed from before 0071 carries no emailVerifiedDateTime at all, and those
+  // accounts predate the check, so they count as confirmed (null is kept).
   restore() {
+    if (this.emailVerifiedDateTime === undefined) this.emailVerifiedDateTime = this.utcCreatedDateTime || new Date();
     return createUser(this);
+  }
+
+  // Confirms the email, but only while it is still the address the link was
+  // sent to. Whether it changed anything: false for a stale link.
+  async markEmailVerified(email: string): Promise<boolean> {
+    const rows = await db.query(
+      `UPDATE "User" SET "emailVerifiedDateTime" = COALESCE("emailVerifiedDateTime", now())
+       WHERE "id" = $1 AND "email" = $2 AND "utcDeletedDateTime" IS NULL
+       RETURNING "emailVerifiedDateTime"`,
+      [this.id, email],
+    );
+    if (!rows.length) return false;
+    this.emailVerifiedDateTime = rows[0].emailVerifiedDateTime;
+    return true;
   }
 
   async update() {
@@ -262,7 +283,7 @@ const USER_COLUMNS = [
   'id', 'userName', 'firstName', 'lastName', 'birthday', 'phone', 'gender', 'locale', 'facebookId', 'googleId', 'appleId',
   'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email', 'password',
   'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices',
-  'locationLatitude', 'locationLongitude', 'locationName', 'locationFromDevice',
+  'locationLatitude', 'locationLongitude', 'locationName', 'locationFromDevice', 'emailVerifiedDateTime',
   'utcCreatedDateTime', 'utcUpdatedDateTime',
 ];
 
@@ -296,7 +317,7 @@ function selectColumn(column: string) {
 }
 
 async function createUser(user: User) {
-  const columns = WRITE_COLUMNS.concat(['defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime']);
+  const columns = WRITE_COLUMNS.concat(['defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices', 'emailVerifiedDateTime', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime']);
   const values = WRITE_COLUMNS.map((c) => writeValue(user, c))
     // utcUpdatedDateTime has always been written from utcCreatedDateTime.
     .concat([
@@ -305,6 +326,7 @@ async function createUser(user: User) {
       value(user.localePreference),
       // A boolean with a default: never written as null.
       user.showCardStockPrices !== false,
+      value(user.emailVerifiedDateTime),
       user.utcCreatedDateTime || new Date(),
       value(user.utcCreatedDateTime),
       value(user.utcDeletedDateTime),
@@ -347,6 +369,9 @@ async function updateUser(user: User) {
     `
     UPDATE "User"
     SET ${columns.map((c, i) => `"${c}" = $${i + 1}`).join(',\n        ')},
+        -- A new address has to be confirmed again. SET reads the row as it
+        -- was, so "email" here is the old one; citext ignores a change of case.
+        "emailVerifiedDateTime" = CASE WHEN "email" IS DISTINCT FROM $${columns.indexOf('email') + 1} THEN NULL ELSE "emailVerifiedDateTime" END,
         "utcUpdatedDateTime" = now()
     WHERE "id" = $${values.length}`,
     values,

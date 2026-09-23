@@ -7,7 +7,7 @@ import { createPortal } from 'react-dom';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { LogoMark } from '@/components/ui/LogoMark';
 import { UserAvatar } from '@/components/ui/UserAvatar';
-import { drawerHeld, onCloseDrawer, onOpenDrawer, setControlsSlot, setDrawerScroller, useHasControls } from '@/lib/client/controlsDrawer';
+import { drawerHeld, onCloseDrawer, onOpenDrawer, setCardsSlot, setControlsSlot, setDrawerScroller, useHasControls } from '@/lib/client/controlsDrawer';
 import { leaveDrawer, settleDrawerMark, takeDrawerReturn } from '@/lib/client/drawerReturn';
 import { useUnreadCount } from '@/lib/client/notifications';
 import { hrefKeepingDate } from '@/lib/client/returnSpot';
@@ -32,10 +32,10 @@ const noSubscribe = () => () => {};
 // A titled group of drawer rows, set off from the one above by a rule.
 // hideTitle: the section's own first row already says it (the filters'
 // panel is headed "Filters"), so the label is only for screen readers.
-function DrawerSection({ title, hideTitle = false, children }: { title: string; hideTitle?: boolean; children: React.ReactNode }) {
+function DrawerSection({ title, hideTitle = false, className = '', children }: { title: string; hideTitle?: boolean; className?: string; children: React.ReactNode }) {
   const id = useId();
   return (
-    <div role="group" aria-labelledby={id} className={`border-t border-line px-2 pb-2.5 ${hideTitle ? 'pt-2.5' : 'pt-2'}`}>
+    <div role="group" aria-labelledby={id} className={`border-t border-line px-2 pb-2.5 ${hideTitle ? 'pt-2.5' : 'pt-2'} ${className}`}>
       <div id={id} className={hideTitle ? 'sr-only' : 'px-3 pt-1 pb-1 text-xs font-semibold tracking-wider text-subtle uppercase'}>
         {title}
       </div>
@@ -329,6 +329,13 @@ export function MobileDrawer() {
           {/* What the timeline or the search below is filtered to: its own
               panels, lent to the drawer while the screen is too narrow to
               float them beside the cards. */}
+          {/* What the search is about (a searched user or company): above the
+              filters, not among them. Shut while no page fills it. */}
+          {hasControls ? (
+            <DrawerSection title={t('nav.searched')} hideTitle className="has-[[data-drawer-cards]:empty]:hidden">
+              <div ref={setCardsSlot} data-drawer-cards className="flex flex-col gap-2 px-1 pb-0.5" />
+            </DrawerSection>
+          ) : null}
           {hasControls ? (
             <DrawerSection title={t('controls.filters')} hideTitle>
               <div ref={setControlsSlot} data-drawer-controls className="flex flex-col gap-2 px-1 pb-0.5" />

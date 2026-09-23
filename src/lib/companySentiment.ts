@@ -10,9 +10,11 @@ export type SentimentPoint = { at: number; value: number };
 export type SentimentBucket = { at: number; value: number; count: number };
 
 export type CompanySentiment = {
-  // Scored pins: id and title for the tooltip and the link.
-  pins: { id: number; title: string; at: string; value: number }[];
-  comments: { at: string; value: number }[];
+  // Scored pins: id and title for the tooltip and the link, and the product
+  // line each is about (0070; null for none or not read yet).
+  pins: { id: number; title: string; at: string; value: number; product?: string | null }[];
+  // pinId: which pin each is on, so a product's graph takes its pins' comments.
+  comments: { at: string; value: number; pinId?: number }[];
 };
 
 const YEAR_MS = 365.25 * 86400000;
@@ -114,4 +116,40 @@ export function explainSentiment(pins: ExplainedPin[], now: number): SentimentEx
     lifting: byValue.filter((p) => p.value >= average + DRIVER_GAP).slice(0, DRIVERS),
     dragging: byValue.reverse().filter((p) => p.value <= average - DRIVER_GAP).slice(0, DRIVERS),
   };
+}
+
+// A company's major products: its pins grouped by the product each is about,
+// most pinned first (the latest pin breaks a tie), each with the comments on
+// its pins, for the graph per product the company panel shows under its own.
+
+export type ProductSentiment = { name: string; average: number; sentiment: CompanySentiment };
+
+export function majorProducts(sentiment: CompanySentiment): ProductSentiment[] {
+  const groups = new Map<string, CompanySentiment['pins']>();
+  for (const pin of sentiment.pins) {
+    if (!pin.product) continue;
+    // citext in the database: one product whatever its case.
+    const key = pin.product.toLowerCase();
+    const group = groups.get(key);
+    if (group) group.push(pin);
+    else groups.set(key, [pin]);
+  }
+  const latest = (pins: CompanySentiment['pins']) => Math.max(...pins.map((p) => Date.parse(p.at)));
+  return [...groups.values()]
+    .sort((a, b) => b.length - a.length || latest(b) - latest(a))
+    .map((pins) => {
+      const ids = new Set(pins.map((p) => p.id));
+      return {
+        // The spelling most of its pins use.
+        name: mostCommon(pins.map((p) => p.product!)),
+        average: round(mean(pins.map((p) => p.value))),
+        sentiment: { pins, comments: sentiment.comments.filter((c) => c.pinId != null && ids.has(c.pinId)) },
+      };
+    });
+}
+
+function mostCommon(values: string[]) {
+  const counts = new Map<string, number>();
+  for (const value of values) counts.set(value, (counts.get(value) ?? 0) + 1);
+  return [...counts].sort((a, b) => b[1] - a[1])[0][0];
 }

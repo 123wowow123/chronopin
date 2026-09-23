@@ -60,7 +60,7 @@ const BACKUP_USER_PROPS = [
   'id', 'userName', 'firstName', 'lastName', 'birthday', 'phone', 'gender', 'locale', 'facebookId', 'googleId',
   'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email', 'password',
   'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices',
-  'locationLatitude', 'locationLongitude', 'locationName', 'locationFromDevice',
+  'locationLatitude', 'locationLongitude', 'locationName', 'locationFromDevice', 'emailVerifiedDateTime',
   'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime',
 ];
 
@@ -268,8 +268,8 @@ async function seedDB() {
   if (!existsSync(flags.userfile)) {
     log.info(`${flags.userfile} not found, seeding default users`);
     const defaults = [
-      { provider: 'facebook', role: 'admin', userName: '@ThePinGang', firstName: 'Ian', lastName: 'Flynn', email: 'flynni2008@gmail.com', password: 'admin', facebookId: '10100470408434696', id: 1 },
-      { provider: 'facebook', role: 'admin', userName: '@PrettyGang', firstName: 'Serena', lastName: 'Chen', email: 'chenxikristy@gmail.com', password: 'admin', facebookId: '984663319826', id: 2 },
+      { provider: 'facebook', role: 'admin', userName: '@ThePinGang', firstName: 'Ian', lastName: 'Flynn', email: 'flynni2008@gmail.com', password: 'admin', facebookId: '10100470408434696', emailVerifiedDateTime: new Date(), id: 1 },
+      { provider: 'facebook', role: 'admin', userName: '@PrettyGang', firstName: 'Serena', lastName: 'Chen', email: 'chenxikristy@gmail.com', password: 'admin', facebookId: '984663319826', emailVerifiedDateTime: new Date(), id: 2 },
     ];
     for (const u of defaults) {
       await new User(u).save();

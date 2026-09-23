@@ -173,7 +173,7 @@ export const TOOLS: JobTool[] = [
   {
     name: 'pending_sentiment',
     description:
-      "The company pins whose title or summary changed since their tone was scored, or that were never scored, and the comments with no tone yet - with the rubric for each. Score each from -1 to 1 by its rubric and save them with record_sentiment, then ask again until nothing is left.",
+      "The company pins whose title or summary changed since their tone was scored, or that were never scored, and the comments with no tone yet - with the rubric for each. Score each from -1 to 1 by its rubric, name each pin's product (reusing one of its knownProducts when it fits, empty for none), and save them with record_sentiment, then ask again until nothing is left.",
     input_schema: obj({ limit: num('At most this many of each, default 50, at most 200') }),
     run: async (input) => {
       const limit = int(input.limit, 50, 1, 200);
@@ -184,7 +184,16 @@ export const TOOLS: JobTool[] = [
       return {
         pinRubric: PIN_SENTIMENT_PROMPT,
         commentRubric: COMMENT_SENTIMENT_PROMPT,
-        pins: pins.slice(0, limit).map((p) => ({ id: p.id, company: p.company, title: p.title, summary: p.description ?? '', textHash: sentimentHash(p) })),
+        pins: await Promise.all(
+          pins.slice(0, limit).map(async (p) => ({
+            id: p.id,
+            company: p.company,
+            knownProducts: await PinSentiment.productsOf(p.companyId, 20),
+            title: p.title,
+            summary: p.description ?? '',
+            textHash: sentimentHash(p),
+          })),
+        ),
         comments,
         remaining: { pins: Math.max(0, pins.length - limit), comments: Math.max(0, commentIds.length - limit) },
       };
@@ -193,9 +202,15 @@ export const TOOLS: JobTool[] = [
   {
     name: 'record_sentiment',
     description:
-      'Saves tones from pending_sentiment: pins as { id, sentiment, textHash } (textHash exactly as given) and comments as { id, sentiment, text } (text exactly as given). A pin or comment edited since it was handed out is skipped, to be scored again.',
+      'Saves tones from pending_sentiment: pins as { id, sentiment, product, textHash } (textHash exactly as given, product empty for none) and comments as { id, sentiment, text } (text exactly as given). A pin or comment edited since it was handed out is skipped, to be scored again.',
     input_schema: obj({
-      pins: { type: 'array', items: obj({ id: num('Pin id'), sentiment: { type: 'number', description: '-1 to 1' }, textHash: str('As given') }, ['id', 'sentiment', 'textHash']) },
+      pins: {
+        type: 'array',
+        items: obj(
+          { id: num('Pin id'), sentiment: { type: 'number', description: '-1 to 1' }, product: str('The product line, empty for none'), textHash: str('As given') },
+          ['id', 'sentiment', 'textHash'],
+        ),
+      },
       comments: { type: 'array', items: obj({ id: num('Comment id'), sentiment: { type: 'number', description: '-1 to 1' }, text: str('As given') }, ['id', 'sentiment', 'text']) },
     }),
     run: async (input, ctx) => {
@@ -205,7 +220,8 @@ export const TOOLS: JobTool[] = [
       let skipped = 0;
       for (const p of Array.isArray(input.pins) ? input.pins : []) {
         const value = score(p?.sentiment);
-        if (value != null && (await PinSentiment.setIfUnchanged(int(p.id, 0, 1, 2 ** 31 - 1), String(p.textHash ?? ''), value))) pins++;
+        const product = typeof p?.product === 'string' ? p.product : undefined;
+        if (value != null && (await PinSentiment.setIfUnchanged(int(p.id, 0, 1, 2 ** 31 - 1), String(p.textHash ?? ''), value, product))) pins++;
         else skipped++;
       }
       for (const c of Array.isArray(input.comments) ? input.comments : []) {

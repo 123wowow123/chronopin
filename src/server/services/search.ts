@@ -255,11 +255,12 @@ async function attachSearchedCompany(pins: Pins, query: SearchQuery) {
     mood: commentMood(comments.map((c) => ({ ...c, utcCreatedDateTime: c.utcCreatedDateTime.toISOString() }))),
     // The graph: how its pins read as news, by when each happens, and how
     // its comments read, by when each was written (src/lib/companySentiment.ts).
+    // Each pin's product lets the page graph its major products too.
     sentiment: {
-      pins: pinTones.map((p) => ({ id: p.id, title: p.title, at: p.utcStartDateTime.toISOString(), value: p.sentiment })),
+      pins: pinTones.map((p) => ({ id: p.id, title: p.title, at: p.utcStartDateTime.toISOString(), value: p.sentiment, product: p.product })),
       comments: comments
         .filter((c): c is typeof c & { sentiment: number } => c.sentiment != null)
-        .map((c) => ({ at: c.utcCreatedDateTime.toISOString(), value: c.sentiment }))
+        .map((c) => ({ at: c.utcCreatedDateTime.toISOString(), value: c.sentiment, pinId: c.pinId }))
         .reverse(),
     },
   };

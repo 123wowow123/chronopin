@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useId, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { createPortal } from 'react-dom';
 import { Icon, type IconName } from '@/components/ui/Icon';
-import { openTagCloud, registerControls, restoreDrawerScroll, useControlsSlot, useOwnsControls } from '@/lib/client/controlsDrawer';
+import { openTagCloud, registerControls, restoreDrawerScroll, useCardsSlot, useControlsSlot, useOwnsControls } from '@/lib/client/controlsDrawer';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { useT } from '@/lib/client/i18n';
 import { PanelHeader, useFold } from './PanelHeader';
@@ -160,6 +160,7 @@ export function FloatingControls({
   const t = useT();
   const inDrawer = useDrawerWidth();
   const slot = useControlsSlot();
+  const cardsSlot = useCardsSlot();
   // These controls' claim on the drawer's Filters section. Made from an
   // effect, so the pages React keeps mounted but hidden either side of this
   // one - each with controls of its own - do not fill the drawer as well.
@@ -253,7 +254,6 @@ export function FloatingControls({
                           {span?.control}
                         </>
                       )}
-                      {cards}
                     </div>
                   </SliderTypingContext>
                 </TagListContext>
@@ -261,6 +261,7 @@ export function FloatingControls({
               slot,
             )
           : null}
+        {owns && cardsSlot && cards ? createPortal(<DrawerPanelContext value={true}>{cards}</DrawerPanelContext>, cardsSlot) : null}
         {/* Its own corner rather than a place in the row on the right: the
             reader's thumb reaches the near side of a phone, and "Today"
             keeps the corner it has everywhere else. */}
@@ -337,7 +338,15 @@ export function FloatingControls({
                 </MergedPanelContext>
               </div>
             </div>
-            {cards ? <div className={`flex flex-col gap-2 ${open === 'controls' ? '' : 'max-xl:hidden'}`}>{cards}</div> : null}
+            {/* Taller than the room left (a company's panels), the cards give way
+                first and scroll, rather than squeezing the controls above them. */}
+            {cards ? (
+              <div
+                className={`flex flex-col gap-2 xl:min-h-0 xl:shrink-[100] xl:overflow-y-auto xl:overscroll-contain xl:[&>*]:shrink-0 ${open === 'controls' ? '' : 'max-xl:hidden'}`}
+              >
+                {cards}
+              </div>
+            ) : null}
             {/* Takes whatever height the controls leave. Whatever does not fit wraps
                 into a second column, which the clipping hides; the empty first item
                 lets even the first panel wrap away, since a column's first item never

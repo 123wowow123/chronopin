@@ -24,9 +24,9 @@ into its instructions, so changing this page changes the next run.
 
 Both are set on **/admin/jobs**: on or off, the times (up to six a day) and
 their time zone, which tasks, which driver, and the two limits. They ship
-**on**, and there is no dry run - every run posts and edits for real (owner,
-2026-09-22: "no dry run needed", "both jobs are on by default", "remove dry
-run option"). Turn a job off there to stop it.
+**off** (owner, 2026-09-23: "turn off nightly jobs by default"); turn a job on
+there to start it. There is no dry run - every run posts and edits for real
+(owner, 2026-09-22: "no dry run needed", "remove dry run option").
 
 **How the clock works.** Every server checks once a minute
 ([dailyJobSchedule.ts](../../../src/server/services/dailyJobSchedule.ts)); a

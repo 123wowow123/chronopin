@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
-import { api } from '@/lib/client/api';
+import { api, isEmailUnverified } from '@/lib/client/api';
 import { commentMood, type CommentMood } from '@/lib/commentMood';
 import { useNow } from '@/lib/client/now';
 import { AuthLink } from '@/components/nav/AuthLink';
@@ -76,8 +76,8 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
       const created = await api.post<CommentJson>(`/api/pins/${pinId}/comment`, body);
       setComments((list) => [...list, created]);
       return true;
-    } catch {
-      setError(body.parentCommentId ? t('comments.replyFailed') : t('comments.postFailed'));
+    } catch (err) {
+      setError(isEmailUnverified(err) ? t('verifyEmail.required') : body.parentCommentId ? t('comments.replyFailed') : t('comments.postFailed'));
       return false;
     }
   }

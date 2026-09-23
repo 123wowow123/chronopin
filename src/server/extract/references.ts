@@ -28,8 +28,10 @@ const MAX_SEARCHES = 5;
 const MAX_CONTINUATIONS = 3;
 // The page only has to say what the event is; the search does the rest.
 export const MAX_PAGE_CHARS = 20000;
-// The scrape route has 120s in all, and the browser has already used some.
-const TIMEOUT_MS = 90000;
+// Per turn. Opus with up to ten searches and fetches takes minutes: a real
+// search took 166s, so the old 90s cut every one off and returned nothing.
+// The scrape route's maxDuration is sized to match.
+const TIMEOUT_MS = 300000;
 
 export type FoundReference = {
   url: string;

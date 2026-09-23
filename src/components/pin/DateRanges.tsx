@@ -10,6 +10,13 @@ import { RefineLink } from './RefineLink';
 
 const dayFormat = (locale: Locale) => dateFormat(INTL_LOCALES[locale], { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
+// "Mar 13 – 14, 2026". Node and the browser ship different ICU data: Node puts
+// thin spaces (U+2009) around the dash and Chrome plain ones, so the same range
+// rendered on the server and again on hydration did not match. Plain spaces
+// either way.
+export const formatDayRange = (from: string, to: string, locale: Locale = 'en') =>
+  dayFormat(locale).formatRange(dayKeyToMs(from), dayKeyToMs(to)).replace(/[\u2009\u202f]/g, ' ');
+
 // "Jan 1, 2027"; "Jan 1, 2561 BC" for a day key before the common era, which
 // Intl prints as plain "2561".
 export const formatDay = (ymd: string, locale: Locale = 'en') =>
@@ -63,7 +70,7 @@ function Range({ label, range }: { label: string; range: DateRange }) {
         ) : null}
         <span className="text-subtle">
           {t('dateRanges.from', { who: best.isSource ? t('dateRanges.theSource') : hostname(best.url || '') })}
-          {spread ? <> · {t('dateRanges.possible', { range: dayFormat(locale).formatRange(dayKeyToMs(range.earliest), dayKeyToMs(range.latest)) })}</> : null}
+          {spread ? <> · {t('dateRanges.possible', { range: formatDayRange(range.earliest, range.latest, locale) })}</> : null}
         </span>
       </dd>
     </>

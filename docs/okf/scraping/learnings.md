@@ -4579,3 +4579,60 @@ supplier) with `stocks:sync --about/--relate` *before* the first post, so no pin
 * **Feedback**: none yet.
 * **Changed**: [Vertical recipes](verticals.md) - a TSMC row; [Sources](sources.md) - TSMC's sites,
   CNA/Focus Taiwan, Taiwan prosecutors and courts, commerce.gov.
+
+## 2026-09-23 - Daily job news, run 5 (session)
+
+* **Learned** (Wikimedia media top-up mismatches) Pin 501 (Jakarta giant sea wall) carried two Wikimedia Commons pictures of unrelated subjects - "Soviet Invasion of Czechoslovakia" and "Baltský řetěz" (Baltic Way) - both with the ?utm_source=en.wikipedia.org&utm_campaign=imageinfo suffix that the Wikipedia image top-up adds. pin_health_scan only flagged one as 'blocked' (429), not as wrong. When a scan or review surfaces an upload.wikimedia.org picture, read its filename against the pin's subject; a filename about another subject is a wrong picture to remove, whatever its HTTP state. Worth a one-off sweep of utm_campaign=imageinfo pictures by an admin session.
+* **Learned** (Morocco time zone change) Morocco moved permanently from GMT+1 to GMT at 02:00 on Sunday 20 September 2026 (le360.ma, 24 Aug 2026). Any Moroccan local time from that day on is the same as UTC. Earlier research briefs assumed +1 and would have put the 23 Sep election an hour early. Check this before converting times on Moroccan pins, and check older pins whose dates fall after 20 Sep 2026 that were converted at +1.
+* **Learned** (Launch pins: where to verify dates) For weekReview of launch pins, spacex.com/launches pages come back empty to fetch, and rocketlabcorp.com and nasaspaceflight.com return 403. Spaceflight Now's launch schedule (spaceflightnow.com/launch-schedule/) and its per-mission pages (spaceflightnow.com/launch/<vehicle>-<mission>/) are readable and current, so use them first to check a date and as a reference. They caught Starlink 15-25 slipping from 30 Sep to 10 Oct (pin 1946), which Launch Library had not yet reflected. A launch slipping past its chain parent breaks the newest-first schedule chain; mark it for a `spacex:launches` re-run rather than re-threading by hand.
+
+## 2026-09-23 - Sable Offshore news, ten pins (@EnergyDesk, @LawDesk), and the keyed pipeline repaired
+
+Ian asked to "pin SABLE OFFSHORE news events using claude key credit and verify everything works",
+then, part way through, "switch to using session credits now". Pins 2984-2993: the Santa Ynez
+restart fight as one oldest-first chain - Judge Anderle's Coastal Commission ruling (2984), PHMSA's
+emergency special permit (2985), the Ninth Circuit's refusal to block it (2986), Judge Geck upholding
+the injunction (2987), the restart under the Energy Secretary's Defense Production Act order (2988),
+Geck's noncompliance ruling (2989), Judge Wilson's ruling that the DPA order preempts California
+(2990) and Platform Hondo's restart (2991, `delayed` June -> September) - and Q1 -> Q2 2026 results
+(2992-2993). Every pin carries `Sable` and `Santa Ynez`; rulings are @LawDesk's with `company:
+Sable Offshore` so they sit in the company's sentiment graph.
+
+* **Fixed - the extraction had been failing on every keyed call.** The schema had grown to 20
+  nullable (`['string','null']`) fields; structured output allows 16 and rejects the whole schema
+  ("too many parameters with union types"), so `extractPinFields` returned null and every scrape
+  quietly handed the work to a session - invisible while the key had no credit. Six rarely-set
+  fields (`originalStartDate`, `delayReasoning`, `workTitle`, `episodeStatus`, `amazonUrl`,
+  `bestBuyUrl`) are now plain strings, empty when unknown, read back as null by `emptyAsNull`; a
+  test holds the count at 16 or fewer. **Adding a nullable field to `SCHEMA` needs another one
+  turned into a plain string.**
+* **Fixed - the reference search always timed out.** It allowed 90s a turn; Opus with up to ten
+  searches and fetches took 166s on a real page, so every keyed search returned nothing. Now 300s a
+  turn, and `/api/scrape`'s `maxDuration` is 360. A keyed scrape takes 2-4 minutes.
+* **Learned - keyed drafts still need a curator's review.** The extraction dated the DPA pin to the
+  expected first sale rather than the restart (a note fixed it), called the DOJ the company of a
+  ruling about Sable, dated a ruling to the DOJ's release two days later, and the page's images
+  included ad GIFs, logos, a 2015 Kamala Harris photo, protest photos on an earnings pin, a Thomas
+  Nast cartoon and three North Sea rigs on the Hondo pin. The references and summaries were good.
+* **Learned - a shell heredoc eats dollar amounts.** Writing a pin body in an unquoted `<<EOF`
+  turned "$137.1 million" into ".1 million" (`$1` expanded); pin 2993 was repaired by a whole-pin
+  PUT. Write bodies from a quoted heredoc (`<<'EOF'`) or a file.
+* **Learned - switching the app to session mode** without touching `.env.local`: start the dev server
+  with `ANTHROPIC_API_KEY=REPLACE_WITH_ANTHROPIC_API_KEY` in its environment (process env wins over
+  `.env.local`, and that value is the "no key" sentinel `getClient` checks), and prefix every
+  script the same way. Scrapes then return `llm: "session"` in seconds, save listeners skip their
+  Claude steps, and daily jobs on `auto` use the Claude Code session.
+* **Learned - sableoffshore.com 403s `curl`** but the app's headless scraper reads its releases;
+  EDGAR (CIK 1831481) has every release as an 8-K exhibit, and `data.sec.gov/submissions` gives
+  each 8-K's acceptance time. Sable has no Wikipedia article: its logo came only after
+  `websiteUrl` was set by hand.
+* **Learned - Las Flores Canyon and Pentland are not in OpenStreetMap;** Platform Hondo, Harmony
+  and Heritage are (`man_made=offshore_platform`), and Commons has CC photos of all three.
+* **Fixed - a hydration mismatch on every pin whose references disagree on a date.** The
+  "possible Mar 13 - 14, 2026" range came from `Intl.DateTimeFormat.formatRange`, which in Node puts
+  thin spaces (U+2009) around the dash and in Chrome plain ones; `formatDayRange` now normalises
+  them (DateRanges.test.ts).
+* **Open - translations are a site-wide backlog:** 2,669 pins have none (only 15 do), since
+  translating needs the key. The Sable pins were translated by hand with `translations:sync
+  --export/--apply`.
+* **Changed**: [Sources](sources.md) - sableoffshore.com; this entry.

@@ -1,5 +1,6 @@
 import { after, type NextRequest } from 'next/server';
 import { getUser, requireUser } from '@/server/auth';
+import { requireVerifiedEmail } from '@/server/emailVerification';
 import { emitPinEvent } from '@/server/events';
 import { HttpError, json, paginationHeaders, paginationLink, readJson, route } from '@/server/http';
 import CompanyFollow from '@/server/model/companyFollow';
@@ -62,6 +63,7 @@ export const GET = route(async (request: NextRequest) => {
 // that answered an earlier one move under this one when it now comes between.
 export const POST = route(async (request: NextRequest) => {
   const user = await requireUser(request);
+  requireVerifiedEmail(user);
   const body = await readJson(request);
   const pin = new Pin(body);
   const stocks = parseScrapedStocks(body.stocks);

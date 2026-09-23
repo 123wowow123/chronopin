@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useId, useRef, useState, type ReactNode } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
 import { useRouter } from '@/lib/client/navigation';
@@ -17,7 +17,7 @@ type Status = { companyId: number; followerCount: number; following: boolean };
 // Follow a company: its new pins then land in the follower's bell, the way a
 // followed person's do. The status is asked for per viewer, because the
 // search results the company comes with are cached for everyone.
-export function CompanyFollowButton({ company, showCount }: { company: Company; showCount?: boolean }) {
+export function CompanyFollowButton({ company, showCount, info }: { company: Company; showCount?: boolean; info?: ReactNode }) {
   const router = useRouter();
   const { isLoggedIn, status: sessionStatus, user } = useSession();
   const [status, setStatus] = useState<Status | null>(null);
@@ -78,6 +78,7 @@ export function CompanyFollowButton({ company, showCount }: { company: Company; 
   return (
     <span className="flex items-center gap-3">
       {showCount ? <span className="text-sm whitespace-nowrap text-muted">{t('follow.followers', { count: followers })}</span> : null}
+      {info}
       <button
         ref={buttonRef}
         type="button"
@@ -142,6 +143,8 @@ function CompanyMood({ mood, commentCount }: { mood: CommentMood; commentCount: 
 // its new pins into notifications.
 export function SearchedCompanyPanel({ company }: { company: Company }) {
   const t = useT();
+  const [explaining, setExplaining] = useState(false);
+  const explainId = useId();
   return (
     <div className="floating flex flex-col gap-3.5 px-4 py-3.5">
       {/* What the company is: the name it was searched by, then its blurb
@@ -177,10 +180,31 @@ export function SearchedCompanyPanel({ company }: { company: Company }) {
       {company.sentiment ? <CompanySentimentChart name={company.name} sentiment={company.sentiment} /> : null}
 
       {/* Following, under a rule: it acts on the company rather than saying
-          anything more about it, and the note belongs with the button. */}
+          anything more about it. What following does sits behind an info
+          toggle, the way the sentiment graph's explanation does. */}
       <div className="border-t border-line pt-3">
-        <CompanyFollowButton company={company} showCount />
-        <p className="mt-2 text-xs leading-snug text-subtle">{t('company.followExplainer')}</p>
+        <CompanyFollowButton
+          company={company}
+          showCount
+          info={
+            <button
+              type="button"
+              onClick={() => setExplaining(!explaining)}
+              aria-expanded={explaining}
+              aria-controls={explainId}
+              aria-label={t('company.followAbout')}
+              title={t('company.followAbout')}
+              className={`-my-1 -ml-2 rounded-full p-1 hover:bg-raised hover:text-ink ${explaining ? 'text-link' : 'text-subtle'}`}
+            >
+              <Icon name="info" className="size-3.5" />
+            </button>
+          }
+        />
+        {explaining ? (
+          <p id={explainId} className="mt-2 text-xs leading-snug text-subtle">
+            {t('company.followExplainer')}
+          </p>
+        ) : null}
       </div>
     </div>
   );

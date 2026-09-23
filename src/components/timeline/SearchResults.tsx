@@ -20,6 +20,7 @@ import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, pinDayKey, pinTense, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
 import type { TimelineVideoSetting } from '@/lib/timelineVideo';
 import type { CardPin, SearchedCompany, SearchPage } from '@/lib/types';
+import { CompanyProductsPanel } from './CompanyProducts';
 import { SearchedCompanyPanel } from './SearchedCompany';
 import { TagCloud, tagPillSummary } from './TagCloud';
 import { FloatingControls } from './FloatingControls';
@@ -495,6 +496,7 @@ export function SearchResults({
                   </div>
                 ) : null}
                 {searchedCompany ? <SearchedCompanyPanel company={searchedCompany} /> : null}
+                {searchedCompany?.sentiment ? <CompanyProductsPanel name={searchedCompany.name} sentiment={searchedCompany.sentiment} /> : null}
               </>
             ) : undefined
           }
