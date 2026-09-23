@@ -123,19 +123,17 @@ test.describe.serial('a signed-in author', () => {
     });
     expect(saved.merchants).toEqual([expect.objectContaining({ label: 'Amazon', url: 'https://www.amazon.com/dp/B000000000' })]);
 
-    // Watch it, comment on it, then edit and delete the comment.
+    // Watch it, comment on it, then delete the comment - a comment is never
+    // edited, so its author gets only the delete.
     const article = page.getByRole('article').first();
     await article.getByRole('button', { name: /^Watch this pin/ }).click();
     await expect(article.getByRole('button', { name: 'Stop watching (1 watching)' })).toBeVisible();
     await page.getByPlaceholder('Add a comment...').fill('First!');
     await page.getByRole('button', { name: 'Post' }).click();
     await expect(page.getByText('First!')).toBeVisible();
-    await page.getByTitle('Edit comment').click();
-    await page.locator('textarea').first().fill('First, edited');
-    await page.getByRole('button', { name: 'Save' }).click();
-    await expect(page.getByText('First, edited')).toBeVisible();
+    await expect(page.getByTitle('Edit comment')).toHaveCount(0);
     await page.getByTitle('Delete comment').click();
-    await expect(page.getByText('First, edited')).toHaveCount(0);
+    await expect(page.getByText('First!')).toHaveCount(0);
 
     // Take the pin down again. Nothing on the pin page does this, so it goes
     // through the API - and it has to happen here, not only in the run's

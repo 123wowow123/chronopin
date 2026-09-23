@@ -504,7 +504,6 @@ const fr: Messages = {
   comments: {
     replyFailed: 'Un problème est survenu lors de la publication de votre réponse.',
     postFailed: 'Un problème est survenu lors de la publication de votre commentaire.',
-    editClosed: 'Ce commentaire ne peut plus être modifié.',
     votes: 'Votes',
     upvote: 'Voter pour',
     downvote: 'Voter contre',
@@ -512,7 +511,6 @@ const fr: Messages = {
     removeDownvote: 'Retirer votre vote contre',
     ownVote: 'Vous ne pouvez pas voter pour votre propre commentaire',
     logInToVote: 'Connectez-vous pour voter',
-    voteCounts: '{up} pour, {down} contre',
     heading: 'Commentaires',
     addPlaceholder: 'Ajouter un commentaire...',
     post: 'Publier',
@@ -532,7 +530,6 @@ const fr: Messages = {
     averageTone: 'Ton moyen',
     averageToneTitle: 'Ton moyen {value} sur une échelle de -1 à 1',
     reply: 'Répondre',
-    editComment: 'Modifier le commentaire',
     deleteComment: 'Supprimer le commentaire',
     replyPlaceholder: 'Écrire une réponse...',
   },

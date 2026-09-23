@@ -504,7 +504,6 @@ const es: Messages = {
   comments: {
     replyFailed: 'Hubo un problema al publicar tu respuesta.',
     postFailed: 'Hubo un problema al publicar tu comentario.',
-    editClosed: 'Este comentario ya no se puede editar.',
     votes: 'Votos',
     upvote: 'Votar a favor',
     downvote: 'Votar en contra',
@@ -512,7 +511,6 @@ const es: Messages = {
     removeDownvote: 'Quitar tu voto en contra',
     ownVote: 'No puedes votar tu propio comentario',
     logInToVote: 'Inicia sesión para votar',
-    voteCounts: '{up} a favor, {down} en contra',
     heading: 'Comentarios',
     addPlaceholder: 'Añade un comentario...',
     post: 'Publicar',
@@ -532,7 +530,6 @@ const es: Messages = {
     averageTone: 'Tono medio',
     averageToneTitle: 'Tono medio {value} en una escala de -1 a 1',
     reply: 'Responder',
-    editComment: 'Editar comentario',
     deleteComment: 'Eliminar comentario',
     replyPlaceholder: 'Escribe una respuesta...',
   },

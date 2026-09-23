@@ -498,7 +498,6 @@ const ja: Messages = {
   comments: {
     replyFailed: '返信の投稿中に問題が発生しました。',
     postFailed: 'コメントの投稿中に問題が発生しました。',
-    editClosed: 'このコメントはもう編集できません。',
     votes: '投票',
     upvote: '高評価',
     downvote: '低評価',
@@ -506,7 +505,6 @@ const ja: Messages = {
     removeDownvote: '低評価を取り消す',
     ownVote: '自分のコメントには投票できません',
     logInToVote: 'ログインして投票',
-    voteCounts: '高評価 {up}・低評価 {down}',
     heading: 'コメント',
     addPlaceholder: 'コメントを追加…',
     post: '投稿',
@@ -526,7 +524,6 @@ const ja: Messages = {
     averageTone: '平均トーン',
     averageToneTitle: '平均トーン {value}（-1〜1）',
     reply: '返信',
-    editComment: 'コメントを編集',
     deleteComment: 'コメントを削除',
     replyPlaceholder: '返信を書く…',
   },

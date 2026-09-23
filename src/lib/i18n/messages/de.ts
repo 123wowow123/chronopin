@@ -504,7 +504,6 @@ const de: Messages = {
   comments: {
     replyFailed: 'Beim Posten deiner Antwort ist ein Fehler aufgetreten.',
     postFailed: 'Beim Posten deines Kommentars ist ein Fehler aufgetreten.',
-    editClosed: 'Dieser Kommentar kann nicht mehr bearbeitet werden.',
     votes: 'Stimmen',
     upvote: 'Positiv bewerten',
     downvote: 'Negativ bewerten',
@@ -512,7 +511,6 @@ const de: Messages = {
     removeDownvote: 'Negative Bewertung zurücknehmen',
     ownVote: 'Eigene Kommentare kannst du nicht bewerten',
     logInToVote: 'Zum Bewerten anmelden',
-    voteCounts: '{up} positiv, {down} negativ',
     heading: 'Kommentare',
     addPlaceholder: 'Kommentar schreiben...',
     post: 'Posten',
@@ -532,7 +530,6 @@ const de: Messages = {
     averageTone: 'Durchschnittlicher Ton',
     averageToneTitle: 'Durchschnittlicher Ton {value} auf einer Skala von -1 bis 1',
     reply: 'Antworten',
-    editComment: 'Kommentar bearbeiten',
     deleteComment: 'Kommentar löschen',
     replyPlaceholder: 'Antwort schreiben...',
   },

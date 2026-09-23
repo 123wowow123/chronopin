@@ -498,7 +498,6 @@ const zh: Messages = {
   comments: {
     replyFailed: '发布回复时出了问题。',
     postFailed: '发布评论时出了问题。',
-    editClosed: '此评论已无法编辑。',
     votes: '投票',
     upvote: '赞',
     downvote: '踩',
@@ -506,7 +505,6 @@ const zh: Messages = {
     removeDownvote: '取消踩',
     ownVote: '不能给自己的评论投票',
     logInToVote: '登录后投票',
-    voteCounts: '{up} 赞，{down} 踩',
     heading: '评论',
     addPlaceholder: '添加评论…',
     post: '发布',
@@ -526,7 +524,6 @@ const zh: Messages = {
     averageTone: '平均语气',
     averageToneTitle: '平均语气 {value}（范围 -1 到 1）',
     reply: '回复',
-    editComment: '编辑评论',
     deleteComment: '删除评论',
     replyPlaceholder: '写下回复…',
   },

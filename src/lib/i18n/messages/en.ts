@@ -499,7 +499,6 @@ const en = {
   comments: {
     replyFailed: 'There was a problem posting your reply.',
     postFailed: 'There was a problem posting your comment.',
-    editClosed: 'This comment can no longer be edited.',
     votes: 'Votes',
     upvote: 'Upvote',
     downvote: 'Downvote',
@@ -507,7 +506,6 @@ const en = {
     removeDownvote: 'Remove your downvote',
     ownVote: "You can't vote on your own comment",
     logInToVote: 'Log in to vote',
-    voteCounts: '{up} up, {down} down',
     heading: 'Comments',
     addPlaceholder: 'Add a comment...',
     post: 'Post',
@@ -527,7 +525,6 @@ const en = {
     averageTone: 'Average tone',
     averageToneTitle: 'Average tone {value} on a scale from -1 to 1',
     reply: 'Reply',
-    editComment: 'Edit comment',
     deleteComment: 'Delete comment',
     replyPlaceholder: 'Write a reply...',
   },

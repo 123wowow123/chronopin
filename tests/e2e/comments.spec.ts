@@ -16,9 +16,9 @@ async function signUp(api: APIRequestContext, who: string) {
   return email;
 }
 
-// Up and down votes on comments (0073): the author cannot vote on their own,
-// a vote shows at once and is still there after a reload, and the same arrow
-// again takes it back.
+// Up and down votes on comments (0073), each thumb counted apart: the author
+// cannot vote on their own, a vote shows at once and is still there after a
+// reload, and the same thumb again takes it back.
 test('a comment takes one up or down vote from each other reader', async ({ page, playwright, baseURL }) => {
   // The author: an account that has confirmed its email, since posting a
   // comment waits for that (the link comes from a local script, as in
@@ -46,18 +46,24 @@ test('a comment takes one up or down vote from each other reader', async ({ page
   await page.goto(pinPath);
   const comment = page.locator(`#comment-${id}`);
   const votes = comment.getByRole('group', { name: 'Votes' });
-  await expect(votes).toContainText('0');
+  // Each thumb keeps its own count.
+  const ups = votes.locator('[data-count="up"]');
+  const downs = votes.locator('[data-count="down"]');
+  await expect(ups).toHaveText('0');
+  await expect(downs).toHaveText('0');
 
   await votes.getByRole('button', { name: 'Upvote' }).click();
-  await expect(votes).toContainText('1');
+  await expect(ups).toHaveText('1');
   await page.reload();
-  await expect(votes).toContainText('1');
+  await expect(ups).toHaveText('1');
+  await expect(downs).toHaveText('0');
   await expect(votes.getByRole('button', { name: 'Remove your upvote' })).toHaveAttribute('aria-pressed', 'true');
 
-  // Down replaces up; the same arrow again takes it back.
+  // Down replaces up; the same thumb again takes it back.
   await votes.getByRole('button', { name: 'Downvote' }).click();
-  await expect(votes).toContainText('-1');
+  await expect(ups).toHaveText('0');
+  await expect(downs).toHaveText('1');
   await votes.getByRole('button', { name: 'Remove your downvote' }).click();
-  await expect(votes).toContainText('0');
+  await expect(downs).toHaveText('0');
   await author.dispose();
 });

@@ -8,9 +8,6 @@ import User from './user';
 
 const prop = ['id', 'text', 'parentCommentId', 'sentiment', 'upvotes', 'downvotes', 'myVote', 'utcCreatedDateTime', 'utcUpdatedDateTime'];
 
-// How long after posting a comment its author may still edit it.
-export const EDIT_WINDOW_MINUTES = 5;
-
 const COMMENT_COLUMNS = `"id", "text", "userId", "pinId", "parentCommentId", "sentiment", "utcCreatedDateTime", "utcUpdatedDateTime"`;
 
 export default class Comment extends PinUserLink {
@@ -104,29 +101,6 @@ export default class Comment extends PinUserLink {
       }
       return { comment: this };
     });
-  }
-
-  // Only the author, only while the comment is live, and only within the edit
-  // window. updated is false when any of those fail. The new text has not been
-  // scored yet, so its sentiment goes back to null.
-  async update() {
-    const rows = await db.query(
-      `
-      UPDATE "Comment"
-      SET "text" = $3, "sentiment" = NULL, "utcUpdatedDateTime" = now()
-      WHERE "id" = $1
-        AND "userId" = $2
-        AND "utcDeletedDateTime" IS NULL
-        AND "utcCreatedDateTime" >= now() - make_interval(mins => $4)
-      RETURNING "utcUpdatedDateTime"`,
-      [this.id, this.userId, this.text, EDIT_WINDOW_MINUTES],
-    );
-    const updated = rows.length > 0;
-    if (updated) {
-      this.utcUpdatedDateTime = rows[0].utcUpdatedDateTime;
-      this.sentiment = null;
-    }
-    return { comment: this, updated };
   }
 
   // A soft delete, by the author only. It also takes back the notifications

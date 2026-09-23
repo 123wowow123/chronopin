@@ -5,16 +5,12 @@ import { Icon } from '@/components/ui/Icon';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { api, isEmailUnverified } from '@/lib/client/api';
 import { commentMood, type CommentMood } from '@/lib/commentMood';
-import { useNow } from '@/lib/client/now';
 import { AuthLink } from '@/components/nav/AuthLink';
 import { usePendingAction } from '@/lib/client/pendingAction';
 import { useSession } from '@/lib/client/session';
 import type { CommentJson } from '@/lib/types';
 import { useT } from '@/lib/client/i18n';
 
-// Must match EDIT_WINDOW_MINUTES in src/server/model/comment.ts; hiding the
-// button is only UX, the real cutoff is enforced by the server.
-const EDIT_WINDOW_MS = 5 * 60 * 1000;
 // Must match MAX_REPLY_DEPTH in the comment route: roots are depth 0.
 const MAX_REPLY_DEPTH = 2;
 
@@ -39,14 +35,12 @@ function buildTree(comments: CommentJson[]): Node[] {
 }
 
 // A pin's comments: server-rendered for readers and crawlers, then live for
-// posting, replying, editing (for 5 minutes) and deleting your own.
+// posting, replying and deleting your own - a comment is never edited.
 export function Comments({ pinId, initialComments }: { pinId: number; initialComments: CommentJson[] }) {
   const { user, isLoggedIn, status } = useSession();
   const [comments, setComments] = useState(initialComments);
   const [text, setText] = useState('');
   const [error, setError] = useState('');
-  // 0 on the server: the edit window is only ever judged in the browser.
-  const now = useNow(15_000);
   const t = useT();
 
   // The page's comments are cached for hours, but a comment's tone is scored
@@ -84,19 +78,6 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
       return true;
     } catch (err) {
       setError(isEmailUnverified(err) ? t('verifyEmail.required') : body.parentCommentId ? t('comments.replyFailed') : t('comments.postFailed'));
-      return false;
-    }
-  }
-
-  async function edit(comment: CommentJson, newText: string) {
-    try {
-      const updated = await api.patch<CommentJson>(`/api/pins/${pinId}/comment/${comment.id}`, { text: newText });
-      setComments((list) =>
-        list.map((c) => (c.id === comment.id ? { ...c, text: updated.text, sentiment: null, utcUpdatedDateTime: updated.utcUpdatedDateTime } : c)),
-      );
-      return true;
-    } catch {
-      setError(t('comments.editClosed'));
       return false;
     }
   }
@@ -140,13 +121,11 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
       key={node.id}
       node={node}
       isOwn={!!user && node.userId === user.id}
-      canEdit={!!user && node.userId === user.id && now - new Date(node.utcCreatedDateTime).getTime() < EDIT_WINDOW_MS}
       canReply={isLoggedIn && node.depth < MAX_REPLY_DEPTH}
       signedIn={isLoggedIn}
       pinId={pinId}
       onVote={(value) => vote(node, value)}
       onReply={(replyText) => post({ text: replyText, parentCommentId: node.id })}
-      onEdit={(newText) => edit(node, newText)}
       onRemove={() => remove(node)}
       renderChild={renderNode}
     />
@@ -261,29 +240,25 @@ function MoodSummary({ mood, total }: { mood: CommentMood; total: number }) {
 function CommentItem({
   node,
   isOwn,
-  canEdit,
   canReply,
   signedIn,
   pinId,
   onVote,
   onReply,
-  onEdit,
   onRemove,
   renderChild,
 }: {
   node: Node;
   isOwn: boolean;
-  canEdit: boolean;
   canReply: boolean;
   signedIn: boolean;
   pinId: number;
   onVote: (value: -1 | 0 | 1) => void;
   onReply: (text: string) => Promise<boolean>;
-  onEdit: (text: string) => Promise<boolean>;
   onRemove: () => void;
   renderChild: (node: Node) => React.ReactNode;
 }) {
-  const [mode, setMode] = useState<'view' | 'edit' | 'reply'>('view');
+  const [mode, setMode] = useState<'view' | 'reply'>('view');
   const [draft, setDraft] = useState('');
   const t = useT();
 
@@ -291,49 +266,26 @@ function CommentItem({
     // The anchor comment notifications link to (its scroll-margin, set for
     // every id in globals.css, keeps it clear of the header).
     <li id={`comment-${node.id}`}>
-      {mode === 'edit' ? (
-        <form
-          onSubmit={async (event) => {
-            event.preventDefault();
-            if (draft.trim() && (await onEdit(draft.trim()))) setMode('view');
-          }}
-        >
-          <textarea value={draft} onChange={(e) => setDraft(e.target.value)} className="field" rows={2} />
-          <div className="mt-2 flex justify-end gap-2">
-            <button type="button" onClick={() => setMode('view')} className="btn btn-sm btn-ghost">
-              {t('common.cancel')}
+      {/* A comment is never edited: its author can only delete it. */}
+      <div className="flex flex-wrap items-baseline gap-2">
+        <UserAvatar userName={node.userName} pictureUrl={node.userPictureUrl} className="size-6 self-center text-xs" />
+        <span className="font-semibold text-ink">{node.userName}</span>
+        {/* Plain text: comments are never rendered as HTML. */}
+        <span className="whitespace-pre-wrap text-ink">{node.text}</span>
+        <span className="ml-auto flex items-center gap-1">
+          <Votes node={node} isOwn={isOwn} signedIn={signedIn} pinId={pinId} onVote={onVote} />
+          {canReply ? (
+            <button type="button" onClick={() => { setDraft(''); setMode('reply'); }} className="rounded-md px-1.5 py-0.5 text-xs text-link hover:bg-raised" title={t('comments.reply')}>
+              {t('comments.reply')}
             </button>
-            <button type="submit" className="btn btn-sm btn-primary">
-              {t('common.save')}
+          ) : null}
+          {isOwn ? (
+            <button type="button" onClick={onRemove} title={t('comments.deleteComment')} className="rounded-md p-1 text-subtle hover:bg-red-500/10 hover:text-danger">
+              <Icon name="close" className="size-3.5" />
             </button>
-          </div>
-        </form>
-      ) : (
-        <div className="flex flex-wrap items-baseline gap-2">
-          <UserAvatar userName={node.userName} pictureUrl={node.userPictureUrl} className="size-6 self-center text-xs" />
-          <span className="font-semibold text-ink">{node.userName}</span>
-          {/* Plain text: comments are never rendered as HTML. */}
-          <span className="whitespace-pre-wrap text-ink">{node.text}</span>
-          <span className="ml-auto flex items-center gap-1">
-            <Votes node={node} isOwn={isOwn} signedIn={signedIn} pinId={pinId} onVote={onVote} />
-            {canReply ? (
-              <button type="button" onClick={() => { setDraft(''); setMode('reply'); }} className="rounded-md px-1.5 py-0.5 text-xs text-link hover:bg-raised" title={t('comments.reply')}>
-                {t('comments.reply')}
-              </button>
-            ) : null}
-            {canEdit ? (
-              <button type="button" onClick={() => { setDraft(node.text); setMode('edit'); }} title={t('comments.editComment')} className="rounded-md p-1 text-subtle hover:bg-raised hover:text-ink">
-                <Icon name="pencil" className="size-3.5" />
-              </button>
-            ) : null}
-            {isOwn ? (
-              <button type="button" onClick={onRemove} title={t('comments.deleteComment')} className="rounded-md p-1 text-subtle hover:bg-red-500/10 hover:text-danger">
-                <Icon name="close" className="size-3.5" />
-              </button>
-            ) : null}
-          </span>
-        </div>
-      )}
+          ) : null}
+        </span>
+      </div>
       {mode === 'reply' ? (
         <form
           className="mt-1 ml-8"
@@ -358,9 +310,10 @@ function CommentItem({
   );
 }
 
-// Up and down votes: the score between two arrows, each arrow lit while it is
-// the viewer's vote and taking it back when pressed again. Nobody votes on
-// their own comment, and a signed-out reader is sent to log in first.
+// Up and down votes, each counted apart: a thumb up with how many gave one,
+// a thumb down with how many gave that. The viewer's own is lit (and filled),
+// and pressing it again takes it back. Nobody votes on their own comment, and
+// a signed-out reader is sent to log in first.
 function Votes({
   node,
   isOwn,
@@ -375,22 +328,25 @@ function Votes({
   onVote: (value: -1 | 0 | 1) => void;
 }) {
   const t = useT();
-  const up = node.upvotes ?? 0;
-  const down = node.downvotes ?? 0;
   const mine = node.myVote ?? 0;
-  const score = up - down;
-  const arrow = (value: 1 | -1) => {
+  const thumb = (value: 1 | -1) => {
     const on = mine === value;
+    const count = value === 1 ? (node.upvotes ?? 0) : (node.downvotes ?? 0);
     const label = t(value === 1 ? (on ? 'comments.removeUpvote' : 'comments.upvote') : on ? 'comments.removeDownvote' : 'comments.downvote');
-    const className = `rounded p-0.5 transition-colors ${
+    const className = `inline-flex items-center gap-1 rounded px-1.5 py-0.5 tabular-nums transition-colors ${
       on ? (value === 1 ? 'text-success' : 'text-danger') : 'text-subtle hover:bg-raised hover:text-ink'
-    } disabled:cursor-default disabled:opacity-40 disabled:hover:bg-transparent disabled:hover:text-subtle`;
-    const icon = <Icon name="chevron" className={`size-4 ${value === 1 ? 'rotate-180' : ''}`} />;
+    } disabled:cursor-default disabled:opacity-60 disabled:hover:bg-transparent disabled:hover:text-subtle`;
+    const face = (
+      <>
+        <Icon name="thumb" className={`size-3.5 ${value === -1 ? '-scale-y-100' : ''} ${on ? '[&_path]:fill-current/25' : ''}`} />
+        <span data-count={value === 1 ? 'up' : 'down'}>{count}</span>
+      </>
+    );
     if (!signedIn) {
       return (
         <span title={t('comments.logInToVote')} className="inline-flex">
           <AuthLink to="/login" className={className} pending={{ kind: 'comment', id: pinId }}>
-            {icon}
+            {face}
             <span className="sr-only">{label}</span>
           </AuthLink>
         </span>
@@ -406,20 +362,14 @@ function Votes({
         onClick={() => onVote(on ? 0 : value)}
         className={className}
       >
-        {icon}
+        {face}
       </button>
     );
   };
   return (
     <span className="mr-1 inline-flex items-center gap-0.5 text-xs" role="group" aria-label={t('comments.votes')}>
-      {arrow(1)}
-      <span
-        className={`min-w-4 text-center font-semibold tabular-nums ${score > 0 ? 'text-success' : score < 0 ? 'text-danger' : 'text-subtle'}`}
-        title={t('comments.voteCounts', { up, down })}
-      >
-        {score}
-      </span>
-      {arrow(-1)}
+      {thumb(1)}
+      {thumb(-1)}
     </span>
   );
 }
