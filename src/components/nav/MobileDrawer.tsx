@@ -254,8 +254,9 @@ export function MobileDrawer() {
       >
         {/* The navbar's own row, signed in or out: 52px tall with the same
             side padding, so the mark in it lands on the menu button underneath
-            and the panel reads as the bar opening out. */}
-        <div className="flex h-[52px] items-center gap-3 px-3">
+            and the panel reads as the bar opening out. It stays put while the
+            rest scrolls under it, so the lines stay over that button. */}
+        <div className="sticky top-0 z-10 flex h-[52px] shrink-0 items-center gap-3 bg-header px-3">
           {/* The menu button in its open state, where the navbar's own sits:
               pressing it puts the drawer away again. */}
           <button
