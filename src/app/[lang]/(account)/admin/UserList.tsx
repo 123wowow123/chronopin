@@ -13,9 +13,10 @@ type AdminUser = {
   utcCreatedDateTime?: string;
   pinsCreated: number;
   pinsViewed: number;
+  viewsReceived: number;
 };
 
-type SortKey = 'signup' | 'viewed' | 'created';
+type SortKey = 'signup' | 'viewed' | 'created' | 'received';
 
 // Each sort opens on its most useful end: newest sign-ups, most views, most
 // pins. Choosing the sort already in use flips it.
@@ -23,6 +24,7 @@ const SORTS: { key: SortKey; label: string; value: (u: AdminUser) => number }[] 
   { key: 'signup', label: 'Sign-up date', value: (u) => (u.utcCreatedDateTime ? Date.parse(u.utcCreatedDateTime) : 0) },
   { key: 'viewed', label: 'Pins viewed', value: (u) => u.pinsViewed },
   { key: 'created', label: 'Pins created', value: (u) => u.pinsCreated },
+  { key: 'received', label: 'Views on their pins', value: (u) => u.viewsReceived },
 ];
 
 // UTC, like the signup charts, so the server and client render the same day.
@@ -77,7 +79,8 @@ export function UserList({ initialUsers }: { initialUsers: AdminUser[] }) {
               <span className="text-xs text-subtle">
                 {user.utcCreatedDateTime ? `Signed up ${joined.format(new Date(user.utcCreatedDateTime))} · ` : ''}
                 {count.format(user.pinsCreated)} {user.pinsCreated === 1 ? 'pin' : 'pins'} created · {count.format(user.pinsViewed)}{' '}
-                {user.pinsViewed === 1 ? 'pin view' : 'pin views'}
+                {user.pinsViewed === 1 ? 'pin view' : 'pin views'} · {count.format(user.viewsReceived)}{' '}
+                {user.viewsReceived === 1 ? 'view' : 'views'} on their pins
               </span>
             </div>
             <button type="button" onClick={() => remove(user)} className="btn btn-sm btn-ghost text-danger hover:bg-red-500/10 hover:text-danger-soft" title="Delete user">

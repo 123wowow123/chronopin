@@ -20,7 +20,7 @@ export default async function AdminUsersPage() {
     Users.activityCounts(),
   ]);
   const users = toJson<Parameters<typeof UserList>[0]['initialUsers']>(
-    allUsers.map((u) => ({ ...u.pick([...pickUserProps, 'utcCreatedDateTime']), ...(activity.get(u.id) ?? { pinsCreated: 0, pinsViewed: 0 }) })),
+    allUsers.map((u) => ({ ...u.pick([...pickUserProps, 'utcCreatedDateTime']), ...(activity.get(u.id) ?? { pinsCreated: 0, pinsViewed: 0, viewsReceived: 0 }) })),
   );
   return (
     <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">

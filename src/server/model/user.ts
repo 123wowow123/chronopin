@@ -404,19 +404,27 @@ export class Users {
     ORDER BY "utcCreatedDateTime"`);
   }
 
-  // Per live user, for the admin list's sorts: the live pins they created, and
-  // the pin views they made signed in (PinView counts a viewer once per pin
-  // per UTC day, as "u:<id>").
-  static async activityCounts(): Promise<Map<number, { pinsCreated: number; pinsViewed: number }>> {
-    const rows = await db.query<{ id: number; pinsCreated: number; pinsViewed: number }>(`
+  // Per live user, for the admin list's sorts: the live pins they created, the
+  // pin views they made signed in, and the views their live pins got from
+  // anyone. PinView counts a viewer once per pin per UTC day ("u:<id>" when
+  // signed in, "v:<visitor>" otherwise).
+  static async activityCounts(): Promise<Map<number, { pinsCreated: number; pinsViewed: number; viewsReceived: number }>> {
+    const rows = await db.query<{ id: number; pinsCreated: number; pinsViewed: number; viewsReceived: number }>(`
     SELECT "u"."id",
            COALESCE("p"."n", 0)::integer AS "pinsCreated",
-           COALESCE("v"."n", 0)::integer AS "pinsViewed"
+           COALESCE("v"."n", 0)::integer AS "pinsViewed",
+           COALESCE("r"."n", 0)::integer AS "viewsReceived"
     FROM "User" "u"
     LEFT JOIN (SELECT "userId", COUNT(*) AS "n" FROM "Pin" WHERE "utcDeletedDateTime" IS NULL GROUP BY "userId") "p"
       ON "p"."userId" = "u"."id"
     LEFT JOIN (SELECT "viewer", COUNT(*) AS "n" FROM "PinView" WHERE "viewer" LIKE 'u:%' GROUP BY "viewer") "v"
       ON "v"."viewer" = 'u:' || "u"."id"
+    LEFT JOIN (
+      SELECT "Pin"."userId", COUNT(*) AS "n"
+      FROM "PinView" JOIN "Pin" ON "Pin"."id" = "PinView"."pinId"
+      WHERE "Pin"."utcDeletedDateTime" IS NULL
+      GROUP BY "Pin"."userId"
+    ) "r" ON "r"."userId" = "u"."id"
     WHERE "u"."utcDeletedDateTime" IS NULL`);
     return new Map(rows.map(({ id, ...counts }) => [id, counts]));
   }
