@@ -5,8 +5,9 @@ import { BackToMenu } from '@/components/nav/BackToMenu';
 import Link from '@/components/ui/Link';
 
 // In three groups, set apart by a rule: what the site is doing (its
-// traffic, its people, its pins), keeping it in order (lint findings, the
-// jobs that run on a timer), and the switches for what visitors see.
+// traffic, its people, its pins, its comments), keeping it in order (the jobs
+// that run on a timer, with the lint findings under them), and the switches
+// for what visitors see.
 const GROUPS = [
   [
     { href: '/admin/views', label: 'Views' },
@@ -15,10 +16,7 @@ const GROUPS = [
     { href: '/admin/pins', label: 'Pins' },
     { href: '/admin/comments', label: 'Comments' },
   ],
-  [
-    { href: '/admin/lint', label: 'Lint' },
-    { href: '/admin/jobs', label: 'Jobs' },
-  ],
+  [{ href: '/admin/jobs', label: 'Jobs' }],
   [{ href: '/admin/settings', label: 'Settings' }],
 ];
 
