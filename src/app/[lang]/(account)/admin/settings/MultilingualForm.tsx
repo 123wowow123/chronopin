@@ -53,7 +53,7 @@ export function MultilingualForm({ saved, coverage }: { saved: MultilingualSetti
             />
             <span lang={locale}>{LOCALE_NAMES[locale]}</span>
             <span className={`tabular-nums ${coverage.current[locale] < coverage.total ? 'text-subtle' : 'text-success'}`}>
-              {coverage.current[locale].toLocaleString('en-US')}/{coverage.total.toLocaleString('en-US')}
+              {coverage.current[locale].toLocaleString('en-US')} / {coverage.total.toLocaleString('en-US')}
             </span>
           </label>
         ))}
