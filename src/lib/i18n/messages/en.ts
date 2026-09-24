@@ -350,6 +350,7 @@ const en = {
     started: 'Started',
     elapsed: 'Time elapsed since posted',
     startedAgo: 'Started {ago}',
+    startedIn: 'Started {when}',
     startsWhen: 'Starts {when}',
     days: '{count}d',
     stretchLate: 'Late by {span}: {from} to {to}',
@@ -588,7 +589,6 @@ const en = {
     titleSimilar: 'Title {percent}% similar',
   },
   trending: {
-    new: 'New',
     heading: 'Trending',
     lastDays: { one: 'Last {count} day', other: 'Last {count} days' },
     views: { one: '{compact} view', other: '{compact} views' },

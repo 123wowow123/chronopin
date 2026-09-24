@@ -350,6 +350,7 @@ const zh: Messages = {
     started: '已开始',
     elapsed: '自发布以来经过的时间',
     startedAgo: '{ago}开始',
+    startedIn: '{when}开始',
     startsWhen: '{when}开始',
     days: '{count}天',
     stretchLate: '延迟 {span}：{from} 至 {to}',
@@ -587,7 +588,6 @@ const zh: Messages = {
     titleSimilar: '标题相似度 {percent}%',
   },
   trending: {
-    new: '新',
     heading: '热门',
     lastDays: '最近 {count} 天',
     views: '{compact} 次浏览',

@@ -356,6 +356,7 @@ const fr: Messages = {
     started: 'Commencé',
     elapsed: 'Temps écoulé depuis la publication',
     startedAgo: 'Commencé {ago}',
+    startedIn: 'Commencé {when}',
     startsWhen: 'Commence {when}',
     days: '{count} j',
     stretchLate: '{span} de retard : du {from} au {to}',
@@ -593,7 +594,6 @@ const fr: Messages = {
     titleSimilar: 'Titre similaire à {percent} %',
   },
   trending: {
-    new: 'Nouveau',
     heading: 'Tendances',
     lastDays: { one: 'Dernier jour', other: '{count} derniers jours' },
     views: { one: '{compact} vue', other: '{compact} vues' },

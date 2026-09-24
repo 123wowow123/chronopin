@@ -350,6 +350,7 @@ const ja: Messages = {
     started: '開始済み',
     elapsed: '投稿からの経過時間',
     startedAgo: '{ago}に開始',
+    startedIn: '{when}に開始',
     startsWhen: '{when}に開始',
     days: '{count}日',
     stretchLate: '{span}の遅れ: {from}〜{to}',
@@ -587,7 +588,6 @@ const ja: Messages = {
     titleSimilar: 'タイトルの類似度 {percent}%',
   },
   trending: {
-    new: '新着',
     heading: 'トレンド',
     lastDays: '直近{count}日',
     views: '{compact} 回表示',

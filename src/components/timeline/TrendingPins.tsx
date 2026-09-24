@@ -9,13 +9,12 @@ import { pinPath } from '@/lib/seo';
 import type { TrendingPin } from '@/lib/types';
 import { useT } from '@/lib/client/i18n';
 import { PlacePills } from './CityPill';
-import type { Translator } from '@/lib/i18n/translate';
 import { StartsWhen } from './StartsWhen';
 
-// How much a pin's views grew on the stretch before: a percentage, or "new"
+// How much a pin's views grew on the stretch before, as a percentage; nothing
 // when nobody viewed it then.
-function growth(pin: TrendingPin, t: Translator): string {
-  if (!pin.previousViews) return t('trending.new');
+function growth(pin: TrendingPin): string | null {
+  if (!pin.previousViews) return null;
   return `+${Math.round(((pin.views - pin.previousViews) / pin.previousViews) * 100)}%`;
 }
 
@@ -45,24 +44,33 @@ export function TrendingPins({ pins, days }: { pins: TrendingPin[]; days: number
   );
 }
 
-// One trending pin: its picture, title, views, how fast they grew, its
-// category and city and when it starts. Also the nav drawer's trending list
+// One trending pin: its picture, title, views, how fast they grew, when it
+// starts, and its category and city. Also the nav drawer's trending list
 // (src/components/nav/DrawerHighlights.tsx).
 export function TrendingRow({ pin }: { pin: TrendingPin }) {
   const t = useT();
+  const grew = growth(pin);
   return (
     <Link href={pinPath(pin)} prefetch={false} className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-raised">
       <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} className="h-9 w-14" />
       <span className="flex min-w-0 flex-col">
-        <span className="line-clamp-2 leading-snug text-ink" title={pin.title}>
+        <span className="truncate leading-snug text-ink" title={pin.title}>
           {pin.title}
         </span>
         <span className="flex min-w-0 items-center gap-1.5 text-xs text-subtle tabular-nums">
           <span className="shrink-0">{t('trending.views', { count: pin.views, compact: compactCount(pin.views) })}</span>
-          <span className="shrink-0 font-medium text-success">{growth(pin, t)}</span>
+          {grew ? (
+            <>
+              <span aria-hidden="true">·</span>
+              <span className="shrink-0 font-medium text-success">{grew}</span>
+            </>
+          ) : null}
+          <span aria-hidden="true">·</span>
+          <span className="min-w-0 truncate">
+            <StartsWhen utcStartDateTime={pin.utcStartDateTime} allDay={pin.allDay} />
+          </span>
         </span>
         <PlacePills category={pin.category} city={pin.city} />
-        <StartsWhen utcStartDateTime={pin.utcStartDateTime} allDay={pin.allDay} />
       </span>
     </Link>
   );

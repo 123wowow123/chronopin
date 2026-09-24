@@ -435,12 +435,13 @@ export function timeAgo(
 }
 
 // When a pin starts, from now, for a list row that has no room for its date,
-// counted in days: "in 41 days", "3 days ago", "in 1 day" - never "tomorrow"
-// or "next month". A timed pin under a day away reads in hours or minutes
+// counted in days: "in 41 days", "in 1 day" - never "tomorrow" or "next
+// month". A pin that has started reads the same way, with no "ago" ("Started
+// in 3 days"). A timed pin under a day away reads in hours or minutes
 // ("in 3 hours"); an all-day pin's (UTC) date is counted against the viewer's
 // today, and on the day itself started is false, so it reads "Starts today".
-// A year or more off it switches to years, one decimal place ("4586.7 years
-// ago"), rather than a day count too long to read.
+// A year or more off it switches to years, one decimal place ("in 4586.7
+// years"), rather than a day count too long to read.
 export function startsWhen(utcStartDateTime: string, allDay: boolean | undefined, now: number, locale: Locale = 'en'): { started: boolean; when: string } {
   const start = new Date(utcStartDateTime);
   let days: number;
@@ -454,11 +455,12 @@ export function startsWhen(utcStartDateTime: string, allDay: boolean | undefined
     if (days === 0) return { started: false, when: relativeFormat(locale).format(0, 'day') };
   } else {
     const ms = start.getTime() - now;
-    if (Math.abs(ms) < DAY_MS) return { started: ms <= 0, when: timeAgo(start, now, locale, { numeric: 'always' }) };
+    if (Math.abs(ms) < DAY_MS) return { started: ms <= 0, when: timeAgo(new Date(now + Math.abs(ms)), now, locale, { numeric: 'always' }) };
     days = Math.round(ms / DAY_MS);
   }
   const rtf = relativeFormat(locale, 'always');
-  const when = Math.abs(days) < 365 ? rtf.format(days, 'day') : rtf.format(Math.round((days / 365.25) * 10) / 10, 'year');
+  const ahead = Math.abs(days);
+  const when = ahead < 365 ? rtf.format(ahead, 'day') : rtf.format(Math.round((ahead / 365.25) * 10) / 10, 'year');
   return { started: days < 0, when };
 }
 

@@ -4,16 +4,15 @@ import Link from '@/components/ui/Link';
 import { PinThumb } from '@/components/pin/PinThumb';
 import { Icon } from '@/components/ui/Icon';
 import { useWholeRows } from '@/lib/client/wholeRows';
-import { timeAgo } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
 import type { CardPin, NewPin } from '@/lib/types';
 import { pinPicture } from '@/components/pin/PinThumb';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { MarketTrend } from './MarketTrend';
-import { StartsWhen } from './StartsWhen';
 import { useT } from '@/lib/client/i18n';
 import { PlacePills } from './CityPill';
 import { cityOf } from '@/lib/city';
+import { StartsWhen } from './StartsWhen';
 
 // How many pins the new pins lists keep, matching the LIMIT newPins() in
 // src/server/services/pages.ts asks for.
@@ -64,13 +63,12 @@ export function withLivePin(list: NewPin[], type: string, changed: CardPin, belo
 }
 
 // The pins added most recently, beside the timeline on wide screens, each with
-// how long ago it was added, its category and city and when it starts. now is the timeline's ticking
-// clock, so the ages agree between the server render and hydration.
+// when it starts and its category and city.
 //
 // Trending comes first: this panel starts at its heading and one row (basis-28)
 // and grows into what trending leaves, up to its full list. When not even that
 // much is left under the whole of trending, it wraps out of sight.
-export function NewPins({ pins, now }: { pins: NewPin[]; now: number }) {
+export function NewPins({ pins }: { pins: NewPin[] }) {
   const ref = useWholeRows<HTMLElement>(pins);
   const t = useT();
   if (!pins.length) return null;
@@ -86,7 +84,7 @@ export function NewPins({ pins, now }: { pins: NewPin[]; now: number }) {
       <ol className="flex min-h-0 flex-col flex-wrap overflow-clip pb-1.5">
         {pins.map((pin) => (
           <li key={pin.id} className="w-full px-1.5">
-            <NewPinRow pin={pin} now={now} />
+            <NewPinRow pin={pin} />
           </li>
         ))}
       </ol>
@@ -94,10 +92,10 @@ export function NewPins({ pins, now }: { pins: NewPin[]; now: number }) {
   );
 }
 
-// One new pin: its picture (or its market's trend), title, how long ago it was
-// added, its category and city and when it starts. Also the nav drawer's new pins list
+// One new pin: its picture (or its market's trend), title, when it starts, and
+// its category and city. Also the nav drawer's new pins list
 // (src/components/nav/DrawerHighlights.tsx).
-export function NewPinRow({ pin, now }: { pin: NewPin; now: number }) {
+export function NewPinRow({ pin }: { pin: NewPin }) {
   const t = useT();
   return (
     <Link href={pinPath(pin)} prefetch={false} className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 hover:bg-raised hover:no-underline">
@@ -107,7 +105,7 @@ export function NewPinRow({ pin, now }: { pin: NewPin; now: number }) {
         <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} className="h-9 w-14" />
       )}
       <span className="flex min-w-0 flex-col">
-        <span className="line-clamp-2 leading-snug text-ink" title={pin.title}>
+        <span className="truncate leading-snug text-ink" title={pin.title}>
           {pin.title}
         </span>
         <span className="flex min-w-0 items-center gap-1.5 text-xs text-subtle">
@@ -118,14 +116,11 @@ export function NewPinRow({ pin, now }: { pin: NewPin; now: number }) {
               <span className="sr-only">{t('newPins.liveOdds')}</span>
             </span>
           ) : null}
-          <time dateTime={pin.utcCreatedDateTime} className="shrink-0">
-            {/* now ticks each minute, so a pin pushed in since the last
-                tick would otherwise read "in 3 seconds". */}
-            {timeAgo(pin.utcCreatedDateTime, Math.max(now, Date.parse(pin.utcCreatedDateTime)), t.locale, { numeric: 'always', decimals: true })}
-          </time>
+          <span className="min-w-0 truncate">
+            <StartsWhen utcStartDateTime={pin.utcStartDateTime} allDay={pin.allDay} />
+          </span>
         </span>
         <PlacePills category={pin.category} city={pin.city} />
-        <StartsWhen utcStartDateTime={pin.utcStartDateTime} allDay={pin.allDay} />
       </span>
     </Link>
   );

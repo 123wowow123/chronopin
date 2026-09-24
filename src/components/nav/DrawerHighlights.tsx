@@ -6,7 +6,6 @@ import { NewPinRow, withLivePin } from '@/components/timeline/NewPins';
 import { TrendingRow } from '@/components/timeline/TrendingPins';
 import { onLive, onLiveReconnect } from '@/lib/client/liveFeed';
 import { withPageLang } from '@/lib/client/navigation';
-import { useNow } from '@/lib/client/now';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import type { CardPin, NewPin, TrendingPin } from '@/lib/types';
 import { useT } from '@/lib/client/i18n';
@@ -24,7 +23,6 @@ let cached: Highlights | null = null;
 // the page's one feed while the drawer is open, as the wide screen's panel is.
 export function DrawerHighlights({ drawerOpen, itemClass }: { drawerOpen: boolean; itemClass: string }) {
   const t = useT();
-  const now = useNow(60_000);
   const [data, setData] = useState<Highlights | null>(() => cached);
   const [unfolded, setUnfolded] = useState<'trending' | 'new' | null>(null);
 
@@ -97,7 +95,7 @@ export function DrawerHighlights({ drawerOpen, itemClass }: { drawerOpen: boolea
         >
           {data?.newPins.map((pin) => (
             <li key={pin.id}>
-              <NewPinRow pin={pin} now={now} />
+              <NewPinRow pin={pin} />
             </li>
           ))}
         </Fold>

@@ -582,7 +582,7 @@ export function Timeline({
             // panels go. Inside, new pins only shows under the whole of trending.
             <div className="pointer-events-none flex min-h-0 grow basis-28 flex-col flex-wrap gap-2 overflow-clip [&>*]:pointer-events-auto [&>*]:w-full">
               <TrendingPins pins={trending.pins} days={trending.days} />
-              <NewPins pins={newPins} now={now} />
+              <NewPins pins={newPins} />
             </div>
           }
         >

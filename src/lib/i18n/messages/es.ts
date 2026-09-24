@@ -356,6 +356,7 @@ const es: Messages = {
     started: 'Empezado',
     elapsed: 'Tiempo transcurrido desde la publicación',
     startedAgo: 'Empezó {ago}',
+    startedIn: 'Empezó {when}',
     startsWhen: 'Empieza {when}',
     days: '{count} d',
     stretchLate: '{span} de retraso: del {from} al {to}',
@@ -593,7 +594,6 @@ const es: Messages = {
     titleSimilar: 'Título {percent}% similar',
   },
   trending: {
-    new: 'Nuevo',
     heading: 'Tendencias',
     lastDays: { one: 'Último día', other: 'Últimos {count} días' },
     views: { one: '{compact} visita', other: '{compact} visitas' },

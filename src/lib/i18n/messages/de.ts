@@ -356,6 +356,7 @@ const de: Messages = {
     started: 'Begonnen',
     elapsed: 'Seit dem Posten vergangene Zeit',
     startedAgo: 'Begonnen {ago}',
+    startedIn: 'Begonnen {when}',
     startsWhen: 'Beginnt {when}',
     days: '{count} T',
     stretchLate: '{span} zu spät: {from} bis {to}',
@@ -593,7 +594,6 @@ const de: Messages = {
     titleSimilar: 'Titel zu {percent} % ähnlich',
   },
   trending: {
-    new: 'Neu',
     heading: 'Im Trend',
     lastDays: { one: 'Letzter Tag', other: 'Letzte {count} Tage' },
     views: { one: '{compact} Aufruf', other: '{compact} Aufrufe' },

@@ -18,7 +18,7 @@ export function CityPill({ city }: { city: string }) {
 export function PlacePills({ category, city }: { category: string | null; city?: string | null }) {
   if (!category && !city) return null;
   return (
-    <span className="mt-0.5 flex min-w-0 items-center gap-1">
+    <span className="mt-0.5 flex min-w-0 items-center gap-1 overflow-hidden">
       {category ? <CategoryPill category={category} /> : null}
       {city ? <CityPill city={city} /> : null}
     </span>

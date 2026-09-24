@@ -243,16 +243,16 @@ describe('startsWhen', () => {
 
   it('reads a timed pin by its instant', () => {
     expect(startsWhen(new Date(now + 3 * 3600_000).toISOString(), false, now)).toEqual({ started: false, when: 'in 3 hours' });
-    expect(startsWhen(new Date(now - 2 * 86_400_000).toISOString(), false, now)).toEqual({ started: true, when: '2 days ago' });
+    expect(startsWhen(new Date(now - 2 * 86_400_000).toISOString(), false, now)).toEqual({ started: true, when: 'in 2 days' });
     expect(startsWhen(new Date(now + 40 * 86_400_000).toISOString(), false, now)).toEqual({ started: false, when: 'in 40 days' });
   });
 
   it('reads an all-day pin by its date against the local today', () => {
     expect(startsWhen('2026-09-16T00:00:00Z', true, now)).toEqual({ started: false, when: 'today' });
     expect(startsWhen('2026-09-17T00:00:00Z', true, now)).toEqual({ started: false, when: 'in 1 day' });
-    expect(startsWhen('2026-09-15T00:00:00Z', true, now)).toEqual({ started: true, when: '1 day ago' });
-    expect(startsWhen('2026-08-16T00:00:00Z', true, now)).toEqual({ started: true, when: '31 days ago' });
-    expect(startsWhen('2026-09-13T00:00:00Z', true, now)).toEqual({ started: true, when: '3 days ago' });
+    expect(startsWhen('2026-09-15T00:00:00Z', true, now)).toEqual({ started: true, when: 'in 1 day' });
+    expect(startsWhen('2026-08-16T00:00:00Z', true, now)).toEqual({ started: true, when: 'in 31 days' });
+    expect(startsWhen('2026-09-13T00:00:00Z', true, now)).toEqual({ started: true, when: 'in 3 days' });
     expect(startsWhen('2027-03-16T00:00:00Z', true, now)).toEqual({ started: false, when: 'in 181 days' });
     expect(startsWhen('2028-09-16T00:00:00Z', true, now)).toEqual({ started: false, when: 'in 2 years' });
   });
