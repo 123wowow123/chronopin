@@ -45,6 +45,74 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **A batch gets a new desk when no existing desk fits.** Owner, 2026-09-24, during the Aldi Nord run: "create new user if that makes more sense". Match the company to what it *is* (a store chain is @RetailDesk, a consumer-goods maker @ConsumerDesk, restaurants @FoodDesk). When nothing fits, create a curator rather than force-fit one, and get the new account's email confirmed on prod *before* the run: prod refuses POST from an unverified account, and the API cannot re-author pins later (see the Nestlé entry).
 * **A product pin says what the product is.** Owner, 2026-09-22, on pin 2346 (the A350F first flight): "Product pins should have notable features in long form summary". A pin about an aircraft, vehicle, device, chip, game, AI model or software release gets summary points on what is new or distinctive about it and its headline specifications with units, not only the event's date and schedule. Owner, same day: the features go in **their own section** - `<h3>Notable features</h3><ul>...</ul>` after the event's list - "rather than piled into large list of bullets with other things". Built into all three summary prompts (`PRODUCT_FEATURES_RULE` in `src/server/extract/index.ts`); the wiki pages now record a product's features too. The manufacturer's product page is the usual place for the specs; add it as a reference.
 * **Scraping from the dev machine processes locally and posts only the finished pin.** Owner, 2026-09-24, during the Oracle prod batch, on hearing that prod's save pipeline starts headless Chromium on the VM: "when running scraping on local machine all processes should be run on local and just post the final pin". Page fetches with Chromium, source wikis, reference and podcast checks, sentiment, company relations, translations and image thumbnailing all belong on the dev machine; prod, one small B2s VM serving readers, only stores the result. **Not yet possible:** every `POST`/`PUT /api/pins` on prod still fires the `pinEvents` save listeners in `src/server/events.ts` (`refreshWiki` opens Chromium per link and calls the LLM; `checkPodcasts`, `suggestDuplicates`, `syncStocks`, `scoreTone`, `syncAwards` and others follow), and create downloads every media URL itself. Those listeners drove prod's load to 59 in the Broadcom run and 70 with three sessions posting on 2026-09-24. Honouring the rule needs a way to post a prebuilt pin: its wikis, relations, sentiment and translations built locally, thumbs pushed with `thumbs:push`, and prod skipping the heavy listeners while keeping search sync, the live feed and the duplicate check. Until that exists, prod batches stay serial and load-gated.
+## 2026-09-24 - Oracle news events, straight to production (@TechDesk, @CyberDesk, @LawDesk, @EconDesk, @HealthDesk)
+
+Ian asked to "pin Oracle news events on prod". Prod had one Oracle pin (2907, the September 2026 layoffs).
+Four agents drafted 63 bodies by lane (finance and leadership / AI deals and data centres / TikTok, Health,
+Java / security, law and layoffs). The lead linted each one, viewed every picture on a contact sheet and
+posted 62, one at a time, whenever prod's load was under 3. Every pin carries the tag `Oracle`; ids
+interleave with five other sessions' batches. Chains, oldest first:
+
+- **Results** (@TechDesk, 16:05 ET from PR Newswire, checked against the 8-K acceptance stamp): 3150 Q4 FY25
+  -> 3157 Q1 FY26 (backlog +359% to $455B) -> 3174 -> 3196 -> 3246 -> 3260 Q1 FY27 -> 3271 Q2 FY27
+  (`estimated` Thu 10 Dec 2026, from five results on the 9th/10th; Oracle's "Sets the Date" release comes
+  about 8 days ahead). **Leadership** 3297 co-CEOs Magouyrk and Sicilia -> 3312 CFO Hilary Maxson.
+  **Financing** 3323 $18B bonds -> 3338 the 2026 $45-50B plan -> 3346 $30B raised. Standalone: 3350 the
+  FY2030 analyst meeting, 3357 Ellison cancels his 50M-share sale plan.
+- **OpenAI** 3366 the "$30B a year" 8-K -> 3373 4.5 GW -> 3378 five Stargate sites (the $300B figure is
+  OpenAI's own) -> 3385 Abilene live. Site chains: Wisconsin 3391 -> 3400 (2H27, `estimated`); Michigan 3406
+  -> 3415 financing -> 3444 construction -> 3454 (2H27); Project Jupiter 3459 Bloom 2.8 GW -> 3468 -> 3478
+  (1H27). AI World 3485 (2025) -> 3493 (25-28 Oct 2026, `scheduled`); 3531 Zettascale10 and 3536 AMD
+  MI450 standalone.
+- **TikTok** 3543 executive order -> 3547 binding agreements -> 3554 USDS JV close -> 3561 the winter-storm
+  data-centre outage. **VA Federal EHR** (@HealthDesk, company = the VA, ORCL `related`) 3568 Michigan ->
+  3573 Ohio/Kentucky -> 3577 Indiana -> 3583 Alaska (`scheduled` 24 Oct 2026). Oracle EHR 3587 -> 3593.
+  **Java** 3602 JDK 25 -> 3608 JDK 26 -> 3617 JDK 27; **JavaOne** 3625 (2026) -> 3631 (23-25 Mar 2027). GSA
+  OneGov 3636 is a period, 7 Jul to 30 Nov 2025.
+- **Security** (@CyberDesk): 3641 the Oracle Cloud login leak claim; Oracle Health 3649 -> 3656 suits
+  consolidated (@LawDesk); E-Business Suite 3664 Cl0p emails -> 3671 CVE-2025-61882 patch -> 3675 CISA KEV
+  (a period) -> 3678 suits consolidated in Austin; 3683 the PeopleSoft zero-day fix; 3687 the October 2026
+  Critical Patch Update (`scheduled` 20 Oct, from Oracle's third-Tuesday list). **Law**: 3691 bondholders
+  -> 3703 the Delaware securities suit; 3708 the Dutch Supreme Court privacy ruling. **Layoffs** (@EconDesk):
+  3713 Aug 2025 -> 3719 Mar 2026 -> **2907** (re-threaded) -> 3725 the September round's last day, 13 Nov.
+
+* **Learned - three sessions gating on the same load read post together.** The Oracle, Aldi and Las Vegas
+  runners all waited for a load under 3, so they would all see it drop at the same moment. Prod reached
+  load 70 with a burst of saves in flight. `run.py` now waits a random 20-150 s once the load drops, reads
+  it again, and only then posts. It also waits up to 2 h instead of 30 min, since the load sat at 3-5 for long spells.
+* **Learned - prod 502s on a create are Caddy, not the load.** Two POSTs answered an empty-bodied 502 at load
+  0.8. Caddy logged `read: connection reset by peer` from `app:9000` on `POST /api/pins`, and the app had not
+  restarted, which looks like Node closing an idle keep-alive connection just as Caddy reuses it. Caddy won't
+  retry a POST. Neither left a partial pin, and both succeeded on a retry. The runner now scans 150 ids for
+  a partial (other sessions push ids up fast), waits 2 min and scans again, then retries the POST once. A
+  late save would 409 on the duplicate sourceUrl, and the next scan finds and repairs it. The server-side fix
+  (a Node keep-alive timeout longer than Caddy's idle timeout) is still to do.
+* **Learned - re-threading an existing pin by whole-pin PUT is safe when tags and stocks are left out.**
+  Pin 2907 was fetched, sent back with `parentId` set and `tags`/`stocks` omitted (the route keeps them),
+  and kept its 3 media, 3 references and 4 categories. It gained only the reserved `Thread` tag.
+* **Learned - a company line set by one pin sticks to every pin.** Prod's Company 4042 (Oracle) had the
+  `tickerNote` "the database and cloud company making the cuts.", adopted from the layoffs pin, and
+  `adoptCompanyStock` never overwrites a note, so all 62 new pins inherit it. The drafts' own note ("the
+  Austin database and cloud group behind Oracle Cloud Infrastructure and Java") was ignored. Fixing it
+  takes a SQL update on prod.
+* **Learned - where oracle.com reads.** oracle.com/news announcement pages, the news sitemap
+  (`oracle.com/news.xml`), the data-centre tracker (`oracle.com/data-centers/<site>/`, which gives each
+  site's customer-delivery half-year) and security-alert pages read with a Chrome UA. So do executive headshots
+  (`oracle.com/a/ocom/img/cimg1x1sm-<name>.webp`, 608 px) and PR images (`/a/pr/img/`). investor.oracle.com
+  and blogs.oracle.com answer 403. The FY2025 analyst-meeting decks are PDFs under
+  `oracle.com/a/ocom/docs/corporate/`. openai.com answers 403 to curl and WebFetch; read it through Wayback.
+* **Learned - the VA's image server** 403s `styles/original/` but serves `styles/viewport_width/`; VA
+  go-live releases say only "on Saturday", so the day comes from VA News or the local VAMC story.
+* **Learned - CourtListener** docket pages are 403, but its v4 search API and the RECAP PDFs on
+  `storage.courtlistener.com` work; the Dutch Supreme Court's full text is on `data.rechtspraak.nl`.
+* **Judgement calls:** risk-09 was held back: ShinyHunters' two-day-old claim that it breached the FBI
+  through a new PeopleSoft zero-day (the FBI calls the point of entry undetermined, and Oracle confirmed nothing). Two
+  pictures appeared in two lanes each (the Austin campus, the 2010 Sands Expo photo); one copy of each was
+  dropped. The Java release pins carry Oracle's release artwork (there is no photo of a JDK).
+* **Feedback**: Ian - process locally and post only the finished pin (standing feedback above); keep a
+  local cache of each batch's work, in the gitignored `.scrape/prod-batches/<company>-<date>/` (never
+  the tokens); keep posting one at a time under load 3.
+* **Changed**: [Vertical recipes](verticals.md) - an Oracle row; [Sources](sources.md) - oracle.com.
 ## 2026-09-24 - Salesforce news events, straight to production (@TechDesk, @CyberDesk, @LawDesk, @EconDesk)
 
 Ian asked to "pin Salesforce news events on prod". Oracle's workflow and scripts: five agents drafted
@@ -184,6 +252,15 @@ toll-sign photo from two congestion pins, and posted serially. There were 41 pin
   Mangione state trial gets a pin when a date is set; 3640 may change with the congestion appeal. Not
   pinned: free buses (never enacted - the MTA is state-run), JFK Terminal 6 (no opening day), Portal
   North Bridge (New Jersey), the 2027 Pride March (no date).
+* **Media top-up (same day):** Ian, "try to add more media to sparse pins". Nine pins had under 3
+  media or no video. Two agents proposed extras to files, the lead viewed them and whole-pin PUT each
+  behind the load gate (`addmedia.mjs`: the draft plus the new media, the live `parentId` kept, the
+  draft rewritten so a later PUT keeps them). All nine now have 3-4 media, a picture and a video each.
+  Courtroom sketches (Jane Rosenberg/Reuters, via amNY, CNBC, Al Jazeera) are the pictures for federal
+  hearings with no cameras; MTAPhotos uploads on Commons cover congestion-pricing moments. Traps: news
+  image resize parameters crop (CNBC `&h=`, Al Jazeera `?resize=W,H`), so ask for width only; a past
+  inauguration fits a "term begins" pin, but one candidate's photo does not belong on an open race;
+  YouTube's results page carries `ytInitialData` for keyless search.
 * **Changed**: [Vertical recipes](verticals.md) - a New York row; [Sources](sources.md) - New York
   sources.
 
@@ -383,21 +460,22 @@ carries the tag `San Francisco`. There were thirty-seven drafts:
   - @MusicDesk: Outside Lands 2026 (3258) -> 2027 (3325); Hardly Strictly Bluegrass 2026 (3283).
   - @SportDesk: the Super Bowl LX Experience at Moscone (3233); the Warriors' home opener (3308); Bay to
     Breakers 2027 (3317).
-- **@CityDesk (18), held back until its email was confirmed:**
-  - The Engardio recall -> Alan Wong sworn in -> Wong wins the June special -> the 3 Nov 2026 ballot
-    (Props A-J, five seats).
-  - The budget proposal -> the $16.9B two-year budget signed (a period, ending 1 Jul 2028).
-  - The SFMTA budget -> the $12 cable car fare (4 Jan 2027).
-  - Connect Bay Area qualifies -> the 3 Nov regional vote.
-  - SF Pride 2026 -> 2027.
-  - Standalone: Trump calls off the federal surge; the Family Zoning Plan signed; the Overpaid CEO Tax
-    rejected; BART's 15-station closure plan; the Fleet Week air show; the 2027 Chinese New Year Parade.
+- **@CityDesk (18), posted once its email was confirmed (3644-3692):**
+  - The Engardio recall (3644) -> Alan Wong sworn in (3650) -> Wong wins the June special (3668) -> the
+    3 Nov 2026 ballot, Props A-J and five seats (3684).
+  - The budget proposal (3665) -> the $16.9B two-year budget signed, a period ending 1 Jul 2028 (3679).
+  - The SFMTA budget (3661) -> the $12 cable car fare from 4 Jan 2027 (3688).
+  - Connect Bay Area qualifies (3676) -> the 3 Nov regional vote (3686).
+  - SF Pride 2026 (3673) -> 2027 (3692).
+  - Standalone: Trump calls off the federal surge (3646); the Family Zoning Plan signed (3654); the Overpaid
+    CEO Tax rejected (3670); BART's 15-station closure plan (3657); the Fleet Week air show (3681); the 2027
+    Chinese New Year Parade (3690).
 
 * **Learned - a city batch splits by event, and city hall needed a desk.** Courts, builds, tech, job cuts,
   music and sport went to their event desks. Nothing covered local government, so **@CityDesk** (user 412)
   was created on prod for city hall and civic news in any city: the mayor, supervisors, the budget, city
   ballot measures, transit money and service, and civic parades. A `.local` address gets no mail, so its
-  email needed Ian's SQL confirm, and its pins were held back while the other desks' posted. The Los Angeles
+  email needed Ian's SQL confirm (run from the Boston session at 16:10Z), so its pins waited until the other desks' had posted. The Los Angeles
   and New York sessions running at the same time reuse it: one desk per vertical, not one per city.
 * **Learned - four agents on one IP exhaust Nominatim.** Every agent hit 429s, or silent timeouts, for most
   of the run. Photon's `/reverse` worked when calls were spaced about 5 s apart, but it has four traps:
