@@ -12,7 +12,8 @@ import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { MarketTrend } from './MarketTrend';
 import { StartsWhen } from './StartsWhen';
 import { useT } from '@/lib/client/i18n';
-import { CategoryPill } from './CategoryPill';
+import { PlacePills } from './CityPill';
+import { cityOf } from '@/lib/city';
 
 // How many pins the new pins lists keep, matching the LIMIT newPins() in
 // src/server/services/pages.ts asks for.
@@ -24,6 +25,7 @@ function toNewPin(pin: CardPin): NewPin {
     id: pin.id,
     title: pin.title,
     category: pin.categories?.[0] ?? null,
+    city: cityOf(pin.address),
     utcStartDateTime: pin.utcStartDateTime,
     allDay: pin.allDay,
     // A just-saved broadcast carries no utcCreatedDateTime (PinCard.tsx
@@ -49,18 +51,20 @@ export function withLivePin(list: NewPin[], type: string, changed: CardPin, belo
   // picture the broadcast carries.
   if (type !== 'pin:update' && type !== 'pin:save') return list;
   // A broadcast is the saved or edited pin: possibly no created time, so that
-  // stays as the list had it, as does the category if it came without any.
+  // stays as the list had it, as do the category and city if it came without
+  // them.
   const next = [...list];
   next[index] = {
     ...toNewPin(changed),
     category: changed.categories ? (changed.categories[0] ?? null) : list[index].category,
+    city: changed.address === undefined ? list[index].city : cityOf(changed.address),
     utcCreatedDateTime: list[index].utcCreatedDateTime,
   };
   return next;
 }
 
 // The pins added most recently, beside the timeline on wide screens, each with
-// how long ago it was added, its category and when it starts. now is the timeline's ticking
+// how long ago it was added, its category and city and when it starts. now is the timeline's ticking
 // clock, so the ages agree between the server render and hydration.
 //
 // Trending comes first: this panel starts at its heading and one row (basis-28)
@@ -91,7 +95,7 @@ export function NewPins({ pins, now }: { pins: NewPin[]; now: number }) {
 }
 
 // One new pin: its picture (or its market's trend), title, how long ago it was
-// added, its category and when it starts. Also the nav drawer's new pins list
+// added, its category and city and when it starts. Also the nav drawer's new pins list
 // (src/components/nav/DrawerHighlights.tsx).
 export function NewPinRow({ pin, now }: { pin: NewPin; now: number }) {
   const t = useT();
@@ -119,8 +123,8 @@ export function NewPinRow({ pin, now }: { pin: NewPin; now: number }) {
                 tick would otherwise read "in 3 seconds". */}
             {timeAgo(pin.utcCreatedDateTime, Math.max(now, Date.parse(pin.utcCreatedDateTime)), t.locale, { numeric: 'always', decimals: true })}
           </time>
-          {pin.category ? <CategoryPill category={pin.category} /> : null}
         </span>
+        <PlacePills category={pin.category} city={pin.city} />
         <StartsWhen utcStartDateTime={pin.utcStartDateTime} allDay={pin.allDay} />
       </span>
     </Link>

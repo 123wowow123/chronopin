@@ -1,5 +1,6 @@
 import Pins from '../model/pins';
 import PinView from '../model/pinView';
+import { cityOf } from '@/lib/city';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
 import type { NewPin } from '@/lib/types';
 import { DEFAULT_LOCALE, type Locale } from '@/lib/i18n/config';
@@ -15,8 +16,9 @@ import { localizePins } from './translations';
 export async function loadNewPins(locale: Locale = DEFAULT_LOCALE): Promise<NewPin[]> {
   const pins = await Pins.newest(5, await timelineMinConfidence());
   const pictures = await PinView.pictures(pins.map((p) => p.id));
-  return localizePins(pins.map(({ sourceUrl, referenceUrls, ...p }) => ({
+  return localizePins(pins.map(({ sourceUrl, referenceUrls, address, ...p }) => ({
     ...p,
+    city: cityOf(address),
     utcStartDateTime: p.utcStartDateTime.toISOString(),
     utcCreatedDateTime: p.utcCreatedDateTime.toISOString(),
     hasMarket: pinMarketRefs({ sourceUrl, references: referenceUrls.map((url) => ({ url })) }).length > 0,

@@ -239,6 +239,8 @@ export type TrendingPin = {
   translatedTo?: string;
   // Its main (first) category, shown on the row's details line.
   category: string | null;
+  // The city it stands in, read off its address (src/lib/city.ts).
+  city?: string | null;
   // When it starts, for the row's "Starts in" / "Started".
   utcStartDateTime: string;
   allDay?: boolean;
@@ -256,6 +258,8 @@ export type NewPin = {
   translatedTo?: string;
   // Its main (first) category, shown on the row's details line.
   category: string | null;
+  // The city it stands in, read off its address (src/lib/city.ts).
+  city?: string | null;
   // When it starts, for the row's "Starts in" / "Started".
   utcStartDateTime: string;
   allDay?: boolean;

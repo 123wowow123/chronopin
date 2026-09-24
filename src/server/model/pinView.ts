@@ -1,4 +1,5 @@
 import * as db from '../db';
+import { cityOf } from '@/lib/city';
 import { pinConfidenceOf } from './pins';
 
 // Pin page views, counted once per viewer per UTC day (see 0014).
@@ -61,10 +62,10 @@ export default class PinView {
   // only pins with more now than then, busiest first. Pins the timeline hides
   // for confidence (minConfidence, null for none) are left out here too.
   static async trending(days: number, limit: number, minConfidence: number | null) {
-    const top = await db.query<{ id: number; title: string; category: string | null; utcStartDateTime: Date; allDay: boolean; views: number; previousViews: number }>(
+    const top = await db.query<{ id: number; title: string; category: string | null; address: string | null; utcStartDateTime: Date; allDay: boolean; views: number; previousViews: number }>(
       `SELECT "p"."id", "p"."title",
          (SELECT "c"."name"::text FROM "PinTag" AS "c" WHERE "c"."pinId" = "p"."id" AND "c"."kind" = 'category' ORDER BY "c"."id" LIMIT 1) AS "category",
-         "p"."utcStartDateTime", "p"."allDay", "t"."views", "t"."previousViews"
+         "p"."address", "p"."utcStartDateTime", "p"."allDay", "t"."views", "t"."previousViews"
        FROM (
          SELECT "pinId",
            COUNT(*) FILTER (WHERE "day" > (now() AT TIME ZONE 'UTC')::date - $1::integer)::integer AS "views",
@@ -81,7 +82,7 @@ export default class PinView {
       [days, limit, minConfidence],
     );
     const pictures = await PinView.pictures(top.map((p) => p.id));
-    return top.map((p) => ({ ...p, utcStartDateTime: p.utcStartDateTime.toISOString(), ...pictures.get(p.id) }));
+    return top.map(({ address, ...p }) => ({ ...p, city: cityOf(address), utcStartDateTime: p.utcStartDateTime.toISOString(), ...pictures.get(p.id) }));
   }
 
   // Each pin's picture as the map popup picks it: a video's still first, else

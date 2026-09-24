@@ -8,7 +8,7 @@ import { compactCount } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
 import type { TrendingPin } from '@/lib/types';
 import { useT } from '@/lib/client/i18n';
-import { CategoryPill } from './CategoryPill';
+import { PlacePills } from './CityPill';
 import type { Translator } from '@/lib/i18n/translate';
 import { StartsWhen } from './StartsWhen';
 
@@ -46,7 +46,7 @@ export function TrendingPins({ pins, days }: { pins: TrendingPin[]; days: number
 }
 
 // One trending pin: its picture, title, views, how fast they grew, its
-// category and when it starts. Also the nav drawer's trending list
+// category and city and when it starts. Also the nav drawer's trending list
 // (src/components/nav/DrawerHighlights.tsx).
 export function TrendingRow({ pin }: { pin: TrendingPin }) {
   const t = useT();
@@ -60,8 +60,8 @@ export function TrendingRow({ pin }: { pin: TrendingPin }) {
         <span className="flex min-w-0 items-center gap-1.5 text-xs text-subtle tabular-nums">
           <span className="shrink-0">{t('trending.views', { count: pin.views, compact: compactCount(pin.views) })}</span>
           <span className="shrink-0 font-medium text-success">{growth(pin, t)}</span>
-          {pin.category ? <CategoryPill category={pin.category} /> : null}
         </span>
+        <PlacePills category={pin.category} city={pin.city} />
         <StartsWhen utcStartDateTime={pin.utcStartDateTime} allDay={pin.allDay} />
       </span>
     </Link>

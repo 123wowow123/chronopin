@@ -291,9 +291,9 @@ export default class Pins extends BasePins<Pin> {
   // market. Pins the timeline hides for confidence (minConfidence, null for
   // none) are left out here too.
   static async newest(limit: number, minConfidence: number | null) {
-    return db.query<{ id: number; title: string; category: string | null; utcStartDateTime: Date; allDay: boolean; utcCreatedDateTime: Date; sourceUrl: string | null; referenceUrls: string[] }>(
+    return db.query<{ id: number; title: string; category: string | null; address: string | null; utcStartDateTime: Date; allDay: boolean; utcCreatedDateTime: Date; sourceUrl: string | null; referenceUrls: string[] }>(
       `
-      SELECT "p"."id", "p"."title", ${MAIN_CATEGORY} AS "category", "p"."utcStartDateTime", "p"."allDay", "p"."utcCreatedDateTime", "p"."sourceUrl",
+      SELECT "p"."id", "p"."title", ${MAIN_CATEGORY} AS "category", "p"."address", "p"."utcStartDateTime", "p"."allDay", "p"."utcCreatedDateTime", "p"."sourceUrl",
         ARRAY(SELECT "r"."url" FROM "PinReference" AS "r" WHERE "r"."pinId" = "p"."id") AS "referenceUrls"
       FROM "Pin" AS "p"
       WHERE "p"."utcDeletedDateTime" IS NULL
