@@ -594,7 +594,6 @@ const en = {
   newPins: {
     heading: 'New pins',
     latest: 'Latest',
-    postedAgo: 'Posted {ago}',
     liveOdds: 'Live market odds',
   },
   controls: {

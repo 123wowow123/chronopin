@@ -114,9 +114,7 @@ export function NewPinRow({ pin, now }: { pin: NewPin; now: number }) {
           <time dateTime={pin.utcCreatedDateTime} className="shrink-0">
             {/* now ticks each minute, so a pin pushed in since the last
                 tick would otherwise read "in 3 seconds". */}
-            {t('newPins.postedAgo', {
-              ago: timeAgo(pin.utcCreatedDateTime, Math.max(now, Date.parse(pin.utcCreatedDateTime)), t.locale, { numeric: 'always', decimals: true }),
-            })}
+            {timeAgo(pin.utcCreatedDateTime, Math.max(now, Date.parse(pin.utcCreatedDateTime)), t.locale, { numeric: 'always', decimals: true })}
           </time>
           {pin.category ? <CategoryPill category={pin.category} /> : null}
         </span>

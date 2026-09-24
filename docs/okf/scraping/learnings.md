@@ -55,15 +55,15 @@ desk (no @CityDesk). Chains, oldest first:
 
 - **Grand Prix**: 606 (2023) -> 3149 Verstappen wins 2025 as both McLarens are disqualified -> 3153 the
   extension through 2037 (a contract period, exclusive end 1 Jan 2038) -> 3169 the 2026 race
-  (`scheduled` Sat 21 Nov 20:00 PST = 22 Nov 04:00Z). 2515 (2027 GP, @SportDesk) is not yet threaded onto 3169.
+  (`scheduled` Sat 21 Nov 20:00 PST = 22 Nov 04:00Z). 2515 (2027 GP) was then re-threaded onto 3169 by whole-pin `PUT`.
 - **Tupac Shakur murder case** (@LawDesk): 3177 trial opens 10 Aug 2026 (`delayed` from June 2024) -> 3188
   guilty 31 Aug -> 3198 sentencing `scheduled` 13 Oct 2026.
 - **Illegal-bookmaker fines** (@LawDesk, Nevada Gaming Commission): 3236 Resorts World $10.5M -> 3243 MGM
   $8.5M -> 3251 Caesars $7.8M.
 - **Water** (@ClimateDesk): 3270 Lake Mead's record low (6 Aug 2026) -> 3277 the 2027-2028 Colorado River
   guidelines (21 Aug, a period to 1 Jan 2029).
-- **A's ballpark** (@BuildDesk): 3347 groundbreaking -> 3354 first roof truss; 2212 (the 2028 opening) is
-  not yet threaded onto 3354. **Zoox** (@TechDesk): 3351 public launch -> 3359 paid rides -> 3367 the
+- **A's ballpark** (@BuildDesk): 3347 groundbreaking -> 3354 first roof truss; 2212 (the 2028 opening) was
+  then re-threaded onto 3354 by whole-pin `PUT`. **Zoox** (@TechDesk): 3351 public launch -> 3359 paid rides -> 3367 the
   airport. **DEF CON** (@CyberDesk): 3382 DEF CON 34 -> 3438 DEF CON 35 (`scheduled` Aug 2027).
 - Answering older pins: Hard Rock's opening (3363, `delayed` to Q4 2027) answers its topping-out 2214;
   Brightline West's $400M equity deadline (3424, 2 Nov 2026) answers the groundbreaking 596.
@@ -101,8 +101,11 @@ desk (no @CityDesk). Chains, oldest first:
   story. Not pinned: the NBA Cup (left Las Vegas for 2026), the Aces' 2025 title (clinched in Phoenix),
   When We Were Young (skips 2026), Caesars' Fertitta buyout vote (unverified headline), a Wynn WARN notice
   (only a Facebook post), the Vanderpump Hotel rebrand (two dates).
-* **Open:** thread 2515 onto 3169 and 2212 onto 3354 by whole-pin `PUT` (both are the same desks'
-  pins); re-date 3413 when the Loop tunnels open; update 3198 after the 13 Oct sentencing; prod's key
+* **Learned - re-threading by round-trip.** `GET /api/pins/:id`, drop `tags` (so the pin keeps its own), set
+  `parentId`, `PUT` it back as the pin's own desk: media, references and categories came back unchanged, the
+  app added its automatic `Thread` tag, and bare `[S]` markers in an older summary became source links.
+  Check `merchants` first - the GET omits them when empty, and PUT replaces them wholesale.
+* **Open:** re-date 3413 when the Loop tunnels open; update 3198 after the 13 Oct sentencing; prod's key
   work (wikis, relations) is unchecked.
 * **Feedback**: none yet.
 * **Changed**: [Vertical recipes](verticals.md) - a Las Vegas row; [Sources](sources.md) - Las Vegas
@@ -326,11 +329,15 @@ results and AGM pins.
   court's seizure of the Etalon stake (3322), Guangzhou Yihai convicted in Huaibei (3329).
 - **@EconDesk**: Queensland sugar-mill strikes end with a pay deal (3328). **@BuildDesk**: AWL's Gohana,
   Haryana food complex (3332, `estimated` day).
-- **@AgriDesk** (posted once the account's email was confirmed): the results chain FY2024 -> 1H2026 plus
-  3Q2026 (`estimated` Fri 30 Oct 17:20 SGT) and FY2026 (`estimated` 25 Feb 2027); AGMs 2025 -> 2026; PZ Wilmar
-  buyout -> TGI Nigeria/Benin JV; Adani's exit from AWL Agri Business as one chain (agreement -> OFS -> rename ->
-  20% deal -> control -> Adani's last 7%); GD Foods (Tops) signing -> close; Madhur sugar brand to AWL; Shree
-  Renuka's new CEO; YKA sells its Kellogg China JV stakes to Mars; SBTi validation.
+- **@AgriDesk** (posted once the account's email was confirmed): the results chain 3416 FY2024 -> 3419 ->
+  3422 -> 3426 -> 3428 -> 3433 -> 3436 1H2026 -> 3439 3Q2026 (`estimated` Fri 30 Oct 17:20 SGT) -> 3443 FY2026
+  (`estimated` 25 Feb 2027); AGMs 3447 -> 3451; PZ Wilmar buyout 3455 -> TGI Nigeria/Benin JV 3457; Adani's exit
+  from AWL Agri Business 3463 agreement -> 3467 OFS -> 3470 rename -> 3473 20% deal -> 3477 control -> 3481
+  Adani's last 7%; GD Foods (Tops) 3484 -> 3487; Madhur sugar to AWL (3490); Shree Renuka's new CEO (3495); YKA
+  sells its Kellogg China JV stakes to Mars (3499); SBTi validation (3508). 43 pins in all; `tag:Wilmar` = 43.
+* **Learned - time images with prod's own User-Agent, not a browser's.** leadership.ng served the TGI photo to
+  a Chrome UA but 403'd prod's `Mozilla/5.0 (compatible; Chronopin/1.0)`, so the create half-saved (3457); the
+  image was swapped in the draft before the runner's repair PUT, which re-reads the file.
 
 * **Learned - a new desk cannot post on prod until someone confirms its email.** Sign-up works through
   `POST /api/users` (with `userName` in the body, so no PATCH needed), but the verification mail goes to a

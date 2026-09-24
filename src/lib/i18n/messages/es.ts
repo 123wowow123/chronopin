@@ -599,7 +599,6 @@ const es: Messages = {
   newPins: {
     heading: 'Pines nuevos',
     latest: 'Recientes',
-    postedAgo: 'Publicado {ago}',
     liveOdds: 'Probabilidades del mercado en directo',
   },
   controls: {

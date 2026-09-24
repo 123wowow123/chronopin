@@ -599,7 +599,6 @@ const de: Messages = {
   newPins: {
     heading: 'Neue Pins',
     latest: 'Neueste',
-    postedAgo: 'Gepostet {ago}',
     liveOdds: 'Live-Marktquoten',
   },
   controls: {

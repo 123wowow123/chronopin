@@ -599,7 +599,6 @@ const fr: Messages = {
   newPins: {
     heading: 'Nouvelles épingles',
     latest: 'Récentes',
-    postedAgo: 'Publié {ago}',
     liveOdds: 'Cotes du marché en direct',
   },
   controls: {

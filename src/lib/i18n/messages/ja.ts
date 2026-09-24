@@ -593,7 +593,6 @@ const ja: Messages = {
   newPins: {
     heading: '新しいピン',
     latest: '最新',
-    postedAgo: '{ago}に投稿',
     liveOdds: 'ライブの市場予想',
   },
   controls: {

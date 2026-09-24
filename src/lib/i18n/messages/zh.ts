@@ -593,7 +593,6 @@ const zh: Messages = {
   newPins: {
     heading: '新图钉',
     latest: '最新',
-    postedAgo: '{ago}发布',
     liveOdds: '实时市场赔率',
   },
   controls: {
