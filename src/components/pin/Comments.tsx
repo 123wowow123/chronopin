@@ -625,9 +625,9 @@ function CommentMenu({
           ref={menuRef}
           id={menuId}
           role="menu"
-          className={`absolute right-0 bottom-full z-30 mb-2.5 ${view === 'actions' ? 'w-48' : 'w-64'} rounded-xl border border-tint/[0.07] bg-panel p-1.5 text-ink shadow-2xl shadow-shade/40`}
+          className={`absolute right-0 bottom-full z-30 mb-2.5 ${view === 'actions' ? 'w-48' : 'w-64'} rounded-xl border border-line bg-panel p-1.5 text-ink shadow-2xl shadow-shade/40`}
         >
-          <span aria-hidden className="absolute -bottom-1.5 right-3 size-3 rotate-45 border-r border-b border-tint/[0.07] bg-panel" />
+          <span aria-hidden className="absolute -bottom-1.5 right-3 size-3 rotate-45 border-r border-b border-line bg-panel" />
           {view === 'actions' ? (
             <>
               {canDelete ? (
