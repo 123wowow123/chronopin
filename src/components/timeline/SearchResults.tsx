@@ -7,6 +7,7 @@ import { Icon, type IconName } from '@/components/ui/Icon';
 import { CardGrid } from '@/components/pin/CardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { useBlocks } from '@/lib/client/blocks';
+import { useLeftOut } from '@/lib/client/leftOut';
 import { useSession } from '@/lib/client/session';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { parseLinkHeader } from '@/lib/client/api';
@@ -159,6 +160,7 @@ export function SearchResults({
   const timeZone = useTimeZone(serverTimeZone);
   const t = useT();
   const blocks = useBlocks();
+  const leftOut = useLeftOut();
   const { user } = useSession();
   const [postedWithin, setPostedWithin] = useState<string | null>(initialView.postedWithin ?? DEFAULT_POSTED_WITHIN);
   // Any search can sort: a filter-only one (tag:, user:) has no scores, so
@@ -575,8 +577,8 @@ export function SearchResults({
         {relevanceShown ? (
           <div hidden={sortBy !== 'relevance'} className={restoring ? 'invisible' : undefined}>
             <CardGrid className="mt-6">
-              {/* Pins by anyone the reader blocked are left out. */}
-              {(rankedPins ?? []).filter((pin) => !blocks.ids.has(pin.user?.id ?? pin.userId ?? -1)).map((pin, i) => (
+              {/* Pins by anyone the reader blocked, or that they are not interested in, are left out. */}
+              {(rankedPins ?? []).filter((pin) => !leftOut(pin)).map((pin, i) => (
                 <li key={pin.id} id={`rank-${pin.id}`}>
                   <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={i === 0} tense={pinTense(pin, serverNow, todayKey)} todayKey={todayKey} />
                 </li>

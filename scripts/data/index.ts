@@ -10,7 +10,7 @@ import { parseArgs } from 'node:util';
 import Holidays from 'date-holidays';
 import _ from 'lodash';
 import * as db from '@/server/db';
-import { Comment, Company, CompanyFollow, DateTime, Follow, FullPins, MediumType, User, UserBlock, Users } from '@/server/model';
+import { Comment, Company, CompanyFollow, DateTime, Follow, FullPins, MediumType, PinNotInterested, User, UserBlock, Users } from '@/server/model';
 import AiFeedback from '@/server/model/aiFeedback';
 import PinDuplicate from '@/server/model/pinDuplicate';
 import CompanyRelation from '@/server/model/companyRelation';
@@ -37,6 +37,7 @@ const { values: flags } = parseArgs({
     followfile: { type: 'string', default: './scripts/backup/seedFollows.json' },
     companyfollowfile: { type: 'string', default: './scripts/backup/seedCompanyFollows.json' },
     userblockfile: { type: 'string', default: './scripts/backup/seedUserBlocks.json' },
+    notinterestedfile: { type: 'string', default: './scripts/backup/seedPinNotInterested.json' },
     duplicatefile: { type: 'string', default: './scripts/backup/seedPinDuplicates.json' },
     aifeedbackfile: { type: 'string', default: './scripts/backup/seedAiFeedback.json' },
     sourcefile: { type: 'string', default: './scripts/backup/seedSources.json' },
@@ -117,6 +118,7 @@ async function saveDB() {
     follows: (await Follow.getAll()).follows,
     companyFollows: await CompanyFollow.getAll(),
     userBlocks: await UserBlock.getAll(),
+    notInterested: await PinNotInterested.getAll(),
   });
   const { dropped } = data;
   if (dropped.users) {
@@ -150,6 +152,10 @@ async function saveDB() {
   // Who blocked whom (0076).
   console.log('Backup User Blocks');
   writeJson(flags.userblockfile, data.userBlocks);
+
+  // Pins readers marked "Not interested" (0077).
+  console.log('Backup Pins Not Interested');
+  writeJson(flags.notinterestedfile, data.notInterested);
 
   // Duplicate pairs and decisions (not page views, which only order stacks),
   // for the pins kept above.
@@ -366,6 +372,15 @@ async function seedDB() {
       await UserBlock.restore(readJson(flags.userblockfile));
     } catch (error) {
       log.error('User Blocks Save Error', JSON.stringify(error));
+    }
+  }
+
+  // After the pins and users they name; a backup from before 0077 has none.
+  if (existsSync(flags.notinterestedfile)) {
+    try {
+      await PinNotInterested.restore(readJson(flags.notinterestedfile));
+    } catch (error) {
+      log.error('Pins Not Interested Save Error', JSON.stringify(error));
     }
   }
 

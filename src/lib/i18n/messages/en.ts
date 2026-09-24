@@ -197,6 +197,12 @@ const en = {
     loading: 'Loading timeline',
   },
   pin: {
+    actions: 'Pin actions',
+    notInterested: 'Not interested',
+    showAgain: 'Show this pin again',
+    hiddenNotice: "Hidden. You won't see this pin again.",
+    undo: 'Undo',
+    notInterestedFailed: "Couldn't save that. Try again.",
     toMap: 'To map',
     toTimeline: 'To timeline',
     posted: 'Posted <time></time>',

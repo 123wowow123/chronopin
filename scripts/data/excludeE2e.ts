@@ -14,7 +14,7 @@ export function e2eUserIds(users: Row[]): Set<number> {
 }
 
 export function excludeE2e<P extends Row>(
-  data: { users: Row[]; pins: P[]; companies: Row[]; comments: Row[]; commentReactions?: Row[]; follows: Row[]; companyFollows: Row[]; userBlocks?: Row[] },
+  data: { users: Row[]; pins: P[]; companies: Row[]; comments: Row[]; commentReactions?: Row[]; follows: Row[]; companyFollows: Row[]; userBlocks?: Row[]; notInterested?: Row[] },
 ) {
   const userIds = e2eUserIds(data.users);
   const isE2eUser = (id: unknown) => userIds.has(id as number);
@@ -49,6 +49,7 @@ export function excludeE2e<P extends Row>(
     follows: data.follows.filter((f) => !isE2eUser(f.followerId) && !isE2eUser(f.followeeId)),
     companyFollows: data.companyFollows.filter((f) => !isE2eUser(f.userId) && !droppedCompanyIds.has(f.companyId)),
     userBlocks: (data.userBlocks ?? []).filter((b) => !isE2eUser(b.blockerId) && !isE2eUser(b.blockedId)),
+    notInterested: (data.notInterested ?? []).filter((m) => !isE2eUser(m.userId) && !droppedPinIds.has(m.pinId)),
     dropped: { users: userIds.size, pins: droppedPins.length, companies: droppedCompanyIds.size },
   };
 }

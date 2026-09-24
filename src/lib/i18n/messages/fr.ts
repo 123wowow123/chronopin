@@ -196,6 +196,12 @@ const fr: Messages = {
     loading: 'Chargement de la chronologie',
   },
   pin: {
+    actions: 'Actions du pin',
+    notInterested: 'Pas intéressé',
+    showAgain: 'Afficher de nouveau ce pin',
+    hiddenNotice: 'Masqué. Vous ne verrez plus ce pin.',
+    undo: 'Annuler',
+    notInterestedFailed: "Impossible d'enregistrer. Réessayez.",
     toMap: 'Vers la carte',
     toTimeline: 'Vers la chronologie',
     posted: 'Publié <time></time>',

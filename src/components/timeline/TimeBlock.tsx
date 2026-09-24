@@ -10,7 +10,8 @@ import { pinPath } from '@/lib/seo';
 import type { Bag } from '@/lib/timeline';
 import type { PinJson } from '@/lib/types';
 import type { personalWeigher } from '@/lib/userWiki';
-import { PinCard, useBlockedAuthor } from '@/components/pin/PinCard';
+import { PinCard } from '@/components/pin/PinCard';
+import { useLeftOut } from '@/lib/client/leftOut';
 import { useLocale, useT } from '@/lib/client/i18n';
 
 // Beside the rail (lg) tags are a fixed-width column; above the cards on
@@ -279,9 +280,9 @@ function DayCard({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   useImpression(ref, pin.id, counted);
-  // Someone the reader blocked: their pins are left out.
-  const blocked = useBlockedAuthor(pin);
-  if (blocked) return null;
+  // By someone the reader blocked, or a pin they are not interested in.
+  const leftOut = useLeftOut()(pin);
+  if (leftOut) return null;
   const card = <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={priority} />;
   return (
     <div ref={ref} id={anchor ? `pin-${pin.id}` : undefined} data-start={pin.utcStartDateTime} role="listitem" className={`mb-2.5 ${className}`} style={{ order }}>

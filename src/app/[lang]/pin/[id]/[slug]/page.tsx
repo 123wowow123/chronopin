@@ -13,6 +13,7 @@ import { DelayBadge, DelayReasoning } from '@/components/pin/DelayBadge';
 import { DateRanges } from '@/components/pin/DateRanges';
 import { FollowButton } from '@/components/pin/FollowButton';
 import { PinAdminLink } from '@/components/pin/PinAdminLink';
+import { PinMenu } from '@/components/pin/PinMenu';
 import { PinRevisitButton } from '@/components/pin/PinRevisitButton';
 import { CardGrid } from '@/components/pin/CardGrid';
 import { PinCard } from '@/components/pin/PinCard';
@@ -349,6 +350,8 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
           <WatchButton pin={pin} loadForViewer />
           <PinRevisitButton pinId={pin.id} />
           <PinAdminLink pinId={pin.id} />
+          {/* Not interested, or Show this pin again. */}
+          <PinMenu pinId={pin.id} onPage />
         </div>
       </div>
 

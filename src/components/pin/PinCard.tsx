@@ -7,14 +7,16 @@ import { PostedTime, StartDistance, StartTime } from '@/components/ui/LocalTime'
 import { money } from '@/lib/format';
 import { useVideoPoster } from '@/lib/client/timelineVideo';
 import { pinPath } from '@/lib/seo';
-import type { CardPin, PinJson } from '@/lib/types';
-import { useBlocks } from '@/lib/client/blocks';
+import type { CardPin } from '@/lib/types';
+import { useLeftOut } from '@/lib/client/leftOut';
+import { undoNotInterested, useNotInterested } from '@/lib/client/notInterested';
 import { pinEvidence } from '@/lib/referenceConfidence';
 import type { PinTense } from '@/lib/timeline';
 import { CitedText } from './CitedText';
 import { DateConfidence, DateConfidenceReasoning } from './DateConfidence';
 import { DelayBadge } from './DelayBadge';
 import { PinConfidence } from './PinConfidence';
+import { PinMenu } from './PinMenu';
 import { PinDistance } from './PinDistance';
 import { CompanyTicker } from './CompanyTicker';
 import { PinCardOdds } from './PinOdds';
@@ -40,14 +42,6 @@ const TENSE_CLASS: Record<PinTense, string> = {
 
 // A pin on the timeline or in search results. Away from the timeline (no day
 // tag beside it), todayKey adds how far its start is from today.
-// Whether a card's pin is by someone the reader blocked (0076): the timeline
-// and search leave those out.
-export function useBlockedAuthor(pin: Pick<PinJson, 'user' | 'userId'>) {
-  const { ids } = useBlocks();
-  const authorId = pin.user?.id ?? pin.userId;
-  return authorId != null && ids.has(authorId);
-}
-
 export function PinCard({
   pin,
   serverTimeZone,
@@ -65,7 +59,8 @@ export function PinCard({
   // admin has turned the players back on.
   const poster = useVideoPoster();
   const t = useT();
-  const blocked = useBlockedAuthor(pin);
+  const leftOut = useLeftOut()(pin);
+  const justHidden = useNotInterested().justHidden.has(pin.id);
   const href = pinPath(pin);
   const media = pin.media ?? [];
   const hasPlace = pin.latitude != null && pin.longitude != null;
@@ -111,9 +106,21 @@ export function PinCard({
       </div>
     ) : null;
 
-  // By someone the reader blocked (0076): shown nowhere - the timeline and
-  // search leave the slot out too, and "More like this" skips it here.
-  if (blocked) return null;
+  // By someone the reader blocked (0076), or marked "Not interested" (0077)
+  // on an earlier page: shown nowhere - the timeline and search leave the
+  // slot out too, and "More like this" skips it here.
+  if (leftOut) return null;
+  // Marked on this page: folded to a line, with Undo.
+  if (justHidden) {
+    return (
+      <article className="surface flex items-center justify-between gap-3 px-3 py-3 text-sm text-subtle">
+        <span>{t('pin.hiddenNotice')}</span>
+        <button type="button" onClick={() => void undoNotInterested(pin.id).catch(() => {})} className="btn btn-sm btn-secondary shrink-0">
+          {t('pin.undo')}
+        </button>
+      </article>
+    );
+  }
 
   return (
     <article
@@ -153,11 +160,16 @@ export function PinCard({
                 or the row would show the dot before an empty item. */}
             {pin.latitude != null && pin.longitude != null ? <PinDistance pinId={pin.id} latitude={pin.latitude} longitude={pin.longitude} compact /> : null}
           </div>
-          {pin.parentId || pin.rootThread ? (
-            <Link href={href} title={pin.parentId ? t('card.partOfThread') : t('card.firstInThread')} className="text-subtle hover:text-ink">
-              <Icon name="thread" className="size-3.5" />
-            </Link>
-          ) : null}
+          <div className="flex shrink-0 items-center gap-1">
+            {pin.parentId || pin.rootThread ? (
+              <Link href={href} title={pin.parentId ? t('card.partOfThread') : t('card.firstInThread')} className="text-subtle hover:text-ink">
+                <Icon name="thread" className="size-3.5" />
+              </Link>
+            ) : null}
+            <span className="-my-1.5 -mr-1.5">
+              <PinMenu pinId={pin.id} buttonClassName="size-7" iconClassName="size-4" />
+            </span>
+          </div>
         </div>
 
         <h2 className="mx-3 mt-1.5 mb-2.5 font-display text-[19px] leading-snug font-medium tracking-tight text-pretty">

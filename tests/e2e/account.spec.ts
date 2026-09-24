@@ -132,7 +132,8 @@ test.describe.serial('a signed-in author', () => {
     await page.getByRole('button', { name: 'Post' }).click();
     await expect(page.getByText('First!')).toBeVisible();
     await expect(page.getByTitle('Edit comment')).toHaveCount(0);
-    await page.getByRole('button', { name: 'More actions' }).click();
+    // The comment's own menu (each "More like this" card has one too).
+    await page.locator('li[id^="comment-"]').filter({ hasText: 'First!' }).getByRole('button', { name: 'More actions' }).click();
     await page.getByRole('menuitem', { name: 'Remove' }).click();
     await expect(page.getByText('First!')).toHaveCount(0);
 

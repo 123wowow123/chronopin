@@ -197,6 +197,12 @@ const zh: Messages = {
     loading: '正在加载时间线',
   },
   pin: {
+    actions: '图钉操作',
+    notInterested: '不感兴趣',
+    showAgain: '重新显示此图钉',
+    hiddenNotice: '已隐藏。你将不会再看到此图钉。',
+    undo: '撤销',
+    notInterestedFailed: '无法保存，请重试。',
     toMap: '去地图',
     toTimeline: '去时间线',
     posted: '发布于 <time></time>',

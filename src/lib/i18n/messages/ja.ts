@@ -196,6 +196,12 @@ const ja: Messages = {
     loading: 'タイムラインを読み込み中',
   },
   pin: {
+    actions: 'ピンの操作',
+    notInterested: '興味なし',
+    showAgain: 'このピンを再表示',
+    hiddenNotice: '非表示にしました。このピンは今後表示されません。',
+    undo: '元に戻す',
+    notInterestedFailed: '保存できませんでした。もう一度お試しください。',
     toMap: 'マップへ',
     toTimeline: 'タイムラインへ',
     posted: '投稿 <time></time>',

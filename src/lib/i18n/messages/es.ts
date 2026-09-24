@@ -196,6 +196,12 @@ const es: Messages = {
     loading: 'Cargando la línea de tiempo',
   },
   pin: {
+    actions: 'Acciones del pin',
+    notInterested: 'No me interesa',
+    showAgain: 'Volver a mostrar este pin',
+    hiddenNotice: 'Oculto. No volverás a ver este pin.',
+    undo: 'Deshacer',
+    notInterestedFailed: 'No se pudo guardar. Inténtalo de nuevo.',
     toMap: 'Al mapa',
     toTimeline: 'A la línea de tiempo',
     posted: 'Publicado <time></time>',

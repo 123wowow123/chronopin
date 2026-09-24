@@ -17,4 +17,5 @@ export { default as Notification } from './notification';
 export { default as Company } from './company';
 export { default as CompanyFollow } from './companyFollow';
 export { default as UserBlock } from './userBlock';
+export { default as PinNotInterested } from './pinNotInterested';
 export { default as User, Users, facebookMapper, googleMapper, pickUserProps, patchableUserProps } from './user';

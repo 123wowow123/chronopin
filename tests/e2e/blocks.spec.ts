@@ -91,7 +91,8 @@ test("a reader blocks an author from their search card, and their pins leave", a
   const cards = page.getByRole('article');
   await expect(cards.first()).toBeVisible();
 
-  const menu = page.getByRole('button', { name: 'More actions' });
+  // The author's card over the results (each pin card has a menu too).
+  const menu = page.locator('div.floating').filter({ hasText: author.userName }).getByRole('button', { name: 'More actions' });
   await menu.click();
   await page.getByRole('menuitem', { name: 'Block', exact: true }).click();
   await page.getByRole('menuitem', { name: `Block ${author.userName}` }).click();

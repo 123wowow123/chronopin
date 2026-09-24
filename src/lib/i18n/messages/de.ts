@@ -196,6 +196,12 @@ const de: Messages = {
     loading: 'Zeitleiste wird geladen',
   },
   pin: {
+    actions: 'Pin-Aktionen',
+    notInterested: 'Kein Interesse',
+    showAgain: 'Diesen Pin wieder anzeigen',
+    hiddenNotice: 'Ausgeblendet. Du siehst diesen Pin nicht mehr.',
+    undo: 'Rückgängig',
+    notInterestedFailed: 'Konnte nicht gespeichert werden. Versuch es noch einmal.',
     toMap: 'Zur Karte',
     toTimeline: 'Zur Zeitleiste',
     posted: 'Gepostet <time></time>',
