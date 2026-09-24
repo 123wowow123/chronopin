@@ -426,7 +426,9 @@ export function timeAgo(
   for (const [unit, size, next] of units) {
     const count = round(seconds / size, unit);
     if (Math.abs(count) < next) {
-      return rtf.format(count, unit);
+      // 'always' would say "in 0 seconds" (a pin posted since the clock last
+      // ticked), so zero reads "now" either way.
+      return count === 0 ? relativeFormat(locale).format(0, unit) : rtf.format(count, unit);
     }
   }
   return rtf.format(round(seconds / 31_536_000, 'year'), 'year');

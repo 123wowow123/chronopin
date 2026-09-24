@@ -228,6 +228,7 @@ describe('timeAgo', () => {
 
   it('gives hours and up a decimal place in numbers when asked', () => {
     const posted = (seconds: number) => timeAgo(new Date(now - seconds * 1000), now, 'en', { numeric: 'always', decimals: true });
+    expect(posted(0)).toBe('now');
     expect(posted(5 * 60)).toBe('5 minutes ago');
     expect(posted(66 * 60)).toBe('1.1 hours ago');
     expect(posted(3600)).toBe('1 hour ago');
