@@ -1,10 +1,10 @@
 import { siteUrl } from './appConfig';
 
-// Google Analytics 4: the "Chronopin web" stream of the chronopin.com property,
-// in chronopin.official's Analytics account. Enhanced measurement (set in
+// Google Analytics 4: the "chronopin - GA4" stream (http://www.chronopin.com,
+// stream id 4458047399) - not the unused "Chronopin web" G-R203GC4H9B. Enhanced measurement (set in
 // Analytics) counts page views - the app's own navigations included, from
 // history changes - scrolls, outbound clicks, site search and file downloads.
-export const GA_MEASUREMENT_ID = 'G-R203GC4H9B';
+export const GA_MEASUREMENT_ID = 'G-N7Q4YYVSC9';
 
 // Inline, first thing after the theme script. It does nothing anywhere but the
 // real site's host, so development, e2e runs and a production build tried
