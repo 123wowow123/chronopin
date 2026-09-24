@@ -19,23 +19,27 @@ export default class Pin extends BasePin {
 
   async save(): Promise<{ pin: Pin }> {
     try {
+      // Media keep their own path: each one fetches and uploads a thumb, which
+      // is what a new pin's time actually goes on, so they run together - and
+      // before the pin row exists. Written first, the row sat listed without
+      // its picture for as long as the thumbs took (the new pins panel read
+      // it then and kept the blank), and a picture that failed to download
+      // left a pin with no media, tags or hooks behind a 500.
+      await Promise.all(this.media.map((m) => m.addThumb()));
+      // A page and the catalogue it cites often hand over the same picture
+      // twice; only one of them is worth a slot on the pin.
+      this.media = (await withoutRepeatedPictures(this.media, [])).keep;
+
       await createPin(this, this.userId);
 
       // Each medium and merchant saves in place, picking up its new id. (The
       // Express version re-added the saved copies, so the create response
-      // listed every medium and merchant twice.)
-      // Media keep their own path: each one fetches and uploads a thumb, which
-      // is what a new pin's time actually goes on, so they run together.
-      const thumbs = Promise.all(this.media.map((m) => m.addThumb()));
-      // The rest go a statement each, in the order the form lists them.
+      // listed every medium and merchant twice.) The rest go a statement
+      // each, in the order the form lists them.
       await Merchant.saveAll(this.merchants, this.id);
       await PinReference.saveAll(this.references);
       await PinRating.saveAll(this.ratings || []);
       if (this.categories) await PinTag.setCategories(this.id, this.categories);
-      await thumbs;
-      // A page and the catalogue it cites often hand over the same picture
-      // twice; only one of them is worth a slot on the pin.
-      this.media = (await withoutRepeatedPictures(this.media, [])).keep;
       // The rows go in together once every thumb is up, in the order the pin
       // lists them.
       await saveAllToPin(this.media, this.id);

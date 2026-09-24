@@ -44,8 +44,11 @@ export function withLivePin(list: NewPin[], type: string, changed: CardPin, belo
   if (index === -1) {
     return type === 'pin:save' ? [toNewPin(changed), ...list].slice(0, NEW_PINS_LIMIT) : list;
   }
-  if (type !== 'pin:update') return list;
-  // An edit's broadcast is the form's pin: possibly no created time, so that
+  // A save can find its row already listed: the list was read (a page load, a
+  // catch-up fetch) while the save was still writing, so the row may lack the
+  // picture the broadcast carries.
+  if (type !== 'pin:update' && type !== 'pin:save') return list;
+  // A broadcast is the saved or edited pin: possibly no created time, so that
   // stays as the list had it, as does the category if it came without any.
   const next = [...list];
   next[index] = {
