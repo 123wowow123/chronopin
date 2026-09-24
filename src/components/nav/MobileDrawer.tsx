@@ -21,7 +21,7 @@ import { searchHref, WATCHED } from './SearchBox';
 import { useT } from '@/lib/client/i18n';
 
 const itemClass =
-  'flex items-center gap-4 rounded-full px-3 py-2 text-[17px] font-semibold text-ink hover:bg-raised hover:no-underline aria-[current=page]:text-accent';
+  'flex items-center gap-4 rounded-full px-3 py-2 text-[17px] font-semibold text-ink hover:bg-raised hover:no-underline active:bg-raised-2 aria-[current=page]:text-accent';
 
 // A swipe under way: where it started, and once it has moved far enough to
 // tell, whether it runs across (drags the drawer) or down (scrolls it).
@@ -269,7 +269,7 @@ export function MobileDrawer() {
           </button>
           {/* A plain link, not next/link: going home reloads the page, fresh from today. */}
           {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-          <a href="/" className="min-w-0 flex-1 font-display text-lg font-semibold tracking-tight text-ink hover:no-underline">
+          <a href="/" className="-mx-2 min-w-0 truncate rounded-lg px-2 py-1 font-display text-lg font-semibold tracking-tight text-ink transition-colors hover:bg-raised hover:no-underline active:bg-raised-2">
             Chronopin
           </a>
           {/* No close button at the far end: the menu mark above, a tap on

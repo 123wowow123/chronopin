@@ -251,7 +251,7 @@ function MoodSummary({ mood, total }: { mood: CommentMood; total: number }) {
 // A comment's controls, beside its bubble: round icon buttons that only take
 // a colour when the pointer is on them.
 const CONTROL =
-  'inline-flex size-9 items-center justify-center rounded-full text-muted transition-colors hover:bg-raised hover:text-ink focus-visible:bg-raised';
+  'inline-flex size-9 items-center justify-center rounded-full text-muted transition-colors hover:bg-raised hover:text-ink focus-visible:bg-raised active:bg-raised-2';
 
 function CommentItem({
   node,
@@ -601,7 +601,7 @@ function CommentMenu({
     }
   }
 
-  const item = 'block w-full rounded-lg px-3 py-2 text-left text-base font-medium hover:bg-ink/[0.07] focus-visible:bg-ink/[0.07] focus-visible:outline-none';
+  const item = 'block w-full rounded-lg px-3 py-2 text-left text-base font-medium hover:bg-ink/[0.07] focus-visible:bg-ink/[0.07] focus-visible:outline-none active:bg-ink/[0.12]';
   return (
     <span ref={rootRef} className="relative inline-flex">
       <button

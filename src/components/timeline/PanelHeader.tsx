@@ -81,7 +81,7 @@ export function PanelHeader({
           aria-controls={opensDialog ? undefined : controls}
           aria-haspopup={opensDialog ? 'dialog' : undefined}
           aria-label={label ?? t('controls.summary', { caption, value })}
-          className="absolute inset-0 rounded-[inherit]"
+          className="absolute inset-0 scale-100 rounded-[inherit] before:absolute before:inset-x-1.5 before:inset-y-1 before:rounded-lg before:transition-colors hover:before:bg-tint/[0.04] active:before:bg-tint/[0.08]"
         />
       )}
       {/* The space is what the row reads as, copied or spoken: the gap between
@@ -121,4 +121,4 @@ function ResetButton({ reset }: { reset: { label: string; onClick: () => void } 
 }
 
 // The round targets at the end of a panel's header row (clear, expand, fold).
-export const iconButton = '-my-1 rounded-full p-1 text-subtle max-lg:p-2 hover:bg-raised hover:text-ink';
+export const iconButton = '-my-1 rounded-full p-1 text-subtle max-lg:p-2 hover:bg-raised hover:text-ink active:bg-raised-2';

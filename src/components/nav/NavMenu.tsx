@@ -11,7 +11,7 @@ import { NotificationBell, WeatherButton } from './NotificationBell';
 import { useT } from '@/lib/client/i18n';
 import type { MessageKey } from '@/lib/i18n/translate';
 
-const itemClass = 'flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-ink hover:bg-raised hover:no-underline';
+const itemClass = 'flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-ink hover:bg-raised hover:no-underline active:bg-raised-2';
 const itemIconClass = 'size-4 text-subtle';
 
 type MenuItem = { href: string; label: MessageKey; icon: IconName };
@@ -57,7 +57,7 @@ export function ViewSwitch({ pathname, className = '' }: { pathname: string; cla
           href={view.href}
           aria-current={view.current ? 'page' : undefined}
           className={`flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-1 text-sm font-medium whitespace-nowrap transition-colors hover:no-underline ${
-            view.current ? 'bg-raised-2 text-ink shadow-sm' : 'text-muted hover:text-ink'
+            view.current ? 'bg-raised-2 text-ink shadow-sm' : 'text-muted hover:bg-raised hover:text-ink active:bg-raised-2'
           }`}
         >
           <Icon name={view.icon} className="size-4" />

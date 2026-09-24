@@ -45,7 +45,7 @@ export async function LintFindings({ check: checkParam, severity: severityParam 
         <Link
           href={href({ severity })}
           aria-current={check ? undefined : 'page'}
-          className={`rounded border px-2 py-1 ${check ? 'border-line text-subtle' : 'border-accent text-ink'}`}
+          className={`rounded border px-2 py-1 transition-colors hover:bg-raised hover:no-underline active:bg-raised-2 ${check ? 'border-line text-subtle' : 'border-accent text-ink'}`}
         >
           All checks
         </Link>
@@ -54,7 +54,7 @@ export async function LintFindings({ check: checkParam, severity: severityParam 
             key={name}
             href={href({ check: name, severity })}
             aria-current={check === name ? 'page' : undefined}
-            className={`rounded border px-2 py-1 ${check === name ? 'border-accent text-ink' : 'border-line text-subtle'}`}
+            className={`rounded border px-2 py-1 transition-colors hover:bg-raised hover:no-underline active:bg-raised-2 ${check === name ? 'border-accent text-ink' : 'border-line text-subtle'}`}
           >
             {name} <span className="text-subtle">{totals.get(name)?.findings ?? 0}</span>
           </Link>
@@ -65,7 +65,7 @@ export async function LintFindings({ check: checkParam, severity: severityParam 
         <Link
           href={href({ check })}
           aria-current={severity ? undefined : 'page'}
-          className={`rounded border px-2 py-1 ${severity ? 'border-line text-subtle' : 'border-accent text-ink'}`}
+          className={`rounded border px-2 py-1 transition-colors hover:bg-raised hover:no-underline active:bg-raised-2 ${severity ? 'border-line text-subtle' : 'border-accent text-ink'}`}
         >
           Any severity
         </Link>
@@ -74,7 +74,7 @@ export async function LintFindings({ check: checkParam, severity: severityParam 
             key={name}
             href={href({ check, severity: name })}
             aria-current={severity === name ? 'page' : undefined}
-            className={`rounded border px-2 py-1 ${severity === name ? 'border-accent text-ink' : 'border-line text-subtle'}`}
+            className={`rounded border px-2 py-1 transition-colors hover:bg-raised hover:no-underline active:bg-raised-2 ${severity === name ? 'border-accent text-ink' : 'border-line text-subtle'}`}
           >
             {name} <span className="text-subtle">{summary.filter((r) => r.severity === name).reduce((n, r) => n + r.findings, 0)}</span>
           </Link>

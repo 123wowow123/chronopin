@@ -314,7 +314,7 @@ function ShowMore({ href, total, fresh, hiddenFrom }: { href: string; total: num
     <div className={`mb-2.5 flex justify-center lg:ml-[170px] ${rowWidth} ${hiddenFrom}`}>
       <Link
         href={href}
-        className="flex items-center gap-2 rounded-full px-3 py-1 text-sm font-medium text-subtle tabular-nums ring-1 ring-line ring-inset hover:text-link hover:no-underline"
+        className="flex items-center gap-2 rounded-full px-3 py-1 text-sm font-medium text-subtle tabular-nums ring-1 ring-line ring-inset transition-colors hover:bg-raised hover:text-link hover:no-underline active:bg-raised-2"
       >
         {t('timeline.viewAll', { count: total })}
         {fresh > 0 ? <span className="rounded-full bg-accent px-1.5 text-xs leading-5 font-bold text-white">{t('timeline.newPins', { count: fresh })}</span> : null}

@@ -132,7 +132,7 @@ export function DistanceSlider({
   // 20px thumbs with a 36px invisible hit area; 28px with a 44px one on touch screens.
   const thumbClass =
     'absolute top-1/2 size-5 max-lg:size-7 -translate-x-1/2 -translate-y-1/2 cursor-grab touch-none rounded-full border-2 border-white shadow-md shadow-shade/50 transition-transform hover:scale-110 after:absolute after:-inset-2 after:content-[""] focus:outline-none focus-visible:ring-2 focus-visible:ring-link active:cursor-grabbing';
-  const tickClass = 'rounded-md px-1 py-0.5 text-[11px] text-subtle max-lg:px-2.5 max-lg:py-2 max-lg:text-sm hover:bg-raised hover:text-ink';
+  const tickClass = 'rounded-md px-1 py-0.5 text-[11px] text-subtle max-lg:px-2.5 max-lg:py-2 max-lg:text-sm hover:bg-raised hover:text-ink active:bg-raised-2';
 
   // Inside a fold there is no pencil: the fold is the panel, so opening it
   // shows the typed box too, and closing it hides the lot. Elsewhere (behind
@@ -178,7 +178,7 @@ export function DistanceSlider({
         <div className={`flex items-start justify-between gap-2 ${folds ? (inDrawer ? 'hidden' : 'xl:hidden') : ''}`}>
           <button
             type="button"
-            className="min-w-0 justify-self-start text-left max-lg:-my-3 max-lg:py-3"
+            className="-mx-1.5 min-w-0 justify-self-start rounded-md px-1.5 text-left transition-colors hover:bg-raised active:bg-raised-2 max-lg:-my-3 max-lg:py-3"
             onClick={() => apply(radius ? null : suggested)}
             title={radius ? t('slider.anyDistance') : t('slider.withinRadius', { radius: label(suggested) })}
           >

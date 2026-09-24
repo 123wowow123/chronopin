@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+/* A hover style is also what a press shows. Tailwind's own hover: only
+   matches where the pointer can hover, so on a touch screen a tap on most
+   buttons showed nothing at all; now it shows the hover colour while the
+   finger is down (and an active: colour, where one is set, still wins). */
+@custom-variant hover {
+  @media (hover: hover) {
+    &:hover {
+      @slot;
+    }
+  }
+  &:active {
+    @slot;
+  }
+}
+
 /* The Chronopin palette: a cool, low-glare dark theme, as Tailwind tokens.
    The light theme redefines them below, under [data-theme="light"]. */
 @theme {
@@ -190,6 +205,16 @@
     outline-offset: 2px;
   }
 
+  /* Every button gives under a press: it shrinks a touch while held, on top
+     of its own hover colours. Links count as buttons when they take a hover
+     background (menu rows, the header logo, .btn links). `scale` is its own
+     property, so this composes with a transform; a utility wins, so a
+     full-row press target that should not shrink sets scale-100 and its own
+     active: colour. Inline text never scales (it is not transformable). */
+  :where(button, [role='button'], .btn, a[class*='hover:bg-']):not(:disabled, [aria-disabled='true']):active {
+    scale: 0.97;
+  }
+
   a {
     @apply text-link;
   }
@@ -211,13 +236,13 @@
     @apply rounded-md px-3 py-1 text-xs;
   }
   .btn-primary {
-    @apply bg-accent text-white hover:bg-accent-hover;
+    @apply bg-accent text-white hover:bg-accent-hover active:brightness-90;
   }
   .btn-secondary {
-    @apply bg-raised text-ink ring-1 ring-line ring-inset hover:bg-raised-2;
+    @apply bg-raised text-ink ring-1 ring-line ring-inset hover:bg-raised-2 active:ring-subtle/60;
   }
   .btn-ghost {
-    @apply text-muted hover:bg-raised hover:text-ink;
+    @apply text-muted hover:bg-raised hover:text-ink active:bg-raised-2;
   }
 
   /* Text inputs, selects and textareas. */

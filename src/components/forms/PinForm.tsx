@@ -374,7 +374,7 @@ export function PinForm({
           </div>
         </div>
         <div className="flex justify-between text-sm">
-          <button type="button" className="text-link" onClick={() => set('allDay', !values.allDay)}>
+          <button type="button" className="text-link hover:underline" onClick={() => set('allDay', !values.allDay)}>
             {values.allDay ? t('form.addTime') : t('form.removeTime')}
           </button>
           <span className="text-subtle">{values.allDay ? t('form.allDay') : timeZone}</span>
@@ -640,7 +640,7 @@ export function PinForm({
                     {medium.authorName ? ` ${t('form.fromAuthor', { name: medium.authorName })}` : ''}
                     {medium.originalUrl === values.selectedMedia?.originalUrl && values.useMedia ? ` (${t('form.heading')})` : ''}
                   </span>
-                  <button type="button" className="shrink-0 text-xs text-link" onClick={() => set('extraMedia', values.extraMedia.filter((m) => m !== medium))}>
+                  <button type="button" className="shrink-0 text-xs text-link hover:underline" onClick={() => set('extraMedia', values.extraMedia.filter((m) => m !== medium))}>
                     {t('common.remove')}
                   </button>
                 </li>

@@ -46,7 +46,7 @@ export function ExpandableList({
     <>
       <ul className={className}>{open ? items : items.slice(0, visible)}</ul>
       {items.length > visible ? (
-        <button type="button" aria-expanded={open} className="py-2 text-sm font-medium text-link" onClick={() => setOpen(!open)}>
+        <button type="button" aria-expanded={open} className="py-2 text-sm font-medium text-link hover:underline" onClick={() => setOpen(!open)}>
           {open ? t('common.showFewer') : t('common.showAllN', { count: items.length, noun })}
         </button>
       ) : null}

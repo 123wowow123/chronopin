@@ -124,7 +124,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
                 ) : (
                   <span />
                 )}
-                <Link href={`/map?pin=${pin.id}`} className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset hover:text-ink hover:no-underline">
+                <Link href={`/map?pin=${pin.id}`} className="inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
                   <Icon name="map" className="size-3.5 text-link" />
                   {t('pin.toMap')}
                 </Link>
@@ -214,7 +214,7 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
             rest are chips in the tag section, where a pin's lesser subjects go. */}
         {pin.categories?.length ? (
           <>
-            <RefineLink field="tag" value={pin.categories[0]} className="rounded-full bg-raised px-2.5 py-0.5 font-medium text-muted ring-1 ring-line ring-inset hover:text-ink hover:no-underline">
+            <RefineLink field="tag" value={pin.categories[0]} className="rounded-full bg-raised px-2.5 py-0.5 font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
               {categoryLabel(t, pin.categories[0])}
             </RefineLink>
             <span className="px-1" />
@@ -235,7 +235,7 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
         ) : null}
         {/* Opens the timeline on this pin, centred, rather than on today. */}
         {/* The same pill as the aside's "To map". */}
-        <Link href={`/?pin=${pin.id}`} className="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset hover:text-ink hover:no-underline">
+        <Link href={`/?pin=${pin.id}`} className="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full bg-raised px-2.5 py-0.5 text-xs font-medium text-muted ring-1 ring-line ring-inset transition-colors hover:bg-raised-2 hover:text-ink hover:no-underline active:ring-subtle/60">
           <Icon name="timeline" className="size-3.5 text-link" />
           {t('pin.toTimeline')}
         </Link>

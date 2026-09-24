@@ -224,7 +224,7 @@ export function TimeRangeSlider({
   // 20px thumbs with a 36px invisible hit area; 28px with a 44px one on touch screens.
   const thumbClass =
     'absolute top-1/2 size-5 max-lg:size-7 -translate-x-1/2 -translate-y-1/2 cursor-grab touch-none rounded-full border-2 border-white shadow-md shadow-shade/50 transition-transform hover:scale-110 after:absolute after:-inset-2 after:content-[""] focus:outline-none focus-visible:ring-2 focus-visible:ring-link active:cursor-grabbing';
-  const tickClass = 'rounded-md px-1 py-0.5 text-[11px] text-subtle max-lg:px-2.5 max-lg:py-2 max-lg:text-sm hover:bg-raised hover:text-ink';
+  const tickClass = 'rounded-md px-1 py-0.5 text-[11px] text-subtle max-lg:px-2.5 max-lg:py-2 max-lg:text-sm hover:bg-raised hover:text-ink active:bg-raised-2';
 
   // Inside a fold there is no pencil: the fold is the panel, so opening it
   // shows the typed box too, and closing it hides the lot. Elsewhere (behind
@@ -273,7 +273,7 @@ export function TimeRangeSlider({
         >
           <button
             type="button"
-            className="justify-self-start text-left max-lg:-my-3 max-lg:py-3"
+            className="-mx-1.5 justify-self-start rounded-md px-1.5 text-left transition-colors hover:bg-raised active:bg-raised-2 max-lg:-my-3 max-lg:py-3"
             // Both sides: the label toggles its side between "All" and nearest now.
             onClick={() => applySide('past', pastOnly || past ? null : minPast)}
             title={pastOnly ? t('slider.anyTime') : past ? t('slider.allPast') : t('slider.sideToNow')}
@@ -285,7 +285,7 @@ export function TimeRangeSlider({
           {!pastOnly ? (
             // col-start-3: the pencil between them is hidden on touch screens,
             // and without it this would land in the middle column.
-            <button type="button" className="col-start-3 justify-self-end text-right max-lg:-my-3 max-lg:py-3" onClick={() => applySide('future', future ? null : minFuture)} title={future ? t('slider.allUpcoming') : t('slider.sideToNow')}>
+            <button type="button" className="col-start-3 -mx-1.5 justify-self-end rounded-md px-1.5 text-right transition-colors hover:bg-raised active:bg-raised-2 max-lg:-my-3 max-lg:py-3" onClick={() => applySide('future', future ? null : minFuture)} title={future ? t('slider.allUpcoming') : t('slider.sideToNow')}>
               <span className="font-semibold text-future">{t('slider.future')}</span>
               <span className="block text-ink">{label(future)}</span>
             </button>
