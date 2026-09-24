@@ -111,12 +111,12 @@ desk (no @CityDesk). Chains, oldest first:
 * **Changed**: [Vertical recipes](verticals.md) - a Las Vegas row; [Sources](sources.md) - Las Vegas
   sources.
 
-## 2026-09-24 - Boston news events, straight to production (@SportDesk, @MusicDesk, @LawDesk, @EconDesk, @PoliticsDesk, @ClimateDesk, @BuildDesk; @CityDesk held)
+## 2026-09-24 - Boston news events, straight to production (@CityDesk, @SportDesk, @MusicDesk, @LawDesk, @EconDesk, @PoliticsDesk, @ClimateDesk, @BuildDesk)
 
 Ian asked to "pin Boston news events on prod". Same city recipe as San Francisco and San Diego, run beside
 them: four agents drafted by theme (city hall and elections; transit, building and climate; sport and
 culture; courts, economy and health), the lead checked every draft and posted serially behind the load
-gate. Every pin carries the tag `Boston`. Twenty-nine posted, none failed or half-saved:
+gate. Every pin carries the tag `Boston`. Thirty-six posted, none failed or half-saved:
 
 - **@SportDesk:** Boston Marathon 2025 (3142) -> 2026 (3147) -> 2027 `scheduled` 19 Apr (3155); the Celtics
   sale closing (3164); Boston Legacy FC's first match (3173), with existing 2199 (White Stadium reopens)
@@ -132,9 +132,10 @@ gate. Every pin carries the tag `Boston`. Twenty-nine posted, none failed or hal
   $10B coastal plan (3333) -> final study to Congress, `estimated` 2028 (3339); BERDO's 2030 limits, in force
   to 2035 (3343). **@BuildDesk:** Draw One groundbreaking (3348) -> completion `estimated` fall 2032 (3352);
   Logan runway 9-27 closure (3355); the FTA ends MBTA safety oversight (3360).
-- **Held for @CityDesk (user 412, email unconfirmed):** Wu's inauguration (answers 3306), the 2027 council
-  election (`politicsdesk`, answers the inauguration), the March and December 2025 school-closure votes, the
-  FY2027 budget, Evacuation Day's 250th and Sail Boston 2026. Drafts wait in the session scratchpad.
+- **@CityDesk** (user 412, posted once the owner had its email confirmed on prod): Wu sworn in (3500, answers
+  3306) -> the 2027 council election, @PoliticsDesk, `estimated` 2 Nov 2027 (3507); school-closure votes March
+  2025 (3510) -> December 2025 (3516); the FY2027 budget, in force to 1 Jul 2027 (3521); Evacuation Day's 250th
+  (3528); Sail Boston's Parade of Sail (3534). Thirty-six pins in all.
 
 * **Learned - Nominatim 429s for a whole run** when four agents and several city sessions share it, even at
   2-3 s gaps. Photon's `/reverse` of the same OSM object stood in (it rejects `lang=en` - pass nothing) and
@@ -264,10 +265,11 @@ serially, load-gated. Every pin carries the tag `San Diego`; each event went to 
   approval; 3309 Comic-Con 2026 (@FilmDesk; existing **2379** Comic-Con 2027 re-threaded under it); Torrey Pines
   3314 Rose's record Farmers win -> 3321 The Sentry 2027; 3327 Poinsettia Bowl, 3331 Holiday Bowl, 3337 Padres
   Opening Day 2027.
-- **City hall** (nine drafts: trash-fee chain 2025-2027, Balboa Park paid parking, the FY2027 budget, the District 1
-  special election, Measure A empty-homes tax, the 3 Nov 2026 county Measures A and B) are drafted for **@CityDesk**
-  (user 412, created by the San Francisco session for civic news in any city) and wait on its email being
-  confirmed on prod.
+- **City hall** (@CityDesk, user 412, created by the San Francisco session for civic news in any city; posted
+  once the owner confirmed its email on prod): trash-fee chain 3496 fee adopted (9 Jun 2025) -> 3501 Balboa Park
+  paid parking (a period to 1 Jan 2027) -> 3505 settlement -> 3511 reduced fees (`scheduled` 1 Jul 2027); 3515 FY2027
+  budget; 3523 District 1 special election; 3525 Measure A empty-homes tax rejected; county Measures B (3530, sales
+  tax) and A (3532, charter) on 3 Nov 2026. 36 pins in all, 3165-3532.
 
 * **Learned - a city batch is split by desk, not by city.** No desk owns a city, and each event already has one
   (courts @LawDesk, quakes @ScienceDesk, fires @ClimateDesk, builds @BuildDesk, games @SportDesk, WARN notices
@@ -528,6 +530,46 @@ HSY adopted from the first pin's company stock with one fixed company-wide note)
 * **Feedback**: none yet.
 * **Changed**: [Vertical recipes](verticals.md) - the consumer-goods row names Hershey; [Sources](sources.md) -
   Hershey's newsroom API and CourtListener's search API.
+
+## 2026-09-24 - Ferrero news events, straight to production (@ConsumerDesk, @BuildDesk, @EconDesk, @HealthDesk, @LawDesk)
+
+Ian asked to "pin Ferrero news events on prod". Same workflow as Nestlé: four agents drafted POST
+bodies (corporate / brands / sites and workforce / safety and legal), the lead linted, looked at every
+picture on contact sheets and posted serially. Sixty-five pins, all tagged `Ferrero`, company Ferrero
+(ids interleaved with other sessions'):
+
+- **Results** (@ConsumerDesk, oldest first): 3187 FY2020/21 -> 3197 -> 3212 -> 3214 -> 3219 FY2024/25
+  -> 3227 FY2025/26 (`estimated` 11 Feb 2027: five releases fell 6-16 February; no calendar is published).
+- **Leadership:** 3230 Giovanni Ferrero executive chairman (2017) -> 3240 Nervegna named CEO of Ferrero
+  Core -> 3247 takes over (1 Sep 2026).
+- **Deals:** 3255 Nestlé US candy; Kellogg cookies 3264 -> 3272; 3281 Eat Natural; 3284 Wells; WK Kellogg
+  3292 -> 3300; signings only, closings to answer them: 3310 Bold Snacks, 3318 Purely Elizabeth.
+- **Kinder salmonella, Arlon 2022** (@HealthDesk / @LawDesk, story order): 3326 -> 3335 -> 3341 -> 3345
+  -> 3349 -> 3353 -> 3356 -> 3361 -> 3364. Standalone legal: 3368, 3371, 3375, 3380, 3383, 3388.
+- **Brands** (@ConsumerDesk): 3389-3452 standalone (founding, first Nutella jar, launches, Super Bowl
+  ads); Wonka 3456 -> 3460 -> 3464 (US shelves `estimated` 30 Nov 2026, "this November").
+- **Sites and workforce** (@BuildDesk / @EconDesk): Bloomington 3469 -> 3474 -> 3480; 3489 Chicago
+  innovation centre; Brantford 3494 -> 3502; 3503 Jelly Belly WARN; Orangeburg 3504 -> 3509 (2029,
+  `estimated`); 3514 Franklin Park; WK Kellogg plants 3518 -> 3519; 3520 Mexico; Italian pay 3524 -> 3526.
+
+* **Learned - no create half-saved.** All 65 POSTs answered 200 and a read-back of every pin matched its
+  draft (media, references, tags, parent, author): the `downloadImage` retries seem to have held.
+* **Learned - the classifier now blocks the SSH read of `/proc/loadavg`** that earlier runs gated on.
+  Gating on the homepage's response time instead (wait while it takes over 6 s, 90 s between posts)
+  worked: it waited through 50-100 s spells while another session posted, and nothing failed.
+* **Learned - ferrero.com's pre-2024 `12:00` is a CMS placeholder**, not a release time; the PR
+  Newswire stamp or the counterparty's 8-K acceptance time gives the real one.
+* **Learned - one stock photo of the Alba sign is everywhere** (ferrero.com, Cuneo24, Gazzetta d'Alba),
+  cropped differently each time, so a difference hash missed it and it reached two pins. Pin 3187's copy
+  was removed by a whole-pin PUT. Look at candidate pictures side by side, not only by hash.
+* **Learned - a delisted ticker in `stocks` is dropped quietly on create** (`addPinStocks` checks
+  Nasdaq), so sending K or KLG for a 2019 or 2025 deal is harmless but adds nothing.
+* **Learned - keep a cumulative WARN file out of `sourceUrl`.** California's yearly EDD PDF went in as
+  a reference with `startDate` instead, so it stays free for the next @EconDesk pin that needs it.
+* **Not pinned yet:** Ferrara's Jelly Belly purchase and CPK (Carambar) deal, WK Kellogg's pledge to drop
+  artificial colours by the end of 2026, Power Crunch, the Fannie May S'mores recall (Aug 2026), the open
+  Chhin v. Ferrara arsenic case, and Fox's Biscuits (bought by the family's CTH, not Ferrero).
+* **Changed**: [Vertical recipes](verticals.md) - a Ferrero row; [Sources](sources.md) - ferrero.com.
 
 ## 2026-09-23 - Nestlé news events, straight to production (@ConsumerDesk, @EconDesk, @HealthDesk, @LawDesk, @BuildDesk)
 
