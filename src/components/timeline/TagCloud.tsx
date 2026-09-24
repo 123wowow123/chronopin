@@ -36,6 +36,34 @@ let rememberedViewCounts: TagCount[] | null = null;
 // own, shared by the panel and the big cloud.
 let rememberedWrapped = true;
 
+// Counts read ahead, by URL. A cold count is ~1.3s away on production (the
+// server scores every pin's confidence when its cache has gone), so the page
+// asks for the panel's and the big cloud's counts once it is idle, and
+// opening either then shows its tags at once. Held a minute, then asked
+// again; a failed one is forgotten.
+const AHEAD_MS = 60_000;
+const ahead = new Map<string, { at: number; counts: Promise<TagCount[]> }>();
+
+function countsFor(url: string): Promise<TagCount[]> {
+  const held = ahead.get(url);
+  if (held && Date.now() - held.at < AHEAD_MS) return held.counts;
+  const counts = api.get<TagCount[]>(url);
+  counts.catch(() => ahead.delete(url));
+  ahead.set(url, { at: Date.now(), counts });
+  return counts;
+}
+
+// Asks for these counts when the browser has nothing better to do.
+function readAhead(urls: string[]) {
+  const go = () => urls.forEach((url) => void countsFor(url).catch(() => {}));
+  if ('requestIdleCallback' in window) {
+    const id = window.requestIdleCallback(go, { timeout: 3000 });
+    return () => window.cancelIdleCallback(id);
+  }
+  const id = setTimeout(go, 1500);
+  return () => clearTimeout(id);
+}
+
 // How many tags the cloud shows before its filter box is needed.
 const SHOWN = 60;
 // A step up from what the cards use: the cloud is read at a glance, and its
@@ -153,10 +181,13 @@ export function TagCloud({
   const countsUrl = `/api/pins/tag-counts?${params.toString()}`;
 
   const showing = listed && (open || !!folded || !!mergedOpen);
+  // Read ahead: the big cloud's counts always (its button is here, and the
+  // drawer opens it too), the panel's while it is folded away.
+  useEffect(() => readAhead(showing ? [viewUrl(countsUrl)] : listed ? [countsUrl, viewUrl(countsUrl)] : [viewUrl(countsUrl)]), [showing, listed, countsUrl]);
   useEffect(() => {
     if (!showing) return;
     let cancelled = false;
-    api.get<TagCount[]>(countsUrl).then(
+    countsFor(countsUrl).then(
       (next) => {
         if (cancelled) return;
         rememberedCounts = next;
@@ -615,6 +646,7 @@ function GroupedToggle({ wrapped, onChange }: { wrapped: boolean; onChange: (wra
 
 // How many tags the big cloud reads.
 const VIEW_LIMIT = 200;
+const viewUrl = (countsUrl: string) => `${countsUrl}&limit=${VIEW_LIMIT}`;
 
 const KIND_LABEL: Record<TagCount['kind'], MessageKey> = {
   award: 'tagCloud.kindAward',
@@ -663,7 +695,7 @@ function TagCloudView({
   const [failed, setFailed] = useState(false);
   const [filter, setFilter] = useState('');
   const [hot, setHot] = useState<TagGroup | null>(null);
-  const url = `${countsUrl}&limit=${VIEW_LIMIT}`;
+  const url = viewUrl(countsUrl);
   useScrollLock(true);
   const rootRef = useRef<HTMLDivElement>(null);
 
@@ -693,7 +725,7 @@ function TagCloudView({
 
   useEffect(() => {
     let cancelled = false;
-    api.get<TagCount[]>(url).then(
+    countsFor(url).then(
       (next) => {
         if (cancelled) return;
         rememberedViewCounts = next;

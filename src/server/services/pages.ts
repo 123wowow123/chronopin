@@ -262,9 +262,13 @@ function zoneFor(query: string, timeZone: string): string {
 export const TAG_CLOUD_SIZE = 60;
 export const TAG_CLOUD_MAX = 200;
 
+// The tag cloud's counts. A cold read scores every pin's confidence (~1.3s on
+// production), so they are kept for hours: a pin change still refreshes them
+// behind the scenes (TAGS.timeline, 'max'), and 'minutes' let them expire
+// after an idle hour, which a quiet site mostly is, so most clouds waited.
 export async function timelineTagCounts(created: CreatedQuery, limit = TAG_CLOUD_SIZE): Promise<TagCount[]> {
   'use cache';
-  cacheLife('minutes');
+  cacheLife('hours');
   cacheTag(TAGS.timeline);
   return Pins.countTimelineTags(resolveCreatedSince(created), await timelineMinConfidence(), limit);
 }
@@ -289,9 +293,10 @@ export async function searchPageTagCounts(
 }
 const CLOUD_FIELDS = new Set(['tag', 'category', 'confidence']);
 
+// Kept for hours, as timelineTagCounts is.
 async function cachedTagCounts(query: string, created: CreatedQuery, timeZone: string, limit: number): Promise<TagCount[]> {
   'use cache';
-  cacheLife('minutes');
+  cacheLife('hours');
   cacheTag(TAGS.timeline);
   return searchTagCounts(query, limit, { userId: null, onlyWatched: false, timeZone, createdSince: resolveCreatedSince(created) });
 }
