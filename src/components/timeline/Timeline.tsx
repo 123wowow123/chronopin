@@ -4,7 +4,7 @@ import { useRouter } from '@/lib/client/navigation';
 import { startTransition, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { parseLinkHeader } from '@/lib/client/api';
 import { createPageAhead } from '@/lib/client/pageAhead';
-import { onLive } from '@/lib/client/liveFeed';
+import { onLive, onLiveReconnect } from '@/lib/client/liveFeed';
 import { useNow } from '@/lib/client/now';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
@@ -19,8 +19,6 @@ import { usesImperial } from '@/lib/weather';
 import { browserTimeZone, useTimeZone } from '@/lib/client/timeZone';
 import { daysBetween, dayKeyIn, monthDayOf } from '@/lib/format';
 import { DEFAULT_POSTED_WITHIN, SPAN_OPTIONS, spanLabel, spanPhrase, spanToParam } from '@/lib/postedSpan';
-import { pinPicture } from '@/components/pin/PinThumb';
-import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
 import { buildBags, pinDayKey, resolveTodayMarker, todayScrollId } from '@/lib/timeline';
@@ -30,7 +28,7 @@ import { personalWeigher, type UserPreference } from '@/lib/userWiki';
 import { DistanceSlider } from './DistanceSlider';
 import { TagCloud, tagPillSummary } from './TagCloud';
 import { FloatingControls } from './FloatingControls';
-import { NewPins } from './NewPins';
+import { NewPins, withLivePin } from './NewPins';
 import { TimeBlock, TodayMarker } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
 import { TrendingPins } from './TrendingPins';
@@ -39,27 +37,9 @@ import { withPageLang } from '@/lib/client/navigation';
 
 type Links = { previous?: string; next?: string };
 
-// How many pins the new pins panel keeps, matching the LIMIT newPins() in
-// src/server/services/pages.ts asks for.
-const NEW_PINS_LIMIT = 5;
-
 // How long a burst of live pin changes is let settle before the days at
 // either end of the loaded stretch are counted again.
 const RECOUNT_DELAY_MS = 500;
-
-// A broadcast pin as the new pins panel lists it.
-function toNewPin(pin: CardPin): NewPin {
-  return {
-    id: pin.id,
-    title: pin.title,
-    userName: pin.user?.userName ?? null,
-    // A just-saved broadcast carries no utcCreatedDateTime (PinCard.tsx
-    // guards the same gap); it was created now, so that is the best answer.
-    utcCreatedDateTime: pin.utcCreatedDateTime ?? new Date().toISOString(),
-    ...pinPicture(pin.media),
-    hasMarket: pinMarketRefs(pin).length > 0,
-  };
-}
 
 // The pin a timeline opened on (the pin page's "To timeline"): the timeline
 // starts there, centred, rather than on today.
@@ -390,6 +370,7 @@ export function Timeline({
   // Live changes from other people (new pins, edits, watch counts), for pins
   // within the stretch of timeline already loaded and the new pins panel, over
   // the page's one live stream.
+  const liveBefore = useRef(false);
   useEffect(() => {
     // A burst of changes (a scrape adding a dozen pins) asks for counts once.
     let recount: ReturnType<typeof setTimeout> | undefined;
@@ -403,9 +384,9 @@ export function Timeline({
       // would on reload; a new one below the bar never joins.
       const confidence = pinConfidence(pinEvidence(changed));
       const belowBar = minConfidence !== null && confidence !== undefined && confidence < minConfidence;
+      setNewPins((list) => withLivePin(list, type, changed, belowBar));
       if (type === 'pin:remove' || belowBar) {
         setPins((list) => list.filter((p) => p.id !== changed.id));
-        setNewPins((list) => list.filter((p) => p.id !== changed.id));
         return;
       }
       // A pin moved outside the ring the timeline is narrowed to leaves the
@@ -429,25 +410,28 @@ export function Timeline({
           return at >= Math.min(...times) && at <= Math.max(...times) ? [...list, withHtml] : list;
         });
       }
-      setNewPins((list) => {
-        const index = list.findIndex((p) => p.id === changed.id);
-        if (index === -1) {
-          return type === 'pin:save' ? [toNewPin(withHtml), ...list].slice(0, NEW_PINS_LIMIT) : list;
-        }
-        if (type !== 'pin:update') return list;
-        // An edit's broadcast is the form's pin: no author, and possibly no
-        // created time, so those stay as the panel had them.
-        const next = [...list];
-        next[index] = { ...toNewPin(withHtml), userName: list[index].userName, utcCreatedDateTime: list[index].utcCreatedDateTime };
-        return next;
-      });
     };
     const stops = ['pin:save', 'pin:update', 'pin:remove', 'pin:favorite', 'pin:unfavorite', 'pin:like', 'pin:unlike'].map((type) =>
       onLive<CardPin>(type, (changed) => onPin(type, changed)),
     );
+    // What broadcasts may have been missed - while the stream was down, or
+    // while this page sat hidden (React Activity keeps it mounted but stops
+    // its effects) - the new pins panel fetches again rather than goes stale.
+    const refreshNewPins = () => {
+      fetch(withPageLang('/api/pins/highlights'), { credentials: 'same-origin' })
+        .then((res) => (res.ok ? (res.json() as Promise<{ newPins: NewPin[] }>) : null))
+        .then((next) => {
+          if (next) setNewPins(next.newPins);
+        })
+        .catch(() => {});
+    };
+    if (liveBefore.current) refreshNewPins();
+    liveBefore.current = true;
+    const stopReconnect = onLiveReconnect(refreshNewPins);
     return () => {
       clearTimeout(recount);
       stops.forEach((stop) => stop());
+      stopReconnect();
     };
   }, [minConfidence, ring]);
 

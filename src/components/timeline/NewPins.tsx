@@ -6,9 +6,47 @@ import { Icon } from '@/components/ui/Icon';
 import { useWholeRows } from '@/lib/client/wholeRows';
 import { timeAgo } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
-import type { NewPin } from '@/lib/types';
+import type { CardPin, NewPin } from '@/lib/types';
+import { pinPicture } from '@/components/pin/PinThumb';
+import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { MarketTrend } from './MarketTrend';
 import { useT } from '@/lib/client/i18n';
+
+// How many pins the new pins lists keep, matching the LIMIT newPins() in
+// src/server/services/pages.ts asks for.
+export const NEW_PINS_LIMIT = 5;
+
+// A broadcast pin as the new pins lists show it.
+function toNewPin(pin: CardPin): NewPin {
+  return {
+    id: pin.id,
+    title: pin.title,
+    userName: pin.user?.userName ?? null,
+    // A just-saved broadcast carries no utcCreatedDateTime (PinCard.tsx
+    // guards the same gap); it was created now, so that is the best answer.
+    utcCreatedDateTime: pin.utcCreatedDateTime ?? new Date().toISOString(),
+    ...pinPicture(pin.media),
+    hasMarket: pinMarketRefs(pin).length > 0,
+  };
+}
+
+// A new pins list after one live pin event: a save joins the top, an edit
+// updates its row, and a removal - or an edit that drops the pin below the
+// timeline's confidence bar - takes it out. The timeline's panel and the nav
+// drawer's list (src/components/nav/DrawerHighlights.tsx) both follow it.
+export function withLivePin(list: NewPin[], type: string, changed: CardPin, belowBar: boolean): NewPin[] {
+  if (type === 'pin:remove' || belowBar) return list.filter((p) => p.id !== changed.id);
+  const index = list.findIndex((p) => p.id === changed.id);
+  if (index === -1) {
+    return type === 'pin:save' ? [toNewPin(changed), ...list].slice(0, NEW_PINS_LIMIT) : list;
+  }
+  if (type !== 'pin:update') return list;
+  // An edit's broadcast is the form's pin: no author, and possibly no
+  // created time, so those stay as the list had them.
+  const next = [...list];
+  next[index] = { ...toNewPin(changed), userName: list[index].userName, utcCreatedDateTime: list[index].utcCreatedDateTime };
+  return next;
+}
 
 // The pins added most recently, beside the timeline on wide screens, each with
 // who added it and how long ago. now is the timeline's ticking clock, so the

@@ -13,7 +13,6 @@ import PinView from '../model/pinView';
 import { SearchPins } from '../model/searchPin';
 import UserWiki from '../model/userWiki';
 import { compareDuplicateRank } from '@/lib/duplicates';
-import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { toJson, type NewPin, type PinJson, type SearchPage, type TimelinePage, type TrendingPin } from '@/lib/types';
 import type { SliderTypingSetting } from '@/lib/sliderTyping';
 import type { TagListSetting } from '@/lib/tagList';
@@ -27,6 +26,7 @@ import { resolveCreatedSince, type CreatedQuery } from '../util/createdFilter';
 import { dependsOnZone, joinSearchQuery, parseSearchQuery, splitSearchQuery } from '../util/searchQuery';
 import { DEFAULT_LOCALE, type Locale } from '@/lib/i18n/config';
 import { localizePins } from './translations';
+import { loadNewPins } from './newPins';
 
 // The video setting the cards on a page of pins read. Cached (and expired)
 // with those pages rather than read per request: it is one row that changes
@@ -81,14 +81,7 @@ export async function newPins(locale: Locale = DEFAULT_LOCALE): Promise<NewPin[]
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
-  const pins = await Pins.newest(5, await timelineMinConfidence());
-  const pictures = await PinView.pictures(pins.map((p) => p.id));
-  return localizePins(pins.map(({ sourceUrl, referenceUrls, ...p }) => ({
-    ...p,
-    utcCreatedDateTime: p.utcCreatedDateTime.toISOString(),
-    hasMarket: pinMarketRefs({ sourceUrl, references: referenceUrls.map((url) => ({ url })) }).length > 0,
-    ...pictures.get(p.id),
-  })), locale);
+  return loadNewPins(locale);
 }
 
 // around opens the first page on a pin instead of now (the pin page's "To

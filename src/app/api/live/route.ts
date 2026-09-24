@@ -30,8 +30,11 @@ export async function GET(request: NextRequest) {
         timeZone,
         send: (event, data) => write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`),
       });
-      // Comments keep proxies from closing a connection between pushes.
-      const keepAlive = setInterval(() => write(': keep-alive\n\n'), 25_000);
+      // Keeps proxies from closing a connection between pushes, and is an
+      // event rather than a comment so the page can see it: a phone that
+      // slept can hold a stream that reads as open but carries nothing, and
+      // a missing ping is how the page tells (src/lib/client/liveFeed.ts).
+      const keepAlive = setInterval(() => write('event: ping\ndata: 0\n\n'), 25_000);
 
       cleanup = () => {
         open = false;
