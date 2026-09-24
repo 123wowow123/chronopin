@@ -65,6 +65,10 @@ export function CompanyTicker({ pin, onDark = false, bare = false }: { pin: Pick
         : stock.symbol;
   const up = onDark ? 'text-emerald-300' : 'text-success';
   const down = onDark ? 'text-red-300' : 'text-danger';
+  // Nothing until the first quote: a "· …" placeholder read as the company's
+  // name cut off. The empty span stays for the observer, taking back the
+  // pill's gap-1.5 so the pill ends at the name.
+  if (!bare && !quote) return <span ref={ref} className="-ml-1.5" />;
   return (
     <span ref={ref} className="inline-flex items-center gap-1 tabular-nums" title={title}>
       {bare ? null : (
@@ -77,7 +81,7 @@ export function CompanyTicker({ pin, onDark = false, bare = false }: { pin: Pick
           {t('stocks.startWas', { price: usd.format(stock.startPrice) })}
         </span>
       ) : null}
-      {bare ? null : <span>{quote ? usd.format(quote.price) : '…'}</span>}
+      {bare || !quote ? null : <span>{usd.format(quote.price)}</span>}
       {pct != null ? (
         bare ? (
           <span className={pct > 0 ? up : pct < 0 ? down : ''}>{pctText}</span>
