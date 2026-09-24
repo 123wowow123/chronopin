@@ -246,10 +246,6 @@ yelp key
 
 pin can have user uploadable pictures in comments.
 
-
-- maybe using tabs on control panel for this
-
-
 # Others:
 
 
@@ -263,4 +259,3 @@ pin can have user uploadable pictures in comments.
 
 - set up google/facebook/apple login flow
 - Activated Google Analytics / Facebook upgrade to non development mode
-

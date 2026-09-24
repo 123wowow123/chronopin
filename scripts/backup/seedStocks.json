@@ -14027,7 +14027,7 @@
       "day": "2014-10-31",
       "price": null,
       "utcPriceDateTime": null,
-      "utcCheckedDateTime": "2026-09-22T23:58:11.438Z",
+      "utcCheckedDateTime": "2026-09-24T01:22:40.212Z",
       "utcSetDateTime": "2026-09-19T05:12:39.086Z"
     },
     {
@@ -25047,9 +25047,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-09-23T23:00:00.000Z",
       "day": "2026-09-23",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 736.595,
+      "utcPriceDateTime": "2026-09-22T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-23T23:01:43.435Z",
       "utcSetDateTime": "2026-09-20T03:11:09.310Z"
     },
     {
@@ -29414,9 +29414,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-09-23T20:00:00.000Z",
       "day": "2026-09-23",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 228.87,
+      "utcPriceDateTime": "2026-09-22T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-23T22:34:02.024Z",
       "utcSetDateTime": "2026-09-21T19:02:39.874Z"
     },
     {
@@ -29436,9 +29436,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-09-23T20:00:00.000Z",
       "day": "2026-09-23",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 339.75,
+      "utcPriceDateTime": "2026-09-22T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-23T22:34:02.006Z",
       "utcSetDateTime": "2026-09-21T19:02:40.155Z"
     },
     {
@@ -29458,9 +29458,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-09-23T20:00:00.000Z",
       "day": "2026-09-23",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 254.98,
+      "utcPriceDateTime": "2026-09-22T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-23T22:34:01.993Z",
       "utcSetDateTime": "2026-09-21T19:02:40.158Z"
     },
     {
@@ -37180,9 +37180,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-09-23T22:30:00.000Z",
       "day": "2026-09-23",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 228.87,
+      "utcPriceDateTime": "2026-09-22T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-23T22:34:01.977Z",
       "utcSetDateTime": "2026-09-23T14:30:17.677Z"
     },
     {
@@ -37191,9 +37191,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-09-23T22:30:00.000Z",
       "day": "2026-09-23",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 339.75,
+      "utcPriceDateTime": "2026-09-22T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-23T22:34:01.510Z",
       "utcSetDateTime": "2026-09-23T14:30:17.681Z"
     },
     {
@@ -37202,9 +37202,9 @@
       "kind": "start",
       "utcStartDateTime": "2026-09-23T22:30:00.000Z",
       "day": "2026-09-23",
-      "price": null,
-      "utcPriceDateTime": null,
-      "utcCheckedDateTime": null,
+      "price": 254.98,
+      "utcPriceDateTime": "2026-09-22T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-23T22:34:01.088Z",
       "utcSetDateTime": "2026-09-23T14:30:17.683Z"
     },
     {

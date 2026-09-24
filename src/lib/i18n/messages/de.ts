@@ -215,6 +215,8 @@ const de: Messages = {
     openSource: 'Quelle öffnen',
     cost: 'Kosten',
     buyOnAmazon: 'Bei Amazon kaufen',
+    watchOn: 'Auf {service} ansehen',
+    watchOnHeading: 'Ansehen auf',
     amazonDisclosure: 'Als Amazon-Partner verdient Chronopin an qualifizierten Verkäufen.',
     thread: 'Thread',
     respond: 'Auf diesen Pin antworten',

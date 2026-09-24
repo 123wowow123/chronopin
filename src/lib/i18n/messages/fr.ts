@@ -215,6 +215,8 @@ const fr: Messages = {
     openSource: 'Ouvrir la source',
     cost: 'Coût',
     buyOnAmazon: 'Acheter sur Amazon',
+    watchOn: 'Regarder sur {service}',
+    watchOnHeading: 'Regarder sur',
     amazonDisclosure: 'En tant que Partenaire Amazon, Chronopin réalise un bénéfice sur les achats remplissant les conditions requises.',
     thread: 'Fil',
     respond: 'Répondre à cette épingle',

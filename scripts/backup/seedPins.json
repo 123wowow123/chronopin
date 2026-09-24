@@ -164400,7 +164400,32 @@
         "html": "<iframe width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/Iwr1aLEDpe4?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen title=\"Frieren: Beyond Journey&#39;s End | OFFICIAL TRAILER\"></iframe>"
       }
     ],
-    "merchants": [],
+    "merchants": [
+      {
+        "id": 130,
+        "label": "Crunchyroll",
+        "url": "https://www.crunchyroll.com/series/GG5H5XQX4/frieren-beyond-journeys-end",
+        "pinId": 769
+      },
+      {
+        "id": 131,
+        "label": "Netflix",
+        "url": "https://www.netflix.com/title/81726714",
+        "pinId": 769
+      },
+      {
+        "id": 132,
+        "label": "Hulu",
+        "url": "https://www.hulu.com/series/frieren-beyond-journeys-end-1d4725f8-06d1-43fb-a077-72143ac5502f",
+        "pinId": 769
+      },
+      {
+        "id": 133,
+        "label": "Prime Video",
+        "url": "https://www.primevideo.com/detail/0FCJEHY4FXTDVCLZ5NR9A0N42N",
+        "pinId": 769
+      }
+    ],
     "references": [
       {
         "id": 1928,
@@ -307139,7 +307164,14 @@
         "type": "1"
       }
     ],
-    "merchants": [],
+    "merchants": [
+      {
+        "id": 134,
+        "label": "Apple TV",
+        "url": "https://tv.apple.com/show/umc.cmc.ym2z4w07kwsi1wywwxtyckr",
+        "pinId": 2072
+      }
+    ],
     "references": [
       {
         "id": 4198,

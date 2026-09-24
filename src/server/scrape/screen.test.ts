@@ -3,6 +3,7 @@ import { tagKind } from '@/lib/tags';
 import {
   adaptationTag,
   aniListEpisodes,
+  aniListStreamingUrls,
   findScreenDetails,
   malIdOf,
   isScreenCategory,
@@ -13,6 +14,8 @@ import {
   titleCandidates,
   wikidataEpisodes,
   wikidataRatings,
+  wikidataStreamingUrls,
+  withoutSeason,
   yearFits,
   youtubeStill,
 } from './screen';
@@ -290,5 +293,45 @@ describe('findScreenDetails with a cited MyAnimeList id', () => {
     expect(details.workTitle).toBeUndefined();
     expect(details.adaptedFrom).toBe('Original Work');
     expect(details.episodes).toEqual({ episodeCount: 175, episodeStatus: 'complete' });
+  });
+});
+
+describe('aniListStreamingUrls', () => {
+  it('keeps the live STREAMING links only', () => {
+    expect(
+      aniListStreamingUrls([
+        { url: 'https://frieren-anime.jp/', type: 'INFO', isDisabled: false },
+        { url: 'https://www.crunchyroll.com/series/GG5H5XQX4', type: 'STREAMING', isDisabled: false },
+        { url: 'https://www.hidive.com/tv/old', type: 'STREAMING', isDisabled: true },
+      ]),
+    ).toEqual(['https://www.crunchyroll.com/series/GG5H5XQX4']);
+    expect(aniListStreamingUrls(null)).toEqual([]);
+  });
+});
+
+describe('wikidataStreamingUrls', () => {
+  const claim = (value: string, rank = 'normal') => ({ rank, mainsnak: { datavalue: { value } } });
+  it("builds each service's title page from its identifier property", () => {
+    expect(
+      wikidataStreamingUrls({
+        P8298: [claim('show/93ba22b1-833e-47ba-ae94-8ee7b9eefa9a')],
+        P1874: [claim('81726714'), claim('70000000', 'deprecated')],
+        P11330: [claim('GG5H5XQX4')],
+        P31: [{ rank: 'normal', mainsnak: { datavalue: { value: { id: 'Q5398426' } } } }],
+      }),
+    ).toEqual([
+      'https://www.netflix.com/title/81726714',
+      'https://www.crunchyroll.com/series/GG5H5XQX4',
+      'https://www.hbomax.com/show/93ba22b1-833e-47ba-ae94-8ee7b9eefa9a',
+    ]);
+  });
+});
+
+describe('withoutSeason', () => {
+  it('names the show a season title belongs to', () => {
+    expect(withoutSeason('Yellowjackets Season 4')).toBe('Yellowjackets');
+    expect(withoutSeason('Percy Jackson and the Olympians Season 3')).toBe('Percy Jackson and the Olympians');
+    expect(withoutSeason('Frieren 2nd Season')).toBe('Frieren');
+    expect(withoutSeason('Neuromancer')).toBeUndefined();
   });
 });

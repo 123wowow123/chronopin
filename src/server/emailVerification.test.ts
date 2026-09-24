@@ -18,7 +18,7 @@ describe('verification links', () => {
 });
 
 describe('verificationEmail', () => {
-  const urls = { link: 'https://chronopin.com/auth/verify-email?token=a&b', profileUrl: 'https://chronopin.com/profile' };
+  const urls = { link: 'https://chronopin.com/auth/verify-email?token=a&b', profileUrl: 'https://chronopin.com/profile', homeUrl: 'https://chronopin.com/' };
 
   it('escapes the name and the link in the HTML, and keeps the text plain', () => {
     const email = verificationEmail({ firstName: '<b>Sam</b>', email: 'sam@example.com' }, urls);
@@ -31,7 +31,7 @@ describe('verificationEmail', () => {
 
   it('links the address to the profile and carries the logo inline', () => {
     const email = verificationEmail({ email: 'sam@example.com' }, urls);
-    expect(email.html).toContain('<a href="https://chronopin.com/profile" style="color:#1a73e8;text-decoration:underline">sam@example.com</a>');
+    expect(email.html).toMatch(/<a class="cp-link" href="https:\/\/chronopin.com\/profile" [^>]*>sam@example.com<\/a>/);
     expect(email.html).toContain('src="cid:chronopin-logo"');
     expect(email.attachments).toEqual([expect.objectContaining({ contentId: 'chronopin-logo', filename: 'chronopin.png' })]);
   });

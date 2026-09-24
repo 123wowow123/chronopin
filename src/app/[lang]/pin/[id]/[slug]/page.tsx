@@ -29,6 +29,8 @@ import { PinTags } from '@/components/pin/PinTags';
 import { PinRatings, RatingSummary } from '@/components/pin/PinRatings';
 import { hasPlace } from '@/lib/places';
 import { affiliateUrl, isAmazonStoreUrl, isPurchaseLinkShown } from '@/lib/affiliate';
+import { streamingService, watchOrder } from '@/lib/streaming';
+import { isWordmark, StreamingLogo } from '@/components/pin/StreamingLogo';
 import { EpisodeCount } from '@/components/pin/EpisodeCount';
 import { MarketVolume } from '@/components/pin/MarketVolume';
 import { PinReferences } from '@/components/pin/PinReferences';
@@ -358,10 +360,42 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
         </div>
       </div>
 
-      {pin.merchants?.some((m) => isPurchaseLinkShown(m.url)) ? (
+      {/* Where to watch a film, series or anime: a merchant whose link is a
+          streaming service (src/lib/streaming.ts), in the service's colours. */}
+      {pin.merchants?.some((m) => streamingService(m.url)) ? (
+        <div className="mt-2 flex flex-wrap items-center gap-2">
+          <span className="mr-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.watchOnHeading')}</span>
+          {watchOrder(pin.merchants).map((merchant, index) => {
+            const service = streamingService(merchant.url);
+            return service ? (
+              <a
+                key={merchant.id ?? index}
+                href={affiliateUrl(merchant.url!)}
+                target="_blank"
+                rel={isAmazonStoreUrl(merchant.url) ? 'noopener nofollow sponsored' : 'noopener nofollow'}
+                aria-label={t('pin.watchOn', { service: service.label })}
+                title={t('pin.watchOn', { service: service.label })}
+                className="btn h-8 gap-1.5 border border-white/15 px-3 py-0 hover:opacity-90"
+                style={{ backgroundColor: service.background, color: service.text }}
+              >
+                {isWordmark(service.label) ? (
+                  <StreamingLogo label={service.label} />
+                ) : (
+                  <>
+                    <StreamingLogo label={service.label} className="size-4 shrink-0" />
+                    {service.label}
+                  </>
+                )}
+              </a>
+            ) : null;
+          })}
+        </div>
+      ) : null}
+
+      {pin.merchants?.some((m) => isPurchaseLinkShown(m.url) && !streamingService(m.url)) ? (
         <div className="mt-2 flex flex-wrap items-center gap-2">
           {pin.merchants
-            .filter((m) => isPurchaseLinkShown(m.url))
+            .filter((m) => isPurchaseLinkShown(m.url) && !streamingService(m.url))
             .map((merchant, index) => (
               <a
                 key={merchant.id ?? index}
@@ -378,10 +412,11 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
                 <Icon name="external" className="size-3.5 shrink-0 opacity-70" />
               </a>
             ))}
-          {/* Amazon Associates asks for this wherever a tagged link is shown. */}
-          {pin.merchants.some((m) => isAmazonStoreUrl(m.url)) ? <p className="basis-full text-xs text-subtle">{t('pin.amazonDisclosure')}</p> : null}
         </div>
       ) : null}
+      {/* Amazon Associates asks for this wherever a tagged link is shown: an
+          Amazon listing, or a Prime Video title (sent to amazon.com, tagged). */}
+      {pin.merchants?.some((m) => isPurchaseLinkShown(m.url) && isAmazonStoreUrl(m.url)) ? <p className="mt-2 text-xs text-subtle">{t('pin.amazonDisclosure')}</p> : null}
 
       <PinReferences pinId={pin.id} authorId={pin.user?.id ?? pin.userId} evidence={pinEvidence(pin)} sourceReasoning={pin.dateConfidenceReasoning} dateRanges={dateRanges} timeZone={timeZone} />
       {/* Right under what backs the pin: a missing link, date or fact goes to

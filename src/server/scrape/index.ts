@@ -482,11 +482,15 @@ async function addLinkedImages(pin: Pin, text: string) {
   }
 }
 
-// Ratings and the episode count onto the pin, with Kalshi's score for the work, and the trailer
+// Ratings and the episode count onto the pin, with Kalshi's score for the work,
+// its streaming services as merchants ("Watch on Netflix"), and the trailer
 // onto the end of its media (so the page's own picture stays the default
 // heading), with the trailer's still as a picture when the page had none.
 function applyScreenDetails(pin: Pin, screen: ScreenDetails | undefined, scoreMarket: ScoreMarket | undefined): Medium | undefined {
   withScoreMarket(screen?.ratings ?? [], scoreMarket).forEach((r) => pin.addRating(new PinRating(r)));
+  screen?.streaming.forEach((link) => {
+    if (!pin.merchants?.some((m) => m.url === link.url)) pin.addMerchant(new Merchant(link));
+  });
   // Only when the page did not say how many episodes: AniList and Wikidata
   // know the show, but the article knows which run the pin is about.
   if (screen?.episodes && !pin.episodeCount) {

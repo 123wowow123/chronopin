@@ -2,7 +2,9 @@
 // promotional video from YouTube (when the pin has no video yet), review-site
 // ratings (refreshed when it has some) and, for an episodic work, how many
 // episodes it has (only when the pin has no count yet - a pin about one season
-// is counted by its own page, not by the catalogue's entry for the show).
+// is counted by its own page, not by the catalogue's entry for the show), and
+// "Watch on" links to the streaming services carrying it (added, never
+// replacing a link the pin already has for that service).
 // See src/server/scrape/screen.ts.
 //
 //   npm run media:screen                  list what would be added
@@ -23,9 +25,11 @@ import { firstCategoryOf } from '@/lib/categories';
 import { inCategories } from '@/server/model/pinTag';
 import * as db from '@/server/db';
 import Medium from '@/server/model/medium';
+import Merchant from '@/server/model/merchant';
 import Pin from '@/server/model/pin';
 import PinTag from '@/server/model/pinTag';
 import { findScreenDetails, malIdOf, SCREEN_CATEGORIES, youtubeStill } from '@/server/scrape/screen';
+import { streamingService } from '@/lib/streaming';
 
 const { values: flags } = parseArgs({
   options: {
@@ -52,7 +56,7 @@ async function run() {
     ids?.length ? [SCREEN_CATEGORIES, ids] : [SCREEN_CATEGORIES],
   );
   console.log(`${flags.apply ? 'Updating' : 'Dry run over'} ${rows.length} pins`);
-  const totals = { trailers: 0, ratings: 0, episodes: 0, tags: 0, unmatched: 0 };
+  const totals = { trailers: 0, ratings: 0, episodes: 0, tags: 0, streaming: 0, unmatched: 0 };
 
   for (const [index, { id, episodeCount }] of rows.entries()) {
     if (index) await sleep(Number(flags.pause));
@@ -83,7 +87,12 @@ async function run() {
     // What the work was adapted from, when the pin is not already tagged with it.
     const adaptedFrom = details.adaptedFrom && !pin.tags?.some((t: { name: string }) => t.name.toLowerCase() === details.adaptedFrom!.toLowerCase()) ? details.adaptedFrom : undefined;
     const tagText = adaptedFrom ? `from ${adaptedFrom}` : 'no adaptation tag';
-    console.log(`${id} ${pin.title}\n    as "${details.workTitle ?? '-'}": ${ratingText}; ${trailerText}; ${episodeText}; ${tagText}`);
+    // Services the pin has no link for yet.
+    const have = new Set(pin.merchants.map((m) => streamingService(m.url)?.label).filter(Boolean));
+    const streaming = details.streaming.filter((m) => !have.has(m.label));
+    const streamingText = streaming.length ? `watch on ${streaming.map((m) => m.label).join(', ')}` : 'no new streaming links';
+    console.log(`${id} ${pin.title}\n    as "${details.workTitle ?? '-'}": ${ratingText}; ${trailerText}; ${episodeText}; ${tagText}; ${streamingText}`);
+    for (const m of streaming) console.log(`      ${m.label}: ${m.url}`);
     if (!details.workTitle && !details.trailer) totals.unmatched++;
 
     if (!flags.apply) {
@@ -91,6 +100,7 @@ async function run() {
       totals.trailers += details.trailer ? 1 : 0;
       totals.episodes += newEpisodes ? 1 : 0;
       totals.tags += adaptedFrom ? 1 : 0;
+      totals.streaming += streaming.length;
       continue;
     }
     try {
@@ -101,6 +111,10 @@ async function run() {
       if (newEpisodes) {
         await Pin.setEpisodes(id, newEpisodes);
         totals.episodes++;
+      }
+      if (streaming.length) {
+        await Merchant.saveAll(streaming.map((m) => new Merchant(m)), id);
+        totals.streaming += streaming.length;
       }
       if (adaptedFrom) {
         await PinTag.addUserTags(id, [adaptedFrom]);
@@ -121,7 +135,7 @@ async function run() {
   }
   console.log(
     `${flags.apply ? 'Added' : 'Would add'} ${totals.trailers} trailers, ${totals.ratings} ratings, ${totals.episodes} episode counts`
-      + ` and ${totals.tags} adaptation tags; ${totals.unmatched} pins matched nothing`,
+      + `, ${totals.tags} adaptation tags and ${totals.streaming} streaming links; ${totals.unmatched} pins matched nothing`,
   );
 }
 

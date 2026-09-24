@@ -12,6 +12,9 @@
  *   say how many episodes the work has, as does Wikidata (P1113).
  * - Wikidata's review-score statements for IMDb, Rotten Tomatoes and
  *   Metacritic. imdb.com itself answers scripts with a bot challenge.
+ * - Where to watch it (Netflix, Crunchyroll, HBO Max...): AniList's streaming
+ *   links for anime, and the services' identifier properties on the Wikidata
+ *   item for everything. Neither says which country a title streams in.
  *
  * A work only counts as found when one of its titles matches exactly (after
  * normalising case, punctuation and "2nd Season"/"Season 2") and its year
@@ -21,7 +24,8 @@
 
 import { mediumID, siteUrl } from '@/lib/appConfig';
 import { categoryList, firstCategoryOf, hasCategory } from '@/lib/categories';
-import type { EpisodeStatus, MediumJson, PinRatingJson } from '@/lib/types';
+import { streamingMerchants } from '@/lib/streaming';
+import type { EpisodeStatus, MediumJson, MerchantJson, PinRatingJson } from '@/lib/types';
 import log from '../util/log';
 
 export const SCREEN_CATEGORIES = ['Anime', 'Movie', 'TV'];
@@ -81,6 +85,9 @@ export type ScreenDetails = {
   // entry, says nothing, or says something that tags a pin with nothing
   // worth searching (see adaptationTag).
   adaptedFrom?: string;
+  // Streaming services carrying the work, as merchants labelled with the
+  // service (src/lib/streaming.ts), one per service.
+  streaming: MerchantJson[];
 };
 
 const REQUEST_TIMEOUT_MS = 8000;
@@ -94,7 +101,7 @@ const USER_AGENT = `ChronopinBot/1.0 (+${siteUrl})`;
 export async function findScreenDetails(query: ScreenQuery, budgetMs = DEFAULT_BUDGET_MS): Promise<ScreenDetails> {
   const signal = AbortSignal.timeout(budgetMs);
   const titles = titleCandidates(query);
-  const details: ScreenDetails = { ratings: [] };
+  const details: ScreenDetails = { ratings: [], streaming: [] };
   if (!titles.length) return details;
 
   const isAnime = query.category?.toLowerCase() === 'anime';
@@ -158,6 +165,19 @@ export async function findScreenDetails(query: ScreenQuery, budgetMs = DEFAULT_B
     const cited = await findMyAnimeList(query.malId, signal).catch(() => undefined);
     if (cited?.rating) details.ratings.push(cited.rating);
     if (isEpisodic) details.episodes ??= cited?.episodes;
+  }
+  // AniList's links first (they carry the title's page, slug and all), then
+  // whatever services only Wikidata knows. A cited id's links only when no
+  // title matched, as with its score above.
+  details.streaming = streamingMerchants([...(anime ?? cited)?.streamingUrls ?? [], ...wikidata?.streamingUrls ?? []]);
+  // A season is watched on the show's own page, and Wikidata's season items
+  // (where there is one to match) carry no streaming ids: "Yellowjackets
+  // Season 4" is streamed as Yellowjackets. Only the links come from the
+  // show's item - its scores and episode count are not the season's.
+  if (!details.streaming.length && !anime && !cited) {
+    const show = titles.map((t) => withoutSeason(t)).find((t): t is string => !!t);
+    const series = show ? await findWikidata(show, undefined, signal, { series: true }) : undefined;
+    details.streaming = streamingMerchants(series?.streamingUrls ?? []);
   }
   if (wikidata) {
     details.ratings.push(...wikidata.ratings);
@@ -235,6 +255,16 @@ export function titleCandidates({ workTitle, pinTitle }: Pick<ScreenQuery, 'work
 }
 
 const seasonOf = (normalized: string) => normalized.match(/\b(?:season|part) (\d+)\b/)?.[1];
+
+// The show a season title names: "Yellowjackets Season 4" -> "Yellowjackets",
+// "Frieren 2nd Season" -> "Frieren". Undefined for a title with no season.
+export function withoutSeason(title: string): string | undefined {
+  const show = title
+    .replace(/[\s:,-]*\b(?:season|series|part) \d+\b.*$/i, '')
+    .replace(/[\s:,-]*\b\d+(?:st|nd|rd|th) (?:season|part)\b.*$/i, '')
+    .trim();
+  return show && show !== title.trim() ? show : undefined;
+}
 
 /* YouTube */
 
@@ -488,7 +518,23 @@ export function youtubeStill(embedUrl: string): MediumJson | undefined {
 
 /* AniList and MyAnimeList */
 
-type AniListMatch = { averageScore?: number; siteUrl?: string; idMal?: number; trailerId?: string; episodes?: ScreenEpisodes; source?: string };
+type AniListMatch = {
+  averageScore?: number;
+  siteUrl?: string;
+  idMal?: number;
+  trailerId?: string;
+  episodes?: ScreenEpisodes;
+  source?: string;
+  streamingUrls?: string[];
+};
+
+// AniList's links of type STREAMING that are still up, e.g. the work's
+// Crunchyroll series page. Which of them are shown is src/lib/streaming.ts's call.
+export function aniListStreamingUrls(links: unknown): string[] {
+  if (!Array.isArray(links)) return [];
+  return links.filter((l) => l?.type === 'STREAMING' && !l.isDisabled && typeof l.url === 'string').map((l) => l.url as string);
+}
+
 
 const ANILIST_QUERY = `query ($search: String) {
   Page(perPage: 10) {
@@ -505,6 +551,7 @@ const ANILIST_QUERY = `query ($search: String) {
       idMal
       source
       trailer { id site }
+      externalLinks { url type isDisabled }
     }
   }
 }`;
@@ -525,6 +572,7 @@ async function findAniList(title: string, year: number | undefined, signal: Abor
     trailerId: match.trailer?.site === 'youtube' ? match.trailer.id : undefined,
     episodes: aniListEpisodes(match),
     source: adaptationTag(match.source),
+    streamingUrls: aniListStreamingUrls(match.externalLinks),
   };
 }
 
@@ -599,6 +647,7 @@ const ANILIST_BY_MAL_QUERY = `query ($idMal: Int) {
     averageScore
     siteUrl
     source
+    externalLinks { url type isDisabled }
   }
 }`;
 
@@ -619,6 +668,7 @@ async function aniListByMalId(idMal: number, signal: AbortSignal): Promise<AniLi
     idMal,
     episodes: aniListEpisodes(media),
     source: adaptationTag(media.source),
+    streamingUrls: aniListStreamingUrls(media.externalLinks),
   };
 }
 
@@ -643,7 +693,44 @@ export function malEpisodes(data: { type?: string | null; status?: string | null
 
 /* Wikidata */
 
-type WikidataMatch = { description?: string; ratings: PinRatingJson[]; episodes?: ScreenEpisodes };
+type WikidataMatch = { description?: string; ratings: PinRatingJson[]; episodes?: ScreenEpisodes; streamingUrls: string[] };
+
+// Streaming services' identifier properties and the title page each id opens
+// (the property's own formatter URL, P1630). Paramount+ has only a per-video
+// id (P13147), which is an episode rather than the work, so it is not here;
+// Crunchyroll's older P4110 is deprecated in favour of the series id.
+const STREAMING_PROPERTIES: Record<string, (id: string) => string> = {
+  P1874: (id) => `https://www.netflix.com/title/${id}`,
+  P11330: (id) => `https://www.crunchyroll.com/series/${id}`,
+  // The formatter's play.hbomax.com redirects here, the public title page.
+  P8298: (id) => `https://www.hbomax.com/${id}`,
+  P7595: (id) => `https://www.disneyplus.com/movies/wd/${id}`,
+  P7596: (id) => `https://www.disneyplus.com/series/wp/${id}`,
+  P6466: (id) => `https://www.hulu.com/movie/${id}`,
+  P6467: (id) => `https://www.hulu.com/series/${id}`,
+  P14440: (id) => `https://www.primevideo.com/detail/${id}`,
+  P8055: (id) => `https://www.amazon.com/gp/video/detail/${id}`,
+  P9586: (id) => `https://tv.apple.com/movie/${id}`,
+  P9751: (id) => `https://tv.apple.com/show/${id}`,
+  P11815: (id) => `https://www.peacocktv.com/stream-${id}`,
+};
+
+// The title pages an item's streaming ids open, in the order above, from the
+// item's claims as wbgetentities gives them (deprecated statements left out).
+export function wikidataStreamingUrls(claims: Record<string, any[]> | undefined): string[] {
+  return Object.entries(STREAMING_PROPERTIES).flatMap(([property, url]) =>
+    (claims?.[property] ?? [])
+      .filter((c) => c?.rank !== 'deprecated' && typeof c?.mainsnak?.datavalue?.value === 'string')
+      .map((c) => url(encodeURI(c.mainsnak.datavalue.value))),
+  );
+}
+
+// The entity API rather than SPARQL: one item's claims come back at once, and
+// the query service times out on a busy day where this does not.
+async function findWikidataStreaming(id: string, signal: AbortSignal): Promise<string[]> {
+  const res = await getJson<any>(`https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=claims&ids=${id}`, signal);
+  return wikidataStreamingUrls(res?.entities?.[id]?.claims);
+}
 
 // Wikidata items for review sites (P447 "review score by"), and how to link
 // to the work on each from its identifier property.
@@ -657,15 +744,17 @@ const REVIEW_SITES: Record<string, { source: string; idColumn: string; url: (id:
 };
 
 const SCREEN_DESCRIPTION = /\b(?:film|movie|television|tv|series|anime|animated|miniseries|ova|season)\b/i;
+const SERIES_DESCRIPTION = /\b(?:television|tv|web|anime|streaming) series\b/i;
 
-async function findWikidata(title: string, year: number | undefined, signal: AbortSignal): Promise<WikidataMatch | undefined> {
+// series: only an item described as a series, for the show a season belongs to.
+async function findWikidata(title: string, year: number | undefined, signal: AbortSignal, { series = false } = {}): Promise<WikidataMatch | undefined> {
   const search = await getJson<any>(
     `https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&uselang=en&type=item&limit=10&search=${encodeURIComponent(title)}`,
     signal,
   );
   const work = normalizeTitle(title);
   const ids: string[] = (search?.search ?? [])
-    .filter((s: any) => SCREEN_DESCRIPTION.test(s.description ?? '') && [s.label, s.match?.text].some((t) => t && normalizeTitle(t) === work))
+    .filter((s: any) => (series ? SERIES_DESCRIPTION : SCREEN_DESCRIPTION).test(s.description ?? '') && [s.label, s.match?.text].some((t) => t && normalizeTitle(t) === work))
     .map((s: any) => s.id)
     .filter((id: string) => /^Q\d+$/.test(id));
   if (!ids.length) return undefined;
@@ -696,7 +785,10 @@ async function findWikidata(title: string, year: number | undefined, signal: Abo
     const years = itemRows.map((r) => Number(r.year)).filter(Number.isFinite);
     const description = itemRows[0].description as string | undefined;
     if (!yearFits(years.length ? Math.min(...years) : undefined, year, /\b(?:series|anime|television)\b/i.test(description ?? ''))) continue;
-    return { description, ratings: wikidataRatings(itemRows), episodes: wikidataEpisodes(itemRows) };
+    // A second request rather than a dozen more OPTIONALs above, each of
+    // which would multiply the review-score rows.
+    const streamingUrls = await findWikidataStreaming(id, signal);
+    return { description, ratings: wikidataRatings(itemRows), episodes: wikidataEpisodes(itemRows), streamingUrls };
   }
   return undefined;
 }

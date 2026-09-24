@@ -216,6 +216,8 @@ const en = {
     openSource: 'Open the source',
     cost: 'Cost',
     buyOnAmazon: 'Buy on Amazon',
+    watchOn: 'Watch on {service}',
+    watchOnHeading: 'Watch on',
     amazonDisclosure: 'As an Amazon Associate, Chronopin earns from qualifying purchases.',
     thread: 'Thread',
     respond: 'Respond to this Pin',

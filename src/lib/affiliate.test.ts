@@ -22,6 +22,25 @@ describe('affiliateUrl', () => {
   });
 });
 
+describe('Prime Video links', () => {
+  it('moves a primevideo.com title page onto amazon.com, tagged', () => {
+    const tagged = `https://www.amazon.com/gp/video/detail/0FCJEHY4FXTDVCLZ5NR9A0N42N?tag=${amazonAssociateTag}`;
+    expect(affiliateUrl('https://www.primevideo.com/detail/0FCJEHY4FXTDVCLZ5NR9A0N42N')).toBe(tagged);
+    expect(affiliateUrl('https://www.primevideo.com/region/na/detail/0FCJEHY4FXTDVCLZ5NR9A0N42N/ref=atv_dp')).toBe(tagged);
+    expect(affiliateUrl('https://www.primevideo.com/-/es/detail/Frieren/0FCJEHY4FXTDVCLZ5NR9A0N42N')).toBe(tagged);
+    expect(affiliateUrl('https://www.amazon.com/gp/video/detail/B0B8TR8Y2K')).toBe(`https://www.amazon.com/gp/video/detail/B0B8TR8Y2K?tag=${amazonAssociateTag}`);
+  });
+
+  it('leaves Prime Video pages that are not a title alone', () => {
+    expect(affiliateUrl('https://www.primevideo.com/storefront')).toBe('https://www.primevideo.com/storefront');
+  });
+
+  it('counts a Prime Video title as a tagged link', () => {
+    expect(isAmazonStoreUrl('https://www.primevideo.com/detail/0FCJEHY4FXTDVCLZ5NR9A0N42N')).toBe(true);
+    expect(isAmazonStoreUrl('https://www.primevideo.com/storefront')).toBe(false);
+  });
+});
+
 describe('isAmazonStoreUrl', () => {
   it('knows the store from the rest', () => {
     expect(isAmazonStoreUrl('https://www.amazon.com/dp/B0727ZQ21F')).toBe(true);

@@ -8,30 +8,45 @@ export const amazonAssociateTag = 'chronopin04-20';
 // other Amazon hosts are not shops, and other country stores need their own id.
 const AMAZON_STORE_HOSTS = new Set(['amazon.com', 'www.amazon.com', 'smile.amazon.com', 'us.amazon.com']);
 
-// The purchase link as it should be clicked: an amazon.com listing carries our
-// tag (replacing anyone else's); anything else comes back untouched.
-export function affiliateUrl(url: string): string {
+// A Prime Video title page ("primevideo.com/detail/0FCJEHY4FXTDVCLZ5NR9A0N42N",
+// also under /region/na/ or a language prefix) is not a page the tag earns on,
+// but amazon.com shows the same title for the same id at /gp/video/detail/,
+// so the link is sent there. Undefined for any other URL.
+const PRIME_VIDEO_TITLE = /\/(?:detail|dp)\/(?:[^/]+\/)?([A-Z0-9]{10,})(?:[/?#]|$)/i;
+
+function primeVideoOnAmazon(parsed: URL): URL | undefined {
+  const host = parsed.hostname.toLowerCase();
+  if (host !== 'primevideo.com' && !host.endsWith('.primevideo.com')) return undefined;
+  const id = parsed.pathname.match(PRIME_VIDEO_TITLE)?.[1];
+  return id ? new URL(`https://www.amazon.com/gp/video/detail/${id}`) : undefined;
+}
+
+// The amazon.com page a link opens as it should be clicked, or undefined when
+// it is not one: an amazon.com store link as it is, a Prime Video title page
+// moved onto amazon.com.
+function amazonStorePage(url: string | undefined | null): URL | undefined {
+  if (!url) return undefined;
   let parsed: URL;
   try {
     parsed = new URL(url);
   } catch {
-    return url;
+    return undefined;
   }
-  if (!AMAZON_STORE_HOSTS.has(parsed.hostname.toLowerCase())) {
-    return url;
-  }
-  parsed.searchParams.set('tag', amazonAssociateTag);
-  return parsed.toString();
+  return AMAZON_STORE_HOSTS.has(parsed.hostname.toLowerCase()) ? parsed : primeVideoOnAmazon(parsed);
 }
 
-export const isAmazonStoreUrl = (url: string | undefined | null): boolean => {
-  if (!url) return false;
-  try {
-    return AMAZON_STORE_HOSTS.has(new URL(url).hostname.toLowerCase());
-  } catch {
-    return false;
-  }
-};
+// The purchase link as it should be clicked: an amazon.com listing (or Prime
+// Video title, moved to amazon.com) carries our tag, replacing anyone else's;
+// anything else comes back untouched.
+export function affiliateUrl(url: string): string {
+  const page = amazonStorePage(url);
+  if (!page) return url;
+  page.searchParams.set('tag', amazonAssociateTag);
+  return page.toString();
+}
+
+// Whether the link is shown tagged, so the page owes the Associates disclosure.
+export const isAmazonStoreUrl = (url: string | undefined | null): boolean => !!amazonStorePage(url);
 
 // Stores we no longer link to. Their rows are gone from the seed data, but a
 // database restored from before (production's, until it is cleaned) still has
