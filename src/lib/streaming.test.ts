@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { streamingMerchants, streamingService, watchOrder } from './streaming';
+import { cleanStreamingUrl, streamingMerchants, streamingService, watchOrder } from './streaming';
 
 describe('streamingService', () => {
   it('knows a service by its host, subdomains included', () => {
@@ -45,5 +45,15 @@ describe('watchOrder', () => {
   it('puts Prime Video first and keeps the rest in order', () => {
     const links = ['https://www.crunchyroll.com/series/x', 'https://www.netflix.com/title/1', 'https://www.primevideo.com/detail/0FCJ', 'https://www.hulu.com/series/y'].map((url) => ({ url }));
     expect(watchOrder(links).map((l) => streamingService(l.url)?.label)).toEqual(['Prime Video', 'Crunchyroll', 'Netflix', 'Hulu']);
+  });
+});
+
+describe('cleanStreamingUrl', () => {
+  it('upgrades http, moves off retired hosts and drops tags and tracking', () => {
+    expect(cleanStreamingUrl('http://www.hulu.com/one-piece')).toBe('https://www.hulu.com/one-piece');
+    expect(cleanStreamingUrl('https://beta.crunchyroll.com/series/GXJHM3P19')).toBe('https://www.crunchyroll.com/series/GXJHM3P19');
+    expect(cleanStreamingUrl('https://www.amazon.com/gp/video/detail/B01MY6K92X/ref=atv_dp_season_select_s2?tag=techblast0f-20')).toBe('https://www.amazon.com/gp/video/detail/B01MY6K92X');
+    expect(cleanStreamingUrl('https://www.primevideo.com/detail/0FKEGV62JLIH656ZBUCR2BBFUJ/ref=atv_dp_share_cu_r')).toBe('https://www.primevideo.com/detail/0FKEGV62JLIH656ZBUCR2BBFUJ');
+    expect(cleanStreamingUrl('https://www.netflix.com/title/80107103')).toBe('https://www.netflix.com/title/80107103');
   });
 });

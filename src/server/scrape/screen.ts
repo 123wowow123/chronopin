@@ -169,12 +169,21 @@ export async function findScreenDetails(query: ScreenQuery, budgetMs = DEFAULT_B
   // AniList's links first (they carry the title's page, slug and all), then
   // whatever services only Wikidata knows. A cited id's links only when no
   // title matched, as with its score above.
-  details.streaming = streamingMerchants([...(anime ?? cited)?.streamingUrls ?? [], ...wikidata?.streamingUrls ?? []]);
+  // Wikidata's title search is loose about kind: the 2026 Supergirl film
+  // matched the 2015 series and would have linked to its Netflix page. Its
+  // links count only when the item is not plainly the other kind of work: a
+  // series for a Movie pin, or a film for a TV one. Anime is either, so an
+  // Anime pin takes both (Your Name. is an Anime pin and a film).
+  const isFilmItem = /\b(?:film|movie)\b/i.test(wikidata?.description ?? '');
+  const category = query.category?.toLowerCase();
+  const wrongKind = (category === 'movie' && !isFilmItem) || (category === 'tv' && isFilmItem);
+  const wikidataLinks = wrongKind ? [] : (wikidata?.streamingUrls ?? []);
+  details.streaming = streamingMerchants([...(anime ?? cited)?.streamingUrls ?? [], ...wikidataLinks]);
   // A season is watched on the show's own page, and Wikidata's season items
   // (where there is one to match) carry no streaming ids: "Yellowjackets
   // Season 4" is streamed as Yellowjackets. Only the links come from the
   // show's item - its scores and episode count are not the season's.
-  if (!details.streaming.length && !anime && !cited) {
+  if (!details.streaming.length && !anime && !cited && isEpisodic) {
     const show = titles.map((t) => withoutSeason(t)).find((t): t is string => !!t);
     const series = show ? await findWikidata(show, undefined, signal, { series: true }) : undefined;
     details.streaming = streamingMerchants(series?.streamingUrls ?? []);

@@ -45,15 +45,31 @@ export function streamingService(url: string | null | undefined): StreamingServi
   return STREAMING_SERVICES.find((service) => service.matches(parsed));
 }
 
+// A link as it should be stored. AniList's are typed in by its users, so
+// some are from before the services went https-only ("http://www.hulu.com/
+// one-piece"), some are on a retired host (beta.crunchyroll.com), and some
+// carry someone's Amazon affiliate tag and ref= tracking, which would be
+// replaced when shown anyway (affiliateUrl) but should not be kept.
+export function cleanStreamingUrl(url: string): string {
+  let parsed: URL;
+  try {
+    parsed = new URL(url.replace(/^http:/i, 'https:'));
+  } catch {
+    return url;
+  }
+  if (parsed.hostname.toLowerCase() === 'beta.crunchyroll.com') parsed.hostname = 'www.crunchyroll.com';
+  parsed.pathname = parsed.pathname.replace(/\/ref=[^/]*$/, '');
+  for (const key of ['tag', 'ref', 'ref_', 'linkCode', 'linkId', 'camp', 'creative']) parsed.searchParams.delete(key);
+  return parsed.toString();
+}
+
 // Watch links as merchants, one per service (the first link for each wins),
 // in the order given, skipping any URL that is not one of the services above.
-// AniList still lists some links from before the services went https-only
-// ("http://www.hulu.com/one-piece"), which all redirect, so they are upgraded.
 export function streamingMerchants(urls: (string | null | undefined)[]): MerchantJson[] {
   const out: MerchantJson[] = [];
   for (const url of urls) {
     const service = streamingService(url);
-    if (service && !out.some((m) => m.label === service.label)) out.push({ label: service.label, url: url!.replace(/^http:/i, 'https:') });
+    if (service && !out.some((m) => m.label === service.label)) out.push({ label: service.label, url: cleanStreamingUrl(url!) });
   }
   return out;
 }
