@@ -3,6 +3,7 @@ import { getUser, requireUser } from '@/server/auth';
 import { HttpError, json, route } from '@/server/http';
 import Follow from '@/server/model/follow';
 import User from '@/server/model/user';
+import UserBlock from '@/server/model/userBlock';
 
 type Ctx = RouteContext<'/api/users/[id]/follow'>;
 
@@ -36,6 +37,10 @@ export const POST = route(async (request: NextRequest, ctx: Ctx) => {
   const userId = await followee(ctx);
   if (userId === follower.id) {
     throw new HttpError(400, '', { message: 'you cannot follow yourself' });
+  }
+  // Blocking ended any follow between them; it does not start again.
+  if (await UserBlock.between(follower.id, userId)) {
+    throw new HttpError(403, '', { code: 'blocked', message: 'you cannot follow this user' });
   }
   const { changed } = await Follow.follow(follower.id, userId);
   return status(userId, follower.id, changed ? 201 : 200);

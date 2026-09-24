@@ -2,10 +2,12 @@
 
 import { startTransition, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { FollowButton } from '@/components/pin/FollowButton';
+import { UserMenu } from '@/components/pin/UserMenu';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { CardGrid } from '@/components/pin/CardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { useBlocks } from '@/lib/client/blocks';
+import { useSession } from '@/lib/client/session';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { parseLinkHeader } from '@/lib/client/api';
 import { createPageAhead } from '@/lib/client/pageAhead';
@@ -157,6 +159,7 @@ export function SearchResults({
   const timeZone = useTimeZone(serverTimeZone);
   const t = useT();
   const blocks = useBlocks();
+  const { user } = useSession();
   const [postedWithin, setPostedWithin] = useState<string | null>(initialView.postedWithin ?? DEFAULT_POSTED_WITHIN);
   // Any search can sort: a filter-only one (tag:, user:) has no scores, so
   // by relevance it keeps date order but still gets the grid and start filter.
@@ -507,9 +510,25 @@ export function SearchResults({
                   <div className="floating flex flex-col gap-3 px-4 py-3.5">
                     <div className="flex items-center gap-2 font-semibold text-ink">
                       <UserAvatar userName={searchedUser.userName} className="size-7 text-sm" />
-                      {searchedUser.userName}
+                      <span className="min-w-0 flex-1 truncate">{searchedUser.userName}</span>
+                      {/* Block and Unblock, for a signed-in reader on someone else. */}
+                      {user && user.id !== searchedUser.id ? (
+                        <span className="-my-1 -mr-2">
+                          <UserMenu
+                            user={{ id: searchedUser.id, userName: searchedUser.userName, pictureUrl: null }}
+                            blocked={blocks.ids.has(searchedUser.id)}
+                          />
+                        </span>
+                      ) : null}
                     </div>
-                    <FollowButton userId={searchedUser.id} userName={searchedUser.userName} showCount />
+                    {/* Blocking ends a follow and keeps a new one from starting, so
+                        the button gives way to what is so (and, back after an
+                        unblock, reads the counts afresh). */}
+                    {blocks.ids.has(searchedUser.id) ? (
+                      <p className="text-sm text-muted">{t('profile.blocked')}</p>
+                    ) : (
+                      <FollowButton userId={searchedUser.id} userName={searchedUser.userName} showCount />
+                    )}
                   </div>
                 ) : null}
                 {searchedCompany ? <SearchedCompanyPanel company={searchedCompany} /> : null}

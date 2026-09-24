@@ -78,22 +78,30 @@ test('a reader blocks another from a comment, and unblocks them', async ({ page,
   await other.dispose();
 });
 
-test("a blocked author's pins leave the reader's search", async ({ page }) => {
+// The user: search's card has its own three-dot menu to block from, and
+// the blocked author's pins leave the search; Unblock there brings them back.
+test("a reader blocks an author from their search card, and their pins leave", async ({ page }) => {
   const pins = await page.request.get('/api/pins').then(async (r) => {
     const body = await r.json();
     return Array.isArray(body) ? body : body.pins;
   });
   const author = pins.find((p: { user?: { id: number; userName?: string } }) => p.user?.userName)!.user;
   await member(page.request, 'pinblocker');
-  const search = `/search?q=${encodeURIComponent(`user:${author.userName.replace(/^@/, '')}`)}`;
-  await page.goto(search);
+  await page.goto(`/search?q=${encodeURIComponent(`user:${author.userName.replace(/^@/, '')}`)}`);
   const cards = page.getByRole('article');
   await expect(cards.first()).toBeVisible();
 
-  expect((await page.request.put(`/api/users/${author.id}/block`)).status()).toBe(201);
-  await page.goto(search);
-  // The results still load (their day headings and counts), just no cards.
-  await page.waitForLoadState('networkidle');
+  const menu = page.getByRole('button', { name: 'More actions' });
+  await menu.click();
+  await page.getByRole('menuitem', { name: 'Block', exact: true }).click();
+  await page.getByRole('menuitem', { name: `Block ${author.userName}` }).click();
   await expect(cards).toHaveCount(0);
-  expect((await page.request.delete(`/api/users/${author.id}/block`)).status()).toBe(204);
+  await expect(page.getByText('Blocked', { exact: true })).toBeVisible();
+  // Nor can they be followed while blocked.
+  expect((await page.request.post(`/api/users/${author.id}/follow`)).status()).toBe(403);
+
+  await menu.click();
+  await page.getByRole('menuitem', { name: 'Unblock' }).click();
+  await expect(cards.first()).toBeVisible();
+  await expect(page.getByRole('button', { name: /^Follow/ })).toBeVisible();
 });
