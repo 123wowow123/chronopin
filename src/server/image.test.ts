@@ -1,6 +1,6 @@
 import { Jimp } from 'jimp';
-import { describe, expect, it } from 'vitest';
-import { shrinkImage, trimPng } from './image';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+import { downloadImage, shrinkImage, trimPng } from './image';
 
 const OPTIONS = { width: 100, uploadImageWidth: 100 };
 
@@ -68,5 +68,71 @@ describe('WebP and AVIF', () => {
     const { needsConversion } = await import('./image');
     const png = await new Jimp({ width: 4, height: 4, color: 0xffffffff }).getBuffer('image/png');
     expect(needsConversion(png)).toBe(false);
+  });
+});
+
+describe('downloadImage retries', () => {
+  const URL = 'https://example.com/picture.jpg';
+  const ok = () => new Response(new Uint8Array([1, 2, 3]), { status: 200 });
+
+  // Runs a download under fake timers, stepping through its pauses.
+  async function download(fetchMock: ReturnType<typeof vi.fn>) {
+    vi.useFakeTimers();
+    vi.stubGlobal('fetch', fetchMock);
+    const result = downloadImage(URL).then(
+      (buffer) => ({ buffer }),
+      (error: Error) => ({ error }),
+    );
+    await vi.runAllTimersAsync();
+    return result;
+  }
+
+  afterEach(() => {
+    vi.useRealTimers();
+    vi.unstubAllGlobals();
+  });
+
+  it('tries again after a network error', async () => {
+    const fetchMock = vi.fn().mockRejectedValueOnce(new TypeError('fetch failed')).mockResolvedValueOnce(ok());
+    expect(await download(fetchMock)).toEqual({ buffer: Buffer.from([1, 2, 3]) });
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+
+  it('gives up after three tries, keeping the cause in the message', async () => {
+    const fetchMock = vi.fn().mockRejectedValue(new TypeError('fetch failed'));
+    const { error } = (await download(fetchMock)) as { error: Error };
+    expect(error.message).toMatch(/fetch failed/);
+    expect(fetchMock).toHaveBeenCalledTimes(3);
+  });
+
+  it('tries again after a 5xx', async () => {
+    const fetchMock = vi.fn().mockResolvedValueOnce(new Response('', { status: 503 })).mockResolvedValueOnce(ok());
+    expect(await download(fetchMock)).toHaveProperty('buffer');
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+
+  it('does not retry a 404', async () => {
+    const fetchMock = vi.fn().mockResolvedValue(new Response('', { status: 404 }));
+    const { error } = (await download(fetchMock)) as { error: Error };
+    expect(error.message).toMatch(/failed with 404/);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("waits out a 429's Retry-After without spending a retry", async () => {
+    const limited = () => new Response('', { status: 429, headers: { 'retry-after': '2' } });
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(limited())
+      .mockRejectedValueOnce(new TypeError('fetch failed'))
+      .mockRejectedValueOnce(new TypeError('fetch failed'))
+      .mockResolvedValueOnce(ok());
+    expect(await download(fetchMock)).toHaveProperty('buffer');
+    expect(fetchMock).toHaveBeenCalledTimes(4);
+  });
+
+  it('sends a timeout signal with each try', async () => {
+    const fetchMock = vi.fn().mockResolvedValue(ok());
+    await download(fetchMock);
+    expect(fetchMock.mock.calls[0][1].signal).toBeInstanceOf(AbortSignal);
   });
 });

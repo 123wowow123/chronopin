@@ -43,22 +43,22 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **Tags should be relevant and catchy.** Owner, 2026-09-21: pin 2389 (US Fiscal Year 2028) was tagged `Appropriations, Federal budget, Fiscal year, United States` and was missing the thing anyone would actually search for - `Government Shutdown`. Tag the consequence and the familiar name people know the event by, not just the procedural vocabulary of the source, and title-case them (`Federal Budget`, `Fiscal Year 2028`).
 
 * **A product pin says what the product is.** Owner, 2026-09-22, on pin 2346 (the A350F first flight): "Product pins should have notable features in long form summary". A pin about an aircraft, vehicle, device, chip, game, AI model or software release gets summary points on what is new or distinctive about it and its headline specifications with units, not only the event's date and schedule. Owner, same day: the features go in **their own section** - `<h3>Notable features</h3><ul>...</ul>` after the event's list - "rather than piled into large list of bullets with other things". Built into all three summary prompts (`PRODUCT_FEATURES_RULE` in `src/server/extract/index.ts`); the wiki pages now record a product's features too. The manufacturer's product page is the usual place for the specs; add it as a reference.
-## 2026-09-23 - Nestlé news events, straight to production (@FoodDesk, @EconDesk, @HealthDesk, @LawDesk, @BuildDesk)
+## 2026-09-23 - Nestlé news events, straight to production (@ConsumerDesk, @EconDesk, @HealthDesk, @LawDesk, @BuildDesk)
 
 Ian asked to "pin Nestle news events on prod". Same workflow as the Aramco batch below: four agents
 drafted POST bodies (results / leadership and job cuts / portfolio and sites / safety and legal), the
 lead deduped, checked and posted serially with each desk's prod token. Twenty-eight pins, all tagged
 `Nestlé`, company Nestlé (ids interleaved with a Verizon session's):
 
-- **Results chain** (@FoodDesk, `Food`, `Finance`, timed 07:00 Vevey from GlobeNewswire's "01:00 ET"
+- **Results chain** (@ConsumerDesk, `Food`, `Finance`, timed 07:00 Vevey from GlobeNewswire's "01:00 ET"
   stamp): 3059 H1 2025 -> 3061 9M 2025 -> 3062 FY 2025 -> 3064 Q1 2026 -> 3065 H1 2026 -> 3066 9M 2026
   (`scheduled` 22 Oct 2026) -> 3067 FY 2026 (`scheduled` 18 Feb 2027), both from the Half-Year Report's
   shareholder calendar.
-- **Leadership** (@FoodDesk): 3068 Freixe fired / Navratil CEO -> 3069 Isla chairman (the 1 Oct effective
+- **Leadership** (@ConsumerDesk): 3068 Freixe fired / Navratil CEO -> 3069 Isla chairman (the 1 Oct effective
   day, not the 16 Sep announcement) -> 3071 AGM 2026 at the SwissTech Convention Center.
 - **Job cuts** (@EconDesk, `Labour`, tag `Layoffs`): 3072 the ~16,000 cuts -> 3074 the end-2027 deadline
   (`estimated`); 3076 Diósgyőr chocolate factory handed to Vimpex on 1 Jan 2027.
-- **Portfolio** (@FoodDesk): 3078 Blue Bottle to Centurium; 3080 Peranel waters JV with Platinum Equity
+- **Portfolio** (@ConsumerDesk): 3078 Blue Bottle to Centurium; 3080 Peranel waters JV with Platinum Equity
   (EUR 4.9bn) -> 3083 close (`estimated` H1 2027); 3084 mainstream vitamins to Yellow Wood ($1.0bn)
   -> 3086 close (`estimated` H1 2027). **Sites** (@BuildDesk): 3088 Purina Batavia, Ohio opens; 3089
   Purina Mantua plant (production 2029, `estimated`).
@@ -74,7 +74,7 @@ lead deduped, checked and posted serially with each desk's prod token. Twenty-ei
   transactional, so the pin row and references were saved with **no media and no user tags**. Every
   image downloaded fine from the Mac, so it was transient on the busy VM (another session posting at
   the same time). Repair: find the pin by title just past the newest id and send the whole draft as a
-  `PUT` (update fetches thumbs before its transaction opens). `post.mjs` now does this itself. A
+  `PUT` (update fetches thumbs before its transaction opens). `post.mjs` now does this itself. Fixed at the source on 2026-09-24: `downloadImage` (src/server/image.ts) gives each try a 30 s timeout and retries a network error, timeout or 5xx twice (after 1 s and 4 s). A
   count by `tag:` and `company:` confirmed no stray duplicates.
 * **Learned - nestle.com is walled to everything the app has.** Cloudflare 403s plain `curl`, and
   the app's own headless scraper and `fetchSourceText` get only "Just a quick security check", so prod
@@ -103,12 +103,18 @@ lead deduped, checked and posted serially with each desk's prod token. Twenty-ei
   "completes" while Nestlé said "expected to close"; Food Dive said the ice cream was sold, the H1
   report says "held for sale". Reverse-geocoding a courthouse or palace centroid gives the nearest
   street, so those pins use Nominatim's own label for the named object.
-* **Judgement calls to revisit:** @FoodDesk (restaurants until now) took Nestlé's company-level pins
-  because `Food` is the company's category; results/leadership could equally sit on a new consumer-goods
-  desk. The AGM (3071) was kept in the leadership chain and the results team's duplicate dropped.
+* **Feedback - a consumer-goods company gets its own desk.** Owner, 2026-09-24: the company-level pins
+  had gone to @FoodDesk and "should use a new user" - @FoodDesk is restaurants. **@ConsumerDesk** (user
+  410) was created on prod for consumer-goods companies (packaged food, drinks, household and personal
+  care) and took the fifteen results, leadership and deal pins; event desks keep theirs. The account was
+  signed up through `POST /api/users`, but prod's email-verification gate blocks an unconfirmed account
+  from posting and a `.local` address gets no mail, and the API cannot change a pin's author - so the
+  owner ran one SQL transaction on prod (confirm user 410's email, set `userId` 372 -> 410 on the fifteen
+  ids), then each pin got a whole-pin `PUT` as @ConsumerDesk so caches, the live feed and search saw the
+  new owner. Ids, chains, references and duplicate decisions were kept (a delete-and-repost loses them).
+* **Judgement calls to revisit:** The AGM (3071) was kept in the leadership chain and the results team's duplicate dropped.
   Not pinned: the ice-cream exit (nothing signed), yfood (no date), the Toronto KitKat line, Purina
   Vargeão (Brazil), German plant closures (unverified), Bonneval's suit (no hearing date).
-* **Feedback**: none yet.
 * **Changed**: [Vertical recipes](verticals.md) - a Nestlé row; [Sources](sources.md) - nestle.com,
   GlobeNewswire, franceinfo.
 

@@ -30,19 +30,50 @@ const WIKIMEDIA_HEADERS = {
 const isWikimedia = (url: string) => /^https?:\/\/[\w.-]*wikimedia\.org\//i.test(url);
 // The longest a 429's Retry-After is waited out once before giving up.
 const MAX_RETRY_AFTER_S = 90;
+// One try's limit, headers and body together: a host that stalls would
+// otherwise hold a pin save open for as long as it likes.
+const DOWNLOAD_TIMEOUT_MS = 30_000;
+// A network error (undici's "fetch failed": a reset or a DNS blip on a busy
+// server), a timeout or a 5xx is tried again after these pauses. Creating a
+// pin is not one transaction, so a picture that failed once used to leave the
+// pin saved without its media or tags (4 of 28 production posts, 2026-09-23).
+const RETRY_PAUSES_MS = [1000, 4000];
+
+const pause = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export async function downloadImage(imgUrl: string): Promise<Buffer> {
   const headers = isWikimedia(imgUrl) ? WIKIMEDIA_HEADERS : DOWNLOAD_HEADERS;
-  let res = await fetch(imgUrl, { headers });
-  const wait = Number(res.headers.get('retry-after'));
-  if (res.status === 429 && wait > 0 && wait <= MAX_RETRY_AFTER_S) {
-    await new Promise((resolve) => setTimeout(resolve, wait * 1000));
-    res = await fetch(imgUrl, { headers });
-  }
-  if (!res.ok) {
+  let waitedOutRateLimit = false;
+  for (let retry = 0; ; retry++) {
+    const canRetry = retry < RETRY_PAUSES_MS.length;
+    let res: Response;
+    try {
+      res = await fetch(imgUrl, { headers, signal: AbortSignal.timeout(DOWNLOAD_TIMEOUT_MS) });
+      if (res.ok) return Buffer.from(await res.arrayBuffer());
+    } catch (err) {
+      // The cause's own words stay in the message: callers such as
+      // media:top-up decide on retrying by them.
+      const message = (err as Error).message || String(err);
+      if (!canRetry) throw new Error(`Image download failed (${message}): ${imgUrl}`, { cause: err });
+      log.warn(`image download retry ${retry + 1} (${message}): ${imgUrl}`);
+      await pause(RETRY_PAUSES_MS[retry]);
+      continue;
+    }
+    await res.body?.cancel().catch(() => undefined);
+    const wait = Number(res.headers.get('retry-after'));
+    if (res.status === 429 && !waitedOutRateLimit && wait > 0 && wait <= MAX_RETRY_AFTER_S) {
+      waitedOutRateLimit = true;
+      retry--;
+      await pause(wait * 1000);
+      continue;
+    }
+    if (canRetry && (res.status >= 500 || res.status === 408)) {
+      log.warn(`image download retry ${retry + 1} (${res.status}): ${imgUrl}`);
+      await pause(RETRY_PAUSES_MS[retry]);
+      continue;
+    }
     throw new Error(`Image download failed with ${res.status}: ${imgUrl}`);
   }
-  return Buffer.from(await res.arrayBuffer());
 }
 
 const PNG_SIGNATURE = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
