@@ -24,6 +24,7 @@ import log from '@/server/util/log';
 import { excludeE2e } from './excludeE2e';
 import PinTranslation from '@/server/model/pinTranslation';
 import PinSentiment from '@/server/model/pinSentiment';
+import ProductPicture from '@/server/model/productPicture';
 
 const { values: flags } = parseArgs({
   options: {
@@ -50,6 +51,7 @@ const { values: flags } = parseArgs({
     seriesfile: { type: 'string', default: './scripts/backup/seedSeries.json' },
     translationfile: { type: 'string', default: './scripts/backup/seedTranslations.json' },
     sentimentfile: { type: 'string', default: './scripts/backup/seedPinSentiments.json' },
+    productpicturefile: { type: 'string', default: './scripts/backup/seedProductPictures.json' },
     companyfile: { type: 'string', default: './scripts/backup/seedCompanies.json' },
     aphelionfile: { type: 'string', default: './scripts/backup/aphelion.json' },
     equinoxfile: { type: 'string', default: './scripts/backup/equinox.json' },
@@ -243,6 +245,11 @@ async function saveDB() {
   // How each company pin reads as news (0068): each costs a Claude call to make again.
   console.log('Backup Pin Sentiments');
   writeJson(flags.sentimentfile, (await PinSentiment.getAll()).filter((t) => keptPinIds.has(t.pinId)));
+
+  // Pictures looked up for products with none of their own (0079): each is a
+  // Wikipedia or paid Google lookup to make again.
+  console.log('Backup Product Pictures');
+  writeJson(flags.productpicturefile, (await ProductPicture.getAll()).filter((p) => keptCompanyIds.has(p.companyId)));
 
   console.log('Data Backup Complete');
 }
@@ -477,6 +484,14 @@ async function seedDB() {
       await PinSentiment.restore(readJson(flags.sentimentfile));
     } catch (error) {
       log.error('Pin Sentiments Save Error', JSON.stringify(error));
+    }
+  }
+
+  if (existsSync(flags.productpicturefile)) {
+    try {
+      await ProductPicture.restore(readJson(flags.productpicturefile));
+    } catch (error) {
+      log.error('Product Pictures Save Error', JSON.stringify(error));
     }
   }
 

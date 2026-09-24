@@ -107,6 +107,15 @@ export const config = {
     apiKey: env('GOOGLE_PLACES_API_KEY') || '',
   },
 
+  // Google Custom Search (Programmable Search Engine) image search, for a
+  // product line's picture when Wikipedia has none (src/server/productPicture.ts).
+  // Only the dev machine looks pictures up; without a key and engine id the
+  // Google step is skipped. Free for 100 queries a day, then billed.
+  googleSearch: {
+    apiKey: env('GOOGLE_SEARCH_API_KEY') || '',
+    engineId: env('GOOGLE_SEARCH_ENGINE_ID') || '',
+  },
+
   // Yelp Fusion, for the Yelp rating, review count, review excerpts and
   // whether the business takes reservations through Yelp. The free tier
   // covers this; without a key the Yelp half is simply absent.

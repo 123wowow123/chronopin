@@ -10,6 +10,8 @@ import Company from '../model/company';
 import CompanyFollow from '../model/companyFollow';
 import PinSentiment from '../model/pinSentiment';
 import Pins, { type SearchFilter, type SearchRank } from '../model/pins';
+import PinView from '../model/pinView';
+import ProductPicture from '../model/productPicture';
 import { SearchPins } from '../model/searchPin';
 import User from '../model/user';
 import { HttpError } from '../util/httpError';
@@ -240,11 +242,15 @@ async function attachSearchedCompany(pins: Pins, query: SearchQuery) {
   if (query.companies.length !== 1) return;
   const company = await Company.byName(query.companies[0]);
   if (!company) return;
-  const [comments, follow, pinTones] = await Promise.all([
+  const [comments, follow, pinTones, productPictures] = await Promise.all([
     Comment.forCompany(company.id, COMPANY_MOOD_COMMENTS),
     CompanyFollow.status(company.id, null),
     PinSentiment.forCompany(company.id),
+    ProductPicture.forCompany(company.id),
   ]);
+  // Pictures only for the pins with a product: each product's row shows one,
+  // else the one looked up for it (0079).
+  const pictures = await PinView.pictures(pinTones.filter((p) => p.product).map((p) => p.id));
   (pins as Pins & { company?: unknown }).company = {
     id: company.id,
     name: company.name,
@@ -258,11 +264,12 @@ async function attachSearchedCompany(pins: Pins, query: SearchQuery) {
     // its comments read, by when each was written (src/lib/companySentiment.ts).
     // Each pin's product lets the page graph its major products too.
     sentiment: {
-      pins: pinTones.map((p) => ({ id: p.id, title: p.title, at: p.utcStartDateTime.toISOString(), value: p.sentiment, product: p.product })),
+      pins: pinTones.map((p) => ({ id: p.id, title: p.title, at: p.utcStartDateTime.toISOString(), value: p.sentiment, product: p.product, ...pictures.get(p.id) })),
       comments: comments
         .filter((c): c is typeof c & { sentiment: number } => c.sentiment != null)
         .map((c) => ({ at: c.utcCreatedDateTime.toISOString(), value: c.sentiment, pinId: c.pinId }))
         .reverse(),
+      productPictures,
     },
   };
 }

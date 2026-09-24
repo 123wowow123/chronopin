@@ -111,9 +111,16 @@ if (!g.__chronopinPinListeners) {
 
   // How the pin reads as news for its company (extract/pinSentiment.ts), for
   // the company search's graph; again only when its title or summary changed.
+  // On the dev machine only, a product it names that has no picture gets one
+  // looked up (productPicture.ts); prod stores what a local run sends it.
   const scoreTone = (pin: Row) => {
     import('./extract/pinSentiment')
       .then(({ scorePin }) => scorePin(Number(pin.id)))
+      .then(async (scored) => {
+        if (!scored || process.env.NODE_ENV === 'production') return;
+        const { pictureProductOf } = await import('./productPicture');
+        await pictureProductOf(Number(pin.id));
+      })
       .catch((err) => log.warn(`sentiment scoring failed for pin ${pin.id}:`, (err as Error).message));
   };
   pinEvents.on('save', scoreTone);

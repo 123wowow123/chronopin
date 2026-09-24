@@ -11,10 +11,14 @@ export type SentimentBucket = { at: number; value: number; count: number };
 
 export type CompanySentiment = {
   // Scored pins: id and title for the tooltip and the link, and the product
-  // line each is about (0070; null for none or not read yet).
-  pins: { id: number; title: string; at: string; value: number; product?: string | null }[];
+  // line each is about (0070; null for none or not read yet), with the pin's
+  // picture when it has a product (PinView.pictures), for the product's row.
+  pins: { id: number; title: string; at: string; value: number; product?: string | null; thumbName?: string | null; originalUrl?: string | null }[];
   // pinId: which pin each is on, so a product's graph takes its pins' comments.
   comments: { at: string; value: number; pinId?: number }[];
+  // { product (lower case): picture URL } looked up for products none of
+  // whose pins has a picture (ProductPicture, 0079).
+  productPictures?: Record<string, string>;
 };
 
 const YEAR_MS = 365.25 * 86400000;
@@ -121,8 +125,15 @@ export function explainSentiment(pins: ExplainedPin[], now: number): SentimentEx
 // A company's major products: its pins grouped by the product each is about,
 // most pinned first (the latest pin breaks a tie), each with the comments on
 // its pins, for the graph per product the company panel shows under its own.
+// Its picture is the newest of its pins' that has one - the product as it
+// looks now - else the one looked up for it, else none.
 
-export type ProductSentiment = { name: string; average: number; sentiment: CompanySentiment };
+export type ProductSentiment = {
+  name: string;
+  average: number;
+  picture: { thumbName?: string | null; originalUrl?: string | null } | null;
+  sentiment: CompanySentiment;
+};
 
 export function majorProducts(sentiment: CompanySentiment): ProductSentiment[] {
   const groups = new Map<string, CompanySentiment['pins']>();
@@ -135,14 +146,20 @@ export function majorProducts(sentiment: CompanySentiment): ProductSentiment[] {
     else groups.set(key, [pin]);
   }
   const latest = (pins: CompanySentiment['pins']) => Math.max(...pins.map((p) => Date.parse(p.at)));
-  return [...groups.values()]
-    .sort((a, b) => b.length - a.length || latest(b) - latest(a))
-    .map((pins) => {
+  return [...groups.entries()]
+    .sort(([, a], [, b]) => b.length - a.length || latest(b) - latest(a))
+    .map(([key, pins]) => {
       const ids = new Set(pins.map((p) => p.id));
+      const pictured = pins.filter((p) => p.thumbName || p.originalUrl).sort((a, b) => Date.parse(b.at) - Date.parse(a.at))[0];
       return {
         // The spelling most of its pins use.
         name: mostCommon(pins.map((p) => p.product!)),
         average: round(mean(pins.map((p) => p.value))),
+        picture: pictured
+          ? { thumbName: pictured.thumbName, originalUrl: pictured.originalUrl }
+          : sentiment.productPictures?.[key]
+            ? { originalUrl: sentiment.productPictures[key] }
+            : null,
         sentiment: { pins, comments: sentiment.comments.filter((c) => c.pinId != null && ids.has(c.pinId)) },
       };
     });

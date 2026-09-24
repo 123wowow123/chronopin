@@ -103,6 +103,28 @@ describe('majorProducts', () => {
     expect(products[0].sentiment.comments).toEqual([{ at: '2026-01-02T00:00:00Z', value: 1, pinId: 3 }]);
   });
 
+  it('pictures each product with its newest pin that has a picture, else none', () => {
+    const products = majorProducts({
+      pins: [
+        { ...pin(1, '2025-01-01', 0.5, 'Model 3'), thumbName: 'old.jpg' },
+        { ...pin(2, '2025-06-01', 0.5, 'Model 3'), originalUrl: 'https://example.com/new.jpg' },
+        pin(3, '2026-01-01', 0.5, 'Model 3'),
+        pin(4, '2026-01-01', 0.5, 'Roadster'),
+      ],
+      comments: [],
+    });
+    expect(products.map((p) => p.picture)).toEqual([{ thumbName: undefined, originalUrl: 'https://example.com/new.jpg' }, null]);
+  });
+
+  it('falls back to the picture looked up for a product none of whose pins has one', () => {
+    const products = majorProducts({
+      pins: [{ ...pin(1, '2026-01-01', 0.5, 'Model 3'), thumbName: 'm3.jpg' }, pin(2, '2025-01-01', 0.5, 'Roadster')],
+      comments: [],
+      productPictures: { 'model 3': 'https://example.com/looked-up.jpg', roadster: 'https://example.com/roadster.jpg' },
+    });
+    expect(products.map((p) => p.picture)).toEqual([{ thumbName: 'm3.jpg', originalUrl: undefined }, { originalUrl: 'https://example.com/roadster.jpg' }]);
+  });
+
   it('is empty when no pin has a product', () => {
     expect(majorProducts({ pins: [pin(1, '2025-01-01', 0.5, null)], comments: [] })).toEqual([]);
   });

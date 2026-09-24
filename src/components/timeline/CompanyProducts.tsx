@@ -1,6 +1,7 @@
 'use client';
 
 import { useId, useMemo, useState } from 'react';
+import { PinThumb } from '@/components/pin/PinThumb';
 import { Icon } from '@/components/ui/Icon';
 import { useT } from '@/lib/client/i18n';
 import { averageByPeriod, bucketUnit, majorProducts, type CompanySentiment, type ProductSentiment } from '@/lib/companySentiment';
@@ -9,14 +10,15 @@ import { CompanySentimentChart } from './CompanySentiment';
 // The products listed before "Show more".
 const SHOWN = 5;
 // The sparkline's size, and the room it keeps so a dot on -1 or 1 is whole.
-const SPARK_W = 128;
+const SPARK_W = 104;
 const SPARK_H = 22;
 const SPARK_PAD = 2.5;
 
 const signed = (value: number) => `${value > 0 ? '+' : ''}${value.toFixed(2)}`;
 
-// A company's major products, each as a row: its name, how many pins it has,
-// a sparkline of how they read as news and their average. The sparklines share
+// A company's major products, each as a row: a picture from its newest pin
+// that has one (a blank tile keeps the rows lined up), its name, how many pins
+// it has, a sparkline of how they read as news and their average. The sparklines share
 // one time axis - the company's whole span - so rows compare at a glance.
 // Picking a row opens that product's own graph (CompanySentimentChart), with
 // hover, the Today line and a table for screen readers. Nothing until at
@@ -80,20 +82,23 @@ export function CompanyProductsPanel({ name, sentiment }: { name: string; sentim
                 type="button"
                 onClick={() => setOpen(expanded ? null : key)}
                 aria-expanded={expanded}
-                className={`flex flex-col gap-0.5 rounded-lg px-2 py-1.5 text-left hover:bg-raised ${expanded ? 'bg-raised/60' : ''}`}
+                className={`flex items-center gap-2.5 rounded-lg px-2 py-1.5 text-left hover:bg-raised ${expanded ? 'bg-raised/60' : ''}`}
               >
-                {/* The name and its average on one line, then the pin count
-                    and the sparkline under them. */}
-                <span className="flex items-center gap-2">
-                  <span className="min-w-0 flex-1 truncate text-sm font-medium text-ink">{product.name}</span>
-                  <span className="shrink-0 text-xs font-medium text-ink tabular-nums" title={t('company.productAverage', { value: signed(product.average) })}>
-                    {signed(product.average)}
+                <PinThumb thumbName={product.picture?.thumbName} originalUrl={product.picture?.originalUrl} className="h-9 w-12" />
+                <span className="flex min-w-0 flex-1 flex-col gap-0.5">
+                  {/* The name and its average on one line, then the pin count
+                      and the sparkline under them. */}
+                  <span className="flex items-center gap-2">
+                    <span className="min-w-0 flex-1 truncate text-sm font-medium text-ink">{product.name}</span>
+                    <span className="shrink-0 text-xs font-medium text-ink tabular-nums" title={t('company.productAverage', { value: signed(product.average) })}>
+                      {signed(product.average)}
+                    </span>
+                    <Icon name="chevron" className={`size-3.5 shrink-0 text-subtle transition-transform ${expanded ? 'rotate-180' : ''}`} />
                   </span>
-                  <Icon name="chevron" className={`size-3.5 shrink-0 text-subtle transition-transform ${expanded ? 'rotate-180' : ''}`} />
-                </span>
-                <span className="flex items-center gap-2">
-                  <span className="min-w-0 flex-1 text-[11px] text-subtle">{t('company.productPins', { count: product.sentiment.pins.length })}</span>
-                  <Sparkline product={product} axis={axis} />
+                  <span className="flex items-center gap-2">
+                    <span className="min-w-0 flex-1 truncate text-[11px] text-subtle">{t('company.productPins', { count: product.sentiment.pins.length })}</span>
+                    <Sparkline product={product} axis={axis} />
+                  </span>
                 </span>
               </button>
               {expanded ? (

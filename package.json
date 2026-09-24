@@ -29,6 +29,7 @@
     "companies:logos": "tsx scripts/company/logos.ts",
     "companies:describe": "tsx scripts/company/descriptions.ts",
     "companies:sentiment": "tsx scripts/company/sentiment.ts",
+    "products:pictures": "tsx scripts/company/productPictures.ts",
     "media:video-thumbs": "tsx scripts/media/videoThumbs.ts",
     "media:screen": "tsx scripts/media/screenDetails.ts",
     "launches:upcoming": "tsx scripts/launches/upcoming.ts",
