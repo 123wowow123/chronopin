@@ -43,6 +43,74 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **Tags should be relevant and catchy.** Owner, 2026-09-21: pin 2389 (US Fiscal Year 2028) was tagged `Appropriations, Federal budget, Fiscal year, United States` and was missing the thing anyone would actually search for - `Government Shutdown`. Tag the consequence and the familiar name people know the event by, not just the procedural vocabulary of the source, and title-case them (`Federal Budget`, `Fiscal Year 2028`).
 
 * **A product pin says what the product is.** Owner, 2026-09-22, on pin 2346 (the A350F first flight): "Product pins should have notable features in long form summary". A pin about an aircraft, vehicle, device, chip, game, AI model or software release gets summary points on what is new or distinctive about it and its headline specifications with units, not only the event's date and schedule. Owner, same day: the features go in **their own section** - `<h3>Notable features</h3><ul>...</ul>` after the event's list - "rather than piled into large list of bullets with other things". Built into all three summary prompts (`PRODUCT_FEATURES_RULE` in `src/server/extract/index.ts`); the wiki pages now record a product's features too. The manufacturer's product page is the usual place for the specs; add it as a reference.
+## 2026-09-23 - Saudi Aramco news events, straight to production (@EnergyDesk, @TechDesk, @BuildDesk)
+
+Ian asked to "pin Saudi Aramco news events on prod" - the first batch posted to production
+(www.chronopin.com) rather than local dev, now that prod is the source of truth (`db:pull-prod`
+replaces local). Four research agents drafted POST bodies to files and posted nothing; the lead
+checked every draft (fields, image downloads, videos' channels via oEmbed, pictures viewed) and
+posted them itself with each desk's prod token. Twenty-six pins, 2996-3026 (ids interleaved with another session's): the results chain 2996 Q3 2025 -> 2998 FY 2025 -> 2999 Q1 2026 -> 3001 Q2 2026 -> 3002 Q3 2026 (`estimated` Tue 3 Nov,
+08:00 Riyadh), the $4B bond (3004) and the first buyback (3005); Jafurah as one chain, 3006 the $11B
+GIP midstream close -> 3007 first shale gas (`delayed` from early 2024) -> 3009 phase two (end 2027);
+Tanajib/Marjan 3010 -> Zuluf 3011 (end 2026); Master Gas System phase three (3012, 2028); the Ras
+Tanura drone strike (3013) and helicopter crash (3014); Commonwealth LNG/MidOcean (3015), the PRefChem
+sale to PETRONAS (3017), $3.7B of French deals (3018), HAPCO Panjin start-up (3019), S-Oil Shaheen
+(3020, `delayed` to Jan 2027), Rio Grande LNG Train 4 (3021, 2030); @TechDesk's HUMAIN term sheet,
+Microsoft and IBM industrial-AI deals (3022-3024); @BuildDesk's Aramco Stadium Company -> stadium
+opening (3025 -> 3026). All tagged `Aramco`.
+
+* **Learned - the production workflow.** Curator passwords are the same on prod (seeded users);
+  log in at `https://www.chronopin.com/auth/local`, one token per desk. Agents draft only; the
+  lead posts serially. Prod's own save pipeline stores the pictures (thumbs in the `thumb`
+  container, so no `thumbs:push`), and its save listener runs the wiki refresh on the prod key.
+  Whether the wikis were written is **unchecked**: `/api/pins/:id/okf` and `/sources` are
+  admin-only, and the summary a curator reads back only shows `[S]`/`[n]` turned into `<cite>`
+  tags. No `wiki:export`/`apply` (they run against the local database), no `backup:data` (the
+  next `db:pull-prod` brings the pins down).
+* **Learned - one POST takes about two minutes on prod, and prod is small.** The second post 500'd
+  with "Connection terminated unexpectedly" while the home page took 53 s: the B2s VM was carrying
+  the previous pin's pipeline and another session's posts. Nothing was half-saved (checked by
+  `tag:` and `company:` search, and the neighbouring ids belonged to another session). Posting one
+  at a time with a 30 s pause went through cleanly. Pin ids interleave with other sessions'.
+* **Learned - aramco.com is a bot wall to `curl` and WebFetch** (timeouts), including its images;
+  the app's scraper reads every page, but the newsroom list renders only the newest story, so find
+  release URLs by WebSearch. aramcostadium.com is the same; its `sitemap.xml` reads through WebFetch.
+* **Learned - the time of an Aramco filing is Tadawul's stamp, not aramco.com's.** saudiexchange.sa
+  403s to `curl` but renders through the scraper (`04/08/2026 08:00:22` = Riyadh, UTC+3); results
+  land about 08:00 Riyadh (05:00Z). Mubasher (`english.mubasher.info/markets/TDWL/stocks/2222/announcements`)
+  mirrors every filing with plain `curl`, its "UTC" `published_time` really Riyadh time. aramco.com
+  itself shows the Q2 release as "AUGUST 03" (a Riyadh-midnight date rendered in another zone).
+* **Learned - the partner, the photo and the dateline disagree on the day.** Microsoft MoU: release
+  12 Feb Dhahran, signing backdrop "February 10, 2026 | Riyadh" - pinned to the signing. PRefChem:
+  Aramco 24 May, PETRONAS 25 May, SPA's copy "May 10". IBM: datelined Riyadh, announced at Think in
+  Boston. Read the partner's release and look at the event photo, not only Aramco's dateline.
+* **Learned - pre-visit scoops name deals that never happen.** Reuters' Woodside Louisiana LNG stake
+  and the Port Arthur Phase 2 25% stake were never signed (Aramco's own 19 Nov list, Sempra's 10-Qs);
+  no pins. A search summary's "Abqaiq drone shutdown" came from an untrustworthy site; not pinned.
+* **Learned - SPA copies bring pictures.** spa.gov.sa/en releases and their `portalcdn.spa.gov.sa`
+  photos read with plain `curl` - the best substitute for aramco.com's walled images. Commons has
+  almost no modern Aramco photos (`AramcoCoreArea.jpg` for the HQ). Aramco's YouTube (@aramco)
+  posts project films (Jafurah, Master Gas System) but nothing on results or deals.
+* **Learned - WebP is fine.** 91 existing WebP originals all have thumbs (sharp decodes them).
+* **Learned - figures disagree across sources** (MEES's FY 2025 adjusted income $93.4bn vs Aramco's
+  $104.7bn): take the filing's. A programme's ">$100bn" lifecycle figure is not a phase's price
+  (Jafurah start-up left null).
+* **Traps:** Nominatim/Photon returned empty bodies while four agents geocoded at once; Jafurah,
+  HAPCO and Commonwealth LNG are not in OSM; Overpass times out on name-regex queries over the
+  Eastern Province (query a bounding box and filter locally); reverse-geocoding a city centroid at
+  high zoom gives a landmark (Paris -> "Notre-Dame Forecourt"; use zoom=10); Al Jazeera's
+  "SAUDI-CRASH" image is a 2018 refinery file photo; an "Asia One News" results clip was dropped
+  as not an established channel.
+* **Judgement calls to revisit:** the AI deals went to @TechDesk (`AI` first) and the Aramco Stadium
+  pins to @BuildDesk (`Architecture`/`Sports`), following the Amazon/Microsoft rule that each event
+  takes its vertical's desk; S-Oil's Shaheen and NextDecade's Rio Grande Train 4 carry the partner
+  as company and `Aramco` as tag; Jafurah's start is 1 December (Aramco says "in December 2025",
+  Reuters reported it begun on the 3rd). The HUMAIN stake has a term sheet only - its definitive
+  agreement should answer that pin.
+* **Feedback**: none yet.
+* **Changed**: [Vertical recipes](verticals.md) - an Aramco row; [Sources](sources.md) - aramco.com,
+  saudiexchange.sa/Mubasher, spa.gov.sa.
+
 ## 2026-09-22 - Layoffs, eighteen pins (2904-2924, @EconDesk)
 
 * **Done**: Ian asked to "pin Layoffs news events". Eighteen layoffs from June
