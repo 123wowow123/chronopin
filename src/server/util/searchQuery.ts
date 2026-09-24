@@ -32,6 +32,17 @@
 // either their name or their two-letter code, whichever the address used.
 // A card's place label and the pin page's write one.
 //
+// rating: takes a bound on a pin's rating as a percentage - the headline
+// number its card shows: the average of its review scores, each rescaled to
+// a percentage of its own maximum (MyAnimeList's 8.2/10 is 82), or its one
+// source's where it has one (format.ts averageRating). rating:>80,
+// rating:>=80, rating:<60, rating:=90, a range rating:80-90 (both ends in),
+// and a bare rating:80 for "80 or more"; a % may follow any number. A
+// prediction market's forecast is not a review, so it counts for nothing,
+// and a pin without ratings matches no rating: term. Unlike the other fields
+// several rating: terms narrow each other, so rating:>=70 rating:<90 is a
+// band; anything that is not a bound is left out rather than matching nothing.
+//
 // user: takes a name with or without its "@" (user:@ThePinGang), and a bare
 // @ThePinGang still works on its own, as it did before user: existed.
 //
@@ -59,6 +70,9 @@
 
 import { type ConfidenceBand, isConfidenceBand } from '@/lib/referenceConfidence';
 
+// One side of a rating: term, compared with the pin's rounded percentage.
+export type RatingBound = { op: '>' | '>=' | '<' | '<=' | '='; value: number };
+
 export type SearchQuery = {
   userNames: string[];
   // Pin ids, matching exactly those pins.
@@ -77,6 +91,8 @@ export type SearchQuery = {
   excludeTags: string[];
   // Places an address must name: cities, states, postal codes, countries.
   places: string[];
+  // Bounds a pin's rating must meet, every one of them.
+  ratings: RatingBound[];
   text: string;
 };
 
@@ -85,7 +101,7 @@ const SMART_SINGLE_QUOTES = /[‘’‚‛′]/g;
 
 // A leading "-" leaves out what the term would match (-tag:Anime); only tags
 // read it so far, and any other field written that way is left out.
-const FIELD = '(-?(?:company|category|user|confidence|date|posted|tag|pin|place))';
+const FIELD = '(-?(?:company|category|user|confidence|date|posted|tag|pin|place|rating))';
 const DAY_KEY = /^-?\d{4,6}-\d{2}-\d{2}$/;
 const DOUBLE_QUOTED = '([^"]*)"?';
 const SINGLE_QUOTED = "((?:[^']|'(?!\\s|$))*)'?";
@@ -105,7 +121,7 @@ const FIELD_TERM = new RegExp(
 
 const USER_TERM = /(^|\s)(@\S+)/g;
 
-export type TermField = 'user' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'tag' | 'pin' | 'place';
+export type TermField = 'user' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'tag' | 'pin' | 'place' | 'rating';
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -171,6 +187,7 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
     tags: [],
     excludeTags: [],
     places: [],
+    ratings: [],
     text: '',
   };
 
@@ -196,6 +213,10 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
       if (DAY_KEY.test(part.value)) addUnique(part.field === 'date' ? query.dates : query.postedDays, part.value);
     } else if (part.field === 'place') {
       addUnique(query.places, part.value);
+    } else if (part.field === 'rating') {
+      for (const bound of ratingBounds(part.value)) {
+        if (!query.ratings.some((b) => b.op === bound.op && b.value === bound.value)) query.ratings.push(bound);
+      }
     } else if (part.value) {
       // category: is the old name for a category's tag.
       addUnique(part.field === 'company' ? query.companies : query.tags, part.value);
@@ -217,7 +238,8 @@ export function hasFilters(query: SearchQuery): boolean {
     query.postedDays.length ||
     query.tags.length ||
     query.excludeTags.length ||
-    query.places.length
+    query.places.length ||
+    query.ratings.length
   );
 }
 
@@ -226,6 +248,30 @@ export function hasFilters(query: SearchQuery): boolean {
 // cached once for all zones.
 export function dependsOnZone(query: SearchQuery): boolean {
   return !!(query.dates.length || query.postedDays.length);
+}
+
+const PERCENT = '(\\d+(?:\\.\\d+)?)\\s*%?';
+const RATING_BOUND = new RegExp(`^(>=|<=|=>|=<|>|<|=)?\\s*${PERCENT}$`);
+const RATING_RANGE = new RegExp(`^${PERCENT}\\s*-\\s*${PERCENT}$`);
+
+// The bounds a rating: value sets: one, two for a range, none for anything
+// else. A bare number is a floor, which is what someone asking for "80" wants.
+export function ratingBounds(value: string): RatingBound[] {
+  const text = value.trim();
+  const range = RATING_RANGE.exec(text);
+  if (range) {
+    const [low, high] = [Number(range[1]), Number(range[2])].sort((a, b) => a - b);
+    return [
+      { op: '>=', value: low },
+      { op: '<=', value: high },
+    ];
+  }
+  const bound = RATING_BOUND.exec(text);
+  if (!bound) {
+    return [];
+  }
+  const op = ({ '=>': '>=', '=<': '<=' } as Record<string, RatingBound['op']>)[bound[1] ?? ''] ?? ((bound[1] || '>=') as RatingBound['op']);
+  return [{ op, value: Number(bound[2]) }];
 }
 
 // User names are stored with their "@", so that is the form matched on.

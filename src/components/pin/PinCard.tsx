@@ -221,7 +221,7 @@ export function PinCard({
               {/* The review-site average, for a film, series or anime pin, or
                   the one source's own score where that is all the pin has -
                   a card lists no sources beside it, same as a thread row. */}
-              <RatingSummary ratings={pin.ratings} />
+              <RatingSummary ratings={pin.ratings} search />
               {/* How many episodes, for a series, anime or other episodic work. */}
               <EpisodeCount pin={pin} compact />
               {/* How far the start is from today, at the tail of the pills. */}

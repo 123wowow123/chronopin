@@ -6,6 +6,11 @@ describe('refineQuery', () => {
     expect(refineQuery('', 'tag', 'Prediction Market')).toBe('tag:"Prediction Market"');
     expect(refineQuery('tag:Movie', 'tag', 'movie')).toBe('tag:Movie');
   });
+
+  it('replaces the rating bounds already there with the one clicked', () => {
+    expect(refineQuery('tag:Anime', 'rating', '>=81')).toBe('tag:Anime rating:>=81');
+    expect(refineQuery('rating:>90 tag:Anime "rating:<95"', 'rating', '>=81')).toBe('tag:Anime rating:>=81');
+  });
 });
 
 describe('removeTerm', () => {

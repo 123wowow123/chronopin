@@ -452,12 +452,22 @@ export function reviewRatings<T extends { source?: string }>(ratings: T[] | unde
 }
 
 export function averageRating(ratings: { score: number; scoreMax: number; source?: string }[] | undefined): number | undefined {
-  const usable = reviewRatings(ratings).filter((r) => Number.isFinite(r.score) && Number.isFinite(r.scoreMax) && r.scoreMax > 0);
-  if (usable.length < 2) {
+  return usableRatings(ratings).length < 2 ? undefined : ratingPercent(ratings);
+}
+
+// The same rounded percentage from as few as one source: what a rating:
+// search compares (server/model/pins.ts), so a pill can search for its own.
+export function ratingPercent(ratings: { score: number; scoreMax: number; source?: string }[] | undefined): number | undefined {
+  const usable = usableRatings(ratings);
+  if (!usable.length) {
     return undefined;
   }
   const total = usable.reduce((sum, r) => sum + (r.score / r.scoreMax) * 100, 0);
   return Math.round(total / usable.length);
+}
+
+function usableRatings<T extends { score: number; scoreMax: number; source?: string }>(ratings: T[] | undefined): T[] {
+  return reviewRatings(ratings).filter((r) => Number.isFinite(r.score) && Number.isFinite(r.scoreMax) && r.scoreMax > 0);
 }
 
 // Plain text from the HTML a pin description or summary may hold, for meta

@@ -87,6 +87,7 @@ const zh: Messages = {
       tag: '标签',
       category: '分类',
       place: '地点',
+      rating: '评分',
     },
     notField: '排除{field}',
     pinsMatching: '与“{query}”匹配的图钉',
@@ -455,6 +456,7 @@ const zh: Messages = {
   },
   ratings: {
     averageLabel: '{count} 个评分的平均值：{average}%',
+    searchFrom: '显示评分 {percent}% 及以上的图钉',
     soleLabel: '{source} 评分：{score}',
     average: '平均',
     sources: '{count} 个来源',

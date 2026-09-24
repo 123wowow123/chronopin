@@ -87,6 +87,7 @@ const en = {
       tag: 'tag',
       category: 'category',
       place: 'place',
+      rating: 'rating',
     },
     notField: 'not {field}',
     pinsMatching: 'Pins matching {query}',
@@ -456,6 +457,7 @@ const en = {
   },
   ratings: {
     averageLabel: 'Average of {count} ratings: {average} percent',
+    searchFrom: 'Show pins rated {percent}% or more',
     soleLabel: '{source} rating: {score}',
     average: 'average',
     sources: { one: '{count} source', other: '{count} sources' },

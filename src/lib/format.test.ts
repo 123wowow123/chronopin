@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { averageRating, compactCount, dayKeyIn, dayStartIn, daysAway, daysBetween, formatDayKey, formatPosted, formatStart, lunarDate, money, moonPhase, monthDayOf, nextDayKey, plainText, ratingScore, timeAgo, timespan, weekdayPlanet } from './format';
+import { averageRating, ratingPercent, compactCount, dayKeyIn, dayStartIn, daysAway, daysBetween, formatDayKey, formatPosted, formatStart, lunarDate, money, moonPhase, monthDayOf, nextDayKey, plainText, ratingScore, timeAgo, timespan, weekdayPlanet } from './format';
 import { buildBags, pinTense, resolveTodayMarker } from './timeline';
 
 describe('money', () => {
@@ -153,6 +153,14 @@ describe('ratingScore', () => {
     expect(ratingScore(82, 100, 'Metacritic')).toBe('82/100');
     expect(ratingScore(8.67, 10, 'MyAnimeList')).toBe('8.67/10');
     expect(ratingScore(8.2, 10, 'IMDb')).toBe('8.2/10');
+  });
+});
+
+describe('ratingPercent', () => {
+  it('rescales even a single source, leaving out forecasts', () => {
+    expect(ratingPercent([{ source: 'MyAnimeList', score: 8.07, scoreMax: 10 }])).toBe(81);
+    expect(ratingPercent([{ source: 'Kalshi RT forecast', score: 95, scoreMax: 100 }])).toBeUndefined();
+    expect(ratingPercent([])).toBeUndefined();
   });
 });
 

@@ -86,6 +86,7 @@ const ja: Messages = {
       tag: 'タグ',
       category: 'カテゴリ',
       place: '場所',
+      rating: '評価',
     },
     notField: '{field}を除外',
     pinsMatching: '「{query}」に一致するピン',
@@ -455,6 +456,7 @@ const ja: Messages = {
   },
   ratings: {
     averageLabel: '{count} 件の評価の平均：{average}%',
+    searchFrom: '評価 {percent}% 以上のピンを表示',
     soleLabel: '{source} の評価：{score}',
     average: '平均',
     sources: '{count} サイト',

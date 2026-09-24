@@ -47,6 +47,7 @@ describe('parseSearchQuery', () => {
       tags: ['software'],
       excludeTags: [],
       places: [],
+      ratings: [],
       text: 'ios',
     });
   });
@@ -88,6 +89,32 @@ describe('parseSearchQuery', () => {
       text: 'fire',
     });
     expect(hasFilters(parseSearchQuery('place:Texas'))).toBe(true);
+  });
+});
+
+describe('rating: bounds', () => {
+  it('reads comparisons, a range and a bare floor, with or without a %', () => {
+    expect(parseSearchQuery('tag:Anime rating:>80').ratings).toEqual([{ op: '>', value: 80 }]);
+    expect(parseSearchQuery('rating:>=75% rating:<90').ratings).toEqual([
+      { op: '>=', value: 75 },
+      { op: '<', value: 90 },
+    ]);
+    expect(parseSearchQuery('rating:90-80').ratings).toEqual([
+      { op: '>=', value: 80 },
+      { op: '<=', value: 90 },
+    ]);
+    expect(parseSearchQuery('rating:85 rating:=>85 rating:=70').ratings).toEqual([
+      { op: '>=', value: 85 },
+      { op: '=', value: 70 },
+    ]);
+    expect(hasFilters(parseSearchQuery('rating:>80'))).toBe(true);
+  });
+
+  it('leaves out anything that is not a bound, and never reads it as text', () => {
+    const q = parseSearchQuery('rating:great rating:> naruto');
+    expect(q.ratings).toEqual([]);
+    expect(q.text).toBe('naruto');
+    expect(splitSearchQuery('rating:>80')).toEqual([{ kind: 'term', field: 'rating', value: '>80', raw: 'rating:>80' }]);
   });
 });
 

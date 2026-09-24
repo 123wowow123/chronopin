@@ -86,6 +86,7 @@ const fr: Messages = {
       tag: 'tag',
       category: 'catégorie',
       place: 'lieu',
+      rating: 'note',
     },
     notField: 'sans {field}',
     pinsMatching: 'Épingles correspondant à {query}',
@@ -461,6 +462,7 @@ const fr: Messages = {
   },
   ratings: {
     averageLabel: 'Moyenne de {count} notes : {average} pour cent',
+    searchFrom: 'Afficher les épingles notées {percent} % ou plus',
     soleLabel: 'Note de {source} : {score}',
     average: 'moyenne',
     sources: { one: '{count} source', other: '{count} sources' },

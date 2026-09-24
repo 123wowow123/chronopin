@@ -314,7 +314,7 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
           block with the place's live scores, so a MICHELIN star count does not
           sit in a chip of its own above them. */}
       <div className="-mt-1 mb-4 flex flex-wrap items-center gap-2 empty:hidden">
-        {hasPlace(pin.place) ? null : <PinRatings ratings={pin.ratings} className="" />}
+        {hasPlace(pin.place) ? null : <PinRatings ratings={pin.ratings} search className="" />}
         <EpisodeCount pin={pin} />
         <MarketVolume pin={pin} />
       </div>

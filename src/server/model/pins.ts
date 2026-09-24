@@ -9,6 +9,7 @@ import { reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
 import { PLACE_TEXT_SCORE, looksLikePlaceText, placePatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
+import type { RatingBound } from '../util/searchQuery';
 
 // A pin "p"'s categories (its category tags, 0043), the main one first, and
 // the main one alone.
@@ -26,6 +27,7 @@ export type PinSearchFilters = {
   tags: string[];
   excludeTags: string[];
   places: string[];
+  ratings: RatingBound[];
 };
 
 // Everything a search narrows pins to. hits are a free-text search's matches
@@ -729,6 +731,9 @@ function queryThreadOrder(pinId: number): Promise<{ id: number; reverseOrder: nu
   );
 }
 
+// The SQL for each rating: comparison, so nothing typed reaches the query.
+const RATING_OPS: Record<RatingBound['op'], string> = { '>': '>', '>=': '>=', '<': '<', '<=': '<=', '=': '=' };
+
 // The FROM and WHERE a search's filter makes, on the Pin table itself rather
 // than the view, so a page counts pins instead of pin x medium x merchant rows.
 // Each label list widens its own field (any of these companies) and an empty
@@ -797,6 +802,20 @@ function searchClauses(filter: SearchFilter) {
   // Any of these places: a US state under either its name or its code.
   if (filter.places.length) {
     where.push(addressMatches(placePatterns(filter.places)));
+  }
+  // Every rating: bound, on the pin's headline rating as its card shows it
+  // (format.ts averageRating): its review scores as percentages of their own
+  // maximums, averaged and rounded - a market's forecast left out. A pin
+  // without ratings averages to NULL and meets no bound.
+  if (filter.ratings.length) {
+    const bounds = filter.ratings.map(({ op, value }) => `"rated"."percent" ${RATING_OPS[op]} ${add(value)}::numeric`);
+    where.push(`EXISTS (
+          SELECT 1 FROM (
+            SELECT round(avg("r"."score" / "r"."scoreMax" * 100)) AS "percent"
+            FROM "PinRating" AS "r"
+            WHERE "r"."pinId" = "Pin"."id" AND "r"."scoreMax" > 0 AND "r"."source" !~* '\\yforecast$'
+          ) AS "rated"
+          WHERE ${bounds.join(' AND ')})`);
   }
   // Any of these tags (PinTagView: the form's, its categories, the prose's
   // and the awards').

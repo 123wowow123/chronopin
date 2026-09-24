@@ -86,6 +86,7 @@ const es: Messages = {
       tag: 'etiqueta',
       category: 'categoría',
       place: 'lugar',
+      rating: 'valoración',
     },
     notField: 'sin {field}',
     pinsMatching: 'Pines que coinciden con {query}',
@@ -461,6 +462,7 @@ const es: Messages = {
   },
   ratings: {
     averageLabel: 'Media de {count} valoraciones: {average} por ciento',
+    searchFrom: 'Mostrar pines con {percent}% o más',
     soleLabel: 'Valoración de {source}: {score}',
     average: 'media',
     sources: { one: '{count} fuente', other: '{count} fuentes' },

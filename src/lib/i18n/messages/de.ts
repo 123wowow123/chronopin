@@ -86,6 +86,7 @@ const de: Messages = {
       tag: 'Tag',
       category: 'Kategorie',
       place: 'Ort',
+      rating: 'Bewertung',
     },
     notField: 'nicht {field}',
     pinsMatching: 'Pins zu {query}',
@@ -461,6 +462,7 @@ const de: Messages = {
   },
   ratings: {
     averageLabel: 'Durchschnitt aus {count} Bewertungen: {average} Prozent',
+    searchFrom: 'Pins mit {percent}% oder mehr anzeigen',
     soleLabel: 'Bewertung von {source}: {score}',
     average: 'Schnitt',
     sources: { one: '{count} Quelle', other: '{count} Quellen' },
