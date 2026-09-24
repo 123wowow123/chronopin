@@ -190,6 +190,8 @@ const de: Messages = {
     pinsAfter: 'Pins nach dem {date}',
     moonLit: '{phase} ({percent} % beleuchtet)',
     viewAll: { one: '{count} Pin ansehen', other: 'Alle {count} Pins ansehen' },
+    // Beside "View all": pins the day gained since this browser last saw it.
+    newPins: { one: '{count} neu', other: '{count} neu' },
     morePinsOfThis: { one: 'weiterer Pin dazu', other: 'weitere Pins dazu' },
     error: 'Hoppla, da ist etwas schiefgelaufen. Bitte versuche es gleich noch einmal...',
     noPinsPosted: 'Keine Pins in den letzten {span} gepostet.',

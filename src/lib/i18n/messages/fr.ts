@@ -190,6 +190,8 @@ const fr: Messages = {
     pinsAfter: 'Épingles après le {date}',
     moonLit: '{phase} ({percent} % éclairée)',
     viewAll: { one: 'Voir {count} épingle', other: 'Voir les {count} épingles' },
+    // Beside "View all": pins the day gained since this browser last saw it.
+    newPins: { one: '{count} nouvelle', other: '{count} nouvelles' },
     morePinsOfThis: { one: 'autre épingle de ceci', other: 'autres épingles de ceci' },
     error: 'Oups, un problème est survenu. Réessayez dans un instant...',
     noPinsPosted: 'Aucune épingle publiée au cours des derniers {span}.',

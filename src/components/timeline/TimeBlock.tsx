@@ -3,6 +3,7 @@
 import Link from '@/components/ui/Link';
 import { useRef } from 'react';
 import { BAG_LIMIT, BAG_LIMIT_PHONE, sampleBag } from '@/lib/bagSample';
+import { useDayNews } from '@/lib/client/dayNews';
 import { useImpression } from '@/lib/client/impressions';
 import { stackDuplicates, type PinStack } from '@/lib/duplicates';
 import { formatDayKey, lunarDate, moonPhase, timespan, weekdayPlanet } from '@/lib/format';
@@ -137,6 +138,11 @@ export function TimeBlock({
   const leftOut = (columns: number) => stacks.length + unloaded - Math.min(shown.length, 2 * columns);
   // The link goes at the first width wide enough to leave nothing out.
   const hiddenFrom = leftOut(2) === 0 ? 'sm:hidden' : (WIDE_COLUMNS.find((_, i) => leftOut(3 + i) === 0)?.hide ?? '');
+  // Pins the day gained since this browser last saw it, for the "View all"
+  // pill's badge. Counted raw (duplicates too), which reads the same whether
+  // the day is loaded whole or only counted.
+  const sectionRef = useRef<HTMLElement>(null);
+  const fresh = useDayNews(sectionRef, bag.day, Math.max(dayTotal ?? 0, bag.pins.length), !!sample);
   const firstShown = shown.findIndex((s) => s.rank < BAG_LIMIT_PHONE);
   const isToday = bag.day === todayKey;
   const planet = weekdayPlanet(bag.day, locale);
@@ -160,7 +166,7 @@ export function TimeBlock({
   ));
 
   return (
-    <section id={id ?? `day-${bag.day}`} aria-label={formatDayKey(bag.day, locale)} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:pt-0">
+    <section ref={sectionRef} id={id ?? `day-${bag.day}`} aria-label={formatDayKey(bag.day, locale)} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:pt-0">
       <div
         className={`rail-marker absolute top-6 cursor-default left-[140px] z-10 -ml-4 hidden size-8 items-center justify-center overflow-hidden rounded-full text-base leading-none lg:flex ${isToday ? 'rail-marker-today' : ''}`}
         title={`${planet.planet}\n${planet.weekday}\n${t('timeline.moonLit', { phase: moon.name, percent: Math.round(moon.illumination * 100) })}`}
@@ -201,7 +207,7 @@ export function TimeBlock({
         <>
           <PinColumns tagsHeight={tagsHeight} cards={cards} ranks={shown.map((s) => s.rank)} />
           {sample && leftOut(1) > 0 && daySearchHref ? (
-            <ShowMore href={daySearchHref(bag.day)} total={stacks.length + unloaded} hiddenFrom={hiddenFrom} />
+            <ShowMore href={daySearchHref(bag.day)} total={stacks.length + unloaded} fresh={fresh} hiddenFrom={hiddenFrom} />
           ) : null}
         </>
       ) : (
@@ -298,14 +304,20 @@ function DayCard({
 }
 
 // Below a day cut to two rows: "View all 71 pins", the whole day as a date:
-// search. Two rows are two cards a column, so a wide enough window may leave
-// nothing out; `hiddenFrom` is the width where that happens and the link goes.
-function ShowMore({ href, total, hiddenFrom }: { href: string; total: number; hiddenFrom: string }) {
+// search, with "3 new" when the day gained pins since this browser last saw
+// it (useDayNews). Two rows are two cards a column, so a wide enough window
+// may leave nothing out; `hiddenFrom` is the width where that happens and the
+// link goes.
+function ShowMore({ href, total, fresh, hiddenFrom }: { href: string; total: number; fresh: number; hiddenFrom: string }) {
   const t = useT();
   return (
     <div className={`mb-2.5 flex justify-center lg:ml-[170px] ${rowWidth} ${hiddenFrom}`}>
-      <Link href={href} className="rounded-full px-3 py-1 text-sm font-medium text-subtle tabular-nums ring-1 ring-line ring-inset hover:text-link hover:no-underline">
+      <Link
+        href={href}
+        className="flex items-center gap-2 rounded-full px-3 py-1 text-sm font-medium text-subtle tabular-nums ring-1 ring-line ring-inset hover:text-link hover:no-underline"
+      >
         {t('timeline.viewAll', { count: total })}
+        {fresh > 0 ? <span className="rounded-full bg-accent px-1.5 text-xs leading-5 font-bold text-white">{t('timeline.newPins', { count: fresh })}</span> : null}
       </Link>
     </div>
   );

@@ -190,6 +190,8 @@ const ja: Messages = {
     pinsAfter: '{date}より後のピン',
     moonLit: '{phase}（輝面 {percent}%）',
     viewAll: '{count} 件のピンをすべて見る',
+    // Beside "View all": pins the day gained since this browser last saw it.
+    newPins: '新着 {count}',
     morePinsOfThis: '件の同じピン',
     error: '問題が発生しました。しばらくしてからもう一度お試しください…',
     noPinsPosted: '直近{span}に投稿されたピンはありません。',

@@ -191,6 +191,8 @@ const zh: Messages = {
     pinsAfter: '{date}之后的图钉',
     moonLit: '{phase}（照亮 {percent}%）',
     viewAll: '查看全部 {count} 个图钉',
+    // Beside "View all": pins the day gained since this browser last saw it.
+    newPins: '新增 {count}',
     morePinsOfThis: '个相同的图钉',
     error: '哎呀，出了点问题。请稍后再试…',
     noPinsPosted: '最近{span}内没有发布的图钉。',
