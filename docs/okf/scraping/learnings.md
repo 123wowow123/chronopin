@@ -42,7 +42,47 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **A released product cites its MSRP from the company's own page.** Owner, 2026-09-20: for a released or on-sale product, check the company's product/store page for the MSRP and add that page as a reference.
 * **Tags should be relevant and catchy.** Owner, 2026-09-21: pin 2389 (US Fiscal Year 2028) was tagged `Appropriations, Federal budget, Fiscal year, United States` and was missing the thing anyone would actually search for - `Government Shutdown`. Tag the consequence and the familiar name people know the event by, not just the procedural vocabulary of the source, and title-case them (`Federal Budget`, `Fiscal Year 2028`).
 
+* **A batch gets a new desk when no existing desk fits.** Owner, 2026-09-24, during the Aldi Nord run: "create new user if that makes more sense". Match the company to what it *is* (a store chain is @RetailDesk, a consumer-goods maker @ConsumerDesk, restaurants @FoodDesk). When nothing fits, create a curator rather than force-fit one, and get the new account's email confirmed on prod *before* the run: prod refuses POST from an unverified account, and the API cannot re-author pins later (see the Nestlé entry).
 * **A product pin says what the product is.** Owner, 2026-09-22, on pin 2346 (the A350F first flight): "Product pins should have notable features in long form summary". A pin about an aircraft, vehicle, device, chip, game, AI model or software release gets summary points on what is new or distinctive about it and its headline specifications with units, not only the event's date and schedule. Owner, same day: the features go in **their own section** - `<h3>Notable features</h3><ul>...</ul>` after the event's list - "rather than piled into large list of bullets with other things". Built into all three summary prompts (`PRODUCT_FEATURES_RULE` in `src/server/extract/index.ts`); the wiki pages now record a product's features too. The manufacturer's product page is the usual place for the specs; add it as a reference.
+## 2026-09-24 - Aldi Nord news events, straight to production (@RetailDesk, @EconDesk, @LawDesk, @HealthDesk, @BuildDesk)
+
+Ian asked to "pin Aldi Nord news events on prod". Three agents drafted one slice each: the company and
+Germany, the other countries, and labour/courts/recalls. The lead linted the drafts, viewed every picture
+on contact sheets and posted **34 pins** serially. Ids 3115-3223, interleaved with another session's.
+Every pin is tagged `Aldi` and `Aldi Nord` under company Aldi Nord (company 6746). No create failed, so
+nothing needed a repair PUT.
+
+* **Chains (oldest first):**
+  - Leadership: 3122 CEO de Lope -> 3123 Kürten as Germany head.
+  - German pay: 3127 -> 3129.
+  - Belgian Sunday opening: 3135 walkout -> 3137 plan to unions.
+  - All Seasons herb recalls: 3144 -> 3146.
+  - Leader Price: 3158 signing -> 3168 completion.
+  - Denmark exit: 3172 -> 3178 KFST clearance -> 3183 last stores.
+* **Standalone:** Aldi Süd private labels 3115, store No. 1 3116, HQ campus 3117, climate goal 3118,
+  Albrecht settlement 3119, Lehrte-Aligse 3120, Wolfsburg store 3121, app discounts 3124, Expo Real 3125
+  (5-7 Oct 2026, `scheduled`), Haribo cartel fine 3126, depot closures 3131, Best DC 3133, Poland pay 3139,
+  French fake-discounts fine 3141 (`estimated`: the DGCCRF page is undated), schnitzel recall 3151,
+  Shop & Go 3189, 400th Polish store 3194, Emilianów DC 3202, 500th Spanish store 3205, Anderlecht 3221,
+  Portugal 2030 target 3223 (`estimated`, 31 Dec 2030).
+* **Learned:**
+  - "Aldi" in the news is often Aldi Süd. The cio.de lead image and the CJEU price case were both Süd's.
+    Nord's logo is the blue/white/orange stacked A; Süd's is the multicolour stripes.
+  - aldi-nord.de and aldi.pl delete old releases. Wayback copies back the date; a trade or ots copy is the source.
+  - Agents reused each other's pictures without noticing: the same Lehrte-Aligse aerial, a recall pack shot,
+    the Denmark press photo inside a 1977/2023 graphic, a CEO portrait inside a handover composite.
+    `check.py` catches identical URLs; only the contact sheet catches the same photo under another URL.
+  - Agents write multi-word tags ("Store Opening", "Distribution Centre", "Price Fixing"). The lead mapped
+    them to one word (`Opening`, `Warehouse`, `Cartel`) before posting.
+  - With the load gate (`/proc/loadavg` < 3 over SSH) plus 45 s between posts, a busy prod (other sessions
+    posting, ids jumping by 10) gave no 500s.
+* **Not pinned (candidates):** Checkout Aldi on Friedrichstraße (18 Mar 2022, fully sourced);
+  UOKiK payment-delay fine (1 Feb 2023, PLN 829,987, cut 30 Sep 2024); Aldi E-Commerce closure (30 Sep 2025);
+  Zaandam DC closure (2020); Denmark's 16 extra stores (9 Feb 2023); Woluwe/Châtelineau openings (Aug 2026);
+  Aldi Nederland CEO Rozendaal (6 Nov 2024); Portugal's Moita DC (Apr 2022).
+* **Feedback:** a new desk when none fits (see Standing feedback).
+* **Changed**: [Vertical recipes](verticals.md) - an Aldi Nord row.
+
 ## 2026-09-23 - Nestlé news events, straight to production (@ConsumerDesk, @EconDesk, @HealthDesk, @LawDesk, @BuildDesk)
 
 Ian asked to "pin Nestle news events on prod". Same workflow as the Aramco batch below: four agents
