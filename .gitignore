@@ -36,3 +36,6 @@ scripts/backup/seedUsers.json
 # npm run okf:export
 /okf-bundle/
 /okf-users/
+
+# Claude Code per-machine permissions
+.claude/settings.local.json
