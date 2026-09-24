@@ -12,7 +12,7 @@ import { analyticsScript } from '@/lib/analytics';
 import { siteName, siteUrl } from '@/lib/appConfig';
 import { INTL_LOCALES, localeOr, LOCALES } from '@/lib/i18n/config';
 import { getMessages } from '@/lib/i18n/messages';
-import { getT, languageAlternates } from '@/lib/i18n/server';
+import { alternates, getT } from '@/lib/i18n/server';
 import { themeScript } from '@/lib/theme';
 import '../globals.css';
 
@@ -36,7 +36,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getT();
+  const [t, links] = await Promise.all([getT(), alternates('/')]);
   const title = t('meta.siteTitle', { site: siteName });
   const description = t('meta.siteDescription');
   return {
@@ -47,13 +47,13 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description,
     applicationName: siteName,
-    alternates: languageAlternates('/', t.locale),
+    alternates: links,
     openGraph: {
       type: 'website',
       siteName,
       title,
       description,
-      url: languageAlternates('/', t.locale).canonical,
+      url: links.canonical,
       locale: INTL_LOCALES[t.locale].replace('-', '_'),
     },
     twitter: { card: 'summary_large_image' },

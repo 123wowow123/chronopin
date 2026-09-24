@@ -2,10 +2,10 @@ import type { NextRequest } from 'next/server';
 import { requireRole } from '@/server/auth';
 import { HttpError, json, readJson, route } from '@/server/http';
 import { getMultilingual, setMultilingual } from '@/server/model/appSetting';
-import { setMultilingualEnabled } from '@/server/services/cache';
+import { setOfferedLocales } from '@/server/services/cache';
 import { parseMultilingual } from '@/lib/multilingual';
 
-// Whether the site is offered in its other languages (src/lib/multilingual.ts).
+// Which of the site's other languages are offered (src/lib/multilingual.ts).
 export const GET = route(async (request: NextRequest) => {
   await requireRole('admin', request);
   return json(await getMultilingual());
@@ -18,6 +18,6 @@ export const PUT = route(async (request: NextRequest) => {
     throw new HttpError(400, '', { message: parsed.problem });
   }
   await setMultilingual(parsed.setting, admin.id);
-  setMultilingualEnabled(parsed.setting.enabled);
+  setOfferedLocales(parsed.setting.locales);
   return json(parsed.setting);
 });

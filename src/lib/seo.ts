@@ -36,8 +36,8 @@ export function pinDescription(pin: PinJson): string {
   return plainText(pin.description || pin.longFormSummary || `${pin.title} on ${siteName}`, 160);
 }
 
-export function pinMetadata(pin: PinJson, locale: Locale = DEFAULT_LOCALE, multilingual = true): Metadata {
-  const links = languageAlternates(pinPath(pin), locale, multilingual);
+export function pinMetadata(pin: PinJson, locale: Locale = DEFAULT_LOCALE, offered?: readonly Locale[]): Metadata {
+  const links = languageAlternates(pinPath(pin), locale, offered);
   const path = links.canonical;
   const description = pinDescription(pin);
   // The pin's own image, or a generated share card when it has none.

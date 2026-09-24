@@ -36,28 +36,6 @@ export default class PinTranslation {
     );
   }
 
-  // Live pins missing a current translation in any of the languages, by id,
-  // for the backfill (translations:sync).
-  static async stale(locales: readonly string[], limit: number): Promise<number[]> {
-    const pins = await db.query<{ id: number } & Record<TranslatedField, string | null>>(
-      `SELECT "id", "title", "description", "longFormSummary", "dateConfidenceReasoning", "delayReasoning" FROM "Pin" WHERE "utcDeletedDateTime" IS NULL ORDER BY "id"`,
-    );
-    const rows = await db.query<{ pinId: number; locale: string; sourceHash: string }>(`SELECT "pinId", "locale", "sourceHash" FROM "PinTranslation"`);
-    const have = new Map<number, Map<string, string>>();
-    for (const row of rows) {
-      if (!have.has(row.pinId)) have.set(row.pinId, new Map());
-      have.get(row.pinId)!.set(row.locale, row.sourceHash.trim());
-    }
-    const out: number[] = [];
-    for (const pin of pins) {
-      const hash = sourceHash(pin);
-      const current = have.get(pin.id);
-      if (locales.some((l) => current?.get(l) !== hash)) out.push(pin.id);
-      if (out.length >= limit) break;
-    }
-    return out;
-  }
-
   static getAll(): Promise<PinTranslationRow[]> {
     return db.query<PinTranslationRow>(`SELECT * FROM "PinTranslation" ORDER BY "pinId", "locale"`);
   }

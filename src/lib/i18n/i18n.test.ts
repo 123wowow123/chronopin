@@ -52,6 +52,7 @@ describe('negotiateLocale', () => {
   it('answers null for nothing supported, or no header', () => {
     expect(negotiateLocale('pt-BR,ko')).toBeNull();
     expect(negotiateLocale('de;q=0')).toBeNull();
+    expect(negotiateLocale('ja,zh-CN;q=0.8,en;q=0.5', ['en', 'zh'])).toBe('zh');
     expect(negotiateLocale(null)).toBeNull();
   });
 });
@@ -65,8 +66,14 @@ describe('languageAlternates', () => {
     expect(links.languages?.['x-default']).toBe('/pin/1/x');
   });
 
-  it('lists no other languages while they are switched off', () => {
-    expect(languageAlternates('/pin/1/x', 'en', false)).toEqual({ canonical: '/pin/1/x' });
+  it('lists only the languages offered', () => {
+    const links = languageAlternates('/pin/1/x', 'zh', ['zh']);
+    expect(links.canonical).toBe('/zh/pin/1/x');
+    expect(Object.keys(links.languages ?? {})).toEqual(['en-US', 'zh-CN', 'x-default']);
+  });
+
+  it('lists no other languages while none are offered', () => {
+    expect(languageAlternates('/pin/1/x', 'en', [])).toEqual({ canonical: '/pin/1/x' });
   });
 });
 

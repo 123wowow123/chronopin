@@ -61,7 +61,7 @@ import { getLocale, getT } from '@/lib/i18n/server';
 import { categoryLabel } from '@/lib/i18n/labels';
 import type { Translator } from '@/lib/i18n/translate';
 import { after } from 'next/server';
-import { multilingualOffered } from '@/server/services/multilingual';
+import { localesOffered } from '@/server/services/multilingual';
 import { needsTranslation, requestTranslation } from '@/server/services/translations';
 
 // src/proxy.ts sends the real 308s and 404s for pin URLs before this renders.
@@ -75,8 +75,8 @@ async function loadPin(params: Props['params']) {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const [pin, t, multilingual] = await Promise.all([loadPin(params), getT(), multilingualOffered()]);
-  return pin ? pinMetadata(pin, t.locale, multilingual) : { title: t('meta.pinNotFound'), robots: { index: false } };
+  const [pin, t, offered] = await Promise.all([loadPin(params), getT(), localesOffered()]);
+  return pin ? pinMetadata(pin, t.locale, offered) : { title: t('meta.pinNotFound'), robots: { index: false } };
 }
 
 export default function PinPage({ params }: Props) {

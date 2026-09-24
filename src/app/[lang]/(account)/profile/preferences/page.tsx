@@ -8,7 +8,7 @@ import { PreferencesForm } from '../PreferencesForm';
 import { ProfileTabs } from '../ProfileTabs';
 import { ThemePicker } from '../ThemePicker';
 import { getT } from '@/lib/i18n/server';
-import { multilingualOffered } from '@/server/services/multilingual';
+import { localesOffered } from '@/server/services/multilingual';
 
 // Reads the session, so it blocks per request (see ../../layout.tsx). The
 // layout's own opt-out only covers navigations into the group, not between its pages.
@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
 // How the app looks and behaves for you, a tab of the profile.
 export default async function PreferencesPage() {
   const user = await requireViewer('/profile/preferences');
-  const [t, multilingual] = await Promise.all([getT(), multilingualOffered()]);
+  const [t, offered] = await Promise.all([getT(), localesOffered()]);
   return (
     <div className="mx-auto max-w-2xl px-4 py-6 sm:py-10">
       <ProfileTabs current="/profile/preferences" />
@@ -29,7 +29,7 @@ export default async function PreferencesPage() {
       <p className="mb-6 text-sm text-subtle">{t('profile.preferencesIntro')}</p>
       <div className="space-y-4">
         <ThemePicker userId={user.id} />
-        {multilingual ? <LanguageSetting userId={user.id} /> : null}
+        {offered.length ? <LanguageSetting userId={user.id} offered={offered} /> : null}
         <PreferencesForm userId={user.id} initial={user.defaultFilterSpanPreference ?? null} />
         <CardStockPricesToggle userId={user.id} initial={user.showCardStockPrices !== false} />
         <DefaultLocationSetting userId={user.id} initial={{ location: userLocation(user), locationFromDevice: user.locationFromDevice !== false }} />

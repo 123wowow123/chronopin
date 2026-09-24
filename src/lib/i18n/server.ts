@@ -4,7 +4,7 @@
 
 import { redirect as nextRedirect, permanentRedirect as nextPermanentRedirect } from 'next/navigation';
 import { lang } from 'next/root-params';
-import { multilingualOffered } from '@/server/services/multilingual';
+import { localesOffered } from '@/server/services/multilingual';
 import { languageAlternates, localeOr, localizePath, type Locale } from './config';
 import { getMessages } from './messages';
 import { createTranslator, type Translator } from './translate';
@@ -32,6 +32,6 @@ export async function permanentRedirect(path: string): Promise<never> {
 export { languageAlternates };
 
 export async function alternates(path: string) {
-  const [locale, multilingual] = await Promise.all([getLocale(), multilingualOffered()]);
-  return languageAlternates(path, locale, multilingual);
+  const [locale, offered] = await Promise.all([getLocale(), localesOffered()]);
+  return languageAlternates(path, locale, offered);
 }

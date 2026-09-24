@@ -29,7 +29,7 @@ test.beforeAll(async ({ baseURL }) => {
   });
   expect(signup.ok()).toBe(true);
   await run(['scripts/data/e2eAdmin.ts', adminEmail]);
-  expect((await api.put('/api/admin/multilingual', { data: { enabled: true } })).ok()).toBe(true);
+  expect((await api.put('/api/admin/multilingual', { data: { locales: ['es', 'fr', 'de', 'ja', 'zh'] } })).ok()).toBe(true);
   await api.dispose();
 });
 

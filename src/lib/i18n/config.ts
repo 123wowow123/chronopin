@@ -78,8 +78,9 @@ export function localizePath(href: string, locale: Locale): string {
 }
 
 // The best supported language for an Accept-Language header, or null.
-// "fr-CA,fr;q=0.9,en;q=0.8" -> 'fr'; quality 0 means "not this one".
-export function negotiateLocale(header: string | null | undefined): Locale | null {
+// "fr-CA,fr;q=0.9,en;q=0.8" -> 'fr'; quality 0 means "not this one". Only
+// the languages in `among` count (those offered, src/lib/multilingual.ts).
+export function negotiateLocale(header: string | null | undefined, among: readonly Locale[] = LOCALES): Locale | null {
   if (!header) return null;
   const ranked = header
     .split(',')
@@ -92,18 +93,20 @@ export function negotiateLocale(header: string | null | undefined): Locale | nul
     .sort((a, b) => b.q - a.q || a.index - b.index);
   for (const { tag } of ranked) {
     const base = tag.split('-')[0];
-    if (isLocale(base)) return base;
+    if (isLocale(base) && among.includes(base)) return base;
   }
   return null;
 }
 
 // A page's canonical path in its language, and the same page in the others
-// (hreflang), for its metadata. x-default is the English page. With the other
-// languages switched off (src/lib/multilingual.ts) there are none to list.
-export function languageAlternates(path: string, locale: Locale, multilingual = true): { canonical: string; languages?: Record<string, string> } {
-  if (!multilingual) return { canonical: localizePath(path, locale) };
+// (hreflang), for its metadata. x-default is the English page. Only the
+// languages offered (src/lib/multilingual.ts) are listed, and with none
+// offered there are none to list.
+export function languageAlternates(path: string, locale: Locale, offered: readonly Locale[] = LOCALES): { canonical: string; languages?: Record<string, string> } {
+  const others = offered.filter((l) => l !== DEFAULT_LOCALE);
+  if (!others.length) return { canonical: localizePath(path, locale) };
   const languages: Record<string, string> = {};
-  for (const l of LOCALES) languages[INTL_LOCALES[l]] = localizePath(path, l);
+  for (const l of [DEFAULT_LOCALE, ...others]) languages[INTL_LOCALES[l]] = localizePath(path, l);
   languages['x-default'] = localizePath(path, DEFAULT_LOCALE);
   return { canonical: localizePath(path, locale), languages };
 }

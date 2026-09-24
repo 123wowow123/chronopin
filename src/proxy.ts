@@ -1,11 +1,12 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { identifyBot } from '@/lib/bots';
+import { isOffered } from '@/lib/multilingual';
 import { DEFAULT_LOCALE, isLocale, LOCALE_COOKIE, localizePath, negotiateLocale, splitLocale, type Locale } from '@/lib/i18n/config';
 import { pinPath } from '@/lib/seo';
 import * as db from '@/server/db';
 import { botRetryAfter } from '@/server/botLimit';
 import BotVisit from '@/server/model/botVisit';
-import { multilingualEnabled, pinPathCache } from '@/server/services/cache';
+import { offeredLocales, pinPathCache } from '@/server/services/cache';
 
 // Pin URLs are settled here, before rendering starts. Pages stream their
 // shell as soon as a request arrives, after which neither a redirect nor a
@@ -70,15 +71,15 @@ export async function proxy(request: NextRequest) {
   if (prefix === DEFAULT_LOCALE) {
     return redirectTo(request, path + search, 308);
   }
-  // With the other languages switched off (src/lib/multilingual.ts), every
-  // page is the English one. Not permanent: the admin can switch them back.
-  const multilingual = await multilingualEnabled();
-  if (prefix && !multilingual) {
+  // A language that is not offered (src/lib/multilingual.ts) is the English
+  // page. Not permanent: the admin can offer it again.
+  const offered = await offeredLocales();
+  if (prefix && !isOffered(offered, prefix)) {
     return redirectTo(request, path + search, 307);
   }
-  if (!prefix && multilingual) {
-    const preferred = preferredLocale(request);
-    if (preferred !== DEFAULT_LOCALE) {
+  if (!prefix && offered.length) {
+    const preferred = preferredLocale(request, offered);
+    if (preferred !== DEFAULT_LOCALE && isOffered(offered, preferred)) {
       // Not permanent: it depends on the visitor.
       return redirectTo(request, localizePath(path, preferred) + search, 307);
     }
@@ -97,11 +98,12 @@ export async function proxy(request: NextRequest) {
 }
 
 // The language picker's choice, else (with none made) the browser's
-// Accept-Language. Crawlers send neither and get English.
-function preferredLocale(request: NextRequest): Locale {
+// Accept-Language among the languages offered. Crawlers send neither and get
+// English.
+function preferredLocale(request: NextRequest, offered: readonly Locale[]): Locale {
   const chosen = request.cookies.get(LOCALE_COOKIE)?.value;
   if (isLocale(chosen)) return chosen;
-  return negotiateLocale(request.headers.get('accept-language')) ?? DEFAULT_LOCALE;
+  return negotiateLocale(request.headers.get('accept-language'), [DEFAULT_LOCALE, ...offered]) ?? DEFAULT_LOCALE;
 }
 
 function redirectTo(request: NextRequest, href: string, status: 307 | 308) {
