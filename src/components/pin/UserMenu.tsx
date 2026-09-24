@@ -65,7 +65,7 @@ export function UserMenu({ user, blocked }: { user: BlockedUser; blocked: boolea
     }
   }
 
-  const item = 'block w-full rounded-lg px-3 py-2 text-left text-base font-medium hover:bg-raised focus-visible:bg-raised focus-visible:outline-none';
+  const item = 'block w-full rounded-lg px-3 py-2 text-left text-base font-medium hover:bg-raised-2 focus-visible:bg-raised-2 focus-visible:outline-none';
   return (
     <span ref={rootRef} className="relative inline-flex">
       <button
@@ -92,9 +92,9 @@ export function UserMenu({ user, blocked }: { user: BlockedUser; blocked: boolea
               id={menuId}
               role="menu"
               style={{ top: open.top, right: open.right }}
-              className={`fixed z-50 ${view === 'actions' ? 'w-48' : 'w-64'} max-w-[calc(100vw-2rem)] rounded-xl border border-line bg-panel p-1.5 text-ink shadow-2xl shadow-shade/40`}
+              className={`fixed z-50 ${view === 'actions' ? 'w-48' : 'w-64'} max-w-[calc(100vw-2rem)] rounded-xl border border-raised-2 bg-popover p-1.5 text-ink shadow-2xl shadow-shade/40`}
             >
-              <span aria-hidden className="absolute -top-1.5 right-3 size-3 rotate-45 border-t border-l border-line bg-panel" />
+              <span aria-hidden className="absolute -top-1.5 right-3 size-3 rotate-45 border-t border-l border-raised-2 bg-popover" />
               {view === 'actions' ? (
                 blocked ? (
                   <button type="button" role="menuitem" onClick={() => run(() => unblockUser(user.id))} className={item}>

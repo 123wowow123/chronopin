@@ -492,7 +492,7 @@ function ReactionPicker({ id, mine, onPick }: { id: string; mine: CommentReactio
       id={id}
       role="group"
       aria-label={t('comments.chooseReaction')}
-      className="absolute bottom-full left-0 z-30 mb-2 flex gap-0.5 rounded-full border border-tint/[0.07] bg-panel p-1.5 shadow-2xl shadow-shade/40"
+      className="absolute bottom-full left-0 z-30 mb-2 flex gap-0.5 rounded-full border border-raised-2 bg-popover p-1.5 shadow-2xl shadow-shade/40"
       onKeyDown={(event) => {
         if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
         event.preventDefault();
@@ -511,7 +511,7 @@ function ReactionPicker({ id, mine, onPick }: { id: string; mine: CommentReactio
           aria-pressed={r.name === mine}
           onClick={() => onPick(r.name)}
           className={`flex size-10 origin-bottom items-center justify-center rounded-full text-[26px] leading-none transition-transform duration-150 outline-none hover:scale-125 focus-visible:scale-125 motion-reduce:transition-none sm:size-12 sm:text-4xl ${
-            r.name === mine ? 'bg-raised' : ''
+            r.name === mine ? 'bg-raised-2' : ''
           }`}
         >
           <span aria-hidden>{r.emoji}</span>
@@ -603,7 +603,7 @@ function CommentMenu({
     }
   }
 
-  const item = 'block w-full rounded-lg px-3 py-2 text-left text-base font-medium hover:bg-raised focus-visible:bg-raised focus-visible:outline-none';
+  const item = 'block w-full rounded-lg px-3 py-2 text-left text-base font-medium hover:bg-raised-2 focus-visible:bg-raised-2 focus-visible:outline-none';
   return (
     <span ref={rootRef} className="relative inline-flex">
       <button
@@ -625,9 +625,9 @@ function CommentMenu({
           ref={menuRef}
           id={menuId}
           role="menu"
-          className={`absolute right-0 bottom-full z-30 mb-2.5 ${view === 'actions' ? 'w-48' : 'w-64'} rounded-xl border border-line bg-panel p-1.5 text-ink shadow-2xl shadow-shade/40`}
+          className={`absolute right-0 bottom-full z-30 mb-2.5 ${view === 'actions' ? 'w-48' : 'w-64'} rounded-xl border border-raised-2 bg-popover p-1.5 text-ink shadow-2xl shadow-shade/40`}
         >
-          <span aria-hidden className="absolute -bottom-1.5 right-3 size-3 rotate-45 border-r border-b border-line bg-panel" />
+          <span aria-hidden className="absolute -bottom-1.5 right-3 size-3 rotate-45 border-r border-b border-raised-2 bg-popover" />
           {view === 'actions' ? (
             <>
               {canDelete ? (

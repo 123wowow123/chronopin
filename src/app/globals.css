@@ -26,6 +26,10 @@
   --color-field: #0c0e12;
   --color-raised: #22262d;
   --color-raised-2: #2f343c;
+  /* Menus and bars that float over the cards (a comment's or a person's
+     three-dot menu, the reaction bar): lifted clear of the panels they open
+     over, which in the dark theme are nearly the same shade as the page. */
+  --color-popover: #2c313a;
   --color-line: #272b33;
 
   --color-ink: #e7e9ec;
@@ -88,6 +92,7 @@
   --color-field: #f7f8fa;
   --color-raised: #eceff3;
   --color-raised-2: #dde1e7;
+  --color-popover: #ffffff;
   --color-line: #dce0e6;
 
   --color-ink: #15181d;
