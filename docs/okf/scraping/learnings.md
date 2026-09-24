@@ -45,6 +45,204 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **A batch gets a new desk when no existing desk fits.** Owner, 2026-09-24, during the Aldi Nord run: "create new user if that makes more sense". Match the company to what it *is* (a store chain is @RetailDesk, a consumer-goods maker @ConsumerDesk, restaurants @FoodDesk). When nothing fits, create a curator rather than force-fit one, and get the new account's email confirmed on prod *before* the run: prod refuses POST from an unverified account, and the API cannot re-author pins later (see the Nestlé entry).
 * **A product pin says what the product is.** Owner, 2026-09-22, on pin 2346 (the A350F first flight): "Product pins should have notable features in long form summary". A pin about an aircraft, vehicle, device, chip, game, AI model or software release gets summary points on what is new or distinctive about it and its headline specifications with units, not only the event's date and schedule. Owner, same day: the features go in **their own section** - `<h3>Notable features</h3><ul>...</ul>` after the event's list - "rather than piled into large list of bullets with other things". Built into all three summary prompts (`PRODUCT_FEATURES_RULE` in `src/server/extract/index.ts`); the wiki pages now record a product's features too. The manufacturer's product page is the usual place for the specs; add it as a reference.
 * **Scraping from the dev machine processes locally and posts only the finished pin.** Owner, 2026-09-24, during the Oracle prod batch, on hearing that prod's save pipeline starts headless Chromium on the VM: "when running scraping on local machine all processes should be run on local and just post the final pin". Page fetches with Chromium, source wikis, reference and podcast checks, sentiment, company relations, translations and image thumbnailing all belong on the dev machine; prod, one small B2s VM serving readers, only stores the result. **Not yet possible:** every `POST`/`PUT /api/pins` on prod still fires the `pinEvents` save listeners in `src/server/events.ts` (`refreshWiki` opens Chromium per link and calls the LLM; `checkPodcasts`, `suggestDuplicates`, `syncStocks`, `scoreTone`, `syncAwards` and others follow), and create downloads every media URL itself. Those listeners drove prod's load to 59 in the Broadcom run and 70 with three sessions posting on 2026-09-24. Honouring the rule needs a way to post a prebuilt pin: its wikis, relations, sentiment and translations built locally, thumbs pushed with `thumbs:push`, and prod skipping the heavy listeners while keeping search sync, the live feed and the duplicate check. Until that exists, prod batches stay serial and load-gated.
+## 2026-09-24 - Salesforce news events, straight to production (@TechDesk, @CyberDesk, @LawDesk, @EconDesk)
+
+Ian asked to "pin Salesforce news events on prod". Oracle's workflow and scripts: five agents drafted
+POST bodies (results and capital / deals and partnerships / cyber and law / people and workforce /
+products, pricing and conferences), the lead linted every draft (`check.py` with the exact CRM note),
+viewed every picture on a contact sheet and posted serially, load-gated over SSH (reading `/proc/loadavg`
+was allowed this time). Seventy pins, 3377-3682 (interleaved with other sessions'), all tagged
+`Salesforce`, company Salesforce (Company 734, already on prod from pin 734; the brief's company-wide note
+"the San Francisco customer-software group behind Agentforce, Slack and Tableau"). None half-saved. The
+batch is cached in `.scrape/prod-batches/salesforce-2026-09-24/`.
+
+- **Results chain** (@TechDesk, `Finance` + `Software`, timed from the Business Wire stamps on the Nasdaq
+  copies): 3558 Q1 FY26 -> 3565 -> 3572 -> 3575 FY26 -> 3582 Q1 FY27 -> 3586 Q2 FY27 -> **3594 Q3 FY27
+  `estimated` Wed 2 Dec 2026 21:01Z** (every Q3 since 2023 came the week after Thanksgiving, every release
+  since May 2025 on a Wednesday; re-date when the Business Wire timing notice appears, early November).
+  Capital: 3562 the $6B Informatica loans (a period, repaid 11 Mar 2026); buyback chain 3576 $25B bonds ->
+  3580 ASR starts -> **3597 ASR settles `estimated` 31 Oct 2026** ("expected in October 2026"). Investor
+  Day 3569 (2025, $60B+ FY30) -> 3590 (2026, $63B+).
+- **Deals** (@TechDesk; the Bundeskartellamt step @LawDesk): Informatica 3377 -> 3386 -> 3393; Regrello
+  3399 -> 3408; Qualified 3441 -> 3449; Contentful 3672 -> 3680; Fin (formerly Intercom) 3674 -> 3682;
+  Anthropic 3423 -> 3677 Claudeforce. Loose: OpenAI 3412, Google Gemini 3432.
+- **Products and conferences** (@TechDesk): Agentforce 3472 (3) -> 3483 (360 GA); pricing 3462 Flex
+  Credits -> 3475 6% rise -> 3527 Core/Advanced/Max editions; TDX 3492 -> 3553 (2027); Connections 3513 ->
+  3557 (2027); World Tour 3537 London -> 3542 Paris -> 3546 Tokyo -> 3550 Munich (all forward). Loose:
+  Slack API limits 3465, MuleSoft Agent Fabric 3479, Slackbot 3488, Tableau Conference 3497.
+- **Security** (@CyberDesk, one extortion chain): 3600 UNC6040 vishing -> 3603 Salesloft Drift (company
+  Salesloft) -> 3610 FBI flash (company FBI) -> 3613 leak site -> 3619 no ransom -> 3621 Qantas dump
+  (company Qantas) -> 3626 Gainsight (company Gainsight) -> 3628 Experience Cloud.
+- **Courts** (@LawDesk): breach class action 3606 -> 3630 (motion to dismiss mostly denied); authors'
+  copyright suit 3624 -> **3633 case conference `scheduled` 20 Nov 2026** (re-check the docket in
+  November); Pirani v. Slack cert denied 3615.
+- **People** (@TechDesk; workforce @EconDesk): National Guard 3642 -> 3647 Conway quits -> 3651 apology;
+  exec churn 3653 Dresser to OpenAI -> 3658 six new leaders; Washington WARN 3639 -> 3669 (5 Oct 2026, a
+  separate chain from the SF batch's 3222 -> 3291). Loose: board 3635, 4,000 support roles 3638, 1,000
+  graduates 3660 (@EconDesk), CAO 3663, Milano COO 3667.
+
+* **Learned - Salesforce's newsroom is a keyless WordPress API.**
+  `salesforce.com/news/wp-json/wp/v2/{sf_press_release,posts,media,search}?search=...&after=...` lists every
+  release and story with `date_gmt` (the exact minute, matching the 8-K acceptance stamp) and full text;
+  `/media?search=` finds executive and event photos, which accept `?w=` for resizing. The public pages read
+  with plain `curl -L` and a Chrome UA. It replaced WebSearch for discovery: the agents used 2-12 searches each.
+* **Learned - a small deal's close day is an editor's note.** Regrello, Qualified and Contentful have no
+  close release; the day is a note appended to the original "signs definitive agreement" story ("completed
+  its acquisition ... on October 1, 2025"), and the price is only in the next 10-Q/10-K. Cite the filing
+  and give the story reference the `startDate`.
+* **Learned - a reference date that is not `YYYY-MM-DD` 400s the whole create.** One draft carried
+  `startDate: "2026-06-01T12:00:00Z"`; prod answered "A reference startDate must be YYYY-MM-DD" and saved
+  nothing (a validation 400 leaves no partial, unlike a 500). `check.py` now lints `publishedDate`,
+  `startDate` and `endDate`.
+* **Learned - `pgrep -f "run.py plan-"` matches other sessions' runners.** Six sessions were posting with
+  copies of the same scripts; a queue that waited on that pattern would have waited on all of them. Wait
+  on your own pid or the absolute path of your own `run.py`.
+* **Learned - Commons' "Salesforce Tower" category holds three towers.** "Salesforce Tower, May 2022" is
+  Sydney's and "Salesforce tower facing south" is a view from Chicago's; look at every Tower picture.
+  Also check the media already on prod: two agents independently picked pin 3222's
+  "San Francisco, California April 2022 Salesforce Tower", which the lead swapped out.
+* **Learned - Washington's WARN database answers a scripted postback.** fortress.wa.gov's ASP.NET form
+  returns the Salesforce rows (93 on 2 Sep 2025, 59 on 5 Aug 2026) to a POST carrying the viewstate.
+* **Learned - coordinate with a city batch covering the same company.** The San Francisco batch already
+  held Dreamforce 2025-2027 and the SF WARN chain (3222 -> 3291); its drafts were read from its
+  scratchpad and those events left to it.
+* **Traps:** businesswire.com, investor.salesforce.com, openai.com and nytimes.com 403 (Nasdaq's
+  `/press-release/` copies carry the Business Wire stamp); contentful.com 429s; help.salesforce.com and
+  status.salesforce.com are JavaScript-only; the YouTube API key in `.env.local` was rejected, so videos
+  were found by parsing `youtube.com/results` with `curl`; Wikimedia 429s a Chrome UA under load but not
+  the ChronoPin UA; INFA was delisted at the close but its related-stock entries posted fine.
+* **Not pinned:** smaller acquisitions with their own "signs definitive agreement" stories (Convergence,
+  Bluebirds, Waii, Apromore, Spindle AI, Doti, Cimulate, Momentum, m3ter); partnership stories (AWS,
+  Databricks, Siemens, Google Cloud 2026, "Salesforce in Claude"); World Tour New York (3 Dec 2026, no
+  venue published) and the Essentials stops; the 2026 victim breaches known only from a roundup; the
+  Backpage suits; the Dreamforce 2026 service disruption.
+* **Feedback**: none yet.
+* **Changed**: [Vertical recipes](verticals.md) - a Salesforce row; [Sources](sources.md) - Salesforce's
+  newsroom API and the Washington WARN database.
+
+## 2026-09-24 - New York news events, straight to production (@CityDesk, @LawDesk, @PoliticsDesk, @SportDesk, @BuildDesk, @ClimateDesk)
+
+Ian asked to "pin New York news events on prod", then "pin 1 by 1" (post one at a time now rather than
+wait for the Los Angeles run to finish; the load gate kept the two interleaved runs under 3). Four agents
+drafted by theme: elections and City Hall; courts and crime; transit, infrastructure and incidents; the
+event calendar. The lead linted every draft, viewed every picture on contact sheets, dropped a repeated
+toll-sign photo from two congestion pins, and posted serially. There were 41 pins, all tagged `New York`
+(pins 3535-3666, interleaved):
+
+- **Mayoral race** 3535 primary -> 3539 general -> 3616 inauguration (@CityDesk); **governor** 3545 (3 Nov,
+  Hochul vs. Blakeman; the June primaries were cancelled, uncontested) -> 3549 term begins 1 Jan 2027;
+  charter amendments on the 3 Nov ballot 3541.
+- **City Hall** (@CityDesk): state budget 3620 (57 days late), rent freeze 3623 (a period from the 25 Jun
+  vote to the exclusive end of Order 58's lease window, 1 Oct 2027), city budget 3627, free 2-K 3629.
+- **Courts** (@LawDesk): Adams case dismissed 3552; Weinstein 3556 -> 3560 (sentenced 23 Sep 2026); Combs
+  3564 -> 3567 -> 3571 (appeal argued, decision reserved - the ruling answers it); 345 Park Avenue 3574;
+  Trump penalty voided 3578; Mangione 3579 -> 3581 -> 3585 (federal guilty plea) -> 3589 (sentencing,
+  `scheduled` 18 Dec 2026; the state trial is adjourned over double jeopardy, no date).
+- **Congestion pricing** (@CityDesk) 3632 -> 3634 -> 3637 -> 3640 ($12 in 2028, `estimated`, a period to
+  2031); incidents 3643 (helicopter), 3645 (Cuauhtémoc), 3648 (Oct 2025 flood); $3 fare 3652.
+- **Builds** (@BuildDesk) answer existing pins: Gateway work halting 3592 -> 662; JFK New Terminal One
+  (`delayed` to Q1 2027) 3595 -> 571.
+- **Calendar**: UNGA 81 3598 (@PoliticsDesk), Climate Week 3601 (@ClimateDesk), marathon 3605 -> 3609
+  (1 Nov 2026), World Cup final 3612 (@SportDesk), Comic Con 3655, Macy's 100th parade 3659, tree lighting
+  3662 (`estimated` 2 Dec), ball drop 3666 (@CityDesk).
+
+* **Learned - a 502 is not a half-save.** The 345 Park Avenue POST came back 502 (the proxy timing out
+  under another session's load); the pin row never saved, so a straight re-post was right (3574). Search
+  by title before and after re-posting - a 500 "fetch failed" is the one that leaves a partial pin.
+* **Learned - official NYC sources that read with plain `curl`:** vote.nyc (certified results PDFs, recap
+  CSVs and ranked-choice round pages - the CSV lists every result twice, per county and citywide, so take
+  the PDF's citywide section), council.nyc.gov, nyc.gov/mayors-office, files.mta.info images, NTSB
+  investigation pages and `data.ntsb.gov` preliminary reports (times to the minute), un.org/en/ga,
+  news.un.org, timessquarenyc.org, CourtListener RECAP PDFs. **Walled to curl, read by the scraper:**
+  mta.info (403), elections.ny.gov (Cloudflare, and the scraper gets nothing from its PDFs),
+  governor.ny.gov, nysenate.gov, nycourts.gov, justice.gov/usao-sdny (Akamai), press.un.org,
+  climateweeknyc.org, fifa.com, macys.com. **Unreadable both ways:** rockefellercenter.com. nyrr.org
+  sits behind a Queue-it room that plain `curl -L` loops on; `curl -c jar -b jar -L` gets through, but
+  prod probably cannot, so NYRR pages are references, not sources.
+* **Learned - free discovery that spares WebSearch:** CourtListener's v4 search API without a key
+  (`type=rd`, `docket_id:`) lists a docket's filings with PDF paths; Google News RSS
+  (`news.google.com/rss/search?q=...+when:14d`) surfaced the Mangione plea and the Weinstein sentencing
+  the searches missed; WordPress JSON on thecityreporter.nyc and manhattanda.org; Wikipedia's
+  `action=parse&prop=externallinks` for reference URLs; YouTube search pages list video ids with plain
+  `curl`.
+* **Learned - dates and times to distrust:** Wikipedia put the rent-freeze vote on 26 June (the board's
+  order says 25 June; coverage ran the next day); a caption called 30 June 2026 "Tuesday, June 29"; SDNY's
+  Combs verdict statement is headed the day before the verdict; a search summary called the Mangione
+  state trial "delayed until Dec. 10" where the article said "next possible court date"; CNN dated the
+  helicopter crash a day late; NTSB and the mayor count 19 injured on the Cuauhtémoc, Mexico 22.
+* **Learned - which courthouse:** news says "Manhattan federal court"; `nysd.uscourts.gov/hon-<judge>`
+  gives each SDNY judge's building (Subramanian at 500 Pearl, Garnett and Ho at 40 Foley Square).
+* **Traps:** Nominatim 429'd for about ten minutes with four agents geocoding (Photon for forward
+  lookups, one spaced `/lookup?osm_ids=` retry loop for labels); reverse-geocoding the Gateway casing
+  gave the High Line and "2 Broadway" the Starbucks inside it, so both use Nominatim's label for the named
+  object; news lead images are often file photos (a gala shot of Combs on the appeal story), and one
+  outlet's verdict sketch reappeared on its sentencing story; UN News image presets 500 above 1170 px and
+  when the path's folder does not match the og:image; a scraped press.un.org page carried stray foreign
+  images and macysinc.com's first news image was a Bloomingdale's shot.
+* **Judgement calls to revisit:** 3662 (tree lighting) re-date by whole-pin PUT when NBC announces it;
+  3571 (Combs appeal) answered by the Second Circuit's ruling; 3589 firm up if sentencing moves; the
+  Mangione state trial gets a pin when a date is set; 3640 may change with the congestion appeal. Not
+  pinned: free buses (never enacted - the MTA is state-run), JFK Terminal 6 (no opening day), Portal
+  North Bridge (New Jersey), the 2027 Pride March (no date).
+* **Changed**: [Vertical recipes](verticals.md) - a New York row; [Sources](sources.md) - New York
+  sources.
+
+## 2026-09-24 - Los Angeles news events, straight to production (@CityDesk, @BuildDesk, @ClimateDesk, @LawDesk, @SportDesk, @PoliticsDesk, @EconDesk, @FilmDesk, @MusicDesk, @TechDesk, @AnimeDesk)
+
+Ian asked to "pin Los Angeles news events on prod". Four agents drafted by theme: city hall, the 2025
+raids and politics; the January 2025 fires; builds and transport; sport and culture. The lead linted each
+draft, viewed every picture on a contact sheet, re-read the post-cutoff claims at their sources (the
+mistrial, the retrial date, the USA-Paraguay score, the Emmys, the mayoral runoff, the 2026-27 budget),
+and posted serially behind the load gate, interleaved with five other city and company sessions. There
+were 59 pins, all tagged `Los Angeles` (pins 3344-3622):
+
+- **Builds** (@BuildDesk): the Rail to Rail path 3344, the LAX/Metro Transit Center 3358, the A Line to
+  Pomona 3362, Sepulveda subway choice 3369, the Rental Car Center 3372, the T4 topping-out 3376, the
+  Sixth Street park 3384 (`delayed`). Chains: LAX roadways 3365 -> 3398 (May 2028); D Line 2192 -> 3390
+  (spring 2027) -> 3395 (fall 2027); SkyLink 712 -> 3381, the bondholders' 8 Dec 2026 longstop.
+- **Fires**: Palisades 3403 -> 3407 -> 3411 arrest (placed in Florida, where it happened) -> 3417 mistrial
+  -> 3421 retrial (2 Nov 2026 08:30 PST); Eaton 3427 -> 3431 -> 3437 -> 3442 -> 3448 SCE compensation
+  program (a period to 1 Dec 2026) -> 3453 -> 3458 bellwether trial (25 Jan 2027); rebuilding 3461 ->
+  3466; LAFD 3596 -> 3599 (@CityDesk).
+- **Civic**: raids 3544 -> 3548 Guard -> 3604 curfew (@CityDesk) -> 3551 Breyer -> 3555 -> 3559 -> 3563 ->
+  3566 withdrawal; budget 3607 -> 3611 -> 3614 (fiscal years as periods); mayor 3570 primary -> 3584 runoff
+  (3 Nov 2026); charter/LAFD measures 3618; homeless count 3622; Olympic wage 3588 -> 3591 ($25.50 on
+  1 Jul 2027).
+- **Events**: Dodgers parade 3471, LA28 tickets 3476 (answers 251), World Cup at SoFi 3482 -> 3486, tourism
+  3491, Emmys 3498, Bruno Mars 3506, AFI Fest 3512, Auto Show 3517, Rose Parade 3522, Rose Bowl 3529,
+  Marathon 3533, Long Beach Grand Prix 3538, Anime Expo 3540 (@AnimeDesk).
+
+* **Learned - a 502 is usually a pin that was never saved.** Two POSTs came back `502` with an empty body
+  from Caddy, both while five other sessions were posting. Neither left a partial pin, in three scans a
+  minute apart; a retry saved each. The runner now rescans three times and then re-POSTs; a re-POST of a
+  pin that did save answers 409 on the duplicate `sourceUrl`, so it cannot double-post.
+* **Learned - lint reference dates too.** Prod answered `400 A reference startDate must be YYYY-MM-DD`
+  for a reference carrying `2025-06-11T03:00:00Z`; the lint only checked the pin's own dates. Check
+  `startDate`, `endDate` and `publishedDate` on every reference before posting. (It is the local date: the
+  curfew began 20:00 PDT on 10 June, so `2025-06-10`.)
+* **Learned - a pin held back from the middle of a chain is re-threaded afterwards.** The curfew pin
+  belongs between the Guard order and Breyer's ruling but waited for @CityDesk's email. It was posted
+  answering the Guard order, then Breyer's pin got a whole-pin `PUT` with `parentId` set to the curfew
+  pin, so the chain stayed linear rather than branching.
+* **Learned - the moment @CityDesk was confirmed, every session posted at once** and the load jumped to
+  14 for about ten minutes, with no pin saved anywhere. The gate held; a gate that gives up after 30 min
+  is enough.
+* **Learned - check existing pins for the same subject under another name.** Pin 712 "LA's $14BN Airport
+  Upgrade" is really the people mover's delayed opening, so the new SkyLink deadline pin answers 712
+  rather than the systems-testing pin 2193.
+* **Learned - the news had the Olympic wage schedule wrong.** Reports put $25 on 1 July 2027; Ordinance
+  188944 and the city's wage chart give $25.00 (1 Jul 2026), $25.50 (2027), $28.50 (2028), $29.00 (2029)
+  and $30.00 (1 Jan 2030). Take a wage step from the ordinance.
+* **Traps:** a Commons "curfew map" was an OpenStreetMap screenshot with a mouse cursor and no zone
+  drawn (dropped); Commons originals 429 a browser UA but not the ChronoPin UA; justice.gov releases are
+  behind Akamai while its case pages read with `curl`; FIFA match-centre pages are JS shells (FIFA's own
+  API has the scores and times); both fires' CAL FIRE containment stamps read "01/31/2025 10:48 AM".
+* **Not pinned:** 2026 high-desert fires (Lancaster, Llano, Gorman), an unverified March 2026 heat record,
+  council expansion (not on the ballot), the Dodgers' 2026 postseason (seeding unsettled), the other four
+  Bruno Mars nights, Crypto.com Arena / Intuit Dome / Hollywood Bowl bookings (JS calendars), East San
+  Fernando Valley rail, the gondola and the Port of LA (not researched).
+* **Changed**: [Vertical recipes](verticals.md) - a Los Angeles row; [Sources](sources.md) - LA agencies.
+
 ## 2026-09-24 - Las Vegas news events, straight to production (@SportDesk, @MusicDesk, @BuildDesk, @TechDesk, @CyberDesk, @LawDesk, @EconDesk, @ClimateDesk)
 
 Ian asked to "pin Las Vegas news events on prod". Four agents drafted (sport and shows / building /
