@@ -348,6 +348,7 @@ const ja: Messages = {
     started: '開始済み',
     elapsed: '投稿からの経過時間',
     startedAgo: '{ago}に開始',
+    startsWhen: '{when}に開始',
     days: '{count}日',
     stretchLate: '{span}の遅れ: {from}〜{to}',
     stretchPromised: '当初約束された待ち時間: {from}〜{to}',
@@ -592,6 +593,7 @@ const ja: Messages = {
   newPins: {
     heading: '新しいピン',
     latest: '最新',
+    postedAgo: '{ago}に投稿',
     liveOdds: 'ライブの市場予想',
   },
   controls: {

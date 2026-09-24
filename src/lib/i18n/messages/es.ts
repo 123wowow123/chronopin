@@ -354,6 +354,7 @@ const es: Messages = {
     started: 'Empezado',
     elapsed: 'Tiempo transcurrido desde la publicación',
     startedAgo: 'Empezó {ago}',
+    startsWhen: 'Empieza {when}',
     days: '{count} d',
     stretchLate: '{span} de retraso: del {from} al {to}',
     stretchPromised: 'La espera prometida al principio: del {from} al {to}',
@@ -598,6 +599,7 @@ const es: Messages = {
   newPins: {
     heading: 'Pines nuevos',
     latest: 'Recientes',
+    postedAgo: 'Publicado {ago}',
     liveOdds: 'Probabilidades del mercado en directo',
   },
   controls: {

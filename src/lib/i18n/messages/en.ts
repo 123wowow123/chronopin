@@ -348,6 +348,7 @@ const en = {
     started: 'Started',
     elapsed: 'Time elapsed since posted',
     startedAgo: 'Started {ago}',
+    startsWhen: 'Starts {when}',
     days: '{count}d',
     stretchLate: 'Late by {span}: {from} to {to}',
     stretchPromised: 'The wait as first promised: {from} to {to}',
@@ -593,6 +594,7 @@ const en = {
   newPins: {
     heading: 'New pins',
     latest: 'Latest',
+    postedAgo: 'Posted {ago}',
     liveOdds: 'Live market odds',
   },
   controls: {

@@ -10,7 +10,9 @@ import type { CardPin, NewPin } from '@/lib/types';
 import { pinPicture } from '@/components/pin/PinThumb';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { MarketTrend } from './MarketTrend';
+import { StartsWhen } from './StartsWhen';
 import { useT } from '@/lib/client/i18n';
+import { CategoryPill } from './CategoryPill';
 
 // How many pins the new pins lists keep, matching the LIMIT newPins() in
 // src/server/services/pages.ts asks for.
@@ -21,7 +23,9 @@ function toNewPin(pin: CardPin): NewPin {
   return {
     id: pin.id,
     title: pin.title,
-    userName: pin.user?.userName ?? null,
+    category: pin.categories?.[0] ?? null,
+    utcStartDateTime: pin.utcStartDateTime,
+    allDay: pin.allDay,
     // A just-saved broadcast carries no utcCreatedDateTime (PinCard.tsx
     // guards the same gap); it was created now, so that is the best answer.
     utcCreatedDateTime: pin.utcCreatedDateTime ?? new Date().toISOString(),
@@ -41,16 +45,20 @@ export function withLivePin(list: NewPin[], type: string, changed: CardPin, belo
     return type === 'pin:save' ? [toNewPin(changed), ...list].slice(0, NEW_PINS_LIMIT) : list;
   }
   if (type !== 'pin:update') return list;
-  // An edit's broadcast is the form's pin: no author, and possibly no
-  // created time, so those stay as the list had them.
+  // An edit's broadcast is the form's pin: possibly no created time, so that
+  // stays as the list had it, as does the category if it came without any.
   const next = [...list];
-  next[index] = { ...toNewPin(changed), userName: list[index].userName, utcCreatedDateTime: list[index].utcCreatedDateTime };
+  next[index] = {
+    ...toNewPin(changed),
+    category: changed.categories ? (changed.categories[0] ?? null) : list[index].category,
+    utcCreatedDateTime: list[index].utcCreatedDateTime,
+  };
   return next;
 }
 
 // The pins added most recently, beside the timeline on wide screens, each with
-// who added it and how long ago. now is the timeline's ticking clock, so the
-// ages agree between the server render and hydration.
+// how long ago it was added, its category and when it starts. now is the timeline's ticking
+// clock, so the ages agree between the server render and hydration.
 //
 // Trending comes first: this panel starts at its heading and one row (basis-28)
 // and grows into what trending leaves, up to its full list. When not even that
@@ -79,8 +87,8 @@ export function NewPins({ pins, now }: { pins: NewPin[]; now: number }) {
   );
 }
 
-// One new pin: its picture (or its market's trend), title, how long ago and
-// who added it. Also the nav drawer's new pins list
+// One new pin: its picture (or its market's trend), title, how long ago it was
+// added, its category and when it starts. Also the nav drawer's new pins list
 // (src/components/nav/DrawerHighlights.tsx).
 export function NewPinRow({ pin, now }: { pin: NewPin; now: number }) {
   const t = useT();
@@ -106,10 +114,13 @@ export function NewPinRow({ pin, now }: { pin: NewPin; now: number }) {
           <time dateTime={pin.utcCreatedDateTime} className="shrink-0">
             {/* now ticks each minute, so a pin pushed in since the last
                 tick would otherwise read "in 3 seconds". */}
-            {timeAgo(pin.utcCreatedDateTime, Math.max(now, Date.parse(pin.utcCreatedDateTime)), t.locale)}
+            {t('newPins.postedAgo', {
+              ago: timeAgo(pin.utcCreatedDateTime, Math.max(now, Date.parse(pin.utcCreatedDateTime)), t.locale, { numeric: 'always', decimals: true }),
+            })}
           </time>
-          {pin.userName ? <span className="truncate">· {pin.userName}</span> : null}
+          {pin.category ? <CategoryPill category={pin.category} /> : null}
         </span>
+        <StartsWhen utcStartDateTime={pin.utcStartDateTime} allDay={pin.allDay} />
       </span>
     </Link>
   );

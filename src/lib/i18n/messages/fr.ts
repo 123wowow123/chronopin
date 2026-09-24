@@ -354,6 +354,7 @@ const fr: Messages = {
     started: 'Commencé',
     elapsed: 'Temps écoulé depuis la publication',
     startedAgo: 'Commencé {ago}',
+    startsWhen: 'Commence {when}',
     days: '{count} j',
     stretchLate: '{span} de retard : du {from} au {to}',
     stretchPromised: 'L’attente promise au départ : du {from} au {to}',
@@ -598,6 +599,7 @@ const fr: Messages = {
   newPins: {
     heading: 'Nouvelles épingles',
     latest: 'Récentes',
+    postedAgo: 'Publié {ago}',
     liveOdds: 'Cotes du marché en direct',
   },
   controls: {

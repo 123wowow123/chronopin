@@ -17,6 +17,7 @@ export async function loadNewPins(locale: Locale = DEFAULT_LOCALE): Promise<NewP
   const pictures = await PinView.pictures(pins.map((p) => p.id));
   return localizePins(pins.map(({ sourceUrl, referenceUrls, ...p }) => ({
     ...p,
+    utcStartDateTime: p.utcStartDateTime.toISOString(),
     utcCreatedDateTime: p.utcCreatedDateTime.toISOString(),
     hasMarket: pinMarketRefs({ sourceUrl, references: referenceUrls.map((url) => ({ url })) }).length > 0,
     ...pictures.get(p.id),

@@ -389,18 +389,29 @@ function lastAllDay(pin: { utcStartDateTime: string; utcEndDateTime?: string | n
   return last.getTime() > new Date(pin.utcStartDateTime).getTime() ? last : null;
 }
 
-// "3 hours ago", "in 2 days". One formatter per language.
-const relativeFormats = new Map<Locale, Intl.RelativeTimeFormat>();
+// "3 hours ago", "in 2 days". One formatter per language and style: 'auto'
+// says "yesterday" and "last month", 'always' says "1 day ago" and "1 month
+// ago".
+const relativeFormats = new Map<string, Intl.RelativeTimeFormat>();
 
-function relativeFormat(locale: Locale): Intl.RelativeTimeFormat {
-  let format = relativeFormats.get(locale);
-  if (!format) relativeFormats.set(locale, (format = new Intl.RelativeTimeFormat(INTL_LOCALES[locale], { numeric: 'auto' })));
+function relativeFormat(locale: Locale, numeric: Intl.RelativeTimeFormatNumeric = 'auto'): Intl.RelativeTimeFormat {
+  const key = `${locale}|${numeric}`;
+  let format = relativeFormats.get(key);
+  if (!format) relativeFormats.set(key, (format = new Intl.RelativeTimeFormat(INTL_LOCALES[locale], { numeric })));
   return format;
 }
 
-export function timeAgo(instant: string | Date, now = Date.now(), locale: Locale = 'en'): string {
-  const rtf = relativeFormat(locale);
+// numeric 'always' says "1 day ago" where 'auto' says "yesterday"; decimals
+// gives hours and up one decimal place ("1.1 hours ago", "in 2.5 days").
+export function timeAgo(
+  instant: string | Date,
+  now = Date.now(),
+  locale: Locale = 'en',
+  { numeric = 'auto', decimals = false }: { numeric?: Intl.RelativeTimeFormatNumeric; decimals?: boolean } = {},
+): string {
+  const rtf = relativeFormat(locale, numeric);
   const seconds = (new Date(instant).getTime() - now) / 1000;
+  const round = (value: number, unit: Intl.RelativeTimeFormatUnit) => (decimals && unit !== 'second' && unit !== 'minute' ? Math.round(value * 10) / 10 : Math.round(value));
   // Each unit's size in seconds and how many of it make the next unit up.
   // The count is rounded before it is compared, so 59m40s reads "1 hour ago"
   // rather than "60 minutes ago".
@@ -413,12 +424,40 @@ export function timeAgo(instant: string | Date, now = Date.now(), locale: Locale
   ];
 
   for (const [unit, size, next] of units) {
-    const count = Math.round(seconds / size);
+    const count = round(seconds / size, unit);
     if (Math.abs(count) < next) {
       return rtf.format(count, unit);
     }
   }
-  return rtf.format(Math.round(seconds / 31_536_000), 'year');
+  return rtf.format(round(seconds / 31_536_000, 'year'), 'year');
+}
+
+// When a pin starts, from now, for a list row that has no room for its date,
+// counted in days: "in 41 days", "3 days ago", "in 1 day" - never "tomorrow"
+// or "next month". A timed pin under a day away reads in hours or minutes
+// ("in 3 hours"); an all-day pin's (UTC) date is counted against the viewer's
+// today, and on the day itself started is false, so it reads "Starts today".
+// A year or more off it switches to years, one decimal place ("4586.7 years
+// ago"), rather than a day count too long to read.
+export function startsWhen(utcStartDateTime: string, allDay: boolean | undefined, now: number, locale: Locale = 'en'): { started: boolean; when: string } {
+  const start = new Date(utcStartDateTime);
+  let days: number;
+  if (allDay) {
+    // Local midnight of the pin's date, set by hand so years under 100 (and
+    // BC) do not land in the 1900s.
+    const day = new Date(2000, 0, 1);
+    day.setFullYear(start.getUTCFullYear(), start.getUTCMonth(), start.getUTCDate());
+    const today = new Date(now);
+    days = Math.round((day.getTime() - new Date(today.getFullYear(), today.getMonth(), today.getDate()).getTime()) / DAY_MS);
+    if (days === 0) return { started: false, when: relativeFormat(locale).format(0, 'day') };
+  } else {
+    const ms = start.getTime() - now;
+    if (Math.abs(ms) < DAY_MS) return { started: ms <= 0, when: timeAgo(start, now, locale, { numeric: 'always' }) };
+    days = Math.round(ms / DAY_MS);
+  }
+  const rtf = relativeFormat(locale, 'always');
+  const when = Math.abs(days) < 365 ? rtf.format(days, 'day') : rtf.format(Math.round((days / 365.25) * 10) / 10, 'year');
+  return { started: days < 0, when };
 }
 
 // A rating the way its source shows it: Rotten Tomatoes and AniList as a

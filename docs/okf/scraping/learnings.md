@@ -44,6 +44,387 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 
 * **A batch gets a new desk when no existing desk fits.** Owner, 2026-09-24, during the Aldi Nord run: "create new user if that makes more sense". Match the company to what it *is* (a store chain is @RetailDesk, a consumer-goods maker @ConsumerDesk, restaurants @FoodDesk). When nothing fits, create a curator rather than force-fit one, and get the new account's email confirmed on prod *before* the run: prod refuses POST from an unverified account, and the API cannot re-author pins later (see the Nestlé entry).
 * **A product pin says what the product is.** Owner, 2026-09-22, on pin 2346 (the A350F first flight): "Product pins should have notable features in long form summary". A pin about an aircraft, vehicle, device, chip, game, AI model or software release gets summary points on what is new or distinctive about it and its headline specifications with units, not only the event's date and schedule. Owner, same day: the features go in **their own section** - `<h3>Notable features</h3><ul>...</ul>` after the event's list - "rather than piled into large list of bullets with other things". Built into all three summary prompts (`PRODUCT_FEATURES_RULE` in `src/server/extract/index.ts`); the wiki pages now record a product's features too. The manufacturer's product page is the usual place for the specs; add it as a reference.
+* **Scraping from the dev machine processes locally and posts only the finished pin.** Owner, 2026-09-24, during the Oracle prod batch, on hearing that prod's save pipeline starts headless Chromium on the VM: "when running scraping on local machine all processes should be run on local and just post the final pin". Page fetches with Chromium, source wikis, reference and podcast checks, sentiment, company relations, translations and image thumbnailing all belong on the dev machine; prod, one small B2s VM serving readers, only stores the result. **Not yet possible:** every `POST`/`PUT /api/pins` on prod still fires the `pinEvents` save listeners in `src/server/events.ts` (`refreshWiki` opens Chromium per link and calls the LLM; `checkPodcasts`, `suggestDuplicates`, `syncStocks`, `scoreTone`, `syncAwards` and others follow), and create downloads every media URL itself. Those listeners drove prod's load to 59 in the Broadcom run and 70 with three sessions posting on 2026-09-24. Honouring the rule needs a way to post a prebuilt pin: its wikis, relations, sentiment and translations built locally, thumbs pushed with `thumbs:push`, and prod skipping the heavy listeners while keeping search sync, the live feed and the duplicate check. Until that exists, prod batches stay serial and load-gated.
+## 2026-09-24 - Las Vegas news events, straight to production (@SportDesk, @MusicDesk, @BuildDesk, @TechDesk, @CyberDesk, @LawDesk, @EconDesk, @ClimateDesk)
+
+Ian asked to "pin Las Vegas news events on prod". Four agents drafted (sport and shows / building /
+civic / conventions and tech), the lead linted, viewed every picture on contact sheets, spot-checked the
+biggest claims against their pages and posted serially. **45 pins, 3149-3450** (ids interleaved with the
+other city and company sessions posting at the same time), all tagged `Las Vegas`, on each event's own
+desk (no @CityDesk). Chains, oldest first:
+
+- **Grand Prix**: 606 (2023) -> 3149 Verstappen wins 2025 as both McLarens are disqualified -> 3153 the
+  extension through 2037 (a contract period, exclusive end 1 Jan 2038) -> 3169 the 2026 race
+  (`scheduled` Sat 21 Nov 20:00 PST = 22 Nov 04:00Z). 2515 (2027 GP, @SportDesk) is not yet threaded onto 3169.
+- **Tupac Shakur murder case** (@LawDesk): 3177 trial opens 10 Aug 2026 (`delayed` from June 2024) -> 3188
+  guilty 31 Aug -> 3198 sentencing `scheduled` 13 Oct 2026.
+- **Illegal-bookmaker fines** (@LawDesk, Nevada Gaming Commission): 3236 Resorts World $10.5M -> 3243 MGM
+  $8.5M -> 3251 Caesars $7.8M.
+- **Water** (@ClimateDesk): 3270 Lake Mead's record low (6 Aug 2026) -> 3277 the 2027-2028 Colorado River
+  guidelines (21 Aug, a period to 1 Jan 2029).
+- **A's ballpark** (@BuildDesk): 3347 groundbreaking -> 3354 first roof truss; 2212 (the 2028 opening) is
+  not yet threaded onto 3354. **Zoox** (@TechDesk): 3351 public launch -> 3359 paid rides -> 3367 the
+  airport. **DEF CON** (@CyberDesk): 3382 DEF CON 34 -> 3438 DEF CON 35 (`scheduled` Aug 2027).
+- Answering older pins: Hard Rock's opening (3363, `delayed` to Q4 2027) answers its topping-out 2214;
+  Brightline West's $400M equity deadline (3424, 2 Nov 2026) answers the groundbreaking 596.
+- Standalone: Crawford-Canelo (3218), WrestleMania 42 (3259), South Point 400 (3286), NFR 2026 (3303),
+  Las Vegas Bowl (3320), CFP final 2027 (3336), Metallica at Sphere (3445), EDC 2027 (3450); the Virgin
+  Hotels strike (3293), 2025 visitation -7.5% (3330), March 2026 record heat (3342), the MGM breach
+  settlement (3311); Eastside Cannery implosion (3370), Cadence Crossing (3379), I-15/Tropicana (3387),
+  LVCC renovation (3396), Durango North (3404, `estimated` H2 2027), Vegas Loop Paradise tunnels (3413,
+  `estimated` Oct 2026); Black Hat 2026 (3374), G2E (3392), Money20/20 (3401), SEMA (3409), NAB 2027
+  (3418), Google Cloud Next 2027 (3429), Cisco Live 2027 (3434).
+
+* **Learned - a reference `startDate` is a day, never an instant.** `POST` answered `400 A reference
+  startDate must be YYYY-MM-DD` for a Ticketmaster reference carrying `2026-10-02T03:30:00Z`; nothing was
+  saved. A show time from a secondary page goes in the reference's reasoning, not its `startDate` (which
+  would also move the pin's date).
+* **Learned - city batches collide with company batches.** The tech agent drafted Oracle AI World 2026
+  while the Oracle session had its own draft; checking the other sessions' scratchpad drafts (not only
+  prod search, which lags) caught it, and the Vegas one was dropped.
+* **Learned - gate on the VM's load, not only the homepage.** The copied runner had been rewritten to gate
+  on homepage speed alone; `ssh ... cut -d' ' -f1 /proc/loadavg` still answers from here, and with five
+  sessions posting the load read 19.8 while the homepage took 44 s. The runner now waits for both (load
+  under 3, homepage under 6 s). Don't gate a follow-up run on `pgrep -f "run.py plan1.txt"`: another
+  session's runner has the same command line.
+* **Learned - the create response HTML-escapes the title** (`Durango Casino &amp; Resort`), but the stored
+  title is plain; check with `GET /api/pins/:id` before "fixing" it.
+* **Learned - sources** (see [Sources](sources.md)): formula1.com's race page carries every session's
+  start in its raw JSON (`startTime`, `gmtOffset`) while lasvegas.gp is a bot wall; prorodeo.com is
+  Incapsula-walled (the LVCVA's /nfr/ page dates the NFR); the LVCVA newsroom answers `curl` with an empty
+  202; 8newsnow.com blocks `curl` and WebFetch (its YouTube channel works); blackhat.com, darkreading.com
+  and businesswire.com are 403; Nevada DETR's WARN list and nevadacurrent.com are 403; the Review-Journal
+  read in full with plain `curl` this time; Nominatim 429'd for long stretches under four agents (Photon
+  and one request a minute got through).
+* **Judgement calls:** the Noem photo on the NFR pin was dropped (a politician on a rodeo pin); sport-01's
+  source moved from Wikipedia to F1's race report; the Nevada 3 Nov election was left as a statewide
+  story. Not pinned: the NBA Cup (left Las Vegas for 2026), the Aces' 2025 title (clinched in Phoenix),
+  When We Were Young (skips 2026), Caesars' Fertitta buyout vote (unverified headline), a Wynn WARN notice
+  (only a Facebook post), the Vanderpump Hotel rebrand (two dates).
+* **Open:** thread 2515 onto 3169 and 2212 onto 3354 by whole-pin `PUT` (both are the same desks'
+  pins); re-date 3413 when the Loop tunnels open; update 3198 after the 13 Oct sentencing; prod's key
+  work (wikis, relations) is unchecked.
+* **Feedback**: none yet.
+* **Changed**: [Vertical recipes](verticals.md) - a Las Vegas row; [Sources](sources.md) - Las Vegas
+  sources.
+
+## 2026-09-24 - Boston news events, straight to production (@SportDesk, @MusicDesk, @LawDesk, @EconDesk, @PoliticsDesk, @ClimateDesk, @BuildDesk; @CityDesk held)
+
+Ian asked to "pin Boston news events on prod". Same city recipe as San Francisco and San Diego, run beside
+them: four agents drafted by theme (city hall and elections; transit, building and climate; sport and
+culture; courts, economy and health), the lead checked every draft and posted serially behind the load
+gate. Every pin carries the tag `Boston`. Twenty-nine posted, none failed or half-saved:
+
+- **@SportDesk:** Boston Marathon 2025 (3142) -> 2026 (3147) -> 2027 `scheduled` 19 Apr (3155); the Celtics
+  sale closing (3164); Boston Legacy FC's first match (3173), with existing 2199 (White Stadium reopens)
+  re-threaded under it by whole-pin `PUT`; the World Cup quarterfinal at Boston Stadium (3184); Head of the
+  Charles 2026 (3195). **@MusicDesk:** Boston Calling 2025 (3206) -> 2027 after the 2026 gap year (3216).
+- **@LawDesk:** Harvard v. the administration as one chain at the Moakley courthouse - SEVP injunction (3224)
+  -> funding ruling (3231) -> antisemitism suit dismissed (3241) -> First Circuit argument, `scheduled`
+  6 Oct 2026 15:00 ET (3248); Judge Young's NIH grants ruling (3256); Karen Read acquitted (3265,
+  `company: null`). **@EconDesk:** Mass General Brigham layoffs (3275); Sanofi's 229 Blueprint cuts, a WARN
+  window 9 Oct 2026 - 25 Jun 2027 (3282).
+- **@PoliticsDesk:** Wu's preliminary win (3290) -> Kraft withdraws (3298, `company: null`) -> Wu re-elected
+  (3306). **@ClimateDesk:** hottest June day, 102F (3316); the Blizzard of 2026 (3324); the Army Corps'
+  $10B coastal plan (3333) -> final study to Congress, `estimated` 2028 (3339); BERDO's 2030 limits, in force
+  to 2035 (3343). **@BuildDesk:** Draw One groundbreaking (3348) -> completion `estimated` fall 2032 (3352);
+  Logan runway 9-27 closure (3355); the FTA ends MBTA safety oversight (3360).
+- **Held for @CityDesk (user 412, email unconfirmed):** Wu's inauguration (answers 3306), the 2027 council
+  election (`politicsdesk`, answers the inauguration), the March and December 2025 school-closure votes, the
+  FY2027 budget, Evacuation Day's 250th and Sail Boston 2026. Drafts wait in the session scratchpad.
+
+* **Learned - Nominatim 429s for a whole run** when four agents and several city sessions share it, even at
+  2-3 s gaps. Photon's `/reverse` of the same OSM object stood in (it rejects `lang=en` - pass nothing) and
+  gave "MA" where Nominatim writes "Massachusetts".
+* **Learned - baa.org is WordPress:** `wp-json/wp/v2/posts?search=&_fields=date,link,title` lists every race
+  report; the race report gives only the day, the race-eve "Media Notes" give the first start (9:06 ET).
+* **Learned - mbta.com reads with `curl`** (`/news?page=N` back to 2023; project pages carry contract,
+  start, completion and the newest budget). massport.com walls after a few requests and mass.gov 403s -
+  both read through the local scraper; the mbta.com copy of a state release can drop details (the FTA
+  letter date was only on mass.gov).
+* **Learned - announcement day is not event day, again:** the FTA letter was 11 Sep, announced 18 Sep; the
+  Army Corps draft came out 24 Jul, the Mayor's release 21 Jul; Draw One's notice to proceed (4 May) is not
+  its groundbreaking (4 Sep); Harvard's SEVP case has two injunctions (20 and 23 June) and the appeal is
+  from the second - the docket's "Appealed From" line settles it.
+* **Learned - check a recurring event actually happened:** Boston Calling skipped 2026; the rent-control
+  ballot question was struck by the SJC on 23 Jun 2026, so there is no 3 Nov vote (not pinned; a @LawDesk
+  candidate).
+* **Learned - forward court dates come from calendaring notices,** about six weeks ahead, found through
+  CourtListener's search API; the First Circuit's `calendar.pdf` covers only the current sitting.
+  harvard.edu/federal-lawsuits hosts every filing in Harvard's cases as `curl`-readable PDFs.
+* **Learned - keyless YouTube search works for local news:** the `ytInitialData` on a results page gives
+  channel and title (WCVB, NBC10 Boston, CBS Boston, GBH, Boston City TV, MassGovernor); check the upload
+  date on the watch page - several "judge blocks Harvard" clips were the earlier TRO.
+* **Learned - Commons' imageinfo now returns `thumb.wikimedia.org` URLs with a `utm_*` query;** stripped,
+  they download with the ChronoPin UA. The City of Boston's Flickr albums (`live.staticflickr.com` `_h`)
+  are the official event photos; boston.gov's `og:image` is always the seal.
+* **Judgement calls to revisit:** 2027 council election `estimated` 2 Nov 2027 from the Tuesday-after-first-
+  Monday pattern; weather pins' company is the National Weather Service; BERDO went to @ClimateDesk, not
+  @CityDesk; the Harvard chain spans three cases (thread per case if preferred).
+* **Changed**: [Vertical recipes](verticals.md) - a Boston row; [Sources](sources.md) - Boston local sources.
+
+## 2026-09-24 - San Francisco news events, straight to production (@CityDesk, @TechDesk, @EconDesk, @LawDesk, @BuildDesk, @MusicDesk, @SportDesk)
+
+Ian asked to "pin San Francisco news events on prod". This was the first batch about a **city** rather than a company.
+Four agents drafted by theme: city hall and elections; transit and builds; tech, business and courts;
+festivals and sport. The lead linted every draft and posted them serially with the load gate. Every pin
+carries the tag `San Francisco`. There were thirty-seven drafts:
+
+- **Posted (19):**
+  - @BuildDesk: the Sophie Maxwell Building at Potrero Power Station (3180); the Ocean Beach adaptation
+    project, `delayed` to late 2029 (3340).
+  - @TechDesk: Dreamforce 2025 (3190) -> 2026 (3276) -> 2027 `scheduled` (3334); Waymo freeway rides
+    (3203) -> SFO pickups (3242); Anthropic's 300 Howard lease (3249); TechCrunch Disrupt 2026 (3299).
+  - @EconDesk: Salesforce's 262 HQ layoffs (3222) -> the fourth WARN round, taking effect 5 Oct 2026 (3291).
+  - @LawDesk: the City Attorney's ultra-processed food suit (3228); the Ninth Circuit on HUD/DOT grant
+    conditions (3266).
+  - @MusicDesk: Outside Lands 2026 (3258) -> 2027 (3325); Hardly Strictly Bluegrass 2026 (3283).
+  - @SportDesk: the Super Bowl LX Experience at Moscone (3233); the Warriors' home opener (3308); Bay to
+    Breakers 2027 (3317).
+- **@CityDesk (18), held back until its email was confirmed:**
+  - The Engardio recall -> Alan Wong sworn in -> Wong wins the June special -> the 3 Nov 2026 ballot
+    (Props A-J, five seats).
+  - The budget proposal -> the $16.9B two-year budget signed (a period, ending 1 Jul 2028).
+  - The SFMTA budget -> the $12 cable car fare (4 Jan 2027).
+  - Connect Bay Area qualifies -> the 3 Nov regional vote.
+  - SF Pride 2026 -> 2027.
+  - Standalone: Trump calls off the federal surge; the Family Zoning Plan signed; the Overpaid CEO Tax
+    rejected; BART's 15-station closure plan; the Fleet Week air show; the 2027 Chinese New Year Parade.
+
+* **Learned - a city batch splits by event, and city hall needed a desk.** Courts, builds, tech, job cuts,
+  music and sport went to their event desks. Nothing covered local government, so **@CityDesk** (user 412)
+  was created on prod for city hall and civic news in any city: the mayor, supervisors, the budget, city
+  ballot measures, transit money and service, and civic parades. A `.local` address gets no mail, so its
+  email needed Ian's SQL confirm, and its pins were held back while the other desks' posted. The Los Angeles
+  and New York sessions running at the same time reuse it: one desk per vertical, not one per city.
+* **Learned - four agents on one IP exhaust Nominatim.** Every agent hit 429s, or silent timeouts, for most
+  of the run. Photon's `/reverse` worked when calls were spaced about 5 s apart, but it has four traps:
+  - It returns an empty body when called fast.
+  - It returns nothing with `lang=en`.
+  - It snaps a street address to the nearest POI (5050 Mission St came back as a pregnancy centre).
+  - It keeps stale OSM names: 300 Howard is still "199 Fremont", so the lead set the sourced street with
+    the geocoded locality.
+
+  For an intersection (a parade or race start), ask Overpass for the two ways within a small bbox (about
+  0.006 deg; a big one 504s) and take the node they share.
+* **Learned - election-night figures are not results.** Mission Local's 72.3% for Wong and ABC7's 64.7% for
+  the recall were partial counts; the certified reports say 64.37% and 62.72%. The certified reports are
+  `sfelections.org/results/<yyyymmdd>/data/<certdate>/summary.pdf` and the RCV `d4_short.pdf`, and they read
+  with plain `curl` + `pdftotext`.
+* **Learned - a roundup's date can be its post date.** SF YIMBY's year-in-review put the Sophie Maxwell
+  opening on 24 Oct, the day it posted; the ribbon-cutting was 15 Oct, per Supervisor Walton's release and
+  the SFGovTV transcript. Granicus transcripts (`sanfrancisco.granicus.com/TranscriptViewer.php`) date city
+  ceremonies and read with `curl`. SFGovTV posts the same ceremonies to YouTube, where they embed.
+* **Learned - a certificate can be reissued.** MTC's Connect Bay Area certificate is marked "Corrected: July 1,
+  2026"; its news post and the campaign say 30 June. Read the certificate itself.
+* **Learned - YouTube search reads without a key.** Fetch `youtube.com/results?search_query=` and parse
+  `ytInitialData` for the videoId, channel and verified badge. Then read the watch page's `uploadDate`, then
+  check oEmbed. This spared the pooled WebSearch quota; the four agents used about 50 searches.
+* **Learned - festival sites carry next year's dates by September.** Outside Lands, SF Pride, Bay to Breakers
+  and the Chinese New Year parade show them in their banner or `og:title`, but their FAQ text often still
+  describes last year. A forward pin for a recurring event has no video of its own; leave the video off
+  rather than use a past edition's clip.
+* **Learned - which sites read and which block.** Details are in [Sources](sources.md).
+  - Read with plain `curl`: sf.gov, sfmta.com, bart.gov, mtc.ca.gov (PDFs too), SF Standard, Mission Local,
+    KQED, ABC7, NBC Bay Area, KTVU, the Examiner, The Frisc and, this time, the SF Chronicle.
+  - Blocked: KRON4, Axios, CoStar, EBAR and investor.salesforce.com (Cloudflare 403); CBS News (406);
+    sfplanning.org and the SFCTA (403); nba.com, cdn.nba.com and ESPN's API (403) and Yahoo (429). The
+    Warriors' tip time came from Yardbarker instead.
+* **Judgement calls:**
+  - BART's closure vote is pinned in Oakland, where the board met, but tagged `San Francisco` because it
+    decides SF stations.
+  - Budget votes carry the budget as `price`.
+  - The 3 Nov ballot pin answers the recall chain, because the Great Highway vote is on it.
+  - Not pinned: the Folsom Street Fair (27 Sep; no picture was safe to use), ICA SF's "The Stack" (2027, no
+    date) and a Portal funding step (none in the window).
+* **Changed**: [Vertical recipes](verticals.md) - a city news row; [Sources](sources.md) - San Francisco
+  sources.
+
+## 2026-09-24 - San Diego news events, straight to production (@BuildDesk, @SportDesk, @LawDesk, @EconDesk, @PoliticsDesk, @ScienceDesk, @ClimateDesk, @FilmDesk, @CityDesk)
+
+Ian asked to "pin San Diego news events on prod" - the first **city** batch (Los Angeles, San Francisco and New York
+sessions ran the same day). Four agents drafted by theme (city hall / safety, courts and disasters / building,
+transport and economy / sports and events); the lead linted, viewed every picture on a contact sheet and posted
+serially, load-gated. Every pin carries the tag `San Diego`; each event went to its vertical's desk.
+27 pins, 3165-3337:
+
+- **Tijuana River sewage**: 3165 Minute 333 signed (@PoliticsDesk, 15 Dec 2025 11:00 PST, from the Minute's own
+  text); plant chain 3171 35 MGD reached (28 Aug 2025) -> 3179 50 MGD expansion (`delayed` to 2030, @BuildDesk).
+- **Disasters and courts**: 3185 Julian M5.2 quake (@ScienceDesk, USGS origin time); 3192 Murphy Canyon jet crash
+  (@BuildDesk, NTSB 03:47 PDT); 3215 Border 2 Fire (@ClimateDesk, a period); Millete 3201 verdict -> 3208
+  sentencing (`scheduled` 29 Sep 2026, @LawDesk - re-date by PUT if it slips).
+- **Building and economy** (@BuildDesk): 3225 new Terminal 1 opens (existing **2163** final gates re-threaded under
+  it); 3234 Gaylord Pacific; Midway Rising 3238 Planning Commission -> 3244 the 4 Dec 2026 deal deadline; 3250
+  SANDAG airport-link vote; 3254 Pure Water Phase 1 (`estimated` end 2026); 3262 Campus at Horton foreclosure.
+  @EconDesk `Layoffs`: 3267 Dexcom (27 Aug 2025 notice day), 3273 Stone Brewing/Sapporo (WARN window Oct-Nov 2026).
+- **Sports and events**: SDFC 3280 first home match -> 3289 Western Conference Final; Padres sale 3296 -> 3304
+  approval; 3309 Comic-Con 2026 (@FilmDesk; existing **2379** Comic-Con 2027 re-threaded under it); Torrey Pines
+  3314 Rose's record Farmers win -> 3321 The Sentry 2027; 3327 Poinsettia Bowl, 3331 Holiday Bowl, 3337 Padres
+  Opening Day 2027.
+- **City hall** (nine drafts: trash-fee chain 2025-2027, Balboa Park paid parking, the FY2027 budget, the District 1
+  special election, Measure A empty-homes tax, the 3 Nov 2026 county Measures A and B) are drafted for **@CityDesk**
+  (user 412, created by the San Francisco session for civic news in any city) and wait on its email being
+  confirmed on prod.
+
+* **Learned - a city batch is split by desk, not by city.** No desk owns a city, and each event already has one
+  (courts @LawDesk, quakes @ScienceDesk, fires @ClimateDesk, builds @BuildDesk, games @SportDesk, WARN notices
+  @EconDesk). What none of them covered was **city hall** - council votes, fees, budgets, local measures - which is
+  what @CityDesk now owns. The shared place tag (`San Diego`) is what holds the batch together.
+* **Learned - four agents geocoding at once get Nominatim to 429 the whole IP** (even at 5-8 s gaps) and both
+  Overpass endpoints timed out. Photon (`photon.komoot.io/api` and `/reverse`) answered nearly everything, with
+  retries after 10-15 s; its reverse lands on the nearest road for a big facility, so use the OSM object's own name.
+* **Learned - local sources that read well** (details in [Sources](sources.md)): the county DA's WordPress JSON
+  (`danewscenter.com/wp-json/wp/v2/posts?search=`), Times of San Diego's WordPress JSON for discovery without
+  WebSearch, the Registrar's results bulletins (`sdvote.com`), California EDD's WARN spreadsheet for forward
+  layoffs, SANDAG's per-meeting calendar pages (start time + meeting video), the NTSB preliminary-report PDF
+  (wreckage coordinates and local time), KPBS and NBC 7 with plain `curl`. Walled: fox5sandiego.com (HUMAN),
+  cbs8.com (Akamai, even through the scraper), fire.ca.gov (403 to `curl`, scraper reads it); their YouTube clips
+  embed fine, ABC 10News clips do not (oEmbed 401).
+* **Learned - the treaty text beats the release.** EPA datelined Minute 333 "WASHINGTON"; the Minute itself says
+  the commissioners met "at the Mexican Section offices in Tijuana ... at 11:00 a.m.". A quietly slipped completion
+  date (the South Bay plant's 50 MGD, end 2027 -> 2030) appeared only in local reporting of testimony to the water
+  board, not in EPA's "on schedule" updates.
+* **Learned - a picture's caption is the check.** A Torrey Pines photo on the Justin Rose pin was Xander
+  Schauffele (the WordPress media API's `caption` said so); a transparent status-table PNG rendered black on the
+  contact sheet. Both dropped. Flatten RGBA onto white before judging a PNG.
+* **Learned - the programme price is not the phase's.** Terminal 1's $3.8B is the whole programme and already on
+  2163, so the Phase 1A opening (3225) has `price: null` with the figure in its text.
+* **Learned - a whole-pin PUT round-trip re-threads an existing pin safely**: GET it, send it back with `parentId`
+  and the **topic** tags only (award tags are derived), and the references, media and categories come back
+  unchanged; the app adds a `Thread` tag itself. A pin at the 8-topic-tag cap cannot take another tag (2455 was
+  left as it was).
+* **Learned - `tag:San Diego` without quotes** searches `tag:San` plus the word "Diego" and finds nothing; quote a
+  multi-word tag (`tag:"San Diego"` returned all 37).
+* **Traps:** zsh does not split `set -- $p` in a loop (the first retag run sent nothing); Times of San Diego printed
+  "Dec. 28, 2026" for a 2025 start and garbled the settlement's fee figures; NBC notes the Millete sentencing can
+  slip on defence motions.
+* **Judgement calls to revisit:** the air crash went to @BuildDesk (`Transport` + `Disaster`), following the Amazon
+  cargo-jet pin; Minute 333 is placed at the South Bay plant (the Tijuana office is not in OSM); Opening Day 2027 has
+  no reference besides the schedule release. Not pinned: the Padres' 2026 postseason (not clinched), the Nov 3
+  council races, Seaport San Diego (no dated step), SB 344's signing (Newsom's deadline is 30 Sep).
+* **Feedback**: none yet.
+* **Changed**: [Vertical recipes](verticals.md) - a city news row; [Sources](sources.md) - San Diego sources.
+
+## 2026-09-24 - Wilmar International news events, straight to production (@AgriDesk, @LawDesk, @EconDesk, @BuildDesk)
+
+Ian asked to "pin Wilmar International news events on prod". No desk fitted an agribusiness group (palm oil,
+oilseeds, sugar, flour, commodity trading - not a consumer-goods maker), so **@AgriDesk** (user 411) was
+signed up on prod for agribusiness companies (Wilmar, and later Cargill, ADM, Bunge, Olam). Three agents drafted
+(corporate, legal, India/China/plants), the lead checked every draft and picture and posted serially, gated on
+`/proc/loadavg` < 3. Every pin is tagged `Wilmar`, company Wilmar International; Wilmar is SGX-listed (F34;
+WLMIY is OTC), so no company stock - ADM (about 22.5% holder, named in the 2026 AGM filing) is `related` on the
+results and AGM pins.
+
+- **@LawDesk, the cooking-oil export case** (one oldest-first chain): 3217 trade official and Wilmar Nabati's
+  commissioner charged (19 Apr 2022) -> 3226 Wilmar Group named a corporate suspect -> 3232 Jakarta Tipikor
+  court acquits (19 Mar 2025) -> 3237 the three judges arrested for bribes -> 3253 Rp 11.8 trillion seized
+  (17 Jun 2025) -> 3261 Supreme Court overturns the acquittal (15 Sep 2025, disclosed by Wilmar 25-26 Sep) ->
+  3268 Rp 13.2 trillion handed to the treasury before Prabowo -> 3274 ex-Ombudsman Yeka named suspect for
+  obstruction. **The judges' trials** are their own chain: 3279 judges jailed 11 years -> 3288 Wilmar's legal
+  head Syafei jailed six years -> 3295 raised to eight on appeal. Loose: KPPU cartel fines (3302), the
+  substandard-rice suspects (3307), the Duta Sugar manager in the Tom Lembong import case (3315), the Moscow
+  court's seizure of the Etalon stake (3322), Guangzhou Yihai convicted in Huaibei (3329).
+- **@EconDesk**: Queensland sugar-mill strikes end with a pay deal (3328). **@BuildDesk**: AWL's Gohana,
+  Haryana food complex (3332, `estimated` day).
+- **@AgriDesk** (posted once the account's email was confirmed): the results chain FY2024 -> 1H2026 plus
+  3Q2026 (`estimated` Fri 30 Oct 17:20 SGT) and FY2026 (`estimated` 25 Feb 2027); AGMs 2025 -> 2026; PZ Wilmar
+  buyout -> TGI Nigeria/Benin JV; Adani's exit from AWL Agri Business as one chain (agreement -> OFS -> rename ->
+  20% deal -> control -> Adani's last 7%); GD Foods (Tops) signing -> close; Madhur sugar brand to AWL; Shree
+  Renuka's new CEO; YKA sells its Kellogg China JV stakes to Mars; SBTi validation.
+
+* **Learned - a new desk cannot post on prod until someone confirms its email.** Sign-up works through
+  `POST /api/users` (with `userName` in the body, so no PATCH needed), but the verification mail goes to a
+  `.local` address that receives nothing, and no API sets `emailVerifiedDateTime`. The owner runs one
+  `UPDATE "User"` over SSH; the batch posted every other desk's pins first and held the new desk's behind a
+  runner that polls `/api/users/me` every five minutes.
+* **Learned - wilmar-international.com images are too slow for prod.** Leadership portraits and the HQ photo
+  took 3-51 s (one failed, one 2-4 min) against `downloadImage`'s 30 s per try, which would half-save a pin.
+  Every image from that host was replaced (BusinessDay's PZ Wilmar refinery, Palm Oil Magazine, Business
+  Times' Bloomberg photo); its PDFs read with plain `curl`, slowly. Time every non-Commons image before posting.
+* **Learned - Wilmar's announcement lists are plain-HTML iframes:** `wilmar-iframe.todayir.com/iframes/{sgx,
+  media_release,calendar,quarterly_report}.php` link every PDF since 2005 (the IR site is a JS app). The PDF
+  file name encodes the SGX broadcast time in SGT (`20251119224949...` = 19 Nov 2025 22:49:49), matching the
+  "Date & Time of Broadcast" on the links.sgx.com cover. `media-wilmar.todayir.com` 403s every UA but a Chrome
+  one (which `sourceText.ts` sends, so prod reads it as a source). Results go out after trading, 17:17-17:42
+  SGT, with a "Notification of Results Release" three to six weeks ahead.
+* **Learned - Indonesian official sites are walled:** kejaksaan.go.id (F5 "Request Rejected" to `curl` and
+  WebFetch), kppu.go.id (403). Antara (with its `?q=` search and a CDN of real event photos), Tempo, detik,
+  CNN Indonesia, Kompas.id and Mongabay read cleanly. A court date is the day the verdict was read, from the
+  court register as quoted by Antara/detik - not the day Wilmar disclosed it.
+* **Learned - NSE's corporate-announcements API** gives AWL/RENUKA/ADANIENT filings with exact broadcast
+  times once a cookie jar is primed from www.nseindia.com (the home page itself 403s); BSE's API is Access
+  Denied; cninfo's search takes `stock=300999,9900039967` but ignores the page number (split by date).
+* **Learned - a 502 from Caddy saved nothing.** One POST (legal-05) answered 502; a scan of the ids after the
+  last post and a sourceUrl match found no partial, so it was re-posted cleanly. A 502 is the proxy, unlike the
+  500 "fetch failed" half-saves.
+* **Judgement calls:** the judges' bribery trials are a second chain rather than a branch of the case chain
+  ([series are one chain](#standing-feedback-from-the-owner)); asia-06 (Adani's last 7%) keeps Wilmar as
+  company to close the chain though Wilmar was not the seller; the KPPU pin's price is Wilmar's two fines
+  (Rp 11.383 billion), not the whole ruling's Rp 71.28 billion. Not pinned: the TGI JV completion (`estimated`
+  end 2026, no picture), the US$1.5-1.8bn loan, the transfer-pricing probe (no official notice), the SEBI
+  settlement and FSSAI penalty on AWL (Aug-Sep 2026), YKA's Maoming/Qingdao plants, Richards Bay refinery.
+* **Changed**: [Vertical recipes](verticals.md) - an agribusiness row; [Sources](sources.md) - Wilmar's
+  iframes, todayir, Indonesian sites, NSE.
+
+## 2026-09-24 - PLDT news events, straight to production (@TechDesk)
+
+Ian asked to "pin PLDT news events on prod". Three agents drafted one slice each (results and
+finance, corporate/deals/legal, network and infrastructure); the lead linted the drafts, viewed every
+picture on contact sheets, deduped across slices and posted **25 pins** serially, load-gated, all as
+@TechDesk (no job cut, court case or regulator penalty turned up in the window). Ids 3154-3319,
+interleaved with four other sessions' batches. Every pin is tagged `PLDT` and carries the NYSE ADR `PHI`
+with one fixed note; 24 are under company PLDT.
+
+* **Chains (oldest first):**
+  - Results: 3252 FY 2024 -> 3257 Q1 2025 -> 3263 H1 2025 -> 3269 9M 2025 -> 3278 FY 2025 -> 3285 Q1 2026
+    -> 3287 H1 2026 -> 3294 9M 2026 (`estimated` Thu 12 Nov, 12:00 Manila) -> 3301 FY 2026 (`estimated`
+    25 Feb 2027). Dividends and capex resets are folded into the results pins.
+  - Annual meetings: 3305 (2025) -> 3313 (2026) -> 3319 (2027, `scheduled` on the by-laws' second Tuesday
+    of June; time and venue assumed from the last two).
+  - VITRO REIT: 3229 filing -> 3235 listing (`delayed` from 12 Oct to the end of Q4 2026).
+  - Smart direct-to-device satellite: 3175 Catanduanes pilot -> 3182 Ilocos Norte tests -> 3191 commercial
+    launch (`estimated` end of 2027).
+* **Loose:** Asia Direct Cable in service (3154), Apricot's Digos landing station (3159), VITRO Sta. Rosa
+  opens (3167), the M7.8 Mindanao quake (3199), the Konektadong Pinoy law (3207, `company: null`, PHI
+  `related`), Radius Telecoms purchase (3220), CFO Danny Yu retires (3239), the material weakness and
+  SGV's withdrawn 20-F opinions (3245).
+
+* **Learned - PSE EDGE is the clock and it reads with `curl`.** `POST edge.pse.com.ph/companyDisclosures/search.ax`
+  (`keyword=6` for PLDT, `pageNo=N`) lists every disclosure with its Manila minute; `downloadHtml.do?file_id=`
+  is the text and `downloadFile.do?file_id=` the PDF. Results land at about 12:00 Manila (04:00Z) before a
+  3:30 pm briefing; the SEC 6-K is accepted 7-10 hours later, so an EDGAR stamp is the wrong time for
+  results. The one exception went the other way: the material-weakness release reached the SEC first (13 Aug
+  19:58 Manila) and the PSE the next morning - take the earliest public stamp.
+* **Learned - pldt.com is a shell, but its CMS is open.** www.pldt.com redirects to pldthome.com (HTTP 247
+  stub) and smart.com.ph does the same; main.pldt.com is a React app. Its Drupal JSON:API
+  (`cms.pldt.com/drupal/jsonapi/node/article`) returns every release since 2011 with the body, the
+  `created` minute and downloadable images. The newsroom no longer carries results, which come from EDGE.
+* **Learned - a 20-F is too big to be a source.** PLDT's FY 2025 20-F is 23 MB; prod's `fetchSourceText`
+  keeps 240,000 characters and would render it in Chromium on the VM. Its "completion of the Apricot cable
+  in 2028" sits at character 436,000, and nothing lighter says 2028 (BusinessWorld still says 2027,
+  TeleGeography says RFS Q4 2025), so the Apricot completion pin was **held back**, not posted.
+* **Learned - a 502 on create saved nothing.** One POST answered 502 while other sessions were posting; a
+  title scan of the next 70 ids found no partial (unlike the 500 "fetch failed" half-saves), so the runner
+  was resumed from that file and it posted cleanly.
+* **Learned - headlines overstate deal status again.** Daily Tribune's "PLDT completes Radius takeover" was
+  only board approval; the purchase agreement was signed on 4 June and still waits on the PCC and NTC.
+* **Traps:** Commons has almost no PLDT photos (the HQ picture is an en.wikipedia upload, so results pins
+  carry HQ photos); InsiderPH `.webp` images are really PNG cards; PLDT's Q1 2026 PDF is named "1Q2025";
+  Inquirer quoted VITRO's 34 MW as "utilized of 62.4 MW" against the release's IT-ready 34 -> 44 -> 62.4 MW
+  ramp; Nominatim 429'd with three agents geocoding (Photon and `/lookup?osm_ids=` worked); a keyless
+  YouTube search parsed from `ytInitialData` found ANC, Bilyonaryo, NET25 and Reuters clips without
+  spending WebSearch quota.
+* **Judgement calls to revisit:** the law pin sits at Malacañang with no company, following the TSMC
+  court-case rule; the ASM pins are `Business`, not `Finance`; 3175/3182 are dated to the announcement day
+  because no source dates the tests themselves; 9M 2026 could be Tue 10 Nov (the 2024-25 pattern) rather
+  than Thu 12 Nov (the 2026 one) - re-date by whole-pin PUT when PLDT files its briefing notice.
+* **Not pinned:** the Radius close (no date), the Konektadong Pinoy rules (undated), the manpower reduction
+  programme (no dated round), the Smart-AWS deal, the Cebu quake and typhoon advisories (relief only), the
+  General Trias data centre and the Palawan cable (no status or date).
+* **Feedback**: none yet.
+* **Changed**: [Vertical recipes](verticals.md) - an Asian telecom (PLDT) row; [Sources](sources.md) -
+  pldt.com/cms.pldt.com, PSE EDGE, sec.gov 6-K exhibits.
+
 ## 2026-09-24 - Aldi Nord news events, straight to production (@RetailDesk, @EconDesk, @LawDesk, @HealthDesk, @BuildDesk)
 
 Ian asked to "pin Aldi Nord news events on prod". Three agents drafted one slice each: the company and
@@ -82,6 +463,64 @@ nothing needed a repair PUT.
   Aldi Nederland CEO Rozendaal (6 Nov 2024); Portugal's Moita DC (Apr 2022).
 * **Feedback:** a new desk when none fits (see Standing feedback).
 * **Changed**: [Vertical recipes](verticals.md) - an Aldi Nord row.
+
+## 2026-09-24 - Hershey news events, straight to production (@ConsumerDesk, @EconDesk, @LawDesk, @BuildDesk)
+
+Ian asked to "pin Hershey news events on prod". Same workflow as Nestlé: four agents drafted POST bodies
+(results / leadership, pricing and jobs / deals and sites / safety, legal and products), the lead checked
+every draft (`check.mjs` now also checks the exact HSY company note, citation numbers against the reference
+count and the desk), viewed every picture on a contact sheet and posted serially. Twenty-eight pins,
+3128-3213 (ids interleaved with a Ferrero session's), all tagged `Hershey`, company Hershey (new on prod,
+HSY adopted from the first pin's company stock with one fixed company-wide note):
+
+- **Results chain** (@ConsumerDesk, `Food`, `Finance`, timed from the PR Newswire stamp, 06:45 ET):
+  3130 Q4 2024 -> 3138 Q1 2025 -> 3145 Q2 2025 -> 3152 Q3 2025 -> 3161 FY 2025 -> 3166 Q1 2026 -> 3170
+  Q2 2026 -> **3181 Q3 2026 `estimated` Thu 29 Oct 10:45Z** (every 2026 release was a Thursday; re-date by
+  whole-pin PUT when the "Hershey to Webcast Third-Quarter Conference Call" release appears, about 3-4
+  weeks ahead). Loose: $2B notes (3132), the dividend raise to $1.452 after five flat quarters (3162).
+- **CEO chain**: 3128 Buck announces retirement -> 3140 Kirk Tanner named (WEN related) -> 3148 Tanner
+  takes over, Kraus chairman (18 Aug 2025). Loose: double-digit price rise (3143), cocoa tariff exemption
+  (3156), 2026 Investor Day at the NYSE (3163), Dave Hulays CFO (3176); @EconDesk 3186 the AAA
+  automation/job-cut programme's end (`estimated` 31 Dec 2026, price = midpoint of the $200-250M cost).
+- **Deals and sites**: 3134 LesserEvil agreement (31 Mar 2025, the 10-Q's signing day, not the 3 Apr
+  release) -> 3160 close (18 Nov 2025, `delayed` from "mid-2025", $769.09M cash from the 10-Q); @BuildDesk
+  3136 Reese chocolate plant opens (16 Apr 2025, from the Governor's release).
+- **Products, dyes, courts**: 3193 dye pledge (30 Jun 2025) -> 3213 deadline 31 Dec 2027; 3200 Reese's
+  Oreo (MDLZ related); @LawDesk 3204 pumpkin suit dismissed -> 3210 amended suit dismissed (16 Sep 2026);
+  3209 Reese's real-chocolate pledge -> 3211 minis switch back (`estimated` 1 Jan 2027).
+
+* **Learned - Hershey's newsroom has a keyless JSON API.** `hersheys.mediaroom.com/api/newsfeed_releases/list.php?format=json&offset=N`
+  lists every release with its exact ET `releaseDate` (pages of 50 by `offset`; `start`/`page` are
+  ignored), `get.php?id=N&format=json` gives the body, URL slug and PR Newswire image. The public page is
+  that slug + `.html` under `thehersheycompany.com/en_us/home/newsroom/press-release/`, which reads with
+  plain `curl`. It replaced WebSearch for discovery. `mma.prnewswire.com` images are 400 px unless
+  `?p=original`/`?p=publish` is added.
+* **Learned - the facts of a deal live in the 10-Q, not the release.** Hershey's LesserEvil releases gave
+  neither the signing day, nor the close day, nor a price; the 10-Qs gave all three and showed the close
+  slipping from "mid-2025" to "end of 2025". No 8-K (not material).
+* **Learned - interview pledges have no release.** The dye pledge and the Reese's recipe reversal were
+  told to Bloomberg, never posted on the newsroom; date them from coverage naming the weekday and give that
+  reference the `startDate`.
+* **Learned - "Hershey's" recalls are usually someone else's.** openFDA had no Hershey Company recall in
+  2025-26; Hershey Creamery (ice cream) is a separate firm. Check `recalling_firm`.
+* **Learned - one lawsuit, two rulings a year apart.** The Reese's pumpkin suit was dismissed in Sept 2025
+  and the amended complaint in Sept 2026; stories from both years read alike, so check the docket.
+  CourtListener's search API (`type=r&q=docket_id:<id>`) gives each entry's "Signed by Judge X on" day
+  keylessly; the docket pages themselves 403.
+* **Learned - prod gating without SSH.** Reading `/proc/loadavg` over SSH was refused by the classifier
+  this time, so `post.mjs` gated on the response time of a plain `GET /api/pins/<id>` (wait while over
+  2.5 s). It paused three times at 6-30 s while a Ferrero session posted, and no create failed.
+* **Traps:** the investors site and its calendar (`hershey.gcs-web.com`) are JavaScript/403 to `curl`,
+  so use the "to Webcast" releases for event days; WARN Firehose now redirects to a dead laborcurrent.com
+  (410); WebSearch with `allowed_domains` naming reuters.com, apnews.com or pennlive.com 400s; the
+  Commons file "Hershey's plant.jpg" is described as the Times Square store but shows the Pennsylvania
+  factory; a generic supermarket Halloween aisle was dropped from 3210 rather than padded.
+* **Not pinned:** Mondelez's approach (Dec 2024, before the window, no later bid), Sour Strips (closed Nov
+  2024), the 2026 AGM (virtual), the heavy-metals dark-chocolate suits (no ruling), the Dubai-style bar and
+  the HERSHEY biopic (a film pin for @FilmDesk).
+* **Feedback**: none yet.
+* **Changed**: [Vertical recipes](verticals.md) - the consumer-goods row names Hershey; [Sources](sources.md) -
+  Hershey's newsroom API and CourtListener's search API.
 
 ## 2026-09-23 - Nestlé news events, straight to production (@ConsumerDesk, @EconDesk, @HealthDesk, @LawDesk, @BuildDesk)
 

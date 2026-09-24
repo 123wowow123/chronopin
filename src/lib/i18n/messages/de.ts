@@ -354,6 +354,7 @@ const de: Messages = {
     started: 'Begonnen',
     elapsed: 'Seit dem Posten vergangene Zeit',
     startedAgo: 'Begonnen {ago}',
+    startsWhen: 'Beginnt {when}',
     days: '{count} T',
     stretchLate: '{span} zu spät: {from} bis {to}',
     stretchPromised: 'Die ursprünglich versprochene Wartezeit: {from} bis {to}',
@@ -598,6 +599,7 @@ const de: Messages = {
   newPins: {
     heading: 'Neue Pins',
     latest: 'Neueste',
+    postedAgo: 'Gepostet {ago}',
     liveOdds: 'Live-Marktquoten',
   },
   controls: {

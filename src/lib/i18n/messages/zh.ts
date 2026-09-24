@@ -348,6 +348,7 @@ const zh: Messages = {
     started: '已开始',
     elapsed: '自发布以来经过的时间',
     startedAgo: '{ago}开始',
+    startsWhen: '{when}开始',
     days: '{count}天',
     stretchLate: '延迟 {span}：{from} 至 {to}',
     stretchPromised: '最初承诺的等待期：{from} 至 {to}',
@@ -592,6 +593,7 @@ const zh: Messages = {
   newPins: {
     heading: '新图钉',
     latest: '最新',
+    postedAgo: '{ago}发布',
     liveOdds: '实时市场赔率',
   },
   controls: {

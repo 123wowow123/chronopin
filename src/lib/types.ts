@@ -237,6 +237,11 @@ export type TrendingPin = {
   title: string;
   originalTitle?: string;
   translatedTo?: string;
+  // Its main (first) category, shown on the row's details line.
+  category: string | null;
+  // When it starts, for the row's "Starts in" / "Started".
+  utcStartDateTime: string;
+  allDay?: boolean;
   views: number;
   previousViews: number;
   thumbName?: string | null;
@@ -249,7 +254,11 @@ export type NewPin = {
   title: string;
   originalTitle?: string;
   translatedTo?: string;
-  userName: string | null;
+  // Its main (first) category, shown on the row's details line.
+  category: string | null;
+  // When it starts, for the row's "Starts in" / "Started".
+  utcStartDateTime: string;
+  allDay?: boolean;
   utcCreatedDateTime: string;
   thumbName?: string | null;
   originalUrl?: string | null;

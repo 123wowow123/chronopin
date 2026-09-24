@@ -8,7 +8,9 @@ import { compactCount } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
 import type { TrendingPin } from '@/lib/types';
 import { useT } from '@/lib/client/i18n';
+import { CategoryPill } from './CategoryPill';
 import type { Translator } from '@/lib/i18n/translate';
+import { StartsWhen } from './StartsWhen';
 
 // How much a pin's views grew on the stretch before: a percentage, or "new"
 // when nobody viewed it then.
@@ -43,8 +45,9 @@ export function TrendingPins({ pins, days }: { pins: TrendingPin[]; days: number
   );
 }
 
-// One trending pin: its picture, title, views and how fast they grew. Also
-// the nav drawer's trending list (src/components/nav/DrawerHighlights.tsx).
+// One trending pin: its picture, title, views, how fast they grew, its
+// category and when it starts. Also the nav drawer's trending list
+// (src/components/nav/DrawerHighlights.tsx).
 export function TrendingRow({ pin }: { pin: TrendingPin }) {
   const t = useT();
   return (
@@ -54,10 +57,12 @@ export function TrendingRow({ pin }: { pin: TrendingPin }) {
         <span className="line-clamp-2 leading-snug text-ink" title={pin.title}>
           {pin.title}
         </span>
-        <span className="flex items-center gap-1.5 text-xs text-subtle tabular-nums">
-          {t('trending.views', { count: pin.views, compact: compactCount(pin.views) })}
-          <span className="font-medium text-success">{growth(pin, t)}</span>
+        <span className="flex min-w-0 items-center gap-1.5 text-xs text-subtle tabular-nums">
+          <span className="shrink-0">{t('trending.views', { count: pin.views, compact: compactCount(pin.views) })}</span>
+          <span className="shrink-0 font-medium text-success">{growth(pin, t)}</span>
+          {pin.category ? <CategoryPill category={pin.category} /> : null}
         </span>
+        <StartsWhen utcStartDateTime={pin.utcStartDateTime} allDay={pin.allDay} />
       </span>
     </Link>
   );
