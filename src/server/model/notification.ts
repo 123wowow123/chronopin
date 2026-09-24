@@ -63,8 +63,9 @@ const MAX_BATCH_PINS = 100;
 const DEFAULT_LIMIT = 30;
 
 // Notification rows joined to what they mention, dropping any whose actor,
-// pin or comment is gone, or whose actor and reader have blocked one another
-// (either way), so the list and the unread badge always agree.
+// pin or comment is gone, whose actor and reader have blocked one another
+// (either way), or whose company the reader blocked, so the list and the
+// unread badge always agree.
 const VISIBLE_FROM = `
       FROM "Notification" n
       JOIN "User" a ON a."id" = n."actorId" AND a."utcDeletedDateTime" IS NULL
@@ -74,7 +75,8 @@ const VISIBLE_FROM = `
       WHERE (n."pinId" IS NULL OR (p."id" IS NOT NULL AND p."utcDeletedDateTime" IS NULL))
         AND (n."commentId" IS NULL OR (c."id" IS NOT NULL AND c."utcDeletedDateTime" IS NULL))
         AND (n."companyId" IS NULL OR co."id" IS NOT NULL)
-        AND NOT ${blockedBetween('n."userId"', 'n."actorId"')}`;
+        AND NOT ${blockedBetween('n."userId"', 'n."actorId"')}
+        AND NOT EXISTS (SELECT 1 FROM "CompanyBlock" cb WHERE cb."userId" = n."userId" AND cb."companyId" = COALESCE(n."companyId", p."companyId"))`;
 
 export type NotificationItem = {
   id: number;

@@ -326,14 +326,14 @@ function CommentItem({
                   <Icon name="reply" className="size-5" />
                 </button>
               ) : null}
-              {node.hidden && !canDelete ? null : (
+              {/* Only for a signed-in reader: everything in it needs an account. */}
+              {!signedIn || (node.hidden && !canDelete) ? null : (
                 <CommentMenu
                   commentId={node.id}
                   pinId={pinId}
                   author={canBlock ? { id: node.userId, userName: node.userName ?? '', pictureUrl: node.userPictureUrl ?? null } : null}
                   canDelete={canDelete}
                   canReport={!node.hidden}
-                  signedIn={signedIn}
                   onRemove={onRemove}
                 />
               )}
@@ -492,7 +492,7 @@ function ReactionPicker({ id, mine, onPick }: { id: string; mine: CommentReactio
       id={id}
       role="group"
       aria-label={t('comments.chooseReaction')}
-      className="absolute bottom-full left-0 z-30 mb-2 flex gap-0.5 rounded-full border border-raised-2 bg-popover p-1.5 shadow-2xl shadow-shade/40"
+      className="absolute bottom-full left-0 z-30 mb-2 flex gap-0.5 rounded-full border border-ink/10 bg-popover p-1.5 shadow-2xl shadow-shade/40"
       onKeyDown={(event) => {
         if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
         event.preventDefault();
@@ -511,7 +511,7 @@ function ReactionPicker({ id, mine, onPick }: { id: string; mine: CommentReactio
           aria-pressed={r.name === mine}
           onClick={() => onPick(r.name)}
           className={`flex size-10 origin-bottom items-center justify-center rounded-full text-[26px] leading-none transition-transform duration-150 outline-none hover:scale-125 focus-visible:scale-125 motion-reduce:transition-none sm:size-12 sm:text-4xl ${
-            r.name === mine ? 'bg-raised-2' : ''
+            r.name === mine ? 'bg-ink/10' : ''
           }`}
         >
           <span aria-hidden>{r.emoji}</span>
@@ -540,16 +540,14 @@ function CommentMenu({
   author,
   canDelete,
   canReport,
-  signedIn,
   onRemove,
 }: {
   commentId: number;
   pinId: number;
-  // Who wrote it, when the reader may block them (signed in, not their own).
+  // Who wrote it, when the reader may block them (not their own).
   author: BlockedUser | null;
   canDelete: boolean;
   canReport: boolean;
-  signedIn: boolean;
   onRemove: () => void;
 }) {
   const t = useT();
@@ -603,7 +601,7 @@ function CommentMenu({
     }
   }
 
-  const item = 'block w-full rounded-lg px-3 py-2 text-left text-base font-medium hover:bg-raised-2 focus-visible:bg-raised-2 focus-visible:outline-none';
+  const item = 'block w-full rounded-lg px-3 py-2 text-left text-base font-medium hover:bg-ink/[0.07] focus-visible:bg-ink/[0.07] focus-visible:outline-none';
   return (
     <span ref={rootRef} className="relative inline-flex">
       <button
@@ -625,9 +623,9 @@ function CommentMenu({
           ref={menuRef}
           id={menuId}
           role="menu"
-          className={`absolute right-0 bottom-full z-30 mb-2.5 ${view === 'actions' ? 'w-48' : 'w-64'} rounded-xl border border-raised-2 bg-popover p-1.5 text-ink shadow-2xl shadow-shade/40`}
+          className={`absolute right-0 bottom-full z-30 mb-2.5 ${view === 'actions' ? 'w-48' : 'w-64'} rounded-xl border border-ink/10 bg-popover p-1.5 text-ink shadow-2xl shadow-shade/40`}
         >
-          <span aria-hidden className="absolute -bottom-1.5 right-3 size-3 rotate-45 border-r border-b border-raised-2 bg-popover" />
+          <span aria-hidden className="absolute -bottom-1.5 right-3 size-3 rotate-45 border-r border-b border-ink/10 bg-popover" />
           {view === 'actions' ? (
             <>
               {canDelete ? (
@@ -643,15 +641,11 @@ function CommentMenu({
                   {t('comments.deleteComment')}
                 </button>
               ) : null}
-              {!canReport ? null : signedIn ? (
+              {canReport ? (
                 <button type="button" role="menuitem" onClick={() => setView('reasons')} className={item}>
                   {t('comments.report')}
                 </button>
-              ) : (
-                <AuthLink to="/login" className={item} pending={{ kind: 'comment', id: pinId }}>
-                  {t('comments.report')}
-                </AuthLink>
-              )}
+              ) : null}
               {author ? (
                 <button type="button" role="menuitem" onClick={() => setView('block')} className={item}>
                   {t('comments.block')}

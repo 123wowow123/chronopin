@@ -94,15 +94,44 @@ test("a reader blocks an author from their search card, and their pins leave", a
   // The author's card over the results (each pin card has a menu too).
   const menu = page.locator('div.floating').filter({ hasText: author.userName }).getByRole('button', { name: 'More actions' });
   await menu.click();
-  await page.getByRole('menuitem', { name: 'Block', exact: true }).click();
-  await page.getByRole('menuitem', { name: `Block ${author.userName}` }).click();
+  await page.getByRole('menuitem', { name: new RegExp(`^Block ${author.userName}`) }).click();
+  await page.getByRole('menuitem', { name: `Block ${author.userName}`, exact: true }).click();
   await expect(cards).toHaveCount(0);
   await expect(page.getByText('Blocked', { exact: true })).toBeVisible();
   // Nor can they be followed while blocked.
   expect((await page.request.post(`/api/users/${author.id}/follow`)).status()).toBe(403);
 
   await menu.click();
-  await page.getByRole('menuitem', { name: 'Unblock' }).click();
+  await page.getByRole('menuitem', { name: /^Unblock/ }).click();
   await expect(cards.first()).toBeVisible();
   await expect(page.getByRole('button', { name: /^Follow/ })).toBeVisible();
+});
+
+// A pin card's menu blocks the pin's company (0078): every pin about it
+// leaves the search, and Profile > Blocked lists it with Unblock.
+test("a reader blocks a pin's company from its card, and unblocks it", async ({ page }) => {
+  await member(page.request, 'coblocker');
+  const pins = await page.request.get('/api/pins').then(async (r) => {
+    const body = await r.json();
+    return Array.isArray(body) ? body : body.pins;
+  });
+  const pin = pins.find((p: { companyId?: number; company?: string; user?: { userName?: string } }) => p.companyId && p.company && p.user?.userName)!;
+  const search = `/search?q=${encodeURIComponent(`user:${pin.user.userName.replace(/^@/, '')}`)}`;
+  await page.goto(search);
+  const card = page.getByRole('article').filter({ has: page.getByRole('link', { name: pin.title, exact: true }) });
+  await expect(card).toHaveCount(1);
+
+  await card.getByRole('button', { name: 'More actions' }).click();
+  await page.getByRole('menuitem', { name: new RegExp(`^Block ${pin.company}`) }).click();
+  await page.getByRole('menuitem', { name: `Block ${pin.company}`, exact: true }).click();
+  await expect(card).toHaveCount(0);
+  // Nor can it be followed while blocked.
+  expect((await page.request.post(`/api/companies/${pin.companyId}/follow`)).status()).toBe(403);
+
+  await page.goto('/profile/blocked');
+  const row = page.getByRole('listitem').filter({ hasText: pin.company });
+  await row.getByRole('button', { name: 'Unblock' }).click();
+  await expect(row).toHaveCount(0);
+  await page.goto(search);
+  await expect(card).toHaveCount(1);
 });

@@ -167,7 +167,7 @@ export function PinCard({
               </Link>
             ) : null}
             <span className="-my-1.5 -mr-1.5">
-              <PinMenu pinId={pin.id} buttonClassName="size-7" iconClassName="size-4" />
+              <PinMenu pin={pin} buttonClassName="size-7" iconClassName="size-4" />
             </span>
           </div>
         </div>

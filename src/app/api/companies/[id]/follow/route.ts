@@ -2,6 +2,7 @@ import type { NextRequest } from 'next/server';
 import { getUser, requireUser } from '@/server/auth';
 import { HttpError, json, route } from '@/server/http';
 import Company from '@/server/model/company';
+import CompanyBlock from '@/server/model/companyBlock';
 import CompanyFollow from '@/server/model/companyFollow';
 
 type Ctx = RouteContext<'/api/companies/[id]/follow'>;
@@ -36,6 +37,10 @@ export const GET = route(async (request: NextRequest, ctx: Ctx) => {
 export const POST = route(async (request: NextRequest, ctx: Ctx) => {
   const user = await requireUser(request);
   const id = await companyId(ctx);
+  // Blocking ended any follow; it does not start again.
+  if (await CompanyBlock.isBlocked(user.id, id)) {
+    throw new HttpError(403, '', { code: 'blocked', message: 'you blocked this company' });
+  }
   const { changed } = await CompanyFollow.follow(user.id, id);
   return status(id, user.id, changed ? 201 : 200);
 });

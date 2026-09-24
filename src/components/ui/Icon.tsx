@@ -216,6 +216,29 @@ const PATHS: Record<string, React.ReactNode> = {
       <line x1="15" x2="15.01" y1="9" y2="9" />
     </>
   ),
+  // A pin's menu (Lucide's shapes, ISC): not interested in it, blocking its
+  // author, blocking its company.
+  'eye-off': (
+    <>
+      <path d="M10.7 5.1A10.6 10.6 0 0 1 12 5c6.4 0 10 7 10 7a18 18 0 0 1-2.3 3.2" />
+      <path d="M6.6 6.6A17.5 17.5 0 0 0 2 12s3.6 7 10 7a9.7 9.7 0 0 0 5.4-1.6" />
+      <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2" />
+      <path d="m2 2 20 20" />
+    </>
+  ),
+  'user-x': (
+    <>
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="m17 8 5 5M22 8l-5 5" />
+    </>
+  ),
+  ban: (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <path d="m4.9 4.9 14.2 14.2" />
+    </>
+  ),
   // A comment's actions (Lucide's shapes, ISC): the menu they sit behind,
   // and answering it.
   'dots-vertical': (

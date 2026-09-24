@@ -1,20 +1,20 @@
 'use client';
 
 import { useCallback, useState } from 'react';
-import { MENU_ITEM, PopMenu } from '@/components/ui/PopMenu';
+import { PopMenu, PopMenuItem } from '@/components/ui/PopMenu';
 import { blockUser, unblockUser, type BlockedUser } from '@/lib/client/blocks';
 import { useT } from '@/lib/client/i18n';
 
 // A person's other actions, behind a three-dot menu (the user: search's
-// card): Block, asked first as in a comment's menu, or Unblock once they are
-// blocked.
+// card), set as the pin menu's are: Block, asked first, or Unblock once they
+// are blocked.
 export function UserMenu({ user, blocked }: { user: BlockedUser; blocked: boolean }) {
   const t = useT();
   const [view, setView] = useState<'actions' | 'confirm' | 'failed'>('actions');
   const reset = useCallback(() => setView('actions'), []);
 
   return (
-    <PopMenu wide={view !== 'actions'} onClose={reset}>
+    <PopMenu wide onClose={reset}>
       {(close) => {
         const run = async (action: () => Promise<void>) => {
           try {
@@ -26,23 +26,15 @@ export function UserMenu({ user, blocked }: { user: BlockedUser; blocked: boolea
         };
         return view === 'actions' ? (
           blocked ? (
-            <button type="button" role="menuitem" onClick={() => run(() => unblockUser(user.id))} className={MENU_ITEM}>
-              {t('profile.unblock')}
-            </button>
+            <PopMenuItem icon="user-x" title={t('pin.unblockName', { name: user.userName })} onClick={() => run(() => unblockUser(user.id))} />
           ) : (
-            <button type="button" role="menuitem" onClick={() => setView('confirm')} className={MENU_ITEM}>
-              {t('comments.block')}
-            </button>
+            <PopMenuItem icon="user-x" title={t('pin.blockName', { name: user.userName })} hint={t('pin.blockUserHint')} onClick={() => setView('confirm')} />
           )
         ) : view === 'confirm' ? (
           <>
             <p className="px-3 pt-1.5 pb-2 text-sm text-subtle">{t('comments.blockConfirm', { name: user.userName })}</p>
-            <button type="button" role="menuitem" onClick={() => run(() => blockUser(user))} className={`${MENU_ITEM} text-danger`}>
-              {t('comments.blockConfirmButton', { name: user.userName })}
-            </button>
-            <button type="button" role="menuitem" onClick={() => close(true)} className={MENU_ITEM}>
-              {t('common.cancel')}
-            </button>
+            <PopMenuItem icon="user-x" danger title={t('pin.blockName', { name: user.userName })} onClick={() => run(() => blockUser(user))} />
+            <PopMenuItem icon="close" title={t('common.cancel')} onClick={() => close(true)} />
           </>
         ) : (
           <p role="status" className="px-3 py-2 text-sm text-danger">

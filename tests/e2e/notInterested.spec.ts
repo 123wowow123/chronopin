@@ -21,7 +21,7 @@ test('a reader marks a pin not interested and brings it back', async ({ page }) 
   await expect(card).toHaveCount(1);
 
   await card.getByRole('button', { name: 'More actions' }).click();
-  await page.getByRole('menuitem', { name: 'Not interested' }).click();
+  await page.getByRole('menuitem', { name: /^Not interested/ }).click();
   // Folded on this page, with Undo; Undo brings the card back.
   const notice = page.getByText("Hidden. You won't see this pin again.");
   await expect(notice).toHaveCount(1);
@@ -30,7 +30,7 @@ test('a reader marks a pin not interested and brings it back', async ({ page }) 
 
   // Marked again, it is gone on the next page.
   await card.getByRole('button', { name: 'More actions' }).click();
-  await page.getByRole('menuitem', { name: 'Not interested' }).click();
+  await page.getByRole('menuitem', { name: /^Not interested/ }).click();
   await expect(notice).toHaveCount(1);
   await page.goto(search);
   await expect(page.getByRole('article').first()).toBeVisible().catch(() => {});
@@ -40,7 +40,23 @@ test('a reader marks a pin not interested and brings it back', async ({ page }) 
   // Its own page still opens, and takes it back.
   await page.goto(`/pin/${pin.id}`);
   await page.getByRole('button', { name: 'Pin actions' }).click();
-  await page.getByRole('menuitem', { name: 'Show this pin again' }).click();
+  await page.getByRole('menuitem', { name: /^Show this pin again/ }).click();
   await page.goto(search);
   await expect(card).toHaveCount(1);
+});
+
+// The three-dot menus are for signed-in readers only: everything in them
+// needs an account.
+test('a signed-out visitor gets no three-dot menus', async ({ page }) => {
+  await page.goto('/search?q=user:TechDesk');
+  await expect(page.getByRole('article').first()).toBeVisible();
+  await page.waitForLoadState('networkidle');
+  await expect(page.getByRole('button', { name: 'More actions' })).toHaveCount(0);
+  const pins = await page.request.get('/api/pins').then(async (r) => {
+    const body = await r.json();
+    return Array.isArray(body) ? body : body.pins;
+  });
+  await page.goto(`/pin/${pins[0].id}`);
+  await page.waitForLoadState('networkidle');
+  await expect(page.getByRole('button', { name: /^(More actions|Pin actions)$/ })).toHaveCount(0);
 });

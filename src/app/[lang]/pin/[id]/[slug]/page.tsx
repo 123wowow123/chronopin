@@ -351,7 +351,10 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
           <PinRevisitButton pinId={pin.id} />
           <PinAdminLink pinId={pin.id} />
           {/* Not interested, or Show this pin again. */}
-          <PinMenu pinId={pin.id} onPage />
+          <PinMenu
+            pin={{ id: pin.id, user: pin.user, companyId: pin.companyId, company: pin.company, companyLogoUrl: pin.companyLogoUrl }}
+            onPage
+          />
         </div>
       </div>
 

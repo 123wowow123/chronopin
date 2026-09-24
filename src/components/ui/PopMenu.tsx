@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useId, useRef, useState, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
-import { Icon } from '@/components/ui/Icon';
+import { Icon, type IconName } from '@/components/ui/Icon';
 import { useT } from '@/lib/client/i18n';
 
 // A vertical three-dot button and the menu it opens, floating over the page
@@ -16,7 +16,45 @@ import { useT } from '@/lib/client/i18n';
 // menu's items are `children`, given a `close`; `onClose` lets the owner put
 // back any step it moved the menu to (a confirm, a status).
 export const MENU_ITEM =
-  'block w-full rounded-lg px-3 py-2 text-left text-base font-medium hover:bg-raised-2 focus-visible:bg-raised-2 focus-visible:outline-none';
+  'block w-full rounded-lg px-3 py-2 text-left text-base font-medium hover:bg-ink/[0.07] focus-visible:bg-ink/[0.07] focus-visible:outline-none';
+
+// An item as Facebook's post menu has them: an icon in a soft disc, the
+// action in bold, and a line under it saying what it does.
+export function PopMenuItem({
+  icon,
+  title,
+  hint,
+  danger = false,
+  onClick,
+}: {
+  icon: IconName;
+  title: string;
+  hint?: string;
+  danger?: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      role="menuitem"
+      onClick={onClick}
+      className="flex w-full items-center gap-3 rounded-lg px-2 py-2 text-left hover:bg-ink/[0.07] focus-visible:bg-ink/[0.07] focus-visible:outline-none"
+    >
+      <span className={`flex size-9 shrink-0 items-center justify-center rounded-full bg-ink/10 ${danger ? 'text-danger' : 'text-ink'}`}>
+        <Icon name={icon} className="size-5" />
+      </span>
+      <span className="min-w-0">
+        <span className={`block truncate text-[15px] font-semibold ${danger ? 'text-danger' : 'text-ink'}`}>{title}</span>
+        {hint ? <span className="block text-xs leading-snug text-subtle">{hint}</span> : null}
+      </span>
+    </button>
+  );
+}
+
+// A hairline between groups of items.
+export function PopMenuDivider() {
+  return <div role="separator" className="mx-2 my-1 h-px bg-ink/10" />;
+}
 
 // Room the menu wants under its button before it opens over it instead.
 const ROOM_BELOW = 260;
@@ -42,7 +80,8 @@ export function PopMenu({
   // The button's name; "More actions" when there is only one on the page's
   // part of it.
   label?: string;
-  // Wide enough for a sentence (a confirm), not just a word or two.
+  // Wide enough for items with hints, or a sentence (a confirm), not just a
+  // word or two.
   wide?: boolean;
   buttonClassName?: string;
   iconClassName?: string;
@@ -147,11 +186,11 @@ export function PopMenu({
               id={menuId}
               role="menu"
               style={{ top: open.top, bottom: open.bottom, right: Math.max(8, open.right) }}
-              className={`fixed z-50 ${wide ? 'w-64' : 'w-52'} max-w-[calc(100vw-1rem)] rounded-xl border border-raised-2 bg-popover p-1.5 text-ink shadow-2xl shadow-shade/40`}
+              className={`fixed z-50 ${wide ? 'w-80' : 'w-52'} max-w-[calc(100vw-1rem)] rounded-xl border border-ink/10 bg-popover p-1.5 text-ink shadow-2xl shadow-shade/40`}
             >
               <span
                 aria-hidden
-                className={`absolute right-3 size-3 rotate-45 border-raised-2 bg-popover ${above ? '-bottom-1.5 border-r border-b' : '-top-1.5 border-t border-l'}`}
+                className={`absolute right-3 size-3 rotate-45 border-ink/10 bg-popover ${above ? '-bottom-1.5 border-r border-b' : '-top-1.5 border-t border-l'}`}
               />
               {children(close)}
             </div>,
