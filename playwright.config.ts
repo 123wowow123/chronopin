@@ -19,11 +19,13 @@ export default defineConfig({
     trace: 'retain-on-failure',
     timezoneId: 'America/Los_Angeles',
   },
+  // The bundled headless shell by default: the real Chrome (PW_CHANNEL=chrome)
+  // opens as a second Chrome in the macOS Dock and stays in its recent apps.
   projects: [
-    { name: 'desktop', testIgnore: /phone\.spec\.ts/, use: { ...devices['Desktop Chrome'], channel: process.env.PW_CHANNEL || 'chrome' } },
+    { name: 'desktop', testIgnore: /phone\.spec\.ts/, use: { ...devices['Desktop Chrome'], channel: process.env.PW_CHANNEL || undefined } },
     // What only exists on a narrow screen - the controls that fold behind
     // pills, and the scroll lock behind them - lives in phone.spec.ts, which
     // the desktop project skips.
-    { name: 'phone', testMatch: /phone\.spec\.ts/, use: { ...devices['Pixel 5'], channel: process.env.PW_CHANNEL || 'chrome' } },
+    { name: 'phone', testMatch: /phone\.spec\.ts/, use: { ...devices['Pixel 5'], channel: process.env.PW_CHANNEL || undefined } },
   ],
 });

@@ -95,7 +95,10 @@ test('the sort rides in the bottom left corner, not over the results', async ({ 
 });
 
 test('a card on the timeline pictures its video instead of loading the player', async ({ page }) => {
-  await page.goto('/');
+  // The home page's cards around today may carry no playable video (a video
+  // saved without its embed drops out of a card), so read @AnimeDesk's pins:
+  // the same cards under the same setting, and most of them carry a trailer.
+  await page.goto('/search?q=user:@AnimeDesk');
   // A still under a play badge, and no player anywhere: an iframe in the
   // markup is already a download, so the card must never write one.
   await expect(page.getByRole('img', { name: "Play on the pin's page" }).first()).toBeVisible();
