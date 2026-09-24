@@ -434,6 +434,7 @@ const zh: Messages = {
     sinceClose: '{symbol} 自 {day} 收盘价 {price} 以来',
     closeNotIn: '{symbol}：{day} 的收盘价尚未公布',
     startWas: '开始时为 {price}',
+    changeSince: '开始以来 {pct}',
     company: '公司',
     related: '相关公司',
     suppliers: '供应商',

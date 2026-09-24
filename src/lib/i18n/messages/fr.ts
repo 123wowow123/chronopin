@@ -440,6 +440,7 @@ const fr: Messages = {
     sinceClose: '{symbol} depuis la clôture du {day} à {price}',
     closeNotIn: '{symbol} : la clôture du {day} n’est pas encore connue',
     startWas: 'au début : {price}',
+    changeSince: '{pct} depuis le début',
     company: 'Entreprise',
     related: 'Entreprises liées',
     suppliers: 'Fournisseurs',

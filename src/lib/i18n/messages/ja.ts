@@ -434,6 +434,7 @@ const ja: Messages = {
     sinceClose: '{symbol}：{day}の終値 {price} から',
     closeNotIn: '{symbol}：{day}の終値はまだありません',
     startWas: '開始時 {price}',
+    changeSince: '開始以来 {pct}',
     company: '企業',
     related: '関連企業',
     suppliers: 'サプライヤー',

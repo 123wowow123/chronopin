@@ -12,7 +12,7 @@ import { stockFormats } from '@/lib/i18n/numbers';
 // The company's own stock, inside the card's company pill (no symbol: the
 // company is named just before it): its price now
 // (Nasdaq, delayed) and its move since the close on the pin's start date,
-// once that day has closed. Related and supplier tickers are on the pin page
+// once that day has closed ("+1.02% since"). Related and supplier tickers are on the pin page
 // only. The quote is followed over the page's live stream only while the card
 // is near the screen, like its market odds. `onDark` for the pill over the
 // card's picture, which is dark in either theme. `bare` drops the leading dot,
@@ -55,10 +55,11 @@ export function CompanyTicker({ pin, onDark = false, bare = false }: { pin: Pick
   if (!stock) return null;
   const since = quote && stock.startPrice ? changeSince(stock.startPrice, quote.price) : null;
   const pct = since == null ? null : since * 100;
+  const pctText = pct == null ? '' : `${pct > 0 ? '+' : ''}${pct.toFixed(2)}%`;
   const startDay = stock.startDay ? dayOnly.format(new Date(`${stock.startDay}T00:00:00Z`)) : null;
   const title =
     stock.startPrice != null && startDay
-      ? t('stocks.sinceClose', { symbol: `${stock.symbol}${pct == null ? '' : ` ${pct > 0 ? '+' : ''}${pct.toFixed(2)}%`}`, day: startDay, price: usd.format(stock.startPrice) })
+      ? t('stocks.sinceClose', { symbol: `${stock.symbol}${pct == null ? '' : ` ${pctText}`}`, day: startDay, price: usd.format(stock.startPrice) })
       : startDay
         ? t('stocks.closeNotIn', { symbol: stock.symbol, day: startDay })
         : stock.symbol;
@@ -78,10 +79,25 @@ export function CompanyTicker({ pin, onDark = false, bare = false }: { pin: Pick
       ) : null}
       {bare ? null : <span>{quote ? usd.format(quote.price) : '…'}</span>}
       {pct != null ? (
-        <span className={pct > 0 ? up : pct < 0 ? down : ''}>
-          {pct > 0 ? '+' : ''}
-          {pct.toFixed(2)}%
-        </span>
+        bare ? (
+          <span className={pct > 0 ? up : pct < 0 ? down : ''}>{pctText}</span>
+        ) : (
+          // "+1.02% since": only the move takes the up/down colour.
+          <span>
+            {t('stocks.changeSince', { pct: '\u0000' })
+              .split('\u0000')
+              .map((part, i) =>
+                i === 0 ? (
+                  part
+                ) : (
+                  <span key={i}>
+                    <span className={pct > 0 ? up : pct < 0 ? down : ''}>{pctText}</span>
+                    {part}
+                  </span>
+                ),
+              )}
+          </span>
+        )
       ) : null}
     </span>
   );

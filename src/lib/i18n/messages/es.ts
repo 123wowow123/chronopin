@@ -440,6 +440,7 @@ const es: Messages = {
     sinceClose: '{symbol} desde el cierre del {day} a {price}',
     closeNotIn: '{symbol}: aún no hay cierre del {day}',
     startWas: 'al inicio: {price}',
+    changeSince: '{pct} desde el inicio',
     company: 'Empresa',
     related: 'Empresas relacionadas',
     suppliers: 'Proveedores',

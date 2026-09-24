@@ -440,6 +440,7 @@ const de: Messages = {
     sinceClose: '{symbol} seit dem Schlusskurs vom {day} von {price}',
     closeNotIn: '{symbol}: Der Schlusskurs vom {day} liegt noch nicht vor',
     startWas: 'zum Start: {price}',
+    changeSince: '{pct} seit Start',
     company: 'Firma',
     related: 'Verbundene Firmen',
     suppliers: 'Zulieferer',

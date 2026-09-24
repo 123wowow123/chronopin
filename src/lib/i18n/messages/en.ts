@@ -435,6 +435,7 @@ const en = {
     sinceClose: '{symbol} since the {day} close of {price}',
     closeNotIn: '{symbol}: the {day} close is not in yet',
     startWas: 'start was {price}',
+    changeSince: '{pct} since',
     company: 'Company',
     related: 'Related companies',
     suppliers: 'Suppliers',
