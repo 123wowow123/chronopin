@@ -12,6 +12,7 @@
 //   npm run media:screen -- --ids 769,389 --apply
 //   npm run media:screen -- --apply --skip-trailer 783   ratings only for 783
 //   npm run media:screen -- --apply --skip-trailer all   no trailer lookups at all
+//   npm run media:screen -- --apply --streaming-only     only add watch links
 //
 // Read the dry run first: a trailer is picked by title, and a title cannot
 // always tell a 1999 anime from a later live-action show of the same name.
@@ -38,6 +39,9 @@ const { values: flags } = parseArgs({
     // Pins whose searched-for trailer turned out to be the wrong video, or
     // "all" for a run that is only after ratings and episode counts.
     'skip-trailer': { type: 'string' },
+    // Add the streaming links and write nothing else: no trailer lookups, and
+    // ratings, episode counts and adaptation tags are left as they are.
+    'streaming-only': { type: 'boolean', default: false },
     // Between pins, to go easy on YouTube, AniList, Jikan and Wikidata.
     pause: { type: 'string', default: '1500' },
   },
@@ -47,7 +51,8 @@ const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function run() {
   const ids = flags.ids?.split(',').map(Number).filter(Number.isInteger);
-  const noTrailers = flags['skip-trailer']?.trim() === 'all';
+  const streamingOnly = flags['streaming-only'];
+  const noTrailers = streamingOnly || flags['skip-trailer']?.trim() === 'all';
   const skipTrailer = new Set(noTrailers ? [] : flags['skip-trailer']?.split(',').map(Number));
   const rows = await db.query<{ id: number; episodeCount: number | null }>(
     `SELECT "id", "episodeCount" FROM "Pin"
@@ -104,6 +109,13 @@ async function run() {
       continue;
     }
     try {
+      if (streamingOnly) {
+        if (streaming.length) {
+          await Merchant.saveAll(streaming.map((m) => new Merchant(m)), id);
+          totals.streaming += streaming.length;
+        }
+        continue;
+      }
       if (details.ratings.length) {
         await Pin.setRatings(id, details.ratings);
         totals.ratings += details.ratings.length;
