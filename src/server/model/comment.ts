@@ -3,6 +3,7 @@ import * as db from '../db';
 import type { QueryFn, Row } from '../db';
 import Notification from './notification';
 import { advanceIdSequence } from './pinShared';
+import { blockedBetween } from './blockSql';
 import PinUserLink from './pinUserLink';
 import User from './user';
 import type { CommentReactionName } from '@/lib/commentReactions';
@@ -148,7 +149,8 @@ export default class Comment extends PinUserLink {
   // A pin's live comments, oldest first, each with its reactions counted by
   // kind and the viewer's own (null when viewerId is null: signed out, or the
   // cached copy every reader shares). One hidden after reports comes with no
-  // words or tone.
+  // words or tone. A viewer does not get the comments of anyone they blocked,
+  // or who blocked them.
   static async getByPinId(pinId: number, viewerId: number | null = null): Promise<Comment[]> {
     const rows = await db.query(
       `
@@ -172,6 +174,7 @@ export default class Comment extends PinUserLink {
         SELECT "commentId", COUNT(*)::integer AS "n" FROM "CommentReport" WHERE "utcDismissedDateTime" IS NULL GROUP BY "commentId"
       ) AS "open" ON "open"."commentId" = "Comment"."id"
     WHERE "Comment"."pinId" = $1 AND "Comment"."utcDeletedDateTime" IS NULL
+      AND ($2::integer IS NULL OR NOT ${blockedBetween('$2::integer', '"Comment"."userId"')})
     ORDER BY "Comment"."utcCreatedDateTime" ASC, "Comment"."id" ASC`,
       [pinId, viewerId, COMMENT_HIDE_REPORTS],
     );
@@ -180,14 +183,16 @@ export default class Comment extends PinUserLink {
 
   // Sets the viewer's reaction to a live comment of this pin, replacing any
   // they gave before, or takes it back (null). Anyone may react to their own,
-  // as on Facebook. Resolves the comment's counts after it, or null when
-  // there is no such comment.
+  // as on Facebook, but not to the comment of someone they blocked or who
+  // blocked them ('blocked'). Resolves the comment's counts after it, or null
+  // when there is no such comment.
   static async react(pinId: number, commentId: number, userId: number, reaction: CommentReactionName | null) {
-    const [comment] = await db.query(
-      `SELECT "id" FROM "Comment" WHERE "id" = $1 AND "pinId" = $2 AND "utcDeletedDateTime" IS NULL`,
-      [commentId, pinId],
+    const [comment] = await db.query<{ blocked: boolean }>(
+      `SELECT ${blockedBetween('$3::integer', '"userId"')} AS "blocked" FROM "Comment" WHERE "id" = $1 AND "pinId" = $2 AND "utcDeletedDateTime" IS NULL`,
+      [commentId, pinId, userId],
     );
     if (!comment) return null;
+    if (comment.blocked && reaction !== null) return 'blocked' as const;
     if (reaction === null) {
       await db.query(`DELETE FROM "CommentReaction" WHERE "commentId" = $1 AND "userId" = $2`, [commentId, userId]);
     } else {

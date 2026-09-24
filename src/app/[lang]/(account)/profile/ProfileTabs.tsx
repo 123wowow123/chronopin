@@ -8,13 +8,14 @@ import { useT } from '@/lib/client/i18n';
 const TABS = [
   { href: '/profile', label: 'account.profile' },
   { href: '/profile/following', label: 'profile.following' },
+  { href: '/profile/blocked', label: 'profile.blocked' },
   { href: '/profile/preferences', label: 'profile.preferences' },
   { href: '/profile/password', label: 'account.password' },
 ] as const;
 
 // Switches between the account's pages, as AdminTabs does the admin's: the row
 // is the section's head, each page keeping its h1 for screen readers only, and
-// below lg the arrow back to the nav drawer leads it. Some languages' four
+// below lg the arrow back to the nav drawer leads it. Some languages' five
 // names are wider than a phone, so the names scroll sideways under the arrow
 // (the row's line drawn by the nav, which the picked tab's underline covers),
 // with the picked one brought into view.

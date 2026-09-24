@@ -4,6 +4,7 @@ import { requireVerifiedEmail } from '@/server/emailVerification';
 import { HttpError, intParam, json, readJson, route } from '@/server/http';
 import Comment from '@/server/model/comment';
 import Pin from '@/server/model/pin';
+import UserBlock from '@/server/model/userBlock';
 import UserWiki from '@/server/model/userWiki';
 import { refreshSentiment } from '@/server/services/commentSentiment';
 import { invalidatePin } from '@/server/services/cache';
@@ -50,6 +51,12 @@ export const POST = route(async (request: NextRequest, ctx: Ctx) => {
     if ((await commentDepth(parent)) + 1 > MAX_REPLY_DEPTH) {
       throw new HttpError(400, 'Maximum reply depth reached');
     }
+  }
+
+  // Nobody comments on the pin of, or replies to, someone they blocked or who
+  // blocked them.
+  if (await UserBlock.stopsComment(user.id, pinId, parentCommentId)) {
+    throw new HttpError(403, 'You cannot comment here.', { code: 'blocked', message: 'You cannot comment here.' });
   }
 
   // Also notifies the pin's author and, for a reply, the parent comment's author.

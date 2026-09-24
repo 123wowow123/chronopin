@@ -1,6 +1,7 @@
 import * as db from '../db';
 import type { QueryFn, Row } from '../db';
 import { emitNotificationsChanged } from '../events';
+import { blockedBetween } from './blockSql';
 
 // Tells the live feed whose notifications a write changed, once it commits.
 // rows are what the write RETURNed, so a write that changed nothing is quiet.
@@ -62,7 +63,8 @@ const MAX_BATCH_PINS = 100;
 const DEFAULT_LIMIT = 30;
 
 // Notification rows joined to what they mention, dropping any whose actor,
-// pin or comment is gone, so the list and the unread badge always agree.
+// pin or comment is gone, or whose actor and reader have blocked one another
+// (either way), so the list and the unread badge always agree.
 const VISIBLE_FROM = `
       FROM "Notification" n
       JOIN "User" a ON a."id" = n."actorId" AND a."utcDeletedDateTime" IS NULL
@@ -71,7 +73,8 @@ const VISIBLE_FROM = `
       LEFT JOIN "Company" co ON co."id" = n."companyId"
       WHERE (n."pinId" IS NULL OR (p."id" IS NOT NULL AND p."utcDeletedDateTime" IS NULL))
         AND (n."commentId" IS NULL OR (c."id" IS NOT NULL AND c."utcDeletedDateTime" IS NULL))
-        AND (n."companyId" IS NULL OR co."id" IS NOT NULL)`;
+        AND (n."companyId" IS NULL OR co."id" IS NOT NULL)
+        AND NOT ${blockedBetween('n."userId"', 'n."actorId"')}`;
 
 export type NotificationItem = {
   id: number;

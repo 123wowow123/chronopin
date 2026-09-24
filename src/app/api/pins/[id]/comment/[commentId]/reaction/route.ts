@@ -20,6 +20,9 @@ export const PUT = route(async (request: NextRequest, ctx: Ctx) => {
   }
   const result = await Comment.react(intParam(id), intParam(commentId), user.id, reaction);
   if (!result) throw new HttpError(404, 'Comment not found');
+  if (result === 'blocked') {
+    throw new HttpError(403, 'You cannot react to this comment.', { code: 'blocked', message: 'You cannot react to this comment.' });
+  }
   // The pin page's comments are cached with their counts; only this pin's
   // page changes (the timeline and sitemap show no reactions).
   revalidateTag(TAGS.pin(id), { expire: 0 });

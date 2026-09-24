@@ -7,7 +7,8 @@ import { PostedTime, StartDistance, StartTime } from '@/components/ui/LocalTime'
 import { money } from '@/lib/format';
 import { useVideoPoster } from '@/lib/client/timelineVideo';
 import { pinPath } from '@/lib/seo';
-import type { CardPin } from '@/lib/types';
+import type { CardPin, PinJson } from '@/lib/types';
+import { useBlocks } from '@/lib/client/blocks';
 import { pinEvidence } from '@/lib/referenceConfidence';
 import type { PinTense } from '@/lib/timeline';
 import { CitedText } from './CitedText';
@@ -39,6 +40,14 @@ const TENSE_CLASS: Record<PinTense, string> = {
 
 // A pin on the timeline or in search results. Away from the timeline (no day
 // tag beside it), todayKey adds how far its start is from today.
+// Whether a card's pin is by someone the reader blocked (0076): the timeline
+// and search leave those out.
+export function useBlockedAuthor(pin: Pick<PinJson, 'user' | 'userId'>) {
+  const { ids } = useBlocks();
+  const authorId = pin.user?.id ?? pin.userId;
+  return authorId != null && ids.has(authorId);
+}
+
 export function PinCard({
   pin,
   serverTimeZone,
@@ -56,6 +65,7 @@ export function PinCard({
   // admin has turned the players back on.
   const poster = useVideoPoster();
   const t = useT();
+  const blocked = useBlockedAuthor(pin);
   const href = pinPath(pin);
   const media = pin.media ?? [];
   const hasPlace = pin.latitude != null && pin.longitude != null;
@@ -100,6 +110,10 @@ export function PinCard({
         {pin.address ? <PlaceLinks address={pin.address} /> : null}
       </div>
     ) : null;
+
+  // By someone the reader blocked (0076): shown nowhere - the timeline and
+  // search leave the slot out too, and "More like this" skips it here.
+  if (blocked) return null;
 
   return (
     <article

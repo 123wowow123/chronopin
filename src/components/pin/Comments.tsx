@@ -7,6 +7,7 @@ import { api, isEmailUnverified } from '@/lib/client/api';
 import { commentMood, type CommentMood } from '@/lib/commentMood';
 import { COMMENT_REACTIONS, type CommentReactionName } from '@/lib/commentReactions';
 import { AuthLink } from '@/components/nav/AuthLink';
+import { blockUser, useBlocks, type BlockedUser } from '@/lib/client/blocks';
 import { usePendingAction } from '@/lib/client/pendingAction';
 import { useSession } from '@/lib/client/session';
 import type { CommentJson } from '@/lib/types';
@@ -40,6 +41,7 @@ function buildTree(comments: CommentJson[]): Node[] {
 export function Comments({ pinId, initialComments }: { pinId: number; initialComments: CommentJson[] }) {
   const { user, isLoggedIn, isAdmin, status } = useSession();
   const [comments, setComments] = useState(initialComments);
+  const blocks = useBlocks();
   const [text, setText] = useState('');
   const [error, setError] = useState('');
   const t = useT();
@@ -53,15 +55,16 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
       .get<CommentJson[]>(`/api/pins/${pinId}/comment`)
       .then((fresh) => {
         if (!live) return;
-        // The fresh read also carries the reactions, and this viewer's own, and
-        // hides a comment reported too often since the page was cached.
+        // The fresh read also carries the reactions, and this viewer's own,
+        // hides a comment reported too often since the page was cached, and
+        // leaves out those of anyone the viewer blocked or who blocked them.
         const byId = new Map(fresh.map((c) => [c.id, c]));
         setComments((list) =>
-          list.map((c) => {
+          list.flatMap((c) => {
             const f = byId.get(c.id);
             return f
-              ? { ...c, text: f.text, hidden: f.hidden, sentiment: f.sentiment ?? null, reactions: f.reactions, myReaction: f.myReaction }
-              : c;
+              ? [{ ...c, text: f.text, hidden: f.hidden, sentiment: f.sentiment ?? null, reactions: f.reactions, myReaction: f.myReaction }]
+              : [];
           }),
         );
       })
@@ -71,9 +74,11 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
     };
   }, [pinId]);
 
-  const tree = buildTree(comments);
+  // Someone blocked on this page goes at once, before the next read.
+  const visible = blocks.ids.size ? comments.filter((c) => !blocks.ids.has(c.userId)) : comments;
+  const tree = buildTree(visible);
   // One hidden after reports says nothing, so it has no say in the mood.
-  const shown = comments.filter((c) => !c.hidden);
+  const shown = visible.filter((c) => !c.hidden);
   const mood = commentMood(shown);
 
   async function post(body: { text: string; parentCommentId?: number }) {
@@ -126,6 +131,7 @@ export function Comments({ pinId, initialComments }: { pinId: number; initialCom
       key={node.id}
       node={node}
       canDelete={!!user && (node.userId === user.id || isAdmin)}
+      canBlock={!!user && node.userId !== user.id}
       canReply={isLoggedIn && node.depth < MAX_REPLY_DEPTH}
       signedIn={isLoggedIn}
       pinId={pinId}
@@ -250,6 +256,7 @@ const CONTROL =
 function CommentItem({
   node,
   canDelete,
+  canBlock,
   canReply,
   signedIn,
   pinId,
@@ -260,6 +267,7 @@ function CommentItem({
 }: {
   node: Node;
   canDelete: boolean;
+  canBlock: boolean;
   canReply: boolean;
   signedIn: boolean;
   pinId: number;
@@ -319,7 +327,15 @@ function CommentItem({
                 </button>
               ) : null}
               {node.hidden && !canDelete ? null : (
-                <CommentMenu commentId={node.id} pinId={pinId} canDelete={canDelete} canReport={!node.hidden} signedIn={signedIn} onRemove={onRemove} />
+                <CommentMenu
+                  commentId={node.id}
+                  pinId={pinId}
+                  author={canBlock ? { id: node.userId, userName: node.userName ?? '', pictureUrl: node.userPictureUrl ?? null } : null}
+                  canDelete={canDelete}
+                  canReport={!node.hidden}
+                  signedIn={signedIn}
+                  onRemove={onRemove}
+                />
               )}
             </div>
           </div>
@@ -512,14 +528,16 @@ const REPORT_REASONS = [
   ['other', 'comments.reportOther'],
 ] as const;
 
-// The comment's other actions, behind a vertical three-dot button: Delete for
-// its author (and an admin, on anyone's) and Report on every comment, which
-// asks why and hands it to Admin > Comments. A signed-out reader's Report
+// The comment's other actions, behind a vertical three-dot button: Remove for
+// its author (and an admin, on anyone's), Report on every comment, which asks
+// why and hands it to Admin > Comments, and Block on someone else's, which
+// asks first. A signed-out reader's Report
 // sends them to log in first. Escape or a click elsewhere shuts it, and the
 // focus goes back to the button.
 function CommentMenu({
   commentId,
   pinId,
+  author,
   canDelete,
   canReport,
   signedIn,
@@ -527,6 +545,8 @@ function CommentMenu({
 }: {
   commentId: number;
   pinId: number;
+  // Who wrote it, when the reader may block them (signed in, not their own).
+  author: BlockedUser | null;
   canDelete: boolean;
   canReport: boolean;
   signedIn: boolean;
@@ -535,7 +555,7 @@ function CommentMenu({
   const t = useT();
   const menuId = useId();
   const [open, setOpen] = useState(false);
-  const [view, setView] = useState<'actions' | 'reasons' | 'done' | 'failed'>('actions');
+  const [view, setView] = useState<'actions' | 'reasons' | 'block' | 'done' | 'failed' | 'blockFailed'>('actions');
   const rootRef = useRef<HTMLSpanElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -562,6 +582,17 @@ function CommentMenu({
       document.removeEventListener('keydown', key);
     };
   }, [open, view, close]);
+
+  async function block() {
+    if (!author) return;
+    try {
+      // The comments (and pins) of theirs on this page go at once.
+      await blockUser(author);
+      close(false);
+    } catch {
+      setView('blockFailed');
+    }
+  }
 
   async function report(reason: string) {
     try {
@@ -594,7 +625,7 @@ function CommentMenu({
           ref={menuRef}
           id={menuId}
           role="menu"
-          className="absolute right-0 bottom-full z-30 mb-2.5 w-48 rounded-xl border border-tint/[0.07] bg-panel p-1.5 text-ink shadow-2xl shadow-shade/40"
+          className={`absolute right-0 bottom-full z-30 mb-2.5 ${view === 'actions' ? 'w-48' : 'w-64'} rounded-xl border border-tint/[0.07] bg-panel p-1.5 text-ink shadow-2xl shadow-shade/40`}
         >
           <span aria-hidden className="absolute -bottom-1.5 right-3 size-3 rotate-45 border-r border-b border-tint/[0.07] bg-panel" />
           {view === 'actions' ? (
@@ -621,6 +652,22 @@ function CommentMenu({
                   {t('comments.report')}
                 </AuthLink>
               )}
+              {author ? (
+                <button type="button" role="menuitem" onClick={() => setView('block')} className={item}>
+                  {t('comments.block')}
+                </button>
+              ) : null}
+            </>
+          ) : view === 'block' && author ? (
+            // Said plainly before it happens: it works both ways for comments.
+            <>
+              <p className="px-3 pt-1.5 pb-2 text-sm text-subtle">{t('comments.blockConfirm', { name: author.userName })}</p>
+              <button type="button" role="menuitem" onClick={block} className={`${item} text-danger`}>
+                {t('comments.blockConfirmButton', { name: author.userName })}
+              </button>
+              <button type="button" role="menuitem" onClick={() => close(true)} className={item}>
+                {t('common.cancel')}
+              </button>
             </>
           ) : view === 'reasons' ? (
             <>
@@ -633,7 +680,7 @@ function CommentMenu({
             </>
           ) : (
             <p role="status" className={`px-3 py-2 text-sm ${view === 'done' ? 'text-success' : 'text-danger'}`}>
-              {view === 'done' ? t('comments.reported') : t('comments.reportFailed')}
+              {view === 'done' ? t('comments.reported') : view === 'blockFailed' ? t('comments.blockFailed') : t('comments.reportFailed')}
             </p>
           )}
         </div>

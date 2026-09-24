@@ -5,6 +5,7 @@ import { FollowButton } from '@/components/pin/FollowButton';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { CardGrid } from '@/components/pin/CardGrid';
 import { PinCard } from '@/components/pin/PinCard';
+import { useBlocks } from '@/lib/client/blocks';
 import { UserAvatar } from '@/components/ui/UserAvatar';
 import { parseLinkHeader } from '@/lib/client/api';
 import { createPageAhead } from '@/lib/client/pageAhead';
@@ -155,6 +156,7 @@ export function SearchResults({
 }) {
   const timeZone = useTimeZone(serverTimeZone);
   const t = useT();
+  const blocks = useBlocks();
   const [postedWithin, setPostedWithin] = useState<string | null>(initialView.postedWithin ?? DEFAULT_POSTED_WITHIN);
   // Any search can sort: a filter-only one (tag:, user:) has no scores, so
   // by relevance it keeps date order but still gets the grid and start filter.
@@ -554,7 +556,8 @@ export function SearchResults({
         {relevanceShown ? (
           <div hidden={sortBy !== 'relevance'} className={restoring ? 'invisible' : undefined}>
             <CardGrid className="mt-6">
-              {(rankedPins ?? []).map((pin, i) => (
+              {/* Pins by anyone the reader blocked are left out. */}
+              {(rankedPins ?? []).filter((pin) => !blocks.ids.has(pin.user?.id ?? pin.userId ?? -1)).map((pin, i) => (
                 <li key={pin.id} id={`rank-${pin.id}`}>
                   <PinCard pin={pin} serverTimeZone={serverTimeZone} priority={i === 0} tense={pinTense(pin, serverNow, todayKey)} todayKey={todayKey} />
                 </li>

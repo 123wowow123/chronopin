@@ -10,7 +10,7 @@ import { parseArgs } from 'node:util';
 import Holidays from 'date-holidays';
 import _ from 'lodash';
 import * as db from '@/server/db';
-import { Comment, Company, CompanyFollow, DateTime, Follow, FullPins, MediumType, User, Users } from '@/server/model';
+import { Comment, Company, CompanyFollow, DateTime, Follow, FullPins, MediumType, User, UserBlock, Users } from '@/server/model';
 import AiFeedback from '@/server/model/aiFeedback';
 import PinDuplicate from '@/server/model/pinDuplicate';
 import CompanyRelation from '@/server/model/companyRelation';
@@ -36,6 +36,7 @@ const { values: flags } = parseArgs({
     commentreactionfile: { type: 'string', default: './scripts/backup/seedCommentReactions.json' },
     followfile: { type: 'string', default: './scripts/backup/seedFollows.json' },
     companyfollowfile: { type: 'string', default: './scripts/backup/seedCompanyFollows.json' },
+    userblockfile: { type: 'string', default: './scripts/backup/seedUserBlocks.json' },
     duplicatefile: { type: 'string', default: './scripts/backup/seedPinDuplicates.json' },
     aifeedbackfile: { type: 'string', default: './scripts/backup/seedAiFeedback.json' },
     sourcefile: { type: 'string', default: './scripts/backup/seedSources.json' },
@@ -115,6 +116,7 @@ async function saveDB() {
     commentReactions: await Comment.getAllReactions(),
     follows: (await Follow.getAll()).follows,
     companyFollows: await CompanyFollow.getAll(),
+    userBlocks: await UserBlock.getAll(),
   });
   const { dropped } = data;
   if (dropped.users) {
@@ -144,6 +146,10 @@ async function saveDB() {
   // Who follows which company (0048).
   console.log('Backup Company Follows');
   writeJson(flags.companyfollowfile, data.companyFollows);
+
+  // Who blocked whom (0076).
+  console.log('Backup User Blocks');
+  writeJson(flags.userblockfile, data.userBlocks);
 
   // Duplicate pairs and decisions (not page views, which only order stacks),
   // for the pins kept above.
@@ -351,6 +357,15 @@ async function seedDB() {
       await CompanyFollow.restore(readJson(flags.companyfollowfile));
     } catch (error) {
       log.error('Company Follows Save Error', JSON.stringify(error));
+    }
+  }
+
+  // After the users they name; a backup from before 0076 has none.
+  if (existsSync(flags.userblockfile)) {
+    try {
+      await UserBlock.restore(readJson(flags.userblockfile));
+    } catch (error) {
+      log.error('User Blocks Save Error', JSON.stringify(error));
     }
   }
 
