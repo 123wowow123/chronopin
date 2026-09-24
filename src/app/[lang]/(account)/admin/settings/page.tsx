@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { requireAdminViewer } from '@/server/guard';
 import { getMultilingual, getPersonalBag, getSliderTyping, getTagList, getTimelineVideo } from '@/server/model/appSetting';
 import UserWiki from '@/server/model/userWiki';
+import { translationCoverage } from '@/server/services/translations';
 import { AdminTabs } from '../AdminTabs';
 import { MultilingualForm } from './MultilingualForm';
 import { PersonalBagForm } from './PersonalBagForm';
@@ -18,13 +19,14 @@ export const metadata: Metadata = { title: 'Admin settings' };
 // how a crowded day picks its pins. Each saves on its own, straight away.
 export default async function AdminSettingsPage() {
   await requireAdminViewer('/admin/settings');
-  const [video, typing, tagList, personal, wikis, multilingual] = await Promise.all([
+  const [video, typing, tagList, personal, wikis, multilingual, coverage] = await Promise.all([
     getTimelineVideo(),
     getSliderTyping(),
     getTagList(),
     getPersonalBag(),
     UserWiki.count(),
     getMultilingual(),
+    translationCoverage(),
   ]);
   return (
     <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
@@ -34,7 +36,7 @@ export default async function AdminSettingsPage() {
       <SliderTypingForm saved={typing} />
       <TagListForm saved={tagList} />
       <PersonalBagForm saved={personal} wikis={wikis} />
-      <MultilingualForm saved={multilingual} />
+      <MultilingualForm saved={multilingual} coverage={coverage} />
     </div>
   );
 }

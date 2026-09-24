@@ -9,10 +9,14 @@
 
 import { DEFAULT_LOCALE, LOCALES, type Locale } from './i18n/config';
 
-export type OtherLocale = Exclude<Locale, typeof DEFAULT_LOCALE>;
+export type OtherLocale = Exclude<Locale, 'en'>;
 export const OTHER_LOCALES = LOCALES.filter((l): l is OtherLocale => l !== DEFAULT_LOCALE);
 
 export type MultilingualSetting = { locales: OtherLocale[] };
+
+// How many live pins each language has a current translation of, out of all
+// of them (services/translations.ts translationCoverage).
+export type TranslationCoverage = { total: number; current: Record<OtherLocale, number> };
 
 export const DEFAULT_MULTILINGUAL: MultilingualSetting = { locales: [] };
 

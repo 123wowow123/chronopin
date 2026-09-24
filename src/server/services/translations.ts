@@ -7,6 +7,7 @@
 // --export/--apply, and /api/admin/translations on a server).
 
 import { DEFAULT_LOCALE, isLocale, type Locale } from '@/lib/i18n/config';
+import type { TranslationCoverage } from '@/lib/multilingual';
 import { inBackground } from '../background';
 import * as db from '../db';
 import { TARGET_LOCALES, translatePinText, type TargetLocale } from '../extract/translate';
@@ -138,6 +139,24 @@ export async function pinsToTranslate(locales: readonly TargetLocale[], { limit 
     if (out.length >= limit) break;
   }
   return out;
+}
+
+// How many live pins each language has a current translation of (one made
+// from the pin's words as they are now, so one a page would show), out of
+// all of them: for the admin's language switches.
+export async function translationCoverage(): Promise<TranslationCoverage> {
+  const [pins, rows] = await Promise.all([
+    db.query<PinText & { id: number }>(
+      `SELECT "id", "title", "description", "longFormSummary", "dateConfidenceReasoning", "delayReasoning" FROM "Pin" WHERE "utcDeletedDateTime" IS NULL`,
+    ),
+    db.query<{ pinId: number; locale: string; sourceHash: string }>(`SELECT "pinId", "locale", "sourceHash" FROM "PinTranslation"`),
+  ]);
+  const hashes = new Map(pins.map((pin) => [pin.id, sourceHash(pin)]));
+  const current = Object.fromEntries(TARGET_LOCALES.map((l) => [l, 0])) as Record<TargetLocale, number>;
+  for (const row of rows) {
+    if (row.locale in current && hashes.get(row.pinId) === row.sourceHash.trim()) current[row.locale as TargetLocale]++;
+  }
+  return { total: pins.length, current };
 }
 
 export type TranslationInput = Partial<PinText> & { pinId: number; locale: string; sourceHash?: string };
