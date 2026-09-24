@@ -724,13 +724,20 @@ const STREAMING_PROPERTIES: Record<string, (id: string) => string> = {
   P11815: (id) => `https://www.peacocktv.com/stream-${id}`,
 };
 
+// Prime Video's ids are an ASIN ("B0B8TR8Y2K") or a title id
+// ("0FCJEHY4FXTDVCLZ5NR9A0N42N"). Wikidata has others that 404 - Grey's
+// Anatomy's P8055 was "1636211884", a book's ISBN.
+const PRIME_VIDEO_ID = /^(?:B0[A-Z0-9]{8}|[A-Z0-9]{20,})$/;
+const ID_CHECKS: Record<string, RegExp> = { P8055: PRIME_VIDEO_ID, P14440: PRIME_VIDEO_ID };
+
 // The title pages an item's streaming ids open, in the order above, from the
 // item's claims as wbgetentities gives them (deprecated statements left out).
 export function wikidataStreamingUrls(claims: Record<string, any[]> | undefined): string[] {
   return Object.entries(STREAMING_PROPERTIES).flatMap(([property, url]) =>
     (claims?.[property] ?? [])
-      .filter((c) => c?.rank !== 'deprecated' && typeof c?.mainsnak?.datavalue?.value === 'string')
-      .map((c) => url(encodeURI(c.mainsnak.datavalue.value))),
+      .map((c) => (c?.rank !== 'deprecated' ? c?.mainsnak?.datavalue?.value : undefined))
+      .filter((id): id is string => typeof id === 'string' && (!ID_CHECKS[property] || ID_CHECKS[property].test(id)))
+      .map((id) => url(encodeURI(id))),
   );
 }
 

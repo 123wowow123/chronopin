@@ -49,7 +49,9 @@ export function streamingService(url: string | null | undefined): StreamingServi
 // some are from before the services went https-only ("http://www.hulu.com/
 // one-piece"), some are on a retired host (beta.crunchyroll.com), and some
 // carry someone's Amazon affiliate tag and ref= tracking, which would be
-// replaced when shown anyway (affiliateUrl) but should not be kept.
+// replaced when shown anyway (affiliateUrl) but should not be kept. A title
+// page needs no query at all. Netflix links pinned to a country
+// ("netflix.com/mx/title/...") lose the country, so each reader gets their own.
 export function cleanStreamingUrl(url: string): string {
   let parsed: URL;
   try {
@@ -59,7 +61,17 @@ export function cleanStreamingUrl(url: string): string {
   }
   if (parsed.hostname.toLowerCase() === 'beta.crunchyroll.com') parsed.hostname = 'www.crunchyroll.com';
   parsed.pathname = parsed.pathname.replace(/\/ref=[^/]*$/, '');
-  for (const key of ['tag', 'ref', 'ref_', 'linkCode', 'linkId', 'camp', 'creative']) parsed.searchParams.delete(key);
+  if (/(^|\.)netflix\.com$/i.test(parsed.hostname)) {
+    // "browse?jbv=80124041" and "search?q=berserk&jbv=..." name the title in
+    // jbv; the old movies.netflix.com/WiMovie/<slug>/<id> links in the path.
+    const jbv = parsed.searchParams.get('jbv');
+    const legacy = parsed.pathname.match(/^\/WiMovie\/(?:[^/]+\/)?(\d+)\/?$/i)?.[1];
+    const id = /^\d+$/.test(jbv ?? '') ? jbv : legacy;
+    parsed.hostname = 'www.netflix.com';
+    parsed.pathname = id ? `/title/${id}` : parsed.pathname.replace(/^\/[a-z]{2}(?:-[a-z]{2})?\/title\//i, '/title/').replace(/\/+$/, '');
+  }
+  parsed.search = '';
+  parsed.hash = '';
   return parsed.toString();
 }
 
@@ -69,7 +81,12 @@ export function streamingMerchants(urls: (string | null | undefined)[]): Merchan
   const out: MerchantJson[] = [];
   for (const url of urls) {
     const service = streamingService(url);
-    if (service && !out.some((m) => m.label === service.label)) out.push({ label: service.label, url: cleanStreamingUrl(url!) });
+    if (!service || out.some((m) => m.label === service.label)) continue;
+    const clean = cleanStreamingUrl(url!);
+    // A Netflix link that is not a title page (a bare browse or search page)
+    // opens nothing in particular.
+    if (service.label === 'Netflix' && !/\/title\/\d+$/.test(new URL(clean).pathname)) continue;
+    out.push({ label: service.label, url: clean });
   }
   return out;
 }

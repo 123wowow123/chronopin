@@ -317,6 +317,7 @@ describe('wikidataStreamingUrls', () => {
         P8298: [claim('show/93ba22b1-833e-47ba-ae94-8ee7b9eefa9a')],
         P1874: [claim('81726714'), claim('70000000', 'deprecated')],
         P11330: [claim('GG5H5XQX4')],
+        P8055: [claim('1636211884')],
         P31: [{ rank: 'normal', mainsnak: { datavalue: { value: { id: 'Q5398426' } } } }],
       }),
     ).toEqual([

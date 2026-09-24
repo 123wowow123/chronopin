@@ -55,5 +55,23 @@ describe('cleanStreamingUrl', () => {
     expect(cleanStreamingUrl('https://www.amazon.com/gp/video/detail/B01MY6K92X/ref=atv_dp_season_select_s2?tag=techblast0f-20')).toBe('https://www.amazon.com/gp/video/detail/B01MY6K92X');
     expect(cleanStreamingUrl('https://www.primevideo.com/detail/0FKEGV62JLIH656ZBUCR2BBFUJ/ref=atv_dp_share_cu_r')).toBe('https://www.primevideo.com/detail/0FKEGV62JLIH656ZBUCR2BBFUJ');
     expect(cleanStreamingUrl('https://www.netflix.com/title/80107103')).toBe('https://www.netflix.com/title/80107103');
+    expect(cleanStreamingUrl('https://www.netflix.com/mx/title/80174974')).toBe('https://www.netflix.com/title/80174974');
+    expect(cleanStreamingUrl('https://www.netflix.com/gt/title/80063153')).toBe('https://www.netflix.com/title/80063153');
+    expect(cleanStreamingUrl('https://www.netflix.com/browse?jbv=80075178&jbp=0&jbr=11')).toBe('https://www.netflix.com/title/80075178');
+    expect(cleanStreamingUrl('https://www.netflix.com/search?q=berserk&jbv=80243876')).toBe('https://www.netflix.com/title/80243876');
+    expect(cleanStreamingUrl('https://movies.netflix.com/WiMovie/Samurai_Champloo/70213065')).toBe('https://www.netflix.com/title/70213065');
+    expect(cleanStreamingUrl('https://www.netflix.com/WiMovie/70305217')).toBe('https://www.netflix.com/title/70305217');
+    expect(cleanStreamingUrl('https://www.netflix.com/title/81364887/')).toBe('https://www.netflix.com/title/81364887');
+    expect(cleanStreamingUrl('https://www.primevideo.com/detail/High-School-of-the-Dead/0QSUH53RBZ9ZAVHC6EGI0GOE0H?_encoding=UTF8&language=eng')).toBe(
+      'https://www.primevideo.com/detail/High-School-of-the-Dead/0QSUH53RBZ9ZAVHC6EGI0GOE0H',
+    );
+  });
+});
+
+describe('streamingMerchants on Netflix', () => {
+  it('skips a Netflix link that opens no title', () => {
+    expect(streamingMerchants(['https://www.netflix.com/browse', 'https://netflix.com/DetectiveConanMovies', 'https://www.netflix.com/browse?jbv=80124041'])).toEqual([
+      { label: 'Netflix', url: 'https://www.netflix.com/title/80124041' },
+    ]);
   });
 });
