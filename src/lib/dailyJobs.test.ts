@@ -1,13 +1,31 @@
 import { describe, expect, it } from 'vitest';
-import { DEFAULT_DAILY_JOBS, dueSlot, groupTasks, nextRun, parseDailyJobs, TASK_GROUPS, TASK_IDS, TASKS } from './dailyJobs';
+import { DEFAULT_DAILY_JOBS, dueSlot, groupTasks, nextRun, parseDailyJobs, TASK_GROUPS, TASK_IDS, TASKS, withDefaultJobs } from './dailyJobs';
 
 const midnight = DEFAULT_DAILY_JOBS.jobs[0];
 const news = DEFAULT_DAILY_JOBS.jobs[1];
+const monthly = DEFAULT_DAILY_JOBS.jobs[2];
 
 describe('parseDailyJobs', () => {
   it('accepts its own default: off, at the top limits', () => {
     expect(parseDailyJobs(DEFAULT_DAILY_JOBS)).toEqual({ setting: DEFAULT_DAILY_JOBS });
-    expect(DEFAULT_DAILY_JOBS.jobs.every((j) => !j.enabled && j.maxNewPins === 100 && j.maxUpdates === 250)).toBe(true);
+    expect(DEFAULT_DAILY_JOBS.jobs.every((j) => !j.enabled && j.maxUpdates === 250)).toBe(true);
+    expect([midnight, news].every((j) => j.maxNewPins === 100 && j.dayOfMonth === null)).toBe(true);
+  });
+
+  it('ships the monthly re-check as updates only, on the 1st', () => {
+    expect(monthly).toMatchObject({ id: 'monthly', dayOfMonth: 1, tasks: ['lowConfidence'], maxNewPins: 0 });
+  });
+
+  it('reads a job saved before monthly jobs as every day', () => {
+    const { dayOfMonth: _, ...saved } = news;
+    expect(parseDailyJobs({ jobs: [saved] })).toEqual({ setting: { jobs: [news] } });
+  });
+
+  it('adds default jobs a saved setting lacks, and keeps the saved ones', () => {
+    const saved = { jobs: [{ ...midnight, enabled: true }] };
+    expect(withDefaultJobs(saved).jobs.map((j) => j.id)).toEqual(['midnight', 'news', 'monthly']);
+    expect(withDefaultJobs(saved).jobs[0].enabled).toBe(true);
+    expect(withDefaultJobs(DEFAULT_DAILY_JOBS)).toBe(DEFAULT_DAILY_JOBS);
   });
 
   it('sorts and de-duplicates times and keeps tasks in catalogue order', () => {
@@ -28,6 +46,9 @@ describe('parseDailyJobs', () => {
       { maxUpdates: -1 },
       { id: 'Has Space' },
       { enabled: 'yes' },
+      { dayOfMonth: 0 },
+      { dayOfMonth: 29 },
+      { dayOfMonth: 1.5 },
     ]) {
       expect(parseDailyJobs({ jobs: [{ ...news, ...patch }] })).toHaveProperty('problem');
     }
@@ -62,6 +83,30 @@ describe('dueSlot', () => {
   it('follows the zone across a DST change', () => {
     // 2026-11-01 falls back: 06:00 PST is 14:00Z.
     expect(dueSlot(news, new Date('2026-11-01T14:01:00Z'))?.at).toEqual(new Date('2026-11-01T14:00:00Z'));
+  });
+});
+
+describe('monthly jobs', () => {
+  // 03:00 PDT on 1 October 2026 is 10:00Z.
+  it('is due only on its day of the month', () => {
+    expect(dueSlot(monthly, new Date('2026-10-01T10:05:00Z'))).toEqual({
+      key: 'monthly@2026-10-01T03:00 America/Los_Angeles',
+      at: new Date('2026-10-01T10:00:00Z'),
+    });
+    expect(dueSlot(monthly, new Date('2026-09-30T10:05:00Z'))).toBeNull();
+    expect(dueSlot(monthly, new Date('2026-10-02T12:00:00Z'))).toBeNull();
+  });
+
+  it('waits a day for a missed slot rather than skip a month', () => {
+    expect(dueSlot(monthly, new Date('2026-10-02T09:59:00Z'))?.key).toBe('monthly@2026-10-01T03:00 America/Los_Angeles');
+    expect(dueSlot(monthly, new Date('2026-10-02T10:01:00Z'))).toBeNull();
+  });
+
+  it('runs next on its day of the next month, across a DST change', () => {
+    expect(nextRun(monthly, new Date('2026-09-24T12:00:00Z'))).toEqual(new Date('2026-10-01T10:00:00Z'));
+    // Summer time ends at 02:00 on 1 November, so that day's 03:00 is PST, 11:00Z.
+    expect(nextRun(monthly, new Date('2026-10-01T10:05:00Z'))).toEqual(new Date('2026-11-01T11:00:00Z'));
+    expect(nextRun({ ...monthly, dayOfMonth: 28 }, new Date('2027-01-29T00:00:00Z'))).toEqual(new Date('2027-02-28T11:00:00Z'));
   });
 });
 

@@ -6,6 +6,7 @@ import { api, ApiError } from '@/lib/client/api';
 import {
   DRIVERS,
   groupTasks,
+  MAX_DAY_OF_MONTH,
   MAX_NEW_PINS,
   MAX_TIMES,
   MAX_UPDATES,
@@ -97,7 +98,7 @@ export function DailyJobsPanel({ initial }: { initial: DailyJobsView }) {
       <section className="mb-6 rounded-xl border border-line bg-panel p-4 sm:p-5">
         <h2 className="text-base font-semibold">Daily pin jobs</h2>
         <p className="mt-1 text-sm text-subtle">
-          Each job is one Claude run at each of its times: it reads the app&apos;s signals, researches on the web, then adds pins and fixes existing ones
+          Each job is one Claude run at each of its times, every day or on one day a month: it reads the app&apos;s signals, researches on the web, then adds pins and fixes existing ones
           through the API as the curator desks. It follows the scraping strategy in the OKF docs and records what it learns there for the next run.
         </p>
         <p className="mt-2 text-sm">
@@ -196,6 +197,30 @@ function JobCard({
 
       <fieldset className="mt-4">
         <legend className="text-sm font-medium">Runs at</legend>
+        <div className="mt-2 flex flex-wrap items-center gap-2 text-sm">
+          <select
+            value={job.dayOfMonth ? 'monthly' : 'daily'}
+            onChange={(e) => onChange({ dayOfMonth: e.target.value === 'monthly' ? 1 : null })}
+            className="field w-auto"
+            aria-label="How often"
+          >
+            <option value="daily">Every day</option>
+            <option value="monthly">Once a month</option>
+          </select>
+          {job.dayOfMonth ? (
+            <label className="flex items-center gap-2">
+              on day
+              <select value={job.dayOfMonth} onChange={(e) => onChange({ dayOfMonth: Number(e.target.value) })} className="field w-auto">
+                {Array.from({ length: MAX_DAY_OF_MONTH }, (_, i) => i + 1).map((day) => (
+                  <option key={day} value={day}>
+                    {day}
+                  </option>
+                ))}
+              </select>
+              <span className="text-subtle">(1-{MAX_DAY_OF_MONTH}, so every month has it)</span>
+            </label>
+          ) : null}
+        </div>
         <div className="mt-2 flex flex-wrap items-center gap-2">
           {job.times.map((time, index) => (
             <span key={index} className="flex items-center gap-1">

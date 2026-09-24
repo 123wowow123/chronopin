@@ -1,7 +1,7 @@
 ---
 type: Strategy
 title: Daily pin jobs
-description: The two scheduled LLM runs that grow and maintain the pins - the midnight maintenance-and-growth job and the 6am/6pm news check - what each task reads and does, the tools and drivers behind them, and how a run's learnings feed the next.
+description: The scheduled LLM runs that grow and maintain the pins - the midnight maintenance-and-growth job, the 6am/6pm news check and the monthly low-confidence re-check - what each task reads and does, the tools and drivers behind them, and how a run's learnings feed the next.
 resource: ../../../src/server/jobs/index.ts
 tags: [scraping, scheduling, maintenance, llm, orchestration, learnings]
 generated: { by: claude-code/claude-opus-5-5, at: 2026-09-22T18:00:00Z }
@@ -15,15 +15,18 @@ fixes existing ones through the real API. The owner asked for them on
 2026-09-22; this page is their standing guidance, and every run reads it
 into its instructions, so changing this page changes the next run.
 
-# The two jobs
+# The jobs
 
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
 | `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources). Find new events: [breakingNews](#breakingnews). Scores: [sentiment](#sentiment) | 100 / 250 |
+| `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 
-Both are set on **/admin/jobs**: on or off, the times (up to six a day) and
-their time zone, which tasks, which driver, and the two limits. They ship
+All are set on **/admin/jobs**: on or off, every day or once a month (on a
+day from 1 to 28, so every month has it), the times (up to six a day) and
+their time zone, which tasks, which driver, and the two limits. A job added
+to the defaults after the setting was first saved is added to it, off. They ship
 **off** (owner, 2026-09-23: "turn off nightly jobs by default"); turn a job on
 there to start it. There is no dry run - every run posts and edits for real
 (owner, 2026-09-22: "no dry run needed", "remove dry run option").
@@ -34,7 +37,8 @@ job whose local time has just passed is claimed in `JobRun` by its slot key
 (`news@2026-09-22T06:00 America/Los_Angeles`), so it runs once however many
 servers there are. A slot missed while the servers were down still runs if
 they are back within two hours; after that it is let go rather than run late
-into the next one. One run at a time, and a run that has not finished after
+into the next one. A monthly slot waits a whole day instead, since letting it
+go skips a month and it may sit behind a long midnight run. One run at a time, and a run that has not finished after
 three hours is closed as failed. "Run now" on the admin page, or `npm run
 jobs:run -- --job <id>`, starts one by hand.
 
@@ -76,7 +80,7 @@ page or a PDF, and looking at a picture are the model's own. The rest:
 
 | Tool | What it gives | Why it is a tool |
 | --- | --- | --- |
-| `category_coverage`, `trending_categories`, `most_viewed_pins`, `recent_comments`, `active_user_places`, `pins_this_week`, `pins_changed_since_last_run`, `soft_dated_soon`, `revisit_queue` | The signals each task starts from ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
+| `category_coverage`, `trending_categories`, `most_viewed_pins`, `recent_comments`, `active_user_places`, `pins_this_week`, `pins_changed_since_last_run`, `soft_dated_soon`, `low_confidence_pins`, `revisit_queue` | The signals each task starts from ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
 | `google_trends` | Trending searches in ten markets, scored for dated events, with `coveredByPin` ([trends.ts](../../../src/server/jobs/trends.ts)) | Same reader as `trends:discover` |
 | `company_coverage`, `tagged_pins` | Where a beat left off: each company's pins and when one was last posted, stalest first; what a tag (`Layoffs`) already holds ([signals.ts](../../../src/server/jobs/signals.ts)) | The app's own data |
 | `find_pins`, `get_pin` | The already-pinned test; a pin's full JSON | The app's own data |
@@ -169,6 +173,37 @@ revisiting with the exact fix.
 **Traps.** `blocked` (403, 429) is not broken - the site refuses servers,
 not readers. A YouTube 401 means embedding was turned off, which does break
 the pin. Never replace a picture with one that has not been viewed.
+
+### lowConfidence
+
+The monthly job's task (owner, 2026-09-24: "monthly jobs to rescrape low
+confidence pins and update"). A pin scored below the timeline's confidence
+bar is hidden from the home page, so firming one up puts it back in front of
+readers.
+**Reads** `low_confidence_pins`: the pins below the bar, curators' pins
+first, then lowest score, then longest unchanged. Pins changed in the last 25
+days (last month's run included) or already marked for revisiting are not
+listed. Ask again after each batch, passing the ids you looked at and left
+alone as `exclude`.
+**Does** re-scrape each pin: `scrape_url` on its `sourceUrl` (or
+`read_page` when the source is blocked), then search for what has been
+published since - the official announcement, the filing, the organiser's
+page, the trade press. Update what the evidence supports through
+`update_pin`: `addReferences` with each new source's confidence, published
+date, start/end dates and reasoning; a firmer `dateConfidence` with its
+reasoning quoting the wording; a moved date (a slip is `originalStartDate` +
+`delayReasoning`); a dead source moved to its live or archived copy. A
+reference's dates do not move the pin through the API (only the edit form
+re-picks them), so a firmer date goes in the patch as `utcStartDateTime` /
+`utcEndDateTime` too. The
+score is recomputed from the references, so independent, dated, confident
+references are what lift it - rewording the summary does not. Mark people's
+pins for revisiting with the exact fix and its sources.
+**Traps.** Do not inflate a confidence to get a pin over the bar: a pin that
+is genuinely uncertain (a rumour, a "by 2030" plan) stays low, and the run
+leaves it alone and says so in the report. A reference that only repeats the
+source (the same wire story on another site) is not independent. A pin whose
+event turned out not to happen is marked for revisiting, not deleted.
 
 ## Find new events
 

@@ -1,4 +1,4 @@
-import { DEFAULT_DAILY_JOBS, parseDailyJobs, type DailyJobsSetting } from '@/lib/dailyJobs';
+import { DEFAULT_DAILY_JOBS, parseDailyJobs, withDefaultJobs, type DailyJobsSetting } from '@/lib/dailyJobs';
 import { DEFAULT_MULTILINGUAL, parseMultilingual, type MultilingualSetting } from '@/lib/multilingual';
 import { DEFAULT_SLIDER_TYPING, parseSliderTyping, type SliderTypingSetting } from '@/lib/sliderTyping';
 import { DEFAULT_TAG_LIST, parseTagList, type TagListSetting } from '@/lib/tagList';
@@ -61,9 +61,10 @@ export function setPersonalBag(setting: PersonalBagSetting, userId: number | nul
 }
 
 // When the daily pin jobs run and what they do (src/server/jobs).
+// The saved jobs, plus any default job added since they were saved.
 export async function getDailyJobs(): Promise<DailyJobsSetting> {
   const parsed = parseDailyJobs(await read(DAILY_JOBS));
-  return 'setting' in parsed ? parsed.setting : DEFAULT_DAILY_JOBS;
+  return 'setting' in parsed ? withDefaultJobs(parsed.setting) : DEFAULT_DAILY_JOBS;
 }
 
 export function setDailyJobs(setting: DailyJobsSetting, userId: number | null) {

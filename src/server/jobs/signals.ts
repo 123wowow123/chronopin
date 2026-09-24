@@ -4,7 +4,12 @@
 // tool in ./tools.ts.
 
 import { CATEGORIES } from '@/lib/categories';
+import { minConfidence } from '@/lib/timelineConfidence';
+import { TIMELINE_MIN_CONFIDENCE } from '@/lib/referenceConfidence';
 import * as db from '../db';
+import { getTimelineConfidence } from '../model/appSetting';
+import { pinConfidenceOf } from '../model/pins';
+import { CURATORS } from './curators';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -307,4 +312,51 @@ export async function taggedPins(tag: string, limit = 40) {
     [tag, Math.min(limit, 100)],
   );
   return { tag, ...counts, pins };
+}
+
+// The pins scored below `below` (default the timeline's own bar, which hides
+// them; 70 when the bar is off), for the monthly re-check. Left out: pins
+// already marked for revisiting (the revisit queue has them) and pins changed
+// in the last `skipDays`, so a pin updated - or found to need nothing - last
+// month waits its turn behind the rest. Curators' pins come first, since only
+// those can be updated; then lowest score, then longest unchanged. Unscored
+// pins (no rated source, no scored reference) are not below any bar - the
+// timeline shows them - and are not listed. `exclude` is the pins this run
+// has already looked at and left as they were.
+export async function lowConfidencePins({ below, limit = 30, skipDays = 25, exclude = [] }: { below?: number; limit?: number; skipDays?: number; exclude?: number[] }) {
+  const bar = below ?? minConfidence(await getTimelineConfidence()) ?? TIMELINE_MIN_CONFIDENCE;
+  const curators = Object.keys(CURATORS).map((h) => h.replace(/^@/, '').toLowerCase());
+  const rows = await db.query<{
+    id: number;
+    title: string;
+    utcStartDateTime: Date;
+    dateConfidence: string | null;
+    sourceUrl: string | null;
+    confidence: number;
+    references: number;
+    author: string | null;
+    editable: boolean;
+    lastChanged: Date;
+    total: number;
+  }>(
+    `
+    WITH "s" AS (
+      SELECT "p"."id", "p"."title", "p"."utcStartDateTime", "p"."dateConfidence", "p"."sourceUrl",
+        ${pinConfidenceOf('p')} AS "confidence",
+        (SELECT count(*)::int FROM "PinReference" AS "r" WHERE "r"."pinId" = "p"."id") AS "references",
+        "u"."userName"::text AS "author",
+        COALESCE(lower(ltrim("u"."userName"::text, '@')) = ANY($2::text[]), false) AS "editable",
+        COALESCE("p"."utcUpdatedDateTime", "p"."utcCreatedDateTime") AS "lastChanged"
+      FROM "Pin" AS "p" LEFT JOIN "User" AS "u" ON "u"."id" = "p"."userId"
+      WHERE "p"."utcDeletedDateTime" IS NULL AND NOT "p"."id" = ANY($5::int[])
+        AND COALESCE("p"."utcUpdatedDateTime", "p"."utcCreatedDateTime") < now() - make_interval(days => $3)
+        AND NOT EXISTS (SELECT 1 FROM "PinRevisit" AS "v" WHERE "v"."pinId" = "p"."id" AND "v"."utcResolvedDateTime" IS NULL)
+    )
+    SELECT *, count(*) OVER ()::int AS "total" FROM "s"
+    WHERE "confidence" < $1
+    ORDER BY "editable" DESC, "confidence", "lastChanged"
+    LIMIT $4`,
+    [bar, curators, skipDays, limit, exclude],
+  );
+  return { below: bar, waiting: rows[0]?.total ?? 0, pins: rows.map(({ total: _, ...pin }) => pin) };
 }

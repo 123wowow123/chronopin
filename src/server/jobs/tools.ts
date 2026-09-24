@@ -130,6 +130,24 @@ export const TOOLS: JobTool[] = [
     run: (input) => signals.softDatedSoon(int(input.days, 30, 1, 365)),
   },
   {
+    name: 'low_confidence_pins',
+    description:
+      "Pins whose confidence score is below `below` (default the timeline's bar, which hides them from the home page): curators' pins (editable) first, then lowest score, then longest unchanged, with the date confidence, reference count and author. Pins changed in the last `skipDays` (default 25) or already marked for revisiting are left out, so a pin you update or mark drops off; pass the ids you checked and left alone as `exclude` when you ask for the next batch. `waiting` is how many are left in all.",
+    input_schema: obj({
+      below: num('Score bar, 0-100'),
+      limit: num('At most this many, default 30, at most 100'),
+      skipDays: num('Leave out pins changed this recently, default 25'),
+      exclude: { type: 'array', items: { type: 'integer' }, description: 'Pin ids already checked this run' },
+    }),
+    run: (input) =>
+      signals.lowConfidencePins({
+        below: input.below == null ? undefined : int(input.below, 70, 1, 100),
+        limit: int(input.limit, 30, 1, 100),
+        skipDays: int(input.skipDays, 25, 0, 365),
+        exclude: Array.isArray(input.exclude) ? input.exclude.map((id: unknown) => int(id, 0, 0, 2 ** 31 - 1)).filter(Boolean) : [],
+      }),
+  },
+  {
     name: 'pins_this_week',
     description: 'Pins happening from yesterday to a week out, least vetted first: date confidence, reference and media counts, whether it has a place, when it last changed, and its author.',
     input_schema: obj(),

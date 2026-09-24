@@ -8,7 +8,8 @@ import log from '../util/log';
 // server looks for an enabled job whose local time has just passed and tries
 // to claim that slot; the one that wins runs it, so it happens once however
 // many servers there are. A slot missed while the servers were down still
-// runs if they are back within two hours of it (CATCH_UP_MS). One run at a
+// runs if they are back within two hours of it (a day for a monthly job,
+// catchUpMs). One run at a
 // time: a job due while another runs waits for the next check.
 
 const CHECK_MS = 60 * 1000;
@@ -18,13 +19,20 @@ const g = globalThis as unknown as { __chronopinDailyJobTimer?: ReturnType<typeo
 export async function checkDailyJobs(now = new Date()): Promise<void> {
   if (g.__chronopinDailyJobBusy) return;
   const { jobs } = await getDailyJobs();
-  const due = jobs.filter((job) => job.enabled).map((job) => ({ job, slot: dueSlot(job, now) })).find((d) => d.slot);
-  if (!due) return;
+  const due = jobs.flatMap((job) => {
+    const slot = job.enabled ? dueSlot(job, now) : null;
+    return slot ? [{ job, slot }] : [];
+  });
+  if (!due.length) return;
   await JobRun.closeAbandoned();
   if (await JobRun.anyRunning()) return;
   g.__chronopinDailyJobBusy = true;
   try {
-    await runJob(due.job.id, { trigger: 'schedule', slot: due.slot!.key });
+    // A slot stays due for its whole catch-up window after it has run (a
+    // monthly one for a day), so one already claimed must not hide the next.
+    for (const { job, slot } of due) {
+      if ((await runJob(job.id, { trigger: 'schedule', slot: slot.key })) !== null) break;
+    }
   } finally {
     g.__chronopinDailyJobBusy = false;
   }
