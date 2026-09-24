@@ -97,6 +97,10 @@ const KNOWN: [RegExp, string, BotKind][] = [
   [/Scrapy/i, 'Scrapy', 'other'],
 ];
 
+// The AI crawlers by name, which is also the token each reads its robots.txt
+// group by.
+export const AI_BOT_NAMES = KNOWN.filter(([, , kind]) => kind === 'ai').map(([, name]) => name);
+
 // A bot this list does not name still calls itself one somewhere in its user
 // agent: "FooBot/1.0", "bar-crawler", "some spider".
 const GENERIC = /[\w.-]*(?:bot|crawler|spider|scraper|fetcher)\b[\w.-]*/i;

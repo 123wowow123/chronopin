@@ -43,6 +43,130 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **Tags should be relevant and catchy.** Owner, 2026-09-21: pin 2389 (US Fiscal Year 2028) was tagged `Appropriations, Federal budget, Fiscal year, United States` and was missing the thing anyone would actually search for - `Government Shutdown`. Tag the consequence and the familiar name people know the event by, not just the procedural vocabulary of the source, and title-case them (`Federal Budget`, `Fiscal Year 2028`).
 
 * **A product pin says what the product is.** Owner, 2026-09-22, on pin 2346 (the A350F first flight): "Product pins should have notable features in long form summary". A pin about an aircraft, vehicle, device, chip, game, AI model or software release gets summary points on what is new or distinctive about it and its headline specifications with units, not only the event's date and schedule. Owner, same day: the features go in **their own section** - `<h3>Notable features</h3><ul>...</ul>` after the event's list - "rather than piled into large list of bullets with other things". Built into all three summary prompts (`PRODUCT_FEATURES_RULE` in `src/server/extract/index.ts`); the wiki pages now record a product's features too. The manufacturer's product page is the usual place for the specs; add it as a reference.
+## 2026-09-23 - Nestlé news events, straight to production (@FoodDesk, @EconDesk, @HealthDesk, @LawDesk, @BuildDesk)
+
+Ian asked to "pin Nestle news events on prod". Same workflow as the Aramco batch below: four agents
+drafted POST bodies (results / leadership and job cuts / portfolio and sites / safety and legal), the
+lead deduped, checked and posted serially with each desk's prod token. Twenty-eight pins, all tagged
+`Nestlé`, company Nestlé (ids interleaved with a Verizon session's):
+
+- **Results chain** (@FoodDesk, `Food`, `Finance`, timed 07:00 Vevey from GlobeNewswire's "01:00 ET"
+  stamp): 3059 H1 2025 -> 3061 9M 2025 -> 3062 FY 2025 -> 3064 Q1 2026 -> 3065 H1 2026 -> 3066 9M 2026
+  (`scheduled` 22 Oct 2026) -> 3067 FY 2026 (`scheduled` 18 Feb 2027), both from the Half-Year Report's
+  shareholder calendar.
+- **Leadership** (@FoodDesk): 3068 Freixe fired / Navratil CEO -> 3069 Isla chairman (the 1 Oct effective
+  day, not the 16 Sep announcement) -> 3071 AGM 2026 at the SwissTech Convention Center.
+- **Job cuts** (@EconDesk, `Labour`, tag `Layoffs`): 3072 the ~16,000 cuts -> 3074 the end-2027 deadline
+  (`estimated`); 3076 Diósgyőr chocolate factory handed to Vimpex on 1 Jan 2027.
+- **Portfolio** (@FoodDesk): 3078 Blue Bottle to Centurium; 3080 Peranel waters JV with Platinum Equity
+  (EUR 4.9bn) -> 3083 close (`estimated` H1 2027); 3084 mainstream vitamins to Yellow Wood ($1.0bn)
+  -> 3086 close (`estimated` H1 2027). **Sites** (@BuildDesk): 3088 Purina Batavia, Ohio opens; 3089
+  Purina Mantua plant (production 2029, `estimated`).
+- **Infant-formula recall** (@HealthDesk / @LawDesk): 3091 first recall, 25 batches in 16 countries
+  (10 Dec 2025, Nunspeet) -> 3093 worldwide recall over tainted ARA oil (5 Jan 2026) -> 3095 Paris
+  prosecutors' five probes (opened 30 Jan, announced 13 Feb) -> 3096 Assemblée nationale report.
+- **Mineral water** (@LawDesk): 3097 Senate inquiry report -> 3099 Gard prefect's Perrier borehole
+  decree (18 Dec 2025) -> 3100 end of its 24-month reinforced checks (`estimated`); 3102 Nancy appeal
+  court orders the Vosges plastic-dumps case retried.
+
+* **Learned - a prod create half-saves when one media fetch fails.** Four of 28 POSTs came back
+  `500 fetch failed`: `downloadImage` has no timeout or retry for a network error, and create is not
+  transactional, so the pin row and references were saved with **no media and no user tags**. Every
+  image downloaded fine from the Mac, so it was transient on the busy VM (another session posting at
+  the same time). Repair: find the pin by title just past the newest id and send the whole draft as a
+  `PUT` (update fetches thumbs before its transaction opens). `post.mjs` now does this itself. A
+  count by `tag:` and `company:` confirmed no stray duplicates.
+* **Learned - nestle.com is walled to everything the app has.** Cloudflare 403s plain `curl`, and
+  the app's own headless scraper and `fetchSourceText` get only "Just a quick security check", so prod
+  cannot read a nestle.com release as a source. WebFetch reads the pages, but only as a summary.
+  Readable copies of the same text: **GlobeNewswire** (Nestlé's distributor; its stamp gives the time;
+  the scraper reads it, `curl` times out) and **the PDFs** under `nestle.com/sites/default/files/YYYY-MM/`,
+  which download with plain `curl` (releases, investor decks, transcripts, the Half-Year Report whose
+  last page is the forward financial calendar). Sources were switched to those wherever one existed.
+* **Learned - Nestlé releases always go out at 01:00 ET**, which is 07:00 in Vevey: 05:00Z in summer
+  time, 06:00Z in winter. The calendar gives dates, never the hour. Deal notices with no time on
+  Nestlé's side took the buyer's PR Newswire stamp (Yellow Wood 13:00 ET).
+* **Learned - in an industry-wide scare, check whose product it is.** The first confirmed cereulide case
+  in France was Danone's formula and the Angers death was ruled asphyxia; neither was pinned. The
+  recall began on **10 Dec 2025** in 16 European countries, weeks before the 5 Jan worldwide recall
+  most coverage dates it from (Nestlé's "sequence of events" PDF and national regulators' notices).
+* **Learned - the day a probe is announced is not the day it opens** (Paris: announced 13 Feb, opened
+  30 Jan per the prosecutor quoted by franceinfo). franceinfo reads with `curl` and its topic page
+  `/sante/alimentation/lait-infantile-contamine/` lists the whole saga.
+* **Learned - Wikimedia 429s a bare `Mozilla/5.0` UA under four parallel agents** while the ChronoPin UA
+  still gets 200, so `check.mjs` now sends the ChronoPin UA to wikimedia.org, as prod does.
+* **Learned - a video's own YouTube still is not a second picture.** One agent padded results pins with
+  the call video's `i.ytimg.com/.../maxresdefault.jpg`; dropped (the video already carries that still).
+* **Traps:** Commons has no photo of Pablo Isla; coverage lead images are mostly reused stock
+  (FoodNavigator Getty shots of other Nestlé buildings, CNBC's 2023 KitKat photo); Food Processing said
+  Bulcke left "effective immediately" against Nestlé's 1 October; Inside Retail Asia said Blue Bottle
+  "completes" while Nestlé said "expected to close"; Food Dive said the ice cream was sold, the H1
+  report says "held for sale". Reverse-geocoding a courthouse or palace centroid gives the nearest
+  street, so those pins use Nominatim's own label for the named object.
+* **Judgement calls to revisit:** @FoodDesk (restaurants until now) took Nestlé's company-level pins
+  because `Food` is the company's category; results/leadership could equally sit on a new consumer-goods
+  desk. The AGM (3071) was kept in the leadership chain and the results team's duplicate dropped.
+  Not pinned: the ice-cream exit (nothing signed), yfood (no date), the Toronto KitKat line, Purina
+  Vargeão (Brazil), German plant closures (unverified), Bonneval's suit (no hearing date).
+* **Feedback**: none yet.
+* **Changed**: [Vertical recipes](verticals.md) - a Nestlé row; [Sources](sources.md) - nestle.com,
+  GlobeNewswire, franceinfo.
+
+## 2026-09-23 - Verizon news events, straight to production (@TechDesk, @EconDesk, @LawDesk)
+
+Ian asked to "pin Verizon news events on prod". Second production batch, same workflow as Aramco:
+three agents (finance, deals/regulation, network/products) drafted 40 POST bodies to files, the lead
+linted them (`check.py`: enums, ISO dates, categories, the exact VZ note, citations vs references),
+viewed every picture on a contact sheet and posted serially. **38 pins, 3049-3114** (ids interleaved
+with another session's Nestlé batch), all tagged `Verizon`, company row 6656:
+
+- **Results chain** (oldest first): 3049 Q2 2025 -> 3052 Q3 2025 -> 3054 Q4/FY 2025 -> 3057 Q1 2026
+  -> 3113 Q2 2026 -> 3114 Q3 2026 (`estimated` Wed 28 Oct 11:00Z - IR lists nothing yet; re-date by
+  whole-pin PUT when the webcast notice appears). Corporate: dividend (3050), Schulman replaces
+  Vestberg (3051), $25B buyback + January dividend raise (3055), Sampath out (3056).
+- **Layoffs** (@EconDesk, `Labour` first, tag `Layoffs`): 13,000+ (3053, $1.7B charge), several
+  hundred in May (3058), 274 stores sold + 500 corporate (3060).
+- **Frontier chain**: 3070 agreement ($20B) -> 3081 FCC approval with the DEI pledge -> 3090 CPUC ->
+  3094 close (20 Jan 2026). **AST chain**: 3063 $100M commitment -> 3085 definitive agreement -> 3112
+  beta (`estimated` 31 Dec 2026). **Outages**: 3082 Aug 2025 -> 3092 Jan 2026 (10 h, $20 credit).
+  **Plans**: 3079 3-year price lock (a period, ending 16 Jun 2026) -> 3106 Simplicity plan + loyalty.
+- Loose: Vertical Bridge towers (3073), admin-fee settlement payouts (3075, @LawDesk), satellite
+  texting on Android (3077), unlocking-rule waiver (3087), Starry (3098), Super Bowl LX (3101),
+  AT&T/T-Mobile/Verizon satellite JV (3103), UScellular spectrum (3104), Supreme Court upholds the
+  location-data fine (3105, @LawDesk), AWS-3 Auction 113 (3107), BT international JV (3108), World
+  Cup 2026 network (3109), NFL Shine takeover (3110), Corning fiber through 2032 (3111).
+
+* **Learned - a failed create on prod leaves a partial pin.** Five POSTs answered 500 ("Image
+  download failed with 404", or "fetch failed" while another session was posting on the same VM),
+  and **every one had already saved the pin row and references** - no tags, no media, no stocks - under
+  a fresh id. A `tag:` search right after did not show it (search lags), so it looked clean; the next
+  retry then 409'd on the duplicate `sourceUrl`. Fix: find the partial by title among the next ids and
+  **whole-pin PUT** the draft onto it (PUT is transactional, and it saves tags, media and stocks).
+  The runner now does that by itself and waits 45 s between posts.
+* **Learned - agents guess Commons hash paths.** Two BlueBird photos were given
+  `/commons/8/82/...` for files that live under `2/23`; the file had been "downloaded and viewed"
+  through a different URL. Resolve every Commons image through
+  `api.php?action=query&prop=imageinfo&iiprop=url|size` before posting, strip the `utm_*` query it
+  adds, and serve anything over 4000 px as a 1920 px (1280 px for portrait) thumbnail on
+  `thumb.wikimedia.org` rather than a 14,000 px original to a small VM.
+* **Learned - the duplicate-source check is per author.** A WARN forward pin (282 Basking Ridge jobs
+  ending 16 Oct 2026) could not be posted: New Jersey publishes one cumulative
+  `2026_WARN_Notice_Archive.pdf`, which @EconDesk had already used for Samsung (2906). Not posted;
+  the fact sits in 3060's orbit. A second NJ WARN pin by the same desk needs another source (the
+  notice itself, or coverage), not a tweaked URL.
+* **Learned - verizon.com reads with plain `curl`** (newsroom pages carry `datePublished` to the
+  minute, matching the 8-K acceptance stamp), but its images only load from `www.verizon.com` - the
+  bare host 404s. Executive portraits come from `ss7.vzw.com/is/image/VerizonWireless/<name>?scl=1&fmt=jpg`.
+  Earnings image cards are logo cards; use the HQ (1095 Sixth Avenue) or the executive instead.
+* **Learned - outages have no pictures.** Coverage uses logos on tablets or store-sign file photos;
+  the outage pins carry Verizon cell-site photos from Commons plus NBC/CBS news clips.
+* **Judgement calls:** the dividend raise moved from September to January (no September 2026 raise,
+  so no pin); the AST and Corning deals keep Verizon as company with the partner as a stock; the
+  satellite JV (3103) is only an agreement in principle - its definitive agreement should answer it;
+  the BT JV completes "in 2027" (not yet pinned).
+* **Feedback**: none yet.
+* **Changed**: [Vertical recipes](verticals.md) - a US telecom row; [Sources](sources.md) - verizon.com.
+
 ## 2026-09-23 - Saudi Aramco news events, straight to production (@EnergyDesk, @TechDesk, @BuildDesk)
 
 Ian asked to "pin Saudi Aramco news events on prod" - the first batch posted to production
@@ -4704,3 +4828,54 @@ Sable Offshore` so they sit in the company's sentiment graph.
   translating needs the key. The Sable pins were translated by hand with `translations:sync
   --export/--apply`.
 * **Changed**: [Sources](sources.md) - sableoffshore.com; this entry.
+
+## 2026-09-23 - Broadcom news, twenty-five pins straight to prod (@TechDesk, four @LawDesk)
+
+Ian asked to "pin Broadcom news events on prod" - the first batch posted to www.chronopin.com rather than
+the local database. Four agents drafted bodies only; the lead validated each and posted them through prod's
+`POST /api/pins` with prod-issued curator tokens. Chains, oldest first: results Q1 FY26 (3044) -> Q2 (3045)
+-> Q3 (3046) -> Q4, `scheduled` Wed 9 Dec 2026 (3047); OpenAI's 10 GW deal (3035) -> the Jalapeno chip unveiled
+(3036) -> first deployment, `estimated` end of 2026 (3037); VMware Explore Las Vegas (3027) -> Explore on Tour
+Mumbai, Singapore, Frankfurt, Tokyo, London, Washington D.C. and Sydney 2027 (3028-3034); @LawDesk's EU case,
+the Commission's information demand (3041) -> Broadcom's action T-280/26 (3042) -> interim relief refused
+(3043). Standalone: Tomahawk 6 in volume (2994), Wi-Fi 8 SoCs (2995), VCF 9.1 (2997), the Meta MTIA
+partnership (3038), the $35B AI XPV Platform with Apollo and Blackstone (3039), CISPE's suit against the
+VMware merger approval (3040) and Hock Tan's Mad Money reply to Anthropic's slowdown call (3048). Every pin
+carries the tag `Broadcom`; the law pins keep `company: Broadcom`, as the Sable rulings did.
+
+* **Learned - posting to prod overloads it.** Three POSTs in a row took the B2s VM to a load of 59 (116
+  Chromium processes, swapping, the homepage at 24s): every save's source-wiki listener opens headless
+  Chromium per reference. Prod's Anthropic key also had no credit, so the wikis, company relations and
+  sentiment all failed after the browsers ran. The rest went one at a time, each only once
+  `/proc/loadavg` read under 3, with 90s between posts - no further trouble.
+* **Learned - a 500 can leave a pin.** The VCF post answered 500 "fetch failed" (prod timed out on
+  blogs.vmware.com's images) but the pin row was saved as 2997 without media; create is not transactional.
+  Look for the pin before re-posting, then repair it with a whole-pin `PUT`.
+* **Learned - broadcom.com and vmware.com are JS shells, but their own JSON API reads with plain `curl`:**
+  `https://www.broadcom.com/api/getjson?url=company/news/product-releases/<id>&locale=en-us` (also
+  `financial-releases/<id>`, `products/...`, and `vmware.com/api/getjson?url=explore`); the whole newsroom
+  list is `/api/news/productnews?id=bltce3a61fa876974ff&type=news_category&locale=en-us&years=10&microsite=broadcom`.
+  investors.broadcom.com is 403 (Akamai) to `curl` and times out in WebFetch.
+* **Learned - broadcom.com's times are wrong.** The page's `publish_date` is ET labelled Z and the list
+  disagrees with it by hours. Take the GlobeNewswire (product and partnership releases) or PR Newswire
+  (results, the XPV financing) stamp, Yahoo's `datePublished` (URL suffix `-201500781` is 20:15:00Z), or
+  the EDGAR acceptance time (CIK 1730168).
+* **Learned - Broadcom names its next results day at the end of each call,** as NVIDIA does (the Q3 call:
+  "Wednesday, December 9, 2026"), about 30 days before the formal notice. Results go out at 4:15 pm ET.
+* **Learned - deals without 8-Ks.** OpenAI, Meta and XPV had none; the XPV backstop ($29B maximum) is in
+  the Q2 FY26 10-Q, Item 5, and the Q3 10-Q adds up to $42B of customer convertible notes.
+* **Learned - EUR-Lex has General Court interim orders in full** before the press: a President's order is
+  CELEX `6YYYYTO<case>(01)` (`62026TO0280(01)`), and the OJ "Action brought on" PDFs read with `pdftotext`.
+  InfoCuria and competition-cases.ec.europa.eu are JS shells; concurrences.com is 403.
+* **Learned - Benzinga's verified YouTube channel streams Broadcom's calls,** a usable results video where
+  the company posts none. CNBC's image CDN is 403 to `curl`, and its older Broadcom stories now share one
+  current og:image. Motley Fool transcripts garble the new CFO's name (Amie Thuener).
+* **Learned - Nominatim puts 3421 Hillview Avenue in 94306;** Broadcom's filings say 94304. The pins carry
+  Nominatim's label. The forward search matches a bus stop 150 m away - use the address node.
+* **Open:** 3037 (Jalapeno deployment) to re-date when OpenAI or Microsoft reports it; 3047 to firm up when
+  the formal Q4 notice lands in November; 2994, 3034, 3035, 3038, 3039 and 3047 carry two media; no pin has a
+  source wiki, company relations or translation (prod's key had no credit) - rerun once it does. Not
+  pinned: the Google TPU/Anthropic (6 Apr) and Apple ASIC (6 Jul) 8-K agreements, VMware Explore 2027 (Resorts
+  World, 3-6 May), the 22 May temporary suspension in T-280/26.
+* **Feedback**: Ian - this draft-then-post-one-at-a-time route is the way to post pins directly to prod.
+* **Changed**: [Vertical recipes](verticals.md) - a Broadcom row; [Sources](sources.md) - broadcom.com.

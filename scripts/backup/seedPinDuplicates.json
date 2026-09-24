@@ -674,5 +674,57 @@
     "verdict": null,
     "verdictReasoning": null,
     "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 2996,
+    "otherPinId": 3002,
+    "reason": "similar",
+    "score": 0.8279108,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-24T04:22:53.959Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 2998,
+    "otherPinId": 3002,
+    "reason": "similar",
+    "score": 0.8006647,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-24T04:22:54.096Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 2998,
+    "otherPinId": 3005,
+    "reason": "similar",
+    "score": 0.81924,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-24T04:24:01.517Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 3000,
+    "otherPinId": 3003,
+    "reason": "similar",
+    "score": 0.8183167,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-24T04:23:30.177Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
   }
 ]

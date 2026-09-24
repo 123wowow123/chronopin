@@ -1,7 +1,9 @@
 import { NextResponse, type NextRequest } from 'next/server';
+import { identifyBot } from '@/lib/bots';
 import { DEFAULT_LOCALE, isLocale, LOCALE_COOKIE, localizePath, negotiateLocale, splitLocale, type Locale } from '@/lib/i18n/config';
 import { pinPath } from '@/lib/seo';
 import * as db from '@/server/db';
+import { botRetryAfter } from '@/server/botLimit';
 import BotVisit from '@/server/model/botVisit';
 import { multilingualEnabled, pinPathCache } from '@/server/services/cache';
 
@@ -45,7 +47,19 @@ export async function proxy(request: NextRequest) {
 
   // Crawlers are counted here, on the page request itself: they rarely run
   // the script that counts a view. Browsers pass straight through it.
-  BotVisit.record(request.headers.get('user-agent'), pathname);
+  const userAgent = request.headers.get('user-agent');
+  const bot = identifyBot(userAgent);
+  BotVisit.record(bot, userAgent, pathname);
+  // AI crawlers are slowed to a steady pace (src/server/botLimit.ts); search
+  // engines are not, so indexing is never held back. robots.txt stays open to
+  // them - it is where they read the Crawl-delay.
+  const retryAfter = pathname === '/robots.txt' ? null : botRetryAfter(bot);
+  if (retryAfter != null) {
+    return new NextResponse('Too many requests - please crawl more slowly.', {
+      status: 429,
+      headers: { 'Retry-After': String(retryAfter), 'Content-Type': 'text/plain; charset=utf-8' },
+    });
+  }
   // robots.txt and the sitemap are what a crawler reads first; they come
   // through only to be counted.
   if (pathname === '/robots.txt' || pathname === '/sitemap.xml') {

@@ -12041,11 +12041,11 @@
   },
   {
     "pinId": 1861,
-    "sentiment": 0.35,
-    "textHash": "65cc3f8e4662693db25ab101b4479d6e17c9c19608a9a3d3b4dce1d318175042",
-    "utcScoredDateTime": "2026-09-23T04:28:36.222Z",
-    "product": "Ray-Ban Meta smart glasses",
-    "productHash": "65cc3f8e4662693db25ab101b4479d6e17c9c19608a9a3d3b4dce1d318175042"
+    "sentiment": 0.5,
+    "textHash": "76c3d05ca3436986c60332c7e27978571d6f8baaf0719eb3c905bd6d3eb07630",
+    "utcScoredDateTime": "2026-09-24T04:29:38.519Z",
+    "product": null,
+    "productHash": "76c3d05ca3436986c60332c7e27978571d6f8baaf0719eb3c905bd6d3eb07630"
   },
   {
     "pinId": 1862,
@@ -15569,11 +15569,11 @@
   },
   {
     "pinId": 2404,
-    "sentiment": 0.4,
-    "textHash": "d0a01feb535596d87489c0aa1ddf79ae36e385ec7c35f3bf06a6f59c168141b2",
-    "utcScoredDateTime": "2026-09-23T04:28:36.563Z",
+    "sentiment": 0.3,
+    "textHash": "75fca5b9b1f363a2e687fee86a8eacfad498f551c8cd22d6cd810c80649f3e49",
+    "utcScoredDateTime": "2026-09-24T04:29:38.529Z",
     "product": null,
-    "productHash": "d0a01feb535596d87489c0aa1ddf79ae36e385ec7c35f3bf06a6f59c168141b2"
+    "productHash": "75fca5b9b1f363a2e687fee86a8eacfad498f551c8cd22d6cd810c80649f3e49"
   },
   {
     "pinId": 2414,
@@ -18865,11 +18865,11 @@
   },
   {
     "pinId": 2979,
-    "sentiment": 0,
-    "textHash": "96d81ed8bb79302500c205b1ffe40dd99d4fb1f424e4eb725624599b0e98d783",
-    "utcScoredDateTime": "2026-09-23T14:41:37.896Z",
+    "sentiment": -0.1,
+    "textHash": "1fd0bc5fad2eb3ade45985fd7c07811727098334c74a025ccea46338166fdc74",
+    "utcScoredDateTime": "2026-09-24T04:29:38.535Z",
     "product": null,
-    "productHash": "96d81ed8bb79302500c205b1ffe40dd99d4fb1f424e4eb725624599b0e98d783"
+    "productHash": "1fd0bc5fad2eb3ade45985fd7c07811727098334c74a025ccea46338166fdc74"
   },
   {
     "pinId": 2981,
@@ -18974,5 +18974,189 @@
     "utcScoredDateTime": "2026-09-23T15:05:25.504Z",
     "product": null,
     "productHash": null
+  },
+  {
+    "pinId": 2994,
+    "sentiment": 0.7,
+    "textHash": "cc3a7ce8663d53ea110ea11743240114b58ff5063299b40701ada14e0cf014e5",
+    "utcScoredDateTime": "2026-09-24T04:29:38.542Z",
+    "product": "Tomahawk",
+    "productHash": "cc3a7ce8663d53ea110ea11743240114b58ff5063299b40701ada14e0cf014e5"
+  },
+  {
+    "pinId": 2995,
+    "sentiment": 0.5,
+    "textHash": "ff8c5a3e732d70ce9dd7ee1cacde5cca1a992961ca5bbc15cf83abcaa660c3d2",
+    "utcScoredDateTime": "2026-09-24T04:29:38.556Z",
+    "product": "Wi-Fi combo chip",
+    "productHash": "ff8c5a3e732d70ce9dd7ee1cacde5cca1a992961ca5bbc15cf83abcaa660c3d2"
+  },
+  {
+    "pinId": 2996,
+    "sentiment": 0.4,
+    "textHash": "751d552baf12121d58d98232a9b4ffb73104b93424ebc8fc552c54669cebcba5",
+    "utcScoredDateTime": "2026-09-24T04:29:38.561Z",
+    "product": null,
+    "productHash": "751d552baf12121d58d98232a9b4ffb73104b93424ebc8fc552c54669cebcba5"
+  },
+  {
+    "pinId": 2997,
+    "sentiment": 0.4,
+    "textHash": "450c5d9fd563305e9567fe8eff388e2fe13ee082495d7140fc50ede4c6099ec1",
+    "utcScoredDateTime": "2026-09-24T04:29:38.565Z",
+    "product": "VMware Cloud Foundation",
+    "productHash": "450c5d9fd563305e9567fe8eff388e2fe13ee082495d7140fc50ede4c6099ec1"
+  },
+  {
+    "pinId": 2998,
+    "sentiment": -0.1,
+    "textHash": "d18b323c79200805692330cfb39f576d89d42175ef0e9e8db87e9f55fa822459",
+    "utcScoredDateTime": "2026-09-24T04:29:38.571Z",
+    "product": null,
+    "productHash": "d18b323c79200805692330cfb39f576d89d42175ef0e9e8db87e9f55fa822459"
+  },
+  {
+    "pinId": 2999,
+    "sentiment": 0.7,
+    "textHash": "fb5908004c0388a863e8d51c8fe83454f0c28716c685f390d9f1ec39faea628f",
+    "utcScoredDateTime": "2026-09-24T04:29:38.577Z",
+    "product": null,
+    "productHash": "fb5908004c0388a863e8d51c8fe83454f0c28716c685f390d9f1ec39faea628f"
+  },
+  {
+    "pinId": 3000,
+    "sentiment": 0.5,
+    "textHash": "57ee6d60183c35e657b5e10e6cd02b81711372cb24fdcae5bbca8b3729028710",
+    "utcScoredDateTime": "2026-09-24T04:29:38.582Z",
+    "product": "Ray-Ban Meta smart glasses",
+    "productHash": "57ee6d60183c35e657b5e10e6cd02b81711372cb24fdcae5bbca8b3729028710"
+  },
+  {
+    "pinId": 3001,
+    "sentiment": 0.7,
+    "textHash": "5611f1b3f1b34fc5ee668dd238983f58e52258196fd046dfc66431d1ba666de1",
+    "utcScoredDateTime": "2026-09-24T04:29:38.588Z",
+    "product": null,
+    "productHash": "5611f1b3f1b34fc5ee668dd238983f58e52258196fd046dfc66431d1ba666de1"
+  },
+  {
+    "pinId": 3002,
+    "sentiment": 0,
+    "textHash": "a96208a83c0888b2d5d74c68532310e6c3f099b1f934b81e18ce3e21b8d2cd9c",
+    "utcScoredDateTime": "2026-09-24T04:29:38.593Z",
+    "product": null,
+    "productHash": "a96208a83c0888b2d5d74c68532310e6c3f099b1f934b81e18ce3e21b8d2cd9c"
+  },
+  {
+    "pinId": 3003,
+    "sentiment": 0.4,
+    "textHash": "37e0d1c529557385b3d789e540e548c42d499203754618b923aff84d90711949",
+    "utcScoredDateTime": "2026-09-24T04:29:38.598Z",
+    "product": "Meta VR Glasses",
+    "productHash": "37e0d1c529557385b3d789e540e548c42d499203754618b923aff84d90711949"
+  },
+  {
+    "pinId": 3004,
+    "sentiment": 0.4,
+    "textHash": "8317c905474a1ec5173ea4b3ba22b6b54e1a3e8ff6cd209f5527a4774b5c3fb9",
+    "utcScoredDateTime": "2026-09-24T04:29:38.607Z",
+    "product": null,
+    "productHash": "8317c905474a1ec5173ea4b3ba22b6b54e1a3e8ff6cd209f5527a4774b5c3fb9"
+  },
+  {
+    "pinId": 3005,
+    "sentiment": 0.4,
+    "textHash": "92a6de4a0f4a3875d78de9ad63a1f3c6527579da1973dc52ec442dbd5baccb84",
+    "utcScoredDateTime": "2026-09-24T04:29:38.616Z",
+    "product": null,
+    "productHash": "92a6de4a0f4a3875d78de9ad63a1f3c6527579da1973dc52ec442dbd5baccb84"
+  },
+  {
+    "pinId": 3006,
+    "sentiment": 0.5,
+    "textHash": "aa92b10f6187c1b4b7312c87ff1e00e45859777c905a3a7bc67e6d4b588e7244",
+    "utcScoredDateTime": "2026-09-24T04:29:38.621Z",
+    "product": "Jafurah",
+    "productHash": "aa92b10f6187c1b4b7312c87ff1e00e45859777c905a3a7bc67e6d4b588e7244"
+  },
+  {
+    "pinId": 3007,
+    "sentiment": 0.6,
+    "textHash": "4679fdb7a331183a812c61fa3e395e81b7d749c39feea697358572e8709ce8eb",
+    "utcScoredDateTime": "2026-09-24T04:29:38.627Z",
+    "product": "Jafurah",
+    "productHash": "4679fdb7a331183a812c61fa3e395e81b7d749c39feea697358572e8709ce8eb"
+  },
+  {
+    "pinId": 3009,
+    "sentiment": 0.4,
+    "textHash": "a7b39f3b2a4a474d99558f2b7ea1f44d47ea19d05d5a1cafc5e510bf6ae67927",
+    "utcScoredDateTime": "2026-09-24T04:29:38.632Z",
+    "product": "Jafurah",
+    "productHash": "a7b39f3b2a4a474d99558f2b7ea1f44d47ea19d05d5a1cafc5e510bf6ae67927"
+  },
+  {
+    "pinId": 3010,
+    "sentiment": 0.5,
+    "textHash": "eedfb69713cda4f485723a0926bc5a554abf146b48d136e169420f52718403b3",
+    "utcScoredDateTime": "2026-09-24T04:29:38.637Z",
+    "product": null,
+    "productHash": "eedfb69713cda4f485723a0926bc5a554abf146b48d136e169420f52718403b3"
+  },
+  {
+    "pinId": 3011,
+    "sentiment": 0.3,
+    "textHash": "f3524e76dcc1852c1fc68cdf93bab34f1065f3b4fa8c520ca20f529fc301b231",
+    "utcScoredDateTime": "2026-09-24T04:29:38.647Z",
+    "product": null,
+    "productHash": "f3524e76dcc1852c1fc68cdf93bab34f1065f3b4fa8c520ca20f529fc301b231"
+  },
+  {
+    "pinId": 3012,
+    "sentiment": 0.4,
+    "textHash": "cdee8dafdc7057af4c38cccec6939282851c9d78a144c032c9efc3cd5321804c",
+    "utcScoredDateTime": "2026-09-24T04:29:38.652Z",
+    "product": "Master Gas System",
+    "productHash": "cdee8dafdc7057af4c38cccec6939282851c9d78a144c032c9efc3cd5321804c"
+  },
+  {
+    "pinId": 3013,
+    "sentiment": -0.8,
+    "textHash": "fb5938e52ff02ce5ea9e599fda17b7bb82e64a97f8874efb30e6edb7bf41b714",
+    "utcScoredDateTime": "2026-09-24T04:29:38.657Z",
+    "product": null,
+    "productHash": "fb5938e52ff02ce5ea9e599fda17b7bb82e64a97f8874efb30e6edb7bf41b714"
+  },
+  {
+    "pinId": 3014,
+    "sentiment": -0.9,
+    "textHash": "a1b12b483bf460860fd1a0a158df452c7cdd3adff329e2281afeb6f0868a7ebd",
+    "utcScoredDateTime": "2026-09-24T04:29:38.664Z",
+    "product": null,
+    "productHash": "a1b12b483bf460860fd1a0a158df452c7cdd3adff329e2281afeb6f0868a7ebd"
+  },
+  {
+    "pinId": 3015,
+    "sentiment": 0.4,
+    "textHash": "34c4ccda2045fac9a26ea7f5b4bdbb58df58cedc159bace5f7ccaa600f9b01d6",
+    "utcScoredDateTime": "2026-09-24T04:29:38.668Z",
+    "product": null,
+    "productHash": "34c4ccda2045fac9a26ea7f5b4bdbb58df58cedc159bace5f7ccaa600f9b01d6"
+  },
+  {
+    "pinId": 3016,
+    "sentiment": 0,
+    "textHash": "2214ef808dfe5d09ab7a566f805ad032a76a007e947216ddcbccef9283249d39",
+    "utcScoredDateTime": "2026-09-24T04:29:38.673Z",
+    "product": null,
+    "productHash": "2214ef808dfe5d09ab7a566f805ad032a76a007e947216ddcbccef9283249d39"
+  },
+  {
+    "pinId": 3017,
+    "sentiment": -0.1,
+    "textHash": "63c32ad606e4eaa74d3434504f2c78c30b165f0568dcb0ae3e58375c2f4c272d",
+    "utcScoredDateTime": "2026-09-24T04:29:43.389Z",
+    "product": null,
+    "productHash": "63c32ad606e4eaa74d3434504f2c78c30b165f0568dcb0ae3e58375c2f4c272d"
   }
 ]

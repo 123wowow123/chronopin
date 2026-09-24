@@ -204,8 +204,6 @@ Run `npm test` for the Vitest unit tests and `npm run test:e2e` for the Playwrig
 
 - create mobile app
 
-- Use this session ai to do this job: Localization is in: the site now works in English, Spanish, French, German, Japanese and Simplified Chinese.
-
 # Monitization
 
 
@@ -259,3 +257,6 @@ pin can have user uploadable pictures in comments.
 
 - set up google/facebook/apple login flow
 - Activated Google Analytics / Facebook upgrade to non development mode
+
+
+- Use this session ai to do this job: translate all pins to all supported language and backup json

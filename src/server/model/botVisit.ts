@@ -1,4 +1,4 @@
-import { identifyBot, type BotKind } from '@/lib/bots';
+import type { Bot, BotKind } from '@/lib/bots';
 import * as db from '../db';
 
 // Bot requests for the site's pages (0069), recorded by the proxy and shown on
@@ -18,10 +18,9 @@ let timer: ReturnType<typeof setTimeout> | null = null;
 const utcDay = (at: Date) => at.toISOString().slice(0, 10);
 
 export default class BotVisit {
-  // Counts a page request if its user agent is a bot's. Browsers are ignored,
-  // so this is safe to call for every request.
-  static record(userAgent: string | null, pathname: string): void {
-    const bot = identifyBot(userAgent);
+  // Counts a page request by the bot its user agent names (identifyBot).
+  // Browsers (null) are ignored, so this is safe to call for every request.
+  static record(bot: Bot | null, userAgent: string | null, pathname: string): void {
     if (!bot) return;
     const at = new Date();
     const path = pathname.slice(0, 300) || '/';
