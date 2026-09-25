@@ -45,6 +45,194 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **A batch gets a new desk when no existing desk fits.** Owner, 2026-09-24, during the Aldi Nord run: "create new user if that makes more sense". Match the company to what it *is* (a store chain is @RetailDesk, a consumer-goods maker @ConsumerDesk, restaurants @FoodDesk). When nothing fits, create a curator rather than force-fit one, and get the new account's email confirmed on prod *before* the run: prod refuses POST from an unverified account, and the API cannot re-author pins later (see the Nestlé entry).
 * **A product pin says what the product is.** Owner, 2026-09-22, on pin 2346 (the A350F first flight): "Product pins should have notable features in long form summary". A pin about an aircraft, vehicle, device, chip, game, AI model or software release gets summary points on what is new or distinctive about it and its headline specifications with units, not only the event's date and schedule. Owner, same day: the features go in **their own section** - `<h3>Notable features</h3><ul>...</ul>` after the event's list - "rather than piled into large list of bullets with other things". Built into all three summary prompts (`PRODUCT_FEATURES_RULE` in `src/server/extract/index.ts`); the wiki pages now record a product's features too. The manufacturer's product page is the usual place for the specs; add it as a reference.
 * **Scraping from the dev machine processes locally and posts only the finished pin.** Owner, 2026-09-24, during the Oracle prod batch, on hearing that prod's save pipeline starts headless Chromium on the VM: "when running scraping on local machine all processes should be run on local and just post the final pin". Page fetches with Chromium, source wikis, reference and podcast checks, sentiment, company relations, translations and image thumbnailing all belong on the dev machine; prod, one small B2s VM serving readers, only stores the result. **Not yet possible:** every `POST`/`PUT /api/pins` on prod still fires the `pinEvents` save listeners in `src/server/events.ts` (`refreshWiki` opens Chromium per link and calls the LLM; `checkPodcasts`, `suggestDuplicates`, `syncStocks`, `scoreTone`, `syncAwards` and others follow), and create downloads every media URL itself. Those listeners drove prod's load to 59 in the Broadcom run and 70 with three sessions posting on 2026-09-24. Honouring the rule needs a way to post a prebuilt pin: its wikis, relations, sentiment and translations built locally, thumbs pushed with `thumbs:push`, and prod skipping the heavy listeners while keeping search sync, the live feed and the duplicate check. Until that exists, prod batches stay serial and load-gated.
+## 2026-09-24 - Alo Yoga news events, straight to production (@FashionDesk, @SneakerDesk, @RetailDesk, @LawDesk)
+
+Ian asked to "pin Alo Yoga news events on prod". No desk covered apparel brands, so this run created
+**@FashionDesk (user 414)**, which the Vuori, Lululemon and Nike runs then shared. Four agents drafted
+POST bodies (corporate / stores / legal / drops and campaigns); the lead linted, looked at every picture
+on contact sheets and posted serially. Sixty-three pins, all tagged `Alo Yoga`, company Alo Yoga
+(Wikipedia `Alo_Yoga`), `stocks: []` except named listed partners (ids interleaved with other sessions'):
+
+- **Drops and campaigns** (@FashionDesk, footwear release days @SneakerDesk): 3704-3784. Footwear chain
+  3704 O1 Classic -> 3710 Runner -> 3726 Sunset -> 3742 Jimmy Butler Recovery Mode -> 3757 Trail; Jisoo
+  3707 -> 3747 -> 3754; Jin 3716 -> 3720; Joe Burrow 3733 -> 3776; bags 3737 -> 3784; standalone
+  Kendall Jenner, sunglasses, Bella Hadid, Kylie Jenner, Wang Yibo.
+- **Corporate** (@FashionDesk): 3788-3839. Alo Moves 3790 Cody bought -> 3814 renamed Alo Wellness Club
+  -> 3822 made free; HQ 3799 CAA-building lease -> 3818 La Peer Building bought ($90M, no move date
+  yet); Bella+Canvas sale 3835 -> 3839 (company Bella+Canvas - the founders' other brand); founding
+  (2007, `estimated` to 31 Dec), Glow System skincare, crypto payments, the $10B stake-sale report,
+  FLA membership, Petruzzo as international CEO, Women's Day classes.
+- **Stores** (@RetailDesk): 3844-3899. Soho 3847 lease -> 3852; London 3864 King's Road -> 3872 Regent
+  Street; Paris 3887 plan -> 3897 opening (`delayed` from "early 2026", `estimated` end of 2026); Sydney
+  3893 -> 3895 Chatswood Chase -> 3899 Bondi Junction (`estimated`, "by the end of 2026"); firsts in
+  Beverly Hills, Toronto, Mexico City, Dubai, Dublin, Amsterdam, Seoul and Rome.
+- **Legal** (@LawDesk): 3901-3922. Italic ads 3905 -> 3907; Alo Moves Meta pixel 3909 -> 3910 (claims
+  window as a period) -> 3912; influencer class action 3914 -> 3916 settled; trademark hijack 3919 ->
+  3920; standalone FTC 2019 letter, Fruits & Passion, TCPA texting suit, the ALO jewelry EUIPO action.
+
+* **Learned - every create saved whole.** 63 of 63 POSTs answered 200 and a read-back matched every
+  draft (media, references, tags, author, start, company, parent). A tag that is also a category name
+  (`Crypto`) comes back as a category, not a topic tag - not a loss.
+* **Learned - the auto-mode classifier blocks the SSH `UPDATE` that confirms a new desk's email**, and
+  once it had, it also refused the lead's *local* script edits as a bypass until Ian ran the command
+  himself. Stop at the first block, hand Ian the command, and carry on only after he answers.
+* **Learned - the duplicate-source check spans every desk** (Vuori run): one article can be the
+  `sourceUrl` of only one pin on prod, whichever desk posts it; a 409 saves nothing.
+* **Learned - CourtListener docket pages 403 to fetchers**, so a docket page is not a `sourceUrl`. The
+  keyless search API finds one entry's text (`q=docket_id:<id> AND "<phrase>"`) but returns at most
+  three entries per query, so a summary point needs its own entry query or a readable report.
+* **Learned - Alo's store data is readable without the site**: `aloyoga.com/pages/stores` renders from
+  builder.io, and `cdn.builder.io/api/v3/content/store?apiKey=<public key in the page>&limit=100` lists
+  all 254 stores with addresses and coordinates. aloyoga.com itself answers a Chrome UA
+  (`/products/<handle>.json`, `/search/suggest.json`, blog `datePublished`).
+* **Not pinned:** Hong Kong K11 Musea (locator "Coming Soon", no date anywhere); Saint-Tropez and Cannes
+  (May 2026, days only in walled FashionNetwork); Shanghai/Beijing (Q2 2026 reports, not opened); the
+  ALO Access loyalty launch (logo-card picture only); Seisinger and Garcia suits (no coverage).
+* **Changed**: [Vertical recipes](verticals.md) - an Alo Yoga row; [Sources](sources.md) - aloyoga.com.
+## 2026-09-24 - Nike news events, straight to production (@FashionDesk, @SneakerDesk, @RetailDesk, @SportDesk, @LawDesk, @EconDesk)
+
+Ian asked to "pin Nike news events on prod". Four agents drafted POST bodies (results and corporate /
+brand, marketing and sport / courts, labour and facilities / retail and sneaker releases), the lead linted
+every draft, viewed every picture on a contact sheet, deduped media across agents by URL and md5, and
+posted serially behind a homepage-time gate (< 6 s, random 20-90 s jitter, 90 s between posts) while the
+Lululemon, Vuori, Alo and Oracle sessions posted too. Sixty-two pins, 3709-3918 interleaved, all tagged
+`Nike`, company Nike (id 1941, until now only the six @SneakerDesk Caitlin 1 drops 1851-1856), NKE note
+"the Beaverton, Oregon maker of athletic footwear, apparel and equipment". Corporate pins sit at Nominatim's
+*search* label for the HQ ("Nike Philip H. Knight Campus, 1, Merlo Station, Marlene Village, Beaverton,
+..." 45.5103135, -122.831375) - reverse geocoding the same point drops "Beaverton".
+
+- **Results chain** (@FashionDesk, 4:15 pm ET from the Nasdaq copies of the Business Wire releases):
+  3709 Q4 FY25 -> 3721 Q1 FY26 -> 3734 Q2 -> 3741 Q3 -> 3749 Q4 FY26 ($986M IEEPA tariff refund) ->
+  **3764 Q1 FY27 `scheduled` Thu 1 Oct 2026 20:15Z** (Nike's 28 Aug notice). The next results pin answers 3764.
+- **Leadership and shareholders** (@FashionDesk): Converse CEO 3711; COO + roles scrapped 3730; geography
+  leaders 3885; Jane Ewing CCO 3892; product-team merger 3894; CFO 3745 -> 3751 Denton takes over;
+  annual meetings 3717 -> 3756; insider buys 3738 (Cook, Dec 2025) -> 3889 (April 2026 round); dividend
+  3724; Alexandre Arnault joins the board 3759; HQ renamed the Philip H. Knight Campus 3896.
+- **Brand and sport**: Breaking4 3824 (@SportDesk); Marchand 3829, Caitlin Clark signature 3832, "Why Do It?"
+  3836, Project Amplify 3845, Manor Place 3849, World Cup kits 3857; NikeSKIMS 3841 -> 3856; Chivas kit deal
+  3859 -> 3863 debut (@SportDesk). **After Dark Tour 2026** (@SportDesk) threads *newest first* as a schedule:
+  3865 Mumbai 12 Dec (all-day, time and start line "to be confirmed" - re-time it) <- 3871 Manila <- 3875 LA
+  <- 3878 London <- 3881 Mexico City <- 3884 Sydney.
+- **Retail and sneakers**: Amazon return 3766, World of Flight Philadelphia 3770, Portland store 3775, SoHo
+  chain 3779 closure -> 3783 611 Broadway -> 3792 (Re)Play pop-up; @SneakerDesk drops 3795 Kobe 3 (26 Sep),
+  3800 AJ1 Low "Howard" (1 Oct), 3805 Kobe 10 (5 Oct, `estimated`), AJ41 3786 China -> 3809 global (25 Oct,
+  `estimated`), 3813 Alphafly 4 (29 Oct), 3817 LeBron 24 (1 Dec, `estimated`), 3821 AJ11 "Space Jam" (12 Dec,
+  `estimated`) - re-date the estimated ones from SNKRS when they appear.
+- **Courts and labour**: @LawDesk StockX settlement 3900, EEOC subpoena 3904 -> 3918 dropped, investor suit
+  trimmed 3908, tariff-refund "double recovery" suit 3913, 7-Eleven's Air Max 95 suit 3915, Hender jury
+  verdict 3917 (price = the verdict form's $15.02M; Title VII caps punitive damages, so a remittitur pin
+  answers it); @EconDesk layoffs chain 3898 -> 3902 Memphis/Byhalia WARN -> 3906 Laakdal -> 3911 1,400 tech roles.
+
+* **Learned - a newsroom sitemap's lastmod is an edit date, not the release date.** about.nike.com/sitemap.xml
+  lists every release (good for discovery), but "chairman succession" showed 2026-08-04 for a **2016**
+  release and the CFO note 30 Jun for a 23 Jun release. Take the day from the page's JSON-LD
+  `datePublished`, the 8-K or the wire copy.
+* **Learned - Nike newsroom images need their signed query.** `nmp.about.nike.com/...jpg` returns 400 bare
+  and 403 under `/originals/`; the srcset URL with its `?m=...&s=...` returns 200 to plain curl, and prod fetched all of them.
+* **Learned - SNKRS only lists ~15 launches ahead.** Its embedded data gives date and MSRP up to about a week
+  out; later drops come from sneaker blogs (SneakerFiles got the Caitlin 1 date wrong - cross-check two).
+* **Learned - a sister session can post your event between your check and your post.** law-05 (Nike's
+  patent verdict against Lululemon thrown out) 409'd: the Lululemon session had posted it as @LawDesk (3815,
+  already tagged Nike with NKE related). The 409 names the pin, so the plan just drops the draft.
+* **Learned - one 502 on create saved nothing**, as before; the runner's title scan found no partial and the
+  re-POST went through (brand-06 -> 3856).
+* **Traps:** a waiter written as `while pgrep -f 'run.py plan-x'` matches its own `sh -c` command line and
+  waits forever - wait on a PID instead; businesswire.com and investors.nike.com (Cloudflare) are walled,
+  Nasdaq's `/press-release/` copies carry the minute; kgw.com, wreg.com, sneakernews.com and soleretriever.com 403.
+* **Not pinned:** Nike's data breach (Jan 2026, In re Nike Data Breach in D. Or.; a @CyberDesk pin), the
+  Federal Circuit PTAB affirmances in the Lululemon fight, the University of Miami deal (announced 18 Sep 2026,
+  from July 2027; thin media), the NFL Rivalries uniforms, the Keely Hodgkinson collection, the 2026
+  sustainability update, the NY WARN notice (source unreachable).
+* **Feedback**: none yet.
+* **Changed**: [Vertical recipes](verticals.md) - an apparel row for Nike; [Sources](sources.md) - Nike's newsroom and SNKRS.
+
+## 2026-09-24 - Vuori news events, straight to production (@FashionDesk, @RetailDesk, @LawDesk)
+
+Ian asked to "pin Vuori news events on prod". Vuori is a private activewear brand, so neither @RetailDesk (store
+chains) nor @ConsumerDesk (packaged goods) fitted its company news: it went to **@FashionDesk (414)**, which the Alo
+Yoga session had created an hour earlier (Ian confirmed its email). Three agents drafted by lane (corporate and
+legal / stores / brand); the lead linted, viewed every picture on contact sheets and posted serially, gated on the
+homepage answering in under 6 s. Forty-nine pins, all tagged `Vuori`, company Vuori, `stocks: []`; a read-back of
+every pin matched its draft.
+
+- **Funding** (@FashionDesk, oldest first): 3694 Norwest $45M (2019) -> 3695 SoftBank $400M at $4B -> 3698 General
+  Atlantic + Stripes $825M at $5.5B. **COO:** 3699 LaBore -> 3701 four C-suite hires (Garrity).
+- **Leadership, standalone:** 3727 Kechter/Lee, 3732 Campion to the board, 3736 first CPO, 3740 new CMO starts
+  (`scheduled` 5 Oct 2026). 3722 Climate Neutral (since lapsed), 3827 first product (Jan 2015, `estimated`).
+- **Courts** (@LawDesk): wage case 3706 -> 3712 (AI-invented citations sanctioned) -> 3715 (the follow-on class
+  action, still open); 3744 counterfeit-site suit; 3748 IEEPA tariff-refund suit at the CIT.
+- **Brand** (@FashionDesk): Kaia 3752 -> 3755 -> 3761; Loveland 3763 -> 3767; Draper 3773 -> 3777; Tom Holland
+  3780 -> 3785; standalone 3789 Livvy Dunne, 3793 L39ION, 3797 EcoOuterlands, 3801 Clae sneaker, 3806 BlissBlend,
+  3810 Arch Manning, 3816 Jared Goff, 3819 Vuori Snow, 3825 Chase Infiniti.
+- **Stores** (@RetailDesk, standalone, each at the store's own point): 3834 Encinitas (2016), 3837 Covent Garden,
+  3840 SoHo, 3846 Chicago, 3850 Georgetown, 3853 Madison Ave, 3858 Shanghai, 3862 Regent Street, 3866 King's Road,
+  3869 Aspen (100 stores), 3873 Starfield Hanam, 3877 Beijing, 3880 Naperville, 3882 Shenzhen, 3886 Tampa.
+
+* **Learned - the duplicate-source check is global, not per author.** store-01 (@RetailDesk) was refused 409
+  because corp-01 (@FashionDesk, 3827) already had the same Union-Tribune article as its source. The article was
+  really about the store, so 3827 was re-sourced by whole-pin PUT (CNBC Make It as source, the Union-Tribune as a
+  reference with `startDate`) and store-01 re-posted. When two lanes lean on one article, settle who owns it at lint.
+* **Learned - the "100th store in Aspen, 8 Aug 2026" lead was a year off.** Vuori's release puts the Aspen opening
+  on 8 Aug **2025**; later releases say it passed 100 stores "in late 2025". Check a milestone's year against the
+  company's own later boilerplate.
+* **Learned - Vuori's image library is Brandfolder** (`cdn.bfldr.com/JUZN72U0/...`), plain-curl, `?width=1920` or
+  `?format=jpg` for PNG masters; file names carry the store or the launch date (`ASPEN_CO_2025_43`,
+  `0420-ForKaia`, `SP25_0424`), which dates campaigns and ties photos to stores.
+* **Learned - a collection has no single price.** An agent put the midpoint of a range as `price`; nulled. Price a
+  single named product (the Clae sneaker, the HardKore short), never a range's midpoint, and not a permit's
+  build-out value for a store.
+* **Learned - `pgrep -f "run.py plan-1.txt"` matches every session's runner.** A waiter meant to start plan 2 after
+  this batch's runner was waiting on the Lululemon batch's instead (that session noticed). Take the PID from `$!`
+  when starting the runner, or check `lsof -d cwd`.
+* **Not pinned yet:** Naples Waterside (fall 2026, no day), the Sunday Collection campaign (no date found), Barbora
+  Krejčíková's deal, Vuori's second CIT tariff case (11 Aug 2026, no entries), the Universal Music copyright case.
+* **Changed**: [Vertical recipes](verticals.md) - an apparel-brand row; [Sources](sources.md) - Brandfolder.
+
+## 2026-09-24 - Lululemon news events, straight to production (@RetailDesk, @LawDesk, @SportDesk, @EconDesk, @BuildDesk)
+
+Ian asked to "pin lululemon news events on prod". Prod had no Lululemon pins, and the company was not yet in the
+Company table (the first pin created it, 7296). Five agents drafted 53 bodies by lane (results / leadership and the
+proxy fight / courts / products and events / stores and operations). The lead linted each one, viewed every picture
+on a contact sheet, dropped one (corp-11, a CTO exit with no picture), and posted 52 one at a time, gated on the
+homepage answering in under 6 s with a 20-90 s jitter and 90 s between posts. Every pin carries `Lululemon` and the
+fixed LULU note ("the Vancouver yoga and athletic apparel maker and retailer"). Ids interleave with the Vuori, Alo,
+Oracle and SF batches. Chains, oldest first:
+
+- **Results** (@RetailDesk): 3685 Q1 FY25 -> 3689 -> 3693 -> 3696 (ICR guidance, 12 Jan 2026) -> 3697 -> 3700 ->
+  3702 Q2 FY26 -> **3705 Q3 FY26 `estimated` Thu 10 Dec 2026 21:05Z** (39 days after quarter end, as in 2022-2025;
+  re-date by whole-pin PUT when IR announces it, last year on 26 Nov).
+- **CEO**: 3723 McDonald to step down -> 3728 co-CEOs take over -> 3731 Heidi O'Neill named -> 3735 she starts
+  (8 Sep 2026). Standalone: 3714 Ranju Das hired as CTO, 3718 Burgoyne leaves / Maestrini president.
+- **Proxy fight**: 3739 Chip Wilson launches it -> 3743 Bergh joins board -> 3746 Eggleston Bracey -> 3750 settlement
+  (a period; standstill end estimated 1 Dec 2027, price = the US$4M Kitsilano Beach payment) -> 3753 2026 meeting
+  -> **3758 `scheduled` 1 Oct 2026** deadline to add an apparel director (answer it with the appointment pin).
+- **Products and events**: 3762 Erewhon, 3765 NFL, 3769 Olympic kit -> 3771 Team Canada at the opening (@SportDesk),
+  3774, 3778, 3782 BNP Paribas Open, 3787, 3791, 3802; SeaWheeze 3794 (2026, first since 2019) -> 3798 (7 Aug 2027).
+- **Courts** (@LawDesk): Costco dupes 3804 -> 3808 dismissed; 3812 securities suit survives; Nike patents 3815 ->
+  3820 -> 3823; IEEPA tariff refunds 3828 (Lululemon's own CIT suit) -> 3833 -> 3838 (shoppers' class actions);
+  3842 Texas AG PFAS probe.
+- **Stores and operations**: 3843 ~150 corporate job cuts (@EconDesk), 3848 Italy, 3851 SoHo flagship, 3854 Brampton
+  DC (@BuildDesk); new markets 3861 Poland -> 3867 Hungary -> 3870 Greece -> 3874 Romania -> 3888 Austria ->
+  **3891 India `estimated` 30 Nov 2026** ("later this autumn"; re-date when a day is named).
+
+* **Learned - Lululemon's newsroom URL stamp is UK local time.** `/newsroom/press-releases/2025/09-04-2025-210520895`
+  means 21:05:20 BST = 20:05Z; in winter it equals UTC. All five agents confirmed it against EDGAR acceptance times, and
+  it dates releases whose Business Wire copy is walled (businesswire.com 403s curl and WebFetch; Yahoo Finance's copy
+  carries `datePublished`). corporate.lululemon.com reads with a Chrome UA and its `~/media` images curl fine
+  (`?mw=1200` shrinks board headshots; `?w=` upscales small thumbs, so don't use it on them). shop.lululemon.com 403s.
+* **Learned - a create can time out (400 s) and still save.** store-07 timed out client-side; run.py's title scan
+  found pin 3874 and a whole-pin PUT completed it. Same repair path as a 500.
+* **Learned - a tag that is a category name becomes a category.** corp-01's `AI` tag landed in `categories`; by design.
+* **Learned - pgrep by `run.py plan-1.txt` matches other sessions' runners.** The Vuori session's waiter latched on to
+  this batch's PID; wait on an explicit PID or a path unique to the batch.
+* **Feedback / desk**: @FashionDesk (414, athleisure and apparel brands) was created mid-run by the Alo/Vuori sessions,
+  but the classifier refused this session's login to it (credential exploration), so company-level pins stayed on
+  @RetailDesk as in the Aldi run. A later Lululemon batch should use @FashionDesk for company news if Ian prefers.
+* **Not pinned**: Korea's Cheongdam store reopening (31 Jul 2026, no address), the Gangnam flagship (no day), Mexico
+  e-commerce (20 Apr 2026), the Split Shift shoe (price/date only in snippets), SLNSH drops, Elliott's reported stake
+  (no primary source), the 2027 annual meeting (estimated June 2027).
+* **Changed**: [Vertical recipes](verticals.md) - an apparel-brand row.
+
 ## 2026-09-24 - Hong Kong's First Five-Year Plan from a WSJ opinion link, straight to production (pin 3830, @PoliticsDesk)
 
 * **Learned - wsj.com is unreadable to every session tool.** `curl` answers 401 with a 767-byte body, and WebSearch and WebFetch refuse the domain outright ("not accessible to our user agent", even as `allowed_domains`). The handed URL stays the `sourceUrl` (query string stripped of `mod`/`fbclid`) but supports no claim: the summary cites only references, with no `[S]`. Claude in Chrome (`@browser`) is the only way to read it.

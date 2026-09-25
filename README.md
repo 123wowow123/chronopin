@@ -249,6 +249,8 @@ pin can have user uploadable pictures in comments.
 
 - add ads
 
+- add Nike affiliate program
+
 - upgrade user to promoter and sell tickets to local events like eventbrite. will have management portal that will have dashboard to sales and impressions, and pin click, and purchases, etc. integrade with payment company - stripe 
 
 
