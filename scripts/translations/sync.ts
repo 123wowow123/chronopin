@@ -21,6 +21,9 @@
 //   npm run translations:sync -- --apply /tmp/done.json
 //
 // The --apply file is [{ "pinId": 1, "locale": "es", "sourceHash": "...", "title": "...", "description": "...", ... }].
+// An exported pin says why each language is listed (states: missing,
+// outdated, incomplete) and, for an outdated one, which fields were edited
+// since (changed): an --apply row may carry just those, keeping the rest.
 // Each pin is one Claude call for all its languages.
 
 import '../env';
@@ -65,6 +68,12 @@ async function run() {
   const pins = flags.pin ? [] : await pinsToTranslate(locales, { limit });
   const ids = flags.pin ? [Number(flags.pin)] : pins.map((p) => p.id);
   console.log(`${ids.length} pin(s) to translate into ${locales.join(', ')}`);
+  for (const locale of locales) {
+    const states = pins.map((p) => p.states[locale]).filter(Boolean);
+    if (!states.length) continue;
+    const by = (s: string) => states.filter((x) => x === s).length;
+    console.log(`  ${locale}: ${by('missing')} missing, ${by('outdated')} outdated (edited since), ${by('incomplete')} incomplete`);
+  }
   if (flags['dry-run']) return;
 
   if (flags.export) {

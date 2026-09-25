@@ -8,13 +8,54 @@ export const TRANSLATED_FIELDS = ['title', 'description', 'longFormSummary', 'da
 export type TranslatedField = (typeof TRANSLATED_FIELDS)[number];
 export type PinText = { title: string } & Partial<Record<Exclude<TranslatedField, 'title'>, string | null>>;
 
-export type PinTranslationRow = PinText & { pinId: number; locale: string; sourceHash: string; utcCreatedDateTime?: string; utcUpdatedDateTime?: string };
+export type FieldHashes = Record<TranslatedField, string>;
+
+export type PinTranslationRow = PinText & {
+  pinId: number;
+  locale: string;
+  sourceHash: string;
+  fieldHashes?: FieldHashes | null;
+  utcCreatedDateTime?: string;
+  utcUpdatedDateTime?: string;
+};
+
+const textOf = (value: unknown) => (typeof value === 'string' ? value : '');
+const sha1 = (text: string) => createHash('sha1').update(text).digest('hex');
 
 // What a translation was made from: a row whose hash no longer matches the
 // pin was translated before an edit, and is not shown.
 export function sourceHash(pin: Partial<Record<TranslatedField, unknown>>): string {
-  const text = TRANSLATED_FIELDS.map((field) => (typeof pin[field] === 'string' ? pin[field] : '')).join('\n--\n');
-  return createHash('sha1').update(text).digest('hex');
+  return sha1(TRANSLATED_FIELDS.map((field) => textOf(pin[field])).join('\n--\n'));
+}
+
+// The same, a field at a time (0080): what tells which of a pin's words were
+// edited since a translation of them was made.
+export function fieldHashes(pin: Partial<Record<TranslatedField, unknown>>): FieldHashes {
+  return Object.fromEntries(TRANSLATED_FIELDS.map((field) => [field, sha1(textOf(pin[field]))])) as FieldHashes;
+}
+
+// The pin's fields edited since the translation was made from them, or null
+// when that is not known (a row from before 0080 whose pin was already edited).
+export function changedFields(pin: Partial<Record<TranslatedField, unknown>>, made: FieldHashes | null | undefined): TranslatedField[] | null {
+  if (!made) return null;
+  const now = fieldHashes(pin);
+  return TRANSLATED_FIELDS.filter((field) => made[field] !== now[field]);
+}
+
+// Where a pin's translation into a language stands. Only a current one is
+// shown; the rest show the pin's English. Outdated: made from the pin's words
+// before an edit. Incomplete: made from its words as they are, but cut short
+// or missing a field (translatesAll).
+export type TranslationState = 'current' | 'outdated' | 'incomplete' | 'missing';
+
+export function translationState(
+  pin: Partial<Record<TranslatedField, unknown>>,
+  hash: string,
+  row: ({ sourceHash: string } & Partial<Record<TranslatedField, unknown>>) | undefined,
+): TranslationState {
+  if (!row) return 'missing';
+  if (row.sourceHash.trim() !== hash) return 'outdated';
+  return translatesAll(pin, row) ? 'current' : 'incomplete';
 }
 
 // Whether a translated field says anything. A translation has come back as a
@@ -78,20 +119,22 @@ export default class PinTranslation {
     return new Map(rows.map((row) => [row.pinId, row]));
   }
 
-  static async save(pinId: number, locale: string, text: PinText, hash: string): Promise<void> {
+  // Saves a translation of `source`, the pin's English words it was made from.
+  static async save(pinId: number, locale: string, text: PinText, source: Partial<Record<TranslatedField, unknown>>): Promise<void> {
     await db.query(
-      `INSERT INTO "PinTranslation" ("pinId", "locale", "title", "description", "longFormSummary", "dateConfidenceReasoning", "delayReasoning", "sourceHash")
-       VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+      `INSERT INTO "PinTranslation" ("pinId", "locale", "title", "description", "longFormSummary", "dateConfidenceReasoning", "delayReasoning", "sourceHash", "fieldHashes")
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
        ON CONFLICT ("pinId", "locale") DO UPDATE SET
          "title" = EXCLUDED."title", "description" = EXCLUDED."description", "longFormSummary" = EXCLUDED."longFormSummary",
          "dateConfidenceReasoning" = EXCLUDED."dateConfidenceReasoning", "delayReasoning" = EXCLUDED."delayReasoning",
-         "sourceHash" = EXCLUDED."sourceHash", "utcUpdatedDateTime" = now()`,
+         "sourceHash" = EXCLUDED."sourceHash", "fieldHashes" = EXCLUDED."fieldHashes", "utcUpdatedDateTime" = now()`,
       [
         pinId,
         locale,
         text.title.slice(0, 500),
         ...(['description', 'longFormSummary', 'dateConfidenceReasoning', 'delayReasoning'] as const).map((field) => (hasWords(text[field]) ? text[field] : null)),
-        hash,
+        sourceHash(source),
+        JSON.stringify(fieldHashes(source)),
       ],
     );
   }
@@ -103,9 +146,21 @@ export default class PinTranslation {
   static async restore(rows: PinTranslationRow[]): Promise<void> {
     for (const row of rows) {
       await db.query(
-        `INSERT INTO "PinTranslation" ("pinId", "locale", "title", "description", "longFormSummary", "dateConfidenceReasoning", "delayReasoning", "sourceHash", "utcCreatedDateTime", "utcUpdatedDateTime")
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) ON CONFLICT DO NOTHING`,
-        [row.pinId, row.locale, row.title, row.description ?? null, row.longFormSummary ?? null, row.dateConfidenceReasoning ?? null, row.delayReasoning ?? null, row.sourceHash, row.utcCreatedDateTime, row.utcUpdatedDateTime],
+        `INSERT INTO "PinTranslation" ("pinId", "locale", "title", "description", "longFormSummary", "dateConfidenceReasoning", "delayReasoning", "sourceHash", "fieldHashes", "utcCreatedDateTime", "utcUpdatedDateTime")
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) ON CONFLICT DO NOTHING`,
+        [
+          row.pinId,
+          row.locale,
+          row.title,
+          row.description ?? null,
+          row.longFormSummary ?? null,
+          row.dateConfidenceReasoning ?? null,
+          row.delayReasoning ?? null,
+          row.sourceHash,
+          row.fieldHashes ? JSON.stringify(row.fieldHashes) : null,
+          row.utcCreatedDateTime,
+          row.utcUpdatedDateTime,
+        ],
       );
     }
   }

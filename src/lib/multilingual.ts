@@ -14,9 +14,16 @@ export const OTHER_LOCALES = LOCALES.filter((l): l is OtherLocale => l !== DEFAU
 
 export type MultilingualSetting = { locales: OtherLocale[] };
 
-// How many live pins each language has a current translation of, out of all
-// of them (services/translations.ts translationCoverage).
-export type TranslationCoverage = { total: number; current: Record<OtherLocale, number> };
+// How many live pins each language has a current translation of, and how
+// many one made before the pin was edited (outdated) or cut short
+// (incomplete), out of all of them (services/translations.ts
+// translationCoverage). Only a current one is shown.
+export type TranslationCoverage = {
+  total: number;
+  current: Record<OtherLocale, number>;
+  outdated: Record<OtherLocale, number>;
+  incomplete: Record<OtherLocale, number>;
+};
 
 export const DEFAULT_MULTILINGUAL: MultilingualSetting = { locales: [] };
 

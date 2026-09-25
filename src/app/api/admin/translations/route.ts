@@ -8,9 +8,11 @@ import { applyTranslations, pinsToTranslate, type TranslationInput } from '@/ser
 // `npm run translations:sync -- --export/--apply` on (services/translations.ts).
 //
 //   GET  ?locale=zh[,ja]&limit=200&after=<pin id>  pins lacking a current
-//        translation, with their words and the sourceHash to send back
+//        translation, with their words, the sourceHash to send back, why each
+//        language is listed (states) and an outdated one's edited fields (changed)
 //   POST { translations: [{ pinId, locale, sourceHash, title, ... }] }
-//        saves them; one whose pin changed since the GET is skipped
+//        saves them; one whose pin changed since the GET is skipped, and a
+//        field left out keeps its stored translation if that is still current
 const MAX_ROWS = 500;
 
 export const GET = route(async (request: NextRequest) => {

@@ -12,14 +12,19 @@ import type { TranslationCoverage } from '@/lib/multilingual';
 import * as db from '../db';
 import { TARGET_LOCALES, translatePinText, type TargetLocale } from '../extract/translate';
 import PinTranslation, {
+  changedFields,
   hasWords,
   sourceHash,
   TRANSLATED_FIELDS,
   TRANSLATED_SHAPES,
   translatesAll,
+  translationState,
   wholeTranslation,
+  type FieldHashes,
   type PinText,
+  type PinTranslationRow,
   type TranslatedField,
+  type TranslationState,
 } from '../model/pinTranslation';
 
 type Localizable = { id: number; title: string; originalTitle?: string; translatedTo?: string } & Partial<Record<Exclude<TranslatedField, 'title'>, unknown>>;
@@ -92,7 +97,7 @@ export async function translatePin(
     for (const locale of wanted) {
       const text = translated[locale as TargetLocale];
       if (!text) continue;
-      await PinTranslation.save(pinId, locale, text, hash);
+      await PinTranslation.save(pinId, locale, text, pin);
       saved++;
     }
     if (saved) await expirePin(pinId);
@@ -111,59 +116,123 @@ async function expirePin(pinId: number) {
   } catch {}
 }
 
-export type PinToTranslate = PinText & { id: number; sourceHash: string; locales: TargetLocale[] };
+const PIN_WORDS = `"id", "title", "description", "longFormSummary", "dateConfidenceReasoning", "delayReasoning"`;
 
-// Live pins lacking a current translation in any of the languages - or one
-// with no words for a field the pin has (translatesAll) - oldest first, with
-// their words and the hash a translation of them must carry: what a
-// translation by hand is made from.
-export async function pinsToTranslate(locales: readonly TargetLocale[], { limit = 100_000, after = 0 }: { limit?: number; after?: number } = {}): Promise<PinToTranslate[]> {
-  const pins = await db.query<PinText & { id: number }>(
-    `SELECT "id", "title", "description", "longFormSummary", "dateConfidenceReasoning", "delayReasoning" FROM "Pin" WHERE "utcDeletedDateTime" IS NULL AND "id" > $1 ORDER BY "id"`,
-    [after],
-  );
-  const have = await db.query<{ pinId: number; locale: string; sourceHash: string } & Record<TranslatedField, unknown>>(
-    `SELECT "pinId", "locale", "sourceHash", ${TRANSLATED_SHAPES} FROM "PinTranslation" WHERE "locale" = ANY($1::text[])`,
-    [locales],
-  );
-  const current = new Map<number, Map<string, typeof have[number]>>();
-  for (const row of have) {
-    if (!current.has(row.pinId)) current.set(row.pinId, new Map());
-    current.get(row.pinId)!.set(row.locale, row);
+type PinWords = PinText & { id: number };
+type TranslationShape = { pinId: number; locale: string; sourceHash: string; fieldHashes: FieldHashes | null; utcUpdatedDateTime: Date } & Record<
+  TranslatedField,
+  unknown
+>;
+
+// Each live pin (after the id given, oldest first) with where its translation
+// into each of the languages stands (TranslationState), and for an outdated
+// one which of the pin's fields were edited since it was made (null when not
+// known) and when it was made. What the export, the admin's counts and its
+// list of translations to redo all read.
+async function translationStates(locales: readonly TargetLocale[], { after = 0 }: { after?: number } = {}) {
+  const [pins, rows] = await Promise.all([
+    db.query<PinWords & { utcUpdatedDateTime: Date }>(
+      `SELECT ${PIN_WORDS}, coalesce("utcUpdatedDateTime", "utcCreatedDateTime") AS "utcUpdatedDateTime" FROM "Pin" WHERE "utcDeletedDateTime" IS NULL AND "id" > $1 ORDER BY "id"`,
+      [after],
+    ),
+    db.query<TranslationShape>(
+      `SELECT "pinId", "locale", "sourceHash", "fieldHashes", "utcUpdatedDateTime", ${TRANSLATED_SHAPES} FROM "PinTranslation" WHERE "locale" = ANY($1::text[]) AND "pinId" > $2`,
+      [locales, after],
+    ),
+  ]);
+  const byPin = new Map<number, Map<string, TranslationShape>>();
+  for (const row of rows) {
+    if (!byPin.has(row.pinId)) byPin.set(row.pinId, new Map());
+    byPin.get(row.pinId)!.set(row.locale, row);
   }
-  const out: PinToTranslate[] = [];
-  for (const pin of pins) {
+  return pins.map((pin) => {
     const hash = sourceHash(pin);
-    const missing = locales.filter((l) => {
-      const row = current.get(pin.id)?.get(l);
-      return !row || row.sourceHash.trim() !== hash || !translatesAll(pin, row);
+    const states = locales.map((locale) => {
+      const row = byPin.get(pin.id)?.get(locale);
+      const state = translationState(pin, hash, row);
+      return {
+        locale,
+        state,
+        changed: state === 'outdated' ? changedFields(pin, row!.fieldHashes) : null,
+        translatedAt: row ? row.utcUpdatedDateTime.toISOString() : null,
+      };
     });
-    if (!missing.length) continue;
+    return { pin, hash, states, editedAt: pin.utcUpdatedDateTime.toISOString() };
+  });
+}
+
+export type PinToTranslate = PinText & {
+  id: number;
+  sourceHash: string;
+  locales: TargetLocale[];
+  // Why each language is listed, and for an outdated one the fields edited
+  // since (only these need translating again: applyTranslations keeps the
+  // stored translation of a field left out).
+  states: Partial<Record<TargetLocale, Exclude<TranslationState, 'current'>>>;
+  changed: Partial<Record<TargetLocale, TranslatedField[]>>;
+};
+
+// Live pins lacking a current translation in any of the languages - missing,
+// outdated by an edit, or with no words for a field the pin has
+// (translatesAll) - oldest first, with their words and the hash a translation
+// of them must carry: what a translation by hand is made from.
+export async function pinsToTranslate(locales: readonly TargetLocale[], { limit = 100_000, after = 0 }: { limit?: number; after?: number } = {}): Promise<PinToTranslate[]> {
+  const out: PinToTranslate[] = [];
+  for (const { pin, hash, states } of await translationStates(locales, { after })) {
+    const due = states.filter((s) => s.state !== 'current');
+    if (!due.length) continue;
     const text: PinText = { title: pin.title };
     for (const field of TRANSLATED_FIELDS) if (field !== 'title' && pin[field]) text[field] = pin[field];
-    out.push({ id: pin.id, ...text, sourceHash: hash, locales: missing });
+    out.push({
+      id: pin.id,
+      ...text,
+      sourceHash: hash,
+      locales: due.map((s) => s.locale),
+      states: Object.fromEntries(due.map((s) => [s.locale, s.state])),
+      changed: Object.fromEntries(due.filter((s) => s.changed).map((s) => [s.locale, s.changed])),
+    });
     if (out.length >= limit) break;
   }
   return out;
 }
 
 // How many live pins each language has a current translation of (one made
-// from the pin's words as they are now, so one a page would show), out of
-// all of them: for the admin's language switches.
+// from the pin's words as they are now, so one a page would show), and how
+// many an outdated or incomplete one, out of all of them: for the admin's
+// language switches. The rest have none.
 export async function translationCoverage(): Promise<TranslationCoverage> {
-  const [pins, rows] = await Promise.all([
-    db.query<PinText & { id: number }>(
-      `SELECT "id", "title", "description", "longFormSummary", "dateConfidenceReasoning", "delayReasoning" FROM "Pin" WHERE "utcDeletedDateTime" IS NULL`,
-    ),
-    db.query<{ pinId: number; locale: string; sourceHash: string } & Record<TranslatedField, unknown>>(`SELECT "pinId", "locale", "sourceHash", ${TRANSLATED_SHAPES} FROM "PinTranslation"`),
-  ]);
-  const byId = new Map(pins.map((pin) => [pin.id, { pin, hash: sourceHash(pin) }]));
-  const current = Object.fromEntries(TARGET_LOCALES.map((l) => [l, 0])) as Record<TargetLocale, number>;
-  for (const row of rows) {
-    const found = byId.get(row.pinId);
-    if (row.locale in current && found && found.hash === row.sourceHash.trim() && translatesAll(found.pin, row)) current[row.locale as TargetLocale]++;
+  const counts = (): Record<TargetLocale, number> => Object.fromEntries(TARGET_LOCALES.map((l) => [l, 0])) as Record<TargetLocale, number>;
+  const coverage: TranslationCoverage = { total: 0, current: counts(), outdated: counts(), incomplete: counts() };
+  for (const { states } of await translationStates(TARGET_LOCALES)) {
+    coverage.total++;
+    for (const { locale, state } of states) if (state !== 'missing') coverage[state][locale]++;
   }
-  return { total: pins.length, current };
+  return coverage;
+}
+
+export type TranslationToRedo = {
+  pinId: number;
+  title: string;
+  editedAt: string;
+  locales: { locale: TargetLocale; state: Exclude<TranslationState, 'current'>; changed: TranslatedField[] | null; translatedAt: string | null }[];
+};
+
+// The pins whose translation into any of the languages is in the given state
+// (outdated by default: the English was edited after it was translated),
+// most recently edited first, and how many there are in all: the admin's
+// list of translations to make again.
+export async function translationsToRedo(
+  locales: readonly TargetLocale[],
+  state: Exclude<TranslationState, 'current'> = 'outdated',
+  { limit = 200 }: { limit?: number } = {},
+): Promise<{ total: number; pins: TranslationToRedo[] }> {
+  const pins: TranslationToRedo[] = [];
+  for (const { pin, states, editedAt } of await translationStates(locales)) {
+    const due = states.filter((s) => s.state === state);
+    if (due.length) pins.push({ pinId: pin.id, title: pin.title, editedAt, locales: due as TranslationToRedo['locales'] });
+  }
+  pins.sort((a, b) => b.editedAt.localeCompare(a.editedAt) || b.pinId - a.pinId);
+  return { total: pins.length, pins: pins.slice(0, limit) };
 }
 
 export type TranslationInput = Partial<PinText> & { pinId: number; locale: string; sourceHash?: string };
@@ -172,7 +241,10 @@ export type ApplyResult = { saved: number; skipped: { pinId: number; locale: str
 // Saves translations made by hand. Each is checked against the pin as it is
 // now: made from other words (its sourceHash no longer matches - the pin was
 // edited since it was exported) it is skipped, as it would never be shown.
-// Fields the pin does not have stay empty, as the Claude path leaves them.
+// Fields the pin does not have stay empty, as the Claude path leaves them. A
+// field left out (not sent at all) keeps the stored translation of it when
+// that was made from the field's English as it is now, so redoing an outdated
+// translation needs only the fields edited since (PinToTranslate.changed).
 export async function applyTranslations(rows: TranslationInput[]): Promise<ApplyResult> {
   const ids = [...new Set(rows.map((r) => Number(r.pinId)).filter((id) => Number.isInteger(id) && id > 0))];
   const pins = new Map(
@@ -183,6 +255,11 @@ export async function applyTranslations(rows: TranslationInput[]): Promise<Apply
       )
     ).map((p) => [p.id, p]),
   );
+  const stored = new Map<string, PinTranslationRow>();
+  for (const locale of new Set(rows.map((r) => r.locale))) {
+    if (!isLocale(locale) || locale === DEFAULT_LOCALE) continue;
+    for (const [pinId, row] of await PinTranslation.forPins(ids, locale)) stored.set(`${pinId}:${locale}`, row);
+  }
   const result: ApplyResult = { saved: 0, skipped: [] };
   const touched = new Set<number>();
   for (const row of rows) {
@@ -196,22 +273,27 @@ export async function applyTranslations(rows: TranslationInput[]): Promise<Apply
       skip('not another language of the site');
       continue;
     }
-    if (typeof row.title !== 'string' || !row.title.trim()) {
-      skip('no title');
-      continue;
-    }
     const hash = sourceHash(pin);
     if (row.sourceHash && row.sourceHash !== hash) {
       skip('the pin changed since it was exported');
       continue;
     }
-    const text: PinText = { title: row.title.trim() };
+    // The stored translation's fields still made from the English as it is.
+    const old = stored.get(`${pin.id}:${row.locale}`);
+    const changed = old ? changedFields(pin, old.fieldHashes) : null;
+    const keeps = (field: TranslatedField) => row[field] === undefined && !!old && !!changed && !changed.includes(field) && wholeTranslation(pin[field], old[field]);
+    const title = keeps('title') ? old!.title : row.title;
+    if (typeof title !== 'string' || !title.trim()) {
+      skip('no title');
+      continue;
+    }
+    const text: PinText = { title: title.trim() };
     for (const field of TRANSLATED_FIELDS) {
       if (field === 'title') continue;
-      const value = row[field];
+      const value = keeps(field) ? old![field] : row[field];
       text[field] = pin[field] && hasWords(value) ? value : null;
     }
-    await PinTranslation.save(pin.id, row.locale, text, hash);
+    await PinTranslation.save(pin.id, row.locale, text, pin);
     touched.add(pin.id);
     result.saved++;
   }

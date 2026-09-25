@@ -1,13 +1,15 @@
 'use client';
 
 import { useState } from 'react';
+import Link from '@/components/ui/Link';
 import { api, ApiError } from '@/lib/client/api';
 import { LOCALE_NAMES } from '@/lib/i18n/config';
 import { OTHER_LOCALES, type MultilingualSetting, type OtherLocale, type TranslationCoverage } from '@/lib/multilingual';
 
 // Which of the site's other languages are offered, each on its own
 // (src/lib/multilingual.ts). None by default. Beside each, how many pins it
-// has a current translation of: the rest show in English.
+// has a current translation of (the rest show in English), and how many were
+// edited since they were translated, linking to the list of them.
 export function MultilingualForm({ saved, coverage }: { saved: MultilingualSetting; coverage: TranslationCoverage }) {
   const [current, setCurrent] = useState(saved);
   const [busy, setBusy] = useState(false);
@@ -39,7 +41,8 @@ export function MultilingualForm({ saved, coverage }: { saved: MultilingualSetti
         The languages the site can be read in besides English, picked in a viewer&apos;s profile or from their browser&apos;s language. A
         language left off is English: links to it open the English page, the profile&apos;s picker leaves it out, and new or edited pins
         are not translated into it. Its stored translations and saved language choices are kept for offering it again. The count beside each
-        is how many pins are translated into it, out of all of them; the rest show in English.
+        is how many pins are translated into it, out of all of them; the rest show in English. Outdated ones were edited after they were
+        translated and need translating again.
       </p>
       <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
         {OTHER_LOCALES.map((locale) => (
@@ -55,9 +58,17 @@ export function MultilingualForm({ saved, coverage }: { saved: MultilingualSetti
             <span className={`tabular-nums ${coverage.current[locale] < coverage.total ? 'text-subtle' : 'text-success'}`}>
               {coverage.current[locale].toLocaleString('en-US')} / {coverage.total.toLocaleString('en-US')}
             </span>
+            {coverage.outdated[locale] ? (
+              <Link href={`/admin/settings/translations?locale=${locale}`} className="text-warning tabular-nums">
+                {coverage.outdated[locale].toLocaleString('en-US')} outdated
+              </Link>
+            ) : null}
           </label>
         ))}
       </div>
+      <p className="mt-3 text-sm">
+        <Link href="/admin/settings/translations">Translations to make again</Link>
+      </p>
       {message ? <p className="mt-2 text-sm text-success" role="status">{message}</p> : null}
       {error ? <p className="mt-2 text-sm text-danger" role="alert">{error}</p> : null}
     </section>

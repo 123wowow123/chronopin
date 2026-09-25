@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { hasWords, translatesAll, wholeTranslation } from './pinTranslation';
+import { changedFields, fieldHashes, hasWords, sourceHash, translatesAll, translationState, wholeTranslation } from './pinTranslation';
 
 describe('hasWords', () => {
   it('counts letters and digits in any script', () => {
@@ -51,5 +51,36 @@ describe('wholeTranslation', () => {
   it('reads a shape the database worked out', () => {
     expect(wholeTranslation('<ul><li>One</li></ul>', { head: '<ul><li>一</li></ul>', length: 15, li: 1, cite: 0, end: '>' })).toBe(true);
     expect(wholeTranslation('<ul><li>One</li><li>Two</li></ul>', { head: '<ul><li>一</li></ul>', length: 15, li: 1, cite: 0, end: '>' })).toBe(false);
+  });
+});
+
+describe('changedFields', () => {
+  const before = { title: 'Pin', description: 'Old words.', longFormSummary: null };
+  const made = fieldHashes(before);
+
+  it('names the fields edited since the translation was made', () => {
+    expect(changedFields(before, made)).toEqual([]);
+    expect(changedFields({ ...before, description: 'New words.' }, made)).toEqual(['description']);
+    expect(changedFields({ ...before, delayReasoning: 'Pushed back.' }, made)).toEqual(['delayReasoning']);
+  });
+
+  it('reads an empty field as an empty string, as sourceHash does', () => {
+    expect(changedFields({ title: 'Pin', description: 'Old words.', longFormSummary: '' }, made)).toEqual([]);
+  });
+
+  it('is null when the row has no field hashes', () => {
+    expect(changedFields(before, null)).toBeNull();
+  });
+});
+
+describe('translationState', () => {
+  const pin = { title: 'Pin', description: 'Words.' };
+  const hash = sourceHash(pin);
+
+  it('tells missing, outdated, incomplete and current apart', () => {
+    expect(translationState(pin, hash, undefined)).toBe('missing');
+    expect(translationState(pin, hash, { sourceHash: sourceHash({ title: 'Old pin', description: 'Words.' }), title: '图钉', description: '词。' })).toBe('outdated');
+    expect(translationState(pin, hash, { sourceHash: hash, title: '图钉', description: ',' })).toBe('incomplete');
+    expect(translationState(pin, hash, { sourceHash: `${hash}`, title: '图钉', description: '词。' })).toBe('current');
   });
 });
