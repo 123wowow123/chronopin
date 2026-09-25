@@ -1,18 +1,17 @@
 // Pins in the page's language. A page (or API answer) in a language other
 // than English shows each pin's translation in place of its own words, when
 // one has been made from the pin as it is now; otherwise the pin's own words.
-// Translations are made in the background: when a pin is saved, when its page
-// is first read in a language it lacks, and by `npm run translations:sync`;
+// Reading a pin never translates it: one without a translation shows English.
+// Translations are made in the background when a pin is saved, and by
+// `npm run translations:sync`;
 // or by hand, through pinsToTranslate and applyTranslations (the script's
 // --export/--apply, and /api/admin/translations on a server).
 
 import { DEFAULT_LOCALE, isLocale, type Locale } from '@/lib/i18n/config';
 import type { TranslationCoverage } from '@/lib/multilingual';
-import { inBackground } from '../background';
 import * as db from '../db';
 import { TARGET_LOCALES, translatePinText, type TargetLocale } from '../extract/translate';
 import PinTranslation, { sourceHash, TRANSLATED_FIELDS, type PinText, type TranslatedField } from '../model/pinTranslation';
-import log from '../util/log';
 
 type Localizable = { id: number; title: string; originalTitle?: string; translatedTo?: string } & Partial<Record<Exclude<TranslatedField, 'title'>, unknown>>;
 
@@ -96,17 +95,6 @@ async function expirePin(pinId: number) {
     const { invalidatePin } = await import('./cache');
     invalidatePin(pinId);
   } catch {}
-}
-
-// The same, not waited for, into the languages offered: a page read in a
-// language the pin lacks.
-export function requestTranslation(pinId: number) {
-  const run = async () => {
-    const { offeredLocales } = await import('./cache');
-    const locales = await offeredLocales();
-    if (locales.length) await translatePin(pinId, { locales });
-  };
-  inBackground(run().catch((err) => log.warn(`translation failed for pin ${pinId}:`, (err as Error).message)));
 }
 
 export type PinToTranslate = PinText & { id: number; sourceHash: string; locales: TargetLocale[] };
@@ -210,10 +198,4 @@ export async function applyTranslations(rows: TranslationInput[]): Promise<Apply
   }
   for (const id of touched) await expirePin(id);
   return result;
-}
-
-// Whether a pin shown in a language has its words in it; the pin page asks
-// for a translation when not.
-export function needsTranslation(pin: Localizable, locale: Locale): boolean {
-  return locale !== DEFAULT_LOCALE && !pin.translatedTo;
 }

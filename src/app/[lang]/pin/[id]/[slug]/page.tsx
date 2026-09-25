@@ -56,13 +56,11 @@ import { pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
 import { pinTense } from '@/lib/timeline';
 import type { PinJson } from '@/lib/types';
 import { duplicateGroupPins, pinById, pinComments, relatedPins, threadPins, timelineVideo } from '@/server/services/pages';
-import { viewerIsBot, viewerTimeZone } from '@/server/viewer';
+import { viewerTimeZone } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { categoryLabel } from '@/lib/i18n/labels';
 import type { Translator } from '@/lib/i18n/translate';
-import { after } from 'next/server';
 import { localesOffered } from '@/server/services/multilingual';
-import { needsTranslation, requestTranslation } from '@/server/services/translations';
 
 // src/proxy.ts sends the real 308s and 404s for pin URLs before this renders.
 type Props = PageProps<'/[lang]/pin/[id]/[slug]'>;
@@ -94,12 +92,6 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   const [pin, t] = await Promise.all([loadPin(params), getT()]);
   if (!pin) {
     notFound();
-  }
-  // Read in a language it has no words in yet: translated once the page has
-  // been answered, for the next reader. Only a person's read asks: a crawler
-  // walking every language would spend the key's credit on the whole site.
-  if (needsTranslation(pin, t.locale) && !(await viewerIsBot())) {
-    after(() => requestTranslation(pin.id));
   }
 
   return (
