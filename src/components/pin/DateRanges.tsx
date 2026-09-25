@@ -51,7 +51,7 @@ function Range({ label, range }: { label: string; range: DateRange }) {
           <ConfidenceBadge
             confidence={best.confidence}
             className={confidenceClass(best.confidence)}
-            title={range.claims.length > 1 ? t('dateRanges.mostConfident', { count: range.claims.length }) : t('dateRanges.onlySource')}
+            title={range.claims.length > 1 ? t(best.later ? 'dateRanges.newest' : 'dateRanges.mostConfident', { count: range.claims.length }) : t('dateRanges.onlySource')}
           >
             {t('confidence.badge', { percent: best.confidence })}
           </ConfidenceBadge>

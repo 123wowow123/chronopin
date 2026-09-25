@@ -44,6 +44,9 @@ export type PinFormValues = {
   startTime: string; // HH:MM (local), timed pins only
   endDate: string;
   endTime: string;
+  // When the pin was posted (an edit): a reference from after it is an update,
+  // whose dates win once credible (topReference). Not sent back.
+  postedAt?: string;
   // Its categories (category tags), the main one first. Always sent whole.
   categories: string[];
   company: string;
@@ -227,6 +230,7 @@ export function pinToForm(pin: PinJson): PinFormValues {
     ...EMPTY_FORM,
     id: pin.id,
     parentId: pin.parentId,
+    postedAt: pin.utcCreatedDateTime,
     sourceUrl: str(pin.sourceUrl),
     title: str(pin.title),
     description: str(pin.description),
@@ -365,11 +369,15 @@ export function formToReferences(values: Pick<PinFormValues, 'references'>): Pin
     );
 }
 
-// The dates the pin is saved with: the source's date fields, or the most
-// confident reference's start and end where one outranks the source. When they
+// The dates the pin is saved with: the source's date fields, or a reference's
+// start and end where one outranks the source (a newer credible one, else the
+// most confident; topReference). When they
 // differ, the source's own dates go along too so they are not lost.
 export function formDates(values: PinFormValues) {
-  const picked = pickDates(values, formToReferences(values), values.dateConfidence);
+  // A reference added in this edit is stored as added now, so it is weighed as one.
+  const now = new Date().toISOString();
+  const references = formToReferences(values).map((r) => (r.utcCreatedDateTime ? r : { ...r, utcCreatedDateTime: now }));
+  const picked = pickDates(values, references, values.dateConfidence, values.postedAt);
   const dates = formToDates({ ...values, ...picked });
   const source = formToDates(values);
   const overridden = dates.utcStartDateTime !== source.utcStartDateTime || dates.utcEndDateTime !== source.utcEndDateTime;

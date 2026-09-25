@@ -63,6 +63,7 @@
     "references:podcasts": "tsx scripts/references/podcasts.ts",
     "duplicates:suggest": "tsx scripts/duplicates/suggest.ts",
     "duplicates:verify": "tsx scripts/duplicates/verify.ts",
+    "duplicates:feed": "tsx scripts/duplicates/feed.ts",
     "comments:sentiment": "tsx scripts/comments/sentiment.ts",
     "suggestions:review": "tsx scripts/suggestions/review.ts",
     "wiki:sync": "tsx scripts/wiki/sync.ts",

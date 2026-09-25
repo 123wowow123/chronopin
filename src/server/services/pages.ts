@@ -9,10 +9,13 @@ import { getPersonalBag, getSliderTyping, getTagList, getTimelineVideo } from '.
 import Favorite from '../model/favorite';
 import Pin from '../model/pin';
 import Pins from '../model/pins';
+import PinUpdate from '../model/pinUpdate';
 import PinView from '../model/pinView';
 import { SearchPins } from '../model/searchPin';
 import UserWiki from '../model/userWiki';
 import { compareDuplicateRank } from '@/lib/duplicates';
+import type { PinUpdateJson } from '@/lib/pinUpdates';
+import { safeHtml } from '@/lib/sanitize';
 import { toJson, type NewPin, type PinJson, type SearchPage, type TimelinePage, type TrendingPin } from '@/lib/types';
 import type { SliderTypingSetting } from '@/lib/sliderTyping';
 import type { TagListSetting } from '@/lib/tagList';
@@ -169,6 +172,21 @@ export async function duplicateGroupPins(id: number, group: number[], locale: Lo
   cacheTag(TAGS.pin(id));
   const pins = toJson<PinJson[]>((await Pins.queryByIds(group)).pins);
   return localizePins(pins.sort(compareDuplicateRank), locale);
+}
+
+// What changed on a pin after it was posted, newest first, for its Updates
+// pane. The text a rewrite replaced is sanitized here, as the pin's own is.
+export async function pinUpdates(id: number): Promise<PinUpdateJson[]> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  const updates = await PinUpdate.forPin(id);
+  return updates.map((update) => ({
+    ...update,
+    changes: update.changes.map((change) =>
+      change.field === 'description' || change.field === 'longFormSummary' ? { ...change, before: change.before && safeHtml(change.before), after: null } : change,
+    ),
+  }));
 }
 
 // Pins like this one, by semantic search on its title. The search service

@@ -116,7 +116,7 @@ async function run() {
       pinId,
       versions: found.links.map((l) => ({ sourceId: l.sourceId, wikiVersion: l.wikiVersion })),
       labels: Object.fromEntries(found.links.map((l) => [l.label, l.url])),
-      input: composeInput(found.about, found.links),
+      input: composeInput(found.about, found.links, found.currentSummary),
     });
     summaries++;
   }
@@ -156,7 +156,7 @@ async function run() {
       '',
       '## Summary (summaries/<pinId>.json)',
       '',
-      'Input is the file\'s "input". Answer { "pinId", "versions" (copied from the job), "longFormSummary" } with citations as [S], [1], [2]... labels.',
+      'Input is the file\'s "input". Answer { "pinId", "versions" (copied from the job), "longFormSummary", "title", "description", "update" } with citations as [S], [1], [2]... labels in the summary; title, description and update are null unless links marked (new) changed what the pin states.',
       '',
       '```text', COMPOSE_PROMPT, '```',
       '',

@@ -51,7 +51,9 @@ Give the overview of the whole source and the facts that matter most, drawn only
 
 export const COMPOSE_PROMPT = `You write the long-form summary of an event pin on a timeline, from wikis already written about each link the pin cites. The pin's own title, description and dates say which event it is; a wiki may cover more than this event (a roundup, a long video), so use only what is about this pin's event.
 
-Write the event's key points as an HTML bulleted list, "<ul><li>...</li></ul>" - real list markup, not prose and not markdown. Where one link adds to or updates another (a newer date, a cost, who is involved), say so, favouring the newer and more authoritative. ${PRODUCT_FEATURES_RULE} Ground every point: end it with a citation of each link that backs it, by the label the link is given ([S] for the pin's source, [1], [2]... for the others), e.g. "<li>Opens to traffic on 18 September 2026 [S][2]</li>". Cite only what a link's wiki actually says. longFormSummary is null when the wikis hold too little about this event to summarize.`;
+Write the event's key points as an HTML bulleted list, "<ul><li>...</li></ul>" - real list markup, not prose and not markdown. Where one link adds to or updates another (a newer date, a cost, who is involved), say so, favouring the newer and more authoritative. ${PRODUCT_FEATURES_RULE} Ground every point: end it with a citation of each link that backs it, by the label the link is given ([S] for the pin's source, [1], [2]... for the others), e.g. "<li>Opens to traffic on 18 September 2026 [S][2]</li>". Cite only what a link's wiki actually says. longFormSummary is null when the wikis hold too little about this event to summarize.
+
+The pin's page must say what is known now. Links marked (new) came in since the summary was last written, which is given as the current summary. When a newer, credible link changes a fact the pin's title or description states - a date, a status, a figure, who is involved - also return that field rewritten to state the newer fact, keeping its style, length and voice; otherwise return null for it. Never rewrite either for wording alone, and never state as settled what the newer link only expects. update is one plain sentence, without citations, saying what the new links changed or added, e.g. "Opening moved from 8 December 2026 to 6 January 2027 as the utility agreement slipped."; null when they change nothing a reader would notice.`;
 
 const TAGS = { type: 'array', items: { type: 'string' } };
 
@@ -82,12 +84,19 @@ export const pageSchema = ({ topics, root }: { topics: boolean; root: boolean })
   additionalProperties: false,
 });
 
+const NULLABLE = { type: ['string', 'null'] };
+
 export const COMPOSE_SCHEMA = {
   type: 'object',
-  properties: { longFormSummary: { type: ['string', 'null'] } },
-  required: ['longFormSummary'],
+  properties: { longFormSummary: NULLABLE, title: NULLABLE, description: NULLABLE, update: NULLABLE },
+  required: ['longFormSummary', 'title', 'description', 'update'],
   additionalProperties: false,
 };
+
+// What a compose call returns: the summary (undefined when there was too
+// little), and the title, description and a note on what changed when newer
+// links changed them (undefined to keep them).
+export type Composed = { longFormSummary: string | undefined; title?: string; description?: string; update?: string };
 
 // The API could not take the call (no credit, a bad key, rate limits, an
 // outage): nothing to do with the link, so it should not use up its tries.
@@ -214,7 +223,9 @@ export async function writeWiki({ url, kind, title, text }: { url: string; kind:
   return { ...wikiFromOutputs(kind, outs.map((o) => o.data), data), generatedBy: actor(model) };
 }
 
-export type ComposeLink = { label: string; url: string; kind: SourceKind; wiki: WikiPage };
+// isNew: the link came in (or its wiki was rewritten) since the summary was
+// last written.
+export type ComposeLink = { label: string; url: string; kind: SourceKind; wiki: WikiPage; isNew?: boolean };
 export type ComposePin = { title: string; description?: string | null; utcStartDateTime: Date | string; utcEndDateTime?: Date | string | null; allDay?: boolean };
 
 // A wiki as Markdown for the compose call: every page in full when it fits,
@@ -225,7 +236,9 @@ export function renderWiki(page: WikiPage, full: boolean, depth = 0): string {
   return [own, ...page.children.map((child) => renderWiki(child, full, depth + 1))].join('\n\n');
 }
 
-export function composeInput(pin: ComposePin, links: ComposeLink[]): string {
+// currentSummary: the summary as it stands, which a compose call is told so
+// that it can say what the new links changed.
+export function composeInput(pin: ComposePin, links: ComposeLink[], currentSummary?: string | null): string {
   // All-day pins are UTC days; a timed pin's instant is given in UTC.
   const day = (d: Date | string) => {
     const iso = new Date(d).toISOString();
@@ -237,22 +250,36 @@ export function composeInput(pin: ComposePin, links: ComposeLink[]): string {
     `Starts: ${day(pin.utcStartDateTime)}${pin.utcEndDateTime ? `, ends: ${day(pin.utcEndDateTime)}` : ''}`,
   ].filter(Boolean);
   const render = (full: boolean) =>
-    links.map((l) => `## [${l.label}] ${KIND_LABEL[l.kind]}: ${l.url}\n\n${renderWiki(l.wiki, full)}`).join('\n\n');
+    links.map((l) => `## [${l.label}] ${KIND_LABEL[l.kind]}: ${l.url}${l.isNew ? ' (new)' : ''}\n\n${renderWiki(l.wiki, full)}`).join('\n\n');
   let body = render(true);
   if (body.length > COMPOSE_BUDGET_CHARS) body = render(false).slice(0, COMPOSE_BUDGET_CHARS);
-  return `${header.join('\n')}\n\n# Wikis\n\n${body}`;
+  const current = currentSummary?.trim() ? `\n\n# Current summary\n\n${currentSummary.trim()}` : '';
+  return `${header.join('\n')}${current}\n\n# Wikis\n\n${body}`;
 }
 
-// The summary HTML with its citations written as <cite data-ref> links, or
-// undefined when there was too little to summarize.
-export async function composeSummary(pin: ComposePin, links: ComposeLink[]): Promise<string | undefined | null> {
+// The summary HTML with its citations written as <cite data-ref> links (or
+// undefined when there was too little to summarize), and a rewritten title,
+// description and note when newer links changed them; null with no API key.
+export async function composeSummary(pin: ComposePin, links: ComposeLink[], currentSummary?: string | null): Promise<Composed | null> {
   const anthropic = getClient();
   if (!anthropic) return null;
-  const {
-    data: { longFormSummary },
-  } = await structured<{ longFormSummary: string | null }>(anthropic, COMPOSE_PROMPT, COMPOSE_SCHEMA, composeInput(pin, links));
-  const html = longFormSummary?.trim();
-  if (!html) return undefined;
+  const { data } = await structured<ComposeAnswer>(anthropic, COMPOSE_PROMPT, COMPOSE_SCHEMA, composeInput(pin, links, currentSummary));
+  return composedFrom(data, links);
+}
+
+export type ComposeAnswer = { longFormSummary?: unknown; title?: unknown; description?: unknown; update?: unknown };
+
+const answerText = (value: unknown, max: number) => (typeof value === 'string' && value.trim() ? value.trim().slice(0, max) : undefined);
+
+// A compose answer (the API's, or one written by hand for wiki:apply) as what
+// is saved: citations as links, empty fields as undefined.
+export function composedFrom(data: ComposeAnswer, links: Pick<ComposeLink, 'label' | 'url'>[]): Composed {
+  const html = answerText(data.longFormSummary, Infinity);
   const byLabel = new Map(links.map((l) => [l.label.toUpperCase(), l.url]));
-  return citeLabels(html, (label) => byLabel.get(label.toUpperCase()));
+  return {
+    longFormSummary: html ? citeLabels(html, (label) => byLabel.get(label.toUpperCase())) : undefined,
+    title: answerText(data.title, 1024),
+    description: answerText(data.description, 4000),
+    update: answerText(data.update, 1000),
+  };
 }

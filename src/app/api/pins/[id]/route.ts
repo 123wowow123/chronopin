@@ -8,6 +8,8 @@ import PinDuplicate from '@/server/model/pinDuplicate';
 import PinReference from '@/server/model/pinReference';
 import type User from '@/server/model/user';
 import { invalidatePin } from '@/server/services/cache';
+import { recordPinUpdate } from '@/server/services/pinUpdates';
+import { addedReferences } from '@/lib/pinUpdates';
 import { addPinStocksQuietly } from '@/server/services/pinStocks';
 import { rejectDuplicateSourceUrl } from '@/server/services/duplicatePin';
 import { delayProblem } from '@/lib/delay';
@@ -83,6 +85,16 @@ const update = route(async (request: NextRequest, ctx: Ctx) => {
 
   const { pin: updated } = await pin.update();
   if (tags) await PinTag.setUserTags(updated.id, tags);
+  // What the edit moved, and the links it added, for the pin's Updates pane.
+  await recordPinUpdate({
+    pinId: updated.id,
+    kind: 'edit',
+    userId: user.id,
+    before: existing,
+    after: updated,
+    references: addedReferences(existing.references, updated.references),
+    postedAt: existing.utcCreatedDateTime,
+  });
   emitPinEvent('update', updated, { userId: user.id });
   // A pin that has just been given a company is news to that company's
   // followers, as a new pin for it would be. Editing it again tells nobody

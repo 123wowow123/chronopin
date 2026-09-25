@@ -26,6 +26,7 @@ import { PinSeriesChart } from '@/components/pin/PinSeriesChart';
 import { PinStocks } from '@/components/pin/PinStocks';
 import { PinAwards } from '@/components/pin/PinAwards';
 import { PinTags } from '@/components/pin/PinTags';
+import { PinUpdates } from '@/components/pin/PinUpdates';
 import { PinRatings, RatingSummary } from '@/components/pin/PinRatings';
 import { hasPlace } from '@/lib/places';
 import { affiliateUrl, isAmazonStoreUrl, isPurchaseLinkShown } from '@/lib/affiliate';
@@ -55,7 +56,7 @@ import { safeCitedHtml, safeHtml, toCardPins } from '@/lib/sanitize';
 import { pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
 import { pinTense } from '@/lib/timeline';
 import type { PinJson } from '@/lib/types';
-import { duplicateGroupPins, pinById, pinComments, relatedPins, threadPins, timelineVideo } from '@/server/services/pages';
+import { duplicateGroupPins, pinById, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo } from '@/server/services/pages';
 import { viewerTimeZone } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { categoryLabel } from '@/lib/i18n/labels';
@@ -93,6 +94,9 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   if (!pin) {
     notFound();
   }
+  // What changed since it was posted: the pin shows the newest, and these say
+  // how it got there.
+  const [updates, timeZone] = await Promise.all([pinUpdates(pin.id), viewerTimeZone()]);
 
   return (
     <>
@@ -101,7 +105,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           floored by its content's min-width, which scrolls the page sideways. */}
       <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-10">
         <article>
-          <PinBodyForViewer pin={pin} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} updatedAt={updates[0]?.utcCreatedDateTime} />
         </article>
 
         <aside className="min-w-0">
@@ -143,6 +147,9 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
           {/* Beside the pin on wide screens, under its map; after it on phones. */}
           <PinTags tags={pin.tags} categories={pin.categories?.slice(1)} className={pin.latitude != null && pin.longitude != null ? 'mt-6' : ''} />
 
+          {/* Right under what the pin is about: what has changed on it since. */}
+          <PinUpdates updates={updates} timeZone={timeZone} className="mt-6" />
+
           <Suspense fallback={null}>
             <Duplicates pin={pin} />
           </Suspense>
@@ -164,12 +171,8 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
   );
 }
 
-async function PinBodyForViewer({ pin }: { pin: PinJson }) {
-  const [timeZone, t] = await Promise.all([viewerTimeZone(), getT()]);
-  return <PinBody pin={pin} timeZone={timeZone} t={t} />;
-}
-
-function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Translator }) {
+// updatedAt: the pin's newest update, when it has changed since it was posted.
+function PinBody({ pin, timeZone, t, updatedAt }: { pin: PinJson; timeZone: string; t: Translator; updatedAt?: string }) {
   const media = pin.media ?? [];
   const hasCoordinates = pin.latitude != null && pin.longitude != null;
   // Searches for the company, as the same label on a card does. That search
@@ -216,6 +219,15 @@ function PinBody({ pin, timeZone, t }: { pin: PinJson; timeZone: string; t: Tran
           <span>
             {t.rich('pin.posted', { time: () => <PostedTime value={pin.utcCreatedDateTime!} serverTimeZone={timeZone} dateOnly="phone" search /> })}
           </span>
+        ) : null}
+        {updatedAt ? (
+          <>
+            <span className="px-1.5 text-faint" aria-hidden>·</span>
+            {/* To the Updates pane, which says what changed. */}
+            <a href="#updates" className="font-medium text-link hover:no-underline">
+              {t.rich('updates.updated', { time: () => <PostedTime value={updatedAt} serverTimeZone={timeZone} dateOnly /> })}
+            </a>
+          </>
         ) : null}
         {pin.user?.userName ? (
           <>

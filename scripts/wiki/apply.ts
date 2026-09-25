@@ -16,8 +16,7 @@ import path from 'node:path';
 import { parseArgs } from 'node:util';
 import * as db from '@/server/db';
 import { cleanContradictions } from '@/server/extract/contradictions';
-import { citeLabels } from '@/server/extract/references';
-import { wikiFromOutputs, type WikiOutput } from '@/server/extract/wiki';
+import { composedFrom, wikiFromOutputs, type WikiOutput } from '@/server/extract/wiki';
 import Source from '@/server/model/source';
 import { contradictionSignature, saveContradictions } from '@/server/services/okfLint';
 import { pinLinks, saveSummary } from '@/server/services/sourceWiki';
@@ -85,9 +84,11 @@ async function run() {
       console.log(`summary ${file}: longFormSummary must be one <ul> list - skipped`);
       continue;
     }
-    const byLabel = new Map(found.links.map((l) => [l.label.toUpperCase(), l.url]));
-    await saveSummary(pinId, found.links, html ? citeLabels(html, (label) => byLabel.get(label.toUpperCase())) : undefined);
-    console.log(`summary for pin ${pinId}: ${html ? 'saved' : 'nothing to summarize, links marked taken in'}`);
+    // A title, description and update note come along when newer links changed them.
+    const composed = composedFrom(data, found.links);
+    await saveSummary(pinId, found.links, composed);
+    const rewrote = [composed.title && 'title', composed.description && 'description'].filter(Boolean).join(' and ');
+    console.log(`summary for pin ${pinId}: ${html ? `saved${rewrote ? `, ${rewrote} rewritten` : ''}` : 'nothing to summarize, links marked taken in'}`);
   }
 
   for (const { file, data } of results(dir, 'contradictions')) {

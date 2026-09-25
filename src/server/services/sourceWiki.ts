@@ -1,12 +1,16 @@
 import * as db from '../db';
 import OkfLint from '../model/okfLint';
-import { composeSummary, ServiceError, writeWiki, type ComposeLink, type ComposePin } from '../extract/wiki';
+import { composeSummary, ServiceError, writeWiki, type ComposeLink, type Composed, type ComposePin } from '../extract/wiki';
+import { emitPinEvent } from '../events';
 import Pin from '../model/pin';
 import Source, { hashText, PinSource, type PinSourceRole } from '../model/source';
 import { fetchSourceText, type SourceText } from '../scrape/sourceText';
 import { sourceKind } from '@/lib/sourceKind';
 import log from '../util/log';
-import { expirePinPage } from './cache';
+import { expirePinPage, invalidatePin } from './cache';
+import { recordRewrite } from './pinUpdates';
+import { UPDATE_GRACE_MS } from '@/lib/dateClaims';
+import { pinChanges } from '@/lib/pinUpdates';
 
 // Keeps a pin's long-form summary built from wikis of the links it cites
 // (0026_source_wiki.sql):
@@ -113,6 +117,8 @@ export function ingestSource(
 export type PinLinks = {
   about: ComposePin;
   links: (ComposeLink & { sourceId: number; wikiVersion: number })[];
+  // The summary as it stands, for the compose call to say what changed.
+  currentSummary: string | null;
 };
 
 // What a summary (or a contradiction check) is written from: the pin, and each
@@ -135,6 +141,7 @@ export async function pinLinks(pinId: number): Promise<PinLinks | undefined> {
       wiki,
       sourceId: row.sourceId,
       wikiVersion: row.wikiVersion,
+      isNew: row.summarizedWikiVersion !== row.wikiVersion,
     });
   }
   const about: ComposePin = {
@@ -144,14 +151,41 @@ export async function pinLinks(pinId: number): Promise<PinLinks | undefined> {
     utcEndDateTime: pin.utcEndDateTime,
     allDay: pin.allDay,
   };
-  return { about, links };
+  return { about, links, currentSummary: pin.longFormSummary ?? null };
 }
 
 // Writes a composed summary (HTML already cited by link, or undefined when
-// there was too little) and records which wiki versions it took in.
-export async function saveSummary(pinId: number, links: PinLinks['links'], summary: string | undefined) {
+// there was too little) and records which wiki versions it took in. A title
+// or description the newer links changed is written too, so the page says
+// what is known now, and the change goes in the pin's Updates pane.
+export async function saveSummary(pinId: number, links: PinLinks['links'], composed: Composed) {
+  const { longFormSummary: summary } = composed;
   if (summary) {
-    await Pin.updateLongFormSummary(pinId, summary);
+    const before = await Pin.articleOf(pinId);
+    if (before) {
+      // The first summary, written as the pin goes up, is part of posting it:
+      // its title and description are the author's, and nothing is an update yet.
+      const posted = Date.now() - new Date(before.utcCreatedDateTime).getTime() > UPDATE_GRACE_MS;
+      const after = {
+        longFormSummary: summary,
+        title: (posted && composed.title) || before.title,
+        description: (posted && composed.description) || before.description,
+      };
+      await Pin.updateArticle(pinId, after);
+      const changes = pinChanges(before, after);
+      if (posted) await recordRewrite(pinId, changes, composed.update);
+      // A new title or description is what search and the translations read,
+      // and a new title is a new slug: the save's own listeners follow it.
+      if (changes.some((c) => c.field === 'title' || c.field === 'description')) {
+        const { pin } = await Pin.queryById(pinId);
+        if (pin) emitPinEvent('update', pin);
+        try {
+          invalidatePin(pinId);
+        } catch {
+          // Outside a Next.js server (a script), there is no page cache to expire.
+        }
+      }
+    }
   }
   // Too little to summarize still counts as taken in: the existing summary
   // stays, and the same wikis are not sent again until something changes.
@@ -177,10 +211,10 @@ export async function rebuildSummary(pinId: number, { force = false }: { force?:
     await PinSource.markSummarized(pinId, []);
     return false;
   }
-  const summary = await composeSummary(found.about, found.links);
-  if (summary === null) return false; // no API key
-  await saveSummary(pinId, found.links, summary);
-  return !!summary;
+  const composed = await composeSummary(found.about, found.links, found.currentSummary);
+  if (composed === null) return false; // no API key
+  await saveSummary(pinId, found.links, composed);
+  return !!composed.longFormSummary;
 }
 
 export type RefreshOptions = {

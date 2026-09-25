@@ -13,6 +13,7 @@ import * as db from '@/server/db';
 import { Comment, Company, CompanyBlock, CompanyFollow, DateTime, Follow, FullPins, MediumType, PinNotInterested, User, UserBlock, Users } from '@/server/model';
 import AiFeedback from '@/server/model/aiFeedback';
 import PinDuplicate from '@/server/model/pinDuplicate';
+import PinUpdate from '@/server/model/pinUpdate';
 import CompanyRelation from '@/server/model/companyRelation';
 import PinTicker from '@/server/model/pinTicker';
 import PinTag from '@/server/model/pinTag';
@@ -42,6 +43,7 @@ const { values: flags } = parseArgs({
     companyblockfile: { type: 'string', default: './scripts/backup/seedCompanyBlocks.json' },
     duplicatefile: { type: 'string', default: './scripts/backup/seedPinDuplicates.json' },
     aifeedbackfile: { type: 'string', default: './scripts/backup/seedAiFeedback.json' },
+    updatefile: { type: 'string', default: './scripts/backup/seedPinUpdates.json' },
     sourcefile: { type: 'string', default: './scripts/backup/seedSources.json' },
     sourcetextfile: { type: 'string', default: './scripts/backup/seedSourceTexts.json.gz' },
     stockfile: { type: 'string', default: './scripts/backup/seedStocks.json' },
@@ -177,6 +179,18 @@ async function saveDB() {
   const keptUserIds = new Set(data.users.map((u) => u.id));
   const feedback = (await AiFeedback.getAll()).filter((f) => keptPinIds.has(f.pinId) && (f.userId == null || keptUserIds.has(f.userId)));
   writeJson(flags.aifeedbackfile, feedback);
+
+  // What changed on each kept pin after it was posted (0081); who brought a
+  // change, or the newer pin it came from, is dropped when not kept.
+  console.log('Backup Pin Updates');
+  const updates = (await PinUpdate.getAll())
+    .filter((u) => keptPinIds.has(u.pinId))
+    .map((u) => ({
+      ...u,
+      userId: u.userId != null && keptUserIds.has(u.userId) ? u.userId : null,
+      relatedPinId: u.relatedPinId != null && keptPinIds.has(u.relatedPinId) ? u.relatedPinId : null,
+    }));
+  writeJson(flags.updatefile, updates);
 
   // Link wikis (0026) for the kept pins' links, so a restore does not pay
   // for writing them again. Links only e2e pins cited are left out.
@@ -419,6 +433,15 @@ async function seedDB() {
       await AiFeedback.restore(readJson(flags.aifeedbackfile));
     } catch (error) {
       log.error('AI Feedback Save Error', JSON.stringify(error));
+    }
+  }
+
+  // After the pins and users they name; a backup from before 0081 has none.
+  if (existsSync(flags.updatefile)) {
+    try {
+      await PinUpdate.restore(readJson(flags.updatefile));
+    } catch (error) {
+      log.error('Pin Updates Save Error', JSON.stringify(error));
     }
   }
 

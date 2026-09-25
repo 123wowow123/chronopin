@@ -149,6 +149,22 @@ export default class Pin extends BasePin {
 
   // Persists a generated longFormSummary without going through the full
   // edit path, which needs the author.
+  // The words a rewrite from the pin's links can change (services/sourceWiki.ts).
+  static async articleOf(pinId: number) {
+    const [row] = await db.query<{ title: string; description: string | null; longFormSummary: string | null; utcCreatedDateTime: Date }>(
+      `SELECT "title", "description", "longFormSummary", "utcCreatedDateTime" FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL`,
+      [pinId],
+    );
+    return row;
+  }
+
+  static async updateArticle(pinId: number, { title, description, longFormSummary }: { title: string; description: string | null; longFormSummary: string }) {
+    await db.query(
+      `UPDATE "Pin" SET "title" = $2, "description" = $3, "longFormSummary" = $4, "utcUpdatedDateTime" = now() WHERE "id" = $1`,
+      [pinId, title, description, longFormSummary],
+    );
+  }
+
   static async updateLongFormSummary(pinId: number, longFormSummary: string) {
     await db.query(`UPDATE "Pin" SET "longFormSummary" = $2, "utcUpdatedDateTime" = now() WHERE "id" = $1`, [
       pinId,
