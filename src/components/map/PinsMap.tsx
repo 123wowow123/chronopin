@@ -659,7 +659,7 @@ export default function PinsMap({ sliderTyping = false, tagList = false }: { sli
           }}
           className="floating absolute top-2.5 left-2.5 z-[1000] flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-raised hover:no-underline active:bg-raised-2"
         >
-          <Icon name="back" className="size-4" />
+          <Icon name="back" className="size-4 text-link" />
           {t('map.backToPin')}
         </a>
       ) : null}

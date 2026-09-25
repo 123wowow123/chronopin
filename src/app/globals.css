@@ -155,14 +155,6 @@
        shifts everything sideways. No effect where scrollbars overlay. */
     scrollbar-gutter: stable;
   }
-  /* Search results pin their sort toggle under the navbar between lg and xl;
-     jumps to a day land below both. On a phone that toggle is at the foot of
-     the screen instead, so only the navbar is in the way. */
-  @media (64rem <= width < 80rem) {
-    html:has([data-sticky-sort]) {
-      --jump-offset: 6.5rem;
-    }
-  }
   @media (width < 80rem) {
     /* An open floating-controls popup holds the page still behind it. Set by
        the controls rather than matched on the dimmer, so that the page being
@@ -187,7 +179,7 @@
      scroll-padding: that would count the navbar's own search field as hidden
      under the navbar, and Chrome scrolled the page up on focus and on every
      keystroke to reveal its caret. */
-  :where([id], a, button, input, select, textarea, [tabindex], [contenteditable]):not(header *, [data-sticky-sort] *) {
+  :where([id], a, button, input, select, textarea, [tabindex], [contenteditable]):not(header *) {
     scroll-margin-top: var(--jump-offset);
   }
 

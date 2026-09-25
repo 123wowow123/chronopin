@@ -29,10 +29,10 @@ export function BackToTimeline({ className = '' }: { className?: string }) {
       <button
         type="button"
         onClick={() => backToTimeline(router)}
-        // Built as "Today" and the phone's sort toggle are: the same floating
-        // capsule, ink words, and an icon in colour. Grey words on it vanished
+        // The map's "Back to pin" (PinsMap): the same floating capsule and ink
+        // words, so the site's ways back look alike. Grey words on it vanished
         // into the cards it floats over in the dark theme.
-        className="floating flex h-11 items-center gap-1.5 rounded-full px-3 text-sm font-medium text-ink transition-colors hover:bg-raised lg:h-auto lg:gap-2 lg:px-3.5 lg:py-2"
+        className="floating flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-raised active:bg-raised-2"
       >
         <Icon name="back" className="size-4 text-link" />
         {t('timeline.backToTimeline')}

@@ -218,11 +218,11 @@ function isHere(href: string) {
 // are li#rank-.
 const DATE_CARDS = '[role="listitem"][id^="pin-"]';
 
-// The highest card still showing below the sticky bars. Cards sit in columns,
+// The highest card still showing below the header. Cards sit in columns,
 // so the first in the page is not always the highest on screen; a hidden
 // list's cards have no height.
 function cardAtTop(cards = `${DATE_CARDS}, li[id^="rank-"]`): CardSpot | null {
-  const bars = [...document.querySelectorAll('header, [data-sticky-sort]')].map((el) => el.getBoundingClientRect().bottom);
+  const bars = [...document.querySelectorAll('header')].map((el) => el.getBoundingClientRect().bottom);
   const covered = Math.max(0, ...bars);
   let best: CardSpot | null = null;
   for (const el of document.querySelectorAll<HTMLElement>(cards)) {

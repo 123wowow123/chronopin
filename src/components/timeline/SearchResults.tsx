@@ -486,15 +486,9 @@ export function SearchResults({
           summary={searchedUser ? searchedUser.userName : searchedCompany ? searchedCompany.name : spanLabel(postedWithin, t.locale)}
           summaryIsPostedWithin={!searchedUser && !searchedCompany}
           onToday={sortBy === 'date' && bags.length ? holdNow : undefined}
-          sort={
-            canSort ? (
-              <>
-                <BackToTimeline className="self-start max-xl:hidden" />
-                <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" />
-              </>
-            ) : undefined
-          }
-          bottom={canSort ? <SortToggle compact value={sortBy} onChange={changeSort} className="floating" /> : undefined}
+          sort={canSort ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : undefined}
+          // The sort to hand below xl; from xl it is in the panel.
+          bottom={canSort ? <SortToggle compact value={sortBy} onChange={changeSort} className="floating xl:hidden" /> : undefined}
           tags={{
             summary: tagPillSummary(query, t.locale),
             control: (
@@ -550,23 +544,9 @@ export function SearchResults({
           <TimeRangeSlider steps={SPAN_OPTIONS} past={postedWithin} pastOnly collapsible onChange={({ past }) => changePostedWithin(past)} />
         </FloatingControls>
 
-        {/* Between lg and xl the floating controls fold away behind pills, and
-            sorting is too important to hide with them, so it gets a bar of its
-            own pinned under the navbar. On a phone that bar ate the top of the
-            results: there it rides in the bottom left corner instead, under
-            the thumb and opposite "Today" (the `bottom` control above). */}
-        {canSort ? (
-          <div data-sticky-sort className="sticky top-[52px] z-20 -mx-3 flex justify-center bg-header/85 px-3 py-2 shadow-[0_1px_0_var(--color-line)] backdrop-blur-md max-lg:hidden lg:-mx-4 xl:hidden">
-            <BackToTimeline className="absolute top-1/2 left-3 -translate-y-1/2 lg:left-4" />
-            <SortToggle value={sortBy} onChange={changeSort} className="w-full max-w-sm rounded-xl bg-field ring-1 ring-line ring-inset" />
-          </div>
-        ) : null}
-
-        {/* The way back to the timeline, where "View all" opened this day: in
-            the sticky sort bar between lg and xl and at the head of the
-            floating controls from xl, so it rides under the header on its own
-            only where neither is (a phone, or a search that cannot sort). */}
-        <BackToTimeline className={`sticky top-[60px] z-20 mb-2 w-fit ${canSort ? 'lg:hidden' : ''}`} />
+        {/* The way back to the timeline, where "View all" opened this day:
+            top left, riding under the header as the day scrolls. */}
+        <BackToTimeline className="sticky top-[60px] z-20 mb-2 w-fit" />
 
         {shown?.status === 'loading' || restoring ? (
           <p className="mt-16 text-center text-lg text-subtle" role="status">

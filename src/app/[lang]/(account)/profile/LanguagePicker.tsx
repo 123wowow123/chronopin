@@ -12,8 +12,12 @@ export function LanguagePicker({ userId, locales = LOCALES, className = '' }: { 
   const locale = useLocale();
   const t = useT();
   return (
-    <label className={`relative flex items-center gap-1.5 text-sm text-muted ${className}`}>
-      <Icon name="globe" className="pointer-events-none size-4 shrink-0 text-subtle" />
+    // The whole field is the select, drawn as the page's other selects are
+    // (.field: full width, its own chevron), with the globe inside its left
+    // edge. It was a bare select the width of its word inside a styled label,
+    // so most of what looked like the control did not open it.
+    <label className={`relative block ${className}`}>
+      <Icon name="globe" className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-subtle" />
       <span className="sr-only">{t('nav.language')}</span>
       <select
         value={locale}
@@ -24,7 +28,7 @@ export function LanguagePicker({ userId, locales = LOCALES, className = '' }: { 
           await api.put(`/api/users/${userId}/preferences`, { localePreference: next }).catch(() => {});
           switchLocale(next, locale);
         }}
-        className="cursor-pointer appearance-none bg-transparent pr-1 font-medium text-inherit outline-none hover:text-ink"
+        className="field pl-9 font-medium"
       >
         {locales.map((l) => (
           <option key={l} value={l} lang={l}>

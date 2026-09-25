@@ -13,7 +13,7 @@ export function LanguageSetting({ userId, offered }: { userId: number; offered: 
   return (
     <section className="surface space-y-2 p-6">
       <h2 className="field-label">{t('profile.language')}</h2>
-      <LanguagePicker userId={userId} locales={[DEFAULT_LOCALE, ...offered]} className="rounded-lg bg-field px-3 py-2 ring-1 ring-line ring-inset" />
+      <LanguagePicker userId={userId} locales={[DEFAULT_LOCALE, ...offered]} />
       <p className="text-sm text-subtle">{t('profile.languageHint')}</p>
     </section>
   );

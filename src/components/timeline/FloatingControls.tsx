@@ -126,10 +126,9 @@ export function FloatingControls({
   // Whether that is the posted-within span (so its slider can drop its heading).
   summaryIsPostedWithin?: boolean;
   onToday?: () => void;
-  // Below lg only, at the foot of the screen on the left, opposite "Today": a
-  // control that must stay to hand while the rest are shut away in the drawer
-  // (the search page's sort). Wider, the pills are already down there and it
-  // has a place of its own on the page.
+  // At the foot of the screen on the left, opposite "Today" and the fold
+  // pills: controls that must stay to hand while the rest are folded away
+  // (the search page's sort, below xl).
   bottom?: React.ReactNode;
   // Shown under the controls on wide screens only (trending and new pins), in
   // the height they leave, and dropped when it has no room: narrower,
@@ -265,7 +264,7 @@ export function FloatingControls({
         {/* Its own corner rather than a place in the row on the right: the
             reader's thumb reaches the near side of a phone, and "Today"
             keeps the corner it has everywhere else. */}
-        {bottom ? <div className="fixed bottom-3 left-3 z-30 flex max-w-[calc(100%-1.5rem)]">{bottom}</div> : null}
+        {bottom ? <div className="fixed bottom-3 left-3 z-30 flex max-w-[calc(100%-1.5rem)] gap-1.5">{bottom}</div> : null}
         <TodayBar onToday={onToday} />
       </>
     );
@@ -358,6 +357,8 @@ export function FloatingControls({
               </div>
             ) : null}
           </div>
+          {/* The same corner as on a phone. */}
+          {bottom ? <div className="fixed bottom-4 left-4 z-30 flex gap-2">{bottom}</div> : null}
           <TodayBar onToday={onToday}>
             {tags ? (
               <FoldPill
