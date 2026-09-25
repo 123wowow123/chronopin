@@ -35,6 +35,7 @@ import { TimeRangeSlider } from './TimeRangeSlider';
 import { TrendingPins } from './TrendingPins';
 import { useT } from '@/lib/client/i18n';
 import { withPageLang } from '@/lib/client/navigation';
+import type { SpecialtyDay } from '@/lib/specialtyDays';
 
 type Links = { previous?: string; next?: string };
 
@@ -126,7 +127,7 @@ export function Timeline({
   initialWithin: string | null;
   // The viewer's saved preference (or the site default): left out of the URL.
   defaultPostedWithin: string | null;
-  initialSpecialtyDays: Record<string, string[]>;
+  initialSpecialtyDays: Record<string, SpecialtyDay[]>;
   // When the server rendered, so "today" matches during hydration.
   serverNow: string;
   // The score a pin needs to show (the admin setting), or null to show every pin.

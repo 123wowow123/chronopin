@@ -11,7 +11,16 @@ import { DEFAULT_LOCALE, isLocale, type Locale } from '@/lib/i18n/config';
 import type { TranslationCoverage } from '@/lib/multilingual';
 import * as db from '../db';
 import { TARGET_LOCALES, translatePinText, type TargetLocale } from '../extract/translate';
-import PinTranslation, { sourceHash, TRANSLATED_FIELDS, type PinText, type TranslatedField } from '../model/pinTranslation';
+import PinTranslation, {
+  hasWords,
+  sourceHash,
+  TRANSLATED_FIELDS,
+  TRANSLATED_SHAPES,
+  translatesAll,
+  wholeTranslation,
+  type PinText,
+  type TranslatedField,
+} from '../model/pinTranslation';
 
 type Localizable = { id: number; title: string; originalTitle?: string; translatedTo?: string } & Partial<Record<Exclude<TranslatedField, 'title'>, unknown>>;
 
@@ -20,7 +29,9 @@ type Localizable = { id: number; title: string; originalTitle?: string; translat
 // it); translatedTo says a pin's words were swapped. Only the fields a pin
 // carries are swapped (a trending row has just a title). A translation counts
 // as current when it was made from the pin's words as stored now, so an edit
-// shows the new English until the new translation is in.
+// shows the new English until the new translation is in. A field whose
+// translation is not whole (a stray ",", a summary cut short) keeps its
+// English too.
 export async function localizePins<T extends Localizable>(pins: T[], locale: Locale): Promise<T[]> {
   if (locale === DEFAULT_LOCALE || !pins.length) return pins;
   const ids = [...new Set(pins.map((p) => p.id))];
@@ -31,7 +42,7 @@ export async function localizePins<T extends Localizable>(pins: T[], locale: Loc
     pin.originalTitle = pin.title;
     pin.title = row.title;
     for (const field of TRANSLATED_FIELDS) {
-      if (field !== 'title' && field in pin && pin[field] && row[field]) (pin as Record<string, unknown>)[field] = row[field];
+      if (field !== 'title' && field in pin && pin[field] && wholeTranslation(pin[field], row[field])) (pin as Record<string, unknown>)[field] = row[field];
     }
     pin.translatedTo = locale;
   }
@@ -67,8 +78,11 @@ export async function translatePin(
     );
     if (!pin) return 0;
     const hash = sourceHash(pin);
-    const existing = await db.query<{ locale: string; sourceHash: string }>(`SELECT "locale", "sourceHash" FROM "PinTranslation" WHERE "pinId" = $1`, [pinId]);
-    const fresh = new Set(existing.filter((row) => row.sourceHash.trim() === hash).map((row) => row.locale));
+    const existing = await db.query<{ locale: string; sourceHash: string } & Record<TranslatedField, unknown>>(
+      `SELECT "locale", "sourceHash", ${TRANSLATED_SHAPES} FROM "PinTranslation" WHERE "pinId" = $1`,
+      [pinId],
+    );
+    const fresh = new Set(existing.filter((row) => row.sourceHash.trim() === hash && translatesAll(pin, row)).map((row) => row.locale));
     const wanted = locales.filter((l) => force || !fresh.has(l));
     if (!wanted.length) return 0;
 
@@ -99,27 +113,31 @@ async function expirePin(pinId: number) {
 
 export type PinToTranslate = PinText & { id: number; sourceHash: string; locales: TargetLocale[] };
 
-// Live pins lacking a current translation in any of the languages, oldest
-// first, with their words and the hash a translation of them must carry: what
-// a translation by hand is made from.
+// Live pins lacking a current translation in any of the languages - or one
+// with no words for a field the pin has (translatesAll) - oldest first, with
+// their words and the hash a translation of them must carry: what a
+// translation by hand is made from.
 export async function pinsToTranslate(locales: readonly TargetLocale[], { limit = 100_000, after = 0 }: { limit?: number; after?: number } = {}): Promise<PinToTranslate[]> {
   const pins = await db.query<PinText & { id: number }>(
     `SELECT "id", "title", "description", "longFormSummary", "dateConfidenceReasoning", "delayReasoning" FROM "Pin" WHERE "utcDeletedDateTime" IS NULL AND "id" > $1 ORDER BY "id"`,
     [after],
   );
-  const have = await db.query<{ pinId: number; locale: string; sourceHash: string }>(
-    `SELECT "pinId", "locale", "sourceHash" FROM "PinTranslation" WHERE "locale" = ANY($1::text[])`,
+  const have = await db.query<{ pinId: number; locale: string; sourceHash: string } & Record<TranslatedField, unknown>>(
+    `SELECT "pinId", "locale", "sourceHash", ${TRANSLATED_SHAPES} FROM "PinTranslation" WHERE "locale" = ANY($1::text[])`,
     [locales],
   );
-  const current = new Map<number, Map<string, string>>();
+  const current = new Map<number, Map<string, typeof have[number]>>();
   for (const row of have) {
     if (!current.has(row.pinId)) current.set(row.pinId, new Map());
-    current.get(row.pinId)!.set(row.locale, row.sourceHash.trim());
+    current.get(row.pinId)!.set(row.locale, row);
   }
   const out: PinToTranslate[] = [];
   for (const pin of pins) {
     const hash = sourceHash(pin);
-    const missing = locales.filter((l) => current.get(pin.id)?.get(l) !== hash);
+    const missing = locales.filter((l) => {
+      const row = current.get(pin.id)?.get(l);
+      return !row || row.sourceHash.trim() !== hash || !translatesAll(pin, row);
+    });
     if (!missing.length) continue;
     const text: PinText = { title: pin.title };
     for (const field of TRANSLATED_FIELDS) if (field !== 'title' && pin[field]) text[field] = pin[field];
@@ -137,12 +155,13 @@ export async function translationCoverage(): Promise<TranslationCoverage> {
     db.query<PinText & { id: number }>(
       `SELECT "id", "title", "description", "longFormSummary", "dateConfidenceReasoning", "delayReasoning" FROM "Pin" WHERE "utcDeletedDateTime" IS NULL`,
     ),
-    db.query<{ pinId: number; locale: string; sourceHash: string }>(`SELECT "pinId", "locale", "sourceHash" FROM "PinTranslation"`),
+    db.query<{ pinId: number; locale: string; sourceHash: string } & Record<TranslatedField, unknown>>(`SELECT "pinId", "locale", "sourceHash", ${TRANSLATED_SHAPES} FROM "PinTranslation"`),
   ]);
-  const hashes = new Map(pins.map((pin) => [pin.id, sourceHash(pin)]));
+  const byId = new Map(pins.map((pin) => [pin.id, { pin, hash: sourceHash(pin) }]));
   const current = Object.fromEntries(TARGET_LOCALES.map((l) => [l, 0])) as Record<TargetLocale, number>;
   for (const row of rows) {
-    if (row.locale in current && hashes.get(row.pinId) === row.sourceHash.trim()) current[row.locale as TargetLocale]++;
+    const found = byId.get(row.pinId);
+    if (row.locale in current && found && found.hash === row.sourceHash.trim() && translatesAll(found.pin, row)) current[row.locale as TargetLocale]++;
   }
   return { total: pins.length, current };
 }
@@ -190,7 +209,7 @@ export async function applyTranslations(rows: TranslationInput[]): Promise<Apply
     for (const field of TRANSLATED_FIELDS) {
       if (field === 'title') continue;
       const value = row[field];
-      text[field] = pin[field] && typeof value === 'string' && value.trim() ? value : null;
+      text[field] = pin[field] && hasWords(value) ? value : null;
     }
     await PinTranslation.save(pin.id, row.locale, text, hash);
     touched.add(pin.id);

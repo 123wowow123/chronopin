@@ -10,6 +10,7 @@ import ja from './messages/ja';
 import zh from './messages/zh';
 import { CATEGORIES, slugify } from '../categories';
 import { createTranslator, type Messages } from './translate';
+import { markerLabel } from './labels';
 
 describe('splitLocale', () => {
   it('reads the language prefix off a path', () => {
@@ -204,5 +205,26 @@ describe('category labels', () => {
     const theirs = labels(en);
     const wrong = CATEGORIES.filter((category) => theirs[slugify(category)] !== category);
     expect(wrong).toEqual([]);
+  });
+});
+
+describe('marker labels', () => {
+  it('reads a holiday or astronomy marker by its English title, apostrophes and dots included', () => {
+    const t = createTranslator(zh as Messages, 'zh', en as Messages);
+    expect(['Yom Kippur', 'Fall Equinoxes', "New Year's Day", 'Martin Luther King Jr. Day'].map((title) => markerLabel(t, title))).toEqual([
+      '赎罪日',
+      '秋分',
+      '元旦',
+      '马丁·路德·金纪念日',
+    ]);
+  });
+
+  it('keeps a title the dictionaries lack', () => {
+    expect(markerLabel(createTranslator(zh as Messages, 'zh', en as Messages), 'Leap Day')).toBe('Leap Day');
+  });
+
+  it('names every marker in English under its own title', () => {
+    const t = createTranslator(en as Messages, 'en');
+    for (const title of Object.values(en.markers)) expect(markerLabel(t, title)).toBe(title);
   });
 });

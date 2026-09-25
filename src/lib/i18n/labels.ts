@@ -21,3 +21,9 @@ export function tagLabel(t: Translator, tag: { name: string; kind?: string }): s
   if (reserved) return t.dynamic(`reserved.${reserved.key}`, reserved.name);
   return kind === 'category' ? categoryLabel(t, tag.name) : tag.name;
 }
+
+// A holiday or astronomy marker's title ("Winter Solstice") in the page's
+// language. A title the dictionaries lack keeps its English.
+export function markerLabel(t: Translator, title: string): string {
+  return t.dynamic(`markers.${slugify(title)}`, title);
+}

@@ -8,12 +8,13 @@ import { DEFAULT_POSTED_WITHIN, isSpan, spanFromParam, spanToParam } from '@/lib
 import { toCardPins } from '@/lib/sanitize';
 import { websiteJsonLd } from '@/lib/seo';
 import { pinDayKey } from '@/lib/timeline';
-import specialtyDays from '@/server/data/specialtyDays.json';
+import { specialtyDaysOn } from '@/server/specialtyDays';
 import { newPins, pinById, TRENDING_DAYS, sliderTyping, tagList, timelinePage, timelineVideo, trendingPins, viewerPreference } from '@/server/services/pages';
 import { resolveCreatedSince } from '@/server/util/createdFilter';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
 import { alternates, getT, redirect } from '@/lib/i18n/server';
 import { connection } from 'next/server';
+import type { SpecialtyDay } from '@/lib/specialtyDays';
 
 type Props = PageProps<'/[lang]'>;
 
@@ -101,14 +102,13 @@ async function HomeTimeline({ searchParams }: Pick<Props, 'searchParams'>) {
   ]);
 
   // Only the specialty days this page shows; the rest load when scrolled to.
-  const days: Record<string, string[]> = {};
-  const all = specialtyDays as Record<string, string[]>;
+  const days: Record<string, SpecialtyDay[]> = {};
   for (const key of [
     ...page.pins.map((p) => monthDayOf(pinDayKey(p, timeZone))),
     ...page.dateTimes.map((d) => monthDayOf(dayKeyIn(d.utcStartDateTime, 'UTC'))),
     new Intl.DateTimeFormat('en-CA', { timeZone, month: '2-digit', day: '2-digit' }).format(new Date()).replace('/', '-'),
   ]) {
-    days[key] = all[key] || [];
+    days[key] = specialtyDaysOn(key, t.locale);
   }
 
   const firstDay = page.pins[0] && pinDayKey(page.pins[0], timeZone);

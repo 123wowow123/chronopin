@@ -77,6 +77,7 @@
     "wiki:export": "tsx scripts/wiki/export.ts",
     "wiki:apply": "tsx scripts/wiki/apply.ts",
     "specialty-days:build": "node scripts/specialtyDays/build.cjs",
+    "specialty-days:translate": "tsx scripts/specialtyDays/translate.ts",
     "favicon:build": "tsx scripts/favicon/build.ts"
   },
   "dependencies": {

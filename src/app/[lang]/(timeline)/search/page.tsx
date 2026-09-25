@@ -4,7 +4,8 @@ import { monthDayOf } from '@/lib/format';
 import { DEFAULT_POSTED_WITHIN, spanFromParam } from '@/lib/postedSpan';
 import { toCardPins } from '@/lib/sanitize';
 import { pinDayKey } from '@/lib/timeline';
-import specialtyDays from '@/server/data/specialtyDays.json';
+import { specialtyDaysOn } from '@/server/specialtyDays';
+import type { SpecialtyDay } from '@/lib/specialtyDays';
 import { searchPage, sliderTyping, tagList, timelineVideo } from '@/server/services/pages';
 import { parseSearchQuery } from '@/server/util/searchQuery';
 import { viewerTimeZone, viewerUser } from '@/server/viewer';
@@ -67,15 +68,14 @@ async function Results({ searchParams }: Pick<Props, 'searchParams'>) {
     tagList(),
   ]);
 
-  const all = specialtyDays as Record<string, string[]>;
-  const days: Record<string, string[]> = {};
+  const days: Record<string, SpecialtyDay[]> = {};
   for (const pin of page.pins) {
     const key = monthDayOf(pinDayKey(pin, timeZone));
-    days[key] = all[key] || [];
+    days[key] = specialtyDaysOn(key, t.locale);
   }
   const now = new Date();
   const today = new Intl.DateTimeFormat('en-CA', { timeZone, month: '2-digit', day: '2-digit' }).format(now).replace('/', '-');
-  days[today] = all[today] || [];
+  days[today] = specialtyDaysOn(today, t.locale);
   const searchedDays = parseSearchQuery(q).dates;
 
   return (

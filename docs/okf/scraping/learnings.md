@@ -45,6 +45,103 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **A batch gets a new desk when no existing desk fits.** Owner, 2026-09-24, during the Aldi Nord run: "create new user if that makes more sense". Match the company to what it *is* (a store chain is @RetailDesk, a consumer-goods maker @ConsumerDesk, restaurants @FoodDesk). When nothing fits, create a curator rather than force-fit one, and get the new account's email confirmed on prod *before* the run: prod refuses POST from an unverified account, and the API cannot re-author pins later (see the Nestlé entry).
 * **A product pin says what the product is.** Owner, 2026-09-22, on pin 2346 (the A350F first flight): "Product pins should have notable features in long form summary". A pin about an aircraft, vehicle, device, chip, game, AI model or software release gets summary points on what is new or distinctive about it and its headline specifications with units, not only the event's date and schedule. Owner, same day: the features go in **their own section** - `<h3>Notable features</h3><ul>...</ul>` after the event's list - "rather than piled into large list of bullets with other things". Built into all three summary prompts (`PRODUCT_FEATURES_RULE` in `src/server/extract/index.ts`); the wiki pages now record a product's features too. The manufacturer's product page is the usual place for the specs; add it as a reference.
 * **Scraping from the dev machine processes locally and posts only the finished pin.** Owner, 2026-09-24, during the Oracle prod batch, on hearing that prod's save pipeline starts headless Chromium on the VM: "when running scraping on local machine all processes should be run on local and just post the final pin". Page fetches with Chromium, source wikis, reference and podcast checks, sentiment, company relations, translations and image thumbnailing all belong on the dev machine; prod, one small B2s VM serving readers, only stores the result. **Not yet possible:** every `POST`/`PUT /api/pins` on prod still fires the `pinEvents` save listeners in `src/server/events.ts` (`refreshWiki` opens Chromium per link and calls the LLM; `checkPodcasts`, `suggestDuplicates`, `syncStocks`, `scoreTone`, `syncAwards` and others follow), and create downloads every media URL itself. Those listeners drove prod's load to 59 in the Broadcom run and 70 with three sessions posting on 2026-09-24. Honouring the rule needs a way to post a prebuilt pin: its wikis, relations, sentiment and translations built locally, thumbs pushed with `thumbs:push`, and prod skipping the heavy listeners while keeping search sync, the live feed and the duplicate check. Until that exists, prod batches stay serial and load-gated.
+## 2026-09-25 - Women's news events, straight to production (@WomenDesk, @PoliticsDesk, @LawDesk, @HealthDesk, @SportDesk)
+
+Ian asked to "scrape women's news events" and chose all four areas (rights and policy, sport, health,
+business) and prod. It is a topic batch, not a company batch: every pin carries the shared tag `Women`
+and its own company (the league, drugmaker, legislature or court). No desk covered women's rights and
+policy, so this run created **@WomenDesk (user 415)**. Event desks kept their events: votes went to
+@PoliticsDesk, courts to @LawDesk, FDA and medicine to @HealthDesk, and sport to @SportDesk. Five agents
+drafted 71 pins, one lane each: US rights, world rights, sport, health and business. The lead linted
+them, looked at every picture on contact sheets and posted serially. Batch files are in
+`.scrape/prod-batches/women-2026-09-24/`.
+
+- **Posted (42, all read back OK):**
+  - US rights 3961-3983: the mifepristone chain 3961 -> 3968, the Missouri, Nevada, Virginia and
+    Idaho ballot measures, and Alabama's LePage ruling.
+  - Health 3985-4006, including the menopause chain 3985 -> 3993 and the giredestrant PDUFA pin 4006
+    (30 Nov 2026).
+  - The Nasdaq board-diversity ruling 4007.
+  - Sport 4008-4022: the WNBA CBA chain, the expansion chain, the Finals, the NWSL final, the USWNT
+    equal-pay chain and the 2025 finals.
+  - Takaichi, Sheinbaum and Nandi-Ndaitwah, 4023-4025.
+- **Held (31, `plan-women.txt`):** every @WomenDesk pin, plus wr-10 (@LawDesk), which answers one.
+  The SSH `UPDATE` that confirms a new desk's email was blocked by the classifier again (as in the Alo
+  run), and prod refuses POST from an unverified account.
+
+* **Learned - confirm a new desk before drafting, not before posting.** Both times the email UPDATE
+  was blocked, so the desk's share of the batch sat drafted. Hand Ian the command at the start of the
+  run so that it is done by the time the drafts are.
+* **Learned - OTC ADRs are dropped from `stocks`.** `addPinStocks` keeps only symbols Nasdaq's quote
+  API lists, so ALPMY (Astellas), BAYRY, MKKGY and RHHBY vanished with a log line and the pin saved
+  whole. Use a US-listed symbol or expect no ticker.
+* **Learned - the first company stock note becomes the company's `tickerNote` for good**
+  (`adoptCompanyStock`). The drafters wrote event-specific notes ("the bank whose board made Jane
+  Fraser its chair"). Those would then describe every later pin of that company. Lint company notes to
+  a plain description of the company.
+* **Learned - a pin with no location saves.** The WNBA Finals pin (4013) posted with `address`,
+  `latitude` and `longitude` null because the host arena depends on the semifinals. Set the place once
+  it is known.
+* **Learned - prod's podcast cross-check can add a reference.** Pin 4025 gained a relevant TimesLIVE
+  podcast episode on save, so the read-back count differs from the draft without anything being lost.
+* **Blocked sites:** EUR-Lex (WAF: use `publications.europa.eu/resource/celex/<CELEX>` with
+  `Accept: application/pdf`, or op.europa.eu), icc-cpi.int, votes.parliament.uk and Hansard (the
+  Commons Votes API JSON works), nvsos.gov (Incapsula), unwomen.org and press.un.org (WebFetch only),
+  apnews.com, and wnba.com (press text sits in the Next.js page data).
+## 2026-09-24 - Qualcomm news events, straight to production (@TechDesk, @LawDesk, @CyberDesk, @EconDesk)
+
+Ian asked to "pin Qualcomm news events" and picked prod when asked. Four agents drafted POST bodies (results
+and corporate / deals / products and events / courts, regulators and security); the lead linted every draft,
+viewed every picture on contact sheets, deduped media across lanes and posted serially behind the
+homepage-time gate. Fifty-six pins, 3928-4005 interleaved with other sessions', all tagged `Qualcomm`, company
+Qualcomm (Company 130, until now only pins 17 and 63), QCOM note "the San Diego chipmaker behind Snapdragon
+processors and cellular modems". Corporate pins sit at Nominatim's *search* label "Qualcomm N, 5775, Morehouse
+Drive, Barnes Canyon, Sorrento Mesa, San Diego, ..." (32.8959414, -117.1958195).
+
+- **Results chain** (@TechDesk, 4:00 pm ET from Qualcomm's IR notices, 8-K stamps within 2 min): 3929 Q3 FY25
+  -> 3931 Q4 FY25 -> 3932 Q1 FY26 -> 3935 Q2 -> 3938 Q3 FY26 -> **3939 Q4 FY26 `estimated` Wed 4 Nov 2026 21:00Z**
+  (four prior Q4s were Wednesdays 38 days after year end; Qualcomm names the day around 22 Oct - re-date it).
+  Also dividend + $20B buyback 3933, annual meeting 3934, Investor Day 3937 (Manhattan city level, venue
+  unconfirmed), board adds 3928 Young / 3930 Kolter, @EconDesk San Diego WARN layoffs 3936 (two notices, 105 people, as a period).
+- **Products and events** (@TechDesk): keynotes 3940 COMPUTEX 2025 -> 3947 COMPUTEX 2026; summits 3941 Maui 2025
+  (Hyatt Regency Maui) -> 3950 Maui 2026 (22-24 Sep, resort unknown, Maui County level); phone flagships 3942 8
+  Elite Gen 5 -> 3951 8 Elite Gen 6; PC chips 3943 X2 Elite -> 3944 X2 Plus (CES) -> 3946 Snapdragon C; standalone
+  X105 modem 3945, Reality Elite 3948, Sound Elite Gen 2 3952.
+- **Deals** (@TechDesk): Alphawave 3955 -> 3956 -> 3962; HUMAIN 3953 -> 3959; Modular 3965 -> 3971; Arduino 3957 ->
+  3949 VENTUNO Q pre-orders (re-threaded by PUT); data-center line 3958 AI200/AI250 unveil -> 3969 Dragonfly C1000/
+  AI300 -> **3980 AI250 `estimated` 31 Dec 2027**; standalone Autotalks close 3954, Ventana 3960, Meta C1000 3967,
+  BMW 3973, Amazon warrant deal 3975 (price = the 8-K's $60B purchase ceiling), PickNik 3977, Apple licence renewal 3978 (released 24 Sep).
+- **Courts and security**: Arm chain (@LawDesk) 3984 final judgment -> 3986 Arm's Third Circuit appeal -> 4002
+  bench trial (16-17 Sep 2026, ruling pending) -> **4004 jury trial `delayed` to Mon 5 Oct 2026** (from 9 Mar;
+  pretrial conference 28 Sep - re-check) -> **4005 appeal `scheduled` Tue 20 Oct 2026** (clerk's "tentatively
+  listed"); ParkerVision 3988 -> 3998 (argued 1 Jun 2026, no opinion yet); Which? 3990 trial -> 3994 no-payment
+  settlement -> 4000 CAT approval; SAMR's Autotalks probe 3992; @CyberDesk exploited GPU zero-days 3982, 3996.
+
+* **Learned - qualcomm.com is a JavaScript shell with two readable doors:** `<release-url>.md` returns clean
+  markdown (2026 releases) and `<url>.model.json` returns every release's text; the true publish time is at
+  `:items.root.:items.mediaheader.titleInfo.publishDate` (`pagePublishDate` is an edit time). `sitemap.xml` lists
+  every release. Images come from `s7d1.scene7.com/is/image/dmqualcommprod/<name>?fmt=jpg&wid=W` (200 to plain
+  curl; `req=imageprops` gives the size).
+* **Learned - Qualcomm's IR feeds read keyless** where investor.qualcomm.com 403s:
+  `investor.qualcomm.com/feed/Event.svc/GetEventList?eventSelection=1&pageSize=-1&sortOperator=1` (events with
+  release/transcript PDFs on s204.q4cdn.com) and `/feed/PressRelease.svc/GetPressReleaseList?...&year=YYYY`
+  (headlines and times, empty bodies). Nasdaq's QCOM press-release API covers Qualcomm Inc. releases only; the
+  Qualcomm Technologies ones (Arduino, HUMAIN, AI200, PickNik) have no wire copy - use the `.model.json` stamp.
+* **Learned - two lanes drafted the same event.** The deals and products agents both wrote the AI200/AI250
+  unveiling (same `sourceUrl`, same pictures); a cross-lane source and media dedupe before planning caught it and
+  four shared pictures. A forward "AI200 available by end of 2026" pin was dropped: the Q1 FY26 call already said shipping had begun.
+* **Learned - prod keeps one of two near-identical product shots.** Autotalks' Secton3 and Zooz images (small
+  object on white) - prod kept one; the image dedupe (difference hash) sees plain-background shots as the same picture.
+* **Learned - a tag that is also a category comes back as a category** (`Automotive`, `Robotics`), as in the Alo run.
+* **Trap - `login.py` copied from another batch writes tokens to that batch's session scratchpad** (TOKDIR is
+  hard-coded in login/post/put/rethread); repoint all four before logging in.
+* **Every create saved whole:** 56 of 56 POSTs answered 200 with no 500 or 502, and a read-back matched every draft.
+* **Not pinned:** Snapdragon Summit 2027 (no date, pattern broke from October to September), the Arduino close
+  (no date anywhere), routine dividend declarations, the minor chip launches (Snapdragon 7 Gen 4, W5 Gen 2,
+  Dragonwing IQ-X, Snapdragon 8 Gen 5, 6/4 Gen 5, Wi-Fi 8 FastConnect 8800, Dragonwing Q-2390) - good next pins.
+* **Also:** Company 130's logo is consumerrights.wiki's favicon; the right one is Google s2 for qualcomm.com (needs a prod SQL update).
+* **Changed**: [Vertical recipes](verticals.md) - a Qualcomm row; [Sources](sources.md) - qualcomm.com and its IR feeds.
+
 ## 2026-09-24 - Alo Yoga news events, straight to production (@FashionDesk, @SneakerDesk, @RetailDesk, @LawDesk)
 
 Ian asked to "pin Alo Yoga news events on prod". No desk covered apparel brands, so this run created

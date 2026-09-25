@@ -34,6 +34,7 @@ import { TimeBlock, TodayMarker } from './TimeBlock';
 import { TimeRangeSlider } from './TimeRangeSlider';
 import { useT } from '@/lib/client/i18n';
 import { withPageLang } from '@/lib/client/navigation';
+import type { SpecialtyDay } from '@/lib/specialtyDays';
 
 type SortBy = 'date' | 'relevance';
 
@@ -139,7 +140,7 @@ export function SearchResults({
   searchedUser?: { id: number; userName: string };
   // The one company a company: search names, for the panel about it.
   searchedCompany?: SearchedCompany;
-  specialtyDays: Record<string, string[]>;
+  specialtyDays: Record<string, SpecialtyDay[]>;
   // The days a date: search keeps to; today is on the timeline only when it is one of them.
   searchedDays?: string[];
   error?: string;
