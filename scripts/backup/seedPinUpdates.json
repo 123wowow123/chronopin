@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "pinId": 3381,
+    "kind": "duplicate",
+    "userId": 76,
+    "relatedPinId": 4055,
+    "changes": [
+      {
+        "after": "2027-01-06T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-12-08T00:00:00.000Z"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.youtube.com/watch?v=Pk_RcYmnuHA",
+        "title": "LAX's SkyLink People Mover Could Open to Passengers on January 6",
+        "startDate": "2027-01-06",
+        "confidence": 40
+      },
+      {
+        "url": "https://www.yahoo.com/news/us/articles/troubled-lax-people-mover-delayed-100000590.html",
+        "title": "Troubled LAX People Mover delayed again — and it might not be the last time (Los Angeles Times)",
+        "startDate": "2027-01-06",
+        "confidence": 90,
+        "publishedDate": "2026-09-24"
+      },
+      {
+        "url": "https://laist.com/news/transportation/lax-people-mover-linxs-train",
+        "title": "More delays: LAX train contractor buys more time for testing (LAist)",
+        "confidence": 90,
+        "publishedDate": "2026-09-24"
+      },
+      {
+        "url": "https://mynewsla.com/traffic/2026/09/24/lax-officials-say-automated-people-mover-to-open-in-january/",
+        "title": "LAX People Mover to Open in January (MyNewsLA.com)",
+        "confidence": 75,
+        "publishedDate": "2026-09-24"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-25T17:06:09.200Z"
+  },
+  {
+    "id": 2,
+    "pinId": 3381,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "LAX's SkyLink Now Aims to Carry Passengers From January 6, Past Its December 8 Deadline",
+        "field": "title",
+        "before": "LAX's SkyLink Reaches Its December 8 Deadline to Carry Passengers"
+      },
+      {
+        "after": "The 2.25-mile LAX people mover, 99% complete but years late, had to enter passenger service by its 8 December 2026 longstop date; contractor LINXS now says service could begin on 6 January 2027, with \"no assurances\" it will not slip again.",
+        "field": "description",
+        "before": "The 2.25-mile LAX people mover, 99% complete but years late, must enter passenger service by its project longstop date of 8 December 2026 or its developer LINXS risks a technical default on $1.2 billion of bonds."
+      },
+      {
+        "after": "<ul><li>In a 16 September disclosure filing, LINXS said it will need time beyond the 8 December completion deadline; if all goes well the train could be running by 6 January 2027, though \"there can be no assurances\" the date will not slip further<cite data-ref=\"https://www.yahoo.com/news/us/articles/troubled-lax-people-mover-delayed-100000590.html\"></cite></li><li>Before opening, the train must pass 30 consecutive days of testing, an independent review and an assessment by Los Angeles World Airports, and a utility agreement with the Los Angeles Department of Water and Power must be completed<cite data-ref=\"https://www.yahoo.com/news/us/articles/troubled-lax-people-mover-delayed-100000590.html\"></cite><cite data-ref=\"https://mynewsla.com/traffic/2026/09/24/lax-officials-say-automated-people-mover-to-open-in-january/\"></cite></li><li>Recent testing was paused twice to fix track components that \"accommodate movement resulting from temperature changes, seismic activity and normal structural behavior\"<cite data-ref=\"https://laist.com/news/transportation/lax-people-mover-linxs-train\"></cite></li><li>Bondholders agreed to push the lender longstop date on the SkyLink bonds back to December, lining it up with the construction longstop and averting a technical default that would have been triggered in October<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite></li><li>Fitch's Seth Lehman said the best case is a 30-day commissioning test starting by the end of September, a utility agreement and public service beginning by December 8, \"but it's very tight\"; a delay beyond December would need LAWA's consent<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite></li><li>The project is more than 99% complete, and a dispute over the interconnection agreement with the Los Angeles Department of Water and Power, which LAX has not signed, remains; the developer has money for debt service only into early to mid-2027<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite></li><li>The California Municipal Finance Authority issued $1.2 billion of bonds for LINXS in 2018; Fitch cut them to BB in July 2026 after LINXS sued the city on July 9<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite></li><li>Construction was first due in March 2023; systems demonstration testing began on April 21, 2026, and the project longstop date is December 8, 2026<cite data-ref=\"https://en.wikipedia.org/wiki/SkyLink_(Los_Angeles_International_Airport)\"></cite></li><li>An August 2026 report had the $3.34 billion system targeting passenger service in October 2026<cite data-ref=\"https://www.yahoo.com/news/us/articles/lax-people-mover-sets-opening-211545779.html\"></cite></li></ul><h3>Notable features</h3><ul><li>A 2.25-mile driverless train with six stations linking the terminals, the LAX/Metro Transit Center and the Rental Car Center<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite><cite data-ref=\"https://en.wikipedia.org/wiki/SkyLink_(Los_Angeles_International_Airport)\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Bondholders agreed to push the lender longstop date on the SkyLink bonds back to December, lining it up with the construction longstop and averting a technical default that would have been triggered in October<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite></li><li>Fitch's Seth Lehman said the best case is a 30-day commissioning test starting by the end of September, a utility agreement and public service beginning by December 8, \"but it's very tight\"; a delay beyond December would need LAWA's consent<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite></li><li>The project is more than 99% complete, and a dispute over the interconnection agreement with the Los Angeles Department of Water and Power, which LAX has not signed, remains; the developer has money for debt service only into early to mid-2027<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite></li><li>The California Municipal Finance Authority issued $1.2 billion of bonds for LINXS in 2018; Fitch cut them to BB in July 2026 after LINXS sued the city on July 9<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite></li><li>Construction was first due in March 2023; systems demonstration testing began on April 21, 2026, and the project longstop date is December 8, 2026<cite data-ref=\"https://en.wikipedia.org/wiki/SkyLink_(Los_Angeles_International_Airport)\"></cite></li><li>An August 2026 report had the $3.34 billion system targeting passenger service in October 2026<cite data-ref=\"https://www.yahoo.com/news/us/articles/lax-people-mover-sets-opening-211545779.html\"></cite></li></ul><h3>Notable features</h3><ul><li>A 2.25-mile driverless train with six stations linking the terminals, the LAX/Metro Transit Center and the Rental Car Center<cite data-ref=\"https://www.bondbuyer.com/news/bondholders-agree-to-ease-key-deadline-for-lax-people-mover\"></cite><cite data-ref=\"https://en.wikipedia.org/wiki/SkyLink_(Los_Angeles_International_Airport)\"></cite></li></ul>"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-25T17:06:37.746Z"
+  }
+]
