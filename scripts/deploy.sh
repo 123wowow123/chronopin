@@ -12,11 +12,14 @@ HOST=azureuser@20.109.175.187
 KEY="$HOME/.ssh/chronopin_azure"
 cd "$(dirname "$0")/.."
 
-git diff --quiet HEAD || echo "Note: uncommitted changes are not deployed; deploying $(git rev-parse --short HEAD)."
+# The commit is fixed here, as the archive is made: HEAD can move while the
+# build runs (another commit, another session), and that is not what went out.
+rev=$(git rev-parse --short HEAD)
+git diff --quiet HEAD || echo "Note: uncommitted changes are not deployed; deploying $rev."
 
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
-git archive HEAD | tar -x -C "$tmp"
+git archive "$rev" | tar -x -C "$tmp"
 
 # The VM's env files and the gitignored seed of user accounts live only there.
 rsync -az --delete -e "ssh -i $KEY" \
@@ -28,4 +31,6 @@ rsync -az --delete -e "ssh -i $KEY" \
 # file creates, such as PinBaseCache.
 services=${*:-app}
 ssh -i "$KEY" "$HOST" "cd chronopin && C='docker compose -f Docker/docker-compose.prod.yml' && \$C --profile tools build tools && \$C --profile tools run --rm tools npm run create:db && \$C up -d --build $services"
-echo "Deployed $(git rev-parse --short HEAD)."
+echo "Deployed $rev."
+# Always ship the latest HEAD: a commit made during the build needs another run.
+[ "$(git rev-parse --short HEAD)" = "$rev" ] || echo "HEAD is now $(git rev-parse --short HEAD), not $rev - run npm run deploy again."
