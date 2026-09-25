@@ -191,6 +191,7 @@ const zh: Messages = {
     pinsAfter: '{date}之后的图钉',
     moonLit: '{phase}（照亮 {percent}%）',
     viewAll: '查看全部 {count} 个图钉',
+    backToTimeline: '返回时间线',
     // Beside "View all": pins the day gained since this browser last saw it.
     newPins: '新增 {count}',
     morePinsOfThis: '个相同的图钉',

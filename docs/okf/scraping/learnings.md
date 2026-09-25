@@ -139,8 +139,17 @@ Lululemon, Vuori, Alo and Oracle sessions posted too. Sixty-two pins, 3709-3918 
 * **Traps:** a waiter written as `while pgrep -f 'run.py plan-x'` matches its own `sh -c` command line and
   waits forever - wait on a PID instead; businesswire.com and investors.nike.com (Cloudflare) are walled,
   Nasdaq's `/press-release/` copies carry the minute; kgw.com, wreg.com, sneakernews.com and soleretriever.com 403.
-* **Not pinned:** Nike's data breach (Jan 2026, In re Nike Data Breach in D. Or.; a @CyberDesk pin), the
-  Federal Circuit PTAB affirmances in the Lululemon fight, the University of Miami deal (announced 18 Sep 2026,
+* **Follow-ups the same day:** the data breach - 3924 WorldLeaks' leak-site claim (22 Jan, @CyberDesk,
+  **standalone**: Nike never tied the gang's 1.4TB design-file dump to the customer breach, only a plaintiff's
+  complaint says it "may have been responsible") and the thread 3925 customer notices (25 Feb; vendor portal
+  breach found 21 Jan, no count published) -> 3926 first class action (Widmia, 4 Mar, @LawDesk) -> 3927
+  consolidation (30 Apr; a ruling on Nike's 17 July motion to dismiss answers it). No regulator filing
+  exists anywhere reachable (Maine's list is offline, CA/WA have none) and no 8-K Item 1.05. And the 13 May
+  2026 Federal Circuit Rule 36 affirmance on Nike's '220 workout-sharing patent (3923, @LawDesk, company
+  Lululemon) slotted into the Lululemon session's thread: 3815 -> **3923** -> 3820 (re-threaded by whole-pin
+  PUT) -> 3823. The court's WordPress JSON (`cafc.uscourts.gov/wp-json/wp/v2/posts?after=...`) lists
+  opinions and Rule 36 judgments where the JavaScript listing page doesn't.
+* **Not pinned:** the University of Miami deal (announced 18 Sep 2026,
   from July 2027; thin media), the NFL Rivalries uniforms, the Keely Hodgkinson collection, the 2026
   sustainability update, the NY WARN notice (source unreachable).
 * **Feedback**: none yet.
@@ -383,6 +392,40 @@ batch is cached in `.scrape/prod-batches/salesforce-2026-09-24/`.
 * **Feedback**: none yet.
 * **Changed**: [Vertical recipes](verticals.md) - a Salesforce row; [Sources](sources.md) - Salesforce's
   newsroom API and the Washington WARN database.
+
+## 2026-09-24 - Media top-up of the next 90 days' sparse pins, on production
+
+Ian: "do this for other pins not in this pinning session" (the New York media top-up), scoped by him to
+curator pins dated 24 Sep - 23 Dec 2026 with fewer than 3 media (his own accounts skipped). 195 pins: the
+local DB (to 2993) gave the candidates, each re-checked on prod, plus a prod GET scan of 2994+. Eight agents
+proposed media per vertical into files; the lead viewed every picture on contact sheets and applied them
+by a GET -> PUT round trip (`tags` dropped so the pin keeps its own, media `type` cast to a number, new media
+appended; references, merchants, categories and parentId sent back as they came - a before/after diff of
+the first pin showed references identical apart from ids). Result: 172 of 195 at 3+ media (was 0), 150
+with a video; 23 stay under 3 where nothing real exists yet (forward earnings, OpenAI retirements, markets).
+
+* **Fixes Ian approved on the way:** wrong pictures removed from 571 (a Dubai route map on JFK), 2274 (a
+  logo), 334 (a different Rotel amplifier), 296 (an NES on an N64 remake) and 2428 (King Charles's ceremony
+  on Xi's); re-upload trailers swapped for the official channel's on 860, 861, 1700, 876 and 395; 2522 Fury v
+  Joshua re-dated to Fri 11 Dec (Sky Sports, 24 Sep; main event early Saturday); 2468 Windows 10 consumer
+  ESU moved to 12 Oct 2027 (`delayed` from 13 Oct 2026, per microsoft.com).
+* **Learned - where media come from, by vertical.** TV: TVmaze `/shows/<id>/images` (keyless; its
+  backgrounds are often the poster's photo turned landscape - compare first). Anime: MAL `/_/pics` and
+  `/_/video` with a browser UA (Jikan 504'd), the official site's slideshow (check each slide's season),
+  eiga.com full-size visuals. Products: Shopify `/products/<handle>.json` lists every image with its size;
+  pr.co press kits (Sonos). Space: SpaceX's keyless `content.spacex.com/api/spacex-website/missions/<slug>`,
+  NASA `images-api.nasa.gov`. Places: Commons geosearch at the pin's coordinates and Wikidata images beat
+  Commons full-text search. YouTube: `ytInitialData` from the results page, oEmbed `author_url` to confirm
+  the channel.
+* **Learned - reject on sight:** re-upload channels (AnimeSelect, KinoCheck, fan "Season N trailer"
+  channels, off-air rips), Polymarket `api/og` cards (they freeze that day's odds), abstract OpenAI launch
+  cards with no content, a video about a different race/quarter/edition, one candidate's picture on an
+  open race, embeds disabled (oEmbed 401), a vertical Short where a landscape clip exists.
+* **Learned - running long PUT queues against prod.** A save takes 1-2 minutes on the B2s and other sessions
+  pushed load to 20 (502s) mid-run, so: gate each GET and PUT on load < 3, retry a failed GET, catch a
+  network error on PUT as a logged failure instead of crashing the run, re-login a desk on 401 (tokens
+  expire after ~5 h), keep a done-file and finish with one catch-up pass over everything (it picked up the
+  11 + 15 pins two crashed runs never reached, and "nothing new" showed which 502'd PUTs had saved anyway).
 
 ## 2026-09-24 - New York news events, straight to production (@CityDesk, @LawDesk, @PoliticsDesk, @SportDesk, @BuildDesk, @ClimateDesk)
 

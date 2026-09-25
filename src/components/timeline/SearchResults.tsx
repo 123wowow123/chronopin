@@ -10,6 +10,7 @@ import { useBlocks } from '@/lib/client/blocks';
 import { useLeftOut } from '@/lib/client/leftOut';
 import { useSession } from '@/lib/client/session';
 import { UserAvatar } from '@/components/ui/UserAvatar';
+import { BackToTimeline } from './BackToTimeline';
 import { parseLinkHeader } from '@/lib/client/api';
 import { createPageAhead } from '@/lib/client/pageAhead';
 import { type CardSpot, takeSearchSpot } from '@/lib/client/returnSpot';
@@ -485,7 +486,14 @@ export function SearchResults({
           summary={searchedUser ? searchedUser.userName : searchedCompany ? searchedCompany.name : spanLabel(postedWithin, t.locale)}
           summaryIsPostedWithin={!searchedUser && !searchedCompany}
           onToday={sortBy === 'date' && bags.length ? holdNow : undefined}
-          sort={canSort ? <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" /> : undefined}
+          sort={
+            canSort ? (
+              <>
+                <BackToTimeline className="self-start max-xl:hidden" />
+                <SortToggle value={sortBy} onChange={changeSort} className="floating max-xl:hidden" />
+              </>
+            ) : undefined
+          }
           bottom={canSort ? <SortToggle compact value={sortBy} onChange={changeSort} className="floating" /> : undefined}
           tags={{
             summary: tagPillSummary(query, t.locale),
@@ -549,9 +557,16 @@ export function SearchResults({
             the thumb and opposite "Today" (the `bottom` control above). */}
         {canSort ? (
           <div data-sticky-sort className="sticky top-[52px] z-20 -mx-3 flex justify-center bg-header/85 px-3 py-2 shadow-[0_1px_0_var(--color-line)] backdrop-blur-md max-lg:hidden lg:-mx-4 xl:hidden">
+            <BackToTimeline className="absolute top-1/2 left-3 -translate-y-1/2 lg:left-4" />
             <SortToggle value={sortBy} onChange={changeSort} className="w-full max-w-sm rounded-xl bg-field ring-1 ring-line ring-inset" />
           </div>
         ) : null}
+
+        {/* The way back to the timeline, where "View all" opened this day: in
+            the sticky sort bar between lg and xl and at the head of the
+            floating controls from xl, so it rides under the header on its own
+            only where neither is (a phone, or a search that cannot sort). */}
+        <BackToTimeline className={`sticky top-[60px] z-20 mb-2 w-fit ${canSort ? 'lg:hidden' : ''}`} />
 
         {shown?.status === 'loading' || restoring ? (
           <p className="mt-16 text-center text-lg text-subtle" role="status">

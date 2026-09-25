@@ -4,6 +4,7 @@ import Link from '@/components/ui/Link';
 import { useRef } from 'react';
 import { BAG_LIMIT, BAG_LIMIT_PHONE, sampleBag } from '@/lib/bagSample';
 import { useDayNews } from '@/lib/client/dayNews';
+import { leaveTimelineForDay } from '@/lib/client/dayReturn';
 import { useImpression } from '@/lib/client/impressions';
 import { stackDuplicates, type PinStack } from '@/lib/duplicates';
 import { formatDayKey, lunarDate, moonPhase, timespan, weekdayPlanet } from '@/lib/format';
@@ -314,6 +315,8 @@ function ShowMore({ href, total, fresh, hiddenFrom }: { href: string; total: num
     <div className={`mb-2.5 flex justify-center lg:ml-[170px] ${rowWidth} ${hiddenFrom}`}>
       <Link
         href={href}
+        // Marks the trip, so the day's search offers the way back to this spot.
+        onClick={() => leaveTimelineForDay(href)}
         className="flex items-center gap-2 rounded-full px-3 py-1 text-sm font-medium text-subtle tabular-nums ring-1 ring-line ring-inset transition-colors hover:bg-raised hover:text-link hover:no-underline active:bg-raised-2"
       >
         {t('timeline.viewAll', { count: total })}

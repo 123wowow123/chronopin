@@ -10,6 +10,7 @@ import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
 import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
 import { takeTimelineSpot } from '@/lib/client/returnSpot';
+import { settleDayTrip } from '@/lib/client/dayReturn';
 import { useTodayHold } from '@/lib/client/todayHold';
 import { useQueryState } from '@/lib/client/urlState';
 import { viewerPlace, type ViewerPlace } from '@/lib/client/viewerPlace';
@@ -344,6 +345,12 @@ export function Timeline({
   }, [reachesToday, holdToday, postedWithin, defaultPostedWithin, radiusKm, imperial, router]);
   // After the effect above, so the position it records on mount is today's.
   useManualScrollRestoration();
+
+  // Showing again (or for the first time), the timeline ends any trip out to
+  // a day's search: that page's pill back is for while it is behind it.
+  useEffect(() => {
+    settleDayTrip();
+  }, []);
 
   // Keep the view still when a page is added above it.
   useLayoutEffect(() => {

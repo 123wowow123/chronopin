@@ -191,6 +191,8 @@ const en = {
     pinsAfter: 'Pins after {date}',
     moonLit: '{phase} ({percent}% lit)',
     viewAll: { one: 'View all {count} pin', other: 'View all {count} pins' },
+    // On a day's search opened from "View all": back to the spot on the timeline.
+    backToTimeline: 'Back to timeline',
     // Beside "View all": pins the day gained since this browser last saw it.
     newPins: { one: '{count} new', other: '{count} new' },
     morePinsOfThis: { one: 'more pin of this', other: 'more pins of this' },

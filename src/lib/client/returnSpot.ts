@@ -59,22 +59,35 @@ export function logoutHrefHere(): string {
   return `/logout?referrer=${encodeURIComponent(localizePath(saveSpotHere(), locale))}`;
 }
 
+// The timeline's spot right now, unsaved: the card at the top of the window,
+// and the timeline opened on it (?pin=) as the page to put it back on.
+export function timelineSpotHere(): { spot: CardSpot | null; href: string } {
+  const { search } = window.location;
+  const spot = cardAtTop();
+  if (!spot) return { spot, href: `/${search}` };
+  const params = new URLSearchParams(search);
+  // The pin decides the pages loaded; a page cursor would only disagree.
+  params.delete('from_date_time');
+  params.delete('last_pin_id');
+  params.set('pin', String(spot.pinId));
+  return { spot, href: `/?${params}` };
+}
+
+// A spot kept elsewhere, left for the page `href` to take as it opens.
+export function keepSpot(spot: CardSpot, href: string) {
+  save(spot, href);
+}
+
 // Saves the spot on this page, and answers the page to come back to.
 function saveSpotHere(): string {
   const { search } = window.location;
   const pathname = appPathname();
   let href = pathname + search;
   let spot: CardSpot | MapSpot | null = null;
-  if (pathname === '/' || pathname === '/search') {
+  if (pathname === '/') {
+    ({ spot, href } = timelineSpotHere());
+  } else if (pathname === '/search') {
     spot = cardAtTop();
-    if (spot && pathname === '/') {
-      const params = new URLSearchParams(search);
-      // The pin decides the pages loaded; a page cursor would only disagree.
-      params.delete('from_date_time');
-      params.delete('last_pin_id');
-      params.set('pin', String(spot.pinId));
-      href = `/?${params}`;
-    }
   } else if (pathname === '/map' && mapView) {
     spot = { kind: 'map', ...mapView() };
   }

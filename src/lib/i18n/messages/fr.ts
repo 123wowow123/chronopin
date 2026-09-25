@@ -190,6 +190,7 @@ const fr: Messages = {
     pinsAfter: 'Épingles après le {date}',
     moonLit: '{phase} ({percent} % éclairée)',
     viewAll: { one: 'Voir {count} épingle', other: 'Voir les {count} épingles' },
+    backToTimeline: 'Retour à la chronologie',
     // Beside "View all": pins the day gained since this browser last saw it.
     newPins: { one: '{count} nouvelle', other: '{count} nouvelles' },
     morePinsOfThis: { one: 'autre épingle de ceci', other: 'autres épingles de ceci' },

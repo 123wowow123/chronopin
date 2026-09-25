@@ -190,6 +190,7 @@ const ja: Messages = {
     pinsAfter: '{date}より後のピン',
     moonLit: '{phase}（輝面 {percent}%）',
     viewAll: '{count} 件のピンをすべて見る',
+    backToTimeline: 'タイムラインに戻る',
     // Beside "View all": pins the day gained since this browser last saw it.
     newPins: '新着 {count}',
     morePinsOfThis: '件の同じピン',
