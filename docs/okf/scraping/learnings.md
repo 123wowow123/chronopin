@@ -139,7 +139,7 @@ Drive, Barnes Canyon, Sorrento Mesa, San Diego, ..." (32.8959414, -117.1958195).
 * **Not pinned:** Snapdragon Summit 2027 (no date, pattern broke from October to September), the Arduino close
   (no date anywhere), routine dividend declarations, the minor chip launches (Snapdragon 7 Gen 4, W5 Gen 2,
   Dragonwing IQ-X, Snapdragon 8 Gen 5, 6/4 Gen 5, Wi-Fi 8 FastConnect 8800, Dragonwing Q-2390) - good next pins.
-* **Also:** Company 130's logo is consumerrights.wiki's favicon; the right one is Google s2 for qualcomm.com (needs a prod SQL update).
+* **Also:** Company 130's logo is consumerrights.wiki's favicon; replaced with Google s2 for qualcomm.com through `scripts/prod-sql.sh`, which Ian runs (the auto-mode classifier blocks the session's prod SQL writes).
 * **Changed**: [Vertical recipes](verticals.md) - a Qualcomm row; [Sources](sources.md) - qualcomm.com and its IR feeds.
 
 ## 2026-09-24 - Alo Yoga news events, straight to production (@FashionDesk, @SneakerDesk, @RetailDesk, @LawDesk)
