@@ -442,6 +442,15 @@ export function timeAgo(
 // today, and on the day itself started is false, so it reads "Starts today".
 // A year or more off it switches to years, one decimal place ("in 4586.7
 // years"), rather than a day count too long to read.
+// timeAgo for an all-day pin, counted in the viewer's calendar days from local
+// midnight of its date: "today", "yesterday", "3 days ago". Its UTC instant
+// would read "yesterday" all day west of Greenwich.
+export function dayAgo(dayStartMs: number, now: number, locale: Locale = 'en'): string {
+  const today = new Date(now);
+  const days = Math.round((dayStartMs - new Date(today.getFullYear(), today.getMonth(), today.getDate()).getTime()) / DAY_MS);
+  return Math.abs(days) < 30 ? relativeFormat(locale).format(days, 'day') : timeAgo(new Date(dayStartMs), now, locale);
+}
+
 export function startsWhen(utcStartDateTime: string, allDay: boolean | undefined, now: number, locale: Locale = 'en'): { started: boolean; when: string } {
   const start = new Date(utcStartDateTime);
   let days: number;

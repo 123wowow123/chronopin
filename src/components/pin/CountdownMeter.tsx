@@ -1,7 +1,7 @@
 'use client';
 
 import { useNow } from '@/lib/client/now';
-import { dayKeyOf, dayKeyParts, formatDayKey, timeAgo } from '@/lib/format';
+import { dayAgo, dayKeyOf, dayKeyParts, formatDayKey, timeAgo } from '@/lib/format';
 import { delayLabel } from '@/lib/delay';
 import { useT } from '@/lib/client/i18n';
 import type { Translator } from '@/lib/i18n/translate';
@@ -116,7 +116,7 @@ export function CountdownMeter({ start, since, allDay, originalStart }: { start:
         )}
       </div>
       {started ? (
-        <span className="text-subtle">{t('countdown.startedAgo', { ago: timeAgo(start, now, t.locale) })}</span>
+        <span className="text-subtle">{t('countdown.startedAgo', { ago: allDay ? dayAgo(startMs, now, t.locale) : timeAgo(start, now, t.locale) })}</span>
       ) : (
         <span className="font-mono text-sm text-future tabular-nums">
           {Math.floor(remaining / DAY) > 0 ? <b className="mr-1">{t('countdown.days', { count: Math.floor(remaining / DAY) })}</b> : null}
