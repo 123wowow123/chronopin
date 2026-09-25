@@ -56,7 +56,7 @@ drafted 71 pins, one lane each: US rights, world rights, sport, health and busin
 them, looked at every picture on contact sheets and posted serially. Batch files are in
 `.scrape/prod-batches/women-2026-09-24/`.
 
-- **Posted (42, all read back OK):**
+- **Event desks (42):**
   - US rights 3961-3983: the mifepristone chain 3961 -> 3968, the Missouri, Nevada, Virginia and
     Idaho ballot measures, and Alabama's LePage ruling.
   - Health 3985-4006, including the menopause chain 3985 -> 3993 and the giredestrant PDUFA pin 4006
@@ -65,9 +65,13 @@ them, looked at every picture on contact sheets and posted serially. Batch files
   - Sport 4008-4022: the WNBA CBA chain, the expansion chain, the Finals, the NWSL final, the USWNT
     equal-pay chain and the 2025 finals.
   - Takaichi, Sheinbaum and Nandi-Ndaitwah, 4023-4025.
-- **Held (31, `plan-women.txt`):** every @WomenDesk pin, plus wr-10 (@LawDesk), which answers one.
-  The SSH `UPDATE` that confirms a new desk's email was blocked by the classifier again (as in the Alo
-  run), and prod refuses POST from an unverified account.
+- **@WomenDesk (29, 4026-4054), posted once Ian confirmed the desk on 2026-09-25:** Alabama's IVF law
+  (answers 3983), Texas HB 7, the White House IVF chain, the EU board-quota and pay-transparency chains,
+  Goldman (answers 4007), the Fortune 500 counts, Bumble, Goldin, Fraser and Carter, and the world
+  rights pins: France, the UK decriminalisation vote -> Act, Italy's femicide law, the EU violence
+  directive deadline, the Taliban law -> ICC warrants (@LawDesk), CSW70 -> CSW71, Iceland and Mohammadi.
+  All 71 read back matching their drafts. The SSH `UPDATE` that confirms a new desk's email was blocked
+  by the classifier twice, as in the Alo run, so these waited drafted until Ian ran it.
 
 * **Learned - confirm a new desk before drafting, not before posting.** Both times the email UPDATE
   was blocked, so the desk's share of the batch sat drafted. Hand Ian the command at the start of the
@@ -82,8 +86,9 @@ them, looked at every picture on contact sheets and posted serially. Batch files
 * **Learned - a pin with no location saves.** The WNBA Finals pin (4013) posted with `address`,
   `latitude` and `longitude` null because the host arena depends on the semifinals. Set the place once
   it is known.
-* **Learned - prod's podcast cross-check can add a reference.** Pin 4025 gained a relevant TimesLIVE
-  podcast episode on save, so the read-back count differs from the draft without anything being lost.
+* **Learned - prod can add a reference on save.** Pin 4025 gained a relevant TimesLIVE podcast episode,
+  so a read-back count one above the draft is not a fault. (4016's extra Sky Sports reference was added
+  by hand: its fee was GBP, not the EUR Al Jazeera printed.)
 * **Blocked sites:** EUR-Lex (WAF: use `publications.europa.eu/resource/celex/<CELEX>` with
   `Accept: application/pdf`, or op.europa.eu), icc-cpi.int, votes.parliament.uk and Hansard (the
   Commons Votes API JSON works), nvsos.gov (Incapsula), unwomen.org and press.un.org (WebFetch only),
