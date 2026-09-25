@@ -15,6 +15,16 @@ export function isVideo(medium: MediumJson): boolean {
   return String(medium.type) === '3' && !!medium.html;
 }
 
+// Whether PinMedia has anything to draw for a medium, from its fields alone: a
+// tweet or player needs its html, a video's still its thumb, a picture a thumb
+// or an original. Only a load failure is left to find out in the browser.
+function drawable(medium: MediumJson, poster?: boolean): boolean {
+  const type = String(medium.type);
+  if (type === '2') return !!medium.html;
+  if (type === '3') return !!medium.html && (!poster || !!medium.thumbName);
+  return type === '1' && !!(medium.thumbName || medium.originalUrl);
+}
+
 // One of a pin's media: its image thumbnail (falling back to the original
 // when the thumb is missing), a tweet, or a YouTube player. With `poster` a
 // video shows its stored still instead of loading the player.
@@ -205,9 +215,13 @@ export function PinMediaFrame({
   const [activeKey, setActiveKey] = useState<string>();
   const t = useT();
 
+  // Media with nothing to draw are left out here rather than reported missing
+  // by an effect: the server would draw an empty frame (and the place row a
+  // missing picture puts above it), and the card would grow by a picture once
+  // the browser hydrated and moved on to the next medium.
   const slides = videosFirst(media)
     .map((medium, i) => ({ medium, key: String(medium.id ?? medium.originalUrl ?? medium.thumbName ?? i) }))
-    .filter((slide) => !missing.has(slide.key));
+    .filter((slide) => drawable(slide.medium, poster) && !missing.has(slide.key));
   if (!slides.length) {
     return fallback;
   }

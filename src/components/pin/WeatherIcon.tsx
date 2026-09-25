@@ -10,7 +10,8 @@ import { useT } from '@/lib/client/i18n';
 // at least one Open-Meteo call on the server.
 export function WeatherIcon({ pinId, hasPlace }: { pinId: number; hasPlace: boolean }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const [weather, setWeather] = useState<ReturnType<typeof formatWeather> | null>(null);
+  // Undefined while loading, null when there is none.
+  const [weather, setWeather] = useState<ReturnType<typeof formatWeather> | null>();
   const t = useT();
 
   useEffect(() => {
@@ -22,7 +23,7 @@ export function WeatherIcon({ pinId, hasPlace }: { pinId: number; hasPlace: bool
         if (entries.some((e) => e.isIntersecting)) {
           observer.disconnect();
           loadWeather(pinId).then((w) => {
-            if (!cancelled && w) setWeather(formatWeather(w, usesImperial(), t));
+            if (!cancelled) setWeather(w ? formatWeather(w, usesImperial(), t) : null);
           });
         }
       },
@@ -35,17 +36,16 @@ export function WeatherIcon({ pinId, hasPlace }: { pinId: number; hasPlace: bool
     };
   }, [pinId, hasPlace, t]);
 
-  if (!hasPlace) return null;
-  // Until the weather loads the span is empty but still watched, so it sits out
-  // of the flex row (absolute) rather than adding a second gap between its neighbours.
+  if (!hasPlace || weather === null) return null;
+  // Until the weather loads the span is empty but still watched, and holds
+  // about an icon and "86°" of room: arriving in a row that was already full,
+  // the weather would wrap the pills after it and push the rest of the card
+  // down. It only fails to arrive when the lookup errors.
+  if (!weather) return <span ref={ref} aria-hidden className="h-4 w-9" />;
   return (
-    <span ref={ref} className="inline-flex items-center gap-1 text-xs text-muted empty:absolute" title={weather?.summary}>
-      {weather ? (
-        <>
-          <Icon name={weather.icon} className={`size-3.5 ${weather.kind === 'typical' ? 'text-subtle' : 'text-warning'}`} />
-          {weather.high ? <span>{weather.high}</span> : null}
-        </>
-      ) : null}
+    <span ref={ref} className="inline-flex items-center gap-1 text-xs text-muted" title={weather.summary}>
+      <Icon name={weather.icon} className={`size-3.5 ${weather.kind === 'typical' ? 'text-subtle' : 'text-warning'}`} />
+      {weather.high ? <span>{weather.high}</span> : null}
     </span>
   );
 }
