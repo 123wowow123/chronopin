@@ -4,6 +4,7 @@ import log from '../util/log';
 import { addReferences } from './addReferences';
 import { UPDATE_GRACE_MS } from '@/lib/dateClaims';
 import { compareDayKeys, dayKeyIn } from '@/lib/format';
+import { MAX_ADDED_REFERENCES } from '@/lib/duplicateDraft';
 import { SOURCE_CONFIDENCE } from '@/lib/referenceConfidence';
 import type { PinReferenceJson } from '@/lib/types';
 
@@ -11,7 +12,9 @@ const DAY_MS = 24 * 60 * 60 * 1000;
 
 // A confirmed duplicate posted later is news for the pin it duplicates: the
 // newer pin's source goes onto the older one as a reference, credited to its
-// author, rated and dated the way that pin rates and dates its source. Being
+// author, rated and dated the way that pin rates and dates its source, and
+// its references come along - a source rated 'delayed' scores under the bar,
+// and the page it cites for the new date is what should move the older pin. Being
 // the newest credible claim it moves the older pin's dates (topReference), the
 // article is rebuilt from the new link, and the older pin's Updates pane says
 // so, linking the newer pin. Once per pair; a pair posted within the hour is
@@ -38,8 +41,17 @@ export async function feedNewerDuplicate(pinId: number, otherPinId: number, deci
     endDate: startDate && lastDay && compareDayKeys(lastDay, startDate) > 0 ? lastDay : undefined,
     reasoning: newer.dateConfidenceReasoning ? String(newer.dateConfidenceReasoning).slice(0, 2000) : undefined,
   };
+  const carried: Partial<PinReferenceJson>[] = (newer.references ?? []).map((r) => ({
+    url: r.url,
+    title: r.title,
+    confidence: r.confidence,
+    publishedDate: r.publishedDate,
+    startDate: r.startDate,
+    endDate: r.endDate,
+    reasoning: r.reasoning,
+  }));
   try {
-    const result = await addReferences(older.id, [reference], Number(newer.userId ?? decidedByUserId), { relatedPinId: newer.id });
+    const result = await addReferences(older.id, [reference, ...carried].slice(0, MAX_ADDED_REFERENCES), Number(newer.userId ?? decidedByUserId), { relatedPinId: newer.id });
     return result?.added.length ? older.id : undefined;
   } catch (err) {
     log.warn(`feeding pin ${newer.id} into ${older.id} failed:`, (err as Error).message);
