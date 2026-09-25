@@ -6,6 +6,7 @@
 // as the logos are.
 
 import { getJson, searchWikiUrl, wikiTitle } from './companyLogo';
+import { splitSentences } from '@/lib/sentences';
 
 // TextExtracts answers at most 20 pages per request.
 const BATCH = 20;
@@ -20,7 +21,6 @@ const MAX_SENTENCES = 2;
 
 // Ends a sentence in writing but not in fact: "Apple Inc. is an American..."
 // is one sentence, and so is "Nintendo Co., Ltd. is a Japanese company".
-const ABBREVIATION = /(?:^|[\s(])(?:[A-Z]|Inc|Ltd|Co|Corp|Cos|Pte|Pty|Plc|Bros|St|Mt|Mr|Mrs|Ms|Dr|Prof|Jr|Sr|vs|etc|al|approx|est|no|Nos)\.$/;
 // A pronunciation or "(listen)" aside, which reads as noise in a one-line blurb.
 const PRONUNCIATION = /\s*\((?:[^()]*(?:\/[^()]*\/|ˈ|listen)[^()]*)\)/g;
 
@@ -118,15 +118,7 @@ export function firstSentences(intro: string, max = MAX_LENGTH): string | null {
   const text = intro.replace(PRONUNCIATION, '').replace(/\s+/g, ' ').trim();
   if (!text) return null;
 
-  const pieces = text.split(/(?<=[.!?])\s+(?=[A-Z(“"'])/);
-  // An abbreviation's full stop is not the end of a sentence, so its piece
-  // carries on into the next.
-  const sentences = pieces.reduce<string[]>((all, piece) => {
-    const last = all[all.length - 1];
-    if (last && ABBREVIATION.test(last)) all[all.length - 1] = `${last} ${piece}`;
-    else all.push(piece);
-    return all;
-  }, []);
+  const sentences = splitSentences(text);
 
   let blurb = '';
   for (const sentence of sentences.slice(0, MAX_SENTENCES)) {

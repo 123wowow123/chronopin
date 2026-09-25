@@ -8,6 +8,7 @@
 
 import type { ScrapedStock } from './stocks';
 import type { MediumJson } from './types';
+import { splitSentences } from './sentences';
 
 export type EntryImage = { originalUrl: string; width: number; height: number };
 
@@ -141,11 +142,7 @@ function dedupeImages(images: EntryImage[]) {
 }
 
 function sentences(text: string): string[] {
-  return text
-    .split('\n')
-    .flatMap((line) => squash(line).split(/(?<=[.!?])\s+(?=[A-Z0-9"“(])/))
-    .map((s) => s.trim())
-    .filter(Boolean);
+  return text.split('\n').flatMap((line) => splitSentences(squash(line)));
 }
 
 export function firstSentence(text: string): string {

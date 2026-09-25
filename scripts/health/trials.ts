@@ -23,6 +23,7 @@ import '../env';
 import { parseArgs } from 'node:util';
 import * as db from '@/server/db';
 import { lookupStudioLocation } from '@/server/studioLocation';
+import { leadSentences } from '@/lib/sentences';
 
 const { values: flags } = parseArgs({
   options: {
@@ -179,7 +180,7 @@ async function run() {
       description: [
         `${sponsor.name}'s phase 3 trial of ${drug} in ${condition.toLowerCase()} reaches primary completion, the point at which the last participant's primary outcome is measured.`,
         `The trial enrolled ${enrollment.toLocaleString('en-US')} participants.`,
-        (p.descriptionModule?.briefSummary ?? '').replace(/\s+/g, ' ').trim().slice(0, 900),
+        leadSentences(p.descriptionModule?.briefSummary ?? '', 900),
       ]
         .filter(Boolean)
         .join(' '),

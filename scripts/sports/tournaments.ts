@@ -20,6 +20,7 @@
 import '../env';
 import { parseArgs } from 'node:util';
 import * as db from '@/server/db';
+import { leadSentences, splitSentences } from '@/lib/sentences';
 
 const { values: flags } = parseArgs({
   options: {
@@ -249,7 +250,7 @@ async function run() {
     const body = {
       title: `${page.title} ${entry.verb ?? 'Kicks Off'}`.slice(0, 90),
       description: [
-        page.extract.split('. ').slice(0, 2).join('. ').slice(0, 600),
+        leadSentences(splitSentences(page.extract).slice(0, 2).join(' '), 600),
         entry.assumed
           ? `No opening venue has been announced, so this pin sits at ${venue?.title ?? entry.venue}, the lead host's flagship ground.`
           : `The pin sits at ${venue?.title ?? entry.venue}.`,
