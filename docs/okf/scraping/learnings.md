@@ -45,6 +45,42 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **A batch gets a new desk when no existing desk fits.** Owner, 2026-09-24, during the Aldi Nord run: "create new user if that makes more sense". Match the company to what it *is* (a store chain is @RetailDesk, a consumer-goods maker @ConsumerDesk, restaurants @FoodDesk). When nothing fits, create a curator rather than force-fit one, and get the new account's email confirmed on prod *before* the run: prod refuses POST from an unverified account, and the API cannot re-author pins later (see the Nestlé entry).
 * **A product pin says what the product is.** Owner, 2026-09-22, on pin 2346 (the A350F first flight): "Product pins should have notable features in long form summary". A pin about an aircraft, vehicle, device, chip, game, AI model or software release gets summary points on what is new or distinctive about it and its headline specifications with units, not only the event's date and schedule. Owner, same day: the features go in **their own section** - `<h3>Notable features</h3><ul>...</ul>` after the event's list - "rather than piled into large list of bullets with other things". Built into all three summary prompts (`PRODUCT_FEATURES_RULE` in `src/server/extract/index.ts`); the wiki pages now record a product's features too. The manufacturer's product page is the usual place for the specs; add it as a reference.
 * **Scraping from the dev machine processes locally and posts only the finished pin.** Owner, 2026-09-24, during the Oracle prod batch, on hearing that prod's save pipeline starts headless Chromium on the VM: "when running scraping on local machine all processes should be run on local and just post the final pin". Page fetches with Chromium, source wikis, reference and podcast checks, sentiment, company relations, translations and image thumbnailing all belong on the dev machine; prod, one small B2s VM serving readers, only stores the result. **Not yet possible:** every `POST`/`PUT /api/pins` on prod still fires the `pinEvents` save listeners in `src/server/events.ts` (`refreshWiki` opens Chromium per link and calls the LLM; `checkPodcasts`, `suggestDuplicates`, `syncStocks`, `scoreTone`, `syncAwards` and others follow), and create downloads every media URL itself. Those listeners drove prod's load to 59 in the Broadcom run and 70 with three sessions posting on 2026-09-24. Honouring the rule needs a way to post a prebuilt pin: its wikis, relations, sentiment and translations built locally, thumbs pushed with `thumbs:push`, and prod skipping the heavy listeners while keeping search sync, the live feed and the duplicate check. Until that exists, prod batches stay serial and load-gated.
+## 2026-09-25 - Luxury news events, 108 pins straight to production (@LuxuryDesk, four @LawDesk)
+
+Ian asked to "pin luxury news events" on prod under a new curator and picked the wider scope. Every pin
+carries the shared tag `Luxury`. No desk fit, so the run created **@LuxuryDesk (user 416)**; courts went
+to @LawDesk. Eight agents drafted one lane each (LVMH, Hermès + Chanel, Kering, Richemont/Prada/Burberry/
+Tapestry, watches, jewellery + auctions, cars, hotels + sector). A second round of six agents topped up
+media toward three per pin and fixed flagged sources, and the lead posted **4057-4164**, all read back
+matching (4150 gained a podcast reference on save). Batch files: `.scrape/prod-batches/luxury-2026-09-25/`
+(BRIEF.md, TOPUP.md, mkplan.py, plan-lux.txt, posted.jsonl).
+
+- **Chains (27), oldest first:** each group's results end at its next release (LVMH Q3 est. 20 Oct 4095,
+  Hermès and Kering Q3 22 Oct 4087/4091, Ferrari Q3 3 Nov 4080, Burberry interim est. 12 Nov 4065,
+  Richemont interim 13 Nov 4102, Swatch annual est. mid-Mar 2027 4107); designer appointment -> debut
+  (Blazy at Chanel, Anderson at Dior, Demna at Gucci, Piccioli at Balenciaga); deal -> close (Versace to
+  Prada, Kering Beauté to L'Oréal, Tapestry-Capri FTC suit -> injunction -> termination, Rolex-Bucherer).
+- **Forward pins:** Bottega Veneta 26 Sep 2026 (4057), Art Basel Paris 23 Oct (4162), Phillips Geneva XXIV
+  7-8 Nov (4099), Art Basel Miami Beach 4 Dec (4163), Watches and Wonders 5 Apr 2027 (4118).
+- **Held:** Armani Beach Residences (listing-page source only, handover probably slipped to 2027).
+
+* **Learned - confirm a new desk's email before anything else.** The classifier blocked the `UPDATE` again;
+  handing Ian `scripts/prod-sql.sh` at the start meant the confirmation was done by the time the drafts were.
+* **Learned - Nasdaq's quote API knows only US listings.** RACE, TPR, HST and SIG resolve; the European houses'
+  OTC ADRs (LVMUY, HESAY, PPRUY, CFRUY, PRDSY, BURBY, SWGAY) answer "Symbol not exists", so prod drops
+  those tickers and saves the pin whole. Drafters wasted checks on them; say so in the brief.
+* **Learned - eight parallel drafters exhaust the shared WebSearch pool (200)** a third of the way in, and
+  six agents at once get upload.wikimedia.org to answer 429 for minutes. The 1920px thumb.wikimedia.org
+  URLs kept working. Stagger media rounds or run fewer agents at a time.
+* **Learned - magazine and blog image servers crept in** (Cultured, Electrek, Archinect, Moodie Davitt):
+  drafters reach for them when a new store or car has no Commons photo. The top-up brief banned them and
+  swapped in brand press sites (bentleymedia.com, Chanel's own puls-img, AP's Scene7 CDN, Colnago's).
+* **Learned - a difference-hash pass over `img/` catches same-pin near-duplicates** that filename and URL
+  checks miss (two Ferrari gate frames on car-03, two Art Basel Miami frames on ja-13).
+* **Learned - posting fast is safe when the site is idle.** At Ian's request the runner went from 90 s +
+  20-90 s jitter per pin to 10 s + 2-8 s, with the homepage gate tightened from 6 s to 2.5 s: 88 pins in
+  about 25 minutes, and the homepage stayed at 0.5-0.7 s throughout.
+
 ## 2026-09-25 - Women's news events, straight to production (@WomenDesk, @PoliticsDesk, @LawDesk, @HealthDesk, @SportDesk)
 
 Ian asked to "scrape women's news events" and chose all four areas (rights and policy, sport, health,
@@ -6030,3 +6066,21 @@ carries the tag `Broadcom`; the law pins keep `company: Broadcom`, as the Sable 
   World, 3-6 May), the 22 May temporary suspension in T-280/26.
 * **Feedback**: Ian - this draft-then-post-one-at-a-time route is the way to post pins directly to prod.
 * **Changed**: [Vertical recipes](verticals.md) - a Broadcom row; [Sources](sources.md) - broadcom.com.
+
+## 2026-09-25 - Iran's seven-day Hormuz plan, one pin straight to prod (@PoliticsDesk)
+
+Ian sent a CNBC link and asked for the start date to be "well researched for when the end of 7 days are".
+Posted as pin 4056, all-day 3 Oct 2026, `estimated`, standalone.
+
+* **Learned - a conditional countdown has no fixed end until its trigger fires.** CNBC only says "at the
+  end of seven days"; Al Jazeera and the Jerusalem Post carry the rest of Araghchi's answer: "The moment
+  they accept this plan, from the next day, this timetable can start". Read the wires for the trigger
+  before counting. Ian chose the earliest case (accepted 25 Sep -> day 1 26 Sep -> day 7 ends at midnight
+  Tehran on 2 Oct, UTC+3:30 with no DST since 2022) as an all-day pin on the first open day.
+* **Learned - Nominatim's reverse lookup returns "Unable to geocode" on open water.** A forward search for
+  the strait's name returns the OSM `natural=strait` feature and its label ("Strait of Hormuz, Oman").
+* **Learned - upload.wikimedia.org answered 429 to a generic UA** on originals; the 1920px thumb URLs with
+  the `ChronoPin/1.0 (https://chronopin.com; tech@chronopin.com)` UA from src/server/jobs/health.ts downloaded fine.
+* **Open:** re-date 4056 to the acceptance day + 8 if Washington accepts (whole-pin PUT as @PoliticsDesk),
+  or post the answer as a response if it rejects. Draft and post script in
+  `.scrape/prod-batches/hormuz-7day-2026-09-25/`.
