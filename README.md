@@ -263,8 +263,7 @@ pin can have user uploadable pictures in comments.
 
 - Use this session ai to do this job: translate all pins to all supported language and backup json
 
-- scrape fashion news events
-- scrape luxury news events
+- pin fashion news events
 
 - post site description on many wiki's an link back
 
