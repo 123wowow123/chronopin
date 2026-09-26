@@ -447,16 +447,16 @@ function MediaEdge({ side, onStep }: { side: 'previous' | 'next'; onStep: () => 
   );
 }
 
-// The previous or next arrow beside the dots. With a mouse it shows while the
-// pointer is over the media (or the arrow has keyboard focus); a touch screen,
-// with no hover, always shows it.
+// The previous or next arrow beside the dots, for a mouse: it shows while the
+// pointer is over the media (or the arrow has keyboard focus). A touch screen
+// has no hover and swipes instead, so there it is not drawn at all.
 function MediaArrow({ side, label, onStep }: { side: 'previous' | 'next'; label: string; onStep: () => void }) {
   return (
     <button
       type="button"
       aria-label={label}
       onClick={onStep}
-      className="rounded-full p-1 text-white/70 transition hover:bg-white/15 hover:text-white focus-visible:opacity-100 active:scale-90 active:bg-white/25 pointer-fine:opacity-0 pointer-fine:group-hover/media:opacity-100 max-lg:p-1.5"
+      className="hidden rounded-full p-1 text-white/70 opacity-0 transition group-hover/media:opacity-100 hover:bg-white/15 hover:text-white focus-visible:opacity-100 active:scale-90 active:bg-white/25 pointer-fine:block"
     >
       <Icon name="chevron" className={`size-4 ${side === 'previous' ? 'rotate-90' : '-rotate-90'}`} />
     </button>
