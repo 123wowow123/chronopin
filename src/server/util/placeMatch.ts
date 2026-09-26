@@ -34,14 +34,16 @@ export function wholeWordPattern(text: string): string {
   return `(^|[^[:alnum:]])${literal}([^[:alnum:]]|$)`;
 }
 
-// Typed text as a Postgres regex (~*) for a title: a whole word or words, as
-// wholeWordPattern, except in Chinese and Japanese, which leave no space
-// between words - there it matches anywhere.
-export function typedTextPattern(text: string): string {
+// Typed text as Postgres regexes (~*) a title must match all of: a whole word
+// or words, as wholeWordPattern, except in Chinese, Japanese and Korean - there
+// each space-separated word matches anywhere, in any order. Chinese and
+// Japanese leave no space between words, and Korean runs nouns together
+// (나이키 실적 finds "나이키 2025 회계연도 4분기 실적").
+export function typedTextPatterns(text: string): string[] {
   if (/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u.test(text)) {
-    return text.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return text.trim().split(/\s+/).map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
   }
-  return wholeWordPattern(text);
+  return [wholeWordPattern(text)];
 }
 
 // The patterns an address matches any of, for the places a query names.

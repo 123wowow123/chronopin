@@ -7,7 +7,7 @@ import PinTag from './pinTag';
 import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
 import { reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
-import { PLACE_TEXT_SCORE, looksLikePlaceText, placePatterns, typedTextPattern, wholeWordPattern } from '../util/placeMatch';
+import { PLACE_TEXT_SCORE, looksLikePlaceText, placePatterns, typedTextPatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
 import type { RatingBound } from '../util/searchQuery';
 
@@ -764,7 +764,7 @@ function searchClauses(filter: SearchFilter) {
   // card in that language writes it (台积电, 風の谷のナウシカ) is then found
   // however the semantic ranking scored it.
   const textTitle = textPlace
-    ? `EXISTS (SELECT 1 FROM "PinTranslation" AS "tr" WHERE "tr"."pinId" = "Pin"."id" AND "tr"."title" ~* ${add(typedTextPattern(filter.text!))})`
+    ? `EXISTS (SELECT 1 FROM "PinTranslation" AS "tr" WHERE "tr"."pinId" = "Pin"."id" AND "tr"."title" ~* ALL(${add(typedTextPatterns(filter.text!))}::text[]))`
     : null;
   let score = '1::float8';
   if (filter.hits) {

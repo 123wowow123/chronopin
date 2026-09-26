@@ -33,6 +33,7 @@ found no more (65 of 84 test queries against 69).
 """
 
 import os
+import re
 import threading
 import time
 
@@ -49,6 +50,8 @@ MODEL_PATHS = {
     ),
 }
 MULTILINGUAL_BOOST = float(os.environ.get("MULTILINGUAL_BOOST", "0.12"))
+# Hangul (syllables and jamo), CJK ideographs, hiragana and katakana.
+CJK = re.compile("[\u1100-\u11ff\u3040-\u30ff\u3130-\u318f\u3400-\u9fff\uac00-\ud7a3\uf900-\ufaff]")
 lock = threading.Lock()
 
 
@@ -111,7 +114,11 @@ def search(q: str = "", k: int = Query(20, ge=1), model: str = "en"):
         return {"res": [], "took": 0}
 
     if model == "both":
-        best = dict(nearest("en", q, k))
+        # The English model has nothing to read in Hangul, Chinese or Japanese
+        # and places such a query near whatever it associates with the script
+        # (Korean restaurants for any Korean search) at scores the multilingual
+        # model's real matches only tie: those queries are read by that one alone.
+        best = {} if CJK.search(q) else dict(nearest("en", q, k))
         for pin_id, score in nearest("multi", q, k):
             best[pin_id] = max(best.get(pin_id, -1.0), score + MULTILINGUAL_BOOST)
         found = sorted(best.items(), key=lambda hit: -hit[1])[:k]

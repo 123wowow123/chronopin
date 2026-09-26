@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { looksLikePlaceText, placeNames, placePatterns, typedTextPattern, wholeWordPattern } from './placeMatch';
+import { looksLikePlaceText, placeNames, placePatterns, typedTextPatterns, wholeWordPattern } from './placeMatch';
 
 // Postgres character classes are not JavaScript's, so a pattern is read here
 // the way Postgres would read it against a real address.
@@ -56,18 +56,27 @@ describe('looksLikePlaceText', () => {
   });
 });
 
-describe('typedTextPattern', () => {
+describe('typedTextPatterns', () => {
+  // A title matches when every pattern does, as ~* ALL(...) reads them.
+  const all = (patterns: string[], title: string) => patterns.every((pattern) => matches([pattern], title));
+
   it('finds Chinese and Japanese anywhere in a title, which has no spaces to find words by', () => {
-    expect(matches([typedTextPattern('台积电')], '台积电在高雄开始量产 2 纳米芯片')).toBe(true);
-    expect(matches([typedTextPattern('ナウシカ')], '『風の谷のナウシカ』劇場公開')).toBe(true);
+    expect(all(typedTextPatterns('台积电'), '台积电在高雄开始量产 2 纳米芯片')).toBe(true);
+    expect(all(typedTextPatterns('ナウシカ'), '『風の谷のナウシカ』劇場公開')).toBe(true);
+  });
+
+  it('finds each Korean word anywhere, in any order', () => {
+    expect(all(typedTextPatterns('나이키 실적'), '나이키 2025 회계연도 4분기 실적…관세 부담 10억 달러 추산')).toBe(true);
+    expect(all(typedTextPatterns('실적 나이키'), '나이키 2025 회계연도 4분기 실적')).toBe(true);
+    expect(all(typedTextPatterns('나이키 실적'), '나이키, 미국서 아마존 직접 판매 재개')).toBe(false);
   });
 
   it('keeps other text to whole words', () => {
-    expect(matches([typedTextPattern('Gucci')], 'Kering nombra a Stefano Cantino CEO de Gucci')).toBe(true);
-    expect(matches([typedTextPattern('ford')], 'Oxford abre su nuevo campus')).toBe(false);
+    expect(all(typedTextPatterns('Gucci'), 'Kering nombra a Stefano Cantino CEO de Gucci')).toBe(true);
+    expect(all(typedTextPatterns('ford'), 'Oxford abre su nuevo campus')).toBe(false);
   });
 
   it('reads regex characters in the text as themselves', () => {
-    expect(typedTextPattern('C++ 入门')).toBe('C\\+\\+ 入门');
+    expect(typedTextPatterns('C++ 入门')).toEqual(['C\\+\\+', '入门']);
   });
 });

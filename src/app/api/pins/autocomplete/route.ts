@@ -45,11 +45,12 @@ export const GET = route(async (request: NextRequest) => {
 
 // The categories whose name in another of the site's languages has a word
 // starting with the typed text - anywhere in it for Chinese and Japanese,
-// which leave no space between words. (English names are PinTag.suggest's.)
+// which leave no space between words, and Korean, which runs nouns together
+// (게임 in 비디오게임). (English names are PinTag.suggest's.)
 async function categoriesNamed(text: string): Promise<string[]> {
   const typed = text.trim().toLowerCase();
   if (!typed) return [];
-  const anywhere = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u.test(typed);
+  const anywhere = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u.test(typed);
   const translators = await Promise.all(
     LOCALES.filter((locale) => locale !== DEFAULT_LOCALE).map(async (locale) => createTranslator(await getMessages(locale), locale)),
   );
