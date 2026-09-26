@@ -23,6 +23,7 @@ export function useQueryState(values: Record<string, string | null>) {
       else params.set(name, value);
     }
     const next = params.size ? `?${params.toString()}` : '';
-    if (next !== window.location.search) window.history.replaceState(null, '', `${window.location.pathname}${next}`);
+    // The hash stays: the timeline keeps the day it is scrolled to there.
+    if (next !== window.location.search) window.history.replaceState(null, '', `${window.location.pathname}${next}${window.location.hash}`);
   }, [key, search, ownPath]);
 }

@@ -171,7 +171,7 @@ export function TimeBlock({
   ));
 
   return (
-    <section ref={sectionRef} id={id ?? `day-${bag.day}`} aria-label={formatDayKey(bag.day, locale)} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:pt-0">
+    <section ref={sectionRef} id={id ?? `day-${bag.day}`} data-day={bag.day} aria-label={formatDayKey(bag.day, locale)} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:pt-0">
       <div
         className={`rail-marker absolute top-6 cursor-default left-[140px] z-10 -ml-4 hidden size-8 items-center justify-center overflow-hidden rounded-full text-base leading-none lg:flex ${isToday ? 'rail-marker-today' : ''}`}
         title={`${planet.planet}\n${planet.weekday}\n${t('timeline.moonLit', { phase: moon.name, percent: Math.round(moon.illumination * 100) })}`}
@@ -368,10 +368,11 @@ export function SpecialtyTag({ days, className = '' }: { days: SpecialtyDay[]; c
   );
 }
 
-export function TodayMarker({ specialtyDays }: { specialtyDays: SpecialtyDay[] }) {
+// `day` is today's key: the day the URL's hash names while it is at the top.
+export function TodayMarker({ day, specialtyDays }: { day: string; specialtyDays: SpecialtyDay[] }) {
   const t = useT();
   return (
-    <div className="relative mt-2.5 pt-10 max-lg:mt-6 lg:min-h-[36px] lg:pt-0">
+    <div data-day={day} className="relative mt-2.5 pt-10 max-lg:mt-6 lg:min-h-[36px] lg:pt-0">
       <div className="today-dot absolute top-[7px] left-[140px] z-10 -ml-[7px] hidden size-3.5 rounded-full lg:block" />
       <div className={tagRow}>
         <div id="today-marker" className={`${tagBase} ${leadTag} tag-today tag-link uppercase tracking-wider lg:text-xs`} style={{ ['--tag-reach' as string]: '23px' }}>

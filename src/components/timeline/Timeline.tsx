@@ -10,6 +10,8 @@ import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
 import { loadSpecialtyDays } from '@/lib/client/specialtyDays';
 import { takeTimelineSpot } from '@/lib/client/returnSpot';
+import { trackEvent } from '@/lib/client/analytics';
+import { readDayHash, useDayHash } from '@/lib/client/dayHash';
 import { settleDayTrip } from '@/lib/client/dayReturn';
 import { useTodayHold } from '@/lib/client/todayHold';
 import { useQueryState } from '@/lib/client/urlState';
@@ -18,7 +20,7 @@ import { distanceKm } from '@/lib/distance';
 import { radiusFromParam, radiusLabel, radiusSteps, radiusToParam } from '@/lib/radius';
 import { usesImperial } from '@/lib/weather';
 import { browserTimeZone, useTimeZone } from '@/lib/client/timeZone';
-import { daysBetween, dayKeyIn, monthDayOf } from '@/lib/format';
+import { compareDayKeys, daysBetween, dayKeyIn, dayStartIn, monthDayOf } from '@/lib/format';
 import { DEFAULT_POSTED_WITHIN, SPAN_OPTIONS, spanLabel, spanPhrase, spanToParam } from '@/lib/postedSpan';
 import { pinConfidence, pinEvidence } from '@/lib/referenceConfidence';
 import { TimelineVideoProvider } from '@/lib/client/timelineVideo';
@@ -165,6 +167,9 @@ export function Timeline({
   const ring = useMemo<Ring | null>(() => (radiusKm && place ? { km: radiusKm, place } : null), [radiusKm, place]);
   useQueryState({ posted: spanToParam(postedWithin, defaultPostedWithin), within: radiusToParam(radiusKm, imperial) });
   const [status, setStatus] = useState<'ready' | 'loading' | 'error'>('ready');
+  // Whether the loaded stretch was fetched around a day from the URL's hash
+  // rather than around now, so it need not reach today.
+  const [jumped, setJumped] = useState(false);
   // Bumped when pins are added, edited or removed, so the days at either end
   // of the loaded stretch are counted again: any change may have moved a pin
   // into or out of one.
@@ -178,6 +183,10 @@ export function Timeline({
   const [ahead] = useState(() => createPageAhead(fetchPage));
   const busy = useRef({ previous: false, next: false });
   const scrolledToToday = useRef(false);
+  // The day from the URL's hash to open on (see src/lib/client/dayHash.ts),
+  // read once as the first page is on screen and kept while its page loads.
+  const hashRead = useRef(false);
+  const dayTarget = useRef<string | null>(null);
   const prependAnchor = useRef<{ height: number; top: number } | null>(null);
 
   const todayKey = dayKeyIn(now, timeZone);
@@ -203,7 +212,7 @@ export function Timeline({
   // TODAY marker at the edge of that stretch until they do. A timeline opened
   // on today always reaches it.
   const reachesToday =
-    !focus ||
+    (!focus && !jumped) ||
     (bags.length > 0 &&
       (daysBetween(bags[0].day, todayKey) >= 0 || !links.previous) &&
       (daysBetween(todayKey, bags[bags.length - 1].day) >= 0 || !links.next));
@@ -218,24 +227,33 @@ export function Timeline({
 
   // A new window or a new ring reloads from the server: the timeline only
   // holds the pages it has scrolled through, so filtering locally would miss
-  // pins and page through the unfiltered set.
-  const reload = useCallback(async (within: string | null, nextRing: Ring | null) => {
+  // pins and page through the unfiltered set. Given a day (from the URL's
+  // hash), the page is fetched around that day's start instead of now, and
+  // the timeline opens on it. False when the load failed.
+  const reload = useCallback(async (within: string | null, nextRing: Ring | null, day: string | null = null) => {
     const params = new URLSearchParams();
     if (within) params.set('created_within', within);
     ringParams(params, nextRing);
+    // The hash is written in the browser's zone, whatever the server rendered in.
+    if (day) params.set('around', new Date(dayStartIn(day, browserTimeZone())).toISOString());
     const token = ++loadToken.current;
     ahead.clear();
     setStatus('loading');
     try {
       const { page, links: pageLinks } = await fetchPage(params.size ? `?${params}` : '');
-      if (token !== loadToken.current) return;
+      if (token !== loadToken.current) return true;
       scrolledToToday.current = false;
+      dayTarget.current = day;
+      setJumped(!!day);
       setPins(page.pins);
       setDateTimes(page.dateTimes);
       setLinks(pageLinks);
       setStatus('ready');
+      return true;
     } catch {
-      if (token === loadToken.current) setStatus('error');
+      if (token !== loadToken.current) return true;
+      setStatus('error');
+      return false;
     }
   }, [ahead]);
 
@@ -263,7 +281,8 @@ export function Timeline({
       const asked = radiusFromParam(initialWithin, units);
       if (!asked) return;
       setRadiusKm(asked);
-      void reload(latestPosted.current, { km: asked, place: found });
+      // Kept on the day the hash names, if it names one.
+      void reload(latestPosted.current, { km: asked, place: found }, readDayHash());
     });
     return () => {
       cancelled = true;
@@ -281,6 +300,31 @@ export function Timeline({
   // Opening and the Today button both hold today in place while the cards
   // above it finish growing.
   const holdToday = useTodayHold(scrollToToday);
+
+  // Whether a day falls within the stretch loaded (or past an end with nothing
+  // more beyond it), so the timeline can open on it without another page.
+  const holdsDay = useCallback(
+    (day: string) =>
+      bags.length > 0 &&
+      (compareDayKeys(day, bags[0].day) >= 0 || !links.previous) &&
+      (compareDayKeys(day, bags[bags.length - 1].day) <= 0 || !links.next),
+    [bags, links],
+  );
+  // A day from the hash, held in place the same way as today. The day's own
+  // block, or the next one drawn (a filtered timeline draws only days with
+  // pins, and a quiet day may have none), or the last.
+  const heldDay = useRef<string | null>(null);
+  const scrollToDay = useCallback(() => {
+    const day = heldDay.current;
+    if (!day || !bags.length) return;
+    if (day === dayKeyIn(Date.now(), timeZone)) {
+      scrollToToday();
+      return;
+    }
+    const bag = bags.find((b) => compareDayKeys(b.day, day) >= 0) ?? bags[bags.length - 1];
+    document.getElementById(`day-${bag.day}`)?.scrollIntoView({ block: 'start' });
+  }, [bags, timeZone, scrollToToday]);
+  const holdDay = useTodayHold(scrollToDay);
 
   // The focused pin's card, or its day when the card is not drawn (hidden in
   // a duplicate stack, or filtered out).
@@ -304,9 +348,35 @@ export function Timeline({
   const holdFocus = useTodayHold(scrollToFocus);
   const flashed = useRef(false);
 
-  // Open on the focused pin, or on today, once the first page is on screen.
+  // Open on the day in the URL's hash, else the focused pin, else today, once
+  // the first page is on screen.
   useLayoutEffect(() => {
     if (scrolledToToday.current || !bags.length) return;
+    if (!hashRead.current) {
+      hashRead.current = true;
+      dayTarget.current = readDayHash();
+      if (dayTarget.current) trackEvent('timeline_day', { day: dayTarget.current, days_from_today: daysBetween(todayKey, dayTarget.current), source: 'link' });
+    }
+    const day = dayTarget.current;
+    if (day) {
+      // Not among the pages loaded: fetch the page around it, and this runs
+      // again once it is in. A failed fetch opens on today as it always did.
+      if (!holdsDay(day) && !jumped) {
+        void reload(postedWithin, ring, day).then((ok) => {
+          if (ok || scrolledToToday.current) return;
+          dayTarget.current = null;
+          scrolledToToday.current = true;
+          setStatus('ready');
+          holdToday();
+        });
+        return;
+      }
+      dayTarget.current = null;
+      scrolledToToday.current = true;
+      heldDay.current = day;
+      holdDay();
+      return;
+    }
     scrolledToToday.current = true;
     const target = focusTarget();
     if (!target) {
@@ -328,7 +398,7 @@ export function Timeline({
         { duration: 3000, delay: 300, easing: 'ease-out' },
       );
     }
-  }, [bags, focus, focusTarget, holdFocus, holdToday]);
+  }, [bags, focus, focusTarget, holdFocus, holdToday, holdDay, holdsDay, jumped, reload, postedWithin, ring, todayKey]);
 
   // Today is not among the pages loaded (the timeline opened on a pin far from
   // it): open the timeline on today instead, keeping the posting window.
@@ -337,15 +407,40 @@ export function Timeline({
       holdToday();
       return;
     }
+    // Opened on a far day from the hash: the pages around now load in place,
+    // and the timeline opens on today once they are in.
+    if (!focus) {
+      dayTarget.current = null;
+      void reload(postedWithin, ring);
+      return;
+    }
     const query = new URLSearchParams();
     const posted = spanToParam(postedWithin, defaultPostedWithin);
     if (posted) query.set('posted', posted);
     const within = radiusToParam(radiusKm, imperial);
     if (within) query.set('within', within);
     router.push(query.size ? `/?${query}` : '/');
-  }, [reachesToday, holdToday, postedWithin, defaultPostedWithin, radiusKm, imperial, router]);
+  }, [reachesToday, holdToday, focus, reload, ring, postedWithin, defaultPostedWithin, radiusKm, imperial, router]);
   // After the effect above, so the position it records on mount is today's.
   useManualScrollRestoration();
+
+  // The day at the top of the window rides in the URL's hash once the reader
+  // scrolls, so a reload or a shared link opens there, and each day they
+  // settle on is counted in Analytics. A hash typed into the address bar is
+  // gone to like one opened from a link.
+  useDayHash({
+    ready: () => scrolledToToday.current,
+    onDay: (day) => trackEvent('timeline_day', { day, days_from_today: daysBetween(todayKey, day), source: 'scroll' }),
+    onJump: (day) => {
+      trackEvent('timeline_day', { day, days_from_today: daysBetween(todayKey, day), source: 'link' });
+      if (holdsDay(day)) {
+        heldDay.current = day;
+        holdDay();
+      } else {
+        void reload(postedWithin, ring, day);
+      }
+    },
+  });
 
   // Showing again (or for the first time), the timeline ends any trip out to
   // a day's search: that page's pill back is for while it is behind it.
@@ -621,7 +716,7 @@ export function Timeline({
         <div className="relative lg:min-h-[calc(100dvh-52px-6rem)] lg:before:absolute lg:before:top-0 lg:before:-bottom-24 lg:before:left-[140px] lg:before:w-px lg:before:bg-rail lg:before:content-['']">
           {bags.map((bag, index) => (
             <div key={bag.day}>
-              {marker.index === index ? <TodayMarker specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}
+              {marker.index === index ? <TodayMarker day={todayKey} specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}
               <TimeBlock
                 bag={bag}
                 todayKey={todayKey}
@@ -638,7 +733,7 @@ export function Timeline({
               />
             </div>
           ))}
-          {marker.atEnd ? <TodayMarker specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}
+          {marker.atEnd ? <TodayMarker day={todayKey} specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}
         </div>
 
         <div ref={bottomRef} aria-hidden className="h-px" />

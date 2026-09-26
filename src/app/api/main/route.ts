@@ -21,9 +21,15 @@ export const GET = route(async (request: NextRequest) => {
   // both, and both ride back out on the links so later pages keep the ring.
   const near = resolveNear({ near: query.get('near'), within: query.get('within') });
 
+  // ?around=<ISO instant>: the first page centred there rather than on now
+  // (a timeline opened on a day from its URL's hash).
+  const aroundAt = query.get('around');
+  const around = aroundAt && !Number.isNaN(Date.parse(aroundAt)) ? { dateTime: aroundAt, pinId: 0 } : null;
+
   const pins = await getTimeline({
     userId: user?.id ?? 0,
     fromDateTime: query.get('from_date_time'),
+    around,
     lastPinId: Number(query.get('last_pin_id')) || 0,
     onlyFavorites: !!query.get('hasFavorite'),
     createdSince,

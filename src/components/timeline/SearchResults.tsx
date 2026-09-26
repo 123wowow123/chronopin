@@ -587,11 +587,11 @@ export function SearchResults({
         <div hidden={sortBy !== 'date'} className={`${rail} ${restoring ? 'invisible' : ''}`}>
           {bags.map((bag, index) => (
             <div key={bag.day}>
-              {marker.index === index ? <TodayMarker specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}
+              {marker.index === index ? <TodayMarker day={todayKey} specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}
               <TimeBlock bag={bag} todayKey={todayKey} specialtyDays={specialtyDays[monthDayOf(bag.day)] || []} serverTimeZone={serverTimeZone} />
             </div>
           ))}
-          {marker.atEnd ? <TodayMarker specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}
+          {marker.atEnd ? <TodayMarker day={todayKey} specialtyDays={specialtyDays[monthDayOf(todayKey)] || []} /> : null}
         </div>
         <div ref={bottomRef} hidden={sortBy !== 'date'} aria-hidden className="h-px" />
       </div>
