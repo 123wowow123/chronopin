@@ -3,7 +3,8 @@
 import type { Metadata } from 'next';
 import { blobUrl, siteDescription, siteName, siteUrl } from './appConfig';
 import { slugify } from './categories';
-import { plainText, reviewRatings } from './format';
+import type { PinEventInfoJson } from './eventInfo';
+import { plainText } from './format';
 import { DEFAULT_LOCALE, INTL_LOCALES, languageAlternates, localizePath, type Locale } from './i18n/config';
 import type { PinJson } from './types';
 
@@ -71,30 +72,99 @@ export function pinMetadata(pin: PinJson, locale: Locale = DEFAULT_LOCALE, offer
   };
 }
 
+// Categories that are a gathering people go to: a conference or a festival
+// always is. A match or a show is too, unless the pin is really about a deal,
+// a product or a release that merely involves a sport or a musician. A show
+// has a doors time, which a music product or album release (all day) lacks.
+const EVENT_CATEGORIES = ['Conference', 'Festival'];
+const NOT_EVENT_CATEGORIES = [
+  'Business', 'Finance', 'Economy', 'Law', 'Justice', 'Labour', 'Policy', 'Architecture', 'Property', 'Retail', 'Fashion',
+  'Electronics', 'Audio', 'Movie', 'TV', 'Anime', 'Gaming',
+];
+
+// Whether a pin is an event Google would list: a place people can go to, for
+// a gathering open to the public. Most pins with a place are not - an anime
+// placed at its studio, an earnings call at the head office, a law where it
+// was passed - and Google's guidelines rule out marking those as events.
+export function isAttendableEvent(pin: PinJson): boolean {
+  const hasPlace = !!pin.address || (pin.latitude != null && pin.longitude != null);
+  if (!hasPlace) {
+    return false;
+  }
+  const categories = pin.categories ?? [];
+  if (categories.some((c) => EVENT_CATEGORIES.includes(c))) {
+    return true;
+  }
+  if (categories.some((c) => NOT_EVENT_CATEGORIES.includes(c))) {
+    return false;
+  }
+  return categories.includes('Sports') || (categories.includes('Music') && !pin.allDay);
+}
+
+// The Event's offers: the ticket price, sale state and link read off the
+// event's pages (PinEventInfo), else the pin's own price. A price without a
+// currency is left out rather than assumed to be dollars.
+export function eventOffers(pin: PinJson, eventInfo: PinEventInfoJson | null | undefined, pageUrl: string) {
+  const low = eventInfo?.lowPrice ?? pin.priceLowerBound ?? pin.price;
+  const high = eventInfo?.lowPrice != null ? eventInfo.highPrice : (pin.priceUpperBound ?? pin.price);
+  const currency = (eventInfo?.lowPrice != null ? eventInfo.priceCurrency : null) || pin.priceCurrency;
+  const priced = low != null && !!currency;
+  const availability = eventInfo?.availability;
+  if (!priced && !availability && !eventInfo?.ticketUrl) {
+    return undefined;
+  }
+  const range = priced && low != null && high != null && high > low;
+  return {
+    '@type': range ? 'AggregateOffer' : 'Offer',
+    url: eventInfo?.ticketUrl || pin.sourceUrl || pageUrl,
+    ...(priced ? (range ? { lowPrice: low, highPrice: high } : { price: low }) : {}),
+    ...(priced ? { priceCurrency: currency } : {}),
+    ...(availability ? { availability: `https://schema.org/${availability}` } : {}),
+    ...(availability === 'PreOrder' && eventInfo?.onSaleDate ? { validFrom: eventInfo.onSaleDate } : {}),
+  };
+}
+
 // JSON-LD for a pin page: the page is an Article about the pin, and when the
-// pin has a place it is also about an Event there. Google only treats a page
-// as an event with a location, so pins without one are not marked as events.
-export function pinJsonLd(pin: PinJson, locale: Locale = DEFAULT_LOCALE) {
+// pin is an event people can attend (isAttendableEvent) it is also about that
+// Event. organizerUrl: the website of the pin's company, which hosts it.
+// eventInfo: its performers and tickets, as read off its pages.
+//
+// Critic scores (IMDb, Rotten Tomatoes, MyAnimeList, ...) are shown on the
+// page but not marked up: Google's review snippet guidelines forbid ratings
+// gathered from other websites, and an Article cannot carry reviews anyway.
+export function pinJsonLd(
+  pin: PinJson,
+  locale: Locale = DEFAULT_LOCALE,
+  { organizerUrl, eventInfo }: { organizerUrl?: string | null; eventInfo?: PinEventInfoJson | null } = {},
+) {
   const url = absoluteUrl(localizePath(pinPath(pin), locale));
+  const offers = eventOffers(pin, eventInfo, url);
   const image = pinImage(pin);
   const description = pinDescription(pin);
   const organizer = pin.company
     ? {
         '@type': 'Organization',
         name: pin.company,
+        ...(organizerUrl ? { url: organizerUrl } : {}),
         ...(pin.companyWikiUrl ? { sameAs: pin.companyWikiUrl } : {}),
       }
     : undefined;
 
-  const hasPlace = !!pin.address || (pin.latitude != null && pin.longitude != null);
-  const event = hasPlace
+  // An all-day pin with no end is that one day, so it ends on the day it
+  // starts. A timed pin with no end has no end we know.
+  const endDate = pin.utcEndDateTime
+    ? eventDate(pin.utcEndDateTime, pin.allDay, true)
+    : pin.allDay
+      ? eventDate(pin.utcStartDateTime, true)
+      : undefined;
+  const event = isAttendableEvent(pin)
     ? {
         '@type': 'Event',
         name: pin.title,
         description,
         url,
         startDate: eventDate(pin.utcStartDateTime, pin.allDay),
-        ...(pin.utcEndDateTime ? { endDate: eventDate(pin.utcEndDateTime, pin.allDay, true) } : {}),
+        ...(endDate ? { endDate } : {}),
         eventStatus:
           pin.dateConfidence === 'delayed' ? 'https://schema.org/EventRescheduled' : 'https://schema.org/EventScheduled',
         eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
@@ -108,16 +178,12 @@ export function pinJsonLd(pin: PinJson, locale: Locale = DEFAULT_LOCALE) {
         },
         ...(image ? { image: [image.url] } : {}),
         ...(organizer ? { organizer } : {}),
-        ...(pin.price != null
+        ...(eventInfo?.performers.length
           ? {
-              offers: {
-                '@type': 'Offer',
-                price: pin.price,
-                priceCurrency: pin.priceCurrency || 'USD',
-                url: pin.sourceUrl || url,
-              },
+              performer: eventInfo.performers.map((p) => ({ '@type': p.type, name: p.name, ...(p.url ? { sameAs: p.url } : {}) })),
             }
           : {}),
+        ...(offers ? { offers } : {}),
       }
     : undefined;
 
@@ -138,20 +204,6 @@ export function pinJsonLd(pin: PinJson, locale: Locale = DEFAULT_LOCALE) {
     publisher: { '@type': 'Organization', name: siteName, url: siteUrl },
     ...(pin.sourceUrl ? { isBasedOn: pin.sourceUrl } : {}),
     ...(event ? { about: event } : {}),
-    // Third-party critic scores (IMDb, Rotten Tomatoes, MyAnimeList, ...),
-    // each its own scale - reported as separate Reviews rather than one
-    // averaged AggregateRating, which would misrepresent sources that don't
-    // share a scale. A market's forecast of a score is not a review.
-    ...(reviewRatings(pin.ratings).length
-      ? {
-          review: reviewRatings(pin.ratings).map((r) => ({
-            '@type': 'Review',
-            author: { '@type': 'Organization', name: r.source },
-            ...(r.url ? { url: r.url } : {}),
-            reviewRating: { '@type': 'Rating', ratingValue: r.score, bestRating: r.scoreMax, worstRating: 0 },
-          })),
-        }
-      : {}),
   };
 
   const breadcrumbs = {

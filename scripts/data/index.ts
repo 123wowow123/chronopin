@@ -18,6 +18,7 @@ import CompanyRelation from '@/server/model/companyRelation';
 import PinTicker from '@/server/model/pinTicker';
 import PinTag from '@/server/model/pinTag';
 import { allFlightPaths, restoreFlightPaths } from '@/server/services/pinFlightPath';
+import { allEventInfo, restoreEventInfo } from '@/server/model/pinEventInfo';
 import { allPlaces, restorePlaces } from '@/server/model/pinPlace';
 import { allSeries, restoreSeries } from '@/server/services/pinSeries';
 import Source from '@/server/model/source';
@@ -50,6 +51,7 @@ const { values: flags } = parseArgs({
     tagfile: { type: 'string', default: './scripts/backup/seedTags.json' },
     flightpathfile: { type: 'string', default: './scripts/backup/seedFlightPaths.json' },
     placefile: { type: 'string', default: './scripts/backup/seedPlaces.json' },
+    eventinfofile: { type: 'string', default: './scripts/backup/seedEventInfo.json' },
     seriesfile: { type: 'string', default: './scripts/backup/seedSeries.json' },
     translationfile: { type: 'string', default: './scripts/backup/seedTranslations.json' },
     sentimentfile: { type: 'string', default: './scripts/backup/seedPinSentiments.json' },
@@ -251,6 +253,11 @@ async function saveDB() {
   // refreshed database draws no charts.
   console.log('Backup Series');
   writeJson(flags.seriesfile, (await allSeries()).filter((s) => keptPinIds.has(s.pinId)));
+
+  // Who performs at each event pin and how to get in (0082), read off its
+  // pages with a browser and often a Claude call, with the time each was read.
+  console.log('Backup Event Info');
+  writeJson(flags.eventinfofile, (await allEventInfo()).filter((e) => keptPinIds.has(e.pinId)));
 
   // Pin translations (0044): each costs a Claude call to make again.
   console.log('Backup Translations');
@@ -499,6 +506,14 @@ async function seedDB() {
       await restoreSeries(readJson(flags.seriesfile));
     } catch (error) {
       log.error('Series Save Error', JSON.stringify(error));
+    }
+  }
+
+  if (existsSync(flags.eventinfofile)) {
+    try {
+      await restoreEventInfo(readJson(flags.eventinfofile));
+    } catch (error) {
+      log.error('Event Info Save Error', JSON.stringify(error));
     }
   }
 

@@ -20,6 +20,7 @@ import { PinCard } from '@/components/pin/PinCard';
 import { PinConfidence } from '@/components/pin/PinConfidence';
 import { PinDistance } from '@/components/pin/PinDistance';
 import { PinDuplicates } from '@/components/pin/PinDuplicates';
+import { PinEventInfo } from '@/components/pin/PinEventInfo';
 import { PinOdds } from '@/components/pin/PinOdds';
 import { PinPlace } from '@/components/pin/PinPlace';
 import { PinSeriesChart } from '@/components/pin/PinSeriesChart';
@@ -53,10 +54,11 @@ import { dayKeyIn, money } from '@/lib/format';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
 import { pinEvidence } from '@/lib/referenceConfidence';
 import { safeCitedHtml, safeHtml, toCardPins } from '@/lib/sanitize';
-import { pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
+import { isAttendableEvent, pinJsonLd, pinMetadata, pinPath } from '@/lib/seo';
 import { pinTense } from '@/lib/timeline';
+import type { PinEventInfoJson } from '@/lib/eventInfo';
 import type { PinJson } from '@/lib/types';
-import { duplicateGroupPins, pinById, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo } from '@/server/services/pages';
+import { companyWebsite, duplicateGroupPins, pinById, pinEventInfo, pinComments, pinUpdates, relatedPins, threadPins, timelineVideo } from '@/server/services/pages';
 import { viewerTimeZone } from '@/server/viewer';
 import { getLocale, getT } from '@/lib/i18n/server';
 import { categoryLabel } from '@/lib/i18n/labels';
@@ -95,17 +97,24 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
     notFound();
   }
   // What changed since it was posted: the pin shows the newest, and these say
-  // how it got there.
-  const [updates, timeZone] = await Promise.all([pinUpdates(pin.id), viewerTimeZone()]);
+  // how it got there. An event people can attend also carries its host's
+  // website, performers and tickets, for the page and its Event markup.
+  const event = isAttendableEvent(pin);
+  const [updates, timeZone, organizerUrl, eventInfo] = await Promise.all([
+    pinUpdates(pin.id),
+    viewerTimeZone(),
+    event && pin.companyId ? companyWebsite(pin.companyId) : null,
+    event ? pinEventInfo(pin.id) : null,
+  ]);
 
   return (
     <>
-      <JsonLd data={pinJsonLd(pin, t.locale)} />
+      <JsonLd data={pinJsonLd(pin, t.locale, { organizerUrl, eventInfo })} />
       {/* grid-cols-[minmax(0,1fr)]: the single column below lg is otherwise
           floored by its content's min-width, which scrolls the page sideways. */}
       <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-10">
         <article>
-          <PinBody pin={pin} timeZone={timeZone} t={t} updatedAt={updates[0]?.utcCreatedDateTime} />
+          <PinBody pin={pin} timeZone={timeZone} t={t} updatedAt={updates[0]?.utcCreatedDateTime} eventInfo={eventInfo} />
         </article>
 
         <aside className="min-w-0">
@@ -172,7 +181,19 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
 }
 
 // updatedAt: the pin's newest update, when it has changed since it was posted.
-function PinBody({ pin, timeZone, t, updatedAt }: { pin: PinJson; timeZone: string; t: Translator; updatedAt?: string }) {
+function PinBody({
+  pin,
+  timeZone,
+  t,
+  updatedAt,
+  eventInfo,
+}: {
+  pin: PinJson;
+  timeZone: string;
+  t: Translator;
+  updatedAt?: string;
+  eventInfo?: PinEventInfoJson | null;
+}) {
   const media = pin.media ?? [];
   const hasCoordinates = pin.latitude != null && pin.longitude != null;
   // Searches for the company, as the same label on a card does. That search
@@ -363,6 +384,8 @@ function PinBody({ pin, timeZone, t, updatedAt }: { pin: PinJson; timeZone: stri
           />
         </div>
       </div>
+
+      {eventInfo ? <PinEventInfo info={eventInfo} started={pinTense(pin, new Date(), dayKeyIn(new Date(), timeZone)) !== 'future'} t={t} /> : null}
 
       {/* Where to watch a film, series or anime: a merchant whose link is a
           streaming service (src/lib/streaming.ts), in the service's colours. */}

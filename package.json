@@ -46,6 +46,7 @@
     "merchants:amazon-prices": "tsx scripts/merchants/amazonPrices.ts",
     "places:resolve": "tsx scripts/places/resolve.ts",
     "places:refresh": "tsx scripts/places/refresh.ts",
+    "events:refresh": "tsx scripts/events/refresh.ts",
     "ai:retirements": "tsx scripts/ai/retirements.ts",
     "sports:tournaments": "tsx scripts/sports/tournaments.ts",
     "astronomy:eclipses": "tsx scripts/astronomy/eclipses.ts",

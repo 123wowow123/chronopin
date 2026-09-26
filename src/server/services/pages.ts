@@ -6,7 +6,10 @@
 
 import { cacheLife, cacheTag } from 'next/cache';
 import { getPersonalBag, getSliderTyping, getTagList, getTimelineVideo } from '../model/appSetting';
+import Company from '../model/company';
 import Favorite from '../model/favorite';
+import { eventInfoForPin } from '../model/pinEventInfo';
+import type { PinEventInfoJson } from '@/lib/eventInfo';
 import Pin from '../model/pin';
 import Pins from '../model/pins';
 import PinUpdate from '../model/pinUpdate';
@@ -152,6 +155,23 @@ export async function pinById(id: number, locale: Locale = DEFAULT_LOCALE): Prom
   if (!pin) return null;
   const [json] = await localizePins([toJson<PinJson>(pin)], locale);
   return json;
+}
+
+// The website of the company a pin names, the organizer in its event markup.
+// A company's links change about never, so this is kept a day.
+export async function companyWebsite(companyId: number): Promise<string | null> {
+  'use cache';
+  cacheLife('days');
+  return (await Company.getById(companyId))?.websiteUrl ?? null;
+}
+
+// Who performs at an event pin and how to get in, or null when nothing was
+// read. Expired with the pin's page when a reading is stored.
+export async function pinEventInfo(id: number): Promise<PinEventInfoJson | null> {
+  'use cache';
+  cacheLife('hours');
+  cacheTag(TAGS.pin(id));
+  return eventInfoForPin(id);
 }
 
 // Tagged with every pin in the thread, so a change to any of them - a
