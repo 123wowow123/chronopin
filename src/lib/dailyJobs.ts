@@ -53,6 +53,11 @@ export const TASKS = {
     label: 'Low-confidence pins',
     summary: "Re-scrape the pins scored below the timeline's confidence bar and update them with firmer dates and stronger references.",
   },
+  eventInfo: {
+    group: 'upkeep',
+    label: 'Performers and tickets',
+    summary: "Read the upcoming event pins' own pages for who performs, ticket prices, whether tickets are on sale or sold out, and the ticket link.",
+  },
   trends: {
     group: 'discover',
     label: 'Google Trends',
@@ -163,7 +168,8 @@ export const DEFAULT_DAILY_JOBS: DailyJobsSetting = {
       times: ['06:00', '18:00'],
       timeZone: 'America/Los_Angeles',
       dayOfMonth: null,
-      tasks: ['weekReview', 'freshSources', 'breakingNews', 'sentiment'],
+      // eventInfo twice a day, so a sell-out shows by the next run.
+      tasks: ['weekReview', 'freshSources', 'eventInfo', 'breakingNews', 'sentiment'],
       driver: 'auto',
       maxNewPins: MAX_NEW_PINS,
       maxUpdates: MAX_UPDATES,

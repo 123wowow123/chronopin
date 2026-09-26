@@ -124,6 +124,21 @@ export async function saveEventInfo(
   return rows.length > 0;
 }
 
+// A check whose pages stated nothing: the pin is marked read now, so a
+// refresh passes it by until it is due again. A row that already says
+// something keeps it - a blocked or rewritten page is no reason to forget
+// what an earlier read found - and only its check time moves.
+export async function markEventChecked(
+  pinId: number,
+  { source, sourceUrl }: { source: EventInfoSource; sourceUrl?: string | null },
+): Promise<void> {
+  await db.query(
+    `INSERT INTO "PinEventInfo" ("pinId", "source", "sourceUrl") VALUES ($1, $2, $3)
+     ON CONFLICT ("pinId") DO UPDATE SET "checkedAt" = now()`,
+    [pinId, source, sourceUrl ?? null],
+  );
+}
+
 export async function deleteEventInfo(pinId: number): Promise<void> {
   await db.query(`DELETE FROM "PinEventInfo" WHERE "pinId" = $1`, [pinId]);
 }

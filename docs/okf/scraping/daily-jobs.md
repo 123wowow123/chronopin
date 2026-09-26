@@ -20,7 +20,7 @@ into its instructions, so changing this page changes the next run.
 | Job | Default time | Tasks | New pins / updates per run |
 | --- | --- | --- | --- |
 | `midnight` - maintenance and new pins | 00:00 America/Los_Angeles | Keep pins right: [revisits](#revisits), [pinHealth](#pinhealth). Find new events: [trends](#trends), [thinCategories](#thincategories), [trendingCategories](#trendingcategories), [commentTopics](#commenttopics), [localEvents](#localevents). Beats: [fortune100](#fortune100), [layoffs](#layoffs) | 100 / 250 |
-| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources). Find new events: [breakingNews](#breakingnews). Scores: [sentiment](#sentiment) | 100 / 250 |
+| `news` - morning and evening check | 06:00 and 18:00 America/Los_Angeles | Keep pins right: [weekReview](#weekreview), [freshSources](#freshsources), [eventInfo](#eventinfo). Find new events: [breakingNews](#breakingnews). Scores: [sentiment](#sentiment) | 100 / 250 |
 | `monthly` - low-confidence re-check | 03:00 America/Los_Angeles on the 1st of each month | Keep pins right: [lowConfidence](#lowconfidence) | 0 / 250 |
 
 All are set on **/admin/jobs**: on or off, every day or once a month (on a
@@ -87,6 +87,7 @@ page or a PDF, and looking at a picture are the model's own. The rest:
 | `pin_health_scan`, `check_pin_health` | Broken pictures, removed or unembeddable videos, deleted posts, dead sources ([health.ts](../../../src/server/jobs/health.ts)) | Dozens of link checks in one call; oEmbed status codes |
 | `read_page` | A page as a browser renders it, a YouTube or podcast transcript, a scanned PDF's OCR | **Headless Chrome** and transcript fetchers from the scrape pipeline; web fetch cannot run a page's JavaScript or get past most bot walls |
 | `scrape_url` | The app's whole scrape into a draft pin (with `llmTasks` when the app's key has no credit) | Media top-up, screen extras, studio HQ and page metadata are the pipeline's, not the model's |
+| `pending_event_info`, `record_event_info` | Upcoming event pins' pages read for performers and tickets, and the readings saved ([eventInfo.ts](../../../src/server/eventInfo.ts)) | **Headless Chrome** plus the page's own Event markup matched to the pin's date; the save holds a ticket link to the links the pages carry |
 | `check_image` | A picture's size, type, fingerprint, and whether it repeats one the pin has | The **image processor** (Jimp decode, difference hash at distance 6) |
 | `read_okf` | Any page here, or the sections of one that mention a word | The docs are on the server, not the web |
 | `create_pin`, `update_pin`, `mark_revisit`, `resolve_revisit` | The writes, through the real API as a curator | See below |
@@ -204,6 +205,38 @@ is genuinely uncertain (a rumour, a "by 2030" plan) stays low, and the run
 leaves it alone and says so in the report. A reference that only repeats the
 source (the same wire story on another site) is not independent. A pin whose
 event turned out not to happen is marked for revisiting, not deleted.
+
+### eventInfo
+
+**Reads** `pending_event_info`: the next upcoming pins the site marks as
+events people can attend (a conference, a festival, a match, a timed music
+show - `isAttendableEvent` in src/lib/seo.ts), never-read first, then any
+read more than 20 hours ago. Each comes with its source and two best
+references as the browser read them: the text, the links that look like
+tickets, and the page's own schema.org Event markup for this date.
+**Does** read each by the rules it hands out - who performs, the cheapest and
+dearest ticket, whether tickets are on sale, sold out or not yet on sale (with
+the on-sale date), and the ticket link - and save **every** pin handed out
+with `record_event_info`, empty fields where the pages say nothing (that marks
+it checked, so it is not read again until due). Ask again until nothing is
+left or 40 pins have been read. The pin page shows these as Performing and
+Tickets lines, and its Event markup gives them to search as performer and
+offers (Google Search Console asked for both, 2026-09-26).
+**When.** In the news job, twice a day, so a sell-out or a new on-sale date
+shows by the next run. `npm run events:refresh` does the same from a
+terminal (with `--export`/`--import` for a session when the key has no
+credit).
+**Traps.** Only this edition, this date, this venue: a tour page lists every
+night, a festival's site still describes last year's lineup, a league page
+every match. A finalist, headliner or keynote the pages do not yet name is
+left out, not guessed. The organizer, promoter, sponsor or venue is never a
+performer. "Sign up for updates", "save the date" or "register your interest"
+is not on sale and not PreOrder either - leave availability empty. A price is
+a ticket price the page quotes for this edition, never a past year's, a
+resale price, or a kids' ticket sold only with an adult one. A ticketUrl must
+be copied from the links given; the tool drops any other. A row someone set
+by hand is kept. First pass (2026-09-26): 75 of 151 upcoming event pins had
+anything to read - blank beats guessed.
 
 ## Find new events
 

@@ -26,8 +26,11 @@ import PinSentiment, { sentimentHash } from '../model/pinSentiment';
 import Comment from '../model/comment';
 import { clampSentiment, PIN_SENTIMENT_PROMPT } from '../extract/pinSentiment';
 import { COMMENT_SENTIMENT_PROMPT } from '../extract/sentiment';
-import { invalidateTimeline } from '../services/cache';
+import { expirePinPage, invalidateTimeline } from '../services/cache';
 import { fetchSourceText } from '../scrape/sourceText';
+import { combineReading, describeEvent, describeReading, EVENT_INFO_PROMPT, EVENT_INFO_SCHEMA, eventPins, pagesForReading, readEventPages, type PageRead } from '../eventInfo';
+import { markEventChecked, saveEventInfo } from '../model/pinEventInfo';
+import { hasEventInfo } from '@/lib/eventInfo';
 import { CURATORS } from './curators';
 import { checkPinHealth, pinsToCheck } from './health';
 import { createPin, getPin, scrapeUrl, updatePin, type PinPatch } from './pinApi';
@@ -85,6 +88,19 @@ export async function readOkf(relative: string, search?: string, offset = 0) {
     return { path: relative, matchingSections: sections.length, text: sections.join('\n\n').slice(0, PAGE_CHARS) };
   }
   return { path: relative, length: text.length, offset, text: text.slice(offset, offset + PAGE_CHARS) };
+}
+
+// The eventInfo task re-reads a pin's pages at most this often, so the two
+// news runs a day read each pin once a day; and shows this much of each page.
+const EVENT_INFO_HOURS = 20;
+const EVENT_INFO_PAGE_CHARS = 3000;
+
+// The pages pending_event_info handed out, by pin, so record_event_info can
+// hold an answer to the links those pages actually carry. Kept per process:
+// one run's tools all run in one (the app, or the session driver's MCP server).
+function eventPagesRead(): Map<number, PageRead[]> {
+  const g = globalThis as unknown as { __chronopinEventPages?: Map<number, PageRead[]> };
+  return (g.__chronopinEventPages ??= new Map());
 }
 
 export const TOOLS: JobTool[] = [
@@ -257,6 +273,86 @@ export const TOOLS: JobTool[] = [
         }
       }
       return { pins, comments, skipped };
+    },
+  },
+  // --- Performers and tickets (the eventInfo task) -------------------------
+  {
+    name: 'pending_event_info',
+    description:
+      "The next upcoming event pins (concerts, matches, conferences, festivals) whose performers and tickets were never read or were read more than 20 hours ago, never-read first, each with its pages as the browser read them - text, the links that look like tickets, and the page's own Event markup - and the rules for reading them. Read each by the rules and save every one with record_event_info (empty fields when the pages say nothing), then ask again until nothing is left.",
+    input_schema: obj({ limit: num('At most this many pins, default 2, at most 4 (each takes a browser visit to up to three pages)') }),
+    run: async (input) => {
+      const pins = await eventPins({ hours: EVENT_INFO_HOURS, limit: int(input.limit, 2, 1, 4) });
+      const due = (await eventPins({ hours: EVENT_INFO_HOURS, limit: 1000 })).length;
+      if (!pins.length) return { rules: EVENT_INFO_PROMPT, pins: [], remaining: 0 };
+      const { launchBrowser } = await import('../scrape');
+      const browser = await launchBrowser();
+      try {
+        const read = [];
+        for (const pin of pins) {
+          const pages = (await readEventPages(browser, pin, EVENT_INFO_PAGE_CHARS)).map((p) => ({ ...p, ticketLinks: p.ticketLinks.slice(0, 12) }));
+          eventPagesRead().set(pin.id, pages);
+          read.push({ pinId: pin.id, event: describeEvent(pin), pages: pagesForReading(pages) });
+        }
+        return { rules: EVENT_INFO_PROMPT, answerShape: EVENT_INFO_SCHEMA, pins: read, remaining: Math.max(0, due - pins.length) };
+      } finally {
+        await browser.close();
+      }
+    },
+  },
+  {
+    name: 'record_event_info',
+    description:
+      'Saves readings of pins handed out by pending_event_info: { pinId, performers: [{ name, type, url }], lowPrice, highPrice, priceCurrency, availability, onSaleDate, ticketUrl, sourceUrl } per the rules, "" or null where the pages say nothing. The page markup\'s claims win, a ticketUrl must be one of the links given, and a pin whose pages said nothing is marked checked. A row someone set by hand is kept.',
+    input_schema: obj({
+      readings: {
+        type: 'array',
+        items: obj(
+          {
+            pinId: num('Pin id, as handed out'),
+            performers: { type: 'array', items: obj({ name: str('As billed'), type: str('Person or PerformingGroup'), url: str('Their own page if linked, else empty') }, ['name', 'type']) },
+            lowPrice: { type: ['number', 'null'], description: 'Cheapest ticket, null for none quoted' },
+            highPrice: { type: ['number', 'null'], description: 'Dearest ticket, null for none quoted' },
+            priceCurrency: str('ISO 4217, empty with no price'),
+            availability: str('InStock, SoldOut, PreOrder or empty'),
+            onSaleDate: str('ISO 8601 for PreOrder, else empty'),
+            ticketUrl: str('Exactly one of the ticket links given, else empty'),
+            sourceUrl: str('The page it mostly came from'),
+          },
+          ['pinId'],
+        ),
+      },
+    }),
+    run: async (input, ctx) => {
+      const results: { pinId: number; stored: string }[] = [];
+      for (const answer of Array.isArray(input.readings) ? input.readings : []) {
+        const pinId = int(answer?.pinId, 0, 1, 2 ** 31 - 1);
+        const pages = eventPagesRead().get(pinId);
+        if (!pages) {
+          results.push({ pinId, stored: 'not handed out by pending_event_info in this run' });
+          continue;
+        }
+        const reading = combineReading(answer, pages);
+        if (typeof reading === 'string') {
+          results.push({ pinId, stored: `rejected: ${reading}` });
+          continue;
+        }
+        if (hasEventInfo(reading.fields)) {
+          const saved = await saveEventInfo(pinId, reading.fields, { source: reading.source, sourceUrl: reading.sourceUrl });
+          results.push({ pinId, stored: saved ? describeReading(reading.fields) : 'kept the reading set by hand' });
+          if (saved) await act(ctx, { tool: 'record_event_info', pinId, detail: describeReading(reading.fields) });
+        } else {
+          await markEventChecked(pinId, reading);
+          results.push({ pinId, stored: 'nothing stated; marked checked' });
+        }
+        eventPagesRead().delete(pinId);
+        try {
+          expirePinPage(pinId);
+        } catch {
+          // Outside a request the cache is not ours to expire; the page lapses within hours.
+        }
+      }
+      return { results };
     },
   },
   {
