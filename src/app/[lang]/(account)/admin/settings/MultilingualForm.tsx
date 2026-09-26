@@ -54,7 +54,9 @@ export function MultilingualForm({ saved, coverage }: { saved: MultilingualSetti
               onChange={(e) => void change(locale, e.target.checked)}
               className="size-4 accent-accent"
             />
-            <span lang={locale}>{LOCALE_NAMES[locale]}</span>
+            <span>
+              <span lang={locale}>{LOCALE_NAMES[locale]}</span> <span className="text-subtle">({locale})</span>
+            </span>
             <span className={`tabular-nums ${coverage.current[locale] < coverage.total ? 'text-subtle' : 'text-success'}`}>
               {coverage.current[locale].toLocaleString('en-US')} / {coverage.total.toLocaleString('en-US')}
             </span>

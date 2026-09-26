@@ -64,12 +64,12 @@ function triviaSearchUrl(name: string, locale: string): string {
   return `https://www.google.com/search?q=${encodeURIComponent(name)}&hl=${locale}`;
 }
 
-// Beside the rail, a `wrap` tag uses the specialty day's small type and wraps
-// to two lines (still within the 42px a tag is allowed) instead of cutting off.
+// Beside the rail, a `wrap` tag wraps evenly to two lines (the 54px a date
+// marker is allowed) instead of cutting off, in the same type as the rest.
 // With an `href` the chip is that search link, opened in a new tab.
 function Tag({ variant, children, title, className = '', wrap = false, href }: { variant: TagVariant; children: React.ReactNode; title?: string; className?: string; wrap?: boolean; href?: string }) {
-  const chip = `${tagBase} tag-${variant} ${wrap ? 'lg:text-xs lg:leading-4' : ''} ${className}`;
-  const label = <span className={`block truncate ${wrap ? 'lg:line-clamp-2 lg:whitespace-normal' : ''}`}>{children}</span>;
+  const chip = `${tagBase} tag-${variant} ${className}`;
+  const label = <span className={`block truncate ${wrap ? 'lg:line-clamp-2 lg:whitespace-normal lg:text-balance' : ''}`}>{children}</span>;
   return href ? (
     <a href={href} target="_blank" rel="noopener nofollow" className={chip} title={title}>
       {label}
@@ -151,7 +151,9 @@ export function TimeBlock({
   const planet = weekdayPlanet(bag.day, locale);
   const moon = moonPhase(bag.day, 16, locale);
   const lunar = lunarDate(bag.day, locale);
-  const tagsHeight = 26 + 42 * (2 + (lunar ? 1 : 0) + bag.dateTimes.length + (specialtyDays.length ? 1 : 0));
+  // 42px a one-line tag, 54 a date marker's two lines and 68 the specialty
+  // day's three.
+  const tagsHeight = 26 + 42 * (2 + (lunar ? 1 : 0)) + 54 * bag.dateTimes.length + (specialtyDays.length ? 68 : 0);
   // Every card the day may show, in date order; which columns they fall into
   // is PinColumns' business, and how narrow a window still shows one is its
   // place in the pick.
@@ -349,7 +351,8 @@ function DuplicateStack({ pin, hiddenCount, children }: { pin: PinJson; hiddenCo
 
 // The day's first specialty day ("National Peanut Day"), in the page's
 // language; the title lists them all. It searches for the English name, the
-// one the web knows it by. Wraps to three lines, so it ends the stack.
+// one the web knows it by. In the tags' own type, wrapped evenly (全国幸福 /
+// 青鸟日, not a lone last character) to three lines, so it ends the stack.
 export function SpecialtyTag({ days, className = '' }: { days: SpecialtyDay[]; className?: string }) {
   const locale = useLocale();
   return (
@@ -357,10 +360,10 @@ export function SpecialtyTag({ days, className = '' }: { days: SpecialtyDay[]; c
       href={triviaSearchUrl(days[0].name, locale)}
       target="_blank"
       rel="noopener nofollow"
-      className={`${tagBase} tag-trivia ${extraTag} lg:text-xs lg:leading-4 ${className}`}
+      className={`${tagBase} tag-trivia ${extraTag} ${className}`}
       title={days.map((day) => day.label).join('\n')}
     >
-      <span className="block truncate lg:line-clamp-3 lg:whitespace-normal">{days[0].label}</span>
+      <span className="block truncate lg:line-clamp-3 lg:whitespace-normal lg:text-balance">{days[0].label}</span>
     </a>
   );
 }
@@ -376,7 +379,7 @@ export function TodayMarker({ specialtyDays }: { specialtyDays: SpecialtyDay[] }
         </div>
         {specialtyDays.length ? <SpecialtyTag days={specialtyDays} /> : null}
       </div>
-      {specialtyDays.length ? <div className="hidden lg:block lg:h-[60px]" /> : null}
+      {specialtyDays.length ? <div className="hidden lg:block lg:h-[72px]" /> : null}
     </div>
   );
 }
