@@ -7,6 +7,8 @@
 //   npm run events:refresh -- --ids 2320,3334 --apply
 //   npm run events:refresh -- --hours 24 --apply   skip pins read in the last day
 //   npm run events:refresh -- --export tasks.json  no credit: the pages and the rules, for a session
+//   npm run events:refresh -- --ids 1,2 --extra urls.json --export tasks.json
+//                                                  also read pages a session found ({ "<pinId>": [urls] })
 //   npm run events:refresh -- --import answers.json --tasks tasks.json --apply
 //                                                  store a session's answers to that export
 //   CHRONOPIN_TOKEN=... npm run events:refresh -- --apply --push https://www.chronopin.com
@@ -39,13 +41,14 @@ import {
   eventPins,
   pagesForReading,
   readEventPages,
+  readPage,
   readWithClaude,
   type EventReading,
   type PageRead,
 } from '@/server/eventInfo';
 import { getClient } from '@/server/extract';
-import { markEventChecked, saveEventInfo } from '@/server/model/pinEventInfo';
-import { hasEventInfo } from '@/lib/eventInfo';
+import { eventInfoForPin, markEventChecked, saveEventInfo } from '@/server/model/pinEventInfo';
+import { EMPTY_EVENT_INFO, hasEventInfo } from '@/lib/eventInfo';
 
 const { values: flags } = parseArgs({
   options: {
@@ -58,6 +61,7 @@ const { values: flags } = parseArgs({
     import: { type: 'string' },
     tasks: { type: 'string' },
     push: { type: 'string' },
+    extra: { type: 'string' },
   },
 });
 
@@ -78,13 +82,27 @@ async function store(pinId: number, reading: EventReading): Promise<string> {
   return (await saveEventInfo(pinId, reading.fields, { source: reading.source, sourceUrl: reading.sourceUrl })) ? 'stored' : 'NOT STORED (set by hand)';
 }
 
+// A read that found nothing: marked checked, so a refresh passes the pin by
+// until it is due. Pushed as an empty reading only where this database (a
+// copy of the site's) holds none - an empty PUT would replace a real one.
+async function storeChecked(pinId: number, reading: EventReading) {
+  if (!flags.push) {
+    await markEventChecked(pinId, reading);
+    return;
+  }
+  const held = await eventInfoForPin(pinId);
+  if (held && hasEventInfo(held)) return;
+  const result = await store(pinId, reading);
+  if (result !== 'stored') console.log(`#${pinId}: checked mark ${result}`);
+}
+
 // --import: a session's answers to an --export, [{ pinId, performers, ... }],
 // held to the same rules as Claude's: read against the exported pages (--tasks)
 // so the markup's claims win and a ticket link must be one the pages carry.
 async function importAnswers(file: string) {
   if (!flags.tasks) throw new Error('--import needs --tasks <the --export file it answers>');
   const answers = JSON.parse(readFileSync(file, 'utf8')) as Record<string, unknown>[];
-  const { tasks } = JSON.parse(readFileSync(flags.tasks, 'utf8')) as { tasks: { pinId: number; pages: PageRead[] }[] };
+  const { tasks } = JSON.parse(readFileSync(flags.tasks, 'utf8')) as { tasks: { pinId: number; event?: { start: string; end: string | null }; pages: PageRead[] }[] };
   const tally = { stored: 0, empty: 0, failed: 0 };
   for (const answer of answers) {
     const pinId = Number(answer.pinId);
@@ -101,10 +119,16 @@ async function importAnswers(file: string) {
       tally.failed++;
       continue;
     }
+    // An event that is over keeps who performed; its tickets are history.
+    const ends = task.event?.end ?? task.event?.start;
+    if (ends && Date.parse(ends.replace(' (exclusive)', '')) < Date.now()) {
+      reading.fields = { ...EMPTY_EVENT_INFO, performers: reading.fields.performers };
+    }
     const links = new Set(pages.flatMap((p) => [...p.ticketLinks.map((l) => l.href), p.markup?.ticketUrl]));
     if (answer.ticketUrl && !links.has(String(answer.ticketUrl))) console.log(`#${pinId}: ticket link ${String(answer.ticketUrl)} is not on its pages; dropped`);
     if (!hasEventInfo(reading.fields)) {
       tally.empty++;
+      if (flags.apply) await storeChecked(pinId, reading);
       continue;
     }
     console.log(`#${pinId}: ${reading.source}: ${describeReading(reading.fields)}`);
@@ -129,6 +153,8 @@ async function run() {
   const anthropic = flags.export ? null : getClient();
   if (!anthropic && !flags.export) console.log('No Anthropic key: storing what page markup says; use --export for the rest.');
 
+  // Pages a session found for a pin, read alongside its own.
+  const extra = (flags.extra ? JSON.parse(readFileSync(flags.extra, 'utf8')) : {}) as Record<string, string[]>;
   const { launchBrowser } = await import('@/server/scrape');
   const browser = await launchBrowser();
   const tasks: unknown[] = [];
@@ -137,6 +163,11 @@ async function run() {
     for (const pin of pins) {
       console.log(`#${pin.id} ${pin.title} (${pin.utcStartDateTime.slice(0, 10)})`);
       const pages = await readEventPages(browser, pin);
+      for (const url of extra[pin.id] ?? []) {
+        if (pages.some((p) => p.url === url)) continue;
+        const read = await readPage(browser, url, pin);
+        if (read) pages.push(read);
+      }
       if (flags.export) {
         tasks.push({ pinId: pin.id, event: describeEvent(pin), pages: pagesForReading(pages) });
         continue;
