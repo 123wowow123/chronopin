@@ -2,6 +2,7 @@ import { randomUUID } from 'node:crypto';
 import getVideoId from 'get-video-id';
 import _ from 'lodash';
 import { mediumID } from '@/lib/appConfig';
+import { youtubeEmbedHtml } from '@/lib/videoEmbed';
 import * as azureBlob from '../azureBlob';
 import * as db from '../db';
 import type { QueryFn, Row } from '../db';
@@ -70,6 +71,7 @@ export default class Medium {
   // other pins too. (The Express version meant to share rows but its check
   // never matched, so this is what it always did.)
   async save(): Promise<this> {
+    this.fillEmbed();
     const pinId = this._pin?.id;
     return pinId ? createPinMediumLink(this, pinId) : createMedium(this);
   }
@@ -99,6 +101,16 @@ export default class Medium {
     }
     if (type === mediumID.youtube && !this.thumbName) {
       await this.addVideoThumb().catch((err) => log.error('video-thumb error:', err));
+    }
+    this.fillEmbed();
+    return this;
+  }
+
+  // A YouTube video added by its URL alone gets the player YouTube's API
+  // would have handed the scraper, so it plays wherever the stored html is read.
+  fillEmbed(): this {
+    if (Number(this.type) === mediumID.youtube && !this.html) {
+      this.html = youtubeEmbedHtml(this.originalUrl) ?? this.html;
     }
     return this;
   }

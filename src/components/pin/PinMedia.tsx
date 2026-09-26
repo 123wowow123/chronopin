@@ -7,12 +7,14 @@ import { Icon } from '@/components/ui/Icon';
 import { blobUrl } from '@/lib/appConfig';
 import { safeEmbedHtml } from '@/lib/sanitize';
 import type { MediumJson } from '@/lib/types';
+import { mediumEmbedHtml } from '@/lib/videoEmbed';
 import { useT } from '@/lib/client/i18n';
 import type { MessageKey } from '@/lib/i18n/translate';
 
-// A video this component can play, as opposed to one it can only picture.
+// A video this component can play, as opposed to one it can only picture:
+// one with a stored player, or a YouTube URL to build one from.
 export function isVideo(medium: MediumJson): boolean {
-  return String(medium.type) === '3' && !!medium.html;
+  return String(medium.type) === '3' && !!mediumEmbedHtml(medium);
 }
 
 // Whether PinMedia has anything to draw for a medium, from its fields alone: a
@@ -21,7 +23,7 @@ export function isVideo(medium: MediumJson): boolean {
 function drawable(medium: MediumJson, poster?: boolean): boolean {
   const type = String(medium.type);
   if (type === '2') return !!medium.html;
-  if (type === '3') return !!medium.html && (!poster || !!medium.thumbName);
+  if (type === '3') return isVideo(medium) && (!poster || !!medium.thumbName);
   return type === '1' && !!(medium.thumbName || medium.originalUrl);
 }
 
@@ -48,7 +50,7 @@ export function PinMedia({
   onMissing?: () => void;
 }) {
   const type = String(medium.type);
-  const unrenderable = !((type === '2' || type === '3') && medium.html) && type !== '1';
+  const unrenderable = !((type === '2' && medium.html) || isVideo(medium)) && type !== '1';
   useEffect(() => {
     if (unrenderable) onMissing?.();
   }, [unrenderable, onMissing]);
@@ -60,7 +62,7 @@ export function PinMedia({
     if (poster) {
       return <VideoPoster medium={medium} title={title} href={href} external={external} priority={priority} sizes={sizes} onMissing={onMissing} />;
     }
-    return <YouTubeEmbed html={medium.html!} title={title} />;
+    return <YouTubeEmbed html={mediumEmbedHtml(medium)!} title={title} />;
   }
   if (unrenderable) {
     return null;
