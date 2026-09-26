@@ -45,6 +45,34 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **A batch gets a new desk when no existing desk fits.** Owner, 2026-09-24, during the Aldi Nord run: "create new user if that makes more sense". Match the company to what it *is* (a store chain is @RetailDesk, a consumer-goods maker @ConsumerDesk, restaurants @FoodDesk). When nothing fits, create a curator rather than force-fit one, and get the new account's email confirmed on prod *before* the run: prod refuses POST from an unverified account, and the API cannot re-author pins later (see the Nestlé entry).
 * **A product pin says what the product is.** Owner, 2026-09-22, on pin 2346 (the A350F first flight): "Product pins should have notable features in long form summary". A pin about an aircraft, vehicle, device, chip, game, AI model or software release gets summary points on what is new or distinctive about it and its headline specifications with units, not only the event's date and schedule. Owner, same day: the features go in **their own section** - `<h3>Notable features</h3><ul>...</ul>` after the event's list - "rather than piled into large list of bullets with other things". Built into all three summary prompts (`PRODUCT_FEATURES_RULE` in `src/server/extract/index.ts`); the wiki pages now record a product's features too. The manufacturer's product page is the usual place for the specs; add it as a reference.
 * **Scraping from the dev machine processes locally and posts only the finished pin.** Owner, 2026-09-24, during the Oracle prod batch, on hearing that prod's save pipeline starts headless Chromium on the VM: "when running scraping on local machine all processes should be run on local and just post the final pin". Page fetches with Chromium, source wikis, reference and podcast checks, sentiment, company relations, translations and image thumbnailing all belong on the dev machine; prod, one small B2s VM serving readers, only stores the result. **Not yet possible:** every `POST`/`PUT /api/pins` on prod still fires the `pinEvents` save listeners in `src/server/events.ts` (`refreshWiki` opens Chromium per link and calls the LLM; `checkPodcasts`, `suggestDuplicates`, `syncStocks`, `scoreTone`, `syncAwards` and others follow), and create downloads every media URL itself. Those listeners drove prod's load to 59 in the Broadcom run and 70 with three sessions posting on 2026-09-24. Honouring the rule needs a way to post a prebuilt pin: its wikis, relations, sentiment and translations built locally, thumbs pushed with `thumbs:push`, and prod skipping the heavy listeners while keeping search sync, the live feed and the duplicate check. Until that exists, prod batches stay serial and load-gated.
+## 2026-09-25 - Fashion news events, 110 pins straight to production (@FashionDesk, @RetailDesk, @LawDesk, @EconDesk)
+
+Ian asked to "pin fashion news events on prod" right after the luxury batch. The existing @FashionDesk
+posted it; retailers went to @RetailDesk. Eight agents drafted one lane each (fashion weeks and galas,
+fast fashion, Shein and regulation, US apparel, designers, sneakers, retail, resale and sustainability),
+steered off everything already pinned (the luxury houses, Nike, Lululemon, Vuori, Alo). The brief folded
+in the luxury batch's lessons (3 media in the first pass, no magazine image servers, US tickers only, 20
+searches per agent), so no second media round was needed. Posted **4165-4274**, all read back OK. Batch
+files: `.scrape/prod-batches/fashion-2026-09-25/`.
+
+- **Forward pins:** Levi Q3 7 Oct (4189), Fast Retailing FY 8 Oct (4177), Victoria's Secret show 18 Oct
+  (4270), Adidas 9M 29 Oct (4166), CFDA Awards 2 Nov (4271), Fashion Awards 30 Nov (4272), H&M FY 28 Jan
+  2027 (4185), Copenhagen 1 Feb 2027 (4273), Milan 23 Feb 2027 (4197), Met Gala 3 May 2027 (4195); the
+  Gap, Ralph Lauren, PVH, VF, ThredUp and Inditex next results are estimated from trackers.
+- **Held:** The RealReal's estimated Q3 date (no genuine picture left after rs-01 used the only one).
+
+* **Learned - a tag named like a category is stored as the category.** `Fashion` and `Award` came back
+  as categories, not tags (`src/lib/tags.ts` `isCategory`), so a batch's shared tag that is also a
+  category name only holds where the pin carries that category. All 110 did; verify.py now counts
+  categories as tags. Pick a non-category word when the shared tag must be a tag.
+* **Learned - one pin per sourceUrl bites chains that cite the same page twice.** The SB 707 signing and
+  its 2030 implementation pin shared the bill page, and two Milan Fashion Week editions shared CNMI's
+  calendar. The 409 saved nothing; the later pin got its own page (the edition's calendar PDF, an
+  implementation tracker) and the run resumed. Lint for shared sourceUrls before posting.
+* **Learned - reusing a Commons file across batches** is not caught by a per-batch grep: three fashion
+  drafts reused luxury pins' photos (White House south facade, Fondation Louis Vuitton, a Versace shop).
+  Grep the previous batch folders too.
+
 ## 2026-09-25 - Luxury news events, 108 pins straight to production (@LuxuryDesk, four @LawDesk)
 
 Ian asked to "pin luxury news events" on prod under a new curator and picked the wider scope. Every pin
