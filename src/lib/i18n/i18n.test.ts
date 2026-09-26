@@ -7,6 +7,7 @@ import en from './messages/en';
 import es from './messages/es';
 import fr from './messages/fr';
 import ja from './messages/ja';
+import ko from './messages/ko';
 import zh from './messages/zh';
 import { CATEGORIES, slugify } from '../categories';
 import { createTranslator, type Messages } from './translate';
@@ -51,7 +52,7 @@ describe('negotiateLocale', () => {
   });
 
   it('answers null for nothing supported, or no header', () => {
-    expect(negotiateLocale('pt-BR,ko')).toBeNull();
+    expect(negotiateLocale('pt-BR,it')).toBeNull();
     expect(negotiateLocale('de;q=0')).toBeNull();
     expect(negotiateLocale('ja,zh-CN;q=0.8,en;q=0.5', ['en', 'zh'])).toBe('zh');
     expect(negotiateLocale(null)).toBeNull();
@@ -134,7 +135,7 @@ describe('formatting in other languages', () => {
 // Every translation keeps the English message's {slots} and <tags>: a slot
 // lost or renamed prints as its braces, and a lost tag loses its link.
 describe('dictionaries', () => {
-  const others: Record<string, Messages> = { es, fr, de, ja, zh };
+  const others: Record<string, Messages> = { es, fr, de, ja, ko, zh };
 
   function leaves(node: unknown, prefix = ''): [string, string][] {
     if (typeof node === 'string') return [[prefix, node]];

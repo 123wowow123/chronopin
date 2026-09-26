@@ -12,6 +12,7 @@ const loaders: Record<Locale, () => Promise<Messages>> = {
   de: () => import('./de').then((m) => m.default),
   ja: () => import('./ja').then((m) => m.default),
   zh: () => import('./zh').then((m) => m.default),
+  ko: () => import('./ko').then((m) => m.default),
 };
 
 export function getMessages(locale: Locale): Promise<Messages> {
