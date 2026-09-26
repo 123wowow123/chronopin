@@ -184,8 +184,12 @@ function videosFirst(media: MediumJson[]): MediumJson[] {
   return [...media].sort((a, b) => Number(String(b.type) === '3') - Number(String(a.type) === '3'));
 }
 
+// How far a finger must travel sideways to move to the next medium.
+const SWIPE_PX = 50;
+
 // A pin's media with labels (place, company) over them. With `selectable`
-// (the pin's own page) dots switch between them when there is more than one;
+// (the pin's own page) dots, or a swipe on a phone, switch between them when
+// there is more than one;
 // without it (a card in the timeline) only the first medium shows. A video
 // shows first. Only images take the labels: a video or tweet draws its own
 // title and badges where they would go, so when a rendered medium is not an
@@ -214,6 +218,9 @@ export function PinMediaFrame({
   const markMissing = useCallback((key: string) => setMissing((prev) => (prev.has(key) ? prev : new Set(prev).add(key))), []);
   const [activeKey, setActiveKey] = useState<string>();
   const t = useT();
+  // A finger's swipe across the media, while it lasts (see swipeHandlers).
+  const swipe = useRef<{ id: number; x: number; y: number; horizontal?: boolean } | null>(null);
+  const [dragX, setDragX] = useState(0);
 
   // Media with nothing to draw are left out here rather than reported missing
   // by an effect: the server would draw an empty frame (and the place row a
@@ -230,6 +237,49 @@ export function PinMediaFrame({
   // first one otherwise.
   const shownSlides = selectable ? slides : slides.slice(0, 1);
   const dots = selectable && slides.length > 1;
+  const activeIndex = slides.indexOf(active);
+
+  // With dots, a finger (or pen) swipes between media too: the shown one
+  // follows it sideways, and a flick past SWIPE_PX moves to the next or the
+  // previous, holding back at either end. A mostly vertical drag is left to
+  // the page's scroll. A mouse keeps its clicks, and a playing video's own
+  // touches stay inside its frame.
+  const swipeHandlers = dots
+    ? {
+        onPointerDown: (e: React.PointerEvent) => {
+          if (e.pointerType !== 'mouse') swipe.current = { id: e.pointerId, x: e.clientX, y: e.clientY };
+        },
+        onPointerMove: (e: React.PointerEvent) => {
+          const s = swipe.current;
+          if (!s || s.id !== e.pointerId) return;
+          const dx = e.clientX - s.x;
+          const dy = e.clientY - s.y;
+          if (s.horizontal === undefined) {
+            if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+            s.horizontal = Math.abs(dx) > Math.abs(dy);
+            if (!s.horizontal) {
+              swipe.current = null;
+              return;
+            }
+          }
+          const pastEnd = (dx > 0 && activeIndex === 0) || (dx < 0 && activeIndex === slides.length - 1);
+          setDragX(pastEnd ? dx / 3 : dx);
+        },
+        onPointerUp: (e: React.PointerEvent) => {
+          const s = swipe.current;
+          swipe.current = null;
+          setDragX(0);
+          if (!s?.horizontal || s.id !== e.pointerId) return;
+          const dx = e.clientX - s.x;
+          const next = Math.abs(dx) > SWIPE_PX ? slides[activeIndex + (dx < 0 ? 1 : -1)] : undefined;
+          if (next) setActiveKey(next.key);
+        },
+        onPointerCancel: () => {
+          swipe.current = null;
+          setDragX(0);
+        },
+      }
+    : {};
   // A video showing as its still is a picture: it draws no title or badges of
   // its own, so the labels belong over it.
   const playing = (medium: MediumJson) => isVideo(medium) && !poster;
@@ -237,7 +287,11 @@ export function PinMediaFrame({
 
   const frame = (
     <div className={className}>
-      <div className="relative">
+      {/* touch-action keeps vertical scroll and pinch with the browser and
+          hands sideways drags to the swipe - on each slide too, since a capped
+          slide scrolls and so starts its own touch-action chain.
+          overflow-x-clip keeps a dragged slide from widening the page. */}
+      <div className={dots ? 'relative touch-pan-y touch-pinch-zoom overflow-x-clip select-none' : 'relative'} {...swipeHandlers}>
         {labelled ? overlay : null}
         {shownSlides.map(({ medium, key }, i) => {
           const shown = key === active.key;
@@ -249,7 +303,14 @@ export function PinMediaFrame({
           // so the dots stay above a card's cut-off.
           const capped = dots && !playing(medium);
           return (
-            <div key={key} hidden={!shown} className={capped ? 'max-h-[26rem] overflow-y-auto [&_img]:max-h-[26rem] [&_img]:object-contain' : undefined}>
+            <div
+              key={key}
+              hidden={!shown}
+              className={[capped ? 'max-h-[26rem] overflow-y-auto [&_img]:max-h-[26rem] [&_img]:object-contain' : '', dots ? 'touch-pan-y touch-pinch-zoom' : '', dots && !dragX ? 'transition-transform duration-200' : '']
+                .filter(Boolean)
+                .join(' ') || undefined}
+              style={shown && dragX ? { transform: `translateX(${dragX}px)` } : undefined}
+            >
               <MediaSlide medium={medium} mediumKey={key} priority={priority && i === 0} poster={poster} onMissing={markMissing} {...shared} />
             </div>
           );
