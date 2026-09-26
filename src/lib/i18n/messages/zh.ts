@@ -558,6 +558,8 @@ const zh: Messages = {
     medium: '媒体',
     label: '媒体',
     nOfTotal: '{kind} {n}/{total}',
+    previous: '上一个',
+    next: '下一个',
     youtubeTitle: 'YouTube 视频：{title}',
   },
   comments: {

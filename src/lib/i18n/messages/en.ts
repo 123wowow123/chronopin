@@ -561,6 +561,8 @@ const en = {
     medium: 'Medium',
     label: 'Media',
     nOfTotal: '{kind} {n} of {total}',
+    previous: 'Previous',
+    next: 'Next',
     youtubeTitle: 'YouTube video: {title}',
   },
   comments: {

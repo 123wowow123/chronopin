@@ -188,7 +188,7 @@ function videosFirst(media: MediumJson[]): MediumJson[] {
 const SWIPE_PX = 50;
 
 // A pin's media with labels (place, company) over them. With `selectable`
-// (the pin's own page) dots, or a swipe on a phone, switch between them when
+// (the pin's own page) dots, or a swipe (finger, mouse drag or trackpad), switch between them when
 // there is more than one;
 // without it (a card in the timeline) only the first medium shows. A video
 // shows first. Only images take the labels: a video or tweet draws its own
@@ -218,9 +218,17 @@ export function PinMediaFrame({
   const markMissing = useCallback((key: string) => setMissing((prev) => (prev.has(key) ? prev : new Set(prev).add(key))), []);
   const [activeKey, setActiveKey] = useState<string>();
   const t = useT();
-  // A finger's swipe across the media, while it lasts (see swipeHandlers).
-  const swipe = useRef<{ id: number; x: number; y: number; horizontal?: boolean } | null>(null);
+  // A finger's (or mouse's) swipe across the media, while it lasts (see
+  // swipeHandlers), and whether the last one moved sideways, so the click
+  // that ends a mouse drag does not also follow the picture's link.
+  const swipe = useRef<{ id: number; x: number; y: number; dx: number; horizontal?: boolean } | null>(null);
+  const swiped = useRef(false);
   const [dragX, setDragX] = useState(0);
+  // A trackpad's sideways swipe arrives as wheel events: their deltaX adds up
+  // until it passes SWIPE_PX, then the rest of that gesture (its momentum
+  // included) is ignored until the events pause.
+  const frameRef = useRef<HTMLDivElement>(null);
+  const wheel = useRef({ dx: 0, locked: false, timer: 0 });
 
   // Media with nothing to draw are left out here rather than reported missing
   // by an effect: the server would draw an empty frame (and the place row a
@@ -229,55 +237,118 @@ export function PinMediaFrame({
   const slides = videosFirst(media)
     .map((medium, i) => ({ medium, key: String(medium.id ?? medium.originalUrl ?? medium.thumbName ?? i) }))
     .filter((slide) => drawable(slide.medium, poster) && !missing.has(slide.key));
-  if (!slides.length) {
-    return fallback;
-  }
   const active = (selectable ? slides.find((slide) => slide.key === activeKey) : undefined) ?? slides[0];
   // Only what can be reached is drawn: every slide when the dots are there, the
   // first one otherwise.
   const shownSlides = selectable ? slides : slides.slice(0, 1);
   const dots = selectable && slides.length > 1;
   const activeIndex = slides.indexOf(active);
+  // Past either end it loops round to the other.
+  const step = (dir: number) => setActiveKey(slides[(activeIndex + dir + slides.length) % slides.length].key);
 
-  // With dots, a finger (or pen) swipes between media too: the shown one
-  // follows it sideways, and a flick past SWIPE_PX moves to the next or the
-  // previous, holding back at either end. A mostly vertical drag is left to
-  // the page's scroll. A mouse keeps its clicks, and a playing video's own
-  // touches stay inside its frame.
+  // React's onWheel is passive, and a sideways trackpad swipe must be kept
+  // from scrolling or going back a page, so the listener is the DOM's own.
+  // A mostly vertical wheel is left to the page's scroll.
+  useEffect(() => {
+    const el = frameRef.current;
+    if (!el) return;
+    const onWheel = (e: WheelEvent) => {
+      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+      e.preventDefault();
+      const w = wheel.current;
+      window.clearTimeout(w.timer);
+      w.timer = window.setTimeout(() => {
+        w.dx = 0;
+        w.locked = false;
+      }, 200);
+      if (w.locked) return;
+      w.dx += e.deltaX;
+      if (Math.abs(w.dx) > SWIPE_PX) {
+        w.locked = true;
+        step(Math.sign(w.dx));
+      }
+    };
+    el.addEventListener('wheel', onWheel, { passive: false });
+    return () => el.removeEventListener('wheel', onWheel);
+  });
+
+  if (!slides.length) {
+    return fallback;
+  }
+
+  // With dots, a finger, pen or mouse drag swipes between media too: the shown
+  // one follows it sideways, and a drag past SWIPE_PX moves to the next or the
+  // previous, looping round at either end. A mostly vertical drag is left to
+  // the page's scroll. A playing video's own touches stay inside its frame.
+  // A finger is followed through touch events rather than pointer events: iOS
+  // can end a sideways touch without a pointerup, which left the picture
+  // following the finger but never moving on. A swipe the browser cancels
+  // still counts by how far it had gone.
+  const startSwipe = (id: number, x: number, y: number) => {
+    swiped.current = false;
+    swipe.current = { id, x, y, dx: 0 };
+  };
+  // Whether the swipe is (now) a sideways one.
+  const moveSwipe = (id: number, x: number, y: number): boolean => {
+    const s = swipe.current;
+    if (!s || s.id !== id) return false;
+    const dx = x - s.x;
+    const dy = y - s.y;
+    if (s.horizontal === undefined) {
+      if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return false;
+      s.horizontal = Math.abs(dx) > Math.abs(dy);
+      if (!s.horizontal) {
+        swipe.current = null;
+        return false;
+      }
+    }
+    s.dx = dx;
+    setDragX(dx);
+    return true;
+  };
+  const endSwipe = (id?: number) => {
+    const s = swipe.current;
+    if (!s || (id !== undefined && s.id !== id)) return;
+    swipe.current = null;
+    setDragX(0);
+    if (!s.horizontal) return;
+    swiped.current = true;
+    if (Math.abs(s.dx) > SWIPE_PX) step(s.dx < 0 ? 1 : -1);
+  };
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (!e.touches.length) endSwipe();
+  };
   const swipeHandlers = dots
     ? {
+        onTouchStart: (e: React.TouchEvent) => {
+          // A second finger is a pinch, not a swipe.
+          if (e.touches.length === 1) startSwipe(-1, e.touches[0].clientX, e.touches[0].clientY);
+          else swipe.current = null;
+        },
+        onTouchMove: (e: React.TouchEvent) => {
+          if (e.touches.length === 1) moveSwipe(-1, e.touches[0].clientX, e.touches[0].clientY);
+        },
+        onTouchEnd,
+        onTouchCancel: onTouchEnd,
         onPointerDown: (e: React.PointerEvent) => {
-          if (e.pointerType !== 'mouse') swipe.current = { id: e.pointerId, x: e.clientX, y: e.clientY };
+          if (e.pointerType === 'touch' || (e.pointerType === 'mouse' && e.button !== 0)) return;
+          startSwipe(e.pointerId, e.clientX, e.clientY);
         },
         onPointerMove: (e: React.PointerEvent) => {
-          const s = swipe.current;
-          if (!s || s.id !== e.pointerId) return;
-          const dx = e.clientX - s.x;
-          const dy = e.clientY - s.y;
-          if (s.horizontal === undefined) {
-            if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
-            s.horizontal = Math.abs(dx) > Math.abs(dy);
-            if (!s.horizontal) {
-              swipe.current = null;
-              return;
-            }
-          }
-          const pastEnd = (dx > 0 && activeIndex === 0) || (dx < 0 && activeIndex === slides.length - 1);
-          setDragX(pastEnd ? dx / 3 : dx);
+          const sideways = moveSwipe(e.pointerId, e.clientX, e.clientY);
+          // A mouse keeps dragging once it leaves the frame.
+          if (sideways && e.pointerType === 'mouse' && !e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.setPointerCapture(e.pointerId);
         },
-        onPointerUp: (e: React.PointerEvent) => {
-          const s = swipe.current;
-          swipe.current = null;
-          setDragX(0);
-          if (!s?.horizontal || s.id !== e.pointerId) return;
-          const dx = e.clientX - s.x;
-          const next = Math.abs(dx) > SWIPE_PX ? slides[activeIndex + (dx < 0 ? 1 : -1)] : undefined;
-          if (next) setActiveKey(next.key);
+        onPointerUp: (e: React.PointerEvent) => endSwipe(e.pointerId),
+        onPointerCancel: (e: React.PointerEvent) => endSwipe(e.pointerId),
+        onClickCapture: (e: React.MouseEvent) => {
+          if (!swiped.current) return;
+          swiped.current = false;
+          e.preventDefault();
+          e.stopPropagation();
         },
-        onPointerCancel: () => {
-          swipe.current = null;
-          setDragX(0);
-        },
+        // A mouse would otherwise pick the picture up as a native drag.
+        onDragStart: (e: React.DragEvent) => e.preventDefault(),
       }
     : {};
   // A video showing as its still is a picture: it draws no title or badges of
@@ -286,12 +357,12 @@ export function PinMediaFrame({
   const labelled = shownSlides.every((slide) => String(slide.medium.type) === '1' || (!!poster && isVideo(slide.medium)));
 
   const frame = (
-    <div className={className}>
+    <div className={`group/media ${className}`}>
       {/* touch-action keeps vertical scroll and pinch with the browser and
           hands sideways drags to the swipe - on each slide too, since a capped
           slide scrolls and so starts its own touch-action chain.
           overflow-x-clip keeps a dragged slide from widening the page. */}
-      <div className={dots ? 'relative touch-pan-y touch-pinch-zoom overflow-x-clip select-none' : 'relative'} {...swipeHandlers}>
+      <div ref={dots ? frameRef : undefined} className={dots ? 'relative touch-pan-y touch-pinch-zoom overflow-x-clip select-none' : 'relative'} {...swipeHandlers}>
         {labelled ? overlay : null}
         {shownSlides.map(({ medium, key }, i) => {
           const shown = key === active.key;
@@ -315,9 +386,21 @@ export function PinMediaFrame({
             </div>
           );
         })}
+        {/* A strip at each edge steps to the previous or next medium when
+            clicked, rather than the picture's link opening, and takes a swipe
+            that starts on it - over a player too, which otherwise keeps every
+            touch and click inside its iframe. They stop short of the player's
+            top and bottom bars and of the labels in the frame's corners. */}
+        {dots ? (
+          <>
+            <MediaEdge side="previous" onStep={() => step(-1)} />
+            <MediaEdge side="next" onStep={() => step(1)} />
+          </>
+        ) : null}
       </div>
       {dots ? (
-        <div role="group" aria-label={t('media.label')} className="flex justify-center gap-0.5 py-1">
+        <div role="group" aria-label={t('media.label')} className="flex items-center justify-center gap-0.5 py-1">
+          <MediaArrow side="previous" label={t('media.previous')} onStep={() => step(-1)} />
           {slides.map(({ medium, key }, i) => {
             const shown = key === active.key;
             return (
@@ -333,6 +416,7 @@ export function PinMediaFrame({
               </button>
             );
           })}
+          <MediaArrow side="next" label={t('media.next')} onStep={() => step(1)} />
         </div>
       ) : null}
     </div>
@@ -344,6 +428,38 @@ export function PinMediaFrame({
       {fallback}
       {frame}
     </>
+  );
+}
+
+// An edge of the frame that steps to the previous or next medium when clicked,
+// and passes a swipe that starts on it up to the frame. It darkens under a
+// hovering pointer and more while pressed. The arrows beside the dots are the
+// labelled buttons, so this one stays out of the tab order and the a11y tree.
+function MediaEdge({ side, onStep }: { side: 'previous' | 'next'; onStep: () => void }) {
+  return (
+    <button
+      type="button"
+      tabIndex={-1}
+      aria-hidden
+      onClick={onStep}
+      className={`absolute inset-y-12 z-10 w-12 touch-pan-y touch-pinch-zoom from-black/0 transition-colors hover:from-black/30 active:from-black/45 ${side === 'previous' ? 'left-0 bg-linear-to-r' : 'right-0 bg-linear-to-l'}`}
+    />
+  );
+}
+
+// The previous or next arrow beside the dots. With a mouse it shows while the
+// pointer is over the media (or the arrow has keyboard focus); a touch screen,
+// with no hover, always shows it.
+function MediaArrow({ side, label, onStep }: { side: 'previous' | 'next'; label: string; onStep: () => void }) {
+  return (
+    <button
+      type="button"
+      aria-label={label}
+      onClick={onStep}
+      className="rounded-full p-1 text-white/70 transition hover:bg-white/15 hover:text-white focus-visible:opacity-100 active:scale-90 active:bg-white/25 pointer-fine:opacity-0 pointer-fine:group-hover/media:opacity-100 max-lg:p-1.5"
+    >
+      <Icon name="chevron" className={`size-4 ${side === 'previous' ? 'rotate-90' : '-rotate-90'}`} />
+    </button>
   );
 }
 

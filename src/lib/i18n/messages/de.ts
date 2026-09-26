@@ -564,6 +564,8 @@ const de: Messages = {
     medium: 'Medium',
     label: 'Medien',
     nOfTotal: '{kind} {n} von {total}',
+    previous: 'Zurück',
+    next: 'Weiter',
     youtubeTitle: 'YouTube-Video: {title}',
   },
   comments: {

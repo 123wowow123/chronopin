@@ -564,6 +564,8 @@ const es: Messages = {
     medium: 'Elemento',
     label: 'Multimedia',
     nOfTotal: '{kind} {n} de {total}',
+    previous: 'Anterior',
+    next: 'Siguiente',
     youtubeTitle: 'Vídeo de YouTube: {title}',
   },
   comments: {

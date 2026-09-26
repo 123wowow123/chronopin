@@ -558,6 +558,8 @@ const ja: Messages = {
     medium: 'メディア',
     label: 'メディア',
     nOfTotal: '{kind} {n}/{total}',
+    previous: '前へ',
+    next: '次へ',
     youtubeTitle: 'YouTube動画：{title}',
   },
   comments: {
