@@ -265,5 +265,16 @@ pin can have user uploadable pictures in comments.
 
 - pin fashion news events
 
+- pin sneakers news events
+
+- music events
+
 - post site description on many wiki's an link back
 
+- need share pin feature via text message
+
+- send address to tesla or phone
+
+- add korean translation
+
+- send notification on time with watched item

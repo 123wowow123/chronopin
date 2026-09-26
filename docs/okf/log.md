@@ -1,5 +1,8 @@
 # Update Log
 
+## 2026-09-26
+* **Update**: **Video media for the fashion pins, on production** (4165-4274): 105 of the 110 pins now carry an embeddable YouTube video (brand/organiser channels first, established news otherwise; forward and completion pins get labelled context coverage), added by a load-gated GET -> PUT round trip. Video need not be Creative Commons. Stale 4195 (Galliano Met Gala cancelled) and 4241 (Andic homicide probe) raised. [Learnings](/scraping/learnings.md)
+
 ## 2026-09-24
 * **Update**: **Qualcomm news events, posted straight to production** (pins 3928-4005 interleaved, @TechDesk with @LawDesk, @CyberDesk and @EconDesk): fifty-six pins tagged `Qualcomm` - the results chain from Q3 FY25 to an estimated 4 November Q4 FY26, the Alphawave, HUMAIN, Modular and Arduino deal chains, the data-center line to an estimated AI250 in 2027, Snapdragon Summits 2025-2026 and the phone and PC chip launches, and the Arm, ParkerVision and Which? court chains with the 5 October jury trial and 20 October appeal ahead. See [learnings](scraping/learnings.md).
 * **Update**: **Alo Yoga news events, posted straight to production** (pins 3704-3922 interleaved, @FashionDesk - created for this run - with @SneakerDesk, @RetailDesk and @LawDesk): sixty-three pins tagged `Alo Yoga` - the footwear chain from the O1 Classic to the Alo Trail, Jisoo/Jin/Burrow campaign chains, Alo Moves to the free Alo Wellness Club, the HQ moves, the Bella+Canvas sale, flagship stores from Beverly Hills to Rome with Paris and Bondi forward-dated, and the Italic, Meta-pixel, influencer and trademark cases. [Learnings](/scraping/learnings.md)
