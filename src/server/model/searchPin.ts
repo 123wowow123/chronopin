@@ -7,7 +7,6 @@ import BasePin, { BasePinProp } from './basePin';
 import BasePins from './basePins';
 import Pins from './pins';
 import type User from './user';
-import { DEFAULT_LOCALE } from '@/lib/i18n/config';
 
 function faissRequest<T = any>(method: string, path: string, body?: unknown) {
   return fetchJson<T>(`${config.faiss.serviceUrl}/faiss${path}`, { method, body });
@@ -16,17 +15,11 @@ function faissRequest<T = any>(method: string, path: string, body?: unknown) {
 type FaissSearchResult = { res: { index: number; match: number }[]; took?: number };
 
 // Which of the search service's indexes reads a query (Docker/faiss/app.py):
-// 'en' is an English model, 'multi' a multilingual one that places a query in
-// any of the site's languages near the English words it means. A search from
-// a page in another language reads the multilingual index, as does text in a
-// script English does not use (a Chinese query typed on an English page).
-// English stays on its own model, which reads English better and is what
-// duplicate detection's thresholds are set against.
-export type SearchModel = 'en' | 'multi';
-
-export function searchModelFor(text: string, locale: string = DEFAULT_LOCALE): SearchModel {
-  return locale !== DEFAULT_LOCALE || /(?!\p{Script=Latin})\p{L}/u.test(text) ? 'multi' : 'en';
-}
+// 'en' is an English model, the one duplicate detection's thresholds are set
+// against; 'both' reads it with that and a multilingual model and keeps each
+// pin's better score, so a search typed in any language finds its pins
+// whatever the page's language is.
+type SearchModel = 'en' | 'both';
 
 // A pin as the search service knows it: just enough to index.
 export class SearchPin extends BasePin {
@@ -130,10 +123,10 @@ export class SearchPins extends BasePins<SearchPin> {
   }
 
   // Every pin the search service counts as a match for the text, best first:
-  // its top config.faiss.maxHits, since semantic search ranks every pin. In
-  // the index for the page's language (searchModelFor).
-  static async hits(searchText: string, locale?: string): Promise<{ id: number; score: number }[]> {
-    const result = await semanticSearch(searchText, config.faiss.maxHits, searchModelFor(searchText, locale));
+  // its top config.faiss.maxHits, since semantic search ranks every pin. Read
+  // in every language the service has a model for.
+  static async hits(searchText: string): Promise<{ id: number; score: number }[]> {
+    const result = await semanticSearch(searchText, config.faiss.maxHits, 'both');
     const seen = new Set<number>();
     return result.res.filter((hit) => !seen.has(hit.index) && !!seen.add(hit.index)).map((hit) => ({ id: hit.index, score: hit.match }));
   }
@@ -145,16 +138,15 @@ export class SearchPins extends BasePins<SearchPin> {
   }
 
   // Autocomplete: pins whose title or description starts with the typed text,
-  // compared on their first 64 characters, case-insensitively - or, on a page
-  // in another language, whose title in that language does. k caps the pins
-  // returned.
+  // compared on their first 64 characters, case-insensitively - or whose title
+  // in any of its translations does. k caps the pins returned.
   //
   // Read off "Pin", not the view. A suggestion is a title and a date in a
   // dropdown, and this runs on every keystroke - going through the view built
   // each candidate's references, ratings, view count and duplicate group, and
   // the LIMIT sat above all of it. It also counted the view's rows rather than
   // pins, so a pin with three pictures used up three of the ten suggestions.
-  static async querySearchPin(title: string, description: string, k = 10, locale: string = DEFAULT_LOCALE): Promise<Pins> {
+  static async querySearchPin(title: string, description: string, k = 10): Promise<Pins> {
     const rows = await db.query(
       `
         SELECT "id", "title", "utcStartDateTime", "allDay"
@@ -164,10 +156,10 @@ export class SearchPins extends BasePins<SearchPin> {
             OR left("description", 64) ILIKE rtrim(left($2, 64)) || '%'
             OR EXISTS (
               SELECT 1 FROM "PinTranslation" AS "tr"
-              WHERE "tr"."pinId" = "Pin"."id" AND "tr"."locale" = $4 AND left("tr"."title", 64) ILIKE rtrim(left($1, 64)) || '%'))
+              WHERE "tr"."pinId" = "Pin"."id" AND left("tr"."title", 64) ILIKE rtrim(left($1, 64)) || '%'))
         ORDER BY "utcStartDateTime", "id"
         LIMIT $3`,
-      [title, description, k, locale === DEFAULT_LOCALE ? null : locale],
+      [title, description, k],
     );
     return new Pins({ pins: rows, queryCount: rows.length });
   }

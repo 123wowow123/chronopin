@@ -249,7 +249,7 @@ export async function searchPage(
   // watchVersion keys the results on the page: Next keeps a page left for
   // another mounted but hidden, so without it coming back to Watched after
   // watching a pin elsewhere showed the list as it was.
-  const [page, watchVersion] = await Promise.all([runSearch(query, userId, true, view, locale), Favorite.listVersion(userId)]);
+  const [page, watchVersion] = await Promise.all([runSearch(query, userId, true, view), Favorite.listVersion(userId)]);
   await localizePins(page.pins, locale);
   return { ...page, watchVersion };
 }
@@ -260,16 +260,15 @@ async function cachedSearch(query: string, view: SearchView, locale: Locale) {
   'use cache';
   cacheLife('minutes');
   cacheTag(TAGS.timeline);
-  const page = withoutViewerState(await runSearch(query, NO_VIEWER, false, view, locale));
+  const page = withoutViewerState(await runSearch(query, NO_VIEWER, false, view));
   await localizePins(page.pins, locale);
   return page;
 }
 
-async function runSearch(query: string, userId: number | null, onlyWatched: boolean, view: SearchView, locale: Locale): Promise<SearchPage & { error?: string }> {
+async function runSearch(query: string, userId: number | null, onlyWatched: boolean, view: SearchView): Promise<SearchPage & { error?: string }> {
   const params = new URLSearchParams({ q: query, sort: view.sort });
   if (onlyWatched) params.set('f', 'watch');
   params.set('tz', view.timeZone);
-  params.set('lang', locale);
   if (view.posted) params.set('created_within', view.posted);
   if (view.past) params.set('start_past', view.past);
   if (view.future) params.set('start_future', view.future);
@@ -285,12 +284,6 @@ async function runSearch(query: string, userId: number | null, onlyWatched: bool
 // entry for every zone whenever the zone makes no difference.
 function zoneFor(query: string, timeZone: string): string {
   return dependsOnZone(parseSearchQuery(query)) ? timeZone : 'UTC';
-}
-
-// The page's language if the query has free text to read in it, else
-// English: labels alone (tag:, date:) match the same pins in every language.
-function textLocaleFor(query: string, locale: Locale): Locale {
-  return parseSearchQuery(query).text ? locale : DEFAULT_LOCALE;
 }
 
 // The tag cloud: the most used tags on the timeline (under its posted-within
@@ -318,7 +311,6 @@ export async function searchPageTagCounts(
   created: CreatedQuery,
   timeZone: string,
   limit = TAG_CLOUD_SIZE,
-  locale: Locale = DEFAULT_LOCALE,
 ): Promise<TagCount[]> {
   // The counts leave out the terms the cloud writes (searchTagCounts), so they
   // are cached without them too: every pick in the cloud then reads the same
@@ -326,19 +318,18 @@ export async function searchPageTagCounts(
   // drift would lay the whole cloud out again.
   const counted = joinSearchQuery(splitSearchQuery(query).filter((part) => part.kind !== 'term' || !CLOUD_FIELDS.has(part.field)));
   const zone = zoneFor(counted, timeZone);
-  const textLocale = textLocaleFor(counted, locale);
   return onlyWatched && userId
-    ? searchTagCounts(counted, limit, { userId, onlyWatched: true, timeZone: zone, locale: textLocale, createdSince: resolveCreatedSince(created) })
-    : cachedTagCounts(counted, created, zone, limit, textLocale);
+    ? searchTagCounts(counted, limit, { userId, onlyWatched: true, timeZone: zone, createdSince: resolveCreatedSince(created) })
+    : cachedTagCounts(counted, created, zone, limit);
 }
 const CLOUD_FIELDS = new Set(['tag', 'category', 'confidence']);
 
 // Kept for hours, as timelineTagCounts is.
-async function cachedTagCounts(query: string, created: CreatedQuery, timeZone: string, limit: number, locale: Locale): Promise<TagCount[]> {
+async function cachedTagCounts(query: string, created: CreatedQuery, timeZone: string, limit: number): Promise<TagCount[]> {
   'use cache';
   cacheLife('hours');
   cacheTag(TAGS.timeline);
-  return searchTagCounts(query, limit, { userId: null, onlyWatched: false, timeZone, locale, createdSince: resolveCreatedSince(created) });
+  return searchTagCounts(query, limit, { userId: null, onlyWatched: false, timeZone, createdSince: resolveCreatedSince(created) });
 }
 
 export async function pinComments(id: number) {

@@ -21,16 +21,13 @@ export const GET = route(async (request: NextRequest) => {
   const params = new URLSearchParams(request.nextUrl.searchParams);
   if (!params.has('tz')) params.set('tz', requestTimeZone(request));
   const user = await getUser(request);
-  // Free text is read in the page's language (?lang=, else the cookie's).
   const locale = requestLocale(request);
-  params.set('lang', locale);
   if (!params.has('sort')) {
     const all = toJson<{ pins: PinJson[] }>(
       await searchPins(params.get('q') || '', {
         userId: user?.id,
         onlyWatched: params.get('f')?.toLowerCase() === 'watch',
         timeZone: params.get('tz')!,
-        locale,
       }),
     );
     await localizePins(all.pins ?? [], locale);

@@ -18,7 +18,6 @@ export const GET = route(async (request: NextRequest) => {
   const user = await getUser(request);
   const onlyWatched = params.get('f')?.toLowerCase() === 'watch';
 
-  const locale = requestLocale(request);
   const pins = await mapPins({
     from: instant(params.get('from'), 'from'),
     to: instant(params.get('to'), 'to'),
@@ -27,9 +26,8 @@ export const GET = route(async (request: NextRequest) => {
     onlyWatched: onlyWatched && !!user,
     userId: user?.id ?? null,
     timeZone: requestTimeZone(request),
-    locale,
   });
-  return json({ pins: await localizePins(pins, locale) });
+  return json({ pins: await localizePins(pins, requestLocale(request)) });
 });
 
 function instant(value: string | null, name: string) {

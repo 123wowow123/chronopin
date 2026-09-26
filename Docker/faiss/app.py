@@ -3,7 +3,7 @@ The FAISS search microservice, run in development and production alike.
 
 Speaks the HTTP contract the Node app uses (src/server/model/searchPin.ts):
 
-  GET    /faiss/search?q=<text>&k=<n>[&model=multi]
+  GET    /faiss/search?q=<text>&k=<n>[&model=multi|both]
                                   -> {"res": [{"index": <pinId>, "match": <score>}], "took": <ms>}
   POST   /faiss/add     {"id", "title", "description"}   (an upsert)
   DELETE /faiss/remove  {"id"}
@@ -14,14 +14,19 @@ file after every change, so it survives a container restart.
 
 Two indexes of the same pins, each with its own model:
 
-  en     BAAI/bge-small-en-v1.5, English only. What English searches read, and
-         what duplicate detection's thresholds and the address match's score
-         are calibrated against.
+  en     BAAI/bge-small-en-v1.5, English only. What duplicate detection's
+         thresholds and the address match's score are calibrated against.
   multi  paraphrase-multilingual-MiniLM-L12-v2, which puts a query in any of
          the site's languages near the English text it means: a Chinese or
          Japanese search found 2 of 14 test pins in the English index and 10
-         and 12 in this one. It reads English a little worse (12 of 14), so
-         English searches stay on the other.
+         and 12 in this one. It reads English a little worse (12 of 14).
+
+model=both reads a query with each and keeps each pin's better score, the
+multilingual one raised by MULTILINGUAL_BOOST (its scores run lower): a search
+then finds its pins in whatever language it was typed, whatever the page's
+language. On 84 test queries (14 pins, in en/zh/ja/es/de/fr) it found 74 in the
+top ten, against 45 for the English index and 69 for the multilingual one,
+English still 14 of 14; boosts from 0.10 to 0.15 all found 71-74.
 
 Both embed only the pin's English words: indexing its translations as well
 found no more (65 of 84 test queries against 69).
@@ -43,6 +48,7 @@ MODEL_PATHS = {
         os.environ.get("MULTILINGUAL_INDEX_PATH", "/data/pins-multi.faiss"),
     ),
 }
+MULTILINGUAL_BOOST = float(os.environ.get("MULTILINGUAL_BOOST", "0.12"))
 lock = threading.Lock()
 
 
@@ -86,24 +92,33 @@ def health():
     return {name: {"model": space.model_name, "count": space.index.ntotal} for name, space in spaces.items()}
 
 
-@app.get("/faiss/search")
-def search(q: str = "", k: int = Query(20, ge=1), model: str = "en"):
-    space = spaces.get(model)
-    if space is None:
-        raise HTTPException(400, f"no such model: {model}")
-    started = time.perf_counter()
-    if not q.strip() or space.index.ntotal == 0:
-        return {"res": [], "took": 0}
-
+def nearest(name, q, k):
+    space = spaces[name]
+    if space.index.ntotal == 0:
+        return []
     vector = space.embed([q])
     with lock:
         scores, ids = space.index.search(vector, min(k, space.index.ntotal))
+    return [(int(pin_id), float(score)) for pin_id, score in zip(ids[0], scores[0]) if pin_id != -1]
 
-    res = [
-        {"index": int(pin_id), "match": float(score)}
-        for pin_id, score in zip(ids[0], scores[0])
-        if pin_id != -1
-    ]
+
+@app.get("/faiss/search")
+def search(q: str = "", k: int = Query(20, ge=1), model: str = "en"):
+    if model not in spaces and model != "both":
+        raise HTTPException(400, f"no such model: {model}")
+    started = time.perf_counter()
+    if not q.strip():
+        return {"res": [], "took": 0}
+
+    if model == "both":
+        best = dict(nearest("en", q, k))
+        for pin_id, score in nearest("multi", q, k):
+            best[pin_id] = max(best.get(pin_id, -1.0), score + MULTILINGUAL_BOOST)
+        found = sorted(best.items(), key=lambda hit: -hit[1])[:k]
+    else:
+        found = nearest(model, q, k)
+
+    res = [{"index": pin_id, "match": score} for pin_id, score in found]
     return {"res": res, "took": round((time.perf_counter() - started) * 1000)}
 
 
