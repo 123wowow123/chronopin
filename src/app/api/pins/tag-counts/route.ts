@@ -4,6 +4,7 @@ import { json, route } from '@/server/http';
 import { searchPageTagCounts, TAG_CLOUD_MAX, TAG_CLOUD_SIZE, timelineTagCounts } from '@/server/services/pages';
 import { resolveCreatedSince } from '@/server/util/createdFilter';
 import { requestTimeZone } from '@/server/viewer';
+import { requestLocale } from '@/lib/i18n/request';
 
 // The tag cloud's tags, [{ name, kind, count }], busiest first, the site's
 // own reserved filters (kind 'reserved') first of all - they stand outside
@@ -25,5 +26,5 @@ export const GET = route(async (request: NextRequest) => {
   }
   const user = await getUser(request);
   const onlyWatched = params.get('f')?.toLowerCase() === 'watch';
-  return json(await searchPageTagCounts(params.get('q') || '', user?.id ?? null, onlyWatched && !!user, created, requestTimeZone(request), limit));
+  return json(await searchPageTagCounts(params.get('q') || '', user?.id ?? null, onlyWatched && !!user, created, requestTimeZone(request), limit, requestLocale(request)));
 });

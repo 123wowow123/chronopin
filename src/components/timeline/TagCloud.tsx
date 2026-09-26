@@ -178,6 +178,8 @@ export function TagCloud({
   if (query != null && onlyWatched) params.set('f', 'watch');
   if (createdSince) params.set('created_since', createdSince);
   else if (postedWithin) params.set('created_within', postedWithin);
+  // A search's text is read in the page's language, which changes its pins.
+  if (query && t.locale !== 'en') params.set('lang', t.locale);
   const countsUrl = `/api/pins/tag-counts?${params.toString()}`;
 
   const showing = listed && (open || !!folded || !!mergedOpen);

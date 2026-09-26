@@ -23,6 +23,7 @@
     "clean:e2e": "tsx scripts/data/cleanE2e.ts",
     "search:refresh": "npm run delete:search:pins && npm run create:search",
     "search:refresh:db": "npm run delete:search:pins && tsx scripts/search/index.ts --db",
+    "search:index:db": "tsx scripts/search/index.ts --db",
     "create:search": "tsx scripts/search/index.ts --seed",
     "delete:search:pins": "tsx scripts/search/index.ts --reset",
     "init:shebang": "npm run db:refresh && npm run search:refresh",

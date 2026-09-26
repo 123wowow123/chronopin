@@ -20,10 +20,12 @@ import { hasFilters, parseSearchQuery, type SearchQuery } from '../util/searchQu
 import { timeZoneOrUtc } from '../viewer';
 import { commentMood } from '@/lib/commentMood';
 import { isSpan, offsetDate } from '@/lib/postedSpan';
+import { DEFAULT_LOCALE, localeOr, type Locale } from '@/lib/i18n/config';
 import type { TagCount } from '@/lib/tags';
 
 // timeZone: the zone date: and posted: days are the viewer's in (UTC when absent).
-type SearchOptions = { userId?: number | null; onlyWatched?: boolean; timeZone?: string };
+// locale: the page's language, which free text is read in (English when absent).
+type SearchOptions = { userId?: number | null; onlyWatched?: boolean; timeZone?: string; locale?: Locale };
 
 export type SearchSort = 'date' | 'relevance';
 
@@ -35,6 +37,8 @@ export type SearchRequest = {
   sort: SearchSort;
   // The zone date: and posted: days are read in (the tz parameter).
   timeZone: string;
+  // The page's language, which free text is read in (the lang parameter).
+  locale: Locale;
   createdSince: Date | null;
   // When the results start, by relevance only: the timeline shows when.
   startFrom: Date | null;
@@ -109,6 +113,7 @@ export function readSearchRequest(params: URLSearchParams, userId: number | null
     onlyWatched: params.get('f')?.toLowerCase() === 'watch' && !!userId,
     sort,
     timeZone: timeZoneOrUtc(params.get('tz') ?? undefined),
+    locale: localeOr(params.get('lang')),
     createdSince,
     startFrom: sort === 'relevance' ? bound('start_from', 'start_past', -1) : null,
     startTo: sort === 'relevance' ? bound('start_to', 'start_future', 1) : null,
@@ -207,11 +212,14 @@ function asksForNothing(query: SearchQuery, options: SearchOptions) {
 // Only the free text goes to the search service - it would read
 // "company:Apple" as words to match. The text is kept on the filter too:
 // the database widens the service's hits with the pins whose address names
-// it (searchClauses).
+// it, and in another language with those whose translated title does
+// (searchClauses).
 async function searchFilter(query: SearchQuery, options: SearchOptions): Promise<SearchFilter> {
+  const locale = options.locale ?? DEFAULT_LOCALE;
   return {
     ...query,
-    hits: query.text ? await SearchPins.hits(query.text) : null,
+    hits: query.text ? await SearchPins.hits(query.text, locale) : null,
+    locale,
     favoriteUserId: options.onlyWatched ? options.userId || 0 : null,
     timeZone: timeZoneOrUtc(options.timeZone),
   };

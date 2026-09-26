@@ -5,6 +5,9 @@
 //   npm run search:refresh        both
 //   npm run search:refresh:db     both, from the database's live pins instead
 //                                 (after db:pull-prod, whose pins seedPins.json lacks)
+//   npm run search:index:db       (re)index the database's live pins without emptying
+//                                 first, so search keeps answering meanwhile - how an
+//                                 index the service adds (Docker/faiss/app.py) is filled
 
 import '../env';
 import { readFileSync } from 'node:fs';

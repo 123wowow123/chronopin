@@ -7,7 +7,8 @@ import PinTag from './pinTag';
 import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
 import { reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
-import { PLACE_TEXT_SCORE, looksLikePlaceText, placePatterns, wholeWordPattern } from '../util/placeMatch';
+import { PLACE_TEXT_SCORE, looksLikePlaceText, placePatterns, typedTextPattern, wholeWordPattern } from '../util/placeMatch';
+import { DEFAULT_LOCALE } from '@/lib/i18n/config';
 import type { NearFilter } from '../util/nearFilter';
 import type { RatingBound } from '../util/searchQuery';
 
@@ -35,8 +36,10 @@ export type PinSearchFilters = {
 export type SearchFilter = PinSearchFilters & {
   hits: { id: number; score: number }[] | null;
   // The free text those hits came from, which also matches pins standing in
-  // the place it names (searchClauses).
+  // the place it names, and in the page's language (locale) the pins whose
+  // translated title says it (searchClauses).
   text?: string;
+  locale?: string;
   favoriteUserId?: number | null;
   createdSince?: Date | null;
   startFrom?: Date | null;
@@ -758,13 +761,22 @@ function searchClauses(filter: SearchFilter) {
   // in Chicago, whether or not the words say so, and those pins can stand
   // well outside the pool the semantic ranking keeps.
   const textPlace = filter.hits && filter.text && looksLikePlaceText(filter.text) ? addressMatches([wholeWordPattern(filter.text)]) : null;
+  // Read in another language, free text is also looked for in the pin's
+  // title in that language - the one the reader sees on its card. A name
+  // typed as it is written there (台积电, 風の谷のナウシカ) is then found
+  // however the semantic ranking scored it.
+  const textTitle =
+    textPlace && filter.locale && filter.locale !== DEFAULT_LOCALE
+      ? `EXISTS (SELECT 1 FROM "PinTranslation" AS "tr" WHERE "tr"."pinId" = "Pin"."id" AND "tr"."locale" = ${add(filter.locale)} AND "tr"."title" ~* ${add(typedTextPattern(filter.text!))})`
+      : null;
   let score = '1::float8';
   if (filter.hits) {
     const hit = `unnest(${add(filter.hits.map((h) => h.id))}::integer[], ${add(filter.hits.map((h) => h.score))}::float8[]) AS "hit" ("id", "score") ON "hit"."id" = "Pin"."id"`;
     if (textPlace) {
+      const textMatches = [textPlace, textTitle].filter(Boolean);
       joins.push(`LEFT JOIN ${hit}`);
-      where.push(`("hit"."id" IS NOT NULL OR ${textPlace})`);
-      score = `GREATEST(COALESCE("hit"."score", 0), CASE WHEN ${textPlace} THEN ${PLACE_TEXT_SCORE}::float8 ELSE 0 END)`;
+      where.push(`("hit"."id" IS NOT NULL OR ${textMatches.join(' OR ')})`);
+      score = `GREATEST(COALESCE("hit"."score", 0), ${textMatches.map((match) => `CASE WHEN ${match} THEN ${PLACE_TEXT_SCORE}::float8 ELSE 0 END`).join(', ')})`;
     } else {
       joins.push(`INNER JOIN ${hit}`);
       score = '"hit"."score"';

@@ -68,8 +68,13 @@ service, which is the Dockerfile's build stage (source and dev dependencies):
 cd chronopin
 docker compose -f Docker/docker-compose.prod.yml --profile tools run --rm tools npm run create:db
 docker compose -f Docker/docker-compose.prod.yml --profile tools run --rm tools npm run db:refresh     # schema + seeds, first launch
-docker compose -f Docker/docker-compose.prod.yml --profile tools run --rm tools npm run create:search  # FAISS index from the pins
+docker compose -f Docker/docker-compose.prod.yml --profile tools run --rm tools npm run search:index:db  # FAISS indexes from the live pins
 ```
+
+`search:index:db` upserts every pin into both FAISS indexes (English and
+multilingual, see `Docker/faiss/app.py`) without emptying them first, so search
+keeps answering while it runs (a few minutes). Run it after a change to the
+service's models (`npm run deploy -- app faiss`), which leaves a new index empty.
 
 Rebuild it (`--profile tools build tools`) after a code change the script needs.
 

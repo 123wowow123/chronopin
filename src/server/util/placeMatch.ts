@@ -34,6 +34,16 @@ export function wholeWordPattern(text: string): string {
   return `(^|[^[:alnum:]])${literal}([^[:alnum:]]|$)`;
 }
 
+// Typed text as a Postgres regex (~*) for a title: a whole word or words, as
+// wholeWordPattern, except in Chinese and Japanese, which leave no space
+// between words - there it matches anywhere.
+export function typedTextPattern(text: string): string {
+  if (/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u.test(text)) {
+    return text.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+  return wholeWordPattern(text);
+}
+
 // The patterns an address matches any of, for the places a query names.
 export function placePatterns(values: string[]): string[] {
   return values.flatMap((value) => placeNames(value)).map(wholeWordPattern);

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { looksLikePlaceText, placeNames, placePatterns, wholeWordPattern } from './placeMatch';
+import { looksLikePlaceText, placeNames, placePatterns, typedTextPattern, wholeWordPattern } from './placeMatch';
 
 // Postgres character classes are not JavaScript's, so a pattern is read here
 // the way Postgres would read it against a real address.
@@ -53,5 +53,21 @@ describe('looksLikePlaceText', () => {
     expect(looksLikePlaceText('京都')).toBe(true);
     expect(looksLikePlaceText('a')).toBe(false);
     expect(looksLikePlaceText(' - ')).toBe(false);
+  });
+});
+
+describe('typedTextPattern', () => {
+  it('finds Chinese and Japanese anywhere in a title, which has no spaces to find words by', () => {
+    expect(matches([typedTextPattern('台积电')], '台积电在高雄开始量产 2 纳米芯片')).toBe(true);
+    expect(matches([typedTextPattern('ナウシカ')], '『風の谷のナウシカ』劇場公開')).toBe(true);
+  });
+
+  it('keeps other text to whole words', () => {
+    expect(matches([typedTextPattern('Gucci')], 'Kering nombra a Stefano Cantino CEO de Gucci')).toBe(true);
+    expect(matches([typedTextPattern('ford')], 'Oxford abre su nuevo campus')).toBe(false);
+  });
+
+  it('reads regex characters in the text as themselves', () => {
+    expect(typedTextPattern('C++ 入门')).toBe('C\\+\\+ 入门');
   });
 });

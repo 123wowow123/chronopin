@@ -119,6 +119,22 @@ export default class PinTag {
     );
   }
 
+  // These tags' pin counts, busiest first: the categories a search suggests
+  // by their name in the page's language.
+  static counted(names: string[]): Promise<TagCount[]> {
+    if (!names.length) return Promise.resolve([]);
+    return db.query<TagCount>(
+      `
+      SELECT min("tg"."name"::text) AS "name", min("tg"."kind") AS "kind", COUNT(DISTINCT "Pin"."id")::integer AS "count"
+      FROM "PinTagView" AS "tg"
+        INNER JOIN "Pin" ON "Pin"."id" = "tg"."pinId" AND "Pin"."utcDeletedDateTime" IS NULL
+      WHERE "tg"."name" = ANY($1::citext[])
+      GROUP BY "tg"."name"
+      ORDER BY 3 DESC, 1`,
+      [names],
+    );
+  }
+
   // Every tag's pin count across these pins (the FROM and WHERE of a search,
   // see model/pins.ts), busiest first. One spelling per name whatever its case.
   // Each but a category also says which category most of those pins carry,

@@ -8,6 +8,7 @@ import Pins from '../model/pins';
 import { searchPins } from './search';
 import { timelineMinConfidence } from './timeline';
 import type { MapPinJson, PinJson } from '@/lib/types';
+import type { Locale } from '@/lib/i18n/config';
 
 export type MapQuery = {
   // When the plotted pins start; null either side for unbounded.
@@ -20,6 +21,8 @@ export type MapQuery = {
   userId: number | null;
   // The zone a search's date: and posted: days are the viewer's in.
   timeZone: string;
+  // The page's language, which a search's text is read in.
+  locale?: Locale;
 };
 
 // Everything off a pin that a marker reads. Applied to a search's results,
@@ -44,7 +47,7 @@ export async function mapPins(query: MapQuery): Promise<MapPinJson[]> {
   // A search already answers with every match at once; it is the window and
   // the missing places that are narrowed here instead of in the browser.
   if (query.q.trim()) {
-    const found = await searchPins(query.q, { userId: query.userId, onlyWatched: query.onlyWatched, timeZone: query.timeZone });
+    const found = await searchPins(query.q, { userId: query.userId, onlyWatched: query.onlyWatched, timeZone: query.timeZone, locale: query.locale });
     return (found.pins as unknown as PinJson[])
       .filter((pin) => pin.latitude != null && pin.longitude != null)
       .filter((pin) => !query.createdSince || !pin.utcCreatedDateTime || new Date(pin.utcCreatedDateTime) >= query.createdSince!)

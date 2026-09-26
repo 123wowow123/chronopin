@@ -1,15 +1,30 @@
 """
-Local stand-in for the FAISS search microservice, for development.
+The FAISS search microservice, run in development and production alike.
 
-Speaks the same HTTP contract the Node app uses (server/model/pin/searchPin):
+Speaks the HTTP contract the Node app uses (src/server/model/searchPin.ts):
 
-  GET    /faiss/search?q=<text>&k=<n>   -> {"res": [{"index": <pinId>, "match": <score>}], "took": <ms>}
+  GET    /faiss/search?q=<text>&k=<n>[&model=multi]
+                                  -> {"res": [{"index": <pinId>, "match": <score>}], "took": <ms>}
   POST   /faiss/add     {"id", "title", "description"}   (an upsert)
   DELETE /faiss/remove  {"id"}
 
 A pin's title and description are embedded together and normalised, so the
-inner-product index scores by cosine similarity. The index is written to
-INDEX_PATH after every change, so it survives a container restart.
+inner-product index scores by cosine similarity. Each index is written to its
+file after every change, so it survives a container restart.
+
+Two indexes of the same pins, each with its own model:
+
+  en     BAAI/bge-small-en-v1.5, English only. What English searches read, and
+         what duplicate detection's thresholds and the address match's score
+         are calibrated against.
+  multi  paraphrase-multilingual-MiniLM-L12-v2, which puts a query in any of
+         the site's languages near the English text it means: a Chinese or
+         Japanese search found 2 of 14 test pins in the English index and 10
+         and 12 in this one. It reads English a little worse (12 of 14), so
+         English searches stay on the other.
+
+Both embed only the pin's English words: indexing its translations as well
+found no more (65 of 84 test queries against 69).
 """
 
 import os
@@ -18,55 +33,71 @@ import time
 
 import faiss
 import numpy as np
-from fastapi import Body, FastAPI, Query
+from fastapi import Body, FastAPI, HTTPException, Query
 from fastembed import TextEmbedding
 
-MODEL_NAME = os.environ.get("EMBEDDING_MODEL", "BAAI/bge-small-en-v1.5")
-INDEX_PATH = os.environ.get("INDEX_PATH", "/data/pins.faiss")
-
-model = TextEmbedding(MODEL_NAME)
-dimension = len(next(iter(model.embed(["dimension probe"]))))
+MODEL_PATHS = {
+    "en": (os.environ.get("EMBEDDING_MODEL", "BAAI/bge-small-en-v1.5"), os.environ.get("INDEX_PATH", "/data/pins.faiss")),
+    "multi": (
+        os.environ.get("MULTILINGUAL_MODEL", "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"),
+        os.environ.get("MULTILINGUAL_INDEX_PATH", "/data/pins-multi.faiss"),
+    ),
+}
 lock = threading.Lock()
 
 
-def load_index():
-    if os.path.exists(INDEX_PATH):
-        index = faiss.read_index(INDEX_PATH)
-        if index.d == dimension:
-            return index
-        print(f"Ignoring {INDEX_PATH}: built for dimension {index.d}, model has {dimension}")
-    return faiss.IndexIDMap2(faiss.IndexFlatIP(dimension))
+class Space:
+    """One model and the index of pins it embedded."""
+
+    def __init__(self, model_name, path):
+        self.model_name = model_name
+        self.path = path
+        self.model = TextEmbedding(model_name)
+        self.dimension = len(next(iter(self.model.embed(["dimension probe"]))))
+        self.index = self.load()
+
+    def load(self):
+        if os.path.exists(self.path):
+            index = faiss.read_index(self.path)
+            if index.d == self.dimension:
+                return index
+            print(f"Ignoring {self.path}: built for dimension {index.d}, model has {self.dimension}")
+        return self.empty()
+
+    def empty(self):
+        return faiss.IndexIDMap2(faiss.IndexFlatIP(self.dimension))
+
+    def save(self):
+        os.makedirs(os.path.dirname(self.path), exist_ok=True)
+        faiss.write_index(self.index, self.path)
+
+    def embed(self, texts):
+        vectors = np.array(list(self.model.embed(texts)), dtype="float32")
+        faiss.normalize_L2(vectors)
+        return vectors
 
 
-def save_index():
-    os.makedirs(os.path.dirname(INDEX_PATH), exist_ok=True)
-    faiss.write_index(index, INDEX_PATH)
-
-
-def embed(texts):
-    vectors = np.array(list(model.embed(texts)), dtype="float32")
-    faiss.normalize_L2(vectors)
-    return vectors
-
-
-index = load_index()
+spaces = {name: Space(model_name, path) for name, (model_name, path) in MODEL_PATHS.items()}
 app = FastAPI()
 
 
 @app.get("/health")
 def health():
-    return {"model": MODEL_NAME, "count": index.ntotal}
+    return {name: {"model": space.model_name, "count": space.index.ntotal} for name, space in spaces.items()}
 
 
 @app.get("/faiss/search")
-def search(q: str = "", k: int = Query(20, ge=1)):
+def search(q: str = "", k: int = Query(20, ge=1), model: str = "en"):
+    space = spaces.get(model)
+    if space is None:
+        raise HTTPException(400, f"no such model: {model}")
     started = time.perf_counter()
-    if not q.strip() or index.ntotal == 0:
+    if not q.strip() or space.index.ntotal == 0:
         return {"res": [], "took": 0}
 
-    vector = embed([q])
+    vector = space.embed([q])
     with lock:
-        scores, ids = index.search(vector, min(k, index.ntotal))
+        scores, ids = space.index.search(vector, min(k, space.index.ntotal))
 
     res = [
         {"index": int(pin_id), "match": float(score)}
@@ -79,27 +110,31 @@ def search(q: str = "", k: int = Query(20, ge=1)):
 @app.post("/faiss/add")
 def add(id: int = Body(...), title: str = Body(""), description: str = Body("")):
     text = "\n".join(part for part in (title, description) if part)
-    vector = embed([text])
     ids = np.array([id], dtype="int64")
+    vectors = {name: space.embed([text]) for name, space in spaces.items()}
     with lock:
-        index.remove_ids(ids)
-        index.add_with_ids(vector, ids)
-        save_index()
-    return {"id": id, "count": index.ntotal}
+        for name, space in spaces.items():
+            space.index.remove_ids(ids)
+            space.index.add_with_ids(vectors[name], ids)
+            space.save()
+    return {"id": id, "count": spaces["en"].index.ntotal}
 
 
 @app.delete("/faiss/remove")
 def remove(id: int = Body(..., embed=True)):
+    ids = np.array([id], dtype="int64")
     with lock:
-        removed = index.remove_ids(np.array([id], dtype="int64"))
-        save_index()
-    return {"id": id, "removed": int(removed), "count": index.ntotal}
+        removed = 0
+        for space in spaces.values():
+            removed = max(removed, int(space.index.remove_ids(ids)))
+            space.save()
+    return {"id": id, "removed": removed, "count": spaces["en"].index.ntotal}
 
 
 @app.delete("/faiss/reset")
 def reset():
-    global index
     with lock:
-        index = faiss.IndexIDMap2(faiss.IndexFlatIP(dimension))
-        save_index()
+        for space in spaces.values():
+            space.index = space.empty()
+            space.save()
     return {"count": 0}

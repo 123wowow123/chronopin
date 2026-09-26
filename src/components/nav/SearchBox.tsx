@@ -5,6 +5,7 @@ import { Fragment, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { canonicalCategory } from '@/lib/categories';
 import { api } from '@/lib/client/api';
+import { withPageLang } from '@/lib/client/navigation';
 import { hrefKeepingDate } from '@/lib/client/returnSpot';
 import { useSession } from '@/lib/client/session';
 import { useTimeZone } from '@/lib/client/timeZone';
@@ -396,7 +397,7 @@ export function SearchBox() {
     // to read. requestId still settles answers that arrive out of order.
     suggestTimer.current = setTimeout(async () => {
       try {
-        const res = await api.get<AutocompleteJson>(`/api/pins/autocomplete?q=${encodeURIComponent(value)}`);
+        const res = await api.get<AutocompleteJson>(withPageLang(`/api/pins/autocomplete?q=${encodeURIComponent(value)}`));
         if (id === requestId.current) {
           const next = toSuggestions(res);
           setSuggestions(next);
