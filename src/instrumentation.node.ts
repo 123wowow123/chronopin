@@ -15,4 +15,5 @@ export async function checkConfig() {
 export function startSchedules() {
   void import('@/server/services/dailyJobSchedule').then(({ startDailyJobSchedule }) => startDailyJobSchedule());
   void import('@/server/services/watchAlerts').then(({ startWatchAlerts }) => startWatchAlerts());
+  void import('@/server/services/listingPrices').then(({ startListingPriceRefresh }) => startListingPriceRefresh());
 }

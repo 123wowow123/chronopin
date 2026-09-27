@@ -44,7 +44,7 @@
     "media:videos": "tsx scripts/media/productVideos.ts",
     "media:score-markets": "tsx scripts/media/scoreMarkets.ts",
     "markets:volume": "tsx scripts/markets/volume.ts",
-    "merchants:amazon-prices": "tsx scripts/merchants/amazonPrices.ts",
+    "merchants:prices": "tsx scripts/merchants/prices.ts",
     "places:resolve": "tsx scripts/places/resolve.ts",
     "places:refresh": "tsx scripts/places/refresh.ts",
     "events:refresh": "tsx scripts/events/refresh.ts",
