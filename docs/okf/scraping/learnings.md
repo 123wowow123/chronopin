@@ -6164,3 +6164,18 @@ rel/glob, award/biz) wrote 62 drafts; posted as 4342-4403, all read back OK. Fol
 * **Open:** retitle the VMAs pin (4342) with winners after 27 Sep; UMG/WMG/Live Nation/Sphere/Tencent
   Music Q3 dates unannounced; Coachella 2027 and Primavera 2027 lineups not out; the Live Nation Tunney Act
   review and post-trial motions have no date yet.
+
+## 2026-09-26 - Future releases are pinned on the predicted release day (owner feedback)
+
+* **Feedback:** "articles that talks about future release date should have those date predicted as a start
+  date." Prompted by Demon Slayer's thread, where Infinity Castle Part 2 and III sat on their 30 Jun 2024
+  announcement day ahead of Part 1's July 2025 release; the owner first had them moved after Part 1 in the
+  chain, then asked that they predict when the films come out.
+* **Changed:** [strategy](strategy.md) "Which date" - a pin about something still to come takes the predicted
+  release as its start (`estimated`, `Estimated:` reasoning naming the basis), is titled as the release, and
+  is re-dated when the real day is announced. The published-time anchor now covers only non-release rumours.
+  1774 -> ~16 Jul 2027 and 1766 -> ~20 Jul 2029 (Collider/The Numbers listing, ufotable reel via
+  ComicBook.com, GamesRadar's 2027/2029 reports), retranslated into all six languages.
+* **Open:** the MAL anime scrape and the extractor prompt (`src/server/extract/systemPrompt.ts`) still date
+  unaired titles as "<Title> Announced" on the announcement day; existing "Announced" pins keep that dating
+  until re-dated.
