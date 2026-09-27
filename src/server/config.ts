@@ -133,6 +133,17 @@ export const config = {
     apiKey: env('YELP_API_KEY') || '',
   },
 
+  // eBay's Browse API, for the cheapest exact listing of a product pin's
+  // product on its eBay button (src/server/ebay.ts). A free developer app's
+  // production keyset (developer.ebay.com). A campaign id from the eBay
+  // Partner Network makes the listing links earn. Without the keys the
+  // button stays a search.
+  ebay: {
+    clientID: env('EBAY_CLIENT_ID') || '',
+    clientSecret: env('EBAY_CLIENT_SECRET') || '',
+    campaignID: env('EBAY_CAMPAIGN_ID') || '',
+  },
+
   // A Kalshi API key: the key id and the RSA private key's PEM text (newlines
   // may be escaped). With both, Kalshi odds stream over its WebSocket and REST
   // reads are signed; without, they fall back to the keyless public API.

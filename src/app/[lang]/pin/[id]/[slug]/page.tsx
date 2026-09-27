@@ -35,6 +35,7 @@ import { affiliateUrl, isAmazonStoreUrl } from '@/lib/affiliate';
 import { shopLinks } from '@/lib/shopping';
 import { streamingService, watchOrder } from '@/lib/streaming';
 import { isWordmark, StreamingLogo } from '@/components/pin/StreamingLogo';
+import { ShopButtons } from '@/components/pin/ShopButtons';
 import { EpisodeCount } from '@/components/pin/EpisodeCount';
 import { MarketVolume } from '@/components/pin/MarketVolume';
 import { PinReferences } from '@/components/pin/PinReferences';
@@ -422,28 +423,8 @@ function PinBody({
         </div>
       ) : null}
 
-      {/* Where to buy the product the pin is about: its stored listings,
-          then a search of each store it has none on (src/lib/shopping.ts). */}
-      {shop.length ? (
-        <div className="mt-2 flex flex-wrap items-center gap-2">
-          <span className="mr-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.buyOnHeading')}</span>
-          {shop.map((link) => (
-            <a
-              key={link.url}
-              href={link.url}
-              target="_blank"
-              rel="noopener nofollow sponsored"
-              title={link.search ? t('pin.searchStore', { store: link.store, product: pin.productName ?? '' }) : t('pin.buyOn', { store: link.store })}
-              className={`btn ${link.store === 'Amazon' ? 'bg-[#ff9900] text-black hover:bg-[#ffad33]' : 'btn-secondary'}`}
-            >
-              <Icon name={link.search ? 'search' : 'cart'} className="size-4" />
-              {link.store}
-              {link.price ? <span className="font-normal">{money(link.price)}</span> : null}
-              <Icon name="external" className="size-3.5 shrink-0 opacity-70" />
-            </a>
-          ))}
-        </div>
-      ) : null}
+      {/* Where to buy the product the pin is about (src/lib/shopping.ts). */}
+      {shop.length ? <ShopButtons pinId={pin.id} links={shop} productName={pin.productName} /> : null}
       {/* Amazon Associates asks for this wherever a tagged link is shown: an
           Amazon listing or search, or a Prime Video title (sent to amazon.com,
           tagged). */}

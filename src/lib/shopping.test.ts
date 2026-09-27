@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { amazonAssociateTag } from './affiliate';
-import { shopLinks, withoutTracking } from './shopping';
+import { cheapestExact, isExactListing, shopLinks, withMatches, withoutTracking } from './shopping';
 import type { PinJson } from './types';
 
 const sneaker = {
@@ -12,7 +12,7 @@ const sneaker = {
 describe('shopLinks', () => {
   it("searches the vertical's stores first, then the marketplaces, Amazon tagged", () => {
     const links = shopLinks(sneaker);
-    expect(links.map((l) => l.store)).toEqual(['StockX', 'GOAT', 'Amazon', 'eBay', 'Mercari', 'Facebook Marketplace']);
+    expect(links.map((l) => l.store)).toEqual(['StockX', 'GOAT', 'Amazon', 'eBay', 'Mercari', 'Facebook']);
     expect(links.every((l) => l.search)).toBe(true);
     expect(links[0].url).toBe('https://stockx.com/search?s=PUMA%20MB.06%20Puerto%20Rico');
     const amazon = links.find((l) => l.store === 'Amazon')!;
@@ -32,7 +32,7 @@ describe('shopLinks', () => {
         },
       ],
     });
-    expect(links[0]).toEqual({ store: 'StockX', url: 'https://stockx.com/puma-lamelo-ball-mb06-puerto-rico?country=US&size=11.5', price: 125, search: false, amazon: false });
+    expect(links[0]).toEqual({ store: 'StockX', url: 'https://stockx.com/puma-lamelo-ball-mb06-puerto-rico?country=US&size=11.5', price: 125, search: false, amazon: false, background: '#006340', text: '#ffffff' });
     expect(links.filter((l) => l.store === 'StockX')).toHaveLength(1);
   });
 
@@ -57,5 +57,54 @@ describe('withoutTracking', () => {
   it('keeps a link with no tracking exactly as it is', () => {
     expect(withoutTracking('https://www.goat.com/sneakers/x?size=10')).toBe('https://www.goat.com/sneakers/x?size=10');
     expect(withoutTracking('not a url')).toBe('not a url');
+  });
+});
+
+describe('isExactListing', () => {
+  it('takes a title with every word of the product, extra size and colour words allowed', () => {
+    expect(isExactListing('Google Pixel Watch 5', 'NEW Google Pixel Watch 5 45mm Wi-Fi Matte Black Sealed')).toBe(true);
+    expect(isExactListing('PUMA MB.06 Puerto Rico', 'Puma LaMelo Ball MB.06 "Puerto Rico" Men\'s Size 11')).toBe(true);
+    expect(isExactListing('Pokémon Legends: Z-A', 'Pokemon Legends Z-A Nintendo Switch 2')).toBe(true);
+  });
+
+  it('refuses another model, an accessory for the product, or part of it', () => {
+    expect(isExactListing('Google Pixel Watch 5', 'Google Pixel Watch 4 41mm')).toBe(false);
+    expect(isExactListing('Google Pixel Watch 5', 'Case for Google Pixel Watch 5 Tempered Glass')).toBe(false);
+    expect(isExactListing('Google Pixel Watch 5', 'Google Pixel Watch 5 Sport Band')).toBe(false);
+    expect(isExactListing('Nintendo Switch 2', 'Nintendo Switch 2 EMPTY BOX only')).toBe(false);
+    expect(isExactListing('Nintendo Switch 2', 'Nintendo Switch 2 for parts not working')).toBe(false);
+  });
+
+  it("lets an accessory word through when it is in the product's own name", () => {
+    expect(isExactListing('Apple AirPods Pro 3 Charging Case', 'Apple AirPods Pro 3 Charging Case USB-C')).toBe(true);
+  });
+});
+
+describe('cheapestExact', () => {
+  it('takes the cheapest exact listing, past any priced under half the middle one', () => {
+    const best = cheapestExact('Nintendo Switch 2', [
+      { title: 'Nintendo Switch 2 Console', price: 489 },
+      { title: 'Nintendo Switch 2 Console Mario Kart', price: 529 },
+      { title: 'Nintendo Switch 2 Carrying Case', price: 19 },
+      { title: 'Nintendo Switch 2 Console (read)', price: 120 },
+      { title: 'Nintendo Switch 2 System', price: 455 },
+      { title: 'Nintendo Switch Lite', price: 150 },
+    ]);
+    expect(best).toEqual({ title: 'Nintendo Switch 2 System', price: 455 });
+  });
+
+  it('finds nothing when no title is the product', () => {
+    expect(cheapestExact('Nintendo Switch 2', [{ title: 'Nintendo Switch OLED', price: 300 }])).toBeUndefined();
+  });
+});
+
+describe('withMatches', () => {
+  it("puts a live listing and its price in place of that store's search, and leaves the rest", () => {
+    const links = withMatches(shopLinks(sneaker), [
+      { store: 'eBay', url: 'https://www.ebay.com/itm/123', price: 112.5, currency: 'USD', title: 'PUMA MB.06 Puerto Rico' },
+    ]);
+    const ebay = links.find((l) => l.store === 'eBay')!;
+    expect(ebay).toMatchObject({ url: 'https://www.ebay.com/itm/123', price: 112.5, currency: 'USD', search: false });
+    expect(links.filter((l) => l.search).map((l) => l.store)).toEqual(['StockX', 'GOAT', 'Amazon', 'Mercari', 'Facebook']);
   });
 });

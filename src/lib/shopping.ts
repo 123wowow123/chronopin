@@ -8,6 +8,9 @@
 // Every pin gets the general marketplaces; a vertical adds the stores its
 // buyers use (StockX and GOAT for sneakers). Each search URL was checked to
 // return results for a real product - don't add a store without doing so.
+// Colours are each store's own brand colour with the text colour that reads
+// on it, as the streaming buttons do (src/lib/streaming.ts). A black one
+// also gets a brighter border, or it vanishes into the dark theme's page.
 
 import { affiliateUrl, isAmazonStoreUrl, isPurchaseLinkShown } from './affiliate';
 import { streamingService } from './streaming';
@@ -17,24 +20,73 @@ type Store = {
   name: string;
   host: RegExp;
   search: (query: string) => string;
+  background: string;
+  text: string;
+  border?: string;
 };
 
 const q = encodeURIComponent;
 
 const STORES = {
-  amazon: { name: 'Amazon', host: /(^|\.)amazon\.com$/i, search: (s: string) => `https://www.amazon.com/s?k=${q(s)}` },
-  ebay: { name: 'eBay', host: /(^|\.)ebay\.com$/i, search: (s: string) => `https://www.ebay.com/sch/i.html?_nkw=${q(s)}` },
-  mercari: { name: 'Mercari', host: /(^|\.)mercari\.com$/i, search: (s: string) => `https://www.mercari.com/search/?keyword=${q(s)}` },
+  amazon: {
+    name: 'Amazon',
+    host: /(^|\.)amazon\.com$/i,
+    search: (s: string) => `https://www.amazon.com/s?k=${q(s)}`,
+    background: '#ff9900',
+    text: '#000000',
+  },
+  ebay: {
+    name: 'eBay',
+    host: /(^|\.)ebay\.com$/i,
+    search: (s: string) => `https://www.ebay.com/sch/i.html?_nkw=${q(s)}`,
+    background: '#3665f3',
+    text: '#ffffff',
+  },
+  mercari: {
+    name: 'Mercari',
+    host: /(^|\.)mercari\.com$/i,
+    search: (s: string) => `https://www.mercari.com/search/?keyword=${q(s)}`,
+    background: '#5356ee',
+    text: '#ffffff',
+  },
   // Facebook moves the search to the viewer's own area.
   facebook: {
-    name: 'Facebook Marketplace',
+    name: 'Facebook',
     host: /(^|\.)facebook\.com$/i,
     search: (s: string) => `https://www.facebook.com/marketplace/search/?query=${q(s)}`,
+    background: '#0866ff',
+    text: '#ffffff',
   },
-  stockx: { name: 'StockX', host: /(^|\.)stockx\.com$/i, search: (s: string) => `https://stockx.com/search?s=${q(s)}` },
-  goat: { name: 'GOAT', host: /(^|\.)goat\.com$/i, search: (s: string) => `https://www.goat.com/search?query=${q(s)}` },
-  backmarket: { name: 'Back Market', host: /(^|\.)backmarket\.com$/i, search: (s: string) => `https://www.backmarket.com/en-us/search?q=${q(s)}` },
-  swappa: { name: 'Swappa', host: /(^|\.)swappa\.com$/i, search: (s: string) => `https://swappa.com/search?q=${q(s)}` },
+  stockx: {
+    name: 'StockX',
+    host: /(^|\.)stockx\.com$/i,
+    search: (s: string) => `https://stockx.com/search?s=${q(s)}`,
+    background: '#006340',
+    text: '#ffffff',
+  },
+  goat: {
+    name: 'GOAT',
+    host: /(^|\.)goat\.com$/i,
+    search: (s: string) => `https://www.goat.com/search?query=${q(s)}`,
+    background: '#000000',
+    text: '#ffffff',
+    border: '#8a8a8a',
+  },
+  backmarket: {
+    name: 'Back Market',
+    host: /(^|\.)backmarket\.com$/i,
+    search: (s: string) => `https://www.backmarket.com/en-us/search?q=${q(s)}`,
+    background: '#000000',
+    text: '#ffffff',
+    border: '#8a8a8a',
+  },
+  swappa: {
+    name: 'Swappa',
+    host: /(^|\.)swappa\.com$/i,
+    search: (s: string) => `https://swappa.com/search?q=${q(s)}`,
+    background: '#1ba94c',
+    text: '#ffffff',
+  },
 } satisfies Record<string, Store>;
 
 type StoreId = keyof typeof STORES;
@@ -51,12 +103,18 @@ const SPECIALTY: { stores: StoreId[]; tags?: string[]; categories?: string[] }[]
 export type ShopLink = {
   store: string;
   url: string;
-  // A stored listing's price; a search has none.
+  // A listing's price; a search has none.
   price?: number;
+  // A live listing's currency; a stored price is in dollars.
+  currency?: string;
   // A search of the store rather than the product's own listing.
   search: boolean;
   // Carries our Amazon tag, so the page owes the Associates disclosure.
   amazon: boolean;
+  // The store's brand colours; a listing on a store not listed here has none.
+  background?: string;
+  text?: string;
+  border?: string;
 };
 
 // Ad and campaign parameters a pasted link picks up ("?utm_source=google&
@@ -106,6 +164,79 @@ function storesFor(pin: Pick<PinJson, 'tags' | 'categories'>): StoreId[] {
   return [...new Set([...specialty, ...GENERAL])];
 }
 
+// A store's own listing of the product, found live (src/server/ebay.ts) for a
+// store the pin only has a search of: its button goes to the listing and
+// shows the price.
+export type ShopMatch = { store: string; url: string; price: number; currency: string; title: string };
+
+// Words a listing title shares with every product and so proves nothing by.
+const FILLER = new Set(['a', 'an', 'and', 'the', 'of', 'x', 'with', 'edition']);
+// A title with one of these sells something for the product, or only part of
+// it: "Case for Pixel Watch 5", "Pixel Watch 5 box only", "for parts".
+const NOT_THE_PRODUCT =
+  /\b(for|fits|compatible|replacement|case|cover|band|strap|charger|cable|protector|skin|sticker|decal|stand|mount|holder|adapter|box only|empty box|no box|parts|broken|repair|lot|bundle)\b/;
+
+const words = (text: string) =>
+  text
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9.]+/g, ' ')
+    .replace(/(^|\s)\.|\.(\s|$)/g, ' ')
+    .split(' ')
+    .filter(Boolean);
+
+// Whether a listing title is the product itself: it has every word of the
+// product's name, and nothing marking it as an accessory, a part, a lot or an
+// empty box. A title may add a size or a colour; it may not leave one out.
+export function isExactListing(product: string, title: string): boolean {
+  const wanted = words(product).filter((w) => !FILLER.has(w));
+  if (!wanted.length) return false;
+  const have = new Set(words(title));
+  if (!wanted.every((w) => have.has(w))) return false;
+  return !NOT_THE_PRODUCT.test(words(title).join(' ')) || NOT_THE_PRODUCT.test(words(product).join(' '));
+}
+
+// The cheapest of a search's exact listings, leaving out any priced under
+// half the middle one: a knock-off or a mislabelled part that got past the
+// title check is cheaper than the real thing, rarely dearer.
+export function cheapestExact<T extends { title: string; price: number }>(product: string, listings: T[]): T | undefined {
+  const exact = listings.filter((l) => l.price > 0 && isExactListing(product, l.title)).sort((a, b) => a.price - b.price);
+  if (!exact.length) return undefined;
+  const middle = exact[Math.floor(exact.length / 2)].price;
+  return exact.find((l) => l.price >= middle / 2);
+}
+
+// The buttons with each live match in place of its store's search.
+export function withMatches(links: ShopLink[], matches: ShopMatch[]): ShopLink[] {
+  return links.map((link) => {
+    const match = link.search && matches.find((m) => m.store === link.store);
+    return match ? { ...link, url: match.url, price: match.price, currency: match.currency, search: false } : link;
+  });
+}
+
+// A buy button click (0086) as the admin Clicks page shows it.
+export type ShopClickRow = {
+  id: number;
+  at: string;
+  pinId: number;
+  title: string | null;
+  thumbName?: string | null;
+  originalUrl?: string | null;
+  store: string;
+  search: boolean;
+  price: number | null;
+  currency: string | null;
+  userId: number | null;
+  userName: string | null;
+  ip: string | null;
+  country: string | null;
+  region: string | null;
+  city: string | null;
+  latitude: number | null;
+  longitude: number | null;
+};
+
 // The pin's buy buttons, in order: its stored listings, then a search of
 // every store it has no listing on. Links are ready to click: tracking
 // stripped and Amazon's tag added (affiliateUrl).
@@ -114,9 +245,13 @@ export function shopLinks(pin: Pick<PinJson, 'productName' | 'merchants' | 'tags
   const covered = new Set(listed.map((m) => storeOf(m.url)).filter(Boolean));
   const links: ShopLink[] = listed.map((m) => {
     const url = withoutTracking(m.url);
-    const store = storeOf(url);
+    const id = storeOf(url);
+    const store: Store | undefined = id && STORES[id];
     return {
-      store: store ? STORES[store].name : m.label || hostOf(url),
+      store: store ? store.name : m.label || hostOf(url),
+      background: store?.background,
+      text: store?.text,
+      border: store?.border,
       url: affiliateUrl(url),
       price: m.price ?? undefined,
       search: false,
@@ -127,8 +262,17 @@ export function shopLinks(pin: Pick<PinJson, 'productName' | 'merchants' | 'tags
   if (product) {
     for (const id of storesFor(pin)) {
       if (covered.has(id)) continue;
-      const url = STORES[id].search(product);
-      links.push({ store: STORES[id].name, url: affiliateUrl(url), search: true, amazon: isAmazonStoreUrl(url) });
+      const store: Store = STORES[id];
+      const url = store.search(product);
+      links.push({
+        store: store.name,
+        url: affiliateUrl(url),
+        search: true,
+        amazon: isAmazonStoreUrl(url),
+        background: store.background,
+        text: store.text,
+        border: store.border,
+      });
     }
   }
   return links;

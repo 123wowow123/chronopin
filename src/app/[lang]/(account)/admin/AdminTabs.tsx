@@ -5,12 +5,13 @@ import { BackToMenu } from '@/components/nav/BackToMenu';
 import Link from '@/components/ui/Link';
 
 // In three groups, set apart by a rule: what the site is doing (its
-// traffic, its people, its pins, its comments), keeping it in order (the jobs
-// that run on a timer, with the lint findings under them), and the switches
-// for what visitors see.
+// traffic, its buy clicks, its people, its pins, its comments), keeping it
+// in order (the jobs that run on a timer, with the lint findings under them),
+// and the switches for what visitors see.
 const GROUPS = [
   [
     { href: '/admin/views', label: 'Views' },
+    { href: '/admin/clicks', label: 'Clicks' },
     { href: '/admin/bots', label: 'Bots' },
     { href: '/admin/users', label: 'Users' },
     { href: '/admin/pins', label: 'Pins' },
