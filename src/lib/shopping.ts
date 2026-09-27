@@ -1,0 +1,135 @@
+// Where to buy what a pin is about. A pin about one purchasable product
+// carries its name as a shop lists it (Pin.productName, 0085), and the pin
+// page offers a button per store: an exact listing a curator or the scrape
+// stored (a Merchant row) when there is one, otherwise a search of that store
+// for the product. Search pages cannot go stale the way a resale listing
+// does, and they cover every product pin without anyone finding listings.
+//
+// Every pin gets the general marketplaces; a vertical adds the stores its
+// buyers use (StockX and GOAT for sneakers). Each search URL was checked to
+// return results for a real product - don't add a store without doing so.
+
+import { affiliateUrl, isAmazonStoreUrl, isPurchaseLinkShown } from './affiliate';
+import { streamingService } from './streaming';
+import type { MerchantJson, PinJson } from './types';
+
+type Store = {
+  name: string;
+  host: RegExp;
+  search: (query: string) => string;
+};
+
+const q = encodeURIComponent;
+
+const STORES = {
+  amazon: { name: 'Amazon', host: /(^|\.)amazon\.com$/i, search: (s: string) => `https://www.amazon.com/s?k=${q(s)}` },
+  ebay: { name: 'eBay', host: /(^|\.)ebay\.com$/i, search: (s: string) => `https://www.ebay.com/sch/i.html?_nkw=${q(s)}` },
+  mercari: { name: 'Mercari', host: /(^|\.)mercari\.com$/i, search: (s: string) => `https://www.mercari.com/search/?keyword=${q(s)}` },
+  // Facebook moves the search to the viewer's own area.
+  facebook: {
+    name: 'Facebook Marketplace',
+    host: /(^|\.)facebook\.com$/i,
+    search: (s: string) => `https://www.facebook.com/marketplace/search/?query=${q(s)}`,
+  },
+  stockx: { name: 'StockX', host: /(^|\.)stockx\.com$/i, search: (s: string) => `https://stockx.com/search?s=${q(s)}` },
+  goat: { name: 'GOAT', host: /(^|\.)goat\.com$/i, search: (s: string) => `https://www.goat.com/search?query=${q(s)}` },
+  backmarket: { name: 'Back Market', host: /(^|\.)backmarket\.com$/i, search: (s: string) => `https://www.backmarket.com/en-us/search?q=${q(s)}` },
+  swappa: { name: 'Swappa', host: /(^|\.)swappa\.com$/i, search: (s: string) => `https://swappa.com/search?q=${q(s)}` },
+} satisfies Record<string, Store>;
+
+type StoreId = keyof typeof STORES;
+
+const GENERAL: StoreId[] = ['amazon', 'ebay', 'mercari', 'facebook'];
+
+// A vertical's own stores, shown ahead of the general ones: by one of the
+// pin's tags or categories.
+const SPECIALTY: { stores: StoreId[]; tags?: string[]; categories?: string[] }[] = [
+  { stores: ['stockx', 'goat'], tags: ['Sneakers', 'Footwear'] },
+  { stores: ['backmarket', 'swappa'], categories: ['Electronics', 'Computing', 'Audio'] },
+];
+
+export type ShopLink = {
+  store: string;
+  url: string;
+  // A stored listing's price; a search has none.
+  price?: number;
+  // A search of the store rather than the product's own listing.
+  search: boolean;
+  // Carries our Amazon tag, so the page owes the Associates disclosure.
+  amazon: boolean;
+};
+
+// Ad and campaign parameters a pasted link picks up ("?utm_source=google&
+// gclid=..."): they credit someone else's campaign and say nothing about the
+// product, so a link is shown without them.
+const TRACKING_PARAM = /^(utm_\w+|gclid|gbraid|wbraid|gad_\w+|fbclid|msclkid|dclid|yclid|mc_[ce]id|_ga|campaign_id|ad_id)$/i;
+
+export function withoutTracking(url: string): string {
+  let parsed: URL;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return url;
+  }
+  const tracked = [...parsed.searchParams.keys()].some((key) => TRACKING_PARAM.test(key));
+  if (!tracked) return url;
+  for (const key of [...parsed.searchParams.keys()]) if (TRACKING_PARAM.test(key)) parsed.searchParams.delete(key);
+  return parsed.toString();
+}
+
+const hostOf = (url: string) => {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
+};
+
+function storeOf(url: string): StoreId | undefined {
+  let host: string;
+  try {
+    host = new URL(url).hostname;
+  } catch {
+    return undefined;
+  }
+  return (Object.keys(STORES) as StoreId[]).find((id) => STORES[id].host.test(host));
+}
+
+const isPurchase = (m: MerchantJson): m is MerchantJson & { url: string } => isPurchaseLinkShown(m.url) && !streamingService(m.url);
+
+function storesFor(pin: Pick<PinJson, 'tags' | 'categories'>): StoreId[] {
+  const tags = new Set((pin.tags ?? []).map((t) => t.name.toLowerCase()));
+  const categories = new Set(pin.categories ?? []);
+  const specialty = SPECIALTY.filter(
+    (s) => s.tags?.some((t) => tags.has(t.toLowerCase())) || s.categories?.some((c) => categories.has(c)),
+  ).flatMap((s) => s.stores);
+  return [...new Set([...specialty, ...GENERAL])];
+}
+
+// The pin's buy buttons, in order: its stored listings, then a search of
+// every store it has no listing on. Links are ready to click: tracking
+// stripped and Amazon's tag added (affiliateUrl).
+export function shopLinks(pin: Pick<PinJson, 'productName' | 'merchants' | 'tags' | 'categories'>): ShopLink[] {
+  const listed = (pin.merchants ?? []).filter(isPurchase);
+  const covered = new Set(listed.map((m) => storeOf(m.url)).filter(Boolean));
+  const links: ShopLink[] = listed.map((m) => {
+    const url = withoutTracking(m.url);
+    const store = storeOf(url);
+    return {
+      store: store ? STORES[store].name : m.label || hostOf(url),
+      url: affiliateUrl(url),
+      price: m.price ?? undefined,
+      search: false,
+      amazon: isAmazonStoreUrl(url),
+    };
+  });
+  const product = pin.productName?.trim();
+  if (product) {
+    for (const id of storesFor(pin)) {
+      if (covered.has(id)) continue;
+      const url = STORES[id].search(product);
+      links.push({ store: STORES[id].name, url: affiliateUrl(url), search: true, amazon: isAmazonStoreUrl(url) });
+    }
+  }
+  return links;
+}

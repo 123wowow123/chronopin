@@ -59,6 +59,13 @@ export function normalizeEpisodes<T extends Row>(pin: T): T {
   return pin;
 }
 
+// The product a pin is about (0085), trimmed and at most the column's 200
+// characters; blank is none.
+export function productNameOf(pin: Row): string | null {
+  const name = typeof pin.productName === 'string' ? pin.productName.trim().replace(/\s+/g, ' ') : '';
+  return name ? name.slice(0, 200) : null;
+}
+
 // The view returns one row per pin x medium x merchant, with the joined
 // columns prefixed ("Media.id", "Merchant.url"). Collects the distinct
 // sub-objects under prefix, keyed by groupKey; undefined when there are none.
@@ -111,7 +118,7 @@ export async function createPin<T extends Row>(pin: T, userId: number | null, { 
     'address', 'priceLowerBound', 'priceUpperBound', 'price',
     'priceCurrency', 'tip', 'utcStartDateTime', 'utcEndDateTime', 'allDay', 'allDayStated',
     'sourceStartDateTime', 'sourceEndDateTime', 'originalStartDate', 'delayReasoning',
-    'episodeCount', 'episodeStatus', 'userId', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime',
+    'episodeCount', 'episodeStatus', 'productName', 'userId', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime',
   ];
   const values = [
     pin.parentId, pin.title, pin.description, pin.sourceUrl, pin.longFormSummary,
@@ -122,7 +129,7 @@ export async function createPin<T extends Row>(pin: T, userId: number | null, { 
     // Only a claim about an all-day pin; a timed one can never carry it.
     pin.allDay && pin.allDayStated ? true : false,
     pin.sourceStartDateTime || null, pin.sourceEndDateTime || null, pin.originalStartDate || null, pin.delayReasoning || null,
-    pin.episodeCount, pin.episodeStatus, userId, pin.utcCreatedDateTime || new Date(), pin.utcUpdatedDateTime, pin.utcDeletedDateTime,
+    pin.episodeCount, pin.episodeStatus, productNameOf(pin), userId, pin.utcCreatedDateTime || new Date(), pin.utcUpdatedDateTime, pin.utcDeletedDateTime,
   ].map(nullIfUndefined);
 
   if (hasId) {

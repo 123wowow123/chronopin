@@ -27,6 +27,7 @@ const stored: PinJson = {
   delayReasoning: 'Stated: first promised for April.',
   episodeCount: 12,
   episodeStatus: 'planned',
+  productName: 'Sonos Arc Ultra',
   merchants: [
     { id: 1, label: 'Amazon', url: 'https://www.amazon.com/x' },
     { id: 2, label: 'Best Buy', url: 'https://www.bestbuy.com/y', price: 1299 },
@@ -61,6 +62,7 @@ describe('pin form round trip', () => {
       delayReasoning: 'Stated: first promised for April.',
       episodeCount: 12,
       episodeStatus: 'planned',
+      productName: 'Sonos Arc Ultra',
     });
     expect(body.merchants).toEqual([
       { id: 1, label: 'Amazon', url: 'https://www.amazon.com/x', price: undefined },

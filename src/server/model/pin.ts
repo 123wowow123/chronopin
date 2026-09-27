@@ -8,7 +8,7 @@ import PinRating from './pinRating';
 import PinReference from './pinReference';
 import PinTag from './pinTag';
 import type User from './user';
-import { createPin, locationSql, mapSubObjectFromQuery, normalizeAllDayDates, normalizeEpisodes } from './pinShared';
+import { createPin, locationSql, mapSubObjectFromQuery, normalizeAllDayDates, normalizeEpisodes, productNameOf } from './pinShared';
 
 const prop = BasePinProp.concat(['favoriteCount', 'likeCount', 'viewCount', 'impressionCount', 'duplicateGroup', 'hasFavorite', 'hasLike', 'reverseOrder']);
 
@@ -257,6 +257,7 @@ async function updatePinRow(pin: Pin, userId: number | null, query: QueryFn = db
     pin.originalStartDate || null, pin.delayReasoning || null, pin.episodeCount, pin.episodeStatus,
     // Only a claim about an all-day pin; a timed one can never carry it.
     pin.allDay && pin.allDayStated ? true : false,
+    productNameOf(pin),
   ].map((value) => (value === undefined ? null : value));
 
   // Every column is written, so a field missing from the pin is cleared - the
@@ -291,6 +292,7 @@ async function updatePinRow(pin: Pin, userId: number | null, query: QueryFn = db
       "episodeCount" = $26,
       "episodeStatus" = $27,
       "allDayStated" = $28,
+      "productName" = $29,
       "utcUpdatedDateTime" = now()
     WHERE "id" = $1`,
     values,

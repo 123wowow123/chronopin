@@ -48,6 +48,7 @@ export type ExtractedFields = {
   episodeCount: number | null;
   episodeStatus: 'complete' | 'ongoing' | 'planned' | null;
   amazonUrl: string | null;
+  productName: string | null;
   startDateTime: string | null;
   endDateTime: string | null;
   allDay: boolean;
@@ -61,7 +62,7 @@ export type ExtractedFields = {
 // rejects the whole schema past that, which silently turned every extraction
 // into a session task), so these rarely-set ones are plain strings, empty when
 // the page has nothing for them. emptyAsNull turns that back into null.
-const EMPTY_AS_NULL = ['originalStartDate', 'delayReasoning', 'workTitle', 'episodeStatus', 'amazonUrl'] as const;
+const EMPTY_AS_NULL = ['originalStartDate', 'delayReasoning', 'workTitle', 'episodeStatus', 'amazonUrl', 'productName'] as const;
 
 export function emptyAsNull<T extends Partial<ExtractedFields>>(fields: T): T {
   const out = { ...fields } as Record<string, unknown>;
@@ -160,6 +161,11 @@ export const SCHEMA = {
       description:
         "Direct URL to this exact product's own listing on amazon.com, from your own knowledge of real Amazon listings - never a guessed or constructed URL. An empty string when the page is not about a specific purchasable consumer product, or you are not confident of the real listing URL.",
     },
+    productName: {
+      type: 'string',
+      description:
+        'The one product the pin is about, as a shop lists it, which the pin page searches stores for: brand, model and edition or colorway, e.g. "PUMA MB.06 Puerto Rico", "Nintendo Switch 2", "Sony WH-1000XM6". Empty ("") when the pin is not about one purchasable product.',
+    },
     startDateTime: {
       type: ['string', 'null'],
       description:
@@ -228,6 +234,7 @@ export const SCHEMA = {
     'episodeCount',
     'episodeStatus',
     'amazonUrl',
+    'productName',
     'startDateTime',
     'endDateTime',
     'allDay',

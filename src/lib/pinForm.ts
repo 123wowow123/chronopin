@@ -71,6 +71,8 @@ export type PinFormValues = {
   // ('complete', 'ongoing', 'planned'); both empty for a one-off.
   episodeCount: string;
   episodeStatus: string;
+  // The product the pin is about, which its buy buttons search for.
+  productName: string;
   merchants: MerchantJson[];
   references: ReferenceFormValues[];
   media: MediumJson[];
@@ -129,6 +131,7 @@ export const EMPTY_FORM: PinFormValues = {
   delayReasoning: '',
   episodeCount: '',
   episodeStatus: '',
+  productName: '',
   merchants: [],
   references: [],
   media: [],
@@ -258,6 +261,7 @@ export function pinToForm(pin: PinJson): PinFormValues {
     delayReasoning: str(pin.delayReasoning),
     episodeCount: str(pin.episodeCount),
     episodeStatus: str(pin.episodeStatus),
+    productName: str(pin.productName),
     merchants: pin.merchants ? pin.merchants.map((m) => ({ ...m })) : [],
     references: (pin.references || []).map(referenceToForm),
     media: pin.media || [],
@@ -309,6 +313,7 @@ export function applyScrape(values: PinFormValues, scraped: ScrapedPin): PinForm
     next.episodeCount = str(scraped.episodeCount);
     next.episodeStatus = scraped.episodeStatus || '';
   }
+  fill('productName', scraped.productName);
   if (!next.merchants.length && scraped.merchants?.length) {
     next.merchants = scraped.merchants.map((m) => ({ ...m }));
   }
@@ -418,6 +423,7 @@ export function formToPin(values: PinFormValues) {
     episodeCount: num(values.episodeCount),
     // Only means anything next to a count, and only the three stored values.
     episodeStatus: (num(values.episodeCount) && EPISODE_STATUSES.find((status) => status === values.episodeStatus)) || undefined,
+    productName: values.productName.trim() || undefined,
     company: company || undefined,
     // A wiki link only travels with the company name it belongs to, so a
     // renamed company never inherits the old one's article.

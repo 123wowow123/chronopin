@@ -569,6 +569,7 @@ function applyExtracted(pin: Pin, fields: Partial<ExtractedFields> | null): Pin 
 
   if (fields.categories?.length) pin.categories = parseCategories(fields.categories);
   if (fields.amazonUrl) pin.addMerchant(new Merchant({ label: 'Amazon', url: fields.amazonUrl }));
+  if (fields.productName) pin.productName = fields.productName;
   if (fields.longFormSummary) pin.longFormSummary = fields.longFormSummary;
 
   if (fields.startDateTime) {

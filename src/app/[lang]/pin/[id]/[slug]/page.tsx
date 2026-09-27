@@ -31,7 +31,8 @@ import { PinTags } from '@/components/pin/PinTags';
 import { PinUpdates } from '@/components/pin/PinUpdates';
 import { PinRatings, RatingSummary } from '@/components/pin/PinRatings';
 import { hasPlace } from '@/lib/places';
-import { affiliateUrl, isAmazonStoreUrl, isPurchaseLinkShown } from '@/lib/affiliate';
+import { affiliateUrl, isAmazonStoreUrl } from '@/lib/affiliate';
+import { shopLinks } from '@/lib/shopping';
 import { streamingService, watchOrder } from '@/lib/streaming';
 import { isWordmark, StreamingLogo } from '@/components/pin/StreamingLogo';
 import { EpisodeCount } from '@/components/pin/EpisodeCount';
@@ -210,6 +211,7 @@ function PinBody({
     </RefineLink>
   ) : null;
   const dateRanges = pinDateRanges(pin, timeZone);
+  const shop = shopLinks(pin);
   // The map labels the place itself; the text is only for an address it cannot draw.
   const locationText = pin.address && !hasCoordinates ? pin.address : null;
 
@@ -420,31 +422,34 @@ function PinBody({
         </div>
       ) : null}
 
-      {pin.merchants?.some((m) => isPurchaseLinkShown(m.url) && !streamingService(m.url)) ? (
+      {/* Where to buy the product the pin is about: its stored listings,
+          then a search of each store it has none on (src/lib/shopping.ts). */}
+      {shop.length ? (
         <div className="mt-2 flex flex-wrap items-center gap-2">
-          {pin.merchants
-            .filter((m) => isPurchaseLinkShown(m.url) && !streamingService(m.url))
-            .map((merchant, index) => (
-              <a
-                key={merchant.id ?? index}
-                href={affiliateUrl(merchant.url!)}
-                target="_blank"
-                rel="noopener nofollow sponsored"
-                className={`btn ${
-                  merchant.label === 'Amazon' ? 'bg-[#ff9900] text-black hover:bg-[#ffad33]'  : 'btn-secondary'
-                }`}
-              >
-                <Icon name="cart" className="size-4" />
-                {merchant.label === 'Amazon' ? t('pin.buyOnAmazon') : merchant.label}
-                {merchant.price ? <span className="font-normal">{money(merchant.price)}</span> : null}
-                <Icon name="external" className="size-3.5 shrink-0 opacity-70" />
-              </a>
-            ))}
+          <span className="mr-1 text-xs font-semibold tracking-wider text-subtle uppercase">{t('pin.buyOnHeading')}</span>
+          {shop.map((link) => (
+            <a
+              key={link.url}
+              href={link.url}
+              target="_blank"
+              rel="noopener nofollow sponsored"
+              title={link.search ? t('pin.searchStore', { store: link.store, product: pin.productName ?? '' }) : t('pin.buyOn', { store: link.store })}
+              className={`btn ${link.store === 'Amazon' ? 'bg-[#ff9900] text-black hover:bg-[#ffad33]' : 'btn-secondary'}`}
+            >
+              <Icon name={link.search ? 'search' : 'cart'} className="size-4" />
+              {link.store}
+              {link.price ? <span className="font-normal">{money(link.price)}</span> : null}
+              <Icon name="external" className="size-3.5 shrink-0 opacity-70" />
+            </a>
+          ))}
         </div>
       ) : null}
       {/* Amazon Associates asks for this wherever a tagged link is shown: an
-          Amazon listing, or a Prime Video title (sent to amazon.com, tagged). */}
-      {pin.merchants?.some((m) => isPurchaseLinkShown(m.url) && isAmazonStoreUrl(m.url)) ? <p className="mt-2 text-xs text-subtle">{t('pin.amazonDisclosure')}</p> : null}
+          Amazon listing or search, or a Prime Video title (sent to amazon.com,
+          tagged). */}
+      {shop.some((link) => link.amazon) || pin.merchants?.some((m) => streamingService(m.url) && isAmazonStoreUrl(m.url)) ? (
+        <p className="mt-2 text-xs text-subtle">{t('pin.amazonDisclosure')}</p>
+      ) : null}
 
       <PinReferences pinId={pin.id} authorId={pin.user?.id ?? pin.userId} evidence={pinEvidence(pin)} sourceReasoning={pin.dateConfidenceReasoning} dateRanges={dateRanges} timeZone={timeZone} />
       {/* Right under what backs the pin: a missing link, date or fact goes to

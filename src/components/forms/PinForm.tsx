@@ -592,6 +592,16 @@ export function PinForm({
                 ))}
               </select>
             </div>
+            {/* The product a shop would list, which the pin page's buy
+                buttons search for (src/lib/shopping.ts). */}
+            <input
+              aria-label={t('form.productName')}
+              title={t('form.productNameTitle')}
+              placeholder={t('form.productName')}
+              className={inputClass}
+              value={values.productName}
+              onChange={(e) => set('productName', e.target.value)}
+            />
             <div>
               <label htmlFor="summary" className={labelClass}>
                 {t('form.keyPoints')}

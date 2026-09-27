@@ -149,6 +149,9 @@ export type PinJson = {
   // ("planned"). Both absent for a film or a one-off event.
   episodeCount?: number;
   episodeStatus?: EpisodeStatus;
+  // The product the pin is about, as a shop lists it ("PUMA MB.06 Puerto
+  // Rico"), which the pin page's buy buttons search for (lib/shopping.ts).
+  productName?: string;
   // The dollars traded on the prediction markets its links cite, as last read
   // (schema 0053). Absent when it cites none, or when no exchange reports
   // volume for the ones it cites. Its live per-market counterpart arrives with
