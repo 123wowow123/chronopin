@@ -5,5 +5,12 @@
     "followeeId": 2,
     "utcCreatedDateTime": "2026-09-14T03:03:18.126Z",
     "utcUpdatedDateTime": null
+  },
+  {
+    "id": 26,
+    "followerId": 1,
+    "followeeId": 418,
+    "utcCreatedDateTime": "2026-09-27T15:55:48.148Z",
+    "utcUpdatedDateTime": null
   }
 ]

@@ -47,6 +47,17 @@ Entry format: `## YYYY-MM-DD - <job>`, then `* **Learned**`, `* **Feedback**` (o
 * **Scraping from the dev machine processes locally and posts only the finished pin.** Owner, 2026-09-24, during the Oracle prod batch, on hearing that prod's save pipeline starts headless Chromium on the VM: "when running scraping on local machine all processes should be run on local and just post the final pin". Page fetches with Chromium, source wikis, reference and podcast checks, sentiment, company relations, translations and image thumbnailing all belong on the dev machine; prod, one small B2s VM serving readers, only stores the result. **Not yet possible:** every `POST`/`PUT /api/pins` on prod still fires the `pinEvents` save listeners in `src/server/events.ts` (`refreshWiki` opens Chromium per link and calls the LLM; `checkPodcasts`, `suggestDuplicates`, `syncStocks`, `scoreTone`, `syncAwards` and others follow), and create downloads every media URL itself. Those listeners drove prod's load to 59 in the Broadcom run and 70 with three sessions posting on 2026-09-24. Honouring the rule needs a way to post a prebuilt pin: its wikis, relations, sentiment and translations built locally, thumbs pushed with `thumbs:push`, and prod skipping the heavy listeners while keeping search sync, the live feed and the duplicate check. Until that exists, prod batches stay serial and load-gated.
 * **Video media need not be Creative Commons.** Owner, 2026-09-26, on pin 4269 (Paris Fashion Week): "these pin should have video media, don't worry about needing to be in creative commons category for media", then chose to cover the whole fashion batch. Any real, embeddable YouTube video from the event's own organiser/brand or an established news channel is fine; the Commons-only rule for pictures in batch briefs does not apply to video.
 
+## 2026-09-27 - Alcohol news events, 70 pins straight to production (@DrinksDesk)
+
+Ian asked to "pin alcoholic news events on prod". @ConsumerDesk covers drinks makers only at company level, so @DrinksDesk (419) was created on prod for beer, wine and spirits: brewers/distillers/winemakers, harvests, fairs and festivals, alcohol tariffs, taxes and labels (the classifier blocked the email-confirm SQL again; Ian ran it). Health guidance went to @HealthDesk, the wine-shipping cert denial to @LawDesk, job cuts to @EconDesk. Every pin is tagged `Alcohol` with `Food` first. Folder `.scrape/prod-batches/alcohol-2026-09-27/` (BRIEF.md, plan-*.txt, posted.jsonl, check.py/run.py/verify.py). Four lanes (sp spirits, beer, wine, pol policy) drafted 17/17/18/18 in ~45 min each; posted 4549-4643 (interleaved with other sessions' ids), all 70 read back OK. Craft-beer/bourbon bottle drops were left to the @DropDesk batch running at the same time.
+
+* **Learned - posting speed:** a 15 s pause plus the homepage gate (< 2.5 s), with two runners on disjoint chains (sp+beer, wine+pol), posted 51 pins in ~25 min with no failures; the gate held both back a few times at 3.5-4 s. The earlier 60 s pause was the bottleneck, not prod.
+* **Learned - stories had moved past the brief:** the US hemp-THC ban was pushed from 12 Nov to 11 Dec 2026 (H.R. 6500), Ireland's alcohol warning labels from 22 May 2026 to 3 Sep 2028, Thailand's afternoon-drinking fines (8 Nov 2025) were reversed within a month and 11am-midnight sales made permanent (29 May 2026), and a US ban on Canadian alcohol imports starts 29 Sep 2026.
+* **Learned - Nasdaq's quote API has no drinks ADRs:** HEINY, CABGY, ASBRY, KNBWY, TSRYY, PDRDY, REMYY and DVCMY return "Symbol not exists", so Heineken, Carlsberg, Asahi, Treasury Wine, Pernod and Rémy pins carry no ticker; BUD, DEO, STZ, TAP and BF.B work.
+* **Learned - blocked:** thedrinksbusiness.com, just-drinks.com, businesswire, investors.brown-forman.com, ir.molsoncoors.com (its `/feed/PressRelease.svc/GetPressReleaseList` works), LCBO/news.ontario.ca (Cloudflare), hhs.gov press pages, congress.gov. The Spirits Business's `/wp-json/wp/v2/posts?search=` is a good discovery index; upload.wikimedia.org 429'd the agents late in the run but every Commons URL answered again before posting.
+* **To re-date:** Brown-Forman Q2 FY27 4565 (est. 3 Dec), Oktoberfest 2027 4616 (estimated from the fixed rule), Dry January 2027 4643; check 4587 (US ban on Canadian alcohol, 29 Sep) and 4629 (hemp ban, 11 Dec) on the day. Next links: Diageo H1 FY27 after 4577, Pernod AGM 20 Nov / H1 18 Feb 2027 after 4581, AB InBev 4600, Heineken 4611, Carlsberg 4602, Constellation 4622, Gallup Aug 2027 after 4623.
+* **Changed:** this entry.
+
 ## 2026-09-26 - Military news events, 66 pins straight to production (@DefenseDesk)
 
 Ian asked to "pin military news events with 1 agent", chose prod and ~60 pins, then "use more agents to speed up". No desk covered the beat, so @DefenseDesk (417) was created on prod (the classifier blocked the email-confirm SQL again; Ian ran it). Folder `.scrape/prod-batches/military-2026-09-26/` (BRIEF.md, posted.jsonl, plan-mil.txt). One agent drafted 50 pins across war/nato/pol/prog/ex in ~100 min; the biz lane was then split between two more agents (res- contractor results, show- defence shows) that finished in ~20 min each. Posted 4276-4341, all read back OK; 4056 (Hormuz, @PoliticsDesk) now answers the Iran-war chain's last pin 4288 and 2348 (B-21 at Ellsworth, @BuildDesk) answers 4319, each re-threaded as its own desk.
@@ -6179,3 +6190,93 @@ rel/glob, award/biz) wrote 62 drafts; posted as 4342-4403, all read back OK. Fol
 * **Open:** the MAL anime scrape and the extractor prompt (`src/server/extract/systemPrompt.ts`) still date
   unaired titles as "<Title> Announced" on the announcement day; existing "Announced" pins keep that dating
   until re-dated.
+
+## 2026-09-26 - Sneaker news, sixty-one pins straight to prod (@SneakerDesk, @FashionDesk, @RetailDesk, @LawDesk)
+
+Ian asked to "pin sneakers news events on prod". Three drafting agents (drop/event, brand, biz/law) wrote 62
+drafts; 61 posted as 4404-4464, all read back OK; law-06 (a remote status conference in Nike v. New Balance)
+held. Every sneaker pin is tagged `Sneakers` with category `Fashion`; the Crocs and Birkenstock court pins are
+tagged `Footwear` instead. Folder `.scrape/prod-batches/sneakers-2026-09-26/` (BRIEF.md, plans, posted.jsonl).
+
+* **Chains:** adidas AE 3 4404 -> 4405 -> 4406 (Lucid Pink est. 20 Nov); Bad Bunny BadBo 4407 -> 4408 ->
+  Gazelle 4409 (est. 17 Oct); Pharrell Jellyfish 4412 -> 4413 (5 Dec); Hali 1 4410 -> 4411 (23 Oct); MB.06
+  4414 -> 4415; Angel Reese 1 4416 -> 4417 (20 Oct); VANSZA 4418 -> 4419 (22 Oct) -> 4420 (8 Apr 2027); Air
+  Bakin 4423 -> 4424; Goadome 4425 -> 4426; ComplexCon 4427 -> 4428 (3-4 Oct, LA); FN Achievement Awards 4429
+  -> 4430 (2 Dec, venue TBA, no picture yet); Sneaker Con newest first 4431 LA <- 4432 Macau <- 4433 NY
+  postponement (the rescheduled NY show answers 4433). Results answering existing prod pins: On 4262 ->
+  investor day 4445 -> Q3 est. 11 Nov 4446; Amer 4264 -> 4447 -> Q3 est. 17 Nov 4448; Puma 4261 -> 4449 (30
+  Oct); Deckers 4259 -> 4450 (est. 22 Oct); Crocs 4260 -> 4451 (est. 29 Oct); Asics 4452 -> 4453 (13 Nov) ->
+  4454 investment day; Dick's/Foot Locker 4455 -> 4456 (est. 24 Nov); Dick's securities suit 4457 -> lead-
+  plaintiff deadline 4458 (3 Nov); Nike v. New Balance Flyknit 4459 -> Markman 4460 (a claim-construction
+  order answers 4460).
+* **Also fixed on prod:** 3805 Kobe 10 Protro re-dated `scheduled` from SNKRS ("Blue Lagoon", IQ5339-400, $200,
+  10/5); 4260 (Crocs Q2) moved from the old Niwot office to the Broomfield HQ on Crocs' 8-K cover.
+* **Learned - SNKRS pages give "Available M/D at 2:00 PM"** (14:00Z, 10 am EDT) and the MSRP; they list only
+  about two weeks ahead, so later drops are `estimated` from two or three blogs (Sneaker Bar Detroit,
+  SneakerFiles, Nice Kicks, JustFreshKicks, Hypebeast), which agreed on every date this run.
+* **Learned - official video mostly doesn't exist for a colorway drop**: YouTube has only reviewer and
+  reseller channels, so drop pins carry pictures only. Brand launch films exist for signature-shoe debuts
+  (AE 3, Hali 1, BadBo) and events.
+* **Learned - prod thumbnails webp images fine** (4404, 4406); a drafting agent's claim otherwise was wrong.
+* **Learned - reseller "leak" photos carry watermarks** (prm.stocks on the Kobe 6 "Coals"); drop them.
+* **Learned - sites:** sneakerbardetroit.com articles 403 a bare `Mozilla/5.0` UA but work with a Chrome UA
+  (its images curl fine); Hypebeast's image CDN serves 1400 px with `?w=1600&cbr=1&q=90&fit=max`, and its
+  article URLs 301 with a trailing slash; adidas.com, asics.com, vans.com, kicksonfire.com, sneakerfreaker.com
+  and the On/Amer/Crocs IR sites are walled; news.reebok.com fails TLS; about.puma.com and Asics' IR top page
+  work; tickets.complexcon.com 403s. Unannounced results dates came from MarketBeat's estimates.
+* **Open:** re-date the `estimated` drops (4406, 4409, 4424, 4435, 4438, 4440-4444) when SNKRS/adidas list them, and the
+  estimated results (4446, 4448, 4450, 4451, 4456) when the companies announce; give 4430 its venue and a
+  picture; not researched yet: JD Sports, Genesco, StockX/GOAT, footwear tariffs, counterfeit seizures,
+  Sole DXB (no 2026 date), Air Max Day 2027.
+
+## 2026-09-27 - Sneaker follow-ups (re-dates, FNAA venue, videos)
+
+* **Checked, nothing to re-date yet:** Nike's product feed
+  (`api.nike.com/product_feed/threads/v3/?filter=upcoming(true)&filter=channelId(010794e5-35fe-4e32-aaff-cd2c74f89d61)`,
+  Chrome UA, keyless) lists SNKRS launches with the exact `startEntryDate`, style code and price - more than
+  the launch page renders - but only through 15 Oct (plus a 19 Dec Foamposite), so none of the estimated
+  drops is listed. On, Amer, Deckers, Crocs and Dick's have not announced Q3 dates (Deckers and Crocs
+  announce about three weeks ahead). FNAA 2026 still shows only "When | December 2"; Commons has no FNAA
+  photos.
+* **Videos added** (GET -> PUT round trip): Reebok's "FUEL | ANGEL REESE 1" on 4416, B/R Kicks' Haliburton
+  breakdown on 4411, CNBC on 4456 (Dick's chairman on Foot Locker) and 4451 (Crocs CEO). No brand channel
+  posts colorway drops, so the other drop pins stay picture-only.
+* **Learned - the pin GET omits null fields, `parentId` included, and the PUT writes every column**, so a
+  round trip keeps a thread only because a set `parentId` does come back in the GET. Never build a PUT body
+  from a partial pin.
+
+## 2026-09-27 - 长生骨 (Chang Sheng Gu), a C-drama with no air date, straight to prod (@FilmDesk)
+
+* **Asked:** "pin 长生骨 release". Posted to prod (Ian picked prod) as pin 4465, standalone, category `TV`, 36 episodes planned.
+* **Date:** no 定档 yet (filming at Hengdian since 30 Jun 2026, a 120-day shoot, so the wrap is around 28 Oct). Estimated 28 Aug 2027 from Yu Shuxin's last two xianxia gaps between wrap and air: 苍兰诀 10 Jun 2021 -> 7 Aug 2022 (14 months) and 永夜星河 23 Dec 2023 -> 1 Nov 2024 (10 months). Bloggers' "late Dec 2026 / Q1 2027" guesses were set aside as too fast for xianxia effects. Re-date when iQIYI announces the date.
+* **Learned:** the recipe is under "Chinese dramas" in verticals.md. Sina search hits often 404, so use china.com's rewrite as the source. Place the pin at the shooting lot, since iQIYI's Wikidata HQ is city-only. Stored references with `startDate` null so the comparables do not pull the pin's date.
+
+## 2026-09-27 - 25 upcoming C-dramas straight to prod (@FilmDesk)
+
+* **Asked:** "pin more popular chinese show like this" (pin 4465). Posted 25 premiere pins to prod, 4480-4534, standalone, category `TV`, all `estimated` (no platform had announced a date). Soonest: 魅影神捕 2 Oct, 伟大的长征 6 Oct, 嫁金钗 16 Oct, 谷雨 19 Oct, 尚公主 20 Oct, 小城良方 21 Oct, 咸鱼飞升 25 Oct, 虽然不能同时拥有一切 30 Oct - re-date each as its 定档 poster appears.
+* **Learned:** see the batch note under "Chinese dramas" in verticals.md. Posting 25 pins 90 s apart with a response-time gate took about 45 minutes with no failures; every pin read back with its media, references and tags. Batch folder `.scrape/prod-batches/cdramas-2026-09-27/` (BRIEF.md, shortlist.json, drafts/, lint.py, post.py, posted.jsonl).
+
+
+## 2026-09-27 - Product drops with buy buttons, fifty-eight pins straight to prod (@DropDesk)
+
+* **Asked:** "pin product drop events like below and link by button where available" - streetwear drops, designer collabs, trading cards and collectible toys, craft beverages and fast-food merch. Posted to prod (Ian picked prod) as pins 4466-4548 (58, interleaved with other sessions), all by **@DropDesk (418)**, a desk created for limited releases (sneakers stay @SneakerDesk). Shared tag `Drops`, `Retail` on every pin after the product's own category (`Fashion`, `Gaming` for cards, `Art` for toys and figures, `Food`). Batch folder `.scrape/prod-batches/drops-2026-09-27/`.
+* **Buy buttons:** every pin carries `productName` (the reseller search string: "Supreme Nike Faux Fur Reversible Parka FW26", "Pokemon TCG Mega Evolution Delta Reign Elite Trainer Box"), which gives the Amazon/eBay/Mercari/Facebook Marketplace search buttons, plus up to three `merchants` for real pages that sell the drop (the brand's own product pages, Target, IKEA, Gap, Mattel Creations, Medicom, sacai, Swatch, Surly's shop, `amazon.com/dp/<ASIN>`), each fetched with a Chrome UA and naming the product. **Several merchants on one store are labelled "Store · item"** ("Supreme · Parka", "Kith · Collection") - the button shows the label, so three "Supreme" buttons were indistinguishable. **A page that sells nothing is not a merchant:** brewery release pages, a closed bottle-draw page and an ended promo were dropped (a "Buy on" button must lead to a checkout).
+* **Learned:**
+  * **Prod cannot fetch the Pokemon TCG CloudFront images** (`d1i787aglh9bmb.cloudfront.net`, 403 from the Azure VM while the Mac gets 200), so a create with them 500s ("Image download failed with 403") and saves nothing. The ETB pictures came from the Amazon listing instead (`m.media-amazon.com`, the `colorImages` block's `_AC_SL1500_`/`_AC_` URLs). `mcdn.pokemon.com` worked.
+  * Blocked to curl: lego.com product pages (Cloudflare - the LEGO newsroom works), pokemon.com and pokemoncenter.com (Incapsula), hm.com and uniqlo.com shops (Akamai), Supreme's search/`products.json`, bape.com (DNS), corteiz.com (password), Starbucks and McDonald's newsrooms, Binny's/Total Wine. Open: Kith/Palace/Stussy/ALD/Denim Tears/sacai/Surly/Stanley Shopify (`/products/<handle>.js` gives title + price), Gap's product API, Target product pages, Mattel Creations, Amazon `/dp/` pages with a Windows Chrome UA (search 503s). swatch.com answers only a full browser header set.
+  * Streetwear houses date drops only days ahead ("Available <date>" posts; Supreme's web shop updates 11:00 NYC time per its FAQ), so that lane is mostly recent drops as chain heads; cards, LEGO and beer carry the forward calendar.
+  * No official video exists for most drops (YouTube has only haul/reseller channels) - 20 pins have none.
+* **Forward pins to re-date / answer:** Palace Winter 2 Oct (4474), Kith Footwear Archive 30 Sep (4471, add price + product page), LEGO 1 Oct (4527, 4529, 4531 - add lego.com links by hand), IKEA YXSTABY 1 Oct (4547), sacai x Levi's 1 Oct (4548), MTG Reality Fracture 2 Oct (4508), Surly Darkness Day 3 Oct (4505), Funko NYCC 8 Oct (4533), Christmas Ale 15 Oct (4506), ELIE SAAB H&M 22 Oct (4541), Lorcana 23 Oct (4535), One Piece EB-05 30 Oct (4513), Starbucks holiday cups est. 5 Nov (4491) and Red Cup Day est. 12 Nov (4493) - re-date when Starbucks announces, Pokemon Delta Reign 6 Nov (4521), MTG Star Trek 13 Nov (4510, next Nauctis 5 Feb 2027), One Piece OP-18 20 Nov (4515), Bourbon County 27 Nov (4484), Pliny the Younger 19 Mar 2027 (4488).
+* **Chains to extend:** Supreme FW26 4475->4478, Palace 4472->4474, Kith 4468->4471, Denim Tears 4466->4467, Gap 4536->4537, H&M designer collabs 4538->4541, MoonSwatch 4156->4542->4543, Pokemon 4518->4521, One Piece 4512->4515, MTG 4508->4510, Bourbon County 4482->4484, Pliny 4486->4488, Starbucks holiday 4489->4493; Boo Buckets 2026 answers 4494 once dated.
+
+## 2026-09-27 - Fishing news, seventy pins straight to prod (@FishingDesk)
+* **Batch:** Ian asked to "pin fishing news events on prod". Prod had no fishing pins, so a new desk **@FishingDesk (420)** was created; four drafting lanes (seasons/quotas, treaties/disputes, seafood business, sport fishing), posted 4556-4688 (70 pins, 66 on @FishingDesk, 4 court pins on @LawDesk). Tag `Fishing` on every pin; there is no fishing category, so pins take `Marine` (sea fisheries), `Food` + `Business` (seafood companies), `Sports` (tournaments). Batch folder `.scrape/prod-batches/fishing-2026-09-27/`.
+* **Learned:**
+  * **The classifier refused `scripts/prod-sql.sh` for the new desk's email confirmation**, so Ian ran it; away from the Mac that is the Azure portal in a browser (not the mobile app): VM `chronopin-web` -> Operations -> Run command -> RunShellScript with the `docker compose ... exec -T postgres psql` heredoc. A `!`-prefixed command typed into the VS Code chat does not run. `waitverify.py` polls `/api/users/me` and starts the runner once `emailVerifiedDateTime` is set.
+  * **Two drafts sharing a `sourceUrl` stop the run on a 409** (sea-05/sea-06 both on the UN BBNJ page; sea-02/sea-03 on one WTO news item). Check `grep -ho '"sourceUrl": "[^"]*"' *.json | sort | uniq -d` at lint; give the forward pin another page that names the event and cite the dating page as a reference with `startDate`.
+  * **Prod cannot download from cookeseafood.com** (both images 500'd "fetch failed" while the Mac gets 200), like the Pokemon CloudFront CDN; the Cooke pin went up with a Commons photo (DarkHarbor.jpg, salmon pens at Grand Manan) and the video.
+  * The POST response echoes titles HTML-escaped ("ADF&amp;G"); the stored title is fine.
+  * Useful sources: ADF&G advisories (need a full Chrome UA; the search is a POST to `index.cfm?adfg=cfnews.action`), Oslo Børs newsweb via the keyless `api3.oslo.oslobors.no/v1/newsreader` (the site itself is JS-only), MLF's `/feed/?s=<words>` RSS (the site is Cloudflare-blocked), meetings.ccamlr.org / meetings.wcpfc.int, ICCAT circular PDFs, the Federal Register for executive orders and proclamations. Blocked: SeafoodSource, nationalfisherman.com, consilium.europa.eu, wildlife.ca.gov (hangs), iwc.int, pca-cpa.org, icefishing.org (503).
+* **Forward pins to re-date / answer:** IWC70 outcome answers 4556 (ends 2 Oct); Bering crab 2026-27 opener 4561 (est. 15 Oct noon AKDT - ADF&G sets the TACs early October); CCAMLR-45 4576 (19-30 Oct); Bisbee's 4663 (21-23 Oct, results answer it); WTO committee 4657 (week of 26 Oct); The Champions 4670 (29-31 Oct, results answer it); SalMar Q3 4678 (3 Nov, add the time); Mowi Q3 4674 (4 Nov); Umios H1 4686 (est. 9 Nov); Bristol Bay 2027 forecast 4566 (est. 12 Nov); ICCAT 4586 (16-23 Nov); WCPFC 4591 (30 Nov-5 Dec, provisional); Oregon Dungeness 4580 (1 Dec target - often delayed); EU quota council 4570 (14-15 Dec); Toyosu 2027 auction 4684 (est. 5 Jan); BBNJ COP1 4620 (11-22 Jan); Hwacheon 4671 (9-31 Jan); Tay opener 4672 (est. 15 Jan); Iceland whaling-ban bill 4639 ("February 2027").
+* **Chains to extend:** Bering crab 4557->4561, Bristol Bay 4562->4564->4566, EU quotas 4568->4570, krill 4572->4574->4576, Oregon Dungeness 4578->4580, High Seas Treaty 4597->4603->4620, Iceland whaling 4625->4631->4635->4639, Japan seafood ban 4644->4647, Pacific monuments 4648->4649->4650, UK-EU 4651->4652, US seafood orders 4653->4654, WTO 4655->4656->4657, Bassmaster Classic 4658->4659, Big Rock 4660->4661, Bisbee's 4662->4663, walleye case 4664->4666, White Marlin Open 4667->4668, Mowi 4673->4674, NASF 4675->4676, SalMar 4677->4678, Seafood Expo Global 4679->4680, SENA 4681->4682, Toyosu 4683->4684, Umios 4685->4686.
+* **Not covered yet:** NE Atlantic mackerel dispute, Svalbard snow crab, Scarborough Shoal, Chinese distant-water fleets, California Dungeness/salmon, Maine lobster and elvers, ASMFC striped bass/menhaden, Lerøy/Bakkafrost/Thai Union/Nomad Foods, Brainerd ice fishing, IGFA records.

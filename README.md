@@ -268,7 +268,10 @@ https://developer.ticketmaster.com/partners/distribution-partners/affiliate-sign
 
 sync prod db to local and backup json
 
-- pin fashion news events on prod
+
+
+- product should link ebay and macari and facebook marketplace and have job to check for updatedness
 
 
 
+- Translate to Hindi & Arabic
