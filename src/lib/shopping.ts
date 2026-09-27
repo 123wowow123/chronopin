@@ -97,6 +97,9 @@ const GENERAL: StoreId[] = ['amazon', 'ebay', 'mercari', 'facebook'];
 // pin's tags or categories.
 const SPECIALTY: { stores: StoreId[]; tags?: string[]; categories?: string[] }[] = [
   { stores: ['stockx', 'goat'], tags: ['Sneakers', 'Footwear'] },
+  // Limited drops resell on StockX too: streetwear, designer toys and sealed
+  // trading cards.
+  { stores: ['stockx'], tags: ['Drops'] },
   { stores: ['backmarket', 'swappa'], categories: ['Electronics', 'Computing', 'Audio'] },
 ];
 

@@ -41,6 +41,12 @@ describe('shopLinks', () => {
     expect(shopLinks({ categories: ['Fashion'] })).toEqual([]);
   });
 
+  it('offers StockX for a limited drop, once when it is also a sneaker', () => {
+    const drop = { productName: 'Supreme Nike Faux Fur Reversible Parka FW26', tags: [{ name: 'Drops', kind: 'topic', source: 'user' }] } as Pick<PinJson, 'productName' | 'tags'>;
+    expect(shopLinks(drop).map((l) => l.store)).toEqual(['StockX', 'Amazon', 'eBay', 'Mercari', 'Facebook']);
+    expect(shopLinks({ ...sneaker, tags: [...sneaker.tags!, ...drop.tags!] }).filter((l) => l.store === 'StockX')).toHaveLength(1);
+  });
+
   it('leaves streaming services and dropped stores to the rest of the page', () => {
     const links = shopLinks({
       merchants: [
