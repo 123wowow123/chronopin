@@ -400,6 +400,7 @@ const es: Messages = {
     startedAgo: 'Empezó {ago}',
     startedIn: 'Empezó {when}',
     startsWhen: 'Empieza {when}',
+    years: '{count} a',
     days: '{count} d',
     stretchLate: '{span} de retraso: del {from} al {to}',
     stretchPromised: 'La espera prometida al principio: del {from} al {to}',

@@ -394,6 +394,7 @@ const ko: Messages = {
     startedAgo: '{ago} 시작',
     startedIn: '{when} 시작',
     startsWhen: '{when} 시작',
+    years: '{count}년',
     days: '{count}일',
     stretchLate: '{span} 지연: {from}~{to}',
     stretchPromised: '최초 약속된 대기 기간: {from}~{to}',

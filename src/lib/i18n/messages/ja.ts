@@ -394,6 +394,7 @@ const ja: Messages = {
     startedAgo: '{ago}に開始',
     startedIn: '{when}に開始',
     startsWhen: '{when}に開始',
+    years: '{count}年',
     days: '{count}日',
     stretchLate: '{span}の遅れ: {from}〜{to}',
     stretchPromised: '当初約束された待ち時間: {from}〜{to}',

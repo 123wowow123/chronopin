@@ -396,6 +396,7 @@ const en = {
     startedAgo: 'Started {ago}',
     startedIn: 'Started {when}',
     startsWhen: 'Starts {when}',
+    years: '{count}y',
     days: '{count}d',
     stretchLate: 'Late by {span}: {from} to {to}',
     stretchPromised: 'The wait as first promised: {from} to {to}',

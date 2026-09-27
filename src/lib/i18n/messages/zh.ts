@@ -394,6 +394,7 @@ const zh: Messages = {
     startedAgo: '{ago}开始',
     startedIn: '{when}开始',
     startsWhen: '{when}开始',
+    years: '{count}年',
     days: '{count}天',
     stretchLate: '延迟 {span}：{from} 至 {to}',
     stretchPromised: '最初承诺的等待期：{from} 至 {to}',

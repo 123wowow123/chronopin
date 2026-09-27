@@ -13,6 +13,19 @@ const DAY = 24 * HOUR;
 
 const pad = (n: number) => String(n).padStart(2, '0');
 
+// The wait from now to a start, as whole calendar years and the rest: the
+// same date N years on counts as N years, so leap days fall in the days.
+function splitYears(now: number, startMs: number) {
+  const at = (years: number) => {
+    const d = new Date(now);
+    d.setFullYear(d.getFullYear() + years);
+    return d.getTime();
+  };
+  let years = Math.max(0, Math.floor((startMs - now) / (366 * DAY)));
+  while (at(years + 1) <= startMs) years++;
+  return { years, rest: startMs - at(years) };
+}
+
 // When a pin starts on the viewer's clock: its instant, or for an all-day pin
 // local midnight of its (UTC) date.
 function localStart(utcStartDateTime: string, allDay?: boolean) {
@@ -83,7 +96,8 @@ export function CountdownMeter({ start, since, allDay, originalStart }: { start:
     return <div className="my-3 h-[26px]" />;
   }
 
-  const remaining = startMs - now;
+  const { years, rest: remaining } = splitYears(now, startMs);
+  const days = Math.floor(remaining / DAY);
   const sinceMs = since ? new Date(since).getTime() : NaN;
   // The day first promised, when the start has slipped past it since.
   const originalMs = originalStart ? localDay(originalStart) : NaN;
@@ -119,7 +133,8 @@ export function CountdownMeter({ start, since, allDay, originalStart }: { start:
         <span className="text-subtle">{t('countdown.startedAgo', { ago: allDay ? dayAgo(startMs, now, t.locale) : timeAgo(start, now, t.locale) })}</span>
       ) : (
         <span className="font-mono text-sm text-future tabular-nums">
-          {Math.floor(remaining / DAY) > 0 ? <b className="mr-1">{t('countdown.days', { count: Math.floor(remaining / DAY) })}</b> : null}
+          {years > 0 ? <b className="mr-1">{t('countdown.years', { count: years })}</b> : null}
+          {years > 0 || days > 0 ? <b className="mr-1">{t('countdown.days', { count: days })}</b> : null}
           {[Math.floor((remaining % DAY) / HOUR), Math.floor((remaining % HOUR) / MINUTE), Math.floor((remaining % MINUTE) / SECOND)].map(pad).join(':')}
         </span>
       )}
