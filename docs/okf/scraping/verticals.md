@@ -727,6 +727,10 @@ A tour is **one pin per show**, each at its venue, not one pin for the tour.
    from the artist's Vevo channel.
 7. `company` is the promoter or ticketer, not the artist: a person is not an
    organisation, and the promoter is what carries a ticker (Live Nation, LYV).
+8. The markup's start time is often the **gates** time (stadium shows at 17:00, Knebworth at
+   14:00), and the artist's own Seated widget can disagree. Prefer the venue's own event page
+   when it names a show time (BC Place: "7:00 PM PT"); otherwise keep the markup's time and say so.
+   A residency's company is the venue operator (Sphere Entertainment, MSG Entertainment).
 
 # Prediction markets
 

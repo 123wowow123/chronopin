@@ -1,6 +1,7 @@
 # Update Log
 
 ## 2026-09-26
+* **Update**: **Music news events, posted straight to production** (pins 4342-4403, @MusicDesk with @LawDesk): sixty-two pins in the `Music` category - tour nights at their venues (Harry Styles, Oasis Live '27, Metallica, Bruno Mars, Celine Dion in Paris), festival editions (Coachella, Glastonbury, Primavera, ACL, Tomorrowland Brasil), 2026 albums and forward releases (U2, Queens of the Stone Age, Fontaines D.C., Kings of Leon, Lisa), K-pop and global (BTS, BLACKPINK, Bad Bunny's halftime, Eurovision 2026), the award calendar to the 2027 Grammys and BRITs, and the music business (Spotify, WMG, UMG, Live Nation's antitrust case, AI-music suits and deals). Four existing pins re-threaded. [Learnings](/scraping/learnings.md)
 * **Update**: **Video media for the fashion pins, on production** (4165-4274): 105 of the 110 pins now carry an embeddable YouTube video (brand/organiser channels first, established news otherwise; forward and completion pins get labelled context coverage), added by a load-gated GET -> PUT round trip. Video need not be Creative Commons. Stale 4195 (Galliano Met Gala cancelled) and 4241 (Andic homicide probe) raised. [Learnings](/scraping/learnings.md)
 
 ## 2026-09-24

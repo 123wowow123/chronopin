@@ -6137,3 +6137,30 @@ Posted as pin 4056, all-day 3 Oct 2026, `estimated`, standalone.
 * **Open:** re-date 4056 to the acceptance day + 8 if Washington accepts (whole-pin PUT as @PoliticsDesk),
   or post the answer as a response if it rejects. Draft and post script in
   `.scrape/prod-batches/hormuz-7day-2026-09-25/`.
+
+## 2026-09-26 - Music news, sixty-two pins straight to prod (@MusicDesk, four @LawDesk)
+
+Ian asked to "pin music news events" and chose prod and ~60 pins. Three drafting agents (tour/fest,
+rel/glob, award/biz) wrote 62 drafts; posted as 4342-4403, all read back OK. Folder
+`.scrape/prod-batches/music-2026-09-26/` (BRIEF.md, posted.jsonl draft -> id).
+
+* **Chains:** Harry Styles album 4343 -> MSG 4365 -> Melbourne 4366 -> Glendale 4367 -> Wembley 4368;
+  Bruno Mars album 4344 -> existing SoFi pin 3506 (re-threaded) -> Nagoya 4361 -> Goyang 4362; Metallica
+  Sphere opener 3445 -> close 4369 -> Vancouver 4370 -> Salt Lake City 4371; Oasis 4372-4374; Celine Dion
+  Paris 4363-4364; Grammys 4345 -> nominations 4346 -> existing 1962 (re-threaded, @OddsDesk); Super Bowl
+  LX halftime 4375 -> existing 1963; Eurovision 2026 win 4379 -> existing 2380 (Burgas 2027); Coachella,
+  Glastonbury and Primavera editions; Spotify Q2 -> Q3 (22 Oct); DOJ v. Live Nation settlement -> verdict.
+* **Learned - Ticketmaster's artist-page times are often gate times.** Harry Styles' official Seated
+  widget gave 19:00 where Ticketmaster gave 17:00 (stadiums) or 20:00 (MSG), and Knebworth's 14:00 is
+  plainly gates. The recipe's Ticketmaster time was kept; a venue's own event page (BC Place) is better.
+* **Learned - the music IR sites are bot-blocked** (investors.spotify.com, businesswire.com 403; UMG's IR
+  is script-only; brits.co.uk, eurovision.tv, ebu.ch, metallica.com, brunomars.com 403). Cite SEC 6-K/8-K
+  exhibits, Nasdaq's copy of the wire, or the organiser quoted by Official Charts/Eurovoix instead.
+  grammy.com press paths 404 but the /news/ copies work; CourtListener's docket HTML 403s, its API works.
+* **Learned - a lawsuit about AI music has no official video**: every YouTube hit on UMG v. DistroKid
+  (4389) is creator commentary, so that pin carries one image.
+* **Learned - prod adds podcast references on create** (4344, 4357, 4359, 4400 gained Apple Podcasts
+  episodes), so a read-back reference count can exceed the draft's.
+* **Open:** retitle the VMAs pin (4342) with winners after 27 Sep; UMG/WMG/Live Nation/Sphere/Tencent
+  Music Q3 dates unannounced; Coachella 2027 and Primavera 2027 lineups not out; the Live Nation Tunney Act
+  review and post-trial motions have no date yet.
