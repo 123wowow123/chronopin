@@ -4,6 +4,7 @@ import _ from 'lodash';
 import * as db from '../db';
 import type { Row } from '../db';
 import { handleValidateReg, mapToUserWhenEmpty } from '../util/mapper';
+import { wordStartPattern } from '../util/searchQuery';
 
 const pbkdf2Async = promisify(pbkdf2);
 const randomBytesAsync = promisify(randomBytes);
@@ -433,6 +434,26 @@ export class Users {
     ) "r" ON "r"."userId" = "u"."id"
     WHERE "u"."utcDeletedDateTime" IS NULL`);
     return new Map(rows.map(({ id, ...counts }) => [id, counts]));
+  }
+
+  // Pin authors with a word of their handle starting with the typed text (a
+  // leading "@" typed or not), most pins first, for the search suggestions.
+  // Only accounts with live pins: their user: search finds something, and a
+  // reader who never posted is not listed to strangers.
+  static suggest(text: string, limit: number) {
+    const handle = text.trim().replace(/^@+/, '');
+    if (!handle) return Promise.resolve([]);
+    return db.query<{ userName: string; pictureUrl: string | null; count: number }>(
+      `
+      SELECT "User"."userName", "User"."pictureUrl", COUNT(*)::integer AS "count"
+      FROM "User"
+        INNER JOIN "Pin" ON "Pin"."userId" = "User"."id" AND "Pin"."utcDeletedDateTime" IS NULL
+      WHERE "User"."utcDeletedDateTime" IS NULL AND "User"."userName" ~* $1
+      GROUP BY "User"."id"
+      ORDER BY 3 DESC, 1
+      LIMIT $2`,
+      [wordStartPattern(handle), limit],
+    );
   }
 
   static async getAll(properties: string[]): Promise<User[]> {

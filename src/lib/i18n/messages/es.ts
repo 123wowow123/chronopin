@@ -76,6 +76,7 @@ const es: Messages = {
     watchedOffTitle: 'Mostrar solo los pines que sigues',
     groupCategories: 'Categorías',
     groupCompanies: 'Empresas',
+    groupAccounts: 'Cuentas',
     groupTags: 'Etiquetas',
     groupPins: 'Pines',
     fields: {

@@ -76,6 +76,7 @@ const ko: Messages = {
     watchedOffTitle: '관심 핀만 표시',
     groupCategories: '카테고리',
     groupCompanies: '기업',
+    groupAccounts: '계정',
     groupTags: '태그',
     groupPins: '핀',
     fields: {

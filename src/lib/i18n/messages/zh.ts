@@ -77,6 +77,7 @@ const zh: Messages = {
     watchedOffTitle: '仅显示你关注的图钉',
     groupCategories: '分类',
     groupCompanies: '公司',
+    groupAccounts: '账号',
     groupTags: '标签',
     groupPins: '图钉',
     fields: {

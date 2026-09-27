@@ -76,6 +76,7 @@ const ja: Messages = {
     watchedOffTitle: 'ウォッチ中のピンのみ表示',
     groupCategories: 'カテゴリ',
     groupCompanies: '企業',
+    groupAccounts: 'アカウント',
     groupTags: 'タグ',
     groupPins: 'ピン',
     fields: {

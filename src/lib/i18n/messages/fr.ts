@@ -76,6 +76,7 @@ const fr: Messages = {
     watchedOffTitle: 'Afficher seulement les épingles que vous suivez',
     groupCategories: 'Catégories',
     groupCompanies: 'Entreprises',
+    groupAccounts: 'Comptes',
     groupTags: 'Tags',
     groupPins: 'Épingles',
     fields: {

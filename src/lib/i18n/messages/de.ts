@@ -76,6 +76,7 @@ const de: Messages = {
     watchedOffTitle: 'Nur Pins zeigen, die du beobachtest',
     groupCategories: 'Kategorien',
     groupCompanies: 'Unternehmen',
+    groupAccounts: 'Konten',
     groupTags: 'Tags',
     groupPins: 'Pins',
     fields: {

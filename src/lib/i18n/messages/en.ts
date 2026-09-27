@@ -77,6 +77,7 @@ const en = {
     watchedOffTitle: 'Show only pins you watch',
     groupCategories: 'Categories',
     groupCompanies: 'Companies',
+    groupAccounts: 'Accounts',
     groupTags: 'Tags',
     groupPins: 'Pins',
     fields: {
