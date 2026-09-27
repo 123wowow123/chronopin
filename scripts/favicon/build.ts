@@ -1,6 +1,7 @@
 // Renders the header logo into src/app/favicon.ico (16/32/48px PNG frames),
-// which the App Router serves automatically, and into the PNG the account
-// emails carry inline (src/server/emailLogo.ts: mail clients show no SVG). It
+// which the App Router serves automatically, into public/apple-touch-icon.png
+// (what an iPhone shows for a saved or shared link), and into the PNG the
+// account emails carry inline (src/server/emailLogo.ts: mail clients show no SVG). It
 // renders the LogoMark component itself, so neither can drift from the logo;
 // rerun after changing it.
 //
@@ -53,6 +54,18 @@ const pngs = await Promise.all(
 
 writeFileSync(resolve(APP, 'favicon.ico'), ico(pngs));
 console.log(`Wrote favicon.ico (${ICO_SIZES.join('/')}px) to ${APP}`);
+
+// iOS wants 180px, square and opaque (it fills transparency with black), so
+// the logo sits on the dark page colour with a margin.
+const TOUCH_SIZE = 180;
+const TOUCH_LOGO = 128;
+const touchLogo = await sharp(Buffer.from(svg), { density: ((72 * TOUCH_LOGO) / 31.2) * 4 }).resize(TOUCH_LOGO, TOUCH_LOGO).png().toBuffer();
+const touch = await sharp({ create: { width: TOUCH_SIZE, height: TOUCH_SIZE, channels: 4, background: '#111111' } })
+  .composite([{ input: touchLogo, gravity: 'centre' }])
+  .png()
+  .toBuffer();
+writeFileSync(resolve(APP, '../../public/apple-touch-icon.png'), touch);
+console.log(`Wrote the ${TOUCH_SIZE}px apple-touch-icon.png to public/`);
 
 // Shown at 48px; drawn at twice that for high-density screens.
 const EMAIL_LOGO_SIZE = 96;

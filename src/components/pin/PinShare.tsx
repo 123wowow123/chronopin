@@ -18,9 +18,6 @@ type Target = {
   href: (item: ShareItem) => string;
   needsUrl?: boolean;
   newTab?: boolean;
-  // Handed to the device's share sheet instead of a link (an app with no web
-  // address of its own), so only where there is one, and only for an address.
-  sheet?: boolean;
 };
 
 const q = encodeURIComponent;
@@ -119,20 +116,6 @@ function targets(t: ReturnType<typeof useT>): Target[] {
       ),
       href: (item) => `https://www.linkedin.com/sharing/share-offsite/?url=${q(item.url!)}`,
     },
-    {
-      // Tesla's app takes a destination from the phone's share sheet (Share
-      // > Tesla); there is no link that sends one to the car.
-      key: 'tesla',
-      label: 'Tesla',
-      sheet: true,
-      icon: (
-        <Brand bg="#E82127">
-          <path d="M12 21 9.6 6.3c-1.5.1-3 .4-4.4 1l-.5-.9C6.8 5.6 9 5.2 10.9 5.2L12 6.5l1.1-1.3c1.9 0 4.1.4 6.2 1.2l-.5.9c-1.4-.6-2.9-.9-4.4-1z" />
-          <path d="M12 4.3c2.2 0 4.6.4 6.9 1.4l.6-.9C17 3.6 14.3 3 12 3s-5 .6-7.5 1.8l.6.9c2.3-1 4.7-1.4 6.9-1.4z" />
-        </Brand>
-      ),
-      href: (item) => item.text,
-    },
     { key: 'email', label: t('share.email'), icon: <Plain name="mail" />, href: (item) => `mailto:?subject=${q(item.text)}&body=${q(line(item))}` },
   ];
 }
@@ -165,14 +148,13 @@ export function ShareTiles({ item, close }: { item: () => ShareItem; close: (ref
   const t = useT();
   const [copied, setCopied] = useState(false);
   const hasUrl = item().url != null;
-  const canSheet = typeof navigator.share === 'function';
   const track = (method: string, it: ShareItem) => trackEvent('share', { method, content_type: it.contentType, item_id: String(it.itemId) });
 
   const tile = 'flex flex-col items-center gap-1 rounded-lg px-1 py-2 text-xs font-medium text-muted hover:bg-ink/[0.07] hover:text-ink focus-visible:bg-ink/[0.07] focus-visible:outline-none';
   return (
     <div className="grid grid-cols-4 gap-0.5">
       {targets(t)
-        .filter((target) => (hasUrl || !target.needsUrl) && (!target.sheet || (!hasUrl && canSheet)))
+        .filter((target) => hasUrl || !target.needsUrl)
         .map((target) => (
           <button
             key={target.key}
@@ -183,9 +165,7 @@ export function ShareTiles({ item, close }: { item: () => ShareItem; close: (ref
               const it = item();
               const href = target.href(it);
               track(target.key, it);
-              // Cancelling the sheet rejects; nothing to do then.
-              if (target.sheet) navigator.share({ text: href }).catch(() => {});
-              else if (target.newTab) window.open(href, '_blank', 'noopener,noreferrer');
+              if (target.newTab) window.open(href, '_blank', 'noopener,noreferrer');
               else window.location.href = href;
               close(true);
             }}
@@ -228,7 +208,7 @@ export function AddressShare({ pinId, address }: { pinId: number; address: strin
     return true;
   };
   return (
-    <PopMenu label={t('share.address')} icon="pin" align="start" wide instead={toSheet} buttonClassName="-m-1 size-6" iconClassName="size-4">
+    <PopMenu label={t('share.address')} icon="pin" accent align="start" wide instead={toSheet} buttonClassName="-m-1 size-7" iconClassName="size-4">
       {(close) => (
         <>
           <p className="px-3 pt-1.5 pb-1 text-sm font-semibold text-ink">{t('share.address')}</p>

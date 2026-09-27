@@ -4,9 +4,9 @@
 // front to back. The delays are inline because the `animate-hop` shorthand
 // would reset a class-set animation-delay. The favicon is rendered from this
 // component: rerun `npm run favicon:build` after changing it.
-const PIN = 'M16 31c-1.1 0-11-9.3-11-19a11 11 0 0 1 22 0c0 9.7-9.9 19-11 19zM20.5 12a4.5 4.5 0 1 0-9 0 4.5 4.5 0 0 0 9 0z';
+export const PIN = 'M16 31c-1.1 0-11-9.3-11-19a11 11 0 0 1 22 0c0 9.7-9.9 19-11 19zM20.5 12a4.5 4.5 0 1 0-9 0 4.5 4.5 0 0 0 9 0z';
 
-const PINS = [
+export const PINS = [
   { fill: '#fde047', tip: [5.5, 17.5], scale: 0.44, delay: 560 },
   { fill: '#fb923c', tip: [12.5, 24], scale: 0.62, delay: 280 },
   { fill: '#f43f5e', tip: [21.5, 31.5], scale: 0.82, delay: 0 },

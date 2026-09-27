@@ -55,6 +55,10 @@ export async function generateMetadata(): Promise<Metadata> {
       description,
       url: links.canonical,
       locale: INTL_LOCALES[t.locale].replace('-', '_'),
+      // The site's card, for a page with no picture of its own (a pin page
+      // sets its own): without one, a link to the home page or a search
+      // previews in Messages as a bare domain.
+      images: [{ url: '/og/site', width: 1200, height: 630, alt: siteName }],
     },
     twitter: { card: 'summary_large_image' },
     robots: { index: true, follow: true },

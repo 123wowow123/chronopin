@@ -75,6 +75,7 @@ export function PopMenu({
   label,
   wide = false,
   icon = 'dots-vertical',
+  accent = false,
   align = 'end',
   buttonClassName = 'size-9',
   iconClassName = 'size-5',
@@ -91,6 +92,9 @@ export function PopMenu({
   // The button's icon, the three dots unless the menu is one action's (the
   // address's map pin, sharing it).
   icon?: IconName;
+  // In the link colour, for a button that reads as an action of its own
+  // rather than a quiet "more" (the address's map pin).
+  accent?: boolean;
   align?: 'start' | 'end';
   buttonClassName?: string;
   iconClassName?: string;
@@ -186,8 +190,10 @@ export function PopMenu({
           if (instead?.()) return;
           setOpen(placeFor(buttonRef.current!.getBoundingClientRect(), align));
         }}
-        className={`inline-flex shrink-0 items-center justify-center rounded-full text-muted transition-colors hover:bg-raised hover:text-ink focus-visible:bg-raised ${
-          open ? 'bg-raised text-ink' : ''
+        className={`inline-flex shrink-0 items-center justify-center rounded-full transition-colors ${
+          accent
+            ? `text-link hover:bg-link/15 focus-visible:bg-link/15 active:bg-link/25 ${open ? 'bg-link/15' : ''}`
+            : `text-muted hover:bg-raised hover:text-ink focus-visible:bg-raised active:bg-raised-2 ${open ? 'bg-raised text-ink' : ''}`
         } ${buttonClassName}`}
       >
         <Icon name={icon} className={iconClassName} />
