@@ -1181,5 +1181,31 @@
     "verdict": null,
     "verdictReasoning": null,
     "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 4291,
+    "otherPinId": 4292,
+    "reason": "similar",
+    "score": 0.8056835,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-27T00:37:46.234Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
+  },
+  {
+    "pinId": 4300,
+    "otherPinId": 4301,
+    "reason": "similar",
+    "score": 0.8126031,
+    "status": "suggested",
+    "decidedByUserId": null,
+    "utcCreatedDateTime": "2026-09-27T00:40:53.656Z",
+    "utcDecidedDateTime": null,
+    "verdict": null,
+    "verdictReasoning": null,
+    "utcVerifiedDateTime": null
   }
 ]

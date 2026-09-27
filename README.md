@@ -268,16 +268,7 @@ https://developer.ticketmaster.com/partners/distribution-partners/affiliate-sign
 
 sync prod db to local and backup json
 
-- pin fashion news events
-
-- pin sneakers news events
+- pin fashion news events on prod
 
 
-
-- need share pin feature via text message
-
-- send address to tesla or phone
-
-
-- send notification on time with watched item
 
