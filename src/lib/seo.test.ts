@@ -78,6 +78,24 @@ describe('pinJsonLd', () => {
     expect((bare as { about: Record<string, unknown> }).about).not.toHaveProperty('offers');
   });
 
+  it('gives an event without a picture its share card as the image', () => {
+    const [article] = pinJsonLd(pin({ ...place, categories: ['Conference'] }));
+    expect((article as { about: Record<string, unknown> }).about.image).toEqual([expect.stringMatching(/\/og\/pin\/1$/)]);
+    expect((article as Record<string, unknown>).image).toEqual([expect.stringMatching(/\/og\/pin\/1$/)]);
+  });
+
+  it('marks an event rescheduled only when it knows the day first promised', () => {
+    const [moved] = pinJsonLd(pin({ ...place, categories: ['Festival'], dateConfidence: 'delayed', originalStartDate: '2027-06-01' }));
+    expect((moved as { about: Record<string, unknown> }).about).toMatchObject({
+      eventStatus: 'https://schema.org/EventRescheduled',
+      previousStartDate: '2027-06-01',
+    });
+    const [unknown] = pinJsonLd(pin({ ...place, categories: ['Festival'], dateConfidence: 'delayed' }));
+    const event = (unknown as { about: Record<string, unknown> }).about;
+    expect(event.eventStatus).toBe('https://schema.org/EventScheduled');
+    expect(event).not.toHaveProperty('previousStartDate');
+  });
+
   it('marks no event for a pin people cannot attend, and no critic reviews', () => {
     const [article] = pinJsonLd(
       pin({ ...place, categories: ['Anime'], ratings: [{ source: 'MyAnimeList', score: 8.5, scoreMax: 10 }] as PinJson['ratings'] }),

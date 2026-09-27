@@ -3,6 +3,7 @@
 import type { Metadata } from 'next';
 import { blobUrl, siteDescription, siteName, siteUrl } from './appConfig';
 import { slugify } from './categories';
+import { pinDelay } from './delay';
 import type { PinEventInfoJson } from './eventInfo';
 import { plainText } from './format';
 import { DEFAULT_LOCALE, INTL_LOCALES, languageAlternates, localizePath, type Locale } from './i18n/config';
@@ -139,7 +140,9 @@ export function pinJsonLd(
 ) {
   const url = absoluteUrl(localizePath(pinPath(pin), locale));
   const offers = eventOffers(pin, eventInfo, url);
-  const image = pinImage(pin);
+  // The pin's own image, or its generated share card: Google wants an image
+  // on every Event and Article.
+  const imageUrl = pinImage(pin)?.url ?? absoluteUrl(`/og/pin/${pin.id}`);
   const description = pinDescription(pin);
   const organizer = pin.company
     ? {
@@ -157,6 +160,9 @@ export function pinJsonLd(
     : pin.allDay
       ? eventDate(pin.utcStartDateTime, true)
       : undefined;
+  // A rescheduled event must say when it was first due (previousStartDate);
+  // a delay with no known original date is simply scheduled for its new one.
+  const delay = pinDelay(pin);
   const event = isAttendableEvent(pin)
     ? {
         '@type': 'Event',
@@ -165,8 +171,9 @@ export function pinJsonLd(
         url,
         startDate: eventDate(pin.utcStartDateTime, pin.allDay),
         ...(endDate ? { endDate } : {}),
-        eventStatus:
-          pin.dateConfidence === 'delayed' ? 'https://schema.org/EventRescheduled' : 'https://schema.org/EventScheduled',
+        ...(delay
+          ? { eventStatus: 'https://schema.org/EventRescheduled', previousStartDate: delay.from }
+          : { eventStatus: 'https://schema.org/EventScheduled' }),
         eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
         location: {
           '@type': 'Place',
@@ -176,7 +183,7 @@ export function pinJsonLd(
             ? { geo: { '@type': 'GeoCoordinates', latitude: pin.latitude, longitude: pin.longitude } }
             : {}),
         },
-        ...(image ? { image: [image.url] } : {}),
+        image: [imageUrl],
         ...(organizer ? { organizer } : {}),
         ...(eventInfo?.performers.length
           ? {
@@ -195,7 +202,7 @@ export function pinJsonLd(
     inLanguage: INTL_LOCALES[locale],
     headline: pin.title.slice(0, 110),
     description,
-    ...(image ? { image: [image.url] } : {}),
+    image: [imageUrl],
     datePublished: pin.utcCreatedDateTime,
     dateModified: pin.utcUpdatedDateTime || pin.utcCreatedDateTime,
     ...(pin.categories?.length ? { articleSection: pin.categories[0] } : {}),
