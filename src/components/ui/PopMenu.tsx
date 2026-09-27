@@ -75,6 +75,7 @@ export function PopMenu({
   label,
   wide = false,
   icon = 'dots-vertical',
+  dots = false,
   accent = false,
   align = 'end',
   buttonClassName = 'size-9',
@@ -92,6 +93,8 @@ export function PopMenu({
   // The button's icon, the three dots unless the menu is one action's (the
   // address's map pin, sharing it).
   icon?: IconName;
+  // A small three-dot mark after a named icon, so it still reads as a menu.
+  dots?: boolean;
   // In the link colour, for a button that reads as an action of its own
   // rather than a quiet "more" (the address's map pin).
   accent?: boolean;
@@ -197,6 +200,7 @@ export function PopMenu({
         } ${buttonClassName}`}
       >
         <Icon name={icon} className={iconClassName} />
+        {dots && icon !== 'dots-vertical' ? <Icon name="dots-vertical" className="-ml-1 size-3.5" /> : null}
       </button>
       {open
         ? createPortal(
