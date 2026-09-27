@@ -5,6 +5,7 @@ import { usePathname, useRouter } from '@/lib/client/navigation';
 import { authHref, type AuthPage } from '@/lib/authRedirect';
 import { savePendingAction, type PendingAction } from '@/lib/client/pendingAction';
 import { authHrefHere, logoutHrefHere } from '@/lib/client/returnSpot';
+import { forgetAlerts } from '@/lib/client/browserAlerts';
 
 // A Log in or Sign up link that comes back to this page, and on the timeline
 // to the place scrolled to, which is only known at the click.
@@ -51,7 +52,10 @@ export function LogoutLink({ className, children }: { className?: string; childr
       onClick={(event) => {
         if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         event.preventDefault();
-        window.location.assign(logoutHrefHere());
+        // Taken now, while the page is still where it was; the browser stops
+        // getting this user's watched-pin alerts before the session ends.
+        const href = logoutHrefHere();
+        void forgetAlerts().finally(() => window.location.assign(href));
       }}
     >
       {children}

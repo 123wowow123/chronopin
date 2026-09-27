@@ -61,6 +61,13 @@ export const PUT = route(async (request: NextRequest) => {
     user.showCardStockPrices = body.showCardStockPrices;
   }
 
+  if ('remindBeforeStart' in body) {
+    if (typeof body.remindBeforeStart !== 'boolean') {
+      throw new HttpError(400, '', { message: 'remindBeforeStart must be true or false' });
+    }
+    user.remindBeforeStart = body.remindBeforeStart;
+  }
+
   // The default location (0066). null clears it, and stops the device from
   // setting it again straight away - clearing it is saying not to keep one.
   // A point from the device is named here, by the geocoder; a point picked

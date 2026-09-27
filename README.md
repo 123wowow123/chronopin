@@ -251,6 +251,12 @@ pin can have user uploadable pictures in comments.
 
 - add Nike affiliate program
 
+- ticketmaster Affiliate
+https://developer.ticketmaster.com/partners/distribution-partners/affiliate-sign-up/
+
+
+- post site description on many wiki's an link back
+
 - upgrade user to promoter and sell tickets to local events like eventbrite. will have management portal that will have dashboard to sales and impressions, and pin click, and purchases, etc. integrade with payment company - stripe 
 
 
@@ -260,21 +266,18 @@ pin can have user uploadable pictures in comments.
 - set up google/facebook/apple login flow
 - Activated Google Analytics / Facebook upgrade to non development mode
 
-
-- Use this session ai to do this job: translate all pins to all supported language and backup json
+sync prod db to local and backup json
 
 - pin fashion news events
 
 - pin sneakers news events
 
-- music events
 
-- post site description on many wiki's an link back
 
 - need share pin feature via text message
 
 - send address to tesla or phone
 
-- add korean translation
 
 - send notification on time with watched item
+

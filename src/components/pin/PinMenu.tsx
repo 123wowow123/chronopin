@@ -3,23 +3,27 @@
 import { useCallback, useState } from 'react';
 import { PopMenu, PopMenuDivider, PopMenuItem } from '@/components/ui/PopMenu';
 import { blockCompany, blockUser, unblockCompany, unblockUser, useBlocks } from '@/lib/client/blocks';
-import { useT } from '@/lib/client/i18n';
+import { useLocale, useT } from '@/lib/client/i18n';
 import { markNotInterested, undoNotInterested, useNotInterested } from '@/lib/client/notInterested';
 import { useSession } from '@/lib/client/session';
+import { localizePath } from '@/lib/i18n/config';
+import { pinPath } from '@/lib/seo';
 import type { PinJson } from '@/lib/types';
+import { ShareTiles } from './PinShare';
 
-export type MenuPin = Pick<PinJson, 'id' | 'user' | 'companyId' | 'company' | 'companyLogoUrl'>;
+export type MenuPin = Pick<PinJson, 'id' | 'title' | 'originalTitle' | 'user' | 'companyId' | 'company' | 'companyLogoUrl'>;
 
-type View = 'actions' | 'blockUser' | 'blockCompany' | 'failed';
+type View = 'actions' | 'share' | 'blockUser' | 'blockCompany' | 'failed';
 
 // A pin's other actions, behind a three-dot menu on its card and its page, as
 // Facebook's post menu has them - an icon, the action, and what it does:
+// - Share: its link by text message, email or to a social site (PinShare)
 // - Not interested (0077): the pin leaves the reader's timeline, search and
 //   "More like this" (or Show this pin again, once it has)
 // - Block its author (0076), asked first
 // - Block its company (0078), asked first
-// Once blocked (seen on the pin's own page), the last two offer Unblock. Only
-// for a signed-in reader, as everything in it needs an account.
+// Once blocked (seen on the pin's own page), the last two offer Unblock. A
+// signed-out reader gets Share alone, as the rest needs an account.
 export function PinMenu({
   pin,
   onPage = false,
@@ -33,6 +37,7 @@ export function PinMenu({
   iconClassName?: string;
 }) {
   const t = useT();
+  const locale = useLocale();
   const { user, isLoggedIn } = useSession();
   const notInterested = useNotInterested();
   const blocks = useBlocks();
@@ -45,7 +50,6 @@ export function PinMenu({
   const authorBlocked = !!author && blocks.ids.has(author.id);
   const companyBlocked = !!company && blocks.companyIds.has(company.id);
 
-  if (!isLoggedIn) return null;
   return (
     <PopMenu label={onPage ? t('pin.actions') : undefined} wide buttonClassName={buttonClassName} iconClassName={iconClassName} onClose={reset}>
       {(close) => {
@@ -62,6 +66,17 @@ export function PinMenu({
             <p role="status" className="px-3 py-2 text-sm text-danger">
               {t('pin.notInterestedFailed')}
             </p>
+          );
+        }
+        if (view === 'share') {
+          return (
+            <>
+              <p className="px-3 pt-1.5 pb-1 text-sm font-semibold text-ink">{t('share.pin')}</p>
+              <ShareTiles
+                item={() => ({ text: pin.title, url: window.location.origin + localizePath(pinPath(pin), locale), contentType: 'pin', itemId: pin.id })}
+                close={close}
+              />
+            </>
           );
         }
         if (view === 'blockUser' && author) {
@@ -84,20 +99,22 @@ export function PinMenu({
         }
         return (
           <>
-            {marked ? (
+            <PopMenuItem icon="share" title={t('share.pin')} hint={t('share.pinHint')} onClick={() => setView('share')} />
+            {isLoggedIn ? <PopMenuDivider /> : null}
+            {!isLoggedIn ? null : marked ? (
               <PopMenuItem icon="eye" title={t('pin.showAgain')} hint={t('pin.showAgainHint')} onClick={() => run(() => undoNotInterested(pin.id))} />
             ) : (
               <PopMenuItem icon="eye-off" title={t('pin.notInterested')} hint={t('pin.notInterestedHint')} onClick={() => run(() => markNotInterested(pin.id))} />
             )}
-            {author || company ? <PopMenuDivider /> : null}
-            {author ? (
+            {isLoggedIn && (author || company) ? <PopMenuDivider /> : null}
+            {!isLoggedIn ? null : author ? (
               authorBlocked ? (
                 <PopMenuItem icon="user-x" title={t('pin.unblockName', { name: author.userName })} onClick={() => run(() => unblockUser(author.id))} />
               ) : (
                 <PopMenuItem icon="user-x" title={t('pin.blockName', { name: author.userName })} hint={t('pin.blockUserHint')} onClick={() => setView('blockUser')} />
               )
             ) : null}
-            {company ? (
+            {isLoggedIn && company ? (
               companyBlocked ? (
                 <PopMenuItem icon="ban" title={t('pin.unblockName', { name: company.name })} onClick={() => run(() => unblockCompany(company.id))} />
               ) : (

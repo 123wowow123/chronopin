@@ -7,13 +7,16 @@
 //   odds            { pinId, markets } for the pins the page says it shows
 //   stock           a StockQuote for each ticker of the pins it asked quotes for
 //   notifications   { unreadCount } for the signed-in viewer's own connections
+//   alert           a watched pin starting now or soon (a WatchAlert), for the
+//                   signed-in viewer's own connections to show as a browser
+//                   notification
 //
 // Like the events it relays this lives in-process, which holds while the app
 // runs as a single replica; several would need Postgres LISTEN/NOTIFY.
 
 import { randomUUID } from 'node:crypto';
 import { pinMarketRefs } from '@/lib/predictionMarkets';
-import { PIN_EVENTS, onNotificationsChanged, onPinEvent } from './events';
+import { PIN_EVENTS, onNotificationsChanged, onPinEvent, onWatchAlert } from './events';
 import Notification from './model/notification';
 import PinTicker from './model/pinTicker';
 import { subscribeQuote } from './stocks';
@@ -111,6 +114,11 @@ export function openLiveConnection({ userId, timeZone, send }: { userId: number 
   }
   if (userId != null) {
     conn.stops.push(onNotificationsChanged((changed) => changed === userId && queueUnreadCount(conn)));
+    conn.stops.push(
+      onWatchAlert(({ userId: to, ...alert }) => {
+        if (to === userId) send('alert', alert);
+      }),
+    );
     // The count as of connecting, after any 'today' notifications due.
     void notifyToday(userId, timeZone).finally(() => queueUnreadCount(conn));
     startTodayChecks();

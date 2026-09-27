@@ -4,6 +4,7 @@ import { useRouter } from '@/lib/client/navigation';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
+import { enableAlerts } from '@/lib/client/browserAlerts';
 import { useCountBump } from '@/lib/client/countBump';
 import { onLive } from '@/lib/client/liveFeed';
 import { useSession } from '@/lib/client/session';
@@ -88,6 +89,10 @@ export function WatchButton({
   );
 
   async function watch(next: boolean) {
+    // Watching is when a browser notification for the pin starting starts to
+    // matter, and this click is what lets the page ask for one. Asked before
+    // anything is awaited, so the browser still counts it as the click's.
+    if (next) void enableAlerts();
     acted.current = true;
     setBusy(true);
     setChosen(next);

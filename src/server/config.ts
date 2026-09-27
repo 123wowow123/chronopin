@@ -98,6 +98,16 @@ export const config = {
     from: env('EMAIL_FROM') || 'Chronopin <noreply@chronopin.com>',
   },
 
+  // Web Push (VAPID) keys, for browser notifications about watched pins that
+  // reach a browser with the site closed (src/server/push.ts). Made once with
+  // `npx web-push generate-vapid-keys`; changing them strands every stored
+  // subscription. Without them alerts reach only open tabs, over the live feed.
+  webPush: {
+    publicKey: env('VAPID_PUBLIC_KEY') || '',
+    privateKey: env('VAPID_PRIVATE_KEY') || '',
+    subject: env('VAPID_SUBJECT') || 'mailto:noreply@chronopin.com',
+  },
+
   // Google Places API (New), for a place's own rating, review count, review
   // excerpts and opening hours. Billed per request and per field, so the
   // lookup is cached (src/server/places.ts) and only a pin with a resolved

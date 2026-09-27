@@ -59,22 +59,27 @@ export function PopMenuDivider() {
 // Room the menu wants under its button before it opens over it instead.
 const ROOM_BELOW = 260;
 
-type Place = { top?: number; bottom?: number; right: number };
+type Place = { top?: number; bottom?: number; right?: number; left?: number };
 
 // Where the menu hangs for a button at `box`, measured from the window's
-// edges; `above` keeps the side it first opened on while it follows.
-function placeFor(box: DOMRect, above?: boolean): Place {
-  const right = window.innerWidth - box.right;
+// edges: its right edge under the button's (`end`), or its left edge
+// (`start`, for a button at the left of the page); `above` keeps the side it
+// first opened on while it follows.
+function placeFor(box: DOMRect, align: 'start' | 'end', above?: boolean): Place {
+  const side = align === 'start' ? { left: box.left } : { right: window.innerWidth - box.right };
   const up = above ?? window.innerHeight - box.bottom < ROOM_BELOW;
-  return up ? { bottom: window.innerHeight - box.top + 10, right } : { top: box.bottom + 10, right };
+  return up ? { bottom: window.innerHeight - box.top + 10, ...side } : { top: box.bottom + 10, ...side };
 }
 
 export function PopMenu({
   label,
   wide = false,
+  icon = 'dots-vertical',
+  align = 'end',
   buttonClassName = 'size-9',
   iconClassName = 'size-5',
   onClose,
+  instead,
   children,
 }: {
   // The button's name; "More actions" when there is only one on the page's
@@ -83,9 +88,16 @@ export function PopMenu({
   // Wide enough for items with hints, or a sentence (a confirm), not just a
   // word or two.
   wide?: boolean;
+  // The button's icon, the three dots unless the menu is one action's (the
+  // address's map pin, sharing it).
+  icon?: IconName;
+  align?: 'start' | 'end';
   buttonClassName?: string;
   iconClassName?: string;
   onClose?: () => void;
+  // Run on the button's click in place of opening the menu, when it returns
+  // true (the address's share goes straight to a phone's own share sheet).
+  instead?: () => boolean;
   children: (close: (refocus?: boolean) => void) => ReactNode;
 }) {
   const t = useT();
@@ -137,7 +149,7 @@ export function PopMenu({
         if (!box || box.bottom < 0 || box.top > window.innerHeight) return close(false);
         // Only moves an open menu: a frame that lands after close() must not
         // open it again.
-        setOpen((was) => (was ? placeFor(box, above) : was));
+        setOpen((was) => (was ? placeFor(box, align, above) : was));
       });
     };
     document.addEventListener('mousedown', outside);
@@ -153,7 +165,7 @@ export function PopMenu({
     };
     // Only whether it is open matters here; its place changes as it follows.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [!!open, close]);
+  }, [!!open, close, align]);
 
   const above = open?.bottom != null;
   return (
@@ -171,13 +183,14 @@ export function PopMenu({
           event.preventDefault();
           event.stopPropagation();
           if (open) return close(false);
-          setOpen(placeFor(buttonRef.current!.getBoundingClientRect()));
+          if (instead?.()) return;
+          setOpen(placeFor(buttonRef.current!.getBoundingClientRect(), align));
         }}
         className={`inline-flex shrink-0 items-center justify-center rounded-full text-muted transition-colors hover:bg-raised hover:text-ink focus-visible:bg-raised ${
           open ? 'bg-raised text-ink' : ''
         } ${buttonClassName}`}
       >
-        <Icon name="dots-vertical" className={iconClassName} />
+        <Icon name={icon} className={iconClassName} />
       </button>
       {open
         ? createPortal(
@@ -185,12 +198,17 @@ export function PopMenu({
               ref={menuRef}
               id={menuId}
               role="menu"
-              style={{ top: open.top, bottom: open.bottom, right: Math.max(8, open.right) }}
+              style={{
+                top: open.top,
+                bottom: open.bottom,
+                right: open.right != null ? Math.max(8, open.right) : undefined,
+                left: open.left != null ? Math.max(8, open.left) : undefined,
+              }}
               className={`fixed z-50 ${wide ? 'w-80' : 'w-52'} max-w-[calc(100vw-1rem)] rounded-xl border border-ink/10 bg-popover p-1.5 text-ink shadow-2xl shadow-shade/40`}
             >
               <span
                 aria-hidden
-                className={`absolute right-3 size-3 rotate-45 border-ink/10 bg-popover ${above ? '-bottom-1.5 border-r border-b' : '-top-1.5 border-t border-l'}`}
+                className={`absolute ${open.left != null ? 'left-3' : 'right-3'} size-3 rotate-45 border-ink/10 bg-popover ${above ? '-bottom-1.5 border-r border-b' : '-top-1.5 border-t border-l'}`}
               />
               {children(close)}
             </div>,

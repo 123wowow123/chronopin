@@ -8,6 +8,7 @@ import { UserAvatar } from '@/components/ui/UserAvatar';
 import { useSession } from '@/lib/client/session';
 import { AuthLink, LogoutLink } from './AuthLink';
 import { NotificationBell, WeatherButton } from './NotificationBell';
+import { WatchAlerts } from './WatchAlerts';
 import { useT } from '@/lib/client/i18n';
 import type { MessageKey } from '@/lib/i18n/translate';
 
@@ -175,6 +176,7 @@ export function NavMenu() {
       </nav>
 
       {user ? <NotificationBell className="hidden lg:block" /> : null}
+      {user ? <WatchAlerts /> : null}
 
       {user ? (
         <div ref={accountRef} className="relative hidden lg:block">

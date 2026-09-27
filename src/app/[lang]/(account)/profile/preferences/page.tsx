@@ -7,6 +7,7 @@ import { LanguageSetting } from '../LanguageSetting';
 import { PreferencesForm } from '../PreferencesForm';
 import { ProfileTabs } from '../ProfileTabs';
 import { ThemePicker } from '../ThemePicker';
+import { WatchAlertsSetting } from '../WatchAlertsSetting';
 import { getT } from '@/lib/i18n/server';
 import { localesOffered } from '@/server/services/multilingual';
 
@@ -32,6 +33,7 @@ export default async function PreferencesPage() {
         {offered.length ? <LanguageSetting userId={user.id} offered={offered} /> : null}
         <PreferencesForm userId={user.id} initial={user.defaultFilterSpanPreference ?? null} />
         <CardStockPricesToggle userId={user.id} initial={user.showCardStockPrices !== false} />
+        <WatchAlertsSetting userId={user.id} initialRemind={user.remindBeforeStart === true} />
         <DefaultLocationSetting userId={user.id} initial={{ location: userLocation(user), locationFromDevice: user.locationFromDevice !== false }} />
       </div>
     </div>

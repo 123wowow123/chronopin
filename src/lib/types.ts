@@ -343,6 +343,8 @@ export type SessionUser = {
   localePreference?: Locale | null;
   // Off hides the company's stock price on pin cards.
   showCardStockPrices?: boolean;
+  // On adds a browser alert 15 minutes before a watched pin starts.
+  remindBeforeStart?: boolean;
   // The default location (0066): where distances are measured from, the
   // weather is for and the map opens on when the browser gives no position.
   // Null when not set; see src/lib/location.ts.

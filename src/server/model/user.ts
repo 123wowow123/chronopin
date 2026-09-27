@@ -40,6 +40,7 @@ const prop = [
   'themePreference',
   'localePreference',
   'showCardStockPrices',
+  'remindBeforeStart',
   'locationLatitude',
   'locationLongitude',
   'locationName',
@@ -66,6 +67,7 @@ export const pickUserProps = [
   'themePreference',
   'localePreference',
   'showCardStockPrices',
+  'remindBeforeStart',
   'locationLatitude',
   'locationLongitude',
   'locationName',
@@ -112,6 +114,8 @@ export default class User {
   declare themePreference: string | null | undefined;
   declare localePreference: string | null | undefined;
   declare showCardStockPrices: boolean | undefined;
+  // A browser alert 15 minutes before a watched pin starts, too (0084).
+  declare remindBeforeStart: boolean | undefined;
   // The default location (0066): a rounded point and the geocoder's name for
   // it, or all null; see src/lib/location.ts.
   declare locationLatitude: number | null | undefined;
@@ -282,7 +286,7 @@ export default class User {
 const USER_COLUMNS = [
   'id', 'userName', 'firstName', 'lastName', 'birthday', 'phone', 'gender', 'locale', 'facebookId', 'googleId', 'appleId',
   'pictureUrl', 'fbUpdatedTime', 'fbVerified', 'googleVerified', 'about', 'email', 'password',
-  'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices',
+  'role', 'provider', 'salt', 'websiteUrl', 'defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices', 'remindBeforeStart',
   'locationLatitude', 'locationLongitude', 'locationName', 'locationFromDevice', 'emailVerifiedDateTime',
   'utcCreatedDateTime', 'utcUpdatedDateTime',
 ];
@@ -317,7 +321,7 @@ function selectColumn(column: string) {
 }
 
 async function createUser(user: User) {
-  const columns = WRITE_COLUMNS.concat(['defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices', 'emailVerifiedDateTime', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime']);
+  const columns = WRITE_COLUMNS.concat(['defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices', 'remindBeforeStart', 'emailVerifiedDateTime', 'utcCreatedDateTime', 'utcUpdatedDateTime', 'utcDeletedDateTime']);
   const values = WRITE_COLUMNS.map((c) => writeValue(user, c))
     // utcUpdatedDateTime has always been written from utcCreatedDateTime.
     .concat([
@@ -326,6 +330,7 @@ async function createUser(user: User) {
       value(user.localePreference),
       // A boolean with a default: never written as null.
       user.showCardStockPrices !== false,
+      user.remindBeforeStart === true,
       value(user.emailVerifiedDateTime),
       user.utcCreatedDateTime || new Date(),
       value(user.utcCreatedDateTime),
@@ -356,12 +361,13 @@ async function createUser(user: User) {
 async function updateUser(user: User) {
   // Written from whatever the object carries, so every caller has to load the
   // row before updating it or a saved preference is cleared.
-  const columns = WRITE_COLUMNS.concat('defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices');
+  const columns = WRITE_COLUMNS.concat('defaultFilterSpanPreference', 'themePreference', 'localePreference', 'showCardStockPrices', 'remindBeforeStart');
   const values = WRITE_COLUMNS.map((c) => writeValue(user, c)).concat(
     user.defaultFilterSpanPreference || null,
     user.themePreference || null,
     user.localePreference || null,
     user.showCardStockPrices !== false,
+    user.remindBeforeStart === true,
     user.id,
   );
 

@@ -11,6 +11,7 @@ import { refreshLocalWeather, requestLocalWeather, useLocalWeather } from '@/lib
 import { formatLocalWeather, usesImperial } from '@/lib/weather';
 import { timeAgo } from '@/lib/format';
 import { pinPath } from '@/lib/seo';
+import { ALERT_SOON_MINUTES } from '@/lib/alerts';
 import { term } from '@/lib/searchTerms';
 import { useT } from '@/lib/client/i18n';
 import type { Translator } from '@/lib/i18n/translate';
@@ -112,6 +113,8 @@ function PinRowLink({ n, onNavigate, children }: { n: Notification; onNavigate?:
 function reasonOf(n: Notification, t: Translator): { icon: IconName; label: string; href?: string } | null {
   switch (n.type) {
     case 'today':
+    case 'start':
+    case 'soon':
       return { icon: 'eye', label: t('notifications.whyWatch') };
     case 'company':
       return n.companyName
@@ -163,14 +166,15 @@ function useNotificationList() {
   return { items, pending, load, followBack };
 }
 
-// The face at the left of a row: a mark of its own for a pin landing today,
-// the company's logo for one of its pins (its author's avatar would look like
-// the pin came from them), otherwise the actor. A batch wears the number it
-// stands for, so a run of pins is countable straight down the left edge.
+// The face at the left of a row: a mark of its own for a watched pin landing
+// today, starting or about to, the company's logo for one of its pins (its
+// author's avatar would look like the pin came from them), otherwise the actor.
+// A batch wears the number it stands for, so a run of pins is countable
+// straight down the left edge.
 function NotificationFace({ n, onNavigate }: { n: Notification; onNavigate?: () => void }) {
   const handle = n.actor.userName.replace(/^@+/, '');
   const face =
-    n.type === 'today' ? (
+    n.type === 'today' || n.type === 'start' || n.type === 'soon' ? (
       <span aria-hidden className="flex size-8 items-center justify-center rounded-full bg-tag-today/15 text-tag-today">
         <Icon name="target" className="size-4" />
       </span>
@@ -252,6 +256,12 @@ function NotificationItems({
                 ) : n.type === 'today' && n.pinId ? (
                   <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>
                     {t.rich('notifications.today', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
+                  </Link>
+                ) : (n.type === 'start' || n.type === 'soon') && n.pinId ? (
+                  <Link href={pinPath({ id: n.pinId, title: n.pinTitle ?? '' })} className="block text-ink" onClick={onNavigate}>
+                    {n.type === 'start'
+                      ? t.rich('notifications.start', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })
+                      : t.rich('notifications.soon', { minutes: ALERT_SOON_MINUTES, pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
                   </Link>
                 ) : n.type === 'pin' && n.pinId ? (
                   <PinRowLink n={n} onNavigate={onNavigate}>

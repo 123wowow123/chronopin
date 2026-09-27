@@ -118,6 +118,8 @@ const en = {
     companyMany: '<company></company> has <n>{count}</n> new pins',
     pin: '<actor></actor> has a new pin: <pin></pin>',
     pinMany: '<actor></actor> posted <n>{count}</n> new pins',
+    start: '<pin></pin> is starting now',
+    soon: '<pin></pin> starts in {minutes} minutes',
     whyWatch: 'A pin you watch',
     whyCompany: 'You follow {company}',
     whyUser: 'You follow {user}',
@@ -125,6 +127,11 @@ const en = {
     whyYourComment: 'Your comment',
     following: 'Following',
     followBack: 'Follow back',
+  },
+  // Browser notifications about watched pins (services/watchAlerts.ts).
+  alerts: {
+    start: 'Starting now · a pin you watch',
+    soon: { one: 'Starts in {count} minute · a pin you watch', other: 'Starts in {count} minutes · a pin you watch' },
   },
   categories: {
     electronics: 'Electronics',
@@ -282,6 +289,18 @@ const en = {
     views: { one: '{count} view', other: '{count} views' },
     translated: 'Translated automatically from the original',
     originalTitle: 'Original title',
+  },
+  share: {
+    // A pin's menu: its link by text, email or a social site; the address
+    // beside its map shares the address alone.
+    pin: 'Share',
+    pinHint: 'Text it or post it to a social site',
+    address: 'Share address',
+    message: 'Message',
+    email: 'Email',
+    copyLink: 'Copy link',
+    copy: 'Copy',
+    copied: 'Copied',
   },
   references: {
     edit: 'Edit references',
@@ -1076,6 +1095,16 @@ const en = {
     stocksOff: 'Cards no longer show stock prices.',
     stocksLabel: 'Stock prices on pin cards',
     stocksHint: "The company's share price and its move since the start date, beside the company's name. A pin's own page always lists its stocks.",
+    alertsLabel: 'Watched pin alerts',
+    alertsHint: 'A browser notification when a pin you watch starts, even with Chronopin closed.',
+    alertsOn: 'Notifications are on in this browser.',
+    alertsEnable: 'Turn on notifications',
+    alertsBlocked: 'This browser blocks notifications from Chronopin. Allow them in the site settings to get alerts.',
+    alertsUnsupported: "This browser can't show notifications.",
+    remindLabel: 'Also remind me 15 minutes before',
+    remindHint: 'A second notification 15 minutes before a pin you watch starts.',
+    remindOn: "You'll be reminded 15 minutes before.",
+    remindOff: 'No more 15-minute reminders.',
     locationLabel: "Default location",
     locationHint: "Where distances to pins are measured from, the weather in the bell is for, and the map opens, whenever your browser is not sharing its own position.",
     locationNone: "Not set - your time zone’s city is used.",

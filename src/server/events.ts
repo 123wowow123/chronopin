@@ -44,6 +44,22 @@ export function onNotificationsChanged(listener: (userId: number) => void) {
   return () => pinEvents.off(NOTIFICATIONS, listener);
 }
 
+// A watched pin is starting, or about to (services/watchAlerts.ts): the live
+// feed hands it to that user's own open pages, which show it as a browser
+// notification.
+export type WatchAlert = { userId: number; pinId: number; type: 'start' | 'soon'; title: string; body: string; url: string; image: string | null; tag: string };
+
+const WATCH_ALERT = 'watchAlert';
+
+export function emitWatchAlert(alert: WatchAlert) {
+  pinEvents.emit(WATCH_ALERT, alert);
+}
+
+export function onWatchAlert(listener: (alert: WatchAlert) => void) {
+  pinEvents.on(WATCH_ALERT, listener);
+  return () => pinEvents.off(WATCH_ALERT, listener);
+}
+
 if (!g.__chronopinPinListeners) {
   g.__chronopinPinListeners = true;
 

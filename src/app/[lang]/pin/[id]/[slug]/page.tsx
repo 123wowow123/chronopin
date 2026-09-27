@@ -15,6 +15,7 @@ import { FollowButton } from '@/components/pin/FollowButton';
 import { PinAdminLink } from '@/components/pin/PinAdminLink';
 import { PinMenu } from '@/components/pin/PinMenu';
 import { PinRevisitButton } from '@/components/pin/PinRevisitButton';
+import { AddressShare } from '@/components/pin/PinShare';
 import { CardGrid } from '@/components/pin/CardGrid';
 import { PinCard } from '@/components/pin/PinCard';
 import { PinConfidence } from '@/components/pin/PinConfidence';
@@ -123,7 +124,7 @@ async function PinContent({ params }: Pick<Props, 'params'>) {
               <div className="mb-2 flex items-center justify-between gap-3 text-sm">
                 {pin.address ? (
                   <p className="flex min-w-0 items-center gap-1.5 text-muted">
-                    <Icon name="pin" className="size-4 shrink-0" />
+                    <AddressShare pinId={pin.id} address={pin.address} />
                     <PlaceLinks address={pin.address} className="min-w-0" />
                   </p>
                 ) : (
@@ -377,9 +378,9 @@ function PinBody({
           <WatchButton pin={pin} loadForViewer />
           <PinRevisitButton pinId={pin.id} />
           <PinAdminLink pinId={pin.id} />
-          {/* Not interested, or Show this pin again. */}
+          {/* Share, Not interested (or Show this pin again), Block. */}
           <PinMenu
-            pin={{ id: pin.id, user: pin.user, companyId: pin.companyId, company: pin.company, companyLogoUrl: pin.companyLogoUrl }}
+            pin={{ id: pin.id, title: pin.title, originalTitle: pin.originalTitle, user: pin.user, companyId: pin.companyId, company: pin.company, companyLogoUrl: pin.companyLogoUrl }}
             onPage
           />
         </div>

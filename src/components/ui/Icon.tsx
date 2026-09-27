@@ -239,6 +239,27 @@ const PATHS: Record<string, React.ReactNode> = {
       <path d="m4.9 4.9 14.2 14.2" />
     </>
   ),
+  // Sharing a pin or its address (Lucide's shapes, ISC): the menu item, a
+  // text message, copying words, an email.
+  share: (
+    <>
+      <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+      <path d="m16 6-4-4-4 4M12 2v13" />
+    </>
+  ),
+  message: <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z" />,
+  copy: (
+    <>
+      <rect x="8" y="8" width="14" height="14" rx="2" />
+      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+    </>
+  ),
+  mail: (
+    <>
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </>
+  ),
   // A comment's actions (Lucide's shapes, ISC): the menu they sit behind,
   // and answering it.
   'dots-vertical': (

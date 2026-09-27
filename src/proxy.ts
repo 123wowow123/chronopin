@@ -138,6 +138,6 @@ export const config = {
   // Everything but route handlers, build assets and the files in public/.
   // robots.txt and sitemap.xml are let in for the bot count and nothing else.
   matcher: [
-    '/((?!api/|_next/|auth/|logout|og/|upload/|pin-not-found|favicon\\.ico|ads\\.txt|privacy\\.html|termsofservice\\.html).*)',
+    '/((?!api/|_next/|auth/|logout|og/|upload/|pin-not-found|sw\\.js|favicon\\.ico|ads\\.txt|privacy\\.html|termsofservice\\.html).*)',
   ],
 };

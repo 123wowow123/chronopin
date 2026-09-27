@@ -1,6 +1,7 @@
 import * as db from '../db';
 import type { QueryFn, Row } from '../db';
 import { emitNotificationsChanged } from '../events';
+import { ALERT_SOON_MINUTES } from '@/lib/alerts';
 import { blockedBetween } from './blockSql';
 
 // Tells the live feed whose notifications a write changed, once it commits.
@@ -23,11 +24,20 @@ const types = {
   reference: 'reference',
   // A pin you watch lands today. The actor is the pin's author.
   today: 'today',
+  // A pin you watch has just started, or starts in ALERT_SOON_MINUTES (for
+  // those who asked). Sent as browser notifications too. The actor is the
+  // pin's author.
+  start: 'start',
+  soon: 'soon',
   // A new pin for a company you follow. The actor is the pin's author.
   company: 'company',
   // A new pin from someone you follow. The actor is the pin's author.
   pin: 'pin',
 } as const;
+
+// How late an alert may still go out, for a server that was down or busy
+// when it was due. Later than this it would only be noise.
+const ALERT_LATE_MINUTES = 10;
 
 // A batch of pins from one person, or for one company, on one day is one
 // entry in the bell: a curator posting thirty scraped pins should not push
@@ -212,13 +222,61 @@ export default class Notification {
     );
   }
 
-  // Unwatching a pin takes back its 'today' notifications.
+  // Writes a 'start' for every watched pin that has just started, and a
+  // 'soon' for one starting within ALERT_SOON_MINUTES for watchers who asked
+  // to be reminded (User.remindBeforeStart), and answers with what it wrote.
+  // Timed pins only: an all-day pin starts at midnight UTC, which is nobody's
+  // "now", and its 'today' says it already. "Just" is the last
+  // ALERT_LATE_MINUTES, so a server that was down a moment still sends them,
+  // and one down longer does not send stale ones. Safe to call as often as
+  // the timer likes: the unique index keeps one per user, pin, kind and start.
+  static async writeDueAlerts(): Promise<{ id: number; userId: number; pinId: number; type: 'start' | 'soon'; title: string; start: Date }[]> {
+    const rows = await db.query(
+      `
+      WITH due AS (
+        SELECT f."userId", p."userId" AS "actorId", 'start' AS "type", p."id" AS "pinId", p."utcStartDateTime" AS "pinStart"
+        FROM "Favorite" f
+        JOIN "Pin" p ON p."id" = f."pinId" AND p."utcDeletedDateTime" IS NULL
+        WHERE f."utcDeletedDateTime" IS NULL AND NOT p."allDay"
+          AND p."utcStartDateTime" <= now()
+          AND p."utcStartDateTime" > now() - make_interval(mins => $2)
+        UNION ALL
+        SELECT f."userId", p."userId", 'soon', p."id", p."utcStartDateTime"
+        FROM "Favorite" f
+        JOIN "User" u ON u."id" = f."userId" AND u."remindBeforeStart" AND u."utcDeletedDateTime" IS NULL
+        JOIN "Pin" p ON p."id" = f."pinId" AND p."utcDeletedDateTime" IS NULL
+        WHERE f."utcDeletedDateTime" IS NULL AND NOT p."allDay"
+          AND p."utcStartDateTime" > now()
+          AND p."utcStartDateTime" <= now() + make_interval(mins => $1)
+          AND p."utcStartDateTime" > now() + make_interval(mins => $1) - make_interval(mins => $2)
+      ),
+      written AS (
+        INSERT INTO "Notification" ("userId", "actorId", "type", "pinId", "pinStart")
+        SELECT "userId", "actorId", "type", "pinId", "pinStart" FROM due
+        ON CONFLICT ("userId", "pinId", "type", "pinStart") WHERE "type" IN ('start', 'soon')
+        DO NOTHING
+        RETURNING "id", "userId", "type", "pinId", "pinStart"
+      )
+      -- Written either way, but sent only where the bell would show it.
+      SELECT w."id", w."userId", w."type", w."pinId", w."pinStart" AS "start", p."title"
+      FROM written w
+      JOIN "Pin" p ON p."id" = w."pinId"
+      WHERE NOT ${blockedBetween('w."userId"', 'p."userId"')}
+        AND NOT EXISTS (SELECT 1 FROM "CompanyBlock" cb WHERE cb."userId" = w."userId" AND cb."companyId" = p."companyId")`,
+      [ALERT_SOON_MINUTES, ALERT_LATE_MINUTES],
+    );
+    announce(db.query, rows);
+    return rows as any;
+  }
+
+  // Unwatching a pin takes back its 'today' notifications, and any alert
+  // that it was starting.
   static retractWatched({ userId, pinId }: { userId: number; pinId: number }, query: QueryFn = db.query) {
     return query(
       `
       UPDATE "Notification"
       SET "utcDeletedDateTime" = now()
-      WHERE "userId" = $1 AND "pinId" = $2 AND "type" = 'today' AND "utcDeletedDateTime" IS NULL
+      WHERE "userId" = $1 AND "pinId" = $2 AND "type" IN ('today', 'start', 'soon') AND "utcDeletedDateTime" IS NULL
       RETURNING "userId"`,
       [userId, pinId],
     ).then((rows) => announce(query, rows));

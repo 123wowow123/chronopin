@@ -14,4 +14,5 @@ export async function checkConfig() {
 // setting, so one that is off costs a query now and then.
 export function startSchedules() {
   void import('@/server/services/dailyJobSchedule').then(({ startDailyJobSchedule }) => startDailyJobSchedule());
+  void import('@/server/services/watchAlerts').then(({ startWatchAlerts }) => startWatchAlerts());
 }
