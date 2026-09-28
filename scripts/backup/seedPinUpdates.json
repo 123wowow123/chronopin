@@ -862,5 +862,1039 @@
     "references": [],
     "note": null,
     "utcCreatedDateTime": "2026-09-27T17:12:03.072Z"
+  },
+  {
+    "id": 37,
+    "pinId": 2232,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2036-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.mot.gov.sg/news-resources/newsroom/update-on-development-plans-for-changi-airport-terminal-5/",
+        "title": "Update on Development Plans for Changi Airport Terminal 5 | Ministry of Transport",
+        "confidence": 70,
+        "publishedDate": "2025-10-14"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:56:57.505Z"
+  },
+  {
+    "id": 38,
+    "pinId": 2260,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2029-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.shanghai.gov.cn/nw4411/20241120/1753db0ec8594ceaa71919b89b8cbe35.html",
+        "title": "浦东机场T3航站楼今开工",
+        "confidence": 75,
+        "publishedDate": "2024-11-20"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:57:18.420Z"
+  },
+  {
+    "id": 39,
+    "pinId": 2290,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2033-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://modgov.hillingdon.gov.uk/mgAi.aspx?ID=48751",
+        "title": "London Borough of Hillingdon - Agenda item - Health Updates (Health and Social Care Select Committee, 3 December 2025)",
+        "endDate": "2032-12-31",
+        "confidence": 75,
+        "publishedDate": "2025-12-03"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:57:39.461Z"
+  },
+  {
+    "id": 40,
+    "pinId": 2685,
+    "kind": "edit",
+    "userId": 372,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2027-03-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2026-04-28T00:00:00.000Z"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.fb101.com/stix-asia-uncommons-las-vegas-food-hall-first-restaurants-c7397b0f16",
+        "title": "Stix Asia Names First Tokyo Icons for Its 12-Concept Las Vegas Food Hall - Food & Beverage Magazine",
+        "confidence": 70,
+        "publishedDate": "2026-09-16"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:58:00.270Z"
+  },
+  {
+    "id": 41,
+    "pinId": 2903,
+    "kind": "edit",
+    "userId": 305,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2031-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2026-09-22T00:00:00.000Z"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:58:21.229Z"
+  },
+  {
+    "id": 42,
+    "pinId": 3347,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2028-03-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": false,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.mortenson.com/projects/las-vegas-athletics-ballpark",
+        "title": "Las Vegas Athletics Ballpark Construction | Mortenson",
+        "endDate": "2028-02-29",
+        "confidence": 80
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:58:42.350Z"
+  },
+  {
+    "id": 43,
+    "pinId": 3348,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2032-12-21T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.mbta.com/projects/north-station-draw-one-bridge-replacement",
+        "title": "North Station Draw One Bridge Replacement | Projects | MBTA",
+        "confidence": 75
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:59:03.312Z"
+  },
+  {
+    "id": 44,
+    "pinId": 3444,
+    "kind": "edit",
+    "userId": 276,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2028-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": "2026-06-02T00:00:00.000Z"
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:59:24.258Z"
+  },
+  {
+    "id": 45,
+    "pinId": 3469,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2024-10-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": false,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.prnewswire.com/news-releases/ferrero-opens-new-214-million-kinder-bueno-production-facility-in-illinois-302262928.html",
+        "title": "Ferrero opens new $214 million Kinder Bueno production facility in Illinois",
+        "endDate": "2024-09-30",
+        "confidence": 95,
+        "publishedDate": "2024-09-30"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T01:59:45.102Z"
+  },
+  {
+    "id": 46,
+    "pinId": 430,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2026-04-13T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2033-12-31T00:00:00.000Z"
+      },
+      {
+        "after": "2036-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://science.osti.gov/-/media/budget/pdf/sc-budget-request-to-congress/2027/FY-2027-Request-Narrative---NP.pdf",
+        "title": "Science/Nuclear Physics FY 2027 Congressional Justification (20-SC-52 Electron Ion Collider)",
+        "endDate": "2035-12-31",
+        "confidence": 80
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:00:39.099Z"
+  },
+  {
+    "id": 47,
+    "pinId": 445,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2022-03-27T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2031-12-31T00:00:00.000Z"
+      },
+      {
+        "after": "2032-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:00:59.972Z"
+  },
+  {
+    "id": 48,
+    "pinId": 474,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2036-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:01:20.733Z"
+  },
+  {
+    "id": 49,
+    "pinId": 486,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2038-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.txdot.gov/nhhip/about/project-timelines.html",
+        "title": "NHHIP Project timelines - Construction timeline & phasing (TxDOT)",
+        "confidence": 70
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:01:41.749Z"
+  },
+  {
+    "id": 50,
+    "pinId": 487,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2032-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.canada.ca/en/public-services-procurement/services/infrastructure-buildings/parliamentary-precinct/projects-in-parliamentary-precinct/centre-block-project/quarterly-reports/progress-june-2026.html",
+        "title": "Centre Block project quarterly progress report: April 1 to June 30, 2026 (PSPC)",
+        "confidence": 80
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:02:02.571Z"
+  },
+  {
+    "id": 51,
+    "pinId": 488,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2030-07-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1300514/000130051426000085/lvs-20260630.htm",
+        "title": "Las Vegas Sands Corp. Form 10-Q for the quarter ended June 30, 2026",
+        "endDate": "2030-06-30",
+        "confidence": 80,
+        "publishedDate": "2026-07-24"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:02:23.468Z"
+  },
+  {
+    "id": 52,
+    "pinId": 524,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2034-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.nsctotal.com.br/colunista/pedro-machado/com-metro-quadrado-a-r-110-mil-senna-tower-vende-60-apartamentos-e-movimenta-r-248-bi-em-um-ano",
+        "title": "Com metro quadrado a R$ 110 mil, Senna Tower vende 60 apartamentos e movimenta R$ 2,48 bi em um ano (NSC Total)",
+        "confidence": 75,
+        "publishedDate": "2026-07-04"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:02:44.316Z"
+  },
+  {
+    "id": 53,
+    "pinId": 596,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2030-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.equipmentworld.com/roadbuilding/article/15817483/latovegas-brightline-west-rail-completion-pushed-to-2029",
+        "title": "L.A.-to-Vegas Brightline West rail completion pushed to 2029 | Equipment World",
+        "confidence": 70,
+        "publishedDate": "2026-02-18"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:03:05.247Z"
+  },
+  {
+    "id": 54,
+    "pinId": 662,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2036-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:03:26.206Z"
+  },
+  {
+    "id": 55,
+    "pinId": 803,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2026-04-23T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.fraport.com/en/newsroom/press-kit/press-kits/press-kit--inauguration-first-day-of-operations.html",
+        "title": "Press kit: Inauguration and first day of operations at Terminal 3",
+        "endDate": "2026-04-22",
+        "confidence": 95,
+        "publishedDate": "2026-04-22"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:03:47.006Z"
+  },
+  {
+    "id": 56,
+    "pinId": 2166,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2034-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://plandesignbuild.ucsd.edu/projects/current.html",
+        "title": "Current Projects - UC San Diego Planning, Design & Construction",
+        "confidence": 80
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:04:08.099Z"
+  },
+  {
+    "id": 57,
+    "pinId": 2168,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2031-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.transitchicago.com/rle/faq/",
+        "title": "Red Line Extension Project FAQ - CTA",
+        "confidence": 85
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:04:28.893Z"
+  },
+  {
+    "id": 58,
+    "pinId": 2182,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2034-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.txdot.gov/content/dam/project-sites/mobility35/documents/capex-central/capex-c-technical-timeline-09022026.pdf",
+        "title": "CapEx Central Phasing (technical schedule, last update 09/02/26) - TxDOT",
+        "confidence": 85,
+        "publishedDate": "2026-09-02"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:04:49.765Z"
+  },
+  {
+    "id": 59,
+    "pinId": 2183,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2034-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.atptx.org/wp-content/uploads/2026/09/ATP-FY26-27-Approved-Budget.pdf",
+        "title": "Austin Transit Partnership FY 2026-27 Approved Budget",
+        "confidence": 80
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:05:10.614Z"
+  },
+  {
+    "id": 60,
+    "pinId": 2191,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2035-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.portseattle.org/projects/s-concourse-evolution",
+        "title": "S Concourse Evolution | Port of Seattle",
+        "confidence": 80
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:05:31.641Z"
+  },
+  {
+    "id": 61,
+    "pinId": 2194,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2029-06-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://plenary.com/americas/project/lacc-expansion",
+        "title": "L.A. Convention Center Expansion and Modernization Project | Plenary Americas",
+        "confidence": 75
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:05:52.585Z"
+  },
+  {
+    "id": 62,
+    "pinId": 2195,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2028-07-14T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://inglewoodtransitconnector.com/plan/",
+        "title": "Project Plan - Inglewood Transit Connector",
+        "confidence": 70
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:06:13.710Z"
+  },
+  {
+    "id": 63,
+    "pinId": 2200,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2030-06-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.commanders.com/news/clark-mortenson-smootdc-joint-venture-tapped-to-build-new-washington-commanders-stadium",
+        "title": "Clark | Mortenson | SmootDC Joint Venture Tapped to Build New Washington Commanders Stadium",
+        "confidence": 80,
+        "publishedDate": "2026-08-11"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:06:34.631Z"
+  },
+  {
+    "id": 64,
+    "pinId": 2202,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2031-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://vapassengerrailauthority.org/wp-content/uploads/2026/07/2026-0728-CAG-DC-Mtg-6-Presentation-FINAL.pdf",
+        "title": "Long Bridge Project - DC Community Advisory Group Meeting 6 presentation (VPRA)",
+        "confidence": 80,
+        "publishedDate": "2026-07-28"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:06:55.457Z"
+  },
+  {
+    "id": 65,
+    "pinId": 2207,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2034-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.skyharbor.com/about-phx/news-media/press-releases/phoenix-sky-harbor-announces-american-airlines-as-primary-carrier-for-west-terminal-unveils-destination-phx-2050/",
+        "title": "Phoenix Sky Harbor Announces American Airlines as Primary Carrier for West Terminal, Unveils Destination PHX 2050",
+        "confidence": 70,
+        "publishedDate": "2026-09-21"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:07:16.424Z"
+  },
+  {
+    "id": 66,
+    "pinId": 2216,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2032-12-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.governor.ny.gov/news/governor-hochul-announces-mta-advances-final-construction-contract-second-avenue-subway-phase",
+        "title": "Governor Hochul Announces MTA Advances Final Construction Contract of Second Avenue Subway Phase 2",
+        "confidence": 80,
+        "publishedDate": "2026-09-14"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:07:37.287Z"
+  },
+  {
+    "id": 67,
+    "pinId": 2219,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2036-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.panynj.gov/port-authority/en/press-room/press-release-archives/2026-press-releases/port-authority-marks-major-constrcution-milestone-for-midtown-bu.html",
+        "title": "Port Authority Marks Major Construction Milestone for Midtown Bus Terminal Redevelopment Project with Placement of First Steel Beams for Dyer Avenue Deck Overs",
+        "confidence": 85,
+        "publishedDate": "2026-04-28"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:07:58.110Z"
+  },
+  {
+    "id": 68,
+    "pinId": 2226,
+    "kind": "edit",
+    "userId": 76,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2028-01-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.miamitodaynews.com/?p=86491",
+        "title": "Major projects flowing toward PortMiami - Miami Today",
+        "endDate": "2027-12-31",
+        "confidence": 80,
+        "publishedDate": "2026-04-08"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:08:18.920Z"
+  },
+  {
+    "id": 69,
+    "pinId": 111,
+    "kind": "edit",
+    "userId": 1,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2018-07-01T00:00:00.000Z",
+        "field": "end",
+        "allDay": true,
+        "before": null
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.kamenz.de/e-mobility.html",
+        "title": "E-mobility - Lessingstadt Kamenz (Daimler press releases: 06.11.2018 Accumotive verdoppelt Beschäftigungszahl)",
+        "endDate": "2018-06-30",
+        "confidence": 75,
+        "publishedDate": "2018-11-06"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T02:08:44.308Z"
+  },
+  {
+    "id": 70,
+    "pinId": 4342,
+    "kind": "edit",
+    "userId": 317,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Taylor Swift Wins Video of the Year and Madonna Artist of the Year at the 2026 VMAs",
+        "field": "title",
+        "before": "The 2026 MTV Video Music Awards at the Peacock Theater"
+      },
+      {
+        "after": "Taylor Swift won Video of the Year for 'The Fate of Ophelia' and the first Artist Director Honors at the 2026 VMAs in Los Angeles, where Madonna took Artist of the Year, Best Collaboration with Sabrina Carpenter and Best Dance, Sienna Spiro Best New Artist and Nirvana the Video Vanguard Award.",
+        "field": "description",
+        "before": "Snoop Dogg hosts the 2026 VMAs live from the Peacock Theater in Los Angeles, opened by Madonna in her first VMA performance in 23 years; she leads the nominations, Nirvana receive the Video Vanguard Award and Taylor Swift the first Artist Director Honors."
+      },
+      {
+        "after": "2026-09-28T02:00:00.000Z",
+        "field": "end",
+        "allDay": false,
+        "before": "2026-09-28T01:30:00.000Z"
+      },
+      {
+        "after": "<ul><li>The 43rd VMAs began on time at 4:30 p.m. PT in the Peacock Theater in Los Angeles on Sunday, 27 September 2026; the CBS broadcast, simulcast on MTV and Paramount+, joined about 21 minutes late behind the Ravens-Cowboys game<cite data-ref=\"https://www.hollywoodreporter.com/tv/tv-news/mtv-vmas-delayed-tv-football-starts-on-time-la-1236713141/\"></cite><cite data-ref=\"https://www.yahoo.com/entertainment/music/live/mtv-vmas-2026-live-updates-taylor-swift-set-to-receive-inaugural-award-as-madonna-gears-up-for-triumphant-return-leading-nominations-140000485.html\"></cite></li><li>Madonna opened with Sabrina Carpenter and Charli XCX in her first VMA performance in 23 years, and Snoop Dogg hosted<cite data-ref=\"https://www.yahoo.com/entertainment/music/live/mtv-vmas-2026-live-updates-taylor-swift-set-to-receive-inaugural-award-as-madonna-gears-up-for-triumphant-return-leading-nominations-140000485.html\"></cite><cite data-ref=\"https://deadline.com/2026/09/madonna-2026-vmas-open-performance-1237105262/\"></cite></li><li>Taylor Swift won Video of the Year for 'The Fate of Ophelia', dedicating it to Dolly Parton, after accepting the first Artist Director Honors and premiering her 'Patient Zero' video with Dakota Johnson and Colin Farrell<cite data-ref=\"https://www.yahoo.com/entertainment/music/live/mtv-vmas-2026-live-updates-taylor-swift-set-to-receive-inaugural-award-as-madonna-gears-up-for-triumphant-return-leading-nominations-140000485.html\"></cite><cite data-ref=\"https://www.hollywoodreporter.com/music/music-news/2026-vmas-taylor-swift-artist-director-honors-1236706910/\"></cite></li><li>Madonna, who led the nominations with 13, won Artist of the Year - her first VMA in 27 years - plus Best Collaboration with Sabrina Carpenter for 'Bring Your Love' and Best Dance for 'Confessions II - The Film'<cite data-ref=\"https://www.yahoo.com/entertainment/music/live/mtv-vmas-2026-live-updates-taylor-swift-set-to-receive-inaugural-award-as-madonna-gears-up-for-triumphant-return-leading-nominations-140000485.html\"></cite><cite data-ref=\"https://en.wikipedia.org/wiki/2026_MTV_Video_Music_Awards\"></cite></li><li>Sienna Spiro won Best New Artist, Lisa Best Pop, and Nirvana's Dave Grohl, Krist Novoselic and Pat Smear accepted the Video Vanguard Award<cite data-ref=\"https://www.yahoo.com/entertainment/music/live/mtv-vmas-2026-live-updates-taylor-swift-set-to-receive-inaugural-award-as-madonna-gears-up-for-triumphant-return-leading-nominations-140000485.html\"></cite></li><li>Performances included Raye, Shaboozey, Lisa, Yung Lean, Bruno Mars remotely from Colorado, Kacey Musgraves' Dolly Parton tribute and a George Michael tribute by Sombr, Raye, Teddy Swims and Adam Lambert<cite data-ref=\"https://www.yahoo.com/entertainment/music/live/mtv-vmas-2026-live-updates-taylor-swift-set-to-receive-inaugural-award-as-madonna-gears-up-for-triumphant-return-leading-nominations-140000485.html\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The 43rd VMAs air live from Los Angeles on Sunday, 27 September 2026, 7:30-9:30 p.m. ET on CBS, simulcast on MTV and streamed on Paramount+, the first time the show has been in the city in nearly a decade<cite data-ref=\"https://www.hollywoodreporter.com/music/music-news/2026-vmas-taylor-swift-artist-director-honors-1236706910/\"></cite><cite data-ref=\"https://www.the-independent.com/arts-entertainment/music/mtv-vmas-nominations-madonna-taylor-swift-b3034961.html\"></cite></li><li>Snoop Dogg hosts; Madonna opens the show in her first VMA performance in 23 years<cite data-ref=\"https://www.hollywoodreporter.com/music/music-news/2026-vmas-taylor-swift-artist-director-honors-1236706910/\"></cite><cite data-ref=\"https://deadline.com/2026/09/madonna-2026-vmas-open-performance-1237105262/\"></cite></li><li>Madonna leads the nominations - 11 at the August announcement, 13 after later categories were added, tying Lady Gaga's 2010 record - with Taylor Swift second<cite data-ref=\"https://www.the-independent.com/arts-entertainment/music/mtv-vmas-nominations-madonna-taylor-swift-b3034961.html\"></cite><cite data-ref=\"https://en.wikipedia.org/wiki/2026_MTV_Video_Music_Awards\"></cite></li><li>Taylor Swift receives the inaugural MTV VMA Artist Director Honors, and her 'The Fate of Ophelia' is up for Video of the Year and she for Artist of the Year<cite data-ref=\"https://www.hollywoodreporter.com/music/music-news/2026-vmas-taylor-swift-artist-director-honors-1236706910/\"></cite></li><li>Nirvana receive the Michael Jackson Video Vanguard Award<cite data-ref=\"https://en.wikipedia.org/wiki/2026_MTV_Video_Music_Awards\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.hollywoodreporter.com/music/music-news/2026-vmas-taylor-swift-artist-director-honors-1236706910/",
+        "title": "Taylor Swift to Receive Inaugural MTV VMA Artist Director Honors",
+        "confidence": 85,
+        "publishedDate": "2026-09-21"
+      },
+      {
+        "url": "https://www.hollywoodreporter.com/tv/tv-news/mtv-vmas-delayed-tv-football-starts-on-time-la-1236713141/",
+        "title": "MTV VMAs Begin on Time in L.A., But Football Delays the Start of the Show on TV",
+        "confidence": 85,
+        "publishedDate": "2026-09-28"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T03:18:55.290Z"
+  },
+  {
+    "id": 71,
+    "pinId": 4342,
+    "kind": "edit",
+    "userId": 317,
+    "relatedPinId": null,
+    "changes": [],
+    "references": [
+      {
+        "url": "https://polymarket.com/event/vma-voty-2026",
+        "title": "VMA Video of the Year 2026 - Polymarket",
+        "confidence": 80
+      },
+      {
+        "url": "https://kalshi.com/markets/kxvma/mtv-video-music-awards/kxvma-voty26",
+        "title": "MTV Video Music Awards: Video of the Year - Kalshi",
+        "confidence": 80
+      },
+      {
+        "url": "https://polymarket.com/event/vma-aoty-2026",
+        "title": "VMA Artist of the Year 2026 - Polymarket",
+        "confidence": 80
+      },
+      {
+        "url": "https://polymarket.com/event/vma-dance-2026",
+        "title": "VMA Best Dance 2026 - Polymarket",
+        "confidence": 80
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T03:30:44.002Z"
+  },
+  {
+    "id": 72,
+    "pinId": 4361,
+    "kind": "edit",
+    "userId": 317,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2027-01-04T09:45:00.000Z",
+        "field": "start",
+        "allDay": false,
+        "before": "2027-01-04T00:00:00.000Z"
+      },
+      {
+        "after": null,
+        "field": "end",
+        "allDay": false,
+        "before": "2027-01-05T00:00:00.000Z"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.livenationhip.co.jp/all-events/bruno-mars-tickets-ae147754",
+        "title": "Bruno Mars - The Romantic Tour in Japan | Live Nation H.I.P.",
+        "startDate": "2027-01-04",
+        "confidence": 95
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T05:39:47.560Z"
+  },
+  {
+    "id": 73,
+    "pinId": 1945,
+    "kind": "edit",
+    "userId": 276,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Starship Reaches Orbit for the First Time on Flight 14",
+        "field": "title",
+        "before": "Starship launches Starlink Group 31-1 (Starship Flight 14)"
+      },
+      {
+        "after": "SpaceX's 14th Starship test flight lifted off from Starbase, Texas at 7:48 a.m. CT on 28 September 2026 and became the first Starship to reach orbit, after 13 earlier flights that were all suborbital.\n\nOne of the ship's six engines failed during ascent; about 22 minutes into the flight SpaceX judged it safe to continue, and Starship began releasing 26 Starlink V3 satellites, the first of the new generation and Starship's first operational payload. The Super Heavy booster made a soft splashdown in the Gulf off Starbase instead of a tower catch.\n\nThe ship was planned to fly about six orbits at roughly 275 km over nearly 10 hours before splashing down in the Pacific west of Chile.",
+        "field": "description",
+        "before": "14th test flight of the two-stage Starship launch vehicle. 3rd flight of Starship V3 and the first Starship flight to deploy satellites (a group of Starlink satellites known as Starlink Group 31-1) into stable Low Earth Orbit.\r\n\r\nThe ship is expected to fly at an altitude approximately 275 km above Earth and complete approximately 6 orbits around the planet for nearly 10 hours, with splashdown targeted in the Pacific Ocean west of Chile.\r\n\r\nThe booster’s primary test objective on Flight 14 will be executing a successful launch, ascent, stage separation, boostback burn, and landing burn at an offshore landing point in the Gulf.\r\n\r\nStarship will deliver 26 Starlink V3 satellites to orbit for the first time, which aim to greatly expand the network's capacity and user speeds. Each Starlink V3 satellite will add 1 Tbps of capacity to the constellation. Lifts off from Orbital Launch Pad 2, SpaceX Starbase, TX, USA to Low Earth Orbit. The booster is due to land at Gulf of Mexico."
+      },
+      {
+        "after": "2026-09-28T12:48:59.000Z",
+        "field": "start",
+        "allDay": false,
+        "before": "2026-09-28T12:15:00.000Z"
+      },
+      {
+        "after": null,
+        "field": "end",
+        "allDay": false,
+        "before": "2026-09-28T13:30:00.000Z"
+      },
+      {
+        "after": "<ul><li>Starship lifted off from Starbase at 7:48 a.m. CT on 28 September 2026, 33 minutes into a window that opened at 7:15, and reached orbit around 8:15 a.m. local time &mdash; the first time in 14 test flights, none of the 13 before it having been meant to<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>The FAA told CNBC it issued the &ldquo;license authorization for the SpaceX Starship Super Heavy Flight 14 launch and reentry operations&rdquo; on 26 September, two days before launch<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite></li><li>One of the six engines on the ship failed during ascent, and about 22 minutes into the flight SpaceX decided it was safe to carry on to orbit<cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>SpaceX began releasing the 26 Starlink V3 satellites around 8:25 a.m. local time; three of them carry cameras to record data on Starship's heat shield<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>The Super Heavy booster made a &ldquo;soft splashdown&rdquo; off Starbase, simulating an offshore landing in the Gulf rather than a return to the launch tower<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>The flight plan is about six orbits at roughly 170 miles over 10 hours, ending in a Pacific splashdown off Chile; SpaceX built in points where Starship could abort its orbital trajectory and return safely<cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>One Starship can carry 60 Starlink V3 satellites, about 20 times a Falcon 9 launch, and Starship is the only vehicle able to launch the larger V3 satellites<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>Starship is key to SpaceX's growth after its June IPO, the largest on record, which values it at about $2 trillion; it also underpins NASA's plan to land astronauts on the Moon, with an Orion docking test planned for Artemis III late next year<cite data-ref=\"https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html\"></cite><cite data-ref=\"https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa\"></cite></li><li>Before launch, Kalshi priced liftoff before 29 September at 55% and Polymarket put a launch by 30 September at 73%<cite data-ref=\"https://kalshi.com/markets/kxspacexstarship/spacex-starship-launch/kxspacexstarship-14\"></cite><cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>SpaceX is targeting Starship Flight 14 no earlier than 28 September 2026 from Starbase, with FAA launch licence approval for the first planned orbital profile named as the main near-term catalyst<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li><li>The target date has moved: a Florida Today piece of 16 September said &ldquo;SpaceX's first attempt to launch its Starship rocket into orbit could come as early as Sept. 22 in South Texas&rdquo;, while the market summary updated on 20 September gives no earlier than 28 September<cite data-ref=\"https://kalshi.com/markets/kxspacexstarship/spacex-starship-launch/kxspacexstarship-14\"></cite><cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li><li>Kalshi's date ladder has the flight launching before 29 September at 55%, before 30 September at 70% and before 1 October at 72%, on $227,921 of volume in a market opened on 17 September 2026<cite data-ref=\"https://kalshi.com/markets/kxspacexstarship/spacex-starship-launch/kxspacexstarship-14\"></cite></li><li>Kalshi contradicts itself on the first of those: the list shows &ldquo;Before Sep 29, 2026&rdquo; at 55% while the order ticket beside it reads &ldquo;Odds 57% chance&rdquo;<cite data-ref=\"https://kalshi.com/markets/kxspacexstarship/spacex-starship-launch/kxspacexstarship-14\"></cite></li><li>Polymarket's equivalents put a launch by 26 September at 1%, by 30 September at 73% and by 31 October at 96%<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li><li>On the flight itself, Polymarket prices a successful controlled splashdown of the upper stage at 83% and a Super Heavy booster explosion at 89% &mdash; though that market counts an explosion &ldquo;at any point during the test from the start of fueling operations to 60 minutes after it makes contact with Earth upon landing&rdquo;, including a planned termination event<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li><li>A chopsticks catch is all but ruled out for this flight: the booster catch trades at 1% and the Starship catch at 3%, consistent with an offshore booster landing and an ocean splashdown; the Starship-catch market is nonetheless the page's largest by volume at $462,614<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li><li>The planned profile: the Block 3 Super Heavy booster and Ship 41 attempt orbital insertion at roughly 275 km, then deploy 26 operational Starlink V3 satellites &mdash; &ldquo;the first revenue-generating payload&rdquo; &mdash; followed by a single-Raptor deorbit burn and a controlled Pacific splashdown<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li><li>Hardware upgrades for this flight address Flight 13 issues, including improved engine filtering and relight reliability on the booster plus enhanced tile retention<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li><li>The stakes are framed as orbital: Starship &ldquo;has not reached orbit in more than three years of flight tests. That could be about to change with flight 14&rdquo;<cite data-ref=\"https://kalshi.com/markets/kxspacexstarship/spacex-starship-launch/kxspacexstarship-14\"></cite></li><li>Kalshi counts the launch date as &ldquo;the calendar date on which liftoff occurred, measured in the local timezone of the launch site, as publicly confirmed by SpaceX&rdquo;, and carries a notice that the series &ldquo;has transitioned to the LAUNCH contract&rdquo;<cite data-ref=\"https://kalshi.com/markets/kxspacexstarship/spacex-starship-launch/kxspacexstarship-14\"></cite></li><li>Polymarket counts the attempt only if the rocket lifts off the pad, with any subsequent anomaly having no bearing on the launch-date outcome, and every market resolving &ldquo;No&rdquo; if the 14th launch has not happened by 30 June 2027<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li><li>Polymarket's page disagrees with itself about when it opened, the details panel giving 1 September 2026 and the FAQ 31 July 2026, on total volume of $703,371<cite data-ref=\"https://polymarket.com/event/spacex-starship-flight-test-14\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.cnbc.com/2026/09/28/spacex-prepares-to-send-starship-rocket-to-orbit-for-first-time.html",
+        "title": "SpaceX launches its massive Starship rocket into orbit for the first time - CNBC",
+        "startDate": "2026-09-28",
+        "confidence": 92,
+        "publishedDate": "2026-09-28"
+      },
+      {
+        "url": "https://www.npr.org/2026/09/28/nx-s1-5983418/spacex-starship-first-orbital-flight-14-nasa",
+        "title": "SpaceX's Starship launches on first orbital mission from Texas - NPR",
+        "startDate": "2026-09-28",
+        "confidence": 90,
+        "publishedDate": "2026-09-28"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T13:56:39.527Z"
+  },
+  {
+    "id": 74,
+    "pinId": 2991,
+    "kind": "edit",
+    "userId": 408,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "Sable Offshore expects the Hondo platform offshore California to come back online by the end of September 2026, the third Santa Ynez Unit platform restarted after Heritage and Harmony. On its August earnings call management said the 45-year-old platform needed about 50% more work than expected and that it was \"hoping\" to hit the September timing. Hondo is expected to produce lower-sulfur crude that should bring field-wide sulfur content back to normal levels.",
+        "field": "description",
+        "before": "Sable Offshore expects the Hondo platform offshore California to come back online in September 2026, the third Santa Ynez Unit platform restarted after Heritage and Harmony. Hondo is expected to produce lower-sulfur crude that should bring field-wide sulfur content back to normal levels."
+      },
+      {
+        "after": "<ul><li>Sable Offshore, a Texas-headquartered oil and gas company, expects to bring the Hondo platform — the third of its Santa Ynez Unit (SYU) platforms offshore California — back online in September 2026<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>The restart follows the phased return of the unit: production resumed from the Heritage platform in early April 2026, with Harmony also producing<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>On the 11 August second-quarter call management put the Hondo restart &ldquo;by the end of September&rdquo;, but said the 45-year-old platform had needed &ldquo;about 50% more work than we expected&rdquo; &mdash; a &ldquo;tremendous amount of structural work&rdquo; and controls &ldquo;completely changed out&rdquo; &mdash; and that the team was &ldquo;hoping we can hit that timing in September&rdquo;<cite data-ref=\"https://www.investing.com/news/transcripts/earnings-call-transcript-sable-offshore-posts-q2-2026-miss-as-shares-fall-93CH-4852298\"></cite></li><li>The date has already slipped once: Sable's April corporate update put Hondo online in June 2026, before its 10 August release moved it to September<cite data-ref=\"https://www.offshore-energy.biz/third-oil-platform-offshore-california-coming-online-in-june/\"></cite><cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1831481/000183148126000105/a991_2q26xpr.htm\"></cite></li><li>An average of about 47 wells at Harmony and Heritage were online in July 2026, producing roughly 721 gross barrels of oil per day per well; all 77 production wells on those two platforms are expected online during Q3 2026<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>A wireline campaign for perforation additions and producing-well optimization at Harmony began in August 2026; five completed perforation additions at Hondo, each forecast at an incremental 600 gross barrels per day, are to come online with the platform restart in September 2026, with four more planned for early Q4 2026<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>Hondo is expected to produce lower-sulfur crude, bringing field-wide sulfur content back to normal levels on restart; chemical sweetening solutions are to be tested in Q4 2026 with full implementation anticipated in 2027<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>Hondo is the easternmost platform, where crude runs lowest in sulfur, so blending its oil into the field's output should cut the sulfur penalties Sable pays on SYU barrels<cite data-ref=\"https://www.investing.com/news/transcripts/earnings-call-transcript-sable-offshore-posts-q2-2026-miss-as-shares-fall-93CH-4852298\"></cite></li><li>Sable reported $18.5 million of non-recurring demurrage charges in Q2 2026 after California refiners, unable to plan for SYU first sales, displaced imported cargoes and limited Pacific OCS throughput; refiners are expected to adjust their crude slates from September 2026 to take more SYU barrels<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>On 19 August a federal court fined Sable $1.449 million for restarting the onshore Santa Ynez Pipeline System without the State Fire Marshal's authorization, but declined to order it shut, since PHMSA had since approved the restart plan; it also refused California's bid to block the Energy Department's Defense Production Act order keeping the line running, and California appealed on 20 August<cite data-ref=\"https://www.sec.gov/Archives/edgar/data/1831481/000183148126000108/socc-20260819.htm\"></cite></li><li>From 8 September Sable crews began excavating 12 stretches of the pipeline that carries SYU oil onshore, where federally mandated tests flagged possible corrosion; any spot with wall loss of 40% or more must be repaired<cite data-ref=\"https://www.independent.com/2026/09/17/sable-offshore-digging-up-12-spots-of-pipeline-for-corrosion/\"></cite></li><li>Chairman and CEO Jim Flores said the team made strong progress ramping up operations in the second quarter, citing higher-than-expected well productivity with minimal observable decline<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>Sable Offshore, a Texas-headquartered oil and gas company, expects to bring the Hondo platform — the third of its Santa Ynez Unit (SYU) platforms offshore California — back online in September 2026<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>The restart follows the phased return of the unit: production resumed from the Heritage platform in early April 2026, with Harmony also producing<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>An average of about 47 wells at Harmony and Heritage were online in July 2026, producing roughly 721 gross barrels of oil per day per well; all 77 production wells on those two platforms are expected online during Q3 2026<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>A wireline campaign for perforation additions and producing-well optimization at Harmony began in August 2026; five completed perforation additions at Hondo, each forecast at an incremental 600 gross barrels per day, are to come online with the platform restart in September 2026, with four more planned for early Q4 2026<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>Hondo is expected to produce lower-sulfur crude, bringing field-wide sulfur content back to normal levels on restart; chemical sweetening solutions are to be tested in Q4 2026 with full implementation anticipated in 2027<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>Sable reported $18.5 million of non-recurring demurrage charges in Q2 2026 after California refiners, unable to plan for SYU first sales, displaced imported cargoes and limited Pacific OCS throughput; refiners are expected to adjust their crude slates from September 2026 to take more SYU barrels<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li><li>Chairman and CEO Jim Flores said the team made strong progress ramping up operations in the second quarter, citing higher-than-expected well productivity with minimal observable decline<cite data-ref=\"https://www.offshore-energy.biz/sable-eyes-september-restart-for-third-oil-platform-in-california-waters/\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-sable-offshore-posts-q2-2026-miss-as-shares-fall-93CH-4852298",
+        "title": "Earnings call transcript: Sable Offshore posts Q2 2026 miss as shares fall - Investing.com",
+        "startDate": "2026-09-30",
+        "confidence": 85,
+        "publishedDate": "2026-08-11"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1831481/000183148126000108/socc-20260819.htm",
+        "title": "Sable Offshore Corp. Form 8-K (Item 8.01): 19 August 2026 court order",
+        "confidence": 90,
+        "publishedDate": "2026-08-24"
+      },
+      {
+        "url": "https://www.independent.com/2026/09/17/sable-offshore-digging-up-12-spots-of-pipeline-for-corrosion/",
+        "title": "Sable Offshore Digging Up 12 Spots of Pipeline for Corrosion - The Santa Barbara Independent",
+        "confidence": 75,
+        "publishedDate": "2026-09-17"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T14:45:13.939Z"
+  },
+  {
+    "id": 75,
+    "pinId": 2832,
+    "kind": "edit",
+    "userId": 276,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "2026-12-31T00:00:00.000Z",
+        "field": "start",
+        "allDay": true,
+        "before": "2026-10-06T00:00:00.000Z"
+      },
+      {
+        "after": "<ul><li>The EU's Technical Committee on Motor Vehicles (TCMV) is expected to vote on 6 October 2026 on extending the Dutch RDW approval of Tesla's FSD (Supervised) to all 27 member states<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite><cite data-ref=\"https://www.teslarati.com/tesla-full-self-driving-expands-another-european-country-czechia/\"></cite><cite data-ref=\"https://cleantechnica.com/2026/08/12/tesla-fsd-hurdles-in-china-secrecy-in-europe/\"></cite>.</li><li>The date is reported, not officially set: Reuters says only that a vote could happen in October<cite data-ref=\"https://www.claimsjournal.com/news/national/2026/08/06/339341.htm\"></cite>.</li><li>It needs a qualified majority: at least 15 of the 27 member states, representing 65% of the EU's population<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite><cite data-ref=\"https://www.globalbankingandfinance.com/explainer-teslas-road-full-self-driving-approval-europe/\"></cite><cite data-ref=\"https://www.teslarati.com/tesla-full-self-driving-expands-another-european-country-czechia/\"></cite>.</li><li>RDW granted the first EU approval on 10 April 2026 after more than 18 months of testing, under an Article 39 exemption of Regulation (EU) 2018/858 and UN Regulation 171<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite><cite data-ref=\"https://www.globalbankingandfinance.com/explainer-teslas-road-full-self-driving-approval-europe/\"></cite>.</li><li>On 21 September 2026 Czechia recognised the Dutch approval, becoming the seventh EU country after the Netherlands, Lithuania, Estonia, Denmark, Belgium and Slovenia<cite data-ref=\"https://www.teslarati.com/tesla-full-self-driving-expands-another-european-country-czechia/\"></cite><cite data-ref=\"https://www.engadget.com/2264292/tesla-will-soon-roll-out-fsd-supervised-in-the-czech-republic/\"></cite>.</li><li>Those six countries held roughly 8.9% of the EU's population before Czechia joined, far short of the 65% threshold<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite>.</li><li>Sweden told the committee in writing it will vote against unless Tesla removes the speed-offset feature; France declined national approval in July over speeding and driver attention, and began road-testing two FSD cars in September<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite><cite data-ref=\"https://www.globalbankingandfinance.com/explainer-teslas-road-full-self-driving-approval-europe/\"></cite>.</li><li>Reuters found Tesla pressed RDW to keep its safety review confidential; RDW says it relied on its own testing, not Tesla's statistics<cite data-ref=\"https://www.claimsjournal.com/news/national/2026/08/06/339341.htm\"></cite>.</li><li>A rejection would make RDW's provisional approval lapse after six months, invalidating the national approvals built on it, according to Denmark's traffic authorities<cite data-ref=\"https://www.globalbankingandfinance.com/explainer-teslas-road-full-self-driving-approval-europe/\"></cite>.</li><li>The 6 October TCMV meeting will only continue discussions on the Dutch request; the vote slipped to December at the earliest<cite data-ref=\"https://www.teslarati.com/tesla-full-self-driving-release-eu-gets-delayed/\"></cite>.</li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>The EU's Technical Committee on Motor Vehicles (TCMV) is expected to vote on 6 October 2026 on extending the Dutch RDW approval of Tesla's FSD (Supervised) to all 27 member states<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite><cite data-ref=\"https://www.teslarati.com/tesla-full-self-driving-expands-another-european-country-czechia/\"></cite><cite data-ref=\"https://cleantechnica.com/2026/08/12/tesla-fsd-hurdles-in-china-secrecy-in-europe/\"></cite>.</li><li>The date is reported, not officially set: Reuters says only that a vote could happen in October<cite data-ref=\"https://www.claimsjournal.com/news/national/2026/08/06/339341.htm\"></cite>.</li><li>It needs a qualified majority: at least 15 of the 27 member states, representing 65% of the EU's population<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite><cite data-ref=\"https://www.globalbankingandfinance.com/explainer-teslas-road-full-self-driving-approval-europe/\"></cite><cite data-ref=\"https://www.teslarati.com/tesla-full-self-driving-expands-another-european-country-czechia/\"></cite>.</li><li>RDW granted the first EU approval on 10 April 2026 after more than 18 months of testing, under an Article 39 exemption of Regulation (EU) 2018/858 and UN Regulation 171<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite><cite data-ref=\"https://www.globalbankingandfinance.com/explainer-teslas-road-full-self-driving-approval-europe/\"></cite>.</li><li>On 21 September 2026 Czechia recognised the Dutch approval, becoming the seventh EU country after the Netherlands, Lithuania, Estonia, Denmark, Belgium and Slovenia<cite data-ref=\"https://www.teslarati.com/tesla-full-self-driving-expands-another-european-country-czechia/\"></cite><cite data-ref=\"https://www.engadget.com/2264292/tesla-will-soon-roll-out-fsd-supervised-in-the-czech-republic/\"></cite>.</li><li>Those six countries held roughly 8.9% of the EU's population before Czechia joined, far short of the 65% threshold<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite>.</li><li>Sweden told the committee in writing it will vote against unless Tesla removes the speed-offset feature; France declined national approval in July over speeding and driver attention, and began road-testing two FSD cars in September<cite data-ref=\"https://www.techtimes.com/articles/327034/20260908/tesla-full-self-driving-clears-six-eu-nations-speed-offset-fight-could-kill-october-vote.htm\"></cite><cite data-ref=\"https://www.globalbankingandfinance.com/explainer-teslas-road-full-self-driving-approval-europe/\"></cite>.</li><li>Reuters found Tesla pressed RDW to keep its safety review confidential; RDW says it relied on its own testing, not Tesla's statistics<cite data-ref=\"https://www.claimsjournal.com/news/national/2026/08/06/339341.htm\"></cite>.</li><li>A rejection would make RDW's provisional approval lapse after six months, invalidating the national approvals built on it, according to Denmark's traffic authorities<cite data-ref=\"https://www.globalbankingandfinance.com/explainer-teslas-road-full-self-driving-approval-europe/\"></cite>.</li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.teslarati.com/tesla-full-self-driving-release-eu-gets-delayed/",
+        "title": "Tesla Full Self-Driving release in the EU gets delayed (Teslarati)",
+        "confidence": 85,
+        "publishedDate": "2026-09-25"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-28T17:41:00.821Z"
   }
 ]
