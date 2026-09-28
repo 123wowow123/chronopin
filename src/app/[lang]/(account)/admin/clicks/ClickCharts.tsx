@@ -307,7 +307,7 @@ export function ClickCharts({ clicks, serverNow }: { clicks: ShopClickRow[]; ser
                   </span>
                 </div>
                 <div className="mt-0.5 flex flex-wrap gap-x-3 text-xs text-subtle tabular-nums">
-                  <span className="text-ink">{c.userId != null ? `@${c.userName ?? c.userId}` : (c.ip ?? 'unknown address')}</span>
+                  <span className="text-ink">{c.userId != null ? (c.userName ?? `user ${c.userId}`) : (c.ip ?? 'unknown address')}</span>
                   <span>{placeLabel(c)}</span>
                   <span className="ml-auto">{utcTime(c.at)}</span>
                 </div>

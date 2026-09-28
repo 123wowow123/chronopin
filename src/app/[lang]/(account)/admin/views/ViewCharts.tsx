@@ -260,7 +260,7 @@ export function ViewCharts({
                   {v.title || `Pin ${v.pinId}`}
                 </Link>
                 <div className="mt-0.5 flex flex-wrap gap-x-3 text-xs text-subtle tabular-nums">
-                  <span className="text-ink">{v.userId != null ? `@${v.userName ?? v.userId}` : v.ip}</span>
+                  <span className="text-ink">{v.userId != null ? (v.userName ?? `user ${v.userId}`) : v.ip}</span>
                   {v.userId != null ? <span>{v.ip}</span> : null}
                   <span>{v.place || 'Unplaced'}</span>
                   <span className="ml-auto">{utcTime(v.at)}</span>
