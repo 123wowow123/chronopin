@@ -4,11 +4,12 @@ import type { Evidence } from './referenceConfidence';
 
 // Pin descriptions and summaries are stored as HTML (bulleted key points,
 // links). The Angular app rendered them with sanitising turned off; this keeps
-// the formatting and drops anything that could run script.
+// the formatting and drops anything that could run script. Tables carry a
+// maker's own results table (a model's benchmarks against its rivals).
 export function safeHtml(html: string | null | undefined): string {
   return sanitizeHtml(html || '', {
-    allowedTags: ['p', 'br', 'ul', 'ol', 'li', 'b', 'strong', 'i', 'em', 's', 'u', 'a', 'h3', 'h4', 'blockquote', 'code'],
-    allowedAttributes: { a: ['href', 'title'] },
+    allowedTags: ['p', 'br', 'ul', 'ol', 'li', 'b', 'strong', 'i', 'em', 's', 'u', 'a', 'h3', 'h4', 'blockquote', 'code', 'table', 'caption', 'thead', 'tbody', 'tr', 'th', 'td'],
+    allowedAttributes: { a: ['href', 'title'], th: ['colspan', 'rowspan', 'scope'], td: ['colspan', 'rowspan'] },
     allowedSchemes: ['http', 'https', 'mailto'],
     transformTags: {
       a: sanitizeHtml.simpleTransform('a', { rel: 'noopener nofollow ugc', target: '_blank' }),

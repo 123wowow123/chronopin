@@ -22,6 +22,13 @@ describe('safeCitedHtml', () => {
     expect(safeCitedHtml(html, [source])).toBe('<ul><li>Point9</li></ul>');
   });
 
+  it('keeps a results table but not its styling or handlers', () => {
+    const html = '<table style="color:red"><thead><tr><th scope="col" onclick="x()">Model</th><th>Score</th></tr></thead><tbody><tr><th scope="row">A</th><td colspan="2" class="x">70.6%</td></tr></tbody></table>';
+    expect(safeCitedHtml(html, [source])).toBe(
+      '<table><thead><tr><th scope="col">Model</th><th>Score</th></tr></thead><tbody><tr><th scope="row">A</th><td colspan="2">70.6%</td></tr></tbody></table>',
+    );
+  });
+
   it('leaves summaries without citations as they were', () => {
     expect(safeCitedHtml('<ul><li>Point [1]</li></ul>', [source])).toBe('<ul><li>Point [1]</li></ul>');
   });

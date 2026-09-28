@@ -389,6 +389,24 @@
   .rich-text > :first-child {
     @apply mt-0;
   }
+  /* A maker's results table (benchmarks); scrolls sideways on a phone
+     rather than widening the page. */
+  .rich-text table {
+    @apply my-3 block max-w-full overflow-x-auto border-collapse text-sm;
+  }
+  .rich-text th,
+  .rich-text td {
+    @apply border border-line px-2 py-1 text-left align-top whitespace-nowrap;
+  }
+  .rich-text thead th {
+    @apply bg-panel font-semibold text-ink;
+  }
+  .rich-text tbody th {
+    @apply font-medium text-ink;
+  }
+  .rich-text caption {
+    @apply mb-1 text-left text-xs text-muted;
+  }
 
   /* YouTube embeds keep a 16:9 box. */
   .embed-container {
