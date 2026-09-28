@@ -63,6 +63,9 @@ describe('isSameProduct', () => {
   it('counts the brand beside the name', () => {
     expect(isSameProduct('PUMA MB.06 Shooting Star', 'Puma', markup)).toBe(true);
   });
+  it('reads past trademark signs', () => {
+    expect(isSameProduct('The Legend of Zelda: Tears of the Kingdom', 'Nintendo', { name: 'The Legend of Zelda\u2122: Tears of the Kingdom' })).toBe(true);
+  });
   it('refuses another colorway of the model', () => {
     expect(isSameProduct('PUMA MB.06 Puerto Rico', 'Puma', markup)).toBe(false);
   });

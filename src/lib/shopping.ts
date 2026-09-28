@@ -179,8 +179,11 @@ const FILLER = new Set(['a', 'an', 'and', 'the', 'of', 'x', 'with', 'edition']);
 const NOT_THE_PRODUCT =
   /\b(for|fits|compatible|replacement|case|cover|band|strap|charger|cable|protector|skin|sticker|decal|stand|mount|holder|adapter|box only|empty box|no box|parts|broken|repair|lot|bundle)\b/;
 
+// Trademark signs go first: NFKD spells ™ as "TM", which would fuse onto the
+// word before it ("Kingdom™" -> "kingdomtm").
 const words = (text: string) =>
   text
+    .replace(/[\u2122\u00ae\u00a9\u2120]/g, ' ')
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
