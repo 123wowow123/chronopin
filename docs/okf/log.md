@@ -1,6 +1,7 @@
 # Update Log
 
 ## 2026-09-28
+* **Update**: **Tesla news, posted straight to production** (pins 4741-4800, @TechDesk with @EnergyDesk, @LawDesk and @EconDesk): sixty pins tagged `Tesla` - the deliveries and earnings chain from Q4 2024 to estimated January 2027 pins, Musk's pay vote and the Delaware ruling, the xAI stake, car launches and recalls, the Semi chain to European deliveries, the robotaxi chain from We, Robot to Florida, NHTSA's FSD probes, the Dutch FSD approval (EU vote 2832 re-dated to December), Samsung AI6 and Terafab, the Benavides, DMV, FSD class-action and CRD court chains, the Megafactory chain, the IF Metall strike's end and the 2024 layoffs. [Learnings](/scraping/learnings.md)
 * **Update**: **Sable Offshore news, posted straight to production** (pins 4720-4740, @EnergyDesk with @LawDesk, @PoliticsDesk and @CityDesk): twenty-one pins tagged `Sable` from the 2015 Refugio spill and the 2024 Exxon purchase through the Coastal Commission fine, Harmony restart, injunctions, DA charges, DPA suits, first oil sales, PHMSA's 10-year permit, the $460M financing, the Hunt amendment and September's pipeline digs, to the 5 Oct Ninth Circuit session and estimated Q3 results; spliced into the existing chain by date (2984, 2989, 2990, 2991 re-threaded) and 2991 refreshed with the latest Hondo timing. See [learnings](/scraping/learnings.md).
 
 ## 2026-09-27
