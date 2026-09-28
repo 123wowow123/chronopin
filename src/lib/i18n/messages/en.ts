@@ -121,6 +121,7 @@ const en = {
     pinMany: '<actor></actor> posted <n>{count}</n> new pins',
     start: '<pin></pin> is starting now',
     soon: '<pin></pin> starts in {minutes} minutes',
+    update: '<pin></pin> was updated',
     whyWatch: 'A pin you watch',
     whyCompany: 'You follow {company}',
     whyUser: 'You follow {user}',
@@ -132,6 +133,7 @@ const en = {
   // Browser notifications about watched pins (services/watchAlerts.ts).
   alerts: {
     start: 'Starting now · a pin you watch',
+    update: 'Updated · a pin you watch',
     soon: { one: 'Starts in {count} minute · a pin you watch', other: 'Starts in {count} minutes · a pin you watch' },
   },
   categories: {
@@ -1109,7 +1111,7 @@ const en = {
     stocksLabel: 'Stock prices on pin cards',
     stocksHint: "The company's share price and its move since the start date, beside the company's name. A pin's own page always lists its stocks.",
     alertsLabel: 'Watched pin alerts',
-    alertsHint: 'A browser notification when a pin you watch starts, even with Chronopin closed.',
+    alertsHint: 'A browser notification when a pin you watch starts or is updated, even with Chronopin closed.',
     alertsOn: 'Notifications are on in this browser.',
     alertsEnable: 'Turn on notifications',
     alertsBlocked: 'This browser blocks notifications from Chronopin. Allow them in the site settings to get alerts.',

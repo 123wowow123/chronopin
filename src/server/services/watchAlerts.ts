@@ -16,7 +16,8 @@ import log from '../util/log';
 // that was new as a browser notification - over the live feed to the
 // watcher's open pages, and as a Web Push to every browser they allowed
 // notifications in (src/server/push.ts). The unique index on the rows is what
-// makes each go out once, however many servers or ticks see it due.
+// makes each go out once, however many servers or ticks see it due. A watched
+// pin that is updated is sent the same way (notifyWatchersOfUpdate).
 
 const CHECK_MS = 20 * 1000;
 
@@ -89,6 +90,46 @@ export async function checkWatchAlerts(now = new Date()): Promise<number> {
     return due.length;
   } finally {
     g.__chronopinWatchAlertBusy = false;
+  }
+}
+
+// Tells a pin's watchers that it was updated - in the bell, and as a browser
+// notification to each one newly told (a watcher who has not yet read the
+// last one only has that one brought up to date). actorId is whoever made the
+// update; left out (an article rewritten from its links) it is the pin's
+// author. Never throws: the update it is about has already been saved.
+export async function notifyWatchersOfUpdate(pinId: number, actorId?: number | null) {
+  try {
+    const { pin: found } = await Pin.queryById(pinId);
+    if (!found) return;
+    const pin = toJson<PinJson>(found);
+    const actor = actorId ?? (pin.userId == null ? null : Number(pin.userId));
+    if (actor == null) return;
+    const userIds = await Notification.createForWatchers({ pinId, actorId: actor });
+    if (!userIds.length) return;
+    const locales = await localesOf(userIds);
+    const translators = new Map<Locale, Promise<Translator>>();
+    await Promise.all(
+      userIds.map(async (userId) => {
+        const locale = locales.get(userId) ?? 'en';
+        if (!translators.has(locale)) translators.set(locale, translatorFor(locale));
+        const t = await translators.get(locale)!;
+        const alert: WatchAlert = {
+          userId,
+          pinId,
+          type: 'update',
+          title: pin.title,
+          body: t('alerts.update'),
+          url: `${pinPath({ id: pinId, title: pin.title })}#updates`,
+          image: pinImage(pin)?.url ?? null,
+          tag: `pin-${pinId}-update`,
+        };
+        emitWatchAlert(alert);
+        await pushToUser(userId, alert);
+      }),
+    );
+  } catch (err) {
+    log.warn(`telling pin ${pinId}'s watchers of its update failed:`, (err as Error).message);
   }
 }
 

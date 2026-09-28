@@ -36,9 +36,9 @@ export default class PinUpdate {
 
   // The pin's newest update since `since`, which a rewrite that follows it
   // (the article rebuilt from the link it brought) folds into.
-  static async latestSince(pinId: number, since: Date): Promise<(Row & { id: number; kind: PinUpdateKind; changes: PinChange[]; note: string | null }) | undefined> {
+  static async latestSince(pinId: number, since: Date): Promise<(Row & { id: number; kind: PinUpdateKind; userId: number | null; changes: PinChange[]; note: string | null }) | undefined> {
     const [row] = await db.query(
-      `SELECT "id", "kind", "changes", "note" FROM "PinUpdate"
+      `SELECT "id", "kind", "userId", "changes", "note" FROM "PinUpdate"
        WHERE "pinId" = $1 AND "utcCreatedDateTime" >= $2
        ORDER BY "utcCreatedDateTime" DESC, "id" DESC LIMIT 1`,
       [pinId, since],

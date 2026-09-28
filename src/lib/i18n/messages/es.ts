@@ -120,6 +120,7 @@ const es: Messages = {
     pinMany: '<actor></actor> publicó <n>{count}</n> pines nuevos',
     start: '<pin></pin> empieza ahora',
     soon: '<pin></pin> empieza en {minutes} minutos',
+    update: '<pin></pin> se ha actualizado',
     whyWatch: 'Un pin que sigues',
     whyCompany: 'Sigues a {company}',
     whyUser: 'Sigues a {user}',
@@ -131,6 +132,7 @@ const es: Messages = {
   // Browser notifications about watched pins (services/watchAlerts.ts).
   alerts: {
     start: 'Empieza ahora · un pin que sigues',
+    update: 'Actualizado · un pin que sigues',
     soon: { one: 'Empieza en {count} minuto · un pin que sigues', other: 'Empieza en {count} minutos · un pin que sigues' },
   },
   categories: {
@@ -1105,7 +1107,7 @@ const es: Messages = {
     stocksLabel: 'Precios de acciones en las tarjetas',
     stocksHint: 'El precio de la acción de la empresa y su variación desde la fecha de inicio, junto al nombre de la empresa. La página de cada pin siempre muestra sus acciones.',
     alertsLabel: 'Avisos de pins que sigues',
-    alertsHint: 'Una notificación del navegador cuando empieza un pin que sigues, aunque Chronopin esté cerrado.',
+    alertsHint: 'Una notificación del navegador cuando un pin que sigues empieza o se actualiza, aunque Chronopin esté cerrado.',
     alertsOn: 'Las notificaciones están activadas en este navegador.',
     alertsEnable: 'Activar notificaciones',
     alertsBlocked: 'Este navegador bloquea las notificaciones de Chronopin. Permítelas en la configuración del sitio para recibir avisos.',

@@ -120,6 +120,7 @@ const ko: Messages = {
     pinMany: '<actor></actor>님이 새 핀 <n>{count}</n>개를 게시했습니다',
     start: '<pin></pin>이(가) 지금 시작됩니다',
     soon: '<pin></pin>이(가) {minutes}분 후 시작됩니다',
+    update: '<pin></pin>이(가) 업데이트되었습니다',
     whyWatch: '관심 핀',
     whyCompany: '{company} 팔로우 중',
     whyUser: '{user}님 팔로우 중',
@@ -131,6 +132,7 @@ const ko: Messages = {
   // Browser notifications about watched pins (services/watchAlerts.ts).
   alerts: {
     start: '지금 시작 · 지켜보는 핀',
+    update: '업데이트됨 · 지켜보는 핀',
     soon: '{count}분 후 시작 · 지켜보는 핀',
   },
   categories: {
@@ -1093,7 +1095,7 @@ const ko: Messages = {
     stocksLabel: '핀 카드에 주가 표시',
     stocksHint: '기업명 옆에 주가와 시작일 이후의 변동을 표시합니다. 핀 페이지에는 항상 주식 정보가 표시됩니다.',
     alertsLabel: '지켜보는 핀 알림',
-    alertsHint: '지켜보는 핀이 시작되면 Chronopin을 닫아 두어도 브라우저 알림을 보냅니다.',
+    alertsHint: '지켜보는 핀이 시작되거나 업데이트되면 Chronopin을 닫아 두어도 브라우저 알림을 보냅니다.',
     alertsOn: '이 브라우저에서 알림이 켜져 있습니다.',
     alertsEnable: '알림 켜기',
     alertsBlocked: '이 브라우저가 Chronopin의 알림을 차단하고 있습니다. 알림을 받으려면 사이트 설정에서 허용하세요.',

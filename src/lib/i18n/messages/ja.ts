@@ -120,6 +120,7 @@ const ja: Messages = {
     pinMany: '<actor></actor>さんが新しいピンを<n>{count}</n>件投稿しました',
     start: '<pin></pin>がまもなく始まります',
     soon: '<pin></pin>は{minutes}分後に始まります',
+    update: '<pin></pin>が更新されました',
     whyWatch: 'ウォッチ中のピン',
     whyCompany: '{company}をフォロー中',
     whyUser: '{user}さんをフォロー中',
@@ -131,6 +132,7 @@ const ja: Messages = {
   // Browser notifications about watched pins (services/watchAlerts.ts).
   alerts: {
     start: 'まもなく開始 · ウォッチ中のピン',
+    update: '更新されました · ウォッチ中のピン',
     soon: '{count}分後に開始 · ウォッチ中のピン',
   },
   categories: {
@@ -1092,7 +1094,7 @@ const ja: Messages = {
     stocksLabel: 'ピンのカードに株価を表示',
     stocksHint: '企業名の横に、企業の株価と開始日からの値動きを表示します。ピンのページには常に株式が表示されます。',
     alertsLabel: 'ウォッチ中のピンの通知',
-    alertsHint: 'ウォッチ中のピンが始まるとき、Chronopinを閉じていてもブラウザに通知します。',
+    alertsHint: 'ウォッチ中のピンが始まるときや更新されたとき、Chronopinを閉じていてもブラウザに通知します。',
     alertsOn: 'このブラウザでは通知がオンです。',
     alertsEnable: '通知をオンにする',
     alertsBlocked: 'このブラウザはChronopinからの通知をブロックしています。通知を受け取るにはサイトの設定で許可してください。',

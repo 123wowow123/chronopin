@@ -120,6 +120,7 @@ const de: Messages = {
     pinMany: '<actor></actor> hat <n>{count}</n> neue Pins gepostet',
     start: '<pin></pin> beginnt jetzt',
     soon: '<pin></pin> beginnt in {minutes} Minuten',
+    update: '<pin></pin> wurde aktualisiert',
     whyWatch: 'Pin, den du beobachtest',
     whyCompany: 'Du folgst {company}',
     whyUser: 'Du folgst {user}',
@@ -131,6 +132,7 @@ const de: Messages = {
   // Browser notifications about watched pins (services/watchAlerts.ts).
   alerts: {
     start: 'Beginnt jetzt · ein Pin, den du beobachtest',
+    update: 'Aktualisiert · ein Pin, den du beobachtest',
     soon: { one: 'Beginnt in {count} Minute · ein Pin, den du beobachtest', other: 'Beginnt in {count} Minuten · ein Pin, den du beobachtest' },
   },
   categories: {
@@ -1105,7 +1107,7 @@ const de: Messages = {
     stocksLabel: 'Aktienkurse auf Pin-Karten',
     stocksHint: 'Der Aktienkurs der Firma und seine Entwicklung seit dem Startdatum, neben dem Firmennamen. Die Seite eines Pins listet seine Aktien immer auf.',
     alertsLabel: 'Hinweise zu beobachteten Pins',
-    alertsHint: 'Eine Browser-Benachrichtigung, wenn ein Pin beginnt, den du beobachtest – auch wenn Chronopin geschlossen ist.',
+    alertsHint: 'Eine Browser-Benachrichtigung, wenn ein Pin, den du beobachtest, beginnt oder aktualisiert wird – auch wenn Chronopin geschlossen ist.',
     alertsOn: 'Benachrichtigungen sind in diesem Browser aktiv.',
     alertsEnable: 'Benachrichtigungen aktivieren',
     alertsBlocked: 'Dieser Browser blockiert Benachrichtigungen von Chronopin. Erlaube sie in den Website-Einstellungen, um Hinweise zu erhalten.',

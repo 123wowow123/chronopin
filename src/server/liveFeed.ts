@@ -7,7 +7,7 @@
 //   odds            { pinId, markets } for the pins the page says it shows
 //   stock           a StockQuote for each ticker of the pins it asked quotes for
 //   notifications   { unreadCount } for the signed-in viewer's own connections
-//   alert           a watched pin starting now or soon (a WatchAlert), for the
+//   alert           a watched pin starting now or soon, or updated (a WatchAlert), for the
 //                   signed-in viewer's own connections to show as a browser
 //                   notification
 //

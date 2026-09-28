@@ -120,6 +120,7 @@ const fr: Messages = {
     pinMany: '<actor></actor> a publié <n>{count}</n> nouvelles épingles',
     start: '<pin></pin> commence maintenant',
     soon: '<pin></pin> commence dans {minutes} minutes',
+    update: '<pin></pin> a été mis à jour',
     whyWatch: 'Une épingle que vous suivez',
     whyCompany: 'Vous suivez {company}',
     whyUser: 'Vous suivez {user}',
@@ -131,6 +132,7 @@ const fr: Messages = {
   // Browser notifications about watched pins (services/watchAlerts.ts).
   alerts: {
     start: 'Commence maintenant · un pin que vous suivez',
+    update: 'Mis à jour · un pin que vous suivez',
     soon: { one: 'Commence dans {count} minute · un pin que vous suivez', other: 'Commence dans {count} minutes · un pin que vous suivez' },
   },
   categories: {
@@ -1105,7 +1107,7 @@ const fr: Messages = {
     stocksLabel: 'Cours boursiers sur les cartes',
     stocksHint: 'Le cours de l’action de l’entreprise et son évolution depuis la date de début, à côté du nom de l’entreprise. La page de chaque épingle liste toujours ses actions.',
     alertsLabel: 'Alertes des pins suivis',
-    alertsHint: 'Une notification du navigateur quand un pin que vous suivez commence, même si Chronopin est fermé.',
+    alertsHint: 'Une notification du navigateur quand un pin que vous suivez commence ou est mis à jour, même si Chronopin est fermé.',
     alertsOn: 'Les notifications sont activées dans ce navigateur.',
     alertsEnable: 'Activer les notifications',
     alertsBlocked: 'Ce navigateur bloque les notifications de Chronopin. Autorisez-les dans les paramètres du site pour recevoir les alertes.',

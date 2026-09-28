@@ -121,6 +121,7 @@ const zh: Messages = {
     pinMany: '<actor></actor> 发布了 <n>{count}</n> 个新图钉',
     start: '<pin></pin>现在开始',
     soon: '<pin></pin>将在{minutes}分钟后开始',
+    update: '<pin></pin>已更新',
     whyWatch: '你关注的图钉',
     whyCompany: '你关注了 {company}',
     whyUser: '你关注了 {user}',
@@ -132,6 +133,7 @@ const zh: Messages = {
   // Browser notifications about watched pins (services/watchAlerts.ts).
   alerts: {
     start: '现在开始 · 你关注的图钉',
+    update: '已更新 · 你关注的图钉',
     soon: '{count}分钟后开始 · 你关注的图钉',
   },
   categories: {
@@ -1092,7 +1094,7 @@ const zh: Messages = {
     stocksLabel: '在图钉卡片上显示股价',
     stocksHint: '在公司名称旁显示公司股价及其自开始日期以来的涨跌。图钉页面始终会列出其股票。',
     alertsLabel: '关注图钉提醒',
-    alertsHint: '你关注的图钉开始时，即使 Chronopin 已关闭，也会收到浏览器通知。',
+    alertsHint: '你关注的图钉开始或更新时，即使 Chronopin 已关闭，也会收到浏览器通知。',
     alertsOn: '此浏览器已开启通知。',
     alertsEnable: '开启通知',
     alertsBlocked: '此浏览器已屏蔽 Chronopin 的通知。请在网站设置中允许通知以接收提醒。',

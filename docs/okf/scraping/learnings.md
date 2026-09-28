@@ -6352,3 +6352,30 @@ tagged `Footwear` instead. Folder `.scrape/prod-batches/sneakers-2026-09-26/` (B
 * **Dates:** availability day, not announcement (3 Haiku 13 Mar 2024, 3.5 Haiku 4 Nov 2024); 3.5 Sonnet's post header now reads 21 Jun but TechCrunch/AWS and the model id say 20 Jun 2024.
 * **Benchmark tables** (the new owner rule) transcribed as HTML tables on 13 of 14 (Claude 4's post has only a bar chart; its CSV data file gave Opus 4's table); multi-value cells either kept in one cell ("Retail 81.4%, Airline 59.6%") or split into rows - both fine. Footnote markers as Unicode superscripts (the sanitizer strips `<sup>`).
 * **No Sonnet 4.7/4.8 and no Haiku between 4.5 and 5.5** (deprecations table, docs models overview). No official video for 3.5 Haiku, Opus 4.1 or Sonnet 5.
+
+## 2026-09-28 - B&W news from r/babcockwilcox, two pins on prod (@EnergyDesk)
+
+Ian asked to "check reddit for babcockwilcox news to pin" (r/babcockwilcox/new). Of the 25 newest
+posts, only the Oliver County zoning fight over Base Electron's Missouri Bend Energy Center (the
+1.2 GW B&W plant for Applied Digital) was not already a pin: prod 4830 (27 Aug, board tables all four
+applications) and 4831 (24 Sep, all four motions to approve fail 2-3), threaded 2948 -> 4830 -> 4831
+-> 2949 (2949 re-threaded by round-trip PUT). The rest were already pinned or not events.
+
+* **Learned - reading a subreddit.** `reddit.com/r/<sub>/new.json` and `api.reddit.com` answer 403
+  (network-security block), `old.reddit.com` redirects to a block, and `/new/.rss` works once and
+  then 429s for minutes. Save the first RSS response. The Atom `content` holds the post body and
+  links.
+* **Learned - county meetings.** olivercountynd.org's County News list (`index.asp?SEC=B943D853-...`)
+  has every agenda with times (P&Z at 7 pm Central), readable with plain `curl`. Minutes lag by
+  months. The recordings are on the county's Facebook page (`facebook.com/100088537675086`), where
+  `facebookexternalhit` as the UA returns the og:title and og:url (which carries the meeting date)
+  and a 1280x720 og:image that prod can fetch. WDEA's newsletter (ndenergy.org) reports the
+  meetings a day later, and its story images sit on `wdeawebsite.blob.core.windows.net`.
+* **Learned - placing a site from a legal description.** BLM's PLSS CadNSDI MapServer layer 2
+  (`query?where=PLSSID='ND051420N0850W0' AND FRSTDIVNO='25'&outSR=4326`) returns each section's
+  outline, so a quarter-section can be placed exactly. The PLSSID has the form
+  `ND05` + `1420N` + `0850W` + `0` (a point query shows it).
+* **Open:** the 24 Sep outcome rests on a shareholder's Reddit summary of the county recording,
+  since no paper had reported it by 28 Sep. The Oliver County Commission makes the final decision,
+  and no date for it was posted. Pin that meeting when it is noticed. The YouTube Data API key in
+  .env.local now answers "API key not valid".

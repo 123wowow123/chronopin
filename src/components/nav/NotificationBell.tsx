@@ -115,6 +115,7 @@ function reasonOf(n: Notification, t: Translator): { icon: IconName; label: stri
     case 'today':
     case 'start':
     case 'soon':
+    case 'update':
       return { icon: 'eye', label: t('notifications.whyWatch') };
     case 'company':
       return n.companyName
@@ -167,14 +168,14 @@ function useNotificationList() {
 }
 
 // The face at the left of a row: a mark of its own for a watched pin landing
-// today, starting or about to, the company's logo for one of its pins (its
+// today, starting or about to, or updated, the company's logo for one of its pins (its
 // author's avatar would look like the pin came from them), otherwise the actor.
 // A batch wears the number it stands for, so a run of pins is countable
 // straight down the left edge.
 function NotificationFace({ n, onNavigate }: { n: Notification; onNavigate?: () => void }) {
   const handle = n.actor.userName.replace(/^@+/, '');
   const face =
-    n.type === 'today' || n.type === 'start' || n.type === 'soon' ? (
+    n.type === 'today' || n.type === 'start' || n.type === 'soon' || n.type === 'update' ? (
       <span aria-hidden className="flex size-8 items-center justify-center rounded-full bg-tag-today/15 text-tag-today">
         <Icon name="target" className="size-4" />
       </span>
@@ -262,6 +263,10 @@ function NotificationItems({
                     {n.type === 'start'
                       ? t.rich('notifications.start', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })
                       : t.rich('notifications.soon', { minutes: ALERT_SOON_MINUTES, pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
+                  </Link>
+                ) : n.type === 'update' && n.pinId ? (
+                  <Link href={`${pinPath({ id: n.pinId, title: n.pinTitle ?? '' })}#updates`} className="block text-ink" onClick={onNavigate}>
+                    {t.rich('notifications.update', { pin: () => <span className="font-semibold">{n.pinTitle}</span> })}
                   </Link>
                 ) : n.type === 'pin' && n.pinId ? (
                   <PinRowLink n={n} onNavigate={onNavigate}>

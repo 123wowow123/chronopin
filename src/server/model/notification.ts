@@ -33,6 +33,9 @@ const types = {
   company: 'company',
   // A new pin from someone you follow. The actor is the pin's author.
   pin: 'pin',
+  // A pin you watch was updated (a new entry in its Updates pane). Sent as a
+  // browser notification too. The actor is whoever made the update.
+  update: 'update',
 } as const;
 
 // How late an alert may still go out, for a server that was down or busy
@@ -184,6 +187,35 @@ export default class Notification {
     ).then((rows) => announce(query, rows));
   }
 
+  // One 'update' per watcher of the pin but the actor, who knows, and answers
+  // with who was newly told, for the browser notification. A watcher with an
+  // unread one already has it brought up to date instead (the unique index),
+  // so an edit made five times is one entry - and one browser notification.
+  // Sent only where the bell would show it, as writeDueAlerts does.
+  static async createForWatchers({ pinId, actorId }: { pinId: number; actorId: number }, query: QueryFn = db.query): Promise<number[]> {
+    const rows = await query(
+      `
+      WITH written AS (
+        INSERT INTO "Notification" ("userId", "actorId", "type", "pinId")
+        SELECT f."userId", $2, 'update', $1
+        FROM "Favorite" f
+        JOIN "User" u ON u."id" = f."userId" AND u."utcDeletedDateTime" IS NULL
+        WHERE f."pinId" = $1 AND f."utcDeletedDateTime" IS NULL AND f."userId" <> $2
+        ON CONFLICT ("userId", "pinId") WHERE "type" = 'update' AND "utcReadDateTime" IS NULL AND "utcDeletedDateTime" IS NULL
+        DO UPDATE SET "actorId" = EXCLUDED."actorId", "utcCreatedDateTime" = now()
+        RETURNING "userId", (xmax = 0) AS "inserted"
+      )
+      SELECT w."userId", w."inserted"
+      FROM written w
+      JOIN "Pin" p ON p."id" = $1
+      WHERE NOT ${blockedBetween('w."userId"', '$2')}
+        AND NOT EXISTS (SELECT 1 FROM "CompanyBlock" cb WHERE cb."userId" = w."userId" AND cb."companyId" = p."companyId")`,
+      [pinId, actorId],
+    );
+    announce(query, rows);
+    return rows.filter((row) => row.inserted).map((row) => Number(row.userId));
+  }
+
   // Soft-deletes everything a comment sent (its 'comment' and 'reply'
   // notifications), for when that comment is deleted.
   static retractForComment(commentId: number, query: QueryFn = db.query) {
@@ -270,13 +302,13 @@ export default class Notification {
   }
 
   // Unwatching a pin takes back its 'today' notifications, and any alert
-  // that it was starting.
+  // that it was starting or had been updated.
   static retractWatched({ userId, pinId }: { userId: number; pinId: number }, query: QueryFn = db.query) {
     return query(
       `
       UPDATE "Notification"
       SET "utcDeletedDateTime" = now()
-      WHERE "userId" = $1 AND "pinId" = $2 AND "type" IN ('today', 'start', 'soon') AND "utcDeletedDateTime" IS NULL
+      WHERE "userId" = $1 AND "pinId" = $2 AND "type" IN ('today', 'start', 'soon', 'update') AND "utcDeletedDateTime" IS NULL
       RETURNING "userId"`,
       [userId, pinId],
     ).then((rows) => announce(query, rows));
