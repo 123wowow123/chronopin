@@ -396,13 +396,13 @@
   }
   .rich-text th,
   .rich-text td {
-    @apply border border-line px-2 py-1 text-left align-top whitespace-nowrap;
+    @apply min-w-[5.5rem] border border-line px-2 py-1 text-left align-top;
   }
   .rich-text thead th {
     @apply bg-panel font-semibold text-ink;
   }
   .rich-text tbody th {
-    @apply font-medium text-ink;
+    @apply min-w-[8rem] font-medium text-ink;
   }
   .rich-text caption {
     @apply mb-1 text-left text-xs text-muted;
