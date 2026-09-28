@@ -34,13 +34,18 @@ export function wholeWordPattern(text: string): string {
   return `(^|[^[:alnum:]])${literal}([^[:alnum:]]|$)`;
 }
 
+// Whether typed text is written in Chinese, Japanese or Korean.
+export function isCjkText(text: string): boolean {
+  return /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u.test(text);
+}
+
 // Typed text as Postgres regexes (~*) a title must match all of: a whole word
 // or words, as wholeWordPattern, except in Chinese, Japanese and Korean - there
 // each space-separated word matches anywhere, in any order. Chinese and
 // Japanese leave no space between words, and Korean runs nouns together
 // (나이키 실적 finds "나이키 2025 회계연도 4분기 실적").
 export function typedTextPatterns(text: string): string[] {
-  if (/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}]/u.test(text)) {
+  if (isCjkText(text)) {
     return text.trim().split(/\s+/).map((word) => word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
   }
   return [wholeWordPattern(text)];
@@ -64,3 +69,11 @@ export function looksLikePlaceText(text: string): boolean {
 // the place someone typed is as good a match as the best the text can offer,
 // so it ranks with them rather than under the whole semantic pool.
 export const PLACE_TEXT_SCORE = 0.7;
+
+// What a translated title holding every word of Chinese, Japanese or Korean
+// text counts as: above any cosine score (they stay under 1), since what was
+// typed is the pin's name as that language writes it (無職転生III ～異世界行ったら
+// 本気だす～ scored 0.73 on unrelated pins, above the address score). The
+// semantic score is added to order several such pins. Latin text keeps
+// PLACE_TEXT_SCORE: an English word is in too many translated titles.
+export const TITLE_TEXT_SCORE = 1;

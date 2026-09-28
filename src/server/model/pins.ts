@@ -7,7 +7,7 @@ import PinTag from './pinTag';
 import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
 import { reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
-import { PLACE_TEXT_SCORE, looksLikePlaceText, placePatterns, typedTextPatterns, wholeWordPattern } from '../util/placeMatch';
+import { PLACE_TEXT_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
 import type { RatingBound } from '../util/searchQuery';
 
@@ -773,7 +773,8 @@ function searchClauses(filter: SearchFilter) {
       const textMatches = [textPlace, textTitle].filter(Boolean);
       joins.push(`LEFT JOIN ${hit}`);
       where.push(`("hit"."id" IS NOT NULL OR ${textMatches.join(' OR ')})`);
-      score = `GREATEST(COALESCE("hit"."score", 0), ${textMatches.map((match) => `CASE WHEN ${match} THEN ${PLACE_TEXT_SCORE}::float8 ELSE 0 END`).join(', ')})`;
+      const titleScore = isCjkText(filter.text!) ? `${TITLE_TEXT_SCORE}::float8 + COALESCE("hit"."score", 0)` : `${PLACE_TEXT_SCORE}::float8`;
+      score = `GREATEST(COALESCE("hit"."score", 0), CASE WHEN ${textPlace} THEN ${PLACE_TEXT_SCORE}::float8 ELSE 0 END, CASE WHEN ${textTitle} THEN ${titleScore} ELSE 0 END)`;
     } else {
       joins.push(`INNER JOIN ${hit}`);
       score = '"hit"."score"';

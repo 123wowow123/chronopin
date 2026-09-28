@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { looksLikePlaceText, placeNames, placePatterns, typedTextPatterns, wholeWordPattern } from './placeMatch';
+import { isCjkText, looksLikePlaceText, placeNames, placePatterns, typedTextPatterns, wholeWordPattern } from './placeMatch';
 
 // Postgres character classes are not JavaScript's, so a pattern is read here
 // the way Postgres would read it against a real address.
@@ -78,5 +78,13 @@ describe('typedTextPatterns', () => {
 
   it('reads regex characters in the text as themselves', () => {
     expect(typedTextPatterns('C++ 入门')).toEqual(['C\\+\\+', '入门']);
+  });
+});
+
+describe('isCjkText', () => {
+  it('tells Chinese, Japanese and Korean from Latin text', () => {
+    expect(isCjkText('無職転生III ～異世界行ったら本気だす～')).toBe(true);
+    expect(isCjkText('나이키 실적')).toBe(true);
+    expect(isCjkText('Mushoku Tensei III')).toBe(false);
   });
 });
