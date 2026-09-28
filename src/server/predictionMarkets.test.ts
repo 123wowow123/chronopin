@@ -83,3 +83,37 @@ describe('oddsFor: Kalshi volume in dollars', () => {
     expect(odds?.volume).toBe(100);
   });
 });
+
+describe('oddsFor: titles and outcomes as shown', () => {
+  afterEach(() => vi.unstubAllGlobals());
+
+  it('leaves off the parts of a Kalshi subtitle the title already says', async () => {
+    answer({
+      event: {
+        event_ticker: 'KXTEST-26',
+        series_ticker: 'KXTEST',
+        title: 'MTV Video Music Awards: Video of the Year',
+        sub_title: 'Video of the Year | 2026',
+        markets: [{ ticker: 'KXTEST-26-A', status: 'active', title: 'A', last_price_dollars: '0.5000' }],
+      },
+    });
+    const { oddsFor } = await load();
+    const odds = await oddsFor(kalshiRef);
+    expect(odds?.title).toBe('MTV Video Music Awards: Video of the Year 2026');
+  });
+
+  it("drops a Polymarket event's inactive placeholder markets", async () => {
+    const market = (label: string, price: string, active: boolean) => ({
+      groupItemTitle: label,
+      question: `Will ${label} win?`,
+      outcomes: '["Yes", "No"]',
+      outcomePrices: JSON.stringify([price, String(1 - Number(price))]),
+      active,
+      closed: false,
+    });
+    answer([{ title: 'VMA Video of the Year 2026', closed: false, markets: [market('Taylor Swift', '0.99', true), market('Madonna', '0.01', true), market('A', '0.5', false), market('B', '0.5', false)] }]);
+    const { oddsFor } = await load();
+    const odds = await oddsFor({ source: 'Polymarket', kind: 'event', slug: 'vma-voty-2026', url: 'https://polymarket.com/event/vma-voty-2026' });
+    expect(odds?.outcomes.map((o) => o.label)).toEqual(['Taylor Swift', 'Madonna']);
+  });
+});

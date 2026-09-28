@@ -126,6 +126,18 @@ async function kalshiEvent(ref: Extract<MarketRef, { source: 'Kalshi' }>): Promi
   }
 }
 
+// The event's title plus whatever its subtitle adds: a subtitle often repeats
+// the title ("MTV Video Music Awards: Video of the Year" + "Video of the Year
+// | 2026"), so each |-separated part already in the title is left off.
+function kalshiTitle(event: Json): string {
+  const title = String(event.title ?? '').trim();
+  const extra = String(event.sub_title ?? '')
+    .split('|')
+    .map((part) => part.trim())
+    .filter((part) => part && !title.toLowerCase().includes(part.toLowerCase()));
+  return [title, ...extra].filter(Boolean).join(' ');
+}
+
 async function kalshi(ref: Extract<MarketRef, { source: 'Kalshi' }>): Promise<MarketOdds | null> {
   // Taken before the read, so a tick that lands during it counts as newer.
   const fetchedAt = new Date().toISOString();
@@ -150,7 +162,7 @@ async function kalshi(ref: Extract<MarketRef, { source: 'Kalshi' }>): Promise<Ma
   return {
     source: 'Kalshi',
     url: ref.url,
-    title: [event.title, event.sub_title].filter(Boolean).join(' '),
+    title: kalshiTitle(event),
     outcomes: outcomes.sort(byChance),
     volume: kalshiEventVolume(markets),
     closeTime: closeTimes[closeTimes.length - 1],
@@ -204,12 +216,13 @@ async function polymarket(ref: Extract<MarketRef, { source: 'Polymarket' }>): Pr
   const closed = !!event.closed;
   // One market is a plain question; several are one outcome each, priced by
   // their Yes side. An open event's settled sub-markets (a candidate who
-  // dropped out) are left off.
+  // dropped out) are left off, and so are inactive ones: the spare slots an
+  // event is created with ("A", "B" ... at 50%, never traded).
   const outcomes =
     markets.length === 1
       ? polymarketOutcomes(markets[0])
       : markets
-          .filter((m) => closed || !m.closed)
+          .filter((m) => m.active !== false && (closed || !m.closed))
           .map((m) => {
             const yes = polymarketOutcomes(m).find((o) => o.label.toLowerCase() === 'yes');
             return { label: m.groupItemTitle || m.question, probability: yes?.probability ?? null, volume: num(m.volume), history: yes?.history };

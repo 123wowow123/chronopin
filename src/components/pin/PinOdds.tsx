@@ -48,8 +48,10 @@ export function PinOdds({ pinId }: { pinId: number }) {
   useEffect(() => watchMarketOdds(pinId), [pinId]);
 
   if (!markets?.length) return null;
+  // Two to a row from sm up; an odd one out at the end takes the full row.
+  // (The sr-only heading is absolutely positioned, so it takes no cell.)
   return (
-    <section aria-labelledby="odds-heading" className="mb-4 flex flex-col gap-3">
+    <section aria-labelledby="odds-heading" className="mb-4 grid gap-3 sm:grid-cols-2 sm:[&>div:last-of-type:nth-of-type(odd)]:col-span-2">
       <h2 id="odds-heading" className="sr-only">
         {t('odds.heading')}
       </h2>
