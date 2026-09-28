@@ -53,7 +53,7 @@ const { values: flags } = parseArgs({
     placefile: { type: 'string', default: './scripts/backup/seedPlaces.json' },
     eventinfofile: { type: 'string', default: './scripts/backup/seedEventInfo.json' },
     seriesfile: { type: 'string', default: './scripts/backup/seedSeries.json' },
-    translationfile: { type: 'string', default: './scripts/backup/seedTranslations.json' },
+    translationfile: { type: 'string', default: './scripts/backup/seedTranslations.json.gz' },
     sentimentfile: { type: 'string', default: './scripts/backup/seedPinSentiments.json' },
     productpicturefile: { type: 'string', default: './scripts/backup/seedProductPictures.json' },
     companyfile: { type: 'string', default: './scripts/backup/seedCompanies.json' },
@@ -533,9 +533,12 @@ async function seedDB() {
     }
   }
 
-  if (existsSync(flags.translationfile)) {
+  // Gzipped since the seventh language took the plain file near GitHub's 100 MB
+  // limit; an older checkout's plain seedTranslations.json still loads.
+  const translationFile = [flags.translationfile, flags.translationfile.replace(/\.gz$/, '')].find((file) => existsSync(file));
+  if (translationFile) {
     try {
-      await PinTranslation.restore(readJson(flags.translationfile));
+      await PinTranslation.restore(readJson(translationFile));
     } catch (error) {
       log.error('Translations Save Error', JSON.stringify(error));
     }
