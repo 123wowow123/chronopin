@@ -11,12 +11,15 @@ import {
   type ChartView,
   type ColumnTip,
   formatRate,
+  OpenPlacesButton,
   periodLabel,
+  PlaceRows,
   RangeTabs,
   SERIES_BLUE,
   SERIES_ORANGE,
   StatTile,
   TimeColumns,
+  useOpenRows,
   ViewTabs,
 } from '../chartParts';
 import type { MapPlace } from '../PlaceMap';
@@ -36,6 +39,8 @@ export type RangeSummary = {
     viewers: number;
     thumbName?: string | null;
     originalUrl?: string | null;
+    // Where this pin's views came from ("" unplaced, null no address).
+    places: { place: string | null; views: number; viewers: number }[];
   }[];
   // Views with an address, and where those came from ("" is unplaced).
   located: number;
@@ -88,6 +93,7 @@ export function ViewCharts({
   const [range, setRange] = useState<TimeRange>('30d');
   const [tip, setTip] = useState<ColumnTip<ViewBucket> | null>(null);
   const [view, setView] = useState<ChartView>('chart');
+  const [openPins, togglePin] = useOpenRows();
   const stats = useMemo(() => viewStats(days, range, new Date(serverNow)), [days, range, serverNow]);
   const summary = summaries[range];
   const rangeLabel = TIME_RANGES.find((r) => r.id === range)!.label;
@@ -166,7 +172,7 @@ export function ViewCharts({
         <h2 className="mb-3 text-base font-semibold">Most viewed pins</h2>
         {summary.top.length ? (
           <div className="overflow-x-auto text-sm">
-            <table className="w-full text-left tabular-nums">
+            <table className="w-full text-left tabular-nums [&>tbody+tbody]:border-t [&>tbody+tbody]:border-line">
               <thead className="text-subtle">
                 <tr>
                   <th className="w-full py-1 font-medium">Pin</th>
@@ -174,20 +180,36 @@ export function ViewCharts({
                   <th className="py-1 pl-6 text-right font-medium whitespace-nowrap">Viewers</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-line">
-                {summary.top.map((p) => (
-                  <tr key={p.id}>
-                    <td className="w-full max-w-0 py-1.5">
-                      <Link href={pinPath(p)} title={p.title} className="flex items-center gap-3 text-link">
-                        <PinThumb thumbName={p.thumbName} originalUrl={p.originalUrl} />
-                        <span className="truncate">{p.title || `Pin ${p.id}`}</span>
-                      </Link>
-                    </td>
-                    <td className="py-1.5 pl-6 text-right">{p.views}</td>
-                    <td className="py-1.5 pl-6 text-right">{p.viewers}</td>
-                  </tr>
-                ))}
-              </tbody>
+              {summary.top.map((p) => {
+                const open = openPins.has(String(p.id));
+                return (
+                  <tbody key={p.id}>
+                    <tr>
+                      <td className="w-full max-w-0 py-1.5">
+                        <div className="flex items-center gap-2">
+                          <OpenPlacesButton open={open} onClick={() => togglePin(String(p.id))} />
+                          <Link href={pinPath(p)} title={p.title} className="flex min-w-0 items-center gap-3 text-link">
+                            <PinThumb thumbName={p.thumbName} originalUrl={p.originalUrl} />
+                            <span className="truncate">{p.title || `Pin ${p.id}`}</span>
+                          </Link>
+                        </div>
+                      </td>
+                      <td className="py-1.5 pl-6 text-right">{p.views}</td>
+                      <td className="py-1.5 pl-6 text-right">{p.viewers}</td>
+                    </tr>
+                    {open ? (
+                      <PlaceRows
+                        places={p.places.map((c) => ({
+                          place: c.place === null ? 'No address' : c.place || 'Unplaced',
+                          count: c.views,
+                          people: c.viewers,
+                          faint: !c.place,
+                        }))}
+                      />
+                    ) : null}
+                  </tbody>
+                );
+              })}
             </table>
           </div>
         ) : (

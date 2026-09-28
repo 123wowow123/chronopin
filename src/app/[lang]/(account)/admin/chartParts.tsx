@@ -1,5 +1,7 @@
 // Pieces shared by the admin charts.
 
+import { useState } from 'react';
+import { Icon } from '@/components/ui/Icon';
 import { TIME_RANGES, type TimeRange, type TimeUnit } from '@/lib/timeStats';
 
 export const SERIES_BLUE = '#3987e5';
@@ -71,6 +73,66 @@ export function StatTile({ label, value, note, swatch }: { label: string; value:
       <div className="mt-1 text-3xl font-semibold text-ink">{typeof value === 'number' ? value.toLocaleString() : value}</div>
       <div className="text-xs text-subtle">{note}</div>
     </div>
+  );
+}
+
+// Which rows of a top-pins table are opened to show where they came from.
+export function useOpenRows() {
+  const [open, setOpen] = useState<ReadonlySet<string>>(new Set());
+  const toggle = (key: string) =>
+    setOpen((was) => {
+      const next = new Set(was);
+      if (!next.delete(key)) next.add(key);
+      return next;
+    });
+  return [open, toggle] as const;
+}
+
+// The chevron that opens a top-pins row onto its places.
+export function OpenPlacesButton({ open, onClick }: { open: boolean; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      aria-expanded={open}
+      title={open ? 'Hide where they came from' : 'Show where they came from'}
+      className="-ml-1 rounded p-1 text-subtle hover:bg-raised hover:text-ink"
+      onClick={onClick}
+    >
+      <Icon name="chevron" className={`size-4 transition-transform ${open ? '' : '-rotate-90'}`} />
+    </button>
+  );
+}
+
+export type PlaceCount = { place: string; count: number; people: number; faint?: boolean };
+
+// Places listed under an opened pin before the rest are summed up.
+const PLACES_SHOWN = 12;
+
+// An opened top-pins row's places, in the table's two count columns and
+// indented to line up with the pin title (past the chevron and thumbnail).
+export function PlaceRows({ places }: { places: PlaceCount[] }) {
+  const hidden = places.slice(PLACES_SHOWN);
+  return (
+    <>
+      {places.slice(0, PLACES_SHOWN).map((p) => (
+        <tr key={p.place} className="text-xs text-muted">
+          <td className={`max-w-0 truncate py-1 pl-[6.5rem] ${p.faint ? 'text-faint' : ''}`} title={p.place}>
+            {p.place}
+          </td>
+          <td className="py-1 pl-6 text-right">{p.count}</td>
+          <td className="py-1 pl-6 text-right">{p.people}</td>
+        </tr>
+      ))}
+      {hidden.length ? (
+        <tr className="text-xs text-faint">
+          <td className="py-1 pl-[6.5rem]">
+            {hidden.length} more {hidden.length === 1 ? 'place' : 'places'}
+          </td>
+          <td className="py-1 pl-6 text-right">{hidden.reduce((n, p) => n + p.count, 0)}</td>
+          <td className="py-1 pl-6" />
+        </tr>
+      ) : null}
+    </>
   );
 }
 

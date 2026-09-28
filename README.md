@@ -272,7 +272,7 @@ sync prod db to local and backup json
 
 - product should link ebay and macari and facebook marketplace and have job to check for updatedness
 
-
+- add private sellers and add payment setup
 
 - Translate to Arabic
 

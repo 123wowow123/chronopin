@@ -11,12 +11,15 @@ import type { ShopClickRow } from '@/lib/shopping';
 import {
   type ChartView,
   type ColumnTip,
+  OpenPlacesButton,
   periodLabel,
+  PlaceRows,
   RangeTabs,
   SERIES_BLUE,
   SERIES_ORANGE,
   StatTile,
   TimeColumns,
+  useOpenRows,
   ViewTabs,
 } from '../chartParts';
 import type { MapPlace } from '../PlaceMap';
@@ -69,6 +72,7 @@ export function ClickCharts({ clicks, serverNow }: { clicks: ShopClickRow[]; ser
   const [range, setRange] = useState<TimeRange>('30d');
   const [tip, setTip] = useState<ColumnTip<Bucket> | null>(null);
   const [view, setView] = useState<ChartView>('chart');
+  const [openPins, togglePin] = useOpenRows();
   const now = useMemo(() => new Date(serverNow), [serverNow]);
   const rangeLabel = TIME_RANGES.find((r) => r.id === range)!.label;
   const inRange = range === 'all' ? 'all time' : `in the last ${rangeLabel}`;
@@ -259,7 +263,7 @@ export function ClickCharts({ clicks, serverNow }: { clicks: ShopClickRow[]; ser
         <h2 className="mb-3 text-base font-semibold">Most clicked pins</h2>
         {stats.pins.length ? (
           <div className="overflow-x-auto text-sm">
-            <table className="w-full text-left tabular-nums">
+            <table className="w-full text-left tabular-nums [&>tbody+tbody]:border-t [&>tbody+tbody]:border-line">
               <thead className="text-subtle">
                 <tr>
                   <th className="w-full py-1 font-medium">Pin</th>
@@ -267,23 +271,37 @@ export function ClickCharts({ clicks, serverNow }: { clicks: ShopClickRow[]; ser
                   <th className="py-1 pl-6 text-right font-medium">People</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-line">
-                {stats.pins.map(({ key, rows, clicks, people }) => {
-                  const pin = rows[0];
-                  return (
-                    <tr key={key}>
+              {stats.pins.map(({ key, rows, clicks, people }) => {
+                const pin = rows[0];
+                const open = openPins.has(key);
+                return (
+                  <tbody key={key}>
+                    <tr>
                       <td className="w-full max-w-0 py-1.5">
-                        <Link href={pinPath({ id: pin.pinId, title: pin.title ?? '' })} title={pin.title ?? ''} className="flex items-center gap-3 text-link">
-                          <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} />
-                          <span className="truncate">{pin.title || `Pin ${pin.pinId}`}</span>
-                        </Link>
+                        <div className="flex items-center gap-2">
+                          <OpenPlacesButton open={open} onClick={() => togglePin(key)} />
+                          <Link href={pinPath({ id: pin.pinId, title: pin.title ?? '' })} title={pin.title ?? ''} className="flex min-w-0 items-center gap-3 text-link">
+                            <PinThumb thumbName={pin.thumbName} originalUrl={pin.originalUrl} />
+                            <span className="truncate">{pin.title || `Pin ${pin.pinId}`}</span>
+                          </Link>
+                        </div>
                       </td>
                       <td className="py-1.5 pl-6 text-right">{clicks}</td>
                       <td className="py-1.5 pl-6 text-right">{people}</td>
                     </tr>
-                  );
-                })}
-              </tbody>
+                    {open ? (
+                      <PlaceRows
+                        places={tally(rows, placeLabel).map((g) => ({
+                          place: g.key,
+                          count: g.clicks,
+                          people: g.people,
+                          faint: !g.rows[0].city && !g.rows[0].region && !g.rows[0].country,
+                        }))}
+                      />
+                    ) : null}
+                  </tbody>
+                );
+              })}
             </table>
           </div>
         ) : (

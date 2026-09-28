@@ -62,8 +62,30 @@ export default class PinView {
       ),
       PinView.places(since),
     ]);
-    const pictures = await PinView.pictures(top.map((p) => p.id));
-    return { viewers, top: top.map((p) => ({ ...p, ...pictures.get(p.id) })), ...places };
+    const ids = top.map((p) => p.id);
+    const [pictures, pinPlaces] = await Promise.all([PinView.pictures(ids), PinView.pinPlaces(ids, since)]);
+    return { viewers, top: top.map((p) => ({ ...p, ...pictures.get(p.id), places: pinPlaces.get(p.id) ?? [] })), ...places };
+  }
+
+  // Where each pin's views since a UTC day (null for all time) came from, as
+  // "city, region, country" with its views and distinct viewers, most first.
+  // place is "" for a view that was looked up but not placed, and null for one
+  // with no address (before 0089).
+  static async pinPlaces(pinIds: number[], since: string | null) {
+    const rows = pinIds.length
+      ? await db.query<{ pinId: number; place: string | null; views: number; viewers: number }>(
+          `SELECT "pinId", CASE WHEN "ip" IS NOT NULL THEN concat_ws(', ', "city", "region", "country") END AS "place",
+             COUNT(*)::integer AS "views", COUNT(DISTINCT "viewer")::integer AS "viewers"
+           FROM "PinView"
+           WHERE "pinId" = ANY($1::integer[]) AND ($2::date IS NULL OR "day" >= $2::date)
+           GROUP BY 1, 2
+           ORDER BY "pinId", "views" DESC, "viewers" DESC, 2 NULLS LAST`,
+          [pinIds, since],
+        )
+      : [];
+    const byPin = new Map<number, { place: string | null; views: number; viewers: number }[]>();
+    for (const { pinId, ...place } of rows) byPin.set(pinId, [...(byPin.get(pinId) ?? []), place]);
+    return byPin;
   }
 
   // Views with an address since a UTC day (null for all time): by country
