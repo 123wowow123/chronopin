@@ -5,7 +5,7 @@ import type { Messages } from '../translate';
 
 const es: Messages = {
   meta: {
-    siteTitle: '{site}: seguimiento de fechas de acontecimientos históricos y futuros',
+    siteTitle: '{site}: predice las fechas de eventos futuros y sigue acontecimientos históricos y futuros',
     siteDescription: 'Descubre y sigue próximas fechas de lanzamiento, eventos y otras fechas importantes.',
     homeHeading: '{site}: próximas fechas de lanzamiento, eventos y otras fechas importantes',
     mapTitle: 'Mapa',

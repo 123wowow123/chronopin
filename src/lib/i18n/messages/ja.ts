@@ -5,7 +5,7 @@ import type { Messages } from '../translate';
 
 const ja: Messages = {
   meta: {
-    siteTitle: '{site}：過去と未来の出来事の日付トラッカー',
+    siteTitle: '{site}：未来の出来事の日付を予測し、過去と未来の出来事を追跡',
     siteDescription: '発売日やイベントなど、これからの大切な日付を見つけて追いかけよう。',
     homeHeading: '{site}：これからの発売日・イベント・大切な日付',
     mapTitle: 'マップ',

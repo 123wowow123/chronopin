@@ -6,7 +6,7 @@
 
 const en = {
   meta: {
-    siteTitle: '{site}: Date tracker for historical and future events',
+    siteTitle: '{site}: Predicts future event dates and tracks historical and future events',
     siteDescription: 'Discover and track upcoming release dates, events, and other important dates.',
     homeHeading: '{site}: upcoming release dates, events and other important dates',
     mapTitle: 'Map',

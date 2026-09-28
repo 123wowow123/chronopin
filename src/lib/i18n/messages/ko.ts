@@ -5,7 +5,7 @@ import type { Messages } from '../translate';
 
 const ko: Messages = {
   meta: {
-    siteTitle: '{site}: 과거와 미래 이벤트의 날짜 트래커',
+    siteTitle: '{site}: 미래 이벤트 날짜를 예측하고 과거와 미래 이벤트를 추적합니다',
     siteDescription: '다가오는 출시일, 이벤트 등 중요한 날짜를 찾아보고 추적하세요.',
     homeHeading: '{site}: 다가오는 출시일, 이벤트, 그 외 중요한 날짜',
     mapTitle: '지도',

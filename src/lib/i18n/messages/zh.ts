@@ -6,7 +6,7 @@ import type { Messages } from '../translate';
 
 const zh: Messages = {
   meta: {
-    siteTitle: '{site}：追踪历史与未来事件的日期',
+    siteTitle: '{site}：预测未来事件日期，追踪历史与未来事件',
     siteDescription: '发现并追踪即将到来的发布日期、活动和其他重要日子。',
     homeHeading: '{site}：即将到来的发布日期、活动和其他重要日子',
     mapTitle: '地图',
