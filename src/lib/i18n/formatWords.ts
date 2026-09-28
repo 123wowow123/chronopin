@@ -1,6 +1,6 @@
 // The few words src/lib/format.ts puts around dates, per language. Kept apart
 // from the message dictionaries because format.ts runs everywhere, in the
-// browser too, and should not bring seven dictionaries with it.
+// browser too, and should not bring eight dictionaries with it.
 
 import type { Locale } from './config';
 
@@ -125,6 +125,20 @@ export const FORMAT_WORDS: Record<Locale, Words> = {
     planets: ['태양', '달', '화성', '수성', '목성', '금성', '토성'],
     moonPhases: ['삭', '초승달', '상현달', '차오르는 달', '보름달', '기우는 달', '하현달', '그믐달'],
     lunarGloss: '음력',
+  },
+  hi: {
+    starts: '{date} से शुरू',
+    range: '{start} - {end}',
+    allDay: 'पूरे दिन',
+    at: '{date}, {time}',
+    today: 'आज',
+    all: 'सभी',
+    bc: '{year} ई.पू.',
+    dateOrder: 'dmy',
+    dateSeparator: '/',
+    planets: ['सूर्य', 'चंद्रमा', 'मंगल', 'बुध', 'बृहस्पति', 'शुक्र', 'शनि'],
+    moonPhases: ['अमावस्या', 'बढ़ता अर्धचंद्र', 'प्रथम चतुर्थांश', 'बढ़ता चंद्रमा', 'पूर्णिमा', 'घटता चंद्रमा', 'अंतिम चतुर्थांश', 'घटता अर्धचंद्र'],
+    lunarGloss: 'नोंग ली, चीनी चंद्र पंचांग',
   },
 };
 

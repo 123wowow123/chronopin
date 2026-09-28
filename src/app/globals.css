@@ -95,6 +95,17 @@
       translate: 0 -5px;
     }
   }
+
+  /* An indeterminate bar: a pending admin tab's underline. */
+  --animate-sweep: sweep 0.9s ease-in-out infinite;
+  @keyframes sweep {
+    from {
+      translate: -100% 0;
+    }
+    to {
+      translate: 200% 0;
+    }
+  }
 }
 
 /* Tailwind's @theme puts the tokens on :root; these win on specificity. */

@@ -323,6 +323,8 @@ const zh: Messages = {
     none: '暂无参考资料。支持此图钉的链接会连同各自的可信度显示在这里。',
   },
   confidence: {
+    tipHeading: '总体可信度',
+    tipLead: '该图钉的来源和参考资料对其日期的支持程度。',
     title: '{count} 份资料对图钉开始和结束时间支持程度的加权平均；资料每比最新的一份旧 {days} 天，权重减半',
     titleWithSource: '包括来源在内的 {count} 份资料对图钉开始和结束时间支持程度的加权平均；资料每比最新的一份旧 {days} 天，权重减半',
     badge: '可信度 {percent}%',
@@ -420,6 +422,8 @@ const zh: Messages = {
     stretchPromised: '最初承诺的等待期：{from} 至 {to}',
   },
   dateConfidence: {
+    tipHeading: '日期确定性',
+    tipScale: '来源对日期的表述有多确定：已确认、已排期、预估、已推迟或未核实。',
     delayed: { label: '已延期', title: '日期已变动' },
     unknown: { label: '未核实', title: '未找到关于日期的说明' },
     estimated: { label: '预估', title: '目标日期，而非确定日期' },
@@ -638,9 +642,9 @@ const zh: Messages = {
     sameAfterAll: '确实是同一事件',
     alsoPinned: '其他人也标记了',
     sameEventPinned: '同一事件，另外被标记了 {count} 次。',
-    stack: '在时间线上它们会叠放，关注最多（其次浏览最多）的在最上面。',
+    stack: '在时间线上它们会叠放，关注最多（其次浏览最多）的在最上面：<pin></pin>。',
     stackThisOne: '在时间线上它们会叠放，关注最多（其次浏览最多）的在最上面：就是这个。',
-    onTimeline: '在时间线上',
+    onTimeline: '显示在最上面',
     unlink: '取消关联',
     possible: '可能的重复',
     suggestions: '条建议',
@@ -944,7 +948,7 @@ const zh: Messages = {
   },
   suggest: {
     heading: '建议更正',
-    explainer: '有遗漏或错误吗？用你自己的话说明：能佐证此图钉的链接、不同的开始或结束日期及理由，或缺失、有误的信息。AI 会对照此图钉的来源进行核实，搜索更好的来源，并添加任何支持你说法的页面。图钉自身的来源仍然最重要。',
+    explainer: '有遗漏或错误吗？用你自己的话说明：能佐证此图钉的链接、不同的开始或结束日期及理由，或缺失、有误的信息。AI 会对照此图钉的来源进行核实，搜索更好的来源，并添加任何支持你说法的页面。图钉自身的来源仍然最重要。AI 也会查看图片：显示的是别的东西或显示效果差的图片会被移到后面或替换。',
     open: '建议更正',
     label: '你的建议',
     placeholder: '发布已推迟到 3 月 14 日，公告见：https://…',
@@ -958,6 +962,9 @@ const zh: Messages = {
     checkingHint: 'AI 正在对照来源核实，结果将在一两分钟内显示在这里。',
     applied: '已添加 {count} 条参考资料',
     dismissed: '未更改',
+    mediaDemoted: '已将 {count} 张图片移到后面',
+    mediaDropped: '已移除 {count} 张图片',
+    mediaAdded: '已添加 {count} 张更好的图片',
     verdict: { supported: '有依据', partly: '部分有依据', unsupported: '无依据', unclear: '无法判断' },
   },
   duplicatePrompt: {

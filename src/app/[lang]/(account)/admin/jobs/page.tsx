@@ -17,7 +17,7 @@ export default async function AdminJobsPage() {
   await requireAdminViewer('/admin/jobs');
   const view = await dailyJobsView();
   return (
-    <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
+    <div className="px-4 py-6 sm:py-10 lg:px-8">
       <AdminTabs current="/admin/jobs" />
       <h1 className="sr-only">Jobs</h1>
       <JobsTabs current="/admin/jobs" />

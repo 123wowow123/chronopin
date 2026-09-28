@@ -1,5 +1,7 @@
 'use client';
 
+import type { ReactNode } from 'react';
+import { PillTip } from '@/components/ui/PillTip';
 import { useT } from '@/lib/client/i18n';
 import type { MessageKey, Translator } from '@/lib/i18n/translate';
 import { type ConfidenceBand, confidenceBand, confidenceBandRange, type Evidence, HALF_LIFE_DAYS, pinConfidence } from '@/lib/referenceConfidence';
@@ -29,24 +31,53 @@ export function bandTitle(band: ConfidenceBand, t: Translator) {
 // A score as a badge that searches for the pins scored like it. The band is
 // read off the score shown, so the amber and the red badge both search for
 // confidence:low - what the pin page flags as low confidence.
-export function ConfidenceBadge({ confidence, className, title, children }: { confidence: number | undefined; className: string; title: string; children: React.ReactNode }) {
+// With a heading, the title shows in a tooltip (PillTip) under that heading
+// instead of the browser's own.
+export function ConfidenceBadge({
+  confidence,
+  className,
+  title,
+  heading,
+  children,
+}: {
+  confidence: number | undefined;
+  className: string;
+  title: string;
+  heading?: ReactNode;
+  children: ReactNode;
+}) {
   const t = useT();
   const band = confidenceBand(confidence);
   const pill = `rounded-full px-2 py-px text-[10px] font-semibold tracking-wider tabular-nums ring-1 ring-inset ${className}`;
   if (!band) {
     return <span className={pill} title={title}>{children}</span>;
   }
+  // The badges sit in a tight row of pills, so the tap target grows past
+  // the pill rather than the pill growing (DateConfidence does the same).
+  const linkClass = `relative ${pill} after:absolute after:inset-x-0 after:-inset-y-1.5 after:content-[''] hover:no-underline hover:ring-current`;
+  if (!heading) {
+    return (
+      <RefineLink field="confidence" value={band} className={linkClass} title={`${title}\n${bandTitle(band, t)}`}>
+        {children}
+      </RefineLink>
+    );
+  }
   return (
-    <RefineLink
-      field="confidence"
-      value={band}
-      // The badges sit in a tight row of pills, so the tap target grows past
-      // the pill rather than the pill growing (DateConfidence does the same).
-      className={`relative ${pill} after:absolute after:inset-x-0 after:-inset-y-1.5 after:content-[''] hover:no-underline hover:ring-current`}
-      title={`${title}\n${bandTitle(band, t)}`}
+    <PillTip
+      tip={
+        <>
+          {heading}
+          <span className="block">{title}</span>
+          <span className="block text-subtle">{bandTitle(band, t)}</span>
+        </>
+      }
     >
-      {children}
-    </RefineLink>
+      {(describedBy) => (
+        <RefineLink field="confidence" value={band} className={linkClass} describedBy={describedBy}>
+          {children}
+        </RefineLink>
+      )}
+    </PillTip>
   );
 }
 
@@ -63,6 +94,14 @@ export function PinConfidence({ evidence }: { evidence: Evidence[] }) {
       confidence={confidence}
       className={`not-italic ${confidenceClass(confidence)}`}
       title={t(evidence.some((e) => e.isSource && e.confidence != null) ? 'confidence.titleWithSource' : 'confidence.title', { count, days: HALF_LIFE_DAYS })}
+      heading={
+        <>
+          <span className="block font-semibold text-ink">
+            {t('confidence.tipHeading')}: {confidence}%
+          </span>
+          <span className="block">{t('confidence.tipLead')}</span>
+        </>
+      }
     >
       {t('confidence.badge', { percent: confidence })}
     </ConfidenceBadge>

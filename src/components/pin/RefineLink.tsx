@@ -15,12 +15,15 @@ export function RefineLink({
   className,
   children,
   title,
+  describedBy,
 }: {
   field: LabelField;
   value: string;
   className?: string;
   children: React.ReactNode;
   title?: string;
+  // The id of a tooltip saying what the label is (PillTip), in place of a title.
+  describedBy?: string;
 }) {
   const router = useRouter();
   const t = useT();
@@ -31,7 +34,8 @@ export function RefineLink({
       href={href}
       prefetch={false}
       className={className}
-      title={title ?? t('card.showAllValue', { value })}
+      title={describedBy ? undefined : (title ?? t('card.showAllValue', { value }))}
+      aria-describedby={describedBy}
       onClick={(event) => {
         if (event.metaKey || event.ctrlKey || event.shiftKey || splitLocale(window.location.pathname).path !== '/search') {
           return;

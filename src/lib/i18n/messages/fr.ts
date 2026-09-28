@@ -323,6 +323,8 @@ const fr: Messages = {
     none: 'Pas encore de références. Les liens qui étayent cette épingle, chacun avec sa confiance, s’afficheront ici.',
   },
   confidence: {
+    tipHeading: 'Confiance globale',
+    tipLead: 'Dans quelle mesure la source et les références du pin étayent ses dates.',
     title: {
       one: 'Moyenne pondérée de la fermeté avec laquelle {count} référence étaye les heures de début et de fin de l’épingle ; une référence compte moitié moins pour chaque tranche de {days} jours d’ancienneté par rapport à la plus récente',
       other: 'Moyenne pondérée de la fermeté avec laquelle {count} références étayent les heures de début et de fin de l’épingle ; une référence compte moitié moins pour chaque tranche de {days} jours d’ancienneté par rapport à la plus récente',
@@ -426,6 +428,8 @@ const fr: Messages = {
     stretchPromised: 'L’attente promise au départ : du {from} au {to}',
   },
   dateConfidence: {
+    tipHeading: 'Certitude de la date',
+    tipScale: 'Avec quelle fermeté la source formule la date : confirmée, programmée, estimée, reportée ou non vérifiée.',
     delayed: { label: 'REPORTÉ', title: 'La date a changé' },
     unknown: { label: 'NON VÉRIFIÉ', title: 'Aucune mention de la date n’a été trouvée' },
     estimated: { label: 'ESTIMÉ', title: 'Un objectif, pas une date fixe' },
@@ -644,9 +648,9 @@ const fr: Messages = {
     sameAfterAll: 'Même événement, finalement',
     alsoPinned: 'Aussi épinglé par d’autres',
     sameEventPinned: { one: 'Le même événement, épinglé {count} autre fois.', other: 'Le même événement, épinglé {count} autres fois.' },
-    stack: 'Dans la chronologie, elles s’empilent, la plus suivie (puis la plus vue) au-dessus.',
+    stack: 'Dans la chronologie, elles s’empilent, la plus suivie (puis la plus vue) au-dessus : <pin></pin>.',
     stackThisOne: 'Dans la chronologie, elles s’empilent, la plus suivie (puis la plus vue) au-dessus : celle-ci.',
-    onTimeline: 'Dans la chronologie',
+    onTimeline: 'Affichée au-dessus',
     unlink: 'Dissocier',
     possible: 'Doublons possibles',
     suggestions: { one: 'suggestion', other: 'suggestions' },
@@ -957,7 +961,7 @@ const fr: Messages = {
   },
   suggest: {
     heading: 'Suggérer une correction',
-    explainer: "Il manque quelque chose ou une erreur s'est glissée ? Dites-le avec vos mots : un lien qui étaye cette épingle, une autre date de début ou de fin et pourquoi, ou une information absente ou erronée. L'IA la vérifie au regard des sources de l'épingle, en cherche de meilleures et ajoute toute page qui vous donne raison. Les sources de l'épingle restent celles qui comptent le plus.",
+    explainer: "Il manque quelque chose ou une erreur s'est glissée ? Dites-le avec vos mots : un lien qui étaye cette épingle, une autre date de début ou de fin et pourquoi, ou une information absente ou erronée. L'IA la vérifie au regard des sources de l'épingle, en cherche de meilleures et ajoute toute page qui vous donne raison. Les sources de l'épingle restent celles qui comptent le plus. L'IA regarde aussi les images : une image qui montre autre chose, ou qui le montre mal, passe en dernier ou est remplacée.",
     open: 'Suggérer une correction',
     label: 'Votre suggestion',
     placeholder: 'Le lancement a été repoussé au 14 mars, annoncé ici : https://…',
@@ -971,6 +975,9 @@ const fr: Messages = {
     checkingHint: "L'IA vérifie cela au regard des sources. Le résultat s'affichera ici d'ici une minute ou deux.",
     applied: { one: '{count} référence ajoutée', other: '{count} références ajoutées' },
     dismissed: 'Aucun changement',
+    mediaDemoted: { one: '{count} image déplacée en dernier', other: '{count} images déplacées en dernier' },
+    mediaDropped: { one: '{count} image retirée', other: '{count} images retirées' },
+    mediaAdded: { one: '{count} meilleure image ajoutée', other: '{count} meilleures images ajoutées' },
     verdict: { supported: 'Confirmée', partly: 'En partie confirmée', unsupported: 'Non confirmée', unclear: 'Incertaine' },
   },
   duplicatePrompt: {

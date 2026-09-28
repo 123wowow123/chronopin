@@ -29,4 +29,23 @@ describe('cleanReview', () => {
   it('reads an unknown verdict as unclear', () => {
     expect(cleanReview({ verdict: 'apply everything', verdictReasoning: 'x' }, seen(), '').verdict).toBe('unclear');
   });
+
+  it('keeps one flag per medium it was shown, with a known problem', () => {
+    const review = cleanReview(
+      {
+        verdict: 'supported',
+        verdictReasoning: 'The second picture is another building.',
+        media: [
+          { medium: '[m2]', problem: 'wrong', reasoning: 'Shows the old stadium.' },
+          { medium: 'M2', problem: 'poor', reasoning: 'Again.' },
+          { medium: 'M9', problem: 'wrong', reasoning: 'Not shown.' },
+          { medium: 'M1', problem: 'ugly', reasoning: 'Unknown problem.' },
+        ],
+      },
+      seen(),
+      '',
+      ['M1', 'M2'],
+    );
+    expect(review.media).toEqual([{ medium: 'M2', problem: 'wrong', reasoning: 'Shows the old stadium.' }]);
+  });
 });

@@ -23,7 +23,7 @@ export default async function AdminUsersPage() {
     allUsers.map((u) => ({ ...u.pick([...pickUserProps, 'utcCreatedDateTime']), ...(activity.get(u.id) ?? { pinsCreated: 0, pinsViewed: 0, viewsReceived: 0 }) })),
   );
   return (
-    <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
+    <div className="px-4 py-6 sm:py-10 lg:px-8">
       <AdminTabs current="/admin/users" />
       <h1 className="sr-only">Users</h1>
       <p className="mb-6 text-sm text-subtle">Deleting and listing users is restricted to the admin role.</p>

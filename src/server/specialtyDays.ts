@@ -10,12 +10,13 @@ import english from './data/specialtyDays.json';
 import de from './data/specialtyDays.de.json';
 import es from './data/specialtyDays.es.json';
 import fr from './data/specialtyDays.fr.json';
+import hi from './data/specialtyDays.hi.json';
 import ja from './data/specialtyDays.ja.json';
 import ko from './data/specialtyDays.ko.json';
 import zh from './data/specialtyDays.zh.json';
 
 const NAMES = english as Record<string, string[]>;
-const LABELS: Partial<Record<Locale, Record<string, string>>> = { de, es, fr, ja, ko, zh };
+const LABELS: Partial<Record<Locale, Record<string, string>>> = { de, es, fr, hi, ja, ko, zh };
 
 // One date's ("09-24") specialty days.
 export function specialtyDaysOn(monthDay: string, locale: Locale): SpecialtyDay[] {

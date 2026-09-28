@@ -223,6 +223,19 @@ export async function createThumbFromUrl(imageUrl: string) {
   }
 }
 
+// A picture as Claude is shown it (suggestion reviews): a JPEG at most 800
+// pixels on a side, base64, which keeps a handful of them well inside a
+// request.
+export async function pictureForReview(buffer: Buffer) {
+  const jpeg = await sharp(buffer)
+    .rotate()
+    .resize({ width: 800, height: 800, fit: 'inside', withoutEnlargement: true })
+    .flatten({ background: '#ffffff' })
+    .jpeg({ quality: 80 })
+    .toBuffer();
+  return { mediaType: 'image/jpeg' as const, data: jpeg.toString('base64') };
+}
+
 // What a picture at a URL is, without storing anything: its size, type and
 // fingerprint. For the daily jobs' check_image tool (src/server/jobs/tools.ts),
 // which weighs a candidate picture before it is added to a pin.

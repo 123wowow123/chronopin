@@ -29,7 +29,7 @@ export default async function AdminSettingsPage() {
     translationCoverage(),
   ]);
   return (
-    <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
+    <div className="px-4 py-6 sm:py-10 lg:px-8">
       <AdminTabs current="/admin/settings" />
       <h1 className="sr-only">Settings</h1>
       <TimelineVideoForm saved={video} />

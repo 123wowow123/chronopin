@@ -5,7 +5,7 @@
 // path to the /en tree the app routes under (src/app/[lang]), so each language
 // renders and caches as its own page and crawlers find every one of them.
 
-export const LOCALES = ['en', 'es', 'fr', 'de', 'ja', 'zh', 'ko'] as const;
+export const LOCALES = ['en', 'es', 'fr', 'de', 'ja', 'zh', 'ko', 'hi'] as const;
 export type Locale = (typeof LOCALES)[number];
 
 export const DEFAULT_LOCALE: Locale = 'en';
@@ -22,6 +22,7 @@ export const LOCALE_NAMES: Record<Locale, string> = {
   ja: '日本語',
   zh: '简体中文',
   ko: '한국어',
+  hi: 'हिन्दी',
 };
 
 // The tag Intl formats dates and numbers with, and <html lang> / hreflang say.
@@ -34,6 +35,7 @@ export const INTL_LOCALES: Record<Locale, string> = {
   ja: 'ja',
   zh: 'zh-CN',
   ko: 'ko',
+  hi: 'hi',
 };
 
 // The language Claude is asked to translate a pin into.
@@ -45,6 +47,7 @@ export const LANGUAGE_NAMES: Record<Locale, string> = {
   ja: 'Japanese',
   zh: 'Simplified Chinese',
   ko: 'Korean',
+  hi: 'Hindi',
 };
 
 export function isLocale(value: unknown): value is Locale {

@@ -1,7 +1,9 @@
 'use client';
 
-import { Fragment, useEffect, useRef } from 'react';
+import { useLinkStatus } from 'next/link';
+import { Fragment } from 'react';
 import { BackToMenu } from '@/components/nav/BackToMenu';
+import { TabRow } from '@/components/nav/TabRow';
 import Link from '@/components/ui/Link';
 
 // In three groups, set apart by a rule: what the site is doing (its
@@ -30,18 +32,10 @@ const GROUPS = [
 // phones, so the names scroll sideways under the arrow as ProfileTabs' do,
 // with the picked one brought into view.
 export function AdminTabs({ current }: { current: string }) {
-  const row = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const picked = row.current?.querySelector<HTMLElement>('[aria-current="page"]');
-    const box = row.current;
-    if (picked && box && (picked.offsetLeft < box.scrollLeft || picked.offsetLeft + picked.offsetWidth > box.scrollLeft + box.clientWidth)) {
-      box.scrollLeft = picked.offsetLeft + picked.offsetWidth - box.clientWidth;
-    }
-  }, [current]);
   return (
     <nav aria-label="Admin" className="mb-6 flex items-center gap-1 border-b border-line">
       <BackToMenu />
-      <div ref={row} className="relative -mb-px flex min-w-0 gap-1.5 overflow-x-auto [scrollbar-width:none] sm:gap-3">
+      <TabRow current={current}>
         {GROUPS.map((group, index) => (
           <Fragment key={group[0].href}>
             {index ? <span aria-hidden className="my-3 w-px shrink-0 self-stretch bg-line" /> : null}
@@ -50,16 +44,33 @@ export function AdminTabs({ current }: { current: string }) {
                 key={tab.href}
                 href={tab.href}
                 aria-current={tab.href === current ? 'page' : undefined}
-                className={`shrink-0 border-b-2 px-2 py-3 text-xl font-semibold tracking-tight whitespace-nowrap hover:no-underline sm:px-4 ${
+                className={`relative shrink-0 border-b-2 px-2 py-3 text-xl font-semibold tracking-tight whitespace-nowrap hover:no-underline sm:px-4 ${
                   tab.href === current ? 'border-accent text-ink' : 'border-transparent text-subtle hover:text-ink'
                 }`}
               >
                 {tab.label}
+                <Pending />
               </Link>
             ))}
           </Fragment>
         ))}
-      </div>
+      </TabRow>
     </nav>
+  );
+}
+
+// The admin pages are dynamic and signed-in, so a tab's page is not
+// prefetched and a click can sit a second or two before anything moves. While
+// it does, a short accent bar sweeps along the clicked tab's underline -
+// after 100ms, so a quick switch does not flash it.
+function Pending() {
+  const { pending } = useLinkStatus();
+  return (
+    <span
+      aria-hidden
+      className={`absolute inset-x-0 -bottom-0.5 h-0.5 overflow-hidden transition-opacity ${pending ? 'opacity-100 delay-100' : 'opacity-0'}`}
+    >
+      {pending ? <span className="block h-full w-1/2 animate-sweep bg-accent" /> : null}
+    </span>
   );
 }

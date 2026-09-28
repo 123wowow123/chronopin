@@ -22,6 +22,9 @@ const prop = [
   'type',
   'utcCreatedDateTime',
   'utcDeletedDateTime',
+  // How much it counts on its pin, 0 to 1 (0090): lowered by a checked
+  // suggestion, and media sort by it (byWeight).
+  'weight',
   // For twitter and youtube
   'authorName',
   'authorUrl',
@@ -106,6 +109,15 @@ export default class Medium {
     return this;
   }
 
+  // addThumb for a picture already downloaded and shrunk
+  // (image.createThumbFromUrl), so one that was looked at before it was kept
+  // is uploaded without being fetched again.
+  async addDownloadedThumb(thumb: ThumbMeta): Promise<this> {
+    const { buffer: _buffer, mimeType: _mimeType, hash, ...saved } = await mapAndSaveThumb(thumb);
+    this.set(saved)._imageHash = hash;
+    return this;
+  }
+
   // A YouTube video added by its URL alone gets the player YouTube's API
   // would have handed the scraper, so it plays wherever the stored html is read.
   fillEmbed(): this {
@@ -146,8 +158,10 @@ export default class Medium {
     return this;
   }
 
+  // Full weight is every medium's own, so it is left out: the seeds and the
+  // API only carry the weight of a demoted one.
   toJSON(): Row {
-    return _.omitBy(this, (value, key) => key.startsWith('_') || _.isNull(value));
+    return _.omitBy(this, (value, key) => key.startsWith('_') || _.isNull(value) || (key === 'weight' && Number(value) === FULL_WEIGHT));
   }
 
   static async getByOriginalUrl(originalUrl: string) {
@@ -170,6 +184,38 @@ export default class Medium {
   static async createAndSaveToCDNFromBuffer(buffer: Buffer) {
     return mapAndSaveThumb(await image.createThumbFromBuffer(buffer));
   }
+}
+
+export const FULL_WEIGHT = 1;
+
+const weightOf = (medium: Row) => (medium.weight == null ? FULL_WEIGHT : Number(medium.weight));
+
+// The order a pin shows its media in: heaviest first, then the order they
+// were added in, so a demoted picture stops leading the pin.
+export function byWeight<T extends Row>(media: T[]): T[] {
+  return _.sortBy(media, (m) => -weightOf(m), (m) => Number(m.id) || 0);
+}
+
+// Sets how much a medium counts on its pin.
+export async function setWeight(pinId: number, mediumId: number, weight: number) {
+  await db.query(`UPDATE "PinMedium" SET "weight" = $3 WHERE "pinId" = $1 AND "mediumId" = $2`, [pinId, mediumId, Math.min(Math.max(weight, 0), FULL_WEIGHT)]);
+}
+
+// Takes a medium off its pin but keeps the row: the dropped picture's
+// fingerprint is how a later search (a suggestion's, media:top-up) knows not
+// to add it back. Removing one by hand (deleteFromPin) forgets it instead.
+export async function dropFromPin(pinId: number, mediumId: number) {
+  await db.query(`UPDATE "PinMedium" SET "utcDeletedDateTime" = now() WHERE "pinId" = $1 AND "mediumId" = $2 AND "utcDeletedDateTime" IS NULL`, [pinId, mediumId]);
+}
+
+// The media dropped from a pin, for leaving them out of what is added to it.
+export async function droppedMedia(pinId: number): Promise<Medium[]> {
+  const rows = await db.query(
+    `SELECT "m".* FROM "PinMedium" AS "pm" JOIN "Medium" AS "m" ON "m"."id" = "pm"."mediumId"
+     WHERE "pm"."pinId" = $1 AND "pm"."utcDeletedDateTime" IS NOT NULL`,
+    [pinId],
+  );
+  return rows.map((row) => new Medium(row));
 }
 
 // Every medium of one pin, created and linked in one statement rather than
@@ -195,8 +241,10 @@ export async function saveAllToPin(media: Medium[], pinId: number, query: QueryF
       SELECT ${columns} FROM "input" ORDER BY "ord"
       RETURNING "id"
     ), "link" AS (
-      INSERT INTO "PinMedium" ("pinId", "mediumId", "utcCreatedDateTime", "utcDeletedDateTime")
-      SELECT $${n + 1}, "medium"."id", $${n + 2}, $${n + 3} FROM "medium"
+      INSERT INTO "PinMedium" ("pinId", "mediumId", "utcCreatedDateTime", "utcDeletedDateTime", "weight")
+      SELECT $${n + 1}, "medium"."id", $${n + 2}, $${n + 3}, "w"."weight"
+      FROM (SELECT "id", row_number() OVER (ORDER BY "id") AS "ord" FROM "medium") AS "medium"
+        JOIN unnest($${n + 4}::real[]) WITH ORDINALITY AS "w" ("weight", "ord") ON "w"."ord" = "medium"."ord"
     )
     SELECT "id" FROM "medium"`,
     [
@@ -204,6 +252,7 @@ export async function saveAllToPin(media: Medium[], pinId: number, query: QueryF
       pinId,
       media[0].utcCreatedDateTime || new Date(),
       media[0].utcDeletedDateTime === undefined ? null : media[0].utcDeletedDateTime,
+      media.map(weightOf),
     ],
   );
   rows.sort((a, b) => a.id - b.id);
@@ -289,14 +338,15 @@ async function createPinMediumLink<T extends Medium>(medium: T, pinId: number): 
     pinId,
     medium.utcCreatedDateTime || new Date(),
     medium.utcDeletedDateTime === undefined ? null : medium.utcDeletedDateTime,
+    weightOf(medium),
   ]);
   const n = MEDIUM_COLUMNS.length;
   const rows = await db.query(
     `
     WITH "medium" AS (${MEDIUM_INSERT}),
     "link" AS (
-      INSERT INTO "PinMedium" ("pinId", "mediumId", "utcCreatedDateTime", "utcDeletedDateTime")
-      SELECT $${n + 1}, "medium"."id", $${n + 2}, $${n + 3} FROM "medium"
+      INSERT INTO "PinMedium" ("pinId", "mediumId", "utcCreatedDateTime", "utcDeletedDateTime", "weight")
+      SELECT $${n + 1}, "medium"."id", $${n + 2}, $${n + 3}, $${n + 4} FROM "medium"
     )
     SELECT "id" FROM "medium"`,
     values,
@@ -311,7 +361,7 @@ async function createMedium<T extends Medium>(medium: T): Promise<T> {
   return medium;
 }
 
-type ThumbMeta = Awaited<ReturnType<typeof image.createThumbFromUrl>>;
+export type ThumbMeta = Awaited<ReturnType<typeof image.createThumbFromUrl>>;
 
 function mapAndSaveThumb(thumb: ThumbMeta) {
   return image.saveThumb({

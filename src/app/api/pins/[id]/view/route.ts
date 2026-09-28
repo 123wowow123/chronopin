@@ -1,6 +1,6 @@
 import { after, userAgent, type NextRequest } from 'next/server';
 import { emitPinEvent } from '@/server/events';
-import { intParam, json, noContent, route } from '@/server/http';
+import { clientIp, intParam, json, noContent, route } from '@/server/http';
 import PinView from '@/server/model/pinView';
 import UserWiki from '@/server/model/userWiki';
 import { viewerKey } from '@/server/visitor';
@@ -17,7 +17,7 @@ export const POST = route(async (request: NextRequest, ctx: Ctx) => {
     return noContent();
   }
   const viewer = await viewerKey(request);
-  const { added, viewCount } = await PinView.record(pinId, viewer);
+  const { added, viewCount } = await PinView.record(pinId, viewer, clientIp(request));
   if (added) emitPinEvent('view', { id: pinId, viewCount });
   // A signed-in open is a signal for their preference wiki.
   if (added && viewer.startsWith('u:')) after(() => UserWiki.rebuildQuietly(Number(viewer.slice(2))));

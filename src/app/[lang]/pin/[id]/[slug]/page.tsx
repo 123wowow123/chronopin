@@ -14,7 +14,6 @@ import { DateRanges } from '@/components/pin/DateRanges';
 import { FollowButton } from '@/components/pin/FollowButton';
 import { PinAdminLink } from '@/components/pin/PinAdminLink';
 import { PinMenu } from '@/components/pin/PinMenu';
-import { PinRevisitButton } from '@/components/pin/PinRevisitButton';
 import { AddressShare } from '@/components/pin/PinShare';
 import { CardGrid } from '@/components/pin/CardGrid';
 import { PinCard } from '@/components/pin/PinCard';
@@ -295,7 +294,7 @@ function PinBody({
       {pin.utcStartDateTime ? (
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted">
           <StartTime pin={pin} serverTimeZone={timeZone} allDaySuffix search />
-          <DateConfidence level={pin.dateConfidence} reasoning={pin.dateConfidenceReasoning} />
+          <DateConfidence level={pin.dateConfidence} />
           <DelayBadge pin={pin} />
           <PinConfidence evidence={pinEvidence(pin)} />
           {/* Last: the reasoning takes a line of its own below the badges. */}
@@ -379,7 +378,6 @@ function PinBody({
         <div className="flex items-center gap-1">
           <ViewCount pinId={pin.id} initial={pin.viewCount} track />
           <WatchButton pin={pin} loadForViewer />
-          <PinRevisitButton pinId={pin.id} />
           <PinAdminLink pinId={pin.id} />
           {/* Share, Not interested (or Show this pin again), Block. */}
           <PinMenu

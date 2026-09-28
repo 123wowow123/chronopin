@@ -4,6 +4,7 @@ import { ServiceError } from '@/server/extract/wiki';
 import AiFeedback from '@/server/model/aiFeedback';
 import Pin from '@/server/model/pin';
 import { addReferences } from '@/server/services/addReferences';
+import { applyMediaReview, mediaLines, reviewPictures, shownMedia, type ShownMedium } from '@/server/services/suggestionMedia';
 import { SOURCE_CONFIDENCE } from '@/lib/referenceConfidence';
 import log from '../util/log';
 
@@ -27,8 +28,9 @@ function when(value: Date | string | null | undefined, allDay: boolean) {
 }
 
 // What the review is given: the pin as it stands, each link it cites with how
-// much it is trusted, and the suggestion.
-export function reviewInput(pin: Pin, feedback: Row): string {
+// much it is trusted, its media (their pictures go along as images), and the
+// suggestion.
+export function reviewInput(pin: Pin, feedback: Row, shown: ShownMedium[] = shownMedia(pin)): string {
   const allDay = !!pin.allDay;
   const start = when(pin.utcStartDateTime, allDay);
   // An all-day pin's end is exclusive; the pin reads it as the day before.
@@ -57,6 +59,8 @@ export function reviewInput(pin: Pin, feedback: Row): string {
       ].join(''),
     ),
     '',
+    ...mediaLines(shown),
+    '',
     `The reader's suggestion (left ${when(feedback.utcCreatedDateTime, true)}):`,
     '"""',
     String(feedback.feedback).replace(/"""/g, '"'),
@@ -67,8 +71,10 @@ export function reviewInput(pin: Pin, feedback: Row): string {
 }
 
 // Applies a finished review: the references it kept go onto the pin, credited
-// to whoever suggested them, and the verdict is recorded on the suggestion.
-export async function applyReview(feedback: Row, review: SuggestionReview): Promise<'applied' | 'dismissed' | 'skipped'> {
+// to whoever suggested them, the media it found the reader right about are
+// demoted and replaced (./suggestionMedia.ts), and the verdict is recorded on
+// the suggestion. shown is the media the review was shown, by label.
+export async function applyReview(feedback: Row, review: SuggestionReview, shown: ShownMedium[]): Promise<'applied' | 'dismissed' | 'skipped'> {
   // Another review may have finished while this one was searching.
   const current = await AiFeedback.byId(feedback.id);
   if (!current || current.status !== 'open') return 'skipped';
@@ -84,8 +90,13 @@ export async function applyReview(feedback: Row, review: SuggestionReview): Prom
       added = review.references.filter((r) => addedUrls.has(r.url));
     }
   }
-  await AiFeedback.recordReview(feedback.id, { ...review, references: added });
-  return added.length ? 'applied' : 'dismissed';
+  const flags = review.media.flatMap((flag) => {
+    const medium = shown.find((m) => m.label === flag.medium);
+    return medium ? [{ mediumId: medium.mediumId, problem: flag.problem, reasoning: flag.reasoning }] : [];
+  });
+  const media = await applyMediaReview(current.pinId, flags, { newReferenceUrls: added.map((r) => r.url), userId: Number(current.userId) || null });
+  await AiFeedback.recordReview(feedback.id, { ...review, references: added, media });
+  return added.length || media ? 'applied' : 'dismissed';
 }
 
 // Reviews one open suggestion end to end. Never throws: a failure is logged
@@ -99,9 +110,11 @@ export async function reviewFeedback(id: number): Promise<ReviewOutcome> {
     const { pin } = await Pin.queryById(feedback.pinId);
     if (!pin) return 'skipped';
 
+    const shown = shownMedia(pin);
     let review: SuggestionReview | null;
     try {
-      review = await reviewSuggestion(reviewInput(pin, feedback), pin.sourceUrl || '');
+      const pictures = await reviewPictures(pin, shown);
+      review = await reviewSuggestion(reviewInput(pin, feedback, shown), pin.sourceUrl || '', pictures, shown.map((m) => m.label));
     } catch (err) {
       if (err instanceof ServiceError) {
         log.warn(`suggestion ${id}: API unavailable, left open -`, err.message);
@@ -112,7 +125,7 @@ export async function reviewFeedback(id: number): Promise<ReviewOutcome> {
       return 'failed';
     }
     if (!review) return 'unavailable'; // no API key
-    return await applyReview(feedback, review);
+    return await applyReview(feedback, review, shown);
   } catch (err) {
     log.warn(`suggestion ${id}: could not be reviewed -`, (err as Error)?.message || err);
     return 'failed';

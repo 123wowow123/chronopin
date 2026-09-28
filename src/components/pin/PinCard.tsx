@@ -213,7 +213,7 @@ export function PinCard({
                 <>
                   <StartTime pin={pin} serverTimeZone={serverTimeZone} search />
                   <WeatherIcon pinId={pin.id} hasPlace={hasPlace} />
-                  <DateConfidence level={pin.dateConfidence} reasoning={pin.dateConfidenceReasoning} />
+                  <DateConfidence level={pin.dateConfidence} />
                   <DelayBadge pin={pin} />
                   <PinConfidence evidence={pinEvidence(pin)} />
                 </>

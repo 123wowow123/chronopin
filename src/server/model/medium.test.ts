@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { mediumID } from '@/lib/appConfig';
-import Medium, { withoutRepeatedPictures } from './medium';
+import Medium, { byWeight, withoutRepeatedPictures } from './medium';
 
 // A medium whose picture has already been read, so nothing is downloaded here.
 function picture(originalUrl: string, hash: string) {
@@ -42,5 +42,12 @@ describe('withoutRepeatedPictures', () => {
     // Nothing can be said about either, so both are kept.
     const { keep } = await withoutRepeatedPictures([video, unread], [picture('https://example.com/poster.jpg', POSTER)]);
     expect(keep).toEqual([video, unread]);
+  });
+});
+
+describe('byWeight', () => {
+  it('puts demoted media last and keeps the rest in the order they were added', () => {
+    const media = [{ id: 3 }, { id: 1, weight: 0.5 }, { id: 2 }, { id: 4, weight: 0 }];
+    expect(byWeight(media).map((m) => m.id)).toEqual([2, 3, 1, 4]);
   });
 });

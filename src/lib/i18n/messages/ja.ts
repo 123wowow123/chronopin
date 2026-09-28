@@ -323,6 +323,8 @@ const ja: Messages = {
     none: 'まだ参考資料はありません。このピンを裏付けるリンクが、それぞれの確度とともにここに表示されます。',
   },
   confidence: {
+    tipHeading: '総合信頼度',
+    tipLead: 'ピンの情報源と参照がその日付をどれだけ裏付けているか。',
     title: '{count} 件の資料がピンの開始・終了時刻をどれだけ強く裏付けているかの加重平均。最新の資料より{days}日古くなるごとに重みは半分になります',
     titleWithSource: '出典を含む {count} 件の資料がピンの開始・終了時刻をどれだけ強く裏付けているかの加重平均。最新の資料より{days}日古くなるごとに重みは半分になります',
     badge: '確度 {percent}%',
@@ -420,6 +422,8 @@ const ja: Messages = {
     stretchPromised: '当初約束された待ち時間: {from}〜{to}',
   },
   dateConfidence: {
+    tipHeading: '日付の確度',
+    tipScale: '情報源が日付をどれだけ確定的に述べているか：確定、予定、推定、延期、未確認。',
     delayed: { label: '延期', title: '日付が変更されました' },
     unknown: { label: '未確認', title: '日付についての記述が見つかりませんでした' },
     estimated: { label: '推定', title: '確定日ではなく目標' },
@@ -638,9 +642,9 @@ const ja: Messages = {
     sameAfterAll: 'やはり同じ出来事',
     alsoPinned: '他のユーザーもピン留め',
     sameEventPinned: '同じ出来事が、ほかに {count} 回ピン留めされています。',
-    stack: 'タイムラインでは重ねて表示され、最もウォッチの多いもの（次に表示の多いもの）が一番上になります。',
+    stack: 'タイムラインでは重ねて表示され、最もウォッチの多いもの（次に表示の多いもの）が一番上になります：<pin></pin>。',
     stackThisOne: 'タイムラインでは重ねて表示され、最もウォッチの多いもの（次に表示の多いもの）が一番上になります：このピンです。',
-    onTimeline: 'タイムラインに表示中',
+    onTimeline: '一番上に表示',
     unlink: 'リンク解除',
     possible: '重複の可能性',
     suggestions: '件の候補',
@@ -944,7 +948,7 @@ const ja: Messages = {
   },
   suggest: {
     heading: '修正を提案',
-    explainer: '足りない点や誤りがありますか？ このピンを裏付けるリンク、別の開始日・終了日とその理由、欠けている情報や誤っている情報を、自由に書いてください。AIがこのピンの出典と照らし合わせ、より良い情報源を探し、裏付けとなるページがあれば参考資料として追加します。ピン自身の出典が引き続き最も重視されます。',
+    explainer: '足りない点や誤りがありますか？ このピンを裏付けるリンク、別の開始日・終了日とその理由、欠けている情報や誤っている情報を、自由に書いてください。AIがこのピンの出典と照らし合わせ、より良い情報源を探し、裏付けとなるページがあれば参考資料として追加します。ピン自身の出典が引き続き最も重視されます。AIは画像も確認します。別のものが写っている画像や写りの悪い画像は、後ろに回すか差し替えます。',
     open: '修正を提案',
     label: 'あなたの提案',
     placeholder: '発売は3月14日に延期されました。発表はこちら: https://…',
@@ -958,6 +962,9 @@ const ja: Messages = {
     checkingHint: 'AIが出典と照らし合わせて確認しています。1〜2分でここに結果が表示されます。',
     applied: '参考資料を {count} 件追加',
     dismissed: '変更なし',
+    mediaDemoted: '画像 {count} 件を後ろに移動',
+    mediaDropped: '画像 {count} 件を削除',
+    mediaAdded: 'より良い画像を {count} 件追加',
     verdict: { supported: '裏付けあり', partly: '一部裏付けあり', unsupported: '裏付けなし', unclear: '判断できず' },
   },
   duplicatePrompt: {

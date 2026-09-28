@@ -1,5 +1,6 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import Link from '@/components/ui/Link';
 import { useMemo, useState } from 'react';
 import { PinThumb } from '@/components/pin/PinThumb';
@@ -18,6 +19,13 @@ import {
   TimeColumns,
   ViewTabs,
 } from '../chartParts';
+import type { MapPlace } from '../PlaceMap';
+
+// Leaflet touches window at import, so the map loads in the browser only.
+const PlaceMap = dynamic(() => import('../PlaceMap'), {
+  ssr: false,
+  loading: () => <div className="h-72 w-full animate-pulse rounded-lg bg-raised" />,
+});
 
 export type RangeSummary = {
   viewers: number;
@@ -29,20 +37,50 @@ export type RangeSummary = {
     thumbName?: string | null;
     originalUrl?: string | null;
   }[];
+  // Views with an address, and where those came from ("" is unplaced).
+  located: number;
+  countries: { country: string; views: number; viewers: number }[];
+  cities: { city: string; views: number; viewers: number }[];
+  points: { label: string; latitude: number; longitude: number; views: number }[];
 };
+
+export type LatestView = {
+  pinId: number;
+  title: string | null;
+  at: string;
+  userId: number | null;
+  userName: string | null;
+  ip: string;
+  place: string;
+};
+
+const regionNames = new Intl.DisplayNames(['en'], { type: 'region' });
+const countryName = (code: string) => {
+  if (!code) return 'Unplaced';
+  try {
+    return regionNames.of(code) ?? code;
+  } catch {
+    return code;
+  }
+};
+// "2026-09-27 16:05 UTC", the same on the server and in the browser.
+const utcTime = (iso: string) => `${iso.slice(0, 10)} ${iso.slice(11, 16)} UTC`;
 
 const SERIES = [
   { label: 'Signed in', color: SERIES_BLUE, value: (b: ViewBucket) => b.signedIn },
   { label: 'Guests', color: SERIES_ORANGE, value: (b: ViewBucket) => b.guests },
 ];
 
-// Pin page views over time and the most-viewed pins for the chosen range.
+// Pin page views over time, the most-viewed pins and where the views came
+// from for the chosen range, and the latest views with who and from where.
 export function ViewCharts({
   days,
+  latest,
   summaries,
   serverNow,
 }: {
   days: ViewDay[];
+  latest: LatestView[];
   summaries: Record<TimeRange, RangeSummary>;
   // When the server rendered, so the buckets match during hydration.
   serverNow: string;
@@ -54,6 +92,10 @@ export function ViewCharts({
   const summary = summaries[range];
   const rangeLabel = TIME_RANGES.find((r) => r.id === range)!.label;
   const inRange = range === 'all' ? 'all time' : `in the last ${rangeLabel}`;
+  const places = useMemo<MapPlace[]>(
+    () => summary.points.map((p) => ({ key: `${p.latitude},${p.longitude}`, label: p.label, latitude: p.latitude, longitude: p.longitude, count: p.views })),
+    [summary],
+  );
 
   return (
     <div className="mb-8 space-y-4">
@@ -150,6 +192,84 @@ export function ViewCharts({
           </div>
         ) : (
           <p className="text-sm text-subtle">No pin views {inRange}.</p>
+        )}
+      </section>
+
+      <section className="surface space-y-4 p-4 sm:p-5">
+        <h2 className="text-base font-semibold">Where from</h2>
+        {places.length ? <PlaceMap places={places} noun="view" /> : null}
+        {summary.countries.length ? (
+          <div className="grid gap-4 text-sm sm:grid-cols-2">
+            <table className="w-full text-left tabular-nums">
+              <thead className="text-subtle">
+                <tr>
+                  <th className="w-full py-1 font-medium">Country</th>
+                  <th className="py-1 pl-4 text-right font-medium">Views</th>
+                  <th className="py-1 pl-4 text-right font-medium">Viewers</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-line">
+                {summary.countries.map((c) => (
+                  <tr key={c.country}>
+                    <td className="py-1.5">{countryName(c.country)}</td>
+                    <td className="py-1.5 pl-4 text-right">{c.views}</td>
+                    <td className="py-1.5 pl-4 text-right">{c.viewers}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <table className="w-full text-left tabular-nums">
+              <thead className="text-subtle">
+                <tr>
+                  <th className="w-full py-1 font-medium">City</th>
+                  <th className="py-1 pl-4 text-right font-medium">Views</th>
+                  <th className="py-1 pl-4 text-right font-medium">Viewers</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-line">
+                {summary.cities.map((c) => (
+                  <tr key={c.city}>
+                    <td className="max-w-0 truncate py-1.5" title={c.city}>
+                      {c.city}
+                    </td>
+                    <td className="py-1.5 pl-4 text-right">{c.views}</td>
+                    <td className="py-1.5 pl-4 text-right">{c.viewers}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <p className="text-sm text-subtle">No views with an address {inRange}.</p>
+        )}
+        <p className="text-xs text-faint">
+          {stats.views ? `${Math.round((summary.located / stats.views) * 100)}% of views ${inRange} have an address. ` : null}
+          <a href="https://db-ip.com" className="text-inherit">
+            IP Geolocation by DB-IP
+          </a>
+        </p>
+      </section>
+
+      <section className="surface p-4 sm:p-5">
+        <h2 className="mb-3 text-base font-semibold">Latest views</h2>
+        {latest.length ? (
+          <ul className="divide-y divide-line text-sm">
+            {latest.map((v) => (
+              <li key={`${v.pinId}-${v.userId ?? v.ip}-${v.at}`} className="py-2">
+                <Link href={pinPath({ id: v.pinId, title: v.title ?? '' })} title={v.title ?? ''} className="block truncate text-link">
+                  {v.title || `Pin ${v.pinId}`}
+                </Link>
+                <div className="mt-0.5 flex flex-wrap gap-x-3 text-xs text-subtle tabular-nums">
+                  <span className="text-ink">{v.userId != null ? `@${v.userName ?? v.userId}` : v.ip}</span>
+                  {v.userId != null ? <span>{v.ip}</span> : null}
+                  <span>{v.place || 'Unplaced'}</span>
+                  <span className="ml-auto">{utcTime(v.at)}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-sm text-subtle">No views with an address yet.</p>
         )}
       </section>
 

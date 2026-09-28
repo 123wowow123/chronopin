@@ -6,6 +6,7 @@ import de from './messages/de';
 import en from './messages/en';
 import es from './messages/es';
 import fr from './messages/fr';
+import hi from './messages/hi';
 import ja from './messages/ja';
 import ko from './messages/ko';
 import zh from './messages/zh';
@@ -111,6 +112,8 @@ describe('formatting in other languages', () => {
     expect(formatDayKey('2026-09-14', 'de')).toBe('14.09.2026');
     expect(formatDayKey('2026-09-14', 'ja')).toBe('2026/09/14');
     expect(formatDayKey('-2560-01-01', 'fr')).toBe('01/01/2561 av. J.-C.');
+    expect(formatDayKey('2026-09-14', 'hi')).toBe('14/09/2026');
+    expect(formatDayKey('-2560-01-01', 'hi')).toBe('01/01/2561 ई.पू.');
   });
 
   it('words start dates and countdowns', () => {
@@ -119,6 +122,7 @@ describe('formatting in other languages', () => {
     // Without the source's word for it the label is left off, in every language.
     expect(formatStart(pin, 'UTC', { allDaySuffix: true }, 'es')).toBe('Empieza el 14/09/2026');
     expect(formatStart(pin, 'UTC', {}, 'zh')).toBe('开始于 2026/09/14');
+    expect(formatStart(pin, 'UTC', {}, 'hi')).toBe('14/09/2026 से शुरू');
     // A run of days is worded as a span, not as a start.
     const span = { ...pin, utcEndDateTime: '2026-09-17T00:00:00.000Z' };
     expect(formatStart(span, 'UTC', {}, 'fr')).toBe('Du 14/09/2026 au 16/09/2026');
@@ -135,7 +139,7 @@ describe('formatting in other languages', () => {
 // Every translation keeps the English message's {slots} and <tags>: a slot
 // lost or renamed prints as its braces, and a lost tag loses its link.
 describe('dictionaries', () => {
-  const others: Record<string, Messages> = { es, fr, de, ja, ko, zh };
+  const others: Record<string, Messages> = { es, fr, de, ja, ko, zh, hi };
 
   function leaves(node: unknown, prefix = ''): [string, string][] {
     if (typeof node === 'string') return [[prefix, node]];

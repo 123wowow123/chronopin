@@ -323,6 +323,8 @@ const de: Messages = {
     none: 'Noch keine Belege. Links, die diesen Pin stützen, erscheinen hier, jeweils mit ihrer Sicherheit.',
   },
   confidence: {
+    tipHeading: 'Gesamtvertrauen',
+    tipLead: 'Wie gut die Quelle und die Belege des Pins seine Termine stützen.',
     title: {
       one: 'Gewichteter Durchschnitt, wie fest {count} Beleg die Start- und Endzeiten des Pins stützt; ein Beleg zählt für je {days} Tage, die er älter ist als der neueste, nur halb so viel',
       other: 'Gewichteter Durchschnitt, wie fest {count} Belege die Start- und Endzeiten des Pins stützen; ein Beleg zählt für je {days} Tage, die er älter ist als der neueste, nur halb so viel',
@@ -426,6 +428,8 @@ const de: Messages = {
     stretchPromised: 'Die ursprünglich versprochene Wartezeit: {from} bis {to}',
   },
   dateConfidence: {
+    tipHeading: 'Terminsicherheit',
+    tipScale: 'Wie fest die Quelle den Termin formuliert: bestätigt, geplant, geschätzt, verschoben oder unbestätigt.',
     delayed: { label: 'VERSCHOBEN', title: 'Der Termin hat sich verschoben' },
     unknown: { label: 'UNBESTÄTIGT', title: 'Es wurde nichts zum Termin gefunden' },
     estimated: { label: 'GESCHÄTZT', title: 'Ein Ziel, kein fester Termin' },
@@ -644,9 +648,9 @@ const de: Messages = {
     sameAfterAll: 'Doch dasselbe Ereignis',
     alsoPinned: 'Auch von anderen gepinnt',
     sameEventPinned: { one: 'Dasselbe Ereignis, {count} weiteres Mal gepinnt.', other: 'Dasselbe Ereignis, {count} weitere Male gepinnt.' },
-    stack: 'Auf der Zeitleiste werden sie gestapelt, der meistbeobachtete (dann meistgesehene) oben.',
+    stack: 'Auf der Zeitleiste werden sie gestapelt, der meistbeobachtete (dann meistgesehene) oben: <pin></pin>.',
     stackThisOne: 'Auf der Zeitleiste werden sie gestapelt, der meistbeobachtete (dann meistgesehene) oben: dieser.',
-    onTimeline: 'Auf der Zeitleiste',
+    onTimeline: 'Oben angezeigt',
     unlink: 'Verknüpfung lösen',
     possible: 'Mögliche Duplikate',
     suggestions: { one: 'Vorschlag', other: 'Vorschläge' },
@@ -957,7 +961,7 @@ const de: Messages = {
   },
   suggest: {
     heading: 'Korrektur vorschlagen',
-    explainer: 'Fehlt etwas oder stimmt etwas nicht? Sag es in deinen eigenen Worten: ein Link, der diesen Pin belegt, ein anderes Start- oder Enddatum und warum, oder eine Angabe, die fehlt oder falsch ist. Die KI prüft es an den Quellen dieses Pins, sucht nach besseren und ergänzt jede Seite, die dich bestätigt. Die eigenen Quellen des Pins zählen weiterhin am meisten.',
+    explainer: 'Fehlt etwas oder stimmt etwas nicht? Sag es in deinen eigenen Worten: ein Link, der diesen Pin belegt, ein anderes Start- oder Enddatum und warum, oder eine Angabe, die fehlt oder falsch ist. Die KI prüft es an den Quellen dieses Pins, sucht nach besseren und ergänzt jede Seite, die dich bestätigt. Die eigenen Quellen des Pins zählen weiterhin am meisten. Auch Bilder sieht sich die KI an: Eines, das etwas anderes oder die Sache schlecht zeigt, wird nach hinten gestellt oder ersetzt.',
     open: 'Korrektur vorschlagen',
     label: 'Dein Vorschlag',
     placeholder: 'Der Start wurde auf den 14. März verschoben, angekündigt hier: https://…',
@@ -971,6 +975,9 @@ const de: Messages = {
     checkingHint: 'Die KI prüft das an den Quellen. Das Ergebnis erscheint hier in ein, zwei Minuten.',
     applied: { one: '{count} Beleg ergänzt', other: '{count} Belege ergänzt' },
     dismissed: 'Keine Änderung',
+    mediaDemoted: { one: '{count} Bild nach hinten gestellt', other: '{count} Bilder nach hinten gestellt' },
+    mediaDropped: { one: '{count} Bild entfernt', other: '{count} Bilder entfernt' },
+    mediaAdded: { one: '{count} besseres Bild ergänzt', other: '{count} bessere Bilder ergänzt' },
     verdict: { supported: 'Belegt', partly: 'Teilweise belegt', unsupported: 'Nicht belegt', unclear: 'Unklar' },
   },
   duplicatePrompt: {

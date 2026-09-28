@@ -26,6 +26,8 @@ export type MediumJson = {
   authorName?: string;
   authorUrl?: string;
   html?: string;
+  // Below 1 once a checked suggestion demoted it (0090); absent at full weight.
+  weight?: number;
 };
 
 export type MerchantJson = {
@@ -56,6 +58,14 @@ export type PinReferenceJson = {
 
 // A suggestion someone left on a pin (AiFeedback), as its author sees it: open
 // while the AI reviews it, then applied (it added references) or dismissed.
+// What a suggestion's review did to the pin's pictures (0090): the ones it
+// demoted (dropped, when a better one took the place or it showed something
+// else) and the ones it added.
+export type SuggestionMediaJson = {
+  demoted: { mediumId: number; originalUrl: string; problem: 'wrong' | 'poor'; reasoning: string; weight: number; dropped: boolean }[];
+  added: { originalUrl: string; reasoning: string }[];
+};
+
 export type SuggestionJson = {
   id: number;
   pinId: number;
@@ -65,6 +75,7 @@ export type SuggestionJson = {
   aiVerdict?: 'supported' | 'partly' | 'unsupported' | 'unclear' | null;
   aiReasoning?: string | null;
   aiReferences?: { url: string; title: string | null; confidence: number }[] | null;
+  aiMedia?: SuggestionMediaJson | null;
   utcCreatedDateTime: string;
   utcResolvedDateTime?: string | null;
 };

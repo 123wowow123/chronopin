@@ -22,7 +22,7 @@ export default async function AdminBotsPage() {
     ...TIME_RANGES.map((r) => BotVisit.summarize(rangeStartDay(r.id, now))),
   ]);
   return (
-    <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
+    <div className="px-4 py-6 sm:py-10 lg:px-8">
       <AdminTabs current="/admin/bots" />
       <h1 className="sr-only">Bots</h1>
       <p className="mb-6 text-sm text-subtle">

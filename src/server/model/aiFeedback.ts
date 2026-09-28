@@ -1,6 +1,7 @@
 import * as db from '../db';
 import type { Row } from '../db';
 import { AI_FEEDBACK_MAX } from '@/lib/duplicateDraft';
+import type { SuggestionMediaJson } from '@/lib/types';
 
 // Failed reviews (the call went through but gave nothing usable) after which
 // `npm run suggestions:review` leaves a suggestion alone unless told to retry.
@@ -11,7 +12,7 @@ export const MAX_REVIEW_ATTEMPTS = 3;
 export const DAILY_LIMIT = 10;
 
 // What one person sees of their own suggestion on a pin.
-const PUBLIC_COLUMNS = `"id", "pinId", "feedback", "sourceUrl", "status", "aiVerdict", "aiReasoning", "aiReferences", "utcCreatedDateTime", "utcResolvedDateTime"`;
+const PUBLIC_COLUMNS = `"id", "pinId", "feedback", "sourceUrl", "status", "aiVerdict", "aiReasoning", "aiReferences", "aiMedia", "utcCreatedDateTime", "utcResolvedDateTime"`;
 
 // What someone says an existing pin is missing or getting wrong, for the AI to
 // check (see 0015 and 0064): left from the duplicate prompt, or from the pin's
@@ -72,17 +73,32 @@ export default class AiFeedback {
     return rows.map((row) => row.id);
   }
 
-  // The finished review: 'applied' when it added references, else 'dismissed'.
+  // The finished review: 'applied' when it added references or changed the
+  // pin's media (0090), else 'dismissed'.
   static async recordReview(
     id: number,
-    review: { verdict: string; reasoning: string; model: string; references: { url: string; title?: string; confidence: number }[] },
+    review: {
+      verdict: string;
+      reasoning: string;
+      model: string;
+      references: { url: string; title?: string; confidence: number }[];
+      media?: SuggestionMediaJson | null;
+    },
   ) {
     const added = review.references.map(({ url, title, confidence }) => ({ url, title: title ?? null, confidence }));
     await db.query(
       `UPDATE "AiFeedback"
-       SET "status" = $2, "aiVerdict" = $3, "aiReasoning" = $4, "aiReferences" = $5::jsonb, "aiModel" = $6, "utcResolvedDateTime" = now()
+       SET "status" = $2, "aiVerdict" = $3, "aiReasoning" = $4, "aiReferences" = $5::jsonb, "aiModel" = $6, "aiMedia" = $7::jsonb, "utcResolvedDateTime" = now()
        WHERE "id" = $1`,
-      [id, added.length ? 'applied' : 'dismissed', review.verdict, review.reasoning || null, JSON.stringify(added), review.model],
+      [
+        id,
+        added.length || review.media ? 'applied' : 'dismissed',
+        review.verdict,
+        review.reasoning || null,
+        JSON.stringify(added),
+        review.model,
+        review.media ? JSON.stringify(review.media) : null,
+      ],
     );
   }
 
@@ -94,7 +110,7 @@ export default class AiFeedback {
   // For backups: every row, oldest first.
   static getAll(): Promise<Row[]> {
     return db.query(`
-      SELECT "id", "pinId", "userId", "feedback", "sourceUrl", "status", "aiVerdict", "aiReasoning", "aiReferences", "aiModel", "reviewAttempts", "utcCreatedDateTime", "utcResolvedDateTime"
+      SELECT "id", "pinId", "userId", "feedback", "sourceUrl", "status", "aiVerdict", "aiReasoning", "aiReferences", "aiMedia", "aiModel", "reviewAttempts", "utcCreatedDateTime", "utcResolvedDateTime"
       FROM "AiFeedback"
       ORDER BY "id"`);
   }
@@ -102,8 +118,8 @@ export default class AiFeedback {
   static async restore(rows: Row[] | undefined) {
     for (const row of rows || []) {
       await db.query(
-        `INSERT INTO "AiFeedback" ("id", "pinId", "userId", "feedback", "sourceUrl", "status", "aiVerdict", "aiReasoning", "aiReferences", "aiModel", "reviewAttempts", "utcCreatedDateTime", "utcResolvedDateTime")
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9::jsonb, $10, $11, COALESCE($12, now()), $13)
+        `INSERT INTO "AiFeedback" ("id", "pinId", "userId", "feedback", "sourceUrl", "status", "aiVerdict", "aiReasoning", "aiReferences", "aiModel", "reviewAttempts", "utcCreatedDateTime", "utcResolvedDateTime", "aiMedia")
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9::jsonb, $10, $11, COALESCE($12, now()), $13, $14::jsonb)
          ON CONFLICT ("id") DO NOTHING`,
         [
           row.id,
@@ -119,6 +135,7 @@ export default class AiFeedback {
           row.reviewAttempts ?? 0,
           row.utcCreatedDateTime ?? null,
           row.utcResolvedDateTime ?? null,
+          row.aiMedia == null ? null : JSON.stringify(row.aiMedia),
         ],
       );
     }

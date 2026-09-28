@@ -21,7 +21,7 @@ import { parseArgs } from 'node:util';
 import { mediumID } from '@/lib/appConfig';
 import { picturesNeeded } from '@/lib/mediaTarget';
 import * as db from '@/server/db';
-import Medium, { withoutRepeatedPictures } from '@/server/model/medium';
+import Medium, { droppedMedia, withoutRepeatedPictures } from '@/server/model/medium';
 import Pin from '@/server/model/pin';
 import { findPinImages } from '@/server/scrape/findImages';
 
@@ -39,14 +39,15 @@ const DELAY_MS = Number(flags.delay ?? 4) * 1000;
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 // The thumb is made first and the picture weighed against the ones the pin
-// has: a source that hands back a picture the pin already carries at another
-// size adds nothing, and is left unstored rather than taking a slot.
-async function store(pin: Pin, image: { originalUrl: string; width?: number; height?: number }): Promise<boolean> {
+// has, or had until a suggestion dropped it (0090): a source that hands back
+// one of those at another size adds nothing, and is left unstored rather than
+// taking a slot.
+async function store(pin: Pin, image: { originalUrl: string; width?: number; height?: number }, dropped: Medium[]): Promise<boolean> {
   for (let attempt = 1; attempt <= 4; attempt++) {
     try {
       const medium = new Medium({ type: mediumID.image, originalUrl: image.originalUrl, originalWidth: image.width || undefined, originalHeight: image.height || undefined }, pin);
       await medium.addThumb();
-      if (!(await withoutRepeatedPictures([medium], pin.media)).keep.length) {
+      if (!(await withoutRepeatedPictures([medium], [...pin.media, ...dropped])).keep.length) {
         return false;
       }
       await medium.save();
@@ -87,6 +88,7 @@ async function run() {
     const { pin } = await Pin.queryById(row.id);
     if (!pin) continue;
     const need = picturesNeeded(row.media, row.images);
+    const dropped = await droppedMedia(pin.id);
     const found = await findPinImages(
       {
         title: pin.title,
@@ -96,14 +98,14 @@ async function run() {
         references: pin.references.map((r) => ({ url: r.url, startDate: r.startDate, publishedDate: r.publishedDate })),
       },
       need,
-      pin.media.map((m) => m.originalUrl!),
+      [...pin.media, ...dropped].map((m) => m.originalUrl!),
     ).catch((err) => {
       console.log(`pin ${row.id}: search failed - ${(err as Error).message.slice(0, 80)}`);
       return { images: [], references: [] };
     });
     let stored = 0;
     for (const image of found.images.slice(0, Math.max(need, 1))) {
-      if (await store(pin, image)) stored++;
+      if (await store(pin, image, dropped)) stored++;
     }
     if (stored) touched++;
     added += stored;

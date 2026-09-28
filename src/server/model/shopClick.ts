@@ -1,6 +1,6 @@
 import * as db from '../db';
-import { locate } from '../ipLocation';
 import type { ShopClickRow } from '@/lib/shopping';
+import { locateUnlocated } from './ipPlaces';
 import PinView from './pinView';
 
 export type ShopClickInput = {
@@ -41,33 +41,9 @@ export default class ShopClick {
     return rows.length > 0;
   }
 
-  // Places every click whose address has not been looked up yet. A click the
-  // database cannot place is marked looked-up all the same, so it is not
-  // asked about again.
-  static async locateUnlocated(): Promise<number> {
-    const rows = await db.query<{ ip: string }>(
-      `SELECT DISTINCT host("ip") AS "ip" FROM "ShopClick" WHERE "located" IS NULL AND "ip" IS NOT NULL`,
-    );
-    if (!rows.length) return 0;
-    const places = await locate(rows.map((r) => r.ip));
-    const found = rows.map((r) => ({ ip: r.ip, ...places.get(r.ip) }));
-    await db.query(
-      `UPDATE "ShopClick" AS "c"
-       SET "country" = "f"."country", "region" = "f"."region", "city" = "f"."city",
-         "latitude" = "f"."latitude", "longitude" = "f"."longitude", "located" = now()
-       FROM unnest($1::inet[], $2::varchar[], $3::varchar[], $4::varchar[], $5::float8[], $6::float8[])
-         AS "f" ("ip", "country", "region", "city", "latitude", "longitude")
-       WHERE "c"."ip" = "f"."ip" AND "c"."located" IS NULL`,
-      [
-        found.map((f) => f.ip),
-        found.map((f) => f.country ?? null),
-        found.map((f) => f.region ?? null),
-        found.map((f) => f.city ?? null),
-        found.map((f) => f.latitude ?? null),
-        found.map((f) => f.longitude ?? null),
-      ],
-    );
-    return rows.length;
+  // Places every click whose address has not been looked up yet.
+  static locateUnlocated(): Promise<number> {
+    return locateUnlocated('ShopClick');
   }
 
   // Every click, newest first, with its pin's title and picture and the

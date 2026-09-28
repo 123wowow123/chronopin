@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
 import { BackToMenu } from '@/components/nav/BackToMenu';
+import { TabRow } from '@/components/nav/TabRow';
 import Link from '@/components/ui/Link';
 import { useT } from '@/lib/client/i18n';
 
@@ -21,18 +21,10 @@ const TABS = [
 // with the picked one brought into view.
 export function ProfileTabs({ current }: { current: (typeof TABS)[number]['href'] }) {
   const t = useT();
-  const row = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const picked = row.current?.querySelector<HTMLElement>('[aria-current="page"]');
-    const box = row.current;
-    if (picked && box && (picked.offsetLeft < box.scrollLeft || picked.offsetLeft + picked.offsetWidth > box.scrollLeft + box.clientWidth)) {
-      box.scrollLeft = picked.offsetLeft + picked.offsetWidth - box.clientWidth;
-    }
-  }, [current]);
   return (
     <nav aria-label={t('account.profile')} className="mb-6 flex items-center gap-1 border-b border-line">
       <BackToMenu />
-      <div ref={row} className="relative -mb-px flex min-w-0 gap-1.5 overflow-x-auto [scrollbar-width:none] sm:gap-3">
+      <TabRow current={current}>
         {TABS.map((tab) => (
           <Link
             key={tab.href}
@@ -45,7 +37,7 @@ export function ProfileTabs({ current }: { current: (typeof TABS)[number]['href'
             {t(tab.label)}
           </Link>
         ))}
-      </div>
+      </TabRow>
     </nav>
   );
 }

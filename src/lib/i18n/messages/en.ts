@@ -327,6 +327,8 @@ const en = {
     none: 'No references yet. Links backing up this pin, each with a confidence, show here.',
   },
   confidence: {
+    tipHeading: 'Overall confidence',
+    tipLead: "How well the pin's source and references back up its dates.",
     title: { one: "Weighted average of how firmly {count} reference supports the pin's start and end times; a reference counts half as much for every {days} days older than the newest", other: "Weighted average of how firmly {count} references support the pin's start and end times; a reference counts half as much for every {days} days older than the newest" },
     titleWithSource: { one: "Weighted average of how firmly {count} reference, the source included, supports the pin's start and end times; a reference counts half as much for every {days} days older than the newest", other: "Weighted average of how firmly {count} references, the source included, support the pin's start and end times; a reference counts half as much for every {days} days older than the newest" },
     badge: '{percent}% CONFIDENCE',
@@ -424,6 +426,8 @@ const en = {
     stretchPromised: 'The wait as first promised: {from} to {to}',
   },
   dateConfidence: {
+    tipHeading: 'Date confidence',
+    tipScale: 'How firmly the source words the date: confirmed, scheduled, estimated, delayed or unverified.',
     delayed: { label: 'DELAYED', title: 'The date has moved' },
     unknown: { label: 'UNVERIFIED', title: 'No wording about the date was found' },
     estimated: { label: 'ESTIMATED', title: 'A target, not a fixed date' },
@@ -643,9 +647,9 @@ const en = {
     sameAfterAll: 'Same event after all',
     alsoPinned: 'Also pinned by others',
     sameEventPinned: { one: 'The same event, pinned {count} more time.', other: 'The same event, pinned {count} more times.' },
-    stack: 'On the timeline they stack, the most watched (then most viewed) on top.',
+    stack: 'On the timeline they stack, the most watched (then most viewed) on top: <pin></pin>.',
     stackThisOne: 'On the timeline they stack, the most watched (then most viewed) on top: this one.',
-    onTimeline: 'On the timeline',
+    onTimeline: 'Shown on top',
     unlink: 'Unlink',
     possible: 'Possible duplicates',
     suggestions: { one: 'suggestion', other: 'suggestions' },
@@ -961,7 +965,7 @@ const en = {
   },
   suggest: {
     heading: 'Suggest a correction',
-    explainer: "Something missing or wrong? Say it in your own words: a link that backs this pin up, a different start or end date and why, or a fact it lacks or gets wrong. The AI checks it against this pin's sources, searches for better ones, and adds any page that backs you up. The pin's own sources still count most.",
+    explainer: "Something missing or wrong? Say it in your own words: a link that backs this pin up, a different start or end date and why, or a fact it lacks or gets wrong. The AI checks it against this pin's sources, searches for better ones, and adds any page that backs you up. The pin's own sources still count most. A picture that shows something else, or shows it badly, is looked at too, and moved down or replaced.",
     open: 'Suggest a correction',
     label: 'Your suggestion',
     placeholder: 'The launch moved to 14 March, announced here: https://…',
@@ -975,6 +979,9 @@ const en = {
     checkingHint: 'The AI is checking this against the sources. The result shows here in a minute or two.',
     applied: { one: 'Added {count} reference', other: 'Added {count} references' },
     dismissed: 'No change',
+    mediaDemoted: { one: 'Moved {count} picture down', other: 'Moved {count} pictures down' },
+    mediaDropped: { one: 'Removed {count} picture', other: 'Removed {count} pictures' },
+    mediaAdded: { one: 'Added {count} better picture', other: 'Added {count} better pictures' },
     verdict: { supported: 'Backed up', partly: 'Partly backed up', unsupported: 'Not backed up', unclear: 'Unclear' },
   },
   duplicatePrompt: {

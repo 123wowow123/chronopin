@@ -2,7 +2,7 @@ import * as db from '../db';
 import type { QueryFn, Row } from '../db';
 import BasePin, { BasePinProp } from './basePin';
 import Company from './company';
-import { saveAllToPin, withoutRepeatedPictures } from './medium';
+import { byWeight, saveAllToPin, withoutRepeatedPictures } from './medium';
 import Merchant from './merchant';
 import PinRating from './pinRating';
 import PinReference from './pinReference';
@@ -205,7 +205,7 @@ export default class Pin extends BasePin {
   }
 
   static mapPinJoins(pin: Pin, pinRows: Row[]): Pin {
-    pin.addMedia(mapSubObjectFromQuery('Media', 'id', pinRows));
+    pin.addMedia(byWeight(mapSubObjectFromQuery('Media', 'id', pinRows) ?? []));
     pin.addMerchants(mapSubObjectFromQuery('Merchant', 'id', pinRows));
     return pin;
   }

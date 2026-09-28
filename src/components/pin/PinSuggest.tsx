@@ -20,10 +20,11 @@ const VERDICT_CLASS = {
 } as const;
 
 // A free-text box for telling the AI what a pin is missing or getting wrong: a
-// link, a different date, a fact. The AI checks it against the pin's own
-// sources (which stay the truth) and adds any page that backs it up as a
-// reference, which moves the pin's dates and summary as references do. Under
-// the box, the viewer's own suggestions on this pin and what came of them.
+// link, a different date, a fact, a picture. The AI checks it against the
+// pin's own sources (which stay the truth) and adds any page that backs it up
+// as a reference, which moves the pin's dates and summary as references do; a
+// picture it looks at and agrees about moves down or is replaced. Under the
+// box, the viewer's own suggestions on this pin and what came of them.
 export function PinSuggest({ pinId }: { pinId: number }) {
   const t = useT();
   const router = useRouter();
@@ -40,7 +41,7 @@ export function PinSuggest({ pinId }: { pinId: number }) {
     api
       .get<SuggestionJson[]>(`/api/pins/${pinId}/ai-feedback`)
       .then((rows) => {
-        // A review that added references changed the pin: show them.
+        // A review that added references or changed pictures changed the pin: show them.
         if (rows.some((r) => r.status === 'applied' && pending.current.has(r.id))) {
           router.refresh();
         }
@@ -175,13 +176,21 @@ function SuggestionOutcome({ suggestion: s }: { suggestion: SuggestionJson }) {
     );
   }
   const added = s.aiReferences ?? [];
+  const demoted = s.aiMedia?.demoted ?? [];
+  const dropped = demoted.filter((d) => d.dropped).length;
+  const outcomes = [
+    added.length ? t('suggest.applied', { count: added.length }) : null,
+    dropped ? t('suggest.mediaDropped', { count: dropped }) : null,
+    demoted.length - dropped ? t('suggest.mediaDemoted', { count: demoted.length - dropped }) : null,
+    s.aiMedia?.added.length ? t('suggest.mediaAdded', { count: s.aiMedia.added.length }) : null,
+  ].filter(Boolean);
   return (
     <div className="mt-1 text-xs">
       <div className="flex flex-wrap items-center gap-2">
         {s.aiVerdict ? (
           <span className={`rounded-full px-2 py-px font-medium ring-1 ring-inset ${VERDICT_CLASS[s.aiVerdict]}`}>{t(`suggest.verdict.${s.aiVerdict}`)}</span>
         ) : null}
-        <span className="text-subtle">{s.status === 'applied' ? t('suggest.applied', { count: added.length }) : t('suggest.dismissed')}</span>
+        <span className="text-subtle">{s.status === 'applied' && outcomes.length ? outcomes.join(' · ') : t('suggest.dismissed')}</span>
       </div>
       {s.aiReasoning ? <p className="mt-1 leading-relaxed text-muted">{s.aiReasoning}</p> : null}
       {added.length ? (

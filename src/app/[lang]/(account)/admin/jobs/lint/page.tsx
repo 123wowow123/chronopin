@@ -14,7 +14,7 @@ export default async function AdminLintPage({ searchParams }: { searchParams: Pr
   await requireAdminViewer('/admin/jobs/lint');
   const { check, severity } = await searchParams;
   return (
-    <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
+    <div className="px-4 py-6 sm:py-10 lg:px-8">
       <AdminTabs current="/admin/jobs" />
       <h1 className="sr-only">Lint</h1>
       <JobsTabs current="/admin/jobs/lint" />

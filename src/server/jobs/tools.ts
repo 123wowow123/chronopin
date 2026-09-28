@@ -135,7 +135,7 @@ export const TOOLS: JobTool[] = [
   },
   {
     name: 'revisit_queue',
-    description: 'Pins marked for revisiting (by an admin or an earlier run), oldest mark first, with why. Resolve each one you finish with resolve_revisit.',
+    description: 'Pins marked for revisiting by an earlier run, oldest mark first, with why. Resolve each one you finish with resolve_revisit.',
     input_schema: obj({ limit: num('At most this many, default 25') }),
     run: (input) => PinRevisit.listOpen(int(input.limit, 25, 1, 100)),
   },

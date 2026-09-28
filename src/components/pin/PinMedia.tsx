@@ -458,7 +458,7 @@ function MediaArrow({ side, label, onStep }: { side: 'previous' | 'next'; label:
       type="button"
       aria-label={label}
       onClick={onStep}
-      className="hidden rounded-full p-1 text-white/70 opacity-0 transition group-hover/media:opacity-100 hover:bg-white/15 hover:text-white focus-visible:opacity-100 active:scale-90 active:bg-white/25 pointer-fine:block"
+      className="hidden rounded-full p-1 text-white/70 opacity-0 transition group-hover/media:opacity-100 hover:bg-white/15 hover:text-white focus-visible:opacity-100 active:scale-90 active:bg-white/25 pointer-fine:flex"
     >
       <Icon name="chevron" className={`size-4 ${side === 'previous' ? 'rotate-90' : '-rotate-90'}`} />
     </button>

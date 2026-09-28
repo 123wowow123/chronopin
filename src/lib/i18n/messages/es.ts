@@ -323,6 +323,8 @@ const es: Messages = {
     none: 'Aún no hay referencias. Aquí aparecen los enlaces que respaldan este pin, cada uno con su confianza.',
   },
   confidence: {
+    tipHeading: 'Confianza general',
+    tipLead: 'Hasta qué punto la fuente y las referencias del pin respaldan sus fechas.',
     title: {
       one: 'Media ponderada de la firmeza con la que {count} referencia respalda las horas de inicio y fin del pin; una referencia cuenta la mitad por cada {days} días que sea más antigua que la más reciente',
       other: 'Media ponderada de la firmeza con la que {count} referencias respaldan las horas de inicio y fin del pin; una referencia cuenta la mitad por cada {days} días que sea más antigua que la más reciente',
@@ -426,6 +428,8 @@ const es: Messages = {
     stretchPromised: 'La espera prometida al principio: del {from} al {to}',
   },
   dateConfidence: {
+    tipHeading: 'Certeza de la fecha',
+    tipScale: 'Con qué firmeza la fuente expresa la fecha: confirmada, programada, estimada, retrasada o sin verificar.',
     delayed: { label: 'RETRASADO', title: 'La fecha ha cambiado' },
     unknown: { label: 'SIN VERIFICAR', title: 'No se encontró nada escrito sobre la fecha' },
     estimated: { label: 'ESTIMADO', title: 'Un objetivo, no una fecha fija' },
@@ -644,9 +648,9 @@ const es: Messages = {
     sameAfterAll: 'Es el mismo evento',
     alsoPinned: 'También fijado por otros',
     sameEventPinned: { one: 'El mismo evento, fijado {count} vez más.', other: 'El mismo evento, fijado {count} veces más.' },
-    stack: 'En la línea de tiempo se apilan, con el más seguido (y luego el más visto) encima.',
+    stack: 'En la línea de tiempo se apilan, con el más seguido (y luego el más visto) encima: <pin></pin>.',
     stackThisOne: 'En la línea de tiempo se apilan, con el más seguido (y luego el más visto) encima: este.',
-    onTimeline: 'En la línea de tiempo',
+    onTimeline: 'Se muestra encima',
     unlink: 'Desvincular',
     possible: 'Posibles duplicados',
     suggestions: { one: 'sugerencia', other: 'sugerencias' },
@@ -957,7 +961,7 @@ const es: Messages = {
   },
   suggest: {
     heading: 'Sugerir una corrección',
-    explainer: '¿Falta algo o hay un error? Dilo con tus palabras: un enlace que respalde este pin, otra fecha de inicio o fin y por qué, o un dato que falta o está mal. La IA lo contrasta con las fuentes del pin, busca otras mejores y añade cualquier página que te dé la razón. Las fuentes del propio pin siguen contando más.',
+    explainer: '¿Falta algo o hay un error? Dilo con tus palabras: un enlace que respalde este pin, otra fecha de inicio o fin y por qué, o un dato que falta o está mal. La IA lo contrasta con las fuentes del pin, busca otras mejores y añade cualquier página que te dé la razón. Las fuentes del propio pin siguen contando más. La IA también mira las imágenes: una que muestra otra cosa, o la muestra mal, pasa al final o se sustituye.',
     open: 'Sugerir una corrección',
     label: 'Tu sugerencia',
     placeholder: 'El lanzamiento pasó al 14 de marzo, anunciado aquí: https://…',
@@ -971,6 +975,9 @@ const es: Messages = {
     checkingHint: 'La IA lo está contrastando con las fuentes. El resultado aparecerá aquí en uno o dos minutos.',
     applied: { one: '{count} referencia añadida', other: '{count} referencias añadidas' },
     dismissed: 'Sin cambios',
+    mediaDemoted: { one: '{count} imagen movida al final', other: '{count} imágenes movidas al final' },
+    mediaDropped: { one: '{count} imagen quitada', other: '{count} imágenes quitadas' },
+    mediaAdded: { one: '{count} imagen mejor añadida', other: '{count} imágenes mejores añadidas' },
     verdict: { supported: 'Respaldada', partly: 'Respaldada en parte', unsupported: 'No respaldada', unclear: 'Poco clara' },
   },
   duplicatePrompt: {

@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+// Capped for the forms and settings; the admin's pages mark themselves
+// data-wide (admin/layout.tsx) to fill the window instead.
 export default function AccountLayout({ children }: { children: React.ReactNode }) {
-  return <main className="mx-auto w-full max-w-5xl">{children}</main>;
+  return <main className="mx-auto w-full max-w-5xl has-[[data-wide]]:max-w-none">{children}</main>;
 }

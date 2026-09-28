@@ -350,7 +350,8 @@ function result(rows: Row[]): PageResult {
   return { pins: rows, queryCount: rows.length };
 }
 
-// A marker's media, lowest id first, the order the view hands them over in.
+// A marker's media in the order the pin shows them (Medium's byWeight):
+// heaviest first, then lowest id.
 // A popup shows one picture - a video's still if the pin has one, else its
 // first medium - so only what picking and drawing that needs is sent.
 const MAP_MEDIA = `
@@ -358,7 +359,7 @@ const MAP_MEDIA = `
             'type', "m"."type",
             'thumbName', "m"."thumbName",
             'originalUrl', "m"."originalUrl"
-          ) ORDER BY "m"."id"), '[]'::json)
+          ) ORDER BY "pm"."weight" DESC, "m"."id"), '[]'::json)
    FROM "PinMedium" AS "pm"
      JOIN "Medium" AS "m" ON "m"."id" = "pm"."mediumId"
    WHERE "pm"."pinId" = "p"."id" AND "pm"."utcDeletedDateTime" IS NULL)`;

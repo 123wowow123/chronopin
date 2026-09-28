@@ -274,4 +274,5 @@ sync prod db to local and backup json
 
 
 
-- Translate to Hindi & Arabic
+- Translate to Arabic
+

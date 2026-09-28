@@ -416,5 +416,5 @@ on its own.
 `JobRun` (schema 0067): its job and slot, trigger, driver,
 the tasks, every write (`actions`), its learnings, the closing report, and
 what it used (tokens and an estimated cost for `api`, turns for `session`).
-`PinRevisit` (0067): a pin marked to be looked at again - by an admin from the
-clock button on the pin's page, or by a run - and how the mark was resolved.
+`PinRevisit` (0067): a pin a run marked to be looked at again, and how the
+mark was resolved. People ask for a fix with "Suggest a correction" instead.

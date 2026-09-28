@@ -1,22 +1,30 @@
 import * as db from '../db';
 import { cityOf } from '@/lib/city';
+import { locateUnlocated } from './ipPlaces';
 import { pinConfidenceOf } from './pins';
 
 // Pin page views, counted once per viewer per UTC day (see 0014).
 export default class PinView {
-  // viewer: "u:<userId>" or "v:<anonymous visitor id>". Nothing is recorded
+  // viewer: "u:<userId>" or "v:<anonymous visitor id>"; ip is the address the
+  // view came from (0089), kept from the day's first view. Nothing is recorded
   // for a pin that does not exist or was deleted. Answers with the pin's view
   // count, and whether this view was new (not yet counted today).
-  static async record(pinId: number, viewer: string): Promise<{ added: boolean; viewCount: number }> {
+  static async record(pinId: number, viewer: string, ip: string | null): Promise<{ added: boolean; viewCount: number }> {
+    const userId = /^u:\d+$/.test(viewer) ? Number(viewer.slice(2)) : null;
     const added = await db.query(
-      `INSERT INTO "PinView" ("pinId", "viewer")
-       SELECT "id", $2 FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL
+      `INSERT INTO "PinView" ("pinId", "viewer", "userId", "ip")
+       SELECT "id", $2, $3::integer, $4::inet FROM "Pin" WHERE "id" = $1 AND "utcDeletedDateTime" IS NULL
        ON CONFLICT DO NOTHING
        RETURNING "pinId"`,
-      [pinId, viewer],
+      [pinId, viewer, userId, ip],
     );
     const [{ count }] = await db.query<{ count: number }>(`SELECT COUNT(*)::integer AS "count" FROM "PinView" WHERE "pinId" = $1`, [pinId]);
     return { added: added.length > 0, viewCount: count };
+  }
+
+  // Places every view whose address has not been looked up yet.
+  static locateUnlocated(): Promise<number> {
+    return locateUnlocated('PinView');
   }
 
   // Views per UTC day, split by signed-in users and anonymous visitors.
@@ -30,10 +38,10 @@ export default class PinView {
     ORDER BY "day"`);
   }
 
-  // Distinct viewers since a UTC day ("YYYY-MM-DD", null for all time), and the
-  // most-viewed live pins over the same days.
+  // Distinct viewers since a UTC day ("YYYY-MM-DD", null for all time), the
+  // most-viewed live pins over the same days, and where the views came from.
   static async summarize(since: string | null, limit = 10) {
-    const [[{ viewers }], top] = await Promise.all([
+    const [[{ viewers }], top, places] = await Promise.all([
       db.query<{ viewers: number }>(
         `SELECT COUNT(DISTINCT "viewer")::integer AS "viewers"
          FROM "PinView"
@@ -52,9 +60,70 @@ export default class PinView {
          LIMIT $2`,
         [since, limit],
       ),
+      PinView.places(since),
     ]);
     const pictures = await PinView.pictures(top.map((p) => p.id));
-    return { viewers, top: top.map((p) => ({ ...p, ...pictures.get(p.id) })) };
+    return { viewers, top: top.map((p) => ({ ...p, ...pictures.get(p.id) })), ...places };
+  }
+
+  // Views with an address since a UTC day (null for all time): by country
+  // ("" while unplaced), by city, and as points for a map (to a tenth of a
+  // degree), each with its views and distinct viewers, most first.
+  static async places(since: string | null) {
+    const range = `"ip" IS NOT NULL AND ($1::date IS NULL OR "day" >= $1::date)`;
+    const [[{ located }], countries, cities, points] = await Promise.all([
+      db.query<{ located: number }>(`SELECT COUNT(*)::integer AS "located" FROM "PinView" WHERE ${range}`, [since]),
+      db.query<{ country: string; views: number; viewers: number }>(
+        `SELECT COALESCE("country", '') AS "country", COUNT(*)::integer AS "views", COUNT(DISTINCT "viewer")::integer AS "viewers"
+         FROM "PinView" WHERE ${range}
+         GROUP BY 1 ORDER BY "views" DESC, "viewers" DESC, 1
+         LIMIT 30`,
+        [since],
+      ),
+      db.query<{ city: string; views: number; viewers: number }>(
+        `SELECT concat_ws(', ', "city", "region", "country") AS "city", COUNT(*)::integer AS "views", COUNT(DISTINCT "viewer")::integer AS "viewers"
+         FROM "PinView" WHERE ${range} AND "city" IS NOT NULL
+         GROUP BY 1 ORDER BY "views" DESC, "viewers" DESC, 1
+         LIMIT 15`,
+        [since],
+      ),
+      db.query<{ label: string; latitude: number; longitude: number; views: number }>(
+        `SELECT MIN(concat_ws(', ', "city", "region", "country")) AS "label",
+           AVG("latitude") AS "latitude", AVG("longitude") AS "longitude", COUNT(*)::integer AS "views"
+         FROM "PinView" WHERE ${range} AND "latitude" IS NOT NULL AND "longitude" IS NOT NULL
+         GROUP BY round("latitude"::numeric, 1), round("longitude"::numeric, 1)
+         ORDER BY "views" DESC
+         LIMIT 500`,
+        [since],
+      ),
+    ]);
+    return { located, countries, cities, points };
+  }
+
+  // The latest views that carry an address, newest first, with the pin's title
+  // and the viewer's user name.
+  static async latest(limit = 50) {
+    return db.query<{
+      pinId: number;
+      title: string | null;
+      at: string;
+      userId: number | null;
+      userName: string | null;
+      ip: string;
+      place: string;
+    }>(
+      `SELECT "v"."pinId", "p"."title",
+         to_char("v"."utcCreatedDateTime" AT TIME ZONE 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS"Z"') AS "at",
+         "v"."userId", "u"."userName", host("v"."ip") AS "ip",
+         concat_ws(', ', "v"."city", "v"."region", "v"."country") AS "place"
+       FROM "PinView" AS "v"
+         LEFT JOIN "Pin" AS "p" ON "p"."id" = "v"."pinId"
+         LEFT JOIN "User" AS "u" ON "u"."id" = "v"."userId"
+       WHERE "v"."ip" IS NOT NULL AND "v"."utcCreatedDateTime" IS NOT NULL
+       ORDER BY "v"."utcCreatedDateTime" DESC
+       LIMIT $1`,
+      [limit],
+    );
   }
 
   // The most viewed live pins whose views are rising: views over the last
@@ -96,7 +165,7 @@ export default class PinView {
            FROM "PinMedium" AS "pm"
              JOIN "Medium" AS "m" ON "m"."id" = "pm"."mediumId"
            WHERE "pm"."pinId" = ANY($1::integer[]) AND "pm"."utcDeletedDateTime" IS NULL
-           ORDER BY "pm"."pinId", "m"."type" = '3' DESC, "pm"."id"`,
+           ORDER BY "pm"."pinId", "pm"."weight" DESC, "m"."type" = '3' DESC, "pm"."id"`,
           [pinIds],
         )
       : [];

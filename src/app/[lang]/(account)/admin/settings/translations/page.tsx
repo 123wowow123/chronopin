@@ -57,7 +57,7 @@ export default async function AdminTranslationsPage({ searchParams }: { searchPa
     s === 'missing' ? coverage.total - coverage.current[l] - coverage.outdated[l] - coverage.incomplete[l] : coverage[s][l];
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
+    <div className="px-4 py-6 sm:py-10 lg:px-8">
       <AdminTabs current="/admin/settings" />
       <h1 className="text-base font-semibold">Translations to make again</h1>
       <p className="mt-1 mb-4 text-sm text-subtle">

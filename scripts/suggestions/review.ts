@@ -15,12 +15,18 @@
 //     each open suggestion as {id, system, schema, input}: the same prompt,
 //     record schema and pin context the API call gets
 //   npm run suggestions:review -- --apply /tmp/reviews.json
-//     [{id, verdict, verdictReasoning, references: [...]}], each in the
-//     record schema; only put in references to pages you actually fetched
+//     [{id, verdict, verdictReasoning, references: [...], media: [...]}],
+//     each in the record schema; only put in references to pages you
+//     actually fetched, and only flag media ([M1]...) whose picture you
+//     looked at. Apply soon after exporting: labels are the pin's media in
+//     the order it shows them now.
 //
 // Applying adds the kept references to the pin (credited to whoever suggested
-// them, dates moved as the form would, the author notified) and records the
-// verdict on the suggestion.
+// them, dates moved as the form would, the author notified), demotes the
+// flagged media and replaces them (src/server/services/suggestionMedia.ts -
+// the replacements are looked at through the API, so without credit none is
+// added and the demoted ones just move to the back), and records the verdict
+// on the suggestion.
 
 import '../env';
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -32,6 +38,7 @@ import { cleanReview, suggestionTask } from '@/server/extract/suggestion';
 import AiFeedback from '@/server/model/aiFeedback';
 import Pin from '@/server/model/pin';
 import { applyReview, reviewFeedback, reviewInput } from '@/server/services/suggestions';
+import { shownMedia } from '@/server/services/suggestionMedia';
 import { refreshPin } from '@/server/services/sourceWiki';
 
 const { values: flags } = parseArgs({
@@ -73,7 +80,7 @@ async function exportTasks(file: string) {
 }
 
 async function applyFile(file: string) {
-  const reviews: { id: number; verdict: string; verdictReasoning: string; references?: FoundReference[] }[] = JSON.parse(readFileSync(file, 'utf8'));
+  const reviews: { id: number; verdict: string; verdictReasoning: string; references?: FoundReference[]; media?: unknown[] }[] = JSON.parse(readFileSync(file, 'utf8'));
   for (const recorded of reviews) {
     const feedback = await AiFeedback.byId(Number(recorded.id));
     const { pin } = feedback ? await Pin.queryById(feedback.pinId) : { pin: undefined };
@@ -84,8 +91,9 @@ async function applyFile(file: string) {
     // By hand there is no search result to check a URL against: the session
     // vouches it fetched each one.
     const seen = new Set((recorded.references || []).map((r) => urlKey(r.url)).filter((key): key is string => !!key));
-    const review = { ...cleanReview(recorded, seen, pin.sourceUrl || ''), model: 'claude-code (by hand)' };
-    const outcome = await applyReview(feedback, review);
+    const shown = shownMedia(pin);
+    const review = { ...cleanReview(recorded, seen, pin.sourceUrl || '', shown.map((m) => m.label)), model: 'claude-code (by hand)' };
+    const outcome = await applyReview(feedback, review, shown);
     console.log(`suggestion ${recorded.id} (pin ${pin.id}): ${outcome}, ${review.verdict}`);
     await settleWiki(feedback.id, outcome);
   }

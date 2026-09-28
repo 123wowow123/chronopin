@@ -24,7 +24,7 @@ export default async function AdminClicksPage() {
   await Promise.race([locating, new Promise((resolve) => setTimeout(resolve, LOCATE_WAIT_MS))]);
   const clicks = await ShopClick.list();
   return (
-    <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
+    <div className="px-4 py-6 sm:py-10 lg:px-8">
       <AdminTabs current="/admin/clicks" />
       <h1 className="sr-only">Clicks</h1>
       <p className="mb-6 text-sm text-subtle">

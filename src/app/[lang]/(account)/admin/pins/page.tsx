@@ -17,7 +17,7 @@ export default async function AdminPinsPage() {
   await requireAdminViewer('/admin/pins');
   const [rows, setting] = await Promise.all([Pins.listConfidence(), getTimelineConfidence()]);
   return (
-    <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
+    <div className="px-4 py-6 sm:py-10 lg:px-8">
       <AdminTabs current="/admin/pins" />
       <h1 className="sr-only">Pins</h1>
       <PinsDashboard

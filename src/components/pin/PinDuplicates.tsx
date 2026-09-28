@@ -68,7 +68,8 @@ export function PinDuplicates({ pinId, group, timeZone }: { pinId: number; group
   if (!others.length && !suggested.length && !dismissed.length) {
     return null;
   }
-  const onTimeline = group[0]?.id;
+  const top = group[0];
+  const onTimeline = top?.id;
 
   // Pairs already dismissed, folded away under the suggestions (or on their own).
   const dismissedList = (className = '') => (
@@ -103,7 +104,15 @@ export function PinDuplicates({ pinId, group, timeZone }: { pinId: number; group
           </h2>
           <p className="mt-1 text-sm text-subtle">
             {t('duplicates.sameEventPinned', { count: others.length })}{' '}
-            {onTimeline === pinId ? t('duplicates.stackThisOne') : t('duplicates.stack')}
+            {onTimeline === pinId
+              ? t('duplicates.stackThisOne')
+              : t.rich('duplicates.stack', {
+                  pin: () => (
+                    <Link href={pinPath(top)} className="font-medium text-ink hover:text-link hover:no-underline">
+                      {top.title}
+                    </Link>
+                  ),
+                })}
           </p>
           <ul className="mt-3 space-y-1">
             {others.map((p) => (

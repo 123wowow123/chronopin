@@ -323,6 +323,8 @@ const ko: Messages = {
     none: '아직 참고자료가 없습니다. 이 핀을 뒷받침하는 링크가 각각의 신뢰도와 함께 여기에 표시됩니다.',
   },
   confidence: {
+    tipHeading: '종합 신뢰도',
+    tipLead: '핀의 출처와 참고 자료가 날짜를 얼마나 뒷받침하는지.',
     title: '자료 {count}건이 핀의 시작·종료 시각을 얼마나 강하게 뒷받침하는지에 대한 가중 평균. 자료는 최신 자료보다 {days}일 오래될 때마다 가중치가 절반이 됩니다',
     titleWithSource: '출처를 포함한 자료 {count}건이 핀의 시작·종료 시각을 얼마나 강하게 뒷받침하는지에 대한 가중 평균. 자료는 최신 자료보다 {days}일 오래될 때마다 가중치가 절반이 됩니다',
     badge: '신뢰도 {percent}%',
@@ -420,6 +422,8 @@ const ko: Messages = {
     stretchPromised: '최초 약속된 대기 기간: {from}~{to}',
   },
   dateConfidence: {
+    tipHeading: '날짜 확실성',
+    tipScale: '출처가 날짜를 얼마나 확정적으로 표현하는지: 확정, 예정, 추정, 연기, 미확인.',
     delayed: { label: '지연됨', title: '날짜가 변경되었습니다' },
     unknown: { label: '미확인', title: '날짜에 대한 언급을 찾을 수 없습니다' },
     estimated: { label: '추정', title: '확정일이 아닌 목표일입니다' },
@@ -638,9 +642,9 @@ const ko: Messages = {
     sameAfterAll: '역시 같은 이벤트임',
     alsoPinned: '다른 사용자도 핀함',
     sameEventPinned: '같은 이벤트가 {count}건 더 핀되었습니다.',
-    stack: '타임라인에서는 겹쳐서 표시되며, 관심 등록이 가장 많은 것(그다음 조회가 많은 것)이 위에 옵니다.',
+    stack: '타임라인에서는 겹쳐서 표시되며, 관심 등록이 가장 많은 것(그다음 조회가 많은 것)이 위에 옵니다: <pin></pin>.',
     stackThisOne: '타임라인에서는 겹쳐서 표시되며, 관심 등록이 가장 많은 것(그다음 조회가 많은 것)이 위에 옵니다: 이 핀입니다.',
-    onTimeline: '타임라인에서',
+    onTimeline: '맨 위에 표시',
     unlink: '연결 해제',
     possible: '중복 가능성',
     suggestions: '개의 제안',
@@ -945,7 +949,7 @@ const ko: Messages = {
   suggest: {
     heading: '수정 제안',
     explainer:
-      '빠지거나 잘못된 점이 있나요? 이 핀을 뒷받침하는 링크, 다른 시작일이나 종료일과 그 이유, 빠지거나 잘못된 사실을 자신의 말로 알려주세요. AI가 이 핀의 출처와 대조하고 더 나은 자료를 찾아, 뒷받침하는 페이지를 추가합니다. 핀 자체의 출처가 여전히 가장 중요하게 반영됩니다.',
+      '빠지거나 잘못된 점이 있나요? 이 핀을 뒷받침하는 링크, 다른 시작일이나 종료일과 그 이유, 빠지거나 잘못된 사실을 자신의 말로 알려주세요. AI가 이 핀의 출처와 대조하고 더 나은 자료를 찾아, 뒷받침하는 페이지를 추가합니다. 핀 자체의 출처가 여전히 가장 중요하게 반영됩니다. AI는 이미지도 확인합니다. 다른 것을 보여주거나 제대로 보여주지 못하는 이미지는 뒤로 옮기거나 교체합니다.',
     open: '수정 제안',
     label: '제안 내용',
     placeholder: '출시일이 3월 14일로 변경되었습니다. 발표: https://…',
@@ -959,6 +963,9 @@ const ko: Messages = {
     checkingHint: 'AI가 출처와 대조해 확인하고 있습니다. 1~2분 후 결과가 여기에 표시됩니다.',
     applied: '참고자료 {count}건 추가됨',
     dismissed: '변경 없음',
+    mediaDemoted: '이미지 {count}개를 뒤로 이동',
+    mediaDropped: '이미지 {count}개 삭제됨',
+    mediaAdded: '더 나은 이미지 {count}개 추가됨',
     verdict: { supported: '뒷받침됨', partly: '일부 뒷받침됨', unsupported: '뒷받침되지 않음', unclear: '불명확함' },
   },
   duplicatePrompt: {

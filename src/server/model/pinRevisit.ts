@@ -1,19 +1,9 @@
 import * as db from '../db';
 
-// A pin marked to be looked at again (schema 0067): by an admin from the
-// pin's page, or by a daily job that found something it could not fix. The
-// midnight job works the open ones (docs/okf/scraping/daily-jobs.md).
-
-export type PinRevisitRow = {
-  id: number;
-  pinId: number;
-  reason: string;
-  markedBy: number | null;
-  jobRunId: number | null;
-  resolution: string | null;
-  utcCreatedDateTime: Date;
-  utcResolvedDateTime: Date | null;
-};
+// A pin marked to be looked at again (schema 0067) by a daily job that found
+// something it could not fix. The midnight job works the open ones
+// (docs/okf/scraping/daily-jobs.md). People ask for a fix with "Suggest a
+// correction" (AiFeedback) instead.
 
 export default class PinRevisit {
   // Marks a pin, or adds the reason to its open mark. Returns the mark's id.
@@ -40,11 +30,6 @@ export default class PinRevisit {
       [pinId, resolution.trim().slice(0, 2000), jobRunId],
     );
     return rows.length > 0;
-  }
-
-  static async openFor(pinId: number): Promise<PinRevisitRow | null> {
-    const rows = await db.query<PinRevisitRow>(`SELECT * FROM "PinRevisit" WHERE "pinId" = $1 AND "utcResolvedDateTime" IS NULL`, [pinId]);
-    return rows[0] ?? null;
   }
 
   // The open marks, oldest first, with enough of each pin to start on it.

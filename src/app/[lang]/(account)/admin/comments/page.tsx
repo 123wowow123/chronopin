@@ -17,7 +17,7 @@ export default async function AdminCommentsPage() {
   await requireAdminViewer('/admin/comments');
   const reports = (await Comment.openReports()).map((r) => ({ ...r, pinHref: pinPath({ id: r.pinId, title: r.pinTitle }) }));
   return (
-    <div className="mx-auto max-w-3xl px-4 py-6 sm:py-10">
+    <div className="px-4 py-6 sm:py-10 lg:px-8">
       <AdminTabs current="/admin/comments" />
       <h1 className="sr-only">Comments</h1>
       <p className="mb-6 text-sm text-subtle">Comments readers reported. Remove one to take it down, or dismiss its reports to keep it. At {COMMENT_HIDE_REPORTS} reports a comment is hidden from readers until you dismiss them.</p>

@@ -19,10 +19,10 @@ import {
   TimeColumns,
   ViewTabs,
 } from '../chartParts';
-import type { ClickPlace } from './ClickMap';
+import type { MapPlace } from '../PlaceMap';
 
 // Leaflet touches window at import, so the map loads in the browser only.
-const ClickMap = dynamic(() => import('./ClickMap'), {
+const PlaceMap = dynamic(() => import('../PlaceMap'), {
   ssr: false,
   loading: () => <div className="h-72 w-full animate-pulse rounded-lg bg-raised" />,
 });
@@ -82,10 +82,10 @@ export function ClickCharts({ clicks, serverNow }: { clicks: ShopClickRow[]; ser
       listing: b.items.filter((c) => !c.search).length,
       search: b.items.filter((c) => c.search).length,
     }));
-    const places: ClickPlace[] = tally(
+    const places: MapPlace[] = tally(
       shown.filter((c) => c.latitude != null && c.longitude != null),
       (c) => `${c.latitude!.toFixed(1)},${c.longitude!.toFixed(1)}`,
-    ).map((g) => ({ key: g.key, label: placeLabel(g.rows[0]), latitude: g.rows[0].latitude!, longitude: g.rows[0].longitude!, clicks: g.clicks }));
+    ).map((g) => ({ key: g.key, label: placeLabel(g.rows[0]), latitude: g.rows[0].latitude!, longitude: g.rows[0].longitude!, count: g.clicks }));
     return {
       unit: grouped.unit,
       buckets,
@@ -203,7 +203,7 @@ export function ClickCharts({ clicks, serverNow }: { clicks: ShopClickRow[]; ser
 
       <section className="surface space-y-4 p-4 sm:p-5">
         <h2 className="text-base font-semibold">Where from</h2>
-        {stats.places.length ? <ClickMap places={stats.places} /> : null}
+        {stats.places.length ? <PlaceMap places={stats.places} noun="click" /> : null}
         {stats.countries.length ? (
           <div className="grid gap-4 text-sm sm:grid-cols-2">
             <table className="w-full text-left tabular-nums">
