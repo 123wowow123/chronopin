@@ -29,6 +29,8 @@ import { seriesPinFor } from './modelSeries';
 import { prequelPinFor } from './prequel';
 import { picturesNeeded, videosNeeded } from '@/lib/mediaTarget';
 import { noteLinks, type NoteLink } from './noteLinks';
+import { findBrandListing } from '../brandListing';
+import Company from '../model/company';
 
 const { scrapeType, mediumID } = config;
 const NAVIGATION_WAIT_MS = 8000;
@@ -234,6 +236,8 @@ async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLin
   let pageText = '';
   let headings: InPageHeadings | null = null;
   let pageMeta: PageMetadata | null = null;
+  // Where the page links, for the maker's own listing of its product.
+  let pageLinks: string[] = [];
   let pin: Pin;
   try {
     const [page] = await browser.pages();
@@ -281,6 +285,7 @@ async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLin
     })) as InPageHeadings | null;
 
     pageMeta = (await page.evaluate(IN_PAGE_META).catch(() => null)) as PageMetadata | null;
+    pageLinks = ((await page.evaluate('[...document.querySelectorAll("a[href]")].map((a) => a.href).slice(0, 3000)').catch(() => [])) as string[]) || [];
 
     pin = new Pin();
     // A page without a usable picture or embed still gets a list to add to.
@@ -351,6 +356,7 @@ async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLin
   const llmDown = !fields;
   applyExtracted(pin, fields ?? metadataFields(pageMeta));
   await placeAtStudioHq(pin);
+  const brandListing = addBrandListing(pin, [pageUrl, ...pageLinks]);
   const trailer = applyScreenDetails(pin, screen, scoreMarket);
   // References first: the top-up takes pictures from the day's articles.
   addReferences(pin, found);
@@ -374,9 +380,23 @@ async function webScrape(pageUrl: string, note?: string, links?: Promise<NoteLin
     log.warn('reading entries failed:', (err as Error).message);
     return undefined;
   });
+  await brandListing;
   const llmTasks: LlmTask[] | undefined =
     llmDown && pageText.trim().length >= 200 ? [extractTask(pageUrl, pageText, note), referencesTask(pageUrl, pageText, 'web page', note)] : undefined;
   return { pin, trailer, stocks: parseScrapedStocks(fields?.stocks), awards, tags: tags.length ? tags : metadataFields(pageMeta).tags, respondTo, entries, llmTasks };
+}
+
+// The maker's own listing of a product pin's product, from the page's links
+// (../brandListing.ts), ahead of the store searches the pin page adds.
+async function addBrandListing(pin: Pin, links: string[]): Promise<void> {
+  if (!pin.productName || !pin.company) return;
+  try {
+    const company = await Company.byName(pin.company);
+    const listing = await findBrandListing({ productName: pin.productName, company: pin.company, websiteUrl: company?.websiteUrl, links });
+    if (listing && !(pin.merchants ?? []).some((m: Merchant) => m.url === listing.url)) pin.addMerchant(new Merchant(listing));
+  } catch (err) {
+    log.warn('brand listing lookup failed:', (err as Error).message);
+  }
 }
 
 const imageCount = (pin: Pin) => pin.media.filter((m) => Number(m.type) === mediumID.image).length;
