@@ -25,6 +25,27 @@ describe('splitSearchQuery', () => {
   it('leaves an @ inside a word as text', () => {
     expect(splitSearchQuery('mail@example.com')).toEqual([{ kind: 'text', raw: 'mail@example.com' }]);
   });
+
+  it('reads a bare $ticker as a ticker term, uppercased', () => {
+    expect(splitSearchQuery('earnings $nke $BRK.B')).toEqual([
+      { kind: 'text', raw: 'earnings ' },
+      { kind: 'term', field: 'ticker', value: 'NKE', raw: '$nke' },
+      { kind: 'text', raw: ' ' },
+      { kind: 'term', field: 'ticker', value: 'BRK.B', raw: '$BRK.B' },
+    ]);
+  });
+
+  it('leaves a dollar amount, a lone $ and a $ inside a word as text', () => {
+    expect(splitSearchQuery('$5 million $ US$100 $NKE,')).toEqual([{ kind: 'text', raw: '$5 million $ US$100 $NKE,' }]);
+  });
+});
+
+describe('ticker terms', () => {
+  it('collects tickers once each whatever the case, as a filter', () => {
+    const query = parseSearchQuery('$nke $NKE $orcl results');
+    expect(query).toMatchObject({ tickers: ['NKE', 'ORCL'], companies: [], text: 'results' });
+    expect(hasFilters(query)).toBe(true);
+  });
 });
 
 describe('joinSearchQuery', () => {
@@ -40,6 +61,7 @@ describe('parseSearchQuery', () => {
       userNames: [],
       ids: [],
       companies: [],
+      tickers: [],
       confidences: [],
       confidenceBands: [],
       dates: [],

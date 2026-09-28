@@ -174,6 +174,13 @@ export default class Company {
     return rows[0] || null;
   }
 
+  // The company listed under this ticker, when only one is: several can
+  // share one (Sony's divisions all trade as SONY), and then none is it.
+  static async byTicker(symbol: string): Promise<CompanyRow | null> {
+    const rows = await db.query<CompanyRow>(`SELECT ${COLUMNS} FROM "Company" WHERE upper("tickerSymbol") = $1 LIMIT 2`, [symbol.trim().toUpperCase()]);
+    return rows.length === 1 ? rows[0] : null;
+  }
+
   // Seeding: puts companies back with their ids, links and logos, so pins
   // seeded afterwards resolve to them rather than creating fresh rows.
   static async restore(companies: Row[] | undefined) {

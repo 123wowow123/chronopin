@@ -519,6 +519,7 @@ const zh: Messages = {
     startDateEarlier: '开始日期（较早）',
     earlierStart: '较早的开始日期，{date}',
     onYahoo: '在雅虎财经查看 {symbol}',
+    searchPins: '${symbol} 的图钉',
     nasdaqDelayed: '纳斯达克，延时',
     market: '市场{status}',
     updated: '{time} 更新',

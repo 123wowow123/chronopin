@@ -519,6 +519,7 @@ const ko: Messages = {
     startDateEarlier: '시작일 (이전)',
     earlierStart: '이전 시작일, {date}',
     onYahoo: 'Yahoo Finance의 {symbol}',
+    searchPins: '${symbol} 관련 핀',
     nasdaqDelayed: 'Nasdaq, 지연 시세',
     market: '시장 {status}',
     updated: '{time} 업데이트',

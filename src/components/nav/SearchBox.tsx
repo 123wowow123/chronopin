@@ -7,7 +7,7 @@ import { UserAvatar } from '@/components/ui/UserAvatar';
 import { canonicalCategory } from '@/lib/categories';
 import { api } from '@/lib/client/api';
 import { withPageLang } from '@/lib/client/navigation';
-import { hrefKeepingDate } from '@/lib/client/returnSpot';
+import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
 import { useSession } from '@/lib/client/session';
 import { useTimeZone } from '@/lib/client/timeZone';
 import { formatStart } from '@/lib/format';
@@ -96,6 +96,7 @@ function toItems(query: string): QueryPart[] {
 // The field's name is shown in the page's language; the query keeps "tag:".
 function termLabel(part: TermPart, t: Translator) {
   if (part.field === 'user') return { field: null, value: `@${part.value.replace(/^@+/, '')}` };
+  if (part.field === 'ticker') return { field: null, value: `$${part.value}` };
   // A list of pin ids says nothing to read; how many there are does.
   if (part.field === 'pin') {
     const count = part.value.split(',').filter((id) => id.trim()).length;
@@ -385,11 +386,12 @@ export function SearchBox() {
   }
 
   // widen: a filter was taken off, so the timeline or search stays on the
-  // same date rather than opening on today.
+  // same date rather than opening on today. Otherwise the search opens its
+  // dates on the day nearest the one the reader was at.
   function submit(q: string, filter = choice, widen = false) {
     closeSuggestions();
     const href = searchHref(onMap, q, filter);
-    router.push(widen ? hrefKeepingDate(href) : href);
+    router.push(widen ? hrefKeepingDate(href) : hrefNearDay(href));
   }
 
   function suggest(value: string) {

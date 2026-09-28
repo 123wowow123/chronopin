@@ -237,10 +237,16 @@ const COMPANY_MOOD_COMMENTS = 200;
 // it is in a line, how the comments on its pins read lately, and how many
 // people follow it - the panel a company: search opens with. Whether the
 // viewer follows it is not here: these results are cached for everyone, so the
-// button asks for its own status (CompanyFollowButton).
+// button asks for its own status (CompanyFollowButton). A lone $ticker opens
+// the same panel when only one company is listed under it.
 async function attachSearchedCompany(pins: Pins, query: SearchQuery) {
-  if (query.companies.length !== 1) return;
-  const company = await Company.byName(query.companies[0]);
+  const one =
+    query.companies.length === 1 && !query.tickers.length
+      ? Company.byName(query.companies[0])
+      : query.tickers.length === 1 && !query.companies.length
+        ? Company.byTicker(query.tickers[0])
+        : null;
+  const company = await one;
   if (!company) return;
   const [comments, follow, pinTones, productPictures] = await Promise.all([
     Comment.forCompany(company.id, COMPANY_MOOD_COMMENTS),

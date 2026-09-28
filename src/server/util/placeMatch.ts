@@ -51,6 +51,34 @@ export function typedTextPatterns(text: string): string[] {
   return [wholeWordPattern(text)];
 }
 
+// Typed text as Postgres regexes (~*) a pin's own words must match all of:
+// each typed word on its own, anywhere and in any order, starting a word and
+// ending it or taking a plural (grammy finds "Grammys", and grammys "Grammy").
+// Chinese, Japanese and Korean words match anywhere, as typedTextPatterns.
+// Words with no letter or digit in them ("&", "-") are left out, and text
+// with none left matches nothing - an empty list would match every pin.
+export function typedWordPatterns(text: string): string[] {
+  if (isCjkText(text)) return typedTextPatterns(text);
+  return text
+    .trim()
+    .split(/\s+/)
+    .filter((word) => /[\p{L}\p{N}]/u.test(word))
+    .map((word) => {
+      const stem = word.length >= 5 && /[^s]s$/i.test(word) ? word.slice(0, -1) : word;
+      return `(^|[^[:alnum:]])${stem.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(s|es|'s)?([^[:alnum:]]|$)`;
+    });
+}
+
+// The cosine score a free-text search's semantic match needs to stay in the
+// results on its own once some pin holds the words typed. The search service
+// ranks every pin, so its pool always runs to the full config.faiss.maxHits,
+// and below this a hit is mostly noise: "grammy" pulled in anime premieres
+// (0.547) and the iPhone 5S event (0.603) under its six Grammy pins, "hot
+// flash" put Gemini Flash (0.619) over the hot-flash pills. Matches worth
+// keeping that no word gives away score above it (Apollo's return to the Moon
+// at 0.724 for "moon landing"). Text no pin holds keeps the whole pool.
+export const SEMANTIC_ALONE_SCORE = 0.65;
+
 // The patterns an address matches any of, for the places a query names.
 export function placePatterns(values: string[]): string[] {
   return values.flatMap((value) => placeNames(value)).map(wholeWordPattern);

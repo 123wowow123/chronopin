@@ -7,6 +7,12 @@ describe('refineQuery', () => {
     expect(refineQuery('tag:Movie', 'tag', 'movie')).toBe('tag:Movie');
   });
 
+  it('writes a ticker bare with its $, once whatever the case', () => {
+    expect(refineQuery('results', 'ticker', 'nke')).toBe('results $NKE');
+    expect(refineQuery('$nke results', 'ticker', 'NKE')).toBe('$nke results');
+    expect(removeTerm('$NKE results $ORCL', 'ticker', 'nke')).toBe('results $ORCL');
+  });
+
   it('replaces the rating bounds already there with the one clicked', () => {
     expect(refineQuery('tag:Anime', 'rating', '>=81')).toBe('tag:Anime rating:>=81');
     expect(refineQuery('rating:>90 tag:Anime "rating:<95"', 'rating', '>=81')).toBe('tag:Anime rating:>=81');

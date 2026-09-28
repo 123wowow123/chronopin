@@ -524,6 +524,7 @@ const en = {
     startDateEarlier: 'Start date (earlier)',
     earlierStart: 'Earlier start, {date}',
     onYahoo: '{symbol} on Yahoo Finance',
+    searchPins: 'Pins on ${symbol}',
     nasdaqDelayed: 'Nasdaq, delayed',
     market: 'market {status}',
     updated: 'updated {time}',

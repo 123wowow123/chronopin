@@ -7,7 +7,7 @@ import PinTag from './pinTag';
 import { dayKeyToMs, dayStartIn, nextDayKey } from '@/lib/format';
 import { reservedName, tagGroupPatterns, type TagCount } from '@/lib/tags';
 import { CONFIDENCE_BANDS, CONFIDENCE_BARS, type ConfidenceBand } from '@/lib/referenceConfidence';
-import { PLACE_TEXT_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, wholeWordPattern } from '../util/placeMatch';
+import { PLACE_TEXT_SCORE, SEMANTIC_ALONE_SCORE, TITLE_TEXT_SCORE, isCjkText, looksLikePlaceText, placePatterns, typedTextPatterns, typedWordPatterns, wholeWordPattern } from '../util/placeMatch';
 import type { NearFilter } from '../util/nearFilter';
 import type { RatingBound } from '../util/searchQuery';
 
@@ -20,6 +20,7 @@ export type PinSearchFilters = {
   userNames: string[];
   ids: number[];
   companies: string[];
+  tickers: string[];
   confidences: string[];
   confidenceBands: ConfidenceBand[];
   dates: string[];
@@ -759,23 +760,41 @@ function searchClauses(filter: SearchFilter) {
   // pin whose address names it: someone typing "chicago" wants what happened
   // in Chicago, whether or not the words say so, and those pins can stand
   // well outside the pool the semantic ranking keeps.
-  const textPlace = filter.hits && filter.text && looksLikePlaceText(filter.text) ? addressMatches([wholeWordPattern(filter.text)]) : null;
-  // Free text is also looked for in the pin's title in each of the languages
-  // it is translated into, whatever the page's language: a name typed as a
-  // card in that language writes it (台积电, 風の谷のナウシカ) is then found
-  // however the semantic ranking scored it.
-  const textTitle = textPlace
-    ? `EXISTS (SELECT 1 FROM "PinTranslation" AS "tr" WHERE "tr"."pinId" = "Pin"."id" AND "tr"."title" ~* ALL(${add(typedTextPatterns(filter.text!))}::text[]))`
-    : null;
+  const typed = filter.hits && filter.text && looksLikePlaceText(filter.text) ? filter.text : null;
   let score = '1::float8';
   if (filter.hits) {
     const hit = `unnest(${add(filter.hits.map((h) => h.id))}::integer[], ${add(filter.hits.map((h) => h.score))}::float8[]) AS "hit" ("id", "score") ON "hit"."id" = "Pin"."id"`;
-    if (textPlace) {
-      const textMatches = [textPlace, textTitle].filter(Boolean);
+    if (typed) {
+      // Each of these is written for a pin alias, as the pool's trim below
+      // asks the same of every pin.
+      const place = add([wholeWordPattern(typed)]);
+      const textPlace = (pin: string) => `(${pin}."address" ~* ANY(${place}::text[]))`;
+      // Free text is also looked for in the pin's title in each of the
+      // languages it is translated into, whatever the page's language: a name
+      // typed as a card in that language writes it (台积电, 風の谷のナウシカ) is
+      // then found however the semantic ranking scored it.
+      const title = add(typedTextPatterns(typed));
+      const textTitle = (pin: string) => `EXISTS (SELECT 1 FROM "PinTranslation" AS "tr" WHERE "tr"."pinId" = ${pin}."id" AND "tr"."title" ~* ALL(${title}::text[]))`;
+      // And in the pin's own title and description, or one of its tags, every
+      // word typed, so a pin that says what was searched for is found however
+      // far down the semantic ranking it fell, or past the pool's end.
+      const wordPatterns = typedWordPatterns(typed);
+      const words = wordPatterns.length ? add(wordPatterns) : null;
+      const textWords = (pin: string) =>
+        words
+          ? `((${pin}."title" || ' ' || COALESCE(${pin}."description", '')) ~* ALL(${words}::text[]) OR EXISTS (SELECT 1 FROM "PinTagView" AS "wt" WHERE "wt"."pinId" = ${pin}."id" AND "wt"."name"::text ~* ALL(${words}::text[])))`
+          : 'false';
+      const textMatches = (pin: string) => `${textPlace(pin)} OR ${textTitle(pin)} OR ${textWords(pin)}`;
       joins.push(`LEFT JOIN ${hit}`);
-      where.push(`("hit"."id" IS NOT NULL OR ${textMatches.join(' OR ')})`);
-      const titleScore = isCjkText(filter.text!) ? `${TITLE_TEXT_SCORE}::float8 + COALESCE("hit"."score", 0)` : `${PLACE_TEXT_SCORE}::float8`;
-      score = `GREATEST(COALESCE("hit"."score", 0), CASE WHEN ${textPlace} THEN ${PLACE_TEXT_SCORE}::float8 ELSE 0 END, CASE WHEN ${textTitle} THEN ${titleScore} ELSE 0 END)`;
+      // Once any pin says the text, the semantic pool keeps only its strong
+      // matches (SEMANTIC_ALONE_SCORE): the rest of it is whatever the model
+      // put nearest a word it had little to go on for.
+      where.push(
+        `(${textMatches('"Pin"')} OR "hit"."score" >= ${SEMANTIC_ALONE_SCORE}::float8
+          OR ("hit"."id" IS NOT NULL AND NOT EXISTS (SELECT 1 FROM "Pin" AS "says" WHERE "says"."utcDeletedDateTime" IS NULL AND (${textMatches('"says"')}))))`,
+      );
+      const titleScore = isCjkText(typed) ? `${TITLE_TEXT_SCORE}::float8 + COALESCE("hit"."score", 0)` : `${PLACE_TEXT_SCORE}::float8`;
+      score = `GREATEST(COALESCE("hit"."score", 0), CASE WHEN ${textPlace('"Pin"')} THEN ${PLACE_TEXT_SCORE}::float8 ELSE 0 END, CASE WHEN ${textTitle('"Pin"')} THEN ${titleScore} ELSE 0 END, CASE WHEN ${textWords('"Pin"')} THEN ${SEMANTIC_ALONE_SCORE}::float8 ELSE 0 END)`;
     } else {
       joins.push(`INNER JOIN ${hit}`);
       score = '"hit"."score"';
@@ -792,6 +811,14 @@ function searchClauses(filter: SearchFilter) {
   if (filter.companies.length) {
     joins.push('INNER JOIN "Company" ON "Company"."id" = "Pin"."companyId"');
     where.push(`"Company"."name" = ANY(${add(filter.companies)}::citext[])`);
+  }
+  // Any of these tickers ($NKE): the pin's company is listed under one, or
+  // the pin carries one as its company's stock (0029) and it was not taken off.
+  if (filter.tickers.length) {
+    const tickers = add(filter.tickers);
+    where.push(`(EXISTS (SELECT 1 FROM "Company" AS "listed" WHERE "listed"."id" = "Pin"."companyId" AND upper("listed"."tickerSymbol") = ANY(${tickers}::text[]))
+          OR EXISTS (SELECT 1 FROM "PinTicker" AS "stock" WHERE "stock"."pinId" = "Pin"."id" AND "stock"."relation" = 'company'
+            AND "stock"."utcRemovedDateTime" IS NULL AND upper("stock"."symbol") = ANY(${tickers}::text[])))`);
   }
   // One confidence: field, so its levels and its score bands widen each other.
   // A band is read off the score in one pass with width_bucket, which drops a

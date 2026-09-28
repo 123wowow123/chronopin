@@ -6,7 +6,7 @@ import { Fragment, useCallback, useEffect, useId, useMemo, useOptimistic, useRef
 import { createPortal } from 'react-dom';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
-import { hrefKeepingDate } from '@/lib/client/returnSpot';
+import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { refineQuery, removeTerm } from '@/lib/searchTerms';
 import { cloudSteps, cloudTags, groupSelection, groupTags, isReserved, reservedPicked, reservedTag, reservedValues, RESERVED_TAGS, tagMembers, type TagCount, type TagGroup } from '@/lib/tags';
@@ -259,7 +259,8 @@ export function TagCloud({
     else current.delete('q');
     // Nothing left to search for or filter by: that's the timeline.
     const href = current.size ? `/search?${current.toString()}` : '/';
-    // Fewer tags picked is a wider search, which stays on the same date.
+    // Fewer tags picked is a wider search, which stays on the same date; more
+    // opens on the day nearest it.
     const widened = next.length + nextReserved.length + nextExcluded.length < selected.length + reserved.length + excluded.length;
     // A pick in the drawer's list keeps the drawer open and where it was
     // scrolled, through the change of page it makes.
@@ -268,7 +269,7 @@ export function TagCloud({
       setSelected(next);
       setReserved(nextReserved);
       setExcluded(nextExcluded);
-      router.push(widened ? hrefKeepingDate(href) : href);
+      router.push(widened ? hrefKeepingDate(href) : hrefNearDay(href));
     });
   }
 

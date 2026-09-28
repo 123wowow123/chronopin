@@ -525,6 +525,7 @@ const fr: Messages = {
     startDateEarlier: 'Date de début (antérieure)',
     earlierStart: 'Début antérieur, {date}',
     onYahoo: '{symbol} sur Yahoo Finance',
+    searchPins: 'Épingles sur ${symbol}',
     nasdaqDelayed: 'Nasdaq, en différé',
     market: 'marché {status}',
     updated: 'mis à jour à {time}',

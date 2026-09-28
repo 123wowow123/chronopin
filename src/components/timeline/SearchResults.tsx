@@ -13,7 +13,7 @@ import { UserAvatar } from '@/components/ui/UserAvatar';
 import { BackToTimeline } from './BackToTimeline';
 import { parseLinkHeader } from '@/lib/client/api';
 import { createPageAhead } from '@/lib/client/pageAhead';
-import { type CardSpot, takeSearchSpot } from '@/lib/client/returnSpot';
+import { type CardSpot, type DaySpot, takeSearchSpot } from '@/lib/client/returnSpot';
 import { safeHtmlInBrowser } from '@/lib/client/sanitize';
 import { useManualScrollRestoration } from '@/lib/client/scrollRestoration';
 import { useTodayHold } from '@/lib/client/todayHold';
@@ -326,6 +326,22 @@ export function SearchResults({
     const ahead = bags.findIndex((bag) => daysBetween(todayKey, bag.day) > 0);
     return `day-${(ahead === -1 ? bags[bags.length - 1] : bags[ahead]).day}`;
   };
+  // The results' day nearest `day`: today's marker where that is today and the
+  // results reach it, and otherwise the closest day they have - the later of
+  // two as close.
+  const dayScrollId = (day: string) => {
+    if (day === todayKey && todayScrollId(bags, marker)) return todayScrollId(bags, marker);
+    let nearest: string | null = null;
+    let away = Infinity;
+    for (const bag of bags) {
+      const distance = Math.abs(daysBetween(day, bag.day));
+      if (distance <= away) {
+        away = distance;
+        nearest = `day-${bag.day}`;
+      }
+    }
+    return nearest;
+  };
   // Opening holds today in place while the cards above it finish growing, and
   // stands aside where the results never reach today: those open at the first
   // of them, as they always have.
@@ -335,8 +351,15 @@ export function SearchResults({
 
   // Back from logging in: the card the reader left, paged toward while the
   // results stay hidden, then put back as far down the window as it was and
-  // held there like today.
-  const returnTo = useRef<CardSpot | null>(null);
+  // held there like today. A search made from a page of cards by date pages
+  // the same way toward the day it was made from (hrefNearDay), and opens on
+  // the nearest day it has; so does a card that is no longer among them.
+  const returnTo = useRef<CardSpot | DaySpot | null>(null);
+  // That day, kept while a search that opened by relevance shows its best
+  // matches, for when its dates first show.
+  const dayAim = useRef<DaySpot | null>(null);
+  const heldDay = useRef<string | null>(null);
+  const holdDay = useTodayHold(() => scrollTo(heldDay.current && dayScrollId(heldDay.current)));
   const heldSpot = useRef<CardSpot | null>(null);
   const [restoring, setRestoring] = useState(false);
   const holdSpot = useTodayHold(() => {
@@ -352,17 +375,20 @@ export function SearchResults({
     if (spotTaken.current) return;
     spotTaken.current = true;
     const spot = takeSearchSpot();
+    // By relevance the day the search was made from waits for its dates.
+    const aimLater = spot?.kind === 'day' && openedSort.current === 'relevance';
+    if (aimLater) dayAim.current = spot;
     // A new search by relevance starts at its best match. The router keeps
     // the window where it was when only the query changes, so a search made
     // from further down the last results would open part-way down the new
     // ones. (By date it opens on today, below; a page shown again after Back
     // is not a new mount and keeps its place.)
-    if (!spot && openedSort.current === 'relevance') window.scrollTo({ top: 0 });
-    if (!spot || error) return;
+    if ((!spot || aimLater) && openedSort.current === 'relevance') window.scrollTo({ top: 0 });
+    if (!spot || aimLater || error) return;
     returnTo.current = spot;
     // Not today: by date, the opening below stands aside and the sentinels may page.
     scrolled.current = true;
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- hidden before the first paint after hydration
+    // Hidden before the first paint after hydration.
     setRestoring(true);
   }, [error]);
 
@@ -373,18 +399,29 @@ export function SearchResults({
     const finish = (found: boolean) => {
       returnTo.current = null;
       setRestoring(false);
-      if (found) {
+      const day = spot.kind === 'day' ? spot.day : (spot.day ?? (spot.start ? dayKeyIn(spot.start, timeZone) : null));
+      if (found && spot.kind === 'card') {
         heldSpot.current = spot;
         holdSpot();
+      } else if (sortBy === 'date' && day) {
+        heldDay.current = day;
+        holdDay();
       } else if (sortBy === 'date') {
         holdToday();
       }
     };
-    if (list.pins.some((pin) => pin.id === spot.pinId)) return finish(true);
+    if (spot.kind === 'card' && list.pins.some((pin) => pin.id === spot.pinId)) return finish(true);
     // By relevance the card is further down; by date, beyond whichever end
-    // its start is past (within the dates loaded, it has gone).
+    // its start is past (within the dates loaded, it has gone). A day is
+    // beyond whichever end it is past, and is reached once the dates loaded
+    // take it in.
     let direction: 'previous' | 'next' | null = 'next';
-    if (sortBy === 'date' && list.pins.length) {
+    if (spot.kind === 'day') {
+      const first = bags[0]?.day;
+      const last = bags[bags.length - 1]?.day;
+      direction =
+        sortBy !== 'date' || !first || !last ? null : daysBetween(spot.day, first) > 0 ? 'previous' : daysBetween(last, spot.day) > 0 ? 'next' : null;
+    } else if (sortBy === 'date' && list.pins.length) {
       const at = new Date(spot.start ?? NaN).getTime();
       const first = new Date(list.pins[0].utcStartDateTime).getTime();
       const last = new Date(list.pins[list.pins.length - 1].utcStartDateTime).getTime();
@@ -395,7 +432,7 @@ export function SearchResults({
       if (added) pagesWalked.current++;
       else if (added === false && returnTo.current === spot) finish(false);
     });
-  }, [lists, sortBy, loadMore, holdSpot, holdToday]);
+  }, [lists, bags, sortBy, timeZone, loadMore, holdSpot, holdDay, holdToday]);
 
   useLayoutEffect(() => {
     if (scrolled.current || sortBy !== 'date' || !bags.length) return;
@@ -410,6 +447,13 @@ export function SearchResults({
     setSortBy(next);
     if (next === 'relevance') setRelevanceShown(true);
     if (!lists[next]) reload(next, postedWithin, startSpan);
+    // The day the search was made from, now that its dates show.
+    if (next === 'date' && dayAim.current) {
+      returnTo.current = dayAim.current;
+      dayAim.current = null;
+      scrolled.current = true;
+      setRestoring(true);
+    }
   };
   const shownSort = useRef(sortBy);
   useLayoutEffect(() => {

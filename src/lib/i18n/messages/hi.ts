@@ -532,6 +532,7 @@ const hi: Messages = {
     startDateEarlier: 'शुरुआत की तारीख (पहले वाली)',
     earlierStart: 'पहले की शुरुआत, {date}',
     onYahoo: 'Yahoo Finance पर {symbol}',
+    searchPins: '${symbol} पर पिन',
     nasdaqDelayed: 'Nasdaq, देरी से',
     market: 'मार्केट {status}',
     updated: '{time} अपडेट किया गया',

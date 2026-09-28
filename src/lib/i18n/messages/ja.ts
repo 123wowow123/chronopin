@@ -519,6 +519,7 @@ const ja: Messages = {
     startDateEarlier: '開始日（以前）',
     earlierStart: '以前の開始日、{date}',
     onYahoo: 'Yahoo Financeで{symbol}を見る',
+    searchPins: '${symbol}のピン',
     nasdaqDelayed: 'Nasdaq（遅延あり）',
     market: '市場：{status}',
     updated: '{time} 更新',

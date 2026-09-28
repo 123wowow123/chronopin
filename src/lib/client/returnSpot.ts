@@ -23,10 +23,13 @@ const KEY = 'returnSpot';
 // coming back.
 const MAX_AGE_MS = 15 * 60_000;
 
-export type CardSpot = { kind: 'card'; pinId: number; top: number; start?: string };
+// day: the day (key) the card is shown under, on a page of cards by date.
+export type CardSpot = { kind: 'card'; pinId: number; top: number; start?: string; day?: string };
 export type MapSpot = { kind: 'map'; lat: number; lng: number; zoom: number };
+// A day for a search's dates to open on, where no one card is sure to be.
+export type DaySpot = { kind: 'day'; day: string };
 // href: the page to come back to, which a spot is only for.
-type Saved = (CardSpot | MapSpot) & { href: string; savedAt: number };
+type Saved = (CardSpot | MapSpot | DaySpot) & { href: string; savedAt: number };
 
 // Where the reader is in the app, without the language prefix ("/es/map" ->
 // "/map"): the spots and the hrefs below are app paths, which the links and
@@ -128,6 +131,22 @@ export function hrefKeepingDate(href: string): string {
   return next.pathname + next.search;
 }
 
+// Where adding a filter goes (href: a search for fewer pins than before),
+// opening its dates on the day the reader was at rather than on today: the day
+// of the card whose label they clicked (`from`), or else of the card at the
+// top of the window. That card may well be filtered out, so it is the day that
+// is kept: the results page toward it and open on the nearest day they have.
+// Only from a page of cards by date; a search that opens by relevance still
+// opens on its best match, and keeps the day for when its dates first show.
+export function hrefNearDay(href: string, from?: Element | null): string {
+  const next = new URL(href, location.origin);
+  const here = appPathname();
+  if (next.pathname !== '/search' || (here !== '/' && here !== '/search')) return href;
+  const day = from?.closest<HTMLElement>('[data-day]')?.dataset.day ?? cardAtTop(DATE_CARDS)?.day;
+  if (day) save({ kind: 'day', day }, next.pathname + next.search);
+  return href;
+}
+
 // Where a card sits once a page has been sent to it on purpose (rather than
 // put back where the reader left it): just under the sticky header.
 const AIMED_TOP = 72;
@@ -154,7 +173,7 @@ export function dateAtTop(): number | null {
 // How a search is shown, as opposed to what it searches for.
 const VIEW_PARAMS = ['sort', 'posted', 'past', 'future'];
 
-function save(spot: CardSpot | MapSpot, href: string) {
+function save(spot: CardSpot | MapSpot | DaySpot, href: string) {
   try {
     sessionStorage.setItem(KEY, JSON.stringify({ ...spot, href, savedAt: Date.now() } satisfies Saved));
   } catch {
@@ -170,10 +189,10 @@ export function takeTimelineSpot(pinId: number): number | null {
   return spot?.kind === 'card' && spot.pinId === pinId && new URL(spot.href, location.origin).pathname === '/' ? spot.top : null;
 }
 
-// The card this search page was left on, once.
-export function takeSearchSpot(): CardSpot | null {
+// The card this search page was left on, or the day it was made from, once.
+export function takeSearchSpot(): CardSpot | DaySpot | null {
   const spot = take();
-  return spot?.kind === 'card' && isHere(spot.href) ? spot : null;
+  return (spot?.kind === 'card' || spot?.kind === 'day') && isHere(spot.href) ? spot : null;
 }
 
 // The view this map was left on. Read without removing it, then cleared once
@@ -229,7 +248,7 @@ function cardAtTop(cards = `${DATE_CARDS}, li[id^="rank-"]`): CardSpot | null {
     const rect = el.getBoundingClientRect();
     const pinId = Number(el.id.slice(el.id.indexOf('-') + 1));
     if (!rect.height || rect.bottom <= covered || rect.top >= window.innerHeight || !Number.isInteger(pinId)) continue;
-    if (!best || rect.top < best.top) best = { kind: 'card', pinId, top: rect.top, start: el.dataset.start };
+    if (!best || rect.top < best.top) best = { kind: 'card', pinId, top: rect.top, start: el.dataset.start, day: el.closest<HTMLElement>('[data-day]')?.dataset.day };
   }
   return best;
 }

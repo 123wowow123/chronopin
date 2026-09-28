@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { RefineLink } from '@/components/pin/RefineLink';
 import { Icon } from '@/components/ui/Icon';
 import { api } from '@/lib/client/api';
 import { useStockQuote, watchStockQuotes } from '@/lib/client/stockQuotes';
@@ -99,7 +100,8 @@ function TickerPill({ stock, open, onToggle }: { stock: PinStock; open: boolean;
 
 // The open pill's details: a line on why it is on the pin ("Supplier: AMD,
 // which designs the PlayStation 5 processor."), and its price when posted and
-// on each start date against the live one.
+// on each start date against the live one, a search for the pins of the
+// company listed under it ($NKE), and the ticker on Yahoo.
 function TickerDetails({ stock }: { stock: PinStock }) {
   const quote = useStockQuote(stock.symbol);
   const t = useT();
@@ -122,6 +124,9 @@ function TickerDetails({ stock }: { stock: PinStock }) {
         />
       ))}
       <div className="mt-1 flex items-center gap-3 text-xs">
+        <RefineLink field="ticker" value={stock.symbol} title={t('stocks.searchPins', { symbol: stock.symbol })} className="text-link hover:underline">
+          {t('stocks.searchPins', { symbol: stock.symbol })}
+        </RefineLink>
         <a
           href={`https://finance.yahoo.com/quote/${encodeURIComponent(stock.symbol.replace('.', '-'))}/`}
           target="_blank"

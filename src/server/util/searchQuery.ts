@@ -46,6 +46,12 @@
 // user: takes a name with or without its "@" (user:@ThePinGang), and a bare
 // @ThePinGang still works on its own, as it did before user: existed.
 //
+// A bare $ and a stock symbol ($NKE, $brk.b) is a company ticker: the pins
+// whose company is listed under it, or which carry it as their company's
+// stock. Several companies can share one (Sony's divisions all trade as
+// SONY), so it widens to all of them, as a second company: term would.
+// Only a letter may follow the $, so "$5 million" stays free text.
+//
 // pin: takes pin ids, comma-separated (pin:1992,1991,1987): exactly those
 // pins and no others. Nothing in the site writes one by hand - it is how a
 // batch of notifications links to the pins it stands for, which no day or
@@ -78,6 +84,8 @@ export type SearchQuery = {
   // Pin ids, matching exactly those pins.
   ids: number[];
   companies: string[];
+  // Stock symbols, uppercase, any of them.
+  tickers: string[];
   confidences: string[];
   // Bands of a pin's overall score ("low", "medium", "high"), which widen the
   // same confidence: field the levels do.
@@ -119,9 +127,10 @@ const FIELD_TERM = new RegExp(
   'gi',
 );
 
-const USER_TERM = /(^|\s)(@\S+)/g;
+// A bare @name, or a bare $ticker standing as a word of its own.
+const BARE_TERM = /(^|\s)(@\S+|\$[A-Za-z][A-Za-z0-9.-]{0,11}(?=\s|$))/g;
 
-export type TermField = 'user' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'tag' | 'pin' | 'place' | 'rating';
+export type TermField = 'user' | 'ticker' | 'company' | 'category' | 'confidence' | 'date' | 'posted' | 'tag' | 'pin' | 'place' | 'rating';
 
 export type QueryPart =
   | { kind: 'term'; field: TermField; value: string; raw: string; negated?: boolean }
@@ -136,14 +145,15 @@ export function splitSearchQuery(searchText: string | null | undefined): QueryPa
     .replace(SMART_SINGLE_QUOTES, "'");
   const parts: QueryPart[] = [];
 
-  // A bare @name is only a term in the text the field terms leave, as a
-  // user:@name value is theirs.
+  // A bare @name or $ticker is only a term in the text the field terms
+  // leave, as a user:@name value is theirs.
   const addText = (text: string) => {
     let from = 0;
-    for (const match of text.matchAll(USER_TERM)) {
+    for (const match of text.matchAll(BARE_TERM)) {
       const start = match.index + match[1].length;
       if (start > from) parts.push({ kind: 'text', raw: text.slice(from, start) });
-      parts.push({ kind: 'term', field: 'user', value: match[2], raw: match[2] });
+      const ticker = match[2].startsWith('$');
+      parts.push({ kind: 'term', field: ticker ? 'ticker' : 'user', value: ticker ? match[2].slice(1).toUpperCase() : match[2], raw: match[2] });
       from = start + match[2].length;
     }
     if (from < text.length) parts.push({ kind: 'text', raw: text.slice(from) });
@@ -180,6 +190,7 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
     userNames: [],
     ids: [],
     companies: [],
+    tickers: [],
     confidences: [],
     confidenceBands: [],
     dates: [],
@@ -200,6 +211,8 @@ export function parseSearchQuery(searchText: string | null | undefined): SearchQ
       if ((part.field === 'tag' || part.field === 'category') && part.value) addUnique(query.excludeTags, part.value);
     } else if (part.field === 'user') {
       addUserName(query, part.value);
+    } else if (part.field === 'ticker') {
+      addUnique(query.tickers, part.value);
     } else if (part.field === 'confidence') {
       addConfidence(query, part.value);
     } else if (part.field === 'pin') {
@@ -232,6 +245,7 @@ export function hasFilters(query: SearchQuery): boolean {
     query.userNames.length ||
     query.ids.length ||
     query.companies.length ||
+    query.tickers.length ||
     query.confidences.length ||
     query.confidenceBands.length ||
     query.dates.length ||

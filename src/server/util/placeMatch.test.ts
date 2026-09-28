@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { isCjkText, looksLikePlaceText, placeNames, placePatterns, typedTextPatterns, wholeWordPattern } from './placeMatch';
+import { isCjkText, looksLikePlaceText, placeNames, placePatterns, typedTextPatterns, typedWordPatterns, wholeWordPattern } from './placeMatch';
 
 // Postgres character classes are not JavaScript's, so a pattern is read here
 // the way Postgres would read it against a real address.
@@ -86,5 +86,33 @@ describe('isCjkText', () => {
     expect(isCjkText('無職転生III ～異世界行ったら本気だす～')).toBe(true);
     expect(isCjkText('나이키 실적')).toBe(true);
     expect(isCjkText('Mushoku Tensei III')).toBe(false);
+  });
+});
+
+describe('typedWordPatterns', () => {
+  const all = (patterns: string[], text: string) => patterns.every((pattern) => matches([pattern], text));
+
+  it('finds every word typed, anywhere and in any order', () => {
+    expect(all(typedWordPatterns('spacex launch'), 'Falcon 9 lifts off as SpaceX makes its 100th launch of the year')).toBe(true);
+    expect(all(typedWordPatterns('launch spacex'), 'SpaceX makes its 100th launch')).toBe(true);
+    expect(all(typedWordPatterns('spacex launch'), 'Soyuz 2.1b launches Progress MS-36')).toBe(false);
+  });
+
+  it('keeps each word whole, taking a plural either way round', () => {
+    expect(all(typedWordPatterns('grammy'), 'Nominations Announced for the 2027 Grammy Awards')).toBe(true);
+    expect(all(typedWordPatterns('grammy'), 'the Grammys return to Los Angeles')).toBe(true);
+    expect(all(typedWordPatterns('grammys'), 'The 69th Grammy Awards Pick Album of the Year')).toBe(true);
+    expect(all(typedWordPatterns('layoffs'), 'Layoff tracker')).toBe(true);
+    expect(all(typedWordPatterns('ford'), 'Oxford opens its new campus')).toBe(false);
+    expect(all(typedWordPatterns('grammy'), 'As a Reincarnated Aristocrat, I\'ll Use My Appraisal Skill')).toBe(false);
+  });
+
+  it('leaves out words with nothing to match on', () => {
+    expect(typedWordPatterns('black & blue')).toHaveLength(2);
+    expect(typedWordPatterns(' - ')).toEqual([]);
+  });
+
+  it('reads Chinese, Japanese and Korean as typedTextPatterns does', () => {
+    expect(typedWordPatterns('나이키 실적')).toEqual(typedTextPatterns('나이키 실적'));
   });
 });

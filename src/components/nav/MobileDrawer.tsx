@@ -10,7 +10,7 @@ import { UserAvatar } from '@/components/ui/UserAvatar';
 import { drawerHeld, onCloseDrawer, onOpenDrawer, setCardsSlot, setControlsSlot, setDrawerScroller, useHasControls } from '@/lib/client/controlsDrawer';
 import { leaveDrawer, settleDrawerMark, takeDrawerReturn } from '@/lib/client/drawerReturn';
 import { useUnreadCount } from '@/lib/client/notifications';
-import { hrefKeepingDate } from '@/lib/client/returnSpot';
+import { hrefKeepingDate, hrefNearDay } from '@/lib/client/returnSpot';
 import { useScrollLock } from '@/lib/client/scrollLock';
 import { useSession } from '@/lib/client/session';
 import { AuthLink, LogoutLink } from './AuthLink';
@@ -210,8 +210,9 @@ export function MobileDrawer() {
   const toggleWatched = () => {
     setOpen(false);
     const href = searchHref(onMap, searching ? params.get('q') || '' : '', watchedOnly ? '' : WATCHED);
-    // Turning Watched off widens the search, which stays on the same date.
-    router.push(watchedOnly ? hrefKeepingDate(href) : href);
+    // Turning Watched off widens the search, which stays on the same date;
+    // turning it on opens on the day nearest it.
+    router.push(watchedOnly ? hrefKeepingDate(href) : hrefNearDay(href));
   };
 
   const drawer = (

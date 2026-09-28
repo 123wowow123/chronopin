@@ -8,8 +8,9 @@
 // batch of notifications linking to exactly the pins it stands for. '-tag'
 // is a tag left out (the tag cloud's second click): the field is written
 // with its minus, so every helper here handles it as a field of its own.
-// 'rating' is a bound (rating:>=81), which a rating pill writes.
-export type LabelField = 'user' | 'company' | 'confidence' | 'date' | 'posted' | 'tag' | '-tag' | 'pin' | 'place' | 'rating';
+// 'rating' is a bound (rating:>=81), which a rating pill writes. 'ticker' is
+// a company's stock symbol, written bare with a $ ($NKE) rather than as a field.
+export type LabelField = 'user' | 'ticker' | 'company' | 'confidence' | 'date' | 'posted' | 'tag' | '-tag' | 'pin' | 'place' | 'rating';
 // Fields a query may still hold but no label writes: category: is the old
 // name for a category's tag: term, which can only be taken out.
 type AnyField = LabelField | 'category' | '-category';
@@ -29,6 +30,7 @@ function termValue(field: AnyField, value: string) {
 // A value with spaces is quoted: company:"Electronic Arts".
 export function term(field: LabelField, value: string): string {
   const name = termValue(field, String(value).replace(DOUBLE_QUOTES, '').trim());
+  if (field === 'ticker') return `$${name.replace(/^\$+/, '').toUpperCase()}`;
   return /\s/.test(name) ? `${field}:"${name}"` : `${field}:${name}`;
 }
 
@@ -36,6 +38,7 @@ export function term(field: LabelField, value: string): string {
 // term quoted, either kind of quote - lowercased, for matching a normalized query.
 function termForms(field: AnyField, value: string): string[] {
   const lower = termValue(field, value).toLowerCase();
+  if (field === 'ticker') return [`$${lower.replace(/^\$+/, '')}`];
   const values = field === 'user' ? [lower, `@${lower}`] : [lower];
   return values.reduce<string[]>(
     (all, v) =>
