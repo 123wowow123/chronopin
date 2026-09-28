@@ -1,5 +1,8 @@
 # Update Log
 
+## 2026-09-28
+* **Update**: **Sable Offshore news, posted straight to production** (pins 4720-4740, @EnergyDesk with @LawDesk, @PoliticsDesk and @CityDesk): twenty-one pins tagged `Sable` from the 2015 Refugio spill and the 2024 Exxon purchase through the Coastal Commission fine, Harmony restart, injunctions, DA charges, DPA suits, first oil sales, PHMSA's 10-year permit, the $460M financing, the Hunt amendment and September's pipeline digs, to the 5 Oct Ninth Circuit session and estimated Q3 results; spliced into the existing chain by date (2984, 2989, 2990, 2991 re-threaded) and 2991 refreshed with the latest Hondo timing. See [learnings](/scraping/learnings.md).
+
 ## 2026-09-27
 * **Update**: **Construction pins are periods** (owner feedback on 2208): construction start -> completion, milestones stay single days; new East Colfax BRT construction pin 4689 with 2208 under it, and 33 prod construction pins given their completion dates and re-translated. [Fields](/scraping/fields.md), [Learnings](/scraping/learnings.md)
 * **Update**: **Product drops with buy buttons, posted straight to production** (pins 4466-4548, @DropDesk - created for this run): fifty-eight pins tagged `Drops` - Supreme, Palace, Kith, Stussy, ALD and Denim Tears drops; H&M, Gap, Target, Uniqlo, IKEA, sacai and MoonSwatch collabs; Pokemon, One Piece, Magic and Lorcana sets, LEGO, Hot Wheels RLC, Bearbrick and Funko; Bourbon County, Pliny the Younger, Dark Lord, Darkness and Christmas Ale releases, Starbucks cups, Stanley, Boo Buckets and Krispy Kreme. Every pin carries `productName` for the store search buttons and real store pages as merchants. [Learnings](/scraping/learnings.md), [Vertical recipes](/scraping/verticals.md)
