@@ -35,9 +35,12 @@ function Brand({ bg, children }: { bg: string; children: ReactNode }) {
   );
 }
 
-function Plain({ name }: { name: IconName }) {
+function Plain({ name, bg }: { name: IconName; bg?: string }) {
   return (
-    <span className="flex size-11 items-center justify-center rounded-full bg-ink/10 text-ink">
+    <span
+      className={`flex size-11 items-center justify-center rounded-full ${bg ? 'text-white' : 'bg-ink/10 text-ink'}`}
+      style={bg ? { background: bg } : undefined}
+    >
       <Icon name={name} className="size-5" />
     </span>
   );
@@ -48,7 +51,7 @@ function targets(t: ReturnType<typeof useT>): Target[] {
     // iOS reads "sms:&body=", Android "sms:?body="; "sms:?&body=" suits both.
     // A link goes alone: Messages turns it into a card with the page's
     // og:image and title, where any words with it become a bubble of their own.
-    { key: 'sms', label: t('share.message'), icon: <Plain name="message" />, href: (item) => `sms:?&body=${q(item.url ?? item.text)}` },
+    { key: 'sms', label: t('share.message'), icon: <Plain name="message" bg="#0A84FF" />, href: (item) => `sms:?&body=${q(item.url ?? item.text)}` },
     {
       key: 'whatsapp',
       label: 'WhatsApp',
@@ -116,7 +119,7 @@ function targets(t: ReturnType<typeof useT>): Target[] {
       ),
       href: (item) => `https://www.linkedin.com/sharing/share-offsite/?url=${q(item.url!)}`,
     },
-    { key: 'email', label: t('share.email'), icon: <Plain name="mail" />, href: (item) => `mailto:?subject=${q(item.text)}&body=${q(line(item))}` },
+    { key: 'email', label: t('share.email'), icon: <Plain name="mail" bg="#EA4335" />, href: (item) => `mailto:?subject=${q(item.text)}&body=${q(line(item))}` },
   ];
 }
 

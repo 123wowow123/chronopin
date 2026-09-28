@@ -388,17 +388,6 @@ export function PinMediaFrame({
             </div>
           );
         })}
-        {/* A strip at each edge steps to the previous or next medium when
-            clicked, rather than the picture's link opening, and takes a swipe
-            that starts on it - over a player too, which otherwise keeps every
-            touch and click inside its iframe. They stop short of the player's
-            top and bottom bars and of the labels in the frame's corners. */}
-        {dots ? (
-          <>
-            <MediaEdge side="previous" onStep={() => step(-1)} />
-            <MediaEdge side="next" onStep={() => step(1)} />
-          </>
-        ) : null}
       </div>
       {dots ? (
         <div role="group" aria-label={t('media.label')} className="flex items-center justify-center gap-0.5 py-1">
@@ -430,22 +419,6 @@ export function PinMediaFrame({
       {fallback}
       {frame}
     </>
-  );
-}
-
-// An edge of the frame that steps to the previous or next medium when clicked,
-// and passes a swipe that starts on it up to the frame. It darkens under a
-// hovering pointer and more while pressed. The arrows beside the dots are the
-// labelled buttons, so this one stays out of the tab order and the a11y tree.
-function MediaEdge({ side, onStep }: { side: 'previous' | 'next'; onStep: () => void }) {
-  return (
-    <button
-      type="button"
-      tabIndex={-1}
-      aria-hidden
-      onClick={onStep}
-      className={`absolute inset-y-12 z-10 w-12 touch-pan-y touch-pinch-zoom from-black/0 transition-colors hover:from-black/30 active:from-black/45 ${side === 'previous' ? 'left-0 bg-linear-to-r' : 'right-0 bg-linear-to-l'}`}
-    />
   );
 }
 
@@ -488,6 +461,10 @@ const YT_BUFFERING = 3;
 // A hidden page's iframe is still there and still playing - its effects are
 // the only thing torn down - so the player is paused on the way out. Coming
 // back it stays paused, where the viewer left off.
+// Also pauses when the browser tab itself is hidden - covers the player's own
+// "Watch on YouTube" control, which opens the video in a new tab (and steals
+// focus) without navigating this page away, so it would otherwise keep
+// playing here too. Resumes if the tab comes back foregrounded.
 function YouTubeEmbed({ html, title }: { html: string; title: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const t = useT();
@@ -499,6 +476,7 @@ function YouTubeEmbed({ html, title }: { html: string; title: string }) {
     const send = (message: object) => iframe.contentWindow?.postMessage(JSON.stringify(message), origin);
     let state: number | undefined;
     let pausedOffscreen = false;
+    let pausedHidden = false;
     const playing = () => state === YT_PLAYING || state === YT_BUFFERING;
 
     const onMessage = (e: MessageEvent) => {
@@ -538,12 +516,25 @@ function YouTubeEmbed({ html, title }: { html: string; title: string }) {
       }
     });
     observer.observe(container);
+
+    const onVisibilityChange = () => {
+      if (document.hidden && playing()) {
+        send({ event: 'command', func: 'pauseVideo', args: [] });
+        pausedHidden = true;
+      } else if (!document.hidden && pausedHidden) {
+        send({ event: 'command', func: 'playVideo', args: [] });
+        pausedHidden = false;
+      }
+    };
+    document.addEventListener('visibilitychange', onVisibilityChange);
+
     return () => {
       if (playing()) send({ event: 'command', func: 'pauseVideo', args: [] });
       observer.disconnect();
       window.clearInterval(handshake);
       iframe.removeEventListener('load', startHandshake);
       window.removeEventListener('message', onMessage);
+      document.removeEventListener('visibilitychange', onVisibilityChange);
     };
   }, [html]);
   return <div ref={ref} className="embed-container" dangerouslySetInnerHTML={{ __html: safeEmbedHtml(html, t('media.youtubeTitle', { title })) }} />;

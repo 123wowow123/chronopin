@@ -276,3 +276,9 @@ sync prod db to local and backup json
 
 - Translate to Arabic
 
+- pins grammy news event
+
+- use ip address and google analytics to help find where trafic is coming from and pin local events for those users
+
+- setup second company for daily job
+
