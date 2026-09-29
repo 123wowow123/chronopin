@@ -13318,7 +13318,7 @@
       "utcCreatedDateTime": "2026-09-24T04:31:46.267Z",
       "utcRemovedDateTime": null,
       "relation": "company",
-      "note": null
+      "note": "the Houston developer of the Rio Grande LNG export plant near Brownsville, Texas"
     },
     {
       "id": 1176,
@@ -25814,63 +25814,111 @@
     },
     {
       "id": 2679,
+      "pinId": 4830,
+      "symbol": "BW",
+      "name": "Babcock & Wilcox",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-09-28T21:55:26.402Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the Akron, Ohio maker of boilers, steam and emissions-control equipment that is now building gas-fired power plants for AI data centres"
+    },
+    {
+      "id": 2680,
+      "pinId": 4830,
+      "symbol": "APLD",
+      "name": "Applied Digital",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-28T21:55:26.799Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": "the AI data-centre developer whose campuses the Babcock & Wilcox 1.2 GW gas-fired power project is being built to supply"
+    },
+    {
+      "id": 2681,
+      "pinId": 4831,
+      "symbol": "BW",
+      "name": "Babcock & Wilcox",
+      "assetClass": "stocks",
+      "origin": "company",
+      "utcCreatedDateTime": "2026-09-28T21:55:57.746Z",
+      "utcRemovedDateTime": null,
+      "relation": "company",
+      "note": "the Akron, Ohio maker of boilers, steam and emissions-control equipment that is now building gas-fired power plants for AI data centres"
+    },
+    {
+      "id": 2682,
+      "pinId": 4831,
+      "symbol": "APLD",
+      "name": "Applied Digital",
+      "assetClass": "stocks",
+      "origin": "article",
+      "utcCreatedDateTime": "2026-09-28T21:56:00.319Z",
+      "utcRemovedDateTime": null,
+      "relation": "related",
+      "note": "the AI data-centre developer whose campuses the Babcock & Wilcox 1.2 GW gas-fired power project is being built to supply"
+    },
+    {
+      "id": 2683,
       "pinId": 1947,
       "symbol": "SPCX",
       "name": "SpaceX",
       "assetClass": "stocks",
       "origin": "company",
-      "utcCreatedDateTime": "2026-09-29T14:00:49.675Z",
+      "utcCreatedDateTime": "2026-09-29T14:26:28.995Z",
       "utcRemovedDateTime": null,
       "relation": "company",
       "note": "the rocket, satellite and AI company leading the full-scale Terafab with Tesla"
     },
     {
-      "id": 2680,
+      "id": 2684,
       "pinId": 1945,
       "symbol": "SPCX",
       "name": "SpaceX",
       "assetClass": "stocks",
       "origin": "company",
-      "utcCreatedDateTime": "2026-09-29T14:07:48.328Z",
+      "utcCreatedDateTime": "2026-09-29T14:26:30.537Z",
       "utcRemovedDateTime": null,
       "relation": "company",
       "note": "the rocket, satellite and AI company leading the full-scale Terafab with Tesla"
     },
     {
-      "id": 2681,
-      "pinId": 4830,
+      "id": 2685,
+      "pinId": 4832,
       "symbol": "F",
       "name": "Ford Motor",
       "assetClass": "stocks",
       "origin": "article",
-      "utcCreatedDateTime": "2026-09-29T14:10:10.456Z",
+      "utcCreatedDateTime": "2026-09-29T14:26:48.791Z",
       "utcRemovedDateTime": null,
       "relation": "related",
-      "note": "which builds vehicles in Canada and fell 3.2% on the announcement"
+      "note": null
     },
     {
-      "id": 2682,
-      "pinId": 4830,
+      "id": 2686,
+      "pinId": 4832,
       "symbol": "GM",
       "name": "General Motors",
       "assetClass": "stocks",
       "origin": "article",
-      "utcCreatedDateTime": "2026-09-29T14:10:10.589Z",
+      "utcCreatedDateTime": "2026-09-29T14:26:49.991Z",
       "utcRemovedDateTime": null,
       "relation": "related",
-      "note": "which builds vehicles in Canada"
+      "note": null
     },
     {
-      "id": 2683,
-      "pinId": 4830,
+      "id": 2687,
+      "pinId": 4832,
       "symbol": "STLA",
       "name": "Stellantis",
       "assetClass": "stocks",
       "origin": "article",
-      "utcCreatedDateTime": "2026-09-29T14:10:10.741Z",
+      "utcCreatedDateTime": "2026-09-29T14:26:50.479Z",
       "utcRemovedDateTime": null,
       "relation": "related",
-      "note": "which fell 4.7% on the announcement"
+      "note": null
     }
   ],
   "prices": [
@@ -73736,114 +73784,202 @@
       "utcSetDateTime": "2026-09-28T21:06:56.609Z"
     },
     {
-      "id": 19091,
+      "id": 19017,
       "pinTickerId": 2679,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 5.8482,
+      "utcPriceDateTime": "2026-09-28T21:53:00.000Z",
+      "utcCheckedDateTime": "2026-09-28T21:55:35.761Z",
+      "utcSetDateTime": "2026-09-28T21:55:26.855Z"
+    },
+    {
+      "id": 19018,
+      "pinTickerId": 2679,
+      "kind": "start",
+      "utcStartDateTime": "2026-08-28T00:10:00.000Z",
+      "day": "2026-08-27",
+      "price": 7.68,
+      "utcPriceDateTime": "2026-08-27T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-28T21:55:31.572Z",
+      "utcSetDateTime": "2026-09-28T21:55:26.914Z"
+    },
+    {
+      "id": 19019,
+      "pinTickerId": 2680,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 24.78,
+      "utcPriceDateTime": "2026-09-28T21:54:00.000Z",
+      "utcCheckedDateTime": "2026-09-28T21:55:30.547Z",
+      "utcSetDateTime": "2026-09-28T21:55:26.938Z"
+    },
+    {
+      "id": 19020,
+      "pinTickerId": 2680,
+      "kind": "start",
+      "utcStartDateTime": "2026-08-28T00:10:00.000Z",
+      "day": "2026-08-27",
+      "price": 27.44,
+      "utcPriceDateTime": "2026-08-27T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-28T21:55:27.583Z",
+      "utcSetDateTime": "2026-09-28T21:55:27.010Z"
+    },
+    {
+      "id": 19025,
+      "pinTickerId": 2681,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 5.8482,
+      "utcPriceDateTime": "2026-09-28T21:53:00.000Z",
+      "utcCheckedDateTime": "2026-09-28T21:56:00.001Z",
+      "utcSetDateTime": "2026-09-28T21:55:57.837Z"
+    },
+    {
+      "id": 19026,
+      "pinTickerId": 2681,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-25T00:10:00.000Z",
+      "day": "2026-09-24",
+      "price": 6.17,
+      "utcPriceDateTime": "2026-09-24T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-28T21:55:57.968Z",
+      "utcSetDateTime": "2026-09-28T21:55:57.900Z"
+    },
+    {
+      "id": 19029,
+      "pinTickerId": 2682,
+      "kind": "posted",
+      "utcStartDateTime": null,
+      "day": null,
+      "price": 24.78,
+      "utcPriceDateTime": "2026-09-28T21:54:00.000Z",
+      "utcCheckedDateTime": "2026-09-28T21:56:02.368Z",
+      "utcSetDateTime": "2026-09-28T21:56:00.824Z"
+    },
+    {
+      "id": 19030,
+      "pinTickerId": 2682,
+      "kind": "start",
+      "utcStartDateTime": "2026-09-25T00:10:00.000Z",
+      "day": "2026-09-24",
+      "price": 27.06,
+      "utcPriceDateTime": "2026-09-24T20:00:00.000Z",
+      "utcCheckedDateTime": "2026-09-28T21:56:01.301Z",
+      "utcSetDateTime": "2026-09-28T21:56:00.980Z"
+    },
+    {
+      "id": 19243,
+      "pinTickerId": 2683,
       "kind": "posted",
       "utcStartDateTime": null,
       "day": null,
       "price": 152.71,
       "utcPriceDateTime": "2026-09-18T20:00:00.000Z",
-      "utcCheckedDateTime": "2026-09-29T14:00:49.990Z",
-      "utcSetDateTime": "2026-09-29T14:00:49.723Z"
+      "utcCheckedDateTime": "2026-09-29T14:26:29.773Z",
+      "utcSetDateTime": "2026-09-29T14:26:29.137Z"
     },
     {
-      "id": 19092,
-      "pinTickerId": 2679,
+      "id": 19244,
+      "pinTickerId": 2683,
       "kind": "start",
       "utcStartDateTime": "2026-10-01T15:10:06.000Z",
       "day": "2026-10-01",
       "price": null,
       "utcPriceDateTime": null,
       "utcCheckedDateTime": null,
-      "utcSetDateTime": "2026-09-29T14:00:49.733Z"
+      "utcSetDateTime": "2026-09-29T14:26:29.204Z"
     },
     {
-      "id": 19097,
-      "pinTickerId": 2680,
+      "id": 19245,
+      "pinTickerId": 2684,
       "kind": "posted",
       "utcStartDateTime": null,
       "day": null,
       "price": 152.71,
       "utcPriceDateTime": "2026-09-18T20:00:00.000Z",
-      "utcCheckedDateTime": "2026-09-29T14:07:48.392Z",
-      "utcSetDateTime": "2026-09-29T14:07:48.369Z"
+      "utcCheckedDateTime": "2026-09-29T14:26:31.156Z",
+      "utcSetDateTime": "2026-09-29T14:26:30.868Z"
     },
     {
-      "id": 19098,
-      "pinTickerId": 2680,
+      "id": 19246,
+      "pinTickerId": 2684,
       "kind": "start",
       "utcStartDateTime": "2026-09-28T12:48:59.000Z",
       "day": "2026-09-28",
       "price": 145.47,
       "utcPriceDateTime": "2026-09-28T20:00:00.000Z",
-      "utcCheckedDateTime": "2026-09-29T14:07:48.383Z",
-      "utcSetDateTime": "2026-09-29T14:07:48.378Z"
+      "utcCheckedDateTime": "2026-09-29T14:26:31.054Z",
+      "utcSetDateTime": "2026-09-29T14:26:30.946Z"
     },
     {
-      "id": 19119,
-      "pinTickerId": 2681,
+      "id": 19267,
+      "pinTickerId": 2685,
       "kind": "posted",
       "utcStartDateTime": null,
       "day": null,
-      "price": 12.355,
-      "utcPriceDateTime": "2026-09-29T14:09:00.000Z",
-      "utcCheckedDateTime": "2026-09-29T14:10:13.106Z",
-      "utcSetDateTime": "2026-09-29T14:10:10.761Z"
+      "price": 12.3601,
+      "utcPriceDateTime": "2026-09-29T14:26:00.000Z",
+      "utcCheckedDateTime": "2026-09-29T14:26:58.040Z",
+      "utcSetDateTime": "2026-09-29T14:26:50.569Z"
     },
     {
-      "id": 19120,
-      "pinTickerId": 2681,
+      "id": 19268,
+      "pinTickerId": 2685,
       "kind": "start",
       "utcStartDateTime": "2027-01-01T00:00:00.000Z",
       "day": "2027-01-01",
       "price": null,
       "utcPriceDateTime": null,
       "utcCheckedDateTime": null,
-      "utcSetDateTime": "2026-09-29T14:10:10.770Z"
+      "utcSetDateTime": "2026-09-29T14:26:50.585Z"
     },
     {
-      "id": 19121,
-      "pinTickerId": 2682,
+      "id": 19269,
+      "pinTickerId": 2686,
       "kind": "posted",
       "utcStartDateTime": null,
       "day": null,
-      "price": 80.48,
-      "utcPriceDateTime": "2026-09-29T14:09:00.000Z",
-      "utcCheckedDateTime": "2026-09-29T14:10:12.294Z",
-      "utcSetDateTime": "2026-09-29T14:10:10.776Z"
+      "price": 80.35,
+      "utcPriceDateTime": "2026-09-29T14:26:00.000Z",
+      "utcCheckedDateTime": "2026-09-29T14:26:55.742Z",
+      "utcSetDateTime": "2026-09-29T14:26:50.601Z"
     },
     {
-      "id": 19122,
-      "pinTickerId": 2682,
+      "id": 19270,
+      "pinTickerId": 2686,
       "kind": "start",
       "utcStartDateTime": "2027-01-01T00:00:00.000Z",
       "day": "2027-01-01",
       "price": null,
       "utcPriceDateTime": null,
       "utcCheckedDateTime": null,
-      "utcSetDateTime": "2026-09-29T14:10:10.785Z"
+      "utcSetDateTime": "2026-09-29T14:26:50.617Z"
     },
     {
-      "id": 19123,
-      "pinTickerId": 2683,
+      "id": 19271,
+      "pinTickerId": 2687,
       "kind": "posted",
       "utcStartDateTime": null,
       "day": null,
-      "price": 4.555,
-      "utcPriceDateTime": "2026-09-29T14:10:00.000Z",
-      "utcCheckedDateTime": "2026-09-29T14:10:11.661Z",
-      "utcSetDateTime": "2026-09-29T14:10:10.790Z"
+      "price": 4.52,
+      "utcPriceDateTime": "2026-09-29T14:26:00.000Z",
+      "utcCheckedDateTime": "2026-09-29T14:26:53.204Z",
+      "utcSetDateTime": "2026-09-29T14:26:50.632Z"
     },
     {
-      "id": 19124,
-      "pinTickerId": 2683,
+      "id": 19272,
+      "pinTickerId": 2687,
       "kind": "start",
       "utcStartDateTime": "2027-01-01T00:00:00.000Z",
       "day": "2027-01-01",
       "price": null,
       "utcPriceDateTime": null,
       "utcCheckedDateTime": null,
-      "utcSetDateTime": "2026-09-29T14:10:10.794Z"
+      "utcSetDateTime": "2026-09-29T14:26:50.658Z"
     }
   ],
   "relations": [

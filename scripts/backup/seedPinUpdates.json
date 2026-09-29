@@ -1898,7 +1898,7 @@
     "utcCreatedDateTime": "2026-09-28T17:41:00.821Z"
   },
   {
-    "id": 78,
+    "id": 76,
     "pinId": 3800,
     "kind": "edit",
     "userId": 303,
@@ -1913,10 +1913,10 @@
       }
     ],
     "note": null,
-    "utcCreatedDateTime": "2026-09-29T14:00:28.231Z"
+    "utcCreatedDateTime": "2026-09-29T14:25:59.940Z"
   },
   {
-    "id": 79,
+    "id": 77,
     "pinId": 1947,
     "kind": "edit",
     "userId": 276,
@@ -1937,10 +1937,10 @@
       }
     ],
     "note": null,
-    "utcCreatedDateTime": "2026-09-29T14:00:49.628Z"
+    "utcCreatedDateTime": "2026-09-29T14:26:28.973Z"
   },
   {
-    "id": 80,
+    "id": 78,
     "pinId": 1945,
     "kind": "edit",
     "userId": 276,
@@ -1966,10 +1966,10 @@
       }
     ],
     "note": null,
-    "utcCreatedDateTime": "2026-09-29T14:07:48.254Z"
+    "utcCreatedDateTime": "2026-09-29T14:26:30.461Z"
   },
   {
-    "id": 81,
+    "id": 79,
     "pinId": 2981,
     "kind": "edit",
     "userId": 374,
@@ -1990,6 +1990,30 @@
       }
     ],
     "note": null,
-    "utcCreatedDateTime": "2026-09-29T14:08:30.174Z"
+    "utcCreatedDateTime": "2026-09-29T14:26:31.774Z"
+  },
+  {
+    "id": 80,
+    "pinId": 4587,
+    "kind": "edit",
+    "userId": 419,
+    "relatedPinId": null,
+    "changes": [
+      {
+        "after": "<ul><li>From 12:01 a.m. eastern time on 29 September 2026, the Canadian alcoholic beverages listed in Proclamation 11061's annex are excluded from importation into the United States<cite data-ref=\"https://www.federalregister.gov/documents/2026/09/14/2026-18835/excluding-certain-canadian-products-from-importation-into-the-united-states-in-response-to-continued\"></cite></li><li>The proclamation says Canada reneged on a commitment on 21 August, that the 50% duties took effect on 22 August, and that Saskatchewan then announced its own 50% levy on US alcohol from 8 September<cite data-ref=\"https://www.federalregister.gov/documents/2026/09/14/2026-18835/excluding-certain-canadian-products-from-importation-into-the-united-states-in-response-to-continued\"></cite></li><li>Goods already imported but not yet entered before 29 September stay subject to the 50% duty, which also applies instead if the ban is invalidated<cite data-ref=\"https://www.federalregister.gov/documents/2026/09/14/2026-18835/excluding-certain-canadian-products-from-importation-into-the-united-states-in-response-to-continued\"></cite></li><li>The ban covers Canadian spirits, wine and malt beer, all of which had carried the 50% tariff since the breakdown of talks in August<cite data-ref=\"https://www.thespiritsbusiness.com/2026/09/trump-bans-canadian-spirits-imports/\"></cite></li><li>A same-day proclamation re-scoped the products that remain under the 50% duty from 15 September<cite data-ref=\"https://www.federalregister.gov/documents/2026/09/14/2026-18838/modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset\"></cite></li><li>US alcohol trade groups have pressed for a deal, saying US spirits exports to Canada fell from US$232 million to US$72 million between March and December 2025<cite data-ref=\"https://www.thespiritsbusiness.com/2026/09/coalition-calls-for-us-canada-resolution/\"></cite></li><li>The ban is estimated to cover about $19.9 billion of Canadian imports (American Action Forum, via CNBC); Canada has announced no fresh retaliation since 9 September, and USTR Jamieson Greer said there is \"no urgency on our side\"<cite data-ref=\"https://www.cnbc.com/2026/09/29/canada-import-ban-trade-war.html\"></cite></li></ul>",
+        "field": "longFormSummary",
+        "before": "<ul><li>From 12:01 a.m. eastern time on 29 September 2026, the Canadian alcoholic beverages listed in Proclamation 11061's annex are excluded from importation into the United States<cite data-ref=\"https://www.federalregister.gov/documents/2026/09/14/2026-18835/excluding-certain-canadian-products-from-importation-into-the-united-states-in-response-to-continued\"></cite></li><li>The proclamation says Canada reneged on a commitment on 21 August, that the 50% duties took effect on 22 August, and that Saskatchewan then announced its own 50% levy on US alcohol from 8 September<cite data-ref=\"https://www.federalregister.gov/documents/2026/09/14/2026-18835/excluding-certain-canadian-products-from-importation-into-the-united-states-in-response-to-continued\"></cite></li><li>Goods already imported but not yet entered before 29 September stay subject to the 50% duty, which also applies instead if the ban is invalidated<cite data-ref=\"https://www.federalregister.gov/documents/2026/09/14/2026-18835/excluding-certain-canadian-products-from-importation-into-the-united-states-in-response-to-continued\"></cite></li><li>The ban covers Canadian spirits, wine and malt beer, all of which had carried the 50% tariff since the breakdown of talks in August<cite data-ref=\"https://www.thespiritsbusiness.com/2026/09/trump-bans-canadian-spirits-imports/\"></cite></li><li>A same-day proclamation re-scoped the products that remain under the 50% duty from 15 September<cite data-ref=\"https://www.federalregister.gov/documents/2026/09/14/2026-18838/modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset\"></cite></li><li>US alcohol trade groups have pressed for a deal, saying US spirits exports to Canada fell from US$232 million to US$72 million between March and December 2025<cite data-ref=\"https://www.thespiritsbusiness.com/2026/09/coalition-calls-for-us-canada-resolution/\"></cite></li></ul>"
+      }
+    ],
+    "references": [
+      {
+        "url": "https://www.cnbc.com/2026/09/29/canada-import-ban-trade-war.html",
+        "title": "US ban on Canadian alcohol takes effect - CNBC",
+        "confidence": 90,
+        "publishedDate": "2026-09-29"
+      }
+    ],
+    "note": null,
+    "utcCreatedDateTime": "2026-09-29T14:38:45.689Z"
   }
 ]

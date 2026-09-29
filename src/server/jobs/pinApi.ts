@@ -1,4 +1,6 @@
+import { SignJWT } from 'jose';
 import { signToken } from '../auth';
+import { sentimentHash, type SentimentText } from '../model/pinSentiment';
 import { curatorId, isCurator } from './curators';
 
 // The daily jobs save through the app's own HTTP API, as a curator, because a
@@ -6,9 +8,27 @@ import { curatorId, isCurator } from './curators';
 // checks, threading and tag sync (docs/okf/scraping/strategy.md, principle 7).
 // The token is signed here for the curator, so no password is ever handled.
 
+// The app on this machine: reads, scrapes (headless Chrome and the pipeline
+// run here, never on the small production VM) and the signals all come from it.
 export function apiBase(): string {
   return (process.env.JOBS_API_BASE || `http://127.0.0.1:${process.env.PORT || 3000}`).replace(/\/$/, '');
 }
+
+// Production, when the run is set to write there (owner, 2026-09-29: the
+// daily jobs' pins and edits belong on prod). JOBS_PROD_BASE is its address
+// (https://www.chronopin.com) and JOBS_PROD_SESSION_SECRET its SESSION_SECRET,
+// so curator tokens are signed as they are locally and no password is handled.
+// Both are set in .env.local, never committed. Local ids match production's
+// only after `npm run db:pull-prod`, so pull first, and again after a run.
+export function prodBase(): string | null {
+  const base = process.env.JOBS_PROD_BASE?.trim().replace(/\/$/, '');
+  if (!base) return null;
+  if (!process.env.JOBS_PROD_SESSION_SECRET) throw new Error('JOBS_PROD_BASE is set but JOBS_PROD_SESSION_SECRET is not');
+  return base;
+}
+
+// Where pins are read for editing and written: production when set, else here.
+const writeBase = () => prodBase() ?? apiBase();
 
 export class ApiCallError extends Error {
   constructor(
@@ -19,8 +39,12 @@ export class ApiCallError extends Error {
   }
 }
 
-async function call<T>(method: string, path: string, { token, body, timeoutMs = 180000 }: { token?: string; body?: unknown; timeoutMs?: number } = {}): Promise<T> {
-  const response = await fetch(`${apiBase()}${path}`, {
+async function call<T>(
+  method: string,
+  path: string,
+  { token, body, timeoutMs = 180000, base = writeBase() }: { token?: string; body?: unknown; timeoutMs?: number; base?: string } = {},
+): Promise<T> {
+  const response = await fetch(`${base}${path}`, {
     method,
     headers: { 'Content-Type': 'application/json', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
     body: body === undefined ? undefined : JSON.stringify(body),
@@ -32,6 +56,21 @@ async function call<T>(method: string, path: string, { token, body, timeoutMs = 
 }
 
 async function tokenFor(handle: string): Promise<string> {
+  const id = await curatorId(handle);
+  if (!id) throw new ApiCallError(400, `${handle} is not a curator account on this database`);
+  if (prodBase()) {
+    return new SignJWT({ id })
+      .setProtectedHeader({ alg: 'HS256', typ: 'JWT' })
+      .setIssuedAt()
+      .setExpirationTime('5h')
+      .sign(new TextEncoder().encode(process.env.JOBS_PROD_SESSION_SECRET));
+  }
+  return signToken(id);
+}
+
+// The scrape runs on this machine even when the pin will be posted to
+// production, so it needs a token the local app accepts.
+async function localTokenFor(handle: string): Promise<string> {
   const id = await curatorId(handle);
   if (!id) throw new ApiCallError(400, `${handle} is not a curator account on this database`);
   return signToken(id);
@@ -48,7 +87,7 @@ export function getPin(id: number): Promise<PinJson> {
 // llmTasks when the key has no credit). Needs a signed-in user; the curator
 // the pin would be posted as is the natural one.
 export async function scrapeUrl(url: string, curator: string, note?: string) {
-  return call<Record<string, any>>('POST', '/api/scrape', { token: await tokenFor(curator), body: { url, note }, timeoutMs: 240000 });
+  return call<Record<string, any>>('POST', '/api/scrape', { token: await localTokenFor(curator), body: { url, note }, timeoutMs: 240000, base: apiBase() });
 }
 
 export async function createPin(curator: string, body: Record<string, unknown>): Promise<PinJson> {
@@ -91,4 +130,30 @@ export async function updatePin(id: number, patch: PinPatch): Promise<PinJson> {
     throw new ApiCallError(403, `Pin ${id} is by ${author ?? 'an unknown user'}, not a curator; mark it for revisiting instead of editing it.`);
   }
   return call<PinJson>('PUT', `/api/pins/${id}`, { token: await tokenFor(author!), body: mergePatch(pin, patch) });
+}
+
+// What a run saved locally that production has no endpoint for besides the
+// pin's own: the two below replay it there as the pin's author. They do
+// nothing unless the run writes to production, and a failure is logged by the
+// caller, not fatal: the local copy stays and the next push can repeat it.
+
+// A reading of an event's performers and tickets (PUT /api/pins/:id/event-info).
+export async function pushEventInfo(pinId: number, reading: { fields: Record<string, unknown>; source: string; sourceUrl?: string | null }): Promise<boolean> {
+  if (!prodBase()) return false;
+  const pin = await getPin(pinId);
+  if (!isCurator(pin.user?.userName)) return false;
+  await call('PUT', `/api/pins/${pinId}/event-info`, { token: await tokenFor(pin.user!.userName), body: { ...reading.fields, source: reading.source, sourceUrl: reading.sourceUrl ?? null } });
+  return true;
+}
+
+// A pin's tone score. Production has no endpoint for it, so it rides a PUT of
+// the pin's own current copy with `sentiment` added; skipped when the pin's
+// text there is not the text that was scored, since the score would not fit.
+export async function pushSentiment(pinId: number, sentiment: number, product: string | undefined, scored: SentimentText): Promise<boolean> {
+  if (!prodBase()) return false;
+  const pin = await getPin(pinId);
+  if (!isCurator(pin.user?.userName)) return false;
+  if (sentimentHash({ title: pin.title, description: pin.description ?? null }) !== sentimentHash(scored)) return false;
+  await call('PUT', `/api/pins/${pinId}`, { token: await tokenFor(pin.user!.userName), body: mergePatch(pin, { sentiment, ...(product ? { productLine: product } : {}) }) });
+  return true;
 }

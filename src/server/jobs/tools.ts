@@ -33,7 +33,8 @@ import { markEventChecked, saveEventInfo } from '../model/pinEventInfo';
 import { hasEventInfo } from '@/lib/eventInfo';
 import { CURATORS } from './curators';
 import { checkPinHealth, pinsToCheck } from './health';
-import { createPin, getPin, scrapeUrl, updatePin, type PinPatch } from './pinApi';
+import log from '../util/log';
+import { createPin, getPin, pushEventInfo, pushSentiment, scrapeUrl, updatePin, type PinPatch } from './pinApi';
 import * as signals from './signals';
 import { trendCandidates } from './trends';
 
@@ -252,8 +253,13 @@ export const TOOLS: JobTool[] = [
       for (const p of Array.isArray(input.pins) ? input.pins : []) {
         const value = score(p?.sentiment);
         const product = typeof p?.product === 'string' ? p.product : undefined;
-        if (value != null && (await PinSentiment.setIfUnchanged(int(p.id, 0, 1, 2 ** 31 - 1), String(p.textHash ?? ''), value, product))) pins++;
-        else skipped++;
+        const pinId = int(p.id, 0, 1, 2 ** 31 - 1);
+        if (value != null && (await PinSentiment.setIfUnchanged(pinId, String(p.textHash ?? ''), value, product))) {
+          pins++;
+          // Written to production too when the run writes there.
+          const scored = await PinSentiment.context(pinId);
+          if (scored) await pushSentiment(pinId, value, product, scored).catch((err) => log.warn(`pin ${pinId}'s score did not reach production:`, (err as Error).message));
+        } else skipped++;
       }
       for (const c of Array.isArray(input.comments) ? input.comments : []) {
         const value = score(c?.sentiment);
@@ -337,9 +343,15 @@ export const TOOLS: JobTool[] = [
         if (hasEventInfo(reading.fields)) {
           const saved = await saveEventInfo(pinId, reading.fields, { source: reading.source, sourceUrl: reading.sourceUrl });
           results.push({ pinId, stored: saved ? describeReading(reading.fields) : 'kept the reading set by hand' });
-          if (saved) await act(ctx, { tool: 'record_event_info', pinId, detail: describeReading(reading.fields) });
+          if (saved) {
+            await act(ctx, { tool: 'record_event_info', pinId, detail: describeReading(reading.fields) });
+            await pushEventInfo(pinId, reading).catch((err) => log.warn(`pin ${pinId}'s event info did not reach production:`, (err as Error).message));
+          }
         } else {
           await markEventChecked(pinId, reading);
+          await pushEventInfo(pinId, { fields: reading.fields, source: reading.source, sourceUrl: reading.sourceUrl }).catch((err) =>
+            log.warn(`pin ${pinId}'s event check did not reach production:`, (err as Error).message),
+          );
           results.push({ pinId, stored: 'nothing stated; marked checked' });
         }
         eventPagesRead().delete(pinId);

@@ -93,6 +93,32 @@ page or a PDF, and looking at a picture are the model's own. The rest:
 | `create_pin`, `update_pin`, `mark_revisit`, `resolve_revisit` | The writes, through the real API as a curator | See below |
 | `record_learning` | Writes down what the run taught | See [Learning](#learning) |
 
+# Writing to production
+
+The owner wants a run's pins and edits on prod (2026-09-29: "this should
+always be done on prod"). Set two variables in `.env.local` and a run posts
+there itself ([pinApi.ts](../../../src/server/jobs/pinApi.ts)):
+
+* `JOBS_PROD_BASE` - production's address, `https://www.chronopin.com`.
+* `JOBS_PROD_SESSION_SECRET` - production's `SESSION_SECRET`, so the run signs
+  a curator token for prod exactly as it does locally and handles no password.
+  Never commit it.
+
+What goes where. **Reads, scrapes and every signal stay on this machine**
+(headless Chrome and the pipeline never run on the small VM). `create_pin`,
+`update_pin` and `get_pin` go to prod. Event-info readings and sentiment
+scores are saved locally and then replayed on prod as the pin's author
+(`PUT /api/pins/:id/event-info`; a `PUT` of the pin with `sentiment`, skipped
+when prod's text is not what was scored). A push that fails is logged and
+the local copy stays. Prod-only writes leave the local database as it was, so
+the run does not seed from it.
+
+**Pull before and after.** Local ids match prod's only after `npm run
+db:pull-prod`; a pin created on prod has a new id there and does not exist
+locally until the next pull. Pull before a run so ids and the already-pinned
+tests agree, and after it so the local copy catches up. Pins by a non-curator
+(the owner's own accounts) are still not the job's to edit, on prod or here.
+
 # Rules every run follows
 
 * **Write through the real API as a curator.** The server signs a token for

@@ -13,6 +13,7 @@ import JobRun, { type JobDriver } from '../model/jobRun';
 import log from '../util/log';
 import { LlmUnavailable, runWithApi, type DriverResult } from './drivers/api';
 import { runWithSession, sessionAvailable } from './drivers/session';
+import { prodBase } from './pinApi';
 import { kickoff, systemPrompt } from './prompt';
 import { contextForRun, OKF_ROOT, type JobContext } from './tools';
 import { getClient } from '../extract';
@@ -102,8 +103,10 @@ async function afterRun(runId: number) {
       log.warn(`job run ${runId}: could not add its learnings to the OKF log:`, (err as Error).message);
     }
   }
+  // Writes that went to production left this database as it was, so there is
+  // nothing new to seed from until the next `npm run db:pull-prod`.
   const wrote = run.actions.some((a) => a.tool === 'create_pin' || a.tool === 'update_pin');
-  if (wrote) {
+  if (wrote && !prodBase()) {
     await new Promise<void>((resolve) => {
       const child = spawn('npm', ['run', 'backup:data'], { cwd: process.cwd(), stdio: 'ignore' });
       child.on('close', (code) => {
