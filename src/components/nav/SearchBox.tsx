@@ -650,6 +650,14 @@ export function SearchBox() {
         event.clipboardData.setData('text/plain', rangeText(sel));
         cutRange(sel);
       }}
+      // A paste over a selected part of the query replaces all of it, items
+      // and all, as a typed key does; the browser would only paste into the
+      // field, which holds none of it.
+      onPaste={(event) => {
+        if (!sel) return;
+        event.preventDefault();
+        cutRange(sel, event.clipboardData.getData('text/plain').replace(/\s*[\r\n]+\s*/g, ' '));
+      }}
       onKeyDown={(event) => {
         const field = event.currentTarget;
         const key = event.key.toLowerCase();
@@ -717,6 +725,8 @@ export function SearchBox() {
         // key gives the selection up. The cut is made here rather than left
         // to the browser: what is selected is mostly not the field's own text.
         if (sel && !MODIFIERS.has(event.key)) {
+          // A paste keeps the selection for the paste event to replace.
+          if ((chord && key === 'v') || (event.shiftKey && event.key === 'Insert')) return;
           setRange(null);
           if (event.key === 'Backspace' || event.key === 'Delete') {
             event.preventDefault();
